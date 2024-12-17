@@ -38,7 +38,7 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-ここでは、[`WebAssembly.Table`](/ja/docs/WebAssembly/JavaScript_interface/Table) コンストラクターを使用して JavaScript からテーブル (`otherTable`) を作成し、`table.wasm` をページに読み込むために [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) ユーティリティ関数を使用しています。
+ここでは、[`WebAssembly.Table`](/ja/docs/WebAssembly/JavaScript_interface/Table) コンストラクターを使用して JavaScript からテーブル (`otherTable`) を作成し、`table.wasm` をページに読み込むために [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) ユーティリティ関数を使用しています。
 
 そのあと、モジュールからエクスポートされた関数を取得し、関数の参照を [`tbl.get()`](/ja/docs/WebAssembly/JavaScript_interface/Table/get) を通して取り出し、それぞれを実行した結果をコンソールに出力します。次に、 `set()` を使用して、`tbl` テーブルと同じ関数への参照を `otherTable` テーブルに含まれるようにします。
 

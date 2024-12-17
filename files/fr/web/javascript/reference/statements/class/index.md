@@ -23,7 +23,7 @@ class nom [extends autreNom] {
 
 Les déclarations qui composent le corps de la classe sont exécutées en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). La propriété du constructeur est optionnelle.
 
-Les déclarations utilisées dans les classes ne sont pas remontées (_hoisted_) (à la différence des [déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Instructions/function)).
+Les déclarations utilisées dans les classes ne sont pas remontées (_hoisted_) (à la différence des [déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Statements/function)).
 
 ## Exemples
 
@@ -71,6 +71,6 @@ class Carré extends Polygone {
 
 ## Voir aussi
 
-- [Les déclarations `function`](/fr/docs/Web/JavaScript/Reference/Instructions/function)
-- [Les expressions `class`](/fr/docs/Web/JavaScript/Reference/Opérateurs/class)
+- [Les déclarations `function`](/fr/docs/Web/JavaScript/Reference/Statements/function)
+- [Les expressions `class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
 - [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)

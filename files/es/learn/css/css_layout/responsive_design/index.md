@@ -54,7 +54,7 @@ El sitio de ancho fijo se arriesgaba a una barra de desplazamiento horizontal en
 > Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
 
 > [!NOTE]
-> Las capturas de pantalla anteriores se han tomado usando el [modo de diseño responsivo](/es/docs/Tools/Responsive_Design_View) de las herramientas DevTools de Firefox.
+> Las capturas de pantalla anteriores se han tomado usando el [modo de diseño responsivo](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) de las herramientas DevTools de Firefox.
 
 A medida que la web móvil comenzó a hacerse realidad con los primeros teléfonos con funciones, las empresas que deseaban adoptar los dispositivos móviles solían crear una versión especial de su sitio web para dispositivo móvil, con una URL diferente (a menudo algo así como _m.example.com_ o _example.mobi_). Esto significaba que había que desarrollar y actualizar dos versiones independientes del sitio web.
 
@@ -62,7 +62,7 @@ Además, estos sitios web para dispositivos móviles a menudo ofrecían una expe
 
 ## Diseño flexible antes del diseño responsivo
 
-Se desarrollaron varios enfoques para tratar de resolver los inconvenientes de los métodos líquidos o de ancho fijo para crear sitios web. En 2004, Cameron Adams escribió una publicación titulada [Resolution dependent layout](http://www.themaninblue.com/writing/perspective/2004/09/21/), que describe un método para crear un diseño que podría adaptarse a diferentes resoluciones de pantalla. Este enfoque requería JavaScript para detectar la resolución de la pantalla y cargar el CSS correcto.
+Se desarrollaron varios enfoques para tratar de resolver los inconvenientes de los métodos líquidos o de ancho fijo para crear sitios web. En 2004, Cameron Adams escribió una publicación titulada [Resolution dependent layout](https://www.themaninblue.com/writing/perspective/2004/09/21/), que describe un método para crear un diseño que podría adaptarse a diferentes resoluciones de pantalla. Este enfoque requería JavaScript para detectar la resolución de la pantalla y cargar el CSS correcto.
 
 Zoe Mickley Gillenwater fue determinante en [su trabajo](http://zomigi.com/blog/voices-that-matter-slides-available/) de descripción y formalización de los diversos modos en que se podían crear sitios web flexibles para intentar encontrar una situación intermedia entre llenar toda la pantalla o tener un tamaño completamente fijo.
 
@@ -71,8 +71,8 @@ Zoe Mickley Gillenwater fue determinante en [su trabajo](http://zomigi.com/blog/
 El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), y describía el uso combinado de tres técnicas.
 
 1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
-2. La segunda técnica era la idea de las [imágenes fluidas](http://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Media_Queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
+2. La segunda técnica era la idea de las [imágenes fluidas](https://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
+3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/CSS_media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
 
 Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
 
@@ -96,7 +96,7 @@ Puedes añadir múltiples consultas a los media dentro de una hoja de estilo, y 
 
 Un enfoque común cuando se usan las consultas a los media es crear un diseño sencillo de una sola columna para dispositivos de pantalla estrecha (por ejemplo, teléfonos móviles), luego implementar un diseño en columnas para pantallas más grandes cuando se sabe que hay suficiente ancho de pantalla para manejarlo. Esto se describe a menudo como diseño **primero móvil**.
 
-Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/Media_Queries) en la documentación de MDN.
+Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/CSS_media_queries) en la documentación de MDN.
 
 ## Cuadrículas flexibles
 
@@ -174,7 +174,7 @@ En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantid
 
 ### Cuadrículas CSS
 
-En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución del espacio disponible en las trazas de la cuadrícula. El ejemplo siguiente crea un contenedor de cuadrícula con tres trazas dimensionadas a `1fr`. Esto crea tres columnas, cada una de las cuales ocupa una parte del espacio que hay disponible en el contenedor. Puedes obtener más información sobre este enfoque para crear una cuadrícula en el módulo Aprender a diseñar cuadrículas en [Cuadrículas flexibles con la unidad fr](/es/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit).
+En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución del espacio disponible en las trazas de la cuadrícula. El ejemplo siguiente crea un contenedor de cuadrícula con tres trazas dimensionadas a `1fr`. Esto crea tres columnas, cada una de las cuales ocupa una parte del espacio que hay disponible en el contenedor. Puedes obtener más información sobre este enfoque para crear una cuadrícula en el módulo Aprender a diseñar cuadrículas en [Cuadrículas flexibles con la unidad fr](/es/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
 
 ```css
 .container {

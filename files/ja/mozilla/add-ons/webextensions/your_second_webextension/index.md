@@ -13,7 +13,7 @@ l10n:
 
 これらの機能を以下のように実装していきます。
 
-- **[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action)**（Firefox のツールバーに表示させるボタン）を定義
+- **[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)**（Firefox のツールバーに表示させるボタン）を定義
   このボタン用に次のものを用意します。
 
   - "beasts-32.png" というアイコン
@@ -452,5 +452,5 @@ web-ext run
 
 - [拡張機能の中身](/ja/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [拡張機能の例](/ja/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [拡張機能を開発し、テストし、公開するために必要なものを探す](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [さらに学びを深める](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next_#学習体験を続ける)
+- [拡張機能を開発し、テストし、公開するために必要なものを探す](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [さらに学びを深める](/ja/docs/Mozilla/Add-ons/WebExtensions/What_next#学習体験を続ける)

@@ -72,9 +72,9 @@ Dans ce script, on récupère une référence à l'objet {{domxref("HTMLInputEle
 
 ### Ajouter des raccourcis clavier
 
-Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Attributs_universels/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
+Les raccourcis clavier permettent à un utilisateur de déclencher une action grâce à une touche ou grâce à une combinaison de touches du clavier. Pour ajouter un raccourci clavier déclenchant le bouton, on pourra ajouter l'attribut universel [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) (qu'on peut d'ailleurs utiliser pour les autres éléments {{HTMLElement("input")}}).
 
-Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Attributs_universels/accesskey) pour la liste de ces touches).
+Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit, il faudra appuyer sur la touche <kbd>s</kbd> avec une ou plusieurs touches supplémentaires qui dépendent du navigateur et du système d'exploitation, cf. [`accesskey`](/fr/docs/Web/HTML/Global_attributes/accesskey) pour la liste de ces touches).
 
 ```html
 <form>

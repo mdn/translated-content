@@ -110,7 +110,7 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
   이것이 [Google 지도](https://www.google.com/maps)가 사용자의 위치를 찾아 지도에 표시하는 방법입니다.
 - {{domxref("Canvas_API","Canvas")}}와 {{domxref("WebGL_API","WebGL")}} API를 사용하면 애니메이션 2D 및 3D 그래픽을 만들 수 있습니다.
   두 웹 기술을 사용해서 만들 수 있는 놀라운 결과를 엿보려면 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome)와 [webglsamples](https://webglsamples.org/)를 방문하세요.
-- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/ko/docs/Web/Guide/Audio_and_video_delivery)를 사용하면 웹 페이지에서 바로 오디오 및 비디오를 재생하거나 웹 카메라에서 비디오를 가져와 다른 사람의 컴퓨터에 표시하는 등 멀티미디어로 정말 흥미로운 작업을 할 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요.)
+- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/ko/docs/Web/Media/Audio_and_video_delivery)를 사용하면 웹 페이지에서 바로 오디오 및 비디오를 재생하거나 웹 카메라에서 비디오를 가져와 다른 사람의 컴퓨터에 표시하는 등 멀티미디어로 정말 흥미로운 작업을 할 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요.)
 
 > [!NOTE]
 > 위의 데모 중 상당수는 구형 브라우저에서 작동하지 않으므로 실험할 때는 Firefox, Chrome, Edge, Opera와 같은 최신 브라우저를 사용하여 코드를 실행하는 것이 좋습니다.
@@ -130,7 +130,7 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
 
 여기서는 실제로 몇 가지 코드를 살펴보면서 페이지에서 JavaScript를 실행하면 실제로 어떤 일이 일어나는지 살펴보겠습니다.
 
-브라우저에서 웹 페이지를 로드할 때 어떤 일이 일어나는지 간단히 정리해 보겠습니다. ([CSS 동작 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works#CSS_는_실제로_어떻게_작동합니까)에서 먼저 알아봤습니다.) 브라우저에서 웹 페이지를 로드하면 실행 환경(브라우저 탭) 내에서 코드(HTML, CSS 및 JavaScript)를 실행하게 됩니다. 이는 원재료(코드)를 받아 제품(웹 페이지)을 출력하는 공장과 같습니다.
+브라우저에서 웹 페이지를 로드할 때 어떤 일이 일어나는지 간단히 정리해 보겠습니다. ([CSS 동작 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works#css_는_실제로_어떻게_작동합니까)에서 먼저 알아봤습니다.) 브라우저에서 웹 페이지를 로드하면 실행 환경(브라우저 탭) 내에서 코드(HTML, CSS 및 JavaScript)를 실행하게 됩니다. 이는 원재료(코드)를 받아 제품(웹 페이지)을 출력하는 공장과 같습니다.
 
 ![페이지가 로드될 때 HTML, CSS, JavaScript 코드가 함께 브라우저 탭에 콘텐츠를 생성합니다.](execution.png)
 
@@ -166,7 +166,7 @@ function updateName() {
 
 위 코드는 텍스트 단락을 선택(1번 줄)해서 이벤트 수신기를 첨부(3번 줄)하여, 사용자가 단락을 클릭하면 `updateName()` 코드 블록(5번 ~ 8번 줄)을 실행하도록 합니다. `updateName()` 코드 블록(이렇게 재사용 가능하도록 나눠놓은 코드 블록을 "함수"라고 합니다)은 새 이름을 요청한 다음 해당 이름을 단락에 삽입하여 표시를 업데이트합니다.
 
-코드의 처음 두 줄의 순서를 바꾸면 더 이상 작동하지 않고 [브라우저 개발자 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 오류 `TypeError: para is undefined`가 나타납니다.
+코드의 처음 두 줄의 순서를 바꾸면 더 이상 작동하지 않고 [브라우저 개발자 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)에 오류 `TypeError: para is undefined`가 나타납니다.
 `para` 객체가 아직 존재하지 않으므로 이벤트 수신기를 추가할 수 없기 때문입니다.
 
 > [!NOTE]

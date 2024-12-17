@@ -5,7 +5,7 @@ slug: Web/CSS/widows
 
 {{CSSRef}}
 
-**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。</p>
+**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。</p>
 
 ```css
 /* <integer> 値 */
@@ -85,4 +85,4 @@ p:first-child {
 ## 関連情報
 
 - {{cssxref("orphans")}}
-- [ページ付きメディア](/ja/docs/Web/CSS/Paged_Media)
+- [ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)

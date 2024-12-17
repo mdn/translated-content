@@ -151,4 +151,4 @@ function defineProperties(obj, properties) {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.keys()")}}
-- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

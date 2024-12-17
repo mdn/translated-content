@@ -5,7 +5,7 @@ slug: Web/HTML/Element/input/search
 
 {{HTMLSidebar}}
 
-**`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/Input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
+**`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
@@ -60,17 +60,17 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 用户可以在搜索字段中输入的最大字符数（UTF-16 代码单元）。必须为 0 或更高的整数。如果未指定 `maxlength` 或指定了无效值，则搜索字段没有最大长度。此值还必须大于或等于 `minlength` 的值。
 
-如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
+如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
 
 ### minlength
 
 用户可以在搜索字段中输入的最小字符数（UTF-16 代码单元）。该值必须是小于或等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效值，则搜索输入没有最小长度。
 
-如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
+如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
@@ -441,5 +441,5 @@ input:valid ~ span::after {
 
 - [HTML 表单](/zh-CN/docs/Learn/Forms)
 - {{HTMLElement("input")}} 及其所基于的接口 {{domxref("HTMLInputElement")}}
-- [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text)
+- [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
 - [CSS 属性的兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -109,7 +109,7 @@ Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties).
+Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ### Valeurs logiques
 

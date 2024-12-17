@@ -35,5 +35,5 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ## Voir aussi
 
 - [`console.time()`](/fr/docs/Web/API/console/time_static)
-- [`console.timeLog()`](/fr/docs/Web/API/console/timelog_static)
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)
+- [`console.timeLog()`](/fr/docs/Web/API/console/timeLog_static)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)

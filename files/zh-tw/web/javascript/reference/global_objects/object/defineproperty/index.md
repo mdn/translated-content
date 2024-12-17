@@ -335,7 +335,7 @@ Versions of Chrome which implement `Object.defineProperty()` in some circumstanc
 
 Versions of Safari which implement `Object.defineProperty()` ignore a `length` value different from the array's current {{jsxref("Array.length", "length")}} property, and attempts to change writability execute without error but do not actually change the property's writability.
 
-Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you _can_ rely on it, [there's really no good reason to do so](http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
+Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you _can_ rely on it, [there's really no good reason to do so](https://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/).
 
 ### Internet Explorer 8 specific notes
 
@@ -347,7 +347,7 @@ Internet Explorer 8 implemented a `Object.defineProperty()` method that could [o
 
 ## 參閱
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

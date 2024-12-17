@@ -18,7 +18,7 @@ Un widget `<details>` peut être dans l'un des deux états suivants. L'état par
 
 Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur la barre d'espacement, il s'ouvre par "torsion", révélant son contenu :
 
-À partir de là, vous pouvez utiliser les feuilles de style en cascade pour donner un style au widget de divulgation, et vous pouvez ouvrir et fermer le widget de façon programmatique en définissant ou en supprimant son attribut [`open`](/fr/docs/Web/HTML/Element/details#attr-open).
+À partir de là, vous pouvez utiliser les feuilles de style en cascade pour donner un style au widget de divulgation, et vous pouvez ouvrir et fermer le widget de façon programmatique en définissant ou en supprimant son attribut [`open`](#attr-open).
 
 Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour afficher le triangle de divulgation et le résumé. Lorsqu'il est ouvert, il s'étend pour afficher les détails qu'il contient.
 
@@ -108,7 +108,7 @@ Comme tous les éléments HTML, cet élément accepte les [attributs universels]
 
 ## Évènements
 
-En plus des évènements classiques pris en charge par les éléments HTML, l'élément `<details>` prend en charge l'évènement [toggle](/fr/docs/Web/API/HTMLDetailsElement/toggle_event) qui est envoyé sur l'élément lorsque son état change entre ouvert et fermé (que ce soit dans un sens ou dans l'autre). L'évènement est envoyé après que l'état ait été changé et si plusieurs changements d'état ont eu lieu avant que le navigateur envoie l'évènement, le navigateur fusionnera ces évènements en un seul.
+En plus des évènements classiques pris en charge par les éléments HTML, l'élément `<details>` prend en charge l'évènement [toggle](/fr/docs/Web/API/HTMLElement/toggle_event) qui est envoyé sur l'élément lorsque son état change entre ouvert et fermé (que ce soit dans un sens ou dans l'autre). L'évènement est envoyé après que l'état ait été changé et si plusieurs changements d'état ont eu lieu avant que le navigateur envoie l'évènement, le navigateur fusionnera ces évènements en un seul.
 
 On peut alors écouter cet évènement en JavaScript afin de détecter le changement d'état du contrôle :
 

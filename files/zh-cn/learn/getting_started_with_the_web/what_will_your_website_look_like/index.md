@@ -62,7 +62,7 @@ _你的网站会是什么样子_？讨论的是你编写代码之前不得不为
 
 ### 字体
 
-和图片一样，很多字体都受版权保护，也就是说，你不可以在你的网站上随意使用它们。[Google Fonts](https://developers.google.com/fonts) 是 Google 旗下的提供许多字体许可的 Web 服务。
+和图片一样，很多字体都受版权保护，也就是说，你不可以在你的网站上随意使用它们。[Google Fonts](https://developers.google.cn/fonts) 是 Google 旗下的提供许多字体许可的 Web 服务。
 
 选好字体后，你有两种主要的使用方式：
 

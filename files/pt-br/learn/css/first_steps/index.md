@@ -28,9 +28,9 @@ Este módulo contém os seguintes artigos, que o guiarão através de toda a teo
   - : Neste artigo, pegaremos um documento HTML simples e aplicaremos CSS, aprendendo algumas coisas práticas sobre a linguagem ao longo do caminho.
 - [Como CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
   - : Agora que você tem uma idéia sobre o que é CSS e o básico sobre como usá-lo, é hora de analisar um pouco mais a fundo a estrutura da própria linguagem. Já conhecemos muitos dos conceitos discutidos aqui; você pode retornar a este para recapitular se achar confusos os conceitos posteriores.
-- [Como CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+- [Como CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : Aprendemos o básico do CSS, para que serve e como escrever folhas de estilo simples(Cascading Style Sheets - CSS). Neste exercício, veremos como um navegador utiliza CSS e HTML, e os transforma em uma página da web.
-- [Usando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+- [Usando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : Com o que aprendeu nas poucas lições anteriores, você já deve estar achando que pode formatar simples documentos de textos usando CSS, para adicionar seu próprio estilo neles. Este artigo te dará a chance de fazê-lo.
 
 ## Veja também

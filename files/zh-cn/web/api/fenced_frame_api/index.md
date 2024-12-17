@@ -24,24 +24,24 @@ Web 上[隐私](/zh-CN/docs/Web/Privacy)和[安全](/zh-CN/docs/Web/Security)问
 - `<fencedframe>` 不能通过常规脚本进行自由操作或访问其数据（例如读取或设置源 URL）。`<fencedframe>` 内容只能通过[特定 API](#用例) 嵌入。
 - `<fencedframe>` 无法访问嵌入上下文的 DOM，嵌入上下文也无法访问 `<fencedframe>` 的 DOM。
 
-有关围栏框架的通信模型的更多信息，请阅读[与嵌入框架的通信](/zh-CN/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames)指南。
+有关围栏框架的通信模型的更多信息，请阅读[与嵌入框架进行通信](/zh-CN/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames)指南。
 
 ### 用例
 
 `<fencedframe>` 被其他 API 用于嵌入不同类型的跨站内容或收集数据，以隐私保护的方式满足不同的使用场景。这些功能以前大多依赖于第三方 cookie 或其他对隐私不利的机制。
 
-- [共享存储 API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) 在安全的环境中提供对未分区跨站数据的访问，并在 `<fencedframe>` 中计算或显示结果。例如：
+- [共享存储 API](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage) 在安全的环境中提供对未分区跨站数据的访问，并在 `<fencedframe>` 中计算或显示结果。例如：
   - 广告商可以衡量广告的覆盖范围，或者根据用户在其他网站上已经看到的广告来投放后续广告。
   - 开发者可以进行 A/B 测试，根据用户被分配到的组或每个变体已被多少用户查看，来向用户展示不同的内容。
   - 企业可以根据用户在其他网站上的行为来定制用户体验。例如，如果用户已经购买了会员资格，那么在其他网站上就不需要再向他们展示会员注册广告。
-- [受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 允许开发者实现基于兴趣组的广告投放，包括再营销和自定义受众使用场景。它可以评估多个广告位的出价，并在 `<fencedframe>` 中显示获胜的广告。
-- [隐私聚合 API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) 可以从 `<fencedframe>`（来源于共享存储空间或受保护的受众 API）中收集数据，并创建聚合报告。
+- [受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 允许开发者实现基于兴趣组的广告投放，包括再营销和自定义受众使用场景。它可以评估多个广告位的出价，并在 `<fencedframe>` 中显示获胜的广告。
+- [隐私聚合 API](https://developers.google.cn/privacy-sandbox/private-advertising/private-aggregation) 可以从 `<fencedframe>`（来源于共享存储空间或受保护的受众 API）中收集数据，并创建聚合报告。
 
 ## `<fencedframe>` 的工作原理
 
 如上所述，你不能通过常规脚本直接控制嵌入在 {{htmlelement("fencedframe")}} 中的内容。
 
-要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一个 {{domxref("FencedFrameConfig")}} 对象，然后通过 Javascript 将该对象设置为 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config")}} 属性。
+要设置将在 `<fencedframe>` 中显示的内容，使用 API（如[受保护的受众](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)或[共享存储](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage)）生成一个 {{domxref("FencedFrameConfig")}} 对象，然后通过 Javascript 将该对象设置为 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config")}} 属性。
 
 以下示例从受保护的受众 API 的广告拍卖中获取一个 `FencedFrameConfig`，然后使用它在 `<fencedframe>` 中显示获胜的广告：
 
@@ -60,9 +60,9 @@ frame.config = frameConfig;
 无论哪种方式，浏览器都会存储一个包含要嵌入内容的目标位置的 URL，该 URL 与不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性相对应。在嵌入上下文中运行的 JavaScript 无法读取 UR 值。
 
 > [!NOTE]
-> 在 `<iframe>` 中支持不透明 URN，以便将现有实现轻松迁移到[隐私沙盒](https://developers.google.com/privacy-sandbox)。这种支持是暂时的，随着采用率的提高，未来将会移除。
+> 在 `<iframe>` 中支持不透明 URN，以便将现有实现轻松迁移到[隐私沙盒](https://developers.google.cn/privacy-sandbox)。这种支持是暂时的，随着采用率的提高，未来将会移除。
 
-> **备注：** `FencedFrameConfig` 有一个 {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} 方法，用于将数据从嵌入文档传递到 `<fencedframe>` 共享存储中。例如，它可以在 {{domxref("Worklet")}} 中通过 `<fencedframe>` 访问，并用于生成报告。参见[共享存储 API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) 查看更多信息。
+> **备注：** `FencedFrameConfig` 有一个 {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} 方法，用于将数据从嵌入文档传递到 `<fencedframe>` 共享存储中。例如，它可以在 {{domxref("Worklet")}} 中通过 `<fencedframe>` 访问，并用于生成报告。参见[共享存储 API](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage) 查看更多信息。
 
 ### 在 `Fence` 对象上访问围栏框架功能
 
@@ -106,7 +106,7 @@ Supports-Loading-Mode: fenced-frame
 ## 接口
 
 - {{domxref("FencedFrameConfig")}}
-  - : 表示 {{htmlelement("fencedframe")}} 的导航配置，即该框架中将显示什么内容。`FencedFrameConfig` 由诸如[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) 等来源返回，并设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
+  - : 表示 {{htmlelement("fencedframe")}} 的导航配置，即该框架中将显示什么内容。`FencedFrameConfig` 由诸如[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience) 等来源返回，并设置为 {{domxref("HTMLFencedFrameElement.config")}} 的值。
 - {{domxref("Fence")}}
   - : 包含与围栏框架功能相关的多个函数。仅在嵌入在 `<fencedframe>` 内的文档中可用。
 - {{domxref("HTMLFencedFrameElement")}}
@@ -121,7 +121,7 @@ Supports-Loading-Mode: fenced-frame
 
 ## 注册和本地测试
 
-某些创建 {{domxref("FencedFrameConfig")}} 的 API 特性，如 {{domxref("Navigator.runAdAuction()")}}（[受保护的受众 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)）和 {{domxref("WindowSharedStorage.selectURL()")}}（[共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)），以及其他特性如 {{domxref("Fence.reportEvent()")}}，要求你将你的网站注册到[隐私沙盒注册流程](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Enrollment)中。如果你不注册，API 调用将失败，并在控制台中显示警告。
+某些创建 {{domxref("FencedFrameConfig")}} 的 API 特性，如 {{domxref("Navigator.runAdAuction()")}}（[受保护的受众 API](https://developers.google.cn/privacy-sandbox/private-advertising/protected-audience)）和 {{domxref("WindowSharedStorage.selectURL()")}}（[共享存储 API](/zh-CN/docs/Web/API/Shared_Storage_API)），以及其他特性如 {{domxref("Fence.reportEvent()")}}，要求你将你的网站注册到[隐私沙盒注册流程](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Enrollment)中。如果你不注册，API 调用将失败，并在控制台中显示警告。
 
 > [!NOTE]
 > 在 Chrome 中，你仍然可以在未注册情况下本地测试你的围栏框架代码。要允许本地测试，请启用以下 Chrome 开发者标志：
@@ -145,5 +145,5 @@ Supports-Loading-Mode: fenced-frame
 
 ## 参见
 
-- developers.google.com 上的[围栏框架](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox)
+- developers.google.cn 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
+- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)

@@ -31,7 +31,7 @@ slug: Web/CSS/@font-feature-values
 } /* Independent of the font */
 ```
 
-The `@font-feature-values` at-rule may be used at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/zh-CN/docs/Web/CSS/At-rule#Conditional_Group_Rules).
+The `@font-feature-values` at-rule may be used at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/zh-CN/docs/Web/CSS/At-rule#conditional_group_rules).
 
 ## Syntax
 

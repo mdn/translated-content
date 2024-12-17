@@ -16,8 +16,8 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 
 - Удостовериться, что вы используете современную версию браузера с поддержкой [WebGL](/ru/docs/Web/API/WebGL_API), например, Firefox или Chrome.
 - Создать папку для экспериментов.
-- Сохранить копию [последней версии библиотеки Three.js](http://threejs.org/build/three.min.js) в вашей папке.
-- Открыть [документацию Three.js](http://threejs.org/docs/) в отдельной вкладке.
+- Сохранить копию [последней версии библиотеки Three.js](https://threejs.org/build/three.min.js) в вашей папке.
+- Открыть [документацию Three.js](https://threejs.org/docs/) в отдельной вкладке.
 
 ## HTML структура
 
@@ -105,7 +105,7 @@ scene.add(camera);
 
 ## Отрисовка сцены
 
-Всё уже готово, но мы пока что ничего не видим. Хотя мы настроили рендерер, нам всё равно нужно запустить рендеринг. Функция `render()` выполнит эту работу с небольшой помощью [`requestAnimationFrame()`](/ru/docs/Web/API/window/requestAnimationFrame), которая заставляет сцену постоянно перерисовываться в каждом кадре:
+Всё уже готово, но мы пока что ничего не видим. Хотя мы настроили рендерер, нам всё равно нужно запустить рендеринг. Функция `render()` выполнит эту работу с небольшой помощью [`requestAnimationFrame()`](/ru/docs/Web/API/Window/requestAnimationFrame), которая заставляет сцену постоянно перерисовываться в каждом кадре:
 
 ```js
 function render() {

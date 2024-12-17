@@ -50,9 +50,9 @@ Content-Security-Policy: style-src-elem <source>;
 
 ### ソース
 
-`<source>` には、[CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#ソース) に掲載されている値のいずれかが使用できます。
+`<source>` には、[CSP ソース値](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#ソース) に掲載されている値のいずれかが使用できます。
 
-この同じ値の集合は、すべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)）で使用できるということに注意してください。
+この同じ値の集合は、すべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#relevant_directives)）で使用できるということに注意してください。
 
 ## 例
 

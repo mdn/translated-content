@@ -35,6 +35,6 @@ Feature-Policy: screen-wake-lock <allowlist>;
 
 - [Screen Wake Lock API](/ja/docs/Web/API/Screen_Wake_Lock_API)
 - {{HTTPHeader('Feature-Policy')}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - [許可リストの既定値](https://www.w3.org/TR/wake-lock/#wake-locks)

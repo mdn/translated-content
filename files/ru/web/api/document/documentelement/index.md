@@ -5,7 +5,7 @@ slug: Web/API/Document/documentElement
 
 {{APIRef("DOM")}}
 
-**`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/DOM/element) , который является коренным элементом документа [`document`](/ru/docs/DOM/document) (например элемент `<html>` для HTML документов).
+**`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/Web/API/Element) , который является коренным элементом документа [`document`](/ru/docs/Web/API/Document) (например элемент `<html>` для HTML документов).
 
 ## Синтаксис
 
@@ -30,7 +30,7 @@ for (var i = 0; i < firstTier.length; i++) {
 
 Это свойство удобно только для чтения для получения корневого элемента, связанного с любым документом.
 
-HTML документ обычно содержит один дочерний узел - `<html>`, возможно с объявлением DOCTYPE перед ним. XML документы часто содержат множественные дочерние узлы: корневой элемент, объявление DOCTYPE, и [инструкции по обработке](/ru/docs/DOM/ProcessingInstruction).
+HTML документ обычно содержит один дочерний узел - `<html>`, возможно с объявлением DOCTYPE перед ним. XML документы часто содержат множественные дочерние узлы: корневой элемент, объявление DOCTYPE, и [инструкции по обработке](/ru/docs/Web/API/ProcessingInstruction).
 
 Поэтому вам стоит использовать `document.documentElement` вместо {{Domxref("document.firstChild")}} для доступа к корневому элементу.
 

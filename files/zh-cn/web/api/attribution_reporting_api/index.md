@@ -112,6 +112,6 @@ l10n:
 ## 参见
 
 - [归因报告标头验证工具](https://wicg.github.io/attribution-reporting-api/validate-headers)
-- developers.google.com 上的[归因报告](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/)（2023）
-- developers.google.com 上的[启用转化测量](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement)（2023）
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox/)（2023）
+- developers.google.cn 上的[归因报告](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/)（2023）
+- developers.google.cn 上的[启用转化测量](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement)（2023）
+- developers.google.cn 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox/)（2023）

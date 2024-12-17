@@ -27,4 +27,4 @@ const label = track.label;
 
 ## 같이 보기
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

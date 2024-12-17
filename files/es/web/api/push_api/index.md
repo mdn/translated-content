@@ -12,13 +12,13 @@ La **API Push** otorga a las aplicaciones web la habilidad de recibir mensajes e
 
 ## Push conceptos y uso
 
-Para que una aplicación recibá mensajes push, esta debe tener un _[service worker](/es/docs/Web/API/ServiceWorker_API)_. Cuando el service worker esta activo, se puede suscribir usando {{domxref("PushManager.subscribe()")}}.
+Para que una aplicación recibá mensajes push, esta debe tener un _[service worker](/es/docs/Web/API/Service_Worker_API)_. Cuando el service worker esta activo, se puede suscribir usando {{domxref("PushManager.subscribe()")}}.
 
 El resultado de {{domxref("PushSubscription")}} incluye toda la información que la aplicación necesita para enviar un mensaje push: un _endpoint_ y la llave de cifrado necesaria para enviar los datos.
 
 El service worker se iniciará cuando sea necesario manejar mensajes push entrantes, que se entregan al manejador de eventos. Esto permite a las aplicaciones reaccionar a los mensajes push recibidos, por ejemplo para mostrar una notiificación usando {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
-Cada suscripción es unica para un service worker. El endpoint para la subscripción es una unica [capability URL](http://www.w3.org/TR/capability-urls/): el conocimiento del endpoint es todo lo se necesita para enviar un mensaje a tu aplicación. La URL del endpoint por lo tanto necesita ser mantenida secreta, u otras aplicaciones podrían ser capases de enviar mensajes push a tu aplicación.
+Cada suscripción es unica para un service worker. El endpoint para la subscripción es una unica [capability URL](https://www.w3.org/TR/capability-urls/): el conocimiento del endpoint es todo lo se necesita para enviar un mensaje a tu aplicación. La URL del endpoint por lo tanto necesita ser mantenida secreta, u otras aplicaciones podrían ser capases de enviar mensajes push a tu aplicación.
 
 Activar un Service-Worker para entregar un mensaje push puede resultar en el incremento de uso de recursos, especialmente de la batería. Los diferentes navegadores disponen de diferentes esquemas para manejar esto - en la actualidad no existe un mecanismo estándar para ello. Firefox permite un numero limitado (det. cuota) de mensajes push para enviar a una aplicación, aunque los mensajes push que generan una notificación estan exentos de este límite. Este límite se actualiza cada vez que se visita el sitio web. En comparación, Chrome no aplica límites, pero requiere que todo mensaje push muestre una notificación.
 
@@ -64,7 +64,7 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 
 ## Ver tambien
 
-- [¿Cómo usar la API Push?](/es/docs/Web/API/Push_API/Using_the_Push_API)
+- [¿Cómo usar la API Push?](/es/docs/Web/API/Push_API)
 - [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), on Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [Service Worker API](/es/docs/Web/API/Service_Worker_API)

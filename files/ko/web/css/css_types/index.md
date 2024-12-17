@@ -65,4 +65,4 @@ slug: Web/CSS/CSS_Types
 ## 같이 보기
 
 - [CSS 단위와 값](/ko/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 단위와 값 소개](/ko/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS 단위와 값 소개](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)

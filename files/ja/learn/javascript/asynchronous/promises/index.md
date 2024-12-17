@@ -34,7 +34,7 @@ l10n:
 > この記事では、ページからブラウザーの JavaScript コンソールにコードサンプルをコピーすることで、プロミスを探ります。設定するには、以下のようにしてください。
 >
 > 1. ブラウザーのタブを開いて <https://example.org> を開いてください。
-> 2. その他部の中で、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)の JavaScript コンソールを開いてください。
+> 2. その他部の中で、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)の JavaScript コンソールを開いてください。
 > 3. 例を示したら、それをコンソールにコピーしてください。新しい例を入力するたびにページを再読み込みする必要があります。そうしないと、コンソールが `fetchPromise` を再宣言したことにクレームを付けてくるでしょう。
 
 この例では、 <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> から JSON ファイルをダウンロードし、それに関するいくつかの情報をログに記録します。

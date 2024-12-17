@@ -78,7 +78,7 @@ JavaScript 语言中有许多内置的函数，它们可以让你无需自己编
 
 到目前为止我们所使用的内置代码同属于这两种形式：**函数**和**方法**。你可以在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)查看内置函数、内置对象以及其相关方法的完整列表。
 
-你在过去的课程中也见到过很多**自定义函数**——在你的代码中而非浏览器中定义的函数。每当你看到一个后面带有括号的自定义名称，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包含一个如下所示的自定义 `draw()` 函数：
+你在过去的课程中也见到过很多**自定义函数**——在你的代码中而非浏览器中定义的函数。每当你看到一个后面带有括号的自定义名称，那么你使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的 [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 示例（参见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包含一个如下所示的自定义 `draw()` 函数：
 
 ```js
 function draw() {
@@ -352,7 +352,7 @@ function greeting() {
 你想要调用的两个函数都被命名为 `greeting()`，但你只能访问到 `first.js` 文件中的 `greeting()` 函数（第二个函数会被忽略）。此外，（在 `second.js` 文件中）试图给 `name` 变量赋一个新值时会导致错误，因为它已经用 `const` 声明过了，所以无法重新赋值。
 
 > [!NOTE]
-> 你可以[在 GitHub 上参考运行的实例](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)（查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
+> 你可以[在 GitHub 上参考运行的实例](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html)（查看完整[源代码](https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/functions)）。
 
 将部分代码锁定在函数中避免了这样的问题，并被认为是最佳实践。
 

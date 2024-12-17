@@ -9,7 +9,7 @@ slug: Web/API/EventTarget
 
 {{domxref("Element")}} 及其子项、{{domxref("document")}} 和 {{domxref("window")}} 是最常见的事件目标，但其他对象也可以是事件目标。比如 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}} 和 {{domxref("AudioContext")}} 等等。
 
-许多事件目标（包括 `element`、`document` 和 `window`）都支持通过 `onevent` 特性和属性设置[事件处理程序](/zh-CN/docs/Web/Guide/DOM/Events/Event_handlers)。
+许多事件目标（包括 `element`、`document` 和 `window`）都支持通过 `onevent` 特性和属性设置[事件处理程序](/zh-CN/docs/Web/Events/Event_handlers)。
 
 {{InheritanceDiagram}}
 

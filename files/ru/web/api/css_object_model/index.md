@@ -96,8 +96,8 @@ slug: Web/API/CSS_Object_Model
 
 ## Уроки
 
-- [Определение размеров элементов](/ru/docs/Determining_the_dimensions_of_elements) (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).
-- [Управление ориентацией экрана](/ru/docs/WebAPI/Managing_screen_orientation)
+- [Определение размеров элементов](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).
+- [Управление ориентацией экрана](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Спецификации
 

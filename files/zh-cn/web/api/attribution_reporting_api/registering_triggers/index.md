@@ -50,7 +50,7 @@ l10n:
        > [!NOTE]
        > 用于表示每个事件的值以及数组中的元素数量完全是任意的，由作为开发人员的你定义。数组可以包含未使用的值，但在触发器注册时，必须在数组中存在值，以便浏览器将其归因于来源。
      - `"priority"`：表示归因触发器优先级的字符串值。有关更多信息，请参见[报告优先级和限制](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#报告优先级和限制)。
-     - `"deduplication_key"`：表示唯一键的字符串，用于防止归因重复——例如，如果用户多次将同一项添加到购物车。有关更多信息，请参见[防止报告重复](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication)。
+     - `"deduplication_key"`：表示唯一键的字符串，用于防止归因重复——例如，如果用户多次将同一项添加到购物车。有关更多信息，请参见[防止报告重复](https://developers.google.cn/privacy-sandbox/private-advertising/attribution-reporting/prevent-duplication)。
    - `"debug_key"`：表示调试键的数字。如果你希望生成[调试报告](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#调试报告)，请设置此项。
 
    请参见 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以获取所有可用字段的详细描述。

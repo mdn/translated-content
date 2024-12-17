@@ -5,18 +5,18 @@ slug: Web/SVG/Attribute/stop-color
 
 {{SVGRef}}
 
-« [SVG Attribute reference hom](/en/SVG/Attribute)e
+« [SVG Attribute reference hom](/es/docs/Web/SVG/Attribute)e
 
-El atributo `stop-color` indica que color usar en el stop del gradiente. La keyword `currentColor` y ICC pueden ser especificadas de la misma manera con la especificación [\<paint>](/en/SVG/Content_type#Paint) para los atributos {{ SVGAttr("fill") }} y {{ SVGAttr("stroke") }}.
+El atributo `stop-color` indica que color usar en el stop del gradiente. La keyword `currentColor` y ICC pueden ser especificadas de la misma manera con la especificación [\<paint>](/es/docs/Web/SVG#paint) para los atributos {{ SVGAttr("fill") }} y {{ SVGAttr("stroke") }}.
 
 ## Usage context
 
-| Categorías          | Presentation attribute                                                                                            |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Valor               | currentColor \| [\<color>](/en/SVG/Content_type#Color) \| [\<icccolor>](/en/SVG/Content_type#ICCColor) \| inherit |
-| Valor inicial       | negro                                                                                                             |
-| Animatable          | Sí                                                                                                                |
-| Documento normativo | [SVG 1.1 (2.ª edición)](http://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                               |
+| Categorías          | Presentation attribute                                                                                    |
+| ------------------- | --------------------------------------------------------------------------------------------------------- |
+| Valor               | currentColor \| [\<color>](/es/docs/Web/SVG#color) \| [\<icccolor>](/es/docs/Web/SVG#icccolor) \| inherit |
+| Valor inicial       | negro                                                                                                     |
+| Animatable          | Sí                                                                                                        |
+| Documento normativo | [SVG 1.1 (2.ª edición)](https://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                      |
 
 ## Ejemplos
 

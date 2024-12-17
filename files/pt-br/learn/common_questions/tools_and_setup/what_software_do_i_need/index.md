@@ -5,9 +5,9 @@ slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.
 
-| Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine) |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objetivo:       | Aprender quais _softwares_ você precisa se quiser editar, fazer _upload_, ou visualizar um _site_.                                                                 |
+| Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines) |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objetivo:       | Aprender quais _softwares_ você precisa se quiser editar, fazer _upload_, ou visualizar um _site_.                                                                                               |
 
 ## Sumário
 
@@ -23,7 +23,7 @@ Quase todos os sistemas operacionais incluem por padrão um editor de texto e um
 
 ## Práticas
 
-Ainda não existem práticas disponíveis. [Por favor, considere contribuir](/pt-BR/docs/MDN/Getting_started).
+Ainda não existem práticas disponíveis. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Contributing/Getting_started).
 
 ## Aprofundando
 
@@ -160,11 +160,11 @@ Aqui está uma captura de tela de um editor de texto online:
 
 ### Fazendo _upload_ de arquivos na _web_
 
-Quando seu _site_ está pronto para visualização pública, você precisa fazer _upload_ de suas páginas _web_ para o seu servidor*web.* Você precisa comprar espaço em um servidor, entre vários provedores (veja [Quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/How_much_does_it_cost)). Após você decidir qual provedor usar, o provador te enviará um _e-mail_ com suas informações de acesso, normalmente em forma de uma SFTP URL, nome de usuário, senha, e outra informação necessária para conectar no servidor. Tenha em mente que (S)FTP está um tanto quanto antiquado, e outros sistemas de _upload_ de arquivos estão se tornando populares, como [RSync](https://en.wikipedia.org/wiki/Rsync) e [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+Quando seu _site_ está pronto para visualização pública, você precisa fazer _upload_ de suas páginas _web_ para o seu servidor*web.* Você precisa comprar espaço em um servidor, entre vários provedores (veja [Quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Após você decidir qual provedor usar, o provador te enviará um _e-mail_ com suas informações de acesso, normalmente em forma de uma SFTP URL, nome de usuário, senha, e outra informação necessária para conectar no servidor. Tenha em mente que (S)FTP está um tanto quanto antiquado, e outros sistemas de _upload_ de arquivos estão se tornando populares, como [RSync](https://en.wikipedia.org/wiki/Rsync) e [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
 > **Nota:**FTP é inerentemente inseguro. Você precisa se certificar que seu provedor permite o uso de uma conexão segura, por exemplo o SFTP ou RSync com SSH.
 
-Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante a criação de um _site_, por isso cobrimos isso detalhadamente em um [artigo separado](/pt-BR/docs/Learn/Upload_files_to_a_web_server). Agora, aqui está uma pequena lista de clientes (S)FTP básicos e gratuítos:
+Fazer _upload_ de arquivos para um servidor _web_ é um importante passo durante a criação de um _site_, por isso cobrimos isso detalhadamente em um [artigo separado](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Agora, aqui está uma pequena lista de clientes (S)FTP básicos e gratuítos:
 
 <table class="standard-table">
   <thead>
@@ -250,6 +250,6 @@ Por todos os meios possíveis, execute testes em dispositivos reais, especialmen
 
 ## Próximos passos
 
-- Alguns desses _software_ são gratis, mas não todos eles. [Descubra quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/How_much_does_it_cost)[.](/pt-BR/docs/Learn/How_much_does_it_cost)
-- Se você deseja aprender mais sobre editores de texto, leia nosso artigo sobre [como escolher e instalar um editor de texto.](/pt-BR/docs/Learn/Choose,_Install_and_set_up_a_text_editor)
-- Se você está se perguntando como publicar seu*site* na*web*, veja ["Como fazer _upload_ para um servidor*web*"](/pt-BR/docs/Learn/Upload_files_to_a_web_server).
+- Alguns desses _software_ são gratis, mas não todos eles. [Descubra quanto custa fazer algo na _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)[.](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- Se você deseja aprender mais sobre editores de texto, leia nosso artigo sobre [como escolher e instalar um editor de texto.](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)
+- Se você está se perguntando como publicar seu*site* na*web*, veja ["Como fazer _upload_ para um servidor*web*"](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

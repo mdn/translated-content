@@ -97,7 +97,7 @@ slug: Web/HTML/Element/a
   - : 在定义一个可能的目标位置时曾经是必需的。在 HTML 4.01 规范中，`<a>` 元素可以同时使用 `id` 和 `name`，只要它们有相同的值。
 
     > [!NOTE]
-    > 使用全局属性 [`id`](/zh-CN/docs/HTML/Global_attributes#id) 来代替。
+    > 使用全局属性 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 来代替。
 
 - `rev` {{Deprecated_Inline}}
   - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。

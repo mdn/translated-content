@@ -13,8 +13,8 @@ slug: WebAssembly/Exported_functions
 
 你可以通过两种方式来获得导出的 WebAssembly 函数：
 
-- 在一个已经存在的表格上调用 [Table.prototype.get()](/zh-CN/docs/WebAssembly/API/Table/get)。
-- 通过 [Instance.exports](/zh-CN/docs/WebAssembly/API/Instance/exports) 从一个 wasm 模块实例获取导出的函数。
+- 在一个已经存在的表格上调用 [Table.prototype.get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get)。
+- 通过 [Instance.exports](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports) 从一个 wasm 模块实例获取导出的函数。
 
 无论哪种方式，你得到的都是底层函数的相同封装。从 JavaScript 的角度来看，每一个 wasm 函数看起来也是一个 JavaScript 函数——但是，它们被封装在导出的 wasm 函数对象实例中，并且只有有限的方式来获取它们。
 
@@ -36,17 +36,17 @@ fetchAndInstantiate("table.wasm").then(function (instance) {
 });
 ```
 
-在这里，我们使用 [WebAssembly.Table](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table) 构造函数在 JavaScript 中创建了一个表格（otherTable），然后使用 [fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 实用函数把 table.wasm 加载到我们的页面。
+在这里，我们使用 [WebAssembly.Table](/zh-CN/docs/WebAssembly/JavaScript_interface/Table) 构造函数在 JavaScript 中创建了一个表格（otherTable），然后使用 [fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 实用函数把 table.wasm 加载到我们的页面。
 
-然后，我们得到了从模块中导出的函数，通过 [tbl.get()](/zh-CN/docs/WebAssembly/API/Table/get) 获取引用的函数并且把每一次的调用结果输出到控制台。接下来，我们使用 set() 使得 otherTable 表格包含了与 tbl 表格相同的函数。
+然后，我们得到了从模块中导出的函数，通过 [tbl.get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 获取引用的函数并且把每一次的调用结果输出到控制台。接下来，我们使用 set() 使得 otherTable 表格包含了与 tbl 表格相同的函数。
 
 为了证明这一点，我们从 otherTable 中获取了这些引用并且也把他们的结果打印到控制台，结果是一样的。
 
 ## 它们确实是函数
 
-在前面的例子中，每次 [Table.prototype.get()](/zh-CN/docs/WebAssembly/API/Table/get) 调用的返回值都是一个导出的 WebAssembly 函数——这正是我们一直在讨论的。
+在前面的例子中，每次 [Table.prototype.get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 调用的返回值都是一个导出的 WebAssembly 函数——这正是我们一直在讨论的。
 
-它们确实是 JavaScript 函数也是对 WebAssembly 函数的封装。如果你把上面的例子加载到[支持 WebAssembly 的浏览器](/zh-CN/docs/WebAssembly#Browser_compatibility)中，然后在你的控制台运行下面几行代码：
+它们确实是 JavaScript 函数也是对 WebAssembly 函数的封装。如果你把上面的例子加载到[支持 WebAssembly 的浏览器](/zh-CN/docs/WebAssembly#browser_compatibility)中，然后在你的控制台运行下面几行代码：
 
 ```js
 var testFunc = otherTable.get(0);

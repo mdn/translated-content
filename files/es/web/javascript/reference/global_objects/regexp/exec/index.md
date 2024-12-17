@@ -165,5 +165,5 @@ Esto logueará un mensaje que contiene 'hola mundo!'.
 
 ## Ver también
 
-- Capítulo de [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de Javascript](/es/docs/Web/JavaScript/Guide)
+- Capítulo de [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de Javascript](/es/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

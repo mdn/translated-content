@@ -28,7 +28,7 @@ l10n:
   </tbody>
 </table>
 
-附加组件的短名称。一般用在 [name](/zh-CN/Add-ons/WebExtensions/manifest.json/name) 字段太长的情况下。建议短名称的长度不要超过 12 个字符。如果没有在 manifest.json 主文件中声明 short_name, 则将使用 name 的值，且可能会被截断。
+附加组件的短名称。一般用在 [name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) 字段太长的情况下。建议短名称的长度不要超过 12 个字符。如果没有在 manifest.json 主文件中声明 short_name, 则将使用 name 的值，且可能会被截断。
 
 这是一个[可本地化属性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#国际化_manifest.json)。
 

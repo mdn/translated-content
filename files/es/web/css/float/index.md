@@ -5,7 +5,7 @@ slug: Web/CSS/float
 
 {{CSSRef}}
 
-La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#Absolute_positioning)).
+La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#absolute_positioning)).
 
 {{EmbedInteractiveExample("pages/css/float.html")}}
 
@@ -32,7 +32,7 @@ Como `float` implica el uso del layout de bloques, este modifica el valor calcul
 | inline-grid            | grid                |
 | otros                  | sin cambios         |
 
-Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto [element.style](/es/DOM/element#element.style), hay que tener en cuenta que los navegadores modernos soportan `float` pero en navegadores más antiguos hay que escribir la propiedad como `cssFloat`, otros navegadores como Internet Explorer 8 y anteriores utilizan `styleFloat`. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre _camel-case_ (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).
+Nota: Al referirse a una propiedad desde JavaScript como un miembro del objeto [element.style](/es/docs/Web/API/Element#element.style), hay que tener en cuenta que los navegadores modernos soportan `float` pero en navegadores más antiguos hay que escribir la propiedad como `cssFloat`, otros navegadores como Internet Explorer 8 y anteriores utilizan `styleFloat`. Fue una excepción a la regla, que el nombre del miembro DOM sea el nombre _camel-case_ (styleFloat) del nombre CSS (style-float) separado por guión (debido al hecho que "float" es una palabra reservada en JavaScript, es necesario escapar "class" como "className" y escapar "for" de la etiqueta como "htmlFor" ).
 
 ## Sintáxis
 
@@ -83,7 +83,7 @@ El elemento debe flotar en el costado de inicio de su bloque contenedor. Esto es
 
 ### Como son ubicados los elements flotantes
 
-[Ver El Ejemplo Vivo](/samples/cssref/float.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/float.html)
 
 Como se ha mencionado más arriba, cuando un elemento flota, es removido del flujo normal del documento (aunque sigue perteneciendo a él). Se cambia hacia la izquierda, o hacia la derecha, hasta que toca el límite de su caja contenedora, u _otro elemento flotante._
 

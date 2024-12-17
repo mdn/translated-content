@@ -19,7 +19,7 @@ Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la m
 >
 > Hemos preparado un curso que incluye toda la información esencial que necesita para trabajar hacia su objetivo.
 >
-> [**Empezar**](/es/docs/Learn/Front-end_web_developer)
+> [**Empezar**](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Donde empezar
 
@@ -94,7 +94,7 @@ Puedes actualizar el repositorio `learning-area` con cualquier cambio realizado 
 
 Si quieres ponerte en contacto sobre cualquier cosa, utiliza los [canales de comunicación](/es/docs/MDN/Community/Communication_channels). Nos gustaría saber de ti sobre cualquier cosa que creas que está mal o que falta en el sitio, solicitudes de nuevos temas de aprendizaje, solicitudes de ayuda con elementos que no comprendes o cualquier otra pregunta o inquietud.
 
-Si estás interesado en ayudar a desarrollar/mejorar el contenido, echa un vistazo a [cómo puedes ayudar](/es/docs/MDN/Contribute) ¡y ponte en contacto! Estamos más que felices de hablar contigo, ya sea un alumno, un maestro, un desarrollador web experimentado o cualquier otra persona interesada en ayudar a mejorar la experiencia de aprendizaje.
+Si estás interesado en ayudar a desarrollar/mejorar el contenido, echa un vistazo a [cómo puedes ayudar](/es/docs/MDN/Community/Contributing) ¡y ponte en contacto! Estamos más que felices de hablar contigo, ya sea un alumno, un maestro, un desarrollador web experimentado o cualquier otra persona interesada en ayudar a mejorar la experiencia de aprendizaje.
 
 ## Véase también
 

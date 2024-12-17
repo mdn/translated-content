@@ -24,7 +24,7 @@ L'objet **`ReferenceError`** représente une erreur qui se produit lorsqu'il fai
   - : Le numéro de la ligne du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 - [`ReferenceError.prototype.columnNumber`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber)
   - : Le numéro de colonne dans la ligne du fichier qui a déclenché cette erreur. Hérité depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
-- [`ReferenceError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/Stack)
+- [`ReferenceError.prototype.stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack)
   - : La pile d'appels. Héritée depuis [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
 ## Exemples

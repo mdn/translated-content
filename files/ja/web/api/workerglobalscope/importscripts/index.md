@@ -1,9 +1,9 @@
 ---
 title: "WorkerGlobalScope: importScripts() メソッド"
-short-title: importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 l10n:
   sourceCommit: 2c732b2ab1969d6ae887b865b11ba27de225f291
+short-title: importScripts()
 ---
 
 {{APIRef("Web Workers API")}}
@@ -30,7 +30,7 @@ importScripts(path0, path1, /* …, */ pathN)
 ### 例外
 
 - `NetworkError`
-  - : インポートされたスクリプトが `text/javascript` の MIME タイプでないか、許可された[古い JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#legacy_javascript_mime_types)のいずれでもない状態で提供された場合。
+  - : インポートされたスクリプトが `text/javascript` の MIME タイプでないか、許可された[古い JavaScript の MIME タイプ](/ja/docs/Web/HTTP/MIME_types#legacy_javascript_mime_types)のいずれでもない状態で提供された場合。
 
 ## 例
 

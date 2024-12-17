@@ -375,7 +375,7 @@ function setWeather() {
 
 ## 삼항연산자
 
-다른 예제로 들어가기 전에 소개하고 싶은 마지막 구문이 있습니다. 삼항(조건)연산자([ternary or conditional operator](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator))는 조건을 테스트하고 만약 조건이 `true`라면 하나의 값/표현식을 리턴하고, 만약 `false`라면 다른 값/표현식을 리턴하는 구문입니다 — 이것은 어떤 상황에 유용할 수 있으며, 만약 `true`/`false`조건 사이를 통해 선택되는 두 선택을 가지고 있다면 `if...else` 블록보다 코드를 훨씬 적게 사용할 수 있습니다. 이 의사 코드는 아래와 같습니다:
+다른 예제로 들어가기 전에 소개하고 싶은 마지막 구문이 있습니다. 삼항(조건)연산자([ternary or conditional operator](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator))는 조건을 테스트하고 만약 조건이 `true`라면 하나의 값/표현식을 리턴하고, 만약 `false`라면 다른 값/표현식을 리턴하는 구문입니다 — 이것은 어떤 상황에 유용할 수 있으며, 만약 `true`/`false`조건 사이를 통해 선택되는 두 선택을 가지고 있다면 `if...else` 블록보다 코드를 훨씬 적게 사용할 수 있습니다. 이 의사 코드는 아래와 같습니다:
 
 ```
 ( condition ) ? run this code : run this code instead
@@ -426,7 +426,7 @@ select.onchange = function () {
 
 여기에는 테마(검정 또는 하양)를 고르기 위한 '{{htmlelement('select')}}' 요소가 있고, 여기에 더하여 웹사이트 제목을 보여주는 간단한 '{{htmlelement('h1')}}" 요소가 있습니다. 우리는 또한 `update()`라는 함수를 가지고 있는데, 이 함수는 두 색상을 매개변수(parameter)(입력)로 취합니다. 웹사이트의 배경색이 첫 번째 제공된 색상으로 지정되고, 텍스트 색상이 두 번째 제공된 색상으로 정해집니다.
 
-끝으로, 우리는 또한 삼항연산자를 포함하고 있는 함수의 실행을 제공하는 '[onchange](/ko/docs/Web/API/GlobalEventHandlers/onchange)' 이벤트 리스너를 가지고 있습니다. 이것은 테스트 조건으로 시작합니다 — `select.value === 'black'`. 만약 이것이 `true`를 리턴하면, 우리는 검정과 하양의 매개변수를 지니고 있는 `update()`함수를 실행하는데, 이는 배경색은 검정으로 텍스트 색은 하양으로 되는 결과를 의미합니다. 만약 이것이 `false`를 리턴하면, 우리는 하양과 검정의 매개변수를 지니고 있는 `update()`함수를 실행하는데, 이는 사이트의 색상이 반전됐다는 것을 의미합니다.
+끝으로, 우리는 또한 삼항연산자를 포함하고 있는 함수의 실행을 제공하는 '[onchange](/ko/docs/Web/API/HTMLElement/change_event)' 이벤트 리스너를 가지고 있습니다. 이것은 테스트 조건으로 시작합니다 — `select.value === 'black'`. 만약 이것이 `true`를 리턴하면, 우리는 검정과 하양의 매개변수를 지니고 있는 `update()`함수를 실행하는데, 이는 배경색은 검정으로 텍스트 색은 하양으로 되는 결과를 의미합니다. 만약 이것이 `false`를 리턴하면, 우리는 하양과 검정의 매개변수를 지니고 있는 `update()`함수를 실행하는데, 이는 사이트의 색상이 반전됐다는 것을 의미합니다.
 
 > [!NOTE]
 > 또한 [이 예제를 GitHub에서 찾을 수 있습니다](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html). (see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) on there also.)
@@ -810,6 +810,6 @@ textarea.onkeyup = function () {
 - [비교 연산자(Comparison operators)](/ko/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
 - [조건문 자세하게 살펴보기](/ko/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else 참고서](/ko/docs/Web/JavaScript/Reference/Statements/if...else)
-- [삼항연산자 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [삼항연산자 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

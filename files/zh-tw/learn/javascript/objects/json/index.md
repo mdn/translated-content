@@ -102,7 +102,7 @@ superHeroes["members"][1]["powers"][2];
 5. 在 `powers` 屬性中有 1 個陣列具備所選超級英雄的能力。我們要選第三種能力，所以用 `[2]`。
 
 > [!NOTE]
-> 我們在 [JSONText.html](http://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) 的變數中，示範上述可用的 JSON。你可在自己瀏覽器的 JavaScript 主控台載入此程式碼，並存取變數中的資料。
+> 我們在 [JSONText.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) 的變數中，示範上述可用的 JSON。你可在自己瀏覽器的 JavaScript 主控台載入此程式碼，並存取變數中的資料。
 
 ### 陣列作為 JSON
 
@@ -212,7 +212,7 @@ var section = document.querySelector("section");
 
 在這裡，我們將所獲得的響應 (可到 [`response`](/zh-TW/docs/Web/API/XMLHttpRequest/response) 屬性中找到) 儲存到 `superHeroes` 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`header>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
 
-當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequestEventTarget/onload)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
+當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequest/load_event)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
 
 ### 產生標頭
 
@@ -274,7 +274,7 @@ function showHeroes(jsonObj) {
 
 我們先把 JSON 的 `members` 屬性儲存到新的變數中。此陣列所具備的多個物件，均包含了各個超級英雄的資訊。
 
-接著我們以 [for 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
+接著我們以 [for 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
 
 1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>`、3 組 `<p>`、1 組 `<ul>`。
 2. 讓 `<h2>` 納入目前超級英雄的 `name`。
@@ -284,10 +284,10 @@ function showHeroes(jsonObj) {
 6. 最後就是在 `<article>` (`myArticle`) 之內附加 `<h2>`、`<p>`、`<ul>`；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
 
 > [!NOTE]
-> 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
+> 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
 
 > [!NOTE]
-> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](http://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
+> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
 
 ## 物件與文字交互轉換
 
@@ -302,7 +302,7 @@ request.responseType = "json";
 - [`parse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：接收文字字串形式的 JSON 物件作為參數，並回傳對應的物件。
 - [`stringify()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收 JSON 物件作為參數，並回傳對等的文字字串形式。
 
-你可到 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) 中看到第一個函式的運作情形。這其實跟我們先前範例所進行的事情一模一樣，不同之處在於我們設定 XHR 要回傳 JSON 為文字，接著再使用 `parse()` 轉換為實際的 JSON 物件。關鍵程式碼片段如下：
+你可到 [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) 中看到第一個函式的運作情形。這其實跟我們先前範例所進行的事情一模一樣，不同之處在於我們設定 XHR 要回傳 JSON 為文字，接著再使用 `parse()` 轉換為實際的 JSON 物件。關鍵程式碼片段如下：
 
 ```js
 request.open("GET", requestURL);

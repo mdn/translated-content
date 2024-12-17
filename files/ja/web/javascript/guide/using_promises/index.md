@@ -392,7 +392,7 @@ for (const f of [func1, func2, func3]) {
 
 {{jsxref("Promise")}} は[コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)を使って 1 から生成すこともできます。これが必要になるのは古い API をラップする場合のみでしょう。
 
-理想的には、すべての非同期関数はプロミスを返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。顕著な例としては [`setTimeout()`](/ja/docs/Web/API/setTimeout) 関数があります。
+理想的には、すべての非同期関数はプロミスを返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。顕著な例としては [`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) 関数があります。
 
 ```js
 setTimeout(() => saySomething("10 seconds passed"), 10 * 1000);
@@ -468,7 +468,7 @@ console.log(1); // 1, 2, 3, 4
 
 ### タスクキューとマイクロタスク
 
-プロミスのコールバックは[マイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)として処理され、 [`setTimeout()`](/ja/docs/Web/API/setTimeout) コールバックはタスクキューとして扱われます。
+プロミスのコールバックは[マイクロタスク](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)として処理され、 [`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) コールバックはタスクキューとして扱われます。
 
 ```js
 const promise = new Promise((resolve, reject) => {
@@ -500,7 +500,7 @@ event-loop cycle: Promise (fulfilled) Promise {<fulfilled>}
 
 プロミスとタスク（イベントやコールバックなど）が予測不可能な順序で発行されている状況に遭遇した場合、マイクロタスクを使用して状態をチェックしたり、プロミスが条件付きで作成されている場合にプロミスのバランスを取ったりすることが有益である可能性があります。
 
-マイクロタスクがこの問題の解決に役立つと思われる場合は、[マイクロタスクガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)で [`queueMicrotask()`](/ja/docs/Web/API/queueMicrotask) を使用して関数をマイクロタスクとしてキューに入れる方法について詳しく説明しています。
+マイクロタスクがこの問題の解決に役立つと思われる場合は、[マイクロタスクガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)で [`queueMicrotask()`](/ja/docs/Web/API/Window/queueMicrotask) を使用して関数をマイクロタスクとしてキューに入れる方法について詳しく説明しています。
 
 ## 関連情報
 

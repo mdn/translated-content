@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 - {{cssxref("contain", "contain: layout", "#layout")}}, `content`, `strict` のいずれかの要素
 - {{Glossary("flex item", "フレックスアイテム")}}
 - グリッドアイテム
-- [段組みコンテナー](/ja/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [段組みコンテナー](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
 - {{cssxref("column-span")}} が `all` に設定された要素
 
 これは、新しい BFC がメインレイアウトの中でミニレイアウトとなり、一番外側の文書のように動作するので便利です。 BFC はその中にすべてを含み、 {{cssxref("float")}} と {{cssxref("clear")}} は同じ整形コンテキスト内の項目にのみ適用され、マージンは同じ整形コンテキスト内の要素間でのみ相殺されます。
@@ -38,7 +38,7 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 
 新しい BFC を生成する効果を見るために、いくつかの例を見てみましょう。
 
-下の例では、境界が適用された `<div>` の中に浮動要素があります。その `<div>` の内容は、その浮動要素の横に並んでいます。その浮動要素の内容は、その横にある内容よりも高さが高いため、 `<div>` の境界線がその浮動要素を通過するようになりました。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)で説明されているように、浮動要素はフローから外れているので、 `<div>` の背景と境界には内容だけが含まれ、浮動要素は含まれません。
+下の例では、境界が適用された `<div>` の中に浮動要素があります。その `<div>` の内容は、その浮動要素の横に並んでいます。その浮動要素の内容は、その横にある内容よりも高さが高いため、 `<div>` の境界線がその浮動要素を通過するようになりました。[フロー内とフローの外のガイド](/ja/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)で説明されているように、浮動要素はフローから外れているので、 `<div>` の背景と境界には内容だけが含まれ、浮動要素は含まれません。
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
@@ -74,10 +74,10 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 
 ## まとめ
 
-このガイドでは、ブロックおよびインライン整形コンテキストにおける詳細と、ブロック整形コンテキスト (BFC) を生成することの重要な目的を見てきました。次のガイドでは、[通常フローがどのように様々な所持方向に対応するか](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)を見ていきます。
+このガイドでは、ブロックおよびインライン整形コンテキストにおける詳細と、ブロック整形コンテキスト (BFC) を生成することの重要な目的を見てきました。次のガイドでは、[通常フローがどのように様々な所持方向に対応するか](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)を見ていきます。
 
 ## 関連情報
 
-- [ブロック整形コンテキスト (BFC)](/ja/docs/Web/Guide/CSS/Block_formatting_context)
+- [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
 - [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)

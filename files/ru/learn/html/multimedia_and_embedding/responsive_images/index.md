@@ -17,7 +17,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
-Такая вёрстка хорошо выглядит на широкоформатных экранах ноутбуков и настольных ПК, (вы можете посмотреть [посмотреть демо-пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) и найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) на Github.) Мы не будем подробно рассматривать CSS, скажем только следующее:
+Такая вёрстка хорошо выглядит на широкоформатных экранах ноутбуков и настольных ПК, (вы можете посмотреть [посмотреть демо-пример](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) и найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) на Github.) Мы не будем подробно рассматривать CSS, скажем только следующее:
 
 - Содержимому тега `main` задана максимальная ширина 1200 пикселей. Если ширина окна браузера больше этого значения, то содержимое сайта остаётся на 1200 пикселей и центрирует себя в доступном пространстве. Если ширина окна браузера меньше, содержимое устанавливается в 100% от ширины экрана.
 - Изображение в шапке всегда будет оставаться в центре тега header вне зависимости от ширины браузера. Если сайт будет просматриваться на узких экранах, то важные детали в центре изображения (люди) всё равно будут видны. Все, что выходит за пределы ширины экрана будет скрыто. Высота шапки 200 пикселей.
@@ -52,7 +52,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-Однако есть два новых атрибута — [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Element/img#sizes) — позволяющих добавить дополнительные изображения с пометками, чтобы браузер выбрал подходящее. Пример на Github: [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) (также смотри [источник кода](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)).
+Однако есть два новых атрибута — [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Element/img#sizes) — позволяющих добавить дополнительные изображения с пометками, чтобы браузер выбрал подходящее. Пример на Github: [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) (также смотри [источник кода](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)).
 
 ```html
 <img
@@ -109,9 +109,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ### Полезные инструменты разработчика
 
-Есть несколько полезных браузерных [инструментов разработчика](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools), чтобы помочь с определением необходимой ширины слотов и т. д., которые вам нужно использовать. Когда я работал над ними, я сначала загружал фиксированную версию моего примера (`not-responsive.html`), затем открывал [Responsive Design View](/ru/docs/Tools/Responsive_Design_Mode) (_Tools > Web Developer > Responsive Design View_), который позволяет взглянуть на layout вашей веб-страницы как если бы они были просмотрены через устройства с различными размерами экрана.
+Есть несколько полезных браузерных [инструментов разработчика](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), чтобы помочь с определением необходимой ширины слотов и т. д., которые вам нужно использовать. Когда я работал над ними, я сначала загружал фиксированную версию моего примера (`not-responsive.html`), затем открывал [Responsive Design View](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) (_Tools > Web Developer > Responsive Design View_), который позволяет взглянуть на layout вашей веб-страницы как если бы они были просмотрены через устройства с различными размерами экрана.
 
-Я устанавливал viewport width на 320px, затем на 480px; для каждой я обращался к [DOM Inspector,](/ru/docs/Tools/Page_Inspector) кликал по элементу {{htmlelement("img")}} в котором мы заинтересованы, далее смотрел размер во вкладке Box Model с правой стороны дисплея. Это должно дать вам необходимую ширину изображения
+Я устанавливал viewport width на 320px, затем на 480px; для каждой я обращался к [DOM Inspector,](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) кликал по элементу {{htmlelement("img")}} в котором мы заинтересованы, далее смотрел размер во вкладке Box Model с правой стороны дисплея. Это должно дать вам необходимую ширину изображения
 
 ![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](box-model-devtools.png)
 
@@ -121,7 +121,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ### Переключения разрешений: Одинаковый размер, разные разрешения
 
-Если вы поддерживаете несколько разрешений экрана, но все видят ваше изображение в одном и том же размере на экране, вы можете позволить браузеру выбирать изображение с подходящим разрешением используя `srcset` с x-дескриптором и без `sizes` — более простой синтаксис! Найти пример как это выглядит можно здесь [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (смотрите также [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
+Если вы поддерживаете несколько разрешений экрана, но все видят ваше изображение в одном и том же размере на экране, вы можете позволить браузеру выбирать изображение с подходящим разрешением используя `srcset` с x-дескриптором и без `sizes` — более простой синтаксис! Найти пример как это выглядит можно здесь [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (смотрите также [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
 <img
@@ -144,13 +144,13 @@ img {
 
 Подводя итоги, **проблема художественного оформления** заключается в желании изменить отображаемое изображение чтобы оно соответствовало разным размерам отображения изображения. Например, если на веб-сайте отображается большой пейзажный снимок с человеком посередине при просмотре в браузере на настольном компьютере, то при просмотре веб-сайта в мобильном браузере он уменьшается; он будет выглядеть плохо так как человек будет очень маленьким, и его будет тяжело разглядеть. Вероятно будет лучше показать меньшую портретную картинку в мобильной версии на которой человек отображается в увеличении (в приближении). Элемент {{htmlelement("picture")}} позволяет нам применять именно такое решение.
 
-Возвращаясь к нашему оригинальному примеру [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), мы имеем изображение которое очень нуждается в художественном оформлении:
+Возвращаясь к нашему оригинальному примеру [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), мы имеем изображение которое очень нуждается в художественном оформлении:
 
 ```html
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
-Давайте исправим это при помощи элемента {{htmlelement("picture")}}! Так же как [`<video>` и `<audio>`](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), элемент `<picture>` это обёртка содержащая некоторое количество элементов {{htmlelement("source")}} которые предоставляют браузеру выбор нескольких разных источников, в сопровождении крайне важного элемента {{htmlelement("img")}}. Код [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) выглядит так:
+Давайте исправим это при помощи элемента {{htmlelement("picture")}}! Так же как [`<video>` и `<audio>`](/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), элемент `<picture>` это обёртка содержащая некоторое количество элементов {{htmlelement("source")}} которые предоставляют браузеру выбор нескольких разных источников, в сопровождении крайне важного элемента {{htmlelement("img")}}. Код [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) выглядит так:
 
 ```html
 <picture>

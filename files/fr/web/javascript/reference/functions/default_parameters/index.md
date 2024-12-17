@@ -183,7 +183,7 @@ f(2); // [2, undefined]
 
 ### Paramètre par défaut et décomposition des paramètres
 
-Il est possible d'utiliser les valeurs par défaut avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition) :
+Il est possible d'utiliser les valeurs par défaut avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) :
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {

@@ -33,7 +33,7 @@ slug: Web/XSLT/Element/apply-templates
 
 ### 정의
 
-[XSLT section 5.4, Applying Template Rules](http://www.w3.org/TR/xslt#section-Applying-Template-Rules)
+[XSLT section 5.4, Applying Template Rules](https://www.w3.org/TR/xslt#section-Applying-Template-Rules)
 
 ### Gecko 지원
 

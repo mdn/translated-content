@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fontsize
 La propriété **`fontsize()`** permet de créer un élément HTML {{HTMLElement("font")}} qui permet d'afficher la chaîne de caractères dans une fonte de taille donnée.
 
 > [!NOTE]
-> L'élément \<font> a été retiré dans [HTML5](/fr/docs/Web/Guide/HTML/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
+> L'élément \<font> a été retiré dans [HTML5](/fr/docs/Glossary/HTML5) et ne devrait plus être utilisé. Les propriétés [CSS](/fr/docs/Web/CSS) permettent de modifier les aspects de mise en forme et doivent donc être utilisées à la place.
 
 ## Syntaxe
 

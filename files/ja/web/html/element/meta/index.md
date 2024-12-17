@@ -107,7 +107,7 @@ l10n:
 
     - `content-type`
 
-      文書の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に [`charset`](#charset) 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
+      文書の [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)を宣言するもので、後に文字エンコーディングの定義が続きます。指定された場合、 `content` 属性には "`text/html; charset=utf-8`" 設定しなければなりません。これは `<meta>` 要素に [`charset`](#charset) 属性を指定した場合と同じであり、文書内の位置の制約も同様になります。 **メモ:** `text/html`で提供される文書でのみ使用することができます - XML MIME型で提供される文書では使用できません。
 
     - `default-style`
 

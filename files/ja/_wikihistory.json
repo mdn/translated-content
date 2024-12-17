@@ -21490,10 +21490,6 @@
     "modified": "2019-03-23T22:24:48.101Z",
     "contributors": ["mfuji09", "kachick", "SphinxKnight", "yyss"]
   },
-  "Web/HTTP/Configuring_servers_for_Ogg_media": {
-    "modified": "2019-03-18T21:25:34.436Z",
-    "contributors": ["silverskyvicto"]
-  },
   "Web/HTTP/Connection_management_in_HTTP_1.x": {
     "modified": "2020-09-27T09:47:29.485Z",
     "contributors": [
@@ -28806,6 +28802,10 @@
   "Web/Media/Formats": {
     "modified": "2020-09-03T13:27:24.598Z",
     "contributors": ["mfuji09"]
+  },
+  "Web/Media/Formats/Configuring_servers_for_Ogg_media": {
+    "modified": "2019-03-18T21:25:34.436Z",
+    "contributors": ["silverskyvicto"]
   },
   "Web/Media/Formats/Image_types": {
     "modified": "2020-11-09T23:53:41.374Z",

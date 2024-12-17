@@ -47,7 +47,7 @@ background-image: unset;
 - `none`
   - : Utilizado para especificar que un elemento no debe tener imagen de fondo.
 - `<image>`
-  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds).
+  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
 
 ## Problemas de accesibilidad
 

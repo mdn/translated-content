@@ -92,4 +92,4 @@ The `:target` pseudo-class also works fine with **undisplayed elements**:
 
 ## 參見
 
-- [使用 :target](/zh-TW/docs/Using_the_:target_selector)
+- [使用 :target](/zh-TW/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)

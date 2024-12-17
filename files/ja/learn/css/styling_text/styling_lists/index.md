@@ -73,7 +73,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-ここで実際の例に行き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかの装飾の既定設定に気付くでしょう。
+ここで実際の例に行き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかの装飾の既定設定に気付くでしょう。
 
 - {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。
 - リスト項目 ({{htmlelement("li")}} 要素) には、間隔の設定に関する既定はありません。

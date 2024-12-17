@@ -209,7 +209,7 @@ main {
 ## 関連情報
 
 - {{CSSxRef("var()", "var(…)")}}
-- [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_Variables)
+- [CSS カスタムプロパティと変数のカスケード](/ja/docs/Web/CSS/CSS_cascading_variables)
 - [カスタムプロパティ (--\*)](/ja/docs/Web/CSS/--*)
 - [CSS カスタムプロパティ (変数) の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)

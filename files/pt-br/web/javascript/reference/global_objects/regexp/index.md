@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 O construtor **`RegExp`** cria um objeto de expressão regular para realizar uma correspondência de texto com um padrão.
 
-Para uma introdução à expressões regulares, leia o [capítulo de Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) no [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide).
+Para uma introdução à expressões regulares, leia o [capítulo de Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) no [Guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide).
 
 ## Construtor
 
@@ -796,6 +796,6 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // prints 'xxx'
 
 ## Veja também
 
-- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) chapter no [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) chapter no [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

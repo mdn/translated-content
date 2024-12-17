@@ -53,7 +53,7 @@ Os dois módulos do diretório modules são descritos abaixo:
 
 - `canvas.js` — contém funções relacionadas à configuração da tela:
 
-  - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossario/Wrapper).
+  - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossary/Wrapper).
   - `createReportList()` — cria uma lista não ordenada anexada dentro de um elemento de wrapper especificado, que pode ser usado para gerar dados de relatório. Retorna o ID da lista.
 
 - `square.js` — contém:
@@ -179,7 +179,7 @@ Você só pode usar `import` e `export` instruções dentro de módulos, não sc
 
 - Você precisa prestar atenção nos testes locais - se você tentar carregar o arquivo HTML localmente (i.e. com um arquivo`://` URL), você encontrará erros do CORS devido a requisitos de segurança do módulo JavaScript. Você precisa fazer seus testes através de um servidor.
 - Além disso, observe que você pode obter um comportamento diferente das seções de script definidas dentro dos módulos e não nos scripts padrão. Isso ocorre porque os módulos usam {{JSxRef("Strict_mode", "strict mode", "", 1)}} automaticamente.
-- Não há necessidade de usar o atributo deferir (consulte [`<script>` attributes](/pt-BR/docs/Web/HTML/Element/script#Attributes)) ao carregar um script de módulo; módulos são adiados automaticamente.
+- Não há necessidade de usar o atributo deferir (consulte [`<script>` attributes](/pt-BR/docs/Web/HTML/Element/script#attributes)) ao carregar um script de módulo; módulos são adiados automaticamente.
 - Os módulos são executados apenas uma vez, mesmo que tenham sido referenciados em várias tags \<script>.
 - Por último, mas não menos importante, vamos esclarecer: os recursos do módulo são importados para o escopo de um único script - eles não estão disponíveis no escopo global. Portanto, você poderá acessar apenas os recursos importados no script para o qual eles foram importados e não poderá acessá-los no console JavaScript, por exemplo. Você ainda receberá erros de sintaxe mostrados no DevTools, mas não poderá usar algumas das técnicas de depuração que você esperava usar.
 
@@ -217,7 +217,7 @@ Isso ocorre porque há apenas uma exportação padrão permitida por módulo e s
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Nota:** **Nota: A sintaxe as para renomear itens exportados é explicada abaixo no** [Renaming imports and exports](#Renaming_imports_and_exports) seção.
+> **Nota:** **Nota: A sintaxe as para renomear itens exportados é explicada abaixo no** [Renaming imports and exports](#renaming_imports_and_exports) seção.
 
 ## Evitando conflitos de nomenclatura
 
@@ -459,7 +459,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 A parte mais recente da funcionalidade dos módulos JavaScript a estar disponível nos navegadores é o carregamento dinâmico de módulos. Isso permite que você carregue módulos dinamicamente somente quando eles forem necessários, em vez de precisar carregar tudo antecipadamente. Isso tem algumas vantagens óbvias de desempenho; vamos ler e ver como isso funciona.
 
-Essa nova funcionalidade permite que você ligue {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} como uma função, passando o caminho para o módulo como um parâmetro. Retorna um{{JSxRef("Promise")}}, que cumpre com um objeto de módulo (consulte [Creating a module object](#Creating_a_module_object)) dando acesso às exportações desse objeto, e.g.
+Essa nova funcionalidade permite que você ligue {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} como uma função, passando o caminho para o módulo como um parâmetro. Retorna um{{JSxRef("Promise")}}, que cumpre com um objeto de módulo (consulte [Creating a module object](#creating_a_module_object)) dando acesso às exportações desse objeto, e.g.
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -512,6 +512,6 @@ Aqui estão algumas dicas que podem ajudá-lo se você estiver com problemas par
 - [Using JavaScript modules on the web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani e Mathias Bynens
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Postagem no blog Hacks por Lin Clark
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Publicação de blog de Hacks por Jason Orendorff
-- Livro de Axel Rauschmayer [Exploring JS: Modules](http://exploringjs.com/es6/ch_modules.html)
+- Livro de Axel Rauschmayer [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

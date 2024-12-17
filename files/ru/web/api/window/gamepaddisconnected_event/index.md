@@ -10,7 +10,7 @@ slug: Web/API/Window/gamepaddisconnected_event
 ## Основная информация
 
 - Спецификация
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
+  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
 - Интерфейс
   - : Event
 - Всплывающее
@@ -38,4 +38,4 @@ slug: Web/API/Window/gamepaddisconnected_event
 
 ## Смотрите также
 
-- [Using Gamepad API](/ru/docs/API/Gamepad/Using_Gamepad_API)
+- [Using Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

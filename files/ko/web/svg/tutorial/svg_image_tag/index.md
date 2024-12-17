@@ -19,7 +19,7 @@ SVG {{ SVGElement("image") }} 요소는 비트맵 이미지를 SVG 객체와 함
 </svg>
 ```
 
-다음 몇가지를 주의하라([W3 specs](http://www.w3.org/TR/SVG/struct.html#ImageElement) 참조):
+다음 몇가지를 주의하라([W3 specs](https://www.w3.org/TR/SVG/struct.html#ImageElement) 참조):
 
 - x 또는 y 속성을 설정하지 않으면 0이 된다.
 - height 또는 width 속성을 설정하지 않으면, 0이 된다.

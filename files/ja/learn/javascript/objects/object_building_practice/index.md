@@ -31,7 +31,7 @@ l10n:
 
 ![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-この例では画面にボールを描くのに [キャンバス API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [requestAnimationFrame](/ja/docs/Web/API/window/requestAnimationFrame) を使います — これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する(**衝突判定**という呼び名で知られています)といった上手いテクニックをいくつかお見せしていきます。
+この例では画面にボールを描くのに [キャンバス API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) を使い、画面をアニメーションさせるのに [requestAnimationFrame](/ja/docs/Web/API/Window/requestAnimationFrame) を使います — これらの API について事前の知識は不要です。この記事を読み終わる頃にはこれら API についてもっと知りたくなっているだろうと期待してますが。道中では、イカしたオブジェクトを活用して、ボールを壁で弾ませる、それぞれがぶつかった事を判定する(**衝突判定**という呼び名で知られています)といった上手いテクニックをいくつかお見せしていきます。
 
 ## 始めに
 
@@ -303,7 +303,7 @@ function loop() {
 ## 関連情報
 
 - [キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial) — 2D キャンバスの初心者向けガイド。
-- [requestAnimationFrame()](/ja/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/ja/docs/Web/API/Window/requestAnimationFrame)
 - [二次元の衝突検出](/ja/docs/Games/Techniques/2D_collision_detection)
 - [三次元の衝突検出](/ja/docs/Games/Techniques/3D_collision_detection)
 - [純粋な JavaScript を使用した 2D ブロック崩しゲーム](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D ゲームの作り方に関する、素晴しい初心者向けチュートリアル。

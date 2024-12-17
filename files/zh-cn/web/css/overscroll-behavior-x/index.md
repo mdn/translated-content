@@ -67,6 +67,10 @@ main > div {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-y")}}
+- {{cssxref("overscroll-behavior-inline")}}
+- {{cssxref("overscroll-behavior-block")}}
+- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块

@@ -105,23 +105,23 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 
 상대 길이 단위는 다른 요소 (상위 요소의 글꼴 크기 또는 viewport 크기)와 관련이 있습니다. 상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든 것에 비례하여 조정되도록 신중하게 계획할 수 있다는 이점이 있습니다. 웹 개발에 가장 유용한 단위가 아래 표에 나열되어 있습니다.
 
-| 단위       | 관련 사항                                                                                                      |
-| ---------- | -------------------------------------------------------------------------------------------------------------- |
-| `em`       | 요소의 글꼴 크기.                                                                                              |
-| `ex`       | 요소 글꼴의 x-height.                                                                                          |
-| `ch`       | 요소 글꼴의 glyph "0"의 사전 길이 (너비)입니다.                                                                |
-| `rem`      | 루트 요소의 글꼴 크기.                                                                                         |
-| `lh`       | 요소의 라인 높이.                                                                                              |
-| `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다. |
-| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비 1%와 같습니다.             |
-| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이 1%와 같습니다.             |
-| `vmin`     | viewport의 작은 치수의 1%.                                                                                     |
-| `vmax`     | viewport의 큰 치수의 1%.                                                                                       |
-| `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_Logical_Properties#블록_치수) 크기 1%와 같습니다.          |
-| `vi`       | 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_Logical_Properties#인라인_치수) 크기 1%와 같습니다.      |
-| `svw, svh` | [작은 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.         |
-| `lvw, lvh` | [큰 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.           |
-| `dvw, dvh` | [동적인 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.       |
+| 단위       | 관련 사항                                                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `em`       | 요소의 글꼴 크기.                                                                                                                                       |
+| `ex`       | 요소 글꼴의 x-height.                                                                                                                                   |
+| `ch`       | 요소 글꼴의 glyph "0"의 사전 길이 (너비)입니다.                                                                                                         |
+| `rem`      | 루트 요소의 글꼴 크기.                                                                                                                                  |
+| `lh`       | 요소의 라인 높이.                                                                                                                                       |
+| `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다.                                          |
+| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비 1%와 같습니다.                                                                    |
+| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이 1%와 같습니다.                                                                    |
+| `vmin`     | viewport의 작은 치수의 1%.                                                                                                                              |
+| `vmax`     | viewport의 큰 치수의 1%.                                                                                                                                |
+| `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.            |
+| `vi`       | 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다. |
+| `svw, svh` | [작은 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                                  |
+| `lvw, lvh` | [큰 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                                    |
+| `dvw, dvh` | [동적인 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                                |
 
 #### 예제 살펴보기
 
@@ -653,7 +653,7 @@ RGB보다 약간 덜 지원되는 HSL 색상은 (이전 버전의 IE에서는 �
 
 위의 예에서, 키워드가 값으로 (예: `red`, `black`, `rebeccapurple` 및 `goldenrod`와 같은 `<color>` 키워드) 사용되는 위치를 확인했습니다. 이러한 키워드는 CSS 가 이해하는 특수한 값인 **_식별자 (identifiers)_**로 보다 정확하게 설명됩니다. 따라서 인용되지 않으며 문자열로 취급되지 않습니다.
 
-CSS에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생성된 콘텐츠를 지정할 때](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after). 이 경우 값은 문자열임을 보여주기 위해 인용됩니다. 아래 예제에서는 인용되지 않은 색상 키워드와 인용된 생성된 콘텐츠 문자열을 사용합니다.
+CSS에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생성된 콘텐츠를 지정할 때](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). 이 경우 값은 문자열임을 보여주기 위해 인용됩니다. 아래 예제에서는 인용되지 않은 색상 키워드와 인용된 생성된 콘텐츠 문자열을 사용합니다.
 
 ```html live-sample___strings-idents
 <div class="box"></div>

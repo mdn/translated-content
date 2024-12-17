@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 
 Permet aux extensions d'interagir avec le gestionnaire de téléchargement du navigateur. Vous pouvez utiliser ce module API pour télécharger des fichiers, annuler, suspendre, reprendre des téléchargements et afficher les fichiers téléchargés dans le gestionnaire de fichiers.
 
-Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "downloads" spécifiée dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API, vous devez disposer de l' [API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "downloads" spécifiée dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 ## Types
 

@@ -5,7 +5,7 @@ slug: WebAssembly/JavaScript_interface/Tag/Tag
 
 {{WebAssemblySidebar}}
 
-Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag).
+Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag).
 
 ## Syntaxe
 

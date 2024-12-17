@@ -39,17 +39,17 @@ req.send();
 Если с помощью `XMLHttpRequest` загрузить XML-документ, в свойстве {{domxref("XMLHttpRequest.responseXML", "responseXML")}} будет DOM-объект, содержащий распарсенный XML-документ, работать напрямую с которым будет сложно. Есть четыре основных способа анализа этого документа:
 
 1. Использовать [XPath](/ru/docs/Web/XPath) для обращения (или указания на) к части XML-документа.
-2. Вручную [конвертировать XML](/ru/docs/Web/Guide/Parsing_and_serializing_XML) в строку или объект.
+2. Вручную [конвертировать XML](/ru/docs/Web/XML/Parsing_and_serializing_XML) в строку или объект.
 3. Использовать {{domxref("XMLSerializer")}} для сериализации **DOM-дерева в строку**.
 4. Использовать {{jsxref("RegExp")}}, если вам заранее известна структура документа. Возможно, потребуется удалить переносы строк из документа или учитывать их в `RegExp`. Однако, этот способ стоит использовать только в крайнем случае, ведь если XML-документ изменится хотя бы чуть-чуть, то регулярное выражение, скорее всего, уже не подойдёт.
 
-> **Обратите внимание:** Теперь с помощью {{domxref("XMLHttpRequest.responseXML", "responseXML")}} можно парсить HTML. Подробнее читайте в статье [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+> **Обратите внимание:** Теперь с помощью {{domxref("XMLHttpRequest.responseXML", "responseXML")}} можно парсить HTML. Подробнее читайте в статье [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 
 ### Получение HTML из responseText
 
 Если вы используете `XMLHttpRequest` для получения содержимого HTML-страницы, в свойстве {{domxref("XMLHttpRequest.responseText", "responseText")}} будет "сырой" HTML, работать с которым неудобно. Есть три способа упростить работу с этим "сырым" HTML:
 
-1. Использовать свойство `XMLHttpRequest.responseXML`, как показано в статье [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+1. Использовать свойство `XMLHttpRequest.responseXML`, как показано в статье [HTML в XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 2. Вставить содержимое в [фрагмент](/ru/docs/Web/API/DocumentFragment) с помощью `fragment.body.innerHTML` и работать уже с содержимым фрагмента как с DOM-деревом.
 3. Использовать {{jsxref("RegExp")}}, если вам заранее известна структура HTML. Возможно, потребуется удалить переносы строк из содержимого или учитывать их в `RegExp`. Однако, этот способ стоит использовать только в крайнем случае, ведь если HTML изменится хотя бы чуть-чуть, то регулярное выражение, скорее всего, уже не подойдёт.
 
@@ -81,7 +81,7 @@ req.responseType = "arraybuffer";
 req.send();
 ```
 
-Больше примеров в статье [Отправка и получение бинарных данных](/ru/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data).
+Больше примеров в статье [Отправка и получение бинарных данных](/ru/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data).
 
 ## Отслеживание прогресса загрузки
 
@@ -592,7 +592,7 @@ user keyed data. The transmitted data is in the same format the form's
 `submit()` method uses to send data, if the form's encoding type were set to
 "multipart/form-data". FormData objects can be utilized in a number of ways with an
 `XMLHttpRequest`. For examples, and explanations of how one can utilize
-FormData with XMLHttpRequests, see the [Using FormData Objects](/ru/docs/Web/API/FormData/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
+FormData with XMLHttpRequests, see the [Using FormData Objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) page. For didactic purposes here is **a _translation_ of [the previous example](#a_little_vanilla_framework) transformed to use the
 `FormData` API**. Note the brevity of the code:
 
 ```html
