@@ -11,14 +11,14 @@ Le rôle **[button](https://www.w3.org/WAI/PF/aria/roles#button)** devrait être
 </div>
 ```
 
-L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) ou [`<input>`](/fr/docs/Web/HTML/Element/Input) avec `type="button"` pour représenter des boutons :
+L'exemple précédent crée un bouton simple qui sera le premier à obtenir le focus. Toutefois, on devrait plutôt utiliser les éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) avec `type="button"` pour représenter des boutons :
 
 ```html
 <button id="saveChanges">Enregistrer</button>
 ```
 
 > [!NOTE]
-> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Document/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour [`click`](/fr/docs/Web/API/Element/click_event) et [`keydown`](/fr/docs/Web/API/Element/keydown_event), y compris la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
 
 ## Description
 
@@ -77,7 +77,7 @@ Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. 
 
     <kbd>Entrée</kbd>
 
-    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Document/keypress_event)).
+    du clavier (attention, il ne s'agit pas de l'évènement déprécié [`onKeyPress`](/fr/docs/Web/API/Element/keypress_event)).
 
 #### Modifier les valeurs des attributs
 

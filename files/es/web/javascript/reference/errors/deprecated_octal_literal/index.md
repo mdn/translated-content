@@ -45,4 +45,4 @@ Utilice el cero inicialmente seguido de la letra "o";
 
 ## Ver Tambien
 
-- [Gramatica lexica](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
+- [Gramatica lexica](/es/docs/Web/JavaScript/Reference/Lexical_grammar#octal)

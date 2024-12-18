@@ -11,11 +11,11 @@ HTML-элемент **`<details>`** используется для раскры
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), sectioning root, interactive content, palpable content. |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), sectioning root, interactive content, palpable content. |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).      |
+| Permitted content                                          | One {{HTMLElement("summary")}} element followed by [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).      |
 | Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                           |
-| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).                                |
+| Permitted parents                                          | Any element that accepts [flow content](/ru/docs/Web/HTML/Content_categories#flow_content).                                |
 | Permitted ARIA roles                                       | None                                                                                                                       |
 | DOM interface                                              | {{domxref("HTMLDetailsElement")}}                                                                                          |
 

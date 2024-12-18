@@ -5,7 +5,7 @@ slug: Glossary/Block-level_content
 
 {{GlossarySidebar}}
 
-Elementos HTML **(Linguagem de marcação de hipertexto)** historicamente foram categorizados como "nível de bloco" ou [elementos "em linha"](/pt-BR/docs/HTML/Inline_elements). Um elemento em nível de bloco ocupa todo o espaço de seu elemento pai (container), criando assim um "bloco". Este artigo ajuda a explicar o que isso significa.
+Elementos HTML **(Linguagem de marcação de hipertexto)** historicamente foram categorizados como "nível de bloco" ou [elementos "em linha"](/pt-BR/docs/Glossary/Inline-level_content). Um elemento em nível de bloco ocupa todo o espaço de seu elemento pai (container), criando assim um "bloco". Este artigo ajuda a explicar o que isso significa.
 
 Navegadores normalmente mostram o elemento em nível de bloco com uma nova linha antes e depois do elemento. O exemplo a seguir demonstra a influência desse elemento em nível de bloco:
 
@@ -43,7 +43,7 @@ Existem algumas diferenças importantes entre os elementos no nível do bloco e 
 - Formatação padrão
   - : Por padrão, os elementos no nível de bloco começam em novas linhas, mas, os elementos em linha, podem iniciar em qualquer lugar.
 
-A distinção entre elementos em nível de bloco e elementos em linha foi usada nas especificações HTML até 4.01. No HTML5, essa distinção binária é substituída por um conjunto mais complexo de [categorias de conteúdo](/pt-BR/docs/HTML/Content_categories). Enquanto a categoria "em linha" corresponde aproximadamente à categoria de [conteúdo de frases](/pt-BR/docs/HTML/Content_categories#Phrasing_content), a categoria "nível de bloco" não corresponde diretamente a nenhuma categoria de conteúdo HTML5. Mas, os elementos "nível de bloco" e "embutido" combinados, correspondem ao [conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), em HTML5. Existem também categorias adicionais, por exemplo [conteúdo interativo](/pt-BR/docs/Web/Guide/HTML/Content_categories#Interactive_content).
+A distinção entre elementos em nível de bloco e elementos em linha foi usada nas especificações HTML até 4.01. No HTML5, essa distinção binária é substituída por um conjunto mais complexo de [categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories). Enquanto a categoria "em linha" corresponde aproximadamente à categoria de [conteúdo de frases](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), a categoria "nível de bloco" não corresponde diretamente a nenhuma categoria de conteúdo HTML5. Mas, os elementos "nível de bloco" e "embutido" combinados, correspondem ao [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), em HTML5. Existem também categorias adicionais, por exemplo [conteúdo interativo](/pt-BR/docs/Web/HTML/Content_categories#interactive_content).
 
 ## Elementos
 
@@ -110,4 +110,4 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
 
 ### Veja também
 
-- [Elementos Emlinha](/pt-BR/docs/Web/HTML/Inline_elements)
+- [Elementos Emlinha](/pt-BR/docs/Glossary/Inline-level_content)

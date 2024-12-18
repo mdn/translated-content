@@ -1,9 +1,9 @@
 ---
 title: "Event: explicitOriginalTarget プロパティ"
-short-title: explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
 l10n:
   sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+short-title: explicitOriginalTarget
 ---
 
 {{APIRef("DOM")}}{{Non-standard_Header}}
@@ -50,4 +50,4 @@ _これは Mozilla 固有のプロパティであり、現在のどの仕様に�
 
 ## 関連情報
 
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [イベントターゲットの比較](/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

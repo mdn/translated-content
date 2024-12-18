@@ -23,7 +23,7 @@ l10n:
 
 ### HTML
 
-- [`<link rel="prefetch">`](/ja/docs/Web/HTTP/Link_prefetching_FAQ) が、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性に従うようになりました ([Firefox バグ 1214819](https://bugzil.la/1214819))。
+- [`<link rel="prefetch">`](/ja/docs/Glossary/Prefetch) が、[`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性に従うようになりました ([Firefox バグ 1214819](https://bugzil.la/1214819))。
 
 ### CSS
 
@@ -85,7 +85,7 @@ l10n:
 #### 変更点
 
 - グローバルレベルにおける [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) のバインディングを、ES2015 に準拠させました。[Firefox バグ 589199](https://bugzil.la/589199) およびブログ記事 ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) をご覧ください。また、`let` が既定でウェブ JavaScript （厳格モードおよび非厳格モード）で使用できるようになり、バージョンのオプトインが不要になりました ([Firefox バグ 932517](https://bugzil.la/932517))。
-- [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクターを {{jsxref("Operators/new", "new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 980945](https://bugzil.la/980945)、[Firefox バグ 1214936](https://bugzil.la/1214936))。
+- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクターを {{jsxref("Operators/new", "new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 980945](https://bugzil.la/980945)、[Firefox バグ 1214936](https://bugzil.la/1214936))。
 - {{jsxref("RegExp")}} のスティッキーフラグが、ES2015 標準の [anchored sticky regular expressions](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) に従うようになりました ([Firefox バグ 773687](https://bugzil.la/773687))。
 - JavaScript シェル (SpiderMonkey の REPL) の既定 JS バージョンが、ウェブ互換の JS バージョンになりました (JS1.7 以降ではありません) ([Firefox バグ 1192329](https://bugzil.la/1192329))。
 

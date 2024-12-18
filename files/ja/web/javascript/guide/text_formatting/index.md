@@ -105,7 +105,7 @@ Unicode のスカラー値が U+FFFF より大きい文字 (中国語/日本語/
 
 ### マルチラインテンプレート文字列
 
-[テンプレート文字列](/ja/docs/Web/JavaScript/Reference/template_strings)は式を埋め込むことができる文字列リテラルです。複数行の文字列や文字列の補間機能で使用することができます。
+[テンプレート文字列](/ja/docs/Web/JavaScript/Reference/Template_literals)は式を埋め込むことができる文字列リテラルです。複数行の文字列や文字列の補間機能で使用することができます。
 
 テンプレート文字列は二重引用符または一重引用符のかわりにバッククォート (`` ` ``) （[抑音アクセント](https://en.wikipedia.org/wiki/Grave_accent)）文字で囲まれています。テンプレート文字列にはプレースホルダーを含めることができます。プレースホルダーはドル記号と波括弧 (`${expression}`) によって示されます。
 
@@ -153,7 +153,7 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 // "Fifteen is 15 and not 20."
 ```
 
-詳細については、[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)内の[テンプレート文字列](/ja/docs/Web/JavaScript/Reference/template_strings)をご覧ください。
+詳細については、[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)内の[テンプレート文字列](/ja/docs/Web/JavaScript/Reference/Template_literals)をご覧ください。
 
 ## 国際化
 

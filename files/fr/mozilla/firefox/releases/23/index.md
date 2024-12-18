@@ -25,7 +25,7 @@ slug: Mozilla/Firefox/Releases/23
 
 ### JavaScript
 
-- La méthode [`Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty) peut désormais être utilisée pour redéfinir la propriété `length` d'un objet [`Array`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array).
+- La méthode [`Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) peut désormais être utilisée pour redéfinir la propriété `length` d'un objet [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
 - L'option pour désactiver JavaScript, incluant les options pour permettre de déplacer une fenêtre/remplacer le menu contextuel, a été retirée. Vous pouvez toujours désactiver JavaScript en double-cliquant sur l'option "javascript.enabled" dans about:config.
 
 ### DOM
@@ -47,7 +47,7 @@ slug: Mozilla/Firefox/Releases/23
 
 - L'effet blink pour `text-decoration: blink;` n'a plus d'effet, mais c'est encore une valeur valide ([bug Firefox 857820](https://bugzil.la/857820)).
 - Les pseudo-éléments {{cssxref("::after")}} et {{cssxref("::before")}} sont désormais des objets flexibles ([bug Firefox 867454](https://bugzil.la/867454)).
-- La façon de calculer les [unités viewport](/fr/docs/Web/CSS/longueur#Longueurs_li.C3.A9es_au_viewport) a été changée. en liaison avec `overflow:auto`, l'espace occupé par d'éventuelles barres de défilement n'est pas soustrait de la fenêtre, alors que dans le cas de `overflow:scroll`, ça l'est ([bug Firefox 811403](https://bugzil.la/811403)).
+- La façon de calculer les [unités viewport](/fr/docs/Web/CSS/length#longueurs_li.c3.a9es_au_viewport) a été changée. en liaison avec `overflow:auto`, l'espace occupé par d'éventuelles barres de défilement n'est pas soustrait de la fenêtre, alors que dans le cas de `overflow:scroll`, ça l'est ([bug Firefox 811403](https://bugzil.la/811403)).
 
 ### MathML
 

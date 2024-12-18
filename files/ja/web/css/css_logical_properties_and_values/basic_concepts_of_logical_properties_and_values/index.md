@@ -48,6 +48,6 @@ CSS は従来、画面の物理的な軸に沿って寸法を取っていまし�
 ## 関連情報
 
 - [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [フレックスレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [フレックスレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Understanding Logical Properties and Values](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [書字方向](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [書字方向](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)

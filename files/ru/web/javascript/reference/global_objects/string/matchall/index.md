@@ -22,7 +22,7 @@ str.matchAll(regexp)
 
 ### Возвращаемое значение
 
-Возвращается [iterator](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators) (не перезапускаемый).
+Возвращается [iterator](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators) (не перезапускаемый).
 
 ## Примеры
 

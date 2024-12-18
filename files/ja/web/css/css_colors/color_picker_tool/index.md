@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_colors/Color_picker_tool
 
 色の使用について詳しくは、以下を参照してください。
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
 - [CSS を使用した境界のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 - [CSS を使用した背景スタイルの変更](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

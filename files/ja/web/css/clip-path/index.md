@@ -72,13 +72,13 @@ clip-path: unset;
   - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形 ({{cssxref("border-radius")}} など) を含めてクリッピングパスにします。ジオメトリボックスは以下の値のうちの一つが指定できます。
 
     - `margin-box`
-      - : [マージンボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box)を参照ボックスとして使用します。
+      - : [マージンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#margin-box)を参照ボックスとして使用します。
     - `border-box`
-      - : [境界ボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#border-box)を参照ボックスとして使用します。
+      - : [境界ボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#border-box)を参照ボックスとして使用します。
     - `padding-box`
-      - : [パディングボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box)を参照ボックスとして使用します。
+      - : [パディングボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#padding-box)を参照ボックスとして使用します。
     - `content-box`
-      - : [コンテンボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#content-box)を参照ボックスとして使用します。
+      - : [コンテンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#content-box)を参照ボックスとして使用します。
     - `fill-box`
       - : オブジェクトの境界ボックスを参照ボックスとして使用します。
     - `stroke-box`

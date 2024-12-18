@@ -1,9 +1,9 @@
 ---
 title: "Element: matches() メソッド"
-short-title: matches()
 slug: Web/API/Element/matches
 l10n:
   sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
+short-title: matches()
 ---
 
 {{APIRef("DOM")}}
@@ -66,5 +66,5 @@ for (const bird of birds) {
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}

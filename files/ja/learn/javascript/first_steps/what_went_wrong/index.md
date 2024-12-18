@@ -213,7 +213,7 @@ const userGuess === Number(guessField.value);
 
 そうすると、このエラーが吐かれます。違うことをやろうとしているように見えるのでしょう。値を変数に設定する代入演算子 (`=`) と、等値演算子 (`===`) を、これはある値が別の値と同じかどうかを判定して `true` または `false` を返しますが、間違わないようにしてください。
 
-> **メモ:** [SyntaxError: missing ; before statement](/ja/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) のリファレンスページで、このエラーに関する詳細な説明が見られます。
+> **メモ:** [SyntaxError: missing ; before statement](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) のリファレンスページで、このエラーに関する詳細な説明が見られます。
 
 ### プログラムが入力の内容に関わらずいつでも勝ちだと言ってくる
 
@@ -263,7 +263,7 @@ function checkGuess( {
 
 どのエラーにも言えることですが、上の例でも見たように、考えてください。エラーが起きた時に、エラーが起きた行の番号をみて、その行にエラーがあるか見てみます。エラーはその行に存在しないこともありますし、上述した理由以外で起きることもあるということを心に留めておいてください。
 
-> **メモ:** [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: unterminated string literal](/ja/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
+> **メモ:** [SyntaxError: Unexpected token](/ja/docs/Web/JavaScript/Reference/Errors/Unexpected_token) と [SyntaxError: unterminated string literal](/ja/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) のリファレンスページで、これらエラーに関する詳細な説明が見られます。
 
 ## まとめ
 

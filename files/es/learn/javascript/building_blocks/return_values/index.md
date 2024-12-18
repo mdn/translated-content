@@ -26,7 +26,7 @@ console.log(newString);
 
 Vimos exactamente este bloque de código en nuestro primer artículo de función. Estamos invocando la función [replace ()](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace) en la cadena `myText`, y le pasamos dos parámetros: la subcadena a encontrar y la subcadena con la que reemplazarla. Cuando esta función se completa (termina de ejecutarse), devuelve un valor, que es una nueva cadena con el reemplazo realizado. En el código anterior, estamos guardando este valor de retorno como el valor de la variable `newString`.
 
-Si observa la página de referencia MDN de la función de reemplazo, verá una sección llamada [Valor de retorno.](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value) Es muy útil conocer y comprender qué valores devuelven las funciones, por lo que tratamos de incluir esta información siempre que sea posible.
+Si observa la página de referencia MDN de la función de reemplazo, verá una sección llamada [Valor de retorno.](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value) Es muy útil conocer y comprender qué valores devuelven las funciones, por lo que tratamos de incluir esta información siempre que sea posible.
 
 Algunas funciones no devuelven un valor de retorno como tal (en nuestras páginas de referencia, el valor de retorno aparece como `void` o `undefined` en tales casos). Por ejemplo, en la función [displayMessage ()](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) que creamos en el artículo anterior, no se devuelve ningún valor específico como resultado de la función que se invoca. Simplemente hace que aparezca un cuadro en algún lugar de la pantalla, ¡eso es todo!
 
@@ -131,7 +131,7 @@ Let's have a go at writing our own functions featuring return values.
 4. Save your code, load it in a browser, and try it out.
 
 > [!NOTE]
-> If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also), or ask us for help.
+> If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also), or ask us for help.
 
 At this point, we'd like you to have a go at writing out a couple of functions of your own and adding them to the library. How about the square or cube root of the number, or the circumference of a circle with a radius of length `num`?
 
@@ -144,7 +144,7 @@ This exercise has brought up a couple of important points besides being a study 
 
 So there we have it — functions are fun, very useful and, although there's a lot to talk about in regards to their syntax and functionality, fairly understandable given the right articles to study.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/docs/Learn#contact_us) to ask for help.
 
 ## See also
 

@@ -130,6 +130,6 @@ footer {
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-template-columns")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-- [Guide : Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#les_propriétés_raccourcies_pour_les_grilles_css)
+- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Guide : Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#les_propri%c3%a9t%c3%a9s_raccourcies_pour_les_grilles_css)
 - Tutoriel vidéo : [les propriétés raccourcies pour les zones de grille (en anglais)](https://gridbyexample.com/video/grid-template-shorthand/)

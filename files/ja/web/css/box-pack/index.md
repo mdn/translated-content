@@ -6,7 +6,7 @@ slug: Web/CSS/box-pack
 {{CSSRef}}{{Non-standard_header}}
 
 > [!WARNING]
-> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)を参照してください。
+> これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。
 
 **`-moz-box-pack`** および **`-webkit-box-pack`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 `-moz-box` または `-webkit-box` がどのようにレイアウトの方向に内容をまとめるかを指定します。この効果はボックス内に空間がある場合のみ見ることができます。
 

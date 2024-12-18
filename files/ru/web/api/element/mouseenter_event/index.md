@@ -46,7 +46,7 @@ slug: Web/API/Element/mouseenter_event
 
 ## Примеры
 
-В документации по [`mouseover`](/ru/docs/Web/Events/mouseover#Example) есть пример иллюстрирующий различия между `mouseover` и `mouseenter`.
+В документации по [`mouseover`](/ru/docs/Web/API/Element/mouseover_event#example) есть пример иллюстрирующий различия между `mouseover` и `mouseenter`.
 
 ### mouseenter
 

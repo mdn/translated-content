@@ -18,7 +18,7 @@ L'élément `<xsl:attribute>` crée un attribut dans le document de sortie, en u
 ### Attributs obligatoires
 
 - `name`
-  - : Définit le nom de l'attribut à créer dans le document de sortie. Le nom doit être un [QName](http://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
+  - : Définit le nom de l'attribut à créer dans le document de sortie. Le nom doit être un [QName](https://www.w3.org/TR/REC-xml-names/#ns-qualnames) valide.
 
 ### Attributs optionnels
 
@@ -31,7 +31,7 @@ Instruction, apparaît dans un modèle ou dans un élément `<xsl:attribute-set>
 
 ### Définition
 
-[XSLT 1.0, section 7.1.3](http://www.w3.org/TR/xslt#creating-attributes).
+[XSLT 1.0, section 7.1.3](https://www.w3.org/TR/xslt#creating-attributes).
 
 ### Support Gecko
 

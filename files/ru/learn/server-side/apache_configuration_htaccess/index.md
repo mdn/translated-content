@@ -42,4 +42,4 @@ ErrorDocument 500 /serverr.html  # Перенаправит пользовате
 
 **Кеширование:** файл .htaccess может управлять кешированием данных веб-браузером пользователя. Это ускорит загрузку страниц и сократит количество передаваемой информации между сервером и клиентом.
 
-**MIME типы**: смотрите статью [correct MIME types](/ru/docs/Properly_Configuring_Server_MIME_Types) для большей информации.
+**MIME типы**: смотрите статью [correct MIME types](/ru/docs/Learn/Server-side/Configuring_server_MIME_types) для большей информации.

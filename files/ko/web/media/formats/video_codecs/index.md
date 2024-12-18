@@ -24,16 +24,16 @@ slug: Web/Media/Formats/Video_codecs
 
 | 코덱 이름 (축약어)             | 전체 코덱 이름                | 지원하는 컨테이너                                                                                                                                                        |
 | ------------------------------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [AV1](#av1)                    | AOMedia Video 1               | [MP4](/ko/docs/Web/Media/Formats/Containers#MP4), [WebM](/ko/docs/Web/Media/Formats/Containers#WebM)                                                                     |
-| [AVC (H.264)](#avc_h.264)      | Advanced Video Coding         | [3GP](/ko/docs/Web/Media/Formats/Containers#3GP), [MP4](/ko/docs/Web/Media/Formats/Containers#MP4), [WebM](/ko/docs/Web/Media/Formats/Containers#WebM)                   |
-| [H.263](#h.263)                | H.263 Video                   | [3GP](/ko/docs/Web/Media/Formats/Containers#3GP)                                                                                                                         |
-| [HEVC (H.265)](#hevc_h.265)    | High Efficiency Video Coding  | [MP4](/ko/docs/Web/Media/Formats/Containers#MP4)                                                                                                                         |
-| [MP4V-ES](#mp4v-es)            | MPEG-4 Video Elemental Stream | [3GP](/ko/docs/Web/Media/Formats/Containers#3GP), [MP4](/ko/docs/Web/Media/Formats/Containers#MP4)                                                                       |
-| [MPEG-1](#mpeg-1_part_2_video) | MPEG-1 Part 2 Visual          | [MPEG](/ko/docs/Web/Media/Formats/Containers#MPEGMPEG-2), [QuickTime](/ko/docs/Web/Media/Formats/Containers#QuickTime)                                                   |
-| [MPEG-2](#mpeg-2_part_2_video) | MPEG-2 Part 2 Visual          | [MP4](/ko/docs/Web/Media/Formats/Containers#MP4), [MPEG](/ko/docs/Web/Media/Formats/Containers#MPEGMPEG-2), [QuickTime](/ko/docs/Web/Media/Formats/Containers#QuickTime) |
-| [Theora](#theora)              | Theora                        | [Ogg](/ko/docs/Web/Media/Formats/Containers#Ogg)                                                                                                                         |
-| [VP8](#vp8)                    | Video Processor 8             | [3GP](/ko/docs/Web/Media/Formats/Containers#3GP), [Ogg](/ko/docs/Web/Media/Formats/Containers#Ogg), [WebM](/ko/docs/Web/Media/Formats/Containers#WebM)                   |
-| [VP9](#vp9)                    | Video Processor 9             | [MP4](/ko/docs/Web/Media/Formats/Containers#MP4), [Ogg](/ko/docs/Web/Media/Formats/Containers#Ogg), [WebM](/ko/docs/Web/Media/Formats/Containers#WebM)                   |
+| [AV1](#av1)                    | AOMedia Video 1               | [MP4](/ko/docs/Web/Media/Formats/Containers#mp4), [WebM](/ko/docs/Web/Media/Formats/Containers#webm)                                                                     |
+| [AVC (H.264)](#avc_h.264)      | Advanced Video Coding         | [3GP](/ko/docs/Web/Media/Formats/Containers#3gp), [MP4](/ko/docs/Web/Media/Formats/Containers#mp4), [WebM](/ko/docs/Web/Media/Formats/Containers#webm)                   |
+| [H.263](#h.263)                | H.263 Video                   | [3GP](/ko/docs/Web/Media/Formats/Containers#3gp)                                                                                                                         |
+| [HEVC (H.265)](#hevc_h.265)    | High Efficiency Video Coding  | [MP4](/ko/docs/Web/Media/Formats/Containers#mp4)                                                                                                                         |
+| [MP4V-ES](#mp4v-es)            | MPEG-4 Video Elemental Stream | [3GP](/ko/docs/Web/Media/Formats/Containers#3gp), [MP4](/ko/docs/Web/Media/Formats/Containers#mp4)                                                                       |
+| [MPEG-1](#mpeg-1_part_2_video) | MPEG-1 Part 2 Visual          | [MPEG](/ko/docs/Web/Media/Formats/Containers#mpegmpeg-2), [QuickTime](/ko/docs/Web/Media/Formats/Containers#quicktime)                                                   |
+| [MPEG-2](#mpeg-2_part_2_video) | MPEG-2 Part 2 Visual          | [MP4](/ko/docs/Web/Media/Formats/Containers#mp4), [MPEG](/ko/docs/Web/Media/Formats/Containers#mpegmpeg-2), [QuickTime](/ko/docs/Web/Media/Formats/Containers#quicktime) |
+| [Theora](#theora)              | Theora                        | [Ogg](/ko/docs/Web/Media/Formats/Containers#ogg)                                                                                                                         |
+| [VP8](#vp8)                    | Video Processor 8             | [3GP](/ko/docs/Web/Media/Formats/Containers#3gp), [Ogg](/ko/docs/Web/Media/Formats/Containers#ogg), [WebM](/ko/docs/Web/Media/Formats/Containers#webm)                   |
+| [VP9](#vp9)                    | Video Processor 9             | [MP4](/ko/docs/Web/Media/Formats/Containers#mp4), [Ogg](/ko/docs/Web/Media/Formats/Containers#ogg), [WebM](/ko/docs/Web/Media/Formats/Containers#webm)                   |
 
 ## 인코딩 관여 요소
 
@@ -929,7 +929,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
 
 **MPEG-4 Video Elemental Stream** (**MP4V-ES**) 포맷은 MPEG-4 Part 2 시각 표준 중 하나입니다. 일반적으로 MPEG-4 part 2 비디오는 더 이상 사용하지 않는데 다른 코덱에 비해 특장점이 없어 모바일에서도 쓰임새가 없습니다. MP4V 는 MPEG-4 컨테이너의 H.263 인코딩과 본질적으로 동일합니다.
 
-원래 목적은 {{Glossary("RTP")}} 세션에서 MPEG-4 오디오 및 비디오 스트림을 사용하기 위해서였습니다. 하지만 [3GP](/ko/docs/Web/Media/Formats/Containers#3GP)를 통한 모바일 통신에서도 쓰이고 있습니다.
+원래 목적은 {{Glossary("RTP")}} 세션에서 MPEG-4 오디오 및 비디오 스트림을 사용하기 위해서였습니다. 하지만 [3GP](/ko/docs/Web/Media/Formats/Containers#3gp)를 통한 모바일 통신에서도 쓰이고 있습니다.
 
 지원하는 주요 브라우저가 없으며 사실상 폐기된 포맷이라 왠만하면 사용할 일이 없을겁니다. 이 컨테이너 파일의 확장자는`.mp4v`지만 `.mp4`로 잘못 표기된 경우도 있습니다.
 
@@ -1039,7 +1039,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
   </tbody>
 </table>
 
-\[1] Firefox supports MP4V-ES in [3GP](/ko/docs/Web/Media/Formats/Containers#3GP) containers only.
+\[1] Firefox supports MP4V-ES in [3GP](/ko/docs/Web/Media/Formats/Containers#3gp) containers only.
 
 \[2] Chrome does not support MP4V-ES; however, ChromeOS does.
 
@@ -1447,7 +1447,7 @@ Theora의 단점 중 하나는 오직 8 bit 컬러 모드만을 지원하여 컬
 
 브라우저가 지원한다면 V8에서 알파 채널을 쓸 수 있으며 비디오 뒤의 백그라운드 이미지를 알파 채널 픽셀과 겹쳐 볼 수도 있습니다.
 
-HTML 콘텐츠로써 특히 [WebM](/ko/docs/Web/Media/Formats/Containers#WebM) 파일에 포함된 VP8을 지원하는 좋은 브라우저가 많습니다. 이는 VP8이 여러분의 콘텐츠로 좋은 선택이 될 수 있으며 가능하다면 더 좋은 VP9를 선택할 수도 있습니다. 웹브라우저는 WebRTC를 위해 VP8을 _반드시_ 지원해야 합니다. 하지만 HTML Audio video 엘리먼츠에는 꼭 VP8을 지원할 필요는 없습니다.
+HTML 콘텐츠로써 특히 [WebM](/ko/docs/Web/Media/Formats/Containers#webm) 파일에 포함된 VP8을 지원하는 좋은 브라우저가 많습니다. 이는 VP8이 여러분의 콘텐츠로 좋은 선택이 될 수 있으며 가능하다면 더 좋은 VP9를 선택할 수도 있습니다. 웹브라우저는 WebRTC를 위해 VP8을 _반드시_ 지원해야 합니다. 하지만 HTML Audio video 엘리먼츠에는 꼭 VP8을 지원할 필요는 없습니다.
 
 <table class="standard-table">
   <tbody>
@@ -1555,7 +1555,7 @@ HTML 콘텐츠로써 특히 [WebM](/ko/docs/Web/Media/Formats/Containers#WebM) �
 
 VP9의 main profile은 4:2:0 크로마 서브 샘플링에서 8-bit 색 깊이 모드만을 지원합니다. 하지만 더 깊은 색상 모드와 전체 범위의 크로마 서브샘플링을 지원하는 프로파일도 가지고 있습니다. HDR 기능도 있으며 프레임 레이트, 영상 비율, 프레임 사이즈를 자유롭게 선택할 수 있는 오셥도 제공합니다.
 
-VP9는 광범위한 브라우저가 지원하고 있으며 하드웨어 구현체로 상당히 퍼져있습니다. VP9는 [WebM](/ko/docs/Web/Media/Formats/Containers#WebM)에서만 사용할 수 있는 두 코덱 중 하나입니다(나머지 하나는 [VP8](#vp8)). 하지만 Safari는 WebM 및 VP9 모두 지원하지 않으므로 VP9를 사용할 경우 iPhone, iPad, Mac에서 AVC나 HEVCS등 다른 포맷을 대체할 수 있도록 만들어야 합니다.
+VP9는 광범위한 브라우저가 지원하고 있으며 하드웨어 구현체로 상당히 퍼져있습니다. VP9는 [WebM](/ko/docs/Web/Media/Formats/Containers#webm)에서만 사용할 수 있는 두 코덱 중 하나입니다(나머지 하나는 [VP8](#vp8)). 하지만 Safari는 WebM 및 VP9 모두 지원하지 않으므로 VP9를 사용할 경우 iPhone, iPad, Mac에서 AVC나 HEVCS등 다른 포맷을 대체할 수 있도록 만들어야 합니다.
 
 Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사용자에게 AVC/HEVC 대체 포맷 제공이 가능하다면 VP9은 좋은 선택입니다. 상용 코덱 대신에 오픈 코덱을 쓰기로 결정했다면 더할 나위 없죠. 호환 포맷을 제공할 수 없지만 Safari 사용자도 잃을 수 없다면 WebM에 VP9는 차선책이 좋을 겁니다. 아니라면 다른 코덱을 고려해 보셔야겠죠.
 
@@ -1717,13 +1717,13 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
 
 우선 블로그나 정보형 사이트, 소규모 기업 웹사이트 등 상품을 설명하기 위한 비디오(비디오 자체가 상품은 아닌)를 위한 옵션을 알아봅시다.
 
-1. **[WebM](/ko/docs/Web/Media/Formats/Containers#WebM)** 컨테이너에 비디오는 **[VP8](#vp8), 오디오는** **[Opus](/ko/docs/Web/Media/Formats/Audio_codecs#Opus)** 코덱을 사용합니다. 이들은 로열티-프리 오픈 포맷이지만 최근 브라우저에서만 폭넓게 지원하는 경향이 있어 폴백 지원이 필수적입니다.
+1. **[WebM](/ko/docs/Web/Media/Formats/Containers#webm)** 컨테이너에 비디오는 **[VP8](#vp8), 오디오는** **[Opus](/ko/docs/Web/Media/Formats/Audio_codecs#Opus)** 코덱을 사용합니다. 이들은 로열티-프리 오픈 포맷이지만 최근 브라우저에서만 폭넓게 지원하는 경향이 있어 폴백 지원이 필수적입니다.
 
    ```js
    <video controls src="filename.webm"></video>
    ```
 
-2. **[MP4](/ko/docs/Web/Media/Formats/Containers#MP4)** 컨테이너에 비디오 코덱은 **[AVC](#avc_h.264)** (**H.264**) 오디오 코덱은 **[AAC](/ko/docs/Web/Media/Formats/Audio_codecs#AAC)** 를 사용합니다. MP4 컨테이너에 AVC, AAC 조합은 모든 주요 브라우저에서 폭넓게 지원하는 조합이며 대부분의 유즈케이스에서 좋은 품질을 보여주기 때문입니다. 하지만 라이선스 요구사항에 대해 컴플라이언스 이슈는 없는 지 확인이 필요하죠.
+2. **[MP4](/ko/docs/Web/Media/Formats/Containers#mp4)** 컨테이너에 비디오 코덱은 **[AVC](#avc_h.264)** (**H.264**) 오디오 코덱은 **[AAC](/ko/docs/Web/Media/Formats/Audio_codecs#AAC)** 를 사용합니다. MP4 컨테이너에 AVC, AAC 조합은 모든 주요 브라우저에서 폭넓게 지원하는 조합이며 대부분의 유즈케이스에서 좋은 품질을 보여주기 때문입니다. 하지만 라이선스 요구사항에 대해 컴플라이언스 이슈는 없는 지 확인이 필요하죠.
 
    ```html
    <video controls>

@@ -7,7 +7,7 @@ slug: Web/CSS/backface-visibility
 
 ## Sumário
 
-A propriedade [CSS](/pt-BR/docs/CSS) **`backface-visibility`** determina se deve ser exibido ou não a parte de trás do elemento para o usuário. A parte de trás de um elemento é sempre um fundo transparente, deixando, quando visível, uma imagem espelho da parte da frente a ser exibida.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`backface-visibility`** determina se deve ser exibido ou não a parte de trás do elemento para o usuário. A parte de trás de um elemento é sempre um fundo transparente, deixando, quando visível, uma imagem espelho da parte da frente a ser exibida.
 
 Há casos quando nós não queremos que a parte da frente de um elemento seja visível pela parte de trás, quando estamos fazendo um efeito de giro de cartões (colocando dois elementos lado a lado).
 
@@ -194,4 +194,4 @@ td {
 
 ## Veja também
 
-- [Usando transformações CSS](/pt-BR/docs/CSS/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

@@ -55,10 +55,10 @@ A algunos elementos se les puede dar estilo con pocos o ningún problema indepen
 
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
 
-- Casillas de verificación ([checkbox](/es/docs/Web/HTML/Element/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Element/Input/radio)).
+- Casillas de verificación ([checkbox](/es/docs/Web/HTML/Element/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Element/input/radio)).
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 
-Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
+Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling).
 
 #### Lo feo
 
@@ -268,7 +268,7 @@ form {
 }
 ```
 
-Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout) y [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) para diseñar el formulario. Usando esto, podemos posicionar fácilmente nuestros elementos, incluido el título y todos los elementos del formulario:
+Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) y [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) para diseñar el formulario. Usando esto, podemos posicionar fácilmente nuestros elementos, incluido el título y todos los elementos del formulario:
 
 ```css
 h1 {

@@ -193,6 +193,6 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 - [Объект arguments](/ru/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
-- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Оператор распространения](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Оригинальное предложение на ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

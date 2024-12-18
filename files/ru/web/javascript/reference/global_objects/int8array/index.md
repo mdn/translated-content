@@ -17,7 +17,7 @@ new Int8Array(object);
 new Int8Array(buffer [, byteOffset [, length]]);
 ```
 
-Для более детальной информации о синтаксисе конструктора смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для более детальной информации о синтаксисе конструктора смотрите _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Properties
 
@@ -166,6 +166,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

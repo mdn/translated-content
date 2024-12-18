@@ -10,7 +10,7 @@ L'évènement `pageshow` est émis lorsqu'une entrée dans un historique de sess
 ## Informations générales
 
 - Spécification
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
 - Interface
   - : [PageTransitionEvent](/fr/docs/Web/API/PageTransitionEvent)
 - Bouillonne

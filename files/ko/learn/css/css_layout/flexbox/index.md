@@ -32,7 +32,7 @@ flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이�
 
 ## 왜 flexbox인가?
 
-오랫동안 CSS 레이아웃을 작성할 수 있는 신뢰할 수 있는 크로스 브라우저 호환 도구는 [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats) 및 [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기) 도구였습니다. 이것들은 무난하고 작동하지만, 어떤 면에서는 되려 제한적이고 좌절감을 맞보게 합니다.
+오랫동안 CSS 레이아웃을 작성할 수 있는 신뢰할 수 있는 크로스 브라우저 호환 도구는 [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats) 및 [위치잡기](/ko/docs/Learn/CSS/CSS_layout/Positioning) 도구였습니다. 이것들은 무난하고 작동하지만, 어떤 면에서는 되려 제한적이고 좌절감을 맞보게 합니다.
 
 다음과 같은 간단한 레이아웃 요구 사항은 그러한 도구를 사용하여 달성하기가 어렵거나 불가능합니다. 또한, 편리하지도 유연한 방식도 못됩니다.
 
@@ -44,7 +44,7 @@ flexbox는 행과 열 형태로 항목 무리를 배치하는 일차원 레이�
 
 ## 간단한 예제 소개
 
-이 문서에서 우리는 여러분이 flexbox의 작동 방식을 이해하는데 도움이 되는 일련의 연습을 수행하도록 하겠습니다. 시작하려면, 첫 번째 착수 파일인 [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)을 우리의 깃허브 저장소에서 사본을 내려받기하여 최신 브라우저(Firefox 또는 Chrome 등)에서 동 파일을 열어 코드 편집기에서 코드를 살펴봐야 합니다. 당신은 그걸 시연한 실제 장면을 [여기서도](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) 볼 수 있습니다.
+이 문서에서 우리는 여러분이 flexbox의 작동 방식을 이해하는데 도움이 되는 일련의 연습을 수행하도록 하겠습니다. 시작하려면, 첫 번째 착수 파일인 [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)을 우리의 깃허브 저장소에서 사본을 내려받기하여 최신 브라우저(Firefox 또는 Chrome 등)에서 동 파일을 열어 코드 편집기에서 코드를 살펴봐야 합니다. 당신은 그걸 시연한 실제 장면을 [여기서도](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) 볼 수 있습니다.
 
 (편집기로 본) 소스안에 최상위 수준에 {{htmlelement("header")}} 요소와 세 개의 {{htmlelement("article")}}를 포함한 {{htmlelement("section")}} 요소가 있음을 알 수 있습니다. 우리는 이것들을 사용해 상당히 표준적인 삼단 레이아웃을 생성할 겁니다.
 
@@ -114,7 +114,7 @@ flex-direction: column;
 
 ## 접기
 
-당신의 레이아웃에 너비 또는 높이가 고정 크기를 갖고 있어 생기는 한 가지 문제는 결국 flexbox 자식 요소가 컨테이너에서 대열이탈하면서 레이아웃이 깨진다는 것입니다. 우리가 제시하는 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) 예제를 확인하고 난 뒤 [라이브 보기](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)를 시도하세요(이 예제를 따라해보고 싶다면 이제 이 파일의 사본을 내려받으세요).
+당신의 레이아웃에 너비 또는 높이가 고정 크기를 갖고 있어 생기는 한 가지 문제는 결국 flexbox 자식 요소가 컨테이너에서 대열이탈하면서 레이아웃이 깨진다는 것입니다. 우리가 제시하는 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) 예제를 확인하고 난 뒤 [라이브 보기](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)를 시도하세요(이 예제를 따라해보고 싶다면 이제 이 파일의 사본을 내려받으세요).
 
 ![](flexbox-example3.png)
 
@@ -153,7 +153,7 @@ flex-flow: row wrap;
 
 ## flex item의 flex 크기 조정
 
-이제 첫 번째 예제로 복귀해서, 우리가 어떻게 flex item의 비율을 조절할 수 있는지 살펴봅시다. [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)사본을 브라우저 탭으로 열거나 [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) 사본을 새로운 출발점으로 삼으세요.([라이브 참조](http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+이제 첫 번째 예제로 복귀해서, 우리가 어떻게 flex item의 비율을 조절할 수 있는지 살펴봅시다. [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html)사본을 브라우저 탭으로 열거나 [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) 사본을 새로운 출발점으로 삼으세요.([라이브 참조](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
 
 첫째, 당신의 CSS 파일 하단에 다음 규칙을 추가하십시오.
 
@@ -205,7 +205,7 @@ flexbox의 실제 값은 flex성/반응성에 포함되어 있다고 볼 수 있
 
 ## 수평 및 수직 정렬
 
-또한 flexbox 기능을 사용하여 기본 축 또는 교차축을 따라 flex item을 정렬할수 있습니다. 이 기능은 새로운 예제인 [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html)을 통해 살펴보자([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). flexbox가 우리는 깔끔한 flex형 단추/툴바로 바뀌게될 겁니다. 지금 당장은 몇몇 단추들이 왼쪽 상단 모서리에 몰린 상태의 수평 메뉴 표시줄이 보입니다.
+또한 flexbox 기능을 사용하여 기본 축 또는 교차축을 따라 flex item을 정렬할수 있습니다. 이 기능은 새로운 예제인 [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html)을 통해 살펴보자([라이브로도 보세요](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). flexbox가 우리는 깔끔한 flex형 단추/툴바로 바뀌게될 겁니다. 지금 당장은 몇몇 단추들이 왼쪽 상단 모서리에 몰린 상태의 수평 메뉴 표시줄이 보입니다.
 
 ![](flexbox-example5.png)
 
@@ -278,7 +278,7 @@ button:last-child {
 
 ## 중첩된 flexbox box
 
-flexbox를 사용하여 꽤 복잡한 레이아웃을 만들 수 있습니다. flex item을 flex container로 설정해도 전혀 문제없습니다. 그렇게 되면 그 컨테이너의 자녀가 flexbox처럼 배치됩니다. [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html)를 찾아보세요. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+flexbox를 사용하여 꽤 복잡한 레이아웃을 만들 수 있습니다. flex item을 flex container로 설정해도 전혀 문제없습니다. 그렇게 되면 그 컨테이너의 자녀가 flexbox처럼 배치됩니다. [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html)를 찾아보세요. ([라이브로도 보세요](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
 
 ![](flexbox-example7.png)
 

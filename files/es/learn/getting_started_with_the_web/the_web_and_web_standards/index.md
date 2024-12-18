@@ -65,7 +65,7 @@ Probablemente estés leyendo estas palabras dentro de un navegador web en este m
 
 ### HTTP
 
-El Protocolo de transferencia de hipertexto, o [HTTP](/es/docs/Web/HTTP/Basics_of_HTTP), es un protocolo de mensajería que permite a los navegadores web comunicarse con los servidores web (donde se almacenan los sitios web). Una conversación típica es algo así como
+El Protocolo de transferencia de hipertexto, o [HTTP](/es/docs/conflicting/Web/HTTP), es un protocolo de mensajería que permite a los navegadores web comunicarse con los servidores web (donde se almacenan los sitios web). Una conversación típica es algo así como
 
 ```bash
 "Hola servidor web. ¿Me puedes dar los archivos que necesito para renderizar bbc.co.uk"?
@@ -116,7 +116,7 @@ La sintaxis real de los mensajes HTTP (llamados peticiones y respuestas) no es t
 
 Una vez que hayas aprendido las tecnologías "sin procesar" que se pueden usar para crear páginas web (como HTML, CSS y JavaScript), pronto comenzarás a encontrar varias herramientas que puedes usar para hacer tu trabajo más fácil y/o más eficiente. Algunos ejemplos incluyen:
 
-- Las [herramientas de desarrollo](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) dentro de los navegadores modernos que se pueden usar para depurar tu código.
+- Las [herramientas de desarrollo](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) dentro de los navegadores modernos que se pueden usar para depurar tu código.
 - [Herramientas de prueba](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) que puedes usar para ejecutar pruebas y mostrar si tu código se está comportando como lo esperabas.
 - Bibliotecas y marcos de desarrollo construidos sobre JavaScript que te permiten crear ciertos tipos de sitios web de manera mucho más rápida y efectiva.
 - Las llamadas "Linternas" (`Linters` en inglés), que toman un conjunto de reglas, examinan tu código y resaltan los lugares donde no has seguido las reglas correctamente.
@@ -155,4 +155,4 @@ Encontrarás los siguientes conceptos en algún momento de tus estudios.
 ## Ve también
 
 - [Historia de la World Wide Web](https://es.wikipedia.org/wiki/Historia_de_la_World_Wide_Web)
-- [¿Cómo funciona la internet?](/es/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [¿Cómo funciona la internet?](/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

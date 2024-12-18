@@ -19,8 +19,8 @@ slug: Web/CSS/CSS_colors/Color_picker_tool
 
 For more on using color, see:
 
-- [Applying color to HTML elements using CSS](/ko/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/ko/docs/Web/CSS/CSS_colors/Applying_color)
 - [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling borders using CSS](/ko/docs/Learn/CSS/Styling_boxes/Borders)
-- [Changing background styles using CSS](/ko/docs/Learn/CSS/Styling_boxes/Backgrounds)
-- [Color and color contrast](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
+- [Styling borders using CSS](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Changing background styles using CSS](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Color and color contrast](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)

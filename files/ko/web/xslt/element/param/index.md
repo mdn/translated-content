@@ -31,7 +31,7 @@ slug: Web/XSLT/Element/param
 
 ### 정의
 
-[XSLT section 11, Variables and Parameters](http://www.w3.org/TR/xslt#variables)
+[XSLT section 11, Variables and Parameters](https://www.w3.org/TR/xslt#variables)
 
 ### Gecko 지원
 

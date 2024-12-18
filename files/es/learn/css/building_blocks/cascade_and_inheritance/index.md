@@ -82,7 +82,7 @@ Por ejemplo, si para un elemento se establece el color (`color`) y el tipo de le
 Algunas propiedades no se heredan. Por ejemplo, si para un elemento se establece un ancho {{cssxref("width")}} del 50%, sus descendientes no tendrán un 50% de ancho con respecto al de sus padres. Si este fuera el caso, ¡sería muy frustrante usar CSS!
 
 > [!NOTE]
-> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro con información técnica (por lo general, en la parte inferior de la sección de especificaciones) que enumera una serie de puntos sobre cada propiedad, incluyendo cuáles se heredan y cuáles no. Véase, por ejemplo, la [sección de especificaciones de la propiedad color](/es/docs/Web/CSS/color#Especificaciones).
+> En las páginas de referencia de las propiedades CSS de MDN encontrarás un cuadro con información técnica (por lo general, en la parte inferior de la sección de especificaciones) que enumera una serie de puntos sobre cada propiedad, incluyendo cuáles se heredan y cuáles no. Véase, por ejemplo, la [sección de especificaciones de la propiedad color](/es/docs/Web/CSS/color#especificaciones).
 
 ## Comprender cómo trabajan juntos estos conceptos
 
@@ -177,7 +177,7 @@ La cantidad de especificidad de un selector se mide usando cuatro valores difere
 > [!NOTE]
 > El selector universal (`*`), los operadores de combinación (`+`, `>`, `~`, ' ') y la pseudo-clase de negación (`:not`) no tienen ningún efecto sobre la especificidad.
 
-La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo mejor. Analízalos y trata de entender por qué tienen la especificidad que les hemos dado. Aun no hemos explicado los selectores de forma detallada, pero puedes encontrar detalles de cada selector en los [selectores de referencia](/es/docs/Web/CSS/Selectores_CSS) de MDN.
+La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo mejor. Analízalos y trata de entender por qué tienen la especificidad que les hemos dado. Aun no hemos explicado los selectores de forma detallada, pero puedes encontrar detalles de cada selector en los [selectores de referencia](/es/docs/Web/CSS/CSS_selectors) de MDN.
 
 | Selector                                                                                                       | Millares: | Centenas: | Decenas: | Unidades: | Especificidad total |
 | -------------------------------------------------------------------------------------------------------------- | --------- | --------- | -------- | --------- | ------------------- |

@@ -26,4 +26,4 @@ value = window.devicePixelRatio;
 ## Ver también
 
 - [consultas de resolución de medio CSS](/es/docs/Web/CSS/@media/resolution)
-- PPK hace alguna [iinvestigación en devicePixelRatio](http://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html)
+- PPK hace alguna [iinvestigación en devicePixelRatio](https://www.quirksmode.org/blog/archives/2012/06/devicepixelrati.html)

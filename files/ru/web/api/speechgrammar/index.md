@@ -7,7 +7,7 @@ slug: Web/API/SpeechGrammar
 
 Интерфейс **`SpeechGrammar`** [Web Speech API](/ru/docs/Web/API/Web_Speech_API) представляет собой набор слов или шаблонов слов, которые мы хотим, чтобы служба распознавания распознавала.
 
-Грамматика определяется с использованием [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) Другие форматы также могут поддерживаться в будущем.
+Грамматика определяется с использованием [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**.) Другие форматы также могут поддерживаться в будущем.
 
 ## Конструктор
 

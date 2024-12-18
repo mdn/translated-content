@@ -68,7 +68,7 @@ DNS リクエストは帯域で見ればとても小さいものですが、遅�
 
 ### 特定のホスト名の参照の強制
 
-[リンク種別](/ja/docs/Web/HTML/Link_types)を `dns-prefetch` にした {{ HTMLElement("link") }} 要素に [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用することで、そのホスト名を使用した特定のアンカーを提供せずに、特定のホスト名を強制的に検索することができます。
+[リンク種別](/ja/docs/Web/HTML/Attributes/rel)を `dns-prefetch` にした {{ HTMLElement("link") }} 要素に [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用することで、そのホスト名を使用した特定のアンカーを提供せずに、特定のホスト名を強制的に検索することができます。
 
 ```html
 <link rel="dns-prefetch" href="https://www.mozilla.org/contribute/" />

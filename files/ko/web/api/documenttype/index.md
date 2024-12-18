@@ -43,6 +43,6 @@ _부모 {{domxref("Node")}} 로부터 메소드를 상속받고 {{domxref("Child
 
 ## 함께 보기
 
-- [DOM 인터페이스 목차.](/ko/docs/DOM/DOM_Reference)
+- [DOM 인터페이스 목차.](/ko/docs/Web/API/Document_Object_Model)
 - {{domxref("Entity")}}
 - {{domxref("Notation")}}

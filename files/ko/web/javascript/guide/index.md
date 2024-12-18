@@ -65,11 +65,11 @@ Overview: [Functions](/ko/docs/Web/JavaScript/Guide/Functions)
 
 ## Expressions and operators
 
-Overview: [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+Overview: [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
-- [Assignment](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators) & [Comparisons](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#comparison_operators)
-- [Arithmetic operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators)
-- [Bitwise](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators) & [logical operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#logical_operators)
+- [Assignment](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) & [Comparisons](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)
+- [Arithmetic operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#arithmetic_operators)
+- [Bitwise](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators) & [logical operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#logical_operators)
 - [Conditional (ternary) operator](</ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_(ternary)_operator>)
 
 ## Numbers and dates
@@ -89,7 +89,7 @@ Overview: [Text formatting](/ko/docs/Web/JavaScript/Guide/Text_formatting)
 - [`String` object](/ko/docs/Web/JavaScript/Guide/Text_formatting#string_objects)
 - [Template literals](/ko/docs/Web/JavaScript/Guide/Text_formatting#multi-line_template_literals)
 - [Internationalization](/ko/docs/Web/JavaScript/Guide/Text_formatting#internationalization)
-- [Regular Expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular Expressions](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 
 ## Indexed collections
 
@@ -109,12 +109,12 @@ Overview: [Keyed collections](/ko/docs/Web/JavaScript/Guide/Keyed_collections)
 
 ## Working with objects
 
-Overview: [Working with objects](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)
+Overview: [Working with objects](/ko/docs/Web/JavaScript/Guide/Working_with_objects)
 
-- [Objects and properties](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)
-- [Creating objects](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)
-- [Defining methods](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#defining_methods)
-- [Getter and setter](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [Objects and properties](/ko/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)
+- [Creating objects](/ko/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects)
+- [Defining methods](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_methods)
+- [Getter and setter](/ko/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 
 ## Using classes
 
@@ -137,11 +137,11 @@ Overview: [Promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 
 ## Iterators and generators
 
-Overview: [Iterators and generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+Overview: [Iterators and generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)
 
-- [Iterators](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)
-- [Iterables](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterables)
-- [Generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+- [Iterators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)
+- [Iterables](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#iterables)
+- [Generators](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
 
 ## Meta programming
 

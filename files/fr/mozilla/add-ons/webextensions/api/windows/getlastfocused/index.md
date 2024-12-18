@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 
 Obtient la fenêtre qui a été recentrée récemment — généralement la fenêtre 'en haut'.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 

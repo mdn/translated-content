@@ -177,7 +177,7 @@ Temos cada seção desacoplada da funcionalidade contida nos elementos de {{html
 
 ### Active learning: building a form structure
 
-Let's put these ideas into practice and build a slightly more involved form structure — a payment form. This form will contain a number of widget types that you may not yet understand — don't worry about this for now; you'll find out how they work in the next article ([The native form widgets](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
+Let's put these ideas into practice and build a slightly more involved form structure — a payment form. This form will contain a number of widget types that you may not yet understand — don't worry about this for now; you'll find out how they work in the next article ([The native form widgets](/pt-BR/docs/Learn/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
 1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
 2. First of all, apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
@@ -298,6 +298,6 @@ You now have all the knowledge you'll need to properly structure your HTML forms
 
 ## See Also
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
+- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}

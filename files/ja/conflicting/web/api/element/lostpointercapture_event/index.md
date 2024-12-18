@@ -6,7 +6,7 @@ original_slug: Web/API/Document/lostpointercapture_event
 
 {{APIRef}}
 
-**`lostpointercapture`** イベントは、[ポインターのキャプチャ](/ja/docs/Web/API/Pointer_events#Pointer_capture)が解放されたときに発生します。
+**`lostpointercapture`** イベントは、[ポインターのキャプチャ](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されたときに発生します。
 
 <table class="properties">
   <tbody>

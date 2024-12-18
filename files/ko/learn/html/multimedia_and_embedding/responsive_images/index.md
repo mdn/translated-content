@@ -42,7 +42,7 @@ l10n:
 
 ![와이드 스크린 화면에서 보았을 때 예제 사이트. 여기서는 첫번째 이미지는 화면이 크기 때문에 중앙의 얼굴을 볼 수 있을 정도로 크게 보여주기 때문에 잘 작동한다.](picture-element-wide.png)
 
-노트북이나 데스크톱과 같은 와이드 스크린 장치에서 잘 작동합니다([실제 예시는 여기에 있고](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있습니다.) 이 단원에서는 CSS에 대해 자세히 설명하지 않지만, 다음 내용들은 알아둡시다.
+노트북이나 데스크톱과 같은 와이드 스크린 장치에서 잘 작동합니다([실제 예시는 여기에 있고](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있습니다.) 이 단원에서는 CSS에 대해 자세히 설명하지 않지만, 다음 내용들은 알아둡시다.
 
 - 본문 콘텐츠는 최대 너비가 1200픽셀로 설정되어 있으며, 이 너비를 초과하는 뷰포트에서는 본문이 1200픽셀로 유지되고 사용 가능한 공간의 중앙에 배치됩니다. 이 너비보다 작은 뷰포트에서는 본문이 뷰포트 너비의 100%로 유지됩니다.
 - 헤더 이미지가 설정된 너비에 관계없이 항상 헤더의 중앙에 위치하도록 설정되었습니다. 좁은 화면에서 사이트를 보는 경우 이미지 중앙의 중요한 세부 사항(사람)은 여전히 볼 수 있으며 초과분은 양쪽에서 손실됩니다. 높이는 200픽셀입니다.
@@ -77,7 +77,7 @@ l10n:
 <img src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바" />
 ```
 
-그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
+그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
 
 ```html
 <img
@@ -126,7 +126,7 @@ l10n:
 
 ### 해상도 전환: 동일한 크기, 다른 해상도
 
-여러 디스플레이 해상도를 지원하지만 모든 사람이 화면에서 동일한 실제 크기로 이미지를 보는 경우, 다소 쉬운 구문인 X-서술자 `sizes` 없이 `srcset`을 사용하여 브라우저가 적절한 해상도 이미지를 선택하도록 할 수 있습니다! [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 그 예시를 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) 참조).
+여러 디스플레이 해상도를 지원하지만 모든 사람이 화면에서 동일한 실제 크기로 이미지를 보는 경우, 다소 쉬운 구문인 X-서술자 `sizes` 없이 `srcset`을 사용하여 브라우저가 적절한 해상도 이미지를 선택하도록 할 수 있습니다! [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 그 예시를 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) 참조).
 
 ```html
 <img
@@ -151,13 +151,13 @@ img {
 
 요약하자면, **아트 디렉션 문제**는 다양한 이미지 디스플레이 크기에 맞게 표시되는 이미지를 변경하려는 경우입니다. 예를 들어, 데스크톱 브라우저에서 볼 때 웹 페이지에 사람이 가운데에 있는 큰 풍경 사진이 포함되어 있다고 가정해 보겠습니다. 모바일 브라우저에서 볼 때는 동일한 이미지가 축소되어 이미지 속 사람이 매우 작아지고 잘 보이지 않습니다. 모바일에서는 인물을 확대하여 더 작은 세로형 이미지를 표시하는 것이 더 좋을 것입니다. {{htmlelement("picture")}} 요소를 사용하면 이러한 종류의 솔루션을 구현할 수 있습니다.
 
-원래의 [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가서 아트 디렉션이 절실히 필요한 이미지가 있습니다.
+원래의 [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가서 아트 디렉션이 절실히 필요한 이미지가 있습니다.
 
 ```html
 <img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스" />
 ```
 
-{{htmlelement("picture")}}으로 해결해 봅시다! [`<video>` 및 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)와 마찬가지로 `<picture>` 요소는 브라우저가 선택할 수 있는 다양한 소스를 제공하는 여러 {{htmlelement("source")}} 요소를 포함하는 래퍼이며, 그 뒤에 가장 중요한 {{htmlelement("img")}} 요소가 있습니다. [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html)의 코드는 다음과 같습니다.
+{{htmlelement("picture")}}으로 해결해 봅시다! [`<video>` 및 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)와 마찬가지로 `<picture>` 요소는 브라우저가 선택할 수 있는 다양한 소스를 제공하는 여러 {{htmlelement("source")}} 요소를 포함하는 래퍼이며, 그 뒤에 가장 중요한 {{htmlelement("img")}} 요소가 있습니다. [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html)의 코드는 다음과 같습니다.
 
 ```html
 <picture>

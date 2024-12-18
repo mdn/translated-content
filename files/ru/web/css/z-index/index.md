@@ -11,7 +11,7 @@ CSS-свойство **`z-index`** определяет положение [по
 
 Для позиционированного элемента (т.е. если у него задано свойство `position` со значением, отличающимся от `static`) свойство `z-index` отвечает за:
 
-1. Порядок наложения в текущем [контексте наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context).
+1. Порядок наложения в текущем [контексте наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 2. Возможность создания локального контекста наложения.
 
 ## Синтаксис
@@ -115,4 +115,4 @@ z-index: unset;
 ## Смотрите также
 
 - CSS-свойство {{Cssxref("position")}}
-- [Понимание CSS z-index](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index)
+- [Понимание CSS z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

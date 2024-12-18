@@ -19,7 +19,7 @@ Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn/HTML), 
 >
 > Tenemos un curso que incluye toda la información esencial que necesitas para lograr tu objetivo.
 >
-> [Inicia ahora](/docs/Learn/Front-end_web_developer)
+> [Inicia ahora](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Guías
 

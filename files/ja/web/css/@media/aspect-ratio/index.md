@@ -95,5 +95,5 @@ h.onchange = h.oninput = function () {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

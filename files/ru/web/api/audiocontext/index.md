@@ -104,5 +104,5 @@ var finish = audioCtx.destination;
 
 ## Смотрите также
 
-- [Применение Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Применение Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - {{domxref("OfflineAudioContext")}}

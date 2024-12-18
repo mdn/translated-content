@@ -7,9 +7,9 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 Эта статья объясняет как установить простой локальный тестовый сервер на вашем компьютере, а так же основы его использования.
 
-| Требования: | Сначала вам необходимо изучить [как работает интернет](/ru/docs/Learn/How_the_Internet_works), а также [что такое веб-сервер](/ru/docs/Learn/What_is_a_Web_server). |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:       | Вы научитесь как устанавливать локальный тестовый сервер.                                                                                                           |
+| Требования: | Сначала вам необходимо изучить [как работает интернет](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work), а также [что такое веб-сервер](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server). |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:       | Вы научитесь как устанавливать локальный тестовый сервер.                                                                                                                                                                             |
 
 ## Локальные и удалённые файлы
 
@@ -72,6 +72,6 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 Модуль Python `SimpleHTTPServer (python 2.0) http.server (python 3.0)` полезен, но он не знает, как запускать код, написанный на таких языках, как Python, PHP или JavaScript. Чтобы справиться с этим, вам понадобится нечто большее - именно то, что вам нужно, зависит от языка сервера, который вы пытаетесь запустить. Вот несколько примеров:
 
-- Для запуска кода на стороне сервера Python вам необходимо использовать веб-инфраструктуру Python. Вы можете узнать, как использовать структуру Django, прочитав [Django Web Framework (Python)](/ru/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) также является хорошей (чуть менее тяжёлой) альтернативой Django. Чтобы запустить это, ознакомьтесь с [install Python/PIP](/ru/docs/Learn/Server-side/Django/development_environment#Installing_Python_3), а затем установите Flask с помощью `pip3 install flask`. На этом этапе вы сможете запустить примеры Python Flask, используя, например, `python3 python-example.py`, затем перейдя на `localhost: 5000` в свой браузер.
+- Для запуска кода на стороне сервера Python вам необходимо использовать веб-инфраструктуру Python. Вы можете узнать, как использовать структуру Django, прочитав [Django Web Framework (Python)](/ru/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) также является хорошей (чуть менее тяжёлой) альтернативой Django. Чтобы запустить это, ознакомьтесь с [install Python/PIP](/ru/docs/Learn/Server-side/Django/development_environment#installing_python_3), а затем установите Flask с помощью `pip3 install flask`. На этом этапе вы сможете запустить примеры Python Flask, используя, например, `python3 python-example.py`, затем перейдя на `localhost: 5000` в свой браузер.
 - Чтобы запустить серверный код Node.js (JavaScript), вам нужно использовать Node.js или фреймворк, построенный поверх него. Express - хороший выбор - см. [Express Web Framework (Node.js/JavaScript)](/ru/docs/Learn/Server-side/Express_Nodejs).
 - Чтобы запустить PHP-серверный код, вам понадобится настройка сервера, которая может интерпретировать PHP. Хорошими вариантами для локального тестирования PHP являются [MAMP](https://www.mamp.info/en/downloads/) (Mac и Windows), [AMPPS](http://ampps.com/download) (Mac, Windows, Linux) и [LAMP](https://www.linux.com/learn/easy-lamp-server-installation) (Linux, Apache, MySQL и PHP / Python / Perl). Это полные пакеты, которые создают локальные настройки, позволяющие запускать базы данных Apache, PHP и MySQL.

@@ -25,7 +25,7 @@ Aucun.
 
 Cette méthode renvoie le texte sélectionné.
 
-En [JavaScript](/fr/JavaScript), cette méthode est appelée automatiquement pour des objets `selection` aux fonctions nécessitant un paramètre `string`&nbsp;:
+En [JavaScript](/fr/docs/Web/JavaScript), cette méthode est appelée automatiquement pour des objets `selection` aux fonctions nécessitant un paramètre `string`&nbsp;:
 
 ```js
 alert(window.getSelection()); // Appel automatique

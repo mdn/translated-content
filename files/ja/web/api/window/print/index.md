@@ -35,6 +35,6 @@ print();
 
 ## 関連情報
 
-- [印刷](/ja/docs/Web/Guide/Printing)
+- [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} イベント
 - {{ domxref("window.afterprint_event", "afterprint") }} イベント

@@ -15,7 +15,7 @@ lang = globalObj.navigator.language
 
 ### Valores
 
-`Un string que representa el código del lenguaje standard como se define en la` [BCP 47](http://www.ietf.org/rfc/bcp/bcp47.txt). Ejemplos de códigos válidos de lenguaje incluyen: "en", "en-US", "fr", "es-ES", etc.
+`Un string que representa el código del lenguaje standard como se define en la` [BCP 47](https://www.ietf.org/rfc/bcp/bcp47.txt). Ejemplos de códigos válidos de lenguaje incluyen: "en", "en-US", "fr", "es-ES", etc.
 
 ## Ejemplo
 

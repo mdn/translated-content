@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToPa
 
 {{JSRef}}
 
-La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une méthode analogue à [`format()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl.RelativeTimeFormat/format) qui renvoie un tableau d'objets contenant les différentes parties représentant le message internationalisé pour le temps relatif.
+La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une méthode analogue à [`format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format) qui renvoie un tableau d'objets contenant les différentes parties représentant le message internationalisé pour le temps relatif.
 
 {{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-formattoparts.html")}}
 

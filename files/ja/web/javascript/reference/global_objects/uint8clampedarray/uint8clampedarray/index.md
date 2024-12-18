@@ -87,6 +87,6 @@ var dv = new Uint8ClampedArray([1, 2, 3]);
 
 ## 関連情報
 
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

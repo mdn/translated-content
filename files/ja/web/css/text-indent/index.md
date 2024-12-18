@@ -197,5 +197,5 @@ p {
   - [`text-rendering`](/ja/docs/Web/CSS/text-rendering)
   - [`text-transform`](/ja/docs/Web/CSS/text-transform)
 
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_Text_Decoration) CSS モジュール
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_Text) モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) CSS モジュール
+- [CSS テキスト](/ja/docs/Web/CSS/CSS_text) モジュール

@@ -5,7 +5,7 @@ slug: Web/HTML/Element/p
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Web/HTML/Éléments_en_bloc).
+L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Glossary/Block-level_content).
 
 {{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
 
@@ -16,7 +16,7 @@ L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes s
 
 ## Attributs
 
-Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
 > L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.

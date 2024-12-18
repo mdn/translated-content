@@ -33,8 +33,8 @@ Los elementos que pertenecen a la categoría de flujo de contenido suelen conten
 Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una condición específica:
 
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#attr-itemprop)
 - {{HTMLElement("style")}}, si está presente el atributo {{deprecated_inline()}} [`scoped`](/es/docs/Web/HTML/Element/style#scoped)
 
 ### Contenido de sección
@@ -44,7 +44,7 @@ Los elementos que pertenecen al modelo de contenido de secciones crean una [secc
 Los elementos que pertenecen a esta categoría son {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} y {{HTMLElement("section")}}.
 
 > [!NOTE]
-> No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots), que aísla su contenido del esquema regular.
+> No confundas este modelo de contenido con la categoría de [seccionado raíz](/es/docs/Web/HTML/Element/Heading_Elements#sectioning_roots), que aísla su contenido del esquema regular.
 
 ### Contenido del encabezado
 
@@ -70,9 +70,9 @@ Algunos otros elementos pertenecen a esta categoría, pero solo si se cumple una
 - {{HTMLElement("area")}}, si es descendiente de un elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, si solo incluye contenido de redacción
 - {{HTMLElement("ins")}}, si solo incluye contenido de redacción
-- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#itemprop)
+- {{HTMLElement("link")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
 - {{HTMLElement("map")}}, si solo incluye contenido de redacción
-- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/HTML/Global_attributes#itemprop)
+- {{HTMLElement("meta")}}, si está presente el atributo [itemprop](/es/docs/Web/HTML/Global_attributes#itemprop)
 
 ### Contenido incrustado
 

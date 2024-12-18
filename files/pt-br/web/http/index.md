@@ -22,7 +22,7 @@ Aprenda como usar HTTP com guias e tutoriais.
 - [Dicas de cliente HTTP](/pt-BR/docs/Web/HTTP/Client_hints)
   - : **Dicas do cliente** são um conjunto de cabeçalhos de resposta que um servidor pode usar para solicitar proativamente informações de um cliente sobre o dispositivo, a rede, o usuário e as preferências específicas do agente do usuário.
     O servidor pode então determinar quais recursos enviar, com base nas informações que o cliente escolher fornecer.
-- [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [Evolução do HTTP](/pt-BR/docs/Web/HTTP/Evolution_of_HTTP)
   - : Uma breve descrição das mudanças que ocorreram no HTTP em versões mais antigas para o moderno HTTP/2 em diante.
 - [Diretrizes de segurança da Web da Mozilla](https://infosec.mozilla.org/guidelines/web_security)
   - : uma coleção de dicas para ajudar as equipes operacionais na criação de aplicativos Web seguros.
@@ -32,7 +32,7 @@ Aprenda como usar HTTP com guias e tutoriais.
   - : Mostra e explica o fluxo de uma sessão HTTP normal.
 - [Gerenciamento de conexões em HTTP/1.x](/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : Descreve os três modelos de conexão disponíveis no HTTP/1.x, seus pontos fortes e fracos.
-- [Controlando a pré-busca de DNS](/pt-BR/docs/Web/HTTP/Controlling_DNS_prefetching)
+- [Controlando a pré-busca de DNS](/pt-BR/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
   - : O Firefox e outros navegadores atuais utilizam a **pré-busca de** **DNS**, ou seja, o navegador faz a busca do nome do domínio nos links contidos numa página antes que o recurso seja requisitado, como por exemplo imagens, scripts e folhas de estilo. Isto tudo ocorre em segundo plano, para que quando o recurso necessite ser carregado, o endereço DNS já esteja resolvido. Isto diminui a latência quando, por exemplo, um usuário clica em um link.
 
 ## Referências
@@ -43,7 +43,7 @@ Navegue por uma detalhada documentação de referências em HTTP.
   - : As mensagens de cabeçalho HTTP são utilizadas para realizar a descrição de algum recurso ou comportamento do cliente ou servidor. Propriedades personalizadas nos cabeçalhos utilizam o prefixo 'X-' ; Outras no [registro IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), cujo conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA também mantém o [registro de novas propostas para mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
 - [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
   - : As mais diferentes requisições podem ser utilizadas pelos métodos de requisições HTTP: {{HTTPMethod("GET")}} e {{HTTPMethod("POST")}}, mas também algumas requisições menos comuns pelos métodos {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}} ou {{HTTPMethod("TRACE")}}.
-- [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Response_codes)
+- [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Status)
   - : Os códigos de status do HTTP indicam quando uma requisição foi completada. Códigos de status são agrupados em cinco classes: Informações, respostas, respostas de sucesso, redirecionamentos, erros de cliente e erros de servidor.
 - [Diretivas CSP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy)
   - : Os campos de cabeçalho de resposta {{HTTPHeader("Content-Security-Policy")}} permitem que os administradores do site controlem os recursos que o agente do usuário pode carregar para uma determinada página. Com algumas exceções, as políticas envolvem principalmente a especificação de origens de servidor e endpoints de script.

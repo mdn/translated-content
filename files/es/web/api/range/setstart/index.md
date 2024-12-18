@@ -45,4 +45,4 @@ range.setStart(startNode, startOffset);
 
 ## Ver también
 
-- [The DOM interfaces index](/es/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/es/docs/Web/API/Document_Object_Model)

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 
 Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/Add-ons/WebExtensions/API/contextMenus) avec le [type de contexte](/fr/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
+Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) avec le [type de contexte](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType) "browser_action".
 
 ## Syntaxe
 

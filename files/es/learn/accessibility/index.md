@@ -38,4 +38,4 @@ Para aprovechar al máximo este módulo, sería una buena idea trabajar al menos
 
 - [Empieza hoy a desarrollar aplicaciones web accesibles](https://egghead.io/courses/start-building-accessible-web-applications-today) — Una excelente serie de videos tutoriales por Marcy Sutton.
 - [Recursos de la Universidad Deque](https://dequeuniversity.com/resources/) — incluye ejemplos de códigos, referencias de lectores de pantalla y otros recursos útiles.
-- [Recursos de WebAIM](http://webaim.org/resources/) — incluye guías, listas de verificación, herramientas, y más.
+- [Recursos de WebAIM](https://webaim.org/resources/) — incluye guías, listas de verificación, herramientas, y más.
