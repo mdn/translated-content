@@ -26,7 +26,7 @@ browser.notifications.onButtonClicked.hasListener(listener)
 - `hasListener(listener)`
   - : 检查 `listener` 是否已注册到这个事件。若在监听，返回 `true`，否则返回 `false`。
 
-## addListener syntax
+## addListener 语法
 
 ### 参数
 
