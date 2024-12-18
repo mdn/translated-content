@@ -38,7 +38,7 @@ Lança uma exceção `SYNTAX_ERR` se o grupo especificado de seletores for invá
 
 `querySelectorAll()` foi introduzida na WebApps API.
 
-Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
+Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/Web/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
 
 ## Compatibilidade com navegadores
 

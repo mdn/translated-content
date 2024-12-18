@@ -203,20 +203,20 @@ teacher1.farewell();
 Все должно работать нормально. Запросы в строках 1, 2, 3 и 6 унаследованные от общего конструктора `Person()` (класса). Запрос в строке 4 обращается к `subject`, доступному только для более специализированного конструктора (класса) `Teacher()`. Запрос в строке 5 получил бы доступ к методу `greeting()`, унаследованному от `Person()`, но `Teacher()` имеет свой собственный метод `greeting()` с тем же именем, поэтому запрос обращается к этому методу.
 
 > [!NOTE]
-> Если вам не удаётся заставить это работать, сравните свой код с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (см. также [рабочее демо](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
+> Если вам не удаётся заставить это работать, сравните свой код с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (см. также [рабочее демо](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
 
 Методика, которую мы здесь рассмотрели, - это не единственный способ создания наследующих классов в JavaScript, но он работает нормально и это даёт вам представление о том, как реализовать наследование в JavaScript.
 
 Вам также может быть интересно узнать некоторые из новых функций {{glossary("ECMAScript")}}, которые позволяют нам делать наследование более чисто в JavaScript (см. [Classes](/ru/docs/Web/JavaScript/Reference/Classes)). Мы не рассматривали их здесь, поскольку они пока не поддерживаются очень широко в браузерах. Все остальные конструкторы кода, которые мы обсуждали в этом наборе статей, поддерживаются ещё в IE9 или ранее и есть способы добиться более ранней поддержки, чем это.
 
-Обычный способ - использовать библиотеку JavaScript - большинство популярных опций имеют простой набор функций, доступных для выполнения наследования более легко и быстро. [CoffeeScript](http://coffeescript.org/#classes) , например, предоставляет класс, расширяет и т.д.
+Обычный способ - использовать библиотеку JavaScript - большинство популярных опций имеют простой набор функций, доступных для выполнения наследования более легко и быстро. [CoffeeScript](https://coffeescript.org/#classes) , например, предоставляет класс, расширяет и т.д.
 
 ## Дальнейшее упражнение
 
-В нашем [руководстве по Объектно-ориентированному JavaScript для начинающих](/ru/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters) мы также включили класс `Student` как концепцию, которая наследует все особенности `Person`, а также имеет другой метод `greeting()` от `Person`, который гораздо более неформален, чем приветствие `Teacher`. Посмотрите, как выглядит приветствие ученика в этом разделе, и попробуйте реализовать собственный конструктор `Student()`, который наследует все функции `Person()` и реализует другую функцию `greeting()`.
+В нашем [руководстве по Объектно-ориентированному JavaScript для начинающих](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters) мы также включили класс `Student` как концепцию, которая наследует все особенности `Person`, а также имеет другой метод `greeting()` от `Person`, который гораздо более неформален, чем приветствие `Teacher`. Посмотрите, как выглядит приветствие ученика в этом разделе, и попробуйте реализовать собственный конструктор `Student()`, который наследует все функции `Person()` и реализует другую функцию `greeting()`.
 
 > [!NOTE]
-> Если вам не удаётся заставить это работать, сравните свой код с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (см. также [рабочее демо](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
+> Если вам не удаётся заставить это работать, сравните свой код с нашей [готовой версией](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (см. также [рабочее демо](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
 
 ## Object member summary
 

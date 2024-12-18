@@ -15,17 +15,17 @@ l10n:
 
 ## 구문
 
-데이터 URI는 접두사(`data:`), 데이터의 타입을 가리키는 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types), 텍스트가 아닌 경우 사용될 부가적인 `base64` 토큰 그리고 데이터 자체 총 네가지 부분으로 구성됩니다.
+데이터 URI는 접두사(`data:`), 데이터의 타입을 가리키는 [MIME 타입](/ko/docs/Web/HTTP/MIME_types), 텍스트가 아닌 경우 사용될 부가적인 `base64` 토큰 그리고 데이터 자체 총 네가지 부분으로 구성됩니다.
 
 ```plain
 data:[<mediatype>][;base64],<data>
 ```
 
-`mediatype`이란, [MIME type](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 말합니다(JPEG 이미지의 경우 `'image/jpeg'`). 만약 생략된다면, 기본 값으로 `text/plain;charset=US-ASCII`이 사용됩니다.
+`mediatype`이란, [MIME type](/ko/docs/Web/HTTP/MIME_types)을 말합니다(JPEG 이미지의 경우 `'image/jpeg'`). 만약 생략된다면, 기본 값으로 `text/plain;charset=US-ASCII`이 사용됩니다.
 
 데이터에 [RFC 3986에 예약된 문자로 정의된 문자](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)가 포함되어 있거나, 공백 문자, 개행 문자 또는 기타 인쇄할 수 없는 문자가 포함되어 있는 경우, 해당 문자는 [URL 인코딩](https://en.wikipedia.org/wiki/URL_encoding)된 문자여야 합니다.
 
-데이터가 텍스트인 경우, 단순히 텍스트를 (포함된 문서 유형에 따라 적합한 엔티티 혹은 이스케이프를 사용하여) 포함할 수 있습니다. 그게 아니라면, base64로 인코딩된 이진 데이터를 포함하기 위해 `base64`를 지정할 수 있습니다. MIME 유형에 대한 자세한 내용은 [여기](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 및 [여기](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)에서 확인할 수 있습니다.
+데이터가 텍스트인 경우, 단순히 텍스트를 (포함된 문서 유형에 따라 적합한 엔티티 혹은 이스케이프를 사용하여) 포함할 수 있습니다. 그게 아니라면, base64로 인코딩된 이진 데이터를 포함하기 위해 `base64`를 지정할 수 있습니다. MIME 유형에 대한 자세한 내용은 [여기](/ko/docs/Web/HTTP/MIME_types) 및 [여기](/ko/docs/Web/HTTP/MIME_types/Common_types)에서 확인할 수 있습니다.
 
 몇 가지 예제입니다.
 
@@ -120,5 +120,5 @@ lots of text…
 - [URL 인코딩](https://en.wikipedia.org/wiki/URL_encoding)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
-- [CSS `url()`](/ko/docs/Web/CSS/uri)
+- [CSS `url()`](/ko/docs/Web/CSS/url_value)
 - [URI](/ko/docs/Glossary/URI)

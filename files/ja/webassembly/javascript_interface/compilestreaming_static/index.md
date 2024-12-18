@@ -5,7 +5,7 @@ slug: WebAssembly/JavaScript_interface/compileStreaming_static
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.compileStreaming()`** 関数は [`WebAssembly.Module`](/ja/docs/WebAssembly/JavaScript_interface/Module) を直接、基礎的なソースのストリームからコンパイルします。この関数はモジュールをインスタンス化する前にコンパイルする必要がある場合に役立ちます（そうでない場合は、[`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) 関数を使用してください）。
+**`WebAssembly.compileStreaming()`** 関数は [`WebAssembly.Module`](/ja/docs/WebAssembly/JavaScript_interface/Module) を直接、基礎的なソースのストリームからコンパイルします。この関数はモジュールをインスタンス化する前にコンパイルする必要がある場合に役立ちます（そうでない場合は、[`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 関数を使用してください）。
 
 > [!NOTE]
 > 厳格な[コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP) のあるウェブページでは、 WebAssembly のコンパイルやモジュールの実行がブロックされることがあります。
@@ -47,7 +47,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
   .then((instance) => instance.exports.exported_func());
 ```
 
-結果として受け取ったモジュールインスタンスはその後 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate) を使用してインスタンス化され、エクスポートされた関数が実行されます。
+結果として受け取ったモジュールインスタンスはその後 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate_static) を使用してインスタンス化され、エクスポートされた関数が実行されます。
 
 ## 仕様書
 

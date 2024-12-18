@@ -54,14 +54,14 @@ Esta sección proporciona una breve descripción de cómo Firefox / Gecko contri
 
 ### Tecnologías web
 
-La plataforma web proporciona muchas herramientas, algunas más adecuadas para trabajos particulares que otras. Toda la lógica de la aplicación está escrita en JavaScript. Para mostrar gráficos, los desarrolladores pueden usar HTML o CSS (es decir, lenguajes declarativos de alto nivel), o usar interfaces imperativas de bajo nivel ofrecidas por el elemento [\<canvas>](/es/docs/Web/HTML/Elemento/canvas) (que incluye [WebGL](/es/docs/Web/API/WebGL_API)). En algún lugar "entre" HTML / CSS y Canvas está [SVG](/es/docs/Web/SVG), que ofrece algunos beneficios de ambos.
+La plataforma web proporciona muchas herramientas, algunas más adecuadas para trabajos particulares que otras. Toda la lógica de la aplicación está escrita en JavaScript. Para mostrar gráficos, los desarrolladores pueden usar HTML o CSS (es decir, lenguajes declarativos de alto nivel), o usar interfaces imperativas de bajo nivel ofrecidas por el elemento [\<canvas>](/es/docs/Web/HTML/Element/canvas) (que incluye [WebGL](/es/docs/Web/API/WebGL_API)). En algún lugar "entre" HTML / CSS y Canvas está [SVG](/es/docs/Web/SVG), que ofrece algunos beneficios de ambos.
 
 HTML y CSS aumentan en gran medida la productividad, a veces a expensas de la frecuencia de cuadros o el control a nivel de píxeles de la renderización. El texto y las imágenes se vuelven a generar automáticamente, los elementos de la IU reciben automáticamente el tema del sistema, y el sistema proporciona soporte "integrado" para algunos casos de uso que los desarrolladores pueden no pensar inicialmente, como pantallas de diferente resolución o idiomas de derecha a izquierda.
 
 The `canvas` element offers a pixel buffer directly for developers to draw on. This gives developers pixel-level control over rendering and precise control of framerate, but now the developers need to deal with multiple resolutions and orientations, right-to-left languages, and so forth. Developers draw to canvases using either a familiar 2D drawing API, or WebGL, a "close to the metal" binding that mostly follows OpenGL ES 2.0.
 
 > [!NOTE]
-> Firefox OS is optimized for apps built with Web technologies: [HTML](/es/docs/Web/HTML), [CSS](/es/docs/Web/CSS), [JavaScript](/es/docs/Web/JavaScript), and so on. Except for a handful of basic system services, all code that runs in Firefox OS comes from Web apps and the Gecko engine. Even the OS window manager is written in HTML, CSS, and JavaScript. Because the core operating system and applications are built with same Web technologies, it's critical how those technologies perform. There's no "escape hatch". This greatly benefits developers because now third-party apps benefit from all the OS's own optimizations. There's no "magic performance sauce" available only to preinstalled code. See [Firefox OS performance testing](/es/Apps/Developing/Performance/Firefox_OS_performance_testing) for more details relevant to Firefox OS.
+> Firefox OS is optimized for apps built with Web technologies: [HTML](/es/docs/Web/HTML), [CSS](/es/docs/Web/CSS), [JavaScript](/es/docs/Web/JavaScript), and so on. Except for a handful of basic system services, all code that runs in Firefox OS comes from Web apps and the Gecko engine. Even the OS window manager is written in HTML, CSS, and JavaScript. Because the core operating system and applications are built with same Web technologies, it's critical how those technologies perform. There's no "escape hatch". This greatly benefits developers because now third-party apps benefit from all the OS's own optimizations. There's no "magic performance sauce" available only to preinstalled code. See [Firefox OS performance testing](/es/docs/Web/Aplicaciones/Developing/Performance/Firefox_OS_performance_testing) for more details relevant to Firefox OS.
 
 ### Gecko rendering
 
@@ -74,7 +74,7 @@ Fully static content is the exception rather than the rule for rich applications
 An app's startup performance matters just as much as its runtime performance. Gecko is optimized to load a wide variety of content efficiently: the entire Web! Many years of improvements targeting this content, like parallel HTML parsing, intelligent scheduling of reflows and image decoding, clever layout algorithms, etc., translate just as well to improving Web applications on Firefox.
 
 > [!NOTE]
-> See [Firefox OS performance testing](/es/Apps/Developing/Performance/Firefox_OS_performance_testing) for more information about Firefox OS specifics that help to further improve startup performance.
+> See [Firefox OS performance testing](/es/docs/Web/Aplicaciones/Developing/Performance/Firefox_OS_performance_testing) for more information about Firefox OS specifics that help to further improve startup performance.
 
 ## Application performance
 
@@ -107,7 +107,7 @@ The Web platform is highly dynamic. JavaScript is a dynamically-typed language, 
 Another problem that can delay startup is idle time, caused by waiting for responses to requests (like database loads). To avoid this problem, applications should issue requests as early as possible in startup (this is called "front-loading"). Then when the data is needed later, hopefully it's already available and the application doesn't have to wait.
 
 > [!NOTE]
-> For much more information on improving startup performance, read [Optimizing startup performance](/es/Apps/Developing/Performance/Optimizing_startup_performance).
+> For much more information on improving startup performance, read [Optimizing startup performance](/es/docs/Web/Aplicaciones/Developing/Performance/Optimizing_startup_performance).
 
 On the same note, notice that locally-cached, static resources can be loaded much faster than dynamic data fetched over high-latency, low-bandwidth mobile networks. Network requests should never be on the critical path to early application startup. Caching resources locally is also the only way applications can be used offline, and for standard Open Web Apps, at the moment this requires use of HTML5 [AppCache](/es/docs/HTML/Using_the_application_cache).
 
@@ -120,7 +120,7 @@ The first important thing for high framerate is to choose the right tool. Use HT
 
 For content drawn using Canvas, it's up to the developer to hit framerate targets: they have direct control over what's drawn.
 
-For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS [media queries](/es/docs/Web/Guide/CSS/Media_queries) allow these compromises to be restricted only to devices that need them.
+For HTML and CSS content, the path to high framerate is to use the right primitives. Firefox is highly optimized to scroll arbitrary content; this is usually not a concern. But often trading some generality and quality for speed, such as using a static rendering instead of a CSS radial gradient, can push scrolling framerate over a target. CSS [media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow these compromises to be restricted only to devices that need them.
 
 Many applications use transitions or animations through "pages", or "panels". For example, the user taps a "Settings" button to transition into an application configuration screen, or a settings menu "pops up". Firefox is highly optimized to transition and animate scenes that:
 
@@ -135,7 +135,7 @@ Improving memory and power usage is a similar problem to speeding up startup: do
 
 Modern CPUs can enter a lower-power mode when mostly idle. Applications that constantly fire timers or keep unnecessary animations running prevent CPUs from entering low-power mode. Power-efficient applications shouldn't do that.
 
-When applications are sent to the background, a [`visibilitychange`](/es/docs/Web/Reference/Events/visibilitychange) event is fired on their documents. This event is a developer's friend; applications should listen for it. Applications that drop as many loaded resources as possible when sent to the background use less memory and are less likely discarded, in the case of Firefox OS (see the note below). This in turn means they "start up" faster (since they are already running) and have better UPP.
+When applications are sent to the background, a [`visibilitychange`](/es/docs/Web/API/Document/visibilitychange_event) event is fired on their documents. This event is a developer's friend; applications should listen for it. Applications that drop as many loaded resources as possible when sent to the background use less memory and are less likely discarded, in the case of Firefox OS (see the note below). This in turn means they "start up" faster (since they are already running) and have better UPP.
 
 > [!NOTE]
 > As mentioned above, Firefox OS tries to keep as many applications running simultaneously as it can, but does have to discard applications sometimes, usually when the device runs out of memory. To find out more about how Firefox OS manages memory usage and kills apps when out of memory issues are encountered, read [Debugging out of memory errors on Firefox OS](/es/Firefox_OS/Debugging/Debugging_OOMs).
@@ -146,17 +146,17 @@ The following practical tips will help improve one or more of the Application pe
 
 #### Use CSS animations and transitions
 
-Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("window.setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/es/docs/Web/Guide/CSS/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/es/docs/Web/Guide/CSS/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
+Instead of using some library's `animate()` function, which probably currently uses many badly performing technologies ({{domxref("window.setTimeout()")}} or `top`/`left` positioning, for example) use [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations). In many cases, you can actually use [CSS Transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) to get the job done. This works well because the browser is designed to optimize these effects and use the GPU to handle them smoothly with minimal impact on processor performance. Another benefit is that you can define these effects in CSS along with the rest of your app's look-and-feel, using a standardized syntax.
 
 CSS animations give you very granular control over your effects using [keyframes](/es/docs/Web/CSS/@keyframes), and you can even watch events fired during the animation process in order to handle other tasks that need to be performed at set points in the animation process. You can easily trigger these animations with the {{cssxref(":hover")}}, {{cssxref(":focus")}}, or {{cssxref(":target")}}, or by dynamically adding and removing classes on parent elements.
 
-If you want to create animations on the fly or modify them in [JavaScript](/es/docs/JavaScript), James Long has written a simple library for that called [CSS-animations.js](https://github.com/jlongster/css-animations.js/).
+If you want to create animations on the fly or modify them in [JavaScript](/es/docs/Web/JavaScript), James Long has written a simple library for that called [CSS-animations.js](https://github.com/jlongster/css-animations.js/).
 
 #### Use CSS transforms
 
 Instead of tweaking absolute positioning and fiddling with all that math yourself, use the {{cssxref("transform")}} CSS property to adjust the position, scale, and so forth of your content. The reason is, once again, hardware acceleration. The browser can do these tasks on your GPU, letting the CPU handle other things.
 
-In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](http://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
+In addition, transforms give you capabilities you might not otherwise have. Not only can you translate elements in 2D space, but you can transform in three dimensions, skew and rotate, and so forth. Paul Irish has an [in-depth analysis of the benefits of `translate()`](https://paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/) from a performance point of view. In general, however, you have the same benefits you get from using CSS animations: you use the right tool for the job and leave the optimization to the browser. You also use an easily extensible way of positioning elements — something that needs a lot of extra code if you simulate translation with `top` and `left` positioning. Another bonus is that this is just like working in a `canvas` element.
 
 > [!NOTE]
 > You may need to attach a `translateZ(0.1)` transform if you wish to get hardware acceleration on your CSS animations, depending on platform. As noted above, this can improve performance, but can also have memory consumption issues. What you do in this regard is up to you — do some testing and find out what's best for your particular app.
@@ -169,21 +169,21 @@ Instead, you should try to use {{domxref("window.requestAnimationFrame()")}}. Th
 
 #### Make events immediate
 
-As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use [`touchstart`](/es/docs/Web/Reference/Events/touchstart) and [`touchend`](/es/docs/Web/Reference/Events/touchend) instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
+As old-school, accessibility-aware Web developers we love click events since they also support keyboard input. On mobile devices, these are too slow. You should use [`touchstart`](/es/docs/Web/API/Element/touchstart_event) and [`touchend`](/es/docs/Web/API/Element/touchend_event) instead. The reason is that these don't have a delay that makes the interaction with the app appear sluggish. If you test for touch support first, you don't sacrifice accessibility, either. For example, the Financial Times uses a library called [fastclick](https://github.com/ftlabs/fastclick) for that purpose, which is available for you to use.
 
 #### Keep your interface simple
 
-One big performance issue we found in HTML5 apps was that moving lots of [DOM](/es/docs/DOM) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
+One big performance issue we found in HTML5 apps was that moving lots of [DOM](/es/docs/Web/API/Document_Object_Model) elements around makes everything sluggish — especially when they feature lots of gradients and drop shadows. It helps a lot to simplify your look-and-feel and move a proxy element around when you drag and drop.
 
 When, for example, you have a long list of elements (let's say tweets), don't move them all. Instead, keep in your DOM tree only the ones that are visible and a few on either side of the currently visible set of tweets. Hide or remove the rest. Keeping the data in a JavaScript object instead of accessing the DOM can vastly improve your app's performance. Think of the display as a presentation of your data rather than the data itself. That doesn't mean you can't use straight HTML as the source; just read it once and then scroll 10 elements, changing the content of the first and last accordingly to your position in the results list, instead of moving 100 elements that aren't visible. The same trick applies in games to sprites: if they aren't currently on the screen, there is no need to poll them. Instead re-use elements that scroll off screen as new ones coming in.
 
 ## General application performance analysis
 
-Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, [Firefox's Network Monitor](/es/docs/Tools/Network_Monitor) will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
+Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, [Firefox's Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
 
 ![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](network-monitor.jpg)
 
-If your page contains JavaScript code that is taking a long time to run, the [JavaScript profiler](/es/docs/Tools/Profiler) will pinpoint the slowest lines of code:
+If your page contains JavaScript code that is taking a long time to run, the [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) will pinpoint the slowest lines of code:
 
 ![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
@@ -192,9 +192,9 @@ The [Built-in Gecko Profiler](/es/docs/Performance/Profiling_with_the_Built-in_P
 ![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
 > [!NOTE]
-> You can use these tools with the Android browser by running Firefox and enabling [remote debugging](/es/docs/Tools/Remote_Debugging).
+> You can use these tools with the Android browser by running Firefox and enabling [remote debugging](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html).
 
-In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Simply downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
+In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Simply downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](https://www.slideshare.net/firt/mobile-web-high-performance) talk.
 
 ### Testcases and submitting bugs
 

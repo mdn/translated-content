@@ -79,7 +79,7 @@ Ou colocar ele para requisições individuais com o atributo `referrerpolicy` no
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-Alternativamente, uma [relação de link](/pt-BR/docs/Web/HTML/Link_types) `noreferrer` em um elemento `a`, `area`, ou `link` pode ser colocada:
+Alternativamente, uma [relação de link](/pt-BR/docs/Web/HTML/Attributes/rel) `noreferrer` em um elemento `a`, `area`, ou `link` pode ser colocada:
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>

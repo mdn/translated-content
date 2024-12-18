@@ -10,7 +10,7 @@ El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [for
 > [!NOTE]
 > Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
 >
-> Si tiene problemas, pídeanos ayuda; consulte la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) en la parte inferior de esta página.
+> Si tiene problemas, pídeanos ayuda; consulte la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
 
 ## Texto HTML avanzado 1
 

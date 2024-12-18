@@ -19,7 +19,7 @@ HTML フォームは [HTTP](/ja/docs/Web/HTTP) リクエストを宣言的に送
 
 最近の多くの UI は、HTML フォームを使用してユーザーからの入力を収集します。ユーザーがデータを送信しようとすると、アプリケーションはバックグラウンドでデータを非同期的に制御して送信し、変更が必要な UI の部分のみを更新します。
 
-任意のデータを非同期に送信することは、**"Asynchronous JavaScript And XML"** を表す頭字語である [AJAX](/ja/docs/Web/Guide/AJAX) として知られています。
+任意のデータを非同期に送信することは、**"Asynchronous JavaScript And XML"** を表す頭字語である [AJAX](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) として知られています。
 
 ### その違いは?
 
@@ -110,11 +110,11 @@ btn.addEventListener("click", () => {
 
 ### XMLHttpRequest と FormData オブジェクトの使用
 
-HTTP リクエストを手作業で作成するのは大変なことです。幸いなことに、最近の [XMLHttpRequest 仕様書](http://www.w3.org/TR/XMLHttpRequest/)では {{domxref("FormData")}} オブジェクトを使ってフォームデータリクエストを処理する便利で簡単な方法が提供されています。
+HTTP リクエストを手作業で作成するのは大変なことです。幸いなことに、最近の [XMLHttpRequest 仕様書](https://www.w3.org/TR/XMLHttpRequest/)では {{domxref("FormData")}} オブジェクトを使ってフォームデータリクエストを処理する便利で簡単な方法が提供されています。
 
 {{domxref("FormData")}} オブジェクトは、送信用のフォームデータを作成したり、送信方法を管理するフォーム要素内のデータを取得するために使用できます。
 
-このオブジェクトの使い方は [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)で詳述されていますが、2 つの例があります。
+このオブジェクトの使い方は [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)で詳述されていますが、2 つの例があります。
 
 #### 独立した FormData オブジェクトを使用する
 

@@ -53,7 +53,7 @@ As duas URNs correspondem
 
 | Esquema     | Descrição                                                                  |
 | ----------- | -------------------------------------------------------------------------- |
-| data        | [URI de dados](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)              |
+| data        | [URI de dados](/pt-BR/docs/Web/URI/Schemes/data)              |
 | file        | Nomes de arquivos específicos do host                                      |
 | ftp         | [Protocolo de transferência de arquivo](/pt-BR/docs/Glossary/FTP)          |
 | http/https  | [Hyper text transfer protocol (Secure)](/pt-BR/docs/Glossary/HTTP)         |
@@ -113,5 +113,5 @@ urn:isbn:9780141036144
 
 ## Veja também
 
-- [O que é uma URL?](/pt-BR/docs/Learn/Common_questions/What_is_a_URL)
-- [Lista de esquemas URI IANA](http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [O que é uma URL?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

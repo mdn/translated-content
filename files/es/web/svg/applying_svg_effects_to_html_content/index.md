@@ -145,6 +145,6 @@ El SVG se importa desde un archivo llamado `resources.svg`, utilizando la ruta d
 
 ## Véa también
 
-- [SVG](/en/SVG)
+- [SVG](/es/docs/Web/SVG)
 - [SVG Effects for HTML Content](/web-tech/2008/09/15/svg-effects-for-html-content) (blog post)
 - [SVG External Document References](/web-tech/2008/10/10/svg-external-document-references) (blog post)

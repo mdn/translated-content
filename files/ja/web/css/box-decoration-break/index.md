@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`box-decoration-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[断片](/ja/docs/Web/CSS/CSS_Fragmentation)が複数の行、段、ページに渡る場合に描画する方法を指定します。
+**`box-decoration-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[断片](/ja/docs/Web/CSS/CSS_fragmentation)が複数の行、段、ページに渡る場合に描画する方法を指定します。
 
 {{EmbedInteractiveExample("pages/css/box-decoration-break.html")}}
 

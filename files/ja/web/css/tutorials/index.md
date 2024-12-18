@@ -37,7 +37,7 @@ CSS 2 (Level 1) のリリース後、 CSS に新しい機能が追加されま�
 その中には、奇抜なものもあれば、かなり自己完結的なものもあります。
 基本的な概念の知識があれば、誰でも簡単に使用することができます。
 
-- [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
   - : CSS でアイテムやページをカウントするのは簡単な作業です。 {{cssxref("counter-reset")}}、{{cssxref("counter-increment")}}、{{cssxref("counters", "counters()")}}、{{cssxref("counter", "counter()")}} の使用方法を学びましょう。
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSSアニメーションでは、スタイル設定を[キーフレーム](/ja/docs/Web/CSS/@keyframes)として定義し、その間をアニメーションで遷移させることができます。

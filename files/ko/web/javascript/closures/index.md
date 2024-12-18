@@ -169,7 +169,7 @@ document.getElementById("size-16").onclick = size16;
 
 자바와 같은 몇몇 언어들은 메서드를 비공개로 선언할 수 있는 기능을 제공합니다. 이는 같은 클래스 내부의 다른 메서드에서만 그 메서드들을 호출할 수 있다는 의미입니다.
 
-[classes](/ko/docs/Web/JavaScript/Reference/Classes) 이전의 JavaScript에는 [비공개 메서드](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods)를 선언하는 기본 방법이 없었지만, 클로저를 사용하여 비공개 메서드를 흉내낼 수 있다는 것이 가능했습니다. 비공개 메서드는 코드에 대한 접근을 제한하는 데만 유용한 것이 아닙니다. 또한 전역 이름 공간을 관리하는 강력한 방법을 제공합니다.
+[classes](/ko/docs/Web/JavaScript/Reference/Classes) 이전의 JavaScript에는 [비공개 메서드](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods)를 선언하는 기본 방법이 없었지만, 클로저를 사용하여 비공개 메서드를 흉내낼 수 있다는 것이 가능했습니다. 비공개 메서드는 코드에 대한 접근을 제한하는 데만 유용한 것이 아닙니다. 또한 전역 이름 공간을 관리하는 강력한 방법을 제공합니다.
 
 아래 코드는 비공개 함수와 변수에 접근하는 퍼블릭 함수를 정의하기 위해 클로저를 사용하는 방법을 보여줍니다. 이렇게 클로저를 사용하는 것을 [모듈 디자인 패턴](https://www.google.com/search?q=javascript+module+pattern)을 따른다고 합니다.
 

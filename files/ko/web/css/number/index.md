@@ -13,7 +13,7 @@ slug: Web/CSS/number
 
 ## 보간
 
-애니메이션에서 `<number>` 자료형의 값은 유동소수점 실수를 사용해 보간합니다. 보간의 속도는 애니메이션과 연결된 [timing function](/ko/docs/Web/CSS/single-transition-timing-function)이 결정합니다.
+애니메이션에서 `<number>` 자료형의 값은 유동소수점 실수를 사용해 보간합니다. 보간의 속도는 애니메이션과 연결된 [timing function](/ko/docs/Web/CSS/easing-function)이 결정합니다.
 
 ## 예제
 

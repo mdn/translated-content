@@ -26,4 +26,4 @@ Pour afficher ces caractères comme texte, il faut les remplacer par l'entité d
 
 ### Référence technique
 
-- [Liste officielle des identificateurs de caractères](http://dev.w3.org/html5/html-author/charref)
+- [Liste officielle des identificateurs de caractères](https://dev.w3.org/html5/html-author/charref)

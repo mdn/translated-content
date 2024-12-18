@@ -48,11 +48,11 @@ slug: Web/CSS/CSS_selectors
   - : `>` 결합자는 첫 번째 요소의 바로 아래 자식인 노드를 선택합니다.
     **구문:** `A > B`
     **예제:** `ul > li`는 {{HTMLElement("ul")}} 요소 바로 아래에 위치하는 모든 {{HTMLElement("li")}} 요소와 일치합니다.
-- [일반 형제 결합자](/ko/docs/Web/CSS/General_sibling_combinator)
+- [일반 형제 결합자](/ko/docs/Web/CSS/Subsequent-sibling_combinator)
   - : `~` 결합자는 형제, 즉 첫 번째 요소를 뒤따르면서 같은 부모를 공유하는 두 번째 요소를 선택합니다.
     **구문:** `A ~ B`
     **예제:** `p ~ span`은 {{HTMLElement("p")}} 요소를 뒤따르는 모든 {{HTMLElement("span")}} 요소와 일치합니다.
-- [인접 형제 결합자](/ko/docs/Web/CSS/Adjacent_sibling_combinator)
+- [인접 형제 결합자](/ko/docs/Web/CSS/Next-sibling_combinator)
   - : `+` 결합자는 인접 형제, 즉 첫 번째 요소의 바로 뒤에 위치하면서 같은 부모를 공유하는 두 번째 요소를 선택합니다.
     **구문:** `A + B`
     **예제:** `h2 + p`는 {{HTMLElement("h2")}} 바로 뒤에 위치하는 {{HTMLElement("p")}} 요소와 일치합니다.

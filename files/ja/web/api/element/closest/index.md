@@ -1,9 +1,9 @@
 ---
 title: "Element: closest() メソッド"
-short-title: closest()
 slug: Web/API/Element/closest
 l10n:
   sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
+short-title: closest()
 ---
 
 {{APIRef('DOM')}}
@@ -78,5 +78,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - セレクターを取る他の {{domxref("Element")}} のメソッド: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}

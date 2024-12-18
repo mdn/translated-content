@@ -58,7 +58,7 @@ Comparons maintenant la bibliothèque avec un serveur web :
 
 ## Pédagogie active
 
-_Aucun contenu de pédagogie active n'est disponible pour le moment. [S'il vous plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Contribute/Getting_started)_
+_Aucun contenu de pédagogie active n'est disponible pour le moment. [S'il vous plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Community/Contributing/Getting_started)_
 
 ## Allons plus loin
 
@@ -107,5 +107,5 @@ Voici un exemple du navigateur Firefox affichant une boîte de recherche Google 
 
 ## Étapes suivantes
 
-- Allez plus loin : [Qu'est-ce qu'un serveur web ?](/fr/docs/Learn/Common_questions/What_is_a_web_server)
-- Voyez comment des pages web sont liées pour former un site web : [Comprendre comment fonctionnent les liens sur le Web](/fr/docs/Learn/Common_questions/What_are_hyperlinks)
+- Allez plus loin : [Qu'est-ce qu'un serveur web ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- Voyez comment des pages web sont liées pour former un site web : [Comprendre comment fonctionnent les liens sur le Web](/fr/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)

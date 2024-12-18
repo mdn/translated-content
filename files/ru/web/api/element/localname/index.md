@@ -61,12 +61,12 @@ name = element.localName
 > [!NOTE]
 > В Gecko 1.9.2 и ранее, свойство возвращает версию локального имени в верхнем регистре для HTML-элементов в HTML DOMs (в отличии от XHTML элементов в XML DOMs). В более поздних версиях, в соответствии с HTML5, свойство возвращает, в случае внутреннего хранилища DOM, в нижнем регистре для HTML-элементов в HTML DOMs и XHTML элементов в XML DOMs. {{domxref("element.tagName","tagName")}} свойство продолжает возвращать в верхнем регистре для HTML-элементов в HTML DOMs.
 
-Для узла другого [типа](/ru/docs/DOM/Node.nodeType) отличного от `ELEMENT_NODE` и `ATTRIBUTE_NODE` `localName` всегда `null`.
+Для узла другого [типа](/ru/docs/Web/API/Node/nodeType) отличного от `ELEMENT_NODE` и `ATTRIBUTE_NODE` `localName` всегда `null`.
 
 ## Спецификации
 
-- [DOM Level 2 Core: Node.localName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSLocalN)
-- [DOM Level 3 Core: Node.localName](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-NodeNSLocalN)
+- [DOM Level 2 Core: Node.localName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSLocalN)
+- [DOM Level 3 Core: Node.localName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-NodeNSLocalN)
 
 ## Смотрите также
 

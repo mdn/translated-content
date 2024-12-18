@@ -18,7 +18,7 @@ _Microsoft Edge를 사용하는 개발자들을 위한 정보를 추가해 주�
 
 ## Firefox
 
-Firefox는 네이티브 [Web Audio 에디터](/ko/docs/Tools/Web_Audio_Editor)를 제공합니다.
+Firefox는 네이티브 [Web Audio 에디터](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)를 제공합니다.
 
 ## Safari
 
@@ -28,4 +28,4 @@ _Safari에서 작업하는 개발자들을 위한 정보를 추가해 주세요.
 
 - [Web Audio API](/ko/docs/Web/API/Web_Audio_API)
 - [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [모든 브라우저에서 작동하는 Web Audio API 코드 작성하기](/ko/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
+- [모든 브라우저에서 작동하는 Web Audio API 코드 작성하기](/ko/docs/Web/API/Web_Audio_API)

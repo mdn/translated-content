@@ -39,7 +39,7 @@ locallibrary/         # Website folder
 
 ## プロジェクトの作成
 
-始めにコマンドプロンプトまたはターミナルを開いて、（先に自分が仮想環境([virtual environment](/ja/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment))にいることを確認して下さい）、Django アプリを格納したい場所へ移動します（ドキュメントフォルダーの中など探しやすい場所にしましょう）。そして、新しいウェブサイトのフォルダー（この場合は _locallibrary_）を作りましょう。そして、cd コマンドでそのフォルダーへ移動しましょう。
+始めにコマンドプロンプトまたはターミナルを開いて、（先に自分が仮想環境([virtual environment](/ja/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment))にいることを確認して下さい）、Django アプリを格納したい場所へ移動します（ドキュメントフォルダーの中など探しやすい場所にしましょう）。そして、新しいウェブサイトのフォルダー（この場合は _locallibrary_）を作りましょう。そして、cd コマンドでそのフォルダーへ移動しましょう。
 
 ```bash
 mkdir locallibrary

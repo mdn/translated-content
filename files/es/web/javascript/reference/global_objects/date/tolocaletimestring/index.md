@@ -19,7 +19,7 @@ dateObj.toLocaleTimeString([locales[, options]])
 
 Los argumentos `locales` y `options` personalizan el comportamiento de la función y le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse. En las implementaciones que ignoran los argumentos `locales` y `options`, la localidad y la forma de la cadena devuelta son dependientes por completo de la implementación.
 
-Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
+Vea el [constructor `Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) para los detalles de estos parámetros y sobre cómo usarlos.
 
 El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month` y `day` son todas {{jsxref("undefined")}}, entonces `year`, `month` y `day` se asumen como `"numeric"`.
 

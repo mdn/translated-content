@@ -5,7 +5,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}
 
-Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
+Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_form_styling) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
 
@@ -659,7 +659,7 @@ Maintenant que le design et la structure sont prêts, nous pouvons écrire le co
 > Le code qui suit a été conçu à des fins éducatives et ne doit pas être utilisé tel quel. Entre autres choses, comme nous le verrons, il n'est pas à l'épreuve du temps et ne fonctionnera pas sur des navigateurs historiques. Il comporte également des parties redondantes. Elles devraient être optimisées pour du code de production.
 
 > [!NOTE]
-> Créer des widgets réutilisables peut se révéler un peu délicat. L'ébauche de la norme « [W3C Web Component](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) » apporte des réponses à cette question particulière. Le [projet X-Tag](http://x-tags.org/) est un essai de mise en œuvre de cette spécification ; nous vous encourageons à y jeter un coup d'œil.
+> Créer des widgets réutilisables peut se révéler un peu délicat. L'ébauche de la norme « [W3C Web Component](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) » apporte des réponses à cette question particulière. Le [projet X-Tag](http://x-tags.org/) est un essai de mise en œuvre de cette spécification ; nous vous encourageons à y jeter un coup d'œil.
 
 ### Pourquoi ne fonctionne-t-il pas ?
 
@@ -1700,11 +1700,11 @@ Mais attendez, avons‑nous vraiment terminé ?
 
 Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !
 
-Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Accessibility/ARIA). ARIA signifie « Accessible Rich Internet Application » et c'est une [norme W3C](http://www.w3.org/TR/wai-aria/) spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.
+Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Web/Accessibility/ARIA). ARIA signifie « Accessible Rich Internet Application » et c'est une [norme W3C](https://www.w3.org/TR/wai-aria/) spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.
 
 ### L'attribut `role`
 
-L'attribut clé utilisé par [ARIA](/fr/docs/Accessibility/ARIA) est l'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques). L'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques) accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
+L'attribut clé utilisé par [ARIA](/fr/docs/Web/Accessibility/ARIA) est l'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques). L'attribut [`role`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques) accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
 
 Il faut aussi noter qu'ARIA définit les rôles appliqués par défaut aux balises HTML standard. Par exemple, l'élément {{HTMLElement("table")}} correspond au rôle `grid`, et l'élément {{HTMLElement("ul")}} correspond au rôle `list`. Comme nous utilisons un élément {{HTMLElement("ul")}}, nous voulons nous assurer que le rôle `listbox` de notre widget remplacera le rôle `list` de l'élément {{HTMLElement("ul")}}. À cette fin, nous utiliserons le rôle `presentation`. Ce rôle est conçu pour nous permettre d'indiquer qu'un élément n'a pas de signification particulière, et est utilisé uniquement pour présenter de l'information. Nous l'appliquerons à notre élément {{HTMLElement("ul")}}.
 
@@ -1727,11 +1727,11 @@ Pour prendre en charge le rôle `listbos`, nous n'avons qu'à mettre à jour not
 ```
 
 > [!NOTE]
-> Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors).
+> Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/Web/CSS/Attribute_selectors).
 
 ### L'attribut `aria-selected`
 
-Utiliser l'attribut `role` ne suffit pas. [ARIA](/fr/docs/Accessibility/ARIA) fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : `aria-selected`.
+Utiliser l'attribut `role` ne suffit pas. [ARIA](/fr/docs/Web/Accessibility/ARIA) fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : `aria-selected`.
 
 L'attribut `aria-selected` s'utilise pour marquer l'option actuellement sélectionnée ; ceci permet aux techniques d'assistance d'informer l'utilisateur quelle est la sélection en cours. Nous l'utiliserons dynamiquement avec JavaScript pour marquer l'option sélectionnée chaque fois que l'utilisateur en choisit une. Pour cela, nous devons réviser la fonction `updateValue()` :
 
@@ -1755,7 +1755,7 @@ function updateValue(select, index) {
 }
 ```
 
-Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](http://www.apple.com/accessibility/voiceover/)). Consultez le [code complet source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) :
+Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](https://www.apple.com/accessibility/voiceover/)). Consultez le [code complet source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) :
 
 ```html hidden
 <form class="no-widget">

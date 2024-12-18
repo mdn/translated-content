@@ -13,7 +13,7 @@ l10n:
 
 ウェブにおける[プライバシー](/ja/docs/Web/Privacy)と[セキュリティ](/ja/docs/Web/Security)の問題の大きな原因の一つは、 {{htmlelement("iframe")}} 要素に埋め込まれたコンテンツです。過去には、 `<iframe>` はサードパーティクッキーを設定するために使用されてきました。サードパーティクッキーは、サイト間で情報を共有したりユーザーを追跡したりするために使用することができます。また、 `<iframe>` に埋め込まれたコンテンツは、埋め込み文書と通信することができます（例えば、 {{domxref("Window.postMessage()")}} を使用します）。
 
-埋め込み先の文書は、スクリプトを使用して `<iframe>` から様々な情報を読み取ることができます。例えば、埋め込まれた URL が [URL 引数](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#query)を含んでいる場合、 `src` プロパティから URL を読み取ることで、重要なトラッキング/フィンガープリントのデータを取得できる可能性があります。 `<iframe>` は埋め込みコンテキストの DOM にもアクセスすることができます。
+埋め込み先の文書は、スクリプトを使用して `<iframe>` から様々な情報を読み取ることができます。例えば、埋め込まれた URL が [URL 引数](/ja/docs/Web/URI#query)を含んでいる場合、 `src` プロパティから URL を読み取ることで、重要なトラッキング/フィンガープリントのデータを取得できる可能性があります。 `<iframe>` は埋め込みコンテキストの DOM にもアクセスすることができます。
 
 ほとんどの現行ブラウザーは、クッキーのデータが追跡のために使用できなくなるようにストレージを分割する仕組みに取り組んでいます（例えば、 [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) や [Firefox State Partitioning](/ja/docs/Web/Privacy/State_Partitioning) を参照してください）。
 
@@ -53,7 +53,7 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-`FencedFrameConfig` オブジェクトを得るには、 `resolveToConfig: true` を `runAdAuction()` に渡す必要があります。 `resolveToConfig` が `false` に設定されていると、返される {{jsxref("Promise")}} は不透過な [URN](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) （`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a` など）に解決し、これは `<iframe>` 内でのみ使用することができます。
+`FencedFrameConfig` オブジェクトを得るには、 `resolveToConfig: true` を `runAdAuction()` に渡す必要があります。 `resolveToConfig` が `false` に設定されていると、返される {{jsxref("Promise")}} は不透過な [URN](/ja/docs/Web/URI#urns) （`urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a` など）に解決し、これは `<iframe>` 内でのみ使用することができます。
 
 どちらの方法でも、ブラウザーは埋め込むコンテンツのターゲット位置を含む URL を格納します。不透明な URN、または `FencedFrameConfig` 内部の `url` プロパティに割り当てられたものです。埋め込みコンテキストで実行する JavaScript では、 URL の値を読み取ることはできません。
 

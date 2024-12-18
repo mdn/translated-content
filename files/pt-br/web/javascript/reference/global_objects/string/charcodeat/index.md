@@ -24,7 +24,7 @@ Um número representando o valor de unidade de código UTF-16 do caractere no í
 
 ## Descrição
 
-Os pontos de código Unicode variam de `0` a `1114111` (`0x10FFFF`). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals).)
+Os pontos de código Unicode variam de `0` a `1114111` (`0x10FFFF`). Os primeiros 128 pontos de código Unicode são uma correspondência direta da codificação de caracteres ASCII. (Para informações sobre Unicode, veja o [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types).)
 
 > [!NOTE]
 > O `charCodeAt()` sempre retornará um valor menor do que `65536`. Isso ocorre pois os pontos de código mais altos são representados por um par de pseudo-caracteres "substitutos" (de menor valor) que são usados para compreender o caracter real.

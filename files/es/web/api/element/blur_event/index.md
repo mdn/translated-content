@@ -5,7 +5,7 @@ slug: Web/API/Element/blur_event
 
 {{ APIRef }}
 
-El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y [`focusout`](/es/docs/Mozilla_event_reference/focusout) es que sólo el último se propaga (bubbles).
+El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferencia principal entre este evento y [`focusout`](/es/docs/Web/API/Element/focusout_event) es que sólo el último se propaga (bubbles).
 
 ## Información General
 
@@ -37,7 +37,7 @@ El evento `blur` es disparado cuando un elemento ha perdido su foco. La diferenc
 
 ## Delegación de eventos
 
-Hay dos maneras de implementar la delegación de eventos para este evento: usando el evento `focusout` en exploradores que lo soporten, o cambiando el parámetro "useCapture" de [`addEventListener`](/es/docs/DOM/element.addEventListener) a `true`:
+Hay dos maneras de implementar la delegación de eventos para este evento: usando el evento `focusout` en exploradores que lo soporten, o cambiando el parámetro "useCapture" de [`addEventListener`](/es/docs/Web/API/EventTarget/addEventListener) a `true`:
 
 ### Contenido HTML
 
@@ -80,7 +80,7 @@ form.addEventListener(
 
 ## Eventos relacionados
 
-- [`focus`](/es/docs/Web/Reference/Events/focus)
-- [`blur`](/es/docs/Web/Reference/Events/blur)
-- [`focusin`](/es/docs/Web/Reference/Events/focusin)
-- [`focusout`](/es/docs/Web/Reference/Events/focusout)
+- [`focus`](/es/docs/Web/API/Element/focus_event)
+- [`blur`](/es/docs/Web/API/Element/blur_event)
+- [`focusin`](/es/docs/Web/API/Element/focusin_event)
+- [`focusout`](/es/docs/Web/API/Element/focusout_event)

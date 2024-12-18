@@ -153,7 +153,7 @@ def index(request):
     )
 ```
 
-La primera parte de la función vista extrae contadores de registros usando el atributo `objects.all()` en las clases del modelo. Tambien obtiene una lista de los objetos `BookInstance` que tienen un valor del campo status de 'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo ([Django Tutorial Part 3: Usando modelos > Buscando registros](/es/docs/Learn/Server-side/Django/Models#Searching_for_records)).
+La primera parte de la función vista extrae contadores de registros usando el atributo `objects.all()` en las clases del modelo. Tambien obtiene una lista de los objetos `BookInstance` que tienen un valor del campo status de 'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo ([Django Tutorial Part 3: Usando modelos > Buscando registros](/es/docs/Learn/Server-side/Django/Models#searching_for_records)).
 
 Al final de la función invocamos a la función `render()` para crear y retornar una página HTML como una respuesta (esta función atajo envuelve una serie, simplicando este caso de uso muy común). Esta recibe como parametros el objeto `request original` (una `ConsultaHttp`), una plantilla HTML con marcadores para los datos, y una variable de `contexto` (un diccionario Python que contiene los datos que serán insertados en esos marcadores).
 

@@ -31,7 +31,7 @@ Un tableau ({{jsxref("Array")}}) contenant les correspondances et les groupes ca
 
 Comme indiqué ci-avant, les résultats peuvent contenir certaines propriétés supplémentaires :
 
-- `groups` : un tableau de groupes capturants nommés ou {{jsxref("undefined")}} si aucun groupe capturant n'a été défini. Voir [la page sur les groupes et les intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges) pour plus d'informations.
+- `groups` : un tableau de groupes capturants nommés ou {{jsxref("undefined")}} si aucun groupe capturant n'a été défini. Voir [la page sur les groupes et les intervalles](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) pour plus d'informations.
 - `index` : l'indice de la chaîne de caractères où a été trouvée la correspondance.
 - `input` : une copie de la chaîne sur laquelle a été effectuée la recherche.
 

@@ -5,7 +5,7 @@ slug: Learn/Forms/Basic_native_form_controls
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-En el [artículo anterior](/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
+En el [artículo anterior](/es/docs/Learn/Forms/How_to_structure_a_web_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
 
 <table>
   <tbody>
@@ -33,7 +33,7 @@ Ya conoces algunos elementos de formulario, incluidos {{HTMLelement ('form')}}, 
 - Algunos de los atributos que comunes para todos los controles de formulario.
 
 > [!NOTE]
-> Las características que se consideran en este artículo son compatibles con todos los navegadores, lo que no es el caso para todos los controles de formulario. En los próximos dos artículos vamos a exponer los controles de formulario que se han añadido a HTML5 más recientemente. Si quieres una referencia más avanzada, consulta nuestra [referencia a elementos de formulario HTML](/es/docs/Web/HTML/Elemento#Formularios), y en particular nuestra extensa referencia a [tipos \<input>](/es/docs/Web/HTML/Elemento/input).
+> Las características que se consideran en este artículo son compatibles con todos los navegadores, lo que no es el caso para todos los controles de formulario. En los próximos dos artículos vamos a exponer los controles de formulario que se han añadido a HTML5 más recientemente. Si quieres una referencia más avanzada, consulta nuestra [referencia a elementos de formulario HTML](/es/docs/Web/HTML/Element#formularios), y en particular nuestra extensa referencia a [tipos \<input>](/es/docs/Web/HTML/Element/input).
 
 ## Campos de entrada de texto
 
@@ -47,7 +47,7 @@ Todos los controles de texto básicos comparten algunos comportamientos comunes:
 - Se pueden marcar como [`readonly`](/es/docs/Web/HTML/Element/input#readonly) (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o [`disabled`](/es/docs/Web/HTML/Element/input#disabled) (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
 - Pueden tener un [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder); se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
 - Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
-- Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
+- Admiten [corrección ortográfica](/es/docs/Web/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
 > [!NOTE]
 > El elemento {{htmlelement ("input")}} es único entre los elementos HTML porque puede tomar muchas formas diferentes según el valor de su atributo. Se utiliza para crear la mayoría de los tipos de controles de formulario, que incluyen campos de texto de una sola línea, controles para la fecha y la hora, controles sin introducción de texto, como casillas de verificación, botones de opción y selectores de color, y botones.
@@ -236,11 +236,11 @@ Por ejemplo, cuando haces clic en las coordenadas (123, 456) de la imagen y se h
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en que se envían y recuperan estos valores se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data).
+Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en que se envían y recuperan estos valores se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data).
 
 ## Selector de archivos
 
-Hay un último tipo de `<input>` que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.
+Hay un último tipo de `<input>` que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.
 
 Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/input/file), utilizas el elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en `file`. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo [`accept`](/es/docs/Web/HTML/Element/input#accept). Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple).
 
@@ -280,8 +280,8 @@ Este artículo ha expuesto los tipos de entrada más antiguos: el conjunto origi
 
 ### Temas avanzados
 
-- [Enviar formularios con JavaScript](/es/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [Cómo crear widgets de formularios personalizados](/es/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Formularios HTML en navegadores antiguos](/es/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Enviar formularios con JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Cómo crear widgets de formularios personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
+- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

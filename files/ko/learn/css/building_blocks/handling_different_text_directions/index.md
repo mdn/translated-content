@@ -59,7 +59,7 @@ CSS 쓰기 모드는 텍스트가 가로 또는 세로로 표시되는지 여부
 
 ## 쓰기 모드 와 블록 및 인라인 레이아웃
 
-우리는 이미 [블록 및 인라인 레이아웃](/ko/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes) 과 일부는 블록 요소로 표시되고 다른 것은 인라인 요소로 표시된다는 사실에 대해 이미 논의했습니다. 위에서 설명한 것처럼 블록과 인라인은 실제 화면이 아니라 문서의 쓰기 모드와 연결되어 있습니다. 영어와 같이 텍스트를 가로로 표시하는 쓰기 모드를 사용하는 경우 블록은 페이지의 맨 위에서 아래로만 표시됩니다.
+우리는 이미 [블록 및 인라인 레이아웃](/ko/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) 과 일부는 블록 요소로 표시되고 다른 것은 인라인 요소로 표시된다는 사실에 대해 이미 논의했습니다. 위에서 설명한 것처럼 블록과 인라인은 실제 화면이 아니라 문서의 쓰기 모드와 연결되어 있습니다. 영어와 같이 텍스트를 가로로 표시하는 쓰기 모드를 사용하는 경우 블록은 페이지의 맨 위에서 아래로만 표시됩니다.
 
 예제를 보면 더 명확해집니다. 이 다음 예제에서는 제목과 단락을 포함하는 두 개의 박스가 있습니다. 첫 번째 쓰기 모드는 페이지 상단에서 하단으로 수평으로 표시되는 `writing-mode: horizontal-tb` 를 사용합니다. 두 번째 쓰기 모드는 세로로 오른쪽에서 왼쪽으로 표시되는 `writing-mode: vertical-rl` 를 사용합니다.
 
@@ -113,7 +113,7 @@ CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-모든 개별 테두리를 고려할 때 많은 속성이 있으며, [논리 속성 및 값](/ko/docs/Web/CSS/CSS_Logical_Properties) 에 대한 MDN 페이지에서 매핑된 속성을 모두 볼 수 있습니다.
+모든 개별 테두리를 고려할 때 많은 속성이 있으며, [논리 속성 및 값](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 에 대한 MDN 페이지에서 매핑된 속성을 모두 볼 수 있습니다.
 
 ### 논리적 값
 

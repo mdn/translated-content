@@ -42,7 +42,7 @@ p {
 }
 ```
 
-Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn/CSS/Styling_text/Fundamentals#Familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
+Este sistema funciona bien, pero las opciones de tipo de letra tradicionales de los desarrolladores web eran limitadas. Solo hay un puñado de tipos de letra que puedes garantizar que están disponibles en todos los sistemas comunes: las llamadas [fuentes seguras para la web](/es/docs/Learn/CSS/Styling_text/Fundamentals#familia_de_tipos_de_letras). Puedes usar la lista de tipos de letra para especificar cuáles prefieres, seguido de alternativas seguras para la web y del tipo de letra predeterminado del sistema. El problema es que esto añade trabajo extra en términos de pruebas para asegurarte de que tus diseños se ven bien con cada tipo de letra, etc.
 
 ## Tipografías web
 
@@ -79,7 +79,7 @@ Hay dos cosas importantes a tener en cuenta acerca de las tipografías web:
 
 Con esto en mente, vamos a construir un ejemplo básico de uso de un tipo de letra seguro para web a partir de los principios básicos. Es difícil hacer un ejemplo de demostración de este aspecto con un ejemplo en vivo incrustado, por lo tanto, nos gustaría que siguieses los pasos que se detallan en las secciones siguientes para que te hagas una idea de cómo funciona el proceso.
 
-Como punto de partida hay que utilizar los archivos [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) y [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) a los que añadir tu código (véase el [ejemplo en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)). Haz una copia de estos archivos en un directorio nuevo de tu equipo. En el archivo `web-font-start.css`, encontrarás un poco de CSS para trabajar con el aspecto y los tipos de letra básicos del ejemplo.
+Como punto de partida hay que utilizar los archivos [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) y [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) a los que añadir tu código (véase el [ejemplo en vivo](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)). Haz una copia de estos archivos en un directorio nuevo de tu equipo. En el archivo `web-font-start.css`, encontrarás un poco de CSS para trabajar con el aspecto y los tipos de letra básicos del ejemplo.
 
 ### Encontrar tipos de letra
 
@@ -132,7 +132,7 @@ Con tu ejemplo de demostración, deberías obtener una página con unos agradabl
 ![](web-font-example.png)
 
 > [!NOTE]
-> Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
+> Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 
 ## Los servicios de tipos de letra en línea
 
@@ -148,7 +148,7 @@ La mayoría de estos servicios son fáciles de usar, por lo que no vamos a expon
 6. Luego, debes copiar las declaraciones CSS enumeradas en tu CSS según corresponda para aplicar los tipos de letra personalizados a tu HTML.
 
 > [!NOTE]
-> Puedes encontrar una versión completa en [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) y [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si necesitas comparar tu trabajo con el nuestro ([consúltalo en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
+> Puedes encontrar una versión completa en [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) y [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si necesitas comparar tu trabajo con el nuestro ([consúltalo en vivo](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
 
 ## @font-face con más detalle
 
@@ -169,7 +169,7 @@ Vamos a explorar que la sintaxis correspondiente a `@font-face` que te ha genera
 }
 ```
 
-Esto se conoce como «sintaxis @font-face a prueba de balas» desde una publicación de Paul Irish, en los tiempos en que `@font-face` empezaba a popularizarse ([Bulletproof @font-face Syntax](http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Vamos a ver qué hace:
+Esto se conoce como «sintaxis @font-face a prueba de balas» desde una publicación de Paul Irish, en los tiempos en que `@font-face` empezaba a popularizarse ([Bulletproof @font-face Syntax](https://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Vamos a ver qué hace:
 
 - `font-family`: Esta línea especifica el nombre con el que vas a referirte a la fuente. Puedes poner el que quieras, siempre y cuando lo uses de manera coherente a lo largo de tu CSS.
 - `src`: Estas líneas especifican las rutas de acceso a los archivos de tipos de letra para que puedas importarlos a tu CSS (la parte `URL`) y el formato de cada archivo de tipo de letra (la parte `format`). La última parte en cada caso es opcional, pero es útil declararla porque permite que los navegadores encuentren más rápido un tipo de letra que puedan usar. Se pueden enumerar varias declaraciones, separadas por comas: el navegador buscará por ellas y usará la primera que encuentre. Por lo tanto, es mejor poner formatos nuevos y mejores, como WOFF2 y formatos más antiguos, no tan buenos, como TTF. La única excepción son las fuentes EOT: se colocan primero para corregir un par de errores en versiones anteriores de Internet Explorer, por lo que intentará usar lo primero que encuentre, incluso si realmente no puede usar la fuente.

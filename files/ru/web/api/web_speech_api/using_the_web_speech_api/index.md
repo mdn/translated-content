@@ -130,7 +130,7 @@ recognition.onaudiostart = function() {
 
 #### Получение и обработка результата
 
-После того, как процесс распознавания речи был запущен, есть много обработчиков событий, которые могут быть использованы для работы с результатом и другой сопутствующей информацией (см. [Список обработчиков событий SpeechRecognition](/ru/docs/Web/API/SpeechRecognition#%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9).) Наиболее распространённый, который вы, вероятно, и будете использовать, это [SpeechRecognition.onresult](/ru/docs/Web/API/SpeechRecognition/onresult), который запускается сразу после получения успешного результата. Значение цвета получаем вызовом функции `getColor()`
+После того, как процесс распознавания речи был запущен, есть много обработчиков событий, которые могут быть использованы для работы с результатом и другой сопутствующей информацией (см. [Список обработчиков событий SpeechRecognition](/ru/docs/Web/API/SpeechRecognition#%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9).) Наиболее распространённый, который вы, вероятно, и будете использовать, это [SpeechRecognition.onresult](/ru/docs/Web/API/SpeechRecognition/result_event), который запускается сразу после получения успешного результата. Значение цвета получаем вызовом функции `getColor()`
 
 ```
 function getColor(speechResult) {
@@ -154,7 +154,7 @@ recognition.onresult = function(event) {
 
 Третья строка здесь выглядит немного усложнённой, поэтому давайте разберёмся с ней подробнее. Свойство [`SpeechRecognitionEvent.results`](/ru/docs/Web/API/SpeechRecognitionEvent/results) возвращает объект [`SpeechRecognitionResultList`](/ru/docs/Web/API/SpeechRecognitionResultList), содержащий в себе другие объекты типа [`SpeechRecognitionResult`](/ru/docs/Web/API/SpeechRecognitionResult). У него есть геттер, поэтому он может быть доступен как массив, поэтому переменная `last` определяет ссылку на `SpeechRecognitionResult` из списка. Каждый объект `SpeechRecognitionResult` содержит объекты [`SpeechRecognitionAlternative`](/ru/docs/Web/API/SpeechRecognitionAlternative), которые содержат отдельные распознанные слова. Они также имеют геттеры, поэтому к ним можно получить доступ как к массивам, поэтому логично, что \[0] возвращает значение `SpeechRecognitionAlternative` по индексу 0. Затем мы возвращаем строку, содержащую индивидуально распознанный результат, используя который и можем установить цвет фона.
 
-Мы также используем свойство [`SpeechRecognition.speechend`](/ru/docs/Web/API/SpeechRecognition/onspeechend), чтобы задать обработчик на завершение работы распознавателя речи (вызов [`SpeechRecognition.stop()`](/ru/docs/Web/API/SpeechRecognition/stop) ), как только одно слово было распознано, и входящий речевой поток был остановлен.
+Мы также используем свойство [`SpeechRecognition.speechend`](/ru/docs/Web/API/SpeechRecognition/speechend_event), чтобы задать обработчик на завершение работы распознавателя речи (вызов [`SpeechRecognition.stop()`](/ru/docs/Web/API/SpeechRecognition/stop) ), как только одно слово было распознано, и входящий речевой поток был остановлен.
 
 ```
 recognition.onspeechend = function() {
@@ -166,7 +166,7 @@ recognition.onspeechend = function() {
 
 #### Обработка ошибок
 
-Последние два обработчика используются для отлова ошибок: когда речь была признана не в соответствии с определённой грамматикой или произошла ошибка. По логике, [`SpeechRecognition.onnomatch`](/ru/docs/Web/API/SpeechRecognition/onnomatch), должен обрабатывать первый случай, но обратите внимание, что на данный момент он не срабатывает правильно в Firefox или Chrome, он просто возвращает все, что было распознано в любом случае:
+Последние два обработчика используются для отлова ошибок: когда речь была признана не в соответствии с определённой грамматикой или произошла ошибка. По логике, [`SpeechRecognition.onnomatch`](/ru/docs/Web/API/SpeechRecognition/nomatch_event), должен обрабатывать первый случай, но обратите внимание, что на данный момент он не срабатывает правильно в Firefox или Chrome, он просто возвращает все, что было распознано в любом случае:
 
 ```
 recognition.onnomatch = function(event) {
@@ -174,7 +174,7 @@ recognition.onnomatch = function(event) {
 };
 ```
 
-[`SpeechRecognition.onerror`](/ru/docs/Web/API/SpeechRecognition/onerror) обрабатывает случаи, когда имела место быть фактическая ошибка при распознавании. Свойство [`SpeechRecognitionError.error`](/ru/docs/Web/API/SpeechRecognitionError/error) содержит возвращаемую фактическую ошибку:
+[`SpeechRecognition.onerror`](/ru/docs/Web/API/SpeechRecognition/error_event) обрабатывает случаи, когда имела место быть фактическая ошибка при распознавании. Свойство [`SpeechRecognitionError.error`](/ru/docs/Web/API/SpeechRecognitionErrorEvent/error) содержит возвращаемую фактическую ошибку:
 
 ```
 recognition.onerror = function(event) {
@@ -293,7 +293,7 @@ function populateVoiceList() {
 }
 ```
 
-Когда мы собираемся запустить функцию, мы делаем следующее. Это связано с тем, что Firefox не поддерживает свойство [`SpeechSynthesis.onvoiceschanged`](/ru/docs/Web/API/SpeechSynthesis/onvoiceschanged) и будет только возвращать список голосов при запуске [`SpeechSynthesis.getVoices()`](/ru/docs/Web/API/SpeechSynthesis/getVoices). Однако, в Chrome вам нужно дождаться триггера события перед заполнением списка, следовательно, нужно условие, описанное в блоке с `if` ниже.
+Когда мы собираемся запустить функцию, мы делаем следующее. Это связано с тем, что Firefox не поддерживает свойство [`SpeechSynthesis.onvoiceschanged`](/ru/docs/Web/API/SpeechSynthesis/voiceschanged_event) и будет только возвращать список голосов при запуске [`SpeechSynthesis.getVoices()`](/ru/docs/Web/API/SpeechSynthesis/getVoices). Однако, в Chrome вам нужно дождаться триггера события перед заполнением списка, следовательно, нужно условие, описанное в блоке с `if` ниже.
 
 ```
 populateVoiceList();
@@ -304,7 +304,7 @@ populateVoiceList();
 
 #### Озвучка введённого текста
 
-Затем мы создаём обработчик событий, чтобы начать "произносить" текст, введённый в текстовом поле, при нажатии на кнопку `Enter/Return` или на `Play`. Для этого используем обработчик [`onsubmit`](/ru/docs/Web/API/GlobalEventHandlers/onsubmit) в html-формы. В функции-обработчике `speak()` мы создаём новый экземпляр [`SpeechSynthesisUtterance()`](/ru/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance), передавая значение текстового поля в конструктор.
+Затем мы создаём обработчик событий, чтобы начать "произносить" текст, введённый в текстовом поле, при нажатии на кнопку `Enter/Return` или на `Play`. Для этого используем обработчик [`onsubmit`](/ru/docs/Web/API/HTMLFormElement/submit_event) в html-формы. В функции-обработчике `speak()` мы создаём новый экземпляр [`SpeechSynthesisUtterance()`](/ru/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance), передавая значение текстового поля в конструктор.
 
 Затем нам нужно выяснить, какой голос использовать. Мы используем свойство [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) `selectedOptions` для получения выбранного элемента [`<option>`](/ru/docs/Web/HTML/Element/option), у которого берём атрибут data-name, и находим объект [`SpeechSynthesisVoice`](/ru/docs/Web/API/SpeechSynthesisVoice), имя которого соответствует значению имеющегося атрибута. После этого устанавливаем соответствующий "голосовой" объект как значение свойства [`SpeechSynthesisUtterance.voice`](/ru/docs/Web/API/SpeechSynthesisUtterance/voice).
 
@@ -313,7 +313,7 @@ populateVoiceList();
 Внутри функции `speak()` мы выполняем проверку на то, воспроизводится ли речь в данный момент, с помощью свойства [`SpeechSynthesis.speaking`](/ru/docs/Web/API/SpeechSynthesis/speaking)
 Если да, то останавливаем процесс функцией [`SpeechSynthesis.cancel()`](/ru/docs/Web/API/SpeechSynthesis/cancel) и запускаем рекурсивно заново.
 
-В последней части функции мы включаем обработчик [`SpeechSynthesisUtterance.onpause`](/ru/docs/Web/API/SpeechSynthesisUtterance/onpause), чтобы показать пример применения [`SpeechSynthesisEvent`](/ru/docs/Web/API/SpeechSynthesisEvent) в различных ситуациях. Вызов [`SpeechSynthesis.pause()`](/ru/docs/Web/API/SpeechSynthesis/pause)возвращает сообщение с информацией о номере символа и слове, на котором была вызвана пауза.
+В последней части функции мы включаем обработчик [`SpeechSynthesisUtterance.onpause`](/ru/docs/Web/API/SpeechSynthesisUtterance/pause_event), чтобы показать пример применения [`SpeechSynthesisEvent`](/ru/docs/Web/API/SpeechSynthesisEvent) в различных ситуациях. Вызов [`SpeechSynthesis.pause()`](/ru/docs/Web/API/SpeechSynthesis/pause)возвращает сообщение с информацией о номере символа и слове, на котором была вызвана пауза.
 
 Наконец, мы назовём `blur()` у текстового поля. Это, прежде всего, для того, чтобы скрыть клавиатуру в ОС Firefox.
 

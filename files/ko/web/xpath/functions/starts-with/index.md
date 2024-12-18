@@ -30,7 +30,7 @@ starts-with(haystack ,needle)
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-starts-with)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-starts-with)
 
 ### Gecko 지원
 

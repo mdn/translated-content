@@ -1,9 +1,9 @@
 ---
 title: "DocumentFragment: querySelector() メソッド"
-short-title: querySelector()
 slug: Web/API/DocumentFragment/querySelector
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+short-title: querySelector()
 ---
 
 {{ApiRef("DOM")}}
@@ -27,7 +27,7 @@ querySelector(selectors)
 
 ### 返値
 
-指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)の集合に一致する文書内の最初の要素を表す {{domxref("Element")}} オブジェクトです。一致する要素がない場合は `null` が返されます。
+指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)の集合に一致する文書内の最初の要素を表す {{domxref("Element")}} オブジェクトです。一致する要素がない場合は `null` が返されます。
 
 ## 例
 

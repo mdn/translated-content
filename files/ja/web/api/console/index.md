@@ -112,7 +112,7 @@ obj.prop = 123;
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-ブラウザーで動作する他の選択肢として、[`structuredClone()`](/ja/docs/Web/API/structuredClone) があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
+ブラウザーで動作する他の選択肢として、[`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
 
 #### 複数のオブジェクトの出力
 

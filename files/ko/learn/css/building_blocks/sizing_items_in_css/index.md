@@ -65,7 +65,7 @@ HTML 요소는 CSS 의 영향을 받기 전에 설정한 자연스러운 크기�
 
 ### 백분율 사용하기
 
-여러 방법으로 백분율은 길이 단위처럼 작동하며, [값과 단위에 대한 수업에서 논의한 것처럼](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#Percentages), 종종 길이와 상호 교환적으로 사용될 수 있습니다. 백분율을 사용하는 경우 백분율이 **_얼마인지_** 알고 있어야 합니다. 다른 container 안에 있는 박스의 경우 자식 박스에 백분율 너비를 지정하면, 부모 container 너비의 백분율이 됩니다.
+여러 방법으로 백분율은 길이 단위처럼 작동하며, [값과 단위에 대한 수업에서 논의한 것처럼](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#percentages), 종종 길이와 상호 교환적으로 사용될 수 있습니다. 백분율을 사용하는 경우 백분율이 **_얼마인지_** 알고 있어야 합니다. 다른 container 안에 있는 박스의 경우 자식 박스에 백분율 너비를 지정하면, 부모 container 너비의 백분율이 됩니다.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 

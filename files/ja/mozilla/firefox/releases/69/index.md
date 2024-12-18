@@ -22,7 +22,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### コンソール
 
-- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Tracking_Protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ([Firefox バグ 1522396](https://bugzil.la/1522396))。
+- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Firefox_tracking_protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ([Firefox バグ 1522396](https://bugzil.la/1522396))。
 - コンソールに表示されているログを、コンテキストメニューの新しい項目である \[表示メッセージをエクスポート] でファイルに保存、またはクリップボードにコピーして共有できるようになりました ([Firefox バグ 1517728](https://bugzil.la/1517728))。
 - コンソールのツールバーが、縦方向の領域を節約するためレスポンシブに高さを 1 行に減らすようになりました ([Firefox バグ 972530](https://bugzil.la/972530))。
 - Firefox UI が発したログに集中するため、コンソールでコンテンツが発したメッセージを隠せるようになりました ([Firefox バグ 1523842](https://bugzil.la/1523842))。

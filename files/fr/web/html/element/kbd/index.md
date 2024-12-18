@@ -13,7 +13,7 @@ L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant l
 
 ## Attributs
 
-Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 

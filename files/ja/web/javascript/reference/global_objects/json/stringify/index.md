@@ -314,7 +314,7 @@ JSON.stringify(circularReference);
 
 循環参照をシリアライズするためには、これに対応したライブラリを使用したり (Douglas Crockford による [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) など)、自分自身で解決策を実装したりする方法があります。循環参照を探索してシリアライズされた値に置き換える (または削除する) 必要があるでしょう。
 
-`JSON.stringify()` をオブジェクトをディープコピーするために使っている場合は、かわりに [`structuredClone()`](/ja/docs/Web/API/structuredClone) を使いたくなるかもしれません。この関数は循環参照に対応しています。[`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue) などのバイナリシリアライズを行う JavaScript エンジンの API も、循環参照に対応しています。
+`JSON.stringify()` をオブジェクトをディープコピーするために使っている場合は、かわりに [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) を使いたくなるかもしれません。この関数は循環参照に対応しています。[`v8.serialize()`](https://nodejs.org/api/v8.html#v8serializevalue) などのバイナリシリアライズを行う JavaScript エンジンの API も、循環参照に対応しています。
 
 ### localStorage で JSON.stringify() を使った例
 

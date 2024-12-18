@@ -12,7 +12,7 @@ Les évènements initialisés par ce moyen ont été créés par la méthode {{d
 > [!NOTE]
 > Ne pas utiliser cette méthode qui est dépréciée.
 >
-> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events) vous donne plus d'informations sur la manière de les utiliser.
+> À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page [Création et déclenchement d'évènements](/fr/docs/Web/Events/Creating_and_triggering_events) vous donne plus d'informations sur la manière de les utiliser.
 
 ## Syntaxe
 

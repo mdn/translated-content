@@ -18,7 +18,7 @@ Promise.race(itérable);
 ### Paramètres
 
 - `itérable`
-  - : Un objet itérable, par exemple un {{jsxref("Array")}}. Voir la page [itérable](/fr/docs/Web/JavaScript/Guide/iterable).
+  - : Un objet itérable, par exemple un {{jsxref("Array")}}. Voir la page [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Valeur de retour
 
@@ -155,7 +155,7 @@ Promise.race([p5, p6]).then(
 ```
 
 > [!NOTE]
-> Voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/WindowTimers/setTimeout)
+> Voir la documentation sur [`setTimeout`.](/fr/docs/Web/API/Window/setTimeout)
 
 ## Spécifications
 

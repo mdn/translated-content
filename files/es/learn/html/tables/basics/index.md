@@ -201,7 +201,7 @@ En este módulo no nos vamos a centrar en el CSS, sino que te vamos a proporcion
 
 ### ¿Cuándo no debes usar tablas HTML?
 
-Las tablas HTML están pensadas para utilizarse con datos tabulados. Por desgracia, mucha gente utiliza las tablas HTML para hacer compaginaciones de páginas web. Por ejemplo, una fila para contener la cabecera, una fila para contener las columnas de contenido, una fila para contener el pie de página, etc. Puede encontrar más detalles y un ejemplo en [Diseños de página](/es/docs/Learn/Accessibility/HTML#Page_layouts) en nuestro [Módulo de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility). Se solía hacer este uso de las tablas porque la compatibilidad CSS entre navegadores solía ser terrible. Los diseños de tablas son mucho menos comunes hoy en día, pero aún se pueden ver en algunos rincones de la web.
+Las tablas HTML están pensadas para utilizarse con datos tabulados. Por desgracia, mucha gente utiliza las tablas HTML para hacer compaginaciones de páginas web. Por ejemplo, una fila para contener la cabecera, una fila para contener las columnas de contenido, una fila para contener el pie de página, etc. Puede encontrar más detalles y un ejemplo en [Diseños de página](/es/docs/Learn/Accessibility/HTML#page_layouts) en nuestro [Módulo de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility). Se solía hacer este uso de las tablas porque la compatibilidad CSS entre navegadores solía ser terrible. Los diseños de tablas son mucho menos comunes hoy en día, pero aún se pueden ver en algunos rincones de la web.
 
 En resumen, es una mala idea usar tablas para el diseño en lugar de las [técnicas de diseño CSS](/es/docs/Learn/CSS/CSS_layout). Las razones principales son las siguientes:
 
@@ -267,7 +267,7 @@ Esto debería dar como resultado una tabla similar a la siguiente:
 </table>
 
 > [!NOTE]
-> También puedes encontrar esto en GitHub como [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) (consúltalo [en vivo](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> También puedes encontrar esto en GitHub como [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) (consúltalo [en vivo](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Añadir encabezados con elementos \<th>
 
@@ -368,7 +368,7 @@ Intentemos mejorar esta tabla.
 3. Guarda tu HTML y cárgalo en un navegador. Los encabezados deberían verse como tal.
 
 > [!NOTE]
-> Puedes encontrar nuestro ejemplo terminado en [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) en GitHub ([o consultarlo en vivo](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> Puedes encontrar nuestro ejemplo terminado en [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) en GitHub ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### ¿Por qué son útiles los encabezados?
 
@@ -454,11 +454,11 @@ Usemos `colspan` y `rowspan` para mejorar esta tabla.
 4. Guarda tu código y ábrelo en un navegador para ver la mejora.
 
 > [!NOTE]
-> Puedes encontrar nuestro ejemplo terminado en [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) en GitHub ([o consultarlo en vivo](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> Puedes encontrar nuestro ejemplo terminado en [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) en GitHub ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Proporcionar un estilo común a las columnas
 
-Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Elemento/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Elemento/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
+Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Element/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Element/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
 
 Tomemos el ejemplo sencillo siguiente:
 
@@ -551,7 +551,7 @@ Recrea la tabla a partir de los pasos siguientes.
 7. Añade un color de fondo diferente más un borde a la sexta columna, para indicar que este es un día especial porque da clases de un idioma diferente. Los valores para tu atributo de `style` son `background-color:#DCC48E; border:4px solid #C1437A;`
 8. Los últimos dos días los tiene libres, así que no establezcas ningún color de fondo, pero sí un valor para el ancho; el valor para el atributo de `style` es `width: 42px;`
 
-Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, puedes encontrar nuestra versión en GitHub como [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (o también puedes consultarlo [en vivo](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
+Mira cómo sigue en el ejemplo. Si te encallas o quieres verificar tu trabajo, puedes encontrar nuestra versión en GitHub como [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (o también puedes consultarlo [en vivo](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 
 ## Resumen
 

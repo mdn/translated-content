@@ -14,7 +14,7 @@ slug: Web/API/BatteryManager/chargingTime
 var time = battery.chargingTime;
 ```
 
-반환되는 중에, 건전지가 완전히 충전될 때까지 또는 이미 완전히 충전되어 있다면 0이 될 때까지 `time` 은 몇 초 뒤에 남게 되는 시간입니다. 이는 {{domxref("BatteryManager")}} object (객체),입니다. 배터리의 전류가 방전되어 있다면, 이 값은 [`Infinity`](/ko/docs/JavaScript/Reference/Global_Objects/Infinity), 즉 무한 값이 됩니다.
+반환되는 중에, 건전지가 완전히 충전될 때까지 또는 이미 완전히 충전되어 있다면 0이 될 때까지 `time` 은 몇 초 뒤에 남게 되는 시간입니다. 이는 {{domxref("BatteryManager")}} object (객체),입니다. 배터리의 전류가 방전되어 있다면, 이 값은 [`Infinity`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity), 즉 무한 값이 됩니다.
 
 ## 예제
 

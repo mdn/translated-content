@@ -319,4 +319,4 @@ Nótese que las clases ES2015 no pueden transpilarse con Babel 6 o TypeScript pa
 
 ## Librerías
 
-Existen varias librerías que se han construido sobre Web Components con la intención de incrementar el nivel de abstracción cuando se crean elementos personalizados. Algunas de estas librerías son [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](http://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), y [Stencil](https://stenciljs.com).
+Existen varias librerías que se han construido sobre Web Components con la intención de incrementar el nivel de abstracción cuando se crean elementos personalizados. Algunas de estas librerías son [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), y [Stencil](https://stenciljs.com).

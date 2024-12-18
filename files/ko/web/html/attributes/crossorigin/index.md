@@ -15,7 +15,7 @@ Media element의 `crossorigin` 속성은 CORS 세팅입니다.
 | `use-credentials` | element의 CORS 요청의 crendentials flag가 'include'로 지정됩니다.                    |
 | `""`              | `crossorigin` 또는 `crossorigin=""`처럼 빈 값을 할당하는건 `anonymous`와 동일합니다. |
 
-기본적으로 (attribute를 명시하지 않으면) CORS 요청은 할 수 없습니다. "anonymous" 키워드는 쿠키를 통한 **user credentials** 교환이 필요 없음을 의미합니다. Same origin이 아닌 경우 client-side SSL certificates/HTTP 인증은 [Terminology section of the CORS specification](http://www.w3.org/TR/cors/#user-credentials)에서 기술하고 있습니다.
+기본적으로 (attribute를 명시하지 않으면) CORS 요청은 할 수 없습니다. "anonymous" 키워드는 쿠키를 통한 **user credentials** 교환이 필요 없음을 의미합니다. Same origin이 아닌 경우 client-side SSL certificates/HTTP 인증은 [Terminology section of the CORS specification](https://www.w3.org/TR/cors/#user-credentials)에서 기술하고 있습니다.
 
 빈 문자열이나 잘못된 값일 경우 `anonymous` 와 동일하게 동작합니다.
 

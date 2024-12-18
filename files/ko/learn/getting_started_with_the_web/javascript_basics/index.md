@@ -63,7 +63,7 @@ JavaScript를 이용하여 본문 제목 텍스트를 "Hello world!"로 변경�
 
 이 모든 것이 작동하는 방식에 대해 더 잘 이해할 수 있도록 JavaScript 언어의 핵심적인 특징을 몇 가지 설명드리겠습니다. 이런 특징은 모든 프로그래밍 언어에서 공통적으로 나타나는 것에 불과하므로 이런 원칙을 숙지한다면 어떤 것이라도 프로그램할 수 있게 될 것입니다!
 
-> **경고:** **중요**: 이 글에서는, 어떤 일이 발생하는지 확인 할 수 있게 JavaScript 콘솔에 예제 코드를 입력합니다. JavaScript 콘솔에 대한 더 자세한 사항은, [브라우저 개발 도구 탐험하기](/ko/Learn/Discover_browser_developer_tools)를 보세요.
+> **경고:** **중요**: 이 글에서는, 어떤 일이 발생하는지 확인 할 수 있게 JavaScript 콘솔에 예제 코드를 입력합니다. JavaScript 콘솔에 대한 더 자세한 사항은, [브라우저 개발 도구 탐험하기](/ko/docs/Learn/Discover_browser_developer_tools)를 보세요.
 
 ### 변수
 
@@ -82,7 +82,7 @@ let myVariable;
 > [!NOTE]
 > JavaScript는 대소문자를 구분합니다 — `myVariable`은 `myvariable`과는 다른 변수입니다. 만약 코드에 문제가 생겼다면, 대소문자를 확인해보세요!
 
-> **참고:** `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let)를 참고하세요.
+> **참고:** `var` 와 `let` 의 차이에 대한 자세한 사항은 [The difference between var and let](/ko/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)를 참고하세요.
 
 변수를 선언한 후에, 값을 할당할 수 있습니다:
 
@@ -204,11 +204,11 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **참고:** [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문은 브라우저에게 함수로부터 나오는 `result` 변수를 반환하게 함으로써 그 변수를 사용할 수 있게 합니다. 이것은 필수적인 것으로 함수 안에서 정의된 변수는 오직 그 함수 내부에서만 사용 가능하기 때문입니다. 이것을 변수 {{Glossary("Scope", "scoping")}}이라고 합니다. ([변수 영역에 대한 더 많은 것](/ko/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variable_scope) 을 여기서 읽어보세요.)
+> **참고:** [`return`](/ko/docs/Web/JavaScript/Reference/Statements/return) 문은 브라우저에게 함수로부터 나오는 `result` 변수를 반환하게 함으로써 그 변수를 사용할 수 있게 합니다. 이것은 필수적인 것으로 함수 안에서 정의된 변수는 오직 그 함수 내부에서만 사용 가능하기 때문입니다. 이것을 변수 {{Glossary("Scope", "scoping")}}이라고 합니다. ([변수 영역에 대한 더 많은 것](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope) 을 여기서 읽어보세요.)
 
 ### 이벤트
 
-웹사이트의 실질적인 상호작용에는 이벤트가 필요합니다. 이벤트는 브라우저에서 발생하는 일을 듣고 그에 대한 반응으로 코드를 실행하는 코드 구조입니다. 가장 확실한 예는 마우스로 무언가를 클릭하면 브라우저가 발생시키는 [클릭 이벤트](/ko/docs/Web/Events/click)입니다. 이를 시연하려면 콘솔에 다음 코드를 입력한 후 현재 웹페이지를 클릭해보시기 바랍니다:
+웹사이트의 실질적인 상호작용에는 이벤트가 필요합니다. 이벤트는 브라우저에서 발생하는 일을 듣고 그에 대한 반응으로 코드를 실행하는 코드 구조입니다. 가장 확실한 예는 마우스로 무언가를 클릭하면 브라우저가 발생시키는 [클릭 이벤트](/ko/docs/Web/API/Element/click_event)입니다. 이를 시연하려면 콘솔에 다음 코드를 입력한 후 현재 웹페이지를 클릭해보시기 바랍니다:
 
 ```js
 document.querySelector("html").onclick = function () {
@@ -216,7 +216,7 @@ document.querySelector("html").onclick = function () {
 };
 ```
 
-요소에 이벤트를 붙이는 방법은 많습니다. 여기서 HTML 요소를 선택하고 그 요소의 [`onclick`](/ko/docs/Web/API/GlobalEventHandlers.onclick) 핸들러 프로퍼티에 클릭 이벤트가 실행할 코드를 갖고 있는 익명(anonymous) 함수를 할당합니다.
+요소에 이벤트를 붙이는 방법은 많습니다. 여기서 HTML 요소를 선택하고 그 요소의 [`onclick`](/ko/docs/Web/API/Element/click_event) 핸들러 프로퍼티에 클릭 이벤트가 실행할 코드를 갖고 있는 익명(anonymous) 함수를 할당합니다.
 
 유의하세요. 다음은
 
@@ -323,7 +323,7 @@ myHTML.onclick = function () {};
 
 ### 사용자 이름이 null?
 
-예제를 실행 시키고 바로 나타나는 다이얼로그 상자에 당신의 이름을 입력하고*Cancel* 버튼을 눌러보세요. "Mozilla is cool, null"라는 제목을 보게될 것입니다. 이것은 사용자가 입력을 취소했을 때 값이, 원래 Javascript가 값이 없음을 표현하는 특별한 값인 [`null`](/ko/docs/Web/JavaScript/Reference/Global_Objects/null)로 설정되기 때문입니다.
+예제를 실행 시키고 바로 나타나는 다이얼로그 상자에 당신의 이름을 입력하고*Cancel* 버튼을 눌러보세요. "Mozilla is cool, null"라는 제목을 보게될 것입니다. 이것은 사용자가 입력을 취소했을 때 값이, 원래 Javascript가 값이 없음을 표현하는 특별한 값인 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)로 설정되기 때문입니다.
 
 또한, 어떠한 이름도 기입하지 않고 OK를 눌러보세요. — 꽤 분명한 이유로 "Mozilla is cool,"라는 제목을 보게될 것입니다.
 

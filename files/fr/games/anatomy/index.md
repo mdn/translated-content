@@ -205,7 +205,7 @@ Une technique commune est de mettre à jour la simulation à une fréquence cons
 
   - Cela utilise le temps du processeur même quand il n'a pas l'attention ou qu'il est minimisé, qu'il ne monopolise pas le fil principal, et est probablement un artefact de la traditionnelle boucle principale (mais plus simple).
 
-- Dessiner à chaque `requestAnimationFrame` et mettre à jour sur un `setInterval` ou `setTimeout` dans un [Web Worker](/fr/docs/Web/Guide/Performance/Using_web_workers).
+- Dessiner à chaque `requestAnimationFrame` et mettre à jour sur un `setInterval` ou `setTimeout` dans un [Web Worker](/fr/docs/Web/API/Web_Workers_API/Using_web_workers).
 
   - C'est la même chose que ci-dessus, excepté que la mise à jour ne monopolise pas le fil principal (ni le fil principal ne le monopolise). C'est une solution plus complexe, et ce pourrait être trop de travail pour de simples mises à jours.
 

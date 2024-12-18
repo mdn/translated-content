@@ -7,7 +7,7 @@ slug: Web/CSS/background-attachment
 
 ## Resumo
 
-Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/CSS) **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
+Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
 
 {{cssinfo}}
 
@@ -107,4 +107,4 @@ p {
 
 ## Veja também
 
-- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds)
+- [Multiple backgrounds](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 {{CSSRef}}
 
-[論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification) には、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/CSS_Positioning)で使用する位置指定プロパティを含んでいます。このガイドはこれらの使い方を見てみます。
+[論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification) には、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)で使用する位置指定プロパティを含んでいます。このガイドはこれらの使い方を見てみます。
 
 ## マッピングされるプロパティと値
 
