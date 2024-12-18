@@ -63,7 +63,7 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 
 {{domxref('CSSStyleValue')}} 接口是所有可通过类型对象模型访问 CSS 值的基类。子类包括：
 
-- {{domxref('CSSImageValue')}} objects
+- {{domxref('CSSImageValue')}}
   - : 表示采用图像的属性值的接口，例如：[`background-image`](/zh-CN/docs/Web/CSS/background-image)、[`list-style-image`](/zh-CN/docs/Web/CSS/list-style-image) 或 [`border-image-source`](/zh-CN/docs/Web/CSS/border-image-source)。
 - {{domxref('CSSKeywordValue')}}
   - : 用于创建一个表示 CSS 关键字和其他标识符的对象的接口。当在需要字符串的地方使用时，它将返回 `CSSKeyword.value` 的值。
@@ -71,28 +71,28 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 
   - : 表示比单个值和单位更复杂的数值的子类树，包括：
 
-    - {{domxref('CSSMathInvert')}} - 代表 CSS {{cssxref("calc","calc()")}} 值，通过 `calc(1 / <value>)` 使用。
-    - {{domxref('CSSMathMax')}} - 代表 CSS {{cssxref("max","max()")}} 方法。
-    - {{domxref('CSSMathMin')}} - 代表 CSS {{cssxref("min","min()")}} 方法。
-    - {{domxref('CSSMathNegate')}} - 对传递进来的值取反。
-    - {{domxref('CSSMathProduct')}} - 表示调用 {{domxref('CSSNumericValue.add','add()')}}，{{domxref('CSSNumericValue.sub','sub()')}} 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 得到的 {{domxref('CSSNumericValue')}}。
-    - {{domxref('CSSMathSum')}} - 表示调用 {{domxref('CSSNumericValue.add','add()')}}，{{domxref('CSSNumericValue.sub','sub()')}} 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 得到的 {{domxref('CSSNumericValue')}}。
+    - {{domxref('CSSMathInvert')}}——代表 CSS {{cssxref("calc","calc()")}} 值，被用作 `calc(1 / <value>)`。
+    - {{domxref('CSSMathMax')}}——代表 CSS {{cssxref("max","max()")}} 函数。
+    - {{domxref('CSSMathMin')}}——代表 CSS {{cssxref("min","min()")}} 函数。
+    - {{domxref('CSSMathNegate')}}——对传递进来的值取反。
+    - {{domxref('CSSMathProduct')}}——表示在 {{domxref('CSSNumericValue')}} 上调用 {{domxref('CSSNumericValue.add','add()')}}、{{domxref('CSSNumericValue.sub','sub()')}} 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 得到的结果。
+    - {{domxref('CSSMathSum')}}——表示在 {{domxref('CSSNumericValue')}} 上调用 {{domxref('CSSNumericValue.add','add()')}}、{{domxref('CSSNumericValue.sub','sub()')}} 或 {{domxref('CSSNumericValue.toSum','toSum()')}} 得到的结果。
 
 - {{domxref('CSSNumericValue')}}
 
   - : 表示所有数值可以执行的操作的接口，包括：
 
-    - {{domxref('CSSNumericValue.add')}} - `CSSNumericValue` 加上提供的数字。
-    - {{domxref('CSSNumericValue.sub')}} - `CSSNumericValue` 减去提供的数字。
-    - {{domxref('CSSNumericValue.mul')}} - `CSSNumericValue` 乘上提供的数字。
-    - {{domxref('CSSNumericValue.div')}} - 将提供的数字除以其他数字，如果为 0，则抛出错误。
-    - {{domxref('CSSNumericValue.min')}} - 返回传递的最小值。
-    - {{domxref('CSSNumericValue.max')}} - 返回传递的最大值。
-    - {{domxref('CSSNumericValue.equals')}} - 如果所有值的类型和值完全相同，且顺序相同返回 true。否则返回 false。
-    - {{domxref('CSSNumericValue.to')}} - 转换 `value` 为指定的*单位。*
+    - {{domxref('CSSNumericValue.add')}}——`CSSNumericValue` 加上提供的数字。
+    - {{domxref('CSSNumericValue.sub')}}——`CSSNumericValue` 减去提供的数字。
+    - {{domxref('CSSNumericValue.mul')}}——`CSSNumericValue` 乘上提供的数字。
+    - {{domxref('CSSNumericValue.div')}}——`CSSNumericValue` 除以提供的数字，如果为 0，则抛出错误。
+    - {{domxref('CSSNumericValue.min')}}——返回传递的最小值。
+    - {{domxref('CSSNumericValue.max')}}——返回传递的最大值。
+    - {{domxref('CSSNumericValue.equals')}}——如果所有值的类型和值完全相同，且顺序相同，则返回 true。否则返回 false。
+    - {{domxref('CSSNumericValue.to')}}——将 `value` 转换为指定的*单位*。
     - {{domxref('CSSNumericValue.toSum')}}
     - {{domxref('CSSNumericValue.type')}}
-    - {{domxref('CSSNumericValue/parse_static', 'CSSNumericValue.parse')}} - 返回从 CSS 字符串解析的数字。
+    - {{domxref('CSSNumericValue/parse_static', 'CSSNumericValue.parse')}}——返回从 CSS 字符串解析的数字。
 
 - {{domxref('CSSPositionValue')}}
   - : 表示采用某个位置的属性（例如 object-position）的值。
