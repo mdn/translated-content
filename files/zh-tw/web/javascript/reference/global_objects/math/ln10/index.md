@@ -7,23 +7,21 @@ l10n:
 
 {{JSRef}}
 
-**`Math.LN10`** 是靜態數據屬性，表示 10 的自然對數值，約為 2.303。
+**`Math.LN10`** 靜態數據屬性表示 10 的自然對數值，約為 2.303。
 
 {{EmbedInteractiveExample("pages/js/math-ln10.html", "shorter")}}
 
 ## 值
 
-<!-- prettier-ignore-start -->
 <math display="block">
   <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟷𝟶</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.303</mn></mrow><annotation encoding="TeX">\mathtt{Math.LN10} = \ln(10) \approx 2.303</annotation></semantics>
 </math>
-<!-- prettier-ignore-end -->
 
 {{js_property_attributes(0, 0, 0)}}
 
 ## 描述
 
-由於 `LN10` 是 `Math` 的靜態屬性，因此你應始終以 `Math.LN10` 的方式使用，而非作為某個 `Math` 物件的屬性（`Math` 並不是建構函式）。
+由於 `LN10` 是 `Math` 的靜態屬性，因此你應始終以 `Math.LN10` 的方式使用，而非作為某個 `Math` 物件的屬性（`Math` 並不是建構子）。
 
 ## 範例
 
