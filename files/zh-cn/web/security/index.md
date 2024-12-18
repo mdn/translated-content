@@ -62,10 +62,10 @@ slug: Web/Security
 
 ## 点击劫持保护
 
-[点击劫持](/zh-CN/docs/Glossary/Clickjacking)描述了用户被愚弄，点击了一个产生用户意料之外行为的 UI 元素的现象。
+[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)描述了用户被愚弄，点击了一个产生用户意料之外行为的 UI 元素的现象。
 
 - [HTTP X-Frame-Options](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头可以用来表明是否应该允许浏览器在 [`<frame>`](/zh-CN/docs/Web/HTML/Element/frame)、[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)、[`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 或 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 中渲染页面。网站通过这些方法，保证它们的内容不被轻易嵌入至其他站点，可以避免[点击劫持](/zh-CN/docs/Glossary/Clickjacking)攻击。
+  - : **`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头可以用来表明是否应该允许浏览器在 [`<frame>`](/zh-CN/docs/Web/HTML/Element/frame)、[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)、[`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 或 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 中渲染页面。网站通过这些方法，保证它们的内容不被轻易嵌入至其他站点，可以避免[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)攻击。
 - [CSP: frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`frame-ancestors`** 指令指定了使用 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或{{HTMLElement("embed")}} 元素嵌入页面的合法父元素。
 
@@ -76,52 +76,13 @@ slug: Web/Security
 - [隐私性和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : 在大约 2010 年之前，[CSS](/zh-CN/docs/Web/CSS) {{cssxref(":visited")}} 选择器允许网站获取用户的浏览历史，弄清用户访问过哪些网站。为了缓解这个问题，浏览器已经限制了从访问过的链接中获得的信息量。
 
-## 与安全相关的术语
-
-- {{Glossary("Block cipher mode of operation")}}
-- {{Glossary("Certificate authority","认证机构")}}
-- {{Glossary("challenge", "挑战—响应认证")}}
-- {{Glossary("Cipher","密码")}}
-- {{Glossary("Cipher suite","密码套件")}}
-- {{Glossary("Ciphertext","密文")}}
-- {{Glossary("Clickjacking")}}
-- {{Glossary("CORS","跨源资源共享")}}
-- {{Glossary("CORS-safelisted request header")}}
-- {{Glossary("CORS-safelisted response header")}}
-- {{Glossary("Cross-site scripting","跨站脚本攻击")}}
-- {{Glossary("Cryptanalysis","密码分析学")}}
-- {{Glossary("Cryptographic hash function")}}
-- {{Glossary("Cryptography","密码学")}}
-- {{Glossary("CSP","内容安全策略")}}
-- {{Glossary("CSRF","跨站请求伪造")}}
-- {{Glossary("Decryption","解密")}}
-- {{Glossary("Digital certificate","数字证书")}}
-- {{Glossary("DTLS")}}
-- {{Glossary("Encryption","加密")}}
-- {{Glossary("Forbidden header name")}}
-- {{Glossary("Forbidden response header name")}}
-- {{Glossary("Hash")}}
-- {{Glossary("HMAC")}}
-- {{Glossary("HPKP")}}
-- {{Glossary("HSTS")}}
-- {{Glossary("HTTPS")}}
-- {{Glossary("Key","密钥")}}
-- {{Glossary("MitM","中间人攻击")}}
-- {{Glossary("OWASP")}}
-- {{Glossary("Preflight request","预检请求")}}
-- {{Glossary("Public-key cryptography","非对称密钥算法")}}
-- {{Glossary("Reporting directive")}}
-- {{Glossary("Robots.txt")}}
-- {{Glossary("Same-origin policy","同源策略")}}
-- {{Glossary("Session hijacking","会话劫持")}}
-- {{Glossary("SQL injection","SQL 注入")}}
-- {{Glossary("Symmetric-key cryptography","对称密钥算法")}}
-- {{Glossary("TOFU")}}
-- {{Glossary("TLS")}}
-
 ## 参见
 
+- [Web 隐私](/zh-CN/docs/Web/Privacy)
+- [学习：站点安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)
 - [Mozilla 安全博客](https://blog.mozilla.org/security/)
-- [Twitter 上的 @mozsec 账号](https://twitter.com/mozsec)
+- [OWASP 备忘录](https://cheatsheetseries.owasp.org/index.html)
 
-{{QuickLinksWithSubpages}}
+<section id="Quick_links">
+{{ListSubpages("/zh-CN/docs/Web/Security", "1", "0", "1")}}
+</section>
