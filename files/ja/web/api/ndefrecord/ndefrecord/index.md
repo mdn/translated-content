@@ -1,9 +1,9 @@
 ---
 title: "NDEFRecord: NDEFRecord() コンストラクター"
+short-title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
-short-title: NDEFRecord()
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}

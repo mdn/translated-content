@@ -1,9 +1,9 @@
 ---
 title: "InputEvent: getTargetRanges() メソッド"
+short-title: getTargetRanges()
 slug: Web/API/InputEvent/getTargetRanges
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
-short-title: getTargetRanges()
 ---
 
 {{APIRef("UI Events")}}

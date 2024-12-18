@@ -1,9 +1,9 @@
 ---
 title: "Element: keyup イベント"
+short-title: keyup
 slug: Web/API/Element/keyup_event
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
-short-title: keyup
 ---
 
 {{APIRef}}
