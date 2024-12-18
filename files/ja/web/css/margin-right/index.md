@@ -2,7 +2,7 @@
 title: margin-right
 slug: Web/CSS/margin-right
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
@@ -143,7 +143,7 @@ margin-right: unset;
 .content {
   margin-right: 5%;
 }
-.sidebox {
+.side-box {
   margin-right: 10px;
 }
 .logo {
@@ -161,5 +161,8 @@ margin-right: unset;
 
 ## 関連情報
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} と {{cssxref("margin")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
+- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
