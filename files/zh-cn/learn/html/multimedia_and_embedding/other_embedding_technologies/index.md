@@ -2,7 +2,7 @@
 title: 从 object 到 iframe——其他嵌入技术
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -68,10 +68,6 @@ l10n:
 如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你实在无法解决，可以按下*显示答案*按钮以借鉴答案。
 
 ```html hidden
-<p>
-  可以试着引入 B 站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其 BV 号为
-  BV1bW411n7fY）
-</p>
 <h2>实时输出</h2>
 
 <div class="output" style="min-height: 250px;"></div>
@@ -151,12 +147,12 @@ window.addEventListener("load", updateCode);
 // 转而使其在当前光标位置插入一个制表符
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -194,7 +190,7 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('动手练习：典型嵌入的使用', 700, 600) }}
 
-## Iframe 详解
+## iframe 详解
 
 是不是很简单又有趣呢？你可以通过 {{htmlelement("iframe")}} 元素将其他 Web 文档嵌入到当前文档中。这很适合将第三方内容嵌入你的网站，这些内容你可能无法直接控制，也不想实现自己的版本——例如来自在线视频提供商的视频、[Disqus](https://disqus.com/) 等评论系统、在线地图提供商、广告横幅等。甚至本课程使用的实时可编辑示例就是使用 `<iframe>` 实现的。
 
@@ -254,9 +250,9 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 浏览器制造商和 Web 开发人员已经深刻认识到，如果 Web 上的恶意人士（通常称为**黑客**，或者更准确地说，**破解者**）试图发起攻击，或者欺骗人们做一些他们不想做的事情，比如泄露敏感信息（如用户名和密码），那么 iframe 是常见目标（正式术语：**攻击向量**）。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，以使 `<iframe>` 更安全，并且还有一些最佳实践需要考虑——我们将在下面介绍其中一些。
 
-> **备注：** [点击劫持](/zh-CN/docs/Glossary/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
+> **备注：** [点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
 
-一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过[点击劫持](/zh-CN/docs/Glossary/Clickjacking)来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
+一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过点击劫持来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
 
 #### 只有在必要时嵌入
 
@@ -290,7 +286,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### 配置 CSP 指令
 
-{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://zh.wikipedia.org/wiki/点击劫持)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
+{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
 
 > [!NOTE]
 > 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，其已经超出了本文所解释内容的范围。
@@ -338,17 +334,10 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
       </td>
     </tr>
     <tr>
-      <td>名称和值，作为参数提供给插件</td>
-      <td>具有这些名称和值的 ad hoc 属性</td>
-      <td>
-        单标签 {{htmlelement("param")}} 元素，包含在 <code>&#x3C;object></code> 元素里面
-      </td>
-    </tr>
-    <tr>
       <td>用作后备资源的独立的 HTML 内容，以防资源不可用</td>
       <td>不受支持（<code>&#x3C;noembed></code> 已过时）</td>
       <td>
-        包含在 <code>&#x3C;object></code> 中，在 <code>&#x3C;param></code> 元素之后
+        包含在 <code>&#x3C;object></code> 的开和闭标签之间
       </td>
     </tr>
   </tbody>
@@ -357,10 +346,10 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 让我们来看一个将 PDF 文件嵌入网页的 `<object>` 示例（查看[实时示例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)和[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)）：
 
 ```html
-<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+<object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
     You don't have a PDF plugin, but you can
-    <a href="mypdf.pdf">download the PDF file. </a>
+    <a href="my-pdf.pdf">download the PDF file. </a>
   </p>
 </object>
 ```

@@ -3,6 +3,8 @@ title: 确保你的站点安全
 slug: Web/Security/Practical_implementation_guides
 ---
 
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
+
 你可以采取一些措施来确保你的网站安全。本文提供了各种建议，以及提供更多有用信息的其他文章的链接。
 
 > [!NOTE]
@@ -28,7 +30,7 @@ slug: Web/Security/Practical_implementation_guides
 - [内容安全策略](/zh-CN/docs/Web/HTTP/CSP)
   - : 一种附加的安全层，有助于检测和减轻某些类型的攻击，包括{{Glossary("Cross-site_scripting", "跨站脚本（XSS）")}}以及数据注入攻击。这些攻击可用于从数据窃取到站点破坏或恶意软件分发的所有内容。受害者执行了恶意代码，且令攻击方绕过了访问控制，以使得他们可以假冒合法用户身份。
 - [X-Frame-Options 响应头](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : `X-Frame-Options:` [HTTP](/zh-CN/docs/Web/HTTP) 响应头可用于指示是否应允许浏览器在 {{HTMLElement("frame")}} 中呈现页面。站点可以通过确保其内容未嵌入到其他站点中来避免[点击劫持](/zh-CN/docs/Glossary/Clickjacking)攻击。
+  - : `X-Frame-Options:` [HTTP](/zh-CN/docs/Web/HTTP) 响应头可用于指示是否应允许浏览器在 {{HTMLElement("frame")}} 中呈现页面。站点可以通过确保其内容未嵌入到其他站点中来避免[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)攻击。
 - 通过配置网站实行访问控制
   - : 这是保证站点安全的最佳方案。你可以忽略特定的 IP 地址，限制网站只能通过某些特定区域访问，做文件保护、防止盗链等配置。例如，.htaccess 文件是用于在 [Apache HTTP 服务器](https://httpd.apache.org/)上运行的网站的配置文件。
 
@@ -37,5 +39,3 @@ slug: Web/Security/Practical_implementation_guides
 - [开放 Web 应用程序安全项目 (OWASP)](http://www.owasp.org/)
 - [Mozilla Web 安全速查表](https://infosec.mozilla.org/guidelines/web_security.html#web-security-cheat-sheet)
 - [OWASP 跨站脚本攻击](https://owasp.org/www-community/attacks/xss/)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
