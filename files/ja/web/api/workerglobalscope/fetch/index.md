@@ -15,7 +15,7 @@ l10n:
 
 `fetch()` メソッドは、取得しようとしているリソースのディレクティブではなく、[Content Security Policy](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の `connect-src` ディレクティブにより制御されます。
 
-> [!NOTE] `fetch()` メソッドの引数は、{{domxref("Request.Request","Request()")}} コンストラクターの引数と同一です。
+> **メモ:** `fetch()` メソッドの引数は、{{domxref("Request.Request","Request()")}} コンストラクターの引数と同一です。
 
 ## 構文
 
