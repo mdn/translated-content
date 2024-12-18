@@ -20,7 +20,7 @@ slug: Web/Performance/Speculative_loading
 - **预连接（Preconnecting）** 通过预先执行部分或全部的连接握手（即 DNS + TCP + TLS）来加速来自给定源的未来加载。
 
 > [!NOTE]
-> 上述描述是高层次和泛化的。浏览器究竟将执行何种操作来实现预加载和预渲染，取决于所使用的功能。更准确的功能描述在下面的[推测性加载功能](#speculative_loading_features)部分给出。
+> 上述描述是高层次和泛化的。浏览器究竟将执行何种操作来实现预加载和预渲染，取决于所使用的特性。更准确的特性描述在下面的[推测性加载特性](#推测性加载特性)部分给出。
 
 ## 推测性加载是如何实现的？
 
@@ -28,9 +28,9 @@ slug: Web/Performance/Speculative_loading
 
 首先，一些浏览器会根据各种启发式方法自动预渲染页面，以提供自动的性能改进。具体如何实现取决于浏览器的实现。例如，Chrome 会在地址栏中输入匹配字符串时自动预渲染页面——如果它有很高的信心你会访问该页面（有关详细信息，请参阅[查看 Chrome 的地址栏推测](https://developer.chrome.google.cn/docs/web-platform/prerender-pages#view_chromes_address_bar_predictions)）。此外，当搜索词输入到地址栏时，它可能会自动预渲染搜索结果页面，当搜索引擎指示这样做时。它使用与 [Speculation Rules API](/zh-CN/docs/Web/API/Speculation_Rules_API) 相同的机制来实现这一点。
 
-其次，有几个不同的平台功能可供开发者使用，以提供他们希望浏览器执行的推测性加载的指令。这些功能将在下一节中进行描述。
+其次，有几个不同的平台特性可供开发者使用，以提供他们希望浏览器执行的推测性加载的指令。这些特性将在下一节中进行描述。
 
-## 推测性加载功能
+## 推测性加载特性
 
 ### `<link rel="preconnect">`
 
@@ -42,7 +42,7 @@ slug: Web/Performance/Speculative_loading
 <link rel="preconnect" href="https://example.com" />
 ```
 
-`<link rel="preconnect">`在浏览器中得到广泛支持，并将改善未来的跨源 HTTP 请求、导航或子资源。这对于同源请求并没有收益，因为连接已经打开过了。
+`<link rel="preconnect">` 在浏览器中得到广泛支持，并将改善未来的跨源 HTTP 请求、导航或子资源。这对于同源请求并没有收益，因为连接已经打开过了。
 
 如果页面需要连接到许多第三方域，全部预连接可能会适得其反。`<link rel="preconnect">` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 来节省第一步的时间——DNS 查找。
 
@@ -56,7 +56,7 @@ Link: <https://example.com>; rel="preconnect"
 
 [`<link rel="dns-prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch) 给浏览器一个提示，表明用户可能需要来自指定源的资源，因此浏览器可以通过预先为该源执行 DNS 解析来提高性能。它与 `<link rel="preconnect">` 相同，只是它只处理 DNS 部分。
 
-同样，浏览器广泛支持此功能，另外这对于同源请求并没有收益，因为连接已经打开过了。
+同样，浏览器广泛支持此特性，另外这对于同源请求并没有收益，因为连接已经打开过了。
 
 例如：
 
@@ -69,7 +69,7 @@ Link: <https://example.com>; rel="preconnect"
 
 ### `<link rel="preload">`
 
-[`<link rel="preload">`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 给浏览器一个提示，表明哪些资源在 _当前页面_ 上是高优先级的，因此浏览器可以在看到 {{htmlelement("link")}} 元素时尽早开始下载它们。
+[`<link rel="preload">`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 给浏览器一个提示，表明哪些资源在*当前页面*上是高优先级的，因此浏览器可以在看到 {{htmlelement("link")}} 元素时尽早开始下载它们。
 
 例如：
 
@@ -96,7 +96,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### `<link rel="modulepreload">`
 
-[`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) 给浏览器一个提示，表明哪些 JavaScript 模块在 _当前页面_ 上是高优先级的，因此浏览器可以在看到它们时尽早开始下载。
+[`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) 给浏览器一个提示，表明哪些 JavaScript 模块在*当前页面*上是高优先级的，因此浏览器可以在看到它们时尽早开始下载。
 
 例如：
 
@@ -104,7 +104,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 <link rel="modulepreload" href="main.js" />
 ```
 
-它是 `<link rel="preload">`的专用版本，用于 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且基本以相同的方式工作。然而还是有些区别：
+它是 `<link rel="preload">` 的专用版本，用于 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，并且基本以相同的方式工作。然而还是有些区别：
 
 - 浏览器知道资源是一个 JavaScript 模块，因为不需要 `as` 属性，它可以使用正确的凭据模式来避免双重获取。
 - 浏览器不仅下载并将其存储在缓存中，还将其解析并编译到内存模块映射中。
@@ -137,7 +137,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 将无法从 `https://aggregator.example/` 访问。
 
-> **注意：** `<link rel="prefetch">` 在功能上等同于一个带有 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}} 调用，但前者通常具有更低的优先级，并且请求上会设置一个 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Headers/Sec-Purpose) 。
+> **备注：** `<link rel="prefetch">` 在功能上等同于一个带有 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}} 调用，但前者通常具有更低的优先级，并且请求上会设置一个 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Headers/Sec-Purpose) 。
 
 > [!NOTE] > `prefetch` 操作的获取请求将产生一个包含 HTTP 标头 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Headers/Sec-Purpose) 的 HTTP 请求。服务器可能会使用此标头更改资源的缓存超时时间或执行其他特殊处理。
 > 请求还将包括 {{HTTPHeader("Sec-Fetch-Dest")}} 标头，其值为 `empty`。
@@ -147,8 +147,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 ### `<link rel="prerender">`
 
 > [!NOTE]
-
-这项技术仅在 Chrome 中可用，现已弃用。作为取代，应该使用 [Speculation Rules API](/zh-CN/docs/Web/API/Speculation_Rules_API) 。
+> 这项技术仅在 Chrome 中可用，现已弃用。作为取代，应该使用 [Speculation Rules API](/zh-CN/docs/Web/API/Speculation_Rules_API) 。
 
 [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Attributes/rel/prerender) 给浏览器一个提示，表明用户可能需要目标资源进行下一次导航，因此浏览器可以通过预渲染资源来提高性能。`prerender` 仅用于同站导航，因此适用于多页应用程序（MPA），而不适用于单页应用程序（SPA）。
 
@@ -164,11 +163,11 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 [Speculation Rules API](/zh-CN/docs/Web/API/Speculation_Rules_API) 用于指定一组规则，以确定浏览器应预加载或预渲染哪些未来文档。这些规则作为内联 `<script type="speculationrules">` 元素和通过 {{httpheader("Speculation-Rules")}} 响应头引用的外部文本文件中的 JSON 结构提供。
 
-## 何时使用每个功能？
+## 何时使用每个特性？
 
-下表总结了上述功能，并提供了何时使用每个功能的指导。
+下表总结了上述特性，并提供了何时使用每个特性的指导。
 
-| 推测性加载功能                                                                    | 目的                                   | 何时使用                                                                                                                                                                                                                                                                                            |
+| 推测性加载特性                                                                    | 目的                                   | 何时使用                                                                                                                                                                                                                                                                                            |
 | --------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`<link rel="preconnect">`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)       | 跨源连接预热                           | 在最关键的跨源连接上使用，以提供性能改进。                                                                                                                                                                                                                                                          |
 | [`<link rel="dns-prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)   | 跨源连接预热                           | 在所有跨源连接上使用，以提供连接时的小性能改进。                                                                                                                                                                                                                                                    |
