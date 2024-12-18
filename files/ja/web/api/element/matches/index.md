@@ -1,9 +1,9 @@
 ---
 title: "Element: matches() メソッド"
+short-title: matches()
 slug: Web/API/Element/matches
 l10n:
   sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
-short-title: matches()
 ---
 
 {{APIRef("DOM")}}

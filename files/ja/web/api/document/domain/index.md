@@ -1,9 +1,9 @@
 ---
 title: "Document: domain プロパティ"
+short-title: domain
 slug: Web/API/Document/domain
 l10n:
   sourceCommit: 3fd9ed857a7d87a5ecc539a9835dbd107178bb6c
-short-title: domain
 ---
 
 {{ApiRef}} {{Deprecated_Header}}
