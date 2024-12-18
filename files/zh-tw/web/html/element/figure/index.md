@@ -121,8 +121,8 @@ function NavigatorExample() {
       <td>
         一個 {{HTMLElement("figcaption")}} 元素，後加上<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >文本流內容</a
-        >；或者流內容後加上一個
-        {{HTMLElement("figcaption")}} 元素；或者流內容。
+        >；或者文本流內容後加上一個
+        {{HTMLElement("figcaption")}} 元素；或者文本流內容。
       </td>
     </tr>
     <tr>
