@@ -1,22 +1,22 @@
 ---
-title: Speculation Rules API
+title: 推测规则 API
 slug: Web/API/Speculation_Rules_API
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
 
-**Speculation Rules API** 是为了提升未来网页跳转的速度而设计的。它主要针对网页的 URL，而不是特定的资源文件，所以更适合多页面应用（MPA），而不是单页面应用（SPA）。
+**推测规则 API**（Speculation Rules API）是为了提升未来网页导航的速度而设计的。它主要针对网页的 URL，而不是特定的资源文件，所以更适合多页面应用（MPA），而不是单页面应用（SPA）。
 
-Speculation Rules API 是 `<link rel="prefetch">` 的一个广泛替代品，并且打算取代仅 Chrome 支持、已经废弃的 `<link rel="prerender">` 功能。它相比这些技术提供了很多改进，并且有更灵活、可配置的方式来指定哪些文档应该被预加载或预渲染。
+推测规则 API 是广泛支持的 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch) 的替代品，并且打算取代仅 Chrome 支持、已经弃用的 [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Attributes/rel/prerender) 特性。它相比这些技术提供了很多改进，并且有更灵活、可配置的方式来指定哪些文档应该被预加载或预渲染。
 
 > [!NOTE]
-> Speculation Rules API 并不处理子资源的预加载；为此还是需要使用 `<link rel="prefetch">`。
+> 推测规则 API 并不处理子资源的预加载；为此还是需要使用 `<link rel="prefetch">`。
 
 ## 概念和用法
 
-推测规则可以写在内联 `<script type="speculationrules">` 标签里，或者通过 {{httpheader("Speculation-Rules")}} 响应头引用的外部文本文件来定义。这些规则以 JSON 格式来书写。
+推测规则可以写在内联的 [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 标签中，或者通过 {{httpheader("Speculation-Rules")}} 响应标头引用的外部文本文件来定义。这些规则以 JSON 格式指定。
 
-举个例子：
+脚本示例：
 
 ```html
 <script type="speculationrules">
@@ -45,7 +45,7 @@ Speculation Rules API 是 `<link rel="prefetch">` 的一个广泛替代品，并
 </script>
 ```
 
-如果网站用了 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令，那么 `<script>` 标签里的推测规则必须被明确允许。可通过添加 `'inline-speculation-rules'` 源、哈希源（hash-source）或 nonce 源（nonce-source）来实现。
+如果网站包含了使用 `<script>` 标签的推测规则，那么其必须被 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令明确允许。可通过添加 `'inline-speculation-rules'` 来源、哈希来源（hash-source）或 nonce 来源（nonce-source）来实现。
 
 一个 HTTP 标头的例子：
 
@@ -64,13 +64,13 @@ Speculation-Rules: "/rules/prefetch.json"
 
 ### 使用预加载
 
-在 `<script type="speculationrules">` 标签或 `Speculation-Rules` 响应头里加上 `prefetch` 规则，支持它的浏览器就会下载引用页面的响应体，但不会下载被页面所引用的子资源。当预加载的页面被访问时，它的加载速度会比没有预加载时快很多。
+在 `<script type="speculationrules">` 标签或 `Speculation-Rules` 响应标头里加上 `prefetch` 规则，支持它的浏览器就会下载引用页面的响应体，但不会下载被页面所引用的子资源。当预加载的页面被访问时，它的加载速度会比没有预加载时快很多。
 
 预加载的结果会保存在一个每个文档的内存缓存里。当你离开当前页面时，任何缓存的预加载都会被丢弃，除非你访问了那个预加载的文档。
 
 这意味着如果你预加载了用户没有访问的内容，那通常就是浪费资源，尽管结果可能会填充 HTTP 缓存（如果标头允许）。话虽如此，预加载的前期成本比预渲染要小得多，所以建议你广泛采用预加载，比如预加载你网站上所有重要的页面，只要这些页面是安全的（具体细节可见[不安全的推测性加载条件](#不安全的推测性加载条件)部分）。
 
-同源和跨源的预加载都可以工作，但跨源预加载有限制（可参阅 [same-site 和 cross-site](https://web.developers.google.cn/articles/same-site-same-origin#same-site-cross-site) 来了解两者的区别）。出于隐私考虑，目前跨源预加载只有在用户对目标站点没有设置 cookies 时才会工作——我们不希望站点能通过预加载的页面（用户可能永远不会真正访问的）来跟踪用户活动。
+同源和跨源的预加载都可以工作，但跨源预加载有限制（可参阅 [same-site 和 cross-site](https://web.developers.google.cn/articles/same-site-same-origin#same-site-cross-site) 来了解两者的区别）。出于隐私考虑，目前跨源预加载只有在用户对目标站点没有设置 cookie 时才会工作——我们不希望站点能通过预加载的页面（用户可能永远不会真正访问的）来跟踪用户活动。
 
 > [!NOTE]
 > 将来会通过 {{httpheader("Supports-Loading-Mode")}} 标头提供一个跨源预加载的选项，但在撰写本文时还没有实现（只有同源、跨源预渲染选项可用）。
@@ -88,7 +88,7 @@ Speculation-Rules: "/rules/prefetch.json"
 
 ### 使用预渲染
 
-在 `<script type="speculationrules">` 标签或 `Speculation-Rules` 响应头里加上 `prerender` 规则，支持它的浏览器就会加载、渲染并将内容加载到一个不可见的标签页中，存储在每个文档的内存缓存里。这包括加载所有子资源、运行所有 JavaScript，甚至还有由 JavaScript 所启动的子资源加载和执行数据请求。任何缓存的预渲染及其子资源在你离开当前页面时都会被丢弃，除非你此后导航到那个预渲染的文档。
+在 `<script type="speculationrules">` 标签或 `Speculation-Rules` 响应标头里加上 `prerender` 规则，支持它的浏览器就会加载、渲染并将内容加载到一个不可见的标签页中，存储在每个文档的内存缓存里。这包括加载所有子资源、运行所有 JavaScript，甚至还有由 JavaScript 所启动的子资源加载和执行数据请求。任何缓存的预渲染及其子资源在你离开当前页面时都会被丢弃，除非你此后导航到那个预渲染的文档。
 
 将来访问预渲染的页面时，加载几乎是即时的。浏览器激活那个不可见的标签页，而不是执行通常的导航过程，用预渲染的页面替换旧的前台页面。如果页面在完全预渲染之前被激活，它将以当前状态激活，然后继续加载，这意味着你仍然会看到显著的性能提升。
 
@@ -98,7 +98,7 @@ Speculation-Rules: "/rules/prefetch.json"
 > 为了让你对潜在的资源浪费有个概念，预渲染使用的资源大约和渲染一个 {{htmlelement("iframe")}} 一样多。
 
 > [!NOTE]
-> 许多 API 在预渲染/激活时会被自动推迟。具体细节见[在预渲染期间推迟或限制的平台功能](#在预渲染期间推迟或限制的平台功能)。
+> 许多 API 在预渲染/激活时会被自动推迟。具体细节见[在预渲染期间推迟或限制的平台特性](#在预渲染期间推迟或限制的平台特性)。
 
 预渲染默认限制在同源的文档中。同站、跨源的预渲染是可能的——它需要导航目标使用 {{httpheader("Supports-Loading-Mode")}} 标头并设置为 `credentialed-prerender`。跨源预渲染目前还不可能。
 
@@ -118,7 +118,7 @@ if (
   HTMLScriptElement.supports &&
   HTMLScriptElement.supports("speculationrules")
 ) {
-  console.log("Your browser supports the Speculation Rules API.");
+  console.log("你的浏览器支持 Speculation Rules API。");
 }
 ```
 
@@ -155,7 +155,7 @@ if (
 
 ### 服务器端检测
 
-预加载和预渲染页面请求会携带 {{httpheader("Sec-Purpose")}} 请求头：
+预加载和预渲染页面请求会携带 {{httpheader("Sec-Purpose")}} 请求标头：
 
 对于预加载：
 
@@ -186,7 +186,7 @@ if (
 }
 ```
 
-当测量性能时，或希望延迟那些可能会在预加载期间发生并导致问题的行为时此技术非常有用。 (可参考[不安全的预加载](#不安全的预加载)).
+当测量性能时，或希望延迟那些可能会在预加载期间发生并导致问题的行为时此技术非常有用。（可参考[不安全的预加载](#不安全的预加载)）。
 
 ### JavaScript 预渲染检测
 
@@ -260,14 +260,14 @@ if (document.prerendering) {
 
 当预渲染发生时，浏览器会通过 GET 请求 URL 并渲染和加载内容到一个不可见的标签页中。这包括运行内容中的 JavaScript 并加载所有子资源，子资源也包括通过 JavaScript 获取的资源。如果观察到以下任何条件，则内容可能不适合预渲染：
 
-- URL 是 [不安全预加载](#不安全的预加载) 的。如果你还没有阅读前一部分，请先阅读并理解这些条件同样适用于不安全的预渲染。
+- URL 是[不安全预加载](#不安全的预加载)的。如果你还没有阅读前一部分，请先阅读并理解这些条件同样适用于不安全的预渲染。
 - 页面的 JavaScript 在加载时修改客户端存储（例如 [Web Storage](/zh-CN/docs/Web/API/Web_Storage_API) 或 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)），这可能会在用户当前查看的其他非预渲染页面中引起混淆效果。
 - 页面运行 JavaScript 或加载图像，导致副作用，例如发送分析数据、记录广告展示或以用户已与其交互的方式修改应用程序状态。这同样可能影响应用程序的流程，或导致错误的性能或使用报告。有关这些用例的更多详细信息，请参阅[服务器渲染的可变状态](#服务器渲染的可变状态)。
 
 为了减轻这些问题，你可以使用以下技术：
 
-- 在服务器上监视{{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} 标头，当请求到达时，然后运行特定代码以推迟问题功能。
-- 使用{{domxref("Document.prerenderingchange_event", "prerenderingchange")}} 事件来检测预渲染页面何时实际被激活，并因此运行代码。这在两种情况下都很有用：
+- 在服务器上监视 {{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} 标头，当请求到达时，然后运行特定代码以推迟问题功能。
+- 使用 {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} 事件来检测预渲染页面何时实际被激活，并因此运行代码。这在两种情况下都很有用：
   - 推迟可能在页面查看之前运行时引起问题的代码。例如，你可能希望等到激活后再更新客户端存储或使用 JavaScript 修改服务器端状态。这可以避免 UI 和应用程序状态彼此不同步的情况，例如购物车显示没有商品，即使用户已添加了一些。
   - 如果上一点做不到，你仍然可以在页面激活后重新运行代码，以使应用程序再次更新。例如，一个高度动态的限时抢购页面可能依赖于来自第三方库的内容更新。如果你不能延迟更新，你总可以在用户查看页面后获得最新的更新。预渲染页面可以使用 [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API) 或另一种机制如 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("WebSocket")}} 进行实时更新。这保证了用户在预渲染激活后会看到最新的内容。
 - 仔细管理你的第三方分析脚本——如果可能，使用对预渲染有意识的脚本（例如使用 {{domxref("Document.prerendering")}} 属性来推迟在预渲染页面上运行）如 Google Analytics 或 NewRelic。
@@ -276,7 +276,7 @@ if (document.prerendering) {
 
 ### 服务器渲染的可变状态
 
-需要关注的服务器渲染状态主要有两种类型：**过时状态**和 **用户特定状态** 。这可能导致不安全的预加载和预渲染。
+需要关注的服务器渲染状态主要有两种类型：**过时状态**和**用户特定状态** 。这可能导致不安全的预加载和预渲染。
 
 - 过时状态：考虑一个服务器渲染的博客评论列表的例子，该列表可能在博客文章被预渲染和被查看之间过时。如果当前页面是一个用户正在删除垃圾评论的管理面板，这可能特别有问题。如果用户然后导航到博客文章，他们可能会对他们刚刚删除的垃圾评论为什么还能看到感到困惑。
 - 用户特定状态：考虑通过 cookie 跟踪登录状态的例子。可能会出现以下问题：
@@ -300,22 +300,22 @@ if (document.prerendering) {
 
 从最终用户的角度来看，激活一个正在预渲染或者已经完成预渲染的文档的行为，就像任何常规的导航一样。激活的文档会显示在标签页中并添加到会话历史中，任何现有的前进历史记录都会被修剪。在激活之前在预渲染浏览上下文中进行的任何导航都不会影响会话历史。
 
-从开发者的角度来看，预渲染文档可以被视为具有一个**微会话历史（trivial session history）**，其只有一个条目——当前条目。预渲染上下文中的所有导航实际上都被替换了。
+从开发者的角度来看，预渲染文档可以被视为具有一个**微会话历史**（trivial session history），其只有一个条目——当前条目。预渲染上下文中的所有导航实际上都被替换了。
 
-虽然在预渲染文档中可以调用操作会话历史的 API 功能（例如 {{domxref("History")}} 和 {{domxref("Navigation")}}），但它们仅在上下文的微会话历史上操作。因此，预渲染文档不会连接进其引用页面的联合会话历史。例如，它们不能通过 {{domxref("History.back()")}} 导航回引用页面。
+虽然在预渲染文档中可以调用操作会话历史的 API 特性（例如 {{domxref("History")}} 和 {{domxref("Navigation")}}），但它们仅在上下文的微会话历史上操作。因此，预渲染文档不会连接进其引用页面的联合会话历史。例如，它们不能通过 {{domxref("History.back()")}} 导航回引用页面。
 
 这种设计确保了用户在使用后退按钮时获得预期的体验——即他们被带回最后看到的内容。一旦预渲染文档被激活，只有单个会话历史条目被添加到联合会话历史中，忽略在预渲染浏览上下文中发生的任何先前导航。在联合会话历史中后退一步——例如，通过按后退按钮——会将用户带回引用页面。
 
-## 在预渲染期间推迟或限制的平台功能
+## 在预渲染期间推迟或限制的平台特性
 
-由于预渲染页面以隐藏的状态打开，因此一些可能导致侵入性行为的 API 功能在此状态下不会被激活，而是**推迟**到页面激活时。其他在预渲染时存在问题的 web 平台功能则完全受到限制。本节给出了哪些功能被推迟或限制的详细信息。
+由于预渲染页面以隐藏的状态打开，因此一些可能导致侵入性行为的 API 特性在此状态下不会被激活，而是**推迟**到页面激活时。其他在预渲染时存在问题的 web 平台特性则完全受到限制。本节给出了哪些特性被推迟或限制的详细信息。
 
 > [!NOTE]
 > 在某些少数无法推迟和限制的情景下，预渲染将被取消。
 
 ### 异步 API 推迟
 
-推迟意味着 API 功能立即返回一个待处理的承诺，然后在页面激活之前不做任何事情。激活后，该功能正常运行，Promise 被正常解决或拒绝。
+推迟意味着 API 功能立即返回一个待处理的 promise，然后在页面激活之前不做任何事情。激活后，该功能正常运行，promise 被正常兑现或拒绝。
 
 在预渲染文档中，以下异步功能的结果被推迟直到页面被激活：
 
@@ -348,7 +348,7 @@ if (document.prerendering) {
 
 ### 隐式限制的 API
 
-以下功能在未激活的文档中将自动失败或无操作。
+以下特性在未激活的文档中将自动失败或无操作。
 
 需要 {{glossary("transient activation")}} 或 {{glossary("sticky activation")}} 的 API：
 
@@ -357,7 +357,7 @@ if (document.prerendering) {
 - [File System API](/zh-CN/docs/Web/API/File_System_API)：{{domxref("Window.showDirectoryPicker()")}}、{{domxref("Window.showOpenFilePicker()")}} 和 {{domxref("Window.showSaveFilePicker()")}}
 - [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)：{{domxref("Element.requestFullscreen()")}}
 - [Idle Detection API](/zh-CN/docs/Web/API/Idle_Detection_API)：{{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
-- [Keyboard API](/zh-CN/docs/Web/API/Keyboard_API)：{{domxref("Keyboard.lock()")}} （需要全屏）
+- [Keyboard API](/zh-CN/docs/Web/API/Keyboard_API)：{{domxref("Keyboard.lock()")}}（需要全屏）
 - [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API)：{{domxref("PaymentRequest.show()")}}
 - [Presentation API](/zh-CN/docs/Web/API/Presentation_API)：{{domxref("PresentationRequest.start()")}}
 - [Pointer Lock API](/zh-CN/docs/Web/API/Pointer_Lock_API)：{{domxref("Element.requestPointerLock()")}}
@@ -371,7 +371,7 @@ if (document.prerendering) {
 
 需要包含文档的 {{domxref("Document.visibilityState")}} 为 `"visible"` 的 API：
 
-- [Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)：{{domxref("HTMLVideoElement.requestPictureInPicture()")}}（要求包含文档的可见状态为 `"visible"` \_或 {{glossary("transient activation")}}）
+- [Picture-in-Picture API](/zh-CN/docs/Web/API/Picture-in-Picture_API)：{{domxref("HTMLVideoElement.requestPictureInPicture()")}}（要求包含文档的可见状态为 `"visible"` _或_ {{glossary("transient activation")}}）
 - [Screen Wake Lock API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API)：{{domxref("WakeLock.request()")}}
 
 ### 其他受限功能
@@ -421,7 +421,7 @@ Speculation Rules API 没有定义自己的任何接口。
 - {{httpheader("Supports-Loading-Mode")}} {{experimental_inline}}
   - 由导航目标设置，以选择使用各种更高风险的加载模式。例如，跨源、同站预渲染需要 `Supports-Loading-Mode` 值为 `credentialed-prerender`。
 
-## HTML 功能
+## HTML 特性
 
 - [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
   - : 用于在当前文档中定义一组预加载和/或预渲染推测规则，这些规则被添加到文档的推测规则集中。
@@ -440,5 +440,5 @@ Speculation Rules API 没有定义自己的任何接口。
 
 ## 参见
 
-- [在 Chrome 中预渲染页面以实现即时页面导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages) 在 developer.chrome.com（2023）
+- developer.chrome.google.cn 上的[在 Chrome 中预渲染页面以实现即时页面导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages)（2023）
 - [推测性加载](/zh-CN/docs/Web/Performance/Speculative_loading) 比较推测规则和其他类似的性能改进功能。
