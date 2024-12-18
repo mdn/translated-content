@@ -16,11 +16,11 @@ MDN 学習領域へようこそ。この一連の記事は、ウェブ開発の�
 ウェブ開発を深く学ぼうと決めているわけではなく、おためしセッションから始めたい場合は、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)ガイドからまずはやってみることをお勧めします。それを終えたら、以下のトピックから学習を始めるといいでしょう。
 
 - HTML および CSS
-  - : HTML とはウェブコンテンツに構造を与えるもので、 CSS とはそのコンテンツにスタイルやレイアウトを設定するものです。初心者向けの基礎知識については、 [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)および [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)を参照してください。
+  - : HTML はウェブコンテンツに構造を与え、 CSS はそのコンテンツにスタイルやレイアウトを設定します。初心者向けの基礎知識については、 [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)および [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)を参照してください。
 - JavaScript
   - : JavaScript を使用すると、ウェブサイト上でインタラクティブな機能を実装することができます。 [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)から始めてください。
 - フレームワークとツールの利用
-  - : 素の HTML、CSS、JavaScript の基本をマスターしたら、次は [クライアントサイドウェブ開発ツール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools)について学んでください。それから、 [クライアントサイド JavaScript フレームワーク](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)、 [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)の基本的なコンセプトの学習というふうに進めていくといいでしょう。
+  - : 素の HTML、CSS、JavaScript の基本をマスターしたら、次は [クライアントサイドウェブ開発ツール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools)について学んでください。それから、 [クライアントサイド JavaScript フレームワーク](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)、 [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)の基本的なコンセプトというふうに学習を進めていくといいでしょう。
 
 > **メモ:** [用語集](/ja/docs/Glossary)には、用語の定義を掲載しています。また、ウェブ開発に関する特定の質問がある場合は、[よくある質問](/ja/docs/Learn/Common_questions)の節で解決できることがあるかもしれません。
 
@@ -34,10 +34,10 @@ MDN 学習領域へようこそ。この一連の記事は、ウェブ開発の�
 
 ## 扱うトピック
 
-下記は MDN 学習領域で扱っているすべてのトピックの一覧です。
+以下は MDN 学習領域で扱っているすべてのトピックの一覧です。
 
 - [ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)
-  - : 完全なウェブ開発初心者用の実用的な入門を提供します。
+  - : 完全な初心者向けのウェブ開発の実用的な入門です。
 - [HTML — ウェブの構造化](/ja/docs/Learn/HTML)
   - : HTML はコンテンツのいろいろな部分を構造化し、意味や目的を定義するのに使う言語です。このトピックでは HTML を詳細に教えます。
 - [CSS — ウェブのスタイル付け](/ja/docs/Learn/CSS)
