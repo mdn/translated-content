@@ -1,9 +1,9 @@
 ---
 title: "FormDataEvent: formData プロパティ"
+short-title: formData
 slug: Web/API/FormDataEvent/formData
 l10n:
   sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
-short-title: formData
 ---
 
 {{APIRef("DOM")}}

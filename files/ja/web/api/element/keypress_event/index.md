@@ -1,9 +1,9 @@
 ---
 title: "Element: keypress イベント"
+short-title: keypress
 slug: Web/API/Element/keypress_event
 l10n:
   sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
-short-title: keypress
 ---
 
 {{APIRef}} {{deprecated_header}}

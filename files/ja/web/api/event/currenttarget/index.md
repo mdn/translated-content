@@ -1,9 +1,9 @@
 ---
 title: "Event: currentTarget プロパティ"
+short-title: currentTarget
 slug: Web/API/Event/currentTarget
 l10n:
   sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
-short-title: currentTarget
 ---
 
 {{APIRef("DOM")}}
