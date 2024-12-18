@@ -25,7 +25,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 
 ## Активное Обучение
 
-_На данный момент этот раздел ещё не готов. Вы можете помочь сообществу разработчиков, вступив в [Please, consider contributing](/ru/docs/MDN/Getting_started)._
+_На данный момент этот раздел ещё не готов. Вы можете помочь сообществу разработчиков, вступив в [Please, consider contributing](/ru/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Более глубокое погружение
 

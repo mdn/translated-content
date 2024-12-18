@@ -7,11 +7,11 @@ slug: Web/HTML/Element/label
 
 HTML-элемент **`<label>`** представляет собой подпись к элементу пользовательского интерфейса.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Общий поток](/ru/docs/Web/HTML/Content_categories#Flow_content), [текстовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), [интерактивный контент, элемент формы](/ru/docs/Web/HTML/Content_categories#Interactive_content), ощутимый контент. |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Общий поток](/ru/docs/Web/HTML/Content_categories#flow_content), [текстовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), [интерактивный контент, элемент формы](/ru/docs/Web/HTML/Content_categories#interactive_content), ощутимый контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Текстовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content), но без вложенных элементов `label`. Недопустимы другие оборачиваемые в `label` элементы помимо целевого.                                                                              |
+| Допустимый контент                                         | [Текстовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), но без вложенных элементов `label`. Недопустимы другие оборачиваемые в `label` элементы помимо целевого.                                                                              |
 | Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                  |
-| Допустимые родители                                        | Любой элемент, разрешающий [текстовый контент.](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                                                                                                                                            |
+| Допустимые родители                                        | Любой элемент, разрешающий [текстовый контент.](/ru/docs/Web/HTML/Content_categories#phrasing_content)                                                                                                                                                            |
 | Допустимые ARIA-роли                                       | Нет                                                                                                                                                                                                                                                               |
 | DOM-интерфейс                                              | {{domxref("HTMLLabelElement")}}                                                                                                                                                                                                                                   |
 
@@ -20,7 +20,7 @@ HTML-элемент **`<label>`** представляет собой подпи
 Элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `for`
-  - : ID [labelable](/ru/docs/Web/Guide/HTML/Content_categories#Form_labelable)-элемента, который находится в том же документе, что и элемент label. Первый такой элемент в документе, ID которого совпадает со значением атрибута `for`, становится `labeled-*` контролом для данного `label`.
+  - : ID [labelable](/ru/docs/Web/HTML/Content_categories#form_labelable)-элемента, который находится в том же документе, что и элемент label. Первый такой элемент в документе, ID которого совпадает со значением атрибута `for`, становится `labeled-*` контролом для данного `label`.
     > [!NOTE]
     > Элемент _label_ может иметь как атрибут _for_, так и отдельный элемент управления, если атрибут _for_ указывает на содержащийся элемент управления.
 - `form`

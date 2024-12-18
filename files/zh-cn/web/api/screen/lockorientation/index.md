@@ -8,7 +8,7 @@ slug: Web/API/Screen/lockOrientation
 `lockOrientation` 此方法会把屏幕锁定为指定的方向。
 
 > [!NOTE]
-> 此方法仅适用于已安装的 Web apps 或 [全屏模式](/zh-CN/docs/Web/Guide/DOM/Using_full_screen_mode) 的 Web 页面。
+> 此方法仅适用于已安装的 Web apps 或 [全屏模式](/zh-CN/docs/Web/API/Fullscreen_API) 的 Web 页面。
 
 ## 使用方法
 
@@ -94,4 +94,4 @@ if (
 - {{domxref("Screen.orientation")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [控制屏幕方向](/zh-CN/docs/Managing_screen_orientation)
+- [控制屏幕方向](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

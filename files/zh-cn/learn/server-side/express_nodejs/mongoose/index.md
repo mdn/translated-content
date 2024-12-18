@@ -569,7 +569,7 @@ npm install mongoose
 
 ## 连接到 MongoDB
 
-打开 **/app.js**（位于项目根目录），并将以下代码复制到声明 Express 应用对象的位置（`var app = express();` 之后）。将数据库 URL 字符串（'在此插入数据库\_URL'）替换为真实的 URL（[设置自 mLab](#架设_MongoDB_数据库)）。
+打开 **/app.js**（位于项目根目录），并将以下代码复制到声明 Express 应用对象的位置（`var app = express();` 之后）。将数据库 URL 字符串（'在此插入数据库\_URL'）替换为真实的 URL（[设置自 mLab](#架设_mongodb_数据库)）。
 
 ```js
 // 设置 Mongoose 连接
@@ -581,7 +581,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB 连接错误："));
 ```
 
-如上文 [Mongoose 入门](#Mongoose_入门) 所讲，以上代码创建了与数据库的默认连接，并绑定了错误事件（错误信息将及时打印到控制台）。
+如上文 [Mongoose 入门](#mongoose_入门) 所讲，以上代码创建了与数据库的默认连接，并绑定了错误事件（错误信息将及时打印到控制台）。
 
 ## 定义 LocalLibrary 模式
 

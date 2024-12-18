@@ -18,7 +18,7 @@ Mathematical Markup Language、または {{glossary("MathML")}} は、分数、�
 >
 > ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
 >
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+> [**始めましょう**](/ja/curriculum/)
 
 ## 前提条件
 

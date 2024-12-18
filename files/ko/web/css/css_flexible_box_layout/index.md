@@ -59,13 +59,13 @@ slug: Web/CSS/CSS_flexible_box_layout
   - : 박스 정렬 속성이 플렉스박스에서 동작하는 방식을 설명합니다.
 - [플렉스 아이템 배치하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
   - : 아이템의 순서와 방향을 바꾸는 여러 방법과, 이 때 발생할 수 있는 여러 문제를 다룹니다.
-- [플렉스 아이템의 주요 축 비율 조절하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)
+- [플렉스 아이템의 주요 축 비율 조절하기](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
   - : `flex-grow`, `flex-shrink`, `flex-basis` 속성을 설명합니다.
 - [플렉스 아이템 줄바꿈 마스터하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
   - : 여러 줄로 이뤄진 플렉스 컨테이너를 만드는 방법과, 컨테이너 아이템의 표시 방법 설정을 설명합니다.
-- [플렉스박스의 일반적인 용례](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)
+- [플렉스박스의 일반적인 용례](/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 일반적인 플렉스박스 디자인 패턴입니다.
-- [플렉스박스의 하위 호환성](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
+- [플렉스박스의 하위 호환성](/ko/docs/Glossary/Flexbox)
   - : 플렉스박스의 브라우저 상태, 상호 호환성 이슈와 함께 구형 브라우저와 이전 명세를 지원하는 방법을 설명합니다.
 
 ## 명세

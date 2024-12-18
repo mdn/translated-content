@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for
 
 {{jsSidebar("Statements")}}
 
-L'instruction **`for`** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement [une instruction de bloc](/fr/docs/Web/JavaScript/Reference/Instructions/bloc)) à exécuter dans la boucle.
+L'instruction **`for`** crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement [une instruction de bloc](/fr/docs/Web/JavaScript/Reference/Statements/block)) à exécuter dans la boucle.
 
 {{EmbedInteractiveExample("pages/js/statement-for.html")}}
 

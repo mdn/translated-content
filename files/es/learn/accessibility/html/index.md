@@ -102,7 +102,7 @@ Una de las mejores ayudas de accesibilidad que un usuario lector de pantalla pue
 </p>
 ```
 
-Hemos preparado una versión más larga para que pruebes con un lector de pantalla (ver [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si tratas de navegar por ella, notaras que es muy fácil:
+Hemos preparado una versión más larga para que pruebes con un lector de pantalla (ver [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si tratas de navegar por ella, notaras que es muy fácil:
 
 1. El lector de pantalla lee cada cabecera a medida que progresas a través del contenido, notificándote qué es una cabecera, qué es un párrafo, etc.
 2. Se detiene después de cada elemento, dejándote ir a un ritmo que sea cómodo para ti.
@@ -134,7 +134,7 @@ Esta es la segunda subsección de mi documento. Creo que es más interesante que
 la primera.
 ```
 
-Si pruebas nuestra versión extendida con un lector de pantalla (ver [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), no vas a tener una buena experiencia: el lector de pantalla no tiene nada que usar como señal, por lo que no podrás tener una tabla de contenidos útil y toda la página se ve como un solo bloque gigante, así que solo se lee de una vez, todo de una vez.
+Si pruebas nuestra versión extendida con un lector de pantalla (ver [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), no vas a tener una buena experiencia: el lector de pantalla no tiene nada que usar como señal, por lo que no podrás tener una tabla de contenidos útil y toda la página se ve como un solo bloque gigante, así que solo se lee de una vez, todo de una vez.
 
 Hay otros problemas más allá de la accesibilidad: es más difícil aplicar estilo al contenido con CSS o manipularlo con JavaScript, por ejemplo, porque no hay elementos para usarlos como selectores.
 
@@ -150,7 +150,7 @@ El lenguaje que usas también puede afectar la accesibilidad. En general deberí
 
 Antiguamente la gente solía crear diseños de página usando tablas HTML, usando diferentes celdas de tabla para contener el encabezado, pie de página, barra lateral, columna de contenido principal, etc. Esto no es una buena idea porque un lector de pantalla probablemente dará como resultado lecturas confusas, especialmente si el diseño es complejo y tiene muchas tablas anidadas.
 
-Prueba nuestro ejemplo [table-layout.html](http://mdn.github.io/learning-area/accessibility/html/table-layout.html), que tiene este código:
+Prueba nuestro ejemplo [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html), que tiene este código:
 
 ```html
 <table width="1200">
@@ -213,7 +213,7 @@ Prueba nuestro ejemplo [table-layout.html](http://mdn.github.io/learning-area/ac
 
 Si intentas navegar por él con un lector de pantalla, probablemente te dirá que hay una tabla para mirar (aunque algunos lectores de pantalla pueden adivinar la diferencia entre diseños con tablas y tablas de datos). Luego, probablemente (dependiendo del lector de pantalla que estés usando) tendrás que entrar en la tabla como objeto y mirar sus características por separado, y luego salir de la tabla nuevamente para continuar navegando por el contenido.
 
-Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la compatibilidad con CSS no estaba muy extendida en los navegadores, pero ahora solo crean confusión para los usuarios de lectores de pantalla. Además, su código fuente requiere más marcado, lo que los hace menos flexibles y más difíciles de mantener. Puedes verificar estas afirmaciones comparando tu experiencia anterior con un ejemplo de [estructura de sitio web más moderno](http://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), que podría verse así:
+Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la compatibilidad con CSS no estaba muy extendida en los navegadores, pero ahora solo crean confusión para los usuarios de lectores de pantalla. Además, su código fuente requiere más marcado, lo que los hace menos flexibles y más difíciles de mantener. Puedes verificar estas afirmaciones comparando tu experiencia anterior con un ejemplo de [estructura de sitio web más moderno](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), que podría verse así:
 
 ```html
 <header>
@@ -249,7 +249,7 @@ Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la c
 
 Si pruebas nuestro ejemplo de estructura más moderna con un lector de pantalla, verás que el marcado de diseño ya no se interpone ni confunde la lectura del contenido. También es mucho más ágil y más pequeño en términos de tamaño de código, lo que significa que el código es más fácil de mantener y menos ancho de banda para que el usuario lo descargue (especialmente para aquellos con conexiones lentas).
 
-Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Elemento#Seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
+Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Element#seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
 
 > [!NOTE]
 > Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
@@ -383,7 +383,7 @@ y esto es un mal texto de enlace:
 ```
 
 > [!NOTE]
-> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Encontrarás mucho más sobre la implementación de enlaces y buenas prácticas en nuestro artículo [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). También encontrarás buenos y malos ejemplos en [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) y [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Las etiquetas de formulario también son importantes, para darte una pista sobre lo que necesita introducir en cada campo de formulario. El siguiente parece un ejemplo bastante razonable:
 
@@ -409,7 +409,7 @@ Con código como este, la etiqueta estará claramente asociada con la entrada; l
 Como ventaja adicional, en la mayoría de los navegadores asociar una etiqueta con una entrada de formulario significa que puedes hacer clic en la etiqueta para seleccionar / activar el elemento del formulario. Esto le da a la entrada un área de impacto más grande, lo que facilita la selección.
 
 > [!NOTE]
-> Puedes ver algunos ejemplos de buenos y malos formularios en [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html) y [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> Puedes ver algunos ejemplos de buenos y malos formularios en [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) y [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
 ## Tablas de datos accesibles
 
@@ -450,13 +450,13 @@ Ahora echa un vistazo a nuestro [ejemplo de tabla de bandas punk](https://github
 Consulte nuestro artículo sobre funciones avanzadas y accesibilidad de tablas HTML para obtener más detalles sobre las tablas de datos accesibles.
 
 > [!NOTE]
-> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad) para ver más detalles sobre tablas de datos accesibles.
+> Consulta nuestro artículo [Funciones avanzadas de tablas y accesibilidad](/es/docs/Learn/HTML/Tables/Advanced) para ver más detalles sobre tablas de datos accesibles.
 
 ## Alternativas de texto
 
 Mientras que el contenido textual es inherentemente accesible, lo mismo no se puede decir del contenido multimedia — el contenido de imagen/video no puede ser visto por personas con discapacidad visual, y el contenido de audio no puede ser escuchado por personas sordas. Cubriremos el contenido de video y audio en detalle en el artículo [multimedia accesible](/es/docs/Learn/Accessibility/Multimedia) más adelante, pero para este artículo veremos la accesibilidad del humilde elemento {{htmlelement("img")}}.
 
-Tenemos un ejemplo simple, [access-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html), que presenta cuatro copias de la misma imagen:
+Tenemos un ejemplo simple, [access-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html), que presenta cuatro copias de la misma imagen:
 
 ```html
 <img src="dinosaur.png" />

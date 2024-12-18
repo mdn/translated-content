@@ -71,7 +71,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 ## Смотрите также
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/ru/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

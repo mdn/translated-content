@@ -12,7 +12,7 @@ slug: Web/SVG/SVG_as_an_Image
 
 ## Гекко-специфические контексты
 
-Кроме того, Gecko 2.0 представил поддержку использования [SVG](/ru/docs/SVG) в следующих контекстах:
+Кроме того, Gecko 2.0 представил поддержку использования [SVG](/ru/docs/Web/SVG) в следующих контекстах:
 
 - CSS {{cssxref("list-style-image")}}
 - CSS {{cssxref("content")}}
@@ -24,7 +24,7 @@ slug: Web/SVG/SVG_as_an_Image
 
 В целях безопасности, Gecko накладывает некоторые ограничения на контент SVG, когда он используется в качестве изображения:
 
-- [JavaScript](/ru/docs/JavaScript) отключён.
+- [JavaScript](/ru/docs/Web/JavaScript) отключён.
 - Внешние ресурсы (например, изображения, таблицы стилей) не могут быть загружены, хотя их можно использовать, если они встроены в данные: URI.
 - {{cssxref(":visited")}}-стили ссылок не отображаются.
 - Стилизация виджитов на платформе (основанная на теме ОС) отключена.
@@ -37,4 +37,4 @@ slug: Web/SVG/SVG_as_an_Image
 
 ## Смотрите также
 
-- [SVG в HTML. Введение](/ru/docs/SVG_In_HTML_Introduction)
+- [SVG в HTML. Введение](/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)

@@ -16,7 +16,7 @@ slug: Web/CSS/@media/update
 - `slow`
   - : 通常の CSS の規則によってレイアウトを動的に変更することができますが、出力端末はアニメーションが円滑に見えるほど変更をすばやく表示することができません。例: 電子ブックリーダーや一部の動力の低い端末。
 - `fast`
-  - : レイアウトは通常の CSS の規則によってレイアウトを動的に変更することができ、出力端末はふつう表示速度が制約されることがなく、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)のような恒常的な更新を使用することができます。例: コンピューターの画面。
+  - : レイアウトは通常の CSS の規則によってレイアウトを動的に変更することができ、出力端末はふつう表示速度が制約されることがなく、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)のような恒常的な更新を使用することができます。例: コンピューターの画面。
 
 ## 例
 
@@ -60,5 +60,5 @@ slug: Web/CSS/@media/update
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

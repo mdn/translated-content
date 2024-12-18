@@ -172,7 +172,7 @@ navigator.credentials
 ```
 
 - [Mozilla Demo](https://webauthn.bin.coffee/) website and its [source code](https://github.com/jcjones/webauthn.bin.coffee).
-- [Google Demo](http://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
+- [Google Demo](https://webauthndemo.appspot.com/) website and its [source code](https://github.com/google/webauthndemo).
 - [webauthn.org](https://webauthn.org) and its [client source code](https://github.com/apowers313/webauthn-simple-app) and [server source code](https://github.com/apowers313/fido2-lib)
 
 ## 规范

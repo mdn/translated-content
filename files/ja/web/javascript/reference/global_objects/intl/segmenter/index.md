@@ -26,7 +26,7 @@ l10n:
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : この `Intl.Segmenter` オブジェクトの初期化時に計算されたロケールおよび粒度のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
 - [`Intl.Segmenter.prototype.segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : この `Intl.Segmenter` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) のインスタンスを返します。
+  - : この `Intl.Segmenter` のインスタンスのロケールおよび粒度に従って文字列のセグメントを表す、新しい反復可能な [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) のインスタンスを返します。
 
 ## 例
 

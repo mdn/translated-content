@@ -12,7 +12,7 @@ slug: Mozilla/Firefox/Releases/93
 ### HTML
 
 - ARIA の [`meter`](/ja/docs/Web/Accessibility/ARIA/Roles/meter_role) ロールを実装しました ([Firefox バグ 1727616](https://bugzil.la/1727616))。
-- [`<input type="datetime-local">`](/docs/Web/HTML/Element/input/datetime-local) の UI を実装しました ([Firefox バグ 1283388](https://bugzil.la/1283388))。
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local) の UI を実装しました ([Firefox バグ 1283388](https://bugzil.la/1283388))。
 
 ### CSS
 
@@ -20,7 +20,7 @@ slug: Mozilla/Firefox/Releases/93
 
 ### JavaScript
 
-- [クラスの `static` 初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks) をサポートしました。{{jsxref("Classes/static", "静的")}} プロパティの初期化を、より柔軟に行えます ([Firefox バグ 1725689](https://bugzil.la/1725689))。
+- [クラスの `static` 初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) をサポートしました。{{jsxref("Classes/static", "静的")}} プロパティの初期化を、より柔軟に行えます ([Firefox バグ 1725689](https://bugzil.la/1725689))。
 - {{domxref("createImageBitmap()")}} メソッドに、`options` オブジェクトを使用して `imageOrientation` および `premultiplyAlpha` プロパティを渡すことが可能になりました ([Firefox バグ 1367251](https://bugzil.la/1367251))。
 - 実装でサポートされている値をコードが列挙することを可能にする、{{jsxref("Intl.supportedValuesOf()")}} をサポートしました。これは、例えば欠けているカテゴリーの値に対するポリフィルだけをダウンロードするために使用できます ([Firefox バグ 1670033](https://bugzil.la/1670033))。
 

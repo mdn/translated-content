@@ -11,11 +11,11 @@ slug: Glossary/TURN
 
 ### Culture générale
 
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Architecture/Protocols)
+- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
 
 ### Référence technique
 
-- [Spécification](http://www.ietf.org/rfc/rfc5766.txt)
-- [Spécification actualisée pour IPv6](http://www.ietf.org/rfc/rfc6156.txt)
+- [Spécification](https://www.ietf.org/rfc/rfc5766.txt)
+- [Spécification actualisée pour IPv6](https://www.ietf.org/rfc/rfc6156.txt)
 
 <!---->

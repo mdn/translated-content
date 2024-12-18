@@ -58,7 +58,7 @@ Vamos a probarlo con un ejemplo del artículo anterior.
 3. Guarda tu código, ábrelo en un navegador y observa qué aspecto presenta.
 
 > [!NOTE]
-> Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
+> Puedes encontrar nuestra versión en GitHub: consulta [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) ([mirar en vivo](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)).
 
 ## Añadir estructura con \<thead>, \<tfoot> y \<tbody>
 
@@ -72,7 +72,7 @@ Para utilizarlos:
 - El elemento `<tfoot>` delimita la parte de la tabla correspondiente al pie de página; esta podría ser una fila final con elementos en las filas anteriores. Puedes incluir el pie de página de la tabla justo en la parte inferior de la tabla, donde esperarías que esté, o justo debajo del encabezado (y el navegador lo mostrará aun así en la parte inferior de la tabla).
 - El elemento `<tbody>` delimita las otras partes del contenido de la tabla que no están en el encabezado o en el pie de página de la tabla. Aparecerá debajo del encabezado de la tabla o, a veces, en el pie de página, según cómo hayas decidido estructurarlo.
 
-> **Nota:** `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
+> **Nota:** `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
 
 ### Aprendizaje activo: Añadir estructura a la tabla
 
@@ -222,7 +222,7 @@ Tu tabla final debería tener un aspecto similar al siguiente:
 {{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> También puedes encontrarlo en GitHub como [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) (o consultarlo también [en vivo](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> También puedes encontrarlo en GitHub como [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) (o consultarlo también [en vivo](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
 
 ## Anidar tablas
 
@@ -450,7 +450,7 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 3. Por último, haz otra copia de los archivos originales, y esta vez añade accesibilidad a la tabla utilizando los atributos `id` y `headers`.
 
 > [!NOTE]
-> Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> Puedes verificar tu trabajo con nuestros ejemplos terminados: consulta [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html)) y [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([consúltalo en vivo](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Resumen
 

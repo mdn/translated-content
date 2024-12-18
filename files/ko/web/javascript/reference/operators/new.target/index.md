@@ -19,7 +19,7 @@ new.target;
 
 `new.target` 구문은 키워드 "`new`", 점 및 속성명 "`target`"으로 구성됩니다. 보통 "`new.`"은 속성 접근을 위한 문맥(context)으로 제공하지만 여기서 "`new.`"은 정말 객체가 아닙니다. 그러나, 생성자 호출에서 `new.target`은 `new`에 의해 호출된 생성자를 가리키고 그래서 "`new.`"은 가상 문맥이 됩니다.
 
-`new.target` 속성은 모든 함수가 이용할 수 있는 메타 속성입니다. [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션)에서, `new.target`은 둘러싸는 함수의 `new.target`을 말합니다.
+`new.target` 속성은 모든 함수가 이용할 수 있는 메타 속성입니다. [화살표 함수](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)에서, `new.target`은 둘러싸는 함수의 `new.target`을 말합니다.
 
 ## 예
 

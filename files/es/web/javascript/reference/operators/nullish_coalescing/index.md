@@ -20,7 +20,7 @@ expresionIzquierda ?? expresionDerecha
 
 ## Descripción
 
-El operador _nullish coalescing_ puede ser visto como un caso especial del [operador lógico OR (`||`)](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR). Este último retorna el operando de lado derecho si el operando izquierdo es _cualquier_ valor {{Glossary("falsy")}}, no solo `null` o `undefined`. En otras palabras, si se usa `||` para proveer algún valor por defecto a otra variable `foo`, se puede encontrar comportamientos inesperados si se considera algún valor _falsy_ como usable (por ejemplo, `''` o `0`). Consulte [a continuación](#Asignación_de_un_valor_por_defecto_a_una_variable) para más ejemplos.
+El operador _nullish coalescing_ puede ser visto como un caso especial del [operador lógico OR (`||`)](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR). Este último retorna el operando de lado derecho si el operando izquierdo es _cualquier_ valor {{Glossary("falsy")}}, no solo `null` o `undefined`. En otras palabras, si se usa `||` para proveer algún valor por defecto a otra variable `foo`, se puede encontrar comportamientos inesperados si se considera algún valor _falsy_ como usable (por ejemplo, `''` o `0`). Consulte [a continuación](#asignación_de_un_valor_por_defecto_a_una_variable) para más ejemplos.
 
 El operador _nullish coalescing_ tiene la quinta más baja [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence), directamente por debajo de `||` y por arriba del [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 

@@ -9,10 +9,10 @@ La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent
 
 #### Valeurs des touches
 
-Voir une liste complète des [valeurs de touches](/fr/docs/Web/API/KeyboardEvent/key/Key_Values)
+Voir une liste complète des [valeurs de touches](/fr/docs/Web/API/UI_Events/Keyboard_event_key_values)
 
 - Si la valeur a une représentation d'impression, ce sera une chaîne de caractères Unicode non vide
-- Si la valeur est une touche de contrôle, une des [valeurs de touches pré-définies](#Key_values).
+- Si la valeur est une touche de contrôle, une des [valeurs de touches pré-définies](#key_values).
 - Si le `KeyboardEvent` est causé par l'appui sur une touche morte, la valeur de la touche sera "`Dead`".
 - Certaines touches de clavier spécialisées (telles que les touches étendues de contrôle des médias sur les claviers multimédias) ne génèrent pas de codes de touches sous Windows ; à la place, ils déclenchent les événements `WM_APPCOMMAND`. Ces événements sont connectés aux événements de clavier DOM et sont répertoriés parmi les «codes de touche virtuelle» pour Windows, même s'ils ne sont pas réellement des codes de touche.
 - Si la valeur ne peut être identifiée, '`Unidentified`' sera retourné.
@@ -171,7 +171,7 @@ Lorsque la touche Maj est enfoncée, un événement [`keydown`](/fr/docs/Web/API
 
 Lorsque la `key 2` est enfoncée, un autre événement [`keydown`](/fr/docs/Web/API/Element/keydown_event) est déclenché pour cette nouvelle touche, et la valeur de la propriété `key` pour l'événement est définie sur la chaîne `"@"` pour le clavier de type américain et `"""` pour le clavier de type britanique, à cause de la touche de changement de modificateur active. Les événements {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} et {{domxref("HTMLElement/input_event", "input")}} sont déclenchés ensuite parce qu'une touche de caractère a été activée. Comme nous maintenons la touche enfoncée, l'événement [`keydown`](/fr/docs/Web/API/Element/keydown_event) continue à se déclencher à plusieurs reprises et la propriété {{domxref ("KeyboardEvent.repeat")}} est définie sur `true`. Les évènements {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} et {{domxref("HTMLElement/input_event", "input")}} sont également déclenchés.
 
-Lorsque nous relâchons la touche `shift`, un événement [`keyup`](/fr/docs/Web/API/Element/keyup_event) est déclenché et la valeur de l'attribut clé reste "Shift". À ce stade, notez que la valeur de la propriété `key` pour l'événement de répétition du clavier de la touche `key 2` est désormais "2" car la touche de modification du sélecteur n'est plus active. Il en va de même pour la propriété {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} des événements {{domxref("HTMLElement/input_event", "input")}} et [`input`](/fr/docs/Web/API/HTMLElement/input_event).
+Lorsque nous relâchons la touche `shift`, un événement [`keyup`](/fr/docs/Web/API/Element/keyup_event) est déclenché et la valeur de l'attribut clé reste "Shift". À ce stade, notez que la valeur de la propriété `key` pour l'événement de répétition du clavier de la touche `key 2` est désormais "2" car la touche de modification du sélecteur n'est plus active. Il en va de même pour la propriété {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} des événements {{domxref("HTMLElement/input_event", "input")}} et [`input`](/fr/docs/Web/API/Element/input_event).
 
 Lorsque nous relâchons enfin la touche `key 2`, un événement [`keyup`](/fr/docs/Web/API/Element/keyup_event) est déclenché mais la propriété `key` est définie sur la valeur de chaîne `"2"` pour les deux configurations de clavier car la touche de modification `shift` n'est plus active.
 

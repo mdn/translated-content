@@ -9,7 +9,7 @@ _Нормальный поток (normal flow)_ или поточная раск
 
 По сути поток представляется собой набор сущностей, которые работают вместе и знают друг о друге. Когда некоторая сущность _вынимается из потока (out of flow)_, то она работает независимо.
 
-В нормальном потоке **строчные (inline)** элементы отображаются в направлении строки (inline direction), то есть в том же направлении, как идут слова в предложении в соответствии с режимом письма ([writing mode](/ru/docs/Web/CSS/CSS_Writing_Modes)) документа. **Блочные (block)** элементы отображаются один за другим, также как параграфы в соответствии с режимом письма документа. Поэтому в английском языке строчные элементы отображаются один за другим, начиная слева, а блочные элементы выкладываются на странице сверху вниз.
+В нормальном потоке **строчные (inline)** элементы отображаются в направлении строки (inline direction), то есть в том же направлении, как идут слова в предложении в соответствии с режимом письма ([writing mode](/ru/docs/Web/CSS/CSS_writing_modes)) документа. **Блочные (block)** элементы отображаются один за другим, также как параграфы в соответствии с режимом письма документа. Поэтому в английском языке строчные элементы отображаются один за другим, начиная слева, а блочные элементы выкладываются на странице сверху вниз.
 
 ## Пример
 
@@ -25,7 +25,7 @@ _Нормальный поток (normal flow)_ или поточная раск
 
 - Блочная и строчная раскладки в нормальном потоке ([Block and Inline Layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)).
 - В потоке и вне потока ([In Flow and Out of Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)).
-- Объяснение контекстов форматирования ([Formatting Contexts Explained](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)).
+- Объяснение контекстов форматирования ([Formatting Contexts Explained](/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)).
 - Поточная раскладка и режимы письма ([Flow Layout and Writing Modes](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)).
 - Поточная раскладка и переполнение ([Flow Layout and Overflow](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)).
 

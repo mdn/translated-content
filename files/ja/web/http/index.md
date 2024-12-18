@@ -24,7 +24,7 @@ l10n:
 - [HTTP クライアントヒント](/ja/docs/Web/HTTP/Client_hints)
   - : **クライアントヒント**は、サーバーがクライアントから端末、ネットワーク、ユーザー、ユーザーエージェント固有の環境設定に関する情報を積極的にリクエストするために使用できるレスポンスヘッダーの集合です。
     サーバーは、クライアントが提供する情報をもとに、送信するリソースを決定することができます。
-- [HTTP の進化](/ja/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [HTTP の進化](/ja/docs/Web/HTTP/Evolution_of_HTTP)
   - : 初期バージョンの HTTP から最新の HTTP/2、姿を現した HTTP/3 以降までの変革を端的に説明します。
 - [Mozilla ウェブセキュリティガイドライン](https://infosec.mozilla.org/guidelines/web_security)
   - : 運用チームがセキュアなウェブアプリケーションを開発するのに役立つコツをまとめました。

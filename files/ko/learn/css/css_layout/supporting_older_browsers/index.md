@@ -206,7 +206,7 @@ feature query 규격에는 브라우저가 기능을 지원하지 않는지 테�
 
 CSS grid 규격은 인터넷 익스플로러 10에서 처음 나온 원형이었습니다. 즉, 인터넷 익스플로러 10 및 11에는 최신 grid 지원이 없지만, 이 사이트에 문서화된 최신 규격과는 다르나 매우 유용한 그리드 레이아웃 버전이 있습니다. 인터넷 익스플로러 10 및 11 구현은 `-ms-` 접두사를 사용해 해당 그리드를 마이크로소프트 브라우저에 사용할 수 있으며 이외의 브라우저에서는 무시됩니다. 에지 브라우저는 여전히 이전 구문을 이해하므로 현대 그리드 CSS에서 모든 항목을 안전하게 덮어씁니다.
 
-[그리드 레이아웃의 점진적 향상](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)에 대한 안내서는 그리드의 인터넷 익스플로러 버전을 이해하는 데 도움이되며 이 단원 끝에는 별도의 유용한 링크를 포함하고 있습니다. 그러나 이전 인터넷 익스플로러 버전 사용자의 방문자 수가 매우 많지 않다면 모든 비지원 브라우저에서 작동하는 대체품을 만드는 것이 더 좋습니다.
+[그리드 레이아웃의 점진적 향상](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)에 대한 안내서는 그리드의 인터넷 익스플로러 버전을 이해하는 데 도움이되며 이 단원 끝에는 별도의 유용한 링크를 포함하고 있습니다. 그러나 이전 인터넷 익스플로러 버전 사용자의 방문자 수가 매우 많지 않다면 모든 비지원 브라우저에서 작동하는 대체품을 만드는 것이 더 좋습니다.
 
 ## 이전 브라우저 여부 확인
 
@@ -221,8 +221,8 @@ Flexbox 및 그리드를 지원하는 대부분의 브라우저를 사용하면 
 ## 참조 항목
 
 - [CSS feature query 사용하기](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [Flexbox의 이전 버전과의 호환성](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS 레이아웃과 점진적 향상](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Flexbox의 이전 버전과의 호환성](/ko/docs/Glossary/Flexbox)
+- [CSS 레이아웃과 점진적 향상](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [CSS 그리드 사용하기: 그리드 없는 브라우저 지원하기](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [인터넷 익스플로러 10 및 11 버전 그리드 사용을 위한 자습서](https://24ways.org/2012/css3-grid-layout/)
 - [인터넷 익스플로러 10 용 그리드 레이아웃 구현을 사용해야 하나요](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)?

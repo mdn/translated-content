@@ -312,7 +312,7 @@ npm install --save-dev eslint prettier babel-eslint
    }
    ```
 
-   上述 ESLint 配置表示我们想使用"推荐的"的 ESLint 设置，我们将允许使用 ES6 特性（例如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 或 [`Set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)），我们可以使用模块的 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，并且允许使用 [`console.log()`](/zh-CN/docs/Web/API/console/log)。
+   上述 ESLint 配置表示我们想使用"推荐的"的 ESLint 设置，我们将允许使用 ES6 特性（例如 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 或 [`Set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)），我们可以使用模块的 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，并且允许使用 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)。
 
 4. 然而，在项目的源文件中，我们使用了 React JSX 语法（对于你的实际项目，你可能会使用 React 或 Vue 或任何其他框架，或者不使用任何框架！）。
 

@@ -140,7 +140,7 @@ console.log("swap");
 
 ### Déclarations de fonctions étiquetées
 
-À partir d'ECMAScript 2015, les déclarations de fonctions étiquetées sont standardisées pour du code non-strict [au sein de l'annexe de la spécification relative à la compatibilité web](http://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
+À partir d'ECMAScript 2015, les déclarations de fonctions étiquetées sont standardisées pour du code non-strict [au sein de l'annexe de la spécification relative à la compatibilité web](https://www.ecma-international.org/ecma-262/6.0/#sec-labelled-function-declarations).
 
 ```js
 L: function F() {}
@@ -154,7 +154,7 @@ L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```
 
-[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Instructions/function*) ne peuvent pas être étiquetées, en mode strict, comme en mode non-strict :
+[Les fonctions génératrices](/fr/docs/Web/JavaScript/Reference/Statements/function*) ne peuvent pas être étiquetées, en mode strict, comme en mode non-strict :
 
 ```js
 L: function* F() {}

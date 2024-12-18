@@ -45,11 +45,11 @@ WebAssembly es un lenguaje distinto a JavaScript, aunque no se pretende sea un r
 
 Con la llegada de WebAssembly en los navegadores, la máquina virtual que se mencionó anteriormente, cargará y ejecutará dos tipos de código - JavaScript y WebAssembly.
 
-Los distintos tipos de código pueden llamarse uno al otro según necesiten. [WebAssembly JavaScript API](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) envuelve código WebAssembly exportado con funciones JavaScript, que pueden ser llamadas normalmente, y WebAssembly puede importar y llamar síncronamente funciones JavaScript. De hecho la unidad básica de código en WebAssembly se llama módulo y los módulos en WebAssembly son simétricos de muchas maneras a los módulos de ES2015.
+Los distintos tipos de código pueden llamarse uno al otro según necesiten. [WebAssembly JavaScript API](/es/docs/conflicting/WebAssembly/JavaScript_interface) envuelve código WebAssembly exportado con funciones JavaScript, que pueden ser llamadas normalmente, y WebAssembly puede importar y llamar síncronamente funciones JavaScript. De hecho la unidad básica de código en WebAssembly se llama módulo y los módulos en WebAssembly son simétricos de muchas maneras a los módulos de ES2015.
 
 ### Conceptos clave en WebAssembly
 
-Hay varios conceptos claves que son necesarios para entender cómo se ejecuta WebAssembly en un navegador. Todos estos conceptos están reflejados uno a uno en [WebAssembly JavaScript API](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
+Hay varios conceptos claves que son necesarios para entender cómo se ejecuta WebAssembly en un navegador. Todos estos conceptos están reflejados uno a uno en [WebAssembly JavaScript API](/es/docs/conflicting/WebAssembly/JavaScript_interface).
 
 - **Módulo**: Representa un binario de WebAssembly que ha sido compilado por el navegador en un ejecutable de código máquina. Un módulo no tiene estado, y es solo eso, como un [Blob](/es/docs/Web/API/Blob), puede ser explícitamente compartido entre ventanas y workers (por medio de [`postMessage()`](/es/docs/Web/API/MessagePort/postMessage)). Un módulo declara 'imports' y 'exports' igual que un módulo ES2015module.
 - **Memoria**: Un conjunto de tamaño variable que contiene una serie lineal y continua de bytes, que puede ser leído o escrito por las instrucciones de memoria de bajo nivel de WebAssembly.

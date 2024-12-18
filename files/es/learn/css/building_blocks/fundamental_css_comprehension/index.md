@@ -34,7 +34,7 @@ Para comenzar esta evaluación, debes:
 - Coge el [archivo de texto de los recursos CSS](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — este contiene un conjunto de selectores y conjuntos de reglas en estado puro que necesitarás estudiar y combinar para responder a parte de esta evaluación.
 
 > [!NOTE]
-> Alternativamente, se puede utilizar un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer la evaluación. Puede pegar el HTML y completar el CSS en uno de estos editores en línea, y usar [esta URL](http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) para apuntar el elemento `<img>` al archivo de imagen. Si el editor en línea que estás usando no tiene un panel CSS separado, no dudes en ponerlo en un elemento `<style>` en el encabezado del documento.
+> Alternativamente, se puede utilizar un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer la evaluación. Puede pegar el HTML y completar el CSS en uno de estos editores en línea, y usar [esta URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) para apuntar el elemento `<img>` al archivo de imagen. Si el editor en línea que estás usando no tiene un panel CSS separado, no dudes en ponerlo en un elemento `<style>` en el encabezado del documento.
 
 ## Resumen del Proyecto
 

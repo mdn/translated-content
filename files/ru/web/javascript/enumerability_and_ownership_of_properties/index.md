@@ -316,9 +316,9 @@ var SimplePropertyRetriever = {
 
 ## Смотрите также
 
-- [`in`](/ru/docs/JavaScript/Reference/Operators/in)
-- [`for..in`](/ru/docs/JavaScript/Reference/Statements/for...in)
-- [`hasOwnProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
-- [`propertyIsEnumerable`](/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-- [`getOwnPropertyNames`](/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
-- [`Object.keys`](/ru/docs/JavaScript/Reference/Global_Objects/Object/keys)
+- [`in`](/ru/docs/Web/JavaScript/Reference/Operators/in)
+- [`for..in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`hasOwnProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`propertyIsEnumerable`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`getOwnPropertyNames`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.keys`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)

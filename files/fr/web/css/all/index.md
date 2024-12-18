@@ -29,7 +29,7 @@ La propriété `all` est définie avec un des mots-clés globaux de CSS. On note
 - [`initial`](/fr/docs/Web/CSS/initial)
   - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [leurs valeurs initiales](/fr/docs/Web/CSS/initial_value).
 - [`inherit`](/fr/docs/Web/CSS/inherit)
-  - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [les valeurs héritées](/fr/docs/Web/CSS/inheritance).
+  - : Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` devront prendre [les valeurs héritées](/fr/docs/Web/CSS/Inheritance).
 - [`unset`](/fr/docs/Web/CSS/unset)
   - : Ce mot-clé indique que toutes les propriétés qui s'appliquent à l'élément prendront leur valeur héritée si elles héritent par défaut, ou leur valeur initiale sinon.
 - [`revert`](/fr/docs/Web/CSS/revert)
@@ -103,7 +103,7 @@ blockquote {
 
 {{EmbedLiveSample("", "200", "125")}}
 
-Dans ce scénario, aucune propriété `all` n'est appliquée dans la règle `blockquote`. L'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) utilise la mise en forme par défaut du navigateur, qui lui fournit une marge, ainsi que des couleurs d'arrière-plan et de texte indiquées par la feuille de style. Il se comporte comme un [_élément de bloc_](/fr/docs/Web/HTML/Block-level_elements)&nbsp;: le texte qui suit l'élément est placé en dessous.
+Dans ce scénario, aucune propriété `all` n'est appliquée dans la règle `blockquote`. L'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) utilise la mise en forme par défaut du navigateur, qui lui fournit une marge, ainsi que des couleurs d'arrière-plan et de texte indiquées par la feuille de style. Il se comporte comme un [_élément de bloc_](/fr/docs/Glossary/Block-level_content)&nbsp;: le texte qui suit l'élément est placé en dessous.
 
 #### `all: initial`
 
@@ -129,7 +129,7 @@ blockquote {
 
 {{EmbedLiveSample("", "200", "125")}}
 
-Lorsque la propriété `all` vaut `initial` au sein de la règle `blockquote`, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) n'utilise plus la mise en forme par défaut du navigateur&nbsp;: il s'agit maintenant d'un [_élément en ligne_](/fr/docs/Web/HTML/Inline_elements) (la valeur initiale de [`display`](/fr/docs/Web/CSS/display#définition_formelle)), [`background-color`](/fr/docs/Web/CSS/background-color#définition_formelle) vaut `transparent` (sa valeur initiale), [`font-size`](/fr/docs/Web/CSS/font-size#définition_formelle) vaut `medium`, et [`color`](/fr/docs/Web/CSS/color#définition_formelle) vaut `black` (là encore, sa valeur initiale).
+Lorsque la propriété `all` vaut `initial` au sein de la règle `blockquote`, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) n'utilise plus la mise en forme par défaut du navigateur&nbsp;: il s'agit maintenant d'un [_élément en ligne_](/fr/docs/Glossary/Inline-level_content) (la valeur initiale de [`display`](/fr/docs/Web/CSS/display#définition_formelle)), [`background-color`](/fr/docs/Web/CSS/background-color#définition_formelle) vaut `transparent` (sa valeur initiale), [`font-size`](/fr/docs/Web/CSS/font-size#définition_formelle) vaut `medium`, et [`color`](/fr/docs/Web/CSS/color#définition_formelle) vaut `black` (là encore, sa valeur initiale).
 
 #### `all: inherit`
 
@@ -155,7 +155,7 @@ blockquote {
 
 {{EmbedLiveSample("", "200", "125")}}
 
-Dans ce cas, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) n'utilise pas la mise en forme par défaut du navigateur mais hérite des valeurs de l'élément parent, [`<body>`](/fr/docs/Web/HTML/Element/body). L'élément `<blockquote>` est désormais un [_élément de bloc_](/fr/docs/Web/HTML/Block-level_elements) (il hérite de cette caractéristique via la valeur de [`display`](/fr/docs/Web/CSS/display) pour `<body>`), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `#F0F0F0` (héritée), [`font-size`](/fr/docs/Web/CSS/font-size) vaut `small` (héritée), et [`color`](/fr/docs/Web/CSS/color) vaut `blue` (héritée).
+Dans ce cas, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) n'utilise pas la mise en forme par défaut du navigateur mais hérite des valeurs de l'élément parent, [`<body>`](/fr/docs/Web/HTML/Element/body). L'élément `<blockquote>` est désormais un [_élément de bloc_](/fr/docs/Glossary/Block-level_content) (il hérite de cette caractéristique via la valeur de [`display`](/fr/docs/Web/CSS/display) pour `<body>`), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `#F0F0F0` (héritée), [`font-size`](/fr/docs/Web/CSS/font-size) vaut `small` (héritée), et [`color`](/fr/docs/Web/CSS/color) vaut `blue` (héritée).
 
 #### `all: unset`
 
@@ -181,7 +181,7 @@ blockquote {
 
 {{EmbedLiveSample("", "200", "125")}}
 
-Lorsque la valeur `unset` est appliquée à la propriété `all` dans la règle `blockquote`, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) n'utilise pas la mise en forme par défaut du navigateur. Comme [`background-color`](/fr/docs/Web/CSS/background-color#définition_formelle) n'est pas une propriété héritée, contrairement à [`font-size`](/fr/docs/Web/CSS/font-size#définition_formelle) et [`color`](/fr/docs/Web/CSS/color#définition_formelle) qui sont héritées, l'élément `<blockquote>` est un [élément en ligne](/fr/docs/Web/HTML/Inline_elements) (la valeur initiale de [`display`](/fr/docs/Web/CSS/display#définition_formelle)), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `transparent` (sa valeur initiale), mais [`font-size`](/fr/docs/Web/CSS/font-size) vaut toujours `small` (sa valeur héritée), et [`color`](/fr/docs/Web/CSS/color) vaut `blue` (sa valeur héritée).
+Lorsque la valeur `unset` est appliquée à la propriété `all` dans la règle `blockquote`, l'élément [`<blockquote>`](/fr/docs/Web/HTML/Element/blockquote) n'utilise pas la mise en forme par défaut du navigateur. Comme [`background-color`](/fr/docs/Web/CSS/background-color#définition_formelle) n'est pas une propriété héritée, contrairement à [`font-size`](/fr/docs/Web/CSS/font-size#définition_formelle) et [`color`](/fr/docs/Web/CSS/color#définition_formelle) qui sont héritées, l'élément `<blockquote>` est un [élément en ligne](/fr/docs/Glossary/Inline-level_content) (la valeur initiale de [`display`](/fr/docs/Web/CSS/display#définition_formelle)), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `transparent` (sa valeur initiale), mais [`font-size`](/fr/docs/Web/CSS/font-size) vaut toujours `small` (sa valeur héritée), et [`color`](/fr/docs/Web/CSS/color) vaut `blue` (sa valeur héritée).
 
 #### `all: revert`
 
@@ -207,7 +207,7 @@ blockquote {
 
 {{EmbedLiveSample("", "200", "125")}}
 
-Lorsque la propriété `all` utilise la valeur `revert` dans la règle `blockquote`, cette règle est considérée comme absente et les valeurs pour la mise en forme sont héritées de celles appliquées à l'élément parent, `<body>`. Aussi, `<blockquote>` devient [un élément de bloc](/fr/docs/Web/HTML/Block-level_elements), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `#F0F0F0`, [`font-size`](/fr/docs/Web/CSS/font-size) vaut `small`, et [`color`](/fr/docs/Web/CSS/color) vaut `blue`&nbsp;: toutes ces valeurs sont héritées de la règle pour `body`.
+Lorsque la propriété `all` utilise la valeur `revert` dans la règle `blockquote`, cette règle est considérée comme absente et les valeurs pour la mise en forme sont héritées de celles appliquées à l'élément parent, `<body>`. Aussi, `<blockquote>` devient [un élément de bloc](/fr/docs/Glossary/Block-level_content), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `#F0F0F0`, [`font-size`](/fr/docs/Web/CSS/font-size) vaut `small`, et [`color`](/fr/docs/Web/CSS/color) vaut `blue`&nbsp;: toutes ces valeurs sont héritées de la règle pour `body`.
 
 #### `all: revert-layer`
 
@@ -233,7 +233,7 @@ blockquote {
 
 {{EmbedLiveSample("", "200", "125")}}
 
-Ici, on n'a pas de couche de cascade définie dans le fichier CSS et l'élément `<blockquote>` hérite donc de la mise en forme de la règle `body` qui s'applique à l'élément parent. `<blockquote>` est donc [un élément de bloc](/fr/docs/Web/HTML/Block-level_elements), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `#F0F0F0`, [`font-size`](/fr/docs/Web/CSS/font-size) vaut `small`, et [`color`](/fr/docs/Web/CSS/color) vaut `blue`. Dans ce scénario, on est dans le cas où `all: revert-layer` mène au même comportement que `all: revert`.
+Ici, on n'a pas de couche de cascade définie dans le fichier CSS et l'élément `<blockquote>` hérite donc de la mise en forme de la règle `body` qui s'applique à l'élément parent. `<blockquote>` est donc [un élément de bloc](/fr/docs/Glossary/Block-level_content), [`background-color`](/fr/docs/Web/CSS/background-color) vaut `#F0F0F0`, [`font-size`](/fr/docs/Web/CSS/font-size) vaut `small`, et [`color`](/fr/docs/Web/CSS/color) vaut `blue`. Dans ce scénario, on est dans le cas où `all: revert-layer` mène au même comportement que `all: revert`.
 
 ## Spécifications
 

@@ -5,9 +5,9 @@ slug: Web/API/XSLTProcessor/Basic_Example
 
 {{APIRef("XSLT")}}
 
-1. [Introduction](/fr/docs/XSLT_dans_Gecko)
-2. [Exemple basique](/fr/docs/XSLT_dans_Gecko/Exemple_basique)
-3. [Génération de HTML](/fr/docs/XSLT_dans_Gecko/Génération_de_HTML)
+1. [Introduction](/fr/docs/Web/API/XSLTProcessor)
+2. [Exemple basique](/fr/docs/Web/API/XSLTProcessor/Basic_Example)
+3. [Génération de HTML](/fr/docs/Web/API/XSLTProcessor/Generating_HTML)
 4. [Différences entre les navigateurs](/fr/docs/XSLT_dans_Gecko/Différences_entre_les_navigateurs)
 5. [Ressources](/fr/docs/XSLT_dans_Gecko/Ressources)
 

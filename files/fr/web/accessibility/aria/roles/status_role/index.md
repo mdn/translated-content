@@ -7,11 +7,11 @@ slug: Web/Accessibility/ARIA/Roles/status_role
 
 ### Description
 
-Cette technique présente l'utilisation du rôle [status](http://www.w3.org/TR/wai-aria/roles#status) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Cette technique présente l'utilisation du rôle [status](https://www.w3.org/TR/wai-aria/roles#status) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
 
-Le rôle `status` est un type de [zone live](http://www.w3.org/WAI/PF/aria/terms#def_liveregion) et un conteneur dont le contenu est un message d'informations destiné à l'utilisateur. Ce message n'est pas assez important pour justifier une [alerte](http://www.w3.org/TR/wai-aria/roles#alert). Il est souvent présenté comme une barre d'état. Lorsque le rôle est ajouté à un élément, le navigateur émettra un événement `status` accessible aux produits de technologies d'assistance qui pourront alors le notifier à l'utilisateur.
+Le rôle `status` est un type de [zone live](https://www.w3.org/WAI/PF/aria/terms#def_liveregion) et un conteneur dont le contenu est un message d'informations destiné à l'utilisateur. Ce message n'est pas assez important pour justifier une [alerte](https://www.w3.org/TR/wai-aria/roles#alert). Il est souvent présenté comme une barre d'état. Lorsque le rôle est ajouté à un élément, le navigateur émettra un événement `status` accessible aux produits de technologies d'assistance qui pourront alors le notifier à l'utilisateur.
 
-Le contenu des informations d'état doit être fourni dans un objet d'état et il faut s'assurer que cet objet ne reçoive pas le focus. Si une autre partie de la page contrôle ce qui s'affiche dans l'objet d'état, la relation doit être explicitement définie à l'aide de l'attribut [`aria-controls`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-controls).
+Le contenu des informations d'état doit être fourni dans un objet d'état et il faut s'assurer que cet objet ne reçoive pas le focus. Si une autre partie de la page contrôle ce qui s'affiche dans l'objet d'état, la relation doit être explicitement définie à l'aide de l'attribut [`aria-controls`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-controls).
 
 Les technologies d'assistance devraient réserver des cellules dans la grille Braille pour rendre l'état.
 
@@ -46,12 +46,12 @@ L'extrait de code ci-dessous montre comment le rôle `status` est ajouté direct
 
 ### Attributs ARIA utilisés
 
-- [status](http://www.w3.org/TR/wai-aria/roles#status).
+- [status](https://www.w3.org/TR/wai-aria/roles#status).
 
 ### Techniques ARIA connexes
 
-- Rôle [alert](http://www.w3.org/TR/wai-aria/roles#alert).
+- Rôle [alert](https://www.w3.org/TR/wai-aria/roles#alert).
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](http://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](https://www.w3.org/TR/wai-aria-practices/#LiveRegions).

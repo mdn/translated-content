@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/id
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`id`** définit un identifiant qui doit être unique pour l'ensemble du document. Le but de cet attribut est de pouvoir identifier un élément lorsqu'on crée un lien, [avec un fragment](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifier_des_ressources_sur_le_Web#Fragment) et qu'on souhaite le manipuler avec un script ou qu'on le met en forme avec CSS.
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`id`** définit un identifiant qui doit être unique pour l'ensemble du document. Le but de cet attribut est de pouvoir identifier un élément lorsqu'on crée un lien, [avec un fragment](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#fragment) et qu'on souhaite le manipuler avec un script ou qu'on le met en forme avec CSS.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 
@@ -28,4 +28,4 @@ La valeur de cet attribut ne doit pas contenir de blancs (espaces, tabulation, e
 ## Voir aussi
 
 - {{domxref("Element.id")}} qui reflète cet attribut
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)

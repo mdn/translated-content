@@ -16,7 +16,7 @@ WebAssembly.compile(bufferSource);
 ### 引数
 
 - _bufferSource_
-  - : コンパイルする .wasm モジュールのバイナリーコードを含む[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) です。
+  - : コンパイルする .wasm モジュールのバイナリーコードを含む[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)または [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) です。
 
 ### 返値
 
@@ -24,7 +24,7 @@ WebAssembly.compile(bufferSource);
 
 ### 例外
 
-- `bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)ではなかった場合、 {{jsxref("TypeError")}} が発生します。
+- `bufferSource` が[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ではなかった場合、 {{jsxref("TypeError")}} が発生します。
 - コンパイルに失敗した場合、プロミスは {{jsxref("WebAssembly.CompileError")}} で拒否されます。
 
 ## 例

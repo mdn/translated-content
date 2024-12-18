@@ -37,7 +37,7 @@ OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에�
 
 ## 시작하기
 
-먼저 [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html)를 다운 받으시고 ([running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html) 페이지도 보시구요). 파일 내에서 이전 예제에서 계속 봐 왔던 `Person()` 생성자를 보실 수 있습니다 — 생성자에 속성 몇 개를 정의했기에 조금 다릅니다:
+먼저 [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html)를 다운 받으시고 ([running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html) 페이지도 보시구요). 파일 내에서 이전 예제에서 계속 봐 왔던 `Person()` 생성자를 보실 수 있습니다 — 생성자에 속성 몇 개를 정의했기에 조금 다릅니다:
 
 ```js
 function Person(first, last, age, gender, interests) {
@@ -218,20 +218,20 @@ teacher1.farewell();
 아주 잘 실행될 겁니다. 1, 2, 3, 6 줄은 Person() 생성자(클래스)에서 상속 받은 멤버에 접근합니다. 4번째 줄은 Teacher() 생성자(클래스)만 가지고 있는 멤버에 접근합니다. 5번째 줄은 Person()에서 상속 받은 멤버도 있지만 Teacher()가 이미 자신만의 새 메소드를 정의했으므로 Teacher()의 메소드에 접근합니다.
 
 > [!NOTE]
-> 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)을 확인해 보세요. ([실행 페이지](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)도 보시구요).
+> 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html)을 확인해 보세요. ([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)도 보시구요).
 
 이 테크닉이 Javascript에서 상속 받는 클래스를 만드는 유일한 방법은 아니지만 잘 동작하며 상속을 구현하는 방법을 잘 설명하고 있습니다.
 
 조금 더 명확한 방식으로 Javascript에서 상속을 구현하는 새 {{glossary("ECMAScript")}} 기능도 관심 가질만한 주제입니다([Classes](/ko/docs/Web/JavaScript/Reference/Classes) 참조). 아직까지 많은 브라우저에서 지원하지 못하고 있기 때문에 여기서 다를 주제는 아닙니다. 여러 문서에서 제시한 코드들은 IE9보다 더 오래된 구형 브라우저에서도 사용 가능하며 더 이전 버전을 지원하기 위한 방법들도 있습니다.
 
-JavaScript 라이브러리를 쓰면 간단합니다 — 상속 기능을 사용하기 위한 보편적인 방법이죠. 예를들어 [CoffeeScript](http://coffeescript.org/#classes)는 `class`와 `extends`등의 기능을 제공합니다.
+JavaScript 라이브러리를 쓰면 간단합니다 — 상속 기능을 사용하기 위한 보편적인 방법이죠. 예를들어 [CoffeeScript](https://coffeescript.org/#classes)는 `class`와 `extends`등의 기능을 제공합니다.
 
 ## 더 연습하기
 
-[OOP theory section](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters), 에서는 개념적으로 Person을 상속받고 Teacher보다 덜 공손한 `greeting()` 메소드를 재정의한 `Student` 클래스를 정의했었습니다. 해당 절에서 `Student`의 인삿말이 어땠는지 확인해 보시고 `Person()`을 상속받는 `Student()` 생성자를 구현해 보세요. `greeting()` 함수도 재정의 해 보시구요.
+[OOP theory section](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), 에서는 개념적으로 Person을 상속받고 Teacher보다 덜 공손한 `greeting()` 메소드를 재정의한 `Student` 클래스를 정의했었습니다. 해당 절에서 `Student`의 인삿말이 어땠는지 확인해 보시고 `Person()`을 상속받는 `Student()` 생성자를 구현해 보세요. `greeting()` 함수도 재정의 해 보시구요.
 
 > [!NOTE]
-> 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) 을 확인해 보세요.([실행 페이지](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)도 보시구요).
+> 코드가 잘 동작하지 않으면 [완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) 을 확인해 보세요.([실행 페이지](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)도 보시구요).
 
 ## 객체 멤버 요약
 

@@ -57,7 +57,7 @@ HTTP URL에서, 앞 부분의 `http://` 또는 `https://` 다음에 오는 첫�
 
 ## 결정하기
 
-이것은 [자전거 타기(bikeshedding)](http://bikeshed.com/) 이슈로 간주될 수도 있는 주관적인 주제입니다. 더 자세한 정보를 얻으려면, 이 주제에 관련된 글들을 읽어보세요.
+이것은 [자전거 타기(bikeshedding)](https://bikeshed.com/) 이슈로 간주될 수도 있는 주관적인 주제입니다. 더 자세한 정보를 얻으려면, 이 주제에 관련된 글들을 읽어보세요.
 
 - 2020년 'www.netlify.com'의 [bare 도메인에 대한 옵션](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains)
 - 2023년 'www.wpbeginner.com'의 [www vs 비-www WordPress SEO에 더 나은 것은 무엇인가요?](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)

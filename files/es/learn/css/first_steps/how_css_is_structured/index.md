@@ -349,7 +349,7 @@ Las [`@rules`](/es/docs/Web/CSS/At-rule) (leído "at-rules" en inglés) dan al C
 @import "styles2.css";
 ```
 
-Una de las `@rules` más comunes con las que te encontrarás es `@media`, que permite usar [consultas a medios](/es/docs/Web/CSS/Media_Queries) para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).
+Una de las `@rules` más comunes con las que te encontrarás es `@media`, que permite usar [consultas a medios](/es/docs/Web/CSS/CSS_media_queries) para aplicar CSS solo cuando se dan ciertas condiciones (por ejemplo, cuando la resolución de la pantalla supera un valor determinado o la anchura supera un valor concreto).
 
 En el CSS que se muestra a continuación, tenemos una hoja de estilo que le da al elemento `<body>` un color de fondo rosado. Sin embargo, luego usamos `@media` para crear una sección de nuestra hoja de estilo que solo se aplicará en los navegadores con una ventana gráfica de más de 30em de ancho. Si el navegador es más ancho que 30em, el color de fondo será azul.
 

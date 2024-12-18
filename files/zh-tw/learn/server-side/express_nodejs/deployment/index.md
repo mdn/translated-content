@@ -82,7 +82,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 - 額外的好處。一些提供商將提供免費域名和 SSL 證書支持，否則你將不得不為此另外支付費用。
 - 你所依賴的「免費」等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著你最好在一開始就使用其他服務！
 
-當你剛開始時，好消息是有很多網站提供「免費」的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) 「永遠」 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在你第一次加入時，提供免費信用額度。
+當你剛開始時，好消息是有很多網站提供「免費」的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) 「永遠」 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在你第一次加入時，提供免費信用額度。
 
 許多提供商還擁有「基本」層，可提供更多有用的計算能力，和更少的限制。舉例來說， [Digital Ocean](https://www.digitalocean.com/) 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月 5 美元的較低範圍）。
 
@@ -382,7 +382,7 @@ var mongoDB =
 npm install
 ```
 
-現在運行該站點（請參閱[測試路由](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes)的相關命令），並檢查該站點，是否仍按預期運行。
+現在運行該站點（請參閱[測試路由](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes)的相關命令），並檢查該站點，是否仍按預期運行。
 
 #### 將更改保存到 Github
 
@@ -452,7 +452,7 @@ Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 ```
 
-我們還應該使用單獨的數據庫進行生產，在**MONGODB_URI**環境變量中，設置其 URI。你可以完全按照[我們原來的方式](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose#Setting_up_the_MongoDB_database)，設置新數據庫和數據庫用戶，並獲取其 URI。你可以如下圖所示設置 URI（顯然，要使用你自己的 URI！）
+我們還應該使用單獨的數據庫進行生產，在**MONGODB_URI**環境變量中，設置其 URI。你可以完全按照[我們原來的方式](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database)，設置新數據庫和數據庫用戶，並獲取其 URI。你可以如下圖所示設置 URI（顯然，要使用你自己的 URI！）
 
 ```bash
 >heroku config:set MONGODB_URI='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'

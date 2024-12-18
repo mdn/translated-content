@@ -38,7 +38,7 @@ El sitio de evaluación terminado debe tener este aspecto:
 Verá algunas diferencias/problemas con la visualización del estado inicial de la evaluación — esto se debe principalmente a las diferencias en el marcado, que a su vez causan algunos problemas de estilo, ya que el CSS no se aplica correctamente. No se preocupe, ¡estará solucionando estos problemas en las próximas secciones!
 
 > [!NOTE]
-> Si se queda atorado, pídanos ayuda — consulta la sección [Evaluación o más ayuda](/es/docs/Learn/Accessibility/Accessibility_troubleshooting#Assessment_or_further_help) en la parte inferior de esta página.
+> Si se queda atorado, pídanos ayuda — consulta la sección [Evaluación o más ayuda](#assessment_or_further_help) en la parte inferior de esta página.
 
 ## Resumen del proyecto
 

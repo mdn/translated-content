@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 Конструктор **`RegExp`** создаёт объект регулярного выражения для сопоставления текста с шаблоном.
 
-Введение в то, что представляют собой регулярные выражения, читайте в [главе «Регулярные выражения» в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_Expressions).
+Введение в то, что представляют собой регулярные выражения, читайте в [главе «Регулярные выражения» в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_expressions).
 
 {{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
 
@@ -846,6 +846,6 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // напечатает 'xxx'
 
 ## Смотрите также
 
-- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- Глава про [регулярные выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions) в [руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

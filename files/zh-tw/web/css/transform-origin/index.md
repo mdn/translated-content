@@ -296,4 +296,4 @@ transform-origin: 100% -30%;
 
 ## See also
 
-- [Using CSS transforms](/zh-TW/docs/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

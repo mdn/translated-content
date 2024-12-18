@@ -43,5 +43,5 @@ console.log(arr.buffer === buffer); // true
 
 ## 같이 보기
 
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

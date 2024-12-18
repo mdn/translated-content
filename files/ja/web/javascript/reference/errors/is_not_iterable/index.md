@@ -69,7 +69,7 @@ for (const [country, capital] of map.entries()) console.log(country, capital);
 
 ### ジェネレーターの反復処理
 
-[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)は反復可能オブジェクトを生成するために呼び出す関数です。</p>
+[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)は反復可能オブジェクトを生成するために呼び出す関数です。</p>
 
 ```js example-bad
 function* generate(a, b) {
@@ -124,5 +124,5 @@ Array.from(myEmptyIterable); // []
 - {{jsxref("Object.keys")}}
 - {{jsxref("Object.entries")}}
 - {{jsxref("Map")}}
-- [ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#generators)
+- [ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
 - [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)

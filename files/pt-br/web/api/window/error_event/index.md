@@ -5,10 +5,10 @@ slug: Web/API/Window/error_event
 
 {{ApiRef("HTML DOM")}}
 
-Um [event handler](/pt-BR/docs/Web/Guide/Events/Event_handlers) para o evento [`error`](/pt-BR/docs/Web/Events/error) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
+Um [event handler](/pt-BR/docs/Web/Events/Event_handlers) para o evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
 
-- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/pt-BR/docs/Web/Events/error) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
-- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/pt-BR/docs/Web/Events/error) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
+- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
+- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
 
 Instalando um manipulador de eventos de erro global é útil para compilação automatizada de relatórios de erro.
 

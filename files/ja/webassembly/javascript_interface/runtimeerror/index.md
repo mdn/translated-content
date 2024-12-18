@@ -9,7 +9,7 @@ slug: WebAssembly/JavaScript_interface/RuntimeError
 
 ## コンストラクター
 
-- [`WebAssembly.RuntimeError()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError)
+- [`WebAssembly.RuntimeError()`](/ja/docs/WebAssembly/JavaScript_interface/RuntimeError/RuntimeError)
   - : 新しい `WebAssembly.RuntimeError` オブジェクトを生成します。
 
 ## インスタンスプロパティ

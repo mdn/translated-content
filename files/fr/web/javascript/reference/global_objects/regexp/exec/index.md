@@ -175,7 +175,7 @@ Cela affichera 'coucou monde !'.
 
 ## Voir aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.matchAll()")}}

@@ -18,7 +18,7 @@ l10n:
 - 文書のルート要素 (`<html>`)
 - {{cssxref("position")}} の値が `absolute` または `relative` であり、かつ {{cssxref("z-index")}} の値が `auto` 以外の要素
 - {{cssxref("position")}} の値が `fixed` または `sticky` の要素（sticky はすべてのモバイルブラウザーにありますが、古いデスクトップブラウザーにはありません）。
-- {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)のために `size` または `inline-size` に設定されているもの。
+- {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
 - [フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - グリッド ({{cssxref("grid")}}) コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - {{cssxref("opacity")}} の値が `1` 未満である要素（[不透明度の仕様](https://www.w3.org/TR/css-color-3/#transparency)をご覧ください）。

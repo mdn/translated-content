@@ -289,7 +289,7 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](http://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1.oo[.PPCCLL]` (AVC video)
@@ -337,7 +337,7 @@ When the value of an entry in the `codecs` list begins with `mp4a`, the syntax o
 mp4a.oo[.A]
 ```
 
-Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](http://mp4ra.org/), which maintains a [list of the possible OTI values](http://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
+Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](https://mp4ra.org/), which maintains a [list of the possible OTI values](https://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
 
 The Audio Object Type is specified as a one or two digit _decimal_ value (unlike most other values in the `codecs` parameter, which use hexadecimal). For example, MPEG-4's AAC-LC has an audio object type number of `2`, so the full `codecs` value representing AAC-LC is `mp4a.40.2`.
 
@@ -415,7 +415,7 @@ The strings `vp8.0` and `vp9.0` also work, but are not recommended.
 
 #### ISO Base Media File Format syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#ISO-BMFF). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
 
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 

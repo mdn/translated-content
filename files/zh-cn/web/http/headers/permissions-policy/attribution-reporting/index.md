@@ -13,7 +13,7 @@ HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `attribution-reporting` 指�
 
 - 不会进行后台 `attributionsrc` 请求。
 - 调用 {{domxref("XMLHttpRequest.setAttributionReporting()")}} 方法时会抛出异常。
-- 当在 {{domxref("fetch()")}} 调用中包含 [`attributionReporting`](/zh-CN/docs/Web/API/fetch#attributionreporting) 选项时，会导致抛出异常。
+- 当在 {{domxref("fetch()")}} 调用中包含 [`attributionReporting`](/zh-CN/docs/Web/API/Window/fetch#attributionreporting) 选项时，会导致抛出异常。
 - HTTP 响应中与文档相关的注册标头（{{httpheader("Attribution-Reporting-Register-Source")}} 和 {{httpheader("Attribution-Reporting-Register-Trigger")}}）将被忽略。
 
 ## 语法

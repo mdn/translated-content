@@ -59,7 +59,7 @@ Todas las animaciones, incluso aquellas con 0 segundos de duración, lanzan even
 
 - [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : Tutorial paso a paso sobre cómo crear animaciones usando CSS. Este artículo describe las propiedades CSS y las reglas arroba relacionadas con la animación y cómo interactúan entre sí.
-- [Consejos y trucos de animación CSS](/es/docs/Web/CSS/CSS_animations/Tips)
+- [Consejos y trucos de animación CSS](/es/docs/Web/API/Web_Animations_API/Tips)
   - : Consejos y trucos para ayudarlo a aprovechar al máximo las animaciones CSS.
 
 ## Conceptos relacionados

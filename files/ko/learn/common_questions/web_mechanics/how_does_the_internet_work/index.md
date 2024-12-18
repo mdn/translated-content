@@ -114,5 +114,5 @@ l10n:
 ## 다음 단계
 
 - [How the Web works(웹이 작동하는 방법)](/ko/docs/Learn/Getting_started_with_the_web/%EC%9B%B9%EC%9D%98_%EB%8F%99%EC%9E%91_%EB%B0%A9%EC%8B%9D)
-- [Understanding the difference between a web page, a web site, a web server and a search engine(웹 페이지, 웹 사이트, 웹 서버, 검색 엔진의 차이점 이해하기)](/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine)
-- [Understanding domain names(도메인 이름 이해하기)](/ko/docs/Learn/Understanding_domain_names)
+- [Understanding the difference between a web page, a web site, a web server and a search engine(웹 페이지, 웹 사이트, 웹 서버, 검색 엔진의 차이점 이해하기)](/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [Understanding domain names(도메인 이름 이해하기)](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

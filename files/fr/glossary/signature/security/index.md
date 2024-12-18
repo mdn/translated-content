@@ -25,4 +25,4 @@ Le système échoue si la clé privée est compromise ou si le destinataire donn
 
 ### Référence technique
 
-- [Tutoriel sur la sécurité informatique](/fr/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [Tutoriel sur la sécurité informatique](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)

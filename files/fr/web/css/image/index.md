@@ -13,7 +13,7 @@ Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS) **`<im
 
 Le type de données `<image>` peut être représenté avec l'une des valeurs suivantes&nbsp;:
 
-- Une image portée par une valeur de type [`url()`](/fr/docs/Web/CSS/url)
+- Une image portée par une valeur de type [`url()`](/fr/docs/Web/CSS/url_value)
 - Une valeur de type [`<gradient>`](/fr/docs/Web/CSS/gradient) qui représente un dégradé
 - Une partie d'une page web définie par la fonction [`element()`](/fr/docs/Web/CSS/element)
 - Une image, un fragment d'image ou une zone de couleur définie par la fonction [`image()`](/fr/docs/Web/CSS/image/image)

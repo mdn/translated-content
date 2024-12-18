@@ -74,4 +74,4 @@ li li {
 
 ## Voir aussi
 
-- [Sélecteur d'enfant](/fr/docs/Web/CSS/Sélecteurs_enfant)
+- [Sélecteur d'enfant](/fr/docs/Web/CSS/Child_combinator)

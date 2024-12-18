@@ -59,7 +59,7 @@ Pasar un ID inválido a `clearTimeout` no tiene ningún efecto (y no lanza una e
 
 ## Especificación
 
-DOM Nivel 0. Especificado en [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-cleartimeout).
+DOM Nivel 0. Especificado en [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dom-windowtimers-cleartimeout).
 
 ## Vea también
 

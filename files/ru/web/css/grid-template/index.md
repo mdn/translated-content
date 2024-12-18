@@ -136,6 +136,6 @@ footer {
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#grid_definition_shorthands)_
-- Обучающее видео: _[Grid Template shorthand](http://gridbyexample.com/video/grid-template-shorthand/)_
+- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
+- Обучающее видео: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_

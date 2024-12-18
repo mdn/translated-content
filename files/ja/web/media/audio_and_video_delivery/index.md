@@ -37,7 +37,7 @@ slug: Web/Media/Audio_and_video_delivery
 > [!NOTE]
 > モバイルブラウザーによっては、 `preload` 属性が無視される場合があります。
 
-詳しい情報は、[クロスブラウザーの音声の基本（HTML Audio の詳細）](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+詳しい情報は、[クロスブラウザーの音声の基本（HTML Audio の詳細）](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
 
 ### HTML の動画
 
@@ -71,7 +71,7 @@ slug: Web/Media/Audio_and_video_delivery
 
 > **メモ:** `autoplay` 属性は、一部のモバイルブラウザーで無視される場合があります。また、自動再生機能は、使い方を誤ると物議をかもす可能性があります。自動再生の賢い使用方法を知るために、[メディアとウェブ音声 API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)を読むことを強くお勧めします。
 
-詳しい情報は [\<video> 要素](/ja/docs/Web/HTML/Element/video)と[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
+詳しい情報は [\<video> 要素](/ja/docs/Web/HTML/Element/video)と[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 
 ### JavaScript の音声
 
@@ -237,14 +237,14 @@ EME の主な使用方法の一つは、ブラウザーに DRM ([Digital Rights 
 
 アダプティブストリーミングを促進するために、新しい書式化とプロトコルが展開されています。アダプティブストリーミングメディアとは、ユーザーが利用できる帯域幅に反応して、ストリームの帯域幅と一般的な品質をリアルタイムで変更できることを意味しています。アダプティブストリーミングは、音声や動画のスムーズな配信が最も重要であるライブストリーミングと組み合わせて使用されることが多い。
 
-アダプティブストリーミングに使用される主な形式は、 [HLS](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) と [MPEG-DASH](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash) です。 MSE は DASH を保有することを念頭に置いて設計されています。 MSE は [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) と [M2TS](https://en.wikipedia.org/wiki/M2ts) に従ってバイトストリームを定義します（DASH はどちらにも対応しており、 HLS は後者に対応しています）。一般的に言って、標準規格に関心があり、柔軟性を求めている場合、あるいはほとんどの現代のブラウザーに対応したい場合は、DASH を使用した方がよいかもしれません。
+アダプティブストリーミングに使用される主な形式は、 [HLS](/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#hls) と [MPEG-DASH](/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video#mpeg-dash) です。 MSE は DASH を保有することを念頭に置いて設計されています。 MSE は [ISOBMFF](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/isobmff-byte-stream-format.html) と [M2TS](https://en.wikipedia.org/wiki/M2ts) に従ってバイトストリームを定義します（DASH はどちらにも対応しており、 HLS は後者に対応しています）。一般的に言って、標準規格に関心があり、柔軟性を求めている場合、あるいはほとんどの現代のブラウザーに対応したい場合は、DASH を使用した方がよいかもしれません。
 
 > [!NOTE]
 > 現在、Safari は DASH に対応していませんが、OSX Yosemite でリリースされる予定の新しいバージョンの Safari では dash.js が動作する予定です。
 
 DASH も、メディアファイルの前処理や分割が不要な単純なオンデマンドプロファイルを含む、多くのプロファイルを提供しています。また、メディアを HLS と DASH の両方に変換してくれるクラウドベースのサービスも数多くあります。
 
-詳しい情報は、[ウェブ音声と映像のライブストリーミング](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video)を参照してください。
+詳しい情報は、[ウェブ音声と映像のライブストリーミング](/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video)を参照してください。
 
 ## メディアプレイヤーのカスタマイズ
 
@@ -299,7 +299,7 @@ window.onload = () => {
 };
 ```
 
-[この例をここで試してみる](https://jsbin.com/jujeladu/2/edit)ことができます。より詳しい情報は、[自分自身でカスタム音声プレイヤーを作成する](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player)をご覧下さい。
+[この例をここで試してみる](https://jsbin.com/jujeladu/2/edit)ことができます。より詳しい情報は、[自分自身でカスタム音声プレイヤーを作成する](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#creating_your_own_custom_audio_player)をご覧下さい。
 
 ## 音声/動画のその他の豆知識
 
@@ -491,33 +491,33 @@ lastsource.addEventListener(
 
 ## 基本的なチュートリアル
 
-- [クロスブラウザー対応の動画プレイヤーの作成](/ja/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
+- [クロスブラウザー対応の動画プレイヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
   - : {{ htmlelement ("video") }} 要素を使用した、基本的なクロスブラウザー対応の動画プレーヤーを作成するためのガイドです。
-- [動画プレイヤーのスタイル付けの基本](/ja/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
+- [動画プレイヤーのスタイル付けの基本](/ja/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
   - : 前回の記事でクロスブラウザーに対応した動画プレイヤーを作成したため、この記事では、プレイヤーに基本的なレスポンシブスタイルを提供することについて見ていきます。
-- [クロスブラウザー対応のオーディオの基本](/ja/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [クロスブラウザー対応のオーディオの基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
   - : この記事では、クロスブラウザーで動作する HTML 音声プレーヤーの作成に関する基本的なガイドと、関連するすべての属性、プロパティ、イベントの説明、およびメディア API を使用して作成するカスタム コントロールのクイック ガイドを提供します。
-- [メディアのバッファリング、シーク、再生範囲](/ja/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges)
+- [メディアのバッファリング、シーク、再生範囲](/ja/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges)
   - : 時には、{{ htmlelement("audio") }} や {{ htmlelement("video") }} がどれだけダウンロードされたか、あるいは遅延なく再生できるかを知ることは有益なことです。この良い例が、音声や 動画プレイヤーのバッファリング進捗バーです。この記事では、 [TimeRanges](/ja/docs/Web/API/TimeRanges) やメディア API の他の機能を使用して、バッファ/シークバーを構築する方法について説明します。
-- [HTML の playbackRate の説明](/ja/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML の playbackRate の説明](/ja/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
   - : `playbackRate` プロパティを使うと、ウェブ音声や動画の再生速度や割合を変更することができます。この記事では、その詳細について説明します。
 - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
   - : ウェブオーディオ API を使用して、音声ソースを取得、操作、再生するための基本的な方法を説明します。
 
 ## ストリーミングメディアのチュートリアル
 
-- [ウェブの音声や映像のライブストリーミング](/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
+- [ウェブの音声や映像のライブストリーミング](/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
   - : ライブストリーミング技術は、スポーツやコンサートなどのライブイベントを中継するために多く採用されており、一般的にはテレビやラジオの番組がライブで出力されています。しばしば単にストリーミングと略され、ライブストリーミングは、コンピュータや機器にメディアを "ライブ "で送信するプロセスです。これは、変数が多く、かなり複雑で新しい主題であるので、この記事では、この主題に紹介し、どのように始めるかが分かるようにします。
-- [アダプティブストリーミングメディアソースの設定](/ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
+- [アダプティブストリーミングメディアソースの設定](/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
   - : 例えば、サーバー上にアダプティブストリーミングメディアソースを設定し、 HTML のメディア要素の中で利用したいとします。どのようにそれを行うのでしょうか？この記事では、最も一般的な 2 つの形式を見て、その方法を説明します。 MPEG-DASH と HLS (HTTP Live Streaming) です。
 - [HTML 5 動画の DASH アダプティブストリーミング](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
   - : DASH と WebM を使用したアダプティブストリーミングを設定する方法について詳しく説明します。
 
 ## 高度なチュートリアル
 
-- [HTML 動画へのキャプションや字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [HTML 動画へのキャプションや字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
   - : この記事では、 [Web_Video_Text_Tracks_Format](/ja/docs/Web/API/WebVTT_API) と {{ htmlelement("track") }} 要素を使って、 HTML でキャプションと字幕を追加する方法について説明します。
-- [あらゆるブラウザーで動作するウェブオーディオ API コードの作成](/ja/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
+- [あらゆるブラウザーで動作するウェブオーディオ API コードの作成](/ja/docs/Web/API/Web_Audio_API)
   - : クロスブラウザー対応のウェブオーディオ API コードを書くためのガイドです。
 - [メディアレコーダー API で音声を簡単に取り込む](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : メディアレコーダー API を使用して、メディアストリームを直接収録する基本的な方法について説明します。

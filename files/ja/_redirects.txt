@@ -1332,6 +1332,7 @@
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
+/ja/docs/Glossary/DOS_attack	/ja/docs/conflicting/Glossary/Denial_of_Service
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element

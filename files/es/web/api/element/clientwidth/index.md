@@ -34,5 +34,5 @@ _intElemClientWidth_ será un entero que corresponde con el **clientWidth** del 
 
 - {{domxref("HTMLElement.offsetWidth")}}
 - {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/es/docs/Determining_the_dimensions_of_elements)
+- [Determining the dimensions of elements](/es/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

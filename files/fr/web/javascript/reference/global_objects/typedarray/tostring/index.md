@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 
 {{JSRef}}
 
-La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 {{EmbedInteractiveExample("pages/js/typedarray-tostring.html")}}
 

@@ -9,7 +9,7 @@ slug: Learn/JavaScript/Objects
 
 ## 预备知识
 
-开始这个模块之前，你应当已经对 HTML 和 CSS 有所了解。我们建议你通读 [HTML 入门](/zh-CN/docs/Web/Guide/HTML/Introduction)和 [CSS 入门](/zh-CN/docs/Learn/CSS/Introduction_to_CSS)模块，再开始了解 JavaScript。
+开始这个模块之前，你应当已经对 HTML 和 CSS 有所了解。我们建议你通读 [HTML 入门](/zh-CN/docs/learn/HTML/Introduction_to_HTML)和 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps)模块，再开始了解 JavaScript。
 
 详细了解 JavaScript 对象之前，你应当已经对 JavaScript 基础有所熟悉。尝试这个模块之前，请通读 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps) 和 [JavaScript 基础要件](/zh-CN/docs/Learn/JavaScript/Building_blocks)
 
@@ -20,11 +20,11 @@ slug: Learn/JavaScript/Objects
 
 - [对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)
   - : 在了解 JavaScript 对象的第一篇文章中，我们将介绍 JavaScript 对象的语法，并回顾先前课程中讲过的某些 JavaScript 功能。你会发现，你已经在使用的很多功能本质上都是对象。
-- [适合初学者的面向对象 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [适合初学者的面向对象 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
   - : 了解基础后，我们将关注面向对象 JavaScript (OOJS)。本文将介绍面向对象编程 (OOP) 的基本理论，然后讲解 JavaScript 如何通过构造器 (constructor) 函数模拟对象类别 (class)、如何创建对象实例 (instance)。
 - [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
   - : 通过原型 (prototype) 这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 `prototype` 属性向已有的构造器添加方法。
-- [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)
+- [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
   - : 了解了 OOJS 的大多数细节之后，本文将介绍如何创建“子”对象类别（构造器）并从“父”类别中继承功能。此外，我们还会针对何时何处使用 OOJS 给出建议。
 - [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
   - : JavaScript Object Notation (JSON) 是一种将结构化数据表达为 JavaScript 对象的标准格式，其常用于在网站上表达或传输数据（比如：从服务器向客户端发送数据，使之显示在网页上）。你会经常遇到它，因此本文将告诉你如何在 JavaScript 中使用 JSON 数据，包括访问 JSON 对象中的数据条目、编写自己的 JSON 数据等等。
