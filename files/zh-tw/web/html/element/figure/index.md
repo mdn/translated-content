@@ -1,11 +1,11 @@
 ---
-title: <figure>：可選標題的圖片元素
+title: <figure>：非必填圖片說明的圖片元素
 slug: Web/HTML/Element/figure
 ---
 
 {{HTMLSidebar}}
 
-**`<figure>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表自包含內容，可能具有可選的標題，可以使用 {{HTMLElement("figcaption")}} 元素指定。該圖片、其標題和其內容被引用為一個單一單位。
+**`<figure>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表自成一體的內容，可能具有非必填的圖片說明，可以使用 {{HTMLElement("figcaption")}} 元素指定。該圖片、其圖片說明和其內容被作為一個單一單位被引用。
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
@@ -15,9 +15,9 @@ slug: Web/HTML/Element/figure
 
 ## 使用注意事項
 
-- 通常 `<figure>` 是文件主流中引用的圖片、插圖、圖表、程式碼片段等，但可以移動到文件的其他部分或附錄，而不影響主流。
-- 可以通過在其中插入 {{HTMLElement("figcaption")}}（作為第一個或最後一個子元素）來將標題與 `<figure>` 元素連結起來。在圖片中找到的第一個 `<figcaption>` 元素被呈現為圖片的標題。
-- `<figcaption>` 為父級 `<figure>` 提供了{{glossary("accessible description", "無障礙描述")}}。
+- 通常 `<figure>` 是文件主要架構中引用的圖片、插圖、圖表、程式碼片段等，但可以移動到文件的其他部分或附錄，而不影響主要架構。
+- 可以通過在其中插入 {{HTMLElement("figcaption")}}（作為第一個或最後一個子元素）來將標題與 `<figure>` 元素產生關聯。在圖片中找到的第一個 `<figcaption>` 元素被呈現為圖片的標題。
+- `<figcaption>` 為父層 `<figure>` 提供了{{glossary("accessible description", "無障礙描述")}}。
 
 ## 範例
 
@@ -105,23 +105,23 @@ function NavigatorExample() {
     <tr>
       <th scope="row">
         <a href="/zh-TW/docs/Web/HTML/Content_categories"
-          >內容類型</a
+          >內容分類</a
         >
       </th>
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流內容</a
+          >文本流內容</a
         >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
-          >捫及內容</a
+          >可感知的內容</a
         >。
       </td>
     </tr>
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        一個 {{HTMLElement("figcaption")}} 元素，後跟<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流內容</a
-        >；或者流內容後跟一個
+        一個 {{HTMLElement("figcaption")}} 元素，後加上<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >文本流內容</a
+        >；或者流內容後加上一個
         {{HTMLElement("figcaption")}} 元素；或者流內容。
       </td>
     </tr>
@@ -130,10 +130,10 @@ function NavigatorExample() {
       <td>不允許，開始和結束標籤都是必須的。</td>
     </tr>
     <tr>
-      <th scope="row">允許的父元素</th>
+      <th scope="row">允許的父層元素</th>
       <td>
         任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >流內容</a
+          >文本流內容</a
         >的元素。
       </td>
     </tr>
@@ -149,7 +149,7 @@ function NavigatorExample() {
       <th scope="row">允許的 ARIA 角色</th>
       <td>
         除了 <a href="/zh-TW/docs/Web/HTML/Element/figcaption">figcaption </a
-        > 後代：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">任何</a>，否則不允許角色
+        > 子層元素：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">允許任何角色</a>，否則不允許其他角色
       </td>
     </tr>
     <tr>
