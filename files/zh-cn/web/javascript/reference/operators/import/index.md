@@ -18,12 +18,12 @@ import(moduleName, options)
 
 `import()` 调用是一个类似于函数调用的语法，但 `import` 本身是一个关键字，而不是一个函数。你不能像 `const myImport = import` 那样对其进行别名处理，这会抛出一个 {{jsxref("SyntaxError")}}。
 
-[尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas) 只有在运行时也支持 `options` 时才被允许使用。请查看[浏览器兼容性](#[浏览器兼容性)部分。
+只有在运行时也支持 `options` 时，[尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)才被允许使用。请查看[浏览器兼容性](#[浏览器兼容性)部分。
 
 ### 参数
 
 - `moduleName`
-  - : 要导入的模块。说明符的求值是宿主特异的（host-specified），但始终遵循与静态的 [import 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 相同的算法。
+  - : 要导入的模块。说明符的求值是宿主特异的（host-specified），但始终遵循与静态的 [import 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)相同的算法。
 - `options`
   - : 一个包含了导入选项的对象。以下是可识别的键：
     - `with`
@@ -50,9 +50,9 @@ import 声明语法（`import something from "somewhere"`）是静态的，并�
 - 当你正要导入的模块有副作用，并且你仅在某些条件下才希望有这些副作用。（建议模块中不要有任何副作用，但有时模块的依赖项中是否有副作用也无法控制）
 - 当你处于非模块化的环境（例如，`eval` 或脚本文件）时。
 
-仅在必要时使用动态导入。静态倒入更适合加载初始依赖项，并且可以更容易地从静态分析工具和[摇树优化](/zh-CN/docs/Glossary/Tree_shaking)中获益。
+仅在必要时使用动态导入。静态导入更适合加载初始依赖项，并且可以更容易地从静态分析工具和[摇树优化](/zh-CN/docs/Glossary/Tree_shaking)中获益。
 
-如果你的文件不是作为模块运行的（如果它在 HTML 文件中被引用，脚本标签必须有 `type="module"`），你将无法使用静态导入声明。而另一方面，异步的动态导入语法却始终可用，它允许你将模块导入到非模块环境中。
+如果你的文件不是作为模块运行的（如果它在 HTML 文件中被引用，脚本标签必须有 `type="module"` 属性），你将无法使用静态导入声明。而另一方面，异步的动态导入语法却始终可用，它允许你将模块导入到非模块环境中。
 
 `options` 参数允许不同类型的导入选项。例如 [import 属性](/zh-CN/docs/Web/JavaScript/Reference/Statements/import/with)：
 
@@ -68,7 +68,7 @@ import("./data.json", { with: { type: "json" } });
 
 模块命名空间对象是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的对象，它具有 [null 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)。也就是说，对象的所有字符串键对应于模块的导出，并且永远不会有额外的键。所有键都是以字典序[可枚举的](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（即 [`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#描述) 的默认行为），默认导出名为 `default` 的键。此外，模块命名空间对象具有一个 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，值为 `"Module"`，在 {{jsxref("Object.prototype.toString()")}} 中被使用。
 
-在使用 {{jsxref("Object.getOwnPropertyDescriptors()")}} 获取它们的描述符时，字符串属性是不可配置的（non-configurable）但可写的。然而，它们实际上是只读的（对于导入模块），因为你不能给属性重新赋一个新的值。这些值可以由导出它们的模块重新赋值，但不能由导入它们的模块重新赋值——这种行为反映了静态导入所创建的"[实时绑定](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改)"。属性的可写入性反映了值变化的可能性，因为不可配置和不可写入的属性必须是常量。例如，你可以重新给一个变量的导出赋值，并且可以在模块命名空间对象中观察到新的值。
+在使用 {{jsxref("Object.getOwnPropertyDescriptors()")}} 获取它们的描述符时，字符串属性是不可配置的（non-configurable）但是可写入的。然而，它们实际上是只读的，因为你不能给属性重新赋一个新的值。这些值可以由导出它们的模块重新赋值，但不能由导入它们的模块重新赋值——这种行为反映了静态导入所创建的[实时绑定](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改)。属性的可写入性反映了值是可能变化的，因为不可配置和不可写入的属性必须是常量。例如，你可以重新给一个变量的导出赋值，并且可以在模块命名空间对象中观察到新的值。
 
 每个模块说明符对应一个唯一的模块命名空间对象，所以以下通常是正确的：
 
@@ -80,7 +80,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-除了一个奇怪的情况：由于一个 promise 永远不会兑现为一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，如果 `my-module.js` 模块恰好导出了一个名为 `then()` 的函数，那么该函数将在动态导入的 promise 兑现时自动被调用，因为这是 [resolve 函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolve_函数)的一部分。
+除了一个奇怪的情况：由于 promise 对象永远不会兑现为 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，如果 `my-module.js` 模块恰好导出了一个名为 `then()` 的函数，那么该函数将在动态导入的 promise 兑现时自动被调用，因为这是 [resolve 函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolve_函数)的一部分。
 
 ```js
 // my-module.js
@@ -95,7 +95,7 @@ export function then(resolve) {
 import * as mod from "/my-module.js";
 
 import("/my-module.js").then((mod2) => {
-  // Logs "then() called"
+  // 打印 "then() called"
   console.log(mod === mod2); // false
 });
 ```
@@ -173,7 +173,7 @@ if (typeof window === "undefined") {
 
 动态导入允许任何表达式作为模块说明符，而不仅仅是字符串字面量。
 
-这里，我们并发加载 10 个模块（如 `/modules/module-0.js`、`/modules/module-1.js` 等），并调用每个模块导出的 `load` 函数。
+这里，我们同时加载 10 个模块（如 `/modules/module-0.js`、`/modules/module-1.js` 等），并调用每个模块导出的 `load` 函数。
 
 ```js
 Promise.all(
