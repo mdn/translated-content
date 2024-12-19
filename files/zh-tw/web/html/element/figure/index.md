@@ -5,7 +5,7 @@ slug: Web/HTML/Element/figure
 
 {{HTMLSidebar}}
 
-**`<figure>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表自成一體的內容，可能具有非必填的圖片說明，可以使用 {{HTMLElement("figcaption")}} 元素指定。該圖片、其圖片說明和其內容被作為一個單一單位被引用。
+**`<figure>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表自成一體的內容，可能具有非必填的圖片說明（使用 {{HTMLElement("figcaption")}} 元素指定）。圖片、其圖片說明和其內容被作為一個單一單位被引用。
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
