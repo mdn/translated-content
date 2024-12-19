@@ -105,23 +105,23 @@ function NavigatorExample() {
     <tr>
       <th scope="row">
         <a href="/zh-TW/docs/Web/HTML/Content_categories"
-          >內容分類</a
+          >內容類型</a
         >
       </th>
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >文本流內容</a
+          >流內容</a
         >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
-          >可感知的內容</a
+          >捫及內容</a
         >。
       </td>
     </tr>
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        一個 {{HTMLElement("figcaption")}} 元素，後加上<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >文本流內容</a
-        >；或者文本流內容後加上一個
+        一個 {{HTMLElement("figcaption")}} 元素，後跟<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+          >流內容</a
+        >；或者流內容後跟一個
         {{HTMLElement("figcaption")}} 元素；或者文本流內容。
       </td>
     </tr>
@@ -130,10 +130,10 @@ function NavigatorExample() {
       <td>不允許，開始和結束標籤都是必須的。</td>
     </tr>
     <tr>
-      <th scope="row">允許的父層元素</th>
+      <th scope="row">允許的父元素</th>
       <td>
         任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
-          >文本流內容</a
+          >流內容</a
         >的元素。
       </td>
     </tr>
@@ -148,8 +148,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        除了 <a href="/zh-TW/docs/Web/HTML/Element/figcaption">figcaption </a
-        > 子層元素：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">允許任何角色</a>，否則不允許其他角色
+        > 後代：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">任何</a>，否則不允許角色
       </td>
     </tr>
     <tr>
