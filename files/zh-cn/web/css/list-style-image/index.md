@@ -20,7 +20,7 @@ slug: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url> values */
-list-style-image: url("starsolid.gif");
+list-style-image: url("star-solid.gif");
 
 /* Global values */
 list-style-image: inherit;
@@ -54,7 +54,7 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 

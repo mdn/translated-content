@@ -76,7 +76,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("starsolid.gif") #00d repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 
