@@ -58,7 +58,7 @@ Math.atanh(2); // NaN
 
 ## 參見
 
-- [在 `core-js` 中的 `Math.atanh` polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- [`core-js` 中的 `Math.atanh` polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.cosh()")}}
