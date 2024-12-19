@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`setInterval()`** 方法是 {{domxref("Window")}} 介面的一部分，用於以固定的時間間隔重複呼叫函式或執行一段程式碼。
+{{domxref("Window")}} 介面的 **`setInterval()`** 方法用於以固定的時間間隔重複呼叫函式或執行一段程式碼。
 
 此方法會返回一個間隔 ID，用於唯一識別該間隔，這樣可以透過呼叫 {{domxref("Window.clearInterval", "clearInterval()")}} 來移除它。
 
