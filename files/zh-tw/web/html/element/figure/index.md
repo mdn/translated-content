@@ -122,7 +122,7 @@ function NavigatorExample() {
         一個 {{HTMLElement("figcaption")}} 元素，後跟<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
         >；或者流內容後跟一個
-        {{HTMLElement("figcaption")}} 元素；或者文本流內容。
+        {{HTMLElement("figcaption")}} 元素；或者流內容。
       </td>
     </tr>
     <tr>
@@ -148,6 +148,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
+        除了 <a href="/zh-TW/docs/Web/HTML/Element/figcaption">figcaption </a
         > 後代：<a href="https://www.w3.org/TR/html-aria/#dfn-any-role">任何</a>，否則不允許角色
       </td>
     </tr>
