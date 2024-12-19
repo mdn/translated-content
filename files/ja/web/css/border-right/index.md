@@ -75,13 +75,13 @@ border-right: unset;
 
 #### HTML
 
-```html
+```html live-sample___applying_a_right_border
 <div>このボックスには右側に境界線があります。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___applying_a_right_border
 div {
   border-right: 4px dashed blue;
   background-color: gold;
@@ -94,7 +94,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('右側の境界の適用')}}
+{{EmbedLiveSample('Applying_a_right_border')}}
 
 ## 仕様書
 
