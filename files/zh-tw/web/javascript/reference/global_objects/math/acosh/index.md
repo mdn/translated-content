@@ -55,7 +55,7 @@ Math.acosh(Infinity); // Infinity
 
 ## 參見
 
-- [在 `core-js` 中的 `Math.acosh` polyfill](https://github.com/zloirock/core-js#ecmascript-math)
+- [`core-js` 中 `Math.acosh` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.asinh()")}}
 - {{jsxref("Math.atanh()")}}
 - {{jsxref("Math.cosh()")}}
