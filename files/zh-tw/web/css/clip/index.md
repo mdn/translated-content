@@ -57,10 +57,7 @@ clip: unset;
   <img src="macarons.png" alt="原圖" />
   <img id="top-left" src="macarons.png" alt="圖像被剪裁到左上角" />
   <img id="middle" src="macarons.png" alt="圖像被剪裁到中間" />
-  <img
-    id="bottom-right"
-    src="macarons.png"
-    alt="圖像被剪裁到右下角" />
+  <img id="bottom-right" src="macarons.png" alt="圖像被剪裁到右下角" />
 </p>
 ```
 
