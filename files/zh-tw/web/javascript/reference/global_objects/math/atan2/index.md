@@ -53,7 +53,7 @@ Math.atan2(y, x)
 
 此外，對於第二和第三象限中的點（`x < 0`），`Math.atan2()` 輸出的角度會小於 <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> 或大於 <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>。
 
-由於 `atan2()` 是 `Math` 的靜態方法，你必須使用 `Math.atan2()` 來呼叫它，而不是呼叫你所建立的 `Math` 物件的方法（`Math` 不是建構函式）。
+由於 `atan2()` 是 `Math` 的靜態方法，你必須使用 `Math.atan2()` 來呼叫它，而不是呼叫你所建立的 `Math` 物件的方法（`Math` 不是建構子）。
 
 ## 範例
 
