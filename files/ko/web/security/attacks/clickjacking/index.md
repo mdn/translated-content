@@ -1,6 +1,7 @@
 ---
 title: 클릭재킹 (Clickjacking)
-slug: Glossary/Clickjacking
+slug: Web/Security/Attacks/Clickjacking
+original_slug: Glossary/Clickjacking
 l10n:
   sourceCommit: ede0057ebf9c1dc646242d019803a567acbb2995
 ---
