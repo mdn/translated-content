@@ -1,5 +1,5 @@
 ---
-title: <figure>：非必填圖片說明的圖片元素
+title: <figure>：具有非必填說明元素的圖片
 slug: Web/HTML/Element/figure
 ---
 
