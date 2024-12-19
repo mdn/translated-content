@@ -2,7 +2,7 @@
 title: margin-left
 slug: Web/CSS/margin-left
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
 {{CSSRef}}
@@ -139,19 +139,13 @@ margin-left: unset;
 
 ## 例
 
-`margin-left` をパーセント値で指定すると、コンテナーのインラインサイズに対する相対になります。
+### margin-left をパーセント値で指定
 
-### CSS
+`margin-left` をパーセント値で指定すると、コンテナーのインラインサイズに対する相対サイズになります。
 
-```css
-.example {
-  margin-left: 50%;
-}
-```
+#### HTML
 
-### HTML
-
-```html
+```html live-sample___setting_margin-left_as_a_percentage
 <p>
   A large rose-tree stood near the entrance of the garden: the roses growing on
   it were white, but there were three gardeners at it, busily painting them red.
@@ -166,9 +160,17 @@ margin-left: unset;
 </p>
 ```
 
+#### CSS
+
+```css live-sample___setting_margin-left_as_a_percentage
+.example {
+  margin-left: 50%;
+}
+```
+
 ### 結果
 
-{{EmbedLiveSample("","","250")}}
+{{EmbedLiveSample("Setting margin-left as a percentage","","250")}}
 
 ## 仕様書
 
@@ -180,5 +182,8 @@ margin-left: unset;
 
 ## 関連情報
 
-- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} と {{cssxref("margin")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}
+- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール
