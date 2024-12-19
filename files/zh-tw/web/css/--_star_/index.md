@@ -32,16 +32,10 @@ l10n:
 ### HTML
 
 ```html
-<p id="firstParagraph">
-  這段文字應該有藍色背景和黃色文字。
-</p>
-<p id="secondParagraph">
-  這段文字應該有黃色背景和藍色文字。
-</p>
+<p id="firstParagraph">這段文字應該有藍色背景和黃色文字。</p>
+<p id="secondParagraph">這段文字應該有黃色背景和藍色文字。</p>
 <div id="container">
-  <p id="thirdParagraph">
-    這段文字應該有綠色背景和黃色文字。
-  </p>
+  <p id="thirdParagraph">這段文字應該有綠色背景和黃色文字。</p>
 </div>
 ```
 
