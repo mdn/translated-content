@@ -1,9 +1,9 @@
 ---
 title: "Window: btoa() メソッド"
+short-title: btoa()
 slug: Web/API/Window/btoa
 l10n:
   sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
-short-title: btoa()
 ---
 
 {{APIRef("HTML DOM")}}

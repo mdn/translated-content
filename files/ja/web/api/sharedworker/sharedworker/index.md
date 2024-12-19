@@ -1,9 +1,9 @@
 ---
 title: "SharedWorker: SharedWorker() コンストラクター"
+short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 l10n:
   sourceCommit: 37eb7ffd54eb2ad90bc8ada80d2c5e396670205c
-short-title: SharedWorker()
 ---
 
 {{APIRef("Web Workers API")}}

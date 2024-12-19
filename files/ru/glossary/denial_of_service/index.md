@@ -1,6 +1,6 @@
 ---
 title: DoS атака
-slug: Glossary/DOS_attack
+slug: Glossary/Denial_of_Service
 ---
 
 {{GlossarySidebar}}
