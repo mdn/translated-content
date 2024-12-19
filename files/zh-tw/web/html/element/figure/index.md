@@ -17,7 +17,7 @@ slug: Web/HTML/Element/figure
 
 - 通常 `<figure>` 是文件主要架構中引用的圖片、插圖、圖表、程式碼片段等，但可以移動到文件的其他部分或附錄，而不影響主要架構。
 - 可以通過在其中插入 {{HTMLElement("figcaption")}}（作為第一個或最後一個子元素）來將標題與 `<figure>` 元素產生關聯。在圖片中找到的第一個 `<figcaption>` 元素被呈現為圖片的標題。
-- `<figcaption>` 為父層 `<figure>` 提供了{{glossary("accessible description", "無障礙描述")}}。
+- `<figcaption>` 為父層 `<figure>` 提供了{{glossary("accessible name", "無障礙名稱")}}。
 
 ## 範例
 
