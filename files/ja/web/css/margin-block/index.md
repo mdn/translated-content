@@ -55,7 +55,7 @@ margin-block: unset;
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## 例
 
@@ -63,7 +63,7 @@ margin-block: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_block_start_and_end_margins
 div {
   background-color: yellow;
   width: 120px;
@@ -84,18 +84,18 @@ p {
 
 #### HTML
 
-```html
+```html live-sample___setting_block_start_and_end_margins
 <div>
-  <p>Example text</p>
+  <p>テキストの例</p>
 </div>
 <div class="verticalExample">
-  <p>Example text</p>
+  <p>テキストの例</p>
 </div>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("ブロック方向の先頭と末尾のマージンを設定", 140, 200)}}
+{{EmbedLiveSample("Setting_block_start_and_end_margins", 140, 200)}}
 
 ## 仕様書
 
