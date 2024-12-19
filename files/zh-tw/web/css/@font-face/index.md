@@ -73,17 +73,17 @@ l10n:
 
 ### 字型 MIME 類型
 
-| 格式                   | MIME 類型    |
-| ---------------------- | ------------ |
-| TrueType               | `font/ttf`   |
-| OpenType               | `font/otf`   |
+| 格式               | MIME 類型    |
+| ------------------ | ------------ |
+| TrueType           | `font/ttf`   |
+| OpenType           | `font/otf`   |
 | Web 開放字型格式   | `font/woff`  |
 | Web 開放字型格式 2 | `font/woff2` |
 
 ### 備註
 
 - Web 字型受相同域名的限制（字型檔案必須與使用它們的頁面在同一域名），除非使用 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)來放寬此限制。
-  - `@font-face` 不能在 CSS 選擇器中宣告。例如，以下內容將無法運作：
+- `@font-face` 不能在 CSS 選擇器中宣告。例如，以下內容將無法運作：
 
   ```css example-bad
   .className {
