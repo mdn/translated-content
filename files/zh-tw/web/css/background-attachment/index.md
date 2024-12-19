@@ -1,46 +1,54 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
+l10n:
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
 
-**`background-attachment`** 這個 [CSS](/zh-TW/docs/Web/CSS) 屬性能夠設定，背景圖片的位置是否要固定在 {{glossary("viewport")}}（視圖）上，還是背景圖片會隨著它的 containing block（外層容器）一起滾動。
+**`background-attachment`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定背景圖片的位置是否固定在{{glossary("viewport", "視區")}}內，或者跟隨其包含區塊一起滑動。
 
 {{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
 ## 語法
 
 ```css
-/* Keyword values */
+/* 關鍵字值 */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
 
-/* Global values */
+/* 全域值 */
 background-attachment: inherit;
 background-attachment: initial;
+background-attachment: revert;
+background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
-`background-attachment` 屬性的值，可以是下方清單中的其中之一。
+`background-attachment` 屬性可設定為以下列舉值之一。
 
-### Values
+### 值
 
 - `fixed`
-  - : 讓背景相對於 viewport（視圖）的移動是固定的。即便元素中的內容是可滾動的，背景也不會在滾動元素內容時跟著移動。(這個屬性與 {{cssxref("background-clip", "background-clip: text", "#text")}} 不相容。)
+  - : 背景相對於視區固定。即使元素有滑動機制，背景也不會跟著元素移動。
 - `local`
-  - : 讓背景相對於元素的內容是固定的，且背景在滾動元素的內容時會跟著移動。另外，背景的繪製與定位區域是相對於元素的可滾動區域，而不是包裹著它們的邊框。
+  - : 背景相對於元素內容固定。如果元素有滑動機制，背景會跟隨元素內容一起滑動，且背景的繪製區域與定位區域是相對於元素的可滑動區域，而不是邊框。
 - `scroll`
-  - : 讓背景相對於元素本身是固定的，使背景在滾動元素的內容時不會跟著移動。（It is effectively attached to the element's border.）
+  - : 背景相對於元素本身固定，並且不會隨內容滑動。（它實際上是附加於元素邊框的。）
 
-### Formal syntax
+## 形式定義
+
+{{cssinfo}}
+
+## 形式語法
 
 {{csssyntax}}
 
-## 例子
+## 範例
 
-### Simple example
+### 簡單範例
 
 #### HTML
 
@@ -56,18 +64,18 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Simple_example", "簡單範例")}}
 
-### Multiple background images
+### 多重背景圖片
 
-這個屬性支援多個背景圖片。你可以對每個背景設定不同的 `<attachment>`。每個背景圖片會依序對應在 `<attachment>` 設定的類型。
+此屬性支援多個背景圖片。可以為每個背景指定不同的 `<attachment>`，以逗號分隔。每張圖片會與對應的 `<attachment>` 類型匹配，順序由先指定到後。
 
 #### HTML
 
@@ -91,26 +99,24 @@ p {
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample("Multiple_background_images")}}
+{{EmbedLiveSample("Multiple_background_images", "多重背景圖片")}}
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
-- [Using multiple backgrounds](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [使用多重背景](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
