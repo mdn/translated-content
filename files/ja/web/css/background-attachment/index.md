@@ -2,7 +2,7 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
@@ -52,7 +52,7 @@ background-attachment: unset;
 
 #### HTML
 
-```html
+```html live-sample___simple_example
 <p>
   There were doors all round the hall, but they were all locked; and when Alice
   had been all the way down one side and up the other, trying every door, she
@@ -62,16 +62,16 @@ background-attachment: unset;
 
 #### CSS
 
-```css
+```css live-sample___simple_example
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("単純な例")}}
+{{EmbedLiveSample("Simple_example")}}
 
 ### 複数の背景画像
 
@@ -79,7 +79,7 @@ p {
 
 #### HTML
 
-```html
+```html live-sample___multiple_background_images
 <p>
   There were doors all round the hall, but they were all locked; and when Alice
   had been all the way down one side and up the other, trying every door, she
@@ -97,9 +97,9 @@ p {
 
 #### CSS
 
-```css
+```css live-sample___multiple_background_images
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -107,7 +107,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("複数の背景画像")}}
+{{EmbedLiveSample("Multiple_background_images")}}
 
 ## 仕様書
 
