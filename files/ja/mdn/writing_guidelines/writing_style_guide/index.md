@@ -388,7 +388,7 @@ MDN Web Docs で書くことの第一の目標は、常にオープンなウェ�
   MDN では、 HTML 要素を示すのに [`HTMLElement` マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references)を使うこともできます。これは、要素のスタイル設定、角括弧 "<>"、参照ページへのリンクを追加します。
 
   - **逆引用符の使用**: `<span>`
-  - **マクロの使用**: {{HTMLElement("span")}} （Markdown 内のソース: \\{{HTMLElement("span")\}}）
+  - **マクロの使用**: {{HTMLElement("span")}} （Markdown 内のソース: `\{{HTMLElement("span")}}`）
 
 - **parameter と argument**: MDN で推奨する用語は **parameter** です。一貫性のためにできるだけ "argument" の用語は使用しないでください。
 
