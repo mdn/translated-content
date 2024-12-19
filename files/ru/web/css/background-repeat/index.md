@@ -141,4 +141,4 @@ div {
 
 ## Смотрите также
 
-- [Использование нескольких CSS фонов](/ru/docs/CSS/Using_CSS_multiple_backgrounds)
+- [Использование нескольких CSS фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

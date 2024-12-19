@@ -132,7 +132,7 @@ En revanche, pour ces chemins, les cookies ne seront pas ajoutés&nbsp;:
 
 #### Attribut `SameSite`
 
-L'attribut [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) permet aux serveurs d'indiquer quand les cookies doivent être envoyés lors de requêtes vers d'autres [origines/sites](/fr/docs/Glossary/Site). Cela fournit une certaine protection contre les attaques [<i lang="en">cross-site request forgery</i>](/fr/docs/Glossary/CSRF).
+L'attribut [`SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) permet aux serveurs d'indiquer quand les cookies doivent être envoyés lors de requêtes vers d'autres [origines/sites](/fr/docs/Glossary/Site). Cela fournit une certaine protection contre les attaques [<i lang="en">cross-site request forgery</i>](/fr/docs/Glossary/CSRF).
 
 Cet attribut peut prendre trois valeurs différentes&nbsp;:
 
@@ -152,7 +152,7 @@ Set-Cookie: macle=mavaleur; SameSite=Strict
 ```
 
 > [!NOTE]
-> La spécification concernant `SameSite` a changé (MDN documente le comportement actuel). Voir [le tableau de compatibilité pour `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite#compatibilité_des_navigateurs) pour plus d'informations dont l'attribut est géré selon les versions des navigateurs&nbsp;:
+> La spécification concernant `SameSite` a changé (MDN documente le comportement actuel). Voir [le tableau de compatibilité pour `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value#compatibilité_des_navigateurs) pour plus d'informations dont l'attribut est géré selon les versions des navigateurs&nbsp;:
 >
 > - `SameSite=Lax` est désormais la valeur par défaut si `SameSite` n'est pas indiqué. Auparavant, les cookies étaient par défaut envoyés pour toutes les requêtes.
 > - Les cookies avec `SameSite=None` doivent désormais utiliser l'attribut `Secure` (autrement dit, le contexte doit être sécurisé).
@@ -221,7 +221,7 @@ Si le domaine et schéma sont différents, le cookie n'est pas considéré comme
 Un serveur tiers peut créer un profil d'une personne à partir des habitudes et parcours de navigation grâce aux cookies qui lui sont envoyés par le navigateur lors de l'accès à différents sites. Par défaut, Firefox et Safari bloquent les cookies tiers connus pour le pistage. Ces cookies peuvent aussi être bloqués en utilisant les paramètres des autres navigateurs ou des extensions. Le blocage des cookies peut parfois empêcher le bon fonctionnement de composants tiers (comme les intégrations de réseaux sociaux).
 
 > [!NOTE]
-> Les serveurs peuvent (et devraient) définir [l'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite) pour indiquer si un cookie peut être envoyé ou non à un site tierce.
+> Les serveurs peuvent (et devraient) définir [l'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) pour indiquer si un cookie peut être envoyé ou non à un site tierce.
 
 ### Régulations relatives aux cookies
 
@@ -251,7 +251,7 @@ Certaines techniques peuvent être utilisées pour recréer des cookies après l
 - [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
 - [`Navigator.cookieEnabled`](/fr/docs/Web/API/Navigator/cookieEnabled)
-- [L'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [L'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 - [La RFC 6265 qui spécifie les cookies](https://datatracker.ietf.org/doc/html/rfc6265)
 - [La page Wikipédia sur les cookies](<https://fr.wikipedia.org/wiki/Cookie_(informatique)>)
 - [Les cookies, le RGPD, et la directive ePrivacy (pas un site officiel de l'UE)](https://gdpr.eu/cookies/)

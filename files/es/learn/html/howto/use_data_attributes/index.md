@@ -5,7 +5,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
 
 {{LearnSidebar}}
 
-[HTML5](/es/docs/Web/Guide/HTML/HTML5) está diseñado de forma tal que sea fácil extender los datos asociados a un elemento en particular sin necesidad de que tengan un significado definido. Los atributos [`data-*`](/es/docs/Web/HTML/Global_attributes#attr-dataset) permiten almacenar información adicional sobre un elemento HTML cualquiera sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM o {{domxref("Node.setUserData()")}}.
+[HTML5](/es/docs/Glossary/HTML5) está diseñado de forma tal que sea fácil extender los datos asociados a un elemento en particular sin necesidad de que tengan un significado definido. Los atributos [`data-*`](/es/docs/Web/HTML/Global_attributes#attr-dataset) permiten almacenar información adicional sobre un elemento HTML cualquiera sin tener que recurrir a artilugios tales como la utilización de atributos no estándar, propiedades adicionales en el DOM o {{domxref("Node.setUserData()")}}.
 
 ## Sintaxis HTML
 
@@ -60,7 +60,7 @@ article[data-columns="4"] {
 
 Puede ver todo esto trabajando junto [en este ejemplo de JSBin](https://jsbin.com/ujiday/2/edit).
 
-Los atributos de datos también se pueden almacenar para que contengan información que cambia constantemente, como los puntajes en un juego. Usando los selectores de CSS y el acceso a JavaScript aquí, esto le permite crear algunos efectos ingeniosos sin tener que escribir sus propias rutinas de visualización. Consulte [este screencast](http://www.youtube.com/watch?v=On_WyUB1gOk) para ver un ejemplo utilizando contenido generado y transacciones CSS ([Ejemplo JSBin](https://jsbin.com/atawaz/3/edit)).
+Los atributos de datos también se pueden almacenar para que contengan información que cambia constantemente, como los puntajes en un juego. Usando los selectores de CSS y el acceso a JavaScript aquí, esto le permite crear algunos efectos ingeniosos sin tener que escribir sus propias rutinas de visualización. Consulte [este screencast](https://www.youtube.com/watch?v=On_WyUB1gOk) para ver un ejemplo utilizando contenido generado y transacciones CSS ([Ejemplo JSBin](https://jsbin.com/atawaz/3/edit)).
 
 Los valores de datos son cadenas de caracteres. Los valores numéricos deben ser citados en el selector para que el estilo surta efecto.
 
@@ -78,4 +78,4 @@ En Firefox 49.0.2 (y quizás versiones anteriores), los atributos de datos que e
 
 - Este artículo es una adaptación de [Usando atributos de datos en JavaScript y CSS en hacks.mozilla.org](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/).
 - Los atributos personalizados también son compatibles en SVG 2; vea {{domxref("SVGElement.dataset")}} y {{SVGAttr("data-*")}} para más información.
-- [Cómo utilizar atributos de datos HTML5](http://www.sitepoint.com/use-html5-data-attributes/)
+- [Cómo utilizar atributos de datos HTML5](https://www.sitepoint.com/use-html5-data-attributes/)

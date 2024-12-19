@@ -52,7 +52,7 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 > [!NOTE]
 > La razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
 >
-> Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/Qué_es_JavaScript#Estrategias_de_carga_de_scripts).
+> Si se cargara primero JavaScript y se supone que debe afectar al HTML que tiene debajo, podría no funcionar, ya que ha sido cargado antes que el HTML sobre el que se supone debe trabajar. Por lo tanto, colocar el JavaScript cerca del final de la página es normalmente la mejor estrategia. Para aprender más sobre enfoques alternativos, mira [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#estrategias_de_carga_de_scripts).
 
 ### ¿Qué ha ocurrido?
 
@@ -68,7 +68,7 @@ Después de eso, estableciste el valor de la propiedad {{domxref("Node.textConte
 Ahora se explicarán algunas de las funciones básicas del lenguaje JavaScript para que puedas comprender mejor cómo funciona todo. Mejor aún, estas características son comunes para todos los lenguajes de programación. Si puedes entender esos fundamentos, deberías ser capaz de comenzar a programar en casi cualquier cosa.
 
 > [!WARNING]
-> En este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> En este artículo, trata de introducir las líneas de código de ejemplo en la consola de tu navegador para ver lo que sucede. Para más detalles sobre consolas JavaScript, mira [Descubre las herramientas de desarrollo de los navegadores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -82,13 +82,13 @@ let nombreDeLaVariable;
 > Todas las líneas en JS deben acabar en punto y coma (;) para indicar que es ahí donde termina la declaración. Si no los incluyes puedes obtener resultados inesperados. Sin embargo, algunas personas creen que es una buena práctica tener punto y coma al final de cada declaración. Hay otras reglas para cuando se debe y no se debe usar punto y coma. Para más detalles, vea [Guía del punto y coma en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) (en inglés).
 
 > [!NOTE]
-> Puedes llamar a una variable con casi cualquier nombre, pero hay algunas restricciones (ver [este artículo sobre las reglas existentes](/es/docs/Web/JavaScript/Guide/Grammar_and_Types#Variables)). Si no estás seguro, puedes [comprobar el nombre de la variable](https://mothereff.in/js-variables) para ver si es válido.
+> Puedes llamar a una variable con casi cualquier nombre, pero hay algunas restricciones (ver [este artículo sobre las reglas existentes](/es/docs/Web/JavaScript/Guide/Grammar_and_types#variables)). Si no estás seguro, puedes [comprobar el nombre de la variable](https://mothereff.in/js-variables) para ver si es válido.
 
 > [!NOTE]
 > JavaScript distingue entre mayúsculas y minúsculas. `miVariable` es una variable distinta a `mivariable`. Si estás teniendo problemas en tu código, revisa las mayúsculas y minúsculas.
 
 > [!NOTE]
-> Para más detalles sobre la diferencia entre `var` y `let`, vea [Diferencia entre var y let](/es/docs/Learn/JavaScript/First_steps/Variables#Diferencia_entre_var_y_let).
+> Para más detalles sobre la diferencia entre `var` y `let`, vea [Diferencia entre var y let](/es/docs/Learn/JavaScript/First_steps/Variables#diferencia_entre_var_y_let).
 
 Tras declarar una variable, puedes asignarle un valor:
 
@@ -336,7 +336,7 @@ multiplica(0.5, 3);
 
 ### Eventos
 
-Para crear una interacción real en tu sitio web, debes usar eventos. Estos son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un clic ([click event](/es/docs/Web/Events/click)), que se activa al hacer clic sobre algo. Para demostrar esto, prueba ingresando lo siguiente en tu consola, luego da clic sobre la página actual:
+Para crear una interacción real en tu sitio web, debes usar eventos. Estos son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un clic ([click event](/es/docs/Web/API/Element/click_event)), que se activa al hacer clic sobre algo. Para demostrar esto, prueba ingresando lo siguiente en tu consola, luego da clic sobre la página actual:
 
 ```js
 document.querySelector("html").onclick = function () {
@@ -344,7 +344,7 @@ document.querySelector("html").onclick = function () {
 };
 ```
 
-Hay muchas maneras de enlazar un evento a un elemento; aquí hemos seleccionado el elemento {{htmlelement("html")}} y le asignamos a su propiedad [`onclick`](/es/docs/Web/API/GlobalEventHandlers/onclick) una función anónima (función sin nombre) que contiene el código que se ejecutará cuando el evento suceda.
+Hay muchas maneras de enlazar un evento a un elemento; aquí hemos seleccionado el elemento {{htmlelement("html")}} y le asignamos a su propiedad [`onclick`](/es/docs/conflicting/Web/API/Element/click_event) una función anónima (función sin nombre) que contiene el código que se ejecutará cuando el evento suceda.
 
 Nota que
 
@@ -472,7 +472,7 @@ En el lenguaje humano, esto significa que si `miNombre` no tiene ningún valor, 
 
 ## Conclusión
 
-Si has seguido las instrucciones en este artículo, tendrás una página que luzca como esta (también puede [ver nuestra versión aquí](http://mdn.github.io/beginner-html-site-scripted/)):
+Si has seguido las instrucciones en este artículo, tendrás una página que luzca como esta (también puede [ver nuestra versión aquí](https://mdn.github.io/beginner-html-site-scripted/)):
 
 ![](website-screen-scripted.png)
 

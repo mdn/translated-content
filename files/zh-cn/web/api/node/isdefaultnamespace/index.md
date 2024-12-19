@@ -28,5 +28,5 @@ alert(el.isDefaultNamespace(XULNS)); // true
 
 ### 规范
 
-- [DOM Level 3 Core: isDefaultNamespace](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
+- [DOM Level 3 Core: isDefaultNamespace](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isDefaultNamespace)
 - [Code snippets: isDefaultNamespace](/zh-CN/Code_snippets/IsDefaultNamespace)

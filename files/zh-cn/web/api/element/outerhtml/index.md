@@ -74,7 +74,7 @@ console.log(container.firstChild.nodeName);
 
 ## 注意事项
 
-如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-CN/DOM/DOMException) 。例如：
+如果元素没有父元素，即如果它是文档的根元素，则设置其 outerHTML 属性将抛出一个带有错误代码 **_NO_MODIFICATION_ALLOWED_ERR_** 的 [`DOMException`](/zh-CN/docs/DOM/DOMException) 。例如：
 
 ```js
 document.documentElement.outerHTML = "test";

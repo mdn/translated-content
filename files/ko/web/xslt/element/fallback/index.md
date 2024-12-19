@@ -29,7 +29,7 @@ slug: Web/XSLT/Element/fallback
 
 ### 정의
 
-[XSLT section 15, Fallback](http://www.w3.org/TR/xslt#fallback)
+[XSLT section 15, Fallback](https://www.w3.org/TR/xslt#fallback)
 
 ### Gecko 지원
 

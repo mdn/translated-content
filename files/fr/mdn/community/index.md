@@ -19,8 +19,8 @@ Les sources de la documentation ici sont [stockées dans GitHub](https://github.
 
 Pour plus d'information sur comment contribuer à la documentation :
 
-- [Débuter sur MDN](/fr/docs/MDN/Contribute/Getting_started)
-- [Contribuer à MDN](/fr/docs/MDN/Contribute)
+- [Débuter sur MDN](/fr/docs/MDN/Community/Contributing/Getting_started)
+- [Contribuer à MDN](/fr/docs/MDN/Community/Contributing)
 
 ## Rejoignez la conversation
 

@@ -17,7 +17,7 @@ La propiedad **onclick** devuelve el manejador del evento `click` del elemento a
 element.onclick = functionRef;
 ```
 
-Donde _functionRef_ es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una _expresión de la función_ .Ver "[JavaScript Guide:Functions](/es/docs/JavaScript/Guide/Functions)" para más detalles.
+Donde _functionRef_ es una función - muchas veces el nombre de la función está declarado ya en otro sitio o como una _expresión de la función_ .Ver "[JavaScript Guide:Functions](/es/docs/Web/JavaScript/Guide/Functions)" para más detalles.
 
 el único argumento pasado a la función manejador de evento especificamente {{domxref("MouseEvent")}} object. Dentro del manejador, `this` será el elemento sobre él el evento ha sido invocado.
 

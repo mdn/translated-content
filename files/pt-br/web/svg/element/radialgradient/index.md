@@ -19,9 +19,9 @@ slug: Web/SVG/Element/radialGradient
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
+- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -40,7 +40,7 @@ slug: Web/SVG/Element/radialGradient
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGRadialGradientElement`](/pt-BR/DOM/SVGRadialGradientElement).
+Este elemento implementa a interface do [`SVGRadialGradientElement`](/pt-BR/docs/DOM/SVGRadialGradientElement).
 
 ## Compatibilidade com navegadores
 

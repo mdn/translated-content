@@ -11,12 +11,12 @@ slug: Mozilla/Firefox/Releases/6
 
 2. Modules complémentaires
 
-   1. [WebExtensions](/fr/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/Add-ons/Themes)
+   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
+   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla/)
+   1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
    4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
@@ -32,7 +32,7 @@ slug: Mozilla/Firefox/Releases/6
 4. Développer et contribuer
 
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options)
+   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
    4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
    5. [Localisation](/fr/docs/Mozilla/Localization)
@@ -50,9 +50,9 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 - L'analyse syntaxique de l'élément HTML5 [`<track>`](/fr/docs/Web/HTML/Element/track), qui spécifie les pistes de texte pour les éléments multimédias, est désormais supporté. Cet élément devrait apparaître dans les DOM, si son comportement n'est pas encore implémenté.
 - L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) est désormais correctement coupé par son conteneur lorsque les coins du conteneur ont été arrondis à l'aide de la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius).
 - Les champs [`<input>`](/fr/docs/Web/HTML/Element/input) des éléments [`<form>`](/fr/docs/Web/HTML/Element/form) ne sont plus supportés par la propriété XUL [`maxwidth`](/fr/docs/XUL/Propriétés/maxwidth), cela n'a jamais été volontaire, et est contraire à la spécification HTML. Vous devriez plutôt utiliser l'attribut [`size`](/fr/docs/Web/HTML/Element/input#attr-size) pour définir la largeur maximum de champs de saisie.
-- Les propriétés `fillStyle` et `strokeStyle` de [`CanvasRenderingContext2d`](/fr/docs/Web/API/CanvasRenderingContext2d) ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)) utilisées pour ignorer les déchets inclus après la définition d'une couleur valide, maintenant c'est traité comme une erreur. Par exemple, "rouge bleu" est une couleur utilisée pour être traitée comme du "rouge", alors qu'elle aurait dû être ignorée.
+- Les propriétés `fillStyle` et `strokeStyle` de [`CanvasRenderingContext2d`](/fr/docs/Web/API/CanvasRenderingContext2D) ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)) utilisées pour ignorer les déchets inclus après la définition d'une couleur valide, maintenant c'est traité comme une erreur. Par exemple, "rouge bleu" est une couleur utilisée pour être traitée comme du "rouge", alors qu'elle aurait dû être ignorée.
 - La largeur et la hauteur des éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) peuvent être correctement mis à 0px ; avant, lorsque vous essayez de le faire, elles se fixaient à 300px.
-- le support de l'attribut HTML [des données personnalisées](/fr/docs/HTML/Global_attributes#attr-data-*) (data-\*) a été ajouté. La propriété DOM [`element.dataset`](/fr/docs/Web/API/Element/dataset) permet d'y accéder.
+- le support de l'attribut HTML [des données personnalisées](/fr/docs/Web/HTML/Global_attributes#attr-data-*) (data-\*) a été ajouté. La propriété DOM [`element.dataset`](/fr/docs/Web/API/Element/dataset) permet d'y accéder.
 - Quand un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) reçoit le focus, le point d'insertion de texte est désormais placé, par défaut, au début du texte plutôt qu'à la fin. Le comportement de Firefox est ainsi conforme avec les autres navigateurs.
 
 ### CSS
@@ -65,48 +65,48 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
   - : Cette nouvelle propriété vous permet de définir le style de décorations du texte, comme le soulignement, le surlignement et le texte barré. Les styles incluent les simples lignes, les lignes doubles, les lignes ondulées, les lignes pointillées, etc.
 - [`-moz-hyphens`](/fr/docs/Web/CSS/hyphens)
   - : Cette nouvelle propriété vous permet de contrôler la façon dont la césure des mots lors de retours à la ligne est gérée.
-- [`-moz-orient`](/fr/docs/Web/CSS/orient)
+- [`-moz-orient`](/fr/docs/Web/CSS/-moz-orient)
   - : Une nouvelle propriété (pour l'instant spécifique à Mozilla) qui vous permet de contrôler l'orientation verticale ou horizontale de certains éléments (en particulier [`<progress>`](/fr/docs/Web/HTML/Element/progress)).
 - [`::-moz-progress-bar`](/fr/docs/Web/CSS/::-moz-progress-bar)
   - : Un pseudo-élément spécifique à Mozilla qui vous permet de définir le style de la zone d'un élément [`<progress>`](/fr/docs/Web/HTML/Element/progress) représentant la fraction d'une tâche.
 
 #### Autres changements
 
-- La propriété [`@-moz-document`](/fr/docs/Web/CSS/@-moz-document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
+- La propriété [`@-moz-document`](/fr/docs/Web/CSS/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
 - La propriété CSS [`azimuth`](/fr/docs/Web/CSS/azimuth) n'est plus supportée, comme nous avons enlevé le peu de code que nous avions pour le groupe média `aural`. Il n'a jamais été implémenté de manière significative, donc il était plus logique de supprimer cette implémentation crufty pour le moment, au lieu d'essayer de le rafistoler.
 - Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
 - La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
-- La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/-moz-appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
+- La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
 - Le [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) change la façon dont le symbole dièse (#) est traité dans les données URI qui peut briser les feuilles de style CSS qui contiennent un tel symbole.
 
 ### DOM
 
-- [Utilisation de media queries à partir de code](/fr/docs/CSS/Using_media_queries_from_code)
+- [Utilisation de media queries à partir de code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : Vous pouvez désormais tester le résultat d'une chaîne media query en programmant la méthode [`window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et l'interface [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList).
-- [Evènements tactile](/fr/docs/DOM/Touch_events)
+- [Evènements tactile](/fr/docs/Web/API/Touch_events)
   - : Firefox 6 ajout le support du standard W3C sur les évènements tactile, cela facilite l'interprétation d'une ou plusieurs touches à la fois sur les surfaces tactiles comme les écrans tactiles et pavés tactiles.
-- [Evènements server-sent](/fr/docs/Server-sent_events)
+- [Evènements server-sent](/fr/docs/Web/API/Server-sent_events)
   - : Les évènements server-sent permettent à une application Web de demander à un serveur pour envoyer des événements comme n'importe quel événement DOM localement créé.
 
 <!---->
 
 - `navigator.securityPolicy`, qui a depuis longtemps retourné une chaîne vide, a simplement été supprimé.
-- [`BlobBuilder`](/fr/docs/Web/API/BlobBuilder) est maintenant implémenté, même si pour l'instant il est préfixé (vous devez utiliser `MozBlobBuilder`).
-- [`document.height`](/fr/docs/Web/API/Document/height) et [`document.width`](/fr/docs/Web/API/Document/width) ont été supprimées. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
+- [`BlobBuilder`](/fr/docs/Web/API/Blob) est maintenant implémenté, même si pour l'instant il est préfixé (vous devez utiliser `MozBlobBuilder`).
+- [`document.height`](/fr/docs/Web/API/Element/clientHeight) et [`document.width`](/fr/docs/Web/API/Element/clientWidth) ont été supprimées. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
 - Les propriétés `entities` et `notations` de l'objet [`DocumentType`](/fr/docs/Web/API/DocumentType), qui n'ont jamais été implémentées et renvoyées toujours `null`, ont été retirées, car elles ont également été enlevées de la spécification.
 - L'interface `DOMConfiguration` et la propriété `document.domConfig` qu'elle utilisait ont été supprimées, elles n'ont jamais été supportées et ont depuis été retirées de la spécification DOM.
-- L'évènement `hashchange` comprend désormais [les champs `newURL` et `oldURL`](/fr/docs/DOM/window.onhashchange#The_hashchange_event).
+- L'évènement `hashchange` comprend désormais [les champs `newURL` et `oldURL`](/fr/docs/Web/API/Window/hashchange_event#the_hashchange_event).
 - La méthode `abort()` de l'interface [`FileReader`](/fr/docs/Web/API/FileReader) retourne maintenant une exception si aucun fichier n'est en cours de lecture lorqu'elle est utilisée.
-- La méthode [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage) utilise maintenant [l'algorithme de clonage structuré](/fr/docs/DOM/The_structured_clone_algorithm) pour vous permettre de transmettre d'une fenêtre à une autre des objets JavaScript au lieu de chaînes.
-- L'API [`window.history`](/fr/docs/Web/API/Window/history) utilise désormais [l'algorithme de clonage structuré](/fr/docs/DOM/The_structured_clone_algorithm) pour sérialiser des objets que vous passez avec les méthodes `pushState()` et `replaceState()`, ce qui vous permet d'utiliser des objets plus complexes (y compris ceux qui contiennent des références de graphes cycliques).
-- Vous pouvez désormais [détecter lorsqu'une impression a été lancée et a été achevée](/fr/docs/Printing#Detecting_print_requests) grâce aux nouveaux évènements `beforeprint` et `afterprint`.
+- La méthode [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage) utilise maintenant [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) pour vous permettre de transmettre d'une fenêtre à une autre des objets JavaScript au lieu de chaînes.
+- L'API [`window.history`](/fr/docs/Web/API/Window/history) utilise désormais [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) pour sérialiser des objets que vous passez avec les méthodes `pushState()` et `replaceState()`, ce qui vous permet d'utiliser des objets plus complexes (y compris ceux qui contiennent des références de graphes cycliques).
+- Vous pouvez désormais [détecter lorsqu'une impression a été lancée et a été achevée](/fr/docs/Web/CSS/CSS_media_queries/Printing#detecting_print_requests) grâce aux nouveaux évènements `beforeprint` et `afterprint`.
 - La propriété `document.strictErrorChecking` a été supprimée, car elle n'a jamais été implémentée et a été retiré de la spécification DOM.
 - La propriété standard [`event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented) est maintenant supportée, vous devriez utiliser à la place la méthode non-standard `getPreventDefault()` pour détecter si [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) a été appelée sur l'événement.
 - La propriété [`window.top`](/fr/docs/Web/API/Window/top) est désormais en lecture seule.
 - DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.
 - La fonction `EventTarget` de la méthode [`addEventListener()`](/fr/docs/XPCOM_Interface_Reference/nsIDOMEventTarget) est désormais facultative, car ça l'est dans WebKit (et aussi dans la dernière version de la spécification).
-- La propriété `mozResponseArrayBuffer` de l'objet [`XMLHttpRequest`](/fr/docs/XMLHttpRequest) a été remplacé par les propriétés `responseType` et `response`.
-- La propriété [`element.dataset`](/fr/docs/Web/API/Element/dataset) a été ajoutée à l'interface [`HTMLElement`](/fr/docs/DOM/HTMLElement) permettant d'accéder aux attributs globaux [`data-*` global attributes](/fr/docs/HTML/Global_attributes#attr-data-*) d'un élément.
+- La propriété `mozResponseArrayBuffer` de l'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) a été remplacé par les propriétés `responseType` et `response`.
+- La propriété [`element.dataset`](/fr/docs/Web/API/Element/dataset) a été ajoutée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) permettant d'accéder aux attributs globaux [`data-*` global attributes](/fr/docs/Web/HTML/Global_attributes#attr-data-*) d'un élément.
 - L'interface [`CustomEvent`](/fr/docs/Web/API/CustomEvent) a été implémentée. (voir [bug 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
 - Pour des raisons de sécurité, les URIs `data:` et `javascript:` n'héritent plus de l'environnment de sécurité de la page active lorsque l'utilisateur les saisit dans la barre d'adresse, mais un nouvel environnment de sécurité vide est créé. Par exemple, le script chargé en entrant l'URI `javascript:` dans la barre d'adresse n'a plus accès aux méthodes DOM et similaires. Ces URIs continueront à travailler comme avant lorsqu'elles sont utilisées par le script.
 
@@ -118,7 +118,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 ### SVG
 
 - L'attribut [`pathLength`](/fr/docs/Web/SVG/Attributs/pathLength) est désormais supporté.
-- Les modèles SVG, les dégradés et les filtres fonctionnent désormais correctement lorsqu'ils sont chargés à partir de [`data:` URLs](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- Les modèles SVG, les dégradés et les filtres fonctionnent désormais correctement lorsqu'ils sont chargés à partir de [`data:` URLs](/fr/docs/Web/URI/Schemes/data).
 
 ### MathML
 
@@ -131,25 +131,25 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 ### Réseau
 
-- [WebSockets](/fr/docs/WebSockets)
+- [WebSockets](/fr/docs/Web/API/WebSockets_API)
   - : Pour Firefox 6, WebSockets a été mis à jour à la version 07 du protocole. De plus, l'objet `WebSocket` a été renommé en `MozWebSocket` pour l'empêcher d'être utilisé de façon incorrecte pour détecter la disponibilité des WebSockets sans préfixe.
 
 <!---->
 
 - L'analyse de l'en-tête `Content-Disposition` a été fixée afin d'interpréter correctement les antislashs des caractères ASCII. Auparavant, il été remplacé par le caractère underscore ("\_").
 - La valeur du champ du chemin de l'en-tête `Set-Cookie` est désormais correctement interprétée lors de l'utilisation de guillements, auparavant, ils étaient considérés comme faisant partie de la chaîne du chemin d'accès à la place d'être des délimiteurs. **Ce changement peut affecter la compatibilité avec certains sites web**, les auteurs doivent vérifier leur code.
-- L'en-tête de la requête [`Upgrade`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) est désormais supporté, vous pouvez demander la mise à niveau d'un canal vers un autre protocole HTTP en appelant [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
+- L'en-tête de la requête [`Upgrade`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) est désormais supporté, vous pouvez demander la mise à niveau d'un canal vers un autre protocole HTTP en appelant [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
 
 ### Autres changements
 
 - Le support des microrésumés a été enlevé, ils n'ont jamais été très utilisés, n'étaient pas très détectable et continuer leur support été d'apporter des améliorations à Places (favoris et historique) à l'architecture difficile.
-- WebGL supporte maintenant l'extension [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt).
+- WebGL supporte maintenant l'extension [`OES_texture_float`](https://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt).
 - Le nouvel outil [Ardoise](/fr/docs/Outils/Ardoise) offre un endroit pratique pour expérimenter du code JavaScript.
-- La méthode `console.trace()` a été ajouté à [ConsoleAPI](/fr/docs/Tools/Web_Console) (voir [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
+- La méthode `console.trace()` a été ajouté à [ConsoleAPI](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (voir [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir [Updating add-ons for Firefox 6](/fr/docs/Firefox/Updating_add-ons_for_Firefox_6).
+Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir [Updating add-ons for Firefox 6](/fr/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
 
 > [!NOTE]
 > Firefox 6 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
@@ -196,7 +196,7 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir
 - [`nsIHttpUpgradeListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpUpgradeListener)
   - : L'interface de rappel pour le traitement des demandes de mise à niveau HTTP via la méthode [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
 - [`nsIStructuredCloneContainer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStructuredCloneContainer)
-  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/structuredClone).
+  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Window/structuredClone).
 - [`nsITelemetry`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITelemetry)
   - : Implémentation du support de la télémétrie permettant d'enregistrer des données de télémétrie pour être utilisé pour présenter des histogrammes à des fins de suivi des performances. Voir [bug 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) et [bug 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196).
 - [`nsITimedChannel`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimedChannel)
@@ -229,10 +229,10 @@ Les interfaces suivantes ont été supprimées car elles n'étaient plus indispe
 
 ## Voir aussi
 
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/1.5)
+- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
+- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
+- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
+- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)

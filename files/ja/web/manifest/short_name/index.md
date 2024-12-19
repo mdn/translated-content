@@ -18,7 +18,7 @@ slug: Web/Manifest/short_name
   </tbody>
 </table>
 
-_`short_name`_ メンバーは文字列で、 [`name`](/ja/docs/Web/Manifest/name) を表示するのに十分なスペースがない場合 (例えば、携帯電話のホーム画面にあるアイコンのラベルなど) に、ユーザーに表示するウェブアプリケーションの名前を表します。 `short_name` は書字方向に対応しており、 [`dir`](/ja/docs/Web/Manifest/dir) および [`lang`](/ja/docs/Web/Manifest/lang) の各マニフェストメンバーの値に基づいて左書きで表示されたり右書きで表示されたりします。
+_`short_name`_ メンバーは文字列で、 [`name`](/ja/docs/Web/Manifest/name) を表示するのに十分なスペースがない場合 (例えば、携帯電話のホーム画面にあるアイコンのラベルなど) に、ユーザーに表示するウェブアプリケーションの名前を表します。 `short_name` は書字方向に対応しており、 [`dir`](/ja/docs/Web/Manifest) および [`lang`](/ja/docs/Web/Manifest) の各マニフェストメンバーの値に基づいて左書きで表示されたり右書きで表示されたりします。
 
 ## 例
 

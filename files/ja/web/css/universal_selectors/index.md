@@ -91,5 +91,5 @@ example|* {
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
 - [CSS の学習: セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)

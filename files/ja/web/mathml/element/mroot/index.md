@@ -16,9 +16,9 @@ MathML の `<mroot>` 要素は根指数の付いた累乗根を表示するの�
 - href
   - : 指定された URL へのハイパーリンクを設定するために使われます。
 - mathbackground
-  - : 背景色を指定します。 `#rgb` や `#rrggbb` のような 16 進表現や[HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)を用いることができます
+  - : 背景色を指定します。 `#rgb` や `#rrggbb` のような 16 進表現や[HTML 色名](/ja/docs/Web/CSS/color_value#color_keywords)を用いることができます
 - mathcolor
-  - : 文字や記号自体の色を指定します。 `#rgb` や `#rrggbb` のような 16 進表現や [HTML color 色名](/ja/docs/CSS/color_value#Color_Keywords)を用いることができます
+  - : 文字や記号自体の色を指定します。 `#rgb` や `#rrggbb` のような 16 進表現や [HTML color 色名](/ja/docs/Web/CSS/color_value#color_keywords)を用いることができます
 
 ## 例
 

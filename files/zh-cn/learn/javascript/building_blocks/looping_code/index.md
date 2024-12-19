@@ -222,7 +222,7 @@ para.textContent = info;
 {{ EmbedLiveSample('循环的标准', '100%', 60, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> 你可以[在 GitHub 上找到这段示例代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html)。 （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)）。
+> 你可以[在 GitHub 上找到这段示例代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html)。 （也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)）。
 
 这显示了一个循环用于迭代数组中的项目，并与每个项目进行一些操作 - JavaScript 中非常常见的模式。这里：
 
@@ -259,7 +259,7 @@ for (var i = 0; i < cats.length; i++) {
 ```
 
 > [!NOTE]
-> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html)。（也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)）
+> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html)。（也可以[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)）
 
 > [!WARNING]
 > 使用`for`- 与所有循环一样，你必须确保初始化程序被迭代，以便最终达到退出条件。如果没有，循环将永不停止，浏览器将强制它停止，否则会崩溃。这被称为无限循环。
@@ -365,7 +365,7 @@ btn.addEventListener("click", function () {
 5. 在`(contacts.length-1)` 迭代后，如果联系人姓名与输入的搜索不符，则段落文本设置为“未找到联系人”，循环继续迭代。
 
 > [!NOTE]
-> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html)或[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)。
+> 你可以[在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html)或[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)。
 
 ## 使用 continue 跳过迭代
 
@@ -435,7 +435,7 @@ Here's the output:
 4. 如果平方根是一个整数，我们完全跳过 if 块，所以 continue 语句不被执行; 相反，我们将当前 i 值加上一个空格连接到段落内容的末尾。
 
 > [!NOTE]
-> 你可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
+> 你可以[在 GitHub 上查看完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html)，或者[在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)。
 
 ## while 语句和 do...while 语句
 
@@ -473,7 +473,7 @@ while (i < cats.length) {
 ```
 
 > [!NOTE]
-> This still works just the same as expected — have a look at it [running live on GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
+> This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 [do...while](/zh-CN/docs/Web/JavaScript/Reference/Statements/do...while)循环非常类似但在 while 后提供了终止条件：
 
@@ -507,7 +507,7 @@ do {
 ```
 
 > [!NOTE]
-> 再一次，它正如我们期望的那样工作 — 看一看它在[Github 在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+> 再一次，它正如我们期望的那样工作 — 看一看它在[Github 在线运行](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (或者查看[完整源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
 > [!WARNING]
 > 使用 while 和 do...while — 所有循环都一样 — 你必须保证初始变量是迭代的，那么它才会逐渐地达到退出条件。不然，它将会永远循环下去，要么浏览器会强制终止它，要么它自己会崩溃。这称为无限循环。
@@ -707,7 +707,7 @@ do {
 
 本文向你展示了背后的基本概念，以及 JavaScript 中循环代码时可用的不同选项。你现在应该明白为什么循环是一个处理重复代码的好机制，并且在你自己的例子中使用它们！
 
-如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
+如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn#contact_us)寻求帮助。
 
 ## 参见
 

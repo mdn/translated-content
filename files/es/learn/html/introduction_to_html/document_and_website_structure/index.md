@@ -59,7 +59,7 @@ La parte visual no lo es todo. Utilizarás diferentes fuentes y colores para lla
 > [!NOTE]
 > Los daltónicos representan alrededor del [4% de la población mundial](http://www.color-blindness.com/2006/04/28/colorblind-population/) (aproximadamente 1 de cada 12 hombres y 1 de cada 200 mujeres son daltónicos). Los invidentes y las personas con discapacidad visual representan aproximadamente el 4-5% de la población mundial (en 2012 había [Discapacidad visual](https://es.wikipedia.org/wiki/Discapacidad_visual) 285 millones de personas con alguna de estas características en el mundo, mientras que el total de la población estaba [alrededor de los 7,000 millones](https://es.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg).
 
-En tu código HTML puedes crear secciones de contenido basadas en su _funcionalidad_ — puedes usar elementos que representen sin ambigüedad las diferentes secciones de contenido descritas, de forma que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como «encontrar el menú de navegación», o «encontrar el contenido principal». Como se mencionó anteriormente en el curso, hay una serie de [consecuencias por no usar la estructura de elementos y semántica adecuada para hacer el trabajo correctamente](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Por_qué_necesitamos_estructura).
+En tu código HTML puedes crear secciones de contenido basadas en su _funcionalidad_ — puedes usar elementos que representen sin ambigüedad las diferentes secciones de contenido descritas, de forma que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como «encontrar el menú de navegación», o «encontrar el contenido principal». Como se mencionó anteriormente en el curso, hay una serie de [consecuencias por no usar la estructura de elementos y semántica adecuada para hacer el trabajo correctamente](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#por_qué_necesitamos_estructura).
 
 HTML dispone de etiquetas adecuadas que puedes usar para establecer estas secciones semánticas, por ejemplo:
 
@@ -191,9 +191,9 @@ Es bueno entender el significado global de todos los elementos definitorios de l
 
 - {{HTMLElement('main')}} encierra el contenido particular a esta página. Utilizaremos `<main>` solamente una vez para cada página y lo situaremos directamente dentro del elemento {{HTMLElement('body')}}. Es mejor que no lo anidemos en otros elementos.
 - {{HTMLElement('article')}} encuadra un bloque de contenido que tiene sentido por sí mismo aparte del resto de la página (por ejemplo una entrada en un blog).
-- {{HTMLElement('section')}} es parecido al elemento `<article>`, pero se usa más para agrupar cada parte de la página que, por su funcionalidad, constituye una sección en sí misma (por ejemplo un minimapa o un conjunto de titulares y resúmenes). Se considera una buena práctica comenzar cada una de estas secciones con un título de encabezado ([heading](/es/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy)); observa que podemos subdividir artículos (`<article>`) en distintas secciones (`<section>`), o también secciones en distintos artículos, dependiendo del contexto.
+- {{HTMLElement('section')}} es parecido al elemento `<article>`, pero se usa más para agrupar cada parte de la página que, por su funcionalidad, constituye una sección en sí misma (por ejemplo un minimapa o un conjunto de titulares y resúmenes). Se considera una buena práctica comenzar cada una de estas secciones con un título de encabezado ([heading](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)); observa que podemos subdividir artículos (`<article>`) en distintas secciones (`<section>`), o también secciones en distintos artículos, dependiendo del contexto.
 - {{HTMLElement('aside')}} incluye contenido que no está directamente relacionado con el contenido principal, pero que puede aportar información adicional relacionada indirectamente con él (resúmenes, biografías del autor, enlaces relacionados, etc.).
-- {{HTMLElement('header')}} representa un grupo de contenido introductorio. Si este es «_hijo_» de un elemento {{HTMLElement('body')}}, se convertirá en el **encabezado** principal del sitio web, pero si es hijo de un elemento {{HTMLElement('article')}} o un elemento {{HTMLElement('section')}}, entonces simplemente será el **encabezado** particular de cada sección (por favor, no lo confundas con [títulos y encabezados](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Añadir_un_título)).
+- {{HTMLElement('header')}} representa un grupo de contenido introductorio. Si este es «_hijo_» de un elemento {{HTMLElement('body')}}, se convertirá en el **encabezado** principal del sitio web, pero si es hijo de un elemento {{HTMLElement('article')}} o un elemento {{HTMLElement('section')}}, entonces simplemente será el **encabezado** particular de cada sección (por favor, no lo confundas con [títulos y encabezados](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#añadir_un_título)).
 - {{HTMLElement('nav')}} contiene la funcionalidad de navegación principal de la página. Los enlaces secundarios, etc., no entrarán en la navegación.
 - {{HTMLElement('footer')}} representa un grupo de contenido al final de una página.
 
@@ -255,7 +255,7 @@ El elemento {{HTMLElement("br")}} genera un salto de línea en un párrafo; es l
 </p>
 ```
 
-Sin el elemento {{HTMLElement("br")}}, todo el párrafo se habría presentado como una sola línea larga (como ya hemos dicho con anterioridad en este curso, [HTML ignora la mayoría del espacio en blanco](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Los_espacios_en_blanco_en_HTML)); con estos elementos {{HTMLElement("br")}} en el código, las líneas quedan:
+Sin el elemento {{HTMLElement("br")}}, todo el párrafo se habría presentado como una sola línea larga (como ya hemos dicho con anterioridad en este curso, [HTML ignora la mayoría del espacio en blanco](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#los_espacios_en_blanco_en_html)); con estos elementos {{HTMLElement("br")}} en el código, las líneas quedan:
 
 {{EmbedLiveSample('line-break-live-sample', '100%', '125px', '', '', 'hide-codepen-jsfiddle')}}
 
@@ -325,6 +325,6 @@ En este punto, deberías tener una mejor idea sobre cómo estructurar una págin
 
 ## Ve también
 
-- [Uso de secciones y esquemas HTML](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
+- [Uso de secciones y esquemas HTML](/es/docs/Web/HTML/Element/Heading_Elements): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

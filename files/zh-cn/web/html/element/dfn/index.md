@@ -42,7 +42,7 @@ _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
 ## 属性
 
-该元素包括 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素包括 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 在 HTML5 中，**`title`** 属性拥有特殊含义，见上文。
 

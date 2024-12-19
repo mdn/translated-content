@@ -131,7 +131,7 @@ input {
 
 ### 入れ子の `calc()` と CSS 変数
 
-`calc()` で [CSS 変数](/ja/docs/Web/CSS/CSS_Variables) を使用することもできます。以下のコードを見てみてください。</p>
+`calc()` で [CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables) を使用することもできます。以下のコードを見てみてください。</p>
 
 ```css
 .foo {

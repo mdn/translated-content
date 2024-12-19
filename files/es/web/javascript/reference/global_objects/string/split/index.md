@@ -16,7 +16,7 @@ cadena.split([separador][,limite])
 ### Parámetros
 
 - `separador`
-  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
+  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
 
 <!---->
 

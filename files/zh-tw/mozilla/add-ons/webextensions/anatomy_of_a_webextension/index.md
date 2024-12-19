@@ -13,16 +13,16 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 這份 manifest 也可以包含幾項其他種類檔案的指標路徑:
 
-- [Background pages](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): 實作長時間執行的邏輯。
+- [Background pages](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts): 實作長時間執行的邏輯。
 - 附加元件的圖示及任何定義的按鈕。
-- [Sidebars, popups, and options pages](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): 提供各種使用者介面元件的 HTML 文件。
-- [Content scripts](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): 包含於你附加元件中的 JavaScript。你將會利用它注入到網頁中。
+- [Sidebars, popups, and options pages](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_options_pages): 提供各種使用者介面元件的 HTML 文件。
+- [Content scripts](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts): 包含於你附加元件中的 JavaScript。你將會利用它注入到網頁中。
 
 ![](webextension-anatomy.png)
 
 參考 [manifest.json](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 參考頁取得全部的明細。
 
-除了那些參考自 manifest 之外，附加元件可以包含額外支援的檔案作為 [Extension pages](/zh-TW/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Extension_pages) 。
+除了那些參考自 manifest 之外，附加元件可以包含額外支援的檔案作為 [Extension pages](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#extension_pages) 。
 
 ## Background scripts 後台腳本
 
@@ -76,7 +76,7 @@ background-page.html：
 
 #### WebExtension APIs
 
-只要你請求了必要的[權限](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)後，後台腳本可以使用任何的[WebExtension APIs](/zh-TW/Add-ons/WebExtensions/API) 。
+只要你請求了必要的[權限](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)後，後台腳本可以使用任何的[WebExtension APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API) 。
 
 #### Cross-origin access 跨域請求
 
@@ -84,7 +84,7 @@ background-page.html：
 
 #### Web content 網頁內容
 
-後台腳本沒辦法直接的存取前端的網頁。然而，你可以載入 [content scripts](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 到前端網頁後，[透過 message-passing API 來與 content scripts 進行通訊](/zh-TW/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts) 。
+後台腳本沒辦法直接的存取前端的網頁。然而，你可以載入 [content scripts](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 到前端網頁後，[透過 message-passing API 來與 content scripts 進行通訊](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts) 。
 
 #### Content security policy 內容安全策略
 
@@ -95,7 +95,7 @@ background-page.html：
 Your extension can include various user interface components whose content is defined using an HTML document:
 
 - a [sidebar](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) is a pane that is displayed at the left-hand side of the browser window, next to the web page
-- a [popup](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) is a dialog that you can display when the user clicks on a [toolbar button](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [address bar button](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
+- a [popup](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) is a dialog that you can display when the user clicks on a [toolbar button](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
 - an [options page](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) is a page that's shown when the user accesses your add-on's preferences in the browser's native add-ons manager.
 
 For each of these components, you create an HTML file and point to it using a specific property in [manifest.json](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json). The HTML file can include CSS and JavaScript files, just like a normal web page.

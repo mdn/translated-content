@@ -39,7 +39,7 @@ Firefox では、_表示_ >*スタイルシート*のサブメニューを使用
 
 ### やってみましょう
 
-[ここをクリック](/samples/cssref/altstyles/index.html)すると、やってみることができる例を見ることができます。
+[ここをクリック](https://mdn.dev/archives/media/samples/cssref/altstyles/index.html)すると、やってみることができる例を見ることができます。
 
 ## 詳細
 

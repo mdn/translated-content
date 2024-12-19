@@ -138,7 +138,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_even
    - `.stop`：停止传播事件。等效于常规 JavaScript 事件中的 [`Event.stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation)。
    - `.prevent`：阻止事件的默认行为。等效于 [`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。
    - `.self`：仅当事件是从该确切元素分派时触发处理程序。
-   - `{.key}`：仅通过指定键触发事件处理程序。 [MDN 有一个有效键值列表](/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values); 多词键只需转换为 kebab 大小写（例如 `page-down`）。
+   - `{.key}`：仅通过指定键触发事件处理程序。 [MDN 有一个有效键值列表](/zh-CN/docs/Web/API/UI_Events/Keyboard_event_key_values); 多词键只需转换为 kebab 大小写（例如 `page-down`）。
    - `.native`：监听组件根（最外层的包装）元素上的原生事件。
    - `.once`：监听事件，直到它被触发一次，然后不再触发。
    - `.left`：仅通过鼠标左键事件触发处理程序。
@@ -152,7 +152,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_even
    <form @submit.prevent="onSubmit">
    ```
 
-如果你现在尝试提交表单，你会注意到页面没有重新加载。如果打开控制台，可以看到我们在 `onSubmit()` 方法中添加的 [`console.log()`](/zh-CN/docs/Web/API/Console/log) 所输出结果。
+如果你现在尝试提交表单，你会注意到页面没有重新加载。如果打开控制台，可以看到我们在 `onSubmit()` 方法中添加的 [`console.log()`](/zh-CN/docs/Web/API/console/log_static) 所输出结果。
 
 ## 用 v-model 来绑定数据到输入
 

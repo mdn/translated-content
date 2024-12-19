@@ -40,7 +40,7 @@ A imagem seguinte dá-lhe uma ideia do que deve ser o programa final:
 
 ![](bouncing-evil-circle.png)
 
-Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
+Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
 
 ## Passos para concluir
 

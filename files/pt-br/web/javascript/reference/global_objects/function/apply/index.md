@@ -146,7 +146,7 @@ someobject.foo = function () {
 };
 ```
 
-Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos `.on([event]...` events, por exemplo aqueles utilizáveis no [Devtools Inspector](/pt-BR/docs/Tools/Page_Inspector#Developer_API)).
+Esse método é especialmente útil quando você quer fazer debug de eventos, ou interagir com algo que não tem nenhuma API como os diversos eventos `.on([event]...` events, por exemplo aqueles utilizáveis no [Devtools Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#developer_api)).
 
 ## Especificações
 

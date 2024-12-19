@@ -14,7 +14,7 @@ Antes de empezar con este módulo necesitaras entender los conceptos de programa
 > [!NOTE]
 > Esta web posee muchos recursos útiles para aprender JavaScript _en el contexto del desarrollo en el lado del cliente:_ [JavaScript](/es/docs/Web/JavaScript), [Guía de JavaScript](/es/docs/Web/JavaScript/Guide), [JavaScript Básico](/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics), [JavaScript](/es/docs/Learn/JavaScript) (aprendizaje). El lenguaje JavaScript y sus conceptos son los mismos para el desarrollo en el lado del servidor en NodeJS y este material será relevante. NodeJS ofrece [APIs adicionales](https://nodejs.org/dist/latest-v6.x/docs/api/) para soportar funcionalidades que son útiles en entornos sin navegador web, por ejemplo para crear servidores HTTP y acceder al sistema de archivos, pero no soportan APIs de JavaScript para trabajar con el navegador y el DOM.
 >
-> Esta guía proporciona información útil para trabajar con Node.js y Express, además hay numerosos y excelentes recursos en Internet y en libros - algunos de estos referenciados en [Cómo empezar con Node.js](http://stackoverflow.com/a/5511507/894359) (Inglés - StackOverflow) y [¿Cuáles son los mejores recursos para aprender Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Inglés - Quora).
+> Esta guía proporciona información útil para trabajar con Node.js y Express, además hay numerosos y excelentes recursos en Internet y en libros - algunos de estos referenciados en [Cómo empezar con Node.js](https://stackoverflow.com/a/5511507/894359) (Inglés - StackOverflow) y [¿Cuáles son los mejores recursos para aprender Node.js?](https://www.quora.com/What-are-the-best-resources-for-learning-Node-js?) (Inglés - Quora).
 
 ## Guías
 

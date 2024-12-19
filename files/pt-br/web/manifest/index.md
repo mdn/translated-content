@@ -19,7 +19,7 @@ Manifesto de aplicativos web são implementados em suas páginas HTML usando uma
 > A extensão `.webmanifest` está especificada na sessão de [Media type registration](https://w3c.github.io/manifest/#media-type-registration) da especificação, mas no geral os navegadores suportam manifestos em outras extensões apropriadas como `.json`
 
 > [!NOTE]
-> Se o manifesto precisa de credenciais para ser buscado, você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionar o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/CORS_settings_attributes) mesmo que o arquivo de manifesto esteja na mesma origem da página atual.
+> Se o manifesto precisa de credenciais para ser buscado, você [deve](https://github.com/w3c/manifest/issues/186#issuecomment-43939505) adicionar o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Attributes/crossorigin) mesmo que o arquivo de manifesto esteja na mesma origem da página atual.
 
 ## Exemplo de manifesto
 
@@ -196,7 +196,7 @@ Valid values are:
 </table>
 
 > [!NOTE]
-> You can selectively apply CSS to your app based on the display mode, using the [display-mode](/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
+> You can selectively apply CSS to your app based on the display mode, using the [display-mode](/pt-BR/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
 
 ### icons
 

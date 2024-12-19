@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 
 {{JSRef}}
 
-La méthode **`join()`** fusionne l'ensemble des éléments d'un tableau en une chaîne de caractères. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.join()")}}. Dans le reste de cet article _TypedArray_ fait référence à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`join()`** fusionne l'ensemble des éléments d'un tableau en une chaîne de caractères. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.join()")}}. Dans le reste de cet article _TypedArray_ fait référence à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 {{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
 

@@ -137,8 +137,8 @@ normalArray.constructor === Array;
 
 ## Veja também
 
-- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [Typed Arrays: Binary Data in the Browser](https://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

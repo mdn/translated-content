@@ -59,8 +59,8 @@ Il existe dix types d'événement de pointeur, dont sept qui ont la même séman
 | [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)           | {{domxref('GlobalEventHandlers.onpointercancel','onpointercancel')}} | le navigateur déclenche cet événement s'il détecte que le pointeur ne pourra plus générer d'événement (si l'appareil est désactivé par exemple).                                                                                              |
 | [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)                 | {{domxref('GlobalEventHandlers.onpointerout','onpointerout')}}       | déclenché quand le pointeur n'est plus affecté à l'élément: qu'il sort des limites du [hit test](term_hit_test) de l'élément; qu'il déclenche l'événement pointerup ou pointercancel; que le stylet sort de la zone de l'écran de l'appareil. |
 | [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)             | {{domxref('GlobalEventHandlers.onpointerleave','onpointerleave')}}   | déclenché quand le pointeur sort des limites du [hit test](term_hit_test) de l'élément. Cet événement est également déclenché lorsqu'on utilise un stylet et qu'il sort de la zone détectable par le numériseur.                              |
-| [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)   | Aucun (voir [Extensions d'Elements](#Extensions_d'Element))          | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
-| [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event) | Aucun (voir [Extensions d'Element](#Extensions_d'Element))           | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
+| [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)   | Aucun (voir [Extensions d'Elements](#extensions_d'element))          | déclenché quand un élément reçoit la capture du pointeur.                                                                                                                                                                                     |
+| [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event) | Aucun (voir [Extensions d'Element](#extensions_d'element))           | déclenché quand la capture du pointeur est désactivée.                                                                                                                                                                                        |
 
 ### Extensions d'Element
 
@@ -329,9 +329,9 @@ Some new value have been proposed for the {{cssxref("touch-action", "CSS touch-a
 ## Communauté
 
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
-- [Mail list](http://lists.w3.org/Archives/Public/public-pointer-events/)
+- [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
 
 ## Sujets et ressources liés
 
-- [Touch Events Standard](http://www.w3.org/TR/touch-events/)
+- [Touch Events Standard](https://www.w3.org/TR/touch-events/)

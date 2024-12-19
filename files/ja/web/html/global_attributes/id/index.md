@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`id`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、文書全体で一意でなければならない識別子 (ID) を定義します。この属性の用途は、リンク（[フラグメント識別子](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#フラグメント)を使用）、スクリプト、スタイル（{{glossary("CSS")}} を使用）で要素を特定することです。
+**`id`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、文書全体で一意でなければならない識別子 (ID) を定義します。この属性の用途は、リンク（[フラグメント識別子](/ja/docs/Web/URI#フラグメント)を使用）、スクリプト、スタイル（{{glossary("CSS")}} を使用）で要素を特定することです。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 

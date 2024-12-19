@@ -5,7 +5,7 @@ slug: Web/HTML/Attributes/elementtiming
 
 {{HTMLSidebar}}
 
-L'attribut **`elementtiming`** est utilisé pour indiquer qu'un élément est marqué pour le suivi par l'API [Element Timing](/fr/docs/Web/API/Element_timing_API). Cet attribut peut être appliqué aux éléments [`<img>`](/fr/docs/Web/HTML/Element/Img), [`<image>`](/fr/docs/Web/SVG/Element/image) à l'intérieur d'un [`<svg>`](/fr/docs/Web/SVG/Element/svg), aux vignettes des éléments [`<video>`](/fr/docs/Web/HTML/Element/video), aux éléments qui ont un [`background-image`](/fr/docs/Web/CSS/background-image) et aux éléments contenant des noeuds de texte, comme un [paragraphe (`<p>)`](/fr/docs/Web/HTML/Element/p).
+L'attribut **`elementtiming`** est utilisé pour indiquer qu'un élément est marqué pour le suivi par l'API [Element Timing](/fr/docs/Web/API/PerformanceElementTiming). Cet attribut peut être appliqué aux éléments [`<img>`](/fr/docs/Web/HTML/Element/img), [`<image>`](/fr/docs/Web/SVG/Element/image) à l'intérieur d'un [`<svg>`](/fr/docs/Web/SVG/Element/svg), aux vignettes des éléments [`<video>`](/fr/docs/Web/HTML/Element/video), aux éléments qui ont un [`background-image`](/fr/docs/Web/CSS/background-image) et aux éléments contenant des noeuds de texte, comme un [paragraphe (`<p>)`](/fr/docs/Web/HTML/Element/p).
 
 ## Utilisation
 

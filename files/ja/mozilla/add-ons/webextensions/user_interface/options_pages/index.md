@@ -38,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 </html>
 ```
 
-このページ内で動く JavaScript は、すべての [WebExtension API](/ja/Add-ons/WebExtensions/API) のうち、アドオンが[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持っているものを使用することができます。特に、設定を保管する [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API が利用できます。
+このページ内で動く JavaScript は、すべての [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) のうち、アドオンが[権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を持っているものを使用することができます。特に、設定を保管する [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API が利用できます。
 
 ページファイルを拡張機能の中にパッケージします。
 

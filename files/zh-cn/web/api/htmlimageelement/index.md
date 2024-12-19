@@ -21,9 +21,9 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
 - {{domxref("HTMLImageElement.alt")}}
   - : 一个 {{domxref("DOMString")}} 表示 HTML 属性 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt)，表明图像的后备描述内容，会在图像无法加载时显示。
 - {{domxref("HTMLImageElement.complete")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是[受支持的图片类型](/zh-CN/docs/HTML/Element/Img#Image_Format)、解码的过程中没有发生错误，则返回 `true`。That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
+  - : 返回一个 {{domxref("Boolean")}} 如果浏览器已经下载完毕，并且图像是[受支持的图片类型](/zh-CN/docs/Web/HTML/Element/img#image_format)、解码的过程中没有发生错误，则返回 `true`。That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
 - {{domxref("HTMLImageElement.crossOrigin")}}
-  - : 一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 [CORS settings attributes](/zh-CN/docs/HTML/CORS_settings_attributes)。This may be `null` if CORS is not used.
+  - : 一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 [CORS settings attributes](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。This may be `null` if CORS is not used.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}
   - : 返回一个 {{domxref("DOMString")}} 表示加载当前显示的图像的 URL。
     这可能会改变，因为图像是调整，由于不断变化的条件，由任何 [media queries](/zh-CN/docs/Web/CSS/CSS_media_queries) 的地方。
@@ -86,7 +86,7 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的方法。_
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
 - The specified image is in a format not supported by the {{Glossary("user agent")}}.
 
-If an error occurs while trying to load or render the image, and an [`onerror`](/zh-CN/docs/Web/HTML/Global_attributes#onerror) event handler has been configured to handle the [`error`](/zh-CN/docs/Web/API/Element/error_event) event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an [`onerror`](/zh-CN/docs/Web/HTML/Global_attributes#onerror) event handler has been configured to handle the [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) event, that event handler will get called. This can happen in a number of situations, including:
 
 ## 例子
 

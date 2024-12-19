@@ -17,7 +17,7 @@ slug: Learn/JavaScript/Building_blocks/Functions
 
 В JavaScript, вы везде уведите функции. На самом деле, мы пользовались функциями на протяжении всего курса; только мы не говорили об этом слишком часто. Теперь наступило время, чтобы поговорить о функциях более конкретно и разобрать их синтаксис.
 
-В значительном количестве случаев, когда вы пользуетесь структурой JavaScript, в которой есть пара обычных скобок — `()` — и при этом, это не является структурой типа [цикл for](/ru/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while, или do...while цикл](/ru/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), или [if...else конструкция](/ru/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), вы используете функцию.
+В значительном количестве случаев, когда вы пользуетесь структурой JavaScript, в которой есть пара обычных скобок — `()` — и при этом, это не является структурой типа [цикл for](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop), [while, или do...while цикл](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), или [if...else конструкция](/ru/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), вы используете функцию.
 
 ## Встроенные функции браузера
 
@@ -58,7 +58,7 @@ var myNumber = Math.random();
 
 Фактически, часть кода, который вы вызываете, когда ссылаетесь на встроенную функцию браузера (воображаемое слово для её запуска или выполнения), не может быть написана на JavaScript — многие из этих функций вызывают части фонового кода браузера, который написан в основном на системных языках низкого уровня, таких как C ++, а не на веб-языках, таких как JavaScript.
 
-Имейте в виду, что некоторые встроенные функции браузера не являются частью основного языка JavaScript — некоторые из них являются частью API браузера, которые основываются на языке по умолчанию, чтобы обеспечить ещё большую функциональность (подробнее см. [один из предыдущих разделов этого курса](/ru/docs/Learn/JavaScript/Первые_шаги/What_is_JavaScript#Так_что_же_он_действительно_может_делать)). Более подробно рассмотрим использование API браузера в более позднем модуле курса.
+Имейте в виду, что некоторые встроенные функции браузера не являются частью основного языка JavaScript — некоторые из них являются частью API браузера, которые основываются на языке по умолчанию, чтобы обеспечить ещё большую функциональность (подробнее см. [один из предыдущих разделов этого курса](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript#так_что_же_он_действительно_может_делать)). Более подробно рассмотрим использование API браузера в более позднем модуле курса.
 
 ## Функции или методы
 
@@ -70,7 +70,7 @@ var myNumber = Math.random();
 
 ## Пользовательские функции
 
-В этом курсе так же использовались **пользовательские функции** — это функции, которые вы определяете в своём коде, а не внутри браузера. Каждый раз, когда вы видели произвольное слово (имя функции) с круглыми скобками прямо после него, вы использовали пользовательскую функцию. В нашем примере [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (подробнее см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) из нашей [статьи о циклах](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code) мы включили пользовательскую функцию `draw()`, которая выглядит так:
+В этом курсе так же использовались **пользовательские функции** — это функции, которые вы определяете в своём коде, а не внутри браузера. Каждый раз, когда вы видели произвольное слово (имя функции) с круглыми скобками прямо после него, вы использовали пользовательскую функцию. В нашем примере [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (подробнее см. [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) из нашей [статьи о циклах](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code) мы включили пользовательскую функцию `draw()`, которая выглядит так:
 
 ```js
 function draw() {

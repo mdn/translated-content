@@ -63,7 +63,7 @@ const BoundBase = Base.bind(null, 1, 2);
 new BoundBase(3, 4); // true, [1, 2, 3, 4]
 ```
 
-しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
+しかし、バインド済み関数は [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを持たないので、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) の基底クラスとして使用することはできません。
 
 ```js example-bad
 class Derived extends class {}.bind(null) {}

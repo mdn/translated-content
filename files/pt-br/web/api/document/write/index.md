@@ -8,7 +8,7 @@ slug: Web/API/Document/write
 O método **`Document.write()`** grava uma sequência de caracteres em um documento aberto por {{domxref("document.open()")}}.
 
 > [!NOTE]
-> à medida que `document.write` grava no **fluxo** de documentos, chamando `document.write` em um documento fechado (carregado) invoca automaticamente `document.open`, [que limpará o documento](/pt-BR/docs/Web/API/document.open#Notes).
+> à medida que `document.write` grava no **fluxo** de documentos, chamando `document.write` em um documento fechado (carregado) invoca automaticamente `document.open`, [que limpará o documento](/pt-BR/docs/Web/API/Document/open#notes).
 
 ## Sintaxe
 

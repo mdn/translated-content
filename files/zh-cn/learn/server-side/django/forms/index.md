@@ -30,7 +30,7 @@ slug: Learn/Server-side/Django/Forms
 
 ## 概览
 
-一张 [HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms) ，是由一个或多个栏位/widget 在一个网页上组成的，以用于向使用者收集资料，并提交至伺服器。表单是一个弹性的机制，用于收集使用者输入，有合适的 widgets 可输入许多不同型态的资料，包含文字框、复选框、单选按钮、日期选取组件等等。若是允许我们用 `POST` 方式传送资料，并附加 CSRF 跨站要求伪造保护，表单也是与伺服器分享资料的一种相对安全的方式。
+一张 [HTML 表单](/zh-CN/docs/Learn/Forms) ，是由一个或多个栏位/widget 在一个网页上组成的，以用于向使用者收集资料，并提交至伺服器。表单是一个弹性的机制，用于收集使用者输入，有合适的 widgets 可输入许多不同型态的资料，包含文字框、复选框、单选按钮、日期选取组件等等。若是允许我们用 `POST` 方式传送资料，并附加 CSRF 跨站要求伪造保护，表单也是与伺服器分享资料的一种相对安全的方式。
 
 在这个教程目前为止，我们还没有创造任何表单，但我们已经在 Django 管理站点遇到这些表单了— 例如以下的撷图展示了一张表单，用于编辑我们的一个 [Book 书本](/zh-CN/docs/Learn/Server-side/Django/Models)模型，包含一些选择列表以及文字编辑框。
 
@@ -42,7 +42,7 @@ slug: Learn/Server-side/Django/Forms
 
 ## HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Learn/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：
+首先简要概述[HTML 表单](/zh-CN/docs/Learn/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -302,7 +302,7 @@ def renew_book_librarian(request, pk):
 > [!WARNING]
 > 虽然你也可以通过请求直接访问表单数据（例如`request.POST['renewal_date']` 或 `request.GET['renewal_date']`（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。
 
-视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 `HttpResponseRedirect` 和 `reverse()` ，重定向到名为'`all-borrowed`'的视图（这是在 [Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)）。如果你没有创建该页面，请考虑重定向到 URL'/'处的主页。
+视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 `HttpResponseRedirect` 和 `reverse()` ，重定向到名为'`all-borrowed`'的视图（这是在 [Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限](/zh-CN/docs/Learn/Server-side/Django/Authentication#challenge_yourself)）。如果你没有创建该页面，请考虑重定向到 URL'/'处的主页。
 
 这就是表单处理本身所需的一切，但我们仍然需要将视图，限制为图书馆员可以访问。我们应该在 `BookInstance` （“`can_renew`”）中创建一个新的权限，但为了简单起见，我们只需使用`@permission_required`函数装饰器，和我们现有的 `can_mark_returned` 权限。
 
@@ -439,7 +439,7 @@ def renew_book_librarian(request, pk):
 
 ### 测试页面
 
-如果你接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)，你将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
+如果你接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/Learn/Server-side/Django/Authentication#challenge_yourself)，你将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
 
 ```django
 {% if perms.catalog.can_mark_returned %}-

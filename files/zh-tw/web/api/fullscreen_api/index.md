@@ -85,7 +85,7 @@ if (elem.requestFullscreen) {
 
 In this example, a video is presented in a web page. Pressing the Return or Enter key lets the user toggle between windowed and fullscreen presentation of the video.
 
-[查看示例](/samples/domref/fullscreen.html)
+[查看示例](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### 監視 Enter 鍵
 
@@ -157,7 +157,7 @@ If fullscreen mode is already active (`fullscreenElement` is non-`null`), we cal
 
 These are some of the methods that browsers implemented before the standard was drafted. Having the standard methods described above it's better to avoid using the following ones:
 
-- [`window.fullScreen`](/zh-TW/docs/DOM/window.fullScreen) (Firefox)
+- [`window.fullScreen`](/zh-TW/docs/Web/API/Window/fullScreen) (Firefox)
 - `HTMLMediaElement.webkitDisplayingFullscreen`
 - `HTMLMediaElement.webkitEnterFullscreen`
 - `HTMLMediaElement.webkitExitFullscreen`

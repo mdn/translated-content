@@ -89,7 +89,7 @@ l10n:
 - `label`
   - : 사용자가 읽을 수 있는 형태의 텍스트 트랙 제목. 브라우저에서 사용 가능한 트랙의 이름 목록을 생성할 때 사용합니다.
 - `src`
-  - : 자막의 주소(`.vtt` 파일). 유효한 {{glossary("URL")}}이어야 합니다. 필수 특성이며, `<track>`의 부모 {{htmlelement("audio")}}/{{htmlelement("video")}} 요소에 [`crossorigin`](/ko/docs/Web/HTML/CORS_settings_attributes) 특성이 없다면 문서와 같은 {{glossary("origin", "출처")}}여야 합니다.
+  - : 자막의 주소(`.vtt` 파일). 유효한 {{glossary("URL")}}이어야 합니다. 필수 특성이며, `<track>`의 부모 {{htmlelement("audio")}}/{{htmlelement("video")}} 요소에 [`crossorigin`](/ko/docs/Web/HTML/Attributes/crossorigin) 특성이 없다면 문서와 같은 {{glossary("origin", "출처")}}여야 합니다.
 - `srclang`
   - : 텍스트 트랙의 언어. 유효한 [IETF 언어 태그](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8)여야 합니다. `kind` 특성이 `subtitle`인 경우, `srclang`은 반드시 정의되어야 합니다.
 
@@ -146,5 +146,5 @@ textTrackElem.addEventListener("cuechange", (event) => {
 
 ## 같이 보기
 
-- [WebVTT 텍스트 트랙 형식](/ko/docs/HTML/WebVTT)
+- [WebVTT 텍스트 트랙 형식](/ko/docs/Web/API/WebVTT_API)
 - {{domxref("HTMLMediaElement.textTracks")}}

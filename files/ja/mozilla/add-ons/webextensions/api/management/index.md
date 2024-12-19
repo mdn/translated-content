@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
 - 特定のアドオンやマニフェストのパーミッション警告を調べる
 - アドオンのインストール・有効・無効の状態に関する通知の取得
 
-操作のほとんどは "management" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions)を要求します。他のアドオンへのアクセスを提供しない操作はこのパーミッションを要求しません。
+操作のほとんどは "management" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を要求します。他のアドオンへのアクセスを提供しない操作はこのパーミッションを要求しません。
 
 ## 型
 

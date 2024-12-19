@@ -29,7 +29,7 @@ slug: Web/HTTP
   - : Показывает и описывает течение обычного сеанса HTTP.
 - [Управление подключениями в HTTP/1.x](/ru/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : Описывает три модели управления подключениями, доступными в HTTP/1.x, их сильные и слабые стороны.
-- [Контроль предварительной загрузки DNS (Controlling DNS prefetching)](/ru/docs/Web/HTTP/Controlling_DNS_prefetching)
+- [Контроль предварительной загрузки DNS (Controlling DNS prefetching)](/ru/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
   - : Firefox, как и большинство других браузеров, выполняет **предварительную загрузку DNS (DNS prefetching)**. Это действие, когда браузеры превентивно выполняют разрешение доменных имён (получают имена доменов) для ссылок, по которым пользователь может перейти, а также для ссылок на ресурсы, такие как картинки, CSS, JavaScript. Эта предварительная загрузка выполняется в фоновом режиме, так что вполне вероятно, что к моменту обращения к объектам в документе DNS уже получен. Это уменьшает задержки, когда, например, пользователь кликает на ссылку.
 
 ## Справочники
@@ -37,7 +37,7 @@ slug: Web/HTTP
 Глубже изучите HTTP с помощью справочников и документации.
 
 - [HTTP-заголовки (HTTP Headers)](/ru/docs/Web/HTTP/Headers)
-  - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](http://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](http://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](http://www.iana.org/assignments/message-headers/prov-headers.html).
+  - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](https://www.iana.org/assignments/message-headers/prov-headers.html).
 - [Методы HTTP-запроса](/ru/docs/Web/HTTP/Methods)
 
   - : Различные операции, которые выполняются с HTTP:
@@ -59,19 +59,19 @@ slug: Web/HTTP
 
 Полезные инструменты и ресурсы для понимания и отладки HTTP.
 
-- [Инструменты разработчика Firefox](/ru/docs/Tools)
-  - : [Сетевой монитор](/ru/docs/Tools/Network_Monitor)
+- [Инструменты разработчика Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [Сетевой монитор](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 - [Mozilla Observatory](https://observatory.mozilla.org/)
   - : Проект, созданный в помощь разработчикам, системным администраторам и специалистам по безопасности для создания безопасных и надёжных сайтов.
 - [RedBot](https://redbot.org/)
   - : Инструмент для проверки кеширования заголовков.
-- [Принципы работы современных веб-браузеров](http://www.html5rocks.com/ru/tutorials/internals/howbrowserswork/)
+- [Принципы работы современных веб-браузеров](https://www.html5rocks.com/ru/tutorials/internals/howbrowserswork/)
   - : Комплексная статья по внутренностям браузеров и потоку запросов через протокол HTTP. Это нужно понимать всем веб-разработчикам.
 
 ## Смотрите также
 
-- [Controlling DNS prefetching](/En/Controlling_DNS_prefetching)
-- [HTTP pipelining FAQ](/en/HTTP_Pipelining_FAQ)
+- [Controlling DNS prefetching](/en-US/Controlling_DNS_prefetching)
+- [HTTP pipelining FAQ](/en-US/HTTP_Pipelining_FAQ)
 - [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Cookies)
 - [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
 - [Basic access authentication](/ru/docs/HTTP/Basic_access_authentication)

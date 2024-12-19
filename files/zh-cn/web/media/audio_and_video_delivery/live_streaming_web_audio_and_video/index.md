@@ -81,7 +81,7 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 一些基于 HTTP 的实时流视频格式开始得到跨浏览器支持。
 
 > [!NOTE]
-> 你可以通过 [设置自适应流媒体源](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources) 找到在 web 中使用的 HLS 和 MPEG-DASH 的编码指南。
+> 你可以通过 [设置自适应流媒体源](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources) 找到在 web 中使用的 HLS 和 MPEG-DASH 的编码指南。
 
 ### MPEG-DASH
 

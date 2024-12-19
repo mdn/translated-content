@@ -34,7 +34,7 @@ var p_prime = p.cloneNode(true);
 
 ## Notas
 
-Al clonar un nodo se copian todos sus atributos y valores, incluyendo escuchadores intrínsecos (en–línea). No copia los escuchadores de evento añadidos utilizando [`addEventListener()`](/es/docs/DOM/element.addEventListener) o aquellos asignados a las propiedades de un elemento. (ej. `node.onclick = fn`). Además, para un elemento `<canvas>`, la imagen pintada no se copia.
+Al clonar un nodo se copian todos sus atributos y valores, incluyendo escuchadores intrínsecos (en–línea). No copia los escuchadores de evento añadidos utilizando [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) o aquellos asignados a las propiedades de un elemento. (ej. `node.onclick = fn`). Además, para un elemento `<canvas>`, la imagen pintada no se copia.
 
 El nodo duplicado devuelto por `cloneNode()` no formará parte del documento hasta que sea añadido a otro nodo que sea parte del documento utilizando {{domxref("Node.appendChild()")}} o un método similar. Tampoco tiene padre hasta que sea añadido a otro nodo.
 

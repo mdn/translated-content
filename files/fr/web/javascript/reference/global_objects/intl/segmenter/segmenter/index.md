@@ -40,7 +40,7 @@ new Intl.Segmenter(locales, options);
 
 ### Valeur de retour
 
-Une nouvelle instance de [`Intl.Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments).
+Une nouvelle instance de [`Intl.Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments).
 
 ## Exemples
 

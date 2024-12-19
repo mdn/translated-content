@@ -11,7 +11,7 @@ A propriedade CSS **opacity** especifica a transparência de um elemento, isto �
 
 O valor aplica-se ao elemento como um todo, incluindo seu conteúdo, apesar de o valor não ser herdado por elementos filhos. Assim, um elemento e seus elementos filhos têm todos a mesma opacidade relativa ao background do elemento, mesmo se o elemento e seus elementos filhos tiverem opacidades diferentes entre si.
 
-Se você [não quer aplicar a opacidade ao elemento filho](http://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app) - use isto:
+Se você [não quer aplicar a opacidade ao elemento filho](https://stackoverflow.com/questions/13508877/resetting-the-opacity-of-a-child-elements-maple-browser-samsung-tv-app) - use isto:
 
 ```css
 background: rgba(0, 0, 0, 0.4);

@@ -44,7 +44,7 @@ slug: Web
   - : Scalable Vector Graphics(SVG)는 어떠한 크기로 확대해도 부드러운 이미지를 만들수 있습니다.
 - [MathML](/ko/docs/Web/MathML)
   - : MathML은 복잡한 수학 표기법을 웹에 표시할 수 있습니다.
-- [웹 컴포넌트](/ko/docs/Web/Web_Components)
+- [웹 컴포넌트](/ko/docs/Web/API/Web_components)
   - : 웹 컴포넌트는 개발자가 직접 정의하고 재사용할 수 있는 사용자 정의 요소입니다.
 - [WebDriver](/ko/docs/Web/WebDriver)
   - : 웹드라이버(WebDriver)는 브라우저를 사용하는 실제 사람의 행위를 모방하여 원격으로 브라우저를 제어하는 브라우저-자동화 메커니즘입니다. 웹 앱의 브라우저간 테스트를 위해 폭넓게 사용합니다.

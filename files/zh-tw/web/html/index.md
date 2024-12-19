@@ -46,19 +46,19 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 
 - [CORS 圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
   - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
-- [設定 CORS 屬性](/zh-TW/docs/Web/HTML/CORS_settings_attributes)
+- [設定 CORS 屬性](/zh-TW/docs/Web/HTML/Attributes/crossorigin)
   - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/Web/HTTP/CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
-- [管理 HTML 中的焦點](/zh-TW/docs/Web/HTML/Focus_management_in_HTML)
+- [管理 HTML 中的焦點](/zh-TW/docs/Web/API/Document/hasFocus)
   - : The [`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) DOM attribute and the [`hasFocus()`](/zh-TW/docs/Web/API/Document/hasFocus) DOM method help you track and control a user's interactions with elements on a web page.
 - [使用 application cache](/zh-TW/docs/Web/HTML/Using_the_application_cache)
   - : Application caching lets web-based applications run offline. You can use the **Application Cache** (_AppCache_) interface to specify resources that the browser should cache and make available to offline users. Applications that are cached load and work correctly even if users click the refresh button when they are offline.
-- [使用 rel="preload" 來預載內容](/zh-TW/docs/Web/HTML/Preloading_content)
+- [使用 rel="preload" 來預載內容](/zh-TW/docs/Web/HTML/Attributes/rel/preload)
   - : The `preload` value of the {{htmlelement("link")}} element's [`rel`](/zh-TW/docs/Web/HTML/Element/link#rel) attribute allows you to write declarative fetch requests in your HTML {{htmlelement("head")}}, specifying resources that your pages will need very soon after loading, which you therefore want to start preloading early in the lifecycle of a page load, before the browser's main rendering machinery kicks in. This ensures that they are made available earlier and are less likely to block the page's first render, leading to performance improvements. This article provides a basic guide to how `preload` works.
 
 ## 參考資料
 
 - [HTML 參考資料](/zh-TW/docs/Web/HTML/Reference)
-  - : HTML 包含**元素**，每個元素都可以被幾個**屬性**修飾。HTML 文件透過[連結](/zh-TW/docs/Web/HTML/Link_types)把彼此連結在一起。
+  - : HTML 包含**元素**，每個元素都可以被幾個**屬性**修飾。HTML 文件透過[連結](/zh-TW/docs/Web/HTML/Attributes/rel)把彼此連結在一起。
 - [HTML 元素參考](/zh-TW/docs/Web/HTML/Element)
   - : 瀏覽 [HTML](/zh-TW/docs/Glossary/HTML) 所有[元素](/zh-TW/docs/Glossary/Element)的清單。
 - [HTML 屬性參考](/zh-TW/docs/Web/HTML/Attributes)
@@ -67,16 +67,16 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
   - : [HTML 元素](/zh-TW/docs/Web/HTML/Element)能指定全域屬性，_就算它不是標準元素_。也就是說，即使是與 HTML5 標準不相容的非標準元素，依舊允許全域屬性。
 - [行內元素](/zh-TW/docs/Glossary/Inline-level_content)與[塊級元素](/zh-TW/docs/Glossary/Block-level_content)
   - : HTML 元素通常為**行內**或**區塊**。行內元素佔據由標籤所定義的其餘空白位置，區塊元素則占據母元素的所有空白位置。
-- [超連結類型](/zh-TW/docs/Web/HTML/Link_types)
+- [超連結類型](/zh-TW/docs/Web/HTML/Attributes/rel)
   - : 在 HTML 中有多種超連結類型能夠使用，並解定義兩個頁面間的關係，超連結元素包含了[`<a>`](/zh-TW/docs/Web/HTML/Element/a), [`<area>`](/zh-TW/docs/Web/HTML/Element/area), [`<link>`](/zh-TW/docs/Web/HTML/Element/link)
-- [HTML audio 及 video 元素對媒體的支援程度](/zh-TW/docs/Web/HTML/Supported_media_formats)
+- [HTML audio 及 video 元素對媒體的支援程度](/zh-TW/docs/Web/Media/Formats)
   - : [`<audio>`](/zh-TW/docs/Web/HTML/Element/audio) 及 [`<video>`](/zh-TW/docs/Web/HTML/Element/video) 元素允許播放聲音和影像檔。這些元素提供了瀏覽器替代 Adobe Flash 和其它類似外掛功能的方案。
-- [HTML 內容種類](/zh-TW/docs/Web/HTML/Kinds_of_HTML_content)
+- [HTML 內容種類](/zh-TW/docs/Web/HTML/Content_categories)
   - : HTML 由多個不同類別的內容組合, 每種內容在特殊情況下在前後關係中有效，而在其它前後關系中無效。相似地，每一組內容，也指定了可以被包含在一起的類別，以及可以或不可以在其中使用的元素。此篇提供了這些類別的指南。
 - [怪異模式與標準模式](/zh-TW/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
   - : 有關怪異模式與標準模式的歷史。
 
 ## 相關焦點
 
-- [使用 CSS 把色彩套用到 HTML 元素](/zh-TW/docs/Web/HTML/Applying_color)
+- [使用 CSS 把色彩套用到 HTML 元素](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
   - : 本文章概括了把 CSS 加到 HTML 內容的方法，列出 HTML 文件的哪些部份可以套用色彩、而 CSS 有哪些屬性搬到這種事。裡面有示範、色彩選擇器的連結......等等。

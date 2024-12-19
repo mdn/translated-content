@@ -5,9 +5,9 @@ slug: Web/CSS/outline
 
 {{CSSRef}}
 
-La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
+La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
 
-{{EmbedInteractiveExample("pages/css/outline.html")}}À l'instar des autres propriétés raccourcies, toutes les valeurs qui ne sont pas explicitement utilisées dans la déclaration sont réinitialisées avec [leur valeur initiale](/fr/docs/Web/CSS/Valeur_initiale).
+{{EmbedInteractiveExample("pages/css/outline.html")}}À l'instar des autres propriétés raccourcies, toutes les valeurs qui ne sont pas explicitement utilisées dans la déclaration sont réinitialisées avec [leur valeur initiale](/fr/docs/Web/CSS/initial_value).
 
 ### Bordures et contours
 

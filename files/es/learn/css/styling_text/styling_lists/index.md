@@ -5,7 +5,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Las [listas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
+Las [listas](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 
 <table>
   <tbody>
@@ -34,7 +34,7 @@ Las [listas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) s
 
 ## Un ejemplo sencillo de lista
 
-Para empezar, veamos un ejemplo sencillo de una lista. A lo largo de este artículo veremos listas no ordenadas, listas ordenadas y listas de descripciones; todas tienen características de estilo similares, algunas que son particulares del tipo de lista. El ejemplo sin ningún estilo aplicado está [disponible en Github](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html).)
+Para empezar, veamos un ejemplo sencillo de una lista. A lo largo de este artículo veremos listas no ordenadas, listas ordenadas y listas de descripciones; todas tienen características de estilo similares, algunas que son particulares del tipo de lista. El ejemplo sin ningún estilo aplicado está [disponible en Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html).)
 
 El HTML para nuestro ejemplo de lista se ve así:
 
@@ -94,7 +94,7 @@ El HTML para nuestro ejemplo de lista se ve así:
 </dl>
 ```
 
-Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las [herramientas de desarrollador del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), observarás un par de valores de estilo predeterminados:
+Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las [herramientas de desarrollador del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), observarás un par de valores de estilo predeterminados:
 
 - Los elementos {{htmlelement("ul")}} y {{htmlelement("ol")}} tienen un {{cssxref("margin")}} superior e inferior de `16px` (`1em`) y un {{cssxref("padding-left")}} de `40px` (`2.5em`.)
 - Los elementos de lista {{htmlelement("li")}} no tienen valores de espacio predeterminados.
@@ -104,7 +104,7 @@ Si accedes al ejemplo en vivo e investigas los elementos de la lista usando las 
 
 ## Manejar el espaciado de la lista
 
-Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como párrafos e imágenes; y el mismo espaciado horizontal entre uno y otro (en Github puedes ver el [ejemplo de diseño terminado](http://mdn.github.io/learning-area/css/styling-text/styling-lists/), y también [encontrar el código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html).)
+Al diseñar listas, es necesario ajustar el diseño para que mantengan los mismos espaciados verticales (a veces denominados ritmos verticales) que el resto de elementos circundantes, como párrafos e imágenes; y el mismo espaciado horizontal entre uno y otro (en Github puedes ver el [ejemplo de diseño terminado](https://mdn.github.io/learning-area/css/styling-text/styling-lists/), y también [encontrar el código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html).)
 
 El CSS que se utiliza para aplicar estilo al texto y al espaciado de texto es el siguiente:
 

@@ -112,7 +112,7 @@ slug: Web/SVG/Content_type
 
 - \<coordinate>
 
-  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/pt-BR/docs/SVG/Content_type#length).
+  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/pt-BR/docs/Web/SVG#length).
 
     Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
 
@@ -120,7 +120,7 @@ slug: Web/SVG/Content_type
 
 - \<frequency>
 
-  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/pt-BR/docs/SVG/Content_type#Number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
+  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/pt-BR/docs/Web/SVG#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
 
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
@@ -293,7 +293,7 @@ slug: Web/SVG/Content_type
 ## Opacity value
 
 - \<opacity-value>
-  - : A opacidade da cor ou do conteúdo do objeto atual é preenchida através de um [\<number>](/pt-BR/docs/SVG/Content_type#Number). Quaisquer valores fora da faixa de 0.0 (totalmente transparente) a 1.0 (totalmente opaco) será ajustada para este intervalo.
+  - : A opacidade da cor ou do conteúdo do objeto atual é preenchida através de um [\<number>](/pt-BR/docs/Web/SVG#number). Quaisquer valores fora da faixa de 0.0 (totalmente transparente) a 1.0 (totalmente opaco) será ajustada para este intervalo.
 
 ## Paint
 
