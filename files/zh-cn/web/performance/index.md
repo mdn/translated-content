@@ -2,7 +2,7 @@
 title: Web 性能
 slug: Web/Performance
 l10n:
-  sourceCommit: 035dd5ef748061d1997c1c79f972781dd680dfa4
+  sourceCommit: 514d1d2690c6374cd65921193ff6b166677395fd
 ---
 
 {{QuickLinksWithSubPages}}
@@ -15,7 +15,7 @@ Web 性能是客观的衡量标准，是用户对加载时间和运行时的直�
 
 ## 关键性能指南
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
 
 ## 初学者教程
 
@@ -63,16 +63,17 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting', '代码拆分')}}
 - {{glossary('CSSOM')}}
+- {{glossary('CLS', '累计布局偏移')}}
 - {{glossary('Domain sharding', '域名分片')}}
 - {{glossary('Effective connection type', '有效连接类型')}}
-- {{glossary('First contentful paint', '首次内容绘制')}}
+- {{glossary('First Contentful Paint', '首次内容绘制')}}
 - {{glossary('First CPU idle', '首次 CPU 空闲')}}
-- {{glossary('First input delay', '首次输入延迟')}}
-- {{glossary('First meaningful paint', '首次有效绘制')}}
-- {{glossary('First paint', '首次绘制')}}
+- {{glossary('First Paint', '首次绘制')}}
 - {{glossary('HTTP')}}
 - {{glossary('HTTP_2', 'HTTP/2')}}
+- {{glossary('Interaction to Next Paint', '交互到下次绘制')}}
 - {{glossary('Jank', '卡顿')}}
+- {{glossary('Largest Contentful Paint', '最大内容绘制')}}
 - {{glossary('Latency', '延迟')}}
 - {{glossary('Lazy load', '懒加载')}}
 - {{glossary('Long task', '长任务')}}
