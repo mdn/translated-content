@@ -75,13 +75,13 @@ border-bottom: unset;
 
 #### HTML
 
-```html
+```html live-sample___applying_a_bottom_border
 <div>このボックスには下側に境界線があります。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___applying_a_bottom_border
 div {
   border-bottom: 4px dashed blue;
   background-color: gold;
@@ -94,7 +94,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('下の境界の適用')}}
+{{EmbedLiveSample('Applying_a_bottom_border')}}
 
 ## 仕様書
 
