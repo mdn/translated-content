@@ -1287,7 +1287,7 @@
 /fr/docs/Glossaire/Argument	/fr/docs/Glossary/Argument
 /fr/docs/Glossaire/Arpanet	/fr/docs/Glossary/Arpanet
 /fr/docs/Glossaire/Asynchronous	/fr/docs/Glossary/Asynchronous
-/fr/docs/Glossaire/Attaque_DOS	/fr/docs/Glossary/DOS_attack
+/fr/docs/Glossaire/Attaque_DOS	/fr/docs/conflicting/Glossary/Denial_of_Service
 /fr/docs/Glossaire/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossaire/Attribut_global	/fr/docs/Web/HTML/Global_attributes
 /fr/docs/Glossaire/Axe_de_grille	/fr/docs/Glossary/Grid_Axis
@@ -1725,7 +1725,9 @@
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
+/fr/docs/Glossary/Clickjacking	/fr/docs/Web/Security/Attacks/Clickjacking
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
+/fr/docs/Glossary/DOS_attack	/fr/docs/conflicting/Glossary/Denial_of_Service
 /fr/docs/Glossary/Descriptor_(CSS)	/fr/docs/Glossary/CSS_Descriptor
 /fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/First_interactive	/fr/docs/Glossary/First_CPU_idle
@@ -4597,6 +4599,7 @@
 /fr/docs/Web/CSS/calc()	/fr/docs/Web/CSS/calc
 /fr/docs/Web/CSS/clamp()	/fr/docs/Web/CSS/clamp
 /fr/docs/Web/CSS/color-adjust	/fr/docs/Web/CSS/print-color-adjust
+/fr/docs/Web/CSS/color_value/color-contrast	/fr/docs/conflicting/Web/CSS/color_value
 /fr/docs/Web/CSS/color_value/hsla	/fr/docs/Web/CSS/color_value/hsl
 /fr/docs/Web/CSS/color_value/rgba	/fr/docs/Web/CSS/color_value/rgb
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/Web/CSS/gradient/conic-gradient
@@ -6716,7 +6719,6 @@
 /fr/docs/conflicting/Web/CSS/Reference	/fr/docs/Web/CSS/Reference
 /fr/docs/conflicting/Web/CSS/border-collapse	/fr/docs/Web/CSS/border-collapse
 /fr/docs/conflicting/Web/CSS/box-ordinal-group	/fr/docs/Web/CSS/box-ordinal-group
-/fr/docs/conflicting/Web/CSS/color_value	/fr/docs/Web/CSS/color_value
 /fr/docs/conflicting/Web/CSS/color_value/hsl	/fr/docs/Web/CSS/color_value/hsl
 /fr/docs/conflicting/Web/CSS/color_value/rgb	/fr/docs/Web/CSS/color_value/rgb
 /fr/docs/conflicting/Web/CSS/column-gap	/fr/docs/Web/CSS/column-gap

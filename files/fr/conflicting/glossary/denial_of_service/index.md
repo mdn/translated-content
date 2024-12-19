@@ -1,6 +1,7 @@
 ---
 title: Attaque DoS
-slug: Glossary/DOS_attack
+slug: conflicting/Glossary/Denial_of_Service
+original_slug: Glossary/DOS_attack
 ---
 
 {{GlossarySidebar}}
