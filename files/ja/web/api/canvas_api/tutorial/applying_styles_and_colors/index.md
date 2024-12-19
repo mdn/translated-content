@@ -684,13 +684,13 @@ const ptrn = ctx.createPattern(img, "repeat");
 
 この最後の例では、 `fillStyle` プロパティに割り当てるパターンを作成します。唯一の注目すべき点は、画像の `onload` ハンドラーを使用していることです。これは、パターンに割り当てる前に画像が読み込まていれることを保証するためです。
 
-```js
+```js live-sample___a_createpattern_example
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // 新しい画像オブジェクトを生成して、パターンとして使用する
   const img = new Image();
-  img.src = "canvas_createpattern.png";
+  img.src = "canvas_create_pattern.png";
   img.onload = () => {
     // パターンを作成
     const ptrn = ctx.createPattern(img, "repeat");
@@ -700,11 +700,11 @@ function draw() {
 }
 ```
 
-```html hidden
+```html hidden live-sample___a_createpattern_example
 <canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
-```js hidden
+```js hidden live-sample___a_createpattern_example
 draw();
 ```
 
