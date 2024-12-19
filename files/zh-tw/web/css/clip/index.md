@@ -54,13 +54,13 @@ clip: unset;
 
 ```html
 <p class="dotted-border">
-  <img src="macarons.png" alt="Original graphic" />
-  <img id="top-left" src="macarons.png" alt="Graphic clipped to upper left" />
-  <img id="middle" src="macarons.png" alt="Graphic clipped towards middle" />
+  <img src="macarons.png" alt="原圖" />
+  <img id="top-left" src="macarons.png" alt="圖像被剪裁到左上角" />
+  <img id="middle" src="macarons.png" alt="圖像被剪裁到中間" />
   <img
     id="bottom-right"
     src="macarons.png"
-    alt="Graphic clipped to bottom right" />
+    alt="圖像被剪裁到右下角" />
 </p>
 ```
 
@@ -95,7 +95,7 @@ clip: unset;
 }
 ```
 
-{{EmbedLiveSample('clipping_an_image', "裁切圖像", '', '450px')}}
+{{EmbedLiveSample('裁切圖像', '', '450px')}}
 
 ## 規範
 
