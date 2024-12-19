@@ -53,7 +53,7 @@ O valor retornado é o filho incluído, exceto quando `newNode` é um {{domxref(
 </script>
 ```
 
-Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/pt-BR/docs/DOM/Node.nextSibling).
+Não existe um método `insertAfter`. Mas ele pode ser emulado combinando o método `insertBefore` com [`nextSibling`](/pt-BR/docs/Web/API/Node/nextSibling).
 
 No exemplo anterior, `sp1` poderia ser inserido após `sp2` desta forma:
 
@@ -65,7 +65,7 @@ Se `sp2` não possuir um próximo nó, significa que ele deve ser o último filh
 
 ## Exemplo 2
 
-Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/DOM/Node.firstChild).
+Inserir um elemento antes do primeiro nó filho, usando a propriedade [firstChild](/pt-BR/docs/Web/API/Node/firstChild).
 
 ```js
 // Guarda a referêncis do elemento no quela nóe queremos inserir o novo nó

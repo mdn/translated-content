@@ -25,7 +25,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 次のサブ記事では、必要なウェブサイトページを表示するために必要なさまざまな機能を追加するプロセスについて説明します。次のものに進む前に、順番にこれらのそれぞれを読み、作業する必要があります。
 
-1. [async を使用した非同期フロー制御](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
+1. [async を使用した非同期フロー制御](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
 2. [テンプレートプライマー](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
 3. [LocalLibrary 基本テンプレート](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
 4. [ホームページ](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)

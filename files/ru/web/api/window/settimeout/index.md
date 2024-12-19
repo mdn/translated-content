@@ -19,11 +19,11 @@ var timeoutID = window.setTimeout(code [, delay]);
 где
 
 - `timeoutID -` это _числовой_ ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.
-- `func -` это [функция](/ru/docs/JavaScript/Reference/Global_Objects/Function), которую требуется вызвать после `delay` миллисекунд.
+- `func -` это [функция](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function), которую требуется вызвать после `delay` миллисекунд.
 - `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!))
 - `delay` {{optional_inline}} - задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. [Notes](#notes) ниже.
 
-Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#Аргументы_колбэк-функции)).
+Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#аргументы_колбэк-функции)).
 
 > **Предупреждение:** **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
 
@@ -60,7 +60,7 @@ function clearAlert() {
 
 {{ EmbedLiveSample('Example') }}
 
-Смотрите также [`пример clearTimeout()`](/ru/docs/DOM/window.clearTimeout#Example).
+Смотрите также [`пример clearTimeout()`](/ru/docs/Web/API/Window/clearTimeout#example).
 
 ## Аргументы колбэк-функции
 
@@ -165,7 +165,7 @@ var intervalID = setTimeout(function () {
 }, 1000);
 ```
 
-Yet another possibility is to use [function's bind](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind). Example:
+Yet another possibility is to use [function's bind](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Example:
 
 ```js
 setTimeout(function (arg1) {}.bind(undefined, 10));
@@ -173,7 +173,7 @@ setTimeout(function (arg1) {}.bind(undefined, 10));
 
 ## Проблема с "`this`"
 
-Когда вы передаёте метод в `setTimeout()` (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением `this`. Эта проблема разъясняется детально в [JavaScript reference](/ru/docs/JavaScript/Reference/Operators/this#Method_binding).
+Когда вы передаёте метод в `setTimeout()` (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением `this`. Эта проблема разъясняется детально в [JavaScript reference](/ru/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ### Объяснение
 
@@ -256,7 +256,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 ## Замечания
 
-Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/ru/docs/DOM/window.clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/ru/docs/DOM/window.setInterval).
+Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/ru/docs/Web/API/Window/clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/ru/docs/Web/API/Window/setInterval).
 
 Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший `setTimeout()`.
 
@@ -278,13 +278,13 @@ String literals are evaluated in the global context, so local symbols in the con
 
 ### Минимальная/ максимальная задержка и вложенность таймаута
 
-[Historically](http://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
+[Historically](https://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
 
-In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to Gecko 5.0, the minimum timeout value for nested timeouts was 10 ms.
+In fact, 4ms is [specified by the HTML5 spec](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to Gecko 5.0, the minimum timeout value for nested timeouts was 10 ms.
 
 In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.
 
-To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as [described here](http://dbaron.org/log/20100309-faster-timeouts).
+To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as [described here](https://dbaron.org/log/20100309-faster-timeouts).
 
 Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.
 

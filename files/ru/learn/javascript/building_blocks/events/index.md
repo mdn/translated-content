@@ -7,7 +7,7 @@ slug: Learn/JavaScript/Building_blocks/Events
 
 События — это действия или случаи, возникающие в программируемой вами системе, о которых система сообщает вам для того, чтобы вы могли с ними взаимодействовать. Например, если пользователь нажимает кнопку на веб-странице, вы можете ответить на это действие, отобразив информационное окно. В этой статье мы обсудим некоторые важные концепции, связанные с событиями, и посмотрим, как они работают в браузерах. Эта статья не является исчерпывающим источником по этой теме — здесь только то, что вам нужно знать на этом этапе.
 
-| Предпосылки: | Базовая компьютерная грамотность, базовое понимание HTML и CSS, [Первые шаги в JavaScript](/ru/docs/Learn/JavaScript/Первые_шаги).    |
+| Предпосылки: | Базовая компьютерная грамотность, базовое понимание HTML и CSS, [Первые шаги в JavaScript](/ru/docs/Learn/JavaScript/First_steps).    |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Задача:      | Понять фундаментальную теорию событий, как они работают в браузерах и как события могут различаться в разных средах программирования. |
 
@@ -64,7 +64,7 @@ btn.onclick = function () {
 };
 ```
 
-В этом коде мы сохраняем ссылку на кнопку внутри переменной `btn` типа `const`, используя функцию {{domxref ("Document.querySelector()")}}. Мы также определяем функцию, которая возвращает случайное число. Третья часть кода — [обработчик события](#Свойства_обработчика_событий). Переменная `btn` указывает на элемент `<button>` — для этого типа объекта существуют возникающие при определённом взаимодействии с ним события, а значит, возможно использование обработчиков событий. Мы отслеживаем момент возникновения события при щелчке мышью, связывая свойство обработчика события `onclick` с анонимной функцией, генерирующей случайный цвет RGB и устанавливающей его в качестве цвета фона элемента `<body>`.
+В этом коде мы сохраняем ссылку на кнопку внутри переменной `btn` типа `const`, используя функцию {{domxref ("Document.querySelector()")}}. Мы также определяем функцию, которая возвращает случайное число. Третья часть кода — [обработчик события](#свойства_обработчика_событий). Переменная `btn` указывает на элемент `<button>` — для этого типа объекта существуют возникающие при определённом взаимодействии с ним события, а значит, возможно использование обработчиков событий. Мы отслеживаем момент возникновения события при щелчке мышью, связывая свойство обработчика события `onclick` с анонимной функцией, генерирующей случайный цвет RGB и устанавливающей его в качестве цвета фона элемента `<body>`.
 
 Этот код теперь будет запускаться всякий раз, когда возникает событие при нажатии на элемент `<button>` — всякий раз, когда пользователь щёлкает по нему.
 
@@ -78,7 +78,7 @@ btn.onclick = function () {
 
 Например, [Node.js](/ru/docs/Learn/Server-side/Express_Nodejs) — очень популярная среда исполнения JavaScript, которая позволяет разработчикам использовать JavaScript для создания сетевых и серверных приложений. [Модель событий Node.js](https://nodejs.org/docs/latest-v5.x/api/events.html) основана на том, что существуют обработчики, отслеживающие события, и эмиттеры (передатчики), которые периодически генерируют события. В общем-то, это похоже на модель событий в JavaScript для веб-страниц, но код совсем другой. В этой модели используется функция `on()` для регистрации обработчиков событий, и функция `once()` для регистрации обработчика событий, который отключается после первого срабатывания. Хорошим примером использования являются протоколы событий [HTTP connect event docs](https://nodejs.org/docs/latest-v8.x/api/http.html#http_event_connect).
 
-Вы также можете использовать JavaScript для создания кросс-браузерных расширений — улучшения функциональности браузера с помощью технологии [WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions). В отличии от модели веб-событий здесь свойства обработчиков событий пишутся в так называемом регистре [CamelCase](https://ru.wikipedia.org/wiki/CamelCase) (например, `onMessage`, а не `onmessage`) и должны сочетаться с функцией `addListener`. См. [runtime.onMessage page](/en-US/Add-ons/WebExtensions/API/runtime/onMessage#Examples) для примера.
+Вы также можете использовать JavaScript для создания кросс-браузерных расширений — улучшения функциональности браузера с помощью технологии [WebExtensions](/ru/docs/Mozilla/Add-ons/WebExtensions). В отличии от модели веб-событий здесь свойства обработчиков событий пишутся в так называемом регистре [CamelCase](https://ru.wikipedia.org/wiki/CamelCase) (например, `onMessage`, а не `onmessage`) и должны сочетаться с функцией `addListener`. См. [runtime.onMessage page](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) для примера.
 
 На данном этапе обучения вам не нужно особо разбираться в различных средах программирования, однако важно понимать, что принцип работы _событий_ в них отличается.
 
@@ -100,7 +100,7 @@ btn.onclick = function () {
 };
 ```
 
-В данной ситуации свойство [`onclick`](/ru/docs/Web/API/GlobalEventHandlers/onclick) — это свойство обработчика события. В принципе это обычное свойство кнопки как элемента (наравне с [`btn.textContent`](/ru/docs/Web/API/Node/textContent) или [`btn.style`](/ru/docs/Web/API/HTMLElement/style)), но оно относится к особому типу. Если вы установите его равным какому-нибудь коду, этот код будет запущен при возникновении события (при нажатии на кнопку).
+В данной ситуации свойство [`onclick`](/ru/docs/Web/API/Element/click_event) — это свойство обработчика события. В принципе это обычное свойство кнопки как элемента (наравне с [`btn.textContent`](/ru/docs/Web/API/Node/textContent) или [`btn.style`](/ru/docs/Web/API/HTMLElement/style)), но оно относится к особому типу. Если вы установите его равным какому-нибудь коду, этот код будет запущен при возникновении события (при нажатии на кнопку).
 
 Для получения того же результата, вы также можете присвоить свойству обработчика имя уже описанной функции (как мы видели в статье [Создайте свою функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)):
 
@@ -120,12 +120,12 @@ btn.onclick = bgChange;
 
 Создайте локальную копию файла [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html) и откройте её в своём браузере. Это всего лишь копия простого примера про случайные цвета, который мы уже разобрали в этой статье. Теперь попробуйте изменить `btn.onclick` на следующие значения и понаблюдайте за результатами:
 
-- [`btn.onfocus`](/ru/docs/Web/API/GlobalEventHandlers/onfocus) и [`btn.onblur`](/ru/docs/Web/API/GlobalEventHandlers/onblur) — Цвет изменится, когда кнопка будет сфокусирована или не сфокусирована (попробуйте нажать Tab, чтобы выбрать кнопку или убрать выбор). Эти свойства часто применяются для отображения информации о том, как заполнить поля формы, когда они сфокусированы, или отобразить сообщение об ошибке, если поле формы было заполнено с неправильным значением.
-- [`btn.ondblclick`](/ru/docs/Web/API/GlobalEventHandlers/ondblclick) — Цвет будет изменяться только при двойном щелчке.
-- [`window.onkeypress`](/ru/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/ru/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/ru/docs/Web/API/GlobalEventHandlers/onkeyup) — Цвет будет меняться при нажатии клавиши на клавиатуре, причём `keypress` ссылается на обычное нажатие (нажатие кнопки и последующее её отпускание _как одно целое_), в то время как `keydown` и `keyup` _разделяют_ действия на нажатие клавиши и отпускание, и ссылаются на них соответственно. Обратите внимание, что это не работает, если вы попытаетесь зарегистрировать этот обработчик событий на самой кнопке - его нужно зарегистрировать на объекте [window](/ru/docs/Web/API/Window), который представляет все окно браузера.
-- [`btn.onmouseover`](/ru/docs/Web/API/GlobalEventHandlers/onmouseover) и [`btn.onmouseout`](/ru/docs/Web/API/GlobalEventHandlers/onmouseout) — Цвет будет меняться при наведении указателя мыши на кнопку или когда указатель будет отводиться от кнопки соответственно.
+- [`btn.onfocus`](/ru/docs/Web/API/Window/focus_event) и [`btn.onblur`](/ru/docs/Web/API/Window/blur_event) — Цвет изменится, когда кнопка будет сфокусирована или не сфокусирована (попробуйте нажать Tab, чтобы выбрать кнопку или убрать выбор). Эти свойства часто применяются для отображения информации о том, как заполнить поля формы, когда они сфокусированы, или отобразить сообщение об ошибке, если поле формы было заполнено с неправильным значением.
+- [`btn.ondblclick`](/ru/docs/Web/API/Element/dblclick_event) — Цвет будет изменяться только при двойном щелчке.
+- [`window.onkeypress`](/ru/docs/Web/API/Element/keypress_event), [`window.onkeydown`](/ru/docs/Web/API/Element/keydown_event), [`window.onkeyup`](/ru/docs/Web/API/Element/keyup_event) — Цвет будет меняться при нажатии клавиши на клавиатуре, причём `keypress` ссылается на обычное нажатие (нажатие кнопки и последующее её отпускание _как одно целое_), в то время как `keydown` и `keyup` _разделяют_ действия на нажатие клавиши и отпускание, и ссылаются на них соответственно. Обратите внимание, что это не работает, если вы попытаетесь зарегистрировать этот обработчик событий на самой кнопке - его нужно зарегистрировать на объекте [window](/ru/docs/Web/API/Window), который представляет все окно браузера.
+- [`btn.onmouseover`](/ru/docs/Web/API/Element/mouseover_event) и [`btn.onmouseout`](/ru/docs/Web/API/Element/mouseout_event) — Цвет будет меняться при наведении указателя мыши на кнопку или когда указатель будет отводиться от кнопки соответственно.
 
-Некоторые события очень общие и доступны практически в любом месте (например, обработчик `onclick` может быть зарегистрирован практически для любого элемента), тогда как некоторые из них более конкретны и полезны только в определённых ситуациях (например, имеет смысл использовать [onplay](/ru/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) только для определённых элементов, таких как {{htmlelement ("video")}}).
+Некоторые события очень общие и доступны практически в любом месте (например, обработчик `onclick` может быть зарегистрирован практически для любого элемента), тогда как некоторые из них более конкретны и полезны только в определённых ситуациях (например, имеет смысл использовать [onplay](/ru/docs/Web/API/HTMLMediaElement/play_event) только для определённых элементов, таких как {{htmlelement ("video")}}).
 
 ### Встроенные обработчики событий - не используйте их
 
@@ -144,7 +144,7 @@ function bgChange() {
 ```
 
 > [!NOTE]
-> Вы можете найти [полный исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
+> Вы можете найти [полный исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html) из этого примера на GitHub (также [взгляните на его выполнение](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html)).
 
 Значение атрибута — это буквально код JavaScript, который вы хотите запустить при возникновении события. В приведённом выше примере вызывается функция, определённая внутри элемента {{htmlelement ("script")}} на той же странице, но вы также можете вставить JavaScript непосредственно внутри атрибута, например:
 
@@ -198,7 +198,7 @@ btn.addEventListener("click", bgChange);
 ```
 
 > [!NOTE]
-> Вы можете найти [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) из этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
+> Вы можете найти [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html) из этого примера на GitHub (также [взгляните на его выполнение](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)).
 
 Внутри функции `addEventListener()` мы указываем два параметра — имя события, для которого мы хотим зарегистрировать этот обработчик, и код, содержащий функцию обработчика, которую мы хотим запустить в ответ. Обратите внимание, что будет целесообразно поместить весь код внутри функции `addEventListener()` в анонимную функцию, например:
 
@@ -276,7 +276,7 @@ btn.addEventListener("click", bgChange);
 ```
 
 > [!NOTE]
-> Вы можете найти [исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) для этого примера на GitHub (также [взгляните на его выполнение](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> Вы можете найти [исходник кода](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) для этого примера на GitHub (также [взгляните на его выполнение](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Итак в коде выше мы включаем объект события **`e`** в функцию, а в функции — настройку стиля фона для `e.target`, который является кнопкой. Свойство объекта события `target` всегда является ссылкой на элемент, с которым только что произошло событие. Поэтому в этом примере мы устанавливаем случайный цвет фона на кнопке, а не на странице.
 
@@ -343,7 +343,7 @@ for (var i = 0; i < divs.length; i++) {
 
 {{ EmbedLiveSample('Hidden_example', '100%', 400) }}
 
-Большинство обработчиков событий, с которыми вы столкнулись, имеют только стандартный набор свойств и функций (методов), доступных для объекта события (см. {{domxref("Event")}} для ссылки на полный список). Однако некоторые более продвинутые обработчики добавляют специальные свойства, содержащие дополнительные данные, которые им необходимо выполнять. Например, [Media Recorder API](/ru/docs/Web/API/MediaRecorder_API) имеет событие, доступное для данных, которое срабатывает, когда записано какое-либо аудио или видео и доступно для выполнения чего-либо (например, для сохранения или воспроизведения). Соответствующий объект события [ondataavailable](/ru/docs/Web/API/MediaRecorder/ondataavailable) handler имеет свойство данных, содержащее записанные аудио- или видеоданные, чтобы вы могли получить к нему доступ и что-то сделать с ним.
+Большинство обработчиков событий, с которыми вы столкнулись, имеют только стандартный набор свойств и функций (методов), доступных для объекта события (см. {{domxref("Event")}} для ссылки на полный список). Однако некоторые более продвинутые обработчики добавляют специальные свойства, содержащие дополнительные данные, которые им необходимо выполнять. Например, [Media Recorder API](/ru/docs/Web/API/MediaStream_Recording_API) имеет событие, доступное для данных, которое срабатывает, когда записано какое-либо аудио или видео и доступно для выполнения чего-либо (например, для сохранения или воспроизведения). Соответствующий объект события [ondataavailable](/ru/docs/Web/API/MediaRecorder/dataavailable_event) handler имеет свойство данных, содержащее записанные аудио- или видеоданные, чтобы вы могли получить к нему доступ и что-то сделать с ним.
 
 ### Предотвращение поведения по умолчанию
 
@@ -376,7 +376,7 @@ div {
 }
 ```
 
-В JavaScript мы реализуем очень простую проверку внутри обработчика события [onsubmit](/ru/docs/Web/API/GlobalEventHandlers/onsubmit) (событие "отправить" запускается в форме, когда оно отправлено), который проверяет, пусты ли текстовые поля. Если они пусты, мы вызываем функцию [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault) объекта события, которая останавливает отправку формы, а затем выводит сообщение об ошибке в абзаце ниже нашей формы, чтобы сообщить пользователю, что не так:
+В JavaScript мы реализуем очень простую проверку внутри обработчика события [onsubmit](/ru/docs/Web/API/HTMLFormElement/submit_event) (событие "отправить" запускается в форме, когда оно отправлено), который проверяет, пусты ли текстовые поля. Если они пусты, мы вызываем функцию [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault) объекта события, которая останавливает отправку формы, а затем выводит сообщение об ошибке в абзаце ниже нашей формы, чтобы сообщить пользователю, что не так:
 
 ```js
 var form = document.querySelector("form");
@@ -398,11 +398,11 @@ form.onsubmit = function (e) {
 {{ EmbedLiveSample('Предотвращение_поведения_по_умолчанию', '100%', 140) }}
 
 > [!NOTE]
-> Чтобы увидеть исходный код, откройте [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (также [запустите](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) здесь).
+> Чтобы увидеть исходный код, откройте [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (также [запустите](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) здесь).
 
 ### Всплытие и перехват событий
 
-Последним предметом для рассмотрения в этой теме является то, с чем вы не часто будете сталкиваться, но это может стать настоящей головной болью, если вы не поймёте, как работает следующий механизм. _Всплытие_ и _перехват событий_ — два механизма, описывающих, что происходит, когда два обработчика одного и того же события активируются на одном элементе. Посмотрим на пример. Чтобы сделать это проще — откройте пример [show-video-box.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) в одной вкладке и [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) в другой вкладке. Он также представлен ниже:
+Последним предметом для рассмотрения в этой теме является то, с чем вы не часто будете сталкиваться, но это может стать настоящей головной болью, если вы не поймёте, как работает следующий механизм. _Всплытие_ и _перехват событий_ — два механизма, описывающих, что происходит, когда два обработчика одного и того же события активируются на одном элементе. Посмотрим на пример. Чтобы сделать это проще — откройте пример [show-video-box.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) в одной вкладке и [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) в другой вкладке. Он также представлен ниже:
 
 ```html hidden
 <!doctype html>
@@ -582,7 +582,7 @@ video.onclick = function (e) {
 };
 ```
 
-Вы можете попробовать создать локальную копию [show-video-box.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) и попробовать его самостоятельно исправить или просмотреть исправленный результат в [show-video-box-fixed.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (также см. [исходный код здесь](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
+Вы можете попробовать создать локальную копию [show-video-box.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) и попробовать его самостоятельно исправить или просмотреть исправленный результат в [show-video-box-fixed.html](https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html) (также см. [исходный код здесь](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html)).
 
 > [!NOTE]
 > Зачем беспокоиться как с захватом, так и с всплыванием? Что ж, в старые добрые времена, когда браузеры были менее совместимы, чем сейчас, Netscape использовал только захват событий, а Internet Explorer использовал только всплывающие события. Когда W3C решил попытаться стандартизировать поведение и достичь консенсуса, они в итоге получили эту систему, которая включала в себя и то, и другое, что реализовано в одном из современных браузеров.
@@ -604,12 +604,12 @@ video.onclick = function (e) {
 
 Кроме того, важно понимать, что различные контексты, в которых используется JavaScript, обычно имеют разные модели событий — от веб-API до других областей, таких как браузерные расширения и Node.js (серверный JavaScript). Может сейчас вы не особо в этом разбираетесь, но по мере изучения веб-разработки начнёт приходить более ясное понимание тематики.
 
-Если у вас возникли вопросы, попробуйте прочесть статью снова или [обратитесь за помощью к нам](/ru/docs/Learn#Contact_us).
+Если у вас возникли вопросы, попробуйте прочесть статью снова или [обратитесь за помощью к нам](/ru/docs/Learn#contact_us).
 
 ## Смотрите также
 
-- [Event order](http://www.quirksmode.org/js/events_order.html) (обсуждение захвата и всплытий) — превосходно детализированная часть от Peter-Paul Koch.
-- [Event accessing](http://www.quirksmode.org/js/events_access.html) (discussing of the event object) — another excellently detailed piece by Peter-Paul Koch.
+- [Event order](https://www.quirksmode.org/js/events_order.html) (обсуждение захвата и всплытий) — превосходно детализированная часть от Peter-Paul Koch.
+- [Event accessing](https://www.quirksmode.org/js/events_access.html) (discussing of the event object) — another excellently detailed piece by Peter-Paul Koch.
 - [Event reference](/ru/docs/Web/Events)
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}

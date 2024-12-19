@@ -469,6 +469,7 @@
 /es/docs/Glossary/Clasificación_por_tarjetas_(card_sorting)	/es/docs/Glossary/Card_sorting
 /es/docs/Glossary/Clausura	/es/docs/Glossary/Closure
 /es/docs/Glossary/Clave	/es/docs/Glossary/Key
+/es/docs/Glossary/Clickjacking	/es/docs/Web/Security/Attacks/Clickjacking
 /es/docs/Glossary/Constante	/es/docs/Glossary/Constant
 /es/docs/Glossary/Criptoanálisis	/es/docs/Glossary/Cryptanalysis
 /es/docs/Glossary/Criptografía	/es/docs/Glossary/Cryptography

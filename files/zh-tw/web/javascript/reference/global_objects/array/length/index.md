@@ -48,7 +48,7 @@ arr.forEach(element => console.log(element)); // 空元素無法被迭代
 // 2
 ```
 
-如上所見，`length` 屬性不盡然代表陣列中所有已定義的元素個數。詳見 [length 與數值屬性的關係](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties)。
+如上所見，`length` 屬性不盡然代表陣列中所有已定義的元素個數。詳見 [length 與數值屬性的關係](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties)。
 
 {{js_property_attributes(1, 0, 0)}}
 

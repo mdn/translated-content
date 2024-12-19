@@ -30,7 +30,7 @@ El elemento {{Glossary("Head", "head")}} de un documento HTML es la parte que no
 
 ## ¿Qué hay en la cabecera HTML?
 
-Vamos a revisar el [documento HTML que se revisó en el artículo anterior](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document):
+Vamos a revisar el [documento HTML que se revisó en el artículo anterior](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document):
 
 ```html
 <!doctype html>
@@ -54,7 +54,7 @@ La cabecera HTML es el contenido del elemento {{htmlelement("head")}} — a dife
 </head>
 ```
 
-En páginas más grandes, sin embargo, la cabecera puede llegar a contener bastantes elementos. Prueba a ir a algunos de tus sitios web favoritos y comprueba el contenido de la cabecera usando las [herramientas para el desarrollador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools). Nuestro objetivo aquí no es mostrarte cómo usar todo lo que puedes incluir en la cabecera, sino enseñarte cómo usar los elementos principales que vas a incluir en la cabecera y que te familiarices con ellos. Empecemos.
+En páginas más grandes, sin embargo, la cabecera puede llegar a contener bastantes elementos. Prueba a ir a algunos de tus sitios web favoritos y comprueba el contenido de la cabecera usando las [herramientas para el desarrollador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Nuestro objetivo aquí no es mostrarte cómo usar todo lo que puedes incluir en la cabecera, sino enseñarte cómo usar los elementos principales que vas a incluir en la cabecera y que te familiarices con ellos. Empecemos.
 
 ## Añadir un título
 
@@ -161,7 +161,7 @@ La descripción también se usa en las páginas de resultados del motor de búsq
    ![Resultado de búsqueda en Yahoo para "Mozilla Developer Network"](mdn-search-result.png)
 
 > [!NOTE]
-> En Google verás algunas subpáginas relevantes de MDN enumeradas debajo del enlace principal a la página principal de MDN (se trata de los llamados **sitelinks** y se pueden configurar con las [Herramientas de administrador de Google](http://www.google.com/webmasters/tools/)), una forma de mejorar los resultados para tu sitio con el motor de búsqueda de Google.
+> En Google verás algunas subpáginas relevantes de MDN enumeradas debajo del enlace principal a la página principal de MDN (se trata de los llamados **sitelinks** y se pueden configurar con las [Herramientas de administrador de Google](https://www.google.com/webmasters/tools/)), una forma de mejorar los resultados para tu sitio con el motor de búsqueda de Google.
 
 > [!NOTE]
 > Muchas características `<meta>` ya no se usan. Por ejemplo, los motores de búsqueda ignoran el elemento `<meta>` (`<meta name="keywords" content="pon, tus, palabras clave, aquí">`), que se supone que facilita palabras clave para motores de búsqueda de forma que se determine la relevancia de esa página según diferentes términos de búsqueda, porque los **spammers** rellenaban la lista de palabras clave con cientos de palabras clave que sesgaban los resultados.
@@ -170,7 +170,7 @@ La descripción también se usa en las páginas de resultados del motor de búsq
 
 Al navegar por la web también puedes encontrar otros tipos de metadatos. Muchas de las funciones que verás en los sitios web son creaciones propietarias diseñadas para proporcionar a ciertos sitios (como los sitios de redes sociales) información específica que puedan usar.
 
-Por ejemplo, [Open Graph Data](http://ogp.me/) es un protocolo de metadatos que Facebook inventó para proveer metadatos más ricos para los sitios web. En las fuentes de código de MDN, encontrarás esto:
+Por ejemplo, [Open Graph Data](https://ogp.me/) es un protocolo de metadatos que Facebook inventó para proveer metadatos más ricos para los sitios web. En las fuentes de código de MDN, encontrarás esto:
 
 ```html
 <meta
@@ -258,7 +258,7 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)).
+- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies)).
 
   ```html
   <script src="my-js-file.js"></script>

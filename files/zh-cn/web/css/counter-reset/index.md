@@ -77,7 +77,7 @@ h1 {
 
 ## 参考
 
-- [CSS Counters](/zh-CN/docs/CSS/Counters), {{Cssxref("counter-increment")}}
+- [CSS Counters](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), {{Cssxref("counter-increment")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("@counter-style")}}

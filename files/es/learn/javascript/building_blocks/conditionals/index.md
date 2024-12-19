@@ -205,7 +205,7 @@ Aunque el código funciona en conjunto, cada declaración `if...else` funciona c
 
 ### Operadores lógicos: AND, OR y NOT
 
-Si quieres probar multiples condiciones sin escribir declaraciones `if...else`anidados, los [operadores lógicos](/es/docs/Web/JavaScript/Reference/Operators/Logical_Operators) pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:
+Si quieres probar multiples condiciones sin escribir declaraciones `if...else`anidados, los [operadores lógicos](/es/docs/Web/JavaScript/Reference/Operators) pueden ayudarte. Cuando se usa en condiciones, los primeros dos hacen lo siguiente:
 
 - `&&` — AND; le permite encadenar dos o más expresiones para que todas ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.
 - `||` — OR; le permite encadenar dos o más expresiones para que una o más de ellas se tengan que evaluar individualmente `true` para que expresión entera retorne `true`.

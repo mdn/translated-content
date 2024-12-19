@@ -5,7 +5,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
 
 {{LearnSidebar}}
 
-[HTML5](/fr/docs/Web/Guide/HTML/HTML5) est conçu avec le souci de l'extensibilité pour les données qui doivent être associées avec un élément particulier sans qu'on leur donne une signification spécifique. [Les attributs `data-*`](/fr/docs/Web/HTML/Attributs_universels#attr-data-*) nous permettent de stocker des informations supplémentaires sur les éléments sémantiques standard sans avoir recours à des attributs non-standard ni à des propriétés supplémentaires du DOM, ni à {{domxref("Node.setUserData()")}}.
+[HTML5](/fr/docs/Glossary/HTML5) est conçu avec le souci de l'extensibilité pour les données qui doivent être associées avec un élément particulier sans qu'on leur donne une signification spécifique. [Les attributs `data-*`](/fr/docs/Web/HTML/Global_attributes#attr-data-*) nous permettent de stocker des informations supplémentaires sur les éléments sémantiques standard sans avoir recours à des attributs non-standard ni à des propriétés supplémentaires du DOM, ni à {{domxref("Node.setUserData()")}}.
 
 ## Syntaxe HTML
 
@@ -47,7 +47,7 @@ article::before {
 }
 ```
 
-Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Sélecteurs_d_attribut) en CSS pour modifier les styles en fonction des données :
+Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Attribute_selectors) en CSS pour modifier les styles en fonction des données :
 
 ```css
 article[data-columns="3"] {

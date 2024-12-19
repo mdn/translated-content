@@ -183,7 +183,7 @@ En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase `.box`, lo 
 
 ### Utilizar las DevTools del navegador para ver el modelo de cajas
 
-Las [herramientas del desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.
+Las [herramientas del desarrollador de tu navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.
 
 ![Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools](box-model-devtools.png)
 
@@ -218,7 +218,7 @@ En el ejemplo siguiente hay dos párrafos. El párrafo superior tiene un atribut
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
 
-Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre [entender el colapso de márgenes](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing). Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.
+Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre [entender el colapso de márgenes](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.
 
 ### Bordes
 

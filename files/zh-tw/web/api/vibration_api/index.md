@@ -9,7 +9,7 @@ slug: Web/API/Vibration_API
 
 ## 振動說明
 
-振動即如「on-off」脈衝的形式，且持續時間亦有不同的變化。可透過單一整數讓振動持續數個毫秒 (ms)；或可由多個整數組成陣列，達到振動與暫停交錯的振動形式。只要單一 [`window.navigator.vibrate()`](/zh-TW/docs/Web/API/window.navigator.vibrate) 函式即可控制振動。
+振動即如「on-off」脈衝的形式，且持續時間亦有不同的變化。可透過單一整數讓振動持續數個毫秒 (ms)；或可由多個整數組成陣列，達到振動與暫停交錯的振動形式。只要單一 [`window.navigator.vibrate()`](/zh-TW/docs/Web/API/Navigator/vibrate) 函式即可控制振動。
 
 ### 單次振動
 
@@ -36,7 +36,7 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 取消目前振動
 
-在 [`window.navigator.vibrate()`](/zh-TW/docs/Web/API/window.navigator.vibrate) 的值為「0」、空白陣列，或陣列全為「0」時呼叫此函式，即可取消目前執行中的振動作業。`
+在 [`window.navigator.vibrate()`](/zh-TW/docs/Web/API/Navigator/vibrate) 的值為「0」、空白陣列，或陣列全為「0」時呼叫此函式，即可取消目前執行中的振動作業。`
 
 ## 規格
 

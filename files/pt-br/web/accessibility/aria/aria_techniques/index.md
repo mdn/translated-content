@@ -77,7 +77,7 @@ As técnicas abaixo descrevem cada função composta, bem como suas funções fi
 ### Funções de ponto de referência
 
 - [banner](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_banner_role)
-- [complementary](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role)
+- [complementary](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Complementary_role)
 - [contentinfo](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)
 - [form](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Form_Role)
 - [main](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Main_role)
@@ -87,15 +87,15 @@ As técnicas abaixo descrevem cada função composta, bem como suas funções fi
 
 ### Funções de regiões ativa
 
-- [alert](/pt-BR/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
+- [alert](/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [log](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role)
 - marquee
 - [status](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role)
-- [timer](/pt-BR/docs/Web/Accessibility/ARIA/Roles/ARIA_timer_role)
+- [timer](/pt-BR/docs/Web/Accessibility/ARIA/Roles/timer_role)
 
 ### Funções de janela
 
-- [alertdialog](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [alertdialog](/pt-BR/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [dialog](/pt-BR/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
 ## Estados e propriedades
@@ -148,7 +148,7 @@ As técnicas abaixo descrevem cada função composta, bem como suas funções fi
 - aria-colspan
 - aria-controls
 - [aria-describedby](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)
-- [aria-details](/pt-BR/docs/Web/Accessibility/ARIA/Annotations#Associating_annotated_elements_with_their_details)
+- [aria-details](/pt-BR/docs/Web/Accessibility/ARIA#associating_annotated_elements_with_their_details)
 - aria-errormessage
 - aria-flowto
 - [aria-labelledby](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
@@ -161,4 +161,4 @@ As técnicas abaixo descrevem cada função composta, bem como suas funções fi
 
 ### Propriedades específicas do MicrosoftEdge
 
-- [x-ms-aria-flowfrom](/pt-BR/docs/Web/API/x-ms-aria-flowfrom) {{Non-standard_Inline}}
+- [x-ms-aria-flowfrom](/pt-BR/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}

@@ -11,24 +11,24 @@ JavaScript または WebAssembly コードから生成されたメモリーは J
 
 ## コンストラクター
 
-- [`WebAssembly.Memory()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory)
+- [`WebAssembly.Memory()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/Memory)
   - : 新しい `Memory` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- [`Memory.prototype.buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)
+- [`Memory.prototype.buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer)
   - : メモリーに格納されているバッファーを返すアクセサープロパティです。
 
 ## インスタンスメソッド
 
-- [`Memory.prototype.grow()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow)
+- [`Memory.prototype.grow()`](/ja/docs/WebAssembly/JavaScript_interface/Memory/grow)
   - : 指定した WebAssembly ページ (64KB で 1 単位) の数でメモリーのインスタンスのサイズを増やします。
 
 ## 例
 
 ### 新しい Memory オブジェクトの生成
 
-`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から生成する方法です。以下の例では、初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で新しい WebAssembly Memory インスタンスを生成しています。その [`buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
+`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から生成する方法です。以下の例では、初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で新しい WebAssembly Memory インスタンスを生成しています。その [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
 
 ```js
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });

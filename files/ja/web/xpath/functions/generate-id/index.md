@@ -34,7 +34,7 @@ generate-id( [node-set] )
 
 ### 定義
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-generate-id)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-generate-id)
 
 ### Gecko のサポート
 

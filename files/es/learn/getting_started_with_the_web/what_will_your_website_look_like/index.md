@@ -41,7 +41,7 @@ Aún debes tener los párrafos y el título de antes. Mantenlos cerca.
 
 ### Color del tema
 
-Para elegir un color, ve al [Selector de color](/es/docs/Web/CSS/CSS_Colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
+Para elegir un color, ve al [Selector de color](/es/docs/Web/CSS/CSS_colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
 
 ![Color del tema](color-picker.png)
 

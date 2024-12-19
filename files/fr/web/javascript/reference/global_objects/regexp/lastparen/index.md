@@ -20,7 +20,7 @@ La propriété `lastParen` est une propriété statique, ce n'est pas une propri
 
 La valeur de la propriété `lastParen` n'est accessible qu'en lecture seule et est modifiée automatiquement à chaque fois qu'il y a une correspondance.
 
-Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'accès aux propriétés (`RegExp.$+`). En effet, le parseur attend une expression avec "+", dans ce cas, une exception {{jsxref("SyntaxError")}} est levée. Pour utiliser cette notation raccourcie, on utilisera [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
+Cet alias ne peut pas être utilisé avec la notation utilisant le point pour l'accès aux propriétés (`RegExp.$+`). En effet, le parseur attend une expression avec "+", dans ce cas, une exception {{jsxref("SyntaxError")}} est levée. Pour utiliser cette notation raccourcie, on utilisera [la notation avec les crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
 ## Exemples
 

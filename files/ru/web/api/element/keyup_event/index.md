@@ -75,7 +75,7 @@ input.onkeyup = logKey;
 
 ## Смотрите также
 
-- [`input`](/ru/docs/Web/API/HTMLElement/input_event)
+- [`input`](/ru/docs/Web/API/Element/input_event)
 - [`keydown`](/ru/docs/Web/API/Element/keydown_event)
 - [`keypress`](/ru/docs/Web/API/Element/keypress_event)
-- [Document `keyup` event](/ru/docs/Web/API/Document/keyup_event)
+- [Document `keyup` event](/ru/docs/Web/API/Element/keyup_event)

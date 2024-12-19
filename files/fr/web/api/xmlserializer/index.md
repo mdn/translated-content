@@ -45,5 +45,5 @@ s.serializeToStream(document, stream, "UTF-8");
 - [Parsing and serializing XML](/fr/Parsing_and_serializing_XML)
 - [Parsing and serializing XML (en)](http://xulplanet.com/tutorials/mozsdk/xmlparse.php) (XULPlanet)
 - [Parsing and serializing XML (en)](http://kb.mozillazine.org/Parsing_and_serializing_XML#Parsing_strings_into_DOM_trees) (MozillaZine)
-- [XMLHttpRequest](/fr/XMLHttpRequest)
+- [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
 - [DOMParser](/fr/DOMParser)

@@ -37,12 +37,12 @@ El ambiente de desarrollo _Express_ incluye una instalación de _Nodejs_, el _NP
 
 _Node_ y el administrador de paquetes _NPM_ se instalan juntos desde paquetes binarios, instaladores, administradores de paquetes del sistema operativo o desde los fuentes (como se muestra en las siguientes secciónes). _Express_ es entonces instalado por NPM como una dependencia individual de sus aplicaciones web _Express_ (conjuntamente con otras librerías como motores de plantillas, controladores de bases de datos, middleware de autenticación, middleware para servir archivos estáticos, etc.)
 
-_NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC](/es/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
+_NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC](/es/docs/Web/Aplicaciones/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
 
 > [!NOTE]
 > A diferencia de otros frameworks web , el ambiente de desarrollo no incluye un servidor web independiente. Una aplicación web _Node_/_Express_ crea y ejecuta su propio servidor web!
 
-Hay otras herramientas periféricas que son parte de un ambiente de desarrollo típico, incluyendo [editores de texto](/es/docs/Learn/Common_questions/Available_text_editors) o IDEs para edición de código, y herramientas de administración de control de fuentes como [Git](https://git-scm.com/) para administrar con seguridad diferentes versiones de su codigo. Asumimos que usted ya tiene instaladas esta clase de herramientas (en particular un editor de texto).
+Hay otras herramientas periféricas que son parte de un ambiente de desarrollo típico, incluyendo [editores de texto](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) o IDEs para edición de código, y herramientas de administración de control de fuentes como [Git](https://git-scm.com/) para administrar con seguridad diferentes versiones de su codigo. Asumimos que usted ya tiene instaladas esta clase de herramientas (en particular un editor de texto).
 
 ### Qué sistemas operativos son soportados?
 

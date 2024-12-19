@@ -26,7 +26,7 @@ Los contextos de formato de bloque son importantes para el posicionamiento (revi
 
 ## Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#block-formatting)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#block-formatting)
 
 ## También puedes ver
 

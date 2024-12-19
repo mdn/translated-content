@@ -151,7 +151,7 @@ def index(request):
 
 첫번째 줄은 우리의 모든 뷰들 안에서 데이터에 접근하는 데 사용할 모델 클래스들을 포함(import)합니다.
 
-view 함수의 첫번째 부분은 모델 클래스들에서 `objects.all()` 속성을 사용하는 레코드들의 개수를 가져옵니다. 이 함수는 또한 상태 필드에서 'a'(Available) 값을 가지고 있는 `BookInstance` 객체들의 목록도 가져옵니다. 이전 튜토리얼에서 모델 데이터에 접근하는 방법에 대한 더 많은 정보를 찾을 수 있습니다 : [Django Tutorial Part 3: Using models > Searching for records](/ko/docs/Learn/Server-side/Django/Models#Searching_for_records).
+view 함수의 첫번째 부분은 모델 클래스들에서 `objects.all()` 속성을 사용하는 레코드들의 개수를 가져옵니다. 이 함수는 또한 상태 필드에서 'a'(Available) 값을 가지고 있는 `BookInstance` 객체들의 목록도 가져옵니다. 이전 튜토리얼에서 모델 데이터에 접근하는 방법에 대한 더 많은 정보를 찾을 수 있습니다 : [Django Tutorial Part 3: Using models > Searching for records](/ko/docs/Learn/Server-side/Django/Models#searching_for_records).
 
 view 함수의 마지막에선 HTML 페이지를 생성하고 이 페이지를 응답으로서 반환하기 위해 `render()` 함수를 호출합니다. 이 바로가기(shortcut) 함수는 아주 일반적으로 사용되는 경우들을 간단히 하기 위해 여러 다른 함수들을 포함합니다. `render()` 함수는 아래 매개 변수들을 허용합니다:
 
@@ -366,11 +366,11 @@ TEMPLATES = [
 
 모델 쿼리, 뷰 그리고 탬플릿들과의 친밀함을 시험할 수 있는 두 가지 임무가 있습니다.
 
-1. LocalLibrary 기본 탬플릿([base template](#The_LocalLibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#The_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
+1. LocalLibrary 기본 탬플릿([base template](#the_locallibrary_base_template))에는 `title` 블록이 정의되어 있습니다. 색인 탬플릿([index template](#the_index_template)) 안에 이 블록을 덮어쓰기하고 페이지를 위한 새로운 제목을 만들어 보세요.
 
-   > **참고:** **힌트:** [Extending templates](#Extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
+   > **참고:** **힌트:** [Extending templates](#extending_templates) 섹션은 블럭(block)을 생성하고 다른 탬플릿에서 블럭을 확장(extend)하는 방법을 설명합니다.
 
-2. 대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#The_index_template) 를 업데이트 하세요.
+2. 대소문자 구분 없이 특정한 단어를 포함하는 장르와 책들의 개수(count)를 생성하도록 [view](<#View_(function-based)>) 를 수정하고, 결과를 `context`에 전달해 보세요. 이것은 `num_books`와 `num_instances_available`을 생성하고 사용하는 것과 비슷한 방법으로 달성할 수 있습니다. 그리고 나서 이 변수들을 포함시키기 위해 [index template](#the_index_template) 를 업데이트 하세요.
 
 ## 요약
 

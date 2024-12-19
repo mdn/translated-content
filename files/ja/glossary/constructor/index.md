@@ -38,5 +38,5 @@ var defaultReference = new Default();
 
 ### 技術リファレンス
 
-- MDN の [JavaScript オブジェクト入門のコンストラクター](/ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor)の記事
+- MDN の [JavaScript オブジェクト入門のコンストラクター](/ja/docs/Learn/JavaScript/Objects#the_constructor)の記事
 - MDN の JavaScript の [new 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)の記事

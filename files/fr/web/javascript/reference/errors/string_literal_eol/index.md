@@ -19,7 +19,7 @@ SyntaxError: unterminated string literal (Firefox)
 
 ## Quel est le problème ?
 
-Une chaîne de caractères ({{jsxref("String")}}) n'est pas bien délimitée quelque part. Les littéraux de chaînes de caractères doivent être délimités par des simples quotes (') ou par des doubles quotes ("). [Les séquences d'échappement](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String#Échappement_des_caractères) permet de représenter dans ces chaînes de caractères. Pour réparer cette erreur :
+Une chaîne de caractères ({{jsxref("String")}}) n'est pas bien délimitée quelque part. Les littéraux de chaînes de caractères doivent être délimités par des simples quotes (') ou par des doubles quotes ("). [Les séquences d'échappement](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#échappement_des_caractères) permet de représenter dans ces chaînes de caractères. Pour réparer cette erreur :
 
 - Vérifiez que la chaîne est bien délimitée au début et à la fin par des doubles quotes ou par des simples quotes,
 - Vérifiez que les caractères spéciaux de la chaîne ont bien été échappés,
@@ -42,7 +42,7 @@ Pour écrire une chaîne sur plusieurs lignes, on pourra utiliser :
 
 - [L'opérateur +](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Addition_()>),
 - Une barre oblique inversée ("\\")
-- [Des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits)
+- [Des littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals)
 
 Voici la première variante avec l'opérateur de concaténation :
 
@@ -62,7 +62,7 @@ to wrap across multiple lines because \
 otherwise my code is unreadable.";
 ```
 
-On pourra également utiliser [les littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) qui sont pris en charge par les environnement ECMAScript 2015 :
+On pourra également utiliser [les littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals) qui sont pris en charge par les environnement ECMAScript 2015 :
 
 ```js example-good
 var longString = `This is a very long string which needs
@@ -73,4 +73,4 @@ var longString = `This is a very long string which needs
 ## Voir aussi
 
 - {{jsxref("String")}}
-- [Les littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits)
+- [Les littéraux de gabarits](/fr/docs/Web/JavaScript/Reference/Template_literals)

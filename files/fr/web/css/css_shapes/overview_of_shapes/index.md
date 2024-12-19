@@ -42,11 +42,11 @@ Avec la valeur `inset()`, le texte environnant continue d'épouser une forme rec
 
 Nous avons vu le fonctionnement de `circle()` dans l'exemple précédent : cette notation fonctionnelle permet de créer une forme circulaire. `ellipse()` est assez proche et permet de créer une ellipse (qu'on peut voir comme un cercle aplati). Si aucune de ces formes ne vous convient, vous pouvez utiliser `polygon()` afin de créer un polygone correspondant à une forme complexe.
 
-Dans [le guide sur les formes simples](/fr/docs/Web/CSS/CSS_Shapes/Formes_simples), nous verrons comment créer et exploiter ces formes.
+Dans [le guide sur les formes simples](/fr/docs/Web/CSS/CSS_shapes/Basic_shapes), nous verrons comment créer et exploiter ces formes.
 
 ### Boîtes de référence
 
-Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte) et utiliser les valeurs :
+Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et utiliser les valeurs :
 
 - `border-box`
 - `padding-box`
@@ -57,7 +57,7 @@ Dans l'exemple qui suit, vous pouvez modifier la valeur `border-box` afin d'util
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-Pour en savoir plus, voir [le guide sur les formes et les boîtes](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values).
+Pour en savoir plus, voir [le guide sur les formes et les boîtes](/fr/docs/Web/CSS/CSS_shapes/From_box_values).
 
 ### Générer une forme à partir d'une image
 
@@ -77,7 +77,7 @@ Dans l'exemple suivant, on utilise une image qui est un dégradé et qui permet 
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-Dans l'article [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images), nous verrons plus en détails le fonctionnement de ces propriétés.
+Dans l'article [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_shapes/Shapes_from_images), nous verrons plus en détails le fonctionnement de ces propriétés.
 
 ## La propriété `shape-margin`
 

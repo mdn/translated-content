@@ -148,5 +148,5 @@ Parfois, on veut forcer le déplacement d'un élément sous les éléments flott
 
 ## Voir aussi
 
-- [Le contexte de formatage des blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)
+- [Le contexte de formatage des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
 - La propriété [`clear`](/fr/docs/Web/CSS/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant

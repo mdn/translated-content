@@ -7,9 +7,9 @@ slug: Learn/CSS/Styling_text/Web_fonts
 
 В первой статье модуля, мы изучали основные функции CSS доступные для стилизации шрифтов и текста. В этой статье мы продвинемся дальше изучая веб-шрифты в деталях — они позволяют вам загружать пользовательские шрифты вместе с вашей веб-страницей, чтобы обеспечить более разнообразный, индивидуальный стиль текста.
 
-| Предварительные требования: | Основная компьютерная грамотность, основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), основы CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/Introduction_to_CSS)), [Основы CSS текста и шрифта](/ru/docs/Learn/CSS/Styling_text/Fundamentals). |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:                     | Изучить как применять веб-шрифты к веб-странице, использовать сторонний сервис или писать код самостоятельно.                                                                                                                                                                    |
+| Предварительные требования: | Основная компьютерная грамотность, основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), основы CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps)), [Основы CSS текста и шрифта](/ru/docs/Learn/CSS/Styling_text/Fundamentals). |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Задача:                     | Изучить как применять веб-шрифты к веб-странице, использовать сторонний сервис или писать код самостоятельно.                                                                                                                                                            |
 
 ## Краткое повторение семейств шрифтов
 
@@ -21,7 +21,7 @@ p {
 }
 ```
 
-Эта система работает хорошо, но традиционно выбор шрифтов веб-разработчиков была ограниченной. Существует только горсть шрифтов которые вы можете гарантировать, что они являются доступными во всех распространённых системах — так называемые [Безопасные веб-шрифты](/en-US/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts). Вы можете использовать стек шрифта для указания предпочтительных шрифтов, за которыми следует веб-безопасные альтернативы, за которыми следует системный шрифт по умолчанию, но это добавляет дополнительной работы с точки зрения тестирования, чтобы убедиться, что ваш дизайн выглядит хорошо с каждым из шрифтов и т. д.
+Эта система работает хорошо, но традиционно выбор шрифтов веб-разработчиков была ограниченной. Существует только горсть шрифтов которые вы можете гарантировать, что они являются доступными во всех распространённых системах — так называемые [Безопасные веб-шрифты](/ru/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts). Вы можете использовать стек шрифта для указания предпочтительных шрифтов, за которыми следует веб-безопасные альтернативы, за которыми следует системный шрифт по умолчанию, но это добавляет дополнительной работы с точки зрения тестирования, чтобы убедиться, что ваш дизайн выглядит хорошо с каждым из шрифтов и т. д.
 
 ## Веб-шрифты
 
@@ -58,7 +58,7 @@ html {
 
 Имея это в виду, давайте создадим базовый пример веб-шрифта из первых принципов. Сложно продемонстрировать это на встроенном живом примере, поэтому вместо, мы бы хотели, чтобы следовали детальным шагам в секциях ниже, чтобы понять идею процесса
 
-Вы должны использовать файлы [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) и [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) как отправную точку добавляя в них ваш код (см. [живой пример](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)). Сейчас сделайте копию этих файлов в новой директории на вашем компьютере. В файле `web-font-start.css` вы найдёте некоторый минимальный CSS для работы с базовым макетом и вёрсткой примера.
+Вы должны использовать файлы [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) и [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) как отправную точку добавляя в них ваш код (см. [живой пример](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)). Сейчас сделайте копию этих файлов в новой директории на вашем компьютере. В файле `web-font-start.css` вы найдёте некоторый минимальный CSS для работы с базовым макетом и вёрсткой примера.
 
 ### Поиск шрифтов
 
@@ -111,7 +111,7 @@ font-family: "zantrokeregular", serif;
 ![](web-font-example.png)
 
 > [!NOTE]
-> Если у вас возникли какие-либо проблемы с тем что что-то не работает, смело сравнивайте файлы вашей версии с нашей законченной — см. [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) и [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([run the finished example live](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
+> Если у вас возникли какие-либо проблемы с тем что что-то не работает, смело сравнивайте файлы вашей версии с нашей законченной — см. [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) и [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([run the finished example live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 
 ## Использование онлайн-сервиса шрифтов
 
@@ -127,7 +127,7 @@ font-family: "zantrokeregular", serif;
 6. Далее вам надо скопировать CSS-объявления, перечисленные в вашем CSS, чтобы применить пользовательские шрифты к вашему HTML.
 
 > [!NOTE]
-> Вы можете найти законченные версии [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) и [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), если вам необходимо сверить вашу работу с нашей ([см. live](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
+> Вы можете найти законченные версии [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) и [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), если вам необходимо сверить вашу работу с нашей ([см. live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
 
 ## @font-face более детально
 

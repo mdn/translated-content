@@ -436,4 +436,4 @@ transform-origin: 100% -30%;
 
 ## 参见
 
-- [使用 CSS 变形](/zh-CN/docs/CSS/Using_CSS_transforms)
+- [使用 CSS 变形](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

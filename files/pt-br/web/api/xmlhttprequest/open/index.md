@@ -47,5 +47,5 @@ XMLHttpRequest.open(method, url, async, user, password)
 
 ## Veja também
 
-- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Métodos Relacionados ao {{domxref("XMLHttpRequest")}}: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}},{{domxref("XMLHttpRequest.send", "send()")}}, e {{domxref("XMLHttpRequest.abort", "abort()")}}

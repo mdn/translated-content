@@ -51,8 +51,8 @@ Specified by the WHATWG's [Web Applications 1.0 working draft](http://whatwg.org
 
 ## Смотрите также
 
-- [Web-based protocol handlers](/en/Web-based_protocol_handlers)
-- [RegisterProtocolHandler Enhancing the Federated Web](http://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Web Application APIs - Custom scheme and content handlers - Whitelisted schemes](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#whitelisted-scheme)
+- [Web-based protocol handlers](/en-US/Web-based_protocol_handlers)
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
+- [Web Application APIs - Custom scheme and content handlers - Whitelisted schemes](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#whitelisted-scheme)
 - [Register a webmail service as mailto handler](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window) shows how to do `registerProtocolHandler` from XPCOM scope.
 - [XPCOM Interface Reference > nsIWebContentHandlerRegistrar > registerContentHandler](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#registerProtocolHandler) - This shows how to use this function XPCOM scope

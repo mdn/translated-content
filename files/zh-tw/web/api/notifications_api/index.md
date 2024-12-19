@@ -31,7 +31,7 @@ btn.addEventListener("click", function () {
 
 {{AvailableInWorkers}}
 
-另外，Notifications API 規範指定了 [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API) 的許多附加功能，以允許服務人員觸發通知。
+另外，Notifications API 規範指定了 [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API) 的許多附加功能，以允許服務人員觸發通知。
 
 > [!NOTE]
 > 要了解有關在自己的應用程序中使用通知的更多信息，請閱讀 [Using the Notifications API](/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API)。

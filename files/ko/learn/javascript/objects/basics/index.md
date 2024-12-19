@@ -38,7 +38,7 @@ slug: Learn/JavaScript/Objects/Basics
 
 객체는 관련된 데이터와 함수(일반적으로 여러 데이터와 함수로 이루어지는데, 객체 안에 있을 때는 보통 프로퍼티와 메소드라고 부릅니다)의 집합입니다. 예제를 통해서 실제 객체가 무엇인지 알아보도록 합시다.
 
-시작하기에 앞서, [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 파일의 복사본을 로컬 환경에 만듭니다. 이 파일은 우리가 작성한 소스코드를 포함하는 작은 {{HTMLElement("script")}} 요소를 포함하고 있습니다. 우리는 기본 객체 문법을 탐구하기 위한 기반으로 이 파일을 사용할 것입니다. 예제를 제대로 따라하려면 반드시 [개발자 도구 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console)을 열어두고, 몇몇 명령어를 직접 입력할 준비가 되어있어야 합니다.
+시작하기에 앞서, [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 파일의 복사본을 로컬 환경에 만듭니다. 이 파일은 우리가 작성한 소스코드를 포함하는 작은 {{HTMLElement("script")}} 요소를 포함하고 있습니다. 우리는 기본 객체 문법을 탐구하기 위한 기반으로 이 파일을 사용할 것입니다. 예제를 제대로 따라하려면 반드시 [개발자 도구 JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console)을 열어두고, 몇몇 명령어를 직접 입력할 준비가 되어있어야 합니다.
 
 여타 JavaScript 의 요소들과 마찬가지로, 객체를 생성하는 것은 변수를 정의하고 초기화하는 것으로 시작합니다. 아래의 JavaScript 코드를 oojs.html 파일의 script tag 사이에 입력하고 저장 한 후, 리로드 해보세요.
 
@@ -46,7 +46,7 @@ slug: Learn/JavaScript/Objects/Basics
 var person = {};
 ```
 
-이제 브라우저의 [JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console) 을 열고 `person`을 입력 한 다음 <kbd>Enter</kbd>/<kbd>Return</kbd>을 누르세요. 아래 줄 중 하나와 유사한 결과가 표시됩니다.
+이제 브라우저의 [JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) 을 열고 `person`을 입력 한 다음 <kbd>Enter</kbd>/<kbd>Return</kbd>을 누르세요. 아래 줄 중 하나와 유사한 결과가 표시됩니다.
 
 ```js
 [object Object]
@@ -253,7 +253,7 @@ greeting: function() {
 }
 ```
 
-아마도 "this" 가 뭔지 의아하실 것입니다. `this` 키워드는 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킵니다. 위의 예제에서 `this` 는 `person` 객체와 동일합니다. 그럼 왜 직접 `person` 객체를 쓰지 않은걸까요? 앞으로 보게될 [입문자를 위한 객체 지향 JavaScript](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS) 문서에서 우리가 생성자를 공부하게 될 때, 혹은 그것 말고도 기타 등등의 상황에서 `this` 는 매우 유용하게 사용됩니다. 이 this 라는 녀석은 객체 멤버의 컨텍스트가 바뀌는 경우에도 언제나 정확한 값을 사용하게 해줍니다(예를 들어, 두개의 다른 `person` 객체가 각각 다른 이름으로 인스턴스로 생성된 상태에서 인사말을 출력하기 위해 객체의 name 을 참조해야 한다고 생각해보세요).
+아마도 "this" 가 뭔지 의아하실 것입니다. `this` 키워드는 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킵니다. 위의 예제에서 `this` 는 `person` 객체와 동일합니다. 그럼 왜 직접 `person` 객체를 쓰지 않은걸까요? 앞으로 보게될 [입문자를 위한 객체 지향 JavaScript](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript) 문서에서 우리가 생성자를 공부하게 될 때, 혹은 그것 말고도 기타 등등의 상황에서 `this` 는 매우 유용하게 사용됩니다. 이 this 라는 녀석은 객체 멤버의 컨텍스트가 바뀌는 경우에도 언제나 정확한 값을 사용하게 해줍니다(예를 들어, 두개의 다른 `person` 객체가 각각 다른 이름으로 인스턴스로 생성된 상태에서 인사말을 출력하기 위해 객체의 name 을 참조해야 한다고 생각해보세요).
 
 간략화된 person 객체를 가지고 설명을 좀 해보겠습니다.
 

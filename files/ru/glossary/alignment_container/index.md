@@ -9,4 +9,4 @@ slug: Glossary/Alignment_Container
 
 ## Дополнительные ресурсы
 
-- [Выравнивание блоков в CSS](/ru/docs/Web/CSS/CSS_Box_Alignment)
+- [Выравнивание блоков в CSS](/ru/docs/Web/CSS/CSS_box_alignment)

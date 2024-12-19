@@ -29,7 +29,7 @@ localeCompare(chaineAComparer, locales, options);
 
   - : Ces arguments permettent d'adapter le comportement de la fonction pour que les applications puissent indiquer la locale dont les conventions doivent être utilisées. Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale et le format de la chaîne qui est renvoyée dépendent entièrement de l'implémentation.
 
-    Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.
+    Voir [la page du constructeur `Intl.Collator()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) pour plus de détails sur ces paramètres et leur utilisation.
 
 ### Valeur de retour
 
@@ -52,7 +52,7 @@ Cette méthode renvoie&nbsp;:
 
 ## Performances
 
-Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) et d'utiliser la fonction fournie par la propriété [`compare`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare).
+Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier de grands tableaux, il est préférable de créer un objet [`Intl.Collator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator) et d'utiliser la fonction fournie par la propriété [`compare`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare).
 
 ## Exemples
 

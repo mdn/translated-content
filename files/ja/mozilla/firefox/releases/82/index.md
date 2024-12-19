@@ -14,7 +14,7 @@ slug: Mozilla/Firefox/Releases/82
 
 ### 開発者ツール
 
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) を使用して [server-sent events を調査できる](/ja/docs/Tools/Network_Monitor/Inspecting_server-sent_events) ようになりました ([Firefox バグ 1640857](https://bugzil.la/1640857))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) を使用して [server-sent events を調査できる](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_server-sent_events/index.html) ようになりました ([Firefox バグ 1640857](https://bugzil.la/1640857))。
 - ネットワークモニターの*メッセージ*パネルを*応答*パネルに統合しました。メッセージ (例えば WebSockets や server-sent events) を応答の一覧で確認できます ([Firefox バグ 1636421](https://bugzil.la/1636421))。
 
 ### HTML

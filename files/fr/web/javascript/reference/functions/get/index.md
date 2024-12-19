@@ -118,7 +118,7 @@ Cet exemple est utilisé dans le code de Firefox, notamment dans le code du modu
 
 ### `get` ou `defineProperty` ?
 
-Bien que le mot-clé `get` et la méthode {{jsxref("Object.defineProperty()")}} aient des résultats similaires, il subsiste une différence lorsqu'on utilise [les classes](/fr/docs/Web/JavaScript/Reference/Instructions/class).
+Bien que le mot-clé `get` et la méthode {{jsxref("Object.defineProperty()")}} aient des résultats similaires, il subsiste une différence lorsqu'on utilise [les classes](/fr/docs/Web/JavaScript/Reference/Statements/class).
 
 Lorsqu'on utilise `get`, la propriété sera définie sur le prototype de l'objet. Avec {{jsxref("Object.defineProperty()")}}, la propriété sera définie sur l'instance à laquelle la méthode s'applique.
 
@@ -150,9 +150,9 @@ console.log(
 
 ## Voir aussi
 
-- [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set)
+- [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Définir des accesseurs et mutateurs](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters), un chapitre du Guide JavaScript
+- [Définir des accesseurs et mutateurs](/fr/docs/Web/JavaScript/Guide/Working_with_objects#d.c3.a9finir_des_getters_et_setters), un chapitre du Guide JavaScript

@@ -23,7 +23,7 @@ regexp[Symbol.matchAll](str);
 
 ### Valeur de retour
 
-Un [itérateur](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
+Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators).
 
 ## Description
 
@@ -54,7 +54,7 @@ console.log(Array.from(resultat, (x) => x[0]));
 
 ### Utiliser `@@matchAll` dans une sous-classe
 
-Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators)).
+Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)).
 
 ```js
 class MaRegExp extends RegExp {

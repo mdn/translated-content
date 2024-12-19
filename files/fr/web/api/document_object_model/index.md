@@ -375,4 +375,4 @@ Voici l'API du DOM pour les types de donnée utilisés pour les propriétés et 
 
 ## Voir aussi
 
-- [Exemples appliqués pour le DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko/Exemples)
+- [Exemples appliqués pour le DOM](/fr/docs/Web/API/Document_Object_Model/Examples)

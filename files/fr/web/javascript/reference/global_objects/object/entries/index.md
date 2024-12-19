@@ -91,7 +91,7 @@ console.log(map); // Map { toto: "truc", machin: 42 }
 
 ### Parcourir un objet
 
-En utilisant [la décomposition des tableaux](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition#Décomposition_d'un_tableau), on peut simplement parcourir les différentes propriétés d'un objet :
+En utilisant [la décomposition des tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#décomposition_d'un_tableau), on peut simplement parcourir les différentes propriétés d'un objet :
 
 ```js
 const obj = { toto: "truc", bidule: 42 };
@@ -131,7 +131,7 @@ if (!Object.entries) {
 
 ## Voir aussi
 
-- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

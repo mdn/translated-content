@@ -104,5 +104,5 @@ CSS 2.1 に存在する規則に加えて、新しい水準の CSS では、ブ�
 
 - [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
 - _[通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - レイアウトの学習
-- [インライン要素](/ja/docs/Web/HTML/Inline_elements)
-- [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)
+- [インライン要素](/ja/docs/Glossary/Inline-level_content)
+- [ブロックレベル要素](/ja/docs/Glossary/Block-level_content)

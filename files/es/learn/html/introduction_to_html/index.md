@@ -11,7 +11,7 @@ En su corazón, {{glossary("HTML")}} es un lenguaje muy sencillo compuesto de {{
 >
 > Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 >
-> [Empieza aquí](/es/docs/Learn/Front-end_web_developer)
+> [Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Prerrequisitos
 

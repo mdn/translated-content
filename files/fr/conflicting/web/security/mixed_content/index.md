@@ -4,13 +4,13 @@ slug: conflicting/Web/Security/Mixed_content
 original_slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 ---
 
-À partir de [Firefox 23](/fr/docs/Mozilla/Firefox/Releases/23), Firefox bloque [le contenu mixte actif](/fr/docs/Security/Mixed_content#contenu_mixte_actif) par défaut. Cela suit une pratique adoptée par Internet Explorer (depuis IE 9) et [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
+À partir de [Firefox 23](/fr/docs/Mozilla/Firefox/Releases/23), Firefox bloque [le contenu mixte actif](/fr/docs/Web/Security/Mixed_content#contenu_mixte_actif) par défaut. Cela suit une pratique adoptée par Internet Explorer (depuis IE 9) et [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
 
 Cette page explique les sujets à connaître à ce sujet pour le développement web.
 
 ## Votre site peut être cassé avec du contenu mixte
 
-Si les pages de votre site web sont servies avec HTTPS, [tout le contenu mixte actif](/fr/docs/Security/Mixed_content#contenu_mixte_actif) servi avec HTTP sur ces pages sera bloqué par défaut. Par conséquent, votre site web pourra apparaître comme cassé pour les personnes le visitant (les <i lang="en">iframes</i> pouvant ne pas charger par exemple). [Le contenu mixte passif](/fr/docs/Security/Mixed_content#contenu_mixte_passif_daffichage) est affiché par défaut, mais les personnes peuvent paramétrer leur navigateur pour également bloquer ce type de contenu.
+Si les pages de votre site web sont servies avec HTTPS, [tout le contenu mixte actif](/fr/docs/Web/Security/Mixed_content#contenu_mixte_actif) servi avec HTTP sur ces pages sera bloqué par défaut. Par conséquent, votre site web pourra apparaître comme cassé pour les personnes le visitant (les <i lang="en">iframes</i> pouvant ne pas charger par exemple). [Le contenu mixte passif](/fr/docs/Web/Security/Mixed_content#contenu_mixte_passif_daffichage) est affiché par défaut, mais les personnes peuvent paramétrer leur navigateur pour également bloquer ce type de contenu.
 
 On notera que le blocage d'un tel contenu mixte se produit pour Chrome. Aussi, si votre site web fonctionne en HTTPS pour ce navigateur, il fonctionnera également pour Firefox pour les aspects de blocage de contenu mixte.
 

@@ -27,7 +27,7 @@ slug: Glossary/Caret
 - [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)
 - [`<input type="password">`](/ja/docs/Web/HTML/Element/input/password)
 - [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/ja/docs/Web/HTML/Element/input/datetime), and [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time), [`<input type="datetime">`](/ja/docs/Web/HTML/Element/input/datetime-local), and [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)
 - [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number), [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
 - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel), and [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}

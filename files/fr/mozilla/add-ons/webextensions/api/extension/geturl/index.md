@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 {{AddonSidebar}}
 
 > [!WARNING]
-> Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).
+> Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL).
 
 Convertit un chemin relatif dans le répertoire d'installation d'une extension en une URL complète.
 

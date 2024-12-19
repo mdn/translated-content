@@ -6,15 +6,15 @@ slug: Web/JavaScript/Reference/Strict_mode
 {{JsSidebar("More")}}
 
 > [!NOTE]
-> 有时你会看到非严格模式，被称为“**[sloppy mode](/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
+> 有时你会看到非严格模式，被称为“**[sloppy mode](/zh-CN/docs/Glossary/Sloppy_mode)**”。这不是一个官方术语，但以防万一，你应该意识到这一点。
 
-[ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm)的**严格模式**是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。不支持严格模式与支持严格模式的浏览器在执行严格模式代码时会采用不同行为。所以在没有对运行环境展开**特性测试**来验证对于严格模式相关方面支持的情况下，就算采用了严格模式也不一定会取得预期效果。严格模式代码和非严格模式代码可以共存，因此项目脚本可以渐进式地采用严格模式。严格模式对正常的 JavaScript 语义做了一些更改。
+[ECMAScript 5](https://www.ecma-international.org/publications/standards/Ecma-262.htm)的**严格模式**是采用具有限制性 JavaScript 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（sloppy）模式。严格模式不仅仅是一个子集：它的产生是为了形成与正常代码不同的语义。不支持严格模式与支持严格模式的浏览器在执行严格模式代码时会采用不同行为。所以在没有对运行环境展开**特性测试**来验证对于严格模式相关方面支持的情况下，就算采用了严格模式也不一定会取得预期效果。严格模式代码和非严格模式代码可以共存，因此项目脚本可以渐进式地采用严格模式。严格模式对正常的 JavaScript 语义做了一些更改。
 
 1. 严格模式通过**抛出错误**来消除了一些原有**静默错误**。
 2. 严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下**运行得更快**。
 3. 严格模式**禁用了**在 ECMAScript 的未来版本中可能会定义的一些语法。
 
-如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)。
+如果你想改变你的代码，让其工作在具有限制性 JavaScript 环境中，请参阅[转换成严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)。
 
 ## 调用严格模式
 
@@ -72,7 +72,7 @@ mistypeVarible = 17;
 
 #### 给对象属性赋值会失败
 
-第二，严格模式会使引起静默失败（silently fail，注：不报错也没有任何效果）的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作（给不可写属性赋值，给只读属性（getter-only）赋值，给[不可扩展对象](/zh-CN/JavaScript/Reference/Global_Objects/Object/preventExtensions)的新属性赋值）都会抛出异常：
+第二，严格模式会使引起静默失败（silently fail，注：不报错也没有任何效果）的赋值操作抛出异常。例如，`NaN` 是一个不可写的全局变量。在正常模式下，给 `NaN` 赋值不会产生任何作用; 开发者也不会受到任何错误反馈。但在严格模式下，给 `NaN` 赋值会抛出一个异常。任何在正常模式下引起静默失败的赋值操作（给不可写属性赋值，给只读属性（getter-only）赋值，给[不可扩展对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)的新属性赋值）都会抛出异常：
 
 ```js
 "use strict";
@@ -296,7 +296,7 @@ function privilegedInvoker() {
 privilegedInvoker();
 ```
 
-第三，严格模式下的`arguments`不会再提供访问与调用这个函数相关的变量的途径。在一些旧时的 ECMAScript 实现中`arguments.caller`曾经是一个对象，里面存储的属性指向那个函数的变量。这是一个[安全隐患](http://stuff.mit.edu/iap/2008/facebook/)，因为它通过函数抽象打破了本来被隐藏起来的保留值；它同时也是引起大量优化工作的原因。出于这些原因，现在的浏览器没有实现它。但是因为它这种历史遗留的功能，`arguments.caller`在严格模式下同样是一个不可被删除的属性，在赋值或者取值时会报错：
+第三，严格模式下的`arguments`不会再提供访问与调用这个函数相关的变量的途径。在一些旧时的 ECMAScript 实现中`arguments.caller`曾经是一个对象，里面存储的属性指向那个函数的变量。这是一个[安全隐患](https://stuff.mit.edu/iap/2008/facebook/)，因为它通过函数抽象打破了本来被隐藏起来的保留值；它同时也是引起大量优化工作的原因。出于这些原因，现在的浏览器没有实现它。但是因为它这种历史遗留的功能，`arguments.caller`在严格模式下同样是一个不可被删除的属性，在赋值或者取值时会报错：
 
 ```js
 "use strict";
@@ -331,7 +331,7 @@ function fun(static) { 'use strict'; } // !!!
 
 两个针对 Mozilla 开发的警告：第一，如果你的 JavaScript 版本在 1.7 及以上（你的 chrome 代码或者你正确使用了`<script type="">`）并且开启了严格模式的话，因为`let`和`yield`是最先引入的关键字，所以它们会起作用。但是网络上用`<script src="">`或者`<script>...</script>`加载的代码，`let`或者`yield`都不会作为关键字起作用；第二，尽管 ES5 无条件的保留了`class`、`enum`、`export`、`extends`、`import`和`super`关键字，在 Firefox 5 之前，Mozilla 仅仅在严格模式中保留了它们。
 
-第二，[严格模式禁止了不在脚本或者函数层面上的函数声明](http://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)。在浏览器的普通代码中，在“所有地方”的函数声明都是合法的。这并不在 ES5 规范中（甚至是 ES3）！这是一种针对不同浏览器中不同语义的一种延伸。未来的 ECMAScript 版本很有希望制定一个新的，针对不在脚本或者函数层面进行函数声明的语法。[在严格模式下禁止这样的函数声明](http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls)对于将来 ECMAScript 版本的推出扫清了障碍：
+第二，[严格模式禁止了不在脚本或者函数层面上的函数声明](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/)。在浏览器的普通代码中，在“所有地方”的函数声明都是合法的。这并不在 ES5 规范中（甚至是 ES3）！这是一种针对不同浏览器中不同语义的一种延伸。未来的 ECMAScript 版本很有希望制定一个新的，针对不在脚本或者函数层面进行函数声明的语法。[在严格模式下禁止这样的函数声明](http://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls)对于将来 ECMAScript 版本的推出扫清了障碍：
 
 ```js
 "use strict";

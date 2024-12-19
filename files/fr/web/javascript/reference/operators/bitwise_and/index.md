@@ -65,5 +65,5 @@ Utiliser un ET binaire sur n'importe quel nombre `x` d'une part et `0` d'autre p
 
 ## Voir aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [L'opérateur ET binaire et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

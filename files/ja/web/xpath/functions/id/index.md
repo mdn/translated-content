@@ -25,7 +25,7 @@ id(expression )
 
 ### 注
 
-- どの属性が ID として扱われるかは、XML 文書の DTD によって決定されます。 [XPath 1.0 5.2.1](http://www.w3.org/TR/xpath#unique-id) を参照してください。
+- どの属性が ID として扱われるかは、XML 文書の DTD によって決定されます。 [XPath 1.0 5.2.1](https://www.w3.org/TR/xpath#unique-id) を参照してください。
 
 ### 定義
 

@@ -30,7 +30,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 7.5](http://www.w3.org/TR/xslt#copying).
+[XSLT 1.0, section 7.5](https://www.w3.org/TR/xslt#copying).
 
 ### Support Gecko
 

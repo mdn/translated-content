@@ -25,7 +25,7 @@ Herramientas como [HTML Tidy](http://tidy.sourceforge.net/) pueden quitar autom�
 
 ### Minimizar el número de archivos
 
-Reducir el número de archivos referentes en una pagina web baja el número de conexiones [HTTP](/es/docs/HTTP) requeridas para bajar la página.
+Reducir el número de archivos referentes en una pagina web baja el número de conexiones [HTTP](/es/docs/Web/HTTP) requeridas para bajar la página.
 
 Dependiendo de la configuración de cache de un navegador, puede enviar una petición "If-Modified-Since" al servidor web para cada "CSS", JavaScript o archivo de imágen, preguntando si el archivo ha sido modificado desde la ultima vez que fué descargado.
 

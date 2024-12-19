@@ -43,7 +43,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 修復語法錯誤
 
-在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
+在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
 
 1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
 2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
@@ -95,7 +95,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
    console.log(lowOrHi);
    ```
 
-   > **備註：** [`console.log()`](/zh-TW/docs/Web/API/console/log)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
+   > **備註：** [`console.log()`](/zh-TW/docs/Web/API/console/log_static)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
 
 7. 存檔並重整，你應該會在主控台中看到`console.log()`輸出的結果。![](console-log-output.png)在這個時間點，`lowOrHi`的值是`null`。所以很明顯的，第 48 行一定出了什麼問題。
 8. 讓我們思考一下發生了什麼問題。第 48 行呼叫了 [`document.querySelector()`](/zh-TW/docs/Web/API/Document/querySelector) 方法來透過 CSS 選擇器取得一個 HTML 元素參照。打開我們的網頁看看我們想要取得的段落元素：
@@ -188,7 +188,7 @@ var userGuess === Number(guessField.value);
 此時程式碼會回報錯誤，因為瀏覽器會認為你想設定不同的東西；我們需要確保自己沒有誤用、混用指派運算子(`=`)：用於賦予變數值跟嚴格比較運算子(`===`)：用於比較兩個值是否完全相等，並回覆`true`/`false`布林值。
 
 > [!NOTE]
-> 更多細節請參考右方關於*缺少分號的語法錯誤*文章頁面： [SyntaxError: missing ; before statement](/zh-TW/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) 。
+> 更多細節請參考右方關於*缺少分號的語法錯誤*文章頁面： [SyntaxError: missing ; before statement](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_token) 。
 
 ### 無論輸入什麼，程式總是顯示「你贏了」
 
@@ -244,7 +244,7 @@ function checkGuess( {
 對於這些錯誤，先思考我們在範例中是如何逐項解決的。當出現錯誤資訊時，先查看該行程式碼行號，按照行號到該行程式碼察看，你可以觀察哪裡出錯了。請記住，錯誤不一定出現在該行程式碼上，而且錯誤原因也可能和我們文章上描述的問題不同！
 
 > [!NOTE]
-> 有關這些錯誤的詳細資訊，可參閱[SyntaxError: Unexpected token](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_token)與[SyntaxError: unterminated string literal](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal)
+> 有關這些錯誤的詳細資訊，可參閱[SyntaxError: Unexpected token](/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_token)與[SyntaxError: unterminated string literal](/zh-TW/docs/Web/JavaScript/Reference/Errors/String_literal_EOL)
 
 ## 小結
 

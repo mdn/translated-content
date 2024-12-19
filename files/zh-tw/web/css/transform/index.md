@@ -110,7 +110,7 @@ div {
 
 ### 更多範例
 
-請參考[使用 CSS transform](/zh-TW/docs/Web/Guide/CSS/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 的更多範例。
+請參考[使用 CSS transform](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 的更多範例。
 
 ## 規範
 
@@ -122,6 +122,6 @@ div {
 
 ## 參見
 
-- [使用 CSS transform](/zh-TW/docs/CSS/Using_CSS_transforms)
+- [使用 CSS transform](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type
 - A cross-browser 2D [transform plugin for jQuery](https://louisremi.github.io/jquery.transform.js/)

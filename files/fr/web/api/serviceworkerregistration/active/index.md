@@ -32,8 +32,8 @@ Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un Ã
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Utilisation des web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utilisation des web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

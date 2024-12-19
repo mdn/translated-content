@@ -12,7 +12,7 @@ slug: Learn/HTML/Howto
 HTML 文件的最基本結構應用。如果你是 HTML 新手，就先從這裡開始看。
 
 - [如何建立基本 HTML 文件](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)
-- [如何有邏輯地分割網頁](/zh-TW/docs/Learn/HTML/Howto/Divide_a_webpage_into_logical_sections)
+- [如何有邏輯地分割網頁](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
 - [如何建立良好的標題段落結構](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs)
 
 ### 基本文字語法
@@ -61,7 +61,7 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 表單是一種用來把網頁資料傳送到網路伺服器的複雜 HTML 結構。我們鼓勵你讀一遍我們對此的[完整指南](/zh-TW/docs/Learn/Forms)。你可以從以下文章開始：
 
-- [如何建立簡單的表單](/zh-TW/docs/Web/Guide/HTML/Forms/My_first_HTML_form)
+- [如何建立簡單的表單](/zh-TW/docs/Learn/Forms/Your_first_form)
 - [如何組織表單的架構](/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form)
 
 ### 表格訊息

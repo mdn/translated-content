@@ -97,5 +97,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## Смотрите также
 
 - {{cssxref("-moz-background-inline-policy")}}
-- [Использование градиентов](/ru/docs/CSS/Using_CSS_gradients)
-- [Несколько backgrounds](/ru/docs/CSS/Multiple_backgrounds)
+- [Использование градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Несколько backgrounds](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

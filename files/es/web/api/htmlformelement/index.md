@@ -7,7 +7,7 @@ slug: Web/API/HTMLFormElement
 
 ### Interfaz del elemento formulario de HTML
 
-Los elementos `FORM` comparten todas las propiedades y métodos de los otros elementos HTML descritos en el capítulo del [elemento](/es/DOM/element). También tienen la interfaz especial [HTMLFormElement](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-40002357).
+Los elementos `FORM` comparten todas las propiedades y métodos de los otros elementos HTML descritos en el capítulo del [elemento](/es/docs/Web/API/Element). También tienen la interfaz especial [HTMLFormElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-40002357).
 
 Esta interfaz proporciona métodos para crear y modificar los elementos `FORM` usando el DOM. El siguiente ejemplo muestra como crear un nuevo formulario, como modificar sus atributos y enviarlo:
 
@@ -77,28 +77,28 @@ Además, el siguiente documento HTML muestra como se puede extraer información 
 
 ### Propiedades
 
-- [form.elements](/es/DOM/form.elements) (todos los elementos del formulario)
+- [form.elements](/es/docs/Web/API/HTMLFormElement/elements) (todos los elementos del formulario)
   - : `.elements` devuelve una colección de todos los controles que hay en el formulario `FORM`.
-- [form.length](/es/DOM/form.length)
+- [form.length](/es/docs/Web/API/HTMLFormElement/length)
   - : `.length` devuelve la cantidad de controles que hay en el formulario
-- [form.name](/es/DOM/form.name)
+- [form.name](/es/docs/Web/API/HTMLFormElement/name)
   - : `.name` devuelve el nombre del formulario actual en forma de cadena.
-- [form.acceptCharset](/es/DOM/form.acceptCharset)
+- [form.acceptCharset](/es/docs/Web/API/HTMLFormElement/acceptCharset)
   - : `.acceptCharset` devuelve una lista del conjunto de caracteres soportados para el actual elemento `FORM`.
-- [form.action](/es/DOM/form.action)
+- [form.action](/es/docs/Web/API/HTMLFormElement/action)
   - : `.action` obtiene/configura la acción del elemento `FORM`.
-- [form.enctype](/es/DOM/form.enctype)
+- [form.enctype](/es/docs/Web/API/HTMLFormElement/enctype)
   - : `.enctype` gets/sets the content type of the `FORM` element.
-- [form.encoding](/es/DOM/form.encoding)
+- [form.encoding](/es/docs/Web/API/HTMLFormElement/encoding)
   - : `.encoding` gets/sets the content type of the `FORM` element.
-- [form.method](/es/DOM/form.method)
+- [form.method](/es/docs/Web/API/HTMLFormElement/method)
   - : `.method` obtiene/configura el método HTTP utilizado para enviar el formulario.
-- [form.target](/es/DOM/form.target)
+- [form.target](/es/docs/Web/API/HTMLFormElement/target)
   - : `.target` obtiene/configura el objetivo de la acción (i.e., the frame to render its output in).
 
 ### Métodos
 
-- [form.submit](/es/DOM/form.submit)
+- [form.submit](/es/docs/Web/API/HTMLFormElement/submit)
   - : submit() manda el formulario.
-- [form.reset](/es/DOM/form.reset)
+- [form.reset](/es/docs/Web/API/HTMLFormElement/reset)
   - : reset() restaura el formulario, lo devuelve al estado inicial.

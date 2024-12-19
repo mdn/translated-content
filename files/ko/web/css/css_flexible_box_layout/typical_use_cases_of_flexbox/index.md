@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 
 ### 항목 내부에 공간 분배
 
-탐색 메뉴를 위한 다른 패턴은 항목 사이에 공간을 만드는 것이 아니라 항목 자체 내에 사용 가능한 공간을 분배하는 것입니다. 이 경우, [주축을 따라 가변 항목의 비율 제어](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)에서 설명된대로 가변 속성을 사용하여 항목이 서로 비례하여 확대 및 축소되도록 합니다.
+탐색 메뉴를 위한 다른 패턴은 항목 사이에 공간을 만드는 것이 아니라 항목 자체 내에 사용 가능한 공간을 분배하는 것입니다. 이 경우, [주축을 따라 가변 항목의 비율 제어](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)에서 설명된대로 가변 속성을 사용하여 항목이 서로 비례하여 확대 및 축소되도록 합니다.
 
 모든 탐색 메뉴 항목의 너비를 동일하게 하려면 `flex: auto`를 사용하면 됩니다. 그것은 `flex: 1 1 auto`의 약칭으로 모든 항목이 자동이란 가변 기반에 따라 확대되거나 축소됩니다. 여기서 자동이란 항목이 길수록 더 많은 공간이 생긴다는 말입니다.
 
@@ -100,7 +100,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 }
 ```
 
-예를 들어 이미지가 있는 쪽을 `flex: 1`로 설정하고 콘텐츠 쪽을 `flex: 3`으로 설정하는 등 각면에 서로 다른 {{cssxref("flex-grow")}}를 부여할 수 있습니다. 즉, `flex-basis`를 `0`으로 사용하지만 해당 공간을 `flex-grow` 인수에 맞춰 서로 다르게 공간을 할당합니다. 그런 용도로 사용하는 가변 속성은 [주축을 따라 가변 항목의 비율 제어](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax) 안내서에서 자세히 설명되어 있습니다.
+예를 들어 이미지가 있는 쪽을 `flex: 1`로 설정하고 콘텐츠 쪽을 `flex: 3`으로 설정하는 등 각면에 서로 다른 {{cssxref("flex-grow")}}를 부여할 수 있습니다. 즉, `flex-basis`를 `0`으로 사용하지만 해당 공간을 `flex-grow` 인수에 맞춰 서로 다르게 공간을 할당합니다. 그런 용도로 사용하는 가변 속성은 [주축을 따라 가변 항목의 비율 제어](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis) 안내서에서 자세히 설명되어 있습니다.
 
 ```css
 .media .content {

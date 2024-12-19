@@ -22,7 +22,7 @@ segment(input);
 
 ### Valeur de retour
 
-Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) qui contient les segments de la chaîne fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
+Un nouvel objet itérable [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) qui contient les segments de la chaîne fournie en entrée et dont le découpage suit la locale et la granularité fournies par le segmenteur.
 
 ## Exemples
 

@@ -18,7 +18,7 @@ Promise.all(iterable);
 ### 매개변수
 
 - `iterable`
-  - : {{jsxref("Array")}}와 같이 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)한(iterable) 객체.
+  - : {{jsxref("Array")}}와 같이 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)한(iterable) 객체.
 
 ### 반환 값
 

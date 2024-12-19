@@ -7,11 +7,11 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 
 Enquanto o [HTML](/pt-BR/docs/Web/HTML) é usado para armazenar o conteúdo e a formatação de uma página web e o [CSS](/pt-BR/docs/Web/CSS) define a formatação e a aparência, o [JavaScript](/pt-BR/docs/Web/JavaScript) é usado para adicionar interatividade a uma página web e criar aplicações web ricas.
 
-No entanto, o termo genérico "JavaScript" tal como é entendido no contexto do navegador contém vários elementos bem diferentes. Um deles é a linguagem principal (ECMAScript), outra é a coleção das [Web APIs](/pt-BR/docs/Web/Reference/API), incluindo o DOM (Document Object Model).
+No entanto, o termo genérico "JavaScript" tal como é entendido no contexto do navegador contém vários elementos bem diferentes. Um deles é a linguagem principal (ECMAScript), outra é a coleção das [Web APIs](/pt-BR/docs/Web/API), incluindo o DOM (Document Object Model).
 
 ## JavaScript, a linguagem principal (ECMAScript)
 
-O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/JavaScript/Language_Resources). A última versão da especificação é [ECMAScript 5.1](https://ecma-international.org/ecma-262/5.1/).
+O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview). A última versão da especificação é [ECMAScript 5.1](https://ecma-international.org/ecma-262/5.1/).
 
 Este núcleo da linguagem é também usado em ambientes fora do navegador, por exemplo em [node.js](https://nodejs.org/).
 
@@ -65,7 +65,7 @@ Procurando pelo [`Document`](/pt-BR/docs/Web/API/Document) object, [`Window`](/p
 
 ## Outras APIs de destaque
 
-- As funções [`setTimeout`](/pt-BR/docs/Web/API/setTimeout) e [`setInterval`](/pt-BR/docs/Web/API/setInterval) foram inicialmente especificadas na interface [`Window`](https://www.whatwg.org/html/#window) no Padrão HTML.
+- As funções [`setTimeout`](/pt-BR/docs/Web/API/Window/setTimeout) e [`setInterval`](/pt-BR/docs/Web/API/Window/setInterval) foram inicialmente especificadas na interface [`Window`](https://www.whatwg.org/html/#window) no Padrão HTML.
 - [XMLHttpRequest.](https://dev.w3.org/2006/webapi/XMLHttpRequest-2/) Possibilita enviar requisições HTTP assíncronas.
 - A [Fetch API](https://fetch.spec.whatwg.org/) fornece uma abstração mais ergonômica para requisições de rede.
 - [CSS Object Model.](https://dev.w3.org/csswg/cssom/) O CSSOM é utilizado para abstrair regras CSS como objetos
@@ -74,7 +74,7 @@ Procurando pelo [`Document`](/pt-BR/docs/Web/API/Document) object, [`Window`](/p
 - [Canvas 2D Context.](https://www.whatwg.org/html/#2dcontext) API de ilustração (desenho) para o elemento canvas.
 - A [interface WebAssembly](https://webassembly.github.io/spec/js-api) fornece utilitários para comunicação entre código JavaScript e módulos [WebAssembly](/pt-BR/docs/WebAssembly).
 
-Ambientes sem navegador (como Node.js) geralmente não têm APIs DOM — porque não interagem com um documento — mas ainda assim implementam muitas APIs da Web, como [`fetch()`](/pt-BR/docs/Web/API/fetch) e [`setTimeout()`](/pt-BR/docs/Web/API/setTimeout).
+Ambientes sem navegador (como Node.js) geralmente não têm APIs DOM — porque não interagem com um documento — mas ainda assim implementam muitas APIs da Web, como [`fetch()`](/pt-BR/docs/Web/API/Window/fetch) e [`setTimeout()`](/pt-BR/docs/Web/API/Window/setTimeout).
 
 ### Suporte de Navegadores
 

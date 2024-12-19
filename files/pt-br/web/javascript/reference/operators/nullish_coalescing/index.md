@@ -142,4 +142,4 @@ console.log(valC); // 42
 
 - [The optional chaining operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [The logical OR (`||`) operator](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>)
-- [Default parameters in functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Parametros_Predefinidos)
+- [Default parameters in functions](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters)

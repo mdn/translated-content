@@ -141,7 +141,7 @@ Al mirar esa página, descubrirás que, además de eliminar las viñetas de la l
 
 Hasta ahora, hemos utilizado elementos cuyo nombre se basa en el nombre de elemento que reciben en HTML. Esto funciona siempre que se desee que todos los elementos de ese tipo tengan el mismo aspecto en el documento. La mayoría de las veces no es el caso, por lo que deberás encontrar una manera de seleccionar un subconjunto de los elementos sin que cambien los demás. La forma más común de hacer esto es añadir una clase al elemento HTML y determinarla.
 
-En tu documento HTML, añade al segundo elemento de la lista un [atributo de clase](/es/docs/Web/HTML/Atributos_Globales/class). Debería verse así:
+En tu documento HTML, añade al segundo elemento de la lista un [atributo de clase](/es/docs/Web/HTML/Global_attributes/class). Debería verse así:
 
 ```html
 <ul>
@@ -214,7 +214,7 @@ El ejemplo que encontrarás a continuación incluye las dos reglas anteriores. I
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
 > [!NOTE]
-> Como puedes ver, el CSS nos ofrece varias formas de seleccionar elementos, y hasta ahora solo hemos arañado la superficie. Examinaremos todos estos selectores y muchos más en los artículos correspondientes a [Selectores](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS) que encontrarás más adelante.
+> Como puedes ver, el CSS nos ofrece varias formas de seleccionar elementos, y hasta ahora solo hemos arañado la superficie. Examinaremos todos estos selectores y muchos más en los artículos correspondientes a [Selectores](/es/docs/Learn/CSS/Building_blocks/Selectors) que encontrarás más adelante.
 
 ## Dar formato según el estado
 

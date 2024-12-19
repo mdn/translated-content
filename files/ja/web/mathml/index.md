@@ -32,8 +32,8 @@ slug: Web/MathML
 - [W3C Validator](http://validator.w3.org)
 - [Mathzilla Firefox アドオンコレクション](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
 - [TeXZilla](https://github.com/fred-wang/TeXZilla) — Javascript で書かれた LaTeX から MathML へのコンバーター ([ライブデモ](http://fred-wang.github.io/TeXZilla/)、[Firefox アドオン](https://addons.mozilla.org/firefox/addon/texzilla/)、[ウェブページや JS プログラム内での使用](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla))
-- [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - LaTeX ドキュメントを HTML+MathML ウェブページへ変換
-- [MathJax](http://www.mathjax.org/) - 数式のためのクロスブラウザー JavaScript 表示エンジン。MathJax をネイティブ MathML で使用するには、[Mozilla アドオン](https://addons.mozilla.org/ja/firefox/addon/mathjax-native-mathml/)、[Safari 拡張](http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)、[GreaseMonkey スクリプト](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/) を試してください。
+- [LaTeXML](https://dlmf.nist.gov/LaTeXML/) - LaTeX ドキュメントを HTML+MathML ウェブページへ変換
+- [MathJax](https://www.mathjax.org/) - 数式のためのクロスブラウザー JavaScript 表示エンジン。MathJax をネイティブ MathML で使用するには、[Mozilla アドオン](https://addons.mozilla.org/ja/firefox/addon/mathjax-native-mathml/)、[Safari 拡張](http://fred-wang.github.io/mathjax-native-mathml-safari/mathjax-native-mathml.safariextz)、[GreaseMonkey スクリプト](https://openuserjs.org/scripts/fred.wang/MathJax_Native_MathML/) を試してください。
 
 ## 関連トピック
 
