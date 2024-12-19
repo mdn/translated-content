@@ -32,7 +32,7 @@ Math.acosh(x)
 
 ## 描述
 
-由於 `acosh()` 是 `Math` 的靜態方法，你必須使用 `Math.acosh()` 來呼叫它，而非呼叫你建立的 `Math` 物件的方法（`Math` 並非建構函式）。
+由於 `acosh()` 是 `Math` 的靜態方法，你必須使用 `Math.acosh()` 來呼叫它，而非呼叫你建立的 `Math` 物件的方法（`Math` 並非建構子）。
 
 ## 範例
 
