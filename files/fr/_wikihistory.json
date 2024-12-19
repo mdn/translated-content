@@ -625,10 +625,6 @@
     "modified": "2019-03-23T22:57:17.449Z",
     "contributors": ["loella16", "davidgourde", "vanz", "Goofy", "htindon"]
   },
-  "Glossary/DOS_attack": {
-    "modified": "2019-03-23T22:38:58.117Z",
-    "contributors": ["xdelatour"]
-  },
   "Glossary/DTMF": {
     "modified": "2019-03-23T22:03:28.745Z",
     "contributors": ["loella16"]
@@ -27230,6 +27226,10 @@
   "conflicting/Glossary/CORS-safelisted_response_header": {
     "modified": "2019-03-18T21:45:55.399Z",
     "contributors": ["loella16"]
+  },
+  "conflicting/Glossary/Denial_of_Service": {
+    "modified": "2019-03-23T22:38:58.117Z",
+    "contributors": ["xdelatour"]
   },
   "conflicting/Glossary/SLD": {
     "modified": "2019-01-16T21:52:29.757Z",

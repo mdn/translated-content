@@ -1,6 +1,7 @@
 ---
 title: Détournement de clic
-slug: Glossary/Clickjacking
+slug: Web/Security/Attacks/Clickjacking
+original_slug: Glossary/Clickjacking
 ---
 
 {{GlossarySidebar}}
