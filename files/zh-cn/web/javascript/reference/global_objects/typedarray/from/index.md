@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`TypedArray.from()`** 静态方法从[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)或可迭代对象创建一个新的类型化数组。此方法与 {{jsxref("Array.from()")}} 几乎相同。
+**`TypedArray.from()`** 静态方法从类数组对象或可迭代对象创建一个新的[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)。此方法与 {{jsxref("Array.from()")}} 几乎相同。
 
 {{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
 
@@ -18,7 +18,7 @@ TypedArray.from(arrayLike, mapFn)
 TypedArray.from(arrayLike, mapFn, thisArg)
 ```
 
-其中 `TypedArray` 是其中之一：
+其中 `TypedArray` 是以下类型之一：
 
 - {{jsxref("Int8Array")}}
 - {{jsxref("Uint8Array")}}
@@ -36,7 +36,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 ### 参数
 
 - `arrayLike`
-  - : 一个可迭代对象或类数组对象，用于转换为类型化数组。
+  - : 要转换为类型化数组的可迭代对象或类数组对象。
 - `mapFn` {{optional_inline}}
   - : 对类型化数组的每个元素调用的函数。如果提供了该函数，数组中要添加的每个值首先会传递给该函数，然后将 `mapFn` 的返回值添加到类型化数组中。该函数使用以下参数调用：
     - `element`
@@ -56,7 +56,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 
 {{jsxref("Array.from()")}} 和 `TypedArray.from()` 之间存在一些微妙的区别（注意：下面提到的 `this` 值是指调用 `TypedArray.from()` 时的 `this` 值，而不是用于调用 `mapFn` 的 `thisArg` 参数）：
 
-- 如果`TypedArray.from()` 的 `this` 值不是构造函数，`TypedArray.from()` 会抛出一个 {{jsxref("TypeError")}}，而 `Array.from()` 默认会创建一个新的 {{jsxref("Array")}}。
+- 如果 `TypedArray.from()` 的 `this` 值不是构造函数，`TypedArray.from()` 会抛出 {{jsxref("TypeError")}}，而 `Array.from()` 默认会创建一个新的 {{jsxref("Array")}}。
 - 由 `this` 构造的对象必须是一个 `TypedArray` 实例，而 `Array.from()` 允许其 `this` 值构造为任何对象。
 - 当 `source` 参数是一个迭代器时，`TypedArray.from()` 首先从迭代器中收集所有值，然后使用计数创建一个 `this` 实例，最后将值设置到该实例上。`Array.from()` 在接收到来自迭代器的每个值时设置其值，然后在最后设置其 `length`。
 - `TypedArray.from()` 使用 `[[Set]]`，而 `Array.from()` 使用 `[[DefineOwnProperty]]`。因此，在处理 {{jsxref("Proxy")}} 对象时，它调用 [`handler.set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set) 来创建新元素，而不是调用 [`handler.defineProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty)。
@@ -64,7 +64,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 
 ## 示例
 
-### 来自可迭代对象（Set）
+### 从可迭代对象（Set）
 
 ```js
 const s = new Set([1, 2, 3]);
@@ -72,7 +72,7 @@ Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
 ```
 
-### 来自字符串
+### 从字符串
 
 ```js
 Int16Array.from("123");
@@ -95,9 +95,9 @@ Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 
-### 在非 TypedArray 构造函数上调用 from() 方法
+### 在非 TypedArray 构造函数上调用 from()
 
-`from()` 方法的 `this` 值必须是一个返回 `TypedArray` 实例的构造函数。
+`from()` 的 `this` 值必须是一个返回 `TypedArray` 实例的构造函数。
 
 ```js
 function NotArray(len) {
