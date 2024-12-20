@@ -208,7 +208,7 @@ request.onupgradeneeded = function (event) {
 
 本例還創建一個稱為"name"的索引，"name"索引查找目標為資料的"name"屬性，且不設立其獨特旗標(unique 為 false)，同樣地，我們又呼叫[createIndex](</zh-TW/docs/Web/API/IDBObjectStore?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBObjectStore#createIndex()>)方法創建了一個"email"索引，不過"email"索引具備獨特旗標(unique 為 true)。雖然存在"name"索引，但資料不一定要含有"name"屬性，只是當搜索"name"索引時資料不會出現。
 
-接下來我們可以開始用 ssn 從物件存檔中取出資料，或是用索引找出資料(請參考[使用索引](/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB#.e4.bd.bf.e7.94.a8.e7.b4.a2.e5.bc.95))。
+接下來我們可以開始用 ssn 從物件存檔中取出資料，或是用索引找出資料（請參考[使用索引](#使用索引)）。
 
 ### 使用資料鍵產生器
 

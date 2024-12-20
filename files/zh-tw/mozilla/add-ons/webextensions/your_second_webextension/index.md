@@ -360,7 +360,7 @@ beastify/
 
 ## 透過命令行佈署
 
-你可以利用[web-ext](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)自動化暫時載入。
+你可以利用 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 自動化暫時載入。
 試試看:
 
 ```bash
