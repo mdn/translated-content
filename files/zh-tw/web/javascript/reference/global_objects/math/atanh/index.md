@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Math.atanh()`** 靜態方法返回一個數字的反雙曲正切值，也就是說，
+**`Math.atanh()`** 靜態方法回傳一個數字的反雙曲正切值，也就是說，
 
 <!-- prettier-ignore-start -->
 <math display="block">
@@ -28,13 +28,13 @@ Math.atanh(x)
 - `x`
   - : 一個介於 -1 和 1 之間的數字（包含邊界）。
 
-### 返回值
+### 回傳值
 
 `x` 的反雙曲正切值。如果 `x` 為 1，返回 {{jsxref("Infinity")}}。如果 `x` 為 -1，返回 `-Infinity`。如果 `x` 小於 -1 或大於 1，返回 {{jsxref("NaN")}}。
 
 ## 描述
 
-由於 `atanh()` 是 `Math` 的靜態方法，你必須使用 `Math.atanh()` 來呼叫它，而不是呼叫你所建立的 `Math` 物件的方法（`Math` 不是建構子）。
+由於 `atanh()` 是 `Math` 的靜態方法，你必須使用 `Math.atanh()` 來呼叫它，而非呼叫你所建立的 `Math` 物件的方法（`Math` 並非建構子）。
 
 ## 範例
 
