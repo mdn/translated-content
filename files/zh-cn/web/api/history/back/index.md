@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("History API")}}
 
-{{domxref("History")}} 接口的 **`back()`** 方法使浏览器在会话历史中返回一页。
+{{domxref("History")}} 接口的 **`back()`** 方法使浏览器在会话历史中后退一页。
 
-它的效果与调用 {{domxref("History.go", "history.go(-1)")}} 相同。如果没有上一页，此方法调用将无效。
+它的效果与调用 {{domxref("History.go", "history.go(-1)")}} 相同。如果没有上一页，此方法调用不执行任何操作。
 
 此方法是{{glossary("asynchronous", "异步")}}的。请添加一个监听器来监听 {{domxref("Window/popstate_event", "popstate")}} 事件，以便确定导航何时完成。
 
@@ -34,12 +34,12 @@ back()
 
 ## 示例
 
-以下简短示例会导致页面上的按钮导航回到会话历史记录中的上一页。
+以下简短示例会导致页面上的按钮导航回到会话历史记录中的上一个条目。
 
 ### HTML
 
 ```html
-<button id="go-back">返回！</button>
+<button id="go-back">后退！</button>
 ```
 
 ### JavaScript
