@@ -224,7 +224,7 @@ textarea.onkeyup = function () {
 <p>sixth</p>
 ```
 
-{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間（這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn/CSS/First_steps)到這些段落上的緣故）。
+{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間（這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn_web_development/Core/Styling_basics)到這些段落上的緣故）。
 
 {{ EmbedLiveSample('區塊級元素_vs._行內元素Block_versus_inline_elements', 700, 200, "", "") }}
 
@@ -613,7 +613,7 @@ HTML 就像大部分的程式語言，提供了一種能讓我們可以在原始
 恭喜你看完了這個章節，我們你能享受這個學習基礎 HTML 的旅程！目前，你應該已經了解 HTML 長什麼樣子、它最基本的運作方式，並且能夠寫出一些元素和屬性。基礎 HTML 大致上就到這裡結束，在單元接下來的章節中，我們將會更深入探討本章節學到的內容並介紹更多 HTML 的觀念。千萬別轉台！
 
 > [!NOTE]
-> 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/zh-TW/docs/Learn/CSS)（Cascading Style Sheet）。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
+> 目前，在你要開始學更多有關 HTML 的知識時，你可能也想要探索基礎的 [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)（Cascading Style Sheet）。CSS 是一種用來為你的網頁增添花樣的語言，例如改變字型、顏色，或改變頁面的布局。你很快就會發現，同時使用 HTML 和 CSS 會帶來很棒的效果。
 
 ## 參見
 

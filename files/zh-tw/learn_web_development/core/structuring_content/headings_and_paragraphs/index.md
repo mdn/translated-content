@@ -1026,6 +1026,6 @@ Here's the best rule of thumb: it's likely appropriate to use `<b>`, `<i>`, or `
 
 ## 總結
 
-That's it for now! This article should have given you a good idea of how to start marking up text in HTML, and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our 'More Semantic Elements' article, later on in the course. In the next article, we'll be looking in detail at how to [create hyperlinks](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), possibly the most important element on the Web.
+That's it for now! This article should have given you a good idea of how to start marking up text in HTML, and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our 'More Semantic Elements' article, later on in the course. In the next article, we'll be looking in detail at how to [create hyperlinks](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links), possibly the most important element on the Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

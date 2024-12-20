@@ -212,7 +212,7 @@ teacher1.greeting();
 
 ## 進階習題
 
-在[〈OOP 理論〉段落](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
+在[〈OOP 理論〉段落](#object-oriented_programming_from_10000_meters)中，我們也納入了 `Student` 類別並繼承了 `Person` 的所有功能，此外也提供不同的 `greeting()` 函式，且較 `Teacher` 的問候語沒那麼正式。在看了該段落中的學生問候語之後，可試著實作自己的 `Student()` 建構子，並繼承 `Person()`, 的所有功能，再實作不同的 `greeting()` 函式。
 
 > [!NOTE]
 > 如果你無法進行到現有進度，可參考[完成版本](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (亦可看[實際執行](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)的情形)。

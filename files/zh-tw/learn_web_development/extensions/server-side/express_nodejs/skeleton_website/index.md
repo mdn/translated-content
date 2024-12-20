@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-在 [Express 教程](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)的第二篇文章，演示如何創建一個 "骨架" 網站項目，你可以接著在裡面加入網站特定的路由、模板/視圖、和數据庫調用。
+在 [Express 教程](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)的第二篇文章，演示如何創建一個 "骨架" 網站項目，你可以接著在裡面加入網站特定的路由、模板/視圖、和數据庫調用。
 
 <table class="learn-box standard-table">
   <tbody>

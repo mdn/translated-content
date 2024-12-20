@@ -83,7 +83,7 @@ JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.jso
 }
 ```
 
-舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「`superHeroes`」變數，如同〈[JavaScript 物件基本概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
+舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「`superHeroes`」變數，如同〈[JavaScript 物件基本概念](/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
 
 ```js
 superHeroes.hometown;
@@ -275,7 +275,7 @@ function showHeroes(jsonObj) {
 
 我們先把 JSON 的 `members` 屬性儲存到新的變數中。此陣列所具備的多個物件，均包含了各個超級英雄的資訊。
 
-接著我們以 [for 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
+接著我們以 [for 迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
 
 1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>`、3 組 `<p>`、1 組 `<ul>`。
 2. 讓 `<h2>` 納入目前超級英雄的 `name`。
@@ -288,7 +288,7 @@ function showHeroes(jsonObj) {
 > 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
 
 > [!NOTE]
-> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn/JavaScript/Objects/Basics) ，再次了解點＼括弧記法。
+> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics) ，再次了解點＼括弧記法。
 
 ## 物件與文字交互轉換
 

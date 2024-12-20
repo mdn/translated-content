@@ -30,7 +30,7 @@ original_slug: Learn/JavaScript/Building_blocks/Functions
 
 在 JavaScript 裡，你到處都能看到函數的蹤影。事實上，我們在前面的課程中一直都在用函數，只是沒什麼提及而已。如今是時候讓我們詳細探討函數並認真探索它們的語法了。
 
-幾乎每當你使用了包含一對小括號 — `()` — 的 JavaScritp 結構，並且沒有用到諸如 [for 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)、[while 與 do...while 迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)或 [if...else 敘述](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)等常見的內建語言結構時，你就是在使用函數。
+幾乎每當你使用了包含一對小括號 — `()` — 的 JavaScritp 結構，並且沒有用到諸如 [for 迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop)、[while 與 do...while 迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while)或 [if...else 敘述](/zh-TW/docs/Learn_web_development/Core/Scripting/Conditionals#if_..._else_statements)等常見的內建語言結構時，你就是在使用函數。
 
 ## 瀏覽器內建函數
 
@@ -69,7 +69,7 @@ var myNumber = Math.random();
 
 JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 JavaScript 來寫——很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 C++ 這種低階系統語言寫成，而非 JavaScript 這種網際網路語言。
 
-麻煩謹記在心，有些瀏覽器內建函數不是 JavaScript 語言核心的一部份——有些被定義為瀏覽器 API 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#so_what_can_it_really_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 API 的用法。
+麻煩謹記在心，有些瀏覽器內建函數不是 JavaScript 語言核心的一部份——有些被定義為瀏覽器 API 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-TW/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#so_what_can_it_really_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 API 的用法。
 
 ## 函數（function） vs 方法（method）
 
@@ -81,7 +81,7 @@ JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就
 
 ## 自訂函數
 
-You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code), we included a custom `draw()` function that looked like this:
+You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops), we included a custom `draw()` function that looked like this:
 
 ```js
 function draw() {

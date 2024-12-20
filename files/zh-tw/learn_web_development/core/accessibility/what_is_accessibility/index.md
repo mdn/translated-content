@@ -160,7 +160,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-如果由 web app 裡面，HTML 元素提供的原生語意訊息出問題了，你可以把它用做 [WAI-ARIA 規範](https://www.w3.org/TR/wai-aria/)的補充：它會把語意訊息添加到 accessibility tree 以增進無障礙功能。你可以在 [WAI-ARIA 基礎](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)文章學習 WAI-ARIA。
+如果由 web app 裡面，HTML 元素提供的原生語意訊息出問題了，你可以把它用做 [WAI-ARIA 規範](https://www.w3.org/TR/wai-aria/)的補充：它會把語意訊息添加到 accessibility tree 以增進無障礙功能。你可以在 [WAI-ARIA 基礎](/zh-TW/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)文章學習 WAI-ARIA。
 
 ## 結論
 

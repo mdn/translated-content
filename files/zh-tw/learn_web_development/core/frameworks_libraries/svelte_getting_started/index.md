@@ -423,7 +423,7 @@ npm install
 npm run dev
 ```
 
-假如你想要學習更多關於 git 和 GitHub，我們已經有整理一些有幫助的連結清單至指南——看看 [Git 和 GitHub](/zh-TW/docs/Learn/Tools_and_testing/GitHub)。
+假如你想要學習更多關於 git 和 GitHub，我們已經有整理一些有幫助的連結清單至指南——看看 [Git 和 GitHub](/zh-TW/docs/Learn_web_development/Core/Version_control)。
 
 > [!NOTE]
 > 假如你只是想要下載檔案而不是複製 git 儲存庫，你可以使用 degit 工具像是這樣—— `npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 來下載特定資料夾。Degit 將不會建立本地 git 儲存庫，它將只下載特定資料夾下的檔案們。

@@ -41,7 +41,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - 頁首:
   - : 通常橫跨於整個頁面頂部有一個大標題。這是網站的主要資訊，通常存在於所有網頁。
 - 導覽列:
-  - : 指向網站各個主要區段的超連結。通常用選單按鈕、連結或頁簽來表示。類似於頁首，導航列通常應在所有網頁之間保持一致，否則會讓用戶感到疑惑，甚至無所適從。許多 web 設計人員認為導航列是頁首的一部分，而不是獨立的元件，但這並非絕對；還有人認為，兩者獨立可以提供更好的[無障礙](/zh-TW/docs/Learn/Accessibility)訪問特性，因為螢幕可以更清晰地分辨二者。
+  - : 指向網站各個主要區段的超連結。通常用選單按鈕、連結或頁簽來表示。類似於頁首，導航列通常應在所有網頁之間保持一致，否則會讓用戶感到疑惑，甚至無所適從。許多 web 設計人員認為導航列是頁首的一部分，而不是獨立的元件，但這並非絕對；還有人認為，兩者獨立可以提供更好的[無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility)訪問特性，因為螢幕可以更清晰地分辨二者。
 - 主要內容:
   - : 中心的大部分區域是當前網頁大多數的獨有內容，例如影片、文章、地圖、新聞等。這些內容是網站的一部分，且會因頁面而異。
 - 側邊攔:
@@ -62,7 +62,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 > [!NOTE]
 > Colorblind people represent around [4% of the world population](http://www.color-blindness.com/2006/04/28/colorblind-population/) or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women are colorblind. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were [285 million such people in the world](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
 
-In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
+In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure).
 
 To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:
 
@@ -194,9 +194,9 @@ It's good to understand the overall meaning of all the HTML sectioning elements 
 
 - {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
 - {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
+- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
 - {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).
-- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_a_title)).
+- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_a_title)).
 - {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
 - {{HTMLElement('footer')}} represents a group of end content for a page.
 
@@ -260,7 +260,7 @@ Two elements that you'll use occasionally and will want to know about are {{html
 </p>
 ```
 
-Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_中的空格（whitespace）)); with `<br>` elements in the code, the markup renders like this:
+Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_中的空格（whitespace）)); with `<br>` elements in the code, the markup renders like this:
 
 {{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
 

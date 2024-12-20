@@ -31,7 +31,7 @@ original_slug: Learn/Server-side/First_steps/Introduction
 
 ## 何謂伺服器端網站程式開發？
 
-網頁瀏覽器使用超文本傳輸協定（**H**yper**T**ext **T**ransfer **P**rotocol, {{glossary("HTTP")}}）與網頁伺服器（[web servers](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)）溝通。當你點選網頁上的連結、送出表單，或者執行搜尋，一段 **HTTP 請求**（**request**）會由你的瀏覽器送至目標伺服器。
+網頁瀏覽器使用超文本傳輸協定（**H**yper**T**ext **T**ransfer **P**rotocol, {{glossary("HTTP")}}）與網頁伺服器（[web servers](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)）溝通。當你點選網頁上的連結、送出表單，或者執行搜尋，一段 **HTTP 請求**（**request**）會由你的瀏覽器送至目標伺服器。
 
 該請求（request）包含一個用來指定受影響資源的 URL、一個定義行為的請求方法（例如對資源進行 get、delete 或 post）與當進行[HTTP POST 方法](/zh-TW/docs/Web/HTTP/Methods/POST)時可能包含編碼於 URL 參數中的額外資訊（經由一段[查詢字串](https://en.wikipedia.org/wiki/Query_string)送出的各個鍵值對），或是在關聯的{{glossary("Cookie", "cookies")}}中。
 
@@ -73,7 +73,7 @@ original_slug: Learn/Server-side/First_steps/Introduction
 
 執行在瀏覽器的程式碼被稱為**用戶端程式碼**（**client-side code**），它主要用來改善一個渲染的網頁外觀與行為。這包含選取與設定 UI 元件樣式、建立佈局、導覽、表格驗證等。相對的，伺服端網站程式設計大量涉及要回傳*哪些內容*給瀏覽器做為對請求的回應。伺服端程式碼處理驗證已提交的資料與請求、使用資料庫儲存及取得資料，和按需求發送正確的資料給用戶等任務。
 
-用戶端程式碼以[HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)與[JavaScript](/zh-TW/docs/Learn/JavaScript)撰寫 — 它執行在網頁瀏覽器內，並且僅有或無訪問底層的作業系統（包含對檔案系統的有限存取）。
+用戶端程式碼以[HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)與[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting)撰寫 — 它執行在網頁瀏覽器內，並且僅有或無訪問底層的作業系統（包含對檔案系統的有限存取）。
 
 網頁開發者不能控制使用者可能使用何種瀏覽器來檢視一個網站 — 瀏覽器與用戶端程式有著不同層度的相容性，並且用戶端程式的挑戰之一是如何妥善地處理瀏覽器支援的差異。
 

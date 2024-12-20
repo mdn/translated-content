@@ -23,7 +23,7 @@ original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 
 ## 高層次的定義
 
-JavaScript 是一種腳本，也能稱它為程式語言，可以讓你在網頁中實現出複雜的功能。當網頁不只呈現靜態的內容，另外提供了像是：內容即時更新、地圖交動、繪製 2D/3D 圖形，影片播放控制……等，你就可以大膽地認為 JavaScript 已經參與其中。它是標準網頁技術蛋糕的第三層，而其他兩層（[HTML](/zh-TW/docs/Learn/HTML) 和 [CSS](/zh-TW/docs/Learn/CSS)）我們在其他學習單元中有更多詳細的介紹。
+JavaScript 是一種腳本，也能稱它為程式語言，可以讓你在網頁中實現出複雜的功能。當網頁不只呈現靜態的內容，另外提供了像是：內容即時更新、地圖交動、繪製 2D/3D 圖形，影片播放控制……等，你就可以大膽地認為 JavaScript 已經參與其中。它是標準網頁技術蛋糕的第三層，而其他兩層（[HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 和 [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)）我們在其他學習單元中有更多詳細的介紹。
 
 ![](cake.png)
 
@@ -104,7 +104,7 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 - [Audio 和 Video API](/zh-TW/docs/Web/Media/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](https://chrisdavidmills.github.io/snapshot/)來了解）。
 
 > [!NOTE]
-> 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)的事情。
+> 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn_web_development/Extensions/Testing)的事情。
 
 **第三方 API** 預設不內建在瀏覽器裡，你通常由網路上取得他們的程式碼與資訊。例如：
 
@@ -112,7 +112,7 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 - [Google Maps API](https://developers.google.com/maps/) 能讓你在自己的網站中嵌入訂製的地圖或其他相關功能。
 
 > [!NOTE]
-> 我們不會在此涵蓋這些進階的 APIs。你可以在我們的 [客戶端網頁 API 單元](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs)找到更多資訊。
+> 我們不會在此涵蓋這些進階的 APIs。你可以在我們的 [客戶端網頁 API 單元](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs)找到更多資訊。
 
 那裡也有很多的東西。然而不要一頭熱陷進去。你不會在學習 JavaScript 24 小時後，就能開發出下一個 Facebook、Google 地圖或 Instagram 之類的產品出來。有許多的基礎的東西得先了解，這也是你在這裡的原因，讓我們繼續吧！
 
@@ -120,7 +120,7 @@ API 是預先製作完成的程式模組，支援開發者實現困難或無法�
 
 這裡我們開始看一些程式碼，探索當 JavaScript 在你的頁面上執行時，發生了哪些事情。
 
-簡單回顧一下當瀏覽器載入一個網站時會發生的事情（第一次是在我們的[CSS 如何工作](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work)章節中提到）。當瀏覽器載入一個網頁，就是在執行環境（瀏覽器分頁）中執行程式碼（HTML，CSS 和 JavaScript）。就像是工廠收集原料（程式碼）並且產出商品（網頁呈現的結果）。
+簡單回顧一下當瀏覽器載入一個網站時會發生的事情（第一次是在我們的[CSS 如何工作](/zh-TW/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_does_css_actually_work)章節中提到）。當瀏覽器載入一個網頁，就是在執行環境（瀏覽器分頁）中執行程式碼（HTML，CSS 和 JavaScript）。就像是工廠收集原料（程式碼）並且產出商品（網頁呈現的結果）。
 
 ![](execution.png)
 
@@ -169,7 +169,7 @@ JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格
 
 你也有可能聽過**伺服器端**與**客戶端**程式，尤其在網站開發的領域。客戶端程式在使用者的電腦中運作，當瀏覽網頁的時候，頁面中的客戶端程式被下載，接著被瀏覽器執行與顯示結果。在這個單元中，我們只談論**客戶端 JavaScript**。
 
-另一方面，伺服器端的程式在伺服器上執行，接著產出的結果被瀏覽器下載後顯示。受歡迎的伺服器端網頁語言，包括 PHP、Python、Ruby 和 ASP.NET 以及… JavaScript！JavaScript 也能夠作為伺服器端程式語言，流行的 Node.js 環境就是一例。你可以在我們的[動態網站—伺服器端網站程式設計](/zh-TW/docs/Learn/Server-side)主題中找到更多資訊。
+另一方面，伺服器端的程式在伺服器上執行，接著產出的結果被瀏覽器下載後顯示。受歡迎的伺服器端網頁語言，包括 PHP、Python、Ruby 和 ASP.NET 以及… JavaScript！JavaScript 也能夠作為伺服器端程式語言，流行的 Node.js 環境就是一例。你可以在我們的[動態網站—伺服器端網站程式設計](/zh-TW/docs/Learn_web_development/Extensions/Server-side)主題中找到更多資訊。
 
 ### 動態與靜態程式
 
@@ -408,6 +408,6 @@ for (var i = 0; i < buttons.length; i++) {
 
 所以你已經踏出在 JavaScript 世界中的第一步。我們從理論開始，逐漸熟悉使用 JavaScript 的原因，以及你可以用它做些什麼。過程中你看到了一些程式碼範例，學到如何將 JavaScript 與你網站的其它東西放在一起。
 
-JavaScript 目前可能看起來有一點嚇人，然而不用擔心，在本課程我們會透過簡單的步驟，帶著你建立觀念並繼續向前。 在下一章節，我們將會[投入更實用的知識](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash)，帶你直接入門並建立你自己的 JavaScript 作品。
+JavaScript 目前可能看起來有一點嚇人，然而不用擔心，在本課程我們會透過簡單的步驟，帶著你建立觀念並繼續向前。 在下一章節，我們將會[投入更實用的知識](/zh-TW/docs/Learn_web_development/Core/Scripting/A_first_splash)，帶你直接入門並建立你自己的 JavaScript 作品。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

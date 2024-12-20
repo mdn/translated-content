@@ -51,7 +51,7 @@ btn.addEventListener("click", () => {
    3. 給予一段文字內容。
    4. 最後，我們將文字段落嵌在文件本體（ document body ）上。
 
-當正在執行每一個操作時，什麼事情都不會發生——渲染暫時停止。我們在[上一篇文章](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing)有提到，這是因為 [Javascript 是跑在一條單執行緒](/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing#javascript_is_single_threaded)。主執行緒在同一時間只能做一件事情，直到目前操作完成為止其他的操作都會暫停。
+當正在執行每一個操作時，什麼事情都不會發生——渲染暫時停止。我們在[上一篇文章](/zh-TW/docs/Learn_web_development/Extensions/Async_JS/Introducing)有提到，這是因為 [Javascript 是跑在一條單執行緒](#javascript_is_single_threaded)。主執行緒在同一時間只能做一件事情，直到目前操作完成為止其他的操作都會暫停。
 
 所以在上面的範例中，直到警告視窗的確認按鈕被按下為止之前，文字段落都不會出現。你可以試試看底下的範例：
 
@@ -144,7 +144,7 @@ gods.forEach(function (eachName, index) {
 
 ## Promise
 
-Promise 是作為非同步程式碼的一種新風格樣式，你將會在現代 Web API 看到這種用法。一個好例子是 [`fetch()`](/zh-TW/docs/Web/API/Window/fetch) API ，它基本上就像更新穎、更有效率版本的 {{domxref("XMLHttpRequest")}} 。我們藉由[從伺服器提取資料](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)這一篇文章快速地來看一個例子吧：
+Promise 是作為非同步程式碼的一種新風格樣式，你將會在現代 Web API 看到這種用法。一個好例子是 [`fetch()`](/zh-TW/docs/Web/API/Window/fetch) API ，它基本上就像更新穎、更有效率版本的 {{domxref("XMLHttpRequest")}} 。我們藉由[從伺服器提取資料](/zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests)這一篇文章快速地來看一個例子吧：
 
 ```js
 fetch("products.json")

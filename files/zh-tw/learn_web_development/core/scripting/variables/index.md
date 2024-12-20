@@ -25,7 +25,7 @@ original_slug: Learn/JavaScript/First_steps/Variables
 
 在此篇文章中，你將被要求輸入程式碼行來測試你對內容的理解。如果你使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
 
-## 什麼是變量／變數 (variable) ？
+## 什麼是變量／變數？
 
 變量是值的容器，就像我們可能在總和中使用的數字，或者我們可能用作句子一部分的字符串。 但關於變量的一個特殊之處在於它們包含的值可以改變。 我們來看一個簡單的例子：
 
@@ -77,7 +77,7 @@ if (name === 'Adam') {
 
 ![](boxes.png)
 
-## 定義變量 (Declaring a variable)
+## 定義變量
 
 要想使用變量，你需要做的第一步就是創建它 — 更準確的說，是定義一個變量。定義一個變量的語法是在關鍵字 `var` 或 `let` 之後加上變量的名字：
 
@@ -107,7 +107,7 @@ scoobyDoo;
 > [!NOTE]
 > 千萬不要把兩個概念弄混淆了，「一個變量**存在，但是沒有數值**」和「一個變量**並不存在**」— 他們完全是兩回事。在前面你看到的盒子的類比中，不存在意味著沒有可以存放變量的「盒子」。沒有定義的值意味著**有**一個「盒子」，但是它裡面沒有任何數值。
 
-## 初始化變量 (Initializing a variable)
+## 初始化變量
 
 一旦你定義了一個變量，你就能夠初始化它來儲存數值。方法如下：在變量名之後跟上一個等號 (`=`)，然後是數值。例如：
 
@@ -131,7 +131,7 @@ let myDog = "Rover";
 
 This is probably what you'll do most of the time, as it is quicker than doing the two actions on two separate lines.
 
-## 比較 var 和 let 的不同 (The difference between var and let)
+## 比較 var 和 let 的不同
 
 此刻你或許會思考「為什麼我們需要兩種方法來定義變數??」「為甚麼要有`var`和`let`??」
 
@@ -253,7 +253,7 @@ There are a few different types of data we can store in variables. In this secti
 
 So far we've looked at the first two, but there are others.
 
-### Numbers 數字
+### 數字
 
 You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:
 
@@ -261,7 +261,7 @@ You can store numbers in variables, either whole numbers like 30 (also called in
 let myAge = 17;
 ```
 
-### Strings 字串
+### 字串
 
 Strings are pieces of text. When you give a variable a string value, you need to wrap it in single or double quote marks, otherwise, JavaScript will try to interpret it as another variable name.
 
@@ -269,7 +269,7 @@ Strings are pieces of text. When you give a variable a string value, you need to
 let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
-### Booleans 布林值
+### 布林值
 
 Booleans are true/false values — they can have two values, `true` or `false`. These are generally used to test a condition, after which code is run as appropriate. So for example, a simple case would be:
 
@@ -285,7 +285,7 @@ let test = 6 < 3;
 
 This is using the "less than" operator (`<`) to test whether 6 is less than 3. As you might expect, it will return `false`, because 6 is not less than 3! You will learn a lot more about such operators later on in the course.
 
-### Arrays 陣列
+### 陣列
 
 An array is a single object that 它包含多個用方括號括起來並用逗號分隔的值。Try entering the following lines into your console:
 
@@ -303,9 +303,9 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [a future article](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays).
+You'll learn a lot more about arrays in [a future article](/zh-TW/docs/Learn_web_development/Core/Scripting/Arrays).
 
-### Objects 物件
+### 物件
 
 在編程中，物件是對真實生活物件進行建模的代碼結構。 你可以擁有一個代表停車場的簡單物件，其中包含有關其寬度和長度的信息，或者你可以擁有一個代表一個人的物件，並用物件紀錄其姓名、身高、體重、慣用語言，如何跟他打招呼等的資訊。
 
@@ -321,7 +321,7 @@ let dog = { name: "Spot", breed: "Dalmatian" };
 dog.name;
 ```
 
-We won't be looking at objects any more for now — you can learn more about those in [a future module](/zh-TW/docs/Learn/JavaScript/Objects).
+We won't be looking at objects any more for now — you can learn more about those in [a future module](/zh-TW/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects).
 
 ## 動態型別
 

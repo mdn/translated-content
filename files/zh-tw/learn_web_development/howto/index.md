@@ -6,7 +6,7 @@ original_slug: Learn/Common_questions
 
 {{LearnSidebar}}
 
-學習專區的這個區塊被設計來為可能遇到的常見問題提供解答，這並非核心學習路線的必要途徑（譬如 [HTML](/zh-TW/docs/Learn/HTML) 或 [CSS](/zh-TW/docs/Learn/CSS) 的教學文章）。這些文章為獨立成群。
+學習專區的這個區塊被設計來為可能遇到的常見問題提供解答，這並非核心學習路線的必要途徑（譬如 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 或 [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics) 的教學文章）。這些文章為獨立成群。
 
 ## Web 的運作方式
 
@@ -20,7 +20,7 @@ original_slug: Learn/Common_questions
   - : 結合 {{Glossary("Hypertext")}} 與 {{Glossary("HTTP")}}，URL 是最重要的網路概念之一。它是被 {{Glossary("Browser","browsers")}} 用來獲取發佈到網路的任何資源的機制。
 - [網域名稱是什麼？](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
   - : 網域名稱是網際網路基礎架構中關鍵的一部份，它提供指向網際網路上可被找到的網路伺服器一個可被人讀懂的地址。
-- [網路伺服器是什麼？](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [網路伺服器是什麼？](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
   - : 「網路伺服器」指能橫跨網路將網站提供給用戶端的硬體或軟體——或是軟硬體結合。這篇文章探討網路伺服器怎麼運作，以及為何它很重要。
 - [超連結是什麼？](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
   - : 這篇文章中，我們會學到超連結是什麼，以及為何它很重要。
@@ -69,6 +69,6 @@ original_slug: Learn/Common_questions
 
 有關 HTML、CSS 與 JavaScript 的常見問題解決方式，可以參考以下文章：
 
-- [使用 HTML 解決常見問題](/zh-TW/docs/Learn/HTML/Howto)
-- [使用 CSS 解決常見問題](/zh-TW/docs/Learn/CSS/Howto)
-- [使用 JavaScript 解決常見問題](/zh-TW/docs/Learn/JavaScript/Howto)
+- [使用 HTML 解決常見問題](/zh-TW/docs/Learn_web_development/Howto/Solve_HTML_problems)
+- [使用 CSS 解決常見問題](/zh-TW/docs/Learn_web_development/Howto/Solve_CSS_problems)
+- [使用 JavaScript 解決常見問題](/zh-TW/docs/Learn_web_development/Howto/Solve_JavaScript_problems)

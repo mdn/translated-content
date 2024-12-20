@@ -10,7 +10,7 @@ original_slug: Learn/CSS/Styling_text
 
 ## 先備知識
 
-在開始這個單元之前，你應該先熟悉基礎的 HTML，如 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 這個單元所討論的，並且要對 CSS 的基礎感到輕鬆，如 [CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps) 討論的。
+在開始這個單元之前，你應該先熟悉基礎的 HTML，如 [HTML 介紹](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 這個單元所討論的，並且要對 CSS 的基礎感到輕鬆，如 [CSS 介紹](/zh-TW/docs/Learn_web_development/Core/Styling_basics) 討論的。
 
 > [!NOTE]
 > If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/), [CodePen](https://codepen.io/) or [Glitch](https://glitch.com/).

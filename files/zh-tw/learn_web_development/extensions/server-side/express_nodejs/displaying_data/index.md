@@ -26,7 +26,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 概覽
 
-在我們先前的教程中，定義了可以用來跟資料庫互動的 [Mongoose models](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose) ，並創建了一些初始的圖書館紀錄。我們接著[創建本地圖書館網站需要的所有路由](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)，但僅使用"空殼控制器" 函式（這些是骨架控制器函式，當一個網頁被存取時，只回傳一個"未實作" 信息）。
+在我們先前的教程中，定義了可以用來跟資料庫互動的 [Mongoose models](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose) ，並創建了一些初始的圖書館紀錄。我們接著[創建本地圖書館網站需要的所有路由](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)，但僅使用"空殼控制器" 函式（這些是骨架控制器函式，當一個網頁被存取時，只回傳一個"未實作" 信息）。
 
 下一步，是為這些顯示圖書館信息的網頁，提供充分的實作（我們將在後面的文章，檢視網頁表單的實作，像是創建、更新、刪除信息）。這包含了更新控制器函式，以利用我們的模型取得紀錄，並定義模板，為使用者顯示這些信息。
 
@@ -39,16 +39,16 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 本教程分為下列章節，說明為了顯示圖書館網站頁面，如何新增各種特性 。在進入下一個教程之前，你需要閱讀並逐一實作下列章節。
 
 1. [模板入門](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-2. [本地圖書館基礎模板](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+2. [本地圖書館基礎模板](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
 3. [主頁](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-4. [書本清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-5. [書本實例清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-6. [日期格式化 - 使用 moment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+4. [書本清單頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+5. [書本實例清單頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+6. [日期格式化 - 使用 moment](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
 7. [作者清單頁面、分類清單頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
 8. [分類詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
-9. [書本詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
-10. [作者詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
-11. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+9. [書本詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
+10. [作者詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+11. [書本實例詳情頁面與自我挑戰](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
 
 ## 總結
 

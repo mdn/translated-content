@@ -19,17 +19,17 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 之後，我們將針對坊間主要框架提供教學，以便提供足夠鑽研下去的背景資訊。我們希望以務實且不忘基本實做（如無障礙）的方法，來理解框架這回事。
 
-**[從「前端框架簡介」開始吧。](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
+**[從「前端框架簡介」開始吧。](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Introduction)**
 
 ## 先決條件
 
-在理解前端框架前，你需要對 web 核心技術：[HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、以及最重要的[JavaScript](/zh-TW/docs/Learn/JavaScript)，擁有基本程度的理解。
+在理解前端框架前，你需要對 web 核心技術：[HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)、以及最重要的[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting)，擁有基本程度的理解。
 
 如果理解構建框架的 Web 技術，你的程式會更豐富（richer）且更專業，同時也能更有信心地除錯。
 
 ## 概觀性教學
 
-- [1. 前端框架介紹](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+- [1. 前端框架介紹](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Introduction)
   - : 我們從整體概述來探討框架、提供 JavaScript 與框架的簡要歷史、框架存在的理由、他們提供什麼東西、如何決定選擇哪個框架、以及前端框架的的替代方案。
 - [2. 框架的主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
   - : 大多數主要的 JavaScript 前端框架在更動 DOM、處理瀏覽器事件、還有提供良好的開發體驗方面，使出了不同的方法。這篇文章將探討「四大框架」的主要功能、看看他們如完成高層次工作、以及這四個框架的相異之處。
@@ -41,9 +41,9 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 >
 > 如果想看看最新的程式，可以從我們的 [todo-react repository](https://github.com/mdn/todo-react) 或互動性的 <https://mdn.github.io/todo-react-build/> 看。
 
-- [1. 開始學 React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. 開始學 React](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : 在這裡我們將開始與 React 打招呼。我們將探索其背景和用途的一些細節、在自己的電腦建立 React 全家桶、還有建立與把玩簡單的程式，以理解 React 是怎麼跑的。
-- [2. 建立我們的 React todo list](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+- [2. 建立我們的 React todo list](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
   - : 我們的任務是驗證 React 的概念（proof-of-concept）：我們將建立一個能讓使用者添加、編輯、刪除需要的工作，同時在不刪除工作的情況下，將它們標記為完成。本文將完成 `App` 組件的基本架構與樣式，以便為下個文章將探討的組件定義與響應性做準備。
 - [3. 把 React app 組件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - : 現在，我們的 app 整個黏在一起了。在做其他事情前，最好把這個程式切成一個個能管理，描述性也好的組件（component）。React 本身對組件的定義不多：那是取決於你的考量！我們將展示如何以聰明的方法，把程式切成一個個組件。
@@ -83,9 +83,9 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 >
 > 如果想看看最新的程式，可以從我們的 [todo-vue repository](https://github.com/mdn/todo-vue) 或互動性的 <https://mdn.github.io/todo-vue/dist/> 看。
 
-- [1. 開始學 Vue](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+- [1. 開始學 Vue](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
   - : 我們首先來介紹 Vue 吧。首先我們將聊聊 Vue 的背景、理解如何安裝新的專案、研究專案的整體架構與單一組件、如何讓專案在自己的電腦執行、並準備好建立一個新範例。
-- [2. 建立第一個 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
+- [2. 建立第一個 Vue 組件](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_first_component)
   - : 現在來開始鑽研 Vue 並建立第一個組件吧：我們將給 todo list 的各個單元建立獨立的組件。在此同時，我們將學習一些重要概念：比如說在組件內使用組件、透過 prop 傳送資料、還有儲存資料的狀態。
 - [3. 渲染 Vue 組件的列表](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
   - : 現在我們已經有了一個能動的組件；現在將要給我們的 App 添加 `ToDoItem` 這個組件了。在這裡，我們將專精於如何給 `App.vue` 組件，添加一組 todo 的資料，接著使用 `v-for` 指令（directive）讓 `ToDoItem` 透過迴圈顯示出來。
@@ -109,11 +109,11 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 >
 > If you need to check your code against our version, you can find a finished version of the sample Svelte app code as it should be after each article, in our [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo. For a running live version, see our Svelte REPL at <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-- [1. Getting started with Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+- [1. Getting started with Svelte](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
   - : In this article we'll provide a quick introduction to the [Svelte framework](https://svelte.dev/). We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run it locally and build it for production.
-- [2. Starting our Svelte Todo list app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+- [2. Starting our Svelte Todo list app](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning)
   - : Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a todo list. In this article we will first have a look at the desired functionality of our app, then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in subsequent articles.
-- [3. Dynamic behavior in Svelte: working with variables and props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+- [3. Dynamic behavior in Svelte: working with variables and props](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props)
   - : Now that we have our markup and styles ready we can start developing the required features for our Svelte To-Do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete todos, mark them as complete, and filter them by status.
 - [4. Componentizing our Svelte app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
   - : The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.
@@ -133,17 +133,17 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 >
 > 如果你需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
 
-- [1. Angular 新手入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+- [1. Angular 新手入門](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
   - : 在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
-- [2. 開始開發我們的 Angular 待辦事項應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+- [2. 開始開發我們的 Angular 待辦事項應用程式](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
   - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，你將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
-- [3. 使用樣式點綴我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+- [3. 使用樣式點綴我們的 Angular 應用程式](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
   - : 現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
-- [4. 建立一個項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+- [4. 建立一個項目元件](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
   - : 元件為你提供了一種組織應用程式的方式。本篇文章將引導你建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
-- [5. 過濾待辦事項](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+- [5. 過濾待辦事項](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
   - : 現在，讓我們繼續增加功能，以允許用戶過濾待辦項目，以便他們可以查看進行中、已完成或所有待辦項目。
-- [6. 構建 Angular 應用程序和更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+- [6. 構建 Angular 應用程序和更多資源](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)
   - : 這篇文章內容涵蓋，如何建立一個產品版（production）的應用程式，以及提供後續的學習資源。
 
 ## 該選什麼框架？

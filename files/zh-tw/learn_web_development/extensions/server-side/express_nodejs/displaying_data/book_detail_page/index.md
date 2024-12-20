@@ -113,5 +113,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 下一個部分: [作者詳情頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 下一個部分: [作者詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)

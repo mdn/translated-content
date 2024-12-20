@@ -198,9 +198,9 @@ original_slug: Learn/HTML/Tables/Basics
 ### 當何時你不應該使用 HTML 表格?
 
 HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它們被設計的目的。
-不幸地是，許多人習慣使用 HTML 表格去排版他們的網頁，例如: 使用一列去當 header，一列當做內容欄位，一列當作 footer...等等，你能在我們的[輔助學習單元](/zh-TW/docs/Learn/Accessibility)裡的[頁面輸出](/zh-TW/docs/Learn/Accessibility/HTML#Page_layouts)發現更多細節以及一個範例。它曾經被這麼使用是因為 CSS 過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。
+不幸地是，許多人習慣使用 HTML 表格去排版他們的網頁，例如: 使用一列去當 header，一列當做內容欄位，一列當作 footer...等等，你能在我們的[輔助學習單元](/zh-TW/docs/Learn_web_development/Core/Accessibility)裡的[頁面輸出](/zh-TW/docs/Learn/Accessibility/HTML#Page_layouts)發現更多細節以及一個範例。它曾經被這麼使用是因為 CSS 過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。
 
-簡單來說，使用表格排版而非使用[CSS 排版技術](/zh-TW/docs/Learn/CSS/CSS_layout)是一件很糟的事情。
+簡單來說，使用表格排版而非使用[CSS 排版技術](/zh-TW/docs/Learn_web_development/Core/CSS_layout)是一件很糟的事情。
 下列是主要原因:
 
 1. **表格排版會減少對視障使用者的輔助** : 視障者使用的[螢幕閱讀器](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)會翻譯存在於 HTML 網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於 CSS 排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。

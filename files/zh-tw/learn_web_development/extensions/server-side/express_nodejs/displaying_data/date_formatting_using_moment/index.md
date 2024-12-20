@@ -53,5 +53,5 @@ BookInstanceSchema.virtual("due_back_formatted").get(function () {
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 的下一個部分: [Author list page and Genre list page challenge](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page).
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 的下一個部分: [Author list page and Genre list page challenge](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page).

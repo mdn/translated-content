@@ -469,7 +469,7 @@ function setUserName() {
 
 ## See also
 
-- [JavaScript — Dynamic client-side scripting](/zh-TW/docs/Learn/JavaScript)
+- [JavaScript — Dynamic client-side scripting](/zh-TW/docs/Learn_web_development/Core/Scripting)
   - : Our JavaScript learning topic — dive into JavaScript in much more detail.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.

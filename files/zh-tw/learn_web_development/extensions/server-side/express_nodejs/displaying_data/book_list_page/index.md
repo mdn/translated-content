@@ -60,11 +60,11 @@ block content
 
 ## 它看起來像是?
 
-運行本應用 (參見 [測試路由](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) 有相關的命令) ，並打開你的瀏覽器，訪問 <http://localhost:3000/>。然後選擇所有書本連結 _All books_。如果每樣東西都設定正確了，你的網站看起來應該像底下的截圖。
+運行本應用 (參見 [測試路由](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#testing_the_routes) 有相關的命令) ，並打開你的瀏覽器，訪問 `http://localhost:3000/`。然後選擇所有書本連結 _All books_。如果每樣東西都設定正確了，你的網站看起來應該像底下的截圖。
 
 ![Book List Page - Express Local Library site](new_book_list.png)
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 下個部分: [書本實例清單頁面](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 繼續教學 5 下個部分: [書本實例清單頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)

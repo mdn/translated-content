@@ -68,6 +68,6 @@ _我們接下來將創建，並隨著本系列教程發展的網站，名字是�
 
 ## 總結
 
-現在，你對本地圖書館網站以及將要學習的東西，有更多一點的認識，是時候開始創建一個 [骨架項目](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，以存放我們的範例。
+現在，你對本地圖書館網站以及將要學習的東西，有更多一點的認識，是時候開始創建一個[骨架項目](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)，以存放我們的範例。
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}

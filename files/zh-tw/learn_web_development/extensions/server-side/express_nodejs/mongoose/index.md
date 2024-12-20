@@ -548,7 +548,7 @@ SomeModel.find(callback_function);
 
 ## 安裝 Mongoose
 
-打開命令提示符，並到你創建[本地圖書館骨架網站](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)的目錄。輸入以下命令，安裝 Mongoose（及其依賴項），並將其添加到你的**package.json**文件中，除非你在閱讀上述**Mongoose 入門**時，已經這樣做了。
+打開命令提示符，並到你創建[本地圖書館骨架網站](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)的目錄。輸入以下命令，安裝 Mongoose（及其依賴項），並將其添加到你的**package.json**文件中，除非你在閱讀上述**Mongoose 入門**時，已經這樣做了。
 
 ```bash
 npm install mongoose

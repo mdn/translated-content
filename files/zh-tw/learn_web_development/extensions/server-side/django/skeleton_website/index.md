@@ -36,7 +36,7 @@ Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"�
 3. 工程裡註冊新的應用。
 4. 為每個應用分配 url。
 
-為 [locallibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 這個項目創建的網站文件夾和它的工程文件夾都命名為*locallibrary*。我們只創建一個名為*catalog*的應用。最高層的項目文件結構如下所示：
+為 [locallibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 這個項目創建的網站文件夾和它的工程文件夾都命名為*locallibrary*。我們只創建一個名為*catalog*的應用。最高層的項目文件結構如下所示：
 
 ```bash
 locallibrary/         # Website folder
@@ -49,7 +49,7 @@ locallibrary/         # Website folder
 
 ## 創建專案項目
 
-首先打開命令提示符/終端，確保你在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment)中，導航到你要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為你的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
+首先打開命令提示符/終端，確保你在[虛擬環境](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#using_a_virtual_environment)中，導航到你要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為你的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
 
 ```bash
 mkdir locallibrary
@@ -146,7 +146,7 @@ INSTALLED_APPS = [
 新的這行，詳細說明了應用配置文件在( `CatalogConfig`) **/locallibrary/catalog/apps.py** 裡，當你創建應用時就完成了這個過程。
 
 > [!NOTE]
-> 注意到`INSTALLED_APPS已经有许多其他的应用了` (還有 `MIDDLEWARE`,在 settings 的下面)。這些應用為 [Django administration site](/zh-TW/docs/Learn/Server-side/Django/Admin_site) 提供了支持和許多功能(包括會話，認證系統等)。
+> 注意到`INSTALLED_APPS已经有许多其他的应用了` (還有 `MIDDLEWARE`,在 settings 的下面)。這些應用為 [Django administration site](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) 提供了支持和許多功能(包括會話，認證系統等)。
 
 ## 配置資料庫
 
@@ -356,7 +356,7 @@ python3 manage.py runserver
 
 你現在已經創建了一個完整的骨架網站項目，你可以繼續加入網址、模型、視圖、和模版。
 
-現在，[Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。
+現在，[Local Library website](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)的骨架已經完成並運行了，是時候開始寫些代碼，讓網站做些它應該做的事了。
 
 ## 參見
 

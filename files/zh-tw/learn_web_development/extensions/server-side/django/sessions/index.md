@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Sessions
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
-本教程擴展了我們的[LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站，為主頁添加了一個基於會話的訪問計數器。這是一個相對簡單的例子，但它確實顯示了，如何使用會話框架，為匿名用戶提供持久的行為。
+本教程擴展了我們的[LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 網站，為主頁添加了一個基於會話的訪問計數器。這是一個相對簡單的例子，但它確實顯示了，如何使用會話框架，為匿名用戶提供持久的行為。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -28,7 +28,7 @@ original_slug: Learn/Server-side/Django/Sessions
 
 ## 概覽
 
-我們在之前的教程中創建的[LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站允許用戶瀏覽目錄中的書籍和作者。 雖然內容是從數據庫動態生成的，但每個用戶在使用該網站時基本上都可以訪問相同的頁面和信息類型。
+我們在之前的教程中創建的[LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 網站允許用戶瀏覽目錄中的書籍和作者。 雖然內容是從數據庫動態生成的，但每個用戶在使用該網站時基本上都可以訪問相同的頁面和信息類型。
 
 在一個"真實"的庫中，你可能希望根據用戶以前對網站的使用，首選項等為單個用戶提供定制的體驗。例如，你可以隱藏或存儲用戶下次訪問網站時之前已確認的警告消息，或尊重他們的偏好（例如，他們希望在每個頁面上顯示的搜索結果的數量）。
 
@@ -44,7 +44,7 @@ Django 使用包含特殊會話 ID 的 cookie 來標識每個瀏覽器及其與�
 
 ## Enabling sessions
 
-當我們[創建框架網站](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)時（在教程 2 中），將自動啟用會話。
+當我們[創建框架網站](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)時（在教程 2 中），將自動啟用會話。
 
 在項目文件的`INSTALLED_APPS` 和`MIDDLEWARE` 部分中進行配置(**locallibrary/locallibrary/settings.py**)，如下所示：
 

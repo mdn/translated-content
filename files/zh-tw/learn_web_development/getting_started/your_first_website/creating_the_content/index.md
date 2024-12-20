@@ -75,7 +75,7 @@ My cat is very grumpy
 
 ### HTML 文件的架構
 
-讓我們來看看一個完整的 HTML 頁面它所包含的要素（以下範例的程式碼出自這篇文章：[Dealing with files](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）：
+讓我們來看看一個完整的 HTML 頁面它所包含的要素（以下範例的程式碼出自這篇文章：[Dealing with files](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)）：
 
 ```html
 <!doctype html>
@@ -146,7 +146,7 @@ My cat is very grumpy
 <p>This is a single paragraph</p>
 ```
 
-**請試試在這裡[_你的網站看起來會是什麼樣子？_](/zh-TW/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)的圖片（\<img> 元素）下方，加上幾段文字。**
+**請試試在這裡[_你的網站看起來會是什麼樣子？_](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)的圖片（\<img> 元素）下方，加上幾段文字。**
 
 ### 清單
 
@@ -221,6 +221,6 @@ My cat is very grumpy
 
 如果哪裡卡關了，你可以隨時造訪 Github 上的 [finished example code](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) ，看看裡面的 code 和你寫的哪裡不同。
 
-這篇文章觸及的是非常基本的 HTML 介紹，若你有興趣想進一步了解，歡迎參考 [HTML Learning page](/zh-TW/docs/Learn/HTML)。
+這篇文章觸及的是非常基本的 HTML 介紹，若你有興趣想進一步了解，歡迎參考 [HTML Learning page](/zh-TW/docs/Learn_web_development/Core/Structuring_content)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

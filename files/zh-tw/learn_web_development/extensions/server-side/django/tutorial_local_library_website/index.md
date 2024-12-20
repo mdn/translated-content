@@ -60,6 +60,6 @@ original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 ## 總結
 
-現在你對本地圖書館網站有了一些了解並知道你會學到什麼。是時候創建我們例子會用到的[網站框架](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)了。
+現在你對本地圖書館網站有了一些了解並知道你會學到什麼。是時候創建我們例子會用到的[網站框架](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)了。
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

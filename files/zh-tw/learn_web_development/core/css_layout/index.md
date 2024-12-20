@@ -12,8 +12,8 @@ original_slug: Learn/CSS/CSS_layout
 
 開始這個單元之前，需要做如下準備：
 
-1. 對 HTML 有基本的認知，如 [HTML 簡介](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 單元中所述。
-2. 熟悉 CSS 基本原理，如 [CSS 簡介](/zh-TW/docs/Learn/CSS/First_steps)中所述。
+1. 對 HTML 有基本的認知，如 [HTML 簡介](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 單元中所述。
+2. 熟悉 CSS 基本原理，如 [CSS 簡介](/zh-TW/docs/Learn_web_development/Core/Styling_basics)中所述。
 3. 了解如何 [樣式框](/zh-TW/docs/Learn/CSS/Building_blocks)。
 
 > [!NOTE]

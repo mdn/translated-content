@@ -34,7 +34,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
 > [!NOTE]
-> 在繼續之前，你應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths)。
+> 在繼續之前，你應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths)。
 
 舉例來說, 如果你的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
@@ -135,7 +135,7 @@ This is a good thing to do, resulting in the page loading quicker and more smoot
 However, you shouldn't alter the size of your images using HTML attributes. If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
 
 > [!NOTE]
-> If you do need to alter an image's size, you should use [CSS](/zh-TW/docs/Learn/CSS) instead.
+> If you do need to alter an image's size, you should use [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics) instead.
 
 ### 圖片標題
 

@@ -31,7 +31,7 @@ HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不
 
 ## 什麼是 HTML head?
 
-讓我們再看一次之前所看過的 [HTML 文件](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#解析_html_文件)：
+讓我們再看一次之前所看過的 [HTML 文件](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#解析_html_文件)：
 
 ```html
 <!doctype html>

@@ -232,7 +232,7 @@ let guessCount = 1;
 let resetButton;
 ```
 
-這一區塊的程式碼設定我們的程式中用來儲存資料的變數。簡單的來說，「變數」是「值」的容器(值可以是數字、一串文字或是其他東西)。你可以用「關鍵字」(keyword) `let`(或是`var`)後面加上變數的名字來建立變數(在[之後的文章](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)你會看到兩者的差別)。利用關鍵字 `const` 建立常數，常數(Constant)是用來儲存你不會更改的值。我們用常數儲存使用者介面的參照，使用者介面中的文字可能會改變，但是參照所指的 HTML 元素的不會改變。
+這一區塊的程式碼設定我們的程式中用來儲存資料的變數。簡單的來說，「變數」是「值」的容器(值可以是數字、一串文字或是其他東西)。你可以用「關鍵字」(keyword) `let`(或是`var`)後面加上變數的名字來建立變數(在[之後的文章](/zh-TW/docs/Learn_web_development/Core/Scripting/Variables#the_difference_between_var_and_let)你會看到兩者的差別)。利用關鍵字 `const` 建立常數，常數(Constant)是用來儲存你不會更改的值。我們用常數儲存使用者介面的參照，使用者介面中的文字可能會改變，但是參照所指的 HTML 元素的不會改變。
 
 藉由等於符號(`=`)後面加上一個值，你可以指定變數或是常數的值。
 

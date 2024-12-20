@@ -174,7 +174,7 @@ a {
 
 {{EmbedLiveSample('鏈接到電子郵件地址')}}
 
-有關 `mailto:` URL 的詳細信息，例如包括主題或正文，請參見[電子郵件鏈接](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links)或 {{RFC(6068)}}。
+有關 `mailto:` URL 的詳細信息，例如包括主題或正文，請參見[電子郵件鏈接](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#e-mail_連結)或 {{RFC(6068)}}。
 
 ### 鏈接到電話號碼
 

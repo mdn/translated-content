@@ -11,7 +11,7 @@ original_slug: Learn/Forms
 ## 參考文章列表
 
 1. [我的第一個 HTML 表單](/zh-TW/docs/Learn/Forms/Your_first_form)
-2. [如何構建 HTML 表單](/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form)
+2. [如何構建 HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 3. [本機表單控件](/zh-TW/docs/Learn/Forms/Basic_native_form_controls)
 4. CSS 和 HTML 表單
 

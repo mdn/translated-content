@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Models
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-本文介紹如何為 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站定義模型。它解釋了模型是什麼、聲明的方式以及一些主要字段類型。它還簡要展示了你可以訪問模型數據的幾個主要方法。
+本文介紹如何為 [LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 網站定義模型。它解釋了模型是什麼、聲明的方式以及一些主要字段類型。它還簡要展示了你可以訪問模型數據的幾個主要方法。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -29,7 +29,7 @@ original_slug: Learn/Server-side/Django/Models
 
 Django Web 應用程序通過被稱為模型的 Python 對象，訪問和管理數據。模型定義儲存數據的結構，包括欄位類型、以及可能還有最大大小，默認值，選擇列表選項，幫助文檔，表單的標籤文本等。模型的定義與底層數據庫無關 — 你可以選擇其中一個，作為項目設置的一部分。一旦你選擇了要使用的數據庫，你就不需要直接與之交談 — 只需編寫模型結構和其他代碼，Django 可以處理與數據庫通信的所有繁瑣工作。
 
-本教程將介紹如何定義和訪問 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 範例網站的模型。
+本教程將介紹如何定義和訪問 [LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 範例網站的模型。
 
 ## 設計 LocalLibrary 模型
 

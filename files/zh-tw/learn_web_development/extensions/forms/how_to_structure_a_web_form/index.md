@@ -25,7 +25,7 @@ original_slug: Learn/Forms/How_to_structure_a_web_form
   </tbody>
 </table>
 
-表單表單的彈性化令其成為 [HTML](/zh-TW/docs/Learn/HTML) 最複雜的結構之一。你能使用專用的表單元素和屬性，來構建任何類型的基本表單。使用正確的 HTML 表單結構能讓確保表單可用、且[無障礙](/zh-TW/docs/Learn/Accessibility)。
+表單表單的彈性化令其成為 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 最複雜的結構之一。你能使用專用的表單元素和屬性，來構建任何類型的基本表單。使用正確的 HTML 表單結構能讓確保表單可用、且[無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility)。
 
 ## \<form> 元素
 

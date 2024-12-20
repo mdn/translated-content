@@ -16,7 +16,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 如果想要完全掌控你發佈的網站，那你可能需要花錢買：
 
-- 主機：跟主機租借商（hosting company）的[網路伺服器](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)（web server）租一個放置檔案的空間。你把你建置的網頁檔案放到這個空間中，然後想要連結到網頁的人就能透過網頁伺服器連結到你的網站。
+- 主機：跟主機租借商（hosting company）的[網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)（web server）租一個放置檔案的空間。你把你建置的網頁檔案放到這個空間中，然後想要連結到網頁的人就能透過網頁伺服器連結到你的網站。
 - [網域名稱](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)(domain name)：人們可以透過這個獨特的網址來尋找你的網站，像是 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你需要向**網域名稱註冊商**（domain registrar）租借網域名稱。
 
 許多專業的網站是用這個方法發佈的。
@@ -76,7 +76,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 ## 參閱
 
-- [何謂網路伺服器](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [何謂網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - [Understanding domain names](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - [How much does it cost to do something on the web?](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.

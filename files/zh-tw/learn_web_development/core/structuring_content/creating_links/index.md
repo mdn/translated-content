@@ -91,7 +91,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ### 區塊級連結(Block-level links)
 
-就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#區塊級元素_vs._行內元素（block_versus_inline_element）)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
+就像先前所提到的，你可以將任何內容轉換成連結，就算是[區塊級元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#區塊級元素_vs._行內元素（block_versus_inline_element）)也沒問題！如果你有一張圖片要轉換成連結，你可以把圖片元素放在 `<a>` 標籤裡，像這樣：
 
 ```html
 <a href="https://www.mozilla.org/en-US/">
@@ -220,7 +220,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 經過之前的說明，你可能會覺得無論如何都應該採用絕對連結，畢竟它們不會像相對連結一樣，因為頁面被搬移而失效。然而，對於相同網站內的連結，你應該盡量使用相對連結 (連到別的網站的連結必須使用絕對連結)，原因如下：
 
 - 首先，由於相對 URL 通常比絕對 URL 來得短，因此使用它可以增進原始碼的可讀性。
-- 第二，使用相對 URL 比較有效率。當你使用絕對 URL 時，瀏覽器會先查看 server 在域名系統({{glossary("DNS")}}，詳情請見[網路是如何運作的](/zh-TW/docs/Learn/Getting_started_with_the_web/How_the_Web_works)) 上的真實位址，並再從那個位址開始尋找請求的檔案；如果我們使用相對 URL，瀏覽器就可以直接從那個 server 開始搜尋。因此，如果你在可以使用相對 URL 時而去使用絕對 URL，就會迫使你的瀏覽器不斷地進行額外的工作，進而降低效能。
+- 第二，使用相對 URL 比較有效率。當你使用絕對 URL 時，瀏覽器會先查看 server 在域名系統({{glossary("DNS")}}，詳情請見[網路是如何運作的](/zh-TW/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)) 上的真實位址，並再從那個位址開始尋找請求的檔案；如果我們使用相對 URL，瀏覽器就可以直接從那個 server 開始搜尋。因此，如果你在可以使用相對 URL 時而去使用絕對 URL，就會迫使你的瀏覽器不斷地進行額外的工作，進而降低效能。
 
 ### 要連到非 HTML 的資源時請先聲明
 

@@ -19,8 +19,8 @@ CSS（階層式樣式表）被用來設定網頁的樣式及佈局。舉例來�
 開始這個單元之前，你應該具備：
 
 1. 基本熟悉電腦的操作，以及網路的使用（即：在網路查資料，看看內容）。
-2. 設定好一個基本的工作環境（參考[安裝基本軟體](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)單元），並知道如何建立以及管檔案（參考[檔案的管理](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)單元）。
-3. 對 HTML 有基本的認識，像是 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)單元裡所提到的。
+2. 設定好一個基本的工作環境（參考[安裝基本軟體](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)單元），並知道如何建立以及管檔案（參考[檔案的管理](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)單元）。
+3. 對 HTML 有基本的認識，像是 [HTML 介紹](/zh-TW/docs/Learn_web_development/Core/Structuring_content)單元裡所提到的。
 
 > [!NOTE]
 > 如果你使用的電腦／平板／或其它裝置上，無法建立你所需要的檔案。你可以在像是 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 的線上程式編輯平台上嘗試（絕大部分的）範例程式。
@@ -29,13 +29,13 @@ CSS（階層式樣式表）被用來設定網頁的樣式及佈局。舉例來�
 
 這個單元包含以下的主題，會帶你瀏覽所有 CSS 的基本理論，並提供你一些測試技巧的機會：
 
-- [CSS 是什麼？](/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS)
+- [CSS 是什麼？](/zh-TW/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
   - : **{{Glossary("CSS")}}** （階層式樣式表）讓你能夠建立好看的網頁，但是它骨子是是怎麼運作的？這個主題用一個簡單的語法範例來解釋 CSS 是什麼，並涵蓋有關這個語言的一些關鍵術語。
-- [開始使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/Getting_started)
+- [開始使用 CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Getting_started)
   - : 這個主題中，我們將把 CSS 套用到一個簡單的 HTML 文件上，逐步學習有關這個語言的一些實用知識。
 - [CSS 的結構](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured)
   - : 現在你對 CSS 是什麼以及基本使用方法有了一些概念，是時候去更深入看看這個語言的結構了。我們在這裡討論了許多的觀念；如果之後你對任何概念感到模糊，可以到這裡來回顧。
-- [CSS 的運作方式](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works)
+- [CSS 的運作方式](/zh-TW/docs/Learn_web_development/Core/Styling_basics/What_is_CSS)
   - : 我們已經學到了什麼是 CSS 以及如何寫一個簡單樣式表的基礎概念。我們會在這堂課裡看看瀏覽器是如何依據 CSS 和 HTML 的內容轉化為網頁的呈現。
 - [使用你的新知識](/zh-TW/docs/Learn/CSS/First_steps/Styling_a_biography_page)
   - : 透過你在前面堂課所學到的東西，你應該會發現你可以對簡單的文字內套用 CSS 設定，加入你想要的樣式。這個主題給你一個機會來做這件事。

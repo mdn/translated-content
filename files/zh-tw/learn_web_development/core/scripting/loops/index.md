@@ -690,7 +690,7 @@ We've already provided you with:
 - `refused.textContent +=` — the beginnings of a line that will concatenate something on to the end of `refused.textContent`.
 - `admitted.textContent +=` — the beginnings of a line that will concatenate something on to the end of `admitted.textContent`.
 
-Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the [Useful string methods](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods) article for help.
+Extra bonus question — after completing the above tasks successfully, you will be left with two lists of names, separated by commas, but they will be untidy — there will be a comma at the end of each one. Can you work out how to write lines that slice the last comma off in each case, and add a full stop to the end? Have a look at the [Useful string methods](/zh-TW/docs/Learn_web_development/Core/Scripting/Useful_string_methods) article for help.
 
 If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.
 
@@ -876,7 +876,7 @@ We would recommend `for`, at least to begin with, as it is probably the easiest 
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn#contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn_web_development#聯絡我們) to ask for help.
 
 ## See also
 

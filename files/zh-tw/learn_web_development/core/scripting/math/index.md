@@ -39,7 +39,7 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 - **二進位** —計算機的最底層語言；0 和 1。
 - **八進位** —以 8 為單位，每列使用 0–7。
-- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。你之前在 CSS 中設置[顏色](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values)時，可能已經遇到過這些數字。
+- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。你之前在 CSS 中設置[顏色](/zh-TW/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values)時，可能已經遇到過這些數字。
 
 **在開始擔心大腦融化之前，先等等！**首先，我們將在整個課程中完全使用十進位數；你很少會想到其他類型的需求，如果有的話。
 
@@ -200,7 +200,7 @@ Try it and see.
 
 ## 遞增和遞減運算符
 
-Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/zh-TW/docs/Learn/JavaScript/First_steps/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
 
 ```js
 guessCount++;

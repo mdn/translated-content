@@ -44,13 +44,6 @@ slug: Mozilla/Firefox/Releases/3
 - [\<a ping>](zh_tw/Firefox_3_ping_attribute_support_for_anchor_element) 的支援
   - : Firefox 3 現在支援用 \<a ping> 去 ping URL，並且預設是 enable 的。
 
-### 參考資料
+## 參見
 
-[Firefox 3 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/3#for_web_site_and_application_developers)
-
-### 延伸閱讀
-
-- [Updating extensions for Firefox 3](/zh-TW/docs/Mozilla/Firefox/Releases/3/Updating_extensions)
-- [Updating web applications for Firefox 3](/zh-TW/docs/Mozilla/Firefox/Releases/3/Updating_web_applications)
-- [Firefox 2 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/zh-TW/docs/Mozilla/Firefox/Releases/1.5)
+{{Firefox_for_developers}}

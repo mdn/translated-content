@@ -17,10 +17,10 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 ## 入門
 
-- 完全新手：如果你正打算接觸 Web 開發，我們建議先從提供了實用 Web 開發介紹的[入門 Web](/zh-TW/docs/Learn/Getting_started_with_the_web)模組。
-- 特殊問題：如果你對 Web 開發有著特殊問題，[常見問題](/zh-TW/docs/Learn/Common_questions)可能有你所需要的資訊。
-- 基礎以外：如果你已經具備基本知識，則下一步就是了解 {{glossary("HTML")}} 與 {{glossary("CSS")}} 的細節。可從[HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)模組著手，再進到[CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)。
-- 寫些腳本：如果你嫻熟 HTML 與 CSS 或想動手寫程式碼，要不要去 {{glossary("JavaScript")}} 或伺服器端語言那邊看看呢 ── 就從我們的 [JavaScript 起步走](/zh-TW/docs/Learn_web_development/Core/Scripting)與[伺服器端程式設計起步走](/zh-TW/docs/Learn/Server-side/First_steps)開始吧。
+- 完全新手：如果你正打算接觸 Web 開發，我們建議先從提供了實用 Web 開發介紹的[入門 Web](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)模組。
+- 特殊問題：如果你對 Web 開發有著特殊問題，[常見問題](/zh-TW/docs/Learn_web_development/Howto)可能有你所需要的資訊。
+- 基礎以外：如果你已經具備基本知識，則下一步就是了解 {{glossary("HTML")}} 與 {{glossary("CSS")}} 的細節。可從[HTML 介紹](/zh-TW/docs/Learn_web_development/Core/Structuring_content)模組著手，再進到[CSS 介紹](/zh-TW/docs/Learn_web_development/Core/Styling_basics)。
+- 寫些腳本：如果你嫻熟 HTML 與 CSS 或想動手寫程式碼，要不要去 {{glossary("JavaScript")}} 或伺服器端語言那邊看看呢 ── 就從我們的 [JavaScript 起步走](/zh-TW/docs/Learn_web_development/Core/Scripting)與[伺服器端程式設計起步走](/zh-TW/docs/Learn_web_development/Extensions/Server-side/First_steps)開始吧。
 
 > [!NOTE]
 > 我們的[字彙庫](/zh-TW/docs/Glossary)另提供專有名詞的定義。
@@ -29,19 +29,19 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 以下是 MDN 學習專區內涵蓋的主題清單。
 
-- [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web)
+- [Web 入門](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)
   - : 針對完全新手提供實際介紹。
-- [HTML：構建 Web](/zh-TW/docs/Learn/HTML)
+- [HTML：構建 Web](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
   - : HTML 是構建不同區域的內容、還有定義這些區域意義和用途的語言。這個主題詳述了 HTML。
-- [CSS：裝飾 Web](/zh-TW/docs/Learn/CSS)
+- [CSS：裝飾 Web](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
   - : CSS 是用來妝點和編排 web 內容、添加動畫行為之類的語言。這個主題總括 CSS 的一切。
-- [JavaScript：動態用戶端腳本](/zh-TW/docs/Learn/JavaScript)
+- [JavaScript：動態用戶端腳本](/zh-TW/docs/Learn_web_development/Core/Scripting)
   - : JavaScript 是給網頁添加動態功能的語言。這個主題會教你要自在理解並撰寫 JavaScript 所需的一切。
-- [無障礙網頁：讓大家都能用上 Web](/zh-TW/docs/Learn/Accessibility)
+- [無障礙網頁：讓大家都能用上 Web](/zh-TW/docs/Learn_web_development/Core/Accessibility)
   - : 無障礙網頁是給盡可能給任何人提供 Web 內容的做法，無論那個人是否受障礙、設備、地點、或其他原因影響。這個主題提供你需要知道的一切。
-- [工具與測試](/zh-TW/docs/Learn/Tools_and_testing)
+- [工具與測試](/zh-TW/docs/Learn_web_development/Extensions/Testing)
   - : 這個主題介紹開發者用來改善工作的工具，如跨瀏覽器測試工具。
-- [伺服端網站程式設計](/zh-TW/docs/Learn/Server-side)
+- [伺服端網站程式設計](/zh-TW/docs/Learn_web_development/Extensions/Server-side)
   - : 就算對用戶端 Web 開發熟悉了，理解伺服器和伺服器端程式如何做動是很有用的。這個主題提供了伺服器端做動原理的總體介紹，並藉著兩大熱門框架 ──Django（Python）與 Express（node.js）── 詳細說明如何建立伺服器端 app。
 
 ## 取得我們的範例程式碼

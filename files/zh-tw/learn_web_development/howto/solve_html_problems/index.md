@@ -12,19 +12,19 @@ original_slug: Learn/HTML/Howto
 
 HTML 文件的最基本結構應用。如果你是 HTML 新手，就先從這裡開始看。
 
-- [如何建立基本 HTML 文件](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document)
-- [如何有邏輯地分割網頁](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [如何建立良好的標題段落結構](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs)
+- [如何建立基本 HTML 文件](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document)
+- [如何有邏輯地分割網頁](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
+- [如何建立良好的標題段落結構](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#the_basics_headings_and_paragraphs)
 
 ### 基本文字語法
 
 HTML 專攻於為文件提供語義資訊，因此 HTML 可以提供使用者更精準的文件資訊傳達方式。
 
-- [如何建立清單](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)
-- [如何強調文件的內容](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
-- [如何表示出一段文字的重要性](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#emphasis_and_importance)
+- [如何建立清單](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists)
+- [如何強調文件的內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance)
+- [如何表示出一段文字的重要性](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#emphasis_and_importance)
 - [如何顯示程式碼](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#representing_computer_code)
-- [如何為圖片加入註記](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#annotating_images_with_figures_and_figure_captions)
+- [如何為圖片加入註記](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images#annotating_images_with_figures_and_figure_captions)
 - [如何標示並註記縮寫](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations)
 - [如何在網頁中加入引用](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#quotations)
 - [如何加入詞語的定義](/zh-TW/docs/Learn/HTML/Howto/Define_terms_with_HTML)
@@ -33,12 +33,12 @@ HTML 專攻於為文件提供語義資訊，因此 HTML 可以提供使用者更
 
 {{Glossary("hyperlink", "超連結")}}把 HTML 導覽變得相當容易，它可以這麼用：
 
-- [如何建立超連結](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [如何用 HTML 建立表格內容](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu)
+- [如何建立超連結](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links)
+- [如何用 HTML 建立表格內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#active_learning_creating_a_navigation_menu)
 
 ### 圖片與多媒體
 
-- [如何把圖片加進網頁](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#how_do_we_put_an_image_on_a_webpage)
+- [如何把圖片加進網頁](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images#how_do_we_put_an_image_on_a_webpage)
 - [如何把視訊內容加進網頁](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [如何把音訊內容加進網頁](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
@@ -46,7 +46,7 @@ HTML 專攻於為文件提供語義資訊，因此 HTML 可以提供使用者更
 
 HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本使內容呈現更具互動性。
 
-- [如何在網頁中使用 CSS](/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works#將_css_套用至_dom)
+- [如何在網頁中使用 CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#將_css_套用至_dom)
 - [如何在網頁中使用 JavaScript](/zh-TW/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
 
 ### 嵌入內容
@@ -60,10 +60,10 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 ### 表單
 
-表單是一種用來把網頁資料傳送到網路伺服器的複雜 HTML 結構。我們鼓勵你讀一遍我們對此的[完整指南](/zh-TW/docs/Learn/Forms)。你可以從以下文章開始：
+表單是一種用來把網頁資料傳送到網路伺服器的複雜 HTML 結構。我們鼓勵你讀一遍我們對此的[完整指南](/zh-TW/docs/Learn_web_development/Extensions/Forms)。你可以從以下文章開始：
 
 - [如何建立簡單的表單](/zh-TW/docs/Learn/Forms/Your_first_form)
-- [如何組織表單的架構](/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form)
+- [如何組織表單的架構](/zh-TW/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 
 ### 表格訊息
 
@@ -92,7 +92,7 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 HTML 不只支援單一語言，它還有提供工具來處理常見的國際化問題。
 
-- [如何在單一網頁中加入多國語言](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#setting_the_primary_language_of_the_document)
+- [如何在單一網頁中加入多國語言](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#setting_the_primary_language_of_the_document)
 - [如何用 HTML 表示時間與日期](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#marking_up_times_and_dates)
 
 ### 效能

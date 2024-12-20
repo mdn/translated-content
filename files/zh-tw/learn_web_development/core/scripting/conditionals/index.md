@@ -53,7 +53,7 @@ if (condition) {
 這邊我們可以得知基礎的架構：
 
 1. 關鍵字 `if` 和後頭的括號。
-2. 想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 [比較運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators)（[comparison operators](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators)），並且最後會回傳 `true` 或是 `false`。
+2. 想測試的條件放在括號中（通常像是「這個值是否大於其他值」或是「這個值是否存在」等等）。這裡的條件會使用先前提過的 [比較運算子](/zh-TW/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)（[comparison operators](/zh-TW/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)），並且最後會回傳 `true` 或是 `false`。
 3. 第一組大括號，在大括號裡面有一些程式碼 — 內容可以是任何我們所需要執行的程式碼，並且只有在條件句回傳 `true` 才會執行。
 4. 關鍵字 `else`。
 5. 另一組大括號，在大括號中我們一樣是放置所需的程式碼，並只有在條件句回傳 `false` 才會執行。
@@ -158,7 +158,7 @@ function setWeather() {
 
 ### A note on comparison operators
 
-Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators) article. Our choices are:
+Comparison operators are used to test the conditions inside our conditional statements. We first looked at comparison operators back in our [Basic math in JavaScript — numbers and operators](/zh-TW/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) article. Our choices are:
 
 - `===` and `!==` — test if one value is identical to, or not identical to, another.
 - `<` and `>` — test if one value is less than or greater than another.
@@ -801,11 +801,11 @@ textarea.onkeyup = function () {
 
 ## Conclusion
 
-And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn#contact_us) to ask for help.
+And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn_web_development#contact_us) to ask for help.
 
 ## See also
 
-- [Comparison operators](/zh-TW/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Comparison operators](/zh-TW/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)
 - [Conditional statements in detail](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else reference](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Conditional (ternary) operator reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

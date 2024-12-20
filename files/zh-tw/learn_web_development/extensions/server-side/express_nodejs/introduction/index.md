@@ -119,7 +119,7 @@ The following sections explain some of the common things you'll see when working
 First lets consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world.html) example (we discuss each part of this below, and in the following sections).
 
 > [!NOTE]
-> If you have Node and Express already installed (or if you install them as shown in the [next article](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
+> If you have Node and Express already installed (or if you install them as shown in the [next article](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
 >
 > **`./node ./app.js`**
 
@@ -283,7 +283,7 @@ var wiki = require("./wiki.js");
 app.use("/wiki", wiki);
 ```
 
-We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes).
+We'll show you a lot more about working with routes, and in particular about using the `Router`, later on in the linked section [Routes and controllers](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes).
 
 ### Using middleware
 

@@ -6,7 +6,7 @@ original_slug: Learn/Accessibility
 
 {{LearnSidebar}}
 
-如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing)、還有其他啟動的要點。
+如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn_web_development/Extensions/Testing)、還有其他啟動的要點。
 
 ## 概觀
 
@@ -20,20 +20,20 @@ When someone describes a site as "accessible," they mean that any user can use a
 
 ## 先決條件
 
-要理解本模塊的概念，最少理解 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 是個好主意。如果在學習相關技術時學習會更好。
+要理解本模塊的概念，最少理解 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting) 是個好主意。如果在學習相關技術時學習會更好。
 
 > [!NOTE]
 > 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 這種程式撰寫網站，執行大多數範例。
 
 ## 教學
 
-- [何謂無障礙網頁？](/zh-TW/docs/Learn/Accessibility/What_is_accessibility)
+- [何謂無障礙網頁？](/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : 這篇文章針對何謂無障礙網頁，起了一個好開頭。這模塊包含了要考慮哪些族群以及理由、不同族群會用什麼工具和 Web 互動、還有怎麼把無障礙網頁導入 Web 開發工作流程。
 - [HTML：無障礙網頁的好開始](/zh-TW/docs/Learn/Accessibility/HTML)
   - : 只要確保在任何時候，正確的 HTML 元素都用於正確的目的，就能消除各種網頁的障礙。這篇文章詳述 HTML 如何確保網頁無障礙。
 - [充分實踐 CSS 與 JavaScript 的無障礙](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : 如果 CSS 與 JavaScript 使用得當，將可以為無障礙網頁提供助力……反過來的話，就會嚴重影響無障礙體驗。這篇文章詳述如何在內容複雜的情況下，確保能充分實踐 CSS 與 JavaScript 的無障礙。
-- [WAI-ARIA 基礎](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [WAI-ARIA 基礎](/zh-TW/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
   - : 從之前的文章來看，有時製作要涉及到非語意的 HTML 還有動態 JavaScript 更新技術……等，會令複雜的 UI 控制變得很困難。WAI-ARIA 正是為了解決此一問題而生。它對瀏覽器和輔助技術添加進一步的語意，讓用戶能知道發生了什麼事。我們將介紹如何在基本層面使用此技術，以提昇無障礙。
 - [無障礙多媒體](/zh-TW/docs/Learn/Accessibility/Multimedia)
   - : 會導致無障礙網頁出問題的另一個根源是多媒體：影片、聲音、圖片等內容，需要有合適的文字替代，以便輔助技術和它的用戶能夠理解。我們將在這篇文章中闡明作法。
