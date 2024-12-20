@@ -20,7 +20,7 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 - 完全新手：如果你正打算接觸 Web 開發，我們建議先從提供了實用 Web 開發介紹的[入門 Web](/zh-TW/docs/Learn/Getting_started_with_the_web)模組。
 - 特殊問題：如果你對 Web 開發有著特殊問題，[常見問題](/zh-TW/docs/Learn/Common_questions)可能有你所需要的資訊。
 - 基礎以外：如果你已經具備基本知識，則下一步就是了解 {{glossary("HTML")}} 與 {{glossary("CSS")}} 的細節。可從[HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)模組著手，再進到[CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps)。
-- 寫些腳本：如果你嫻熟 HTML 與 CSS 或想動手寫程式碼，要不要去 {{glossary("JavaScript")}} 或伺服器端語言那邊看看呢 ── 就從我們的 [JavaScript 起步走](/zh-TW/docs/Learn/JavaScript/First_steps)與[伺服器端程式設計起步走](/zh-TW/docs/Learn/Server-side/First_steps)開始吧。
+- 寫些腳本：如果你嫻熟 HTML 與 CSS 或想動手寫程式碼，要不要去 {{glossary("JavaScript")}} 或伺服器端語言那邊看看呢 ── 就從我們的 [JavaScript 起步走](/zh-TW/docs/Learn_web_development/Core/Scripting)與[伺服器端程式設計起步走](/zh-TW/docs/Learn/Server-side/First_steps)開始吧。
 
 > [!NOTE]
 > 我們的[字彙庫](/zh-TW/docs/Glossary)另提供專有名詞的定義。
