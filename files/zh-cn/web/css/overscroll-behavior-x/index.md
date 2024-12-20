@@ -7,7 +7,8 @@ slug: Web/CSS/overscroll-behavior-x
 
 **`overscroll-behavior-x`** 这个 CSS 属性用来控制当滚动到区域的水平边界时的浏览器行为。
 
-> **备注：** 详细的解释请访问 {{cssxref("overscroll-behavior")}}
+> [!NOTE]
+> 详细的解释请访问 {{cssxref("overscroll-behavior")}}
 
 ```css
 /* Keyword values */
@@ -66,6 +67,10 @@ main > div {
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("overscroll-behavior-y")}}
+- {{cssxref("overscroll-behavior-inline")}}
+- {{cssxref("overscroll-behavior-block")}}
+- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块

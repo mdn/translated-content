@@ -56,7 +56,7 @@ greeting: function greeting() {
 }
 ```
 
-- [MDN 用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{glossary("global scope", "グローバルスコープ")}}
   - {{glossary("object", "オブジェクト")}}

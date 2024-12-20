@@ -24,7 +24,8 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
 4. 常规流中的后代行内元素
 5. 后代中的定位元素按照它们在 HTML 中出现的顺序层叠
 
-> **备注：** 在下面的例子中，除了非定位的那个块元素外，所有的块元素都是半透明的，以便来显示层叠顺序。如果减少非定位元素 (DIV #4) 的透明度，会发生很诡异的事情：该元素的背景和边框会出现在浮动块元素上方，但是仍然处于定位元素的下方。我不能确定这是规范的 bug 或是怪异的解析。(设置透明度会隐式的创建一个层叠上下文。)
+> [!NOTE]
+> 在下面的例子中，除了非定位的那个块元素外，所有的块元素都是半透明的，以便来显示层叠顺序。如果减少非定位元素 (DIV #4) 的透明度，会发生很诡异的事情：该元素的背景和边框会出现在浮动块元素上方，但是仍然处于定位元素的下方。我不能确定这是规范的 bug 或是怪异的解析。(设置透明度会隐式的创建一个层叠上下文。)
 
 {{ EmbedLiveSample('该示例的源码', '563', '255') }}
 
@@ -128,9 +129,9 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
 
 ### 相关链接
 
-- [未使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index)：默认层叠规则
-- [使用 z-index 的层叠](/zh-CN/CSS/Understanding_z-index/Using_z-index)：使用 z-index 来改变默认层叠顺序
-- [层叠上下文](/zh-CN/CSS/Understanding_z-index/Stacking_context)：关于层叠上下文的注意事项
+- [未使用 z-index 的层叠](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)：默认层叠规则
+- [使用 z-index 的层叠](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index)：使用 z-index 来改变默认层叠顺序
+- [层叠上下文](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context)：关于层叠上下文的注意事项
 - [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：两层嵌套标签的 HTML 中，z-index 作用在内层标签上
 - [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：两层嵌套标签的 HTML 中，z-index 作用在内外层标签上
 - [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：三层嵌套标签的 HTML 中，z-index 作用在中间层标签上
@@ -138,5 +139,5 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elem
 ### 原始文档信息
 
 - 作者：Paolo Lombardi
-- 该文档的英文原始版本是从我为 [YappY](http://www.yappy.it) 写的意大利文章翻译而来的，该文章版权为 [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- 该文档的英文原始版本是从我为 [YappY](http://www.yappy.it) 写的意大利文章翻译而来的，该文章版权为 [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - 上次更新于：2014 年 11 月 3 日

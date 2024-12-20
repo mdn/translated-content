@@ -10,7 +10,8 @@ l10n:
 
 **`FormData.entries()`** メソッドは、この {{domxref("FormData")}} に含まれているすべてのキー/値のペアを走査する[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。それぞれのペアのキーは文字列オブジェクトで、値は文字列または {{domxref("Blob")}} のどちらかです。
 
-> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
+> [!NOTE]
+> このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 

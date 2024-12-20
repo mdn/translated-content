@@ -25,7 +25,8 @@ Para demostrar el uso de módulos, hemos creado un [sencillo conjunto de ejemplo
 
 Estos son bastante triviales, pero se han mantenido deliberadamente simples para demostrar los módulos con claridad.
 
-> **Nota:** Si deseas descargar los ejemplos y ejecutarlos localmente, deberás ejecutarlos a través de un servidor web local.
+> [!NOTE]
+> Si deseas descargar los ejemplos y ejecutarlos localmente, deberás ejecutarlos a través de un servidor web local.
 
 ## Estructura básica de los ejemplos
 
@@ -39,7 +40,8 @@ modules/
     square.js
 ```
 
-> **Nota:** Todos los ejemplos de esta guía básicamente tienen la misma estructura; lo anterior debería empezar a resultarte bastante familiar.
+> [!NOTE]
+> Todos los ejemplos de esta guía básicamente tienen la misma estructura; lo anterior debería empezar a resultarte bastante familiar.
 
 Los dos módulos del directorio `modules` se describen a continuación:
 
@@ -131,7 +133,8 @@ se convierte en
 
 Puedes ver estas líneas en acción en [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
 
-> **Nota:** En algunos sistemas de módulos, puedes omitir la extensión del archivo y el punto (por ejemplo, `'/modules/square'`). Esto no funciona en módulos de JavaScript nativos.
+> [!NOTE]
+> En algunos sistemas de módulos, puedes omitir la extensión del archivo y el punto (por ejemplo, `'/modules/square'`). Esto no funciona en módulos de JavaScript nativos.
 
 Una vez que hayas importado las funciones a tu script, las puedes usar tal como se definieron dentro del mismo archivo. Lo siguiente se encuentra en `main.js`, debajo de las líneas `import`:
 
@@ -144,7 +147,8 @@ reportArea(square1.length, reportList);
 reportPerimeter(square1.length, reportList);
 ```
 
-> **Nota:** Aunque las funciones importadas están disponibles en el archivo, son vistas de solo lectura de la función que se exportó. No puedes cambiar la variable que se importó, pero aún puedes modificar propiedades similares a `const`. Además, estas características se importan como enlaces activos, lo cual significa que pueden cambiar de valor incluso si no puedes modificar el enlace a diferencia de `const`.
+> [!NOTE]
+> Aunque las funciones importadas están disponibles en el archivo, son vistas de solo lectura de la función que se exportó. No puedes cambiar la variable que se importó, pero aún puedes modificar propiedades similares a `const`. Además, estas características se importan como enlaces activos, lo cual significa que pueden cambiar de valor incluso si no puedes modificar el enlace a diferencia de `const`.
 
 ## Aplicar el módulo a tu HTML
 
@@ -208,7 +212,8 @@ Una vez más, ten en cuenta la falta de llaves. Esto se debe a que solo se permi
 import { default as randomSquare } from "./modules/square.js";
 ```
 
-> **Nota:** La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#Renombrar_impotaciones_y_exportaciones).
+> [!NOTE]
+> La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#renombrar_impotaciones_y_exportaciones).
 
 ## Evitar conflictos de nombres
 
@@ -428,7 +433,8 @@ export { Circle } from "./shapes/circle.js";
 
 Estas toman las exportaciones de los submódulos individuales y las ponen a disposición de manera efectiva desde el módulo `shapes.js`.
 
-> **Nota:** Las exportaciones a las que se hace referencia en `shapes.js` básicamente se redirigen a través del archivo y realmente no existen allí, por lo que no podrás escribir ningún código relacionado útil dentro del mismo archivo.
+> [!NOTE]
+> Las exportaciones a las que se hace referencia en `shapes.js` básicamente se redirigen a través del archivo y realmente no existen allí, por lo que no podrás escribir ningún código relacionado útil dentro del mismo archivo.
 
 Entonces, ahora en el archivo `main.js`, podemos obtener acceso a las tres clases de módulos reemplazando
 
@@ -448,7 +454,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 La parte más nueva de la funcionalidad de los módulos de JavaScript que estará disponible en los navegadores es la carga dinámica de módulos. Esto te permite cargar módulos dinámicamente solo cuando son necesarios, en lugar de tener que cargar todo por adelantado. Esto tiene algunas obvias ventajas de rendimiento; sigue leyendo y veamos cómo funciona.
 
-Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#Crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
+Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -501,6 +507,6 @@ Aquí hay algunos consejos que te pueden ayudar si tienes problemas para hacer q
 - [Uso de módulos JavaScript en la web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani y Mathias Bynens
 - [Módulos ES: un análisis profundo de dibujos animados](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), publicación en el blog Hacks de Lin Clark
 - [ES6 en profundidad: Módulos](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), publicación en el blog Hacks de Jason Orendorff
-- Libro de Axel Rauschmayer [Explorando JS: Módulos](http://exploringjs.com/es6/ch_modules.html)
+- Libro de Axel Rauschmayer [Explorando JS: Módulos](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

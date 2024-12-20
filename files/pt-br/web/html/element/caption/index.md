@@ -61,7 +61,7 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`caption`** especifica a legenda (ou t
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ### Atributos obsoletos
 
@@ -80,7 +80,8 @@ Os seguintes atributos são obsoletos e não devem ser usados. Estão documentad
     - `bottom`
       - : A legenda é exibida abaixo da tabela.
 
-    > **Aviso:** Não use este atributo já que ele foi depreciado: O elemento {{HTMLElement("caption")}} deve ser estilizado usando as propriedades [CSS](/pt-BR/docs/Web/CSS). Para dar um efeito similar ao atributo `align`, use as propriedades [CSS](/pt-BR/docs/Web/CSS) {{cssxref("caption-side")}} e {{cssxref("text-align")}}.
+    > [!WARNING]
+    > Não use este atributo já que ele foi depreciado: O elemento {{HTMLElement("caption")}} deve ser estilizado usando as propriedades [CSS](/pt-BR/docs/Web/CSS). Para dar um efeito similar ao atributo `align`, use as propriedades [CSS](/pt-BR/docs/Web/CSS) {{cssxref("caption-side")}} e {{cssxref("text-align")}}.
 
 ## Notas de uso
 

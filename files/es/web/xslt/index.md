@@ -26,7 +26,7 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 
   - : Cuando un buen ejemplo vale más que mil palabras.
 
-- [Utilizando la interfaz JavaScript de Mozilla para Transformaciones XSLT (en)](http://www.mozilla.org/projects/xslt/js-interface.html)
+- [Utilizando la interfaz JavaScript de Mozilla para Transformaciones XSLT (en)](https://www.mozilla.org/projects/xslt/js-interface.html)
 
   - : Este documento describe la interfaz JavaScript de Mozilla 1.2 y el motor de procesado de XSLT. Notese que esto no es aplicable a las publicaciones previas de Mozilla o de otros navegadores basados el.
 
@@ -49,4 +49,5 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 - Temas relacionados
   - : [XML](/es/XML), [XPath](/es/XPath), [XSL](/es/XSL).
 
-> **Nota:** Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).
+> [!NOTE]
+> Esta descripción de XSLT ha sido obtenida del [Artículo sobre XSLT en la Wikipedia (es)](http://es.wikipedia.org/wiki/XSLT).

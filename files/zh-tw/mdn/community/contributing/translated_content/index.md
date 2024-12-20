@@ -41,8 +41,8 @@ l10n:
 
 ### 韓文（`ko`）
 
-- 討論群組：[Discord（`#korean`）](/discord)、[Kakao Talk（`#MDN Korea`）](https://open.kakao.com/o/gdfG288c)
-- 目前的維護者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[cos18](https://github.com/cos18)、[pje1740](https://github.com/pje1740)、[wisedog](https://github.com/wisedog)、[swimjiy](https://github.com/swimjiy)、[jho2301](https://github.com/jho2301)、[sunhpark42](https://github.com/sunhpark42)、[1ilsang](https://github.com/1ilsang)
+- 討論群組：[Discord（`#korean`）](/discord)、[Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
+- 目前的維護者：[hochan222](https://github.com/hochan222)、[yechoi42](https://github.com/yechoi42)、[wisedog](https://github.com/wisedog)、[sunhpark42](https://github.com/sunhpark42)、[1ilsang](https://github.com/1ilsang)
 
 ### 俄文（`ru`）
 
@@ -51,7 +51,7 @@ l10n:
 
 ### 西班牙文（`es`）
 
-- 討論群組：[Matrix（`#mdn-l10n-es`）](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)、[Telegram（`MDN l10n ES`）](https://t.me/+Dr6qKQCAepw4MjFj)
+- 討論群組：[Matrix（`#mdn-l10n-es`）](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)、[Telegram（`MDN l10n ES`）](https://t.me/+Dr6qKQCAepw4MjFj)、[Discord（`#spanish`）](/discord)
 - 目前的維護者：[JuanVqz](https://github.com/JuanVqz)、[davbrito](https://github.com/davbrito)、[Graywolf9](https://github.com/Graywolf9)、[Vallejoanderson](https://github.com/Vallejoanderson)、[marcelozarate](https://github.com/marcelozarate)、[Jalkhov](https://github.com/Jalkhov)
 
 ## 參見

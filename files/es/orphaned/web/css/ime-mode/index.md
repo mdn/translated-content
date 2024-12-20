@@ -54,15 +54,17 @@ input[type=password] {
 }
 ```
 
-> **Nota:** En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.
+> [!NOTE]
+> En general, no es apropiado por un sitio público la manipulación el estado del modo de IME. Esta propiedad debería usarse para aplicaciones web o similares.
 
 La versión de Gecko 1.9 para Macintosh no es capaz de recuperar el estado previo del IME cuando el campo para el cual se ha desactivado pierde el foco, por tanto, los usuarios de Mac podrían enfadarse cuando se utiliza el valor `disabled`.
 
-> **Nota:** Desactivar el IME para prevenir la entrada de caracteres extendidos en los formularios no impide que los usuarios puedan pegar caracteres extendidos en los campos del formulario.
+> [!NOTE]
+> Desactivar el IME para prevenir la entrada de caracteres extendidos en los formularios no impide que los usuarios puedan pegar caracteres extendidos en los campos del formulario.
 
 ### Especificaciones
 
-- [Especificaciones de Microsoft](http://msdn2.microsoft.com/en-us/library/ms533883.aspx)
+- [Especificaciones de Microsoft](https://msdn2.microsoft.com/en-us/library/ms533883.aspx)
 
 ### Compatibilidad entre navegadores
 
@@ -70,4 +72,4 @@ La propiedad `ime-mode` es soportada en Firefox 3 y posteriores, así como en In
 
 Categorías
 
-Interwiki Languages [zh tw:CSS:ime-mode](/zh_tw/CSS/ime-mode)
+Interwiki Languages [zh tw:CSS:ime-mode](/es/docs/CSS/ime-mode)

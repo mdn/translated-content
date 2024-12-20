@@ -42,7 +42,8 @@ l10n:
 
 ## 출처 변경
 
-> **경고:** 여기에 설명된 접근 방식({{domxref("document.domain")}} setter 사용)은 동일 출처 정책에서 제공하는 보안 보호를 약화시키고 브라우저의 출처 모델을 복잡하게 하여 상호 운용성 문제와 보안 버그로 이어지기 때문에 더 이상 권장되지 않습니다.
+> [!WARNING]
+> 여기에 설명된 접근 방식({{domxref("document.domain")}} setter 사용)은 동일 출처 정책에서 제공하는 보안 보호를 약화시키고 브라우저의 출처 모델을 복잡하게 하여 상호 운용성 문제와 보안 버그로 이어지기 때문에 더 이상 권장되지 않습니다.
 
 페이지는 일부 제한 사항과 함께 자신의 출처를 변경할 수 있습니다. 스크립트는 {{domxref("document.domain")}}의 값을 현재 도메인 또는 현재 도메인의 상위 도메인으로 설정할 수 있습니다. 현재 도메인의 상위 도메인으로 설정하면 더 짧은 상위 도메인이 동일 출처 검사에 사용됩니다.
 
@@ -58,13 +59,14 @@ document.domain = "company.com";
 
 이 메커니즘에는 몇 가지 제한 사항이 있습니다. 예를 들어 [`document-domain`](/ko/docs/Web/HTTP/Headers/Permissions-Policy/document-domain) [`Permissions-Policy`](/ko/docs/Web/HTTP/Headers/Permissions-Policy)가 활성화되었거나, 문서가 샌드박스된 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe)에 있는 경우 "`SecurityError`" [`DOMException`](/ko/docs/Web/API/DOMException)이 발생하며, 이러한 방식으로 출처를 변경하더라도 많은 Web API에서 사용되는 출처 확인에는 영향을 미치지 않습니다. (예: [`localStorage`](/ko/docs/Web/API/Window/localStorage), [`indexedDB`](/ko/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ko/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ko/docs/Web/API/SharedWorker)). 실패 사례의 전체 목록은 [Document.domain > Failures](/ko/docs/Web/API/Document/domain#failures)에서 찾을 수 있습니다.
 
-> **참고:** 하위 도메인이 상위 도메인에 액세스하도록 허용하기 위해 `document.domain`을 사용하는 경우 상위 도메인과 하위 도메인 모두에서 `document.domain`을 같은 값으로 설정해야 합니다. 이는 상위 도메인을 원래 값으로 다시 설정하는 경우에도 필요합니다. 이렇게 하지 않으면 권한 오류가 발생할 수 있습니다.
+> [!NOTE]
+> 하위 도메인이 상위 도메인에 액세스하도록 허용하기 위해 `document.domain`을 사용하는 경우 상위 도메인과 하위 도메인 모두에서 `document.domain`을 같은 값으로 설정해야 합니다. 이는 상위 도메인을 원래 값으로 다시 설정하는 경우에도 필요합니다. 이렇게 하지 않으면 권한 오류가 발생할 수 있습니다.
 
 ## 교차 출처 네트워크 접근
 
 동일 출처 정책은 {{domxref("XMLHttpRequest")}}이나 {{htmlelement("img")}} 요소를 사용하는 경우와 같이 서로 다른 두 출처 간의 상호 작용을 제어합니다. 이러한 상호 작용은 일반적으로 세 가지 범주로 분류됩니다.
 
-- 교차 출처 쓰기는 보통 허용합니다. 예시로는 링크, 리다이렉트, 그리고 양식 제출 등이 있습니다. 일부 HTTP 요청은 [프리플라이트](/ko/docs/Web/HTTP/CORS#Preflighted_requests)를 요구합니다.
+- 교차 출처 쓰기는 보통 허용합니다. 예시로는 링크, 리다이렉트, 그리고 양식 제출 등이 있습니다. 일부 HTTP 요청은 [프리플라이트](/ko/docs/Web/HTTP/CORS#preflighted_requests)를 요구합니다.
 - 교차 출처 삽입은 보통 허용합니다. (예시는 아래에 있습니다.)
 - 교차 출처 읽기는 보통 허용하지 않지만, 종종 교차 출처 삽입 과정에서 읽기 권한이 누출됩니다. 예를 들어 삽입된 이미지의 크기, 삽입된 스크립트의 작업, 또는 [삽입된 리소스의 가용성](https://bugzil.la/629094)을 읽을 수 있습니다.
 

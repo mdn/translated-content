@@ -9,7 +9,8 @@ slug: Web/API/FormData/keys
 
 La méthode `FormData.keys()` renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{domxref("USVString")}}.
 
-> **Note :** Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
 
 ## Syntaxe
 
@@ -53,6 +54,6 @@ cle2
 ## Voir aussi
 
 - {{domxref("XMLHTTPRequest")}}
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Utiliser les objets FormData](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

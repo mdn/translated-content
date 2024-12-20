@@ -7,11 +7,13 @@ slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis).
 
-> **Nota:** Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
+> [!NOTE]
+> Você pode experimentar soluções nos editores interativos abaixo. No entanto, pode ser útil fazer o download do código e usar uma ferramenta on-line como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar as tarefas.
 >
 > Se você travar, peça ajuda — veja a seção [Assessment or further help](#assessment_or_further_help) na parte inferior desta página.
 
-> **Nota:** Nos exemplos abaixo, se houver um erro no seu código, ele será exibido no painel de resultados da página, para ajudá-lo a tentar descobrir a resposta (ou no console JavaScript do navegador, no caso da versão para download).
+> [!NOTE]
+> Nos exemplos abaixo, se houver um erro no seu código, ele será exibido no painel de resultados da página, para ajudá-lo a tentar descobrir a resposta (ou no console JavaScript do navegador, no caso da versão para download).
 
 ## Variáveis 1
 

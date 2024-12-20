@@ -7,13 +7,8 @@ slug: Web/API/DeviceMotionEvent/rotationRate
 
 返回设备围绕其每个轴（x、y、z）旋转的速率（单位：度/秒）。
 
-> **备注：** 如果设备无法提供此信息，则为 null
-
-## 语法
-
-```
-var rates = instanceOfDeviceMotionEvent.rotationRate;
-```
+> [!NOTE]
+> 如果设备无法提供此信息，则为 null
 
 ## 值
 
@@ -41,5 +36,5 @@ rotationRates 属性是一个只读对象，用于描述设备围绕其每个轴
 - {{ domxref("window.ondevicemotion") }}
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)

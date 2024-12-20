@@ -32,19 +32,20 @@ Authorization: <тип> <данные пользователя>
 
 - <тип>
 
-  - : [Тип авторизации](/ru/docs/Web/HTTP/Авторизация#Authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Авторизация#Basic_authentication_scheme). Остальные типы:
+  - : [Тип авторизации](/ru/docs/Web/HTTP/Authentication#authentication_schemes). Общий тип [«Базовая»](/ru/docs/Web/HTTP/Authentication#basic_authentication_scheme). Остальные типы:
 
-    - [IANA registry of Authentication schemes](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
-    - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
+    - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
+    - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
 - <данные пользователя>
 
   - : Если используется схема авторизации «Базовая», данные пользователя формируются следующим образом:
 
     - Логин и пароль, разделённые двоеточием (`aladdin:opensesame`).
-    - Результирующая строка, закодированная в [base64](/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
+    - Результирующая строка, закодированная в [base64](/ru/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-    > **Примечание:** Кодировка Base64 не означает шифрование или хэширование! Этот метод так же небезопасен, как и отправка учётных данных в открытом виде (base64 является обратимой кодировкой). Отдавайте предпочтение использованию HTTPS в сочетании с Базовой Авторизацией.
+    > [!NOTE]
+    > Кодировка Base64 не означает шифрование или хэширование! Этот метод так же небезопасен, как и отправка учётных данных в открытом виде (base64 является обратимой кодировкой). Отдавайте предпочтение использованию HTTPS в сочетании с Базовой Авторизацией.
 
 ## Примеры
 

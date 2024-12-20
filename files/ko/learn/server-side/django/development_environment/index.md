@@ -178,7 +178,7 @@ pip3 list
 
 ## 파이썬 가상 환경에서 장고 사용하기
 
-우리가 가상 환경을 만드는 데 사용할 라이브러리들은 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (리눅스와 맥 OS X) 그리고 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (윈도우)입니다. 둘 다 [virtualenv](/ko/docs/Python/Virtualenv) 도구를 사용하죠. wrapper 도구는 모든 플랫폼의 인터페이스를 관리하기 위한 일관적인 인터페이스를 생성합니다.
+우리가 가상 환경을 만드는 데 사용할 라이브러리들은 [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (리눅스와 맥 OS X) 그리고 [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (윈도우)입니다. 둘 다 [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv) 도구를 사용하죠. wrapper 도구는 모든 플랫폼의 인터페이스를 관리하기 위한 일관적인 인터페이스를 생성합니다.
 
 ### 가상 환경 소프트웨어 설치하기
 
@@ -259,7 +259,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 이 코드들은 우분트에서도 같은 코드이지만, startup 파일은 당신의 홈 디렉토리에 위치하며 다른 이름 **.bash_profile**을 가진 숨겨진 파일입니다.
 
-> **참고:** 파인더(finder)에서**.bash-profile** 파일을 찾을 수 없다면, 터미널에서 nano를 이용해 이 파일을 열 수 있습니다.
+> [!NOTE]
+> 파인더(finder)에서**.bash-profile** 파일을 찾을 수 없다면, 터미널에서 nano를 이용해 이 파일을 열 수 있습니다.
 >
 > 터미널 명령은 대체로 아래와 같습니다 :
 >

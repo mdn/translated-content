@@ -9,7 +9,8 @@ l10n:
 
 **`bookmarks.move()`** 方法将指定的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 移动到书签树中的指定目的地。这允许你将书签移动到新文件夹或文件夹内的位置。
 
-> **警告：** 如果你的扩展尝试将书签移动到书签树根节点，则调用将引发错误，并显示消息：“_The bookmark root cannot be modified_”，移动操作将不会完成。
+> [!WARNING]
+> 如果你的扩展尝试将书签移动到书签树根节点，则调用将引发错误，并显示消息：“_The bookmark root cannot be modified_”，移动操作将不会完成。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -41,7 +42,8 @@ let movingBookmark = browser.bookmarks.move(
 
 如果与 `id` 参数对应的节点无法找到，则该 Promise 将以错误消息拒绝。
 
-> **备注：** 如果移动多个书签，由于此 API 是异步的，移动调用可能以任何顺序处理。因此，每个书签的索引值在 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 中返回之前可能会改变或是未知的。如果书签的索引与你的扩展相关，则在移动下一个书签之前，扩展应该等待每个 `bookmarks.move` 调用完成。等待确保每个书签关联的索引不会受到在原始调用进行时并发执行移动调用的影响。
+> [!NOTE]
+> 如果移动多个书签，由于此 API 是异步的，移动调用可能以任何顺序处理。因此，每个书签的索引值在 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 中返回之前可能会改变或是未知的。如果书签的索引与你的扩展相关，则在移动下一个书签之前，扩展应该等待每个 `bookmarks.move` 调用完成。等待确保每个书签关联的索引不会受到在原始调用进行时并发执行移动调用的影响。
 
 ## 示例
 
@@ -68,7 +70,8 @@ movingBookmark.then(onMoved, onRejected);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-move) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.bookmarks`](https://developer.chrome.google.cn/docs/extensions/reference/api/bookmarks#method-move) API。该文档衍生自 Chromium 代码中的 [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

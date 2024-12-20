@@ -50,7 +50,8 @@ Un atributo debe tener siempre:
 
 Los atributos siempre se incluyen en la etiqueta de apertura de un elemento, nunca en la de cierre.
 
-> **Nota:** el atributo con valores simples que no contengan espacios en blanco ASCII (o cualesquiera de los caracteres `"` `'` `` ` `` `=` `<` `>`) pueden permanecer sin entrecomillar, pero se recomienda entrecomillar todos los valores de atributo, ya que esto hace que el código sea más consistente y comprensible.
+> [!NOTE]
+> El atributo con valores simples que no contengan espacios en blanco ASCII (o cualesquiera de los caracteres `"` `'` `` ` `` `=` `<` `>`) pueden permanecer sin entrecomillar, pero se recomienda entrecomillar todos los valores de atributo, ya que esto hace que el código sea más consistente y comprensible.
 
 ### Anidar elementos
 
@@ -80,7 +81,7 @@ Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerr
 
 ### Anatomía de un documento HTML
 
-Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos)):
+Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
 
 ```html
 <!doctype html>
@@ -125,7 +126,8 @@ La frase clave acerca del texto alt de arriba es «texto que debería describir 
 
 Prueba a dar con mejores textos alt para tu imagen.
 
-> **Nota:** Descubre más acerca de la accesibilidad en el [módulo de aprendizaje sobre la accesibilidad](/es/docs/Web/Accessibility).
+> [!NOTE]
+> Descubre más acerca de la accesibilidad en el [módulo de aprendizaje sobre la accesibilidad](/es/docs/Web/Accessibility).
 
 ## Marcado de texto
 
@@ -144,7 +146,8 @@ Los elementos de encabezado permiten especificar que ciertas partes del contenid
 
 Intenta ahora añadir un título apropiado para tu página HTML, antes de tu elemento {{htmlelement("img")}}.
 
-> **Nota:** verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn/Accessibility/HTML#Contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#¿Por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
+> [!NOTE]
+> Verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn/Accessibility/HTML#contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#¿por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
 
 ### Párrafos
 
@@ -223,12 +226,12 @@ Ahora agrega un vínculo a tu página, si es que aún no lo hiciste.
 
 ## Conclusión
 
-Si lograste seguir todas las instrucciones de este artículo, deberías terminar con una página que se vea así (también puedes [verla aquí](http://mdn.github.io/beginner-html-site/)):
+Si lograste seguir todas las instrucciones de este artículo, deberías terminar con una página que se vea así (también puedes [verla aquí](https://mdn.github.io/beginner-html-site/)):
 
 ![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](finished-test-page-small.png)
 
 Si te estancas en algún paso, puedes comparar tu trabajo con el [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) en Github.
 
-Aquí realmente solo has rasguñado la superficie de HTML. Para aprender más, ve a la [página de Aprendizaje HTML](/es/Learn/HTML).
+Aquí realmente solo has rasguñado la superficie de HTML. Para aprender más, ve a la [página de Aprendizaje HTML](/es/docs/Learn/HTML).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web")}}

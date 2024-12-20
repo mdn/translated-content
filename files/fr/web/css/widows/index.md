@@ -5,7 +5,7 @@ slug: Web/CSS/widows
 
 {{CSSRef}}
 
-La propriété **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de la [page](/fr/docs/Web/CSS/Medias_paginés), région ou [colonne](/fr/docs/Web/CSS/Colonnes_CSS) suivante. En utilisant la propriété `widows`, on évite d'avoir des veuves sur une seule ligne.
+La propriété **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de la [page](/fr/docs/Web/CSS/Medias_paginés), région ou [colonne](/fr/docs/Web/CSS/CSS_multicol_layout) suivante. En utilisant la propriété `widows`, on évite d'avoir des veuves sur une seule ligne.
 
 ```css
 /* Valeurs entières */
@@ -19,7 +19,8 @@ widows: initial;
 widows: unset;
 ```
 
-> **Note :** En typographie, une ligne veuve est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une nouvelle page (alors que le paragraphe démarrait sur une page antérieure).
+> [!NOTE]
+> En typographie, une ligne veuve est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une nouvelle page (alors que le paragraphe démarrait sur une page antérieure).
 
 ## Syntaxe
 

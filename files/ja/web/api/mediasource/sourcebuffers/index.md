@@ -27,7 +27,7 @@ function sourceOpen() {
   fetchAB(assetURL, (buf) => {
     sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
-      console.log(mediaSource.sourceBuffers); // 上で追加されたソースバッファが含まれます
+      console.log(mediaSource.sourceBuffers); // 上で追加されたソースバッファーが含まれます
       video.play();
       console.log(mediaSource.readyState); // ended
     });

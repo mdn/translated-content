@@ -61,7 +61,8 @@ Comme nous l'avons dit dans [l'article précédent](/fr/docs/Learn/Tools_and_tes
 - La confusion à propos de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), la portée à laquelle il s'applique, pouvant changer la valeur à laquelle on s'attend. Vous pouvez lire [Qu'est-ce que «&nbsp;this&nbsp;»&nbsp;?](/fr/docs/Learn/JavaScript/Objects/Basics#quest-ce_que_«_this_») comme introduction à ce sujet, et aussi étudier quelques exemples comme [celui-ci](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), qui illustre un usage classique où on enregistre la valeur de `this` pour une portée donnée dans une variable séparée afin de l'utiliser dans des fonctions imbriquées, pour être sûr·e d'appliquer le code au bon `this`.
 - L'usage incorrect de fonctions au sein de boucles qui utilisent une variable globale (ce qui correspond plus généralement à une confusion sur les portées). Par exemple, dans [`bad-for-loop.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (voir [le code source](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), on exécute 10 itérations en utilisant une variable définie avec `var`, en créant à chaque fois un paragraphe auquel on attache un gestionnaire d'évènement [`onclick`](/fr/docs/Web/API/Element/click_event). Lorsqu'on clique sur les paragraphes, on souhaite afficher un message d'alerte indiquant le numéro du paragraphe (c'est-à-dire la valeur de `i` au moment où le paragraphe a été ajouté). Au lieu de ce résultat, tous les messages d'alertes affichent la valeur 11, car la boucle `for` a terminé ses itérations avant que les fonctions imbriquées soient appelées.
 
-  > **Note :** La solution la plus simple consiste à déclarer la variable d'itération avec `let` plutôt que `var` pour que la valeur `i` associée à chaque fonction soit unique pour chaque itération. Malheureusement, cela ne fonctionne pas avec IE11, et c'est pourquoi nous n'avons pas utilisé cette solution pour la version correcte de cet exemple.
+  > [!NOTE]
+  > La solution la plus simple consiste à déclarer la variable d'itération avec `let` plutôt que `var` pour que la valeur `i` associée à chaque fonction soit unique pour chaque itération. Malheureusement, cela ne fonctionne pas avec IE11, et c'est pourquoi nous n'avons pas utilisé cette solution pour la version correcte de cet exemple.
 
   Pour que cela fonctionne, il faut définir séparément une fonction à attacher aux gestionnaires, et l'appeler à chaque itération en lui passant la valeur courante pour `para` et `i`. Voir le fichier [`good-for-loop.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)) pour une version fonctionnelle.
 
@@ -167,7 +168,8 @@ Pour résumer, lorsque quelque chose ne fonctionne pas et qu'une valeur n'est pa
 
 Malheureusement, l'erreur est toujours là. Continuons notre enquête en utilisant un outil plus avancé&nbsp;: [le débogueur JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
 
-> **Note :** Des outils équivalents sont disponibles dans les autres navigateurs&nbsp;: [l'onglet Sources](https://developer.chrome.com/docs/devtools/#sources) de Chrome et Edge, le débogueur de Safari (voir [les outils de développement de Safari](https://developer.apple.com/safari/tools/)).
+> [!NOTE]
+> Des outils équivalents sont disponibles dans les autres navigateurs&nbsp;: [l'onglet Sources](https://developer.chrome.com/docs/devtools/#sources) de Chrome et Edge, le débogueur de Safari (voir [les outils de développement de Safari](https://developer.apple.com/safari/tools/)).
 
 Dans Firefox, l'onglet du débogueur se présente ainsi&nbsp;:
 
@@ -196,7 +198,8 @@ Nous avons ici plusieurs informations très utiles.
 
 Nous vous donnons ici l'occasion de corriger le problème par vous-même. Pour vous donner quelques pistes, vous pouvez [paramétrer l'objet de la requête `XMLHttpRequest` pour recevoir explicitement une réponse au format JSON](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [convertir le texte obtenu en JSON](/fr/docs/Learn/JavaScript/Objects/JSON#conversion_entre_objets_et_textes) après avoir reçu la réponse. Si vous coincez, vous pouvez consulter [le code source de l'exemple corrigé](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
 
-> **Note :** Le débogueur possède de nombreuses autres fonctionnalités que nous n'avons pas abordées ici, comme les points d'arrêt conditionnels et les expressions espionnes. Pour plus d'informations, [référez vous à la documentation du débogueur Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
+> [!NOTE]
+> Le débogueur possède de nombreuses autres fonctionnalités que nous n'avons pas abordées ici, comme les points d'arrêt conditionnels et les expressions espionnes. Pour plus d'informations, [référez vous à la documentation du débogueur Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
 
 ### Les problèmes de performance
 
@@ -222,7 +225,8 @@ Dans [l'article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_test
 
 Il existe différentes stratégies pour gérer la prise en charge des fonctionnalités récentes. Voyons-en quelques-unes.
 
-> **Note :** Ces stratégies ne s'excluent pas les unes les autres. Vous pouvez les combiner si besoin. Par exemple, vous pouvez utiliser la détection de fonctionnalité pour déterminer si une API est prise en charge, et si elle ne l'est pas, exécuter du code pour charger une bibliothèque ou une prothèse d'émulation pour palier ce manque.
+> [!NOTE]
+> Ces stratégies ne s'excluent pas les unes les autres. Vous pouvez les combiner si besoin. Par exemple, vous pouvez utiliser la détection de fonctionnalité pour déterminer si une API est prise en charge, et si elle ne l'est pas, exécuter du code pour charger une bibliothèque ou une prothèse d'émulation pour palier ce manque.
 
 #### Détection de fonctionnalité
 
@@ -249,7 +253,8 @@ On pourra écrire un test analogue pour la prise en charge d'une fonctionnalité
 
 Attention, il ne faut pas confondre la détection de fonctionnalité avec **la tentative d'identification du navigateur (<i lang="en">browser sniffing</i>)** (qui vise à déterminer quel est le navigateur qui accède au site). Cette dernière est une mauvaise pratique qui doit être évitée. Voir ci-après [Utilisation de mauvais code pour tenter d'identifier le navigateur](#utilisation_de_mauvais_code_pour_tenter_didentifier_le_navigateur) pour plus de détails.
 
-> **Note :** Nous reviendrons plus en détails sur la détection de fonctionnalités dans un article dédié, dans la suite du module.
+> [!NOTE]
+> Nous reviendrons plus en détails sur la détection de fonctionnalités dans un article dédié, dans la suite du module.
 
 #### Bibliothèques
 
@@ -270,7 +275,8 @@ Lors du choix d'une bibliothèque, assurez vous qu'elle fonctionne sur l'ensembl
 
 Pour utiliser une bibliothèque, il faudra généralement télécharger ses fichiers (JavaScript, parfois CSS et/ou avec d'autres dépendances) et les attacher à la page (par exemple via un élément [`<script>`](/fr/docs/Web/HTML/Element/script)). D'autres méthodes existent aussi, comme l'installation sous forme de composants [Bower](https://bower.io/) ou l'inclusion comme dépendances avec [Webpack](https://webpack.github.io/). Référez vous à la documentation d'installation de chaque bibliothèque pour plus d'informations.
 
-> **Note :** Vous rencontrerez probablement certains <i lang="en">frameworks</i> JavaScript comme [React](https://react.dev), [Ember](https://emberjs.com/) et [Angular](https://angularjs.org/). Les bibliothèques s'utilisent pour régler différents problèmes et s'intégrer à des sites existants. Les <i lang="en">frameworks</i> sont plutôt des solutions complètes pour développer des applications web complexes.
+> [!NOTE]
+> Vous rencontrerez probablement certains <i lang="en">frameworks</i> JavaScript comme [React](https://react.dev), [Ember](https://emberjs.com/) et [Angular](https://angularjs.org/). Les bibliothèques s'utilisent pour régler différents problèmes et s'intégrer à des sites existants. Les <i lang="en">frameworks</i> sont plutôt des solutions complètes pour développer des applications web complexes.
 
 #### Prothèses d'émulation (<i lang="en">polyfills</i>)
 
@@ -301,12 +307,14 @@ Prenons un exemple où nous utiliserons une prothèse pour l'API Fetch et une au
    });
    ```
 
-5. Si vous chargez alors la page dans un navigateur qui n'est pas compatible avec [l'API Fetch](/fr/docs/Web/API/fetch), vous devriez néanmoins voir l'image apparaître&nbsp;!
+5. Si vous chargez alors la page dans un navigateur qui n'est pas compatible avec [l'API Fetch](/fr/docs/Web/API/Window/fetch), vous devriez néanmoins voir l'image apparaître&nbsp;!
    ![Un titre "fetch basic example" suivi d'une photo de fleurs violettes](fetch-image.jpg)
 
-> **Note :** Vous pouvez consulter [l'exemple finalisé en ligne](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (et aussi [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
+> [!NOTE]
+> Vous pouvez consulter [l'exemple finalisé en ligne](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (et aussi [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 
-> **Note :** Il existe différentes façons pour utiliser des prothèses d'émulation. Là encore, référez vous à la documentation de chacune pour en savoir plus.
+> [!NOTE]
+> Il existe différentes façons pour utiliser des prothèses d'émulation. Là encore, référez vous à la documentation de chacune pour en savoir plus.
 
 Mais dans ce cas, pourquoi toujours charger le code du <i lang="en">polyfill</i>, même si elle n'est pas nécessaire&nbsp;? Lorsqu'un site ou une application devient de plus en plus complexe, on peut charger de plus en plus de bibliothèque et de prothèses d'émulation superflues dans certains cas, ce qui pourra avoir un impact sur les performances, notamment sur les appareils ou réseaux les moins puissants. Autant ne charger que les fichiers qui sont nécessaires.
 
@@ -332,7 +340,7 @@ function navigateurPrendEnCharge() {
 }
 ```
 
-Nous testons ici si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) et si la fonction [`fetch()`](/fr/docs/Web/API/fetch) existent dans le navigateur. Si c'est le cas pour les deux, la fonction renvoie `true`. Dans le cas contraire, on exécute le code situé dans l'autre branche conditionnelle, qui appelle la fonction `chargerScript()`, qui s'occupe de charger les <i lang="en">polyfills</i> dans la page avant d'appeler `main()` lorsque le chargement est terminé. `chargerScript()` est implémentée ainsi&nbsp;:
+Nous testons ici si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) et si la fonction [`fetch()`](/fr/docs/Web/API/Window/fetch) existent dans le navigateur. Si c'est le cas pour les deux, la fonction renvoie `true`. Dans le cas contraire, on exécute le code situé dans l'autre branche conditionnelle, qui appelle la fonction `chargerScript()`, qui s'occupe de charger les <i lang="en">polyfills</i> dans la page avant d'appeler `main()` lorsque le chargement est terminé. `chargerScript()` est implémentée ainsi&nbsp;:
 
 ```js
 function chargerScript(src, done) {
@@ -358,7 +366,8 @@ Vous pouvez voir [le résultat obtenu](https://mdn.github.io/learning-area/tools
 
 Une autre option pour utiliser des fonctionnalités JavaScript récentes consiste à convertir le code dans une version qui fonctionnera pour les anciens navigateurs.
 
-> **Note :** On appelle transpilation cette transformation du code qui ne transforme pas le code dans un langage de plus bas niveau (comme un programme C compilé en binaire), mais qui transforme le code en changeant sa syntaxe avec un même niveau d'abstraction, afin que celui-ci puisse être utilisé dans d'autres circonstances.
+> [!NOTE]
+> On appelle transpilation cette transformation du code qui ne transforme pas le code dans un langage de plus bas niveau (comme un programme C compilé en binaire), mais qui transforme le code en changeant sa syntaxe avec un même niveau d'abstraction, afin que celui-ci puisse être utilisé dans d'autres circonstances.
 
 Un transpilateur populaire est [Babel.js](https://babeljs.io/), mais il en existe d'autres.
 

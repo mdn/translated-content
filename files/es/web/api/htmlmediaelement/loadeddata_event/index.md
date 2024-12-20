@@ -46,7 +46,8 @@ El evento **`loadeddata`** se arroja cuando el cuadro en la posición de reprodu
   </tbody>
 </table>
 
-> **Nota:** Tenga en cuenta que este evento no se activará en dispositivos móviles / tablet, si el protector de datos está activado en configuración del navegador.
+> [!NOTE]
+> Tenga en cuenta que este evento no se activará en dispositivos móviles / tablet, si el protector de datos está activado en configuración del navegador.
 
 ## Ejemplos
 

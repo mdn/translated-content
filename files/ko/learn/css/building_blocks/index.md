@@ -18,7 +18,8 @@ slug: Learn/CSS/Building_blocks
 3. [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 과목에서 설명한 HTML 에 대한 기본적인 친숙성.
 4. [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 과목에서 논의된 CSS 의 기본 사항에 대한 이해.
 
-> **참고:** 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
+> [!NOTE]
+> 자신의 파일을 만들 수 없는 컴퓨터/태블릿/기타 장치에서 작업하는 경우, [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 코딩 프로그램에서 대부분의 코드 예제를 시험해 볼 수 있습니다.
 
 ## 안내
 
@@ -60,11 +61,11 @@ slug: Learn/CSS/Building_blocks
 
 CSS 기술을 테스트하고 싶습니까? 다음 평가는 위 안내서에서 다루는 CSS 에 대한 이해를 테스트 합니다.
 
-- [기본 CSS 이해](/ko/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
+- [기본 CSS 이해](/ko/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : 이 평가는 기본적인 구문, 선택자, 우선 순위, 박스 모델 등에 대한 이해를 테스트 합니다.
-- [멋진 편지지 만들기](/ko/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
+- [멋진 편지지 만들기](/ko/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
   - : 올바른 인상을 남기고 싶다면, 멋진 편지지에 편지를 쓰는 것이 정말 좋습니다. 이 평가에서는 이러한 모양을 달성하기 위해 온라인 템플릿을 작성해야 합니다.
-- [멋진 박스](/ko/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)
+- [멋진 박스](/ko/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
   - : 여기에서는 배경 및 테두리 스타일을 사용하여 눈길을 끄는 박스를 만드는 방법을 연습합니다.
 
 ## 참고 항목

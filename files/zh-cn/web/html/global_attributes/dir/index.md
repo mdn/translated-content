@@ -11,7 +11,8 @@ slug: Web/HTML/Global_attributes/dir
 - rtl，指从*右*到*左*，用于那种从右向左书写的语言（比如阿拉伯语）；
 - auto，指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。
 
-> **备注：** 这个属性对有不同语义的{{ HTMLElement("bdo") }}元素是必须的。
+> [!NOTE]
+> 这个属性对有不同语义的{{ HTMLElement("bdo") }}元素是必须的。
 >
 > - 这个属性在{{ HTMLElement("bdi") }}元素中*不可*继承。未赋值时，它的默认值是 auto。
 > - 这个属性可以被 CSS 属性{{ cssxref("direction") }}和{{ cssxref("unicode-bidi") }}覆盖，如果 CSS 网页有效且该元素支持这些属性的话。

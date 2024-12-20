@@ -24,7 +24,8 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 
 我们并不要求你立刻完整理解所有代码：你不需要借此学会 JavaScript，甚至不需要理解我们要求你编写的全部代码。当前只是概括地介绍一些抽象的概念，让你了解 JavaScript 的特性是如何协同工作的，以及获得编写 JavaScript 的一些感受。所有具体特性将在后续文章中详细介绍，如果你没有很快地全部理解它们，请不要担心！
 
-> **备注：** 可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。
+> [!NOTE]
+> 可以看到，JavaScript 中许多代码特性和其他编程语言是一致的（函数、循环，等等）。尽管代码语法不尽相同，但概念基本类似。
 
 ## 像程序员一样思考
 
@@ -136,7 +137,8 @@ let resetButton;
 
 - 倒数第二个变量存储一个计数器并初始化为 1（用于跟踪玩家猜测的次数），最后一个变量存储对重置按钮的引用，这个按钮尚不存在（但稍后就有了）。
 
-> **备注：** 稍后将讲解更多关于变量和常量的信息。[参见下一篇文章](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)。
+> [!NOTE]
+> 稍后将讲解更多关于变量和常量的信息。[参见下一篇文章](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)。
 
 ### 函数（Function）
 
@@ -153,7 +155,7 @@ function checkGuess() {
 要运行一个函数代码时，可以输入函数名加一对小括号。
 
 让我们尝试一下。保存你的代码并刷新浏览器页面。然后进入
-[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)，并输入以下代码：
+[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并输入以下代码：
 
 ```js
 checkGuess();
@@ -167,7 +169,7 @@ checkGuess();
 
 JavaScript 运算符允许我们执行比较、做数学运算、连接字符串，以及其他类似的事情。
 
-请保存代码以免丢失，然后刷新浏览器页面，打开 [开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下 <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。
+请保存代码以免丢失，然后刷新浏览器页面，打开 [开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下 <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。
 
 首先让我们来看看算术运算符，例如：
 
@@ -394,7 +396,7 @@ function resetGame() {
 
 上面代码中有一部分需要我们仔细研读，那就是 [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。
 
-首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 然后输入以下内容：
+首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 然后输入以下内容：
 
 ```js
 const fruits = ["apples", "bananas", "cherries"];
@@ -459,7 +461,7 @@ guessField.focus();
 浏览器对象如何使用呢，下面我们来小试牛刀。
 
 1. 首先在浏览器中打开你的程序。
-2. 接下来打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)，并且切换到 JavaScript 控制台的标签页。
+2. 接下来打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并且切换到 JavaScript 控制台的标签页。
 3. 输入 `guessField`，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！
 4. 现在输入下面的代码：
 

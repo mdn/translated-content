@@ -28,7 +28,8 @@ JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 �
 
 시작하기 전에, 우리의 기대 목표를 먼저 확실하게 짚고 넘어가겠습니다. 이 글을 끝낸 뒤에도, 함께 따라서 작성한 코드를 이해하지 못할 수 있습니다. 그래도 괜찮습니다. 이 시간은 JavaScript의 기능들이 함께 어떻게 동작하는지, JavaScript 코드를 작성하는 게 어떤 느낌인지 알려드리기 위한 시간일 뿐입니다. 여기에서 사용한 기능들은 이후의 다른 여러 글에서 자세하게 짚어볼 테니, 지금 당장은 굳이 모두 이해하려고 애쓰지 마세요.
 
-> **참고:** 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
+> [!NOTE]
+> 함수와 반복문처럼 JavaScript의 많은 코드 기능은 다른 프로그래밍 언어에도 존재합니다. 코드 구문은 다르더라도, 그 개념은 많은 부분 동일합니다.
 
 ## 프로그래머처럼 사고하기
 
@@ -156,7 +157,7 @@ function checkGuess() {
 
 함수 내부 코드를 실행하기 위해선 함수의 이름을 입력하고, 그 뒤에 소괄호를 덧붙여야 합니다.
 
-바로 시험해봅시다. 코드를 저장하고, 브라우저를 열어 새로고침으로 페이지를 다시 불러오세요. [개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 열어, 다음 코드를 입력해보세요.
+바로 시험해봅시다. 코드를 저장하고, 브라우저를 열어 새로고침으로 페이지를 다시 불러오세요. [개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)을 열어, 다음 코드를 입력해보세요.
 
 ```js
 checkGuess();
@@ -170,7 +171,7 @@ checkGuess();
 
 JavaScript에서는 연산자로 참/거짓 판별, 수학 계산, 문자열 연결 등등 다양한 작업을 수행할 수 있습니다.
 
-아직 콘솔을 열지 않았으면, 코드를 저장하고 브라우저를 새로고침한 후 [개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 열어주세요. 이제 연산자 표에서 "예제" 열에 적힌 코드를 직접 입력해 보고, <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 어떤 결과가 나타나는지 확인해보세요.
+아직 콘솔을 열지 않았으면, 코드를 저장하고 브라우저를 새로고침한 후 [개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)을 열어주세요. 이제 연산자 표에서 "예제" 열에 적힌 코드를 직접 입력해 보고, <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 어떤 결과가 나타나는지 확인해보세요.
 
 먼저 산술 연산자입니다.
 
@@ -408,7 +409,7 @@ function resetGame() {
 
 특별히 살펴봐야 할 부분 중 하나는 바로 [for...of](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 반복문입니다. 반복은 프로그래밍에서 매우 중요한 개념으로, 특정 조건을 만족할 때까지 하나의 코드 조각을 계속 실행할 수 있는 방법입니다.
 
-직접 반복을 시험해보려면 [브라우저 개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)을 다시 열고, 다음 코드를 입력하세요.
+직접 반복을 시험해보려면 [브라우저 개발자 도구의 JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)을 다시 열고, 다음 코드를 입력하세요.
 
 ```js
 const fruits = ["apples", "bananas", "cherries"];
@@ -475,7 +476,7 @@ guessField.focus();
 브라우저 객체를 몇 가지 사용해 봅시다.
 
 1. 우선 브라우저로 숫자 알아맞히기 게임을 여세요.
-2. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열고, JavaScript 콘솔 탭으로 이동하세요.
+2. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 열고, JavaScript 콘솔 탭으로 이동하세요.
 3. 콘솔에 `guessField`를 입력하면 변수에 {{htmlelement("input")}} 요소가 저장되어 있는 것을 확인할 수 있습니다. 그리고 콘솔이 여러분의 실행 환경에 존재하는 객체와 변수 이름들을 자동으로 완성해준다는 것도요.
 4. 이제 콘솔에 아래 코드를 입력하세요.
 

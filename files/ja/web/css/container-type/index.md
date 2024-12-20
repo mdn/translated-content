@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-要素は、[コンテナーサイズの問い合わせ](/ja/docs/Web/CSS/CSS_container_queries)のためのクエリーコンテナーとして、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用して確立することができます。 `container-type` は、コンテナークエリーで使用するサイズ格納方法の種類を定義するために使用します。
+要素は、[コンテナーサイズの問い合わせ](/ja/docs/Web/CSS/CSS_containment/Container_queries)のためのクエリーコンテナーとして、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用して確立することができます。 `container-type` は、コンテナークエリーで使用するサイズ格納方法の種類を定義するために使用します。
 
 これはコンテナークエリーで無限ループを避けるために重要です。もしそうでなければ、コンテナークエリーの中にある CSS ルールがコンテンツサイズを変更する可能性があり、その結果、クエリーが偽に評価されて親要素のサイズが変更され、そして、コンテンツサイズが変更されてクエリーが真に戻る、といった動作になります。
 
@@ -84,7 +84,7 @@ container-type: unset;
 </div>
 ```
 
-コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)の格納コンテキストを作成しています。
+コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)のコンテナーコンテキストを作成しています。
 
 ```css
 .container {
@@ -143,7 +143,7 @@ h3 {
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ

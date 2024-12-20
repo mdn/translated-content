@@ -24,7 +24,8 @@ WebAssembly ha sido creado por como un estándar abierto dentro de [W3C WebAssem
 - Mantenerse seguro — WebAssembly se especifica para ser ejecutado de manera segura en un entorno de ejecución de espacio aislado (sandbox).Como otros códigos web, reforzará el propio origen del navegador así como sus políticas de seguridad.
 - No quebrantar a la red — WebAssembly está diseñado de tal forma que se lleve bien con otras tecnologías web y mantenga compatibilidad con versiones anteriores.
 
-> **Nota:** WebAssembly tendrá también usos fuera de la red y de los ambientes JavaScript (vea [Incrustaciones no-web](http://webassembly.org/docs/non-web/)).
+> [!NOTE]
+> WebAssembly tendrá también usos fuera de la red y de los ambientes JavaScript (vea [Incrustaciones no-web](http://webassembly.org/docs/non-web/)).
 
 ## ¿Cómo se inserta WebAssembly dentro de la plataforma web?
 
@@ -44,11 +45,11 @@ WebAssembly es un lenguaje distinto a JavaScript, aunque no se pretende sea un r
 
 Con la llegada de WebAssembly en los navegadores, la máquina virtual que se mencionó anteriormente, cargará y ejecutará dos tipos de código - JavaScript y WebAssembly.
 
-Los distintos tipos de código pueden llamarse uno al otro según necesiten. [WebAssembly JavaScript API](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) envuelve código WebAssembly exportado con funciones JavaScript, que pueden ser llamadas normalmente, y WebAssembly puede importar y llamar síncronamente funciones JavaScript. De hecho la unidad básica de código en WebAssembly se llama módulo y los módulos en WebAssembly son simétricos de muchas maneras a los módulos de ES2015.
+Los distintos tipos de código pueden llamarse uno al otro según necesiten. [WebAssembly JavaScript API](/es/docs/conflicting/WebAssembly/JavaScript_interface) envuelve código WebAssembly exportado con funciones JavaScript, que pueden ser llamadas normalmente, y WebAssembly puede importar y llamar síncronamente funciones JavaScript. De hecho la unidad básica de código en WebAssembly se llama módulo y los módulos en WebAssembly son simétricos de muchas maneras a los módulos de ES2015.
 
 ### Conceptos clave en WebAssembly
 
-Hay varios conceptos claves que son necesarios para entender cómo se ejecuta WebAssembly en un navegador. Todos estos conceptos están reflejados uno a uno en [WebAssembly JavaScript API](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
+Hay varios conceptos claves que son necesarios para entender cómo se ejecuta WebAssembly en un navegador. Todos estos conceptos están reflejados uno a uno en [WebAssembly JavaScript API](/es/docs/conflicting/WebAssembly/JavaScript_interface).
 
 - **Módulo**: Representa un binario de WebAssembly que ha sido compilado por el navegador en un ejecutable de código máquina. Un módulo no tiene estado, y es solo eso, como un [Blob](/es/docs/Web/API/Blob), puede ser explícitamente compartido entre ventanas y workers (por medio de [`postMessage()`](/es/docs/Web/API/MessagePort/postMessage)). Un módulo declara 'imports' y 'exports' igual que un módulo ES2015module.
 - **Memoria**: Un conjunto de tamaño variable que contiene una serie lineal y continua de bytes, que puede ser leído o escrito por las instrucciones de memoria de bajo nivel de WebAssembly.
@@ -94,7 +95,8 @@ Resumiendo, el proceso es el que sigue:
 2. Emscripten transforma el resultado de la compilación de clang+LLVM en un binario .wasm.
 3. Por sí mismo, WebAssembly no puede acceder directamente a el DOM; únicamente puede llamar a JavaScript, y pasarle datos enteros o de coma flotante como datos. Luego, para acceder a cualquier API Web, WebAssembly necesita llamar a JavaScript, que entonces hará lla llamada a la API Web. Emscripten por lo tanto crea el documento HTML y el código "pegamento" en JavaScript necesario para conseguir esto.
 
-> **Nota:** There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
+> [!NOTE]
+> There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), and parts of [POSIX](https://en.wikipedia.org/wiki/POSIX). These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.
 

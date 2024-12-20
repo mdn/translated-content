@@ -39,7 +39,7 @@ En este artículo vamos a ver cómo se tratan ciertos elementos especiales en CS
 
 ## Elementos de reemplazo
 
-Las imágenes y los vídeos se describen como **[elementos de reemplazo](/es/docs/Web/CSS/Elemento_reemplazo)**. Esto significa que el CSS no puede intervenir en aspectos del diseño interno de estos elementos, sino solo a su posición en la página y algunos otros aspectos. Sin embargo, como veremos, hay varias cosas que el CSS puede hacer con una imagen.
+Las imágenes y los vídeos se describen como **[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)**. Esto significa que el CSS no puede intervenir en aspectos del diseño interno de estos elementos, sino solo a su posición en la página y algunos otros aspectos. Sin embargo, como veremos, hay varias cosas que el CSS puede hacer con una imagen.
 
 También se describen ciertos elementos de reemplazo que, como las imágenes y vídeos, presentan una **relación de aspecto**. Esto significa que tienen un tamaño definido tanto en la dimensión horizontal (x) como en la vertical (y), y por defecto se mostrarán con las dimensiones intrínsecas del archivo.
 
@@ -56,7 +56,7 @@ En el ejemplo siguiente hay dos cajas, ambas de 200 píxeles de tamaño:
 
 ¿Qué podemos hacer con el problema del desbordado?
 
-Como aprendimos en [nuestro artículo anterior](/es/docs/Learn/CSS/Building_blocks/Dimensionar_elementos_en_CSS), una técnica común es hacer que el la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Elemento/video) o [`<iframe>`](/es/docs/Web/HTML/Elemento/iframe).
+Como aprendimos en [nuestro artículo anterior](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), una técnica común es hacer que el la propiedad {{cssxref ("max-width")}} de una imagen sea 100%. Esto permite que la imagen tenga un tamaño menor que la caja, pero no que tenga un tamaño mayor. Esta técnica funciona con otros elementos de reemplazo, como [`<video>`](/es/docs/Web/HTML/Element/video) o [`<iframe>`](/es/docs/Web/HTML/Element/iframe).
 
 **Añade `max-width: 100%` al elemento `<img>` del ejemplo anterior. Verás que la imagen más pequeña permanece sin cambios, pero la más grande se reduce hasta caber en la caja.**
 
@@ -95,7 +95,7 @@ Sin embargo, esto deformaría la imagen, por lo que probablemente no es lo que q
 
 ## Los elementos de formulario
 
-Los elementos de formulario pueden ser un problema si queremos diseñar con CSS, y el [artículo sobre formularios web](/es/docs/Learn/HTML/Forms) contiene guías detalladas sobre los aspectos más complicados relativos a este tema, que no vamos a repetir en este artículo. Hay algunos conceptos básicos clave que vale la pena destacar en esta sección.
+Los elementos de formulario pueden ser un problema si queremos diseñar con CSS, y el [artículo sobre formularios web](/es/docs/Learn/Forms) contiene guías detalladas sobre los aspectos más complicados relativos a este tema, que no vamos a repetir en este artículo. Hay algunos conceptos básicos clave que vale la pena destacar en esta sección.
 
 Muchos controles de formulario se añaden con el elemento [`<input>`](/es/docs/Web/HTML/Element/input): este elemento define desde campos de formulario simples, como entradas de texto, hasta campos más complejos añadidos en HTML5, como selectores de color y fecha. Hay algunos elementos adicionales, como [`<textarea>`](/es/docs/Web/HTML/Element/textarea) para la entrada de texto multilínea, y también elementos que se utilizan para contener y etiquetar partes de formularios como [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset) y [`<legend>`](/es/docs/Web/HTML/Element/legend).
 
@@ -109,9 +109,10 @@ En el ejemplo siguiente hemos diseñado algunas entradas de texto con CSS: puede
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **Advertencia:** Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.
+> [!WARNING]
+> Al cambiar el estilo de los elementos de formulario debes asegurarte de que para el usuario sigue siendo obvio que se trata de elementos de formulario. Podrías crear una entrada de formulario sin bordes y un fondo que sea casi indistinguible del contenido que lo rodea, pero esto haría que sea muy difícil de reconocer y completar.
 
-Como se explica en los artículos sobre [el diseño de formularios](/es/docs/Learn/HTML/Forms/Styling_HTML_forms) en la parte HTML de esta web, el sistema operativo presenta muchos de los tipos de entrada más complejos y son inaccesibles para el diseño. Por lo tanto, siempre debes suponer que los formularios se verán de manera bastante diferentes para los distintos visitantes, y deberás probar los formularios complejos en diversos navegadores.
+Como se explica en los artículos sobre [el diseño de formularios](/es/docs/Learn/Forms/Styling_web_forms) en la parte HTML de esta web, el sistema operativo presenta muchos de los tipos de entrada más complejos y son inaccesibles para el diseño. Por lo tanto, siempre debes suponer que los formularios se verán de manera bastante diferentes para los distintos visitantes, y deberás probar los formularios complejos en diversos navegadores.
 
 ### Herencia y elementos de formulario
 
@@ -129,7 +130,7 @@ textarea {
 
 ### Elementos de formulario y tamaño de la caja
 
-Los elementos de formulario utilizan reglas diferentes en los diversos navegadores para el dimensionado de las cajas de los diferentes controles de formulario. Ya cubrimos la propiedad `box-sizing` en [el artículo sobre el modelo de cajas](/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja). Puedes usar este conocimiento cuando diseñes formularios que garanticen una experiencia homogénea en cuanto a los anchos y las alturas de los elementos de formulario.
+Los elementos de formulario utilizan reglas diferentes en los diversos navegadores para el dimensionado de las cajas de los diferentes controles de formulario. Ya cubrimos la propiedad `box-sizing` en [el artículo sobre el modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model). Puedes usar este conocimiento cuando diseñes formularios que garanticen una experiencia homogénea en cuanto a los anchos y las alturas de los elementos de formulario.
 
 Por coherencia, es una buena idea establecer los márgenes y el área de relleno en `0` para todos los elementos, y luego establecerlos de nuevo al diseñar cada uno de los controles de formulario.
 
@@ -175,11 +176,12 @@ textarea {
 }
 ```
 
-> **Nota:** Muchos desarrolladores utilizan las hojas de estilo de normalización para crear un conjunto de estilos de línea base para usar en todos los proyectos. Por lo general, estas hojas hacen cosas similares a las que acabamos de describir y garantizan que cualquier cosa que pueda ser diferente en distintos navegadores tenga establecido un valor por defecto coherente antes de que tú hagas tu propio trabajo con el CSS. Aunque ya no son tan importantes como lo eran antes, porque los navegadores suelen ser más homogéneos que en el pasado. Sin embargo, si deseas ver un ejemplo, consulta [Normalize.css](http://necolas.github.io/normalize.css/), que es una hoja de estilo muy popular que muchos proyectos utilizan como base.
+> [!NOTE]
+> Muchos desarrolladores utilizan las hojas de estilo de normalización para crear un conjunto de estilos de línea base para usar en todos los proyectos. Por lo general, estas hojas hacen cosas similares a las que acabamos de describir y garantizan que cualquier cosa que pueda ser diferente en distintos navegadores tenga establecido un valor por defecto coherente antes de que tú hagas tu propio trabajo con el CSS. Aunque ya no son tan importantes como lo eran antes, porque los navegadores suelen ser más homogéneos que en el pasado. Sin embargo, si deseas ver un ejemplo, consulta [Normalize.css](http://necolas.github.io/normalize.css/), que es una hoja de estilo muy popular que muchos proyectos utilizan como base.
 
 Para obtener más información sobre los formularios de estilo, echa un vistazo a los dos artículos en la sección HTML de estas guías.
 
-- [Diseño de formularios web](/es/docs/Learn/HTML/Forms/Styling_HTML_forms)
+- [Diseño de formularios web](/es/docs/Learn/Forms/Styling_web_forms)
 - [Aspectos avanzados de aplicación de estilo a formularios](/es/docs/Learn/Forms/Advanced_form_styling)
 
 ## Resumen

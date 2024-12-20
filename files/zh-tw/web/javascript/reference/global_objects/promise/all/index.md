@@ -14,7 +14,7 @@ Promise.all(iterable);
 ```
 
 - iterable
-  - : 一個 [iterable](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol) 物件像是 {{jsxref("Array")}} 或 {{jsxref("String")}}。
+  - : 一個 [iterable](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) 物件像是 {{jsxref("Array")}} 或 {{jsxref("String")}}。
 
 ### 回傳值
 

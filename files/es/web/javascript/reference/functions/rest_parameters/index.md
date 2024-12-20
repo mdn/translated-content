@@ -193,10 +193,10 @@ Para poder usar los métodos de `Array` en el objeto `arguments`, se debe conver
 
 ## Ver también
 
-- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+- [Spread Operator](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Arguments object](/es/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/es/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
-- [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
+- [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
 - [Destructuring assignment](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

@@ -11,7 +11,7 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
 ## Attributs
 
-À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ### Attributs dépréciés ou obsolètes
 
@@ -19,7 +19,8 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
   - : Cet attribut booléen fournit une indication pour afficher la liste en mode compact. L'interprétation de cet attribut est laissée à la discrétion de l'agent utilisateur et ne fonctionne pas pour tous les navigateurs.
 
-    > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
+    > [!WARNING]
+    > Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
 
 - `type`{{Deprecated_inline}}
 
@@ -31,7 +32,8 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
     Un quatrième type a été défini dans l'interface WebTV : `triangle` mais tous les navigateurs ne l'implémentent pas.
 
-    > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété CSS {{cssxref("list-style-type")}} à la place.
+    > [!WARNING]
+    > Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété CSS {{cssxref("list-style-type")}} à la place.
 
 ## Notes d'utilisation
 
@@ -149,7 +151,7 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -191,6 +193,6 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 - Les propriétés CSS particulièrement utiles pour mettre en forme l'élément `<ul>` :
 
   - La propriété {{cssxref("list-style")}} qui permet de choisir la façon dont l'indicateur ordinal est affiché,
-  - [Les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), qui permettent de gérer des listes imbriquées complexes,
-  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](/fr/docs/Web/HTML/Element/ul#compact) désormais déprécié,
+  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), qui permettent de gérer des listes imbriquées complexes,
+  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](#compact) désormais déprécié,
   - La propriété {{cssxref("margin")}} peut être utilisée pour contrôler l'indentation de la liste.

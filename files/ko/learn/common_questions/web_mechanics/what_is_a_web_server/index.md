@@ -1,6 +1,8 @@
 ---
 title: 웹 서버란 무엇일까?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
+l10n:
+  sourceCommit: bd48972c8a9c2acf3b8fa6e41248d0952eb0c406
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -10,18 +12,18 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선수 지식</th>
+      <th scope="row">선행 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
           >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
-        <a href="/ko/docs/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >인터넷이 어떻게 동작하는지</a
         > 알고있으면 좋습니다.
       </td>
     </tr>
     <tr>
-      <th scope="row">목표</th>
+      <th scope="row">목표:</th>
       <td>
         웹 서버가 무엇인지를 배우고, 어떻게 동작하는지에 대한 전반적인 이해를
         얻을 것입니다.
@@ -43,9 +45,9 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 
 웹 사이트를 공개하기 위해서는, 당신은 정적 혹은 동적 웹 서버가 필요합니다.
 
-정적 웹 서버 혹은 스택은 HTTP 서버 (소프트웨어)가 있는 컴퓨터(하드웨어)로 구성되어 있습니다. 서버가 그 불려진 파일을 당신의 브라우저에게 전송하기 때문에, 저희는 그것을 "정적"이라고 부릅니다.
+**정적 웹 서버** 혹은 스택은 HTTP 서버 (소프트웨어)가 있는 컴퓨터(하드웨어)로 구성되어 있습니다. 서버가 그 불려진 파일을 당신의 브라우저에게 전송하기 때문에, 저희는 그것을 "정적"이라고 부릅니다.
 
-동적 웹 서버는 정적 웹 서버와 추가적인 소프트웨어(대부분 일반적인 애플리케이션 서버와 데이터베이스)로 구성되어 있습니다. 애플리케이션 서버가 HTTP 서버를 통해 당신의 브라우저에게 불려진 파일들을 전송하기 전에, 애플리케이션 서버가 업데이트하기 때문에 우리는 이것을 동적이라고 부릅니다.
+**동적 웹 서버**는 정적 웹 서버와 추가적인 소프트웨어(대부분 일반적인 애플리케이션 서버와 데이터베이스)로 구성되어 있습니다. 애플리케이션 서버가 HTTP 서버를 통해 당신의 브라우저에게 불려진 파일들을 전송하기 전에, 애플리케이션 서버가 업데이트하기 때문에 우리는 이것을 동적이라고 부릅니다.
 
 예를 들어, 당신이 브라우저에서 보는 최종 웹페이지들을 생성하기 위해, 애플리케이션 서버는 아마 데이터베이스로 온 컨텐츠들로 이루어진 HTML 템플릿을 채울지 모릅니다. MDN 혹은 Wikipedia와 같은 사이트들은 수 천개의 웹페이지들을 가지고 있지만, 그것들은 실제의 HTML 문서가 아니라 오직 약간의 HTML 템플릿과 엄청 큰 데이터베이스로 되어있습니다. 이 구성은 내용들을 전달하고 관리하기 쉽고 빠르게 만들어 줍니다.
 
@@ -64,13 +66,13 @@ slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 - 항상 같은 IP주소를 가지고 있습니다(모든 {{Glossary("ISP", "ISPs")}}가 홈 라인에 대해 고정된 IP주소를 제공하는 것은 아닙니다.)
 - 제 3자에 의해 유지보수 됩니다
 
-이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/en-US/Learn/How_much_does_it_cost#Hosting) 찾을 수 있습니다.
+이러한 이유들로, 좋은 호스팅 제공자를 찾는 것은 당신의 웹 사이트를 구축하는 것의 핵심 부분입니다. 다양한 서비스 회사들의 조건을 살펴보고 당신의 필요와 예산을 충족하는 하나를 선택하세요 (서비스는 무료부터 매달 수 백만원까지 있습니다.) 더 많은 자세한 사항은 [여기서](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting) 찾을 수 있습니다.
 
-당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Upload_files_to_a_web_server)
+당신이 웹 호스팅 솔루션을 설정했다면, 그저 당신의 [웹 서버에 파일들을 업로드 하시면 됩니다.](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 ### HTTP를 이용해 통신하기
 
-두 번째로, 웹 서버는 {{Glossary("HTTP")}} (hypertext transfer protocol)을 위한 지원합니다. 이름이 의미하듯이, HTTP는 어떻게 두 컴퓨터간의 hypertext(예를 들어, 연결된 웹 문서)를 전송하는지를 서술합니다.
+두 번째로, 웹 서버는 {{Glossary("HTTP")}} (Hypertext Transfer Protocol)을 위한 지원합니다. 이름이 의미하듯이, HTTP는 어떻게 두 컴퓨터간의 hypertext(예를 들어, 연결된 웹 문서)를 전송하는지를 서술합니다.
 
 프로토콜은 두 컴퓨터간의 통신를 위한 규칙의 집합입니다. HTTP는 문자로 된, 독립적인 프로토콜입니다.
 
@@ -89,7 +91,9 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
 2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.
-3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 "404 Not Found" 입니다.(이 에러는 너무 많이 발생하여 많은 웹 디자이너들은404 error pages를 디자인하는데 많은 시간을 할애합니다.
+3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 {{HTTPStatus("404", "404 Not Found")}} 입니다.
+   404 오류는 매우 흔하기 때문에 일부 웹 디자이너들은 404 오류 페이지를 디자인하는 데 많은 시간과 노력을 들이기도 합니다.
+   ![The MDN 404 page as an example of such error page](mdn-404.jpg)
 
 ### 정적 vs. 동적 컨텐츠
 
@@ -97,7 +101,7 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 "동적"은 서버가 컨텐츠를 처리하는 것, 심지어는 컨텐츠를 데이터베이스로부터 생성하는 것을 의미합니다. 이 방법은 더 많은 유연성을 제공하지만, 기술적 스택이 더 다루기 힘들어지고, 웹사이트를 구축하는 것이 훨씬 더 복잡해집니다.
 
-당신이 지금 읽고있는 페이지를 예시로 봅시다. 이 사이트를 호스팅하고 있는 웹 서버에는, 데이터베이스로부터 내용들을 받고, 구성하고, HTML 템플릿 안에 집어넣고, 당신에게 결과를 보내는 애플리케이션 서버가 있습니다. 이러한 경우, 애플리케이션 서버는 [Kuma](/ko/docs/MDN/Kuma)라고 불리고, [Python](https://www.python.org/)([Django](https://www.djangoproject.com/) 프레임워크를 이용한)으로 구축됩니다. Mozilla 팀은 MDN의 특수한 목적으로 Kuma를 만들었지만, 많은 다른 기술들로 만들어진 비슷한 애플리케이션이 존재합니다.
+당신이 지금 읽고있는 페이지를 예시로 봅시다. 이 사이트를 호스팅하고 있는 웹 서버에는, 데이터베이스로부터 내용들을 받고, 구성하고, HTML 템플릿 안에 집어넣고, 당신에게 결과를 보내는 애플리케이션 서버가 있습니다. 이러한 경우, 애플리케이션 서버는 [Kuma](https://github.com/mdn/yari/tree/main/docs)라고 불리고, [Python](https://www.python.org/)([Django](https://www.djangoproject.com/) 프레임워크를 이용한)으로 구축됩니다. Mozilla 팀은 MDN의 특수한 목적으로 Kuma를 만들었지만, 많은 다른 기술들로 만들어진 비슷한 애플리케이션이 존재합니다.
 
 애플리케이션 서버는 아주 많이 있어서 특정한 하나만 추천하기는 어렵습니다. 어떤 애플리케이션 서버는 블로그나 위키, 인터넷 쇼핑, {{Glossary("CMS", "CMSs")}}라고 불리는 다른 것들(컨텐츠 관리 시스템) 같은 특수한 웹 사이트에 특화되어 있습니다. 만약 당신이 동적 웹 사이트를 구축한다면, 당신의 필요에 맞는 도구를 선택하는 시간을 가져보세요. 웹 서버 프로그래밍을 배우기를 원하는 경우가 아니라면(물론, 그 자체로도 흥미진진한 영역입니다!), 애플리케이션 서버를 새로 만들 필요가 없습니다. 그것은 휠을 다시 재발명 하는 것과 같은 일입니다.
 
@@ -105,6 +109,6 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 이제 당신은 웹 서버에 익숙해졌으니, 아래와 같은 것들을 할 수 있습니다.
 
-- [웹에서 어떤 것을 하는 것이 얼마나 많은 비용이 들지](/ko/docs/Learn/How_much_does_it_cost)를 읽어보기
+- [웹에서 어떤 것을 하는 것이 얼마나 많은 비용이 들지](/ko/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)를 읽어보기
 - [당신이 웹 사이트를 생성하기 위해 필요한 다양한 소프트웨어](/ko/docs/Learn/What_software_do_I_need.)를 배우기
-- [웹 서버에 어떻게 파일을 업로드 하는 지](/ko/docs/Learn/Upload_files_to_a_web_server)와 같은 실용적인 것으로 넘어가기
+- [웹 서버에 어떻게 파일을 업로드 하는 지](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)와 같은 실용적인 것으로 넘어가기

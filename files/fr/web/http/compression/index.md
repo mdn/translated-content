@@ -26,7 +26,8 @@ Certains formats peuvent être utilisés à la fois pour une compression sans pe
 
 Les algorithmes de compression avec pertes sont généralement plus performants que les algorithmes de compression sans perte.
 
-> **Note :** Puisque certains types de fichiers gèrent nativement la compression, il est souvent inutile de les compresser une seconde fois. En réalité, cela s'avère souvent contre-productif de par la taille induite par les données additionnelles nécessaires (lors de la compression, un dictionnaire de données est généré) le fichier en sortie est alors plus gros que celui avant compression. Veillez à ne pas utiliser les techniques suivantes pour les fichiers au format compressé.
+> [!NOTE]
+> Puisque certains types de fichiers gèrent nativement la compression, il est souvent inutile de les compresser une seconde fois. En réalité, cela s'avère souvent contre-productif de par la taille induite par les données additionnelles nécessaires (lors de la compression, un dictionnaire de données est généré) le fichier en sortie est alors plus gros que celui avant compression. Veillez à ne pas utiliser les techniques suivantes pour les fichiers au format compressé.
 
 ## Compression de bout en bout
 
@@ -42,7 +43,7 @@ Pour sélectionner l'algorithme à utiliser, le navigateur et le serveur s'appui
 
 La compression permettant un gain de performance significatif, il est conseillé de l'activer pour l'ensemble des fichiers à l'exception des fichiers audios et vidéos au format compressé.
 
-Apache prend en charge la compression et utilise [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html); nginx dispose de [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); pour IIS, il existe l'élément [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
+Apache prend en charge la compression et utilise [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); nginx dispose de [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); pour IIS, il existe l'élément [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
 
 ## Compression saut par saut
 

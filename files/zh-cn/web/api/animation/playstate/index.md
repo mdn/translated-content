@@ -7,17 +7,10 @@ slug: Web/API/Animation/playState
 
 作为一个 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的属性，**`Animation.playState`** 能够返回并设置一个可枚举值来描述一个动画的回放状态。
 
-> **备注：** 这个属性只对 CSS Animations 和 Transitions 可读。
+> [!NOTE]
+> 这个属性只对 CSS Animations 和 Transitions 可读。
 
-## 语法
-
-```
-var currentPlayState = Animation.playState;
-
-Animation.playState = newState;
-```
-
-### 可能的值
+## 值
 
 - `idle`
   - : 动画当前的时间是无法解析的，并且队列里没有处于等待执行的任务。

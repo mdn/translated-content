@@ -18,25 +18,25 @@ l10n:
 ### CSS
 
 - コンテナークエリーと、コンテナークエリーの長さの単位をデフォルトで有効にしました。
-  これらのクエリーや関連する長さの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1809720](https://bugzil.la/1809720))。
+  これらのクエリーや関連する長さの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1809720](https://bugzil.la/1809720))。
 - [color-gamut メディアクエリー](/ja/docs/Web/CSS/@media/color-gamut) をサポートしました ([Firefox バグ 1422237](https://bugzil.la/1422237))。
 - Windows および Linux で、`type="color"` を持つ `<input>` 要素で [`list`](/ja/docs/Web/HTML/Element/datalist#color_type) 属性をサポートしました ([Firefox バグ 960984](https://bugzil.la/960984))。
 - [`@page`](/ja/docs/Web/CSS/@page) アットルールで名前つきページをサポートしました。これは [`page`](/ja/docs/Web/CSS/page) プロパティを使用して、ユーザーが特定のセレクターで改ページを生成することを可能にします ([Firefox バグ 1787947](https://bugzil.la/1787947))。
 
 ### JavaScript
 
-- [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) および [`structuredClone()`](/ja/docs/Web/API/structuredClone) を使用したとき、[ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) をシリアライズした結果に worker の [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
+- [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) および [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) を使用したとき、[ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) をシリアライズした結果に worker の [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
   この機能追加によりメインスレッドと worker の両方で、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) を使用するすべてのメソッドでネイティブエラーのスタックの複製が機能するようになりました (詳しくは [Firefox バグ 1774866](https://bugzil.la/1774866) をご覧ください)。
 
 ### API
 
-- [Permission API](/ja/docs/Web/API/Permissions_API) の `midi` パーミッションをサポートしました。
+- [権限 API](/ja/docs/Web/API/Permissions_API) の `midi` パーミッションをサポートしました。
   これにより、[`navigator.permissions.query()`](/ja/docs/Web/API/Permissions/query) を使用して [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) の使用許可の状態を問い合わせできます ([Firefox バグ 1772166](https://bugzil.la/1772166))。
 
 - {{domxref("ReadableStream")}} で、`for await...of` 構文を使用する [ストリーム内のチャンクの非同期反復処理](/ja/docs/Web/API/ReadableStream#async_iteration) をサポートしました ([Firefox バグ 1734244](https://bugzil.la/1734244))。
 
 - WebRTC で、ピア接続にトランシーバーを追加する際に使用可能なエンコーディングのセットを送信すること、および送信元に紐づいたアクティブなエンコーディングを取得することをサポートしました。
-  特に {{domxref("RTCPeerConnection.addTransceiver()")}} で、[`init`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#init) 引数オブジェクトで [`sendEncodings`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) オプションを使用すること、および送信データでエンコーディングが使用されているかを確認するために使用できる [`RTCRtpEncodingParameters.active`](/ja/docs/Web/API/RTCRtpEncodingParameters#active) をサポートしました (詳しくは [Firefox バグ 1676855](https://bugzil.la/1676855) をご覧ください)。
+  特に {{domxref("RTCPeerConnection.addTransceiver()")}} で、[`init`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#init) 引数オブジェクトで [`sendEncodings`](/ja/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) オプションを使用すること、および送信データでエンコーディングが使用されているかを確認するために使用できる [`RTCRtpEncodingParameters.active`](/ja/docs/Web/API/RTCRtpSender/setParameters#active) をサポートしました (詳しくは [Firefox バグ 1676855](https://bugzil.la/1676855) をご覧ください)。
 
 - WebRTC の {{domxref("RTCRtpSender.getParameters()")}}、{{domxref("RTCRtpSender.setParameters()")}}、{{domxref("RTCRtpReceiver.getParameters()")}} メソッドが仕様書に準拠するようになりました ([Firefox バグ 1401592](https://bugzil.la/1401592))。
 

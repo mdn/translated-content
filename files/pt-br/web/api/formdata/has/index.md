@@ -9,7 +9,8 @@ slug: Web/API/FormData/has
 
 O método **`has()`** da interface {{domxref("FormData")}} retorna um booleano declarando se o objeto `FormData` contém uma certa chave.
 
-> **Nota:** This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> This method is available in [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -53,6 +54,6 @@ formData.has("username"); // Retorna true
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

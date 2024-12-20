@@ -47,6 +47,6 @@ window.addEventListener("unhandledrejection", function (event) {
 
 ## Смотрите также
 
-- {{Event("rejectionhandled")}}
+- [`rejectionhandled`](/ru/docs/Web/API/Window/rejectionhandled_event)
 - {{domxref("PromiseRejectionEvent")}}
 - {{domxref("Promise")}}

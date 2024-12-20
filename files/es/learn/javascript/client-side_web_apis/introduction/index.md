@@ -23,7 +23,8 @@ _Fuente de la imagen: [Overloaded plug socket](https://www.flickr.com/photos/eas
 
 De la misma manera, si quisieras programar gráficos 3D, sería mucho más facil hacerlo usando una API escrita en un lenguaje de alto nivel como JavaScript o Python, en lugar de intentar escribir código de bajo nivel (por ejemplo: C o C++) que controle directamente la GPU del equipo u otras funciones gráficas.
 
-> **Nota:** Consulta también la [entrada API en el glosario](/es/docs/Glossary/API) para una descripción más detallada.
+> [!NOTE]
+> Consulta también la [entrada API en el glosario](/es/docs/Glossary/API) para una descripción más detallada.
 
 ### APIs en JavaScript del lado cliente
 
@@ -55,7 +56,7 @@ En particular, las categorías más comunes de APIs de navegador más usadas (y 
 - **APIs para manipular documentos** cargados en el navegador. El ejemplo más obvio es la [API DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model), que permite manipular HTML y CSS — crear, eliminar y modificar HTML, aplicar estilos dinámicos a una página, etc. Cada vez que se muestra una ventana emergente en una página, o un nuevo contenido, por ejemplo, es el DOM en acción. Más información sobre este tipo de APIs en [Manipulando documentos](/es/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
 - **APIs que obtienen datos del servidor,** comunmente usadas para actualizar pequeñas secciones de una página web. Este aparente pequeño detalle tiene un gran impacto en el performance y en el comportamiento de los sitios. — Sí solo necesitas actualizar un Stock de artículos o una lista de tiendas disponibles, al utilizar APIs para obtener datos desde el servidor lo lograrás sin tener que volver a cargar toda la página o aplicación logrando que estas tengan una sensación de rapidez y agilidad. Las APIs hacen esto posible gracias a que incluyen [`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) y la [Fetch API](/es/docs/Web/API/Fetch_API). Tambièn puede encontrar el termino Ajax que describe esta técnica. Más información sobre este tipo de APIs en [Fetching data from the server](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
 - **Las APIs para dibujar y manipular graficos** ya son soportadas por la mayoría de navegadores. Las más populares son [Canvas](/es/docs/Web/API/Canvas_API) y [WebGL](/es/docs/Web/API/WebGL_API), que permiten actualizar la información de cada uno de los píxeles contenidos en un {{htmlelement("canvas")}} HTML, para crear escenas 2D y 3D. Por ejemplo, se pueden dibujar formas como rectángulos o círculos, importar una imagen en el canvas y aplicarle filtros como sepia o escala de grises usando la API de Canvas, o crear una escena compleja 3D con iluminación y texturas usando WebGL. Estas APIs, a menudo se combinan con apis para crear bucles de animación (como {{domxref("window.requestAnimationFrame()")}}) y otras veces para hacer que se actualicen constantemente escenas de dibujos animados o videojuegos.
-- **[APIS de audio y vídeo](/es/Apps/Fundamentals/Audio_and_video_delivery)** como {{domxref("HTMLMediaElement")}}, la [Web Audio API](/es/docs/Web/API/Web_Audio_API), y [WebRTC](/es/docs/Web/API/WebRTC_API) te permitirán hacer cosas realmente interesantes con elementos multimedia: crear una interfaz personalizada para los controles de reproducción de audio y vídeo, mostrar pistas de texto con subtítulos junto con el vídeo, capturar vídeo de la cámara web para ser manipulado en un canvas (ver más arriba) o mostrado en el ordenador de otra persona en una videoconferencia, añadir efectos a las pistas de audio (como ganancia, distorsión, retardo, etc).
+- **[APIS de audio y vídeo](/es/docs/Web/Aplicaciones/Fundamentals/Audio_and_video_delivery)** como {{domxref("HTMLMediaElement")}}, la [Web Audio API](/es/docs/Web/API/Web_Audio_API), y [WebRTC](/es/docs/Web/API/WebRTC_API) te permitirán hacer cosas realmente interesantes con elementos multimedia: crear una interfaz personalizada para los controles de reproducción de audio y vídeo, mostrar pistas de texto con subtítulos junto con el vídeo, capturar vídeo de la cámara web para ser manipulado en un canvas (ver más arriba) o mostrado en el ordenador de otra persona en una videoconferencia, añadir efectos a las pistas de audio (como ganancia, distorsión, retardo, etc).
 - **Las APIs de dispositivos** son básicamente APIs para manipular y recuperar información de dispositivos modernos de hardware de forma que sean útiles para aplicaciones web. Ya hemos hablado de la API de geolocalización, que accede a la información de ubicación del dispositivo, de forma que te pueda localizar en un mapa. Otros ejemplos incluyen indicar al usuario de que una actulización útil está disponible en una aplicación web mediante notificaciones de sistema (ver [Notifications API](/es/docs/Web/API/Notifications_API)) o la vibración de hardware (ver [Vibration API](/es/docs/Web/API/Vibration_API)).
 - Las **APIS de almacenamiento en el lado del cliente** se están popularizando en los navegadores. La habilidad de almacenar información en el lado del cliente es muy útil para hacer aplicaciones que salven su estado entre carga de páginas, e incluso trabajar cuando el dispositivo está fuera de línea. Hay varias opciones disponibles, por ejemplo el almacenamiento en pares de clave/valor con [Web Storage API](/es/docs/Web/API/Web_Storage_API), y una forma más compleja de almacenar datos tabulados mediante la [IndexedDB API](/es/docs/Web/API/IndexedDB_API).
 
@@ -69,7 +70,8 @@ Existe una gran variedad de APIs de terceros, algunas de las más populares de l
 - La [YouTube API](https://developers.google.com/youtube/), te permite integrar videos de Youtube en tu sitio, buscar en Youtube, construir listas de reproducción y más.
 - La [Twilio API](https://www.twilio.com/), provee de un framework para crear la funcionalidad de llamadas y videollamadas en tus aplicaciones, enviar SMS o MMS y más.
 
-> **Nota:** puedes encontrar información de una gran cantidad de APIs de terceros en el [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
+> [!NOTE]
+> Puedes encontrar información de una gran cantidad de APIs de terceros en el [Programmable Web API directory](http://www.programmableweb.com/category/all/apis).
 
 ## ¿Cómo funcionan las APIs?
 
@@ -79,7 +81,8 @@ Las distintas APIs de JavaScript funcionan de forma ligeramente diferente, pero 
 
 Las APIs interactúan con tu código usando uno o más [Objetos JavaScript,](/es/docs/Learn/JavaScript/Objects) que sirven como contenedores para los datos que usa la API (contenidos en las propiedades del objeto), y la funcionalidad que la API provee (contenida en los métodos del objeto).
 
-> **Nota:** si no estás familiarizado en cómo trabajar con objetos, deberías volver atrás y revisar el módulo de [objetos JavaScript](/es/docs/Learn/JavaScript/Objects)antes de seguir.
+> [!NOTE]
+> Si no estás familiarizado en cómo trabajar con objetos, deberías volver atrás y revisar el módulo de [objetos JavaScript](/es/docs/Learn/JavaScript/Objects)antes de seguir.
 
 Volvamos al ejemplo de la API de Geolocalización, que es una API muy simple que consiste en unos pocos objetos sencillos:
 
@@ -87,7 +90,7 @@ Volvamos al ejemplo de la API de Geolocalización, que es una API muy simple que
 - {{domxref("Position")}}, que representa la posición de un dispositivo en un momento dado — esto contiene un objeto {{domxref("Coordinates")}} que contiene la información de la posición actual, además de una marca de tiempo con el momento exacto.
 - {{domxref("Coordinates")}}, que contiene una gran cantidad de datos útiles sobre la posición del dispositivo, incluyendo latitud y longitud, altitud, velocidad, dirección de movimiento y más.
 
-¿Cómo interactúan estos objetos? Si miras a nuestro ejemplo [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([ver también en vivo](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), encontrarás el siguiente código:
+¿Cómo interactúan estos objetos? Si miras a nuestro ejemplo [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([ver también en vivo](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), encontrarás el siguiente código:
 
 ```js
 navigator.geolocation.getCurrentPosition(function (position) {
@@ -108,7 +111,8 @@ navigator.geolocation.getCurrentPosition(function (position) {
 });
 ```
 
-> **Nota:** cuando cargues por primera vez el ejemplo de arriba, se te mostrará un mensaje preguntando si deseas compartir tu localización con esta aplicación (ver la sección [They have additional security mechanisms where appropriate](#they_have_additional_security_mechanisms_where_appropriate) que se encuentra más adelante en este artículo). Deberás estar de acuerdo con esto para poder ver tu localización en el mapa. Si aún así sigues sin ver tu localización, tal vez debas establecer los permisos manualmente; lo puedes hacer de varias formas dependiendo del navegador que estés usando; por ejemplo en Firefox debes ir a > _Tools_ > _Page Info_ > _Permissions_, y cambiar la configuración para _Share Location_; en Chrome ve a _Settings_ > _Privacy_ > _Show advanced settings_ > _Content settings_ y cambia las opciones para _Location_.
+> [!NOTE]
+> Cuando cargues por primera vez el ejemplo de arriba, se te mostrará un mensaje preguntando si deseas compartir tu localización con esta aplicación (ver la sección [They have additional security mechanisms where appropriate](#they_have_additional_security_mechanisms_where_appropriate) que se encuentra más adelante en este artículo). Deberás estar de acuerdo con esto para poder ver tu localización en el mapa. Si aún así sigues sin ver tu localización, tal vez debas establecer los permisos manualmente; lo puedes hacer de varias formas dependiendo del navegador que estés usando; por ejemplo en Firefox debes ir a > _Tools_ > _Page Info_ > _Permissions_, y cambiar la configuración para _Share Location_; en Chrome ve a _Settings_ > _Privacy_ > _Show advanced settings_ > _Content settings_ y cambia las opciones para _Location_.
 
 Primero queremos usar el método {{domxref("Geolocation.getCurrentPosition()")}} para retornar la posición actuali de nuestro dispositivo. El objeto {{domxref("Geolocation")}} del navegador es accedido llamando a la propiedad {{domxref("Navigator.geolocation")}}, así que comenzaremos haciendo:
 
@@ -127,7 +131,8 @@ Pero podemos usar la sintaxis con punto para concatener nuestros accesos a propi
 
 El método {{domxref("Geolocation.getCurrentPosition()")}} solamente tiene un parámetroobligatorio, que es una función anónima que se ejecutará cuando se recupere correctamente la ubicación del dispositivo. Esta función tiene un parámetro, que contiene un objeto {{domxref("Position")}} con la representación de los datos de la posición actual.
 
-> **Nota:** una función que es tomada por otra función como argumento es conocida con el nombre de [callback function](/es/docs/Glossary/Callback_function).
+> [!NOTE]
+> Una función que es tomada por otra función como argumento es conocida con el nombre de [callback function](/es/docs/Glossary/Callback_function).
 
 Este patrón de invocar una función solamente cuando una operación ha sido completada es muy común en las APIs de Javascript — asegurando que una operación ha sido completada antes de intentar usar los datos que retorna en otra operación. Estas operaciones se llaman **[operaciones asíncronas](/es/docs/Glossary/Asynchronous)**. Puesto que obtener la posición actual del dispositivo recae en un componente externo (el GPS del dispositivo u otro hardware de geolocalización), no podemos asegurar que se haga a tiempo para usar inmediatamente los datos. Por tanto, algo así no funcionará:
 
@@ -172,7 +177,8 @@ Una vez hecho, veremos dibujado nuestro mapa.
 
 Este último bloque de código muestra dos patrones habituales que veremos en muchas APIs. Primero, los objetos de las APIs habitualmente disponen de constructores, que son invocados para crear instancias de esos objetos que que habitualmente usaremos en nuestros programas. Segundo, los objetos de las APIs a menudo ofrecen múltiples opciones que pueden ser adaptadas para obtener exactamente lo que queremos en nuestro programa. Los constructores de las APIs habitualmente aceptan un objeto de opciones como parámetro, que es donde se deben establecer dichas opciones.
 
-> **Nota:** no te preocupes si no entiendes todos los detalles de este ejemplo inmediantamente. Los repasaremos usando APIs de terceros con más detalle en un artículo futuro.
+> [!NOTE]
+> No te preocupes si no entiendes todos los detalles de este ejemplo inmediantamente. Los repasaremos usando APIs de terceros con más detalle en un artículo futuro.
 
 ### Tienen puntos de acceso reconocibles
 
@@ -205,7 +211,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **Nota:** puedes ver este código en acción en nuetro [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (y también verlo [funcionando](http://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)).
+> [!NOTE]
+> Puedes ver este código en acción en nuetro [bouncing balls demo](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/bouncing-balls.html) (y también verlo [funcionando](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html)).
 
 ### Usan eventos para manejar cambios en su estado
 
@@ -230,7 +237,8 @@ request.onload = function () {
 };
 ```
 
-> **Nota:** puedes ver este código en acción en nuestro ejemplo [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) ([verlo en vivo](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)).
+> [!NOTE]
+> Puedes ver este código en acción en nuestro ejemplo [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) ([verlo en vivo](https://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)).
 
 Las primeras cinco líneas especifican la licalización del recurso que queremos recuperar, se crea una nueva instancia del objeto con la petición usando el constructor `XMLHttpRequest()`, se abre una petición HTTP `GET` para recuperar el recurso especificado, se indica que la respuesta debería ser enviada en formato JSON, y finalmente se envía la petición.
 

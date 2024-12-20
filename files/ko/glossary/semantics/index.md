@@ -35,7 +35,7 @@ CSS의 경우, 다양한 종류의 과일을 나타내기 위해서는 리스트
 
 이렇게 하면 최상위 제목처럼 보이도록 렌더링되지만, 의미적 가치가 없으므로 위에서 설명한 것처럼 추가적인 이점은 얻을 수 없습니다. 따라서 작업에 적합한 HTML 요소를 사용하는 것이 좋습니다.
 
-HTML은 채워질 '데이터'를 나타내도록 코딩해야 합니다. 기본 프리젠테이션 스타일기반이 아닙니다. 프레젠테이션(어떻게 보여져야만 하는가)은 [CSS](/ko/docs/Web/CSS)만의 단독 역할입니다.
+HTML은 채워질 '데이터'를 나타내도록 코딩해야 합니다. 기본 프레젠테이션 스타일기반이 아닙니다. 프레젠테이션(어떻게 보여져야만 하는가)은 [CSS](/ko/docs/Web/CSS)만의 단독 역할입니다.
 
 의미론적인 마크업을 사용하면 아래와 같은 이점이 있습니다.
 
@@ -68,7 +68,7 @@ HTML은 채워질 '데이터'를 나타내도록 코딩해야 합니다. 기본 
 
 ## 같이 보기
 
-- MDN의 [HTML 요소 참조](/ko/docs/Web/HTML/Element#Inline_text_semantics)
+- MDN의 [HTML 요소 참조](/ko/docs/Web/HTML/Element#inline_text_semantics)
 - MDN의 [HTML 구역과 윤곽선 사용하기](/ko/docs/Web/HTML/Element/Heading_Elements#usage_notes)
 - 위키백과의 [컴퓨터 과학에서 시맨틱의 의미](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [용어 사전](/ko/docs/Glossary)

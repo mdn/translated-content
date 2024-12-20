@@ -3,7 +3,7 @@ title: "ARIA: document ロール"
 slug: Web/Accessibility/ARIA/Roles/document_role
 ---
 
-複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Roles/Application_Role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
+複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
 
 ```html
 <div role="dialog">
@@ -28,7 +28,7 @@ slug: Web/Accessibility/ARIA/Roles/document_role
 
 支援技術は、コンテキストを文書モードに戻すべきであり、場合によっては、親の動的コンテキスト用に配線されたコントロールから横取りすることで、<kbd>上矢印</kbd>や<kbd>下矢印</kbd>のキーボードイベントなどの標準入力イベントを再度有効にして、読み取りカーソルを制御します。
 
-記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role)) ロールとは対照的に、文書 (`document`) ロールは、文書ロールを持つ他の要素との関係はなく、単にそれ含む複合ウィジェットとの関係があるだけです。 記事は関連記事を持つことができます。
+記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/article_role)) ロールとは対照的に、文書 (`document`) ロールは、文書ロールを持つ他の要素との関係はなく、単にそれ含む複合ウィジェットとの関係があるだけです。 記事は関連記事を持つことができます。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
@@ -57,7 +57,7 @@ slug: Web/Accessibility/ARIA/Roles/document_role
 
 文書ロールは、ユーザーがスクリーンリーダーの標準コマンドで読むべき内容であることを明確に示すことによって、支援技術の振る舞いを間接的に制御する簡単な方法です。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -66,6 +66,6 @@ slug: Web/Accessibility/ARIA/Roles/document_role
 ## 関連情報
 
 - [ARIA: widget ロール](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)
-- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

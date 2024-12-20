@@ -30,7 +30,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 Люди с ограниченными возможностями так же разнообразны, как и люди без них, так и своими недостатками. Ключевой урок заключается в том, чтобы думать за пределами вашего собственного компьютера и того, как вы используете Интернет, и начать изучать как его используют другие — _вы не ваши пользователи._ Ниже разъясняются основные виды инвалидности, а также любые специализированные инструменты, которые используются для доступа к веб-контенту (известные как **вспомогательные технологии**).
 
-> **Примечание:** в информационном бюллетене Всемирной организации здравоохранения по вопросам [Инвалидности и Здоровья](https://www.who.int/ru/news-room/fact-sheets/detail/disability-and-health) говорится, что "Более 1 миллиарда людей, около 15% населения мира, имеют какую-либо форму инвалидности" и "От 110 до 190 миллионов взрослых испытывают значительные трудности в функционировании."
+> [!NOTE]
+> В информационном бюллетене Всемирной организации здравоохранения по вопросам [Инвалидности и Здоровья](https://www.who.int/ru/news-room/fact-sheets/detail/disability-and-health) говорится, что "Более 1 миллиарда людей, около 15% населения мира, имеют какую-либо форму инвалидности" и "От 110 до 190 миллионов взрослых испытывают значительные трудности в функционировании."
 
 ### Люди с нарушениями зрения
 
@@ -38,7 +39,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - Некоторые платные коммерческие продукты, такие как [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) и [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - Некоторые бесплатные продукты, такие как [NVDA](http://www.nvaccess.org/) (для Windows), [ChromeVox](http://www.chromevox.com/) (браузер Chrome, Windows и Mac ОС Х) и [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Некоторые из них встроены в операционную систему, например [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X и iOS), [Экранный диктор](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)([Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (в ChromeOS) и [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Некоторые из них встроены в операционную систему, например [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X и iOS), [Экранный диктор](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)([Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (в ChromeOS) и [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Хорошая идея ознакомиться с экранными дикторами; вы можете настроить экранный считыватель и поиграть с ним, чтобы получить представление о том, как это работает. Более подробную информацию об их использовании см. в [руководстве по кросс-браузерному тестированию](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders). Видео ниже предоставляет краткий пример взаимодействия с экранными читателями.
 
@@ -85,7 +86,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 С точки зрения статистики, опять же цифры значительны. Отчёт Корнелльского университета [О состоянии инвалидности за 2014 год](http://www.disabilitystatistics.org/StatusReports/2014-PDF/2014-StatusReport_US.pdf) (PDF, 511 КБ)(en) показывает, что в 2014 году 4,5% людей в США в возрасте 21-64 лет имели ту или иную форму когнитивной инвалидности.
 
-> **Примечание:** [Страница о когнитивных расстройствах](http://webaim.org/articles/cognitive/) на WebAIM обеспечивает полезное распространение этих идей, и это, безусловно, стоит прочитать.
+> **Примечание:** [Страница о когнитивных расстройствах](https://webaim.org/articles/cognitive/) на WebAIM обеспечивает полезное распространение этих идей, и это, безусловно, стоит прочитать.
 
 ## Реализация доступности в проекте
 
@@ -110,7 +111,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 Чтобы показать, что вы заботитесь о доступности и думали о ней, опубликуйте на своём сайте заявление о доступности, в котором подробно излагается, какова ваша политика в отношении доступности, и какие шаги вы предприняли для обеспечения доступности сайта. Если кто-то жалуется, что у вашего сайта есть проблема с доступностью, начните с ним диалог, проявите сочувствие и примите разумные меры, чтобы попытаться устранить проблему.
 
-> **Примечание:** В нашей статье [«Об общих проблемах доступности»](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives) рассматриваются особенности доступности, которые необходимо протестировать более подробно.
+> [!NOTE]
+> В нашей статье [«Об общих проблемах доступности»](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives) рассматриваются особенности доступности, которые необходимо протестировать более подробно.
 
 Подведём итоги:
 

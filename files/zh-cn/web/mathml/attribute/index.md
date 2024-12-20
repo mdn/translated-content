@@ -9,7 +9,8 @@ l10n:
 
 此页面是 MathML 属性的字母表。要了解每个属性的更多详细信息，请参见 [MathML 元素页面](/zh-CN/docs/Web/MathML/Element)和[全局属性页面](/zh-CN/docs/Web/MathML/Global_attributes)。[值](/zh-CN/docs/Web/MathML/Values)页面也介绍了有关 MathML 属性常用值的一些说明。
 
-> **备注：** 就像 [MathML](/zh-CN/docs/Web/MathML) 主页所解释的那样，MDN 使用 [MathML 核心](https://w3c.github.io/mathml-core/)作为参考规范。不过，一些浏览器仍在使用的遗留特性也被记录在案。你可以在 [MathML 4](https://w3c.github.io/mathml/) 中找到有关这些特性和其他特性的更多详细信息。
+> [!NOTE]
+> 就像 [MathML](/zh-CN/docs/Web/MathML) 主页所解释的那样，MDN 使用 [MathML 核心](https://w3c.github.io/mathml-core/)作为参考规范。不过，一些浏览器仍在使用的遗留特性也被记录在案。你可以在 [MathML 4](https://w3c.github.io/mathml/) 中找到有关这些特性和其他特性的更多详细信息。
 
 <table class="standard-table">
   <thead>

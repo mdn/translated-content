@@ -9,13 +9,13 @@ l10n:
 
 Ce module contient un ensemble d'article pour acquérir les notions fondamentales relatives aux formulaires web. Les formulaires web sont un outil puissant pour l'interaction avec les utilisatrices et utilisateurs. On les utilise généralement pour collecter des données saisies ou pour permettre le contrôle de l'interface. Toutefois, pour des raisons historiques et techniques, il n'est pas évident de les utiliser avec tout leur potentiel. Dans les articles indiqués ci-après, nous aborderons les concepts essentiels des formulaires web&nbsp;: leur structure HTML, la mise en forme des contrôles des formulaires, la validation des données, et l'envoi de données au serveur.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > #### Vous souhaitez devenir développeuse ou développeur <i lang="en">front-end</i>&nbsp;?
 >
 > Nous avons construit un module qui contient toutes les informations essentielles pour parvenir à cet objectif.
 >
-> [**Commencez ici**](/fr/docs/Learn/Front-end_web_developer)
+> [**Commencez ici**](/fr/curriculum/)
 
 ## Prérequis
 
@@ -25,7 +25,8 @@ Pour maîtriser les formulaires, connaître le HTML ne sera pas suffisant. Il fa
 
 Le paragraphe précédent permet de comprendre pourquoi nous avons créé un module à part entière pour les formulaires (plutôt que de distiller le contenu sur les formulaires dans les sections sur HTML, CSS, et JavaScript). En effet, les éléments relatifs aux formulaires sont plus complexes que les autres éléments HTML et nécessite de travailler de concert avec des techniques basées sur CSS et ou JavaScript pour en tirer le meilleur parti.
 
-> **Note :** Si vous travaillez sur un appareil (que ce soit un ordinateur, une tablette ou autre) où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code fournis dans ces articles dans des outils en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si vous travaillez sur un appareil (que ce soit un ordinateur, une tablette ou autre) où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code fournis dans ces articles dans des outils en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides introductifs
 
@@ -66,7 +67,7 @@ Les articles suivants ne sont pas nécessaires à l'apprentissage initial, mais 
 - [Comment construire des contrôles de formulaire spécifiques](/fr/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : Dans certains cas, les contrôles natifs des formulaires pourront ne pas répondre à votre besoin (que ce soit à cause de la mise en forme ou des fonctionnalités). Pour ces cas, vous aurez peut-être à construire votre propre contrôle à l'aide de HTML. Dans cet article, nous verrons comment faire et les considérations à avoir, tout en mettant en œuvre un cas pratique.
 - [Envoyer des formulaires avec JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : Dans cet article, nous verrons comment utiliser un formulaire pour créer une requête HTTP et l'envoyer avec du code JavaScript (plutôt que d'utiliser l'envoi standard natif). Nous verrons pourquoi cela peut être pertinent et les implications associées (voir aussi [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormData_Objects)).
+  - : Dans cet article, nous verrons comment utiliser un formulaire pour créer une requête HTTP et l'envoyer avec du code JavaScript (plutôt que d'utiliser l'envoi standard natif). Nous verrons pourquoi cela peut être pertinent et les implications associées (voir aussi [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)).
 - [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : Ce dernier article fournit une référence pratique qui permet de connaître la compatibilité entre les propriétés CSS et les différents éléments de formulaire.
 

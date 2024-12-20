@@ -11,7 +11,8 @@ slug: Web/API/MediaStreamTrack/enabled
 
 사실, `enabled`의 값은 사용자가 트랙의 "음소거" 상태로 취급할 상태를 나타내며, {{domxref("MediaStreamTrack.muted", "muted")}} 속성은 전송 중 프레임 유실 등으로 인해 데이터를 출력할 수 없는 상태를 뜻합니다.
 
-> **참고:** 트랙의 연결이 끊긴 후에도 `enabled` 값을 바꿀 수는 있지만 아무런 효과도 없습니다.
+> [!NOTE]
+> 트랙의 연결이 끊긴 후에도 `enabled` 값을 바꿀 수는 있지만 아무런 효과도 없습니다.
 
 ## 구문
 
@@ -51,7 +52,7 @@ pauseButton.onclick = function (evt) {
 
 ## 같이 보기
 
-- [MediaStream API](/ko/docs/Web/API/Media_Streams_API)
+- [MediaStream API](/ko/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/ko/docs/Web/API/WebRTC_API)

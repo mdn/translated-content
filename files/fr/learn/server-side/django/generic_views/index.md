@@ -75,7 +75,8 @@ class BookListView(generic.ListView):
 
 C'est tout ! La vue générique va adresser une requête à la base de données pour obtenir tous les enregistrements du modèle spécifié (`Book`), et ensuite rendre un template situé à l'adresse **/locallibrary/catalog/templates/catalog/book_list.html** (que nous allons créer ci-dessous). À l'intérieur du template vous pouvez accéder à la liste de livres grâce à la variable de template appelée `object_list` OU `book_list` (c'est-à-dire l'appellation générique "`the_model_name_list`").
 
-> **Note :** Ce chemin étrange vers le lieu du template n'est pas une faute de frappe : les vues génériques cherchent les templates dans `/application_name/the_model_name_list.html` (`catalog/book_list.html` dans ce cas) à l'intérieur du répertoire `/application_name/templates/` (`/catalog/templates/`).
+> [!NOTE]
+> Ce chemin étrange vers le lieu du template n'est pas une faute de frappe : les vues génériques cherchent les templates dans `/application_name/the_model_name_list.html` (`catalog/book_list.html` dans ce cas) à l'intérieur du répertoire `/application_name/templates/` (`/catalog/templates/`).
 
 Vous pouvez ajouter des attributs pour changer le comportement par défaut utilisé ci-dessus. Par exemple, vous pouvez spécifier un autre fichier de template si vous souhaitez avoir plusieurs vues qui utilisent ce même modèle, ou bien vous pourriez vouloir utiliser un autre nom de variable de template, si book_list n'est pas intuitif par rapport à l'usage que vous faites de vos templates. Probablement, le changement le plus utile est de changer/filtrer le sous-ensemble des résultats retournés : au lieu de lister tous les livres, vous pourriez lister les 5 premiers livres lus par d'autres utilisateurs.
 
@@ -121,7 +122,8 @@ Quand vous faites cela, il est important de suivre la procédure indiquée ci-de
 - Ensuite ajouter la nouvelle information de contexte.
 - Enfin retourner le nouveau contexte (mis à jour).
 
-> **Note :** Voyez dans [Built-in class-based generic views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/) (doc de Django) pour avoir beaucoup plus d'exemples de ce que vous pouvez faire.
+> [!NOTE]
+> Voyez dans [Built-in class-based generic views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/) (doc de Django) pour avoir beaucoup plus d'exemples de ce que vous pouvez faire.
 
 ### Créer le template pour la Vue Liste
 
@@ -188,7 +190,8 @@ Nous accédons aux _champs_ de l'enregistrement "livre" associé, en utilisant l
 
 Nous pouvons aussi appeler des _fonctions_ contenues dans le modèle depuis l'intérieur de notre template — dans ce cas nous appelons `Book.get_absolute_url()` pour obtenir une URL que vous pouvez utiliser pour afficher dans la vue détail l'enregistrement associé. Cela fonctionne, pourvu que la fonction ne comporte pas d'arguments (il n'y a aucun moyen de passer des arguments !).
 
-> **Note :** Il nous faut être quelque peu attentifs aux "effets de bord" quand nous appelons des fonctions dans nos templates. Ici nous récupérons simplement une URL à afficher, mais une fonction peut faire à peu près n'importe quoi — nous ne voudrions pas effacer notre base de données (par exemple) juste parce que nous avons affiché notre template !
+> [!NOTE]
+> Il nous faut être quelque peu attentifs aux "effets de bord" quand nous appelons des fonctions dans nos templates. Ici nous récupérons simplement une URL à afficher, mais une fonction peut faire à peu près n'importe quoi — nous ne voudrions pas effacer notre base de données (par exemple) juste parce que nous avons affiché notre template !
 
 #### Mettre à jour le template de base
 
@@ -224,13 +227,16 @@ Pour le chemin _book-detail_, le pattern d'URL utilise une syntaxe spéciale pou
 
 Dans ce cas, nous utilisons `'<int:pk>'` pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé `pk` (abréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.
 
-> **Note :** Comme nous l'avons dit précédemment, notre URL correcte est en réalité `catalog/book/<digits>` (comme nous sommes dans l'application **catalog**, `/catalog/` est supposé).
+> [!NOTE]
+> Comme nous l'avons dit précédemment, notre URL correcte est en réalité `catalog/book/<digits>` (comme nous sommes dans l'application **catalog**, `/catalog/` est supposé).
 
-> **Attention :** La vue générique basée sur classe "détail" _s'attend_ à recevoir un paramètre appelé **pk**. Si vous écrivez votre propre fonction, vous pouvez utiliser le nom que vous voulez pour votre paramètre, ou même passer l'information avec un argument non nommé.
+> [!WARNING]
+> La vue générique basée sur classe "détail" _s'attend_ à recevoir un paramètre appelé **pk**. Si vous écrivez votre propre fonction, vous pouvez utiliser le nom que vous voulez pour votre paramètre, ou même passer l'information avec un argument non nommé.
 
 #### Introduction aux chemins et expressions régulières avancés
 
-> **Note :** Vous n'aurez pas besoin de cette section pour achever le tutoriel ! Nous en parlons parce que nous savons que cette option vous sera probablement utile dans votre avenir centré sur Django.
+> [!NOTE]
+> Vous n'aurez pas besoin de cette section pour achever le tutoriel ! Nous en parlons parce que nous savons que cette option vous sera probablement utile dans votre avenir centré sur Django.
 
 La recherche de pattern fournie par `path()` est simple et utile pour les cas (très communs) où vous voulez seulement capturer _n'importe quelle_ chaîne ou entier. Si vous avez besoin d'un filtre plus affiné (par exemple pour filtrer seulement les chaînes qui ont un certain nombre de caractères), alors vous pouvez utiliser la méthode [re_path()](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.re_path).
 
@@ -330,7 +336,8 @@ Considérons quelques exemples réels de patterns :
 
 Vous pouvez capturer plusieurs patterns en une seule fois, et donc encoder beaucoup d'informations différentes dans l'URL.
 
-> **Note :** Comme défi, essayez d'envisager comment vous devriez encoder une URL pour lister tous les livres sortis en telle année, à tel mois et à tel jour, et l'expression régulière qu'il faudrait utiliser pour la rechercher.
+> [!NOTE]
+> Comme défi, essayez d'envisager comment vous devriez encoder une URL pour lister tous les livres sortis en telle année, à tel mois et à tel jour, et l'expression régulière qu'il faudrait utiliser pour la rechercher.
 
 #### Passer des options supplémentaires dans vos mappages d'URL
 
@@ -341,7 +348,8 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **Note :** Les options supplémentaires aussi bien que les patterns capturés sont passés à la vue comme arguments _nommés_. Si vous utilisez le **même nom** pour un pattern capturé et une option supplémentaire, alors seul la value du pattern capturé sera envoyé à la vue (la valeur spécifiée dans l'option supplémentaire sera abandonnée).
+> [!NOTE]
+> Les options supplémentaires aussi bien que les patterns capturés sont passés à la vue comme arguments _nommés_. Si vous utilisez le **même nom** pour un pattern capturé et une option supplémentaire, alors seul la value du pattern capturé sera envoyé à la vue (la valeur spécifiée dans l'option supplémentaire sera abandonnée).
 
 ### Vue (basée sur classe)
 
@@ -418,7 +426,8 @@ Créez le fichier HTML **/locallibrary/catalog/templates/catalog/book_detail.htm
 {% endblock %}
 ```
 
-> **Note :** Le lien vers l'auteur dans le template ci-dessus est vide, parce que nous n'avons pas encore crée de page détail pour un auteur. Une fois que cette page sera créée, vous pourrez remplacer l'URL par ceci :
+> [!NOTE]
+> Le lien vers l'auteur dans le template ci-dessus est vide, parce que nous n'avons pas encore crée de page détail pour un auteur. Une fois que cette page sera créée, vous pourrez remplacer l'URL par ceci :
 >
 > ```python
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
@@ -441,7 +450,8 @@ Une chose intéressante que nous n'avons pas encore vue, c'est la fonction `book
 
 Cette méthode est requise parce que vous déclarez un champ `ForeignKey` (one-to-many) seulement du côté "one" de la relation. Comme vous ne faites rien pour déclarer la relation dans les modèles opposés ("many"), Django n'a pas de champ pour récupérer l'ensemble des enregistrements associés. Pour remédier à ce problème, Django construit une fonction justement nommée "recherche inversée", que vous pouvez utiliser. Le nom de la fonction est construit en mettant en minuscule le nom du modèle où a été déclarée la `ForeignKey`, suivi de `_set` (ainsi la fonction créée dans `Book` est `bookinstance_set()`).
 
-> **Note :** Ici nous utilisons `all()` pour récupérer tous les enregistrements (comportement par défaut). Bien que vous puissiez utiliser la méthode `filter()` pour obtenir un sous-ensemble d'enregistrements dans le code, vous ne pouvez faire cela directement dans le template, parce que vous ne pouvez pas spécifier d'arguments dans les fonctions.
+> [!NOTE]
+> Ici nous utilisons `all()` pour récupérer tous les enregistrements (comportement par défaut). Bien que vous puissiez utiliser la méthode `filter()` pour obtenir un sous-ensemble d'enregistrements dans le code, vous ne pouvez faire cela directement dans le template, parce que vous ne pouvez pas spécifier d'arguments dans les fonctions.
 >
 > Prenez garde également que, si vous ne définissez pas un ordre (dans votre vue basée sur classe ou votre modèle), vous allez voir des erreurs de ce genre en provenance du serveur de développement :
 >
@@ -486,7 +496,8 @@ Cette méthode est requise parce que vous déclarez un champ `ForeignKey` (one-t
 
 À ce point, nous devrions avoir créé tout ce qu'il faut pour afficher à la fois la liste des livres et les pages de détail pour chaque livre. Lancez le serveur (`python3 manage.py runserver`) et ouvrez votre navigateur à l'adresse <http://127.0.0.1:8000/>.
 
-> **Attention :** Ne cliquez pas sur les liens vers le détail des auteurs : vous allez les créer lors du prochain défi !
+> [!WARNING]
+> Ne cliquez pas sur les liens vers le détail des auteurs : vous allez les créer lors du prochain défi !
 
 Cliquez sur le lien **Tous les livres** pour afficher la liste des livres.
 
@@ -565,10 +576,10 @@ Le challenge dans cet article consiste à créer les vues détail et liste néce
 
 Le code requis pour le mappeur d'URL et les vues sera virtuellement identique aux vues liste et détail du modèle `Book`, créées ci-dessus. Les templates seront différents, mais auront un comportement semblable.
 
-> **Note :**
+> [!NOTE]
 >
-> - Une fois que vous aurez créé le mappeur d'URL pour la page "liste d'auteurs", vous aurez besoin de mettre aussi à jour le lien **All authors** dans le template de base. Suivez la [même procédure](#Update_the_base_template) que celle adoptée quand nous avons mis à jour le lien **All books**.
-> - Une fois créé le mappeur d'URL pour la page de détails sur l'auteur, vous devrez aussi mettre à jour le [template de la vue détail d'un livre](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**), de sorte que le lien vers l'auteur pointe vers votre nouvelle page de détails sur l'auteur (au lieu d'être une URL vide). La ligne va avoir comme changement la balise montrée en gras ci-dessous.
+> - Une fois que vous aurez créé le mappeur d'URL pour la page "liste d'auteurs", vous aurez besoin de mettre aussi à jour le lien **All authors** dans le template de base. Suivez la [même procédure](#update_the_base_template) que celle adoptée quand nous avons mis à jour le lien **All books**.
+> - Une fois créé le mappeur d'URL pour la page de détails sur l'auteur, vous devrez aussi mettre à jour le [template de la vue détail d'un livre](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**), de sorte que le lien vers l'auteur pointe vers votre nouvelle page de détails sur l'auteur (au lieu d'être une URL vide). La ligne va avoir comme changement la balise montrée en gras ci-dessous.
 >
 >   ```django
 >   <p>

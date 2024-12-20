@@ -15,7 +15,7 @@ l10n:
 
 JavaScript は明確な配列データ型を持っていません。しかし、アプリケーションでは配列として機能する定義済みの `Array` オブジェクトとそのメソッドを利用することができます。`Array` オブジェクトには、結合、反転、ソートなど様々な方法で配列を操作するメソッドがあります。また、配列の長さを特定するプロパティや、正規表現で使用するプロパティなどがあります。
 
-この記事では配列を中心に説明しますが、配列と型付き配列には共通するメソッドが多いため、同じ概念の多くが型付き配列にも当てはまります。型付き配列の詳細については、[型付き配列のリファレンス](/ja/docs/Web/JavaScript/Typed_arrays)を参照してください。
+この記事では配列を中心に説明しますが、配列と型付き配列には共通するメソッドが多いため、同じ概念の多くが型付き配列にも当てはまります。型付き配列の詳細については、[型付き配列のリファレンス](/ja/docs/Web/JavaScript/Guide/Typed_arrays)を参照してください。
 
 ## 配列の生成
 
@@ -45,7 +45,8 @@ const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **メモ:** 上記のコードでは、`arrayLength` は `Number`（数値）である必要があります。さもないと、（指定した値の）単一の要素を持つ配列が生成されます。`arr.length` を呼び出すと `arrayLength` が返されますが、配列には要素が存在していません。この配列で {{jsxref("Statements/for...in","for...in")}} ループを実行しても、配列の要素は返されません。
+> [!NOTE]
+> 上記のコードでは、`arrayLength` は `Number`（数値）である必要があります。さもないと、（指定した値の）単一の要素を持つ配列が生成されます。`arr.length` を呼び出すと `arrayLength` が返されますが、配列には要素が存在していません。この配列で {{jsxref("Statements/for...in","for...in")}} ループを実行しても、配列の要素は返されません。
 
 上記のように新規に定義した変数に割り当てるだけでなく、新規または既存のオブジェクトのプロパティに配列を割り当てることができます。
 
@@ -88,7 +89,7 @@ const wisenArray = Array.of(9.3); // wisenArray は 1 つの要素 9.3 だけを
 
 ## 配列要素の参照
 
-要素はプロパティでもあるので、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使ってアクセスすることができます。以下の配列を定義するとします。
+要素はプロパティでもあるので、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使ってアクセスすることができます。以下の配列を定義するとします。
 
 ```js
 const myArray = ["Wind", "Rain", "Fire"];
@@ -96,7 +97,7 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > const arr = ["one", "two", "three"];
@@ -115,7 +116,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **メモ:** 上記のコードで配列演算子（角括弧）内に整数ではない値を指定すると、配列要素ではなく配列を表すオブジェクトのプロパティとして作成されます。
+> [!NOTE]
+> 上記のコードで配列演算子（角括弧）内に整数ではない値を指定すると、配列要素ではなく配列を表すオブジェクトのプロパティとして作成されます。
 >
 > ```js
 > const arr = [];
@@ -385,7 +387,8 @@ a.forEach((element) => {
 
 コールバックを受け取る `forEach` メソッド（および下記のもの）は、配列全体を何らかの方法で反復処理するため、_反復処理メソッド_ として知られています。それぞれのメソッドは、オプションで `thisArg` という 2 つ目の引数を取ります。指定された場合、`thisArg`はコールバック関数の本体の中で `this` キーワードの値となります。指定されなかった場合、関数が明示的なオブジェクトコンテキストの外で呼び出される他のケースと同様に、`this` はグローバルオブジェクト（[`window`](/ja/docs/Web/API/Window)、[`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) など）を参照しています。これは関数が[厳格モードでない場合](/ja/docs/Web/JavaScript/Reference/Strict_mode)であり、関数が厳格モードの場合は `undefined` となります。
 
-> **メモ:** 上で紹介した `sort()` メソッドは反復処理メソッドではありません。そのコールバック関数は比較のためにのみ使用され、要素の順序に基づく特定の順序で呼び出されることはないためです。`sort()` は `thisArg` という引数も受け入れません。
+> [!NOTE]
+> 上で紹介した `sort()` メソッドは反復処理メソッドではありません。そのコールバック関数は比較のためにのみ使用され、要素の順序に基づく特定の順序で呼び出されることはないためです。`sort()` は `thisArg` という引数も受け入れません。
 
 [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) はすべての配列アイテムごとにコールバック関数 `callback` を実行し、返値からなる新しい配列を返します。
 
@@ -587,7 +590,7 @@ arr.property = "value";
 console.log(arr.property); // "value"
 ```
 
-例えば、配列が正規表現と文字列の一致した結果である場合、配列は一致した情報を提供するプロパティや要素を返します。[`RegExp.prototype.exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype. match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) は配列を返します。正規表現での配列の使用に関する情報については、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)を参照してください。
+例えば、配列が正規表現と文字列の一致した結果である場合、配列は一致した情報を提供するプロパティや要素を返します。[`RegExp.prototype.exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.prototype. match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`String.prototype.split()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) は配列を返します。正規表現での配列の使用に関する情報については、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を参照してください。
 
 ### 配列風オブジェクトの扱い
 

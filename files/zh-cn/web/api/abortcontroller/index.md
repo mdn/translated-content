@@ -24,7 +24,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("AbortController.abort()")}}
-  - : 中止一个尚未完成的异步操作。这能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)及任何响应体和流的使用。
+  - : 中止一个尚未完成的异步操作。这能够中止 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)及任何响应体和流的使用。
 
 ## 示例
 
@@ -34,7 +34,7 @@ l10n:
 
 我们先使用 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数创建一个控制器，然后使用 {{domxref("AbortController.signal")}} 属性获取其关联 {{domxref("AbortSignal")}} 对象的引用。
 
-当 [fetch 请求](/zh-CN/docs/Web/API/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
+当 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
 let controller;
@@ -65,7 +65,8 @@ function fetchVideo() {
 }
 ```
 
-> **备注：** 当 `abort()` 被调用时，这个 `fetch()` promise 将 `reject` 一个名为 `AbortError` 的 `DOMException`。
+> [!NOTE]
+> 当 `abort()` 被调用时，这个 `fetch()` promise 将 `reject` 一个名为 `AbortError` 的 `DOMException`。
 
 你可以在 [GitHub](https://github.com/mdn/dom-examples/tree/main/abort-api) 上找到这个示例的完整源代码（也可以[在线运行](https://mdn.github.io/dom-examples/abort-api/)）。
 
@@ -80,4 +81,4 @@ function fetchVideo() {
 ## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- Jake Archibald 的[可中止的 Fetch](https://developer.chrome.com/blog/abortable-fetch/)
+- Jake Archibald 的[可中止的 Fetch](https://developer.chrome.google.cn/blog/abortable-fetch)

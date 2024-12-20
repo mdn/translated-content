@@ -16,7 +16,8 @@ slug: Web/HTTP/Permissions_Policy
 - 允许 iframe 使用[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)。
 - 如果项目在视口中不可见，则停止对其进行脚本处理，以提高性能。
 
-> **备注：** 权限策略曾经被称为特性策略（Feature Policy）。名字已经改变，HTTP 头的语法也发生了变化，如果你过去使用过特性策略，请记住这一点，并检查浏览器的支持表。`<iframe allow=" ... ">` 的语法是保持不变的。
+> [!NOTE]
+> 权限策略曾经被称为特性策略（Feature Policy）。名字已经改变，HTTP 头的语法也发生了变化，如果你过去使用过特性策略，请记住这一点，并检查浏览器的支持表。`<iframe allow=" ... ">` 的语法是保持不变的。
 
 ## 概念和用法
 
@@ -29,7 +30,8 @@ slug: Web/HTTP/Permissions_Policy
 - API 甚至没有对外暴露，好像它们不存在一样。
 - 控制特性行为的选项有不同的默认值。
 
-> **备注：** 新引入的特性可能有一个明确的 API 来提示状态。后来与权限策略整合的现有特性通常会使用现有机制。
+> [!NOTE]
+> 新引入的特性可能有一个明确的 API 来提示状态。后来与权限策略整合的现有特性通常会使用现有机制。
 
 权限策略允许你控制哪些源可以使用哪些特性，无论是在顶层页面还是在嵌入的 {{htmlelement("iframe")}} 中。其目的是为良好的用户体验执行最佳实践，并对*敏感*或*强大*的特性（指在执行相关代码之前需要用户明确许可使用的特性）提供细化控制。
 
@@ -40,7 +42,8 @@ slug: Web/HTTP/Permissions_Policy
 
 这些是独立的，但又是相关的——详见[嵌入式内容的继承策略](#嵌入式内容的继承策略)。
 
-> **备注：** 脚本可以通过位于 {{DOMxRef("FeaturePolicy")}} 对象的 {{DOMxRef("Document.featurePolicy")}} 或 {{DOMxRef("HTMLIFrameElement.featurePolicy")}} 以编程方式查询权限策略信息。
+> [!NOTE]
+> 脚本可以通过位于 {{DOMxRef("FeaturePolicy")}} 对象的 {{DOMxRef("Document.featurePolicy")}} 或 {{DOMxRef("HTMLIFrameElement.featurePolicy")}} 以编程方式查询权限策略信息。
 
 为了控制每个特性，会撰写包含以下这些方面的策略：
 
@@ -74,7 +77,8 @@ slug: Web/HTTP/Permissions_Policy
 
 值 `*` 和 `()` 只能单独使用，而 `self` 和 `src` 可以与一个或多个源结合使用。
 
-> **备注：** 指令有一个默认的允许列表，对于 `Permissions-Policy` HTTP 标头来说，它总是 `*`'、`self` 或 `none` 之一，如果它们没有明确地列在策略中，则管理默认行为。这些都是在各个[指令参考页](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)中指定的。对于 `<iframe>` 的 `allow` 属性，默认行为总是 `src`。
+> [!NOTE]
+> 指令有一个默认的允许列表，对于 `Permissions-Policy` HTTP 标头来说，它总是 `*`'、`self` 或 `none` 之一，如果它们没有明确地列在策略中，则管理默认行为。这些都是在各个[指令参考页](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy#指令)中指定的。对于 `<iframe>` 的 `allow` 属性，默认行为总是 `src`。
 
 在支持的情况下，你可以在权限策略源中包括通配符。这意味着你不必在允许列表中明确指定几个不同的子域，而是可以用通配符在一个单一的源中指定它们。
 
@@ -178,7 +182,8 @@ Permissions-Policy: camera=*
 ></iframe>
 ```
 
-> **备注：** 你会注意到，`<iframe>` 策略的语法与 `Permissions-Policy` 标头的语法有些不同。前者仍然使用与旧的特性策略规范相同的语法，它被权限策略所取代。
+> [!NOTE]
+> 你会注意到，`<iframe>` 策略的语法与 `Permissions-Policy` 标头的语法有些不同。前者仍然使用与旧的特性策略规范相同的语法，它被权限策略所取代。
 
 ## 嵌入式内容的继承策略
 
@@ -222,6 +227,6 @@ Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 
 - {{HTTPHeader("Permissions-Policy")}} HTTP 标头
 - iframe 的 {{HTMLElement("iframe", "allow", "#属性")}} 属性
-- [使用权限特性控制浏览器特性](https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/)：使用指南，其中还包含几个演示链接。
+- [使用权限特性控制浏览器特性](https://developer.chrome.google.cn/docs/privacy-security/permissions-policy)：使用指南，其中还包含几个演示链接。
 - [chromestatus.com 上的权限/特性策略](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)

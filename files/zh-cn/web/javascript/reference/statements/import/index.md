@@ -140,7 +140,8 @@ myModule.doAllTheAmazingThings();
 
 `myModule` 是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的对象，其原型为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)。它提供了一个名为 `default` 的键，用于访问默认导出。有关更多信息，请参考[模块命名空间对象](/zh-CN/docs/Web/JavaScript/Reference/Operators/import#模块命名空间对象)。
 
-> **备注：** JavaScript 没有像 `import * from "module-name"` 这样的通配符导入，因为它会导致名称冲突的可能性很高。
+> [!NOTE]
+> JavaScript 没有像 `import * from "module-name"` 这样的通配符导入，因为它会导致名称冲突的可能性很高。
 
 #### 仅为了其副作用而导入模块
 

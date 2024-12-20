@@ -7,13 +7,14 @@ slug: Mozilla/Firefox/Releases/90
 
 このページでは、開発者に影響する Firefox 90 の変更点をまとめています。Firefox 90 は、米国時間 2021 年 7 月 13 日にリリースされました。
 
-> **メモ:** Mozilla Hacks の [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) もご覧ください。
+> [!NOTE]
+> Mozilla Hacks の [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
-- 応答ビューで [ウェブフォントのプレビュー](/ja/docs/Tools/Network_Monitor/request_details#response_tab) を表示するようになりました ([Firefox バグ 872078](https://bugzil.la/872078))。
+- 応答ビューで [ウェブフォントのプレビュー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) を表示するようになりました ([Firefox バグ 872078](https://bugzil.la/872078))。
 
 ### HTML
 
@@ -26,8 +27,8 @@ slug: Mozilla/Firefox/Releases/90
 
 ### JavaScript
 
-- [プライベートスタティックフィールド、プライベートインスタンスフィールドおよびプライベートスタティックメソッド、プライベートインスタンスメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields) をデフォルトでサポートしました ([Firefox バグ 1708235](https://bugzil.la/1708235) および [Firefox バグ 1708236](https://bugzil.la/1708236))。
-- [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in#private_fields_and_methods) 演算子を、[プライベートなメソッドやフィールドが定義されているかの確認](/ja/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features#checking_if_a_private_fieldmethod_exists) に使用できるようになりました。これはコードを `try/catch` で包むこととは対照的に、未定義の可能性がある機能をよりコンパクトな方法で扱うことができます ([Firefox バグ 1648090](https://bugzil.la/1648090))。
+- [プライベートスタティックフィールド、プライベートインスタンスフィールドおよびプライベートスタティックメソッド、プライベートインスタンスメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties) をデフォルトでサポートしました ([Firefox バグ 1708235](https://bugzil.la/1708235) および [Firefox バグ 1708236](https://bugzil.la/1708236))。
+- [`in`](/ja/docs/Web/JavaScript/Reference/Operators/in#private_fields_and_methods) 演算子を、[プライベートなメソッドやフィールドが定義されているかの確認](/ja/docs/Web/JavaScript/Guide/Using_Classes#private_fields#checking_if_a_private_fieldmethod_exists) に使用できるようになりました。これはコードを `try/catch` で包むこととは対照的に、未定義の可能性がある機能をよりコンパクトな方法で扱うことができます ([Firefox バグ 1648090](https://bugzil.la/1648090))。
 - [`Intl.DateTimeFormat()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) のオプションとして指定する独自の日付や時刻のフォーマットに、`dayPeriod` を含めることが可能になりました。これは、1 日のうちのおおまかな時間帯 (例えば "朝" や "夜" など) を `narrow`、`short` または `long` の文字列として含めることを示します ([Firefox バグ 1645115](https://bugzil.la/1645115))。
 - 相対的な位置を指定するメソッドである `at()` を [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)、[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)、[`TypedArray`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) グローバルオブジェクトに追加しました ([Firefox バグ 1681371](https://bugzil.la/1681371))。
 

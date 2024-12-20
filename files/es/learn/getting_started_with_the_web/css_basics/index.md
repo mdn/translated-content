@@ -19,7 +19,7 @@ p {
 
 Vas a probarlo: pega estas tres líneas de CSS en un nuevo archivo en tu editor de texto y guarda este archivo como `style.css` en tu directorio `styles` (estilos).
 
-Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos) y [HTML básico](/es/docs/Learn/Getting_started_with_the_web/HTML_basics) para averiguar qué necesitas hacer primero.)
+Pero aún debes aplicar el CSS a tu documento HTML, de otra manera el estilo CSS no cambiará cómo tu navegador muestra el documento HTML. (Si no has seguido nuestro proyecto, lee [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files) y [HTML básico](/es/docs/Learn/Getting_started_with_the_web/HTML_basics) para averiguar qué necesitas hacer primero.)
 
 1. Abre tu archivo `index.html` y pega la siguiente línea en algún lugar dentro del {{htmlelement("head")}}, es decir, entre las etiquetas `<head>` y `</head>`:
 
@@ -88,13 +88,13 @@ Existen muchos tipos diferentes de selectores. Antes, solo viste los **selectore
 | Selector de atributo                                                     | Los elementos en una página con el atributo especificado.                                                                  | `img[src]`<br> Selecciona `<img src="mimagen.png">` pero no `<img>`               |
 | Selector de pseudoclase                                                  | Los elementos especificados, pero solo cuando esté en el estado especificado, por ejemplo cuando el puntero esté sobre él. | `a:hover`<br> Selecciona `<a>`, pero solo cuando el puntero esté sobre el enlace. |
 
-Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en la [guía de Selectores](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS).
+Existen muchos más selectores para explorar, y podrás encontrar una lista más detallada en la [guía de Selectores](/es/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Fuentes y texto
 
 Ahora que has explorado lo básico de CSS, empieza por añadir información y algunas reglas más a tu archivo `style.css` para que tu ejemplo se vea bonito. Primero, haz que tus fuentes y texto luzcan un poco mejor.
 
-1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
+1. Antes que nada, regresa y busca las [fuentes de Google Fonts](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fuente) que guardaste en un lugar seguro. Agrega el elemento {{htmlelement("link")}}`...` en algún lugar del _head_ de tu archivo `index.html` (de nuevo, en cualquier lugar entre las etiquetas {{htmlelement("head")}} y `</head>`). Debe verse algo así:
 
    ```html
    <link
@@ -104,7 +104,7 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
    ```
 
 2. Luego, borra la regla existente en tu archivo `style.css`. Fue una buena prueba, pero el texto en rojo en realidad no se ve muy bien.
-3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
+3. Añade las siguientes líneas (que se muestran a continuación), sustituyendo la asignación de `font-family` por tu selección de `font-family` que obtuviste en [¿Cuál será la apariencia de tu sitio Web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#fuente) La propiedad `font-family` se refiere a la(s) fuente(s) que deseas usar en tu texto. Esta regla define una fuente base global y un tamaño de fuente para usar en toda la página. Dado que {{htmlelement("html")}} es el elemento primario (o padre) de toda la página, todos los elementos contenidos dentro de él heredan las propiedades `font-size` y `font-family`):
 
    ```css
    html {
@@ -113,7 +113,8 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
    }
    ```
 
-   > **Nota:** se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
+   > [!NOTE]
+   > Se ha añadido un comentario para explicar qué significa «px». Todo lo que está en un documento de CSS entre `/*` y `*/` es un **comentario en CSS**, el cual el navegador descarta cuando carga el código. Este es un espacio donde puedes escribir notas útiles sobre lo que estás haciendo.
 
 4. Ahora escoge el tamaño de fuente para los elementos que contienen texto dentro del cuerpo del HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, y {{htmlelement("p")}}). También centra el texto del título, escoge un ancho de línea y espaciado entre letras en el contenido del texto para hacerlo un poco más legible:
 
@@ -167,7 +168,7 @@ html {
 }
 ```
 
-Esta regla asigna un color de fondo a la página entera. Puedes cambiar el código de color por cualquiera [como el que elegiste usar en tu proyecto](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Color_de_tema).
+Esta regla asigna un color de fondo a la página entera. Puedes cambiar el código de color por cualquiera [como el que elegiste usar en tu proyecto](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#color_de_tema).
 
 ### Dar estilo al cuerpo del documento
 
@@ -184,9 +185,9 @@ body {
 Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Element/body). Revisa una por una:
 
 - `width: 600px;` — esto hará que el cuerpo siempre tenga 600 píxeles de ancho.
-- `margin: 0 auto;` — cuando seleccionas dos valores dentro de propiedades como `margin` o `padding`, el primer valor afectará los lados superior (top) **e** inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierdo (left) **y** derecho (right) (aquí, `auto` es un valor especial que divide el espacio disponible entre derecha e izquierda). Puedes usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/padding#Sintaxis).
+- `margin: 0 auto;` — cuando seleccionas dos valores dentro de propiedades como `margin` o `padding`, el primer valor afectará los lados superior (top) **e** inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierdo (left) **y** derecho (right) (aquí, `auto` es un valor especial que divide el espacio disponible entre derecha e izquierda). Puedes usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/padding#sintaxis).
 - `background-color: #FF9500;` — como antes, este selecciona el color de fondo de un elemento. Se ha usado un naranja rojizo para el elemento `body` en contraste con el azul oscuro del elemento {{htmlelement("html")}}. Sigue y experimenta. Siéntete libre de usar `white` o cualquiera que sea de tu agrado.
-- `padding: 0 20px 20px 20px;` — tienes 4 valores puestos en el relleno, para dar un poco de espacio alrededor del contenido. Esta vez no pondrás relleno en la parte de arriba de `body`, 20 píxeles a la izquierda, abajo y derecha. Los valores se ponen: arriba, derecha, abajo e izquierda, en ese orden. Como con `margin` usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/padding#Sintaxis).
+- `padding: 0 20px 20px 20px;` — tienes 4 valores puestos en el relleno, para dar un poco de espacio alrededor del contenido. Esta vez no pondrás relleno en la parte de arriba de `body`, 20 píxeles a la izquierda, abajo y derecha. Los valores se ponen: arriba, derecha, abajo e izquierda, en ese orden. Como con `margin` usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/padding#sintaxis).
 - `border: 5px solid black;` — este simplemente pone un borde de 5 píxeles de ancho, continuo y de color negro alrededor del elemento `body`.
 
 ### Posicionar y dar estilo al título principal de la página
@@ -226,13 +227,15 @@ Finalmente, centra la imagen para hacer que luzca mejor. Puedes usar nuevamente 
 
 El elemento {{htmlelement("body")}} es un elemento en nivel de bloque (**block-level**), lo que significa que tomará espacio en la página y que puede tener otros valores de espacio aplicables como margen. Las imágenes, por otra parte, son elementos **inline**, lo que quiere decir que no puedes aplicarles márgenes, debes dar a la imagen un comportamiento de _block-level_ usando `display: block;`.
 
-> **Nota:** las instrucciones anteriores asumen que estás usando una imagen más pequeña que el ancho establecido en `body` (600 píxeles). Si tu imagen es más grande, desbordará el cuerpo, derramándose en el resto de la página. Para solucionar esto, puedes hacer lo siguiente: 1) reducir el ancho de la imagen usando un [editor gráfico](https://es.wikipedia.org/wiki/Editor_de_gráficos_rasterizados), o 2) usar CSS para dimensionar la imagen estableciendo la propiedad {{cssxref("width")}} en el elemento `<img>` con un valor menor.
+> [!NOTE]
+> Las instrucciones anteriores asumen que estás usando una imagen más pequeña que el ancho establecido en `body` (600 píxeles). Si tu imagen es más grande, desbordará el cuerpo, derramándose en el resto de la página. Para solucionar esto, puedes hacer lo siguiente: 1) reducir el ancho de la imagen usando un [editor gráfico](https://es.wikipedia.org/wiki/Editor_de_gráficos_rasterizados), o 2) usar CSS para dimensionar la imagen estableciendo la propiedad {{cssxref("width")}} en el elemento `<img>` con un valor menor.
 
-> **Nota:** no te preocupes si aún no entiendes `display: block;` y la diferencia entre un elemento de bloque y un elemento _inline_. Lo entenderás en tanto estudies CSS a profundidad. Puedes encontrar más en cuanto a los diferentes valores disponibles para _display_ en la [página de referencia de display](/es/docs/Web/CSS/display).
+> [!NOTE]
+> No te preocupes si aún no entiendes `display: block;` y la diferencia entre un elemento de bloque y un elemento _inline_. Lo entenderás en tanto estudies CSS a profundidad. Puedes encontrar más en cuanto a los diferentes valores disponibles para _display_ en la [página de referencia de display](/es/docs/Web/CSS/display).
 
 ## Conclusión
 
-Si has seguido las instrucciones de esta publicación, deberías terminar con una página que luce algo así (también puedes [ver nuestra versión aquí](http://mdn.github.io/beginner-html-site-styled/)):
+Si has seguido las instrucciones de esta publicación, deberías terminar con una página que luce algo así (también puedes [ver nuestra versión aquí](https://mdn.github.io/beginner-html-site-styled/)):
 
 ![El logo de Mozilla centrado con título y párrafos. Ahora se ve muy bien de estilo, con un fondo azul para toda la página y un fondo naranja para la franja de contenido principal centrada.](website-screenshot-final.png)
 

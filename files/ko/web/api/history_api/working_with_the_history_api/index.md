@@ -105,5 +105,5 @@ const currentState = history.state;
 ## 같이 보기
 
 - [History API](/ko/docs/Web/API/History_API)
-- [History navigation 예제](/ko/docs/Web/API/History_API/Example)
+- [History navigation 예제](/ko/docs/Web/API/History_API/Working_with_the_History_API)
 - {{domxref("window.history", "history")}} 전역 객체

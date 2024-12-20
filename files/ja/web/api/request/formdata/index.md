@@ -1,11 +1,12 @@
 ---
-title: Request.formData()
+title: "Request: formData() メソッド"
+short-title: formData()
 slug: Web/API/Request/formData
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`formData()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、 {{domxref("FormData")}} オブジェクトで解決するプロミスとして返します。
 
@@ -38,7 +39,7 @@ const request = new Request("/myEndpoint", {
 });
 
 request.formData().then((data) => {
-  // do something with the formdata sent in the request
+  // リクエストで送信されたフォームデータに対して何らかの処理を行う
 });
 ```
 

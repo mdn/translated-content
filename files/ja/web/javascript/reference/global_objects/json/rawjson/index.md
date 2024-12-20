@@ -2,7 +2,7 @@
 title: JSON.rawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/rawJSON
 l10n:
-  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
+  sourceCommit: 0e8730e1a9bdfaa1710530c47135f79cedc3e94b
 ---
 
 {{JSRef}}
@@ -45,7 +45,7 @@ JSON.stringify({ value: 12345678901234567890 });
 
 この値は元の数値と正確には等しくありません！これは JavaScript がすべての数値に浮動小数点数を使用しているため、すべての整数を正確に表すことができないからです。数値リテラル `12345678901234567890` 自体は、 JavaScript によって解釈されるときに、最も近い表現可能な数値に丸められます。
 
-`JSON.rawJSON` がなければ、対応する JavaScript の数値が存在しないため、 `JSON.stringify` に `12345678901234567000` という数値リテラルを生成するように指示する方法はありません。生の JSON では、具体的な値を文字列化するように `JSON.stringify()` に直接指示することができます。
+`JSON.rawJSON` がなければ、対応する JavaScript の数値が存在しないため、 `JSON.stringify` に `12345678901234567890` という数値リテラルを生成するように指示する方法はありません。生の JSON では、具体的な値を文字列化するように `JSON.stringify()` に直接指示することができます。
 
 ```js
 const rawJSON = JSON.rawJSON("12345678901234567890");
@@ -53,7 +53,7 @@ JSON.stringify({ value: rawJSON });
 // {"value":12345678901234567890}
 ```
 
-この例については、[損失のない数値のシリアライズ](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers)を参照してください。
+この例については、[損失のない数値のシリアライズ](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON#json_数値の使用)を参照してください。
 
 `JSON.rawJSON()` に文字列を渡しましたが、最終的な JSON では数値になることに注意してください。これは、文字列が JSON のテキストをそのまま表しているからです。文字列をシリアライズしたい場合は、 `JSON.rawJSON()` に引用符で囲まれた文字列値を使用してください。
 
@@ -114,14 +114,11 @@ console.log(JSON.stringify({ value: "\ud83d\ude04" })); // {"value":"😄"}
 ```js
 const rawJSON = JSON.rawJSON('"\\ud83d\\ude04"');
 const objStr = JSON.stringify({ value: rawJSON });
+console.log(objStr); // {"value":"\ud83d\ude04"}
 console.log(JSON.parse(objStr).value); // 😄
 ```
 
-`rawJSON` の二重バックスラッシュは、実際には単一のバックスラッシュ文字を表しますので、 JSON テキストは次のようになることに注意してください。
-
-```json-nolint
-{"value":"\ud83d\ude04"}
-```
+`rawJSON` の二重バックスラッシュは、実際には単一のバックスラッシュ文字を表します。
 
 ## 仕様書
 

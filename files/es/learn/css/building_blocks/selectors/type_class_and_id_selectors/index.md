@@ -54,7 +54,7 @@ Es posible observar este tipo de comportamiento en las «hojas de estilo de pues
 
 ### Uso del selector universal para facilitar la legibilidad de tus selectores
 
-Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento `<article>` y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector {{cssxref(":first-child")}}, que veremos con mayor detalle más adelante en el artículo de [pseudoclases y pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos), como selector descendente junto con el selector de elemento `<article>`:
+Uno de los usos del selector universal es facilitar la legibilidad de los selectores y clarificar sus funciones. Por ejemplo, si quiero seleccionar el primer elemento hijo de cualquier elemento `<article>` y poner ese elemento, cualquiera que sea, en negrita, puedo utilizar el selector {{cssxref(":first-child")}}, que veremos con mayor detalle más adelante en el artículo de [pseudoclases y pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements), como selector descendente junto con el selector de elemento `<article>`:
 
 ```css
 article :first-child {
@@ -100,10 +100,11 @@ Un selector de ID comienza con un carácter `#` en lugar de un punto, pero se ut
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
-> **Nota:** Como aprendimos en el artículo sobre la especificidad, un ID tiene una especificidad muy alta y anula la mayoría de los otros selectores. Esto puede dificultar su uso. En la mayoría de los casos es preferible añadir una clase al elemento en lugar de utilizar un ID. Sin embargo, si el ID es la única manera de seleccionar el elemento (tal vez porque no tengas acceso al marcado y, por lo tanto, no lo puedes editar) no hay ningún problema en utilizarlo.
+> [!NOTE]
+> Como aprendimos en el artículo sobre la especificidad, un ID tiene una especificidad muy alta y anula la mayoría de los otros selectores. Esto puede dificultar su uso. En la mayoría de los casos es preferible añadir una clase al elemento en lugar de utilizar un ID. Sin embargo, si el ID es la única manera de seleccionar el elemento (tal vez porque no tengas acceso al marcado y, por lo tanto, no lo puedes editar) no hay ningún problema en utilizarlo.
 
 ## En el próximo artículo
 
-Seguiremos con la descripción de los selectores examinando los [selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos).
+Seguiremos con la descripción de los selectores examinando los [selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

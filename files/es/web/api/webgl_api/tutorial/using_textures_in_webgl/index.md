@@ -11,7 +11,8 @@ Ahora que nuestro programa de prueba tiene un cubo, asignemos una textura en lug
 
 La primera cosa que debemos hacer es añadir el codigo para cargar nuestra textura. en nuestro caso, estaremos usando una unica textura, asignada en las seis caras de nuestro cubo rotador, pero la misma tecnica puede ser utilizada para cualquier cantidad de texturas.
 
-> **Nota:** Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/Access_control_CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
+> [!NOTE]
+> Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
 
 El codigo que carga la textura se ve como esto:
 
@@ -43,7 +44,8 @@ La rutina `initTextures()` comienza por crear el GL texture cubeTexture llamando
 
 Para realmente crear la textura, especificamos que la nueva textura es la textura actual en la que queremos operar vinculándola a gl.TEXTURE_2D. Despues de esto, la imagen cargada es pasada a {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} para escribir la informacion de la imagen en la textura.
 
-> **Nota:** El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](/es/docs/Web/WebGL/Using_textures_in_WebGL#Non_power-of-two_textures), a continuación.
+> [!NOTE]
+> El alto y hancho de las texturas deben, en la mayoría de las circunstancias, ser una potencia de dos píxeles (es decir, 1, 2, 4, 8, 16, etc.) en cada dimensión. Para la excepción, vea la sección: ["Texturas no potencia de dos"](#non_power-of-two_textures), a continuación.
 
 Las siguientes dos líneas setean el filtrado para la textura; Esto controla cómo se filtra la imagen mientras se escala. En este caso estamos usando linear filtering cuando escala la imagen, y mipmap cuando se hace mas pequeña. Entonces el mipmap es generado llamando {{domxref("WebGLRenderingContext.generateMipMap()", "generateMipMap()")}}, Y terminamos diciéndole a WebGL que hemos terminado de manipular la textura vinculando null a gl.TEXTURE_2D.
 
@@ -183,16 +185,19 @@ En este punto, el cubo giratorio debe estar listo.
 
 ## Texturas entre dominios
 
-La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/Access_control_CORS) para mas detalles sobre CORS.
+La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/CORS) para mas detalles sobre CORS.
 
-Ver este articulo [hacks.mozilla.org](http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](http://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
+Ver este articulo [hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 
-> **Nota:** El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en Gecko 8.0.
+> [!NOTE]
+> El soporte CORS para texturas WebGL y el atributo crossOrigin para elementos de imagen se implementan en Gecko 8.0.
 
 Canvas 2D contaminados (Solo lectura) no pueden ser utilizados como texturas WebGL. una 2D {{ HTMLElement("canvas") }} se convierte en contaminada, por ejemplo, cuando una imagen de dominio cruzado (cross-domain) es dibujada en el.
 
-> **Nota:** El soporte de CORS para Canvas 2D drawImage se implementa en Gecko 9.0. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
+> [!NOTE]
+> El soporte de CORS para Canvas 2D drawImage se implementa en Gecko 9.0. Esto significa que el uso de una imagen de dominio cruzado con aprobación de CORS ya no pinta el lienzo 2D, por lo que el lienzo 2D sigue siendo utilizable como fuente de una textura WebGL.
 
-> **Nota:** El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en Gecko 12.0.
+> [!NOTE]
+> El soporte de CORS para videos de dominio cruzado y el atributo de crossorigin para elementos {{HTMLElement("video")}} se implementa en Gecko 12.0.
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

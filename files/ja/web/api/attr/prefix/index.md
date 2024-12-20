@@ -11,7 +11,8 @@ l10n:
 
 接頭辞は、属性が作成されたときの大文字小文字に関わらず、常に小文字になります。
 
-> **メモ:** XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
+> [!NOTE]
+> XML だけが名前空間に対応しています。 HTML は対応していません。つまり、 HTML 要素の属性の接頭辞は常に `null` になります。
 
 また、`xml` （`xml:lang` 属性）、`xlink` （`xlink:href`, `xlink:show`, `xlink:target`, `xlink:title` 属性）、 `xpath` 名前空間だけに、 SVG と MathML 要素でのみ対応しています。
 

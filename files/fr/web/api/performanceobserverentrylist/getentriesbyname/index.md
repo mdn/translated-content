@@ -7,7 +7,8 @@ slug: Web/API/PerformanceObserverEntryList/getEntriesByName
 
 La méthode **`getEntriesByName()`** de l'interface [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList) retourne une liste d'objets [d'entrée de performance](/fr/docs/Web/API/PerformanceEntry) explicitement _observés_ pour un _[`name`](/fr/docs/Web/API/PerformanceEntry/name)_ et _[`entryType`](/fr/docs/Web/API/PerformanceEntry/entryType)_ donnés. Les membres de la liste sont déterminés par l'ensemble des [types d'entrées](/fr/docs/Web/API/PerformanceEntry/entryType) spécifiés dans l'appel à la méthode [`observe()`](/fr/docs/Web/API/PerformanceObserver/observe). La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).
 
-> **Note :** Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
+> [!NOTE]
+> Cette interface est exposée à [`Window`](/fr/docs/Web/API/Window) et [`Worker`](/fr/docs/Web/API/Worker).
 
 ## Syntaxe
 
@@ -18,9 +19,9 @@ let entries = list.getEntriesByName(name, type);
 ### Paramètres
 
 - _`name`_
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le nom de l'entrée à récupérer.
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le nom de l'entrée à récupérer.
 - _`type`_ {{optional_inline}}
-  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) représentant le type d'entrée à récupérer tel que « `mark` ». Les types d'entrée valides sont énumérés dans [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type d'entrée à récupérer tel que « `mark` ». Les types d'entrée valides sont énumérés dans [`PerformanceEntry.entryType`](/fr/docs/Web/API/PerformanceEntry/entryType).
 
 ### Valeur de retour
 

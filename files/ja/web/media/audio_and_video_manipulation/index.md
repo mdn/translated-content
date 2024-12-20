@@ -3,7 +3,7 @@ title: 音声と動画の加工
 slug: Web/Media/Audio_and_video_manipulation
 ---
 
-ウェブのよいところは、複数の技術をまとめて新しいものを作ることができる点です。ネイティブの音声や動画をブラウザー上で利用できるということは、これらのデータストリームを {{htmlelement("canvas")}}、[WebGL](/ja/docs/Web/WebGL)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API) を利用して操作することで、音声や動画に直接変更を加えることができることを意味します。例えば音声にリバーブやコンプレッション効果をかけたり、動画にグレイスケールやセピアのフィルターをかけたりすることができます。この記事では、必要なことを説明するためのリファレンスを提供します。
+ウェブのよいところは、複数の技術をまとめて新しいものを作ることができる点です。ネイティブの音声や動画をブラウザー上で利用できるということは、これらのデータストリームを {{htmlelement("canvas")}}、[WebGL](/ja/docs/Web/API/WebGL_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API) を利用して操作することで、音声や動画に直接変更を加えることができることを意味します。例えば音声にリバーブやコンプレッション効果をかけたり、動画にグレイスケールやセピアのフィルターをかけたりすることができます。この記事では、必要なことを説明するためのリファレンスを提供します。
 
 ## 動画の加工
 
@@ -113,11 +113,12 @@ processor.doLoad();
 
 これは、キャンバスを使用して動画フレームを加工する方法を示すとてもシンプルな例です。効率をよくするために、対応しているブラウザーで実行する場合は {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を `setTimeout()` の代わりに使用することを検討したほうがいいでしょう。
 
-> **メモ:** 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Access_control_CORS) を有効にする必要があります。
+> [!NOTE]
+> 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/CORS) を有効にする必要があります。
 
 ### 動画と WebGL
 
-[WebGL](/ja/docs/Web/WebGL) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
+[WebGL](/ja/docs/Web/API/WebGL_API) はキャンバスを使用してハードウェアアクセラレーションによる三次元や二次元の描画を行う強力な API です。 {{htmlelement("video")}} 要素と組み合わせることで、動画をテクチャとして利用できます。つまり三次元空間上に動画を配置し、再生できます。
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
@@ -291,7 +292,7 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **メモ:** [CORS](/ja/docs/Web/HTTP/Access_control_CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
+> **メモ:** [CORS](/ja/docs/Web/HTTP/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
 
 #### よく使われる音声フィルター
 
@@ -306,7 +307,8 @@ window.addEventListener("load", setFilter);
 - ノッチ: 指定された周波数帯を除き、全ての音を通過させます
 - オールパス: 周波数に関わらず全ての音を通過させますが、幾つかの周波数間の相関係を変更します
 
-> **メモ:** 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
+> [!NOTE]
+> 詳しくは {{domxref("BiquadFilterNode")}} を参照してください。
 
 ### たたみ込みとインパルス
 
@@ -359,25 +361,26 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - Opus: [Opus.js](https://github.com/audiocogs/opus.js)
 - Vorbis: [vorbis.js](https://github.com/audiocogs/vorbis.js)
 
-> **メモ:** AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
+> [!NOTE]
+> AudioCogs で[いくつかのデモ](http://audiocogs.org/codecs/)を試せます。 Audiocogs は JavaScript でのコーデック実装を行うためのフレームワークである [Aurora.js](http://audiocogs.org/codecs/) を提供しています。
 
 ## 例
 
 - [様々な Web Audio API (およびその他) の例](https://github.com/mdn/)
 - [THREE.js Video Cube example](https://github.com/chrisdavidmills/threejs-video-cube)
-- [Convolution Effects in Real-Time](http://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
+- [Convolution Effects in Real-Time](https://chromium.googlecode.com/svn/trunk/samples/audio/convolution-effects.html)
 
 ## 関連情報
 
 ### チュートリアル
 
-- [キャンバスを使用した動画の加工](/ja/docs/Web/HTML/Manipulating_video_using_canvas)
-- [HTML5 playbackRate の解説](/ja/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
+- [キャンバスを使用した動画の加工](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [HTML5 playbackRate の解説](/ja/docs/Web/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 - [Web Audio API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web audio spatialisation の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [動画フレームの WebGL テクスチャとしての利用](/ja/docs/Web/WebGL/Animating_textures_in_WebGL#Using_the_video_frames_as_a_texture) ([THREE.js](http://threejs.org) WebGL ライブラリ (及びその他) と [この効果の実現](http://stemkoski.github.io/Three.js/Video.html))
-- [WebGL におけるアニメーションテクスチャ](/ja/docs/Web/WebGL/Animating_textures_in_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Web audio spatialisation の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [動画フレームの WebGL テクスチャとしての利用](/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#using_the_video_frames_as_a_texture) ([THREE.js](https://threejs.org) WebGL ライブラリ (及びその他) と [この効果の実現](http://stemkoski.github.io/Three.js/Video.html))
+- [WebGL におけるアニメーションテクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
 ### リファレンス
 
@@ -386,7 +389,7 @@ JavasCript でより低レベルでの音声操作が可能です。これを利
 - {{htmlelement("canvas")}} 要素
 - [Web Audio API](/ja/docs/Web/API/Web_Audio_API)
 - [AudioContext](/ja/docs/Web/API/AudioContext)
-- More info on [Spatial Audio](/ja/docs/Web/API/AudioContext.createPanner)
+- More info on [Spatial Audio](/ja/docs/Web/API/BaseAudioContext/createPanner)
 - [ウェブメディア技術](/ja/docs/Web/Media)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Apps/Fundamentals/")}}

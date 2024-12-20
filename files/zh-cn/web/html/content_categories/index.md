@@ -15,9 +15,10 @@ l10n:
 - 表单相关的内容类，描述了表单相关元素共有的规则；
 - 特殊内容类，描述了仅仅在少数元素（有时仅在特定的上下文中）共享的规则。
 
-> **备注：** 对这些内容类别及其功能的更详细的讨论超出了本文的范围；如果你向了解这些内容，请阅读 [HTML 规范的相关部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)。
+> [!NOTE]
+> 对这些内容类别及其功能的更详细的讨论超出了本文的范围；如果你想了解这些内容，请阅读 [HTML 规范的相关部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)。
 
-[![显示各种内容类别相互之间是如何关联的维恩图。后面的部分以文本形式解释这些关系。](content_categories_venn.png)](/zh-CN/docs/Web/HTML/Content_categories/content_categories_venn.png)
+![显示各种内容类别相互之间是如何关联的维恩图。后面的部分以文本形式解释这些关系。](content_categories_venn.png)
 
 ## 主内容分类
 
@@ -133,9 +134,11 @@ l10n:
 
 属于此分类的元素有：{{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} 和 {{HTMLElement("hgroup")}}。
 
-> **备注：** 尽管 {{HTMLElement("header")}} 可能包含一些标题内容，但其并不是标题内容本身。
+> [!NOTE]
+> 尽管 {{HTMLElement("header")}} 可能包含一些标题内容，但其并不是标题内容本身。
 
-> **备注：** 已不再推荐使用 {{HTMLElement("hgroup")}} 元素，因为它不能与辅助技术一起正常工作。在 HTML 5 最终定稿之前，它已从 W3C 的 HTML 规范中删除，但其仍属于 WHATWG 规范，并且仍被大多数浏览器部分支持。
+> [!NOTE]
+> 已不再推荐使用 {{HTMLElement("hgroup")}} 元素，因为它不能与辅助技术一起正常工作。在 HTML 5 最终定稿之前，它已从 W3C 的 HTML 规范中删除，但其仍属于 WHATWG 规范，并且仍被大多数浏览器部分支持。
 
 ### 短语内容
 

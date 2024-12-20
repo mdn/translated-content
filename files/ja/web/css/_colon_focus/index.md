@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus.html", "tabbed-shorter")}}
 
-> **メモ:** この擬似クラスはフォーカスを持つ要素に対してのみ適用されます。フォーカスを持つ要素を*含む*要素を選択したい場合は、{{CSSxRef(":focus-within")}} を使用してください。
+> [!NOTE]
+> この擬似クラスはフォーカスを持つ要素に対してのみ適用されます。フォーカスを持つ要素を*含む*要素を選択したい場合は、{{CSSxRef(":focus-within")}} を使用してください。
 
 ## 構文
 

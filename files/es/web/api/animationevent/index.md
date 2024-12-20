@@ -5,7 +5,7 @@ slug: Web/API/AnimationEvent
 
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
-La interfaz **`AnimationEvent`** representa los eventos que proporciona información relacionada con las [animaciones](/es/docs/Web/Guide/CSS/Using_CSS_animations).
+La interfaz **`AnimationEvent`** representa los eventos que proporciona información relacionada con las [animaciones](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
 
 {{InheritanceDiagram}}
 
@@ -42,5 +42,5 @@ _También hereda los métodos de su padre {{domxref("Event")}}_.
 
 ## Ver también
 
-- [Usando animaciones CSS](/es/docs/CSS/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - Las propiedades CSS referentes a animación y reglas: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.

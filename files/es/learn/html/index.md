@@ -11,7 +11,7 @@ Para crear sitios web, debes conocer el {{Glossary('HTML')}} — la tecnología 
 >
 > Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
 >
-> [Empieza aquí](/es/docs/Learn/Front-end_web_developer)
+> [Empieza aquí](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Prerrequisitos
 
@@ -41,7 +41,7 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar c
 
 ## Ve también
 
-- [Formularios Web](/es/docs/Learn/HTML/Forms)
+- [Formularios Web](/es/docs/Learn/Forms)
   - : Este módulo proporciona una serie de artículos que te ayudarán a dominar los conceptos básicos de los formularios web. Los formularios web son una herramienta muy poderosa para interactuar con los usuarios — generalmente, se utilizan para recopilar datos de los usuarios o para permitirles controlar una interfaz de usuario. Sin embargo, por razones históricas y técnicas, no siempre es obvio cómo utilizarlos en todo su potencial. Aborda todos los aspectos esenciales de los formularios web, incluido el marcado de su estructura HTML, el diseño de controles de formulario, la validación de datos de formulario y el envío de datos al servidor.
 - [HTML (lenguaje de marcado de hipertexto)](/es/docs/Web/HTML)
   - : El punto de entrada principal para la documentación de referencia HTML en MDN, incluidas las referencias detalladas de elementos y atributos; si deseas saber qué atributos tiene un elemento o qué valores tiene un atributo, por ejemplo, este es un excelente lugar para comenzar.

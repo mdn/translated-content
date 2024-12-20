@@ -1,44 +1,44 @@
 ---
 title: PermissionStatus
 slug: Web/API/PermissionStatus
+l10n:
+  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
 ---
 
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-[Permissions API](/ja/docs/Web/API/Permissions_API) の **`PermissionStatus`** インターフェイスは、オブジェクトの状態と、その状態への変更を監視するためのイベントハンドラを提供します。
+**`PermissionStatus`** は[権限 API](/ja/docs/Web/API/Permissions_API) のインターフェイスで、オブジェクトの状態と、その状態の変化を監視するためのイベントハンドラーを提供します。
 
-## プロパティ
+{{InheritanceDiagram}}
 
-- {{domxref("PermissionStatus.state")}} {{readonlyinline}}
-  - : 要求されたパーミッションの状態を返します。 `'granted'`（付与）、`'denied'`（拒否）、`'prompt'`（プロンプト）のいずれかです。
-- {{domxref("PermissionStatus.status")}}{{readonlyinline}} {{deprecated_inline()}}
-  - : 要求されたパーミッションの状態を返します。 `'granted'`、`'denied'`、`'prompt'` のいずれかです。 仕様の今後のバージョンは、これを {{domxref("PermissionStatus.state")}} に置き換えます。
+## インスタンスプロパティ
 
-### イベントハンドラ
+- {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
+  - : 要求された権限の名前を返します。{{domxref("Permissions.query")}} に渡された `name` と同じです。
+- {{domxref("PermissionStatus.state")}} {{ReadOnlyInline}}
+  - : 要求された権限の状態を返します。 `'granted'`（許可）、`'denied'`（拒否）、`'prompt'`（プロンプト）のいずれかです。
 
-- {{domxref("PermissionStatus.onchange")}}
-  - : `PermissionStatus.status` が変わるたびに呼び出されるイベント。
+### イベントハンドラー
+
+- {{domxref("PermissionStatus.change_event", "change")}}
+  - : `PermissionStatus.state` 変化するたびに発行されるイベントです。
 
 ## 例
 
 ```js
 navigator.permissions
   .query({ name: "geolocation" })
-  .then(function (permissionStatus) {
-    console.log(
-      "位置情報のパーミッションの状態は " + permissionStatus.state + " です。",
-    );
-    permissionStatus.onchange = function () {
+  .then((permissionStatus) => {
+    console.log(`位置情報の権限の状態は ${permissionStatus.state} です。`);
+    permissionStatus.onchange = () => {
       console.log(
-        "位置情報のパーミッションの状態が " +
-          this.state +
-          " に変更されました。",
+        `位置情報の権限の状態が ${permissionStatus.state} に変更されました。`,
       );
     };
   });
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

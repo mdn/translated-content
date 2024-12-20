@@ -9,7 +9,8 @@ La propriété **`border-right-style`** définit le style de ligne utilisé pour
 
 {{EmbedInteractiveExample("pages/css/border-right-style.html")}}
 
-> **Note :** La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
+> [!NOTE]
+> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
 
 ## Syntaxe
 

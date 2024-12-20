@@ -72,13 +72,13 @@ clip-path: unset;
   - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形 ({{cssxref("border-radius")}} など) を含めてクリッピングパスにします。ジオメトリボックスは以下の値のうちの一つが指定できます。
 
     - `margin-box`
-      - : [マージンボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box)を参照ボックスとして使用します。
+      - : [マージンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#margin-box)を参照ボックスとして使用します。
     - `border-box`
-      - : [境界ボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#border-box)を参照ボックスとして使用します。
+      - : [境界ボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#border-box)を参照ボックスとして使用します。
     - `padding-box`
-      - : [パディングボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box)を参照ボックスとして使用します。
+      - : [パディングボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#padding-box)を参照ボックスとして使用します。
     - `content-box`
-      - : [コンテンボックス](/ja/docs/Web/CSS/CSS_Shapes/From_box_values#content-box)を参照ボックスとして使用します。
+      - : [コンテンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#content-box)を参照ボックスとして使用します。
     - `fill-box`
       - : オブジェクトの境界ボックスを参照ボックスとして使用します。
     - `stroke-box`
@@ -89,7 +89,8 @@ clip-path: unset;
 - `none`
   - : クリッピングパスは作成されません。
 
-> **メモ:** 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
+> [!NOTE]
+> 計算値が **`none`** 以外の場合は、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。これは、 {{cssxref("opacity")}} が `1` 以外の値の場合と同様です。
 
 ## 公式定義
 

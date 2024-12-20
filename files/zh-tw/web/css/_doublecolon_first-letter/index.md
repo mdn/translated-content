@@ -7,15 +7,15 @@ slug: Web/CSS/::first-letter
 
 ## 概要
 
-`::first-letter` [CSS](/zh-TW/docs/Web/CSS) [虛擬元素](/zh-TW/docs/CSS/Pseudo-elements)選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。
+`::first-letter` [CSS](/zh-TW/docs/Web/CSS) [虛擬元素](/zh-TW/docs/Web/CSS/Pseudo-elements)選取了一個區塊第一行的第一個字母，如果那一行前面沒有其他內容（例如圖片或是行內表格）。
 
 The first letter of an element is not necessarily trivial to identify:
 
 - Punctuation, that is any characters defined in Unicode in the _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf) and _other punctuation_ (Po) classes, preceding or immediately following the first letter is also matched by this pseudo-element.
-- Similarly some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these rare cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element. (This is poorly supported by browsers, check the [browser compatibility table](/zh-TW/docs/CSS/::first-letter#瀏覽器相容性)).
+- Similarly some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these rare cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element. (This is poorly supported by browsers, check the [browser compatibility table](/zh-TW/docs/Web/CSS/::first-letter#%e7%80%8f%e8%a6%bd%e5%99%a8%e7%9b%b8%e5%ae%b9%e6%80%a7)).
 - Finally, a combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
 
-A first line has meaning only in a [block-container box](/zh-TW/docs/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
+A first line has meaning only in a [block-container box](/zh-TW/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), therefore the `::first-letter` pseudo-element has an effect only on elements with a {{ cssxref("display") }} value of `block`, `inline-block`, `table-cell`, `list-item` or `table-caption`. In all other cases, `::first-letter` has no effect.
 
 Only a small subset of all CSS properties can be used inside a declaration block of a CSS ruleset containing a selector using the `::first-letter` pseudo-element:
 
@@ -29,7 +29,8 @@ Only a small subset of all CSS properties can be used inside a declaration block
 
 As this list will be extended in the future, it is recommended that you not use any other properties inside the declaration block, in order to keep the CSS future-proof.
 
-> **備註：** In CSS 2, pseudo-elements were prefixed with a single colon character. As pseudo-classes were also following the same convention, they were indistinguishable. To solve this, CSS 2.1 changed the convention for pseudo-elements. Now a pseudo-element is prefixed with two colon characters, and a pseudo-class is still prefixed with a single colon.As several browsers already implemented the CSS 2 version in a release version, all browsers supporting the two-colon syntax also support the old one-colon syntax.If legacy browsers must be supported, `:first-letter` is the only viable choice; if not, `::first-letter` is preferred.
+> [!NOTE]
+> In CSS 2, pseudo-elements were prefixed with a single colon character. As pseudo-classes were also following the same convention, they were indistinguishable. To solve this, CSS 2.1 changed the convention for pseudo-elements. Now a pseudo-element is prefixed with two colon characters, and a pseudo-class is still prefixed with a single colon.As several browsers already implemented the CSS 2 version in a release version, all browsers supporting the two-colon syntax also support the old one-colon syntax.If legacy browsers must be supported, `:first-letter` is the only viable choice; if not, `::first-letter` is preferred.
 
 ## Example
 

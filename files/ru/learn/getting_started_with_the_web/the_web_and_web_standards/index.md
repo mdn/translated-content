@@ -65,7 +65,7 @@ You are probably reading these words inside a web browser in this very moment (u
 
 ### HTTP
 
-Hypertext Transfer Protocol, or [HTTP](/ru/docs/Web/HTTP/Basics_of_HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
+Hypertext Transfer Protocol, or [HTTP](/ru/docs/Web/HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
 
 ```
 "Hello web server. Can you give me the files I need to render bbc.co.uk"?
@@ -116,7 +116,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
 
 Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
 
-- The [developer tools](/ru/docs/Learn/Common_questions/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
+- The [developer tools](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
 - [Testing tools](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing) that can be used to run tests to show whether your code is behaving as you intended it to.
 - Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
 - So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
@@ -155,4 +155,4 @@ You'll come across the below concepts at some point in your studies.
 ## Смотрите также
 
 - [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/ru/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [How does the internet work?](/ru/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)

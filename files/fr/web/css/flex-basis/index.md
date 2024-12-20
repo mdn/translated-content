@@ -9,7 +9,8 @@ La propriété **`flex-basis`** détermine la base de flexibilité utilisée com
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-> **Note :** Dans le cas où `flex-basis` (avec une valeur différente de `auto`) et `width` (ou `height` si `flex-direction: column`) sont définis pour un élément, c'est `flex-basis` qui a la priorité.
+> [!NOTE]
+> Dans le cas où `flex-basis` (avec une valeur différente de `auto`) et `width` (ou `height` si `flex-direction: column`) sont définis pour un élément, c'est `flex-basis` qui a la priorité.
 
 ## Syntaxe
 
@@ -46,9 +47,11 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 
   - : Le dimensionnement se fera de façon automatique selon le contenu de l'élément flexible.
 
-    > **Note :** Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec `auto`.
+    > [!NOTE]
+    > Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec `auto`.
 
-    > **Note :** Voici un rapide historique pour cette propriété :
+    > [!NOTE]
+    > Voici un rapide historique pour cette propriété :
     >
     > - Au début, `flex-basis:auto` signifiait « se référer à ma propriété `width` ou `height` »
     > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le [bug Firefox 1032922](https://bugzil.la/1032922).
@@ -178,5 +181,5 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 ## Voir aussi
 
 - {{cssxref("width")}}
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

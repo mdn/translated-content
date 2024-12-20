@@ -2,12 +2,13 @@
 title: FileReaderSync：readAsBinaryString() 方法
 slug: Web/API/FileReaderSync/readAsBinaryString
 l10n:
-  sourceCommit: 502e8c3f0be95c6f42afe6a72113b029b290b9e8
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{APIRef("File API")}}{{deprecated_header}} {{AvailableInWorkers("worker_except_service")}}
 
-> **备注：** 此方法已弃用，取而代之的是 {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}。
+> [!NOTE]
+> 此方法已弃用，取而代之的是 {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}。
 
 {{DOMxRef("FileReaderSync")}} 接口的 **`readAsBinaryString()`** 方法允许以同步方式读取 {{DOMxRef("File")}} 或 {{DOMxRef("Blob")}} 对象并将其转换为字符串。此接口仅在 [worker](/zh-CN/docs/Web/API/Worker) 中[可用](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)，因为它支持同步 I/O，可能导致潜在的阻塞。
 

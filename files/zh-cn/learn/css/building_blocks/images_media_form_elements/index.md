@@ -89,7 +89,7 @@ img {
 
 ## form 元素
 
-用 CSS 格式化表单元素是一个需要技巧的工作，[HTML 表单指南](/zh-CN/docs/Learn/HTML/Forms)包含了详细的格式化表单元素的指导，我不会在这里复述。本节需要介绍的是一些值得关注的关键基础内容。
+用 CSS 格式化表单元素是一个需要技巧的工作，[HTML 表单指南](/zh-CN/docs/Learn/Forms)包含了详细的格式化表单元素的指导，我不会在这里复述。本节需要介绍的是一些值得关注的关键基础内容。
 
 很多表单控件是通过 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 元素添加到网页上的。该元素定义了简单的表单区域，例如文字输入。更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea)，以及那些用来包含和标记表单特定部分的元素，例如 [`<fieldset>`](/zh-CN/docs/Web/HTML/Element/fieldset) 和 [`<legend>`](/zh-CN/docs/Web/HTML/Element/legend) 。
 
@@ -103,9 +103,10 @@ HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能
 
 {{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
 
-> **警告：** 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。
+> [!WARNING]
+> 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。
 
-正如在本教程的 HTML 部分的[样式化表单](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是留意到表单在不同的用户看来差异很大，并在许多浏览器上测试复杂的表单。
+正如在本教程的 HTML 部分的[样式化表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是留意到表单在不同的用户看来差异很大，并在许多浏览器上测试复杂的表单。
 
 ### 继承和表单元素
 
@@ -169,12 +170,13 @@ textarea {
 }
 ```
 
-> **备注：** 通用样式表被许多开发者用作所有项目的一系列基础样式，典型就是那些做了和以上提到相似的事情的那些，在你开始自己的 CSS 作业前，它确保了跨浏览器的任何事情都被默认设定为统一样式。它们不像以往那么重要了，因为浏览器显著地要比以往更加统一。但是，如果你想要看一个例子，可以看看这个[Normalize.css](http://necolas.github.io/normalize.css/)，它被许多项目用作基础，是非常流行的样式表。
+> [!NOTE]
+> 通用样式表被许多开发者用作所有项目的一系列基础样式，典型就是那些做了和以上提到相似的事情的那些，在你开始自己的 CSS 作业前，它确保了跨浏览器的任何事情都被默认设定为统一样式。它们不像以往那么重要了，因为浏览器显著地要比以往更加统一。但是，如果你想要看一个例子，可以看看这个[Normalize.css](http://necolas.github.io/normalize.css/)，它被许多项目用作基础，是非常流行的样式表。
 
 至于样式化表单的更加深入的信息，可以看下这些教程的 HTML 一节的这两篇文章：
 
-- [Styling HTML Forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced Styling for HTML Forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
+- [Styling HTML Forms](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [Advanced Styling for HTML Forms](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
 
 ## 技能测试
 

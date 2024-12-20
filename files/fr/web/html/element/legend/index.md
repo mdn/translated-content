@@ -11,7 +11,7 @@ L'élément HTML **\<legend>** représente une légende pour le contenu de son �
 
 ## Attributs
 
-Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -31,7 +31,8 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
 
 {{EmbedLiveSample("Exemples","100%","100%")}}
 
-> **Note :** Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
+> [!NOTE]
+> Voir la page sur {{HTMLElement("form")}} pour d'autres exemples qui utilisent `<legend>`.
 
 ## Résumé technique
 

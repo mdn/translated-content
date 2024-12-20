@@ -16,7 +16,7 @@ l10n:
 }
 ```
 
-どの要素が `:scope` に一致するかは、そ使用されるコンテキストによって変わります。
+どの要素が `:scope` に一致するかは、それが使用されるコンテキストによって変わります。
 
 - スタイルシートのルートレベルで使用する場合、 `:scope` は {{cssxref(":root")}} と等価であり、通常の HTML 文書内の {{htmlelement("html")}} 要素に一致します。
 - {{cssxref("@scope")}} ブロックの中で使用した場合、 `:scope` はブロックの定義するスコープのルートに一致します。これは `@scope` ブロック自身からスコープのルートにスタイル設定を適用する方法を提供します。
@@ -166,7 +166,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 - {{cssxref("@scope")}} [アットルール](/ja/docs/Web/CSS/At-rule)
 - {{cssxref(":root")}} [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} および {{domxref("Document.querySelectorAll()")}}
 - {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}

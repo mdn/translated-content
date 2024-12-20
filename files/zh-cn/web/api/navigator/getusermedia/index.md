@@ -3,7 +3,8 @@ title: navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 ---
 
-> **备注：** 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。
+> [!NOTE]
+> 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
@@ -11,14 +12,14 @@ slug: Web/API/Navigator/getUserMedia
 
 ## 语法
 
-```
-navigator.getUserMedia ( constraints, successCallback, errorCallback );
+```js-nolint
+getUserMedia(constraints, successCallback, errorCallback)
 ```
 
 ### 参数
 
 - `constraints`
-  - : {{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 [constraints](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#Parameters) 部分。
+  - : {{domxref("MediaStreamConstaints")}} 对象指定了请求使用媒体的类型，还有每个类型的所需要的参数。具体细节请参见 {{domxref("MediaDevices.getUserMedia()")}} 方法下面的 [constraints](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#parameters) 部分。
 - `successCallback`
 
   - : 当调用成功后，successCallback 中指定的函数就被调用，包含了媒体流的 {{domxref("MediaStream")}} 对象作为它的参数，你可以把媒体流对象赋值给合适的元素，然后使用它，就像下面的例子一样：
@@ -46,7 +47,7 @@ navigator.getUserMedia ( constraints, successCallback, errorCallback );
 
 ### 宽度和高度
 
-使用 `getUserMedia()` 的示例，包括了可以适用于多种浏览器前缀的代码。注意这种使用方式已经被废除，现代的使用方法请参见 {{domxref("MediaDevices.getUserMedia()")}} 下面的[示例](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#Frame_rate)部分。
+使用 `getUserMedia()` 的示例，包括了可以适用于多种浏览器前缀的代码。注意这种使用方式已经被废除，现代的使用方法请参见 {{domxref("MediaDevices.getUserMedia()")}} 下面的[示例](/zh-CN/docs/Web/API/MediaDevices/getUserMedia#frame_rate)部分。
 
 ```js
 navigator.getUserMedia =
@@ -77,7 +78,7 @@ if (navigator.getUserMedia) {
 
 在一个可以安装的 app（比如，Firefox OS app）中使用 getUserMedia()，你需要在你的 manifest 文件中指定一个或者多个以下条目：
 
-```
+```json
 "permissions": {
   "audio-capture": {
     "description": "Required to capture audio using getUserMedia()"
@@ -88,13 +89,14 @@ if (navigator.getUserMedia) {
 }
 ```
 
-参见 [permission: audio-capture](/zh-CN/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/Apps/Developing/App_permissions#video-capture) 以查看更多信息。
+参见 [permission: audio-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#video-capture) 以查看更多信息。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-> **警告：** 新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代。
+> [!WARNING]
+> 新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代。
 
 ## 参见
 

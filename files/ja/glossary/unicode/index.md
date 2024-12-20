@@ -14,4 +14,4 @@ Unicode ができる以前は、同じデータのなかに異なる言語を入
 ## 関連項目
 
 - Wikipedia の [Unicode](https://ja.wikipedia.org/wiki/Unicode)
-- [The Unicode Standard: A Technical Introduction](http://www.unicode.org/standard/principles.html)
+- [The Unicode Standard: A Technical Introduction](https://www.unicode.org/standard/principles.html)

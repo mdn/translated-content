@@ -15,8 +15,8 @@ Si la configuration CORS n'est pas correctement effectuée, la console du naviga
 
 Pour saisir la cause de l'erreur, il faut préalablement découvrir la requête fautive, ainsi que la configuration erronée. Ces étapes peuvent être utiles au processus:
 
-1. Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](/fr/docs/Tools).
-2. Essayez de reproduir la requête qui échoue et vérifiez la [console](/fr/docs/Tools/Web_Console) pour trouver les messages de violation CORS, ce qui tournerait autours de:
+1. Rendez-vous sur le site défaillant et ouvrez les [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
+2. Essayez de reproduir la requête qui échoue et vérifiez la [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) pour trouver les messages de violation CORS, ce qui tournerait autours de:
 
 ![Firefox console showing CORS error](cors-error2.png)
 
@@ -28,7 +28,8 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **Note :** Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
+> [!NOTE]
+> Pour des raisons de sécurité, il _est impossible_ d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.
 
 ## Messages d'erreur CORS
 
@@ -54,7 +55,7 @@ Firefox affiche les erreurs dans la console lors d'échec de requête CORS. Ce m
 
 - Glossaire: {{Glossary("CORS")}}
 - [CORS introduction](/fr/docs/Web/HTTP/CORS)
-- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/Server-Side_Access_Control)
+- [Paramètres CORS côté serveur](/fr/docs/Web/HTTP/CORS)
 - [Image compatible CORS](/fr/docs/Web/HTML/CORS_enabled_image)
-- [Attributs des paramètres CORS](/fr/docs/Web/HTML/CORS_settings_attributes)
+- [Attributs des paramètres CORS](/fr/docs/Web/HTML/Attributes/crossorigin)
 - <https://www.test-cors.org> – une page pour tester les requêtes CORS

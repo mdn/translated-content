@@ -11,14 +11,15 @@ L'élément HTML **`<progress>`** indique l'état de complétion d'une tâche et
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `max`
   - : Cet attribut indique la valeur correspondant à la complétion de la tâche. Si l'attribut `max` est présent, sa valeur doit être un nombre décimal supérieur à 0. La valeur par défaut est 1.
 - `value`
   - : Cet attribut indique l'état actuel de complétion de la tâche avec une valeur numérique. La valeur de l'attribut doit être un nombre décimal compris entre 0 et `max` (ou entre 0 et 1 si l'attribut `max` est absent). Si l'attribut `value` est absent, la barre de progression traduit un état indéterminé (la tâche est en cours et on ne sait pas la durée qu'elle prendra).
 
-> **Note :** La valeur minimale est toujours 0 et il n'existe pas d'attribut `min` pour l'élément `progress`. La propriété CSS {{cssxref("-moz-orient")}} peut être utilisée afin d'indiquer si barre de progression doit être affichée horizontalement (le comportement par défaut) ou verticalement.
+> [!NOTE]
+> La valeur minimale est toujours 0 et il n'existe pas d'attribut `min` pour l'élément `progress`. La propriété CSS {{cssxref("-moz-orient")}} peut être utilisée afin d'indiquer si barre de progression doit être affichée horizontalement (le comportement par défaut) ou verticalement.
 > La pseudo-classe CSS {{cssxref(":indeterminate")}} permet quant à elle de cibler les barres de progression indéterminées. Pour qu'une barre d'avancement retrouve un état indéterminé après qu'elle ait eu une valeur, on pourra utiliser `element.removeAttribute("value")`.
 
 ## Exemples
@@ -70,7 +71,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

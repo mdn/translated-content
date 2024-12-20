@@ -109,9 +109,11 @@ customElements.define(
 </my-paragraph>
 ```
 
-> **备注：** 可以被插入到槽中的节点被称为 _Slotable_；已经插入到槽中的节点被称为 _slotted_。
+> [!NOTE]
+> 可以被插入到槽中的节点被称为 _Slotable_；已经插入到槽中的节点被称为 _slotted_。
 
-> **备注：** 未命名的 {{HTMLElement("slot")}} 元素将填充自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的顶级子节点。也包括文本节点。
+> [!NOTE]
+> 未命名的 {{HTMLElement("slot")}} 元素将填充自定义元素中所有不含 [`slot`](/zh-CN/docs/Web/HTML/Global_attributes#slot) 属性的顶级子节点。也包括文本节点。
 
 这就我们的简单例子，如果你想继续了解，你可以[在 GitHub 上查看](https://github.com/mdn/web-components-examples/tree/master/simple-template)（另见[在线运行](https://mdn.github.io/web-components-examples/simple-template/)）。
 
@@ -128,7 +130,8 @@ customElements.define(
 
 另外，就算它还没有渲染，使用 {{HTMLElement("template")}} 时，容器作为模板的目的在语义上应该清晰。而且 {{HTMLElement("template")}} 上可以直接添加一些对象，如 {{HTMLElement("td")}}，当添加到 {{HTMLElement("div")}} 中时会隐藏。
 
-> **备注：** 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) 查看这个完整的例子（另见[在线运行](https://mdn.github.io/web-components-examples/element-details/)）。
+> [!NOTE]
+> 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) 查看这个完整的例子（另见[在线运行](https://mdn.github.io/web-components-examples/element-details/)）。
 
 ### 使用插槽创建一个模板
 

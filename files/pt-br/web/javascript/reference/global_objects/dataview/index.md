@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView
 
 {{JSRef}}
 
-O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossario/Endianness).
+O **`DataView`** provê uma interface de baixo nível para leitura e escrita de múltiplos tipos de número em um {{jsxref("ArrayBuffer")}}, independentemente da [extremidade (_endianness_) da plataforma](/pt-BR/docs/Glossary/Endianness).
 
 {{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
@@ -97,11 +97,11 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties') -->
 
 ## Métodos
 
-{{page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods')}}
+<!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Methods') -->
 
 ## Exemplo
 

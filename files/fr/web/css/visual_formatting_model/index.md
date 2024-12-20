@@ -25,7 +25,7 @@ Lors de cette étape, on crée les boîtes à partir des éléments du document.
 
 Un élément est dit « de bloc » lorsque [la valeur calculée](/fr/docs/Web/CSS/computed_value) de la propriété {{cssxref("display")}} qui lui est appliquée vaut : `block`, `list-item` ou `table`. Un élément de bloc est représenté sous la forme d'un bloc (comme un paragraphe par exemple) et les blocs sont empilés verticalement les uns sur les autres.
 
-Chaque boîte de bloc contribue au [contexte de mise en forme des blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context). Chaque élément de bloc génère au moins une boîte de niveau bloc, qu'on appelle la boîte de bloc principale. Certains éléments (comme les éléments d'une liste par exemple) génèrent d'autres boîtes afin de gérer les puces ou d'autres éléments typographiques.
+Chaque boîte de bloc contribue au [contexte de mise en forme des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context). Chaque élément de bloc génère au moins une boîte de niveau bloc, qu'on appelle la boîte de bloc principale. Certains éléments (comme les éléments d'une liste par exemple) génèrent d'autres boîtes afin de gérer les puces ou d'autres éléments typographiques.
 
 La boîte de bloc principale contient les boîtes générées par les descendants ete le contenu généré. Cette boîte participe au schéma de positionnement.
 
@@ -169,11 +169,11 @@ Pour un élément positionné de façon fixe, le bloc englobant sera la zone d'a
 - Concepts clés de CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
   - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Héritage](/fr/docs/Web/CSS/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
     - [Initiales](/fr/docs/Web/CSS/initial_value)
     - [Calculées](/fr/docs/Web/CSS/computed_value)

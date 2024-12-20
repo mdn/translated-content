@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 
 Récupère des informations sur toutes les visites de l'URL donnée.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -28,7 +28,7 @@ var getting = browser.history.getVisits(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets `{{WebExtAPIRef('history.VisitItem')}}` représentant chacun une visite à l'URL donnée. Les visites sont triées dans l'ordre chronologique inverse.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie avec un tableau d'objets `{{WebExtAPIRef('history.VisitItem')}}` représentant chacun une visite à l'URL donnée. Les visites sont triées dans l'ordre chronologique inverse.
 
 ## Compatibilité des navigateurs
 
@@ -67,9 +67,9 @@ searching.then(listVisits);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/extensions/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

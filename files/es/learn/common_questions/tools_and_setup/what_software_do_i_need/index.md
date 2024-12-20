@@ -43,7 +43,7 @@ Casi todos los sistemas operativos incluyen por defecto un editor de texto y un 
 
 ## Aprendizaje activo
 
-_No hay aprendizaje activo disponible todavía. [Por favor, considere contribuir](/es/docs/MDN/Comenzando)._
+_No hay aprendizaje activo disponible todavía. [Por favor, considere contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Profundización
 
@@ -180,11 +180,12 @@ Esta es una captura de panalla de un editor de texto online:
 
 ### Subir archivos a la Web
 
-Cuando tu sitio web está listo para visualización pública , tendrás que subir tus páginas web a tu servidor web. Puedes comprar espacio en un servidor de varios proveedores (vea el artículo [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/How_much_does_it_cost)). Una vez que establezca qué proveedor utilizar, el proveedor le enviará un correo con la información de acceso, usualmente en la forma de una URL SFTP, nombre de usuario, contraseña, y otra información necesaria para conectarte con su servidor. Tenga en cuenta que el protocolo (S)FTP está actualmente algo pasado de moda, mientras otros sistemas de carga de archivos están comenzando a volverse populares como [RSync](https://en.wikipedia.org/wiki/Rsync) y [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
+Cuando tu sitio web está listo para visualización pública , tendrás que subir tus páginas web a tu servidor web. Puedes comprar espacio en un servidor de varios proveedores (vea el artículo [¿Cuánto cuesta hacer algo en la web?](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Una vez que establezca qué proveedor utilizar, el proveedor le enviará un correo con la información de acceso, usualmente en la forma de una URL SFTP, nombre de usuario, contraseña, y otra información necesaria para conectarte con su servidor. Tenga en cuenta que el protocolo (S)FTP está actualmente algo pasado de moda, mientras otros sistemas de carga de archivos están comenzando a volverse populares como [RSync](https://en.wikipedia.org/wiki/Rsync) y [Git/GitHub](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 
-> **Nota:** FTP es inherentemente inseguro. Deberías asegurarte de que tu proveedor de alojamiento permite el uso de una conexión segura, por ejemplo SFTP o RSync sobre SSH.
+> [!NOTE]
+> FTP es inherentemente inseguro. Deberías asegurarte de que tu proveedor de alojamiento permite el uso de una conexión segura, por ejemplo SFTP o RSync sobre SSH.
 
-Subir archivos a un sitio web es un paso muy importante mientras se crea un sitio web, por lo que sete tema se abarca en detalle en [un artículo aparte](/es/docs/Learn/Upload_files_to_a_web_server). Por ahora, se presenta una lista de clientes (S)FTP gratuitos:
+Subir archivos a un sitio web es un paso muy importante mientras se crea un sitio web, por lo que sete tema se abarca en detalle en [un artículo aparte](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Por ahora, se presenta una lista de clientes (S)FTP gratuitos:
 
 <table>
   <thead>
@@ -257,10 +258,10 @@ Como ya sabe, necesita un navegador para ver los sitios web. Existen [docenas](h
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.fr/chrome/browser/)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
-- [Apple Safari](http://www.apple.com/safari/)
+- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
+- [Apple Safari](https://www.apple.com/safari/)
 
-Si su sitio está destinado a un grupo específico (por ejemplo, una plataforma técnica o país), puede que tenga que probar el sitio con navegadores adicionales, como [Opera](http://www.opera.com/) o [Konqueror](http://www.konqueror.org/).
+Si su sitio está destinado a un grupo específico (por ejemplo, una plataforma técnica o país), puede que tenga que probar el sitio con navegadores adicionales, como [Opera](https://www.opera.com/) o [Konqueror](http://www.konqueror.org/).
 
 Sin embargo las pruebas se dificultan debido a que algunos navegadores sólo funcionan en determinados sistemas operativos. Apple Safari se ejecuta en iOS y Mac OS, mientras Internet Explorer corre solamente en Windows. Lo mejor es aprovechar los servicios como [Browsershots](http://browsershots.org/) o [Browserstack](http://www.browserstack.com/). Browsershots proporciona capturas de pantallas de tu sitio web en diferentes navegadores. Browserstack realmente te otorga acceso remoto a máquinas virtuales de modo que puedes probar tu sitio en los entornos más comunes. De manera alternativa, puedes instalar tu propia máquina virtual, pero se necesita algo de experiencia. (Si escoge este camino, Microsoft tiene algunas herramientas para desarrolladores incluso una [máquina virtual lista para utilizar](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)).
 
@@ -268,7 +269,7 @@ Sin falta ejecute algunas pruebas en dispositivos reales, especialmente en dispo
 
 ## Próximos pasos
 
-- Algunos de estos programas son gratis, pero no todos. [Descubra cuánto cuesta hacer algo en la web](/es/docs/Learn/Common_questions/How_much_does_it_cost).
+- Algunos de estos programas son gratis, pero no todos. [Descubra cuánto cuesta hacer algo en la web](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost).
 
-- Si desea aprrender más sobre editores de texto, lea este artículo acerca de [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Choose,_Install_and_set_up_a_text_editor).
-- Si se está preguntando cómo publicar en tu sitio web, eche un vistazo a ["Cómo subir archivos a un servidor web"](/es/docs/Learn/Upload_files_to_a_web_server).
+- Si desea aprrender más sobre editores de texto, lea este artículo acerca de [cómo seleccionar e instalar un editor de texto](/es/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
+- Si se está preguntando cómo publicar en tu sitio web, eche un vistazo a ["Cómo subir archivos a un servidor web"](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

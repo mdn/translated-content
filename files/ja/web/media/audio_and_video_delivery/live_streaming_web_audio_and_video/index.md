@@ -43,7 +43,8 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 ### RTSP
 
-> **メモ:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that [Firefox OS 1.3 supports RTSP](http://www.mozilla.org/en-US/firefox/os/notes/1.3/).
+> [!NOTE]
+> Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers, but be aware that [Firefox OS 1.3 supports RTSP](https://www.mozilla.org/en-US/firefox/os/notes/1.3/).
 >
 > **Note**: some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).
 
@@ -51,7 +52,8 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 RTSP 2.0 is currently in development and is not backward compatible with RTSP 1.0.
 
-> **警告:** Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
+> [!WARNING]
+> Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
 
 ## ストリーミングプロトコルの利用
 
@@ -71,19 +73,22 @@ For example:
 
 For example, [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](http://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **メモ:** Time Shifting is the process of consuming a live stream sometime after it happened.
+> [!NOTE]
+> Time Shifting is the process of consuming a live stream sometime after it happened.
 
 ## 動画ストリーミングファイル形式
 
 A couple of HTTP-based live streaming video formats are beginning to see support across browsers.
 
-> **メモ:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources).
+> [!NOTE]
+> You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
 DASH stands for Dynamic Adaptive Streaming over HTTP and is a new format that has recently seen support added to Chrome, and Internet Explorer 11 running on Windows 8.1. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
-> **メモ:** you can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> [!NOTE]
+> you can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
@@ -129,7 +134,7 @@ Opus is a royalty-free and open format that manages to optimize quality at vario
 
 Currently, Opus is supported by Firefox desktop and mobile as well as the latest versions of desktop Chrome and Opera.
 
-> **メモ:** [Opus is a mandatory format](http://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
+> **メモ:** [Opus is a mandatory format](https://tools.ietf.org/html/draft-ietf-rtcweb-audio-05) for WebRTC browser implementations.
 
 ### MP3, AAC, Ogg Vorbis
 
@@ -143,9 +148,9 @@ In order to stream live audio and video, you will need to run specific streaming
 
 ### GStreamer
 
-[GStreamer](http://gstreamer.freedesktop.org/) is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components. Through its plugin system, GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, and FLV.)
+[GStreamer](https://gstreamer.freedesktop.org/) is an open source cross-platform multimedia framework that allows you to create a variety of media-handling components, including streaming components. Through its plugin system, GStreamer provides support for more than a hundred codecs (including MPEG-1, MPEG-2, MPEG-4, H.261, H.263, H.264, RealVideo, MP3, WMV, and FLV.)
 
-GStreamer plugins such as [souphttpclientsink](http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP. You can also integrate with Python's Twisted framework or use something like [Flumotion](http://www.flumotion.net/features/) (open source streaming software).
+GStreamer plugins such as [souphttpclientsink](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good-plugins/html/gst-plugins-good-plugins-plugin-soup.html) and [shout2send](https://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-good/html/gst-plugins-good-plugins-shout2send.html) exist to stream media over HTTP. You can also integrate with Python's Twisted framework or use something like [Flumotion](http://www.flumotion.net/features/) (open source streaming software).
 
 For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/nginx-rtmp-module).
 
@@ -153,11 +158,11 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 [SHOUTcast](http://en.wikipedia.org/wiki/SHOUTcast) is a cross-platform proprietary technology for streaming media. Developed by Nullsoft, it allows digital audio content in MP3 or AAC format to be broadcast. For web use, SHOUTcast streams are transmitted over HTTP.
 
-**Note**: [SHOUTcast URLs may require a semi-colon to be appended to them](http://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
+**Note**: [SHOUTcast URLs may require a semi-colon to be appended to them](https://stackoverflow.com/questions/2743279/how-could-i-play-a-shoutcast-icecast-stream-using-html5).
 
 ### Icecast
 
-The [Icecast](http://www.icecast.org/) server is an open source technology for streaming media. Maintained by the [Xiph.org Foundation](http://www.xiph.org/), it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
+The [Icecast](https://www.icecast.org/) server is an open source technology for streaming media. Maintained by the [Xiph.org Foundation](https://www.xiph.org/), it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
 
 **Note**: SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
@@ -168,22 +173,22 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 ## 関連情報
 
 - [HTTP Live Streaming](http://en.wikipedia.org/wiki/HTTP_Live_Streaming)
-- [HLS Browser Support](http://www.jwplayer.com/html5/hls/)
+- [HLS Browser Support](https://www.jwplayer.com/html5/hls/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
-- [MPEG-DASH Media Source Demo](http://dash-mse-test.appspot.com/media.html)
-- [DASH Reference Client](http://dashif.org/reference/players/javascript/1.0.0/index.html)
+- [MPEG-DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
+- [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)
 - [Dynamic Streaming over HTTP](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
-- [The State of MPEG-DASH Deployment](http://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
-- [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](http://www.bbc.co.uk/rd/blog/2014/03/media-source-extensions)
+- [The State of MPEG-DASH Deployment](https://www.streamingmediaglobal.com/Articles/Editorial/Featured-Articles/The-State-of-MPEG-DASH-Deployment-96144.aspx)
+- [Look, no plugins: Live streaming to the browser using Media Source Extensions and MPEG-DASH](https://www.bbc.co.uk/rd/blog/2014/03/media-source-extensions)
 - [Media Source Extensions (W3C)](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html)
 - [Icecast](http://en.wikipedia.org/wiki/Icecast)
 - [SHOUTcast](http://en.wikipedia.org/wiki/Shoutcast)
 - [GStreamer](http://en.wikipedia.org/wiki/GStreamer)
 - [Streaming GStreamer Pipelines Via HTTP](https://coaxion.net/blog/2013/10/streaming-gstreamer-pipelines-via-http/)
 - [Streaming media using GStreamer on the web](http://www.svesoftware.com/passkeeper/cms/article/streaming-media-using-gstreamer-web/)
-- [GStreamer and Raspberry Pi](http://nginx-rtmp.blogspot.it/2013/07/gstreamer-and-raspberry-pi.html)
+- [GStreamer and Raspberry Pi](https://nginx-rtmp.blogspot.it/2013/07/gstreamer-and-raspberry-pi.html)
 - [Acceptance of Media Source Extensions as W3C Candidate Recommendation will accelerate adoption of dash.js](http://msopentech.com/blog/2014/01/09/acceptance-media-source-extensions-w3c-candidate-recommendation-will-accelerate-adoption-dash-js/)
 - [Comparison of Streaming Media Systems](http://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)

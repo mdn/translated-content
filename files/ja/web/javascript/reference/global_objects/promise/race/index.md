@@ -2,7 +2,7 @@
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 l10n:
-  sourceCommit: 3f0cd840cd9575701c65b8c6a1e172a2b0c3bd62
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{JSRef}}
@@ -30,7 +30,8 @@ Promise.race(iterable)
 
 `Promise.race()` メソッドは[プロミス並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)メソッドの 1 つです。これは最初の非同期タスクを完全に完了させたいが、最終的な状態は気にしない（つまり、成功も失敗もあり得る）場合に有用です。
 
-> **メモ:** 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
+> [!NOTE]
+> 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
 反復可能オブジェクトに 1 つ以上の非プロミス値および/または既に確定したプロミスが格納されている場合、 `Promise.race()` は反復可能オブジェクトで最初に見つかった値に確定します。
 
@@ -38,7 +39,7 @@ Promise.race(iterable)
 
 ### Promise.race() の使用
 
-この例では、 `Promise.race()` を使用して、 [`setTimeout()`](/ja/docs/Web/API/setTimeout) で実装された複数のタイマーを競わせることができることを示しています。最も時間の短いタイマーが常にレースに勝ち、結果のプロミスの状態となります。
+この例では、 `Promise.race()` を使用して、{{domxref("Window.setTimeout", "setTimeout()")}} で実装された複数のタイマーを競わせることができることを示しています。最も時間の短いタイマーが常にレースに勝ち、結果のプロミスの状態となります。
 
 ```js
 function sleep(time, value, state) {

@@ -41,7 +41,8 @@ slug: Learn/Server-side/Django/skeleton_website
 1. 프로젝트 폴더, 기본적인 파일 템플릿과 프로젝트 관리 스크립트(**manage.py**)를 만들기 위해서 `django-admin`을 사용합니다.
 2. 하나 또는 그 이상의 애플리케이션을 만들기 위해서 **manage.py**를 사용합니다.
 
-   > **참고:** 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
+   > [!NOTE]
+   > 하나의 웹사이트는 하나 또는 그 이상의 섹션으로 구성될 수 있습니다. (예를 들어 main site, blog, wiki, downloads area 등). 장고는 필요할 때에 다른 프로젝트에서 재사용이 가능할 수 있게 , 이 요소들을 분리된 어플리케이션으로 개발하는 것을 추천합니다.
 
 3. 프로젝트에 포함시키기 위해 새 어플리케이션들을 등록(register)합니다.
 4. 각 어플리케이션에 대해 url/mapper를 연결(hook up)합니다.
@@ -59,7 +60,7 @@ locallibrary/         # Website folder
 
 ## 프로젝트 만들기
 
-먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
+먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
 
 ```bash
 mkdir locallibrary

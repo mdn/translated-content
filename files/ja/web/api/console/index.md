@@ -2,22 +2,20 @@
 title: console
 slug: Web/API/console
 l10n:
-  sourceCommit: 2ceee44bc3cc48e2a005734761a1abed7abdf57b
+  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
 ---
 
 {{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。このオブジェクトの詳細な動作はブラウザーによって異なりますが、一般的に共通の機能セットが提供されています。
+**`console`** オブジェクトは、ブラウザーのデバッグコンソール（例えば Firefox の[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）へのアクセスを提供します。
+
+コンソール API の実装はランタイムによって異なる場合があります。具体的な例として、いくつかのコンソールメソッドはオンラインエディターや IDE によっては動作が異なったり、まったく動作しなかったりすることがあります。この記事で記述された動作を確認するには、ブラウザーの開発者ツールでメソッドを試してください。
 
 `console` オブジェクトには任意のグローバルオブジェクトからアクセスできます。閲覧スコープの {{domxref("Window")}} や、特定の種類のワーカーを表す {{domxref("WorkerGlobalScope")}} の console プロパティを通してアクセスできます。これは {{domxref("Window.console")}} として公開されていますが、単に `console` として参照できます。
 
 ```js
 console.log("Failed to open the specified link");
 ```
-
-このページでは、 `console` オブジェクトで使用できる[メソッド](#メソッド)やいくらかの[使用例](#使用例)を提供します。
-
-> **メモ:** 一部のオンライン IDE やエディターでは、コンソール API の実装がブラウザーと異なる場合があります。その結果、コンソール API の特定の機能（タイマーメソッドなど）がオンライン IDE やエディターのコンソールに出力されないことがあります。このドキュメント内のようにログを表示させるためには、常にブラウザーの開発者ツールコンソールを開いてください。
 
 ## メソッド
 
@@ -30,13 +28,13 @@ console.log("Failed to open the specified link");
 - {{domxref("console/countReset_static", "console.countReset()")}}
   - : 指定されたラベルのカウンターの値をリセットします。
 - {{domxref("console/debug_static", "console.debug()")}}
-  - : ログレベルが `debug` のコンソールへメッセージを出力します。
+  - : コンソールへデバッグログレベルでメッセージを出力します。
 - {{domxref("console/dir_static", "console.dir()")}}
   - : 指定した JavaScript オブジェクトのプロパティの、対話型リストを表示します。このリスト内の三角印をクリックすると、子オブジェクトの内容を調査して表示させることができます。
 - {{domxref("console/dirxml_static", "console.dirxml()")}}
   - : 指定したオブジェクトを XML/HTML 要素で表現したものを表示します。表現できない場合は、JavaScript オブジェクトビューを表示します。
 - {{domxref("console/error_static", "console.error()")}}
-  - : エラーメッセージを出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
+  - : コンソールへエラーログレベルでメッセージを出力します。
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : `console.error()` の別名です。
 - {{domxref("console/group_static", "console.group()")}}
@@ -46,9 +44,9 @@ console.log("Failed to open the specified link");
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
   - : 現在のインライン[グループ](#コンソールでのグループの使用)から抜けます。
 - {{domxref("console/info_static", "console.info()")}}
-  - : メッセージタイプのログ情報を出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
+  - : コンソールへ情報ログレベルでメッセージを出力します。
 - {{domxref("console/log_static", "console.log()")}}
-  - : 一般タイプのログ情報を出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
+  - : コンソールへメッセージを出力します。
 - {{domxref("console/profile_static", "console.profile()")}} {{Non-standard_inline}}
   - : ブラウザー内蔵のプロファイラー (例えば [Firefox のパフォーマンスツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)) を開始します。プロファイルの名称を指定することができます。
 - {{domxref("console/profileEnd_static", "console.profileEnd()")}} {{Non-standard_inline}}
@@ -62,17 +60,17 @@ console.log("Failed to open the specified link");
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : 指定された[タイマー](#タイマー)の値をコンソールへ出力します。
 - {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : ブラウザー（[Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) または [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)）のパフォーマンスツールのタイムラインにマーカーを追加します（。
+  - : ブラウザー（[Chrome](https://developer.chrome.com/docs/devtools/performance/reference) または [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)）のパフォーマンスツールのタイムラインにマーカーを追加します（。
 - {{domxref("console/trace_static", "console.trace()")}}
   - : [スタックトレース](#スタックトレース)を出力します。
 - {{domxref("console/warn_static", "console.warn()")}}
-  - : 警告メッセージを出力します。このメソッドでは、[文字列置換](#文字列置換の使用)および追加の引数を使用することができます。
+  - : コンソールへ警告ログレベルでメッセージを出力します。
 
 ## 例
 
 ### コンソールへのテキストの出力
 
-コンソールでもっとも頻繁に使用される機能は、テキストやその他のデータをログ出力することです。生成することができる出力のカテゴリーはいくつかあり、{{domxref("console/log_static", "console.log()")}}、{{domxref("console/info_static", "console.info()")}}、{{domxref("console/warn_static", "console.warn()")}}、{{domxref("console/error_static", "console.error()")}}、{{domxref("console/debug_static", "console.debug()")}} の各メソッドを使用します。これらメソッドの出力結果はログ上でそれぞれ異なるスタイルがつけられ、また関心がある種類の出力だけを参照するためにブラウザーが提供するフィルタ機能を使用することもできます。
+コンソールでもっとも頻繁に使用される機能は、テキストやその他のデータをログ出力することです。生成することができる出力のカテゴリーはいくつかあり、{{domxref("console/log_static", "console.log()")}}、{{domxref("console/info_static", "console.info()")}}、{{domxref("console/warn_static", "console.warn()")}}、{{domxref("console/error_static", "console.error()")}}、{{domxref("console/debug_static", "console.debug()")}} の各メソッドを使用します。これらメソッドの出力結果はログ上でそれぞれ異なるスタイルがつけられ、また関心がある種類の出力だけを参照するためにブラウザーが提供するフィルター機能を使用することもできます。
 
 各出力メソッドを使用する方法は 2 つあります。
 
@@ -94,6 +92,28 @@ console.log(someObject);
 {str:"Some text", id:5}
 ```
 
+ブラウザーは、オブジェクトに関する情報を可能な限り表示します。例えば、オブジェクトのプライベートな状態も表示されるかもしれません。DOM 要素や関数のようなある種のオブジェクトは、特別な方法で表示されることもあります。
+
+#### オブジェクトのスナップショット
+
+オブジェクトに関する情報は、遅延して取得されます。これは、ログメッセージはオブジェクトがログ出力された時点ではなく、最初に表示された時点のオブジェクトのコンテンツを表示させるということです。例えば、次のようになります。
+
+```js
+const obj = {};
+console.log(obj);
+obj.prop = 123;
+```
+
+これは `{}` を出力します。しかし、オブジェクトの詳細を展開すると、`prop: 123` と表示されます。
+
+オブジェクトを変更しようとしていて、ログ出力した情報が更新されないようにしたい場合は、ログ出力する前にオブジェクトを[ディープクローン](/ja/docs/Glossary/Deep_copy)することができます。一般的な方法は、{{jsxref("JSON.stringify()")}} してから {{jsxref("JSON.parse()")}} することです。
+
+```js
+console.log(JSON.parse(JSON.stringify(obj)));
+```
+
+ブラウザーで動作する他の選択肢として、[`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
+
 #### 複数のオブジェクトの出力
 
 ログ出力のメソッドを呼び出すときにオブジェクトを羅列することで、複数のオブジェクトを出力することもできます。
@@ -112,18 +132,22 @@ My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 
 #### 文字列置換の使用
 
-文字列を取る `console` オブジェクトのメソッドの一つ (`log()` など) に文字列を渡すと、以下の置換文字列を使用することができます。
+ログ出力メソッドの最初の引数は、0 個以上の置換文字列の入った文字列とすることができます。各置換文字列は、対応する引数値で置き換えられます。
 
-- `%o` または `%O`
-  - : JavaScript オブジェクトを出力します。オブジェクト名をクリックすると、調査ツールで詳細情報を表示します。
+- `%o`
+  - : JavaScript オブジェクトを「最適に有益な書式設定」スタイルで出力します。例えば、DOM 要素は要素インスペクターに現れるのと同じ方法で表示されます。
+- `%O`
+  - : 「一般的な JavaScript オブジェクト書式化」スタイルで、通常は展開されたツリーの形で JavaScript オブジェクトを出力します。これは {{domxref("console/dir_static", "console.dir()")}} に似ています。
 - `%d` または `%i`
-  - : 整数値を出力します。数値の書式設定をサポートしています。例えば `console.log("Foo %.2d", 1.1)` は、先頭に 0 を補った有効数字 2 桁の数値として `Foo 01` のように出力します。
+  - : 整数値を出力します。
 - `%s`
   - : 文字列を出力します。
 - `%f`
-  - : 浮動小数点数値を出力します。数値の書式設定に対応しています。例えば `console.log("Foo %.2f", 1.1)` は、小数部分が 2 桁の数値として出力し、 `Foo 1.10` となります。
+  - : 浮動小数点数値を出力します。
+- `%c`
+  - : 以下のテキストすべてに CSS スタイルルールを適用します。[コンソール出力のスタイル設定](#styling_console_output)を参照してください。
 
-> **メモ:** 精度の書式は Chrome では動作しません。
+ブラウザーによっては追加の書式を指定します。例えば、Safari と Firefox は C スタイルの精度書式 `%.<精度>f` に対応しています。例えば、`console.log("Foo %.2f", 1.1)` は小数点以下 2 桁の数値を出力し、`Foo 1.10` となります。`console.log("Foo %.2d", 1.1)` は有効数字 2 桁に先頭の 0 を加えた数値を出力し、 `Foo 01` となります。
 
 これらは引数リストの書式化文字列の後にある引数を引用します。例えば次のようになります。
 
@@ -190,7 +214,11 @@ console.log(
 - {{cssxref("word-spacing")}} および {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **メモ:** コンソールメッセージは、既定ではインライン要素と同様に動作します。 `padding`, `margin` などの効果を得たい場合は、例えば `display: inline-block` のように設定してください。
+> [!NOTE]
+> 既定では、各コンソールメッセージはインライン要素のように動作します。`padding` や `margin` などのプロパティに何らかの効果を持たせたい場合は、`display` プロパティを `display: inline-block` に設定します。
+
+> [!NOTE]
+> 明るい配色と暗い配色の両方に対応するために、色を指定するときに {{cssxref("color_value/light-dark")}} を使用することができます。例えば `color: light-dark(#D00000, #FF4040);` とします。
 
 ### コンソールでのグループの使用
 
@@ -262,18 +290,11 @@ foo();
 
 {{Compat}}
 
-## メモ
-
-- 少なくとも Firefox では、ページで `console` オブジェクトを定義すると、 Firefox が内蔵している console オブジェクトをオーバーライドします。
-
 ## 関連情報
 
 - [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — Firefox のウェブコンソールがコンソール API の呼び出しを処理する方法
 - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — モバイル端末がデバッグ対象である場合に、コンソールの出力を確認する方法
-
-### その他の実装
-
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
 - [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

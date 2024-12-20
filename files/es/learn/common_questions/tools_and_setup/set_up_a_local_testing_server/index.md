@@ -62,7 +62,8 @@ Para hacer esto:
    python -V
    ```
 
-   > **Nota:** La v del ejemplo en mayuscula (V)
+   > [!NOTE]
+   > La v del ejemplo en mayuscula (V)
 
 3. Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando `cd`.
 
@@ -85,12 +86,13 @@ Para hacer esto:
 
 5. Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
 
-> **Nota:** si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el `localhost:7800`.
+> [!NOTE]
+> Si ya tienes corriendo algo en el puerto 8000, puedes escoger otro puerto corriendo el siguiente comando de servidor por un número de puerto alternativo, por ejemplo `python -m SimpleHTTPServer 7800`. Puedes acceder a tu contenido en el `localhost:7800`.
 
 ## Ejecución de lenguajes del lado del servidor localmente
 
 El módulo `SimpleHTTPServer` de Python es útil, pero desconoce como ejecutar el código escrito en lenguajes como PHP o Python. Para resolver eso necesitarás algo más — lo que necesitarás exactamente depende del lenguaje del lado del servidor que estas intentando de ejecutar. Aquí están un par de ejemplos:
 
-- Para ejecutar el código del lado del servidor Python, necesitrá utilizar un framework web python. Puedes averiguar cómo usar el framework Django leyendog [Django Web Framework (Python)](/es/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) también es buena alternativa a Django (ligeramente menos pesado). Para ejecutar esto necesitarás [instalar Python/PIP](/es/docs/Learn/Server-side/Django/development_environment#Installing_Python_3), luego instala Flask usando `pip3 install flask`. En este punto, deberías ser capaz de ejecutar los ejemplos de Python Flask usando por ejemplo `python3 python-example.py`, luego navegar al `localhost:5000` en tu navegador.
+- Para ejecutar el código del lado del servidor Python, necesitrá utilizar un framework web python. Puedes averiguar cómo usar el framework Django leyendog [Django Web Framework (Python)](/es/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) también es buena alternativa a Django (ligeramente menos pesado). Para ejecutar esto necesitarás [instalar Python/PIP](/es/docs/Learn/Server-side/Django/development_environment#installing_python_3), luego instala Flask usando `pip3 install flask`. En este punto, deberías ser capaz de ejecutar los ejemplos de Python Flask usando por ejemplo `python3 python-example.py`, luego navegar al `localhost:5000` en tu navegador.
 - Para ejecutar código Node.js (JavaScript) del lado del servidor, necesitarás usar el nodo raw o un framework construido encima de él. Express es una buena opción — mira [Express Web Framework (Node.js/JavaScript)](/es/docs/Learn/Server-side/Express_Nodejs).
 - Para ejecutar código PHP del lado del servidor, necesitarás una configuración de servidor que pueda interpretar PHP. Las buenas opciones para los testeos locales de PHP son [MAMP](https://www.mamp.info/en/downloads/) (Mac y Windows) t [AMPPS](http://ampps.com/download) (Mac, Windows, Linux). Estos son paquetes completos que crean configuraciones locales que permiten ejecutar servidor Apache, PHP, y base de datos MySQL.

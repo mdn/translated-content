@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API を利用すると、拡張機能からブラウザーのブックマークシステムにアクセスしたり、操作することができます。ページをブックマークしたり、既存のブックマークを取得したり、ブックマークを編集・削除・整理することが可能です。
 
-この API を使用する際は、拡張機能の [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "bookmarks" [パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions) を指定する必要があります。
+この API を使用する際は、拡張機能の [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "bookmarks" [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) を指定する必要があります。
 
 拡張機能ではブックマークツリーのルートノードではブックマークを作成・編集・削除できません。それをしようとすると次のエラーになります: "_The bookmark root cannot be modified_"
 
@@ -60,7 +60,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 - {{WebExtAPIRef("bookmarks.onChildrenReordered")}}
   - : UI で表示されている順序に伴って子フォルダーの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move", "move()")}} の実行後には発火しません。
 - {{WebExtAPIRef("bookmarks.onImportBegan")}}
-  - : ブックマークのインポートが開始した際に発火します。パフォーマンスが重要である場合、イベントのオブザーバは {{WebExtAPIRef("bookmarks.onImportEnded")}} が発火するまで {{WebExtAPIRef("bookmarks.onCreated")}} を無視すべきでしょう。その場合であっても、オブザーバは他のイベントについては即座に処理すべきでしょう。
+  - : ブックマークのインポートが開始した際に発火します。パフォーマンスが重要である場合、イベントのオブザーバーは {{WebExtAPIRef("bookmarks.onImportEnded")}} が発火するまで {{WebExtAPIRef("bookmarks.onCreated")}} を無視すべきでしょう。その場合であっても、オブザーバーは他のイベントについては即座に処理すべきでしょう。
 - {{WebExtAPIRef("bookmarks.onImportEnded")}}
   - : ブックマークのインポートが終了した際に発火します。
 
@@ -70,7 +70,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 {{WebExtExamples("h2")}}
 
-> **メモ:** この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> [!NOTE]
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

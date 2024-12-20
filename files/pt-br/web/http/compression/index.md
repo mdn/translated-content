@@ -27,7 +27,8 @@ Para o melhor desempenho de um site, é ideal comprimir o máximo possível, man
 
 Algoritmos de compressão com perdas geralmente são mais eficientes que os sem perdas.
 
-> **Nota:** Como a compressão funciona melhor em tipos específicos de arquivos, ela geralmente não fornece nada mais ao comprimir o mesmo arquivo uma segunda vez. Na verdade, isso geralmente é contraproducente, pois o custo da sobrecarga (algoritmos geralmente precisam de um dicionário que some ao tamanho inicial) pode ser maior do que o ganho extra na compressão, resultando em um arquivo maior. Não use as duas técnicas a seguir para arquivos em um formato comprimido.
+> [!NOTE]
+> Como a compressão funciona melhor em tipos específicos de arquivos, ela geralmente não fornece nada mais ao comprimir o mesmo arquivo uma segunda vez. Na verdade, isso geralmente é contraproducente, pois o custo da sobrecarga (algoritmos geralmente precisam de um dicionário que some ao tamanho inicial) pode ser maior do que o ganho extra na compressão, resultando em um arquivo maior. Não use as duas técnicas a seguir para arquivos em um formato comprimido.
 
 ## Compressão de ponta a ponta
 
@@ -43,7 +44,7 @@ Para selecionar o algoritmo a ser usado, os navegadores e servidores usam a [neg
 
 Como a copressão de dados traz melhorias significativas no desempenho, recomenda-se ativá-la para todos os arquivos, com exceção daqueles já comprimidos, como imagens, arquivos de áudio e vídeos.
 
-Apache suporta compressão e usa [mod_deflate](http://httpd.apache.org/docs/current/mod/mod_deflate.html); para nginx existe [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); para IIS, o elemento [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
+Apache suporta compressão e usa [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); para nginx existe [ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html); para IIS, o elemento [`<httpCompression>`](https://www.iis.net/configreference/system.webserver/httpcompression).
 
 ## Compressão de nó a nó (_Hop-by-hop_)
 

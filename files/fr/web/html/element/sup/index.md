@@ -11,7 +11,7 @@ L'élément HTML **`<sup>`** est utilisé, pour des raisons typographiques, afin
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -120,7 +120,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

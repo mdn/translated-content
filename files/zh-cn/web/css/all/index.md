@@ -28,18 +28,18 @@ all: revert;
 - {{cssxref("initial")}}
   - : 该关键字代表改变该元素或其父元素的所有属性至初始值。
 - {{cssxref("inherit")}}
-  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[inherited values](/zh-CN/docs/Web/CSS/inheritance)
+  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[inherited values](/zh-CN/docs/Web/CSS/Inheritance)
 - {{cssxref("unset")}}
   - : 该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。
 - {{cssxref("revert")}}
 
   - : 指定依赖于声明所属的样式表原点的行为：
 
-    - [User-agent origin](/zh-CN/docs/Web/CSS/Cascade#User-agent_stylesheets)
+    - [User-agent origin](/zh-CN/docs/Web/CSS/Cascade#user-agent_stylesheets)
       - : 相当于 `unset`
-    - [User origin](/zh-CN/docs/Web/CSS/Cascade#User_stylesheets)
+    - [User origin](/zh-CN/docs/Web/CSS/Cascade#user_stylesheets)
       - : 将层叠回滚到用户代理级别，以便计算指定的值，就好像没有为该元素指定作者级别或用户级别规则。
-    - [Author origin](/zh-CN/docs/Web/CSS/Cascade#Author_stylesheets)
+    - [Author origin](/zh-CN/docs/Web/CSS/Cascade#author_stylesheets)
       - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，“作者”原点包括“覆盖”和“动画”原点。
 
 ### 形式定义

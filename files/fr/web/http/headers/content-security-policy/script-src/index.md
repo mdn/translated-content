@@ -37,9 +37,9 @@ Content-Security-Policy: script-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -71,7 +71,8 @@ document.getElementById("btn").addEventListener("click", faireQuelqueChose);
 
 ### Scripts embarqués non fiables
 
-> **Note :** Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
+> [!NOTE]
+> Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
 
 Vous pouvez autoriser les scripts embarqués et les gestionnaires d'évènements par attributs en spécifiant la valeur `'unsafe-inline'`, des nonces ou des empreintes correspondant au script.
 
@@ -123,8 +124,8 @@ La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code Ja
 - [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - En passant une chaine à des méthodes tel que : `window.setTimeout("alert('Coucou le monde');", 500);`
 
-  - [`setTimeout()`](/fr/docs/Web/API/setTimeout)
-  - [`setInterval()`](/fr/docs/Web/API/setInterval)
+  - [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout)
+  - [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
   - [`window.setImmediate()`](/fr/docs/Web/API/window/setImmediate)
 
 - `window.execScript()` {{non-standard_inline}} (IE10 et versions précédentes)

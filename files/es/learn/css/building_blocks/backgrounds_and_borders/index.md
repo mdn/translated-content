@@ -90,7 +90,7 @@ La propiedad {{cssxref ("background-repeat")}} se usa para controlar el comporta
 
 #### Dimensionar la imagen de fondo
 
-En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/length) o [porcentaje](/es/docs/Web/CSS/porcentaje), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
+En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/length) o [porcentaje](/es/docs/Web/CSS/percentage), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
 
 También puedes utilizar palabras clave:
 
@@ -111,7 +111,8 @@ Prueba lo siguiente:
 
 La propiedad {{cssxref ("background-position")}} te permite elegir la posición en la que aparece la imagen de fondo dentro de la caja a la que está asociada. Para ello se utiliza un sistema de coordenadas en el que la esquina superior izquierda de la caja es `(0,0)`, y la caja se coloca sobre los ejes horizontal (`x`) y vertical (`y`).
 
-> **Nota:** El valor predeterminado de `background-position` es `(0,0)`.
+> [!NOTE]
+> El valor predeterminado de `background-position` es `(0,0)`.
 
 Los valores de `background-position` más comunes toman dos valores independientes: un valor horizontal seguido de un valor vertical.
 
@@ -125,7 +126,7 @@ Puedes usar palabras clave como `top` y `right` (busca todas las demás en la p�
 }
 ```
 
-Y también [longitudes](/es/docs/Web/CSS/length) y [porcentajes](/es/docs/Web/CSS/porcentaje):
+Y también [longitudes](/es/docs/Web/CSS/length) y [porcentajes](/es/docs/Web/CSS/percentage):
 
 ```css
 .box {
@@ -177,7 +178,8 @@ También es posible poner múltiples imágenes de fondo: puedes especificar múl
 
 Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los fondos se superponen con la última imagen de fondo que hay en la parte inferior de la lista, y cada imagen anterior se apila encima de la que sigue en el código.
 
-> **Nota:** Los degradados se pueden mezclar con imágenes de fondo normales.
+> [!NOTE]
+> Los degradados se pueden mezclar con imágenes de fondo normales.
 
 Las otras propiedades `background-*` también pueden tener valores múltiples separados por comas, de la misma manera que `background-image`:
 
@@ -204,7 +206,7 @@ Otra opción que hay disponible para fondos es especificar cómo se desplazan cu
 - `fixed`: Hace que el fondo de un elemento quede fijo con respecto a la ventana gráfica, de modo que no se desplace cuando te desplazas por la página o el contenido del elemento. Siempre permanece en la misma posición de la pantalla.
 - `local`: Este valor se añadió posteriormente (solo es compatible con Internet Explorer 9+, mientras que los otros son compatibles con IE4+) porque el valor `scroll` es bastante confuso y en muchos casos no hace lo que deseas. El valor `local` ancla el fondo al elemento en el que está configurado, de modo que cuando te desplazas por el contenido del elemento, el fondo se desplaza con este.
 
-La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (También puedes consultar el [código fuente](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) aquí).
+La propiedad {{cssxref ("background-attachment")}} solo tiene efecto cuando hay contenido por el que puedas desplazarte, por lo que hemos preparado un ejemplo para demostrar las diferencias entre los tres valores: echa un vistazo a [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (También puedes consultar el [código fuente](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) aquí).
 
 ### Usar la propiedad abreviada para el fondo
 
@@ -267,7 +269,8 @@ Y las no abreviadas:
 }
 ```
 
-> **Nota:** Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!NOTE]
+> Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 **Hay una variedad de estilos que puedes usar para los bordes. En el ejemplo siguiente, hemos utilizado un estilo de borde diferente para los cuatro lados de la caja. Juega con el estilo, el ancho y el color del borde para ver cómo funcionan los bordes.**
 

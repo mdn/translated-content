@@ -83,7 +83,7 @@ Voir [Utiliser l'API Popover](/fr/docs/Web/API/Popover_API/Using) pour un guide 
 - Évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event), rattaché à `HTMLElement`
   - : Déclenché juste avant que l'état d'un élément <i lang="en">popover</i> ne change entre affiché et masqué, ou vice versa.
 - Évènement [`toggle`](/fr/docs/Web/API/HTMLElement/toggle_event), rattaché à `HTMLElement`
-  - : Déclenché lorsque l'état d'un élément <i lang="en">popover</i> a changé entre les états affiché et masqué, ou vice versa. Voir l'évènement analogue [`toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLDetailsElement/toggle_event) qui signale les changements d'états des éléments [`<details>`](/fr/docs/Web/HTML/Element/details).
+  - : Déclenché lorsque l'état d'un élément <i lang="en">popover</i> a changé entre les états affiché et masqué, ou vice versa. Voir l'évènement analogue [`toggle` de `HTMLDetailsElement`](/fr/docs/Web/API/HTMLElement/toggle_event) qui signale les changements d'états des éléments [`<details>`](/fr/docs/Web/HTML/Element/details).
 
 ## Exemples
 

@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess
 
 {{AddonSidebar}}Renvoie `true` si l'extension peut accéder au schéma "file://", sinon `false`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -19,7 +19,7 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` si l'extension est autorisée à accéder aux URLs "file://", sinon `false`.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un booléen : `true` si l'extension est autorisée à accéder aux URLs "file://", sinon `false`.
 
 Firefox retournera toujours `false`.
 
@@ -40,9 +40,9 @@ isAllowed.then(logIsAllowed);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/extensions/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

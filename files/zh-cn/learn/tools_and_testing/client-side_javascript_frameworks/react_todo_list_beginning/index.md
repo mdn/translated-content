@@ -7,7 +7,8 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_
 
 假设我们的任务是在 React 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
 
-> **备注：** 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的 React 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
+> [!NOTE]
+> 如果你需要对照我们的版本检查你的代码，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react) 中找到一个完成版本的 React 应用代码。关于运行中的实时版本，参见 <https://mdn.github.io/todo-react-build/>.
 
 <table>
   <tbody>
@@ -188,7 +189,7 @@ function App(props) {
 
 它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的 JSX，以及它是如何与我们的用户故事相对应的。
 
-- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
+- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
 - 我们有一组按钮，用于筛选我们的任务。
 - 我们有一个标题，用于告诉我们还有多少任务。
 - 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。

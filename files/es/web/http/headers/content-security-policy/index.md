@@ -40,7 +40,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
   - : Define los origenes válidos para [web workers](/es/docs/Web/API/Web_Workers_API) y contextos de navegación anidados cargados usando elementos como {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Advertencia:** En lugar de **`child-src`**, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.
+    > [!WARNING]
+    > En lugar de **`child-src`**, los autores quienes deseen regular los contextos de navegación anidados y "workers" deberían usar las directivas {{CSP("frame-src")}} y {{CSP("worker-src")}}, respectivamente.
 
 - {{CSP("connect-src")}}
   - : Restringe las URLs que pueden ser cargados usando scripts.
@@ -69,7 +70,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("style-src")}}
   - : Specifies valid sources for stylesheets.
 - {{CSP("webrtc-src")}} {{experimental_inline}}
-  - : Specifies valid sources for [WebRTC](/docs/Web/API/WebRTC_API) connections.
+  - : Specifies valid sources for [WebRTC](/es/docs/Web/API/WebRTC_API) connections.
 - {{CSP("worker-src")}}
   - : Specifies valid sources for {{domxref("Worker")}}, {{domxref("SharedWorker")}}, or {{domxref("ServiceWorker")}} scripts.
 
@@ -105,7 +106,8 @@ Reporting directives control the reporting process of CSP violations. See also t
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
-    > **Advertencia:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn't supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
+    > [!WARNING]
+    > Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn't supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
     >
     > ```
     > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname
@@ -191,7 +193,7 @@ See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelin
 ## Mirar tambien
 
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Learn about: Content Security Policy](/docs/Web/HTTP/CSP)
+- [Learn about: Content Security Policy](/es/docs/Web/HTTP/CSP)
 - [Content Security in WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Display security and privacy policies In Firefox Developer Tools](/es/docs/Tools/GCLI/Display_security_and_privacy_policies)
 - [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)

@@ -1,13 +1,16 @@
 ---
 title: 知覚可能
 slug: Web/Accessibility/Understanding_WCAG/Perceivable
+l10n:
+  sourceCommit: 3a004b55441ee5ac51bd34be5f3b7c6ce693ed6d
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 この記事では、ウェブコンテンツアクセシビリティガイドライン (WCAG) 2.0 および 2.1 の**知覚可能**原則に概説されている達成基準に準拠するようにウェブコンテンツを作成する方法についての実用的なアドバイスを提供します。 知覚可能とは、ユーザーが自分の感覚の 1 つ以上を使用して何らかの方法でそれを知覚できなければならないということです。
 
-> **メモ:** 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
+> [!NOTE]
+> 知覚可能の W3C 定義とそのガイドラインおよび達成基準を読むには、[原則 1: 知覚可能 — 情報とユーザーインターフェイス・コンポーネントが、ユーザーが認識できる方法で提示可能である必要があります](https://www.w3.org/TR/WCAG21/#perceivable)（英語）を参照してください。
 
 ## ガイドライン 1.1 — 非テキストコンテンツのための代替テキストの提供
 
@@ -28,26 +31,21 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
         意味のある内容を伝える全ての画像は、適切な代替テキストを与えられるべきです。
       </td>
       <td>
-        <a href="/ja/docs/Learn/Accessibility/HTML#Text_alternatives"
+        <a href="/ja/docs/Learn/Accessibility/HTML#代替テキスト"
           >代替テキスト。</a
         >
       </td>
     </tr>
     <tr>
       <td>
-        複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセス可能な代替手段を用意するべきです。
-        <a href="/ja/docs/Web/HTML/Element/img#longdesc"><code>longdesc</code></a>
-        属性ではなく通常のリンクを使用してください。
+        複雑な画像や図表には、同じページ上またはリンク先のいずれかにアクセス可能な代替手段を用意するべきです。 <code>longdesc</code> 属性ではなく通常のリンクを使用してください。
       </td>
       <td>
         <p>
           テキストの説明や、アクセス可能なデータ表がうまくいくかもしれません（<a
             href="/ja/docs/Learn/HTML/Tables/Advanced"
             >HTML 表の高度な機能とアクセシビリティ</a
-          >を参照）。 <code>longdesc</code> 反対論については、<a
-            href="/ja/docs/Learn/Accessibility/HTML#Other_text_alternative_mechanisms"
-            >その他の代替テキストの仕組み</a
-          >も参照してください。
+          >を参照）。 <code>longdesc</code> 反対論については、 W3C の<a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>も参照してください。
         </p>
       </td>
     </tr>
@@ -58,17 +56,14 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
       <td>
         <p>
           静的キャプションの選択肢については<a
-            href="/ja/docs/Learn/Accessibility/HTML#Text_alternatives"
+            href="/ja/docs/Learn/Accessibility/HTML#代替テキスト"
             >代替テキスト</a
           >を、その他の選択肢については<a
-            href="/ja/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
-            >オーディオトランスクリプト</a
+            href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト"
+            >音声トランスクリプト</a
           >、
-          <a href="/ja/docs/Learn/Accessibility/Multimedia#Video_text_tracks"
-            >ビデオテキストトラック</a
-          >、<a
-            href="/ja/docs/Learn/Accessibility/Multimedia#Other_multimedia_content"
-            >その他のマルチメディアコンテンツ</a
+          <a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック"
+            >映像のテキストトラック</a
           >を参照してください。
         </p>
       </td>
@@ -94,7 +89,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
       <td>
         <p>
           装飾画像は CSS 背景画像を使用して実装する必要があります（<a
-            href="/ja/docs/Learn/CSS/Styling_boxes/Backgrounds"
+            href="/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
             >背景</a
           >を参照）。 {{htmlelement("img")}}
           要素を介して画像を含める必要がある場合は、空白の
@@ -130,16 +125,16 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
     <tr>
        <td>1.2.1 記録済みの音声のみおよび動画のみのコンテンツに代わるものを提供する (A)</td>
        <td>トランスクリプトは、録音済みの音声のみのメディアに提供するべきで、トランスクリプトまたは音声解説は、録画済みの動画のみのメディア（すなわち、サイレントビデオ）に提供するべきです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#オーディオトランスクリプト">オーディオトランスクリプト</a>を参照してください。 音声解説のチュートリアルはまだありません。</td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a>を参照してください。 音声解説のチュートリアルはまだありません。</td>
     </tr>
     <tr>
        <td>1.2.2 ウェブベースの動画にキャプションを付ける (A)</td>
        <td>ウェブ上に表示される動画（例えば、HTML 動画）には、キャプションを付けるべきです。 これは、動画の音声部分が聞こえない人々のためのものです。</td>
-       <td>HTML 動画のキャプションについては<a href="/ja/docs/Learn/Accessibility/Multimedia#ビデオテキストトラック">ビデオテキストトラックs</a>を、その他のテクノロジーについては<a href="/ja/docs/Learn/Accessibility/Multimedia#その他のマルチメディアコンテンツ">その他のマルチメディアコンテンツ</a>を参照してください。 <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a>（YouTube、英語）も参照してください。</td>
+       <td>HTML 動画のキャプションについては<a href="/ja/docs/Learn/Accessibility/Multimedia#映像のテキストトラック">映像のテキストトラックs</a>を参照してください。 <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a>（YouTube、英語）も参照してください。</td>
     <tr>
        <td>1.2.3 ウェブベースの動画にテキストトランスクリプトまたは音声解説を提供する (A)</td>
        <td>ウェブ上に提示される動画（例えば、HTML 動画）のためのテキストトランスクリプトまたは音声解説を提供するべきです。 これは、動画の視覚的な部分を見ることができず、音声だけではコンテンツ全体を把握できない人々のためのものです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#オーディオトランスクリプトaudio_transcripts">オーディオトランスクリプト</a> を参照してください。 音声解説のチュートリアルはまだありません。</td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 音声解説のチュートリアルはまだありません。</td>
     </tr>
     <tr>
        <td>1.2.4 生音声にキャプションを付ける (AA)</td>
@@ -164,12 +159,12 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
     <tr>
        <td>1.2.8 記録済みメディアの代替を提供する (AAA)</td>
        <td>動画を特徴とする全てのコンテンツには、わかりやすいテキストトランスクリプトを提供する必要があります。 例えば、見ている映画のスクリプトなどです。 これは、コンテンツを聴くことができない聴覚障碍者のためのものです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#オーディオトランスクリプトaudio_transcripts">オーディオトランスクリプト</a> を参照してください。 </td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 </td>
     </tr>
     <tr>
        <td> 1.2.9 生音声用のトランスクリプトを提供する (AAA)</td>
        <td>放送されている生音声のコンテンツのために、例えば、あなたが聞いている演劇やミュージカルのスクリプトのような説明文を提供するべきです。 これは、コンテンツを聴くことができない聴覚障碍者のためのものです。</td>
-       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#オーディオトランスクリプトaudio_transcripts">オーディオトランスクリプト</a> を参照してください。 </td>
+       <td>トランスクリプト情報については、<a href="/ja/docs/Learn/Accessibility/Multimedia#音声トランスクリプト">音声トランスクリプト</a> を参照してください。 </td>
     </tr>
  </tbody>
 </table>
@@ -201,15 +196,14 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
             要素を使用して明確に関連付けられて、スクリーンリーダーなどが拾うことができます。
           </li>
           <li>
-            画像の代替テキスト —
+            画像の代替テキスト。
             コンテンツ画像には、その画像の内容を明確に説明するテキストが含まれているべきです。
-            これは、プログラム的に関連付けることができます（例えば、<a href="/ja/docs/Web/HTML/Element/img#alt"><code>alt</code></a>
-            テキスト）。
+            これは、プログラム的に関連付けることができます（例えば、alt　テキスト）。
             そうでない場合は、関連付けるのは簡単です（例えば、それを説明し、そのすぐ隣に置きます）。
             これは、たとえあなたが画像を見ることができなくても、完全な意味がまだ推測できることを意味するはずです。
           </li>
           <li>
-            リスト —
+            リスト。
             リスト項目の順序が重要で、順序付きリストを使用するべき場合（{{htmlelement("ol")}}）。
           </li>
         </ul>
@@ -233,8 +227,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
       <td>1.3.2 重要なコンテンツの順序 (A)</td>
       <td>
         賢明で論理的な読み上げ順序は、たとえそれが独特な方法で視覚的に提示されていても、どんな内容に対しても決定しやすいはずです。
-        マークアップに関係なく、CSS
-        を使用して独特なレイアウトスタイルを作成することで、正しい意味論的要素（見出し、段落など）を使用して順序を明確にするべきです。
+        マークアップに関係なく、CSS を使用して独特なレイアウトスタイルを作成することで、正しい意味論的要素（見出し、段落など）を使用して順序を明確にするべきです。
       </td>
       <td>
         繰り返しますが、<a href="/ja/docs/Learn/Accessibility/HTML"
@@ -246,15 +239,14 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
       <td>1.3.3 感覚的性質 (A)</td>
       <td>
         <p>
-          コントロールを操作したり、コンテンツを理解したりするための指示は、単一の感覚には依存しません
-          —
+          コントロールを操作したり、コンテンツを理解したりするための指示は、単一の感覚には依存しません。
           これは、その感覚に関連する障碍を持つ人々、またはその感覚をサポートしていないデバイスにとってアクセスできないことを証明するかもしれません。
           だから、例えば、
         </p>
         <ul>
           <li>
             「続けるために丸いボタンをクリックしてください」<br />
-            それがあなたが押す必要があるボタンであることは明らかであるように、ボタンは明確にラベル付けされるべきです。
+            それがあなたが押す必要があるボタンであることは明らかであるように、ボタンは明確にラベル付けすべきです。
             複数のボタンがある場合は、それらの機能を区別するために全てが明確にラベル付けされていることを確認してください。
           </li>
           <li>
@@ -268,11 +260,10 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
             キーボードショートカットや、キーボードなどの手段でアクティブにできるボタンなどの代替手段を提供する必要があります。
           </li>
         </ul>
-        <div class="note">
+        <div class="note notecard">
           <p>
-            <strong>注:</strong>
-            色だけで指示を伝えることは関連していますが、異なるガイドラインでカバーされています
-            — 1.4.1。
+            <strong>メモ:</strong>
+            色だけで指示を伝えることは関連していますが、異なるガイドラインでカバーされています — 1.4.1。
           </p>
         </div>
       </td>
@@ -280,7 +271,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
     </tr>
     <tr>
       <td>
-        1.3.4 オリエンテーション (AA)
+        1.3.4 方向 (AA)
         <a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
           >2.1 で追加</a
         >（英語）
@@ -291,7 +282,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
       <td>
         <p>
           <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html"
-            >オリエンテーションを理解する</a
+            >方向を理解する</a
           >（英語）
         </p>
       </td>
@@ -304,10 +295,9 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
         >（英語）
       </td>
       <td>
-        <p></p>
         <p>
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
-            >53個の入力フィールド</a
+            >53 個の入力フィールド</a
           >（英語）のリストに従って、プログラム的にフィールドの目的を識別してください。
         </p>
       </td>
@@ -342,7 +332,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
 
 ## ガイドライン 1.4: 前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする
 
-このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色で（色のコントラストと指示を伝えるための色の使い方の両方が）、他の状況でも適用されます。
+このガイドラインは、コアコンテンツが背景や他の装飾から識別しやすいことを確認することに関するものです。 典型的な例は、色（[色のコントラスト](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)と指示を伝えるための[色の使い方](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color)の両方が）ですが、他の状況でも適用されます。
 
 <table class="standard-table">
   <thead>
@@ -360,11 +350,15 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
         </p>
       </td>
       <td>
+        <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color"
+          >色の使用</a
+        >、
         <a
-          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
-        >および<a
-          href="/ja/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
+        >、
+        <a
+          href="/ja/docs/Learn/Forms/How_to_structure_a_web_form#複数のラベル"
           >複数のラベル</a
         >を参照してください。
       </td>
@@ -376,10 +370,10 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
       </td>
       <td>
         <a
-          href="/ja/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
-          >ビデオプレーヤーのスタイリングの基本</a
+          href="/ja/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
+          >動画プレーヤーのスタイル設定の基本</a
         >に示すように、ネイティブの
-        <code>&#x3C;button></code>
+        <code>&lt;button&gt;</code>
         を使用してアクセス可能なキーボードコントロールを提供します。
       </td>
     </tr>
@@ -399,8 +393,10 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
         </ul>
       </td>
       <td>
-        <a
-          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast"
+        <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast"
+          >色のコントラスト</a
+        >と<a
+          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
         >を参照してください。
       </td>
@@ -435,11 +431,10 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
         </ul>
       </td>
       <td>
-        See
         <a
-          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
+          href="/ja/docs/Learn/Accessibility/CSS_and_JavaScript#色とそのコントラスト"
           >色とそのコントラスト</a
-        >.
+        >を参照してください。
       </td>
     </tr>
     <tr>
@@ -464,7 +459,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
             >）。
           </li>
           <li>
-            行の高さは、段落内ではテキストサイズの 1.5 倍以上（例えば、 `line-height: 1.5;`）、段落間ではテキストサイズの 2.25 倍以上（例えば、 `padding: 2.25rem;`）にするするべきです。
+            行の高さは、段落内ではテキストサイズの 1.5 倍以上（例えば、 <code>line-height: 1.5;</code>）、段落間ではテキストサイズの 2.25 倍以上（例えば、 <code>padding: 2.25rem;</code>）にするするべきです。
           </li>
           <li>
             テキストサイズが2倍になったときに、コンテンツのスクロールが必要になるべきではありません。
@@ -566,7 +561,7 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
           この達成基準では、満たす必要がある次の 3 つの条件を指定します。
         </p>
         <ul>
-          <li>却下可能（閉じたり取り除くことが可能）。</li>
+          <li>却下可能（閉じたり取り除いたりすることが可能）。</li>
           <li>
             ホバーリング可能（追加のコンテンツは、ポインターが上にあるときは消えません）。
           </li>

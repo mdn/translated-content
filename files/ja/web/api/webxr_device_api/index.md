@@ -150,7 +150,7 @@ WebXR 互換機器には、モーションと方向の追跡が可能な完全�
 
 - [移動、向き、モーション: WebXR の例](/ja/docs/Web/API/WebXR_Device_API/Movement_and_motion)
 - [入力と入力ソース](/ja/docs/Web/API/WebXR_Device_API/Inputs)
-- [ターゲティングとヒット検出](/ja/docs/Web/API/Web_Audio_API/Targeting)
+- [ターゲティングとヒット検出](/ja/docs/Web/API/WebXR_Device_API/Targeting)
 
 ### パフォーマンスとセキュリティ
 
@@ -237,7 +237,7 @@ WebXR 互換機器には、モーションと方向の追跡が可能な完全�
 
 ## 関連情報
 
-- [ウェブのグラフィック](/ja/docs/Web/Guide/Graphics)
+- [ウェブのグラフィック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [WebGL API](/ja/docs/Web/API/WebGL_API): ウェブ上の 2D および 3D グラフィックスの高速化
 - [キャンバス API](/ja/docs/Web/API/Canvas_API): ウェブのための 2D 描画

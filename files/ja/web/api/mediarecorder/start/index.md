@@ -15,7 +15,8 @@ l10n:
 
 ソースストリームが終了すると、`state` は `inactive` に設定され、データ収集は停止します。 最後の {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントが `MediaRecorder` に送られ、その後に {{domxref("MediaRecorder/stop_event", "stop")}} イベントが続きます。
 
-> **メモ:** ブラウザーが収録を開始または収録を続行できない場合は、{{domxref("DOMError")}} イベントを発生させ、続いて収集した `Blob` を含む {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントと {{domxref("MediaRecorder/stop_event", "stop")}} イベントを発生*させよう*とします。
+> [!NOTE]
+> ブラウザーが収録を開始または収録を続行できない場合は、{{domxref("DOMError")}} イベントを発生させ、続いて収集した `Blob` を含む {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントと {{domxref("MediaRecorder/stop_event", "stop")}} イベントを発生*させよう*とします。
 
 ## 構文
 

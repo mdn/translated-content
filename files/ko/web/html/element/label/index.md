@@ -36,7 +36,7 @@ slug: Web/HTML/Element/label
 
 - `for`
 
-  - : 같은 문서 내의 `<label>` 요소로서, [레이블 가능](/ko/docs/Web/Guide/HTML/Content_categories#레이블_가능)한 form-related 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). 레이블 가능한 요소일 때, `for` 속성값과 일치하는 `id`를 가진 문서의 첫 번째 요소는 그 label 요소의 *라벨 제어(labeled control)*라고 합니다. label을 지정할 수 없으면 `for` 속성은 영향을 미치지 않습니다. 문서의 뒷부분에 `id` 값과 일치하는 다른 요소들은 무시합니다.
+  - : 같은 문서 내의 `<label>` 요소로서, [레이블 가능](/ko/docs/Web/HTML/Content_categories#레이블_가능)한 form-related 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). 레이블 가능한 요소일 때, `for` 속성값과 일치하는 `id`를 가진 문서의 첫 번째 요소는 그 label 요소의 *라벨 제어(labeled control)*라고 합니다. label을 지정할 수 없으면 `for` 속성은 영향을 미치지 않습니다. 문서의 뒷부분에 `id` 값과 일치하는 다른 요소들은 무시합니다.
 
     > **참고:** `<label>` 요소는 `for` 속성과 제어control 요소를 동시에 가질 수 있습니다. 이 때 `for` 속성은 포함되어있는 제어control 요소를 가리키고 있어야 합니다.
 
@@ -160,7 +160,7 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>

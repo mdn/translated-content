@@ -1,57 +1,54 @@
 ---
-title: CanvasRenderingContext2D.filter
+title: CanvasRenderingContext2D：filter 属性
 slug: Web/API/CanvasRenderingContext2D/filter
+l10n:
+  sourceCommit: 592bea250bec05a3b641b0372cb7eddfd24616fb
 ---
 
-{{APIRef}} {{SeeCompatTable}}
+{{APIRef}}
 
-**`CanvasRenderingContext2D.filter`** 是 Canvas 2D API 提供模糊、灰度等过滤效果的属性。它类似于 CSS [`filter`](/zh-CN/docs/Web/CSS/filter) 属性，并且接受相同的函数。
+Canvas 2D API 的 **`CanvasRenderingContext2D.filter`** 属性是用来提供模糊、灰度等滤镜效果。它类似于 CSS {{cssxref("filter")}} 属性，并且接受相同的值。
 
-## 语法
+## 值
 
-```
-ctx.filter = "<filter-function1> [<filter-function2] [<filter-functionN]";
-ctx.filter = "none";
-```
+`filter` 属性接受字符串形式的值，可以是 `"none"`，或者是以下一个或多个滤镜函数。
 
-### Filter 函数
-
-filter 属性接受{{domxref("DOMString")}}字符串，可以包含一个或多个 filter 函数。
-
-- `url(<url>)`
-  - : `url()` 函数接受一个描述 SVG 过滤器的 XML 文件的位置，并且可以包含一个针对特殊过滤元素的锚点。
-- `blur(<length>)`
-  - : length：CSS 长度。给绘图提供一个高斯模糊。
-- `brightness(<percentage>)`
-  - : Percentage：百分比。给绘图提供一个线性乘法，调节亮度的高低。
-- `contrast(<percentage>)`
-  - : Percentage：百分比。调节图像的对比度。当数值为 `0%` 时，图像会完全变黑。当数值为 `100%` 时，图像没有任何变化。
-- `drop-shadow(<offset-x>, <offset-y>, <blur-radius>, <spread-radius>, <color>)`
-
-  - : 给绘图提供阴影。阴影事实上是在图像下面呈现出模糊的，通过对图像的透明遮罩进行偏移绘制出一种特殊的颜色，组合而成的效果。这个函数接受 5 个参数：
-
-    - `<offset-x>`: 查看 {{cssxref("&lt;length&gt;")}} 允许的单位。描述阴影的水平距离。
-    - `<offset-y>`: 查看 {{cssxref("&lt;length&gt;")}} 允许的单位。描述阴影的垂直距离。
-    - `<blur-radius>`: 数值越大，模糊就越大，从而使阴影范围变得更大颜色变得更浅。不允许为负数。
-    - `<spread-radius>`: 正数会使阴影扩张变大，负数会使阴影收缩。
-    - `<color>`: 查看 {{cssxref("&lt;color&gt;")}} 允许的关键字和标识符。
-
-- `grayscale(<percentage>)`
-  - : Percentage：百分比。将图像转换成灰色的图片。当值为 100% 时，图像会完全变成灰色。当值为 0% 时，图像没有任何变化。
-- `hue-rotate(<degree>)`
-  - : Degree：度数。对图像进行色彩旋转的处理。当值为 0 度时，图像没有任何变化。
-- `invert(<percentage>)`
-  - : Percentage：百分比。反色图像（呈现出照片底片的效果）。当值为 100% 时，图像会完全反色处理。当值为 0% 时，图像没有任何变化。
-- `opacity(<percentage>)`
-  - : Percentage：百分比。对图像进行透明度的处理。当值为 0% 时，图像完全透明。当值为 100% 时，图像没有任何变化。
-- `saturate(<percentage>)`
-  - : 对图像进行饱和度的处理。当值为 0% 时，图像完全不饱和。当值为 100% 时，图像没有任何变化。
-- `sepia(<percentage>)`
-  - : 对图像进行深褐色处理（怀旧风格）。当值为 100% 时，图像完全变成深褐色。当值为 0% 时，图像没有任何变化。
+- [`url()`](/zh-CN/docs/Web/CSS/url_function)
+  - : 一个 CSS {{cssxref("url_function", "url()")}}。接受任意一个可以解析为 SVG 滤镜元素的 URL。其可以是元素的 ID、外部 XML 文件的路径，甚至是一个数据 URL 编码的 SVG 值。
+- [`blur()`](/zh-CN/docs/Web/CSS/filter-function/blur)
+  - : 一个 CSS {{cssxref("&lt;length&gt;")}}。将高斯模糊应用于绘图。它定义了高斯函数的标准偏差值，即屏幕上多少像素混合在一起；因此，较大的值会产生更模糊的效果。值为 `0` 时保持输入不变。
+- [`brightness()`](/zh-CN/docs/Web/CSS/filter-function/brightness)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。将线性乘数应用于绘图，使其看起来更亮或更暗。低于 `100%` 的值会使图像变暗，而高于 `100%` 的值会使其变亮。值为 `0%` 会生成完全黑色的图像，值为 `100%` 保持输入不变。
+- [`contrast()`](/zh-CN/docs/Web/CSS/filter-function/contrast)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。调整绘图的对比度。值为 `0%` 会生成完全黑色的绘图，值为 `100%` 保持绘图不变。
+- [`drop-shadow()`](/zh-CN/docs/Web/CSS/filter-function/drop-shadow)
+  - : 将阴影效果应用于绘图。阴影效果实际上是绘图 alpha 蒙版的模糊、偏移版本，以特定颜色绘制，位于绘图下方。此函数最多接受五个参数：
+    - `<offset-x>`
+      - : 参见 {{cssxref("&lt;length&gt;")}} 允许的单位。指定阴影的水平偏移距离。
+    - `<offset-y>`
+      - : 参见 {{cssxref("&lt;length&gt;")}} 允许的单位。指定阴影的垂直偏移距离。
+    - `<blur-radius>`
+      - : 此值越大，模糊程度越高，因此阴影会变得更大更淡。不允许使用负值。
+    - `<color>`
+      - : 参见 {{cssxref("&lt;color&gt;")}} 允许的关键字和表示法。
+- [`grayscale()`](/zh-CN/docs/Web/CSS/filter-function/grayscale)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。将绘图转换为灰度。值为 `100%` 完全灰度化，值为 `0%` 保持绘图不变。
+- [`hue-rotate()`](/zh-CN/docs/Web/CSS/filter-function/hue-rotate)
+  - : 一个 CSS {{cssxref("&lt;angle&gt;")}}。对绘图应用色相旋转。值为 `0deg` 保持输入不变。
+- [`invert()`](/zh-CN/docs/Web/CSS/filter-function/invert)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。反转绘图。值为 `100%` 完全反转，值为 `0%` 保持绘图不变。
+- [`opacity()`](/zh-CN/docs/Web/CSS/filter-function/opacity)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。对绘图应用透明度。值为 `0%` 完全透明，值为 `100%` 保持绘图不变。
+- [`saturate()`](/zh-CN/docs/Web/CSS/filter-function/saturate)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。修改绘图饱和度。值为 `0%` 完全不饱和，值为 `100%` 保持绘图不变。
+- [`sepia()`](/zh-CN/docs/Web/CSS/filter-function/sepia)
+  - : 一个 CSS {{cssxref("&lt;percentage&gt;")}}。将绘图转换为深褐色。值为 `100%` 完全深褐色，值为 `0%` 保持绘图不变。
 - `none`
-  - : 没有使用 filter。
+  - : 不应用滤镜。初始值。
 
 ## 示例
+
+要查看这些示例，请确保使用支持此特性的浏览器；请参阅以下的兼容性表格。
 
 ### 应用模糊
 
@@ -78,6 +75,42 @@ ctx.fillText("Hello world", 50, 100);
 
 {{ EmbedLiveSample('应用模糊', 700, 180) }}
 
+### 应用多个滤镜
+
+你可以组合任意数量的滤镜。此示例将 `contrast`、`sepia` 和 `drop-shadow` 滤镜应用于一张犀牛的照片。
+
+#### HTML
+
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+<div style="display:none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg" />
+</div>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const image = document.getElementById("source");
+
+image.addEventListener("load", (e) => {
+  // 绘制未经滤镜处理的图像
+  ctx.drawImage(image, 0, 0, image.width * 0.6, image.height * 0.6);
+
+  // 绘制应用滤镜后的图像
+  ctx.filter = "contrast(1.4) sepia(1) drop-shadow(-9px 9px 3px #e81)";
+  ctx.drawImage(image, 400, 0, -image.width * 0.6, image.height * 0.6);
+});
+```
+
+#### 结果
+
+{{ EmbedLiveSample('应用多个滤镜', 700, 180) }}
+
 ## 规范
 
 {{Specifications}}
@@ -88,5 +121,6 @@ ctx.fillText("Hello world", 50, 100);
 
 ## 参见
 
-- 接口定义，{{domxref("CanvasRenderingContext2D")}}
+- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - CSS {{cssxref("filter")}}
+- CSS {{cssxref("&lt;filter-function&gt;")}}

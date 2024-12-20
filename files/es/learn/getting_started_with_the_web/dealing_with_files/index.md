@@ -5,7 +5,7 @@ slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensible en tu computadora local, asegurarte de que puedan comunicarse entre sí y hacer que todo su contenido se vea bien antes de que eventualmente [los cargues en un servidor](/es/Learn/Getting_started_with_the_web/Publishing_your_website). El _manejo de archivos_ analiza algunos problemas que debes tener en cuenta, para que puedas configurar una estructura de archivos adecuada para tu sitio web.
+Un sitio web consta de muchos archivos: texto del contenido, código, hojas de estilo, contenido multimedia, etc. Cuando estás creando un sitio web, necesitas ensamblar estos archivos en una estructura sensible en tu computadora local, asegurarte de que puedan comunicarse entre sí y hacer que todo su contenido se vea bien antes de que eventualmente [los cargues en un servidor](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website). El _manejo de archivos_ analiza algunos problemas que debes tener en cuenta, para que puedas configurar una estructura de archivos adecuada para tu sitio web.
 
 ## ¿Dónde debería estar tu sitio web en tu computadora?
 
@@ -32,11 +32,12 @@ A continuación, veamos qué estructura debería tener tu sitio de prueba. Las c
 3. Directorio **`styles`**: Este directorio contendrá el código CSS que se utiliza para aplicar estilo al contenido (por ejemplo, configurar el texto y los colores de fondo). Crea un directorio llamado `styles`, dentro de tu directorio `pruebasitio`.
 4. Directorio **`scripts`**: Este directorio contendrá todo el código JavaScript utilizado para agregar funcionalidad interactiva a tu sitio (por ejemplo, botones que cargan datos cuando se hace clic en ellos). Crea un directorio llamado `scripts`, dentro de tu directorio `pruebasitio`.
 
-> **Nota:** En las computadoras con Windows, es posible que tengas problemas para ver los nombres de los archivos, porque de manera predeterminada, Windows tiene activada una opción llamada **Ocultar extensiones para tipos de archivos conocidos**. Generalmente, la puedes desactivar yendo al Explorador de Windows, seleccionando la opción **Opciones de directorio...**, desmarcando la casilla de verificación **Ocultar extensiones para tipos de archivo conocidos** y luego haciendo clic en **Aceptar**. Para obtener información más específica sobre tu versión de Windows, puedes buscar en la web.
+> [!NOTE]
+> En las computadoras con Windows, es posible que tengas problemas para ver los nombres de los archivos, porque de manera predeterminada, Windows tiene activada una opción llamada **Ocultar extensiones para tipos de archivos conocidos**. Generalmente, la puedes desactivar yendo al Explorador de Windows, seleccionando la opción **Opciones de directorio...**, desmarcando la casilla de verificación **Ocultar extensiones para tipos de archivo conocidos** y luego haciendo clic en **Aceptar**. Para obtener información más específica sobre tu versión de Windows, puedes buscar en la web.
 
 ## Rutas de archivo
 
-Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de archivo entre ellos, básicamente una ruta, para que un archivo sepa dónde está otro. Para demostrarlo, insertaremos un poco de HTML en nuestro archivo `index.html` y haremos que muestre la imagen que elegiste en el artículo [¿Cómo se verá tu sitio web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#Imágenes)
+Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de archivo entre ellos, básicamente una ruta, para que un archivo sepa dónde está otro. Para demostrarlo, insertaremos un poco de HTML en nuestro archivo `index.html` y haremos que muestre la imagen que elegiste en el artículo [¿Cómo se verá tu sitio web?](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#imágenes)
 
 1. Copia la imagen que elegiste anteriormente en tu directorio `images`.
 2. Abre tu archivo `index.html` e inserta el siguiente código en el archivo exactamente como se muestra. Por ahora, no te preocupes por lo que significa todo esto; veremos las estructuras con más detalle más adelante en la serie.
@@ -69,7 +70,8 @@ Algunas reglas generales para las rutas de archivo:
 
 Por ahora, esto es todo lo que necesitas saber.
 
-> **Nota:** El sistema de archivos de Windows tiende a utilizar barras invertidas, no barras diagonales, p. ej. `C:\windows`. Esto no importa en HTML, incluso si estás desarrollando tu sitio web en Windows, debes usar barras diagonales en tu código.
+> [!NOTE]
+> El sistema de archivos de Windows tiende a utilizar barras invertidas, no barras diagonales, p. ej. `C:\windows`. Esto no importa en HTML, incluso si estás desarrollando tu sitio web en Windows, debes usar barras diagonales en tu código.
 
 ## ¿Qué más se debería hacer?
 

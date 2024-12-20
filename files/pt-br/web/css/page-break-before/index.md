@@ -5,7 +5,8 @@ slug: Web/CSS/page-break-before
 
 {{CSSRef}}
 
-> **Warning:** Esta propriedade foi substituída pela propriedade {{cssxref("break-before")}}.
+> [!WARNING]
+> Esta propriedade foi substituída pela propriedade {{cssxref("break-before")}}.
 
 A propriedade CSS **`page-break-before`** ajusta as "quebras de páginas" _antes_ do elemento atual.
 

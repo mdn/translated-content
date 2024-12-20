@@ -34,14 +34,16 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
-> **Note :** si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
+> [!NOTE]
+> Si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
 - **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
 - **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte dans la boîte de contenu.
 
-> **Note :** Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
+> [!NOTE]
+> Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
 
 ## Fontes
 
@@ -62,7 +64,8 @@ Passons directement aux propriétés pour le style des polices. Dans cet exemple
 </p>
 ```
 
-> **Note :** (NdT : Extrait et traduction _approximative_ de la chanson _Tommy the Cat_ du groupe [Primus)](<https://fr.wikipedia.org/wiki/Primus_(groupe)>)
+> [!NOTE]
+> (NdT : Extrait et traduction _approximative_ de la chanson _Tommy the Cat_ du groupe [Primus)](<https://fr.wikipedia.org/wiki/Primus_(groupe)>)
 
 Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) sur Github (voir aussi [le code source](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)).
 
@@ -70,7 +73,7 @@ Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/cs
 
 La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
 
-`color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Couleurs), par exemple :
+`color` accepte toutes les [unités de couleur des CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), par exemple :
 
 ```css
 p {
@@ -128,9 +131,11 @@ La liste des polices web vraiment sûres changera à mesure que les systèmes d'
 | Trebuchet MS    | sans-serif     | Vous devriez être prudent avec l'utilisation de cette police - elle n'est pas aussi largement disponible sur les systèmes d'exploitation des mobiles.                                                                                         |
 | Verdana         | sans-serif     |                                                                                                                                                                                                                                               |
 
-> **Note :** Le site [cssfontstack.com](https://www.cssfontstack.com/) met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.
+> [!NOTE]
+> Le site [cssfontstack.com](https://www.cssfontstack.com/) met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.
 
-> **Note :** Il y a moyen de télécharger une police personnalisée avec une page Web ; cela permet une utilisation personnalisée de la police comme vous le souhaitez : **les polices web**. C'est un peu plus complexe, et nous en discuterons dans un article séparé plus loin dans le module.
+> [!NOTE]
+> Il y a moyen de télécharger une police personnalisée avec une page Web ; cela permet une utilisation personnalisée de la police comme vous le souhaitez : **les polices web**. C'est un peu plus complexe, et nous en discuterons dans un article séparé plus loin dans le module.
 
 #### Polices par défaut
 
@@ -160,7 +165,8 @@ Dans ce cas, le navigateur débute la lecture de la liste et cherche à voir si 
 
 Indiquer un nom de police générique approprié en fin de liste est une bonne idée : si aucune des polices listées n'est disponible, le navigateur peut au‑moins fournir quelque chose de convenable. Soulignons ce point : les paragraphes seront rendus avec la police serif par défaut du navigateur si aucune autre option n'est disponible — généralement Time New Roman — mais ce ne sera pas un bon substitut à une police sans-serif !
 
-> **Note :** Les noms de police comportant plus d'un mot — comme `Trebuchet MS` — doivent être entourés de guillemets, par exemple `"Trebuchet MS"`.
+> [!NOTE]
+> Les noms de police comportant plus d'un mot — comme `Trebuchet MS` — doivent être entourés de guillemets, par exemple `"Trebuchet MS"`.
 
 #### Un exemple de font-family
 
@@ -194,7 +200,7 @@ p {
 
 ### Taille de la police de caractères
 
-Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
+Dans l'article [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
 
 - `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
@@ -343,12 +349,13 @@ text-shadow: 4px 4px 5px red;
 
 Les 4 propriétés sont les suivantes :
 
-1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
+1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
 2. Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
-3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size) des CSS.
-4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
+3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size) des CSS.
+4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
 
-> **Note :** Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
+> [!NOTE]
+> Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
 
 #### Ombres multiples
 
@@ -409,7 +416,8 @@ p {
 
 {{ EmbedLiveSample('', '100%', 250) }}
 
-> **Note :** Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
+> [!NOTE]
+> Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
 
 ## Mise en page du texte
 
@@ -474,7 +482,7 @@ p {
 
 ### Hauteur de ligne
 
-La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne de texte — elle peut prendre la plupart des [unités de longueur et de taille](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Length_and_size), mais elle peut également prendre une valeur sans unité, qui agit comme un multiplicateur et est considérée habituellement comme la meilleure option — la valeur de {{cssxref ("font-size")}} est multipliée par ce facteur pour obtenir la valeur de `line-height`. Le corps de texte semble généralement plus agréable et est plus facile à lire lorsque les lignes sont espacées ; la hauteur de ligne recommandée est d'environ 1,5-2 (double interligne). Donc, pour définir une hauteur de ligne de texte égale à 1,5 fois la hauteur de la police, vous utiliserez ceci :
+La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne de texte — elle peut prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), mais elle peut également prendre une valeur sans unité, qui agit comme un multiplicateur et est considérée habituellement comme la meilleure option — la valeur de {{cssxref ("font-size")}} est multipliée par ce facteur pour obtenir la valeur de `line-height`. Le corps de texte semble généralement plus agréable et est plus facile à lire lorsque les lignes sont espacées ; la hauteur de ligne recommandée est d'environ 1,5-2 (double interligne). Donc, pour définir une hauteur de ligne de texte égale à 1,5 fois la hauteur de la police, vous utiliserez ceci :
 
 ```css
 line-height: 1.5;
@@ -530,7 +538,7 @@ p {
 
 ### Espacement entre les lettres et les mots
 
-Les propriétés {{cssxref ("letter-spacing")}} et {{cssxref ("word-spacing")}} permettent de définir l'espacement entre les lettres et les mots de votre texte. Vous ne les utiliserez pas très souvent, mais vous pourriez les utiliser pour obtenir une certaine apparence ou pour améliorer la lisibilité d'une police particulièrement dense. Ils peuvent prendre la plupart des [unités de longueur et de taille](/fr/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
+Les propriétés {{cssxref ("letter-spacing")}} et {{cssxref ("word-spacing")}} permettent de définir l'espacement entre les lettres et les mots de votre texte. Vous ne les utiliserez pas très souvent, mais vous pourriez les utiliser pour obtenir une certaine apparence ou pour améliorer la lisibilité d'une police particulièrement dense. Ils peuvent prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size).
 
 Si nous appliquons les paramètres suivants à la première ligne des éléments {{htmlelement("p")}} dans notre exemple :
 

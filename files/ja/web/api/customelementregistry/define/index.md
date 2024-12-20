@@ -28,7 +28,7 @@ customElements.define(name, constructor, options);
 
   - : 要素の定義の仕方を制御するオブジェクト。現在は、次の 1 つのオプションのみに対応しています。
 
-- `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
+    - `extends`: 拡張する組み込み要素の名前を示す文字列。*カスタム組み込み要素*を作成するのに使われる。
 
 ### 返値
 
@@ -136,7 +136,8 @@ customElements.define("popup-info", PopUpInfo);
                                     numbers on the back of your card."></popup-info>
 ```
 
-> **メモ:** 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
+> [!NOTE]
+> 自律カスタム要素のコンストラクターは {{domxref("HTMLElement")}} を継承していなければなりません。
 
 ### カスタム組み込み要素
 

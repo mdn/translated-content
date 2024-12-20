@@ -22,7 +22,8 @@ selector {
 
 関数は CSS のプロパティ値と同様の形式で複数の引数を取ることができます。ホワイトスペースは許可されていますが、括弧内では省略可能です。関数表記によっては、複数の引数がカンマで区切られていたり、空白を使用していたりします。
 
-> **メモ:** CSS 値関数はプロパティ値として使用しますので、擬似クラスと混同しないでください。[関数形式の擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)、[言語擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#言語擬似クラス)、または一部の[ツリー構造擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#ツリー構造擬似クラス)は引数を必要としますが、値関数ではありません。[条件付きアットルール](/ja/docs/Web/CSS/At-rule#conditional_group_rules)も値関数ではありません。括弧はグループ化のために使用しています。
+> [!NOTE]
+> CSS 値関数はプロパティ値として使用しますので、擬似クラスと混同しないでください。[関数形式の擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)、[言語擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#言語擬似クラス)、または一部の[ツリー構造擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#ツリー構造擬似クラス)は引数を必要としますが、値関数ではありません。[条件付きアットルール](/ja/docs/Web/CSS/At-rule#conditional_group_rules)も値関数ではありません。括弧はグループ化のために使用しています。
 
 ## 座標変換関数
 

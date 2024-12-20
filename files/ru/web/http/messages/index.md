@@ -64,7 +64,7 @@ HTTP запросы - это сообщения, отправляемые кли
 Тела можно грубо разделить на две категории:
 
 - Одноресурсные тела (Single-resource bodies), состоящие из одного отдельного файла, определяемого двумя заголовками: {{HTTPHeader("Content-Type")}} и {{HTTPHeader("Content-Length")}}.
-- [Многоресурсные тела (Multiple-resource bodies](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)), состоящие из множества частей, каждая из которых содержит свой бит информации. Они обычно связаны с [HTML-формами](/ru/docs/Web/Guide/HTML/Forms).
+- [Многоресурсные тела (Multiple-resource bodies](/ru/docs/Web/HTTP/MIME_types#multipartform-data)), состоящие из множества частей, каждая из которых содержит свой сегмент информации. Они обычно связаны с [HTML-формами](/ru/docs/Learn/Forms).
 
 ## Ответы HTTP
 
@@ -98,7 +98,7 @@ HTTP запросы - это сообщения, отправляемые кли
 
 - Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла известной длины, определяемые двумя заголовками: {{HTTPHeader("Content-Type")}} и {{HTTPHeader("Content-Length")}}.
 - Одноресурсные тела (Single-resource bodies), состоящие из отдельного файла неизвестной длины, разбитого на небольшие части (chunks) с заголовком {{HTTPHeader("Transfer-Encoding")}}, значением которого является `chunked`.
-- [Многоресурсные тела (Multiple-resource bodies)](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data), состоящие из многокомпонентного тела, каждая часть которого содержит свой сегмент информации. Они относительно редки.
+- [Многоресурсные тела (Multiple-resource bodies)](/ru/docs/Web/HTTP/MIME_types#multipartform-data), состоящие из многокомпонентного тела, каждая часть которого содержит свой сегмент информации. Они относительно редки.
 
 ## Фреймы HTTP/2
 

@@ -5,7 +5,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
 
-Это 8й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
+Это 8й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 
 Уничтожение кирпичей действительно классно, но, чтобы быть ещё более удивительным, игра должна присуждать очки за каждый кирпич, в который попадает игрок, и подсчитывать общий балл.
 
@@ -97,10 +97,11 @@ function collisionDetection() {
 
 {{JSFiddleEmbed("https://jsfiddle.net/yumetodo/2m74vr9r/1/","","395")}}
 
-> **Примечание:** добавьте больше очков за каждый разбитый кирпич, выведите количество набранных очков в конце игры.
+> [!NOTE]
+> добавьте больше очков за каждый разбитый кирпич, выведите количество набранных очков в конце игры.
 
 ## Следующие шаги
 
-На данный момент игра выглядит довольно хорошо. В следующем уроке вы расширите привлекательность игры, добавив [Mouse controls](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Mouse_controls).
+На данный момент игра выглядит довольно хорошо. В следующем уроке вы расширите привлекательность игры, добавив [Mouse controls](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

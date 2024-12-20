@@ -2,7 +2,7 @@
 title: Firefox 126 for developers
 slug: Mozilla/Firefox/Releases/126
 l10n:
-  sourceCommit: 8262255fae143b8e5d337bdedbe35a6aaa6cb1ef
+  sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
 ---
 
 {{FirefoxSidebar}}
@@ -68,11 +68,11 @@ l10n:
 
 #### WebDriver BiDi
 
-- ネットワーク要求の傍受を特定のトップレベルブラウジングコンテキストに限定するための `contexts` 引数を、`network.addIntercept` コマンドに追加しました ([Firefox bug 1884935](https://bugzil.la/1882260))。
-- `session.subscribe` および `session.unsubscribe` コマンドで、`events` または `contexts` 引数の値が空の配列であるときに `invalid argument` エラーが発生するようになりました ([Firefox bug 1884935](https://bugzil.la/1887871))。
-- `storage.getCookies` コマンドの実装を、Gecko の既定の Cookie の動作に合わせて更新しました。これは CDP 実装だけが設定すると想定していた、設定項目 `network.cookie.cookieBehavior` のユーザー設定値を削除できます ([Firefox bug 1884935](https://bugzil.la/1879503))。
-- もはや必要ないため、`browsingContext.locateNodes` コマンドの `ownership` および `sandbox` 引数を削除しました ([Firefox bug 1884935](https://bugzil.la/1838152))。
-- `session.new` コマンドで capability が指定されていないときのエラーメッセージを改善しました ([Firefox bug 1885495](https://bugzil.la/1838152))。
+- ネットワーク要求の傍受を特定のトップレベル閲覧コンテキストに限定するための `contexts` 引数を、`network.addIntercept` コマンドに追加しました ([Firefox bug 1882260](https://bugzil.la/1882260))。
+- `session.subscribe` および `session.unsubscribe` コマンドで、`events` または `contexts` 引数の値が空の配列であるときに `invalid argument` エラーが発生するようになりました ([Firefox bug 1887871](https://bugzil.la/1887871))。
+- `storage.getCookies` コマンドの実装を、Gecko の既定の Cookie の動作に合わせて更新しました。これは CDP 実装だけが設定すると想定していた、設定項目 `network.cookie.cookieBehavior` のユーザー設定値を削除できます ([Firefox bug 1879503](https://bugzil.la/1879503))。
+- もはや必要ないため、`browsingContext.locateNodes` コマンドの `ownership` および `sandbox` 引数を削除しました ([Firefox bug 1884935](https://bugzil.la/1884935))。
+- `session.new` コマンドで capability が指定されていないときのエラーメッセージを改善しました ([Firefox bug 1838152](https://bugzil.la/1838152))。
 
 ## アドオン開発者向けの変更点一覧
 
@@ -80,6 +80,7 @@ l10n:
 - {{WebExtAPIRef("runtime.MessageSender")}} 型が `origin` プロパティを含むようになりました。これはメッセージや接続要求が、接続を開始したページやフレームを確認することを可能にします。これはオリジンが URL から明らかでないときに、オリジンを信頼できるかを明確にするのに役立ちます ([Firefox bug 1787379](https://bugzil.la/1787379))。
 - `"webRequestAuthProvider"` パーミッションをサポートしました。これは Manifest V3 の {{WebExtAPIRef("webRequest.onAuthRequired")}} のパーミッション要求について、Chrome と互換性があります ([Firefox bug 1820569](https://bugzil.la/1820569))。
 - [`options_page` マニフェストキー](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) を、[`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) キーの別名として提供します。これは拡張機能に対して、Chrome とのよりよい互換性を提供します ([Firefox bug 1816960](https://bugzil.la/1816960))。
+- {{WebExtAPIRef("tabs.captureVisibleTab")}} メソッドが `activeTab` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) でも使用可能になり、Chrome や Safari との互換性を提供します ([Firefox bug 1784920](https://bugzil.la/1784920))。
 
 ### その他
 

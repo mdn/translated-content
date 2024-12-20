@@ -55,6 +55,6 @@ console.log(uint8); // Uint8Array [ 0, 0, 0, 1, 2, 3, 0, 0 ]
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

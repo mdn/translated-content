@@ -47,19 +47,19 @@ l10n:
 
 ## 브라우저 개발자 도구 사용 방법
 
-[브라우저 개발자 도구란](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 기사는 다양한 브라우저 및 플랫폼에서 도구를 사용하는 방법을 설명하는 최신 안내서입니다. 대부분 특정 브라우저에서 개발하도록 선택할 수 있으므로, 해당 브라우저에 포함된 도구에 가장 익숙해지지만, 다른 브라우저에서 해당 도구에 액세스하는 방법을 알아야 합니다. 여러 브라우저 간에 다른 렌더링이 표시되는 경우 도움이 됩니다.
+[브라우저 개발자 도구란](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 기사는 다양한 브라우저 및 플랫폼에서 도구를 사용하는 방법을 설명하는 최신 안내서입니다. 대부분 특정 브라우저에서 개발하도록 선택할 수 있으므로, 해당 브라우저에 포함된 도구에 가장 익숙해지지만, 다른 브라우저에서 해당 도구에 액세스하는 방법을 알아야 합니다. 여러 브라우저 간에 다른 렌더링이 표시되는 경우 도움이 됩니다.
 
-또한 브라우저마다 개발자 도구에서 집중하는 부분이 다르다는 것을 알 수 있습니다. 예를 들어, Firefox에는 CSS 레이아웃으로 시각적으로 작업하기 위한 훌륭한 도구가 있으며, [그리드 레이아웃](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), [Flexbox](/ko/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) 및 [Shapes](/ko/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)를 검사하고 편집할 수 있습니다. 그러나, 모든 브라우저마다 유사한 기본 도구가 있습니다. 이러한 기본 도구는 예를 들면 페이지의 요소에 적용된 속성 및 값을 검사하고 편집기에서 변경하는 데 사용됩니다.
+또한 브라우저마다 개발자 도구에서 집중하는 부분이 다르다는 것을 알 수 있습니다. 예를 들어, Firefox에는 CSS 레이아웃으로 시각적으로 작업하기 위한 훌륭한 도구가 있으며, [그리드 레이아웃](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) 및 [Shapes](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)를 검사하고 편집할 수 있습니다. 그러나, 모든 브라우저마다 유사한 기본 도구가 있습니다. 이러한 기본 도구는 예를 들면 페이지의 요소에 적용된 속성 및 값을 검사하고 편집기에서 변경하는 데 사용됩니다.
 
 이 수업에서는 CSS 작업을 위한 Firefox 개발자 도구의 유용한 기능을 살펴봅니다. 이를 위해 [예제 파일](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html)을 사용하겠습니다. 따라하고 싶다면, 새 탭에 로드하고 위에 링크된 기사에 설명된 대로 개발자 도구를 여세요.
 
 ## DOM vs 소스 보기
 
-새로운 사용자가 개발자 도구에서 혼동할 수 있는 것은 웹 페이지의 [소스 보기](/ko/docs/Tools/View_source) 를 보거나 서버에 넣은 HTML 파일을 볼 때 표시되는 것과 개발자 도구의 [HTML 창](/ko/docs/Tools/Page_Inspector/UI_Tour#HTML_pane)에서 보이는 것의 차이입니다. 소스 보기를 통해 볼 수 있는 것과 거의 비슷해 보이지만 몇 가지 차이점이 있습니다.
+새로운 사용자가 개발자 도구에서 혼동할 수 있는 것은 웹 페이지의 [소스 보기](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) 를 보거나 서버에 넣은 HTML 파일을 볼 때 표시되는 것과 개발자 도구의 [HTML 창](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#html_pane)에서 보이는 것의 차이입니다. 소스 보기를 통해 볼 수 있는 것과 거의 비슷해 보이지만 몇 가지 차이점이 있습니다.
 
 렌더링 된 DOM에서 브라우저가 잘못 작성된 HTML을 수정했을 수 있습니다. `<h2>`를 열고 `</h3>`로 닫는 등의 요소를 잘못 닫은 경우, 브라우저는 수행하려는 작업을 파악하고 DOM의 HTML은 `<h2>`를 `</h2>`로 올바르게 닫습니다. 또한 브라우저에서는 모든 HTML을 표준화하고, DOM은 JavaScript로 변경한 내용도 표시합니다.
 
-소스 보기는 서버에 저장된 HTML 소스 코드입니다. 개발자 도구의 [HTML tree](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree)는 특정 시점에 브라우저가 렌더링하는 내용을 정확하게 보여주므로, 실제로 어떤 일이 일어나고 있는지 파악할 수 있습니다.
+소스 보기는 서버에 저장된 HTML 소스 코드입니다. 개발자 도구의 [HTML tree](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html_tree)는 특정 시점에 브라우저가 렌더링하는 내용을 정확하게 보여주므로, 실제로 어떤 일이 일어나고 있는지 파악할 수 있습니다.
 
 ## 적용된 CSS 검사
 
@@ -67,7 +67,7 @@ l10n:
 
 ![개발자 도구가 열려 있는 이 튜토리얼의 예제 페이지](inspecting1.png)
 
-HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)를 보면 해당 요소에 적용된 CSS 속성과 값을 볼 수 있습니다. `box1` 클래스에 직접 적용된 규칙과 상자가 조상으로부터 상속받은 CSS(이 경우 `<body>`)를 볼 수 있습니다. 이것은 예상하지 못한 일부 CSS가 적용되는 경우에 유용합니다. 아마도 부모 요소에서 상속되고 있고 이 요소의 컨텍스트에서 덮어쓰는 규칙을 추가해야 합니다.
+HTML 오른쪽의 [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules_view)를 보면 해당 요소에 적용된 CSS 속성과 값을 볼 수 있습니다. `box1` 클래스에 직접 적용된 규칙과 상자가 조상으로부터 상속받은 CSS(이 경우 `<body>`)를 볼 수 있습니다. 이것은 예상하지 못한 일부 CSS가 적용되는 경우에 유용합니다. 아마도 부모 요소에서 상속되고 있고 이 요소의 컨텍스트에서 덮어쓰는 규칙을 추가해야 합니다.
 
 또한 단축 속성을 확장하는 기능도 유용합니다. 이 예에서는 `margin` 단축 속성이 사용되었습니다.
 
@@ -97,13 +97,14 @@ HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)
 
 ![개발자 도구 패널, 규칙에 새 속성을 추가하고, 폰트 자동 완성을 열고 있습니다.](inspecting3-font-size.png)
 
-> **참고:** 규칙 보기에는 다른 유용한 기능도 있습니다. 예를 들어 유효하지 않은 값이 있는 선언에는 줄이 그어 표시됩니다. 자세한 내용은 [CSS 검사 및 수정](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)에서 확인할 수 있습니다.
+> [!NOTE]
+> 규칙 보기에는 다른 유용한 기능도 있습니다. 예를 들어 유효하지 않은 값이 있는 선언에는 줄이 그어 표시됩니다. 자세한 내용은 [CSS 검사 및 수정](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)에서 확인할 수 있습니다.
 
 ## 박스 모델 이해
 
 이전 강의에서 [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)과 변경되는 대체 박스 모델이 있다는 사실에 대해 논의했습니다. 요소의 크기가 요소에 제공한 크기와 패딩 및 테두리를 기반으로 계산되는 방식입니다. 개발자 도구는 요소의 크기가 어떻게 계산되는지 이해하는 데 실제로 도움이 될 수 있습니다.
 
-[레이아웃 보기](/ko/docs/Tools/Page_Inspector/UI_Tour#Layout_view)는 선택한 요소의 박스 모델 다이어그램과 함께 요소가 배치되는 방식을 변경하는 속성 및 값에 대한 설명이 표시됩니다. 여기에는 요소에 명시적으로 사용하지 않았지만, 초기 값이 설정된 속성에 대한 설명이 포함됩니다.
+[레이아웃 보기](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout_view)는 선택한 요소의 박스 모델 다이어그램과 함께 요소가 배치되는 방식을 변경하는 속성 및 값에 대한 설명이 표시됩니다. 여기에는 요소에 명시적으로 사용하지 않았지만, 초기 값이 설정된 속성에 대한 설명이 포함됩니다.
 
 이 패널에서 세부 속성 중 하나는 요소가 사용하는 박스 모델을 제어하는 `box-sizing` 속성입니다.
 
@@ -113,7 +114,7 @@ HTML 오른쪽의 [Rules view](/ko/docs/Tools/Page_Inspector/UI_Tour#Rules_view)
 
 ![개발자 도구의 레이아웃 섹션](inspecting4-box-model.png)
 
-> **참고:** [박스 모델 검사](/ko/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)에서 자세히 알아보십시오.
+> **참고:** [박스 모델 검사](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)에서 자세히 알아보십시오.
 
 ## 특이성 문제 해결
 

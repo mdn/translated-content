@@ -51,7 +51,7 @@ console.log(newString); // Should print "The weather is warm"
 
 [`replace()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 함수 MDN 레퍼런스 페이지를 본다면, [return value](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value) 라는 섹션을 보게 될 것입니다. 어떤 값이 함수에 의해 반환되는지 이해하고 아는 것은 몹시 유용합니다. 어디든지 가능한 곳에 이 정보를 사용해 볼 수 있도록 말입니다.
 
-어떤 함수들은 어떠한 값도 반환하지 않습니다. (이 경우, 우리의 레퍼런스 페이지는 반환 값을 [`void`](/ko/docs/Web/JavaScript/Reference/Operators/void) 나 [`undefined`](/ko/docs/Glossary/undefined)로 보여줍니다.) 예를 들면, 지난 문서에서 우리가 만든 [`displayMessage()`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) 함수에서, 어떤 특정한 값도 함수가 호출되었을 때 반환되지 않습니다. 이 함수는 단지 화면 어딘가에 박스가 나타나게 만들 뿐입니다 — 그게 전부입니다!
+어떤 함수들은 어떠한 값도 반환하지 않습니다. (이 경우, 우리의 레퍼런스 페이지는 반환 값을 [`void`](/ko/docs/Web/JavaScript/Reference/Operators/void) 나 [`undefined`](/ko/docs/Glossary/Undefined)로 보여줍니다.) 예를 들면, 지난 문서에서 우리가 만든 [`displayMessage()`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) 함수에서, 어떤 특정한 값도 함수가 호출되었을 때 반환되지 않습니다. 이 함수는 단지 화면 어딘가에 박스가 나타나게 만들 뿐입니다 — 그게 전부입니다!
 
 일반적으로, 반환 값은 함수가 어떤 종류의 계산에서의 중간 단계인 곳에서 사용됩니다. 최종 결과를 얻기 위해, 몇몇 값들은 함수에 의해 계산될 필요가 있을 수 있습니다. 함수가 값을 계산한 이후에, 결과가 변수에 저장될 수 있도록 함수는 계산 결과를 반환합니다; 그리고 다음 단계의 계산에서 그 변수를 사용할 수 있습니다.
 
@@ -169,7 +169,8 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. 코드를 저장하고, 브라우저에서 로드한 후, 시도해 보세요.
 
-> **참고:** 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)도 보세요), 우리에게 도움을 요청해 보세요.
+> [!NOTE]
+> 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 [GitHub에 있는 완성된 버전](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)과 비교해 보거나 ([실제로 작동하는 모습](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)도 보세요), 우리에게 도움을 요청해 보세요.
 
 ## 이제 여러분의 차례입니다!
 

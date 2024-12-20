@@ -109,7 +109,7 @@ int16View[0] = 32;
 console.log("現在32位元陣列的欄位0是" + int32View[0]);
 ```
 
-輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/JavaScript_typed_arrays/ArrayBufferView#Typed_array_subclasses) 也是同樣的情形。
+輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typed_array_subclasses) 也是同樣的情形。
 
 ### 處理複雜的資料結構
 
@@ -139,7 +139,8 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 舉例來說，可以用 `amountDueView[0]` 存取 amountDue。
 
-> **備註：** C 結構的 [data structure alignment](http://en.wikipedia.org/wiki/Data_structure_alignment) 是與使用平台有關，須小心這些填充上的差異。
+> [!NOTE]
+> C 結構的[資料結構對齊](https://zh.wikipedia.org/wiki/数据结构对齐)是與使用平台有關，須小心這些填充上的差異。
 
 ### Conversion to normal arrays
 
@@ -154,8 +155,8 @@ normalArray.constructor === Array;
 
 ## 參見
 
-- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/zh-TW/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
 - [`StringView` – a C-like representation of strings based on typed arrays](/zh-TW/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
-- [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
+- [型別陣列——瀏覽器中的二進位資料](https://web.dev/articles/webgl-typed-arrays)
 - {{Glossary("Endianness")}}

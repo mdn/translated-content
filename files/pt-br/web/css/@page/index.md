@@ -11,7 +11,8 @@ A regra CSS `@page` é utilizada para modificar algumas propriedades CSS quando 
 
 A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxref("CSSPageRule")}}.
 
-> **Nota:** A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, and `vmax`. Enquanto isso, não use eles junto com a regra @page.
+> [!NOTE]
+> A W3C está analisando como lidar com unidades viewport-related {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, and `vmax`. Enquanto isso, não use eles junto com a regra @page.
 
 ## Sintaxe
 
@@ -23,7 +24,7 @@ A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxre
 
 ## Exemplos
 
-Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes) de `@page` por exemplo.
+Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) de `@page` por exemplo.
 
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}

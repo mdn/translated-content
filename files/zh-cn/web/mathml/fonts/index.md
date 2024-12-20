@@ -24,7 +24,8 @@ l10n:
 5. 打开 `static_otf.zip` ZIP 压缩文件，然后进入 `static_otf` 目录。在那里的文件中，你将找到一个 `STIXTwoMath-Regular` 文件。
 6. 打开 `STIXTwoMath-Regular` 文件，然后点击**安装**按钮。如果需要，你也可以对目录中的其他字体文件执行相同操作。
 
-> **备注：** Windows 上默认安装了 _Cambria Math_ 字体，应该可以确保相对良好的 MathML 渲染效果。
+> [!NOTE]
+> Windows 上默认安装了 _Cambria Math_ 字体，应该可以确保相对良好的 MathML 渲染效果。
 
 ### macOS
 
@@ -34,7 +35,8 @@ l10n:
 2. 解压缩 ZIP 文件，进入 `latinmodern-math-1959` 目录，然后进入 `otf` 目录。你将找到一个 `latinmodern-math` 字体文件。
 3. 双击 `latinmodern-math` 字体文件，然后点击打开的窗口中的**安装字体**按钮。
 
-> **备注：** 如果你使用的是 macOS Ventura（版本 13）或更高版本，则已经预装 _STIX Two Math_，你可以跳过以下步骤。
+> [!NOTE]
+> 如果你使用的是 macOS Ventura（版本 13）或更高版本，则已经预装 _STIX Two Math_，你可以跳过以下步骤。
 
 按照以下步骤安装 _STIX Two Math_ 字体：
 
@@ -42,7 +44,8 @@ l10n:
 2. 打开 `static_otf.zip` ZIP 压缩文件，然后进入 `static_otf` 目录。在那里的文件中，你将找到一个 `STIXTwoMath-Regular.otf` 文件。
 3. 打开 `STIXTwoMath-Regular.otf` 文件，然后点击打开的窗口中的**安装字体**按钮。如果需要，你也可以对目录中的其他字体文件执行相同操作。
 
-> **备注：** 自 OS X Lion（版本 10.7）开始，已预安装了 _STIX_ 的废弃版本。虽然一些浏览器可以使用它，但强烈建议按照上述说明进行操作以实现最佳的数学渲染效果。
+> [!NOTE]
+> 自 OS X Lion（版本 10.7）开始，已预安装了 _STIX_ 的废弃版本。虽然一些浏览器可以使用它，但强烈建议按照上述说明进行操作以实现最佳的数学渲染效果。
 
 ### Linux
 
@@ -109,7 +112,8 @@ fc-cache -sf
 
 你必须使用 [MathML 字体插件](https://addons.mozilla.org/firefox/addon/mathml-fonts/)。
 
-> **备注：** Noto Sans Math 提供了良好的 Unicode 数学符号的覆盖，并且 [Google 计划添加数学布局特性的支持](https://github.com/notofonts/math/issues/14#issuecomment-1161414446)。
+> [!NOTE]
+> Noto Sans Math 提供了良好的 Unicode 数学符号的覆盖，并且 [Google 计划添加数学布局特性的支持](https://github.com/notofonts/math/issues/14#issuecomment-1161414446)。
 
 ### 其他系统
 

@@ -9,7 +9,7 @@ JavaScript supporte nativement un ensemble d'instructions. Ces instructions perm
 
 Les [Références de JavaScript](/fr/docs/Web/JavaScript/Reference/Statements) contiennent plus de détails sur les différentes instructions décrites dans ce chapitre.
 
-Toute expression est une instruction, voir la page [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators) pour plus d'informations sur les expressions. En JavaScript, le point-virgule (`;`) est utilisé afin de séparer des instructions dans le code.
+Toute expression est une instruction, voir la page [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators) pour plus d'informations sur les expressions. En JavaScript, le point-virgule (`;`) est utilisé afin de séparer des instructions dans le code.
 
 ## Les blocs d'instruction
 
@@ -36,7 +36,8 @@ while (x < 10) {
 
 Ici, `{ x++; }` représente le bloc.
 
-> **Note :** En JavaScript, avant ECMAScript 2015 (aussi appelé ES6), les blocs **n'introduisaient pas de nouvelles portées**. Les variables introduites dans le bloc avec l'instruction `var` font partie de la portée de la fonction englobante ou du script. Les effets de leur définition persistent en dehors du bloc. Les blocs seuls utilisés avec `var` (et non `let`) pourront laisser penser que ce bloc se comportera comme en C ou en Java. Par exemple :
+> [!NOTE]
+> En JavaScript, avant ECMAScript 2015 (aussi appelé ES6), les blocs **n'introduisaient pas de nouvelles portées**. Les variables introduites dans le bloc avec l'instruction `var` font partie de la portée de la fonction englobante ou du script. Les effets de leur définition persistent en dehors du bloc. Les blocs seuls utilisés avec `var` (et non `let`) pourront laisser penser que ce bloc se comportera comme en C ou en Java. Par exemple :
 >
 > ```js
 > var x = 1;
@@ -129,7 +130,8 @@ Les valeurs suivantes sont évaluées à `false` (également connues sous le nom
 
 Les autres valeurs, y compris les objets, seront équivalents à `true`.
 
-> **Attention :** Ne pas confondre les valeurs booléennes « primitives » `true` et `false` avec les valeurs créées grâce à un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
+> [!WARNING]
+> Ne pas confondre les valeurs booléennes « primitives » `true` et `false` avec les valeurs créées grâce à un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
 >
 > Par exemple, on aura :
 >
@@ -252,7 +254,8 @@ throw {
 };
 ```
 
-> **Note :** Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc `catch`.
+> [!NOTE]
+> Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc `catch`.
 
 ```js
 // On crée le constructeur pour cet objet
@@ -340,7 +343,8 @@ try {
 }
 ```
 
-> **Note :** Quand on souhaite afficher des erreurs dans la console, on privilégiera [`console.error()`](/fr/docs/Web/API/Console/error) plutôt que [`console.log()`](/fr/docs/Web/API/Console/log). En effet, cette première méthode est plus adaptée et indiquera plus d'informations.
+> [!NOTE]
+> Quand on souhaite afficher des erreurs dans la console, on privilégiera [`console.error()`](/fr/docs/Web/API/console/error_static) plutôt que [`console.log()`](/fr/docs/Web/API/console/log_static). En effet, cette première méthode est plus adaptée et indiquera plus d'informations.
 
 #### Le bloc `finally`
 

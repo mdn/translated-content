@@ -43,7 +43,7 @@ event.preventDefault();
 </html>
 ```
 
-Вы можете посмотреть работу `preventDefault` в действии [здесь](/samples/domref/dispatchEvent.html).
+Вы можете посмотреть работу `preventDefault` в действии [здесь](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
 
 В следующем примере некорректный ввод останавливается и вводимый символ не добавляется в поле с `preventDefault()`.
 
@@ -99,11 +99,12 @@ function checkName(evt) {
 
 Вызов `preventDefault` на любой стадии выполнения потока событий отменяет событие, а это означает, что любое действие по умолчанию обычно принимается реализацией, как результат события, которое не произойдёт.
 
-> **Примечание:** В Gecko 6.0, вызов `preventDefault()` приводит к {{ domxref("event.defaultPrevented") }} к переходу значения в состояние `True`.
+> [!NOTE]
+> В Gecko 6.0, вызов `preventDefault()` приводит к {{ domxref("event.defaultPrevented") }} к переходу значения в состояние `True`.
 
-Вы можете использовать [event.cancelable](/ru/docs/Web/API/event.cancelable) чтобы проверить, является ли событие отменяемым. Вызов `preventDefault` для неотменяемых событий не имеет никакого эффекта.
+Вы можете использовать [event.cancelable](/ru/docs/Web/API/Event/cancelable) чтобы проверить, является ли событие отменяемым. Вызов `preventDefault` для неотменяемых событий не имеет никакого эффекта.
 
-`preventDefault` не останавливает дальнейшее распространение событий на DOM. Для этого следует использовать [event.stopPropagation](/ru/docs/Web/API/event.stopPropagation).
+`preventDefault` не останавливает дальнейшее распространение событий на DOM. Для этого следует использовать [event.stopPropagation](/ru/docs/Web/API/Event/stopPropagation).
 
 ## Спецификации
 

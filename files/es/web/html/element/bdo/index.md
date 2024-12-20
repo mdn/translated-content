@@ -9,15 +9,15 @@ slug: Web/HTML/Element/bdo
 
 **bdo** Bi-Directional Overriding=Anulación de bidireccionalidad.
 
-- La dirección de escritura del texto está relacionada con el idioma y se declara con el atributo dir. Pero en ocasiones esto no es suficiente, entonces entra en juego el elemento [bdo](/es/HTML/Elemento/bdo) (anulación del algoritmo bidireccional) que al anular el algoritmo permite un control total de la direccionalidad.
+- La dirección de escritura del texto está relacionada con el idioma y se declara con el atributo dir. Pero en ocasiones esto no es suficiente, entonces entra en juego el elemento [bdo](/es/docs/Web/HTML/Element/bdo) (anulación del algoritmo bidireccional) que al anular el algoritmo permite un control total de la direccionalidad.
 
   - : **Sus etiquetas son**: \<bdo> y \</bdo> (ambas obligatorias).
 
     **Crea una caja**: En línea.
 
-    **Está definido como**: [Elemento especial](/es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Está definido como**: [Elemento especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
-    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
+    **Puede contener**: Texto y/o cero o más elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
 #### Atributos
 
@@ -229,7 +229,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

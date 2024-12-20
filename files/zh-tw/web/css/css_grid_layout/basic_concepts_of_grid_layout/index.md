@@ -77,7 +77,7 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 {{ EmbedLiveSample('格線容器', '200', '330') }}
 
-在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
+在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
@@ -414,7 +414,7 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '220', '410') }}
 
-Don't forget that you can use the [Grid Inspector](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ## Grid Cells
 
@@ -544,7 +544,8 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 In the level 1 grid specification there is a feature called _subgrid_ which would let us create nested grids that use the track definition of the parent grid.
 
-> **備註：** Subgrids are not yet implemented in any browsers, and the specification is subject to change.
+> [!NOTE]
+> Subgrids are not yet implemented in any browsers, and the specification is subject to change.
 
 In the current specification, we would edit the above nested grid example to use `display: subgrid` rather than `display: grid`, then remove the track definition. The nested grid will use the parent grid tracks to lay out items.
 

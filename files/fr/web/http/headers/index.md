@@ -18,7 +18,7 @@ Les en-têtes peuvent être groupés selon leur contexte&nbsp;:
 - [Les en-têtes de réponse](/fr/docs/Glossary/Response_header)
   - : Contiennent des informations supplémentaires au sujet de la réponse (par exemple son emplacement), ou au sujet du serveur qui la fournit.
 - [Les en-têtes de représentation](/fr/docs/Glossary/Representation_header)
-  - : Contiennent des informations à propos du corps de la ressource, comme son [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types), ou le type de compression ou d'encodage appliqué.
+  - : Contiennent des informations à propos du corps de la ressource, comme son [type MIME](/fr/docs/Web/HTTP/MIME_types), ou le type de compression ou d'encodage appliqué.
 - [Les en-têtes de charge utile (<i lang="en">payload headers</i>)](/fr/docs/Glossary/Payload_header)
   - : Contiennent des informations indépendantes de la représentation sur la charge utile, comme la longueur du contenu ou l'encodage utilisé pour le transport.
 
@@ -233,7 +233,7 @@ Les en-têtes de requêtes qui suivent ne sont pas à strictement parler des en-
 - [`Sec-Purpose`](/fr/docs/Web/HTTP/Headers/Sec-Purpose)
   - : Indique le but de la requête lorsque celui-ci n'est pas une utilisation immédiate par l'agent utilisateur. Cet en-tête prend actuellement une seule valeur possible&nbsp;: `prefetch`, qui indique que la ressource est récupérée de façon préventive, pour préparer une éventuelle navigation future vers celle-ci.
 - [`Service-Worker-Navigation-Preload`](/fr/docs/Web/HTTP/Headers/Service-Worker-Navigation-Preload)
-  - : Un en-tête de requête envoyé de façon préventive pour récupérer (via [`fetch()`](/fr/docs/Web/API/fetch)) une ressource au démarrage d'un <i lang="en">service worker</i>. La valeur, définie via [`NavigationPreloadManager.setHeaderValue()`](/fr/docs/Web/API/NavigationPreloadManager/setHeaderValue), peut être utilisée afin d'informer un serveur qu'une ressource différente (que celle fournie pour une opération `fetch()` normale) devrait être renvoyée.
+  - : Un en-tête de requête envoyé de façon préventive pour récupérer (via [`fetch()`](/fr/docs/Web/API/Window/fetch)) une ressource au démarrage d'un <i lang="en">service worker</i>. La valeur, définie via [`NavigationPreloadManager.setHeaderValue()`](/fr/docs/Web/API/NavigationPreloadManager/setHeaderValue), peut être utilisée afin d'informer un serveur qu'une ressource différente (que celle fournie pour une opération `fetch()` normale) devrait être renvoyée.
 
 ## Évènements émis par le serveur
 

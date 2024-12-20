@@ -11,7 +11,8 @@ slug: Web/API/AnalyserNode/smoothingTimeConstant
 
 在技术术语中，我们应用一个 [布莱克曼窗](http://webaudio.github.io/web-audio-api/#blackman-window) 并随着时间推移去平滑值。大部分情况下，默认值是较好的。
 
-> **备注：** 如果设置了 0\~1 范围外的值，将会抛出异常`INDEX_SIZE_ERR`.
+> [!NOTE]
+> 如果设置了 0\~1 范围外的值，将会抛出异常`INDEX_SIZE_ERR`.
 
 ## 语法
 
@@ -29,7 +30,7 @@ analyser.smoothingTimeConstant = 1;
 
 下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).
 
-更多的例子/信息，查看 [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 `如果你对 smoothingTimeConstant()` 的效果好奇，可以尝试克隆上面的例子并设置 "`analyser.smoothingTimeConstant = 0;"` 代替。你会发现值的变化更加快速。
 
@@ -84,4 +85,4 @@ draw();
 
 ## 相关内容
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

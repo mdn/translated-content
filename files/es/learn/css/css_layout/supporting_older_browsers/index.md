@@ -93,7 +93,8 @@ En el ejemplo siguiente hemos especificado tres elementos de flotación `<div>` 
 
 {{ EmbedLiveSample('Example1', '100%', '200') }}
 
-> **Nota:** La propiedad {{cssxref ("clear")}} tampoco tiene efecto una vez que el elemento al que se le aplica se convierte en un elemento de cuadrícula, por lo que podrías tener una compaginación con un pie `clear`, que luego pase a ser un elemento de compaginación en cuadrícula.
+> [!NOTE]
+> La propiedad {{cssxref ("clear")}} tampoco tiene efecto una vez que el elemento al que se le aplica se convierte en un elemento de cuadrícula, por lo que podrías tener una compaginación con un pie `clear`, que luego pase a ser un elemento de compaginación en cuadrícula.
 
 ### Métodos de soluciones alternativas
 
@@ -204,13 +205,11 @@ En versiones anteriores de navegadores, puedes encontrar versiones anteriores de
 
 La especificación CSS Grid se prototipó inicialmente en Internet Explorer 10; esto significa que si bien IE10 e IE11 no tienen compatibilidad de cuadrícula _moderna_, sí tienen una versión de compaginación en cuadrícula, que es muy útil, aunque diferente de la especificación moderna que documentamos en este sitio. Las implementaciones de IE10 y 11 tienen el prefijo `-ms-`, lo que significa que puedes usarlo para estos navegadores y los navegadores que no sean de Microsoft lo ignorarán. Sin embargo, Edge todavía comprende la sintaxis anterior, así que ten cuidado de que todo se sobrescriba de forma segura en tu cuadrícula de CSS moderna.
 
-La guía de [Mejora progresiva en la compaginación en cuadrícula](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) puede ayudarte a comprender la versión de la cuadrícula de Internet Explorer, y hemos incluido algunos enlaces útiles adicionales al final de este artículo. Sin embargo, a menos que tengas una gran cantidad de visitantes con versiones anteriores de Internet Explorer, puede que te resulte mejor centrarte en crear una reserva que funcione para todos los navegadores no compatibles.
+La guía de [Mejora progresiva en la compaginación en cuadrícula](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) puede ayudarte a comprender la versión de la cuadrícula de Internet Explorer, y hemos incluido algunos enlaces útiles adicionales al final de este artículo. Sin embargo, a menos que tengas una gran cantidad de visitantes con versiones anteriores de Internet Explorer, puede que te resulte mejor centrarte en crear una reserva que funcione para todos los navegadores no compatibles.
 
 ## Pruebas con navegadores antiguos
 
-Dado que la mayoría de los navegadores ya son compatibles con Flexbox y Grid, puede resultar en efecto difícil hacer pruebas con navegadores más antiguos. Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Herramientas_y_pruebas/Cross_browser_testing).
-
-También puedes descargar e instalar máquinas virtuales y ejecutar versiones anteriores de navegadores en un entorno de tu propio ordenador. Tener acceso a versiones anteriores de Internet Explorer es particularmente útil, y para ese propósito, Microsoft ha puesto a disposición de los usuarios una [variedad de máquinas virtuales de descarga gratuita](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Están disponibles para los sistemas operativos Mac, Windows y Linux, por lo que resultan una manera excelente de hacer pruebas con los navegadores Windows antiguos y modernos, incluso si no utilizas una computadora con sistema Windows.
+Una forma es utilizar una herramienta de prueba en línea como Sauce Labs, como se detalla en el módulo de [comprobación de compatibilidad entre navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
 ## Resumen
 
@@ -219,8 +218,8 @@ Ahora tienes el conocimiento para usar con confianza técnicas como Grid y Flexb
 ## Ver también
 
 - [Uso de consultas de propiedades en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [Compatibilidad con versiones anteriores de Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [Compaginación en cuadrícula CSS y mejora progresiva](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Compatibilidad con versiones anteriores de Flexbox](/es/docs/conflicting/Glossary/Flexbox)
+- [Compaginación en cuadrícula CSS y mejora progresiva](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Uso de CSS Grid: Compatibilidad con navegadores sin comportamiento de cuadrícula](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [Un tutorial que usa las versiones IE10 y 11 de Grid](https://24ways.org/2012/css3-grid-layout/)
 - [¿Debo tratar de usar la implementación IE10 de Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)

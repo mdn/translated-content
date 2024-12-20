@@ -137,7 +137,7 @@ L'entrée a une bordure en pointillés rouge vif lorsqu'elle n'est pas valide, e
 
 ### Validation selon une expression régulière
 
-Une autre fonctionnalité de validation très courante est l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern), qui attend une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.
+Une autre fonctionnalité de validation très courante est l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern), qui attend une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_expressions) comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.
 
 Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base de leur fonctionnement :
 
@@ -190,9 +190,11 @@ Dans cet exemple, l'élément {{HTMLElement("input")}} accepte l'une des deux va
 
 Maintenant, essayez de changer la valeur à l'intérieur de l'attribut `pattern` suivant certains exemples vus plus haut et regardez comment les valeurs entrées en sont affectées pour rester valides. Écrivez vos propres textes et voyez comment vous vous en sortez ! Restez dans le domaine des fruits dans la mesure du possible, afin que vos exemples aient du sens !
 
-> **Note :** Certains types d'éléments {{HTMLElement("input")}} n'ont pas besoin d'un attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern) pour être validés. Spécifier le type `email`, par exemple, valide la valeur saisie par rapport à une expression régulière correspondant à une adresse e‑mail bien formée (ou une liste d'adresses e‑mail séparées par des virgules si elle possède l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple). Comme autre exemple, les champs de type `url` vont automatiquement nécessiter une URL correctement formée.
+> [!NOTE]
+> Certains types d'éléments {{HTMLElement("input")}} n'ont pas besoin d'un attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern) pour être validés. Spécifier le type `email`, par exemple, valide la valeur saisie par rapport à une expression régulière correspondant à une adresse e‑mail bien formée (ou une liste d'adresses e‑mail séparées par des virgules si elle possède l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple). Comme autre exemple, les champs de type `url` vont automatiquement nécessiter une URL correctement formée.
 
-> **Note :** L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern).
+> [!NOTE]
+> L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern).
 
 ### Limitation de la taille des entrées
 
@@ -412,7 +414,7 @@ Propriétés de l'API de validation des contraintes
 
 | Méthodes                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement [`invalid`](/fr//docs/Web/API/HTMLInputElement/invalid_event) sur cet élément.                                                                                                                                                                                                                                                                                         |
+| `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement [`invalid`](/fr_docs/Web/API/HTMLInputElement/invalid_event) sur cet élément.                                                                                                                                                                                                                                                                                          |
 | `setCustomValidity(message)` | Ajoute un message d'erreur personnalisé à l'élément&nbsp;; si vous définissez un message d'erreur personnalisé, l'élément est considéré comme invalide, et le message spécifié est affiché. Cela vous permet d'utiliser du code JavaScript pour établir une erreur de validation autre que celles offertes par l'API standard des contraintes de validation. Le message est affiché à l'utilisateur lorsque le problème est rapporté. Si l'argument est une chaîne de caractères vide, l'erreur personnalisée est considérée comme effacée. |
 
 Pour les anciens navigateurs, il existe [une prothèse d'émulation (_polyfill_) comme Hyperform](https://hyperform.js.org/), pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.
@@ -439,7 +441,7 @@ Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. 
 
 Ce formulaire simple utilise l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) pour désactiver la validation automatique par le navigateur ; cela permet donc à notre script d'avoir le contrôle sur la validation. Toutefois, cela ne désactive la prise en charge par l'API de validation des contraintes, ni l'application des pseudo-classes CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} et {{cssxref(":out-of-range")}}. Cela signifie que, même si le navigateur ne vérifie pas automatiquement la validité du formulaire avant l'envoi des données, vous pouvez toujours effectuer cette validation et définir l'apparence du formulaire par vous-même.
 
-L'attribut [`aria-live`](/fr/docs/Accessibility/ARIA/ARIA_Live_Regions) garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.
+L'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.
 
 ##### CSS
 
@@ -557,7 +559,7 @@ L'API de validation des contraintes fournit un outil puissant pour gérer la val
 
 ### Valider des formulaires sans API intégrée
 
-Il arrive parfois, comme c'est le cas avec des navigateurs anciens ou de [widgets personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets), de ne pas pouvoir (ou vouloir) utiliser l'API de validation des contraintes. Dans ce cas, vous pourrez toujours utiliser JavaScript pour valider votre formulaire. Valider un formulaire est plus une question d'interface utilisateur que de réelle validation des données.
+Il arrive parfois, comme c'est le cas avec des navigateurs anciens ou de [widgets personnalisés](/fr/docs/Learn/Forms/How_to_build_custom_form_controls), de ne pas pouvoir (ou vouloir) utiliser l'API de validation des contraintes. Dans ce cas, vous pourrez toujours utiliser JavaScript pour valider votre formulaire. Valider un formulaire est plus une question d'interface utilisateur que de réelle validation des données.
 
 Pour valider un formulaire, vous devez vous poser un certain nombre de questions:
 
@@ -596,7 +598,7 @@ Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonct
 </form>
 ```
 
-Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA) est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
+Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Web/Accessibility/ARIA) est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
 
 ##### CSS
 

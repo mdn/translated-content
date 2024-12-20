@@ -15,7 +15,7 @@ Construir juegos con HTML5 te da ventajas, como:
 
 La tecnología en si es multiplataforma, por lo que puedes escribir el código una vez y apuntarle a múltiples dispositivos. Esto puede ir desde teléfonos inteligentes o tabletas de gama baja, portátiles y ordenadores de escritorio, a smart TVs, relojes o incluso una nevera si puede manejar un navegador lo suficientemente moderno.
 
-No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/es/docs/Games/Techniques/Publishing_games/Game_promotion) y [Monetizar](/es/docs/Games/Techniques/Publishing_games/Game_monetization).
+No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/es/docs/Games/Publishing_games/Game_promotion) y [Monetizar](/es/docs/Games/Publishing_games/Game_monetization).
 
 ### Actualizaciones instantáneas
 
@@ -65,7 +65,8 @@ También puedes subir y publicar tu juego directamente en diferentes tipos de ti
 
 Veamos cuáles son las opciones disponibles con respecto a los mercados/tiendas disponibles para diferentes plataformas y sistemas operativos.
 
-> **Nota:** Estas son las plataformas de distribución más populares, pero esto no quiere decir que sean la única opción. En lugar de intentar sumar tu juego a los miles de otros en la tienda de iOS, también puedes intentar encontrar un nicho y promocionar directamente al público que esté interesado en tus juegos. Tu creatividad es crítica aquí.
+> [!NOTE]
+> Estas son las plataformas de distribución más populares, pero esto no quiere decir que sean la única opción. En lugar de intentar sumar tu juego a los miles de otros en la tienda de iOS, también puedes intentar encontrar un nicho y promocionar directamente al público que esté interesado en tus juegos. Tu creatividad es crítica aquí.
 
 ### Tiendas web
 
@@ -94,7 +95,7 @@ Después de que hayas cubierto Steam, hay un montón de rumores alrededor de ini
 
 La web es la primera y la mejor opción para juegos de HTML5, pero si quieres buscar una audiencia más amplia y distribuir tu juego en un ecosistema cerrado, todavía puedes hacerlo empaquetándolo.
 
-Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/es/docs/) o [CocoonIO](/es/docs/) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
+Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/es/docs/Web) o [CocoonIO](/es/docs/Web) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
 
 ### Herramientas disponibles
 

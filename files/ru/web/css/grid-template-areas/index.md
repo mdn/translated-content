@@ -111,5 +111,5 @@ grid-template-areas: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Области грид-шаблона](/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_
-- Видеоурок: _[Grid Template Areas](http://gridbyexample.com/video/grid-template-areas/)_
+- Руководство по грид-раскладке: _[Области грид-шаблона](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)_
+- Видеоурок: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_

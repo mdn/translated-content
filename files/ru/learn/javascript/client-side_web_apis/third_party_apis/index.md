@@ -17,13 +17,12 @@ API, которые мы рассмотрели до сих пор, встрое
 
 Давайте снова посмотрим на наш пример карты (см. [исходный код на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html); [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), и используем его для иллюстрации того, как сторонние API отличаются от API-интерфейсов браузера.
 
-> **Примечание:** По умолчанию использование сторонних API на вашем сайте позволит им отслеживать файлы cookie своих доменов, устанавливать файлы cookie в исходное состояние, получать заголовки ссылок, определяющие посещаемые страницы, и разрешать им выполнять JavaScript на страницах, на которых они загружаются с теми же разрешениями (например, выполнить запросы AJAX на ваши серверы с теми же кукисами сеанса). Должны быть оценены вопросы регулирования, безопасности и конфиденциальности.
-
-> **Примечание:** Возможно, вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn#Getting_our_code_examples), в этом случае вы можете просто искать репо для файлов примеров, которые вам нужны в каждом разделе.
+> [!NOTE]
+> Возможно вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn#получение_наших_примеров_кода), в этом случае вы можете просто искать репозиторий с файлами примеров, которые вам нужны в каждом разделе.
 
 ### Они находятся на сторонних серверах
 
-API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation/Using_geolocation), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/ru/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/ru/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/ru/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
+API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation_API), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/ru/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/ru/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/ru/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) { ... });
@@ -58,11 +57,12 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
 Это вся информация, которую API Карт Google требует для построения простой карты. Сервер, к которому вы подключаетесь, обрабатывает все сложные вещи, такие как отображение правильных фрагментов карты для отображаемой области и т. д.
 
-> **Примечание:** Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
+> [!NOTE]
+> Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
 
 ### Разрешения обрабатываются по-разному
 
-Безопасность API-интерфейсов браузеров, как правило, обрабатывается запросами разрешения, как [описано в нашей первой статье](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#They_have_additional_security_mechanisms_where_appropriate). Целью этого является то, что пользователь знает, что происходит на сайтах, которые он посещает, и с меньшей вероятностью может стать жертвой того, кто использует API, злонамеренно.
+Безопасность API-интерфейсов браузеров, как правило, обрабатывается запросами разрешения, как [описано в нашей первой статье](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). Целью этого является то, что пользователь знает, что происходит на сайтах, которые он посещает, и с меньшей вероятностью может стать жертвой того, кто использует API, злонамеренно.
 
 Сторонние API имеют немного другую систему разрешений - они, как правило, используют ключевые коды, чтобы позволить разработчикам получить доступ к функциям API. Просмотрите URL-адрес библиотеки API Карт Google, с которой мы связались:
 
@@ -80,7 +80,7 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
 
 Теперь когда мы рассмотрели пример API Карт Google и посмотрели, как он работает, добавим ещё несколько функций, чтобы показать, как использовать некоторые другие функции API.
 
-1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn#Getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
+1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn#getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
 2. Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
 
    1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
@@ -90,8 +90,6 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
    5. Нажмите кнопку _Enable_.
    6. Нажмите _Create credentials_, затем выберите _API key_.
    7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
-
-   > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
 
 3. Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
 
@@ -130,9 +128,11 @@ Adding a marker (icon) at a certain point on the map is easy — you just need t
 
    Here we specify the icon property value as the `iconBase` plus the icon filename, to create the complete URL. Now try reloading your example and you'll see a custom marker displayed on your map!
 
-> **Примечание:** See [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) for more information.
+> [!NOTE]
+> See [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) for more information.
 
-> **Примечание:** See [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) to find out what other icons are available, and see what their reference names are. Their file name will be the icon name they display when you click on them, with ".png" added on the end.
+> [!NOTE]
+> See [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) to find out what other icons are available, and see what their reference names are. Their file name will be the icon name they display when you click on them, with ".png" added on the end.
 
 ### Displaying a popup when the marker is clicked
 
@@ -203,7 +203,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 1. Let's request a key for the "Article Search API" — fill in the form, selecting this as the API you want to use.
 2. Next, wait a few minutes, then get the key from your email.
-3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn#Getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
@@ -279,9 +279,11 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 &fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **Примечание:** You can find more details of what URL parameters can be included in the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json).
+> [!NOTE]
+> You can find more details of what URL parameters can be included in the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json).
 
-> **Примечание:** The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn/HTML/Forms/Form_validation) for more details on how these work.
+> [!NOTE]
+> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn/Forms/Form_validation) for more details on how these work.
 
 ### Requesting data from the API
 
@@ -300,7 +302,7 @@ fetch(url)
   });
 ```
 
-Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
+Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/Window/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
 
 ### Displaying the data
 

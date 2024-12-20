@@ -16,7 +16,8 @@ WeakSet 中的值一定是可被垃圾回收的值。大多数{{Glossary("Primit
 - `WeakSet` **只能是对象和符号**的集合，它不能像 {{jsxref("Set")}} 那样包含任何类型的任意值。
 - `WeakSet` 持*弱引用*：`WeakSet` 中对象的引用为*弱*引用。如果没有其他的对 `WeakSet` 中对象的引用存在，那么这些对象会被垃圾回收。
 
-  > **备注：** 这也意味着集合中没有存储当前值的列表。`WeakSet` 是不可枚举的。
+  > [!NOTE]
+  > 这也意味着集合中没有存储当前值的列表。`WeakSet` 是不可枚举的。
 
 ### 用例：检测循环引用
 
@@ -67,8 +68,8 @@ execRecursively((obj) => console.log(obj), foo);
 
 - {{jsxref("Object/constructor", "WeakSet.prototype.constructor")}}
   - : 创建了该实例对象的构造函数。对于 `WeakSet` 实例，初始值是 {{jsxref("WeakSet/WeakSet", "WeakSet")}} 构造函数。
-- `WeakSet.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakSet"`。该属性被 {{jsxref("Object.prototype.toString()")}} 所使用。
+- `WeakSet.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"WeakSet"`。该属性被 {{jsxref("Object.prototype.toString()")}} 所使用。
 
 ## 实例方法
 

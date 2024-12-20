@@ -30,7 +30,8 @@ Such blocks are naturally called **declaration blocks** and declarations inside 
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **備註：** The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/zh-TW/docs/Web/HTML/Global_attributes#style) attribute.
+> [!NOTE]
+> The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/zh-TW/docs/Web/HTML/Global_attributes#style) attribute.
 
 ## CSS rulesets
 
@@ -40,9 +41,10 @@ CSS allows this by associating conditions with declarations blocks. Each (valid)
 
 ![css syntax - ruleset.png](ruleset.png)
 
-As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/zh-TW/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) algorithm.
+As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/zh-TW/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) algorithm.
 
-> **備註：** It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
+> [!NOTE]
+> It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
 >
 > This leads to an important consequence: if one single basic selector is invalid, like when using an unknown pseudo-element or pseudo-class, the whole _selector_ is invalid and therefore the entire rule is ignored (as invalid too).
 
@@ -71,7 +73,7 @@ There is another group of statements - the **nested statements**. These are stat
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/inheritance)
+  - [繼承](/zh-TW/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)

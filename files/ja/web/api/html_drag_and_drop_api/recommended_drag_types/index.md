@@ -9,7 +9,8 @@ l10n:
 
 HTML ドラッグ & ドロップ API は、プレーンテキスト、URL、HTML コード、ファイルなど、さまざまな形式のデータのドラッグをサポートしています。この記事では、一般的なドラッグ可能なデータ形式のベストプラクティスについて説明しています。
 
-> **メモ:** この記事の中で、 `mozSetDataAt()` のような `moz` の接頭辞を持つすべてのメソッドとプロパティは、Gecko ベースのブラウザーでのみ動作します。
+> [!NOTE]
+> この記事の中で、 `mozSetDataAt()` のような `moz` の接頭辞を持つすべてのメソッドとプロパティは、Gecko ベースのブラウザーでのみ動作します。
 
 ## テキストのドラッグ
 
@@ -41,7 +42,8 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 複数のリンクをドラッグするには、それぞれのリンクを `text/uri-list` データ内で CRLF 改行で区切ってください。ナンバー記号 (`#`) で始まる行はコメントで、有効な URL として扱われません。コメントは、リンクの目的を示したり、リンクに関連づけられたタイトルを保持したりする目的で利用できます
 
-> **警告:** 複数のリンクのための `text/plain` 型のフォールバックは、すべての URL を含むべきですが、コメントを含めるべきではありません。
+> [!WARNING]
+> 複数のリンクのための `text/plain` 型のフォールバックは、すべての URL を含むべきですが、コメントを含めるべきではありません。
 
 例えば、以下のサンプル `text/uri-list` データには、2 つのリンクと 1 つのコメントが含まれています。
 
@@ -94,7 +96,7 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 
 可能であれば、`text/uri-list` 型と `text/plain` 型の両方を使ってファイルの URL を含めてください。これらの型は最後に登録されるべきで、それによって、 `application/x-moz-file` 型は優先度の高い、より適切な型となります。
 
-複数のファイルは、データ転送中に複数のアイテムとしてドロップ中に受信されます。これについての詳細は、[複数の項目のドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)を参照してください。
+複数のファイルは、データ転送中に複数のアイテムとしてドロップ中に受信されます。これについての詳細は、[複数の項目のドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)を参照してください。
 
 以下の例は、ドロップしたファイルを受信するための領域を作成する方法を示しています。
 
@@ -136,9 +138,9 @@ if ([...event.dataTransfer.types].includes("text/html")) {
 
 ## 画像のドラッグ
 
-画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に `text/uri-list` 型を使用します。データは、画像の URL、または画像が Web 上やディスク上に無い場合は [データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) である必要があります。
+画像の直接のドラッグは一般的ではありません。そのため、Mozilla は Mac と Linux での画像の直接のドラッグをサポートしていません。その代わり、画像は通常その URL としてドラッグされます。そのためには、他の URL と同様に `text/uri-list` 型を使用します。データは、画像の URL、または画像が Web 上やディスク上に無い場合は [データ URL](/ja/docs/Web/URI/Schemes/data) である必要があります。
 
-リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
+リンクと同様に、`text/plain` 型のデータには URL も含まれている必要があります。しかし、[データ URL](/ja/docs/Web/URI/Schemes/data) は通常のテキストの内容には有用ではないので、このような状況では `text/plain` 型のデータを除外した方がよいでしょう。
 
 Chrome などの特権的なコードでは、画像の種類に応じて、`image/jpeg`、`image/png`、`image/gif` のいずれかの形式を使用することもできます。データは `nsIInputStream` インターフェイスを実装したオブジェクトでなければなりません。このストリームが読み込まれる時には、そのファイル形式での画像のデータビットを提供しなければなりません。
 
@@ -254,5 +256,5 @@ dataProvider.prototype = {
 
 - [HTML ドラッグ & ドロップ API (概要)](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [複数のアイテムのドラッグ & ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数のアイテムのドラッグ & ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

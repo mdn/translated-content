@@ -44,7 +44,7 @@ new Intl.Segmenter(locales, options);
 
 ### 返値
 
-新しい [`Intl.Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments) のインスタンスです。
+新しい [`Intl.Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) のインスタンスです。
 
 ## 例
 

@@ -195,7 +195,8 @@ HTML
 Captura de pantalla
 ![Screenshot of a plain slider control on macOS](macslider-labels.png)
 
-> **Nota:** Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
+> [!NOTE]
+> Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
 
 ### Cambiar la orientación
 
@@ -203,7 +204,8 @@ Captura de pantalla
 
 Por defecto, si un navegador renderiza un input range, lo mostrará como un "slider" (deslizador) que se desliza hacia la izquierda y hacia la derecha. By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. Sin embargo puedes cambiar esto fácilmente para que se deslice hacia arriba y hacia abajo simplemente usando CSS
 
-> **Nota:** Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
+> [!NOTE]
+> Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
 
 #### Control de rango horizontal
 
@@ -307,6 +309,6 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 ## Ver también
 
-- [HTML Forms](/es/docs/Learn/HTML/Forms)
+- [HTML Forms](/es/docs/Learn/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)

@@ -21,7 +21,7 @@ Casi todos los programas que hemos mostrado hasta ahora en el curso han involucr
 
 ## Cadenas — las bases
 
-A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveeremos de una aquí abajo (también puedes [abrir la consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separada, o usar la [consola de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) si así lo prefieres).
+A primera vista, las cadenas se tratan de forma similar a los números, pero cuando profundizas empiezas a ver diferencias notables. Comencemos ingresando algunas líneas de texto básicas en la consola para familiarizarnos. Te proveeremos de una aquí abajo (también puedes [abrir la consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separada, o usar la [consola de desarrollo del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si así lo prefieres).
 
 ```html hidden
 <!doctype html>
@@ -201,7 +201,7 @@ var bigmouth = "I've got no right to take my place...";
 bigmouth;
 ```
 
-Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma, ej. `\"`, y hay varios códigos más. Ve a [Notación de Escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) para más detalles.
+Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma, ej. `\"`, y hay varios códigos más. Ve a [Notación de Escape](/es/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) para más detalles.
 
 ## Concatenando cadenas
 
@@ -230,7 +230,8 @@ Ahora funciona correctamente. Puedes escapar otros caracteres de la misma forma,
    response;
    ```
 
-> **Nota:** Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama **string literal**.
+> [!NOTE]
+> Cuando ingresas una string real en tu código, entre comillas simples o dobles, se llama **string literal**.
 
 ### La concatenación en contexto
 

@@ -7,28 +7,29 @@ l10n:
 
 {{JSRef}}
 
-**`Iterator`** 对象是一个符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)的对象，其提供了 `next()` 方法用以返回迭代器结果对象。所有内置迭代器都继承自 `Iterator` 类。`Iterator` 类提供了 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator) 方法，该方法返回迭代器对象本身，使迭代器也[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。它还提供了一些使用迭代器的辅助方法。
+**`Iterator`** 对象是一个符合[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议)的对象，其提供了 `next()` 方法用以返回迭代器结果对象。所有内置迭代器都继承自 `Iterator` 类。`Iterator` 类提供了 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) 方法，该方法返回迭代器对象本身，使迭代器也[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。它还提供了一些使用迭代器的辅助方法。
 
 ## 描述
 
 以下都是内置的 JavaScript 迭代器：
 
-- _数组迭代器_，返回自 {{jsxref("Array.prototype.values()")}}、{{jsxref("Array.prototype.keys()")}}、{{jsxref("Array.prototype.entries()")}}、[`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)、{{jsxref("TypedArray.prototype.values()")}}、{{jsxref("TypedArray.prototype.keys()")}}、{{jsxref("TypedArray.prototype.entries()")}}、[`TypedArray.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator) 和 [`arguments[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)。
-- _字符串迭代器_，返回自 [`String.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
-- _Map 迭代器_，返回自 {{jsxref("Map.prototype.values()")}}、{{jsxref("Map.prototype.keys()")}}、{{jsxref("Map.prototype.entries()")}} 和 [`Map.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)。
-- _Set 迭代器_，返回自 {{jsxref("Set.prototype.values()")}}、{{jsxref("Set.prototype.keys()")}}、{{jsxref("Set.prototype.entries()")}} 和 [`Set.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)。
-- _正则表达式字符串迭代器_，返回自 [`RegExp.prototype[@@matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) 和 {{jsxref("String.prototype.matchAll()")}}。
+- _数组迭代器_，返回自 {{jsxref("Array.prototype.values()")}}、{{jsxref("Array.prototype.keys()")}}、{{jsxref("Array.prototype.entries()")}}、[`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)、{{jsxref("TypedArray.prototype.values()")}}、{{jsxref("TypedArray.prototype.keys()")}}、{{jsxref("TypedArray.prototype.entries()")}}、[`TypedArray.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator) 和 [`arguments[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)。
+- _字符串迭代器_，返回自 [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)。
+- _Map 迭代器_，返回自 {{jsxref("Map.prototype.values()")}}、{{jsxref("Map.prototype.keys()")}}、{{jsxref("Map.prototype.entries()")}} 和 [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)。
+- _Set 迭代器_，返回自 {{jsxref("Set.prototype.values()")}}、{{jsxref("Set.prototype.keys()")}}、{{jsxref("Set.prototype.entries()")}} 和 [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)。
+- _正则表达式字符串迭代器_，返回自 [`RegExp.prototype[Symbol.matchAll]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) 和 {{jsxref("String.prototype.matchAll()")}}。
 - {{jsxref("Generator")}} 对象，返回自[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
-- _Segment 迭代器_，返回自 [`Intl.Segmenter.prototype.segment()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) 返回的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象的 [`[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator) 方法。
+- _Segment 迭代器_，返回自 [`Intl.Segmenter.prototype.segment()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) 返回的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象的 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator) 方法。
 - _迭代器辅助方法_，返回自迭代器辅助方法例如 {{jsxref("Iterator.prototype.filter()")}} 和 {{jsxref("Iterator.prototype.map()")}}。
 
-每个迭代器都有一个不同的原型对象，它定义了特定迭代器使用的 `next()` 方法。例如，所有字符串迭代器对象都继承自隐藏对象 `StringIteratorPrototype`，该对象具有按码位迭代当前字符串的 `next()` 方法。`StringIteratorPrototype` 还有一个 [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，其初始值为字符串 `"String Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。类似地，其他迭代器原型也有自己的 `@@toStringTag` 值，这些值与上面给出的名称相同。
+每个迭代器都有一个不同的原型对象，它定义了特定迭代器使用的 `next()` 方法。例如，所有字符串迭代器对象都继承自隐藏对象 `StringIteratorPrototype`，该对象具有按码位迭代当前字符串的 `next()` 方法。`StringIteratorPrototype` 还有一个 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，其初始值为字符串 `"String Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。类似地，其他迭代器原型也有自己的 `[Symbol.toStringTag]` 值，这些值与上面给出的名称相同。
 
-所有这些原型对象都继承自 `Iterator.prototype`，它提供了一个返回迭代器对象本身的 [`@@iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，这使迭代器也变得[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
+所有这些原型对象都继承自 `Iterator.prototype`，它提供了一个返回迭代器对象本身的 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，这使迭代器也变得[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
 
 ### 迭代器辅助方法
 
-> **备注：** 这些方法是*迭代器*辅助方法，而不是*可迭代对象*辅助方法，因为可迭代对象的唯一要求就是具有 `@@iterator` 方法，因此它们没有共享的原型来安装这些方法。
+> [!NOTE]
+> 这些方法是*迭代器*辅助方法，而不是*可迭代对象*辅助方法，因为可迭代对象的唯一要求就是具有 `[Symbol.iterator]()` 方法，因此它们没有共享的原型来安装这些方法。
 
 `Iterator` 类本身提供了一些使用迭代器的辅助方法。例如，你可能想做以下事情：
 
@@ -132,11 +133,12 @@ const myIterator = Iterator.from({
 
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Iterator` 实例，其初始值是 {{jsxref("Iterator/Iterator", "Iterator")}} 构造函数。
-- `Iterator.prototype[@@toStringTag]`
+- `Iterator.prototype[Symbol.toStringTag]`
 
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
-    > **备注：** 与大多数内置类的 `@@toStringTag` 不同，出于 web 兼容性原因，`Iterator.prototype[@@toStringTag]` 是可写的。
+    > [!NOTE]
+    > 与大多数内置类的 `[Symbol.toStringTag]` 不同，出于 web 兼容性原因，`Iterator.prototype[Symbol.toStringTag]` 是可写的。
 
 ## 实例方法
 
@@ -162,7 +164,7 @@ const myIterator = Iterator.from({
   - : 返回一个新的迭代器帮助方法，它生成当前迭代器中给定数量的元素，然后结束。
 - {{jsxref("Iterator.prototype.toArray()")}} {{experimental_inline}}
   - : 创建一个用迭代器产生的元素填充的新的 {{jsxref("Array")}} 实例。
-- [`Iterator.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator)
+- [`Iterator.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
   - : 返回迭代器对象本身。这使迭代器对象也是可迭代的。
 
 ## 示例

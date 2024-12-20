@@ -9,7 +9,6 @@ l10n:
 {{APIRef("DOM")}}
 
 **`Document.readyState`** プロパティは {{domxref("document")}} の読み込み状態を記述します。
-
 このプロパティの値が変化すると、 {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが {{domxref("document")}} オブジェクトに発行されます。
 
 ### 値

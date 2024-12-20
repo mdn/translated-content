@@ -8,7 +8,8 @@ slug: WebAssembly/Understanding_the_text_format
 为了能够让人类阅读和编辑 WebAssembly，wasm 二进制格式提供了相应的文本表示。这是一种用来在文本编辑器、浏览器开发者工具等工具中显示的中间形式。本文用基本语法的方式解释了这种文本表示是如何工作的，以及它是如何与它表示的底层字节码，及在 JavaScript 中表示 wasm 的封装对象关联起来的。
 本质上，这种文本形式更类似于处理器的汇编指令。
 
-> **备注：** 如果你是一个 Web 开发者并且只是想在页面中加载 wasm 模块然后在你的代码中使用它（参考[使用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)），那么，本文可能有点儿强人所难了。但是，如果你想编写 wasm 模块从而优化你的 JavaScript 的性能或者构建你自己的 WebAssembly 编译器，那么，本文是很有用的。
+> [!NOTE]
+> 如果你是一个 Web 开发者并且只是想在页面中加载 wasm 模块然后在你的代码中使用它（参考[使用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)），那么，本文可能有点儿强人所难了。但是，如果你想编写 wasm 模块从而优化你的 JavaScript 的性能或者构建你自己的 WebAssembly 编译器，那么，本文是很有用的。
 
 ## S-表达式
 
@@ -36,7 +37,7 @@ S-表达式如下：
 
 这个模块完全是空的，但是仍然是一个合法的模块。
 
-如果我们现在把该模块转换为二进制（参考[把 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm)），我们将会看到在[二进制格式](http://webassembly.org/docs/binary-encoding/#high-level-structure)中描述的 8 字节的模块头：
+如果我们现在把该模块转换为二进制（参考[把 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm)），我们将会看到在[二进制格式](http://webassembly.org/docs/binary-encoding/#high-level-structure)中描述的 8 字节的模块头：
 
 ```wasm
 0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -106,7 +107,8 @@ WebAssembly 模块中的所有代码都是划分到函数里面。函数具有�
 
 这里，使用 `local.get $p1` 就可以代替 `local.get 0`，访问参数 i32 变量时，就可以通过 $p1 进行访问。
 
-> **备注：** 当文本转换为二进制后，二进制中只包含整数。
+> [!NOTE]
+> 当文本转换为二进制后，二进制中只包含整数。
 
 ## 栈式机器
 
@@ -118,6 +120,7 @@ WebAssembly 模块中的所有代码都是划分到函数里面。函数具有�
 
 ```wasm
 (func (param $p i32)
+  (result i32)
   local.get $p
   local.get $p
   i32.add)
@@ -173,9 +176,9 @@ WebAssembly 验证规则确保栈准确匹配：如果你声明了 (result f32)�
 )
 ```
 
-如果你想继续研究这个例子，那么把我们上面的模块保存到一个名叫 add.wat 的文件中，然后使用 wabt（参考[把 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_wasm)）将其转换为名叫 add.wasm 的二进制文件。
+如果你想继续研究这个例子，那么把我们上面的模块保存到一个名叫 add.wat 的文件中，然后使用 wabt（参考[把 WebAssembly 文本格式转换为 wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm)）将其转换为名叫 add.wasm 的二进制文件。
 
-接下来，我们把二进制文件加载到叫做 addCode 的带类型数组（[获取 WebAssembly 字节码](/zh-CN/docs/WebAssembly/Fetching_WebAssembly_bytecode)），编译并实例化它，然后在 JavaScript 中执行我们的 add 函数（现在，我们可以在实例的 [exports](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) 属性中找到 add()）。
+接下来，我们把二进制文件加载到叫做 addCode 的带类型数组（[获取 WebAssembly 字节码](/zh-CN/docs/WebAssembly/Loading_and_running)），编译并实例化它，然后在 JavaScript 中执行我们的 add 函数（现在，我们可以在实例的 [exports](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports) 属性中找到 add()）。
 
 ```js
 fetchAndInstantiate("add.wasm").then(function (instance) {
@@ -191,7 +194,8 @@ function fetchAndInstantiate(url, importObject) {
 }
 ```
 
-> **备注：** 你可以在 GitHub 上找到这个例子 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)（[实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)）。另外，参考 [WebAssembly.instantiate()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) 来获取关于实例化函数的更多细节以及 [wasm-utils.js](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 来获取 fetchAndInstantiate() 的源代码。
+> [!NOTE]
+> 你可以在 GitHub 上找到这个例子 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)（[实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)）。另外，参考 [WebAssembly.instantiate()](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static) 来获取关于实例化函数的更多细节以及 [wasm-utils.js](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 来获取 fetchAndInstantiate() 的源代码。
 
 ## 探索基本原则
 
@@ -211,7 +215,8 @@ function fetchAndInstantiate(url, importObject) {
     i32.add))
 ```
 
-> **备注：** i32.const 只是定义一个 32 位整数并把它压入栈。你可以把 i32 替换为任何其他可用的类型，并把 const 值修改为你想要的任何值（这里，我们把这个值设置为 42）。
+> [!NOTE]
+> i32.const 只是定义一个 32 位整数并把它压入栈。你可以把 i32 替换为任何其他可用的类型，并把 const 值修改为你想要的任何值（这里，我们把这个值设置为 42）。
 
 在这个例子中，你注意到一个 (export "getAnswerPlus1") 代码段，并且它声明在第二个函数的 func 语句之后——这声明我们想导出这个函数，以及定义导出的名字的简便方法。
 
@@ -229,7 +234,8 @@ fetchAndInstantiate("call.wasm").then(function (instance) {
 });
 ```
 
-> **备注：** 你可以在 GitHub 上找到这个例子 [call.wasm](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)（或[实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)）。再提一次，查看 [wasm-utils.js](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 来了解 fetchAndInstantiate() 的源代码。
+> [!NOTE]
+> 你可以在 GitHub 上找到这个例子 [call.wasm](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)（或[实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)）。再提一次，查看 [wasm-utils.js](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 来了解 fetchAndInstantiate() 的源代码。
 
 ### 从 JavaScript 导入函数
 
@@ -247,7 +253,7 @@ WebAssembly 使用了两级命名空间，所以，这里的导入语句是说�
 
 导入的函数就像普通函数一样：它们拥有一个 WebAssembly 验证机制，会静态检查的签名，可以被设置一个索引，能够被命名和被调用。
 
-JavaScript 函数没有签名的概念，因此，无论导入的声明签名是什么，任何 JavaScript 函数都可以被传递过来。一旦一个模块声明了一个导入， [WebAssembly.instantiate()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate)的调用者必须传递一个拥有相应属性的导入对象。
+JavaScript 函数没有签名的概念，因此，无论导入的声明签名是什么，任何 JavaScript 函数都可以被传递过来。一旦一个模块声明了一个导入， [WebAssembly.instantiate()](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static)的调用者必须传递一个拥有相应属性的导入对象。
 
 就上面而言，我们需要一个（让我们称之为 importObject 的）对象，并且 importObject.console.log 是一个 JavaScript 函数。
 
@@ -267,7 +273,8 @@ fetchAndInstantiate("logger.wasm", importObject).then(function (instance) {
 });
 ```
 
-> **备注：** 你可以在 GitHub 上找到这个例子 [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)（[实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上找到这个例子 [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)（[实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html)）。
 
 ### WebAssembly 内存
 
@@ -281,9 +288,9 @@ fetchAndInstantiate("logger.wasm", importObject).then(function (instance) {
 
 让我们假设我们已经把一个合适的字符串字节写入到了内存中；那么，我们该如何把那个字符串传递给 JavaScript 呢？
 
-关键在于 JavaScript 能够通过 {{jsxref("WebAssembly.Memory()")}} 接口创建 WebAssembly 线性内存实例，并且能够通过相关的实例方法获取已经存在的内存实例（当前每一个模块实例只能有一个内存实例）。内存实例拥有一个 [buffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) 获取器，它返回一个指向整个线性内存的 ArrayBuffer。
+关键在于 JavaScript 能够通过 {{jsxref("WebAssembly.Memory()")}} 接口创建 WebAssembly 线性内存实例，并且能够通过相关的实例方法获取已经存在的内存实例（当前每一个模块实例只能有一个内存实例）。内存实例拥有一个 [buffer](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/buffer) 获取器，它返回一个指向整个线性内存的 ArrayBuffer。
 
-内存实例也能够增长。举例来说，在 JavaScript 中可以调用 [Memory.grow()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) 方法。由于 ArrayBuffer 不能改变大小，所以，当增长产生的时候，当前的 ArrayBuffer 会被移除，并且一个新的 ArrayBuffer 会被创建并指向新的、更大的内存。这意味着为了向 JavaScript 传递一个字符串，我们所需要做的就是把字符串在线性内存中的偏移量，以及表示其长度的方法传递出去。
+内存实例也能够增长。举例来说，在 JavaScript 中可以调用 [Memory.grow()](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 方法。由于 ArrayBuffer 不能改变大小，所以，当增长产生的时候，当前的 ArrayBuffer 会被移除，并且一个新的 ArrayBuffer 会被创建并指向新的、更大的内存。这意味着为了向 JavaScript 传递一个字符串，我们所需要做的就是把字符串在线性内存中的偏移量，以及表示其长度的方法传递出去。
 
 虽然有许多不同的方法在字符串自身当中保存字符串的长度（例如，C 字符串）；但是，这里为了简单起见，我们仅仅把偏移量和长度都作为参数：
 
@@ -301,7 +308,7 @@ consoleLogString(offset, length) {
 }
 ```
 
-这个谜题的最后一部分就是 consoleLogString 从哪里获得？WebAssembly 的内存（memory）实例。这里，WebAssembly 给我们很大灵活性：我们既可以使用 JavaScript 创建一个[内存](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory)对象，让 WebAssembly 模块导入这个内存，或者我们让 WebAssembly 模块创建这个内存并把它导出给 JavaScript。
+这个谜题的最后一部分就是 consoleLogString 从哪里获得？WebAssembly 的内存（memory）实例。这里，WebAssembly 给我们很大灵活性：我们既可以使用 JavaScript 创建一个[内存](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory)对象，让 WebAssembly 模块导入这个内存，或者我们让 WebAssembly 模块创建这个内存并把它导出给 JavaScript。
 
 为了简单起见，让我们用 JavaScript 创建它，然后把它导入到 WebAssembly。我们的导入语句编写如下：
 
@@ -326,7 +333,8 @@ consoleLogString(offset, length) {
     call $log))
 ```
 
-> **备注：** 注意上面的双分号语法，它允许在 WebAssembly 文件中添加注释。
+> [!NOTE]
+> 注意上面的双分号语法，它允许在 WebAssembly 文件中添加注释。
 
 现在，我们可以从 JavaScript 中创建一个 1 页的内存（Memory）然后把它传递进去。这会在控制台输出"Hi"。
 
@@ -340,7 +348,8 @@ fetchAndInstantiate("logger2.wasm", importObject).then(function (instance) {
 });
 ```
 
-> **备注：** 你可以在 GitHub 上找到完整源代码 [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html)（[或者实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上找到完整源代码 [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html)（[或者实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)）。
 
 ### WebAssembly 表格
 
@@ -381,7 +390,8 @@ WebAssembly 可以增加一个 anyfunc 类型（"any"的含义是该类型能够
 - 元素段（elem section）能够将一个模块中的任意函数子集以任意顺序列入其中，并允许出现重复。列入其中的函数将会被表格引用并，且引用顺序是其出现的顺序。
 - 元素段（elem section）中的 (i32.const 0) 值是一个偏移量——它需要在元素段开始的位置声明，其作用是表明函数引用是在表格中的什么索引位置开始存储的。这里我们指定的偏移量是 0，表格大小是 2（参考上面），因此，我们可以在索引 0 和 1 的位置填入两个引用。如果想在偏移量 1 的位置开始写入引用，那么，我们必须使用 (i32.const 1) 并且表格大小必须是 3.
 
-> **备注：** 未初始化的元素会被设定一个默认的调用即抛出（throw-on-call）值。
+> [!NOTE]
+> 未初始化的元素会被设定一个默认的调用即抛出（throw-on-call）值。
 
 在 JavaScript 中，可以创建这样一个表格实例的等价的函数调用看起来如下所示：
 
@@ -424,7 +434,7 @@ function() {
 
 在更高层面，像 JavaScript 这样更具表达力的语言，你可以设想使用一个数组（或者更有可能的是对象）来完成相同的事情。伪代码看起来像这样：tbl\[i]\()。
 
-回到类型检查。因为 WebAssembly 是带有类型检查的，并且 anyfunc 的含义是任何函数签名，所以，我们必须在调用点提供假定的被调用函数签名。这里，我们包含了一个$return_i32 类型来告诉程序期望的是一个返回值为 i32 类型的函数。如果被调用函数没有一个匹配的签名（比如说返回值是 f32 类型的），那么，程序会抛出 [WebAssembly.RuntimeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError) 异常。
+回到类型检查。因为 WebAssembly 是带有类型检查的，并且 anyfunc 的含义是任何函数签名，所以，我们必须在调用点提供假定的被调用函数签名。这里，我们包含了一个$return_i32 类型来告诉程序期望的是一个返回值为 i32 类型的函数。如果被调用函数没有一个匹配的签名（比如说返回值是 f32 类型的），那么，程序会抛出 [WebAssembly.RuntimeError](/zh-CN/docs/WebAssembly/JavaScript_interface/RuntimeError) 异常。
 
 那么，是什么把 call_indirect 指令和我们要是用的表格联系起来的呢？答案是，现在每一个模块实例只允许唯一一个表格存在，这也就是 call_indirect 指令隐式地使用的表格。在将来，当多表格被允许了，我们需要在代码行中指明一个某种形式的表格标识符：
 
@@ -460,17 +470,19 @@ fetchAndInstantiate("wasm-table.wasm").then(function (instance) {
 });
 ```
 
-> **备注：** 你可以在 GitHub 上找到这个例子 [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([实时查看](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html))。
+> [!NOTE]
+> 你可以在 GitHub 上找到这个例子 [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([实时查看](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html))。
 
-> **备注：** 就像内存一样，表格也能够从 JavaScript 中创建 (参考 [WebAssembly.Table()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)) 并且能够导入和导出到其他 wasm 模块。
+> [!NOTE]
+> 就像内存一样，表格也能够从 JavaScript 中创建 (参考 [WebAssembly.Table()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table)) 并且能够导入和导出到其他 wasm 模块。
 
 ### 改变表格和动态链接
 
-因为 JavaScript 对于函数引用有完全的存取权限，所以，从 JavaScript 中通过 [grow()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow)、[get()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 和 [set()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) 方法能够改变表格对象。
+因为 JavaScript 对于函数引用有完全的存取权限，所以，从 JavaScript 中通过 [grow()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/grow)、[get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 和 [set()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/set) 方法能够改变表格对象。
 
 因为表格是可变的，所以，它们能够用来实现复杂的加载时和运行时[动态链接](http://webassembly.org/docs/dynamic-linking)。当程序被动态地链接，多个实例共享相同的内存和表格。这与原生应用程序的多个.dll 共享一个进程地址空间是等价的。
 
-为了看看实际情况，我们会创建一个包含一个内存对象和一个表格对象的导入对象，并且把这个导入对象传递到多个 [instantiate()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) 调用中去。
+为了看看实际情况，我们会创建一个包含一个内存对象和一个表格对象的导入对象，并且把这个导入对象传递到多个 [instantiate()](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiate_static) 调用中去。
 
 我们的.wat 看起来像这样：
 
@@ -511,7 +523,8 @@ fetchAndInstantiate("wasm-table.wasm").then(function (instance) {
 4. 在这个函数的最后一部分，我们创建了常量值 0，然后调用表格中索引 0 处的函数，该函数正是我们之前在 shared0.wat 中的使用元素代码段（elem block）存储的 shared0func。
 5. shared0func 在被调用之后会加载我们在 shared1.wat 中使用 i32.store 指令存储在内存中的 42。
 
-> **备注：** 上面的表达式会隐式地把这些值出栈，但是，你可以在使用指令的时候进行显式地声明。例如：
+> [!NOTE]
+> 上面的表达式会隐式地把这些值出栈，但是，你可以在使用指令的时候进行显式地声明。例如：
 >
 > ```wasm
 > (i32.store (i32.const 0) (i32.const 42))
@@ -538,7 +551,8 @@ Promise.all([
 
 每一个将被编译的模块都可以导入相同的内存和表格对象，这也就是共享相同的线性内存和表格的“地址空间”。
 
-> **备注：** 你可以在 GitHub 上找到这个例子 [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html)（[或者实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上找到这个例子 [shared-address-space.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/shared-address-space.html)（[或者实时运行](https://mdn.github.io/webassembly-examples/understanding-text-format/shared-address-space.html)）。
 
 ## 总结
 

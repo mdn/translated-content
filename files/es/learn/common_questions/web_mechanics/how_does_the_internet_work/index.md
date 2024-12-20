@@ -46,7 +46,8 @@ En este artículo se describe qué es Internet y cómo funciona.
 
 Cuando dos ordenadores necesitan comunicarse, tienes que vincularlos, ya sea físicamente (por lo general con un [cable de Ethernet](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) o de forma inalámbrica (por ejemplo por [WiFi](http://en.wikipedia.org/wiki/WiFi) o sistema de [Bluetooth](http://en.wikipedia.org/wiki/Bluetooth)). Todos los ordenadores modernos pueden soportar cualquiera de este tipo de conexiones.
 
-> **Nota:** En el resto de este artículo, sólo nos referiremos al uso de cables físicos, pero es igualmente aplicable a las redes inalámbricas.
+> [!NOTE]
+> En el resto de este artículo, sólo nos referiremos al uso de cables físicos, pero es igualmente aplicable a las redes inalámbricas.
 
 ![Dos computadoras conectadas entre sí](internet-schema-1.png)
 
@@ -92,6 +93,6 @@ Como puedes notar, cuando navegamos por la web con un navegador, normalmente uti
 
 ## Próximos pasos
 
-- [Cómo funciona la Web.](/es/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Comprender la diferencia entre una página web, un sitio web, un servidor web y un motor de búsqueda.](/es/docs/Learn/page_vs_site_vs_server_vs_search_engine)
-- [La comprensión de los nombres de dominio.](/es/docs/Learn/Understanding_domain_names)
+- [Cómo funciona la Web.](/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Comprender la diferencia entre una página web, un sitio web, un servidor web y un motor de búsqueda.](/es/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [La comprensión de los nombres de dominio.](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

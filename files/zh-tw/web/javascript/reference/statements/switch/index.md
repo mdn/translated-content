@@ -42,7 +42,7 @@ switch (expression) {
 
 ## 描述
 
-一個 switch 陳述式會先評估自己的 expression。然後他會按照 `case` 條件順序開始尋找，直到比對到第一個表達式值跟輸入 expression 的值相等的 case 條件（使用[嚴格的邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`）並把控制流交給該子句、並執行裡面的陳述式（如果給定值符合多個 case，就執行第一個符合的 case，就算該 case 與其他 case 不同）
+一個 switch 陳述式會先評估自己的 expression。然後他會按照 `case` 條件順序開始尋找，直到比對到第一個表達式值跟輸入 expression 的值相等的 case 條件（使用[嚴格的邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators), `===`）並把控制流交給該子句、並執行裡面的陳述式（如果給定值符合多個 case，就執行第一個符合的 case，就算該 case 與其他 case 不同）
 
 If no matching `case` clause is found, the program looks for the optional `default` clause, and if found, transfers control to that clause, executing the associated statements. If no `default` clause is found, the program continues execution at the statement following the end of `switch`. 按照慣例， `default` 語句會是最後一個條件，但不一定要存在。
 
@@ -127,7 +127,7 @@ It also works when you put default before all other cases.
 
 Source for this technique is here:
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+[Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-for-multiple-cases-in-javascript)
 
 #### Multi-case - single operation
 

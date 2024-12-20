@@ -9,12 +9,12 @@ Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigat
 
 ## Fonctions
 
-- [`devtools.panels.ElementsPanel.createSidebarPane()`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane)
+- [`devtools.panels.ElementsPanel.createSidebarPane()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
   - : Crée un volet dans la barre latérale de l'inspecteur.
 
 ## Evénements
 
-- [`devtools.panels.ElementsPanel.onSelectionChanged`](/fr/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/onSelectionChanged)
+- [`devtools.panels.ElementsPanel.onSelectionChanged`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged)
   - : Appèle lorsque l'utilisateur sélectionne un élément différent dans la page, par exemple en utilisant l'élément de menu contextuel "inspect élément".
 
 ## Compatibilité des navigateurs
@@ -23,7 +23,7 @@ Un `ElementsPanel` représente l'inspecteur HTML/CSS dans la devtools du navigat
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
 

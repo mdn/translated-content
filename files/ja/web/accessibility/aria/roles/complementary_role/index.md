@@ -85,7 +85,7 @@ slug: Web/Accessibility/ARIA/Roles/complementary_role
 
 - [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/) (英語)
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
@@ -97,10 +97,10 @@ TBD
 
 - {{htmlelement("aside")}}: 余談要素
 - [complementary (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#complementary)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
-- [Aside Revisited | HTML5 Doctor](http://html5doctor.com/aside-revisited/)
+- [Aside Revisited | HTML5 Doctor](https://html5doctor.com/aside-revisited/)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

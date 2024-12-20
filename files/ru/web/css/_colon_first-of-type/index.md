@@ -7,7 +7,7 @@ slug: Web/CSS/:first-of-type
 
 ## Описание
 
-[CSS](/ru/docs/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:first-of-type` находит первого потомка своего типа среди детей родителя.
+[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:first-of-type` находит первого потомка своего типа среди детей родителя.
 
 ## Синтаксис
 

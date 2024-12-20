@@ -19,7 +19,8 @@ Bien que cette confusion (entre classe et prototype) soit souvent avancée comme
 
 Les objets JavaScript sont des ensembles dynamiques de propriétés (les propriétés directement rattachées à un objet sont appelées **propriétés en propre (_own properties_)**). Les objets JavaScript possèdent également un lien vers un objet qui est leur prototype. Lorsqu'on tente d'accéder aux propriétés d'un objet, la propriété sera recherchée d'abord sur l'objet même, puis sur son prototype, puis sur le prototype du prototype et ainsi de suite jusqu'à ce qu'elle soit trouvée ou que la fin de la chaîne de prototype ait été atteinte.
 
-> **Note :** Dans la spécification ECMAScript, on utilise la notation `unObjet.[[Prototype]]` pour faire référence au prototype de `unObjet`. Depuis ECMAScript 2015, on peut accéder à `[[Prototype]]` grâce aux accesseurs {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}}. Cela est équivalent à la propriété JavaScript `__proto__` qui était non-standard avant ES2015 mais qui était de fait implémentée par la majorité des navigateurs.
+> [!NOTE]
+> Dans la spécification ECMAScript, on utilise la notation `unObjet.[[Prototype]]` pour faire référence au prototype de `unObjet`. Depuis ECMAScript 2015, on peut accéder à `[[Prototype]]` grâce aux accesseurs {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}}. Cela est équivalent à la propriété JavaScript `__proto__` qui était non-standard avant ES2015 mais qui était de fait implémentée par la majorité des navigateurs.
 >
 > Cette propriété ne devrait pas être confondue avec la propriété `func.prototype` des fonctions qui définissent le `[[Prototype]]` à affecter aux instances des objets créés par cette fonction lorsqu'elle est utilisée comme constructeur. La propriété **`Object.prototype`** représente le prototype de {{jsxref("Object")}}.
 
@@ -83,7 +84,7 @@ Lorsquon définit une propriété sur un objet, cela définit une propriété en
 
 JavaScript ne possède pas de méthodes au sens des langages de classe. En effet, en JavaScript, toute fonction associée à un objet est également une propriété. Une fonction héritée se comportera comme n'importe quelle autre propriété (y compris pour l'ombrage mentionné ci-avant où on pourra parler de surcharge).
 
-Lorsqu'une fonction héritée est exécutée, la valeur de [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) pointe vers l'objet hérité et non vers l'objet prototype qui possède la fonction comme propriété en propre.
+Lorsqu'une fonction héritée est exécutée, la valeur de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pointe vers l'objet hérité et non vers l'objet prototype qui possède la fonction comme propriété en propre.
 
 ```js
 var o = {
@@ -110,7 +111,8 @@ console.log(p.m()); // 5
 
 Regardons un peu plus en détail ce qui se déroule en arrière-plan.
 
-> **Note :** Pour tous les exemples suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](/fr/docs/Tools), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
+> [!NOTE]
+> Pour tous les exemples suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/index.html), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
 
 En JavaScript, comme mentionné ci-dessus, les fonctions peuvent avoir des propriétés. Toutes les fonctions ont une propriété spéciale intitulée `prototype`.
 
@@ -267,7 +269,7 @@ function f() {
 
 ### Objets créés avec un constructeur
 
-En JavaScript, un constructeur est _juste_ une fonction que l'on invoque avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new).
+En JavaScript, un constructeur est _juste_ une fonction que l'on invoque avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
 function Graphe() {
@@ -309,7 +311,7 @@ console.log(d.hasOwnProperty);
 
 #### Suppression des propriétés avec `delete`
 
-L'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete) permet de supprimer une propriété directement rattachée à un objet. En revanche, il n'empêchera pas l'exploration de la chaîne de prototype :
+L'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete) permet de supprimer une propriété directement rattachée à un objet. En revanche, il n'empêchera pas l'exploration de la chaîne de prototype :
 
 ```js
 let a = { toto: 1 };
@@ -358,7 +360,7 @@ var carré = new Carré(2);
 
 Le temps de recherche des propriétés sera plus élevé si ces propriétés sont situées plus loin dans la chaîne de prototype. Tenter d'accéder à ces propriétés éloignées pourra avoir un impact négatif sur les performances. De plus, tenter d'accéder à des propriétés inexistantes entraînera toujours le parcours de l'ensemble de la chaîne de prototype.
 
-Lorsqu'on parcourt les propriétés d'un objet, **toutes** les propriétés énumérables situées sur la chaîne de prototype seront parcourues. Pour vérifier si un objet possède une propriété en propre plus que via sa chaîne de prototype, on devra utiliser la méthode [`hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty) qui est héritée grâce à `Object.prototype`. Prenons un exemple concret avec le cas du graphe traité dans un exemple précédent :
+Lorsqu'on parcourt les propriétés d'un objet, **toutes** les propriétés énumérables situées sur la chaîne de prototype seront parcourues. Pour vérifier si un objet possède une propriété en propre plus que via sa chaîne de prototype, on devra utiliser la méthode [`hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) qui est héritée grâce à `Object.prototype`. Prenons un exemple concret avec le cas du graphe traité dans un exemple précédent :
 
 ```js
 console.log(g.hasOwnProperty("arêtes"));
@@ -374,7 +376,8 @@ console.log(g.__proto__.hasOwnProperty("ajoutSommet"));
 // true
 ```
 
-> **Note :** Tester si une propriété vaut {{jsxref("undefined")}} ne suffit pas à vérifier la présence de la propriété sur un objet : une propriété peut très bien exister sur un objet mais valoir `undefined`.
+> [!NOTE]
+> Tester si une propriété vaut {{jsxref("undefined")}} ne suffit pas à vérifier la présence de la propriété sur un objet : une propriété peut très bien exister sur un objet mais valoir `undefined`.
 
 ### Mauvaise pratique : étendre les prototypes natifs
 

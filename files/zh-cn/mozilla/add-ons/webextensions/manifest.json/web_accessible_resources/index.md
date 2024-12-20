@@ -66,9 +66,10 @@ moz-extension://<extension-UUID>/images/my-image.png"
 
 `<extension-UUID>` 不是应用 ID，它随机生成，对应每个浏览器实例，以防网页查看浏览器安装的扩展应用来获取信息。
 
-> **备注：** Chrome 的 `<extension-UUID>` 是不变的。某资源如果由`web_accessible_resources` 写明，那么它可通过 `chrome-extension://<your-extension-id>/<path/to/resource>` 来访问。
+> [!NOTE]
+> Chrome 的 `<extension-UUID>` 是不变的。某资源如果由 `web_accessible_resources` 写明，那么它可通过 `chrome-extension://<your-extension-id>/<path/to/resource>` 来访问。
 
-要获得资源的 URL，推荐用 [`runtime.getURL`](/zh-CN/Add-ons/WebExtensions/API/runtime/getURL) 向参数传递 manifest.json 的相对路径，比如：
+要获得资源的 URL，推荐用 [`runtime.getURL`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) 向参数传递 manifest.json 的相对路径，比如：
 
 ```js
 browser.runtime.getURL("images/my-image.png");

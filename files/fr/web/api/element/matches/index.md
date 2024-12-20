@@ -7,7 +7,8 @@ slug: Web/API/Element/matches
 
 La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramètre&nbsp;; sinon, elle renvoie `false`.
 
-> **Attention :** Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
+> [!WARNING]
+> Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
 
 ## Syntaxe
 
@@ -86,5 +87,5 @@ if (!Element.prototype.matches) {
 
 ## Voir aussi
 
-- [La syntaxe des sélecteurs](/fr/Apprendre/CSS/Introduction_à_CSS/Les_sélecteurs)
+- [La syntaxe des sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors)
 - autres méthodes qui utilisent les sélecteurs : {{domxref("element.querySelector()")}} et {{domxref("element.closest()")}}.

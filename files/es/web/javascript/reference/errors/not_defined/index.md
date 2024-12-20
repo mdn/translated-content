@@ -17,7 +17,8 @@ ReferenceError: "x" no está definida.
 
 Hay una variable no existente que está siendo referida en algún lugar. Esta variable necesita ser declarada o se debe comprobar su disponibilidad en el {{Glossary("ámbito")}} actual del script.
 
-> **Nota:** Cuando una librería es cargada (como por ejemplo jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.
+> [!NOTE]
+> Cuando una librería es cargada (como por ejemplo jQuery) asegúrese de que se haya cargado antes de intentar acceder a sus variables, como por ejemplo "$". Ponga la etiqueta {{HTMLElement("script")}}, que carga la librería antes del código que la utiliza.
 
 ## Ejemplo
 
@@ -36,7 +37,7 @@ foo.substring(1); // "ar"
 
 ### Contexto erróneo
 
-Una variable necesita estar disponible en el contexto actual de ejecución. No se puede acceder a las variables definidas dentro de una [función](/es/docs/Web/JavaScript/Referencia/Funciones) desde fuera de dicha función, debido a que la variable está definida solamente dentro de la función.
+Una variable necesita estar disponible en el contexto actual de ejecución. No se puede acceder a las variables definidas dentro de una [función](/es/docs/Web/JavaScript/Reference/Functions) desde fuera de dicha función, debido a que la variable está definida solamente dentro de la función.
 
 ```js example-bad
 function numbers() {
@@ -64,5 +65,5 @@ console.log(num1); // 2
 ## Temas relacionados
 
 - {{Glossary("Ámbito")}}
-- [Guía; declarando variables en JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Guía; declarando variables en JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
 - [Guía; contexto de la función en Java Script](/es/docs/Web/JavaScript/Guide/Functions#ámbito_de_function)

@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 
 La gestion du presse-papier avec les extensions s'effectue avec l'objet [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) (elle s'effectuait avant avec la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) qui est désormais dépréciée).
 
-> **Note :** L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
+> [!NOTE]
+> L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
 
 La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) est analogue aux actions de copier/coller/couper du clavier en échangeant des données entre une page web et un presse-papier tandis que [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) permet de lire et d'écrire des données arbitraires dans le presse-papier.
 
@@ -39,7 +40,8 @@ navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
 });
 ```
 
-> **Note :** La permission intitulée `clipboard-write` est uniquement prise en charge pour les navigateurs basés sur Chromium et pas dans Firefox.
+> [!NOTE]
+> La permission intitulée `clipboard-write` est uniquement prise en charge pour les navigateurs basés sur Chromium et pas dans Firefox.
 
 La fonction qui suit prend en argument une chaîne de caractères et l'écrit dans le presse-papier&nbsp;:
 
@@ -66,7 +68,7 @@ Prenons comme exemple une fenêtre contenant le fragment de HTML suivant&nbsp;:
 <input id="input" type="text" /> <button id="copy">Copier</button>
 ```
 
-Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input), on pourra utiliser un code comme celui-ci&nbsp;:
+Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), on pourra utiliser un code comme celui-ci&nbsp;:
 
 ```js
 function copy() {
@@ -132,7 +134,7 @@ navigator.clipboard
 
 ### Utiliser `execCommand()`
 
-Pour utiliser [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand), l'extension aura besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"`. Cela vaut également lorsqu'on utilise la commande `"paste"` depuis un gestionnaire d'évènement pour un évènement généré par l'utilisatrice ou l'utilisateur (comme [`click`](/fr/docs/Web/API/Element/click_event) ou [`keypress`](/fr/docs/Web/API/Document/keypress_event)).
+Pour utiliser [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand), l'extension aura besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"`. Cela vaut également lorsqu'on utilise la commande `"paste"` depuis un gestionnaire d'évènement pour un évènement généré par l'utilisatrice ou l'utilisateur (comme [`click`](/fr/docs/Web/API/Element/click_event) ou [`keypress`](/fr/docs/Web/API/Element/keypress_event)).
 
 Prenons ce fragment de HTML&nbsp;:
 
@@ -140,7 +142,7 @@ Prenons ce fragment de HTML&nbsp;:
 <textarea id="output"></textarea> <button id="paste">Coller</button>
 ```
 
-Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Element/Button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:
+Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Element/button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:
 
 ```js
 function paste() {
@@ -155,7 +157,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### Considérations spécifiques à chaque navigateur
 
-Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` à partir de la version 54 mais la prise en charge porte uniquement sur le collage au sein d'éléments [en mode éditable](/fr/docs/Web/Guide/HTML/Editable_content), ce qui limite à [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) pour les scripts de contenu. Pour les scripts d'arrière-plan, tout élément pourra être mis en mode éditable.
+Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` à partir de la version 54 mais la prise en charge porte uniquement sur le collage au sein d'éléments [en mode éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable), ce qui limite à [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) pour les scripts de contenu. Pour les scripts d'arrière-plan, tout élément pourra être mis en mode éditable.
 
 ## Compatibilité des navigateurs
 
@@ -165,5 +167,5 @@ Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/m
 
 - [API Clipboard](/fr/docs/Web/API/Clipboard_API)
 - [API Permissions](/fr/docs/Web/API/Permissions_API)
-- [Rendre le contenu éditable](/fr/docs/Web/Guide/HTML/Editable_content)
+- [Rendre le contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
 - [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable)

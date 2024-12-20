@@ -1,15 +1,17 @@
 ---
-title: NavigatorUAData.toJSON()
+title: "NavigatorUAData: toJSON() メソッド"
+short-title: toJSON()
 slug: Web/API/NavigatorUAData/toJSON
 l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-**`toJSON()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、インターフェースは、 `NavigatorUAData` オブジェクトの低エントロピーのプロパティの JSON 表現を返す _シリアライザー_ です。
+**`toJSON()`** は {{domxref("NavigatorUAData")}} インターフェイスのメソッドで、インターフェイスは、 `NavigatorUAData` オブジェクトの低エントロピーのプロパティの JSON 表現を返す _シリアライザー_ です。
 
-> **メモ:** 高エントロピーと低エントロピーという用語は、これらの値がブラウザーについて明らかにする情報の量を参照します。このメソッドで返される低エントロピーの値は、ユーザーを特定できるような情報を明らかにしない値です。高エントロピーの値は {{domxref("NavigatorUAData.getHighEntropyValues()")}} メソッドによってのみ返すことができます。
+> [!NOTE]
+> 高エントロピーと低エントロピーという用語は、これらの値がブラウザーについて明らかにする情報の量を参照します。このメソッドで返される低エントロピーの値は、ユーザーを特定できるような情報を明らかにしない値です。高エントロピーの値は {{domxref("NavigatorUAData.getHighEntropyValues()")}} メソッドによってのみ返すことができます。
 
 ## 構文
 

@@ -2,18 +2,19 @@
 title: grid
 slug: Web/CSS/grid
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`grid`** は CSS のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
+**`grid`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。
 
 `grid` を使用すると、一方の軸を {{cssxref("grid-template-rows")}} または {{cssxref("grid-template-columns")}} を使用して設定し、もう一方の軸でどのように内容物を自動反復させるかを、暗黙のグリッドプロパティである {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}} で設定します。
 
 {{EmbedInteractiveExample("pages/css/grid.html")}}
 
-> **メモ:** 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
+> [!NOTE]
+> 指定しないサブプロパティは、通常の一括指定と同様に初期値に設定されます。また、溝に関するプロパティはこの一括指定では初期化されません。
 
 ## 構成要素のプロパティ
 
@@ -32,7 +33,7 @@ l10n:
 /* <'grid-template'> 値 */
 grid: none;
 grid: "a" 100px "b" 1fr;
-grid: [linename1] "a" 100px [linename2];
+grid: [line-name1] "a" 100px [line-name2];
 grid: "a" 200px "b" min-content;
 grid: "a" minmax(100px, max-content) "b" 20%;
 grid: 100px / 200px;
@@ -90,7 +91,7 @@ grid: unset;
 
 #### HTML
 
-```html
+```html live-sample___creating_a_grid_layout
 <div id="container">
   <div></div>
   <div></div>
@@ -105,7 +106,7 @@ grid: unset;
 
 #### CSS
 
-```css
+```css live-sample___creating_a_grid_layout
 #container {
   display: grid;
   grid: repeat(2, 60px) / auto-flow 80px;
@@ -120,7 +121,7 @@ grid: unset;
 
 #### 結果
 
-{{EmbedLiveSample("グリッドレイアウトの作成", "100%", 150)}}
+{{EmbedLiveSample("Creating_a_grid_layout", "100%", 150)}}
 
 ## 仕様書
 
@@ -132,6 +133,12 @@ grid: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- グリッドレイアウトガイド: [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域: グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

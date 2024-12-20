@@ -65,7 +65,8 @@ slug: Web/HTML/Element/li
 
   - : {{HTMLElement("ol")}} 요소 내부에서 항목의 현재 서수 값을 나타내는 정수. 리스트가 로마 숫자나 문자로 표시되더라도 이 특성에는 숫자만 넣을수 있습니다. `value`를 지정한 항목을 뒤따르는 다른 항목은 이 값에서부터 번호를 매깁니다. `value` 속성은 비정렬 목록({{HTMLElement("ul")}})과 메뉴({{HTMLElement("menu")}})에서는 아무 의미가 없습니다.
 
-    > **참고:** HTML4에서는 `value`의 사용을 중단했지만 HTML5에서 다시 도입했습니다.
+    > [!NOTE]
+    > HTML4에서는 `value`의 사용을 중단했지만 HTML5에서 다시 도입했습니다.
 
 - `type` {{Deprecated_inline}}
 
@@ -79,7 +80,8 @@ slug: Web/HTML/Element/li
 
     부모 {{HTMLElement("ol")}} 요소에서 지정하는 유형을 덮어씁니다.
 
-    > **참고:** 이 속성은 사용 중단됐습니다. 대신 CSS {{cssxref("list-style-type")}} 속성을 사용하세요.
+    > [!NOTE]
+    > 이 속성은 사용 중단됐습니다. 대신 CSS {{cssxref("list-style-type")}} 속성을 사용하세요.
 
 ## 예제
 
@@ -135,5 +137,5 @@ slug: Web/HTML/Element/li
 - `<li>` 요소와 유용하게 사용할 수 있는 CSS 속성
 
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
-  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.

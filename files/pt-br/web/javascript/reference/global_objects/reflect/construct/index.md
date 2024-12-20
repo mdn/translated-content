@@ -34,7 +34,7 @@ A {{jsxref("TypeError")}}, if `target` or `newTarget` are not constructors.
 
 ## Description
 
-`Reflect.construct` allows you to invoke a constructor with a variable number of arguments (which would also be possible by using the [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) combined with the [new operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)).
+`Reflect.construct` allows you to invoke a constructor with a variable number of arguments (which would also be possible by using the [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax) combined with the [new operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)).
 
 ```js
 var obj = new Foo(...args);

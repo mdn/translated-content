@@ -5,7 +5,8 @@ slug: Web/CSS/box-orient
 
 {{CSSRef}}{{Non-standard_header}}
 
-> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) pour plus d'informations à propos du standard actuel.
+> [!WARNING]
+> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) pour plus d'informations à propos du standard actuel.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-orient`** définit si un élément organise son contenu horizontalement ou verticalement.
 

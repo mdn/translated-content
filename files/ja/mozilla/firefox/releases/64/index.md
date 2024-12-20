@@ -11,19 +11,19 @@ Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされまし
 
 ### 開発者ツール
 
-- [アクセシビリティインスペクターの情報バー](/ja/docs/Tools/Accessibility_inspector#Highlighting_of_UI_items) が、ページ上のテキストや画像の色のコントラスト比に関する情報を表示するようになりました ([Firefox バグ 1473037](https://bugzil.la/1473037))。
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) で選択したデバイスが、セッションをまたいで保存されるようになりました ([Firefox バグ 1248619](https://bugzil.la/1248619))。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で、[トラッキング防止](/ja/docs/Mozilla/Firefox/Privacy/Tracking_Protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) で、コードの入力や評価の機能が向上しました:
+- [アクセシビリティインスペクターの情報バー](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#highlighting_of_ui_items) が、ページ上のテキストや画像の色のコントラスト比に関する情報を表示するようになりました ([Firefox バグ 1473037](https://bugzil.la/1473037))。
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で選択したデバイスが、セッションをまたいで保存されるようになりました ([Firefox バグ 1248619](https://bugzil.la/1248619))。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、[トラッキング防止](/ja/docs/Web/Privacy/Firefox_tracking_protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) で、コードの入力や評価の機能が向上しました:
 
-  - コンソールの式の [オートコンプリート](/ja/docs/Tools/Web_Console/The_command_line_interpreter#Autocomplete) が、大文字・小文字を区別しないようになりました ([Firefox バグ 672733](https://bugzil.la/672733))。
-  - bash のような reverse search によって [コンソールの式の履歴](/ja/docs/Tools/Web_Console/The_command_line_interpreter#Command_history) をたどれるようになりました ([Firefox バグ 1024913](https://bugzil.la/1024913))。
-  - コンソールで [評価されたコード](/ja/docs/Tools/Web_Console/The_command_line_interpreter) が、入力・出力ともに構文強調を行うようになりました ([Firefox バグ 1463669](https://bugzil.la/1463669))。
+  - コンソールの式の [オートコンプリート](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) が、大文字・小文字を区別しないようになりました ([Firefox バグ 672733](https://bugzil.la/672733))。
+  - bash のような reverse search によって [コンソールの式の履歴](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command_history) をたどれるようになりました ([Firefox バグ 1024913](https://bugzil.la/1024913))。
+  - コンソールで [評価されたコード](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html) が、入力・出力ともに構文強調を行うようになりました ([Firefox バグ 1463669](https://bugzil.la/1463669))。
 
-- [JavaScript デバッガー](/ja/docs/Tools/Debugger) のステップ実行の機能も向上しました:
+- [JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) のステップ実行の機能も向上しました:
 
-  - ステップ実行中は [展開された変数](/ja/docs/Tools/Debugger/UI_Tour#Scopes) を維持するようになりました ([Firefox バグ 1491471](https://bugzil.la/1491471))。
-  - 関数の [ステップアウト](/ja/docs/Tools/Debugger/How_to/Step_through_code) で、戻り値をスキップするようになりました ([Firefox バグ 923975](https://bugzil.la/923975))。
+  - ステップ実行中は [展開された変数](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#scopes) を維持するようになりました ([Firefox バグ 1491471](https://bugzil.la/1491471))。
+  - 関数の [ステップアウト](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html) で、戻り値をスキップするようになりました ([Firefox バグ 923975](https://bugzil.la/923975))。
 
 #### 廃止
 
@@ -35,7 +35,7 @@ _変更なし。_
 
 ### CSS
 
-- [CSS Scrollbars](/ja/docs/Web/CSS/CSS_Scrollbars) 仕様の機能をデフォルトで有効化しました ([Firefox バグ 1492012](https://bugzil.la/1492012))。
+- [CSS Scrollbars](/ja/docs/Web/CSS/CSS_scrollbars_styling) 仕様の機能をデフォルトで有効化しました ([Firefox バグ 1492012](https://bugzil.la/1492012))。
 - [`pointer:coarse`](/ja/docs/Web/CSS/@media/pointer) を含む、Interaction Media Features を実装しました ([Firefox バグ 1035774](https://bugzil.la/1035774))。[`any-pointer`](/ja/docs/Web/CSS/@media/any-pointer) および [`any-hover`](/ja/docs/Web/CSS/@media/any-hover) の実装については、[Firefox バグ 1483111](https://bugzil.la/1483111) をご覧ください。
 - [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性を Android 版 Firefox でサポートしました ([Firefox バグ 1478505](https://bugzil.la/1478505))。
 - CSS の {{cssxref("&lt;gradient&gt;")}} 値で複数の color stop を持つ構文をサポートしました。例えば `yellow 25%, yellow 50%` を `yellow 25% 50%` と書くことができます ([Firefox バグ 1352643](https://bugzil.la/1352643))。
@@ -44,13 +44,13 @@ _変更なし。_
 - 上記の更新に関連して、Firefox 固有の `-moz-appearance` の大半の値を削除しました ([Firefox バグ 1496720](https://bugzil.la/1496720))。
 - {{htmlelement("legend")}} 要素で {{cssxref("display")}}: `list-item` をサポートしました ([Firefox バグ 1486602](https://bugzil.la/1486602))。
 - {{cssxref("offset-path")}} で使用可能な SVG の `path()` がアニメーション可能になりました ([Firefox バグ 1486094](https://bugzil.la/1486094))。
-- セレクターの羅列やグループに `-webkit-` 接頭辞を持つ疑似要素が含まれるとき、疑似要素がセレクターを無効化しないようになりました (詳しくは [Firefox バグ 1424106](https://bugzil.la/1424106)、またこの機能の有効化について [Firefox バグ 1486325](https://bugzil.la/1486325) をご覧ください)。
+- セレクターの羅列やグループに `-webkit-` 接頭辞を持つ擬似要素が含まれるとき、擬似要素がセレクターを無効化しないようになりました (詳しくは [Firefox バグ 1424106](https://bugzil.la/1424106)、またこの機能の有効化について [Firefox バグ 1486325](https://bugzil.la/1486325) をご覧ください)。
 
 #### 廃止
 
 - {{CSSxRef("display")}} の非標準の値である [`-moz-box` および `-moz-inline-box`](/ja/docs/Mozilla/Gecko/Chrome/CSS/display-xul) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
-- 非標準の {{CSSxRef("::-moz-tree")}} [疑似要素](/ja/docs/Web/CSS/Pseudo-elements) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
-- 設定項目 `layout.css.filters.enabled` を削除しました。[CSS filters](/ja/docs/Web/CSS/Filter_Effects) は無効化できません ([Firefox バグ 1408841](https://bugzil.la/1408841))。
+- 非標準の {{CSSxRef("::-moz-tree")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1496961](https://bugzil.la/1496961))。
+- 設定項目 `layout.css.filters.enabled` を削除しました。[CSS filters](/ja/docs/Web/CSS/CSS_filter_effects) は無効化できません ([Firefox バグ 1408841](https://bugzil.la/1408841))。
 - {{cssxref("overflow")}} の 2 値構文で block を 1 番目、inline を 2 番目に入れ替えた変更 ([Firefox バグ 1481866](https://bugzil.la/1481866)) を元に戻しました ([Firefox バグ 1492567](https://bugzil.la/1492567))。理由は [Bug 1481866 の comment 14](https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14) をご覧ください。
 
 ### SVG
@@ -149,7 +149,7 @@ _変更なし。_
 
 #### devtools.panels API
 
-- [`devtools.panels.elements`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements) の `Sidebar.setPage()` メソッドをサポートしました ([Firefox バグ 1398734](https://bugzil.la/1398734))。
+- [`devtools.panels.elements`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements) の `Sidebar.setPage()` メソッドをサポートしました ([Firefox バグ 1398734](https://bugzil.la/1398734))。
 
 ### マニフェストの変更点
 

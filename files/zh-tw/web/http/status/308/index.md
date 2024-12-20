@@ -11,7 +11,8 @@ HTTP **`308 Permanent Redirect`** 永久重新導向狀態碼表示所請求的�
 
 請求方法和主體不會被更改，而 {{HTTPStatus("301")}} 有時可能會錯誤地被更改為 {{HTTPMethod("GET")}} 方法。
 
-> **備註：** 一些 Web 應用可能會以非標準方式使用 `308 Permanent Redirect`，並用於其他目的。例如 Google Drive 使用 `308 Resume Incomplete` 回應來指示用戶端不完整的上傳停滯。（請參見 Google Drive 文件上的[執行可恢復的下載](https://developers.google.com/drive/api/guides/manage-uploads?hl=zh-tw)）
+> [!NOTE]
+> 一些 Web 應用可能會以非標準方式使用 `308 Permanent Redirect`，並用於其他目的。例如 Google Drive 使用 `308 Resume Incomplete` 回應來指示用戶端不完整的上傳停滯。（請參見 Google Drive 文件上的[執行可恢復的下載](https://developers.google.com/drive/api/guides/manage-uploads)）
 
 ## 狀態
 

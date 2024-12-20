@@ -78,7 +78,7 @@ columns: unset;
 
 #### 結果
 
-{{EmbedLiveSample('Setting_three_equal_columns', 'auto', 120)}}
+{{EmbedLiveSample('3 つの等しい段の設定', 'auto', 120)}}
 
 ## 仕様書
 
@@ -92,5 +92,5 @@ columns: unset;
 
 - {{cssxref("widows")}}
 - {{cssxref("orphans")}}
-- [ページ化メディア](/ja/docs/Web/CSS/Paged_Media)
+- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)
 - [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)

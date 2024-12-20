@@ -17,9 +17,10 @@ A partir del protocolo HTTP/1.1 la conexión, no se cierra al finalizar la terce
 
 En un protocolo cliente servidor, es siempre el cliente el que establece la conexión. Iniciar una conexión en HTTP, implica iniciar una conexión en el protocolo correspondiente a la capa de comunicación subyacente, que normalmente es TCP.
 
-En TCP el puerto por defecto, para un servidor HTTP en un computador, es el puerto 80. Se pueden usar otros puertos como el 8000 o el 8080. La URL de la página pedida contiene tanto el nombre del dominio, como el número de puerto, aunque este puede ser omitido, si se trata del puerto 80. Véase la referencia de [Identificación de recursos en la Web](/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) para más detalles.
+En TCP el puerto por defecto, para un servidor HTTP en un computador, es el puerto 80. Se pueden usar otros puertos como el 8000 o el 8080. La URL de la página pedida contiene tanto el nombre del dominio, como el número de puerto, aunque este puede ser omitido, si se trata del puerto 80. Véase la referencia de [Identificación de recursos en la Web](/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) para más detalles.
 
-> **Nota:** El modelo cliente-servidor no permite que el servidor mande datos al cliente sin una petición explicita. Como solución parcial a este problema, los desarrolladores web, usan varias técnicas, como hacer un ping al servidor periódicamente, mediante {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, o usar la HTML [WebSockets API](/en/WebSockets) o protocolos similares.
+> [!NOTE]
+> El modelo cliente-servidor no permite que el servidor mande datos al cliente sin una petición explicita. Como solución parcial a este problema, los desarrolladores web, usan varias técnicas, como hacer un ping al servidor periódicamente, mediante {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} APIs, o usar la HTML [WebSockets API](/en-US/WebSockets) o protocolos similares.
 
 ## Mandando una petición
 
@@ -61,7 +62,7 @@ name=Juan%20Garcia&request=Envieme%20uno%20de%20sus%20catalogos
 HTTP define un conjunto de [métodos de peticiones](/es/docs/Web/HTTP/Methods) en los que se indican las acciones que se piden realizar al recibir un conjunto de datos. A pesar de que pueden referirse como 'nombres', estos métodos de petición, son denominados a veces como 'verbos' de HTTP. La peticiones más comunes son `GET` y `POST`:
 
 - El método {{HTTPMethod("GET")}} hace una petición de un recurso específico. Las peticiones con `GET` unicamente hacen peticiones de datos.
-- El método {{HTTPMethod("POST")}} envía datos al servidor de manera que este pueda cambiar su estado. Este es el método usado normalmente para enviar los datos de un [formulario HTML](/es/docs/Web/Guide/HTML/Forms).
+- El método {{HTTPMethod("POST")}} envía datos al servidor de manera que este pueda cambiar su estado. Este es el método usado normalmente para enviar los datos de un [formulario HTML](/es/docs/Learn/Forms).
 
 ## Estructura de la respuesta del servidor
 
@@ -140,7 +141,7 @@ Los [códigos de estado de las respuestas](/es/docs/Web/HTTP/Status) indican si 
 
 ## Vea también
 
-- [Identificación de recursos en la Web](/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Identificación de recursos en la Web](/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
 - [Cabeceras HTTP](/es/docs/Web/HTTP/Headers)
 - [Métodos de petición HTTP](/es/docs/Web/HTTP/Methods)
 - [Códigos de estados de respuesta HTTP](/es/docs/Web/HTTP/Status)

@@ -9,7 +9,7 @@ Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui d�
 
 ## Types de panneau
 
-Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action).
+Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action).
 
 Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel".
 
@@ -80,7 +80,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
 >

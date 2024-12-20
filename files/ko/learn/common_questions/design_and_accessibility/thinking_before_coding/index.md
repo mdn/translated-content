@@ -1,6 +1,8 @@
 ---
 title: 나의 웹사이트를 설계하기 위해서는?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
+l10n:
+  sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -34,7 +36,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 
 ## 능동 학습
 
-_아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/MDN/Getting_started)._
+_아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/MDN/Community/Contributing/Getting_started)._
 
 ## 깊게 들어가기
 
@@ -44,7 +46,7 @@ _아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/
 
 친구와 함께하는 한 시간의 토론은 좋은 시작이지만 부족하다. 생각을 현실로 만들 길의 탁 트인 전망을 얻으려면 앉아서 생각을 구조화해야한다. 이것을 하기 위해서, 오직 펜과 종이 그리고 적어도 다음 질문에 대한 답할 시간이 필요하다.
 
-> **참고:** **메모:** 프로젝트 관념화를 수행하기 위한 셀 수 없는 방법들이 있다. 우리는 여기에 그것들을 모두 제시할 수는 없다. (책 전체로는 충분하지 않을 것이다). 이 곳에 주는 것은 전문가들이 [Project Ideation(관념화)](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Project Planning(계획)](http://en.wikipedia.org/wiki/Project_planning) 그리고 [Project Management(관리)](http://en.wikipedia.org/wiki/Project_management) 라고 부르는 것을 다루는 단순한 방법이다.
+> **참고:** 프로젝트 관념화를 수행하기 위한 셀 수 없는 방법들이 있다. 우리는 여기에 그것들을 모두 제시할 수는 없다. (책 전체로는 충분하지 않을 것이다). 이 곳에 주는 것은 전문가들이 [Project Ideation(관념화)](<http://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Project Planning(계획)](http://en.wikipedia.org/wiki/Project_planning) 그리고 [Project Management(관리)](http://en.wikipedia.org/wiki/Project_management) 라고 부르는 것을 다루는 단순한 방법이다.
 
 ### 내가 정확히 달성하고 싶은 것은 무엇인가?
 
@@ -88,9 +90,9 @@ _아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/
 
 ### 내 목표를 달성하기 위해, 무엇을, 어떤 순서로 해야할까?
 
-이제 우리가 달성하고 싶은 것을 알고 있으므로, 그 목표들을 실행가능한 단계로 바꿀 시간입니다.
+이제 무엇을 성취하고 싶은지 알았으니, 그 목표를 실행 가능한 단계로 바꿀 시간입니다. 참고로, 목표는 반드시 고정된 것이 아닙니다. 프로젝트가 진행되는 동안 예상치 못한 장애물을 만나거나 마음이 바뀌는 경우에 따라 시간이 지나면서 변화할 수 있습니다.
 
-긴 설명을 하기 보다는 이 표로 우리의 예제를 돌아봅시다.
+긴 설명을 하기보다는, 이 표와 함께 예제로 돌아가 보겠습니다.
 
 <table class="standard-table">
   <thead>
@@ -170,4 +172,4 @@ _아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/
 
 당신이 본 것 처럼, "나는 웹사이트를 만들고 싶다" 라는 단순한 생각이 긴 해야할 목록을 만들었다. 그리고 그것은 생각하면 할 수록 더 길어진다. 금방 그것은 압도적으로 보일 것이다. 그러나 겁먹지 마라. 당신은 모든 질문에 대답할 필요는 없다. 그리고 당신은 리스트에 모든 것을 할 필요는 없다. 중요한 것은 원하는 것과 도달하는 법에 대한 비전을 가지고 있어야하는 것이다. 일단 분명한 비전이 있다면, 당신은 해야할 때와 하는 방법을 결정할 필요가 있다. 큰 일을 작은 실행할 수 있는 단계로 부숴라. 그리고 그 작은 단계를 거대한 성과로 합쳐라.
 
-이 글에서, 당신은 웹사이트를 만들기 위한 개략적인 계획을 지금 세울 수 있어야 한다. 다음 단계는 [how the Internet works(인터넷이 작동하는 법)](/ko/docs/Learn/Common_questions/How_does_the_Internet_work) 을 읽어야 할 것이다.
+이 글에서, 당신은 웹사이트를 만들기 위한 개략적인 계획을 지금 세울 수 있어야 한다. 다음 단계는 [how the Internet works(인터넷이 작동하는 법)](/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work) 을 읽어야 할 것이다.

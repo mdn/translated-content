@@ -72,7 +72,8 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 - `action` 属性定义了在提交表单时，应该把所收集的数据送给谁（URL）去处理。
 - `method` 属性定义了发送数据的 HTTP 方法（通常是 `get` 或 `post`）。
 
-> **备注：** 如果你想深入了解这些属性是如何工作的，那么将在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
+> [!NOTE]
+> 如果你想深入了解这些属性是如何工作的，那么将在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
 
 现在，将上面的 {{htmlelement("form")}} 元素添加到你的 HTML {{htmlelement("body")}} 中。
 
@@ -116,7 +117,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 - 在我们的简单示例中，我们使用值 {{HTMLelement("input/text", "text")}} 作为第一个输入——这个属性的默认值。它表示一个基本的单行文本字段，接受任何类型的文本输入。
 - 对于第二个输入，我们使用值 {{HTMLelement("input/email", "email")}}，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，你将了解到更多关于[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)的信息。
 
-最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/Input#value) 属性，如下所示：
+最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性，如下所示：
 
 ```html
 <input type="text" value="by default this element is filled with this text" />
@@ -146,13 +147,15 @@ by default this element is filled with this text
 - 单击 `type` 属性定义为 `reset` 值的按钮 将所有表单小部件重新设置为它们的默认值。从用户体验的角度来看，这被认为是一种糟糕的做法。
 - 单击 `type` 属性定义为 `button` 值的按钮，不会发生任何事！这听起来很傻，但是用 JavaScript 构建定制按钮非常有用。
 
-> **备注：** 你还可以使用相应类型的 {{HTMLElement("input")}} 元素来生成一个按钮，如 `<input type="submit">`。{{htmlelement("button")}} 元素的主要优点是，{{HTMLElement("input")}} 元素只允许纯文本作为其标签，而 {{htmlelement("button")}} 元素允许完整的 HTML 内容，允许更复杂、更有创意的按钮内容。
+> [!NOTE]
+> 你还可以使用相应类型的 {{HTMLElement("input")}} 元素来生成一个按钮，如 `<input type="submit">`。{{htmlelement("button")}} 元素的主要优点是，{{HTMLElement("input")}} 元素只允许纯文本作为其标签，而 {{htmlelement("button")}} 元素允许完整的 HTML 内容，允许更复杂、更有创意的按钮内容。
 
 ## 基本表单样式
 
 现在你已经完成了表单的 HTML 代码，尝试保存它并在浏览器中查看它。现在，你会看到它看起来很丑。
 
-> **备注：** 如果你怀疑你的 HTML 代码不对，试着把它和我们完成的例子进行比较——[first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html)（你也可以[查看预览版](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)）。
+> [!NOTE]
+> 如果你怀疑你的 HTML 代码不对，试着把它和我们完成的例子进行比较——[first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html)（你也可以[查看预览版](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)）。
 
 如何排布好表单是公认的难点。这超出了本文的讨论范围，所以现在我们只需要让你添加一些 CSS 来让它看起来很好。
 
@@ -233,7 +236,8 @@ button {
 
 保存并重新加载，现在它看起来没那么丑了。
 
-> **备注：** 你可以在 GitHub 上的这里找到这个版本 [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)（也可以在这儿看[在线演示](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)）。
+> [!NOTE]
+> 你可以在 GitHub 上的这里找到这个版本 [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)（也可以在这儿看[在线演示](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)）。
 
 ## 向你的 web 服务器发送表单数据
 

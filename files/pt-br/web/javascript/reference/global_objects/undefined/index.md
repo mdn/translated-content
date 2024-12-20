@@ -25,7 +25,7 @@ Nos browsers modernos (JavaScript 1.8.5 / Firefox 4+), a especificação ECMAScr
 
 Uma variável que não teve um valor atribuído é do tipo `undefined`. Um método ou sentença também retorna `undefined` se a variável que está sendo avaliada não tem um valor atribuído. Uma função retorna `undefined` se um valor não for {{jsxref("Statements/return", "retornado")}}.
 
-Uma vez que undefined não é uma {{jsxref("Reserved_Words", "palavra reservada")}}, ele pode ser usado como um [identificador](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Variables) (nome de variável) em qualquer escopo que não seja o escopo global.
+Uma vez que undefined não é uma {{jsxref("Reserved_Words", "palavra reservada")}}, ele pode ser usado como um [identificador](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variables) (nome de variável) em qualquer escopo que não seja o escopo global.
 
 ```js
 // escreve no console "foo string"
@@ -55,7 +55,8 @@ if (x === undefined) {
 }
 ```
 
-> **Nota:** Observação: O operador de igualdade estrita (`===`) tem que ser utilizado aqui uma vez que `x == undefined` também checa se `x` é nulo, enquanto o operador não o faz. `null` não é equivalente à `undefined`. Veja {{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.
+> [!NOTE]
+> O operador de igualdade estrita (`===`) tem que ser utilizado aqui uma vez que `x == undefined` também checa se `x` é nulo, enquanto o operador não o faz. `null` não é equivalente à `undefined`. Veja {{jsxref("Operators/Comparison_Operators", "operadores de comparação")}} (em inglês) para maiores detalhes.
 
 ### `Operador Typeof` e `undefined`
 

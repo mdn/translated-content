@@ -34,7 +34,8 @@ l10n:
 
 或者，你可以使用在线编辑器，如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
 
-> **备注：** 示例 HTML 文件包含大量 CSS，用于为页面设置样式。你不需要修改 CSS，只需修改 {{htmlelement("body")}} 元素内的 HTML 即可。只要插入正确的标记，样式就会使其显示正确。
+> [!NOTE]
+> 示例 HTML 文件包含大量 CSS，用于为页面设置样式。你不需要修改 CSS，只需修改 {{htmlelement("body")}} 元素内的 HTML 即可。只要插入正确的标记，样式就会使其显示正确。
 >
 > 如果你遇到困难，可以在我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)中联系我们。
 
@@ -56,7 +57,8 @@ l10n:
 
 接下来，创建一个宽度为 1200 像素的横向版 `red-panda.jpg`，以及一个宽度为 600 像素的纵向版，展示更近距离的熊猫照片。再次，给它们取一个合理的名称，以便你能够轻松识别它们。你应将这两张图片的副本保存在与 `index.html` 相同的目录中。
 
-> **备注：** 你应该优化你的 JPG 和 PNG 图像，使它们尽可能小，同时保持良好的质量。[tinypng.com](https://tinypng.com/) 是一个很好的在线服务，可以轻松完成这项工作。
+> [!NOTE]
+> 你应该优化你的 JPG 和 PNG 图像，使它们尽可能小，同时保持良好的质量。[tinypng.com](https://tinypng.com/) 是一个很好的在线服务，可以轻松完成这项工作。
 
 ### 为 header 添加一个图标
 
@@ -74,7 +76,8 @@ l10n:
 
 确保每个链接匹配了正确的图片！
 
-> **备注：** 为了正确地测试 `srcset`/`sizes` 示例，你需要把你的网站上传到服务器（使用 [Github pages](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) 是一个简单免费的方法），之后你就可以使用浏览器开发者工具（如 Firefox [网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)）来测试它们是否正常工作。
+> [!NOTE]
+> 为了正确地测试 `srcset`/`sizes` 示例，你需要把你的网站上传到服务器（使用 [Github pages](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) 是一个简单免费的方法），之后你就可以使用浏览器开发者工具（如 Firefox [网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)）来测试它们是否正常工作。
 
 ### 一张美术设计后的小熊猫照片
 

@@ -2,12 +2,12 @@
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
 {{JSRef}}
 
-**`delete()`** 메서드는 키로 `Map` 객체에서 특정 요소를 제거합니다.
+{{jsxref("Map")}} 인스턴스의 **`delete()`** 메서드는 이 Map 에서 특정 요소를 제거합니다.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 
@@ -17,7 +17,7 @@ l10n:
 delete(key)
 ```
 
-### 매개 변수
+### 매개변수
 
 - `key`
   - : `Map` 객체에서 제거할 요소의 키

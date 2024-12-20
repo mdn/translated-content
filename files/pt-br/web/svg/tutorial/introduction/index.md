@@ -5,9 +5,9 @@ slug: Web/SVG/Tutorial/Introduction
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
-![](svg_overview.png)[SVG](/pt-BR/SVG) é uma linguagem [XML](/pt-BR/XML), similar ao [XHTML](/pt-BR/XHTML), na qual pode ser usada para desenhar vetores gráficos (imagens), como os mostrados à direita. Ela pode ser usada para criar uma imagem qualquer especificando todas as linhas e formas necessárias, para modificar uma imagem raster já existente ou fazer ambas as opções. A imagem e seus componentes também podem ser transformados, compostas em conjunto, ou filtradas para mudar completamente sua aparência.
+![](svg_overview.png)[SVG](/pt-BR/docs/Web/SVG) é uma linguagem [XML](/pt-BR/XML), similar ao [XHTML](/pt-BR/XHTML), na qual pode ser usada para desenhar vetores gráficos (imagens), como os mostrados à direita. Ela pode ser usada para criar uma imagem qualquer especificando todas as linhas e formas necessárias, para modificar uma imagem raster já existente ou fazer ambas as opções. A imagem e seus componentes também podem ser transformados, compostas em conjunto, ou filtradas para mudar completamente sua aparência.
 
-SVG surgiu em 1999 após vários outros formatos terem sido submetidos à [W3C](https://www.w3.org) e não terem sido totalmente ratificados. Enquanto a especificação tem levado um bom tempo, a aceitação pelos navegadores têm sido lenta, e não há tanto conteúdo sobre SVG sendo utilizado na internet neste momento (2009). Even the implementations that are available often are not as fast as competing technologies like [HTML5 Canvas](/pt-BR/HTML/Canvas) or Adobe Flash as a full application interface. SVG does offer benefits over both implementations, some of which include having a [DOM interface](/pt-BR/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
+SVG surgiu em 1999 após vários outros formatos terem sido submetidos à [W3C](https://www.w3.org) e não terem sido totalmente ratificados. Enquanto a especificação tem levado um bom tempo, a aceitação pelos navegadores têm sido lenta, e não há tanto conteúdo sobre SVG sendo utilizado na internet neste momento (2009). Even the implementations that are available often are not as fast as competing technologies like [HTML5 Canvas](/pt-BR/docs/Web/API/Canvas_API) or Adobe Flash as a full application interface. SVG does offer benefits over both implementations, some of which include having a [DOM interface](/pt-BR/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
 
 ### Ingredientes Básicos
 
@@ -17,14 +17,14 @@ Começando daqui, o SVG em imagem pode se tornar arbitrariamente complexo. SVG s
 
 ### Antes de você começar
 
-Há muitos softwares disponíveis como o [Inkscape](http://www.inkscape.org/) os quais são gratuitos e usam SVG como seus formatos de arquivos padrão. Entretanto, este tutorial dependerá apenas do XML ou do editor de texto da sua escolha. A ideia é ensinar o funcionamento interno do SVG para aqueles que desejam entendê-lo, e a melhor forma é "pondo a mão na masssa", escrevendo algumas marcações. Contudo você deve anotar o seu objetivo. Nenhum dos visualizadores SVG são iguais, então, há uma boa chance de você desenvolver para um aplicativo não será exibido exatamente da mesma forma que em outros, simplesmente porque eles suportam diferentes níveis da especificação SVG ou outra especificação que você está usando junto com o SVG (isto é, JavaScript ou CSS).
+Há muitos softwares disponíveis como o [Inkscape](https://www.inkscape.org/) os quais são gratuitos e usam SVG como seus formatos de arquivos padrão. Entretanto, este tutorial dependerá apenas do XML ou do editor de texto da sua escolha. A ideia é ensinar o funcionamento interno do SVG para aqueles que desejam entendê-lo, e a melhor forma é "pondo a mão na masssa", escrevendo algumas marcações. Contudo você deve anotar o seu objetivo. Nenhum dos visualizadores SVG são iguais, então, há uma boa chance de você desenvolver para um aplicativo não será exibido exatamente da mesma forma que em outros, simplesmente porque eles suportam diferentes níveis da especificação SVG ou outra especificação que você está usando junto com o SVG (isto é, JavaScript ou CSS).
 
 SVG é suportado em todos os browsers modernos em cobre algumas versões anteriores em alguns casos. Uma tabela completa de compatibilidade com browser pode ser encontrada em [Can I use](http://caniuse.com/svg). O Firefox suporta alguns conteúdos SVG desde a versão 1.5, e este suporte vem crescendo a cada lançamento desde então. Espero, que com essa tradução aqui, o MDN possa ajudar os desenvolvedores a acompanhar as diferenças entre o Gecko e algumas das outras importantes implementações.
 
 - O XML é case-sensitive (diferencia maiúsculas e minúsculas, diferentemente do HTML), ou seja, todos os exemplos devem ser escritos exatamente como mostrado aqui.
 - Valores de atributos, mesmo que estes sejam números, devem ser colocados dentro de aspas.
 
-SVG é uma especificação imensa. Este tutorial combre apenas o conteúdo básico. Uma vez que você se familiarizar você estará habilitado a usar o [Element Reference](/pt-BR/SVG/Element) e o [Interface Reference](/pt-BR/docs/DOM/DOM_Reference#SVG_interfaces) para encontrar qualquer outra coisa que precisa saber.
+SVG é uma especificação imensa. Este tutorial combre apenas o conteúdo básico. Uma vez que você se familiarizar você estará habilitado a usar o [Element Reference](/pt-BR/docs/Web/SVG/Element) e o [Interface Reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces) para encontrar qualquer outra coisa que precisa saber.
 
 ### Sabores do SVG
 

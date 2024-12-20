@@ -72,7 +72,7 @@ WebXR Device API 受到一系列许可与安全性的控制。这些控制不涉
 
 #### VR 的沉浸式（immersive）
 
-首先，如果域名不支持请求有权限打开沉浸模式，那么 `immersive-vr` 模式就会被拒绝。这个权限管理来自`xr-spatial-tracking` [特征策略](/zh-CN/docs/Web/HTTP/Feature_Policy)。
+首先，如果域名不支持请求有权限打开沉浸模式，那么 `immersive-vr` 模式就会被拒绝。这个权限管理来自`xr-spatial-tracking` [特征策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。
 
 一旦有权限了，申请开启 `immersive-vr` 模式的请求还需要再检查以下三点，全部满足才能开启：
 
@@ -93,7 +93,8 @@ WebXR Device API 受到一系列许可与安全性的控制。这些控制不涉
 - 如果发起请求的文档不可信任，该请求会被驳回且 Promise 返回 `false`。一个可信任文档指的是该文档是活跃的、负责任的且有重点的；
 - 如果设备无法明确用户开启内联模式的意图，该请求将会被驳回。对[用户的目的](#用户意图)的理解可以是隐性或者显性的。
 
-> **备注：** 当调用 `requestSession()` 时，根据选择对象需要指定的特性不同，将会执行额外的请求。
+> [!NOTE]
+> 当调用 `requestSession()` 时，根据选择对象需要指定的特性不同，将会执行额外的请求。
 
 #### 用户意图
 

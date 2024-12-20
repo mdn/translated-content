@@ -16,7 +16,7 @@ new Map([iterable])
 ### 參數
 
 - `iterable`
-  - : 為一個{{jsxref("Array", "陣列")}}或其他元素成鍵值對的[可迭代](/zh-TW/docs/Web/JavaScript/Guide/iterable)物件（有兩個元素的陣列，例如 `[[ 1, 'one' ],[ 2, 'two' ]]`）。每一個鍵值對都會被加入至新的 `Map`；`null` 會被視為 `undefined`。
+  - : 為一個{{jsxref("Array", "陣列")}}或其他元素成鍵值對的[可迭代](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)物件（有兩個元素的陣列，例如 `[[ 1, 'one' ],[ 2, 'two' ]]`）。每一個鍵值對都會被加入至新的 `Map`；`null` 會被視為 `undefined`。
 
 ## 描述
 
@@ -24,7 +24,7 @@ new Map([iterable])
 
 ### 鍵的相等性
 
-鍵相等是基於 [SameValueZero](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality) 的演算法：`NaN` 被認為與 `NaN` 相同（即使 `NaN !== NaN`）並且根據 `===` 運算符的語義，所有其他值都被認為相等。在目前的 ECMAScript 規範中，`-0` 和 `+0` 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 [瀏覽器相容性](#瀏覽器相容性) 表中的 "Value equality for -0 and 0"。
+鍵相等是基於 [SameValueZero](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) 的演算法：`NaN` 被認為與 `NaN` 相同（即使 `NaN !== NaN`）並且根據 `===` 運算符的語義，所有其他值都被認為相等。在目前的 ECMAScript 規範中，`-0` 和 `+0` 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 [瀏覽器相容性](#瀏覽器相容性) 表中的 "Value equality for -0 and 0"。
 
 ### Object 及 Map 的比較
 
@@ -32,7 +32,7 @@ new Map([iterable])
 
 - `Object` 的鍵是 {{jsxref("String", "字串")}} 和 {{jsxref("Symbol", "Symbol")}}，而它們在 `Map` 中可以是任意的資料型態，包括函數，對象以及原始的資料型態。
 - 你可以使用 `size` 屬性輕鬆地獲得 `Map` 的大小，而 `Object` 中的屬性數量必須手動確認。
-- `Map` 是可迭代（[iterable](/zh-TW/docs/Web/JavaScript/Guide/iterable)）的，因此可以直接迭代，而在 `Object` 上迭代則需要以某種方式獲取其鍵並對其進行迭代。
+- `Map` 是可迭代（[iterable](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)）的，因此可以直接迭代，而在 `Object` 上迭代則需要以某種方式獲取其鍵並對其進行迭代。
 - `Object` 有一個原型，所以如果不小心，映射中有一些默認鍵可能與鍵發生衝突。從 ES5 開始，這可以通過使用 `map = Object.create(null)` 來繞過這個問題，但是很少這樣做。
 - 在涉及頻繁添加和刪除鍵值對的場景中，`Map` 可能表現得更好。
 
@@ -41,7 +41,7 @@ new Map([iterable])
 - `Map.length`
   - : `length`屬性的值為 0
     要計算 `Map` 中有多少元素，可以使用 {{jsxref("Map.prototype.size")}}。
-- {{jsxref("Map.@@species", "get Map[@@species]")}}
+- [`Map[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : 用於創建派生物件的構造函數。
 - {{jsxref("Map.prototype")}}
   - : 表示 `Map` 構造函數的原型，允許對所有的 `Map` 物件添加屬性
@@ -52,8 +52,8 @@ new Map([iterable])
 
 ### 屬性
 
-- `Map.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Map.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Map.prototype.size")}}
   - : Returns the number of key/value pairs in the `Map` object.
 
@@ -71,7 +71,7 @@ new Map([iterable])
   - : Returns a boolean indicating whether a value has been associated with the passed key in the `Map` object or not.
 - {{jsxref("Map.prototype.set()")}}
   - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
-- {{jsxref("Map/@@iterator", "Map.prototype[@@iterator]()")}}
+- [`Map.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 - {{jsxref("Map.prototype.keys()")}}
   - : Returns a new Iterator object that contains the keys for each element in the `Map` object in insertion order.

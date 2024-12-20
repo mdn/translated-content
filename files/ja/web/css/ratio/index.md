@@ -2,12 +2,12 @@
 title: <ratio>
 slug: Web/CSS/ratio
 l10n:
-  sourceCommit: 5d19ba908628a2713c4ea9f30422dbd9563e1cf4
+  sourceCommit: 2ef2c905a7322f5a533cf7c96ec5a337fc614359
 ---
 
 {{CSSRef}}
 
-**`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、幅と高さの比例関係を記述します。これは、メディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナクエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
+**`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、幅と高さの比例関係を記述します。これは、メディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナークエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
 
 ## 構文
 
@@ -70,9 +70,10 @@ l10n:
 ## 関連情報
 
 - [`aspect-ratio`](/ja/docs/Web/CSS/@media/aspect-ratio) メディア記述子
+- [アスペクト比の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)ガイド
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)ガイド
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-- [CSS 封じ込め](/ja/docs/Web/CSS/CSS_containment)モジュール
+- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)モジュール
 - [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール

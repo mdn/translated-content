@@ -28,7 +28,8 @@ new WebAssembly.Memory(memoryDescriptor);
     - shared _{{optional_inline}}_
       - : 論理値で、このメモリーを共有メモリーにするかどうかを定義します。 `true` に設定すると、共有メモリーになります。既定値は `false` です。
 
-> **メモ:** WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
+> [!NOTE]
+> WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
 
 ### 例外
 
@@ -39,7 +40,7 @@ new WebAssembly.Memory(memoryDescriptor);
 
 ### 新しい Memory インスタンスの作成
 
-`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法です。次の例では、新しい WebAssembly Memory インスタンスを初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で生成しています。この [`buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
+`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法です。次の例では、新しい WebAssembly Memory インスタンスを初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で生成しています。この [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
 
 ```js
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });

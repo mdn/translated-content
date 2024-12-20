@@ -3,10 +3,10 @@ title: "AbortController: AbortController() コンストラクター"
 short-title: AbortController()
 slug: Web/API/AbortController/AbortController
 l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`AbortController()`** は、新しい {{domxref("AbortController")}} オブジェクトインスタンスを生成します。
 
@@ -26,7 +26,7 @@ new AbortController()
 
 最初に {{domxref("AbortController.AbortController","AbortController()")}} コンストラクターを使用してコントローラーを作成し、関連する {{domxref("AbortSignal")}} オブジェクトへの参照を {{domxref("AbortController.signal")}} プロパティを使用して取り込みます。
 
-[フェッチリクエスト](/ja/docs/Web/API/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{ signal }`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
+[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)が開始されると、 `AbortSignal` をリクエストのオプションオブジェクト（下記の `{ signal }`）にオプションとして渡します。これにより、シグナルとコントローラーをそのフェッチリクエストと関連付け、 2 つ目のイベントリスナーで下記のように {{domxref("AbortController.abort()")}} を呼び出すことでフェッチを中断できるようになります。
 
 ```js
 const controller = new AbortController();

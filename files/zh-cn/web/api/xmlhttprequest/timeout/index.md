@@ -5,9 +5,10 @@ slug: Web/API/XMLHttpRequest/timeout
 
 {{APIRef('XMLHttpRequest')}}
 
-**`XMLHttpRequest.timeout`** 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests 请求中，否则将会抛出一个 `InvalidAccessError` 类型的错误。当超时发生， [timeout](/zh-CN/docs/Web/Events/timeout) 事件将会被触发。
+**`XMLHttpRequest.timeout`** 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests 请求中，否则将会抛出一个 `InvalidAccessError` 类型的错误。当超时发生， [timeout](/zh-CN/docs/Web/API/XMLHttpRequest/timeout_event) 事件将会被触发。
 
-> **备注：** 你不能在拥有的 window 中，给同步请求使用超时。
+> [!NOTE]
+> 你不能在拥有的 window 中，给同步请求使用超时。
 
 [在异步请求中使用 timeout](/zh-CN/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#例子：使用超时)
 

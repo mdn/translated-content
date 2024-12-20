@@ -30,7 +30,8 @@ slug: Web/CSS/float
 | `inline-grid`        | `grid`      |
 | _other_              | _unchanged_ |
 
-> **备注：** 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
+> [!NOTE]
+> 如果要在 JavaScript 中把 `float` 属性当作 {{domxref("HTMLElement.style")}} 对象的一个成员来操作，那么在旧版本的浏览器中，你必须拼写成 `cssFloat`。另外还要注意到在 Internet Explorer 8 和更老的 IE 当中，要使用 `styleFloat` 属性。这是 DOM 驼峰命名和 CSS 所用的连字符分隔命名法对应关系中的一个特例（这是因为在 JavaScript 中“float”是一个保留字，因为同样的原因，“class”被改成了“className” 、`<label>` 的“for”被改成了“htmlFor”）。
 
 ## 语法
 
@@ -76,7 +77,7 @@ float: unset;
 
 ### 浮动元素是如何定位的
 
-正如我们前面提到的那样，当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处的容器的边框，或者碰到**另外一个浮动的元素**。
+正如我们前面提到的那样，当一个元素浮动之后，它会被移出正常的文档流，然后向左或者向右平移，一直平移直到碰到了所处盒子的边界，或者碰到**另外一个浮动的元素**。
 
 在下面的图片中，有三个红色的正方形。其中有两个向左浮动，一个向右浮动。要注意到第二个向左浮动的正方形被放在第一个向左浮动的正方形的右边。如果还有更多的正方形这样浮动，它们会继续向右堆放，直到填满容器一整行，之后换行至下一行。
 

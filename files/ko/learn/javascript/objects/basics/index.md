@@ -38,7 +38,7 @@ slug: Learn/JavaScript/Objects/Basics
 
 객체는 관련된 데이터와 함수(일반적으로 여러 데이터와 함수로 이루어지는데, 객체 안에 있을 때는 보통 프로퍼티와 메소드라고 부릅니다)의 집합입니다. 예제를 통해서 실제 객체가 무엇인지 알아보도록 합시다.
 
-시작하기에 앞서, [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 파일의 복사본을 로컬 환경에 만듭니다. 이 파일은 우리가 작성한 소스코드를 포함하는 작은 {{HTMLElement("script")}} 요소를 포함하고 있습니다. 우리는 기본 객체 문법을 탐구하기 위한 기반으로 이 파일을 사용할 것입니다. 예제를 제대로 따라하려면 반드시 [개발자 도구 JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console)을 열어두고, 몇몇 명령어를 직접 입력할 준비가 되어있어야 합니다.
+시작하기에 앞서, [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 파일의 복사본을 로컬 환경에 만듭니다. 이 파일은 우리가 작성한 소스코드를 포함하는 작은 {{HTMLElement("script")}} 요소를 포함하고 있습니다. 우리는 기본 객체 문법을 탐구하기 위한 기반으로 이 파일을 사용할 것입니다. 예제를 제대로 따라하려면 반드시 [개발자 도구 JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console)을 열어두고, 몇몇 명령어를 직접 입력할 준비가 되어있어야 합니다.
 
 여타 JavaScript 의 요소들과 마찬가지로, 객체를 생성하는 것은 변수를 정의하고 초기화하는 것으로 시작합니다. 아래의 JavaScript 코드를 oojs.html 파일의 script tag 사이에 입력하고 저장 한 후, 리로드 해보세요.
 
@@ -46,7 +46,7 @@ slug: Learn/JavaScript/Objects/Basics
 var person = {};
 ```
 
-이제 브라우저의 [JavaScript 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools#the_javascript_console) 을 열고 `person`을 입력 한 다음 <kbd>Enter</kbd>/<kbd>Return</kbd>을 누르세요. 아래 줄 중 하나와 유사한 결과가 표시됩니다.
+이제 브라우저의 [JavaScript 콘솔](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) 을 열고 `person`을 입력 한 다음 <kbd>Enter</kbd>/<kbd>Return</kbd>을 누르세요. 아래 줄 중 하나와 유사한 결과가 표시됩니다.
 
 ```js
 [object Object]
@@ -95,7 +95,8 @@ person.greeting();
 
 이제 객체 내부에 몇 가지 데이터와 기능이 있으며, 멋진 간단한 구문으로 액세스 할 수 있습니다!
 
-> **참고:** 만약 여기까지 진행하는데 어려움이 있다면, 제가 만들어놓은 파일과 비교해보세요 — [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (그리고 [실행되는 예제도 보세요](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Live 버전에서는 텅빈 화면만 보이겠지만, 그게 정상입니다 — 다시, 개발자도구를 열고 객체 구조를 들여다보기 위해 위에 언급된 명령어를 입력해보세요.
+> [!NOTE]
+> 만약 여기까지 진행하는데 어려움이 있다면, 제가 만들어놓은 파일과 비교해보세요 — [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (그리고 [실행되는 예제도 보세요](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Live 버전에서는 텅빈 화면만 보이겠지만, 그게 정상입니다 — 다시, 개발자도구를 열고 객체 구조를 들여다보기 위해 위에 언급된 명령어를 입력해보세요.
 
 자, 이제 뭘 해볼까요? 객체는 각기 다른 이름(위의 예에서는 `name` 과 `age`)과 값(예제에서, `['Bob', 'Smith']` 과 `32`)을 갖는 복수개의 멤버로 구성됩니다. 한 쌍의 이름과 값은 ',' 로 구분되야 하고, 이름과 값은 ':' 으로 분리됩니다. 결국 문법은 아래와 같은 패턴이 됩니다.
 
@@ -252,7 +253,7 @@ greeting: function() {
 }
 ```
 
-아마도 "this" 가 뭔지 의아하실 것입니다. `this` 키워드는 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킵니다. 위의 예제에서 `this` 는 `person` 객체와 동일합니다. 그럼 왜 직접 `person` 객체를 쓰지 않은걸까요? 앞으로 보게될 [입문자를 위한 객체 지향 JavaScript](/ko/docs/Learn/JavaScript/Objects/Object-oriented_JS) 문서에서 우리가 생성자를 공부하게 될 때, 혹은 그것 말고도 기타 등등의 상황에서 `this` 는 매우 유용하게 사용됩니다. 이 this 라는 녀석은 객체 멤버의 컨텍스트가 바뀌는 경우에도 언제나 정확한 값을 사용하게 해줍니다(예를 들어, 두개의 다른 `person` 객체가 각각 다른 이름으로 인스턴스로 생성된 상태에서 인사말을 출력하기 위해 객체의 name 을 참조해야 한다고 생각해보세요).
+아마도 "this" 가 뭔지 의아하실 것입니다. `this` 키워드는 지금 동작하고 있는 코드를 가지고 있는 객체를 가리킵니다. 위의 예제에서 `this` 는 `person` 객체와 동일합니다. 그럼 왜 직접 `person` 객체를 쓰지 않은걸까요? 앞으로 보게될 [입문자를 위한 객체 지향 JavaScript](/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript) 문서에서 우리가 생성자를 공부하게 될 때, 혹은 그것 말고도 기타 등등의 상황에서 `this` 는 매우 유용하게 사용됩니다. 이 this 라는 녀석은 객체 멤버의 컨텍스트가 바뀌는 경우에도 언제나 정확한 값을 사용하게 해줍니다(예를 들어, 두개의 다른 `person` 객체가 각각 다른 이름으로 인스턴스로 생성된 상태에서 인사말을 출력하기 위해 객체의 name 을 참조해야 한다고 생각해보세요).
 
 간략화된 person 객체를 가지고 설명을 좀 해보겠습니다.
 
@@ -305,7 +306,8 @@ var myNotification = new Notification("Hello!");
 
 다음 문서에서 생성자에 대해서 좀더 자세히 알아볼 것입니다.
 
-> **참고:** 객체간 통신은 **message passing** 방식을 사용한다고 생각하는게 좋습니다. 한 객체가 다른 객체에게 어떤 액션을 요청해야 하는 경우, 그 객체는 다른 객체가 가지고 있는 메소드를 통해서 메세지를 보내는 것이고, 응답을 기다리는 것입니다. 그 응답은 것이 우리가 알고 있는 return 값입니다.
+> [!NOTE]
+> 객체간 통신은 **message passing** 방식을 사용한다고 생각하는게 좋습니다. 한 객체가 다른 객체에게 어떤 액션을 요청해야 하는 경우, 그 객체는 다른 객체가 가지고 있는 메소드를 통해서 메세지를 보내는 것이고, 응답을 기다리는 것입니다. 그 응답은 것이 우리가 알고 있는 return 값입니다.
 
 ## 실력을 시험해보세요!
 

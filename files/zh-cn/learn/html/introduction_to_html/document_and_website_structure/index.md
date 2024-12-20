@@ -39,7 +39,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - 页眉
   - : 通常横跨于整个页面顶部有一个大标题 和/或 一个标志。这是网站的主要一般信息，通常存在于所有网页。
 - 导航栏
-  - : 指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 [无障碍访问特性](/zh-CN/docs/learn/Accessibility)，因为屏幕阅读器可以更清晰地分辨二者。
+  - : 指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 [无障碍访问特性](/zh-CN/docs/Learn/Accessibility)，因为屏幕阅读器可以更清晰地分辨二者。
 - 主内容
   - : 中心的大部分区域是当前网页大多数的独有内容，例如视频、文章、地图、新闻等。这些内容是网站的一部分，且会因页面而异。
 - 侧边栏
@@ -59,7 +59,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 > **备注：** [全球色盲患者比例为 4%](http://www.color-blindness.com/2006/04/28/colorblind-population/)，换句话说，每 12 名男性就有一位色盲，每 200 名女性就有一位色盲。全盲和视障人士约占世界人口（[约 70 亿](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)）的 13％（2015 年 [全球约有 9.4 亿人口存在视力问题](https://en.wikipedia.org/wiki/Visual_impairment)）。
 
-HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧义地表示上文所讲的内容区段，屏幕阅读器等辅助技术可以识别这些元素，并帮助执行“找到主导航“或”找到主内容“等任务。参见前文所讲的 [页面中元素结构和语义不佳所带来的后果](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#为什么我们需要结构化)。
+HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧义地表示上文所讲的内容区段，屏幕阅读器等辅助技术可以识别这些元素，并帮助执行“找到主导航“或”找到主内容“等任务。参见前文所讲的 [页面中元素结构和语义不佳所带来的后果](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%88%91%e4%bb%ac%e9%9c%80%e8%a6%81%e7%bb%93%e6%9e%84%e5%8c%96)。
 
 为了实现语义化标记，HTML 提供了明确这些区段的专用标签，例如：
 
@@ -140,9 +140,9 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 - {{HTMLElement('main')}} 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 {{HTMLElement('body')}} 中。最好不要把它嵌套进其他元素。
 - {{HTMLElement('article')}} 包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。
-- {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/zh-CN/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
+- {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/zh-CN/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
 - {{HTMLElement('aside')}} 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
-- {{HTMLElement('header')}} 是简介形式的内容。如果它是 {{HTMLElement('body')}} 的子元素，那么就是网站的全局页眉。如果它是 {{HTMLElement('article')}} 或{{HTMLElement('section')}} 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#增加一个标题)）。
+- {{HTMLElement('header')}} 是简介形式的内容。如果它是 {{HTMLElement('body')}} 的子元素，那么就是网站的全局页眉。如果它是 {{HTMLElement('article')}} 或{{HTMLElement('section')}} 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#%e5%a2%9e%e5%8a%a0%e4%b8%80%e4%b8%aa%e6%a0%87%e9%a2%98)）。
 - {{HTMLElement('nav')}} 包含页面主导航功能。其中不应包含二级链接等内容。
 - {{HTMLElement('footer')}} 包含了页面的页脚部分。
 
@@ -184,7 +184,8 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 这里不应使用 `<aside>`，因为它和主内容并没有必要的联系（你想在任何地方都能看到它）。甚至不能用 `<section>` ，因为它也不是页面上主内容的一部分。所以在这种情况下就应使用 `<div>`，为满足无障碍使用特征，还应为购物车的标题设置一个可读标签。
 
-> **警告：** div 元素非常便利但容易被滥用。由于它们没有语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用，否则文档的升级和维护工作会非常困难。
+> [!WARNING]
+> div 元素非常便利但容易被滥用。由于它们没有语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用，否则文档的升级和维护工作会非常困难。
 
 ### 换行与水平分割线
 
@@ -203,7 +204,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 </p>
 ```
 
-没有 `<br>` 元素，这段会直接显示在长长的一行中（如前文所讲，[HTML 会忽略大部分空格](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started#HTML中的空白)）；使用 `<br>` 元素，才使得诗看上去像诗：
+没有 `<br>` 元素，这段会直接显示在长长的一行中（如前文所讲，[HTML 会忽略大部分空格](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html%e4%b8%ad%e7%9a%84%e7%a9%ba%e7%99%bd)）；使用 `<br>` 元素，才使得诗看上去像诗：
 
 {{EmbedLiveSample('br_换行元素', '100%', 150)}}
 
@@ -239,7 +240,8 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 自己创造一个网站（什么网站呢？）并尝试执行上述步骤。
 
-> **备注：** 记得保存你的杰作，今后可能会用到哦。
+> [!NOTE]
+> 记得保存你的杰作，今后可能会用到哦。
 
 ## 小结
 

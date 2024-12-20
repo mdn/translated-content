@@ -100,7 +100,8 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 
 {{EmbedLiveSample('Exemple', '', '150')}}
 
-> **Note :** La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
+> [!NOTE]
+> La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
 
 ### Méthodes de substitution
 
@@ -211,7 +212,7 @@ Dans les anciennes versions des navigateurs, vous pouvez trouver des itérations
 
 La spécification CSS Grid a été initialement prototypée dans Internet Explorer 10 ; cela signifie que si IE10 et IE11 ne disposent pas du support de la grille _moderne_, ils disposent d'une version de la mise en page Grid qui est très utilisable, bien que différente de la spécification moderne documentée sur ce site. Les implémentations d'IE10 et 11 sont préfixées `-ms-`, ce qui signifie que vous pouvez les utiliser pour ces navigateurs et qu'elles seront ignorées par les navigateurs non-Microsoft. Edge comprend toujours l'ancienne syntaxe, cependant, alors faites attention à ce que tout soit écrasé en toute sécurité dans votre grille CSS moderne.
 
-Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
+Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
 
 ## Test des anciens navigateurs
 
@@ -226,8 +227,8 @@ Vous disposez désormais des connaissances nécessaires pour utiliser en toute c
 ## Voir aussi
 
 - [Utilisation des requêtes de fonctionnalités en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) (en)
-- [Mises en page avancées avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [Mises en page avancées avec les boîtes flexibles](/fr/docs/Glossary/Flexbox)
+- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Utilisation de la grille CSS : Prise en charge des navigateurs sans Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/) (en)
 - [Un tutoriel qui utilise la version IE10 et 11 de Grid](https://24ways.org/2012/css3-grid-layout/) (en)
 - [Dois-je essayer d'utiliser la mise en œuvre de la grille dans IE10 ?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/) (en)

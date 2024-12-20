@@ -59,7 +59,8 @@ slug: WebAssembly/C_to_Wasm
 
 現在只要使用一個支援 WebAssembly 的瀏覽器，加載產生的 `hello.html` 即可。自從 Firefox 52、Chrome 57、Edge 57 和 Opera 44 開始，已經預設啟用了 WebAssembly。
 
-> **備註：** 如果你試圖直接從本機硬碟打開產生的 HTML 檔案（`hello.html`）（例如 `file://your_path/hello.html`），你會得到一個錯誤訊息，_`both async and sync fetching of the wasm failed`_。你需要藉由 HTTP 伺服器（`http://`）來執行你的 HTML 檔案——參見[如何設定本機測試伺服器？](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)來取得更多資訊。
+> [!NOTE]
+> 如果你試圖直接從本機硬碟打開產生的 HTML 檔案（`hello.html`）（例如 `file://your_path/hello.html`），你會得到一個錯誤訊息，_`both async and sync fetching of the wasm failed`_。你需要藉由 HTTP 伺服器（`http://`）來執行你的 HTML 檔案——參見[如何設定本機測試伺服器？](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)來取得更多資訊。
 
 如果一切順利，你應該可以在網頁上的 Emscripten 控制台和瀏覽器的 JavaScript 控制台中看到「Hello World」的輸出。
 
@@ -96,7 +97,8 @@ slug: WebAssembly/C_to_Wasm
 
 4. 下面讓我們來運行這個例子。上面的指令已經產生了 `hello2.html`，內容和我們使用的模板非常相像，只不過多加了一些 JavaScript 膠水程式碼和加載 Wasm 程式的程式碼。在瀏覽器中打開它，你會看到與上一個範例相同的輸出。
 
-> **備註：** 你可以在 `-o` 選項中指定 .js 檔案而不是 HTML 檔案，例如 `emcc -o hello2.js hello2.c -O3`，從而只輸出 JavaScript 膠水程式碼，而不是完整的 HTML 檔案。這樣，你就可以完全從頭開始建立自訂 HTML，儘管這是一種進階用法；使用提供的 HTML 模板通常會更簡單。
+> [!NOTE]
+> 你可以在 `-o` 選項中指定 .js 檔案而不是 HTML 檔案，例如 `emcc -o hello2.js hello2.c -O3`，從而只輸出 JavaScript 膠水程式碼，而不是完整的 HTML 檔案。這樣，你就可以完全從頭開始建立自訂 HTML，儘管這是一種進階用法；使用提供的 HTML 模板通常會更簡單。
 >
 > - Emscripten 需要大量的 JavaScript 膠水程式碼來處理記憶體分配、記憶體洩漏等一系列問題
 
@@ -130,7 +132,8 @@ slug: WebAssembly/C_to_Wasm
 
    預設情況下，Emscripten 生成的程式只會調用 `main()` 函式，其他的函式將被無視。在函式名稱之前添加 `EMSCRIPTEN_KEEPALIVE` 能夠防止這樣的事情發生。你需要導入 `emscripten.h` 來使用 `EMSCRIPTEN_KEEPALIVE`。
 
-   > **備註：** 我們使用了 `#ifdef`，來使得你在引用這段 C++ 程式時，這個範例一樣會運作。由於 C 與 C++ 中名字修飾規則的差異，這有可能發生問題，但目前我們這樣設定能保證你使用 C++ 時，這些代碼會被視為外部 C 語言函式。
+   > [!NOTE]
+   > 我們使用了 `#ifdef`，來使得你在引用這段 C++ 程式時，這個範例一樣會運作。由於 C 與 C++ 中名字修飾規則的差異，這有可能發生問題，但目前我們這樣設定能保證你使用 C++ 時，這些代碼會被視為外部 C 語言函式。
 
 2. 為了方便起見，現在將 `html_template/shell_minimal.html` 也添加到這一資料夾（但在實際開發環境中你肯定需要將其放到某一特定位置）。
 
@@ -168,7 +171,7 @@ slug: WebAssembly/C_to_Wasm
 
 ## 參見
 
-- [emscripten.org](http://emscripten.org/)——了解更多有關 Emscripten 和其各種不同的設定
-- [利用 ccall/cwrap 從 JavaScript 調用編譯過的 C 函式](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
-- [為什麼當我要將 C/C++ 編譯成 JavaScript 時，原始碼中的函式會消失且／或沒有函式可以處理？](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
+- [emscripten.org](https://emscripten.org/)——了解更多有關 Emscripten 和其各種不同的設定
+- [利用 ccall/cwrap 從 JavaScript 調用編譯過的 C 函式](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
+- [為什麼當我要將 C/C++ 編譯成 JavaScript 時，原始碼中的函式會消失且／或沒有函式可以處理？](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [將現成的 C 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/existing_C_to_wasm)

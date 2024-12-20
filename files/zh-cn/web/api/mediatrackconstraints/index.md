@@ -9,7 +9,7 @@ The **`MediaTrackConstraints`** dictionary is used to describe a set of capabili
 
 For each constraint, you can typically specify an exact value you need, an ideal value you want, a range of acceptable values, and/or a value which you'd like to be as close to as possible. The specifics vary somewhat depending on the type of the constrainable property.
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/zh-CN/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints work, see [Capabilities, constraints, and settings](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
 ## Properties
 

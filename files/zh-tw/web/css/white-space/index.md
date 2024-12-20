@@ -7,7 +7,8 @@ slug: Web/CSS/white-space
 
 此 CSS **`white-space`** 屬性決定如何處理元素內的空白字元。
 
-> **備註：** 如果要讓文字本身斷行，請改用 {{cssxref("overflow-wrap")}}、{{cssxref("word-break")}} 或 {{cssxref("hyphens")}}。
+> [!NOTE]
+> 如果要讓文字本身斷行，請改用 {{cssxref("overflow-wrap")}}、{{cssxref("word-break")}} 或 {{cssxref("hyphens")}}。
 
 ```css
 /* Keyword values */

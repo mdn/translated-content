@@ -53,7 +53,7 @@ En el ejemplo anterior, añade texto al elemento vacío. Ahora el borde contiene
 
 ## Configurar un tamaño específico
 
-Por supuesto, podemos dar a los elementos de nuestro diseño un tamaño específico. Cuando asignas un tamaño a un elemento (al cual deberá ajustarse el contenido del elemento) nos referimos a este como **tamaño extrínseco**. Toma nuestro elemento `<div>` del ejemplo anterior: podemos darle valores específicos como {{cssxref ("width")}} y {{cssxref ("height")}}, y así tendrá ese tamaño sea cual sea su contenido. Como descubrimos en [nuestro artículo anterior sobre el desbordamiento](/es/docs/Learn/CSS/Building_blocks/Contenido_desbordado), una altura establecida puede causar el desbordamiento del contenido si hay más contenido del que cabe en el elemento.
+Por supuesto, podemos dar a los elementos de nuestro diseño un tamaño específico. Cuando asignas un tamaño a un elemento (al cual deberá ajustarse el contenido del elemento) nos referimos a este como **tamaño extrínseco**. Toma nuestro elemento `<div>` del ejemplo anterior: podemos darle valores específicos como {{cssxref ("width")}} y {{cssxref ("height")}}, y así tendrá ese tamaño sea cual sea su contenido. Como descubrimos en [nuestro artículo anterior sobre el desbordamiento](/es/docs/Learn/CSS/Building_blocks/Overflowing_content), una altura establecida puede causar el desbordamiento del contenido si hay más contenido del que cabe en el elemento.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -61,7 +61,7 @@ Debido a este problema de desbordamiento, fijar la altura de los elementos con l
 
 ### El uso de porcentajes
 
-En muchos sentidos, los porcentajes actúan como unidades de longitud, y como discutimos en el [artículo sobre valores y unidades](/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS#Porcentajes), a menudo se pueden usar indistintamente con longitudes. Cuando usas un porcentaje, debes tener claro de qué es porcentaje. En el caso de una caja dentro de otro contenedor, si a la caja secundaria le asignas un porcentaje al ancho, será un porcentaje del ancho del contenedor principal.
+En muchos sentidos, los porcentajes actúan como unidades de longitud, y como discutimos en el [artículo sobre valores y unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units#porcentajes), a menudo se pueden usar indistintamente con longitudes. Cuando usas un porcentaje, debes tener claro de qué es porcentaje. En el caso de una caja dentro de otro contenedor, si a la caja secundaria le asignas un porcentaje al ancho, será un porcentaje del ancho del contenedor principal.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
@@ -99,7 +99,8 @@ En el ejemplo siguiente hemos utilizado la misma imagen dos veces. La primera im
 
 Esta técnica se utiliza para dar a las imágenes una respuesta _adaptativa_, de modo que se reduzcan adecuadamente cuando se visualizan en un dispositivo más pequeño. Sin embargo, no es conveniente usar esta técnica para cargar imágenes demasiado grandes y luego reducirlas en el navegador. Las imágenes deben tener el tamaño adecuado, no deben ser más grandes de lo que sea necesario para el tamaño más grande que se muestran en el diseño. Descargar imágenes muy grandes ralentizará tu sitio y puede costarles más dinero a los usuarios si tienen una conexión tarifada.
 
-> **Nota:** Obtén más información sobre las [técnicas adaptativas para las imágenes](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+> [!NOTE]
+> Obtén más información sobre las [técnicas adaptativas para las imágenes](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## Unidades de ventana gráfica
 

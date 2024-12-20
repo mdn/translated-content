@@ -50,7 +50,7 @@ Cross-Origin-Opener-Policy: same-origin
 
 설정해야 하는 {{HTTPHeader("Cross-Origin-Opener-Policy")}} 헤더도 참조하세요.
 
-[`crossOriginIsolated`](/ko/docs/Web/API/crossOriginIsolated)가 성공했는지 확인하려면 창 및 작업자 컨텍스트에서 사용할 수 있는 crossOriginIsolated 속성에 대해 테스트하면 됩니다.
+[`crossOriginIsolated`](/ko/docs/Web/API/Window/crossOriginIsolated)가 성공했는지 확인하려면 창 및 작업자 컨텍스트에서 사용할 수 있는 crossOriginIsolated 속성에 대해 테스트하면 됩니다.
 
 ```js
 const myWorker = new Worker("worker.js");

@@ -61,7 +61,8 @@ persona.saludo();
 
 ¡Ahora tienes algunos datos y funcionalidades dentro de tu objeto, y ahora puedes acceder a ellos con una sintaxis simple y agradable!
 
-> **Nota:** Si tienes problemas para hacer que esto funcione, intenta comparar tu código con nuestra versión - ve [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (también [ve que se ejecuta en vivo](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). La versión en vivo te dará una pantalla en blanco, pero eso está bien. De nuevo, abre tu devtools e intenta escribir los comandos anteriores para ver la estructura del objeto.
+> [!NOTE]
+> Si tienes problemas para hacer que esto funcione, intenta comparar tu código con nuestra versión - ve [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (también [ve que se ejecuta en vivo](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). La versión en vivo te dará una pantalla en blanco, pero eso está bien. De nuevo, abre tu devtools e intenta escribir los comandos anteriores para ver la estructura del objeto.
 
 Entonces, ¿qué está pasando aquí? Bien, un objeto se compone de varios miembros, cada uno de los cuales tiene un nombre (por ejemplo, `nombre` y `edad`) y un valor (por ejemplo, `['Bob', 'Smith']` y `32`). Cada par nombre/valor debe estar separado por una coma, y el nombre y el valor en cada caso están separados por dos puntos. La sintaxis siempre sigue este patrón:
 
@@ -218,7 +219,7 @@ saludo: function() {
 }
 ```
 
-Probablemente te estés preguntando qué es `"this"`. La palabra clave `this` se refiere al objeto actual en el que se está escribiendo el código, por lo que en este caso `this` es equivalente a la `persona`. Entonces, ¿por qué no escribir `persona` en su lugar? Como verás en el artículo [JavaScript orientado a objetos para principiantes](/es/docs/Learn/JavaScript/Objects/Object-oriented_JS) cuando comenzaremos a crear constructores, etc., `this` es muy útil: siempre asegurará que se usen los valores correctos cuando cambie el contexto de un miembro (por ejemplo, dos diferentes instancias de objetos `persona`) pueden tener diferentes nombres, pero querráx usar su propio nombre al decir su saludo).
+Probablemente te estés preguntando qué es `"this"`. La palabra clave `this` se refiere al objeto actual en el que se está escribiendo el código, por lo que en este caso `this` es equivalente a la `persona`. Entonces, ¿por qué no escribir `persona` en su lugar? Como verás en el artículo [JavaScript orientado a objetos para principiantes](/es/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript) cuando comenzaremos a crear constructores, etc., `this` es muy útil: siempre asegurará que se usen los valores correctos cuando cambie el contexto de un miembro (por ejemplo, dos diferentes instancias de objetos `persona`) pueden tener diferentes nombres, pero querráx usar su propio nombre al decir su saludo).
 
 Vamos a ilustrar lo que queremos decir con un par de objetos persona simplificados:
 
@@ -271,7 +272,8 @@ const miNotificacion = new Notification("¡Hola!");
 
 De nuevo, veremos qué son los constructores en un artículo posterior.
 
-> **Nota:** Es útil pensar en la forma en que los objetos se comunican como **paso de mensajes** — cuando un objeto necesita otro objeto para realizar algún tipo de acción a menudo enviará un mensaje a otro objeto a través de uno de sus métodos, y esperará una respuesta, que conocemos como un valor de retorno.
+> [!NOTE]
+> Es útil pensar en la forma en que los objetos se comunican como **paso de mensajes** — cuando un objeto necesita otro objeto para realizar algún tipo de acción a menudo enviará un mensaje a otro objeto a través de uno de sus métodos, y esperará una respuesta, que conocemos como un valor de retorno.
 
 ## Resumen
 

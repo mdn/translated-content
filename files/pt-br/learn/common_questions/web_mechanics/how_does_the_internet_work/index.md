@@ -44,7 +44,8 @@ A **Internet** é a espinha dorsal da Web, a infraestrutura técnica que faz a W
 
 Quando dois computadores precisam se comunicar, você precisa conectá-los, seja fisicamente (normalmente com um [Cabo de rede](https://pt.wikipedia.org/wiki/Cabo_de_par_tran%C3%A7ado)) ou de uma forma sem fio (por exemplo com sistemas [WiFi](https://pt.wikipedia.org/wiki/Wi-Fi) ou [Bluetooth](https://pt.wikipedia.org/wiki/Bluetooth)). Todos os computadores modernos suportam alguma(s) dessas conexões.
 
-> **Nota:** Até o final deste artigo nós estaremos falando apenas a respeito de cabos físicos, mas redes sem fio funcionam da mesma forma
+> [!NOTE]
+> Até o final deste artigo nós estaremos falando apenas a respeito de cabos físicos, mas redes sem fio funcionam da mesma forma
 
 ![Dois computadores conectados](internet-schema-1.png)
 
@@ -106,5 +107,5 @@ Tanto as intranets quanto as extranets são executadas no mesmo tipo de infraest
 ## Próximos passos
 
 - [Como a Web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Entendendo a diferença entre uma página web, um website, um servidor web e um mecânismo de pesquisa](/pt-BR/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
-- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/What_is_a_domain_name)
+- [Entendendo a diferença entre uma página web, um website, um servidor web e um mecânismo de pesquisa](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [Entendendo nomes de domínio](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

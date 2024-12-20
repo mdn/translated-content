@@ -5,7 +5,7 @@ slug: Web/CSS/Containing_block
 
 {{CSSRef}}
 
-要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Web/HTML/Block-level_elements)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
+要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
 
 ユーザーエージェント (ブラウザーなど) が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは４つの領域に分かれます。
 
@@ -38,7 +38,8 @@ slug: Web/CSS/Containing_block
    3. {{cssxref("filter")}} の値が `none` 以外、または `will-change` の値が `filter` の場合 (Firefox のみで動作)。
    4. {{cssxref("contain")}} の値が `paint` の場合 (例 `contain: paint;`)
 
-> **メモ:** ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、**初期包含ブロック**と呼ばれる矩形になります。これはビューポート (連続的なメディアの場合) またはページ領域 (ページメディアの場合) の寸法を持ちます。
+> [!NOTE]
+> ルート要素 ({{HTMLElement("html")}}) が包含ブロックである場合、**初期包含ブロック**と呼ばれる矩形になります。これはビューポート (連続的なメディアの場合) またはページ領域 (ページメディアの場合) の寸法を持ちます。
 
 ## 包含ブロックからのパーセント値の計算
 

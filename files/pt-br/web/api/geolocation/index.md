@@ -9,7 +9,8 @@ A interface **Geolocation** representa um objeto ábil de programaticamente obte
 
 Um objeto com tal interface é obtido utilizando a propriedade {{domxref("NavigatorGeolocation.geolocation")}} implementada pelo objeto {{domxref("Navigator")}}.
 
-> **Nota:** Por questões de segurança, quando uma página tenta obter acesso às informações de localização o usuário é notificado e uma requisição é feita para o mesmo fornecesser a permissão. Saiba que cada navegaor possui suas próprias políticas e métodos para requisitar tal permissão.
+> [!NOTE]
+> Por questões de segurança, quando uma página tenta obter acesso às informações de localização o usuário é notificado e uma requisição é feita para o mesmo fornecesser a permissão. Saiba que cada navegaor possui suas próprias políticas e métodos para requisitar tal permissão.
 
 ## Propriedades
 
@@ -36,4 +37,4 @@ _A interface_ Geolocation _não herda qualquer métodos._
 
 ## Veja Também
 
-- [Usando Geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando Geolocation](/pt-BR/docs/Web/API/Geolocation_API)

@@ -12,4 +12,4 @@ En la {{Glossary("symmetric-key cryptography", "criptografía de clave simétric
 ## Saber más
 
 - [Principos de Kerckhoffs](https://es.wikipedia.org/wiki/Principios_de_Kerckhoffs) en Wikipedia
-- [Cifrado](/es/docs/Glossary/Cifrado)
+- [Cifrado](/es/docs/Glossary/Cipher)

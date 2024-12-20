@@ -23,7 +23,8 @@ l10n:
 
   - : 一个布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
-    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+    > [!NOTE]
+    > 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
 
     无法使用 `autoplay="false"` 来关闭视频的自动播放功能；只要 `<video>` 标签中有这个属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。
 
@@ -80,7 +81,7 @@ l10n:
 
     每个浏览器的默认值都不相同，即使规范建议设置为 `metadata`。
 
-    > **备注：**
+    > [!NOTE]
     >
     > - `autoplay` 属性的优先级比 `preload` 高。如果指定了 `autoplay` 属性，浏览器显然需要开始下载视频以便回放。
     > - 规范中没有强制浏览器去遵循该属性的值，这仅仅只是个提示。
@@ -285,10 +286,10 @@ l10n:
 
 其他的使用说明：
 
-- 如果你不指定 `controls` 属性，视频将不会包含浏览器的默认控件；你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详细信息请参阅[创建跨浏览器视频播放器](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)。
-- 为了实现对视频（和音频）内容的精确控制，`HTMLMediaElement` 会触发多种不同的[事件](/zh-CN/docs/Web/Guide/Events/Media_events)，除了提供可控性之外，这些事件还允许你监控媒体的下载进度和播放进度，以及播放状态和位置。
+- 如果你不指定 `controls` 属性，视频将不会包含浏览器的默认控件；你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详细信息请参阅[创建跨浏览器视频播放器](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
+- 为了实现对视频（和音频）内容的精确控制，`HTMLMediaElement` 会触发多种不同的[事件](/zh-CN/docs/Web/Events#media)，除了提供可控性之外，这些事件还允许你监控媒体的下载进度和播放进度，以及播放状态和位置。
 - 你可以使用 {{cssxref("object-position")}} 属性调整视频在元素框内的位置，和使用 {{cssxref("object-fit")}} 属性控制视频如何调整大小以适应框架。
-- 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详细信息请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
+- 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详细信息请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
 - 你可以使用 `<video>` 元素播放音频文件。如果你需要结合 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕进行音频播放，这会非常有用，因为 {{HTMLElement("audio")}} 元素不支持使用 WebVTT 提供字幕。
 - 要在支持该元素的浏览器上测试回退内容，你可以将 `<video>` 替换为不存在的元素，如 `<notavideo>`。
 
@@ -530,4 +531,4 @@ AddType video/webm .webm
 - {{htmlelement("audio")}}
 - [使用 HTML 音频和视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [使用 canvas 处理视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

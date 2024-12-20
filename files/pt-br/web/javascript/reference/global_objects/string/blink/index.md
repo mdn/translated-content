@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/blink
 
 O método **`blink()`** cria um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink) que faz uma string piscar.
 
-> **Aviso:** A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento `<blink>` não é padrão e está obsoleto!
+> [!WARNING]
+> A criação de textos que piscam é desaprovada por vários padrões de acessibilidade. O próprio elemento `<blink>` não é padrão e está obsoleto!
 
 ## Sintaxe
 

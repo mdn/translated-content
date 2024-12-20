@@ -9,7 +9,8 @@ La propriété **`function.name`** est une propriété en lecture seule qui renv
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}{{js_property_attributes(0,0,1)}}
 
-> **Note :** Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
+> [!NOTE]
+> Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
 
 ## Exemples
 
@@ -94,7 +95,7 @@ toto.bind({}).name; // "bound toto"
 
 ### Noms de fonction pour les accesseurs et les mutateurs
 
-Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Fonctions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Fonctions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
+Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
 
 ```js
 var o = {

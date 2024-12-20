@@ -30,7 +30,7 @@ slug: Web/HTTP/Headers/Sec-Fetch-Dest
 
 ## 语法
 
-```
+```http
 Sec-Fetch-Dest: audio
 Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document
@@ -58,7 +58,8 @@ Sec-Fetch-Dest: xslt
 
 ## 指令
 
-> **备注：** 这些指令对应于 {{domxref("Request.destination")}} 返回的值。
+> [!NOTE]
+> 这些指令对应于 {{domxref("Request.destination")}} 返回的值。
 
 - `audio`
   - : 目标是音频数据。这可能源自 HTML {{HTMLElement("audio")}} 标签。
@@ -79,7 +80,7 @@ Sec-Fetch-Dest: xslt
 - `image`
   - : 目标是图片。这可能源自 HTML {{HTMLElement("image")}}、SVG {{SVGElement("image")}}、CSS {{cssxref("background-image")}}、CSS {{cssxref("cursor")}}、CSS {{cssxref("list-style-image")}} 等等。
 - `manifest`
-  - : 目标是 mainfest。这可能源自 HTML [\<link rel=manifest>](/zh-CN/docs/Web/HTML/Link_types/manifest)。
+  - : 目标是 mainfest。这可能源自 HTML [\<link rel=manifest>](/zh-CN/docs/Web/HTML/Attributes/rel/manifest)。
 - `object`
   - : 目标是对象，这可能源自 {{HTMLElement("object")}} 标签。
 - `paintworklet`
@@ -107,7 +108,7 @@ Sec-Fetch-Dest: xslt
 
 {{HTMLElement("img")}} 元素生成的跨域请求将具有以下的 HTTP 请求标头（请注意，目标是 `image`）：
 
-```
+```http
 Sec-Fetch-Dest: image
 Sec-Fetch-Mode: no-cors
 Sec-Fetch-Site: cross-site
@@ -129,5 +130,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/articles/fetch-metadata) (web.dev)
-- [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
+- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.developers.google.cn）
+- [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/)（secmetadata.appspot.com）

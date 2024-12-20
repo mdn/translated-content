@@ -7,9 +7,9 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 В этом уроке мы рассмотрим, как обрабатываются определённые специальные элементы в CSS. Элементы изображений, других медиа и форм ведут себя иначе при их стилизации в CSS чем обычные блоки. Понимание того, что возможно, а что нет спасут вас от лишних разочарований и этот урок прольёт свет на некоторые из этих основных вещей, которые вам нужно знать.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                |
+| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                    |
 
 ## Замещаемые элементы
 
@@ -149,7 +149,8 @@ textarea {
 }
 ```
 
-> **Примечание:** Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However if you want to take a look at one example, check out [Normalize.css](http://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
+> [!NOTE]
+> Normalizing stylesheets are used by many developers to create a set of baseline styles to use on all projects. Typically these do similar things to those described above, making sure that anything different across browsers is set to a consistent default before you do your own work on the CSS. They are not as important as they once were, as browsers are typically more consistent than in the past. However if you want to take a look at one example, check out [Normalize.css](http://necolas.github.io/normalize.css/), which is a very popular stylesheet used as a base by many projects.
 
 Для дополнительной информации по стилизации форм, посмотрите две статьи в разделе HTML этого руководства.
 

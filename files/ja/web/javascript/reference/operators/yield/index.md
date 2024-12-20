@@ -39,7 +39,8 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 ジェネレーターのコードパス、 `yield` 演算子、新しい開始値を {{jsxref("Generator.prototype.next()")}} に渡すことで指定することができる機能により、ジェネレーターは大きな力と制御を提供します。
 
-> **警告:** 残念ながら `next()` は非対称ですが、仕方がありません。常に現在中断している `yield` に値を送りますが、次の `yield` のオペランドを返します。
+> [!WARNING]
+> 残念ながら `next()` は非対称ですが、仕方がありません。常に現在中断している `yield` に値を送りますが、次の `yield` のオペランドを返します。
 
 ## 例
 
@@ -100,7 +101,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## 関連情報
 
-- [Iterator プロトコル](/ja/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [Iterator プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

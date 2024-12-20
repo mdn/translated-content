@@ -61,7 +61,7 @@ slug: Web/HTML/Element/table
 
 ## 屬性
 
-這個元件包含了 [全域屬性（global attributes）](/zh-TW/docs/HTML/Global_attributes)。
+這個元件包含了 [全域屬性（global attributes）](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 ### 棄用屬性
 
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/table
 - `bgcolor` {{Deprecated_inline}}
   - : 定義表格的背景與內容顏色。它使用[六位十六進制 RGB code](/zh-TW/docs/Web/CSS/color_value#RGB_colors)，前缀需要加上 '`#`' 。也可以用[預先定義的顏色字串](/zh-TW/docs/Web/CSS/color_value#Color_keywords)可用。在 CSS 要得出類似效果，應該使用 {{cssxref("background-color")}} 屬性。
 - `border` {{Deprecated_inline}}
-  - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 [`frame`](/zh-TW/docs/Web/HTML/Element/table#frame) 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
+  - : 這個屬性以像素為單位，定義了圍繞於表格框架的大小。如果設為 0，代表 [`frame`](#frame) 屬性為空。在 CSS 要得出類似效果，應該使用 {{cssxref("border")}} 屬性。
 - `cellpadding` {{Deprecated_inline}}
   - : 這個屬性定義了元件與邊界線之間的空白，以及要不要顯示。如果輸入像素，像素長度的空白會套用到四個邊；如果輸入百分比，內容將居中、整體的垂直空間（上與下）會使用這個百分比表示。橫向空間（左與右）也適用這個規則。在 CSS 要得出類似效果，應該對 `<table>` 屬性使用 {{cssxref("border-collapse")}}；並對 {{HTMLElement("td")}} 使用 {{cssxref("padding")}}。
 - `cellspacing` {{Deprecated_inline}}

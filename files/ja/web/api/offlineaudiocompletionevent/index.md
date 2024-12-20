@@ -9,7 +9,8 @@ l10n:
 
 [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の `OfflineAudioCompletionEvent` このインターフェイスは、 {{domxref("OfflineAudioContext")}} の処理が終了した際に発生するイベントを表します。 {{domxref("OfflineAudioContext/complete_event", "complete")}} イベントがこのインターフェイスで使用されます。
 
-> **メモ:** このインターフェイスは非推奨とされています。過去の経緯からまだ対応していますが、ブラウザーがプロミス版の {{domxref("OfflineAudioContext.startRendering")}} に対応してくると、このインターフェイスはまもなく廃止され、必要なくなる予定です。
+> [!NOTE]
+> このインターフェイスは非推奨とされています。過去の経緯からまだ対応していますが、ブラウザーがプロミス版の {{domxref("OfflineAudioContext.startRendering")}} に対応してくると、このインターフェイスはまもなく廃止され、必要なくなる予定です。
 
 {{InheritanceDiagram}}
 

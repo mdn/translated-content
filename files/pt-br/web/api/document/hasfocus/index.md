@@ -5,7 +5,8 @@ slug: Web/API/Document/hasFocus
 
 {{APIRef}}O método **`Document.hasFocus()`** retorna um valor {{jsxref("Boolean")}} que indica se o documento ou qualquer elemento dentro do documento está com o foco ativo. Este método pode ser usado para determinar se o elemento ativo em um documento tem foco.
 
-> **Nota:** Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.
+> [!NOTE]
+> Quando se está visualizando um documento, um elemento com focus é sempre o ativo no mesmo, mas um elemento ativo não necessariamente tem o foco. Por exemplo, um elemento ativo com uma janela (popup) que não é a principal não tem foco.
 
 ## Sintaxe
 
@@ -73,4 +74,4 @@ focused = document.hasFocus();
 
 ## Veja também
 
-- [Usando a API de Page Visibility](/pt-BR/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)
+- [Usando a API de Page Visibility](/pt-BR/docs/Web/API/Page_Visibility_API)

@@ -203,7 +203,8 @@ h1, h2, .intro
 
 Essayez de créer des règles CSS qui utilisent les sélecteurs ci-dessus et du code HTML à styler. Si vous ne savez pas ce que signifie la syntaxe ci-dessus, essayez de la rechercher sur MDN !
 
-> **Note :** Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors), dans un prochain cours.
+> [!NOTE]
+> Vous en apprendrez beaucoup plus sur les sélecteurs dans nos tutoriels sur [les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors), dans un prochain cours.
 
 ### Spécificité
 
@@ -272,9 +273,11 @@ Définir les propriétés CSS sur des valeurs spécifiques est la fonction princ
 - **[`color`](/fr/docs/Web/CSS/color)**
 - **[`border`](/fr/docs/Web/CSS/border)**
 
-> **Attention :** Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
+> [!WARNING]
+> Si la propriété est inconnue ou si la valeur est invalide pour une propriété donnée, la déclaration est considérée comme _invalide_ et complètement ignorée par le moteur CSS du navigateur.
 
-> **Attention :** En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit _toujours_ être notée `color`. `couleur` ne fonctionnera pas.
+> [!WARNING]
+> En CSS (et dans les autres standards web), l'orthographe américaine a été adoptée comme norme à respecter en cas d'incertitude linguistique. Par exemple, la couleur doit _toujours_ être notée `color`. `couleur` ne fonctionnera pas.
 
 ### Fonctions
 
@@ -345,7 +348,7 @@ Nous n'avons pas rencontré jusqu'ici les [`@rules`](/fr/docs/Web/CSS/At-rule) (
 @import "styles2.css";
 ```
 
-L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Media_Queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
+L'une des `@rules` les plus fréquemment rencontrée est `@media`, qui permet d'utiliser les [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries) pour appliquer CSS seulement quand certaines conditions sont vérifiées (par ex. quand la résolution de l'écran dépasse une certaine valeur, ou quand l'écran dépasse une certaine largeur).
 
 Dans le CSS ci-dessous, une règle donne à l'élément `<body>` un fond rose. La section `@media` ne s'appliquera que dans les navigateurs dont la fenêtre est plus large que 30em. Dans ce cas la couleur de fond sera redéfinie à bleue.
 
@@ -408,7 +411,8 @@ Ce n'est pas le moment d'apprendre tous ces raccourcis — vous les croiserez à
 
 **Ajoutez les déclarations précédentes à votre CSS pour voir comment elles affectent la mise en forme de votre document HTML. Testez différentes valeurs.**
 
-> **Attention :** Les raccourcis vous autorisent à ne pas déclarer certaines valeurs, mais dans ce cas, les valeurs non déclarées sont restaurées à leur valeur par défaut. Cela garantit l'usage d'un ensemble de valeurs qui restent raisonnables. Cela peut par contre vous surprendre, si vous pensiez que le raccourci ne changeait que les valeurs passées en argument.
+> [!WARNING]
+> Les raccourcis vous autorisent à ne pas déclarer certaines valeurs, mais dans ce cas, les valeurs non déclarées sont restaurées à leur valeur par défaut. Cela garantit l'usage d'un ensemble de valeurs qui restent raisonnables. Cela peut par contre vous surprendre, si vous pensiez que le raccourci ne changeait que les valeurs passées en argument.
 
 ## Commentaires
 

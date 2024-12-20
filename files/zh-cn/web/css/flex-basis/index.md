@@ -5,11 +5,12 @@ slug: Web/CSS/flex-basis
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/css) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`flex-basis`** 指定了 flex 元素在主轴方向上的初始大小。如果不使用 {{Cssxref("box-sizing")}} 改变盒模型的话，那么这个属性就决定了 flex 元素的内容盒（content-box）的尺寸。
 
 {{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-> **备注：** 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。
+> [!NOTE]
+> 当一个元素同时被设置了 `flex-basis` (除值为 `auto` 外) 和 `width` (或者在 `flex-direction: column` 情况下设置了`height`) , `flex-basis` 具有更高的优先级。
 
 ## 语法
 
@@ -34,7 +35,7 @@ flex-basis: initial;
 flex-basis: unset;
 ```
 
-这个 `flex-basis` 属性 被指定为关键词 [`content`](/zh-CN/docs/Web/CSS/flex-basis#content) 或者 [`<'width'>`](/zh-CN/docs/Web/CSS/flex-basis#%3C'width'%3E).
+这个 `flex-basis` 属性 被指定为关键词 [`content`](#content) 或者 [`<'width'>`](/zh-CN/docs/Web/CSS/flex-basis#%3C'width'%3E).
 
 ### 取值
 

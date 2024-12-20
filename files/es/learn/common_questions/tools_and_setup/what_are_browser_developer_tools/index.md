@@ -7,7 +7,8 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 
-> **Nota:** Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](http://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
+> [!NOTE]
+> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](https://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/docs/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
 
 ## Cómo abrir devtools en tu navegador
 
@@ -106,7 +107,7 @@ Notarás una serie de pestañas en las que se puede hacer clic en la parte super
 
 Obtén más información sobre el Inspector en diferentes navegadores:
 
-- [Inspector de páginas de Firefox.](/es/docs/Tools/Page_Inspector)
+- [Inspector de páginas de Firefox.](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [Explorador del DOM de Edge.](https://docs.microsoft.com/es-es/microsoft-edge/)
 - [inspector del DOM de Chrome.](https://developers.google.com/web/tools/chrome-devtools/inspect-styles?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) (el inspector de Opera funciona igual que este)
 - [Safari inspector y explorador de estilos.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
@@ -163,7 +164,7 @@ La sección final, **Alcances**, muestra qué valores son visibles desde varios 
 
 Obtén más información sobre el depurador de JavaScript en diferentes navegadores:
 
-- [Depurador de JavaScript en Firefox.](/es/docs/Tools/Debugger)
+- [Depurador de JavaScript en Firefox.](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
 - [Depurador de Microsoft Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide/debugger)
 - [Depurador de Chrome.](https://developers.google.com/web/tools/chrome-devtools/javascript/)
 - [Depurador de Safari.](https://developer.apple.com/safari/tools/)
@@ -224,12 +225,12 @@ Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos 
 
 Obtén más información sobre la consola de JavaScript en diferentes navegadores:
 
-- [Consola Web de Firefox.](/es/docs/Tools/Web_Console)
+- [Consola Web de Firefox.](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
 - [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
-- [Consola JavaScript de Chrome.](https://developer.chrome.com/devtools/docs/console) (el inspector de Opera funciona de la misma manera)
+- [Consola JavaScript de Chrome.](https://developer.chrome.com/docs/devtools/console/) (el inspector de Opera funciona de la misma manera)
 - [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## Ve también
 
 - [Depurar HTML.](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Depurar CSS.](/es/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
+- [Depurar CSS.](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)

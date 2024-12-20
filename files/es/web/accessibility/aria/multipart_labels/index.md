@@ -36,7 +36,8 @@ Tanto **aria-labelledby** y **aria-describedby** se especifican en el elemento d
 
 JAWS 8.0 tiene su propia lógica para encontrar etiquetas, causando que siempre sobreescriba el nombre accesible que obtiene la caja de texto de un documento HTML. Con JAWS 8, no se ha encontrado una manera de hacer que acepte la etiqueta del ejemplo anterior. Pero NVDA y Window-Eyes funcionan correctamente, Orca on Linux tampoco tiene problemas.
 
-> **Nota:** TBD (pendiente): añadir más información sobre compatiblidad
+> [!NOTE]
+> TBD (pendiente): añadir más información sobre compatiblidad
 
 ## ¿Puede hacerse sin ARIA?
 

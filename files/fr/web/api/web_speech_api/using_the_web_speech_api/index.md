@@ -13,7 +13,8 @@ La reconnaissance vocale implique de recevoir de la voix à travers un dispositi
 
 L'API Web Speech a une interface principale de contrôle — {{domxref("SpeechRecognition")}} — plus un nombre d'interfaces inter-reliées pour représenter une grammaire, des résultats, etc. Généralement, le système de reconnaissance vocale par défaut disponible sur le dispositif matériel sera utilisé pour la reconnaissance vocale — la plupart des systèmes d'exploitation modernes ont un système de reonnaissance vocale pour transmettre des commandes vocales. On pense à Dictation sur macOS, Siri sur iOS, Cortana sur Windows 10, Android Speech, etc.
 
-> **Note :** Sur certains navigateurs, comme Chrome, utiliser la reconnaissance vocale sur une page web implique de disposer d'un moteur de reconnaissance basé sur un serveur. Votre flux audio est envoyé à un service web pour traitement, le moteur ne fonctionnera donc pas hors ligne.
+> [!NOTE]
+> Sur certains navigateurs, comme Chrome, utiliser la reconnaissance vocale sur une page web implique de disposer d'un moteur de reconnaissance basé sur un serveur. Votre flux audio est envoyé à un service web pour traitement, le moteur ne fonctionnera donc pas hors ligne.
 
 ### Demo
 
@@ -63,7 +64,7 @@ var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', '
 var grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colors.join(' | ') + ' ;'
 ```
 
-The grammar format used is [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:
+The grammar format used is [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:
 
 - The lines are separated by semi-colons, just like in JavaScript.
 - The first line — `#JSGF V1.0;` — states the format and version used. This always needs to be included first.
@@ -127,7 +128,7 @@ document.body.onclick = function () {
 
 #### Receiving and handling results
 
-Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the [`SpeechRecognition` event handlers list](/fr/docs/Web/API/SpeechRecognition#Event_handlers).) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:
+Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the [`SpeechRecognition` event handlers list](/fr/docs/Web/API/SpeechRecognition#event_handlers).) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:
 
 ```js
 recognition.onresult = function (event) {
@@ -275,7 +276,7 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
 
 #### Speaking the entered text
 
-Next, we create an event handler to start speaking the text entered into the text field. We are using an [onsubmit](/fr/docs/Web/API/GlobalEventHandlers/onsubmit) handler on the form so that the action happens when <kbd>Enter</kbd>/<kbd>Return</kbd> is pressed. We first create a new {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} instance using its constructor — this is passed the text input's value as a parameter.
+Next, we create an event handler to start speaking the text entered into the text field. We are using an [onsubmit](/fr/docs/Web/API/HTMLFormElement/submit_event) handler on the form so that the action happens when <kbd>Enter</kbd>/<kbd>Return</kbd> is pressed. We first create a new {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "SpeechSynthesisUtterance()")}} instance using its constructor — this is passed the text input's value as a parameter.
 
 Next, we need to figure out which voice to use. We use the {{domxref("HTMLSelectElement")}} `selectedOptions` property to return the currently selected {{htmlelement("option")}} element. We then use this element's `data-name` attribute, finding the {{domxref("SpeechSynthesisVoice")}} object whose name matches this attribute's value. We set the matching voice object to be the value of the {{domxref("SpeechSynthesisUtterance.voice")}} property.
 

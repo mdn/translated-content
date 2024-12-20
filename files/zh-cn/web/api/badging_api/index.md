@@ -2,7 +2,7 @@
 title: Badging API
 slug: Web/API/Badging_API
 l10n:
-  sourceCommit: 8a999418acafeb44b4491e37d02721d32607ec3a
+  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
 {{DefaultAPISidebar("Badging API")}}{{securecontext_header}}{{AvailableInWorkers}}
@@ -28,7 +28,7 @@ Web 开发人员经常更新文档图标或标题以指示状态。Badging API �
   - : 表示当前未设置徽章。若徽章被应用程序清除或被用户代理重置，徽章可能会处于此状态。
 - `flag`
   - : 表示已设置徽章，但没有具体数据可显示。如果应用程序已设置徽章，但未将任何值传递给该方法，则徽章将处于此状态。
-- `an integer`
+- 一个整数
   - : 设置徽章时传递的值。该值永远不会是 `0`，设置徽章时传递值 `0` 将导致用户代理通过将其设置为 `nothing` 来清除徽章。
 
 ### 设置徽章
@@ -83,5 +83,5 @@ navigator.clearAppBadge();
 
 ## 参见
 
-- [应用程序图标标记](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
+- [应用程序图标标记](https://developer.chrome.google.cn/docs/capabilities/web-apis/badging-api)
 - [Badging API Explainer](https://github.com/w3c/badging/blob/main/explainer.md)

@@ -17,11 +17,12 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
-> **备注：** 上述示例使用了两个选择器来向每个除了首项 `li` 元素以外插入内容。也可以仅用一个选择器达到目标：
+> [!NOTE]
+> 上述示例使用了两个选择器来向每个除了首项 `li` 元素以外插入内容。也可以仅用一个选择器达到目标：
 >
 > ```css
 > .breadcrumb li:not(:first-child)::before {

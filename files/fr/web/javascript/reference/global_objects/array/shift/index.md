@@ -27,7 +27,8 @@ Cette méthode est générique et peut être {{jsxref("Function.call", "appelée
 
 Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
 
-> **Note :** La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
+> [!NOTE]
+> La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
 
 ## Exemples
 
@@ -52,7 +53,7 @@ console.log("Cet élément a été enlevé :", premierÉlément);
 
 ### Utiliser `shift()` dans une boucle `while`
 
-La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
+La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
 
 ```js
 var noms = ["André", "Édouard", "Paul", "Christophe", "Jean"];

@@ -7,9 +7,10 @@ slug: Web/CSS/border-top
 
 ## Resumen
 
-La propiedad de [CSS](/es/docs/CSS) **`border-top`** es una abreviatura que establece los valores de {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, y {{Cssxref("border-top-width")}}. Estas propiedades las características del borde superior de un elemento.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-top`** es una abreviatura que establece los valores de {{Cssxref("border-top-color")}}, {{Cssxref("border-top-style")}}, y {{Cssxref("border-top-width")}}. Estas propiedades las características del borde superior de un elemento.
 
-> **Nota:** Los tres valores de la abreviatura pueden ser especificados en cualquier orden, y uno o dos de ellos pueden ser omitidos.
+> [!NOTE]
+> Los tres valores de la abreviatura pueden ser especificados en cualquier orden, y uno o dos de ellos pueden ser omitidos.
 >
 > Como con todas las propiedades abreviadas, border-top siempre establece los valores de todas las propiedades que sean posibles, aun si no están especificadas. Establece aquellas que no son especificadas a sus valores por defecto. Esto significa que:
 >

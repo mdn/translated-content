@@ -2,7 +2,7 @@
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
-  sourceCommit: ec80e95431ed46f05946e9b12219fdd2962808e6
+  sourceCommit: 56fc816a9fb8e96a6b69cd19be03f62b582c06ae
 ---
 
 {{LearnSidebar}}
@@ -45,13 +45,14 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ## 首先：解决一般问题
 
-在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
+在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
 
-在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
+在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
 
 总的来说，这涉及到检查你的 HTML 和 CSS 代码是否格式规范、无任何语法错误。
 
-> **备注：** CSS 与 HTML 之间的一个常见挑战是 CSS 规则之间的冲突。当引入第三方代码时，这些问题可能变得很棘手。比如，你可能在使用某个 CSS 框架时，发现它的某个类名与你已经在其他地方使用的类名产生了冲突。或者，你可能会注意到，某些第三方 API（如用于生成广告横幅的脚本）生成的 HTML 中包含了与你在其他地方使用的类名或 ID 相同的名称。为了避免这种情况，你需要先研究你所使用的工具，并在设计代码时考虑如何与它们协作或避开它们。给 CSS 添加“命名空间”也是一个不错的做法，例如，如果你有一个小组件，确保它有一个唯一的类名，并使用这个类名来选择组件内的元素，这样可以减少冲突的可能性。例如，使用 `.audio-player ul a`。
+> [!NOTE]
+> CSS 与 HTML 之间的一个常见挑战是 CSS 规则之间的冲突。当引入第三方代码时，这些问题可能变得很棘手。比如，你可能在使用某个 CSS 框架时，发现它的某个类名与你已经在其他地方使用的类名产生了冲突。或者，你可能会注意到，某些第三方 API（如用于生成广告横幅的脚本）生成的 HTML 中包含了与你在其他地方使用的类名或 ID 相同的名称。为了避免这种情况，你需要先研究你所使用的工具，并在设计代码时考虑如何与它们协作或避开它们。给 CSS 添加“命名空间”也是一个不错的做法，例如，如果你有一个小组件，确保它有一个唯一的类名，并使用这个类名来选择组件内的元素，这样可以减少冲突的可能性。例如，使用 `.audio-player ul a`。
 
 ### 验证
 
@@ -81,7 +82,8 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 大多数浏览器中内置的开发者工具也提供了有用的工具来查找错误，主要是针对 CSS 的。
 
-> **备注：** 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误的标记；目前，W3C 验证器是佳的获取 HTML 错误的方法——请参阅上面的[验证](#验证)。
+> [!NOTE]
+> 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误的标记；目前，W3C 验证器是佳的获取 HTML 错误的方法——请参阅上面的[验证](#验证)。
 
 例如，在 Firefox 中，CSS 检查器将显示未应用的 CSS 声明，并带有警告三角形。悬停在警告三角上，其将提供描述性的错误信息：
 
@@ -99,7 +101,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 一旦你确定了将要使用但不被普遍支持的技术列表，最好研究一下它们在哪些浏览器中受支持，以及相关的有用技巧。请参阅下面的[寻求帮助](#寻找帮助)。
 
-#### HTML 回退行为
+### HTML 回退行为
 
 某些问题可以通过利用 HTML/CSS 的自然工作方式来解决。
 
@@ -147,11 +149,12 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 你也可以在 GitHub 上的 [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) 上查看此实时示例（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 上的 [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) 上查看此实时示例（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果你查看示例，当你尝试输入数据时，UI 特性会发挥作用。在具有动态键盘的设备上，将显示特定于类型的输入面板（keypad）。在不支持新特性的浏览器上，输入框将默认为普通文本输入框，使得用户仍然可以输入正确的信息。
 
-#### CSS 回退行为
+### CSS 回退行为
 
 CSS 的情况可以说比 HTML 更好一些。如果浏览器遇到一个它不明白的声明或规则，它只会完全跳过它，而不会强行应用它或者抛出错误。如果这样的错误意外地出现在生产环境代码中，这可能会让你和用户感到沮丧，但至少这样的话，整个网站不会因为一个错误而崩溃。如果巧妙地利用它，你甚至可以从中获益。
 
@@ -159,7 +162,8 @@ CSS 的情况可以说比 HTML 更好一些。如果浏览器遇到一个它不�
 
 ![具有圆角、内阴影和投影效果的红色按钮](blingy-button.png)
 
-> **备注：** 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> [!NOTE]
+> 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -191,9 +195,10 @@ button:active {
 
 为了解决这个问题，我们添加了第二个 `background-color` 声明，指定了一个十六进制颜色——这在非常老旧的浏览器中也得到支持，可以作为现代炫酷特性的后备方案。浏览器在访问此页面时，首先会应用第一个 `background-color` 值；当遇到第二个 `background-color` 声明时，如果浏览器支持 RGB 颜色，就会用这个值覆盖之前的值。如果不支持，它就会忽略整个声明，继续执行后续样式。
 
-> **备注：** 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
+> [!NOTE]
+> 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
 
-#### 选择器支持
+### 选择器支持
 
 当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
 
@@ -213,7 +218,7 @@ form > #date
 
 （因为 `date` 表单输入不是 `<form>` 的直接子元素，你最好使用一个一般的后代选择器而不是子选择器）。
 
-#### 处理 CSS 前缀
+### 处理 CSS 前缀
 
 另一组问题来自 CSS 前缀——这种机制最初用于允许浏览器供应商在实验状态下实施自己版本的 CSS（或 JavaScript）特性，这样他们就可以试用并确保其正常工作，而不会与其他浏览器的实现或最终无前缀的实现发生冲突。
 
@@ -253,7 +258,7 @@ form > #date
 
 如果需要使用现代特性，可以使用 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 进行特性支持检测，并在 `@supports` 块中嵌套使用带有前缀的特性或新特性。
 
-#### 响应式设计问题
+### 响应式设计问题
 
 响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
 
@@ -269,7 +274,7 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 - 带有客户端 web 技术浏览器支持信息的参考资料，例如 [\<video> 参考页面](/zh-CN/docs/Web/HTML/Element/video)。
 - 其他的支持性参考资料，例如 [web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)。
-- 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)。
+- 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
 
 [caniuse.com](https://caniuse.com/) 提供支持信息，以及一些有用的外部资源链接。例如，请参阅 <https://caniuse.com/#search=video>（你只需在文本框中输入要搜索的特性）。
 

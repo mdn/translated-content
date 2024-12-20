@@ -1,20 +1,29 @@
 ---
-title: Selection.isCollapsed
+title: Selection：isCollapsed 属性
 slug: Web/API/Selection/isCollapsed
+l10n:
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
-{{ ApiRef() }}
+{{ ApiRef("DOM") }}
 
-### 概述
+**`Selection.isCollapsed`** 只读属性返回一个布尔值，表示当前是否有任何文本被选中。当选定内容的起点和终点位于内容中的同一位置时，没有选定文本。
 
-返回一个布尔值用于描述选区的起始点和终止点是否位于一个位置（即是否框选了，译者注）。
+请注意，折叠的选择可能仍有一个（在 Gecko 中为多个）{{domxref("Range")}}，因此 {{domxref("Selection.rangeCount")}} 可能不为零。在这种情况下，调用 {{domxref("Selection")}} 对象的 {{domxref("Selection.getRangeAt", "getRangeAt()")}} 方法可能会返回折叠的 `Range` 对象。
 
-### 用法
+## 值
 
-```plain
-sel.isCollapsed
-```
+一个布尔值。
 
-### 注意
+## 规范
 
-即使是一个被折叠了的选区，其 rangeCount 的结果也可能大于 0。sel.getRangeAt(0) 会在选区被折叠的情况下返回一个值。
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Selection")}}
+- {{domxref("Range")}}

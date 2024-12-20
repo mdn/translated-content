@@ -86,7 +86,8 @@ application/x-ns-proxy-autoconfig
 
 接下来，你应当配置你的服务器，让文件拓展名 .pac 映射到如上所示的 MIME 类型。
 
-> **备注：** PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。
+> [!NOTE]
+> PAC 文件的 JavaScript 代码应该总是单独保存到 .pac 文件中，而不是嵌入到 HTML 文件或是任何其他文件之中。
 >
 > - 本文档末尾的示例都是完整的，使用时不需要增加任何其他代码，直接保存应用即可。（当然，你需要改成你自己的域名/子域）
 
@@ -96,28 +97,28 @@ application/x-ns-proxy-autoconfig
 
 - 基于主机名的判断函数
 
-  - [`isPlainHostName()`](#isPlainHostName)
-  - [`dnsDomainIs()`](#dnsDomainIs)
-  - [`localHostOrDomainIs()`](#localHostOrDomainIs)
-  - [`isResolvable()`](#isResolvable)
-  - [`isInNet()`](#isInNet)
+  - [`isPlainHostName()`](#isplainhostname)
+  - [`dnsDomainIs()`](#dnsdomainis)
+  - [`localHostOrDomainIs()`](#localhostordomainis)
+  - [`isResolvable()`](#isresolvable)
+  - [`isInNet()`](#isinnet)
 
 - 和代理相关的功能函数
 
-  - [`dnsResolve()`](#dnsResolve)
+  - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
-  - [`myIpAddress()`](#myIpAddress)
-  - [`dnsDomainLevels()`](#dnsDomainLevels)
+  - [`myIpAddress()`](#myipaddress)
+  - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - 基于 URL 或主机名的判断函数
 
-  - [`shExpMatch()`](#shExpMatchstr_shexp)
+  - [`shExpMatch()`](#shexpmatchstr_shexp)
 
 - 基于时间的判断函数
 
-  - [`weekdayRange()`](#weekdayRange)
-  - [`dateRange()`](#dateRange)
-  - [`timeRange()`](#timeRange)
+  - [`weekdayRange()`](#weekdayrange)
+  - [`dateRange()`](#daterange)
+  - [`timeRange()`](#timerange)
 
 - 日志记录功能函数
 
@@ -127,7 +128,8 @@ application/x-ns-proxy-autoconfig
 
   - `ProxyConfig.bindings` {{Deprecated_Inline}}
 
-> **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
+> [!NOTE]
+> pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
 > - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org`（传入 `host` 参数 `www.mozilla.org`、`url` 参数 `https://www.mozilla.org`）
@@ -318,7 +320,8 @@ myIpAddress()
 
 获取当前 Firefox 所在设备的 IP 地址，并返回为标准格式的 IP 地址字符串。
 
-> **警告：** myIpAddress() 返回与 **`nslookup localhost` **命令在 Linux 主机上的执行结果相同的 IP 地址。不会返回公网 IP 地址。
+> [!WARNING]
+> myIpAddress() 返回与 **`nslookup localhost` **命令在 Linux 主机上的执行结果相同的 IP 地址。不会返回公网 IP 地址。
 
 #### 例子
 
@@ -383,7 +386,8 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 weekdayRange(wd1, wd2, [gmt])
 ```
 
-> **备注：** (Before Firefox 49) `wd1` must be less than `wd2` if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) `wd1` must be less than `wd2` if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### 参数
 
@@ -431,7 +435,8 @@ dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
 dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 ```
 
-> **备注：** (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### 参数
 
@@ -494,7 +499,8 @@ dateRange(1995, 1997);
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
 
-> **备注：** (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### 参数
 
@@ -526,7 +532,8 @@ timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds pa
 
 ### 对除本地主机以外的所有连接使用代理
 
-> **备注：** 以下所有示例都只针对特定需求并未经测试
+> [!NOTE]
+> 以下所有示例都只针对特定需求并未经测试
 
 所有并非完全限定的主机名，以及在本地域内的主机名，都将直接连接。其他的会通过 w3proxy:8080 连接。如果代理不可用，则自动回退到直连。
 
@@ -540,7 +547,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **备注：** 这是只有一个代理服务器情况下最简单高效的自动配置脚本。
+> [!NOTE]
+> 这是只有一个代理服务器情况下最简单高效的自动配置脚本。
 
 ## 例 2
 
@@ -564,7 +572,8 @@ function FindProxyForURL(url, host) {
 
 以上示例为 mozilla.org 域外所有主机使用代理，同时添加了例外使 `www.mozilla.org` 和 `merchant.mozilla.org` 也使用代理。
 
-> **备注：** 以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和 && 前的括号。
+> [!NOTE]
+> 以上例外的顺序影响效率：localHostOrDomainIs() 只在 URL 位于本地域内时执行，注意位于 || 外和 && 前的括号。
 
 ## 例 3
 
@@ -695,7 +704,8 @@ function FindProxyForURL(url, host) {
 > // ...
 > ```
 
-> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
+> [!NOTE]
+> 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
 
 ## 历史与实现
 

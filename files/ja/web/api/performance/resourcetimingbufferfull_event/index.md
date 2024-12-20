@@ -33,7 +33,7 @@ onresourcetimingbufferfull = (event) => {};
 ```js
 function increaseFilledBufferSize(event) {
   console.log(
-    "警告: リソースタイミングバッファが満杯です。バッファーサイズを 500 に増やします。",
+    "警告: リソースタイミングバッファーが満杯です。バッファーサイズを 500 に増やします。",
   );
   performance.setResourceTimingBufferSize(500);
 }

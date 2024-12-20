@@ -70,9 +70,11 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
     - `inline`
       - : この要素は、自身の前後に改行を生成しない 1 つ以上のインラインボックスを生成します。通常のフローでは、次の要素は、空間があれば同じ行になります。
 
-> **メモ:** 複数キーワードの構文に対応しているブラウザーでは、**外側**の値のみがあるのを見つけると（`display: block` や `display: inline` が指定されている場合など）、内側の値を `flow` に設定します。（例えば、 `display: block flow` や `display: inline flow` のように。）
+> [!NOTE]
+> 複数キーワードの構文に対応しているブラウザーでは、**外側**の値のみがあるのを見つけると（`display: block` や `display: inline` が指定されている場合など）、内側の値を `flow` に設定します。（例えば、 `display: block flow` や `display: inline flow` のように。）
 
-> **メモ:** 古いブラウザーでも確実にレイアウトが機能するように、 1 つの値の構文を使用することができます。例えば、 `display: inline flex` には次のように代替を指定することができます。
+> [!NOTE]
+> 古いブラウザーでも確実にレイアウトが機能するように、 1 つの値の構文を使用することができます。例えば、 `display: inline flex` には次のように代替を指定することができます。
 >
 > ```css
 > .container {
@@ -108,7 +110,8 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
     - `ruby` {{Experimental_Inline}}
       - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
-> **メモ:** 複数キーワードの構文に対応しているブラウザーは、**内側**の表示種別のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示種別を `block` に設定します（`display: block flex` や `display: block grid` など）。
+> [!NOTE]
+> 複数キーワードの構文に対応しているブラウザーは、**内側**の表示種別のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示種別を `block` に設定します（`display: block flex` や `display: block grid` など）。
 
 ### リスト項目
 
@@ -119,7 +122,8 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
-> **メモ:** 複数キーワードの構文に対応しているブラウザーでは、内側の表示種別がないと既定で `flow` になります。
+> [!NOTE]
+> 複数キーワードの構文に対応しているブラウザーでは、内側の表示種別がないと既定で `flow` になります。
 > 外側の表示種別が指定されないと、基本ボックスは外側の表示種別が `block` になります。
 
 ### 内部

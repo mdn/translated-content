@@ -151,7 +151,8 @@ Trouvé abb. Prochaine correspondance à partir de 3
 Trouvé ab. Prochaine correspondance à partir de 9
 ```
 
-> **Attention :** Il ne faut pas placer un littéral d'expression rationnelle (ou le constructeur {{jsxref("RegExp")}}) au sein de la condition `while` car cela créerait un boucle infinie s'il y a une correspondance car la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} serait redéfinie à chaque itération. Il faut également s'assurer que le drapeau global est défini sinon on aura également une boucle.
+> [!WARNING]
+> Il ne faut pas placer un littéral d'expression rationnelle (ou le constructeur {{jsxref("RegExp")}}) au sein de la condition `while` car cela créerait un boucle infinie s'il y a une correspondance car la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} serait redéfinie à chaque itération. Il faut également s'assurer que le drapeau global est défini sinon on aura également une boucle.
 
 ### Utiliser `exec()` avec des littéraux
 
@@ -174,7 +175,7 @@ Cela affichera 'coucou monde !'.
 
 ## Voir aussi
 
-- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
+- Le chapitre sur [les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.matchAll()")}}

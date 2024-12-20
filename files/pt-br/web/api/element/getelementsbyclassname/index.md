@@ -30,7 +30,8 @@ Habitualmente, o conjunto de elementos retornado será atualizado simultaneament
 
 O oposto disso também acontece; os elementos que não satisfazerem mais as classes contidas em `name` serão removidos instantaneamente do conjunto.
 
-> **Nota:** No modo [quirks](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.
+> [!NOTE]
+> No modo [quirks](/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), o nome das classes são comparadas da forma case-insensitive. Caso contrário, considere case sensitive.
 
 ## Exemplos
 

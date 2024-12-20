@@ -9,7 +9,8 @@ La méthode **`cmp()`** de l'interface {{domxref("IDBFactory")}} compare deux va
 
 {{AvailableInWorkers}}
 
-> **Note :** Cette méthode ne doit pas être utilisée pour comparer des valeurs JavaScript. En effet, de nombreuses valeurs JavaScript ne sont pas des valeurs valides pour représenter des clés IndexedDB (les booléens et les objets par exemple), dans ces cas, elles peuvent être traitées comme des clés égales (ainsi IndexedDB ignore les tableaux ayant des propriétés non numériques et les considère comme des tableaux vides, de sorte que les éventuels tableaux non numériques seront considérés comme égaux). Une exception est levée si l'une des valeurs n'est pas une clé valide.
+> [!NOTE]
+> Cette méthode ne doit pas être utilisée pour comparer des valeurs JavaScript. En effet, de nombreuses valeurs JavaScript ne sont pas des valeurs valides pour représenter des clés IndexedDB (les booléens et les objets par exemple), dans ces cas, elles peuvent être traitées comme des clés égales (ainsi IndexedDB ignore les tableaux ayant des propriétés non numériques et les considère comme des tableaux vides, de sorte que les éventuels tableaux non numériques seront considérés comme égaux). Une exception est levée si l'une des valeurs n'est pas une clé valide.
 
 ## Syntaxe
 
@@ -61,7 +62,7 @@ console.log("Résultat de la comparaison : " + result);
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

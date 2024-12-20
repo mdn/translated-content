@@ -31,17 +31,18 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ## 概览
 
-[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)在网页中是一个或多个字段/小工具的集合，它被用来收集用户的信息，并将信息上传到服务器。表单作为一种用来收集用户的机制，非常的灵活，因为有各种合适的输入框，来接受各种类型的数据——文本框，复选框，单选按钮，时间选择器等。表单和服务器交互数据也相对安全，因为它使用 POST 请求发送数据，保护不受跨站点请求伪造攻击（cross-site request forgery）的威胁。
+[HTML 表单](/zh-CN/docs/Learn/Forms)在网页中是一个或多个字段/小工具的集合，它被用来收集用户的信息，并将信息上传到服务器。表单作为一种用来收集用户的机制，非常的灵活，因为有各种合适的输入框，来接受各种类型的数据——文本框，复选框，单选按钮，时间选择器等。表单和服务器交互数据也相对安全，因为它使用 POST 请求发送数据，保护不受跨站点请求伪造攻击（cross-site request forgery）的威胁。
 
 但是表单同样也很复杂！开发者需要为表单编写 HTML，在服务器上验证，并且正确去除有害的数据（浏览器上也可能需要），对于任何不合法的字段，需要传给用户相应的错误信息，当数据成功提交后，处理数据，并设法通知用户提交成功。
 
 此教程将展示上述的操作，如何在 _Express_ 中实现。在此过程中，我们将扩展 LocalLibrary 网站，以允许用户创建，编辑和删除图书馆中的项目。
 
-> **备注：** 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。
+> [!NOTE]
+> 我们还没有考虑如何将特定路由，限制为经过身份验证或授权的用户，因此在这个时间点，任何用户都可以对数据库进行更改。
 
 ### HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
+首先简要概述[HTML 表单](/zh-CN/docs/Learn/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -114,7 +115,8 @@ npm install express-validator --save
 
 #### 使用 express-validator
 
-> **备注：** Github 上的[express-validator](https://github.com/ctavan/express-validator#express-validator)指南，提供了 API 的良好概述。我们建议你阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。
+> [!NOTE]
+> Github 上的[express-validator](https://github.com/ctavan/express-validator#express-validator)指南，提供了 API 的良好概述。我们建议你阅读该内容，以了解其所有功能（包括创建自定义验证程序）。下面我们只介绍一个对 LocalLibrary 有用的子集。
 
 要在我们的控制器中使用验证器，我们必须从'**express-validator/check**'和'**express-validator/filter**'模块中，导入我们想要使用的函数，如下所示：
 
@@ -141,7 +143,9 @@ const { sanitizeBody } = require("express-validator/filter");
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
 
-  > **备注：** 你还可以添加内联清理器，如`trim()`，如上所示。但是，此处应用清理器，仅适用于验证步骤。如果要对最终输出进行消毒，则需要使用单独的清理器方法，如下所示。
+  > [!NOTE]
+  >
+  > 你还可以添加内联清理器，如`trim()`，如上所示。但是，此处应用清理器，仅适用于验证步骤。如果要对最终输出进行消毒，则需要使用单独的清理器方法，如下所示。
 
 - [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): 指定一个正文要清理的字段。然后将清理操作，以菊花链形式连接到此方法。例如，下面的`escape()`清理操作，会从名称变量中，删除可能在 JavaScript 跨站点脚本攻击中使用的 HTML 字符。
 
@@ -197,7 +201,8 @@ const { sanitizeBody } = require("express-validator/filter");
 
 哦，如果你涉及文件上传，那么你可能需要“[multer](https://blog.csdn.net/qq_43624878/article/details/103607944)”中间件，你大概听说过“formidable”，但 multer 比它更强大！
 
-> **备注：** 更“牢固”的实现，可能允许你在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。
+> [!NOTE]
+> 更“牢固”的实现，可能允许你在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。
 
 ### 路由
 

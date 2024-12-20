@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API の **`CanvasRenderingContext2D.shadowBlur`** プロパティは、影にかかるぼかしの量を設定します。デフォルトは `0` (ぼかしなし) です。
 
-> **メモ:** 影はプロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ `shadowBlur`、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} のいずれかがゼロでない値に設定されていなければなりません。
+> [!NOTE]
+> 影はプロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ `shadowBlur`、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} のいずれかがゼロでない値に設定されていなければなりません。
 
 ## 値
 

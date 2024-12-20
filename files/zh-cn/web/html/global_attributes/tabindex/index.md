@@ -19,7 +19,8 @@ slug: Web/HTML/Global_attributes/tabindex
 
 如果我们在 {{htmlelement("div")}} 上设置了 `tabindex` 属性，它的子元素内容不能使用箭头键来滚动，除非我们在内容上也设置 `tabindex`。[查看这篇 fiddle 来理解 tabindex 的滚动影响](https://jsfiddle.net/jainakshay/0b2q4Lgv/)。
 
-> **备注：** tabindex 的最大值不应超过 32767。如果没有指定，它的默认值为 0。
+> [!NOTE]
+> tabindex 的最大值不应超过 32767。如果没有指定，它的默认值为 0。
 
 ## 规范
 
@@ -33,4 +34,4 @@ slug: Web/HTML/Global_attributes/tabindex
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 反映这个属性的 {{domxref("HTMLElement.tabIndex")}}
-- tabindex 的无障碍问题：请见 [不要使用大于 0 的 Tabindex | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)。
+- tabindex 的无障碍问题：请见 [不要使用大于 0 的 Tabindex | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)。

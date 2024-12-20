@@ -40,15 +40,18 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
 
 ![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
-> **备注：** 看一下这个简单的流式布局：[示例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。当查看示例时，来回拖拽你的浏览器窗口，改变其大小，看下不同尺寸下的显示情况。
+> [!NOTE]
+> 看一下这个简单的流式布局：[示例](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html)。当查看示例时，来回拖拽你的浏览器窗口，改变其大小，看下不同尺寸下的显示情况。
 
 固定宽度站点的一个可能的后果是，在比站点更窄的屏幕上会出现一个水平滚动条（如下所示），在大屏幕上的设计边缘还会有许多空白。
 
 ![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
-> **备注：** 看下这个简单的固定宽度布局：[示例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)，重新观察一下你调整浏览器窗口大小后的结果。
+> [!NOTE]
+> 看下这个简单的固定宽度布局：[示例](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html)，重新观察一下你调整浏览器窗口大小后的结果。
 
-> **备注：** 上面的截屏是在火狐开发者工具的[响应式设计模式](/zh-CN/docs/Tools/Responsive_Design_Mode)中截取的。
+> [!NOTE]
+> 上面的截屏是在火狐开发者工具的[响应式设计模式](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)中截取的。
 
 随着移动 Web 在早期的功能手机上开始成为现实，希望拥抱移动端的公司普遍希望为他们的网站创建一个有着不同的网址的移动版本（大多是像*m.example.com*或者*example.mobi*这类）。这意味着一个网站需要开发两个分开的版本，而且要保持时效性。
 
@@ -56,7 +59,7 @@ slug: Learn/CSS/CSS_layout/Responsive_Design
 
 ## 响应式设计之前的灵活布局
 
-人们开发了许多方式，尽力解决建设网站时使用液态和固定宽度的方式所带来的弊端。2004 年，Cameron Adams 写了一篇题为《[Resolution dependent layout](http://www.themaninblue.com/writing/perspective/2004/09/21/)》的帖子，描述了一种可以创造适应多种屏幕分辨率的设计的方式。这种方式需要 JavaScript 来探测屏幕的分辨率，载入恰当的 CSS。
+人们开发了许多方式，尽力解决建设网站时使用液态和固定宽度的方式所带来的弊端。2004 年，Cameron Adams 写了一篇题为《[Resolution dependent layout](https://www.themaninblue.com/writing/perspective/2004/09/21/)》的帖子，描述了一种可以创造适应多种屏幕分辨率的设计的方式。这种方式需要 JavaScript 来探测屏幕的分辨率，载入恰当的 CSS。
 
 Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voices-that-matter-slides-available/)，在里面描述并标准化了可变站点建立的不同方式，试图在充满屏幕和完全保持固定尺寸之间找到最佳平衡。
 
@@ -65,7 +68,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 “响应式设计”这个词是[Ethan Marcotte 在 2010 年首度提出的](https://alistapart.com/article/responsive-web-design/)，他将其描述为三种技术的混合使用。
 
 1. 第一个是液态网格，这早先已由 Gillenwater 进行探讨，可以在 Marcotte 的文章《[Fluid Grids](https://alistapart.com/article/fluidgrids/)》（出版于 2009 年的《A List Apart》上）中读到。
-2. 第二个是[液态图像](http://unstoppablerobotninja.com/entry/fluid-images)的理念。通过使用相当简单的将设置`max-width`属性设置为`100%`的技术，图像可以在包含它们的列变得比图像原始尺寸窄的时候，缩放得更小，但总不会变得更大。这使得图像可以被缩放，以被放到一个灵活尺寸的列，而不是溢出出去，同时也不会在列宽于图像的时候，使图像变得太大以至于画质变得粗糙。
+2. 第二个是[液态图像](https://unstoppablerobotninja.com/entry/fluid-images)的理念。通过使用相当简单的将设置`max-width`属性设置为`100%`的技术，图像可以在包含它们的列变得比图像原始尺寸窄的时候，缩放得更小，但总不会变得更大。这使得图像可以被缩放，以被放到一个灵活尺寸的列，而不是溢出出去，同时也不会在列宽于图像的时候，使图像变得太大以至于画质变得粗糙。
 3. 第三个关键的组件是[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。媒体查询使以往 Cameron Adams 探讨过的、由 JavaScript 实现的布局类型切换，可以只使用 CSS 实现。和所有尺寸的屏幕都使用一种布局不同的是，布局是可以改变的：侧栏可以在小屏幕上重新布局，而替代用的导航栏也可以显示出来。
 
 需要你理解的很重要的一点是**响应式 Web 设计不是单独的技术**，它是描述 Web 设计的一种方式、或者是一组最佳实践的一个词，它是用来建立可以**响应**查看内容的设备的样式的一个词。在 Marcotte's 原来的探索中，这意味着灵活网格（使用 float）和媒体查询，但是在这篇文章写就的几乎十年以后，Web 的响应式工作已经成为了默认做法。现代的 CSS 布局方式基本上就是响应式的，而且我们在 Web 平台上内置了新的东西，使得设计响应式站点变得容易。
@@ -122,7 +125,8 @@ target / context = result
 
 ![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
-> **备注：** 你可以在 GitHub 上找到此示例的[实时示例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)和[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)。
+> [!NOTE]
+> 你可以在 GitHub 上找到此示例的[实时示例](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)和[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)。
 
 ## 现代布局技术
 
@@ -150,7 +154,7 @@ target / context = result
 
 在伸缩盒中，初始的行为是，弹性的物件将参照容器里面的空间的大小，缩小和分布物件之间的空间。通过更改`flex-grow`和 `flex-shrink`的值，你可以指示在物件遇到周围有更多或者更少的空间的情况下，你所期望的物件表现。
 
-在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
+在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
 
 ```css
 .container {
@@ -162,11 +166,12 @@ target / context = result
 }
 ```
 
-> **备注：** 作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：[示例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html)。
+> [!NOTE]
+> 作为一个示例，我们已经重构了上面的简单响应式布局，这次我们用了伸缩盒。你可以看看我们是怎么样才不再需要使用奇怪的百分数值来计算列的尺寸的：[示例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/flex-based-rwd.html)。
 
 ### CSS 网格
 
-在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[Flexible grids with the fr unit](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
+在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[Flexible grids with the fr unit](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
 
 ```css
 .container {
@@ -175,7 +180,8 @@ target / context = result
 }
 ```
 
-> **备注：** 网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列[：示例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html)。
+> [!NOTE]
+> 网格布局版本的代码要更简单，因为我们可以在.wrapper 上定义列[：示例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/grid-based-rwd.html)。
 
 ## 响应式图像
 
@@ -227,7 +233,8 @@ h1 {
 
 ![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
-> **备注：** 查看这个编排好的示例：[示例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
+> [!NOTE]
+> 查看这个编排好的示例：[示例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html)。
 
 正如这种排版方式展示的这样，你不需要让媒介查询只能改变页面的布局。它们也能用来调节每个元素，让它们在别的大小的屏幕上更加可用或者更具吸引力。
 
@@ -253,7 +260,8 @@ h1 {
 
 这就是说，我们只需要指定标题的字体大小一次，而不是为移动端设定它，然后再在媒介查询中重新定义它。字体会在你增加视口大小的时候逐渐增大。
 
-> **备注：** 查看这种情况的一个编排好的示例： [示例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html)。
+> [!NOTE]
+> 查看这种情况的一个编排好的示例： [示例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)，[源代码](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-vw.html)。
 
 ## 视口元标签
 

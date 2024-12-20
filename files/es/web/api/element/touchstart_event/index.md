@@ -5,11 +5,12 @@ slug: Web/API/Element/touchstart_event
 
 {{APIRef}}
 
-Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento [`touchstart`](/es/docs/Web/Reference/Events/touchstart).
+Un {{domxref("GlobalEventHandlers","global event handler")}} para el evento [`touchstart`](/es/docs/Web/API/Element/touchstart_event).
 
 {{SeeCompatTable}}
 
-> **Nota:** Este atributo _no_ ha sido estandarizado formalmente. Está especificado en la especificación [Touch Events – Level 2](https://w3c.github.io/touch-events/) Draft y no en [Touch Events](https://www.w3.org/TR/touch-events/) Recommendation. Este atributo no está totalmente implementado.
+> [!NOTE]
+> Este atributo _no_ ha sido estandarizado formalmente. Está especificado en la especificación [Touch Events – Level 2](https://w3c.github.io/touch-events/) Draft y no en [Touch Events](https://www.w3.org/TR/touch-events/) Recommendation. Este atributo no está totalmente implementado.
 
 ## Sintaxis
 
@@ -54,4 +55,4 @@ function init() {
 
 ## Véase también
 
-- [`touchstart`](/es/docs/Web/Reference/Events/touchstart)
+- [`touchstart`](/es/docs/Web/API/Element/touchstart_event)

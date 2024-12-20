@@ -3,9 +3,11 @@ title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
-> **Advertencia:** Cambiar la propiedad `[[Prototype]]` de un objeto es, por como los navegadores modernos optimizan las propiedades de acceso, una operación muy lenta en **_todos_** los navegadores y motores JavaScript. Los efectos en el rendimiento de alterar la herencia son muchos y delicados, y no se limita simplemente al tiempo que necesita la asignación `obj.__proto__ = ...` sentencia, sin embargo afecta a **_cualquier_** código que tiene acceso a **_cualquier_** objeto cuya propiedad `[[Prototype]]` ha sido alterada, por lo que se debe de tener mucho cuidado.Si el rendimiento en tu aplicación es necesario, deberías evitar modificar la propiedad `[[Prototype]]` de un objeto. En su lugar, crea un objecto nuevo con la propiedad `[[Prototype]]` deseada usando {{jsxref("Object.create()")}}.
+> [!WARNING]
+> Cambiar la propiedad `[[Prototype]]` de un objeto es, por como los navegadores modernos optimizan las propiedades de acceso, una operación muy lenta en **_todos_** los navegadores y motores JavaScript. Los efectos en el rendimiento de alterar la herencia son muchos y delicados, y no se limita simplemente al tiempo que necesita la asignación `obj.__proto__ = ...` sentencia, sin embargo afecta a **_cualquier_** código que tiene acceso a **_cualquier_** objeto cuya propiedad `[[Prototype]]` ha sido alterada, por lo que se debe de tener mucho cuidado.Si el rendimiento en tu aplicación es necesario, deberías evitar modificar la propiedad `[[Prototype]]` de un objeto. En su lugar, crea un objecto nuevo con la propiedad `[[Prototype]]` deseada usando {{jsxref("Object.create()")}}.
 
-> **Advertencia:** Mientras `Object.prototype.__proto__` es soportado hoy día por la mayoría de navegadores, su existencia y comportamiento exacto solo ha sido estandarizado en la especificación ECMAScript 6 como una característica de legado y para asegurar la compatibilidad entre los navegadores web. Para tener un mejor soporte, es recomendable que se utilice {{jsxref("Object.getPrototypeOf()")}} para obtener el prototipo de un objeto.
+> [!WARNING]
+> Mientras `Object.prototype.__proto__` es soportado hoy día por la mayoría de navegadores, su existencia y comportamiento exacto solo ha sido estandarizado en la especificación ECMAScript 6 como una característica de legado y para asegurar la compatibilidad entre los navegadores web. Para tener un mejor soporte, es recomendable que se utilice {{jsxref("Object.getPrototypeOf()")}} para obtener el prototipo de un objeto.
 
 {{JSRef}}
 
@@ -37,7 +39,7 @@ La función getter `__proto__`el valor interno del `[[Prototype]]` de un objeto.
 
 El `__proto__` setter la mutación del objeto `[[Prototype]]` de un objeto. El objeto debe ser extensible según {{jsxref("Object.isExtensible()")}}: si no, un {{jsxref("Global_Objects/TypeError", "TypeError")}} es lanzado. El valor proveído debe ser un objeto o {{jsxref("Global_Objects/null", "null")}}. Provetendo otro tipo de valor no hará nada.
 
-Para entender como los prototipos son usados para herencia, ver el artículo [Inheritance and the prototype chain](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Para entender como los prototipos son usados para herencia, ver el artículo [Inheritance and the prototype chain](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 La propiedad `__proto__` es una simple propiedad de acceso a {{jsxref("Object.prototype")}} que consiste en una función getter y setter. Un acceso a la propiedad `__proto__` que eventualmente consulta {{jsxref("Object.prototype")}} encontrará esta propiedad, pero un acceso que no consulta {{jsxref("Object.prototype")}} no lo encontrará. Si alguna otra propiedad `__proto__` es encontrada antes {{jsxref("Object.prototype")}} es consultada, esta propiedad sera ocultada por la encontrada en {{jsxref("Object.prototype")}}.
 

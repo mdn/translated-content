@@ -11,7 +11,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:   | Изучить как встроить SVG (векторное) изображение на веб-страницу.                                                                                                           |
 
-> **Примечание:** Данная статья не научит вас векторной графике, а даст понимание что это и как её использовать в веб-документах.
+> [!NOTE]
+> Данная статья не научит вас векторной графике, а даст понимание что это и как её использовать в веб-документах.
 
 ## Что такое векторная графика?
 
@@ -20,7 +21,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 - Растровое изображение задаётся сеткой пикселей — файл растрового изображения содержит информацию о расположении и цвете каждого пикселя. Среди популярных форматов изображений данного типа числятся Bitmap (.bmp), PNG (.png), JPEG (.jpg) и GIF (.gif)
 - Векторное изображение определяется алгоритмом — файл векторного изображения содержит фигуры и правила, по которым компьютер может вычислить как должно выглядеть изображение, когда выводится на экран.{{glossary("SVG")}} формат позволяет нам создавать векторную графику для использования в веб-документах.
 
-Для демонстрации различий между типами изображений, давайте взглянем на пример. Вы можете найти данный пример на Github как [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — в нем демонстрируются два, на первый взгляд, одинаковых изображения, расположенных рядом друг с другом. Каждое из изображений представляет собой красную звезду с тенью. Различие их в том, что левое изображение имеет формат PNG, а правое - SVG.
+Для демонстрации различий между типами изображений, давайте взглянем на пример. Вы можете найти данный пример на Github как [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — в нем демонстрируются два, на первый взгляд, одинаковых изображения, расположенных рядом друг с другом. Каждое из изображений представляет собой красную звезду с тенью. Различие их в том, что левое изображение имеет формат PNG, а правое - SVG.
 
 Различия становятся заметны, когда вы изменяете масштаб страницы — PNG изображение становится неровным (становятся видны пиксели), потому что оно содержит информацию о положении и цвете каждого пикселя. При увеличении каждый пиксель также увеличивается, охватывая несколько пикселей дисплея, поэтому становятся заметны "кирпичики". Векторное изображение продолжает выглядеть ровным и красивым, потому что фигуры, масштабируются совместно с ним.
 
@@ -28,7 +29,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 ![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
-> **Примечание:** Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) !
+> [!NOTE]
+> Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) !
 
 Более того, файлы векторных изображений намного меньше растровых, т.к. в них содержится алгоритмы построения вместо информации о каждом пикселе.
 
@@ -69,7 +71,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 
 В целом, растровая графика лучше подходит для сложных изображений, например, фотографий.
 
-> **Примечание:** В приложении Inkscape сохраняйте файлы как Plain SVG, для экономии места. Также, пожалуйста перейдите на [статью, описывающую как подготовить SVG изображение для веб-документа.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)
+> [!NOTE]
+> В приложении Inkscape сохраняйте файлы как Plain SVG, для экономии места. Также, пожалуйста перейдите на [статью, описывающую как подготовить SVG изображение для веб-документа.](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html)
 
 ## Добавление SVG на страницы
 
@@ -119,7 +122,7 @@ background-size: contain;
 
 Подобно методу `<img>`, описанному выше, вставка SVG с использованием фоновых изображений CSS означает, что SVG нельзя манипулировать при помощи JavaScript, и что SVG будет иметь те же ограничения, что и CSS.
 
-Если ваши SVG не отображаются вовсе, возможно, ваш сервер не настроен должным образом. Если проблема в этом, то [данная статья укажет вам верное направление](/ru/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers).
+Если ваши SVG не отображаются вовсе, возможно, ваш сервер не настроен должным образом. Если проблема в этом, то [данная статья укажет вам верное направление](/ru/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
 
 ### Как включить SVG в ваш HTML код
 
@@ -134,7 +137,7 @@ background-size: contain;
 #### Плюсы
 
 - Вставка вашего SVG путём **SVG inline** позволяет сохранить HTTP запросы и, следовательно, может уменьшить время загрузки.
-- Вы можете присваивать `class`-ы и `id` элементам SVG и стилизовать их при помощи CSS, либо в пределах SVG, либо внутри SVG, либо там, где вы размещаете правила стиля CSS для вашего HTML документа. По факту вы можете использовать любой [атрибут представления SVG](/ru/docs/Web/SVG/Attribute#Presentation_attributes) как свойство CSS.
+- Вы можете присваивать `class`-ы и `id` элементам SVG и стилизовать их при помощи CSS, либо в пределах SVG, либо внутри SVG, либо там, где вы размещаете правила стиля CSS для вашего HTML документа. По факту вы можете использовать любой [атрибут представления SVG](/ru/docs/Web/SVG/Attribute#presentation_attributes) как свойство CSS.
 - **SVG inline** единственный метод, который позволяет вам использовать CSS-взаимодействия (как `:focus`) и CSS-анимацию на вашем SVG изображении (даже в вашей обычной таблице стилей).
 - Вы можете разметить SVG как гиперссылку, обернув в элемент {{htmlelement("a")}}.
 
@@ -316,7 +319,7 @@ textarea.onkeyup = function () {
 - [SVG tutorial](/ru/docs/Web/SVG/Tutorial/Getting_Started) on MDN
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [Accessibility benefits of SVG](http://www.w3.org/TR/SVG-access/)
+- [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

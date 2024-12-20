@@ -2,7 +2,7 @@
 title: DataTransferItem：type 属性
 slug: Web/API/DataTransferItem/type
 l10n:
-  sourceCommit: b5583a21df2aeaebddd7e0eeb58ff690b013546b
+  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -59,4 +59,4 @@ function dropHandler(ev) {
 ## 参见
 
 - {{domxref("DataTransfer.types()")}}
-- [常见 MIME 类型列表](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- [常见 MIME 类型列表](/zh-CN/docs/Web/HTTP/MIME_types/Common_types)

@@ -31,7 +31,7 @@ slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 
 ## CSS 的背景样式
 
-CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普通背景属性的简写表示。如果你在样式表中发现了一个复杂的背景属性，可能会觉得有点难以理解，因为可以同时传入这么多的值。
+CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普通背景属性的简写表示。如果你在样式表中发现了一个复杂的背景属性，可能会觉得有点难以理解，因为可以同时传入这么多的值：
 
 ```css
 .box {
@@ -42,7 +42,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
         rgba(51, 56, 57, 1) 96%
       )
       center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
+    url(image.png) center no-repeat,
     rebeccapurple;
 }
 ```
@@ -53,21 +53,70 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 {{cssxref("background-color")}} 属性定义了 CSS 中任何元素的背景颜色。属性接受任何有效的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 值。`background-color` 可以延伸至元素的内容和内边距盒子的下面。
 
-在下面的例子中，我们用各种颜色值为盒子、标题和 {{htmlelement("span")}} 元素添加背景色。
+在下面的例子中，我们用各种颜色值为盒子、标题和 {{htmlelement("span")}} 元素添加背景色。尝试修改为任何可用的 [`<color>`](/zh-CN/docs/Web/CSS/color_value) 值。
 
-**尝试修改为任何可用的 [\<color>](/zh-CN/docs/Web/CSS/color_value) 值。**
+```html live-sample___color
+<div class="box">
+  <h2>背景颜色</h2>
+  <p>尝试修改背景<span>颜色</span>。</p>
+</div>
+```
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
+```css live-sample___color
+.box {
+  padding: 0.3em;
+  background-color: #567895;
+}
+
+h2 {
+  background-color: black;
+  color: white;
+}
+span {
+  background-color: rgb(255 255 255 / 50%);
+}
+```
+
+{{EmbedLiveSample("color")}}
 
 ### 背景图像
 
-{{cssxref("background-image")}} 属性可以在一个元素的背景中显示一个图像。在下面的例子中，我们有两个盒子，其中一个盒子具有比盒子大的背景图像（[balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)），另一个盒子具有较小的单个星星的图像（[star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)）。
+{{cssxref("background-image")}} 属性可以在一个元素的背景中显示一个图像。在下面的例子中，我们有两个盒子，其中一个盒子具有比盒子大的背景图像（[balloons.jpg](https://mdn.github.io/shared-assets/images/examples/balloons.jpg)），另一个盒子具有较小的单个星星的图像（[star.png](https://mdn.github.io/shared-assets/images/examples/star.png)）。
 
 这个示例演示了关于背景图像的两种情形。默认情况下，大图不会缩小以适应盒子，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。在
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
+```html live-sample___background-image
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
 
-**如果除了背景图像外，还指定了背景颜色，则图像将显示在颜色的顶部。尝试向上面的示例添加 `background-color` 属性，看看效果如何。**
+```css live-sample___background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.a {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+}
+
+.b {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+}
+```
+
+{{EmbedLiveSample("background-image")}}
+
+如果除了背景图像外，还指定了背景颜色，则图像将显示在颜色的顶部。尝试向上面的示例添加 `background-color` 属性，看看效果如何。
 
 #### 控制背景平铺行为
 
@@ -78,9 +127,30 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 - `repeat-y`——仅垂直方向上重复平铺。
 - `repeat`——默认值，在水平和垂直两个方向重复平铺。
 
-**在下面的示例中尝试这些值。我们已经将值设置为 `no-repeat`，因此你将只能看到一个星星。尝试不同的值（`repeat-x` 和 `repeat-y`），看看它们的效果如何。**
+在下面的示例中尝试这些值。我们已经将值设置为 `no-repeat`，因此你将只能看到一个星星。尝试不同的值（`repeat-x` 和 `repeat-y`），看看它们的效果如何。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}
+```html live-sample___repeat
+<div class="box"></div>
+```
+
+```css hidden live-sample___repeat
+.box {
+  width: 200px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
+```css live-sample___repeat
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("repeat")}}
 
 #### 调整背景图像的大小
 
@@ -99,13 +169,36 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 - 去掉长度单位，看看使用 `background-size: cover` 或 `background-size: contain` 时会发生什么。
 - 如果你的图像小于盒子，可以更改 `background-repeat` 的值来重复平铺图像。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
+```html live-sample___size
+<div class="box"></div>
+```
+
+```css hidden live-sample___size
+.box {
+  width: 500px;
+  height: 100px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+```
+
+```css live-sample___size
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-repeat: no-repeat;
+  background-size: 80px 10em;
+}
+```
+
+{{EmbedLiveSample("size")}}
 
 #### 背景图像定位
 
 {{cssxref("background-position")}} 属性允许你选择背景图片出现在它所应用的盒子上的位置。这使用了一个坐标系统，其中方框的左上角是 `(0,0)`，方框沿水平（`x`）和垂直（`y`）轴定位。
 
-> **备注：** 默认的 `background-position` 值是 `(0,0)`。
+> [!NOTE]
+> 默认的 `background-position` 值是 `(0,0)`。
 
 最常见的 `background-position` 值有两个单独的值——一个水平值后面跟着一个垂直值。
 
@@ -113,7 +206,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -123,7 +216,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -133,7 +226,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: 20px top;
 }
@@ -143,17 +236,40 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 ```css
 .box {
-  background-image: url(star.png);
+  background-image: url(image.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
 ```
 
-**使用下面的示例来处理这些值并在框内移动星星。**
+使用下面的示例来处理这些值并在框内移动星星。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
+```html live-sample___position
+<div class="box"></div>
+```
 
-> **备注：** `background-position` 是 {{cssxref("background-position-x")}} 和 {{cssxref("background-position-y")}} 的简写，它们允许用户分别设置不同的坐标轴的值。
+```css hidden live-sample___position
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+```
+
+```css live-sample___position
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png);
+  background-repeat: no-repeat;
+  background-position: 120px 1em;
+}
+```
+
+{{EmbedLiveSample("position")}}
+
+> [!NOTE]
+> 简写属性 `background-position` 用于替代 {{cssxref("background-position-x")}} 和 {{cssxref("background-position-y")}}，它们允许用户分别设置不同坐标轴的值。
 
 ### 渐变背景
 
@@ -163,7 +279,45 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 在下面的示例中尝试一些不同的渐变。在这两个盒子里，我们分别有一个线性渐变，它延伸到整个盒子上，还有一个径向渐变，它有一个固定的大小，因此会重复。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 700)}}
+```html live-sample___gradients
+<div class="wrapper">
+  <div class="box a"></div>
+  <div class="box b"></div>
+</div>
+```
+
+```css live-sample___gradients
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 400px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.a {
+  background-image: linear-gradient(
+    105deg,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+}
+
+.b {
+  background-image: radial-gradient(
+    circle,
+    rgb(0 249 255 / 100%) 39%,
+    rgb(51 56 57 / 100%) 96%
+  );
+  background-size: 100px 50px;
+}
+```
+
+{{EmbedLiveSample("gradients")}}
 
 ### 多个背景图像
 
@@ -171,7 +325,8 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 
 当你这样做时，你可能会出现背景图片相互重叠的情况。背景将分层，最后列出的背景图片位于最下层，而之前的每张图片都堆在代码中紧随其后的那张图片之上。
 
-> **备注：** 渐变可以与常规的背景图像很好地混合在一起。
+> [!NOTE]
+> 渐变可以与常规的背景图像很好地混合在一起。
 
 其他 `background-*` 属性也可以像 `background-image` 一样使用逗号分隔的方式设置：
 
@@ -186,9 +341,34 @@ background-position:
 
 不同属性的每个值，将与其他属性中相同位置的值匹配。例如，上面的 `image1` 的 `background-repeat` 值将是 `no-repeat`。但是，当不同的属性具有不同数量的值时，会发生什么情况呢？答案是较小数量的值会循环——在上面的例子中有四个背景图像，但是只有两个背景位置值。前两个位置值将应用于前两个图像，然后它们将再次循环——`image3` 将被赋予第一个位置值，`image4` 将被赋予第二个位置值。
 
-**我们来试一试。在下面的示例中包含了两个图像。为了演示叠加顺序，请尝试切换哪个背景图像在列表中最先出现。或使用其他属性更改位置、大小或重复值。**
+我们来试一试。在下面的示例中包含了两个图像。为了演示叠加顺序，请尝试切换哪个背景图像在列表中最先出现。或使用其他属性更改位置、大小或重复值。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}
+```html live-sample___multiple-background-image
+<div class="wrapper">
+  <div class="box"></div>
+</div>
+```
+
+```css live-sample___multiple-background-image
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 500px;
+  height: 80px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 20px;
+}
+
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+}
+```
+
+{{EmbedLiveSample("multiple-background-image")}}
 
 ### 背景附加
 
@@ -213,7 +393,29 @@ background-position:
 
 查看 {{cssxref("background")}} 的 MDN 页面，以查看所有的注意事项。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 900)}}
+```html live-sample___background
+<div class="box"></div>
+```
+
+```css live-sample___background
+.box {
+  width: 500px;
+  height: 300px;
+  padding: 0.5em;
+  background:
+    linear-gradient(
+        105deg,
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
+      )
+      center center / 400px 200px no-repeat,
+    url(https://mdn.github.io/shared-assets/images/examples/big-star.png) center
+      no-repeat,
+    rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("background", "", "320px")}}
 
 ### 背景的无障碍考虑
 
@@ -261,11 +463,37 @@ background-position:
 }
 ```
 
-> **备注：** 这些顶部、右侧、底部和左侧边框属性还具有与文档写入模式相关的映射逻辑属性（例如，从左到右或从右到左的文本，或从上到下）。在下一课中，我们将探讨这些问题，这包括[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
+> [!NOTE]
+> 这些顶部、右侧、底部和左侧边框属性还具有与文档写入模式相关的映射逻辑属性（例如，从左到右或从右到左的文本，或从上到下）。在下一课中，我们将探讨这些问题，这包括[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
 
 有各种各样的样式可以用于边框。在下面的例子中，我们为框的四个边使用了不同的边框样式。调整边框样式、宽度和颜色，看看边框是如何工作的。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 800)}}
+```html live-sample___borders
+<div class="box">
+  <h2>边框</h2>
+  <p>尝试对边框做出调整。</p>
+</div>
+```
+
+```css live-sample___borders
+* {
+  padding: 0.2em;
+}
+.box {
+  width: 500px;
+  background-color: #567895;
+  border: 5px solid #0b385f;
+  border-bottom-style: dashed;
+  color: #fff;
+}
+
+h2 {
+  border-top: 2px dotted rebeccapurple;
+  border-bottom: 1em double rgb(24 163 78);
+}
+```
+
+{{EmbedLiveSample("borders", "", "200px")}}
 
 ### 圆角
 
@@ -289,7 +517,25 @@ background-position:
 
 我们在下面的示例中设置了所有四个角，然后更改右上角的值使之不同。你可以使用这些值来更改圆角样式。查看 {{cssxref("border-radius")}} 的属性页，查看可用的语法选项。
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}
+```html live-sample___corners
+<div class="box">
+  <h2>边框</h2>
+  <p>尝试对边框做出调整。</p>
+</div>
+```
+
+```css live-sample___corners
+.box {
+  width: 500px;
+  height: 110px;
+  padding: 0.5em;
+  border: 10px solid rebeccapurple;
+  border-radius: 1em;
+  border-top-right-radius: 10% 30%;
+}
+```
+
+{{EmbedLiveSample("corners")}}
 
 ## 技能测试！
 

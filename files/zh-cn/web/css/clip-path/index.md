@@ -30,7 +30,7 @@ clip-path: view-box;
 /* <basic-shape> values */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
-clip-path: ellipse(50px 60px at 0 10% 20%);
+clip-path: ellipse(50px 60px at 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
@@ -52,7 +52,7 @@ clip-path: unset;
 ### 取值
 
 - `<clip-source>`
-  - : 用 {{cssxref("url", "url()")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
+  - : 用 {{cssxref("url_value", "&lt;url&gt;")}} 引用 [SVG](/zh-CN/docs/Web/SVG) 的 {{SVGElement("clipPath")}} 元素
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : 一种形状，其大小和位置由 `<geometry-box>` 的值定义。如果没有指定 `<geometry-box>`，则将使用 `border-box` 用为参考框。取值可为以下值中的任意一个：
@@ -65,7 +65,7 @@ clip-path: unset;
       - : 定义一个椭圆（使用两个半径和一个圆心位置）。
     - {{cssxref("basic-shape/polygon","polygon()")}}
       - : 定义一个多边形（使用一个 SVG 填充规则和一组顶点）。
-    - {{cssxref("path","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : 定义一个任意形状（使用一个可选的 SVG 填充规则和一个 SVG 路径定义）。
 
 - `<geometry-box>`
@@ -90,7 +90,8 @@ clip-path: unset;
 - `none`
   - : 不创建剪切路径。
 
-> **备注：** CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
+> [!NOTE]
+> CSS 计算值不为 **`none`** 时，会创建新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，就像 CSS {{cssxref("opacity")}} 的值不为 `1` 时那样。
 
 ## 形式定义
 

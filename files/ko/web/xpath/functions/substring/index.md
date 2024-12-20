@@ -39,7 +39,7 @@ substring(string ,start [,length] )
 
 ### 정의
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring)
 
 ### Gecko 지원
 

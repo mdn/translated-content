@@ -17,7 +17,8 @@ Para comenzar, deberás responder estas preguntas:
 2. **¿Qué información presentas sobre el tema?**; Escribe un título y algunos párrafos y piensa en una imagen que te gustaría mostrar en tu página.
 3. **¿Cómo se ve tu sitio web**, en términos simples de alto nivel?, ¿cuál es el color de fondo?, ¿qué tipo de letra es apropiado: formal, caricaturesca, atrevida y fuerte, sutil?
 
-> **Nota:** Los proyectos complejos necesitan pautas detalladas que incluyan todos los detalles de los colores, los tipos de letra, el espacio entre los elementos de una página, el estilo de escritura adecuado, etc. Esto, a veces, se denomina guía de diseño, sistema de diseño o libro de marcas, y puedes ver un ejemplo en el [Sistema de diseño de fotones de Firefox](https://design.firefox.com/photon/).
+> [!NOTE]
+> Los proyectos complejos necesitan pautas detalladas que incluyan todos los detalles de los colores, los tipos de letra, el espacio entre los elementos de una página, el estilo de escritura adecuado, etc. Esto, a veces, se denomina guía de diseño, sistema de diseño o libro de marcas, y puedes ver un ejemplo en el [Sistema de diseño de fotones de Firefox](https://design.firefox.com/photon/).
 
 ## Haz un bosquejo de tu diseño
 
@@ -25,7 +26,8 @@ A continuación, toma papel y lápiz y dibuja aproximadamente cómo deseas que s
 
 ![Bosquejo](website-drawing-scan.png)
 
-> **Nota:** Incluso en sitios web reales y complejos, los equipos de diseño suelen comenzar con bocetos en papel y luego crean maquetas digitales utilizando un editor de gráficos o tecnologías web.
+> [!NOTE]
+> Incluso en sitios web reales y complejos, los equipos de diseño suelen comenzar con bocetos en papel y luego crean maquetas digitales utilizando un editor de gráficos o tecnologías web.
 >
 > Los equipos web suelen incluir tanto un diseñador gráfico como un diseñador de {{Glossary("UX", "experiencia de usuario")}} (UX). Los diseñadores gráficos ensamblan las imágenes del sitio web. Los diseñadores de experiencia de usuario tienen un papel algo más abstracto al abordar cómo los usuarios experimentarán e interactuarán con el sitio web.
 
@@ -39,7 +41,7 @@ Aún debes tener los párrafos y el título de antes. Mantenlos cerca.
 
 ### Color del tema
 
-Para elegir un color, ve al [Selector de color](/es/docs/Web/CSS/CSS_Colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
+Para elegir un color, ve al [Selector de color](/es/docs/Web/CSS/CSS_colors/Color_picker_tool) y busca un color que te guste . Al hacer clic en un color, verás un extraño código de seis caracteres como `#660066`. Eso se llama _código hex_ (abreviatura de hexadecimal) y representa tu color. Copia el código en un lugar seguro por ahora.
 
 ![Color del tema](color-picker.png)
 

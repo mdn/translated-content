@@ -35,19 +35,19 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ## 如何使用浏览器开发者工具
 
-[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其他浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
+[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其他浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
 
-你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 [Grid Layouts](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)、[Flexbox](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts)、[Shapes](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes)。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。
+你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 [Grid Layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)、[Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)、[Shapes](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。
 
 我们这节课会重点看用于处理 CSS 的开发者工具中的一些有用特性。为此，我会用[一个示例](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html)。想跟着学习的话，就在新标签页加载该网页吧，并打开开发者工具（上述文章对该工具有描述）。
 
 ## 比较 DOM 和 View Source
 
-刚接触开发者工具的人可能会在这个地方产生失误：网页源码（或服务器端的 HTML 文件）显示的和开发者工具的 [HTML Pane](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#HTML_pane) 显示的相比起来不太一样。通过 View Source，内容看起来差不多，然而一些差异还是存在的。
+刚接触开发者工具的人可能会在这个地方产生失误：网页源码（或服务器端的 HTML 文件）显示的和开发者工具的 [HTML Pane](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#html_pane) 显示的相比起来不太一样。通过 View Source，内容看起来差不多，然而一些差异还是存在的。
 
 浏览器在渲染的 DOM 中已为你纠正了一些错误的 HTML 部分。如果你错误地闭合了元素（比如开始标签是`<h2>`，结束标签是`</h3>`。），浏览器会尽力弄清你的意图，之后 DOM 中的 HTML 就以 `<h2>` 起始，以 `</h2>` 结束了。浏览器还会处理好 HTML 文档，JavaScript 做出的更改都会由 DOM 表现出来。
 
-相比之下，View Source 就是服务器端的 HTML 源码。DevTools 内的 [HTML tree](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree) 展示了浏览器任意时间的渲染结果，让你深入理解正在发生什么。
+相比之下，View Source 就是服务器端的 HTML 源码。DevTools 内的 [HTML tree](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html_tree) 展示了浏览器任意时间的渲染结果，让你深入理解正在发生什么。
 
 ## 审查 CSS
 
@@ -55,7 +55,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The example page for this tutorial with DevTools open.](inspecting1.png)
 
-如果查看 HTML 右边的 [Rules view](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#Rules_view) 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 `box1` 类上的规则，还有其继承了祖先的 CSS（该例中指 `<body>`）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。
+如果查看 HTML 右边的 [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules_view) 栏，你应该能看到该元素的 CSS 属性与值。你能看到直接应用到 `box1` 类上的规则，还有其继承了祖先的 CSS（该例中指 `<body>`）。这在一种情况下就很有帮助——你看到有些 CSS 并非在计划之内（或许它们继承自某个父元素然而你没有覆盖它们）。
 
 另一个有用的功能是将简写属性展开的功能。在我们的示例里面使用了 `margin` 的简写。
 
@@ -81,13 +81,14 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **备注：** 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)里了解更多。
+> [!NOTE]
+> 在 Rules view 里面还有其他有用的功能，例如带有无效值的声明会被划掉。你可以在[检查并编辑 CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html)里了解更多。
 
 ## 理解盒模型
 
 在之前的课程里我们已经讨论了[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)，介绍了替代盒模型，它改变了元素根据给定大小计算自身尺寸的方式，再在这个计算值上加上内边距和边框。开发者工具可以确实帮助你理解元素尺寸的计算方式。
 
-[Layout view](/zh-CN/docs/Tools/Page_Inspector/UI_Tour#Layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
+[Layout view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
 
 在这一面板上，被详细说明的属性之一为 `box-sizing` 属性，它控制了元素使用的盒模型种类。
 
@@ -97,7 +98,8 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **备注：** 在[仔细检查盒模型](/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)里了解更多。
+> [!NOTE]
+> 在[仔细检查盒模型](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)里了解更多。
 
 ## 解决优先级问题
 
@@ -128,7 +130,7 @@ em {
 
 ## 进一步了解火狐开发者工具
 
-在 MDN 这里有很多关于火狐调试工具的信息，看下主要的[开发者工具段落](/zh-CN/docs/Tools)，欲了解在本节课中我们简要介绍的事情的细节，请看下[这篇教程](/zh-CN/docs/Tools/Page_Inspector#How_to)。
+在 MDN 这里有很多关于火狐调试工具的信息，看下主要的[开发者工具段落](https://firefox-source-docs.mozilla.org/devtools-user/index.html)，欲了解在本节课中我们简要介绍的事情的细节，请看下[这篇教程](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#how_to)。
 
 ## 在 CSS 中调试问题
 
@@ -151,7 +153,7 @@ em {
 
 ![Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported.](no-support.png)
 
-你还可以查看 MDN 每个属性页底部的浏览器兼容性表。这些向你显示浏览器对该属性的支持，如果支持该属性的某些用法，而不支持其他用法，则经常会 break down。 [这里](/zh-CN/docs/)显示了 {{cssxref("shape-outside")}} 属性的兼容性数据。
+你还可以查看 MDN 每个属性页底部的浏览器兼容性表。这些向你显示浏览器对该属性的支持，如果支持该属性的某些用法，而不支持其他用法，则经常会 break down。 [这里](/zh-CN/docs/Web)显示了 {{cssxref("shape-outside")}} 属性的兼容性数据。
 
 ### 是否有其他东西覆盖了你的 CSS?
 

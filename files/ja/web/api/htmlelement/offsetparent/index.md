@@ -1,24 +1,27 @@
 ---
 title: "HTMLElement: offsetParent プロパティ"
+short-title: offsetParent
 slug: Web/API/HTMLElement/offsetParent
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 5cc24ca96ab687857a9a1784714b0bd0bb926a83
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetParent`** は読み取り専用プロパティで、最も近くにある（包含階層で最も近い）位置指定された祖先要素である要素への参照を返します。
+**`HTMLElement.offsetParent`** は読み取り専用プロパティで、最も近くにある（包含階層で最も近い）位置指定祖先要素である要素への参照を返します。
 
-位置指定された祖先とは、次のどちらかです。
+位置指定祖先とは、以下のいずれかです。
 
-- 静的配置ではない要素
-- 要素自体が静的配置である場合の `td`、`th`、`table`
+- 絶対位置指定要素の場合は[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)
+- この要素とは異なる実効[ズーム](/ja/docs/Web/CSS/zoom)値（つまり、その親のすべての変倍率の積）を持つ要素。
+- 要素自体が静的位置指定である場合の `td`、`th`、`table`
 
-位置指定された祖先要素がない場合は、`body` を返します。
+位置指定祖先要素がない場合は、`body` を返します。
 
-> **メモ:** 次の状況では、`offsetParent` は `null` を返します。
+> [!NOTE]
+> 次の状況では、`offsetParent` は `null` を返します。
 >
-> - 要素またはその親要素の `display` プロパティが `none` に設定されている。
+> - 要素またはその祖先要素の `display` プロパティが `none` に設定されている。
 > - 要素の `position` プロパティが `fixed`（固定位置指定）に設定されている（Firefox は `<body>` を返します）。
 > - 要素が `<body>` または `<html>` 要素である。
 

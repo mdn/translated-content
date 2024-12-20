@@ -7,7 +7,8 @@ slug: Web/SVG/Attribute/stroke-dasharray
 
 L'attribut **`stroke-dasharray`** est un attribut de présentation qui définit le motif des traits et des espaces utilisés pour dessiner le contour de la forme.
 
-> **Note :** Étant un attribut de présentation, `stroke-dasharray` peut être utilisé comme propriété CSS.
+> [!NOTE]
+> Étant un attribut de présentation, `stroke-dasharray` peut être utilisé comme propriété CSS.
 
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 

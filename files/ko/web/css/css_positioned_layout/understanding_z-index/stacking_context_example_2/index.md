@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 {{CSSRef}}
 
-« [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
+« [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### 쌓임 맥락 예제2
 
@@ -24,7 +24,8 @@ z-index 속성 값이 2인 DIV #2는 z-index 속성 값이 1인 DIV #3 위에 �
 
     - DIV #4 (z-index 10)
 
-> **참고:** 일반적인 HTML 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다.
+> [!NOTE]
+> 일반적인 HTML 계층 구조가 쌓임 맥락 계층 구조와 다르다는걸 상기하자. 쌓임 맥락을 만들지 않는 엘리먼트들은 쌓임 맥락 계층 구조에서 사라진다.
 
 ## 예제
 
@@ -121,15 +122,15 @@ span.bold {
 
 ### See also
 
-- [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/en/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/en/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/en-US/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/en-US/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
+- [Adding z-index](/en-US/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
+- [The stacking context](/en-US/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/en-US/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 3](/en-US/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### Original Document Information
 
 - Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005

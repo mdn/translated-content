@@ -24,21 +24,21 @@ Conforme descrito acima, a propriedade `flex-direction` define a direção do ei
 
 Se o valor escolhido for `row` (linha) ou `row-reverse` (linha reversa), seu eixo principal se moverá ao longo da linha — na **direção inline**.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
 
 Se o valor escolhido for `column` (coluna) ou `column-reverse` (coluna reversa) e o eixo principal se moverá do topo até o fim da página — na **direção block**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
 
 ### Eixo transversal
 
 O eixo transversal é perpendicular ao eixo principal, logo, se a propriedade `flex-direction` estiver definida nas linhas, como `row` ou `row-reverse`, o eixo transversal estará na direção das colunas, como `column` ou `column-reverse`.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
 Se o eixo principal for definido nas colunas, como `column` ou `column-reverse`, então o eixo transversal estará na direção das linhas, como `row` ou `row-reverse`.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
 Compreender a diferença entre os eixos principal e perpendicular é o que importa quando começamos a observar o alinhamento ou justificação dos itens flexíveis (flex items); o _flexbox_ possui propriedades que alinham e justificam o conteúdo ao longo de um eixo ou de outro.
 
@@ -50,11 +50,11 @@ Essa discussão sobre a relação entre o _flexbox_ e a especificação do modo 
 
 Se o valor da propriedade `flex-direction` for `row (linha)`, considerando o estilo de escrita ocidental, a borda inicial do eixo principal estará localizada à esquerda e a borda final, à direita.
 
-![Working in English the start edge is on the left.](basics5.png)
+![Working in English the start edge is on the left.](basics5.svg)
 
 Considerando um idioma como o Árabe, que possui um estilo de escrita oriental, teremos o inverso: a borda inicia do eixo principal estará localizada à direita e a borda final, à esquerda.
 
-![The start edge in a RTL language is on the right.](basics6.png)
+![The start edge in a RTL language is on the right.](basics6.svg)
 
 Em ambos os casos, a borda inicial do eixo transversal está na parte superior do contêiner flex e a borda final, na parte inferior, visto que ambos os idiomas têm um estilo de de escrita horizontal.
 
@@ -113,13 +113,13 @@ Para ter mais controle sobre os elementos _flex_ é possível alterá-los direta
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-Na presente seção, examinar-se-á brevemente tais propriedades. Para se aprofundar neste conteúdo sugere-se o tutorial [Taxas de Controle de Elementos Flex ao Longo do Eixo Principal](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax) (em inglês).
+Na presente seção, examinar-se-á brevemente tais propriedades. Para se aprofundar neste conteúdo sugere-se o tutorial [Taxas de Controle de Elementos Flex ao Longo do Eixo Principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis) (em inglês).
 
 Antes que essas propriedades possam fazer sentido, é preciso compreender o conceito de **espaço disponível**. Quando se modifica o valor das propriedades acima, altera-se a forma que o espaço disponível é distribuído entre os elementos. Tal conceito de espaço disponível também é relevante quando se trata do alinhamento.
 
 Conforme o exemplo abaixo, se houver três elementos com 100 pixels de comprimento em um contêiner de 500 pixels, então o espaço total necessário para acomodá-los será de 300 pixels. Desse modo, sobrarão 200 pixels de espaço útil. Se os valores iniciais não forem modificados, então o _flexbox_ posicionará esse espaço após o último item.
 
-![This flex container has available space after laying out the items.](basics7.png)
+![This flex container has available space after laying out the items.](basics7.svg)
 
 Se for necessário que os elementos cresçam proprocionamente ou não e preencham o espaço disponível, deverá haver método que faça essa distribuição espacial entre eles, conforme será visto nas seções subsequentes.
 
@@ -143,7 +143,8 @@ Enquanto a propriedade `flex-grow` permite aumentar a largura dos elementos dent
 
 O tamanho mínimo do elemento será levado em consideração ao se calcular a quantidade real de encolhimento que ocorrerá, o que significa que a propriedade flex-shrink se comporta de modo potencialmente menos consistente do que a propriedade flex-grow. Examinar-se-á mais detalhadamente o funcionamento desse algoritmo no artigo Taxas de Controle de Elementos Flex ao Longo do Eixo Principal.
 
-> **Nota:** Note que os valores para as propriedades `flex-grow` e `flex-shrink` são proporcionais. Particularmente, se tivermos todos os nossos elementos definidos como flex: `1 1 200px` e então quisermos que um deles cresça o dobro, temos de definir o elemento como flex: `2 1 200px`. Entretanto, podemos escrever flex: `10 1 200px` e flex: `20 1 200px` se quisermos.
+> [!NOTE]
+> Note que os valores para as propriedades `flex-grow` e `flex-shrink` são proporcionais. Particularmente, se tivermos todos os nossos elementos definidos como flex: `1 1 200px` e então quisermos que um deles cresça o dobro, temos de definir o elemento como flex: `2 1 200px`. Entretanto, podemos escrever flex: `10 1 200px` e flex: `20 1 200px` se quisermos.
 
 ### Abreviatura para os valores das propriedades flex
 
@@ -210,7 +211,7 @@ Tente os seguintes valores da propriedada `justify-content` no exemplo prático 
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
 
-No artigo [Alinhando Elementos em um Contêiner Flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) (em inglês) tais propriedades serão abordadas mais detalhadamente, de modo a compreender melhor o seu funcionamento. Contudo, os exemplos simples abordados aqui serão úteis na maioria dos casos.
+No artigo [Alinhando Elementos em um Contêiner Flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) (em inglês) tais propriedades serão abordadas mais detalhadamente, de modo a compreender melhor o seu funcionamento. Contudo, os exemplos simples abordados aqui serão úteis na maioria dos casos.
 
 ## Próximos passos
 

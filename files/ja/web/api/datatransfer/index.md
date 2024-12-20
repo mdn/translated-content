@@ -35,7 +35,8 @@ slug: Web/API/DataTransfer
 
 {{SeeCompatTable}}
 
-> **メモ:** この節のすべてのプロパティは Gecko 固有のものです。
+> [!NOTE]
+> この節のすべてのプロパティは Gecko 固有のものです。
 
 - {{domxref("DataTransfer.mozCursor")}}
   - : ドラッグカーソルの状態を返します。主にタブドラッグの際のカーソルを制御するのに使います。
@@ -66,7 +67,8 @@ slug: Web/API/DataTransfer
 
 {{Non-standard_header()}}
 
-> **メモ:** この節のすべてのメソッドは Gecko 固有のものです。
+> [!NOTE]
+> この節のすべてのメソッドは Gecko 固有のものです。
 
 - {{domxref("DataTransfer.addElement()")}}
   - : ドラッグ元の要素を指定します。
@@ -99,5 +101,5 @@ slug: Web/API/DataTransfer
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [複数の項目のドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [複数の項目のドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)

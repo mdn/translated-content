@@ -13,14 +13,15 @@ Although this interface has a constructor, it is not possible to create a useful
 
 ## 语法
 
-```
- event = new DragEvent(type, DragEventInit);
+```js-nolint
+new DragEvent(type)
+new DragEvent(type, dragEventInit)
 ```
 
 ### 参数
 
 - _type_
-  - : Is a {{domxref("DOMString")}} representing the name of the event (see [DragEvent event types](/zh-CN/docs/Web/API/DragEvent#Event_types)).
+  - : Is a {{domxref("DOMString")}} representing the name of the event (see [DragEvent event types](/zh-CN/docs/Web/API/DragEvent#event_types)).
 - _DragEventInit_{{optional_inline}}
 
   - : Is a `DragEventInit` dictionary, having the following fields:
@@ -29,7 +30,7 @@ Although this interface has a constructor, it is not possible to create a useful
 
 The `DragEventInit` dictionary inherits from the {{domxref("MouseEvent.MouseEvent","MouseEventInit dictionary")}}.
 
-## 标准
+## 规范
 
 {{Specifications}}
 

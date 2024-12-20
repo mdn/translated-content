@@ -48,7 +48,8 @@ l10n:
 
 `role` 属性は意味づけを追加するだけです。 [HTML radio](/ja/docs/Web/HTML/Element/input/radio) にネイティブに備わっている機能はすべて JavaScript と HTML の [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性で追加する必要があります。
 
-> **メモ:** ARIA の最初のルールは、ネイティブの HTML 要素や属性が要求される意味づけや動作を持っている場合、要素を再利用して ARIA を追加する代わりにそれを使用することです。代わりに、ネイティブの [HTML `<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio) （{{HTMLElement('label')}} が関連付けられたもの）を使用してください。
+> [!NOTE]
+> ARIA の最初のルールは、ネイティブの HTML 要素や属性が要求される意味づけや動作を持っている場合、要素を再利用して ARIA を追加する代わりにそれを使用することです。代わりに、ネイティブの [HTML `<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio) （{{HTMLElement('label')}} が関連付けられたもの）を使用してください。
 
 ```html
 <fieldset>

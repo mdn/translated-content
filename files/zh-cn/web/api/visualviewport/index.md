@@ -9,7 +9,8 @@ slug: Web/API/VisualViewport
 
 你可以使用 {{domxref("Window.visualViewport")}} 获得对应 window 的视觉视口 API。
 
-> **备注：** 与布局视口（layout viewport）不同的是：只有最上层的 window 才有视觉视口（visual viewport）这一概念。因此只有最上层 window 的 `VisualViewport` 属性才是有效的，其他层的视觉视口属性可看作是布局视口属性的别名。比如，对于一个 {{htmlelement("iframe")}} ，其对应的视觉视口属性 {{domxref("VisualViewport.width")}} 相当于对应的布局视口属性，如 {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
+> [!NOTE]
+> 与布局视口（layout viewport）不同的是：只有最上层的 window 才有视觉视口（visual viewport）这一概念。因此只有最上层 window 的 `VisualViewport` 属性才是有效的，其他层的视觉视口属性可看作是布局视口属性的别名。比如，对于一个 {{htmlelement("iframe")}} ，其对应的视觉视口属性 {{domxref("VisualViewport.width")}} 相当于对应的布局视口属性，如 {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
 
 ## 属性
 
@@ -93,7 +94,8 @@ window.visualViewport.addEventListener("scroll", viewportHandler);
 window.visualViewport.addEventListener("resize", viewportHandler);
 ```
 
-> **备注：** 应小心使用上述方案，使用这种方式模拟的 `position: device-fixed` 可能会导致其他元素在滚动页面时出现闪烁。
+> [!NOTE]
+> 应小心使用上述方案，使用这种方式模拟的 `position: device-fixed` 可能会导致其他元素在滚动页面时出现闪烁。
 
 ## 规范
 

@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/class
 
 {{SVGRef}}
 
-« [Página inicial da referência de atributos do SVG](/pt-BR/SVG/Attribute)
+« [Página inicial da referência de atributos do SVG](/pt-BR/docs/SVG/Attribute)
 
 Atribui um nome de classe ou um conjunto de nomes de classe a um elemento. Você pode atribuir o mesmo nome ou nomes de classe para qualquer número de elementos. Se você especificar vários nomes de classe, estes devem ser separados por caracteres de espaço em branco.
 
@@ -20,11 +20,11 @@ A classe pode ser utilizada pra estilizar o conteúdo do SVG com CSS.
 
 | Categorias          | Nenhuma                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
-| Valor               | [\<list-of-class-names>](/pt-BR/SVG/Content_type#List-of-Ts)                                   |
+| Valor               | [\<list-of-class-names>](/pt-BR/docs/SVG/Content_type#list-of-ts)                              |
 | Animável            | Sim                                                                                            |
 | Documento normativo | [SVG 1.1 (2ª Edição): O atributo class](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 
-{{ page("/pt-BR/SVG/Content_type","List-of-Ts") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/SVG/Content_type","List-of-Ts")  -->
 
 ## Exemplo
 

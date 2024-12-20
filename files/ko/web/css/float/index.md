@@ -32,7 +32,8 @@ CSS 속성(property) **`float`** 은 한 요소(element)가 보통 흐름(normal
 | `inline-flex`           | `inline-flex`, 다만 `float` 은 이러한 요소에 효과가 없음 |
 | _그외_                  | _변화없음_                                               |
 
-> **참고:** **주의:** JavaScript에서 이 속성을 {{domxref("element.style")}} 객체의 멤버로서 참조한다면, 당신은 `cssFloat`으로 철자를 써야 합니다. 또한 Internet Explorer 8 이전 버전에서는 `styleFloat`으로 썼음을 주의하세요. 이는 DOM 멤버의 이름은 dash(-)로 구분된 CSS 이름의 카멜케이스(camel-case) 명이다는 규칙의 예외(이고 "class"는 "className"으로 \<label>의 "for"는 "htmlFor"로 이스케이프할 필요와 같이 "float"이 JavaScript에서 예약어란 사실 때문)입니다.
+> [!NOTE]
+> JavaScript에서 이 속성을 {{domxref("element.style")}} 객체의 멤버로서 참조한다면, 당신은 `cssFloat`으로 철자를 써야 합니다. 또한 Internet Explorer 8 이전 버전에서는 `styleFloat`으로 썼음을 주의하세요. 이는 DOM 멤버의 이름은 dash(-)로 구분된 CSS 이름의 카멜케이스(camel-case) 명이다는 규칙의 예외(이고 "class"는 "className"으로 \<label>의 "for"는 "htmlFor"로 이스케이프할 필요와 같이 "float"이 JavaScript에서 예약어란 사실 때문)입니다.
 
 ## 구문
 
@@ -115,7 +116,7 @@ h2.secondHeading {
 }
 ```
 
-그러나, 이 방법은 우리가 머릿글이 가로로 옆에 계속 보이기를 원하는 같은 블록 형식 문맥([block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context)) 내에 다른 요소가 없을 때만 동작합니다. 우리 `h2` 좌우로 부동되는 사이드바(sidebar)인 형제(sibling)가 있다면, `clear` 사용은 강제로 머릿글이 두 사이드바 아래로 나타나게 하고 이는 아마 우리가 원하는 게 아닙니다.
+그러나, 이 방법은 우리가 머릿글이 가로로 옆에 계속 보이기를 원하는 같은 블록 형식 문맥([block formatting context](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)) 내에 다른 요소가 없을 때만 동작합니다. 우리 `h2` 좌우로 부동되는 사이드바(sidebar)인 형제(sibling)가 있다면, `clear` 사용은 강제로 머릿글이 두 사이드바 아래로 나타나게 하고 이는 아마 우리가 원하는 게 아닙니다.
 
 그들 아래 요소의 float을 지우는 게 선택사항이 아니라면, 다른 방법(approach)은 부동 요소가 담긴 컨테이너의 블록 형식 문맥을 제한하는 겁니다. 다시 위 예제를 참조하면, 빨간 박스 셋은 모두 `p` 요소 내에 있는 걸로 보입니다. 우리는 박스를 포함하도록 늘어나지만, 그 하단 밖(밑)으로 사라지지 않게 `hidden` 혹은 `auto` 로 p의 {{Cssxref("overflow")}} 속성을 설정할 수 있습니다:
 
@@ -125,8 +126,6 @@ p.withRedBoxes {
   height: auto;
 }
 ```
-
-> **참고:** **주의:** `overflow` 를 `scroll` 로 설정하면 부동된 모든 자식(child) 요소도 포함합니다. 하지만 스크롤바가 콘텐츠의 높이에 상관없이 보입니다. 그 컨테이너가 콘텐츠를 수용하기 위해 늘어야(grow) 함을 나타내는 기본(default)임에도 불구하고, 여기에서 우리는 `height` 를 `auto` 로 설정하고 있습니다.
 
 ## 명세
 
@@ -138,4 +137,4 @@ p.withRedBoxes {
 
 ## 같이 보기
 
-- [Block formatting context](/ko/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)

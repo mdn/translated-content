@@ -7,22 +7,24 @@ slug: Learn/CSS/Styling_text/Fundamentals
 
 В данной статье мы начнём путь к овладению стилизацией текста при помощи {{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие как толщина, начертание, семейство, стенография, выравнивание текста и другие эффекты, а также рассмотрим междустрочный и межбуквенный интервалы.
 
-| Необходимые знания: | Базовые компьютерные знания, Основы HTML (раздел [Введение в HTML](/ru/docs/Learn/HTML/Введение_в_HTML)), основы CSS (раздел [Введение в CSS](/ru/docs/Learn/CSS/First_steps)). |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:             | Изучить основные свойства и техники, необходимые для стилизации текста на веб-страницах.                                                                                        |
+| Необходимые знания: | Базовые компьютерные знания, Основы HTML (раздел [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), основы CSS (раздел [Введение в CSS](/ru/docs/Learn/CSS/First_steps)). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Задача:             | Изучить основные свойства и техники, необходимые для стилизации текста на веб-страницах.                                                                                             |
 
 ## Что участвует в стилизации текста в CSS?
 
 Как вы уже проверили в своей работе с HTML и CSS, текст внутри элемента выкладывается в поле содержимого элемента. Он начинается в левом верхнем углу области содержимого (или в правом верхнем углу, в случае содержимого языка RTL) и течёт к концу строки. Как только он достигает конца, он переходит к следующей строке и продолжает, затем к следующей строке, пока все содержимое не будет помещено в коробку. Текстовое содержимое эффективно ведёт себя как ряд встроенных элементов, размещённых на соседних строках и не создающих разрывы строк до тех пор, пока не будет достигнут конец строки, или если вы не принудите разрыв строки вручную с помощью элемента {{htmlelement("br")}}.
 
-> **Примечание:** если приведённый выше абзац оставляет вас в замешательстве, то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, чтобы освежить теорию модели коробки, прежде чем продолжить.
+> [!NOTE]
+> Если приведённый выше абзац оставляет вас в замешательстве, то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, чтобы освежить теорию модели коробки, прежде чем продолжить.
 
 Свойства CSS, используемые для стилизации текста, обычно делятся на две категории, которые мы рассмотрим отдельно в этой статье:
 
 - **Font styles**: Свойства, влияющие на шрифт, применяемый к тексту, влияющие на то, какой шрифт применяется, насколько он велик, является ли он полужирным, курсивным и т. д.
 - **Text layout styles**: Свойства, влияющие на интервал и другие особенности компоновки текста, позволяющие манипулировать, например, пространством между строками и буквами, а также тем, как текст выравнивается в поле содержимого.
 
-> **Примечание:** имейте в виду, что текст внутри элемента все затронуты как одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста, если вы не обернёте их в соответствующий элемент (например, {{htmlelement ("span")}} или {{htmlelement ("strong")}}), или использовать текстовый псевдоэлемент, такой как ::first-letter (выделяет первую букву текста элемента),:: first-line (выделяет первую строку текста элемента) или ::selection (выделяет текст, выделенный в данный момент курсором.)
+> [!NOTE]
+> Имейте в виду, что текст внутри элемента все затронуты как одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста, если вы не обернёте их в соответствующий элемент (например, {{htmlelement ("span")}} или {{htmlelement ("strong")}}), или использовать текстовый псевдоэлемент, такой как ::first-letter (выделяет первую букву текста элемента),:: first-line (выделяет первую строку текста элемента) или ::selection (выделяет текст, выделенный в данный момент курсором.)
 
 ## Шрифты
 
@@ -42,13 +44,13 @@ slug: Learn/CSS/Styling_text/Fundamentals
 </p>
 ```
 
-You can find the [finished example on GitHub](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
 
 ### Color
 
 The {{cssxref("color")}} property sets the color of the foreground content of the selected elements (which is usually the text, but can also include a couple of other things, such as an underline or overline placed on text using the {{cssxref("text-decoration")}} property).
 
-`color` can accept any [CSS color unit](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors), for example:
+`color` can accept any [CSS color unit](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#colors), for example:
 
 ```css
 p {
@@ -103,9 +105,11 @@ The list of actual web safe fonts will change as operating systems evolve, but i
 | Trebuchet MS    | sans-serif   | You should be careful with using this font — it isn't widely available on mobile OSes.                                                                                                                                                            |
 | Verdana         | sans-serif   |                                                                                                                                                                                                                                                   |
 
-> **Примечание:** Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
+> [!NOTE]
+> Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
 
-> **Примечание:** There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
+> [!NOTE]
+> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn/CSS/Styling_text/Web_fonts) later on in the module.
 
 #### Default fonts
 
@@ -135,7 +139,8 @@ In such a case, the browser starts at the beginning of the list and looks to see
 
 It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasise this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
 
-> **Примечание:** Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> [!NOTE]
+> Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
 
 #### A font-family example
 
@@ -168,7 +173,7 @@ This gives us the following result:
 
 ### Font size
 
-In our previous module's [CSS values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)), however the most common units you'll use to size text are:
+In our previous module's [CSS values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)), however the most common units you'll use to size text are:
 
 - `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
 - `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
@@ -311,10 +316,10 @@ text-shadow: 4px 4px 5px red;
 
 The four properties are as follows:
 
-1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
+1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text; behaves basically just like the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
-3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors). If not included, it defaults to `black`.
+3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
+4. The base color of the shadow, which can take any [CSS color unit](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#colors). If not included, it defaults to `black`.
 
 #### Multiple shadows
 
@@ -368,7 +373,8 @@ p {
 
 {{ EmbedLiveSample('Hidden_example1', '100%', 260) }}
 
-> **Примечание:** You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/).
+> [!NOTE]
+> You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
 
 ## Text layout
 
@@ -428,7 +434,7 @@ p {
 
 ### Line height
 
-The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 – 2 (double spaced.) So to set our lines of text to 1.6 times the height of the font, you'd use this:
+The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 – 2 (double spaced.) So to set our lines of text to 1.6 times the height of the font, you'd use this:
 
 ```css
 line-height: 1.6;
@@ -480,7 +486,7 @@ p {
 
 ### Letter and word spacing
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size).
+The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size).
 
 So as an example, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our example:
 
@@ -684,4 +690,4 @@ We hoped you enjoyed playing with text in this article! The next article will gi
 - [Styling lists](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Styling links](/ru/docs/Learn/CSS/Styling_text/Styling_links)
 - [Web fonts](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Typesetting a community school homepage](/ru/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

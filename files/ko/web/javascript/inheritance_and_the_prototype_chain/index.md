@@ -21,7 +21,8 @@ JavaScript는 동적 타입이고 정적 타입이 없기 때문에, (Java 또�
 
 JavaScript 객체는 속성을 저장하는 동적인 "가방"과 (**자기만의 속성**이라고 부릅니다) 프로토타입 객체에 대한 링크를 가집니다. 객체의 어떤 속성에 접근하려할 때, 그 객체 자체 속성 뿐만 아니라 객체의 프로토타입, 그 프로토타입의 프로토타입 등 프로토타입 체인의 종단에 이를 때까지 그 속성을 탐색합니다.
 
-> **Note:** ECMAScript 표준은 `someObject.[[Prototype]]`을 객체 `someObject`의 프로토타입을 지시하도록 명시하였습니다. `[[Prototype]]` 내부 슬롯은 각각 {{jsxref("Object.getPrototypeOf()")}}과 {{jsxref("Object.setPrototypeOf()")}} 함수로 접근하고 수정할 수 있습니다. 이것은 JavaScript의 표준은 아니나 많은 브라우저에 구현되어 사실상의 표준이 된 속성 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)과 동일합니다. 간결함을 유지하고 혼동을 방지하기 위해 표기법에서 `obj.__proto__`를 사용하지 않고, `obj.[[Prototype]]`을 사용합니다. 이것은 `Object.getPrototypeOf(obj)`에 해당합니다.
+> [!NOTE]
+> ECMAScript 표준은 `someObject.[[Prototype]]`을 객체 `someObject`의 프로토타입을 지시하도록 명시하였습니다. `[[Prototype]]` 내부 슬롯은 각각 {{jsxref("Object.getPrototypeOf()")}}과 {{jsxref("Object.setPrototypeOf()")}} 함수로 접근하고 수정할 수 있습니다. 이것은 JavaScript의 표준은 아니나 많은 브라우저에 구현되어 사실상의 표준이 된 속성 [`__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)과 동일합니다. 간결함을 유지하고 혼동을 방지하기 위해 표기법에서 `obj.__proto__`를 사용하지 않고, `obj.[[Prototype]]`을 사용합니다. 이것은 `Object.getPrototypeOf(obj)`에 해당합니다.
 >
 > 생성자로 사용될 때 주어진 함수에 의해 생성된 객체의 모든 `인스턴스`에 `[[Prototype]]`이 할당되도록 지정하는 함수의 `func.prototype` 속성과 혼동해서는 안 됩니다. [나중 섹션](#constructors)에서 생성자 함수의 `prototype` 속성에 대해 논의할 것입니다.
 
@@ -175,9 +176,10 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-`new Box(1)`이 `Box` 생성자 함수에서 생성된 "인스턴스"라고 말할 수 있는데, `Box.prototype`은 이전에 생성한 `boxPrototype` 객체와 크게 다르지 않습니다. `Box.prototype`은 그냥 일반 객체입니다. 생성자 함수에서 생성된 모든 인스턴스는 자동으로 생성자의 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 속성을 `[[Prototype]]`으로 갖게 됩니다. 즉, `Object.getPrototypeOf(new Box()) === Box.prototype`입니다. 기본적으로 `Constructor.prototype`에는 생성자 함수 자체를 참조하는 [`constructor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 속성이 하나 있습니다. 즉, `Box.prototype.constructor === Box`이기 때문에, 모든 인스턴스에서 원래 생성자에 접근할 수 있게 됩니다.
+`new Box(1)`이 `Box` 생성자 함수에서 생성된 "인스턴스"라고 말할 수 있는데, `Box.prototype`은 이전에 생성한 `boxPrototype` 객체와 크게 다르지 않습니다. `Box.prototype`은 그냥 일반 객체입니다. 생성자 함수에서 생성된 모든 인스턴스는 자동으로 생성자의 [`prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function) 속성을 `[[Prototype]]`으로 갖게 됩니다. 즉, `Object.getPrototypeOf(new Box()) === Box.prototype`입니다. 기본적으로 `Constructor.prototype`에는 생성자 함수 자체를 참조하는 [`constructor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 속성이 하나 있습니다. 즉, `Box.prototype.constructor === Box`이기 때문에, 모든 인스턴스에서 원래 생성자에 접근할 수 있게 됩니다.
 
-> **참고:** 생성자 함수에서 반환된 값이 원시 값이 아니라면, 해당 값은 `new` 표현식의 결과가 됩니다. 이 경우, `[[Prototype]]`이 올바르게 바인딩되지 않을 수 있지만, 실제로는 많이 발생하지 않습니다.
+> [!NOTE]
+> 생성자 함수에서 반환된 값이 원시 값이 아니라면, 해당 값은 `new` 표현식의 결과가 됩니다. 이 경우, `[[Prototype]]`이 올바르게 바인딩되지 않을 수 있지만, 실제로는 많이 발생하지 않습니다.
 
 위 생성자 함수는 [classes](/ko/docs/Web/JavaScript/Reference/Classes)에서 다음과 같이 다시 작성할 수 있습니다.
 
@@ -248,7 +250,8 @@ const regexp = new RegExp("abc");
 
 예를 들어, [`map()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map)과 같은 "배열 메서드"는 단순히 `Array.prototype`에 정의된 메서드입니다. 모든 배열 인스턴스에서 자동으로 사용할 수 있습니다.
 
-> **경고:** 널리 알려진 한 가지 잘못된 기능이 있습니다. 바로 `Object.prototype` 또는 다른 내장 프로토타입 중 하나를 확장하는 것입니다. 이 잘못된 기능의 예는 `Array.prototype.myMethod = function () {...}`를 정의한 다음 모든 배열 인스턴스에서 `myMethod`를 사용하는 것입니다.
+> [!WARNING]
+> 널리 알려진 한 가지 잘못된 기능이 있습니다. 바로 `Object.prototype` 또는 다른 내장 프로토타입 중 하나를 확장하는 것입니다. 이 잘못된 기능의 예는 `Array.prototype.myMethod = function () {...}`를 정의한 다음 모든 배열 인스턴스에서 `myMethod`를 사용하는 것입니다.
 >
 > 이러한 잘못된 기능을 원숭이 패칭(monkey patching)이라고 합니다. 원숭이 패칭을 하게 되면, 상위 호환성에 문제가 발생합니다. 언어가 나중에 이 메서드를 추가하지만 다른 서명을 사용하면, 코드가 깨질 수 있기 대문입니다. 이로 인해, [SmooshGate](https://developer.chrome.com/blog/smooshgate/)와 같은 사고가 발생했으며, JavaScript는 "웹을 중단하지 않으려" 시도하므로 언어가 발전하는 데 있어 큰 장애물이 될 수 있습니다.
 >
@@ -349,7 +352,8 @@ console.log(doSomethingFromArrowFunction.prototype);
 }
 ```
 
-> **참고:** Chrome 콘솔은 `[[Prototype]]`을 사용하여, 명세의 용어에 따라 객체의 프로토타입을 나타냅니다. Firefox는 `<prototype>`을 사용하는데, 일관성을 위해 `[[Prototype]]`을 사용합니다.
+> [!NOTE]
+> Chrome 콘솔은 `[[Prototype]]`을 사용하여, 명세의 용어에 따라 객체의 프로토타입을 나타냅니다. Firefox는 `<prototype>`을 사용하는데, 일관성을 위해 `[[Prototype]]`을 사용합니다.
 
 아래와 같이, `doSomething()`의 프로토타입에 속성을 추가할 수 있습니다.
 
@@ -498,7 +502,7 @@ const p = { b: 2, __proto__: o };
 
 ### 생성자 함수를 이용
 
-JavaScript에서 생성자는 단지 [new 연산자](/en/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
+JavaScript에서 생성자는 단지 [new 연산자](/en-US/JavaScript/Reference/Operators/new)를 사용해 함수를 호출하면 된다.
 
 ```js
 function Graph() {

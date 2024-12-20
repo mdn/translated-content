@@ -56,7 +56,7 @@ window.addEventListener("message", (event) => {
 });
 ```
 
-Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements [`onmessage`](/fr/docs/Web/API/WindowEventHandlers/onmessage):
+Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements [`onmessage`](/fr/docs/Web/API/Window/message_event):
 
 ```js
 window.onmessage = (event) => {

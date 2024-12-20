@@ -81,7 +81,7 @@ Django에 대한 지원이 활발하게 이루어지거나 Django가 잘 동작�
 - 추가적인 혜택들. 어떤 업체들은 다른곳에서는 유료로 지원되는 도메인 네임과 SSL인증에 대한 지원을 무료로 제공한다.
 - 당신이 사용하던 "무료"계정이 시간초과로 중지되거나 좀더 비싼 계정으로 이전하는데 비용들거나 하게된다는 것은 처음에 선택한 호스팅 서비스와 다른 선택을 했다면 웹사이트가 좀더 성공적일 수도 있었다는 것을 의미한다!
 
-당신이 개발을 시작했다면 좋은 소식은 "평가용", "개발자용"혹은 "취미개발용" 컴퓨터 환경을 "무료"로 제공하는 업체가 꽤 있다는 것이다. 이들은 항상 자원을 아주 제한적으로만 사용할 수 있고, 처음 신규 가입 기간이 지나 중지되지 않는지 주의를 기울여야 한다. 하지만, 트래픽이 낮은 사이트를 실제 운영환경에서 테스트 하기에 좋으며, 사이트가 좀더 바빠질 경우 더 많은 자원을 제공하는 유료환경으로 쉽게 이전할 수 있다.이런 종류의 환경으로 인기있는 곳은 [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 등등이다.
+당신이 개발을 시작했다면 좋은 소식은 "평가용", "개발자용"혹은 "취미개발용" 컴퓨터 환경을 "무료"로 제공하는 업체가 꽤 있다는 것이다. 이들은 항상 자원을 아주 제한적으로만 사용할 수 있고, 처음 신규 가입 기간이 지나 중지되지 않는지 주의를 기울여야 한다. 하지만, 트래픽이 낮은 사이트를 실제 운영환경에서 테스트 하기에 좋으며, 사이트가 좀더 바빠질 경우 더 많은 자원을 제공하는 유료환경으로 쉽게 이전할 수 있다.이런 종류의 환경으로 인기있는 곳은 [Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 등등이다.
 
 많은 업체가 좀더 쓸만한 수준의 컴퓨팅 파워와 제한사항을 완화한 "기본"계정을 가지고 있다. [Digital Ocean](https://www.digitalocean.com/) 과 [Python Anywhere](https://www.pythonanywhere.com/) 는 상대적으로 비용이 낮은( 1달에 5\~10 USD 가격의) 기본 계정을 제공하는 인기있는 호스팅 업체의 대표적인 예이다.
 
@@ -446,7 +446,8 @@ psycopg2==2.6.2
 whitenoise==3.2.2
 ```
 
-> **참고:** 위 목록에 **psycopg2** 줄이 있다는 것을 주의해야 한다! 로컬환경에서 이 라이브러리를 설치한 적이 없더라도 이 줄은 **requirements.txt** 파일에 추가해야 한다.
+> [!NOTE]
+> 위 목록에 **psycopg2** 줄이 있다는 것을 주의해야 한다! 로컬환경에서 이 라이브러리를 설치한 적이 없더라도 이 줄은 **requirements.txt** 파일에 추가해야 한다.
 
 #### Runtime 파일 추가하기
 
@@ -564,7 +565,7 @@ heroku addons:open heroku-postgresql
 DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3
 ```
 
-위에서 공부한 [웹 사이트 공개(publish) 준비하기](#Getting_your_website_ready_to_publish) 섹션을 다시 떠올려보면, `DJANGO_SECRET_KEY`와 `DJANGO_DEBUG` 환경 변수를 설정해야 한다. 지금 이 작업을 하자.
+위에서 공부한 [웹 사이트 공개(publish) 준비하기](#getting_your_website_ready_to_publish) 섹션을 다시 떠올려보면, `DJANGO_SECRET_KEY`와 `DJANGO_DEBUG` 환경 변수를 설정해야 한다. 지금 이 작업을 하자.
 
 > **참고:** **주목할 점:** secret key는 정말로 비밀이 유지되어야 한다! 새로운 키를 만들어 내는 한가지 방법은 새로운 Django 프로젝트를 생성하고 (`django-admin startproject someprojectname`) 신규 프로젝트의 **settings.py**에서 생성된 키를 가져오는 것이다.
 
@@ -602,7 +603,8 @@ git push origin master
 git push heroku master
 ```
 
-> **참고:** Heroku에 사이트 업데이트하는 것을 완료한후, 존재하지 않는 주소URL(예를 들면, **/catalog/doesnotexist/**) 을 입력해 보자. 이전에는 이런 경우 자세한 설명이 담긴 디버그 페이지를 보여주었었지만, 이제는 단순한 "Not Found" 페이지가 보일것이다.
+> [!NOTE]
+> Heroku에 사이트 업데이트하는 것을 완료한후, 존재하지 않는 주소URL(예를 들면, **/catalog/doesnotexist/**) 을 입력해 보자. 이전에는 이런 경우 자세한 설명이 담긴 디버그 페이지를 보여주었었지만, 이제는 단순한 "Not Found" 페이지가 보일것이다.
 
 ### 디버깅 하기
 

@@ -20,7 +20,7 @@ L'événement se produit dans deux contextes liés mais unique:
 ## Informations générales
 
 - Spécification
-  - : [HTML5 media](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
+  - : [HTML5 media](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html#event-media-ended) et [Media Capture and Streams](https://www.w3.org/TR/mediacapture-streams/#event-mediastreamtrack-ended)
 - Interface
   - : {{domxref("Event")}}
 - Propagation
@@ -32,7 +32,8 @@ L'événement se produit dans deux contextes liés mais unique:
 - Action par défaut
   - : Aucune
 
-> **Note :** Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
+> [!NOTE]
+> Bien que cet événement soit défini dans deux spécifications, à ce moment-là, les deux spécifient cet événement de manière identique, nous avons donc documenté comme si elles ne faisaient qu'une. Si à un moment donné, cela change, la documentation sera révisée.
 
 ## Propriétés
 

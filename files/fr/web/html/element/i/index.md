@@ -11,7 +11,7 @@ L'élément HTML **`<i>`** représente un morceau de texte qui se différencie d
 
 ## Attributs
 
-Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément possède uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -77,7 +77,7 @@ C'est une bonne pratique que d'utiliser l'attribut **`class`** pour identifier l
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

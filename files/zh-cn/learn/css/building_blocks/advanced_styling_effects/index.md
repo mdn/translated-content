@@ -34,7 +34,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 回到我们的[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)模块，我们查看了{{cssxref("text-shadow")}}属性，它允许你将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许你将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。
 
-你可以 [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html)在这部分找到例子 (见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html))。
+你可以 [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html)在这部分找到例子 (见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html))。
 
 ### 一个简单的盒子阴影
 
@@ -176,7 +176,8 @@ button:active {
 
 当按钮被按下时，这里的 active 声明将第一个盒阴影换成一个非常暗的 inset 阴影。给人一种按钮被按下的样子。
 
-> **备注：** 还有一个可以在 box-shadow 中设置的值 — 另外一个位于颜色值前面可选的长度值，即**spread radius**，如果设置了这个值，将会导致阴影变得比原始的阴影更大，这个值不是很常用，但是值得一提。
+> [!NOTE]
+> 还有一个可以在 box-shadow 中设置的值 — 另外一个位于颜色值前面可选的长度值，即**spread radius**，如果设置了这个值，将会导致阴影变得比原始的阴影更大，这个值不是很常用，但是值得一提。
 
 ## Filters（滤镜）
 
@@ -223,9 +224,10 @@ p {
 - 滤镜很新——它们可以被大多数的现代的浏览器支持，包括 Microsoft Edge，但它们一点也不能被 IE 浏览器支持。因此如果你在你的设计中使用滤镜，你需要确保你的内容即使没有滤镜也是可用的。
 - 你会看到我们在`filter`属性中通过`-webkit-`前缀包含了一个版本信息，这被称为一个 {{glossary("Vendor Prefix")}}，有时会被浏览器使用，以在一个新特性完整实现之前，当它与无前缀版本没有冲突的时候支持并实验这个特性。Vendor prefixes 永远都不被指望着被 web 开发人员使用，但是它们有时候确实会被在产品页面中使用，即当实验性的特性确实被需要时。在这个实例中，Chrome/Safari/Opera 目前要求这些属性的`-webkit-`版本，而 Edge 和 Firefox 则使用后者，无前缀版本。
 
-> **备注：** 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。
+> [!NOTE]
+> 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。
 
-你可以看到更多关于滤镜的例子，在 [filters.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (也可以看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/filters.html)).
+你可以看到更多关于滤镜的例子，在 [filters.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (也可以看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/filters.html)).
 
 ## Blend modes（混合模式）
 
@@ -236,9 +238,10 @@ CSS 混合模式允许我们为元素添加一个混合模式，以当两个元�
 - {{cssxref("background-blend-mode")}}, 用来将单个元素的多重背景图片和背景颜色设置混合在一起。
 - {{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容 (content) 混合在一起。
 
-你可以找到比这里用到的更多的例子，在我们的[blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) 示例页面 (查看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。
+你可以找到比这里用到的更多的例子，在我们的[blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) 示例页面 (查看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。
 
-> **备注：** 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。
+> [!NOTE]
+> 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。
 
 ### background-blend-mode
 
@@ -334,7 +337,8 @@ article div:last-child {
 
 你可以看到，多层混合（mix-blend）不仅混合了两种背景图像，还混合了在`<div>`下面的颜色。
 
-> **备注：** 如果你不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} 等。我们将在 [CSS Layout](/zh-CN/docs/Learn/CSS/CSS_layout) 模块中详细地介绍这些内容。
+> [!NOTE]
+> 如果你不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} 等。我们将在 [CSS Layout](/zh-CN/docs/Learn/CSS/CSS_layout) 模块中详细地介绍这些内容。
 
 ## -webkit-background-clip: text
 
@@ -351,7 +355,8 @@ article div:last-child {
 
 如果你确实希望在你的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。
 
-> **备注：** 对于一个完整的 `-webkit-background-clip: text` 代码示例，见[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
+> [!NOTE]
+> 对于一个完整的 `-webkit-background-clip: text` 代码示例，见[background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
 
 ## 自主学习：尝试一些效果
 

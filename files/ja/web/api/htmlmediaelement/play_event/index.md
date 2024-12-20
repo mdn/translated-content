@@ -1,8 +1,9 @@
 ---
 title: "HTMLMediaElement: play イベント"
+short-title: play
 slug: Web/API/HTMLMediaElement/play_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -27,7 +28,7 @@ onplay = (event) => {};
 
 ## 例
 
-これらの例では、`HTMLMediaElement` の `play` イベントのイベントリスナーを追加し、そのイベントハンドラがイベントの発生に反応したときにメッセージを投稿します。
+これらの例では、`HTMLMediaElement` の `play` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
 `addEventListener()` を使用する場合:
 
@@ -36,8 +37,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("play", (event) => {
   console.log(
-    "Boolean の paused プロパティは false になりました。 " +
-      "play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
+    "論理値の paused プロパティは false になりました。play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
   );
 });
 ```
@@ -49,8 +49,7 @@ const video = document.querySelector("video");
 
 video.onplay = (event) => {
   console.log(
-    "Boolean の paused プロパティは false になりました。 " +
-      "play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
+    "論理値の paused プロパティは false になりました。play() メソッドが呼び出されたか、autoplay 属性が切り替えられました。",
   );
 };
 ```
@@ -76,7 +75,6 @@ video.onplay = (event) => {
 - HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} イベント
-- HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.pause_event", 'pause')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}} イベント
 - HTMLMediaElement {{domxref("HTMLMediaElement.volumechange_event", 'volumechange')}} イベント

@@ -38,7 +38,8 @@ _Source de l'image&nbsp;: [<i lang="en">Overloaded plug socket</i>](https://www.
 
 De la même façon, par exemple, pour programmer des graphismes en 3D, il est beaucoup plus facile de le faire en utilisant une API écrite dans un langage de haut niveau comme JavaScript ou Python, plutôt que d'essayer d'écrire du code bas niveau (comme C ou C++) qui contrôle directement le GPU de l'ordinateur ou d'autres fonctions graphiques.
 
-> **Note :** Voir aussi [l'entrée du glossaire pour le terme API](/fr/docs/Glossary/API) pour une description plus détaillée.
+> [!NOTE]
+> Voir aussi [l'entrée du glossaire pour le terme API](/fr/docs/Glossary/API) pour une description plus détaillée.
 
 ### Les API JavaScript côté client
 
@@ -106,7 +107,8 @@ Chaque API JavaScript a son fonctionnement propre. Elles partagent toutefois des
 
 Les API interagissent avec le code en utilisant un ou plusieurs [objets JavaScript](/fr/docs/Learn/JavaScript/Objects), qui servent de conteneurs pour les données utilisées par l'API (contenues dans les propriétés d'objet), et la fonctionnalité rendue disponible par l'API (contenue dans des méthodes d'objet).
 
-> **Note :** Si vous ne connaissez pas encore le fonctionnement des objets, vous devriez revenir en arrière et parcourir le module [objets JavaScript](/fr/docs/Learn/JavaScript/Objects) avant de continuer.
+> [!NOTE]
+> Si vous ne connaissez pas encore le fonctionnement des objets, vous devriez revenir en arrière et parcourir le module [objets JavaScript](/fr/docs/Learn/JavaScript/Objects) avant de continuer.
 
 Prenons comme exemple l'API <i lang="en">Web Audio</i>. Il s'agit d'une API assez complexe avec plusieurs objets. Voici les objets principaux&nbsp;:
 
@@ -127,7 +129,7 @@ Alors comment ces objets interagissent-ils&nbsp;? Si vous regardez notre exemple
 <input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
 
-Pour commencer, nous incluons, un élément `<audio>` avec lequel nous intégrons un fichier MP3 dans la page. Nous n'incluons pas de contrôles par défaut du navigateur. Ensuite, nous incluons un [`<button>`](/fr/docs/Web/HTML/Element/Button) que nous utiliserons pour lire et arrêter la musique, et un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`, que nous utiliserons pour ajuster le volume de la piste en cours de lecture.
+Pour commencer, nous incluons, un élément `<audio>` avec lequel nous intégrons un fichier MP3 dans la page. Nous n'incluons pas de contrôles par défaut du navigateur. Ensuite, nous incluons un [`<button>`](/fr/docs/Web/HTML/Element/button) que nous utiliserons pour lire et arrêter la musique, et un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`, que nous utiliserons pour ajuster le volume de la piste en cours de lecture.
 
 Ensuite, examinons le JavaScript de cet exemple.
 
@@ -178,7 +180,8 @@ audioElement.addEventListener("ended", function () {
 });
 ```
 
-> **Note :** Vous aurez peut-être remarqué que les méthodes `play()` et `pause()` utilisées pour lire et mettre en pause la piste ne font pas partie de l'API <i lang="en">Web Audio</i>&nbsp;; elles font partie de l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). qui est différente mais étroitement liée.
+> [!NOTE]
+> Vous aurez peut-être remarqué que les méthodes `play()` et `pause()` utilisées pour lire et mettre en pause la piste ne font pas partie de l'API <i lang="en">Web Audio</i>&nbsp;; elles font partie de l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement). qui est différente mais étroitement liée.
 
 Ensuite, nous créons un objet [`GainNode`](/fr/docs/Web/API/GainNode) à l'aide de la méthode [`AudioContext.createGain()`](/fr/docs/Web/API/BaseAudioContext/createGain), qui peut être utilisé pour ajuster le volume de l'audio qui le traverse, et nous créons un autre gestionnaire d'évènements qui modifie la valeur du gain (volume) du graphique audio lorsque la valeur du curseur est modifiée&nbsp;:
 
@@ -229,7 +232,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **Note :** Vous pouvez voir ce code en action dans notre [démo de balles rebondissantes](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (voir [le résultat en direct](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) également).
+> [!NOTE]
+> Vous pouvez voir ce code en action dans notre [démo de balles rebondissantes](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (voir [le résultat en direct](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) également).
 
 ### Elles utilisent des évènements pour gérer les changements d'état
 
@@ -277,7 +281,8 @@ En outre, certaines API web demandent la permission à la personne pour être ac
 
 Les API <i lang="en">Web Audio</i> et [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) sont soumises à un mécanisme de sécurité pour [la lecture automatique](/fr/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy). Cela signifie essentiellement que vous ne pouvez pas lire automatiquement l'audio lorsqu'une page se charge&nbsp;: vous devez permettre aux personnes consultant le site de déclencher la lecture audio par le biais d'un contrôle comme un bouton. Cette mesure est prise parce que la lecture automatique de l'audio est généralement indésirable.
 
-> **Note :** Selon la rigueur du navigateur, ces mécanismes de sécurité peuvent même empêcher l'exemple de fonctionner localement, c'est-à-dire si vous chargez le fichier d'exemple local dans votre navigateur au lieu de l'exécuter à partir d'un serveur web. Au moment de la rédaction de ce document, notre exemple d'API <i lang="en">Web Audio</i> ne fonctionnait pas localement sur Google Chrome&nbsp;: nous avons dû le mettre sur GitHub pour qu'il fonctionne en étant servi depuis un serveur web.
+> [!NOTE]
+> Selon la rigueur du navigateur, ces mécanismes de sécurité peuvent même empêcher l'exemple de fonctionner localement, c'est-à-dire si vous chargez le fichier d'exemple local dans votre navigateur au lieu de l'exécuter à partir d'un serveur web. Au moment de la rédaction de ce document, notre exemple d'API <i lang="en">Web Audio</i> ne fonctionnait pas localement sur Google Chrome&nbsp;: nous avons dû le mettre sur GitHub pour qu'il fonctionne en étant servi depuis un serveur web.
 
 ## Résumé
 

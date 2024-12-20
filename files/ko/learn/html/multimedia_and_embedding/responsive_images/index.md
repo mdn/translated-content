@@ -42,7 +42,7 @@ l10n:
 
 ![와이드 스크린 화면에서 보았을 때 예제 사이트. 여기서는 첫번째 이미지는 화면이 크기 때문에 중앙의 얼굴을 볼 수 있을 정도로 크게 보여주기 때문에 잘 작동한다.](picture-element-wide.png)
 
-노트북이나 데스크톱과 같은 와이드 스크린 장치에서 잘 작동합니다([실제 예시는 여기에 있고](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있습니다.) 이 단원에서는 CSS에 대해 자세히 설명하지 않지만, 다음 내용들은 알아둡시다.
+노트북이나 데스크톱과 같은 와이드 스크린 장치에서 잘 작동합니다([실제 예시는 여기에 있고](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있습니다.) 이 단원에서는 CSS에 대해 자세히 설명하지 않지만, 다음 내용들은 알아둡시다.
 
 - 본문 콘텐츠는 최대 너비가 1200픽셀로 설정되어 있으며, 이 너비를 초과하는 뷰포트에서는 본문이 1200픽셀로 유지되고 사용 가능한 공간의 중앙에 배치됩니다. 이 너비보다 작은 뷰포트에서는 본문이 뷰포트 너비의 100%로 유지됩니다.
 - 헤더 이미지가 설정된 너비에 관계없이 항상 헤더의 중앙에 위치하도록 설정되었습니다. 좁은 화면에서 사이트를 보는 경우 이미지 중앙의 중요한 세부 사항(사람)은 여전히 볼 수 있으며 초과분은 양쪽에서 손실됩니다. 높이는 200픽셀입니다.
@@ -62,7 +62,8 @@ l10n:
 
 웹이 처음 등장한 90년대 초중반에는 이러한 문제가 존재하지 않았습니다. 당시에는 웹을 탐색할 수 있는 기기가 데스크톱과 노트북뿐이었기 때문에 브라우저 엔지니어와 사양 작성자는 해결책을 구현할 생각조차 하지 못했죠. 반응형 이미지 기술은 위에서 언급한 문제를 해결하기 위해 최근에 구현된 기술로, 동일한 내용을 표시하지만 픽셀 수가 다른 여러 이미지 파일을 브라우저에 제공하거나(해상도 전환), 공간 할당에 적합한 다른 이미지를 제공(아트 디렉션)할 수 있도록 합니다.
 
-> **참고:** 이 문서에서 설명하는 새로운 기능인 [srcset](/ko/docs/Web/HTML/Element/img#srcset)/[sizes](/ko/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} 은 최신 데스크톱 및 모바일 브라우저에서 모두 지원됩니다.
+> [!NOTE]
+> 이 문서에서 설명하는 새로운 기능인 [srcset](/ko/docs/Web/HTML/Element/img#srcset)/[sizes](/ko/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} 은 최신 데스크톱 및 모바일 브라우저에서 모두 지원됩니다.
 
 ## 반응형 이미지를 어떻게 만드나요?
 
@@ -76,7 +77,7 @@ l10n:
 <img src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바" />
 ```
 
-그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
+그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
 
 ```html
 <img
@@ -101,7 +102,8 @@ l10n:
 2. 공백
 3. 미디어 조건이 참(`480px`)일 때 이미지가 채울 **슬롯의 너비**입니다.
 
-> **참고:** 슬롯 너비의 경우 절대 너비(예: `480px`)를 제공하는 대신 뷰포트에 대한 상대 너비(예: `50vw`)를 제공할 수 있지만 백분율은 제공하지 않습니다. 마지막 슬롯 너비에 미디어 조건이 없는 것을 보셨을 것입니다(미디어 조건이 모두 참일 때 선택되는 기본값입니다). 브라우저는 첫 번째 일치하는 조건 이후의 모든 것을 무시하므로 미디어 조건 순서에 주의해야 합니다.
+> [!NOTE]
+> 슬롯 너비의 경우 절대 너비(예: `480px`)를 제공하는 대신 뷰포트에 대한 상대 너비(예: `50vw`)를 제공할 수 있지만 백분율은 제공하지 않습니다. 마지막 슬롯 너비에 미디어 조건이 없는 것을 보셨을 것입니다(미디어 조건이 모두 참일 때 선택되는 기본값입니다). 브라우저는 첫 번째 일치하는 조건 이후의 모든 것을 무시하므로 미디어 조건 순서에 주의해야 합니다.
 
 따라서 이러한 속성을 설정하면 브라우저는 다음과 같이 작동합니다.
 
@@ -112,17 +114,19 @@ l10n:
 
 이제 끝입니다! 이 시점에서 뷰포트 너비가 480px인 지원 브라우저가 페이지를 로드하면 `(max-width: 600px)` 미디어 조건이 참이 되므로 브라우저는 `480px` 슬롯을 선택합니다. 고유의 너비(`480w`)가 슬롯 크기에 가장 가깝기 때문에 `elva-fairy-480w.jpg`가 로드됩니다. 800px 사진은 디스크에서 128KB인 반면 480px 버전은 63KB에 불과하므로 65KB를 절약할 수 있습니다. 이제 이 페이지에 많은 사진이 있다고 상상해 보세요. 이 기술을 사용하면 모바일 사용자의 대역폭을 크게 절약할 수 있습니다.
 
-> **참고:** 데스크톱 브라우저에서 테스트할 때 창 너비를 가장 좁게 설정했는데도 브라우저에서 더 좁은 이미지를 로드하지 못하면 뷰포트의 크기를 살펴보세요. 브라우저의 JavaScript 콘솔로 이동하여 `document.querySelector('html').clientWidth`를 입력하면 대략적인 크기를 알 수 있습니다. 브라우저마다 창 너비를 줄일 수 있는 최소 크기가 있으며, 생각보다 더 넓을 수도 있습니다. 모바일 브라우저로 테스트할 때는 Firefox의 `about:debugging` 페이지와 같은 도구를 사용하여 데스크톱 개발자 도구를 사용하여 모바일에 로드된 페이지를 검사할 수 있습니다.
+> [!NOTE]
+> 데스크톱 브라우저에서 테스트할 때 창 너비를 가장 좁게 설정했는데도 브라우저에서 더 좁은 이미지를 로드하지 못하면 뷰포트의 크기를 살펴보세요. 브라우저의 JavaScript 콘솔로 이동하여 `document.querySelector('html').clientWidth`를 입력하면 대략적인 크기를 알 수 있습니다. 브라우저마다 창 너비를 줄일 수 있는 최소 크기가 있으며, 생각보다 더 넓을 수도 있습니다. 모바일 브라우저로 테스트할 때는 Firefox의 `about:debugging` 페이지와 같은 도구를 사용하여 데스크톱 개발자 도구를 사용하여 모바일에 로드된 페이지를 검사할 수 있습니다.
 >
 > 어떤 이미지가 로드되었는지 확인하려면 Firefox 개발자 도구의 [네트워크 모니터](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 탭 또는 Chrome 개발자 도구의 [네트워크](https://developer.chrome.com/docs/devtools/network/) 패널을 사용하면 됩니다. Chrome의 경우 [캐시를 비활성화](https://stackoverflow.com/questions/5690269/disabling-chrome-cache-for-website-development/7000899#7000899)하여 이미 다운로드한 이미지를 선택하지 못하도록 할 수도 있습니다.
 
 이러한 기능을 지원하지 않는 구형 브라우저는 이를 무시합니다. 대신 해당 브라우저는 [`src`](/ko/docs/Web/HTML/Element/img#src) 속성에 참조된 이미지를 정상적으로 로드합니다.
 
-> **참고:** 위에 링크된 예제의 {{htmlelement("head")}}에 `<meta name="viewport" content="width=device-width">`라는 줄이 있는데, 이는 모바일 브라우저가 웹 페이지를 로드할 때 실제 뷰포트 너비를 적용하도록 합니다. 일부 모바일 브라우저는 뷰포트 너비를 속이고 더 큰 뷰포트 너비로 페이지를 로드한 다음 로드한 페이지를 축소하므로 반응형 이미지나 디자인에 도움이 되지 않습니다.
+> [!NOTE]
+> 위에 링크된 예제의 {{htmlelement("head")}}에 `<meta name="viewport" content="width=device-width">`라는 줄이 있는데, 이는 모바일 브라우저가 웹 페이지를 로드할 때 실제 뷰포트 너비를 적용하도록 합니다. 일부 모바일 브라우저는 뷰포트 너비를 속이고 더 큰 뷰포트 너비로 페이지를 로드한 다음 로드한 페이지를 축소하므로 반응형 이미지나 디자인에 도움이 되지 않습니다.
 
 ### 해상도 전환: 동일한 크기, 다른 해상도
 
-여러 디스플레이 해상도를 지원하지만 모든 사람이 화면에서 동일한 실제 크기로 이미지를 보는 경우, 다소 쉬운 구문인 X-서술자 `sizes` 없이 `srcset`을 사용하여 브라우저가 적절한 해상도 이미지를 선택하도록 할 수 있습니다! [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 그 예시를 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) 참조).
+여러 디스플레이 해상도를 지원하지만 모든 사람이 화면에서 동일한 실제 크기로 이미지를 보는 경우, 다소 쉬운 구문인 X-서술자 `sizes` 없이 `srcset`을 사용하여 브라우저가 적절한 해상도 이미지를 선택하도록 할 수 있습니다! [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)에서 그 예시를 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) 참조).
 
 ```html
 <img
@@ -147,13 +151,13 @@ img {
 
 요약하자면, **아트 디렉션 문제**는 다양한 이미지 디스플레이 크기에 맞게 표시되는 이미지를 변경하려는 경우입니다. 예를 들어, 데스크톱 브라우저에서 볼 때 웹 페이지에 사람이 가운데에 있는 큰 풍경 사진이 포함되어 있다고 가정해 보겠습니다. 모바일 브라우저에서 볼 때는 동일한 이미지가 축소되어 이미지 속 사람이 매우 작아지고 잘 보이지 않습니다. 모바일에서는 인물을 확대하여 더 작은 세로형 이미지를 표시하는 것이 더 좋을 것입니다. {{htmlelement("picture")}} 요소를 사용하면 이러한 종류의 솔루션을 구현할 수 있습니다.
 
-원래의 [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가서 아트 디렉션이 절실히 필요한 이미지가 있습니다.
+원래의 [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) 예제로 돌아가서 아트 디렉션이 절실히 필요한 이미지가 있습니다.
 
 ```html
 <img src="elva-800w.jpg" alt="딸 엘바를 안고 서 있는 크리스" />
 ```
 
-{{htmlelement("picture")}}으로 해결해 봅시다! [`<video>` 및 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)와 마찬가지로 `<picture>` 요소는 브라우저가 선택할 수 있는 다양한 소스를 제공하는 여러 {{htmlelement("source")}} 요소를 포함하는 래퍼이며, 그 뒤에 가장 중요한 {{htmlelement("img")}} 요소가 있습니다. [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html)의 코드는 다음과 같습니다.
+{{htmlelement("picture")}}으로 해결해 봅시다! [`<video>` 및 `<audio>`](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)와 마찬가지로 `<picture>` 요소는 브라우저가 선택할 수 있는 다양한 소스를 제공하는 여러 {{htmlelement("source")}} 요소를 포함하는 래퍼이며, 그 뒤에 가장 중요한 {{htmlelement("img")}} 요소가 있습니다. [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html)의 코드는 다음과 같습니다.
 
 ```html
 <picture>

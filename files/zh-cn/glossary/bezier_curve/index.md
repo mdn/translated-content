@@ -2,7 +2,7 @@
 title: 贝塞尔曲线
 slug: Glossary/Bezier_curve
 l10n:
-  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
+  sourceCommit: d2bf1d12a18c615b80d4bcd95bfe5c7d234c49c0
 ---
 
 {{GlossarySidebar}}
@@ -13,7 +13,7 @@ l10n:
 
 在绘制二次贝塞尔曲线的过程中，需要先作两条辅助线：P<sub>0</sub> 到 P<sub>1</sub> 和 P<sub>1</sub> 到 P<sub>2</sub>；第三条辅助线从其起点稳步移动到第一辅助线上，终点在第二辅助线上。在这条辅助线上，有一个点从其起点稳步移动到其终点。这个点描述的曲线就是贝塞尔曲线。以下是一个动画示例，展示了曲线的创建过程：
 
-![绘制一条贝塞尔曲线](bézier_2_big.gif)
+![绘制一条贝塞尔曲线](bezier_2_big.gif)
 
 ## 参见
 

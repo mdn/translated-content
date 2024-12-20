@@ -2,7 +2,7 @@
 title: resize
 slug: Web/CSS/resize
 l10n:
-  sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
@@ -14,7 +14,7 @@ l10n:
 `resize` は以下のものには適用されません。
 
 - インライン要素
-- {{cssxref("overflow")}} プロパティが `visible` であるブロック要素
+- {{cssxref("overflow")}} プロパティが `visible` または `clip` であるブロック要素
 
 ## 構文
 
@@ -47,9 +47,9 @@ resize: unset;
   - : 要素はユーザーが寸法を変更できる仕組みを、*水平方向*について表示します。
 - `vertical`
   - : 要素はユーザーが寸法を変更できる仕組みを、*垂直方向*について表示します。
-- `block` {{experimental_inline}}
+- `block`
   - : 要素はユーザーが寸法を変更できる仕組みを、*ブロック方向*について表示します ({{cssxref("writing-mode")}} と {{cssxref("direction")}} の値によって、水平方向または垂直方向のどちらかになります)。
-- `inline` {{experimental_inline}}
+- `inline`
   - : 要素はユーザーが寸法を変更できる仕組みを、*インライン方向*について表示します ({{cssxref("writing-mode")}} と {{cssxref("direction")}} の値によって、水平方向または垂直方向のどちらかになります)。
 
 ## 公式定義
@@ -68,21 +68,21 @@ resize: unset;
 
 #### HTML
 
-```html
-<textarea>Type some text here.</textarea>
+```html live-sample___disabling_resizability_of_text_areas
+<textarea>いくらかテキストを入力してください。</textarea>
 ```
 
 #### CSS
 
-```css
+```css live-sample___disabling_resizability_of_text_areas
 textarea {
-  resize: none; /* Disables resizability */
+  resize: none; /* リサイズを無効化 */
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("テキストエリアの寸法の変更を無効化","200","100")}}
+{{EmbedLiveSample("Disabling_resizability_of_text_areas","200","100")}}
 
 ### 任意の要素に対する resize の使用
 
@@ -90,18 +90,17 @@ textarea {
 
 #### HTML
 
-```html
+```html-nolint live-sample___using_resize_with_arbitrary_elements
 <div class="resizable">
   <p class="resizable">
-    This paragraph is resizable in all directions, because the CSS `resize`
-    property is set to `both` on this element.
+    この要素では CSS の `resize` プロパティが `both` に設定されているため、この段落はすべてリサイズ可能です。
   </p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___using_resize_with_arbitrary_elements
 .resizable {
   resize: both;
   overflow: scroll;
@@ -121,7 +120,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("任意の要素に対する resize の使用","450","450")}}
+{{EmbedLiveSample("Using_resize_with_arbitrary_elements","450","450")}}
 
 ## 仕様書
 

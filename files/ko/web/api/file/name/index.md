@@ -55,4 +55,4 @@ filepicker.addEventListener("change", (event) => {
 
 ## 같이 보기
 
-- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 어플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)

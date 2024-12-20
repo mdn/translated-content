@@ -104,11 +104,12 @@ typeof Math.sin === "function";
 typeof null === "object"; // 自從有 JavaScript 開始就是這樣了
 ```
 
-自從 JavaScript 一開始出現, JavaScript 的值就總以型別標簽跟著一個值的方式表示。物件的型別標簽是 0. 而 `null` 這個值是使用 NULL 指標 (在大部份平台上是 0x00) 來表示. 因此, null 看起來像是一個以 0 為型別標簽的值, 並使得 `typeof` 傳回不甚正確的結果. ([參考來源](http://www.2ality.com/2013/10/typeof-null.html))
+自從 JavaScript 一開始出現, JavaScript 的值就總以型別標簽跟著一個值的方式表示。物件的型別標簽是 0. 而 `null` 這個值是使用 NULL 指標 (在大部份平台上是 0x00) 來表示. 因此, null 看起來像是一個以 0 為型別標簽的值, 並使得 `typeof` 傳回不甚正確的結果. ([參考來源](https://2ality.com/2013/10/typeof-null.html))
 
 這個問題已計畫[在下一版 ECMAScript 予以修正](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null) (會以 opt-in 方式提供). 屆時它將會做出如 `typeof null === 'null'` 的正確回傳結果。
 
-> **備註：** 此修正計畫已被拒絕
+> [!NOTE]
+> 此修正計畫已被拒絕
 
 ### 正規表示式 (Regular expressions)
 
@@ -125,7 +126,8 @@ typeof /s/ === "object"; // Firefox 5+ ...    // 符合 ECMAScript 5.1
 
 在 IE 6, 7 和 8, `typeof alert === 'object'`
 
-> **備註：** 這並不怪異。這是實情。在許多較舊的 IE 中, 主機端物件的確是物件, 而非函數
+> [!NOTE]
+> 這並不怪異。這是實情。在許多較舊的 IE 中, 主機端物件的確是物件, 而非函數
 
 ## 規範
 
@@ -133,4 +135,4 @@ typeof /s/ === "object"; // Firefox 5+ ...    // 符合 ECMAScript 5.1
 
 ## 參照
 
-- [instanceof](/zh-TW/docs/JavaScript/Reference/Operators/instanceof)
+- [instanceof](/zh-TW/docs/Web/JavaScript/Reference/Operators/instanceof)

@@ -19,7 +19,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 ![](document-window-navigator.png)
 
-- Окно - это вкладка браузера, в которую загружается веб-страница; это представлено в JavaScript объектом {{domxref("Window")}}. Используя методы, доступные для этого объекта, вы можете делать такие вещи, как возврат размера окна (см. {{Domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}), манипулировать документом, загруженным в этот window, хранить данные, специфичные для этого документа на стороне клиента (например, используя локальную базу данных или другой механизм хранения), присоединить обработчик событий ([event handler](/ru/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events)) к текущему окну и многое другое.
+- Окно - это вкладка браузера, в которую загружается веб-страница; это представлено в JavaScript объектом {{domxref("Window")}}. Используя методы, доступные для этого объекта, вы можете делать такие вещи, как возврат размера окна (см. {{Domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}), манипулировать документом, загруженным в этот window, хранить данные, специфичные для этого документа на стороне клиента (например, используя локальную базу данных или другой механизм хранения), присоединить обработчик событий ([event handler](/ru/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events)) к текущему окну и многое другое.
 - Навигатор представляет состояние и идентификатор браузера (т. е. пользовательский агент), как он существует в Интернете. В JavaScript это представлено объектом {{domxref("Navigator")}}. Вы можете использовать этот объект для извлечения таких вещей, как геолокационная информация, предпочтительный язык пользователя, медиапоток с веб-камеры пользователя и т. д.
 - Документ (представленный DOM в браузерах) представляет собой фактическую страницу, загруженную в окно, и представлен в JavaScript объектом {{domxref("Document")}}. Вы можете использовать этот объект для возврата и обработки информации о HTML и CSS, содержащей документ, например, получить ссылку на элемент в DOM, изменить его текстовый контент, применить к нему новые стили, создать новые элементы и добавить их в текущий элемент как дочерний элемент, или даже вообще удалить его.
 
@@ -56,7 +56,8 @@ DOM, с другой стороны, выглядит так:
 
 ![](dom-screenshot.png)
 
-> **Примечание:** . Эта диаграмма дерева DOM была создана с использованием [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) Яна Хиксона.
+> [!NOTE]
+> Эта диаграмма дерева DOM была создана с использованием [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) Яна Хиксона.
 
 Вы можете видеть здесь, что каждый элемент и бит текста в документе имеют свою собственную запись в дереве - каждый из них называется **узлом** (**node)**. Вы также столкнётесь с различными терминами, используемыми для описания типа узла, и их положением в дереве относительно друг друга:
 
@@ -187,7 +188,7 @@ linkPara.parentNode.removeChild(linkPara);
    para.style.textAlign = "center";
    ```
 
-2. Перезагрузите страницу, и вы увидите, что стили были применены к абзацу. Если вы посмотрите на этот параграф в инспекторе [Page Inspector/DOM inspector](/ru/docs/Tools/Page_Inspector) вашего браузера, вы увидите, что эти строки действительно добавляют встроенные стили в документ:
+2. Перезагрузите страницу, и вы увидите, что стили были применены к абзацу. Если вы посмотрите на этот параграф в инспекторе [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) вашего браузера, вы увидите, что эти строки действительно добавляют встроенные стили в документ:
 
    ```html
    <p
@@ -196,7 +197,8 @@ linkPara.parentNode.removeChild(linkPara);
    </p>
    ```
 
-> **Примечание:** Примечание: Обратите внимание на то, как версии свойств JavaScript стилей CSS пишутся в нижнем регистре верблюжьего стиля (lower camel case), в то время как версии свойств стилей CSS используют дефисы (например, `backgroundColor` и `background-color`). Убедитесь, что вы не перепутали их, иначе это не сработает.
+> [!NOTE]
+> Обратите внимание на то, как версии свойств JavaScript стилей CSS пишутся в нижнем регистре верблюжьего стиля (lower camel case), в то время как версии свойств стилей CSS используют дефисы (например, `backgroundColor` и `background-color`). Убедитесь, что вы не перепутали их, иначе это не сработает.
 
 Существует ещё один распространённый способ динамического управления стилями вашего документа, который мы рассмотрим сейчас.
 
@@ -229,11 +231,12 @@ linkPara.parentNode.removeChild(linkPara);
 
 В следующих параграфах мы рассмотрим ещё несколько практических применений DOM API.
 
-> **Примечание:** Примечание. Вы можете найти наш пример [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) на GitHub ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> [!NOTE]
+> Вы можете найти наш пример [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/dom-example-manipulated.html) на GitHub ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Активное обучение: Получение полезной информации из объекта Window
 
-До сих пор мы действительно смотрели на использование функций {{domxref("Node")}} и {{domxref("Document")}} для управления документами, но нет причин, по которым вы не можете получить данные из других источников и использовать его в пользовательском интерфейсе. Вспомните нашу простую демонстрацию [maps-example.html](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html) из последней статьи - там мы извлекли некоторые данные о местоположении и использовали её для отображения карты вашей области. Вам просто нужно убедиться, что ваши данные в правильном формате; JavaScript упрощает работу, чем многие другие языки, будучи слабо типизированным - например, числа автоматически преобразуются в строки, когда вы хотите распечатать их на экране.
+До сих пор мы действительно смотрели на использование функций {{domxref("Node")}} и {{domxref("Document")}} для управления документами, но нет причин, по которым вы не можете получить данные из других источников и использовать его в пользовательском интерфейсе. Вспомните нашу простую демонстрацию [maps-example.html](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html) из последней статьи - там мы извлекли некоторые данные о местоположении и использовали её для отображения карты вашей области. Вам просто нужно убедиться, что ваши данные в правильном формате; JavaScript упрощает работу, чем многие другие языки, будучи слабо типизированным - например, числа автоматически преобразуются в строки, когда вы хотите распечатать их на экране.
 
 В этом примере мы решим общую проблему: убедитесь, что ваше приложение имеет размер как окно, в котором он просматривается, независимо от его размера. Это часто полезно в таких ситуациях, как игры, где вы хотите использовать как можно большую площадь экрана, чтобы играть в игру.
 
@@ -266,7 +269,8 @@ linkPara.parentNode.removeChild(linkPara);
    };
    ```
 
-> **Примечание:** . Если у вас возникла проблема, посмотрите на наш [законченный пример изменения размера окна](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
+> [!NOTE]
+> Если у вас возникла проблема, посмотрите на наш [законченный пример изменения размера окна](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/window-resize-example-finished.html) ([см. также live](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/window-resize-example-finished.html)).
 
 ## Активное обучение: динамический список покупок
 
@@ -294,7 +298,8 @@ linkPara.parentNode.removeChild(linkPara);
 10. Прикрепите обработчик события к кнопке удаления, чтобы при щелчке удалял весь элемент списка, внутри которого он находится.
 11. Наконец, используйте метод [`focus()`](/ru/docs/Web/API/HTMLElement/focus), чтобы сфокусировать входной элемент, готовый для входа в следующий элемент списка покупок.
 
-> **Примечание:** Примечание: Если у вас возникла действительно сложная проблема, взгляните на наши примеры [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> [!NOTE]
+> Если у вас возникла действительно сложная проблема, взгляните на наши примеры [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
 ## Краткая информация
 

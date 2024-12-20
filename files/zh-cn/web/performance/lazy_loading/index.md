@@ -3,7 +3,7 @@ title: 懒加载
 slug: Web/Performance/Lazy_loading
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 **延迟加载**（懒加载）是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
@@ -92,5 +92,5 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 ## 参见
 
-- [渲染阻塞 CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
-- [使用延迟加载来提高加载速度](https://web.dev/articles/lazy-loading)
+- [渲染阻塞 CSS](https://web.developers.google.cn/articles/critical-rendering-path/render-blocking-css)
+- [使用延迟加载来提高加载速度](https://web.developers.google.cn/articles/browser-level-image-lazy-loading)

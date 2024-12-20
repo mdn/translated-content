@@ -40,7 +40,8 @@ border: unset;
 
 `border` 속성은 다음의 값 중 한 개에서 세 개를 선택해서 지정할 수 있습니다. 순서는 영향을 주지 않습니다.
 
-> **참고:** 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다.
+> [!NOTE]
+> 스타일을 지정하지 않으면 기본값인 `none`이 사용돼 테두리가 보이지 않습니다.
 
 ### 값
 
@@ -114,5 +115,5 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [배경 및 테두리](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [배경 및 테두리](/ko/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS 배우기: 배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

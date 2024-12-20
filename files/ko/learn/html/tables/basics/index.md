@@ -300,7 +300,8 @@ th {
 
 {{EmbedLiveSample("Result")}}
 
-> **참고:** 이 자료는 GitHub에서 [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html)로 확인할 수도 있습니다([라이브 버전도 참조하세요](https://mdn.gitub.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> 이 자료는 GitHub에서 [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html)로 확인할 수도 있습니다([라이브 버전도 참조하세요](https://mdn.gitub.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## \<th> 요소로 헤더 추가하기
 
@@ -371,13 +372,15 @@ th {
 2. 테이블 헤더를 시각적으로나 의미적으로 헤더로 인식하려면 **[`<th>`](/ko/docs/Web/HTML/Element/th)** 요소('th'는 '테이블 헤더'를 의미)를 사용하시면 됩니다. 이는 일반 셀이 아닌 헤더를 나타낸다는 점을 제외하면 `<td>`와 완전히 동일한 방식으로 작동합니다. HTML로 이동하여 테이블 헤더를 둘러싼 모든 `<td>` 요소를 `<th>` 요소로 변경합니다.
 3. HTML을 저장하고 브라우저에서 로드하면 이제 헤더가 헤더처럼 보이는 것을 볼 수 있습니다.
 
-> **참고:** 완성된 예제는 GitHub의 [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html)에서 확인할 수 있습니다([라이브 버전도 참조하세요](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!NOTE]
+> 완성된 예제는 GitHub의 [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html)에서 확인할 수 있습니다([라이브 버전도 참조하세요](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### 헤더가 유용한 이유는 무엇인가요?
 
 이미 이 질문에 부분적으로 답변해 드렸습니다. 헤더가 명확하게 눈에 띄고 디자인이 일반적으로 더 보기 좋으면 원하는 데이터를 더 쉽게 찾을 수 있습니다.
 
-> **참고:** 테이블 제목에는 몇 가지 기본 스타일이 제공됩니다. 테이블에 나만의 스타일링을 더하지 않아도 대담하고 중심을 잡아주어 테이블을 돋보이게 해줍니다.
+> [!NOTE]
+> 테이블 제목에는 몇 가지 기본 스타일이 제공됩니다. 테이블에 나만의 스타일링을 더하지 않아도 대담하고 중심을 잡아주어 테이블을 돋보이게 해줍니다.
 
 테이블 헤더에는 다음과 같은 추가 이점도 있습니다. `scope` 특성 (다음 장에서 자세히 알아보겠습니다)과 함께 사용하시면 각 헤더를 동일한 행 또는 열의 모든 데이터와 연결하여 테이블에 대한 접근성을 높일 수 있습니다. 그러면 스크린 리더가 데이터의 전체 행이나 열을 한 번에 읽을 수 있으므로 매우 유용합니다.
 
@@ -439,7 +442,8 @@ th {
 3. 마지막으로 `rowspan`을 사용하여 'Horse'와 'Chicken'이 두 행에 걸쳐 있도록 합니다.
 4. 코드를 저장하고 브라우저에서 열어 개선 사항을 확인하세요.
 
-> **참고:** 완성된 예제는 GitHub의 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html)에서 확인할 수 있습니다([라이브 버전도 참조하세요](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> 완성된 예제는 GitHub의 [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html)에서 확인할 수 있습니다([라이브 버전도 참조하세요](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## 열에 공통 스타일 제공
 
@@ -447,7 +451,8 @@ th {
 
 계속 진행하기 전에 이 글에서 마지막으로 소개할 기능이 하나 더 있습니다. HTML에는 데이터 열 전체에 대한 스타일 정보를 한 곳에서 정의하는 방법, 즉 **[`<col>`](/ko/docs/Web/HTML/Element/col)** 및 **[`<colgroup>`](/ko/docs/Web/HTML/Element/colgroup)** 요소가 있습니다. 열에 스타일을 지정하는 것이 다소 번거롭고 비효율적일 수 있기 때문에 이러한 기능이 존재합니다. 일반적으로 열의 "모든" `<td>` 또는 `<th>`에 스타일링 정보를 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
 
-> **참고:** 이와 같은 열 스타일링은 [`border`](/ko/docs/Web/CSS/border), [`background`](/ko/docs/Web/CSS/background), [`width`](/ko/docs/Web/CSS/width) 및 [`visibility`](/ko/docs/Web/CSS/visibility)와 같은 [몇 가지 속성으로 제한됩니다](https://www.w3.org/TR/CSS22/tables.html#columns). 다른 속성을 설정하려면 열의 모든 `<td>` 또는 `<th>`에 스타일을 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
+> [!NOTE]
+> 이와 같은 열 스타일링은 [`border`](/ko/docs/Web/CSS/border), [`background`](/ko/docs/Web/CSS/background), [`width`](/ko/docs/Web/CSS/width) 및 [`visibility`](/ko/docs/Web/CSS/visibility)와 같은 [몇 가지 속성으로 제한됩니다](https://www.w3.org/TR/CSS22/tables.html#columns). 다른 속성을 설정하려면 열의 모든 `<td>` 또는 `<th>`에 스타일을 지정하거나 {{cssxref(":nth-child")}}와 같은 복잡한 선택기를 사용해야 합니다.
 
 다음의 간단한 예를 들어보겠습니다.
 

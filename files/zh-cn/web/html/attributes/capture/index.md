@@ -18,7 +18,8 @@ l10n:
 | `user`        | 应使用面向用户的摄像头和/或麦克风。 |
 | `environment` | 应使用朝外的摄像头和/或麦克风。     |
 
-> **备注：** capture 以前是一个布尔属性，如果存在，则要求使用设备自身的媒体捕捉设备（如摄像头或麦克风），而不是要求输入文件。
+> [!NOTE]
+> capture 以前是一个布尔属性，如果存在，则要求使用设备自身的媒体捕捉设备（如摄像头或麦克风），而不是要求输入文件。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
 

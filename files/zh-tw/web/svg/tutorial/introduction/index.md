@@ -11,7 +11,7 @@ slug: Web/SVG/Tutorial/Introduction
 
 ![Mozilla dino logo](dino.svg)
 
-SVG 于 1999 年推出，之前有几个相互竞争的格式规范被提交到[W3C](https://www.w3.org)，但是都没有完全通过。虽然规范已经出现存在很长时间了，但浏览器实现的进度却比较缓慢，所以目前（2009 年）应用在 web 上的 SVG 内容并不是很多。即便浏览器实现了一些规范，但实现速度完全不能和竞争技术相比，比如 [HTML Canvas](/zh-TW/docs/HTML/Canvas) 和 Adobe Flash，都已经实现了成熟的应用接口。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方插件就可以在浏览器中使用（比 Flash 方便）。当然，是否使用 SVG 还要取决于你要实现什么。
+SVG 于 1999 年推出，之前有几个相互竞争的格式规范被提交到 [W3C](https://www.w3.org/)，但是都没有完全通过。虽然规范已经出现存在很长时间了，但浏览器实现的进度却比较缓慢，所以目前（2009 年）应用在 web 上的 SVG 内容并不是很多。即便浏览器实现了一些规范，但实现速度完全不能和竞争技术相比，比如 [HTML Canvas](/zh-TW/docs/Web/API/Canvas_API) 和 Adobe Flash，都已经实现了成熟的应用接口。但是 SVG 也有自身的优点，比如它实现了 DOM 接口（比 Canvas 方便），不需要安装第三方插件就可以在浏览器中使用（比 Flash 方便）。当然，是否使用 SVG 还要取决于你要实现什么。
 
 ### 基本要素
 
@@ -21,7 +21,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 
 ### 开始之前
 
-包括 [Inkscape](https://www.inkscape.org/) 在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手取写一些 SVG 的标记。各种 SVG 浏览器是有差别的，因此很可能当你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如 [JavaScript](/zh-TW/docs/Web/JavaScript) 和 [CSS](/zh-TW/docs/Web/CSS)），也会出现类似的情况。
+包括 [Inkscape](https://inkscape.org/) 在内的很多免费应用原生支持 SVG 格式的文件。但是本教程建议在学习过程中使用 XML 或文本编辑器，因为想要理解 SVG 内部的原理，最好的方法就是动手取写一些 SVG 的标记。各种 SVG 浏览器是有差别的，因此很可能当你制作了一个 SVG 图形，并且用一个工具调试正常后，却在另外一个浏览器中无法正常显示。这是因为不同的浏览器支持 SVG 标准的程度不同，另外，如果你将其他技术和 SVG 一起使用（比如 [JavaScript](/zh-TW/docs/Web/JavaScript) 和 [CSS](/zh-TW/docs/Web/CSS)），也会出现类似的情况。
 
 并非所有的现代浏览器都支持 SVG，[SVG wiki](http://wiki.svg.org/Viewer_Implementations) 上有一份比较详细的 SVG 浏览器列表，Firefox 支持 SVG 1.5 版本中的部分内容，并且支持的程度越来越高。希望通过这里的教程，MDC 能帮助开发者理解 Gecko 内核和其他一些主要实现之间的差异。
 

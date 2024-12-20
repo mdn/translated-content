@@ -167,7 +167,8 @@ body {
 
 {{ EmbedLiveSample('Grid_2', '100%', 400) }}
 
-> **Nota:** La unidad `fr` distribuye el espacio _disponible_, no _todo_ el espacio. Por lo tanto, si una de tus trazas tiene algo grande dentro, habrá menos espacio libre para compartir.
+> [!NOTE]
+> La unidad `fr` distribuye el espacio _disponible_, no _todo_ el espacio. Por lo tanto, si una de tus trazas tiene algo grande dentro, habrá menos espacio libre para compartir.
 
 ### Los espacios entre trazas
 
@@ -222,7 +223,8 @@ body {
 
 {{ EmbedLiveSample('Grid_3', '100%', 400) }}
 
-> **Nota:** Las propiedades `*gap` solían tener el prefijo `grid-`, pero esto se ha cambiado en la especificación, porque la intención es hacerlas compatibles con diversos métodos de diseño. Por el momento, Edge y Firefox admiten las versiones sin prefijo, y las versiones con prefijo se mantienen como un alias, por lo que será seguro usarlas durante algún tiempo. Para quedarte en lo seguro, y que tu código sea más a prueba de balas, puedes duplicar y añadir ambas propiedades.
+> [!NOTE]
+> Las propiedades `*gap` solían tener el prefijo `grid-`, pero esto se ha cambiado en la especificación, porque la intención es hacerlas compatibles con diversos métodos de diseño. Por el momento, Edge y Firefox admiten las versiones sin prefijo, y las versiones con prefijo se mantienen como un alias, por lo que será seguro usarlas durante algún tiempo. Para quedarte en lo seguro, y que tu código sea más a prueba de balas, puedes duplicar y añadir ambas propiedades.
 
 ```css
 .container {
@@ -496,7 +498,8 @@ aside {
 
 {{ EmbedLiveSample('Grid_6', '100%', 400) }}
 
-> **Nota:** también puedes usar el valor `-1` para señalar la columna del final o la fila del final, y contar hacia atrás desde el final con valores negativos. Sin embargo, esto solo funciona con la cuadrícula explícita. El valor `-1` no señala la línea del final de la cuadrícula implícita.
+> [!NOTE]
+> También puedes usar el valor `-1` para señalar la columna del final o la fila del final, y contar hacia atrás desde el final con valores negativos. Sin embargo, esto solo funciona con la cuadrícula explícita. El valor `-1` no señala la línea del final de la cuadrícula implícita.
 
 ## Posicionamiento con grid-template-areas
 
@@ -766,7 +769,7 @@ En esta descripción general, hemos recorrido las características principales d
 
 ## Ver también
 
-- [Guías de cuadrícula CSS](/es/docs/Web/CSS/CSS_Grid_Layout#guides)
+- [Guías de cuadrícula CSS](/es/docs/Web/CSS/CSS_grid_layout#guides)
 - [Inspector de cuadrícula CSS: Examinar diseños de cuadrícula](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

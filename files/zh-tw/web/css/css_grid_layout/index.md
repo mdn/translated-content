@@ -123,7 +123,7 @@ slug: Web/CSS/CSS_grid_layout
 - [格線區域](/zh-TW/docs/Glossary/Grid_Areas)
 - [間距](/zh-TW/docs/Glossary/Gutters)
 - [格線軸](/zh-TW/docs/Glossary/Grid_Axis)
-- [格線行](/zh-TW/docs/Glossary/Grid_Rows)
+- [格線行](/zh-TW/docs/Glossary/Grid_Row)
 - [格線列](/zh-TW/docs/Glossary/Grid_Column)
 
 ## 指引
@@ -134,19 +134,19 @@ slug: Web/CSS/CSS_grid_layout
 - [格線模板區域](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [Layout using named grid lines](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
 - [使用指定的網格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [在 CSS 自動放置格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_CSS_grid_layout)
-- [用 Box 對齊 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Box_Alignment_in_CSS_grid_layout)
-- [CSS 格線、邏輯值和寫作模式](/zh-TW/docs/Web/CSS/CSS_grid_layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-- [CSS 格線布局與無障礙](/zh-TW/docs/Web/CSS/CSS_grid_layout/CSS_grid_layout_and_Accessibility)
+- [在 CSS 自動放置格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+- [用 Box 對齊 CSS 格線布局](/zh-TW/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS 格線、邏輯值和寫作模式](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+- [CSS 格線布局與無障礙](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS 格線與漸進增強](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [用 CSS 格線實做常見排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Realising_common_layouts_using_CSS_Grid_)
+- [用 CSS 格線實做常見排版](/zh-TW/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## 外部資源
 
-- [Jen Simmons 的示範](http://labs.jensimmons.com/)
-- [格線示例：一些影片教學與使用範例](http://gridbyexample.com/)
+- [Jen Simmons 的示範](https://labs.jensimmons.com/)
+- [格線示例：一些影片教學與使用範例](https://gridbyexample.com/)
 - [Codrops 格線參考](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](/zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 - [CSS Grid Playground](https://mozilladevelopers.github.io/playground/)
 
 ## 規範

@@ -121,7 +121,8 @@ Assez parlé — voyons maintenant quelques commandes utilisables dans un termin
 - Afficher le contenu d'un fichier page par page: `less`, `cat`
 - Manipuler et transformer des flux de texte (par exemple remplacer toutes les occurrences de `<div>` dans un fichier HTML par `<article>`): `awk`, `tr`, `sed`
 
-> **Note :** On trouve sur le web un bon nombre de tutoriels de qualité qui permettent d'aller beaucoup plus loin avec la ligne de commande — ceci n'est qu'une brève introduction ! L'auteur de ces lignes lui-même a sa propre [série de vidéos de formation au terminal](https://terminal.training/?coupon=mdn) (80% de réduction en utilisant le code mdn au moment du paiement — 19$).
+> [!NOTE]
+> On trouve sur le web un bon nombre de tutoriels de qualité qui permettent d'aller beaucoup plus loin avec la ligne de commande — ceci n'est qu'une brève introduction ! L'auteur de ces lignes lui-même a sa propre [série de vidéos de formation au terminal](https://terminal.training/?coupon=mdn) (80% de réduction en utilisant le code mdn au moment du paiement — 19$).
 
 Pour aller plus loin, voyons maintenant comment utiliser quelques-uns de ces outils en ligne de commande. Commencez par ouvrir votre programme de terminal (ou console) !
 
@@ -147,7 +148,8 @@ Si vous voulez revenir au répertoire précédent, utilisez les deux points :
 cd ..
 ```
 
-> **Note :** Raccourci vraiment utile sur un terminal, la touche <kbd>tab</kbd> émule la saisie automatique des mots dont vous connaissez l'existence, ce qui vous évite de les taper en entier. Par exemple, après avoir tapé les deux commandes ci-dessus, essayez de taper `cd B` puis de presser la touche <kbd>tab</kbd> — cela devrait saisir automatiquement le nom de répertoire `Bureau`, à condition qu'il soit présent dans le répertoire courant. Gardez ceci à l'esprit tout en poursuivant.
+> [!NOTE]
+> Raccourci vraiment utile sur un terminal, la touche <kbd>tab</kbd> émule la saisie automatique des mots dont vous connaissez l'existence, ce qui vous évite de les taper en entier. Par exemple, après avoir tapé les deux commandes ci-dessus, essayez de taper `cd B` puis de presser la touche <kbd>tab</kbd> — cela devrait saisir automatiquement le nom de répertoire `Bureau`, à condition qu'il soit présent dans le répertoire courant. Gardez ceci à l'esprit tout en poursuivant.
 
 Si le répertoire que vous visez est placé assez loin dans l'arborisation des fichiers, il vous faut connaître le chemin (on dit souvent path, qui est le terme anglais) pour vous y rendre. Cela devient en général plus facile à mesure que vous vous familiarisez avec la structure de votre système de fichiers, mais si vous n'êtes pas sûr vous pouvez le retrouver en combinant la commande `ls` avec des clicks dans votre Explorer ou autre gestionnaire graphique de fichiers, ce qui va vous permettre de voir où se trouve le répertoire (ou dossier) cherché par rapport à votre répertoire actuel (= répertoire courant).
 
@@ -167,7 +169,8 @@ cd Bureau/projet/src
 
 Notez que si vous commencez le chemin par un slash, vous le rendez absolu, par exemple `/Utilisateurs/votre-nom/Bureau`. Omettre le premier slash comme nous l'avons fait ci-dessus construit un chemin relatif à votre répertoire de travail actuel. C'est exactement la même chose qu'une URL dans un navigateur. Un slash au début signifie "à la racine du site web", alors qu'omettre le slash signifie "l'URL est relative à ma page courante".
 
-> **Note :** Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. `cd Bureau\projet\src` — cela peut vous paraître vraiment étrange, mais si la question vous intéresse, [regardez cette vidéo YouTube](https://www.youtube.com/watch?v=5T3IJfBfBmI) (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.
+> [!NOTE]
+> Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. `cd Bureau\projet\src` — cela peut vous paraître vraiment étrange, mais si la question vous intéresse, [regardez cette vidéo YouTube](https://www.youtube.com/watch?v=5T3IJfBfBmI) (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.
 
 ### Lister le contenu d'un répertoire
 
@@ -197,9 +200,11 @@ Voici ci-dessous une copie d'écran avec un terminal macOS "vanilla" en haut, et
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
-> **Note :** Pour savoir exactement quelles sont les options d'une commande, vous pouvez consulter sa [page de manuel](<https://fr.wikipedia.org/wiki/Man_(Unix)>) ([man page](https://en.wikipedia.org/wiki/Man_page) en anglais). Pour cela, tapez la commande `man` suivie du nom de la commande que vous cherchez, par exemple `man ls`. La page de manuel va s'ouvrir dans le lecteur de texte par défaut de votre terminal (par exemple, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) sur mon terminal), et vous allez pouvoir faire défiler la page avec les touches de flèches ou un mécanisme similaire. La page de manuel liste toutes les options de façon très détaillée, ce qui peut être un peu intimidant au début, mais au moins vous savez où les trouver si vous en avez besoin. Lorsque vous avez terminé avec la page de manuel, vous la refermez avec la commande "quitter" de votre visionneur de texte (pour `less` c'est "q" ; si ce n'est pas évident cherchez sur Internet).
+> [!NOTE]
+> Pour savoir exactement quelles sont les options d'une commande, vous pouvez consulter sa [page de manuel](<https://fr.wikipedia.org/wiki/Man_(Unix)>) ([man page](https://en.wikipedia.org/wiki/Man_page) en anglais). Pour cela, tapez la commande `man` suivie du nom de la commande que vous cherchez, par exemple `man ls`. La page de manuel va s'ouvrir dans le lecteur de texte par défaut de votre terminal (par exemple, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) sur mon terminal), et vous allez pouvoir faire défiler la page avec les touches de flèches ou un mécanisme similaire. La page de manuel liste toutes les options de façon très détaillée, ce qui peut être un peu intimidant au début, mais au moins vous savez où les trouver si vous en avez besoin. Lorsque vous avez terminé avec la page de manuel, vous la refermez avec la commande "quitter" de votre visionneur de texte (pour `less` c'est "q" ; si ce n'est pas évident cherchez sur Internet).
 
-> **Note :** Pour lancer une commande avec des options multiples, on peut en général les regrouper dans une seule chaîne de caractères après le tiret, par exemple `ls -lah`, ou `ls -ltrh`. Exercez-vous à consulter la page man de `ls` pour savoir ce que vous donnent ces options !
+> [!NOTE]
+> Pour lancer une commande avec des options multiples, on peut en général les regrouper dans une seule chaîne de caractères après le tiret, par exemple `ls -lah`, ou `ls -ltrh`. Exercez-vous à consulter la page man de `ls` pour savoir ce que vous donnent ces options !
 
 Maintenant que vous connaissez ces deux commandes fondamentales, allez un peu fouiller dans votre système de fichiers en naviguant à partir de votre répertoire.
 
@@ -216,7 +221,8 @@ Jouez avec elles dans un répertoire que vous aurez créé quelque part de faço
 - `cp` — d'un usage similaire à `mv`, `cp` copie le fichier à l'emplacement spécifié en premier vers celui spécifié en second. Par exemple, `cp mdn-exemple.txt mdn-exemple.txt.bak` crée une copie de `mdn-exemple.txt` nommée `mdn-exemple.txt.bak` (bien entendu vous pouvez la nommer comme vous voulez).
 - `rm` — supprimer le fichier spécifié. Par exemple, `rm mdn-exemple.txt` efface un fichier unique nommé `mdn-exemple.txt`. Notez que cet effacement est permanent et ne peut pas être annulé comme lorsque vous placez un fichier dans la corbeille de votre Bureau dans votre interface utilisateur.
 
-> **Note :** Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, `rm mdn-*` va effacer tous les fichiers qui commencent par `mdn-`. `rm mdn-*.bak` va effacer tous les fichiers qui commencent par `mdn-` et finissent par `.bak`.
+> [!NOTE]
+> Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, `rm mdn-*` va effacer tous les fichiers qui commencent par `mdn-`. `rm mdn-*.bak` va effacer tous les fichiers qui commencent par `mdn-` et finissent par `.bak`.
 
 ## Le terminal — une pratique à risque ?
 
@@ -264,9 +270,9 @@ L'opérateur pipe peut _connecter_ ces entrées et sorties, ce qui nous permet d
 
 ## Un exemple un peu plus complexe
 
-Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons d'abord essayer de récupérer le contenu de la page MDN "fetch" en utilisant la commande `curl` (dont on peut se servir pour faire une requête de contenu à partir d'URLs), sur [https://developer.mozilla.org/fr/docs/Web/API/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
+Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons d'abord essayer de récupérer le contenu de la page MDN "fetch" en utilisant la commande `curl` (dont on peut se servir pour faire une requête de contenu à partir d'URLs), sur [https://developer.mozilla.org/fr/docs/Web/API/fetch](/fr/docs/Web/API/Window/fetch).
 
-En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
+En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/Window/fetch).
 
 Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 

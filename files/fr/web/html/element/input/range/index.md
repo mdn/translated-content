@@ -5,13 +5,13 @@ slug: Web/HTML/Element/input/range
 
 {{HTMLSidebar}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
 
 Ce genre de <i lang="en">widget</i> n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie est importante.
 
 {{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
-Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le type `range`, il utilisera le type [`text`](/fr/docs/Web/HTML/Element/Input/text) à la place.
+Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le type `range`, il utilisera le type [`text`](/fr/docs/Web/HTML/Element/input/text) à la place.
 
 <table class="properties">
   <tbody>
@@ -50,14 +50,14 @@ Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le ty
 
 Il n'existe pas de motif de validation. Cependant, voici les formes de validation automatiques qui sont appliquées&nbsp;:
 
-- Si la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) est quelque chose qui ne peut pas être converti en nombre décimal, la validation échoue.
-- La valeur ne doit pas être inférieure à [`min`](/fr/docs/Web/HTML/Element/Input#attr-min). La valeur minimale par défaut est `0`.
-- La valeur ne doit pas être supérieure à [`max`](/fr/docs/Web/HTML/Element/Input#attr-max). La valeur maximale par défaut est `0`.
-- La valeur doit être un multiple de [`step`](/fr/docs/Web/HTML/Element/Input#attr-step). La valeur par défaut est `1`.
+- Si la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) est quelque chose qui ne peut pas être converti en nombre décimal, la validation échoue.
+- La valeur ne doit pas être inférieure à [`min`](/fr/docs/Web/HTML/Element/input#attr-min). La valeur minimale par défaut est `0`.
+- La valeur ne doit pas être supérieure à [`max`](/fr/docs/Web/HTML/Element/input#attr-max). La valeur maximale par défaut est `0`.
+- La valeur doit être un multiple de [`step`](/fr/docs/Web/HTML/Element/input#attr-step). La valeur par défaut est `1`.
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) contient une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`). Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut&nbsp;:
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value) contient une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`). Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut&nbsp;:
 
 ```js
 defaultValue =
@@ -70,33 +70,34 @@ Si on essaie d'obtenir une valeur inférieure au minimum, alors la valeur sera r
 
 ## Attributs supplémentaires
 
-En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs pour les intervalles peuvent utiliser les attributs suivants&nbsp;:
+En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs pour les intervalles peuvent utiliser les attributs suivants&nbsp;:
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Element/Input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Element/input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 Voir l'exemple ci-après sur [le contrôle d'intervalle avec les marques](#un_contrôle_avec_des_marques) qui illustre comment ces options s'affichent dans les navigateurs qui prennent en charge la fonctionnalité.
 
 ### `max`
 
-La plus grande valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)) dépasse ce seuil, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun maximum ne sera fixé pour la valeur du contrôle.
+La plus grande valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)) dépasse ce seuil, [la validation échouera](/fr/docs/Web/HTML/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun maximum ne sera fixé pour la valeur du contrôle.
 
 Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut [`min`](/fr/docs/Web/HTML/Attributes/min). Voir l'attribut HTML [`max`](/fr/docs/Web/HTML/Attributes/max).
 
 ### `min`
 
-La plus petite valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)) est inférieure à ce seuil, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun minimum ne sera fixé pour la valeur du contrôle.
+La plus petite valeur autorisée sur l'intervalle. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value)) est inférieure à ce seuil, [la validation échouera](/fr/docs/Web/HTML/Constraint_validation). Si la valeur fournie n'est pas un nombre, aucun minimum ne sera fixé pour la valeur du contrôle.
 
 Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut [`max`](/fr/docs/Web/HTML/Attributes/max). Voir l'attribut HTML [`min`](/fr/docs/Web/HTML/Attributes/min).
 
 ### `step`
 
-L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit obéir, ou la valeur `any` (décrite ci-après). Seules les valeurs qui sont des incréments en multiple de `step` depuis la valeur de base ([`min`](#min) si cet attribut est défini, [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) sinon, et si aucun n'est fourni, une valeur par défaut appropriée) sont valides.
+L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit obéir, ou la valeur `any` (décrite ci-après). Seules les valeurs qui sont des incréments en multiple de `step` depuis la valeur de base ([`min`](#min) si cet attribut est défini, [`value`](/fr/docs/Web/HTML/Element/input#attr-value) sinon, et si aucun n'est fourni, une valeur par défaut appropriée) sont valides.
 
 Si cet attribut utilise la chaîne de caractère `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)).
 
-> **Note :** Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
+> [!NOTE]
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 Par défaut, l'incrément utilisé pour les champs de type `range` vaut 1 et on ne peut alors saisir que des entiers à moins que la valeur de base ne soit pas entière. Ainsi, si on définit `min` avec -10 et `value` avec 1.5, un attribut `step` qui vaut 1 permettra de saisir les valeurs positives 1.5, 2.5, 3.5, etc. et les valeurs négatives -0.5, -1.5, -2.5, etc.
 
@@ -106,9 +107,10 @@ Voir [l'attribut HTML `step`](/fr/docs/Web/HTML/Attributes/step).
 
 ### `orient`
 
-Semblable à la propriété CSS non-standard `moz-orient` qui agit sur les éléments [`<progress>`](/fr/docs/Web/HTML/Element/Progress) et [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `orient` définit l'orientation de la piste pour le contrôle d'intervalle. Les valeurs possibles incluent `horizontal` pour un affichage horizontal et `vertical` pour un affichage vertical.
+Semblable à la propriété CSS non-standard `moz-orient` qui agit sur les éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress) et [`<meter>`](/fr/docs/Web/HTML/Element/meter), l'attribut `orient` définit l'orientation de la piste pour le contrôle d'intervalle. Les valeurs possibles incluent `horizontal` pour un affichage horizontal et `vertical` pour un affichage vertical.
 
-> **Note :** Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
+> [!NOTE]
+> Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
 
 ## Exemples
 
@@ -125,7 +127,7 @@ De façon générale, si une utilisatrice ou un utilisateur est plutôt intéres
 
 ### Indiquer le minimum et le maximum
 
-Par défaut, le minimum vaut `0` et le maximum vaut `100`. Si ces bornes ne conviennent pas, on peut facilement les changer via les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et/ou [`max`](/fr/docs/Web/HTML/Element/Input#attr-max). Ces attributs acceptent des nombres décimaux.
+Par défaut, le minimum vaut `0` et le maximum vaut `100`. Si ces bornes ne conviennent pas, on peut facilement les changer via les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min) et/ou [`max`](/fr/docs/Web/HTML/Element/input#attr-max). Ces attributs acceptent des nombres décimaux.
 
 Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir une valeur approximative dans l'intervalle `[-10, 10]`, on pourra utiliser&nbsp;:
 
@@ -137,7 +139,7 @@ Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir u
 
 ### Définir la granularité
 
-Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step) qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre `5` et `10` et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut `step` avec la valeur `0.01`&nbsp;:
+Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step) qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre `5` et `10` et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut `step` avec la valeur `0.01`&nbsp;:
 
 #### Utiliser l'attribut `step`
 
@@ -149,7 +151,7 @@ Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujour
 
 #### Utiliser l'attribut `step` avec `any`
 
-Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step)&nbsp;:
+Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step)&nbsp;:
 
 ```html
 <input type="range" min="0" max="3.14" step="any" />
@@ -161,7 +163,7 @@ Cet exemple permet de choisir une valeur entre `0` et `3.14` sans aucune restric
 
 ### Ajouter des marques et des étiquettes
 
-La spécification HTML fournit une certaine flexibilité aux navigateurs pour représenter le contrôle de saisie. La spécification indique comment ajouter des informations pour certains niveaux de l'intervalle grâce à l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) et à un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist). En revanche, il n'y a pas de spécifications précises quant aux marques (tirets) positionnées le long du contrôle.
+La spécification HTML fournit une certaine flexibilité aux navigateurs pour représenter le contrôle de saisie. La spécification indique comment ajouter des informations pour certains niveaux de l'intervalle grâce à l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list) et à un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist). En revanche, il n'y a pas de spécifications précises quant aux marques (tirets) positionnées le long du contrôle.
 
 #### Aperçus
 
@@ -169,7 +171,7 @@ La plupart des navigateurs prennent partiellement en charge ces fonctionnalités
 
 ##### Un contrôle sans marque
 
-Voici ce qu'on obtient lorsque le navigateur ne prend pas en charge cette fonctionnalité ou que l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) est absent.
+Voici ce qu'on obtient lorsque le navigateur ne prend pas en charge cette fonctionnalité ou que l'attribut [`list`](/fr/docs/Web/HTML/Element/input#attr-list) est absent.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -204,7 +206,7 @@ Voici ce qu'on obtient lorsque le navigateur ne prend pas en charge cette foncti
 
 ##### Un contrôle avec des marques
 
-Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui définit un ensemble de marques à appliquer sur le contrôle. Il y en a ici 11&nbsp;: une marque pour `0%` puis une marque tous les `10%`. Chaque point pour lequel on souhaite afficher une marque est représenté par un élément [`<option>`](/fr/docs/Web/HTML/Element/Option) dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Option#attr-value) correspond à l'emplacement de la marque.
+Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui définit un ensemble de marques à appliquer sur le contrôle. Il y en a ici 11&nbsp;: une marque pour `0%` puis une marque tous les `10%`. Chaque point pour lequel on souhaite afficher une marque est représenté par un élément [`<option>`](/fr/docs/Web/HTML/Element/option) dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/option#attr-value) correspond à l'emplacement de la marque.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -256,7 +258,7 @@ Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'i
 
 ##### Un contrôle avec des marques et des étiquettes
 
-Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/docs/Web/HTML/Element/Option#attr-label) des éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) correspondants aux marques.
+Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/docs/Web/HTML/Element/option#attr-label) des éléments [`<option>`](/fr/docs/Web/HTML/Element/option) correspondants aux marques.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -307,7 +309,8 @@ Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/doc
   </tbody>
 </table>
 
-> **Note :** Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
+> [!NOTE]
+> Actuellement, aucun navigateur ne prend en charge l'ensemble de ces fonctionnalités. Firefox n'affiche aucune marque ni étiquette et Chrome affiche uniquement les marques mais pas les étiquettes. La version 66 (66.0.3359.181) de Chrome prendre en charge les étiquettes mais par défaut l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) est mis en forme avec CSS et [`display`](/fr/docs/Web/CSS/display)`: none;`, ce qui le masque.
 
 ### Créer des contrôles d'intervalle verticaux
 
@@ -350,7 +353,7 @@ Toutefois, aucun navigateur majeur ne prend en charge cette fonctionnalité.
 
 On peut créer un contrôle vertical en dessinant un contrôle horizontal auquel on applique une rotation. Pour cela, on pourra utiliser CSS avec [`transform`](/fr/docs/Web/CSS/transform) pour tourner l'élément. Voyons comment faire.
 
-Tout d'abord, on enveloppe l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div) afin de pouvoir corriger la disposition une fois que la transformation est effectuée (les transformations n'affectent pas automatiquement la disposition de la page)&nbsp;:
+Tout d'abord, on enveloppe l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div) afin de pouvoir corriger la disposition une fois que la transformation est effectuée (les transformations n'affectent pas automatiquement la disposition de la page)&nbsp;:
 
 ```html
 <div class="slider-wrapper">
@@ -469,7 +472,7 @@ input[type="range"] {
 ## Voir aussi
 
 - [Les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
+- [`<input>`](/fr/docs/Web/HTML/Element/input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
 - [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number)
 - [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow)
 - [`validityState.rangeUnderflow`](/fr/docs/Web/API/validityState/rangeUnderflow)

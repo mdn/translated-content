@@ -29,7 +29,7 @@ Deux espaces de noms (_namespaces_) sont utilisés pour les quatre principaux na
 - `browser.*`, l'espace standard de l'API, utilisé par Firefox et Edge.
 - `chrome.*`, utilisé par Chrome et Opera.
 
-Firefox prend également en charge l'espace de noms `chrome.*` pour les API compatibles avec Chrome, principalement pour faciliter le [portage](/fr/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). Cependant, il est préférable d'utiliser l'espace de nommage `browser.*`. En plus d'être la norme proposée, `browser.*` utilise des promesses — un mécanisme moderne et pratique pour gérer les événements asynchrones.
+Firefox prend également en charge l'espace de noms `chrome.*` pour les API compatibles avec Chrome, principalement pour faciliter le [portage](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). Cependant, il est préférable d'utiliser l'espace de nommage `browser.*`. En plus d'être la norme proposée, `browser.*` utilise des promesses — un mécanisme moderne et pratique pour gérer les événements asynchrones.
 
 Ce n'est que dans les extensions les plus triviales que l'espace de nom sera probablement le seul problème multiplateforme à résoudre. Il est donc rarement, voire jamais, utile d'essayer d'aborder cette seule question. La meilleure approche consiste à traiter ce problème avec une gestion asynchrone des événements.
 
@@ -37,12 +37,13 @@ Ce n'est que dans les extensions les plus triviales que l'espace de nom sera pro
 
 Il existe deux approches pour gérer les événements asynchrones utilisées par les quatre principaux navigateurs :
 
-- [Les promesses](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise), le standard proposé pour l'API d'extensions, utilisé par Firefox.
+- [Les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), le standard proposé pour l'API d'extensions, utilisé par Firefox.
 - Les _callbacks_ (fonctions de rappel), utilisés par Chrome, Edge, et Opera.
 
 Firefox prend également en charge les _callbacks_ pour les API qui prennent en charge l'espace de noms `chrome.*`. Cependant, il est recommandé d'utiliser des promesses (et l'espace de noms `browser.*` du navigateur). Des promesses ont été adoptées dans le cadre de la norme proposée. Cette approche simplifie grandement la gestion asynchrone des événements, en particulier lorsque vous devez enchaîner des événements.
 
-> **Note :** Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à [Apprendre à connaître le JavaScript asynchrone : Rappels, promesses et synchronisation/attente](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) ou la page sur [l'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses) de MDN.
+> [!NOTE]
+> Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à [Apprendre à connaître le JavaScript asynchrone : Rappels, promesses et synchronisation/attente](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) ou la page sur [l'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises) de MDN.
 
 #### Polyfill pour l'API WebExtension du navigateur
 
@@ -69,7 +70,8 @@ Ainsi, par exemple, ce code `manifest.json` rend le _polyfill_ disponible pour v
 
 Votre but est de vous assurer que le _polyfill_ s'exécute dans votre extension avant tout autre script qui attend le `browser.*` API namespace s'exécute.
 
-> **Note :** Pour plus de détails et d'informations sur l'utilisation du _polyfill_ avec un module bundler, voir le [readme du projet sur GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
+> [!NOTE]
+> Pour plus de détails et d'informations sur l'utilisation du _polyfill_ avec un module bundler, voir le [readme du projet sur GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
 
 Il existe d'autres options de _polyfill_ mais, au moment où nous écrivons ces lignes, aucune ne fournit une couverture équivalente à ce _polyfill_ pour l'API WebExtension du navigateur. Ainsi, lorsque vous n'avez pas choisi Firefox comme cible initiale de navigateur, vos options sont d'accepter les limitations des _polyfills_ alternatifs, de porter sur Firefox et d'ajouter la prise en charge multi-navigateur, ou de développer votre propre _polyfill_.
 

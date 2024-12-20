@@ -5,19 +5,17 @@ slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 
 {{CSSRef}}
 
-原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/zh-TW/CSS/CSS_transitions)
-
-{{ SeeCompatTable() }}
-
 CSS transitions 是 CSS3 specification 草案的一部分，他可以用來調整 CSS animation 變動的速度。舉例來說，倘若你設計了一個 element 會由白轉紅，你可以透過 CSS transitions 來控制轉變的時間及變化曲線。
 
-> **備註：** CSS transitions specification 目前仍舊以草案形式存在，所以當你要在 Gecko 的系統中使用時，記得加上 "-moz-" 的前綴。此外，為了更好的相容，你還得加上 "-webkit-" 前綴 (給基於 Webkit 技術的瀏覽器)以及 "-o-" (Opera 使用)。舉例來說，你可能會寫出包含有 `-moz-transition`, `-webkit-transition 及` `-o-transition 的程式。`
+> [!NOTE]
+> CSS transitions specification 目前仍舊以草案形式存在，所以當你要在 Gecko 的系統中使用時，記得加上 "-moz-" 的前綴。此外，為了更好的相容，你還得加上 "-webkit-" 前綴 (給基於 Webkit 技術的瀏覽器)以及 "-o-" (Opera 使用)。舉例來說，你可能會寫出包含有 `-moz-transition`, `-webkit-transition 及` `-o-transition 的程式。`
 
 ## 可供調整的 CSS property 清單
 
 CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animatable properties](http://oli.jp/2010/css-animatable-properties/) 可以看到。這裡頭同時包含了 SVG properties。
 
-> **備註：** 這些列出 properties 可能都還會改變，所以請使用已經被支援的那些，以免造成無法預期的結果。
+> [!NOTE]
+> 這些列出 properties 可能都還會改變，所以請使用已經被支援的那些，以免造成無法預期的結果。
 
 ## CSS transition properties
 
@@ -38,8 +36,6 @@ CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animat
 
 漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表。
 
-[CSS transition function manipulator](http://cssglue.com/cubic) 是一個可以讓你非常容易以視覺化方式了解轉場流程的工具。
-
 除了自行定義之外，尚有幾個已經預先定義好的函式：
 
 - **ease**, 等同於 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`
@@ -52,7 +48,7 @@ CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animat
 
 我們在這直接用範例來說明。
 
-在看程式碼之前，或許你會想先看看實際的執行效果。請挑個有支援 transitions 的瀏覽器，然後[看看這個](/samples/cssref/transitions/sample3) (而[這裡](/samples/cssref/transitions/sample3/transitions.css)有這個範例的相關 CSS 程式碼)。
+在看程式碼之前，或許你會想先看看實際的執行效果。請挑個有支援 transitions 的瀏覽器，然後[看看這個](https://mdn.dev/archives/media/samples/cssref/transitions/sample3) (而[這裡](https://mdn.dev/archives/media/samples/cssref/transitions/sample3/transitions.css)有這個範例的相關 CSS 程式碼)。
 
 首先，先以 HTML 創建這個範例的主要外殼：
 
@@ -127,7 +123,8 @@ transition-timing-function: cubic-bezier(0.2, 0.4, 0.7, 0.8);
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-> **備註：** "transitionend" event 若 transition 在執行中被中斷(意指 transition 沒有真正完成)則不會觸發。
+> [!NOTE]
+> "transitionend" event 若 transition 在執行中被中斷(意指 transition 沒有真正完成)則不會觸發。
 
 ## 當 property value list 之間並不等長時 ... ?
 
@@ -171,7 +168,7 @@ div {
 
 一個使用 CSS 的好時機是用來強調目前使用者滑鼠經過的選單位置。使用 transitions 可以使效果變得更吸引人。
 
-在看實際的程式碼之前，你可以先看[實際的範例](/samples/cssref/transitions/sample2) (當然你的瀏覽器要能支援 transitions)。相關的 CSS 程式在[這裡](/samples/cssref/transitions/sample2/transitions.css)。
+在看實際的程式碼之前，你可以先看[實際的範例](https://mdn.dev/archives/media/samples/cssref/transitions/sample2) (當然你的瀏覽器要能支援 transitions)。相關的 CSS 程式在[這裡](https://mdn.dev/archives/media/samples/cssref/transitions/sample2/transitions.css)。
 
 我們先用 HTML 構建外殼：
 
@@ -279,7 +276,7 @@ p {
 
 這裡讓我們看個例子，一個內含文字的方塊左右來回移動，並且會在兩種顏色之間做轉變：
 
-在我們仔細研究程式碼之前可以先看[範例](/samples/cssref/transitions/sample1)。同樣地，可以到[這](/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
+在我們仔細研究程式碼之前可以先看[範例](https://mdn.dev/archives/media/samples/cssref/transitions/sample1)。同樣地，可以到[這](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
 
 ### HTML 程式碼
 
@@ -303,7 +300,7 @@ p {
 
 ### CSS 程式碼
 
-我們使用 slideRight 和 slideLeft 這兩個 CSS class 來建構動畫 (請參閱 [`transitions.css`](/samples/cssref/transitions/sample1/transitions.css) )。這裡列出部分：
+我們使用 slideRight 和 slideLeft 這兩個 CSS class 來建構動畫 (請參閱 [`transitions.css`](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css) )。這裡列出部分：
 
 ```css
 .slideRight {
@@ -352,7 +349,8 @@ p {
 
 在定義了左右兩端點的狀態後，現在我們可以準備來描述 animation 了。這可以簡單的透過 JavaScript 達成。
 
-> **備註：** 在這裡，倘若 [CSS animations](/zh_tw/CSS_動畫) 被使用者的瀏覽器支援，那就未必要使用 JavaScript 了。
+> [!NOTE]
+> 在這裡，倘若 [CSS animations](/zh-TW/CSS_動畫) 被使用者的瀏覽器支援，那就未必要使用 JavaScript 了。
 
 首先定義 `runDemo()` function，他將在文件被讀取後立刻執行：
 
@@ -390,8 +388,8 @@ function updateTransition() {
 
 ## 更多資訊
 
-- [CSS Transitions](http://dev.w3.org/csswg/css3-transitions/)
-- [CSS Transitions Module Level 3](http://www.w3.org/TR/css3-transitions)
+- [CSS Transitions](https://drafts.csswg.org/css-transitions-1/)
+- [CSS Transitions Module Level 3](https://www.w3.org/TR/css-transitions-1/)
 - [CSS animatable properties](http://oli.jp/2010/css-animatable-properties/)
 - {{ cssxref("-moz-transition") }}
 - {{ cssxref("-moz-transition-property") }}

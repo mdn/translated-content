@@ -20,17 +20,19 @@ querySelectorAll(selectors)
 
 - `selectors`
 
-  - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターを指定する際は、カンマで区切ります。
+  - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターを指定する際は、カンマで区切ります。
 
     なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
 
-> **メモ:** 標準の CSS 構文の一部ではない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)を参照してください。
+> [!NOTE]
+> 標準の CSS 構文の一部ではない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)を参照してください。
 
 ### 返値
 
 生きていない {{domxref("NodeList")}} で、指定されたセレクターの 1 つ以上に一致する子孫ノード 1 つに対して 1 つずつの {{domxref("Element")}} を含みます。
 
-> **メモ:** 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
+> [!NOTE]
+> 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
 ### 例外
 
@@ -197,7 +199,7 @@ selectScope.addEventListener("click", () => {
 
 ## 関連情報
 
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - CSS ガイドの[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
 - MDN 学習エリアの[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
 - {{domxref("Element.querySelector()")}}

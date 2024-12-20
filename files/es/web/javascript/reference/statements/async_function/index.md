@@ -46,7 +46,8 @@ Cuando se llama a una función `async`, esta devuelve un elemento {{jsxref("Prom
 
 Una función `async` puede contener una expresión {{jsxref("Operators/await", "await")}}, la cual pausa la ejecución de la función asíncrona y espera la resolución de la `Promise` pasada y, a continuación, reanuda la ejecución de la función `async` y devuelve el valor resuelto.
 
-> **Nota:** La finalidad de las funciones `async`/`await` es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de `Promises`. Del mismo modo que las `Promises` son semejantes a las devoluciones de llamadas estructuradas, `async`/`await` se asemejan a una combinación de generadores y promesas.
+> [!NOTE]
+> La finalidad de las funciones `async`/`await` es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de `Promises`. Del mismo modo que las `Promises` son semejantes a las devoluciones de llamadas estructuradas, `async`/`await` se asemejan a una combinación de generadores y promesas.
 
 ## Ejemplos
 
@@ -129,4 +130,4 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 - {{jsxref("Operators/async_function", "Expresión de función async")}}
 - Objeto {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}
-- [«Decorar funciones async de JavaScript» en innolitics.com](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)
+- [«Decorar funciones async de JavaScript» en innolitics.com](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)

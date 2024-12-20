@@ -57,7 +57,8 @@ HTML no es tan complicado de entender como Rust; HTML no se compila por separado
 
 HTML en sí mismo no suele producir errores sintácticos porque los navegadores son permisivos con ellos; o sea, el código se sigue ejecutando ¡aun si hay errores! Los navegadores disponen de reglas internas para saber cómo interpretar los errores de marcado incorrecto que encuentran, y seguirán funcionando aunque no produzcan el resultado esperado. Esto puede también ser un problema, por supuesto.
 
-> **Nota:** La ejecución de HTML es permisiva porque cuando se creó la web por primera vez, se decidió que el hecho de permitir que la gente publicara su contenido era más importante que el hecho de que la sintaxis fuera totalmente correcta. La web no sería tan popular como lo es hoy en día si se hubiera sido más estricto desde el primer momento.
+> [!NOTE]
+> La ejecución de HTML es permisiva porque cuando se creó la web por primera vez, se decidió que el hecho de permitir que la gente publicara su contenido era más importante que el hecho de que la sintaxis fuera totalmente correcta. La web no sería tan popular como lo es hoy en día si se hubiera sido más estricto desde el primer momento.
 
 ### Aprendizaje activo: Estudio del código permisivo
 
@@ -93,7 +94,7 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
    - Esta sección está mal anidada: `<strong>negritas <em>negritas enfatizadas?</strong> ¿qué es esto?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
    - Al valor del atributo [`href`](/es/docs/Web/HTML/Element/a#href) le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
 
-5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), y luego continuaremos.
+5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), y luego continuaremos.
 6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![El inspector de HTML en Firefox, con el párrafo de nuestro ejemplo resaltado, muestra el texto "¿Qué causa los errores en HTML?" Aquí puede ver que el navegador ha cerrado el elemento de párrafo.](html-inspector.png)
 7. Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
 
@@ -156,7 +157,8 @@ La lista de mensajes de error que nos presenta el validador suele ayudar, pero a
 
   ejemplo: `<a href="https://www.mozilla.org/>enlace a la página de inicio de Mozilla</a> ↩ </ul>↩ </body>↩</html>`
 
-  > **Nota:** Un atributo al que le falten las comillas de cierre puede ser un elemento abierto, porque el resto del documento será interpretado como si fuera parte de este atributo.
+  > [!NOTE]
+  > Un atributo al que le falten las comillas de cierre puede ser un elemento abierto, porque el resto del documento será interpretado como si fuera parte de este atributo.
 
 - Unclosed element `ul`: Este no ayuda mucho, porque el elemento {{htmlelement("ul")}} está cerrado correctamente. Este error se debe a que el elemento {{htmlelement("a")}} no ha sido cerrado, ya que faltan las comillas de cierre.
 

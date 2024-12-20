@@ -399,4 +399,4 @@ svg {
 
 If you had difficulty understanding this page, or if you have other comments about it, please contribute to its Discussion page.
 
-이 예제에서 SVG 기능이 있는(SVG enabled) 브라우저는 이미 SVG 엘리먼트를 디스플레이하는 방법을 알고 있습니다. 스타일 시트는 단지 그 디스플레이를 특정 방식으로 수정할 뿐 입니다. 그러나 디스플레이하는 방식이 미리 지정되어 있지 않은 범용(general-purpose) XML 문서를 위해서 CSS를 사용할 수있습니다. 다음 페이지에서는 이를 실행해 봅니다: **[XML data](/ko/CSS/Getting_Started/XML_data)**
+이 예제에서 SVG 기능이 있는(SVG enabled) 브라우저는 이미 SVG 엘리먼트를 디스플레이하는 방법을 알고 있습니다. 스타일 시트는 단지 그 디스플레이를 특정 방식으로 수정할 뿐 입니다. 그러나 디스플레이하는 방식이 미리 지정되어 있지 않은 범용(general-purpose) XML 문서를 위해서 CSS를 사용할 수있습니다. 다음 페이지에서는 이를 실행해 봅니다: **[XML data](/ko/docs/CSS/Getting_Started/XML_data)**

@@ -20,11 +20,12 @@ canvas.getContext(contextType, contextAttributes);
   - : É um {{domxref("DOMString")}} contendo o contexto identificador definindo o contexto de desenho associado ao canvas. Os valores possiveis são:
 
     - `"2d"`, levando a criação de um objeto {{domxref("CanvasRenderingContext2D")}} representando uma renderização bidimensional.
-    - `"webgl"` (or `"experimental-webgl"`) que criará um objeto {{domxref("WebGLRenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/WebGL) versão 1 (OpenGL ES 2.0).
-    - `"webgl2"` que criará um objeto {{domxref("WebGL2RenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/WebGL) versão 2 (OpenGL ES 3.0). {{experimental_inline}}
+    - `"webgl"` (or `"experimental-webgl"`) que criará um objeto {{domxref("WebGLRenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/API/WebGL_API) versão 1 (OpenGL ES 2.0).
+    - `"webgl2"` que criará um objeto {{domxref("WebGL2RenderingContext")}} representando uma renderização tridimensional. Esse contexto está disponivel somente em browsers que implementam [WebGL](/pt-BR/docs/Web/API/WebGL_API) versão 2 (OpenGL ES 3.0). {{experimental_inline}}
     - `"bitmaprenderer"` que criará um {{domxref("ImageBitmapRenderingContext")}} que apenas provê a funcionalidade de substituir o conteúdo do canvas pelo de um {{domxref("ImageBitmap")}}.
 
-    > **Nota:** O identificador "`experimental-webgl`" é usado em novas implementações do WebGL. Essas implementações ou ainda não passaram nos casos de teste, ou os drivers gráficos na plataforma ainda não estão estáveis. O [Khronos Group](https://www.khronos.org/) certifica as implementações do WebGL sob certas [regas de conformidade](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > [!NOTE]
+    > O identificador "`experimental-webgl`" é usado em novas implementações do WebGL. Essas implementações ou ainda não passaram nos casos de teste, ou os drivers gráficos na plataforma ainda não estão estáveis. O [Khronos Group](https://www.khronos.org/) certifica as implementações do WebGL sob certas [regas de conformidade](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes`
 

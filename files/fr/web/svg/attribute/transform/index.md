@@ -39,7 +39,8 @@ svg {
 
 {{EmbedLiveSample('Exemple', '100%', 200)}}
 
-> **Note :** Pour SVG2, `transform` est un attribut de présentation et peut donc être utilisé comme une propriété CSS. Attention toutefois aux différences de syntaxe entre la propriété CSS et cet attribut. Voir la documentation de la propriété {{cssxref('transform')}} pour la syntaxe .
+> [!NOTE]
+> Pour SVG2, `transform` est un attribut de présentation et peut donc être utilisé comme une propriété CSS. Attention toutefois aux différences de syntaxe entre la propriété CSS et cet attribut. Voir la documentation de la propriété {{cssxref('transform')}} pour la syntaxe .
 
 En tant qu'attribut de présentation, **`transform`** peut être utilisé par n'importe quel élément (en SVG 1.1, seuls les 16 éléments suivants pouvaient l'utiliser : {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}} et {{SVGElement('use')}}).
 
@@ -74,7 +75,8 @@ Pour des raisons historiques liées à SVG 1.1, {{SVGElement('linearGradient')}}
 
 Les fonctions de transformation suivantes peuvent être utilisées par l'attribut `transform`.
 
-> **Attention :** Selon la spécification, on devrait également pouvoit utiliser les fonctions CSS {{cssxref('transform-function', 'transform functions')}} mais la compatibilité n'est pas assurée.
+> [!WARNING]
+> Selon la spécification, on devrait également pouvoit utiliser les fonctions CSS {{cssxref('transform-function', 'transform functions')}} mais la compatibilité n'est pas assurée.
 
 ### `matrix()`
 

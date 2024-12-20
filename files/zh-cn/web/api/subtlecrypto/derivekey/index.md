@@ -84,7 +84,8 @@ PBKDF2 的规范定于 [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 ## 示例
 
-> **备注：** 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html)。
+> [!NOTE]
+> 你可以在 GitHub 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html)。
 
 ### ECDH
 

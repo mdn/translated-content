@@ -19,5 +19,5 @@ slug: Glossary/Server
 
 ### 一般知識
 
-- [サーバー入門](/ja/Learn/What_is_a_web_server)
+- [サーバー入門](/ja/docs/Learn/What_is_a_web_server)
 - Wikipedia 上の記事「[サーバー](https://ja.wikipedia.org/wiki/サーバー)」

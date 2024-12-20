@@ -309,7 +309,8 @@ const values = await Promise.all([coffee, tea, description]);
 
 Для обработки ошибок мы добавили блок `.catch()` для функции `displayContent()`; Это позволило нам отловить ошибки в обоих функциях.
 
-> **Примечание:** Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
+> [!NOTE]
+> Мы также можем использовать синхронный блок [`finally`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_clause) внутри асинхронной функции, вместо асинхронного `.finally()`, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем [live example](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html) (смотрите [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html)).
 
 ## Недостатки async/await
 
@@ -321,7 +322,7 @@ const values = await Promise.all([coffee, tea, description]);
 
 Есть подход, который позволяет обойти эту проблему — сохранить все выполняющиеся Promises в переменные, а уже после этого дожидаться (awaiting) их результата. Давайте посмотрим на несколько примеров.
 
-Мы подготовили два примера — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) и [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова [`setTimeout()`](/ru/docs/Web/API/setTimeout):
+Мы подготовили два примера — [slow-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html)) и [fast-async-await.html](https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html) (см. [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html)). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова [`setTimeout()`](/ru/docs/Web/API/Window/setTimeout):
 
 ```js
 function timeoutPromise(interval) {
@@ -390,7 +391,7 @@ async function timeTest() {
 
 ## Async/await class methods
 
-В качестве последнего замечания, вы можете использовать `async` перед методами классов или объектов, вынуждая их возвращать promises. А также `await` внутри методов объявленных таким образом. Посмотрите на пример [ES class code, который мы видели в статье object-oriented JavaScript](/ru/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes) и сравните его с модифицированной (асинхронной) `async` версией ниже:
+В качестве последнего замечания, вы можете использовать `async` перед методами классов или объектов, вынуждая их возвращать promises. А также `await` внутри методов объявленных таким образом. Посмотрите на пример [ES class code, который мы видели в статье object-oriented JavaScript](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#ecmascript_2015_classes) и сравните его с модифицированной (асинхронной) `async` версией ниже:
 
 ```js
 class Person {

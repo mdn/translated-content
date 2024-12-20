@@ -117,7 +117,8 @@ As palavras-chave são atalhos convenientes e correspondem aos seguintes valores
 
 {{CSSInfo}}
 
-> **Nota:** O valor inicial de `transform-origin` é `0 0` para todos os elementos SVG, exceto para elementos `<svg>` raiz e elementos `<svg>` que são filhos diretos de um elemento [foreignObject](/pt-BR/docs/Web/SVG/Element/foreignObject), cujo `transform-origin` é `50% 50%`, assim como outros elementos CSS. Consulte o atributo [transform-origin](/pt-BR/docs/Web/SVG/Attribute/transform-origin) do SVG para obter mais informações.
+> [!NOTE]
+> O valor inicial de `transform-origin` é `0 0` para todos os elementos SVG, exceto para elementos `<svg>` raiz e elementos `<svg>` que são filhos diretos de um elemento [foreignObject](/pt-BR/docs/Web/SVG/Element/foreignObject), cujo `transform-origin` é `50% 50%`, assim como outros elementos CSS. Consulte o atributo [transform-origin](/pt-BR/docs/Web/SVG/Attribute/transform-origin) do SVG para obter mais informações.
 
 ## Sintaxe formal
 
@@ -316,5 +317,5 @@ transform-origin: 100% -30%;
 
 ## Veja também
 
-- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

@@ -1,8 +1,9 @@
 ---
 title: "Document: hasFocus() メソッド"
+short-title: hasFocus()
 slug: Web/API/Document/hasFocus
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef}}
@@ -10,7 +11,8 @@ l10n:
 **`hasFocus()`** は {{domxref("Document")}} インターフェイスのメソッドで、文書または文書内の何れかの要素がフォーカスを持っているかどうかを示す論理値を返します。
 このメソッドは、文書内のアクティブな要素がフォーカスを持っているかどうかを特定するために使用することができます。
 
-> **メモ:** 文書を見ている時、文書内でフォーカスを持つ要素は常に[アクティブ要素](/ja/docs/Web/API/Document/activeElement)ですが、アクティブ要素がフォーカスを持っているとは限りません。
+> [!NOTE]
+> 文書を見ている時、文書内でフォーカスを持つ要素は常に[アクティブ要素](/ja/docs/Web/API/Document/activeElement)ですが、アクティブ要素がフォーカスを持っているとは限りません。
 > 例えば、フォアグラウンドになっていないポップアップウィンドウ内のアクティブ要素はフォーカスを持ちません。
 
 ## 構文

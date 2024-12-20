@@ -26,7 +26,8 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 
 另外，你还可以使用类似 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)）这些在线编辑器来完成测验。你可以将 HTML、CSS 和 JavaScript 粘贴到这几个在线编辑器中。如果你使用的在线编辑器没有单独的 JavaScript/CSS 面板，请将它们放入 HTML 页面内联的 `<script>`/`<style>` 元素中。
 
-> **备注：** 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
+> [!NOTE]
+> 如果你遇到了困难，请联系我们以寻求帮助——见本页面底部的[评估或进一步帮助](#评估或进一步帮助)。
 
 ## 项目简介
 

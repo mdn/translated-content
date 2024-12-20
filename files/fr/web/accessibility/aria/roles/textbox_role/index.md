@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Roles/textbox_role
 
 ### Description
 
-Cette technique présente l'utilisation du rôle [`textbox`](http://www.w3.org/TR/wai-aria/roles#textbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Cette technique présente l'utilisation du rôle [`textbox`](https://www.w3.org/TR/wai-aria/roles#textbox) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
 
 Le rôle `textbox` est utilisé pour identifier un élément permettant la saisie d'un texte librement formaté. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement `textbox` accessible aux produits de technologie d'assistance qui pourront alors le notifier à l'utilisateur.
 
@@ -27,7 +27,8 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 - Les lecteurs d'écran devraient annoncer son label et son rôle lorsque le focus est sur la boite de texte. Si elle contient également du contenu, il devrait être annoncé comme avec une boite de texte régulière&nbsp;;
 - Les loupes d'écran devraient agrandir la boite de texte.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> [!NOTE]
+> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 
@@ -60,7 +61,7 @@ L'extrait de code ci-dessous montre comment le rôle `textbox` est ajouté direc
 
 ### Attributs ARIA utilisés
 
-- [textbox](http://www.w3.org/TR/wai-aria/roles#textbox).
+- [textbox](https://www.w3.org/TR/wai-aria/roles#textbox).
 
 ### Techniques ARIA connexes
 

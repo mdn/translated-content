@@ -37,7 +37,8 @@ slug: Learn/Forms/Form_validation
 
 这就是**表单校验**——当你向 Web 应用输入数据时，应用会验证你输入的数据是否是正确的。如果验证通过，应用允许提交这些数据到服务器并储存到数据库中（通常情况下），如果验证未通过，则 Web 应用会提示你有错误的数据，并且一般都会明确的告诉你错误发生在哪里。表单校验可以通过许多不同的方式实现。
 
-> **备注：** 下面一段在英文原文中已经删除
+> [!NOTE]
+> 下面一段在英文原文中已经删除
 
 （事实上，没有人愿意填写表单——很多证据表明，用户对填写表单这件事情都感到很烦恼，如果他们在填写表单的过程中遇到一些自己无法理解的问题，通常都会导致他们直接离开你的 Web 应用，简而言之，[表单是一个很烦人的东西](https://www.slideshare.net/jwegesin/forms-suck/)。）
 
@@ -45,9 +46,10 @@ slug: Learn/Forms/Form_validation
 
 - **我们希望以正确的格式获取到正确的数据**——如果我们的用户数据以不正确的格式存储，或者他们没有输入正确的信息/完全省略信息，我们的应用程序将无法正常运行。
 - **我们希望保护我们的用户**——强制用户输入安全的密码，有利于保护他们的账户信息。
-- **我们希望保护我们自己**——恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/learn/Server-side/First_steps/Website_security)）。
+- **我们希望保护我们自己**——恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)）。
 
-> **警告：** 永远不要相信从客户端传递到服务器的数据。即使你的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
+> [!WARNING]
+> 永远不要相信从客户端传递到服务器的数据。即使你的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
 
 ### 不同类型的表单数据校验
 
@@ -58,13 +60,13 @@ slug: Learn/Forms/Form_validation
   - **JavaScript** 校验，这是可以完全自定义的实现方式；
   - HTML5 **内置校验**，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。
 
-- **服务器端校验**则是发生在浏览器提交数据并被服务器端程序接收之后——通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今[所有的服务端框架](/zh-CN/docs/learn/Server-side/First_steps/Web_frameworks)都提供了数据**校验**与**清洁**功能（让数据更安全）。
+- **服务器端校验**则是发生在浏览器提交数据并被服务器端程序接收之后——通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今[所有的服务端框架](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)都提供了数据**校验**与**清洁**功能（让数据更安全）。
 
 在真实的项目开发过程中，开发者一般都倾向于使用客户端校验与服务器端校验的组合校验方式以更好的保证数据的正确性与安全性。
 
 ## 使用内置表单数据校验
 
-[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
+[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/HTML/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
 
 当一个元素校验通过时：
 
@@ -191,9 +193,11 @@ input:valid {
 
 在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响你可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
 
-> **备注：** 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
+> [!NOTE]
+> 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
 
-> **备注：** 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
+> [!NOTE]
+> 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
 
 ### 限制输入的长度
 
@@ -352,7 +356,7 @@ input:focus:invalid {
 
 要自定义这些消息的外观和文本，你必须使用 JavaScript; 不能使用 HTML 和 CSS 来改变。
 
-HTML5 提供 [constraint validation API](http://www.w3.org/TR/html5/forms.html#the-constraint-validation-api) 来检测和自定义表单元素的状态。除此之外，他可以改变错误信息的文本。让我们快速的看一个例子：
+HTML5 提供 [constraint validation API](https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api) 来检测和自定义表单元素的状态。除此之外，他可以改变错误信息的文本。让我们快速的看一个例子：
 
 ```html
 <form>
@@ -470,7 +474,7 @@ email.addEventListener("input", function (event) {
 
 这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，你仍然可以自己做，并相应地设置表单的样式。
 
-[`aria-live`](/zh-CN/docs/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
+[`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 
 ##### CSS
 
@@ -583,7 +587,7 @@ form.addEventListener(
 
 ### 不使用内建 API 时的表单校验
 
-有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)，你将无法（或不希望）使用约束校验 API。在这种情况下，你仍然可以使用 JavaScript 来校验你的表单。校验表单比起真实数据校验更像是一个用户界面问题。
+有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)，你将无法（或不希望）使用约束校验 API。在这种情况下，你仍然可以使用 JavaScript 来校验你的表单。校验表单比起真实数据校验更像是一个用户界面问题。
 
 要校验表单，你必须问自己几个问题：
 
@@ -598,7 +602,7 @@ form.addEventListener(
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
-    - A List Apart: [Inline Validation in Web Forms](http://www.alistapart.com/articles/inline-validation-in-web-forms/)
+    - A List Apart: [Inline Validation in Web Forms](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
 
 #### 不使用约束校验 API 的例子
 
@@ -622,7 +626,7 @@ form.addEventListener(
 </form>
 ```
 
-正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，[ARIA](/zh-CN/docs/Accessibility/ARIA) 是与 HTML5 无关的独立规范。
+正如你所看到的，HTML 几乎是一样的；我们只是关闭了 HTML 校验功能。请注意，[ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 是与 HTML5 无关的独立规范。
 
 ##### CSS
 

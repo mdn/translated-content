@@ -2,7 +2,7 @@
 title: CSS 背景和边框
 slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
 {{CSSRef}}
@@ -116,13 +116,13 @@ box-shadow 包括内阴影和外阴影、单个或多个阴影，以及实心或
 - {{cssxref("border-start-start-radius")}} 属性
 - {{cssxref("border-start-end-radius")}} 属性
 - {{cssxref("border-end-start-radius")}} 属性
-- {{cssxref("border-end-end-radius ")}} 属性
+- {{cssxref("border-end-end-radius")}} 属性
 
 - {{cssxref("box-sizing")}} 属性
 - {{cssxref("box-decoration-break")}} 属性
 - {{cssxref("text-shadow")}} 属性
 
-- {{cssxref("url", "url()")}} CSS 函数
+- {{cssxref("url_value", "&lt;url&gt;")}} CSS 类型
 - [`<color>`](/zh-CN/docs/Web/CSS/color) 数据类型
 - [`<image>`](/zh-CN/docs/Web/CSS/image) 数据类型
 - [`<position>`](/zh-CN/docs/Web/CSS/position) 数据类型

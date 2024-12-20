@@ -13,7 +13,7 @@ slug: Web/HTML/Element/acronym
 
 ## Атрибуты
 
-Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/HTML/global_attributes).
+Этот элемент поддерживает _только_ [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 ## Интерфейс DOM
 

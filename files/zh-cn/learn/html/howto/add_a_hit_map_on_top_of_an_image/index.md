@@ -28,7 +28,8 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
   </tbody>
 </table>
 
-> **警告：** 本文仅讨论客户端图像映射。不要使用服务器端图像映射，这需要用户拥有鼠标。
+> [!WARNING]
+> 本文仅讨论客户端图像映射。不要使用服务器端图像映射，这需要用户拥有鼠标。
 
 ## 图像映射和它的缺点
 
@@ -36,7 +37,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 图像映射原本非常流行于导航策略，但是前提需要考虑它的性能和无障碍。
 
-[Text links](/zh-CN/Learn/HTML/Howto/Create_a_hyperlink) (perhaps styled with CSS) 比图像映射更具优势：文本链接更轻量级、好维护、更易于 SEO，而且支持更多形式需求的访问（如，屏幕阅读器、纯文本浏览器、翻译服务等）。
+[Text links](/zh-CN/docs/Learn/HTML/Howto/Create_a_hyperlink) (perhaps styled with CSS) 比图像映射更具优势：文本链接更轻量级、好维护、更易于 SEO，而且支持更多形式需求的访问（如，屏幕阅读器、纯文本浏览器、翻译服务等）。
 
 ## 如何正确的插入一张图像映射
 
@@ -48,7 +49,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 - 图片必须明确指出热点的开始和结束位置。
 - 在任何尺寸的视口下，热点都需要足够大，方便用户可以点击。多大足够呢？[72 × 72 CSS pixels 是一个推荐的最小尺寸，](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) 包括触摸目标之间额外的间隙。在 [50languages.com](http://www.goethe-verlag.com/book2/) (as of time of writing) 上的世界地图可以完美诠释这一点。用户点击 Russia 或 North America 要比 Albania 或 Estonia 容易得多。
 
-插入图片的方式 [和通常一样](/zh-CN/Learn/HTML/Howto/Add_images_to_a_webpage) (用 {{htmlelement("img")}} 标签 和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本). 如果图片只是用作导航容器，你可以设置图片的 `alt=""`，改在后面 {{htmlelement('area')}} 的 [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt) 中提供合适的文本。
+插入图片的方式 [和通常一样](/zh-CN/docs/Learn/HTML/Howto/Add_images_to_a_webpage) (用 {{htmlelement("img")}} 标签 和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本). 如果图片只是用作导航容器，你可以设置图片的 `alt=""`，改在后面 {{htmlelement('area')}} 的 [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt) 中提供合适的文本。
 
 你将需要一个特殊的 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性。为图像映射提供一个唯一标识，这个标识不能包含空格。将这个标识 (preceded by a hash) 作为 `usemap` 属性的值：
 
@@ -83,7 +84,7 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 - [`href`](/zh-CN/docs/Web/HTML/Element/area#href)
   - : 你需要链接的资源地址。如果你不希望当前区域链接到任何地方 (比方说，如果你正在创建一个空心圆)，你可以将这个属性保留为空。
 - [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt)
-  - : 一个必选属性，告诉用户链接的指向或功能说明。`alt` 文本仅在图像不可用时显示。请参阅我们的[guidelines for writing accessible link text](/zh-CN/Learn/HTML/Howto/Create_a_hyperlink#Writing_accessible_link_text)。如果 `href` 属性为空并且整个图像已经具备了 `alt` 属性，则可以设置 `alt=""`。
+  - : 一个必选属性，告诉用户链接的指向或功能说明。`alt` 文本仅在图像不可用时显示。请参阅我们的[guidelines for writing accessible link text](/zh-CN/docs/Learn/HTML/Howto/Create_a_hyperlink#writing_accessible_link_text)。如果 `href` 属性为空并且整个图像已经具备了 `alt` 属性，则可以设置 `alt=""`。
 
 ```html
 <map name="example-map-1">

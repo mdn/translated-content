@@ -54,7 +54,8 @@ l10n:
 
 {{EmbedLiveSample("示例 3（CSS 替代方案）")}}
 
-> **备注：** 将 {{Cssxref("text-align")}}`:center` 应用于 {{HTMLElement("div")}} 或 {{HTMLElement("p")}} 元素会将这些元素的*内容*居中，同时保持其总体尺寸不变。
+> [!NOTE]
+> 将 {{Cssxref("text-align")}}`:center` 应用于 {{HTMLElement("div")}} 或 {{HTMLElement("p")}} 元素会将这些元素的*内容*居中，同时保持其总体尺寸不变。
 
 ## 规范
 

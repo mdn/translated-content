@@ -19,7 +19,8 @@ ReferenceError: "x" is not defined
 
 在某些地方引用一个不存在的变量的时候。当你使用变量的时候，这个变量必须是已经被声明的，或者你可以确保它在你当前的脚本或作用域 ({{Glossary("scope")}}) 中可用。
 
-> **备注：** 当你加载一个库的时候（例如 jQuery），请确保你在这个库加载完毕后再使用这个库中的变量，如“$”。将你想加载的库的 {{HTMLElement("script")}} 标签放置在你的代码前面。
+> [!NOTE]
+> 当你加载一个库的时候（例如 jQuery），请确保你在这个库加载完毕后再使用这个库中的变量，如“$”。将你想加载的库的 {{HTMLElement("script")}} 标签放置在你的代码前面。
 
 ## 示例
 
@@ -66,5 +67,5 @@ console.log(num1); // 2
 ## 相关页面
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Declaring variables in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
 - [Function scope in the JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数作用域)

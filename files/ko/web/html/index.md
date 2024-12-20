@@ -27,13 +27,13 @@ HTML 요소는 "태그"를 사용해서 문서의 다른 텍스트와 구분합�
 - HTML 참고서
   - : 방대한 [HTML 참고서](/ko/docs/Web/HTML/Reference)에서는 HTML을 구성하는 모든 요소와 특성의 자세한 설명을 볼 수 있습니다.
 
-> **알림:**
+> [!CALLOUT]
 >
-> #### 프런트엔드 웹 개발자가 되고자 하시나요?
+> 프런트엔드 웹 개발자가 되고자 하시나요?
 >
 > 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 초보자 자습서
 
@@ -56,7 +56,7 @@ MDN [HTML 학습지](/ko/docs/Learn/HTML)는 HTML을 처음부터 알려주는 �
   - : [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 적절한 {{glossary("CORS")}} 헤더와 조합하면 {{htmlelement("img")}} 요소의 이미지를 외부 {{glossary("origin", "출처")}}에서 가져올 수 있으며, 마치 현재 출처의 이미지인 것처럼 {{htmlelement("canvas")}}에서도 사용할 수 있습니다.
 - [CORS 설정 특성](/ko/docs/Web/HTML/Attributes/crossorigin)
   - : {{htmlelement("img")}}, {{htmlelement("video")}} 등 {{glossary("CORS")}}를 지원하는 일부 HTML 요소는 `crossorigin` 특성(`crossOrigin` 속성)을 보유하며, 해당 요소가 데이터를 가져올 때의 CORS 요청을 통제할 수 있습니다.
-- [rel="preload"로 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Link_types/preload)
+- [rel="preload"로 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Attributes/rel/preload)
   - : {{htmlelement("link")}} 요소, [`rel`](/ko/docs/Web/HTML/Element/link#rel) 특성의 `preload` 값을 사용하면 페이지를 불러온 직후 빠르게 사용해야 하는 리소스에 대해 선언적인 가져오기 요청을 {{htmlelement("head")}} 안에 추가할 수 있습니다. 이렇게 지정한 리소스는 페이지 불러오기 라이프사이클의 초기, 브라우저의 주 렌더링이 시작하기도 전에 시작하고, 페이지의 첫 렌더링이 덜 막혀 성능이 개선됩니다. 이 글에서는 `preload` 작동 방식에 대한 기본적인 지침을 제공합니다.
 
 ## 참고서
@@ -69,16 +69,16 @@ MDN [HTML 학습지](/ko/docs/Learn/HTML)는 HTML을 처음부터 알려주는 �
   - : HTML 요소는 **특성**을 가집니다. 특성은 요소나 그 동작 방식을 다양하게 설정하고 수정하는 일련의 추가 값입니다.
 - [전역 특성](/ko/docs/Web/HTML/Global_attributes)
   - : 전역 특성은 모든 [HTML 요소](/ko/docs/Web/HTML/Element)에 지정할 수 있으며, 심지어 표준에 명시되지 않은 요소에도 지정할 수 있습니다. 비록 비표준 요소를 사용하는 순간 문서는 HTML 표준을 준수하지 않는 것이지만, 그렇다고 해도 모든 비표준 요소는 전역 특성을 허용해야 합니다.
-- [인라인 요소](/ko/docs/Web/HTML/Inline_elements)와 [블록 레벨 요소](/ko/docs/Web/HTML/Block-level_elements)
+- [인라인 요소](/ko/docs/Glossary/Inline-level_content)와 [블록 레벨 요소](/ko/docs/Glossary/Block-level_content)
   - : HTML의 요소는 역사적으로 "블록 레벨" 요소와 "인라인" 요소로 분류됐습니다. 인라인 요소는 콘텐츠의 흐름을 끊지 않고, 요소를 구성하는 태그에 할당된 공간만 차지합니다. 블록 레벨 요소는 부모 요소의 전체 공간을 차지하여 "블록"을 만듭니다.
 - [HTML 미디어 유형과 형식 안내서](/ko/docs/Web/Media/Formats)
   - : {{HTMLElement("audio")}}와 {{HTMLElement("video")}} 요소를 통해 외부 프로그램 없이 오디오와 비디오 미디어를 재생할 수 있습니다.
-- [HTML 콘텐츠 카테고리](/ko/docs/Web/Guide/HTML/Content_categories)
+- [HTML 콘텐츠 카테고리](/ko/docs/Web/HTML/Content_categories)
   - : HTML 요소는 어떤 상황에서는 사용할 수 있고, 어떤 상황에서는 사용할 수 없는지 결정하는 여러가지 분류, 콘텐츠 카테고리에 속합니다. 마찬가지로, 요소는 자신의 콘텐츠로 허용할 콘텐츠 카테고리도 정의합니다.
 - [호환성 모드와 표준 모드](/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
   - : 호환성 모드와 표준 모드에 대한 역사적인 정보입니다.
 
 ## 관련 주제
 
-- [CSS를 사용해 HTML 요소에 색 입히기](/ko/docs/Web/HTML/Applying_color)
+- [CSS를 사용해 HTML 요소에 색 입히기](/ko/docs/Web/CSS/CSS_colors/Applying_color)
   - : 이 문서는 HTML 문서의 어떤 부분에 색을 적용할 수 있는지와, 이 때 사용할 수 있는 CSS 속성을 나열합니다. 예제와 함께 각종 도구로의 링크도 제공합니다.

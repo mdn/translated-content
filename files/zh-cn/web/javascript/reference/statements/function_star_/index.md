@@ -27,7 +27,8 @@ function* name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **备注：** 箭头函数不能用来定义生成器函数。
+> [!NOTE]
+> 箭头函数不能用来定义生成器函数。
 
 > **备注：** `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。
 

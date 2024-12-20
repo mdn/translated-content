@@ -13,7 +13,8 @@ HTML 规范定义了以下标准元数据名称：
 
 - `application-name`：网页中所运行的应用程序的名称。
 
-  > **备注：** 浏览器可能使用此名称来识别应用程序。It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status. 简单的网页不应当使用 `application-name`。
+  > [!NOTE]
+  > 浏览器可能使用此名称来识别应用程序。It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status. 简单的网页不应当使用 `application-name`。
 
 - `author`：文档作者的名字。
 - `description`：一段简短而精确的、对页面内容的描述。一些浏览器，比如 Firefox 和 Opera，将其用作书签的默认描述。
@@ -32,7 +33,8 @@ HTML 规范定义了以下标准元数据名称：
   | `strict-origin-when-cross-origin` | 对同源请求发送完整 URL（不含 URL 参数）；其他情况下，如果请求目标与当前页面一样安全或者更加安全（HTTP(S)→HTTPS），则发送 origin；如果请求目标更加不安全（HTTPS→HTTP），则不发送 referrer。 |
   | `unsafe-URL`                      | 对同源请求和跨源请求发送完整 URL（不含 URL 参数）。                                                                                                                                        |
 
-  > **备注：** 动态插入 `<meta name="referrer">`（使用 {{domxref("Document.write", "document.write()")}} 方法或者 {{domxref("Node.appendChild", "appendChild()")}} 等方法）会使 referrer 行为变得不可预测。如果定义了互相冲突的策略，则会转而使用 `no-referrer` 策略。
+  > [!NOTE]
+  > 动态插入 `<meta name="referrer">`（使用 {{domxref("Document.write", "document.write()")}} 方法或者 {{domxref("Node.appendChild", "appendChild()")}} 等方法）会使 referrer 行为变得不可预测。如果定义了互相冲突的策略，则会转而使用 `no-referrer` 策略。
 
 - [`theme-color`](/zh-CN/docs/Web/HTML/Element/meta/name/theme-color)：表示当前页面的建议颜色，在自定义当前页面从或页面周围的用户界面的显示时，用户代理应当使用此颜色。`content` 属性应当包含一个有效的 CSS {{cssxref("&lt;color&gt;")}} 值。
 
@@ -64,17 +66,19 @@ CSS 颜色调整规范（CSS Color Adjustment specification）定义了以下元
 CSS 设备适配规范（CSS Device Adaptation specification）定义了以下元数据名称：
 
 - `viewport`: 为{{glossary("viewport", "视口")}}的初始大小提供指示（hint）。目前仅用于移动设备。
-  | 值 | 可能的附加值 | 描述 |
-  | --------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | `width` | 一个正整数，或者字符串 `device-width` | 定义 viewport 的宽度，如果值为正整数，则单位为像素。 |
-  | `height` | 一个正整数，或者字符串 `device-height` | 定义 viewport 的高度。未被任何浏览器使用。 |
-  | `initial-scale` | 一个 `0.0` 和 `10.0` 之间的正数 | 定义设备宽度（宽度和高度中更小的那个：如果是纵向屏幕，就是 `device-width`，如果是横向屏幕，就是 `device-height`）与 viewport 大小之间的缩放比例。 |
-  | `maximum-scale` | 一个 `0.0` 和 `10.0` 之间的正数 | 定义缩放的最大值，必须大于等于 `minimum-scale`，否则表现将不可预测。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。 |
-  | `minimum-scale` | 一个 `0.0` 和 `10.0` 之间的正数 | 定义缩放的最小值，必须小于等于 `maximum-scale`，否则表现将不可预测。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。 |
-  | `user-scalable` | `yes` 或者 `no` | 默认为 `yes`，如果设置为 `no`，用户将无法缩放当前页面。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。 |
-  | `viewport-fit` | `auto`、`contain` 或者 `cover` | The `auto` value doesn’t affect the initial layout viewport, and the whole web page is viewable.The `contain` value means that the viewport is scaled to fit the largest rectangle inscribed within the display.The `cover` value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the [safe area inset](/zh-CN/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display. |
 
-  > **备注：** 虽然此元数据条目未被标准化，但是，由于此条目在事实上处于支配地位，大多数移动浏览器都遵守此条目的声明。
+  | 值              | 可能的附加值                           | 描述                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+  | --------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `width`         | 一个正整数，或者字符串 `device-width`  | 定义 viewport 的宽度，如果值为正整数，则单位为像素。                                                                                                                                                                                                                                                                                                                                                                                                                  |
+  | `height`        | 一个正整数，或者字符串 `device-height` | 定义 viewport 的高度。未被任何浏览器使用。                                                                                                                                                                                                                                                                                                                                                                                                                            |
+  | `initial-scale` | 一个 `0.0` 和 `10.0` 之间的正数        | 定义设备宽度（宽度和高度中更小的那个：如果是纵向屏幕，就是 `device-width`，如果是横向屏幕，就是 `device-height`）与 viewport 大小之间的缩放比例。                                                                                                                                                                                                                                                                                                                     |
+  | `maximum-scale` | 一个 `0.0` 和 `10.0` 之间的正数        | 定义缩放的最大值，必须大于等于 `minimum-scale`，否则表现将不可预测。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。                                                                                                                                                                                                                                                                                                                                |
+  | `minimum-scale` | 一个 `0.0` 和 `10.0` 之间的正数        | 定义缩放的最小值，必须小于等于 `maximum-scale`，否则表现将不可预测。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。                                                                                                                                                                                                                                                                                                                                |
+  | `user-scalable` | `yes` 或者 `no`                        | 默认为 `yes`，如果设置为 `no`，用户将无法缩放当前页面。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。                                                                                                                                                                                                                                                                                                                                             |
+  | `viewport-fit`  | `auto`、`contain` 或者 `cover`         | The `auto` value doesn’t affect the initial layout viewport, and the whole web page is viewable.The `contain` value means that the viewport is scaled to fit the largest rectangle inscribed within the display.The `cover` value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the [safe area inset](/zh-CN/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display. |
+
+  > [!NOTE]
+  > 虽然此元数据条目未被标准化，但是，由于此条目在事实上处于支配地位，大多数移动浏览器都遵守此条目的声明。
   >
   > - 不同设备和浏览器的默认值可能有不同。
   > - 若想了解 Firefox 移动版对此声明的支持和处理，请参考[这篇文章](/zh-CN/docs/Mobile/Viewport_meta_tag)。
@@ -95,20 +99,21 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 - `publisher`：当前文档的发布者/出版者。
 - `robots`：爬虫、协作搜寻器，或者“机器人”，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
 
-  | 值             | 描述                                                                        | 被用于                                                                                                                                                                                                                                                 |
-  | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-  | `index`        | 允许机器人索引此页面（默认）。                                              | 所有爬虫                                                                                                                                                                                                                                               |
-  | `noindex`      | 要求机器人不索引此页面。                                                    | 所有爬虫                                                                                                                                                                                                                                               |
-  | `follow`       | 允许机器人跟随此页面上的链接（默认）。                                      | 所有爬虫                                                                                                                                                                                                                                               |
-  | `nofollow`     | 要求机器人不跟随此页面上的链接。                                            | 所有爬虫                                                                                                                                                                                                                                               |
-  | `all`          | 与 `index, follow` 等价                                                     | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                          |
-  | `none`         | 与 `noindex, nofollow` 等价                                                 | [Google](https://developers.google.com/search/docs/advanced/crawling/special-tags?visit_id=637855965074074862-574753619&rd=1)                                                                                                                          |
-  | `noarchive`    | 要求搜索引擎不缓存页面内容。                                                | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)、[Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html)、[Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
-  | `nosnippet`    | 不在搜索引擎的结果中显示该网页的任何描述。                                  | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)、[Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
-  | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                    |
-  | `nocache`      | `noarchive` 的替代名称。                                                    | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                          |
+  | 值             | 描述                                                                        | 被用于                                                                                                                                                                                                                                                  |
+  | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `index`        | 允许机器人索引此页面（默认）。                                              | 所有爬虫                                                                                                                                                                                                                                                |
+  | `noindex`      | 要求机器人不索引此页面。                                                    | 所有爬虫                                                                                                                                                                                                                                                |
+  | `follow`       | 允许机器人跟随此页面上的链接（默认）。                                      | 所有爬虫                                                                                                                                                                                                                                                |
+  | `nofollow`     | 要求机器人不跟随此页面上的链接。                                            | 所有爬虫                                                                                                                                                                                                                                                |
+  | `all`          | 与 `index, follow` 等价                                                     | [Google](https://developers.google.cn/search/docs/crawling-indexing/special-tags)                                                                                                                                                                       |
+  | `none`         | 与 `noindex, nofollow` 等价                                                 | [Google](https://developers.google.cn/search/docs/crawling-indexing/special-tags)                                                                                                                                                                       |
+  | `noarchive`    | 要求搜索引擎不缓存页面内容。                                                | [Google](https://developers.google.cn/search/docs/crawling-indexing/robots-meta-tag)、[Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html)、[Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240) |
+  | `nosnippet`    | 不在搜索引擎的结果中显示该网页的任何描述。                                  | [Google](https://developers.google.cn/search/docs/crawling-indexing/robots-meta-tag)、[Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                     |
+  | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.cn/search/docs/crawling-indexing/robots-meta-tag)                                                                                                                                                                    |
+  | `nocache`      | `noarchive` 的替代名称。                                                    | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                           |
 
-  > **备注：** 只有正规的爬虫/协作搜寻器/机器人遵守这些规则。不要指望爬取电子邮件地址的恶意爬虫也这么做。
+  > [!NOTE]
+  > 只有正规的爬虫/协作搜寻器/机器人遵守这些规则。不要指望爬取电子邮件地址的恶意爬虫也这么做。
   >
   > - 只有访问相应的页面之后，机器人才能读取到这些规则。为避免这一点带来的带宽消耗，可以在 _{{Glossary("robots.txt")}}_ 文件中声明一些规则。
   > - 如果你想从机器人的索引中移除某个页面，`noindex` 可以做到这一点，但机器人还是得先访问那个页面，读取到 `noindex` 规则。遇到这种情况时，请确保 `robots.txt` 文件没有阻止机器人重新访问那个页面。

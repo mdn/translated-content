@@ -63,7 +63,8 @@ function handleCallButton(evt) {
 
 여기서 중요한건 `getUserMedia()`는 카메라 스트림이 아직 확보되지 않았음에도 거의 즉시 반환을 해줬다는 것 입니다. `handleCallButton()` 함수가 자신을 호출한 코드로 결과를 이미 반환을 했더라도 `getUserMedia()`의 작업이 종료되면 프로그래머가 작성한 다음 핸들러를 호출할 것 입니다. 앱이 스트리밍을 했다고 가정하지 않는 한 계속 실행될 수 있습니다.
 
-> **참고:** You can learn more about this somewhat advanced topic, if you're interested, in the article [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling). Code similar to this, but much more complete, is used in that example.
+> [!NOTE]
+> You can learn more about this somewhat advanced topic, if you're interested, in the article [Signaling and video calling](/ko/docs/Web/API/WebRTC_API/Signaling_and_video_calling). Code similar to this, but much more complete, is used in that example.
 
 ## The trouble with callbacks
 
@@ -75,7 +76,7 @@ Promise가 왜 좋은지 이해하기 위해 구식 callbacks을 살펴보고 �
 2. 그다음 피자를 주문합니다. 식당이 바빠서 피자가 나오는 데 오래 걸릴 수 있고, 마침 재료가 다 떨어졌으면 피자를 만들 수 없다고 할 것 입니다.
 3. 마지막으로 피자를 받아서 먹습니다. 그런데! 만약 지갑을 놓고 와서 돈을 내지 못한다면 피자를 먹지 못할 수 있습니다.
 
-구식 [callbacks](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#Callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
+구식 [callbacks](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
 
 ```js
 chooseToppings(function (toppings) {
@@ -151,7 +152,8 @@ chooseToppings()
 
 그런데 이렇게 작성하면 읽기가 쉽지 않습니다. 사용자의 코드가 지금의 예제보다 더 복잡하다면 위의 방법은 사용하기 힘듭니다.
 
-> **참고:** 다음 장에서 배울 `async`/`await` 문법으로 좀 더 간결화 할 수 있습니다.
+> [!NOTE]
+> 다음 장에서 배울 `async`/`await` 문법으로 좀 더 간결화 할 수 있습니다.
 
 Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습니다. :
 
@@ -162,9 +164,10 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
 모던 웹 API는 잠재적으로 긴 작업을 수행하는 함수에 Promise를 사용하므로 Promise가 무엇인지 이해하는것은 매우 중요합니다. 현대적인 웹 기술을 사용하려면 Promise를 사용해야합니다. 챕터의 후반부에서 직접 Promise를 만들어보겠지만, 지금은 일단 웹 API에서 접할 수 있는 몇 가지 예제를 살펴보겠습니다.
 
-첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#Asynchronous_JavaScript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
+첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
 
-> **참고:** The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn/Common_questions/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Using_Github_pages).
+> [!NOTE]
+> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
 
 1. 먼저 [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 와 fetch할 이미지인 [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) 을 다운받습니다.
 2. HTML {{htmlelement("body")}} 하단에 {{htmlelement("script")}} 엘리먼트를 삽입합니다.
@@ -178,7 +181,8 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
 4. 작업이 성공적으로 진행될 때를 대응하기 위해 (이번 예제에선 {{domxref("Response")}} 가 반환될 때 입니다. ), 우리는 Promise 오브젝트의 [`.then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 호출합니다. `.then()` 블럭 안의 callback은 (**executor** 라고 부름) Promise가 성공적으로 완료되고{{domxref("Response")}} 오브젝트를 반환할 때만 실행합니다. — 이렇게 성공한 Promise의 상태를 **fulfilled**라고 부릅니다. 그리고 반환된 {{domxref("Response")}} 오브젝트를 매개변수로 전달합니다.
 
-   > **참고:** The way that a `.then()` block works is similar to when you add an event listener to an object using `AddEventListener()`. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a .then() will only run once for each time it is used, whereas an event listener could be invoked multiple times.
+   > [!NOTE]
+   > The way that a `.then()` block works is similar to when you add an event listener to an object using `AddEventListener()`. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a .then() will only run once for each time it is used, whereas an event listener could be invoked multiple times.
 
    그리고 즉시 `blob()` 메서드를 실행하여 Response Body가 완전히 다운로드 됐는지 확인합니다. 그리고 Response Body가 이용 가능할 때 추가 작업을 할 수 있는 `Blob` 오브젝트로 변환시킵니다. 해당 코드는 아래와 같이 작성할 수 있습니다. :
 
@@ -221,7 +225,8 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
 If you save the HTML file you've just created and load it in your browser, you'll see that the image is displayed in the page as expected. Good work!
 
-> **참고:** You will probably notice that these examples are somewhat contrived. You could just do away with the whole `fetch()` and `blob()` chain, and just create an `<img>` element and set its `src` attribute value to the URL of the image file, `coffee.jpg`. We did, however, pick this example because it demonstrates promises in a nice simple fashion, rather than for its real-world appropriateness.
+> [!NOTE]
+> You will probably notice that these examples are somewhat contrived. You could just do away with the whole `fetch()` and `blob()` chain, and just create an `<img>` element and set its `src` attribute value to the URL of the image file, `coffee.jpg`. We did, however, pick this example because it demonstrates promises in a nice simple fashion, rather than for its real-world appropriateness.
 
 ### Responding to failure
 
@@ -239,7 +244,8 @@ let errorCase = promise3.catch((e) => {
 
 물론 `.catch()` 블록 없이 코드를 작동시킬 수 있습니다. 하지만 좀 더 깊게 생각해보면 `.catch()` 블록이 없으면 어떤 에러가 발생했는지, 어떻게 해결해야 하는지 디버깅이 어렵습니다. 실제 앱에서 `.catch()` 을 사용하여 이미지 가져오기를 다시 실행하거나, 기본 이미지를 표시하는 등 작업을 지시할 수 있습니다.
 
-> **참고:** You can see [our version of the example live](https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html) also).
+> [!NOTE]
+> You can see [our version of the example live](https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch.html) (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch.html) also).
 
 ### Chaining the blocks together
 
@@ -385,9 +391,11 @@ Promise.all([a, b, c]).then(values => {
 
 여기서 제공한 코드는 매우 기초적이지만, 내용을 전달하기에는 아주 좋습니다..
 
-> **참고:** If you get stuck, you can compare your version of the code to ours, to see what it is meant to look like — [see it live](https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html), and see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html).
+> [!NOTE]
+> If you get stuck, you can compare your version of the code to ours, to see what it is meant to look like — [see it live](https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html), and see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html).
 
-> **참고:** If you were improving this code, you might want to loop through a list of items to display, fetching and decoding each one, and then loop through the results inside `Promise.all()`, running a different function to display each one depending on what the type of code was. This would make it work for any number of items, not just three.
+> [!NOTE]
+> If you were improving this code, you might want to loop through a list of items to display, fetching and decoding each one, and then loop through the results inside `Promise.all()`, running a different function to display each one depending on what the type of code was. This would make it work for any number of items, not just three.
 >
 > Also, you could determine what the type of file is being fetched without needing an explicit `type` property. You could, for example, check the {{HTTPHeader("Content-Type")}} HTTP header of the response in each case using [`response.headers.get("content-type")`](/ko/docs/Web/API/Headers/get), and then react accordingly.
 
@@ -460,7 +468,7 @@ function fetchAndDecode(url, type) {
 
 [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) constructor를 사용하여 사용자 정의 Promise를 만들 수 있습니다. 주로 Promise기반이 아닌 구식 비동기 API코드를 Promise기반 코드로 만들고 싶을 경우 사용합니다. 이 방법은 구식 프로젝트 코드, 라이브러리, 혹은 프레임워크를 지금의 Promise 코드와 함께 사용할 때 유용합니다.
 
-간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
+간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/Window/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
 
 ```js
 let timeoutPromise = new Promise((resolve, reject) => {
@@ -490,7 +498,8 @@ Try [running this live](https://mdn.github.io/learning-area/javascript/asynchron
 
 위의 예시는 유연하게 적용된 예시가 아닙니다. — Promise는 항산 하나의 문자열로만 fulfil됩니다. 그리고 [`reject()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 조건도 정의되어있지 않습니다. (사실, `setTimeout()` 은 실패 조건이 필요없습니다, 그러니 이 예제에서는 없어도 됩니다.).
 
-> **참고:** Why `resolve()`, and not `fulfill()`? The answer we'll give you, for now, is _it's complicated_.
+> [!NOTE]
+> Why `resolve()`, and not `fulfill()`? The answer we'll give you, for now, is _it's complicated_.
 
 ### Rejecting a custom promise
 
@@ -538,7 +547,8 @@ timeoutPromise("Hello there!", 1000)
 
 이 코드를 저장하고 브라우저를 새로 고침하면 1초 후에 'Hello there!' alert가 출력될 것 입니다. 이제 메시지 내용을 비우거나 interval을 음수로 지정해보세요 그렇게 하면 Promise가 reject되며 에러 메시지를 콘솔에 출력해 줄 것입니다. 또한 resolved 메시지를 다르게 만들어 줄 수도 있습니다.
 
-> **참고:** You can find our version of this example on GitHub as [custom-promise2.html](https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html)).
+> [!NOTE]
+> You can find our version of this example on GitHub as [custom-promise2.html](https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise2.html) (see also the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise2.html)).
 
 ### A more real-world example
 
@@ -562,8 +572,8 @@ function promisifyRequest(request) {
 
 우리가 했던것 처럼 적절한 타이밍에 Promise를 fulfil하고 reject하는 이벤트 핸들러를 두 개 추가했습니다. :
 
-- [`request`](/ko/docs/Web/API/IDBRequest)의 [`success` event](/ko/docs/Web/API/IDBRequest/success_event)가 실행될 때, [`onsuccess`](/ko/docs/Web/API/IDBRequest/onsuccess) 핸들러에 의해 fulfill된 Promise의 request [`result`](/ko/docs/Web/API/IDBRequest/result)를 반환한다.
-- 반면 [`request`](/ko/docs/Web/API/IDBRequest)'s [`error` event](/ko/docs/Web/API/IDBRequest/error_event)가 실행되면 [`onerror`](/ko/docs/Web/API/IDBRequest/onerror) 핸들러에 의해 reject된 Promise의 request [`error`](/ko/docs/Web/API/IDBRequest/error)를 반환한다.
+- [`request`](/ko/docs/Web/API/IDBRequest)의 [`success` event](/ko/docs/Web/API/IDBRequest/success_event)가 실행될 때, [`onsuccess`](/ko/docs/Web/API/IDBRequest/success_event) 핸들러에 의해 fulfill된 Promise의 request [`result`](/ko/docs/Web/API/IDBRequest/result)를 반환한다.
+- 반면 [`request`](/ko/docs/Web/API/IDBRequest)'s [`error` event](/ko/docs/Web/API/IDBRequest/error_event)가 실행되면 [`onerror`](/ko/docs/Web/API/IDBRequest/error_event) 핸들러에 의해 reject된 Promise의 request [`error`](/ko/docs/Web/API/IDBRequest/error)를 반환한다.
 
 ## Conclusion
 
@@ -573,7 +583,7 @@ Promises work in the latest versions of all modern browsers; the only place wher
 
 We didn't touch on all promise features in this article, just the most interesting and useful ones. As you start to learn more about promises, you'll come across further features and techniques.
 
-Most modern Web APIs are promise-based, so you'll need to understand promises to get the most out of them. Among those APIs are [WebRTC](/ko/docs/Web/API/WebRTC_API), [Web Audio API](/ko/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/ko/docs/Web/API/Media_Streams_API), and many more. Promises will be more and more important as time goes on, so learning to use and understand them is an important step in learning modern JavaScript.
+Most modern Web APIs are promise-based, so you'll need to understand promises to get the most out of them. Among those APIs are [WebRTC](/ko/docs/Web/API/WebRTC_API), [Web Audio API](/ko/docs/Web/API/Web_Audio_API), [Media Capture and Streams](/ko/docs/Web/API/Media_Capture_and_Streams_API), and many more. Promises will be more and more important as time goes on, so learning to use and understand them is an important step in learning modern JavaScript.
 
 ## See also
 

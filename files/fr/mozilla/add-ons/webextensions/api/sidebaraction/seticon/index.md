@@ -11,11 +11,11 @@ Vous pouvez spécifier une icône unique comme chemin d'accès à un fichier ima
 
 Vous pouvez spécifier plusieurs icônes de différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Types d'icônes
 
-Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle _"manifest icon"_.
+Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest [sidebar_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle _"manifest icon"_.
 
 Si vous ne spécifiez pas d'icône dans la clé `sidebar_action`, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
 
@@ -52,7 +52,7 @@ var settingIcon = browser.sidebarAction.setIcon(
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choisir les tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choisir les tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
 
     - `path`{{optional_inline}}
 
@@ -67,7 +67,7 @@ var settingIcon = browser.sidebarAction.setIcon(
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choosir les tailles d'icônes](/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes) pour plus d'informations à ce sujet.
+        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choosir les tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
 
         si `path` est une chaîne vide, le navigateur utilisera l'icône par défaut.
 
@@ -89,7 +89,7 @@ var settingIcon = browser.sidebarAction.setIcon(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument une fois l'icône définie.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument une fois l'icône définie.
 
 ## Exemples
 
@@ -123,6 +123,6 @@ browser.browserAction.onClicked.addListener(toggle);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
 > Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).

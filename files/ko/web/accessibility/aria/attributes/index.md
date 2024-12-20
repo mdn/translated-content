@@ -9,7 +9,8 @@ l10n:
 
 <abbr>ARIA</abbr> 속성을 사용하면 접근성 트리에 정의된 대로 요소의 상태와 속성을 수정할 수 있습니다.
 
-> **참고:** ARIA는 접근성 트리만을 수정하여 보조 기술이 사용자에게 컨텐츠를 제공하는 방법을 수정합니다. ARIA는 요소의 기능이나 동작에 대해 아무것도 변경하지 않습니다. 의도된 목적과 기본 기능을 위해 시맨틱 HTML 요소를 사용하지 않을 때는 행동, 포커스 및 ARIA 상태를 관리하기 위해 JavaScript를 사용해야 합니다.
+> [!NOTE]
+> ARIA는 접근성 트리만을 수정하여 보조 기술이 사용자에게 컨텐츠를 제공하는 방법을 수정합니다. ARIA는 요소의 기능이나 동작에 대해 아무것도 변경하지 않습니다. 의도된 목적과 기본 기능을 위해 시맨틱 HTML 요소를 사용하지 않을 때는 행동, 포커스 및 ARIA 상태를 관리하기 위해 JavaScript를 사용해야 합니다.
 
 ## ARIA 속성 유형
 
@@ -103,7 +104,7 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
 - [`aria-relevant`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-"특뱔한 상황에서만 금지된다"는 의미에서 위의 모든 속성들은 전역 속성입니다. 단, `aria-label` 및 `aria-labelledby` 속성은 [`presentation`](/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role) 역할 또는 동일한 의미의 [`none`](/ko/docs/Web/Accessibility/ARIA/Roles/none_role) 역할을 갖는 요소들에는 허용되지 않습니다.
+"특별한 상황에서만 금지된다"는 의미에서 위의 모든 속성들은 전역 속성입니다. 단, `aria-label` 및 `aria-labelledby` 속성은 [`presentation`](/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role) 역할 또는 동일한 의미의 [`none`](/ko/docs/Web/Accessibility/ARIA/Roles/none_role) 역할을 갖는 요소들에는 허용되지 않습니다.
 
 ## MDN에 정의된 상태와 속성들
 

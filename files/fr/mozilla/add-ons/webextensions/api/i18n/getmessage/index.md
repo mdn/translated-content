@@ -70,9 +70,9 @@ Si `target.url` est "https\://developer.mozilla.org", alors la valeur de message
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/extensions/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

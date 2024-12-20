@@ -82,7 +82,7 @@ Deberías:
 - Asegurarte de que los títulos destaquen del texto del cuerpo, generalmente grandes y en negrita como estilo predeterminado. Tus listas deben parecer
 - El color del texto debe contrastar bien con el color de fondo.
 
-Consulte [Fundamentos del texto HTML](/es/docs/Learn/HTML/Introduccion_a_HTML/texto) y [Estilo de texto](/es/docs/Learn/CSS/Styling_text) para obtener más información.
+Consulte [Fundamentos del texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) y [Estilo de texto](/es/docs/Learn/CSS/Styling_text) para obtener más información.
 
 #### Texto enfatizado
 
@@ -127,7 +127,7 @@ abbr {
 }
 ```
 
-La convención de estilo reconocida para las abreviaturas es un subrayado punteado, y no es aconsejable desviarse significativamente de esto. Para obtener más información sobre abreviaturas, consulte [Abreviaturas](/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting#Abreviaturas).
+La convención de estilo reconocida para las abreviaturas es un subrayado punteado, y no es aconsejable desviarse significativamente de esto. Para obtener más información sobre abreviaturas, consulte [Abreviaturas](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abreviaturas).
 
 #### Enlaces
 
@@ -188,7 +188,7 @@ Sin embargo, no debes desviarse demasiado de la retroalimentación visual espera
 
 Tablas para presentar datos tabulares.
 
-Puedes ver un buen y simple ejemplo de tabla HTML y CSS en nuestro ejemplo [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) ([pruébalo en vivo](http://mdn.github.io/learning-area/accessibility/css/table-css.html) también).
+Puedes ver un buen y simple ejemplo de tabla HTML y CSS en nuestro ejemplo [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) ([pruébalo en vivo](https://mdn.github.io/learning-area/accessibility/css/table-css.html) también).
 
 El CSS de tablas generalmente sirve para hacer que la tabla se adapte mejor a su diseño y se vea menos fea. Es una buena idea asegurarse de que los encabezados de la tabla se destaquen (normalmente en negrita) y usar rayas de cebra para que las diferentes filas sean más fáciles de analizar.
 
@@ -196,15 +196,16 @@ El CSS de tablas generalmente sirve para hacer que la tabla se adapte mejor a su
 
 Al elegir un esquema de color para tu sitio web, asegúrate de que el color del texto (primer plano) contrasta bien con el color de fondo. Tu diseño puede verse bien, pero no es bueno si las personas con discapacidades visuales como daltonismo no pueden leer tu contenido.
 
-Existe una manera fácil de verificar si el contraste es lo suficientemente grande como para no causar problemas. Hay una serie de herramientas de verificación de contraste en línea en las que puede introduci los colores de primer plano y de fondo para verificarlos. Por ejemplo, el [Comprobador de contraste de color](http://webaim.org/resources/contrastchecker/) de WebAIM es fácil de usar y proporciona una explicación de lo que necesitas para cumplir con los criterios WCAG sobre el contraste de color.
+Existe una manera fácil de verificar si el contraste es lo suficientemente grande como para no causar problemas. Hay una serie de herramientas de verificación de contraste en línea en las que puede introduci los colores de primer plano y de fondo para verificarlos. Por ejemplo, el [Comprobador de contraste de color](https://webaim.org/resources/contrastchecker/) de WebAIM es fácil de usar y proporciona una explicación de lo que necesitas para cumplir con los criterios WCAG sobre el contraste de color.
 
-> **Nota:** una relación de contraste alta también permitirá que cualquier persona que utilice un teléfono inteligente o una tableta con una pantalla brillante lea mejor las páginas cuando se encuentre en un entorno brillante, como a la luz del sol.
+> [!NOTE]
+> Una relación de contraste alta también permitirá que cualquier persona que utilice un teléfono inteligente o una tableta con una pantalla brillante lea mejor las páginas cuando se encuentre en un entorno brillante, como a la luz del sol.
 
 Otro consejo es no confiar solo en el color para las señales / información, ya que esto no será bueno para aquellos que no pueden ver el color. En lugar de marcar los campos de formulario obligatorios en rojo, por ejemplo, márcalos con un asterisco y en rojo.
 
 ### Esconder cosas
 
-Hay muchos casos en los que un diseño visual requerirá que no se muestre todo el contenido a la vez. Por ejemplo, en nuestro ejemplo de [cuadro de información con pestañas](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (ver [código fuente](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) tenemos tres paneles de información, pero los colocamos uno encima del otro y proporcionamos pestañas en las que se puede hacer clic para mostrar cada uno (también es accesible desde el teclado - pues usar alternativamente Tab y Enter / Return para seleccionarlos).
+Hay muchos casos en los que un diseño visual requerirá que no se muestre todo el contenido a la vez. Por ejemplo, en nuestro ejemplo de [cuadro de información con pestañas](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (ver [código fuente](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)) tenemos tres paneles de información, pero los colocamos uno encima del otro y proporcionamos pestañas en las que se puede hacer clic para mostrar cada uno (también es accesible desde el teclado - pues usar alternativamente Tab y Enter / Return para seleccionarlos).
 
 ![](tabbed-info-box.png)
 
@@ -212,7 +213,7 @@ A los usuarios de lectores de pantalla no les importa nada de esto: están conte
 
 Por otro lado, no debes usar {{cssxref ("visibility")}}`: hidden` o {{cssxref ("display")}}`: none`, porque ocultan el contenido de los lectores de pantalla. A menos que, por supuesto, exista una buena razón por la que desees ocultar este contenido a los lectores de pantalla.
 
-> **Nota:** [Invisible Content Just for Screen Reader Users](http://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
+> **Nota:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) tiene muchos más detalles útiles sobre este tema.
 
 ### Acepta que los usuarios pueden saltarse tus estilos
 
@@ -234,7 +235,7 @@ Se puede decir que el contenido y la funcionalidad simples son fáciles de hacer
 - Buena semántica: usar el elemento correcto para el trabajo correcto. Por ejemplo, asegúrate de usar encabezados y párrafos, y elementos {{htmlelement ("button")}} y {{htmlelement ("a")}}
 - Asegurarse de que el contenido esté disponible como texto, ya sea directamente como contenido de texto, buenas etiquetas de texto para los elementos de formulario o alternativas de texto, p.ej. texto alternativo para imágenes.
 
-También vimos un ejemplo de cómo usar JavaScript para incorporar la funcionalidad donde faltaba; consulta [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#Volver_a_añadir_la_accesibilidad_del_teclado). Esto no es ideal; en realidad, deberías usar el elemento correcto para el trabajo correcto, pero demuestra que es posible en situaciones en las que, por alguna razón, no puedes controlar el marcado que se utiliza. Otra forma de mejorar la accesibilidad de los widgets no semánticos que funcionan con JavaScript es utilizar WAI-ARIA para proporcionar semántica adicional para los usuarios de lectores de pantalla. El próximo artículo también cubrirá esto en detalle.
+También vimos un ejemplo de cómo usar JavaScript para incorporar la funcionalidad donde faltaba; consulta [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado). Esto no es ideal; en realidad, deberías usar el elemento correcto para el trabajo correcto, pero demuestra que es posible en situaciones en las que, por alguna razón, no puedes controlar el marcado que se utiliza. Otra forma de mejorar la accesibilidad de los widgets no semánticos que funcionan con JavaScript es utilizar WAI-ARIA para proporcionar semántica adicional para los usuarios de lectores de pantalla. El próximo artículo también cubrirá esto en detalle.
 
 Las funcionalidades complejas como los juegos en 3D no son tan fáciles de hacer accesibles: un juego en 3D complejo creado con [WebGL](/es/docs/Web/API/WebGL_API) se renderizará en un elemento {{htmlelement ("canvas")}}, que en este momento no tiene la capacidad de proporcionar alternativas de texto u otros información que pueden utilizar los usuarios con discapacidad visual grave. Se puede argumentar que un juego de este tipo no tiene realmente a este grupo de personas como parte de su público objetivo principal, y no sería razonable esperar que lo hicieras 100% accesible para las personas ciegas; sin embargo, podrías implementar controles de teclado para que sea utilizable por usuarios que no utilizan el ratóny hacer que el esquema de color sea lo suficientemente contrastante como para que lo puedan usar aquellos con deficiencias de color.
 
@@ -253,11 +254,12 @@ Entre los buenos ejemplos de usos de JavaScript no intrusivo se incluyen:
 - Proporcionar validación de formularios del lado del cliente, que alerta a los usuarios sobre problemas con las entradas de sus formularios rápidamente, sin tener que esperar a que el servidor verifique los datos. Si no está disponible, el formulario seguirá funcionando, pero la validación puede ser más lenta.
 - Proporcionar controles personalizados para `<video>` HTML5 a los que pueden acceder los usuarios que solo utilizan el teclado, junto con un enlace directo al video que se puede usar para acceder a él si JavaScript no está disponible (los controles del navegador predeterminados para `<video>` no son acccesibles por teclado en la mayoría de los navegadores).
 
-Como ejemplo, hemos escrito un ejemplo rápido y sucio de validación de formulario del lado del cliente: consulta [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (y también la [demostración en vivo](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Aquí verás un formulario simple; al intentar enviar el formulario con uno o ambos campos vacíos, el envío falla y aparece un cuadro de mensaje de error para indicar cuál es el problema.
+Como ejemplo, hemos escrito un ejemplo rápido y sucio de validación de formulario del lado del cliente: consulta [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (y también la [demostración en vivo](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Aquí verás un formulario simple; al intentar enviar el formulario con uno o ambos campos vacíos, el envío falla y aparece un cuadro de mensaje de error para indicar cuál es el problema.
 
 Este tipo de validación de formulario es no intrusiva: se puede usar el formulario perfectamente aunque JavaScript no esté disponible, y cualquier implementación de formulario razonable también tendrá activa la validación del lado del servidor, porque es demasiado fácil para los usuarios malintencionados eludir la validación del lado del cliente (por ejemplo, desactivando JavaScript en el navegador). La validación del lado del cliente sigue siendo realmente útil para informar de errores: los usuarios pueden saber los errores que cometen al instante, en lugar de tener que esperar un viaje de ida y vuelta al servidor y la recarga de la página. Esta es una clara ventaja de usabilidad.
 
-> **Nota:** la validación del lado del servidor no se ha implementado en esta simple demostración.
+> [!NOTE]
+> La validación del lado del servidor no se ha implementado en esta simple demostración.
 
 También hemos hecho que esta validación de formulario sea bastante accesible. Hemos utilizado elementos {{htmlelement ("label")}} para asegurarnos de que las etiquetas del formulario estén vinculadas de forma inequívoca a sus entradas, de modo que los lectores de pantalla puedan leerlas junto con ellas:
 
@@ -287,7 +289,8 @@ function validate(e) {
 }
 ```
 
-> **Nota:** En este ejemplo estamos ocultando y mostrando el cuadro de mensaje de error utilizando posicionamiento absoluto en lugar de otro método como la visibilidad o la visualización, porque no interfiere con que el lector de pantalla pueda leer su contenido.
+> [!NOTE]
+> En este ejemplo estamos ocultando y mostrando el cuadro de mensaje de error utilizando posicionamiento absoluto en lugar de otro método como la visibilidad o la visualización, porque no interfiere con que el lector de pantalla pueda leer su contenido.
 
 La validación real del formulario sería mucho más compleja que esto: querría verificar que el nombre entrado realmente parezca un nombre, la edad entrada sea realmente un número y sea realista (por ejemplo, no negativa y menor de 4 dígitos). Aquí acabamos de implementar una verificación simple de que se haya completado un valor en cada campo de entrada (`if(testItem.input.value === '')`).
 
@@ -317,7 +320,8 @@ function createLink(testItem) {
 
 Cada enlace tiene un doble propósito: te dice cuál es el error, y además puedes hacer clic en él / activarlo para ir directamente al elemento de entrada en cuestión y corregir la entrada.
 
-> **Nota:** La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
+> [!NOTE]
+> La parte `focus()` de este ejemplo es un poco complicada. Chrome y Edge darán foco al elemento al hacer clic en el enlace, sin necesidad del bloque `onclick` / `focus()`. Safari solo resaltará el elemento de formulario con el enlace por sí solo, por lo que necesita el bloque `onclick` / `focus()` para darle foco. Firefox no da foco a las entradas correctamente en este contexto, por lo que los usuarios de Firefox no pueden aprovechar esto en este momento (aunque todo lo demás funciona bien). El problema de Firefox debería solucionarse pronto; se está trabajando para que el comportamiento de Firefox sea igual al de otros navegadores (consulte [Error 277178 en Firefox](https://bugzil.la/277178)).
 
 Además, el `errorField` se coloca en la parte superior del orden de código (aunque se coloca de manera diferente en la interfaz de usuario usando CSS), lo que significa que los usuarios pueden averiguar exactamente qué está mal con los envíos de sus formularios y acceder a los elementos de entrada en cuestión retrocediendo hasta el inicio de la página.
 
@@ -331,9 +335,10 @@ Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostrac
 
 Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics) con mucho más detalle.
 
-> **Nota:** Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
+> [!NOTE]
+> Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
 
-> **Nota:** [Usable and Accessible Form Validation and Error Recovery](http://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
+> **Nota:** [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/), de WebAIM, proporciona más información útil sobre la validación de formularios accesibles.
 
 ### Otros potenciales problemas de accesibilidad de JavaScript
 
@@ -347,7 +352,7 @@ Para mitigar estos problemas, debes duplicar estos eventos con eventos similares
 
 Veamos un ejemplo que destaca cuándo esto podría ser útil. Tal vez queramos proporcionar una imagen en miniatura que muestre una versión más grande de la imagen cuando al colocar el ratón sobre ella o darle foco (como pasaría en un catálogo de productos de comercio electrónico).
 
-Hemos creado un ejemplo muy simple, que puedes encontrar en [mouse-and-keyboard-events.html](http://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). El código presenta dos funciones que muestran y ocultan la imagen ampliada; estas se ejecutan mediante las siguientes líneas que las configuran como controladores de eventos:
+Hemos creado un ejemplo muy simple, que puedes encontrar en [mouse-and-keyboard-events.html](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (consulta también el [código fuente](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). El código presenta dos funciones que muestran y ocultan la imagen ampliada; estas se ejecutan mediante las siguientes líneas que las configuran como controladores de eventos:
 
 ```js
 imgThumb.onmouseover = showImg;
@@ -359,7 +364,7 @@ imgThumb.onblur = hideImg;
 
 Las dos primeras líneas ejecutan las funciones cuando el puntero del ratón se desplaza sobre la miniatura y deja de hacerlo, respectivamente. Sin embargo, esto no nos permite acceder a la vista ampliada con el teclado; para hacerlo hemos incluido las dos últimas líneas, que ejecutan las funciones cuando la imagen toma y pierde el foco. Esto se puede hacer presionando el tabulador hasta llegar a la imagen, porque le hemos dado `tabindex="0"`.
 
-El evento de `click` es interesante: parece dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#Volver_a_añadir_la_accesibilidad_del_teclado)).
+El evento de `click` es interesante: parece dependiente del ratón, pero la mayoría de los navegadores activan los controladores de eventos `onclick` al presionar Enter / Return en un enlace o elemento de formulario que tenga foco, o cuando dicho elemento se toca en un dispositivo de pantalla táctil. Sin embargo, esto no funciona por defecto cuando permites que un evento no enfocable por defecto adquiera el foco usando tabindex; en tales casos, debe detectar específicamente cuándo se presiona esa tecla exacta (consulte [Volver a añadir la accesibilidad del teclado](/es/docs/Learn/Accessibility/HTML#volver_a_añadir_la_accesibilidad_del_teclado)).
 
 ## ¡Pon a prueba tus habilidades
 

@@ -21,19 +21,15 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 Поймите, что вы - не ваши пользователи — если ваш сайт работает на Macbook Pro или Galaxy Nexus, это не значит, что он будет работать так для всех пользователей — нужно сделать много тестов!
 
-> **Примечание:** Статья [сделаем веб доступным для всех](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) предоставляет более полезную информацию о различных браузерах, которые используют люди, их доле рынка и связанных с этим проблемах совместимости браузеров.
-
 Мы должны поговорить немного о терминологии. Для начала, когда мы говорим о сайтах, "работающих кросс-браузерной", на самом деле мы говорим о том, что они должны обеспечивать приемлемое удобство использования в разных браузерах. Это нормально, если сайт выглядит немного по-разному в разных браузерах, главное он должен обеспечивать полную функциональность.В современных браузерах вы можете сделать что-то анимированным или использовать 3D, тогда как в старых браузерах вы можете лишь показать плоскую картинку, предоставляющую ту же информацию. Если владелец сайта доволен, вы сделали своё дело.
 
 С другой стороны, плохо, когда сайт полноценно работает для обычных людей, но может быть совершенно недоступен для людей, имеющих проблемы со зрением, т.к. их приложения для чтения экрана не могут распознать информацию на сайте.
 
 Когда мы говорим "приемлемое количество браузеров", мы не говорим, что это должно быть 100% всех браузеров в мире — это почти невозможно. Вы можете собрать информацию о том, какими браузеры и устройства используют ваши пользователи (это мы обсудим во второй статье — см. [Gotta test 'em all?](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), но это ничего не гарантирует. Как веб-разработчик, вы должны определить для себя несколько браузеров и устройств, на которых код должен работать полностью, но кроме этого, вы должны писать код так, чтобы и другие браузеры были способны максимально использовать ваш сайт (defensive coding). Это одна из самых больших проблем веб-разработки.
 
-> **Примечание:** Мы разберём defensive coding позже в этом модуле.
-
 ## Почему возникают кросс-браузерные проблемы?
 
-Есть множество причин, почему возникают кросс-браузерные проблемы, и, заметьте, что сейчас мы говорим о проблемах, при которых некоторые вещи ведут себя по-разному в разных браузерах / устройствах / настройках просмотра. Прежде чем вы столкнётесь с проблемами браузера, вы должны исправить все ошибки в коде (см. [Отладка HTML](/ru/docs/Learn/HTML/Введение_в_HTML/Debugging_HTML), [Отладка CSS](/ru/docs/Learn/CSS/Introduction_to_CSS/Отладка_CSS), and [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/Первые_шаги/Что_пошло_не_так) из предыдущего раздела).
+Есть множество причин, почему возникают кросс-браузерные проблемы, и, заметьте, что сейчас мы говорим о проблемах, при которых некоторые вещи ведут себя по-разному в разных браузерах / устройствах / настройках просмотра. Прежде чем вы столкнётесь с проблемами браузера, вы должны исправить все ошибки в коде (см. [Отладка HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [Что пошло не так? Устранение ошибок JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong) из предыдущего раздела).
 
 Кросс-браузерные проблемы возникают потому-что:
 
@@ -69,7 +65,8 @@ Now you know your target testing platforms, you should go back and review the re
 
 You should compile a list of the potential problem areas.
 
-> **Примечание:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
+> [!NOTE]
+> You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](http://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 
@@ -122,7 +119,7 @@ It is often a good idea to test on prerelease versions of browsers; see the foll
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-- [Opera Developer](http://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/computer/beta)
 
 This is especially prevalent if you are using very new technologies in your site, and you want to test against the latest implementations, or if you are coming across a bug in the latest release version of a browser, and you want to see if the browser's developers have fixed the bug in a newer version.
 
@@ -134,7 +131,7 @@ The first thing to do is to narrow down where the bug occurs as much as possible
 
 It might not be your fault — if a bug exists in a browser, then hopefully the vendor will rapidly fix it. It might have already been fixed — for example if a bug is present in Firefox release 49, but it is no longer there in Firefox Nightly (version 52), then they have fixed it. If it is not fixed, then you may want to file a bug (see [Reporting bugs](#reporting_bugs), below).
 
-If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see [Debugging HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/ru/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.
+If it is your fault, you need to fix it! Finding out the cause of the bug involves the same strategy as any web development bug (again, see [Debugging HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS), and [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)). Once you've discovered what is causing your bug, you need to decide how to work around it in the particular browser it is causing problems in — you can't just change the problem code outright, as this may break the code in other browsers. The general approach is usually to fork the code in some way, for example use JavaScript feature detection code to detect situations in which a problem feature doesn't work, and run some different code in those cases that does work.
 
 Once a fix has been made, you'll want to repeat your testing process to make sure your fix is working OK, and hasn't caused the site to break in other places or in other browsers.
 

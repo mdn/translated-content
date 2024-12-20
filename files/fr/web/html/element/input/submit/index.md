@@ -33,13 +33,13 @@ Si on n'indique aucune valeur, ce sera un texte par défaut (dépendant du navig
 
 En complément des attributs pris en charge par l'ensemble des éléments {{HTMLElement("input")}}, les boutons `"submit"` permettent d'utiliser les attributs suivants :
 
-| Attribut                            | Description                                                                                                                                                                                                               |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire s'il est défini.                                             |
-| [`formenctype`](#formenctype)       | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                                        |
-| [`formmethod`](#formmethod)         | La méthode HTTP ({{HTTPMethod("get")}} ou {{HTTPMethod("post")}}) à utiliser pour envoyer le formulaire.                                                                                                                  |
-| [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) avant l'envoi des données au serveur. |
-| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                                    |
+| Attribut                            | Description                                                                                                                                                                                                   |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut [`action`](/fr/docs/Web/HTML/Element/form#action) du formulaire s'il est défini.                                 |
+| [`formenctype`](#formenctype)       | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                            |
+| [`formmethod`](#formmethod)         | La méthode HTTP ({{HTTPMethod("get")}} ou {{HTTPMethod("post")}}) à utiliser pour envoyer le formulaire.                                                                                                      |
+| [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/HTML/Constraint_validation) avant l'envoi des données au serveur. |
+| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                        |
 
 ### `formaction`
 
@@ -126,7 +126,7 @@ Voici le résultat obtenu :
 
 Pour tester, vous pouvez saisir un texte dans le champ puis cliquer sur le bouton.
 
-Lorsque le formulaire est envoyé, les paires formées par les noms et les valeurs seront envoyées au serveur. Dans le cas précédent, la donnée envoyée aura la forme `text=monTexte` (la deuxième partie varie selon le texte saisi). La destination et la méthode utilisées pour l'envoi des données dépend des attributs utilisés sur l'élément `<form>` (ainsi que d'autres détails). Pour plus d'informations, vous pouvez lire [Envoyer les données d'un formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires).
+Lorsque le formulaire est envoyé, les paires formées par les noms et les valeurs seront envoyées au serveur. Dans le cas précédent, la donnée envoyée aura la forme `text=monTexte` (la deuxième partie varie selon le texte saisi). La destination et la méthode utilisées pour l'envoi des données dépend des attributs utilisés sur l'élément `<form>` (ainsi que d'autres détails). Pour plus d'informations, vous pouvez lire [Envoyer les données d'un formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data).
 
 ### Ajouter un raccourci clavier
 
@@ -148,7 +148,8 @@ Dans l'exemple qui suit, on définit <kbd>s</kbd> comme raccourci (autrement dit
 
 {{EmbedLiveSample("Ajouter_un_raccourci_clavier", 650, 100)}}
 
-> **Note :** Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.
+> [!NOTE]
+> Un problème de cet exemple est que l'utilisateur ne saura pas quelle touche utiliser comme raccourci. Dans un cas concret, cette information serait affichée ou fournie via un lien simple d'accès qui décrirait les raccourcis disponibles.
 
 ### Activer et désactiver un bouton d'envoi
 
@@ -160,9 +161,11 @@ Si on souhaite désactiver un bouton, il sufft d'utiliser l'attribut booléen un
 
 Pour activer / désactiver le bouton dynamiquement, on pourra manipuler l'attribut DOM `disabled` avec la valeur `true` ou `false` en JavaScript (avec une instruction similaire à `btn.disabled = true`).
 
-> **Note :** Voir la page [`<input type="button">`](/fr/docs/Web/HTML/Element/Input/button#Désactiver_et_activer_un_bouton) pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.
+> [!NOTE]
+> Voir la page [`<input type="button">`](/fr/docs/Web/HTML/Element/input/button#d%c3%a9sactiver_et_activer_un_bouton) pour plus d'exemples concernant l'activation/désactivation des boutons liés à un formulaire.
 
-> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
+> [!NOTE]
+> À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -217,5 +220,5 @@ Voir les exemples ci-avant.
 - L'élément {{HTMLElement("input")}} et l'interface DOM {{domxref("HTMLInputElement")}} qu'il implémente
 - L'élément {{HTMLElement("button")}}.
 - [Apprendre les formulaires et les boutons](/fr/docs/Learn/HTML/Forms_and_buttons)
-- [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA/forms)
-- [Les formulaires HTML](/fr/docs/Learn/HTML/Forms)
+- [L'accessibilité et les formulaires](/fr/docs/Web/Accessibility/ARIA)
+- [Les formulaires HTML](/fr/docs/Learn/Forms)

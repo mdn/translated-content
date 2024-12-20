@@ -27,7 +27,8 @@ De nombreux sites web ont des pages qui permettent de créer un compte ou de s'a
 - [`navigator.credentials.get()`](/fr/docs/Web/API/CredentialsContainer/get)
   - : Lorsqu'elle est utilisée avec l'option `publicKey`, elle utilise des informations d'authentification existantes afin de s'authentifier sur un service, pour connecter la personne ou comme deuxième facteur d'authentification.
 
-> **Note :** Ces deux méthodes, `create()` et `get()`, doivent être utilisées depuis [un contexte securisé](/fr/docs/Web/Security/Secure_Contexts) (c'est-à-dire que la connexion au serveur soit en HTTPS ou que le site soit servi depuis localhost). Elles ne seront pas disponibles si le navigateur n'est pas dans un tel contexte.
+> [!NOTE]
+> Ces deux méthodes, `create()` et `get()`, doivent être utilisées depuis [un contexte securisé](/fr/docs/Web/Security/Secure_Contexts) (c'est-à-dire que la connexion au serveur soit en HTTPS ou que le site soit servi depuis localhost). Elles ne seront pas disponibles si le navigateur n'est pas dans un tel contexte.
 
 Dans leurs formes les plus simples, `create()` et `get()` reçoivent un grand nombre aléatoire appelé «&nbsp;challenge&nbsp;» de la part du serveur et renvoient au serveur le challenge signé avec la clé privée. Cela prouve au serveur que la personne est en possession de la clé privée requise pour l'authentification, sans révéler de secrets sur le réseau.
 
@@ -54,7 +55,8 @@ Les étapes suivantes sont&nbsp;:
 
    - Ces informations sont envoyées au programme JavaScript. Le protocole de communication avec le serveur ne fait pas partie de la spécification de l'API Web Authentication. Il s'agit généralement d'une communication via HTTPS en [REST](/fr/docs/Glossary/REST) (et qui utilisera probablement [l'API Fetch](/fr/docs/Web/API/Fetch_API) ou encore [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)) (en théorie, tout protocole sécurisé peut être utilisé). Les paramètres reçus du serveur seront passés lors de l'appel à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) (généralement avec peu ou pas de modification) qui renverra [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) contenant un objet [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse).
 
-   > **Attention :** Il est absolument nécessaire que le challenge soit un tampon mémoire d'informations aléatoires (d'au moins 16 octets) et qui soit généré sur le serveur afin de garantir la sécurité du processus d'enregistrement.
+   > [!WARNING]
+   > Il est absolument nécessaire que le challenge soit un tampon mémoire d'informations aléatoires (d'au moins 16 octets) et qui soit généré sur le serveur afin de garantir la sécurité du processus d'enregistrement.
 
 2. **Le navigateur appelle `authenticatorMakeCredential()` qui sollicite l'authentificateur.**
 
@@ -72,7 +74,8 @@ Les étapes suivantes sont&nbsp;:
 
    - La promesse fournie par `create()` est résolue en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential), possédant une propriété [`PublicKeyCredential.rawId`](/fr/docs/Web/API/PublicKeyCredential/rawId) qui correspond à l'identifiant d'authentification globalement unique et une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response) contenant le reste de la réponse sous la forme d'un objet [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse) qui contient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON) et [`AuthenticatorAttestationResponse.attestationObject`](/fr/docs/Web/API/AuthenticatorAttestationResponse/attestationObject). Cet objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) est renvoyé au serveur en utilisant le format et le protocole voulu.
 
-   > **Note :** Les propriétés qui sont des `ArrayBuffer` doivent être encodés en base64 ou d'une autre façon.
+   > [!NOTE]
+   > Les propriétés qui sont des `ArrayBuffer` doivent être encodés en base64 ou d'une autre façon.
 
 6. **Le serveur valide et finalise l'enregistrement.**
 
@@ -82,7 +85,8 @@ Les étapes suivantes sont&nbsp;:
       2. La vérification que l'origine correspond bien à l'origine attendu&nbsp;;
       3. La validation de la signature de l'empreinte des données du client et de l'attestation en utilisant la chaîne de certificats associée au modèle de l'authentificateur.
 
-      > **Note :** La liste complète des étapes de validation [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#registering-a-new-credential).
+      > [!NOTE]
+      > La liste complète des étapes de validation [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#registering-a-new-credential).
 
    2. Si toutes les vérifications sont réussies, le serveur enregistre la nouvelle clé publique pour le compte de la personne afin qu'elle puisse être utilisée par la suite (quand la personne s'authentifiera).
 
@@ -107,7 +111,8 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
 
    - Le serveur envoie un challenge au programme JavaScript. Le protocole de communication n'est pas détaillé par la spécification. Généralement, on a une requête HTTPS [REST](/fr/docs/Glossary/REST) (qui utilise [l'API Fetch](/fr/docs/Web/API/Fetch_API) ou encore [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)), mais il peut s'agir, en théorie, de n'importe quel protocole sécurisé. Les paramètres reçus du serveur sont passés à l'appel de la méthode [`get()`](/fr/docs/Web/API/CredentialsContainer/get) avec peu ou pas de modification.
 
-   > **Attention :** Il est crucial que le challenge soit un tampon d'informations aléatoires (au moins 16 octets) et que celui-ci ait été généré sur le serveur pour garantir la sécurité du processus d'authentification.
+   > [!WARNING]
+   > Il est crucial que le challenge soit un tampon d'informations aléatoires (au moins 16 octets) et que celui-ci ait été généré sur le serveur pour garantir la sécurité du processus d'authentification.
 
 2. **Le navigateur appelle `authenticatorGetCredential()` qui sollicite l'authentificateur.**
 
@@ -133,7 +138,8 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
       2. Vérifier que le challenge signé par l'authenticateur correspond à celui généré par le serveur.
       3. Vérifier que l'identifiant du tiers de confiance est celui attendu pour ce service.
 
-      > **Note :** La liste complète des étapes de validation d'une assertion [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#verifying-assertion).
+      > [!NOTE]
+      > La liste complète des étapes de validation d'une assertion [est détaillée dans la spécification de l'API](https://w3c.github.io/webauthn/#verifying-assertion).
 
    2. Si la validation est réussie, le serveur notera que la personne est authentifiée. Bien que cela ne soit pas dans le périmètre de la spécification de l'API, cela pourra par exemple se traduire par le dépôt d'un cookie pour la session de la personne.
 
@@ -173,7 +179,8 @@ On a ensuite ces étapes pour l'authentification&nbsp;:
 
 ### Exemple d'utilisation
 
-> **Attention :** Pour des raisons de sécurité, les appels à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) et [`get()`](/fr/docs/Web/API/CredentialsContainer/get) sont annulés si la fenêtre du navigateur perd le focus lorsque l'appel est en attente.
+> [!WARNING]
+> Pour des raisons de sécurité, les appels à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) et [`get()`](/fr/docs/Web/API/CredentialsContainer/get) sont annulés si la fenêtre du navigateur perd le focus lorsque l'appel est en attente.
 
 ```js
 // des arguments d'exemple pour un enregistrement

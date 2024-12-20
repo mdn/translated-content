@@ -84,7 +84,7 @@ MyClass.prototype.myMethod = function () {
 };
 ```
 
-[Object.assign](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [.assign()](https://lodash.com/docs/#assign) 。
+[Object.assign](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 複製 OtherSuperClass 原型上的所有屬性到 MyClass 的原型上，使所有 MyClass 的實例都能使用。Object.assign 為 ES2015 標準且[有 polyfill](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill)。如需支援較舊的瀏覽器，可使用第三方套件實現如 [jQuery.extend()](https://api.jquery.com/jQuery.extend/) 或 [.assign()](https://lodash.com/docs/#assign) 。
 
 ### `propertiesObject` 參數的使用
 
@@ -196,4 +196,4 @@ if (typeof Object.create !== "function") {
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- John Resig's post on [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)

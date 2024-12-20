@@ -25,7 +25,8 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Это достигается с помощью таких API, как {{domxref("XMLHttpRequest")}} или - более новой - [Fetch API](/ru/docs/Web/API/Fetch_API). Эти технологии позволяют веб-страницам напрямую обрабатывать запросы [HTTP](/ru/docs/Web/HTTP) для определённых ресурсов, доступных на сервере, и форматировать результирующие данные по мере необходимости перед их отображением.
 
-> **Примечание:** Вначале эта общая техника была известна как Асинхронный JavaScript и XML (Ajax), поскольку она, как правило, использовала {{domxref("XMLHttpRequest")}} для запроса данных XML. В наши дни это обычно не так (вы, скорее всего, будете использовать `XMLHttpRequest` или Fetch для запроса JSON), но результат все тот же, и термин «Ajax» по-прежнему часто используется для описания этой техники.
+> [!NOTE]
+> Вначале эта общая техника была известна как Асинхронный JavaScript и XML (Ajax), поскольку она, как правило, использовала {{domxref("XMLHttpRequest")}} для запроса данных XML. В наши дни это обычно не так (вы, скорее всего, будете использовать `XMLHttpRequest` или Fetch для запроса JSON), но результат все тот же, и термин «Ajax» по-прежнему часто используется для описания этой техники.
 
 ![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
@@ -74,7 +75,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 4. Мы начнём нашу функцию с создания относительного URL-адреса, указывающего на текстовый файл, который мы хотим загрузить и который понадобится нам позже. Значение элемента {{htmlelement("select")}} в любой момент совпадает с текстом внутри выбранного {{htmlelement("option")}} (если вы не укажете другое значение в атрибуте value) - например, «Verse 1». Соответствующий текстовый файл стиха является «verse1.txt» и находится в том же каталоге, что и файл HTML, поэтому будет использоваться только имя файла.
 
-   Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой [конкатенации строк](/ru/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings). Добавьте следующие строки внутри функции `updateDisplay()`:
+   Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой [конкатенации строк](/ru/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings). Добавьте следующие строки внутри функции `updateDisplay()`:
 
    ```js
    verse = verse.replace(" ", "");
@@ -100,7 +101,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
    request.responseType = "text";
    ```
 
-8. Получение ресурса из сети - это {{glossary("asynchronous")}} операция, означающая, что вам нужно дождаться завершения этой операции (например, ресурс возвращается из сети), прежде чем вы сможете сделать что-либо с этим ответом, иначе будет выброшена ошибка. XHR позволяет вам обрабатывать это, используя обработчик события {{domxref("XMLHttpRequest.onload", "onload")}} - он запускается при возникновении события {{event("load")}} (когда ответ вернулся). Когда это произойдёт, данные ответа будут доступны в свойстве `response` (ответ) объекта запроса XHR.
+8. Получение ресурса из сети - это {{glossary("asynchronous")}} операция, означающая, что вам нужно дождаться завершения этой операции (например, ресурс возвращается из сети), прежде чем вы сможете сделать что-либо с этим ответом, иначе будет выброшена ошибка. XHR позволяет вам обрабатывать это, используя обработчик события {{domxref("XMLHttpRequest.onload", "onload")}} - он запускается при возникновении события [`load`](/ru/docs/Web/API/Window/load_event) (когда ответ вернулся). Когда это произойдёт, данные ответа будут доступны в свойстве `response` (ответ) объекта запроса XHR.
 
    Добавьте следующее ниже вашего последнего дополнения. Вы увидите, что внутри обработчика события `onload` мы устанавливаем textContent `poemDisplay` (элемент {{htmlelement("pre")}}) в значение {{domxref("XMLHttpRequest.response", "request. response ")}}.
 
@@ -127,7 +128,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Некоторые браузеры (включая Chrome) не будут запускать запросы XHR, если вы просто запускаете пример из локального файла. Это связано с ограничениями безопасности (для получения дополнительной информации о безопасности в Интернете, ознакомьтесь с [Website security](/ru/docs/Learn/Server-side/First_steps/Website_security)).
 
-Чтобы обойти это, нам нужно протестировать пример, запустив его через локальный веб-сервер. Чтобы узнать, как это сделать, прочитайте [Как настроить локальный тестовый сервер?](/ru/docs/Learn/Common_questions/set_up_a_local_testing_server)
+Чтобы обойти это, нам нужно протестировать пример, запустив его через локальный веб-сервер. Чтобы узнать, как это сделать, прочитайте [Как настроить локальный тестовый сервер?](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
 
 ### Fetch
 
@@ -339,7 +340,8 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
   - О наилучшем эквиваленте Fetch's `response.ok` в XHR следует проверить, является ли {{domxref("XMLHttpRequest.status","request.status")}} равным 200 или если {{domxref("XMLHttpRequest.readyState","request.readyState")}} равно 4.
   - Свойства для получения статуса и сообщения состояния одинаковы, но они находятся на объекте `request` (XHR), а не в объекте `response`.
 
-> **Примечание:** Если у вас есть проблемы с этим, не стесняйтесь сравнить свой код с готовой версией на GitHub ([см. исходник здесь](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js), а также [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)).
+> [!NOTE]
+> Если у вас есть проблемы с этим, не стесняйтесь сравнить свой код с готовой версией на GitHub ([см. исходник здесь](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js), а также [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/)).
 
 ## Резюме
 
@@ -349,7 +351,7 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
 
 Однако в этой статье обсуждается много разных тем, которые только поцарапали поверхность. Для получения более подробной информации по этим темам, попробуйте следующие статьи:
 
-- [Введение в Ajax](/ru/docs/AJAX/Getting_Started)
+- [Введение в Ajax](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [Применение Fetch](/ru/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Работа с JSON данными](/ru/docs/Learn/JavaScript/Objects/JSON)

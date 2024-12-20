@@ -66,10 +66,10 @@ for (const entry of Array.prototype.keys.call(arrayLike)) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.keys` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`Array.prototype[@@iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.keys()")}}
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -40,7 +40,8 @@ Os hiperlinks são realmente importantes — são o que torna a Web uma _web_. E
 
 Os hiperlinks são uma das inovações mais interessantes que a Web oferece. Bem, eles são uma característica da Web desde o início, mas são o que torna a Web como ela é — eles nos permitem vincular nossos documentos a qualquer outro documento (ou outro recurso) que queremos. Também podemos vincular para partes específicas de documentos e podemos disponibilizar aplicativos em um endereço web simples (em contraste com aplicativos nativos, que devem ser instalados e tantas outras coisas). Qualquer conteúdo da web pode ser convertido em um link, para que, quando clicado (ou ativado de outra forma) fará com que o navegador vá para outro endereço ({{glossary("URL")}}).
 
-> **Nota:** Um URL pode apontar para arquivos HTML, arquivos de texto, imagens, documentos de texto, arquivos de vídeo e áudio e qualquer outra coisa que possa estar na Web. Se o navegador não souber exibir ou manipular o arquivo, ele perguntará se você deseja abrir o arquivo (nesse caso, o dever de abrir ou manipular o arquivo é passado para um aplicativo nativo adequado no dispositivo) ou fazer o download dele (nesse caso, você pode tentar lidar com isso mais tarde).
+> [!NOTE]
+> Um URL pode apontar para arquivos HTML, arquivos de texto, imagens, documentos de texto, arquivos de vídeo e áudio e qualquer outra coisa que possa estar na Web. Se o navegador não souber exibir ou manipular o arquivo, ele perguntará se você deseja abrir o arquivo (nesse caso, o dever de abrir ou manipular o arquivo é passado para um aplicativo nativo adequado no dispositivo) ou fazer o download dele (nesse caso, você pode tentar lidar com isso mais tarde).
 
 A página inicial da BBC, por exemplo, contém um grande número de links que apontam não apenas para várias notícias, mas também diferentes áreas do site (funcionalidade de navegação), páginas de login/registro (ferramentas do usuário) e muito mais.
 
@@ -80,7 +81,8 @@ Isto nos dá o seguinte resultado (o título aparecerá como uma dica de ferrame
 
 Estou criando um link para [a página inicial da Mozilla](https://www.mozilla.org/pt-BR/).
 
-> **Nota:** Um título de link só é revelado ao passar o mouse sobre ele, o que significa que as pessoas que dependem do teclado ou _touchscreen_ para navegar em páginas web terão dificuldade em acessar a informação do título. Se a informação de um título é realmente importante para a usabilidade da página, então você deve apresentá-la de uma maneira que será acessível a todos os usuários, por exemplo, colocando-o no texto normal.
+> [!NOTE]
+> Um título de link só é revelado ao passar o mouse sobre ele, o que significa que as pessoas que dependem do teclado ou _touchscreen_ para navegar em páginas web terão dificuldade em acessar a informação do título. Se a informação de um título é realmente importante para a usabilidade da página, então você deve apresentá-la de uma maneira que será acessível a todos os usuários, por exemplo, colocando-o no texto normal.
 
 Aprendizagem na prática: criando seu próprio link de exemplo
 
@@ -92,7 +94,7 @@ Momento da aprendizagem na prática: gostaríamos que você criasse um documento
 
 ### Links de nível de bloco
 
-Como falamos anteriormente, você pode transformar qualquer conteúdo em um link, mesmo [elementos de nível de bloco](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started#Elementos_em_bloco_versus_elementos_inline). Se você tiver uma imagem que queira transformar em um link, você pode simplesmente colocar a imagem entre as tags `<a></a>`.
+Como falamos anteriormente, você pode transformar qualquer conteúdo em um link, mesmo [elementos de nível de bloco](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#elementos_em_bloco_versus_elementos_inline). Se você tiver uma imagem que queira transformar em um link, você pode simplesmente colocar a imagem entre as tags `<a></a>`.
 
 ```html
 <a href="https://www.mozilla.org/pt-BR/">
@@ -102,7 +104,8 @@ Como falamos anteriormente, você pode transformar qualquer conteúdo em um link
 </a>
 ```
 
-> **Nota:** Você descobrirá muito mais sobre o uso de imagens na Web em artigo posterior.
+> [!NOTE]
+> Você descobrirá muito mais sobre o uso de imagens na Web em artigo posterior.
 
 ## Um guia rápido sobre URLs e caminhos
 
@@ -145,7 +148,8 @@ Existem também dois diretórios dentro da nossa raiz — `pdfs` e `projects`. C
   </p>
   ```
 
-> **Nota:** Você pode combinar várias instâncias desses recursos em URLs complexas, se necessário, por exemplo`../../../complex/path/to/my/file.html`.
+> [!NOTE]
+> Você pode combinar várias instâncias desses recursos em URLs complexas, se necessário, por exemplo`../../../complex/path/to/my/file.html`.
 
 ### Fragmentos de documento
 
@@ -224,7 +228,7 @@ Outras dicas:
 A partir da descrição acima, você pode pensar que é uma boa idéia usar apenas links absolutos o tempo todo; Afinal, eles não quebram quando uma página é movida como pode ocorrer com _links relativos_. No entanto, você deve usar _links relativos_ sempre que possível ao vincular a outros locais dentro do mesmo site (ao vincular a outro site, você precisará usar um link absoluto):
 
 - Para começar, é muito mais fácil verificar seu código — os URL relativos geralmente são muito mais curtos que os URLs absolutos, o que torna o código de leitura muito mais fácil.
-- Em segundo lugar, é mais eficiente usar URLs relativas sempre que possível. Quando você usa um URL absoluto, o navegador começa procurando a localização real do servidor no Servidor de Nomes de Domínio "DNS"; veja [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona) para obter mais informações), então ele vai para esse servidor e encontra o arquivo que está sendo solicitado. Por outro lado, com um URL relativo, o navegador apenas procura o arquivo que está sendo solicitado, no mesmo servidor. Então, se você usa URLs absolutos para fazer o que os URLs relativos fariam, você está constantemente fazendo o seu navegador realizar trabalho extra, o que significa que ele irá executar de forma menos eficiente.
+- Em segundo lugar, é mais eficiente usar URLs relativas sempre que possível. Quando você usa um URL absoluto, o navegador começa procurando a localização real do servidor no Servidor de Nomes de Domínio "DNS"; veja [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works) para obter mais informações), então ele vai para esse servidor e encontra o arquivo que está sendo solicitado. Por outro lado, com um URL relativo, o navegador apenas procura o arquivo que está sendo solicitado, no mesmo servidor. Então, se você usa URLs absolutos para fazer o que os URLs relativos fariam, você está constantemente fazendo o seu navegador realizar trabalho extra, o que significa que ele irá executar de forma menos eficiente.
 
 ### Vinculando-se a recursos que não sejam HTML — deixe indicadores claros
 
@@ -289,7 +293,8 @@ O exemplo final acabaria por parecer algo assim:
 
 ![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
-> **Nota:** Se você ficar preso, ou não tem certeza se o fez bem, você pode verificar o diretório de [navegação-menu-marcado](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver a resposta correta.
+> [!NOTE]
+> Se você ficar preso, ou não tem certeza se o fez bem, você pode verificar o diretório de [navegação-menu-marcado](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver a resposta correta.
 
 ## Links de e-mail
 
@@ -318,7 +323,8 @@ Aqui está um exemplo que inclui um cc, bcc, assunto e corpo de texto:
 </a>
 ```
 
-> **Nota:** Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para entender para que esta notação de consulta é mais comum.
+> [!NOTE]
+> Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) para entender para que esta notação de consulta é mais comum.
 
 Aqui estão alguns outros exemplos de URLs de `mailto:`
 

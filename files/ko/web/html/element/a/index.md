@@ -5,7 +5,7 @@ slug: Web/HTML/Element/a
 
 {{HTMLSidebar}}
 
-**HTML `<a>` 요소**(앵커 요소)는 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
+**HTML `<a>` 요소**(앵커 요소)는 [`href`](#href) 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만듭니다. `<a>` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 합니다**.
 
 {{EmbedInteractiveExample("pages/tabbed/a.html")}}
 
@@ -21,7 +21,7 @@ slug: Web/HTML/Element/a
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 헤더
       - [URL 경로](/ko/docs/Web/API/URL/pathname)의 마지막 조각
-      - {{glossary("MIME type", "미디어 유형")}} ({{HTTPHeader("Content-Type")}} 헤더, [`data:` URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)의 시작 부분, [`blob:` URL](/ko/docs/Web/API/URL/createObjectURL)의 {{domxref("Blob.type")}}에서 알아냄)
+      - {{glossary("MIME type", "미디어 유형")}} ({{HTTPHeader("Content-Type")}} 헤더, [`data:` URL](/ko/docs/Web/URI/Schemes/data)의 시작 부분, [`blob:` URL](/ko/docs/Web/API/URL/createObjectURL_static)의 {{domxref("Blob.type")}}에서 알아냄)
 
     - 값을 지정하면 저장할 때의 파일 이름으로서 제안합니다. `/`와 `\` 문자는`_`로 변환합니다. 파일시스템에서 다른 문자도 제한할 수 있으므로, 필요한 경우 브라우저가 추가로 이름을 조정할 수 있습니다.
 
@@ -46,7 +46,7 @@ slug: Web/HTML/Element/a
 - `referrerpolicy` {{experimental_inline}}
   - : URL을 가져올 때 사용할 리퍼러. {{httpheader("Referrer-Policy")}} 문서에서 가능한 값과 효과를 확인하세요.
 - `rel`
-  - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Link_types) 목록.
+  - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Attributes/rel) 목록.
 - `target`
 
   - : 링크한 URL을 표시할 위치. 가능한 값은 브라우징 맥락으로, 즉 탭, 창, `<iframe>`의 이름이나 특정 키워드입니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
@@ -58,7 +58,8 @@ slug: Web/HTML/Element/a
 
     > **참고:** `target`을 사용할 때, `rel="noreferrer"`를 추가해 `window.opener` API의 악의적인 사용을 방지하는걸 고려하세요.
 
-    > **참고:** 최근의 브라우저(Firefox 79+ 등)에서는 target="\_blank"를 지정하면 `rel="noopener"`를 적용한 것과 같은 동작을 합니다.
+    > [!NOTE]
+    > 최근의 브라우저(Firefox 79+ 등)에서는 target="\_blank"를 지정하면 `rel="noopener"`를 적용한 것과 같은 동작을 합니다.
 
 - `type`
   - : 링크 URL의 {{Glossary("MIME type")}}에 대한 힌트. 특별한 내장 기능은 없습니다.
@@ -103,7 +104,7 @@ slug: Web/HTML/Element/a
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -232,7 +233,7 @@ a {
 
 ### `download` 특성으로 `<canvas>`를 PNG로 저장하기
 
-[`download`](/ko/docs/Web/HTML/Element/a#download) 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
+[`download`](#download) 특성과 `data:` URL을 사용해 {{HTMLElement("canvas")}} 요소의 콘텐츠를 이미지로 저장할 수 있습니다.
 
 #### 저장 링크를 가진 그림판 예제
 
@@ -419,7 +420,7 @@ document
 산문 내의 텍스트로만 이루어진 링크는 위 규칙에서 제외할 수 있지만, 그래도 활성화하기 쉬운 크기를 확보하는 것이 좋습니다.
 
 - [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5](http://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Target Size and 2.5.5](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
 - [Quick test: Large touch targets](https://a11yproject.com/posts/large-touch-targets/)
 
 #### 간격

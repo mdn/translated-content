@@ -2,7 +2,7 @@
 title: NavigatorUAData
 slug: Web/API/NavigatorUAData
 l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
@@ -11,7 +11,8 @@ l10n:
 
 通过调用 {{domxref("Navigator.userAgentData")}} 或 {{domxref("WorkerNavigator.userAgentData")}} 返回此对象的实例。因此，该接口没有构造函数。
 
-> **备注：** 术语*高熵*和*低熵*指的是这些值揭示的有关浏览器的信息量。作为属性返回的值被视为低熵，并且不太可能识别用户。{{domxref("NavigatorUAData.getHighEntropyValues()")}} 返回的值可能会揭示更多信息。因此，这些值是通过 {{jsxref("Promise")}} 检索的，从而使浏览器有时间请求用户权限或进行其他检查。
+> [!NOTE]
+> 术语*高熵*和*低熵*指的是这些值揭示的有关浏览器的信息量。作为属性返回的值被视为低熵，并且不太可能识别用户。{{domxref("NavigatorUAData.getHighEntropyValues()")}} 返回的值可能会揭示更多信息。因此，这些值是通过 {{jsxref("Promise")}} 检索的，从而使浏览器有时间请求用户权限或进行其他检查。
 
 ## 实例属性
 
@@ -67,4 +68,4 @@ navigator.userAgentData
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)

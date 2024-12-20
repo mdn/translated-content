@@ -18,7 +18,7 @@ const nom1 = valeur1 [, nom2 = valeur2 [, … [, nomN = valeurN]]];
 - `nomN`
   - : Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.
 - `valeurN`
-  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)).
+  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Operators/function)).
 
 ## Description
 
@@ -26,7 +26,8 @@ Cette déclaration permet de créer une constante qui peut être globale ou loca
 
 Attention, la déclaration `const` crée une référence en lecture seule vers une valeur. Cela ne signifie pas que la valeur référencée ne peut pas être modifiée ! Ainsi, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié.
 
-> **Note :** Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
+> [!NOTE]
+> Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
 
 ## Exemples
 
@@ -109,4 +110,4 @@ mon_tableau = ["B"]; // lève une exception
 
 - {{jsxref("Instructions/var","var")}}
 - {{jsxref("Instructions/let","let")}}
-- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Constantes)
+- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#constantes)

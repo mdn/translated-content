@@ -42,7 +42,8 @@ element.insertAdjacentHTML(position, text);
 <!-- afterend -->
 ```
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
+> [!NOTE]
+> Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
 
 ## Exemple
 

@@ -42,7 +42,7 @@ Examinemos un escenario típico. Un sitio web típico puede contener una imagen 
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
-Esto funciona bien en un dispositivo de pantalla ancha, como una computadora portatil o de escritorio (puedes [ver el ejemplo en vivo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) y encontrar el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) en Github.) No hablaremos mucho del CSS en esta lección, excepto para decir que:
+Esto funciona bien en un dispositivo de pantalla ancha, como una computadora portatil o de escritorio (puedes [ver el ejemplo en vivo](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) y encontrar el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) en Github.) No hablaremos mucho del CSS en esta lección, excepto para decir que:
 
 - El contenido del `body` se ha ajustado a un ancho máximo de 1200 píxeles - en pantallas por encima de ese ancho, el cuerpo permanece a 1200px y se centra en el espacio disponible. En pantallas por debajo de ese ancho, el cuerpo permanecerá al 100% del ancho de la ventana.
 - La imagen del encabezado se ha configurado para que su centro siempre permanezca en el centro del encabezado, sin importar el ancho que tenga el encabezado. Por lo tanto, si el sitio se visualiza en una pantalla más estrecha, aún se puede ver el detalle importante en el centro de la imagen (las personas) y el exceso se pierde en ambos lados. Tiene 200px de alto.
@@ -64,7 +64,8 @@ Podrías pensar que las imágenes vectoriales resolverían estos problemas, y lo
 
 Este tipo de problemas no existían cuando la web se creó por primera vez, a principios y mediados de los noventa — en ese entonces, los únicos dispositivos disponibles para navegar por la web eran los ordenadores de escritorio y laptops, por lo que los desarrolladores e ingenieros que programaban los navegadores ni siquiera pensaban en implementar estas soluciones. Las tecnologías de imagen adaptable se implementaron recientemente para resolver los problemas descritos anteriormente al permitirle ofrecer al navegador varias versiones de imágenes (en diferentes archivos), ya sea que muestren lo mismo pero contengan diferentes números de píxeles (cambio de resolución), o diferentes imágenes adecuadas para diferentes asignaciones de espacio (dirección de arte).
 
-> **Nota:** Las nuevas características discutidas en este artículo — [`srcset`](/es/docs/Web/HTML/Element/img#srcset)/[`sizes`](/es/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} —son compatibles con las versiones de lanzamiento de los navegadores de escritorio y móviles modernos (incluido el navegador Edge de Microsoft, aunque no Internet Explorer).
+> [!NOTE]
+> Las nuevas características discutidas en este artículo — [`srcset`](/es/docs/Web/HTML/Element/img#srcset)/[`sizes`](/es/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} —son compatibles con las versiones de lanzamiento de los navegadores de escritorio y móviles modernos (incluido el navegador Edge de Microsoft, aunque no Internet Explorer).
 
 ## ¿Cómo se crean las imágenes adaptables?
 
@@ -78,7 +79,7 @@ Entonces, ¿qué queremos solucionar con el cambio de resolución? Queremos most
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-Sin embargo, podemos utilizar dos nuevos atributos — [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes) — para proporcionar varias imágenes de origen adicionales junto con sugerencias para ayudar al navegador a elegir el correcto. Puede ver el ejemplo [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) en Github (vea también [el código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
+Sin embargo, podemos utilizar dos nuevos atributos — [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes) — para proporcionar varias imágenes de origen adicionales junto con sugerencias para ayudar al navegador a elegir el correcto. Puede ver el ejemplo [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) en Github (vea también [el código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
 <img
@@ -108,7 +109,8 @@ Los atributos `srcset` y `sizes` parecen complicados, pero resultan más fácile
 2. Un espacio.
 3. El **ancho de la ranura** que la imagen llenará cuando la condición de medios sea verdadera (`440px`.)
 
-> **Nota:** Para el **ancho de la ranura**, debe indicar una longitud absoluta (`px`, `em`) o relativa (como un porcentaje.) Usted debe haber advertido que el ancho de la última ranura no tiene condición de medios (esta es la opción por defecto que se elige cuando ninguna de las condiciones de medios se cumplen). El navegador ignora todo lo posterior a la primera condición coincidente, por eso sea cuidadoso con el orden de las condiciones de medios.
+> [!NOTE]
+> Para el **ancho de la ranura**, debe indicar una longitud absoluta (`px`, `em`) o relativa (como un porcentaje.) Usted debe haber advertido que el ancho de la última ranura no tiene condición de medios (esta es la opción por defecto que se elige cuando ninguna de las condiciones de medios se cumplen). El navegador ignora todo lo posterior a la primera condición coincidente, por eso sea cuidadoso con el orden de las condiciones de medios.
 
 Entonces, con estos atributos establecidos, el navegador:
 
@@ -119,15 +121,17 @@ Entonces, con estos atributos establecidos, el navegador:
 
 ¡Y eso es todo! Hasta este punto, si un navegador compatible con un ancho de ventana de 480px carga la página, la condición de medios `(max-width: 480px)` se cumplirá, por lo que la ranura de `440px` será elegida y se cargará el archivo de imagen `elva-fairy-480w.jpg`, ya que el ancho inherente (`480w`) es el más cercano a `440px`. La imagen de 800px tiene 128KB en disco mientras que la versión de 480px tiene solo 63KB — un ahorro de 65KB. Ahora imagine si esta fuera una página que tuviera muchas imágenes. Usar esta técnica puede ahorrarle a los usuarios de dispositivos móviles mucho ancho de banda.
 
-> **Nota:** Al probar esto con un navegador de escritorio, si el navegador no carga las imágenes más estrechas cuando tiene su ventana configurada en el ancho más estrecho, eche un vistazo a cuál es la ventana gráfica (puede aproximarla yendo a la **Consola JavaScript** del navegador y escribiendo `document.querySelector('html').clientWidth`). Los diferentes navegadores tienen tamaños mínimos a los que te permitirán reducir el ancho de la ventana y pueden ser más anchos de lo que piensas. Al probarlo con un navegador móvil, puede usar herramientas como la página de depuración de Firefox `about:debugging` para inspeccionar la página cargada en el dispositivo móvil usando las herramientas de desarrollo de escritorio. Para ver qué imágenes se cargaron, puede usar la pestaña [Monitor de red](/es/docs/Tools/Network_Monitor) en las herramientas del desarrollador de Firefox.
+> [!NOTE]
+> Al probar esto con un navegador de escritorio, si el navegador no carga las imágenes más estrechas cuando tiene su ventana configurada en el ancho más estrecho, eche un vistazo a cuál es la ventana gráfica (puede aproximarla yendo a la **Consola JavaScript** del navegador y escribiendo `document.querySelector('html').clientWidth`). Los diferentes navegadores tienen tamaños mínimos a los que te permitirán reducir el ancho de la ventana y pueden ser más anchos de lo que piensas. Al probarlo con un navegador móvil, puede usar herramientas como la página de depuración de Firefox `about:debugging` para inspeccionar la página cargada en el dispositivo móvil usando las herramientas de desarrollo de escritorio. Para ver qué imágenes se cargaron, puede usar la pestaña [Monitor de red](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) en las herramientas del desarrollador de Firefox.
 
 Los navegadores más antiguos que no soportan estas características solo las ignorarán y seguirán adelante con la carga de la imagen referenciada en el atributo [`src`](/es/docs/Web/HTML/Element/img#src) como lo hacen habitualmente.
 
-> **Nota:** En el {{htmlelement("head")}} del documento usted hallará la línea `<meta name="viewport" content="width=device-width">`: esto fuerza a los dispositivos móviles a adoptar su ancho real de ventana para cargar las páginas web (algunos navegadores móviles mienten sobre el ancho de su ventana gráfica y, en su lugar, cargan páginas con un ancho de ventana más grande y luego reducen la página cargada, lo que no es muy útil para imágenes o diseño receptivos).
+> [!NOTE]
+> En el {{htmlelement("head")}} del documento usted hallará la línea `<meta name="viewport" content="width=device-width">`: esto fuerza a los dispositivos móviles a adoptar su ancho real de ventana para cargar las páginas web (algunos navegadores móviles mienten sobre el ancho de su ventana gráfica y, en su lugar, cargan páginas con un ancho de ventana más grande y luego reducen la página cargada, lo que no es muy útil para imágenes o diseño receptivos).
 
 ### Resolution switching: Same size, different resolutions
 
-If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
+If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
 <img
@@ -150,13 +154,13 @@ In this case, `sizes` is not needed — the browser simply works out what resolu
 
 To recap, the **art direction problem** involves wanting to change the image displayed to suit different image display sizes. For example, if a large landscape shot with a person in the middle is shown on a website when viewed on a desktop browser, then shrunk down when the website is viewed on a mobile browser, it will look bad as the person will be really tiny and hard to see. It would probably be better to show a smaller, portrait image on mobile, which shows the person zoomed in. The {{htmlelement("picture")}} element allows us to implement just this kind of solution.
 
-Returning to our original [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) example, we have an image that badly needs art direction:
+Returning to our original [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) example, we have an image that badly needs art direction:
 
 ```html
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
-Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), The `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide several different sources for the browser to choose between, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
+Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), The `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide several different sources for the browser to choose between, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
 
 ```html
 <picture>
@@ -174,7 +178,8 @@ This code allows us to display a suitable image on both wide screen and narrow s
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> **Nota:** You should use the `media` attribute only in art direction scenarios; when you do use `media`, don't also offer media conditions within the `sizes` attribute.
+> [!NOTE]
+> You should use the `media` attribute only in art direction scenarios; when you do use `media`, don't also offer media conditions within the `sizes` attribute.
 
 ### ¿Por qué no podemos usar, simplemente, CSS o Javascript?
 
@@ -210,7 +215,8 @@ For this active learning, we're expecting you to be brave and go it alone ... mo
 4. Create multiple image files of different sizes, each showing the same picture.
 5. Use `srcset`/`size` to create a resolution switcher example, either to serve the same size image at different resolutions, or different image sizes at different viewport widths.
 
-> **Nota:** Use the browser devtools to help work out what sizes you need, as mentioned above.
+> [!NOTE]
+> Use the browser devtools to help work out what sizes you need, as mentioned above.
 
 ## Resumen
 

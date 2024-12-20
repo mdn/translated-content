@@ -181,7 +181,8 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 이렇게 하면 배경 이미지가 서로 겹칠 수 있습니다. 배경은 stack 맨 아래에 마지막으로 나열된 배경 이미지와 함께 쌓이고, 코드에서 그 뒤에 오는 이미지 위에 각각의 이전 이미지가 쌓입니다.
 
-> **참고:** 그라디언트는 일반 배경 이미지와 혼합될 수 있습니다.
+> [!NOTE]
+> 그라디언트는 일반 배경 이미지와 혼합될 수 있습니다.
 
 다른 `background-*` 속성은 `background-image` 와 같은 방식으로 쉼표로 구분된 값을 가질 수도 있습니다.
 
@@ -208,7 +209,7 @@ background-position:
 - `fixed`: 요소의 배경을 viewport 에 고정시켜, 페이지나 요소 내용을 스크롤할 때 스크롤되지 않도록 합니다. 항상 화면에서 동일한 위치에 유지됩니다.
 - `local`: 이 값은 나중에 추가 되었습니다 (Explorer 9 이상에서만 지원되지만, 다른 값은 IE4 이상에서 지원됨). 왜냐하면 `scroll` 값이 다소 혼란스럽고 많은 경우 실제로 원하는 것을 수행하지 않기 때문입니다. `local` 값은 배경을 설정된 요소로 고정하므로, 요소를 스크롤하면 배경과 함께 스크롤 됩니다.
 
-{{cssxref("background-attachment")}} 속성은 스크롤할 내용이 있을 때만 영향을 미치므로, 세 가지 값의 차이점을 보여주는 데모를 만들었습니다 — [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) 을 살펴보십시오 (여기에서 [소스 코드](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) 를 참조하십시오).
+{{cssxref("background-attachment")}} 속성은 스크롤할 내용이 있을 때만 영향을 미치므로, 세 가지 값의 차이점을 보여주는 데모를 만들었습니다 — [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) 을 살펴보십시오 (여기에서 [소스 코드](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) 를 참조하십시오).
 
 ### 배경 속기 (shorthand) 속성 사용
 
@@ -271,7 +272,8 @@ background-position:
 }
 ```
 
-> **참고:** 위쪽, 오른쪽, 아래쪽 및 왼쪽 테두리 속성에는 문서의 쓰기 모드 (예: 왼쪽에서 오른쪽으로 또는 오른쪽에서 왼쪽으로 텍스트 또는 위에서 아래로) 와 관련된 논리적 속성이 매핑되어 있습니다. 다음 수업에서는 [다양한 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) 에 대해 다룰것입니다.
+> [!NOTE]
+> 위쪽, 오른쪽, 아래쪽 및 왼쪽 테두리 속성에는 문서의 쓰기 모드 (예: 왼쪽에서 오른쪽으로 또는 오른쪽에서 왼쪽으로 텍스트 또는 위에서 아래로) 와 관련된 논리적 속성이 매핑되어 있습니다. 다음 수업에서는 [다양한 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions) 에 대해 다룰것입니다.
 
 **테두리에 사용할 수 있는 다양한 스타일이 있습니다. 아래 예에서 우리는 박스의 네 면에 다른 테두리 스타일을 사용했습니다. 테두리 스타일, 너비 및 색상으로 실습하여 테두리의 작동 방식을 확인 하십시오.**
 

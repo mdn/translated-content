@@ -70,7 +70,7 @@ l10n:
 > - `\{{APIRef ("GroupDataName")}}` — esto genera la barra lateral de referencia de la izquierda que muestra enlaces de referencia rápida relacionados con la página actual.
 >   Por ejemplo, todas las páginas de la [API de WebVR](/es/docs/Web/API/WebVR_API) tienen la misma barra lateral, que apunta a las otras páginas de la API.
 >   Para generar la barra lateral correcta para tu API, debes añadir una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
->   Consulta nuestra guía de [barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar la macro `\{{MDNSidebar}}` cuando copie esta página.
+>   Consulta nuestra guía de [barras laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar la macro `\{{MDNSidebar}}` cuando copie esta página.
 >
 > Las muestras de los banners **Experimental**, **Contexto seguro** y **Desaprobado** se muestran justo después de este bloque de notas.
 >
@@ -96,7 +96,8 @@ Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encab
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
-> **Nota:** A veces querrás enlazar a ejemplos dados en otra página.
+> [!NOTE]
+> A veces querrás enlazar a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos ejemplos más en otra página:
 >

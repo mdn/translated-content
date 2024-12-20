@@ -20,7 +20,7 @@ JavaScript est plutôt compact tout en étant très souple. Les développeurs on
 - des API tierces‑parties permettant aux développeurs d'incorporer dans leurs sites des fonctionnalités issues d'autres fournisseurs de contenu, comme Twitter ou Facebook.
 - des modèles et bibliothèques tierces‑parties applicables à votre HTML permettant de mettre en œuvre rapidement des sites et des applications.
 
-Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/Apprendre/JavaScript), et le reste du MDN.
+Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/Learn/JavaScript), et le reste du MDN.
 
 Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et vous pratiquerez aussi en manipulant les fonctionnalités des API navigateur. Amusez-vous !
 
@@ -30,7 +30,8 @@ Le paragraphe précédent laisse entrevoir quelque chose de passionnant, et cela
 
 Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML ou CSS. Vous pourrez démarrer petit et continuer à travailler par petites étapes de façon soutenue. Pour commencer, nous allons vous montrer comment ajouter un JavaScript basique à votre page, en créant un exemple « Hello world&nbsp;!&nbsp;» ([la norme en matière d'exemples de programmation de base](https://fr.wikipedia.org/wiki/Hello_world)).
 
-> **Attention :** Si vous rejoignez cette série d'articles en cours de route, [téléchargez cet exemple de code](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) et utilisez‑le comme point de départ.
+> [!WARNING]
+> Si vous rejoignez cette série d'articles en cours de route, [téléchargez cet exemple de code](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) et utilisez‑le comme point de départ.
 
 1. Tout d'abord, allez sur votre site de test et créez un nouveau dossier nommé «&nbsp;scripts&nbsp;» (sans guillemets). Ensuite, dans le nouveau dossier `scripts` que vous venez de créer, créez un nouveau fichier appelé main.js. Sauvegardez-le dans votre dossier scripts.
 2. Ensuite, dans votre fichier `index.html`, ajoutez l'élément suivant sur une nouvelle ligne avant la balise fermante `</body>` :
@@ -49,7 +50,8 @@ Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML
 
 5. Assurez-vous que les fichiers HTML et JavaScript soient enregistrés puis chargez `index.html` dans votre navigateur. Vous devriez obtenir quelque chose comme :![](hello-world.png)
 
-> **Note :** La raison pour laquelle nous avons placé l'élément {{htmlelement("script")}} en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.
+> [!NOTE]
+> La raison pour laquelle nous avons placé l'élément {{htmlelement("script")}} en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.
 
 ### Que s'est-il passé ?
 
@@ -57,13 +59,15 @@ Le texte du titre a été changé en «Bonjour, monde ! » en utilisant JavaScri
 
 Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propriété {{domxref("Node.textContent", "textContent")}} de la variable `myHeading` (elle représente le contenu du titre).
 
-> **Note :** Les deux fonctions que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.
+> [!NOTE]
+> Les deux fonctions que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.
 
 ## Les bases du JavaScript en accéléré
 
 Nous allons explorer les fonctionnalités de base de JavaScript pour que vous puissiez mieux comprendre comment il fonctionne. Ces fonctionnalités sont communes à la plupart des langages de programmation, si vous comprenez ces éléments en JavaScript, vous êtes en bonne voie de pouvoir programmer à peu près n'importe quoi !
 
-> **Attention :** Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/Apprendre/Découvrir_outils_développement_navigateurs).
+> [!WARNING]
+> Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -73,11 +77,14 @@ Les {{Glossary("Variable", "variables")}} sont des conteneurs dans lesquels on p
 let myVariable;
 ```
 
-> **Note :** Un point-virgule en fin de ligne indique là où se termine l'instruction&nbsp;; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez [Guide des points‑virgule en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) pour plus de détails.
+> [!NOTE]
+> Un point-virgule en fin de ligne indique là où se termine l'instruction&nbsp;; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez [Guide des points‑virgule en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) pour plus de détails.
 
-> **Note :** Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables) sur les règles de nommage des variables). Si vous avez un doute, vous pouvez [vérifier le nom de votre variable](https://mothereff.in/js-variables) pour voir s'il est valide.
+> [!NOTE]
+> Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez [cet article](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#variables) sur les règles de nommage des variables). Si vous avez un doute, vous pouvez [vérifier le nom de votre variable](https://mothereff.in/js-variables) pour voir s'il est valide.
 
-> **Note :** JavaScript est sensible à la casse — `myVariable` est une variable différente de `myvariable`. Si vous avez des problèmes dans votre code, vérifiez la casse &nbsp;!
+> [!NOTE]
+> JavaScript est sensible à la casse — `myVariable` est une variable différente de `myvariable`. Si vous avez des problèmes dans votre code, vérifiez la casse &nbsp;!
 
 Une fois une variable déclarée, vous pouvez lui donner une valeur :
 
@@ -104,7 +111,7 @@ let myVariable = "Bob";
 myVariable = "Étienne";
 ```
 
-Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives)&nbsp;:
+Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)&nbsp;:
 
 <table class="standard-table">
   <thead>
@@ -275,9 +282,10 @@ Un {{Glossary("operator","opérateur")}} est un symbole mathématique qui produi
   </tbody>
 </table>
 
-Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à ceux-là pour le moment. Voir [Expressions et opérateurs](/fr/docs/Web/JavaScript/Reference/Opérateurs) pour la liste complète.
+Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à ceux-là pour le moment. Voir [Expressions et opérateurs](/fr/docs/Web/JavaScript/Reference/Operators) pour la liste complète.
 
-> **Note :** Mélanger les types de données peut conduire à d'étranges résultats lors des opérations, donc prenez soin de vous référer correctement à vos variables et d'obtenir les résultats attendus. Par exemple, entrez `"35" + "25"` dans votre console. Pourquoi n'obtenez-vous pas le résultat attendu ? Parce que les guillemets ont transformé les nombres en chaînes, et donc vous avez concaténé deux chaînes au lieu d'additionner deux nombres. Si vous entrez `35 + 25`, vous obtiendrez le bon résultat.
+> [!NOTE]
+> Mélanger les types de données peut conduire à d'étranges résultats lors des opérations, donc prenez soin de vous référer correctement à vos variables et d'obtenir les résultats attendus. Par exemple, entrez `"35" + "25"` dans votre console. Pourquoi n'obtenez-vous pas le résultat attendu ? Parce que les guillemets ont transformé les nombres en chaînes, et donc vous avez concaténé deux chaînes au lieu d'additionner deux nombres. Si vous entrez `35 + 25`, vous obtiendrez le bon résultat.
 
 ### Structures conditionnelles
 
@@ -329,11 +337,12 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Note :** L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Instructions/return) indique au navigateur qu'il faut renvoyer la variable `result` en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables)).
+> [!NOTE]
+> L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) indique au navigateur qu'il faut renvoyer la variable `result` en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez [cet article](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_portées_de_variables)).
 
 ### Événements
 
-Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/Events/click), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours&nbsp;:
+Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/API/Element/click_event), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours&nbsp;:
 
 ```js
 document.querySelector("html").addEventListener("click", function () {
@@ -341,7 +350,7 @@ document.querySelector("html").addEventListener("click", function () {
 });
 ```
 
-Il existe plein de méthodes pour « attacher » un événement à un élément. Dans cet exemple, nous avons sélectionné l'élément HTML concerné et nous avons défini un gestionnaire [`onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick) qui est une propriété qui est égale à une fonction anonyme (sans nom) qui contient le code à exécuter quand l'utilisateur clique.
+Il existe plein de méthodes pour « attacher » un événement à un élément. Dans cet exemple, nous avons sélectionné l'élément HTML concerné et nous avons défini un gestionnaire [`onclick`](/fr/docs/Web/API/Element/click_event) qui est une propriété qui est égale à une fonction anonyme (sans nom) qui contient le code à exécuter quand l'utilisateur clique.
 
 On pourra noter que :
 

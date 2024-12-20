@@ -42,7 +42,7 @@ return x + y / 3;
 
 ### Ajout automatique de point-virgule
 
-L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
+L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
 
 ```js
 return;
@@ -58,7 +58,8 @@ a + b;
 // après une instruction return sans point-virgule"
 ```
 
-> **Note :** À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le [bug Firefox 1005110](https://bugzil.la/1005110) pour plus d'informations.
+> [!NOTE]
+> À partir de Gecko 40, un avertissement sera affiché dans la console si l'analyse du code trouve une instruction semblable à une expression après une instruction `return` sans point-virgule. Voir le [bug Firefox 1005110](https://bugzil.la/1005110) pour plus d'informations.
 
 Pour éviter ce problème et l'insertion automatique, on peut, si besoin, utiliser des parenthèses.
 

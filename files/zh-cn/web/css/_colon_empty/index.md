@@ -9,7 +9,8 @@ slug: Web/CSS/:empty
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
 
-> **备注：** 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为与 {{CSSxRef(":-moz-only-whitespace")}} 类似一样的行为，但目前还没有浏览器支持它。
+> [!NOTE]
+> 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为与 {{CSSxRef(":-moz-only-whitespace")}} 类似一样的行为，但目前还没有浏览器支持它。
 
 ## 语法
 

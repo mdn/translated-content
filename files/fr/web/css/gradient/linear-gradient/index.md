@@ -56,7 +56,8 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 - `<color-hint>`
   - : Une indication d'interpolation qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
 
-> **Note :** Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorial/Gradients).
 
 ## Description
 
@@ -173,7 +174,7 @@ body {
 
 ### D'autres exemples de dégradés linéaires
 
-Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) pour plus d'exemples.
+Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) pour plus d'exemples.
 
 ## Spécifications
 
@@ -185,7 +186,7 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS
 
 ## Voir aussi
 
-- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Les autres fonctions de dégradés&nbsp;:
   - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)
   - [`radial-gradient()`](</fr/docs/Web/CSS/gradient/radial-gradient()>)

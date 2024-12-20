@@ -1,23 +1,26 @@
 ---
-title: BaseAudioContext.createChannelSplitter()
+title: "BaseAudioContext: createChannelSplitter() メソッド"
+short-title: createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
+l10n:
+  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
 {{ APIRef("Web Audio API") }}
 
 `createChannelSplitter()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelSplitterNode")}} を作成します。これは音声ストリームの個々のチャンネルにアクセスし、それらを個別に処理するために使用されます。
 
-> **メモ:** {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} コンストラクターは {{domxref("ChannelSplitterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} コンストラクターは {{domxref("ChannelSplitterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 
-```js
-createChannelSplitter(numberOfOutputs);
+```js-nolint
+createChannelSplitter(numberOfOutputs)
 ```
 
 ### 引数
 
-- numberOfOutputs
+- `numberOfOutputs`
   - : 入力オーディオストリームのうち、個別に出力したいチャンネル数です。この引数が指定されていない場合の既定値は 6 です。
 
 ### 返値
@@ -29,16 +32,16 @@ createChannelSplitter(numberOfOutputs);
 次の単純な例では、ステレオトラック（例えば音楽）を分離し、左チャンネルと右チャンネルを別々に処理する方法を示しています。これを使うには、 {{domxref("AudioNode/connect", "AudioNode.connect(AudioNode)")}} メソッドの第 2、第 3 引数を使って、接続元のチャンネルのインデックスと接続先のチャンネルのインデックスを指定することが必要です。
 
 ```js
-var ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, function (data) {
-  var source = ac.createBufferSource();
+const ac = new AudioContext();
+ac.decodeAudioData(someStereoBuffer, (data) => {
+  const source = ac.createBufferSource();
   source.buffer = data;
-  var splitter = ac.createChannelSplitter(2);
+  const splitter = ac.createChannelSplitter(2);
   source.connect(splitter);
-  var merger = ac.createChannelMerger(2);
+  const merger = ac.createChannelMerger(2);
 
   // 左チャンネルのボリュームのみ小さくする
-  var gainNode = ac.createGain();
+  const gainNode = ac.createGain();
   gainNode.gain.setValueAtTime(0.5, ac.currentTime);
   splitter.connect(gainNode, 0);
 
@@ -47,7 +50,7 @@ ac.decodeAudioData(someStereoBuffer, function (data) {
   gainNode.connect(merger, 0, 1);
   splitter.connect(merger, 1, 0);
 
-  var dest = ac.createMediaStreamDestination();
+  const dest = ac.createMediaStreamDestination();
 
   // ChannelMergerNode を使っているので、ステレオの MediaStream が
   // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに

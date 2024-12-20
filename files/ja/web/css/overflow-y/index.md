@@ -1,11 +1,13 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
+l10n:
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
 
-**`overflow-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素の内容が上下の境界からあふれた場合、どのように表示するのかを設定します。表示しないか、スクロールバーを表示するか、あふれさせるかを設定できます。
+**`overflow-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックレベル要素のコンテンツが上下の端からあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。このプロパティは、[`overflow`](/ja/docs/Web/CSS/overflow) 一括指定プロパティを使用して設定することもできます。
 
 {{EmbedInteractiveExample("pages/css/overflow-y.html")}}
 
@@ -23,25 +25,29 @@ overflow-y: auto;
 overflow-y: inherit;
 overflow-y: initial;
 overflow-y: revert;
+overflow-y: revert-layer;
 overflow-y: unset;
 ```
 
-`overflow-y` プロパティは、以下の値の一覧のうち一つのキーワードで指定します。
+`overflow-y` プロパティは、単一の {{CSSXref("overflow_value", "&lt;overflow&gt;")}} キーワード値で指定します。
 
-{{cssxref("overflow-x")}} が `hidden`, `scroll`, `auto` であり、このプロパティが `visible` (既定値) である場合は、暗黙的に `auto` と計算されます。
+{{cssxref("overflow-x")}} が `hidden`、`scroll`、`auto` のいずれかで、 `overflow-y` プロパティが `visible` （既定値）の場合、この値は暗黙的に `auto` として計算されます。
 
 ### 値
 
 - `visible`
-  - : 内容は切り取られず、パディングボックスの上下の辺よりも外側に表示される可能性があります。
+  - : あふれたコンテンツは切り取られず、この要素のパディングボックスの上下の端よりも外側に表示される可能性があります。この要素ボックスは{{glossary("scroll container","スクロールコンテナー")}}になりません。
 - `hidden`
-  - : 垂直方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。スクロールバーは表示されません。
-- `clip` {{experimental_inline}}
-  - : `hidden` と同様に、コンテンツは要素のパディングボックスに合わせて切り取られます。 `clip` と `hidden` の違いは、 `clip` キーワードがプログラム的なスクロールも含め、すべてのスクロールを禁止することです。ボックスはスクロールコンテナーにはならず、新しい整形コンテキストを始めることもありません。新しい整形コンテキストを始めたいのであれば、 {{cssxref("display", "display: flow-root", "#flow-root")}} を使用して実現することができます。
+  - : 要素のパディングボックスに垂直方向に合わせる必要がある場合は、コンテンツを切り取ります。スクロールバーは表示されません。
+- `clip`
+  - : あふれたコンテンツは、 [`overflow-clip-margin`](/ja/docs/Web/CSS/overflow-clip-margin) プロパティを使用して定義された要素のオーバーフロークリップ枠で切り取られます。その結果、コンテンツは要素のパディングボックスから `overflow-clip-margin` の値 {{cssxref("&lt;length&gt;")}} だけはみ出します（設定されていない場合は `0px` です）。 `clip` と `hidden` の違いは、 `clip` キーワードはプログラムによるスクロールも含め、すべてのスクロールを禁止することです。新しい整形コンテキストは生成されません。新しい整形コンテキストを生成するのであれば、 `overflow: clip` と共に {{cssxref("display", "display: flow-root", "#flow-root")}} を使用してください。この要素ボックスはスクロールコンテナーにはなりません。
 - `scroll`
-  - : 垂直方向にパディングボックスに合わせる必要がある場合は、内容を切り取ります。ブラウザーは内容が実際に切り取られるかどうかにかかわらず、スクロールバーを表示します。 (これは内容が変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターははみ出す内容を印刷するかもしれません。
+  - : あふれたコンテンツは、垂直方向にパディングボックスに合わせる必要がある場合に切り取られます。ブラウザーはコンテンツが実際に切り取られるかどうかにかかわらず、垂直方向のスクロールバーを表示します。 (これで、コンテンツが変化したときにスクロールバーが表示されたり非表示になったりすることを防ぎます。) プリンターはあふれたコンテンツを印刷するかもしれません。
 - `auto`
-  - : ユーザーエージェントに依存します。内容がパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。内容があふれる場合、デスクトップブラウザーはスクロールバーを表示します。
+  - : あふれたコンテンツは要素のパディングボックスで切り取られ、あふれたコンテンツはビュー内にスクロールすることができます。 `scroll` とは異なり、ユーザーエージェントはコンテンツがあふれた場合のみスクロールバーを表示し、既定では、スクロールバーを非表示にします。コンテンツが要素のパディングボックス内に収まる場合、 `visible` と同じように見えますが、新しいブロック整形コンテキストを確立します。
+
+> [!NOTE]
+> キーワード値 `overlay` は、 `auto` の古い別名です。 `overlay` の場合、スクロールバーは空間を占有することなく、コンテンツの上に描画されます。
 
 ## 公式定義
 
@@ -57,29 +63,49 @@ overflow-y: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <ul>
- - <code>overflow-y:hidden</code> — ボックスの外側のテキストを隠す
-  <div id="div1">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:hidden</code> — ボックスの外側のテキストを隠す
+    <div id="div1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
- - <code>overflow-y:scroll</code> — 常にスクロールバーを表示
-  <div id="div2">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:scroll</code> — 常にスクロールバーを表示
+    <div id="div2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
- - <code>overflow-y:visible</code> — 必要に応じてテキストをボックスの外に表示
-  <div id="div3">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:visible</code> — 必要に応じてテキストをボックスの外に表示
+    <div id="div3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
- - <code>overflow-y:auto</code> — 多くのブラウザーでは <code>scroll</code> と同じ
+  <li>
+    <code>overflow-y:auto</code> — 多くのブラウザーでは <code>scroll</code> と同じ
   <div id="div4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 </ul>
@@ -88,10 +114,7 @@ overflow-y: unset;
 #### CSS
 
 ```css
-#div1,
-#div2,
-#div3,
-#div4 {
+div {
   border: 1px solid black;
   width: 250px;
   height: 100px;
@@ -129,4 +152,6 @@ overflow-y: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-x")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
+- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)

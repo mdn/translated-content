@@ -11,7 +11,7 @@ La regla "CSS `@supports"`asocia un conjunto de declaraciones anidadas en un blo
 
 `@supports` otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles _(feature query)_.
 
-La regla `@supports` puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier [regla de grupo condicional](/en/CSS/At-rule#Conditional_Group_Rules) y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.
+La regla `@supports` puede ser usada tanto en el nivel superior de una hoja de estilos, como dentro de cualquier [regla de grupo condicional](/es/docs/Web/CSS/At-rule#conditional_group_rules) y se puede acceder a ella a través del modelo de objetos de CSS {{domxref("CSSSupportsRule")}}.
 
 ## Sintaxis
 
@@ -46,7 +46,8 @@ not ( not ( transform-origin: 2px ) )
 (display: flexbox) and ( not (display: inline-grid) )
 ```
 
-> **Nota:** no hay necesidad de encerrar el operador `not` entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como `and` y `or`, sí se requieren paréntesis
+> [!NOTE]
+> No hay necesidad de encerrar el operador `not` entre paréntesis cuando se encuentra en el nivel superior. Para combinarlo con otros operadores, como `and` y `or`, sí se requieren paréntesis
 
 ### El operador "`and`"
 
@@ -90,7 +91,8 @@ es equivalente a:
 (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  )))
 ```
 
-> **Nota:** cuando se usan `and` y `or`, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .
+> [!NOTE]
+> Cuando se usan `and` y `or`, el paréntesis debe ser usado para definir el orden en el cual aplican. Si no, la condición es inválida provocando que se ignore todo el "at-rule" .
 
 ### Sintaxis formal
 

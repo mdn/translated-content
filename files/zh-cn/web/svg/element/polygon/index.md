@@ -7,7 +7,7 @@ slug: Web/SVG/Element/polygon
 
 **`polygon`** 元素定义了一个由一组首尾相连的直线线段构成的闭合多边形形状。最后一点连接到第一点。欲了解开放形状，请看{{SVGElement("polyline")}}元素。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -37,10 +37,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

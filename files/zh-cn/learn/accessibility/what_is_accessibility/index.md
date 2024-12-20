@@ -39,7 +39,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 残疾人士和正常人一样是多样化的，他们身患的残疾也多种多样。此处课题的关键是抛开思考你自己的电脑和你自己使用网页的方式，而是要开始了解别人如何使用网页——你不是你的用户。接下来会讲解需要考虑的主要残疾类型，以及他们访问网页内容时用到的一些特殊工具 (被称为辅助技术或 ATs)。
 
-> **备注：** 世界卫生组织的“残疾和健康”状况说明书指出：“超过 10 亿人，约占世界总人口的 15%，患有某种形式的残疾”，而且“有 1.1 亿至 1.9 亿之间的成年人在身体功能上存在重大困难。”
+> [!NOTE]
+> 世界卫生组织的“残疾和健康”状况说明书指出：“超过 10 亿人，约占世界总人口的 15%，患有某种形式的残疾”，而且“有 1.1 亿至 1.9 亿之间的成年人在身体功能上存在重大困难。”
 
 ### 有视觉障碍的人
 
@@ -47,7 +48,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - 有些是付费产品，比如 [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) 和 [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - 有些是免费产品，比如 [NVDA](http://www.nvaccess.org/) (Windows)， [ChromeVox](http://www.chromevox.com/) (Chrome, Windows 和 Mac OS X)，和 [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- 有些内置在操作系统中，比如 [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS)， [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows)， [ChromeVox](http://www.chromevox.com/) (on ChromeOS)，和 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- 有些内置在操作系统中，比如 [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X and iOS)， [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows)， [ChromeVox](http://www.chromevox.com/) (on ChromeOS)，和 [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 让自己熟悉屏幕阅读器是个好主意；你还应该设置一个屏幕阅读器并充分的使用它（盘它），以了解它是如何工作的。请参阅我们的[跨浏览器屏幕阅读器测试向导](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7#%E5%B1%8F%E5%B9%95%E9%98%85%E8%AF%BB%E5%99%A8)，以了解更多使用它们的细节。下面的视频还提供了一个简单的例子说明了体验是怎样的。
 
@@ -69,7 +70,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 这种残疾也可能是由于年老体衰导致，而不是任何特定的创伤或状况造成，也可能是由于硬件限制所致——有些用户可能没有鼠标。
 
-这些残疾通常影响 Web 开发工作的方式是要求通过键盘就可以访问控件——我们将在本模块的后续文章中讨论键盘无障碍，但最好是仅通过使用键盘来尝试访问一些网站，看看你能够做些什么。例如，你可以使用 Tab 键在 Web 表单的不同控件之间移动吗？你可以在我们的“[跨浏览器测试使用本机键盘的无障碍](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)”章节中找到有关键盘控制的更多详细信息。
+这些残疾通常影响 Web 开发工作的方式是要求通过键盘就可以访问控件——我们将在本模块的后续文章中讨论键盘无障碍，但最好是仅通过使用键盘来尝试访问一些网站，看看你能够做些什么。例如，你可以使用 Tab 键在 Web 表单的不同控件之间移动吗？你可以在我们的“[跨浏览器测试使用本机键盘的无障碍](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility)”章节中找到有关键盘控制的更多详细信息。
 
 据统计，有相当多的人患有行动障碍症。美国疾病控制与防御中心的“[残疾与机能（18 岁及以上的非住院成年人）](https://www.cdc.gov/nchs/fastats/disability.htm)”报道称美国有 15.1% 的成年人都患有身体功能疾病。
 
@@ -92,7 +93,7 @@ slug: Learn/Accessibility/What_is_accessibility
 ### 注意
 
 - 具有[认知无障碍](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility)的设计将导致良好的设计实践。他们将使所有人受益。
-- 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility#Guidelines)。
+- 许多有认知障碍的人也可能患有身体残疾。网站必须遵循 W3C 的“[网页内容无障碍指南](https://www.w3.org/WAI/standards-guidelines/wcag/)”包括[认知无障碍指南](/zh-CN/docs/Web/Accessibility/Cognitive_accessibility#guidelines)。
 - W3C 的“[认知和学习残疾无障碍专案组](https://www.w3.org/WAI/GL/task-forces/coga/)”为认知障碍人士制作了 web 无障碍指南。
 - WebAIM 有一个[认知网页](https://webaim.org/articles/cognitive/)提供了相关的信息和资源。
 - 美国疾病控制中心估计，截至 2018 年，美国四分之一的公民有残疾，[其中认知障碍是年轻人最常见的疾病](https://www.cdc.gov/media/releases/2018/p0816-disability.html)。
@@ -107,7 +108,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 然而如果你能在项目的开始阶段就考虑到无障碍的话，使大多数内容无障碍化的代价就会相当微小。
 
-在规划项目时，将无障碍测试纳入测试体系，就像对其他任何重要目标受众群体（例如台式机或移动浏览器的目标用户）进行测试一样。尽早和经常进行测试，理想情况下运行自动化测试找出程序化方式可检测到的缺失功能（例如，缺少图像[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)或不良链接文字——请参阅[元素关系与上下文](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context)），并对残疾人士的用户群进行一些测试，以查看更复杂的网站功能是否对他们可用。例如：
+在规划项目时，将无障碍测试纳入测试体系，就像对其他任何重要目标受众群体（例如台式机或移动浏览器的目标用户）进行测试一样。尽早和经常进行测试，理想情况下运行自动化测试找出程序化方式可检测到的缺失功能（例如，缺少图像[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives)或不良链接文字——请参阅[元素关系与上下文](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context)），并对残疾人士的用户群进行一些测试，以查看更复杂的网站功能是否对他们可用。例如：
 
 - 我的日期选择器小部件是否可供使用屏幕阅读器的人使用？
 - 如果内容动态更新，视力受损的人知道吗？
@@ -121,7 +122,8 @@ slug: Learn/Accessibility/What_is_accessibility
 
 为了表明你关心并考虑了无障碍，请在你的网站上发布无障碍声明，其中详细说明你对无障碍的政策以及为使该站点可访问而采取的步骤。如果有人确实反映你的网站存在无障碍问题，请与他们展开对话，保持同情心，并采取合理的步骤尝试解决问题。
 
-> **备注：** 我们的“[处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)”一文涵盖了应更详细地测试的无障碍细节。
+> [!NOTE]
+> 我们的“[处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)”一文涵盖了应更详细地测试的无障碍细节。
 
 总结：
 

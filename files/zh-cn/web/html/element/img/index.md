@@ -16,9 +16,9 @@ slug: Web/HTML/Element/img
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#crossorigin) 和 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/img#referrerpolicy) 属性。
-- 使用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
-- 使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 和 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
+- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
+- 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
+- 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
 
 ## 支持的图像格式
 
@@ -52,13 +52,14 @@ Web 最常用的图像格式是：
 
 ## 属性
 
-此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 - `alt`
 
   - : 定义了图像的备用文本描述。
 
-    > **备注：** 浏览器并非总是会显示图像。比如：
+    > [!NOTE]
+    > 浏览器并非总是会显示图像。比如：
     >
     > - 非可视化浏览器（Non-visual browsers）（比如有视力障碍的人使用的音频浏览器）
     > - 用户选择不显示图像（比如为了节省带宽，或出于隐私考虑）
@@ -113,13 +114,15 @@ Web 最常用的图像格式是：
 
   - : 图像的固有高度，以像素为单位。必须是没有单位的整数值。
 
-    > **备注：** 同时包括 `height` 和 [`width`](#attr-width) 使浏览器在加载图像之前计算图像的长宽比。此长宽比用于保留显示图像所需的空间，减少甚至防止在下载图像并将其绘制到屏幕上时布局的偏移。减少布局偏移是良好用户体验和 Web 性能的主要组成部分。
+    > [!NOTE]
+    > 同时包括 `height` 和 [`width`](#attr-width) 使浏览器在加载图像之前计算图像的长宽比。此长宽比用于保留显示图像所需的空间，减少甚至防止在下载图像并将其绘制到屏幕上时布局的偏移。减少布局偏移是良好用户体验和 Web 性能的主要组成部分。
 
 - `ismap`
 
   - : 这个布尔属性表示图像是否是[服务器端图像映射](https://en.wikipedia.org/wiki/Image_map#Server-side)的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
 
-    > **备注：** 只有在 `<img>` 元素是一个拥有有效 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
+    > [!NOTE]
+    > 只有在 `<img>` 元素是一个拥有有效 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
 
 - `loading`
 
@@ -130,7 +133,8 @@ Web 最常用的图像格式是：
     - `lazy`
       - : 延迟加载图像，直到它和视口接近到一个计算得到的距离（由浏览器定义）。目的是在需要图像之前，避免加载图像所需要的网络和存储带宽。这通常会提高大多数典型用场景中内容的性能。
 
-    > **备注：** 仅在启用 JavaScript 时才会延迟加载。这是一种反跟踪的措施，因为，如果用户代理在禁用脚本的情况下支持延迟加载，网站可以在会话中策略性地放置图像，通过服务器跟踪请求了多少图像以及请求在何时发起，来跟踪用户在整个会话期间的大致滚动位置。
+    > [!NOTE]
+    > 仅在启用 JavaScript 时才会延迟加载。这是一种反跟踪的措施，因为，如果用户代理在禁用脚本的情况下支持延迟加载，网站可以在会话中策略性地放置图像，通过服务器跟踪请求了多少图像以及请求在何时发起，来跟踪用户在整个会话期间的大致滚动位置。
 
 - `referrerpolicy`
 
@@ -138,7 +142,7 @@ Web 最常用的图像格式是：
 
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：若未使用 {{Glossary("TLS")}}（{{glossary("HTTPS")}}）导航到源站，则不发送 `Referer` 标头。
-    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`：发送到其他来源的来源地址会被限制为协议、主机和端口。同源导航仍将包含路径。
     - `same-origin`：仅{{Glossary("Same-origin policy", "同源")}}请求发送来源地址，而跨源请求则不包含来源地址信息。
     - `strict-origin`：仅在协议安全级别保持不变（HTTPS→HTTPS）的情况下将文档的来源作为来源地址发送。而在目标的安全性降低（HTTPS→HTTP）时则不发送来源地址。
@@ -178,9 +182,10 @@ Web 最常用的图像格式是：
   - : 图像的宽度，以像素为单位。必须是没有单位的整数。
 - `usemap`
 
-  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
+  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/Web/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
 
-    > **备注：** 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
+    > [!NOTE]
+    > 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
 
 ### 已废弃的属性
 
@@ -207,7 +212,8 @@ Web 最常用的图像格式是：
 
   - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id)。
 
-    > **备注：** 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
+    > [!NOTE]
+    > 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
 
 - `name` {{Deprecated_Inline}}
   - : 元素的名字。使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性代替此废弃属性。
@@ -272,7 +278,8 @@ Web 最常用的图像格式是：
 
 {{EmbedLiveSample("使用 srcset 和 sizes 属性", "100%", 350)}}
 
-> **备注：** 若要看到大小调整的效果，请{{LiveSampleLink('使用 srcset 和 sizes 属性', '打开单独的页面查看示例')}}，以便拖动窗口，调整内容区域的大小。
+> [!NOTE]
+> 若要看到大小调整的效果，请{{LiveSampleLink('使用 srcset 和 sizes 属性', '打开单独的页面查看示例')}}，以便拖动窗口，调整内容区域的大小。
 
 ## 安全与隐私方面的考量
 

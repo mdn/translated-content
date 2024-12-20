@@ -75,7 +75,7 @@ El núcleo del lenguaje JavaScript de lado del cliente consta de algunas caracte
 
 - Almacenar valores útiles dentro de variables. En el ejemplo anterior, por ejemplo, pedimos que ingreses un nuevo nombre y luego almacenamos ese nombre en una variable llamada `name`.
 - Operaciones sobre fragmentos de texto (conocidas como "cadenas" (`strings`) en programación). En el ejemplo anterior, tomamos la cadena "`Player1`:" y la unimos a la variable `name` para crear la etiqueta de texto completa, p. ej. ''`Player1: Chris`".
-- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento [`click`](/es/docs/Web/Reference/Events/click) en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
+- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento [`click`](/es/docs/Web/API/Element/click_event) en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
 - ¡Y mucho más!
 
 Sin embargo, lo que aún es más emocionante es la funcionalidad construida sobre el lenguaje JavaScript de lado del cliente. Las denominadas **interfaces de programación de aplicaciones** (**API**) te proporcionan superpoderes adicionales para utilizar en tu código JavaScript.
@@ -91,16 +91,18 @@ Las **APIs del navegador** están integradas en tu navegador web y pueden expone
 - La {{domxref("Document_Object_Model", " API del DOM (<code>Document Object Model</code>)")}} te permite manipular HTML y CSS, crear, eliminar y cambiar el HTML, aplicar dinámicamente nuevos estilos a tu página, etc. Cada vez que ves aparecer una ventana emergente en una página, o se muestra algún nuevo contenido (como vimos anteriormente en nuestra sencilla demostración), por ejemplo, ese es el DOM en acción.
 - La {{domxref("Geolocation", "API de Geolocalización")}} recupera información geográfica. Así es como [Google Maps](https://www.google.com/maps) puede encontrar tu ubicación y trazarla en un mapa.
 - Las APIs {{domxref("Canvas_API", "Canvas")}} y {{domxref("WebGL_API", "WebGL")}} te permiten crear gráficos animados en 2D y 3D. Las personas están haciendo cosas increíbles con estas tecnologías web — consulta [Experimentos de Chrome](https://www.chromeexperiments.com) y [webglsamples](https://webglsamples.org/).
-- [APIs de audio y video](/es/Apps/Fundamentals/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y {{domxref("WebRTC API", "WebRTC")}} te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y video directamente en una página web, o tomar video de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración instantánea](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
+- [APIs de audio y video](/es/docs/Web/Aplicaciones/Fundamentals/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y {{domxref("WebRTC API", "WebRTC")}} te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y video directamente en una página web, o tomar video de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración instantánea](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
 
-> **Nota:** Muchas de las demostraciones anteriores no funcionarán en un navegador antiguo — al experimentar, es una buena idea utilizar un navegador moderno como Firefox, Chrome, Edge u Opera para ejecutar tu código. Deberás considerar las [pruebas en varios navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) con más detalle cuando estés más cerca de entregar el código de producción (es decir, código real que usarán los clientes reales).
+> [!NOTE]
+> Muchas de las demostraciones anteriores no funcionarán en un navegador antiguo — al experimentar, es una buena idea utilizar un navegador moderno como Firefox, Chrome, Edge u Opera para ejecutar tu código. Deberás considerar las [pruebas en varios navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) con más detalle cuando estés más cerca de entregar el código de producción (es decir, código real que usarán los clientes reales).
 
 Las **APIs de terceros** no están integradas en el navegador de forma predeterminada y, por lo general, debes obtener su código e información de algún lugar de la Web. Por ejemplo:
 
 - La [API de Twitter](https://dev.twitter.com/overview/documentation) te permite hacer cosas como mostrar tus últimos tweets en tu sitio web.
 - La [API de Google Maps](https://developers.google.com/maps/) y la [API de OpenStreetMap](https://wiki.openstreetmap.org/wiki/API) te permiten insertar mapas personalizados en tu sitio web y otras funciones similares.
 
-> **Nota:** estas APIs son avanzadas y no cubriremos ninguna de ellas en este módulo. Puedes obtener más información sobre estas en nuestro [módulo de APIs web de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs).
+> [!NOTE]
+> Estas APIs son avanzadas y no cubriremos ninguna de ellas en este módulo. Puedes obtener más información sobre estas en nuestro [módulo de APIs web de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs).
 
 ¡También hay mucho más disponible! Sin embargo, no te emociones demasiado todavía. No podrás crear el próximo Facebook, Google Maps o Instagram después de estudiar JavaScript durante 24 horas — hay muchos conceptos básicos que cubrir primero. Y es por eso que estás aquí — ¡sigamos adelante!
 
@@ -108,17 +110,18 @@ Las **APIs de terceros** no están integradas en el navegador de forma predeterm
 
 Aquí, de hecho, comenzaremos a ver algo de código y, mientras lo hacemos, exploraremos lo que realmente sucede cuando ejecutas JavaScript en tu página.
 
-Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
+Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
 
 ![](execution.png)
 
-Un uso muy común de JavaScript es modificar dinámicamente HTML y CSS para actualizar una interfaz de usuario, a través de la API del modelo de objetos del documento (como se mencionó anteriormente). Ten en cuenta que el código de tus documentos web generalmente se cargan y ejecutan en el orden en que aparece en la página. Si JavaScript se carga e intenta ejecutarse antes de que se hayan cargado el HTML y el CSS al que afecta, pueden producirse errores. Aprenderás formas de evitar esto más adelante en el artículo, en la sección [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies).
+Un uso muy común de JavaScript es modificar dinámicamente HTML y CSS para actualizar una interfaz de usuario, a través de la API del modelo de objetos del documento (como se mencionó anteriormente). Ten en cuenta que el código de tus documentos web generalmente se cargan y ejecutan en el orden en que aparece en la página. Si JavaScript se carga e intenta ejecutarse antes de que se hayan cargado el HTML y el CSS al que afecta, pueden producirse errores. Aprenderás formas de evitar esto más adelante en el artículo, en la sección [Estrategias de carga de scripts](#script_loading_strategies).
 
 ### Seguridad del navegador
 
 Cada pestaña del navegador tiene su propio depósito separado para ejecutar código (estos depósitos se denominan "entornos de ejecución" en términos técnicos) — esto significa que, en la mayoría de los casos, el código de cada pestaña se ejecuta de forma completamente independiente y el código de una pestaña no puede afectar el código en otra pestaña, o en otro sitio web. Esta es una buena medida de seguridad — si este no fuera el caso, los piratas podrían comenzar a escribir código para robar información de otros sitios web y otras cosas muy malas.
 
-> **Nota:** Existen formas de enviar código y datos entre diferentes sitios web/pestañas de manera segura, pero estas son técnicas avanzadas que no cubriremos en este curso.
+> [!NOTE]
+> Existen formas de enviar código y datos entre diferentes sitios web/pestañas de manera segura, pero estas son técnicas avanzadas que no cubriremos en este curso.
 
 ### Orden de ejecución de JavaScript
 
@@ -137,9 +140,10 @@ function updateName() {
 
 Aquí seleccionamos un párrafo de texto (línea 1), luego adjuntamos un detector de eventos (línea 3) de modo que cuando se hace clic en el párrafo, el bloque de código `updateName()` (líneas 5-8) se ejecuta. El bloque de código `updateName()` (estos tipos de bloques de código reutilizables se denominan "funciones") pide al usuario un nuevo nombre y luego inserta ese nombre en el párrafo para actualizar la pantalla.
 
-Si cambiaras el orden de las dos primeras líneas de código, ya no funcionaría — en su lugar, obtendrías un error en la [consola del desarrollador del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) — `TypeError: para is undefined`. Esto significa que el objeto `para` aún no existe, por lo que no podemos agregarle un detector de eventos.
+Si cambiaras el orden de las dos primeras líneas de código, ya no funcionaría — en su lugar, obtendrías un error en la [consola del desarrollador del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`. Esto significa que el objeto `para` aún no existe, por lo que no podemos agregarle un detector de eventos.
 
-> **Nota:** Este es un error muy común; debes tener cuidado de que los objetos a los que se hace referencia en tu código existan antes de intentar hacer algo con ellos.
+> [!NOTE]
+> Este es un error muy común; debes tener cuidado de que los objetos a los que se hace referencia en tu código existan antes de intentar hacer algo con ellos.
 
 ### Código interpretado versus compilado
 
@@ -199,9 +203,11 @@ JavaScript se aplica a tu página HTML de manera similar a CSS. Mientras que CSS
 
 5. Guarda tu archivo y actualiza el navegador — ahora deberías ver que cuando haces clic en el botón, se genera un nuevo párrafo y se coloca debajo.
 
-> **Nota:** Si tu ejemplo no parece funcionar, sigue los pasos nuevamente y verifica que hiciste todo bien. ¿Guardaste tu copia local del código de inicio como un archivo `.html`? ¿Agregaste tu elemento {{htmlelement("script")}} justo antes de la etiqueta `</head>`? ¿Ingresaste el JavaScript exactamente como se muestra? **JavaScript distingue entre mayúsculas y minúsculas y es muy exigente, por lo que debes ingresar la sintaxis exactamente como se muestra; de lo contrario, es posible que no funcione.**
+> [!NOTE]
+> Si tu ejemplo no parece funcionar, sigue los pasos nuevamente y verifica que hiciste todo bien. ¿Guardaste tu copia local del código de inicio como un archivo `.html`? ¿Agregaste tu elemento {{htmlelement("script")}} justo antes de la etiqueta `</head>`? ¿Ingresaste el JavaScript exactamente como se muestra? **JavaScript distingue entre mayúsculas y minúsculas y es muy exigente, por lo que debes ingresar la sintaxis exactamente como se muestra; de lo contrario, es posible que no funcione.**
 
-> **Nota:** Puedes ver esta versión en GitHub como [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) o ([verla en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+> [!NOTE]
+> Puedes ver esta versión en GitHub como [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) o ([verla en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
 
 ### JavaScript externo
 
@@ -232,7 +238,8 @@ Esto funciona muy bien, pero ¿y si quisiéramos poner nuestro JavaScript en un 
 
 4. Guarda y actualiza tu navegador, ¡y deberías ver lo mismo! Funciona igual, pero ahora tenemos nuestro JavaScript en un archivo externo. Por lo general, esto es bueno en términos de organización de tu código y para hacerlo reutilizable en varios archivos HTML. Además, el HTML es más fácil de leer sin grandes trozos de script en él.
 
-> **Nota:** Puedes ver esta versión en GitHub como [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) y [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([verla en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+> [!NOTE]
+> Puedes ver esta versión en GitHub como [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) y [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([verla en vivo también](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 
 ### Controladores de JavaScript en línea
 
@@ -272,7 +279,8 @@ for (let i = 0; i < buttons.length; i++) {
 
 Esto puede ser un poco más largo que el atributo `onclick`, pero funcionará para todos los botones, sin importar cuántos haya en la página, ni cuántos se agreguen o eliminen. No es necesario cambiar el JavaScript.
 
-> **Nota:** Intenta editar tu versión de `apply-javascript.html` y agrega algunos botones más en el archivo. Cuando la vuelvas a cargar, deberías encontrar que todos los botones al hacer clic crearán un párrafo. Limpio, ¿eh?
+> [!NOTE]
+> Intenta editar tu versión de `apply-javascript.html` y agrega algunos botones más en el archivo. Cuando la vuelvas a cargar, deberías encontrar que todos los botones al hacer clic crearán un párrafo. Limpio, ¿eh?
 
 ### Estrategias para la carga de scripts
 
@@ -298,7 +306,8 @@ En el ejemplo externo, usamos una función de JavaScript más moderno para resol
 
 En este caso, tanto el script como el HTML se cargarán simultáneamente y el código funcionará.
 
-> **Nota:** En el caso externo, no necesitamos usar el evento `DOMContentLoaded` porque el atributo `defer` nos resolvió el problema. No usamos la solución `defer` para el ejemplo interno de JavaScript porque `defer` solo funciona para scripts externos.
+> [!NOTE]
+> En el caso externo, no necesitamos usar el evento `DOMContentLoaded` porque el atributo `defer` nos resolvió el problema. No usamos la solución `defer` para el ejemplo interno de JavaScript porque `defer` solo funciona para scripts externos.
 
 Una solución pasada de moda a este problema solía ser colocar tu elemento `script` justo en la parte inferior del cuerpo (por ejemplo, justo antes de la etiqueta `</body>`), para que se cargara después de haber procesado todo el HTML. El problema con esta solución es que la carga/procesamiento del script está completamente bloqueado hasta que se haya cargado el DOM HTML. En sitios muy grandes con mucho JavaScript, esto puede causar un importante problema de rendimiento y ralentizar tu sitio.
 
@@ -384,12 +393,13 @@ for (let i = 0; i < buttons.length; i++) {
 }
 ```
 
-> **Nota:** En general, más comentarios suelen ser mejor que menos, pero debes tener cuidado si agregas muchos comentarios para explicar qué son las variables (los nombres de tus variables tal vez deberían ser más intuitivos), o para explicar operaciones muy simples (tal vez tu código sea demasiado complicado).
+> [!NOTE]
+> En general, más comentarios suelen ser mejor que menos, pero debes tener cuidado si agregas muchos comentarios para explicar qué son las variables (los nombres de tus variables tal vez deberían ser más intuitivos), o para explicar operaciones muy simples (tal vez tu código sea demasiado complicado).
 
 ## Resumen
 
 Así que ahí tienes, tu primer paso en el mundo de JavaScript. Comenzamos solo con teoría, para comenzar a acostumbrarte a por qué usarías JavaScript y qué tipo de cosas puedes hacer con él. En el camino, viste algunos ejemplos de código y aprendiste cómo encaja JavaScript con el resto del código en tu sitio web, entre otras cosas.
 
-JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
+JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn/JavaScript/First_steps/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

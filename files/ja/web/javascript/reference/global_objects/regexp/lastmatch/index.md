@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}} {{deprecated_header}}
 
-> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+> [!NOTE]
+> グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
 
 **`RegExp.lastMatch`** は静的アクセサープロパティで、最後に一致した部分文字列を返します。`RegExp["$&"]` はこのプロパティの別名です。
 

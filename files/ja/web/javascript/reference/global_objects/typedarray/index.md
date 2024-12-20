@@ -13,7 +13,7 @@ l10n:
 
 ## 解説
 
-`TypedArray` コンストラクター（よく `%TypedArray%` と表記されます。JavaScript プログラムに公開されるグローバルに対応するものがあるわけではないため、「個別のもの」を表すためです）は、すべての `TypedArray` のサブクラスの共通のスーパークラスとして機能します。`%TypedArray%` はすべての型付き配列のサブクラスに対してユーティリティメソッドの共通インターフェイスを提供する「抽象クラス」であると考えてください。このコンストラクターは直接公開されていません。グローバルプロパティである `TypedArray` プロパティは存在しません。`オブジェクト.getPrototypeOf(Int8Array)` などを通してのみアクセスすることができます。
+`TypedArray` コンストラクター（よく `%TypedArray%` と表記されます。JavaScript プログラムに公開されるグローバルに対応するものがあるわけではないため、「個別のもの」を表すためです）は、すべての `TypedArray` のサブクラスの共通のスーパークラスとして機能します。`%TypedArray%` はすべての型付き配列のサブクラスに対してユーティリティメソッドの共通インターフェイスを提供する「抽象クラス」であると考えてください。このコンストラクターは直接公開されていません。グローバルプロパティである `TypedArray` プロパティは存在しません。`Object.getPrototypeOf(Int8Array)` などを通してのみアクセスすることができます。
 
 `TypedArray` のサブクラス（例えば `Int8Array`）のインスタンスを作成する際、配列バッファーがメモリーに内部作成されるか、コンストラクターの引数に `ArrayBuffer` オブジェクトが指定されると、代わりにその `ArrayBuffer` を使用します。バッファーアドレスはインスタンスの内部プロパティとして保存され、`%TypedArray%.prototype` のすべてのメソッドがその配列バッファーアドレスに基づいて値を設定したり取得したりします。
 
@@ -145,7 +145,8 @@ new TypedArray(buffer, byteOffset, length)
 
 ここで _TypedArray_ は特定の型のコンストラクターのうちの一つを表します。
 
-> **メモ:** すべての `TypedArray` サブクラスのコンストラクターは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> すべての `TypedArray` サブクラスのコンストラクターは [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を使ってのみ構築することができます。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

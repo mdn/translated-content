@@ -9,16 +9,16 @@ slug: Web/HTML/Element/input
 
 **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML.
 
-- _[Content categories](/ru/docs/HTML/Content_categories)_ [Flow content](/ru/docs/HTML/Content_categories#Flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
-  If the [`type`](/ru/docs/Web/HTML/Element/input#type) has not the `hidden` value, labellable element, palpable content.
+- _[Content categories](/ru/docs/Web/HTML/Content_categories)_ [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).
+  If the [`type`](#type) has not the `hidden` value, labellable element, palpable content.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
+- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLInputElement")}}
 
 ## Атрибуты
 
-Этот элемент содержит [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент содержит [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - Расширение файла, начинающееся с символа точки (U+002E). Наприм., '.jpg, .png, .doc)
 - Валидный тип MIME без расширения
@@ -46,7 +46,8 @@ slug: Web/HTML/Element/input
     - `number`: Элемент управления ввода числа(тип **float**).
     - `password`: Однострочное текстовое поле, чьё значение скрыто символом "звёздочка". Используйте атрибуты **minlength** и **maxlength**, чтобы указать минимальную и максимальную длину значения, которое может быть введено.
 
-      > **Примечание:** Любые формы, в которых присутствует важная информация(например, пароль), должны быть обработаны через HTTPS; в настоящий момент Firefox реализует составной механизм предупреждения, направленные против небезопасных форм для входа в систему - смотрите [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords).
+      > [!NOTE]
+      > Любые формы, в которых присутствует важная информация(например, пароль), должны быть обработаны через HTTPS; в настоящий момент Firefox реализует составной механизм предупреждения, направленные против небезопасных форм для входа в систему - смотрите [Небезопасные пароли](/ru/docs/Web/Security/Insecure_passwords).
 
     - `radio`: Кнопка-переключатель, позволяет выбрать одно значение из множественного выбора.
     - `range`: Элемент управления для ввода числа, точное значение которого не имеет значения. Этот тип управления использует следующие значения по умолчанию, если соответствующие атрибуты не указаны:
@@ -83,7 +84,7 @@ slug: Web/HTML/Element/input
 - `checked`
   - : When the value of the **type** attribute is `radio` or `checkbox`, the presence of this Boolean attribute indicates that the control is selected by default; otherwise it is ignored.
 - `disabled`
-  - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) on disabled controls. Also, a disabled control's value isn't submitted with the form.
+  - : This Boolean attribute indicates that the form control is not available for interaction. In particular, the `click` event [will not be dispatched](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) on disabled controls. Also, a disabled control's value isn't submitted with the form.
 - `form`
   - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
 - `formaction`
@@ -91,7 +92,7 @@ slug: Web/HTML/Element/input
 - `formenctype`
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
-    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/ru/docs/Web/HTML/Element/input#type) attribute set to `file`.
+    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](#type) attribute set to `file`.
     - `text/plain` If this attribute is specified, it overrides the [`enctype`](/ru/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
 - `formmethod`
   - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
@@ -138,7 +139,8 @@ slug: Web/HTML/Element/input
   - : A regular expression that the control's value is checked against. The pattern must match the entire value, not just some subset. Use the **title** attribute to describe the pattern to help the user. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored. The regular expression language is the same as JavaScript's. The pattern is not surrounded by forward slashes.
 - `placeholder`
   - : A hint to the user of what can be entered in the control . The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the **type** attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
-    > **Примечание:** Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element. Their purposes are different: the {{HTMLElement("label")}} attribute describes the role of the form element; that is, it indicates what kind of information is expected, the `placeholder` attribute is a hint about the format the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
+    > [!NOTE]
+    > Do not use the `placeholder` attribute instead of a {{HTMLElement("label")}} element. Their purposes are different: the {{HTMLElement("label")}} attribute describes the role of the form element; that is, it indicates what kind of information is expected, the `placeholder` attribute is a hint about the format the content should take. There are cases in which the `placeholder` attribute is never displayed to the user, so the form must be understandable without it.
 - `readonly`
   - : This Boolean attribute indicates that the user cannot modify the value of the control. This attribute is ignored if the value of the **type** attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 - `required`
@@ -169,7 +171,8 @@ slug: Web/HTML/Element/input
 
 ### File inputs
 
-> **Примечание:** Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Using_files_from_web_applications) for an example and more details.
+> [!NOTE]
+> Starting in Gecko 2.0, calling the `click()` method on an {{HTMLElement("input")}} element of type "file" opens the file picker and lets the user select files. See [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications) for an example and more details.
 
 You can't set the value of a file picker from a script; doing something like the following has no effect:
 

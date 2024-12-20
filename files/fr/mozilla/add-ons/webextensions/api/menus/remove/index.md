@@ -9,7 +9,7 @@ Supprime un élément de menu.
 
 Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ var removing = browser.menus.remove(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera définit sans argument si la suppression a réussi, ou rejetée avec un message d'erreur si la suppression a échoué (par exemple, parce que l'élément n'a pas pu être trouvé).
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera définit sans argument si la suppression a réussi, ou rejetée avec un message d'erreur si la suppression a échoué (par exemple, parce que l'élément n'a pas pu être trouvé).
 
 ## Exemples
 
@@ -61,9 +61,9 @@ browser.menus.onClicked.addListener(function (info, tab) {
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

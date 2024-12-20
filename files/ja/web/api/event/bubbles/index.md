@@ -10,7 +10,8 @@ l10n:
 
 **`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。
 
-> **メモ:** バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)を参照してください。
+> [!NOTE]
+> バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)を参照してください。
 
 ## 値
 

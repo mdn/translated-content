@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
-WebGL permite que el contenido web utilice una API basada en [OpenGL ES](http://www.khronos.org/opengles/) 2.0 para llevar a cabo la representación 2D y 3D en un elemento [canvas](/es/docs/Web/API/Canvas_API) HTML en los navegadores que lo soporten sin el uso de plug-ins. WebGL consiste en código de control escrito en JavaScript y código de efectos especiales (código shader) que se ejecuta en la unidad de procesamiento gráfico de una computadora (GPU). Los elementos WebGL se pueden mezclar con otros elementos HTML y componerse con otras partes de la página o el fondo de la misma.
+WebGL permite que el contenido web utilice una API basada en [OpenGL ES](https://www.khronos.org/opengles/) 2.0 para llevar a cabo la representación 2D y 3D en un elemento [canvas](/es/docs/Web/API/Canvas_API) HTML en los navegadores que lo soporten sin el uso de plug-ins. WebGL consiste en código de control escrito en JavaScript y código de efectos especiales (código shader) que se ejecuta en la unidad de procesamiento gráfico de una computadora (GPU). Los elementos WebGL se pueden mezclar con otros elementos HTML y componerse con otras partes de la página o el fondo de la misma.
 
 Este artículo le dará a conocer los conceptos básicos de WebGL. Se asume que ya tiene una comprensión de las matemáticas implicadas en gráficos 3D, y este artículo no pretende tratar de enseñar OpenGL en sí.
 
@@ -78,11 +78,12 @@ function initWebGL(canvas) {
 
 Para obtener el contexto WebGL de un canvas, pedimo el contexto llamado "webgl" del canvas. Si este falla, intentamos con el nombre "experimental-webgl". Si este igualmente, falla, mostramos una alerta permitiendo al usuario conocer que parece no tener soporte WebGL. Eso es todo al respecto. En este punto, `gl` es nulo (no hay ningun contexto WebGL disponible) o es una referencia al contexto WebGL en donde renderizaremos.
 
-> **Nota:** El nombre de contexto "experimental-webgl" es nombre temporal para usar durante el desarrollo de las especificaciones; el nombre "webgl" sera usado una vez se termine el desarrollo.
+> [!NOTE]
+> El nombre de contexto "experimental-webgl" es nombre temporal para usar durante el desarrollo de las especificaciones; el nombre "webgl" sera usado una vez se termine el desarrollo.
 
 En este punto, tienes suficiente código para que el contexto WebGL, inicialice exitosamente, y deberias terminar con una gran cuadro negro y vacio, listo y esperando a recibir contenido .
 
-[Prueba este ejemplo](/samples/webgl/sample1/index.html) si estas usando un navegador compatible con WebGL.
+[Prueba este ejemplo](https://mdn.github.io/webgl-examples/tutorial/sample1/index.html) si estas usando un navegador compatible con WebGL.
 
 ### Cambiando el tamaño del contexto WebGL
 
@@ -99,6 +100,6 @@ Un lienzo experimentara escalado cuando es renderizado en una resolución difere
 ## También podría interesarte
 
 - [Una introducción a WebGL -](https://dev.opera.com/articles/introduction-to-webgl-part-1/)Escrito por Luz Caballero, publicado en dev.opera.com. Este articulo cita que es WebGL, explica como funciona WebGL (incluyendo el concepto del proceso de renderizado), e introduce algunas librerias WebGL
-- [Una introducción al OpenGL moderno](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) - Una serie de articulos escritos por Joe Groff. Joe da una limpia introducción sobre OpenGL desde su historia al importante concepto del proceso de graficos y provee algunos ejemplos sobre como OpenGL trabaja. Si no tienes ninguna idea sobre OpenGL, este es un buen lugar para comenzar.
+- [Una introducción al OpenGL moderno](https://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) - Una serie de articulos escritos por Joe Groff. Joe da una limpia introducción sobre OpenGL desde su historia al importante concepto del proceso de graficos y provee algunos ejemplos sobre como OpenGL trabaja. Si no tienes ninguna idea sobre OpenGL, este es un buen lugar para comenzar.
 
 {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

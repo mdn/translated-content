@@ -42,7 +42,8 @@ Strong 元素 (`<strong>`) 表示文本十分重要，一般用粗体显示。
 
 实现了 `HTMLElement` 接口。
 
-> **备注：** 实现注意事项**:** 一直到 Gecko 1.9.2 (含), Firefox 对这个元素实现了 [`HTMLSpanElement`](/zh-CN/docs/DOM/span) 接口
+> [!NOTE]
+> 实现注意事项**:** 一直到 Gecko 1.9.2 (含), Firefox 对这个元素实现了 [`HTMLSpanElement`](/zh-CN/docs/DOM/span) 接口
 
 ## 举例
 

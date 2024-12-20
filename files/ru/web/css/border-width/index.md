@@ -13,7 +13,7 @@ CSS-свойство {{cssxref("border-width")}} определяет ширин
 
 ## Синтаксис
 
-[Общий синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
+[Общий синтаксис](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
 
 ```css
 border-width: ширина                  /* Одно значение */
@@ -34,7 +34,8 @@ border-width: inherit /* Родительское значение */
     - `medium`
     - `thick`
 
-    > **Примечание:** The specification doesn't precisely define the thickness of each of the keywords, which is therefore implementation specific. Nevertheless, it requests that the thickness does follow the `thin ≤ medium ≤ thick` inequality and that the values are constant on a single document.
+    > [!NOTE]
+    > The specification doesn't precisely define the thickness of each of the keywords, which is therefore implementation specific. Nevertheless, it requests that the thickness does follow the `thin ≤ medium ≤ thick` inequality and that the values are constant on a single document.
 
 - `inherit`
   - : Is a keyword indicating that all four values are inherited from their parent's element calculated value.

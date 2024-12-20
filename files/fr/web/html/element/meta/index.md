@@ -20,7 +20,8 @@ L'élément HTML **`<meta>`** représente toute information de métadonnées qui
 
 Comme tous les autres éléments, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-> **Note :** Il faut préciser que l'attribut [`name`](#name) possède une signification spécifique pour l'élément `<meta>` et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs suivant est déjà défini&nbsp;: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
+> [!NOTE]
+> Il faut préciser que l'attribut [`name`](#name) possède une signification spécifique pour l'élément `<meta>` et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs suivant est déjà défini&nbsp;: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
 
 - `charset`
 
@@ -33,8 +34,9 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     - `content-security-policy`
       - : Cette valeur permet de créer des [règles de gestion de contenu (CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
     - `content-type`
-      - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
-        > **Note :** Cette valeur peut uniquement être utilisée pour les documents servis avec le type `text/html`. Elle ne peut pas être utilisée pour les documents servis avec un type MIME XML.
+      - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
+        > [!NOTE]
+        > Cette valeur peut uniquement être utilisée pour les documents servis avec le type `text/html`. Elle ne peut pas être utilisée pour les documents servis avec un type MIME XML.
     - `default-style`
       - : Le nom de [la feuille de style CSS](/fr/docs/Web/CSS) par défaut.
     - `x-ua-compatible`

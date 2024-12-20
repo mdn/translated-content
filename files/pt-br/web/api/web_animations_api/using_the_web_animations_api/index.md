@@ -91,7 +91,8 @@ Você pode notar algumas diferenças aqui comparando com os valores equivalentes
 - A propriedade `duration` está em milisegundos (`3000`, não `3s`). Assim como {{domxref("WindowTimers.setTimeout()")}} e {{domxref("Window.requestAnimationFrame()")}}, a Web Animations API somente aceita millisegundos.
 - A outra diferença é o uso de `iterations` no lugar de `iteration-count`.
 
-> **Nota:** Existem algumas pequenas diferenças de terminologia entre o CSS Animations e o Web Animations. Por exemplo, Web Animations não usa a string `"infinite"`, e sim a keyword JavaScript `Infinity`. E no lugar de `timing-function`, usamos `easing`. Não estamos citando um valor de `easing` aqui pois, diferente das Animações CSS onde o valor padrão do [animation-timing-function](/pt-BR/docs/Web/CSS/animation-timing-function) é `ease`, na Web Animations API o padrão é `linear` — o que nós já queremos para a animação da Alice.
+> [!NOTE]
+> Existem algumas pequenas diferenças de terminologia entre o CSS Animations e o Web Animations. Por exemplo, Web Animations não usa a string `"infinite"`, e sim a keyword JavaScript `Infinity`. E no lugar de `timing-function`, usamos `easing`. Não estamos citando um valor de `easing` aqui pois, diferente das Animações CSS onde o valor padrão do [animation-timing-function](/pt-BR/docs/Web/CSS/animation-timing-function) é `ease`, na Web Animations API o padrão é `linear` — o que nós já queremos para a animação da Alice.
 
 #### Juntando as peças
 
@@ -341,8 +342,8 @@ var endGame = function() {
 
 Animações e Transições CSS tem seus event listeners próprios, que também são possíveis com a Web Animations API:
 
-- [`onfinish`](/pt-BR/docs/Web/API/Animation/onfinish) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
-- [`oncancel`](/pt-BR/docs/Web/API/Animation/oncancel) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
+- [`onfinish`](/pt-BR/docs/Web/API/Animation/finish_event) é o manipulador de eventos para o evento `finish` e pode ser disparado manualmente com [`finish()`](/pt-BR/docs/Web/API/Animation/finish).
+- [`oncancel`](/pt-BR/docs/Web/API/Animation/cancel_event) é o manipulador de eventos para o evento `cancel` e pode ser disparado manualmente com [`cancel()`](/pt-BR/docs/Web/API/Animation/cancel).
 
 Aqui nós definimos os callbacks para o bolinho, a garrafa e para Alice para disparar a função `endGame`:
 

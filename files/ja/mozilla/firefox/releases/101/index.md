@@ -34,7 +34,7 @@ slug: Mozilla/Firefox/Releases/101
 
 - [`DOMException`](/ja/docs/Web/API/DOMException) が {{Glossary("シリアライズ可能なオブジェクト")}} になりました。{{domxref("structuredClone()")}} でクローンを作ることや、{{domxref("Worker.postMessage()", "postMessage()")}} を使用して [workers](/ja/docs/Web/API/Worker) との間でコピーすることができます ([Firefox バグ 1561357](https://bugzil.la/1561357))。
 
-- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
+- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpSender/setParameters) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
   0 は有効なフレームレートの値ですが、Firefox は "フレームレート制限なし" と解釈しますので注意してください。
   詳しくは [Firefox バグ 1611957](https://bugzil.la/1611957) をご覧ください。
 
@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/101
 #### Media、WebRTC、Web Audio
 
 - [AV1 コーデックのパラメーター](/ja/docs/Web/Media/Formats/codecs_parameter#av1) が、メディアサポートクエリーで適切に解析されるようになりました。
-  これは [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo)、[`HTMLMediaElement.canPlayType()`](/ja/docs/Web/API/HTMLMediaElement/canPlayType)、[`MediaSource.isTypeSupported()`](/ja/docs/Web/API/MediaSource/isTypeSupported) が、与えられたコーデックパラメーターに基づいた AV1 ソースの再生を正確に報告することを意味します。
+  これは [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo)、[`HTMLMediaElement.canPlayType()`](/ja/docs/Web/API/HTMLMediaElement/canPlayType)、[`MediaSource.isTypeSupported()`](/ja/docs/Web/API/MediaSource/isTypeSupported_static) が、与えられたコーデックパラメーターに基づいた AV1 ソースの再生を正確に報告することを意味します。
   [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo) も、AV1 動画の "効率的なデコード" を正確に報告するためにこの情報を使用します。
   詳しくは [Firefox バグ 1757861](https://bugzil.la/1757861) をご覧ください。
 
@@ -57,7 +57,7 @@ slug: Mozilla/Firefox/Releases/101
 
 - イベントをグローバルにサブスクライブするコマンド ([`session.subscribe`](https://w3c.github.io/webdriver-bidi/#command-session-subscribe)) およびサブスクライブを解除するコマンド ([`session.unsubscribe`](https://w3c.github.io/webdriver-bidi/#command-session-unsubscribe)) の部分的な実装と、WebDriver クラシックを使用しないときに WebDriver BiDi セッションを直接作成する機能 ([`session.new`](https://w3c.github.io/webdriver-bidi/#command-session-new)) を含む、[`session` モジュール](https://w3c.github.io/webdriver-bidi/#module-session) を追加しました。
 
-- 新しいタブやウィンドウを開くコマンド ([`browsingContext.create`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create)) や閉じるコマンド ([`browsingContext.close`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close))、開いているブラウジングコンテキストを取得するコマンド ([`browsingContext.getTree`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree))、ブラウジングコンテキスト内でナビゲーションするコマンド ([`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate)) を含む [`browsingContext` モジュール](https://w3c.github.io/webdriver-bidi/#module-browsingContext) を追加しました。これらは、ブラウジングコンテキストが作成されたときのイベント ([`browsingContext.contextCreated`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextCreated)) もサポートします。
+- 新しいタブやウィンドウを開くコマンド ([`browsingContext.create`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create)) や閉じるコマンド ([`browsingContext.close`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-close))、開いている閲覧コンテキストを取得するコマンド ([`browsingContext.getTree`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-getTree))、閲覧コンテキスト内でナビゲーションするコマンド ([`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate)) を含む [`browsingContext` モジュール](https://w3c.github.io/webdriver-bidi/#module-browsingContext) を追加しました。これらは、閲覧コンテキストが作成されたときのイベント ([`browsingContext.contextCreated`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextCreated)) もサポートします。
 
 - ログのイベント ([`log.entryAdded`](https://w3c.github.io/webdriver-bidi/#event-log-entryAdded)) をサポートする [`log` モジュール](https://w3c.github.io/webdriver-bidi/#module-log) を追加しました。
 

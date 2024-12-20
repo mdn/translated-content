@@ -5,15 +5,16 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
 
-> В других статьях мы рассмотрели как [создать cross browser видео плеер](/en-US/Apps/Build/Manipulating_media/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.
+> В других статьях мы рассмотрели как [создать cross browser видео плеер](/ru/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как [стилизовать плеер](/ru/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics). В этой статье мы возьмём тот же плеер и покажем как добавить подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.
 
 ## Пример видео с подписями
 
-В этой статье мы сошлёмся на пример плеера с подписями. Этот пример использует отрывок из [Sintel open movie](http://www.sintel.org/), созданного [Blender Foundation](http://www.blender.org/foundation/).
+В этой статье мы сошлёмся на пример плеера с подписями. Этот пример использует отрывок из [Sintel open movie](https://www.sintel.org/), созданного [Blender Foundation](https://www.blender.org/foundation/).
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-> **Примечание:** вы можете найти [source on Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а так же [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
+> [!NOTE]
+> Вы можете найти [исходный код на Github](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions), а также [посмотреть пример](http://iandevlin.github.io/mdn/video-player-with-captions/).
 
 ## HTML5 и Video Captions
 
@@ -21,7 +22,7 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 ### Подписи или Субтитры
 
-[Подписи и субтитры не одно и тоже](http://web.archive.org/web/20160117160743/http://screenfont.ca/learn/): они имеют существенные различия для зрителя, и передают различную информацию, мы рекомендуем ознакомится с различиями, если вы не уверены, что они есть. Однако технически они реализуются одинаково, поэтому материал в нашей статье применим к обоим.
+[Подписи и субтитры не одно и тоже](https://web.archive.org/web/20160117160743/http://screenfont.ca/learn/): они имеют существенные различия для зрителя, и передают различную информацию, мы рекомендуем ознакомится с различиями, если вы не уверены, что они есть. Однако технически они реализуются одинаково, поэтому материал в нашей статье применим к обоим.
 
 В этой статье мы сошлёмся на text tracks, отображаемые как субтистры, т.к их контент направлен на слышащих людей, со сложностью понимания языка в фильме, а не на людей с плохим или отсутствием слуха.
 
@@ -31,15 +32,15 @@ HTML5 позволяет нам указать субтитры для виде�
 
 ### WebVTT
 
-Файлы содержащие данные о субтитрах - это простой текстовый файл, который следует специальному формату, такому как [Web Video Text Tracks](/ru/docs/HTML/WebVTT) (WebVTT) формат. [WebVTT specification](http://dev.w3.org/html5/webvtt/) всё ещё работает, по этому основные его части стабильны и мы можем использовать их сегодня.
+Файлы содержащие данные о субтитрах - это простой текстовый файл, который следует специальному формату, такому как [Web Video Text Tracks](/ru/docs/Web/API/WebVTT_API) (WebVTT) формат. [WebVTT specification](https://dev.w3.org/html5/webvtt/) всё ещё работает, по этому основные его части стабильны и мы можем использовать их сегодня.
 
-Поставщики видео контента (такие как [Blender Foundation](http://www.blender.org/foundation/)) предоставляют и подписи и субтитры в текстовом формате с их видео, но они обычно в SubRip Text (SRT) формате. Этот формат может быть легко переконвертирован в WebVTT, используя online конвертер например такой как [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
+Поставщики видео контента (такие как [Blender Foundation](https://www.blender.org/foundation/)) предоставляют и подписи и субтитры в текстовом формате с их видео, но они обычно в SubRip Text (SRT) формате. Этот формат может быть легко переконвертирован в WebVTT, используя online конвертер например такой как [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
 
 ## Modifications to the HTML and CSS
 
 В этом разделе представлены модификации, сделанные в коде предыдущих статей, для того чтобы облегчить добавление субтитров в видео. Если вам это не интересно и вы просто хотите идти дальше в JavaScript и более соответствующий CSS, пропустите [Subtitle implementation](#subtitle_implementation) раздел.
 
-В этом примере мы используем другое видео, [Sintel](http://www.sintel.org/), так как оно имеет больше речи и следовательно лучше иллюстрирует работу субтитров.
+В этом примере мы используем другое видео, [Sintel](https://www.sintel.org/), так как оно имеет больше речи и следовательно лучше иллюстрирует работу субтитров.
 
 ### HTML Markup
 
@@ -140,7 +141,7 @@ for (var i = 0; i < video.textTracks.length; i++) {
 
 Свойство `video.textTracks` содержит массив всех текстовых треков, присоединённых к видео. Мы проходим по каждому и устанавливаем его `mode` в `hidden`
 
-Примечание: [WebVTT API](http://dev.w3.org/html5/webvtt/#api) даёт нам доступ ко всем текстовым трекам, что определены в HTML5 video, c помощью элемента `<track>`
+Примечание: [WebVTT API](https://dev.w3.org/html5/webvtt/#api) даёт нам доступ ко всем текстовым трекам, что определены в HTML5 video, c помощью элемента `<track>`
 
 ### Building a caption menu
 
@@ -259,7 +260,7 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 ## Styling the displayed subtitles
 
-One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via [CSS Extensions](http://dev.w3.org/html5/webvtt/#css-extensions).
+One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via [CSS Extensions](https://dev.w3.org/html5/webvtt/#css-extensions).
 
 The `::cue` pseudo-element is the key to targetting individual text track cues for styling, as it matches any defined cue. There are only a handful of CSS properties that can be applied to a text cue:
 
@@ -281,7 +282,7 @@ For example, to change the text colour of the text track cues you can write:
 }
 ```
 
-If the WebVTT file uses [voice spans](http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
+If the WebVTT file uses [voice spans](https://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
 
 ```
 0
@@ -298,7 +299,8 @@ Then this specific 'voice' will be stylable like so:
 }
 ```
 
-> **Примечание:** Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
+> [!NOTE]
+> Some of the styling of cues with ::cue currently works on Chrome, Opera, and Safari, but not yet on Firefox.
 
 ## Совместимость с браузерами
 

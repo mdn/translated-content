@@ -20,13 +20,14 @@ Lorsqu'on fournit des versions haute densité d'une image pour les appareils ave
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
 Il est possible d'utiliser la propriété CSS {{cssxref("object-position")}} afin d'ajuster le positionnement de l'image dans le cadre de l'élément. La propriété {{cssxref("object-fit")}} permet quant à elle de contrôler la façon dont la taille de l'image est ajustée.
 
-> **Note :** Ces propriétés doivent être utilisées sur les éléments `<img>` fils et pas sur l'élément `<picture>`.
+> [!NOTE]
+> Ces propriétés doivent être utilisées sur les éléments `<img>` fils et pas sur l'élément `<picture>`.
 
 ## Exemples
 
@@ -86,7 +87,7 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

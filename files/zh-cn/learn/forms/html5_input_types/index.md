@@ -27,7 +27,8 @@ slug: Learn/Forms/HTML5_input_types
   </tbody>
 </table>
 
-> **备注：** 本篇文章中讨论的大多数特性都受到了广泛支持，如果有任何例外将会在文章中说明，如果你需要更多浏览器支持的细节，你应该查看我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是深入的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/Input) 参考。
+> [!NOTE]
+> 本篇文章中讨论的大多数特性都受到了广泛支持，如果有任何例外将会在文章中说明，如果你需要更多浏览器支持的细节，你应该查看我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是深入的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/input) 参考。
 
 由于 HTML 表单控件的外观可能与设计者的规格有很大的不同，web 开发者有时会建立自己的自定义表单控件。我们在一个高级教程中介绍了这一点：[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)。
 
@@ -53,7 +54,8 @@ slug: Learn/Forms/HTML5_input_types
 
 ![Firefox for Android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
-> **备注：** 你可以在[基本 input 例子](https://mdn.github.io/learning-area/html/forms/basic-input-examples/)中找到基本文本 input 类型的例子（也请看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)）。
+> [!NOTE]
+> 你可以在[基本 input 例子](https://mdn.github.io/learning-area/html/forms/basic-input-examples/)中找到基本文本 input 类型的例子（也请看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)）。
 
 这是使用这些较新的 input 类型的另一个很好的理由——可以为这些设备的用户改善用户体验。
 
@@ -65,7 +67,8 @@ slug: Learn/Forms/HTML5_input_types
 
 注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网络的电子邮件地址。为了实现不同的验证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn/Forms/Form_validation)文章中进一步说明如何使用这些功能。
 
-> **备注：** 如果输入的数据不是一个电子邮件地址，会匹配 {{cssxref(':invalid')}} 伪类，且 {{domxref('validityState.typeMismatch')}} 属性总会返回 `true`。
+> [!NOTE]
+> 如果输入的数据不是一个电子邮件地址，会匹配 {{cssxref(':invalid')}} 伪类，且 {{domxref('validityState.typeMismatch')}} 属性总会返回 `true`。
 
 ## 查询字段
 
@@ -115,7 +118,8 @@ slug: Learn/Forms/HTML5_input_types
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
 
-> **备注：** URL 格式正确可不意味着所指向的地址一定实际存在！
+> [!NOTE]
+> URL 格式正确可不意味着所指向的地址一定实际存在！
 
 ## 数字字段
 
@@ -189,7 +193,8 @@ price.addEventListener("input", () => {
 
 这里我们将 `range` 输入元素和 `output` 元素存为了两个变量。然后我们马上将 `output` 的 [`textContent`](/zh-CN/docs/Web/API/Node/textContent) 属性设置为 input 的 `value` 。最终，我们设置了一个事件监听器，确保每次范围滑块移动时，`output` 的 `textContent` 总是可以及时更新为新值。
 
-> **备注：** 在 CSS Tricks 网站上有一篇关于该主题的很好的教程：[The Output Element](https://css-tricks.com/the-output-element/)。
+> [!NOTE]
+> 在 CSS Tricks 网站上有一篇关于该主题的很好的教程：[The Output Element](https://css-tricks.com/the-output-element/)。
 
 ## 日期和时间选择器
 
@@ -205,7 +210,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的控件。
+[`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的控件。
 
 ```html
 <input type="datetime-local" name="datetime" id="datetime" />
@@ -213,7 +218,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `month`
 
-[`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month) 创建了显示和选择带有年份信息的某个月的控件。
+[`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month) 创建了显示和选择带有年份信息的某个月的控件。
 
 ```html
 <input type="month" name="month" id="month" />
@@ -221,7 +226,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `time`
 
-[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 创建了显示和选择时间的控件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
+[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 创建了显示和选择时间的控件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
 
 ```html
 <input type="time" name="time" id="time" />
@@ -229,7 +234,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `week`
 
-[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/Input/week) 创建了显示和选择一年中特定编号周的控件。
+[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week) 创建了显示和选择一年中特定编号周的控件。
 
 一周以周一开始，一直运行到周日结束。另外，每年的第一周总会包含那一年首个星期四，其中可能不包括当年的第一天，也可能包括前一年的最后几天。
 

@@ -31,7 +31,7 @@ Hay muchos otros elementos en HTML para dar formato al texto, que no expusimos e
 
 ## Listas de descripciones
 
-En los fundamentos del texto HTML, explicamos cómo [marcar listas básicas](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) en HTML, pero no mencionamos el tercer tipo de lista con la que te encontrarás ocasionalmente: **listas de descripción**. El propósito de estas listas es marcar un conjunto de elementos y sus descripciones asociadas, como términos y definiciones, o preguntas y respuestas. Veamos un ejemplo de un conjunto de términos y definiciones:
+En los fundamentos del texto HTML, explicamos cómo [marcar listas básicas](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists) en HTML, pero no mencionamos el tercer tipo de lista con la que te encontrarás ocasionalmente: **listas de descripción**. El propósito de estas listas es marcar un conjunto de elementos y sus descripciones asociadas, como términos y definiciones, o preguntas y respuestas. Veamos un ejemplo de un conjunto de términos y definiciones:
 
 ```bash
 soliloquio
@@ -491,7 +491,8 @@ Estos saldrán con un aspecto similar a este (la expansión aparecerá en una de
 
 {{EmbedLiveSample('ejemplo-de-abreviaturas-en-vivo', '100%', '94px', '', '', 'hide-codepen-jsfiddle')}}
 
-> **Nota:** Hay otro elemento, {{HTMLElement("acronym")}}, que básicamente hace lo mismo que `<abbr>`, y se diseñó específicamente para acrónimos en lugar de las abreviaturas. Sin embargo, este ha caído en desuso — no era compatible con los navegadores ni con `<abbr>`, y `<abbr>` tiene una función tan similar que se consideró inútil conservar ambos. Solo utiliza `<abbr>`.
+> [!NOTE]
+> Hay otro elemento, {{HTMLElement("acronym")}}, que básicamente hace lo mismo que `<abbr>`, y se diseñó específicamente para acrónimos en lugar de las abreviaturas. Sin embargo, este ha caído en desuso — no era compatible con los navegadores ni con `<abbr>`, y `<abbr>` tiene una función tan similar que se consideró inútil conservar ambos. Solo utiliza `<abbr>`.
 
 ### Aprendizaje activo: Marcar una abreviatura
 
@@ -772,6 +773,6 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 ## Resumen
 
-Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Element) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Element#Inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
+Esto marca el final de nuestro estudio de la semántica del texto HTML. Ten en cuenta que lo que has visto durante este curso no es una lista exhaustiva de elementos de texto HTML — quisimos tratar de cubrir los aspectos esenciales y algunos de los más comunes que verás en la naturaleza, o al menos podrían resultarte interesantes. Para encontrar muchos más elementos HTML, puedes echarle un vistazo a nuestra [referencia de elementos HTML](/es/docs/Web/HTML/Element) (la [La sección Semántica de texto en línea](/es/docs/Web/HTML/Element#inline_text_semantics) sería un gran lugar para comenzar). En el próximo artículo veremos los elementos HTML que usarás para estructurar las diferentes partes de un documento HTML.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}

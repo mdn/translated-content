@@ -5,7 +5,7 @@ slug: Web/CSS/outline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
+[CSS](/zh-CN/docs/Web/CSS) 的 `outline` 属性是在一条声明中设置多个轮廓属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) ，例如 {{cssxref("outline-style")}}, {{cssxref("outline-width")}} 和 {{cssxref("outline-color")}}。
 
 {{EmbedInteractiveExample("pages/css/outline.html")}}
 
@@ -20,28 +20,31 @@ slug: Web/CSS/outline
 
 ## 语法
 
-```
+```css
 /* 样式 */
 outline: solid;
 
-/* 颜色 | 样式 */
-outline: #f66 dashed;
+/* 样式 | 颜色 */
+outline: dashed #f66;
 
-/* 样式 | 宽度 */
-outline: inset thick;
+/* 宽度 | 样式 */
+outline: thick inset;
 
-/* 颜色 | 样式 | 宽度 */
-outline: green solid 3px;
+/* 宽度 | 样式 | 颜色 */
+outline: 3px solid green;
 
 /* 全局值 */
 outline: inherit;
 outline: initial;
+outline: revert;
+outline: revert-layer;
 outline: unset;
 ```
 
 `outline` 属性可使用以下一个、两个或三个值来声明，且顺序不重要。
 
-> **备注：** 对于很多元素来说，如果没有设置样式，轮廓是不可见的。因为样式（style）的默认值是 `none`。但 `input` 元素是例外，其样式默认值由浏览器决定。
+> [!NOTE]
+> 对于很多元素来说，如果没有设置样式，轮廓是不可见的。因为样式（style）的默认值是 `none`。但 `input` 元素是例外，其样式默认值由浏览器决定。
 
 ### 取值
 
@@ -52,21 +55,27 @@ outline: unset;
 - `<'outline-width'>`
   - : 设置轮廓的宽度。没有设置时默认值为 `medium`。参见 {{cssxref("outline-width")}}。
 
-### 形式语法
+## 形式定义
 
-{{csssyntax("outline")}}
+{{cssinfo}}
+
+## 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
-### HTML
+### 使用 outline 设置焦点样式
 
-```
-<a href="#">This link has a special focus style.</a>
+#### HTML
+
+```html
+<a href="#">该链接具有特殊的焦点样式。</a>
 ```
 
 ### CSS
 
-```
+```css
 a {
   border: 1px solid;
   border-radius: 3px;
@@ -82,7 +91,9 @@ a:focus {
 }
 ```
 
-### 结果
+#### 结果
+
+{{EmbedLiveSample("使用 outline 设置焦点样式", "100%", 85)}}
 
 ## 无障碍考虑
 
@@ -94,8 +105,6 @@ a:focus {
 ## 规范
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## 浏览器兼容性
 

@@ -33,7 +33,8 @@ Une valeur {{domxref ("WebGLUniformLocation")}} indiquant l'emplacement de la va
 
 `WebGLUniformLocation` est une valeur opaque utilisée pour identifier de manière unique l'emplacement dans la mémoire de la GPU auquel se trouve la variable uniform. Avec cette valeur en main, vous pouvez appeler d'autres méthodes WebGL pour accéder à la valeur de la variable uniform.
 
-> **Note :** Le type `WebGLUniformLocation` est compatible avec le type `GLint` pour indiquer l'indice ou l'emplacement d'un attribut uniform.
+> [!NOTE]
+> Le type `WebGLUniformLocation` est compatible avec le type `GLint` pour indiquer l'indice ou l'emplacement d'un attribut uniform.
 
 ### Erreurs
 
@@ -60,7 +61,8 @@ gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
 ```
 
-> **Note :** Cet extrait de code provient de [la fonction animateScene()](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
+> [!NOTE]
+> Cet extrait de code provient de [la fonction animateScene()](/fr/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) dans "Un exemple d'animation WebGL 2D de base". Voir cet article pour l'exemple complet et pour voir l'animation résultante en action.
 
 Après avoir défini le programme d'ombrage en cours comme `programmeShader`, ce code récupère les trois uniforms `"uScalingFactor"`, `"uGlobalColor"` et `"uRotationVector"`, en appelant `getUniformLocation()` une fois pour chaque uniform.
 

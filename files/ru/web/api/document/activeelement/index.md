@@ -11,7 +11,8 @@ slug: Web/API/Document/activeElement
 
 Часто возвращается {{ HTMLElement("input") }} или {{ HTMLElement("textarea") }} объект, если он содержит в себе выделенный в данный момент текст. При этом вы можете получить более подробные сведения, используя свойства элемента `selectionStart` и `selectionEnd`. В других случаях сфокусированным элементом может быть {{ HTMLElement("select") }} элемент (меню) или {{ HTMLElement("input") }} элемент типа button, checkbox или radio.
 
-> **Примечание:** На Mac, элементы, не являющиеся текстовыми полями, как правило, не получают фокус.
+> [!NOTE]
+> На Mac, элементы, не являющиеся текстовыми полями, как правило, не получают фокус.
 
 Как правило, пользователь может нажать клавишу табуляции для перемещения по фокусируемым элементам страницы, и использовать пробел для их активации (нажать кнопку button, выбрать переключатель radio).
 
@@ -19,7 +20,8 @@ slug: Web/API/Document/activeElement
 
 Когда выделение отсутствует, активным элементом является {{ HTMLElement("body") }} страницы или null.
 
-> **Примечание:** Этот атрибут является частью разрабатываемой спецификации HTML 5.
+> [!NOTE]
+> Этот атрибут является частью разрабатываемой спецификации HTML 5.
 
 ## Синтаксис
 
@@ -59,7 +61,7 @@ var curElement = document.activeElement;
   </head>
   <body onload="init()">
     <div>Выделите текст в одном из текстовых полей ниже:</div>
-    <form id="frm-example" action="#" accept-charset="utf-8">
+    <form>
       <textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
 Это текстовое поле 1:
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
@@ -93,7 +95,7 @@ Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut ac
 
 ## Связанные события
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/ru/docs/Web/API/Element/focus_event)
+- [`blur`](/ru/docs/Web/API/Element/blur_event)
+- [`focusin`](/ru/docs/Web/API/Element/focusin_event)
+- [`focusout`](/ru/docs/Web/API/Element/focusout_event)

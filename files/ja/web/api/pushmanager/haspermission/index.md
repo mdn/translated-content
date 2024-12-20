@@ -10,7 +10,8 @@ l10n:
 
 **`PushManager.hasPermission()`** は {{domxref("PushManager")}} インターフェイスのメソッドで、 {{jsxref("Promise")}} を返します。このプロミスは、ウェブアプリへのリクエストの `PushPermissionStatus` に解決し、 `granted`, `denied`, `default` のいずれかになります。
 
-> **メモ:** この機能は {{domxref("PushManager.permissionState()")}} メソッドに置き換えられました。
+> [!NOTE]
+> この機能は {{domxref("PushManager.permissionState()")}} メソッドに置き換えられました。
 
 ## 構文
 

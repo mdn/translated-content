@@ -19,7 +19,8 @@ PlayCanvas では、機能紹介を兼ねたデモをいくつか公開してい
 
 ![A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8.](playcanvas-demos.png)
 
-> **メモ:** さらに事例をご覧になる場合は[特集されているデモ](https://playcanvas.com/explore)も確認してください。
+> [!NOTE]
+> さらに事例をご覧になる場合は[特集されているデモ](https://playcanvas.com/explore)も確認してください。
 
 ## エンジンとエディターの違い
 

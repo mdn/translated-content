@@ -2,7 +2,7 @@
 title: grid-area
 slug: Web/CSS/grid-area
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: b692821c494fd3a25dd883b6fe14998fa2621f7b
 ---
 
 {{CSSRef}}
@@ -19,7 +19,7 @@ l10n:
 
 `grid-column-start` が省略された場合、 `grid-row-start` が `<custom-ident>` であれば、 4 つの個別指定値はその値に設定されます。それ以外の場合は `auto` に設定されます。
 
-grid-area プロパティは領域の名称として機能する {{cssxref("&lt;custom-ident&gt;")}} を設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
+`grid-area` プロパティは領域の名称として機能する {{cssxref("&lt;custom-ident&gt;")}} を設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
 
 ## 構成要素のプロパティ
 
@@ -66,9 +66,10 @@ grid-area: unset;
   - : このプロパティがグリッドアイテムの配置に何も寄与しないことを示すキーワードで、自動配置または既定のスパン `1` を示します。
 - `<custom-ident>`
 
-  - : '`<custom-ident>-start`'/'`<custom-ident>-end`' という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
+  - : `<custom-ident>-start` または `<custom-ident>-end` という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
 
-    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-area: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します（その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り）。
+    > [!NOTE]
+    > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-area: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します（その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り）。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
@@ -102,7 +103,7 @@ grid-area: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_grid_areas
 <div id="grid">
   <div id="item1"></div>
   <div id="item2"></div>
@@ -112,7 +113,7 @@ grid-area: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_grid_areas
 #grid {
   display: grid;
   height: 100px;
@@ -135,7 +136,7 @@ grid-area: unset;
 
 #### 結果
 
-{{EmbedLiveSample("グリッド領域の設定", "100%", "150px")}}
+{{EmbedLiveSample("Setting_grid_areas", "100%", "150px")}}
 
 ## 仕様書
 
@@ -147,6 +148,12 @@ grid-area: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
-- グリッドレイアウトガイド: [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- 動画チュートリアル: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-template-areas")}}
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- 動画: [Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)

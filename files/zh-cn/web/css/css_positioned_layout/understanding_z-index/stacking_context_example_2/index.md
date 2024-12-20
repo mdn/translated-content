@@ -24,7 +24,8 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
     - DIV #4 (z-index 10)
 
-> **备注：** 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。
+> [!NOTE]
+> 值得记住的是，通常 HTML 的层次结构和层叠上下文的层次结构是不同的。在层叠上下文的层次结构中，没有创建层叠上下文的元素同其父级处于一个层叠上下文。
 
 ### 示例源码
 
@@ -122,15 +123,15 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 ### 相关文章
 
-- [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
-- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
-- [The stacking context](/zh-CN/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/zh-CN/docs/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
+- [Adding z-index](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 3](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### 原文信息
 
 - Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005

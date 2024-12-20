@@ -61,7 +61,7 @@ l10n:
 > - `\{{APIRef("GroupDataName")}}` — これをクリックすると、現在のページに関連するすばやく参照できるリンクを表示する左側のリファレンスサイドバーが生成されます。
 >   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) の中の各ページは同じサイドバーを持ち、そこでこの API の別なページにアクセスできます。
 >   API に適したサイドバーを生成するには、GitHub リポジトリーに `GroupData` エントリーを追加し、マクロ呼び出しの中で _GroupDataName_ の代わりにそのエントリーの名前を記載する必要があります。
->   この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)ガイドを参照してください。
+>   この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)ガイドを参照してください。
 > - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
@@ -90,7 +90,8 @@ l10n:
 
 詳しくは、[サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)を追加する方法のガイドをご覧ください。
 
-> **メモ:** 他のページで紹介されている例にリンクしたい場合もあるでしょう。
+> [!NOTE]
+> 他のページで紹介されている例にリンクしたい場合もあるでしょう。
 >
 > **シナリオ 1:** このページにいくつかの例があり、別のページにさらにいくつかの例がある場合。
 >

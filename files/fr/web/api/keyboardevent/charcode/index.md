@@ -11,7 +11,8 @@ La propriété en lecture seule {{domxref("KeyboardEvent.charCode")}} retourne l
 
 Pour des constantes équivalant ces codes numériques, voir {{ domxref("KeyboardEvent", "KeyEvent") }}.
 
-> **Note :** N'utilisez plus cette propriété, elle est dépréciée. Utilisez plutôt {{domxref("KeyboardEvent.key")}}.
+> [!NOTE]
+> N'utilisez plus cette propriété, elle est dépréciée. Utilisez plutôt {{domxref("KeyboardEvent.key")}}.
 
 ## Syntaxe
 

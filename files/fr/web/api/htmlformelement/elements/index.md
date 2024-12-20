@@ -5,7 +5,7 @@ slug: Web/API/HTMLFormElement/elements
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`elements`**, rattachée à l'interface [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement), renvoie un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) qui liste l'ensemble des contrôles de formulaire contenu dans l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form).
+La propriété **`elements`**, rattachée à l'interface [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement), renvoie un objet [`HTMLFormControlsCollection`](/fr/docs/Web/API/HTMLFormControlsCollection) qui liste l'ensemble des contrôles de formulaire contenu dans l'élément [`<form>`](/fr/docs/Web/HTML/Element/form).
 
 Si besoin d'obtenir uniquement le nombre de contrôles du formulaire, on pourra utiliser la propriété [`length`](/fr/docs/Web/API/HTMLFormElement/length).
 
@@ -13,7 +13,8 @@ On peut accéder à un contrôle particulier du formulaire via la collection ren
 
 Avant HTML 5, l'objet renvoyé était un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection), sur lequel `HTMLFormControlsCollection` est désormais basé.
 
-> **Note :** De la même façon, on peut obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété [`forms`](/fr/docs/Web/API/Document/forms).
+> [!NOTE]
+> De la même façon, on peut obtenir la liste de tous les formulaires contenus dans un document donné en utilisant la propriété [`forms`](/fr/docs/Web/API/Document/forms).
 
 ## Valeur
 
@@ -23,13 +24,13 @@ Les contrôles de formulaires de la collection renvoyée sont dans le même ordr
 
 Seuls les éléments suivants sont renvoyés&nbsp;:
 
-- [`<button>`](/fr/docs/Web/HTML/Element/Button)
-- [`<fieldset>`](/fr/docs/Web/HTML/Element/Fieldset)
+- [`<button>`](/fr/docs/Web/HTML/Element/button)
+- [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset)
 - [`<input>`](/fr/docs/Web/HTML/Element/input) (exception faite des éléments dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `"image"`, pour des raisons historiques)
 - [`<object>`](/fr/docs/Web/HTML/Element/object)
 - [`<output>`](/fr/docs/Web/HTML/Element/output)
 - [`<select>`](/fr/docs/Web/HTML/Element/select)
-- [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea)
+- [`<textarea>`](/fr/docs/Web/HTML/Element/textarea)
 
 ## Exemples
 
@@ -53,7 +54,7 @@ const inputByName = inputs["username"];
 
 ### Accéder aux contrôles du formulaire
 
-Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`"text"`](/fr/docs/Web/HTML/Element/Input/text) afin de pouvoir modifier leur valeur.
+Dans cet exemple, on récupère la liste des éléments du formulaire, qu'on parcourt à la recherche d'éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type [`"text"`](/fr/docs/Web/HTML/Element/input/text) afin de pouvoir modifier leur valeur.
 
 ```js
 const inputs = document.getElementById("mon-formulaire").elements;

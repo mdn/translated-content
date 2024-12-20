@@ -33,7 +33,7 @@ var sign = window.prompt("Você está se sentindo com sorte", "certamente"); // 
 
 Quando o usuário pressiona o botão OK, o texto digitado no campo de texto é retornado. Se o usuário pressionar OK sem ter digitado qualquer texto, uma cadeia de caracteres vazia é retornada. Se o usuário pressionar o botão Cancelar, esta função retornará `null`.
 
-{{todo("external image!")}} O prompt acima aparece da seguinte forma (no Chrome do Windows 7):
+<!-- TODO: add content --> O prompt acima aparece da seguinte forma (no Chrome do Windows 7):
 
 ![](https://lh4.googleusercontent.com/-uDx7r8y4tV8/UKv_PjG163I/AAAAAAAAHd0/Arwk0l4cpq0/s362/Prompt_Chrome_Windows7.png)
 
@@ -45,7 +45,7 @@ The following text is shared between this article, DOM:window\.confirm and DOM:w
 
 Por favor, note que o resultado é uma cadeia de caracteres. Isso significa que você deve, algumas vezes, converter o valor dado pelo usuário. Por exemplo, se a resposta deve ser um número, você deve converter o valor para `Number:` var aNumber = Number(window\.prompt("Digite um número", ""));
 
-Os códigos do [Mozilla Chrome](/pt-BR/docs/Chrome) (e.g. Firefox extensions) ao invés disso, devem usar os métodos da interface `nsIPromptService`.
+Os códigos do [Mozilla Chrome](/pt-BR/docs/Glossary/Chrome) (e.g. Firefox extensions) ao invés disso, devem usar os métodos da interface `nsIPromptService`.
 
 No Safari, se o usuário clicar em Cancelar, a função retornará uma cadeia de caracteres vazia. Portanto, ele não diferenciará o cancelamento do usuário de uma cadeia de caracteres vazia na caixa de texto.
 

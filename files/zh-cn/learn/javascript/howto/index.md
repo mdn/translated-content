@@ -136,7 +136,7 @@ const myObject = {
 ### JavaScript 调试
 
 - [什么是错误的基本类型？](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#错误类型)
-- [什么是浏览器开发工具，如何使用它？](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [什么是浏览器开发工具，如何使用它？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [怎么在 JavaScript 控制台打印值？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#console_相关_api)
 - [怎么使用断点和其他 JavaScript 调试工具？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
@@ -196,8 +196,8 @@ const myObject = {
 - [我该使用什么样的机制将事件代码添加到我的网页上？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#我该使用哪种机制？)
 - [什么是事件对象，如何使用它？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件对象)
 - [如何防止默认事件行为？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#阻止默认行为)
-- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件冒泡及捕获)
-- [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件委托)
+- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling#事件委托)
 
 ### 面向对象的 JavaScript
 

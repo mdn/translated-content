@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 El método `animate()` de la interfaz {{domxref("Element")}} es un método abreviado el cual crea un nuevo {{domxref("Animation")}}, aplicado al elemento, luego reproduce la animación. Devuelve la instancia creada de un objeto {{domxref("Animation")}}.
 
-> **Nota:** Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
+> [!NOTE]
+> Los elementos pueden tener multiples animaciones aplicadas a ellos. Puedes obtener una
 > lista de las animaciones que afectan a un elemento llamando a {{domxref("Element.getAnimations()")}}.
 
 ## Síntaxis
@@ -30,7 +31,7 @@ animate(keyframes, options);
     siguientes opciones:
 
     - `id {{optional_inline}}`
-      - : Una propiedad única `animate()` para animar: una [`DOMString`](/es/docs/Web/API/DOMString) la cual hace referencia a la animación.
+      - : Una propiedad única `animate()` para animar: una [`DOMString`](/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String) la cual hace referencia a la animación.
 
 ### Valor de retorno
 

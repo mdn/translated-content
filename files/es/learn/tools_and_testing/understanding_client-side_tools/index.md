@@ -13,13 +13,13 @@ Las herramientas del lado del cliente (_client-side_ en inglés) pueden ser inti
 
 Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS) y [JavaScript](/es/docs/Learn/JavaScript), antes de intentar usar las herramientas aquí descritas.
 
-> **Observación:**
+> [!CALLOUT]
 >
 > ### ¿Quieres convertirte en un desarrollador front-end?
 >
 > Tenemos un curso que incluye toda la información esencial que necesitas para lograr tu objetivo.
 >
-> [Inicia ahora](/docs/Learn/Front-end_web_developer)
+> [Inicia ahora](/es/docs/orphaned/Learn/Front-end_web_developer)
 
 ## Guías
 

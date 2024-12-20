@@ -1,8 +1,9 @@
 ---
 title: HTTP ヘッダー
+short-title: ヘッダー
 slug: Web/HTTP/Headers
 l10n:
-  sourceCommit: ba5f28ab10ef1af48a55f363c8facc04a1f94479
+  sourceCommit: a8f881645d776d1303a0a25bd884f95e1b2805e1
 ---
 
 {{HTTPSidebar}}
@@ -19,7 +20,7 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{Glossary("Response header", "レスポンスヘッダー")}}
   - : レスポンスに関する追加情報、例えば場所や提供しているサーバーに関する情報を保持します。
 - {{Glossary("Representation header", "表現ヘッダー")}}
-  - : リソースの本体に関する情報、例えば [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
+  - : リソースの本体に関する情報、例えば [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
 - {{Glossary("Payload header","ペイロードヘッダー")}}
   - : 転送されるデータの表現から独立した情報、例えばコンテンツの長さや転送に使われるエンコード方式などを持ちます。
 
@@ -88,6 +89,10 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : 送り返すリソースで使用できるエンコードアルゴリズム (一般的には[圧縮アルゴリズム](/ja/docs/Web/HTTP/Compression)) をサーバーに通知します。
 - {{HTTPHeader("Accept-Language")}}
   - : 送り返すリソースで期待する自然言語をサーバーに通知します。これはヒントであり、必ずしもユーザーの完全な制御下にあるものではありません。サーバーはユーザーの選択 (ドロップダウンリストで選ぶ言語など) を明示的に上書きしないように、常に注意を払うべきです。
+- {{HTTPHeader("Accept-Patch")}}
+  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("PATCH")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/MIME_types)を通知します。
+- {{HTTPHeader("Accept-Post")}}
+  - : リクエストコンテンツネゴシエーションのレスポンスヘッダーで、サーバーが {{HTTPMethod("POST")}} リクエストで理解できる[メディア型](/ja/docs/Web/HTTP/MIME_types)を通知します。
 
 ## 制御
 
@@ -133,6 +138,20 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{HTTPHeader("Content-Disposition")}}
   - : 転送したリソースをインラインで表示すべきか (ヘッダーが存在しない場合の既定の動作)、またはダウンロードとして扱い、「名前を付けて保存」ウィンドウを表示すべきかを示します。
 
+## インテグリティダイジェスト
+
+- {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
+  - : {{HTTPHeader("Content-Encoding")}} および {{HTTPHeader("Content-Range")}} に依存する HTTP メッセージ（メッセージコンテンツ）内のオクテットストリームの{{Glossary("digest","ダイジェスト")}}を提供します。
+- {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
+  - : 転送前に、対象とするリソースの選択された表現の{{Glossary("digest","ダイジェスト")}}を提供します。
+    {{HTTPHeader("Content-Digest")}} とは異なり、ダイジェストは {{HTTPHeader("Content-Encoding")}} や {{HTTPHeader("Content-Range")}} を考慮しません。
+- {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
+  - : {{HTTPHeader("Content-Digest")}} ヘッダーのウィッシュの状態です。
+    これは、 `Content-` における {{HTTPHeader("Want-Repr-Digest")}} に相当します。
+- {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
+  - : {{HTTPHeader("Repr-Digest")}} ヘッダーのウィッシュの状態です。
+    これは、 `Repr-` における {{HTTPHeader("Want-Content-Digest")}} に相当します。
+
 ## メッセージ本文の情報
 
 - {{HTTPHeader("Content-Length")}}
@@ -152,6 +171,20 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : リクエストのパスにプロキシーが関与したときに変更または遺失した、プロキシーサーバーのクライアント側の情報を持ちます。
 - {{HTTPHeader("Via")}}
   - : フォワードプロキシーとリバースプロキシーの両方が追加するヘッダーであり、リクエストヘッダーとレスポンスヘッダーのどちらでも見られます。
+
+## 範囲付きリクエスト
+
+HTTP の[範囲付きリクエスト](/ja/docs/Web/HTTP/Range_requests)により、クライアントはサーバーからリソースの一部をリクエストすることができます。
+範囲付きリクエストは、ランダムアクセスに対応しているメディアプレーヤーや、大きなファイルの一部のみが必要なデータツール、ダウンロードを一時停止したり再開したりできるダウンロードマネージャーなどのアプリケーションに便利です。
+
+- {{HTTPHeader("Accept-Ranges")}}
+  - : サーバーが範囲付きリクエストに対応するかどうか、対応していれば対応する場合は、範囲を表すことができる単位を示します。
+- {{HTTPHeader("Range")}}
+  - : サーバーが返すべきである文書の範囲を示します。
+- {{HTTPHeader("If-Range")}}
+  - : 指定した ETag または日時がリモートのリソースにマッチする場合に限定した、条件付き範囲付きリクエストを生成します。異なるバージョンのリソースから 2 つの範囲をダウンロードすることを防ぎます。
+- {{HTTPHeader("Content-Range")}}
+  - : 部分的なメッセージが、メッセージ本文全体のどこに位置するかを示します。
 
 ## リダイレクト
 
@@ -180,17 +213,6 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{HTTPHeader("Server")}}
   - : リクエストを扱うサーバーが使用するソフトウェアの情報を持ちます。
 
-## 範囲付きリクエスト
-
-- {{HTTPHeader("Accept-Ranges")}}
-  - : サーバーが範囲付きリクエストに対応するかどうか、対応していれば対応する場合は、範囲を表すことができる単位を示します。
-- {{HTTPHeader("Range")}}
-  - : サーバーが返すべきである文書の範囲を示します。
-- {{HTTPHeader("If-Range")}}
-  - : 指定した ETag または日時がリモートのリソースにマッチする場合に限定した、条件付き範囲付きリクエストを生成します。異なるバージョンのリソースから 2 つの範囲をダウンロードすることを防ぎます。
-- {{HTTPHeader("Content-Range")}}
-  - : 部分的なメッセージが、メッセージ本文全体のどこに位置するかを示します。
-
 ## セキュリティ
 
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP)
@@ -203,8 +225,12 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : ユーザーエージェントがページで読み込むことを許可するリソースを制御します。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : ウェブの開発者がポリシーの効果を適用せずに監視することで、実験を行うことができます。これらの違反レポートは、 HTTP `POST` リクエストによって指定した URI へ送信される {{Glossary("JSON")}} 文書で構成されます。
+- {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
+  - : サイトが[証明書の透過性](/ja/docs/Web/Security/Certificate_Transparency)の報告と実施にオプトインできるようにし、そのサイトに対して誤って発行された資格情報を使用しているかどうかを検出できるようにします。
 - {{HTTPHeader("Permissions-Policy")}}
   - : 自身のフレームまたはその中に埋め込まれた {{htmlelement("iframe")}} で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
+- {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
+  - : ウェブサイト所有者が、 1 つ以上のエンドポイントを指定し、 CSP 違反レポート、 {{HTTPHeader("Cross-Origin-Opener-Policy")}} レポート、その他の一般的な違反などのエラーを受信するために使用します。
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : HTTP の代わりに HTTPS による通信を強制します。
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
@@ -238,12 +264,14 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
 - {{HTTPHeader("Sec-Purpose")}}
   - : リクエストがユーザーエージェントによって直ちに使用される以外の目的である場合に、その目的を示します。このヘッダーは現在一つの可能な値 `prefetch` を持っており、これはリソースが将来のナビゲーションのために優先的に読み取られていることを示します。
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
-  - : サービスワーカーの起動中に、リソースに対して {{domxref("fetch()")}} で先制的なリクエストをする際に送られるリクエストヘッダーです。この値は {{domxref("NavigationPreloadManager.setHeaderValue()")}} で設定され、通常の `fetch()` 処理とは異なる形でリソースを返すべきことをサーバーに通知するために使用することができます。
+  - : サービスワーカーの起動中に、リソースに対して {{domxref("Window/fetch", "fetch()")}} で先制的なリクエストをする際に送られるリクエストヘッダーです。この値は {{domxref("NavigationPreloadManager.setHeaderValue()")}} で設定され、通常の `fetch()` 処理とは異なる形でリソースを返すべきことをサーバーに通知するために使用することができます。
 
 ## サーバー送信イベント
 
-- {{HTTPHeader("Report-To")}}
-  - : 警告やエラーを送信るためのブラウザーに対するサーバーのエンドポイントを指定するために使用します。
+- {{HTTPHeader("Reporting-Endpoints")}}
+  - : [報告 API](/ja/docs/Web/API/Reporting_API) を使用する際に、ブラウザーが警告およびエラーレポートを送信すべきサーバーエンドポイントを指定するレスポンスヘッダーです。
+- {{HTTPHeader("Report-To")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : [報告 API](/ja/docs/Web/API/Reporting_API) を使用する際に、ブラウザーが警告およびエラーレポートを送信すべきサーバーエンドポイントを指定するレスポンスヘッダーです。
 
 ## 転送エンコーディング
 
@@ -253,6 +281,24 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : ユーザーエージェントが進んで受け入れる転送エンコーディングを指定します。
 - {{HTTPHeader("Trailer")}}
   - : 送信者が chunk メッセージの終端に追加フィールドを含めることができます。
+
+## WebSocket
+
+[WebSockets API](/ja/docs/Web/API/WebSockets_API) で、 [WebSocket ハンドシェイク](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake)において使われるヘッダーです。
+
+- {{HTTPHeader("Sec-WebSocket-Accept")}}
+  - : サーバーが WebSocket 接続へのアップグレードを望んでいることを示すレスポンスヘッダーです。
+- {{HTTPHeader("Sec-WebSocket-Extensions")}}
+  - : リクエストでは、このヘッダーはクライアントが対応している WebSocket 拡張機能を推奨する順番で示します。
+    レスポンスでは、サーバーがクライアントの環境設定から選択した拡張機能を示します。
+- {{HTTPHeader("Sec-WebSocket-Key")}}
+  - : クライアントが明示的に `WebSocket` を開くための意図を確認するキーを持つリクエストヘッダーです。
+- {{HTTPHeader("Sec-WebSocket-Protocol")}}
+  - : リクエストでは、このヘッダーはクライアントが対応しているサブプロトコルを推奨する順番で示します。
+    レスポンスでは、サーバーがクライアントの環境設定から選択したサブプロトコルを示します。
+- {{HTTPHeader("Sec-WebSocket-Version")}}
+  - : リクエストにおいて、このヘッダーはクライアントが使用する WebSocket プロトコルのバージョンを示します。
+    レスポンスでは、リクエストされたプロトコルのバージョンがサーバーで対応していない場合にのみ送信され、サーバーが対応しているバージョンが掲載されています。
 
 ## その他
 
@@ -274,6 +320,9 @@ IANA レジストリーはヘッダーを、"permanent"（標準で定義）、"
   - : 生成されたコードを[ソースマップ](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)にリンクします。
 - {{HTTPHeader("Upgrade")}}
   - : これは HTTP/1.1（のみ）のヘッダーで、すでに確立されているクライアント/サーバー接続を（同じトランスポートプロトコル上で）異なるプロトコルにアップグレードするために使用することができます。例えば、クライアントが HTTP 1.1 から HTTP 2.0 に接続をアップグレードしたり、HTTP や HTTPS 接続を WebSocket にアップグレードするために使用することができます。
+- {{HTTPHeader("Priority")}}
+  - : 指定された接続における特定のリソースリクエストの優先度に関するヒントを提供します。
+    この値は、クライアントの優先度を示すリクエストで送信することも、サーバーがリクエストの優先度を変更することを選択した場合にレスポンスで送信することもできます。
 
 ## 実験的なヘッダー
 
@@ -294,7 +343,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
 
 サーバーは {{HTTPHeader("Accept-CH")}} を使用して、クライアントに関心があるクライアントヒントヘッダーを積極的にリクエストします。クライアントはリクエストされたヘッダーをその後のリクエストに記載することを選べます。
 
-- {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
+- {{HTTPHeader("Accept-CH")}}
   - : サーバーは Accept-CH ヘッダーフィールドや HTML `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性を使ってクライアントヒントに対応していることを告知できます。
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : サーバーは `Critical-CH` を {{HttpHeader("Accept-CH")}} とともに使用して、受け入れられるクライアントヒントも[重要なクライアントヒント](/ja/docs/Web/HTTP/Client_hints#critical_client_hints)であることを指定します。
@@ -311,6 +360,10 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
   - : ユーザーエージェントの基盤となっているプラットフォームアーキテクチャです。
 - {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
   - : ユーザーエージェントの基盤となっている CPU のビットのアーキテクチャ（例えば "64" ビット）です。
+- {{HTTPHeader("Sec-CH-UA-Form-Factor")}} {{experimental_inline}}
+  - : ユーザーエージェントのフォームファクター、ユーザーがユーザーエージェントを操作する方法を説明しています。
+- {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
+  - : ユーザーエージェントの完全なバージョン文字列です。
 - {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}
   - : ユーザーエージェントのブランドリストにある各ブランドの完全版。
 - {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
@@ -321,17 +374,30 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
   - : ユーザーエージェントの基盤となっているオペレーティングシステム/プラットフォーム。
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : ユーザーエージェントの基盤となっているオペレーティングシステムのバージョン。
-- {{HTTPHeader("Sec-CH-UA-Prefers-Color-Scheme")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-UA-WoW64")}} {{experimental_inline}}
+  - : ユーザーエージェントのバイナリーが 64 ビットの Windows 上の 32 ビットモードで動作しているかどうか。
+- {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} {{experimental_inline}}
   - : ユーザーのダークまたはライトモードの環境設定。
-- {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : ユーザーの環境設定として、アニメーションやコンテンツレイアウトの変化が少ないことが推奨されていること。
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Transparency")}} {{experimental_inline}}
+  - : 透過率を低下させることを示すユーザーエージェントの環境設定を示すリクエストヘッダーです。
 
-> **メモ:** ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
+> [!NOTE]
+> ユーザーエージェントクライアントヒントは、データの漏洩に使用することができる[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の委譲が必要であるため、[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)内では利用できません。
 
 #### 端末クライアントヒント
 
-- {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
+- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : 画像リソースを選択するために、画面の {{HTTPHeader("DPR")}} クライアントヒントが使用されるリクエストにおける、画像機器とピクセルの比 (DPR) を確認するために使用されるレスポンスヘッダーです。
+- {{HTTPHeader("Device-Memory")}}
   - : 利用できるクライアント RAM メモリーのおおよその量。これは[端末メモリー API](/ja/docs/Web/API/Device_Memory_API) の一部です。
+- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : クライアント端末のピクセル比率（{{Glossary("CSS pixel","CSS ピクセル")}}ごとの物理的デバイスピクセル数）を提供したリクエストヘッダー。
+- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : クライアントのレイアウトビューポートの幅を {{Glossary("CSS pixel","CSS ピクセル")}}で指定するリクエストヘッダーです。
+- {{HTTPHeader("Width")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : リソースの希望する幅を物理ピクセル（画像の内在サイズ）で示すリクエストヘッダーです。
 
 #### ネットワーククライアントヒント
 
@@ -348,7 +414,12 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
 
 ### プライバシー
 
-- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}}{{experimental_inline}}
+- {{HTTPHeader("DNT")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : ユーザーのトラッキング環境設定（トラッキング拒否）を示すリクエストヘッダー。
+    非推奨のグローバルプライバシーコントロール (GPC) は、 {{HTTPHeader("Sec-GPC")}} ヘッダーを使用してサーバーに通知され、 {{domxref("navigator.globalPrivacyControl")}} を介してクライアントにアクセスできます。
+- {{HTTPHeader("Tk")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : 対応するリクエストに適用されたトラッキングのステータスを示すレスポンスヘッダー。 DNT と併用します。
+- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}} {{experimental_inline}}
   - : ウェブサイトやサービスワーカースクリプトが、ユーザーの個人情報を第三者に販売または共有することにユーザーが同意するかどうかを示します。
 
 ### セキュリティ
@@ -361,16 +432,28 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
 - {{HTTPHeader("NEL")}} {{experimental_inline}}
   - : 開発者がネットワークエラー報告ポリシーを宣言できるようにする仕組みを定義します。
 
+### トピック API
+
+トピック API は、関心に基づく広告 (IBA) などの用途を開発者が実装するための仕組みを提供します。
+詳しい情報は[トピック API](/ja/docs/Web/API/Topics_API) のドキュメントを参照してください。
+
+- {{HTTPHeader("Observe-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
+  - : [トピック API を有効にする機能](/ja/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)によって生成されたリクエストに対するレスポンスを監視し、呼び出されたサイトの URL から推測される興味深いトピックをマークするために使用されるレスポンスヘッダーです。
+- {{HTTPHeader("Sec-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
+  - : 広告技術プラットフォームが個人設定された広告を選んで表示するために使用する、関連付けられたリクエストとともに、現在のユーザーが選択したトピックを送信するリクエストヘッダーです。
+
 ### その他
 
-- {{HTTPHeader("Accept-Push-Policy")}} {{experimental_inline}}
-  - : クライアントはリクエストに対して求めるプッシュポリシーを、リクエスト内で [`Accept-Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1) ヘッダーフィールドを送信することで表現することができます。
 - {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
   - : クライアントは [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) ヘッダーフィールドを送信して、利用可能な署名を利用する意図を示したり、対応している署名の種類を示したりすることができます。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : このリクエストが TLS early data で送信されたことを示します。
-- {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
-  - : [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) は、リクエストを処理するときのプッシュ通知に関するサーバーの動作を定義します。
+- {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
+  - : レスポンスヘッダーは、関連付けられた文書 ({{domxref("Document")}}) がオリジンキー付き[エージェントクラスター](https://tc39.es/ecma262/#sec-agent-clusters)に配置されるべきであることを示すために使用されます。
+    この分離により、ユーザーエージェントは、プロセスやスレッドなどのエージェントクラスターに対して、実装固有のリソースをより効率的に割り当てることができます。
+- {{HTTPHeader("Set-Login")}} {{experimental_inline}}
+  - : 連合 ID プロバイダー (IdP) が送信するレスポンスヘッダーで、ログイン状態を設定します。つまり、現在のブラウザーで IdP にユーザーがログインしているかどうかということです。
+    これはブラウザーで保存され、 [FedCM API](/ja/docs/Web/API/FedCM_API) で使用あれます。
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signature-header) ヘッダーフィールドは、交換のための署名のリストを伝え、それぞれはその署名の権威を決定して、そして更新する方法についての情報を伴います。
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
@@ -391,7 +474,7 @@ HTTP [クライアントヒント](/ja/docs/Web/HTTP/Client_hints)は一連の�
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : ユーザーがたどるであろうリンクや、ドキュメントが参照する画像、 CSS、 JavaScript などのリソースのドメイン名解決をブラウザーが事前に行う機能である、 DNS プリフェッチを制御します。
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="…">` と等価です。
+  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) ヘッダーは、一般の検索エンジンの結果でウェブページをどのように索引付けをするかを示します。このヘッダーは `<meta name="robots" content="…">` と等価です。
 
 ## 非推奨のヘッダー
 

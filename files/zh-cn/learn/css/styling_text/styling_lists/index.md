@@ -5,7 +5,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-[列表](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
+[列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
 
 <table>
   <tbody>
@@ -32,7 +32,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 ## 一个简单的列表示例
 
-首先，让我们看一个简单的列表示例。文章中我们将看到无序、有序和描述列表——它们都具有相似的样式特性，而某些特性却又各不相同。[Github](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 上有无额外样式的例子（也可以查看[源码](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html)）。
+首先，让我们看一个简单的列表示例。文章中我们将看到无序、有序和描述列表——它们都具有相似的样式特性，而某些特性却又各不相同。[Github](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 上有无额外样式的例子（也可以查看[源码](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html)）。
 
 示例列表的 HTML 代码如下：
 
@@ -92,7 +92,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-现在，如果你去到示例的展示页面，并使用[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)查看那些列表元素，你会注意到若干个默认的样式预设值：
+现在，如果你去到示例的展示页面，并使用[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)查看那些列表元素，你会注意到若干个默认的样式预设值：
 
 - {{htmlelement("ul")}} 和 {{htmlelement("ol")}} 元素含有 `16px`（`1em`）的顶部和底部 {{cssxref("margin")}} 和 `40px`（`2.5em`）的 {{cssxref("padding-left")}}。
 - 列表项（{{htmlelement("li")}} 元素）默认是没有设置间距的。
@@ -294,7 +294,8 @@ ul {
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **备注：** 如果反向计数的列表项数比 `start` 属性的值还要多，计数将继续到零并向负数方向增加。
+> [!NOTE]
+> 如果反向计数的列表项数比 `start` 属性的值还要多，计数将继续到零并向负数方向增加。
 
 ### value
 
@@ -315,7 +316,8 @@ ul {
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **备注：** 即使使用非数字的 {{cssxref("list-style-type")}}，仍需要在 `value` 属性中使用等效的数值。
+> [!NOTE]
+> 即使使用非数字的 {{cssxref("list-style-type")}}，仍需要在 `value` 属性中使用等效的数值。
 
 ## 动手练习：为嵌套式列表添加样式
 

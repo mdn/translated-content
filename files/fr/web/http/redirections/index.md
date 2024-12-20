@@ -63,7 +63,8 @@ L'attribut [`content`](/fr/docs/Web/HTML/Global_attributes#content) commence ave
 
 Bien entendu, cette méthode ne fonctionne qu'avec des pages HTML (ou similaires) et ne peut être utilisée pour des images ou tout autre type de contenu.
 
-> **Note :** Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais vous serez de nouveau instantanément redirigé.
+> [!NOTE]
+> Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais vous serez de nouveau instantanément redirigé.
 
 ### Redirections JavaScript
 
@@ -103,7 +104,8 @@ Un alias de domaine peut être fait pour plusieurs raisons:
 
 Lorsque vous restructurez des sites Web, les URL des ressources changent. Même si vous pouvez mettre à jour les liens internes de votre site Web pour qu'ils correspondent au nouveau schéma de nommage, vous n'avez aucun contrôle sur les URL utilisées par les ressources externes. Vous ne voulez pas briser ces liens, car ils vous apportent des utilisateurs précieux (et aident votre référencement), donc vous configurez des redirections depuis les anciennes URL vers les nouvelles.
 
-> **Note :** Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.
+> [!NOTE]
+> Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.
 
 ### Réponses temporaires aux requêtes non sécurisées
 
@@ -147,7 +149,7 @@ Redirect permanent / http://www.example.com
 Redirect 301 / http://www.example.com
 ```
 
-Le module [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) peut également être utilisé pour créer des redirections. Il est plus flexible, mais un peu plus complexe à utiliser.
+Le module [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) peut également être utilisé pour créer des redirections. Il est plus flexible, mais un peu plus complexe à utiliser.
 
 ### Nginx
 

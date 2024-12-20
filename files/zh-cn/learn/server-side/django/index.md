@@ -13,7 +13,8 @@ Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服�
 
 最好能有基本的编程概念并了解 [Python](/zh-CN/docs/Glossary/Python) 语言，但其并不是理解本教程的核心概念的必然条件。
 
-> **备注：** 对于初学者来说，Python 是最容易阅读和理解的编程语言之一。也就是说，如果你想更好的理解本教程，网上有很多免费书籍及免费教程可供参考学习（建议初学者查看 Python 官网的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) 教程）。
+> [!NOTE]
+> 对于初学者来说，Python 是最容易阅读和理解的编程语言之一。也就是说，如果你想更好的理解本教程，网上有很多免费书籍及免费教程可供参考学习（建议初学者查看 Python 官网的 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) 教程）。
 
 ## 指南
 
@@ -38,7 +39,7 @@ Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服�
 - [Django Tutorial Part 8: 用户身份验证和权限](/zh-CN/docs/Learn/Server-side/Django/Authentication)
   - : 本教程，我们将向你展示如何允许用户使用自己的账户登录到你的网站，以及如何根据他们是否登录及其权限来控制他们可以做什么和看到什么。作为此次演示的一部分，我们将扩展本地图书馆网站，添加登录和注销页面以及用户和工作人员特定页面，以查看已借用的书籍。
 - [Django Tutorial Part 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
-  - : 本教程，我们将向你展示如何使用 Django 中的[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)，特别是编写创建表单，更新和删除模型实例的最简单方法。作为此次演示的一部分，我们将扩展本地图书馆网站，以便图书馆员可以使用我们自己的表单 (而不是使用管理应用程序) 来更新书籍，创建，更新和删除作者。
+  - : 本教程，我们将向你展示如何使用 Django 中的[HTML 表单](/zh-CN/docs/Learn/Forms)，特别是编写创建表单，更新和删除模型实例的最简单方法。作为此次演示的一部分，我们将扩展本地图书馆网站，以便图书馆员可以使用我们自己的表单 (而不是使用管理应用程序) 来更新书籍，创建，更新和删除作者。
 - [Django Tutorial Part 10:测试 Django Web 应用程序](/zh-CN/docs/Learn/Server-side/Django/Testing)
   - : 随着网站的发展，手工测试越来越难测试—不仅要测试更多，而且随着组件之间的相互作用变得越来越复杂，一个领域的一个小的变化可能需要许多额外的测试来验证其对其他领域的影响。减轻这些问题的一种方法是编写自动化测试，每次更改时都可以轻松可靠地运行。本教程将介绍如何使用 Django 的测试框架对你的网站进行**单元测试**自动化。
 - [Django Tutorial Part 11: 将 Django 部署到生产](/zh-CN/docs/Learn/Server-side/Django/Deployment)

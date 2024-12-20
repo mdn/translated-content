@@ -13,7 +13,7 @@ Découvrez comment créer des modules complémentaires pour [Firefox](https://ww
 
 - Notes de versions
 
-  [Les notes de versions pour les développeurs](/fr/docs/Firefox/Versions) vous permettent de garder un œil sur les nouvelles fonctionnalités pour les sites web et les modules complémentaires qu'apporte chaque nouvelle version de Firefox.
+  [Les notes de versions pour les développeurs](/fr/docs/Mozilla/Firefox/Releases) vous permettent de garder un œil sur les nouvelles fonctionnalités pour les sites web et les modules complémentaires qu'apporte chaque nouvelle version de Firefox.
 
 - Documentation du projet
 
@@ -57,7 +57,7 @@ Essayé, testé et adopté par des millions de personnes à travers le monde. Ap
 
 Firefox ESR est une édition avec un support à long terme. Très utile pour des organisations telles que des écoles, des universités, des entreprises ou autres qui ont besoin d'un support étendu pour des déploiements importants.
 
-[En savoir plus sur Firefox Extended Support Release](/fr/docs/Firefox/Firefox_ESR).
+[En savoir plus sur Firefox Extended Support Release](/fr/docs/Mozilla/Firefox/Firefox_ESR).
 
 [Télécharger Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

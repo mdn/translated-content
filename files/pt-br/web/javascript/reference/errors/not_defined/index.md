@@ -19,7 +19,8 @@ ReferenceError: "x" is not defined
 
 Há uma variavel inexistente referenciada em algum lugar. Essa variável precisa ser declarada ou você precisa ter certeza que ela está disponível no seu atual script ou {{Glossary("escopo")}}.
 
-> **Nota:** Quando carregar uma biblioteca (como o JQuery) tenha certeza que ela está carregada antes que você acesse as variáveis dela, como "$". Coloque na tag {{HTMLElement("script")}} para carregar a biblioteca antes do seu código usá-lo.
+> [!NOTE]
+> Quando carregar uma biblioteca (como o JQuery) tenha certeza que ela está carregada antes que você acesse as variáveis dela, como "$". Coloque na tag {{HTMLElement("script")}} para carregar a biblioteca antes do seu código usá-lo.
 
 ## Exemplos
 
@@ -66,5 +67,5 @@ console.log(num1); // 2
 ## Veja também
 
 - {{Glossary("Scope")}}
-- [Declarando variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals)
+- [Declarando variáveis no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types)
 - [Escopo de função no JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es)

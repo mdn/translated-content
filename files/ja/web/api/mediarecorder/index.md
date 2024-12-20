@@ -14,12 +14,12 @@ l10n:
 ## コンストラクター
 
 - {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}}
-  - : 収録する {{domxref("MediaStream")}} を指定して、新しい `MediaRecorder` オブジェクトを作成します。 コンテナの MIME タイプ（`"video/webm"` や `"video/mp4"` など）、音声トラックと動画トラックのビットレート、または単一の全体的なビットレートの設定などを行うためのオプションがあります。
+  - : 収録する {{domxref("MediaStream")}} を指定して、新しい `MediaRecorder` オブジェクトを作成します。 コンテナーの MIME タイプ（`"video/webm"` や `"video/mp4"` など）、音声トラックと動画トラックのビットレート、または単一の全体的なビットレートの設定などを行うためのオプションがあります。
 
 ## インスタンスプロパティ
 
 - {{domxref("MediaRecorder.mimeType")}} {{ReadOnlyInline}}
-  - : `MediaRecorder` オブジェクトの作成時にその収録コンテナとして選択した MIME タイプを返します。
+  - : `MediaRecorder` オブジェクトの作成時にその収録コンテナーとして選択した MIME タイプを返します。
 - {{domxref("MediaRecorder.state")}} {{ReadOnlyInline}}
   - : `MediaRecorder` オブジェクトの現在の状態（非活動 (`inactive`)、収録中 (`recording`)、一時停止中 (`paused`)）を返します。
 - {{domxref("MediaRecorder.stream")}} {{ReadOnlyInline}}
@@ -63,7 +63,7 @@ l10n:
   - : メディアの収録を開始したときに発生します。
 - [`stop`](/ja/docs/Web/API/MediaRecorder/stop_event)
   - : {{domxref("MediaStream")}} が終了したか、または {{domxref("MediaRecorder.stop()")}} メソッドが呼び出された場合のいずれかでメディアの収録が終了したときに発生します。
-- [`warning`](/ja/docs/Web/API/MediaRecorder/warning_event) {{deprecated_inline}}
+- [`warning`](/ja/docs/Web/API/MediaRecorder) {{deprecated_inline}}
   - : メディアの収録に致命的でないエラーが発生したとき、または {{domxref("MediaRecorder.onwarning()")}} メソッドが呼び出された後に発行されます。
 
 ## 例
@@ -141,7 +141,8 @@ if (navigator.mediaDevices) {
 }
 ```
 
-> **メモ:** このコードサンプルは、ウェブディクタフォン (Web Dictaphone) のデモから着想を得たものです。 簡潔にするために一部の行は省略されています。 完全なコードについては[ソースを参照](https://github.com/mdn/web-dictaphone/)してください。
+> [!NOTE]
+> このコードサンプルは、ウェブディクタフォン (Web Dictaphone) のデモから着想を得たものです。 簡潔にするために一部の行は省略されています。 完全なコードについては[ソースを参照](https://github.com/mdn/web-dictaphone/)してください。
 
 ## 仕様書
 

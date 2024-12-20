@@ -33,7 +33,8 @@ console.log(arr);
 // [0, 0, 0]
 ```
 
-> **Note :** Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
+> [!NOTE]
+> Cela peut être raisonnable que de commenter l'utilisation d'une instruction vide pour la rendre visible et l'expliciter. Par exemple, dans le code qui suit, le point-virgule ne semble pas intentionnel :
 
 ```js
 if (condition); // Attention, ce "if" ne fait rien !

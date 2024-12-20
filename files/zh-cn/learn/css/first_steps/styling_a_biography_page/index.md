@@ -37,7 +37,8 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 你可以使用下面的实时编辑器，或者下载这个[download the starting point](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)在自己的编辑器中进行编辑。这是一个独立的 HTML 文件，在 head 中包含了初始 CSS 样式。你可以将这些 CSS 样式从 HTML 文件中移出，保存为另一个独立文件。你可以选择 CodePen、jsFiddle 或 Glitch 中的任意一个完成这些工作。
 
-> **备注：** 如果遇到困难，你可以向我求助——参见本页下面的[测评或请求帮助](#测评或请求帮助)部分。
+> [!NOTE]
+> 如果遇到困难，你可以向我求助——参见本页下面的[测评或请求帮助](#测评或请求帮助)部分。
 
 ### 让我们来学一些 CSS 样式
 

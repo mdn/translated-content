@@ -57,4 +57,4 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 参见
 
-- [Using CSS gradients](/zh-CN/docs/CSS/Using_CSS_gradients)
+- [Using CSS gradients](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)

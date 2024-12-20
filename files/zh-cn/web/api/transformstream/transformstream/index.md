@@ -49,13 +49,14 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
     - `size(chunk)`
       - : 一个包含参数 `chunk` 的方法。它表示用于每一个块的大小，以字节为单位。
 
-> **备注：** 你可以自定义 `readableStrategy` 或 `writableStrategy`，或者使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例作为对象的值。
+> [!NOTE]
+> 你可以自定义 `readableStrategy` 或 `writableStrategy`，或者使用 {{domxref("ByteLengthQueuingStrategy")}} 或 {{domxref("CountQueuingStrategy")}} 的实例作为对象的值。
 
 ## 示例
 
 ### 将文本转换为大写
 
-以下示例将文本逐块转换为大写。这个示例来自[数据流——权威指南](https://web.dev/articles/streams)，它有关于不同类型流的一些示例。
+以下示例将文本逐块转换为大写。这个示例来自[数据流——权威指南](https://web.developers.google.cn/articles/streams)，它有关于不同类型流的一些示例。
 
 ```js
 function upperCaseStream() {

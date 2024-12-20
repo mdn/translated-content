@@ -24,7 +24,8 @@ WebAssembly está sendo criado em código aberto dentro do [W3C WebAssembly Comm
 - Manter a segurança — WebAssembly é especificado para ser executado num ambiente seguro e controlado. Como outros códigos web, ele reforçará as mesmas políticas de origem e permissões dos browsers.
 - Não quebrar a web — WebAssembly foi pensado de maneira que ele seja executado em harmonia com outras tecnologias web, mantendo a compatibilidade retroativa.
 
-> **Nota:** WebAssembly também terá usos fora dos ambientes web e JavaScript (veja [Non-web embeddings](http://webassembly.org/docs/non-web/)).
+> [!NOTE]
+> WebAssembly também terá usos fora dos ambientes web e JavaScript (veja [Non-web embeddings](http://webassembly.org/docs/non-web/)).
 
 ## Como o WebAssembly se encaixa na plataforma web?
 
@@ -44,11 +45,11 @@ WebAssembly é uma linguagem diferente do JavaScript, mas não foi pensada para 
 
 Com o advento do WebAssembly nos browsers, a máquina virtual a que nos referimos antes, vai carregar e executar dois tipos de código — JavaScript E WebAssembly.
 
-Os diferentes tipos de códigos podem invocar um ao outro conforme necessário — o [WebAssembly JavaScript API](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) encapsula código WebAssembly exportado com funções JavaScript que podem ser invocados normalmente, e código WebAssembly pode importar de forma síncrona, funções normais de JavaScript. Na verdade, a unidade básica do código WebAssembly é chamado de módulo, e módulos WebAssembly são semelhantes em vários níveis aos módulos de ES2015.
+Os diferentes tipos de códigos podem invocar um ao outro conforme necessário — o [WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/JavaScript_interface) encapsula código WebAssembly exportado com funções JavaScript que podem ser invocados normalmente, e código WebAssembly pode importar de forma síncrona, funções normais de JavaScript. Na verdade, a unidade básica do código WebAssembly é chamado de módulo, e módulos WebAssembly são semelhantes em vários níveis aos módulos de ES2015.
 
 ### Conceitos-chave do WebAssembly
 
-Existem diversos conceitos-chave que precisam ser compreendidos, sobre como o WebAssembly é executado no browser. Todos estes conceitos são refletidos 1:1 na [WebAssembly JavaScript API](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
+Existem diversos conceitos-chave que precisam ser compreendidos, sobre como o WebAssembly é executado no browser. Todos estes conceitos são refletidos 1:1 na [WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/JavaScript_interface).
 
 - **Módulo**: Representa o binário do WebAssembly que foi compilado pelo browser, em código executável pela máquina. Um módulo não tem estado e, tal qual um [Blob](/pt-BR/docs/Web/API/Blob), pode ser explicitamente compartilhado entre janelas e workers (via [`postMessage()`](/pt-BR/docs/Web/API/MessagePort/postMessage)). Um Módulo declara imports e exports, assim com um módulo ES2015.
 - **Memória**: Um ArrayBuffer redimensionável que contém um array linear de bytes, lidos e escritos pelas intruções de memória de baixo nível do WebAssembly.
@@ -94,7 +95,8 @@ De maneira resumida, o processo funciona da seguinte maneira:
 2. Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
 3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de "cola" HTML e JavaScript necessário para alcançar isso.
 
-> **Nota:** Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
+> [!NOTE]
+> Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 O código de "cola" JavaScript não é tão simples quanto você imagina. Para começar, o Emscripten implementa bibliotecas populares de C/C++ como SDL, OpenGL, OpenAL e partes do POSIX. Essas bibliotecas são implementadas em termos de APIs da Web e, portanto, cada uma exige algum código JavaScript para conectar o WebAssembly à API da Web subjacente.
 
@@ -102,7 +104,7 @@ Portanto, parte do código está implementando a funcionalidade de cada bibliote
 
 O documento HTML gerado carrega o arquivo JavaScript e grava stdout em um {{htmlelement("textarea")}}. Se o aplicativo usar OpenGL, o HTML também conterá um elemento {{htmlelement("canvas")}} usado como destino de renderização. É muito fácil modificar a saída do Emscripten e transformá-la em qualquer aplicativo da web que você precisar.
 
-Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm).
+Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_Wasm).
 
 ### Escrevendo WebAssembly diretamente
 

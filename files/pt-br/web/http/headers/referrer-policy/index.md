@@ -22,7 +22,8 @@ O cabeçalho HTTP **`Referrer-Policy`** controla quanta [informação de referê
 
 ## Sintaxe
 
-> **Nota:** O nome original do cabeçalho {{HTTPHeader("Referer")}} é um erro ortográfico da palavra "referrer". O cabeçalho `Referrer-Policy` não compartilha do mesmo erro ortográfico.
+> [!NOTE]
+> O nome original do cabeçalho {{HTTPHeader("Referer")}} é um erro ortográfico da palavra "referrer". O cabeçalho `Referrer-Policy` não compartilha do mesmo erro ortográfico.
 
 ```
 Referrer-Policy: no-referrer
@@ -43,7 +44,8 @@ Referrer-Policy: unsafe-url
 
   - : Este é o comportamento padrão quando nenhuma política é especificada, ou se o valor provido é inválido. A origem, caminho e cadeia de consulta ({{glossary("origin")}}, {{glossary("path")}}, and {{glossary("querystring")}}) da URL são enviadas como referência quando os níveis de protocolo de segurança continuam os mesmos (HTTP→HTTP, HTTPS→HTTPS) ou melhora (HTTP→HTTPS), mas não é enviado para destinos menos seguros (HTTPS→HTTP).
 
-    > **Nota:** Existe um esforço dos navegadores em mover para um valor padrão mais estrito, chamado de `strict-origin-when-cross-origin` (veja <https://github.com/whatwg/fetch/pull/952>), considere usar este valor (ou um mais estrito), se possível, quando trocando a Referrer-Policy.
+    > [!NOTE]
+    > Existe um esforço dos navegadores em mover para um valor padrão mais estrito, chamado de `strict-origin-when-cross-origin` (veja <https://github.com/whatwg/fetch/pull/952>), considere usar este valor (ou um mais estrito), se possível, quando trocando a Referrer-Policy.
 
 - `origin`
   - : Somente envia a origem ({{glossary("origin")}}) do documento como referência.
@@ -60,7 +62,8 @@ Referrer-Policy: unsafe-url
 
   - : Envia a origem, o caminho e a cadeia de consulta quando performando qualquer requisição, independente da segurança.
 
-    > **Aviso:** Esta política irá vazar informações potencialmente privadas da URL HTTPS do recurso para origens inseguras. Considere o impacto desta configuração com cuidado.
+    > [!WARNING]
+    > Esta política irá vazar informações potencialmente privadas da URL HTTPS do recurso para origens inseguras. Considere o impacto desta configuração com cuidado.
 
 ## Integração com HTML
 
@@ -76,7 +79,7 @@ Ou colocar ele para requisições individuais com o atributo `referrerpolicy` no
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-Alternativamente, uma [relação de link](/pt-BR/docs/Web/HTML/Link_types) `noreferrer` em um elemento `a`, `area`, ou `link` pode ser colocada:
+Alternativamente, uma [relação de link](/pt-BR/docs/Web/HTML/Attributes/rel) `noreferrer` em um elemento `a`, `area`, ou `link` pode ser colocada:
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>
@@ -199,7 +202,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 No cenário acima, `no-referrer` só será usada se `strict-origin-when-cross-origin` não for suportada pelo navegador.
 
-> **Nota:** Especificar múltiplos valores só é suportado no cabeçalho HTTP `Referrer-Policy`, e não no atributo `referrerpolicy`.
+> [!NOTE]
+> Especificar múltiplos valores só é suportado no cabeçalho HTTP `Referrer-Policy`, e não no atributo `referrerpolicy`.
 
 ## Especificações
 
@@ -211,8 +215,9 @@ No cenário acima, `no-referrer` só será usada se `strict-origin-when-cross-or
 
 {{Compat}}
 
-> **Nota:** - Da versão 53 em diante, Gecko possui uma preferência disponível em `about:config` para permitir usuários colocarem a `Referrer-Policy` padrão — `network.http.referer.userControlPolicy`.
+> [!NOTE]
 >
+> - Da versão 53 em diante, Gecko possui uma preferência disponível em `about:config` para permitir usuários colocarem a `Referrer-Policy` padrão — `network.http.referer.userControlPolicy`.
 > - Da versão 59 em diante (veja [#587523](https://bugzilla.mozilla.org/show_bug.cgi?id=587523)), isso foi substituído por `network.http.referer.defaultPolicy` e `network.http.referer.defaultPolicy.pbmode`.Valores possíveis são:- 0 — `no-referrer`
 > - 1 — `same-origin`
 > - 2 — `strict-origin-when-cross-origin`

@@ -7,9 +7,10 @@ slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text
 
 El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) articulo.
 
-> **Nota:** Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
+> [!NOTE]
+> Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
 >
-> Si tiene problemas, pídeanos ayuda; consulte la sección [Evaluación o ayuda adicional](#Evaluación_o_ayuda_adicional) en la parte inferior de esta página.
+> Si tiene problemas, pídeanos ayuda; consulte la sección [Evaluación o ayuda adicional](#evaluación_o_ayuda_adicional) en la parte inferior de esta página.
 
 ## Texto HTML avanzado 1
 

@@ -1,15 +1,17 @@
 ---
 title: <xsl:comment>
 slug: Web/XSLT/Element/comment
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:comment>` 要素は出力文書にコメントを書き込みます。テキストのみを含める必要があります。
 
 ### 構文
 
-```
+```xml
 <xsl:comment>
   TEMPLATE
 </xsl:comment>
@@ -23,11 +25,11 @@ slug: Web/XSLT/Element/comment
 
 なし
 
-### タイプ
+### 種類
 
-命令は、テンプレート内に表示されます。
+命令で、テンプレート内に現れます。
 
-### 定義
+## 仕様書
 
 XSLT, section 7.4.
 

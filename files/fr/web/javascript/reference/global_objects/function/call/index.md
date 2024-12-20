@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 La méthode **`call()`** réalise un appel à une fonction avec une valeur `this` donnée et des arguments fournis individuellement.
 
-> **Note :** Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.apply", "apply()")}}, la différence fondamentale réside dans le fait que `call()` accepte **une liste d'arguments**, tandis que la méthode `apply()` accepte **un unique tableau d'arguments**.
+> [!NOTE]
+> Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.apply", "apply()")}}, la différence fondamentale réside dans le fait que `call()` accepte **une liste d'arguments**, tandis que la méthode `apply()` accepte **un unique tableau d'arguments**.
 
 {{EmbedInteractiveExample("pages/js/function-call.html")}}
 
@@ -112,7 +113,8 @@ function afficher() {
 afficher.call(); // prenom est Archibald
 ```
 
-> **Note :** La valeur de `this` sera {{jsxref("undefined")}} en mode strict.
+> [!NOTE]
+> La valeur de `this` sera {{jsxref("undefined")}} en mode strict.
 >
 > ```js
 > "use strict";
@@ -138,4 +140,4 @@ afficher.call(); // prenom est Archibald
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [Introduction à JavaScript orienté objet](/fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet)
+- [Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects)

@@ -5,7 +5,7 @@ slug: Web/API/console/group_static
 
 {{APIRef("Console API")}}
 
-**`console.group()`** 메서드는 [웹 콘솔](/ko/docs/Tools/Web_Console) 로그에 새로운 인라인 그룹을 만듭니다. 이는 {{domxref("console.groupEnd()")}}가 호출될 때까지 모든 다음 출력을 추가 수준으로 들여씁니다.
+**`console.group()`** 메서드는 [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) 로그에 새로운 인라인 그룹을 만듭니다. 이는 {{domxref("console.groupEnd()")}}가 호출될 때까지 모든 다음 출력을 추가 수준으로 들여씁니다.
 
 {{AvailableInWorkers}}
 
@@ -24,7 +24,8 @@ console.group([label]);
 
 중첩 그룹을 사용하여 관련 메시지를 시각적으로 연결하여 출력을 구성할 수 있습니다. 새 중첩 블록을 만들려면 `console.group()`을 호출하세요. `console.groupCollapsed()` 메서드와 비슷하지만 새 블록이 접혀 있고 이를 읽으려면 공개 버튼을 클릭해야 합니다.
 
-> **참고:** Gecko 9부터 Gecko 51까지 `groupCollapsed()` 메소드는 `group()`과 동일했습니다.
+> [!NOTE]
+> Gecko 9부터 Gecko 51까지 `groupCollapsed()` 메소드는 `group()`과 동일했습니다.
 > 축소된 그룹은 Gecko 52부터 완전히 지원됩니다. [Firefox bug 1088360](https://bugzil.la/1088360)를 참조하세요.
 
 현재 그룹을 종료하려면 `console.groupEnd()`를 호출하세요. 예를 들어...

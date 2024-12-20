@@ -1,8 +1,9 @@
 ---
-title: PointerEvent()
+title: "PointerEvent: PointerEvent() コンストラクター"
+short-title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 l10n:
-  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{APIRef("Pointer Events")}}

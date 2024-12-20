@@ -59,7 +59,8 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 ## API 参考页
 
-> **备注：** 也称为*接口着陆页*。
+> [!NOTE]
+> 也称为*接口着陆页*。
 
 **API 着陆页**列出了属于特定接口或类的所有方法、属性、事件等。它提供了该类或接口的概述，以及每个成员的文档链接。它比 API 着陆页的粒度更细，后者通常链接到多个 API 参考页。
 
@@ -187,7 +188,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 **着陆页**作为其子页面的菜单，因此主要作为*导航*页面。着陆页布局通常用于关于特定主题的页面树的根页面。它以对主题的简要概述开头，然后呈现一个结构化的链接列表，指向其子页面，以及可选的其他对读者有用的材料。
 
-子页面列表可使用 [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) 和 [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs) 模板自动生成。但是，在更复杂的情况下，列表可能需要手动创建（和维护！）。
+子页面列表可使用 [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) 模板自动生成。但是，在更复杂的情况下，列表可能需要手动创建（和维护）。
 
 ### 示例
 

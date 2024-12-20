@@ -9,13 +9,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Los navegadores web modernos admiten varias formas para que los sitios web almacenen datos en la computadora del usuario, con el permiso del usuario, y luego los recuperen cuando sea necesario. Esto te permite conservar los datos para el almacenamiento a largo plazo, guardar sitios o documentos para su uso sin conexión, conservar la configuración específica del usuario para tu sitio y más. Este artículo explica los conceptos básicos de cómo funcionan.
 
-| Prerrequisitos: | Conceptos básicos de JavaScript (consulta [primeros pasos](/es/docs/Learn/JavaScript/First_steps), [bloques de construcción](/es/docs/Learn/JavaScript/Building_blocks), [objetos JavaScript](/es/docs/Learn/JavaScript/Objects)), los [conceptos básicos de las APIs de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Introducción) |
+| Prerrequisitos: | Conceptos básicos de JavaScript (consulta [primeros pasos](/es/docs/Learn/JavaScript/First_steps), [bloques de construcción](/es/docs/Learn/JavaScript/Building_blocks), [objetos JavaScript](/es/docs/Learn/JavaScript/Objects)), los [conceptos básicos de las APIs de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Objetivo:       | Aprender a utilizar las APIs de almacenamiento de lado del cliente para almacenar datos de aplicaciones.                                                                                                                                                                                                                                                |
 
 ## ¿Almacenamiento de lado del cliente?
 
-En otra parte del área de aprendizaje de MDN, hablamos sobre la diferencia entre [sitios estáticos](/es/docs/Learn/Server-side/First_steps/Client-Server_overview#Sitios_estaticos) y [sitios dinámicos](/es/docs/Learn/Server-side/First_steps/Client-Server_overview#Sitios_dinamicos). La mayoría de los principales sitios web modernos son dinámicos: almacenan datos en el servidor utilizando algún tipo de base de datos (almacenamiento de lado del servidor) y luego ejecutan [de lado del servidor](/es/docs/Learn/Server-side) para recuperar los datos necesarios, insertarlos en plantillas de páginas estáticas y entregar el HTML resultante al cliente para que lo muestre el navegador del usuario.
+En otra parte del área de aprendizaje de MDN, hablamos sobre la diferencia entre [sitios estáticos](/es/docs/Learn/Server-side/First_steps/Client-Server_overview#sitios_estaticos) y [sitios dinámicos](/es/docs/Learn/Server-side/First_steps/Client-Server_overview#sitios_dinamicos). La mayoría de los principales sitios web modernos son dinámicos: almacenan datos en el servidor utilizando algún tipo de base de datos (almacenamiento de lado del servidor) y luego ejecutan [de lado del servidor](/es/docs/Learn/Server-side) para recuperar los datos necesarios, insertarlos en plantillas de páginas estáticas y entregar el HTML resultante al cliente para que lo muestre el navegador del usuario.
 
 El almacenamiento de lado del cliente funciona con principios similares, pero tiene diferentes usos. Consiste en una API de JavaScript que te permiten almacenar datos en el cliente (es decir, en la máquina del usuario) y luego recuperarlos cuando sea necesario. Esto tiene muchos usos distintos, como:
 
@@ -26,7 +26,8 @@ El almacenamiento de lado del cliente funciona con principios similares, pero ti
 
 A menudo, el almacenamiento de lado del cliente y de lado del servidor se utilizan juntos. Por ejemplo, puedes descargar un lote de archivos de música (quizás utilizados por un juego web o una aplicación de reproducción de música), almacenarlos dentro de una base de datos de lado del cliente y reproducirlos según sea necesario. El usuario solo tendría que descargar los archivos de música una vez; en las visitas posteriores, se recuperarían de la base de datos.
 
-> **Nota:** Existen límites en la cantidad de datos que puedes almacenar utilizando las APIs de almacenamiento de lado del cliente (posiblemente tanto por API individual como acumulativamente); el límite exacto varía según el navegador y posiblemente según la configuración del usuario. Consulta [límites de almacenamiento del navegador y criterios de desalojo](/es/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obtener más información.
+> [!NOTE]
+> Existen límites en la cantidad de datos que puedes almacenar utilizando las APIs de almacenamiento de lado del cliente (posiblemente tanto por API individual como acumulativamente); el límite exacto varía según el navegador y posiblemente según la configuración del usuario. Consulta [límites de almacenamiento del navegador y criterios de desalojo](/es/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) para obtener más información.
 
 ### Vieja escuela: cookies
 
@@ -216,9 +217,11 @@ Construyamos el ejemplo para que puedas entender cómo funciona.
 
 Tu ejemplo está terminado, ¡bien hecho!; Todo lo que queda ahora es guardar tu código y probar tu página HTML en un navegador. Puedes ver nuestra [versión finalizada en vivo aquí](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html).
 
-> **Nota:** Hay otro ejemplo un poco más complejo para explorar en [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> [!NOTE]
+> Hay otro ejemplo un poco más complejo para explorar en [Uso de la API de almacenamiento web](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
-> **Nota:** En la línea `<script src="index.js" defer></script>` del código fuente de nuestra versión final, el atributo `defer` especifica que el contenido del elemento {{htmlelement("script")}} no se ejecutará hasta que la página haya terminado de cargarse.
+> [!NOTE]
+> En la línea `<script src="index.js" defer></script>` del código fuente de nuestra versión final, el atributo `defer` especifica que el contenido del elemento {{htmlelement("script")}} no se ejecutará hasta que la página haya terminado de cargarse.
 
 ## Almacenamiento de datos complejos — `IndexedDB`
 
@@ -261,7 +264,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
    window.onload = function () {};
    ```
 
-   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento [`load`](/es/docs/Web/Reference/Events/load) de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
+   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento [`load`](/es/docs/Web/API/Window/load_event) de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
 
 3. Dentro del controlador `window.onload`, agrega lo siguiente:
 
@@ -275,7 +278,8 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
 
    Para manejar esto en IndexedDB, crea un objeto de solicitud (que se puede llamar como desees; lo llamamos `request`, por lo que es obvio para qué sirve). Luego, usa controladores de eventos para ejecutar código cuando la solicitud se completa, falla, etc., que verás en uso a continuación.
 
-   > **Nota:** El número de versión es importante. Si deseas actualizar tu base de datos (por ejemplo, cambiando la estructura de la tabla), debes ejecutar tu código nuevamente con un número de versión aumentado, un esquema diferente especificado dentro del controlador `onupgradeneeded` (ve más abajo), etc. No cubriremos la actualización de bases de datos en este sencillo tutorial.
+   > [!NOTE]
+   > El número de versión es importante. Si deseas actualizar tu base de datos (por ejemplo, cambiando la estructura de la tabla), debes ejecutar tu código nuevamente con un número de versión aumentado, un esquema diferente especificado dentro del controlador `onupgradeneeded` (ve más abajo), etc. No cubriremos la actualización de bases de datos en este sencillo tutorial.
 
 4. Ahora agrega los siguientes controladores de eventos justo debajo de tu adición anterior, nuevamente dentro del controlador `window.onload`:
 
@@ -646,11 +650,12 @@ Aquí es donde entran el [servicio workers](/es/docs/Web/API/Service_Worker_API)
 
 Un servicio _worker_ es un archivo JavaScript que, en pocas palabras, se registra con un origen en particular (sitio web o parte de un sitio web en un determinado dominio) cuando se accede a él mediante un navegador. Cuando se registra, puede controlar las páginas disponibles en ese origen. Para ello, se sienta entre una página cargada y la red e intercepta las solicitudes de red dirigidas a ese origen.
 
-Cuando intercepta una solicitud, puede hacer lo que desees (consulta [ideas de casos de uso](/es/docs/Web/API/Service_Worker_API#Other_use_case_ideas)), pero el ejemplo clásico es guardar las respuestas de la red fuera de línea y luego proporcionarlas en respuesta a una solicitud en lugar de las respuestas de la red. De hecho, te permite hacer que un sitio web funcione completamente fuera de línea.
+Cuando intercepta una solicitud, puede hacer lo que desees (consulta [ideas de casos de uso](/es/docs/Web/API/Service_Worker_API#other_use_case_ideas)), pero el ejemplo clásico es guardar las respuestas de la red fuera de línea y luego proporcionarlas en respuesta a una solicitud en lugar de las respuestas de la red. De hecho, te permite hacer que un sitio web funcione completamente fuera de línea.
 
 La API de caché es otro mecanismo de almacenamiento del lado del cliente, con una pequeña diferencia: está diseñada para guardar respuestas HTTP y, por lo tanto, funciona muy bien con el servicio _workers_.
 
-> **Nota:** El servicio _workers_ y la memoria caché ahora son compatibles con la mayoría de los navegadores modernos. Al momento de escribir este artículo, Safari todavía estaba ocupado implementándolo, pero debería estar allí pronto.
+> [!NOTE]
+> El servicio _workers_ y la memoria caché ahora son compatibles con la mayoría de los navegadores modernos. Al momento de escribir este artículo, Safari todavía estaba ocupado implementándolo, pero debería estar allí pronto.
 
 ### Un ejemplo del servicio worker
 
@@ -676,7 +681,8 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-> **Nota:** La ruta proporcionada al archivo `sw.js` es relativa al origen del sitio, no al archivo JavaScript que contiene el código. El servicio _worker_ está en `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. El origen es `https://mdn.github.io` y, por lo tanto, la ruta dada debe ser `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Si quisieras alojar este ejemplo en tu propio servidor, tendrías que cambiarlo consecuentemente. Esto es bastante confuso, pero tiene que funcionar de esta manera por razones de seguridad.
+> [!NOTE]
+> La ruta proporcionada al archivo `sw.js` es relativa al origen del sitio, no al archivo JavaScript que contiene el código. El servicio _worker_ está en `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. El origen es `https://mdn.github.io` y, por lo tanto, la ruta dada debe ser `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. Si quisieras alojar este ejemplo en tu propio servidor, tendrías que cambiarlo consecuentemente. Esto es bastante confuso, pero tiene que funcionar de esta manera por razones de seguridad.
 
 #### Instalación del servicio worker
 
@@ -715,7 +721,7 @@ Dentro del controlador, primero registramos la URL del activo solicitado. Luego 
 
 Dentro de este bloque usamos {{domxref("CacheStorage.match()")}} para verificar si una solicitud coincidente (es decir, coincide con la URL) se puede encontrar en cualquier caché. Esta promesa se cumple con la respuesta coincidente si se encuentra una coincidencia, o `undefined` si no lo es.
 
-Si se encuentra una coincidencia, simplemente la devolvemos como la respuesta personalizada. De lo contrario, [fetch()](/es/docs/Web/API/fetch) la respuesta de la red y la devolvemos en su lugar.
+Si se encuentra una coincidencia, simplemente la devolvemos como la respuesta personalizada. De lo contrario, [fetch()](/es/docs/Web/API/Window/fetch) la respuesta de la red y la devolvemos en su lugar.
 
 ```js
 self.addEventListener("fetch", function (e) {

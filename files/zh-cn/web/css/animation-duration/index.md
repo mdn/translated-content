@@ -5,7 +5,7 @@ slug: Web/CSS/animation-duration
 
 {{CSSRef}}
 
-**`animation-duration`** [CSS](/zh-CN/docs/CSS) 属性设置动画完成一个动画周期所需的时间。
+**`animation-duration`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画完成一个动画周期所需的时间。
 
 {{EmbedInteractiveExample("pages/css/animation-duration.html")}}
 
@@ -42,9 +42,11 @@ animation-duration: unset;
     - 如果 `animation-fill-mode` 设置为 `forwards` 或者 `both`，在 `animation-delay` 结束后，将显示由 `animation-direction` 定义的动画的最后一帧。
     - 如果 `animation-fill-mode` 设置为 `none`，动画将不会有任何的视觉效果。
 
-> **备注：** 负值是无效的，会导致声明被忽略。一些早期的、有前缀的实现可能将其视为与 `0s` 相同。
+> [!NOTE]
+> 负值是无效的，会导致声明被忽略。一些早期的、有前缀的实现可能将其视为与 `0s` 相同。
 
-> **备注：** 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!NOTE]
+> 当你在 `animation-*` 属性上指定多个逗号分隔的值时，它们将按照 {{cssxref("animation-name")}} 出现的顺序应用于动画。对于动画数量和 `animation-*` 属性值不匹配的情况，请参见[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ## 形式定义
 
@@ -107,6 +109,6 @@ animation-duration: unset;
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 其他相关的动画属性：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timeline")}}、{{cssxref("animation-timing-function")}}

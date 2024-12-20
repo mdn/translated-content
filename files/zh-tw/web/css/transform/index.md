@@ -11,7 +11,8 @@ slug: Web/CSS/transform
 
 如果這個屬性的值不是 `none`，將會建立一個 [stacking context](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在這個情況下，此元素將被其所包含的 `position: fixed` 元素當成一個 containing block。
 
-> **警告：** 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Element/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Element/colgroup)。
+> [!WARNING]
+> 只有可以變形的元素可以被變形，這包括所有被 CSS box model 掌管輸出的元素，除了[視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [table-column box](/zh-TW/docs/Web/HTML/Element/col) 和 [table-colunm-group box](/zh-TW/docs/Web/HTML/Element/colgroup)。
 
 ## 語法
 
@@ -109,7 +110,7 @@ div {
 
 ### 更多範例
 
-請參考[使用 CSS transform](/zh-TW/docs/Web/Guide/CSS/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 的更多範例。
+請參考[使用 CSS transform](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 的更多範例。
 
 ## 規範
 
@@ -121,6 +122,6 @@ div {
 
 ## 參見
 
-- [使用 CSS transform](/zh-TW/docs/CSS/Using_CSS_transforms)
+- [使用 CSS transform](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} data type
 - A cross-browser 2D [transform plugin for jQuery](https://louisremi.github.io/jquery.transform.js/)

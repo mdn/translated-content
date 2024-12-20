@@ -9,7 +9,8 @@ l10n:
 
 [ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 2 つのプロパティがあります。
 
-> **メモ:** このインターフェイスは非推奨で、標準路線ではなくなりました。
+> [!NOTE]
+> このインターフェイスは非推奨で、標準路線ではなくなりました。
 > _もう使用しないでください。_ 代わりに[ファイルおよびディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)を使用してください。
 
 ## 基本コンセプト

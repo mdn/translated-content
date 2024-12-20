@@ -9,7 +9,8 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 {{AvailableInWorkers}}
 
-> **警告：** 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
+> [!WARNING]
+> 本文中的示例代码片段来自我们的 WebSocket 聊天应用示例，[源代码在此处](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## 创建 WebSocket 对象
 
@@ -17,11 +18,8 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 WebSocket 构造函数接受一个必要参数和一个可选参数：
 
-```
-WebSocket WebSocket(
-  in DOMString url,
-  in optional DOMString protocols
-);
+```js
+webSocket = new WebSocket(url, protocols);
 ```
 
 - `url`
@@ -38,7 +36,7 @@ WebSocket WebSocket(
 
 如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
 
-在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
+在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
 
 ### 示例
 
@@ -74,9 +72,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
-
-> **备注：** 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/docs/JavaScript_typed_arrays/ArrayBuffer)来发送。
 
 因为连接的建立是异步的，而且容易失败，所以不能保证刚创建 WebSocket 对象时使用 `send()` 方法会成功。我们至少可以确定企图在链接建立起来之后立马发送数据，可以通过注册 `onopen` 事件处理器解决：
 
@@ -129,31 +125,39 @@ exampleSocket.onmessage = function (event) {
 
 解析这些收到的消息的代码可能是这样的：
 
-```
-exampleSocket.onmessage = function(event) {
+```js
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text =
+        "<b>Your username has been set to <em>" +
+        msg.name +
+        "</em> because the name you chose is in use.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;
@@ -167,7 +171,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/zh-CN/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

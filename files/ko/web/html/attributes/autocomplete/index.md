@@ -25,7 +25,8 @@ slug: Web/HTML/Attributes/autocomplete
 
   - : 브라우저가 이 필드에 값을 자동으로 넣는 것을 금지합니다. 문서나 애플리케이션이 자신만의 자동완성 기능을 구현하거나, 보안상 문제로 자동완성을 사용하지 않아야 할 경우 지정할 수 있습니다.
 
-    > **참고:** 대부분의 최신 브라우저에서는 `autocomplete`을 `off`로 지정하더라도 브라우저가 사용자에게 계정 이름과 비밀번호 저장 여부를 묻는 것을 막을 수 없으며, 저장한 값을 사용해 자동완성하는 것도 막을 수 없습니다. [The autocomplete attribute and login fields](/ko/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields) 문서를 참고하세요.
+    > [!NOTE]
+    > 대부분의 최신 브라우저에서는 `autocomplete`을 `off`로 지정하더라도 브라우저가 사용자에게 계정 이름과 비밀번호 저장 여부를 묻는 것을 막을 수 없으며, 저장한 값을 사용해 자동완성하는 것도 막을 수 없습니다. [The autocomplete attribute and login fields](/ko/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields) 문서를 참고하세요.
 
 - `on`
   - : 브라우저의 자동완성을 허용합니다. 아무런 안내 정보도 제공하지 않으므로, 브라우저가 스스로의 판단 하에 값을 결정합니다.
@@ -180,7 +181,8 @@ slug: Web/HTML/Attributes/autocomplete
 
   - : 구/읍/면: "팔달구", "홍북읍"
 
-    > **참고:** 구/읍/면은 `address-level2`에 합쳐 "수원시 팔달구", "홍성군 홍북읍"의 형태로 작성하는 경우도 많습니다.
+    > [!NOTE]
+    > 구/읍/면은 `address-level2`에 합쳐 "수원시 팔달구", "홍성군 홍북읍"의 형태로 작성하는 경우도 많습니다.
 
 - `address-line1`
   - : 도로명, 건물번호: "세종로 1", "효원로 1", "충남대로 21"
@@ -219,5 +221,5 @@ Exampleville CA 95555
 - {{htmlelement("select")}} 요소.
 - {{htmlelement("textarea")}} 요소.
 - {{htmlelement("form")}} 요소.
-- [HTML 양식](/ko/docs/Learn/HTML/Forms)
+- [HTML 양식](/ko/docs/Learn/Forms)
 - 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).

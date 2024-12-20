@@ -5,7 +5,7 @@ slug: Web/CSS/Class_selectors
 
 {{CSSRef}}
 
-O **seletor de classes** [CSS](/pt-BR/docs/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
+O **seletor de classes** [CSS](/pt-BR/docs/Web/CSS) corresponde aos elementos com base no conteúdo de seus atributos `class.`
 
 ```css
 /* Todos os elementos com class="espaçoso" */

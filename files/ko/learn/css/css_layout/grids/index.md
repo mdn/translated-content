@@ -478,7 +478,8 @@ aside {
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 600) }}
 
-> **참고:** 마지막 열 또는 행 라인을 상대로 `-1` 값을 사용할 수 있으며, 음수값을 사용하여 끝에서 안쪽으로 카운트할 수도 있습니다. 줄은 항상 [implicit grid](/ko/docs/Glossary/Grid)가 아닌 명시적 격자의 가장자리부터 계산된다는 점에 유의하세요.
+> [!NOTE]
+> 마지막 열 또는 행 라인을 상대로 `-1` 값을 사용할 수 있으며, 음수값을 사용하여 끝에서 안쪽으로 카운트할 수도 있습니다. 줄은 항상 [implicit grid](/ko/docs/Glossary/Grid)가 아닌 명시적 격자의 가장자리부터 계산된다는 점에 유의하세요.
 
 ## grid-template-areas로 위치잡기
 
@@ -688,7 +689,7 @@ aside {
 
 {{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
 
-[Firefox 그리드 검사기](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하여 당신의 디자인 상의 그리드 라인을 겹쳐놓으면 12개로 구성된 열 그리드가 작동하는 방법을 볼 수 있습니다.
+[Firefox 그리드 검사기](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)를 사용하여 당신의 디자인 상의 그리드 라인을 겹쳐놓으면 12개로 구성된 열 그리드가 작동하는 방법을 볼 수 있습니다.
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 

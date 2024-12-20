@@ -1,15 +1,17 @@
 ---
 title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
+l10n:
+  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:fallback>` 要素は指定された拡張子 (または、最終的には新しいバージョン) 要素がサポートされていない場合に使用するテンプレートを指定します。
 
 ### 構文
 
-```
+```xml
 <xsl:fallback>
   TEMPLATE
 </xsl:fallback>
@@ -17,17 +19,17 @@ slug: Web/XSLT/Element/fallback
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
-なし
+なし。
 
-### タイプ
+### 種類
 
-命令は、テンプレート内に表示されます。
+命令で、テンプレート内に現れます。
 
-### 定義
+## 仕様書
 
 XSLT, section 15
 

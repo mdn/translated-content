@@ -23,6 +23,6 @@ l10n:
 - [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
 - [ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [用語集](/ja/docs/Glossary)
+- 関連用語:
 
   - {{Glossary("Main thread", "メインスレッド")}}

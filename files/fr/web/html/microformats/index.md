@@ -43,11 +43,11 @@ Tous les noms de classe des microformats utilisent des préfixes. La syntaxe des
 
 - **"p-\*" pour les propriétés textuelles** (ex. "p-name", "p-summary")
 
-  - Un contenu texte. Pour certains éléments HTML, certains attributs spécifiques seront utilisés (ex. [`alt`](/fr/docs/Web/HTML/Element/Img#attr-alt) pour [`<img>`](/fr/docs/Web/HTML/Element/Img), [`title`](/fr/docs/Web/HTML/Element/abbr#attr-title) pour [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)).
+  - Un contenu texte. Pour certains éléments HTML, certains attributs spécifiques seront utilisés (ex. [`alt`](/fr/docs/Web/HTML/Element/img#attr-alt) pour [`<img>`](/fr/docs/Web/HTML/Element/img), [`title`](/fr/docs/Web/HTML/Element/abbr#attr-title) pour [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)).
 
 - **"u-\*" pour les propriétés qui sont des URL** (ex. "u-url", "u-photo", "u-logo")
 
-  - Analyse spéciale : attributs d'éléments [`<a>`](/fr/docs/Web/HTML/Element/a)/[`href`](/fr/docs/Web/HTML/Element/a#attr-href), [`<img>`](/fr/docs/Web/HTML/Element/Img)/[`src`](/fr/docs/Web/HTML/Element/Img#attr-src), [`<object>`](/fr/docs/Web/HTML/Element/object)/[`data`](/fr/docs/Web/HTML/Element/object#attr-data) etc. attributs sur le contenu des éléments.
+  - Analyse spéciale : attributs d'éléments [`<a>`](/fr/docs/Web/HTML/Element/a)/[`href`](/fr/docs/Web/HTML/Element/a#attr-href), [`<img>`](/fr/docs/Web/HTML/Element/img)/[`src`](/fr/docs/Web/HTML/Element/img#attr-src), [`<object>`](/fr/docs/Web/HTML/Element/object)/[`data`](/fr/docs/Web/HTML/Element/object#attr-data) etc. attributs sur le contenu des éléments.
 
 - **"dt-\*" pour les propriétés temporelles (date/heure)** (ex. "dt-start", "dt-end", "dt-bday")
 
@@ -126,7 +126,8 @@ Cela fournira le JSON suivant :
 }
 ```
 
-> **Note :** Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
+> [!NOTE]
+> Le h-card imbriqué récupère des valeurs implicites pour `name` et `url`.
 
 ### h-entry
 

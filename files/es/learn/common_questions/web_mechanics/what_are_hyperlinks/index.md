@@ -88,5 +88,5 @@ Los enlaces influyen en la facilidad con que un motor de búsqueda se vinculará
 
 Ahora querrás configurar algunas páginas web con enlaces.
 
-- Para obtener más antecedentes teóricos, aprenda sobre [URLs y su estructura](/es/docs/Learn/Common_questions/What_is_a_URL), dado que todo enlace apunta a una URL.
+- Para obtener más antecedentes teóricos, aprenda sobre [URLs y su estructura](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), dado que todo enlace apunta a una URL.
 - ¿Quieres algo un poco más práctico? El artículo [Creación de hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) de nuestro módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) explica cómo implementar enlaces en detalle.

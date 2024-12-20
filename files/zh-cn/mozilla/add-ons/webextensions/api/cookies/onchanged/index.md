@@ -9,7 +9,8 @@ l10n:
 
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件在设置或删除扩展程序可以访问的 Cookie 时触发。
 
-> **备注：** 当[存储分区](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#存储分区)处于活动状态时，`cookies.Cookie.partitionKey` 包含 Cookie 的存储分区的描述。在修改 Cookie 时，将此值传递给 {{WebExtAPIRef("cookies.set()")}} 或 {{WebExtAPIRef("cookies.remove()")}} 很重要，以确保扩展程序使用正确的 Cookie。
+> [!NOTE]
+> 当[存储分区](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#存储分区)处于活动状态时，`cookies.Cookie.partitionKey` 包含 Cookie 的存储分区的描述。在修改 Cookie 时，将此值传递给 {{WebExtAPIRef("cookies.set()")}} 或 {{WebExtAPIRef("cookies.remove()")}} 很重要，以确保扩展程序使用正确的 Cookie。
 
 请注意，更新 Cookie 属性实际上是一个两步过程：
 
@@ -75,7 +76,8 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#event-onChanged) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#event-onChanged) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

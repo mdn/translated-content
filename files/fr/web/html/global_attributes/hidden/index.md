@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`hidden`** est un attribut booléen qui indique s'il n'est pas encore ou s'il n'est plus pertinent d'afficher l'élément courant. Cet attribut peut, par exemple, être utilisé afin de masquer des éléments tant que l'utilisateur ne s'est pas connecté. Le navigateur n'affichera pas les éléments masqués via cet attribut.
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`hidden`** est un attribut booléen qui indique s'il n'est pas encore ou s'il n'est plus pertinent d'afficher l'élément courant. Cet attribut peut, par exemple, être utilisé afin de masquer des éléments tant que l'utilisateur ne s'est pas connecté. Le navigateur n'affichera pas les éléments masqués via cet attribut.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-hidden.html","tabbed-shorter")}}
 
@@ -15,7 +15,8 @@ Les éléments cachés avec `hidden` ne devraient pas avoir de lien qui pointent
 
 Par exemple, on peut utiliser l'attribut ARIA `aria-describedby` pour faire référence à une description qui serait cachée (si cette dernière n'est pas pertinente seule). De même un élément {{HTMLElement("canvas")}} caché peut être utilisé comme un _buffer_ hors champ par moteur graphique scripté.
 
-> **Note :** Cet attribut sera surchargé par la propriété CSS {{cssxref("display")}}. Ainsi, un élément dont le style a `display: flex` sera affiché à l'écran, même si l'attribut `hidden` est présent.
+> [!NOTE]
+> Cet attribut sera surchargé par la propriété CSS {{cssxref("display")}}. Ainsi, un élément dont le style a `display: flex` sera affiché à l'écran, même si l'attribut `hidden` est présent.
 
 ## Spécifications
 
@@ -27,5 +28,5 @@ Par exemple, on peut utiliser l'attribut ARIA `aria-describedby` pour faire réf
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - [Utiliser l'attribut `aria-hidden`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-hidden_attribute)

@@ -47,7 +47,20 @@ CSS 代表**层叠样式表**（Cascading Style Sheets），理解第一个词*�
 
 下面的示例中，我们有两个关于 `<h1>` 的规则。`<h1>` 最后显示蓝色——这两个规则来自同一个源，且具有相同的元素选择器，有相同的优先级，所以顺序在最后的生效。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 500)}}
+```html live-sample___cascade-simple
+<h1>这是我的标题。</h1>
+```
+
+```css live-sample___cascade-simple
+h1 {
+  color: red;
+}
+h1 {
+  color: blue;
+}
+```
+
+{{EmbedLiveSample("cascade-simple")}}
 
 ### 优先级
 
@@ -58,7 +71,21 @@ CSS 代表**层叠样式表**（Cascading Style Sheets），理解第一个词*�
 
 下面我们再来介绍两个适用于 `<h1>` 的规则。下面的 `<h1>` 最后会显示红色——类选择器 `main-heading` 有更高的优先级，因此就会被应用——即使元素选择器顺序在它后面。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 600)}}
+```html live-sample___specificity-simple
+<h1 class="main-heading">这是我的标题。</h1>
+```
+
+```css live-sample___specificity-simple
+.main-heading {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+```
+
+{{EmbedLiveSample("specificity-simple")}}
 
 稍后我们会详细解释优先级算法。
 
@@ -68,11 +95,27 @@ CSS 代表**层叠样式表**（Cascading Style Sheets），理解第一个词*�
 
 举一个例子，如果你设置一个元素的 `color` 和 `font-family`，每个在里面的元素也都会有相同的属性，除非你直接在元素上设置属性。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 650)}}
+```html live-sample___inheritance-simple
+<p>由于主题颜色被设置为蓝色，因此该颜色会被子元素继承。</p>
+<p>我们可以通过选择器定位元素来改变颜色，比如这个<span>内容跨越</span>元素。</p>
+```
+
+```css live-sample___inheritance-simple
+body {
+  color: blue;
+}
+
+span {
+  color: black;
+}
+```
+
+{{EmbedLiveSample("inheritance-simple")}}
 
 一些属性是不能继承的——举个例子如果你在一个元素上设置 {{cssxref("width")}} 为 50% ，所有的后代不会是父元素的宽度的 50% 。如果这个也可以继承的话，CSS 就会很难使用了！
 
-> **备注：** 在 MDN CSS 属性参考页面，你会发现一个名为“形式定义”的技术信息框，其中列举了属性的很多数据信息，包括能否被继承。以 [color 属性的形式定义部分](/zh-CN/docs/Web/CSS/color#形式定义)为例。
+> [!NOTE]
+> 在 MDN CSS 属性参考页面，你会发现一个名为“形式定义”的技术信息框，其中列举了属性的很多数据信息，包括能否被继承。以 [color 属性的形式定义部分](/zh-CN/docs/Web/CSS/color#形式定义)为例。
 
 ## 理解这些概念是如何协同工作的
 
@@ -88,7 +131,46 @@ CSS 代表**层叠样式表**（Cascading Style Sheets），理解第一个词*�
 
 `color` 属性是一个继承属性。因此，`color` 属性应用在直接子元素和其后代——直接子元素 `<li>` 和第一个嵌套列表中的子项。然后添加了一个 `special` 类到第二个嵌套列表，其中使用了不同的颜色。然后通过它的子元素继承。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 1100)}}
+```html live-sample___inheritance
+<ul class="main">
+  <li>项目 1</li>
+  <li>
+    项目 2
+    <ul>
+      <li>2.1</li>
+      <li>2.2</li>
+    </ul>
+  </li>
+  <li>
+    项目 3
+    <ul class="special">
+      <li>
+        3.1
+        <ul>
+          <li>3.1.1</li>
+          <li>3.1.2</li>
+        </ul>
+      </li>
+      <li>3.2</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css live-sample___inheritance
+.main {
+  color: rebeccapurple;
+  border: 2px solid #ccc;
+  padding: 1em;
+}
+
+.special {
+  color: black;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("inheritance", "", "280px")}}
 
 像 `width`（上面提到的）、`margin`、`padding` 和 `border` 不会被继承。如果 border 可以被继承，每个列表和列表项都会获得一个边框——可能就不是我们想要的结果！
 
@@ -109,7 +191,8 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 - {{cssxref("unset")}}
   - : 将属性重置为自然值，也就是如果属性是自然继承那么就是 `inherit`，否则和 `initial` 一样
 
-> **备注：** 见 [CSS 声明的源](/zh-CN/docs/Web/CSS/Cascade#css_声明的源)有更多信息和具体是怎么工作的。
+> [!NOTE]
+> 见 [CSS 声明的源](/zh-CN/docs/Web/CSS/Cascade#css_声明的源)有更多信息和具体是怎么工作的。
 
 我们可以查看一个链接列表来探索这些值是如何运作的。在下面的实例中，你可以通过修改 CSS 来查看它们的功能，写代码是掌握 HTML 和 CSS 最好的办法。
 
@@ -120,7 +203,34 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 3. 如果你为 `<a>` 元素定义新的颜色（例如：`a { color: red; }`），哪些链接会改变颜色？
 4. 阅读下一节有关重置所有属性的内容后，回到这里，并将 `color` 属性改为 `all` 属性。注意第二个链接是怎么出现在新的一行中，还带有一个无序列表的符号的。你认为继承了哪些属性。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 800)}}
+```html live-sample___keywords
+<ul>
+  <li>默认<a href="#">链接</a>颜色</li>
+  <li class="my-class-1">继承<a href="#">链接</a>颜色</li>
+  <li class="my-class-2">重置<a href="#">链接</a>颜色</li>
+  <li class="my-class-3">取消<a href="#">链接</a>颜色的设置</li>
+</ul>
+```
+
+```css live-sample___keywords
+body {
+  color: green;
+}
+
+.my-class-1 a {
+  color: inherit;
+}
+
+.my-class-2 a {
+  color: initial;
+}
+
+.my-class-3 a {
+  color: unset;
+}
+```
+
+{{EmbedLiveSample("keywords")}}
 
 ### 重设所有属性值
 
@@ -128,7 +238,28 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 下面的示例中有两个块级引用元素。第一个用元素本身的样式，第二个设置 `all` 为 `unset`
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 800)}}
+```html live-sample___all
+<blockquote>
+  <p>当前块引用设置了样式</p>
+</blockquote>
+
+<blockquote class="fix-this">
+  <p>当前块引用未设置样式</p>
+</blockquote>
+```
+
+```css live-sample___all
+blockquote {
+  background-color: orange;
+  border: 2px solid blue;
+}
+
+.fix-this {
+  all: unset;
+}
+```
+
+{{EmbedLiveSample("all")}}
 
 试着将 `all` 改成其他可用的值然后观察有什么不一样。
 
@@ -160,7 +291,29 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 这样可以避免重复的 CSS。一种常见的做法是给基本元素定义通用样式，然后给不同的元素创建对应的类。举个例子，在下面的样式中我给 2 级标题定义了通用样式，然后创建了一些类只修改部分属性的值。最初定义的值应用于所有标题，然后更具体的值通过对应类来实现。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 1000)}}
+```html live-sample___mixing-rules
+<h2>未设置类的标题</h2>
+<h2 class="small">设置了 small 类的标题</h2>
+<h2 class="bright">设置了 bright 类的标题</h2>
+```
+
+```css live-sample___mixing-rules
+h2 {
+  font-size: 2em;
+  color: #000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.small {
+  font-size: 1em;
+}
+
+.bright {
+  color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("mixing-rules", "", "240px")}}
 
 现在让我们来看看浏览器如何计算优先级。我们已经知道一个元素选择器比类选择器的优先级更低，会被其覆盖。本质上，不同类型的选择器有不同的分数值，把这些分数相加就得到特定选择器的权重，然后就可以进行匹配。
 
@@ -170,7 +323,8 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 - **类**：选择器中包含类选择器、属性选择器或者伪类则十位得一分。
 - **元素**：选择器中包含元素、伪元素选择器则个位得一分。
 
-> **备注：** 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/:where)）不会影响优先级。
+> [!NOTE]
+> 通用选择器（[`*`](/zh-CN/docs/Web/CSS/Universal_selectors)）、组合符（`+`、`>`、`~`、' '）和调整优先级的选择器（[`:where()`](/zh-CN/docs/Web/CSS/:where)）不会影响优先级。
 
 否定（[`:not()`](/zh-CN/docs/Web/CSS/:not)）和任意匹配（[`:is()`](/zh-CN/docs/Web/CSS/:is)）伪类本身对优先级没有影响，但它们的参数则会带来影响。参数中，对优先级算法有贡献的参数的优先级的最大值将作为该伪类选择器的优先级。
 
@@ -186,7 +340,73 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 在我们继续之前，先看看这个示例。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 800)}}
+```html live-sample___specificity-boxes
+<div class="container" id="outer">
+  <div class="container" id="inner">
+    <ul>
+      <li class="nav"><a href="#">一</a></li>
+      <li class="nav"><a href="#">二</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+```css live-sample___specificity-boxes
+/* 1. 优先级：1-0-1 */
+#outer a {
+  background-color: red;
+}
+
+/* 2. 优先级：2-0-1 */
+#outer #inner a {
+  background-color: blue;
+}
+
+/* 3. 优先级：1-0-4 */
+#outer div ul li a {
+  color: yellow;
+}
+
+/* 4. 优先级：1-1-3 */
+#outer div ul .nav a {
+  color: white;
+}
+
+/* 5. 优先级：0-2-4 */
+div div li:nth-child(2) a:hover {
+  border: 10px solid black;
+}
+
+/* 6. 优先级：0-2-3 */
+div li:nth-child(2) a:hover {
+  border: 10px dashed black;
+}
+
+/* 7. 优先级：0-3-3 */
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+```
+
+{{EmbedLiveSample("specificity-boxes")}}
 
 这里发生了什么？首先，我们先看看最上面的选择器规则，你会发现，我们已经把优先级计算出来放在最前面的注释里。
 
@@ -194,7 +414,8 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 - 第三四个选择器都是链接文本颜色样式——后者赢了使得文本变成白色，因为它虽然少一个元素选择器，但是多了一个类选择器。所以优先级是 1-1-3 vs. 1-0-4。
 - 第 5 到 7 个选择器都是鼠标悬停时链接边框样式。第六个显然输给了第五个，优先级是 0-2-3 vs. 0-2-4——少了个元素选择器。第七个，比第五第六都高——子选择器数量相同，但是有一个元素选择器变成类选择器。所以最后优先级是 0-3-3 vs. 0-2-3 和 0-2-4。
 
-> **备注：** 每一个选择器类编都有它自己的优先级等级，它们不会被具有较低优先级的选择器覆盖。例如，权重为*一百万*的**类**选择器不会覆盖权重为*一*的 **ID** 选择器。
+> [!NOTE]
+> 每一个选择器类编都有它自己的优先级等级，它们不会被具有较低优先级的选择器覆盖。例如，权重为*一百万*的**类**选择器不会覆盖权重为*一*的 **ID** 选择器。
 >
 > 评估优先级的最佳方法是对不同的优先级等级单独进行评分，并从最高的等级开始，必要时再计算低优先级等级的权重。即，仅当某一列的优先级权重相同时，你才需要评估下一列；否则，你可以直接忽略低等级的选择器，因为它们无法覆盖高优先级等级的选择器。
 
@@ -206,11 +427,35 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 有一个特殊的 CSS 可以用来覆盖所有上面所有优先级计算，不过需要很小心的使用——`!important`。用于修改特定属性的值，能够覆盖普通规则的层叠。
 
-> **备注：** 了解 `!important` 是为了在阅读别人代码的时候知道有什么作用。**但是，强烈建议除了非常情况不要使用它。**`!important` 改变了层叠的常规工作方式，它会使调试 CSS 问题非常困难，特别是在大型样式表中。
+> [!NOTE]
+> 了解 `!important` 是为了在阅读别人代码的时候知道有什么作用。**但是，强烈建议除了非常情况不要使用它。**`!important` 改变了层叠的常规工作方式，它会使调试 CSS 问题非常困难，特别是在大型样式表中。
 
 看看这个示例，有两个段落，其中一个有 ID。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 800)}}
+```html live-sample___important
+<p class="better">这是个段落。</p>
+<p class="better" id="winning">一个选择器掌管一切！</p>
+```
+
+```css live-sample___important
+#winning {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+```
+
+{{EmbedLiveSample("important")}}
 
 让我们看看会发生什么——如果有什么疑问，试着删除一些属性：
 
@@ -219,7 +464,8 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 3. 两个元素都有 `better` [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class)，但是第二个有 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 。因为 ID 选择器比类选择器优先级更高（一个页面只能有一个独特的 ID，但是很多元素都有相同的类——ID 对于目标非常独特），红色背景和 1px 黑色边框应该都被应用到第二个元素，第一个元素应该是灰色背景和 no border，根据类选择器。
 4. 第二个元素有红色背景但是没有边框。为什么？因为 `!important` 声明在第二条规则里——在 `border: none` 后面，说明即使计算优先级低，这个属性也使用这个值。
 
-> **备注：** 覆盖 `!important` 唯一的办法就是另一个 `!important` 具有相同*优先级*而且顺序靠后，或者更高优先级。
+> [!NOTE]
+> 覆盖 `!important` 唯一的办法就是另一个 `!important` 具有相同*优先级*而且顺序靠后，或者更高优先级。
 
 在一种情况下，你可能不得不使用它：当你不能编辑核心的 CSS 模块，不能用任何其他方式覆盖，而你又真的想要覆盖一个样式时。但说真的，如果可以避免的话就不要用它。
 
@@ -242,7 +488,8 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 5. 用户样式表中的 `!important` 声明
 6. 用户代理样式表中的 `!important` 声明
 
-> **备注：** 标记为 `!important` 的样式的优先级顺序是颠倒的。web 开发人员的样式表覆盖用户的样式表是有意义的，因此设计可以按预期进行，但是有时用户有充足的理由覆盖 web 开发人员的样式，正如上面提到的——这可以通过在他们的规则中使用 `!important` 来实现。
+> [!NOTE]
+> 标记为 `!important` 的样式的优先级顺序是颠倒的。web 开发人员的样式表覆盖用户的样式表是有意义的，因此设计可以按预期进行，但是有时用户有充足的理由覆盖 web 开发人员的样式，正如上面提到的——这可以通过在他们的规则中使用 `!important` 来实现。
 
 ## 级联层的顺序
 
@@ -252,7 +499,46 @@ CSS 的简写属性 [`all`](/zh-CN/docs/Web/CSS/all) 可以用于同时将这些
 
 当你在不同的层中有多个样式块，且其中提供了对于某一元素的单一属性的相互冲突的值时，声明该冲突样式的层的顺序将决定其优先级。而不是高优先级的层直接覆盖低优先级的层中的所有样式。需要注意的是单独的一个层中的样式的优先级仍旧会起作用。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-layers.html", '100%', 800)}}
+```html live-sample___cascade-layers
+<p id="addSpecificity">具有边框和背景的段落</p>
+```
+
+```css live-sample___cascade-layers
+@layer firstLayer, secondLayer;
+
+p {
+  /* 0-0-1 */
+  background-color: red;
+  color: grey !important;
+  border: 5px inset purple;
+}
+p#addSpecificity {
+  /* 1-0-1 */
+  border-style: solid !important;
+}
+
+@layer firstLayer {
+  #addSpecificity {
+    /* 1-0-0 */
+    background-color: blue;
+    color: white !important;
+    border-width: 5px;
+    border-style: dashed !important;
+  }
+}
+
+@layer secondLayer {
+  p#addSpecificity {
+    /* 1-0-1 */
+    background-color: green;
+    color: orange !important;
+    border-width: 10px;
+    border-style: dotted !important;
+  }
+}
+```
+
+{{EmbedLiveSample("cascade-layers")}}
 
 让我们讨论一下上例以了解发生了什么。示例中，声明了两个级联层，按 `firstLayer` 和 `secondLayer` 的顺序声明。即使 `secondLayer` 的优先级更高，但其中声明的样式没有被使用。为什么？因为不分层的常规样式具有更高的优先级，覆盖了层中的常规样式，不论层的优先级如何，而具有 important 的样式，则是先前声明的层会覆盖后声明的层，而不是层的优先级。
 

@@ -5,7 +5,7 @@ slug: Learn/CSS/Styling_text/Styling_links
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-A la hora de dar estilo a los [enlaces](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.
+A la hora de dar estilo a los [enlaces](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.
 
 <table>
   <tbody>
@@ -35,11 +35,11 @@ A la hora de dar estilo a los [enlaces](/es/docs/Learn/HTML/Introduccion_a_HTML/
 
 ## Echemos un vistazo a algunos enlaces
 
-Analizamos cómo se implementan los enlaces en tu HTML de acuerdo con las buenas prácticas de [Creación de hipervínculos](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks). En este artículo desarrollaremos estos conocimientos y te mostraremos las buenas prácticas del diseño de enlaces.
+Analizamos cómo se implementan los enlaces en tu HTML de acuerdo con las buenas prácticas de [Creación de hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). En este artículo desarrollaremos estos conocimientos y te mostraremos las buenas prácticas del diseño de enlaces.
 
 ### Los estados de un enlace
 
-Lo primero que hay que entender es el concepto de estados de un enlace (diferentes estados en los que pueden estar los enlaces, que pueden diseñarse usando diferentes [pseudoclases](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS)):
+Lo primero que hay que entender es el concepto de estados de un enlace (diferentes estados en los que pueden estar los enlaces, que pueden diseñarse usando diferentes [pseudoclases](/es/docs/Learn/CSS/Building_blocks/Selectors)):
 
 - **Link (no visitado)**: El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. Se puede especificar usando la pseudoclase {{cssxref(":link")}}.
 - **Visited**: Un enlace cuando ya se ha visitado (está grabado en el historial del navegador); se le aplica otro formato con la pseudoclase {{cssxref(":visited")}}.
@@ -64,7 +64,8 @@ p {
 
 {{ EmbedLiveSample('Estilos_predeterminados', '100%', 120) }}
 
-> **Nota:** Todos los enlaces que hay en los ejemplos de esta página son simulados, encontrarás un símbolo `#` (almohadilla) en el lugar de una URL real. Esto es porque si incluyéramos enlaces reales, los ejemplos quedarían interrumpidos al hacer clic (daría error, o se cargaría una página en el ejemplo incrustado de la que no podrías volver atrás). `#` solo establece enlaces dentro de la misma página.
+> [!NOTE]
+> Todos los enlaces que hay en los ejemplos de esta página son simulados, encontrarás un símbolo `#` (almohadilla) en el lugar de una URL real. Esto es porque si incluyéramos enlaces reales, los ejemplos quedarían interrumpidos al hacer clic (daría error, o se cargaría una página en el ejemplo incrustado de la que no podrías volver atrás). `#` solo establece enlaces dentro de la misma página.
 
 A medida que explores los estilos predeterminados, observarás algunas cosas:
 
@@ -86,7 +87,8 @@ Los estilos por defecto se pueden desactivar/cambiar usando las propiedades CSS 
 - {{cssxref("cursor")}} para el estilo del cursor (no debes deshabilitar esta opción a menos que tengas una muy buena razón para hacerlo).
 - {{cssxref("outline")}} para el contorno del texto (un contorno es similar a un borde, la única diferencia es que el borde ocupa un espacio en la caja y el contorno solo se solapa sobre el fondo). El contorno es una ayuda de accesibilidad útil, así que piénsatelo bien antes de desactivar esta opción; al menos deberías plantear dos estilos para los estados de pasar el puntero por encima y de tener el foco.
 
-> **Nota:** No estás limitado a las propiedades anteriores para diseñar tus enlaces; tienes libertad para usar cualquier propiedad que te guste. ¡Solo trata de que no resulte descabellado!
+> [!NOTE]
+> No estás limitado a las propiedades anteriores para diseñar tus enlaces; tienes libertad para usar cualquier propiedad que te guste. ¡Solo trata de que no resulte descabellado!
 
 ### Dar formato a algunos enlaces
 
@@ -358,11 +360,12 @@ También usamos {{cssxref("background-size")}} para especificar el tamaño de la
 
 Finalmente, establecemos un área de relleno a la derecha ({{cssxref ("padding-right")}}) para los enlaces, para crear un espacio en que aparezca la imagen de fondo, de modo que no se superponga con el texto.
 
-Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces [HTML](/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks) de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un [selector de atributos](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS#Selectores_de_atributo): `a[href*="http"]` selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo [`href`](/es/docs/Web/HTML/Element/a#href) con un valor que contiene «http» en algún lugar de su contenido textual.
+Un último apunte: ¿cómo seleccionamos solo los enlaces externos? Bueno, si escribes tus enlaces [HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) de forma adecuada, solo deberías usar URL absolutos para los enlaces externos. Para enlazar con otras partes del mismo sitio web, resulta más eficiente usar enlaces relativos. Por lo tanto, el texto «http» solo debe aparecer en los enlaces externos y es posible seleccionarlos con un [selector de atributos](/es/docs/Learn/CSS/Building_blocks/Selectors#selectores_de_atributo): `a[href*="http"]` selecciona los elementos {{HTMLElement ( "a")}}, pero solo si tienen un atributo [`href`](/es/docs/Web/HTML/Element/a#href) con un valor que contiene «http» en algún lugar de su contenido textual.
 
 Eso es todo. Vuelve a la sección de aprendizaje activo anterior ¡y prueba esta nueva técnica!
 
-> **Nota:** No te preocupes si aún no estás familiarizado con los [fondos](/es/docs/Learn/CSS/Building_blocks) y el [diseño web adaptativo](/es/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks), lo explicaremos en otros artículos.
+> [!NOTE]
+> No te preocupes si aún no estás familiarizado con los [fondos](/es/docs/Learn/CSS/Building_blocks) y el [diseño web adaptativo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design), lo explicaremos en otros artículos.
 
 ## Dar aspecto de botón a un enlace
 
@@ -438,7 +441,7 @@ Esto nos da el resultado siguiente:
 Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más interesantes:
 
 - Nuestra segunda regla elimina el área de relleno ({{cssxref ("padding")}}) predeterminada del elemento {{htmlelement ("ul")}} y establece un ancho para abarcar el 100% del contenedor externo (el {{htmlelement ("body")}}, en este caso).
-- Los elementos {{htmlelement ("li")}} por defecto suelen ser elementos de bloque (repasa los [tipos de cajas CSS](/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja)), lo que significa que ocupan sus propias líneas. En este caso, creamos una lista de enlaces horizontal, para lo que en la tercera regla establecemos la propiedad {{cssxref ("display")}} en el valor `inline`, que ubica todos los elementos de la lista sobre la misma línea porque ahora se comportan como elementos de línea.
+- Los elementos {{htmlelement ("li")}} por defecto suelen ser elementos de bloque (repasa los [tipos de cajas CSS](/es/docs/Learn/CSS/Building_blocks/The_box_model)), lo que significa que ocupan sus propias líneas. En este caso, creamos una lista de enlaces horizontal, para lo que en la tercera regla establecemos la propiedad {{cssxref ("display")}} en el valor `inline`, que ubica todos los elementos de la lista sobre la misma línea porque ahora se comportan como elementos de línea.
 - La cuarta regla (que da formato al elemento {{htmlelement("a")}}) es la más complicada. Vamos a verla paso a paso:
 
   - Como en los ejemplos anteriores, comenzamos por desactivar las propiedades predeterminadas {{cssxref ("text-decoration")}} y {{cssxref ("outline")}}, ya que no queremos que estropeen nuestro aspecto.
@@ -446,7 +449,8 @@ Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más int
   - Ahora nos centramos en el tamaño. Queremos llenar todo el ancho del elemento de lista {{htmlelement ("ul")}} y dejar un pequeño margen entre cada botón (pero ningún hueco en el borde derecho), y queremos los 5 botones del mismo tamaño. Para hacer esto, establecemos el atributo {{cssxref ("width")}} en 19,5%, y el atributo {{cssxref ("margin-right")}} en 0,625%. Observa que el ancho completo suma 100,625%, lo que haría caer el último botón `<ul>` a la siguiente línea por desbordamiento. Sin embargo, lo restituimos al 100% con la siguiente regla, que selecciona solo el último elemento `<a>` de la lista y elimina de él el margen. ¡Hecho!
   - Las tres últimas declaraciones son bastante sencillas y tienen principalmente finalidades estéticas. Centramos el texto dentro de cada enlace, establecemos {{cssxref ("line-height")}} en 3 para dar algo de altura a los botones (lo que también presenta la ventaja de centrar verticalmente el texto), y establecemos el color del texto a negro.
 
-> **Nota:** Es posible que hayas observado que en el HTML se han colocado todos los elementos de lista en una misma línea; esto es porque los espacios/saltos de línea que se colocan entre elementos de bloque crean espacios en la página, igual como lo hacen los espacios entre las palabras, y estos espacios romperían nuestro diseño de menú de navegación horizontal. Así que hemos eliminado esos espacios. Puede encontrar más información sobre este problema (y sus soluciones) en [Combatir los espacios entre elementos de bloque colocados en línea](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
+> [!NOTE]
+> Es posible que hayas observado que en el HTML se han colocado todos los elementos de lista en una misma línea; esto es porque los espacios/saltos de línea que se colocan entre elementos de bloque crean espacios en la página, igual como lo hacen los espacios entre las palabras, y estos espacios romperían nuestro diseño de menú de navegación horizontal. Así que hemos eliminado esos espacios. Puede encontrar más información sobre este problema (y sus soluciones) en [Combatir los espacios entre elementos de bloque colocados en línea](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
 
 ## Resumen
 

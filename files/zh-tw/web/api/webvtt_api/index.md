@@ -544,7 +544,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby tag** (`<ruby></ruby>`)
-  - : Used with ruby text tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 18 - Ruby tag
 
@@ -553,7 +553,7 @@ That's <00:00:21.000>amore
 ```
 
 - **Ruby text tag** (`<rt></rt>`)
-  - : Used with ruby tags to display [ruby characters](http://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
+  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e. small annotative characters above other characters).
 
 ##### Example 19 - Ruby text tag
 

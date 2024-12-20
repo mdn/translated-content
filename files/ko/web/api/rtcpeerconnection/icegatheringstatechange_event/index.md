@@ -15,7 +15,8 @@ ICE가 처음 연결 candidate들을 수집하게되면 값이 `new`에서 `gath
 | 인터페이스    | {{domxref("Event")}}                                                                    |
 | 이벤트 핸들러 | {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} |
 
-> **참고:** ICE candidate 수집 과정이 완료되었는지는 `icegatheringstatechange`이벤트와 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}의 값이 `complete`로 바뀌는 것을 확인하면 알 수 있습니다. 하지만, 더 쉬운 방법으로는 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 이벤트에 대한 핸들러가 {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} 속성의 값이 null로 변하는 시점을 체크하도록 할 수 있습니다. 이 속성이 `null` 값으로 바뀌었다는 것은 즉 모든 candidate 수집이 완료되었다는 뜻입니다.
+> [!NOTE]
+> ICE candidate 수집 과정이 완료되었는지는 `icegatheringstatechange`이벤트와 {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}의 값이 `complete`로 바뀌는 것을 확인하면 알 수 있습니다. 하지만, 더 쉬운 방법으로는 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 이벤트에 대한 핸들러가 {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} 속성의 값이 null로 변하는 시점을 체크하도록 할 수 있습니다. 이 속성이 `null` 값으로 바뀌었다는 것은 즉 모든 candidate 수집이 완료되었다는 뜻입니다.
 
 ## 예시
 

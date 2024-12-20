@@ -38,7 +38,8 @@ _无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 
 以下以 {{domxref("Window")}} 为目标的 `onXYZ` 事件处理器属性同样在 `window` 对象这一别名目标上可用。但建议直接在 `window` 对象上监听这些事件，而不是在 `HTMLBodyElement` 上。
 
-> **备注：** 对于以下的 `onXYZ` 事件处理器，在 `HTMLBodyElement` 上使用 `addEventListener()` 将不会生效。请在 {{domxref("window")}} 对象上监听这些事件。
+> [!NOTE]
+> 对于以下的 `onXYZ` 事件处理器，在 `HTMLBodyElement` 上使用 `addEventListener()` 将不会生效。请在 {{domxref("window")}} 对象上监听这些事件。
 
 - {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : 在关联的文档开始打印或打印预览关闭后触发。

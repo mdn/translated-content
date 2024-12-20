@@ -15,7 +15,8 @@ Lorsque la propriété `dir` d'un tableau vaut `rtl`, l'ordre des colonnes est a
 
 Lorsqua la propriété `dir` d'un élément vaut `auto`, la direction de l'élément est déterminée selon son premier caractère de direction fort ou, par défaut, la direction d'écriture de son élément parent.
 
-> **Note :** Les navigateurs peuvent permettre aux utilisatrices et utilisateurs de modifier la direction d'écriture des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) afin de faciliter l'édition du contenu. Chrome et Safari fournissent une option via le menu contextuel des champs de saisie, Internet Explorer et Edge (ancienne version) utilisent la combinaison de touches <kbd>Ctrl</kbd> + <kbd>Maj gauche</kbd> et <kbd>Ctrl</kbd> + <kbd>Maj droit</kbd>. Firefox utilise <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Maj</kbd> + <kbd>X</kbd> mais _ne_ met _pas_ à jour la valeur de l'attribut **`dir`**.
+> [!NOTE]
+> Les navigateurs peuvent permettre aux utilisatrices et utilisateurs de modifier la direction d'écriture des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) afin de faciliter l'édition du contenu. Chrome et Safari fournissent une option via le menu contextuel des champs de saisie, Internet Explorer et Edge (ancienne version) utilisent la combinaison de touches <kbd>Ctrl</kbd> + <kbd>Maj gauche</kbd> et <kbd>Ctrl</kbd> + <kbd>Maj droit</kbd>. Firefox utilise <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Maj</kbd> + <kbd>X</kbd> mais _ne_ met _pas_ à jour la valeur de l'attribut **`dir`**.
 
 ## Valeur
 
@@ -44,7 +45,7 @@ parg.dir = "rtl";
 
 ## Voir aussi
 
-- [`document.dir`](/fr/docs/Web/API/document/dir)
+- [`document.dir`](/fr/docs/Web/API/Document/dir)
 - L'attribut universel HTML [`dir`](/fr/docs/Web/HTML/Global_attributes/dir)
 - La propriété CSS [`direction`](/fr/docs/Web/CSS/direction)
 - La pseudo-classe CSS [`:dir`](/fr/docs/Web/CSS/:dir)

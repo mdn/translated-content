@@ -5,7 +5,7 @@ slug: Learn/Forms/Form_validation
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
 
-A validação de formulário nos ajuda a garantir que os usuários preencham os campos no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o [Guia de validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation).
+A validação de formulário nos ajuda a garantir que os usuários preencham os campos no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o [Guia de validação](/pt-BR/docs/Web/HTML/Constraint_validation).
 
 <table class="learn-box standard-table">
   <tbody>
@@ -45,7 +45,8 @@ Queremos tornar o preenchimento de formulários da web o mais fácil possível. 
 - **Quemos proteger os dados dos nossos usuários** — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.
 - **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
 
-  > **Aviso:** Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.
+  > [!WARNING]
+  > Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.
 
 ### Diferentes tipos de validação de formulário
 
@@ -62,7 +63,7 @@ No mundo real, os desenvolvedores tendem a usar uma combinação de validação 
 
 ## Usando validação de formulário integrada
 
-Um dos recursos do [HTML5](/pt-BR/docs/HTML/HTML5) é a capacidade de validar a maioria dos dados do usuário sem depender de scripts. Isso é feito usando [atributos de validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes) em elementos de formulário, que permitem especificar regras para uma entrada de formulário, como se um valor precisa a ser preenchido, o comprimento mínimo e máximo dos dados, se precisa ser um número, um endereço de e-mail ou qualquer outra coisa, e um padrão que deve corresponder. Se os dados inseridos seguirem todas as regras especificadas, são considerados válidos; caso contrário, é considerado inválido.
+Um dos recursos do [HTML5](/pt-BR/docs/HTML/HTML5) é a capacidade de validar a maioria dos dados do usuário sem depender de scripts. Isso é feito usando [atributos de validação](/pt-BR/docs/Web/HTML/Constraint_validation#validation-related_attributes) em elementos de formulário, que permitem especificar regras para uma entrada de formulário, como se um valor precisa a ser preenchido, o comprimento mínimo e máximo dos dados, se precisa ser um número, um endereço de e-mail ou qualquer outra coisa, e um padrão que deve corresponder. Se os dados inseridos seguirem todas as regras especificadas, são considerados válidos; caso contrário, é considerado inválido.
 
 Quando um elemento é válido:
 
@@ -134,7 +135,7 @@ Isso faz com que a entrada tenha uma borda tracejada vermelha brilhante quando f
 
 ### Validando com uma expressão regular
 
-Outro recurso de validação muito comum é o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
+Outro recurso de validação muito comum é o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) que espera uma [Expressão Regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
 
 Regexes são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
 
@@ -170,9 +171,11 @@ Neste exemplo, o elemento {{HTMLElement("input")}} aceita um dos dois valores po
 
 Neste ponto, tente alterar o valor dentro do atributo `pattern` para igualar alguns dos exemplos que você viu anteriormente e veja como isso afeta os valores que você pode inserir para tornar o valor de entrada válido. Tente escrever alguns dos seus próprios, e veja como você se sai! Tente torná-los relacionados a frutas sempre que possível, para que seus exemplos façam sentido!
 
-> **Nota:** Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
+> [!NOTE]
+> Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
 
-> **Nota:** O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern).
+> [!NOTE]
+> O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern).
 
 ### Restringindo o comprimento de suas entradas
 
@@ -327,7 +330,7 @@ input:focus:invalid {
 
 {{EmbedLiveSample("Exemplo completo", "100%", 420)}}
 
-Consulte [Atributos relacionados à validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation#Validation-related_attributes) para obter uma lista completa de atributos que podem ser usados para restringir valores de entrada e os tipos de entrada que suportam eles.
+Consulte [Atributos relacionados à validação](/pt-BR/docs/Web/HTML/Constraint_validation#validation-related_attributes) para obter uma lista completa de atributos que podem ser usados para restringir valores de entrada e os tipos de entrada que suportam eles.
 
 ### Mensagens de erro personalizadas
 
@@ -346,7 +349,7 @@ Essas mensagens automatizadas têm duas desvantagens:
 
 Para personalizar a aparência e o texto dessas mensagens, você deve usar JavaScript; não há como fazer isso usando apenas HTML e CSS.
 
-HTML5 fornece a [API de validação de restrição](/pt-BR/docs/Web/API/Constraint_validation) para verificar e personalizar o estado de um elemento de formulário. Entre outras coisas, é possível alterar o texto da mensagem de erro. Vejamos um exemplo rápido:
+HTML5 fornece a [API de validação de restrição](/pt-BR/docs/Learn/Forms/Form_validation) para verificar e personalizar o estado de um elemento de formulário. Entre outras coisas, é possível alterar o texto da mensagem de erro. Vejamos um exemplo rápido:
 
 ```html
 <form>
@@ -399,8 +402,8 @@ Mais e mais navegadores agora suportam a API de validação de restrição, e el
 
 | Método                                          | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkValidade()`                               | Retorna `true` se o valor do elemento não tiver problemas de validade; `falso` caso contrário. Se o elemento for inválido, este método também causará um evento {{event("invalid")}} no elemento.                                                                                                                                                                                                                                                                                  |
-| {{domxref("HTMLFormElement.reportValidity()")}} | Retorna `true` se o elemento ou seus controles filho atendem às restrições de validação. Quando `false` é retornado, eventos canceláveis {{event("invalid")}} são acionados para cada elemento inválido e problemas de validação são relatados ao usuário.                                                                                                                                                                                                                         |
+| `checkValidade()`                               | Retorna `true` se o valor do elemento não tiver problemas de validade; `falso` caso contrário. Se o elemento for inválido, este método também causará um evento [`invalid`](/pt-BR/docs/Web/API/HTMLInputElement/invalid_event) no elemento.                                                                                                                                                                                                                                       |
+| {{domxref("HTMLFormElement.reportValidity()")}} | Retorna `true` se o elemento ou seus controles filho atendem às restrições de validação. Quando `false` é retornado, eventos canceláveis [`invalid`](/pt-BR/docs/Web/API/HTMLInputElement/invalid_event) são acionados para cada elemento inválido e problemas de validação são relatados ao usuário.                                                                                                                                                                              |
 | `setCustomValidity(mensagem)`                   | Adiciona uma mensagem de erro personalizada ao elemento; se você definir uma mensagem de erro personalizada, o elemento será considerado inválido e o erro especificado será exibido. Isso permite que você use o código JavaScript para estabelecer uma falha de validação diferente daquelas oferecidas pela API de validação de restrição padrão. A mensagem é mostrada ao usuário ao relatar o problema. Se o argumento for a string vazia, o erro personalizado será apagado. |
 
 Para navegadores legados, é possível usar um [polyfill como Hyperform](https://hyperform.js.org/) para compensar a falta de suporte para a API de validação de restrição. Como você já está usando JavaScript, usar um polyfill não é um fardo adicional para o design ou implementação de seu site ou aplicativo da Web.
@@ -424,7 +427,7 @@ Vamos ver como usar essa API para criar mensagens de erro personalizadas. Primei
 
 Este formulário simples usa o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) para desativar a validação automática do navegador; isso permite que nosso script assuma o controle sobre a validação. No entanto, isso não desativa o suporte para a API de validação de restrição nem a aplicação da pseudoclasse CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref( ":in-range")}} e {{cssxref(":out-of-range")}} classes. Isso significa que, embora o navegador não verifique automaticamente a validade do formulário antes de enviar seus dados, você ainda pode fazer isso sozinho e estilizar o formulário de acordo.
 
-O atributo [`aria-live`](/pt-BR/docs/Accessibility/ARIA/ARIA_Live_Regions) garante que nossa mensagem de erro personalizada seja apresentada a todos, incluindo aqueles que usam tecnologias assistivas, como leitores de tela.
+O atributo [`aria-live`](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) garante que nossa mensagem de erro personalizada seja apresentada a todos, incluindo aqueles que usam tecnologias assistivas, como leitores de tela.
 
 ##### CSS
 
@@ -541,7 +544,7 @@ A API de validação de restrição oferece uma ferramenta poderosa para lidar c
 
 ### Validando formulários sem uma API integrada
 
-Às vezes, como em navegadores legados ou [widgets personalizados](/pt-BR/docs/HTML/Forms/How_to_build_custom_form_widgets), você não poderá (ou não desejará) usar a API de validação de restrição. Nesse caso, você ainda pode usar JavaScript para validar seu formulário. Validar um formulário é mais uma questão de interface do usuário do que validação de dados reais.
+Às vezes, como em navegadores legados ou [widgets personalizados](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls), você não poderá (ou não desejará) usar a API de validação de restrição. Nesse caso, você ainda pode usar JavaScript para validar seu formulário. Validar um formulário é mais uma questão de interface do usuário do que validação de dados reais.
 
 Para validar um formulário, você deve se fazer algumas perguntas:
 
@@ -556,7 +559,7 @@ Para validar um formulário, você deve se fazer algumas perguntas:
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Validação de formulário da Web: práticas recomendadas e tutoriais](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Seis revisões: [Práticas recomendadas para dicas e validação em formulários da Web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
-    - Uma lista à parte: [Validação Inline em Formulários da Web](http://www.alistapart.com/articles/inline-validation-in-web-forms/)
+    - Uma lista à parte: [Validação Inline em Formulários da Web](https://www.alistapart.com/articles/inline-validation-in-web-forms/)
 
 #### Um exemplo que não usa a API de validação de restrição
 
@@ -580,7 +583,7 @@ Para ilustrar isso, vamos reconstruir o exemplo anterior para que funcione com n
 </form>
 ```
 
-Como você pode ver, o HTML é quase o mesmo; acabamos de remover os recursos de validação HTML. Observe que [ARIA](/pt-BR/docs/Accessibility/ARIA) é uma especificação independente que não está especificamente relacionada ao HTML5.
+Como você pode ver, o HTML é quase o mesmo; acabamos de remover os recursos de validação HTML. Observe que [ARIA](/pt-BR/docs/Web/Accessibility/ARIA) é uma especificação independente que não está especificamente relacionada ao HTML5.
 
 ##### CSS
 

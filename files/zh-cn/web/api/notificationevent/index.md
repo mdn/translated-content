@@ -2,16 +2,17 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 l10n:
-  sourceCommit: 17abe1c7a64248b77998643433cb3285ae937c6e
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
 
 {{domxref("Notifications API", "", "", "nocode")}} 的 **`NotificationEvent`** 接口表示在 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上触发的通知事件。
 
 该接口继承自 {{domxref("ExtendableEvent")}} 接口。
 
-> **备注：** 只有在 {{domxref("ServiceWorkerGlobalScope")}} 对象上触发的持久通知事件才会使用 `NotificationEvent` 接口。非持久通知事件在 {{domxref("Notification")}} 对象上触发，使用 `Event` 接口。
+> [!NOTE]
+> 只有在 {{domxref("ServiceWorkerGlobalScope")}} 对象上触发的持久通知事件才会使用 `NotificationEvent` 接口。非持久通知事件在 {{domxref("Notification")}} 对象上触发，使用 `Event` 接口。
 
 {{InheritanceDiagram}}
 
@@ -60,7 +61,8 @@ self.addEventListener("notificationclick", (event) => {
 
 {{Specifications}}
 
-> **备注：** 此接口在 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 中指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}} 访问。
+> [!NOTE]
+> 此接口在 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 中指定，但是可以通过 {{domxref("ServiceWorkerGlobalScope")}} 访问。
 
 ## 浏览器兼容性
 

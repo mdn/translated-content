@@ -20,7 +20,8 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 - `kHz`
   - : 表示以千赫兹（kilohertz）为单位的频率。例如：`0kHz`、`1.5kHz`、`10kHz`。
 
-> **备注：** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0Hz` or `0kHz`. Though the units are case-insensitive, it is good practice to use a capital "H" for `Hz` and `kHz`, as specified in the [SI](https://en.wikipedia.org/wiki/International_System_of_Units).
+> [!NOTE]
+> Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0Hz` or `0kHz`. Though the units are case-insensitive, it is good practice to use a capital "H" for `Hz` and `kHz`, as specified in the [SI](https://en.wikipedia.org/wiki/International_System_of_Units).
 
 ## 示例
 
@@ -44,7 +45,8 @@ The `<frequency>` data type consists of a {{cssxref("&lt;number&gt;")}} followed
 
 {{Specifications}}
 
-> **备注：** This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/zh-CN/docs/Web/CSS/@media/aural) [media type](/zh-CN/docs/Web/CSS/@media#Media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
+> [!NOTE]
+> This data type was initially introduced in [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) for the now-obsolete [aural](/zh-CN/docs/Web/CSS/@media/aural) [media type](/zh-CN/docs/Web/CSS/@media#media_types), where it was used to define the pitch of the voice. However, the `<frequency>` data type has been reintroduced in CSS3, though no CSS property is using it at the moment.
 
 ## 浏览器兼容性
 

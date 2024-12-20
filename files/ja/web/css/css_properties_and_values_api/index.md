@@ -84,7 +84,7 @@ CSS.registerProperty({
 
   - : CSS や JavaScript でカスタムプロパティを登録する方法について、未定義値や無効値の扱い方、代替、継承などのヒントを交えて解説しています。
 
-- [CSS Houdini](/ja/docs/Web/API/Houdini)
+- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)
   - : CSS Houdini とは何か、その利点について、利用可能な API とそのステータスの一覧とともに説明します。
 
 ## 関連概念

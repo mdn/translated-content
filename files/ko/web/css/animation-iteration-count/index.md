@@ -111,7 +111,6 @@ animation-iteration-count: unset;
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기
-  ](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 애니메이션과 관련된 다른 CSS 속성: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

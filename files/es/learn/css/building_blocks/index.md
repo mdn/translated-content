@@ -15,17 +15,18 @@ Antes de comenzar este módulo deberías poseer:
 
 1. Un entendimiento básico de la utilización de una computadora y de la
    navegación web a nivel de usuario.
-2. Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
+2. Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
+3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduction_to_HTML).
 4. Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/Learn/CSS/First_steps).
 
-> **Nota:** Si estás trabajando en una computadora, tablet, u otro dispositivo en el que no eres capaz de crear tus propios archivos puedes intentar la mayor parte de los ejemplos en código en un programa para trabajar código en linea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si estás trabajando en una computadora, tablet, u otro dispositivo en el que no eres capaz de crear tus propios archivos puedes intentar la mayor parte de los ejemplos en código en un programa para trabajar código en linea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
 En este módulo encontrarás artículos que cubren los fundamentos más esenciales del lenguaje CSS. A lo largo del módulo encontrarás múltiples ejercicios que te permitirán poner a prueba tu entendimiento.
 
-- [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascada_y_herencia)
+- [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
   - : El objetivo de ésta lección es desarrollar tu entendimiento sobre algunos de los conceptos fundamentales de CSS - cascada, especificidad y herencia - los cuales controlan como CSS es aplicado a HTML y como sus conflitos son resueltos.
 - [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
 
@@ -62,11 +63,11 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 
 ¿Quieres probar tus habilidades de CSS? Las siguientes evaluaciones pondrán a prueba su comprensión del CSS cubierto en las guías anteriores.
 
-- [Comprensión de CSS básica](/es/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)
+- [Comprensión de CSS básica](/es/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
   - : Esta evaluación evalúa su comprensión de la sintaxis básica, selectores, especificidad, modelo de caja y más.
-- [Crear papel con membrete elegante](/es/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
+- [Crear papel con membrete elegante](/es/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
   - : Si desea causar la impresión correcta, escribir una carta en papel con membrete puede ser un buen comienzo. En esta evaluación, lo retaremos a crear una plantilla en línea para lograr ese aspecto.
-- [Una caja de aspecto genial](/es/docs/Learn/CSS/Styling_boxes/A_cool_looking_box)
+- [Una caja de aspecto genial](/es/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
   - : Aquí aprenderás a usar el estilo de fondo y borde para crear un cuadro llamativo.
 
 ## Ver también

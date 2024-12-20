@@ -63,7 +63,8 @@ function setStyles() {
 }
 ```
 
-> **メモ:** 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> [!NOTE]
+> 完全に動作する例として実行する様子を見るために、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 

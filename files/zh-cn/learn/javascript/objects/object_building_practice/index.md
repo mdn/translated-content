@@ -171,7 +171,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 
 {{ EmbedLiveSample('弹跳吧！小彩球！', '100%', 480) }}
 
-这个实例将会利用 [Canvas API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) 来在屏幕上画小球，还会用到 [requestAnimationFrame](/zh-CN/docs/Web/API/window/requestAnimationFrame) API 来使整个画面动起来——我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。
+这个实例将会利用 [Canvas API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) 来在屏幕上画小球，还会用到 [requestAnimationFrame](/zh-CN/docs/Web/API/Window/requestAnimationFrame) API 来使整个画面动起来——我们并不要求你事先学习过这些 API 的相关知识，希望你完成这个练习之后会想去探索更多。这个过程中我们会用到一些漂亮的小东西并向你展示一些技巧，比如小球从墙上反弹，检查它们是否撞到了对方（也就是碰撞检测）。
 
 ## 让我们开始吧
 
@@ -425,7 +425,8 @@ Ball.prototype.update = function () {
 
 3. 保存文件，刷新浏览器，你就会看到小球在撞击时会变色！
 
-> **备注：** 如果示例无法顺利执行，可参考我们的 [最终版本](https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls)，或者 [在线试用](https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/)。
+> [!NOTE]
+> 如果示例无法顺利执行，可参考我们的 [最终版本](https://github.com/roy-tian/learning-area/tree/master/javascript/oojs/bouncing-balls)，或者 [在线试用](https://roy-tian.github.io/learning-area/javascript/oojs/bouncing-balls/)。
 
 ## 概要
 
@@ -436,7 +437,7 @@ Ball.prototype.update = function () {
 ## 参见
 
 - [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial)——2D canvas 初学者指南。
-- [requestAnimationFrame()](/zh-CN/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/zh-CN/docs/Web/API/Window/requestAnimationFrame)
 - [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection)
 - [3D 碰撞检测](/zh-CN/docs/Games/Techniques/3D_collision_detection)
 - [纯 JavaScript 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)——一个很好的 2D 游戏开发初学者教程。

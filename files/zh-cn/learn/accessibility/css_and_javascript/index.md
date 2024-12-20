@@ -170,7 +170,7 @@ a:active {
 </div>
 ```
 
-你可以在我们的 [form-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-css.html) 示例中看到一些很好的示例 CSS（[查看示例](http://mdn.github.io/learning-area/accessibility/css/form-css.html)）。
+你可以在我们的 [form-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-css.html) 示例中看到一些很好的示例 CSS（[查看示例](https://mdn.github.io/learning-area/accessibility/css/form-css.html)）。
 
 你将为表单编写的大多数 CSS 将用于调整元素大小、排列标签和输入，以及让它们看起来整洁。
 
@@ -180,7 +180,7 @@ a:active {
 
 用于显示表格数据的表。
 
-你可以在 [table-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/table-css.html) 示例中看到表 HTML 和 CSS 的一个很好的简单示例（[查看示例](http://mdn.github.io/learning-area/accessibility/css/table-css.html)）。
+你可以在 [table-css.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/table-css.html) 示例中看到表 HTML 和 CSS 的一个很好的简单示例（[查看示例](https://mdn.github.io/learning-area/accessibility/css/table-css.html)）。
 
 表的 CSS 通常使表更适合你的设计，看起来不那么难看。最好确保表标题醒目（通常使用粗体），并使用斑马条带化使不同的行更易于解析。
 
@@ -190,13 +190,14 @@ a:active {
 
 有一个简单的方法来检查你的对比度是否足够大，不会引起问题。有许多对比检查工具可以在线输入你的前景和背景颜色，以检查它们。例如，WebAIM 的颜色对比度检查器易于使用，并说明了你需要满足有关颜色对比度的 WCAG 标准的内容。
 
-> **备注：** 高对比度还允许任何使用带有光面屏幕的智能手机或平板电脑的人在明亮的环境中 (如阳光) 更好地阅读页面。
+> [!NOTE]
+> 高对比度还允许任何使用带有光面屏幕的智能手机或平板电脑的人在明亮的环境中 (如阳光) 更好地阅读页面。
 
 另一个提示是不要仅仅依靠颜色来提供路标/信息，因为对于那些看不到颜色的人来说，这没有什么用。例如，不要用红色标记所需的表单字段，而是用星号和红色标记它们。
 
 ### 隐藏的东西
 
-在很多情况下，可视化设计需要并非同时显示所有内容。例如，在我们的 [Tabbed info box 示例](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)（参见[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)），我们有三个信息面板，但我们将它们放在彼此之上，并提供可以单击以显示每个选项卡的选项卡（也可以使用键盘——你也可以使用 Tab 和 Enter/Return 以选择它们）。
+在很多情况下，可视化设计需要并非同时显示所有内容。例如，在我们的 [Tabbed info box 示例](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)（参见[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)），我们有三个信息面板，但我们将它们放在彼此之上，并提供可以单击以显示每个选项卡的选项卡（也可以使用键盘——你也可以使用 Tab 和 Enter/Return 以选择它们）。
 
 ![](tabbed-info-box.png)
 
@@ -204,7 +205,7 @@ a:active {
 
 另一方面，不应使用 {{cssxref("visibility")}}`:hidden` 或 {{cssxref("display")}}`:none`，因为它们会隐藏屏幕阅读器中的内容。当然，除非你希望从屏幕阅读器中隐藏此内容，这是有充分理由的。
 
-> **备注：** [专为屏幕阅读器用户设计的不可见内容](http://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
+> **备注：** [专为屏幕阅读器用户设计的不可见内容](https://webaim.org/techniques/css/invisiblecontent/)有围绕本主题的更多有用详细信息。
 
 ### 接受用户覆盖样式
 
@@ -247,11 +248,12 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 - 提供客户端表单验证，它快速提醒用户表单条目出现的问题，而无需等待服务器检查数据。如果表单不可用，则窗口仍然有效，但验证速度可能较慢。
 - 为 HTML5 `<video>` 提供自定义控件，这些控件仅供键盘用户访问，以及如果 JavaScript 不可用 (默认 `<video>` 浏览器控件在大多数浏览器中无法使用键盘访问)，就直接通过链接访问视频。
 
-例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见[form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](http://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
+例如，我们编写了一个快速而糟糕的客户端客户端表单验证示例——参见[form-validation.html](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html)（[查看在线演示](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)）。在示例中，你会看到一个简单的表格；当你尝试提交一个或两个字段为空的表单时，提交将失败，并且会出现一个错误消息框，告诉你出了什么问题。
 
 这种表单验证并不引人注目——在 JavaScript 不可用的情况下，你仍然可以很好的使用表单，并且任何合理的表单实现都将激活服务器端验证，因为恶意用户很容易绕过客户端验证（例如，通过在浏览器中关闭 JavaScript）。客户端验证对于报告错误仍然非常有用——用户可以立即了解他们所犯的错误，而不必等待到服务器的往返和页面重新加载。这是一个明确的可用性优势。
 
-> **备注：** 此简单示例中尚未实现服务器端验证。
+> [!NOTE]
+> 此简单示例中尚未实现服务器端验证。
 
 我们使此表单验证非常容易访问。我们使用 {{htmlelement("label")}} 元素来确保表单标签明确链接到其输入，因此屏幕阅读器可以一起读取它们：
 
@@ -281,7 +283,8 @@ function validate(e) {
 }
 ```
 
-> **备注：** 在此示例中，我们使用绝对定位而不是其他方法（如可见性或显示）隐藏和显示错误消息框，因为它不会干扰屏幕阅读器从中读取内容。
+> [!NOTE]
+> 在此示例中，我们使用绝对定位而不是其他方法（如可见性或显示）隐藏和显示错误消息框，因为它不会干扰屏幕阅读器从中读取内容。
 
 实际表单验证会比这复杂得多——你需要检查输入的名称实际上看起来像一个名称，输入的年龄实际上是一个数字，并且与真实情况符合（例如，不是负数或四位数字）。在这里，我们刚刚实现了一个简单的验证，是否将值填充到每个输入字段（`if(testItem.input.value === '')`）。
 
@@ -309,7 +312,8 @@ function createLink(testItem) {
 
 每个链接都有双重用途，即它不仅告诉你错误是什么，而且可以单击它或激活它直接跳转到有问题的输入元素，并且更正输入。
 
-> **备注：** 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 [Firefox bug 277178](https://bugzil.la/277178)）。
+> [!NOTE]
+> 此示例的 `focus()` 部分有点棘手。Chrome 和 Edge（以及较新版本的 IE）将在单击链接时聚焦元素，而无需 `onclick`/`focus()` 代码块。Safari 只会突出显示表单元素，并自行显示链接，因此需要 `onclick/focus()` 代码块来实际聚焦它。Firefox 没有在上下文中正确的聚焦输入，因此 Firefox 用户目前无法利用这一点（尽管其他一切都正常）。Firefox 问题应该尽快会得到修复——现在的工作是使 Firefox 行为与其他浏览器的行为相同（参见 [Firefox bug 277178](https://bugzil.la/277178)）。
 
 此外，`errorField` 被放置在源顺序的顶部（与 UI 中使用 CSS 时相比，位置不同），这意味着用户可以准确找出表单提交时的问题，并通过返回到页面的开头，来获悉有问题的输入元素。
 
@@ -323,9 +327,11 @@ function createLink(testItem) {
 
 我们将在下一篇文章中解释这些属性，其中将更详细地介绍 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)。
 
-> **备注：** 一些人可能会考虑这样一个事实，即 HTML5 表单有内置的验证机制，如 `required`、`min`/`minlength` 和 `max`/`maxlength` 属性（详细信息，请参阅 {{htmlelement("input")}}元素引用）。我们最终没有在演示中使用这些功能，因为不是所有的浏览器都支持（例如，仅 IE10 及以上版本支持，Safari 不支持）。
+> [!NOTE]
+> 一些人可能会考虑这样一个事实，即 HTML5 表单有内置的验证机制，如 `required`、`min`/`minlength` 和 `max`/`maxlength` 属性（详细信息，请参阅 {{htmlelement("input")}}元素引用）。我们最终没有在演示中使用这些功能，因为不是所有的浏览器都支持（例如，仅 IE10 及以上版本支持，Safari 不支持）。
 
-> **备注：** WebAIM 的[可用且无障碍的表单验证和错误恢复](http://webaim.org/techniques/formvalidation/)提供了一些有关无障碍表单验证的更多的有用信息。
+> [!NOTE]
+> WebAIM 的[可用且无障碍的表单验证和错误恢复](https://webaim.org/techniques/formvalidation/)提供了一些有关无障碍表单验证的更多的有用信息。
 
 ### 其他 JavaScript 无障碍问题
 
@@ -333,13 +339,13 @@ function createLink(testItem) {
 
 #### 鼠标特定事件
 
-正如你所知，客户端 JavaScript 使用事件处理程序，实现大多数用户交互，它允许我们运行函数以响应某些事件的发生。某些事件可能有辅助功能问题。你将遇到的主要示例是鼠标特定的事件，如鼠标悬停（[mouseover](/zh-CN/docs/Web/Events/mouseover)）、鼠标划出（[mouseout](/zh-CN/docs/Web/Events/mouseout)）、双击（[dblclick](/zh-CN/docs/Web/Events/dblclick)）等。使用其他机制（如键盘控件）无法访问为这些事件而运行的功能。
+正如你所知，客户端 JavaScript 使用事件处理程序，实现大多数用户交互，它允许我们运行函数以响应某些事件的发生。某些事件可能有辅助功能问题。你将遇到的主要示例是鼠标特定的事件，如鼠标悬停（[mouseover](/zh-CN/docs/Web/API/Element/mouseover_event)）、鼠标划出（[mouseout](/zh-CN/docs/Web/API/Element/mouseout_event)）、双击（[dblclick](/zh-CN/docs/Web/API/Element/dblclick_event)）等。使用其他机制（如键盘控件）无法访问为这些事件而运行的功能。
 
-为了缓解此类问题，你应该将这些事件与可以通过其他方式（所谓的设备独立事件处理程序）激活的类似事件相结合——[focus](/zh-CN/docs/Web/Events/focus) 和 [blur](/zh-CN/docs/Web/Events/blur) 将为键盘用户提供无障碍。
+为了缓解此类问题，你应该将这些事件与可以通过其他方式（所谓的设备独立事件处理程序）激活的类似事件相结合——[focus](/zh-CN/docs/Web/API/Element/focus_event) 和 [blur](/zh-CN/docs/Web/API/Element/blur_event) 将为键盘用户提供无障碍。
 
 让我们看一个示例：突出显示了何时可能有用。我们想要实现一个缩略图：当鼠标悬停或聚焦在图像上，可以放大图像（正如电子商务产品目录所展示的）。
 
-我们做了一个非常简单的示例，你可以在 [mouse-and-keyboard-events.html](http://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) 中找到（参见[源码](https://github.com/mdn/learning-area/blob/main/accessibility/css/mouse-and-keyboard-events.html)）。该代码具有显示和隐藏放大图像的两个函数。它由以下几行行实现，这些行将它们设置为事件处理程序：
+我们做了一个非常简单的示例，你可以在 [mouse-and-keyboard-events.html](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) 中找到（参见[源码](https://github.com/mdn/learning-area/blob/main/accessibility/css/mouse-and-keyboard-events.html)）。该代码具有显示和隐藏放大图像的两个函数。它由以下几行行实现，这些行将它们设置为事件处理程序：
 
 ```js
 imgThumb.onmouseover = showImg;
@@ -351,7 +357,7 @@ imgThumb.onblur = hideImg;
 
 当鼠标指针在缩略图上悬停或者移开，将分别调用前两行代码。此时不允许我们通过键盘访问缩略图——为了允许这一点，我们调用后两行代码，它们在图像聚焦和失焦时 (聚焦停止) 运行函数。这可以在图像加 tab 键实现，因为我们为图像的属性设置 `tabindex="0"`。
 
-[Click](/zh-CN/docs/Web/Events/click) 事件很有趣——听起来它依赖于鼠标，但是大多数的浏览器，在有焦点的链接或者表单元素上，按下 enter/return 之后，或者在触屏设备上点击一个元素，都将会激活 [onclick](/zh-CN/docs/Web/API/GlobalEventHandlers/onclick) 事件处理程序。但是，当你允许非默认可聚焦事件使用 tabindex 进行焦点处理时，默认情况下不起作用，在这种情况下，你需要在按下确切键时进行专门检测（参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的无障碍)）。
+[Click](/zh-CN/docs/Web/API/Element/click_event) 事件很有趣——听起来它依赖于鼠标，但是大多数的浏览器，在有焦点的链接或者表单元素上，按下 enter/return 之后，或者在触屏设备上点击一个元素，都将会激活 [onclick](/zh-CN/docs/Web/API/Element/click_event) 事件处理程序。但是，当你允许非默认可聚焦事件使用 tabindex 进行焦点处理时，默认情况下不起作用，在这种情况下，你需要在按下确切键时进行专门检测（参见[重新建立键盘的无障碍](/zh-CN/docs/Learn/Accessibility/HTML#重新建立键盘的无障碍)）。
 
 ## 总结
 

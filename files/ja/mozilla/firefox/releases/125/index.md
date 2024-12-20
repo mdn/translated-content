@@ -2,7 +2,7 @@
 title: Firefox 125 for developers
 slug: Mozilla/Firefox/Releases/125
 l10n:
-  sourceCommit: ffa9179059f16fa82e2687c2c80ac8c0108beb93
+  sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
 {{FirefoxSidebar}}
@@ -19,6 +19,7 @@ l10n:
 
 - {{cssxref("align-content")}} プロパティを、`display: block;` レイアウトで動作するように更新しました。これは `flex` や `grid` から `block` まですべてのレイアウト位置で、開発者はコンテナーを `flex` や `grid` に変換することなくブロックレベル要素を整列できるようになります ([Firefox bug 1882853](https://bugzil.la/1882853))。
 - CSS の [`transform-box`](/ja/docs/Web/CSS/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [content box](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します ([Firefox bug 1868374](https://bugzil.la/1868374))。
+- [`content-visibility`](/ja/docs/Web/CSS/content-visibility) CSS プロパティの値 `auto` をデフォルトで有効にしました。これは、[ユーザーとの関連性](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user) がない場合にコンテンツのレンダリングを省くことを可能にします。([Firefox bug 1874874](https://bugzil.la/1874874))
 
 ### JavaScript
 
@@ -49,7 +50,7 @@ l10n:
 
   ([Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993))
 
-- {{domxref("RTCIceTransport")}} の {{domxref("RTCIceTransport/state","state")}} および {{domxref("RTCIceTransport/gatheringState","gatheringState")}} プロパティと、これらに関連づけられる {{domxref("RTCIceTransport/statechange_event","statechange")}} および {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange_event")}} イベントをサポートしました。また、{{domxref("RTCDtlsTransport.iceTransport")}} プロパティ ({{domxref("RTCDtlsTransport")}} の基礎をなす `RTCIceTransport` を返します) もサポートしました。
+- {{domxref("RTCIceTransport")}} の {{domxref("RTCIceTransport/state","state")}} および {{domxref("RTCIceTransport/gatheringState","gatheringState")}} プロパティと、これらに関連づけられる {{domxref("RTCIceTransport/statechange_event","statechange")}} および {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}} イベントをサポートしました。また、{{domxref("RTCDtlsTransport.iceTransport")}} プロパティ ({{domxref("RTCDtlsTransport")}} の基礎をなす `RTCIceTransport` を返します) もサポートしました。
   これらは、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} および {{domxref("RTCPeerConnection.connectionState","connectionState")}} プロパティで提供されるものよりとてもきめ細かいモニタリングを可能にします。
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} および {{domxref("Element.ariaBrailleRoleDescription")}} をサポートしました。それぞれ、ARIA のグローバル HTML 属性である [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) および [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) を反映します ([Firefox bug 1861201](https://bugzil.la/1861201))。

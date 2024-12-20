@@ -11,7 +11,7 @@ API файлов и каталогов взаимодействует с дру�
 
 ## Об этом документе
 
-В данном документе приведены основные концепции и терминология API файлов и каталогов, которые должны показать общую картину и ключевые идеи. Также описаны [ограничения](#Ограничения), несоблюдение которых может привести к появлению ошибок безопасности. Используемая терминология описана в разделе [Определений](#Определения).
+В данном документе приведены основные концепции и терминология API файлов и каталогов, которые должны показать общую картину и ключевые идеи. Также описаны [ограничения](#ограничения), несоблюдение которых может привести к появлению ошибок безопасности. Используемая терминология описана в разделе [Определений](#определения).
 
 Ссылки на страницы данного API приведены в [Ссылочном справочнике](/ru/docs/Web/API/FileSystem).
 
@@ -19,7 +19,7 @@ API файлов и каталогов взаимодействует с дру�
 
 ## Обзор
 
-Программный интерфейс файлов и каталогов включает асинхронные и синхронные методы. Асинхронное API может быть использовано в тех случаях, когда нежелательно, чтобы длительные вычисления блокировали весь пользовательский интерфейс. В свою очередь синхронное API предлагает более простую модель программирования, однако оно должно использоваться только с объектами [WebWorkers](/En/Using_web_workers).
+Программный интерфейс файлов и каталогов включает асинхронные и синхронные методы. Асинхронное API может быть использовано в тех случаях, когда нежелательно, чтобы длительные вычисления блокировали весь пользовательский интерфейс. В свою очередь синхронное API предлагает более простую модель программирования, однако оно должно использоваться только с объектами [WebWorkers](/en-US/Using_web_workers).
 
 ### Применимость API
 
@@ -34,7 +34,7 @@ API файлов и каталогов является важным прогр�
 
 ### API файлов и каталогов и другие программные интерфейсы хранения данных
 
-API файлов и каталогов является альтернативой для других интерфейсов хранения данных, таких как [IndexedDB](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL (признано устаревшим с 18 ноября 2010 г.) и AppCache. Тем не менее данное API является более хорошим выбором для приложений, обрабатывающим большие объёмы данных, по следующим причинам:
+API файлов и каталогов является альтернативой для других интерфейсов хранения данных, таких как [IndexedDB](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL (признано устаревшим с 18 ноября 2010 г.) и AppCache. Тем не менее данное API является более хорошим выбором для приложений, обрабатывающим большие объёмы данных, по следующим причинам:
 
 - Данное API предлагает возможность хранения данных на стороне клиента в вариантах использования, которые не могут быть решены с помощью баз данных. Например, данное API является намного более производительным в случае хранения и обработки больших файлов.
 - Firefox поддерживает хранение бинарных данных в IndexedDB, в то время как в Chrome эта функция по-прежнему находится на стадии разработки. Если Chrome является одним из целевых браузеров для вашего приложения и у вас есть необходимость хранения бинарных данных, то вы можете использовать только либо данное API, либо AppCache. В свою очередь хранилище AppCache не предоставляет возможности локальных изменений, а также тонкой настройки на стороне клиента.
@@ -96,13 +96,13 @@ Use temporary storage for caching and persistent storage for data that you want 
 
 To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](http://code.google.com/chrome/whitepapers/storage.html).
+How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://code.google.com/chrome/whitepapers/storage.html).
 
 ### The File and Directory Entries API has asynchronous and synchronous versions
 
 The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
 
-- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/En/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
+- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/en-US/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
 - **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
 - **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
 
@@ -178,4 +178,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## Смотрите также
 
 - [File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)
+- [Exploring the FileSystem APIs](https://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)

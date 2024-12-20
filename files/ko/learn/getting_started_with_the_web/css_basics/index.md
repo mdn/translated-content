@@ -19,7 +19,7 @@ p {
 
 한 번 해봅시다. 텍스트 에디터의 새 파일에 위의 CSS 3줄을 복사해 붙여넣으세요. 그다음에 `styles` 디렉토리에 `style.css`로 파일을 저장하세요.
 
-아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
+아직 여러분의 HTML 문서에 CSS를 적용하는 것이 남아 있습니다. 그렇지 않으면 CSS 스타일은 그 HTML 문서가 브라우저에 표시될 때 아무 영향도 주지 않을 것입니다. (여러분이 우리 프로젝트를 따라오지 않으셨다면, [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)와 [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics)을 읽고 무엇이 먼저 필요한지를 알아보시기 바랍니다.)
 
 1. `index.html` 파일을 열고 head의 안쪽 어딘가(즉, `<head>`와 `</head>` 태그 사이)에 아래의 코드를 붙여 넣으세요:
 
@@ -88,15 +88,16 @@ h1 {
 | 속성 선택자                                       | 특정 속성을 갖는 페이지의 요소.                                                                  | `img[src]` `<img src="myimage.png">` 를 선택하지만 `<img>` 는 선택 안함  |
 | 수도(Pseudo) 클래스 선택자                        | 특정 요소이지만 특정 상태에 있을 때만, 예를 들면, hover over 상태일 때.                          | `a:hover` `<a>` 를 선택하지만, 마우스 포인터가 링크위에 있을 때만 선택함 |
 
-탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Web/Guide/CSS/Getting_started/Selectors)에서 찾아보세요.
+탐구할 더 많은 선택자가 있습니다. 더 자세한 목록은 [선택자 가이드](/ko/docs/Learn/CSS/Building_blocks/Selectors)에서 찾아보세요.
 
 ## 글꼴과 문자
 
 지금까지 약간의 CSS 기본에 대해 살펴보았습니다, 우리의 예제가 멋있게 보이도록 `style.css` 파일에 더 많은 rule 과 정보를 추가해 봅시다. 우선, 글꼴과 문자가 조금 더 나아보이도록 해보죠.
 
-> **참고:** "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
+> [!NOTE]
+> "px" 가 무슨 뜻인지 설명하는 주석을 추가해 두었습니다. CSS 문서의 /\* 와 \*/ 사이에 있는 것은 브라우저가 코드를 표현할 때 무시하는 **CSS 주석**입니다. 여러분이 하고 있는 것에 대한 유용한 메모를 작성하기 위한 공간입니다.
 
-1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
+1. 먼저, 돌아가서 여러분이 안전한 어딘가에 저장해 두었던 [구글 글꼴의 결과물](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)을 찾으세요. `index.html` 의 head 안 어딘가에 `<link>` 요소를 추가하세요 (다시 말해서, `<head>` 와 `</head>` 태그 사이 어디에나). 이런식이 될 겁니다:
 
    ```html
    <link
@@ -167,7 +168,7 @@ html {
 }
 ```
 
-이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like#Theme_color) 색으로 변경하세요.
+이 rule 은 전체 페이지를 위한 배경색을 설정합니다. 위의 색상 코드를 [여러분의 사이트를 계획할 때 선택했던](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#theme_color) 색으로 변경하세요.
 
 ### body 외부 정렬하기
 
@@ -184,7 +185,7 @@ body {
 이제는 body 요소를 위한 것입니다. 여기 적지 않은 선언들이 있습니다. 하나 하나 모두 살펴 봅시다:
 
 - `width: 600px;` — 이것은 body가 항상 600 pixels 의 너비를 갖도록 강제합니다.
-- `margin: 0 auto;` — 여러분이 `margin` 또는 `padding` 처럼 한 속성에 두개의 값을 설정할 때, 첫 번째 값은 요소의 상단과 하단 (이 예시에서는 0입니다) 에 영향을 주고, 두 번째 값은 좌측 **과** 우측 (여기서, `auto` 는 가능한 수평공간의 왼쪽과 오른쪽을 같게 나눠주는 특별한 값입니다) 에 영향을 줍니다. 여러분은 또한 하나, 셋, 또는 네개의 값을 사용할 수도 있습니다. [여기](/ko/docs/Web/CSS/margin#Values)에 문서화 되어 있습니다.
+- `margin: 0 auto;` — 여러분이 `margin` 또는 `padding` 처럼 한 속성에 두개의 값을 설정할 때, 첫 번째 값은 요소의 상단과 하단 (이 예시에서는 0입니다) 에 영향을 주고, 두 번째 값은 좌측 **과** 우측 (여기서, `auto` 는 가능한 수평공간의 왼쪽과 오른쪽을 같게 나눠주는 특별한 값입니다) 에 영향을 줍니다. 여러분은 또한 하나, 셋, 또는 네개의 값을 사용할 수도 있습니다. [여기](/ko/docs/Web/CSS/margin#values)에 문서화 되어 있습니다.
 - `background-color: #FF9500;` — 전과 같이, 이것은 요소의 배경색을 설정합니다. `html` 요소를 위한 짙은 파란색에 반대되도록 body 에는 붉은 빛을 띄는 오렌지색 같은 것을 사용했었습니다. 한번 시험해보세요. 흰색이나 여러분이 원하는 어떤 색이든 편하게 사용해보세요.
 - `padding: 0 20px 20px 20px;` — padding 에는 콘텐츠의 주위에 약간의 공간을 주기 위한 네 개의 값이 있습니다. 이번엔 body의 상단에 no padding, 그리고 왼쪽, 아래 그리고 오른쪽에 20 pixels 을 설정하고 있습니다. 상단, 우측, 하단, 좌측 순서로 값을 설정합니다.(12시부터 시계방향)
 - `border: 5px solid black;` — 이것은 간단하게 body 모든 면의 border 를 5 pixels 두깨의 실선으로 설정합니다.
@@ -224,18 +225,20 @@ img {
 
 마지막으로, 이미지를 더 나아보이도록 가운데로 둘 것입니다. 전에 body 에서 했듯이 다시 `margin: 0 auto` 트릭을 사용해 볼 수 있지만, 무언가 더 해야할 필요가 있습니다. `body` 요소는 **block level** 입니다. 이것은 페이지의 공간을 차지하고, margin 과 여기에 적용된 다른 여백값을 가질 수 있다는 것을 의미합니다. 반면에 이미지는 **inline** 요소 입니다. 이것은 그렇지 못함을 의미합니다. 따라서 이미지에 margin 을 적용하기 위해서는, `display: block;` 을 사용해 이미지에 block-level 성질을 주어야 합니다.
 
-> **참고:** 노트: 위의 지침에서는 body에 설정된 너비(600 픽셀) 보다 작은 이미지를 사용한다고 가정합니다. 이미지가 더 크면 body가 넘쳐 페이지의 나머지 부분으로 유출됩니다. 이 문제를 해결하려면 1) [그래픽 편집기](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%BD_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)를 사용하여 이미지의 너비를 줄이거나 2) 더 작은 값(예: `400px`) 으로 `<img>` 요소에 width 속성을 설정하고 CSS를 사용하여 이미지 크기를 조정할 수 있습니다.
+> [!NOTE]
+> 위의 지침에서는 body에 설정된 너비(600 픽셀) 보다 작은 이미지를 사용한다고 가정합니다. 이미지가 더 크면 body가 넘쳐 페이지의 나머지 부분으로 유출됩니다. 이 문제를 해결하려면 1) [그래픽 편집기](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%BD_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)를 사용하여 이미지의 너비를 줄이거나 2) 더 작은 값(예: `400px`) 으로 `<img>` 요소에 width 속성을 설정하고 CSS를 사용하여 이미지 크기를 조정할 수 있습니다.
 
-> **참고:** 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
+> [!NOTE]
+> 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
 
 ## 마무리
 
-이 글의 모든 설명을 따라오셨다면, 이와 같이 보이는 페이지가 되실 겁니다. ([여기서](http://mdn.github.io/beginner-html-site-styled/) 확인하실 수도 있습니다):
+이 글의 모든 설명을 따라오셨다면, 이와 같이 보이는 페이지가 되실 겁니다. ([여기서](https://mdn.github.io/beginner-html-site-styled/) 확인하실 수도 있습니다):
 
 ![a mozilla logo, centered, and a header and paragraphs. It now looks nicely styled, with a blue background for the whole page and orange background for the centered main content strip.](website-screenshot-final.png)
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)와 항상 비교해보세요.
 
-여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/en-US/Learn/CSS) 페이지로 가보세요.
+여기서, 우리는 CSS의 겉만 살짝 맛봤습니다. 더 많은 것이 알고 싶으시면 [CSS 배우기](/ko/docs/Learn/CSS) 페이지로 가보세요.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

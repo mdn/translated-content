@@ -29,10 +29,11 @@ Com uma API baseada em promises, a função assíncrona inicia a operação e re
 
 ## Usando a API fetch()
 
-> **Nota:** Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
+> [!NOTE]
+> Neste artigo, vamos explorar promises copiando exemplos de código desta página dentro do console Javascript do seu navegador. Para configurar isso:
 >
 > 1. abra o navegador e visite <https://example.org>
-> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools)
+> 2. nesta aba, abra o console Javascript nas [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 > 3. quando mostrarmos um exemplo, copie-o dentro do console. Você vai ter que recarregar a página cada vez que você começar um novo exemplo, caso contrário o console irá reclamar que você redeclarou a função `fetchPromise`.
 
 Neste exemplo, vamos baixar o seguinte arquivo JSON <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> e registrar algumas informações sobre ele.

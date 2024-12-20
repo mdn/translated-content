@@ -60,17 +60,18 @@ svgns|a:active {
 
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
-> **Attention :** Étant donné que cet élément partage son nom de balise avec l'[élément HTML `<a>`](/fr/docs/Web/HTML/Element/a), la sélection de "`a`" avec CSS ou [`querySelector`](/fr/docs/Web/API/Document/querySelector) peut s'appliquer au mauvais type d'élément. La [règle `@namespace`](/fr/docs/Web/CSS/@namespace) permet de faire la distinction entre les deux.
+> [!WARNING]
+> Étant donné que cet élément partage son nom de balise avec l'[élément HTML `<a>`](/fr/docs/Web/HTML/Element/a), la sélection de "`a`" avec CSS ou [`querySelector`](/fr/docs/Web/API/Document/querySelector) peut s'appliquer au mauvais type d'élément. La [règle `@namespace`](/fr/docs/Web/CSS/@namespace) permet de faire la distinction entre les deux.
 
 ## Attributs
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Événement_graphiques)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_présentation)
-- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#Attributs_XLink)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#événement_graphiques)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_présentation)
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#attributs_xlink)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -94,7 +95,7 @@ svgns|a:active {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAElement`](/fr/docs/DOM/SVGAElement).
+Cet élément implémente l'interface [`SVGAElement`](/fr/docs/Web/API/SVGAElement).
 
 ## Spécifications
 

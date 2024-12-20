@@ -9,13 +9,13 @@ l10n:
 
 En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils proviennent des fonctionnalités natives du langage, comme les tableaux, ou qu'ils soient fournis par les API du navigateur. Il est aussi possible de créer ses propres objets qui contiendront des propriétés avec des données ou des fonctions. JavaScript est un langage orienté objet et la compréhension de cette notion est nécessaire pour approfondir ses connaissances dans ce langage. Nous avons donc construit un module pour vous aider, où nous vous apprendrons la théorie du modèle objet et les détails de la syntaxe JavaScript associée. Nous verrons ensuite comment créer ses propres objets.
 
-> **Remarque :**
+> [!CALLOUT]
 >
-> #### Vous souhaitez devenir développeuse ou développeur web&nbsp;?
+> Vous souhaitez devenir développeuse ou développeur web&nbsp;?
 >
 > Nous avons construit un cursus contenant toutes les informations essentielles pour parvenir à cet objectif.
 >
-> [**Commencer**](/fr/docs/Learn/Front-end_web_developer)
+> [**Commencer**](/fr/curriculum/)
 
 ## Prérequis
 
@@ -23,7 +23,8 @@ Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/do
 
 Vous devriez également connaître les notions de bases sur JavaScript avant d'étudier les objets JavaScript en détails. Avant de démarrer ce module, lisez [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Blocs de construction de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks).
 
-> **Note :** Si vous travaillez depuis un appareil où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un outil de programmation en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si vous travaillez depuis un appareil où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un outil de programmation en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

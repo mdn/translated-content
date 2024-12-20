@@ -1,8 +1,9 @@
 ---
-title: Document.implementation
+title: "Document: implementation プロパティ"
+short-title: implementation
 slug: Web/API/Document/implementation
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: f24f8634cb73e3a608f0fb49202d52a4a9dc7ce3
 ---
 
 {{ ApiRef("DOM") }}
@@ -22,10 +23,11 @@ const conformTest = document.implementation.hasFeature(modName, modVer);
 
 console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 
-// DOM Level 2 HTML module に対応している場合、"DOM HTML 2.0 supported?: true" とアラート表示されます。
+// ログ: "DOM HTML 2.0 supported?: true" （hasFeature は常に true を返す）
 ```
 
-モジュール名 (Core, HTML, XML, 等) の一覧は [Conformance Section](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2) で入手可能です。
+> [!WARNING]
+> これを昨日検出に使用しないでください。 `hasFeature()` メソッドは常に true を返します。
 
 ## メモ
 

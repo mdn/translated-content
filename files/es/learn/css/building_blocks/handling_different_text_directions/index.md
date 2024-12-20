@@ -110,7 +110,7 @@ Puedes ver una comparación entre las propiedades físicas y lógicas a continua
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-Existe un gran número de propiedades cuando consideras cada uno de los bordes que puedes hacer a mano, y puedes ver todas las propiedades asignadas en la página de MDN para [propiedades Lógicas y Valores](/es/docs/Web/CSS/CSS_Logical_Properties)
+Existe un gran número de propiedades cuando consideras cada uno de los bordes que puedes hacer a mano, y puedes ver todas las propiedades asignadas en la página de MDN para [propiedades Lógicas y Valores](/es/docs/Web/CSS/CSS_logical_properties_and_values)
 
 ### Valores lógicos
 
@@ -124,7 +124,8 @@ Por ejemplo, puedes hacer que una imagen flote a la izquierda para hacer que el 
 
 Aquí también estamos usando valores lógicos de margen para asegurar que el margen está en el sitio correcto sin importar que modo de escritura es.
 
-> **Nota:** Actualmente, solo Firefox soporta valores relativos de flujo para `float`. Si estás usando **Google Chrome** o **Microsoft Edge**, deberías ver que la imagen no flota.
+> [!NOTE]
+> Actualmente, solo Firefox soporta valores relativos de flujo para `float`. Si estás usando **Google Chrome** o **Microsoft Edge**, deberías ver que la imagen no flota.
 
 ### ¿Debería usar propiedades físicas o lógicas?
 

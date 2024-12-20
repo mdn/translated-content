@@ -13,7 +13,8 @@ La courbure de la bordure s'applique à l'arrière-plan (défini avec la propri�
 
 La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque [`border-collapse`](/fr/docs/Web/CSS/border-collapse) vaut `collapse`.
 
-> **Note :** Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
+> [!NOTE]
+> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
 
 ## Propriétés détaillées correspondantes
 

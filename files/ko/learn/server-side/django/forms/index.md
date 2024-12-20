@@ -32,7 +32,7 @@ slug: Learn/Server-side/Django/Forms
 
 ## 개요
 
-[HTML 폼(Form)](/ko/docs/Web/Guide/HTML/Forms) 은 웹 페이지상에서 한개 이상의 필드나 위젯들의 묶음을 말하며, 사용자로부터 정보를 수집하여 서버에 제출하는데 사용된다. 다양한 종류의 데이타 입력을 지원하는 위젯들( 텍스트 박스, 체크 박스, 라디오 버튼, 날짜 선택기 등등)이 많이 존재하기 때문에, 폼은 사용자 입력을 수집하는데 유연한 장치라고 할 수 있다. 폼은 또한, 교차 사이트 요청 위조 방지(CSRF protection, cross-site request forgery protection)와 함께 `POST`요청으로 데이타를 보낼수 있도록 지원하므로, 데이타를 서버와 공유하는데 있어서 비교적 안전한 방법이다.
+[HTML 폼(Form)](/ko/docs/Learn/Forms) 은 웹 페이지상에서 한개 이상의 필드나 위젯들의 묶음을 말하며, 사용자로부터 정보를 수집하여 서버에 제출하는데 사용된다. 다양한 종류의 데이타 입력을 지원하는 위젯들( 텍스트 박스, 체크 박스, 라디오 버튼, 날짜 선택기 등등)이 많이 존재하기 때문에, 폼은 사용자 입력을 수집하는데 유연한 장치라고 할 수 있다. 폼은 또한, 교차 사이트 요청 위조 방지(CSRF protection, cross-site request forgery protection)와 함께 `POST`요청으로 데이타를 보낼수 있도록 지원하므로, 데이타를 서버와 공유하는데 있어서 비교적 안전한 방법이다.
 
 지금까지 이 튜토리얼에서 우리가 직접 폼을 생성한 적은 없지만, Django 관리 사이트에서 이미 경험해 보았다. 예를 들면, 아래 스크린 샷에서 [Book](/ko/docs/Learn/Server-side/Django/Models) 모델중 하나를 편집하는 폼을 보여주고 있는데, 몇개의 선택 목록과 텍스트 에디터를 볼 수 있다.
 
@@ -44,7 +44,7 @@ slug: Learn/Server-side/Django/Forms
 
 ## HTML 폼(Form) 이란?
 
-첫번째로 [HTML 폼(Form](/ko/docs/Learn/HTML/Forms))에 대한 간단한 개요이다. 어떤 "team"의 이름을 입력하는 단일 텍스트 필드와 관련 라벨을 가진 간단한 HTML 폼을 생각해보자:
+첫번째로 [HTML 폼(Form](/ko/docs/Learn/Forms))에 대한 간단한 개요이다. 어떤 "team"의 이름을 입력하는 단일 텍스트 필드와 관련 라벨을 가진 간단한 HTML 폼을 생각해보자:
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -312,7 +312,7 @@ def renew_book_librarian(request, pk):
 
 > **경고:** **중요사항**: 'request'객체를 통해 직접 폼 데이터를 가져올수는 있으나 ( 예를 들면 `request.POST['renewal_date']`나 GET 요청인경우 `request.GET['renewal_date']`처럼), 이 방식은 **절대** 추천하지 않는다. 위 코드에서 깔끔한 데이타(cleaned_data)란 것은 정제되고(sanitised), 유효성체크가되고, 파이썬에서 많이쓰는 타입의 데이타이다.
 
-뷰에서 폼 처리의 마지막 단계는 , 대개는 "Success" 페이지라는 다른 페이지로 주소를 바꾸는 것이다. 여기서는 `'all-borrowed'`라는 뷰( 이 뷰는 [Django 튜토리얼 파트 8: 사용자 인증과 사용권한](/ko/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) 파트에서 "도전과제로" 생성했었다) 로 주소를 바꾸기 위해 `HttpResponseRedirect`와 `reverse()`를 사용한다. 당신이 이 페이지를 생성하지 않았다면 URL 주소가 '/'인 홈페이지로 주소를 변경하는 것을 고려해보자.
+뷰에서 폼 처리의 마지막 단계는 , 대개는 "Success" 페이지라는 다른 페이지로 주소를 바꾸는 것이다. 여기서는 `'all-borrowed'`라는 뷰( 이 뷰는 [Django 튜토리얼 파트 8: 사용자 인증과 사용권한](/ko/docs/Learn/Server-side/Django/Authentication#challenge_yourself) 파트에서 "도전과제로" 생성했었다) 로 주소를 바꾸기 위해 `HttpResponseRedirect`와 `reverse()`를 사용한다. 당신이 이 페이지를 생성하지 않았다면 URL 주소가 '/'인 홈페이지로 주소를 변경하는 것을 고려해보자.
 
 여기까지가 폼을 다루기 위해 필요한 모든 것이지만, 해당 폼 뷰의 사용권한을 도서관사서로 한정해야 하는 문제가 남아있다. `BookInstance`모델에 "`can_renew`"라는 새로운 사용권한을 추가해야 하겠지만, 작업을 간단하게 하기위해 그냥 기존의 사용권한`can_mark_returned`에 함수 데코레이터`@permission_required`를 사용하도록 하겠다.
 
@@ -383,9 +383,10 @@ def renew_book_librarian(request, pk):
 
 이 작업의 대부분은 앞선 튜토리얼에서 익숙해진 작업이다. 우리는 베이스 템플릿을 확장하고 콘텐츠 블럭을 재설정한다. `\{{bookinst}}`(와 그에 따른 변수) 가 `render()` 함수 내의 컨텍스트 객체로 넘겨졌기 때문에 `\{{bookinst}}`를 참조할수 있다. 이들을 이용해 책 제목, 대여자 그리고 이전 대여마감일의 목록을 열거한다.
 
-폼 코드는 상대적으로 간단하다. 우선 form이 어디에 제출될 것인지(`action`)(POST인지 PUT인지) 명시하여 `form` 태그를 선언하고, 데이터를 제출하는 `method` 를 명시한다(이 경우에는 "HTTP POST") — 해당 페이지 위 쪽의 [HTML Forms](#HTML_forms) overview에서 보았듯이, `action`을 비워 놓았는데, 이렇게 하면 form 데이터가 현재 URL페이지로 다시 POST 된다(지금 우리가 하고자 하는 것입니다!). `form` 태그 안에는 `submit` input 태그 또한 만들어서 페이지 사용자가 눌러서 데이터를 제출(submit)할 수 있도록 한다. `form` 태그 안에정의된 또 다른 하나인 `{% csrf_token %}`는 Django의 cross-site 위조 방지의 방식 중 하나이다.
+폼 코드는 상대적으로 간단하다. 우선 form이 어디에 제출될 것인지(`action`)(POST인지 PUT인지) 명시하여 `form` 태그를 선언하고, 데이터를 제출하는 `method` 를 명시한다(이 경우에는 "HTTP POST") — 해당 페이지 위 쪽의 [HTML Forms](#html_forms) overview에서 보았듯이, `action`을 비워 놓았는데, 이렇게 하면 form 데이터가 현재 URL페이지로 다시 POST 된다(지금 우리가 하고자 하는 것입니다!). `form` 태그 안에는 `submit` input 태그 또한 만들어서 페이지 사용자가 눌러서 데이터를 제출(submit)할 수 있도록 한다. `form` 태그 안에정의된 또 다른 하나인 `{% csrf_token %}`는 Django의 cross-site 위조 방지의 방식 중 하나이다.
 
-> **참고:** Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
+> [!NOTE]
+> Add the `{% csrf_token %}` to every Django template you create that uses `POST` to submit data. This will reduce the chance of forms being hijacked by malicious users.
 
 마지막으로 템플릿에 context라는 dictionary형 데이터로 넘기는 `\{{form}}` 변수가 남았다. 별로 놀랍지 않을 수 있지만, 아래처럼 하면 form의 모든 field의 필드, 위젯, 도움말을 함께 렌더링하는 기본 렌더링기능을 사용할 수 있다 — 렌더링된 결과는 다음과 같다.
 
@@ -407,7 +408,8 @@ def renew_book_librarian(request, pk):
 </tr>
 ```
 
-> **참고:** 필드가 하나만 있기 때문에 분명하지는 않지만 기본적으로 모든 필드는 자체 테이블 행에 정의되어 있습니다. 템플릿 변수 `\{{ form.as_table }}`을 참조하면이 동일한 렌더링이 제공됩니다.
+> [!NOTE]
+> 필드가 하나만 있기 때문에 분명하지는 않지만 기본적으로 모든 필드는 자체 테이블 행에 정의되어 있습니다. 템플릿 변수 `\{{ form.as_table }}`을 참조하면이 동일한 렌더링이 제공됩니다.
 
 유효하지 않은 날짜를 입력하는 경우 페이지에서 렌더링 된 오류 목록 (아래 굵게 표시)을 얻게됩니다.
 
@@ -447,7 +449,7 @@ def renew_book_librarian(request, pk):
 
 ### Page를 시험하기
 
-If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
+If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication#challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
 ```django
 {% if perms.catalog.can_mark_returned %}-
@@ -455,7 +457,8 @@ If you accepted the "challenge" in [Django Tutorial Part 8: User authentication 
 {% endif %}
 ```
 
-> **참고:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
+> [!NOTE]
+> Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
 
 You can alternatively manually construct a test URL like this — `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (a valid bookinstance id can be obtained by navigating to a book detail page in your library, and copying the `id` field).
 
@@ -491,7 +494,8 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back',]
 ```
 
-> **참고:** This might not look like all that much simpler than just using a `Form` (and it isn't in this case, because we just have one field). However if you have a lot of fields, it can reduce the amount of code quite significantly!
+> [!NOTE]
+> This might not look like all that much simpler than just using a `Form` (and it isn't in this case, because we just have one field). However if you have a lot of fields, it can reduce the amount of code quite significantly!
 
 The rest of the information comes from the model field definitions (e.g. labels, widgets, help text, error messages). If these aren't quite right, then we can override them in our `class Meta`, specifying a dictionary containing the field to change and its new value. For example, in this form we might want a label for our field of "_Renewal date_" (rather than the default based on the field name: _Due date_), and we also want our help text to be specific to this use case. The `Meta` below shows you how to override these fields, and you can similarly set `widgets` and `error_messages` if the defaults aren't sufficient.
 
@@ -625,7 +629,8 @@ There is nothing particularly new here! You can see that the views are classes, 
 
 The author create, update, and delete pages are now ready to test (we won't bother hooking them into the site sidebar in this case, although you can do so if you wish).
 
-> **참고:** Observant users will have noticed that we didn't do anything to prevent unauthorised users from accessing the pages! We leave that as an exercise for you (hint: you could use the `PermissionRequiredMixin` and either create a new permission or reuse our `can_mark_returned` permission).
+> [!NOTE]
+> Observant users will have noticed that we didn't do anything to prevent unauthorised users from accessing the pages! We leave that as an exercise for you (hint: you could use the `PermissionRequiredMixin` and either create a new permission or reuse our `can_mark_returned` permission).
 
 ### Testing the page
 

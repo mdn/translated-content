@@ -207,7 +207,8 @@ para.textContent = info;
 
 {{ EmbedLiveSample('Hidden_code_2', '100%', 60) }}
 
-> **Примечание:** вы можете найти этот [пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) или [посмотреть онлайн](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html).
+> [!NOTE]
+> Вы можете найти этот [пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) или [посмотреть онлайн](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html).
 
 Здесь показан цикл, используемый для перебора элементов в массиве и выполнения определённых действий с каждым из них — очень распространённый шаблон в JavaScript
 Подробнее:
@@ -222,9 +223,11 @@ para.textContent = info;
 
 4. Когда `i` достигнет величины `cats.length` цикл остановится и браузер перейдёт к следующему фрагменту кода после цикла.
 
-> **Примечание:** Мы добавили условия выхода `i < cats.length`, а не `i <= cats.length`, потому что компьютеры считают с 0, а не с 1 — в начале `i = 0` и увеличивается до `i = 4` (индекс последнего элемента массива). `cats.length` возвращает 5, т.к. в массиве 5 элементов, но нам не нужно увеличивать до `i = 5`, т.к. `cats[5]` вернёт `undefined` (в массиве нет элемента с индексом 5). Таким образом мы хотим придти к результату на 1 меньше, поэтому `i < cats.length`, не одно и тоже что `i <= cats.length`.
+> [!NOTE]
+> Мы добавили условия выхода `i < cats.length`, а не `i <= cats.length`, потому что компьютеры считают с 0, а не с 1 — в начале `i = 0` и увеличивается до `i = 4` (индекс последнего элемента массива). `cats.length` возвращает 5, т.к. в массиве 5 элементов, но нам не нужно увеличивать до `i = 5`, т.к. `cats[5]` вернёт `undefined` (в массиве нет элемента с индексом 5). Таким образом мы хотим придти к результату на 1 меньше, поэтому `i < cats.length`, не одно и тоже что `i <= cats.length`.
 
-> **Примечание:** Стандартной ошибкой с условием выхода является использование условия "равный" (`===`) ,а не "меньше или равно" (`<=`). Если нам нужно увеличить счётчик до `i = 5`, условие выхода должно быть `i <= cats.length`. Если мы установим `i === cats.length`, цикл не начнётся, т.к. `i` не равно `5` на самой первой итерации, поэтому цикл остановится сразу.
+> [!NOTE]
+> Стандартной ошибкой с условием выхода является использование условия "равный" (`===`) ,а не "меньше или равно" (`<=`). Если нам нужно увеличить счётчик до `i = 5`, условие выхода должно быть `i <= cats.length`. Если мы установим `i === cats.length`, цикл не начнётся, т.к. `i` не равно `5` на самой первой итерации, поэтому цикл остановится сразу.
 
 Остаётся одна небольшая проблема: выходная строка сформирована не совсем корректно:
 
@@ -242,13 +245,14 @@ for (var i = 0; i < cats.length; i++) {
 }
 ```
 
-> **Примечание:** вы можете найти этот [пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) или [посмотреть онлайн](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html).
+> [!NOTE]
+> Вы можете найти этот [пример на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) или [посмотреть онлайн](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html).
 
 > **Предупреждение:** **Важно**: С циклом **for**, также как и с другими циклами, вы должны убедиться что инициализатор (счётчик) и окончательное выражение построены так, что они достигнут условия выхода. Если этого не произойдёт, то цикл будет продолжаться вечно. В итоге браузер или заставит его остановиться, или выдаст ошибку. Это называется **бесконечным циклом**.
 
 ## Выход из цикла с помощью break
 
-Если вы хотите выйти из цикла до завершения всех итераций, вы можете использовать оператор [break](/ru/docs/Web/JavaScript/Reference/Statements/break) . Мы уже встречались с ним в предыдущей статье, когда рассматривали оператор [switch](/ru/docs/Learn/JavaScript/Building_blocks/conditionals#Оператор_switch): когда происходит событие, соответствующее условию, прописанному ключевым словом `case` внутри оператора `switch`, условие break моментально выходит из конструкции `switch` и запускает следующий после неё код.
+Если вы хотите выйти из цикла до завершения всех итераций, вы можете использовать оператор [break](/ru/docs/Web/JavaScript/Reference/Statements/break) . Мы уже встречались с ним в предыдущей статье, когда рассматривали оператор [switch](/ru/docs/Learn/JavaScript/Building_blocks/conditionals#оператор_switch): когда происходит событие, соответствующее условию, прописанному ключевым словом `case` внутри оператора `switch`, условие break моментально выходит из конструкции `switch` и запускает следующий после неё код.
 
 Тоже самое и с циклами — условие `break` моментально закончит цикл и заставит браузер запустить следующий после цикла код.
 
@@ -352,7 +356,8 @@ btn.addEventListener("click", function () {
 
 5. После [итерации](<https://ru.wikipedia.org/wiki/%D0%98%D1%82%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F_(%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)>) `(contacts.length-1)`, если имя контакта не совпадает с введённым именем в поисковом запросе, для текста абзаца устанавливается: «Контакт не найден.», и цикл продолжает повторяться.
 
-> **Примечание:** Примечание: вы можете посмотреть исходный код на [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) или запустить его (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> Вы можете посмотреть исходный код на [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) или запустить его (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Пропуск итераций с продолжением
 
@@ -423,7 +428,8 @@ for (var i = 1; i <= num; i++) {
 3. Если квадратный корень и округлённый вниз квадратный корень не равны друг другу `(! ==)`, значит квадратный корень не является целым числом, поэтому нас он не интересует. В таком случае мы используем оператор `continue`, чтобы перейти к следующей итерации цикла без записи этого числа.
 4. Если квадратный корень _является целым числом_, мы пропускаем блок `if` полностью, поэтому оператор `continue` не выполняется; вместо этого объединяется текущее значение `i` с пробелом в конце содержимого абзаца.
 
-> **Примечание:** Вы также можете просмотреть полный исходный код на [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (так же смотри [этот код вживую](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> Вы также можете просмотреть полный исходный код на [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (так же смотри [этот код вживую](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## Циклы `while` и `do...while`
 
@@ -462,7 +468,7 @@ while (i < cats.length) {
 }
 ```
 
-> **Примечание:**цикл все ещё работает так же, как и ожидалось - посмотрите, [как он работает на GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (также посмотрите [полный исходный код](https://github.com/ConstantineZz/javaScript/blob/master/while.html)).
+> **Примечание:**цикл все ещё работает так же, как и ожидалось - посмотрите, [как он работает на GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (также посмотрите [полный исходный код](https://github.com/ConstantineZz/javaScript/blob/master/while.html)).
 
 Цикл** [do...while](/ru/docs/Web/JavaScript/Reference/Statements/do...while)** представляет собой вариацию структуры цикла `while`:
 
@@ -495,7 +501,7 @@ do {
 } while (i < cats.length);
 ```
 
-> **Примечание:**И снова это работает так же, как и ожидалось - посмотрите, как он работает [на GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (также посмотрите полный [исходный код](https://github.com/ConstantineZz/javaScript/blob/master/do-while.html)).
+> **Примечание:**И снова это работает так же, как и ожидалось - посмотрите, как он работает [на GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (также посмотрите полный [исходный код](https://github.com/ConstantineZz/javaScript/blob/master/do-while.html)).
 
 > **Предупреждение:** **Замечание**: Применяя циклы `while` and `do...while` , как и все циклы, убедитесь, что инициализатор повторяется так, чтобы он в конце концов достиг условия выхода. Если это не так, цикл будет продолжаться вечно, и либо браузер заставит его остановиться, либо произойдёт сбой. Это называется _~~доктор Стрэндж и Дормамму~~_ **бесконечным циклом**.
 
@@ -672,7 +678,7 @@ textarea.onkeyup = function () {
 - `refused.textContent +=` — начало строки, которая объединит что-то до конца `refused.textContent`.
 - `admitted.textContent +=` — начало строки, которая объединит что-то до конца `admitted.textContent`.
 
-Дополнительный бонусный вопрос - после успешного выполнения вышеупомянутых задач у вас останется два списка имён, разделённых запятыми, но они будут составлены некорректно: в конце каждого списка будет запятая. Сможете ли вы составить эти списки так, чтобы в конце каждой строки вместо запятой была точка. За помощью можно обратиться к статье «[Полезные строковые методы](/ru/docs/Learn/JavaScript/Первые_шаги/Useful_string_methods)».
+Дополнительный бонусный вопрос - после успешного выполнения вышеупомянутых задач у вас останется два списка имён, разделённых запятыми, но они будут составлены некорректно: в конце каждого списка будет запятая. Сможете ли вы составить эти списки так, чтобы в конце каждой строки вместо запятой была точка. За помощью можно обратиться к статье «[Полезные строковые методы](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)».
 
 Если вы допустили ошибку, вы всегда можете сбросить пример с помощью кнопки «Сброс» (Reset). Если у вас совсем ничего не получается, нажмите «Показать решение», чтобы увидеть решение.
 
@@ -851,17 +857,18 @@ do {
 
 Для начала мы бы порекомендовали `for`, так как его проще запомнить: инициализатор, условие выхода и конечное выражение аккуратно заключено в скобки, поэтому их легко отследить, чтобы их не пропускать.
 
-> **Примечание:** Существуют и другие типы и функции цикла, которые полезны в сложных или специализированных ситуациях и выходят за рамки данной статьи. Если вы хотите подробнее изучить тему циклов, прочитайте наше расширенное [руководство по циклам и итерациям](/ru/docs/Web/JavaScript/Guide/Циклы_и_итерации).
+> [!NOTE]
+> Существуют и другие типы и функции цикла, которые полезны в сложных или специализированных ситуациях и выходят за рамки данной статьи. Если вы хотите подробнее изучить тему циклов, прочитайте наше расширенное [руководство по циклам и итерациям](/ru/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
 ## Заключение
 
 Эта статья раскрывает основные концепции и различные опции, доступные при циклическом кодировании в JavaScript. Теперь вам должно быть понятно, почему циклы являются хорошим механизмом для работы с повторяющимся кодом. Старайтесь использовать их в своих собственных примерах!
 
-Если вы чего-то не поняли, пробуйте читать статью снова или [свяжитесь с нами](/ru/docs/Learn#Связаться_с_нами), мы поможем разобраться.
+Если вы чего-то не поняли, пробуйте читать статью снова или [свяжитесь с нами](/ru/docs/Learn#связаться_с_нами), мы поможем разобраться.
 
 ## Дополнительная информация
 
-- [Циклы и итерации](/ru/docs/Web/JavaScript/Guide/Циклы_и_итерации)
+- [Циклы и итерации](/ru/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [for свойства и характеристики](/ru/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/ru/docs/Web/JavaScript/Reference/Statements/while) и [do...while](/ru/docs/Web/JavaScript/Reference/Statements/do...while) описание
 - [break](/ru/docs/Web/JavaScript/Reference/Statements/break) и [continue](/ru/docs/Web/JavaScript/Reference/Statements/continue) описание

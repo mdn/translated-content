@@ -13,7 +13,7 @@ A diferencia del evento obsoleto {{domxref("Element/keypress_event", "keypress")
 
 Los eventos `keydown` y [`keyup`](/es/docs/Web/API/Element/keyup_event) proporcionan un código que indica qué tecla se presiona, mientras que `keypress` indica qué carácter se ingresó. Por ejemplo, una "a" minúscula será reportada como 65 por `keydown` y `keyup`, pero como 97 por `keypress`. Todos los eventos notifican una "A" mayúscula como 65.
 
-Los eventos de teclado solo son generados por `<input>`, `<textarea>`, `<summary>` y cualquier cosa con el atributo `contentEditable` o `tabindex`. Si no se detectan, [burbujean](/es/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling) por el [árbol DOM](/Web/API/Document_object_model/Using_the_Document_Object_Model#what_is_a_dom_tree) hasta llegar a {{domxref("Document")}}.
+Los eventos de teclado solo son generados por `<input>`, `<textarea>`, `<summary>` y cualquier cosa con el atributo `contentEditable` o `tabindex`. Si no se detectan, [burbujean](/es/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling) por el [árbol DOM](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree) hasta llegar a {{domxref("Document")}}.
 
 Desde Firefox 65, los eventos `keydown` y [`keyup`](/es/docs/Web/API/Element/keyup_event) ahora se activan durante la composición del [IME](/es/docs/Glossary/Input_method_editor), para mejorar la compatibilidad entre navegadores para los usuarios de CJKT ([error 354358 en Firefox](https://bugzil.la/354358)). Para ignorar todos los eventos `keydown` que forman parte de la composición, haga algo como esto (229 es un valor especial establecido para un `keyCode` relacionado con un evento que ha sido procesado por un IME):
 
@@ -54,7 +54,8 @@ _Esta interfaz también hereda las propiedades de sus padres, {{domxref("UIEvent
 
   - : Devuelve una cadena con el valor del código de la tecla física representada por el evento.
 
-    > **Advertencia:** Esto ignora el diseño del teclado del usuario, de modo que si el usuario presiona la tecla en la posición "Y" en un diseño de teclado QWERTY (cerca del medio de la fila sobre la fila de inicio), esto siempre devolverá "KeyY", incluso si el el usuario tiene un teclado QWERTZ (lo que significaría que el usuario espera una "Z" y todas las demás propiedades indicarían una "Z") o un diseño de teclado Dvorak (donde el usuario esperaría una "F"). Si desea mostrar las pulsaciones de teclas correctas al usuario, puede usar {{domxref("Keyboard.getLayoutMap()")}}.
+    > [!WARNING]
+    > Esto ignora el diseño del teclado del usuario, de modo que si el usuario presiona la tecla en la posición "Y" en un diseño de teclado QWERTY (cerca del medio de la fila sobre la fila de inicio), esto siempre devolverá "KeyY", incluso si el el usuario tiene un teclado QWERTZ (lo que significaría que el usuario espera una "Z" y todas las demás propiedades indicarían una "Z") o un diseño de teclado Dvorak (donde el usuario esperaría una "F"). Si desea mostrar las pulsaciones de teclas correctas al usuario, puede usar {{domxref("Keyboard.getLayoutMap()")}}.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
 
@@ -68,7 +69,8 @@ _Esta interfaz también hereda las propiedades de sus padres, {{domxref("UIEvent
 
   - : Devuelve una cadena que representa una cadena de configuración regional que indica la configuración regional para la que está configurado el teclado. Esta puede ser la cadena vacía si el navegador o el dispositivo no conocen la configuración regional del teclado.
 
-    > **Nota:** Esto no describe la configuración regional de los datos que se ingresan. Un usuario puede estar usando un diseño de teclado mientras escribe texto en un idioma diferente.
+    > [!NOTE]
+    > Esto no describe la configuración regional de los datos que se ingresan. Un usuario puede estar usando un diseño de teclado mientras escribe texto en un idioma diferente.
 
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : Devuelve un número que representa la ubicación de la tecla en el teclado u otro dispositivo de entrada.
@@ -122,6 +124,6 @@ input.onkeydown = logKey;
 
 ## Véase también
 
-- [`input`](/es/docs/Web/API/HTMLElement/input_event)
+- [`input`](/es/docs/Web/API/Element/input_event)
 - [`keypress`](/es/docs/Web/API/Element/keypress_event)
 - [`keyup`](/es/docs/Web/API/Element/keyup_event)

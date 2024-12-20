@@ -247,7 +247,8 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 - [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox)
   - : IE 10 이상에서 지원되는`<iframe>`의 다른 기능보다 이 특성은 상대적으로 최신 브라우저에서 작동하며 높은 보안 설정을 요구합니다. 이에 대해서는 다음 내용에서 다룰 예정입니다.
 
-> **참고:** 속도를 향상하기 위해 메인 콘텐츠가 완전히 로딩된 이후에 JavaScript로 iframe의 src 특성을 설정하는 편이 좋습니다. 웹 페이지를 더 빠르게 이용할 수 있고 {{glossary("SEO")}} 측정 시 중요한 지표인 웹 페이지 로딩 시간을 단축할 수 있습니다.
+> [!NOTE]
+> 속도를 향상하기 위해 메인 콘텐츠가 완전히 로딩된 이후에 JavaScript로 iframe의 src 특성을 설정하는 편이 좋습니다. 웹 페이지를 더 빠르게 이용할 수 있고 {{glossary("SEO")}} 측정 시 중요한 지표인 웹 페이지 로딩 시간을 단축할 수 있습니다.
 
 ### 보안 문제
 
@@ -257,7 +258,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 > **참고:** [클릭재킹](/ko/docs/Glossary/Clickjacking)은 iframe 공격 방식의 하나입니다. 눈에 보이지 않는 iframe을 여러분의 웹 문서에 삽입하거나, 해커들의 악성 웹사이트에 여러분의 웹페이지를 삽입하여 사용자들의 활동을 빼돌립니다. 이는 사용자들을 잘못된 행동으로 유도하거나 민감한 데이터를 훔쳐내는 일반적인 기술입니다.
 
-우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
+우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
 
 #### 필요한 경우에만 삽입하세요
 
@@ -276,7 +277,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 웹사이트에 HTTPS를 적용하려면 특별한 보안 인증서를 설치해야 합니다. 여러 호스팅 업체에서는 직접 인증서를 설치하지 않아도 HTTPS를 적용할 수 있는 호스팅을 제공합니다. 하지만 직접 HTTPS를 적용해야 한다면, [Let's Encrypt](https://letsencrypt.org/)에서 Apache 웹 서버나 Nginx 등 널리 사용되는 웹 서버를 지원할 뿐만 아니라 자동으로 필요한 인증서를 생성하고 설치할 수 있는 도구와 설명서를 제공하고 있습니다. Let's Encrypt는 이 과정을 최대한 쉽게 만들도록 설계되었습니다. 그러니 웹페이지에 HTTPS를 적용하기 위하여 Let's Encrypt를 사용하지 않을 이유가 전혀 없습니다.
 
-> **참고:** [GitHub pages](/ko/docs/Learn/Common_questions/Using_Github_pages)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
+> **참고:** [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
 
 #### 항상 `sandbox` 특성을 사용하세요
 
@@ -286,13 +287,15 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 꼭 필요한 경우 `sandbox=""` 특성값 안에 하나씩 권한을 부여할 수 있습니다. [`sandbox`](/ko/docs/Web/HTML/Element/iframe#sandbox) 항목을 참고하여 사용할 수 있는 옵션을 살펴보세요. 한 가지 명심하셔야 할 점은 절대로 `sandbox` 특성에 `allow-scripts`와 `allow-same-origin` 옵션을 동시에 적용하면 안 된다는 점입니다. 두 옵션을 동시에 적용하면 삽입된 콘텐츠는 스크립트 실행을 방지하는 [동일 출처 정책](/ko/docs/Glossary/Same-origin_policy)을 우회하여 샌드박스 특성을 해제하는 JavaScript를 사용할 수 있게 됩니다.
 
-> **참고:** 공격자들이 사용자를 속여 `iframe` 외부에서 직접 악성 콘텐츠로 접근하게 한다면 샌드박스는 이를 보호할 수 없습니다. 만약 사용자가 생성한 콘텐츠 등 악의적인 콘텐츠일 가능성이 있는 경우, 여러분의 웹사이트와 다른 {{glossary("domain")}}에서 메인 사이트로 제공하도록 하세요.
+> [!NOTE]
+> 공격자들이 사용자를 속여 `iframe` 외부에서 직접 악성 콘텐츠로 접근하게 한다면 샌드박스는 이를 보호할 수 없습니다. 만약 사용자가 생성한 콘텐츠 등 악의적인 콘텐츠일 가능성이 있는 경우, 여러분의 웹사이트와 다른 {{glossary("domain")}}에서 메인 사이트로 제공하도록 하세요.
 
 #### CSP 지시어를 설정하세요
 
 {{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/ko/docs/Web/HTTP/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/ko/docs/Glossary/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
 
-> **참고:** 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.
+> [!NOTE]
+> 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.
 
 ## \<embed> 와 \<object> 요소
 

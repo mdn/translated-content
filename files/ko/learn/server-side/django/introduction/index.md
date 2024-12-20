@@ -63,7 +63,7 @@ Django는 다음과 같은 소프트웨어를 개발하는데 도움을 줍니�
 - Scalable(확장성 있는)
   - : Django는 컴포넌트 기반의 "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" 아키텍쳐(각각의 아키텍쳐가 독립적이어서 필요하다면 교체 및 변경할 수 있는)를 사용합니다. 각 부분이 분명하게 분리되면 어떤 레벨에서든(예를 들면 캐싱 서버, 데이터베이스 서버, 혹은 어플리케이션 서버) 하드웨어를 추가해서 발생하는 늘어난 트래픽에 대응해 크기를 변경할 수 있게 됩니다. 사용자가 가장 많은 몇몇 사이트는 요구사항에 맞춰서 Django의 크기를 성공적으로 변경했습니다. (예를들면 Instagram, Disqus 등)
 - Maintainable(유지보수가 쉬운)
-  - : Django 코드는 유지보수가 쉽고 재사용하기 좋게끔 하는 디자인 원칙들과 패턴들을 이용하여 작성됩니다. 특히 Don't Repeat Yourself (DRY) 원칙을 적용해서 불필요한 중복이 없고 많은 양의 코드를 줄였습니다. 또한 Django는 관련된 기능들을 재사용 가능한 "applications"로 그룹화했고, 더 낮은 레벨에서 관련된 코드들을 모듈로 만들었습니다. ([Model View Controller (MVC)](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 패턴과 유사합니다).
+  - : Django 코드는 유지보수가 쉽고 재사용하기 좋게끔 하는 디자인 원칙들과 패턴들을 이용하여 작성됩니다. 특히 Don't Repeat Yourself (DRY) 원칙을 적용해서 불필요한 중복이 없고 많은 양의 코드를 줄였습니다. 또한 Django는 관련된 기능들을 재사용 가능한 "applications"로 그룹화했고, 더 낮은 레벨에서 관련된 코드들을 모듈로 만들었습니다. ([Model View Controller (MVC)](/ko/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 패턴과 유사합니다).
 - Portable(포터블한)
   - : 장고는 파이썬으로 작성되어 있으며, 파이썬은 많은 플랫폼에서 작동합니다. 그것은 특정한 서버 플랫폼에 얽매이지 않는다는 것을 의미하며, 리눅스, 윈도우 그리고 맥 OS X 등등 다양한 운영체제에서 작동할 수 있다는 뜻입니다. 나아가, 장고는 많은 웹 호스팅 공급자들에 의해서 지원되고 있습니다. 그들은 장고 사이트의 호스팅과 관련해서 특정한 인프라와 문서를 제공합니다.
 
@@ -73,7 +73,8 @@ Django는 다음과 같은 소프트웨어를 개발하는데 도움을 줍니�
 
 장고는 2008년 9월 첫 번째 주요 릴리즈(1.0)에서부터 2017년의 최근 버전(2.0)까지 성장하고 발전했습니다. 장고는 각각의 버전에서 기능을 추가하고 버그를 수정했습니다. 새로운 유형의 데이터베이스, 탬플릿 엔진들 그리고 캐싱에 대한 지원에서부터 일반 보기 함수와 클래스들의 추가까지요(이를 통해 여러 프로그래밍 작업을 위해 개발자들이 작성해야 할 코드를 줄여줍니다).
 
-> **참고:** 장고를 더 좋게 만들기 위해 어떤 작업이 이루어지고 있는지, 최근 버전에서 어떤 변경이 있었는지 확인하려면 장고 웹사이트의 [release notes](https://docs.djangoproject.com/en/1.10/releases/) 를 살펴보세요.
+> [!NOTE]
+> 장고를 더 좋게 만들기 위해 어떤 작업이 이루어지고 있는지, 최근 버전에서 어떤 변경이 있었는지 확인하려면 장고 웹사이트의 [release notes](https://docs.djangoproject.com/en/1.10/releases/) 를 살펴보세요.
 
 장고는 수많은 사용자와 기여자가 있는 협력적이고 번성하는 프로젝트입니다. 여전히 몇 가지 장고만의 특징이 있지만, 장고는 모든 유형의 웹사이트를 개발할 수 있는 다용도적인 웹 프레임워크로 발전했습니다.
 
@@ -108,7 +109,8 @@ Django 웹 어플리케이션은 전형적으로 아래와 같이 분류된 파�
 - **Models:** 모델은 응용프로그램의 데이터 구조를 정의하고 데이터베이스의 기록을 관리(추가, 수정, 삭제)하고 쿼리하는 방법을 제공하는 파이썬 객체입니다.
 - **Templates:** 탬플릿은 파일의 구조나 레이아웃을 정의하고(예: HTML 페이지), 실제 내용을 보여주는 데 사용되는 플레이스홀더를 가진 텍스트 파일입니다. 뷰는 HTML 탬플릿을 이용하여 동적으로 HTML 페이지를 만들고 모델에서 가져온 데이터로 채웁니다. 탬플릿으로 모든 파일의 구조를 정의할 수 있습니다.탬플릿이 꼭 HTML 타입일 필요는 없습니다!
 
-> **참고:** 장고는 이 구조를 "모델 뷰 템플릿(Model View Template)(MVT)" 아키텍처라고 부릅니다. 이것은 더 익숙한 [Model View Controller](/ko/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 아키텍처와 많은 유사점을 가지고 있습니다.
+> [!NOTE]
+> 장고는 이 구조를 "모델 뷰 템플릿(Model View Template)(MVT)" 아키텍처라고 부릅니다. 이것은 더 익숙한 [Model View Controller](/ko/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 아키텍처와 많은 유사점을 가지고 있습니다.
 
 아래 부문들은 장고 앱의 주요 부분들이 어떻게 보일지에 대한 단서를 보여줄 것입니다 (우리는 개발 환경을 설치한 이후에 세부적인 디테일에 대해 다룰겁니다).
 
@@ -149,7 +151,8 @@ def index(request):
     return HttpResponse('Hello from Django!')
 ```
 
-> **참고:** 파이썬에 관하여:
+> [!NOTE]
+> 파이썬에 관하여:
 >
 > - [Python modules](https://docs.python.org/3/tutorial/modules.html)은 우리가 코드에 쓰고 싶을지도 모르며 분리된 파일로 저장되어 있는 함수의 "라이브러리" 입니다.
 > - `from django.http import HttpResponse`와 같은 방법으로 `django.http` 모듈에서 `HttpResponse` 객체만 가져와서 뷰에서 사용할 수 있습니다. 모듈에서 여럿, 아니면 전체 모듈을 임포트할 수 있는 몇 가지 방법이 있습니다.

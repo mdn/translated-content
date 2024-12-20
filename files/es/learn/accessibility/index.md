@@ -11,7 +11,8 @@ Aprender algo de HTML, CSS y JavaScript es útil si deseas convertirte en un des
 
 Para aprovechar al máximo este módulo, sería una buena idea trabajar al menos en los dos primeros módulos de los temas de [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS), y [JavaScript](/es/docs/Learn/JavaScript) o quizás mejor, trabajar en las partes relevantes del módulo de accesibilidad como tu trabajas a través de los temas relacionados con la tecnología.
 
-> **Nota:** si está trabajando en una computadora / tableta / otro dispositivo donde no tiene la capacidad de crear sus propios archivos, puede probar la mayoría de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
+> [!NOTE]
+> Si está trabajando en una computadora / tableta / otro dispositivo donde no tiene la capacidad de crear sus propios archivos, puede probar la mayoría de los ejemplos de código en un programa de codificación en línea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -37,4 +38,4 @@ Para aprovechar al máximo este módulo, sería una buena idea trabajar al menos
 
 - [Empieza hoy a desarrollar aplicaciones web accesibles](https://egghead.io/courses/start-building-accessible-web-applications-today) — Una excelente serie de videos tutoriales por Marcy Sutton.
 - [Recursos de la Universidad Deque](https://dequeuniversity.com/resources/) — incluye ejemplos de códigos, referencias de lectores de pantalla y otros recursos útiles.
-- [Recursos de WebAIM](http://webaim.org/resources/) — incluye guías, listas de verificación, herramientas, y más.
+- [Recursos de WebAIM](https://webaim.org/resources/) — incluye guías, listas de verificación, herramientas, y más.

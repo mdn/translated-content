@@ -57,17 +57,17 @@ l10n:
 
 #### WebDriver BiDi
 
-- 指定したブラウジングコンテキストで現在表示されているページまたはフレームを再読み込みできるコマンド [`browsingContext.reload`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-reload) を追加しました ([Firefox bug 1830859](https://bugzil.la/1830859))。
+- 指定した閲覧コンテキストで現在表示されているページまたはフレームを再読み込みできるコマンド [`browsingContext.reload`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-reload) を追加しました ([Firefox bug 1830859](https://bugzil.la/1830859))。
 
 - `alert`、`confirm`、`prompt` 型のユーザープロンプトが閉じられたときに発生するイベント [`browsingContext.userPromptClosed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptClosed) を追加しました ([Firefox bug 1824221](https://bugzil.la/1824221))。
 
 - Firefox によって新しいナビゲーションが開始されたときに発生するイベント [`browsingContext.navigationStarted`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-navigationStarted) を追加しました ([Firefox bug 1756595](https://bugzil.la/1756595))。
 
-- 指定したブラウジングコンテキストで JavaScript Realm のライフタイムを監視できるイベント [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) および [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) を追加しました。Realm は基本的に、独自のグローバルオブジェクト (window) を持つ分離された実行環境 (`sandbox`) です ([Firefox bug 1788657](https://bugzil.la/1788657)、[Firefox bug 1788659](https://bugzil.la/1788659))。
+- 指定した閲覧コンテキストで JavaScript Realm のライフタイムを監視できるイベント [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) および [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) を追加しました。Realm は基本的に、独自のグローバルオブジェクト (window) を持つ分離された実行環境 (`sandbox`) です ([Firefox bug 1788657](https://bugzil.la/1788657)、[Firefox bug 1788659](https://bugzil.la/1788659))。
 
 - HTTP 認証のダイアログボックスが表示されたときに、`browsingContext.userPromptOpened` イベントが誤って発生していた不具合を修正しました ([Firefox bug 1853302](https://bugzil.la/1853302))。
 
-- `context` フィールドが `null` に設定された不必要なイベントが発生しないようになりました。基礎となるブラウジングコンテキストが閉じられたため、このようなイベントは有効ではありません ([Firefox bug 1847563](https://bugzil.la/1847563))。
+- `context` フィールドが `null` に設定された不必要なイベントが発生しないようになりました。基礎となる閲覧コンテキストが閉じられたため、このようなイベントは有効ではありません ([Firefox bug 1847563](https://bugzil.la/1847563))。
 
 #### Marionette
 

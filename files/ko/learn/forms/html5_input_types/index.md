@@ -29,7 +29,8 @@ l10n:
   </tbody>
 </table>
 
-> **참고:** 이 글에서 다루는 대부분의 기능은 브라우저 간에 다양하게 지원됩니다. 예외 사항은 알려 드리겠습니다. 브라우저 지원에 대한 자세한 내용을 원하신다면, [HTML 폼 요소 참조](/ko/docs/Web/HTML/Element#forms) 및 특히 상세한 [\<input> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
+> [!NOTE]
+> 이 글에서 다루는 대부분의 기능은 브라우저 간에 다양하게 지원됩니다. 예외 사항은 알려 드리겠습니다. 브라우저 지원에 대한 자세한 내용을 원하신다면, [HTML 폼 요소 참조](/ko/docs/Web/HTML/Element#forms) 및 특히 상세한 [\<input> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
 
 웹 개발자들은 때때로 사용자 지정 폼 컨트롤을 만들기 위해 HTML 폼 컨트롤 외관을 디자인 사양과 다르게 만들기도 합니다. 우리는 고급 튜토리얼에서 이것을 다룹니다. [사용자 정의 폼 위젯 만들기](/ko/docs/Learn/Forms/How_to_build_custom_form_controls).
 
@@ -55,7 +56,8 @@ l10n:
 
 ![기본적으로 at 기호가 표시되는 Firefox for Android 이메일 키보드.](fx-android-email-type-keyboard.jpg)
 
-> **참고:** 기본 텍스트 입력 유형의 예제는 [기본 입력 예제](https://mdn.github.io/learning-area/html/forms/basic-input-examples/)에서 찾을 수 있습니다(또한 [소스 코드](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)도 확인해보세요).
+> [!NOTE]
+> 기본 텍스트 입력 유형의 예제는 [기본 입력 예제](https://mdn.github.io/learning-area/html/forms/basic-input-examples/)에서 찾을 수 있습니다(또한 [소스 코드](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html)도 확인해보세요).
 
 여러 디바이스에서 사용자 경험을 향상시킨다는 점에서 이러한 새로운 입력 유형을 사용하는 또 다른 좋은 이유입니다.
 
@@ -67,7 +69,8 @@ l10n:
 
 `a@b`는 제공된 기본 제약 조건에 따라 유효한 이메일 주소입니다. 이는 `email` 입력 유형이 기본적으로 인트라넷 이메일 주소를 허용하기 때문입니다. 다른 유효성 검사 동작을 구현하려면 [`pattern`](/ko/docs/Web/HTML/Attributes/pattern) 속성을 사용할 수 있으며, 오류 메시지도 사용자 정의할 수 있습니다. 이러한 기능을 어떻게 사용하는지에 대한 내용은 나중에 [클라이언트 측 폼 유효성 검사](/ko/docs/Learn/Forms/Form_validation) 글에서 다룰 것입니다.
 
-> **참고:** 입력된 데이터가 이메일 주소가 아닌 경우, {{cssxref(':invalid')}} 의사 클래스가 일치하며, {{domxref('validityState.typeMismatch')}} 속성은 `true`를 반환합니다.
+> [!NOTE]
+> 입력된 데이터가 이메일 주소가 아닌 경우, {{cssxref(':invalid')}} 의사 클래스가 일치하며, {{domxref('validityState.typeMismatch')}} 속성은 `true`를 반환합니다.
 
 ## 검색 필드
 
@@ -193,7 +196,8 @@ output.textContent = priceInput.value; // 초기 출력 값 설정
 
 여기서 우리는 `range` 입력과 `output`에 대한 참조를 두 변수에 저장합니다. 그 다음에 즉시 `output`의 [`textContent`](/ko/docs/Web/API/Node/textContent)를 입력의 현재 `value`로 설정합니다. 마지막으로 범위 슬라이더가 움직일 때마다 `output`의 `textContent`가 새 값으로 갱신되도록 이벤트 수신기가 설정됩니다.
 
-> **참고:** CSS Tricks에 이 주제를 다루는 멋진 튜토리얼이 있습니다. [The Output Element](https://css-tricks.com/the-output-element/).
+> [!NOTE]
+> CSS Tricks에 이 주제를 다루는 멋진 튜토리얼이 있습니다. [The Output Element](https://css-tricks.com/the-output-element/).
 
 ## 날짜와 시간 선택기
 

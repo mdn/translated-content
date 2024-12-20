@@ -9,8 +9,9 @@ slug: Web/API/Request/Request
 
 ## 语法
 
-```
-var myRequest = new Request(input[, init]);
+```js-nolint
+new Request(input)
+new Request(input, options)
 ```
 
 ### 参数
@@ -47,7 +48,7 @@ var myRequest = new Request(input[, init]);
 
 ## Example
 
-在我们的获取请求示例 [Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (see [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用构造函数创建一个新的`Request`对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。
+在我们的获取请求示例 [Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (see [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用构造函数创建一个新的`Request`对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。
 
 ```js
 var myImage = document.querySelector("img");
@@ -64,7 +65,7 @@ fetch(myRequest)
   });
 ```
 
-在[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
+在[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
 
 ```js
 var myImage = document.querySelector('img');
@@ -109,7 +110,8 @@ var myRequest = new Request("flowers.jpg", myInit);
 
 也可以把 {{domxref("Request")}} 对象再作参数传递进 `Request()` 构造器来创建一个请求的副本（就像调用{{domxref("Request.clone","clone()")}}一样）。
 
-> **备注：** This last usage is probably only useful in [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API).
+> [!NOTE]
+> This last usage is probably only useful in [ServiceWorkers](/zh-CN/docs/Web/API/Service_Worker_API).
 
 ## 规范
 
@@ -121,6 +123,6 @@ var myRequest = new Request("flowers.jpg", myInit);
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

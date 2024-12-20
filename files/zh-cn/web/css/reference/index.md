@@ -51,7 +51,8 @@ div.menu-bar li:hover > ul {
 
 ## 索引
 
-> **备注：** 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
+> [!NOTE]
+> 此索引中的属性名称**不包括**与 CSS 标准名称不同的 [JavaScript 名称](#索引)。
 
 {{CSS_Ref}}
 
@@ -96,7 +97,7 @@ div.menu-bar li:hover > ul {
 - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) `::`
   - : 代表不包含在 HTML 中的实体。
 
-> **标注：**
+> [!CALLOUT]
 >
 > 参见[标准 4 定义的选择器列表](https://www.w3.org/TR/selectors/#overview)。
 
@@ -109,7 +110,7 @@ div.menu-bar li:hover > ul {
 - [层叠](/zh-CN/docs/Web/CSS/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
-- [继承](/zh-CN/docs/Web/CSS/inheritance)
+- [继承](/zh-CN/docs/Web/CSS/Inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)
 - [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)

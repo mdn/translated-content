@@ -2,7 +2,7 @@
 title: CORS-безопасный заголовок запроса
 slug: Glossary/CORS-safelisted_request_header
 l10n:
-  sourceCommit: fea9eb7420e6d70772144854242c30e421898415
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -31,6 +31,7 @@ CORS-безопасные заголовки запроса должны соо�
 
 ## Смотрите также
 
-- {{Glossary("CORS-safelisted response header", "CORS-безопасный заголовок ответа")}}
-- {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
-- {{Glossary("Request header", "Заголовок запроса")}}
+- Связанные термины глоссария:
+  - {{Glossary("CORS-safelisted response header", "CORS-безопасный заголовок ответа")}}
+  - {{Glossary("Forbidden header name", "Запрещённое имя заголовка")}}
+  - {{Glossary("Request header", "Заголовок запроса")}}

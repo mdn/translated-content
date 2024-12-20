@@ -2,7 +2,7 @@
 title: 色环
 slug: Glossary/Color_wheel
 l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+  sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
 {{GlossarySidebar}}
@@ -17,7 +17,7 @@ l10n:
 
 在计算机领域中，色环被用于*颜色选择器*，比如 macOS 上的默认颜色选择器：
 
-[![macOS 上的默认颜色选择器](color_wheel_macos.png)](/zh-CN/docs/Glossary/Color_wheel/color_wheel_macos.png)
+![macOS 上的默认颜色选择器](color_wheel_macos.png)
 
 ## 参见
 

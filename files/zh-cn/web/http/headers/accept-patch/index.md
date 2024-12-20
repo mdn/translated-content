@@ -13,7 +13,8 @@ l10n:
 
 当服务器接收到带有不支持媒体类型的 PATCH 请求时，可以回复 {{HTTPStatus("415")}} `Unsupported Media Type` 状态码，并在 Accept-Patch 标头中指明一个或多个支持的媒体类型。
 
-> **备注：** IANA 维护了一个[媒体类型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)。
+> [!NOTE]
+> IANA 维护了一个[媒体类型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)。
 
 <table class="properties">
   <tbody>
