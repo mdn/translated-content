@@ -1,6 +1,8 @@
 ---
 title: import()
 slug: Web/JavaScript/Reference/Operators/import
+l10n:
+  sourceCommit: eb7cf694c19b31ee8826f22eaac6c12e808b1e50
 ---
 
 {{jsSidebar("Operators")}}
