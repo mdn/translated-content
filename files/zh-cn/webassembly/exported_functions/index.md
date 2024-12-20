@@ -25,8 +25,8 @@ slug: WebAssembly/Exported_functions
 ```js
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-fetchAndInstantiate("table.wasm").then(function (instance) {
-  var tbl = instance.exports.tbl;
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
+  var tbl = obj.instance.exports.tbl;
   console.log(tbl.get(0)()); // 13
   console.log(tbl.get(1)()); // 42
   otherTable.set(0, tbl.get(0));
@@ -36,7 +36,7 @@ fetchAndInstantiate("table.wasm").then(function (instance) {
 });
 ```
 
-在这里，我们使用 [WebAssembly.Table](/zh-CN/docs/WebAssembly/JavaScript_interface/Table) 构造函数在 JavaScript 中创建了一个表格（otherTable），然后使用 [fetchAndInstantiate()](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js) 实用函数把 table.wasm 加载到我们的页面。
+在这里，我们使用 [WebAssembly.Table](/zh-CN/docs/WebAssembly/JavaScript_interface/Table) 构造函数在 JavaScript 中创建了一个表格（otherTable），然后使用 [WebAssembly.instantiateStreaming()](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 把 table.wasm 加载到我们的页面。
 
 然后，我们得到了从模块中导出的函数，通过 [tbl.get()](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 获取引用的函数并且把每一次的调用结果输出到控制台。接下来，我们使用 set() 使得 otherTable 表格包含了与 tbl 表格相同的函数。
 
