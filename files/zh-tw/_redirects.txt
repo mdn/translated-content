@@ -110,7 +110,6 @@
 /zh-TW/docs/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
 /zh-TW/docs/HTML/HTML5	/zh-TW/docs/Glossary/HTML5
 /zh-TW/docs/HTML/HTML5_表單	/zh-TW/docs/Learn_web_development/Extensions/Forms
-/zh-TW/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/HTTP	/zh-TW/docs/Web/HTTP
 /zh-TW/docs/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/HTTP/Browser_detection_using_the_user_agent	/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent
