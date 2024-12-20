@@ -1,9 +1,9 @@
 ---
 title: "DocumentFragment: querySelector() メソッド"
+short-title: querySelector()
 slug: Web/API/DocumentFragment/querySelector
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
-short-title: querySelector()
 ---
 
 {{ApiRef("DOM")}}

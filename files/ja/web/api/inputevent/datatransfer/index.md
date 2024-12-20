@@ -1,9 +1,9 @@
 ---
 title: "InputEvent: dataTransfer プロパティ"
+short-title: dataTransfer
 slug: Web/API/InputEvent/dataTransfer
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
-short-title: dataTransfer
 ---
 
 {{APIRef("UI Events")}}

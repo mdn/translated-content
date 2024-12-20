@@ -1,9 +1,9 @@
 ---
 title: "Event: explicitOriginalTarget プロパティ"
+short-title: explicitOriginalTarget
 slug: Web/API/Event/explicitOriginalTarget
 l10n:
   sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
-short-title: explicitOriginalTarget
 ---
 
 {{APIRef("DOM")}}{{Non-standard_Header}}

@@ -82,6 +82,7 @@
 /ru/docs/Games/Инструменты/asm.js	/ru/docs/Games/Tools/asm.js
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
 /ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
+/ru/docs/Glossary/DOS_attack	/ru/docs/Glossary/Denial_of_Service
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
@@ -953,7 +954,7 @@
 /ru/docs/Словарь/Crawler	/ru/docs/Glossary/Crawler
 /ru/docs/Словарь/DNS	/ru/docs/Glossary/DNS
 /ru/docs/Словарь/DOM	/ru/docs/Glossary/DOM
-/ru/docs/Словарь/DOS_attack	/ru/docs/Glossary/DOS_attack
+/ru/docs/Словарь/DOS_attack	/ru/docs/Glossary/Denial_of_Service
 /ru/docs/Словарь/Doctype	/ru/docs/Glossary/Doctype
 /ru/docs/Словарь/Domain_name	/ru/docs/Glossary/Domain_name
 /ru/docs/Словарь/ECMA	/ru/docs/Glossary/ECMA

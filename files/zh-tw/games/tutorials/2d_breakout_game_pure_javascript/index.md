@@ -11,7 +11,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 每個步驟均提供可測試修改的實際範例，讓你能看到各個步驟所產生的影響。你將了解該如何使用 {{htmlelement("canvas")}} 元件完成基礎的遊戲機制，例如繪製 (Render)、移動圖形、碰撞偵測、操控機制、輸贏狀態等。
 
-若要能充分了解此一系列文章，你應具備基礎至中等的 [JavaScript](/zh-TW/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 知識。結束此教學之後即可寫出自己的簡易網頁遊戲。
+若要能充分了解此一系列文章，你應具備基礎至中等的 [JavaScript](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) 知識。結束此教學之後即可寫出自己的簡易網頁遊戲。
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 

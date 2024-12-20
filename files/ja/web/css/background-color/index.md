@@ -2,7 +2,7 @@
 title: background-color
 slug: Web/CSS/background-color
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
@@ -42,6 +42,7 @@ background-color: transparent;
 background-color: inherit;
 background-color: initial;
 background-color: revert;
+background-color: revert-layer;
 background-color: unset;
 ```
 
@@ -52,7 +53,7 @@ background-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : 背景の単一色 (uniform color) を表します。指定されていれば {{cssxref("background-image")}} の背後に描画されますが、画像に透明な部分があれば色が見えます。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 背景色とその上に配置されたテキストの色のコントラスト比が、弱視の人がページのコンテンツを読むことができる程度の高さであることを確認することが重要です。
 
@@ -72,37 +73,97 @@ background-color: unset;
 
 ## 例
 
-### HTML
+### ボックスへの色付け
 
-```html
-<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
+この例では、さまざまな CSS の {{cssxref("color_value", "&lt;color&gt;")}} 値を使用して、 HTML の {{HTMLelement("div")}} 要素に `background-color` を適用する方法を示しています。
 
-<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
+#### HTML
 
-<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
+```html live-sample___colorize_boxes
+<div class="example-one">Lorem ipsum dolor sit amet, consectetuer</div>
+
+<div class="example-two">Lorem ipsum dolor sit amet, consectetuer</div>
+
+<div class="example-three">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
 ### CSS
 
-```css
-.exampleone {
+```css live-sample___colorize_boxes
+.example-one {
   background-color: transparent;
 }
 
-.exampletwo {
+.example-two {
   background-color: rgb(153 102 153);
   color: rgb(255 255 204);
 }
 
-.examplethree {
+.example-three {
   background-color: #777799;
   color: #ffffff;
 }
 ```
 
-### 結果
+#### 結果
 
-{{EmbedLiveSample("Examples", 200, 150)}}
+{{EmbedLiveSample("Colorize boxes", 200, 150)}}
+
+### 表への色付け
+
+この例では、 `background-color` を HTML の {{HTMLelement("table")}} 要素（{{HTMLelement("tr")}} の行や {{HTMLelement("td")}} のセルを含む）に使用する方法を示しています。
+
+#### HTML
+
+```html live-sample___colorize_tables
+<table>
+  <tr id="r1">
+    <td id="c11">11</td>
+    <td id="c12">12</td>
+    <td id="c13">13</td>
+  </tr>
+  <tr id="r2">
+    <td id="c21">21</td>
+    <td id="c22">22</td>
+    <td id="c23">23</td>
+  </tr>
+  <tr id="r3">
+    <td id="c31">31</td>
+    <td id="c32">32</td>
+    <td id="c33">33</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css live-sample___colorize_tables
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+}
+#r1 {
+  background-color: lightblue;
+}
+#c12 {
+  background-color: cyan;
+}
+#r2 {
+  background-color: grey;
+}
+#r3 {
+  background-color: olive;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Colorize tables', "100%", "100%")}}
 
 ## 仕様書
 
@@ -117,4 +178,3 @@ background-color: unset;
 - [複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("&lt;color&gt;")}} データ型
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
-- [CSS を使用した HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)

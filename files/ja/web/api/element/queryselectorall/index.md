@@ -1,9 +1,9 @@
 ---
 title: "Element: querySelectorAll() メソッド"
+short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 l10n:
   sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
-short-title: querySelectorAll()
 ---
 
 {{APIRef("DOM")}}

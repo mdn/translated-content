@@ -17,11 +17,11 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 
 - HTML 介紹
 
-  如果是網站開發的新手，請先閱讀我們的 [HTML 基礎](/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics)文章以理解 HTML 是什麼還有它怎麼使用。
+  如果是網站開發的新手，請先閱讀我們的 [HTML 基礎](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)文章以理解 HTML 是什麼還有它怎麼使用。
 
 - HTML 教學
 
-  有關如何使用 HTML、教學、完整範例，請參考我們的 [HTML 學習專區](/zh-TW/docs/Learn/HTML)。
+  有關如何使用 HTML、教學、完整範例，請參考我們的 [HTML 學習專區](/zh-TW/docs/Learn_web_development/Core/Structuring_content)。
 
 - HTML 參考資料
 
@@ -29,17 +29,17 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 
 ## 初學者教學
 
-我們的[HTML 學習專區](/zh-TW/docs/Learn/HTML)提供數個從頭開始的 HTML 教學單元：你不需要任何先備知識。
+我們的[HTML 學習專區](/zh-TW/docs/Learn_web_development/Core/Structuring_content)提供數個從頭開始的 HTML 教學單元：你不需要任何先備知識。
 
-- [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 介紹](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
   - : 本單元會為你打下基礎，帶你熟悉重要概念和語法，像是如何把 HTML 套用到文本、如何建立超連結、還有如何使用 HTML 構建網頁。
-- [多媒體與嵌入](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding)
+- [多媒體與嵌入](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
   - : 本模塊探究如何使用 HTML 在你的網頁裡置入多媒體，包含多種不同載入圖片的方式，如何嵌入影音，甚至是另外一整個網頁。
-- [HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
+- [HTML 表格](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : 要以簡單易懂的方式將表格式的資訊呈現在網頁上會是一件挑戰。本模組涵蓋了基本的表格使用與更複雜的功能，例如標題和總結。
-- [HTML 表單](/zh-TW/docs/Learn/Forms)
+- [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)
   - : 表單是網頁相當重要的部分，能夠提供與網頁互動時所需的各式的功能性。例如：註冊和登入、發送回饋意見、購買產品以及更多實用的功能。這個單元將帶領你建立網頁端的表單功能。
-- [用 HTML 解決常見問題](/zh-TW/docs/Learn/HTML/Howto)
+- [用 HTML 解決常見問題](/zh-TW/docs/Learn_web_development/Howto/Solve_HTML_problems)
   - : 提供部分內容註釋連結。 當你建立一個網頁時，如何解決 HTML 中常見問題，例如 : 處理標題、增加圖片或影片、強調內文、建立基本表單等。.
 
 ## 進階部份
