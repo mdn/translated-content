@@ -1,6 +1,8 @@
 ---
 title: 推测性加载
 slug: Web/Performance/Speculative_loading
+l10n:
+  sourceCommit: 0a9c10fc67901972221dc7b3d006334fbfa73dce
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
