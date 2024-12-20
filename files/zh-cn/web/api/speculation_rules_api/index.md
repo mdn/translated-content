@@ -1,6 +1,8 @@
 ---
 title: 推测规则 API
 slug: Web/API/Speculation_Rules_API
+l10n:
+  sourceCommit: bca6332a9b752ba195f544e115ada4bff76bc822
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Speculation Rules API")}}
