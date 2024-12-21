@@ -1,59 +1,49 @@
 ---
-title: ウェブ入門
+title: 初めてのウェブサイト
 slug: Learn_web_development/Getting_started/Your_first_website
-original_slug: Learn/Getting_started_with_the_web
 l10n:
-  sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-「ウェブ入門」は、ウェブ開発の実用性を紹介する簡潔なシリーズです。簡単なウェブページを構築するために必要なツールをセットアップし、簡単なコードを書いたら、実際にウェブに公開します。
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
-## 最初のウェブサイトの物語
+このモジュールでは、ウェブ開発の実際について学びます。 単純なウェブページを構築するための資産を集め、コードを書き、それを世界に向けて公開します。
 
-プロが作るようなウェブサイトを作るのはとても大変な作業です。ウェブ開発の初心者は、まずは小さなものから作り始めるとよいでしょう。今すぐ Facebook のようなサイトを作ることはできませんが、簡単なウェブサイトなら作るのはそれほど難しくありません。私たちはここから始めることにしましょう。
+プロが作るようなウェブサイトを作るのはとても大変な作業です。ウェブ開発の初心者は、まずは小さなものから作り始めるとよいでしょう。今すぐ Facebook のようなサイトを作ることはできませんが、簡単なウェブサイトなら作るのはそれほど難しくありません。ここから始めることにしましょう。
 
-## ガイド
+## 前提条件
 
-以下の一覧の記事を通して作業することで、何もないところから、最初のウェブページをオンラインで公開できるようになります。さあ、旅を始めましょう。
+このモジュールでは、ウェブ技術に関する予備知識は想定していませんが、オペレーティングシステムの操作に加えて、ファイルシステムの使用やウェブの閲覧などにすでに慣れている必要があります。コードエディターと複数のウェブブラウザーをインストールしている必要があります。
 
-- [基本的なソフトウェアのインストール](/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+まだの場合は、先に[環境設定](/ja/docs/Learn_web_development/Getting_started/Environment_setup)モジュールを実行することをお勧めします。
 
-  - : ウェブサイトを構築するためのツールは、実にさまざまなものからがあります。これから始める人は、コードエディター、フレームワーク、テストツールなど、さまざまな種類のツールに戸惑うかもしれません。この記事では、基本的なウェブ開発を始めるために必要なソフトウェアをインストールする方法を手順を追って紹介します。
+## チュートリアル
 
-- [ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
 
   - : ウェブサイトのコードを書き始める前に、まずは計画を立てることが大切です。あなたのウェブサイトにはどんな情報を載せますか？フォントや色はどうしたいですか？ここでは、コンテンツやデザインを計画するのに役に立つ簡単な方法を紹介します。
 
-- [ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [コンテンツの作成](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
 
-  - : ウェブサイトを作るにはたくさんのファイルが必要です。テキストコンテンツ、コード、スタイルシート、メディアコンテンツなどファイルがあります。ウェブサイトを作るときは、これらのファイルをうまく配置して、ファイル同士がお互いにアクセスできることを確認する必要があります。この記事では、ウェブサイトのファイルを適切に配置する方法と、気をつけるべきことについて説明します。
+  - : HTML（**H**yper**T**ext **M**arkup **L**anguage、ハイパーテキストマークアップ言語）とは、ウェブコンテンツを構成し、その内容に意味や目的を持たせるために使用するコードのことです。例えば、コンテンツは段落、箇条書きのリスト、または画像やデータ表を使用して構造化することができます。この記事では、 HTML とその機能の基本的な理解を深め、最初のウェブサイト用の基本的なコンテンツを作成する方法を説明します。
 
-- [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [コンテンツのスタイル設定](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
 
-  - : HyperText Markup Language (HTML、ハイパーテキストマークアップランゲージ) とは、ウェブコンテンツを構成し、その内容に意味や目的を持たせるために使用するコードのことです。例えば、私のコンテンツは段落の集合なのか、それともこの点のリストなのか？ページに挿入する画像はあるか？データ表はありますか？この記事では、HTMLに慣れるために必要な情報を提供します。
+  - : CSS（カスケーディングスタイルシート、Cascading Style Sheets）は、ウェブサイトの見た目を決めるために使うコードです。 「コンテンツのスタイル設定」では、始めるために何が必要かを一通り追って行きます。 例えば、テキストを赤くするにはどうすればよいでしょうか？ コンテンツを（ウェブページ）レイアウトの特定の位置に表示するにはどうすればよいでしょうか？ 背景画像や背景色を使ってウェブページを装飾するにはどうすればよいでしょうか？
 
-- [CSS の基本](/ja/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [操作の追加](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
 
-  - : Cascading Stylesheets (CSS: カスケーディング・スタイルシート) は、ウェブサイトの見た目を決めるために使うコードです。CSS を書くと、テキストの色を黒や赤にしたり、コンテンツを画面のどこに表示するかを決めたり、ページの背景に好きな色をつけたり画像を表示したりして、ウェブサイトを好きなように飾り付けることができます。この記事では、こうした飾り付けの方法について説明します。
+  - : JavaScript は、ウェブサイトに操作を追加するために使うプログラミング言語です。これはゲーム、ボタンが押された際のレスポンスの動作、フォームへのデータ入力、動的なスタイル設定、アニメーションなど、さまざまな場面で現れます。この記事は、JavaScriptを使い始めたり、何ができるのかを理解したりするのに役立ちます。
 
-- [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [サンプルコードの公開](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
 
-  - : JavaScript は、ウェブサイトにインタラクティブな機能を追加するために使うプログラミング言語です。例えば、ゲーム、ボタンが押された時やフォームにデータが入力された時に起こること、動的なスタイルの効果、アニメーション、などなどです。この記事では、この楽しいプログラミング言語を使ってどんなことができるのか、そしてどうやって使い始めれば良いのかを紹介します。
+  - : コードを書き終え、ウェブサイトを構成するファイルを整理したら、人々が探せるようにすべてをオンラインで公開する必要があります。この記事では、最小限の手間でサンプルウェブサイトをどのようにオンラインで公開するかを説明します。
 
-- [サンプルコードの公開](/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-
-  - : ウェブサイトのコードを書き終えて、ウェブサイトに必要なファイルが用意できたら、作ったファイルをすべてオンラインにして、インターネット上の他の人からも見られるようにする必要があります。この記事では、簡単なサンプルコードを最小限の手間でオンラインに公開する方法を説明しています。
-
-- [ウェブのしくみ](/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-  - : あなたがお気に入りのウェブサイトにアクセスする時、実は目に見えない所ではとても複雑なことが行われています。ここでは、あなたがパソコンでウェブページを開いた時に裏側でどんなことが行われているのか、その大まかなしくみを説明します。
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}
 
 ## 関連情報
 
 - [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
   - : [Scrimba's](https://scrimba.com?via=mdn) のフロントエンド開発者キャリアパスは、楽しい対話型のレッスンや課題、知識豊富な講師、対応しているコミュニティを通じて、有能なフロントエンドウェブ開発者になるために必要なすべてを教えてくれます。ゼロから最初のフロントエンドの仕事に就くまで。このコースの多くの部分は、無料版として単独で利用できます。
-- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : ウェブの基本を説明した素晴らしい動画のシリーズで、完全な初心者がウェブ開発できるようにするためのものです。 [Jérémie Patonnier](https://twitter.com/JeremiePat) 作。
-- [ウェブとウェブ標準](/ja/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards)
-  - : この記事では、ウェブの役立つ背景 — どうやってできたのか、ウェブ標準技術とはなにか、どう連携させるか、「ウェブ開発者」がなぜ素晴らしいキャリアであるか、この過程を通じてどんなベストプラクティスが学習できるか — を提供します。

@@ -1,14 +1,36 @@
 ---
-title: HTML の基本
+title: "HTML: コンテンツの作成"
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-original_slug: Learn/Getting_started_with_the_web/HTML_basics
 l10n:
-  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 HTML （**H**yper**T**ext **M**arkup **L**anguage、ハイパーテキスト・マークアップ・ランゲージ）は、ウェブサイトのコンテンツの構造を作るために使うコードです。例えば、コンテンツは段落、箇条書きのリスト、画像の使用、データテーブルなどの組み合わせで構成されています。タイトルが示すように、この記事では HTML とその機能の基本的な理解ができるように説明します。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        コンピューターのオペレーティングシステム、ウェブサイトを構築する際に使用する基本ソフトウェア、およびファイルシステムに概ね慣れておくこと。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>HTML の目的と機能。</li>
+          <li>HTML 構文の基本的な部分 — 開始タグと閉じられたタグ、要素、属性、見出し、本体。</li>
+          <li>段落、見出し、画像、リスト、リンクなど、一般的な HTML 要素が含まれます。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## HTML とは
 
@@ -54,7 +76,7 @@ My cat is very grumpy
 
 ### 要素の入れ子
 
-要素の中に他の要素を入れることもできます。これを**ネスト**（または入れ子）と言います。もしあなたの猫が「とっても」機嫌が悪いことを表したいとしたら、「とっても」という単語を {{htmlelement("strong")}} 要素に入れて、単語の強調を表すことができます。
+要素の中に他の要素を入れることもできます。これを**ネスト**（または入れ子）と言います。もしあなたの猫が**とっても**機嫌が悪いことを表したいとしたら、 "very" という単語を {{htmlelement("strong")}} 要素に入れて、単語の強調を表すことができます。
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -78,9 +100,12 @@ My cat is very grumpy
 
 この要素は 2 つの属性を持っていますが、終了タグ `</img>` がありませんし、内部にコンテンツもありません。これは画像要素は、その機能を果たすためにコンテンツを囲むものではないからです。画像要素の目的は、画像を HTML ページの表示させたいところに埋め込むことです。
 
-### HTML 文書の構造
+## 初めての HTML 文書の作成
 
-ここまでは HTML 要素について見てきましたが、しかし、要素単体ではあまり役には立ちません。ここからはどのようにしてそれぞれの要素を組み合わせ、 HTML ページ全体を作っていくのかを勉強していきましょう。[ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で出てきた `index.html` に書いてあるコードをもう一度見てみましょう。
+以上で個々の HTML 要素の基本は終了ですが、要素単体ではあまり役に立ちません。 これで個々の要素を結合して HTML ページ全体を形成する方法を見てみましょう。 基本的な HTML ファイルを作成し、それがどのような要素で構成されているか見てみましょう。
+
+1. 自分の `web-projects` フォルダー内に、 `first-website` という新しいフォルダーを作成します。
+2. `first-website` の中で、 `index.html` という新しいファイルを作成し、次のコードを正確に表示させるように挿入します。
 
 ```html
 <!doctype html>
@@ -91,7 +116,7 @@ My cat is very grumpy
     <title>テストページ</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="テスト画像" />
+    <img src="" alt="テスト画像" />
   </body>
 </html>
 ```
@@ -102,8 +127,8 @@ My cat is very grumpy
 - `<html></html>` — {{htmlelement("html")}} 要素です。この要素は、このページのすべてのコンテンツを囲み、ルート要素と呼ばれることもあります。ここでは文書の主要な言語を設定する `lang` 属性も指定します。
 - `<head></head>` — {{htmlelement("head")}} 要素です。この要素は、ページの閲覧者に向けて表示するためのコンテンツではない、 HTML ページに含めたいものをすべて収めるための入れ物です。検索エンジン向けの {{Glossary("keyword", "キーワード")}} やページのディスクリプション（説明書き）、ページの見た目を変更するための CSS、文字コードの宣言などを含みます。
 - `<meta charset="utf-8">` — この要素は、大部分の書き言葉の文字のほとんどを含む UTF-8 を文書で使用するように設定しています。基本的には、文書はどんなテキストコンテンツでも扱えるようになります。これを設定しない理由はありませんし、後でいくつかの問題を回避するのに役立ちます。
+- `<meta name="viewport" content="width=device-width">` — この[ビューポート属性](/ja/docs/Web/CSS/Viewport_concepts#モバイルのビューポート)は、このページがある幅のビューポートで描画されることを保証し、モバイルブラウザーがビューポートより広い幅でページを描画した上で縮小して表示するのを防止します。
 - `<title></title>` — {{htmlelement("title")}} 要素です。ページのタイトルを指定しています。このタイトルはページが読み込まれた時にブラウザーのタブに表示されます。また、ブックマークやお気に入りに登録した時の説明にも使われます。
-- `<meta name="viewport" content="width=device-width">` — この[ビューポート属性](/ja/docs/Web/CSS/Viewport_concepts#mobile_viewports)は、このページがある幅のビューポートで描画されることを保証し、モバイルブラウザーがビューポートより広い幅でページを描画した上で縮小して表示するのを防止します。
 - `<body></body>` — {{htmlelement("body")}} 要素です。これには、テキスト、画像、ビデオ、ゲーム、再生可能な音声トラックなど、ページを訪れたウェブの利用者に表示したいすべてのコンテンツが含まれます。
 
 ## 画像
@@ -111,12 +136,12 @@ My cat is very grumpy
 もう一度 {{htmlelement("img")}} 要素について見ていくことにしましょう。
 
 ```html
-<img src="images/firefox-icon.png" alt="テスト画像" />
+<img src="" alt="テスト画像" />
 ```
 
 前に説明したように、ページのこれが現れたところに画像を埋め込みます。画像ファイルのパスを値に持つ `src` (source) 属性を指定することによってその画像を表示できます。
 
-また、 `alt` (alternative; 代替) 属性も指定しています。 [`alt` 属性](/ja/docs/Web/HTML/Element/img#意味のある代替説明を書く)は、以下のような理由で画像を見られない人に向けて説明するテキストを指定するものです。
+また、 `alt` (alternative、代替) 属性も指定しています。 [`alt` 属性](/ja/docs/Web/HTML/Element/img#意味のある代替説明を書く)は、以下のような理由で画像を見られない人に向けて説明するテキストを指定するものです。
 
 1. 目が不自由な人。著しく目の不自由な人はよくスクリーンリーダーと呼ばれるツールを使っていて、それが画像の `alt` 属性の内容を読み上げます。
 2. 何らかの理由で画像の表示に失敗した場合。例えば、 `src` 属性の中のパスをわざと正しくないものに変更してみてください。ページを保存したり再読み込みしたりすると、画像の場所に下記のようなものが表示されるでしょう。
@@ -125,10 +150,19 @@ My cat is very grumpy
 
 alt テキストのキーワードは「説明文」です。 alt テキストは、その画像が何を伝えているのかを読者が十分に理解できるような情報を提供する必要があります。この例では、現在のテキストである「テスト画像」は全く意味がありません。 Firefox のロゴであれば、「Firefox のロゴ: 地球の周りを燃えるような狐が囲んでいる。」の方がずっと良いでしょう。
 
-画像に良い代替文字列を付けてみましょう。
+> [!NOTE]
+> アクセシビリティについての詳細は、[アクセシビリティ学習モジュール](/ja/docs/Learn_web_development/Core/Accessibility)をご覧ください。
+
+画像を表示させてみましょう。
+
+1. `first-website` フォルダー内に、 `images` という新しいフォルダーを作成し、前回選択した画像をこのフォルダー内に置きます。
+2. `<img>` タグの `src` 属性値内に、画像へのパスを入力します。 `images` というフォルダー内にあり、 `index.html` ファイルと同じディレクトリー内にあります。したがって、パスは `images/` に画像の名前を付けたものになります。例えば、画像が `firefox-icon.png` という名前で呼ばれている場合、 `src` 属性は `src="images/firefox-icon.png"` のようになります。
+3. `alt` 属性値の `テスト画像` を、画像をより適切に説明するテキストに置き換えてください。
+4. ウェブブラウザー内で `index.html` ファイルを開いてください。画像が表示されるはずです。表示されない場合は、上記のコードと照らし合わせて `<img>` 要素を調べてください。引用符などの構文に抜けがないか確認してください。画像ファイル名が正しいことを確認してください。
 
 > [!NOTE]
-> アクセシビリティについての詳細は、[アクセシビリティ学習モジュール](/ja/docs/Learn/Accessibility)と、さまざまな状況で画像に alt 属性を使用する方法を学ぶための [alt 決定ツリー](https://www.w3.org/WAI/tutorials/images/decision-tree/)をご覧ください。
+> 画像が実に大きく、画面に収まらない場合でも、心配しないでください。次の記事でこの課題は修正されます。
+> アクセシビリティについての詳細は、[アクセシビリティ学習モジュール](/ja/docs/Learn_web_development/Core/Accessibility)と、さまざまな状況で画像に alt 属性を使用する方法を学ぶための [alt 決定ツリー](https://www.w3.org/WAI/tutorials/images/decision-tree/)をご覧ください。
 
 ## テキストのマークアップ
 
@@ -152,17 +186,17 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 それでは、あなたの HTML の {{htmlelement("img")}} 要素の上に適切なタイトルを付けてみましょう。
 
 > [!NOTE]
-> 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#テキストコンテンツ)や [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#なぜ構造が必要なのか)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
+> 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/HTML#%e3%83%86%e3%82%ad%e3%82%b9%e3%83%88%e3%82%b3%e3%83%b3%e3%83%86%e3%83%b3%e3%83%84)や [SEO などの理由](/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#%e3%81%aa%e3%81%9c%e6%a7%8b%e9%80%a0%e3%81%8c%e5%bf%85%e8%a6%81%e3%81%aa%e3%81%ae%e3%81%8b)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
 
 ### 段落
 
 先に説明したように、 {{htmlelement("p")}} 要素は段落を示しています。通常の文章を書くときにはこの要素を頻繁に使うことになるでしょう。
 
 ```html
-<p>This is a single paragraph</p>
+<p>これは単一の段落です</p>
 ```
 
-サンプルテキストを (「[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)」から持ってきてください) 1 つまたは複数の段落に入れ、 {{htmlelement("img")}} 要素のすぐ下に配置してください。
+前の記事のサンプルテキストを 1 つまたは複数の段落に入れ、 {{htmlelement("img")}} 要素のすぐ下に配置してください。保存したら、ページをブラウザーで見てみてください。
 
 ### リスト
 
@@ -237,6 +271,6 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 
 もし途中で行き詰まってしまったなら、 GitHub にある[完成版のコード例](https://github.com/mdn/beginner-html-site/blob/main/index.html)と見比べてみてください。
 
-この記事では HTML の表面的な部分だけを勉強しました。もっと知りたい場合は [HTML を学ぶ](/ja/docs/Learn/HTML)を読んでみてくだい。
+この記事では HTML の表面的な部分だけを勉強しました。もっと知りたい場合は [HTML を学ぶ](/ja/docs/Learn_web_development/Core/Structuring_content)を読んでみてくだい。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
