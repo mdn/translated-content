@@ -68,5 +68,5 @@ html(lang='en')
 
 ## 下一步
 
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下個部分：[主页](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 的下個部分：[主页](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page)

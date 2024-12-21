@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Express_Nodejs/deployment
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
-现在你已经创建（并测试）了一个不错的 [本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。
+现在你已经创建（并测试）了一个不错的 [本地图书馆](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) 网站了，你打算把它发布到一个公共网络服务器，这样图书馆职工和网络上的其他成员就可以访问它了。这篇文章总结了你可以怎样找到一台主机部署你的网站，以及你需要为站点准备到生产环境做什么。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">前提：</th>
       <td>
         完成前面所有的指南主题，包括
-        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>
@@ -30,7 +30,7 @@ original_slug: Learn/Server-side/Express_Nodejs/deployment
 
 一旦你的站点完成（或完成“足够”以开始公共测试），你将需要将其托管在比你的个人开发计算机，更公开和可访问的地方。
 
-到目前为止，你一直在[开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment)中工作，使用 Express / Node 作为 Web 服务器，将你的站点共享到本地浏览器/网络，并使用（不安全的）开发设置运行你的网站，以显示调试和其他私人信息。在你可以在外部托管网站之前，你首先必须：
+到目前为止，你一直在[开发环境](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)中工作，使用 Express / Node 作为 Web 服务器，将你的站点共享到本地浏览器/网络，并使用（不安全的）开发设置运行你的网站，以显示调试和其他私人信息。在你可以在外部托管网站之前，你首先必须：
 
 - 选择托管 Express 应用程序的环境。
 - 对项目设置进行一些更改。

@@ -14,15 +14,15 @@ original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-ele
       <th scope="row">前提：</th>
       <td>
         基础电脑知识，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装了基本的软件</a
-        >，<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >，<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习 <a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >），以及对 CSS 工作原理的了解（学习 <a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 入门概述</a
         >）
       </td>
@@ -231,7 +231,7 @@ article p:first-child::first-line {
 
 伪类使得你可以将处于特定状态的元素作为目标，就像你已向 DOM 添加了该状态的类一样。伪元素的作用就像是你已向 DOM 添加了全新的元素，并允许你为其设置样式。`::before` 和 `::after` 伪元素让你可以使用 CSS 将内容插入文档。
 
-在下一篇文章中，我们将会学习[关系选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)。
+在下一篇文章中，我们将会学习[关系选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators)。
 
 ## 参见
 

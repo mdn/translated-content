@@ -16,16 +16,16 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         <a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，具备<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >处理文件</a
         >的基本知识，熟悉 HTML 基础知识（如在<a
-         href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+         href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >入门 HTML </a
         >中介绍的内容）以及 <a
-         href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+         href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >HTML 中的图像</a
         >。
       </td>
@@ -258,7 +258,7 @@ WEBVTT
 </video>
 ```
 
-为了尝试这种方法，需要在[本地 HTTP 服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)上托管文件。在浏览器的输出中，会看到一个显示字幕的视频，有点像这样：
+为了尝试这种方法，需要在[本地 HTTP 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)上托管文件。在浏览器的输出中，会看到一个显示字幕的视频，有点像这样：
 
 ![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
 
@@ -285,11 +285,11 @@ WEBVTT
 
 ## 技能测试！
 
-你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)。
+你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)。
 
 ## 总结
 
-我们祝愿你可以沉浸在 Web 网站的音频和视频当中，下一篇文章，我们将会学习到[另外一种在 web 页面中嵌入内容的方法](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)，比如使用 {{htmlelement("iframe")}} 或者 {{htmlelement("object")}}。
+我们祝愿你可以沉浸在 Web 网站的音频和视频当中，下一篇文章，我们将会学习到[另外一种在 web 页面中嵌入内容的方法](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)，比如使用 {{htmlelement("iframe")}} 或者 {{htmlelement("object")}}。
 
 ## 参见
 

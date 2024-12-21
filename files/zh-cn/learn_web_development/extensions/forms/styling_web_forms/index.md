@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        对 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 和 <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS</a> 的基本理解。
+        对 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 的基本理解。
       </td>
     </tr>
     <tr>
@@ -52,7 +52,7 @@ l10n:
 - 复选框和单选按钮
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 
-[表单样式化进阶](/zh-CN/docs/Learn/Forms/Advanced_form_styling)一文介绍了如何设置这些样式。
+[表单样式化进阶](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)一文介绍了如何设置这些样式。
 
 #### 仅靠 CSS 无法对内部结构进行样式设计
 
@@ -65,14 +65,14 @@ l10n:
 
 例如，日期选择器的日历和点击时会显示选项列表的 \<select> 按钮不能仅使用 CSS 进行样式设计。
 
-[表单样式化进阶](/zh-CN/docs/Learn/Forms/Advanced_form_styling)和[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)两篇文章介绍了如何设置这些样式。
+[表单样式化进阶](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)和[如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)两篇文章介绍了如何设置这些样式。
 
 > [!NOTE]
 > 一些专有的 CSS 伪元素（如 {{cssxref('::-moz-range-track')}}）可以为此类内部组件设计样式，但它们在不同浏览器之间并不一致，因此并不十分可靠。我们稍后会提到。
 
 ## 对简单的表单微件进行样式设计
 
-可以使用[你的首个表单](/zh-CN/docs/Learn/Forms/Your_first_form)和 [CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)文章中的技术对上一节中“易于样式化”的微件进行样式设计。还有一些特殊的选择器——[UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)——可以根据用户界面的当前状态来设计样式。
+可以使用[你的首个表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)和 [CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)文章中的技术对上一节中“易于样式化”的微件进行样式设计。还有一些特殊的选择器——[UI 伪类](/zh-CN/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)——可以根据用户界面的当前状态来设计样式。
 
 我们将在本文结尾举例说明，但首先，这里有一些值得了解的表单样式的特殊方面。
 
@@ -161,7 +161,7 @@ legend {
 
 ### HTML
 
-与我们在[本指南第一篇文章](/zh-CN/docs/Learn/Forms/Your_first_form)中使用的示例相比，HTML 只是稍微复杂一些；它只是多了几个 ID 和一个标题。
+与我们在[本指南第一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)中使用的示例相比，HTML 只是稍微复杂一些；它只是多了几个 ID 和一个标题。
 
 ```html
 <form>
@@ -203,7 +203,7 @@ legend {
 1. 访问 fontsquirrel.com 的 [Web 字体生成器](https://www.fontsquirrel.com/tools/webfont-generator)工具。
 2. 使用表单上传字体文件，生成 Web 字体工具包。将该工具包下载到你的电脑上。
 3. 解压缩提供的压缩文件。
-4. 在解压后的内容中，你会发现一些字体文件（在撰写本文时，有两个 `.woff` 文件和两个 `.woff2` 文件；将来可能会有变化）。将这些文件复制到一个名为 fonts 的目录中，该目录与之前的目录相同。我们为每种字体使用了两个不同的文件，以最大限度地提高浏览器兼容性；请参阅我们的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)文章，了解更多信息。
+4. 在解压后的内容中，你会发现一些字体文件（在撰写本文时，有两个 `.woff` 文件和两个 `.woff2` 文件；将来可能会有变化）。将这些文件复制到一个名为 fonts 的目录中，该目录与之前的目录相同。我们为每种字体使用了两个不同的文件，以最大限度地提高浏览器兼容性；请参阅我们的 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)文章，了解更多信息。
 
 ### CSS
 
@@ -374,16 +374,16 @@ button:focus {
 
 ## 技能测试
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn/Forms/Test_your_skills:_Styling_basics)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics)。
 
 ## 总结
 
-正如你所看到的，只要我们想创建只有文本字段和按钮的表单，就很容易使用 CSS 对其进行样式设置。[下一篇文章中](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单微件。
+正如你所看到的，只要我们想创建只有文本字段和按钮的表单，就很容易使用 CSS 对其进行样式设置。[下一篇文章中](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单微件。
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 ### 进阶内容
 
-- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单控件的属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单控件的属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

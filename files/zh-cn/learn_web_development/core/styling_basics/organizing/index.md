@@ -20,10 +20,10 @@ original_slug: Learn/CSS/Building_blocks/Organizing
           href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >），了解 CSS 的工作方式（学习<a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 入门</a
         >。）
       </td>
@@ -383,7 +383,7 @@ $base-color: #c6538c;
 
 这是我们学习 CSS 的指导的最后一部分，正如你所见，你可以通过许多方式从这里继续对 CSS 的探索。
 
-欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)这节课。
+欲了解更多关于 CSS 布局的事情，查看[学习 CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)这节课。
 
 你应该也有了探索 [MDN CSS](/zh-CN/docs/Web/CSS) 学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的 [CSS 指导手册](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的布局模式，或继续阅读如 [CSS 网格布局指南](/zh-CN/docs/Web/CSS/CSS_grid_layout)等更加专门的指南。
 

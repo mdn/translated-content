@@ -21,10 +21,10 @@ original_slug: Learn/CSS/Building_blocks/Selectors
           href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >）以及对 CSS 工作方式的了解（学习<a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 初步</a
         >）
       </td>
@@ -175,6 +175,6 @@ article > p {
 
 ## 接下来要做的事情
 
-你可以看下下面的选择器参考表，可以获得到这个学习章节——或者总体来说是 MDN 上——的各种选择器的直接链接；你也可以继续下去，开始你的了解[类型、类和 ID 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)的旅程。
+你可以看下下面的选择器参考表，可以获得到这个学习章节——或者总体来说是 MDN 上——的各种选择器的直接链接；你也可以继续下去，开始你的了解[类型、类和 ID 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)的旅程。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

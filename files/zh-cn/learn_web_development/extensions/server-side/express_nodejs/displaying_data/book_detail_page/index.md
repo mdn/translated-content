@@ -37,7 +37,7 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
 > [!NOTE]
 > 我们不需要用 require 导入任何额外的模块，因为我们在实现主页控制器时已经导入了依赖项。
 
-此方法与[类别详细信息页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)描述的方法完全相同。路由控制器函数使用 `Promise.all()` 并行查询指定的书籍（`Book`）以及它的相关副本（`BookInstance`）。如果没有找到匹配的书籍，就会返回一个带有“404: Not Found”错误的 Error 对象。如果找到了书籍，那么就会使用“book_detail”模板呈现检索到的数据库信息。由于“title”键用于给网页命名（如“layout.pug”中定义的标题），所以这次我们在渲染网页时传递了 `results.book.title`。
+此方法与[类别详细信息页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)描述的方法完全相同。路由控制器函数使用 `Promise.all()` 并行查询指定的书籍（`Book`）以及它的相关副本（`BookInstance`）。如果没有找到匹配的书籍，就会返回一个带有“404: Not Found”错误的 Error 对象。如果找到了书籍，那么就会使用“book_detail”模板呈现检索到的数据库信息。由于“title”键用于给网页命名（如“layout.pug”中定义的标题），所以这次我们在渲染网页时传递了 `results.book.title`。
 
 ## 视图
 
@@ -101,5 +101,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下一个部分：[作者详细信息页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 的下一个部分：[作者详细信息页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)

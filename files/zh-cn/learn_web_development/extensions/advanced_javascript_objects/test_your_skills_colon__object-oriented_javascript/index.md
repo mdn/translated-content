@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaSc
 
 {{learnsidebar}}
 
-这个测试的目的是为了评估你是否已经理解了我们的 [JavaScript 中的类](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)这一文章。
+这个测试的目的是为了评估你是否已经理解了我们的 [JavaScript 中的类](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)这一文章。
 
 > [!NOTE]
 > 你可以尝试在下方的交互式编辑器，但是若你下载源码并使用在线工具（例如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）来尝试这些任务，可能会更有帮助。

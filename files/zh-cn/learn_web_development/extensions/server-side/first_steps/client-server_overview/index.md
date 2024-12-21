@@ -27,7 +27,7 @@ original_slug: Learn/Server-side/First_steps/Client-Server_overview
 
 ## Web 服务器和 HTTP（入门）
 
-Web 浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与 [Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)。当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
+Web 浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与 [Web 服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)。当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
 
 这个请求包含：
 
@@ -62,7 +62,7 @@ Web 服务器等待来自客户的请求信息，当请求到达时处理它们�
 
 #### 请求
 
-每一行请求都包含着相关信息。第一部分被称为**标头**（header），并且包含着关于这个请求的有用信息，同样地，[HTML head](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) 包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
+每一行请求都包含着相关信息。第一部分被称为**标头**（header），并且包含着关于这个请求的有用信息，同样地，[HTML head](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) 包含着关于 HTML 文档的有用信息（但是却没有自身的实际内容，内容在主体里面）。
 
 ```plain
 GET /zh-CN/search?q=client+server+overview&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev HTTP/1.1

@@ -14,10 +14,10 @@ original_slug: Learn/Performance/CSS
       <th scope="row">前提：</th>
       <td>
         基本的计算机操作能力，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，以及对<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端 Web 技术的基本了解</a
         >。
       </td>
@@ -35,7 +35,7 @@ original_slug: Learn/Performance/CSS
 
 在开始优化 CSS 之前，你应该回答一个问题：“我需要优化什么？”下面讨论的一些技巧和技术是适用于几乎任何 Web 项目的良好实践，然而另一些只在特定情况下需要。试图在所有地方应用这些技术可能是不必要的，而且可能会浪费你的时间。你应该确定每个项目实际上需要哪些性能优化。
 
-为了做到这一点，你需要[测量网站性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如上面的链接所示，有几种不同的测量性能的方法，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，入门的最佳方法是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，以查看页面加载中哪些部分花费了很长时间，并且需要进行优化。
+为了做到这一点，你需要[测量网站性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如上面的链接所示，有几种不同的测量性能的方法，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，入门的最佳方法是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，以查看页面加载中哪些部分花费了很长时间，并且需要进行优化。
 
 ## 优化渲染
 
@@ -93,7 +93,7 @@ original_slug: Learn/Performance/CSS
   }
   ```
 
-  请记住，许多属性（例如 {{cssxref("font-size")}}）会从其父元素继承其值，因此你不需要在所有地方应用它们。而且功能强大的工具（如[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)）需要谨慎使用。在所有地方都使用它们可能会导致各种意外行为。
+  请记住，许多属性（例如 {{cssxref("font-size")}}）会从其父元素继承其值，因此你不需要在所有地方应用它们。而且功能强大的工具（如[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)）需要谨慎使用。在所有地方都使用它们可能会导致各种意外行为。
 
 - **使用 CSS 精灵图减少图像相关的 HTTP 请求**：[CSS 精灵图](https://css-tricks.com/css-sprites/) 是一种技术，它将你希望在站点上使用的多个小图像（例如图标）放入单个图像文件中，然后使用不同的 {{cssxref("background-position")}} 值在不同的位置显示图像的一部分。这可以大大减少获取图像所需的 HTTP 请求数量。
 

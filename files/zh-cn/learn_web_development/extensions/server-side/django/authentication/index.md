@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Authentication
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-在本教程中，我们将向你展示如何允许用户使用自己的帐户登录到你的网站，以及如何根据用户是否已登录及其*权限*来控制他们可以执行和查看的内容。作为演示的一部分，我们将扩展[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，添加登录页面和注销页面，以及用户和员工特定的页面以查看已借阅的图书。
+在本教程中，我们将向你展示如何允许用户使用自己的帐户登录到你的网站，以及如何根据用户是否已登录及其*权限*来控制他们可以执行和查看的内容。作为演示的一部分，我们将扩展[LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)网站，添加登录页面和注销页面，以及用户和员工特定的页面以查看已借阅的图书。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Django/Authentication
       <th scope="row">前提：</th>
       <td>
         完成之前的所有教程主题，包括
-        <a href="/zh-CN/docs/Learn/Server-side/Django/Sessions"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Sessions"
           >Django 教程 7：Sessions 框架</a
         >。
       </td>
@@ -28,12 +28,12 @@ original_slug: Learn/Server-side/Django/Authentication
 
 ## 概观
 
-Django 提供了一个身份验证和授权（“权限”）系统，该系统构建在[上一个教程](/zh-CN/docs/Learn/Server-side/Django/Sessions)中讨论的会话框架之上，允许你验证用户凭据，并定义每个用户可允许执行的操作。该框架包括用户`Users`和分组`Groups`的内置模型（一次向多个用户应用权限的通用方法），用于登录用户的权限/标志，以指定用户是否可以执行任务，表单和视图，以及查看限制内容的工具。
+Django 提供了一个身份验证和授权（“权限”）系统，该系统构建在[上一个教程](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Sessions)中讨论的会话框架之上，允许你验证用户凭据，并定义每个用户可允许执行的操作。该框架包括用户`Users`和分组`Groups`的内置模型（一次向多个用户应用权限的通用方法），用于登录用户的权限/标志，以指定用户是否可以执行任务，表单和视图，以及查看限制内容的工具。
 
 > [!NOTE]
 > Django 身份验证系统的目标非常通用，因此不提供其他 Web 身份验证系统中，所提供的某些功能。某些常见问题的解决方案，可作为第三方软件包提供。例如，限制登录尝试，和针对第三方的身份验证（例如 OAuth）。
 
-在本教程中，我们将向你展示，如何在[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站中，启用用户身份验证，创建你自己的登录和注销页面，为模型添加权限，以及控制对页面的访问。我们将使用身份验证/权限，来显示用户和图书馆员借用图书的列表。
+在本教程中，我们将向你展示，如何在[LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)网站中，启用用户身份验证，创建你自己的登录和注销页面，为模型添加权限，以及控制对页面的访问。我们将使用身份验证/权限，来显示用户和图书馆员借用图书的列表。
 
 身份验证系统非常灵活，你可以根据需要，从头开始构建 URLs，表单，视图和模板，只需调用提供的 API，即可登录用户。但是，在本文中，我们将在登录和注销页面，使用 Django 的“库存”身份验证视图和表单。我们仍然需要创建一些模板，但这很简单。
 
@@ -41,7 +41,7 @@ Django 提供了一个身份验证和授权（“权限”）系统，该系统�
 
 ## 启用身份验证
 
-我们在[创建框架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)时（在教程 2 中），自动启用了身份验证，因此你此时，无需再执行任何操作。
+我们在[创建框架网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)时（在教程 2 中），自动启用了身份验证，因此你此时，无需再执行任何操作。
 
 > [!NOTE]
 > 当我们使用 `django-admin startproject` 命令，以创建应用程序时，所有必要的配置都已完成。当我们第一次调用 `python manage.py migrate` 时，创建了用户和模型权限的数据库表。
@@ -65,7 +65,7 @@ MIDDLEWARE = [
 
 ## 创建用户和分组
 
-在教程 4 中，当我们查看 [Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)时，你已经创建了第一个用户（这是一个超级用户，使用命令 `python manage.py createsuperuser` 创建）。我们的超级用户已经过身份验证，并拥有所有权限，因此我们需要创建一个测试用户，来代表普通网站用户。我们将使用管理站点，来创建我们的 locallibrary 组別和网站登录，因为这是最快的方法之一。
+在教程 4 中，当我们查看 [Django 管理站点](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)时，你已经创建了第一个用户（这是一个超级用户，使用命令 `python manage.py createsuperuser` 创建）。我们的超级用户已经过身份验证，并拥有所有权限，因此我们需要创建一个测试用户，来代表普通网站用户。我们将使用管理站点，来创建我们的 locallibrary 组別和网站登录，因为这是最快的方法之一。
 
 > [!NOTE]
 > 你还可以用编程方式创建用户，如下所示。你会必须这样做，例如，如果要开发一个界面，能允许用户创建自己的登录（你不应该授予用户访问管理站点的权限）。

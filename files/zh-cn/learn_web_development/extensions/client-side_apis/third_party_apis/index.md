@@ -15,13 +15,13 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        JavaScript 基础（见 <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+        JavaScript 基础（见 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript 第一步</a
-        >、<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        >、<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建 JavaScript 代码块</a
-        >、<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a
+        >、<a href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript 对象介绍</a
         >）、<a
-          href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
           >Web API 简介</a
         >
       </td>
@@ -254,7 +254,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HE
 > 你可以在[纽约时报开发者文档](https://developer.mytimes.com/)中找到更多关于可以包含的 URL 参数的详细信息。
 
 > [!NOTE]
-> 这个例子包含了基本的表单数据验证——在表单提交之前，搜索词字段必须被填入（通过 `required` 属性实现），日期字段包含 `pattern` 属性，这意味着它们的值必须由 8 个数字组成（`pattern="[0-9]{8}"`）。有关这些工作原理的更多详情，请参阅[表单数据验证](/zh-CN/docs/Learn/Forms/Form_validation)。
+> 这个例子包含了基本的表单数据验证——在表单提交之前，搜索词字段必须被填入（通过 `required` 属性实现），日期字段包含 `pattern` 属性，这意味着它们的值必须由 8 个数字组成（`pattern="[0-9]{8}"`）。有关这些工作原理的更多详情，请参阅[表单数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。
 
 ### 从 API 请求数据
 

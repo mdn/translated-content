@@ -14,7 +14,7 @@ original_slug: Learn/JavaScript/Building_blocks/conditionals
       <th scope="row">前提：</th>
       <td>
         基本的计算机知识，对 HTML 和 CSS 有基本的了解，已经阅读了 <a
-          href="/zh-CN/docs/Learn/JavaScript/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript 第一步</a
         >。
       </td>
@@ -838,7 +838,7 @@ textarea.onkeyup = function () {
 
 ## 技能测试！
 
-你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[技能测试：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
+你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[技能测试：条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals)
 
 ## 结论
 

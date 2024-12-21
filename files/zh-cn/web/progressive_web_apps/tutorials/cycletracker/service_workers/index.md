@@ -378,7 +378,7 @@ if ("serviceWorker" in navigator) {
 
 你可能会不想每次保存都要更新版本号。在你准备好将你的 PWA 的新版本投入生产并为所有人提供你的 PWA 的新版本前，你可以用注销 service worker 的方法来代替在每次保存时更改版本号。
 
-你可以通过在[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
+你可以通过在[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中点击 `unregister` 按钮来注销一个 service worker。强刷新页面将会重新注册 service worker 并建立新的缓存。
 
 ![带有停止和注销 service worker 按钮的 Firefox 开发者工具应用程序面板](firefox_sw.jpg)
 

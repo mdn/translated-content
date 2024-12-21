@@ -162,5 +162,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- 继续教程 6 的下一个部分：[删除作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form)
+- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
+- 继续教程 6 的下一个部分：[删除作者表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form)

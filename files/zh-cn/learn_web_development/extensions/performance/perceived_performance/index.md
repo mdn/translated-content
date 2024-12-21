@@ -17,7 +17,7 @@ original_slug: Learn/Performance/Perceived_performance
       <td>
         <a href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装基本的软件</a
-        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        >、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端 web 技术</a
         >的基础知识。
       </td>

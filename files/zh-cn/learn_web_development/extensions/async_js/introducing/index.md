@@ -237,7 +237,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("事件处理程序", 600, 120)}}
 
-这就像我们在以前的模块中遇到的[事件处理程序](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)，只是这次的事件不是像点击按钮那样的用户行为，而是某个对象的状态变化。
+这就像我们在以前的模块中遇到的[事件处理程序](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)，只是这次的事件不是像点击按钮那样的用户行为，而是某个对象的状态变化。
 
 ## 回调
 

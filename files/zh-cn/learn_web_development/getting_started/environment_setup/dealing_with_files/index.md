@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
-一个网站包含许多文件：文本内容、代码、样式表、媒体内容，等等。在建立一个网站时，你需要在计算机上将这些文件以合理的结构组织起来，确保文件之间交互畅通，并在最终[将它们上传到服务器](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)之前使所有内容看起来正确。*处理文件*讨论了一些你应该注意的问题，以便你能为你的网站建立一个合理的文件结构。
+一个网站包含许多文件：文本内容、代码、样式表、媒体内容，等等。在建立一个网站时，你需要在计算机上将这些文件以合理的结构组织起来，确保文件之间交互畅通，并在最终[将它们上传到服务器](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)之前使所有内容看起来正确。*处理文件*讨论了一些你应该注意的问题，以便你能为你的网站建立一个合理的文件结构。
 
 ## 网站应该保存在何处？
 
@@ -47,7 +47,7 @@ l10n:
 
 ## 文件路径
 
-为使文件之间交互通畅，你必须提供一个文件间的文件路径，让一个文件知道另一个文件的位置。作为演示，我们将在 `index.html` 中插入一小段 HTML，显示在[“你的网站会是什么样子？“](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)一文中选择的图片。或者，你可以在电脑上或从网上选择一张现有的图片，并在下面的步骤中使用它：
+为使文件之间交互通畅，你必须提供一个文件间的文件路径，让一个文件知道另一个文件的位置。作为演示，我们将在 `index.html` 中插入一小段 HTML，显示在[“你的网站会是什么样子？“](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)一文中选择的图片。或者，你可以在电脑上或从网上选择一张现有的图片，并在下面的步骤中使用它：
 
 1. 将前面选择的图片复制到 `images` 文件夹。
 2. 打开 `index.html` 文件，准确无误地将下列代码插入该文件中。现在不用担心它是什么意思——我们将在本系列后面的文章中更详细地研究这些结构。

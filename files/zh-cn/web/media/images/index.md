@@ -7,7 +7,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
-{{Glossary("HTML")}} {{HTMLElement("img")}} 元素可让你在 HTML 文档中嵌入图像，而 {{HTMLElement("picture")}} 元素则可启用[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)。在本指南中，你可以找到有关在网站中添加图像的资源链接。
+{{Glossary("HTML")}} {{HTMLElement("img")}} 元素可让你在 HTML 文档中嵌入图像，而 {{HTMLElement("picture")}} 元素则可启用[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)。在本指南中，你可以找到有关在网站中添加图像的资源链接。
 
 ## 参考
 
@@ -42,5 +42,5 @@ l10n:
 
 你可能感兴趣的相关主题。
 
-- [学习 HTML：响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [学习 HTML：响应式图片](/zh-CN/docs/Web/HTML/Responsive_images)
   - : 在本文中，我们将了解响应式图像（能在屏幕尺寸、分辨率和其他特性差异较大的设备上正常显示的图像）的概念并了解 HTML 提供了哪些工具来帮助我们实现这项技术。

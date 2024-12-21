@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Building_blocks/Images_tasks
 
 {{LearnSidebar}}
 
-该任务的目的是帮助你检查对我们在本课程[Images, Media and Form elements](/zh-CN/docs/Learn/CSS/Building_blocks/Images_media_form_elements)(图像，媒体及表格元素）中了解的一些值和单位的理解。
+该任务的目的是帮助你检查对我们在本课程[Images, Media and Form elements](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)(图像，媒体及表格元素）中了解的一些值和单位的理解。
 
 > [!NOTE]
 > 你可以在下面的交互式编辑器中尝试解决方案，但是下载代码并使用诸如[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) 之类的在线工具来完成任务可能会更加有所帮助。

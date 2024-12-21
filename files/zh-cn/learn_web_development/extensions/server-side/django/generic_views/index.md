@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Generic_views
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
-本教程扩充了 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入 URL 处理细节，演示如何实施基本模式匹配。
+本教程扩充了 [LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入 URL 处理细节，演示如何实施基本模式匹配。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Django/Generic_views
       <th scope="row">前提：</th>
       <td>
         完成所有先前的教程主题，包含<a
-          href="/zh-CN/docs/Learn/Server-side/Django/Home_page"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Home_page"
           >Django 教程 5: 创建主页。</a
         >
       </td>
@@ -31,7 +31,7 @@ original_slug: Learn/Server-side/Django/Generic_views
 
 ## 概览
 
-本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站（或者更准确地说，我们将向你展示如何实现书页，并让你自己创建作者页面！）
+本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的[LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 网站（或者更准确地说，我们将向你展示如何实现书页，并让你自己创建作者页面！）
 
 该过程类似于创建索引页面，我们在上一个教程中展示了该页面。我们仍然需要创建 URL 地图，视图和模板。主要区别在于，对于详细信息页面，我们还有一个额外的挑战，即从 URL 中的模式中提取信息，并将其传递给视图。对于这些页面，我们将演示一种完全不同的视图类型：基于类别的通用列表和详细视图。这些可以显着减少所需的视图代码量，使其更易于编写和维护。
 

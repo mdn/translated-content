@@ -18,15 +18,15 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         <a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装了基本的软件</a
         >，了解基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件管理知识</a
         >，具有 HTML 基础（参见 <a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
-        >），并了解 CSS 如何工作（参见 <a href="/zh-CN/docs/Learn/CSS/First_steps"
+        >），并了解 CSS 如何工作（参见 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 第一步</a
         >）。
       </td>
@@ -344,12 +344,12 @@ img {
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks)。
 
 ## 总结
 
 本课讲解的概念在 CSS 中变得越来越重要。了解块级方向和行级方向，以及文字流如何随着书写模式的改变而改变，对今后的工作非常有用。即使你从未使用过水平书写模式以外的其他书写模式，也能帮助你理解 CSS。
 
-在下一篇文章中，我们将仔细研究 CSS 中的[溢出](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)。
+在下一篇文章中，我们将仔细研究 CSS 中的[溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow)。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

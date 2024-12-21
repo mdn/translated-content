@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Deployment
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-现在，你已经创建（并测试）了一个令人敬畏的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，如果你希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能让你的网站准备好生产。
+现在，你已经创建（并测试）了一个令人敬畏的[LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)网站，如果你希望将其安装在公共 Web 服务器上，以便图书馆工作人员和成员可以通过 Internet 访问它。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能让你的网站准备好生产。
 
 <table>
   <tbody>
@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/Django/Deployment
       <td>
         完成所有先前的教程，包括：
         <p>
-          <a href="/zh-CN/docs/Learn/Server-side/Django/Testing"
+          <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Testing"
             >在线教学 10：测试 Django 的 Web 应用</a
           >
         </p>
@@ -309,7 +309,7 @@ web: gunicorn locallibrary.wsgi --log-file -
 
 虽然在开发期间，我们不需要 Gunicorn 为我们的 LocalLibrary 应用程序提供服务，但我们将安装它，以便它成为我们在远程服务器上设置 Heroku 的 [requirements](#requirements) 的一部分。
 
-使用 pip（我们在[设置开发环境](/zh-CN/docs/Learn/Server-side/Django/development_environment)时安装）在命令行上，将 Gunicorn 安装到本地：
+使用 pip（我们在[设置开发环境](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)时安装）在命令行上，将 Gunicorn 安装到本地：
 
 ```bash
 pip3 install gunicorn
@@ -373,7 +373,7 @@ pip3 install psycopg2
 
 相关的设置变量是：
 
-- `STATIC_URL`: 这是将提供静态文件的基本 URL 位置，例如，在 CDN 上。这用于在我们的基本模板中访问的静态模板变量（请参阅 [Django 教程 5：创建我们的主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)）。
+- `STATIC_URL`: 这是将提供静态文件的基本 URL 位置，例如，在 CDN 上。这用于在我们的基本模板中访问的静态模板变量（请参阅 [Django 教程 5：创建我们的主页](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)）。
 - `STATIC_ROOT`: 这是 Django 的“collectstatic”工具将收集模板中引用的任何静态文件的目录的绝对路径。收集完成后，可以将这些文件，作为一个组上载到托管文件的任何位置。
 - `STATICFILES_DIRS`: 这列出了 Django 的 collectstatic 工具应该搜索静态文件的其他目录。
 

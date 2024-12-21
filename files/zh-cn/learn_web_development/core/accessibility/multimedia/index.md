@@ -14,7 +14,7 @@ original_slug: Learn/Accessibility/Multimedia
       <th scope="row">先决条件：</th>
       <td>
         基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a
-          href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
+          href="/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility"
           >对无障碍</a
         >
         的理解。
@@ -29,7 +29,7 @@ original_slug: Learn/Accessibility/Multimedia
 
 ## 多媒体和无障碍
 
-到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
+到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)属性）。
 
 另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
 
@@ -37,7 +37,7 @@ original_slug: Learn/Accessibility/Multimedia
 
 ## 简单图像
 
-我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/zh-CN/docs/Learn/Accessibility/HTML) –– 你可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
+我们已经介绍了 HTML 图像的简单文本替代[HTML: A good basis for accessibility](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML) –– 你可以参考其中了解详细信息。简而言之，应确保在可能的情况下，视觉内容具有替代文本，供屏幕阅读器拾取和读取给其用户。
 
 示例：
 

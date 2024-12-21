@@ -14,17 +14,17 @@ l10n:
 
 ## 学习起点
 
-你要是还不确定是否要深入地学习 Web 开发，仅想从体验环节开始，我们会建议你从 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南开始学习。除此之外，你应该从下面的主题开始学习。
+你要是还不确定是否要深入地学习 Web 开发，仅想从体验环节开始，我们会建议你从 [Web 入门](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)指南开始学习。除此之外，你应该从下面的主题开始学习。
 
 - HTML 和 CSS
-  - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在 [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)和 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)中学习基本的入门知识。
+  - : HTML 为 Web 内容提供结构，而 CSS 为 Web 内容添加样式并对 Web 内容进行布局。在 [HTML 简介](/zh-CN/docs/Learn_web_development/Core/Structuring_content)和 [CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)中学习基本的入门知识。
 - JavaScript
-  - : JavaScript 为网站提供交互功能。从 [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)开始学习。
+  - : JavaScript 为网站提供交互功能。从 [JavaScript 第一步](/zh-CN/docs/Learn_web_development/Core/Scripting)开始学习。
 - 框架和工具
-  - : 掌握原生 HTML、CSS 和 JavaScript 的基本知识之后，你应该学习[客户端 Web 开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)，接着考虑钻研[客户端 JavaScript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)。你也应该考虑学习[服务器端网站编程](/zh-CN/docs/Learn/Server-side)的基础知识。
+  - : 掌握原生 HTML、CSS 和 JavaScript 的基本知识之后，你应该学习[客户端 Web 开发工具](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools)，接着考虑钻研[客户端 JavaScript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)。你也应该考虑学习[服务器端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)的基础知识。
 
 > [!NOTE]
-> 在[术语表](/zh-CN/docs/Glossary)中能找到术语定义。此外，要是有和 Web 开发相关的特定问题，[常见问题](/zh-CN/docs/Learn/Common_questions)中的内容也许会帮助到你。
+> 在[术语表](/zh-CN/docs/Glossary)中能找到术语定义。此外，要是有和 Web 开发相关的特定问题，[常见问题](/zh-CN/docs/Learn_web_development/Howto)中的内容也许会帮助到你。
 
 > [!CALLOUT]
 >
@@ -38,25 +38,25 @@ l10n:
 
 下面列表包含 MDN 学习区全部的主题。
 
-- [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)
+- [Web 入门](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)
   - : 为纯新手提供实用的 Web 开发介绍。
-- [HTML——为 Web 提供结构](/zh-CN/docs/Learn/HTML)
+- [HTML——为 Web 提供结构](/zh-CN/docs/Learn_web_development/Core/Structuring_content)
   - : HTML 是用于构建内容的不同部分并定义其含义或目的的语言。该主题将详细讲解 HTML。
-- [CSS——为 Web 提供样式](/zh-CN/docs/Learn/CSS)
+- [CSS——为 Web 提供样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : CSS 是用于为 Web 内容添加样式、对 Web 内容进行布局、添加诸如动画的行为的语言。该主题对 CSS 做了全面的覆盖。
-- [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
+- [JavaScript——动态客户端脚本语言](/zh-CN/docs/Learn_web_development/Core/Scripting)
   - : JavaScript 是用于为 Web 页面添加动态功能的脚本语言。该主题涵盖有关编写和理解 JavaScript 代码所需的全部重点。
-- [Web 表单——操作用户数据](/zh-CN/docs/Learn/Forms)
+- [Web 表单——操作用户数据](/zh-CN/docs/Learn_web_development/Extensions/Forms)
   - : Web 表单是用于和用户交互的强大工具——其常用于收集用户数据和控制用户界面。该主题涵盖 Web 表单的结构、样式和交互相关的全部要点。
-- [无障碍——让每个人都能使用 Web](/zh-CN/docs/Learn/Accessibility)
+- [无障碍——让每个人都能使用 Web](/zh-CN/docs/Learn_web_development/Core/Accessibility)
   - : 无障碍是让更多的人不受残疾、设备、地区等因素的限制都能访问 Web 内容的实践。该主题包含一切所需了解的信息。
-- [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn/Performance)
+- [Web 性能优化——让网站更快做出响应](/zh-CN/docs/Learn_web_development/Extensions/Performance)
   - : Web 性能是确保 Web 应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
-- [MathML](/zh-CN/docs/Learn/MathML)
+- [MathML](/zh-CN/docs/Web/MathML)
   - : MathML 是用于在 Web 页面中书写数学公式的语言（使用分数、上下标、根号、矩阵、积分、级数，等等）。该主题讲解 MathML。
-- [工具和测试](/zh-CN/docs/Learn/Tools_and_testing)
+- [工具和测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)
   - : 该主题涵盖的是开发者用于提升效率的工具，如跨浏览器测试工具、代码检查工具、代码格式化工具、转换工具、版本控制系统、部署工具、客户端 JavaScript 框架等。
-- [服务器端网站编程](/zh-CN/docs/Learn/Server-side)
+- [服务器端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)
   - : 尽管你专注于客户端 Web 开发，但了解服务器和服务器端代码的运行机制仍是有用的。该主题对服务器端的运作机制进行了通用介绍，以及包含使用 Django（Python）和 Express（node.js）两个流行框架构建服务器端应用的详细教程。
 
 ## 任务和评估
@@ -64,7 +64,7 @@ l10n:
 在 MDN 的学习 Web 开发部分，有许多独立的任务和评估，等待你完成。有两种主要类型：
 
 - “技能测试”任务，例如，在[代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#技能测试！)。
-- 在某些模块的结尾处，包含更深入的**评估**，例如，[图片库](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery)。
+- 在某些模块的结尾处，包含更深入的**评估**，例如，[图片库](/zh-CN/docs/Learn_web_development/Core/Scripting/Image_gallery)。
 
 每个类型都有相应的评分指南和推荐解决方案，可用于帮助你评估你的工作。某些模式能让你更容易地找到这些资源，例如：
 

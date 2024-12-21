@@ -15,10 +15,10 @@ original_slug: Learn/Forms/Sending_and_retrieving_form_data
       <td>
         <p>
           基本计算机素养，对<a
-            href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+            href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
             >HTML 的理解</a
           >，对<a href="/zh-CN/docs/Web/HTTP">HTTP</a> 和<a
-            href="/zh-CN/docs/Learn/Server-side/First_steps"
+            href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps"
             >服务器端编程</a
           >的基础知识。
         </p>
@@ -46,7 +46,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下：
 在客户端，HTML 表单只不过是一种方便的用户友好的方式，可以配置 HTTP 请求将数据发送到服务器。这使用户能够提供在 HTTP 请求中传递的信息。
 
 > [!NOTE]
-> 为了更好地了解客户端—服务器架构是如何工作的，请阅读我们的[服务器端网站编程的第一个步骤](/zh-CN/docs/Learn/Server-side/First_steps)模块。
+> 为了更好地了解客户端—服务器架构是如何工作的，请阅读我们的[服务器端网站编程的第一个步骤](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps)模块。
 
 ### 在客户端：定义如何发送数据
 
@@ -247,8 +247,8 @@ if __name__ == "__main__":
 
 还有许多其他的服务器端技术可以用于表单处理，包括[Perl](/zh-CN/docs/Web)、[Java](/zh-CN/docs/Web)、 [.Net](https://www.microsoft.com/net)、[Ruby](/zh-CN/docs/Web)等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
 
-- [Django](/zh-CN/docs/Learn/Server-side/Django) for Python（比[Flask](http://flask.pocoo.org/)要重量级一些，但是有更多的工具和选项。）
-- [Express](/zh-CN/docs/Learn/Server-side/Express_Nodejs) for Node.js
+- [Django](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django) for Python（比[Flask](http://flask.pocoo.org/)要重量级一些，但是有更多的工具和选项。）
+- [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) for Node.js
 - [Laravel](https://laravel.com/) for PHP
 - [Ruby On Rails](https://rubyonrails.org/) for Ruby
 - [Phoenix](https://phoenixframework.org/) for Elixir
@@ -335,17 +335,17 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 如果你遵循这三条规则，你应该避免很多问题，但是如果你想要得到一个有能力的第三方执行的安全检查，这是一个好主意。不要以为你已经看到了所有可能的问题。
 
 > [!NOTE]
-> 我们的[服务器端](/zh-CN/docs/Learn/Server-side)学习主题的[网站安全性文章](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)更详细地讨论了上述威胁和潜在的解决方案。
+> 我们的[服务器端](/zh-CN/docs/Learn_web_development/Extensions/Server-side)学习主题的[网站安全性文章](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)更详细地讨论了上述威胁和潜在的解决方案。
 
 ## 结论
 
-如你所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/Learn/Forms/Form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
+如你所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
 
 ## 参见
 
 如果你想了解更多关于保护 web 应用程序的信息，你可以深入了解这些资源：
 
-- [Server-side website programming first steps](/zh-CN/docs/Learn/Server-side/First_steps)
+- [Server-side website programming first steps](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps)
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
 - [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
 

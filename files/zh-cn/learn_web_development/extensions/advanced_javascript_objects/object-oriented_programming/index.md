@@ -20,13 +20,13 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_programming
       <td>
         理解 JavaScript 函数，熟悉 JavaScript 基础
         （参见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和<a
-          href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript 第一步</a>和<a
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建 JavaScript 代码块</a
         >），熟悉对象基础概念（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics"
           >JavaScript 对象基础</a
-        >和<a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>）。
+        >和<a href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">对象原型</a>）。
       </td>
     </tr>
     <tr>
@@ -222,7 +222,7 @@ student.year // 错误：'year'是学生类的私有属性
 
 在本文中，我们所描述的这些基本特性都属于基于类的面向对象编程方式，像是 Java、C++ 这些编程语言都实现了这些特性。
 
-在先前的两篇文章中，我们探讨了 JavaScript 中的一对核心特性：[构造函数](/zh-CN/docs/Learn/JavaScript/Objects/Basics)和[原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)。毫无疑问，这些特性完全可以描述面向对象编程的这些概念。
+在先前的两篇文章中，我们探讨了 JavaScript 中的一对核心特性：[构造函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics)和[原型](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)。毫无疑问，这些特性完全可以描述面向对象编程的这些概念。
 
 - **构造函数**：在 JavaScript 中，构造函数可以实现类的定义，帮助我们在一个地方描述类的“形状”，包括定义类的方法。不过，原型也可以用于实现类的定义。例如，如果一个方法定义于构造函数的 `prototype` 属性中，那么所有由该构造函数创造出来的对象都可以通过原型使用该方法，而我们也不再需要将它定义在构造函数中。
 

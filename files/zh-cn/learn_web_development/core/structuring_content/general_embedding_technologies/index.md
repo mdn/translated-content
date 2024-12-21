@@ -16,13 +16,13 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装基础软件</a
         >、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件处理</a
         >的基本知识、熟悉 HTML 基础知识（阅读<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >开始学习 HTML</a
         >）以及本模块中以前的文章。
       </td>
@@ -253,7 +253,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 > **备注：** [点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
 
-一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过点击劫持来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
+一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过点击劫持来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
 
 #### 只有在必要时嵌入
 
@@ -272,7 +272,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 要想为网站启用 HTTPS，你需要安装特殊的安全证书。许多托管提供商提供了支持 HTTPS 的托管服务，无需你自己进行任何设置即可安装证书。但是，如果你*确实*需要自己动手为网站设置 HTTPS 支持，[Let's Encrypt](https://letsencrypt.org/) 提供了工具和说明，可以自动创建和安装所需的证书，并支持包括 Apache Web 服务器、Nginx 和其他常用的 Web 服务器。Let's Encrypt 的工具旨在使该过程尽可能简单，因此强烈建议使用它或其他可用的方法来启用你的网站的 HTTPS。
 
-> **备注：** [Github pages](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
+> **备注：** [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
 
 #### 始终使用 `sandbox` 属性
 
@@ -359,7 +359,7 @@ PDF 是纸质文件与数字文件之间重要的转换桥梁，但它[在无障
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)。
+你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。
 
 ## 总结
 

@@ -19,10 +19,10 @@ original_slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
         >，<a href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基本知识，HTML 基础（学习<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >），以及对 CSS 工作原理的了解（学习<a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 初步</a
         >）
       </td>
@@ -118,6 +118,6 @@ original_slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 
 ## 接下来……
 
-现在我们完成了属性选择器的学习，你可以继续读下篇文章——关于[伪类和伪元素选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)的事情。
+现在我们完成了属性选择器的学习，你可以继续读下篇文章——关于[伪类和伪元素选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)的事情。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}

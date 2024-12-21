@@ -38,7 +38,7 @@ original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 图像映射原本非常流行于导航策略，但是前提需要考虑它的性能和无障碍。
 
-[Text links](/zh-CN/docs/Learn/HTML/Howto/Create_a_hyperlink) (perhaps styled with CSS) 比图像映射更具优势：文本链接更轻量级、好维护、更易于 SEO，而且支持更多形式需求的访问（如，屏幕阅读器、纯文本浏览器、翻译服务等）。
+[Text links](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links) (perhaps styled with CSS) 比图像映射更具优势：文本链接更轻量级、好维护、更易于 SEO，而且支持更多形式需求的访问（如，屏幕阅读器、纯文本浏览器、翻译服务等）。
 
 ## 如何正确的插入一张图像映射
 
@@ -50,7 +50,7 @@ original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 - 图片必须明确指出热点的开始和结束位置。
 - 在任何尺寸的视口下，热点都需要足够大，方便用户可以点击。多大足够呢？[72 × 72 CSS pixels 是一个推荐的最小尺寸，](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/) 包括触摸目标之间额外的间隙。在 [50languages.com](http://www.goethe-verlag.com/book2/) (as of time of writing) 上的世界地图可以完美诠释这一点。用户点击 Russia 或 North America 要比 Albania 或 Estonia 容易得多。
 
-插入图片的方式 [和通常一样](/zh-CN/docs/Learn/HTML/Howto/Add_images_to_a_webpage) (用 {{htmlelement("img")}} 标签 和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本). 如果图片只是用作导航容器，你可以设置图片的 `alt=""`，改在后面 {{htmlelement('area')}} 的 [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt) 中提供合适的文本。
+插入图片的方式 [和通常一样](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage) (用 {{htmlelement("img")}} 标签 和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本). 如果图片只是用作导航容器，你可以设置图片的 `alt=""`，改在后面 {{htmlelement('area')}} 的 [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt) 中提供合适的文本。
 
 你将需要一个特殊的 [`usemap`](/zh-CN/docs/Web/HTML/Element/img#usemap) 属性。为图像映射提供一个唯一标识，这个标识不能包含空格。将这个标识 (preceded by a hash) 作为 `usemap` 属性的值：
 

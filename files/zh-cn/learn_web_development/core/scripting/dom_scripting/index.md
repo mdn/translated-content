@@ -109,7 +109,7 @@ Web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
    link.href = "https://developer.mozilla.org";
    ```
 
-请注意，就像 JavaScript 中所做的那样，有许多方法可以选择一个元素并将其引用存储在一个变量中。{{domxref("Document.querySelector()")}} 是推荐的现代方法。它很方便，因为它允许你使用 CSS 选择器来选择元素。上面的 `querySelector()` 调用将匹配文档中出现的第一个 {{htmlelement("a")}} 元素。如果你想对多个元素进行匹配和操作，你可以使用 {{domxref("Document.querySelectorAll()")}}，它可以匹配文档中与选择器相匹配的每个元素，并将它们的引用存储在一个叫做 {{domxref("NodeList")}} 的类[数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)对象中。
+请注意，就像 JavaScript 中所做的那样，有许多方法可以选择一个元素并将其引用存储在一个变量中。{{domxref("Document.querySelector()")}} 是推荐的现代方法。它很方便，因为它允许你使用 CSS 选择器来选择元素。上面的 `querySelector()` 调用将匹配文档中出现的第一个 {{htmlelement("a")}} 元素。如果你想对多个元素进行匹配和操作，你可以使用 {{domxref("Document.querySelectorAll()")}}，它可以匹配文档中与选择器相匹配的每个元素，并将它们的引用存储在一个叫做 {{domxref("NodeList")}} 的类[数组](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)对象中。
 
 对于获取元素引用，还有一些更旧的方法，如：
 
@@ -270,7 +270,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 1. 首先，下载 [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 文件，并存入本地。你会看到它有一些极小的 CSS，一个带有 label、input 和 button 的 div 和一个空的列表以及 {{htmlelement("script")}} 元素。要添加的所有程序都在 script 里面。
 2. 创建三个变量来保存列表（{{htmlelement("ul")}}）、{{htmlelement("input")}} 和 {{htmlelement("button")}} 元素的引用。
-3. 创建一个[函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)响应点击按钮。
+3. 创建一个[函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)响应点击按钮。
 4. 在函数体内，开始要在一个变量中存储输入框的当前[值](/zh-CN/docs/Web/API/HTMLInputElement#属性)。
 5. 然后，为输入框元素设置空字符串 `''` 以清空它。
 6. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。

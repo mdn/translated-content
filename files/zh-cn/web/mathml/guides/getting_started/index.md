@@ -14,13 +14,13 @@ original_slug: Learn/MathML/First_steps/Getting_started
       <th scope="row">前提：</th>
       <td>
         基本的计算机操作能力，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件操作知识</a
         >以及 HTML 基础知识（学习过 <a
-        href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 简介</a
         >。）
       </td>
@@ -193,7 +193,7 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 ## 总结
 
-本文中，我们介绍了如何使用 `<math>` 元素将数学公式插入 HTML 文档中。我们了解了使用 `display="block"` 和不使用它的 `<math>` 元素之间的渲染差异。此外，我们还介绍了几个其他的 MathML 元素：`<mfrac>` 用于表示分数，`<mrow>` 用于分组，以及一些文本元素。在下一篇文章中，我们将进一步分析这些[文本容器](/zh-CN/docs/Learn/MathML/First_steps/Text_containers)。
+本文中，我们介绍了如何使用 `<math>` 元素将数学公式插入 HTML 文档中。我们了解了使用 `display="block"` 和不使用它的 `<math>` 元素之间的渲染差异。此外，我们还介绍了几个其他的 MathML 元素：`<mfrac>` 用于表示分数，`<mrow>` 用于分组，以及一些文本元素。在下一篇文章中，我们将进一步分析这些[文本容器](/zh-CN/docs/Web/MathML/Guides/Text_containers)。
 
 {{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
 

@@ -31,7 +31,7 @@ original_slug: Learn/Server-side/First_steps/Introduction
 
 ## 服务器端编程是什么？
 
-Web 浏览器通过**超文本传输协议**（{{glossary("HTTP")}}）来和 [Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)进行通信。当你在网页上点击一个链接，或提交一个表单，再或进行一次搜索时，一个 **HTTP 请求**就从你的浏览器发送到了目标服务器。
+Web 浏览器通过**超文本传输协议**（{{glossary("HTTP")}}）来和 [Web 服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)进行通信。当你在网页上点击一个链接，或提交一个表单，再或进行一次搜索时，一个 **HTTP 请求**就从你的浏览器发送到了目标服务器。
 
 这个请求包括一个标识所请求资源的 URL，一个定义所需操作的方法 (比如获取，删除或者发布资源)，还可以包括编码在 URL 参数中的附加信息。附加信息以键值对（参数和它的值）的形式，通过一个[查询字符串](https://en.wikipedia.org/wiki/Query_string)，作为 POST 数据（由[HTTP POST 方法](/zh-CN/docs/Web/HTTP/Methods/POST)发送）或存放在与之相关联的{{glossary("Cookie")}}中。
 
@@ -71,7 +71,7 @@ Web 服务器等待客户端的请求信息，在它们到达的时候处理它�
 
 在浏览器端运行的代码被称为**客户端代码**，并且主要涉及所呈现的网页的外观和行为的改进。这就包括选择和设计 UI 元素、布局、导航、表单验证等。相反的，服务器端网站编程主要涉及，对于相应的请求，选择所要返回给浏览器的内容。服务器端代码解决这样一些问题，比如验证提交的数据和请求、使用数据库来存储和检索信息及发送给用户正如他们所请求的正确内容。
 
-客户端代码使用 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 来编写——这些代码直接在 Web 浏览器中运行，并且几乎没有访问底层操作系统的路径（包括对文件系统访问的限制）。
+客户端代码使用 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 来编写——这些代码直接在 Web 浏览器中运行，并且几乎没有访问底层操作系统的路径（包括对文件系统访问的限制）。
 
 web 开发者无法控制用户可能会使用哪一种浏览器来浏览网站——浏览器对客户端代码的兼容性支持水平不一致，客户端编程的一部分挑战就是如何优雅地处理浏览器兼容性问题。
 

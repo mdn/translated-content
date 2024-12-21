@@ -13,11 +13,11 @@ CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以�
     <tr>
       <th scope="row">前提：</th>
       <td>
-        HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">
+        HTML 基础 (学习<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">
           HTML 简介</a
         >)，以及了解 CSS 如何工作的 (学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">CSS 简介</a>和<a
-          href="/zh-CN/docs/Learn/CSS/Building_blocks">盒子样式</a>。)
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 简介</a>和<a
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">盒子样式</a>。)
       </td>
     </tr>
     <tr>
@@ -722,7 +722,7 @@ aside {
 
 ## 技能测试！
 
-你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grid_skills)。
+你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grid_skills)。
 
 ## 小结
 

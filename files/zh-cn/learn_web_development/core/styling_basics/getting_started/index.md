@@ -15,8 +15,8 @@ original_slug: Learn/CSS/First_steps/Getting_started
 在开始本单元之前，你应该：
 
 - 基本熟悉计算机操作。
-- 基本工作环境的设置（详见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)），基本的文件操作，详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)。
-- 熟悉 [HTML 概述](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 章节中提到的基本 HTML 知识。
+- 基本工作环境的设置（详见[安装基本软件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)），基本的文件操作，详见[处理文件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)。
+- 熟悉 [HTML 概述](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 章节中提到的基本 HTML 知识。
 
 #### 目标
 
@@ -199,7 +199,7 @@ h1 + p {
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
 > [!NOTE]
-> 如你所见，CSS 给我们提供了几种定位元素的方法。到目前为止，我们只触及了皮毛！我们将对这些选择器进行适当的研究，更多的内容将在我们后面的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)章节中介绍。
+> 如你所见，CSS 给我们提供了几种定位元素的方法。到目前为止，我们只触及了皮毛！我们将对这些选择器进行适当的研究，更多的内容将在我们后面的[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)章节中介绍。
 
 ## 根据状态确定样式
 

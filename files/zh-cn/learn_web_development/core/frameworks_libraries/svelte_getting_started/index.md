@@ -16,12 +16,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
       <td>
         <p>
           推荐你至少需熟悉基本的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-            href="/zh-CN/docs/Learn/CSS"
+          <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a> 与
-          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           等程序语言且具备<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行</a
           >基本知识。
         </p>
@@ -87,9 +87,9 @@ Svelte 也可以通过 [Svelte Native](https://svelte-native.technology) 用于�
 
 ### 条件
 
-要想使用 Svelte，你需要安装 [Node.js](https://nodejs.org/en/)。推荐使用长期支持版本（LTS）。Node 包含 npm（node 包管理器）和 npx（node 包运行器）。另外你也可以使用 Yarn 包管理工具来代替 npm，但我们先假定你在教学系列中使用 npm。若想知道更多 npm 和 yarn 的相关信息，请参见[软件包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+要想使用 Svelte，你需要安装 [Node.js](https://nodejs.org/en/)。推荐使用长期支持版本（LTS）。Node 包含 npm（node 包管理器）和 npx（node 包运行器）。另外你也可以使用 Yarn 包管理工具来代替 npm，但我们先假定你在教学系列中使用 npm。若想知道更多 npm 和 yarn 的相关信息，请参见[软件包管理基础](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
 
-如果你使用的是 Windows 的话，则需要安装一些软件来使其命令行与 Unix/macOS 的终端的行为一致，以便使用本教程中提到的终端命令。Gitbash（[适用于 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[适用于 Linux 的 Windows 子系统（WSL）](https://docs.microsoft.com/zh-CN/windows/wsl/about)，这些都是合适的解决方案。若想了解有关命令行的更多信息，请参见[命令行课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
+如果你使用的是 Windows 的话，则需要安装一些软件来使其命令行与 Unix/macOS 的终端的行为一致，以便使用本教程中提到的终端命令。Gitbash（[适用于 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[适用于 Linux 的 Windows 子系统（WSL）](https://docs.microsoft.com/zh-CN/windows/wsl/about)，这些都是合适的解决方案。若想了解有关命令行的更多信息，请参见[命令行课程](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
 
 若想知道更多相关信息也可以阅读下列资料：
 
@@ -145,7 +145,7 @@ moz-todo-svelte
 
 内容解释如下：
 
-- `package.json` 和 `package-lock.json`：包含 Node.js/npm 用于组织化管理你的项目的信息。在这个教程中，你完全不需要了解这个文件，但如果你想要学习更多内容，你可以阅读 npmjs.com 上的 [`package.json` 处理](https://docs.npmjs.com/cli/configuring-npm/package-json)；我们在[软件包管理基础教程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)也有谈到。
+- `package.json` 和 `package-lock.json`：包含 Node.js/npm 用于组织化管理你的项目的信息。在这个教程中，你完全不需要了解这个文件，但如果你想要学习更多内容，你可以阅读 npmjs.com 上的 [`package.json` 处理](https://docs.npmjs.com/cli/configuring-npm/package-json)；我们在[软件包管理基础教程](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)也有谈到。
 - `node_modules`：这里是 node 存放项目依赖的地方。这些依赖在生产环境中不会用到，只有开发时才会被使用到。
 - `.gitignore`：告诉 git 有哪些文件或文件夹不要纳入项目版本控制——如果你决定将应用程序包含在 git 仓库中，它还蛮实用的！
 - `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 作为模块打包工具。这个配置文件告诉 rollup 如何编译和构建你的应用程序。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改为执行 `npx degit sveltejs/template-webpack svelte-app` 来创建你的入门项目。
@@ -427,7 +427,7 @@ npm install
 npm run dev
 ```
 
-假如你想要学习有关 git 和 GitHub 的更多信息，我们已经整理了一些有帮助的指南的链接列表——请参阅 [Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub)。
+假如你想要学习有关 git 和 GitHub 的更多信息，我们已经整理了一些有帮助的指南的链接列表——请参阅 [Git 和 GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control)。
 
 > [!NOTE]
 > 假如你只是想要下载文件而不是克隆 git 仓库，你可以使用 degit 工具，像这样——`npx degit opensas/mdn-svelte-tutorial`。你也可以用 `npx degit opensas/mdn-svelte-tutorial/01-getting-started` 来下载特定文件夹。Degit 不会创建本地 git 仓库，它只下载特定文件夹下的文件。

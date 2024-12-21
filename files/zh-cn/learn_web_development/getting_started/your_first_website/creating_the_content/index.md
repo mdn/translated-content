@@ -82,7 +82,7 @@ My cat is very grumpy
 
 ### HTML 文档详解
 
-以上把 HTML 元素作为个体进行介绍，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)文章中创建的 `index.html` 示例：
+以上把 HTML 元素作为个体进行介绍，但孤木不成林。现在来看看单个元素如何彼此协同构成一个完整的 HTML 页面。回顾[处理文件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)文章中创建的 `index.html` 示例：
 
 ```html
 <!doctype html>
@@ -130,7 +130,7 @@ alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传
 可以试着为图像编写一些更好的 alt 文本。
 
 > [!NOTE]
-> 更多信息请参阅[无障碍学习模块](/zh-CN/docs/Learn/Accessibility)。
+> 更多信息请参阅[无障碍学习模块](/zh-CN/docs/Learn_web_development/Core/Accessibility)。
 
 ## 标记文本
 
@@ -164,7 +164,7 @@ alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传
 <p>这是一个段落</p>
 ```
 
-试着向一个或几个段落中添加一些文本（[_你的网站会是什么样子？_](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)文章中有这些文本），并把它们放在你的 {{htmlelement("img")}} 元素下方。
+试着向一个或几个段落中添加一些文本（[_你的网站会是什么样子？_](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)文章中有这些文本），并把它们放在你的 {{htmlelement("img")}} 元素下方。
 
 ### 列表（List）
 
@@ -239,6 +239,6 @@ Web 上的许多内容都是列表，HTML 有一些特别的列表元素。标�
 
 如果你遇到困难，你可以将 Github 上的[完整示例代码](https://github.com/mdn/beginner-html-site/blob/main/index.html)与你的文件进行比较。
 
-在这里，我们只是介绍了一点点 HTML。想学习更多，访问我们的[学习 HTML](/zh-CN/docs/Learn/HTML) 主题。
+在这里，我们只是介绍了一点点 HTML。想学习更多，访问我们的[学习 HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 主题。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}

@@ -51,7 +51,7 @@ myFunction();
 
 #### 函数作用域
 
-记住，[函数拥有自己的作用域](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)——你不能从函数外部访问一个函数内的变量值，除非你在全局声明了该变量（即不在任何函数内），或者从函数外部获得它的[返回值](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)。
+记住，[函数拥有自己的作用域](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)——你不能从函数外部访问一个函数内的变量值，除非你在全局声明了该变量（即不在任何函数内），或者从函数外部获得它的[返回值](/zh-CN/docs/Learn_web_development/Core/Scripting/Return_values)。
 
 #### 在 return 语句之后运行代码
 
@@ -67,7 +67,7 @@ myFunction();
 const myNumber = 0;
 ```
 
-但是在[对象](/zh-CN/docs/Learn/JavaScript/Objects)中，需要小心地使用正确的语法标签。你需要使用花括号来包裹一个对象，冒号来分隔成员名称和值，并用逗号来分隔每个成员，例如：
+但是在[对象](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)中，需要小心地使用正确的语法标签。你需要使用花括号来包裹一个对象，冒号来分隔成员名称和值，并用逗号来分隔每个成员，例如：
 
 ```js
 const myObject = {
@@ -80,11 +80,11 @@ const myObject = {
 
 - [JavaScript 是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#广义的定义)
 - [变量是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/Variables#变量是什么？)
-- [字符串是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/Strings)
+- [字符串是什么？](/zh-CN/docs/Learn_web_development/Core/Scripting/Strings)
 - [数组是什么？](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)
-- [循环是什么？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [函数是什么？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)
-- [事件是什么？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [循环是什么？](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops)
+- [函数是什么？](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)
+- [事件是什么？](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - [对象是什么？](/zh-CN/docs/Learn/JavaScript/Objects/Basics#对象基础)
 - [JSON 是什么？](/zh-CN/docs/Learn/JavaScript/Objects/JSON#什么是_json)
 - [web API 是什么？](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#什么是_api)
@@ -137,15 +137,15 @@ const myObject = {
 ### JavaScript 调试
 
 - [什么是错误的基本类型？](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#错误类型)
-- [什么是浏览器开发工具，如何使用它？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
+- [什么是浏览器开发工具，如何使用它？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
 - [怎么在 JavaScript 控制台打印值？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#console_相关_api)
 - [怎么使用断点和其他 JavaScript 调试工具？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
-有关 JavaScript 调试的更多内容，请查阅[处理 JavaScript 常见问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)页面，也可以查看[其他常见错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#其他常见错误)的描述。
+有关 JavaScript 调试的更多内容，请查阅[处理 JavaScript 常见问题](/zh-CN/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)页面，也可以查看[其他常见错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong#其他常见错误)的描述。
 
 ### 在代码中作出判断
 
-- [如何根据变量的值或其他条件执行不同代码块？](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [如何根据变量的值或其他条件执行不同代码块？](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [如何使用 if ...else 语句？](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_语句)
 - [如何将决策的代码块嵌套在其他代码块之中？](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#嵌套_if_..._else)
 - [如何在 JavaScript 中使用与、或、非运算符？](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#逻辑运算符：_和_!)
@@ -154,7 +154,7 @@ const myObject = {
 
 ### 循环/迭代
 
-- [如何重复运行相同的代码？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)
+- [如何重复运行相同的代码？](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops)
 - [如何在满足某些条件下退出循环？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#使用_break_退出循环)
 - [如何在满足某些条件下跳转至下一次循环迭代？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#使用_continue_跳过迭代)
 - [如何使用 while 和 do ... while 循环？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#while_语句和_do_..._while_语句)
@@ -165,12 +165,12 @@ const myObject = {
 
 - [如何找到浏览器中的内置函数？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#浏览器内置函数)
 - [函数和方法有什么不同？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数与方法)
-- [如何创建自己的函数？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [如何创建自己的函数？](/zh-CN/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
 - [如何运行（或调用）函数？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#调用函数)
 - [什么是匿名函数？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#匿名函数)
 - [如何在调用函数时指定参数？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数参数)
 - [什么是函数作用域？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)
-- [什么是函数返回值，如何使用它们？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [什么是函数返回值，如何使用它们？](/zh-CN/docs/Learn_web_development/Core/Scripting/Return_values)
 
 ### 对象
 
@@ -179,7 +179,7 @@ const myObject = {
 - [什么是括号表示法？](/zh-CN/docs/Learn/JavaScript/Objects/Basics#括号表示法)
 - [如何获取和设置对象的方法和属性？](/zh-CN/docs/Learn/JavaScript/Objects/Basics#设置对象成员)
 - [对象中的 `this` 是什么？](/zh-CN/docs/Learn/JavaScript/Objects/Basics#this的含义)
-- [什么是面向对象编程？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [什么是面向对象编程？](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
 - [什么是构造器和实例，如何创建它们？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#类和构造函数)
 - [在 JavaScript 中创建对象的方法都有哪些？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
 
@@ -197,15 +197,15 @@ const myObject = {
 - [我该使用什么样的机制将事件代码添加到我的网页上？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#我该使用哪种机制？)
 - [什么是事件对象，如何使用它？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件对象)
 - [如何防止默认事件行为？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#阻止默认行为)
-- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [事件如何在嵌套元素中触发？（事件传递及其相关内容——事件冒泡及捕获）](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)
 - [什么是事件委托，它如何工作？](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling#事件委托)
 
 ### 面向对象的 JavaScript
 
-- [什么是对象原型？](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [什么是对象原型？](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
 - [什么是构造器属性，如何使用它？](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes#constructor_属性)
 - [如何向构造器中添加方法？](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes#修改原型)
-- [如何创建一个新的构造函数，从父构造函数中继承其成员？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [如何创建一个新的构造函数，从父构造函数中继承其成员？](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
 - [什么时候应当在 JavaScript 中使用继承？](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#继承)
 
 ### Web API

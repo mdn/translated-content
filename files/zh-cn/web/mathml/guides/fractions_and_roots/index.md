@@ -14,13 +14,13 @@ original_slug: Learn/MathML/First_steps/Fractions_and_roots
       <th scope="row">前提：</th>
       <td>
         基本的计算机操作能力，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件操作知识</a
         >，以及 HTML 基础知识（学习过 <a
-        href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 简介</a
         >。）
       </td>
@@ -36,7 +36,7 @@ original_slug: Learn/MathML/First_steps/Fractions_and_roots
 
 ## \<mfrac>、\<msqrt> 和 \<mroot> 的子树
 
-在 [MathML 使用入门](/zh-CN/docs/Learn/MathML/First_steps/Getting_started)文章中，我们学习了用于描述分数的 `<mfrac>` 元素。现在让我们看一个基本示例，其中还添加了用于根号（`<msqrt>` 和 `<mroot>`）的新元素：
+在 [MathML 使用入门](/zh-CN/docs/Web/MathML/Guides/Getting_started)文章中，我们学习了用于描述分数的 `<mfrac>` 元素。现在让我们看一个基本示例，其中还添加了用于根号（`<msqrt>` 和 `<mroot>`）的新元素：
 
 ```html
 <math>
@@ -252,7 +252,7 @@ checkboxes.forEach((checkbox) => {
 {{EmbedLiveSample('可伸缩的根号符号', 700, 200)}}
 
 > [!WARNING]
-> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现该拉伸效果，上面的示例依赖于 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
+> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现该拉伸效果，上面的示例依赖于 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。
 
 ## 无横线的分数
 
@@ -291,7 +291,7 @@ checkboxes.forEach((checkbox) => {
 
 ## 总结
 
-在本文中，我们学习了如何使用 `<mfrac>`、`<msqrt>` 和 `<mroot>` 元素来构建分数和根式。我们注意到了这些元素的一些特殊功能，即分数和根号符号。我们还学习了如何使用 `linethickness` 属性绘制无横线的分数。在下一篇文章中，我们将继续介绍基本的数学符号，并学习[上下标记](/zh-CN/docs/Learn/MathML/First_steps/Scripts)的使用。
+在本文中，我们学习了如何使用 `<mfrac>`、`<msqrt>` 和 `<mroot>` 元素来构建分数和根式。我们注意到了这些元素的一些特殊功能，即分数和根号符号。我们还学习了如何使用 `linethickness` 属性绘制无横线的分数。在下一篇文章中，我们将继续介绍基本的数学符号，并学习[上下标记](/zh-CN/docs/Web/MathML/Guides/Scripts)的使用。
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
 

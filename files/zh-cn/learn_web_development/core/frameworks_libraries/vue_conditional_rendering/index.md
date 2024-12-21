@@ -14,10 +14,10 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_con
       <th scope="row">预备条件：</th>
       <td>
         <p>
-          熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-            href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a
-            href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a
+            href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行</a
           >知识。
         </p>
@@ -317,7 +317,7 @@ editToDo(toDoId, newLabel) {
 
 注意你取消后复选框的状态——不仅应用程序忘记了复选框的状态，而且待办事项的完成状态现在也不正常了。如果你尝试再次勾选（或取消勾选）它，完成项的计数值将反向更改。这是因为在组件加载时，`data` 中的 `isDone` 只给出了值 `this.done`。
 
-幸运的是，修复这个问题很容易：我们可以通过将我们的 `isDone` 数据转换为[计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)来做到这一点。计算属性的另一个优点是，它们保留了[反应性](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)，这意味着（在其他事情中）当模板发生变化时，它们的状态会被保存，就像我们现在做的那样。
+幸运的是，修复这个问题很容易：我们可以通过将我们的 `isDone` 数据转换为[计算属性](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)来做到这一点。计算属性的另一个优点是，它们保留了[反应性](https://vuejs.org/guide/essentials/reactivity-fundamentals.html)，这意味着（在其他事情中）当模板发生变化时，它们的状态会被保存，就像我们现在做的那样。
 
 所以，让我们来修复一下 `ToDoItem.vue`：
 

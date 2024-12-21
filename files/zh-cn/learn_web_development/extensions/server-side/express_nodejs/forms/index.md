@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/Express_Nodejs/forms
       <td>
         <p>
           完成前面所有的教程，包括
-          <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data"
+          <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data"
             >Express 教程第 5 章：展示图书馆数据</a
           >
         </p>
@@ -32,7 +32,7 @@ original_slug: Learn/Server-side/Express_Nodejs/forms
 
 ## 概览
 
-[HTML 表单](/zh-CN/docs/Learn/Forms)在网页中是一个或多个字段/小工具的集合，它被用来收集用户的信息，并将信息上传到服务器。表单作为一种用来收集用户的机制，非常的灵活，因为有各种合适的输入框，来接受各种类型的数据——文本框，复选框，单选按钮，时间选择器等。表单和服务器交互数据也相对安全，因为它使用 POST 请求发送数据，保护不受跨站点请求伪造攻击（cross-site request forgery）的威胁。
+[HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)在网页中是一个或多个字段/小工具的集合，它被用来收集用户的信息，并将信息上传到服务器。表单作为一种用来收集用户的机制，非常的灵活，因为有各种合适的输入框，来接受各种类型的数据——文本框，复选框，单选按钮，时间选择器等。表单和服务器交互数据也相对安全，因为它使用 POST 请求发送数据，保护不受跨站点请求伪造攻击（cross-site request forgery）的威胁。
 
 但是表单同样也很复杂！开发者需要为表单编写 HTML，在服务器上验证，并且正确去除有害的数据（浏览器上也可能需要），对于任何不合法的字段，需要传给用户相应的错误信息，当数据成功提交后，处理数据，并设法通知用户提交成功。
 
@@ -43,7 +43,7 @@ original_slug: Learn/Server-side/Express_Nodejs/forms
 
 ### HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Learn/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
+首先简要概述[HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -211,7 +211,7 @@ const { sanitizeBody } = require("express-validator/filter");
 
 第一个（`GET`）路由，用于显示用于创建对象的新空表单。第二个路由（`POST`），用于验证用户输入的数据，然后保存信息，并重定向到详细信息页面（如果数据有效），或重新显示有错误的表单（如果数据无效）。
 
-我们已经在 **/routes/catalog.js**（在[之前的教程](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)中）为我们所有模型的创建页面，创建了路径。例如，种类路由如下所示：
+我们已经在 **/routes/catalog.js**（在[之前的教程](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)中）为我们所有模型的创建页面，创建了路径。例如，种类路由如下所示：
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
@@ -225,12 +225,12 @@ router.post("/genre/create", genre_controller.genre_create_post);
 
 以下子文件，将带我们完成向示例应用程序添加所需表单的过程。在进入下一个文件之前，你需要依次阅读并解决每个问题。
 
-1. [创建种类表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定义我们的页面以创建`Genre`种类对象。
-2. [创建作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定义用于创建作者对象的页面。
-3. [创建书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定义页面/表单以创建书本对象。
-4. [创建书本实例表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定义页面/表单以创建书本实例对象。
-5. [删除作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定义要删除作者对象的页面。
-6. [更新书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定义页面以更新书本对象。
+1. [创建种类表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form) — 定义我们的页面以创建`Genre`种类对象。
+2. [创建作者表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form) — 定义用于创建作者对象的页面。
+3. [创建书本表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form) — 定义页面/表单以创建书本对象。
+4. [创建书本实例表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定义页面/表单以创建书本实例对象。
+5. [删除作者表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form) — 定义要删除作者对象的页面。
+6. [更新书本表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form) — 定义页面以更新书本对象。
 
 ## 挑战自我
 

@@ -14,7 +14,7 @@ original_slug: Learn/Performance/business_case_for_performance
       <th scope="row">前提：</th>
       <td>
         基本的计算机素养，对<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端 web 技术</a
         >有基本的了解，以及对 <a
         href="/zh-CN/docs/Web/Performance"

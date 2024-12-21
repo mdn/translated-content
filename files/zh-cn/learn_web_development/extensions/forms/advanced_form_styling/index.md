@@ -8,15 +8,15 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
+在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        对 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 和
-        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS</a> 的基本理解。
+        对 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 的基本理解。
       </td>
     </tr>
     <tr>
@@ -229,7 +229,7 @@ input[type="checkbox"]:disabled {
 }
 ```
 
-在[下一篇文章](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)中，你将了解到更多关于此类伪类的信息和更多内容；上述伪类的作用如下：
+在[下一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)中，你将了解到更多关于此类伪类的信息和更多内容；上述伪类的作用如下：
 
 - `:checked`——复选框（或单选按钮）处于选中状态（用户已单击/激活它）。
 - `:disabled`——复选框（或单选按钮）处于禁用状态（无法与之交互）。
@@ -506,18 +506,18 @@ label[for="file"]:active {
 
 如果想控制样式，为这些功能创建自己的自定义解决方案，或使用第三方解决方案（如 [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples)）会更方便。
 
-文章[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)提供了一个如何使用 HTML、CSS 和 JavaScript 构建自定义设计的选择控件的示例。
+文章[如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)提供了一个如何使用 HTML、CSS 和 JavaScript 构建自定义设计的选择控件的示例。
 
 ## 总结
 
 虽然在 HTML 表单中使用 CSS 仍有一些困难，但有一些方法可以解决许多问题。虽然没有一劳永逸的通用解决方案，但现代浏览器提供了新的可能性。目前，最好的解决办法是进一步了解不同浏览器在 HTML 表单控件中应用 CSS 时的支持方式。
 
-在本模块的下一篇文章中，我们将探讨现代浏览器中不同的 [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)，以便为不同状态的表单设计样式。
+在本模块的下一篇文章中，我们将探讨现代浏览器中不同的 [UI 伪类](/zh-CN/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)，以便为不同状态的表单设计样式。
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 ### 进阶内容
 
-- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单控件的属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单控件的属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

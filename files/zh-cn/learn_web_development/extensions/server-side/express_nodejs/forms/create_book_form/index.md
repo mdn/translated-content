@@ -46,7 +46,7 @@ exports.book_create_get = function (req, res, next) {
 };
 ```
 
-这使用异步模块 async（[教程 5：显示数据库中的数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)），来获取所有作者和种类对象。然后将它们作为名为 `authors` 和 `genres` 的变量（以及页面标题 `title`），传递给视图 `book_form.pug`。
+这使用异步模块 async（[教程 5：显示数据库中的数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)），来获取所有作者和种类对象。然后将它们作为名为 `authors` 和 `genres` 的变量（以及页面标题 `title`），传递给视图 `book_form.pug`。
 
 ## 控制器—post 路由
 
@@ -238,6 +238,6 @@ block content
 
 ## 下一步
 
-回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
+回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
 
-继续教程 6 的下一个部分：[创建书本实例表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form)
+继续教程 6 的下一个部分：[创建书本实例表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form)

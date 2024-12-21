@@ -14,15 +14,15 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
       <th scope="row">前提：</th>
       <td>
         计算机基础知识、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装基础软件</a
         >、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >处理文件</a
         >的基本知识、HTML 基础（学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 介绍</a
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 介绍</a
         >）和对 CSS 工作原理的大致理解（学习
-        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 第一步</a>）
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 第一步</a>）
       </td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 那么该如何处理溢出问题呢？
 
-正如我们在[之前的课程](/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) 所学的那样，一个常用的方法是将一张图片的 {{cssxref("max-width")}} 设为 100%。这将会使图片的尺寸小于等于盒子。这个技术也会对其他替换元素（例如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)，或者 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 起作用。
+正如我们在[之前的课程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing) 所学的那样，一个常用的方法是将一张图片的 {{cssxref("max-width")}} 设为 100%。这将会使图片的尺寸小于等于盒子。这个技术也会对其他替换元素（例如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)，或者 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 起作用。
 
 **尝试向上面的示例中的 `<img>` 元素加入 `max-width: 100%`，你会看到，左边那张小的图像没有变化，而大的图像变小了，恰好装在了盒子里。**
 
@@ -90,7 +90,7 @@ img {
 
 ## form 元素
 
-用 CSS 格式化表单元素是一个需要技巧的工作，[HTML 表单指南](/zh-CN/docs/Learn/Forms)包含了详细的格式化表单元素的指导，我不会在这里复述。本节需要介绍的是一些值得关注的关键基础内容。
+用 CSS 格式化表单元素是一个需要技巧的工作，[HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)包含了详细的格式化表单元素的指导，我不会在这里复述。本节需要介绍的是一些值得关注的关键基础内容。
 
 很多表单控件是通过 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 元素添加到网页上的。该元素定义了简单的表单区域，例如文字输入。更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea)，以及那些用来包含和标记表单特定部分的元素，例如 [`<fieldset>`](/zh-CN/docs/Web/HTML/Element/fieldset) 和 [`<legend>`](/zh-CN/docs/Web/HTML/Element/legend) 。
 
@@ -107,7 +107,7 @@ HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能
 > [!WARNING]
 > 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。
 
-正如在本教程的 HTML 部分的[样式化表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是留意到表单在不同的用户看来差异很大，并在许多浏览器上测试复杂的表单。
+正如在本教程的 HTML 部分的[样式化表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)里解释的那样，许多更加复杂的输入类型是由操作系统渲染的，无法进行样式化。因而你应该总是留意到表单在不同的用户看来差异很大，并在许多浏览器上测试复杂的表单。
 
 ### 继承和表单元素
 
@@ -125,7 +125,7 @@ textarea {
 
 ### form 元素与 box-sizing
 
-跨浏览器的 form 元素对于不同的挂件使用不同的盒子约束规则。你已经在我们的[盒模型课](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)中学习了 `box-sizing` 属性，在样式化表单时候，你可以使用这一知识，确保在给 form 元素设定宽度和高度时可以有统一的体验。
+跨浏览器的 form 元素对于不同的挂件使用不同的盒子约束规则。你已经在我们的[盒模型课](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)中学习了 `box-sizing` 属性，在样式化表单时候，你可以使用这一知识，确保在给 form 元素设定宽度和高度时可以有统一的体验。
 
 为了保证统一，最好将所有元素的内外边距都设为 `0`，然后在单独进行样式化控制的时候将这些加回来。
 
@@ -176,12 +176,12 @@ textarea {
 
 至于样式化表单的更加深入的信息，可以看下这些教程的 HTML 一节的这两篇文章：
 
-- [Styling HTML Forms](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [Advanced Styling for HTML Forms](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [Styling HTML Forms](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Advanced Styling for HTML Forms](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
 
 ## 技能测试
 
-我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks)
 
 ## 小结
 

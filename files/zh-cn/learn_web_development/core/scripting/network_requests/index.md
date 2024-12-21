@@ -16,12 +16,12 @@ l10n:
       <th scope="row">预备条件：</th>
       <td>
         JavaScript 基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>、<a
-          href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript 第一步</a>、<a
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建代码块</a
         >、<a
-          href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象</a>）、<a
-          href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript 对象</a>）、<a
+          href="/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
           >客户端 API 基础</a
         >
       </td>
@@ -49,7 +49,7 @@ l10n:
 
 ![使用 Fetch 来更新页面](fetch-update.svg)
 
-这里主要的 API 是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)。它允许页面中运行的 JavaScript 向服务器发起 [HTTP](/zh-CN/docs/Web/HTTP) 请求来获取特定的资源。当服务器提供了这些资源时，JavaScript 可以使用这些数据更新页面（通常是通过使用 [DOM 操作 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)）。请求的数据通常是 [JSON](/zh-CN/docs/Learn/JavaScript/Objects/JSON)，这是一种很好的传输结构化的格式，但也可以是 HTML 或纯文本。
+这里主要的 API 是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)。它允许页面中运行的 JavaScript 向服务器发起 [HTTP](/zh-CN/docs/Web/HTTP) 请求来获取特定的资源。当服务器提供了这些资源时，JavaScript 可以使用这些数据更新页面（通常是通过使用 [DOM 操作 API](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)）。请求的数据通常是 [JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON)，这是一种很好的传输结构化的格式，但也可以是 HTML 或纯文本。
 
 这是数据驱动网站（如 Amazon、YouTube、eBay 等）的常见模式。使用此模型，使得：
 
@@ -131,7 +131,7 @@ fetch(url)
 
 首先，Fetch API 的入口点是一个名为 {{domxref("fetch", "fetch()")}} 的全局函数，它以 URL 为参数（其使用另一个可选参数来进行自定义设置，但我们在这里不使用它）。
 
-接下来，`fetch()` 是一个异步 API，会返回一个 {{jsxref("Promise")}}。如果你不知道什么是 Promise，请参阅[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 章节，然后再回到这里。你会发现那篇文章也介绍了 `fetch()` API！
+接下来，`fetch()` 是一个异步 API，会返回一个 {{jsxref("Promise")}}。如果你不知道什么是 Promise，请参阅[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 章节，然后再回到这里。你会发现那篇文章也介绍了 `fetch()` API！
 
 因为 `fetch()` 返回一个 Promise，所以我们将一个函数传递给它返回的 Promise 的 {{jsxref("Promise/then", "then()")}} 方法。此方法会在 HTTP 请求收到服务器的响应时被调用。在它的处理器中，我们检查请求是否成功，并在请求失败时抛出一个错误。否则，我们调用 {{domxref("Response/text", "response.text()")}} 以获取文本形式的响应正文。
 
@@ -148,9 +148,9 @@ verseChoose.value = "Verse 1";
 
 ### 在服务端运行示例
 
-如果只是使用本地文件运行示例，现代浏览器将不会执行 HTTP 请求。这是因为安全限制（更多关于 Web 安全性的限制，请参阅[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)）。
+如果只是使用本地文件运行示例，现代浏览器将不会执行 HTTP 请求。这是因为安全限制（更多关于 Web 安全性的限制，请参阅[网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)）。
 
-为了解决这个问题，我们需要通过在本地 Web 服务器上运行它来测试这个示例。要了解如何实现这一点，请阅读[我们的设置本地测试服务器指南](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。
+为了解决这个问题，我们需要通过在本地 Web 服务器上运行它来测试这个示例。要了解如何实现这一点，请阅读[我们的设置本地测试服务器指南](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)。
 
 ### 罐头商店
 
@@ -183,7 +183,7 @@ fetch("products.json")
 在此函数中，我们：
 
 - 检查服务器是否返回错误（例如 [`404 Not Found`](/zh-CN/docs/Web/HTTP/Status/404)）。如果返回了错误，我们抛出一个错误。
-- 对响应调用 {{domxref("Response.json","json()")}}。它会将数据检索为 [JSON 对象](/zh-CN/docs/Learn/JavaScript/Objects/JSON)。然后我们返回 `response.json()` 返回的 promise。
+- 对响应调用 {{domxref("Response.json","json()")}}。它会将数据检索为 [JSON 对象](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON)。然后我们返回 `response.json()` 返回的 promise。
 
 接着，我们将一个函数传递给返回的 Promise 的 `then()` 方法。该函数会被传入一个包含 JSON 格式的响应数据的对象，我们将这个对象传递给 `initialize()` 函数。该函数会开始在用户界面中显示所有产品的过程。
 
@@ -259,8 +259,8 @@ try {
 
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
+- [使用 JSON 数据](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON)
 - [HTTP 概述](/zh-CN/docs/Web/HTTP/Overview)
-- [服务器端网页编程](/zh-CN/docs/Learn/Server-side)
+- [服务器端网页编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

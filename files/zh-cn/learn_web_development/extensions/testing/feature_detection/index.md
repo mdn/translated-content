@@ -15,12 +15,12 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-          href="/zh-CN/docs/Learn/CSS"
+        熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
         >
-        以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解顶层的<a
-          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        以及 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解顶层的<a
+          href="/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction"
           >跨浏览器测试原则</a
         >。
       </td>

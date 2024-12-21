@@ -139,7 +139,7 @@ let resetButton;
 - 倒数第二个变量存储一个计数器并初始化为 1（用于跟踪玩家猜测的次数），最后一个变量存储对重置按钮的引用，这个按钮尚不存在（但稍后就有了）。
 
 > [!NOTE]
-> 稍后将讲解更多关于变量和常量的信息。[参见下一篇文章](/zh-CN/docs/Learn/JavaScript/First_steps/Variables)。
+> 稍后将讲解更多关于变量和常量的信息。[参见下一篇文章](/zh-CN/docs/Learn_web_development/Core/Scripting/Variables)。
 
 ### 函数（Function）
 
@@ -156,7 +156,7 @@ function checkGuess() {
 要运行一个函数代码时，可以输入函数名加一对小括号。
 
 让我们尝试一下。保存你的代码并刷新浏览器页面。然后进入
-[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并输入以下代码：
+[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，并输入以下代码：
 
 ```js
 checkGuess();
@@ -164,13 +164,13 @@ checkGuess();
 
 在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 `I am a placeholder`；我们在代码中定义了一个函数，当我们调用它时，其都会创建一个告警窗口。
 
-> **备注：** [后续课程](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)将讲解更多有关函数的知识。
+> **备注：** [后续课程](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)将讲解更多有关函数的知识。
 
 ### 运算符（Operator）
 
 JavaScript 运算符允许我们执行比较、做数学运算、连接字符串，以及其他类似的事情。
 
-请保存代码以免丢失，然后刷新浏览器页面，打开 [开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下 <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。
+请保存代码以免丢失，然后刷新浏览器页面，打开 [开发者工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。然后我们就可以尝试下文中的示例了：把下表中“示例”一列中的每一项都原封不动输入进来，每次输入完毕后都按下 <kbd>Return</kbd>/<kbd>Enter</kbd> ，可以看到返回的结果。
 
 首先让我们来看看算术运算符，例如：
 
@@ -397,7 +397,7 @@ function resetGame() {
 
 上面代码中有一部分需要我们仔细研读，那就是 [for...of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环。循环是一个非常重要的编程概念，它让你能够重复运行一段代码，直到满足某个条件为止。
 
-首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 然后输入以下内容：
+首先，请再次转到 [浏览器开发工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) 然后输入以下内容：
 
 ```js
 const fruits = ["apples", "bananas", "cherries"];
@@ -408,7 +408,7 @@ for (const fruit of fruits) {
 
 发生了什么？控制台中打印出了字符串 `'apples'、'bananas'、'cherries'`。
 
-这正是循环所为。`const fruits = ['apples', 'bananas', 'cherries'];` 这一行创建了一个数组。我们在本章稍后的[完整的数组指南](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)中会作深入探究。就目前而言，数组是元素（本例中为字符串）的集合。
+这正是循环所为。`const fruits = ['apples', 'bananas', 'cherries'];` 这一行创建了一个数组。我们在本章稍后的[完整的数组指南](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)中会作深入探究。就目前而言，数组是元素（本例中为字符串）的集合。
 
 `for...of` 循环为你提供了一种获取数组中的每一个元素的方法，并在元素的基础上运行 JavaScript 代码。`for (const fruit of fruits)` 这一行的意思是：
 
@@ -447,7 +447,7 @@ guessField.focus();
 const guessField = document.querySelector(".guessField");
 ```
 
-使用 {{domxref("document")}} 对象的 {{domxref("document.querySelector", "querySelector()")}} 方法可以获得这个引用。`querySelector()` 需要一个信息——用一个 [CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors) 可以选中需要引用的元素。
+使用 {{domxref("document")}} 对象的 {{domxref("document.querySelector", "querySelector()")}} 方法可以获得这个引用。`querySelector()` 需要一个信息——用一个 [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) 可以选中需要引用的元素。
 
 因为 `guessField` 现在包含一个指向 {{htmlelement("input")}} 元素的引用，它现在就能够访问一系列的属性（存储于对象内部的基础变量，其中一些的值无法改变）和方法（存储在对象内部的基础函数）。`focus()` 是 `input` 元素可用方法之一，因此我们可以使用这行代码将光标聚焦于此文本框上︰
 
@@ -462,7 +462,7 @@ guessField.focus();
 浏览器对象如何使用呢，下面我们来小试牛刀。
 
 1. 首先在浏览器中打开你的程序。
-2. 接下来打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并且切换到 JavaScript 控制台的标签页。
+2. 接下来打开[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，并且切换到 JavaScript 控制台的标签页。
 3. 输入 `guessField`，控制台将会显示此变量包含一个 {{htmlelement("input")}} 元素。同时控制台还能自动补全运行环境中对象的名字，包括你的变量！
 4. 现在输入下面的代码：
 

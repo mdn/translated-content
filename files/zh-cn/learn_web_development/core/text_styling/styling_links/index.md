@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-当为[链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)添加样式时，理解利用伪类有效地建立链接状态是很重要的，以及如何为链接添加样式来实现常用的功能（如导航菜单和选项卡）。我们将在本文中关注所有这些主题。
+当为[链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)添加样式时，理解利用伪类有效地建立链接状态是很重要的，以及如何为链接添加样式来实现常用的功能（如导航菜单和选项卡）。我们将在本文中关注所有这些主题。
 
 <table>
   <tbody>
@@ -16,12 +16,12 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         HTML 基础（已学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 简介</a
         >）、CSS 基础（已学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 简介</a
-        >）、<a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
+        >）、<a href="/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >CSS 文本和字体基础</a
         >。
       </td>
@@ -38,7 +38,7 @@ l10n:
 
 ## 让我们来看一些链接
 
-在[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)一文中，我们了解了如何根据最佳实践在 HTML 中实现链接。在本文中，我们将以这些知识为基础，向你展示为超链接设计样式的最佳做法。
+在[创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)一文中，我们了解了如何根据最佳实践在 HTML 中实现链接。在本文中，我们将以这些知识为基础，向你展示为超链接设计样式的最佳做法。
 
 ### 链接状态
 
@@ -389,14 +389,14 @@ a[href^="http"] {
 
 最后，我们在链接上设置 {{cssxref("padding-right")}} ，为背景图片留出空间，这样就不会让它和文本重叠了。
 
-最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#标签属性选择器)——`a[href^="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值以“http”开头的 {{htmlelement("a")}} 元素。
+最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#标签属性选择器)——`a[href^="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值以“http”开头的 {{htmlelement("a")}} 元素。
 
 就是这样。重温上文的动手练习部分，试试这种新技巧吧！
 
 > **备注：** `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
 
 > [!NOTE]
-> 如果你对[背景](/zh-CN/docs/Learn/CSS/Building_blocks)和[响应式 web 设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)还不熟悉，也不用担心，其他地方会有解释。
+> 如果你对[背景](/zh-CN/docs/Learn_web_development/Core/Styling_basics)和[响应式 web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)还不熟悉，也不用担心，其他地方会有解释。
 
 ## 样式化链接为按钮
 
@@ -463,7 +463,7 @@ a:active {
 HTML 定义了一个 {{HTMLElement("nav")}} 元素，该元素具有 `"container"` 类。其中的 `<nav>` 包含我们的链接。
 
 - 第二条规则的含义：
-  - 容器为[弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)。其中包含的项目（本例中为链接）将是*弹性项*。
+  - 容器为[弹性盒](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)。其中包含的项目（本例中为链接）将是*弹性项*。
   - 柔性项之间的间隙为容器宽度的 `0.625%`。
 - 第三条规则为链接设置样式：
   - 第一个声明 `flex: 1` 表示将调整项的宽度，以便它们使用容器中的所有可用空间。
@@ -472,6 +472,6 @@ HTML 定义了一个 {{HTMLElement("nav")}} 元素，该元素具有 `"container
 
 ## 总结
 
-希望这篇文章目前能为你提供关于链接的所有知识！我们的文字样式模块的最后一篇文章将详细介绍如何在网站上使用[自定义字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)（或称 Web 字体）。
+希望这篇文章目前能为你提供关于链接的所有知识！我们的文字样式模块的最后一篇文章将详细介绍如何在网站上使用[自定义字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)（或称 Web 字体）。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

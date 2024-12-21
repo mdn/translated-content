@@ -13,7 +13,7 @@ original_slug: Learn/HTML/Howto
 HTML 应用最基础的是文档结构。如果你是 HTML 新手那么你应该和我们一起从这里开始学习。
 
 - [如何创建 HTML 文档](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#主动学习：创建第一个_html_元素)
-- [如何将网页分成有逻辑的部分](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+- [如何将网页分成有逻辑的部分](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
 - [如何设置一个适当的标题和段落结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#基础：标题和段落)
 
 ### 基本文本语义
@@ -27,30 +27,30 @@ HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何�
 - [如何注释图片和图标](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#通过为图片搭配说明文字的方式来解说图片)
 - [如何注解缩略语并使其可理解](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)
 - [如何为网页添加引述和引用](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#引用)
-- [如何用 HTML 定义术语](/zh-CN/docs/Learn/HTML/Howto/Define_terms_with_HTML)
+- [如何用 HTML 定义术语](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML)
 
 ### 超链接
 
 使用 HTML 的主要原因之一，就是可以使用{{Glossary("hyperlink", "超链接")}}来轻松导航，实现方式有以下几种：
 
-- [如何创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+- [如何创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - [如何创建导航菜单](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#主动学习：创建一个导航菜单)
 
 ### 图像 & 多媒体
 
 - [如何在页面中添加图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#怎样将一幅图片放到网页上？)
-- [如何在页面中添加视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [如何在页面中添加视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 ### 脚本 & 样式
 
 HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary("CSS")}} 或脚本使页面具有交互功能。
 
 - [如何在网页中使用 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#应用_css_到_dom)
-- [如何在网页中使用 JavaScript](/zh-CN/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+- [如何在网页中使用 JavaScript](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
 
 ### 嵌入内容
 
-- [如何在网页中嵌入另一个页面](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [如何在网页中嵌入另一个页面](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
 
 ## 不常见或进阶的问题
 
@@ -58,22 +58,22 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 
 ### 表单
 
-表单是一种复杂的 HTML 结构，用于从网页向网络服务器发送数据。我们鼓励你仔细阅读[完整指南](/zh-CN/docs/Learn/Forms)。你可由此入门：
+表单是一种复杂的 HTML 结构，用于从网页向网络服务器发送数据。我们鼓励你仔细阅读[完整指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)。你可由此入门：
 
-- [如何创建一个简单的网页表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何组织一个网页表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [如何创建一个简单的网页表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [如何组织一个网页表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 
 ### 表格信息
 
 一些表格化信息/数据需用行和列整合到表格中去。而表格是最复杂的 HTML 结构之一，熟练掌握它并不容易：
 
-- [如何创建一张数据表格](/zh-CN/docs/Learn/HTML/Tables/Basics)
-- [如何使 HTML 表格更具无障碍性](/zh-CN/docs/Learn/HTML/Tables/Advanced)
+- [如何创建一张数据表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [如何使 HTML 表格更具无障碍性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
 
 ### 数据表示
 
 - 如何用 HTML 表示数值和代码，参见[上标和下标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#上标和下标)以及[展示计算机代码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#展示计算机代码)
-- [如何使用 data 属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)
+- [如何使用 data 属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 
 ### 高级文本语义
 
@@ -82,9 +82,9 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 
 ### 高级图像 & 多媒体
 
-- [如何为网页添加响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [如何为网页添加矢量图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [如何在图像上添加 hit map](/zh-CN/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [如何为网页添加响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
+- [如何为网页添加矢量图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
+- [如何在图像上添加 hit map](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 
 ### 国际化
 
@@ -95,4 +95,4 @@ HTML 支持多语言，其提供了用于解决常见的国际化问题的工具
 
 ### 性能
 
-- [如何写一个加载速度很快的 HTML 页面](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+- [如何写一个加载速度很快的 HTML 页面](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)

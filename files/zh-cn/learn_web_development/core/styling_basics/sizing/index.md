@@ -20,9 +20,9 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
           href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识、HTML 基础（学习<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
-        >）、理解 CSS 如何工作（学习 <a href="/zh-CN/docs/Learn/CSS/First_steps"
+        >）、理解 CSS 如何工作（学习 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 入门</a
         >）。
       </td>
@@ -50,7 +50,7 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## 设置具体的尺寸
 
-我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为**外部尺寸**。以上面例子中的 `<div>` 举例——我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。正如我们在[上一课](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。
+我们当然可以给设计中的元素指定具体大小。当给元素指定尺寸（然后其内容需要适合该尺寸）时，我们将其称为**外部尺寸**。以上面例子中的 `<div>` 举例——我们可以给它一个具体的 {{cssxref("width")}} 和 {{cssxref("height")}} 值，然后不论我们放什么内容进去它都是该尺寸。正如我们在[上一课](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow)有关溢出的内容中所发现的，如果内容的数量超出了元素可容纳的空间，则设置的高度会导致内容溢出。
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -97,7 +97,7 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 这个技术是用来让图片**可响应**的，所以在更小的设备上浏览的时候，它们会合适地缩放。你无论怎样都不应该用这个技术先载入大原始尺寸的图片，再对它们在浏览器中进行缩放。图像应该合适地调整尺寸，以使它们不会比预计中展示时所需要的最大尺寸大。下载过大的图像会造成你的网站变慢，如果用户使用按量收费的网络连接，会让用户花更多钱。
 
 > [!NOTE]
-> 了解更多关于[响应式图片技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)的事情。
+> 了解更多关于[响应式图片技术](/zh-CN/docs/Web/HTML/Responsive_images)的事情。
 
 ## 视口单位
 
@@ -113,6 +113,6 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## 小结
 
-本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
+本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习 [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

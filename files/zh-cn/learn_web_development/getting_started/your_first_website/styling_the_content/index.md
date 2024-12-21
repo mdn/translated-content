@@ -24,7 +24,7 @@ p {
 
 让我们来试一试！使用文本编辑器，在新文件中粘贴上面的三行 CSS 代码。在 `styles` 文件夹中将文件保存为 `style.css`。
 
-为了使代码发挥作用，我们仍需要将上面的 CSS 应用到 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)和 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)。）
+为了使代码发挥作用，我们仍需要将上面的 CSS 应用到 HTML 文档中。否则，这些样式不会改变 HTML 的外观。（如果你没有完成前几节的实践，请复习[处理文件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)和 [HTML 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)。）
 
 1. 打开 `index.html` 文件，在文档头部（也就是 {{HTMLElement("head")}} 和 `</head>` 标签之间）粘贴这行代码。
 
@@ -143,13 +143,13 @@ h1 {
   </tbody>
 </table>
 
-选择器的种类远不止这些，更多信息请参阅 MDN 的[选择器指南](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。
+选择器的种类远不止这些，更多信息请参阅 MDN 的[选择器指南](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。
 
 ## 字体和文本
 
 在探索了一些 CSS 基础后，让我们在 `style.css` 中添加更多的规则和信息，从而让示例更美观。
 
-1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)中保存的 [Google Fonts 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。在 `index.html` 文档头部（{{HTMLElement("head")}} 和 `</head>` 之间的任意位置）添加 {{htmlelement("link")}} 元素。代码如下：
+1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)中保存的 [Google Fonts 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。在 `index.html` 文档头部（{{HTMLElement("head")}} 和 `</head>` 之间的任意位置）添加 {{htmlelement("link")}} 元素。代码如下：
 
    ```html
    <link
@@ -301,6 +301,6 @@ img {
 
 （你可以[在这里查看我们的版本](https://mdn.github.io/beginner-html-site-styled/)。）如果你遇到困难，你可以将 [Github 上的完整示例代码](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)与你的文件进行比较。
 
-在这里，我们只是介绍了 CSS 的表面。想学习更多，参见[学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)。
+在这里，我们只是介绍了 CSS 的表面。想学习更多，参见[学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}

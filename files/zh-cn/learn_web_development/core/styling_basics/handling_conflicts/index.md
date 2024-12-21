@@ -18,11 +18,11 @@ original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
         基本的计算机知识、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装基本的软件</a
-        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件处理</a>基本知识、HTML
-        基础知识（<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML
+        基础知识（<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML
           简介</a>），以及 CSS 如何工作的基本常识（<a
-          href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a>）。
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">学习 CSS 第一步</a>）。
       </td>
     </tr>
     <tr>
@@ -547,11 +547,11 @@ p#addSpecificity {
 
 ## 技能测试！
 
-你已经阅读到了本文的末尾，但你记住最重要的内容了吗？在进一步学习之前，你可以寻找一些深入的测验来验证你是否掌握了这些信息，参见[技能测试：层叠](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_tasks)。
+你已经阅读到了本文的末尾，但你记住最重要的内容了吗？在进一步学习之前，你可以寻找一些深入的测验来验证你是否掌握了这些信息，参见[技能测试：层叠](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks)。
 
 ## 总结
 
-如果你理解了本文的大部分内容，那么就做得很好了——你已经开始熟悉 CSS 的基本机制。接下来，我们将详细讨论[层叠层](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_layers)。
+如果你理解了本文的大部分内容，那么就做得很好了——你已经开始熟悉 CSS 的基本机制。接下来，我们将详细讨论[层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)。
 
 如果你没有完全理解层叠、优先级和继承，也请不要担心！这绝对是我们到目前为止在课程中所涉及到的最复杂的事情，即使是专业的 web 开发人员有时也会觉得棘手。我们建议你在继续学习这门课程的过程中，反复阅读这篇文章几次，并继续思考它。
 

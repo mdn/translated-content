@@ -14,15 +14,15 @@ original_slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_serv
       <th scope="row">前提：</th>
       <td>
         你必须知道<a
-          href="/zh-CN/docs/Learn/Common_questions/What_is_a_web_server"
+          href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >什么是 web 服务器</a
         >以及<a
-          href="/zh-CN/docs/Learn/Understanding_domain_names"
+          href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name"
           >域名是如何工作的</a
         >。你必须知道如何<a
-          href="/zh-CN/docs/Learn/Set_up_a_basic_working_environment"
+          href="/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server"
           >搭建一个基本环境</a
-        >，还有如何<a href="/zh-CN/docs/Learn/HTML/Write_a_simple_page_in_HTML"
+        >，还有如何<a href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >写一个简单的网页</a
         >。
       </td>
@@ -36,7 +36,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_serv
 
 ## 概要
 
-如果你已经建立了一个简单的页面（参见 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)以获取示例），你会想将它放到某些 web 服务器上。在本文中，我们将讨论如何使用各类可用的方法（如 SFTP 客户端、Rsync 和 GitHub）来做到这一点。
+如果你已经建立了一个简单的页面（参见 [HTML 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)以获取示例），你会想将它放到某些 web 服务器上。在本文中，我们将讨论如何使用各类可用的方法（如 SFTP 客户端、Rsync 和 GitHub）来做到这一点。
 
 ## SFTP
 
@@ -156,7 +156,7 @@ rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 
 GitHub 允许你通过 [GitHub pages](https://pages.github.com/)（gh-pages）发布网站。
 
-我们已经在我们的[web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)指南的[发布网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)中介绍了这一内容，所以我们不再重复。
+我们已经在我们的[web 入门](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)指南的[发布网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)中介绍了这一内容，所以我们不再重复。
 
 但是，值得注意的是，你也可以在使用自定义域名的情况下，在 GitHub 上托管网站。请参阅[配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site)以获取详细的指南。
 

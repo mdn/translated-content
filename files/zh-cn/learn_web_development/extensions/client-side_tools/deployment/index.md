@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">预备条件：</th>
       <td>
-        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -105,7 +105,7 @@ l10n:
 
 ## 将更改提交至 GitHub
 
-本节将帮助你将代码存储到 git 仓库，但它与 git 教程相去甚远。我们的[Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub)页面也是一个很好的开始。
+本节将帮助你将代码存储到 git 仓库，但它与 git 教程相去甚远。我们的[Git 和 GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control)页面也是一个很好的开始。
 
 前面我们将工作目录初始化为 git 工作目录。运行以下命令即可快速验证：
 
@@ -230,7 +230,7 @@ Netlify 部分的内容就到此为止。我们可以选择更改 Netlify 项目
 - 端到端测试，即访问者点击某样东西，然后发生另一件事。
 - 集成测试，基本上是说“当一个代码块连接到另一个代码块时，它还能工作吗”。
 - 单元测试，即测试小而具体的功能位，看它们是否完成了应该做的事情。
-- [还有更多类型](https://en.wikipedia.org/wiki/Functional_testing)。此外，请参阅我们的[跨浏览器测试模块](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)，获取大量有用的测试信息。
+- [还有更多类型](https://en.wikipedia.org/wiki/Functional_testing)。此外，请参阅我们的[跨浏览器测试模块](/zh-CN/docs/Learn_web_development/Extensions/Testing)，获取大量有用的测试信息。
 
 请记住，测试并不局限于 JavaScript；还可以针对渲染的 DOM、用户交互、CSS 甚至页面外观运行测试。
 

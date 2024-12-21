@@ -60,7 +60,7 @@ _唯一不变的就是变化。_
 
 ## 现代 Web 技术概述
 
-如果你想成为前端 Web 开发人员，要学习多种技术。在本节中，我们将简要描述它们。有关其中某些功能是如何协同工作的详尽说明，请阅读我们的文章 [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)。
+如果你想成为前端 Web 开发人员，要学习多种技术。在本节中，我们将简要描述它们。有关其中某些功能是如何协同工作的详尽说明，请阅读我们的文章 [Web 是如何工作的](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)。
 
 ### 浏览器
 
@@ -119,8 +119,8 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 一旦了解了可用于构建网页的“原始”技术（例如 HTML、CSS 和 JavaScript），你很快就会遇到各种让工作更轻松或更有效的工具。例如：
 
-- 现代浏览器中的[开发人员工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)可用于调试代码。
-- 可用于运行测试以显示你的代码是否按预期运行的[测试工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+- 现代浏览器中的[开发人员工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)可用于调试代码。
+- 可用于运行测试以显示你的代码是否按预期运行的[测试工具](/zh-CN/docs/Learn_web_development/Extensions/Testing)。
 - 建立在 JavaScript 之上的库和框架，使你可以更快，更有效地构建特定类型的网站。
 - 所谓的“linter”，它包含了一组规则，检查你的代码之后，会突出显示你未正确遵循规则的地方。
 - 极简化器（minifier），它将代码文件中的所有空格删除以使其更小，从而可以更快地从服务器下载。
@@ -158,4 +158,4 @@ HTML、CSS 和 JavaScript 是前端（或客户端）语言，这意味着浏览
 ## 参见
 
 - [万维网的历史](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [互联网是如何工作的](/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [互联网是如何工作的](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)

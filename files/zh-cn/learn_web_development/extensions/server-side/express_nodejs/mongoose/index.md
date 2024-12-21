@@ -6,14 +6,14 @@ original_slug: Learn/Server-side/Express_Nodejs/mongoose
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
-本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 [Mongoose](http://mongoosejs.com/) 为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。
+本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 [Mongoose](http://mongoosejs.com/) 为 [LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website"
           >Express 教程 2: 创建站点骨架</a
         >，了解数据库基础知识。
       </td>
@@ -78,7 +78,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 > [!NOTE]
 > 使用 Mongoose 无需事先了解 MongoDB，但是部分 [Mongoose 文档](http://mongoosejs.com/docs/guide.html) 对于熟悉 MongoDB 的朋友会更易于使用和理解。
 
-下面将介绍如何为 [LocalLibrary 网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 定义和访问 Mongoose 模式和模型。
+下面将介绍如何为 [LocalLibrary 网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) 定义和访问 Mongoose 模式和模型。
 
 ## 设计 LocalLibrary 模型
 
@@ -562,7 +562,7 @@ SomeModel.find(callback_function);
 
 ## 安装 Mongoose
 
-打开终端，并转到 [LocalLibrary 站点骨架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website) 的目录。通过以下命令安装 Mongoose（及其依赖项），并将其添加至 **package.json** 文件，若你在阅读 **Mongoose 入门** 时已经完成这一操作，请忽略本段。
+打开终端，并转到 [LocalLibrary 站点骨架](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) 的目录。通过以下命令安装 Mongoose（及其依赖项），并将其添加至 **package.json** 文件，若你在阅读 **Mongoose 入门** 时已经完成这一操作，请忽略本段。
 
 ```bash
 npm install mongoose

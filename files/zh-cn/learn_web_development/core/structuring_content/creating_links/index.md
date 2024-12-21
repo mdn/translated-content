@@ -12,7 +12,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
   <tbody>
     <tr>
       <th scope="row">前提：</th>
-       <td>熟悉基本 HTML（包含在<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>中），HTML 文本格式（包含在 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML 文字处理基础</a>中）。</td>
+       <td>熟悉基本 HTML（包含在<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">开始学习 HTML</a>中），HTML 文本格式（包含在 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs">HTML 文字处理基础</a>中）。</td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
@@ -328,10 +328,10 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ## 技能测试！
 
-你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)。
+你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)。
 
 ## 小结
 
-这就是链接！在课程的后期，当你开始研究链接的样式时，会回顾链接部分。接下来是 HTML，我们将回顾文本语义，并查看一些你会发现有用的更高级/不寻常的功能，[文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)是你的下一站。
+这就是链接！在课程的后期，当你开始研究链接的样式时，会回顾链接部分。接下来是 HTML，我们将回顾文本语义，并查看一些你会发现有用的更高级/不寻常的功能，[文本格式进阶](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)是你的下一站。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

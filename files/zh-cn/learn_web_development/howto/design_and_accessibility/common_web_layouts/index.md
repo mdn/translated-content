@@ -12,7 +12,7 @@ original_slug: Learn/Common_questions/Design_and_accessibility/Common_web_layout
   <tbody>
     <tr>
       <th scope="row">知识储备：</th>
-      <td>请先保证你已经考虑过<a href="/zh-CN/docs/Learn/Common_questions/Thinking_before_coding">《我该怎样开始设计我的网站？》</a>所说的内容。</td>
+      <td>请先保证你已经考虑过<a href="/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding">《我该怎样开始设计我的网站？》</a>所说的内容。</td>
     </tr>
     <tr>
       <th scope="row">学习目标：</th>

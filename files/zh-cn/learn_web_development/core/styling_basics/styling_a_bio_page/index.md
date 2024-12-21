@@ -15,13 +15,13 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
       <td>
         <p>
           基本熟悉使用计算机，<a
-            href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
             >基本工作环境的设置</a
           >，基本的<a
             href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
             >文件处理知识</a
           >，基本的 HTML 知识（在<a
-            href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+            href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
             > HTML 概述</a
           >中学习）和 CSS 基础（查看本模块其他内容）
         </p>
@@ -87,6 +87,6 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 ## 接下来是什么？
 
-恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)中，我们将对一些关键区域进行深入的学习。
+恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)中，我们将对一些关键区域进行深入的学习。
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

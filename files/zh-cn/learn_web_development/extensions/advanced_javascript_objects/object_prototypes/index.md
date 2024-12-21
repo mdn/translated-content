@@ -14,9 +14,9 @@ original_slug: Learn/JavaScript/Objects/Object_prototypes
       <th scope="row">前提：</th>
       <td>
         基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript 基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建 JavaScript 代码块</a
-        >）以及面向对象的 JavaScript（OOJS）基础（参见<a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
+        >）以及面向对象的 JavaScript（OOJS）基础（参见<a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics"
           >对象简介</a
         >）。
       </td>

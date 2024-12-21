@@ -6,13 +6,13 @@ original_slug: Learn/Forms/Basic_native_form_controls
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-在[上一篇文章](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
+在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
 
 <table>
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>计算机基础知识和对于 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 的基本理解</a>。</td>
+   <td>计算机基础知识和对于 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 的基本理解</a>。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -68,7 +68,7 @@ _以下截图现实了 macOS 上的 Firefox 71 和 Safari 以及 Windows 10 上�
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
 > [!NOTE]
-> HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)。
+> HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)。
 
 #### 密码框
 
@@ -94,7 +94,7 @@ _以下截图现实了 macOS 上的 Firefox 71 和 Safari 以及 Windows 10 上�
 
 如果你创建了这样一个元素，就需要设置它的 `name` 和 `value` 属性。元素的值可以通过 JavaScript 动态设置。`hidden` input 类型不应有关联的标签（`label` 元素）。
 
-HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
+HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)中介绍。
 
 ## 可选中项：复选框和单选按钮
 
@@ -258,11 +258,11 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-这是构建“热图”的一种非常方便的方式。如何发送和检索这些值在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
+这是构建“热图”的一种非常方便的方式。如何发送和检索这些值在[发送和检索表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)文章中详细说明。
 
 ## 文件选择器
 
-HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
+HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
 
 要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
 
@@ -329,7 +329,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls)。
 
 ## 总结
 
@@ -339,6 +339,6 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ### 高级技巧
 
-- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单部件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单部件兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

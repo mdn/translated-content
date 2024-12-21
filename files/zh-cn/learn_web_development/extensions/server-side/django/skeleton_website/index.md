@@ -6,18 +6,18 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-[Django 教程](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)的第二篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings，urls，模型 (models)，视图 (views) 和模板 (templates)。
+[Django 教程](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)的第二篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings，urls，模型 (models)，视图 (views) 和模板 (templates)。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a href="/zh-CN/docs/Learn/Server-side/Django/development_environment"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >创建 Django 的开发环境</a
         >。复习
         <a
-          href="/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
           >Django 教程</a
         >。
       </td>
@@ -44,7 +44,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 3. 在工程里注册新的应用。
 4. 为每个应用分配 url。
 
-为 [locallibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 这个项目创建的网站文件夹和它的工程文件夹都命名为*locallibrary*。我们只创建一个名为*catalog*的应用。最高层的项目文件结构如下所示：
+为 [locallibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 这个项目创建的网站文件夹和它的工程文件夹都命名为*locallibrary*。我们只创建一个名为*catalog*的应用。最高层的项目文件结构如下所示：
 
 ```bash
 locallibrary/         # 网站文件夹
@@ -150,7 +150,7 @@ INSTALLED_APPS = [
 新的这行详细说明了应用配置文件在 (`CatalogConfig`) **/locallibrary/catalog/apps.py** 里，当你创建应用时就完成了这个过程。
 
 > [!NOTE]
-> 注意到 `INSTALLED_APPS` 已经有许多其他的应用了（还有 `MIDDLEWARE`，在 settings 的下面）。这些应用为 [Django administration site](/zh-CN/docs/Learn/Server-side/Django/Admin_site) 提供了支持和许多功能（包括会话，认证系统等）。
+> 注意到 `INSTALLED_APPS` 已经有许多其他的应用了（还有 `MIDDLEWARE`，在 settings 的下面）。这些应用为 [Django administration site](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) 提供了支持和许多功能（包括会话，认证系统等）。
 
 ## 配置数据库
 
@@ -363,7 +363,7 @@ python3 manage.py runserver
 
 你现在已经创建了一个完整的基本网站项目骨架，你可以继续填加网址，模型，视图和模版。
 
-现在， [Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 的骨架已经完成并运行，是时候开始编写代码，让这个网站做它应该做的事情了。
+现在， [Local Library website](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 的骨架已经完成并运行，是时候开始编写代码，让这个网站做它应该做的事情了。
 
 ## 更多
 

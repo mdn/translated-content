@@ -14,7 +14,7 @@ original_slug: Learn/Accessibility/CSS_and_JavaScript
       <th scope="row">准备：</th>
       <td>
         <p>
-          基本的计算机读写能力，对 HTML、CSS 和 JavaScript 的基本理解，以及对<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility">无障碍</a>的理解。
+          基本的计算机读写能力，对 HTML、CSS 和 JavaScript 的基本理解，以及对<a href="/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">无障碍</a>的理解。
         </p>
       </td>
     </tr>
@@ -37,7 +37,7 @@ CSS 和 JavaScript 对无障碍直接的重要性都不如 HTML，但是它们�
 
 ### 正确的语义和用户期望
 
-可以使用 CSS 使任何 HTML 元素看起来像任何东西，但这并不意味着你应该这样做。正如我们经常提到的 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)，你应该尽可能为作业（job）使用适当的语义元素。如果不这样做，它可能会对每个人造成混乱和可用性问题，尤其是对残障用户。使用正确的语义与用户期望有很大的帮助——元素的外观和功能会根据它们的功能进行某些方式的显示，而且用户期望这些常见的约定。
+可以使用 CSS 使任何 HTML 元素看起来像任何东西，但这并不意味着你应该这样做。正如我们经常提到的 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML)，你应该尽可能为作业（job）使用适当的语义元素。如果不这样做，它可能会对每个人造成混乱和可用性问题，尤其是对残障用户。使用正确的语义与用户期望有很大的帮助——元素的外观和功能会根据它们的功能进行某些方式的显示，而且用户期望这些常见的约定。
 
 例如，如果开发人员没有适当地使用标题元素标记内容，则屏幕阅读器用户无法通过标题元素导航页面。同样，如果对标题进行样式设置，则标题将失去其视觉目的，使其看起来不像标题。
 
@@ -78,7 +78,7 @@ li {
 - 确保标题从正文文本中脱颖而出，通常像默认样式一样大而粗壮。你的列表应类似于列表。
 - 文本颜色应与背景颜色形成良好对比。
 
-有关详细信息，请参阅 [HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)和[设置文本样式](/zh-CN/docs/Learn/CSS/Styling_text)。
+有关详细信息，请参阅 [HTML 文本基础知识](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)和[设置文本样式](/zh-CN/docs/Learn_web_development/Core/Text_styling)。
 
 #### 强调的文本
 
@@ -225,7 +225,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 
 现代 JavaScript 是一种功能强大的语言，如今我们可以使用它，从简单的内容和 UI 更新到成熟的 2D 和 3D 游戏。没有任何规则规定所有内容都必须对所有人 100% 无障碍——你只需尽力而为，并使你的应用尽可能无障碍。
 
-简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)一文中提到的，主要注意事项包括：
+简单的内容和功能可以说是很容易使访问——例如文本，图像，表格，窗体和按钮，激活功能。正如我们在 [HTML：辅助功能的良好基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML)一文中提到的，主要注意事项包括：
 
 - 良好的语义：为正确的工作使用正确的元素。例如，确保你使用标题和段落，以及 {{htmlelement("button")}} 和 {{htmlelement("a")}} 元素
 - 确保内容以文本形式提供，要么直接作为文本内容、表单元素的良好文本标签，也可以确保[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)（例如图像的 alt 文本）。
@@ -326,7 +326,7 @@ function createLink(testItem) {
 </div>
 ```
 
-我们将在下一篇文章中解释这些属性，其中将更详细地介绍 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)。
+我们将在下一篇文章中解释这些属性，其中将更详细地介绍 [WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)。
 
 > [!NOTE]
 > 一些人可能会考虑这样一个事实，即 HTML5 表单有内置的验证机制，如 `required`、`min`/`minlength` 和 `max`/`maxlength` 属性（详细信息，请参阅 {{htmlelement("input")}}元素引用）。我们最终没有在演示中使用这些功能，因为不是所有的浏览器都支持（例如，仅 IE10 及以上版本支持，Safari 不支持）。

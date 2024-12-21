@@ -124,7 +124,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 为了表明你关心并考虑了无障碍，请在你的网站上发布无障碍声明，其中详细说明你对无障碍的政策以及为使该站点可访问而采取的步骤。如果有人确实反映你的网站存在无障碍问题，请与他们展开对话，保持同情心，并采取合理的步骤尝试解决问题。
 
 > [!NOTE]
-> 我们的“[处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)”一文涵盖了应更详细地测试的无障碍细节。
+> 我们的“[处理常见的无障碍问题](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling)”一文涵盖了应更详细地测试的无障碍细节。
 
 总结：
 
@@ -155,7 +155,7 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 - Android: Accessibility framework
 - iOS: UIAccessibility
 
-如果 Web 应用中的 HTML 元素提供的本机语义信息失效，则可以使用 [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/) 的功能来补充该信息，这些功能向辅助功能树添加语义信息以提高无障碍。在 [WAI-ARIA basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章中了解有关 WAI-ARIA 的更多详细信息。
+如果 Web 应用中的 HTML 元素提供的本机语义信息失效，则可以使用 [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/) 的功能来补充该信息，这些功能向辅助功能树添加语义信息以提高无障碍。在 [WAI-ARIA basics](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 文章中了解有关 WAI-ARIA 的更多详细信息。
 
 ## 摘要
 
@@ -165,13 +165,13 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 
 ## 本章目录
 
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
-- [无障碍疑难解答](/zh-CN/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [什么是无障碍？](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
+- [HTML：无障碍的良好基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML)
+- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
+- [WAI-ARIA 基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
+- [多媒体无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/Multimedia)
+- [移动端无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/Mobile)
+- [无障碍疑难解答](/zh-CN/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting)
 
 ## 参见
 

@@ -25,7 +25,7 @@ l10n:
   </tbody>
 </table>
 
-在[上一篇文章](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)中，我们谈到使用回调实现异步函数的方法。在这种设计中，我们需要在调用异步函数的同时传入回调函数。这个异步函数会立即返回，并在操作完成后调用传入的回调。
+在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)中，我们谈到使用回调实现异步函数的方法。在这种设计中，我们需要在调用异步函数的同时传入回调函数。这个异步函数会立即返回，并在操作完成后调用传入的回调。
 
 在基于 Promise 的 API 中，异步函数会启动操作并返回一个 {{jsxref("Promise")}} 对象。然后，你可以将处理函数附加到 Promise 对象上，当操作完成时（成功或失败），这些处理函数将被执行。
 
@@ -35,7 +35,7 @@ l10n:
 > 在这篇文章中，我们将通过复制页面上的代码示例到浏览器的 JavaScript 控制台中运行的方式来学习 Promise。因此在正式开始学习之前你需要进行以下设置：
 >
 > 1. 在浏览器中打开一个新标签页并访问 <https://example.org>。
-> 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的 JavaScript 控制台
+> 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中的 JavaScript 控制台
 > 3. 把我们展示的代码示例复制到控制台中运行。值得注意的是，你必须在每次输入新的示例之前重新加载页面，否则控制台会报错“重新定义了 `fetchPromise`”。
 
 在这个例子中，我们将从 <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> 下载 JSON 文件，并打印一些相关信息。

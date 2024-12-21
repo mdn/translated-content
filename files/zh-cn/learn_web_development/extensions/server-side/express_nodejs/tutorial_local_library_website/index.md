@@ -14,11 +14,11 @@ original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
       <th scope="row">前提：</th>
       <td>
         阅读
-        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction"
           >Express 入门</a
         >。进行以后的小节还需要阅读
         <a
-          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment"
           >配置 Node 开发环境</a
         >。
       </td>
@@ -69,6 +69,6 @@ original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 ## 总结
 
-现在，你对 LocalLibrary 网站和即将学习的东西又多了解了一点，下面，我们开始创建一个用于存放它的 [框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website) 吧！
+现在，你对 LocalLibrary 网站和即将学习的东西又多了解了一点，下面，我们开始创建一个用于存放它的 [框架](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) 吧！
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}

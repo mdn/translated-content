@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-我们现在可以添加代码来显示我们的第一个完整页面 - [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。
+我们现在可以添加代码来显示我们的第一个完整页面 - [LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 网站的主页，显示每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模板的实践经验。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -14,10 +14,10 @@ original_slug: Learn/Server-side/Django/Home_page
       <th scope="row">前提：</th>
       <td>
         读 the
-        <a href="/zh-CN/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >Django Introduction</a
         >. 完成上章节 (including
-        <a href="/zh-CN/docs/Learn/Server-side/Django/Admin_site"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >).
       </td>
@@ -78,7 +78,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 ### URL 映射
 
-在我们创建的[基础网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)上，更新 **/locallibrary/urls.py** 文件。以确保每当收到以 **`catalog/`** 开头的 URL 时，URLConf 模块中的 **catalog.urls** 会处理剩余的字符串。
+在我们创建的[基础网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)上，更新 **/locallibrary/urls.py** 文件。以确保每当收到以 **`catalog/`** 开头的 URL 时，URLConf 模块中的 **catalog.urls** 会处理剩余的字符串。
 
 打开 catalog/**urls.py** ，复制下面代码
 
@@ -319,7 +319,7 @@ return render(
 ```
 
 > [!NOTE]
-> 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
+> 上面的更改指定文件所在的位置，但 Django 默认不提供它们。当我们[created the website skeleton](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website),我们在全局 URL 映射器 r (**/locallibrary/locallibrary/urls.py**) 中开发 Web 服务器提供服务，你仍然需要安排它们在生产中投放。我们接下来看一看
 
 更多内容—[Managing static files](https://docs.djangoproject.com/en/1.10/howto/static-files/) (Django docs).
 

@@ -12,7 +12,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introdu
  <tbody>
   <tr>
    <th scope="row">前提：</th>
-   <td>熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>, <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心。</td>
+   <td>熟悉 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a>, 以及 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言的核心。</td>
   </tr>
   <tr>
    <th scope="row">目标：</th>
@@ -39,7 +39,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introdu
 
 [Ember](https://emberjs.com/) 于 2011 年 12 月发布，最初作为 [SproutCore](https://en.wikipedia.org/wiki/SproutCore) 项目的延续而开始。比其新式的替代品（例如 React 和 Vue），作为老框架，它的用户人数要少得多。但因其稳定性、社区支持以及编程原则都非常良好，它仍然享有很高的知名度。
 
-[开始学习 Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+[开始学习 Ember](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Ember_getting_started)
 
 ### Angular
 
@@ -47,7 +47,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introdu
 
 Angular 是一种基于组件的框架，使用声明式的 HTML 模板。在应用构建时，框架的编译器将 HTML 模板转换为优化好的 JavaScript 指令，这一过程对开发者是透明的。Angular 使用 TypeScript，它是 JavaScript 的超集，我们将在下一章中对其进行更多介绍。
 
-[开始学习 Angular](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+[开始学习 Angular](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
 
 ### Vue
 
@@ -55,7 +55,7 @@ Angular 是一种基于组件的框架，使用声明式的 HTML 模板。在应
 
 Vue，就像 [AngularJS](https://angularjs.org/)，用它自己的代码拓展了 HTML。除此之外，它还主要依赖于现代的、标准化的 JavaScript。
 
-[开始学习 Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+[开始学习 Vue](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started)
 
 ### React
 
@@ -65,7 +65,7 @@ Facebook 在 2013 年发布了 React。在当时 React 已经被用于 Facebook 
 
 React 用类似 HTML 的语法的 [JSX](https://reactjs.org/docs/introducing-jsx.html) 拓展了 JavaScript。
 
-[开始学习 React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+[开始学习 React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
 
 ## 框架为何会存在？
 
@@ -188,7 +188,7 @@ JavaScript 框架都提供了一种更具以*声明性*的方式地编写用户�
 由于此模块中的每个框架都有一个庞大而活跃的社区，因此每个框架的体系都提供了工具来改善开发体验。这些工具让诸如添加测试（确保你的应用表现应有的行为）和 linting（确保你的代码没有错误且排版统一）变得更加容易。
 
 > [!NOTE]
-> 如果你想了解有关 Web 工具概念的更多详细信息，请阅读[客户端工具概述](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。
+> 如果你想了解有关 Web 工具概念的更多详细信息，请阅读[客户端工具概述](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Overview)。
 
 ### 组件化
 

@@ -14,7 +14,7 @@ original_slug: Learn/Forms/Other_form_controls
       <th scope="row">前提：</th>
       <td>
         计算机基础知识和对于
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 的基本理解</a
         >。
       </td>
@@ -74,7 +74,7 @@ original_slug: Learn/Forms/Other_form_controls
 - `horizontal`：只允许横向水平缩放行为。
 - `vertical`：只允许纵向竖直缩放行为。
 - `none`：不允许缩放行为。
-- `block` 和 `inline`：实验性的值，仅允许以 `block` 或 `inline` 方向缩放，如何变化取决于文字的方向，请参阅[处理不同文字方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)以了解更多内容。
+- `block` 和 `inline`：实验性的值，仅允许以 `block` 或 `inline` 方向缩放，如何变化取决于文字的方向，请参阅[处理不同文字方向](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)以了解更多内容。
 
 多多调试 {{cssxref("resize")}} 参考页面顶部的例子，来看看它们是如何运行的。
 
@@ -302,18 +302,18 @@ original_slug: Learn/Forms/Other_form_controls
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls)。
 
 ## 总结
 
 正如你在过去的几篇文章中所看到的，有许多不同类型的表单控件。你不需要一下子记住所有这些细节，只要你愿意，可以经常回到这些文章中来检查细节。
 
-现在你已经掌握了不同的可用表单控件背后的 HTML 代码，接下来我们将看看[如何进行样式化表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)。
+现在你已经掌握了不同的可用表单控件背后的 HTML 代码，接下来我们将看看[如何进行样式化表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)。
 
 {{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 ### 进阶内容
 
-- [如何构建表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单控件兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

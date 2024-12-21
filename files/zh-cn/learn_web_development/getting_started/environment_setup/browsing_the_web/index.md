@@ -109,5 +109,5 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 
 ## 下一步
 
-- 继续探索：[什么是 Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- 看网页是如何被链接到网站中的：[理解超链接](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
+- 继续探索：[什么是 Web 服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- 看网页是如何被链接到网站中的：[理解超链接](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)

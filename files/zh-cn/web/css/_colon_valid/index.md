@@ -42,4 +42,4 @@ input:valid {
 ## 参见
 
 - {{ cssxref(":invalid") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}
-- [Form data validation](/zh-CN/docs/Learn/Forms/Form_validation)
+- [Form data validation](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)

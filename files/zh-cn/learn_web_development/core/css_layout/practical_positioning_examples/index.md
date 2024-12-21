@@ -14,10 +14,10 @@ original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
       <th scope="row"><p>前提：</p></th>
       <td>
         <p>
-          HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          HTML 基础 (学习<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
             >Introduction to HTML</a
           >),和 CSS 怎么工作的 (学习<a
-            href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >Introduction to CSS</a
           >.)
         </p>
@@ -96,7 +96,7 @@ original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 这样我们已经得到了一个{{htmlelement("section")}}元素带有类（`class`）为 `info-box`。此元素又包含一个 {{htmlelement("ul")}} 和一个 {{htmlelement("div")}}。无序列表包含三个列表项，列表项有链接在内，实际上将成为用于点击后显示内容面板的选项卡。 `div` 包含三个{{htmlelement("article")}} 元素，构成对应于每个选项卡的内容面板。每个面板包含一些示例内容。
 
-这里的思路是我们将样式化选项卡看起来是一个标准的水平导航菜单，使用绝对定位样式化面板互相坐落其顶上。我们也给你一点 JavaScript 包含到你的页面上，当选项卡被按下时，显示对应的面板，并且样式化选项卡本身。你不需要在这个阶段了解 JavaScript 本身，但是你应该尽快学习一些基本的 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)——你的用户界面越复杂，越需要一些 JavaScript 来实现你渴望的功能。
+这里的思路是我们将样式化选项卡看起来是一个标准的水平导航菜单，使用绝对定位样式化面板互相坐落其顶上。我们也给你一点 JavaScript 包含到你的页面上，当选项卡被按下时，显示对应的面板，并且样式化选项卡本身。你不需要在这个阶段了解 JavaScript 本身，但是你应该尽快学习一些基本的 [JavaScript](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)——你的用户界面越复杂，越需要一些 JavaScript 来实现你渴望的功能。
 
 ### 一般设置
 

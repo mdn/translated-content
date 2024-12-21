@@ -16,12 +16,12 @@ original_slug: Learn/CSS/Building_blocks/Selectors/Combinators
         基础电脑知识、<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >安装了基本的软件</a
-        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件处理</a>基本知识、HTML 基础（学习 <a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >），以及对 CSS 工作原理的了解（学习<a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 初步</a
         >）
       </td>
@@ -100,10 +100,10 @@ ul > li[class="a"] {
 
 ## 技能测试！
 
-我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks)。
+我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks)。
 
 ## 继续学习
 
-这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)。
+这是我们选择器这节课的最后一节了。下面我们将会继续前进，学习 CSS 的另一个重要部分——[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}

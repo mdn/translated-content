@@ -147,6 +147,6 @@ web 框架可以帮助抵御很多常见的攻击。
 
 这篇文章介绍了有关网络安全的概念和你应该避免的一些常见的攻击。最重要的是，你应该明白一个 web 应用不可以相信任何来自网络服务器的数据！所有的用户数据在展示、使用 SQL 查询或者回应系统之前应该被过滤。
 
-这也是[这个模块](/zh-CN/docs/Learn/Server-side/First_steps)的结尾，涵盖了你之前在服务器端编程学到的知识。我们希望你非常享受这个学习基础概念的过程，并且你现在已经准备好选择一个 web 框架开始编程了。
+这也是[这个模块](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps)的结尾，涵盖了你之前在服务器端编程学到的知识。我们希望你非常享受这个学习基础概念的过程，并且你现在已经准备好选择一个 web 框架开始编程了。
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

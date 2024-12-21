@@ -77,7 +77,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 [Git](https://git-scm.com/) 是现在大多数人使用的源代码控制系统。它主要通过命令行访问，但也可以通过友好的用户界面访问。使用 git 存储库中的代码，你可以将其推到自己的服务器实例中，或者使用托管的源代码控制网站，如[GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product/features).
 
-我们将在这个模块中使用 GitHub。你可以在网站上找到更多关于它的信息[Git and GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub).
+我们将在这个模块中使用 GitHub。你可以在网站上找到更多关于它的信息[Git and GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control).
 
 #### 代码格式化
 
@@ -97,7 +97,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 web 应用程序生命周期的这个阶段通常允许你编写“未来代码”(比如最新的 CSS 或 JavaScript 特性，这些特性可能还没有得到浏览器的本地支持)，或者完全使用另一种语言编写代码，比如 [TypeScript](https://www.typescriptlang.org/)。转换工具将为你生成与浏览器兼容的代码，以用于生产。
 
-通常 web 开发被认为是三种语言：[HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)，所有这些语言都有转换工具。转换提供了两个主要好处（还有其他好处）
+通常 web 开发被认为是三种语言：[HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting)，所有这些语言都有转换工具。转换提供了两个主要好处（还有其他好处）
 
 1. 能够使用最新的语言特性编写代码，并将其转换为可在日常设备上使用的代码。例如，你可能希望使用尖端的新语言特性来编 JavaScript，但是你的最终产品代码仍然可以在不支持这些特性的旧浏览器上工作。例如：
 

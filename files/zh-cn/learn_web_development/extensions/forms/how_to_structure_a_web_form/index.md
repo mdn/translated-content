@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的基本理解</a
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">对 HTML 的基本理解</a
         >。
       </td>
     </tr>
@@ -28,7 +28,7 @@ l10n:
   </tbody>
 </table>
 
-表单的灵活性使它们成为 [HTML](/zh-CN/docs/Learn/HTML) 中最复杂的结构之一。你可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和[无障碍性](/zh-CN/docs/Learn/Accessibility)。
+表单的灵活性使它们成为 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 中最复杂的结构之一。你可以使用专用的表单元素和属性构建任何类型的基本表单。在构建 HTML 表单时使用正确的结构将有助于确保表单可用性和[无障碍性](/zh-CN/docs/Learn_web_development/Core/Accessibility)。
 
 ## \<form> 元素
 
@@ -184,7 +184,7 @@ l10n:
 
 ### 动手练习：构建一个表单结构
 
-让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多你可能还不了解的微件类型——现在不要担心这个，在下一篇文章（[基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)）中，你将了解它们是如何工作的。现在，当你遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
+让我们把这些想法付诸实践，建立一个稍微复杂一点的表单结构——一个支付表单。这个表单将包含许多你可能还不了解的微件类型——现在不要担心这个，在下一篇文章（[基本的原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)）中，你将了解它们是如何工作的。现在，当你遵循下面的指令时，请仔细阅读这些描述，并开始理解我们使用的包装器元素是如何构造表单的，以及为什么这么做。
 
 1. 在开始之前，在计算机上的一个新目录中，创建一个[空白模板文件](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)的本地副本。
 2. 接下来，通过添加 {{htmlelement("form")}} 元素来创建一张表单：
@@ -254,7 +254,7 @@ l10n:
    </section>
    ```
 
-5. 表单的第二个 `<section>` 是支付信息。在这里，我们有三个不同的微件以及它们的标签，每个都包含在 `<p>` 中。第一个是选择信用卡类型的下拉菜单（{{htmlelement("select")}}）。第二个是 `tel` 类型的 `<input>` 元素，用于输入信用卡号码；虽然我们可以使用 `number` 类型，但我们不需要数字的旋转 UI。最后一个是 `text` 类型的 `<input>` 元素，用于输入卡片的到期日期；其中包括 _placeholder_ 属性，用于指示正确的格式，以及 _pattern_ 属性，用于测试输入的日期是否具有正确的格式。这些更新的输入类型在 [HTML5 输入类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中重新引入。在上一节下方输入以下内容：
+5. 表单的第二个 `<section>` 是支付信息。在这里，我们有三个不同的微件以及它们的标签，每个都包含在 `<p>` 中。第一个是选择信用卡类型的下拉菜单（{{htmlelement("select")}}）。第二个是 `tel` 类型的 `<input>` 元素，用于输入信用卡号码；虽然我们可以使用 `number` 类型，但我们不需要数字的旋转 UI。最后一个是 `text` 类型的 `<input>` 元素，用于输入卡片的到期日期；其中包括 _placeholder_ 属性，用于指示正确的格式，以及 _pattern_ 属性，用于测试输入的日期是否具有正确的格式。这些更新的输入类型在 [HTML5 输入类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)中重新引入。在上一节下方输入以下内容：
 
    ```html
    <section>
@@ -387,13 +387,13 @@ l10n:
    }
    ```
 
-我们在下面完成的表单中应用了一些额外的 CSS。如果你想更改表单的外观，可以复制[示例](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form/Example)中的样式，或者访问[为 web 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)。
+我们在下面完成的表单中应用了一些额外的 CSS。如果你想更改表单的外观，可以复制[示例](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example)中的样式，或者访问[为 web 表单添加样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)。
 
 {{EmbedLiveSample("动手练习：构建一个表单结构","100%",620)}}
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn/Forms/Test_your_skills:_Form_structure)。
+本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure)。
 
 ## 总结
 
@@ -407,6 +407,6 @@ l10n:
 
 ### 进阶内容
 
-- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单微件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单微件兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

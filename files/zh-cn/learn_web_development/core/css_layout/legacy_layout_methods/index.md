@@ -16,13 +16,13 @@ original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
       <th scope="row">学习前提：</th>
       <td>
         HTML 基础 (学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >),并且了解 CSS 是怎么工作的 (学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >Introduction to CSS</a
         >
-        and <a href="/zh-CN/docs/Learn/CSS/Styling_boxes">Styling boxes</a>.)
+        and <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">Styling boxes</a>.)
       </td>
     </tr>
     <tr>
@@ -129,7 +129,7 @@ div:nth-of-type(2) {
 
 ## 创建简单的传统网格框架
 
-大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
+大多数传统的框架使用{{cssxref("float")}}属性来使列相邻排列，让它们看起来像是一个网格。以用 float 创建网格的流程工作，可以向你展示它们工作的原理，并介绍一些更高级的概念，并在[浮动和清除](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats)这节课中学到的内容之上搭建更多的东西。
 
 最简单的一类网格创建是固定宽度的——我们只需要计算设计中总的宽度、列的数目、每一列和间隔的宽度。但是，如果我们决定设计的网格是可以根据浏览器宽度缩放的，我们则需要计算每一列和间距的所占的宽度的百分比。
 
@@ -508,7 +508,7 @@ body {
 
 ## 弹性盒网格？
 
-如果你读了之前关于[flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
+如果你读了之前关于[flexbox](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)的文章，你大概会想，弹性布局是个写网格布局的好办法。现在有很多基于弹性布局的网格布局，并且弹性布局可以解决很多上面讲的问题。
 
 但是，弹性布局不是为网格布局而设的，把它当网格布局来用也有新的挑战。举个简单的例子，我们可以使用我们在上面使用过的同样的示例标记，用下面的 CSS 样式化`wrapper`、`row`和`col`类：
 

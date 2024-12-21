@@ -14,8 +14,8 @@ original_slug: Learn/Accessibility/HTML
       <th scope="row">前提：</th>
       <td>
         有一定的 HTML 基础（可参阅
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
-        >），理解<a href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 入门</a
+        >），理解<a href="/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility"
           >什么是无障碍</a
         >。
       </td>
@@ -384,7 +384,7 @@ document.onkeydown = function (e) {
 ```
 
 > [!NOTE]
-> 你可以在我们的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
+> 你可以在我们的[创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)文章中找到更多关于链接实现和最佳实践的信息。你还可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 中看到一些好的和不好的例子。
 
 表单标签也很重要，可以让你了解你需要输入每个表单输入的内容。以下似乎是一个足够合理的例子：
 
@@ -449,7 +449,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 - `{{htmlelement("caption")}}` 元素和 `<table>` `summary` 属性都执行类似的工作 - 它们充当表格的替代文本，为屏幕阅读器用户提供有用的表格内容快速摘要。 `<caption>` 通常是首选，因为它使内容可供视力良好的用户访问，而且他们也可能会发现它很有用。你并不需要两者都使用！。
 
 > [!NOTE]
-> 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn/HTML/Tables/Advanced) 文章。
+> 有关可访问数据表的更多详细信息，请参阅我们的 [HTML 表格高级功能和无障碍](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) 文章。
 
 ## 替代文本
 
@@ -489,7 +489,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 需要考虑的一件事是，你的图片是否在你的内容中有意义，或者它们纯粹是为了视觉装饰，所以没有意义。如果它们是装饰性的，最好将它们包含在页面中作为 CSS 背景图像。
 
 > [!NOTE]
-> 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
+> 请阅读 [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images) 和 [响应式图片](/zh-CN/docs/Web/HTML/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
 如果你确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 
@@ -506,7 +506,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 在这种情况下，我们不使用“alt”属性——相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果你想将相同的文本用作多个图像的标签，这是特别有用的——这是使用“`alt`”不可能实现的。
 
 > [!NOTE]
-> “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
+> “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 文章。
 
 ### 其他文字替代机制
 

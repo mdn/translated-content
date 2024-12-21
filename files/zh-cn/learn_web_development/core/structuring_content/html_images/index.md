@@ -17,14 +17,14 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         <a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装基本软件</a
         >，掌握
         <a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >处理文件</a
         >的基本知识，熟悉 HTML 基础（参见
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 入门</a
         >。）
       </td>
@@ -183,7 +183,7 @@ l10n:
 >
 > 如果设置的图片大小过大，你的图片将看起来粗糙、模糊或太小，不仅浪费带宽而且图片还不符合用户需求。如果[长宽比](<https://zh.wikipedia.org/wiki/長寬比_(影像)>)不正确，图片也可能会变形。在将图片放到网页上之前，你应使用图像编辑器将其设置为正确的大小。
 >
-> 如果确实需要更改图片的大小，应该使用 [CSS](/zh-CN/docs/Learn/CSS) 来实现。
+> 如果确实需要更改图片的大小，应该使用 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 来实现。
 
 ### 图像标题
 
@@ -611,7 +611,7 @@ p {
 总而言之，如果图像对你的内容有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。
 
 > [!NOTE]
-> 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)的知识。
+> 你可以在 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)的知识。
 
 ## 网页上的其他图形
 
@@ -623,17 +623,17 @@ p {
   - : 你可以借助可缩放矢量图形（SVG）来使用线条、曲线和其他几何形状来渲染 2D 图形。借助矢量图形，你可以创建能够以任意尺寸清晰缩放的图像。
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
   - : WebGL API 指南将帮助你入门 WebGL，这是用于 Web 的 3D 图形 API，可让你在 Web 内容中使用标准的 OpenGL ES。
-- [使用 HTML 音频和视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [使用 HTML 音频和视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : 与 `<img>` 类似，你可以使用 HTML 将 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 嵌入到网页中，并控制其播放。
 - [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
   - : WebRTC 中的 RTC 代表实时通信（Real-Time Communications），这是一种可以在浏览器客户端（对等方）之间进行音频/视频流和数据共享的技术。
 
 ## 技能测试！
 
-你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images)。
 
 ## 总结
 
-到此为止，我们已经详细介绍了图片和说明文字，在下篇文章中，我们将进一步看看如何使用 HTML 在网页上嵌入[音频和视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)。
+到此为止，我们已经详细介绍了图片和说明文字，在下篇文章中，我们将进一步看看如何使用 HTML 在网页上嵌入[音频和视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}

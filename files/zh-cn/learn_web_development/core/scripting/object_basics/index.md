@@ -14,9 +14,9 @@ original_slug: Learn/JavaScript/Objects/Basics
       <th scope="row">前提：</th>
       <td>
         基础计算机基础，了解基础的 HTML 和 CSS，熟悉 JavaScript 基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript 第一步</a>和<a
-          href="/zh-CN/docs/Learn/JavaScript/Building_blocks">创建代码块</a
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting">创建代码块</a
         >）。
       </td>
     </tr>
@@ -33,7 +33,7 @@ original_slug: Learn/JavaScript/Objects/Basics
 
 对象是一个包含相关数据和方法的集合（通常由一些变量和函数组成，我们称之为对象里面的属性和方法），让我们通过一个例子来了解它们。
 
-首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地，文件的元素非常少——仅一个供我们编写源代码的 {{HTMLElement("script")}} 标签。我们将在此基础上研究对象基础语法。在使用此示例时，你应该打开[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，并准备键入一些命令。
+首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) 文件复制到本地，文件的元素非常少——仅一个供我们编写源代码的 {{HTMLElement("script")}} 标签。我们将在此基础上研究对象基础语法。在使用此示例时，你应该打开[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，并准备键入一些命令。
 
 如同 JavaScript 中的很多东西一样，创建一个对象通常先定义并初始化变量。尝试在你的文件中输入以下 JavaScript 代码，保存并刷新页面：
 
@@ -402,7 +402,7 @@ const myNotification = new Notification("你好！");
 
 ## 技能测试！
 
-你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“技能测试：对象基础”](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics)。
+你已经读到这篇文章的末尾了，但是你还记得最重要的知识吗？进行下一步之前，你可以找到一些进一步的测试来验证你已经记住了这些知识——参见 [“技能测试：对象基础”](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics)。
 
 ## 总结
 

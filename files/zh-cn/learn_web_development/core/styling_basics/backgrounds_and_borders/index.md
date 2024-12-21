@@ -14,13 +14,13 @@ original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
       <th scope="row">前提：</th>
       <td>
         基础的计算机知识，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装了基本的软件</a
         >，了解基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件处理知识</a
-        >和 HTML 基础（已经学习了 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 介绍</a
-        >)，以及 CSS 如何工作的基本常识（已经学习了 <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 入门概述</a>）。
+        >和 HTML 基础（已经学习了 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 介绍</a
+        >)，以及 CSS 如何工作的基本常识（已经学习了 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 入门概述</a>）。
       </td>
     </tr>
     <tr>
@@ -465,7 +465,7 @@ background-position:
 ```
 
 > [!NOTE]
-> 这些顶部、右侧、底部和左侧边框属性还具有与文档写入模式相关的映射逻辑属性（例如，从左到右或从右到左的文本，或从上到下）。在下一课中，我们将探讨这些问题，这包括[处理不同的文本方向](/zh-CN/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)。
+> 这些顶部、右侧、底部和左侧边框属性还具有与文档写入模式相关的映射逻辑属性（例如，从左到右或从右到左的文本，或从上到下）。在下一课中，我们将探讨这些问题，这包括[处理不同的文本方向](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)。
 
 有各种各样的样式可以用于边框。在下面的例子中，我们为框的四个边使用了不同的边框样式。调整边框样式、宽度和颜色，看看边框是如何工作的。
 
@@ -540,7 +540,7 @@ h2 {
 
 ## 技能测试！
 
-你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders)。
+你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders)。
 
 ## 总结
 

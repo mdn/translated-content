@@ -14,7 +14,7 @@ original_slug: Learn/Accessibility/Mobile
       <th scope="row">前提：</th>
       <td>
         具备基本的计算机知识，对 HTML、CSS 和 JavaScript
-        基本的了解，并理解<a href="/zh-CN/docs/Learn/Accessibility"
+        基本的了解，并理解<a href="/zh-CN/docs/Learn_web_development/Core/Accessibility"
           >之前课程中的文章</a
         >。
       </td>
@@ -32,7 +32,7 @@ original_slug: Learn/Accessibility/Mobile
 
 现代移动设备对无障碍和大多数 web 标准有很好的支持。那个因为移动设备和桌面设备使用了完全不同的技术而强制要求开发者使用浏览器嗅探并为它们提供不同网站的时代已经结束了（虽然现在还有许多公司仍然在检测用户移动设备的使用，并为这些设备提供一个独立的移动端域名）。
 
-如今，移动设备一般都可以处理特性齐全的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了屏幕阅读器。移动设备也倾向于对“[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)”有很好的支持。
+如今，移动设备一般都可以处理特性齐全的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了屏幕阅读器。移动设备也倾向于对“[WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)”有很好的支持。
 
 你只要需要遵守良好的 web 设计规范和最佳的无障碍实践，就可以让你的网站在手机上无障碍地使用。
 
@@ -220,13 +220,13 @@ panel.ontouchend = stopMove;
 
 ## 响应式设计
 
-[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是根据屏幕大小和分辨率等因素动态更改你的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用且无障碍的。
+[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)是根据屏幕大小和分辨率等因素动态更改你的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用且无障碍的。
 
 特别是，移动端设备需要解决的最常见的问题是：
 
-- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来解决。
-- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)处理此问题。
-- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)以了解更多的细节）。
+- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来解决。
+- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Web/HTML/Responsive_images)处理此问题。
+- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)以了解更多的细节）。
 
 > [!NOTE]
 > 我们不会在这里对响应式设计进行完整的讨论，因为它们在 MDN 其他地方都有涉及（参考上面的链接）。
@@ -264,7 +264,7 @@ panel.ontouchend = stopMove;
 - 在输入数字（`number`）、电话（`tel`）和邮件（`email`）时，展示合适的虚拟键盘来输入数字。
 - 在输入时间（`time`）和日期（`date`）时展示合适的选择器来选择时间和日期。
 
-如果你想为桌面端提供不同的解决方案，则可以使用特性检测为你的移动设备始终提供不同的标记。有关检测不同输入类型的原始信息，请参阅[输入类型](https://diveinto.html5doctor.com/detect.html#input-types)，还可以查看我们的[特性检测文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)获取更多信息。
+如果你想为桌面端提供不同的解决方案，则可以使用特性检测为你的移动设备始终提供不同的标记。有关检测不同输入类型的原始信息，请参阅[输入类型](https://diveinto.html5doctor.com/detect.html#input-types)，还可以查看我们的[特性检测文章](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection)获取更多信息。
 
 ## 总结
 

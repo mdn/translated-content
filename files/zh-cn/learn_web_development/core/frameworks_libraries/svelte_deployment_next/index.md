@@ -17,10 +17,10 @@ l10n:
       <td>
         <p>
           建议你熟悉核心的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-           href="/zh-CN/docs/Learn/CSS">CSS</a> 和
-          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语法，并了解<a
-           href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+           href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和
+          <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语法，并了解<a
+           href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行</a
           >的知识。
         </p>
@@ -303,7 +303,7 @@ GitLab 使用名为 GitLab CI/CD 的内置工具来构建你的网站并将其�
 
 - [Sapper](https://sapper.svelte.dev/)：由 Svelte 驱动的应用程序框架，提供服务器端渲染（SSR）、代码拆分、基于文件的路由、离线支持等功能。可以将其视为 Svelte 的 [Next.js](https://nextjs.org/)。如果你计划开发相当复杂的 Web 应用程序，一定要查看这个项目。
 - [Svelte Native](https://svelte-native.technology/)：由 Svelte 驱动的移动应用程序框架。可以将其视为 Svelte 的 [React Native](https://reactnative.dev/)。
-- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)：官方支持的用于处理 `.svelte` 文件的 VS Code 插件，我们在我们的 [TypeScript 文章](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)中介绍过它。
+- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)：官方支持的用于处理 `.svelte` 文件的 VS Code 插件，我们在我们的 [TypeScript 文章](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript)中介绍过它。
 
 ### 其他学习资源
 

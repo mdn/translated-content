@@ -6,7 +6,7 @@ original_slug: Learn/CSS/Building_blocks/Tables_tasks
 
 {{LearnSidebar}}
 
-此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)课程中学到的技巧的理解。
+此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)课程中学到的技巧的理解。
 
 > [!NOTE]
 > You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.

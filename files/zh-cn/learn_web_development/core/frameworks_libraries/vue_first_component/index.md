@@ -18,11 +18,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fir
       <td>
         <p>
           熟悉<a href="/zh-CN/docs/learn/HTML">HTML</a>、<a
-            href="/zh-CN/docs/Learn/CSS"
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a
-          >、<a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a
+          >、<a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a
           >核心语言，了解<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端或命令行</a
           >。
         </p>

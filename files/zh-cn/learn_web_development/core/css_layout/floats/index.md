@@ -13,10 +13,10 @@ original_slug: Learn/CSS/CSS_layout/Floats
     <tr>
       <th scope="row">要求：</th>
       <td>
-        HTML 基础知识 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础知识 (学习<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >入门 HTML</a
         >)，和 CSS 的工作理念（学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">入门 CSS</a>)。
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">入门 CSS</a>)。
       </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@ original_slug: Learn/CSS/CSS_layout/Floats
 
 但 Web 开发人员很快意识到，任何东西都可以浮动，而不仅仅是图像，所以浮动的使用范围扩大了。之前的 [fancy paragraph example](https://css-tricks.com/snippets/css/drop-caps/) 的课程展示了如何使用浮动创建一个有趣的 drop-cap（首字下沉）效果。
 
-浮动曾被用来实现整个网站页面的布局，它使信息列得以横向排列（默认的设定则是按照这些列在源代码中出现的顺序纵向排列）。目前出现了更新更好的页面布局技术，所以使用浮动来进行页面布局应被看作[传统的布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)。
+浮动曾被用来实现整个网站页面的布局，它使信息列得以横向排列（默认的设定则是按照这些列在源代码中出现的顺序纵向排列）。目前出现了更新更好的页面布局技术，所以使用浮动来进行页面布局应被看作[传统的布局方法](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)。
 
 在这一章中，我们仅就浮动这一命令本身的性能展开讲解。
 
@@ -660,10 +660,10 @@ body {
 
 ## 技能测试！
 
-你已经读完了这一篇文章，但是你还记得几成呢？在继续阅读之前你可以在这里找到一些测试来检验一下：[技能测试：浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats_skills)。
+你已经读完了这一篇文章，但是你还记得几成呢？在继续阅读之前你可以在这里找到一些测试来检验一下：[技能测试：浮动](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats_skills)。
 
 ## 总结
 
-现在你应该了解现代网页开发中浮动布局开发的知识了，请参阅 [传统的布局方法](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) 以查看它们的用法，没准可以对你老旧的项目有所帮助。
+现在你应该了解现代网页开发中浮动布局开发的知识了，请参阅 [传统的布局方法](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods) 以查看它们的用法，没准可以对你老旧的项目有所帮助。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}

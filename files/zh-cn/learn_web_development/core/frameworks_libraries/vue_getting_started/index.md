@@ -13,8 +13,8 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_get
     <tr>
       <th scope="row">预备条件：</th>
       <td>
-        <p>熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a>
-        和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解终端/命令行。</p>
+        <p>熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a>
+        和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解终端/命令行。</p>
         <p>
           Vue 组件设计成为由管理应用数据的 JavaScript 对象和映射到底层 DOM
           结构的 html 模板语法组成的混合体。安装和使用的一些更高级的功能

@@ -17,12 +17,12 @@ l10n:
       <td>
         <p>
           <a
-            href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
             >安装基本的软件</a
           >，<a
-            href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
             >文件处理</a
-          >基本知识，HTML 基础知识（如果不了解 HTML，请移步 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a>），了解 CSS 的工作原理（如果不了解 CSS，请移步 <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 入门</a>）
+          >基本知识，HTML 基础知识（如果不了解 HTML，请移步 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 入门</a>），了解 CSS 的工作原理（如果不了解 CSS，请移步 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 入门</a>）
         </p>
       </td>
     </tr>
@@ -65,11 +65,11 @@ l10n:
 
 盒子还有*内部*显示类型，它决定了盒子内元素的布局方式。
 
-区块和行内布局是网络上的默认行为方式。默认情况下，在没有任何其他指令的情况下，方框内的元素也会以[**标准流**](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)的方式布局，并表现为区块或行内盒子。
+区块和行内布局是网络上的默认行为方式。默认情况下，在没有任何其他指令的情况下，方框内的元素也会以[**标准流**](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction)的方式布局，并表现为区块或行内盒子。
 
-例如，可以通过设置 `display: flex;` 来更改内部显示类型。该元素仍将使用外部显示类型 `block` 但内部显示类型将变为 `flex`。该方框的任何直接子代都将成为弹性（flex）项，并按照[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)规范执行。
+例如，可以通过设置 `display: flex;` 来更改内部显示类型。该元素仍将使用外部显示类型 `block` 但内部显示类型将变为 `flex`。该方框的任何直接子代都将成为弹性（flex）项，并按照[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)规范执行。
 
-当你继续详细学习 CSS 布局时，将会遇到 [`flex`](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 以及盒子可以具有的其他各种内部值，例如 [`grid`](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)。
+当你继续详细学习 CSS 布局时，将会遇到 [`flex`](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox) 以及盒子可以具有的其他各种内部值，例如 [`grid`](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)。
 
 > [!NOTE]
 > 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)。
@@ -199,7 +199,7 @@ html {
 
 ### 使用浏览器开发者工具来查看盒模型
 
-[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)可以使你更容易地理解盒模型。如果你在 Firefox 的 DevTools 中查看一个元素，你可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断你的盒子大小是否符合预期！
+[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)可以使你更容易地理解盒模型。如果你在 Firefox 的 DevTools 中查看一个元素，你可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断你的盒子大小是否符合预期！
 
 ![使用 Firefox 开发者工具检查元素的盒模型](box-model-devtools.png)
 
@@ -328,12 +328,12 @@ html {
 
 ## 技能测试！
 
-本文已经结束，你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试来验证你是否保留了这些信息——请参阅[技能测试：盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/Box_Model_Tasks)。
+本文已经结束，你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试来验证你是否保留了这些信息——请参阅[技能测试：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks)。
 
 ## 总结
 
 这就是你需要了解的关于盒子模型的大部分内容。今后，如果你对布局中盒子的大小感到困惑，不妨再回来看看这些内容。
 
-在下一篇文章中，我们将看看如何使用[背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)来使你的普通盒子看起来更有趣。
+在下一篇文章中，我们将看看如何使用[背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)来使你的普通盒子看起来更有趣。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}

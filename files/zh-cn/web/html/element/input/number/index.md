@@ -433,8 +433,8 @@ switchBtn.addEventListener("click", () => {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - [文章：为什么 Gov.UK 为数字输入改变了输入类型](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

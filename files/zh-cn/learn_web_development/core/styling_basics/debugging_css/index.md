@@ -14,17 +14,17 @@ original_slug: Learn/CSS/Building_blocks/Debugging_CSS
       <th scope="row">必备条件：</th>
       <td>
         会使用计算机、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装基础软件</a
         >、基本了解<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
           >文件处理</a
         >、有 HTML 基础（请参考<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
         >
           HTML 导论</a
         >）、了解 CSS 工作（请参考
-        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS first steps</a>）。
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS first steps</a>）。
       </td>
     </tr>
     <tr>
@@ -36,7 +36,7 @@ original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ## 如何使用浏览器开发者工具
 
-[What are browser developer tools](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其他浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
+[What are browser developer tools](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其他浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。
 
 你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 [Grid Layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)、[Flexbox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)、[Shapes](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。
 
@@ -87,7 +87,7 @@ original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 
 ## 理解盒模型
 
-在之前的课程里我们已经讨论了[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)，介绍了替代盒模型，它改变了元素根据给定大小计算自身尺寸的方式，再在这个计算值上加上内边距和边框。开发者工具可以确实帮助你理解元素尺寸的计算方式。
+在之前的课程里我们已经讨论了[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)，介绍了替代盒模型，它改变了元素根据给定大小计算自身尺寸的方式，再在这个计算值上加上内边距和边框。开发者工具可以确实帮助你理解元素尺寸的计算方式。
 
 [Layout view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout_view) 给你展示了一张选定元素的盒模型示意图，还有对能改变元素展示方式的属性和值的描述。你可能原本没有精确地使用元素的属性，只设定了初始值，盒模型也可能包含对于这些属性的描述。
 
@@ -123,7 +123,7 @@ em {
 }
 ```
 
-正如你从[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)里面，我们讨论的关于优先级的经验中回忆起来的那样，类选择器比元素选择器有更高的优先级，因而这就是实际生效的值。开发工具可以帮忙找出这类问题，尤其是在有效的信息被淹没在一个巨大的样式表的某个角落的时候。
+正如你从[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)里面，我们讨论的关于优先级的经验中回忆起来的那样，类选择器比元素选择器有更高的优先级，因而这就是实际生效的值。开发工具可以帮忙找出这类问题，尤其是在有效的信息被淹没在一个巨大的样式表的某个角落的时候。
 
 **检查有 `.special` 类的 `<em>` 元素，开发者工具会告诉你橘黄色是实际生效的颜色，还会将应用在 em 上的 `color` 属性划掉。你这样就能看到是类选择器覆盖了元素选择器了。**
 

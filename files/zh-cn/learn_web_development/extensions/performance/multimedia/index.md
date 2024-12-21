@@ -14,9 +14,9 @@ original_slug: Learn/Performance/Multimedia
       <th scope="row">前提：</th>
       <td>
         基本的计算机操作能力，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
-        >，以及基本的<a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        >，以及基本的<a href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端 Web 技术知识</a
         >。
       </td>
@@ -43,7 +43,7 @@ original_slug: Learn/Performance/Multimedia
 
 ## 优化图像传递
 
-尽管图像下载是带宽消耗最大的部分，但其对[感知性能](/zh-CN/docs/Learn/Performance/Perceived_performance)的影响远低于许多人的预期（主要是因为页面文本内容可以立即下载，用户可以在图像到达时看到它们被渲染）。然而，为了提供良好的用户体验，访问者仍然应尽快看到图像。
+尽管图像下载是带宽消耗最大的部分，但其对[感知性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance)的影响远低于许多人的预期（主要是因为页面文本内容可以立即下载，用户可以在图像到达时看到它们被渲染）。然而，为了提供良好的用户体验，访问者仍然应尽快看到图像。
 
 ### 加载策略
 

@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
-在本教程中，我们将为[本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)网站最终需要的所有资源端点设置具有“虚拟”处理器函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理器函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
+在本教程中，我们将为[本地图书馆](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)网站最终需要的所有资源端点设置具有“虚拟”处理器函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理器函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
 
 <table class="learn-box standard-table">
   <tbody>
@@ -16,10 +16,10 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         回顾
-        <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction"
           >Express/Node 入门</a
         >。完成本教程之前小节（包括 <a
-          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose"
           >Express 教程 3：使用数据库（Mongoose）</a
         >）。
       </td>
@@ -33,7 +33,7 @@ l10n:
 
 ## 概览
 
-[上节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose)定义了与数据库交互的 _Mongoose_ 模型，并使用一个（独立）脚本创建了一些初始的图书馆记录。现在可以编写代码来向用户展示这些信息。我们首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后要创建路由（URL 处理器）和视图（模板）来显示这些页面。
+[上节](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)定义了与数据库交互的 _Mongoose_ 模型，并使用一个（独立）脚本创建了一些初始的图书馆记录。现在可以编写代码来向用户展示这些信息。我们首先要确定页面中应显示哪些信息，然后定义适当的 URL 来返回这些资源。随后要创建路由（URL 处理器）和视图（模板）来显示这些页面。
 
 下图展示了 HTTP 请求/响应处理的主数据流和需要实现的行为。图中除视图（View）和路由（Route）外，还展示了控制器（Controller），即将路由请求的代码与实际处理请求的代码分离的函数。
 
@@ -691,7 +691,7 @@ app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 
-- 如果设置过 [nodemon](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
+- 如果设置过 [nodemon](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)，则可以使用：
 
   ```bash
   DEBUG=express-locallibrary-tutorial:* npm run devstart

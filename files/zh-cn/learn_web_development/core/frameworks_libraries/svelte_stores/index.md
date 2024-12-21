@@ -18,11 +18,11 @@ l10n:
       <td>
         <p>
           至少，建议你熟悉核心的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-             href="/zh-CN/docs/Learn/CSS">CSS</a> 和
-          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+             href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和
+          <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           语言，并且了解<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行</a
           >的使用方法。
         </p>
@@ -400,7 +400,7 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 
 通常情况下，使用屏幕阅读器测试应用程序是一个好主意，不仅可以发现可访问性问题，还可以熟悉视觉障碍人士如何使用 Web。你有几个选项，例如 Windows 上的 [NVDA](https://www.nvaccess.org/)、Chrome 上的 [ChromeVox](https://support.google.com/chromebook/answer/7031755)、Linux 上的 [Orca](https://wiki.gnome.org/Projects/Orca)、macOS 和 iOS 上的 [VoiceOver](https://www.apple.com/accessibility/vision/)，以及其他选项。
 
-要了解有关检测和修复无障碍问题的更多信息，请查看我们的[解决常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)文章。
+要了解有关检测和修复无障碍问题的更多信息，请查看我们的[解决常见的无障碍问题](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling)文章。
 
 ## 使用 store 合约持久化我们的待办事项
 

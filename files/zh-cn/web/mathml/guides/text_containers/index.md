@@ -14,18 +14,18 @@ original_slug: Learn/MathML/First_steps/Text_containers
       <th scope="row">前提：</th>
       <td>
         基本的计算机知识，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，了解基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件操作</a
         >，了解 HTML 基础知识（学习<a
-        href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 入门</a
         >），并对文本样式方面的 CSS 有一定的了解（阅读<a
-        href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
+        href="/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals"
         >文本和字体样式基础</a>和
-      <a href="/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts"
+      <a href="/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts"
         >Web 字体</a>）。
       </td>
     </tr>
@@ -42,7 +42,7 @@ original_slug: Learn/MathML/First_steps/Text_containers
 
 数学公式涉及许多特殊字符，例如希腊字母（例如 Δ）、弗拉克图尔字母（例如 𝔄）、双线字母（例如 ℂ）、二元运算符（例如 ≠）、箭头（例如 ⇒）、积分符号（例如 ∮）、求和符号（例如 ∑）、逻辑符号（例如 ∀）以及括号（例如 ⌊）等等。维基百科的文章[数学运算符和符号的 Unicode](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode) 提供了这些字符的概述。
 
-由于这些字符大多不属于基本拉丁 Unicode 块，因此建议指定你的[文档字符编码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#指定文档中的字符编码)，并使用适当的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。以下是一个使用 UTF-8 编码和 [Latin Modern Math](/zh-CN/docs/Web/MathML/Fonts#带有数学表的字体) 字体的基本模板：
+由于这些字符大多不属于基本拉丁 Unicode 块，因此建议指定你的[文档字符编码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#指定文档中的字符编码)，并使用适当的 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。以下是一个使用 UTF-8 编码和 [Latin Modern Math](/zh-CN/docs/Web/MathML/Fonts#带有数学表的字体) 字体的基本模板：
 
 ```html
 <!doctype html>
@@ -64,7 +64,7 @@ original_slug: Learn/MathML/First_steps/Text_containers
 
 ## 一些语义
 
-我们在 [MathML 使用入门](/zh-CN/docs/Learn/MathML/First_steps/Getting_started)文章中提到，MathML 公式中的文本被包裹在特定的容器元素中，例如 `<mn>` 或 `<mo>`。一般而言，MathML 公式中的所有文字都必须包含在这类容器元素中，这类元素被称为*标记*（token）元素。此外，MathML 提供了多种标记元素，以区分文字内容的不同含义。
+我们在 [MathML 使用入门](/zh-CN/docs/Web/MathML/Guides/Getting_started)文章中提到，MathML 公式中的文本被包裹在特定的容器元素中，例如 `<mn>` 或 `<mo>`。一般而言，MathML 公式中的所有文字都必须包含在这类容器元素中，这类元素被称为*标记*（token）元素。此外，MathML 提供了多种标记元素，以区分文字内容的不同含义。
 
 - `<mi>` 元素表示“标识符”，其可以是符号名称或任意文本。例如：`<mi>x</mi>`（变量）、`<mi>cos</mi>`（函数名）和 `<mi>π</mi>`（符号常量）。
 - `<mn>` 元素表示“数值文字”或其他应呈现为数值文字的数据。例如：`<mn>2</mn>`（整数）、`<mn>0.123</mn>`（小数）或 `<mn>0xFFEF</mn>`（十六进制值）。
@@ -460,11 +460,11 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 ```
 
 > [!WARNING]
-> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现文本的拉伸效果，前面的示例依赖于 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
+> 通常需要特殊的[数学字体](/zh-CN/docs/Web/MathML/Fonts)才能实现文本的拉伸效果，前面的示例依赖于 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。
 
 ## 总结
 
-在本文中，我们学习了一些用作文本容器的*标记*元素及其不同的语义，即 `<mi>`（标识符）、`<mn>`（数字）、`<mo>`（运算符）、`<mtext>`（通用文本）。我们介绍了在数学公式中常见的特殊 Unicode 字符，并概述了 `<mi>` 和 `<mo>` 元素的一些可观察表现。在下一篇文章中，我们将学习如何借助*标记*元素构建更复杂的表达式，例如[分数和根号](/zh-CN/docs/Learn/MathML/First_steps/Fractions_and_roots)。
+在本文中，我们学习了一些用作文本容器的*标记*元素及其不同的语义，即 `<mi>`（标识符）、`<mn>`（数字）、`<mo>`（运算符）、`<mtext>`（通用文本）。我们介绍了在数学公式中常见的特殊 Unicode 字符，并概述了 `<mi>` 和 `<mo>` 元素的一些可观察表现。在下一篇文章中，我们将学习如何借助*标记*元素构建更复杂的表达式，例如[分数和根号](/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots)。
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
 

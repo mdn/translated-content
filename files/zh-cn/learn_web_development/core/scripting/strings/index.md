@@ -33,7 +33,7 @@ l10n:
 
 ## 创建字符串
 
-乍一看，字符串的操作方式与数字类似，但当你深入研究时，你会发现一些显著的差异。让我们在[浏览器开发者控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中输入一些基本的代码来熟悉一下。
+乍一看，字符串的操作方式与数字类似，但当你深入研究时，你会发现一些显著的差异。让我们在[浏览器开发者控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中输入一些基本的代码来熟悉一下。
 
 首先，输入以下几行：
 

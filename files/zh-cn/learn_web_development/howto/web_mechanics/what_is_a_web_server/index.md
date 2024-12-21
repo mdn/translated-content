@@ -15,9 +15,9 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你应该已经知道<a href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">互联网是怎么工作的</a
+        你应该已经知道<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">互联网是怎么工作的</a
         >，并且<a
-          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >了解网页、网站、web 服务器和搜索引擎的区别是什么</a
         >。
       </td>
@@ -65,7 +65,7 @@ l10n:
 
 因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在[这篇文章](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#专业网站机构和托管)中找到更多的细节。
 
-一旦你设置好一个网络托管解决方案，你必须[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)。
+一旦你设置好一个网络托管解决方案，你必须[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。
 
 ### 通过 HTTP 交流
 
@@ -99,12 +99,12 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 
 不可能建议一个通用的应用服务器适用于所有可能的用例。一些应用服务器设计用于托管和管理博客、知识库或电子商务解决方案，而其他一些则更通用。如果你正在构建一个动态网站，请花时间研究你的需求，并找到最适合你需求的技术。
 
-大多数网站开发者不需要从头开始创建应用服务器，因为有很多现成的解决方案，其中许多都可以高度配置。但是，如果你确实需要创建自己的服务器，那么你可能需要使用服务器框架，利用其现有的代码和库，并仅扩展你需要的部分以满足你的用例。只有相对较少的开发者需要完全从头开始开发服务器：例如，为了满足嵌入式系统上紧张的资源限制。如果你想尝试构建一个服务器，请浏览[服务器端网站编程](/zh-CN/docs/Learn/Server-side)学习路径中的资源。
+大多数网站开发者不需要从头开始创建应用服务器，因为有很多现成的解决方案，其中许多都可以高度配置。但是，如果你确实需要创建自己的服务器，那么你可能需要使用服务器框架，利用其现有的代码和库，并仅扩展你需要的部分以满足你的用例。只有相对较少的开发者需要完全从头开始开发服务器：例如，为了满足嵌入式系统上紧张的资源限制。如果你想尝试构建一个服务器，请浏览[服务器端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)学习路径中的资源。
 
 ## 下一步
 
 现在你已经熟悉了什么是 web 服务器，你可以：
 
-- 钻研[在 web 上做某些事情要花费多少](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- 学习关于[创建一个网页所需要的各种软件](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- 移步到某些实用的东西，像是[如何上传文件到一个 web 服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)。
+- 钻研[在 web 上做某些事情要花费多少](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- 学习关于[创建一个网页所需要的各种软件](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- 移步到某些实用的东西，像是[如何上传文件到一个 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。

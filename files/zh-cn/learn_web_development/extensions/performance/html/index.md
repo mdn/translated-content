@@ -15,10 +15,10 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
       <td>
         基本的计算机知识，
         <a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，以及基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端 Web 技术知识</a
         >。
       </td>
@@ -36,7 +36,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 在开始优化 HTML 之前，你应该首先回答的问题是“我需要优化什么？”。下面讨论的一些技巧和技术是适用于几乎任何 Web 项目的良好实践，而其他一些技巧只在特定情况下才需要使用。试图在任何地方应用这些技术可能是不必要的，而且可能是浪费时间的。你应该确定在每个项目中实际需要哪些性能优化。
 
-为此，你需要[测量性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如此链接所示，有几种不同的方式可以测量性能，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方法是学习如何使用内置浏览器的[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络监控工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#性能监控工具)工具，以检查加载时间较长且需要优化的页面部分。
+为此，你需要[测量性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如此链接所示，有几种不同的方式可以测量性能，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方法是学习如何使用内置浏览器的[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络监控工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#性能监控工具)工具，以检查加载时间较长且需要优化的页面部分。
 
 ## HTML 性能关键问题
 
@@ -51,11 +51,11 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 
 ## 响应式处理替代元素
 
-[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)彻底改变了在不同设备上处理网页内容布局的方式。它的一个关键优势是可以动态切换根据不同的屏幕尺寸优化后的布局，例如宽屏布局与窄屏（移动设备）布局之间的切换。它还可以根据其他设备属性，如分辨率或亮色或暗色配色方案的偏好，来处理内容的动态切换。
+[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)彻底改变了在不同设备上处理网页内容布局的方式。它的一个关键优势是可以动态切换根据不同的屏幕尺寸优化后的布局，例如宽屏布局与窄屏（移动设备）布局之间的切换。它还可以根据其他设备属性，如分辨率或亮色或暗色配色方案的偏好，来处理内容的动态切换。
 
 所谓的“移动优先”技术可以确保默认布局适用于小屏幕设备，因此移动设备只需下载适合其屏幕的图像，无需下载更大的桌面图像，以此提高性能。然而，由于这是通过 CSS 中的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)来控制的，因此它只能对在 CSS 中加载的图像的性能产生积极影响。
 
-在下面的小节中，我们将总结如何实现响应式的替代元素。你可以在[视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)和[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南中找到更多关于这些实现的详细信息。
+在下面的小节中，我们将总结如何实现响应式的替代元素。你可以在[视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)和[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)指南中找到更多关于这些实现的详细信息。
 
 ### 通过 srcset 提供不同的图像分辨率
 
@@ -170,7 +170,7 @@ HTML 默认情况下快速且易于访问。作为开发者，我们的工作是
 - 接上一点，你还需要为每个不同的 `<iframe>` 分别处理任何 CSS 样式或 JavaScript 操作（除非嵌入的页面来自同一源），这变得更加复杂。你无法使用应用于顶级页面的 CSS 和 JavaScript 来定位嵌入的内容，反之亦然。这是一项合理的安全措施，是 Web 的基本原则。想象一下，如果第三方嵌入的内容可以任意在其嵌入的任何页面上运行脚本，那么你可能会遇到的问题！
 - 每个 `<iframe>` 还需要单独加载所有共享的数据和媒体文件——你无法在不同的页面嵌入之间共享缓存的资源（再次强调，除非嵌入的页面来自同一源）。这可能导致页面使用的带宽比你预期的要多得多。
 
-建议将内容放在单个页面中。如果你想在页面更改时动态获取新内容，仍然比将其放入 `<iframe>` 中更好，这样可以提高性能。例如，你可以使用 {{domxref("fetch()")}} 方法获取新数据，然后使用一些 DOM 脚本将其插入到页面中。更多信息，请参见[从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)和[操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)。
+建议将内容放在单个页面中。如果你想在页面更改时动态获取新内容，仍然比将其放入 `<iframe>` 中更好，这样可以提高性能。例如，你可以使用 {{domxref("fetch()")}} 方法获取新数据，然后使用一些 DOM 脚本将其插入到页面中。更多信息，请参见[从服务器获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)和[操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)。
 
 > [!NOTE]
 > 如果你掌控内容并且内容相对简单，你可以考虑使用在 `src` 属性中以 base-64 编码的内容填充 `<iframe>`，甚至可以将原始 HTML 插入到 `srcdoc` 属性中（有关更多信息，请参见 [Iframe 性能第二部分：好消息](https://medium.com/slices-of-bread/iframe-performance-part-2-the-good-news-26eb53cea429)）。
@@ -273,5 +273,5 @@ pElem.addEventListener("click", () => {
 
 ## 参见
 
-- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
+- [从服务器获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)

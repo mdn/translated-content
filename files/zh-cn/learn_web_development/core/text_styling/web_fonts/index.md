@@ -14,12 +14,12 @@ original_slug: Learn/CSS/Styling_text/Web_fonts
       <th scope="row">前提：</th>
       <td>
         基本计算机素养，HTML 基础 (学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
-        >), CSS 基础 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+        >), CSS 基础 (学习<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >Introduction to CSS</a
         >),
-        <a href="/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >CSS 文本和字体基础 </a
         >。
       </td>
@@ -35,7 +35,7 @@ original_slug: Learn/CSS/Styling_text/Web_fonts
 
 ## 字体种类回顾
 
-正如我们在[基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)中所看到的那样，应用到你的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。你需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
+正如我们在[基本文本和字体样式](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)中所看到的那样，应用到你的 HTML 的字体可以使用 {{cssxref("font-family")}}属性来控制。你需要提供一个或多个字体种类名称，浏览器会在列表中搜寻，直到找到它所运行的系统上可用的字体。
 
 ```css
 p {

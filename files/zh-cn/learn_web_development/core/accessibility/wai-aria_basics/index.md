@@ -241,7 +241,7 @@ const intervalID = setInterval(showQuote, 10000);
 这会让你的屏幕阅读器在更新时可以读取内容。
 
 > [!NOTE]
-> 当你用 `file://` 协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如，[使用 GitHub](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> 当你用 `file://` 协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如，[使用 GitHub](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 这里有一个附加的考虑——只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>`，像这样：
 

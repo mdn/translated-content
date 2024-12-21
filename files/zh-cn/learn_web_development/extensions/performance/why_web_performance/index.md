@@ -14,10 +14,10 @@ Web 性能关乎网站的快速加载，以及让缓慢过程*看起来*更快�
       <th scope="row">预备条件：</th>
       <td>
         基本计算机素养、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >基本软件已安装</a
         >，以及
-        <a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        <a href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端网络技术的基本知识</a
         >。
       </td>
@@ -35,7 +35,7 @@ Web 性能是指网站内容在网页浏览器中的**加载**和**渲染**速�
 
 ## 为什么关心性能？
 
-Web 性能及其相关的最佳实践对于网站访问者拥有良好的体验至关重要。从某种意义上说，web 性能可以被认为是 [web 无障碍](/zh-CN/docs/Learn/Accessibility)的一个子集。在性能和无障碍方面，你需要考虑网站访问者使用的设备以及设备的连接速度。
+Web 性能及其相关的最佳实践对于网站访问者拥有良好的体验至关重要。从某种意义上说，web 性能可以被认为是 [web 无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)的一个子集。在性能和无障碍方面，你需要考虑网站访问者使用的设备以及设备的连接速度。
 
 以 CNN.com 的加载体验为例，截至撰写本文时，该网站有超过 400 个 HTTP 请求，文件大小超过 22.6MB。
 

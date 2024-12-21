@@ -15,12 +15,12 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-        href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a
-          href="/zh-CN/docs/Learn/JavaScript"
+        熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+        href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript</a
         > 语言；理解<a
-          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction"
           >跨浏览器测试原理</a
         >
       </td>
@@ -47,7 +47,7 @@ l10n:
 - 使用较旧设备（可能没有最新的浏览器）的用户
 - 设备性能不高（可能具有较慢的处理器）的用户
 
-在某种程度上，本模块都是关于无障碍的——跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇[无障碍是什么？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)更全面透彻地定义了什么是无障碍。
+在某种程度上，本模块都是关于无障碍的——跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇[无障碍是什么？](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)更全面透彻地定义了什么是无障碍。
 
 也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在本模块的其他地方已经讨论过别的领域，例如[响应式设计问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#响应式设计问题)和[性能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#性能问题)。
 
@@ -221,7 +221,7 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 
 #### 隐藏内容
 
-在许多情况下，视觉设计并不要求一次性展示所有内容。例如，在我们的[标签信息框示例](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中（参见[源代码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)），虽然有三个信息面板，但我们选择将它们[定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)重叠在一起，并提供了标签，你可以通过点击他们来分别显示每个面板的内容（这些标签也支持键盘操作——你可以使用 Tab 和 Enter/Return 键来选择它们）。
+在许多情况下，视觉设计并不要求一次性展示所有内容。例如，在我们的[标签信息框示例](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中（参见[源代码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)），虽然有三个信息面板，但我们选择将它们[定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)重叠在一起，并提供了标签，你可以通过点击他们来分别显示每个面板的内容（这些标签也支持键盘操作——你可以使用 Tab 和 Enter/Return 键来选择它们）。
 
 ![屏幕截图显示了一个可访问的隐藏和显示标签内容的示例。示例中有三个标签，分别为标签 1、标签 2 和标签 3。标签 1 当前被选中并激活，显示其内容。](20191022144107.png)
 
@@ -277,7 +277,7 @@ CSS 虽然提供的基本无障碍特性不如 HTML 多，但如果使用不当�
 
 你可以参考 Freedom Scientific 的 [ARIA 动态更新区域](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)示例——其中高亮的段落每 10 秒更新一次内容，并且屏幕阅读器会将这些内容读给用户听。[ARIA 动态区域——原子化](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm)也是一个很有价值的例子。
 
-虽然这里没有足够的空间来详细介绍 WAI-ARIA，但你可以通过 [WAI-ARIA 基础](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)来了解更多相关信息。
+虽然这里没有足够的空间来详细介绍 WAI-ARIA，但你可以通过 [WAI-ARIA 基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)来了解更多相关信息。
 
 ## 无障碍工具
 

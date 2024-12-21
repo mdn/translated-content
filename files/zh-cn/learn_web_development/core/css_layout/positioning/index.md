@@ -17,7 +17,7 @@ original_slug: Learn/CSS/CSS_layout/Positioning
       <td>
         HTML 基础 (学习
         <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML">HTML 导学</a>) 和
-        CSS 怎样工作的 (学习<a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS">
+        CSS 怎样工作的 (学习<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">
           CSS 导学</a
         >)
       </td>
@@ -33,7 +33,7 @@ original_slug: Learn/CSS/CSS_layout/Positioning
 
 定位是一个相当复杂的话题，所以我们深入了解代码之前，让我们审视一下布局理论，并让我们了解它的工作原理。
 
-首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model) ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 `display: block;`。
+首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model) ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 `display: block;`。
 
 这只是解释了单个元素，但是元素相互之间如何交互呢？**正常的布局流**（在布局介绍文章中提到）是将元素放置在浏览器视口内的系统。默认情况下，块级元素在视口中垂直布局——每个都将显示在上一个元素下面的新行上，并且它们的外边距将分隔开它们。
 
@@ -740,7 +740,7 @@ body {
 
 ## 技能测试！
 
-这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn/CSS/CSS_layout/Position_skills)。
+这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Position_skills)。
 
 ## 总结
 

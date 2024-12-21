@@ -53,7 +53,7 @@ l10n:
 
 ### 边框
 
-任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)了解为边框应用样式的更多信息。
+任何元素都可以在其周围绘制[边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)。基本的元素边框是围绕元素内容边缘绘制的一条线。请参阅[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)了解元素与其边框之间的关系，并参阅文章[使用 CSS 为边框添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)了解为边框应用样式的更多信息。
 
 你可以使用 {{cssxref("border")}} 简写属性，这样就可以一次性配置边框的所有内容（包括边框的非颜色特性，如[宽度](/zh-CN/docs/Web/CSS/border-width)、[样式](/zh-CN/docs/Web/CSS/border-style)（实线、虚线等）等等）。
 
@@ -668,6 +668,6 @@ colorPicker.addEventListener(
 
 ## 参见
 
-- [绘制图形](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [Web 上的图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#web_上的其他图形)
 - [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)

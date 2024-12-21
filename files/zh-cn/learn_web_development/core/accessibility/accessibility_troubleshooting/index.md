@@ -14,7 +14,7 @@ original_slug: Learn/Accessibility/Accessibility_troubleshooting
       <th scope="row">先决条件：</th>
       <td>
         基础的计算机知识，对 HTML、CSS 和 JavaScript 有基础的理解，理解<a
-          href="/zh-CN/docs/Learn/Accessibility"
+          href="/zh-CN/docs/Learn_web_development/Core/Accessibility"
           >本课程的前期内容</a
         >。
       </td>

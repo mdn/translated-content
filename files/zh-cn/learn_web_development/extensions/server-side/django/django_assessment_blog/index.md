@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/django_assessment_blog
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
-在这个评估中，你将使用你在 [Django Web Framework (Python)](/zh-CN/docs/Learn/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
+在这个评估中，你将使用你在 [Django Web Framework (Python)](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -218,7 +218,7 @@ original_slug: Learn/Server-side/Django/django_assessment_blog
 
 以下部分，描述了你需要执行的操作。
 
-1. 为站点创建骨架项目和 Web 应用程序（如[Django 教程 2：创建骨架网站](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)中所述）。你可以使用 'diyblog' 作为项目名称，使用 'blog' 作为应用程序名称。
+1. 为站点创建骨架项目和 Web 应用程序（如[Django 教程 2：创建骨架网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)中所述）。你可以使用 'diyblog' 作为项目名称，使用 'blog' 作为应用程序名称。
 2. 为博客帖子，评论和所需的任何其他对象创建模型。在考虑你的设计时，请记住：
 
    - 每个评论只有一个博客，但博客可能有很多评论。
@@ -234,12 +234,12 @@ original_slug: Learn/Server-side/Django/django_assessment_blog
 
 ## 提示和技巧
 
-该项目与 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 教程非常相似。你将能够使用几乎所有相同的方法，包含设置框架，用户登录/注销行为，对静态文件，视图，URL，表单，基本模板和管理站点配置的支持。
+该项目与 [LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 教程非常相似。你将能够使用几乎所有相同的方法，包含设置框架，用户登录/注销行为，对静态文件，视图，URL，表单，基本模板和管理站点配置的支持。
 
 一些一般提示：
 
 1. 索引页面可以实现为基本功能视图和模板（就像 locallibrary 一样）。
-2. T 可以使用[通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)，以创建博客帖子和博主的列表视图，以及博客帖子的详细信息视图。
+2. T 可以使用[通用列表和详细信息视图](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views)，以创建博客帖子和博主的列表视图，以及博客帖子的详细信息视图。
 3. 可以使用通用列表的博客列表视图，并对指定作者匹配的博客对象进行过滤，来创建特定作者的博客帖子列表。
 
    - 你将必须实现`get_queryset(self)`来进行过滤（很像我们的图书馆类`LoanedBooksAllListView`），并从 URL 获取作者信息。

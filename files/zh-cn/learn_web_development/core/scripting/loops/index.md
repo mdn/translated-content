@@ -14,7 +14,7 @@ original_slug: Learn/JavaScript/Building_blocks/Looping_code
       <th scope="row">前提：</th>
       <td>
         基本的电脑知识，对 HTML 与 CSS 有基本的了解，及已阅读：
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript first steps</a
         >（JS 的入门）.
       </td>
@@ -702,7 +702,7 @@ do {
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops)。
+你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops)。
 
 ## 结论
 

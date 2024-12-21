@@ -4,7 +4,9 @@ slug: Web/MathML/Guides/Three_famous_mathematical_formulas
 original_slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 
 <table>
   <tbody>
@@ -12,7 +14,7 @@ original_slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
       <th scope="row">前提：</th>
       <td>
         在尝试本测验之前，你应该已经完成本单元中的所有文章，并且对 HTML 基础知识有所了解（请参阅 <a
-        href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 简介</a
         >）。
       </td>
@@ -119,4 +121,4 @@ original_slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 - 使用 [W3C 验证器](https://validator.w3.org/nu/)检查你的 HTML/MathML 标记中是否有意外的错误。
 - 如果你陷入困境，或感到手动编写 MathML 有多么痛苦，请随时使用[编写 MathML 的工具](/zh-CN/docs/Web/MathML/Authoring)（如 [TeXZilla](https://fred-wang.github.io/TeXZilla/)）。
 
-{{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

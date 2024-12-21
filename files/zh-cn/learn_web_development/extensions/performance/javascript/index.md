@@ -15,10 +15,10 @@ original_slug: Learn/Performance/JavaScript
       <td>
         基本的计算机知识，
         <a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，以及对<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端 Web 技术</a
         >的基本了解。
       </td>
@@ -36,13 +36,13 @@ original_slug: Learn/Performance/JavaScript
 
 在开始优化代码之前，你应该先回答一个问题：“我需要优化什么？”下面讨论的一些技巧和方法是适用于任何 Web 项目的良好实践，而其他一些只在特定情况下才需要。试图在所有地方应用这些技术可能是不必要的，也可能是浪费时间。你应该确定每个项目实际上需要哪些性能优化。
 
-为此，你需要[测量性能](/zh-CN/docs/Learn/Performance/Measuring_performance)。正如前面的链接所示，有多种不同的方法来测量性能，其中一些方法涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方式是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，查看页面加载的哪些部分花费了很长时间，并需要进行优化。
+为此，你需要[测量性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如前面的链接所示，有多种不同的方法来测量性能，其中一些方法涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方式是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，查看页面加载的哪些部分花费了很长时间，并需要进行优化。
 
 ## 优化 JavaScript 的下载
 
 最高效、最不阻塞的 JavaScript 是根本不使用 JavaScript。你应该尽量少使用 JavaScript。以下是一些需要记住的点：
 
-- **并非总是需要框架**：你可能熟悉使用某个 [JavaScript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)。如果你对使用该框架有经验和信心，并且喜欢它提供的所有工具，那么它可能是你构建大多数项目的首选。然而，框架会增加 JavaScript 的负担。如果你创建的是一个相对静态的体验，对 JavaScript 的要求很少，那么你可能不需要那个框架。也许你可以使用几行标准 JavaScript 来实现你需要的功能。
+- **并非总是需要框架**：你可能熟悉使用某个 [JavaScript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)。如果你对使用该框架有经验和信心，并且喜欢它提供的所有工具，那么它可能是你构建大多数项目的首选。然而，框架会增加 JavaScript 的负担。如果你创建的是一个相对静态的体验，对 JavaScript 的要求很少，那么你可能不需要那个框架。也许你可以使用几行标准 JavaScript 来实现你需要的功能。
 - **考虑更简单的解决方案**：你可能有一个华丽、有趣的解决方案要实现，但请考虑用户是否会喜欢它。他们是否更喜欢简单的东西？
 - **删除未使用的代码**：这听起来很明显，但令人惊讶的是很多开发者忘记清除在开发过程中添加的不会被用到的功能。你需要谨慎并有意识地添加和删除代码。所有脚本都会被解析，无论它是否被使用；因此，加快下载速度的一个快速方法是摆脱任何不会被使用的功能。此外，要考虑通常只会使用框架中的一小部分功能。是否有可能创建一个仅包含你所需部分的框架的自定义构建版本？
 - **考虑使用浏览器内置特性**：也许你可以使用浏览器已经具备的特性，而不是通过 JavaScript 自己创建。例如：
@@ -264,7 +264,7 @@ function loop() {
 loop();
 ```
 
-你可以在[绘制图形 > 动画](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#动画)中找到有关 canvas 动画的简介，以及在[对象构建实践](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice) 中找到更详细的示例。你还可以在 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中找到一整套 canvas 教程。
+你可以在[绘制图形 > 动画](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#动画)中找到有关 canvas 动画的简介，以及在[对象构建实践](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) 中找到更详细的示例。你还可以在 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中找到一整套 canvas 教程。
 
 ## 优化事件性能
 
@@ -327,7 +327,7 @@ elem.removeEventListener("mousemove", handleMouseMove);
 
 - **将计算任务移到主线程之外**：在前面我们谈到了 JavaScript 通常在主线程上运行任务，长时间的操作可能会阻塞主线程，从而导致 UI 性能很差。我们还展示了如何将长任务分解为较小的任务，以缓解这个问题。处理这类问题的另一种方法是将任务完全移到主线程之外。有几种方法可以实现这一点：
 
-  - 使用异步代码：[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)基本上是指不会阻塞主线程的 JavaScript。异步 API 通常用于处理诸如从网络获取资源、访问本地文件系统上的文件或打开用户网络摄像头流等操作。因为这些操作可能需要很长时间，所以在等待它们完成的过程中阻塞主线程是不好的。相反，浏览器会执行这些函数，继续运行后续代码，这些函数将*在将来某个时间点*返回结果。现代异步 API 基于 Promise，这是一种用于处理异步操作的 JavaScript 语言特性。如果你有功能可以从异步运行中受益，则可以[编写自己的基于 Promise 的函数](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)。
+  - 使用异步代码：[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)基本上是指不会阻塞主线程的 JavaScript。异步 API 通常用于处理诸如从网络获取资源、访问本地文件系统上的文件或打开用户网络摄像头流等操作。因为这些操作可能需要很长时间，所以在等待它们完成的过程中阻塞主线程是不好的。相反，浏览器会执行这些函数，继续运行后续代码，这些函数将*在将来某个时间点*返回结果。现代异步 API 基于 Promise，这是一种用于处理异步操作的 JavaScript 语言特性。如果你有功能可以从异步运行中受益，则可以[编写自己的基于 Promise 的函数](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API)。
   - 在 Web Worker 中进行计算：[Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 是一种机制，允许你打开一个单独的线程来运行一段 JavaScript 代码，以便不会阻塞主线程。Worker 有一些限制，最大的限制是你不能在 Worker 内部运行 DOM 脚本。你可以执行大多数其他操作，并且 Worker 可以与主线程之间发送和接收消息。Worker 的主要用例是如果你有大量计算需要进行，而不希望它阻塞主线程，那么就需要使用 Worker。在 Worker 中进行计算，等待结果，并在准备好时将结果发送回主线程。
   - **使用 WebGPU**：[WebGPU](/zh-CN/docs/Web/API/WebGPU_API) 是一种浏览器 API，允许 Web 开发人员使用底层系统的 GPU（Graphics Processing Unit，图形处理单元）来进行高性能计算和绘制复杂的图像，这些图像可以在浏览器中呈现。它相对复杂，但可以提供比 Web Worker 更好的性能优势。
 

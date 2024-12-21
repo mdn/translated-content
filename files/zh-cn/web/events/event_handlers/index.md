@@ -5,7 +5,7 @@ slug: Web/Events/Event_handlers
 
 事件是浏览器窗口内触发的信号，用于通知浏览器或操作系统环境的变化。程序员可以创建用于在事件触发时运行的*事件处理器*代码，使网页能够适当地响应变化。
 
-本页提供了有关如何使用事件和事件处理器的非常简短的“提醒”。新开发人员应阅读[事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)。
+本页提供了有关如何使用事件和事件处理器的非常简短的“提醒”。新开发人员应阅读[事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)。
 
 ## 有哪些可用事件？
 
@@ -87,7 +87,7 @@ controller.abort(); // 移除与此控制器关联的任何/所有事件处理�
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
     <li><a href="/zh-CN/docs/Web/Events">事件参考</a></li>
   </ol>
 </section>

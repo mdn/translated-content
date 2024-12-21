@@ -46,7 +46,7 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
 });
 ```
 
-该方法与[种类详情页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)中描述的方法完全相同。路由控制器函数使用 `Promise.all()` 并行地查询指定的作者（`Author`）及其关联的 `Book` 实例。如果没有找到匹配的作者，则会将错误（Error）对象发送到 Express 错误处理中间件。如果找到作者，则使用“author_detail”模板呈现检索到的数据库信息。
+该方法与[种类详情页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)中描述的方法完全相同。路由控制器函数使用 `Promise.all()` 并行地查询指定的作者（`Author`）及其关联的 `Book` 实例。如果没有找到匹配的作者，则会将错误（Error）对象发送到 Express 错误处理中间件。如果找到作者，则使用“author_detail”模板呈现检索到的数据库信息。
 
 ## 视图
 
@@ -86,5 +86,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下一个部分：[书本实例细节页面和自我挑战](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)
+- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 的下一个部分：[书本实例细节页面和自我挑战](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)

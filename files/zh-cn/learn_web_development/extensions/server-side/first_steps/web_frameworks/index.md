@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/First_steps/Web_frameworks
       <td>
         基础电脑素养。对于服务器端代码是如何处理并响应 HTTP
         请求有深刻的理解。（参见<a
-          href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >Client-Server overview</a
         >）
       </td>

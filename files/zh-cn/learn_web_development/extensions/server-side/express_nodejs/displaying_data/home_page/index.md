@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 
 ## 路由
 
-在[前面的教程](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)中，我们创建了索引页的路由。此处要提醒的是，所有的路由函数都定义在 **/routes/catalog.js** 中：
+在[前面的教程](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)中，我们创建了索引页的路由。此处要提醒的是，所有的路由函数都定义在 **/routes/catalog.js** 中：
 
 ```js
 // GET 分类主页
@@ -134,5 +134,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续阅读教程 5 下个子章节：[书本列表页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 继续阅读教程 5 下个子章节：[书本列表页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page)

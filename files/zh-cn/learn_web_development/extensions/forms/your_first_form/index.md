@@ -14,7 +14,7 @@ original_slug: Learn/Forms/Your_first_form
       <th scope="row">前提：</th>
       <td>
         <p>
-          基本计算机素养和<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          基本计算机素养和<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
             >对 HTML 的基本理解</a
           >。
         </p>
@@ -33,7 +33,7 @@ original_slug: Learn/Forms/Your_first_form
 
 ## web 表单是什么？
 
-web 表单是用户和 web 站点或应用程序之间交互的主要内容之一。它们允许用户输入数据，大多数情况下会将数据发送到 web 服务器进行处理和存储（见后面的章节[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)），或者在客户端使用某种方式立刻更新界面（例如，添加列表中的另一个项目，或者显示或隐藏 UI 功能）。
+web 表单是用户和 web 站点或应用程序之间交互的主要内容之一。它们允许用户输入数据，大多数情况下会将数据发送到 web 服务器进行处理和存储（见后面的章节[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)），或者在客户端使用某种方式立刻更新界面（例如，添加列表中的另一个项目，或者显示或隐藏 UI 功能）。
 
 web 表单是由一个或多个**表单控件**（有时称为**小部件**），以及一些有助于构建整个表单的附加元素组成——通常被称为 **HTML 表单**。这些控件可以是文本字段（单行或多行）、选择框、按钮、复选框或单选按钮，大部分是使用 {{htmlelement("input")}} 元素创建的，尽管还有一些其他元素需要学习。
 
@@ -74,7 +74,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 - `method` 属性定义了发送数据的 HTTP 方法（通常是 `get` 或 `post`）。
 
 > [!NOTE]
-> 如果你想深入了解这些属性是如何工作的，那么将在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
+> 如果你想深入了解这些属性是如何工作的，那么将在[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)文章中详细说明。
 
 现在，将上面的 {{htmlelement("form")}} 元素添加到你的 HTML {{htmlelement("body")}} 中。
 
@@ -111,12 +111,12 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 
 使用 {{HTMLelement("li")}} 元素可以使我们更加方便地构造我们自己的代码，并且更容易样式化（参见本文后面的内容）。为了可用性和无障碍，我们为每个表单控件包含一个明确的标签。注意在所有 {{HTMLElement("label")}} 元素上使用 [`for`](/zh-CN/docs/Web/HTML/Attributes/for) 属性；它是将标签链接到表单控件的一种正规方式。这个属性引用对应的表单控件的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)。
 
-这样做有一些好处。最明显的一个好处是允许用户单击标签以激活相应的表单控件，它还有助于使用屏幕阅读器的用户读取名称。如果你想更好地理解这个属性的其他好处，你可以找到[如何构造 web 表单](/zh-CN/docs/Learn/Forms/Form_validation)的详细信息。
+这样做有一些好处。最明显的一个好处是允许用户单击标签以激活相应的表单控件，它还有助于使用屏幕阅读器的用户读取名称。如果你想更好地理解这个属性的其他好处，你可以找到[如何构造 web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)的详细信息。
 
-在 {{HTMLElement("input")}} 元素中，最重要的属性是 `type` 属性。这个属性非常重要，因为它定义了 {{HTMLElement("input")}} 属性的行为方式。稍后你将在[原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)文章中找到更多关于此的内容。
+在 {{HTMLElement("input")}} 元素中，最重要的属性是 `type` 属性。这个属性非常重要，因为它定义了 {{HTMLElement("input")}} 属性的行为方式。稍后你将在[原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)文章中找到更多关于此的内容。
 
 - 在我们的简单示例中，我们使用值 {{HTMLelement("input/text", "text")}} 作为第一个输入——这个属性的默认值。它表示一个基本的单行文本字段，接受任何类型的文本输入。
-- 对于第二个输入，我们使用值 {{HTMLelement("input/email", "email")}}，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，你将了解到更多关于[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)的信息。
+- 对于第二个输入，我们使用值 {{HTMLelement("input/email", "email")}}，它定义了一个只接受格式正确的电子邮件地址的单行文本字段。这会将一个基本的文本字段转换为一种“智能”字段，该字段将对用户输入的数据进行一些检查。在稍后的表单数据验证文章中，你将了解到更多关于[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)的信息。
 
 最后但同样重要的是，要注意 `<input>` 和 `<textarea></textarea>` 的语法。这是 HTML 的一个奇怪之处。`<input>` 标签是一个空元素，这意味着它不需要关闭标签。相反，{{HTMLElement("textarea")}} 不是一个空元素，因此必须使用适当的结束标记来关闭它。这对 HTML 表单的特定特性有影响：定义默认值的方式。要定义 {{HTMLElement("input")}} 的默认值，你必须使用 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性，如下所示：
 
@@ -271,7 +271,7 @@ button {
 
 在我们的示例中，表单会发送三个已命名的数据块“`user_name`”、“`user_email`”和“`user_message`”。这些数据将用使用 [HTTP `POST`](/zh-CN/docs/Web/HTTP/Methods/POST) 方法，把信息发送到 URL 为“`/my-handling-form-page`”的目录下。
 
-在服务器端，位于 URL“`/my-handling-form-page`”上的脚本将接收的数据作为 HTTP 请求中包含的 3 个键/值项的列表。这个脚本处理这些数据的方式取决于你。每个服务器端语言（PHP、Python、Ruby、Java、c 等等）都有自己的表单数据处理机制。深入到这个主题已经超出了本指南的范围，但是如果你想了解更多，我们已经在[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中提供了一些示例。
+在服务器端，位于 URL“`/my-handling-form-page`”上的脚本将接收的数据作为 HTTP 请求中包含的 3 个键/值项的列表。这个脚本处理这些数据的方式取决于你。每个服务器端语言（PHP、Python、Ruby、Java、c 等等）都有自己的表单数据处理机制。深入到这个主题已经超出了本指南的范围，但是如果你想了解更多，我们已经在[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)文章中提供了一些示例。
 
 ## 总结
 
@@ -377,6 +377,6 @@ button {
 
 ### 高级主题
 
-- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单控件的属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单控件的属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

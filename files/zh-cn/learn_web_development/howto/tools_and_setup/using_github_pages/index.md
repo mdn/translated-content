@@ -101,4 +101,4 @@ git push
 
 你可以使用更合适的消息替换 _another commit_，以描述你刚刚做出的更改。
 
-我们仅仅提供了 Git 的浅显基本的信息。要了解更多信息，查看我们的 [Git 和 GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub) 页面。
+我们仅仅提供了 Git 的浅显基本的信息。要了解更多信息，查看我们的 [Git 和 GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control) 页面。

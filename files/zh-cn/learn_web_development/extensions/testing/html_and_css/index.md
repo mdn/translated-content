@@ -18,12 +18,12 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         <p>
-          熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-            href="/zh-CN/docs/Learn/CSS"
+          熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a
           >
-          和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的基本知识；了解<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言的基本知识；了解<a
+            href="/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction"
             >跨浏览器测试</a
           >中涉及的高级概念。
         </p>
@@ -48,7 +48,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
 
-在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
+在我们的[调试 HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
 
 总的来说，这涉及到检查你的 HTML 和 CSS 代码是否格式规范、无任何语法错误。
 
@@ -201,7 +201,7 @@ button:active {
 
 ### 选择器支持
 
-当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
+当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
 
 在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/:not)。
 
@@ -261,7 +261,7 @@ form > #date
 
 ### 响应式设计问题
 
-响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
+响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
 
 分辨率也是个大问题——例如，移动设备不太可能需要大的图像，但更有可能有较慢的互联网连接，甚至可能有昂贵的数据流量计划，这会使浪费带宽成为一个问题。此外，不同的设备可能有各种不同的分辨率，这意味着较小的图像可能会出现像素化。有一些技术可以解决这些问题，从[媒体查询](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design#媒体查询)到更复杂的[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#分辨率切换：不同的尺寸)，包括 {{HTMLElement('picture')}} 元素和 {{HTMLElement('img')}} 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)属性。
 

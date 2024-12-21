@@ -14,7 +14,7 @@ original_slug: Learn/HTML/Tables/Advanced
       <th scope="row">前提：</th>
       <td>
         HTML 的基础知识（参见
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 简介</a>）。
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 简介</a>）。
       </td>
     </tr>
     <tr>
@@ -68,7 +68,7 @@ original_slug: Learn/HTML/Tables/Advanced
 - `<tbody>` 元素需要包住表格内容的主要部分（不是表头和表尾）。
 - `<tfoot>` 元素需要包住表格的表尾部分。一般是最后一行，往往是对前面所有行的总结。
 
-> **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
+> **备注：** `<tbody>` 总是包含在每个表中，如果你没有在代码中指定它，那就是隐式的。可以来验证一下，打开一个你之前没有包含 `<tbody>` 的例子，然后在你的[浏览器开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中观察你的代码，你会看到浏览器为你添加了这个标签。你也许会想问，为什么你应该在所有表中都需要这个元素，因为它可以让你更好地控制表格结构和样式。
 
 ### 动手练习：添加表格结构
 
@@ -94,7 +94,7 @@ original_slug: Learn/HTML/Tables/Advanced
 7. 先保存，再刷新，然后观察一下结果。如果没有 `<tbody>` 和 `<tfoot>` 元素，你也许会写更加复杂的选择器或规则来应用同样的样式。
 
 > [!NOTE]
-> 我们并不期望你现在就能完全理解 CSS。在你阅读我们的 CSS 模块时，你会学到更多这方面的知识（[CSS 介绍](/zh-CN/docs/Learn/CSS/First_steps)是一个好的起点；文章[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)也专门讲述了如何对表格添加样式）。
+> 我们并不期望你现在就能完全理解 CSS。在你阅读我们的 CSS 模块时，你会学到更多这方面的知识（[CSS 介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics)是一个好的起点；文章[样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)也专门讲述了如何对表格添加样式）。
 
 你完成的表格应该如下所示：
 
@@ -344,10 +344,10 @@ th {
 
 ## 总结
 
-关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。接下来，你可以在 [HTML 表格测评](/zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data)中测试自己的水平了，祝你玩得开心！
+关于 HTML 表格你还可以学习其他一些东西，但是我们目前已经把大部分你需要知道的内容都告诉你了。接下来，你可以在 [HTML 表格测评](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Planet_data_table)中测试自己的水平了，祝你玩得开心！
 
-如果你已经在学习 CSS，并且在评估中表现良好，你就可以继续学习 HTML 表格的样式，参见[样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)。
+如果你已经在学习 CSS，并且在评估中表现良好，你就可以继续学习 HTML 表格的样式，参见[样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)。
 
-如果你想要入门 CSS，请前往 [CSS 学习区](/zh-CN/docs/Learn/CSS)！
+如果你想要入门 CSS，请前往 [CSS 学习区](/zh-CN/docs/Learn_web_development/Core/Styling_basics)！
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

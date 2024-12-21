@@ -14,12 +14,12 @@ original_slug: Learn/MathML/First_steps/Scripts
       <th scope="row">前提：</th>
       <td>
         基本的计算机操作能力、<a
-        href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+        href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
         >安装基本软件</a
-        >、<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        >、<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
         >处理文件</a>的基本知识，以及
       HTML 基础知识（可以学习 <a
-        href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 入门</a
+        href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 入门</a
         >。）
       </td>
     </tr>
@@ -34,7 +34,7 @@ original_slug: Learn/MathML/First_steps/Scripts
 
 ## 下标和上标
 
-类似于我们在[上一篇文章](/zh-CN/docs/Learn/MathML/First_steps/Fractions_and_roots)中所学习的，`<msub>`、`<msup>` 和 `<msubsup>` 具有特殊的结构，它们恰好有两个元素（`<msub>`、`<msup>`）或三个元素（`<msubsup>`）：
+类似于我们在[上一篇文章](/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots)中所学习的，`<msub>`、`<msup>` 和 `<msubsup>` 具有特殊的结构，它们恰好有两个元素（`<msub>`、`<msup>`）或三个元素（`<msubsup>`）：
 
 ```html
 <p>
@@ -475,7 +475,7 @@ math {
 
 ## 总结
 
-在本文中，我们完成了对引入下标、上标、正下标和正上标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Learn/MathML/First_steps/Tables)。
+在本文中，我们完成了对引入下标、上标、正下标和正上标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Web/MathML/Guides/Tables)。
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
 

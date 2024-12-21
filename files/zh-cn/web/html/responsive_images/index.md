@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
-在本文中我们将学习响应式图片（一种在不同的屏幕尺寸、分辨率或具有其他类似特性的设备上都呈现良好的图片），并且探究 HTML 提供的一些帮助实现它们的工具，这有助于提升（网页在）不同设备上的性能。响应式图片仅是[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)的一部分，你在学习 CSS 的过程中将学到相关的知识。
+在本文中我们将学习响应式图片（一种在不同的屏幕尺寸、分辨率或具有其他类似特性的设备上都呈现良好的图片），并且探究 HTML 提供的一些帮助实现它们的工具，这有助于提升（网页在）不同设备上的性能。响应式图片仅是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的一部分，你在学习 CSS 的过程中将学到相关的知识。
 
 <table class="standard-table">
   <tbody>
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         你应该知道
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 基础</a>以及如何<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">在网站上添加静态图片</a>。
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 基础</a>以及如何<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images">在网站上添加静态图片</a>。
       </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@ l10n:
 
 一个改进的方法是，当网站在窄屏上观看时，显示一张只含重要细节的裁剪版本的图片，在像平板电脑这样的中等宽度的屏幕设备上显示时，显示另一张裁剪的图片。如果采用这种方式，你会需要为多种布局提供不同的裁剪图片，这种问题通常称为**美术设计问题（art direction problem）**。
 
-此外，如果是在小屏手机屏幕上显示网页，那么没有必要在网页上嵌入这样大的图片。这样做会浪费流量；移动用户不希望浪费流量来下载为桌面用户准备的大图片，他们的设备只需下载小图片即可。反过来说，一张小的[位图](/zh-CN/docs/Glossary/Raster_image)，如果它的显示尺寸大于原始尺寸，看起来就会有颗粒感（位图有固定数量的像素宽，固定数量的像素高，正如我们在[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)中所学到的）。理想情况下，用户的 web 浏览器可以使用多种分辨率的图片。然后，浏览器就可以根据用户设备的屏幕尺寸来确定加载的最佳分辨率。这就是**分辨率切换问题**。
+此外，如果是在小屏手机屏幕上显示网页，那么没有必要在网页上嵌入这样大的图片。这样做会浪费流量；移动用户不希望浪费流量来下载为桌面用户准备的大图片，他们的设备只需下载小图片即可。反过来说，一张小的[位图](/zh-CN/docs/Glossary/Raster_image)，如果它的显示尺寸大于原始尺寸，看起来就会有颗粒感（位图有固定数量的像素宽，固定数量的像素高，正如我们在[矢量图](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)中所学到的）。理想情况下，用户的 web 浏览器可以使用多种分辨率的图片。然后，浏览器就可以根据用户设备的屏幕尺寸来确定加载的最佳分辨率。这就是**分辨率切换问题**。
 
 更复杂的是，有些设备的屏幕分辨率很高，需要比你想象中更大的图像才能很好地显示。这本质上是同一个问题，但背景略有不同。
 
@@ -98,7 +98,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 
 **`sizes`** 定义了一组媒体条件（例如屏幕宽度）并且指明当某些媒体条件为真时，什么样的图片尺寸是最佳选择——这就是我们之前提到的提示。上面的示例中，在每个逗号之前，我们写：
 
-1. 一个**媒体条件**（`(max-width:600px)`）——你会在 [CSS 主题](/zh-CN/docs/Learn/CSS)中学到更多相关的知识，但现在我们暂且认为，媒体条件描述的是屏幕可能处于的状态。上面示例中，我们的意思是“当视口的宽度小于等于 600px 时”。
+1. 一个**媒体条件**（`(max-width:600px)`）——你会在 [CSS 主题](/zh-CN/docs/Learn_web_development/Core/Styling_basics)中学到更多相关的知识，但现在我们暂且认为，媒体条件描述的是屏幕可能处于的状态。上面示例中，我们的意思是“当视口的宽度小于等于 600px 时”。
 2. 一个空格
 3. 当媒体条件为真时，图像将填充的**插槽的宽度**（`480px`）
 
@@ -161,7 +161,7 @@ img {
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
-让我们使用 {{htmlelement("picture")}} 来解决这个问题！就像 [`<video>` 和 `<audio>`](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 一样，`<picture>` 元素是包含多个 {{htmlelement("source")}} 元素的容器，它提供了多个不同的资源供浏览器选择，然后还有至关重要的 {{htmlelement("img")}} 元素。在 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中的代码如下所示：
+让我们使用 {{htmlelement("picture")}} 来解决这个问题！就像 [`<video>` 和 `<audio>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) 一样，`<picture>` 元素是包含多个 {{htmlelement("source")}} 元素的容器，它提供了多个不同的资源供浏览器选择，然后还有至关重要的 {{htmlelement("img")}} 元素。在 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中的代码如下所示：
 
 ```html
 <picture>
@@ -203,9 +203,9 @@ img {
 响应式图像的介绍到此结束——希望你享受学习新技术的过程。总结一下，我们讨论了两个不同的问题：
 
 - **美术设计**：当你想为不同布局提供不同剪裁的图片——比如在桌面布局上显示完整的、横向图片，而在手机布局上显示一张剪裁过的、突出重点的纵向图片，可以用 {{htmlelement("picture")}} 元素来实现。
-- **分辨率切换**：当你想要为窄屏提供更小的图片时（因为小屏幕不需要像桌面端显示那么大的图片）；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)（SVG 图片）或者 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性来实现。
+- **分辨率切换**：当你想要为窄屏提供更小的图片时（因为小屏幕不需要像桌面端显示那么大的图片）；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 图片）或者 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性来实现。
 
-此时整个[多媒体与嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)，看看你学得怎样。希望你玩得开心！
+此时整个[多媒体与嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)，看看你学得怎样。希望你玩得开心！
 
 ## 参见
 

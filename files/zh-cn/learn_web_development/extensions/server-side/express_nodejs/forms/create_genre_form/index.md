@@ -40,7 +40,7 @@ exports.genre_create_get = (req, res, next) => {
 };
 ```
 
-请注意，这里我们将使用一个“普通”express 路由处理器替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes)中添加的占位异步处理器。我们不需要为该路由添加 `asyncHandler()` 包装器，因为它不包含任何可能引发异常的代码。
+请注意，这里我们将使用一个“普通”express 路由处理器替换我们在 [Express 教程 4：路由和控制器](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)中添加的占位异步处理器。我们不需要为该路由添加 `asyncHandler()` 包装器，因为它不包含任何可能引发异常的代码。
 
 ## 控制器——post 路由
 
@@ -222,5 +222,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- 继续教程 6 下一个部分：[创建作者表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form)
+- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
+- 继续教程 6 下一个部分：[创建作者表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form)

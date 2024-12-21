@@ -14,16 +14,16 @@ CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上�
       <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装基本的软件</a
         >、<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件处理</a
         >基本知识、HTML 基础知识（<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >学习 HTML 入门</a
         >），以及 CSS 如何工作的基本常识（如果完全不了解 CSS，请移步<a
-          href="/zh-CN/docs/Learn/CSS/First_steps">学习 CSS 第一步</a
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">学习 CSS 第一步</a
         >。）
       </td>
     </tr>
@@ -194,7 +194,7 @@ CSS 中的值类型是一种定义了一些可使用的值的集合的方式。�
 
 #### em 和 rem
 
-`em` 和 `rem` 是你在从框到文本调整大小时最常遇到的两个相对长度。了解这些方法是如何工作的以及它们之间的区别是很有意义的，尤其是当你开始学习更复杂的主题时，比如[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)或 [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)。下面的示例提供了一个演示。
+`em` 和 `rem` 是你在从框到文本调整大小时最常遇到的两个相对长度。了解这些方法是如何工作的以及它们之间的区别是很有意义的，尤其是当你开始学习更复杂的主题时，比如[样式化文本](/zh-CN/docs/Learn_web_development/Core/Text_styling)或 [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)。下面的示例提供了一个演示。
 
 HTML 是一组嵌套的列表——我们总共有三个列表，并且两个示例都有相同的 HTML。唯一的区别是第一个类具有 _em_，第二个类具有 _rem_。
 
@@ -729,7 +729,7 @@ li {
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——[技能测试：值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_tasks)。
+你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——[技能测试：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_tasks)。
 
 ## 总结
 

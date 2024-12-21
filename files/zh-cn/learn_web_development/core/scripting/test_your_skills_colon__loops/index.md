@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-这个技能测试的目标是评估你是否理解了[循环吧，代码](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)一文。
+这个技能测试的目标是评估你是否理解了[循环吧，代码](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops)一文。
 
 > [!NOTE]
 > 你可以下载代码并放入在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)）中来尝试解决问题。
@@ -19,7 +19,7 @@ l10n:
 
 为了完成下面的某些问题，你需要编写一些 [DOM](/zh-CN/docs/Glossary/DOM) 操作代码——例如创建新的 HTML 元素，将它们的文本内容设为特定的字符串值，以及将它们嵌套到页面中已有的元素中——这些都要通过 JavaScript 来完成。
 
-我们还没有在课程中明确讲述这些知识，但是你将会看到一些使用这些知识的示例；并且我们希望你能研究一下，为了成功解答问题，你需要哪些 DOM API。一个好的出发点是我们的[操作文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)教程。
+我们还没有在课程中明确讲述这些知识，但是你将会看到一些使用这些知识的示例；并且我们希望你能研究一下，为了成功解答问题，你需要哪些 DOM API。一个好的出发点是我们的[操作文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)教程。
 
 ## 循环 1
 
@@ -33,7 +33,7 @@ l10n:
 
 在这个任务中，我们希望你编写一个简单的程序，在给定名字的情况下，搜索一个包含名字和电话号码的[对象](/zh-CN/docs/Glossary/Object)数组（`phonebook`）；如果找到了名字，将名字和电话号码输出到段落（`para`）中，然后退出循环，让它不要继续进行。
 
-如果你还没有知悉和对象有关的知识，不要担心！现在你只需要知道如何访问成员–值对就可以了。你可以在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)教程中阅读有关对象的内容。
+如果你还没有知悉和对象有关的知识，不要担心！现在你只需要知道如何访问成员–值对就可以了。你可以在 [JavaScript 对象基础](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics)教程中阅读有关对象的内容。
 
 开始时，你有三个变量：
 

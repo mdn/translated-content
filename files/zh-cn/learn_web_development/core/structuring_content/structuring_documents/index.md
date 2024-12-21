@@ -14,14 +14,14 @@ original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
       <th scope="row">前提：</th>
       <td>
         阅读
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >开始学习 HTML</a
         >、<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML 文字处理初步</a
         >
         、<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >创建超链接</a
         >，掌握相关基础知识。
       </td>
@@ -40,7 +40,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - 页眉
   - : 通常横跨于整个页面顶部有一个大标题 和/或 一个标志。这是网站的主要一般信息，通常存在于所有网页。
 - 导航栏
-  - : 指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 [无障碍访问特性](/zh-CN/docs/Learn/Accessibility)，因为屏幕阅读器可以更清晰地分辨二者。
+  - : 指向网站各个主要区段的超链接。通常用菜单按钮、链接或标签页表示。类似于标题栏，导航栏通常应在所有网页之间保持一致，否则会让用户感到疑惑，甚至无所适从。许多 web 设计人员认为导航栏是标题栏的一部分，而不是独立的组件，但这并非绝对；还有人认为，两者独立可以提供更好的 [无障碍访问特性](/zh-CN/docs/Learn_web_development/Core/Accessibility)，因为屏幕阅读器可以更清晰地分辨二者。
 - 主内容
   - : 中心的大部分区域是当前网页大多数的独有内容，例如视频、文章、地图、新闻等。这些内容是网站的一部分，且会因页面而异。
 - 侧边栏
@@ -141,7 +141,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 - {{HTMLElement('main')}} 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 {{HTMLElement('body')}} 中。最好不要把它嵌套进其他元素。
 - {{HTMLElement('article')}} 包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。
-- {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/zh-CN/docs/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
+- {{HTMLElement('section')}} 与 `<article>` 类似，但 `<section>` 更适用于组织页面使其按功能（比如迷你地图、一组文章标题和摘要）分块。一般的最佳用法是：以 [标题](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) 作为开头；也可以把一篇 `<article>` 分成若干部分并分别置于不同的 `<section>` 中，也可以把一个区段 `<section>` 分成若干部分并分别置于不同的 `<article>` 中，取决于上下文。
 - {{HTMLElement('aside')}} 包含一些间接信息（术语条目、作者简介、相关链接，等等）。
 - {{HTMLElement('header')}} 是简介形式的内容。如果它是 {{HTMLElement('body')}} 的子元素，那么就是网站的全局页眉。如果它是 {{HTMLElement('article')}} 或{{HTMLElement('section')}} 的子元素，那么它是这些部分特有的页眉（此 `<header>` 非彼 [标题](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#%e5%a2%9e%e5%8a%a0%e4%b8%80%e4%b8%aa%e6%a0%87%e9%a2%98)）。
 - {{HTMLElement('nav')}} 包含页面主导航功能。其中不应包含二级链接等内容。

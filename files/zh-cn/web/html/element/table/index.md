@@ -674,7 +674,7 @@ tr:last-child td {
 
 ## 参见
 
-- [HTML 数据表格初步](/zh-CN/docs/Learn/HTML/Tables)
+- [HTML 数据表格初步](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - 可能特别有用的关于设定表格元素样式的 CSS 属性：
 
   - {{cssxref("width")}} 控制表格的宽度；

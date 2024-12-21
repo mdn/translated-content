@@ -13,8 +13,8 @@ original_slug: Learn/Forms/UI_pseudo-classes
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机知识，对 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 和 <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS</a> 的基本了解，包括对<a
-          href="/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements"
+        基本的计算机知识，对 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 的基本了解，包括对<a
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements"
           >伪类和伪元素</a
         >的基本认识。
       </td>
@@ -46,7 +46,7 @@ original_slug: Learn/Forms/UI_pseudo-classes
 还有很多其他的，但上面列出的是最明显有用的。其中一些旨在解决非常具体的小众问题，或者在浏览器中还没有得到很好的支持。上面列出的那些都有相当好的浏览器支持，但当然，你应该仔细测试你的表单实现，以确保它们对你的目标受众有效。
 
 > [!NOTE]
-> 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
+> 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
 
 ## 根据必需与否为输入控件添加样式
 
@@ -209,7 +209,7 @@ input:required + span::after {
 - 设定了 `required`，且没有任何值的表单控件是无效的——它们与 `:invalid` 和 `:required` 匹配。
 - 具有内置验证功能的控件，如 `<input type="email">` 或 `<input type="url">`，当输入的数据与它们所需的模式不匹配时，会被（与）`:invalid` 匹配（但当它们为空时是有效的）。
 - 当前值超出 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性所指定的范围限制的控件，会被（与）`:invalid` 匹配，但也会被 {{cssxref(":out-of-range")}} 匹配，后面还会看到。
-- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)文章中看到。但目前还没有必要介绍得太复杂。
+- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)文章中看到。但目前还没有必要介绍得太复杂。
 
 让我们看看一个简单的 `:valid`/`:invalid` 的示例（访问 [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) 以查看实时演示，也可以查看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)）。
 
@@ -616,16 +616,16 @@ input[type="radio"]:indeterminate {
 
 ## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn/Forms/Test_your_skills:_Advanced_styling).
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling).
 
 ## 总结
 
-这就完成了我们对与表单输入有关的 UI 伪类的研究。继续使用它们，创造一些有趣的表单样式吧。接下来，我们将继续研究一些不同的东西——[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)。
+这就完成了我们对与表单输入有关的 UI 伪类的研究。继续使用它们，创造一些有趣的表单样式吧。接下来，我们将继续研究一些不同的东西——[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
 ### 进阶内容
 
-- [如何构建自定义表单组件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [通过 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [表单组件的属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建自定义表单组件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [通过 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [表单组件的属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

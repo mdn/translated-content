@@ -13,12 +13,12 @@ original_slug: Learn/CSS/CSS_layout/Responsive_Design
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础（学习<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >），以及对 CSS 工作方式的理解（学习<a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS first steps</a
-        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS building blocks</a
         >）
       </td>
@@ -102,7 +102,7 @@ Zoe Mickley Gillenwater 深刻影响了[她的著作](http://zomigi.com/blog/voi
 
 使用灵活网格，你只需要加进去一个断点，在内容看起来不齐整的时候改变设计。例如如果一行随着屏幕大小增加而增长得不可读的长，或者是一个盒子在变窄时把每行的两个单词挤到一起。
 
-早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用[float](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。
+早年间进行响应式设计的时候，我们唯一的实现布局的选项是使用[float](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats)。灵活浮动布局是这样实现的，让每个元素都有一个作为宽度的百分数，而且确保整个布局的和不会超过 100%。在他对于液态网格文章的原文中，Marcotte 详细描述了一种布局的法则，通过使用像素并把布局转化为百分数的方式设计。
 
 ```plain
 target / context = result
@@ -116,7 +116,7 @@ target / context = result
 }
 ```
 
-这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的[Legacy layout methods](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。
+这种方式将会在今天整个 Web 上的许多地方上看到，而且它被我们的[Legacy layout methods](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)一文中的布局一节中记载。可能你将会在工作中遇到使用这种方式的站点，所以有必要理解它，即使是在你不用建立一个使用浮动基础的灵活网格的情况下。
 
 下面的例子阐释了一个使用媒体查询和灵活网格的简单响应式设计。在窄屏幕上，布局将盒子堆叠在另一个的上面：
 
@@ -131,7 +131,7 @@ target / context = result
 
 ## 现代布局技术
 
-现代布局方式，例如[多栏布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)、[伸缩盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)和[网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)默认是响应式的。它们都假设你在尽力创建一个可伸缩网格，而且给了你更容易这样做的方式。
+现代布局方式，例如[多栏布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)、[伸缩盒](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)和[网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)默认是响应式的。它们都假设你在尽力创建一个可伸缩网格，而且给了你更容易这样做的方式。
 
 ### 多个列
 
@@ -200,7 +200,7 @@ img {
 
 你也可以给用于不同尺寸的图像做“艺术指导”，为不同的屏幕尺寸提供不同的图像裁切或者完全不同的图像。
 
-你可以在 MDN 这里的学习 HTML 一节中找到详细的[响应式图像指南](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)。
+你可以在 MDN 这里的学习 HTML 一节中找到详细的[响应式图像指南](/zh-CN/docs/Web/HTML/Responsive_images)。
 
 ## 响应式排版
 

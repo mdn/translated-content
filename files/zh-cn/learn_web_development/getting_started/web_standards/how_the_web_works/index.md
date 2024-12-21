@@ -53,7 +53,7 @@ l10n:
 
 ## 解析组成文件的顺序
 
-当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn/CSS) 样式表文件和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 脚本文件。了解页面加载时[浏览器解析](/zh-CN/docs/Web/Performance/How_browsers_work#解析)这些文件的顺序是很重要的：
+当浏览器向服务器发送请求获取 HTML 文件时，HTML 文件通常包含 {{htmlelement("link")}} 和 {{htmlelement("script")}} 元素，这些元素分别指向了外部的 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 样式表文件和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 脚本文件。了解页面加载时[浏览器解析](/zh-CN/docs/Web/Performance/How_browsers_work#解析)这些文件的顺序是很重要的：
 
 - 浏览器首先解析 HTML 文件，并从中识别出所有的指向外部 CSS 样式表的 `<link>` 和指向脚本的 `<script>` 元素引用。
 - 继续解析 HTML 文件的同时，浏览器继续向服务器发送请求以获取 `<link>` 元素中找到的 CSS 文件以及 `<script>` 元素中找到的 JavaScript 文件，然后解析 CSS 和 JavaScript。
@@ -75,7 +75,7 @@ l10n:
 
 ## 参见
 
-- [互联网是如何工作的](/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [互联网是如何工作的](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 
 ## 感谢
 

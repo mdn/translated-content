@@ -20,10 +20,10 @@ l10n:
       <td>
         <p>
           推荐你至少需熟悉基本的
-          <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 与
-          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 与
+          <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           等程序语言且具备<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行环境</a
           >基本知识。
         </p>

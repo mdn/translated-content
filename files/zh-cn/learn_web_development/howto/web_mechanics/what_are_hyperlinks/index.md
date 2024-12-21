@@ -15,10 +15,10 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你该知道<a href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        你该知道<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >互联网是怎样工作的</a
         >，并且熟悉<a
-          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >网页、网站、网络服务器和搜索引擎间的区别</a
         >。
       </td>
@@ -89,5 +89,5 @@ l10n:
 
 所以现在当然你想要建立一些链接的网页！
 
-- 为了获得更多的理论背景，了解 [URL 以及其结构](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)，因为每个链接都指向一个 URL。
-- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 模块中的[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)详细解释了如何实现超链接。
+- 为了获得更多的理论背景，了解 [URL 以及其结构](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)，因为每个链接都指向一个 URL。
+- 想要一些更实际的东西？我们的 [HTML 介绍](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 模块中的[创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)详细解释了如何实现超链接。

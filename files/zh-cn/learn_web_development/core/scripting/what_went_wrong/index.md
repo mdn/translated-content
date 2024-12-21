@@ -44,7 +44,7 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 修复语法错误
 
-以前的课程中，你学会了在 [开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 中输入一些简单的 JavaScript 命令。（如果你忘记了如何在浏览器中打开它，可以直接打开上面的链接）。更实用的是，当 JavaScript 代码进入浏览器的 JavaScript 引擎时，如果存在语法错误，控制台会提供出错信息。现在我们去看一看。
+以前的课程中，你学会了在 [开发工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) 中输入一些简单的 JavaScript 命令。（如果你忘记了如何在浏览器中打开它，可以直接打开上面的链接）。更实用的是，当 JavaScript 代码进入浏览器的 JavaScript 引擎时，如果存在语法错误，控制台会提供出错信息。现在我们去看一看。
 
 1. 打开 `number-game-errors.html` 所在的标签页，然后打开 JavaScript 控制台。你将看到以下出错信息：
 

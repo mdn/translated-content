@@ -82,5 +82,5 @@ _还没有可用的资料，[请考虑贡献一个](/zh-CN/docs/MDN/Community/Co
 
 无障碍会影响网站的设计和技术结构。
 
-- 从设计角度来看，我们建议学习[为所有类型的用户设计](/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users)。
-- 如果对技术方面更感兴趣，可以学习如何[在网页中嵌入图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)。
+- 从设计角度来看，我们建议学习[为所有类型的用户设计](/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users)。
+- 如果对技术方面更感兴趣，可以学习如何[在网页中嵌入图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)。

@@ -88,6 +88,6 @@ block content
 
 ## 下一步
 
-回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
 
-继续教程 5 下一個部分：[种类细节页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+继续教程 5 下一個部分：[种类细节页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)

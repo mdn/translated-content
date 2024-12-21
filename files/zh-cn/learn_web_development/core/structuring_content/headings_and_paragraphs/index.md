@@ -14,7 +14,7 @@ HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发
       <th scope="row">前提：</th>
       <td>
         阅读
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >开始学习 HTML</a
         >，了解基本的 HTML 知识。
       </td>
@@ -261,7 +261,7 @@ textarea.onkeyup = function () {
 
 现在让我们把注意力转向列表。在生活中，列表无处不在——从你的购物清单到你每天下意识地遵循的方向列表，再到你在这些教程中遵循的指令列表！在 Web 上，有三种类型的列表：无序列表、有序列表和描述列表。
 
-无序列表和有序列表非常常见，将在本节介绍。描述列表不太常见，将在[文本格式进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)中介绍。
+无序列表和有序列表非常常见，将在本节介绍。描述列表不太常见，将在[文本格式进阶](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)中介绍。
 
 ### 无序列表
 
@@ -1056,10 +1056,10 @@ HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，赋予了它们新的但有点�
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——参见[技能测试：HTML 文本基础知识](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics) 。
+你已经到了本文的结尾，但你能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——参见[技能测试：HTML 文本基础知识](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics) 。
 
 ## 总结
 
-现在就到此为止了！这篇文章应该已经让你对如何开始在 HTML 中标记文本有了一个很好的概念，并且向你介绍了这个领域中的一些最重要的元素。这个领域还有很多语义元素要介绍，我们将在本课程稍后的[文本格式化进阶](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)一文中看得更清楚。在下一篇文章中，作为 Web 上最重要的元素，我们将详细介绍如何[创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)。
+现在就到此为止了！这篇文章应该已经让你对如何开始在 HTML 中标记文本有了一个很好的概念，并且向你介绍了这个领域中的一些最重要的元素。这个领域还有很多语义元素要介绍，我们将在本课程稍后的[文本格式化进阶](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)一文中看得更清楚。在下一篇文章中，作为 Web 上最重要的元素，我们将详细介绍如何[创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

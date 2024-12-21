@@ -16,11 +16,11 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         基本计算机知识、对于 HTML 和 CSS 的基本理解（见 <a
-          href="/zh-CN/docs/Learn/JavaScript/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript 第一步</a
-        >、<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        >、<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建 JavaScript 代码块</a
-        >、<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象入门</a
+        >、<a href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript 对象入门</a
         >）。
       </td>
     </tr>
@@ -59,10 +59,10 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 如上所述，我们讨论了什么是客户端 JavaScript API，以及它们与 JavaScript 语言的关系。让我们回顾一下，使其更清晰，并提及其他 JavaScript 工具的所适用的地方：
 
-- JavaScript——一种内置于浏览器的高级脚本语言，你可以用来实现 Web 页面/应用中的功能。注意 JavaScript 也可用于其他像 [Node](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction) 这样的编程环境。
+- JavaScript——一种内置于浏览器的高级脚本语言，你可以用来实现 Web 页面/应用中的功能。注意 JavaScript 也可用于其他像 [Node](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction) 这样的编程环境。
 - 客户端 API——内置于浏览器的结构程序，位于 JavaScript 语言之上，使你可以更容易的实现功能。
 - 第三方 API——置于第三方普通的结构程序（例如 Disqus、Facebook），使你可以在自己的 Web 页面中使用这些平台的某些功能（例如在你的 Web 页面显示 Disqus 评论）。
-- JavaScript 库——通常是包含具有[自定义函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions)的一个或多个 JavaScript 文件，把这些文件关联到你的 Web 页以加快或启用常见的功能的编码。示例包括 jQuery、Mootools 和 React。
+- JavaScript 库——通常是包含具有[自定义函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)的一个或多个 JavaScript 文件，把这些文件关联到你的 Web 页以加快或启用常见的功能的编码。示例包括 jQuery、Mootools 和 React。
 - JavaScript 框架——从库开始的下一步，JavaScript 框架（例如 Angular 和 Ember）视图把 HTML、CSS、JavaScript 和其他安装的技术打包在一起，然后用来从头编写一个完整的 Web 应用。库和框架的主要区别在于“控制反转”。调用库中的方法时，开发人员处于控制地位。而框架的控制权则相反：框架调用开发人员的代码。
 
 ## API 可以做什么？
@@ -73,8 +73,8 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 特别地，你将使用的最常见的浏览器 API 类别（以及我们将在本模块中更详细地介绍的）有：
 
-- **操作文档的 API** 内置于浏览器中。最明显的例子是 [DOM（文档对象模型）API](/zh-CN/docs/Web/API/Document_Object_Model)，它允许你操作 HTML 和 CSS——创建、移除以及修改 HTML，动态地将新样式应用到你的页面，等等。每当你看到一个弹出窗口出现在一个页面上，或者显示一些新的内容时，这都是 DOM 的行为。你可以在[操控文档](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)一文中找到关于这些类型的 API 的更多信息。
-- **从服务器获取数据的 API** 用于更新网页的一小部分，其非常常用。这个看似很小的细节可以对网站的性能和行为产生巨大的影响——如果你只是更新一个股票列表或者一些可用的新故事而不需要从服务器重新加载整个页面将使网站或应用程序的响应感觉更快、更“敏捷”。主要用于此目的的 API 是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)，虽然旧的代码可能仍然会使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) API。你也可能会同时遇到描述这项技术的术语 **Ajax**）。你可以在[从服务器中获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)一文找到关于此类 API 的更多信息。
+- **操作文档的 API** 内置于浏览器中。最明显的例子是 [DOM（文档对象模型）API](/zh-CN/docs/Web/API/Document_Object_Model)，它允许你操作 HTML 和 CSS——创建、移除以及修改 HTML，动态地将新样式应用到你的页面，等等。每当你看到一个弹出窗口出现在一个页面上，或者显示一些新的内容时，这都是 DOM 的行为。你可以在[操控文档](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)一文中找到关于这些类型的 API 的更多信息。
+- **从服务器获取数据的 API** 用于更新网页的一小部分，其非常常用。这个看似很小的细节可以对网站的性能和行为产生巨大的影响——如果你只是更新一个股票列表或者一些可用的新故事而不需要从服务器重新加载整个页面将使网站或应用程序的响应感觉更快、更“敏捷”。主要用于此目的的 API 是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)，虽然旧的代码可能仍然会使用 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) API。你也可能会同时遇到描述这项技术的术语 **Ajax**）。你可以在[从服务器中获取数据](/zh-CN/docs/Learn_web_development/Core/Scripting/Network_requests)一文找到关于此类 API 的更多信息。
 - **用于绘制和操作图形的 API** 目前已被浏览器广泛支持。最流行的是允许你以编程方式更新包含在 HTML {{htmlelement("canvas")}} 元素中的像素数据以创建 2D 和 3D 场景的 [Canvas](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)。例如，你可以绘制矩形或圆形等形状，将图像导入到画布上，然后使用 Canvas API 对其应用滤镜（如棕褐色滤镜或灰度滤镜），或使用 WebGL 创建具有光照和纹理的复杂 3D 场景。这些 API 经常与用于创建动画循环的 API（例如 {{domxref("window.requestAnimationFrame()")}}）和其他 API 一起不断更新诸如动画和游戏之类的场景。
 - **[音频和视频 API](/zh-CN/docs/Web/Media/Audio_and_video_delivery)** 例如 {{domxref("HTMLMediaElement")}}、[Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 允许你使用多媒体来做一些非常有趣的事情，比如创建用于播放音频和视频的自定义 UI 控件、显示字幕字幕和你的视频、从网络摄像机抓取视频、通过画布操纵（见上），或在网络会议中显示在别人的电脑上，或者添加效果到音轨（如增益、失真、平移等） 。
 - **设备 API** 使得你可以与设备的硬件进行交互：例如，使用[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)来访问设备的 GPS，从而查找用户的位置。
@@ -100,10 +100,10 @@ _图片来自：[过载的插头接口](https://www.flickr.com/photos/easy-pics/
 
 ### 它们是基于对象的
 
-API 使用一个或多个 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)在你的代码中进行交互，这些对象用作 API 使用的数据（包含在对象属性中）的容器以及 API 提供的功能（包含在对象方法中）。
+API 使用一个或多个 [JavaScript 对象](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)在你的代码中进行交互，这些对象用作 API 使用的数据（包含在对象属性中）的容器以及 API 提供的功能（包含在对象方法中）。
 
 > [!NOTE]
-> 如果你不熟悉对象如何工作，则应在继续之前学习 [JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)模块。
+> 如果你不熟悉对象如何工作，则应在继续之前学习 [JavaScript 对象](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)模块。
 
 让我们回到 Web 音频 API 的例子——这是一个相当复杂的 API，它由多个对象组成。最重要的包括：
 
@@ -230,7 +230,7 @@ Ball.prototype.draw = function () {
 
 ### 它们使用事件来处理状态的变化
 
-我们之前已经在课程中讨论了事件，在我们的[事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)一文中详细介绍了客户端 Web 事件是什么以及它们在代码中的用法。如果你还不熟悉客户端 Web API 事件的工作方式，则应在继续之前阅读这篇文章。
+我们之前已经在课程中讨论了事件，在我们的[事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)一文中详细介绍了客户端 Web 事件是什么以及它们在代码中的用法。如果你还不熟悉客户端 Web API 事件的工作方式，则应在继续之前阅读这篇文章。
 
 一些 Web API 不包含事件，但有些包含一些事件。当事件触发时，允许我们运行函数的处理器属性通常在参考资料中单独的“事件处理器”部分列出。
 

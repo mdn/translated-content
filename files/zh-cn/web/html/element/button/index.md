@@ -5,7 +5,7 @@ slug: Web/HTML/Element/button
 
 {{HTMLSidebar}}
 
-**HTML `<button>` 元素**表示一个可点击的按钮，可以用在[表单](/zh-CN/docs/Learn/Forms)或文档其他需要使用简单标准按钮的地方。默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮，但你可以使用 [CSS](/zh-CN/docs/Web/CSS) 来改变按钮的样貌。
+**HTML `<button>` 元素**表示一个可点击的按钮，可以用在[表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)或文档其他需要使用简单标准按钮的地方。默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮，但你可以使用 [CSS](/zh-CN/docs/Web/CSS) 来改变按钮的样貌。
 
 <table class="properties">
  <tbody>

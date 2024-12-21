@@ -12,7 +12,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
   <tbody>
     <tr>
       <th scope="row">前提：</th>
-      <td>初步了解 HTML（参见 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started">开始学习 HTML</a>）。</td>
+      <td>初步了解 HTML（参见 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">开始学习 HTML</a>）。</td>
     </tr>
     <tr>
       <th scope="row">学习目标：</th>
@@ -47,7 +47,7 @@ HTML 头部包含 HTML {{htmlelement("head")}} 元素的内容，与 {{htmleleme
 </head>
 ```
 
-然而，大型页面的头部会相当大。可以试着到一些喜欢的网站上，使用[开发者工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)查看网页的头部内容。我们在这里的目的不是向你展示如何使用所有可能放在头部的东西，而是教你如何熟悉使用你想要包括在头部的主要元素。让我们开始吧。
+然而，大型页面的头部会相当大。可以试着到一些喜欢的网站上，使用[开发者工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)查看网页的头部内容。我们在这里的目的不是向你展示如何使用所有可能放在头部的东西，而是教你如何熟悉使用你想要包括在头部的主要元素。让我们开始吧。
 
 ## 添加标题
 
@@ -298,6 +298,6 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
 
 ## 总结
 
-已经到了我们快速学习 HTML 头部的尾声——你还能学到更多的相关的，但是现阶段详尽的讲的太多会令人无聊且困惑，我们只希望你现在在这学到最基本的概念！下一篇我们将要学习 [HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)。
+已经到了我们快速学习 HTML 头部的尾声——你还能学到更多的相关的，但是现阶段详尽的讲的太多会令人无聊且困惑，我们只希望你现在在这学到最基本的概念！下一篇我们将要学习 [HTML 文字处理基础](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}

@@ -17,7 +17,7 @@ Express 可以与许多不同的[模板渲染引擎](https://expressjs.com/en/gu
 
 ## 模板组态
 
-在我们[创建骨架网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)时，LocalLibrary 配置为使用 [Pug](https://pugjs.org/api/getting-started.html)。你应该看到 Pug 模块作为依赖项，包含在网站的 **package.json**文件中，以及 **app.js**文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在 **/views**子目录中搜索模板。
+在我们[创建骨架网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)时，LocalLibrary 配置为使用 [Pug](https://pugjs.org/api/getting-started.html)。你应该看到 Pug 模块作为依赖项，包含在网站的 **package.json**文件中，以及 **app.js**文件中的以下配置设置。设置告诉我们，使用 Pug 作为视图引擎，Express 应该在 **/views**子目录中搜索模板。
 
 ```js
 // View engine setup.
@@ -133,7 +133,7 @@ ul
 
 在一个站点中，通常所有页面都有一个共同的结构，包括页首，页脚，导航等的标准 HTML 标记。比起强迫开发人员在每个页面中复制这个“样板”的做法，Pug 允许你声明一个基本模板，然后扩展它，只替换每个特定页面不同的地方。
 
-例如，在我们的[骨架项目](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website)中，创建的基本模板 **layout.pug**，如下所示：
+例如，在我们的[骨架项目](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)中，创建的基本模板 **layout.pug**，如下所示：
 
 ```pug
 doctype html
@@ -159,5 +159,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 下一个部分：[图书馆基本模板](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 下一个部分：[图书馆基本模板](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)

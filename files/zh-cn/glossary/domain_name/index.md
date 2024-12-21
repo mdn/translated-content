@@ -12,4 +12,4 @@ l10n:
 ## 参见
 
 - 维基百科上的[域名](https://zh.wikipedia.org/wiki/域名)
-- [了解“域名”](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [了解“域名”](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

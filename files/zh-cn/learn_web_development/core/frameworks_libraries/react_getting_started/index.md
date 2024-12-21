@@ -14,12 +14,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_g
       <th scope="row">前提：</th>
       <td>
         <p>
-          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
-            href="/zh-CN/docs/Learn/CSS"
+          熟悉核心 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>，<a
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a
           >
-          和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行</a
           >。
         </p>
@@ -113,9 +113,9 @@ const header = React.createElement(
 
 为了使用 create-react-app，你需要安装 [Node.js](https://nodejs.org/en/)。建议你使用长期支持（LTS）版本。Node 包括 npm（Node 程序包管理器）和 npx（Node 程序包运行器）
 
-你也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+你也可以使用 Yarn 软件包管理器作为替代方案，但是我们假设在这套教程中使用 npm。有关 npm 和 yarn 的更多信息，请参见[程序包管理基础](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
 
-如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
+如果你使用的是 Windows，则需要安装一些软件以与 Unix/macOS 终端保持同等地位，才能使用本教程中提到的终端命令。**Gitbash**（作为 [git Windows 工具集](https://gitforwindows.org/)的一部分提供）或**[适用于 Linux 的 Windows 子系统](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）均适用。有关这些以及一般终端命令的更多信息，请参见[命令行速成课程](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
 
 还请记住，React 和 ReactDOM 生成的应用程序只能在相当现代的一组浏览器上运行——通过某些 polyfill 可以使用 IE9+。在阅读这些教程时，建议你使用 Firefox，Safari 或 Chrome 等现代浏览器。
 
@@ -182,9 +182,9 @@ moz-todo-react
 
 目录 **`public`** 包含了开发应用时浏览器会读取的文件，其中最重要的就是 `index.html`。React 将目录 **`src`** 中的代码嵌入这个文件，从而浏览器才能运行此文件。 `index.html`中的有些内容关乎 create-react-app 的运作，因此除非你知道自己在做什么样的修改，否则不建议编辑这个文件。当然，你可以修改`index.html`中的 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 元素的内容来表现此应用程序通俗易懂的名称。
 
-目录 `public` 会在建立并部署此应用的时候更新。此教程不涉及部署，你可以参考 [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 这一篇教程。
+目录 `public` 会在建立并部署此应用的时候更新。此教程不涉及部署，你可以参考 [Deploying our app](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Deployment) 这一篇教程。
 
-文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)。
+文件 `package.json` 包含了 Node.js/npm 为了建立该应用程序所管理着的文件信息。这个文件不是 React 应用独有的。你无需理解这个文件也能看懂这篇教程。不过，如果你想了解更多，你可以阅读 [What is the file `package.json`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/) 和 [Package management basics](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)。
 
 ## 探索第一个 React 组件 — `<App/>`
 

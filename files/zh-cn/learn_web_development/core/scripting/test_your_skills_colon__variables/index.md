@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 
 {{learnsidebar}}
 
-本测试旨在评估读者对 [存储所需信息 - 变量](/zh-CN/docs/Learn/JavaScript/First_steps/Variables) 一文的理解程度。
+本测试旨在评估读者对 [存储所需信息 - 变量](/zh-CN/docs/Learn_web_development/Core/Scripting/Variables) 一文的理解程度。
 
 > [!NOTE]
 > 可在下文的互动编辑器中尝试完成评估，也可借助 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) 等在线编程实用工具完成任务。

@@ -65,5 +65,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 下个部分：[书本实例列表页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 下个部分：[书本实例列表页面](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)

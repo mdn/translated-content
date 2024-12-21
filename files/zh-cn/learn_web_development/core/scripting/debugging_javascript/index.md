@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟练使用 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练使用 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解<a href="/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction"
           >跨浏览器测试的核心概念</a
         >。
       </td>
@@ -58,9 +58,9 @@ if (window.XMLHttpRequest) {
 
 ## 修复一般的 JavaScript 问题
 
-正如我们在关于 HTML/CSS 的[前一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#首先：解决一般问题)中所说，你应该先确保你的代码能够正常工作，然后再去集中解决跨浏览器问题。如果你还不熟悉[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)的基本内容，你应该在继续学习之前学习这篇文章。你要注意一些常见的 JavaScript 问题，比如说：
+正如我们在关于 HTML/CSS 的[前一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#首先：解决一般问题)中所说，你应该先确保你的代码能够正常工作，然后再去集中解决跨浏览器问题。如果你还不熟悉[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn_web_development/Core/Scripting/What_went_wrong)的基本内容，你应该在继续学习之前学习这篇文章。你要注意一些常见的 JavaScript 问题，比如说：
 
-- 基本的语法和逻辑问题（再次重申，请参阅[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
+- 基本的语法和逻辑问题（再次重申，请参阅[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn_web_development/Core/Scripting/What_went_wrong)）。
 - 确保变量等定义在正确的作用域中，并且你不会遇到在不同地方声明的内容之间的冲突（见[函数作用域和冲突](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)）。
 - 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么作用域，它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#“this”的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定能够把功能应用到正确的 `this` 作用域。
 - 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是“弄错作用域”）。
@@ -70,7 +70,7 @@ if (window.XMLHttpRequest) {
 >
 > 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。请参阅 [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html)（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)）以查看能正常工作的版本。
 
-- 确保在你试图使用[异步操作](/zh-CN/docs/Learn/JavaScript/Asynchronous)返回的值之前，其已经完成。这通常需要了解如何使用 _promise_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理器中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)。
+- 确保在你试图使用[异步操作](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)返回的值之前，其已经完成。这通常需要了解如何使用 _promise_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理器中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promise](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)。
 
 > **备注：** [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
 
@@ -125,7 +125,7 @@ function showHeroes(jsonObj) {
 }
 ```
 
-所以当我们尝试使用 `jsonObj`（正如你所料，它应该是一个 [JSON 对象](/zh-CN/docs/Learn/JavaScript/Objects/JSON)）时，代码就会崩溃。这个 JSON 对象应该通过以下 {{domxref("fetch()")}} 调用从外部的 `.json` 文件中获取：
+所以当我们尝试使用 `jsonObj`（正如你所料，它应该是一个 [JSON 对象](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON)）时，代码就会崩溃。这个 JSON 对象应该通过以下 {{domxref("fetch()")}} 调用从外部的 `.json` 文件中获取：
 
 ```js
 const requestURL =

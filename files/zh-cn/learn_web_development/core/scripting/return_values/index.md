@@ -15,9 +15,9 @@ original_slug: Learn/JavaScript/Building_blocks/Return_values
       <td>
         <p>
           基础的计算机知识，懂得基础的 HTML 和 CSS,
-          <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript </a
+          <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript </a
           >第一步学习，函数-<a
-            href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions"
+            href="/zh-CN/docs/Learn_web_development/Core/Scripting/Functions"
           >
           </a
           >可重用的代码块。

@@ -13,7 +13,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_sit
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你需要知道怎么<a href="/zh-CN/docs/Learn/Upload_files_to_a_web_server"
+        你需要知道怎么<a href="/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server"
           >上传文件到 web 服务器</a
         >。
       </td>
@@ -84,7 +84,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![Deleting the ‘s’](code-correct.png)
 
-保存，[推送到服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
+保存，[推送到服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
 
 ![The image loads corectly in the browser](image-corrected.png)
 
@@ -119,7 +119,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![A Javascript error is shown in the Console](js-error.png)
 
-在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/zh-CN/docs/Learn/JavaScript) 的文章中提到 JavaScript )。
+在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/zh-CN/docs/Learn_web_development/Core/Scripting) 的文章中提到 JavaScript )。
 
 ### 更多需要检查的地方
 
@@ -163,5 +163,5 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
 恭喜，你的网站已经成功运作，任何人都可以访问。这是一项巨大的成就。现在，你可以开始深入探索各种主题。
 
-- 来自世界各地的人会进入你的网站，你应该考虑 [让每个人都可以访问网站](/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility) 。
-- 你的网站是否设计的得太粗糙了？是时候[了解更多 CSS](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works) 了。
+- 来自世界各地的人会进入你的网站，你应该考虑 [让每个人都可以访问网站](/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility) 。
+- 你的网站是否设计的得太粗糙了？是时候[了解更多 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) 了。

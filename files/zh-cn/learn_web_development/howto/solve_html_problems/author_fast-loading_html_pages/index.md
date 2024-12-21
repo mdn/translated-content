@@ -69,7 +69,7 @@ CDN 是一个分布在不同地理位置的服务器网络，它们协同工作�
 
 ### 减少内联脚本的数量
 
-内联脚本对页面加载的影响很大，因为解析器必须假定内联脚本可能会在解析过程中修改页面结构。减少内联脚本的使用，尤其是减少使用 `document.write()` 来输出内容，可以提高页面的整体加载速度。为现代浏览器使用 [DOM API 来操作页面内容](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)，而不是使用 `document.write()`。
+内联脚本对页面加载的影响很大，因为解析器必须假定内联脚本可能会在解析过程中修改页面结构。减少内联脚本的使用，尤其是减少使用 `document.write()` 来输出内容，可以提高页面的整体加载速度。为现代浏览器使用 [DOM API 来操作页面内容](/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting)，而不是使用 `document.write()`。
 
 ### 使用现代 CSS 和有效标记
 
@@ -81,7 +81,7 @@ CDN 是一个分布在不同地理位置的服务器网络，它们协同工作�
 
 ### 给内容分块
 
-使用 table 布局是一种不应该再采用的传统方法，而应运用[浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)、[定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)、[弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)或[网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)来布局。
+使用 table 布局是一种不应该再采用的传统方法，而应运用[浮动](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats)、[定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)、[弹性盒](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)或[网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)来布局。
 
 当然，table 仍是不失为一种有效的展示表格数据的方式。为了帮助浏览器更快速的渲染你的页面，你应该避免嵌套 table。
 

@@ -49,7 +49,7 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 ### 这是我们的全部数字
 
-让我们快点玩一些数字，以重新定义我们所需要的基本语法。在你的[开发工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中输入下面列出的命令。
+让我们快点玩一些数字，以重新定义我们所需要的基本语法。在你的[开发工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中输入下面列出的命令。
 
 **[在新窗口中打开](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
@@ -141,7 +141,7 @@ original_slug: Learn/JavaScript/First_steps/Math
 > [!NOTE]
 > 有时你可能会看到使用较旧的 {{jsxref("Math.pow()")}} 方法表达的指数，该方法的工作方式非常相似。例如，在 `Math.pow(7, 3)` 中，`7` 是基数，`3` 是指数，因此表达式的结果是 `343`。 `Math.pow(7, 3)` 相当于 `7 ** 3`。
 
-我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中。
+我们可能不需要教你如何做基础数学，但我们想测试你对所涉及的语法的理解。尝试将下面的示例输入到[开发者工具 JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中。
 
 1. 首先尝试输入一些简单的例子，例如
 
@@ -198,7 +198,7 @@ num2 + num1 / 8 + 2;
 
 ## 自增和自减运算符
 
-有时候，你需要反复把一个变量加 1 或减 1。这可以方便地使用增量（`++`）和递减（ `--` ）运算符来完成。我们在[JavaScript 初体验](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)文章的“猜数字”游戏中使用了++，当我们添加 1 到我们的 guessCount 变量来跟踪用户在每次转动之后剩下的猜测时。
+有时候，你需要反复把一个变量加 1 或减 1。这可以方便地使用增量（`++`）和递减（ `--` ）运算符来完成。我们在[JavaScript 初体验](/zh-CN/docs/Learn_web_development/Core/Scripting/A_first_splash)文章的“猜数字”游戏中使用了++，当我们添加 1 到我们的 guessCount 变量来跟踪用户在每次转动之后剩下的猜测时。
 
 ```js
 guessCount++;

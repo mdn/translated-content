@@ -15,12 +15,12 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你首先需要知道<a href="/zh-CN/docs/Learn/How_the_Internet_works"
+        你首先需要知道<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >互联网是如何工作的</a
-        >、<a href="/zh-CN/docs/Learn/Common_questions/What_is_a_web_server"
+        >、<a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >什么是 Web 服务器</a
         >，以及
-        <a href="/zh-CN/docs/Learn/Common_questions/What_are_hyperlinks"
+        <a href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks"
           >Web 中超链接的概念</a
         >。
       </td>
@@ -72,7 +72,7 @@ URL 的第一部分是*方案*（scheme），它表示浏览器必须使用的�
 
 接下来是*权威*（authority），它与方案之间用字符模式 `://` 分隔。如果存在，权威会包括*域*（例如 `www.example.com`）和*端口*（`80`），由冒号分隔：
 
-- 域指示被请求的 Web 服务器。通常这是一个[域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)，但也可以使用 {{Glossary("IP address", "IP 地址")}}（但这很少见，因为它不太方便）。
+- 域指示被请求的 Web 服务器。通常这是一个[域名](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)，但也可以使用 {{Glossary("IP address", "IP 地址")}}（但这很少见，因为它不太方便）。
 - 端口指示用于访问 Web 服务器上资源的技术“门户”。如果 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）来授予对其资源的访问权限，则通常会省略端口。否则，端口是强制的。
 
 > [!NOTE]
@@ -102,7 +102,7 @@ URL 的第一部分是*方案*（scheme），它表示浏览器必须使用的�
 
 可以直接在浏览器的地址栏里输入任何 URL，来获得后台的资源。但是这仅仅是冰山一角。
 
-[后续会再来讨论](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)在 URL 中有着大量的使用的 {{Glossary("HTML")}} 语言：
+[后续会再来讨论](/zh-CN/docs/Learn_web_development/Core/Structuring_content)在 URL 中有着大量的使用的 {{Glossary("HTML")}} 语言：
 
 - 创建到其他文档的链接，用 {{HTMLElement("a")}} 元素；
 - 将文档与它的相关资源关联，用各种元素如 {{HTMLElement("link")}} 或 {{HTMLElement("script")}}；

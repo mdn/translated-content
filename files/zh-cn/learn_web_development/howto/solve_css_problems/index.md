@@ -24,23 +24,23 @@ original_slug: Learn/CSS/Howto
 
 ### 样式和内容
 
-- [如何给文字添加样式？](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
-- [如何定制元素列表？](/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists)
-- [如何给链接添加样式？](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)
+- [如何给文字添加样式？](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- [如何定制元素列表？](/zh-CN/docs/Learn_web_development/Core/Text_styling/Styling_lists)
+- [如何给链接添加样式？](/zh-CN/docs/Learn_web_development/Core/Text_styling/Styling_links)
 - [如何给文本添加阴影？](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影)
 
 ### 盒子和布局
 
-- [如何调整 CSS 盒模型大小？](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-- [如何控制盒模型溢出？](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [如何调整 CSS 盒模型大小？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [如何控制盒模型溢出？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow)
 - [如何控制 CSS 盒模型中背景绘制部分？](/zh-CN/docs/Web/CSS/background-clip)
-- [如何理解 inline、block 以及 inline-block？](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)
-- [How to create fancy boxes](/zh-CN/docs/Learn/CSS/Howto/create_fancy_boxes) (请一并查看 [Styling boxes](/zh-CN/docs/Learn/CSS/Building_blocks) 模块)
+- [如何理解 inline、block 以及 inline-block？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- [How to create fancy boxes](/zh-CN/docs/Learn/CSS/Howto/create_fancy_boxes) (请一并查看 [Styling boxes](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 模块)
 - [如何使用 background-clip 控制背景图覆盖？](/zh-CN/docs/Web/CSS/background-clip)
 - [如何使用 box-sizing 完全改变盒模型？](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#替代（ie）盒模型)
 - [如何改变背景色？](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders#背景颜色)
 - [如何修改边框？](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders#玩转背景和边框)
-- [如何给 HTML 表格添样式？](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables)
+- [如何给 HTML 表格添样式？](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)
 - [如何添加盒子阴影？](/zh-CN/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#盒子阴影)
 
 ## 罕见问题与进阶技巧
@@ -61,4 +61,4 @@ CSS 允许一些高级的设计技巧。这些文章可以帮助你解决一些�
 
 - [使用 CSS flex 布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [使用 CSS 多列布局](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-- [使用 CSS 生成内容](/zh-CN/docs/Learn/CSS/Howto/Generated_content)
+- [使用 CSS 生成内容](/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)

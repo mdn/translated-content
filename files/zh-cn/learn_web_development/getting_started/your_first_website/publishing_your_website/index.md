@@ -18,8 +18,8 @@ l10n:
 
 想要对内容和网站外观拥有更多的控制，大多数人会选择购买 Web 托管服务和域名：
 
-- Web 托管服务是指在托管服务提供商的 [Web 服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)上租用的文件空间。你将网站文件上传到 Web 服务器，然后 Web 服务器向网站用户提供网站内容。
-- [域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)是一个可以让人们访问的独一无二的地址，比如 `https://www.mozilla.org` 或 `https://www.bbc.co.uk`。你可以从**域名注册商**租借域名，年限自定。
+- Web 托管服务是指在托管服务提供商的 [Web 服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)上租用的文件空间。你将网站文件上传到 Web 服务器，然后 Web 服务器向网站用户提供网站内容。
+- [域名](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)是一个可以让人们访问的独一无二的地址，比如 `https://www.mozilla.org` 或 `https://www.bbc.co.uk`。你可以从**域名注册商**租借域名，年限自定。
 
 许多专业的网站通过这种方法接入互联网。
 
@@ -39,7 +39,7 @@ l10n:
 有一些工具能让你在线发布网站：
 
 - [GitHub](https://github.com/) 是一个“社交编程”网站。它允许你上传代码库并将其储存在 [Git](https://git-scm.com/) 版本控制系统里。然后你可以在代码项目上进行协作，系统默认是开源的，也就是说世界上任何人都可以找到你 GitHub 上的代码，并进行使用、学习和改善。GitHub 有一个非常有用的特性叫 [GitHub Pages](https://pages.github.com/)，允许你发布网站。
-- [Google App Engine](https://cloud.google.com/appengine/) 是一个让你在 Google 的基础架构上构建和运行应用程序的强大的平台——无论你是需要从头开始构建一个多级的 Web 应用程序还是托管一个静态网站。更多信息请参阅[如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)。
+- [Google App Engine](https://cloud.google.com/appengine/) 是一个让你在 Google 的基础架构上构建和运行应用程序的强大的平台——无论你是需要从头开始构建一个多级的 Web 应用程序还是托管一个静态网站。更多信息请参阅[如何在 Google App Engine 上托管你的网站？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)。
 
 尽管这类工具通常是免费的，但你只能使用有限的功能。
 
@@ -77,9 +77,9 @@ l10n:
 
 ## 延展阅读
 
-- [什么是 Web 服务器？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [什么是域名？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-- [在互联网上做一件事要花费多少？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- [什么是 Web 服务器？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- [什么是域名？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
+- [在互联网上做一件事要花费多少？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)：Codeacademy 提供的一个很好的教程，它比本文更深入一些，还展示了一些其他技术。
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}

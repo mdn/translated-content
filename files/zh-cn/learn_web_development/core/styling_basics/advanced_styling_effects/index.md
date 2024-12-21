@@ -14,10 +14,10 @@ original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
       <th scope="row">前提：</th>
       <td>
         HTML 基础 (学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >) ，了解 CSS 工作原理 (学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >Introduction to CSS</a
         >.)
       </td>
@@ -33,7 +33,7 @@ original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 ## 盒子阴影
 
-回到我们的[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)模块，我们查看了{{cssxref("text-shadow")}}属性，它允许你将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许你将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。
+回到我们的[样式化文本](/zh-CN/docs/Learn_web_development/Core/Text_styling)模块，我们查看了{{cssxref("text-shadow")}}属性，它允许你将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许你将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。
 
 你可以 [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html)在这部分找到例子 (见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html))。
 
@@ -339,7 +339,7 @@ article div:last-child {
 你可以看到，多层混合（mix-blend）不仅混合了两种背景图像，还混合了在`<div>`下面的颜色。
 
 > [!NOTE]
-> 如果你不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} 等。我们将在 [CSS Layout](/zh-CN/docs/Learn/CSS/CSS_layout) 模块中详细地介绍这些内容。
+> 如果你不理解上面的一些布局属性，请不要担心，像 {{cssxref("position")}}、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("z-index")}} 等。我们将在 [CSS Layout](/zh-CN/docs/Learn_web_development/Core/CSS_layout) 模块中详细地介绍这些内容。
 
 ## -webkit-background-clip: text
 

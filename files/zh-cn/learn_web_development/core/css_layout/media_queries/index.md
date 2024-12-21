@@ -13,12 +13,12 @@ original_slug: Learn/CSS/CSS_layout/Media_queries
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础知识（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础知识（学习<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >），对 CSS 工作方式的大致了解（学习<a
-          href="/zh-CN/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS first steps</a
-        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS building blocks</a
         >）
       </td>
@@ -421,7 +421,7 @@ article {
 
 ## 技能测试！
 
-你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见[技能测试：响应式 Web 设计](/zh-CN/docs/Learn/CSS/CSS_layout/rwd_skills)。
+你已经到了此文的结尾，但是你能记住最重要的信息吗？你可以在继续之前，找一个测试来验证下你是否已经掌握了这些信息。见[技能测试：响应式 Web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/rwd_skills)。
 
 ## 小结
 

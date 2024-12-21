@@ -14,15 +14,15 @@ HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将
       <th scope="row">前提：</th>
       <td>
         阅读并理解
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 入门</a
         >、<a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML 文字处理初步</a
         >
         和
         <a
-          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >创建超链接</a
         >
         等文章，熟悉 HTML 的基本概念。
@@ -88,7 +88,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
    - 以下嵌套有问题：`<strong>重点（strong）<em>重点强调（strongly emphasised）？</strong>这又是什么鬼？</em>`。浏览器很难做出正确解释，理由同上。
    - [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
-5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
+5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。
 6. 在 DOM 查看器中可以看到渲染的标记：![Firefox 控制台中的 HTML 检查器，可标亮元素，（图中标亮了“什么使得 HTML 出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
 7. 通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
 

@@ -14,7 +14,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
       <th scope="row">前提：</th>
       <td>
         你应该已经知晓了<a
-          href="/zh-CN/docs/Learn/Common_questions/What_software_do_I_need">为了建立一个网站所需的各种软件</a
+          href="/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need">为了建立一个网站所需的各种软件</a
         >。
       </td>
     </tr>
@@ -470,4 +470,4 @@ original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 ## 下一步
 
-现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn/Getting_started_with_the_web)。
+现在你已经选择了一个合适的文本编辑器，可以花一些时间来搭建[基本工作环境](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)，或者，如果想立即使用它，可以写下[你的第一个网页](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)。

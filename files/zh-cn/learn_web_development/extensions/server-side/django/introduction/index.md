@@ -14,11 +14,11 @@ original_slug: Learn/Server-side/Django/Introduction
       <th scope="row">前提：</th>
       <td>
         基本的电脑知识。对
-        <a href="/zh-CN/docs/Learn/Server-side/First_steps"
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >服务器端网站编程的一般了解</a
         >, 特别是
         <a
-          href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >网站中客户端 - 服务器交互的机制</a
         >.
       </td>
@@ -53,7 +53,7 @@ Django 可以使你的应用具有以下优点：
 
     _密码哈希是通过[密码散列函数](https://zh.wikipedia.org/wiki/密碼雜湊函數)发送密码而创建的固定长度值。Django 能通过运行哈希函数并将输出的哈希值与存储的哈希值进行比较来检查输入的密码是否正确。然而由于功能的“单向”性质，即使存储的哈希值被泄漏，攻击者也难以破解原始密码。_
 
-    默认情况下，Django 可以防范许多漏洞，包括 SQL 注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 [网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security) 相关信息，如有兴趣).
+    默认情况下，Django 可以防范许多漏洞，包括 SQL 注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 [网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) 相关信息，如有兴趣).
 
 - 可扩展
   - : Django 使用基于组件的“[无共享](https://en.wikipedia.org/wiki/Shared_nothing_architecture)”架构 (架构的每一部分独立于其他架构，因此可以根据需要进行替换或更改). 在不用部分之间有明确的分隔意味着它可以通过在任何级别添加硬件来扩展服务：缓存服务器，数据库服务器或应用程序服务器。一些最繁忙的网站已经成功地缩放了 Django，以满足他们的需求（例如 Instagram 和 Disqus，仅举两个例子，可自行添加）。

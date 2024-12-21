@@ -16,7 +16,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
       <th scope="row">前提：</th>
       <td>
         <a
-          href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment"
           >配置 Node 开发环境</a
         >。复习 Express 教程。
       </td>
@@ -30,7 +30,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## 概览
 
-本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
+本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
 
 以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。
 
@@ -49,7 +49,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 > [!NOTE]
 > 你可能已经发现国内用 NPM 太慢了！这是由众所周知的不可抗力造成的。可用淘宝提供的 [CNPM](https://npm.taobao.org/) 代替之，功能和用法基本一致（只是不能上传自己的包）。
 
-你应该已经安装好了生成器，它是 [设置 Node 开发环境](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 的一部分。可以使用 NPM 来安装全局的生成器，如下所示：
+你应该已经安装好了生成器，它是 [设置 Node 开发环境](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment) 的一部分。可以使用 NPM 来安装全局的生成器，如下所示：
 
 ```bash
 sudo npm install express-generator -g
@@ -451,7 +451,7 @@ block content
 
 ## 小结
 
-现在你已经为 [本地图书馆](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建好了骨架，并且成功在 node 上运行起来。同时最重要的是，你了解了项目的结构，从而了解了如何为本地图书馆添加路由和视图。
+现在你已经为 [本地图书馆](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建好了骨架，并且成功在 node 上运行起来。同时最重要的是，你了解了项目的结构，从而了解了如何为本地图书馆添加路由和视图。
 
 下一节我们开始修改骨架，让它具备一些图书馆网站的功能。
 

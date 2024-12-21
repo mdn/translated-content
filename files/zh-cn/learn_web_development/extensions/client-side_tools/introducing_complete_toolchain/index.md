@@ -13,8 +13,8 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introduci
     <tr>
       <th scope="row">预备条件：</th>
       <td>
-        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和
-        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -48,7 +48,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introduci
 - 有用的开发工具，例如用于格式化的 [Prettier](https://prettier.io/) 和用于代码规范检测的 [ESLint](https://eslint.org/)。
 - [PostCSS](https://postcss.org/) 提供 CSS 嵌套功能。
 - [Parcel](https://parceljs.org/) 用于构建和压缩我们的代码，并自动为我们编写一堆配置文件内容。
-- [GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub) 用于管理我们的源代码。
+- [GitHub](/zh-CN/docs/Learn_web_development/Core/Version_control) 用于管理我们的源代码。
 - [Netlify](https://www.netlify.com/) 用于自动化我们的部署过程。
 
 你可能不熟悉上述所有功能和工具或它们的作用，但不要惊慌——随着我们在本文中的深入讨论，我们将解释每个部分。
@@ -80,7 +80,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introduci
 
 ## 工具的三个阶段
 
-正如我们在[第一章](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)中所讨论的那样，工具链将分为以下阶段：
+正如我们在[第一章](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Overview)中所讨论的那样，工具链将分为以下阶段：
 
 - **安全的网络**：使软件开发体验稳定且更高效。我们也可能将其称为开发环境。
 - **编译与构建**：允许我们在开发过程中使用编程语言（例如 JavaScript）的最新特性或其他语言（例如 JSX 或 TypeScript），然后转译我们的代码，以便生产版本仍在各种浏览器上运行，无论是现代的和陈旧的。

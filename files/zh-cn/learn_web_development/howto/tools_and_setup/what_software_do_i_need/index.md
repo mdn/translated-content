@@ -16,7 +16,7 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         你应当已经知道<a
-          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >网页、网站、Web 服务器，以及搜索引擎间的区别</a
         >。
       </td>
@@ -160,12 +160,12 @@ _现在还没有动手练习的内容。[请考虑投稿](/zh-CN/docs/MDN/Commun
 
 ### 将文件上传到 Web
 
-当你的网站已经为公众浏览做好准备，你需要将网页上传到你的 Web 服务器。你可以从各种提供商处购买服务器空间（请参阅[在网络上做一些事情要花多少钱？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)）。一旦确定使用哪家提供商，提供商会通过电子邮件向你发送访问信息，通常以 SFTP URL、用户名、密码和其他连接到其服务器所需的信息的形式提供。请注意，（S）FTP 现在有点过时了，其他上传系统开始流行起来，例如 [RSync](https://zh.wikipedia.org/wiki/Rsync) 和 [Git/GitHub](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site)。
+当你的网站已经为公众浏览做好准备，你需要将网页上传到你的 Web 服务器。你可以从各种提供商处购买服务器空间（请参阅[在网络上做一些事情要花多少钱？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)）。一旦确定使用哪家提供商，提供商会通过电子邮件向你发送访问信息，通常以 SFTP URL、用户名、密码和其他连接到其服务器所需的信息的形式提供。请注意，（S）FTP 现在有点过时了，其他上传系统开始流行起来，例如 [RSync](https://zh.wikipedia.org/wiki/Rsync) 和 [Git/GitHub](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site)。
 
 > [!NOTE]
 > FTP 本质上是不安全的。你应确保你的托管服务提供商允许使用安全连接，例如 SFTP 或基于 SSH 的 RSync。
 
-将文件上传到 Web 服务器是创建网站时非常重要的一步，因此我们在[一篇单独的文章](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)中详细介绍了这一过程。现在，这里有一些免费的基础（S）FTP 客户端的简短列表：
+将文件上传到 Web 服务器是创建网站时非常重要的一步，因此我们在[一篇单独的文章](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)中详细介绍了这一过程。现在，这里有一些免费的基础（S）FTP 客户端的简短列表：
 
 <table class="standard-table">
   <thead>
@@ -240,6 +240,6 @@ _现在还没有动手练习的内容。[请考虑投稿](/zh-CN/docs/MDN/Commun
 
 ## 下一步
 
-- 这里的一些软件是免费的，但不是所有都是。探寻[在网络上做一些事情需要花费多少](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)。
-- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于[如何选择并安装一个文件浏览器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)的文章。
-- 如果你想知道如何在网络上发布你的网站，查阅“[如何上传文件到一个网络服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)”。
+- 这里的一些软件是免费的，但不是所有都是。探寻[在网络上做一些事情需要花费多少](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)。
+- 如果你想要了解更多关于文本编辑器的知识，阅读我们关于[如何选择并安装一个文件浏览器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)的文章。
+- 如果你想知道如何在网络上发布你的网站，查阅“[如何上传文件到一个网络服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)”。

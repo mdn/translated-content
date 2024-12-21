@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-这个技能测试的目标是评估你是否理解了[在代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)一文。
+这个技能测试的目标是评估你是否理解了[在代码中做决定——条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)一文。
 
 > [!NOTE]
 > 你可以下载代码并放入在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)）中来尝试解决问题。如果出现了错误，会显示在页面中的结果面板上或者浏览器的 JavaScript 控制台中，来帮助你解决问题。

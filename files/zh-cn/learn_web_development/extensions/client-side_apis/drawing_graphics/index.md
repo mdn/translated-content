@@ -16,12 +16,12 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         JavaScript 基础（见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a
-        >、<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript 第一步</a
+        >、<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建 JavaScript 代码块</a
-        >、<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象</a
+        >、<a href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript 对象</a
         >）、<a
-          href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
           >客户端 API 基础知识</a
         >。
       </td>
@@ -37,13 +37,13 @@ l10n:
 
 ## Web 中的图形
 
-我们来讨论 HTML 的[多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)模块，早先的网页只有单调的文字，后来才引入了图像，起初是通过 {{htmlelement("img")}} 元素的方式，后来出现了类似于 {{cssxref("background-image")}} 的 CSS 属性和 [SVG](/zh-CN/docs/Web/SVG) 图像等方式。
+我们来讨论 HTML 的[多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content)模块，早先的网页只有单调的文字，后来才引入了图像，起初是通过 {{htmlelement("img")}} 元素的方式，后来出现了类似于 {{cssxref("background-image")}} 的 CSS 属性和 [SVG](/zh-CN/docs/Web/SVG) 图像等方式。
 
-然而，这还不够好。当你能够使用 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 让 SVG 矢量图（因为其由标记表示）动起来时，位图却依然没有相应的支持。同时 SVG 动画的可用工具也少得可怜。Web 仍然无法高效地创建动画、游戏、3D 场景，而其他需求则通常由底层语言（如 C++ 或 Java）来应对。
+然而，这还不够好。当你能够使用 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 让 SVG 矢量图（因为其由标记表示）动起来时，位图却依然没有相应的支持。同时 SVG 动画的可用工具也少得可怜。Web 仍然无法高效地创建动画、游戏、3D 场景，而其他需求则通常由底层语言（如 C++ 或 Java）来应对。
 
 当浏览器于 2004 年开始支持 HTML 画布元素 {{htmlelement("canvas")}} 和相关的 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 时，形势开始改善。下面你会看到，canvas 提供了许多用于创建 2D 动画、游戏、数据可视化和其他应用类型的有用工具，特别是当捆绑了由 Web 平台提供的一些其他的 API 时。
 
-下面的例子显示的是一个基于 canvas 的简单的 2D 弹跳球动画，前面我们在[介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)模块中见到过。
+下面的例子显示的是一个基于 canvas 的简单的 2D 弹跳球动画，前面我们在[介绍 JavaScript 对象](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)模块中见到过。
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
 

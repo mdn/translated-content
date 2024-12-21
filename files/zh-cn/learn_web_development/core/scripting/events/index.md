@@ -15,7 +15,7 @@ original_slug: Learn/JavaScript/Building_blocks/Events
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机知识，对 HTML 和 CSS 的基本了解，学习了 <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+        基本的计算机知识，对 HTML 和 CSS 的基本了解，学习了 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript 第一步</a
         >。
       </td>
@@ -393,7 +393,7 @@ form.addEventListener("submit", (e) => {
 
 事件不是 JavaScript 独有的——大多数编程语言都有某种事件模型，而模型的工作方式往往与 JavaScript 的方式不同。事实上，网页的 JavaScript 的事件模型与其他环境中使用的 JavaScript 的事件模型也是不同的。
 
-例如，[Node.js](/zh-CN/docs/Learn/Server-side/Express_Nodejs) 是一个非常流行的 JavaScript 运行时，使开发人员能够使用 JavaScript 来构建网络和服务器端应用程序。[Node.js 事件模型](https://nodejs.org/api/events.html)依靠监听器来监听事件，依靠发射器来定期发射事件。听起来没有什么不同，但代码却很不同，利用 `on()` 等函数来注册一个事件监听器，而 `once()` 则是注册一个一次性事件监听器，在运行一次后取消注册。[HTTP 连接事件文档](https://nodejs.org/api/http.html#event-connect)提供了一个很好的例子。
+例如，[Node.js](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) 是一个非常流行的 JavaScript 运行时，使开发人员能够使用 JavaScript 来构建网络和服务器端应用程序。[Node.js 事件模型](https://nodejs.org/api/events.html)依靠监听器来监听事件，依靠发射器来定期发射事件。听起来没有什么不同，但代码却很不同，利用 `on()` 等函数来注册一个事件监听器，而 `once()` 则是注册一个一次性事件监听器，在运行一次后取消注册。[HTTP 连接事件文档](https://nodejs.org/api/http.html#event-connect)提供了一个很好的例子。
 
 你也可以使用一种叫做 [WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 的技术编写 JavaScript，建立跨浏览器的附加组件（浏览器功能增强）。其中的事件模型类似于 Web 事件模型，但有点不同——事件监听器的属性是驼峰式的（如 `onMessage` 而不是 `onmessage`），需要与 `addListener` 函数相结合。参见 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#示例) 页面的示例。
 

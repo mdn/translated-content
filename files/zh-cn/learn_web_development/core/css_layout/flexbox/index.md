@@ -14,10 +14,10 @@ original_slug: Learn/CSS/CSS_layout/Flexbox
       <th scope="row">前提：</th>
       <td>
         HTML 基础（学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >），和了解 CSS 如何工作的（学习
-        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 介绍</a
         >）。
       </td>
@@ -31,9 +31,9 @@ original_slug: Learn/CSS/CSS_layout/Flexbox
 
 ## 为什么是弹性盒子？
 
-长久以来，CSS 布局中唯一可靠且跨浏览器兼容的创建工具只有 [floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)。这两个工具大部分情况下都很好使，但是在某些方面它们具有一定的局限性，让人难以完成任务。
+长久以来，CSS 布局中唯一可靠且跨浏览器兼容的创建工具只有 [floats](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)。这两个工具大部分情况下都很好使，但是在某些方面它们具有一定的局限性，让人难以完成任务。
 
-以下简单的布局需求是难以或不可能用这样的工具（[floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)）方便且灵活的实现的：
+以下简单的布局需求是难以或不可能用这样的工具（[floats](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Floats) 和 [positioning](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning)）方便且灵活的实现的：
 
 - 在父内容里面垂直居中一个块内容。
 - 使容器的所有子项占用等量的可用宽度/高度，而不管有多少宽度/高度可用。
@@ -338,15 +338,15 @@ button {
 
 弹性盒子相较其他一些 CSS 特性可能更为棘手。例如，如果浏览器缺少 CSS 阴影，则该网站可能仍然可用。但是假如不支持弹性盒子功能就会完全打破布局，使其不可用。
 
-我们在[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块中讨论了克服跨浏览器支持问题的策略。
+我们在[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)模块中讨论了克服跨浏览器支持问题的策略。
 
 ## 技能测试
 
-我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox_skills)来验证你是否掌握了这些知识。
+我们在文章里面覆盖了很多内容，但你是否能记住最重要的知识？在你继续学习前，你可以进行[测试](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills)来验证你是否掌握了这些知识。
 
 ## 总结
 
-到这里，介绍弹性盒子的基础知识就结束了。我们希望你体会到乐趣，并且玩的开心，能随着你的学习与你一起向前。接下来，我们将看到 CSS 布局的另一个重要方面：[CSS 网格系统](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
+到这里，介绍弹性盒子的基础知识就结束了。我们希望你体会到乐趣，并且玩的开心，能随着你的学习与你一起向前。接下来，我们将看到 CSS 布局的另一个重要方面：[CSS 网格系统](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
 

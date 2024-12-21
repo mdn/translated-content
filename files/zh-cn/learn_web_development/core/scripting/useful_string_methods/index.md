@@ -36,7 +36,7 @@ let string = "This is my string";
 
 **可能现在你的大脑开始迷糊了，不要担心！** 在你的学习进程中你真的不需要过早地理解大部分这方面知识，但是接下来我们这儿要看的是你要经常使用的一些知识。
 
-现在我们在控制台中加些示例，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用[浏览器开发者控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)）
+现在我们在控制台中加些示例，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用[浏览器开发者控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)）
 
 ```html hidden
 <!doctype html>

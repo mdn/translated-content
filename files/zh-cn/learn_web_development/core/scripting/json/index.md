@@ -14,10 +14,10 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
       <th scope="row">前提：</th>
       <td>
         具备基本的计算机知识、对 HTML 和 CSS 的基本了解、熟悉 JavaScript
-        基础知识（阅读 <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
-          >JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        基础知识（阅读 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
+          >JavaScript 第一步</a>和<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建代码块</a>）和 JS
-        面向对象基础（阅读<a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
+        面向对象基础（阅读<a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics"
           >对象介绍</a
         >）。
       </td>
@@ -84,7 +84,7 @@ JSON 可以作为一个对象或者字符串存在，前者用于解读 JSON 中
 }
 ```
 
-如果我们把字符串加载到 JavaScript 程序中，并将其解析到一个名为 `superHeroes` 的变量，那么我们就可以使用在 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章中相同的点/括号表示法来访问其中的数据。例如：
+如果我们把字符串加载到 JavaScript 程序中，并将其解析到一个名为 `superHeroes` 的变量，那么我们就可以使用在 [JavaScript 对象基础](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics)文章中相同的点/括号表示法来访问其中的数据。例如：
 
 ```js
 superHeroes.hometown;
@@ -197,7 +197,7 @@ async function populate() {
 - 我们使用 {{domxref("fetch", "fetch()")}} 函数进行网络请求，它返回一个 {{domxref("Response")}} 对象
 - 我们使用 `Response` 对象的 {{domxref("Response/json", "json()")}} 函数将响应作为 JSON 获取。
 
-> **备注：**`fetch()` API 是**异步**的。我们将在[下一个模块](/zh-CN/docs/Learn/JavaScript/Asynchronous)中详细了解有关异步函数的知识，但现在我们只需知道需要在使用 fetch API 的函数名称之前添加 {{jsxref("Statements/async_function", "async")}} 关键字，并在任何异步函数的调用之前添加 {{jsxref("Operators/await", "await")}} 关键字。
+> **备注：**`fetch()` API 是**异步**的。我们将在[下一个模块](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)中详细了解有关异步函数的知识，但现在我们只需知道需要在使用 fetch API 的函数名称之前添加 {{jsxref("Statements/async_function", "async")}} 关键字，并在任何异步函数的调用之前添加 {{jsxref("Operators/await", "await")}} 关键字。
 
 在这一切之后，`superHeroes` 变量将包含基于 JSON 的 JavaScript 对象。然后，我们将该对象传递给两个函数调用——第一个函数用正确的数据填充 `<header>`，而第二个函数为团队中的每个英雄创建一个信息卡，并将其插入到 `<section>` 中。
 
@@ -275,7 +275,7 @@ function populateHeroes(obj) {
 > 如有疑难，试试引用我们的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/heroes-finished.html) 代码（也可以查看[运行实例](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)）。
 
 > [!NOTE]
-> 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn/JavaScript/Objects/Basics)文章，了解关于点和括号表示法的更多信息。
+> 如果你对访问 JSON 对象的点/括号表示法有困扰。获得文件 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json)，在你的编辑器中打开并参考我们的 JS 代码将会有所帮助。你还应该参考我们的 [JavaScript 对象基础](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics)文章，了解关于点和括号表示法的更多信息。
 
 ### 调用顶层函数
 
@@ -329,7 +329,7 @@ myString;
 
 ## 技能测试！
 
-你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[技能测试：JSON](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)。
+你已经到达本文的末尾，但你是否记住了最重要的信息呢？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息——请参阅[技能测试：JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON)。
 
 ## 总结
 

@@ -14,14 +14,14 @@ original_slug: Learn/MathML/First_steps/Tables
       <th scope="row">前提：</th>
       <td>
         基本的计算机操作能力，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安装基本软件</a
         >，基本的<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >文件操作知识</a
-        >，以及 HTML 基础知识（学习 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        >，以及 HTML 基础知识（学习 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 简介</a
-        >和 <a href="/zh-CN/docs/Learn/HTML/Tables"
+        >和 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics"
           >HTML 表格</a
         >）
       </td>
@@ -37,7 +37,7 @@ original_slug: Learn/MathML/First_steps/Tables
 
 ## MathML 表格元素
 
-MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)的元素类似：`<mtable>` 元素表示数学表格，它的子元素是 `<mtr>` 元素（表示行），每个 `<mtr>` 元素都有 `<mtd>` 元素作为其子元素（表示单元格）。`<mtable>` 元素可以在 MathML 公式的任何位置插入。`<mtd>` 元素可以包含任意数量的 MathML 子元素，并将它们布局为 `<mrow>` 容器。
+MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)的元素类似：`<mtable>` 元素表示数学表格，它的子元素是 `<mtr>` 元素（表示行），每个 `<mtr>` 元素都有 `<mtd>` 元素作为其子元素（表示单元格）。`<mtable>` 元素可以在 MathML 公式的任何位置插入。`<mtd>` 元素可以包含任意数量的 MathML 子元素，并将它们布局为 `<mrow>` 容器。
 
 表格通常用于矩阵式表达式（包括向量）。以下是一个基本示例，该示例取自[有关 CSS `matrix()` 函数的文章](/zh-CN/docs/Web/CSS/transform-function/matrix)：
 
@@ -301,13 +301,13 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)的元素类�
 
 在本文中，我们回顾了 `<mtable>`、`<mtr>` 和 `<mtd>` 元素，它们是用于表格的 HTML 元素的等效元素。我们学习了如何使用它们表示类似矩阵的对象，以及如何用它们实现高级布局。
 
-你已经接近完成本单元了——我们只剩下最后一件事要做。在[三个著名数学公式测验](/zh-CN/docs/Learn/MathML/First_steps/Three_famous_mathematical_formulas)中，你需要运用新学到的知识，使用 HTML 和 MathML 重写一个小型数学文章。
+你已经接近完成本单元了——我们只剩下最后一件事要做。在[三个著名数学公式测验](/zh-CN/docs/Web/MathML/Guides/Three_famous_mathematical_formulas)中，你需要运用新学到的知识，使用 HTML 和 MathML 重写一个小型数学文章。
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
 
 ## 参见
 
-- [学习 HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [学习 HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [`<mtable>` 元素](/zh-CN/docs/Web/MathML/Element/mtable)
 - [`<mtr>` 元素](/zh-CN/docs/Web/MathML/Element/mtr)
 - [`<mtd>` 元素](/zh-CN/docs/Web/MathML/Element/mtd)

@@ -146,7 +146,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 ## 下一步
 
-现在你已经了解了你的网站可能会花费哪些方面的资金，现在该开始设计该网站，并[设置你的工作环境](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)了。
+现在你已经了解了你的网站可能会花费哪些方面的资金，现在该开始设计该网站，并[设置你的工作环境](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)了。
 
-- 阅读[如何选择和安装文本编辑器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) 。
-- 如果你更专注于设计，请查看[网页的解剖结构](/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts) 。
+- 阅读[如何选择和安装文本编辑器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors) 。
+- 如果你更专注于设计，请查看[网页的解剖结构](/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts) 。

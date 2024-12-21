@@ -12,7 +12,7 @@ l10n:
 
 ## 为什么使用 JavaScript 提交表单数据？
 
-根据文章[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)中的描述，标准 HTML 表单提交会加载发送数据的目标 URL，这意味着浏览器窗口将以加载整个页面的方式进行导航。
+根据文章[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)中的描述，标准 HTML 表单提交会加载发送数据的目标 URL，这意味着浏览器窗口将以加载整个页面的方式进行导航。
 
 然而，许多 web 应用（特别是{{glossary("progressive web apps","渐进式 web 应用")}}和{{glossary("SPA","单页面应用")}}）都使用 JavaScript API 向服务器请求数据，并更新页面的相关部分，从而避免加载整个页面的开销。
 
@@ -127,20 +127,20 @@ form.addEventListener("submit", (event) => {
 
 ### 学习路径
 
-- [你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构建 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 输入（input）类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [你的第一个 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [如何构建 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [HTML5 输入（input）类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
+- [其他表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
+- [UI 伪类](/zh-CN/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
+- [样式化 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
 ### 更进一步
 
 - **使用 JavaScript 发送表单**
-- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [旧式浏览器的 HTML 表单](/zh-CN/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [进一步为 HTML 表单添加样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [旧式浏览器的 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [进一步为 HTML 表单添加样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [表单控件兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

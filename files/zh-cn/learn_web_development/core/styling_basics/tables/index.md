@@ -16,9 +16,9 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         HTML 基础（学习
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 简介</a
-        >），具有 <a href="/zh-CN/docs/Learn/HTML/Tables">HTML 表格</a>基础，理解 CSS 工作原理（学习 CSS 第一步）。
+        >），具有 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics">HTML 表格</a>基础，理解 CSS 工作原理（学习 CSS 第一步）。
       </td>
     </tr>
     <tr>
@@ -301,10 +301,10 @@ caption {
 
 ## 技能测试！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks)。
 
 ## 总结
 
-现在，我们身后的表格样式令人炫目，令人兴奋，我们需要一些其他的东西来占据我们的时间。下一篇文章将介绍 [CSS 调试](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS)，探索如何解决一些问题，例如布局看起来不像应该有的样子，或者属性在你认为应该应用的时候没有应用。那里包含了使用浏览器开发者工具寻找你的问题的解决方案的信息。
+现在，我们身后的表格样式令人炫目，令人兴奋，我们需要一些其他的东西来占据我们的时间。下一篇文章将介绍 [CSS 调试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)，探索如何解决一些问题，例如布局看起来不像应该有的样子，或者属性在你认为应该应用的时候没有应用。那里包含了使用浏览器开发者工具寻找你的问题的解决方案的信息。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks")}}

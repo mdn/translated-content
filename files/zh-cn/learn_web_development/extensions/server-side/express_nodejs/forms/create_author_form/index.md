@@ -12,7 +12,7 @@ l10n:
 
 ## 导入验证和修整方法
 
-与[类型表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form)一样，要使用 _express-validator_，我们必须 _require_ 我们想要使用的函数。
+与[类型表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form)一样，要使用 _express-validator_，我们必须 _require_ 我们想要使用的函数。
 
 打开 **/controllers/authorController.js**，并将以下代码添加到文件顶部（路由函数上方）：
 
@@ -180,5 +180,5 @@ block content
 
 ## 下一步
 
-- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms)
-- 继续教程 6 的下一个部分：[创建书本表单](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form)
+- 回到 [Express 教程 6: 使用表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
+- 继续教程 6 的下一个部分：[创建书本表单](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form)

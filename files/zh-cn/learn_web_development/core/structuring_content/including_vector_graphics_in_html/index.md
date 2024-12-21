@@ -16,10 +16,10 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         你需要了解
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 的基本知识</a
         >并且知道如何<a
-         href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+         href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >在文档中插入图片</a
         >。
       </td>
@@ -99,7 +99,7 @@ SVG 除了前面描述的以外还有其他优点：
 
 ### 快捷方式：`img` 元素
 
-要通过 {{htmlelement("img")}} 元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将至少需要 `height` 或 `width` 属性中的一个（或者如果你的 SVG 没有固有的{{glossary("aspect ratio","宽高比")}}，则都需要）。如果你还没使用过 `img` 元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)教程。
+要通过 {{htmlelement("img")}} 元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。你将至少需要 `height` 或 `width` 属性中的一个（或者如果你的 SVG 没有固有的{{glossary("aspect ratio","宽高比")}}，则都需要）。如果你还没使用过 `img` 元素，请阅读 [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)教程。
 
 ```html
 <img src="equilateral.svg" alt="等边三角形" height="87px" width="100px" />
@@ -163,7 +163,7 @@ background-size: contain;
 
 ### 如何使用 `iframe` 嵌入 SVG
 
-你可以在浏览器中打开 SVG 图像，就像网页一样。因此，使用 `<iframe>` 嵌入 SVG 文档就像我们在[从 \<object> 到 \<iframe>——其他嵌入技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)中学习的一样。
+你可以在浏览器中打开 SVG 图像，就像网页一样。因此，使用 `<iframe>` 嵌入 SVG 文档就像我们在[从 \<object> 到 \<iframe>——其他嵌入技术](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)中学习的一样。
 
 以下是一个快速回顾：
 
@@ -323,7 +323,7 @@ textarea.onkeyup = function () {
 
 本文提供了矢量图形和 SVG 的简单教程，让你了解他们的作用，以及如何在网页中引入 SVG。本文并非学习 SVG 的完整教程，只是一个指南，让你在 Web 上遇到 SVG 时知道它是什么。所以不要因为觉得你不是一个 SVG 专家而担心。如果你想了解更多它的工作原理，我们在下面列出了一些可能会帮助你的链接。
 
-在本模块的最后一篇文章中，我们将详细探索[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)，查看 HTML 提供的可以让图像更好地跨设备适配的工具。
+在本模块的最后一篇文章中，我们将详细探索[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)，查看 HTML 提供的可以让图像更好地跨设备适配的工具。
 
 ## 参见
 

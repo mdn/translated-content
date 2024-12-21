@@ -78,7 +78,7 @@ l10n:
 确保每个链接匹配了正确的图片！
 
 > [!NOTE]
-> 为了正确地测试 `srcset`/`sizes` 示例，你需要把你的网站上传到服务器（使用 [Github pages](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) 是一个简单免费的方法），之后你就可以使用浏览器开发者工具（如 Firefox [网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)）来测试它们是否正常工作。
+> 为了正确地测试 `srcset`/`sizes` 示例，你需要把你的网站上传到服务器（使用 [Github pages](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) 是一个简单免费的方法），之后你就可以使用浏览器开发者工具（如 Firefox [网络监视器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)）来测试它们是否正常工作。
 
 ### 一张美术设计后的小熊猫照片
 

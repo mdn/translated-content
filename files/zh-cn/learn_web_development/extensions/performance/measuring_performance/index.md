@@ -18,10 +18,10 @@ original_slug: Learn/Performance/Measuring_performance
       <th scope="row">前提：</th>
       <td>
         基本计算机素养，<a
-          href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >已安装基本软件</a
         >，以及<a
-        href="/zh-CN/docs/Learn/Getting_started_with_the_web"
+        href="/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website"
           >客户端网络技术的基本知识</a
         >。
       </td>

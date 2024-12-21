@@ -15,13 +15,13 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
     <tr>
       <th scope="row">前提：</th>
       <td>
-        JavaScript 基础（见 <a href="/zh-CN/docs/Learn/JavaScript/First_steps"
+        JavaScript 基础（见 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >JavaScript 第一步</a
-        >，<a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        >，<a href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建 JavaScript 代码块</a
-        >，<a href="/zh-CN/docs/Learn/JavaScript/Objects">JavaScript 对象介绍</a
+        >，<a href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript 对象介绍</a
         >）、<a
-          href="/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction"
           >Web API 简介</a
         >
       </td>
@@ -35,7 +35,7 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
 
 ## HTML 视频和音频
 
-{{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素允许我们把视频和音频嵌入到网页当中。就像我们在[音频和视频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)文中展示的一样，一个典型的实现如下所示：
+{{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素允许我们把视频和音频嵌入到网页当中。就像我们在[音频和视频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)文中展示的一样，一个典型的实现如下所示：
 
 ```html
 <video controls>
@@ -166,7 +166,7 @@ button:before {
 接下来，我们使用这些内容来显示每个按钮上的图标：
 
 - 我们使用 {{cssxref("::before")}} 选择器在每个 {{htmlelement("button")}} 元素之前显示内容。
-- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 的内容是一个大写的“P”。
+- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 的内容是一个大写的“P”。
 - 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
 
 图标字体非常酷有很多原因：可以减少 HTTP 请求，因为你不再需要将这些图标作为图像文件一一下载；具有出色的可扩展性；可以使用文本属性来设置它们的样式，例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
@@ -457,7 +457,7 @@ clearInterval(intervalFwd);
 ## 参见
 
 - {{domxref("HTMLMediaElement")}}
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)：`<video>` 和 `<audio>` 的简单指南。
+- [视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)：`<video>` 和 `<audio>` 的简单指南。
 - [音频与视频传输](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：给浏览器传输音频和视频的详细指南，包括很多提示、技巧和指向更深层次教程的相关链接。
 - [音频与视频操作](/zh-CN/docs/Web/Media/Audio_and_video_manipulation)：操作音频和视频的详细指南，例如：使用 [Canvas API](/zh-CN/docs/Web/API/Canvas_API)、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等。
 - {{htmlelement("video")}}、{{htmlelement("audio")}} 参考。

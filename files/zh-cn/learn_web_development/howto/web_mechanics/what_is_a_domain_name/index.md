@@ -14,10 +14,10 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         首先你得知道<a
-          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+          href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >互联网是怎么工作的</a
         >并理解<a
-          href="/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL"
+          href="/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL"
         >什么是 URL</a>。
       </td>
     </tr>
@@ -167,7 +167,7 @@ DNS 数据库存储在全球每个 DNS 服务器上，所有这些服务器都�
 
 好了，我们讲了许多有关的步骤和结构。接下来。
 
-- 如果你想亲自实践，现在最好开始深入设计和探索[网页的结构](/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)。
-- 关于建站需要的花销这类问题的讨论也是有价值的。请参考[建站需要花费多少钱](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)。
+- 如果你想亲自实践，现在最好开始深入设计和探索[网页的结构](/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts)。
+- 关于建站需要的花销这类问题的讨论也是有价值的。请参考[建站需要花费多少钱](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)。
 - 或者在维基百科上阅读更多关于[域名](https://zh.wikipedia.org/wiki/域名)。
 - 你也可以在[这里](https://howdns.works/)找到有关 DNS 工作原理的有趣且丰富多彩的解释。

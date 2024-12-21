@@ -30,7 +30,7 @@ l10n:
 
 ### 安装本地 Web 服务器
 
-有些例子需要通过 Web 服务器才能成功运行。你可以在[如何设置本地测试服务器？](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)中找到该怎么做。
+有些例子需要通过 Web 服务器才能成功运行。你可以在[如何设置本地测试服务器？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)中找到该怎么做。
 
 ## 专业人士使用什么工具？
 
@@ -42,6 +42,6 @@ l10n:
 - **图形编辑器**，如 [GIMP](https://www.gimp.org/)、[Figma](https://www.figma.com/)、[Paint.NET](https://www.getpaint.net/)、[Photoshop](https://www.adobe.com/products/photoshop.html)、[Sketch](https://www.sketch.com) 或 [XD](https://www.adobe.com/products/xd.html)，为你的网页制作图像或图形。
 - **版本控制系统**，用来管理服务器上的文件、与团队合作开展项目、共享代码和资产、避免编辑冲突。现在，[Git](https://git-scm.com/) 是最流行的版本控制系统，还有 [GitHub](https://github.com/) 或 [GitLab](https://gitlab.com) 托管服务。
 
-对于其他的特定项目的工具的更多信息，尤其是对于客户端 Web 开发，参见[理解客户端 Web 开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)指南。
+对于其他的特定项目的工具的更多信息，尤其是对于客户端 Web 开发，参见[理解客户端 Web 开发工具](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools)指南。
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

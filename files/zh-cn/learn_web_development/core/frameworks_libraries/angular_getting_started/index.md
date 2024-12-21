@@ -13,7 +13,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，以及<a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端命令行</a>的知识。
+        熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，以及<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">终端命令行</a>的知识。
       </td>
     </tr>
     <tr>

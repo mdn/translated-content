@@ -18,7 +18,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        <p>建议你至少熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，并了解<a href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">终端/命令行</a>的知识。</p>
+        <p>建议你至少熟悉核心的 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，并了解<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">终端/命令行</a>的知识。</p>
         <p>你需要安装有 Node 和 npm 的终端来编译和构建你的应用程序。</p>
       </td>
     </tr>

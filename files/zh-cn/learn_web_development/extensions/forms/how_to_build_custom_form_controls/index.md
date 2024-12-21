@@ -6,7 +6,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}
 
-在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上[设置高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，或者如果要提供自定义行为，你就需要考虑构建自己的控件。
+在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上[设置高级样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)，或者如果要提供自定义行为，你就需要考虑构建自己的控件。
 
 在本文中，我们会看到如何构建自定义控件。为此，我们将使用这样一个示例：重建 {{HTMLElement("select")}} 元素。我们还将讨论如何构建、何时构建自定义控件、构建是否存在意义，以及构建控件的相关注意事项。
 
@@ -274,7 +274,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-这是我们的三种状态的结果（[在此处查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1)）：
+这是我们的三种状态的结果（[在此处查看源代码](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1)）：
 
 #### 正常状态
 
@@ -1053,7 +1053,7 @@ window.addEventListener("load", function () {
 
 #### 实时示例
 
-查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)。
+查看[完整源代码](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3)。
 
 ```html hidden
 <form class="no-widget">
@@ -1375,7 +1375,7 @@ window.addEventListener("load", () => {
 
 #### 实时示例
 
-查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)。
+查看[完整源代码](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4)。
 
 ```html hidden
 <form class="no-widget">
@@ -1701,7 +1701,7 @@ function updateValue(select, index) {
 
 #### 实时示例
 
-查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)。
+查看[完整源代码](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5)。
 
 ```html hidden
 <form class="no-widget">
@@ -2081,20 +2081,20 @@ window.addEventListener("load", () => {
 
 ### 学习路径
 
-- [你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 的 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [为 HTML 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [你的第一个 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [HTML5 的 input 类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
+- [其他表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
+- [UI 伪类](/zh-CN/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
+- [为 HTML 表单添加样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
 ### 高级主题
 
-- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
 - **如何构建自定义表单控件**
-- [旧式浏览器中的 HTML 表单](/zh-CN/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [高级设计 HTML 表单](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [旧式浏览器中的 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [高级设计 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [表单控件兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

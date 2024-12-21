@@ -17,7 +17,7 @@ original_slug: Learn/CSS/Building_blocks/Cascade_layers
     <tr>
       <th scope="row">前提：</th>
       <td>对 CSS 如何工作有一定的了解，包括层叠和优先级（学习
-        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS 入门</a>和<a href="/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">层叠和继承</a>）。
+        <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 入门</a>和<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">层叠和继承</a>）。
       </td>
     </tr>
     <tr>
@@ -415,6 +415,6 @@ body {
 
 ## 总结
 
-如果你理解了本文中的大部分内容，那么恭喜——你现在已经熟悉了 CSS 层叠层的基本机制。接下来，我们将详细了解[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
+如果你理解了本文中的大部分内容，那么恭喜——你现在已经熟悉了 CSS 层叠层的基本机制。接下来，我们将详细了解[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

@@ -14,11 +14,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_sty
       <th scope="row">前提：</th>
       <td>
         <p>
-          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-            href="/zh-CN/docs/Learn/CSS"
+          熟悉核心 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+            href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a
-          > 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a
-            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          > 和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言，了解<a
+            href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >终端/命令行</a
           >知识。
         </p>

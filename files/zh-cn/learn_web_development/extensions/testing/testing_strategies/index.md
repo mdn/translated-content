@@ -15,10 +15,10 @@ l10n:
     <tr>
       <th scope="row">准备：</th>
       <td>
-        熟练掌握 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-        href="/zh-CN/docs/Learn/CSS">CSS</a> 和
-        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
-          href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+        熟练掌握 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+        href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 语言; 了解<a
+          href="/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction"
           >跨浏览器测试的核心概念</a
         >。
       </td>
@@ -104,7 +104,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 ### 其他注意事项
 
-你应该将无障碍性作为 A 级测试要求（我们将在我们的[处理常见无障碍性问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)文章中详细介绍你应该测试的内容）。
+你应该将无障碍性作为 A 级测试要求（我们将在我们的[处理常见无障碍性问题](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling)文章中详细介绍你应该测试的内容）。
 
 此外，你还应注意特定情况下的需求。例如，如果你的产品面向的市场以手机为主要上网手段，那么你可能需要优先支持移动浏览器。
 

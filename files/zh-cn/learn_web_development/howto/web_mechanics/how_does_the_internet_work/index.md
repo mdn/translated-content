@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        无，但是鼓励先去阅读<a href="/zh-CN/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding">关于设定项目目标的文章</a>
+        无，但是鼓励先去阅读<a href="/zh-CN/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding">关于设定项目目标的文章</a>
       </td>
     </tr>
     <tr>
@@ -99,6 +99,6 @@ l10n:
 
 ## 下一步
 
-- [Web 是如何工作的](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [理解网页、网站、网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
-- [理解域名](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Web 是如何工作的](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [理解网页、网站、网络服务器和搜索引擎之间的不同](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
+- [理解域名](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

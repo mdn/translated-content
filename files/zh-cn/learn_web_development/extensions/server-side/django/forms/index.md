@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-在本教程中，我们将向你展示如何在 Django 中使用 HTML 表单，特别是编写表单以创建，更新和删除模型实例的最简单方法。作为本演示的一部分，我们将扩展[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站，以便图书馆员可以使用我们自己的表单（而不是使用管理员应用程序）更新图书，创建，更新和删除作者。
+在本教程中，我们将向你展示如何在 Django 中使用 HTML 表单，特别是编写表单以创建，更新和删除模型实例的最简单方法。作为本演示的一部分，我们将扩展[LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)网站，以便图书馆员可以使用我们自己的表单（而不是使用管理员应用程序）更新图书，创建，更新和删除作者。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/Django/Forms
       <td>
         完成所有先前的教程主题，包含
         <a
-          href="/zh-CN/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Authentication"
           >Django 教程 8: 使用者授权与许可</a
         >。
       </td>
@@ -31,9 +31,9 @@ original_slug: Learn/Server-side/Django/Forms
 
 ## 概览
 
-一张 [HTML 表单](/zh-CN/docs/Learn/Forms) ，是由一个或多个栏位/widget 在一个网页上组成的，以用于向使用者收集资料，并提交至伺服器。表单是一个弹性的机制，用于收集使用者输入，有合适的 widgets 可输入许多不同型态的资料，包含文字框、复选框、单选按钮、日期选取组件等等。若是允许我们用 `POST` 方式传送资料，并附加 CSRF 跨站要求伪造保护，表单也是与伺服器分享资料的一种相对安全的方式。
+一张 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms) ，是由一个或多个栏位/widget 在一个网页上组成的，以用于向使用者收集资料，并提交至伺服器。表单是一个弹性的机制，用于收集使用者输入，有合适的 widgets 可输入许多不同型态的资料，包含文字框、复选框、单选按钮、日期选取组件等等。若是允许我们用 `POST` 方式传送资料，并附加 CSRF 跨站要求伪造保护，表单也是与伺服器分享资料的一种相对安全的方式。
 
-在这个教程目前为止，我们还没有创造任何表单，但我们已经在 Django 管理站点遇到这些表单了— 例如以下的撷图展示了一张表单，用于编辑我们的一个 [Book 书本](/zh-CN/docs/Learn/Server-side/Django/Models)模型，包含一些选择列表以及文字编辑框。
+在这个教程目前为止，我们还没有创造任何表单，但我们已经在 Django 管理站点遇到这些表单了— 例如以下的撷图展示了一张表单，用于编辑我们的一个 [Book 书本](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Models)模型，包含一些选择列表以及文字编辑框。
 
 ![Admin Site - Book Add](admin_book_add.png)
 
@@ -43,7 +43,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 ## HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Learn/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：
+首先简要概述[HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -351,7 +351,7 @@ def renew_book_librarian(request, pk):
 
 ### 模板
 
-创建视图中引用的模板（**/catalog/templates/catalog/book\_renew\_librarian.html**），并将下面的代码，复制到其中：
+创建视图中引用的模板（**/catalog/templates/catalog/book_renew_librarian.html**），并将下面的代码，复制到其中：
 
 ```django
 {% extends "base_generic.html" %}
@@ -568,7 +568,7 @@ class AuthorDelete(DeleteView):
 
 ### 模板
 
-“创建”和“更新”视图默认使用相同的模板，它将以你的模型命名：**model\_name\_form.html**（你可以使用视图中的`template_name_suffix` 字段，将后缀更改为 **form** 以外的其他内容，例如，`template_name_suffix = '_other_suffix'`）
+“创建”和“更新”视图默认使用相同的模板，它将以你的模型命名：**model_name_form.html**（你可以使用视图中的`template_name_suffix` 字段，将后缀更改为 **form** 以外的其他内容，例如，`template_name_suffix = '_other_suffix'`）
 
 创建模板文件 **locallibrary/catalog/templates/catalog/author_form.html**，并复制到下面的文本中。
 
@@ -588,7 +588,7 @@ class AuthorDelete(DeleteView):
 
 这与我们之前的表单类似，并使用表单呈现字段。另请注意我们如何声明`{% csrf_token %}`，以确保我们的表单能够抵抗 CSRF 攻击。
 
-“删除”视图需要查找以 **model\_name\_confirm\_delete.html** 格式命名的模板（同样，你可以在视图中，使用`template_name_suffix` 更改后缀）。创建模板文件 **locallibrary/catalog/templates/catalog/author\_confirm\_delete.html** ，并复制到下面的文本中。
+“删除”视图需要查找以 **model_name_confirm_delete.html** 格式命名的模板（同样，你可以在视图中，使用`template_name_suffix` 更改后缀）。创建模板文件 **locallibrary/catalog/templates/catalog/author_confirm_delete.html** ，并复制到下面的文本中。
 
 ```django
 {% extends "base_generic.html" %}

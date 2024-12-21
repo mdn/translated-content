@@ -14,9 +14,9 @@ original_slug: Learn/Server-side/Express_Nodejs/Introduction
       <th scope="row">前提：</th>
       <td>
         掌握计算机基础知识。了解
-        <a href="/zh-CN/docs/Learn/Server-side">服务器端编程</a>，特别是
+        <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side">服务器端编程</a>，特别是
         <a
-          href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >客户 - 服务器交互机制</a
         >。
       </td>
@@ -139,7 +139,7 @@ Express 是高度包容的。几乎可以将任何兼容的中间件以任意顺
 首先来看 Express 的 [Hello World](https://www.expressjs.com.cn/starter/hello-world.html) 的示例（下文将逐行讨论）。
 
 > [!NOTE]
-> 如果你已经安装了 Node 和 Express（或者你已经按照 [下一节](/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment) 中的说明安装好了），可以将此代码保存为 **app.js**，并通过在 bash 中这样运行它：
+> 如果你已经安装了 Node 和 Express（或者你已经按照 [下一节](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment) 中的说明安装好了），可以将此代码保存为 **app.js**，并通过在 bash 中这样运行它：
 >
 > ```bash
 > node ./app.js
@@ -310,7 +310,7 @@ const wiki = require("./wiki.js");
 app.use("/wiki", wiki);
 ```
 
-今后将介绍更多关于路由的信息，特别是关于 `Router` 的用法，请参见 [路由和控制器](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes) 一节。
+今后将介绍更多关于路由的信息，特别是关于 `Router` 的用法，请参见 [路由和控制器](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes) 一节。
 
 ### 使用中间件（Middleware）
 

@@ -13,11 +13,11 @@ original_slug: Learn/Forms/Form_validation
     <tr>
       <th scope="row">前提：</th>
       <td>
-        计算机基础能力，对 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-          href="/zh-CN/docs/Learn/CSS"
+        计算机基础能力，对 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
         >
-        和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
+        和 <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript</a> 有一定的理解。
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ original_slug: Learn/Forms/Form_validation
 
 - **我们希望以正确的格式获取到正确的数据**——如果我们的用户数据以不正确的格式存储，或者他们没有输入正确的信息/完全省略信息，我们的应用程序将无法正常运行。
 - **我们希望保护我们的用户**——强制用户输入安全的密码，有利于保护他们的账户信息。
-- **我们希望保护我们自己**——恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)）。
+- **我们希望保护我们自己**——恶意用户有很多通过滥用应用中缺乏保护的表单破坏应用的方法（具体请参见[网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)）。
 
 > [!WARNING]
 > 永远不要相信从客户端传递到服务器的数据。即使你的表单正确验证并防止输入格式错误，恶意用户仍然可以更改网络请求。
@@ -61,7 +61,7 @@ original_slug: Learn/Forms/Form_validation
   - **JavaScript** 校验，这是可以完全自定义的实现方式；
   - HTML5 **内置校验**，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。
 
-- **服务器端校验**则是发生在浏览器提交数据并被服务器端程序接收之后——通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今[所有的服务端框架](/zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks)都提供了数据**校验**与**清洁**功能（让数据更安全）。
+- **服务器端校验**则是发生在浏览器提交数据并被服务器端程序接收之后——通常服务器端校验都是发生在将数据写入数据库之前，如果数据没通过校验，则会直接从服务器端返回错误消息，并且告诉浏览器端发生错误的具体位置和原因，服务器端校验不像客户端校验那样有好的用户体验，因为它直到整个表单都提交后才能返回错误信息。但是服务器端校验是你的应用对抗错误/恶意数据的最后防线，在这之后，数据将被持久化至数据库。当今[所有的服务端框架](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks)都提供了数据**校验**与**清洁**功能（让数据更安全）。
 
 在真实的项目开发过程中，开发者一般都倾向于使用客户端校验与服务器端校验的组合校验方式以更好的保证数据的正确性与安全性。
 
@@ -588,7 +588,7 @@ form.addEventListener(
 
 ### 不使用内建 API 时的表单校验
 
-有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)，你将无法（或不希望）使用约束校验 API。在这种情况下，你仍然可以使用 JavaScript 来校验你的表单。校验表单比起真实数据校验更像是一个用户界面问题。
+有时，例如使用旧版浏览器或[自定义小部件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)，你将无法（或不希望）使用约束校验 API。在这种情况下，你仍然可以使用 JavaScript 来校验你的表单。校验表单比起真实数据校验更像是一个用户界面问题。
 
 要校验表单，你必须问自己几个问题：
 

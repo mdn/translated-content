@@ -111,7 +111,7 @@ span {
 
 {{EmbedLiveSample('应用 CSS 到 DOM', '100%', 55)}}
 
-在我们下一个模块的 [Debugging CSS](/zh-CN/docs/Learn/CSS/Building_blocks/Debugging_CSS) 文章中我们将会使用 F12 调试 CSS 的问题并且更进一步的了解浏览器如何解析 CSS。
+在我们下一个模块的 [Debugging CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) 文章中我们将会使用 F12 调试 CSS 的问题并且更进一步的了解浏览器如何解析 CSS。
 
 ## 当浏览器遇到无法解析的 CSS 代码会发生什么
 
@@ -154,6 +154,6 @@ p {
 
 ## 最后
 
-恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
+恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}

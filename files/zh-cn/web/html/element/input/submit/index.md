@@ -147,7 +147,7 @@ slug: Web/HTML/Element/input/submit
 
 试着输入一些文字到文本字段，然后提交表单。
 
-在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 `text=usertext`，其中“usertext”是用户输入的字符，它转换为保留的特殊字符。数据提交的方式和位置都由 `<form>` 的设置决定，参阅[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章以获取更多细节。
+在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 `text=usertext`，其中“usertext”是用户输入的字符，它转换为保留的特殊字符。数据提交的方式和位置都由 `<form>` 的设置决定，参阅[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)文章以获取更多细节。
 
 ### 添加提交的快捷键
 
@@ -208,6 +208,6 @@ slug: Web/HTML/Element/input/submit
 
 - {{HTMLElement("input")}} 元素和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - [表单与按钮](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#actual_buttons)
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("button")}} 元素
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

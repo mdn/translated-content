@@ -15,12 +15,12 @@ original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础（学习<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content"
           >HTML 介绍</a
         >），了解 CSS 工作的原理（学习<a
-          href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
+          href="/zh-CN/docs/Learn_web_development/Core/Styling_basics"
           >CSS 介绍</a
-        >和<a href="/zh-CN/docs/Learn/CSS/Styling_boxes">样式化盒子</a>）
+        >和<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">样式化盒子</a>）
       </td>
     </tr>
     <tr>
@@ -58,9 +58,9 @@ original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 
 ## 在 CSS 中构建回滚
 
-CSS 规范包含了在一个物件上同时应用两种布局的时候，解释浏览器如何反应的信息。例如，规范定义如果一个浮动元素同时又是用 CSS 网格布局实现的网格元素（Grid Item）的时候会发生什么。结合浏览器会忽略掉它不会理解的 CSS 的特点组合起来，你就得到了使用我们已经提到的[传统技术](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)构建简单布局的方法，在可以理解你的网格布局的现代浏览器中，传统布局方法会被网格布局覆写掉。
+CSS 规范包含了在一个物件上同时应用两种布局的时候，解释浏览器如何反应的信息。例如，规范定义如果一个浮动元素同时又是用 CSS 网格布局实现的网格元素（Grid Item）的时候会发生什么。结合浏览器会忽略掉它不会理解的 CSS 的特点组合起来，你就得到了使用我们已经提到的[传统技术](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)构建简单布局的方法，在可以理解你的网格布局的现代浏览器中，传统布局方法会被网格布局覆写掉。
 
-在下面的示例中，我们已经浮动了三个`<div>`，所以它们显示在了一行中。任何使用不支持[CSS 网格布局](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)的浏览器的人将会看到以浮动布局实现的一列盒子。一个成为了网格物件的浮动物件失去了浮动的动作，就是说通过把 wrapper 变成网格容器，浮动物件变成了网格物件。如果浏览器器支持网格布局，它会显示网格视图，否则它会忽略`display: grid`相关的属性，使用浮动布局。
+在下面的示例中，我们已经浮动了三个`<div>`，所以它们显示在了一行中。任何使用不支持[CSS 网格布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)的浏览器的人将会看到以浮动布局实现的一列盒子。一个成为了网格物件的浮动物件失去了浮动的动作，就是说通过把 wrapper 变成网格容器，浮动物件变成了网格物件。如果浏览器器支持网格布局，它会显示网格视图，否则它会忽略`display: grid`相关的属性，使用浮动布局。
 
 ```css
 * {
@@ -104,11 +104,11 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 - display: inline-block
   - : 这种方式能被用来建立列布局，如果一个物件被设为`display: inline-block`，但是之后变成了弹性或者网格物件，inline-block 行为将会被忽略。
 - display: table
-  - : 这种在这几节课的[介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)中描述的建立 CSS 表格的方式可以被用作回滚。被设为 CSS 表格布局的物件将会在它们变为弹性或者网格物件的时候不再表现出这种行为。重要的是，被建立起来用于修复表格结构的匿名盒子没有被建立起来。
+  - : 这种在这几节课的[介绍](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction)中描述的建立 CSS 表格的方式可以被用作回滚。被设为 CSS 表格布局的物件将会在它们变为弹性或者网格物件的时候不再表现出这种行为。重要的是，被建立起来用于修复表格结构的匿名盒子没有被建立起来。
 - Multiple-column Layout
-  - : 对于某些布局，你能用[multi-col](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)作为回滚。如果你的容器有任何一个`column-*`属性被定义，之后变成了网格容器，那么多列行为不会实现。
+  - : 对于某些布局，你能用[multi-col](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)作为回滚。如果你的容器有任何一个`column-*`属性被定义，之后变成了网格容器，那么多列行为不会实现。
 - 作为网格的回滚的弹性盒
-  - : [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)由于受到了 IE10 和 IE11 的支持，比网格有着更好的浏览器支持。不过，在这节课的稍后部分，你一定要看下旧浏览器对弹性盒相当参差不齐而且令人困惑的支持的相关信息。如果你把弹性容器做成了网格容器，任何应用到子元素的`flex`属性都会被忽略。
+  - : [弹性盒](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)由于受到了 IE10 和 IE11 的支持，比网格有着更好的浏览器支持。不过，在这节课的稍后部分，你一定要看下旧浏览器对弹性盒相当参差不齐而且令人困惑的支持的相关信息。如果你把弹性容器做成了网格容器，任何应用到子元素的`flex`属性都会被忽略。
 
 对于许多在旧浏览器中微调的布局来说，你可能会发现你能用这种方式使用 CSS，给访客亲切的体验。我们加入了一个更简单的基于旧的和受到良好支持技术的布局，然后用新一些的 CSS 建立一个可以由 90% 的用户看到的布局。但是存在这样的情况：回滚代码会需要包含新浏览器也能理解的东西；举例来说就是，我们要往我们的浮动物件中加入百分数宽度，从而让列看起来更像网格，拉伸以充满容器。
 
@@ -208,7 +208,7 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 
 ## 测试旧浏览器
 
-由于大多数浏览器都支持弹性盒和网格，测试旧浏览器想想就很难。一种方式是使用在线的测试工具，例如 Sauce Labs，在[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块里有详细说明。
+由于大多数浏览器都支持弹性盒和网格，测试旧浏览器想想就很难。一种方式是使用在线的测试工具，例如 Sauce Labs，在[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)模块里有详细说明。
 
 你也可以下载安装虚拟机，在你的电脑的容器环境中运行旧版浏览器。能够使用旧版 IE 是很有用的，为此，微软已经制作了[一些可以免费下载的虚拟机](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)。这些对 Mac、Windows 和 Linux 操作系统都是可以用的，所以即使你没有 Windows 电脑，这也是一个测试旧的和现代 Windows 浏览器的绝佳办法。
 

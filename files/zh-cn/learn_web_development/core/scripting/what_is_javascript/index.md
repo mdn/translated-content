@@ -23,7 +23,7 @@ original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 
 ## 高层定义
 
-JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新——交互式的地图、2D/3D 动画、滚动播放的视频等等——JavaScript 就在其中。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 我们已经在学习区的其他部分进行了详细的讲解。
+JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新——交互式的地图、2D/3D 动画、滚动播放的视频等等——JavaScript 就在其中。它是标准 Web 技术蛋糕的第三层，其中 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 和 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 我们已经在学习区的其他部分进行了详细的讲解。
 
 ![标准 web 技术的三层——HTML、CSS 和 JavaScript](cake.png)
 
@@ -102,7 +102,7 @@ API 通常分为两类。
 - 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC","","nocode")}} 等[影音类 API](/zh-CN/docs/Web/Media/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图演示](http://chrisdavidmills.github.io/snapshot/)以理解这个概念）。
 
 > [!NOTE]
-> 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
+> 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)。
 
 **第三方 API** 并没有默认嵌入浏览器中，一般要从网上取得它们的代码和信息。比如：
 
@@ -110,7 +110,7 @@ API 通常分为两类。
 - [谷歌地图 API](https://developers.google.cn/maps/)、[OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 可以在网站嵌入定制的地图等等。
 
 > [!NOTE]
-> 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)。
+> 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs)。
 
 先稳住！你看到的只是冰山一角。你不可能仅靠学一天 JavaScript 就能构建下一个 Facebook、谷歌地图、或 Instagram——还有很多基础需要了解，这也是为什么你会在这里，让我们继续吧！
 
@@ -148,7 +148,7 @@ function updateName() {
 
 首先使用 `document.querySelector` 选定一个按钮，然后使用 `addEventListener` 给它附上一个事件监听器（第 3 行），使得在它被点击时，`updateName()` 代码块（5 – 8 行）便会运行。`updateName()` 代码块（这类可以重复使用的代码块称为“函数”）向用户请求一个新名字，然后把这个名字插入到段落中以更新显示。
 
-如果互换了代码里最初两行的顺序，会导致问题。[浏览器开发者控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`Uncaught ReferenceError: Cannot access 'button' before initialization`。这意味着 `button` 对象还未初始化，所以我们不能为它增添事件监听器。
+如果互换了代码里最初两行的顺序，会导致问题。[浏览器开发者控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)将返回一个错误：`Uncaught ReferenceError: Cannot access 'button' before initialization`。这意味着 `button` 对象还未初始化，所以我们不能为它增添事件监听器。
 
 > [!NOTE]
 > 这是一个很常见的错误，在引用对象之前必须确保该对象已经存在。
@@ -167,7 +167,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
 
 你或许还听说过**服务器端**（server-side）和**客户端**（client-side）代码这两个术语，尤其是在 web 开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。在本模块中我们讨论的主要是**客户端 JavaScript**。
 
-而服务器端代码在服务器上运行，然后运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET，甚至有 JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的[动态网页——服务器端编程](/zh-CN/docs/Learn/Server-side)主题中找到更多关于服务器端 JavaScript 的知识。
+而服务器端代码在服务器上运行，然后运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET，甚至有 JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的[动态网页——服务器端编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)主题中找到更多关于服务器端 JavaScript 的知识。
 
 ### 动态代码 vs 静态代码
 
@@ -247,7 +247,7 @@ JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，
    ```
 
 4. 保存并刷新浏览器。就会发现点击按钮不起作用，如果检查浏览器控制台，会看见类似 `Cross-origin request blocked` 的错误。这是因为与许多外部资源一样，JavaScript 模块需要从与 HTML 同源的地方加载，并且 `file://` URL 不符合条件。有两个解决方案可以解决这个问题：
-   - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 `8000` 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
+   - 我们推荐的解决方案是按照指南[设置本地测试服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)。运行服务器程序并且在 `8000` 端口提供文件 `apply-javascript-external.html` 和 `script.js`，打开浏览器并访问 `http://localhost:8000`。
    - 如果无法运行本地服务器，也可以使用 `<script defer src="script.js"></script>` 代替 `<script type="module" src="script.js"></script>`。了解更多信息请参阅下面的[脚本加载策略](#脚本加载策略)。但是注意，本教程其他部分使用的特性可能需要本地 HTTP 服务器。
 5. 现在网站和之前一样了，但是我们的 JavaScript 放在了一个外部文件。一般来说，这对组织代码并在多个 HTML 文件中复用来说是一件好事。此外，没有大段脚本的 HTML 更容易阅读。
 
@@ -359,6 +359,6 @@ for (const button of buttons) {
 
 恭喜你，迈出了探索 JavaScript 世界的第一步。我们从理论开始，介绍为什么要使用 JavaScript，以及用它能做什么事情。过程中穿插了一些代码示例并讲解了 JavaScript 如何与网站中其他代码适配，等等。
 
-现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
+现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn_web_development/Core/Scripting/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

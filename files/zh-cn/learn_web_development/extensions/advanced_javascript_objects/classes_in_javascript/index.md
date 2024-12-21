@@ -6,9 +6,9 @@ original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
-在[上一篇文章](/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming)中，我们介绍了面向对象编程（OOP）的基本概念，并介绍了一个使用 OOP 原则对学校的教授和学生进行建模的示例。
+在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming)中，我们介绍了面向对象编程（OOP）的基本概念，并介绍了一个使用 OOP 原则对学校的教授和学生进行建模的示例。
 
-我们还讨论了如何使用[原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)和[构造函数](/zh-CN/docs/Learn/JavaScript/Objects/Basics#introducing_constructors)来实现这样的模型，而 JavaScript 还提供了更接近经典 OOP 概念的特性。
+我们还讨论了如何使用[原型](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)和[构造函数](/zh-CN/docs/Learn/JavaScript/Objects/Basics#introducing_constructors)来实现这样的模型，而 JavaScript 还提供了更接近经典 OOP 概念的特性。
 
 在本文中，我们将介绍这些特性。注意，这里描述的特性并不是一种继承对象的新方式：在引擎的底层，这一特性使用的仍是原型。这只是一种更容易的创建原型链的方法。
 
@@ -19,14 +19,14 @@ original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
       <td>
         基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript
         基础（参见<a
-          href="/zh-CN/docs/Learn/JavaScript/First_steps">第一步</a>和<a
-          href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting">第一步</a>和<a
+          href="/zh-CN/docs/Learn_web_development/Core/Scripting"
           >创建代码块</a>）以及面向对象的
           JavaScript（OOJS）基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
+        <a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics"
           >JavaScript 对象基础</a>、<a
-          href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>和<a
-          href="/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming">面向对象编程</a>）。
+          href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">对象原型</a>和<a
+          href="/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming">面向对象编程</a>）。
       </td>
     </tr>
     <tr>
@@ -64,7 +64,7 @@ class Person {
 
 你也可以在声明属性时，为其初始化一个默认值。就像这样：`name = '';`。
 
-构造函数使用 {{jsxref("Classes/constructor", "constructor")}} 关键字来声明。就像[在类声明外的构造函数](/zh-CN/docs/Learn/JavaScript/Objects/Basics)一样，它会：
+构造函数使用 {{jsxref("Classes/constructor", "constructor")}} 关键字来声明。就像[在类声明外的构造函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics)一样，它会：
 
 - 创建一个新的对象
 - 将 `this` 绑定到这个新的对象，你可以在构造函数代码中使用 `this` 来引用它
@@ -205,7 +205,7 @@ myExample.#somePrivateMethod(); // SyntaxError
 
 ## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：面向对象的 JavaScript](/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript)。
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：面向对象的 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript)。
 
 ## 总结
 
