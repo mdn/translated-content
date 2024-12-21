@@ -2,7 +2,7 @@
 title: 実験的、非推奨、廃止
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: ce83b64f1132a29a19471e46bfffced755f775eb
 ---
 
 {{MDNSidebar}}
