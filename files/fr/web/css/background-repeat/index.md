@@ -144,7 +144,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
+  background-image: url(star-solid.gif);
   width: 160px;
   height: 70px;
 }
@@ -171,7 +171,7 @@ div {
 
 /* Plusieurs images */
 .sept {
-  background-image: url(starsolid.gif), url(favicon.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
