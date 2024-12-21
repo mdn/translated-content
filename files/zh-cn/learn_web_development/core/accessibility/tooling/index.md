@@ -49,7 +49,7 @@ l10n:
 
 在某种程度上，本模块都是关于无障碍的——跨浏览器测试可确保你的网站可以被尽可能多的人使用。这篇[无障碍是什么？](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)更全面透彻地定义了什么是无障碍。
 
-也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在本模块的其他地方已经讨论过别的领域，例如[响应式设计问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#响应式设计问题)和[性能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#性能问题)。
+也就是说，本文将涵盖跨浏览器和有关残疾人的测试问题以及他们如何使用 Web。我们在本模块的其他地方已经讨论过别的领域，例如[响应式设计问题](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#响应式设计问题)和[性能](/zh-CN/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#性能问题)。
 
 > [!NOTE]
 > 如同 Web 开发的许多方面一样，无障碍并非可以用 100% 的成功或失败来定义；实际上，对于所有内容来说，要达到完全的无障碍几乎是不可能的，特别是当网站变得越来越复杂。我们所做的，更多是采取防御性编程，并遵守最佳实践，以确保尽可能多的人能够访问到尽可能多的内容。
@@ -59,7 +59,7 @@ l10n:
 在本节中，我们将围绕 Web 无障碍，详细介绍与特定技术相关的一些主要问题、要遵循的最佳实践，以及可以进行的一些快速测试，以查看你的网站是否朝着正确的方向发展。
 
 > [!NOTE]
-> 无障碍在道德上是正确的事情，对企业也有好处（残疾用户，移动用户等构成了重要的细分市场），并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读[无障碍指南和法律](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍指南和法律)获取更多相关信息。
+> 无障碍在道德上是正确的事情，对企业也有好处（残疾用户，移动用户等构成了重要的细分市场），并且在世界许多地方，提供出来的网络媒体资源无法为残疾人服务也是违法的。阅读[无障碍指南和法律](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍指南和法律)获取更多相关信息。
 
 ### HTML
 
@@ -176,7 +176,7 @@ select:focus {
 替代文本对无障碍性至关重要——对于视觉或听觉障碍者来说，如果无法看到或听到某些内容，这将是一个障碍。最简单且常用的文本替代方法是使用 `alt` 属性，我们应在所有包含关键内容的图像上使用该属性。它应包含能够在页面上成功传达图像意义和内容的描述，并能被屏幕阅读器读取，从而朗读给用户听。
 
 > [!NOTE]
-> 更多信息请阅读[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)。
+> 更多信息请阅读[替代文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)。
 
 可以通过多种方法来测试缺少的替代文本，例如，使用无障碍[审计工具](#审计工具)。
 
@@ -191,14 +191,14 @@ select:focus {
 接下来是表单中的 {{htmlelement("label")}} 元素，这是确保表单无障碍的关键特性之一。表单的挑战在于，你需要标签来指明每个表单输入应该输入的数据。每个标签都应该包含在 {{htmlelement("label")}} 中，并且与其对应的表单输入明确关联（每个 `<label>` 的 `for` 属性值需要与表单元素的 `id` 值相匹配），即使源代码的顺序并不完全合理（尽管它应该是合理的）。
 
 > [!NOTE]
-> 有关链接文本和表单标签的更多信息，请参阅[有意义的文本标签](/zh-CN/docs/Learn/Accessibility/HTML#有意义的文本标签)。
+> 有关链接文本和表单标签的更多信息，请参阅[有意义的文本标签](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#有意义的文本标签)。
 
 最后，让我们简要讨论一下数据表格。使用非常简单的标记，你可以编写基本的数据表格（参见 `bad-table.html` 的[在线演示](https://mdn.github.io/learning-area/accessibility/html/bad-table.html)和[源代码](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html)），但这样做会有问题——屏幕阅读器用户无法将行或列作为数据分组——为此，你需要标明哪些是标题行，以及它们是用于标题行还是标题列等。这样的表格只能通过视觉方式来识别。
 
 相反，如果你查看我们的 `punk-bands-complete.html` 示例（[在线演示](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)，[源代码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)），你会发现这里使用了一些辅助功能，如表头（{{htmlelement("th")}} 和 `scope` 属性）、{{htmlelement("caption")}} 元素等。
 
 > [!NOTE]
-> 有关无障碍数据表格的更多信息，请参阅[无障碍数据表格](/zh-CN/docs/Learn/Accessibility/HTML#无障碍数据表格)。
+> 有关无障碍数据表格的更多信息，请参阅[无障碍数据表格](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#无障碍数据表格)。
 
 ### CSS
 
@@ -569,13 +569,13 @@ NVDA 拥有众多键盘命令，这里不会全部列举。以下表格中列出
 
 ### 用户测试
 
-如上所述，你不能仅依靠自动化工具来确定网站上的无障碍问题。建议在制定测试计划时，包含一些用户测试无障碍的计划 (有关更多内容，请参阅前面的[用户测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#用户测试)部分)。尝试让一些屏幕阅读器用户，一些全键盘用户，一些有听觉障碍的用户或其他用户参与测试，以满足你的需求。
+如上所述，你不能仅依靠自动化工具来确定网站上的无障碍问题。建议在制定测试计划时，包含一些用户测试无障碍的计划 (有关更多内容，请参阅前面的[用户测试](/zh-CN/docs/Learn_web_development/Extensions/Testing/Testing_strategies#用户测试)部分)。尝试让一些屏幕阅读器用户，一些全键盘用户，一些有听觉障碍的用户或其他用户参与测试，以满足你的需求。
 
 ## 无障碍测试清单
 
 以下列表提供了一个供你参考的无障碍测试清单，以确保你的项目已经执行了推荐的无障碍测试：
 
-1. 确保你的 HTML 尽可能语义化正确。[验证它](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#验证)是一个不错的开始，使用[审计工具](#审计工具)也是如此。
+1. 确保你的 HTML 尽可能语义化正确。[验证它](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#验证)是一个不错的开始，使用[审计工具](#审计工具)也是如此。
 2. 检查在 CSS 关闭的情况下，你的内容是否仍然有意义。
 3. 确保你的功能[可通过键盘访问](#使用键盘原生无障碍性)。使用 Tab、Return/Enter 等键进行测试。
 4. 确保你的非文本内容都有[文本替代](#替代文本)。[审计工具](#审计工具)可帮助你发现此类问题。
@@ -589,7 +589,7 @@ NVDA 拥有众多键盘命令，这里不会全部列举。以下表格中列出
 
 ## 寻找帮助
 
-无障碍还会遇到许多其他问题。你要学会如何在线查找答案。请查阅 HTML 和 CSS 文章的“[寻找帮助](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#寻找帮助)”部分，以获取一些指导。
+无障碍还会遇到许多其他问题。你要学会如何在线查找答案。请查阅 HTML 和 CSS 文章的“[寻找帮助](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#寻找帮助)”部分，以获取一些指导。
 
 ## 总结
 

@@ -234,7 +234,7 @@ _现在还没有动手练习的内容。[请考虑投稿](/zh-CN/docs/MDN/Commun
 
 如果你正以特定的群体（比如说技术平台或者国家）为目标，你或许需要用额外的浏览器，像是 [Opera](https://www.opera.com/)、[Konqueror](https://apps.kde.org/konqueror/) 来测试它。
 
-但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。特别是，Apple Safari 在 iOS、iPadOS 和 macOS 上运行。最好利用像 [Browsershots](https://browsershots.org/) 或 [Browserstack](https://www.browserstack.com/) 这样的服务。Browsershots 提供你的网站在各种浏览器中显示的截图。Browserstack 则提供对虚拟机的完全远程访问，因此你可以在最常见的环境和不同操作系统上测试你的网站。或者，你也可以自行设置虚拟机，但这需要一定的专业知识。有关更多信息，请参阅[执行测试的策略：建立测试实验室](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#建立测试实验室)。
+但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。特别是，Apple Safari 在 iOS、iPadOS 和 macOS 上运行。最好利用像 [Browsershots](https://browsershots.org/) 或 [Browserstack](https://www.browserstack.com/) 这样的服务。Browsershots 提供你的网站在各种浏览器中显示的截图。Browserstack 则提供对虚拟机的完全远程访问，因此你可以在最常见的环境和不同操作系统上测试你的网站。或者，你也可以自行设置虚拟机，但这需要一定的专业知识。有关更多信息，请参阅[执行测试的策略：建立测试实验室](/zh-CN/docs/Learn_web_development/Extensions/Testing/Testing_strategies#建立测试实验室)。
 
 无论如何，一定要在真实设备上进行一些测试，尤其是在真实的移动设备上。移动设备模拟是一项新的、不断发展的技术，比桌面模拟不太可靠。移动设备当然需要花费金钱，所以我们建议你看看[开放设备实验室倡议](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls)。如果你想在多个平台上进行测试而不花费太多，你也可以共享设备。
 

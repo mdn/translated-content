@@ -131,7 +131,7 @@ ctx.fillStyle = "rgb(0, 0, 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
-这里我们使用画布的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 属性（和 CSS 属性[色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#颜色)一致）设置填充色，然后使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 方法绘制一个覆盖整个区域的矩形（前两个参数是矩形左上顶点的坐标，后两个参数是矩形的长宽，现在你知道 `width` 和 `height` 的作用了吧）。
+这里我们使用画布的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} 属性（和 CSS 属性[色值](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#颜色)一致）设置填充色，然后使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} 方法绘制一个覆盖整个区域的矩形（前两个参数是矩形左上顶点的坐标，后两个参数是矩形的长宽，现在你知道 `width` 和 `height` 的作用了吧）。
 
 好的，模板已经就位，我们要开始了。
 

@@ -108,7 +108,7 @@ l10n:
 
 此时，你要修复一切发现的问题。
 
-接下来，你应该将测试拓展到所有浏览器，并集中精力排除跨浏览器问题（关于[确定你的目标浏览器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)，请查阅下一篇文章获取更多信息）。例如：
+接下来，你应该将测试拓展到所有浏览器，并集中精力排除跨浏览器问题（关于[确定你的目标浏览器](/zh-CN/docs/Learn_web_development/Extensions/Testing/Testing_strategies#是否需要测试？)，请查阅下一篇文章获取更多信息）。例如：
 
 - 尽量在所有现代桌面浏览器上测试最新的修改——包括桌面版的 Firefox、Chrome、Opera、Edge 和 Safari（最好 Mac、Windows 和 Linux 版本都试一遍）。
 - 在常用的手机和平板浏览器中测试（例如 iPhone/iPad 上的 iOS Safari、iPhone/iPad/Android 的 Chrome 和 Firefox）。

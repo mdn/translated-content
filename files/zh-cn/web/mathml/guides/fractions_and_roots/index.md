@@ -70,7 +70,7 @@ original_slug: Learn/MathML/First_steps/Fractions_and_roots
 ![mfrac、msqrt 和 mroot 的屏幕截图](mfrac-msqrt-mroot.png)
 
 - 我们知道 `<mfrac>` 元素被渲染为一个分数：第一个子元素（分子）被绘制于第二个子元素（分母）的上方，并由一条水平线分隔。
-- `<msqrt>` 被渲染为一个平方根：其子元素呈现为一个 [`<mrow>`](/zh-CN/docs/Learn/MathML/First_steps/Getting_started#使用_mrow_元素进行分组)，前缀为根号√，并完全被一条横线覆盖。
+- `<msqrt>` 被渲染为一个平方根：其子元素呈现为一个 [`<mrow>`](/zh-CN/docs/Web/MathML/Guides/Getting_started#使用_mrow_元素进行分组)，前缀为根号√，并完全被一条横线覆盖。
 - 最后，`<mroot>` 元素被渲染为一个 n 次方根：第一个元素被根号符号覆盖，而第二个元素被用作根的次数，并作为前缀上标呈现。
 
 ### 主动练习：内嵌不同元素

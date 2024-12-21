@@ -44,7 +44,7 @@ l10n:
 
 ### 它们植根于第三方服务器
 
-浏览器 API 在浏览器构建之初就存在：用 JavaScript 就可以立即访问它们。例如，[在简介](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#api_如何工作？)中所使用的 Web Audio API 就是通过原生的 {{domxref("AudioContext")}} 对象来访问的。
+浏览器 API 在浏览器构建之初就存在：用 JavaScript 就可以立即访问它们。例如，[在简介](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#api_如何工作？)中所使用的 Web Audio API 就是通过原生的 {{domxref("AudioContext")}} 对象来访问的。
 
 ```js
 const audioCtx = new AudioContext();
@@ -85,7 +85,7 @@ const map = L.mapquest.map("map", {
 
 ### 它们通常需要 API 密钥
 
-浏览器 API 的安全通常通过权限提示处理，正如[我们前文所说](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#它们在适当的地方有额外的安全机制)。这样做的目的是让用户知道他们访问的网站上发生了什么，从而减少因有人恶意使用 API 而受害的可能性。
+浏览器 API 的安全通常通过权限提示处理，正如[我们前文所说](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#它们在适当的地方有额外的安全机制)。这样做的目的是让用户知道他们访问的网站上发生了什么，从而减少因有人恶意使用 API 而受害的可能性。
 
 第三方 API 有一个稍微不同的权限系统——它们倾向于使用开发者密钥来允许开发人员访问 API 功能。这更多是为了保护 API 的提供者而非用户。
 

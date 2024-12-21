@@ -320,7 +320,7 @@ li:nth-of-type(even) {
 
 ### 完成我们 PWA 的静态 HTML 和 CSS
 
-在继续之前，[注释](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments)或者删除假的过去月经周期数据和标题：
+在继续之前，[注释](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_注释)或者删除假的过去月经周期数据和标题：
 
 ```html
 <section id="past-periods">

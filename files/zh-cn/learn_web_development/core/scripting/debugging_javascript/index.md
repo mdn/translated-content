@@ -58,11 +58,11 @@ if (window.XMLHttpRequest) {
 
 ## 修复一般的 JavaScript 问题
 
-正如我们在关于 HTML/CSS 的[前一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#首先：解决一般问题)中所说，你应该先确保你的代码能够正常工作，然后再去集中解决跨浏览器问题。如果你还不熟悉[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn_web_development/Core/Scripting/What_went_wrong)的基本内容，你应该在继续学习之前学习这篇文章。你要注意一些常见的 JavaScript 问题，比如说：
+正如我们在关于 HTML/CSS 的[前一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#首先：解决一般问题)中所说，你应该先确保你的代码能够正常工作，然后再去集中解决跨浏览器问题。如果你还不熟悉[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn_web_development/Core/Scripting/What_went_wrong)的基本内容，你应该在继续学习之前学习这篇文章。你要注意一些常见的 JavaScript 问题，比如说：
 
 - 基本的语法和逻辑问题（再次重申，请参阅[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn_web_development/Core/Scripting/What_went_wrong)）。
-- 确保变量等定义在正确的作用域中，并且你不会遇到在不同地方声明的内容之间的冲突（见[函数作用域和冲突](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)）。
-- 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么作用域，它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#“this”的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定能够把功能应用到正确的 `this` 作用域。
+- 确保变量等定义在正确的作用域中，并且你不会遇到在不同地方声明的内容之间的冲突（见[函数作用域和冲突](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions#函数作用域和冲突)）。
+- 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么作用域，它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics#“this”的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定能够把功能应用到正确的 `this` 作用域。
 - 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是“弄错作用域”）。
 
 > [!CALLOUT]
@@ -76,7 +76,7 @@ if (window.XMLHttpRequest) {
 
 ### Linter
 
-就像 [HTML 和 CSS](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#linter) 所说的一样，使用 linter 可以确保编写出质量更高，错误更少的 JavaScript 代码，它可以指出错误，也可以标记出关于不良做法的警告等，并且可以自定义为更严格或更宽松的错误/警告报告。我们推荐的 JavaScript/ECMAScript linter 包括 [JSHint](https://jshint.com/) 和 [ESLint](https://eslint.org/)；它们能以多种方式使用，其中一些我们将在下面详细介绍。
+就像 [HTML 和 CSS](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#linter) 所说的一样，使用 linter 可以确保编写出质量更高，错误更少的 JavaScript 代码，它可以指出错误，也可以标记出关于不良做法的警告等，并且可以自定义为更严格或更宽松的错误/警告报告。我们推荐的 JavaScript/ECMAScript linter 包括 [JSHint](https://jshint.com/) 和 [ESLint](https://eslint.org/)；它们能以多种方式使用，其中一些我们将在下面详细介绍。
 
 #### 在线检查器
 
@@ -102,7 +102,7 @@ npm install -g jshint
 
 ![命令行输入了 jshint filename.js。响应是一个有行号的列表和对发现的错误的描述。](js-hint-commandline.png)
 
-你也可以将这些工具与任务运行器/构建工具（如 [Gulp](https://gulpjs.com/) 或 [Webpack](https://webpack.github.io/)）一起使用，以便在开发过程中自动对你的 JavaScript 进行 lint。（见后面文章中的[使用任务运行器来自动测试工具](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#使用任务运行器作为自动化测试工具)。）关于 ESLint 选项，请参见 [ESLint 集成](https://eslint.org/docs/user-guide/integrations)；Grunt 开箱即支持 JSHint，并且还有其他可用的集成，例如 [Webpack 的 JSHint 加载器](https://github.com/webpack-contrib/jshint-loader)。
+你也可以将这些工具与任务运行器/构建工具（如 [Gulp](https://gulpjs.com/) 或 [Webpack](https://webpack.github.io/)）一起使用，以便在开发过程中自动对你的 JavaScript 进行 lint。（见后面文章中的[使用任务运行器来自动测试工具](/zh-CN/docs/Learn_web_development/Extensions/Testing/Automated_testing#使用任务运行器作为自动化测试工具)。）关于 ESLint 选项，请参见 [ESLint 集成](https://eslint.org/docs/user-guide/integrations)；Grunt 开箱即支持 JSHint，并且还有其他可用的集成，例如 [Webpack 的 JSHint 加载器](https://github.com/webpack-contrib/jshint-loader)。
 
 > [!NOTE]
 > 尽管 ESLint 的安装和配置过程比起 JSHint 更繁琐，但是它也更强大。
@@ -235,7 +235,7 @@ fetch(requestURL).then((response) => {
 
 ### 使用了现代 JavaScript/API 特性
 
-在[之前的文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#浏览器不支持新特性)中，我们描述了由于 HTML 和 CSS 的语言性质，处理 HTML 和 CSS 错误和不被识别特性的一些方法。然而，JavaScript 不像 HTML 和 CSS 那么宽容，如果 JavaScript 引擎遇到错误或不被识别的语法（例如在使用新的不受支持的 特性时），它通常会抛出错误。
+在[之前的文章](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#浏览器不支持新特性)中，我们描述了由于 HTML 和 CSS 的语言性质，处理 HTML 和 CSS 错误和不被识别特性的一些方法。然而，JavaScript 不像 HTML 和 CSS 那么宽容，如果 JavaScript 引擎遇到错误或不被识别的语法（例如在使用新的不受支持的 特性时），它通常会抛出错误。
 
 有几种处理新特性支持的策略可以探索，让我们来探讨一下最常见的几种。
 
@@ -391,7 +391,7 @@ Aaron Andersen 撰写的[浏览器用户代理字符串的历史](https://webaim
 
 ### 处理 JavaScript 前缀
 
-在上一篇文章中，我们详细讨论了[处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)的内容。新的 JavaScript 实现有时也会使用前缀，但与 CSS 使用{{Glossary("kebab_case", "连字符")}}不同，JavaScript 采用{{Glossary("camel_case", "驼峰命名")}}。例如，如果一个新的 jshint API 对象名为 `Object`，不同的浏览器厂商会使用以下前缀：
+在上一篇文章中，我们详细讨论了[处理 CSS 前缀](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#处理_css_前缀)的内容。新的 JavaScript 实现有时也会使用前缀，但与 CSS 使用{{Glossary("kebab_case", "连字符")}}不同，JavaScript 采用{{Glossary("camel_case", "驼峰命名")}}。例如，如果一个新的 jshint API 对象名为 `Object`，不同的浏览器厂商会使用以下前缀：
 
 - Mozilla 会使用 `mozObject`
 - Chrome、Opera、Safari 会使用 `webkitObject`
@@ -422,7 +422,7 @@ window.AudioContext;
 
 ## 寻求帮助
 
-在使用 JavaScript 的过程中，你还会遇到很多其他问题；最重要的是知道如何在网上找到答案。请参考 HTML 和 CSS 文章的[寻找帮助部分](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#寻找帮助)，了解我们的最佳建议。
+在使用 JavaScript 的过程中，你还会遇到很多其他问题；最重要的是知道如何在网上找到答案。请参考 HTML 和 CSS 文章的[寻找帮助部分](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#寻找帮助)，了解我们的最佳建议。
 
 ## 总结
 

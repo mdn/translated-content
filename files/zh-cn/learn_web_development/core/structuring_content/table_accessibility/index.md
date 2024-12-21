@@ -49,7 +49,7 @@ original_slug: Learn/HTML/Tables/Advanced
 
 我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.
 
-1. 打开你的语言老师的学校时间表，就是 [HTML 表格基础](/zh-CN/docs/Learn/HTML/Tables/Basics#动手练习：colgroup_和_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) 文件复制到本地。
+1. 打开你的语言老师的学校时间表，就是 [HTML 表格基础](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#动手练习：colgroup_和_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) 文件复制到本地。
 2. 为表格添加一个合适的标题。
 3. 保存你的代码，然后用浏览器打开，看看你的表格是什么样的。
 
@@ -229,7 +229,7 @@ th {
 
 屏幕阅读设备会识别所有的标题，然后在它们和它们所关联的单元格之间产生程序关联。列和行标题的组合将标识和解释每个单元格中的数据，以便屏幕阅读器用户可以类似于视力正常的用户的操作来理解表格。
 
-我们之前的文章就提到过这一点，可见[使用 \<th> 元素添加标题](/zh-CN/docs/Learn/HTML/Tables/Basics#使用_th_元素添加标题)。
+我们之前的文章就提到过这一点，可见[使用 \<th> 元素添加标题](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#使用_th_元素添加标题)。
 
 ### scope 属性
 

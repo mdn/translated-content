@@ -63,7 +63,7 @@ l10n:
 - 专用 web 服务器可以一直拥有一样的 IP 地址，这也称为*专有 IP 地址*（不是所有的 {{Glossary("ISP")}} 都会为家庭线提供一个固定的 IP 地址）
 - 专用 web 服务器往往由第三方提供者维护
 
-因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在[这篇文章](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#专业网站机构和托管)中找到更多的细节。
+因为所有的这些原因，寻找一个优秀的托管提供者是建立你的网站的一个重要部分。比较不同公司提供的服务并选择一个适合你的需求和预算的服务（服务的价格从免费到每月上万美金不等）。你可以在[这篇文章](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#专业网站机构和托管)中找到更多的细节。
 
 一旦你设置好一个网络托管解决方案，你必须[上传你的文件到你的 web 服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)。
 

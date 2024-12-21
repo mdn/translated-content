@@ -25,7 +25,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ### 使用弹性/相对单位
 
-为了在尽可能广泛的设备上获得最大的灵活性，建议使用 em 和 rem 或百分比和视口单位等相对单位来设置容器、填充等的大小，如果你希望它们随视口宽度变化。你可以在我们的 [CSS 值与单位指南](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#相对长度单位)中阅读更多相关内容。
+为了在尽可能广泛的设备上获得最大的灵活性，建议使用 em 和 rem 或百分比和视口单位等相对单位来设置容器、填充等的大小，如果你希望它们随视口宽度变化。你可以在我们的 [CSS 值与单位指南](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相对长度单位)中阅读更多相关内容。
 
 ### 不要使用预处理器
 

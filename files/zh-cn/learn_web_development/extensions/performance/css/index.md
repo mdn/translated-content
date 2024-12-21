@@ -35,7 +35,7 @@ original_slug: Learn/Performance/CSS
 
 在开始优化 CSS 之前，你应该回答一个问题：“我需要优化什么？”下面讨论的一些技巧和技术是适用于几乎任何 Web 项目的良好实践，然而另一些只在特定情况下需要。试图在所有地方应用这些技术可能是不必要的，而且可能会浪费你的时间。你应该确定每个项目实际上需要哪些性能优化。
 
-为了做到这一点，你需要[测量网站性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如上面的链接所示，有几种不同的测量性能的方法，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，入门的最佳方法是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，以查看页面加载中哪些部分花费了很长时间，并且需要进行优化。
+为了做到这一点，你需要[测量网站性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如上面的链接所示，有几种不同的测量性能的方法，其中一些涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，入门的最佳方法是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance#通用性能报告工具)工具，以查看页面加载中哪些部分花费了很长时间，并且需要进行优化。
 
 ## 优化渲染
 
@@ -81,7 +81,7 @@ original_slug: Learn/Performance/CSS
   }
   ```
 
-  将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#优先级_2)，以后需要时就很容易覆盖样式。
+  将选择器简化和降低优先级对于维护也是有好处的。简单选择器的作用很容易理解，如果选择器不具有那么高的[优先级](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)，以后需要时就很容易覆盖样式。
 
 - **不要将样式应用于不需要的元素**：常见的错误是使用[通用选择器](/zh-CN/docs/Web/CSS/Universal_selectors)将样式应用于所有元素，或者至少应用于比实际需要的元素更多的元素。这种类型的样式会对性能产生负面影响，特别是在较大的站点上。
 
@@ -192,7 +192,7 @@ CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对�
 
 本节包含一些有用的技巧，可以用于改善 Web 字体的性能。
 
-总体而言，请仔细考虑在你的网站上使用的字体。某些字体文件可能非常大（几兆字节）。虽然使用大量字体以获得视觉上的吸引力可能很诱人，但这可能会显著降低页面加载速度，并使你的网站看起来凌乱不堪。你可能只需要使用两到三种字体，如果选择使用 [Web 安全字体](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#网页安全字体)，则可以使用更少的字体。
+总体而言，请仔细考虑在你的网站上使用的字体。某些字体文件可能非常大（几兆字节）。虽然使用大量字体以获得视觉上的吸引力可能很诱人，但这可能会显著降低页面加载速度，并使你的网站看起来凌乱不堪。你可能只需要使用两到三种字体，如果选择使用 [Web 安全字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#网页安全字体)，则可以使用更少的字体。
 
 ### 字体加载
 

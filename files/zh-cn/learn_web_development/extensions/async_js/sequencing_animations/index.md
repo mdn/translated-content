@@ -85,11 +85,11 @@ alice1.animate(aliceTumbling, aliceTiming);
 
 我们希望你尝试一些不同的方式来实现这个功能，以便于加强对使用 Promise 的不同方式的理解。
 
-1. 首先，实现一个能够工作的代码，但它存在“回调地狱”问题（我们在[关于回调的讨论](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing#回调)中提到过）的 Promise 版本。
+1. 首先，实现一个能够工作的代码，但它存在“回调地狱”问题（我们在[关于回调的讨论](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing#回调)中提到过）的 Promise 版本。
 
-2. 接下来，使用 [Promise 链](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises#链式使用_promise)来实现它。注意：可以用[箭头函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#箭头函数)的不同形式来编写这个函数。尝试这些不同的形式。哪个最简洁？哪个可读性最好？
+2. 接下来，使用 [Promise 链](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises#链式使用_promise)来实现它。注意：可以用[箭头函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions#箭头函数)的不同形式来编写这个函数。尝试这些不同的形式。哪个最简洁？哪个可读性最好？
 
-3. 使用 [`async` 和 `await`](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises#async_和_await) 来实现它。
+3. 使用 [`async` 和 `await`](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises#async_和_await) 来实现它。
 
 别忘了，`element.animate()` 并不返回一个 `Promise`：它返回一个 `Animation` 对象，该对象具有一个 `finished` 属性，这个属性才是 `Promise`。
 

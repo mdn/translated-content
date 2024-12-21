@@ -155,7 +155,7 @@ target / context = result
 
 在伸缩盒中，初始的行为是，弹性的物件将参照容器里面的空间的大小，缩小和分布物件之间的空间。通过更改`flex-grow`和 `flex-shrink`的值，你可以指示在物件遇到周围有更多或者更少的空间的情况下，你所期望的物件表现。
 
-在下面的示例中，和布局专题的[Flexbox: Flexible sizing of flex items](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
+在下面的示例中，和布局专题的[弹性盒子：弹性元素的动态尺寸](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox#flex_项的动态尺寸)中所描述的那样，使用了`flex: 1`的简写，可伸缩物件每个将会占据一份可伸缩容器中相等大小的空间。
 
 ```css
 .container {
@@ -172,7 +172,7 @@ target / context = result
 
 ### CSS 网格
 
-在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[Flexible grids with the fr unit](/zh-CN/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit)下的学习布局网格专题了解更多和这一方式相关的信息。
+在 CSS 网格布局中，`fr`单位许可了跨网格轨道可用空间的分布。下面的示例创建了一个有着 3 个大小为`1fr`的轨道的网格容器。这会创建三个列轨道，每个占据了容器中可用空间的一部分。你可以在[使用 fr 单位的灵活网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids#使用_fr_单位的灵活网格)下的学习布局网格专题了解更多和这一方式相关的信息。
 
 ```css
 .container {

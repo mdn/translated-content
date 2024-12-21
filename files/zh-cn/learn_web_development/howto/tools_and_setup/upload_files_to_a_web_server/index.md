@@ -43,7 +43,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_serv
 有多种 SFTP 客户端。我们的示例使用的是 [FileZilla](https://filezilla-project.org/)，因为它免费，且可在 Windows、macOS 以及 Linux 上使用。要安装 FileZilla，请转到 [FileZilla 下载页面](https://filezilla-project.org/download.php?type=client)，点击下载按钮，然后以常规的方式通过安装文件安装它。
 
 > [!NOTE]
-> 当然还有很多其他的选择。有关详细的信息，请参阅[发布工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#发布工具)。
+> 当然还有很多其他的选择。有关详细的信息，请参阅[发布工具](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#发布工具)。
 
 打开 FileZilla 应用程序，你应该看到这样的界面：
 

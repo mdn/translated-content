@@ -78,7 +78,7 @@ l10n:
 
 本例中的用例是最重要的。每当使用一组单选按钮时，都应该将它们嵌套在 {{HTMLElement("fieldset")}} 元素中。还有其他用例，一般来说，{{HTMLElement("fieldset")}} 元素也可以用来对表单进行分段。理想情况下，长表单应该在拆分为多个页面，但是如果表单很长，却必须在单个页面上，那么将以不同的关联关系划分的分段，分别放在不同的 fieldset 里，可以提高可用性。
 
-因为它对辅助技术的影响， {{HTMLElement("fieldset")}} 元素是构建无障碍表单的关键元素之一。无论如何，你有责任不去滥用它。如果可能，每次构建表单时，请尝试[听一听屏幕阅读器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#屏幕阅读器)如何解释它。如果听起来很奇怪，请尝试改进表单结构。
+因为它对辅助技术的影响， {{HTMLElement("fieldset")}} 元素是构建无障碍表单的关键元素之一。无论如何，你有责任不去滥用它。如果可能，每次构建表单时，请尝试[听一听屏幕阅读器](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#屏幕阅读器)如何解释它。如果听起来很奇怪，请尝试改进表单结构。
 
 ## \<label> 元素
 

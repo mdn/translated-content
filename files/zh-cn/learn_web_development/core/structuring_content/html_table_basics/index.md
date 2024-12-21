@@ -217,11 +217,11 @@ td {
 
 ### 什么时候你不应该使用 HTML 表格？
 
-HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途。不幸的是，许多人习惯用 HTML 表格来实现网页布局，例如：一行包含头部，一行包含几列内容，一行包含尾部。你可以在我们的[无障碍学习模块](/zh-CN/docs/Learn_web_development/Core/Accessibility)中的[页面布局](/zh-CN/docs/Learn/Accessibility/HTML#页面布局)章节获得更多细节内容和一个示例。这种做法以前是很常见的，因为以前 CSS 在不同浏览器上的兼容性比较糟糕；表格布局现在不太普遍，但你可能仍然会在网络的某些角落看到它们。
+HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途。不幸的是，许多人习惯用 HTML 表格来实现网页布局，例如：一行包含头部，一行包含几列内容，一行包含尾部。你可以在我们的[无障碍学习模块](/zh-CN/docs/Learn_web_development/Core/Accessibility)中的[页面布局](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#页面布局)章节获得更多细节内容和一个示例。这种做法以前是很常见的，因为以前 CSS 在不同浏览器上的兼容性比较糟糕；表格布局现在不太普遍，但你可能仍然会在网络的某些角落看到它们。
 
 简单来说，使用表格布局而不使用 [CSS 布局技巧](/zh-CN/docs/Learn_web_development/Core/CSS_layout)是很糟糕的。主要的理由有以下几个：
 
-1. **表格布局减少了视觉受损的用户的无障碍**: 盲人所使用的[屏幕阅读器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#屏幕阅读器)会解析存在于 HTML 页面上的标签，然后为用户读出其中的内容。因为对于布局来说，表格不是一个正确的工具，使用的标记比使用 CSS 布局技术更复杂，所以屏幕阅读器的输出会让他们的用户感到困惑。
+1. **表格布局减少了视觉受损的用户的无障碍**: 盲人所使用的[屏幕阅读器](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#屏幕阅读器)会解析存在于 HTML 页面上的标签，然后为用户读出其中的内容。因为对于布局来说，表格不是一个正确的工具，使用的标记比使用 CSS 布局技术更复杂，所以屏幕阅读器的输出会让他们的用户感到困惑。
 2. **表格会产生很多标签**: 正如刚才提到的，表格布局通常会比正确的布局技术涉及更复杂的标签结构，这会导致代码变得更难于编写、维护、调试。
 3. **表格不能自动响应**: 当你使用正确的布局容器（比如 {{htmlelement("header")}}、{{htmlelement("section")}}、{{htmlelement("article")}} 或是 {{htmlelement("div")}}）时，它们的默认宽度是父元素的 100%；而表格的默认大小是根据其内容而定的。因此，需要采取额外的措施来获取表格布局样式，以便有效地在各种设备上工作。
 

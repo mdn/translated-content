@@ -23,4 +23,4 @@ slug: Web/CSS/CSS_colors/Color_picker_tool
 - [基础文本和字体样式](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [通过 CSS 编辑边框样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
 - [通过 CSS 改变背景样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [颜色及颜色对比](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#颜色和颜色对比度)
+- [颜色及颜色对比](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#颜色和颜色对比度)

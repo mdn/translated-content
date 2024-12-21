@@ -303,7 +303,7 @@ def renew_book_librarian(request, pk):
 > [!WARNING]
 > 虽然你也可以通过请求直接访问表单数据（例如`request.POST['renewal_date']` 或 `request.GET['renewal_date']`（如果使用 GET 请求），但不建议这样做。清理后的数据是无害的、验证过的、并转换为 Python 友好类型。
 
-视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 `HttpResponseRedirect` 和 `reverse()` ，重定向到名为'`all-borrowed`'的视图（这是在 [Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限](/zh-CN/docs/Learn/Server-side/Django/Authentication#challenge_yourself)）。如果你没有创建该页面，请考虑重定向到 URL'/'处的主页。
+视图的表单处理部分的最后一步，是重定向到另一个页面，通常是“成功”页面。在这种情况下，我们使用 `HttpResponseRedirect` 和 `reverse()` ，重定向到名为'`all-borrowed`'的视图（这是在 [Django 教程第 8 部分中创建的“挑战”：用户身份验证和权限](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#挑战自己)）。如果你没有创建该页面，请考虑重定向到 URL'/'处的主页。
 
 这就是表单处理本身所需的一切，但我们仍然需要将视图，限制为图书馆员可以访问。我们应该在 `BookInstance` （“`can_renew`”）中创建一个新的权限，但为了简单起见，我们只需使用`@permission_required`函数装饰器，和我们现有的 `can_mark_returned` 权限。
 
@@ -440,7 +440,7 @@ def renew_book_librarian(request, pk):
 
 ### 测试页面
 
-如果你接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/Learn/Server-side/Django/Authentication#challenge_yourself)，你将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
+如果你接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#challenge_yourself)，你将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
 
 ```django
 {% if perms.catalog.can_mark_returned %}-

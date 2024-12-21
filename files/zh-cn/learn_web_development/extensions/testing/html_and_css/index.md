@@ -46,7 +46,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ## 首先：解决一般问题
 
-在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
+在本系列的[第一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Testing/Introduction#测试查错)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
 
 在我们的[调试 HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
 
@@ -263,7 +263,7 @@ form > #date
 
 响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
 
-分辨率也是个大问题——例如，移动设备不太可能需要大的图像，但更有可能有较慢的互联网连接，甚至可能有昂贵的数据流量计划，这会使浪费带宽成为一个问题。此外，不同的设备可能有各种不同的分辨率，这意味着较小的图像可能会出现像素化。有一些技术可以解决这些问题，从[媒体查询](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design#媒体查询)到更复杂的[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#分辨率切换：不同的尺寸)，包括 {{HTMLElement('picture')}} 元素和 {{HTMLElement('img')}} 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)属性。
+分辨率也是个大问题——例如，移动设备不太可能需要大的图像，但更有可能有较慢的互联网连接，甚至可能有昂贵的数据流量计划，这会使浪费带宽成为一个问题。此外，不同的设备可能有各种不同的分辨率，这意味着较小的图像可能会出现像素化。有一些技术可以解决这些问题，从[媒体查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#媒体查询)到更复杂的[响应式图像技术](/zh-CN/docs/Web/HTML/Responsive_images#分辨率切换：不同的尺寸)，包括 {{HTMLElement('picture')}} 元素和 {{HTMLElement('img')}} 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)属性。
 
 ## 寻找帮助
 
