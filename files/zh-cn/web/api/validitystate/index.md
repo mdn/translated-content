@@ -45,4 +45,4 @@ DOM 接口 `ValidityState` 代表一个元素可有的有效性状态（_validit
 ## 参见
 
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)

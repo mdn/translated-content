@@ -204,7 +204,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 搜索表单的一个问题是它们的无障碍性。常见的设计惯例是不为搜索字段提供标签（尽管可能会有放大镜或类似图标），因为由于放置位置的原因，搜索表单的目的通常对于视力正常的用户而言相当明显（[这个例子展示了一个典型的模式](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
-但是，这可能会使屏幕阅读器用户感到困惑，因为它们不会对搜索输入内容有任何口头指示。解决此问题而不会影响你的视觉设计的一种方法是使用 [WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 功能：
+但是，这可能会使屏幕阅读器用户感到困惑，因为它们不会对搜索输入内容有任何口头指示。解决此问题而不会影响你的视觉设计的一种方法是使用 [WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 功能：
 
 - `<form>` 元素上， `search` 值的 `role` 属性向屏幕阅读器用户声明该表单是搜索表单。
 - 还可以在 {{HTMLElement("input")}} 本身使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。这应该是一个描述性的文本标签，屏幕阅读器会读出该标签；它用作 `<label>` 的非可视等效项。
@@ -439,7 +439,7 @@ input:valid ~ span::after {
 
 ## 参见
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 及其所基于的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
-- [CSS 属性的兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性的兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

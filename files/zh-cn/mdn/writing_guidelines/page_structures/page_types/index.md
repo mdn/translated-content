@@ -168,7 +168,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 - [使用 WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API)
 - [基于 Web Audio API 的可视化](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [CSS 的层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [CSS 的层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 ## 术语页
 

@@ -67,4 +67,4 @@ if (done === true) {
 
 - [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
 - [比较操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators)
-- [在代码中做判断 — 条件表达式](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [在代码中做判断 — 条件表达式](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)

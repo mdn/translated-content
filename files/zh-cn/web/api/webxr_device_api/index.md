@@ -235,7 +235,7 @@ The following guides and tutorials are a great resource to learn how to comprehe
 ## 参见
 
 - [Web 上的图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#web_上的其他图形)
-- [绘制图形](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [WebGL API](/zh-CN/docs/Web/API/WebGL_API)：加速 Web 上的 2D 和 3D 图形
 - [Canvas API](/zh-CN/docs/Web/API/Canvas_API)：Web 2D 绘图
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)

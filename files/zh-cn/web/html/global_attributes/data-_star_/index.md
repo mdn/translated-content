@@ -29,7 +29,7 @@ slug: Web/HTML/Global_attributes/data-*
 </img>
 ```
 
-有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)。
+有关使用 HTML 数据属性的更深入的教程，请参阅[使用数据属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)。
 
 ## 规范
 
@@ -43,4 +43,4 @@ slug: Web/HTML/Global_attributes/data-*
 
 - 所有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.dataset")}} 属性允许访问和修改这些值
-- [使用数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)
+- [使用数据属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

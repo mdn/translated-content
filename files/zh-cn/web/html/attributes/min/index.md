@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`min`** 属性定义了可接受和有效的输入最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[验证](/zh-CN/docs/Learn/Forms/Form_validation)。此值必须小于等于 `max` 属性的值。
+**`min`** 属性定义了可接受和有效的输入最小值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 小于此值，则该元素将无法通过[验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须小于等于 `max` 属性的值。
 
 某些输入类型具有默认的最小值。如果输入项没有默认的最小值，且 `min` 指定的值无法转换为有效的数字（或未设置最小值），则输入没有最小值。
 
@@ -138,7 +138,7 @@ input:invalid {
 - [`max`](/zh-CN/docs/Web/HTML/Attributes/max)
 - 其他 meter 属性：[`low`](/zh-CN/docs/Web/HTML/Attributes/low)、[`high`](/zh-CN/docs/Web/HTML/Attributes/high)、[`optimum`](/zh-CN/docs/Web/HTML/Attributes/optimum)
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

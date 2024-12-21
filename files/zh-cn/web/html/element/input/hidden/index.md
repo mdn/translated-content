@@ -168,5 +168,5 @@ textarea {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的 {{domxref("HTMLInputElement")}} 接口

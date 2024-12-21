@@ -399,7 +399,7 @@ input:valid + span::after {
 
 ## 示例
 
-可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
+可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
 
 ## 规范
 
@@ -411,8 +411,8 @@ input:valid + span::after {
 
 ## 参阅
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 元素和其基于的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}：多行文本输入元素
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)
