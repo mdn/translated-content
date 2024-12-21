@@ -23,10 +23,8 @@ original_slug: Learn/CSS/CSS_layout
 
 这些文章将提供在 CSS 中可用的基本布局工具和技术的指导。
 
-- [介绍 CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
+- [介绍 CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : 本文将重述一些我们在之前的模块中已经涉及的 CSS 布局功能——例如不同的 {{cssxref("display")}} 值——并介绍我们将在本单元中涵盖的一些概念。
-- [正常布局流](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-  - : 这篇文章介绍正常的流布局，或者说，在你没有改变默认布局规则情况下的页面元素布局方式。
 - [弹性盒](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
   - : [弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) 是一种新技术，但在如今各个浏览器都广泛支持的情况下，它已经开始准备广泛应用了。弹性盒子提供了工具，允许快速创建曾经被证明用 CSS 很难实现的一些复杂，灵活的布局和功能。本文将解释所有的基本原理。
 - [网格](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

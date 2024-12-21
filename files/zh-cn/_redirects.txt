@@ -597,7 +597,7 @@
 /zh-CN/docs/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/HTML/HTML_Elements	/zh-CN/docs/Web/HTML/Element/Heading_Elements
 /zh-CN/docs/HTML/HTML_Elements/time	/zh-CN/docs/Web/HTML/Element/time
-/zh-CN/docs/HTML/Introduction	/zh-CN/docs/conflicting/Learn_web_development/Core/Structuring_content
+/zh-CN/docs/HTML/Introduction	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/HTML/块级元素	/zh-CN/docs/Glossary/Block-level_content
 /zh-CN/docs/HTML\Canvas\Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/HTTP	/zh-CN/docs/Web/HTTP
@@ -1036,7 +1036,7 @@
 /zh-CN/docs/Learn/Accessibility/Multimedia	/zh-CN/docs/Learn_web_development/Core/Accessibility/Multimedia
 /zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics	/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 /zh-CN/docs/Learn/Accessibility/What_is_accessibility	/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
-/zh-CN/docs/Learn/CSS	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/zh-CN/docs/Learn/CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Building_blocks	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
 /zh-CN/docs/Learn/CSS/Building_blocks/Advanced_box_effects	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
@@ -1057,7 +1057,7 @@
 /zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Combinators
 /zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
-/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors
+/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 /zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing
 /zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks
@@ -1075,7 +1075,7 @@
 /zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 /zh-CN/docs/Learn/CSS/CSS_layout/Media_queries	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Media_queries
 /zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
-/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow	/zh-CN/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction
+/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction
 /zh-CN/docs/Learn/CSS/CSS_layout/Position_skills	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Position_skills
 /zh-CN/docs/Learn/CSS/CSS_layout/Positioning	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning
 /zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples
@@ -1084,14 +1084,14 @@
 /zh-CN/docs/Learn/CSS/CSS_layout/传统的布局方法	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 /zh-CN/docs/Learn/CSS/CSS_layout/定位	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Positioning
 /zh-CN/docs/Learn/CSS/CSS_layout/网格	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids
-/zh-CN/docs/Learn/CSS/First_steps	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics
+/zh-CN/docs/Learn/CSS/First_steps	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Learn/CSS/First_steps/CSS如何运行	/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /zh-CN/docs/Learn/CSS/First_steps/Getting_started	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Getting_started
-/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started
+/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /zh-CN/docs/Learn/CSS/First_steps/How_CSS_works	/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 /zh-CN/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
+/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /zh-CN/docs/Learn/CSS/First_steps/开始	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /zh-CN/docs/Learn/CSS/Howto	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems
 /zh-CN/docs/Learn/CSS/Howto/CSS_FAQ	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
@@ -1189,7 +1189,7 @@
 /zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5	/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5
 /zh-CN/docs/Learn/Forms/How_to_structure_a_web_form	/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /zh-CN/docs/Learn/Forms/Other_form_controls	/zh-CN/docs/Learn_web_development/Extensions/Forms/Other_form_controls
-/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls	/zh-CN/docs/conflicting/Learn_web_development/Extensions/Forms
+/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls	/zh-CN/docs/Learn_web_development/Extensions/Forms
 /zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Learn/Forms/Styling_web_forms	/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
@@ -1220,7 +1220,7 @@
 /zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_4	/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4
 /zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /zh-CN/docs/Learn/HTML/Forms/My_first_HTML_form	/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form
-/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets	/zh-CN/docs/conflicting/Learn_web_development/Extensions/Forms
+/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets	/zh-CN/docs/Learn_web_development/Extensions/Forms
 /zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms	/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
@@ -1239,7 +1239,7 @@
 /zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 /zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 /zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
-/zh-CN/docs/Learn/HTML/Multimedia_and_embedding	/zh-CN/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b
+/zh-CN/docs/Learn/HTML/Multimedia_and_embedding	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page
@@ -1248,11 +1248,11 @@
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术	/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/在网页中添加矢量图形	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
-/zh-CN/docs/Learn/HTML/Tables	/zh-CN/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics
+/zh-CN/docs/Learn/HTML/Tables	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /zh-CN/docs/Learn/HTML/Tables/Advanced	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /zh-CN/docs/Learn/HTML/Tables/Basics	/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /zh-CN/docs/Learn/HTML/Tables/Structuring_planet_data	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Planet_data_table
-/zh-CN/docs/Learn/JavaScript	/zh-CN/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792
+/zh-CN/docs/Learn/JavaScript	/zh-CN/docs/Learn_web_development/Core/Scripting
 /zh-CN/docs/Learn/JavaScript/Asynchronous	/zh-CN/docs/Learn_web_development/Extensions/Async_JS
 /zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises
 /zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-CN/docs/Learn_web_development/Extensions/Async_JS
@@ -1282,7 +1282,7 @@
 /zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents	/zh-CN/docs/Learn_web_development/Core/Scripting/DOM_scripting
 /zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs	/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 /zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs	/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
-/zh-CN/docs/Learn/JavaScript/First_steps	/zh-CN/docs/conflicting/Learn_web_development/Core/Scripting
+/zh-CN/docs/Learn/JavaScript/First_steps	/zh-CN/docs/Learn_web_development/Core/Scripting
 /zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash	/zh-CN/docs/Learn_web_development/Core/Scripting/A_first_splash
 /zh-CN/docs/Learn/JavaScript/First_steps/Arrays	/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays
 /zh-CN/docs/Learn/JavaScript/First_steps/Math	/zh-CN/docs/Learn_web_development/Core/Scripting/Math
@@ -1310,7 +1310,7 @@
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 /zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
 /zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help
-/zh-CN/docs/Learn/MathML	/zh-CN/docs/conflicting/Web/MathML
+/zh-CN/docs/Learn/MathML	/zh-CN/docs/Web/MathML
 /zh-CN/docs/Learn/MathML/First_steps	/zh-CN/docs/Web/MathML/Guides
 /zh-CN/docs/Learn/MathML/First_steps/Fractions_and_roots	/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots
 /zh-CN/docs/Learn/MathML/First_steps/Getting_started	/zh-CN/docs/Web/MathML/Guides/Getting_started
@@ -1381,7 +1381,7 @@
 /zh-CN/docs/Learn/Server-side/First_steps/Introduction	/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction
 /zh-CN/docs/Learn/Server-side/First_steps/Web_frameworks	/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 /zh-CN/docs/Learn/Server-side/First_steps/Website_security	/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security
-/zh-CN/docs/Learn/Tools_and_testing	/zh-CN/docs/conflicting/Learn_web_development/Extensions/Testing
+/zh-CN/docs/Learn/Tools_and_testing	/zh-CN/docs/Learn_web_development/Extensions/Testing
 /zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries
 /zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started	/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 /zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction	/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Introduction
@@ -2627,7 +2627,7 @@
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /zh-CN/docs/Web/Guide/Audio_and_video_manipulation	/zh-CN/docs/Web/Media/Audio_and_video_manipulation
-/zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Web/Guide/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
@@ -2681,7 +2681,7 @@
 /zh-CN/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /zh-CN/docs/Web/Guide/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Web/Guide/HTML/Forms/表单入门	/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form
-/zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/conflicting/Learn_web_development/Core/Structuring_content
+/zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 /zh-CN/docs/Web/Guide/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
@@ -2727,7 +2727,7 @@
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content
 /zh-CN/docs/Web/HTML/Inline_elements	/zh-CN/docs/Glossary/Inline-level_content
-/zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/conflicting/Learn_web_development/Core/Structuring_content
+/zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/Web/HTML/Link_types	/zh-CN/docs/Web/HTML/Attributes/rel
 /zh-CN/docs/Web/HTML/Link_types/prefetch	/zh-CN/docs/Web/HTML/Attributes/rel/prefetch
 /zh-CN/docs/Web/HTML/Link_types/preload	/zh-CN/docs/Web/HTML/Attributes/rel/preload
@@ -3125,7 +3125,7 @@
 /zh-CN/docs/learn/Accessibility/什么是可访问性	/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
 /zh-CN/docs/learn/Accessibility/多媒体	/zh-CN/docs/Learn_web_development/Core/Accessibility/Multimedia
 /zh-CN/docs/learn/GitHub	/zh-CN/docs/Learn_web_development/Core/Version_control
-/zh-CN/docs/learn/HTML/Introduction_to_HTML	/zh-CN/docs/conflicting/Learn_web_development/Core/Structuring_content
+/zh-CN/docs/learn/HTML/Introduction_to_HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-CN/docs/learn/HTML/Introduction_to_HTML/创建超链接	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
 /zh-CN/docs/learn/How_the_Internet_works	/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
