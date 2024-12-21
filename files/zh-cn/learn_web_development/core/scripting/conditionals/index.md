@@ -16,8 +16,8 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        了解 <a href="/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</a>
-        和 <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS 基础</a>，熟悉前面课程中涵盖的
+        了解 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a>
+        和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 基础</a>，熟悉前面课程中涵盖的
         JavaScript 的基础知识。
       </td>
     </tr>
@@ -871,7 +871,7 @@ function insertAtCaret(text) {
 
 ## 参见
 
-- [比较运算符](/en-US/docs/Learn_web_development/Core/Scripting/Math#比较运算符)
+- [比较运算符](/zh-CN/docs/Learn_web_development/Core/Scripting/Math#比较运算符)
 - [条件声明详细信息](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#条件语句)
 - [if...else 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
 - [条件（三元）运算符参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
