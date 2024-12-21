@@ -52,15 +52,15 @@ margin-block-end: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_block_end_margin
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_block_end_margin
 div {
   background-color: yellow;
   width: 120px;
@@ -76,7 +76,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("ブロック方向の末尾のマージンを設定", 140, 140)}}
+{{EmbedLiveSample("Setting_block_end_margin", 140, 140)}}
 
 ## 仕様書
 
