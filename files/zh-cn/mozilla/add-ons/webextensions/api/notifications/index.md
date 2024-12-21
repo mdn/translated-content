@@ -11,11 +11,11 @@ l10n:
 
 在 macOS 上，通知看起来像这样：
 
-![在 macOS 上的示例通知：通知位于系统时钟下方，有一个粗体标题“Click notification”，接着是一段正常字体的文本“You clicked https://developer.mozilla.org/zh-CN/docs/MDN”，且左侧有 Firefox Nightly 的标志，右侧有一个链接图标的通知。](notification-macos.png)
+![在 macOS 上的示例通知：通知位于系统时钟下方，有一个粗体标题“Click notification”，接着是一段正常字体的文本“You clicked https://developer.mozilla.org/en-US/docs/MDN”。通知的左侧有 Firefox Nightly 的标志，右侧有一个链接图标。](notification-macos.png)
 
 在 Windows 上，通知会一直保留在操作中心中，直到浏览器关闭，看起来是这样的：
 
-![在 Windows 10 上的示例通知：位于系统时钟上方，有一个粗体标题“Click notification”，接着是一段正常字体的文本“You clicked https://developer.mozilla.org/zh-CN/docs/MDN”，左上角有一个较小的 Firefox 的图标并跟着文本“Mozilla Firefox”，在通知正文内容左侧还有一个链接图标的通知。](notification-windows.png)
+![在 Windows 10 上的示例通知：位于系统时钟上方，有一个粗体标题“Click notification”，接着是一段正常字体的文本“You clicked https://developer.mozilla.org/en-US/docs/MDN”。通知的左上角有一个较小的 Firefox 的图标并跟着文本“Mozilla Firefox”，在通知正文内容左侧还有一个链接图标。](notification-windows.png)
 
 要使用该 API，你需要预先取得“notifications”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
