@@ -1,7 +1,8 @@
 ---
 title: Cloud
 slug: Glossary/Cloud
-page-type: glossary-definition
+l10n:
+  sourceCommit: 99c2c3add298eaebe27102b2d83e27fd3ca80aef
 ---
 
 {{GlossarySidebar}}
