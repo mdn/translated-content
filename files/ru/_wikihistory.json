@@ -1122,7 +1122,7 @@
     "modified": "2020-10-27T09:22:04.704Z",
     "contributors": ["duckDominatrix"]
   },
-  "Learn": {
+  "Learn_web_development": {
     "modified": "2020-10-04T14:26:11.837Z",
     "contributors": [
       "akariZ",
@@ -1148,7 +1148,7 @@
       "Jeremie"
     ]
   },
-  "Learn/Accessibility": {
+  "Learn_web_development/Core/Accessibility": {
     "modified": "2020-07-16T22:40:00.507Z",
     "contributors": [
       "baradusov",
@@ -1162,150 +1162,23 @@
       "Paul_Yuhnovich"
     ]
   },
-  "Learn/Accessibility/Accessibility_troubleshooting": {
+  "Learn_web_development/Core/Accessibility/Accessibility_troubleshooting": {
     "modified": "2020-07-16T22:40:36.878Z",
     "contributors": ["boxa6"]
   },
-  "Learn/Accessibility/CSS_and_JavaScript": {
+  "Learn_web_development/Core/Accessibility/CSS_and_JavaScript": {
     "modified": "2020-07-16T22:40:19.160Z",
     "contributors": ["Madihander", "boxa6"]
   },
-  "Learn/Accessibility/HTML": {
+  "Learn_web_development/Core/Accessibility/HTML": {
     "modified": "2020-07-16T22:40:14.761Z",
     "contributors": ["TurtleOld", "baradusov", "niktariy", "boxa6"]
   },
-  "Learn/Accessibility/What_is_accessibility": {
+  "Learn_web_development/Core/Accessibility/What_is_accessibility": {
     "modified": "2020-07-16T22:40:06.747Z",
     "contributors": ["niktariy", "Frisle", "Pristavka"]
   },
-  "Learn/CSS": {
-    "modified": "2020-07-16T22:25:37.223Z",
-    "contributors": [
-      "Ivan961",
-      "binxer",
-      "skrikl",
-      "izhurav",
-      "alexbs",
-      "sborenko",
-      "niktariy",
-      "bezik",
-      "Shychara",
-      "kolanski",
-      "VladdOs",
-      "BychekRU",
-      "uleming",
-      "Andrew_Pfeiffer"
-    ]
-  },
-  "Learn/CSS/Building_blocks": {
-    "modified": "2020-07-16T22:28:09.658Z",
-    "contributors": ["Ivan961", "chrisdavidmills"]
-  },
-  "Learn/CSS/Building_blocks/Advanced_styling_effects": {
-    "modified": "2020-07-16T22:28:22.659Z",
-    "contributors": ["Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Backgrounds_and_borders": {
-    "modified": "2020-11-06T03:37:34.340Z",
-    "contributors": ["AlexUS", "sadmice", "Thekarov", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Cascade_and_inheritance": {
-    "modified": "2020-12-04T09:24:49.879Z",
-    "contributors": [
-      "RoPy73",
-      "at940266",
-      "superyasha2",
-      "k0w4lk",
-      "RadDeepton",
-      "Lyla",
-      "fishr-flash",
-      "shade0602",
-      "Ivan961",
-      "borshagovskij"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Cascade_tasks": {
-    "modified": "2020-10-01T14:31:53.395Z",
-    "contributors": ["at940266"]
-  },
-  "Learn/CSS/Building_blocks/Debugging_CSS": {
-    "modified": "2020-10-15T22:26:31.777Z",
-    "contributors": ["shade0602", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:13.122Z",
-    "contributors": ["maxbo8", "trman", "VyacheslavLobanov"]
-  },
-  "Learn/CSS/Building_blocks/Handling_different_text_directions": {
-    "modified": "2020-12-08T21:59:49.897Z",
-    "contributors": ["RoPy73", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Images_media_form_elements": {
-    "modified": "2020-07-16T22:29:26.428Z",
-    "contributors": ["shade0602", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Overflowing_content": {
-    "modified": "2020-10-29T13:12:58.938Z",
-    "contributors": ["velheor24", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Selectors": {
-    "modified": "2020-07-19T06:45:12.608Z",
-    "contributors": ["k0w4lk", "Ivan961", "BADNaMe-RK"]
-  },
-  "Learn/CSS/Building_blocks/Selectors/Attribute_selectors": {
-    "modified": "2020-10-08T15:38:42.541Z",
-    "contributors": ["at940266", "k0w4lk", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Selectors/Combinators": {
-    "modified": "2020-12-07T19:30:35.658Z",
-    "contributors": [
-      "RoPy73",
-      "at940266",
-      "anna.bunakova",
-      "sovushka-utrom",
-      "Ivan961"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements": {
-    "modified": "2020-10-14T14:08:41.639Z",
-    "contributors": ["at940266", "anna.bunakova", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Selectors/Selectors_Tasks": {
-    "modified": "2020-10-28T14:57:16.890Z",
-    "contributors": ["at940266"]
-  },
-  "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors": {
-    "modified": "2020-10-07T14:15:51.046Z",
-    "contributors": ["at940266", "ctmyxa", "k0w4lk", "Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Sizing_items_in_CSS": {
-    "modified": "2020-07-16T22:29:22.613Z",
-    "contributors": ["Ivan961"]
-  },
-  "Learn/CSS/Building_blocks/Styling_tables": {
-    "modified": "2020-07-16T22:28:18.695Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "Maxim-Bernashevsky"]
-  },
-  "Learn/CSS/Building_blocks/The_box_model": {
-    "modified": "2020-12-08T19:06:33.479Z",
-    "contributors": [
-      "RoPy73",
-      "at940266",
-      "AlexUS",
-      "mvictorl",
-      "velheor24",
-      "yedyharova22",
-      "matropsycat",
-      "k0w4lk",
-      "EmperorPeter3",
-      "Ivan961"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Values_and_units": {
-    "modified": "2020-08-26T08:49:20.533Z",
-    "contributors": ["isakura313", "shade0602", "Ivan961"]
-  },
-  "Learn/CSS/CSS_layout": {
+  "Learn_web_development/Core/CSS_layout": {
     "modified": "2020-11-04T06:48:54.216Z",
     "contributors": [
       "chuuddo",
@@ -1318,7 +1191,7 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/CSS/CSS_layout/Flexbox": {
+  "Learn_web_development/Core/CSS_layout/Flexbox": {
     "modified": "2020-07-28T14:20:24.419Z",
     "contributors": [
       "Dmitrjj_Klat",
@@ -1337,19 +1210,19 @@
       "rhiter"
     ]
   },
-  "Learn/CSS/CSS_layout/Floats": {
+  "Learn_web_development/Core/CSS_layout/Floats": {
     "modified": "2020-08-08T09:35:44.432Z",
     "contributors": ["shade0602", "sinai"]
   },
-  "Learn/CSS/CSS_layout/Floats_skills": {
+  "Learn_web_development/Core/CSS_layout/Floats_skills": {
     "modified": "2020-09-01T06:51:07.528Z",
     "contributors": ["shade0602"]
   },
-  "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension": {
+  "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension": {
     "modified": "2020-07-16T22:27:25.007Z",
     "contributors": ["mbalabash"]
   },
-  "Learn/CSS/CSS_layout/Grids": {
+  "Learn_web_development/Core/CSS_layout/Grids": {
     "modified": "2020-07-27T09:14:16.796Z",
     "contributors": [
       "shade0602",
@@ -1359,7 +1232,7 @@
       "slychai85"
     ]
   },
-  "Learn/CSS/CSS_layout/Introduction": {
+  "Learn_web_development/Core/CSS_layout/Introduction": {
     "modified": "2020-07-19T12:27:41.774Z",
     "contributors": [
       "nsvintitskiy",
@@ -1370,870 +1243,39 @@
       "Novo"
     ]
   },
-  "Learn/CSS/CSS_layout/Multicol_skills": {
+  "Learn_web_development/Core/CSS_layout/Multicol_skills": {
     "modified": "2020-09-07T06:45:08.142Z",
     "contributors": ["shade0602"]
   },
-  "Learn/CSS/CSS_layout/Multiple-column_Layout": {
+  "Learn_web_development/Core/CSS_layout/Multiple-column_Layout": {
     "modified": "2020-09-06T07:21:18.080Z",
     "contributors": ["shade0602"]
   },
-  "Learn/CSS/CSS_layout/Normal_Flow": {
-    "modified": "2020-10-13T15:21:40.503Z",
-    "contributors": ["mvictorl", "nsvintitskiy", "SoMuchEffort"]
-  },
-  "Learn/CSS/CSS_layout/Position_skills": {
+  "Learn_web_development/Core/CSS_layout/Position_skills": {
     "modified": "2020-09-07T06:09:02.193Z",
     "contributors": ["shade0602"]
   },
-  "Learn/CSS/CSS_layout/Positioning": {
+  "Learn_web_development/Core/CSS_layout/Positioning": {
     "modified": "2020-09-01T06:46:51.887Z",
     "contributors": ["shade0602"]
   },
-  "Learn/CSS/CSS_layout/Practical_positioning_examples": {
+  "Learn_web_development/Core/CSS_layout/Practical_positioning_examples": {
     "modified": "2020-07-16T22:26:49.409Z",
     "contributors": ["slychai85"]
   },
-  "Learn/CSS/CSS_layout/Responsive_Design": {
+  "Learn_web_development/Core/CSS_layout/Responsive_Design": {
     "modified": "2020-10-31T07:15:02.288Z",
     "contributors": ["shade0602"]
   },
-  "Learn/CSS/First_steps": {
-    "modified": "2020-07-16T22:27:40.530Z",
-    "contributors": [
-      "Khaidarov-Dinar",
-      "Ivan961",
-      "karina-vas",
-      "ustyar",
-      "Tortik217",
-      "TheZavitaev"
-    ]
-  },
-  "Learn/CSS/First_steps/Getting_started": {
-    "modified": "2020-07-16T22:27:52.241Z",
-    "contributors": ["Ivan961", "Tortik217"]
-  },
-  "Learn/CSS/First_steps/How_CSS_is_structured": {
-    "modified": "2020-11-30T19:42:39.732Z",
-    "contributors": ["RoPy73", "shade0602", "Ivan961", "Ultron5"]
-  },
-  "Learn/CSS/First_steps/How_CSS_works": {
-    "modified": "2020-11-30T20:19:36.865Z",
-    "contributors": [
-      "RoPy73",
-      "XrestRus",
-      "zhukov-daniil",
-      "Onberfrest",
-      "Shterneregen",
-      "Ivan961",
-      "Immdevrov"
-    ]
-  },
-  "Learn/CSS/First_steps/Styling_a_biography_page": {
-    "modified": "2020-12-03T17:31:51.841Z",
-    "contributors": ["RoPy73", "Ivan961"]
-  },
-  "Learn/CSS/First_steps/What_is_CSS": {
-    "modified": "2020-10-15T22:23:15.801Z",
-    "contributors": ["Ivan961", "fedev", "Tortik217"]
-  },
-  "Learn/CSS/Howto": {
-    "modified": "2020-07-16T22:25:44.184Z",
-    "contributors": ["code-timer", "Shychara"]
-  },
-  "Learn/CSS/Howto/CSS_FAQ": {
-    "modified": "2020-07-16T22:25:45.996Z",
-    "contributors": ["quinn"]
-  },
-  "Learn/CSS/Styling_text": {
-    "modified": "2020-10-23T11:04:50.232Z",
-    "contributors": [
-      "evstpet",
-      "vagifrg",
-      "maxbo8",
-      "aFoxy",
-      "snowydad",
-      "izhurav",
-      "pranay2063"
-    ]
-  },
-  "Learn/CSS/Styling_text/Fundamentals": {
-    "modified": "2020-12-04T09:07:58.038Z",
-    "contributors": ["Vladimir_Grishechko", "rokra2005"]
-  },
-  "Learn/CSS/Styling_text/Styling_links": {
-    "modified": "2020-07-16T22:26:20.734Z",
-    "contributors": ["shade0602", "fscholz", "Warginal", "nikolayandr"]
-  },
-  "Learn/CSS/Styling_text/Styling_lists": {
-    "modified": "2020-07-16T22:26:14.698Z",
-    "contributors": ["shade0602", "vedmibot"]
-  },
-  "Learn/CSS/Styling_text/Typesetting_a_homepage": {
-    "modified": "2020-07-16T22:26:27.408Z",
-    "contributors": ["shade0602"]
-  },
-  "Learn/CSS/Styling_text/Web_fonts": {
-    "modified": "2020-07-19T10:10:59.329Z",
-    "contributors": ["nsvintitskiy", "shade0602"]
-  },
-  "Learn/Common_questions": {
-    "modified": "2020-07-16T22:35:26.905Z",
-    "contributors": ["gadjetron", "stephaniehobson"]
-  },
-  "Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users": {
-    "modified": "2020-07-16T22:35:51.073Z",
-    "contributors": ["podocenov"]
-  },
-  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
-    "modified": "2020-12-06T16:34:14.303Z",
-    "contributors": ["alkrukovsky", "aleshkanet", "GGWP"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
-    "modified": "2020-07-16T22:35:49.507Z",
-    "contributors": ["Waterdark"]
-  },
-  "Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
-    "modified": "2020-12-06T08:00:45.465Z",
-    "contributors": ["valandis", "zloypatrik88", "Glazir", "slychai85"]
-  },
-  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:46.080Z",
-    "contributors": ["Mandy_May", "lasteris"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
-    "modified": "2020-09-08T06:46:28.361Z",
-    "contributors": ["mykhailo.pradosh", "Sireler", "zumgluck", "Sturmtiger"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:52.047Z",
-    "contributors": ["slychai85"]
-  },
-  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
-    "modified": "2020-07-16T22:35:48.058Z",
-    "contributors": ["mirajane23", "fox67rus", "Metallman", "Dante103"]
-  },
-  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.685Z",
-    "contributors": ["Sturmtiger", "mr.raccoon.dev"]
-  },
-  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
-    "modified": "2020-11-20T18:21:00.561Z",
-    "contributors": [
-      "rsvato",
-      "Daerzo",
-      "masiacra",
-      "saniaky",
-      "slychai85",
-      "VladSum",
-      "llccought",
-      "mrtaracqk",
-      "lorsange",
-      "Npmb",
-      "cybspace",
-      "teedree"
-    ]
-  },
-  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
-    "modified": "2020-08-13T11:15:09.762Z",
-    "contributors": [
-      "bogpok",
-      "S-Sukhin",
-      "kss555",
-      "Sturmtiger",
-      "OrkVasya",
-      "andrey_fm",
-      "TinaSuhanovskaya",
-      "elcamlost"
-    ]
-  },
-  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
-    "modified": "2020-09-27T11:42:16.769Z",
-    "contributors": [
-      "sailonely",
-      "PinkDeer",
-      "beloglazof",
-      "OrkVasya",
-      "Kipelych",
-      "TinaSuhanovskaya",
-      "Hasyama",
-      "elcamlost"
-    ]
-  },
-  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
-    "modified": "2020-11-25T08:11:30.000Z",
-    "contributors": ["NikeSmitt", "Aalexashka", "vladislavukhov", "lerniri"]
-  },
-  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
-    "modified": "2020-07-16T22:35:30.373Z",
-    "contributors": ["Excent163", "gadjetron", "vladislavukhov", "lerniri"]
-  },
-  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
-    "modified": "2020-07-16T22:35:44.834Z",
-    "contributors": [
-      "StasBalia",
-      "sergeyshulzhenko",
-      "CLoud-Maker",
-      "thecodecreator",
-      "Glebowsky",
-      "elcamlost",
-      "makoviychuk",
-      "vladislavukhov"
-    ]
-  },
-  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
-    "modified": "2020-07-16T22:35:32.096Z",
-    "contributors": [
-      "joshua1955",
-      "Dozorengel",
-      "beloglazof",
-      "Geloosa",
-      "erelena",
-      "Sumere4ny",
-      "talgautb",
-      "Xryak",
-      "uralbash",
-      "elcamlost"
-    ]
-  },
-  "Learn/Forms": {
-    "modified": "2020-07-16T22:21:01.609Z",
-    "contributors": [
-      "ryabv",
-      "shmel3",
-      "Zekkler",
-      "neizerth",
-      "PWasiliy",
-      "SeryiMysh",
-      "chrisdavidmills",
-      "GaidaiAndrii",
-      "bracket",
-      "Dmitrij"
-    ]
-  },
-  "Learn/Forms/Form_validation": {
-    "modified": "2020-10-17T05:54:59.534Z",
-    "contributors": [
-      "raylyanway",
-      "NadinHub",
-      "Hydrock",
-      "nikolai-shabalin",
-      "JediKnightIT",
-      "Ishayahu",
-      "LbIdarka",
-      "ivandoroshenko"
-    ]
-  },
-  "Learn/Forms/How_to_build_custom_form_controls": {
-    "modified": "2020-07-16T22:21:58.194Z",
-    "contributors": ["Avrisia", "outdever"]
-  },
-  "Learn/Forms/How_to_structure_a_web_form": {
-    "modified": "2020-09-23T12:04:06.961Z",
-    "contributors": [
-      "ryabv",
-      "BADNaMe-RK",
-      "outdever",
-      "Lapagirl",
-      "vedmibot",
-      "SeryiMysh"
-    ]
-  },
-  "Learn/Forms/Sending_and_retrieving_form_data": {
-    "modified": "2020-07-16T22:21:29.080Z",
-    "contributors": [
-      "Shabu-Dabi",
-      "taletski",
-      "isetpro",
-      "melission",
-      "Kamikadze4GAME",
-      "ZveRuss",
-      "Dzmitry_K"
-    ]
-  },
-  "Learn/Forms/Sending_forms_through_JavaScript": {
-    "modified": "2020-11-20T12:05:04.254Z",
-    "contributors": ["lazyelf472"]
-  },
-  "Learn/Forms/Styling_web_forms": {
-    "modified": "2020-07-16T22:21:32.230Z",
-    "contributors": ["8nabo"]
-  },
-  "Learn/Forms/User_input_methods": {
-    "modified": "2020-09-02T11:05:36.300Z",
-    "contributors": ["bogpok"]
-  },
-  "Learn/Getting_started_with_the_web": {
-    "modified": "2020-07-17T07:11:41.531Z",
-    "contributors": [
-      "leiner",
-      "Anonymous",
-      "RickRep",
-      "skapesec",
-      "BychekRU",
-      "dmitrytar",
-      "Evgeny_Kurkin",
-      "arbatskiy",
-      "BlizzardCode",
-      "Neir",
-      "Jeremie"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/CSS_basics": {
-    "modified": "2020-12-05T13:19:11.721Z",
-    "contributors": [
-      "valandis",
-      "avdalyan",
-      "Anonymous",
-      "KhaalAramaj",
-      "skapesec",
-      "Egokorok",
-      "TimurShigapov",
-      "BychekRU",
-      "Evgeny_Kurkin",
-      "Tamplier13",
-      "Aleksej",
-      "KuzAlenka"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Dealing_with_files": {
-    "modified": "2020-07-16T22:34:38.245Z",
-    "contributors": [
-      "EA5",
-      "VladimirLogachev",
-      "a-klimantow",
-      "skapesec",
-      "Egokorok",
-      "popovichia",
-      "BychekRU",
-      "Evgeny_Kurkin",
-      "Unregistered45",
-      "Stopy",
-      "Semegen"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/HTML_basics": {
-    "modified": "2020-12-05T13:04:21.457Z",
-    "contributors": [
-      "valandis",
-      "zuenko.michail",
-      "budaevw",
-      "bckpkol",
-      "VladimirLogachev",
-      "Yorgigiri",
-      "skapesec",
-      "Egokorok",
-      "kolanski",
-      "Denispok",
-      "rakuznetsov",
-      "balexander2",
-      "BychekRU",
-      "Stash_Venrici",
-      "runicelf",
-      "Evgeny_Kurkin",
-      "Igor_K.",
-      "rbakhilov"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/How_the_Web_works": {
-    "modified": "2020-11-11T16:01:15.006Z",
-    "contributors": [
-      "Leenday",
-      "Anonymous",
-      "avdoshenkov",
-      "skapesec",
-      "TinaSuhanovskaya",
-      "BychekRU",
-      "runicelf",
-      "bracket",
-      "elcamlost"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Installing_basic_software": {
-    "modified": "2020-07-16T22:34:11.219Z",
-    "contributors": [
-      "Anonymous",
-      "skapesec",
-      "rapaich",
-      "Egokorok",
-      "gitzizou",
-      "boddik",
-      "BychekRU",
-      "Evgeny_Kurkin",
-      "Unregistered45",
-      "Neir"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/JavaScript_basics": {
-    "modified": "2020-12-06T06:38:17.396Z",
-    "contributors": [
-      "valandis",
-      "Anonymous",
-      "sergeyshulzhenko",
-      "exarces",
-      "a-klimantow",
-      "VKhist",
-      "rinbik",
-      "skapesec",
-      "TimurShigapov",
-      "ktolik",
-      "Sania_JS",
-      "BychekRU",
-      "qdex",
-      "Evgeny_Kurkin",
-      "Fiksers",
-      "bulayeu",
-      "artem328",
-      "cs5chester",
-      "aos2006"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Publishing_your_website": {
-    "modified": "2020-12-06T08:02:19.427Z",
-    "contributors": [
-      "valandis",
-      "Anonymous",
-      "Sonntag09",
-      "valerii15298",
-      "AlexanderSpivak",
-      "mickgo",
-      "smo1in",
-      "skapesec",
-      "reksar",
-      "nikin93",
-      "Riptrip",
-      "IrinaShv",
-      "thelensky",
-      "roikefir",
-      "gnusee",
-      "romkadmitrievka1997",
-      "nemyxa",
-      "bondpuoq",
-      "Evgeny_Kurkin"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/The_web_and_web_standards": {
-    "modified": "2020-08-13T10:56:47.304Z",
-    "contributors": ["bogpok"]
-  },
-  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
-    "modified": "2020-07-16T22:34:19.490Z",
-    "contributors": [
-      "skapesec",
-      "gitzizou",
-      "Egokorok",
-      "BychekRU",
-      "Evgeny_Kurkin",
-      "NOSOROG",
-      "Unregistered45",
-      "dm_glazunov"
-    ]
-  },
-  "Learn/HTML": {
-    "modified": "2020-07-16T22:22:23.267Z",
-    "contributors": [
-      "izhurav",
-      "skapesec",
-      "StrixG",
-      "AKonia",
-      "cezsored",
-      "BychekRU",
-      "Zevs"
-    ]
-  },
-  "Learn/HTML/Howto": {
-    "modified": "2020-07-16T22:22:30.849Z",
-    "contributors": ["PaRaD0XCORP", "Rendjey", "AKonia"]
-  },
-  "Learn/HTML/Howto/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:33.594Z",
-    "contributors": ["SoMuchEffort", "optimistic"]
-  },
-  "Learn/HTML/Howto/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:37.165Z",
-    "contributors": [
-      "AliaksandrZahorski",
-      "dima74",
-      "bad4iz",
-      "ultrinnan",
-      "SphinxKnight",
-      "lerniri",
-      "ArtiFisher",
-      "xoyk",
-      "BaNru"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML": {
-    "modified": "2020-07-16T22:22:52.967Z",
-    "contributors": [
-      "boxa6",
-      "skapesec",
-      "VAskel",
-      "SedovDP",
-      "SergeyIrk",
-      "s1lver",
-      "alekaru",
-      "Denispok",
-      "AKonia",
-      "pk.prog",
-      "Vosik",
-      "Cyganov"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
-    "modified": "2020-12-07T12:01:12.996Z",
-    "contributors": [
-      "valandis",
-      "avdalyan",
-      "Ivan961",
-      "streetsummit",
-      "dkrukouski",
-      "boxa6",
-      "Bodyhealer",
-      "s.g.matinyan",
-      "Dzhabarovm",
-      "xap",
-      "Chugou9",
-      "slychai85",
-      "glebsc",
-      "pythonmag",
-      "FeruzOripov"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks": {
-    "modified": "2020-12-07T04:48:22.214Z",
-    "contributors": [
-      "valandis",
-      "Ivan961",
-      "Aalexashka",
-      "Hemonugi",
-      "boxa6",
-      "Bob-chemist",
-      "xap",
-      "Klevtcov",
-      "reksar",
-      "skapesec",
-      "Potemkiin",
-      "Nerill",
-      "Cruseir",
-      "thoughtspile",
-      "arturparkhisenko",
-      "nikin93"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Debugging_HTML": {
-    "modified": "2020-07-16T22:24:16.076Z",
-    "contributors": [
-      "IlyaDanilovich",
-      "ekirpichyov",
-      "boxa6",
-      "krempson",
-      "thoughtspile",
-      "CruOne",
-      "MariyaSka"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Document_and_website_structure": {
-    "modified": "2020-12-07T13:21:17.650Z",
-    "contributors": [
-      "valandis",
-      "ana-karp",
-      "Ivan961",
-      "sergeyshulzhenko",
-      "Merius",
-      "boxa6",
-      "thoughtspile",
-      "Potemkiin",
-      "beloglazof",
-      "IrinaShv"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Getting_started": {
-    "modified": "2020-12-06T12:25:35.513Z",
-    "contributors": [
-      "valandis",
-      "avdalyan",
-      "mirzoevtt",
-      "Ivan961",
-      "OlehMrB",
-      "boxa6",
-      "HelpVPS",
-      "SedovDP",
-      "Smekh",
-      "SoMuchEffort",
-      "AlexeyIoffe",
-      "buhman1974",
-      "Christisrisen",
-      "lexachsar",
-      "5iv1i73",
-      "SelenIT",
-      "SergeyIrk",
-      "ax2mx",
-      "StrixG",
-      "nikin93",
-      "thoughtspile",
-      "katerina_ti",
-      "zloyKrolik",
-      "Startsev",
-      "kolanski",
-      "AKonia"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals": {
-    "modified": "2020-12-07T02:44:19.544Z",
-    "contributors": [
-      "valandis",
-      "Vir",
-      "Ivan961",
-      "streetsummit",
-      "CLoud-Maker",
-      "exarces",
-      "4Realit",
-      "ndrxie",
-      "Hemonugi",
-      "boxa6",
-      "screenspace",
-      "a-klimantow",
-      "Tuman",
-      "nikin93"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter": {
-    "modified": "2020-12-07T13:58:43.781Z",
-    "contributors": [
-      "valandis",
-      "Khaidarov-Dinar",
-      "shade0602",
-      "Janivar05",
-      "Darbestor",
-      "boxa6",
-      "Tuman",
-      "thoughtspile",
-      "saniaky"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
-    "modified": "2020-12-08T12:05:46.465Z",
-    "contributors": [
-      "valandis",
-      "shade0602",
-      "H3llaFresh",
-      "boxa6",
-      "SenkevichEvgenii",
-      "Dzhabarovm",
-      "thoughtspile"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
-    "modified": "2020-12-06T13:02:48.159Z",
-    "contributors": [
-      "valandis",
-      "Ivan961",
-      "streetsummit",
-      "AlexKost700",
-      "trman",
-      "boxa6",
-      "Bapen1k",
-      "SoMuchEffort",
-      "AlexeyIoffe",
-      "DenisYaschenko",
-      "hornuglan",
-      "reksar",
-      "AkulinaShark",
-      "saniaky",
-      "SergeyIrk",
-      "SergeySM",
-      "thoughtspile",
-      "nikin93",
-      "kolanski"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding": {
-    "modified": "2020-12-09T01:54:57.875Z",
-    "contributors": [
-      "valandis",
-      "vnezapno-ya",
-      "rokra2005",
-      "oleg3280",
-      "Potemkiin",
-      "alexfromvl",
-      "Khulagen"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web": {
-    "modified": "2020-12-10T10:10:26.376Z",
-    "contributors": [
-      "Simkin",
-      "Khaidarov-Dinar",
-      "nepiravno",
-      "AlexChebanenko",
-      "shade0602",
-      "Why-are-you-crying",
-      "vedmibot"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
-    "modified": "2020-12-10T06:02:16.441Z",
-    "contributors": [
-      "valandis",
-      "qafarov33",
-      "shade0602",
-      "wizardbil",
-      "WorpSeal",
-      "xHelloverx",
-      "Zekller",
-      "Corba",
-      "orcee",
-      "nowember",
-      "Aleksey_Esev",
-      "KoS57",
-      "InRedikaWB",
-      "Kouler",
-      "AliyevHrn",
-      "sowdfr",
-      "tav1313"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images": {
-    "modified": "2020-12-10T07:17:32.470Z",
-    "contributors": ["valandis"]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page": {
-    "modified": "2020-12-01T05:21:19.875Z",
-    "contributors": ["Furestry", "RoPy73", "Zekkler", "AlekseyCorsello"]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies": {
-    "modified": "2020-08-09T06:54:55.688Z",
-    "contributors": [
-      "Soffity",
-      "olga_ant",
-      "AlexChebanenko",
-      "shade0602",
-      "shmel3",
-      "nepiravno",
-      "wizardbil",
-      "ANetuk",
-      "jswisher",
-      "SoMuchEffort",
-      "Roman216"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Responsive_images": {
-    "modified": "2020-12-01T05:25:47.513Z",
-    "contributors": [
-      "Furestry",
-      "RoPy73",
-      "jynweythek",
-      "konstantin.k",
-      "petr012",
-      "CyberNinja2007",
-      "Zobakka",
-      "desentcare",
-      "Khaidarov-Dinar",
-      "meltsulaya",
-      "shade0602",
-      "ckomop0x",
-      "Roman11000",
-      "Bargamut",
-      "rhopos",
-      "airtwister",
-      "AnnaNeu",
-      "manayardmenkgtu",
-      "alexzimakov",
-      "fonpixel",
-      "RenusAvin",
-      "KuznetsEnvy"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
-    "modified": "2020-12-11T04:51:45.299Z",
-    "contributors": [
-      "valandis",
-      "burevestnik-png",
-      "shade0602",
-      "wizardbil",
-      "Osbelkz",
-      "SedovDP",
-      "FeruzOripov"
-    ]
-  },
-  "Learn/HTML/Tables": {
-    "modified": "2020-11-02T02:08:26.971Z",
-    "contributors": [
-      "AlexUS",
-      "Excent163",
-      "Khaidarov-Dinar",
-      "streetsummit",
-      "skapesec",
-      "mariag"
-    ]
-  },
-  "Learn/HTML/Tables/Advanced": {
-    "modified": "2020-11-21T11:20:38.881Z",
-    "contributors": [
-      "RoPy73",
-      "evstpet",
-      "Zobakka",
-      "Khaidarov-Dinar",
-      "Why-are-you-crying",
-      "Maxim-Bernashevsky"
-    ]
-  },
-  "Learn/HTML/Tables/Basics": {
-    "modified": "2020-11-20T13:19:06.723Z",
-    "contributors": [
-      "RoPy73",
-      "CyberNinja2007",
-      "Khaidarov-Dinar",
-      "Bergamot",
-      "nepiravno",
-      "slychai85",
-      "Maxim-Bernashevsky",
-      "mariag"
-    ]
-  },
-  "Learn/HTML/Tables/Structuring_planet_data": {
-    "modified": "2020-07-16T22:25:30.870Z",
-    "contributors": ["Khaidarov-Dinar", "Anonymous"]
-  },
-  "Learn/JavaScript": {
-    "modified": "2020-11-05T07:04:03.926Z",
-    "contributors": [
-      "ksam",
-      "kristina.simakova",
-      "dkireev",
-      "Casper-SC",
-      "ConstantineZz",
-      "rinbik",
-      "welcometowonderland",
-      "pk.prog",
-      "pust0ta",
-      "umbrochcho",
-      "teoli"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous": {
-    "modified": "2020-10-10T21:18:05.427Z",
-    "contributors": ["sideshowbarker", "Chukhryaev", "Sheppy"]
-  },
-  "Learn/JavaScript/Asynchronous/Introducing": {
-    "modified": "2020-12-09T10:05:03.071Z",
-    "contributors": [
-      "WhoRlyCares",
-      "Qnemes",
-      "pikeraft",
-      "KulkovaAnna",
-      "kjkoala",
-      "evgeniy.bilan93",
-      "d-goppen",
-      "MaxYenot"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Promises": {
-    "modified": "2020-12-10T12:33:00.159Z",
-    "contributors": ["WhoRlyCares", "Bucido"]
-  },
-  "Learn/JavaScript/Building_blocks": {
+  "Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-07-16T22:39:33.460Z",
+    "contributors": ["Anonymous"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_getting_started": {
+    "modified": "2020-07-16T22:39:39.236Z",
+    "contributors": ["ckomop0x"]
+  },
+  "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:31:10.516Z",
     "contributors": [
       "JojeeFleming",
@@ -2248,174 +1290,7 @@
       "umbrochcho"
     ]
   },
-  "Learn/JavaScript/Building_blocks/Build_your_own_function": {
-    "modified": "2020-07-16T22:31:31.342Z",
-    "contributors": ["chergav", "ConstantineZz", "slychai85"]
-  },
-  "Learn/JavaScript/Building_blocks/Event_bubbling": {
-    "modified": "2019-03-18T21:46:09.700Z",
-    "contributors": ["ademaro"]
-  },
-  "Learn/JavaScript/Building_blocks/Events": {
-    "modified": "2020-08-14T06:15:51.092Z",
-    "contributors": [
-      "bogpok",
-      "Bb1cTpeJI",
-      "artamonster",
-      "chergav",
-      "kryukalexander",
-      "ConstantineZz",
-      "Zibroff",
-      "vOICe-xx",
-      "CharlyLovegood",
-      "slychai85",
-      "Paul_Yuhnovich"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Functions": {
-    "modified": "2020-11-19T11:11:58.455Z",
-    "contributors": [
-      "Tartalon",
-      "chergav",
-      "ConstantineZz",
-      "Novo",
-      "Dmitrytbp",
-      "slychai85",
-      "irodger",
-      "Mikhail_Eltekov",
-      "Sparks"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Image_gallery": {
-    "modified": "2020-07-16T22:31:44.425Z",
-    "contributors": ["ellegre", "ConstantineZz", "slychai85", "saniaky"]
-  },
-  "Learn/JavaScript/Building_blocks/Looping_code": {
-    "modified": "2020-11-25T10:13:56.926Z",
-    "contributors": [
-      "tetragidrohlorid",
-      "Tartalon",
-      "chergav",
-      "ConstantineZz",
-      "Chugou9",
-      "ohnoitsdasha",
-      "PavelDikiy",
-      "satori",
-      "Novo"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Return_values": {
-    "modified": "2020-07-16T22:31:34.747Z",
-    "contributors": [
-      "sirartemis",
-      "slayermass",
-      "chergav",
-      "logty3",
-      "Rodionoff"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Test_your_skills:_Functions": {
-    "modified": "2020-09-06T19:14:23.282Z",
-    "contributors": ["randomesis"]
-  },
-  "Learn/JavaScript/Building_blocks/conditionals": {
-    "modified": "2020-11-24T14:22:16.804Z",
-    "contributors": [
-      "tetragidrohlorid",
-      "BulavkinNN",
-      "chergav",
-      "ConstantineZz",
-      "Chugou9",
-      "ohnoitsdasha",
-      "space-rider",
-      "Dmitrytbp",
-      "hasiev-elchin",
-      "fuckingRedBastard",
-      "evgor80",
-      "easydeads",
-      "mspunk",
-      "evgeniypotseluev"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs": {
-    "modified": "2020-07-16T22:32:42.215Z",
-    "contributors": [
-      "hisbvdis",
-      "Fiksers",
-      "wind-of",
-      "slychai85",
-      "qwerst13",
-      "MagicMight",
-      "Paul_Yuhnovich",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Client-side_storage": {
-    "modified": "2020-07-16T22:33:07.262Z",
-    "contributors": [
-      "DABgames",
-      "Egorix132",
-      "slayermass",
-      "kotokrad",
-      "Aparin",
-      "Paul_Yuhnovich"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
-    "modified": "2020-07-16T22:32:59.142Z",
-    "contributors": [
-      "chergav",
-      "Vitaligo",
-      "sergeomak",
-      "n0ne",
-      "slychai85",
-      "ar4ell"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Introduction": {
-    "modified": "2020-10-17T16:01:51.786Z",
-    "contributors": [
-      "kirillunlimited",
-      "tix836",
-      "wind-of",
-      "stasusov",
-      "alexbs",
-      "atomeon",
-      "slychai85",
-      "ezdodance"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
-    "modified": "2020-09-06T12:59:12.593Z",
-    "contributors": [
-      "randomesis",
-      "wind-of",
-      "chergav",
-      "Aparin",
-      "jainashur",
-      "slychai85"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs": {
-    "modified": "2020-07-16T22:32:55.085Z",
-    "contributors": ["sergeomak"]
-  },
-  "Learn/JavaScript/First_steps": {
-    "modified": "2020-07-16T22:29:55.165Z",
-    "contributors": [
-      "chrisdavidmills",
-      "boxa6",
-      "maxno62",
-      "Jertej",
-      "pepsikat",
-      "alekaru",
-      "a13xk",
-      "campside",
-      "werreour",
-      "tagir000"
-    ]
-  },
-  "Learn/JavaScript/First_steps/A_first_splash": {
+  "Learn_web_development/Core/Scripting/A_first_splash": {
     "modified": "2020-09-18T19:59:13.793Z",
     "contributors": [
       "aashch1",
@@ -2443,7 +1318,7 @@
       "alekaru"
     ]
   },
-  "Learn/JavaScript/First_steps/Arrays": {
+  "Learn_web_development/Core/Scripting/Arrays": {
     "modified": "2020-07-16T22:30:57.680Z",
     "contributors": [
       "SphinxKnight",
@@ -2458,7 +1333,105 @@
       "ArtyomIv"
     ]
   },
-  "Learn/JavaScript/First_steps/Math": {
+  "Learn_web_development/Core/Scripting/Build_your_own_function": {
+    "modified": "2020-07-16T22:31:31.342Z",
+    "contributors": ["chergav", "ConstantineZz", "slychai85"]
+  },
+  "Learn_web_development/Core/Scripting/Conditionals": {
+    "modified": "2020-11-24T14:22:16.804Z",
+    "contributors": [
+      "tetragidrohlorid",
+      "BulavkinNN",
+      "chergav",
+      "ConstantineZz",
+      "Chugou9",
+      "ohnoitsdasha",
+      "space-rider",
+      "Dmitrytbp",
+      "hasiev-elchin",
+      "fuckingRedBastard",
+      "evgor80",
+      "easydeads",
+      "mspunk",
+      "evgeniypotseluev"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/DOM_scripting": {
+    "modified": "2020-09-06T12:59:12.593Z",
+    "contributors": [
+      "randomesis",
+      "wind-of",
+      "chergav",
+      "Aparin",
+      "jainashur",
+      "slychai85"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Event_bubbling": {
+    "modified": "2019-03-18T21:46:09.700Z",
+    "contributors": ["ademaro"]
+  },
+  "Learn_web_development/Core/Scripting/Events": {
+    "modified": "2020-08-14T06:15:51.092Z",
+    "contributors": [
+      "bogpok",
+      "Bb1cTpeJI",
+      "artamonster",
+      "chergav",
+      "kryukalexander",
+      "ConstantineZz",
+      "Zibroff",
+      "vOICe-xx",
+      "CharlyLovegood",
+      "slychai85",
+      "Paul_Yuhnovich"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Functions": {
+    "modified": "2020-11-19T11:11:58.455Z",
+    "contributors": [
+      "Tartalon",
+      "chergav",
+      "ConstantineZz",
+      "Novo",
+      "Dmitrytbp",
+      "slychai85",
+      "irodger",
+      "Mikhail_Eltekov",
+      "Sparks"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Image_gallery": {
+    "modified": "2020-07-16T22:31:44.425Z",
+    "contributors": ["ellegre", "ConstantineZz", "slychai85", "saniaky"]
+  },
+  "Learn_web_development/Core/Scripting/JSON": {
+    "modified": "2020-07-16T22:32:28.868Z",
+    "contributors": [
+      "Tatyana-c",
+      "pm3512",
+      "wind-of",
+      "NikitaOstapenko1205",
+      "boxa6",
+      "Lirikklimov",
+      "slychai85"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Loops": {
+    "modified": "2020-11-25T10:13:56.926Z",
+    "contributors": [
+      "tetragidrohlorid",
+      "Tartalon",
+      "chergav",
+      "ConstantineZz",
+      "Chugou9",
+      "ohnoitsdasha",
+      "PavelDikiy",
+      "satori",
+      "Novo"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Math": {
     "modified": "2020-07-16T22:30:28.347Z",
     "contributors": [
       "podocenov",
@@ -2475,7 +1448,50 @@
       "FIJN"
     ]
   },
-  "Learn/JavaScript/First_steps/Silly_story_generator": {
+  "Learn_web_development/Core/Scripting/Network_requests": {
+    "modified": "2020-07-16T22:32:59.142Z",
+    "contributors": [
+      "chergav",
+      "Vitaligo",
+      "sergeomak",
+      "n0ne",
+      "slychai85",
+      "ar4ell"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Object_basics": {
+    "modified": "2020-11-25T08:55:51.454Z",
+    "contributors": [
+      "Tartalon",
+      "alexpikuta",
+      "wind-of",
+      "jynweythek",
+      "iwanttobealight",
+      "ConstantineZz",
+      "genesky",
+      "boxa6",
+      "injashkin",
+      "NooNoo1337",
+      "Dusmatoff",
+      "KoS57",
+      "slychai85",
+      "Jony_e",
+      "slowpokex",
+      "DoRightt",
+      "superpuper32"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Return_values": {
+    "modified": "2020-07-16T22:31:34.747Z",
+    "contributors": [
+      "sirartemis",
+      "slayermass",
+      "chergav",
+      "logty3",
+      "Rodionoff"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Silly_story_generator": {
     "modified": "2020-11-24T09:51:12.035Z",
     "contributors": [
       "tetragidrohlorid",
@@ -2490,7 +1506,7 @@
       "DonVeds"
     ]
   },
-  "Learn/JavaScript/First_steps/Strings": {
+  "Learn_web_development/Core/Scripting/Strings": {
     "modified": "2020-09-30T14:12:03.725Z",
     "contributors": [
       "artsimon555",
@@ -2503,7 +1519,11 @@
       "mironovartem"
     ]
   },
-  "Learn/JavaScript/First_steps/Useful_string_methods": {
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Functions": {
+    "modified": "2020-09-06T19:14:23.282Z",
+    "contributors": ["randomesis"]
+  },
+  "Learn_web_development/Core/Scripting/Useful_string_methods": {
     "modified": "2020-12-02T10:07:41.183Z",
     "contributors": [
       "nyood",
@@ -2522,7 +1542,7 @@
       "AndrewSamofalov"
     ]
   },
-  "Learn/JavaScript/First_steps/Variables": {
+  "Learn_web_development/Core/Scripting/Variables": {
     "modified": "2020-07-23T12:20:59.443Z",
     "contributors": [
       "k0w4lk",
@@ -2538,7 +1558,7 @@
       "HaukIce"
     ]
   },
-  "Learn/JavaScript/First_steps/What_is_JavaScript": {
+  "Learn_web_development/Core/Scripting/What_is_JavaScript": {
     "modified": "2020-07-16T22:30:12.291Z",
     "contributors": [
       "hisbvdis",
@@ -2572,7 +1592,7 @@
       "lawyer12"
     ]
   },
-  "Learn/JavaScript/First_steps/What_went_wrong": {
+  "Learn_web_development/Core/Scripting/What_went_wrong": {
     "modified": "2020-07-16T22:30:36.453Z",
     "contributors": [
       "SphinxKnight",
@@ -2589,41 +1609,453 @@
       "nikitapoly"
     ]
   },
-  "Learn/JavaScript/Howto": {
-    "modified": "2020-07-16T22:33:11.402Z",
-    "contributors": ["korsakov-kuzjma", "paxarpp"]
+  "Learn_web_development/Core/Structuring_content": {
+    "modified": "2020-07-16T22:22:23.267Z",
+    "contributors": [
+      "izhurav",
+      "skapesec",
+      "StrixG",
+      "AKonia",
+      "cezsored",
+      "BychekRU",
+      "Zevs"
+    ]
   },
-  "Learn/JavaScript/Objects": {
+  "Learn_web_development/Core/Structuring_content/Advanced_text_features": {
+    "modified": "2020-12-07T12:01:12.996Z",
+    "contributors": [
+      "valandis",
+      "avdalyan",
+      "Ivan961",
+      "streetsummit",
+      "dkrukouski",
+      "boxa6",
+      "Bodyhealer",
+      "s.g.matinyan",
+      "Dzhabarovm",
+      "xap",
+      "Chugou9",
+      "slychai85",
+      "glebsc",
+      "pythonmag",
+      "FeruzOripov"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Basic_HTML_syntax": {
+    "modified": "2020-12-06T12:25:35.513Z",
+    "contributors": [
+      "valandis",
+      "avdalyan",
+      "mirzoevtt",
+      "Ivan961",
+      "OlehMrB",
+      "boxa6",
+      "HelpVPS",
+      "SedovDP",
+      "Smekh",
+      "SoMuchEffort",
+      "AlexeyIoffe",
+      "buhman1974",
+      "Christisrisen",
+      "lexachsar",
+      "5iv1i73",
+      "SelenIT",
+      "SergeyIrk",
+      "ax2mx",
+      "StrixG",
+      "nikin93",
+      "thoughtspile",
+      "katerina_ti",
+      "zloyKrolik",
+      "Startsev",
+      "kolanski",
+      "AKonia"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Creating_links": {
+    "modified": "2020-12-07T04:48:22.214Z",
+    "contributors": [
+      "valandis",
+      "Ivan961",
+      "Aalexashka",
+      "Hemonugi",
+      "boxa6",
+      "Bob-chemist",
+      "xap",
+      "Klevtcov",
+      "reksar",
+      "skapesec",
+      "Potemkiin",
+      "Nerill",
+      "Cruseir",
+      "thoughtspile",
+      "arturparkhisenko",
+      "nikin93"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Debugging_HTML": {
+    "modified": "2020-07-16T22:24:16.076Z",
+    "contributors": [
+      "IlyaDanilovich",
+      "ekirpichyov",
+      "boxa6",
+      "krempson",
+      "thoughtspile",
+      "CruOne",
+      "MariyaSka"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/General_embedding_technologies": {
+    "modified": "2020-08-09T06:54:55.688Z",
+    "contributors": [
+      "Soffity",
+      "olga_ant",
+      "AlexChebanenko",
+      "shade0602",
+      "shmel3",
+      "nepiravno",
+      "wizardbil",
+      "ANetuk",
+      "jswisher",
+      "SoMuchEffort",
+      "Roman216"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_images": {
+    "modified": "2020-12-10T06:02:16.441Z",
+    "contributors": [
+      "valandis",
+      "qafarov33",
+      "shade0602",
+      "wizardbil",
+      "WorpSeal",
+      "xHelloverx",
+      "Zekller",
+      "Corba",
+      "orcee",
+      "nowember",
+      "Aleksey_Esev",
+      "KoS57",
+      "InRedikaWB",
+      "Kouler",
+      "AliyevHrn",
+      "sowdfr",
+      "tav1313"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images": {
+    "modified": "2020-12-10T07:17:32.470Z",
+    "contributors": ["valandis"]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_table_basics": {
+    "modified": "2020-11-20T13:19:06.723Z",
+    "contributors": [
+      "RoPy73",
+      "CyberNinja2007",
+      "Khaidarov-Dinar",
+      "Bergamot",
+      "nepiravno",
+      "slychai85",
+      "Maxim-Bernashevsky",
+      "mariag"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_video_and_audio": {
+    "modified": "2020-12-11T04:51:45.299Z",
+    "contributors": [
+      "valandis",
+      "burevestnik-png",
+      "shade0602",
+      "wizardbil",
+      "Osbelkz",
+      "SedovDP",
+      "FeruzOripov"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs": {
+    "modified": "2020-12-07T02:44:19.544Z",
+    "contributors": [
+      "valandis",
+      "Vir",
+      "Ivan961",
+      "streetsummit",
+      "CLoud-Maker",
+      "exarces",
+      "4Realit",
+      "ndrxie",
+      "Hemonugi",
+      "boxa6",
+      "screenspace",
+      "a-klimantow",
+      "Tuman",
+      "nikin93"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML": {
+    "modified": "2020-12-10T10:10:26.376Z",
+    "contributors": [
+      "Simkin",
+      "Khaidarov-Dinar",
+      "nepiravno",
+      "AlexChebanenko",
+      "shade0602",
+      "Why-are-you-crying",
+      "vedmibot"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Marking_up_a_letter": {
+    "modified": "2020-12-07T13:58:43.781Z",
+    "contributors": [
+      "valandis",
+      "Khaidarov-Dinar",
+      "shade0602",
+      "Janivar05",
+      "Darbestor",
+      "boxa6",
+      "Tuman",
+      "thoughtspile",
+      "saniaky"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
+    "modified": "2020-12-01T05:21:19.875Z",
+    "contributors": ["Furestry", "RoPy73", "Zekkler", "AlekseyCorsello"]
+  },
+  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
+    "modified": "2020-07-16T22:25:30.870Z",
+    "contributors": ["Khaidarov-Dinar", "Anonymous"]
+  },
+  "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
+    "modified": "2020-12-08T12:05:46.465Z",
+    "contributors": [
+      "valandis",
+      "shade0602",
+      "H3llaFresh",
+      "boxa6",
+      "SenkevichEvgenii",
+      "Dzhabarovm",
+      "thoughtspile"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Structuring_documents": {
+    "modified": "2020-12-07T13:21:17.650Z",
+    "contributors": [
+      "valandis",
+      "ana-karp",
+      "Ivan961",
+      "sergeyshulzhenko",
+      "Merius",
+      "boxa6",
+      "thoughtspile",
+      "Potemkiin",
+      "beloglazof",
+      "IrinaShv"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Table_accessibility": {
+    "modified": "2020-11-21T11:20:38.881Z",
+    "contributors": [
+      "RoPy73",
+      "evstpet",
+      "Zobakka",
+      "Khaidarov-Dinar",
+      "Why-are-you-crying",
+      "Maxim-Bernashevsky"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
+    "modified": "2020-12-06T13:02:48.159Z",
+    "contributors": [
+      "valandis",
+      "Ivan961",
+      "streetsummit",
+      "AlexKost700",
+      "trman",
+      "boxa6",
+      "Bapen1k",
+      "SoMuchEffort",
+      "AlexeyIoffe",
+      "DenisYaschenko",
+      "hornuglan",
+      "reksar",
+      "AkulinaShark",
+      "saniaky",
+      "SergeyIrk",
+      "SergeySM",
+      "thoughtspile",
+      "nikin93",
+      "kolanski"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics": {
+    "modified": "2020-07-16T22:28:09.658Z",
+    "contributors": ["Ivan961", "chrisdavidmills"]
+  },
+  "Learn_web_development/Core/Styling_basics/Advanced_styling_effects": {
+    "modified": "2020-07-16T22:28:22.659Z",
+    "contributors": ["Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Attribute_selectors": {
+    "modified": "2020-10-08T15:38:42.541Z",
+    "contributors": ["at940266", "k0w4lk", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders": {
+    "modified": "2020-11-06T03:37:34.340Z",
+    "contributors": ["AlexUS", "sadmice", "Thekarov", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Basic_selectors": {
+    "modified": "2020-07-19T06:45:12.608Z",
+    "contributors": ["k0w4lk", "Ivan961", "BADNaMe-RK"]
+  },
+  "Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks": {
+    "modified": "2020-10-28T14:57:16.890Z",
+    "contributors": ["at940266"]
+  },
+  "Learn_web_development/Core/Styling_basics/Box_model": {
+    "modified": "2020-12-08T19:06:33.479Z",
+    "contributors": [
+      "RoPy73",
+      "at940266",
+      "AlexUS",
+      "mvictorl",
+      "velheor24",
+      "yedyharova22",
+      "matropsycat",
+      "k0w4lk",
+      "EmperorPeter3",
+      "Ivan961"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Cascade_tasks": {
+    "modified": "2020-10-01T14:31:53.395Z",
+    "contributors": ["at940266"]
+  },
+  "Learn_web_development/Core/Styling_basics/Combinators": {
+    "modified": "2020-12-07T19:30:35.658Z",
+    "contributors": [
+      "RoPy73",
+      "at940266",
+      "anna.bunakova",
+      "sovushka-utrom",
+      "Ivan961"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
+    "modified": "2020-10-15T22:26:31.777Z",
+    "contributors": ["shade0602", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
+    "modified": "2020-07-16T22:28:13.122Z",
+    "contributors": ["maxbo8", "trman", "VyacheslavLobanov"]
+  },
+  "Learn_web_development/Core/Styling_basics/Getting_started": {
+    "modified": "2020-07-16T22:27:52.241Z",
+    "contributors": ["Ivan961", "Tortik217"]
+  },
+  "Learn_web_development/Core/Styling_basics/Handling_conflicts": {
+    "modified": "2020-12-04T09:24:49.879Z",
+    "contributors": [
+      "RoPy73",
+      "at940266",
+      "superyasha2",
+      "k0w4lk",
+      "RadDeepton",
+      "Lyla",
+      "fishr-flash",
+      "shade0602",
+      "Ivan961",
+      "borshagovskij"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Handling_different_text_directions": {
+    "modified": "2020-12-08T21:59:49.897Z",
+    "contributors": ["RoPy73", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Images_media_forms": {
+    "modified": "2020-07-16T22:29:26.428Z",
+    "contributors": ["shade0602", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Overflow": {
+    "modified": "2020-10-29T13:12:58.938Z",
+    "contributors": ["velheor24", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements": {
+    "modified": "2020-10-14T14:08:41.639Z",
+    "contributors": ["at940266", "anna.bunakova", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Sizing": {
+    "modified": "2020-07-16T22:29:22.613Z",
+    "contributors": ["Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Styling_a_bio_page": {
+    "modified": "2020-12-03T17:31:51.841Z",
+    "contributors": ["RoPy73", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/Tables": {
+    "modified": "2020-07-16T22:28:18.695Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "Maxim-Bernashevsky"]
+  },
+  "Learn_web_development/Core/Styling_basics/Values_and_units": {
+    "modified": "2020-08-26T08:49:20.533Z",
+    "contributors": ["isakura313", "shade0602", "Ivan961"]
+  },
+  "Learn_web_development/Core/Styling_basics/What_is_CSS": {
+    "modified": "2020-11-30T20:19:36.865Z",
+    "contributors": [
+      "RoPy73",
+      "XrestRus",
+      "zhukov-daniil",
+      "Onberfrest",
+      "Shterneregen",
+      "Ivan961",
+      "Immdevrov"
+    ]
+  },
+  "Learn_web_development/Core/Text_styling": {
+    "modified": "2020-10-23T11:04:50.232Z",
+    "contributors": [
+      "evstpet",
+      "vagifrg",
+      "maxbo8",
+      "aFoxy",
+      "snowydad",
+      "izhurav",
+      "pranay2063"
+    ]
+  },
+  "Learn_web_development/Core/Text_styling/Fundamentals": {
+    "modified": "2020-12-04T09:07:58.038Z",
+    "contributors": ["Vladimir_Grishechko", "rokra2005"]
+  },
+  "Learn_web_development/Core/Text_styling/Styling_links": {
+    "modified": "2020-07-16T22:26:20.734Z",
+    "contributors": ["shade0602", "fscholz", "Warginal", "nikolayandr"]
+  },
+  "Learn_web_development/Core/Text_styling/Styling_lists": {
+    "modified": "2020-07-16T22:26:14.698Z",
+    "contributors": ["shade0602", "vedmibot"]
+  },
+  "Learn_web_development/Core/Text_styling/Typesetting_a_homepage": {
+    "modified": "2020-07-16T22:26:27.408Z",
+    "contributors": ["shade0602"]
+  },
+  "Learn_web_development/Core/Text_styling/Web_fonts": {
+    "modified": "2020-07-19T10:10:59.329Z",
+    "contributors": ["nsvintitskiy", "shade0602"]
+  },
+  "Learn_web_development/Core/Version_control": {
+    "modified": "2020-09-30T19:47:51.138Z",
+    "contributors": ["TXCloud", "PPGAkril", "garanzha.s.a"]
+  },
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects": {
     "modified": "2020-07-16T22:31:52.750Z",
     "contributors": ["VoropN", "injashkin", "KomarovSergey", "george-04"]
   },
-  "Learn/JavaScript/Objects/Adding_bouncing_balls_features": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features": {
     "modified": "2020-07-16T22:32:35.948Z",
     "contributors": ["Stexe", "slychai85"]
   },
-  "Learn/JavaScript/Objects/Basics": {
-    "modified": "2020-11-25T08:55:51.454Z",
-    "contributors": [
-      "Tartalon",
-      "alexpikuta",
-      "wind-of",
-      "jynweythek",
-      "iwanttobealight",
-      "ConstantineZz",
-      "genesky",
-      "boxa6",
-      "injashkin",
-      "NooNoo1337",
-      "Dusmatoff",
-      "KoS57",
-      "slychai85",
-      "Jony_e",
-      "slowpokex",
-      "DoRightt",
-      "superpuper32"
-    ]
-  },
-  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript": {
     "modified": "2020-10-17T04:55:20.992Z",
     "contributors": [
       "raylyanway",
@@ -2635,19 +2067,7 @@
       "slychai85"
     ]
   },
-  "Learn/JavaScript/Objects/JSON": {
-    "modified": "2020-07-16T22:32:28.868Z",
-    "contributors": [
-      "Tatyana-c",
-      "pm3512",
-      "wind-of",
-      "NikitaOstapenko1205",
-      "boxa6",
-      "Lirikklimov",
-      "slychai85"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object_building_practice": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice": {
     "modified": "2020-07-16T22:32:32.476Z",
     "contributors": [
       "Slowball",
@@ -2657,7 +2077,7 @@
       "slychai85"
     ]
   },
-  "Learn/JavaScript/Objects/Object_prototypes": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes": {
     "modified": "2020-07-16T22:32:22.353Z",
     "contributors": [
       "wind-of",
@@ -2672,15 +2092,144 @@
       "AndreySushentsov"
     ]
   },
-  "Learn/Performance": {
+  "Learn_web_development/Extensions/Async_JS": {
+    "modified": "2020-10-10T21:18:05.427Z",
+    "contributors": ["sideshowbarker", "Chukhryaev", "Sheppy"]
+  },
+  "Learn_web_development/Extensions/Async_JS/Introducing": {
+    "modified": "2020-12-09T10:05:03.071Z",
+    "contributors": [
+      "WhoRlyCares",
+      "Qnemes",
+      "pikeraft",
+      "KulkovaAnna",
+      "kjkoala",
+      "evgeniy.bilan93",
+      "d-goppen",
+      "MaxYenot"
+    ]
+  },
+  "Learn_web_development/Extensions/Async_JS/Promises": {
+    "modified": "2020-12-10T12:33:00.159Z",
+    "contributors": ["WhoRlyCares", "Bucido"]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs": {
+    "modified": "2020-07-16T22:32:42.215Z",
+    "contributors": [
+      "hisbvdis",
+      "Fiksers",
+      "wind-of",
+      "slychai85",
+      "qwerst13",
+      "MagicMight",
+      "Paul_Yuhnovich",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage": {
+    "modified": "2020-07-16T22:33:07.262Z",
+    "contributors": [
+      "DABgames",
+      "Egorix132",
+      "slayermass",
+      "kotokrad",
+      "Aparin",
+      "Paul_Yuhnovich"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Introduction": {
+    "modified": "2020-10-17T16:01:51.786Z",
+    "contributors": [
+      "kirillunlimited",
+      "tix836",
+      "wind-of",
+      "stasusov",
+      "alexbs",
+      "atomeon",
+      "slychai85",
+      "ezdodance"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs": {
+    "modified": "2020-07-16T22:32:55.085Z",
+    "contributors": ["sergeomak"]
+  },
+  "Learn_web_development/Extensions/Forms": {
+    "modified": "2020-07-16T22:21:01.609Z",
+    "contributors": [
+      "ryabv",
+      "shmel3",
+      "Zekkler",
+      "neizerth",
+      "PWasiliy",
+      "SeryiMysh",
+      "chrisdavidmills",
+      "GaidaiAndrii",
+      "bracket",
+      "Dmitrij"
+    ]
+  },
+  "Learn_web_development/Extensions/Forms/Form_validation": {
+    "modified": "2020-10-17T05:54:59.534Z",
+    "contributors": [
+      "raylyanway",
+      "NadinHub",
+      "Hydrock",
+      "nikolai-shabalin",
+      "JediKnightIT",
+      "Ishayahu",
+      "LbIdarka",
+      "ivandoroshenko"
+    ]
+  },
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls": {
+    "modified": "2020-07-16T22:21:58.194Z",
+    "contributors": ["Avrisia", "outdever"]
+  },
+  "Learn_web_development/Extensions/Forms/How_to_structure_a_web_form": {
+    "modified": "2020-09-23T12:04:06.961Z",
+    "contributors": [
+      "ryabv",
+      "BADNaMe-RK",
+      "outdever",
+      "Lapagirl",
+      "vedmibot",
+      "SeryiMysh"
+    ]
+  },
+  "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data": {
+    "modified": "2020-07-16T22:21:29.080Z",
+    "contributors": [
+      "Shabu-Dabi",
+      "taletski",
+      "isetpro",
+      "melission",
+      "Kamikadze4GAME",
+      "ZveRuss",
+      "Dzmitry_K"
+    ]
+  },
+  "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript": {
+    "modified": "2020-11-20T12:05:04.254Z",
+    "contributors": ["lazyelf472"]
+  },
+  "Learn_web_development/Extensions/Forms/Styling_web_forms": {
+    "modified": "2020-07-16T22:21:32.230Z",
+    "contributors": ["8nabo"]
+  },
+  "Learn_web_development/Extensions/Forms/User_input_methods": {
+    "modified": "2020-09-02T11:05:36.300Z",
+    "contributors": ["bogpok"]
+  },
+  "Learn_web_development/Extensions/Performance": {
     "modified": "2020-11-19T04:33:49.923Z",
     "contributors": ["nomercyso2cybersport", "EgorKorol", "estelle"]
   },
-  "Learn/Performance/business_case_for_performance": {
+  "Learn_web_development/Extensions/Performance/business_case_for_performance": {
     "modified": "2020-07-16T22:40:42.596Z",
     "contributors": ["D.Lesnik"]
   },
-  "Learn/Server-side": {
+  "Learn_web_development/Extensions/Server-side": {
     "modified": "2020-07-16T22:36:02.172Z",
     "contributors": [
       "skipp",
@@ -2692,11 +2241,11 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/Server-side/Apache_Configuration_htaccess": {
+  "Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess": {
     "modified": "2020-11-17T06:08:27.845Z",
     "contributors": ["chrisdavidmills", "kirill001"]
   },
-  "Learn/Server-side/Django": {
+  "Learn_web_development/Extensions/Server-side/Django": {
     "modified": "2020-07-16T22:36:35.585Z",
     "contributors": [
       "exelay",
@@ -2708,7 +2257,7 @@
       "DenGodunov"
     ]
   },
-  "Learn/Server-side/Django/Admin_site": {
+  "Learn_web_development/Extensions/Server-side/Django/Admin_site": {
     "modified": "2020-07-16T22:37:05.756Z",
     "contributors": [
       "Palladiumm",
@@ -2724,7 +2273,7 @@
       "Denizz"
     ]
   },
-  "Learn/Server-side/Django/Authentication": {
+  "Learn_web_development/Extensions/Server-side/Django/Authentication": {
     "modified": "2020-10-09T09:34:14.083Z",
     "contributors": [
       "hustonCun",
@@ -2743,7 +2292,7 @@
       "al+chernin"
     ]
   },
-  "Learn/Server-side/Django/Deployment": {
+  "Learn_web_development/Extensions/Server-side/Django/Deployment": {
     "modified": "2020-07-16T22:37:42.545Z",
     "contributors": [
       "velocanica",
@@ -2756,7 +2305,7 @@
       "al+chernin"
     ]
   },
-  "Learn/Server-side/Django/Forms": {
+  "Learn_web_development/Extensions/Server-side/Django/Forms": {
     "modified": "2020-10-10T14:48:33.294Z",
     "contributors": [
       "hustonCun",
@@ -2771,7 +2320,7 @@
       "alexfromvl"
     ]
   },
-  "Learn/Server-side/Django/Generic_views": {
+  "Learn_web_development/Extensions/Server-side/Django/Generic_views": {
     "modified": "2020-07-16T22:37:18.976Z",
     "contributors": [
       "theomoore",
@@ -2784,7 +2333,7 @@
       "al+chernin"
     ]
   },
-  "Learn/Server-side/Django/Home_page": {
+  "Learn_web_development/Extensions/Server-side/Django/Home_page": {
     "modified": "2020-07-16T22:37:11.505Z",
     "contributors": [
       "askras",
@@ -2796,7 +2345,7 @@
       "al+chernin"
     ]
   },
-  "Learn/Server-side/Django/Introduction": {
+  "Learn_web_development/Extensions/Server-side/Django/Introduction": {
     "modified": "2020-12-09T11:58:11.401Z",
     "contributors": [
       "mantisSp",
@@ -2817,7 +2366,7 @@
       "DIAMONDinc"
     ]
   },
-  "Learn/Server-side/Django/Models": {
+  "Learn_web_development/Extensions/Server-side/Django/Models": {
     "modified": "2020-09-21T15:09:16.230Z",
     "contributors": [
       "DrPeryCox",
@@ -2835,11 +2384,11 @@
       "carbonec"
     ]
   },
-  "Learn/Server-side/Django/Sessions": {
+  "Learn_web_development/Extensions/Server-side/Django/Sessions": {
     "modified": "2020-07-16T22:37:27.912Z",
     "contributors": ["egorguscha", "timur-orudzhov", "askras", "al+chernin"]
   },
-  "Learn/Server-side/Django/Testing": {
+  "Learn_web_development/Extensions/Server-side/Django/Testing": {
     "modified": "2020-07-16T22:37:38.879Z",
     "contributors": [
       "Breadp4ck",
@@ -2851,11 +2400,11 @@
       "al+chernin"
     ]
   },
-  "Learn/Server-side/Django/Tutorial_local_library_website": {
+  "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website": {
     "modified": "2020-07-16T22:36:50.376Z",
     "contributors": ["mmbl", "hexeh", "FeruzOripov", "Flygrounder"]
   },
-  "Learn/Server-side/Django/development_environment": {
+  "Learn_web_development/Extensions/Server-side/Django/development_environment": {
     "modified": "2020-07-16T22:36:46.788Z",
     "contributors": [
       "maksam07",
@@ -2872,11 +2421,11 @@
       "hellpirat"
     ]
   },
-  "Learn/Server-side/Django/django_assessment_blog": {
+  "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog": {
     "modified": "2020-07-16T22:37:49.218Z",
     "contributors": ["DIAMONDinc"]
   },
-  "Learn/Server-side/Django/skeleton_website": {
+  "Learn_web_development/Extensions/Server-side/Django/skeleton_website": {
     "modified": "2020-07-16T22:36:54.229Z",
     "contributors": [
       "Bogomazof",
@@ -2892,11 +2441,11 @@
       "Flygrounder"
     ]
   },
-  "Learn/Server-side/Django/web_application_security": {
+  "Learn_web_development/Extensions/Server-side/Django/web_application_security": {
     "modified": "2020-07-16T22:37:46.879Z",
     "contributors": ["NataliaNagaeva", "Azwartin"]
   },
-  "Learn/Server-side/Express_Nodejs": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs": {
     "modified": "2020-07-16T22:37:55.363Z",
     "contributors": [
       "Aparin",
@@ -2906,43 +2455,43 @@
       "Sumere4ny"
     ]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data": {
     "modified": "2020-07-16T22:38:31.314Z",
     "contributors": ["mikemoll", "alxatr", "MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page": {
     "modified": "2020-07-16T22:38:38.119Z",
     "contributors": ["alxatr"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page": {
     "modified": "2020-07-16T22:38:36.909Z",
     "contributors": ["alxatr"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_list_page": {
     "modified": "2020-07-16T22:38:36.242Z",
     "contributors": ["alxatr", "MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment": {
     "modified": "2020-07-16T22:38:37.510Z",
     "contributors": ["alxatr", "MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page": {
     "modified": "2020-07-16T22:38:38.667Z",
     "contributors": ["alxatr"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/Home_page": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page": {
     "modified": "2020-07-16T22:38:35.549Z",
     "contributors": ["hahlek", "blok1118", "alxatr"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template": {
     "modified": "2020-12-13T05:36:31.182Z",
     "contributors": ["kozakartem", "hahlek", "alxatr", "MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer": {
     "modified": "2020-07-16T22:38:34.518Z",
     "contributors": ["alxatr"]
   },
-  "Learn/Server-side/Express_Nodejs/Introduction": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction": {
     "modified": "2020-10-28T17:14:05.095Z",
     "contributors": [
       "Craiqser",
@@ -2958,15 +2507,15 @@
       "ivaskonyan"
     ]
   },
-  "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website": {
     "modified": "2020-07-16T22:38:16.847Z",
     "contributors": ["maxno62", "daviys"]
   },
-  "Learn/Server-side/Express_Nodejs/development_environment": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment": {
     "modified": "2020-07-16T22:38:01.474Z",
     "contributors": ["OlegKolesnikoff", "SmIB"]
   },
-  "Learn/Server-side/Express_Nodejs/forms": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms": {
     "modified": "2020-10-30T05:59:56.813Z",
     "contributors": [
       "Rams3ska",
@@ -2977,19 +2526,19 @@
       "MariyaSka"
     ]
   },
-  "Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form": {
     "modified": "2020-07-16T22:38:45.863Z",
     "contributors": ["mikemoll"]
   },
-  "Learn/Server-side/Express_Nodejs/forms/Delete_author_form": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form": {
     "modified": "2020-07-16T22:38:46.661Z",
     "contributors": ["MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/forms/Update_Book_form": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form": {
     "modified": "2020-07-16T22:38:48.138Z",
     "contributors": ["MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/mongoose": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose": {
     "modified": "2020-07-16T22:38:23.060Z",
     "contributors": [
       "alxatr",
@@ -3000,11 +2549,11 @@
       "MariyaSka"
     ]
   },
-  "Learn/Server-side/Express_Nodejs/routes": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes": {
     "modified": "2020-07-16T22:38:27.367Z",
     "contributors": ["Simbiryan", "alxatr", "skm.yura", "MariyaSka"]
   },
-  "Learn/Server-side/Express_Nodejs/skeleton_website": {
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website": {
     "modified": "2020-10-09T11:34:26.503Z",
     "contributors": [
       "yevheniiperekopskyi",
@@ -3018,7 +2567,7 @@
       "daviys"
     ]
   },
-  "Learn/Server-side/First_steps": {
+  "Learn_web_development/Extensions/Server-side/First_steps": {
     "modified": "2020-07-16T22:36:10.688Z",
     "contributors": [
       "xc0derx",
@@ -3028,7 +2577,7 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/Server-side/First_steps/Client-Server_overview": {
+  "Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview": {
     "modified": "2020-12-07T10:17:52.209Z",
     "contributors": [
       "mantisSp",
@@ -3051,7 +2600,7 @@
       "Khulagen"
     ]
   },
-  "Learn/Server-side/First_steps/Introduction": {
+  "Learn_web_development/Extensions/Server-side/First_steps/Introduction": {
     "modified": "2020-11-30T09:56:11.980Z",
     "contributors": [
       "mantisSp",
@@ -3065,7 +2614,7 @@
       "Khulagen"
     ]
   },
-  "Learn/Server-side/First_steps/Web_frameworks": {
+  "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks": {
     "modified": "2020-12-09T09:29:12.510Z",
     "contributors": [
       "mantisSp",
@@ -3081,23 +2630,15 @@
       "reksar"
     ]
   },
-  "Learn/Server-side/First_steps/Website_security": {
+  "Learn_web_development/Extensions/Server-side/First_steps/Website_security": {
     "modified": "2020-12-05T11:58:05.010Z",
     "contributors": ["valandis", "ruslanjumagaliev", "maxlu86", "tymino"]
   },
-  "Learn/Server-side/Node_server_without_framework": {
+  "Learn_web_development/Extensions/Server-side/Node_server_without_framework": {
     "modified": "2020-07-16T22:36:06.418Z",
     "contributors": ["coldsteelbr", "Paul_Yuhnovich"]
   },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks": {
-    "modified": "2020-07-16T22:39:33.460Z",
-    "contributors": ["Anonymous"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started": {
-    "modified": "2020-07-16T22:39:39.236Z",
-    "contributors": ["ckomop0x"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing": {
+  "Learn_web_development/Extensions/Testing": {
     "modified": "2020-07-16T22:39:01.559Z",
     "contributors": [
       "no1dor",
@@ -3107,17 +2648,332 @@
       "Anna-Myzukina"
     ]
   },
-  "Learn/Tools_and_testing/Cross_browser_testing/Feature_detection": {
+  "Learn_web_development/Extensions/Testing/Feature_detection": {
     "modified": "2020-07-16T22:39:23.610Z",
     "contributors": ["Igor-Sangin"]
   },
-  "Learn/Tools_and_testing/Cross_browser_testing/Introduction": {
+  "Learn_web_development/Extensions/Testing/Introduction": {
     "modified": "2020-10-20T08:45:48.469Z",
     "contributors": ["nerrevar", "slayermass"]
   },
-  "Learn/Tools_and_testing/GitHub": {
-    "modified": "2020-09-30T19:47:51.138Z",
-    "contributors": ["TXCloud", "PPGAkril", "garanzha.s.a"]
+  "Learn_web_development/Getting_started/Environment_setup/Browsing_the_web": {
+    "modified": "2020-09-27T11:42:16.769Z",
+    "contributors": [
+      "sailonely",
+      "PinkDeer",
+      "beloglazof",
+      "OrkVasya",
+      "Kipelych",
+      "TinaSuhanovskaya",
+      "Hasyama",
+      "elcamlost"
+    ]
+  },
+  "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files": {
+    "modified": "2020-07-16T22:34:38.245Z",
+    "contributors": [
+      "EA5",
+      "VladimirLogachev",
+      "a-klimantow",
+      "skapesec",
+      "Egokorok",
+      "popovichia",
+      "BychekRU",
+      "Evgeny_Kurkin",
+      "Unregistered45",
+      "Stopy",
+      "Semegen"
+    ]
+  },
+  "Learn_web_development/Getting_started/Environment_setup/Installing_software": {
+    "modified": "2020-07-16T22:34:11.219Z",
+    "contributors": [
+      "Anonymous",
+      "skapesec",
+      "rapaich",
+      "Egokorok",
+      "gitzizou",
+      "boddik",
+      "BychekRU",
+      "Evgeny_Kurkin",
+      "Unregistered45",
+      "Neir"
+    ]
+  },
+  "Learn_web_development/Getting_started/Web_standards/How_the_web_works": {
+    "modified": "2020-11-11T16:01:15.006Z",
+    "contributors": [
+      "Leenday",
+      "Anonymous",
+      "avdoshenkov",
+      "skapesec",
+      "TinaSuhanovskaya",
+      "BychekRU",
+      "runicelf",
+      "bracket",
+      "elcamlost"
+    ]
+  },
+  "Learn_web_development/Getting_started/Web_standards/The_web_standards_model": {
+    "modified": "2020-08-13T10:56:47.304Z",
+    "contributors": ["bogpok"]
+  },
+  "Learn_web_development/Getting_started/Your_first_website": {
+    "modified": "2020-07-17T07:11:41.531Z",
+    "contributors": [
+      "leiner",
+      "Anonymous",
+      "RickRep",
+      "skapesec",
+      "BychekRU",
+      "dmitrytar",
+      "Evgeny_Kurkin",
+      "arbatskiy",
+      "BlizzardCode",
+      "Neir",
+      "Jeremie"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity": {
+    "modified": "2020-12-06T06:38:17.396Z",
+    "contributors": [
+      "valandis",
+      "Anonymous",
+      "sergeyshulzhenko",
+      "exarces",
+      "a-klimantow",
+      "VKhist",
+      "rinbik",
+      "skapesec",
+      "TimurShigapov",
+      "ktolik",
+      "Sania_JS",
+      "BychekRU",
+      "qdex",
+      "Evgeny_Kurkin",
+      "Fiksers",
+      "bulayeu",
+      "artem328",
+      "cs5chester",
+      "aos2006"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/Creating_the_content": {
+    "modified": "2020-12-05T13:04:21.457Z",
+    "contributors": [
+      "valandis",
+      "zuenko.michail",
+      "budaevw",
+      "bckpkol",
+      "VladimirLogachev",
+      "Yorgigiri",
+      "skapesec",
+      "Egokorok",
+      "kolanski",
+      "Denispok",
+      "rakuznetsov",
+      "balexander2",
+      "BychekRU",
+      "Stash_Venrici",
+      "runicelf",
+      "Evgeny_Kurkin",
+      "Igor_K.",
+      "rbakhilov"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website": {
+    "modified": "2020-12-06T08:02:19.427Z",
+    "contributors": [
+      "valandis",
+      "Anonymous",
+      "Sonntag09",
+      "valerii15298",
+      "AlexanderSpivak",
+      "mickgo",
+      "smo1in",
+      "skapesec",
+      "reksar",
+      "nikin93",
+      "Riptrip",
+      "IrinaShv",
+      "thelensky",
+      "roikefir",
+      "gnusee",
+      "romkadmitrievka1997",
+      "nemyxa",
+      "bondpuoq",
+      "Evgeny_Kurkin"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/Styling_the_content": {
+    "modified": "2020-12-05T13:19:11.721Z",
+    "contributors": [
+      "valandis",
+      "avdalyan",
+      "Anonymous",
+      "KhaalAramaj",
+      "skapesec",
+      "Egokorok",
+      "TimurShigapov",
+      "BychekRU",
+      "Evgeny_Kurkin",
+      "Tamplier13",
+      "Aleksej",
+      "KuzAlenka"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like": {
+    "modified": "2020-07-16T22:34:19.490Z",
+    "contributors": [
+      "skapesec",
+      "gitzizou",
+      "Egokorok",
+      "BychekRU",
+      "Evgeny_Kurkin",
+      "NOSOROG",
+      "Unregistered45",
+      "dm_glazunov"
+    ]
+  },
+  "Learn_web_development/Howto": {
+    "modified": "2020-07-16T22:35:26.905Z",
+    "contributors": ["gadjetron", "stephaniehobson"]
+  },
+  "Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users": {
+    "modified": "2020-07-16T22:35:51.073Z",
+    "contributors": ["podocenov"]
+  },
+  "Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-12-06T16:34:14.303Z",
+    "contributors": ["alkrukovsky", "aleshkanet", "GGWP"]
+  },
+  "Learn_web_development/Howto/Solve_CSS_problems": {
+    "modified": "2020-07-16T22:25:44.184Z",
+    "contributors": ["code-timer", "Shychara"]
+  },
+  "Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ": {
+    "modified": "2020-07-16T22:25:45.996Z",
+    "contributors": ["quinn"]
+  },
+  "Learn_web_development/Howto/Solve_HTML_problems": {
+    "modified": "2020-07-16T22:22:30.849Z",
+    "contributors": ["PaRaD0XCORP", "Rendjey", "AKonia"]
+  },
+  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:33.594Z",
+    "contributors": ["SoMuchEffort", "optimistic"]
+  },
+  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:37.165Z",
+    "contributors": [
+      "AliaksandrZahorski",
+      "dima74",
+      "bad4iz",
+      "ultrinnan",
+      "SphinxKnight",
+      "lerniri",
+      "ArtiFisher",
+      "xoyk",
+      "BaNru"
+    ]
+  },
+  "Learn_web_development/Howto/Solve_JavaScript_problems": {
+    "modified": "2020-07-16T22:33:11.402Z",
+    "contributors": ["korsakov-kuzjma", "paxarpp"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/Available_text_editors": {
+    "modified": "2020-07-16T22:35:49.507Z",
+    "contributors": ["Waterdark"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine": {
+    "modified": "2020-12-06T08:00:45.465Z",
+    "contributors": ["valandis", "zloypatrik88", "Glazir", "slychai85"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-07-16T22:35:46.080Z",
+    "contributors": ["Mandy_May", "lasteris"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-09-08T06:46:28.361Z",
+    "contributors": ["mykhailo.pradosh", "Sireler", "zumgluck", "Sturmtiger"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages": {
+    "modified": "2020-07-16T22:35:52.047Z",
+    "contributors": ["slychai85"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
+    "modified": "2020-07-16T22:35:48.058Z",
+    "contributors": ["mirajane23", "fox67rus", "Metallman", "Dante103"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:33.685Z",
+    "contributors": ["Sturmtiger", "mr.raccoon.dev"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-11-20T18:21:00.561Z",
+    "contributors": [
+      "rsvato",
+      "Daerzo",
+      "masiacra",
+      "saniaky",
+      "slychai85",
+      "VladSum",
+      "llccought",
+      "mrtaracqk",
+      "lorsange",
+      "Npmb",
+      "cybspace",
+      "teedree"
+    ]
+  },
+  "Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work": {
+    "modified": "2020-08-13T11:15:09.762Z",
+    "contributors": [
+      "bogpok",
+      "S-Sukhin",
+      "kss555",
+      "Sturmtiger",
+      "OrkVasya",
+      "andrey_fm",
+      "TinaSuhanovskaya",
+      "elcamlost"
+    ]
+  },
+  "Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks": {
+    "modified": "2020-11-25T08:11:30.000Z",
+    "contributors": ["NikeSmitt", "Aalexashka", "vladislavukhov", "lerniri"]
+  },
+  "Learn_web_development/Howto/Web_mechanics/What_is_a_URL": {
+    "modified": "2020-07-16T22:35:30.373Z",
+    "contributors": ["Excent163", "gadjetron", "vladislavukhov", "lerniri"]
+  },
+  "Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name": {
+    "modified": "2020-07-16T22:35:44.834Z",
+    "contributors": [
+      "StasBalia",
+      "sergeyshulzhenko",
+      "CLoud-Maker",
+      "thecodecreator",
+      "Glebowsky",
+      "elcamlost",
+      "makoviychuk",
+      "vladislavukhov"
+    ]
+  },
+  "Learn_web_development/Howto/Web_mechanics/What_is_a_web_server": {
+    "modified": "2020-07-16T22:35:32.096Z",
+    "contributors": [
+      "joshua1955",
+      "Dozorengel",
+      "beloglazof",
+      "Geloosa",
+      "erelena",
+      "Sumere4ny",
+      "talgautb",
+      "Xryak",
+      "uralbash",
+      "elcamlost"
+    ]
   },
   "MDN": {
     "modified": "2020-02-19T18:23:03.586Z",
@@ -10520,6 +10376,33 @@
       "alexlead"
     ]
   },
+  "Web/HTML/Responsive_images": {
+    "modified": "2020-12-01T05:25:47.513Z",
+    "contributors": [
+      "Furestry",
+      "RoPy73",
+      "jynweythek",
+      "konstantin.k",
+      "petr012",
+      "CyberNinja2007",
+      "Zobakka",
+      "desentcare",
+      "Khaidarov-Dinar",
+      "meltsulaya",
+      "shade0602",
+      "ckomop0x",
+      "Roman11000",
+      "Bargamut",
+      "rhopos",
+      "airtwister",
+      "AnnaNeu",
+      "manayardmenkgtu",
+      "alexzimakov",
+      "fonpixel",
+      "RenusAvin",
+      "KuznetsEnvy"
+    ]
+  },
   "Web/HTML/Using_the_application_cache": {
     "modified": "2019-04-09T18:24:32.273Z",
     "contributors": ["jwhitlock", "teoli", "pashak"]
@@ -15933,5 +15816,122 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
+  },
+  "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {
+    "modified": "2020-10-13T15:21:40.503Z",
+    "contributors": ["mvictorl", "nsvintitskiy", "SoMuchEffort"]
+  },
+  "conflicting/Learn_web_development/Core/Scripting": {
+    "modified": "2020-07-16T22:29:55.165Z",
+    "contributors": [
+      "chrisdavidmills",
+      "boxa6",
+      "maxno62",
+      "Jertej",
+      "pepsikat",
+      "alekaru",
+      "a13xk",
+      "campside",
+      "werreour",
+      "tagir000"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792": {
+    "modified": "2020-11-05T07:04:03.926Z",
+    "contributors": [
+      "ksam",
+      "kristina.simakova",
+      "dkireev",
+      "Casper-SC",
+      "ConstantineZz",
+      "rinbik",
+      "welcometowonderland",
+      "pk.prog",
+      "pust0ta",
+      "umbrochcho",
+      "teoli"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Structuring_content": {
+    "modified": "2020-07-16T22:22:52.967Z",
+    "contributors": [
+      "boxa6",
+      "skapesec",
+      "VAskel",
+      "SedovDP",
+      "SergeyIrk",
+      "s1lver",
+      "alekaru",
+      "Denispok",
+      "AKonia",
+      "pk.prog",
+      "Vosik",
+      "Cyganov"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics": {
+    "modified": "2020-11-02T02:08:26.971Z",
+    "contributors": [
+      "AlexUS",
+      "Excent163",
+      "Khaidarov-Dinar",
+      "streetsummit",
+      "skapesec",
+      "mariag"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b": {
+    "modified": "2020-12-09T01:54:57.875Z",
+    "contributors": [
+      "valandis",
+      "vnezapno-ya",
+      "rokra2005",
+      "oleg3280",
+      "Potemkiin",
+      "alexfromvl",
+      "Khulagen"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics": {
+    "modified": "2020-07-16T22:27:40.530Z",
+    "contributors": [
+      "Khaidarov-Dinar",
+      "Ivan961",
+      "karina-vas",
+      "ustyar",
+      "Tortik217",
+      "TheZavitaev"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors": {
+    "modified": "2020-10-07T14:15:51.046Z",
+    "contributors": ["at940266", "ctmyxa", "k0w4lk", "Ivan961"]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics/Getting_started": {
+    "modified": "2020-11-30T19:42:39.732Z",
+    "contributors": ["RoPy73", "shade0602", "Ivan961", "Ultron5"]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS": {
+    "modified": "2020-10-15T22:23:15.801Z",
+    "contributors": ["Ivan961", "fedev", "Tortik217"]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1": {
+    "modified": "2020-07-16T22:25:37.223Z",
+    "contributors": [
+      "Ivan961",
+      "binxer",
+      "skrikl",
+      "izhurav",
+      "alexbs",
+      "sborenko",
+      "niktariy",
+      "bezik",
+      "Shychara",
+      "kolanski",
+      "VladdOs",
+      "BychekRU",
+      "uleming",
+      "Andrew_Pfeiffer"
+    ]
   }
 }
