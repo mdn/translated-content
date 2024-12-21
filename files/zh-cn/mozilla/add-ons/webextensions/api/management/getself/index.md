@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-获取有关调用该方法的插件的包含在 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象中的信息。
+获取包含了有关调用该方法的附加组件的信息的 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象。
 
 此 API *不*需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 
@@ -25,7 +25,7 @@ let gettingSelf = browser.management.getSelf()
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将用包含有关附加组件的信息的 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现为包含有关附加组件的信息的 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象。
 
 ## 浏览器兼容性
 
