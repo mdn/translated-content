@@ -2,7 +2,7 @@
 title: CSS 类型对象模型 API
 slug: Web/API/CSS_Typed_OM_API
 l10n:
-  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
+  sourceCommit: 9151632d3aacb4f7d7228d5446ca66c7f44f406a
 ---
 
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
