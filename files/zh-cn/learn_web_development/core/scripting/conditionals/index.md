@@ -2,7 +2,7 @@
 title: 在代码中做决定——条件语句
 slug: Learn_web_development/Core/Scripting/Conditionals
 l10n:
-  sourceCommit: 94982f79dc1b95025700c48170a5b48d5f3a2a64
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
