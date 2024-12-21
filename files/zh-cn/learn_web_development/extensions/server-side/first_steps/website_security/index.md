@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/First_steps/Website_security
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 站点安全需要在网站设计和使用的各个方面保持警惕。这篇入门文章不会让你成为一个网站安全专家，但是可以帮助你理解威胁的来源以及如何保护你的 Web 应用来远离这些常见的攻击。
 
@@ -149,4 +149,4 @@ web 框架可以帮助抵御很多常见的攻击。
 
 这也是[这个模块](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps)的结尾，涵盖了你之前在服务器端编程学到的知识。我们希望你非常享受这个学习基础概念的过程，并且你现在已经准备好选择一个 web 框架开始编程了。
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
 
 在本测验中，我们将测试你对于本模块文章所介绍的技术的掌握程度。你需要将一些有关于 Mozilla 的图片和视频添加到一个漂亮的页面上！
 
@@ -92,10 +92,8 @@ l10n:
 
 ## 示例
 
-下面的截图展示了在正确标记后，欢迎页面在宽屏和窄屏下的样子。
+以下屏幕截图显示了欢迎页的外观。
 
 ![宽屏下示例欢迎页面的截图](wide-shot.png)
 
-![窄屏下示例欢迎页面的截图](narrow-shot.png)
-
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}

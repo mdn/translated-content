@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 现代 Web 浏览器提供了很多在用户电脑上存放数据的方法——只要用户的允许——然后在需要时检索数据。这样能让你存留的数据长时间保存，保存站点和文档在离线情况下使用，保留对站点的个性化配置等等。本篇文章只解释它们工作的一些很基础的部分。
 
@@ -759,4 +759,4 @@ self.addEventListener("fetch", (e) => {
 - [Cookie](/zh-CN/docs/Web/HTTP/Cookies)
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

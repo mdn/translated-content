@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 通过在前几节课程中学到的知识，你应该学会了用 CSS 组织一个简单的文本文件，并且在其中添加自己的 CSS 样式。本节中你将实现这一功能。
 
@@ -89,4 +89,4 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)中，我们将对一些关键区域进行深入的学习。
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

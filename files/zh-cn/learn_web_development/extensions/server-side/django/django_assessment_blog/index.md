@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 original_slug: Learn/Server-side/Django/django_assessment_blog
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 在这个评估中，你将使用你在 [Django Web Framework (Python)](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django) 模块中获得的知识，来创建一个非常基本的博客。
 
@@ -285,4 +285,4 @@ class SomeView(generic.ListView):
 
 完成本单元后，表示你还完成了所有 MDN 用于学习《基本 Django 服务器端网站编程》的内容！我们希望你喜欢这个模块，并感觉你已经掌握了基础知识！
 
-{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

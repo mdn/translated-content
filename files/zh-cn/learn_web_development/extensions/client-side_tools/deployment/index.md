@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 13c2df5af92c04e57a2e882e92306fcf6949b239
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本系列的最后一篇文章中，我们将采用上一篇文章中构建的示例工具链，并将其添加到示例应用程序，以便部署。我们会将代码推送到 GitHub，使用 Netlify 进行部署，也会向你展示如何在部署过程中添加一个简单的测试。
 
@@ -320,4 +320,4 @@ Netlify 部分的内容就到此为止。我们可以选择更改 Netlify 项目
 - 能否添加更多测试来防止糟糕的构建部署，例如[性能审核](https://developer.chrome.google.cn/docs/lighthouse/performance/performance-scoring)？
 - 能否设置一个通知，令你及时得知部署成功与否？
 
-{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}

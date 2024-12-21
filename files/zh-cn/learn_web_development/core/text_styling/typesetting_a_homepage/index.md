@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
 original_slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 
 在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。
 
@@ -83,4 +83,4 @@ original_slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 如果你将本测评作为课程的一部分，你应该能够将你的作品交给你的老师/指导员打分。如果你是自学的，你可以很轻松地在[discussion thread for this exercise](https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683)，或者[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道上获得打分。先尝试完成本次练习——作弊是学不到任何东西的！
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Image_gallery
 original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 我们已经学习了 JavaScript 基础的块结构，下面我们通过编写一个常见的基于 JavaScript 的图片库来测验一下你对于循环、函数、条件和事件的掌握情况。
 
@@ -119,4 +119,4 @@ overlay.style.backgroundColor = xxx;
    - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。
    - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}

@@ -5,7 +5,7 @@ original_slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}
-{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 
 如果你已经完成了本模块的学习，那么你就已经掌握了今天进行 CSS 布局所需要的基本知识，并且也可以使用旧的 CSS。这个任务将通过使用各种技术开发一个简单的网页布局来测试你的一些知识。
 
@@ -80,4 +80,4 @@ original_slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
    - 在一个在线可共享的编辑器中，提供你想要评估或需要帮助的例子的链接（在上面第 1 步中提到的）。这是一个很好的做法，如果你不能看到他们的代码，就很难帮助别人解决编码问题。
    - 实际任务或评估页面的链接，以便我们能够找到你想要帮助的问题。
 
-{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}

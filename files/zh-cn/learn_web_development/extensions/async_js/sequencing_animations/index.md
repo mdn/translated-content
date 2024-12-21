@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 original_slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 
 在本测验中，你将使用我们在[如何使用 Promise](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises) 中学习的一些技术来更新页面，使它能够按顺序播放一系列动画。
 
@@ -105,4 +105,4 @@ alice1.animate(aliceTumbling, aliceTiming);
    - 一个指向你的作品的链接（托管在在线共享编辑器中，如步骤 1 所述），这是一个很好的实践ーー如果你看不到他们的代码，就很难帮助有编码问题的人。
    - 指向实际任务或评估页面的链接，这样我们就可以找到你需要帮助的问题。
 
-{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

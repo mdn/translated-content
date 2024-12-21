@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 
 在本模块的测验环节中，我们将呈现一个含有若干无障碍问题的简单网站，你需要对它进行诊断并修复这些问题。
 
@@ -96,4 +96,4 @@ original_slug: Learn/Accessibility/Accessibility_troubleshooting
    - 在一个在线可共享的编辑器（例如第 1 步中提到的那些）中，提供你想要评估或需要帮助的例子的链接。这是一个很好的做法，如果你不能看到他们的代码，就很难帮助别人解决编码问题。
    - 一个链接到实际任务或测验页面的链接，通过这个链接我们可以明白你寻求帮助的问题。
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
