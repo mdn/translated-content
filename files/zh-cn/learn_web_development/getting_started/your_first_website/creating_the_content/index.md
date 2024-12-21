@@ -154,7 +154,7 @@ alt 文本的关键字即“描述文本”。alt 文本应向用户完整地传
 可以尝试在 {{htmlelement("img")}} 元素上面添加一个合适的标题。
 
 > [!NOTE]
-> 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗文本，因为标题对于[无障碍](/zh-CN/docs/Learn/Accessibility/HTML#文本内容)和[搜索引擎优化](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%88%91%e4%bb%ac%e9%9c%80%e8%a6%81%e7%bb%93%e6%9e%84%e5%8c%96%ef%bc%9f)非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
+> 你可以看到第一级标题是有隐式的主题样式。不要使用标题元素来加大、加粗文本，因为标题对于[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#文本内容)和[搜索引擎优化](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#为什么我们需要结构化？)非常有意义。要保持页面结构清晰，标题整洁，不要发生标题级别跳跃。
 
 ### 段落（Paragraph）
 

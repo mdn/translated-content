@@ -45,7 +45,7 @@ visibility: unset;
 
 ## 无障碍考虑
 
-将元素的 `visibility` 的值设置为 `hidden` 会将其从[可访问性树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_api)中移除。这将导致元素及其所有子元素不再被屏幕阅读器所读取。
+将元素的 `visibility` 的值设置为 `hidden` 会将其从[可访问性树](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍_api)中移除。这将导致元素及其所有子元素不再被屏幕阅读器所读取。
 
 ## 插值
 

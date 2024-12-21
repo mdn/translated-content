@@ -232,7 +232,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 与上一个示例没有视觉上的区别，但是屏幕阅读器用户可以获得更多可用信息。
 
 > [!NOTE]
-> 有关此类辅助功能的更多信息，请参见 [Signposts/Landmarks](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) 。
+> 有关此类辅助功能的更多信息，请参见[路牌/地标](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#路牌地标) 。
 
 ### 输入框元素物理大小
 
@@ -381,7 +381,7 @@ input:valid ~ span::after {
 
 ### 指定模式
 
-你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效（请参照[使用正则表达式进行验证](/zh-CN/docs/Learn/Forms/Form_validation#使用正则表达式校验)）。
+你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效（请参照[使用正则表达式进行验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
 
 让我们看一个例子。假设我们想提供一个产品 ID 搜索表格，这些 ID 都是由两个字母和四个数字组成的代码。以下示例对此进行了介绍：
 

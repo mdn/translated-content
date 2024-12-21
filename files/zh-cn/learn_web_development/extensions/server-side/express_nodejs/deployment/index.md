@@ -382,7 +382,7 @@ var mongoDB =
 npm install
 ```
 
-现在运行该站点（请参阅[测试路由](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes)的相关命令），并检查该站点，是否仍按预期运行。
+现在运行该站点（请参阅[测试路由](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#测试路由)的相关命令），并检查该站点，是否仍按预期运行。
 
 #### 将更改保存到 Github
 
@@ -452,7 +452,7 @@ Setting NODE_ENV and restarting limitless-tor-18923... done, v13
 NODE_ENV: production
 ```
 
-我们还应该使用单独的数据库进行生产，在**MONGODB_URI**环境变量中，设置其 URI。你可以完全按照[我们原来的方式](/zh-CN/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database)，设置新数据库和数据库用户，并获取其 URI。你可以如下图所示设置 URI（显然，要使用你自己的 URI！）
+我们还应该使用单独的数据库进行生产，在**MONGODB_URI**环境变量中，设置其 URI。你可以完全按照[我们原来的方式](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database)，设置新数据库和数据库用户，并获取其 URI。你可以如下图所示设置 URI（显然，要使用你自己的 URI！）
 
 ```bash
 >heroku config:set MONGODB_URI='mongodb://your_user:your_password@ds139278.mlab.com:39278/local_library_production'

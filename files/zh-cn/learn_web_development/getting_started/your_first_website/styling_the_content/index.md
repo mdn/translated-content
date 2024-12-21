@@ -149,7 +149,7 @@ h1 {
 
 在探索了一些 CSS 基础后，让我们在 `style.css` 中添加更多的规则和信息，从而让示例更美观。
 
-1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)中保存的 [Google Fonts 输出的地址](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)。在 `index.html` 文档头部（{{HTMLElement("head")}} 和 `</head>` 之间的任意位置）添加 {{htmlelement("link")}} 元素。代码如下：
+1. 第一步，找到之前在[你的网站会是什么样子？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)中保存的 [Google Fonts 输出的地址](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#字体)。在 `index.html` 文档头部（{{HTMLElement("head")}} 和 `</head>` 之间的任意位置）添加 {{htmlelement("link")}} 元素。代码如下：
 
    ```html
    <link
@@ -160,7 +160,7 @@ h1 {
    这段代码将你的页面链接到一个样式表，该样式表将 Open Sans 字体家族与你的网页一起加载。
 
 2. 接下来，删除 `style.css` 文件中已有的规则。虽然测试是成功的，但是红字看起来并不太舒服。
-3. 添加下列几行代码（如下文所示），用你在[你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#字体)中选择的 `font-family` 替换 `font-family`。`font-family` 属性是指为文本设置的字体。这个规则为整个页面定义了全局的基础字体和基础字号。由于 {{HTMLElement("html")}} 是整个页面的父元素，它里面的所有元素都继承相同的 `font-size` 和 `font-family`。
+3. 添加下列几行代码（如下文所示），用你在[你的网站会是什么样子？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#字体)中选择的 `font-family` 替换 `font-family`。`font-family` 属性是指为文本设置的字体。这个规则为整个页面定义了全局的基础字体和基础字号。由于 {{HTMLElement("html")}} 是整个页面的父元素，它里面的所有元素都继承相同的 `font-size` 和 `font-family`。
 
    ```css
    html {
@@ -226,7 +226,7 @@ html {
 }
 ```
 
-这条规则为整个页面设置了背景颜色。将颜色代码修改为[在“我的网站将会是什么样子？”中所选择的颜色](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#主题颜色)。
+这条规则为整个页面设置了背景颜色。将颜色代码修改为[在“我的网站将会是什么样子？”中所选择的颜色](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#主题颜色)。
 
 ### 文档体样式
 

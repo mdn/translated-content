@@ -676,7 +676,7 @@ li {
 
 在上面的示例中，我们看到关键字被用作值的地方（例如 `<color>` 关键字，如 `red`、`black`、`rebeccapurple` 和 `goldenrod`）。这些关键字被更准确地描述为标识符，一个 CSS 可以理解的特殊值。因此它们没有使用引号括起来——它们不被当作字符串。
 
-在某些地方可以使用 CSS 中的字符串，例如[在指定生成的内容时](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#生成带有before_和after_的内容)。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。
+在某些地方可以使用 CSS 中的字符串，例如[在指定生成的内容时](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#生成带有before_和after_的内容)。在本例中，引用该值以证明它是一个字符串。在下面的示例中，我们使用非引号括起来的颜色关键字和引号括起来的内容字符串。
 
 ```html live-sample___strings-idents
 <div class="box"></div>

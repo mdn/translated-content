@@ -23,7 +23,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 
 ## 什么是 HTML 头部
 
-让我们简单回顾一下[上一章节的 HTML 文档](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#剖析html文档)：
+让我们简单回顾一下[上一章节的 HTML 文档](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#剖析html文档)：
 
 ```html
 <!doctype html>
@@ -252,7 +252,7 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- {{htmlelement("script")}} 元素也应当放在文档的头部，并包含 `src` 属性来指向需要加载的 JavaScript 文件路径，同时最好加上 `defer` 以告诉浏览器在解析完成 HTML 后再加载 JavaScript。这样可以确保在加载脚本之前浏览器已经解析了所有的 HTML 内容。这样你就不会因为 JavaScript 试图访问页面上不存在的 HTML 元素而产生错误。实际上有很多方法来处理在你的页面上加载 JavaScript，但对于现代浏览器来说，这是最可靠的方法（对于其他方法，请阅读[脚本加载策略](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#脚本调用策略)）。
+- {{htmlelement("script")}} 元素也应当放在文档的头部，并包含 `src` 属性来指向需要加载的 JavaScript 文件路径，同时最好加上 `defer` 以告诉浏览器在解析完成 HTML 后再加载 JavaScript。这样可以确保在加载脚本之前浏览器已经解析了所有的 HTML 内容。这样你就不会因为 JavaScript 试图访问页面上不存在的 HTML 元素而产生错误。实际上有很多方法来处理在你的页面上加载 JavaScript，但对于现代浏览器来说，这是最可靠的方法（对于其他方法，请阅读[脚本加载策略](/zh-CN/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#脚本调用策略)）。
 
   ```html
   <script src="my-js-file.js" defer></script>

@@ -42,7 +42,7 @@ l10n:
 
 ### 链接状态
 
-第一件需要理解的事情是链接状态的概念，链接存在时处于不同的状态，每一个状态都可以用对应的[伪类](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#伪类)来应用样式：
+第一件需要理解的事情是链接状态的概念，链接存在时处于不同的状态，每一个状态都可以用对应的[伪类](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#伪类)来应用样式：
 
 - **Link**：有目的地的链接（即不只是一个具名锚点），使用 {{cssxref(":link")}} 伪类来应用样式。
 - **Visited**：已访问过（存在于浏览器历史记录中）的链接，使用 {{cssxref(":visited")}} 伪类来应用样式。
@@ -383,13 +383,13 @@ a[href^="http"] {
 
 {{ EmbedLiveSample('在链接中包含图标', '100%', 150) }}
 
-那么这里发生了什么？我们将跳过大部分的 CSS，因为那些只是你之前看过的相同的信息。最后一条规则很有趣，这里，我们在外部链接上插入了一个自定义背景图片，这和上篇[自定义列表项目符号](/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists#使用自定义的项目符号图片)文章的做法很像。这次，我们使用了 {{cssxref("background")}} 简写，而不是分别使用多个属性。我们设置了我们想要插入的图片的路径，指定了 `no-repeat` ，这样我们只插入了一次图片，然后指定位置为 100%，使其出现在内容的右边，距离上方是 0 像素。
+那么这里发生了什么？我们将跳过大部分的 CSS，因为那些只是你之前看过的相同的信息。最后一条规则很有趣，这里，我们在外部链接上插入了一个自定义背景图片，这和上篇[自定义列表项目符号](/zh-CN/docs/Learn_web_development/Core/Text_styling/Styling_lists#使用自定义的项目符号图片)文章的做法很像。这次，我们使用了 {{cssxref("background")}} 简写，而不是分别使用多个属性。我们设置了我们想要插入的图片的路径，指定了 `no-repeat` ，这样我们只插入了一次图片，然后指定位置为 100%，使其出现在内容的右边，距离上方是 0 像素。
 
 我们也使用 {{cssxref("background-size")}} 来指定要显示的背景图像的大小，为了满足响应式网站设计的需要，在图标更大，需要再重新调整它的大小的时候，这样做是很有帮助的。但是，这仅适用于 IE 9 及更高版本。所以你如果需要支持那些老的浏览器，只能调整图像的原始大小，然后插入。
 
 最后，我们在链接上设置 {{cssxref("padding-right")}} ，为背景图片留出空间，这样就不会让它和文本重叠了。
 
-最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#标签属性选择器)——`a[href^="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值以“http”开头的 {{htmlelement("a")}} 元素。
+最后的问题，我们是如何只选中了外部链接的？如果你正确编写你的 [HTML 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)，你应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此“http”文本应该只出现在外部链接上，为此我们可以使用一个[属性选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#标签属性选择器)——`a[href^="http"]`——选中 {{htmlelement("a")}} 元素，但是这样只会选中那些拥有 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性，且属性的值以“http”开头的 {{htmlelement("a")}} 元素。
 
 就是这样。重温上文的动手练习部分，试试这种新技巧吧！
 

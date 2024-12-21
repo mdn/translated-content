@@ -34,7 +34,7 @@ l10n:
 
 ## 客户端存储？
 
-在其他的 MDN 学习中我们已经讨论过[静态网站](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#静态网站)和[动态网站](/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview#动态网站)的区别。大多数现代的网站是动态的——它们在服务端使用各种类型的数据库（服务端存储）来存储数据，之后通过运行[服务端](/zh-CN/docs/Learn_web_development/Extensions/Server-side)代码来查询需要的数据，把其数据插入到静态页面的模板中，并将生成的 HTML 提供给客户端，以在用户的浏览器中显示。
+在其他的 MDN 学习中我们已经讨论过[静态网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#静态网站)和[动态网站](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#动态网站)的区别。大多数现代的网站是动态的——它们在服务端使用各种类型的数据库（服务端存储）来存储数据，之后通过运行[服务端](/zh-CN/docs/Learn_web_development/Extensions/Server-side)代码来查询需要的数据，把其数据插入到静态页面的模板中，并将生成的 HTML 提供给客户端，以在用户的浏览器中显示。
 
 客户端存储以相同的原理工作，但是在使用上有一些不同。它是由 JavaScript API 组成的因此允许你在客户端存储数据（比如在用户的机器上），而且可以在需要的时候查询相关的数据。这有很多明显的用处，比如：
 

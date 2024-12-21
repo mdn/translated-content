@@ -168,7 +168,7 @@ div:nth-of-type(2) {
 
 ![](simple-grid-finished.png)
 
-在{{htmlelement("style")}}中，加入下面的代码，使容器右侧的内边距为 20 像素，总的宽度变为 980 像素。这样给我们留出 960 像素可以放置列和它们的间隔——这种情况下，内边距会被从总的内容宽度中减去，因为我们在{{cssxref("box-sizing")}}中将站点上所有的元素设置成了`border-box` （可以查看[完全改变盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely)，获得更多解释）。
+在{{htmlelement("style")}}中，加入下面的代码，使容器右侧的内边距为 20 像素，总的宽度变为 980 像素。这样给我们留出 960 像素可以放置列和它们的间隔——这种情况下，内边距会被从总的内容宽度中减去，因为我们在{{cssxref("box-sizing")}}中将站点上所有的元素设置成了`border-box` （可以查看[完全改变盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#changing_the_box_model_completely)，获得更多解释）。
 
 ```css
 * {

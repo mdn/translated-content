@@ -155,5 +155,5 @@ slug: Web/HTML/Element/meta
 ## 参见
 
 - [标准元数据名称](/zh-CN/docs/Web/HTML/Element/meta/name)
-- [学习：`<meta>`](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [学习：`<meta>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
 - [viewport 元标签](/zh-CN/docs/Web/HTML/Viewport_meta_tag)

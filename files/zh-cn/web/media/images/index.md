@@ -35,7 +35,7 @@ l10n:
 
 - [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
   - : 本指南介绍 web 浏览器通常支持的各种图像文件类型，包括它们各自的使用情况、功能和兼容性因素的详细信息。此外，本文还提供了针对特定情况选择最佳图像文件类型的指导。
-- [包含 `width` 和 `height` 属性以防止卡顿](/zh-CN/docs/Learn/Performance/Multimedia#渲染策略：在加载图像时避免卡顿)
+- [包含 `width` 和 `height` 属性以防止卡顿](/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia#渲染策略：在加载图像时避免卡顿)
   - : 这就改变了浏览器加载图像的方式，使浏览器可以在加载图像前就计算出图像的宽高比，然后再利用宽高比预留图像的显示尺寸。
 
 ## 其他主题

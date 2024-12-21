@@ -317,7 +317,7 @@ input:out-of-range + span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[层叠规则](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠)开始发挥作用，并且显示“超出范围”信息。
+数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[层叠规则](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#理解层叠)开始发挥作用，并且显示“超出范围”信息。
 
 这一点做得很好——当页面第一次加载时，会显示“required”，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出“Outside allowable value range”的信息，取代了原先的“required”。
 
@@ -488,7 +488,7 @@ Firefox 在版本 78 之前只支持带前缀的伪类，从这个版本以后�
 
 当单选钮或复选框被选中时，它们将被 {{cssxref(":checked")}} 伪类所匹配。
 
-最常见的用途是在复选框或单选按钮被选中时添加不同的样式，在这种情况下，已经使用 `appearance: none;` 删除了系统默认的样式，想自己重新建立样式。我们在上一篇文章中看到了这样的示例，当时我们谈到了[在单选钮/复选框上使用 `appearance: none`](/zh-CN/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)。
+最常见的用途是在复选框或单选按钮被选中时添加不同的样式，在这种情况下，已经使用 `appearance: none;` 删除了系统默认的样式，想自己重新建立样式。我们在上一篇文章中看到了这样的示例，当时我们谈到了[在单选钮/复选框上使用 `appearance: none`](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#在单选框复选框上使用_appearance_none)。
 
 回顾一下，我们的[有样式的单选钮](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)示例中的 `:checked` 代码看起来像这样：
 

@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 
 在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming)中，我们介绍了面向对象编程（OOP）的基本概念，并介绍了一个使用 OOP 原则对学校的教授和学生进行建模的示例。
 
-我们还讨论了如何使用[原型](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)和[构造函数](/zh-CN/docs/Learn/JavaScript/Objects/Basics#introducing_constructors)来实现这样的模型，而 JavaScript 还提供了更接近经典 OOP 概念的特性。
+我们还讨论了如何使用[原型](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)和[构造函数](/zh-CN/docs/Learn_web_development/Core/Scripting/Object_basics#构造函数介绍)来实现这样的模型，而 JavaScript 还提供了更接近经典 OOP 概念的特性。
 
 在本文中，我们将介绍这些特性。注意，这里描述的特性并不是一种继承对象的新方式：在引擎的底层，这一特性使用的仍是原型。这只是一种更容易的创建原型链的方法。
 

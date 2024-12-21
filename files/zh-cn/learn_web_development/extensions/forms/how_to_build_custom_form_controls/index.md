@@ -723,7 +723,7 @@ window.addEventListener("load", function () {
 
 #### 不使用 JS
 
-查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#不使用_js)。
+查看[完整源代码](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#不使用_js)。
 
 ```html hidden
 <form class="no-widget">
@@ -762,7 +762,7 @@ window.addEventListener("load", function () {
 
 #### 使用 JS
 
-查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#使用_js)。
+查看[完整源代码](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#使用_js)。
 
 ```html hidden
 <form class="no-widget">

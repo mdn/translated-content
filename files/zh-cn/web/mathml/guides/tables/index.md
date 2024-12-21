@@ -126,7 +126,7 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Stru
 
 ## 允许单元格跨多行多列
 
-与 [HTML 表格](/zh-CN/docs/Learn/HTML/Tables/Basics#allowing_cells_to_span_multiple_rows_and_columns)类似，`<mtd>` 元素具有 `columnspan` 和 `rowspan` 属性，以指示单元格跨多行和多列。下面的内部矩阵跨越外部矩阵的两列：
+与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#允许单元格跨越多行和列)类似，`<mtd>` 元素具有 `columnspan` 和 `rowspan` 属性，以指示单元格跨多行和多列。下面的内部矩阵跨越外部矩阵的两列：
 
 ```html hidden
 <!doctype html>

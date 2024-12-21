@@ -378,7 +378,7 @@ f("a", "b"); // 'a+b'
 本节提供一些 JavaScript 中常见的数组操作示例。
 
 > [!NOTE]
-> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn_web_development/Core/Scripting/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 

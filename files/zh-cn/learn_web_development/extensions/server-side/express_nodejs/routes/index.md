@@ -56,7 +56,7 @@ l10n:
 创建路由有多种方法。在本教程中，我们将使用 [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) 中间件，因为它允许我们将网站特定部分的路由处理器分组在一起并使用共同的路由前缀访问它们。我们将把所有与图书馆相关的路由保存在“catalog”（目录）模块中，如果我们添加了用于处理用户账户或其他功能的路由，可以将它们单独分组。
 
 > [!NOTE]
-> 我们在 [Express 简介 > 创建路由处理程序](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 *Express 应用对象*上定义路由非常类似。
+> 我们在 [Express 简介 > 创建路由处理器](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#创建路由处理器（route_handler）)中简要讨论了 Express 应用的路由机制。使用 _Router_ 可以保证更好的模块化（下文所述），且用法与直接在 *Express 应用对象*上定义路由非常类似。
 
 本小节的剩余部分内容将介绍使用 `Router` 定义路由的方法。
 
@@ -111,7 +111,7 @@ router.get("/about", (req, res) => {
 该回调有三个参数（通常命名为：`req`、`res`、`next`），分别是：HTTP 请求对象、HTTP 响应、中间件链中的下一个函数。
 
 > [!NOTE]
-> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#使用中间件（middleware）)，这意味着它们要么（通过响应）结束请求，要么调用链中的 `next` 函数。在上述示例中，我们使用 `send()` 完成了请求，因而没有用上 `next` 参数（参数表中将其省略）。
+> 路由函数就是 [Express 中间件](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#使用中间件（middleware）)，这意味着它们要么（通过响应）结束请求，要么调用链中的 `next` 函数。在上述示例中，我们使用 `send()` 完成了请求，因而没有用上 `next` 参数（参数表中将其省略）。
 >
 > 上述路由函数只需要一个回调。我们可以根据需要指定任意数量的回调参数或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
