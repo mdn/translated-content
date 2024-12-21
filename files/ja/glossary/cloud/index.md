@@ -1,5 +1,5 @@
 ---
-title: クラウド
+title: Cloud (クラウド)
 slug: Glossary/Cloud
 l10n:
   sourceCommit: 99c2c3add298eaebe27102b2d83e27fd3ca80aef
