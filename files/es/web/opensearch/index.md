@@ -7,11 +7,11 @@ slug: Web/OpenSearch
 
 ## OpenSearch
 
-[Firefox 2](/es/Firefox_2) admite el formato de descripción [OpenSearch](http://opensearch.org/) para complementos (_plugins_) de búsqueda. Aquellos complementos que usen [la sintaxis OpenSearch](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document) son compatibles con Firefox e Internet Explorer 7. Por ello es el formato recomendado para cualquier nuevo desarrollo.
+[Firefox 2](/es/Firefox_2) admite el formato de descripción [OpenSearch](http://opensearch.org/) para complementos (_plugins_) de búsqueda. Aquellos complementos que usen [la sintaxis OpenSearch](https://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document) son compatibles con Firefox e Internet Explorer 7. Por ello es el formato recomendado para cualquier nuevo desarrollo.
 
-Firefox admite además capacidades de búsqueda adicionales no incluidas en [la sintaxis de descripción OpenSearch](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document), tales como las "sugerencias de búsqueda" y el elemento `SearchForm`. Este artículo se centrará en la creación de complementos compatibles con OpenSearch que empleen estas capacidades adicionales de Firefox.
+Firefox admite además capacidades de búsqueda adicionales no incluidas en [la sintaxis de descripción OpenSearch](https://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document), tales como las "sugerencias de búsqueda" y el elemento `SearchForm`. Este artículo se centrará en la creación de complementos compatibles con OpenSearch que empleen estas capacidades adicionales de Firefox.
 
-Además, los ficheros de descripción OpenSearch pueden ser anunciados dentro de una página HTML de forma que puedan ser descubiertos automáticamente por el navegador (esto se describe en [Detección automática de motores de búsqueda](#Autodiscovery_of_search_plugins).
+Además, los ficheros de descripción OpenSearch pueden ser anunciados dentro de una página HTML de forma que puedan ser descubiertos automáticamente por el navegador (esto se describe en [Detección automática de motores de búsqueda](#autodiscovery_of_search_plugins).
 
 Por último, estos complementos, pueden ser instalados mediante código tal y como se describe en [Añadir motores de búsqueda desde páginas web](/es/A%c3%b1adir_motores_de_b%c3%basqueda_desde_p%c3%a1ginas_web).
 
@@ -52,7 +52,7 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
 <!---->
 
 - **Image**
-  - : Icono de 16x16 codificado en Base-64 que represente al motor de búsqueda. Puedes encontrar una utilidad para generar estos datos en: [The data: URI kitchen](http://software.hixie.ch/utilities/cgi/data/data).
+  - : Icono de 16x16 codificado en Base-64 que represente al motor de búsqueda. Puedes encontrar una utilidad para generar estos datos en: [The data: URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
 
 <!---->
 
@@ -68,7 +68,7 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
     - `type="text/html"` se usa al especificar la URL a donde se va a enviar la petición de búsqueda.
     - `type="application/x-suggestions+json"` se usa al especificar la URL de donde se van a obtener las sugerencias de búsqueda.
 
-    El atributo `template` indica la forma en que se construirá la URL para la consulta. Dentro de este atributo se pueden introducir plantillas que se expanden de forma dinámica; la más habitual es `{searchTerms}`, la cual se expande a los términos de búsqueda introducidos por el usuario en la barra de búsquedas. En [OpenSearch 1.1 parameters](http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters) se describen los otros tipos admitidos.
+    El atributo `template` indica la forma en que se construirá la URL para la consulta. Dentro de este atributo se pueden introducir plantillas que se expanden de forma dinámica; la más habitual es `{searchTerms}`, la cual se expande a los términos de búsqueda introducidos por el usuario en la barra de búsquedas. En [OpenSearch 1.1 parameters](https://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters) se describen los otros tipos admitidos.
 
     Para consultas que devuelven sugerencias de búsqueda, la URL descrita en `template` se usa para obtener una lista de sugerencias en el formato JSON (JavaScript Object Notation). Para saber más sobre como incorporar sugerencias de búsqueda en el lado del servidor, ver [Permitir sugerencias en los plugins de búsqueda](/es/Permitir_sugerencias_en_los_plugins_de_b%c3%basqueda).
 
@@ -136,6 +136,6 @@ Adicionalmente, el servicio de complementos de búsqueda suministra un mecanismo
 - Wikipedia - [`data:` URL](http://es.wikipedia.org/wiki/Data:_URL)
 - [Searchy](http://searchy.protecus.de/) - [Crea](http://searchy.protecus.de/en/add2.php) tu propio complemento o usa [la lista de complementos](http://searchy.protecus.de/en/searchbox-add-ons.php).
 - [searchplugins.net](http://www.searchplugins.net) - Crea complementos OpenSearch plugins para ser usados con Firefox 2. [Lista de complementos de búsqueda](http://www.searchplugins.net/pluginlist.aspx)
-- [Ready2Search](http://ready.to/search/en/) - Crea complementos OpenSearch. [Búsquedas personalizadas a través de Ready2Search](http://ready.to/search/make/en_make_plugin.htm)
+- [Ready2Search](https://ready.to/search/en/) - Crea complementos OpenSearch. [Búsquedas personalizadas a través de Ready2Search](https://ready.to/search/make/en_make_plugin.htm)
 
 Interwiki link

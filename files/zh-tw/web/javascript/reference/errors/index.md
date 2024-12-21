@@ -17,4 +17,4 @@ In this list, each page is listed by name (the type of error) and message (a mor
 
 ## 參見
 
-- [哪裡出錯了？JavaScript 除錯](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)：針對初學者的 JavaScript 除錯入門教程。
+- [哪裡出錯了？JavaScript 除錯](/zh-TW/docs/Learn_web_development/Core/Scripting/What_went_wrong)：針對初學者的 JavaScript 除錯入門教程。

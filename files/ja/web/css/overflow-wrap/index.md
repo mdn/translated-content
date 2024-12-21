@@ -137,4 +137,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [テキストの分割と折り返しのガイド](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

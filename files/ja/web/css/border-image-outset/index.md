@@ -2,7 +2,7 @@
 title: border-image-outset
 slug: Web/CSS/border-image-outset
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
 {{CSSRef}}
@@ -67,13 +67,13 @@ border-image-outset: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___outsetting_a_border_image
 <div id="outset">この要素の境界画像ははみ出しています。</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___outsetting_a_border_image
 #outset {
   width: 10rem;
   background: #cef;
@@ -86,7 +86,7 @@ border-image-outset: unset;
 
 #### 例
 
-{{EmbedLiveSample("境界画像をはみ出させる", "auto", 200)}}
+{{EmbedLiveSample("Outsetting_a_border_image", "auto", 200)}}
 
 ## 仕様書
 
@@ -100,3 +100,4 @@ border-image-outset: unset;
 
 - [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/)（MDN ブログ、2023）

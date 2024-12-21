@@ -41,7 +41,7 @@ Você deve ter seu título e parágrafos desde antes. Mantenha eles por perto.
 
 ### Cor do tema
 
-Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
+Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
 
 ![](screenshot_from_2014-11-03_17-40-49.png)
 
@@ -62,7 +62,7 @@ Observe que a maioria das imagens na Web, inclusive no Imagens do Google, é pro
 
 Para escolher uma fonte:
 
-1. Vá no [Google Fontes](http://www.google.com/fonts) e role a lista até que você ache uma que você goste. Você também pode usar os controles à direita para filtrar os resultados.
+1. Vá no [Google Fontes](https://www.google.com/fonts) e role a lista até que você ache uma que você goste. Você também pode usar os controles à direita para filtrar os resultados.
 2. Clique no ícone "mais" (Adicionar a) ao lado da fonte desejada.
 3. Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
 4. Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.

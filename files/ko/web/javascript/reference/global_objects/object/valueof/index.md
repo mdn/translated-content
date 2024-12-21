@@ -19,7 +19,7 @@ object.valueOf();
 
 객체의 원시 값.
 
-> **참고:** [(단항) 더하기 기호](/ko/docs/Web/JavaScript/Reference/Operators#단항_연산자) 는 가끔 `valueOf` 의 단축 표현으로 사용됩니다. 예를 들면, 다음과 같은 표현을 보세요. `+new Number()`. [단항 더하기 사용하기](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf#단항_더하기_사용하기).도 참조 하세요.
+> **참고:** [(단항) 더하기 기호](/ko/docs/Web/JavaScript/Reference/Operators#단항_연산자) 는 가끔 `valueOf` 의 단축 표현으로 사용됩니다. 예를 들면, 다음과 같은 표현을 보세요. `+new Number()`. [단항 더하기 사용하기](#단항_더하기_사용하기).도 참조 하세요.
 
 ## 설명
 

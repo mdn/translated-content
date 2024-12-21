@@ -11,7 +11,7 @@ La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples i
 
 - [Valor inicial](/es/docs/Web/CSS/initial_value): source-over
 - Se aplica a : todos los elementos
-- [Heredable](/es/docs/Web/CSS/inheritance): no
+- [Heredable](/es/docs/Web/CSS/Inheritance): no
 - Media: {{cssxref("Media/Visual", "visual")}}
 - [Valor calculado](/es/docs/Web/CSS/computed_value): tal y como se especifica.
 

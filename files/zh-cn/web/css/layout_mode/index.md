@@ -11,7 +11,7 @@ slug: Web/CSS/Layout_mode
 - **行内布局**：用来布置文本。
 - **表格布局**：用来布置表格。
 - **定位布局**：用来对那些与其他元素无交互的定位元素进行布置。
-- [**弹性盒子布局**](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)：用来布置那些可以顺利调整大小的复杂页面。{{experimental_inline}}
+- [**弹性盒子布局**](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)：用来布置那些可以顺利调整大小的复杂页面。{{experimental_inline}}
 - [**网格布局**](/zh-CN/docs/Web/CSS/CSS_grid_layout)：用来布置那些与一个固定网格相关的元素。{{experimental_inline}}
 
 > [!NOTE]
@@ -25,7 +25,7 @@ slug: Web/CSS/Layout_mode
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)

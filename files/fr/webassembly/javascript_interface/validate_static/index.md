@@ -7,7 +7,7 @@ l10n:
 
 {{WebAssemblySidebar}}
 
-La méthode statique **`WebAssembly.validate()`** permet de valider un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) de <i lang="en">bytecode</i> WebAssembly et renvoie un booléen qui indique si le contenu du tableau forme un module WebAssembly valide (`true`) ou non (`false`).
+La méthode statique **`WebAssembly.validate()`** permet de valider un [tableau typé](/fr/docs/Web/JavaScript/Guide/Typed_arrays) de <i lang="en">bytecode</i> WebAssembly et renvoie un booléen qui indique si le contenu du tableau forme un module WebAssembly valide (`true`) ou non (`false`).
 
 ## Syntaxe
 
@@ -18,7 +18,7 @@ WebAssembly.validate(bufferSource)
 ### Paramètres
 
 - `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) qui contient le <i lang="en">bytecode</i> du module qu'on souhaite valider.
+  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) qui contient le <i lang="en">bytecode</i> du module qu'on souhaite valider.
 
 ### Valeur de retour
 

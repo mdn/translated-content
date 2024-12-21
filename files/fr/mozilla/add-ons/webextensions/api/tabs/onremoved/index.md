@@ -38,7 +38,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `removeInfo`
-      - : [`object`](#removeInfo). L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.
+      - : [`object`](#removeinfo). L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.
 
 ## Objets supplémentaires
 

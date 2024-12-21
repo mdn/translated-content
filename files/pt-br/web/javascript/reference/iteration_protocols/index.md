@@ -94,7 +94,7 @@ var someString = "hi";
 typeof someString[Symbol.iterator]; // "function"
 ```
 
-[O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) de uma string retorna as posições dos caracteres de uma string um por um:
+[O iterador padrão](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) de uma string retorna as posições dos caracteres de uma string um por um:
 
 ```js
 var iterator = someString[Symbol.iterator]();
@@ -179,7 +179,7 @@ Veja também {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promi
 
 ### Sintaxe que espera iteráveis
 
-Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+Some statements and expressions expect iterables, for example the [`for-of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`yield*`](/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*), and [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```
 for(let value of ['a', 'b', 'c']){

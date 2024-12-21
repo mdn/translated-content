@@ -69,11 +69,11 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Notas
 
-A partir del 25 de Mayo del 2011, la especificación HTML5 establece que llamadas a los métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
+A partir del 25 de Mayo del 2011, la especificación HTML5 establece que llamadas a los métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](https://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
 
 Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en about:config para habilitar este comportamiento.
 
-Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire [Usando el almacenamiento en cache Firefox 1.5](/en/Using_Firefox_1.5_caching) para detalles.
+Usando este manejador de evento tu pagina previene que Firefox cambie el cache de la pagina a uno en memoria bfcache. Mire [Usando el almacenamiento en cache Firefox 1.5](/en-US/Using_Firefox_1.5_caching) para detalles.
 
 ## Especificaciones
 
@@ -85,9 +85,9 @@ Usando este manejador de evento tu pagina previene que Firefox cambie el cache d
 
 ## Mire tambien
 
-- [`DOMContentLoaded`](/es/docs/Web/Reference/Events/DOMContentLoaded)
-- [`readystatechange`](/es/docs/Web/Reference/Events/readystatechange)
-- [`load`](/es/docs/Web/Reference/Events/load)
-- [`unload`](/es/docs/Web/Reference/Events/unload)
-- [Unloading Documents — Confirmacion para descargar un documento](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [`DOMContentLoaded`](/es/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/es/docs/Web/API/Document/readystatechange_event)
+- [`load`](/es/docs/Web/API/Window/load_event)
+- [`unload`](/es/docs/Web/API/Window/unload_event)
+- [Unloading Documents — Confirmacion para descargar un documento](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
 - [Remover mensajes personalizados en dialogos onbeforeload despues de Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs)

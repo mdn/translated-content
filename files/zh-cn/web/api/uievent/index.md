@@ -56,5 +56,5 @@ _也继承了父代 {{domxref("Event")}} 的一些方法。_
 
 ## 相关链接
 
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}}

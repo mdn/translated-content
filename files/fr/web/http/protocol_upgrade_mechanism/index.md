@@ -77,7 +77,7 @@ Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
 Cet en-tête fournit les informations nécessaires au serveur pour confirmer que le client est habilité à demander une mise à niveau en WebSocket. Cet en-tête peut être utilisé lorsque des clients non sécurisés (HTTP) souhaite basculer, afin de fournir certaines protections contre les abus. La valeur de la clé est calculée avec un algorithme défini par la spécification WebSocket. Une telle clé _ne fournit pas de sécurité_&nbsp;: elle permet d'éviter à des clients non-WebSocket de se connecter par inadvertance (ou malveillance) en WebSocket. Autrement dit, cette clé permet simplement de confirmer que «&nbsp;Oui, je souhaite réellement demander ouvrir une connexion WebSocket&nbsp;».
 
-Cet en-tête est automatiquement ajouté par les clients qui choisissent de l'utiliser. On _ne peut pas_ ajouter cet en-tête en script avec les méthodes [`fetch()`](/fr/docs/Web/API/fetch) ou [`XMLHttpRequest.setRequestHeader()`](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader).
+Cet en-tête est automatiquement ajouté par les clients qui choisissent de l'utiliser. On _ne peut pas_ ajouter cet en-tête en script avec les méthodes [`fetch()`](/fr/docs/Web/API/Window/fetch) ou [`XMLHttpRequest.setRequestHeader()`](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader).
 
 ```http
 Sec-WebSocket-Key: key

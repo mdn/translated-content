@@ -240,4 +240,4 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - [SVG attribute reference](/zh-CN/docs/Web/SVG/Attribute)
 - [SVG Tutorial](/zh-CN/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/zh-CN/docs/Web/API/Document_Object_Model#SVG_interfaces)
+- [SVG interface reference](/zh-CN/docs/Web/API/Document_Object_Model#svg_interfaces)

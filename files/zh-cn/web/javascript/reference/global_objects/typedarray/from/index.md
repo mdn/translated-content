@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 
 {{JSRef}}
 
-`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)。这个方法和 {{jsxref("Array.from()")}} 类似。
+`TypedArray.from()` 方法 从一个类数组或者可迭代对象中创建一个新[类型数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)。这个方法和 {{jsxref("Array.from()")}} 类似。
 
 ## 语法
 
@@ -46,7 +46,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 `TypedArray.from()` 允许你从下面两者来创建数组：
 
 - 类数组对象（拥有一个 `length` 属性和若干索引属性的任意对象）
-- [可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/iterable)（你可以从它身上迭代出若干个元素的对象，比如有 {{jsxref("Map")}} 和 {{jsxref("Set")}} 等）。
+- [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)（你可以从它身上迭代出若干个元素的对象，比如有 {{jsxref("Map")}} 和 {{jsxref("Set")}} 等）。
 
 `TypedArray.from()` 方法有一个可选参数 `mapFn`, 让你可以在最后生成的类型数组上再执行一次 {{jsxref("Array.prototype.map", "map")}} 方法后再返回。也就是说以下两种形式是等价的：
 

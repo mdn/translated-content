@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/viewBox
 
 {{SVGRef}}
 
-« [SVG Attribute reference home](/en/SVG/Attribute)
+« [SVG Attribute reference home](/en-US/SVG/Attribute)
 
 `viewBox` 속성은 특수한 container element 에 fit 하기 위한 주어진 graphics stretch 의 set 을 명시한다.
 
@@ -15,11 +15,11 @@ slug: Web/SVG/Attribute/viewBox
 
 ## Usage context
 
-| Categories         | None                                                                             |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | _See above_                                                                      |
-| Animatable         | Yes                                                                              |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute) |
+| Categories         | None                                                                              |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Value              | _See above_                                                                       |
+| Animatable         | Yes                                                                               |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/coords.html#ViewBoxAttribute) |
 
 ## Example
 
@@ -36,4 +36,4 @@ slug: Web/SVG/Attribute/viewBox
 
 ## See also
 
-- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/en-US/SVG/Tutorial/Positions)

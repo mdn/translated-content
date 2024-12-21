@@ -43,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
+有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
 
 ### @规则语法
 
@@ -110,7 +110,7 @@ div.menu-bar li:hover > ul {
 - [层叠](/zh-CN/docs/Web/CSS/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
-- [继承](/zh-CN/docs/Web/CSS/inheritance)
+- [继承](/zh-CN/docs/Web/CSS/Inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/Specificity)
 - [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)

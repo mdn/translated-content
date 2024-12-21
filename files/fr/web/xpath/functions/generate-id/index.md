@@ -34,7 +34,7 @@ Cette fonction est un ajout à XPath spécifique à XSLT. Elle ne fait pas parti
 
 ### Définition
 
-[XSLT 1.0, section 12.4](http://www.w3.org/TR/xslt#function-generate-id).
+[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-generate-id).
 
 ### Support Gecko
 

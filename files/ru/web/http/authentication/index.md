@@ -69,7 +69,7 @@ WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
-Здесь, `<type>` - это схема аутентификации ("Basic" (базовая) это наиболее распространённая, [представленная ниже](/ru/docs/Web/HTTP/Authentication#Basic_authentication_scheme)). _realm_
+Здесь, `<type>` - это схема аутентификации ("Basic" (базовая) это наиболее распространённая, [представленная ниже](#Basic_authentication_scheme)). _realm_
 используется для описания защищённой области или для индикации области защиты. Это может быть сообщение типа "Access
 to the staging site" или подобное, чтобы пользователь знал, к какой области он пытается получить доступ.
 
@@ -90,7 +90,7 @@ Proxy-Authorization: <type> <credentials>
 Общая структура HTTP аутентификации является основной для ряда схем аутентификации. Schemes can differ in security
 strength and in their availability in client or server software.
 
-IANA поддерживат [список схем аутентификации](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml),
+IANA поддерживат [список схем аутентификации](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml),
 однако существуют и другие схемы предлагаемые хост-сервисами, например, Amazon AWS.
 
 Некоторые распространенные схемы аутентификации включают:
@@ -104,7 +104,7 @@ IANA поддерживат [список схем аутентификации]
   **O**rigin-**B**ound **A**uthentication, digital-signature-based),
 - **Mutual** (смотреть [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
 - **AWS4-HMAC-SHA256** (смотреть [AWS
-  документацию](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
+  документацию](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).
 
 Схемы могут различаться по степени безопасности и по их доступности в клиентском или серверном программном
 обеспечении.

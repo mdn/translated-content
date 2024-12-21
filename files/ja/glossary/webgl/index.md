@@ -22,5 +22,5 @@ slug: Glossary/WebGL
 
 ### 技術記事
 
-- [MDN の WebGL](/ja/docs/Web/WebGL)
+- [MDN の WebGL](/ja/docs/Web/API/WebGL_API)
 - [WebGL のサポート表](http://caniuse.com/#feat=webgl)

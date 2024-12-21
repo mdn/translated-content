@@ -49,4 +49,4 @@ _Inherits methods from its parent, {{domxref("Node")}}, and implements the {{dom
 
 ## See also
 
-- [The DOM interfaces index](/pt-BR/docs/DOM/DOM_Reference).
+- [The DOM interfaces index](/pt-BR/docs/Web/API/Document_Object_Model).

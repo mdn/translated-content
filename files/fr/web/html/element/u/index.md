@@ -14,7 +14,7 @@ L'élément HTML **`<u>`** permet d'afficher un fragment de texte qui est annot�
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 

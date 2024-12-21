@@ -38,13 +38,13 @@ Une action de page est une icône que votre extension ajoute dans la barre d'URL
 
 Votre extension peut éventuellement fournir une fenêtre contextuelle associée dont le contenu est spécifié en utilisant HTML, CSS et JavaScript.
 
-Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages) quand l'utilisateur clique sur l'icône.
+Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) quand l'utilisateur clique sur l'icône.
 
-Vous pouvez également créer et activer des actions de page par programme en utilisant l'[API pageAction](/fr/Add-ons/WebExtensions/API/pageAction).
+Vous pouvez également créer et activer des actions de page par programme en utilisant l'[API pageAction](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction).
 
 Les actions de page sont comme les actions de navigateur, mais elles sont associées à des pages Web particulières et non au navigateur dans son ensemble. Si une action est seulement pertinente sur certaines pages, vous devez utiliser une action de page et l'afficher uniquement sur les pages pertinentes. Si une action est pertinente pour toutes les pages ou pour le navigateur lui-même, utilisez une action de navigateur.
 
-Alors que les actions du navigateur sont affichées par défaut, les actions de page sont cachées par défaut. Elles peuvent être affichées pour un onglet particulier en appelant [`pageAction.show()`](/fr/Add-ons/WebExtensions/API/pageAction/show), en passant dans l'ID de l'onglet. Vous pouvez également modifier ce comportement par défaut en utilisant la propriété `show_matches`.
+Alors que les actions du navigateur sont affichées par défaut, les actions de page sont cachées par défaut. Elles peuvent être affichées pour un onglet particulier en appelant [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show), en passant dans l'ID de l'onglet. Vous pouvez également modifier ce comportement par défaut en utilisant la propriété `show_matches`.
 
 ## Syntaxe
 
@@ -284,6 +284,6 @@ Une action de page avec une icône, un titre et une fenêtre contextuelle. Cette
 
 ## Voir aussi
 
-- [`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/fr/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
+- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)

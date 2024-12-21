@@ -17,4 +17,4 @@ slug: Glossary/XMLHttpRequest
 ### Informations techniques
 
 - L'objet {{domxref("XMLHttpRequest")}}.
-- La [documentation sur MDN à propos de l'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest).
+- La [documentation sur MDN à propos de l'utilisation de XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).

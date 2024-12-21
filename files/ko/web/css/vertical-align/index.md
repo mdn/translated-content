@@ -254,7 +254,7 @@ td {
 
 ## 같이 보기
 
-- [Typical use cases of Flexbox, section "Center item"](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#center_item)
+- [Typical use cases of Flexbox, section "Center item"](/ko/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](http://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

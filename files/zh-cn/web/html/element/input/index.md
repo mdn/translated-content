@@ -512,7 +512,7 @@ slug: Web/HTML/Element/input
     如果没有明确包含它：
 
     - `step` 对于类型为 `number` 和 `range` 的默认值为 1。
-    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Element/Input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Element/Input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Element/Input/week#step)。
+    - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Element/input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Element/input/week#step)。
 
     值必须为一个正数（整数或小数）或特殊值 `any`（意味着不指定任何步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外））。
 
@@ -786,7 +786,7 @@ input:checked + label {
 
 ### 属性选择器
 
-使用[属性选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)，可以根据表单控件的 [`type`](#type) 来锁定不同类型的表单控件。CSS 属性选择器只需根据一个属性的存在或一个给定属性的值来匹配元素。
+使用[属性选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)，可以根据表单控件的 [`type`](#type) 来锁定不同类型的表单控件。CSS 属性选择器只需根据一个属性的存在或一个给定属性的值来匹配元素。
 
 ```css
 /* 匹配密码输入 */
@@ -859,9 +859,9 @@ input.custom {
 
 还可以参考：
 
-- [为 HTML 表单赋予样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [HTML 表单高级样式化](/zh-CN/docs/Learn/Forms/Advanced_form_styling) 和
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)。
+- [为 HTML 表单赋予样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [HTML 表单高级样式化](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling) 和
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)。
 
 ## 额外特性
 
@@ -1235,13 +1235,13 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 ## 参见
 
 - [表单约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构建 Web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [表单数据验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [旧式浏览器中的 HTML 表单](/zh-CN/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [为 HTML 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [HTML 表单高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [你的第一个表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [如何构建 Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [表单数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [旧式浏览器中的 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [为 HTML 表单添加样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [HTML 表单高级样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

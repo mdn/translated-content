@@ -22,7 +22,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 
 #### 新機能
 
-- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/CSS_Masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
+- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/CSS_masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
 - {{cssxref("caret-color")}} プロパティを追加しました ([Firefox バグ 1063162](https://bugzil.la/1063162))。
 - {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} 一括指定プロパティを実装しました ([Firefox バグ 1319958](https://bugzil.la/1319958))。
 - {{cssxref("display")}} プロパティに値 `flow-root` を追加しました ([Firefox バグ 1322191](https://bugzil.la/1322191))。
@@ -57,7 +57,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} コンストラクターを実装しました ([Firefox バグ 1002256](https://bugzil.la/1002256))。
 - {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} の別名である {{domxref("MouseEvent.x")}} および {{domxref("MouseEvent.y")}} を実装しました ([Firefox バグ 424390](https://bugzil.la/424390))。
 - {{domxref("Element/auxclick_event", "auxclick")}} イベントと、これに対応するイベントハンドラーを実装しました ([Firefox バグ 1304044](https://bugzil.la/1304044))。
-- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/CSS_Transitions) をキャンセルした後に発生するようになりました。
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/CSS_transitions) をキャンセルした後に発生するようになりました。
 
 ### DOM
 
@@ -158,7 +158,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 向上した API:
 
 - [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
-- [`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) の [context タイプ](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType) として `page_action`、`browser_action`、`password`, `tab`
+- [`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) の [context タイプ](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) として `page_action`、`browser_action`、`password`, `tab`
 - [`webRequest.onBeforeRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) で `requestBody` をサポート
 - [`tabs.insertCSS`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) で `cssOrigin` をサポート。ユーザースタイルシートが挿入可能になります。
 

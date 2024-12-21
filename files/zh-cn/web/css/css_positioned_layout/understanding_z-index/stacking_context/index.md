@@ -223,5 +223,5 @@ h1 {
 ## 原始文档信息
 
 - 作者：Paolo Lombardi
-- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/) 将所有内容分享。
+- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/) 将所有内容分享。
 - 上次更新时间：July 9th, 2005

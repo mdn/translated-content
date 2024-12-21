@@ -36,7 +36,7 @@ slug: Web/API/CloseEvent
 
 ## 參見
 
-- [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket)
+- [`WebSocket`](/zh-TW/WebSockets/WebSockets_reference/WebSocket)
 
 ## 瀏覽器兼容
 

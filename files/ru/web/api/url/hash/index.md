@@ -8,7 +8,7 @@ slug: Web/API/URL/hash
 Свойство **`hash`** интерфейса {{domxref("URL")}} — это строка типа {{domxref("USVString")}},
 содержащая символ `'#'`, после которого идет идентификатор фрагмента URL-адреса.
 
-Фрагмент не [кодируется](/ru/docs/Glossary/percent-encoding). Если URL-адрес не имеет
+Фрагмент не [кодируется](/ru/docs/Glossary/Percent-encoding). Если URL-адрес не имеет
 идентификатора фрагмента, то данное свойство содержит пустую строку — `""`.
 
 {{AvailableInWorkers}}

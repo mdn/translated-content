@@ -91,7 +91,7 @@ _这个接口也继承其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
 - {{domxref("Element/click_event", "click")}}

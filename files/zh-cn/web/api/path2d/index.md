@@ -5,7 +5,7 @@ slug: Web/API/Path2D
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-Canvas 2D API 的接口 **`Path2D`** 用来声明路径，此路径稍后会被{{domxref("CanvasRenderingContext2D")}} 对象使用。`CanvasRenderingContext2D` 接口的 [路径方法](/zh-CN/docs/Web/API/CanvasRenderingContext2D#Paths) 也存在于 Path2D 这个接口中，允许你在 canvas 中根据需要创建可以保留并重用的路径。
+Canvas 2D API 的接口 **`Path2D`** 用来声明路径，此路径稍后会被{{domxref("CanvasRenderingContext2D")}} 对象使用。`CanvasRenderingContext2D` 接口的 [路径方法](/zh-CN/docs/Web/API/CanvasRenderingContext2D#paths) 也存在于 Path2D 这个接口中，允许你在 canvas 中根据需要创建可以保留并重用的路径。
 
 ## 构造函数
 

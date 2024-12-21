@@ -79,7 +79,7 @@ En versiones anteriores de Firefox, había casos en los que cuando el usuario se
 
 ### Cambios en JavaScript
 
-Firefox 3 soporta [JavaScript 1.8](/en/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
+Firefox 3 soporta [JavaScript 1.8](/en-US/New_in_JavaScript_1.8). Un cambio importante que quizás requiera actualizaciones en los sitios web o en las aplicaciones, es que los Script obsoletos y no-estandar no son soportados. Esto no es la etiqueta `<script>`, pero un objeto de JavaScript que nunca fue estandarizado. De cualquier manera es muy improbable que se use, así que probablemente no surgan problemas.
 
 ### Vea también
 

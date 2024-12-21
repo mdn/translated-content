@@ -51,23 +51,23 @@ svg {
 
 - {{SVGAttr("dx")}}
   - : この属性は、ドロップシャドウの X 方向のオフセットを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number); _既定値_: `2`; _Animatable_: **yes**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number); _既定値_: `2`; _Animatable_: **yes**
 - {{SVGAttr("dy")}}
   - : この属性は、ドロップシャドウの Y 方向のオフセットを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number); _既定値_: `2`; _Animatable_: **yes**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number); _既定値_: `2`; _Animatable_: **yes**
 - {{SVGAttr("stdDeviation")}}
   - : この属性は、ドロップシャドウのぼかし操作の標準偏差を定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number); _既定値_: `2`; _Animatable_: **yes**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Content_type#number); _既定値_: `2`; _Animatable_: **yes**
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- [コア属性](/ja/docs/Web/SVG/Attribute)
   - : 特に: {{SVGAttr('id')}}
-- [スタイル属性](/ja/docs/Web/SVG/Attribute/Styling)
+- [スタイル属性](/ja/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Attribute#Filters_Attributes)
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Attribute#filters_attributes)
   - : {{SVGAttr('height')}}, {{SVGAttr('in')}}, {{SVGAttr('result')}}, {{SVGAttr('x')}}, {{SVGAttr('y')}}, {{SVGAttr('width')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute)
   - : 特に: {{SVGAttr('flood-color')}}, {{SVGAttr('flood-opacity')}}
 
 ## 使用上の注意

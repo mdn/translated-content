@@ -13,7 +13,7 @@ Lorsqu'une chaîne de caractères est assignée à la propriété `returnValue` 
 > Afin d'éviter les "pop-ups" indésirables, les navigateurs peuvent ne pas afficher les alertes créées dans les gestionnaires `beforeunload`.
 
 > [!WARNING]
-> Attacher un gestionnaire d'événement `beforeunload` à `window` ou à `document` empêche les navigateurs d'utiliser leur mémoire cache ; consulter [Utilisation du cache de Firefox 1.5](/fr/docs/Utilisation_du_cache_de_Firefox_1.5) ou [WebKit's Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/) (en anglais).
+> Attacher un gestionnaire d'événement `beforeunload` à `window` ou à `document` empêche les navigateurs d'utiliser leur mémoire cache ; consulter [Utilisation du cache de Firefox 1.5](/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching) ou [WebKit's Page Cache](https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/) (en anglais).
 
 <table class="properties">
   <tbody>
@@ -86,7 +86,7 @@ Noter aussi que de nombreux navigateurs ignorent le résultat de l'événement (
 
 - [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
 - [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-- [`load`](/fr//docs/Web/API/Window/load_event)
+- [`load`](/fr_docs/Web/API/Window/load_event)
 - [`unload`](/fr/docs/Web/API/Window/unload_event)
-- [Unloading Documents — Prompt to unload a document](http://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [Unloading Documents — Prompt to unload a document](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
 - [Enlever les messages personnalisés dans les boîtes de dialogues onbeforeload après Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeload_dialogs)

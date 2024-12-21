@@ -98,4 +98,4 @@ slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
 - 画面サイズに列幅を合わせることにより、様々な画面サイズのデバイスに対応可能となります。
   - また、アイテム一つ一つの幅を正しく指定することで、他のコンテンツの表示崩れ等の併発を防ぐことができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

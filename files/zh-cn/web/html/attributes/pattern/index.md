@@ -13,7 +13,7 @@ slug: Web/HTML/Attributes/pattern
 
 `pattern` 属性是 {{HTMLElement("input/text", "text")}}、{{HTMLElement("input/tel", "tel")}}、{{HTMLElement("input/email", "email")}}、{{HTMLElement("input/url", "url")}}、{{HTMLElement("input/password", "password")}} 和 {{HTMLElement("input/search", "search")}} 等输入类型的属性。
 
-当指定 `pattern` 属性时，它是一个正则表达式，代表输入的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 必须与之匹配，以便该值能够通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。它必须是一个有效的 JavaScript 正则表达式，它会被 {{jsxref("RegExp")}} 类型所使用，正如我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中所述；在编译正则表达式时指定 `'u'` 标志，以便将该模式作为 Unicode 码点序列，而不是 ASCII。模式文本周围不应指定正斜杠。
+当指定 `pattern` 属性时，它是一个正则表达式，代表输入的 [`value`](/zh-CN/docs/Web/HTML/Global_attributes#value) 必须与之匹配，以便该值能够通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。它必须是一个有效的 JavaScript 正则表达式，它会被 {{jsxref("RegExp")}} 类型所使用，正如我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中所述；在编译正则表达式时指定 `'u'` 标志，以便将该模式作为 Unicode 码点序列，而不是 ASCII。模式文本周围不应指定正斜杠。
 
 如果没有指定模式或无效，则不应用正则表达式，此属性被忽略。
 
@@ -157,6 +157,6 @@ input:valid + span::after {
 
 ## 参见
 
-- [约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)

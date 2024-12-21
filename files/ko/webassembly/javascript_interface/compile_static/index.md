@@ -16,7 +16,7 @@ WebAssembly.compile(bufferSource);
 ### Parameters
 
 - _bufferSource_
-  - : 컴파일 할 .wasm 모듈의 이진 코드가 들어있는 [typed array](/ko/docs/Web/JavaScript/Typed_arrays) 또는 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)입니다.
+  - : 컴파일 할 .wasm 모듈의 이진 코드가 들어있는 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 또는 [ArrayBuffer](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)입니다.
 
 ### Return value
 
@@ -24,7 +24,7 @@ WebAssembly.compile(bufferSource);
 
 ### Exceptions
 
-- `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)가 아니면 {{jsxref("TypeError")}}가 발생합니다.
+- `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays)가 아니면 {{jsxref("TypeError")}}가 발생합니다.
 - 컴파일에 실패하면 promise는 {{jsxref("WebAssembly.CompileError")}}와 함께 reject가 반환됩니다.
 
 ## Examples

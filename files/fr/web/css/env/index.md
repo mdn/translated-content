@@ -115,6 +115,6 @@ Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fourni
 ## Voir aussi
 
 - {{CSSxRef("var", "var(…)")}}
-- [Les propriétés personnalisées et la cascade](/fr/docs/Web/CSS/CSS_Variables)
+- [Les propriétés personnalisées et la cascade](/fr/docs/Web/CSS/CSS_cascading_variables)
 - [Les propriétés personnalisées (--\*)](/fr/docs/Web/CSS/--*)
-- [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Les_variables_CSS)
+- [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties)

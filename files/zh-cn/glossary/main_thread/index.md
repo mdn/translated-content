@@ -13,7 +13,7 @@ l10n:
 
 ## 参见
 
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
 - [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [术语](/zh-CN/docs/Glossary)

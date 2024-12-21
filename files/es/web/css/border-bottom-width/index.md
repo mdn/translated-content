@@ -45,7 +45,7 @@ border-bottom-width: <border-width> | inherit
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border.html)
 
 ```
 element {

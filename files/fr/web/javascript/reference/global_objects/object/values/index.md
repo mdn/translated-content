@@ -79,7 +79,7 @@ Afin d'ajouter le support pour `Object.values` dans des environnements plus anci
 
 ## Voir aussi
 
-- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

@@ -195,7 +195,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## Ve también
 
-- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Typed_arrays)
+- [Arreglos tipados JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [TextDecoder](/es/docs/Web/API/TextDecoder) — Ayuda que decodifica cadenas a partir de datos numéricos

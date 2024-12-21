@@ -7,11 +7,11 @@ slug: Web/HTML/Element/script
 
 **HTML `<script>` 元素**能嵌入或引用要執行的程式碼。最常見的用途是嵌入或引用 JavaScript 程式碼。`<script>` 元素也能執行其他語言，例如 [WebGL](/zh-TW/docs/Web/API/WebGL_API) 的 GLSL shader 程式語言。
 
-| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content). |
+| [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content). |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許的內容                                          | 動態腳本如 `text/javascript`.                                                                                                                                                                                           |
 | 標籤省略                                            | 不允許，開始和結束標籤都是必須的。                                                                                                                                                                                      |
-| 允許的父元素                                        | 任何可接受 [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)或 [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content) 的元素。                                               |
+| 允許的父元素                                        | 任何可接受 [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#metadata_content)或 [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content) 的元素。                                               |
 | 允許的 ARIA role                                    | None                                                                                                                                                                                                                    |
 | DOM 介面                                            | {{domxref("HTMLScriptElement")}}                                                                                                                                                                                        |
 
@@ -35,7 +35,7 @@ slug: Web/HTML/Element/script
     請參見[相容性註解](#相容性註解)的瀏覽器支援備註。另請參見 [Async scripts for asm.js](/zh-TW/docs/Games/Techniques/Async_scripts)。
 
 - `crossorigin`
-  - : 針對沒有通過標準 [CORS](/zh-TW/docs/HTTP_access_control) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/CORS_settings_attributes) 以以取得對其有效參數的，更具描述性的解釋。
+  - : 針對沒有通過標準 [CORS](/zh-TW/docs/Web/HTTP/CORS) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 以以取得對其有效參數的，更具描述性的解釋。
 - `defer`
 
   - : 設置此 Boolean attribute 是為了指示瀏覽器，腳本應在 document 解析後，但在觸發 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event) 之前被執行。具有 `defer` 屬性的腳本將阻止觸發 `DOMContentLoaded` 事件，直到腳本 load 完成並且 finished evaluating。
@@ -62,7 +62,7 @@ slug: Web/HTML/Element/script
   - : Like the `textContent` attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
 - `type`
 
-  - : 此屬性指定程式碼應該表示的類型。此屬性的值會屬於以下類別之一：**省略或 JavaScript MIME 類型**：針對相容 HTML5 的瀏覽器來說，元素內會執行 JavaScript。HTML5 規範敦促作者省略此屬性，不需要寫冗長的 MIME 類型。在早期的瀏覽器中，這確定了嵌入或引入（透過 `src` 屬性）腳本的語言。JavaScript MIME 類型[有列在規範內](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
+  - : 此屬性指定程式碼應該表示的類型。此屬性的值會屬於以下類別之一：**省略或 JavaScript MIME 類型**：針對相容 HTML5 的瀏覽器來說，元素內會執行 JavaScript。HTML5 規範敦促作者省略此屬性，不需要寫冗長的 MIME 類型。在早期的瀏覽器中，這確定了嵌入或引入（透過 `src` 屬性）腳本的語言。JavaScript MIME 類型[有列在規範內](/zh-TW/docs/Web/HTTP/MIME_types)。
 
     - **`module`**：針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 `charset` 與 `defer` 屬性影響。針對 `module` 的資訊，請參閱 [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)。在使用 `module` 關鍵字時，程式碼的行為會有所不同。
     - **其他值**：嵌入的內容會被當成一段不給瀏覽器執行的資料塊（data block）。開發者應當使用非 JavaScript 的有效 MIME 類型，以標明資料塊。`src` 屬性也將被忽略。
@@ -79,7 +79,7 @@ slug: Web/HTML/Element/script
 
 Scripts without `async` or `defer` attributes, as well as inline scripts, are fetched and executed immediately, before the browser continues to parse the page.
 
-The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an [`error`](/zh-TW/docs/Web/API/Element/error_event) is sent to the element, if not a [`load`](/zh-TW/docs/Web/API/Window/load_event) event is sent.
+The script should be served with the `text/javascript` MIME type, but browsers are lenient and only block them if the script is served with an image type (`image/*`); a video type (`video/*`); an audio (`audio/*`) type; or `text/csv`. If the script is blocked, an [`error`](/zh-TW/docs/Web/API/HTMLElement/error_event) is sent to the element, if not a [`load`](/zh-TW/docs/Web/API/Window/load_event) event is sent.
 
 ## 示例
 

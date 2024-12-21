@@ -50,7 +50,7 @@ Vejamos um exemplo para tornar isso um pouco mais claro.
 
 ## Noções básicas sobre objetos de protótipo
 
-Aqui voltaremos ao exemplo em que terminamos de escrever nosso construtor `Person()` — carregamos o exemplo em seu navegador. Se você ainda não o conseguiu trabalhar no último artigo, use nosso exemplo [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
+Aqui voltaremos ao exemplo em que terminamos de escrever nosso construtor `Person()` — carregamos o exemplo em seu navegador. Se você ainda não o conseguiu trabalhar no último artigo, use nosso exemplo [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) (veja também o [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
 
 Neste exemplo, definimos uma função construtora, assim:
 
@@ -132,7 +132,7 @@ var myString = "This is my string.";
 `myString` imediatamente tem vários métodos úteis disponíveis, como [`split()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
 > [!NOTE]
-> Vale a pena ler nosso guia mais aprofundado sobre [Como usar protótipos em JavaScript](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Using_prototypes_in_JavaScript), uma vez que você tenha entendido esta seção e queira saber mais. Esta seção é intencionalmente simplificada para tornar esses conceitos um pouco mais fáceis de entender quando você os conhecer pela primeira vez.
+> Vale a pena ler nosso guia mais aprofundado sobre [Como usar protótipos em JavaScript](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#using_prototypes_in_javascript), uma vez que você tenha entendido esta seção e queira saber mais. Esta seção é intencionalmente simplificada para tornar esses conceitos um pouco mais fáceis de entender quando você os conhecer pela primeira vez.
 
 > **Aviso:** **Importante**: A propriedade `prototype` é uma das partes com o nome mais confuso do JavaScript — você pode pensar que `this` aponta para o objeto de protótipo do objeto atual, mas não (esse é um objeto interno que pode ser acessado por `__proto__`, lembra?) . Em vez disso, `prototype` é uma propriedade que contém um objeto no qual você define os membros que deseja herdar.
 
@@ -207,7 +207,7 @@ person1.constructor.name;
 
 Vamos dar uma olhada em um exemplo de modificação da propriedade `prototype` de uma função construtora — os métodos adicionados ao protótipo estão então disponíveis em todas as instâncias de objeto criadas a partir do construtor. Neste ponto, finalmente adicionaremos algo ao protótipo do nosso construtor `Person()`.
 
-1. Volte para o nosso exemplo de [oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
+1. Volte para o nosso exemplo de [oojs-class-further-exercises.html](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html) e faça uma cópia local do [código-fonte](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). Abaixo do JavaScript existente, adicione o seguinte código, que adiciona um novo método à propriedade `prototype` do construtor:
 
    ```js
    Person.prototype.farewell = function () {
@@ -244,7 +244,7 @@ Person.prototype.farewell = function () {
 Mas o método `farewell()` ainda está disponível na instância do objeto `person1` — seus membros foram atualizados automaticamente para incluir o método `farewell()`.
 
 > [!NOTE]
-> Se você está tendo problemas para fazer este exemplo funcionar, dê uma olhada no nosso exemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) (veja também [running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
+> Se você está tendo problemas para fazer este exemplo funcionar, dê uma olhada no nosso exemplo [oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html) (veja também [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)).
 
 Você raramente verá propriedades definidas na propriedade `prototype`, porque elas não são muito flexíveis quando definidas dessa forma. Por exemplo, você poderia adicionar uma propriedade assim:
 

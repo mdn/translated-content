@@ -20,7 +20,7 @@ JavaScript est plutôt compact tout en étant très souple. Les développeurs on
 - des API tierces‑parties permettant aux développeurs d'incorporer dans leurs sites des fonctionnalités issues d'autres fournisseurs de contenu, comme Twitter ou Facebook.
 - des modèles et bibliothèques tierces‑parties applicables à votre HTML permettant de mettre en œuvre rapidement des sites et des applications.
 
-Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/Apprendre/JavaScript), et le reste du MDN.
+Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/Learn/JavaScript), et le reste du MDN.
 
 Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et vous pratiquerez aussi en manipulant les fonctionnalités des API navigateur. Amusez-vous !
 
@@ -67,7 +67,7 @@ Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propri�
 Nous allons explorer les fonctionnalités de base de JavaScript pour que vous puissiez mieux comprendre comment il fonctionne. Ces fonctionnalités sont communes à la plupart des langages de programmation, si vous comprenez ces éléments en JavaScript, vous êtes en bonne voie de pouvoir programmer à peu près n'importe quoi !
 
 > [!WARNING]
-> Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/Apprendre/Découvrir_outils_développement_navigateurs).
+> Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variables
 
@@ -81,7 +81,7 @@ let myVariable;
 > Un point-virgule en fin de ligne indique là où se termine l'instruction&nbsp;; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez [Guide des points‑virgule en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) pour plus de détails.
 
 > [!NOTE]
-> Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables) sur les règles de nommage des variables). Si vous avez un doute, vous pouvez [vérifier le nom de votre variable](https://mothereff.in/js-variables) pour voir s'il est valide.
+> Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez [cet article](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#variables) sur les règles de nommage des variables). Si vous avez un doute, vous pouvez [vérifier le nom de votre variable](https://mothereff.in/js-variables) pour voir s'il est valide.
 
 > [!NOTE]
 > JavaScript est sensible à la casse — `myVariable` est une variable différente de `myvariable`. Si vous avez des problèmes dans votre code, vérifiez la casse &nbsp;!
@@ -111,7 +111,7 @@ let myVariable = "Bob";
 myVariable = "Étienne";
 ```
 
-Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives)&nbsp;:
+Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Data_structures#les_valeurs_primitives)&nbsp;:
 
 <table class="standard-table">
   <thead>
@@ -282,7 +282,7 @@ Un {{Glossary("operator","opérateur")}} est un symbole mathématique qui produi
   </tbody>
 </table>
 
-Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à ceux-là pour le moment. Voir [Expressions et opérateurs](/fr/docs/Web/JavaScript/Reference/Opérateurs) pour la liste complète.
+Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à ceux-là pour le moment. Voir [Expressions et opérateurs](/fr/docs/Web/JavaScript/Reference/Operators) pour la liste complète.
 
 > [!NOTE]
 > Mélanger les types de données peut conduire à d'étranges résultats lors des opérations, donc prenez soin de vous référer correctement à vos variables et d'obtenir les résultats attendus. Par exemple, entrez `"35" + "25"` dans votre console. Pourquoi n'obtenez-vous pas le résultat attendu ? Parce que les guillemets ont transformé les nombres en chaînes, et donc vous avez concaténé deux chaînes au lieu d'additionner deux nombres. Si vous entrez `35 + 25`, vous obtiendrez le bon résultat.
@@ -338,11 +338,11 @@ multiply(0.5, 3);
 ```
 
 > [!NOTE]
-> L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Instructions/return) indique au navigateur qu'il faut renvoyer la variable `result` en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables)).
+> L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) indique au navigateur qu'il faut renvoyer la variable `result` en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez [cet article](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_portées_de_variables)).
 
 ### Événements
 
-Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/Events/click), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours&nbsp;:
+Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/API/Element/click_event), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours&nbsp;:
 
 ```js
 document.querySelector("html").addEventListener("click", function () {
@@ -350,7 +350,7 @@ document.querySelector("html").addEventListener("click", function () {
 });
 ```
 
-Il existe plein de méthodes pour « attacher » un événement à un élément. Dans cet exemple, nous avons sélectionné l'élément HTML concerné et nous avons défini un gestionnaire [`onclick`](/fr/docs/Web/API/GlobalEventHandlers/onclick) qui est une propriété qui est égale à une fonction anonyme (sans nom) qui contient le code à exécuter quand l'utilisateur clique.
+Il existe plein de méthodes pour « attacher » un événement à un élément. Dans cet exemple, nous avons sélectionné l'élément HTML concerné et nous avons défini un gestionnaire [`onclick`](/fr/docs/Web/API/Element/click_event) qui est une propriété qui est égale à une fonction anonyme (sans nom) qui contient le code à exécuter quand l'utilisateur clique.
 
 On pourra noter que :
 

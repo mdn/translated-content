@@ -143,7 +143,7 @@ if (num === 0) {
 
 여기에 설명된 것 이외에도 {{jsxref("eval", "eval()")}} 처럼 {{jsxref("Function")}} 생성자를 사용하여 런타임 중 문자열에서 함수를 만들 수 있습니다.
 
-객체의 속성이 함수인 것을 **메서드**(method)라고 합니다. 자세한 내용은 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects) 문서를 참고하세요.
+객체의 속성이 함수인 것을 **메서드**(method)라고 합니다. 자세한 내용은 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects) 문서를 참고하세요.
 
 ## 함수 호출
 
@@ -169,7 +169,7 @@ square = function (n) {
 };
 ```
 
-함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
+함수의 인수는 문자열과 숫자에 제한되지 않습니다. 여러분은 함수에 전체 객체를 전달할 수 있습니다. [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)에서 정의된 `showProps()` 함수는 인수로 객체를 받는 함수의 예입니다.
 
 함수는 자신을 호출할 수 있습니다. 예를 들어, 팩토리얼을 재귀적으로 계산하는 함수가 있습니다.
 
@@ -307,7 +307,7 @@ function loop(x) {
 loop(0);
 ```
 
-그러나 일부 알고리즘은 단순 반복 루프가 될 수 없습니다. 예를 들어, [DOM](/ko/docs/DOM)과 같은 트리 구조의 모든 노드를 가져오는 것은 재귀를 사용하는 편이 더 간편합니다.
+그러나 일부 알고리즘은 단순 반복 루프가 될 수 없습니다. 예를 들어, [DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 트리 구조의 모든 노드를 가져오는 것은 재귀를 사용하는 편이 더 간편합니다.
 
 ```js
 function walkTree(node) {
@@ -734,7 +734,7 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 
   - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다.
-    > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description) 규칙을 가지고 있습니다.
+    > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) 규칙을 가지고 있습니다.
     >
     > {{jsxref("Number.isNaN()")}}을 이용해 값이 NaN인지 확인할 수 있습니다.
     >

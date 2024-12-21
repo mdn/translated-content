@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/privacy
 
 さまざまなプライバシー関連のブラウザー設定にアクセスや変更を行います。
 
-privacy API を使うには、"privacy" [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)が必要です。
+privacy API を使うには、"privacy" [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)が必要です。
 
 ## プロパティ
 
