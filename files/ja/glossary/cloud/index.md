@@ -1,5 +1,5 @@
 ---
-title: Cloud
+title: クラウド
 slug: Glossary/Cloud
 l10n:
   sourceCommit: 99c2c3add298eaebe27102b2d83e27fd3ca80aef
@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-The **Cloud** refers to servers located worldwide that are accessed over the Internet, and the software and databases that run on those servers.
+**クラウド**とは、インターネット経由でアクセスできる世界中に配置されたサーバー群、およびそのサーバー上で実行されるソフトウェアとデータベースを指します。
 
 Instead of storing data or running programs on a local computer or server, users can access cloud resources to perform tasks: this is known as {{glossary("Cloud computing")}}.
 
