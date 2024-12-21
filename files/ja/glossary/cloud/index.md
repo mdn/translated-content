@@ -11,11 +11,11 @@ l10n:
 
 ローカルのコンピュータやサーバーにデータを保存したりプログラムを実行したりする代わりに、ユーザーはクラウド上のリソースにアクセスしてタスクを実行できます: これは{{glossary("Cloud computing")}}とも呼ばれます。
 
-Key features of the cloud include:
+クラウドに含まれる主な機能: 
 
-- Remote Access: Data and services are accessed remotely.
-- Scalability: Resources can be scaled up or down based on demand.
-- Availability: Services and data are typically accessible from anywhere with internet access.
+- リモートアクセス: データやサービスにリモートからアクセスする
+- スケーラビリティ: リソースは需要に応じて増減できる
+- 可用性: サービスとデータは、通常インターネット経由で利用可能になっている
 
 ## See also
 
