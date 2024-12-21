@@ -3,7 +3,7 @@ title: 检测 WebGL
 slug: Web/API/WebGL_API/By_example/Detect_WebGL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example","Learn/WebGL/By_example/Clearing_with_colors")}}
 
 这个例子演示了如何通过渲染上下文来检测{{Glossary("WebGL")}}，并将结果报告给用户。
 
