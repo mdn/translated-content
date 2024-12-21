@@ -44,7 +44,7 @@ original_slug: Learn/MathML/First_steps/Text_containers
 
 数学公式涉及许多特殊字符，例如希腊字母（例如 Δ）、弗拉克图尔字母（例如 𝔄）、双线字母（例如 ℂ）、二元运算符（例如 ≠）、箭头（例如 ⇒）、积分符号（例如 ∮）、求和符号（例如 ∑）、逻辑符号（例如 ∀）以及括号（例如 ⌊）等等。维基百科的文章[数学运算符和符号的 Unicode](https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode) 提供了这些字符的概述。
 
-由于这些字符大多不属于基本拉丁 Unicode 块，因此建议指定你的[文档字符编码](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#指定文档中的字符编码)，并使用适当的 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。以下是一个使用 UTF-8 编码和 [Latin Modern Math](/zh-CN/docs/Web/MathML/Fonts#带有数学表的字体) 字体的基本模板：
+由于这些字符大多不属于基本拉丁 Unicode 块，因此建议指定你的[文档字符编码](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#指定文档中的字符编码)，并使用适当的 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)。以下是一个使用 UTF-8 编码和 [Latin Modern Math](/zh-CN/docs/Web/MathML/Fonts#带有数学表的字体) 字体的基本模板：
 
 ```html
 <!doctype html>

@@ -306,7 +306,7 @@ self.addEventListener("fetch", (event) => {
 
 现在我们的 service worker 脚本已经完成了，我们需要注册 service worker。
 
-我们先从使用检查全局 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象上是否存在 [`serviceWorker`](/zh-CN/docs/Web/API/ServiceWorker) 属性的[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#特性检测的概念)手段来检查浏览器是否支持 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 开始：
+我们先从使用检查全局 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象上是否存在 [`serviceWorker`](/zh-CN/docs/Web/API/ServiceWorker) 属性的[特性检测](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection#特性检测的概念)手段来检查浏览器是否支持 [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 开始：
 
 ```html
 <script>

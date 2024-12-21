@@ -48,7 +48,7 @@ alert("This is a message");
 首先，让我们来组织一个基本的函数。
 
 > [!NOTE]
-> 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
+> 对于函数命名约定，应遵循与[变量命名约定](/zh-CN/docs/Learn_web_development/Core/Scripting/Variables#关于变量命名的规则)相同的规则。这很好，尽你所能理解它们之间的区别 - 函数名称后带有括号，而变量则没有。
 
 1. 我们希望你首先访问[function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html)文件并创建一个本地拷贝。你将会看到这个 HTML 很简单 — 我们的 body 块仅包含一个按钮。我们还提供了一些基本的 CSS 来装饰自定义消息框，以及一个用于放置 JavaScript 代码的{{htmlelement("script")}}元素。
 2. 接下来，将下面的代码添加至 `<script>` 元素中：

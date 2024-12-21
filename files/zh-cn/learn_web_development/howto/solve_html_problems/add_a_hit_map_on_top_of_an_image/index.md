@@ -85,7 +85,7 @@ original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 - [`href`](/zh-CN/docs/Web/HTML/Element/area#href)
   - : 你需要链接的资源地址。如果你不希望当前区域链接到任何地方 (比方说，如果你正在创建一个空心圆)，你可以将这个属性保留为空。
 - [`alt`](/zh-CN/docs/Web/HTML/Element/area#alt)
-  - : 一个必选属性，告诉用户链接的指向或功能说明。`alt` 文本仅在图像不可用时显示。请参阅我们的[guidelines for writing accessible link text](/zh-CN/docs/Learn/HTML/Howto/Create_a_hyperlink#writing_accessible_link_text)。如果 `href` 属性为空并且整个图像已经具备了 `alt` 属性，则可以设置 `alt=""`。
+  - : 一个必选属性，告诉用户链接的指向或功能说明。`alt` 文本仅在图像不可用时显示。请参阅我们的[guidelines for writing accessible link text](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#writing_accessible_link_text)。如果 `href` 属性为空并且整个图像已经具备了 `alt` 属性，则可以设置 `alt=""`。
 
 ```html
 <map name="example-map-1">

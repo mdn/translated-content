@@ -184,7 +184,7 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 
 ## 控制机制
 
-在我们的 CSS 和 JavaScript 无障碍文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[特定于鼠标的事件](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#鼠标特定事件)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
+在我们的 CSS 和 JavaScript 无障碍文章中，我们研究了特定于某种控制机制的事件的概念（请参阅[特定于鼠标的事件](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#鼠标特定事件)）。回顾一下，因为其他控制机制不能激活相关的功能，将会导致辅助功能的问题。
 
 举例来说，[点击](/zh-CN/docs/Web/API/Element/click_event)事件在无障碍方面是良好的——通过点击处理器设置的元素，选中它并按下回车或返回，或者在触摸屏设备上点击它，可以调用关联的事件处理程序。试试我们的 [simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) 示例（[查看实时示例](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）以理解我们的意思。
 

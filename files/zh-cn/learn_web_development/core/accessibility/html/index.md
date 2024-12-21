@@ -54,7 +54,7 @@ original_slug: Learn/Accessibility/HTML
 让我们来继续学习 HTML 语义化实现细则。
 
 > [!NOTE]
-> 在本地计算机上设置屏幕阅读器是一个不错的主意，因此你可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders)。
+> 在本地计算机上设置屏幕阅读器是一个不错的主意，因此你可以对下面显示的示例进行一些测试。更多内容请查阅 [Screenreaders guide](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#screenreaders)。
 
 ## 良好的语义
 
@@ -252,7 +252,7 @@ the last one.
 > [!NOTE]
 > 除了你的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 你可以随时将它放在你想要使用 CSS 的位置，但是你应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
 
-### UI 控制
+### UI 控件
 
 通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本无障碍问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 无障碍的其他方面。
 
@@ -263,7 +263,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 接着你可以按 Enter / Return 来追踪当前获得焦点的链接，或者按按钮来实现（我们已经使用 JavaScript 使按钮同时显示提示消息），或者开始在文本输入中输入文本（其他表单元素具有不同的控件，例如 {{htmlelement("select")}} 元素拥有自己的显示选项，可以使用向上和向下箭头键进行循环）。
 
 > [!NOTE]
-> 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#使用键盘)获取更多详细信息。
+> 不同的浏览器可能有不同的键盘控制选项。请参阅[使用本机键盘辅助功能](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#使用键盘)获取更多详细信息。
 
 实际上，你只需使用适当的元素即可免费获得此功能，例如，
 

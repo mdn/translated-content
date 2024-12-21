@@ -64,7 +64,7 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) 或 [yarn](https://yarnpkg.com/)。
 
 > [!NOTE]
-> 如果你还没有安装上述软件，有关安装 NPM 和 Node.js 的方法[在这里](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#添加工具)。
+> 如果你还没有安装上述软件，有关安装 NPM 和 Node.js 的方法[在这里](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#添加工具)。
 
 安装 CLI，终端中运行以下命令：
 

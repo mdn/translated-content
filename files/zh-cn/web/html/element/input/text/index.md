@@ -341,7 +341,7 @@ input:valid + span::after {
 
 ### 指定模式
 
-可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[以正则表达式验证](/zh-CN/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)）。
+可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[使用正则表达式校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
 
 下面的示例将值限制为 4-8 个字符，并要求该值仅包含小写字母。
 

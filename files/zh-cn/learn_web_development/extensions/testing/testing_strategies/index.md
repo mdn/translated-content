@@ -146,7 +146,7 @@ A 级：
 
 - 它们在执行测试时为你提供了一组步骤。
 - 它们可以很容易地转化为用户组在进行测试时需要遵循的指示（例如，“尝试使用鼠标和键盘激活按钮…”）——请参见下面的[用户测试](#用户测试)部分。
-- 它们还可以为编写自动化测试提供基础。如果你知道要测试什么以及成功条件是什么，编写此类测试就会更容易（请参见本系列中的 [Selenium](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium) 部分）。
+- 它们还可以为编写自动化测试提供基础。如果你知道要测试什么以及成功条件是什么，编写此类测试就会更容易（请参见本系列中的 [Selenium](/zh-CN/docs/Learn_web_development/Extensions/Testing/Your_own_automation_environment#selenium) 部分）。
 
 ## 建立测试实验环境
 

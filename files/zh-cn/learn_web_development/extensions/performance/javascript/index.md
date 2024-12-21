@@ -36,7 +36,7 @@ original_slug: Learn/Performance/JavaScript
 
 在开始优化代码之前，你应该先回答一个问题：“我需要优化什么？”下面讨论的一些技巧和方法是适用于任何 Web 项目的良好实践，而其他一些只在特定情况下才需要。试图在所有地方应用这些技术可能是不必要的，也可能是浪费时间。你应该确定每个项目实际上需要哪些性能优化。
 
-为此，你需要[测量性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如前面的链接所示，有多种不同的方法来测量性能，其中一些方法涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方式是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn/Performance/Measuring_performance#通用性能报告工具)工具，查看页面加载的哪些部分花费了很长时间，并需要进行优化。
+为此，你需要[测量性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance)。正如前面的链接所示，有多种不同的方法来测量性能，其中一些方法涉及复杂的[性能 API](/zh-CN/docs/Web/API/Performance_API)。然而，最好的入门方式是学习如何使用内置的浏览器[网络](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance#网络工具)和[性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Measuring_performance#通用性能报告工具)工具，查看页面加载的哪些部分花费了很长时间，并需要进行优化。
 
 ## 优化 JavaScript 的下载
 
@@ -46,7 +46,7 @@ original_slug: Learn/Performance/JavaScript
 - **考虑更简单的解决方案**：你可能有一个华丽、有趣的解决方案要实现，但请考虑用户是否会喜欢它。他们是否更喜欢简单的东西？
 - **删除未使用的代码**：这听起来很明显，但令人惊讶的是很多开发者忘记清除在开发过程中添加的不会被用到的功能。你需要谨慎并有意识地添加和删除代码。所有脚本都会被解析，无论它是否被使用；因此，加快下载速度的一个快速方法是摆脱任何不会被使用的功能。此外，要考虑通常只会使用框架中的一小部分功能。是否有可能创建一个仅包含你所需部分的框架的自定义构建版本？
 - **考虑使用浏览器内置特性**：也许你可以使用浏览器已经具备的特性，而不是通过 JavaScript 自己创建。例如：
-  - 使用[内置的客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation#使用内置表单数据校验)。
+  - 使用[内置的客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用内置表单数据校验)。
   - 使用浏览器自带的 {{htmlelement("video")}} 播放器。
   - 使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)而不是 JavaScript 动画库（参见[处理动画](#处理_javascript_动画)）。
 
@@ -238,7 +238,7 @@ async function main() {
 
 最显然的动画建议是使用更少的动画——去除任何非必要的动画，或考虑为用户提供一个偏好设置，让他们可以关闭动画，例如当他们使用低功率设备或电池电量有限的移动设备时。
 
-对于关键的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种通过 JavaScript 直接连接到 CSS 动画的方式）。直接使用浏览器执行 DOM 动画而不是使用 JavaScript 操纵内联样式表的效率更高。另请参阅 [CSS 性能优化 > 处理动画](/zh-CN/docs/Learn/Performance/CSS#处理动画)。
+对于关键的 DOM 动画，建议尽可能使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，而不是 JavaScript 动画（[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 提供了一种通过 JavaScript 直接连接到 CSS 动画的方式）。直接使用浏览器执行 DOM 动画而不是使用 JavaScript 操纵内联样式表的效率更高。另请参阅 [CSS 性能优化 > 处理动画](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS#处理动画)。
 
 对于无法在 JavaScript 中处理的动画，例如在 HTML {{htmlelement("canvas")}} 上创建动画，建议使用 {{domxref("Window.requestAnimationFrame()")}} 而不是旧的选项，例如 {{domxref("Window.setInterval()")}}。`requestAnimationFrame()` 方法专门设计用于高效、一致地处理动画帧，以获得流畅的用户体验。基本模式如下所示：
 
@@ -264,7 +264,7 @@ function loop() {
 loop();
 ```
 
-你可以在[绘制图形 > 动画](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#动画)中找到有关 canvas 动画的简介，以及在[对象构建实践](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) 中找到更详细的示例。你还可以在 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中找到一整套 canvas 教程。
+你可以在[绘制图形 > 动画](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics#动画)中找到有关 canvas 动画的简介，以及在[对象构建实践](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice) 中找到更详细的示例。你还可以在 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中找到一整套 canvas 教程。
 
 ## 优化事件性能
 
@@ -288,7 +288,7 @@ elem.removeEventListener("mousemove", handleMouseMove);
 
 另一个要点是尽可能使用事件委托。当你有一些代码需要在用户与大量子元素中的任何一个进行交互时，可以在它们的父元素上设置事件监听器。在任何子元素上触发的事件都会冒泡到它们的父元素，这样你无需单独为每个子元素设置事件监听器。减少要跟踪的事件监听器数量可以提高性能。
 
-请参阅[事件委托](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#事件委托)以了解更多详细信息和一个有用的示例。
+请参阅[事件委托](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#事件委托)以了解更多详细信息和一个有用的示例。
 
 ## 编写更高效代码的技巧
 

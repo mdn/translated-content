@@ -41,7 +41,7 @@ original_slug: Learn/JavaScript/Objects/Basics
 const person = {};
 ```
 
-打开你的浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 <kbd>Enter</kbd>/<kbd>Return</kbd>，你可能会得到以下结果中的一种：
+打开你的浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 <kbd>Enter</kbd>/<kbd>Return</kbd>，你可能会得到以下结果中的一种：
 
 ```plain
 [object Object]

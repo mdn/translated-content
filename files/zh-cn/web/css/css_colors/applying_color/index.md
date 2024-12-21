@@ -26,11 +26,11 @@ l10n:
 无论何时渲染元素，这些属性都将用于确定文本的颜色、背景以及文本上的任何装饰。
 
 - {{cssxref("color")}}
-  - : 绘制文本和任何[文本装饰](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#字体样式、字体粗细、文本转换和文本装饰)（如添加下划线或上划线、删除线等）时使用的颜色。
+  - : 绘制文本和任何[文本装饰](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#字体样式、字体粗细、文本转换和文本装饰)（如添加下划线或上划线、删除线等）时使用的颜色。
 - {{cssxref("background-color")}}
   - : 文本的背景色。
 - {{cssxref("text-shadow")}}
-  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals#文字阴影)以了解更多信息。
+  - : 配置应用于文字的阴影效果。阴影选项包括阴影的基色（然后根据其他参数将基色模糊并与背景混合）。请参阅[文字阴影](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals#文字阴影)以了解更多信息。
 - {{cssxref("text-decoration-color")}}
   - : 默认情况下，文本装饰（如下划线、删除线等）使用 `color` 属性作为其颜色。不过，你可以使用 `text-decoration-color` 属性覆盖该行为，并为它们使用不同的颜色。
 - {{cssxref("text-emphasis-color")}}
@@ -669,5 +669,5 @@ colorPicker.addEventListener(
 ## 参见
 
 - [绘制图形](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
-- [Web 上的图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#web_上的其他图形)
+- [Web 上的图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#web_上的其他图形)
 - [CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)

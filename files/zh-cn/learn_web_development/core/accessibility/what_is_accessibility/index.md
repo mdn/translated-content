@@ -71,7 +71,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 
 这种残疾也可能是由于年老体衰导致，而不是任何特定的创伤或状况造成，也可能是由于硬件限制所致——有些用户可能没有鼠标。
 
-这些残疾通常影响 Web 开发工作的方式是要求通过键盘就可以访问控件——我们将在本模块的后续文章中讨论键盘无障碍，但最好是仅通过使用键盘来尝试访问一些网站，看看你能够做些什么。例如，你可以使用 Tab 键在 Web 表单的不同控件之间移动吗？你可以在我们的“[跨浏览器测试使用本机键盘的无障碍](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility)”章节中找到有关键盘控制的更多详细信息。
+这些残疾通常影响 Web 开发工作的方式是要求通过键盘就可以访问控件——我们将在本模块的后续文章中讨论键盘无障碍，但最好是仅通过使用键盘来尝试访问一些网站，看看你能够做些什么。例如，你可以使用 Tab 键在 Web 表单的不同控件之间移动吗？你可以在我们的“[使用键盘原生无障碍性](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#使用键盘原生无障碍性)”章节中找到有关键盘控制的更多详细信息。
 
 据统计，有相当多的人患有行动障碍症。美国疾病控制与防御中心的“[残疾与机能（18 岁及以上的非住院成年人）](https://www.cdc.gov/nchs/fastats/disability.htm)”报道称美国有 15.1% 的成年人都患有身体功能疾病。
 
@@ -109,7 +109,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 
 然而如果你能在项目的开始阶段就考虑到无障碍的话，使大多数内容无障碍化的代价就会相当微小。
 
-在规划项目时，将无障碍测试纳入测试体系，就像对其他任何重要目标受众群体（例如台式机或移动浏览器的目标用户）进行测试一样。尽早和经常进行测试，理想情况下运行自动化测试找出程序化方式可检测到的缺失功能（例如，缺少图像[替代文本](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives)或不良链接文字——请参阅[元素关系与上下文](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context)），并对残疾人士的用户群进行一些测试，以查看更复杂的网站功能是否对他们可用。例如：
+在规划项目时，将无障碍测试纳入测试体系，就像对其他任何重要目标受众群体（例如台式机或移动浏览器的目标用户）进行测试一样。尽早和经常进行测试，理想情况下运行自动化测试找出程序化方式可检测到的缺失功能（例如，缺少图像[替代文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#替代文本)或不良链接文字——请参阅[元素关系与上下文](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#元素关系和上下文)），并对残疾人士的用户群进行一些测试，以查看更复杂的网站功能是否对他们可用。例如：
 
 - 我的日期选择器小部件是否可供使用屏幕阅读器的人使用？
 - 如果内容动态更新，视力受损的人知道吗？

@@ -546,6 +546,6 @@ minuteSelect.onchange = setMinutesToZero;
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [日期时间选择器教程](/zh-CN/docs/Learn/Forms/HTML5_input_types#日期和时间选择器)
+- [日期时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日期和时间选择器)
 - [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
 - [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

@@ -64,7 +64,7 @@ original_slug: Learn/Accessibility/WAI-ARIA_basics
 - [角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
   - : 这定义了元素是干什么的。许多「标志性的角色」，其实重复了 HTML5 的结构元素的语义价值。例如 `role="navigation"` ({{htmlelement("nav")}}) 或者 `role="complementary"` ({{htmlelement("aside")}})，这也有一些描述其他页面结构的（角色），例如 `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"` 等等。我们通常能从 UI 层面找到它们。
 - 属性
-  - : 定义元素的属性，使元素具备额外的含义或语义。例如，`aria-required="true"` 指定表单输入元素需要被填写才能有效，而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于在页面中的其他地方（包括多个元素）引用其作为标签，`<label for="input">` 不可能做到这一点。举个例子：你可以用 `aria-labelledby` 指定在 {{htmlelement("div")}} 中包含的关键描述是多个表格单元的标签，或者将它指定为图像的替代文本——为图像替代文本指定额外信息，而无需在每一个 `alt` 属性中重复。你可以在[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)中查看示例。
+  - : 定义元素的属性，使元素具备额外的含义或语义。例如，`aria-required="true"` 指定表单输入元素需要被填写才能有效，而 `aria-labelledby="label"` 允许你在元素上设置一个 ID，用于在页面中的其他地方（包括多个元素）引用其作为标签，`<label for="input">` 不可能做到这一点。举个例子：你可以用 `aria-labelledby` 指定在 {{htmlelement("div")}} 中包含的关键描述是多个表格单元的标签，或者将它指定为图像的替代文本——为图像替代文本指定额外信息，而无需在每一个 `alt` 属性中重复。你可以在[替代文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)中查看示例。
 - 状态
   - : 用于表达元素当前的条件的特殊属性，例如 `aria-disabled="true"`，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 JavaScript。
 
@@ -98,7 +98,7 @@ original_slug: Learn/Accessibility/WAI-ARIA_basics
 
 我们过去讨论了一些促使 WAI-ARIA 诞生的问题。但基本上是以下四个主要领域：
 
-1. **路标/地标**（**Signposts/Landmarks**）**：** ARIA 的 `角色` 属性值可以作为地标来复制 HTML5 元素的语义化（例如 nav tag）。或者超越 HTML5 的语义，给不同的功能块提供「路标」，例如 `search`, `tabgroup`, `tab`, `listbox` 等等。
+1. **路标/地标**（**Signposts/Landmarks**）：ARIA 的 `角色` 属性值可以作为地标来复制 HTML5 元素的语义化（例如 nav tag）。或者超越 HTML5 的语义，给不同的功能块提供「路标」，例如 `search`, `tabgroup`, `tab`, `listbox` 等等。
 2. **动态的内容更新：** 屏幕阅读器往往难以报告一直变化的内容，用无障碍特性我们能使用 `aria-live` 来通知屏幕阅读器某一部分的内容更新了。例如[XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest) 或者 [DOM APIs](/zh-CN/docs/Web/API/Document_Object_Model)。
 3. **优化键盘的无障碍操作**: 默认的 HTML 元素是具有自带的键盘辅助功能的。当其他元素与 JavaScript 一起进行交互时，键盘的辅助功能和屏幕阅读器的报告会因此收到影响（例如你将会难以用 tab 到达理想的位置）。这是无法避免的，WAI-ARIA 提供了提供了一种允许其他元素获得焦点的方法（使用 `tabindex`）。
 4. **非语义控件的无障碍**：当一系列嵌套的 `<div>` 与 CSS / JavaScript 一起用于创建复杂的 UI 功能，或者通过 JavaScript 大大地增强或者更改原生的控件，无障碍将会变得极其困难——屏幕阅读器将会难以找到语义内容线索。在这种情况下，AIRA 可以帮助提供缺少了的功能，例如 `button`, `listbox`，或者 `tabgroup`，另外和 aria-required 或 aria-posinset 这样的属性可以提供有关功能的更多线索。
@@ -114,9 +114,9 @@ original_slug: Learn/Accessibility/WAI-ARIA_basics
 
 在下一节中，我们将更详细地研究这四个方，并提供一些实例。继续之前你最好安装一个屏幕阅读器，以便你测试接下来的用例。（接下来的屏幕阅读器默认为 Mac 的 VoiceOver，Windows 用户可以尝试 JAWS 或者 Window Eyes）
 
-查看我们的 [testing screenreaders](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) 得到更多关于屏幕阅读器的信息。
+查看我们的 [testing screenreaders](/zh-CN/docs/Learn_web_development/Core/Accessibility/Tooling#屏幕阅读器) 得到更多关于屏幕阅读器的信息。
 
-### 路牌/地标（**Signposts/Landmarks**）
+### 路牌/地标
 
 WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles)的例子（[在线演示](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
 
@@ -268,7 +268,7 @@ const intervalID = setInterval(showQuote, 10000);
 - `tabindex="-1"` — 这允许通常不可列表的元素以编程方式来接收 focus。例如用：JavaScript，或者作为链接的目标。
 
 我们更详细地讨论了这一点，并在 HTML 辅助功能文章中显示了一个典型的实现
-——请看 [Building keyboard accessibility back in](/zh-CN/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in).
+——请看[重新建立键盘的无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#重新建立键盘的无障碍)。
 
 ### 非语义控件的无障碍
 
@@ -276,7 +276,7 @@ const intervalID = setInterval(showQuote, 10000);
 
 #### 表单验证和错误显示
 
-首先，让我们在此访问之前的文章（重读 [Keeping it unobtrusive](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#keeping_it_unobtrusive)）。在本节的最后，我们展示了当你尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
+首先，让我们在此访问之前的文章（重读[保持别抢眼](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#保持别抢眼)）。在本节的最后，我们展示了当你尝试提交表单时，如果存在验证错误，我们在错误消息框中包含了一些 ARIA 属性：
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -320,7 +320,7 @@ const intervalID = setInterval(showQuote, 10000);
 > [!NOTE]
 > 你可以在这里看这个在线完成的例子 [form-validation-updated.html](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
 
-除了经典的 {{htmlelement("label")}} 元素之外，WAI-ARIA 还支持一些高级表单标注技术。我们已经讨论过使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 属性来提供标签，我们不希望标签对于有视力的用户是可见的（参见上面的 [路牌/地标（Signposts/Landmarks）](#路牌地标_（signpostslandmarks）) 部分）。还有一些其他标签技术使用其他属性，例如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) ，如果你想将非\<label>元素指定为标签或标签多个表单输入具有相同的标签，并且 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)，如果你想关联 带有表单输入的其他信息，并将其读出。请查阅文章获得更多细节： [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced)
+除了经典的 {{htmlelement("label")}} 元素之外，WAI-ARIA 还支持一些高级表单标注技术。我们已经讨论过使用 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label) 属性来提供标签，我们不希望标签对于有视力的用户是可见的（参见上面的[路牌/地标](#路牌地标)部分）。还有一些其他标签技术使用其他属性，例如 [`aria-labelledby`](https://www.w3.org/TR/wai-aria-1.1/#aria-labelledby) ，如果你想将非 \<label> 元素指定为标签或标签多个表单输入具有相同的标签，并且 [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby)，如果你想关联 带有表单输入的其他信息，并将其读出。请查阅文章获得更多细节： [WebAIM's Advanced Form Labeling article](https://webaim.org/techniques/forms/advanced)
 
 还有许多其他有用的属性和状态，用于指示表单元素的状态。例如：`aria-disabled="true"` 可用于表示该表单字段已禁用。许多浏览器只会跳过禁用的表单字段，它们甚至不会被屏幕阅读器读出，但在某些情况下它们会被识别出来，所以最好包含这个属性让屏幕阅读器知道禁用的输入事实上已经被禁用。
 
@@ -353,7 +353,7 @@ function toggleMusician(bool) {
 
 #### 描述非语义的 button 是个 button
 
-在本课程中已经有几次，我们已经提到了原生的无障碍（以及使用其他元素伪造导致的无障碍问题）按钮，链接或表单元素（请参阅 HTML 辅助功能文章中的[UI 控件](/zh-CN/docs/Learn/Accessibility/HTML#ui_controls) ，以及[优化键盘的无障碍操作](#优化键盘的无障碍操作)，上面）。基本上，利用 tabindex 和一些 JavaScript 的话，大部分情况下添加键盘辅助功能不会有多少麻烦。
+在本课程中已经有几次，我们已经提到了原生的无障碍（以及使用其他元素伪造导致的无障碍问题）按钮，链接或表单元素（请参阅 HTML 辅助功能文章中的[UI 控件](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#ui_控件)，以及[优化键盘的无障碍操作](#优化键盘的无障碍操作)，上面）。基本上，利用 tabindex 和一些 JavaScript 的话，大部分情况下添加键盘辅助功能不会有多少麻烦。
 
 但是屏幕阅读器呢？他们还是看着这个元素并不是一个 button，如果你用屏幕阅读器测试我们的 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 例子，你会听到一段短语描述这个按钮，内容大概是 "Click me!, group"，显然这会让人疑惑。
 
@@ -374,7 +374,7 @@ function toggleMusician(bool) {
 
 还有许多其他 [roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 可以将非语义元素结构识别为常见的 UI 功能，这些功能超出了标准 HTML 中可用的功能，例如 [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree).。你可以在 [Deque university code library](https://dequeuniversity.com/library/) 中看到许多有用的示例，以便了解如何使这些控件做到无障碍的。
 
-让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的 [Hiding things](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#hiding_things) 段落），你可以在 [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）。
+让我们来看看我们自己的一个例子。我们将返回到我们简单的绝对定位选项卡界面（请参阅我们的 CSS 和 JavaScript 无障碍的文章的[隐藏的东西](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#隐藏的东西)部分），你可以在 [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)中找到它（[源码地址](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）。
 
 这个例子在键盘无障碍方面运行良好——你可以愉快地在不同选项卡之间进行 tab 并选择它们然后显示选项卡内容。它也是相当容易访问的——你可以滚动浏览内容并使用标题进行导航，即使你无法看到屏幕上发生的事情。然而，内容并不明显——屏幕阅读器目前将内容报告为链接列表，以及一些内容包含三个标题。它不会让你知道内容之间的关系。为用户提供有关内容结构的更多线索总是好的。
 

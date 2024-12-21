@@ -30,7 +30,7 @@ l10n:
 
 在 JavaScript 中，你将发现函数无处不在。事实上，到目前为止，我们一直在使用函数；我们只是还没正式地讨论它们。然而现在是时候了，让我们开始聊聊函数，并探索它们的语法。
 
-几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 [for 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#循环的标准)、[while 或 do...while 循环](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code#while_语句和_do_..._while_语句)，或者 [if...else 语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_语句)这样的常见的内置语言结构时，那么你就正在使用函数。
+几乎任何时候，只要你使用一个带有一对圆括号（`()`）的 JavaScript 结构，并且你**没有**使用比如 [for 循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops#循环的标准)、[while 或 do...while 循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Loops#while_语句和_do_..._while_语句)，或者 [if...else 语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals#if...else_语句)这样的常见的内置语言结构时，那么你就正在使用函数。
 
 ## 浏览器内置函数
 
@@ -71,7 +71,7 @@ const myNumber = Math.random();
 
 JavaScript 语言中有许多内置的函数，它们可以让你无需自己编写所有的代码，就能做很多有用的事情。事实上，许多你**调用**（专业词语，意指“运行”或“执行”）浏览器内置函数时调用的代码并不能用 JavaScript 来编写——大多数调用浏览器后台的函数的代码，是使用像 C++ 这样更低级的系统语言编写的，而不是像 JavaScript 这样的 web 编程语言。
 
-请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——其中部分函数被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅[本课程的早期部分](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#它到底可以做什么？)以获得更多的描述）。我们将在以后的模块中更详细地介绍如何使用浏览器 API。
+请记住，这些内置浏览器函数不是核心 JavaScript 语言的一部分——其中部分函数被定义为浏览器 API 的一部分，它建立在默认语言之上，以提供更多的功能（请参阅[本课程的早期部分](/zh-CN/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#它到底可以做什么？)以获得更多的描述）。我们将在以后的模块中更详细地介绍如何使用浏览器 API。
 
 ## 函数与方法
 

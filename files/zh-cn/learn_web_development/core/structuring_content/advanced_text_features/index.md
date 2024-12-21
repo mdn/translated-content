@@ -33,7 +33,7 @@ HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML
 
 ## 描述列表
 
-在 HTML 文本处理基础中，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#列表)，并且提到了你偶尔会遇到的第三种列表类型——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
+在 HTML 文本处理基础中，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#列表)，并且提到了你偶尔会遇到的第三种列表类型——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
 
 ```plain
 内心独白

@@ -48,7 +48,7 @@ l10n:
 
 ### 在 Node 下搭建 Selenium 环境
 
-1. 参考上一个章节[配置 Node 和 npm 环境](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#配置_node_和_npm_环境)，创建一个新的 npm 工程，并取一个不同的名字，如 `selenium-test`。
+1. 参考上一个章节[配置 Node 和 npm 环境](/zh-CN/docs/Learn_web_development/Extensions/Testing/Automated_testing#配置_node_和_npm_环境)，创建一个新的 npm 工程，并取一个不同的名字，如 `selenium-test`。
 2. 接下来，我们需要安装一个框架从而能够在 Node 中运行 Selenium。我们选择 Selenium 官方提供的 [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver)，它的文档更新及时，维护良好。如果你想要其他选择，[webdriver.io](https://webdriver.io/) 和 [nightwatch.js](https://nightwatchjs.org/) 也都是不错的选择。要安装 selenium-webdriver，在你的工程目录下运行以下命令：
 
    ```bash

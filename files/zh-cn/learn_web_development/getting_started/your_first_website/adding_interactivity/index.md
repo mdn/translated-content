@@ -59,7 +59,7 @@ JavaScript 是最流行的现代 Web 技术之一。随着 JavaScript 技能的�
 > [!NOTE]
 > 上面将 {{htmlelement("script")}} 元素放在 HTML 文件的底部附近的原因是**浏览器会按照代码在文件中的顺序进行读取**。
 >
-> 如果 JavaScript 先加载，并期望操纵还未加载的 HTML，可能会出现问题。将 JavaScript 放在 HTML 页面的底部附近是一种解决方案。想要了解更多的替代方案，参见[脚本加载策略](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#脚本加载策略)。
+> 如果 JavaScript 先加载，并期望操纵还未加载的 HTML，可能会出现问题。将 JavaScript 放在 HTML 页面的底部附近是一种解决方案。想要了解更多的替代方案，参见[脚本加载策略](/zh-CN/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#脚本加载策略)。
 
 ### 发生了什么？
 

@@ -171,7 +171,7 @@ a {
 
 {{EmbedLiveSample('链接到 email 地址')}}
 
-有关 `mailto:` URL 协议的更多细节，比如如何包含主题、正文，或其他预定内容，参考 [Email 链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_链接)或 {{RFC(6068)}}。
+有关 `mailto:` URL 协议的更多细节，比如如何包含主题、正文，或其他预定内容，参考 [Email 链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_链接)或 {{RFC(6068)}}。
 
 ### 链接到电话号码
 

@@ -241,11 +241,11 @@ if __name__ == "__main__":
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
 > [!NOTE]
-> 同样，如果你只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，你需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#installing_python_3)，然后使用`pip3 install flask`安装 Flask。此时，你应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
+> 同样，如果你只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，你需要[安装 Python/pip](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#安装_python_3)，然后使用`pip3 install flask`安装 Flask。此时，你应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
 
 #### 其他语言和框架
 
-还有许多其他的服务器端技术可以用于表单处理，包括[Perl](/zh-CN/docs/Web)、[Java](/zh-CN/docs/Web)、 [.Net](https://www.microsoft.com/net)、[Ruby](/zh-CN/docs/Web)等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
+还有许多其他的服务器端技术可以用于表单处理，包括 [Perl](/zh-CN/docs/Web)、[Java](/zh-CN/docs/Web)、[.Net](https://www.microsoft.com/net)、[Ruby](/zh-CN/docs/Web) 等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：
 
 - [Django](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django) for Python（比[Flask](http://flask.pocoo.org/)要重量级一些，但是有更多的工具和选项。）
 - [Express](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) for Node.js
@@ -270,7 +270,7 @@ if __name__ == "__main__":
 
 - 将[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`POST`，因为文件内容不能放入 URL 参数中。
 - 将[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
-- 包含一个或多个[File picker](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#file_picker)小部件，允许用户选择将要上传的文件。
+- 包含一个或多个[文件选择器](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#文件选择器)微件，允许用户选择将要上传的文件。
 
 例如：
 

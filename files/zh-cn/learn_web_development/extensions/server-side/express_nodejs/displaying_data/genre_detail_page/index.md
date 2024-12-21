@@ -67,7 +67,7 @@ exports.genre_detail = function (req, res, next) {
 > }
 > ```
 >
-> 然后，此消息将传播给我们的错误处理代码（这是在我们[生成应用程序框架](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#error_handling)时设置的 - 有关更多信息，请参阅[处理错误](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction#handling_errors)）。
+> 然后，此消息将传播给我们的错误处理代码（这是在我们[生成应用程序框架](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#error_handling)时设置的——有关更多信息，请参阅[错误处理](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#错误处理)）。
 
 渲染的视图是 **genre_detail**，它传递了该类型的标题`title`，种类`genre`和书本列表的变量（`genre_books`）。
 

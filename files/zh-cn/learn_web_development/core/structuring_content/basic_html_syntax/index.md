@@ -226,13 +226,13 @@ textarea.onkeyup = () => {
 
 {{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而 {{htmlelement("p")}} 是一个块级元素，所以第二行代码中的每个 _p_ 元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着展示 {{htmlelement("p")}} 元素的默认 [CSS 样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)）。
 
-{{ EmbedLiveSample('块级元素和内联元素', 700, 200, "", "") }}
+{{ EmbedLiveSample('块级元素和内联元素', 700, 200) }}
 
 > [!NOTE]
 > HTML5 重新定义了元素的类别：见[元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
 
 > [!NOTE]
-> 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
+> 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
 > [!NOTE]
 > 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
@@ -732,7 +732,7 @@ textarea.onkeyup = () => {
 {{ EmbedLiveSample('实体引用：在 HTML 中包含特殊字符', 700, 200) }}
 
 > [!NOTE]
-> 不需要为任何其他符号使用实体引用，因为只要你的 HTML 的[字符编码设置为 UTF-8](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding)，现代浏览器就能很好地处理实际符号。
+> 不需要为任何其他符号使用实体引用，因为只要你的 HTML 的[字符编码设置为 UTF-8](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#指定文档中的字符编码)，现代浏览器就能很好地处理实际符号。
 
 ## HTML 注释
 

@@ -45,7 +45,7 @@ l10n:
 ['alt' 属性的描述如下](#备选文本)。
 
 > [!NOTE]
-> 为了更容易理解下面的内容，建议你阅读 [URL 和路径简明入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#统一资源定位符（url）与路径（path）快速入门)来复习一下相对和绝对 URL 的概念。
+> 为了更容易理解下面的内容，建议你阅读 [URL 和路径简明入门](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#统一资源定位符（url）与路径（path）快速入门)来复习一下相对和绝对 URL 的概念。
 
 例如，如果你的图像叫做 `dinosaur.jpg`，并且它位于与 HTML 页面相同的目录中，你可以这样嵌入图像：
 
@@ -113,13 +113,13 @@ l10n:
 
 - **装饰**：如果图片仅用于装饰，你应该使用 [CSS 背景图片](#css_背景图片)，但如果必须使用 HTML，请添加空的 `alt=""`。如果图片不是内容的一部分，那么屏幕阅读器不应该浪费时间读取它。
 - **内容**：如果你的图片提供了重要的信息，就要在 `alt` 文本中*简要*的提供相同的信息，甚至更近一步，把这些信息写在主要的文本内容里，这样所有人都能看见。不要写冗余的备选文本（如果在主要文本中将所有的段落都重复两遍，对于没有失明的用户来说多烦啊！），如果在主要文本中已经对图片进行了充分的描述，写 `alt=""` 就好。
-- **链接**：如果你把图片嵌套在 {{htmlelement("a")}} 标签里，来把图片变成链接，那你还必须提供[无障碍的链接文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用清晰的链接措辞)。在这种情况下，你可以写在同一个 `<a>` 元素里，或者写在图片的 `alt` 属性里，随你喜欢。
+- **链接**：如果你把图片嵌套在 {{htmlelement("a")}} 标签里，来把图片变成链接，那你还必须提供[无障碍的链接文本](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#使用清晰的链接措辞)。在这种情况下，你可以写在同一个 `<a>` 元素里，或者写在图片的 `alt` 属性里，随你喜欢。
 - **文本**：你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/text-shadow) 来达到这个目的，而不是把文本放到图片里。如果*真的必须这么做*，那就把文本也放到 `alt` 里。
 
 本质上，关键在于即使图片无法被看见，也能提供可用的体验，这确保了所有人都不会错失某部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。
 
 > [!NOTE]
-> 如需了解更多信息，请参阅我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南。
+> 如需了解更多信息，请参阅我们的[替代文本](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML#替代文本)指南。
 
 ### 宽度和高度
 
@@ -187,7 +187,7 @@ l10n:
 
 ### 图像标题
 
-类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用_title_属性添加支持信息)，你可以通过给图片增加 `title` 属性来提供更多的信息。在我们的例子中，可以这样做：
+类似于[超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links#使用_title_属性添加支持信息)，你可以通过给图片增加 `title` 属性来提供更多的信息。在我们的例子中，可以这样做：
 
 ```html
 <img

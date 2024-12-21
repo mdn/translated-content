@@ -383,7 +383,7 @@ export default FilterButton;
 ```
 
 > [!NOTE]
-> 你可能会注意到，我们在这里犯了和第一次在 `<Todo />` 组件中同样的错误，即每个按钮将是相同的。没关系！我们将在以后修复这个组件，具体在 [Back to the filter buttons](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)。
+> 你可能会注意到，我们在这里犯了和第一次在 `<Todo />` 组件中同样的错误，即每个按钮将是相同的。没关系！我们将在以后修复这个组件，具体在 [Back to the filter buttons](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)。
 
 ## 导入所有组件
 

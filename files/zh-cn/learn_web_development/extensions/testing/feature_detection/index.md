@@ -38,7 +38,7 @@ l10n:
 
 特性检测的理念在于，通过执行一个测试来确认当前浏览器是否支持某项特性。然后，根据测试结果有条件地执行代码，确保在*支持*该特性的浏览器和*不支持*的浏览器中都能提供一个可接受的用户体验。如果不采取这种做法，那么在那些不支持你代码中所用特性的浏览器上，你的网站将无法正确显示，从而导致糟糕的用户体验。
 
-让我们回顾一下我们在[处理常见 JavaScript 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#特性检测)一文中提及的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它能够访问运行网页浏览器的设备的位置数据），其主要使用入口点是全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上的 `geolocation` 属性。因此，你可以使用类似以下的方法来检测浏览器是否支持地理位置特性：
+让我们回顾一下我们在[处理常见 JavaScript 问题](/zh-CN/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#特性检测)一文中提及的例子——[地理位置 API](/zh-CN/docs/Web/API/Geolocation_API)（它能够访问运行网页浏览器的设备的位置数据），其主要使用入口点是全局 [Navigator](/zh-CN/docs/Web/API/Navigator) 对象上的 `geolocation` 属性。因此，你可以使用类似以下的方法来检测浏览器是否支持地理位置特性：
 
 ```js
 if ("geolocation" in navigator) {
@@ -50,7 +50,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-在我们继续之前，先说一件事——不要把特性检测和**浏览器嗅探**（检测什么浏览器在访问网站）混淆起来——后者是一种糟糕的做法，应该不惜一切代价加以阻止。参见[不要嗅探浏览器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#不要嗅探浏览器)以了解更多细节。
+在我们继续之前，先说一件事——不要把特性检测和**浏览器嗅探**（检测什么浏览器在访问网站）混淆起来——后者是一种糟糕的做法，应该不惜一切代价加以阻止。参见[不要嗅探浏览器](/zh-CN/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#不要嗅探浏览器)以了解更多细节。
 
 ## 撰写自己的特性检测代码
 
