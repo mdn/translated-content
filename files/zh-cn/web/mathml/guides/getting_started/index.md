@@ -4,7 +4,7 @@ slug: Web/MathML/Guides/Getting_started
 original_slug: Learn/MathML/First_steps/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
 
 在本文中，我们将使用一个简单的 HTML 文档，了解如何在其中添加 MathML 公式，并顺便介绍一些元素。
 
@@ -195,8 +195,6 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 
 本文中，我们介绍了如何使用 `<math>` 元素将数学公式插入 HTML 文档中。我们了解了使用 `display="block"` 和不使用它的 `<math>` 元素之间的渲染差异。此外，我们还介绍了几个其他的 MathML 元素：`<mfrac>` 用于表示分数，`<mrow>` 用于分组，以及一些文本元素。在下一篇文章中，我们将进一步分析这些[文本容器](/zh-CN/docs/Web/MathML/Guides/Text_containers)。
 
-{{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
-
 ## 参见
 
 - [使用 MathML](/zh-CN/docs/Web/MathML/Authoring#使用_mathml)
@@ -205,3 +203,5 @@ MathML 使用与 HTML 相同的语法来表示元素和属性的树形结构。�
 - [`<mrow>` 元素](/zh-CN/docs/Web/MathML/Element/mrow)
 - [`math-style` 属性](/zh-CN/docs/Web/CSS/math-style)
 - [`math-depth` 属性](/zh-CN/docs/Web/CSS/math-depth)
+
+{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}

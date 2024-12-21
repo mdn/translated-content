@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Your_first_form
 original_slug: Learn/Forms/Your_first_form
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 本系列的一篇文章为你提供了第一次创建 web 表单的经验，包括设计一个简单表单、使用正确的 HTML 表单控件和其他 HTML 元素实现它、通过 CSS 添加一些非常简单的样式，以及如何将数据发送到服务器。稍后我们将在这一章节中更详细地扩展这些主题。
 
@@ -373,7 +373,7 @@ button {
 
 然而，这仅仅是开始，现在是时候深入研究了。表单比我们在这里看到的要强大得多，本指南的其他文章将帮助你掌握其余部分。
 
-{{NextMenu("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 ### 高级主题
 

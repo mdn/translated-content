@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Introduction
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。
 
@@ -317,4 +317,4 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 
 我们的下一篇文章将深入到较低的层次，看看框架倾向于提供的特定类型的功能，以及它们的工作原理。
 
-{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}

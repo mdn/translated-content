@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
 欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题。并使你熟悉 JavaScript 的用途。
 
@@ -361,4 +361,4 @@ for (const button of buttons) {
 
 现在 JavaScript 或许还有些令人生畏，但不用担心。在课程中我们会循序渐进。下一节将[全力投入实战](/zh-CN/docs/Learn_web_development/Core/Scripting/A_first_splash)，让你专注其中，并建立自己的 JavaScript 示例。
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}

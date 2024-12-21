@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 original_slug: Learn/HTML/Tables/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 本文将从 HTML 表格开始，介绍一些基本的内容，如行和单元格、标题、使单元格跨越多个列和行，以及如何将列中的所有单元组合在一起进行样式化。
 
@@ -540,4 +542,4 @@ th {
 
 本章节仅仅包含了 HTML 表格的基础。在下一篇文章中，我们将介绍一些[表格进阶特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)，并开始考虑方便视力障碍的人士的访问。
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

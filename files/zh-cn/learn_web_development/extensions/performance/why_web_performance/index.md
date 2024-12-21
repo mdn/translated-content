@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/why_web_performance
 original_slug: Learn/Performance/why_web_performance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 Web 性能关乎网站的快速加载，以及让缓慢过程*看起来*更快。本文将介绍 web 性能对于网站访问者和你的业务目标的重要性。
 
@@ -72,4 +72,4 @@ Web 性能及其相关的最佳实践对于网站访问者拥有良好的体验�
 
 Web 性能对于可访问性以及服务于组织或企业目标的其他网站指标非常重要。网站性能的好坏与用户体验以及大多数网站的整体效果密切相关。这就是为什么你应该关心 web 性能。
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

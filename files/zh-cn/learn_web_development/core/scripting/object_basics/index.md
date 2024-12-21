@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Object_basics
 original_slug: Learn/JavaScript/Objects/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
 
 在这学习 JavaScript 的对象的首篇文章中，我们将会学习有关对象基础的语法，并且回顾一些之前学过的 JavaScript 的一些特点，使你明白你所使用过的一些功能实际上是由对象提供的。
 
@@ -410,4 +410,4 @@ const myNotification = new Notification("你好！");
 
 在下一篇文章，我们将讨论**原型**（prototype），这是 JavaScript 让对象从其他对象继承属性的基本方式。
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}

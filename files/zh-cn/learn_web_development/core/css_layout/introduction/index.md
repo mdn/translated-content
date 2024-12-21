@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}
 
 本文将回顾我们以前模块中已经介绍过的一些 CSS 布局特性——例如不同的{{cssxref("display")}}值——并介绍我们将在本模块中使用的一些概念。
 
@@ -781,4 +781,4 @@ body {
 
 本文提供了关于你应该了解的所有布局技术的简要概述。阅读更多关于每一项技术的信息！
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{NextMenu("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

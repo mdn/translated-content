@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e97f3c5ada65b6638909bde92881a4b8d46a2b8
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 首先，我们将从一个高层次看看 API——它们是什么、它们如何工作、如何在代码中使用它们，以及它们是如何组织的。我们也将看看不同主要类别的 API 以及它们的用途。
 
@@ -281,4 +281,4 @@ Web 音频和 {{domxref("HTMLMediaElement")}} API 受制于一种名为[自动�
 
 至此，你应该对什么是 API、API 如何工作以及在 JavaScript 代码中如何使用 API 有了一定的了解。你可能已经迫不及待地想开始使用特定的 API 做一些有趣的事情了，那就开始吧！接下来，我们将学习使用文档对象模型（DOM）操作文档。
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 33a4048e0f2664db44dd3eeefebeb0c161bda3bb
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在*安装基础软件*中，我们向你展示了进行简单的 Web 开发需要哪些工具，以及如何正确安装它们。
 
@@ -44,4 +44,4 @@ l10n:
 
 对于其他的特定项目的工具的更多信息，尤其是对于客户端 Web 开发，参见[理解客户端 Web 开发工具](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools)指南。
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

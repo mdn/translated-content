@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_tools/Overview
 original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本文中，我们提供了现代 web 工具的概述，有哪些工具可用，在 web 应用程序开发的生命周期中你将在哪里遇到它们，以及如何使用各个工具寻求帮助。
 
@@ -165,4 +165,4 @@ web 应用程序生命周期的这个阶段通常允许你编写“未来代码�
 
 以上是我们对客户端 web 工具主题的简要介绍的最后一部分。接下来，我们将为你提供一个关于命令行的速成课程，许多工具都是从命令行调用的。我们将看一看命令行可以做什么，然后尝试安装和使用我们的第一个工具。
 
-{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}

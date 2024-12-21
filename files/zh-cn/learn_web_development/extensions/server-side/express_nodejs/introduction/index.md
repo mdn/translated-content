@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 original_slug: Learn/Server-side/Express_Nodejs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 本节将回答“什么是 Node”以及“什么是 Express”这两个问题，并通过主要特征和构成要件来简要介绍 Express 框架的与众不同之处。（只是目前尚不能用一个开发环境来测试它）
 
@@ -525,4 +525,4 @@ Express 不对文件结构和组件的选用做任何约定。路由、视图、
 - [托管静态文件](https://www.expressjs.com.cn/starter/static-files.html) （Express 中文文档）
 - [错误处理](https://www.expressjs.com.cn/guide/error-handling.html) （Express 英文文档）
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

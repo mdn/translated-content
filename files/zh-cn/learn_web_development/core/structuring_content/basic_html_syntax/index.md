@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
 本文将从 HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在 HTML 文档中所处的位置。本文还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。学习的过程中，我们也会使用 HTML 做一些好玩的事情。
 
@@ -763,4 +763,4 @@ HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地
 
 - [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

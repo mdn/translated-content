@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 
 本文作为本模块的开篇阐述了究竟什么是“无障碍” — 主要包括哪些用户群体是我们所需要和为什么需要考虑的，不同用户使用哪些工具与网页交互，以及我们在网站开发流程中如何构建无障碍。
 
@@ -161,18 +161,6 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
 
 本文应该给你提供一个有用的无障碍的高级概述，向你展示为什么它是重要的，并研究如何将它融入你的工作流程。现在，你还应该渴望了解可以使站点可访问的实现细节，我们将在下一节中开始，了解为什么 HTML 是无障碍的良好基础。
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
-
-## 本章目录
-
-- [什么是无障碍？](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-- [HTML：无障碍的良好基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML)
-- [CSS 和 JavaScript 无障碍最佳实践](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA 基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
-- [多媒体无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/Multimedia)
-- [移动端无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/Mobile)
-- [无障碍疑难解答](/zh-CN/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting)
-
 ## 参见
 
 - [WCAG](/zh-CN/docs/Web/Accessibility/Understanding_WCAG)
@@ -181,3 +169,5 @@ Web 浏览器使用特殊的无障碍 API(由底层操作系统提供)，这些 
   - [Operable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable)
   - [Understandable](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable)
   - [Robust](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Robust)
+
+{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
