@@ -3,6 +3,8 @@ title: Utilizando Políticas de Segurança de Conteúdo
 slug: Web/HTTP/CSP
 ---
 
+{{HTTPSidebar}}
+
 **Content Security Policy** (Política de Segurança de Conteúdo, também conhecida como {{Glossary("CSP")}}) é uma camada adicional de segurança que facilita a detecção e mitigação de certos tipos de ataques, incluindo Cross Site Scripting ({{Glossary("XSS")}}) e ataques de injeção de dados. Esses ataques são utilizados para diversos fins, e eles vão desde roubo de dados até desfiguração do site para distribuição de malware.
 
 O CSP foi projetado para ser totalmente compatível retroatívelmente (come exceção da versão 2 do CSP onde existem algumas inconsistências explicitamente mencionadas com compatibilidade retroativa; mais detalhes podem ser encontrados [aqui](https://www.w3.org/TR/CSP2) na seção 1.1). Os navegadores que não possuem suporte para o CSP ainda irão funcionar com servidores que o implementarem, e vice-versa: navegadores que não fornecem suporte podem simplesmente ignora-lo, funcionando normalmente, utilizando a norma padrão de [same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy) (política de mesma origem) para conteúdo web. Se o site não oferecer o cabeçaho CSP, os navegadores também utilizam a política de same-origin.
