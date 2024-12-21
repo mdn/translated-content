@@ -6,7 +6,9 @@ l10n:
   sourceCommit: c62b98afeca1df0ffdd92bb96b8a006662073a8e
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在本文中我们描述了各种与网络相关的概念：网页、网站、网络服务器以及搜索引擎。这些概念常被网络新手混淆，或被误用。让我们看看它们到底代指的是什么吧！
 
