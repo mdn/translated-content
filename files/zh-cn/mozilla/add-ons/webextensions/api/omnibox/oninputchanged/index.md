@@ -12,7 +12,7 @@ l10n:
 这是你会向地址栏的下拉菜单中填入推荐的事件。事件监听器会传递：
 
 - 当前的用户输入（不包含关键词以及其后的空格）
-- 一个函数，监听器可以调用这个函数传递一个数组。数组中包含一个 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象，且每个对象代表一个推荐内容。只有前六个推荐会被显示。
+- 一个函数，监听器可以使用 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象数组调用它，且每个对象代表一个推荐内容。只有前六个推荐会被显示。
 
 ## 语法
 
@@ -38,9 +38,9 @@ browser.omnibox.onInputChanged.hasListener(listener)
 ### 参数
 
 - `text`
-  - : `String`。当前的用户输入（不包含关键词以及其后的空格）你可以据此决定要在下拉菜单中显示的推荐内容。
+  - : `String`。当前的用户输入（不包含关键词以及其后的空格），你可以据此决定要在下拉菜单中显示的推荐内容。
 - `suggest`
-  - : `Function`。一个函数，监听器可以调用这个函数传递一个数组。数组中包含一个 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象，且每个对象代表一个推荐内容。只有前六个推荐会被显示。
+  - : `Function`。事件监听器可调用的函数，用于为地址栏的下拉列表提供建议。该函数将接收 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象数组，每个对象代表一个推荐内容。只有前六个推荐会被显示。
 
 ## 浏览器兼容性
 
