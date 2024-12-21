@@ -60,7 +60,9 @@ window.requestAnimationFrame(positionElem);
 
 이는 `screenX`/`screenY` 와 완전히 동일한 동작을 합니다.
 
-또한 코드에서는 `screenLeft` 을 지원하는지, 만일 지원하지 않으면 `screenLeft`/`screenTop` 의 폴리필을 `screenX`/`screenY` 로 사용할 수 있도록 탐지하기 위해 스니펫이 추가되었습니다.
+또한 코드에서는 `screenLeft` 을 지원하는지, 만일 지원하지 않으면
+`screenLeft`/`screenTop` 의 폴리필을 `screenX`/`screenY` 로 사용할 수 있도록
+탐지하기 위해 스니펫이 추가되었습니다.
 
 ```js
 if (!window.screenLeft) {
