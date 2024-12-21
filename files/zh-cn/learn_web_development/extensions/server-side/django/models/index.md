@@ -4,7 +4,9 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}这篇文章展示了如何为我们的 LocalLibray（本地图书馆）网站定义 models。它解释了一个模型是什么，它是怎么被声明的，和其中的一些主要域类型。
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
+
+这篇文章展示了如何为我们的 LocalLibray（本地图书馆）网站定义 models。它解释了一个模型是什么，它是怎么被声明的，和其中的一些主要域类型。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -442,10 +444,10 @@ In this article we've learned how models are defined, and then used this informa
 
 At this point we'll divert briefly from creating the site, and check out the _Django Administration site_. This site will allow us to add some data to the library, which we can then display using our (yet to be created) views and templates.
 
-## See also
+## 参见
 
 - [Writing your first Django app, part 2](https://docs.djangoproject.com/en/1.10/intro/tutorial02/) (Django docs)
 - [Making queries](https://docs.djangoproject.com/en/1.10/topics/db/queries/) (Django Docs)
 - [QuerySet API Reference](https://docs.djangoproject.com/en/1.10/ref/models/querysets/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

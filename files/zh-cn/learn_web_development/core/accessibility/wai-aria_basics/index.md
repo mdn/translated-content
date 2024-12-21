@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 original_slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
 紧接上文继续，有时候，我们制作涉及非语义 HTML 和动态的 JavaScript 内容更新的复杂 UI 控件可能很困难。**WAI-ARIA** 是一项技术，它可以通过浏览器和一些辅助技术来帮助我们进一步地识别以及实现语义化，这样一来能帮助我们解决问题，也让用户可以了解发生了什么。接下来我们将展示如何运用它来优化无障碍体验：
 
@@ -446,4 +446,4 @@ function toggleMusician(bool) {
 - [WAI-ARIA Authoring Practices](http://w3c.github.io/aria-practices/) — very detailed design patterns from the W3C, explaining how to implement different types of complex UI control whilst making them accessible using WAI-ARIA features.
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) — A W3C spec that defines, for each HTML feature, what accessibility (ARIA) semantics that feature implicitly has set on it by the browser, and what WAI-ARIA features you may set on it if extra semantics are required.
 
-{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}

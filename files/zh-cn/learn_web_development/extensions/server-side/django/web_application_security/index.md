@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
 original_slug: Learn/Server-side/Django/web_application_security
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 保护用户数据是任何网站设计的重要部分。我们之前在文章[web 安全](/zh-CN/docs/Web/Security)中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。
 
@@ -193,4 +193,4 @@ Django 具备有效的防护措施，以对抗一些常見的威胁，包括 XSS
 - [Web security](/zh-CN/docs/Web/Security) (MDN)
 - [Securing your site](/zh-CN/docs/Web/Security/Practical_implementation_guides) (MDN)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}

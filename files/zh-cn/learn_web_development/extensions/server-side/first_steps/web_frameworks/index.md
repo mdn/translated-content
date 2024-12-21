@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/First_steps/Web_frameworks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 前面的文章向你展示了 web 客户端和服务器之间的通信是什么样子的，HTTP 的请求和回应之间的性质，以及服务器端应用为了回应来自 web 浏览器的请求的需要做的事情。有了这些知识后，现在是时候来探索一个 web 框架是如何简化这些任务的，并且告诉你应该如何为你的第一个服务器端应用选择一个框架。
 
@@ -281,4 +281,4 @@ Mojolicious 提供的一些功能是：
 
 这个模块的下一章节我们会稍微转变一下思路，我们会讨论一下网络安全。
 
-{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps/Website_security", "Learn_web_development/Extensions/Server-side/First_steps")}}

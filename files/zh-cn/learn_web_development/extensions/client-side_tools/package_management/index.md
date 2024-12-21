@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_tools/Package_management
 original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本文中，我们将详细介绍软件包管理器，以了解我们如何在自己的项目中使用它们——安装项目工具依赖项，使其保持最新状态等。
 
@@ -429,7 +429,7 @@ Server running at http://localhost:1234
 
 这就是我们对软件包管理器的介绍。接下来，我们将构建一个示例工具链，将我们到目前为止学到的所有知识付诸实践。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 ## 参考资料
 

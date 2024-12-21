@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_styling","Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在本文中，我们将使用 Vue 中的计算属性实现一个计数器，来显示已完成待办事项的数量。计算属性的工作原理类似于方法，但只有在它的依赖项发生变化时才重新运行。
 
@@ -131,4 +131,4 @@ updateDoneStatus(toDoId) {
 
 在本文中，我们使用计算属性为我们的应用程序添加了一个漂亮的小功能。然而，我们还有更重要的事情要做：在下一篇文章中，我们将学习条件渲染，以及当我们想编辑现有的待办事项时，如何使用它来显示编辑表单。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_styling","Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering", "Learn_web_development/Core/Frameworks_libraries")}}

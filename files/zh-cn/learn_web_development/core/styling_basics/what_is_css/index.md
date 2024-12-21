@@ -5,7 +5,7 @@ original_slug: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 我们已经知道了 CSS 是做什么的以及怎么写简单的样式这样基础的 CSS，接下来我将了解到浏览器如何获取 CSS、HTML 和将他们加载成网页。
 
@@ -156,4 +156,4 @@ p {
 
 恭喜你完成本模块，下面的文章你将会[使用你的新知识](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)来完成覆盖样式的案例，在这个过程中测试一些 CSS 样式。
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

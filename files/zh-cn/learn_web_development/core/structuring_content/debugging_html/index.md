@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将介绍一些查找和修复 HTML 错误的工具。
 
@@ -164,4 +164,4 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
 以上就是 HTML 调试的一篇入门介绍，同时对于调试 CSS 和 JavaScript 也有帮助，或者你职业生涯中的任一门语言。这也是 HTML 学习一章的最后一节，接下来是两个小测试，点击“下一页”来小试牛刀吧。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

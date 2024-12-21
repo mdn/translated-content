@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 的主要工作之一是赋予文本结构，使浏览器能够按照开发者的意图显示 HTML 文档。本文解释了 {{glossary("HTML")}} 如何通过添加标题和段落、强调单词、创建列表等方式来构造文本。
 
@@ -1062,4 +1062,4 @@ HTML5 重新定义了 `<b>`、`<i>` 和 `<u>`，赋予了它们新的但有点�
 
 现在就到此为止了！这篇文章应该已经让你对如何开始在 HTML 中标记文本有了一个很好的概念，并且向你介绍了这个领域中的一些最重要的元素。这个领域还有很多语义元素要介绍，我们将在本课程稍后的[文本格式化进阶](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)一文中看得更清楚。在下一篇文章中，作为 Web 上最重要的元素，我们将详细介绍如何[创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}

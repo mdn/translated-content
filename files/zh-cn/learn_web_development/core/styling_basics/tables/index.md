@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 为 HTML 表格设计样式并不是世界上最光彩的工作，但有时我们不得不这么做。本文将介绍如何让 HTML 表格看起来更美观，并重点介绍一些具体的表格样式设计技巧。
 
@@ -307,4 +307,4 @@ caption {
 
 现在，我们身后的表格样式令人炫目，令人兴奋，我们需要一些其他的东西来占据我们的时间。下一篇文章将介绍 [CSS 调试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)，探索如何解决一些问题，例如布局看起来不像应该有的样子，或者属性在你认为应该应用的时候没有应用。那里包含了使用浏览器开发者工具寻找你的问题的解决方案的信息。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

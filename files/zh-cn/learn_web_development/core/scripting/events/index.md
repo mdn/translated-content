@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Events
 original_slug: Learn/JavaScript/Building_blocks/Events
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Event_bubbling", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 
 事件是你正在编程的系统中发生的事情，系统会告诉你有关这些事件的信息，以便你的代码能够对它们做出反应。
 
@@ -405,4 +405,4 @@ form.addEventListener("submit", (e) => {
 
 另外，理解 JavaScript 在不同环境下使用不同的事件模型很重要——从 Web API 到其他领域，如浏览器 WebExtensions 和 Node.js（服务器端 JavaScript）。我们并不期望现在了解所有这些领域，但是当你在学习 web 开发的过程中，理解这些事件的基础是很有帮助的。
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Event_bubbling", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}

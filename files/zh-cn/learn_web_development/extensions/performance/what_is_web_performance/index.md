@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/What_is_web_performance
 original_slug: Learn/Performance/What_is_web_performance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance")}}
 
 Web 性能就是让网站变得更快，以及让缓慢过程*看起来*更快。网站加载速度是否很快，是否允许用户快速开始与之交互，是否在某些东西需要时间加载时提供可靠的反馈（例如，一个“加载中”的旋转指示器）？网页的滚动和动画是否流畅？本文简要介绍了客观、可衡量的网络性能\*，涵盖了网络优化所涉及的技术、方法和工具。
 
@@ -66,4 +66,4 @@ Web 性能是对网站或应用程序的客观度量和用户的体验。这包�
 
 目前就是这些。我们希望我们对 web 性能主题的简要概述可以帮助你理解它的全部内容，并使你想要知道更多。接下来，我们将研究感知性能，以及如何使用一些巧妙的技术使某些不可避免的性能影响对用户来说不那么严重，或者被完全忽视。
 
-{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance")}}

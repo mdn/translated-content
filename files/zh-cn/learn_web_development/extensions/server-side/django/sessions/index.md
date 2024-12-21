@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}
 
 本教程扩展了我们的[LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)网站，为主页添加了一个基于会话的访问计数器。这是一个相对简单的例子，但它确实显示了，如何使用会话框架为匿名用户提供持久的行为。
 
@@ -170,4 +170,4 @@ def index(request):
 
 - [如何使用会话](https://docs.djangoproject.com/en/2.0/topics/http/sessions/) (Django 文档)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/HTML5_input_types
 original_slug: Learn/Forms/HTML5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 在[前一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)中我们学习了 {{htmlelement("input")}} 元素，涵盖了自 HTML 早期以来可用的 `type` 属性的原始值。现在我们来具体看一看较新的表单控件，包含一些新添加至 HTML 5 的 input 类型，以允许收集更多特定类型的数据。
 
@@ -286,7 +286,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 至此，我们结束了对 HTML5 表单输入类型的考察。还有一些其他的控件类型，由于其行为非常特殊，所以不能轻易地归为一类，但仍有必要了解一下。我们将在下一篇文章中介绍这些类型。
 
-{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 ### 进阶内容
 

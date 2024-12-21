@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/JavaScript
 original_slug: Learn/Performance/JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}
 
 考虑如何在你的网站上使用 JavaScript 以及如何减少它可能造成的性能问题是非常重要的。虽然图片和视频占了平均网站下载字节的 70% 以上，但是逐字节来看，JavaScript 对性能的负面影响更大——它会显著影响下载时间、渲染性能、CPU 和电池使用。本文介绍了一些优化 JavaScript 的技巧和方法，以提高你的网站的性能。
 
@@ -336,4 +336,4 @@ elem.removeEventListener("mousemove", handleMouseMove);
 - [优化长任务](https://web.developers.google.cn/articles/optimize-long-tasks)（web.developers.google.cn，2022 年）
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 
-{{PreviousMenuNext("Learn/Performance/video", "Learn/Performance/HTML", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}

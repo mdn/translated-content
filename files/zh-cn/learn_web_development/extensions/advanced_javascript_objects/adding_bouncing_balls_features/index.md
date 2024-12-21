@@ -4,22 +4,9 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bounci
 original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在此次测验中，你需要将上一节中的“弹球”演示程序作为模板，添加一些新的有趣的功能。
-
-<table class="learn-box standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>请确保完整学习本章所有内容后再开始测验。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>测试你对 JavaScript 对象和面向对象结构的理解。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 开始
 
@@ -432,4 +419,4 @@ window.onkeydown = (e) => {
 
 如果你将此评估作为有组织的课程的一部分，你可以将你的成果交给你的老师/导师进行评分。如果你是自学的，通过在 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)，或者在 [Mozilla IRC](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) IRC 频道上申请，你可以十分容易地得到评分指南。首先先尝试这个练习，作弊不会有任何收获。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

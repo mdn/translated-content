@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 original_slug: Learn/HTML/Tables/Advanced
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
 
 本模块的第二篇文章中，我们来看一下 HTML 表格更进阶的特性，比如表格的标题、摘要，以及将表格中的各行分组成表头、表体和表尾三部分，以及为视力受损的用户提供表格无障碍。
 
@@ -350,4 +350,4 @@ th {
 
 如果你想要入门 CSS，请前往 [CSS 学习区](/zh-CN/docs/Learn_web_development/Core/Styling_basics)！
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}

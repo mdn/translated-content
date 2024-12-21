@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 
 是时候添加一个我们仍然缺少，但十分重要的功能了——编辑现有的待办事项。为此，我们将利用 Vue 的条件渲染（即 `v-if` 和 `v-else`）来让我们能在现有待办视图和用于更新待办的编辑视图之间切换。我们还将实现删除待办事项的功能。
 
@@ -380,4 +380,4 @@ editToDo(toDoId, newLabel) {
 
 这篇文章相当密集，我们在这里讨论了很多内容。现在我们的应用中有了编辑和删除功能，这非常令人兴奋。现在，我们的 Vue 系列已经接近尾声。最后一个要讨论的功能是焦点管理，或者换句话说：我们应如何提高应用程序的键盘无障碍。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}

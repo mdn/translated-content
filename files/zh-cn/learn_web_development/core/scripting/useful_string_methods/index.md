@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 现在我们学习基本的字符串语法，让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。
 
@@ -463,4 +463,4 @@ window.addEventListener("load", updateCode);
 
 你不能逃避的事实是在编程中处理单词和句子是非常重要的——特别是在 JavaScript 中，因为网站都是关于与人沟通的。本文已经给出了你现在需要了解的关于操作字符串的基础知识。这将在未来进入更复杂的主题时为你服务。接下来，我们将在短期内研究我们需要关注的最后一个主要的数据类型——数组。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

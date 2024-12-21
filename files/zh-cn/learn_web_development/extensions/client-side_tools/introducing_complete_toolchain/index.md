@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_to
 original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本系列的最后几篇文章中，我们将通过演示如何构建一个示例案例工具链来巩固你的工具知识。我们将从设置合理的开发环境和设置转换工具开始，一直到在 Netlify 上实际部署应用程序。在本文中，我们将介绍研究案例、设置开发环境和设置代码构建转换工具。
 
@@ -447,4 +447,4 @@ Parcel 的另一个聪明技巧是，对源代码的任何更改现在都会触�
 
 相反，我们为你编写了一个示例项目，供你使用你的工具。我们建议你使用我们的示例代码来完成本章的其余部分，然后你可以尝试更改 src 目录的内容以适应你自己的项目，并将其发布到 Netlify 上！事实上，将部署到 Netlify 将是下一章的最终目标！
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}

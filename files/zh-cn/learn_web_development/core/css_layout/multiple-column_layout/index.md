@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 original_slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}
 
 多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。这篇文章介绍怎么使用这一特性。
 
@@ -455,5 +455,3 @@ body {
 
 - [CSS Fragmentation](/zh-CN/docs/Web/CSS/CSS_fragmentation)
 - [Using multi-column layouts](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

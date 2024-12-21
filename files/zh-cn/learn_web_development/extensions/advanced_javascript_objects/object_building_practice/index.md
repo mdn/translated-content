@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在前面的文章中，我们学习了 JavaScript 的面向对象理论和基本的语法知识，为之后的学习建立了良好的基础。这篇文章中我们将进行一次实战演练，通过构造 JavaScript 对象得到生动有趣的成果！
 
@@ -444,4 +444,4 @@ Ball.prototype.update = function () {
 - [纯 JavaScript 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)——一个很好的 2D 游戏开发初学者教程。
 - [Phaser 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)——JavaScript 游戏库构建 2D 游戏的基础知识。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

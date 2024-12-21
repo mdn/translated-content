@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
 
 通过之前的准备工作，我们现在将专门研究在 HTML 和 CSS 代码中常见的跨浏览器问题，以及可以用来预防或解决这些问题的工具。这包括代码静态分析、处理 CSS 前缀、使用浏览器开发者工具追踪问题、使用 polyfill 为浏览器提供支持，以及解决响应式设计的问题等。
 
@@ -287,4 +287,4 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 现在你应该熟悉 Web 开发中主要的跨浏览器 HTML 和 CSS 问题，以及如何解决这些问题。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}

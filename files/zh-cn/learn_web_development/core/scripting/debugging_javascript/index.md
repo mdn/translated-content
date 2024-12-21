@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
 
 现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发者工具来跟踪和修复问题，使用 polyfill 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
 
@@ -428,4 +428,4 @@ window.AudioContext;
 
 所以，这就是 JavaScript 的基本情况。听起来简单吗？可能并不完全如此，但希望这篇文章至少为你提供了一个开始的地方，以及一些关于如何解决你可能遇到的 JavaScript 相关问题的思路。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}

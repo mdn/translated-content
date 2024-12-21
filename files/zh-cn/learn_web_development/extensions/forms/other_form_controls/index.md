@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 original_slug: Learn/Forms/Other_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 现在我们来具体看看非 `<input>` 表单控件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。
 
@@ -310,7 +310,7 @@ original_slug: Learn/Forms/Other_form_controls
 
 现在你已经掌握了不同的可用表单控件背后的 HTML 代码，接下来我们将看看[如何进行样式化表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)。
 
-{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 ### 进阶内容
 

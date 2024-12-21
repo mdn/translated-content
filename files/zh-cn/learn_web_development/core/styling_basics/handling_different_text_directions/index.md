@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 68772e87a84d6d6fc6a8e377dea4998afbeb511c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在盒子的上侧、右侧、下侧、左侧设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。
 
@@ -349,7 +349,3 @@ img {
 ## 总结
 
 本课讲解的概念在 CSS 中变得越来越重要。了解块级方向和行级方向，以及文字流如何随着书写模式的改变而改变，对今后的工作非常有用。即使你从未使用过水平书写模式以外的其他书写模式，也能帮助你理解 CSS。
-
-在下一篇文章中，我们将仔细研究 CSS 中的[溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow)。
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}

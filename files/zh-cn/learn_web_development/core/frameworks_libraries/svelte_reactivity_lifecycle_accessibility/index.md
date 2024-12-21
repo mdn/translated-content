@@ -5,7 +5,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_components","Learn_web_development/Core/Frameworks_libraries/Svelte_stores", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们为待办事项列表添加了更多功能，并开始将应用程序组织成组件。在本文中，我们将添加应用程序的最终功能，并进一步组件化我们的应用程序。我们将学习处理与更新对象和数组相关的响应式问题。为了避免常见的问题，我们需要深入了解 Svelte 的响应式系统。我们还将解决一些无障碍聚焦问题，以及其他一些问题。
 
@@ -890,4 +890,4 @@ npx degit opensas/mdn-svelte-tutorial/06-stores
 
 在下一篇文章中，我们将学习如何使用 store 在组件之间进行通信，并为我们的组件添加动画效果。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_components","Learn_web_development/Core/Frameworks_libraries/Svelte_stores", "Learn_web_development/Core/Frameworks_libraries")}}

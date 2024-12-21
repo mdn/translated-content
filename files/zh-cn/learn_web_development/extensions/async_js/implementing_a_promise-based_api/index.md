@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 
 在上一篇文章中，我们讨论了如何使用返回 promises 的 APIs。在本文中，我们将研究另一方面--如何实现返回 promises 的 APIs。跟使用基于 promise 的 APIs 相比，这是一个不太常见的任务，但它仍然值得了解。
 
@@ -209,4 +209,4 @@ button.addEventListener("click", async () => {
 - [`Promise()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise)
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

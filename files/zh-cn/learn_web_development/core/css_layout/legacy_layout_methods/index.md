@@ -6,8 +6,6 @@ original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
 在 CSS 布局中，网格系统是一种非常常见的布局方式，并且在 CSS 网格布局之前，它们倾向于由浮动和其他的布局功能实现。假想你的布局是一组数字标注的列（例如 4、6 或者 12），然后把你的内容填充到这些想象的列中。这篇文章将要探讨这种早期的方法是怎么实现的，来帮助你在旧项目工作时更好地理解他们。
 
 <table class="learn-box standard-table">
@@ -665,5 +663,3 @@ Skeleton（或者其他任何网格框架）正在做的所有事情是，设定
 ## 小结
 
 你现在理解了多种网格系统是如何建立的。这将会在处理老网站的时候，以及理解 CSS 网格布局的原生网格和那些老系统的不同的时候帮到你。
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

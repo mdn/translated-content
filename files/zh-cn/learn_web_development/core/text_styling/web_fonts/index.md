@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Web_fonts
 original_slug: Learn/CSS/Styling_text/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本 CSS 特性。在这篇文章中，我们将更进一步，详细地探索 web 字体——它们允许你下载自定义字体和你的 web 页面，以允许更多不同的、自定义的文本样式。
 
@@ -185,4 +185,4 @@ html {
 
 既然你已经完成了我们关于文本样式基础的文章，现在是时候用我们对模块的评估来测试你的理解了，为社区学校的主页进行排版。
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

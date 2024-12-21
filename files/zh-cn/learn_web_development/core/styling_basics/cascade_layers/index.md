@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 original_slug: Learn/CSS/Building_blocks/Cascade_layers
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
 这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity)的基本概念之上。
 
@@ -416,5 +416,3 @@ body {
 ## 总结
 
 如果你理解了本文中的大部分内容，那么恭喜——你现在已经熟悉了 CSS 层叠层的基本机制。接下来，我们将详细了解[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)。
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

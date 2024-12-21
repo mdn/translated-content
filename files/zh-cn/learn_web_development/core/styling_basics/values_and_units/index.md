@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Values_and_units
 original_slug: Learn/CSS/Building_blocks/Values_and_units
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 CSS 中使用的每个属性都允许拥有一个或一组值，查看 MDN 上的任何属性页将帮助你理解对任何特定属性有效的值。在本节课中，我们将学习一些最常用的值和单位。
 
@@ -739,4 +739,4 @@ li {
 
 例如，理解 [`<image>`](/zh-CN/docs/Web/CSS/image) 还允许你创建一个颜色渐变有意义的，但也许这个章节并不会提供太多明显的相关知识！
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

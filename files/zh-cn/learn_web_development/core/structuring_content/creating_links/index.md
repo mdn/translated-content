@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
 original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 超链接非常重要——它们使互联网成为一个*互联的网络*。本文介绍了创建链接所需的语法，并且讨论了链接的最佳实践。
 
@@ -334,4 +334,4 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 这就是链接！在课程的后期，当你开始研究链接的样式时，会回顾链接部分。接下来是 HTML，我们将回顾文本语义，并查看一些你会发现有用的更高级/不寻常的功能，[文本格式进阶](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)是你的下一站。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

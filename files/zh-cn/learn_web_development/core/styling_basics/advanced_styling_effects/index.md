@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 original_slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}
 
 这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。
 
@@ -442,5 +442,3 @@ window.addEventListener("load", drawOutput);
 ## 总结
 
 我们希望这篇文章被证明是很有趣的——玩着闪亮的玩具通常是很有趣的，而且看看什么样的工具在尖端的浏览器中是可以得到的是我们很感兴趣的。你已经到达了样式盒文章的末尾，因此，接下来你将通过我们的评估来测试你的 box syling 技能。
-
-{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}

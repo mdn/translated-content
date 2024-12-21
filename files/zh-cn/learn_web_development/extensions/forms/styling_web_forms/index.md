@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 在前几篇文章中，我们介绍了如何用 HTML 创建网页表单。现在，我们将介绍如何使用 [CSS](/zh-CN/docs/Web/CSS) 来设置表单样式。
 
@@ -380,7 +380,7 @@ button:focus {
 
 正如你所看到的，只要我们想创建只有文本字段和按钮的表单，就很容易使用 CSS 对其进行样式设置。[下一篇文章中](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单微件。
 
-{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 ### 进阶内容
 

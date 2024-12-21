@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Frameworks_libraries/Main_features
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}
 
 每种主流的 JavaScript 框架都有自己不同的方式更新 DOM、处理浏览器事件并为开发者提供愉快的使用体验，这篇文章将探索“四大”框架的主要特性，从较高的层次探讨框架的工作方式以及它们之间的区别。
 
@@ -325,4 +327,4 @@ it("Increments the count when clicked", () => {
 - [Svelte](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started)
 - [Angular](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_getting_started", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility","Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们完成了应用程序的开发，将其组织为组件，并讨论了一些处理响应式、处理 DOM 节点以及暴露组件功能的高级技术。在本文中，我们将展示另一种在 Svelte 中处理状态管理的方式：[store](https://learn.svelte.dev/tutorial/writable-stores)。store 是全局数据存储库，用于保存值。组件可以订阅 store 并在其值发生变化时接收通知。
 
@@ -701,4 +701,4 @@ npx degit opensas/mdn-svelte-tutorial/07-next-steps
 
 在下一篇文章中，我们将学习如何为我们的 Svelte 应用程序添加 TypeScript 支持。为了充分利用其所有特性，我们还会将整个应用程序迁移到 TypeScript。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility","Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}

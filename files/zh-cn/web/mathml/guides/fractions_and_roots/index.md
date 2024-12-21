@@ -4,7 +4,9 @@ slug: Web/MathML/Guides/Fractions_and_roots
 original_slug: Learn/MathML/First_steps/Fractions_and_roots
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
 
 本文在前文对文本容器介绍的基础上，介绍了如何通过嵌套分数和根号构建更复杂的 MathML 表达式。
 
@@ -293,10 +295,10 @@ checkboxes.forEach((checkbox) => {
 
 在本文中，我们学习了如何使用 `<mfrac>`、`<msqrt>` 和 `<mroot>` 元素来构建分数和根式。我们注意到了这些元素的一些特殊功能，即分数和根号符号。我们还学习了如何使用 `linethickness` 属性绘制无横线的分数。在下一篇文章中，我们将继续介绍基本的数学符号，并学习[上下标记](/zh-CN/docs/Web/MathML/Guides/Scripts)的使用。
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
-
 ## 参见
 
 - [`<mfrac>` 元素](/zh-CN/docs/Web/MathML/Element/mfrac)
 - [`<msqrt>` 元素](/zh-CN/docs/Web/MathML/Element/msqrt)
 - [`<mroot>` 元素](/zh-CN/docs/Web/MathML/Element/mroot)
+
+{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}

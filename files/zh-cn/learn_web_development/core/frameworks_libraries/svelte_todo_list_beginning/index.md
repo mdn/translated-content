@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在我们对 Svelte 运作机制有初步的了解后，就能开始构建我们的示例应用程序：一个待办事项列表。此篇文章中，会先确认应用程序所需的功能，接着会建立 `Todos.svelte` 组件并编写一些静态标记（markup）语言和样式，待一切准备就绪后，就能开始开发待办事项列表应用程序的相关特性，我们将在后续文章实现它们。
 
@@ -722,4 +722,4 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 
 随着标记和样式设计的到位，我们的待办事项列表应用程序已初具雏形，一切准备就绪，我们可以开始专注于需要实现的特性了。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}

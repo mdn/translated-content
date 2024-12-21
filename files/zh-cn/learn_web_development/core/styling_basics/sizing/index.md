@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Sizing
 original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
 
@@ -107,7 +107,7 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/vw-vh.html", '100%', 600)}}
 
-**如果你改变了 `vh` 和 `vw` 的对应值，盒子和字体的大小也会改变；视口大小的变化也会让它们的大小变化，因为它们是依照视口来定大小的。想看到随着你改变视口大小的时候示例的变化的话，你需要在一个新浏览器视窗里面载入此示例，因为你可以控制该视窗的大小，同时上面示例所在的嵌入的 `<iframe>` 的大小即是对上面示例而言的视口。[打开此示例](https://mdn.github.io/css-examples/learn/sizing/vw-vh.html)，调整浏览器视窗的大小，观察在盒子和文本的大小上所发生的事情。**
+如果你改变了 `vh` 和 `vw` 的对应值，盒子和字体的大小也会改变；视口大小的变化也会让它们的大小变化，因为它们是依照视口来定大小的。想看到随着你改变视口大小的时候示例的变化的话，你需要在一个新浏览器视窗里面载入此示例，因为你可以控制该视窗的大小，同时上面示例所在的嵌入的 `<iframe>` 的大小即是对上面示例而言的视口。[打开此示例](https://mdn.github.io/css-examples/learn/sizing/vw-vh.html)，调整浏览器视窗的大小，观察在盒子和文本的大小上所发生的事情。
 
 在你的设计中，根据视口改变物件的大小是很有用的。例如，如果你想要在你其他内容之前，有一个充满整个视口的视觉宣传段落，让你的页面的那个部分有 100vh 高的话，会把剩下的内容推到视口的下面，只有向下滚动文档的时候它们才会出现。
 
@@ -115,4 +115,4 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 本节课，你已经得到了一个对于你可能在约束网站上的内容大小的时候，会遇到的一些关键问题的详细介绍。当你继续学习 [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)的时候，约束大小会成为掌握不同布局途径的非常重要的基础，所以在继续之前有必要在这里理解这些概念。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 是时候将目光转向谷歌的 Angular 框架了，这是一种你可能经常遇到的选项。在这篇文章中我们关注 Angular 能提供什么、安装必备的组件、建立一个示例应用，并关注 Angular 的基本架构。
 
@@ -257,4 +259,4 @@ export class AppComponent {
 
 这就是我们给你的第一次关于 Angular 的介绍。此时，你应该已经设置并准备好构建 Angular 应用程序，并对 Angular 的工作原理有基本的了解。在下一篇文章中，我们将加深这些知识，并开始构建待办事项列表应用程序的结构。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

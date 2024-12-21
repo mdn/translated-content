@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local
 original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在实战教程第一节中，你将了解要学习哪些内容，对「本地图书馆」示例网站有一个初步的印象。本章接下来的内容就是逐步完成这个网站。
 
@@ -71,4 +71,4 @@ original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 现在，你对 LocalLibrary 网站和即将学习的东西又多了解了一点，下面，我们开始创建一个用于存放它的 [框架](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) 吧！
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

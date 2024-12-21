@@ -4,7 +4,9 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 随着通过手机设备访问 web 愈加常见，iOS 和 Android 等流行的平台都拥有了完善的无障碍工具，在这些平台上考虑 web 的无障碍是一件很重要事情。本文将着重介绍移动端无障碍的注意事项。
 
@@ -275,4 +277,4 @@ panel.ontouchend = stopMove;
 - [移动 Web 开发指南](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)——“Smashing”杂志的文章列表，涵盖移动网页设计的不同技术。
 - [使你的网站在触摸设备上工作](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)——有关使用触摸事件来获得在移动设备上进行交互的有用文章。
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

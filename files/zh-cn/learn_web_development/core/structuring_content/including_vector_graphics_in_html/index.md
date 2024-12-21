@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 2492742db9d7341fa74604a1b4cd97dc3c079cab
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
 矢量图形在很多情况下非常有用——它们拥有较小的文件尺寸，却高度可缩放，所以它们不会在镜头拉近或者放大图像时像素化。在本文中，我们将向你展示如何在网页中添加矢量图形。
 
@@ -331,5 +331,3 @@ textarea.onkeyup = function () {
 - [Sara Soueidan 的响应式 SVG 图像教程](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [SVG 在无障碍方面的好处](https://www.w3.org/TR/SVG-access/)
 - [如何缩放 SVG](https://css-tricks.com/scale-svg/)（它不像位图那么简单！）
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

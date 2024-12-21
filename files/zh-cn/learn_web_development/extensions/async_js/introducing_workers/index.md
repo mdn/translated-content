@@ -1,11 +1,11 @@
 ---
-title: workers 简介
+title: worker 简介
 slug: Learn_web_development/Extensions/Async_JS/Introducing_workers
 original_slug: Learn/JavaScript/Asynchronous/Introducing_workers
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}
 
 在“异步 JavaScript”模块的最后一篇文章中，我们将介绍 worker，它使你能够在单独执行的{{Glossary("Thread", "线程")}}中运行一些任务。
 
@@ -229,14 +229,14 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 
 ## 总结
 
-在本文中，我们介绍了 web workers，它使得 web 应用能够离线加载任务到单独的线程中。主线程和 worker 不直接共享任何变量，但是可以通过发送消息来进行通信，这些消息作为 `message` 事件被对方接受。
+在本文中，我们介绍了 web worker，它使得 web 应用能够离线加载任务到单独的线程中。主线程和 worker 不直接共享任何变量，但是可以通过发送消息来进行通信，这些消息作为 `message` 事件被对方接受。
 
-Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不能访问 DOM，但是可以作为使主应用程序保持响应的一个有效的方式。
+Worker 尽管不能访问主应用程序能访问的所有 API，尤其是不能访问 DOM，但是可以作为使主应用程序保持响应的一个有效的方式。
 
 ## 参见
 
-- [使用 web workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [使用 service workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Web workers API](/zh-CN/docs/Web/API/Web_Workers_API)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 service worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Web worker API](/zh-CN/docs/Web/API/Web_Workers_API)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS/Sequencing_animations", "Learn_web_development/Extensions/Async_JS")}}

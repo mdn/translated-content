@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的“骨架”站点。
 
@@ -460,4 +460,4 @@ block content
 - [Express 应用程序生成器](https://expressjs.com/zh-cn/starter/generator.html)（Express 文档）
 - [将模板引擎用于 Express](https://expressjs.com/zh-cn/guide/using-template-engines.html)（Express 文档）
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

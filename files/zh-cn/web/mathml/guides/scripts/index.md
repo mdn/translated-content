@@ -4,7 +4,9 @@ slug: Web/MathML/Guides/Scripts
 original_slug: Learn/MathML/First_steps/Scripts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 
 我们继续回顾基本数学符号，并重点介绍如何使用附加符号构建 MathML 元素。
 
@@ -477,8 +479,6 @@ math {
 
 在本文中，我们完成了对引入下标、上标、正下标和正上标的基本布局元素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>` 以及 `<munderover>` 的介绍。在介绍这些元素的过程中，我们顺便介绍了 `<mo>` 元素的新属性。在下一篇文章中，我们将继续关注[表格布局](/zh-CN/docs/Web/MathML/Guides/Tables)。
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
-
 ## 参见
 
 - [<msub> 元素](/zh-CN/docs/Web/MathML/Element/msub)
@@ -487,3 +487,5 @@ math {
 - [<munder> 元素](/zh-CN/docs/Web/MathML/Element/munder)
 - [<mover> 元素](/zh-CN/docs/Web/MathML/Element/mover)
 - [<munderover> 元素](/zh-CN/docs/Web/MathML/Element/munderover)
+
+{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

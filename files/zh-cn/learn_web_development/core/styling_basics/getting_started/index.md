@@ -6,7 +6,7 @@ original_slug: Learn/CSS/First_steps/Getting_started
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
 在这篇文章中，我们将会拿一个简单的 HTML 文档做例子，并且在里面使用 CSS 样式，期待你能在此过程中学会更多有关 CSS 的实战性知识。
 
@@ -270,4 +270,4 @@ body h1 + p .special {
 
 在下一节中，我们将看到样式表的结构是什么样的。
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}

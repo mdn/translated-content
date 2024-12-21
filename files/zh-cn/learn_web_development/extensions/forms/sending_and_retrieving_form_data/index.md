@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。
 
@@ -349,4 +349,4 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 - [The Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page)
 - [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
 
-{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

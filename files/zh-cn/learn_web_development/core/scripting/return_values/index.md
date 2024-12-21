@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Return_values
 original_slug: Learn/JavaScript/Building_blocks/Return_values
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 函数返回值 - 是本章中最后一个基础概念，让我们一起来瞧瞧.。有些函数在执行完毕后不会返回一个有用的值，但有些会，重要的是理解返回的是什么，怎样使用这些值在你的代码中，我们将在下面讨论这些。
 
@@ -183,4 +183,4 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 - [Functions in-depth](/zh-CN/docs/Web/JavaScript/Reference/Functions) — 详细介绍更多高级功能相关信息的指南。
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一个常见的 JavaScript 模式是把一个函数传递给另一个函数作为参数，然后在第一个函数中调用它。这有点超出了这门课的范围，但值得学习很久。
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

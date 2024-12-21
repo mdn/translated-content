@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/Vue_resources", "Learn_web_development/Core/Frameworks_libraries")}}
 
 使用 Vue 所做的事情快要结束了。最后一个需要讲述的内容是焦点管理，换句话说，也是如何提升我们应用的键盘无障碍性。我们将看看如何使用 **Vue 模板引用**来处理这个问题——这是一个进阶功能，允许你直接访问虚拟 DOM 之下的底层 DOM 节点，或者从一个组件直接访问一个子组件的内部 DOM 结构。
 
@@ -228,4 +228,4 @@ deleteToDo(toDoId) {
 > [!NOTE]
 > 如果你需要对照我们的版本检查你的代码，你可以在我们的 todo-vue 仓库中找到一个完成版本的 Vue 应用示例代码。关于运行中的实时版本，请看 <https://mdn.github.io/todo-vue/>。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/Vue_resources", "Learn_web_development/Core/Frameworks_libraries")}}

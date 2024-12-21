@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Floats
 original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 {{cssxref("float")}} 属性最初只用于在成块的文本内浮动图像，但是现在它已成为在网页上创建多列布局的最常用工具之一。本文将阐述它的有关知识。
 
@@ -666,4 +666,4 @@ body {
 
 现在你应该了解现代网页开发中浮动布局开发的知识了，请参阅 [传统的布局方法](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods) 以查看它们的用法，没准可以对你老旧的项目有所帮助。
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

@@ -4,7 +4,9 @@ slug: Web/MathML/Guides/Tables
 original_slug: Learn/MathML/First_steps/Tables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
 
 掌握了所有基本的数学符号后，接下来要考虑的是用于矩阵式表达和其他高级数学布局的表格布局。
 
@@ -303,11 +305,11 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Stru
 
 你已经接近完成本单元了——我们只剩下最后一件事要做。在[三个著名数学公式测验](/zh-CN/docs/Web/MathML/Guides/Three_famous_mathematical_formulas)中，你需要运用新学到的知识，使用 HTML 和 MathML 重写一个小型数学文章。
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps/Three_famous_mathematical_formulas", "Learn/MathML/First_steps")}}
-
 ## 参见
 
 - [学习 HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - [`<mtable>` 元素](/zh-CN/docs/Web/MathML/Element/mtable)
 - [`<mtr>` 元素](/zh-CN/docs/Web/MathML/Element/mtr)
 - [`<mtd>` 元素](/zh-CN/docs/Web/MathML/Element/mtd)
+
+{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

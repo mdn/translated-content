@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术协同工作的，以及从上层来看，它有哪些主要特性。在本文中，我们将深入了解真正的基础知识，学习如何使用 JavaScript 最基础的构建单元——变量。
 
@@ -444,4 +444,4 @@ typeof myNumber;
 
 到目前为止，你应该了解了一些 JavaScript 变量以及如何创建它们。在下一篇文章中，我们将更详细地关注数字，了解如何在 JavaScript 中使用基础数学。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

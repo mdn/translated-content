@@ -4,7 +4,9 @@ slug: Web/MathML/Guides/Text_containers
 original_slug: Learn/MathML/First_steps/Text_containers
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
 
 现在，我们将重点介绍 MathML 的文本容器（变量、数字、运算符等），它们是 MathML 公式的构建模块。
 
@@ -466,11 +468,11 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 在本文中，我们学习了一些用作文本容器的*标记*元素及其不同的语义，即 `<mi>`（标识符）、`<mn>`（数字）、`<mo>`（运算符）、`<mtext>`（通用文本）。我们介绍了在数学公式中常见的特殊 Unicode 字符，并概述了 `<mi>` 和 `<mo>` 元素的一些可观察表现。在下一篇文章中，我们将学习如何借助*标记*元素构建更复杂的表达式，例如[分数和根号](/zh-CN/docs/Web/MathML/Guides/Fractions_and_roots)。
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Getting_started", "Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps")}}
-
 ## 参见
 
 - [`<mi>` 元素](/zh-CN/docs/Web/MathML/Element/mi)
 - [`<mn>` 元素](/zh-CN/docs/Web/MathML/Element/mn)
 - [`<mo>` 元素](/zh-CN/docs/Web/MathML/Element/mo)
 - [`<mtext>` 元素](/zh-CN/docs/Web/MathML/Element/mtext)
+
+{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}

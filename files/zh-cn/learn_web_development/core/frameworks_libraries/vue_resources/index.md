@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_resources
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在，我们将为我们的 Vue 学习画上句号，这里将给你一个资源清单，你可以用它来进一步学习，还有一些其他有用的提示。
 
@@ -65,4 +65,4 @@ Vue 2 的支持将于 2023 年 12 月 31 日结束，所有 CLI 工具的默认 
 
 如果要从 Vue 2 升级，建议看一下 [Vue 3 迁移指南](https://v3-migration.vuejs.org/zh/)。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}

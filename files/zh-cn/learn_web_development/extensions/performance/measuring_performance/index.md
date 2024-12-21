@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/Measuring_performance
 original_slug: Learn/Performance/Measuring_performance
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 测量性能提供了一个重要的指标，以帮助你评估应用程序、网站或 web 服务的成功程度。
 
@@ -94,4 +94,4 @@ original_slug: Learn/Performance/Measuring_performance
 
 本文简要介绍了 web 性能指标，以帮助你了解可以在 web 应用程序或网站上测量的内容。接下来，你将了解如何优化网站上的图片以优化其性能。
 
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}

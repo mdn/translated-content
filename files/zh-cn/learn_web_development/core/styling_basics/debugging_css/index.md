@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
 
 你有时写 CSS 会碰到这样的问题：结果看起来和你想的不太一样。你可能会认为 selector（选择器）匹配到了元素但是什么都没发生，还可能会觉得盒子的大小与你想的有出入。这篇文章会教你着手调试 CSS，向你展示现代浏览器中的 DevTools 是怎样让你更方便地获悉发生了什么。
 
@@ -181,4 +181,4 @@ em {
 
 随着对 CSS 的使用经验越来越丰富，你会发现发现问题的速度越来越快。但是，即使我们中最有经验的人有时也会发现自己想知道到底发生了什么。采取有条不紊的方法，简化测试用例，并向他人解释问题，通常会找到解决方法。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}

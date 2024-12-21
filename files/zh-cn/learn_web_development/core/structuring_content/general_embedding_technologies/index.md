@@ -6,7 +6,7 @@ l10n:
   sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
 现在，你应该已经掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让你在网页中嵌入各种类型内容的元素：{{htmlelement("iframe")}}、{{htmlelement("embed")}} 和 {{htmlelement("object")}} 元素。`<iframe>` 用于嵌入其他网页，另外两个元素则用于嵌入外部资源，例如 PDF 文件。
 
@@ -366,5 +366,3 @@ PDF 是纸质文件与数字文件之间重要的转换桥梁，但它[在无障
 在 web 文档中嵌入其他内容可能是一件相当复杂的事。因此，在本文中，我们试图以一些简单而熟悉的例子作为引子来介绍，这样可以立即让人感觉到它与实际生活相关，同时也暗示了涉及技术的一些更高级的特性。最初，你可能只会使用嵌入功能来包括地图和视频等第三方内容在你的网页上。但随着你经验的增长，你可能会发现更多的使用场景。
 
 除了在这里讨论的技术之外，还有许多其他涉及嵌入外部内容的技术。我们在之前的文章中已经了解了一些技术，如 {{htmlelement("video")}}、{{htmlelement("audio")}} 和 {{htmlelement("img")}}，但还有更多等待你去探索的技术，比如 {{htmlelement("canvas")}}，它用于 JavaScript 生成的 2D 和 3D 图形，以及 {{SVGElement("svg")}}，用于嵌入矢量图形。在本模块的下一篇文章中，我们将深入了解 SVG。
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

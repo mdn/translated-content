@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Event_bubbling
 original_slug: Learn/JavaScript/Building_blocks/Event_bubbling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Events","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 ## 事件冒泡
 
@@ -365,4 +365,4 @@ container.addEventListener("click", (event) => {
 - [事件参考](/zh-CN/docs/Web/Events)
 - [事件顺序](https://www.quirksmode.org/js/events_order.html)（探讨了捕获和冒泡）——由 Peter-Paul Koch 撰写的非常详尽的文章。
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Events","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

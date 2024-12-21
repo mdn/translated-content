@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 54c4741354cf49b4dd62e1bb3d8ab13181b210f0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
 
 本文解释如何进行跨浏览器测试：如何选择要测试的浏览器和设备、如何实际测试这些浏览器和设备，以及如何借助用户群体进行测试。
 
@@ -280,4 +280,4 @@ A 级：
 
 接下来，我们将把注意力转向测试可能发现的实际代码问题，从 HTML 和 CSS 开始。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}

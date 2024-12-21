@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 下一组我们将了解的选择器被称为**伪类**和**伪元素**。这一类选择器的数量众多，通常用于很明确的目的。一旦你了解了如何使用它们，你便可以通过查阅列表来寻找合适的那一项以完成你想要的选择。与之前一样，每个选择器相关的 MDN 页面都将帮助你了解各浏览器的支持情况。
 
@@ -238,4 +238,4 @@ article p:first-child::first-line {
 - [伪类参考](/zh-CN/docs/Web/CSS/Pseudo-classes)
 - [伪元素参考](/zh-CN/docs/Web/CSS/Pseudo-elements)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

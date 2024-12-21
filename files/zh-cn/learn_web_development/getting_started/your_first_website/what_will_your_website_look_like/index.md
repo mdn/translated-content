@@ -6,7 +6,9 @@ l10n:
   sourceCommit: 14f7331883bfa16ca5c0e3cd3b19d412e1b412fd
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _你的网站会是什么样子_？讨论的是你编写代码之前不得不为你的网站准备的计划和设计工作，包括“网站提供哪些信息？”、“用哪些字体和颜色？”、“网站是做什么的？”。
 
@@ -75,4 +77,4 @@ _你的网站会是什么样子_？讨论的是你编写代码之前不得不为
 
 另一个选择是使用[安全 Web 字体](https://web.mit.edu/jmorzins/www/fonts.html)，如 Arial、Times New Roman、Courier New。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

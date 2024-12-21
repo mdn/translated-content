@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
 original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML 文字处理基础](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引用、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
 
@@ -765,4 +765,4 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 
 到这里你就完成了 HTML 语义文本元素的学习。但要记住，你在本课程中学到的并不是 HTML 文本元素的详细列表——我们想要尽量覆盖主要的、通用的、常见的，或者至少是有趣的部分。如果你想找到更多的 HTML 元素，可以看一看我们的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)（从[内联文本语义](/zh-CN/docs/Web/HTML/Element#内联文本语义)部分开始会是一个好的选择）。在下一篇文章中我们将会学习用来[组织 HTML 文档不同部分的 HTML 元素](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
