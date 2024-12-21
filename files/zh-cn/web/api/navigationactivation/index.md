@@ -35,7 +35,7 @@ window.addEventListener("pagereveal", async (e) => {
     const fromUrl = new URL(navigation.activation.from.url);
     const currentUrl = new URL(navigation.activation.entry.url);
 
-    // 从个人资料页面转到主页 ~> 在相关列表项上设置VT名称
+    // 从个人资料页面转到主页 ~> 在相关列表项上设置 VT 名称
     if (isProfilePage(fromUrl) && isHomePage(currentUrl)) {
       const profile = extractProfileNameFromUrl(fromUrl);
 
