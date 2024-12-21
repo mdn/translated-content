@@ -20,22 +20,22 @@ CSS 类型对象模型既允许对分配给 CSS 属性的值进行高性能操�
 CSS 类型对象模型 API 的 {{domxref('CSSStyleValue')}} 接口是所有可通过类型对象模型访问 CSS 值的基类。此类的实例可用于任何需要字符串的地方。
 
 - {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}}
-  - : `CSSStyleValue` 接口的 `parse()` 方法允许通过 CSS 字符串构造 `CSSNumericValue`。它将特定 CSS 属性设置为指定值，并将第一个值作为 `CSSStyleValue` 对象返回。
+  - : 此方法允许通过 CSS 字符串构造 `CSSNumericValue`。它将特定 CSS 属性设置为指定值，并将第一个值作为 `CSSStyleValue` 对象返回。
 - {{domxref('CSSStyleValue.parseAll_static', 'CSSStyleValue.parseAll()')}}
-  - : `CSSStyleValue` 接口的 `parseAll()` 方法将特定 CSS 属性的所有出现设置为指定值，并返回 `CSSStyleValue` 对象数组，每个对象包含一个提供的值。
+  - : 此方法将特定 CSS 属性的所有出现设置为指定值，并返回 `CSSStyleValue` 对象数组，每个对象包含一个提供的值。
 
 ### `StylePropertyMap`
 
 CSS 类型对象模型 API 的 {{domxref('StylePropertyMap')}} 接口提供了 CSS 声明块的表示，它是 `CSSStyleDeclaration` 的替代。
 
 - {{domxref('StylePropertyMap.set()')}}
-  - : `StylePropertyMap` 接口的 `set` 方法，将具有给定属性的 CSS 声明更改为给定的值。
+  - : `此方法将具有给定属性的 CSS 声明更改为给定的值。
 - {{domxref('StylePropertyMap.append()')}}
-  - : `StylePropertyMap` 接口的 `append` 方法基于给定的属性和值，向 `StylePropertyMap` 添加新的 CSS 声明的方法。
+  - : 此方法基于给定的属性和值，向 `StylePropertyMap` 添加新的 CSS 声明的方法。
 - {{domxref('StylePropertyMap.delete()')}}
-  - : `StylePropertyMap` 接口的 `delete` 方法，将从 `StylePropertyMap` 中删除具有给定属性的 CSS。
+  - : 此方法将从 `StylePropertyMap` 中删除具有给定属性的 CSS。
 - {{domxref('StylePropertyMap.clear()')}}
-  - : `StylePropertyMap` 接口的 `clear` 方法，将从 `StylePropertyMap` 删除所有声明。
+  - : `此方法将从 `StylePropertyMap` 删除所有声明。
 
 ### `CSSUnparsedValue`
 
@@ -59,7 +59,7 @@ CSS 类型对象模型 API 的 {{domxref('CSSUnparsedValue')}} 接口创建一�
 - {{domxref('CSSKeywordValue.value()')}}
   - : `CSSKeywordValue` 接口的属性，返回或设置 `CSSKeywordValue` 的值。
 
-## CSSStyleValue 接口子类
+## CSSStyleValue 接口
 
 {{domxref('CSSStyleValue')}} 接口是所有可通过类型对象模型访问 CSS 值的基类。子类包括：
 
