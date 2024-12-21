@@ -17,6 +17,6 @@ l10n:
 - スケーラビリティ: リソースは需要に応じて増減できる
 - 可用性: サービスとデータは、通常インターネット経由で利用可能になっている
 
-## See also
+## 関連情報
 
-- [What is the Cloud?](https://www.cloudflare.com/en-gb/learning/cloud/what-is-the-cloud/) on Cloudflare
+- [クラウドとは？ | クラウドの定義](https://www.cloudflare.com/ja-jp/learning/cloud/what-is-the-cloud/) Cloudflare
