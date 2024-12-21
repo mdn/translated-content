@@ -9,7 +9,7 @@ l10n:
 
 **クラウド**とは、インターネット経由でアクセスできる世界中に配置されたサーバー群、およびそのサーバー上で実行されるソフトウェアとデータベースを指します。
 
-Instead of storing data or running programs on a local computer or server, users can access cloud resources to perform tasks: this is known as {{glossary("Cloud computing")}}.
+ローカルのコンピュータやサーバーにデータを保存したりプログラムを実行したりする代わりに、ユーザーはクラウド上のリソースにアクセスしてタスクを実行できます: これは{{glossary("Cloud computing")}}とも呼ばれます。
 
 Key features of the cloud include:
 
