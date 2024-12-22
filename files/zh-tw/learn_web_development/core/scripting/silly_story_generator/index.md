@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 在本次評估中，你被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。 祝玩的開心！
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">事先具備:</th>

@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Objects/Basics
 
 第一篇談到 JavaScript 物件的文章中，我們了解到基本的 JavaScript 物件語法，複習了某些先前提過的 JavaScript 功能，也再次強調你現正使用中的許多功能其實就是物件。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">必要條件：</th>

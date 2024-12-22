@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/forms
 
 在此教程中，我們會教你如何使用 Express ，並且結合 Pug 來實現 HTML 表單，並且如何從數據庫中創建、更新、和刪除文檔。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提條件:</th>

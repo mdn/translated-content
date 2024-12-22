@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 
 在解釋過大部分的 OOJS 細節之後，本文將說明該如何建立「子」物件類別 (建構子)，並從其「母」類別繼承功能。此外，也將建議開發者應於何時、於何處使用 OOJS。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">必備條件：</th>
