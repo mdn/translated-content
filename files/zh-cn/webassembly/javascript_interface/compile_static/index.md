@@ -16,7 +16,7 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 ### 参数
 
 - _bufferSource_
-  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
+  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
 
 ### 返回值
 
@@ -24,7 +24,7 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 
 ### 异常
 
-- 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays), 将抛出一个 {{jsxref("TypeError")}} 。
+- 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays), 将抛出一个 {{jsxref("TypeError")}} 。
 - 如果编译失败 promise 将会 reject 一个 {{jsxref("WebAssembly.CompileError")}}。
 
 ## 示例

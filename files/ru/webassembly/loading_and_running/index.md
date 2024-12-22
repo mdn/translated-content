@@ -57,7 +57,7 @@ fetch("module.wasm")
 > Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/ru/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
 
 > [!NOTE]
-> Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
+> Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
 
 ### Выполнение вашего кода WebAssembly
 

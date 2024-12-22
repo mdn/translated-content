@@ -168,7 +168,7 @@ pip list
 
 ## Использование Django внутри виртуальной среды Python
 
-Для создания виртуальных сред мы будем использовать библиотеки [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux и macOS X) и [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), которые в свою очередь обе используют инструмент [virtualenv](/ru/docs/Python/Virtualenv). Инструмент обёртки предоставляет совместимый интерфейс для управления интерфейсами на всех платформах.
+Для создания виртуальных сред мы будем использовать библиотеки [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux и macOS X) и [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), которые в свою очередь обе используют инструмент [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv). Инструмент обёртки предоставляет совместимый интерфейс для управления интерфейсами на всех платформах.
 
 ### Установка ПО виртуальной среды
 

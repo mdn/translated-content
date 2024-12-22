@@ -34,7 +34,7 @@ Content-Type: multipart/form-data; boundary=something
 ## 디렉티브
 
 - `media-type`
-  - : 리소스 혹은 데이터의 [MIME type](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types).
+  - : 리소스 혹은 데이터의 [MIME type](/ko/docs/Web/HTTP/MIME_types).
 - charset
   - : 문자 인코딩 표준.
 - boundary

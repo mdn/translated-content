@@ -47,7 +47,7 @@ var event = new RTCDataChannelEvent("datachannel", { channel: dc });
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCPeerConnection")}}
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)

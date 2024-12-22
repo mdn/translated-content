@@ -54,13 +54,13 @@ Use a class-specific style when you want to apply the styling rules to many bloc
 
 Stylesheets with fewer rules are usually more performant. It is therefore recommended to use classes as much as possible, and to reserve the use of id for specific uses (like to connect label and form elements or for styling elements that must be semantically unique).
 
-See [CSS selectors](/ru/docs/CSS/Getting_Started/Selectors)
+See [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
 ## How do I restore the default value of a property?
 
 Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property.
 
-This has changed with CSS 2; the keyword [initial](/es/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
+This has changed with CSS 2; the keyword [initial](/ru/docs/Web/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ## How do I derive one style from another?
 
@@ -166,7 +166,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/CSS/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
+When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/Web/CSS/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
 
 ```
 div { color: black; }
@@ -176,7 +176,7 @@ div { color: black; }
 <div id="orange" class="green" style="color: red;">This is red</div>
 ```
 
-The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the [CSS 2.1 Specification chapter 6.4.3](http://www.w3.org/TR/CSS21/cascade.html#specificity).
+The rules are more complicated when the selector has multiple parts. More detailed information about how selector specificity is calculated can be found in the [CSS 2.1 Specification chapter 6.4.3](https://www.w3.org/TR/CSS21/cascade.html#specificity).
 
 ## What do the -moz-\*, -ms-\*, -webkit-\*, -o-\* and -khtml-\* properties do?
 
@@ -184,7 +184,7 @@ These properties, called _prefixed properties_, are extensions to the CSS standa
 
 The use of such properties on production websites is not recommended. If nevertheless needed, you are hinted to make a plan for the website evolution: these prefixed properties can be modified or even suppressed when the standard evolves.
 
-Please see the [Mozilla CSS Extensions](/ru/docs/CSS/CSS_Reference/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
+Please see the [Mozilla CSS Extensions](/ru/docs/Web/CSS/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

@@ -26,7 +26,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Directivas
 
 - `media-type`
-  - : El [MIME type](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types) de el recurso o el dato.
+  - : El [MIME type](/es/docs/Web/HTTP/MIME_types) de el recurso o el dato.
 - charset
   - : La codificación de caracteres.
 - boundary

@@ -68,7 +68,7 @@ slug: Web/SVG/Attribute/text-anchor
 
 以下元素可以运用文本锚点属性：
 
-- [Text content elements](/zh-CN/SVG/Element#Text_content_elements) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
 
 ## 规范
 

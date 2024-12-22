@@ -17,7 +17,7 @@ counters(countername, '.', upper-roman)
 
 {{EmbedInteractiveExample("pages/tabbed/function-counters.html", "tabbed-standard")}}
 
-[カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counters()` 関数 (および {{cssxref("counter()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
+[カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counters()` 関数 (および {{cssxref("counter()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
 
 > **メモ:** `counters()` 関数は CSS プロパティとも併用できますが、 {{CSSxRef("content")}} 以外のプロパティにおける対応は実験的であり、型または単位の引数への対応は限られています。
 >
@@ -30,7 +30,7 @@ counters(countername, '.', upper-roman)
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : カウンターを識別する名前であり、 {{cssxref("counter-reset")}} および {{cssxref("counter-increment")}} に用いた名前と、大文字小文字まで同一でなければなりません。名前をダッシュ 2 つで始めることはできず、また `none`, `unset`, `initial`, `inherit` という名前は禁止です。
 - `<counter-style>`
-  - : カウンタースタイル名または [`symbols()`](</ja/docs/Web/CSS/symbols()>) 関数です。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/CSS_Counter_Styles)があります。省略された場合は、既定で `decimal` になります。
+  - : カウンタースタイル名または [`symbols()`](</ja/docs/Web/CSS/symbols()>) 関数です。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)があります。省略された場合は、既定で `decimal` になります。
 - {{cssxref("&lt;string&gt;")}}
   - : 任意の数のテキスト文字です。ラテン文字以外は Unicode エスケープシーケンスでエンコードする必要があります。例えば `\000A9` は著作権記号を表します。
 
@@ -154,7 +154,7 @@ li::before {
 
 ## 関連情報
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-increment")}}

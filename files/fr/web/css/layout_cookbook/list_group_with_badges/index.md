@@ -33,5 +33,5 @@ Pour aligner le contenu horizontalement, on utilise la propriété `align-items`
 
 ## Voir aussi
 
-- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
+- [Alignement des boîtes avec les boîtes flexibles](/fr/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)

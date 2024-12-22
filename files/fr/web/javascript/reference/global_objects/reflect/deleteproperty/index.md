@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 
 {{JSRef}}
 
-La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
+La méthode statique **`Reflect.deleteProperty()`** permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 {{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
@@ -32,7 +32,7 @@ Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
 ## Description
 
-La méthode `Reflect.deleteProperty` permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
+La méthode `Reflect.deleteProperty` permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Exemples
 
@@ -63,4 +63,4 @@ Reflect.deleteProperty(Object.freeze({ toto: 1 }), "toto"); // false
 ## Voir aussi
 
 - {{jsxref("Reflect")}}
-- [Opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete)
+- [Opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Operators/delete)

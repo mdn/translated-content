@@ -19,7 +19,7 @@ Si vous débutez complètement, le développement web peut être un réel défi&
 >
 > Nous avons mis au point un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](/fr/docs/Learn/Front-end_web_developer)
+> [Commencer](/fr/curriculum/)
 
 ## Par où commencer&nbsp;?
 
@@ -109,7 +109,7 @@ Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement in
 
 Si vous voulez nous contacter au sujet de quoi que ce soit, le meilleur moyen est de nous [contacter](/fr/docs/MDN/Community/Communication_channels). N'hésitez pas à nous faire part de tout ce que vous pensez être erroné ou manquant sur le site, des demandes de nouveaux sujets d'apprentissage, des demandes d'aide pour des éléments que vous ne comprenez pas ou toute autre question ou préoccupation.
 
-Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Contribute), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
+Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Community/Contributing), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
 
 ## Voir aussi
 

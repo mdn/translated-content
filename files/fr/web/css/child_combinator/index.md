@@ -63,4 +63,4 @@ div > span {
 
 ## Voir aussi
 
-- [Le combinateur de descendant](/fr/docs/Web/CSS/Sélecteurs_descendant)
+- [Le combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator)

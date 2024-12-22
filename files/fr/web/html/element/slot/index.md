@@ -5,11 +5,11 @@ slug: Web/HTML/Element/slot
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/Web_Components).
+L'élément HTML **`<slot>`** représente un emplacement d'un composant web qu'on peut remplir avec son propre balisage. On peut ainsi obtenir un document construit avec différents arbres DOM. Cet élément fait partie des outils relatifs [aux composants web (Web Components)](/fr/docs/Web/API/Web_components).
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `name`
 
@@ -66,7 +66,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 ```
 
 > [!NOTE]
-> Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/Web_Components/Using_templates_and_slots).
+> Vous pouvez retrouver cet exemple sur [ce dépôt GitHub](https://github.com/mdn/web-components-examples/tree/master/element-details) et observer [son fonctionnement en live ici](https://mdn.github.io/web-components-examples/element-details/). Une explication plus détaillée est également disponible avec l'article [Manipuler `template` et `slot`](/fr/docs/Web/API/Web_components/Using_templates_and_slots).
 
 ## Résumé technique
 

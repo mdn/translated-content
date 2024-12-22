@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_images
 
 ## Руководства
 
-- [Использование CSS градиентов](/ru/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Использование CSS градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Представляют собой особый тип CSS изображений, _градиенты_, как создавать и использовать их.
 - [Создание спрайтов в CSS](/ru/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
   - : Описывает общую технику группировки нескольких изображений в один документ, чтобы сократить количество запросов и скорость загрузки страницы.

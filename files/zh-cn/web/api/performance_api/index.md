@@ -70,4 +70,4 @@ Performance API 是一组用于衡量 web 应用性能的标准。
 ## 参见
 
 - [Web 性能](/zh-CN/docs/Web/Performance)
-- [学习：Web 性能](/zh-CN/docs/Learn/Performance)
+- [学习：Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)

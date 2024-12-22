@@ -27,11 +27,11 @@ function starting(e) {
 document.addEventListener("beforescriptexecute", starting, true);
 ```
 
-[Voir l'exemple sur une page](/samples/html/currentScript.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## Spécification
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
 ## Voir aussi
 

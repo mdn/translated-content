@@ -315,7 +315,7 @@ var func = (a, b, c) => 1;
 
 ## Ordem de análise
 
-Apesar de a flecha numa _arrow function_ não ser um operador, _arrow functions_ possuem regras especiais de análise que interagem diferentemente com precedência de operador ([operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)) comparadas à funções comuns.
+Apesar de a flecha numa _arrow function_ não ser um operador, _arrow functions_ possuem regras especiais de análise que interagem diferentemente com precedência de operador ([operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)) comparadas à funções comuns.
 
 ```
 let callback;

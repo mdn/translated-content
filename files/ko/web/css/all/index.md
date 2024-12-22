@@ -28,7 +28,7 @@ all: revert;
 - {{cssxref("initial")}}
   - : 요소의 모든 속성을 [초깃값](/ko/docs/Web/CSS/initial_value)으로 변경합니다.
 - {{cssxref("inherit")}}
-  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/inheritance)으로 변경합니다.
+  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/Inheritance)으로 변경합니다.
 - {{cssxref("unset")}}
   - : 요소의 모든 속성을, 속성이 값을 상속하는 경우 상속값으로, 아니면 초깃값으로 변경합니다.
 - {{cssxref("revert")}}

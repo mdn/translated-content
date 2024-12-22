@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 {{CSSRef}}
 
-[CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_Grid_Layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
+[CSS 그리드 레이아웃(Grid Layout)](/ko/docs/Web/CSS/CSS_grid_layout)은 CSS에 2차원의 그리드 시스템을 도입했습니다. 그리드는 주요 페이지 영역을 설계하거나 작은 사용자 인터페이스 요소를 배치하는 데 사용할 수 있습니다. 이 문서에서는 CSS 그리드 레이아웃 및 CSS 그리드 레이아웃 레벨 1 명세서에 포함된 새로운 기술 용어를 소개합니다. 이번 개요에 소개된 기능은 나머지 안내 문서에서 자세히 설명합니다.
 
 ## 그리드가 무엇인가요?
 
@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 그리드 셀에 하나 이상의 아이템을 배치하거나 그리드 영역을 부분적으로 서로 겹치게 할 수 있습니다. 이렇게 생긴 중첩의 우선순위는 나중에 {{cssxref("z-index")}} 프로퍼티로 제어할 수 있습니다.
 
-그리드는 아주 강력한 기능을 담은 표준이라서 [플랙스박스(flexbox)](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)와 같은 CSS의 다른 부분과 결합하면, 이전에는 CSS에서 불가능했던 레이아웃을 만들 수 있도록 도와줍니다. 이 모든 것은 **그리드 컨테이너**에서 그리드를 생성하는 것부터 시작합니다.
+그리드는 아주 강력한 기능을 담은 표준이라서 [플랙스박스(flexbox)](/ko/docs/Web/CSS/CSS_flexible_box_layout)와 같은 CSS의 다른 부분과 결합하면, 이전에는 CSS에서 불가능했던 레이아웃을 만들 수 있도록 도와줍니다. 이 모든 것은 **그리드 컨테이너**에서 그리드를 생성하는 것부터 시작합니다.
 
 ## 그리드 컨테이너
 
@@ -86,7 +86,7 @@ slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 
 {{ EmbedLiveSample('그리드_컨테이너', '200', '330') }}
 
-바로 밑에 있는 모든 자식 요소는 이제 그리드 아이템이 됩니다. 이렇게 하면 웹 브라우저에서 보이는 모습이 그리드로 전환하기 전과 별 차이가 없는데, 이는 그리드가 우선 아이템을 단일 열 형태의 구조를 가진 그리드를 생성하였기 때문입니다. 이 시점에서 Firefox Developer Edition에서 작업하는 것이 유용하실 텐데, 여기엔 개발자 도구의 일부로 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) 기능을 제공합니다. Firefox에서 이 예제의 그리드를 검사해보면, `grid` 값 바로 옆에 작은 아이콘이 보이실 겁니다. 이 아이콘을 클릭하면 해당 요소의 그리드가 브라우저 창 위에 중첩되어 표시됩니다.
+바로 밑에 있는 모든 자식 요소는 이제 그리드 아이템이 됩니다. 이렇게 하면 웹 브라우저에서 보이는 모습이 그리드로 전환하기 전과 별 차이가 없는데, 이는 그리드가 우선 아이템을 단일 열 형태의 구조를 가진 그리드를 생성하였기 때문입니다. 이 시점에서 Firefox Developer Edition에서 작업하는 것이 유용하실 텐데, 여기엔 개발자 도구의 일부로 [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) 기능을 제공합니다. Firefox에서 이 예제의 그리드를 검사해보면, `grid` 값 바로 옆에 작은 아이콘이 보이실 겁니다. 이 아이콘을 클릭하면 해당 요소의 그리드가 브라우저 창 위에 중첩되어 표시됩니다.
 
 ![그리드를 살펴보기 위해 개발자 도구에 있는 그리드 하이라이터를 사용하는 모습](1-grid-inspector.png)
 
@@ -444,7 +444,7 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 {{ EmbedLiveSample('라인을_이용한_아이템_배치', '230', '420') }}
 
-Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
+Firefox 개발자 도구에 있는 [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
 
 ## 그리드 셀
 
@@ -731,24 +731,24 @@ Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspecto
 
 ## 다음 단계
 
-이 글에서는 Grid 레이아웃 표준 문서에 나와 있는 내용을 아주 간단히 살펴보았습니다. 코드 예제를 좀 더 연구해 보시고, [안내서의 다음 부분으로 넘어가서 CSS 그리드 레이아웃의 세부 사항을 조금 더 심도 있게 살펴보시기 바랍니다](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계).
+이 글에서는 Grid 레이아웃 표준 문서에 나와 있는 내용을 아주 간단히 살펴보았습니다. 코드 예제를 좀 더 연구해 보시고, [안내서의 다음 부분으로 넘어가서 CSS 그리드 레이아웃의 세부 사항을 조금 더 심도 있게 살펴보시기 바랍니다](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
 
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   8. [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
 
@@ -759,12 +759,12 @@ Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspecto
    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
    6. [grid-column](/ko/docs/Web/CSS/grid-column)
    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+   8. [grid-column-gap](/ko/docs/Web/CSS/column-gap)
    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
+   10. [grid-gap](/ko/docs/Web/CSS/gap)
    11. [grid-row](/ko/docs/Web/CSS/grid-row)
    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
+   13. [grid-row-gap](/ko/docs/Web/CSS/row-gap)
    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
    15. [grid-template](/ko/docs/Web/CSS/grid-template)
    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
@@ -774,11 +774,11 @@ Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspecto
 6. **용어집**
 
    1. [Grid](/ko/docs/Glossary/Grid)
-   2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-   3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-   4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-   5. [Grid areas](/ko/docs/Glossary/Grid_areas)
+   2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_Cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_Areas)
    6. [Gutters](/ko/docs/Glossary/Gutters)
    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-   8. [Grid row](/ko/docs/Glossary/Grid_rows)
-   9. [Grid column](/ko/docs/Glossary/Grid_column)
+   8. [Grid row](/ko/docs/Glossary/Grid_Row)
+   9. [Grid column](/ko/docs/Glossary/Grid_Column)

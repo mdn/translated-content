@@ -7,9 +7,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 Теперь, когда мы спокойно добавляем простые изображения на веб-страницу, сделаем следующий шаг — начнём добавлять видео и аудиоплееры в ваши HTML-документы! В этой статье вы увидите, как это делать с элементами {{htmlelement("video")}} и {{htmlelement("audio")}} ; а в завершение посмотрите, как добавить титры и субтитры к вашим видео.
 
-| Предпосылки: | Базовая компьютерная грамотность, [установка базового ПО](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F), базовые знания [работа с файлами](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), знакомство с основами HTML (как описано в [Начало работы с HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started)) и [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML). |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:      | Узнать, как вставлять видео и аудиоконтент в веб-страницу, а также добавлять титры или субтитры к видео.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Предпосылки: | Базовая компьютерная грамотность, [установка базового ПО](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F), базовые знания [работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), знакомство с основами HTML (как описано в [Начало работы с HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started)) и [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML). |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:      | Узнать, как вставлять видео и аудиоконтент в веб-страницу, а также добавлять титры или субтитры к видео.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## Аудио и видео в Интернете
 
@@ -48,7 +48,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 ![A simple video player showing a video of a small white rabbit](simple-video.png)
 
-Вы можете [посмотреть живой пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) (взгляните также на [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
+Вы можете [посмотреть живой пример](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) (взгляните также на [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
 
 ### Поддержка нескольких форматов
 
@@ -83,7 +83,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 Ещё одна вещь, о которой следует помнить: мобильные браузеры могут поддерживать дополнительные форматы, не поддерживаемые их настольными эквивалентами, точно так же, как они могут не поддерживать все те же форматы, что и настольная версия. Вдобавок ко всему, как настольные, так и мобильные браузеры могут быть спроектированы так, чтобы разгрузить обработку воспроизведения мультимедиа (либо для всех мультимедиа, либо только для определённых типов, которые он не может обрабатывать внутренне). Это означает, что поддержка мультимедиа частично зависит от того, какое программное обеспечение установил пользователь.
 
-Так как мы это сделаем? Взгляните на следующий [обновлённый пример](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) (и попробуйте [живой пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)):
+Так как мы это сделаем? Взгляните на следующий [обновлённый пример](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) (и попробуйте [живой пример](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)):
 
 ```html
 <video controls>
@@ -147,7 +147,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
     - `"auto"` буферизирует медиафайл
     - `"metadata"` буферирует только метаданные файла
 
-Вы можете найти приведённый выше пример для воспроизведения [на Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (также [просмотрите исходный код](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Обратите внимание, что мы не включили атрибут `autoplay` в live-версию - если видео начнёт воспроизводиться, как только страница загрузится, вы не увидите заставку к видео!
+Вы можете найти приведённый выше пример для воспроизведения [на Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (также [просмотрите исходный код](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Обратите внимание, что мы не включили атрибут `autoplay` в live-версию - если видео начнёт воспроизводиться, как только страница загрузится, вы не увидите заставку к видео!
 
 ### Элемент \<audio>
 
@@ -169,7 +169,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > [!NOTE]
-> Вы можете запустить [аудио-демо](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) в Github (см. также [исходный код аудиоплеера](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> Вы можете запустить [аудио-демо](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) в Github (см. также [исходный код аудиоплеера](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Он занимает меньше места, чем видеоплеер, поскольку нет визуального компонента - вам просто нужно отображать элементы управления для воспроизведения звука. Другие отличия от видео HTML5 заключаются в следующем:
 
@@ -186,7 +186,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 - Другие могут не слышать звук, потому что они находятся в шумной обстановке (например, в переполненном баре при показе спортивной игры) или, возможно, не хотят беспокоить других, если они находятся в тихом месте (например, в библиотеке).
 - Люди, которые не говорят на языке из видео, могут захотеть увидеть текстовую расшифровку или даже перевод, чтобы помочь им понять медиа-контент.
 
-Разве было бы неплохо иметь возможность предоставить этим людям транскрипцию слов, произносимых в аудио или видео? Благодаря HTML5 вы можете это сделать с форматом [WebVTT](/ru/docs/Web/API/Web_Video_Text_Tracks_Format) и элементом {{htmlelement ("track")}}.
+Разве было бы неплохо иметь возможность предоставить этим людям транскрипцию слов, произносимых в аудио или видео? Благодаря HTML5 вы можете это сделать с форматом [WebVTT](/ru/docs/Web/API/WebVTT_API) и элементом {{htmlelement ("track")}}.
 
 > [!NOTE]
 > "Транскрибировать" значит записывать устную речь в виде текста. Полученный текст представляет собой «стенограмму».
@@ -235,7 +235,7 @@ WEBVTT
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Подробнее читайте в разделе [добавление титров и субтитров к видео HTML5](/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Вы можете [найти пример](http://iandevlin.github.io/mdn/video-player-with-captions/), который соответствует этой статье в Github, написанной Яном Девлином (см. также [исходный код](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)). В этом примере используется JavaScript, позволяющий пользователям выбирать между различными субтитрами. Обратите внимание, что для включения субтитров вам нужно нажать кнопку «CC» и выбрать вариант - английский, немецкий или испанский.
+Подробнее читайте в разделе [добавление титров и субтитров к видео HTML5](/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Вы можете [найти пример](http://iandevlin.github.io/mdn/video-player-with-captions/), который соответствует этой статье в Github, написанной Яном Девлином (см. также [исходный код](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)). В этом примере используется JavaScript, позволяющий пользователям выбирать между различными субтитрами. Обратите внимание, что для включения субтитров вам нужно нажать кнопку «CC» и выбрать вариант - английский, немецкий или испанский.
 
 > [!NOTE]
 > Текстовые треки также помогут вам с {{glossary ("SEO")}}, так как поисковые системы особенно преуспевают в работе с текстом. Текстовые треки даже позволяют поисковым системам напрямую связываться с местом, происходящим в видео.
@@ -266,9 +266,9 @@ WEBVTT
 - {{htmlelement("video")}}
 - {{htmlelement("source")}}
 - {{htmlelement("track")}}
-- [Adding captions and subtitles to HTML5 video](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [Audio and Video delivery](/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery): Множество деталей встраивания аудио и видео в страницу используя HTML и Javascript.
-- [Audio and Video manipulation](/ru/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation): Множество способов управления аудио и видео с помощью Javascript(вроде добавления фильтров).
+- [Adding captions and subtitles to HTML5 video](/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [Audio and Video delivery](/ru/docs/Web/Media/Audio_and_video_delivery): Множество деталей встраивания аудио и видео в страницу используя HTML и Javascript.
+- [Audio and Video manipulation](/ru/docs/Web/Media/Audio_and_video_manipulation): Множество способов управления аудио и видео с помощью Javascript(вроде добавления фильтров).
 - Автоматические опции по переводу([translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/)).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

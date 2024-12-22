@@ -24,7 +24,7 @@ SVG 图像可以作为一种图片格式用在很多环境中。很多浏览器�
 如果 SVG 作为一个图像，出于安全目的，Gecko 在 SVG 环境上作了一些限制：
 
 - 禁用了 [JavaScript](/zh-CN/docs/Web/JavaScript)。
-- 外部源（比如说：图像、样式表）不能载入，然而行内源可以使用（利用 [BlobBuilder](/zh-CN/docs/DOM/BlobBuilder) 对象 URL 或者 data: URI 属性）。
+- 外部源（比如说：图像、样式表）不能载入，然而行内源可以使用（利用 [BlobBuilder](/zh-CN/docs/Web/API/Blob) 对象 URL 或者 data: URI 属性）。
 - 链接的{{cssxref(":visited")}}伪类不能呈现。
 - 禁用了平台原生的小部件样式（基于操作系统主题）
 

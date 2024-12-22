@@ -5,14 +5,14 @@ slug: Web/API/IDBFactory
 
 {{APIRef("IndexedDB")}}
 
-A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/IndexedDB) , permite que aplicativos acessem de forma assíncrona os bancos de dados indexados. O objeto que implementa a interface é o window\.indexedDB, com este objeto é possível criar, acessar, modificar e excluir informações de um banco de dados.
+A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/Web/API/IndexedDB_API) , permite que aplicativos acessem de forma assíncrona os bancos de dados indexados. O objeto que implementa a interface é o window\.indexedDB, com este objeto é possível criar, acessar, modificar e excluir informações de um banco de dados.
 
 {{AvailableInWorkers}}
 
 ## Métodos
 
 - {{domxref("IDBFactory.open")}}
-  - : Realizar a abertura de uma [conexão com uma base de dados](/pt-BR/docs/IndexedDB#gloss_database_connection).
+  - : Realizar a abertura de uma [conexão com uma base de dados](/pt-BR/docs/Web/API/IndexedDB_API#gloss_database_connection).
 - {{domxref("IDBFactory.deleteDatabase")}}
   - : Remove uma base de dados.
 - {{domxref("IDBFactory.cmp")}}
@@ -20,8 +20,8 @@ A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/IndexedDB) , p
 
 ### Métodos Obsoletos
 
-- [`IDBFactory.open`](/pt-BR/docs/Web/API/IDBFactory.open-obsolete), a versão original
-  - : Este método realizava [conexão com uma base de dados](/pt-BR/docs/IndexedDB#gloss_database_connection), ele ainda é usado em alguns navegadores.
+- [`IDBFactory.open`](/pt-BR/docs/Web/API/IDBFactory/open), a versão original
+  - : Este método realizava [conexão com uma base de dados](/pt-BR/docs/Web/API/IndexedDB_API#gloss_database_connection), ele ainda é usado em alguns navegadores.
 
 ## Exemplo
 

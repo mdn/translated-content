@@ -81,7 +81,7 @@ Vamos tornar o `.wrapper` um contêiner de grade.
 
 {{ EmbedLiveSample('The_Grid_container', '200', '330') }}
 
-Todos os filhos diretos agora são itens de grade. Em um navegador web, você não verá nenhuma diferença em relação a como esses itens eram exibidos antes de transformá-los em uma grade, pois a grade criou uma grade de coluna única para os itens. Neste ponto, você pode achar útil trabalhar com o [Inspetor de Grade](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), disponível como parte das Ferramentas da Pessoa Desenvolvedora do Firefox. Se você visualizar este exemplo no Firefox e inspecionar a grade, verá um pequeno ícone ao lado do valor `grid`. Clique nele e a grade neste elemento será sobreposta na janela do navegador.
+Todos os elementos filhos diretos agora são itens de grade. Em um navegador web, você não verá nenhuma diferença em relação a como esses itens eram exibidos antes de transformá-los em uma grade, pois a grade criou uma grade de coluna única para os itens. Neste ponto, você pode achar útil trabalhar com o [Inspetor de Grade](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), disponível como parte das Ferramentas da Pessoa Desenvolvedora do Firefox. Se você visualizar este exemplo no Firefox e inspecionar a grade, verá um pequeno ícone ao lado do valor `grid`. Clique nele e a grade neste elemento será sobreposta na janela do navegador.
 
 ![Usando o marcador de grade nas Ferramentas da Pessoa Desenvolvedora para visualizar uma grade](1-grid-inspector.png)
 
@@ -124,11 +124,13 @@ Agora criamos uma grade com três trilhas de coluna de 200 pixels de largura. Os
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -165,11 +167,13 @@ As trilhas podem ser definidas usando qualquer unidade de comprimento. A grade t
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -337,11 +341,13 @@ No exemplo abaixo, usamos `grid-auto-rows` para garantir que as trilhas criadas 
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -371,11 +377,13 @@ A grade tem uma solução para isso com a função {{cssxref("minmax", "minmax()
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -391,7 +399,6 @@ A grade tem uma solução para isso com a função {{cssxref("minmax", "minmax()
   <div>
     Two
     <p>I have some more content in.</p>
-
     <p>This makes me taller than 100 pixels.</p>
   </div>
   <div>Three</div>
@@ -434,12 +441,14 @@ O segundo item começa na linha da coluna 1 da grade e abrange uma trilha. Este 
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
+
 .box1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
 .box2 {
   grid-column-start: 1;
   grid-row-start: 3;
@@ -451,11 +460,13 @@ O segundo item começa na linha da coluna 1 da grade e abrange uma trilha. Este 
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -538,6 +549,7 @@ _Calhas_ ou _becos_ entre células de grade podem ser criados usando as propried
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   column-gap: 10px;
   row-gap: 1em;
@@ -545,6 +557,7 @@ _Calhas_ ou _becos_ entre células de grade podem ser criados usando as propried
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -597,6 +610,7 @@ Se definirmos `box1` como `display: grid`, poderemos dar a ela uma definição d
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
@@ -605,6 +619,7 @@ Se definirmos `box1` como `display: grid`, poderemos dar a ela uma definição d
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .box {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -670,12 +685,14 @@ Se retornarmos ao nosso exemplo com itens posicionados por número de linha, pod
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
+
 .box1 {
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
 .box2 {
   grid-column-start: 1;
   grid-row-start: 2;
@@ -687,11 +704,13 @@ Se retornarmos ao nosso exemplo com itens posicionados por número de linha, pod
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .box {
   border: 2px solid #ffa94d;
   border-radius: 5px;
@@ -715,6 +734,7 @@ Podemos controlar a ordem em que os itens são empilhados usando a propriedade `
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
+
 .box1 {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -722,6 +742,7 @@ Podemos controlar a ordem em que os itens são empilhados usando a propriedade `
   grid-row-end: 3;
   z-index: 2;
 }
+
 .box2 {
   grid-column-start: 1;
   grid-row-start: 2;
@@ -744,11 +765,13 @@ Podemos controlar a ordem em que os itens são empilhados usando a propriedade `
 * {
   box-sizing: border-box;
 }
+
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
   background-color: #fff4e6;
 }
+
 .box {
   border: 2px solid #ffa94d;
   border-radius: 5px;

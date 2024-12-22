@@ -29,4 +29,4 @@ l10n:
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLElement")}}
 - {{HTMLElement("label")}}
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)

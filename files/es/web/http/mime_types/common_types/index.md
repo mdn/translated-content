@@ -13,7 +13,7 @@ Dos tipos primarios de MIME son importantes para el rol de tipos por defecto:
 - `text/plain` es el valor por defecto para los archivos textuales. Un archivo textual debe ser legible y no puede contener datos binarios.
 - `application/octet-stream` es el valor por defecto para todos los demás casos. Un tipo de archivo desconocido debe usar este tipo. Los navegadores tienen un cuidado particular cuando manipulan estos archivos, tratando de proteger al usuario previéndo comportamientos peligrosos.
 
-IANA es el registro oficial de los tipos de media MIME y mantiene una [lista oficial de todos los tipos de MIME](http://www.iana.org/assignments/media-types/media-types.xhtml). Esta tabla, lista algunos de los tipos de MIME importantes para la web:
+IANA es el registro oficial de los tipos de media MIME y mantiene una [lista oficial de todos los tipos de MIME](https://www.iana.org/assignments/media-types/media-types.xhtml). Esta tabla, lista algunos de los tipos de MIME importantes para la web:
 
 | Extensión      | Tipo de documento                                                                                      | Tipo de MIME                                            |
 | -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |

@@ -5,9 +5,9 @@ slug: Web/API/WebGL_API
 
 {{DefaultAPISidebar("WebGL")}}
 
-WebGL (Web Graphics Library) - программная библиотека для языка JavaScript предназначенная для визуализации интерактивной трёхмерной графики и двухмерной графики в пределах совместимости веб-браузера без использования плагинов. WebGL приносит в веб трёхмерную графику, вводя API, который построен на основе OpenGL ES 2.0, что позволяет его использовать в элементах [`canvas`](/ru/docs/HTML/Canvas) HTML5 .
+WebGL (Web Graphics Library) - программная библиотека для языка JavaScript предназначенная для визуализации интерактивной трёхмерной графики и двухмерной графики в пределах совместимости веб-браузера без использования плагинов. WebGL приносит в веб трёхмерную графику, вводя API, который построен на основе OpenGL ES 2.0, что позволяет его использовать в элементах [`canvas`](/ru/docs/Web/API/Canvas_API) HTML5 .
 
-Поддержка WebGL присутствует в [Firefox](/en-US/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari](http://www.apple.com/safari/) 5.1+ и [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+. Однако помимо поддержки WebGL браузером, необходима также его поддержка графическим процессором клиента.
+Поддержка WebGL присутствует в [Firefox](/ru/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/) 12+, [Safari](https://www.apple.com/safari/) 5.1+ и [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/browser-ie) 11+. Однако помимо поддержки WebGL браузером, необходима также его поддержка графическим процессором клиента.
 
 <table class="topicpage-table">
   <tbody>

@@ -521,10 +521,6 @@
     "modified": "2019-03-23T22:40:33.690Z",
     "contributors": ["tronov", "MuradAz"]
   },
-  "Glossary/DOS_attack": {
-    "modified": "2019-08-14T18:10:26.015Z",
-    "contributors": ["Newage3018"]
-  },
   "Glossary/Data_structure": {
     "modified": "2019-03-23T22:40:22.188Z",
     "contributors": ["alitskevich"]
@@ -532,6 +528,10 @@
   "Glossary/Decryption": {
     "modified": "2019-03-18T20:41:22.238Z",
     "contributors": ["Frisle"]
+  },
+  "Glossary/Denial_of_Service": {
+    "modified": "2019-08-14T18:10:26.015Z",
+    "contributors": ["Newage3018"]
   },
   "Glossary/Developer_Tools": {
     "modified": "2019-03-18T21:46:30.400Z",

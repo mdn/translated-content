@@ -13,7 +13,7 @@ Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされまし�
 
 #### ウェブコンソール
 
-- `$x()` [ウェブコンソールヘルパー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#Constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
+- `$x()` [ウェブコンソールヘルパー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
 - コンソールのオートコンプリートでも使用可能な、optional chaining 演算子 "?." を新たにサポートしました ([Firefox バグ 1594009](https://bugzil.la/1594009))。
 - デバッガーで [入れ子の worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) を調査およびデバッグできるようになりました ([Firefox バグ 1590766](https://bugzil.la/1590766))。
 

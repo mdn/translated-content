@@ -15,8 +15,8 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncG>`** doit être placé
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
-- [Attributs de fonction de transfert](/fr/docs/Web/SVG/Attribute#Attributs_de_fonction_de_transfert)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
+- [Attributs de fonction de transfert](/fr/docs/Web/SVG/Attribute#attributs_de_fonction_de_transfert)
 
 ### Attributs spécifiques
 
@@ -43,4 +43,4 @@ Cet élément implémente l'interface {{domxref("SVGFEFuncGElement")}}.
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncR")}}
 - {{SVGElement("feFuncB")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

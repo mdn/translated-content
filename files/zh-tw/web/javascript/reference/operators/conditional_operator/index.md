@@ -81,7 +81,7 @@ function example(…) {
 ## 參見
 
 - [if statement](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Optional chaining](/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Making decisions in your code — conditionals](/zh-TW/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)

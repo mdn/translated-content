@@ -11,7 +11,7 @@ slug: Learn/JavaScript
 >
 > 우리는 모든 필수 정보를 포함하는 과정을 구성했습니다. 목표를 향해 노력할 일만 남았습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 전제 조건
 
@@ -19,7 +19,7 @@ JavaScript 는 [HTML](/ko/docs/Learn/HTML) 이나 [CSS](/ko/docs/Learn/CSS) 와 
 
 - [Web과 함께 시작하기](/ko/docs/Learn/Getting_started_with_the_web)
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
-- [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS)
+- [CSS 소개](/ko/docs/Learn/CSS/First_steps)
 
 다른 프로그래밍 언어를 배웠던 경험이 있다면 도움이 될 수도 있습니다.
 

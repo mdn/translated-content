@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/function
     var myFunction = function [name]([param1[, param2[, ..., paramN]]]) { statements };
 ```
 
-[ES2015](/ko/docs/)에서 [화살표 함수(arrow functions)](/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)를 사용할 수도 있습니다.
+[ES2015](/ko/docs/Web)에서 [화살표 함수(arrow functions)](/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98)를 사용할 수도 있습니다.
 
 ### 매개변수
 

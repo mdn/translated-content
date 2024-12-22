@@ -5,7 +5,7 @@ slug: Web/API/BatteryManager/dischargingTime
 
 {{APIRef("Battery API")}}
 
-La propriété **`BatteryManager.dischargingTime`** indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit déchargée, ou vaut [`Infinity`](/fr/docs/JavaScript/Reference/Global_Objects/Infinity) si la batterie est en train d'être chargée ou si le système ne parvient pas à calculer un temps restant. Lorsque sa valeur change, l'évènement [`dischargingtimechange`](/fr/docs/Web/API/BatteryManager/dischargingtimechange_event) est déclenché.
+La propriété **`BatteryManager.dischargingTime`** indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit déchargée, ou vaut [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) si la batterie est en train d'être chargée ou si le système ne parvient pas à calculer un temps restant. Lorsque sa valeur change, l'évènement [`dischargingtimechange`](/fr/docs/Web/API/BatteryManager/dischargingtimechange_event) est déclenché.
 
 > [!NOTE]
 > Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) pour des raisons de confidentialité.

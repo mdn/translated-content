@@ -24,7 +24,7 @@ L'URI de l'entité non analysée récupérée dans la DTD, si elle existe. Autre
 
 ### Définition
 
-[XSLT 1.0, section 12.4](http://www.w3.org/TR/xslt#function-unparsed-entity-uri).0
+[XSLT 1.0, section 12.4](https://www.w3.org/TR/xslt#function-unparsed-entity-uri).0
 
 ### Support Gecko
 

@@ -19,6 +19,6 @@ Para mais aplicações de cores, veja:
 
 - [Aplicando cores para elementos HTML com CSS](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals)
 - [Fundamentação de textos e estilo de fonte](/pt-BR/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Estilização de bordas com CSS](/pt-BR/docs/Learn/CSS/Styling_boxes/Borders)
+- [Estilização de bordas com CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
 - [Mudando estilos de cores de fundo com CSS](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)
 - [Cores e contrastes de cores](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast)

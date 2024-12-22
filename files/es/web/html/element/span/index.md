@@ -11,11 +11,11 @@ slug: Web/HTML/Element/span
 
   - : **Sus etiquetas son**: `<span>` y `</span>` (ambas obligatorias).
 
-    **Está definido como**: Elemento [especial](/es/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Está definido como**: Elemento [especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
 
     **Crea una caja**: En línea.
 
-    **Puede contener**: Texto, y/o Elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o Elementos [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 

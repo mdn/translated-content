@@ -9,6 +9,6 @@ Le **premier rendu** (ou <i lang="en">**first paint**</i> en anglais), qui fait 
 
 ## Voir aussi
 
-- [Premier affichage significatif (ou <i lang="en">first meaningful paint</i> en anglais)](/fr/docs/Glossary/first_meaningful_paint)
+- [Premier affichage significatif (ou <i lang="en">first meaningful paint</i> en anglais)](/fr/docs/Glossary/First_meaningful_paint)
 - [Premier affichage de contenu (ou <i lang="en">first contentful paint</i> en anglais)](/fr/docs/Glossary/First_contentful_paint)
 - [L'API <i lang="en">Paint Timing</i>](/fr/docs/Web/PerformancePaintTiming) {{deprecated_inline}}

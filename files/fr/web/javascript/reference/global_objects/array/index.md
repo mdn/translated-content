@@ -11,7 +11,7 @@ L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux s
 
 Les tableaux sont des objets semblables à des listes dont le prototype possède des méthodes qui permettent de parcourir et de modifier le tableau. Ni la longueur ni le type des éléments d'un tableau JavaScript sont fixés. Comme la longueur d'un tableau peut varier à tout moment et que les données peuvent être stockées à des emplacements qui ne sont pas nécessairement contigus, les tableaux JavaScript ne sont pas forcément «&nbsp;pleins&nbsp;» / denses. Généralement, ces particularités sont appréciables mais si elles ne correspondent pas à votre usage, vous pourriez vouloir utiliser les tableaux typés.
 
-Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices pour les éléments (à la façon des [tableaux associatifs](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais doivent utiliser des entiers. Définir une valeur ou tenter d'y accéder avec un indice non-entier via [la notation entre crochet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties) (ou [la notation avec le point](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors)) ne définira ou ne récupèrera pas la valeur mais définira ou récupèrera une variable associée [aux propriétés de l'objet](/fr/docs/Web/JavaScript/Data_structures#properties) formé par le tableau. Les propriétés et les éléments d'un tableau sont distincts et [les opérations de parcours et de modification du tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) ne peuvent pas être appliquées à ces propriétés.
+Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices pour les éléments (à la façon des [tableaux associatifs](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais doivent utiliser des entiers. Définir une valeur ou tenter d'y accéder avec un indice non-entier via [la notation entre crochet](/fr/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties) (ou [la notation avec le point](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors)) ne définira ou ne récupèrera pas la valeur mais définira ou récupèrera une variable associée [aux propriétés de l'objet](/fr/docs/Web/JavaScript/Data_structures#properties) formé par le tableau. Les propriétés et les éléments d'un tableau sont distincts et [les opérations de parcours et de modification du tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) ne peuvent pas être appliquées à ces propriétés.
 
 ### Opérations fréquentes
 
@@ -335,9 +335,9 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
   - : Retire le dernier élément du tableau et renvoie cet élément.
 - [`Array.prototype.push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
   - : Ajoute un ou plusieurs éléments à la fin du tableau et renvoie la nouvelle longueur (`length`) du tableau.
-- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
   - : Applique une fonction sur un accumulateur et chaque valeur du tableau (de gauche à droite) afin de réduire le tableau à une seule valeur.
-- [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight)
+- [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight)
   - : Applique une fonction sur un accumulateur et chaque valeur du tableau (de droite à gauche) afin de réduire le tableau à une seule valeur.
 - [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
   - : Inverse l'ordre des éléments du tableau _à même le tableau_ (le premier élément devient le dernier, le dernier devient le premier, etc.).
@@ -462,7 +462,7 @@ Résulte en
 ## Voir aussi
 
 - Chapitres du guide JavaScript
-  - [Guide JavaScript : indexer les propriétés d'un objet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
+  - [Guide JavaScript : indexer les propriétés d'un objet](/fr/docs/Web/JavaScript/Guide/Working_with_objects#indexing_object_properties)
   - [Guide JavaScript : Les objets natifs : l'objet `Array`](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [RangeError: invalid array length](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
