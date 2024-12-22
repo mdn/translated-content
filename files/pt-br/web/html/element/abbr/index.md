@@ -197,7 +197,7 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
 
 {{Specifications}}
 
-## Compatibilidade do navegador
+## Compatibilidade com navegadores
 
 {{Compat}}
 
