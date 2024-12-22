@@ -8,7 +8,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 在本文中，我们提供了现代 web 工具的概述，有哪些工具可用，在 web 应用程序开发的生命周期中你将在哪里遇到它们，以及如何使用各个工具寻求帮助。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">预备条件：</th>

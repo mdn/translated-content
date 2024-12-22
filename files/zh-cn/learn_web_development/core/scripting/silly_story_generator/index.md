@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Building_blocks/A_cool_looking_box
 
 在这个评估里，通过尝试创造一个引人瞩目的盒子，你将得到更多关于如何创造酷炫盒子的练习。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

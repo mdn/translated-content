@@ -8,7 +8,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 
 HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将介绍一些查找和修复 HTML 错误的工具。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
