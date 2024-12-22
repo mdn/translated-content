@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Introduction
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
 我們從整體概述來探討框架、提供 JavaScript 與框架的簡要歷史、框架存在的理由、他們提供什麼東西、如何決定選擇哪個框架、以及前端框架的的替代方案。
 
@@ -13,10 +13,10 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introdu
     <tr>
       <th scope="row">先決條件：</th>
       <td>
-        熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a
-          href="/zh-TW/docs/Learn/CSS"
+        熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+          href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
-        >、<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 這些核心技術。
+        >、<a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 這些核心技術。
       </td>
     </tr>
     <tr>
@@ -188,7 +188,7 @@ JavaScript 框架都會提供一種能更加*宣告性*撰寫介面的方法。�
 本模塊提到的幾個框架，背後都有著龐大而活躍的社群；這些社群形成了各種生態圈、並提供能增進開發體驗的工具：像是確保功能正常的測試、或著維持程式一致性的 linting。
 
 > [!NOTE]
-> 如果對這方面的概念有興趣，請看看 [Client-side tooling overview](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)。
+> 如果對這方面的概念有興趣，請看看 [Client-side tooling overview](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Overview)。
 
 ### 切分
 
@@ -319,4 +319,4 @@ Vue 的開發團隊也寫了[有關 Vue 與其他框架的詳盡比較](https://
 
 我們的下一篇文章，將探討更底層的東西，著眼於框架傾向於提供的特定種類的功能，以及它們為什麼能動。
 
-{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}
 
 當你在練習撰寫上一節的「猜數字」遊戲時，你可能會發現它無法運作。不用擔心，本文將會把你從快被拔光的頭髮中拯救出來，並且給你一些小提示，讓你知道怎麼找出及修正 Javascript 的程式運行錯誤。
 
@@ -44,7 +44,7 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 修復語法錯誤
 
-在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
+在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
 
 1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
 2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
@@ -251,9 +251,9 @@ function checkGuess( {
 
 那麼，我們得到它了——能在簡易 JavaScript 程式中找出錯誤的基礎知識。解決程式碼中的錯誤並不總是那麼簡單，但至少本章節可以為你省下幾小時的時間好用來睡覺，並讓你在早期學習過程更快的解決問題。
 
-## 另可參閱
+## 參見
 
 - 還有許多類型的錯誤未列在此頁，我們正在編輯一份參考資料好詳細解釋了它們的含義——可參閱[JavaScript error reference](/zh-TW/docs/Web/JavaScript/Reference/Errors)。
 - 如果你在閱讀本章節遇到了某些程式錯誤而且不知道如何修正，你可以尋求援助！可以至[Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)發問，或者到[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn)頻道提問。告訴我們你遇到什麼錯誤，我們會盡力幫助你。若能附上你的程式碼會更有幫助。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting")}}

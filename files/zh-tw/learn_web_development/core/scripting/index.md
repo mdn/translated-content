@@ -23,11 +23,11 @@ original_slug: Learn/JavaScript/Building_blocks
   - : 有時候你需要超過一行的程式碼完成一項任務，舉例來說：尋找一個擁有許多名字的清單。透過編輯程式，迴圈可以幫助你完美的完成這項工作，在本文中，我們將探討迴圈的結構如何在 JavaScript 中運作。
 - [函式 — 可重複使用的程式碼區塊](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions)
   - : 撰寫程式的另一個基本概念是函式 (function)，它允許你在一個定義好的區塊內，存放一些程式碼。定義好的函式後，無論你需要在一個單一簡短的指令列用到它，或者是重複使用相同的片段程式碼，你都可以不段重複地呼叫這些函式執行對應的內容。在本文中，我們將探索函式的基本概念，像是基本語法、如何定義函式內容、以及函式將會使用的參數。
-- [建立自己的函式](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [建立自己的函式](/zh-TW/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
   - : 前面許多文章已經提到大部分的基本理論基礎了，在本文中，我們將分享一個實際的經驗，你將學習到關於打造自定義函式的實務範例。透過這樣的學習方式，我們也進一步解釋一些函式相關的細節知識。
-- [函式回傳值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [函式回傳值](/zh-TW/docs/Learn_web_development/Core/Scripting/Return_values)
   - : 這堂課程中最後一個想要說明的基本概念就是函式的回傳值，一些函式執行完畢後，不會回傳一個數值；但有些函式則會。理解這些函式的回傳值是重要的概念，本文中，你將學會如何在自定義的函式中，回傳有用的數值提供給其他函式使用。
-- [事件介紹](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介紹](/zh-TW/docs/Learn_web_development/Core/Scripting/Events)
   - : 事件代表你所撰寫的程式在一套系統內所產生的動作或發生的事情，舉例來說：假如一位使用者在網頁點擊一個按鈕時，你可能想要讓使用者點擊該按鈕後，在畫面呈現一個訊息方塊。在本課程最後一篇文章內，我們將討論一些與事件相關的重要概念、以及這些事件在瀏覽器中，如何呈現給使用者。
 
 ## 評量

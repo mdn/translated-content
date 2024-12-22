@@ -155,7 +155,7 @@ HTML
 - [The `<source>` Element](/zh-TW/docs/Web/HTML/Element/source)
 - [The `<img> srcset` attribute](/zh-TW/docs/Web/HTML/Element/img#Attributes)
 
-  - [Responsive images](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images)
 
 - [Preloading content with `rel="preload"`](/zh-TW/docs/Web/HTML/Attributes/rel/preload) - [https://w3c.github.io/preload/](https://w3c.github.io/preload/)
 

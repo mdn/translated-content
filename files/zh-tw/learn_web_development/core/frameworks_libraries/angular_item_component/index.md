@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 元件可以用來幫助你組織你的應用程式。這篇文章會引導你建立一個元件，用來管理清單列表中的個別項目，包含加入核取方塊、編輯和刪除功能。這邊也會介紹 Angular 事件模型。
 
@@ -13,12 +13,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
     <tr>
       <th scope="row">預備知識：</th>
       <td>
-        熟悉主要的 <a href="/zh-TW/docs/Learn/HTML">HTML</a>，<a
-          href="/zh-TW/docs/Learn/CSS"
+        熟悉主要的 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>，<a
+          href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
         >
-        和 <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 語言和<a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+        和 <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 語言和<a
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
           >terminal/command line</a
         >知識。
       </td>
@@ -377,4 +377,4 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 
 你現在應該擁有一個樣式化的 Angular 待辦事項列表應用程序，該應用程序可以添加，編輯和刪除項目。下一步是加入過濾功能，以便你可以查看符合特定條件的項目。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}

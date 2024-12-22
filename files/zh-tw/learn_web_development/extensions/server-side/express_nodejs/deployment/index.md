@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Express_Nodejs/deployment
       <th scope="row">預備知識:</th>
       <td>
         完成前面所有的指南主題，包括
-        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>

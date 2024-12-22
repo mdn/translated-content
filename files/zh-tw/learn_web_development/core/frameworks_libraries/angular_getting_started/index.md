@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在該看一下 Google 的 Angular 框架了，這是另一個你經常會遇到的前端框架。在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
 
@@ -13,11 +13,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
     <tr>
       <th scope="row">預備知識：</th>
       <td>
-        熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a>、
-        <a href="/zh-TW/docs/Learn/CSS">CSS</a>、以及
-        <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>程式語言，具備
+        熟悉基本的<a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+        <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a>、以及
+        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>程式語言，具備
         <a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
           >終端機/命令列環境</a
         >的基本知識。
       </td>
@@ -276,4 +276,4 @@ export class AppComponent {
 
 以上這些就是關於 Angular 的簡介。這時候的你，應該已經對 Angular 的運作有基本的了解，並準備建立一個 Angular 的專案。在下一篇文章裡，我們會更深入的應用這些知識，並且試著用 Angular 去寫一個「待辦清單」。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

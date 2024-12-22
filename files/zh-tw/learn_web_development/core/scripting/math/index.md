@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Math
 original_slug: Learn/JavaScript/First_steps/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 在本課程的這一點上，我們將討論 JavaScript 中的數學 - 我們如何使用{{Glossary("Operator","operators")}} 和其他功能來成功操縱數字來進行我們的出價。
 
@@ -39,7 +39,7 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 - **二進位** —計算機的最底層語言；0 和 1。
 - **八進位** —以 8 為單位，每列使用 0–7。
-- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。你之前在 CSS 中設置[顏色](/zh-TW/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values)時，可能已經遇到過這些數字。
+- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。你之前在 CSS 中設置[顏色](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Values_and_units#hexadecimal_values)時，可能已經遇到過這些數字。
 
 **在開始擔心大腦融化之前，先等等！**首先，我們將在整個課程中完全使用十進位數；你很少會想到其他類型的需求，如果有的話。
 
@@ -50,7 +50,7 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 ### 我怎麼看都是些數字!
 
-讓我們來快速操作一些數字來重新認識一下我們會需要用到的基本語法。將下面的需求表輸入進你的開發者工具 js 控制台([developer tools JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools))，或是簡單建立在任何你偏好的控制台。
+讓我們來快速操作一些數字來重新認識一下我們會需要用到的基本語法。將下面的需求表輸入進你的開發者工具 js 控制台([developer tools JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools))，或是簡單建立在任何你偏好的控制台。
 
 1. 首先，先來宣告兩個變數，並分別賦予他們初始值為整數與浮點數，然後接著打上變數名稱來確認萬事預備:
 
@@ -144,7 +144,7 @@ Arithmetic operators are the basic operators that we use to do sums:
 
 **備註：** You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
-We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.
+We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), or use the simple built in console seen earlier if you'd prefer, to familiarize yourself with the syntax.
 
 1. First try entering some simple examples of your own, such as
 
@@ -355,4 +355,4 @@ In the next article, we'll explore text and how JavaScript allows us to manipula
 > [!NOTE]
 > If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

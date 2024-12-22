@@ -6,19 +6,19 @@ original_slug: Learn/Server-side/Express_Nodejs/Introduction
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在這篇文章中回答了「什麼是 Node？」和「什麼是 Express」，同時概述是什麼讓 Express 框架如此特別。本文將概述主要特性、展示一些 Express 應用的主要建構模塊(雖然此時你還沒有能測試它的開發環境)
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前置需求:</th>
       <td>
-        基本的電腦知識。 對<a href="/zh-TW/docs/Learn/Server-side/First_steps"
+        基本的電腦知識。 對<a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >伺服器端網站程式設計</a
         >的基本了解，特別是網站中<a
-          href="/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >客戶端 - 伺服器交互的機制</a
         >。
       </td>
@@ -493,7 +493,7 @@ In a later topic we'll use the _Express Application Generator_, which creates a 
 
 當然，Express 是一個非常輕量級的 Web 應用程序框架，它的許多好處和潛力來自第三方函式庫和功能。我們將在以下文章中更詳細地介紹這些內容。在下一篇文章中，我們將介紹如何設置 Node 開發環境，以便你可以開始查看一些 Express 代碼。
 
-## See also
+## 參見
 
 - [Venkat.R - Manage Multiple Node versions](https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44)
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
@@ -507,4 +507,4 @@ In a later topic we'll use the _Express Application Generator_, which creates a 
 - [Serving static files in Express](http://expressjs.com/en/starter/static-files.html) (Express docs)
 - [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

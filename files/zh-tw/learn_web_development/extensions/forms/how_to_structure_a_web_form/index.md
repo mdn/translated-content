@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 original_slug: Learn/Forms/How_to_structure_a_web_form
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 有了基礎後，我們就能探討表單元素，所提供的結構與文意之詳細資訊；還有各表單部份的相異之處。
 
@@ -14,7 +14,7 @@ original_slug: Learn/Forms/How_to_structure_a_web_form
       <th scope="row">先決條件：</th>
       <td>
         對電腦還有
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML">HTML</a>
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>
         有基本理解。
       </td>
     </tr>
@@ -75,7 +75,7 @@ original_slug: Learn/Forms/How_to_structure_a_web_form
 
 這個示例的是最重要的用法之一：每次有一組 radio 按鈕時，就該在裡面放一個 {{HTMLElement("fieldset")}} 元素。{{HTMLElement("fieldset")}} 也能用在表單的其他地方。理想上，要是表單一長，就要把他放到其他頁面。但如果做不到這點，那將不同的相關部分，放在不同的 fieldsets 之中，也可以提高可用性。
 
-由於 {{HTMLElement("fieldset")}} 對輔助技術的影響，這個元素是建立無障礙表單的基石，但請注意不要濫用這個元素。可以的話，[聽聽螢幕報讀是怎麼講的](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)。如果踢起來怪怪的，那就試著改進表單。
+由於 {{HTMLElement("fieldset")}} 對輔助技術的影響，這個元素是建立無障礙表單的基石，但請注意不要濫用這個元素。可以的話，[聽聽螢幕報讀是怎麼講的](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Screenreaders)。如果踢起來怪怪的，那就試著改進表單。
 
 ## \<label> 元素
 
@@ -185,7 +185,7 @@ Above all, it is up to you to find a comfortable coding style that results in ac
 
 ### 主動學習：建立表單結構
 
-Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/zh-TW/docs/Learn/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
+Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/zh-TW/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
 1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
 2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
@@ -263,7 +263,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </section>
    ```
 
-6. The second `<section>` of our form is the payment information. We have three distinct controls along with their labels, each contained inside a `<p>`. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI. The last one is an `<input>` element of type `date`, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in [The HTML5 input types](/zh-TW/docs/Learn/Forms/HTML5_input_types).
+6. The second `<section>` of our form is the payment information. We have three distinct controls along with their labels, each contained inside a `<p>`. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI. The last one is an `<input>` element of type `date`, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in [The HTML5 input types](/zh-TW/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
 
    Enter the following below the previous section:
 
@@ -316,4 +316,4 @@ You can see the finished form in action below (also find it on GitHub — see ou
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}

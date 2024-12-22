@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/JSON
 original_slug: Learn/JavaScript/Objects/JSON
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
 
 JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 JavaScript 搭配 JSON 時所應知道的觀念，包含如何在 JSON 物件中存取資料項目，並寫出你自己的 JSON。
 
@@ -14,12 +14,12 @@ JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現
       <th scope="row">必要條件：</th>
       <td>
         基礎的計算機素養、了解 HTML 與 CSS 的基本概念、熟悉 JavaScript (參閱〈<a
-          href="/zh-TW/docs/Learn/JavaScript/First_steps"
+          href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >First steps</a
-        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >〉) 與 OOJS 基本概念 (參閱〈<a
-          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >〉)。
       </td>
@@ -340,4 +340,4 @@ myString;
 - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP 請求函式](/zh-TW/docs/Web/HTTP/Methods)
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
