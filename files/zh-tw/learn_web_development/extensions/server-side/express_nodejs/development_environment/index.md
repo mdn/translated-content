@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_en
 original_slug: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 現在你已經了解 Express 的目的了，接下來繼續說明如何設定和測試 Windows、Linux (Ubuntu)和 Mac OS X 上的 Node/Express 開發環境。不管你用的是什麼作業系統，你都能在本文中找到開發 Express 應用的入門需知。
 
@@ -373,11 +373,11 @@ We'll talk more about the generated app when we get to the article on generating
 
 下一篇文章，我們開始跟著教程一步一步實作，使用這個開發環境與搭配工具，建立一個完整的網頁應用。
 
-## See also
+## 參見
 
 - [Downloads](https://nodejs.org/en/download/) page (nodejs.org)
 - [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
 - [Installing Express](http://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

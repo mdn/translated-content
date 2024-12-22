@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Useful_string_methods
 original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 現在我們已經了解了字符串的基礎知識，讓我們開始思考我們可以使用內置方法對字符串執行哪些有用的操作，例如查找文本字符串的長度，連接和拆分字符串 ，將字符串中的一個字符替換為另一個字符，等等。
 
@@ -718,4 +718,4 @@ textarea.onkeyup = function () {
 
 不可否認當網站在跟人們互相溝通時，處理文字和句子在程式設計中是相當重要的，尤其是在 JavaScript 中。這篇文章已經傳授你如何去處理字串的方法，應該對以後深入了解其他更複雜主題的你會很有幫助。接下來，我們將會看看最後一個近期內我們需要關注的主要的資料型態 — 陣列。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

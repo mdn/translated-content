@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不會顯示在瀏覽器上的部分。其中包含一些資訊，如頁面的標題({{htmlelement("title")}})、{{glossary("CSS")}} 的連結 (當你想利用 CSS 來妝點你的頁面 HTML 時，你會用到它們)、網頁圖示(favicon)的連結，以及 metadata (裡頭承載了有關於該 HTML 的資料，如作者、描述該文件的關鍵詞等)。在這一章節裡，我們會討論以上的內容，甚至更多，藉此替你打下標記網頁的根基。
 
@@ -297,4 +297,4 @@ These codes are defined by the [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639
 
 That marks the end of our quickfire tour of the HTML head — there's a lot more you can do in here, but an exhaustive tour would be boring and confusing at this stage, and we just wanted to give you an idea of the most common things you'll find in there for now! In the next article we'll be looking at HTML text fundamentals.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}

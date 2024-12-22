@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Variables
 original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 閱讀完最後幾篇文章之後，你現在應該知道 JavaScript 是什麼，它可以為你做什麼，如何將它與其他 Web 技術一起使用，以及它的主要功能從高層看起來如何。 在本文中，我們將深入了解真正的基礎知識，了解如何使用 JavaScript 的大多數基本構建塊 - 變數。
 
@@ -366,4 +366,4 @@ daysInWeek = 8;
 
 By now you should know a reasonable amount about JavaScript variables and how to create them. In the next article, we'll focus on numbers in more detail, looking at how to do basic math in JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

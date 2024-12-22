@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_cont
 original_slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 HTML（**H**ypertext **M**arkup **L**anguage），中文全名為「超文字標記語言」，是一種用來組織架構並呈現網頁內容的標記語言。網頁內容的組成，可能包含了段落、清單、圖片或表格...等。透過這篇文章，希望能幫助大家對 HTML 及其功能有基本的認識。
 
@@ -223,4 +223,4 @@ My cat is very grumpy
 
 這篇文章觸及的是非常基本的 HTML 介紹，若你有興趣想進一步了解，歡迎參考 [HTML Learning page](/zh-TW/docs/Learn_web_development/Core/Structuring_content)。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

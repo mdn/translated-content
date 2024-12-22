@@ -4,11 +4,11 @@ slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 在這第一篇 Django 文章中，我們將回答「什麼是 Django」這個問題，並概述這個網絡框架有什麼特性。我們將描述主要功能，包括一些高級功能，但我們並不會在本單元中詳細介紹。我們還會展示一些 Django 應用程序的主要構建模塊（儘管此時你還沒有要測試的開發環境）。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備知識:</th>
@@ -252,4 +252,4 @@ def index(request):
 
 你已經看到上面的一些真正的 Django 代碼，但與客戶端代碼不同，你需要設置一個開發環境來運行它。這是我們的下一步。
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

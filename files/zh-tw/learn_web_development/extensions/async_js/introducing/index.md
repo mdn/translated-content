@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。
 
@@ -276,4 +276,4 @@ Javascript 基本上是一個同步性的、阻塞的，且是跑在單一執行
 
 如果我們正在執行一些需要花一點時間的操作，就好比查詢資料庫並將結果填充到模板上，最好的方式是不要在主執行緒上執行並用非同步的方法來完成。隨著時間的學習，你將會了解到在更多的情況下，選擇使用非同步的技巧會比選擇同步的方式來的更合理。
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

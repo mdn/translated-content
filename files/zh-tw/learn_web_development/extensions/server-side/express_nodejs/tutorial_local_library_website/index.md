@@ -1,10 +1,10 @@
 ---
-title: "Express 教學 1: 本地圖書館網站"
+title: Express 教學 1：本地圖書館網站
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
 original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 我們實作教程系列的第一篇文章，會說明將學到什麼東西，並提供「本地圖書館」範例網站的概述 。我們將在接下來的文章中一步一步完成這個網站。
 
@@ -70,4 +70,4 @@ _我們接下來將創建，並隨著本系列教程發展的網站，名字是�
 
 現在，你對本地圖書館網站以及將要學習的東西，有更多一點的認識，是時候開始創建一個[骨架項目](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)，以存放我們的範例。
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

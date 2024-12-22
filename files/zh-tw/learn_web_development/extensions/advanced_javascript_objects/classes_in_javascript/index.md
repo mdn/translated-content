@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_Ja
 original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在解釋過大部分的 OOJS 細節之後，本文將說明該如何建立「子」物件類別 (建構子)，並從其「母」類別繼承功能。此外，也將建議開發者應於何時、於何處使用 OOJS。
 
@@ -248,10 +248,10 @@ teacher1.greeting();
 
 下篇文章就要來看看該如何搭配 JavaScript Object Notation (JSON)，使用 JavaScript 物件的常見資料交換格式。
 
-## 另可參閱
+## 參見
 
 - [ObjectPlayground.com](http://www.objectplayground.com/) — 互動式學習網站，讓你了解物件。
 - [Secrets of the JavaScript Ninja](https://www.amazon.com/gp/product/193398869X/) 的第六章 — 進階 JavaScript 概念與技術的好書。第六章講述了原型與繼承的概念。此書有紙本與線上版。
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Kyle Simpson 絕佳 JavaScript 手冊系列的一部分。第五章特別深入講述了原型。我們透過本文為初學者提供簡易概念，但 Kyle 則說明得更深入、更精確。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

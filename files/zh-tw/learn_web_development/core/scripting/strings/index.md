@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Strings
 original_slug: Learn/JavaScript/First_steps/Strings
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 接下來我們將把注意力轉向字串——這就是程式設計中調用的文字片段。在本文中，我們將介紹在學習 JavaScript 時你應該了解所有有關字串的常見事項，例如建立字串，跳脫字串中的引號以及將字串連接在一起。
 
@@ -395,4 +395,4 @@ I gave it a score of ${(score / highestScore) * 100}%.`;
 
 以上是 JavaScript 中基礎的字串觀念。下個文章中，我們會依循這些概念並試試一些適用於字串的內建方法，進而運用這些方法讓字串能照我們想要的方式呈現。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}

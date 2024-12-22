@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Installing_softwar
 original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在本文中，你會知道有哪些 Web 開發的簡易工具，以及正確的安裝方式。
 
@@ -47,4 +47,4 @@ original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 有些例子需要使用伺服器軟體。你可以在 [How do you set up a local testing server?](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) 找到作法。
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}

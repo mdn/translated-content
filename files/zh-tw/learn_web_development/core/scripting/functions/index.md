@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Functions
 original_slug: Learn/JavaScript/Building_blocks/Functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
 
 程式設計的另一個基本概念是函數，它允許你儲存一段程式碼，該程式碼在定義的區塊內執行單個任務，然後在需要時使用一個簡短命令調用該程式碼區塊，而不必多次輸入相同的程式碼。 在本文中，我們將探索函數背後的基本概念，例如基本語法、如何調用和定義它們、作用域範圍與參數。
 
@@ -441,4 +441,4 @@ function subFunction3(value) {
 - [函數參考文件](/zh-TW/docs/Web/JavaScript/Reference/Functions)
 - [預設參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 進階概念參考文件
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}

@@ -1,10 +1,10 @@
 ---
-title: "Express 教學 3: 使用資料庫 ( Mongoose)"
+title: Express 教學 3：使用資料庫（Mongoose）
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 original_slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 本文簡短介紹數據庫，以及如何搭配 Node / Express 應用，使用數據庫。接下來會演示我們如何使用 [Mongoose](http://mongoosejs.com/)，為本地圖書館提供數據庫存取。本文說明物件要求與模型如何宣告，主要的欄位型態，以及基本驗證。本文也簡短演示一些存取模型數據的主要方法。
 
@@ -733,7 +733,7 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 最後，我們創建一些實例，以測試模型(使用獨立運作的命令稿)。下一篇文章，我們將關注於如何創建一些網頁，以呈現這些物件。
 
-## 參閱
+## 參見
 
 - [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
 - [Mongoose website](http://mongoosejs.com/) (Mongoose docs)
@@ -744,4 +744,4 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 - [Queries](http://mongoosejs.com/docs/queries.html) (Mongoose docs)
 - [Population](http://mongoosejs.com/docs/populate.html) (Mongoose docs)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

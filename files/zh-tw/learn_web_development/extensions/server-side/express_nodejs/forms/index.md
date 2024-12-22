@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 original_slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在此教程中，我們會教你如何使用 Express ，並且結合 Pug 來實現 HTML 表單，並且如何從數據庫中創建、更新、和刪除文檔。
 
@@ -235,8 +235,8 @@ Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西
 
 你現在應該了解如何新增基本表單，以及表單處理代碼到你的 node 網站！
 
-## 請參閱
+## 參見
 
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm docs).
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

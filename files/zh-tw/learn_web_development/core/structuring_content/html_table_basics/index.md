@@ -4,11 +4,11 @@ slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 original_slug: Learn/HTML/Tables/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 這篇文章將帶你從列、格、標頭，以及將各格以數欄、數列的方式合併等基礎開始探索 HTML 表格。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備知識:</th>
@@ -536,4 +536,4 @@ See how you get on with the example. If you get stuck, or want to check your wor
 
 That just about wraps up the basics of HTML Tables. In the next article we will look at some slightly more advanced table features, and start to think how accessible they are for visually impaired people.
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 original_slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
 接續之前的文章，有時在涉及非語意 HTML 與動態 JavaScript 更新的內容製作複雜的 UI 控制措施將是個難題。WAI-ARIA 即是一個能藉由添加進一步的語意幫助處理這種問題的技術 ，讓瀏覽器與輔助科技可以辨識及用以讓使用者知道發生甚麼事情。這裡我們將展示如何以基本水準的運用來增進無障礙使用。
 
@@ -436,4 +436,4 @@ function toggleMusician(bool) {
 - [WAI-ARIA Authoring Practices](http://w3c.github.io/aria-practices/) — 由 W3C 發佈之非常詳細的設計模型，解釋如何使用 WAI-ARIA 特徵實作不同類型的複雜 UI 控制措施無障礙
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/) — W3C 標準針對每一個 HTML 特徵定義由瀏覽器設置隱含特徵的無障礙(ARIA)語意，以及如果需要額外的語意，你可以設置的 WAI-ARIA 特徵。
 
-{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}

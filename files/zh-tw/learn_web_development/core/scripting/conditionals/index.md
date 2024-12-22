@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Conditionals
 original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 在任何編程語言中，代碼都需要根據不同的輸入做出決策並相應地執行操作。 例如，在遊戲中，如果玩家的生命數量為 0，則遊戲結束。 在天氣應用程序中，如果在早上查看，則顯示日出圖形; 如果是夜晚，則顯示星星和月亮。 在本文中，我們將探討條件結構如何在 JavaScript 中工作。
 
@@ -803,11 +803,11 @@ textarea.onkeyup = function () {
 
 And that's all you really need to know about conditional structures in JavaScript right now! I'm sure you'll have understood these concepts and worked through the examples with ease; if there is anything you didn't understand, feel free to read through the article again, or [contact us](/zh-TW/docs/Learn_web_development#contact_us) to ask for help.
 
-## See also
+## 參見
 
 - [Comparison operators](/zh-TW/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)
 - [Conditional statements in detail](/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [if...else reference](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Conditional (ternary) operator reference](/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

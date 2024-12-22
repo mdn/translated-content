@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/development_environmen
 original_slug: Learn/Server-side/Django/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 現在，你知道什麼是 Django。那麼我們將向你展示如何在 Windows，Linux（Ubuntu）和 Mac OSX 上設置和測試 Django 開發環境—無論你常用哪種操作系統，本文應該都能讓你開始開發 Django 應用程序。
 
@@ -410,4 +410,4 @@ Quit the server with CONTROL-C.
 - [How to install Django — Complete guide](https://docs.djangoproject.com/en/2.0/topics/install/) (Django docs) - includes information on how to remove Django
 - [How to install Django on Windows](https://docs.djangoproject.com/en/2.0/howto/windows/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}

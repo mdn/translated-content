@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactiv
 original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript 是一個可以幫你在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助你踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
 
@@ -467,11 +467,11 @@ function setUserName() {
 
 在此，我們只稍稍體驗了 JavaScript 的一些皮毛。如果你非常享受這段學習的過程，並想要繼續深究，請你繼續瀏覽我們製作的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)。
 
-## See also
+## 參見
 
 - [JavaScript — Dynamic client-side scripting](/zh-TW/docs/Learn_web_development/Core/Scripting)
   - : Our JavaScript learning topic — dive into JavaScript in much more detail.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

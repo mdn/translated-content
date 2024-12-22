@@ -5,7 +5,7 @@ original_slug: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 我們已經學會基本 CSS 的用途與用法了，這堂課我們就來看看瀏覽器是如何將 CSS 和 HTML 變化成網頁的吧。
 
@@ -166,4 +166,4 @@ p {
 
 你已經快完成這個主題了，但是還差臨門一腳，在下篇文章裡，你將會[利用你學到的新知識](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page)來重新美化一個範例，並在過程中重溫你所學到的 CSS 技巧。
 
-{{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

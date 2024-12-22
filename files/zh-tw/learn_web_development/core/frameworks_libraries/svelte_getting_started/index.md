@@ -5,7 +5,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此篇文章我們將摘要說明 [Svelte 框架](https://svelte.dev/)。我們將會看到 Svelte 如何運作，以及它與其它框架和工具的不同之處。接著我們將學習如何設置我們的開發環境並建立一個範例應用程式，了解其專案結構及如何在本地運行，最後可以將其建置於正式環境。
 
@@ -507,4 +507,4 @@ npx degit opensas/mdn-svelte-tutorial/01-getting-started
 - 元件中的頂層變數會構成其元件狀態。
 - 當指定新數值給頂層變數時，將會觸發其反應性。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
