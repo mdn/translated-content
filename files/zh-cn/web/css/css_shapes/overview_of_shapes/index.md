@@ -59,7 +59,7 @@ Specification 定义了三种新的权限：
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/Shapes_From_Box_Values)。
+详见 [Shapes From Box Values](/zh-CN/docs/Web/CSS/CSS_shapes/From_box_values)。
 
 ### 由 Image 创建的形状
 
@@ -107,7 +107,7 @@ Specification 定义了三种新的权限：
 
 ## 形状的开发工具
 
-和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 [Shape Path Editor](/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes) 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。
+和 CSS 形状的开发工具类似，Firefox 在 Firefox DevTools 中自带 [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) 开发工具。这个工具让你可以查看网页中的任意形状，甚至可以实时显示改变形状之后的效果。如果你的多边形不正确，你可以用 Shapes Editor 调节，然后复制粘贴到 CSS 中。
 
 在 Firefox 60 当中，对于含有 `clip-path`的属性的元素默认启用 Shape Path Editor。你也可以编辑 含有 `shape-outside` 的属性的元素，但前提是开启`layout.css.shape-outside.enabled` 首选项。
 

@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
   </tbody>
 </table>
 
-アップデート目的で使われる [version](/ja/Add-ons/WebExtensions/manifest.json/version) 項目に加えて、[version_name](https://developer.chrome.com/docs/extensions/reference/manifest/version) はバージョン説明の文字列をセットできて、存在する場合は表示目的に使われます。
+アップデート目的で使われる [version](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 項目に加えて、[version_name](https://developer.chrome.com/docs/extensions/reference/manifest/version) はバージョン説明の文字列をセットできて、存在する場合は表示目的に使われます。
 
 **version_name** が存在しない場合、**version** 項目が同様な表示目的で使われます。
 

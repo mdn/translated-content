@@ -8,10 +8,10 @@ slug: Web/JavaScript/Reference/Functions/arguments
 Объект **`arguments`** — это подобный массиву объект, который содержит аргументы, переданные в функцию.
 
 > [!NOTE]
-> Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters).
+> Если вы пишете ES6-совместимый код, то лучше использовать [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
 > [!NOTE]
-> "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](/ru/docs/Web/JavaScript/Reference/Functions/arguments#Описание).
+> "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](#Описание).
 
 {{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
@@ -75,7 +75,7 @@ console.log(typeof arguments[0]);
 
 ### Использование оператора расширения для объекта `arguments`
 
-Как и с обычными массива-подобными объектами, для преобразования объекта `arguments` в обычный массив можно использовать метод {{jsxref("Array.from()")}} или [оператор расширения:](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+Как и с обычными массива-подобными объектами, для преобразования объекта `arguments` в обычный массив можно использовать метод {{jsxref("Array.from()")}} или [оператор расширения:](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ```js
 var args = Array.from(arguments);
@@ -148,7 +148,7 @@ var listHTML = list("u", "One", "Two", "Three");
 
 ### Остаточные, деструктурированные и параметры по умолчанию
 
-Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметрами по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Объект `arguments` может использоваться совместно с [остаточными параметрами](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметрами по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированными параметрами](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
 function foo(...args) {
@@ -157,7 +157,7 @@ function foo(...args) {
 foo(1, 2, 3); // { "0": 1, "1": 2, "2": 3 }
 ```
 
-Тем не менее, в нестрогих функциях **соответствие между их аргументами и объектом `arguments`** существует только в том случае, если функция **не** содержит никаких [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:
+Тем не менее, в нестрогих функциях **соответствие между их аргументами и объектом `arguments`** существует только в том случае, если функция **не** содержит никаких [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Например, в функции, приведённой ниже, используется параметр по умолчанию, и в данном случае возвращаемый результат будет равен 10, а не 100:
 
 ```js
 function bar(a = 1) {
@@ -167,7 +167,7 @@ function bar(a = 1) {
 bar(10); // 10
 ```
 
-В следующем примере возвращается 100, поскольку здесь нет [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+В следующем примере возвращается 100, поскольку здесь нет [остаточных параметров](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированных параметров](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
 
 ```js
 function zoo(a) {
@@ -177,7 +177,7 @@ function zoo(a) {
 zoo(10); // 100
 ```
 
-На самом деле, если [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) не используются, формальные аргументы будут ссылаться на последние значения объекта **`arguments`**, при считывании значений формальных аргументов будут считаны последние данные из **`arguments`**, а при изменении значений формальных аргументов будет обновлён и объект **`arguments`**. Пример приведён в коде ниже:
+На самом деле, если [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) не используются, формальные аргументы будут ссылаться на последние значения объекта **`arguments`**, при считывании значений формальных аргументов будут считаны последние данные из **`arguments`**, а при изменении значений формальных аргументов будет обновлён и объект **`arguments`**. Пример приведён в коде ниже:
 
 ```js
 function func(a, b) {
@@ -201,7 +201,7 @@ function func(a, b) {
 func(3, 4); //9, 99
 ```
 
-Но в случае, когда применяются [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), будет обработано нормальное поведение, как в случае [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters):
+Но в случае, когда применяются [остаточные параметры](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), [параметры по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters) или [деструктурированные параметры](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), будет обработано нормальное поведение, как в случае [параметров по умолчанию](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters):
 
 ```js
 function func(a, b, c = 9) {

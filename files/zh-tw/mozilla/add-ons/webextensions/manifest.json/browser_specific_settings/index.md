@@ -42,10 +42,10 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 
 目前這只包含了一個鍵，`gecko`，它包含 4 個 string 參數：
 
-- `id` 是套件 ID。Firefox 48 以後爲選擇性，48 前爲強制。需要什麼來指定 add-on ID 請查看[套件與 Add-on ID](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)。
+- `id` 是套件 ID。Firefox 48 以後爲選擇性，48 前爲強制。需要什麼來指定 add-on ID 請查看[套件與 Add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/)。
 - `strict_min_version`：支持的最舊 Gecko 版本。在這個欄位版本號包含 "\*" 是不合法的。預設是 "42a1"。
 - `strict_max_version`： 支持的最新 Gecko 版本。如果套件安裝的 Firefox 版本超過這個版本號則套件會被禁用或不被允許安裝。預設爲 "\*"，表示禁用最新支持版本檢查。
-- `update_url` 是[套件更新 manifest](/zh-TW/Add-ons/Updates)。備：連結必須以 "https" 開頭。這個鍵用來自己管理套件更新（不透過套件管理器）。
+- `update_url` 是[套件更新 manifest](https://extensionworkshop.com/documentation/manage/updating-your-extension/)。備：連結必須以 "https" 開頭。這個鍵用來自己管理套件更新（不透過套件管理器）。
 
 查看[可用 Gecko 版本](https://addons.mozilla.org/en-US/firefox/pages/appversions/)。
 

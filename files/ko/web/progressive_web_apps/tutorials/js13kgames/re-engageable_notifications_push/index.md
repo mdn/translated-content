@@ -67,7 +67,7 @@ function randomNotification() {
 
 이 기술은 여전히 아주 초기 단계에 있습니다. 몇몇 동작하는 예제들은 Google Cloude Messaging 플랫폼을 사용하지만, [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)(자발적 어플리케이션 식별, Voluntary Application Identification)를 지원하도록 재작성되어 앱을 위한 부가적인 보안 계층을 제공합니다. [Service Workers Cookbook examples](https://github.com/mdn/serviceworker-cookbook/push-payload.html)를 확인하고, [Firebase](https://firebase.google.com/)를 사용하는 푸시 메시징 서버를 설정하거나, 여러분만의 서버(예제에서는 Node.js를 사용)를 구축해보시기 바랍니다.
 
-앞서 언급듯이, 푸시 알림을 수신하려면 service worker가 있어야 합니다. 이를 위한 기본적인 내용은 [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Apps/Progressive/Offline_Service_workers) 문서에서 이미 설명했습니다. Service worker 안에서 푸시 서비스 구독 메커니즘이 생성됩니다.
+앞서 언급듯이, 푸시 알림을 수신하려면 service worker가 있어야 합니다. 이를 위한 기본적인 내용은 [Service worker를 사용해 PWA를 오프라인에서 동작하게 만들기](/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers) 문서에서 이미 설명했습니다. Service worker 안에서 푸시 서비스 구독 메커니즘이 생성됩니다.
 
 ```js
 registration.pushManager.getSubscription().then(/* ... */);
@@ -268,7 +268,7 @@ self.addEventListener("push", function (event) {
 
 ## 결론
 
-이것이 튜토리얼 시리즈의 전부입니다. [js13kPWA 예제 앱의 소스 코드](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)를 살펴봤으며 [소개](/ko/docs/Web/Apps/Progressive/Introduction), [PWA 구조](/ko/docs/Web/Apps/Progressive/App_structure), [Service Worker를 사용한 오프라인 기능](/ko/docs/Web/Apps/Progressive/Offline_Service_workers), [설치 가능한 PWA](/ko/docs/Web/Apps/Progressive/Installable_PWAs) 그리고 마지막으로 알림을 포함해 프로그레시브 웹 앱의 기능의 사용에 대해 배웠습니다. 또한 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)의 도움으로 푸시에 대해서도 설명했습니다.
+이것이 튜토리얼 시리즈의 전부입니다. [js13kPWA 예제 앱의 소스 코드](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)를 살펴봤으며 [소개](/ko/docs/Web/Progressive_web_apps), [PWA 구조](/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure), [Service Worker를 사용한 오프라인 기능](/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers), [설치 가능한 PWA](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) 그리고 마지막으로 알림을 포함해 프로그레시브 웹 앱의 기능의 사용에 대해 배웠습니다. 또한 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)의 도움으로 푸시에 대해서도 설명했습니다.
 
 코드를 실험해보시고, 여러분의 앱을 PWA 기능으로 개선하거나, 완전히 새로운 무언가를 구축해 보세요. PWA는 일반 웹 앱에 비해 큰 이점을 제공합니다.
 

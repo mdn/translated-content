@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/escape
 La fonction **`escape()`** permet de renvoyer une nouvelle chaîne de caractères dont certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Cette méthode est obsolète et il est donc conseillé d'utiliser {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} à la place.
 
 > [!NOTE]
-> Cette fonction pouvait être utilisée pour l'encodage de fragment de requêtes d'URL. Si on souhaite remplacer des caractères par leur séquence d'échappement correcte (avec `%20` par exemple), on pourra utiliser [`decodeURIComponent`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/decodeURIComponent).
+> Cette fonction pouvait être utilisée pour l'encodage de fragment de requêtes d'URL. Si on souhaite remplacer des caractères par leur séquence d'échappement correcte (avec `%20` par exemple), on pourra utiliser [`decodeURIComponent`](/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent).
 
 ## Syntaxe
 

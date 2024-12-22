@@ -5,7 +5,7 @@ slug: Web/API/IDBIndex/keyPath
 
 {{ APIRef("IndexedDB") }}
 
-La propriété **`keyPath`** de l'interface {{domxref("IDBIndex")}} renvoie le [chemin de clé](/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath) de l'index. Si l'index n'est pas [automatiquement mise à jour](/fr/IndexedDB/Index#gloss_auto-populated) la propriété vaux `null`.
+La propriété **`keyPath`** de l'interface {{domxref("IDBIndex")}} renvoie le [chemin de clé](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_keypath) de l'index. Si l'index n'est pas [automatiquement mise à jour](/fr/IndexedDB/Index#gloss_auto-populated) la propriété vaux `null`.
 
 {{AvailableInWorkers}}
 

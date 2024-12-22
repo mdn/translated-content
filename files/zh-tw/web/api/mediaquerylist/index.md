@@ -5,7 +5,7 @@ slug: Web/API/MediaQueryList
 
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-`MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/CSS/Media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
+`MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
 
 MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。
 
@@ -64,7 +64,7 @@ void removeListener(
 
 ## 參見
 
-- [Media queries](/zh-TW/docs/CSS/Media_queries)
-- [Using media queries from code](/zh-TW/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{ domxref("window.matchMedia()") }}
 - {{ domxref("MediaQueryListListener") }}

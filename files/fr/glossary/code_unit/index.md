@@ -35,5 +35,5 @@ console.log(visage.codePointAt(0)); // 129397 soit 0x1F975 en hexadécimal
 
 ## Voir aussi
 
-- [Gestion des caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_Unicode_et_groupes_de_graphèmes)
+- [Gestion des caractères UTF-16, points de code Unicode et groupes de graphèmes](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#caractères_utf-16_points_de_code_unicode_et_groupes_de_graphèmes)
 - [La FAQ sur l'encodage Unicode (en anglais)](https://www.unicode.org/faq/utf_bom.html)

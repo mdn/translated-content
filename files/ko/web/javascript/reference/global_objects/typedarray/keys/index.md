@@ -56,7 +56,7 @@ console.log(arrKeys.next().value); // 4
 ## 같이 보기
 
 - [Polyfill of `TypedArray.prototype.keys` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ko/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}

@@ -94,10 +94,10 @@ Chaque contexte de navigation possède son propre [historique](/fr/docs/Web/API/
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `allow`
-  - : L'attribut `allow` permet de définir une [politique de fonctionnalité](/fr/docs/Web/HTTP/Feature_Policy) pour l'_iframe_. Cette politique définit les fonctionnalités disponibles au sein de l'_iframe_ selon l'origine de la requête (les fonctionnalités peuvent être l'accès au micro, à la caméra, aux informations de batterie, etc.). Pour plus d'informations, voir [l'article sur l'utilisation de `Feature-Policy`](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute).
+  - : L'attribut `allow` permet de définir une [politique de fonctionnalité](/fr/docs/Web/HTTP/Permissions_Policy) pour l'_iframe_. Cette politique définit les fonctionnalités disponibles au sein de l'_iframe_ selon l'origine de la requête (les fonctionnalités peuvent être l'accès au micro, à la caméra, aux informations de batterie, etc.). Pour plus d'informations, voir [l'article sur l'utilisation de `Feature-Policy`](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy#the_iframe_allow_attribute).
 - `allowfullscreen`
 
-  - : Cet attribut, lorsqu'il vaut `true`, indique que l'_iframe_ intégrée peut être passée en plein écran via la méthode[`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullScreen).
+  - : Cet attribut, lorsqu'il vaut `true`, indique que l'_iframe_ intégrée peut être passée en plein écran via la méthode[`Element.requestFullscreen()`](/fr/docs/Web/API/Element/requestFullscreen).
 
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
@@ -121,14 +121,14 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
     - `lazy` : Le chargement de l'_iframe_ est retardé jusqu'à ce que celle-ci atteigne une distance donnée du _viewport_, définie par le navigateur.
 
 - `name`
-  - : Un nom pour le contexte de navigation (ou la _frame_). Ce nom peut être utilisé comme la valeur de l'attribut `target` _(cible)_ d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou [`<form>`](/fr/docs/Web/HTML/Element/Form) _(formulaire)_ ou comme valeur de l'attribut `formtarget` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) _(entrée)_ ou [`<button>`](/fr/docs/Web/HTML/Element/Button) _(bouton)_. Il peut également être utilisé comme valeur pour le paramètre `windowName` de la méthode [`window.open()`](/fr/docs/Web/API/Window/open).
+  - : Un nom pour le contexte de navigation (ou la _frame_). Ce nom peut être utilisé comme la valeur de l'attribut `target` _(cible)_ d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou [`<form>`](/fr/docs/Web/HTML/Element/form) _(formulaire)_ ou comme valeur de l'attribut `formtarget` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) _(entrée)_ ou [`<button>`](/fr/docs/Web/HTML/Element/button) _(bouton)_. Il peut également être utilisé comme valeur pour le paramètre `windowName` de la méthode [`window.open()`](/fr/docs/Web/API/Window/open).
 - `referrerpolicy`
 
   - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération de la ressource :
 
     - `no-referrer` signifie que l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) ne sera pas envoyé.
-    - `no-referrer-when-downgrade` signifie qu'aucun en-tête `Referer` ne sera envoyé lorsqu'on navigue vers une origine qui n'utilise pas [TLS](/fr/docs/Glossary/TLS) ([HTTPS](/fr/docs/Glossary/https)). C'est le comportement par défaut de l'agent utilisateur.
-    - `origin` signifie que le référent sera l'origine de la page (c'est-à-dire son [schéma](/fr/docs/Learn/Common_questions/What_is_a_URL), son [hôte](/fr/docs/Glossary/Host) et le [port](/fr/docs/Glossary/Port) utilisé).
+    - `no-referrer-when-downgrade` signifie qu'aucun en-tête `Referer` ne sera envoyé lorsqu'on navigue vers une origine qui n'utilise pas [TLS](/fr/docs/Glossary/TLS) ([HTTPS](/fr/docs/Glossary/HTTPS)). C'est le comportement par défaut de l'agent utilisateur.
+    - `origin` signifie que le référent sera l'origine de la page (c'est-à-dire son [schéma](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL), son [hôte](/fr/docs/Glossary/Host) et le [port](/fr/docs/Glossary/Port) utilisé).
     - `origin-when-cross-origin` signifie que les navigations vers d'autres origines seront limitées aux schémas, hôtes et ports. Les navigations sur la même origine incluront le chemin explicite du référent.
     - `same-origin` un référent sera envoyé pour [les mêmes origines](/fr/docs/Web/Security/Same-origin_policy) mais les requêtes multi-origines ne contiendront pas d'informations de référent.
     - `strict-origin` seule l'origine du document est envoyée comme référent lorsque le protocole de sécurité est le même (HTTPS→HTTPS). L'origine n'est pas envoyée lorsque la destination est moins sécurisée (HTTPS→HTTP).

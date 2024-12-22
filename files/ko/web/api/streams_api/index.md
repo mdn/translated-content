@@ -76,12 +76,12 @@ Stream의 주요한 기본 사용법은 응답 데이터를 stream으로 만드�
 
 Streams API 문서와 참조할 만한 예제를 함께 작성하였습니다 — [mdn/dom-examples/streams](https://github.com/mdn/dom-examples/tree/master/streams) 를 참조하세요. 예제는 아래와 같습니다.:
 
-- [Simple stream pump](http://mdn.github.io/dom-examples/streams/simple-pump/): ReadableStream에서 어떻게 데이터를 읽어들여 다른 곳으로 전달하는지 보여줍니다.
-- [Grayscale a PNG](http://mdn.github.io/dom-examples/streams/grayscale-png/): PNG file의 ReadableStream을 통해 grayscale로 변경하는 방법을 보여줍니다.
-- [Simple random stream](http://mdn.github.io/dom-examples/streams/simple-random-stream/): 커스텀 스트림을 통해 무작위 문자열을 생성하고, 데이터 청크로 큐잉한 뒤, 다시 읽어들이는 방법에 대해 설명합니다.
-- [Simple tee example](http://mdn.github.io/dom-examples/streams/simple-tee-example/): 이 예제는 simple random stream 예제를 확장하여, 스트림을 분할하고 각 스트림이 독립적으로 데이터를 읽는 방법을 보여줍니다.
-- [Simple writer](http://mdn.github.io/dom-examples/streams/simple-writer/): Writable stream에 데이터를 쓰는 방법을 설명하고, 스트림 데이터를 디코드하여 UI로 표현하는 방법을 보여줍니다.
-- [Unpack chunks of a PNG](http://mdn.github.io/dom-examples/streams/png-transform-stream/): [`pipeThrough()`](/ko/docs/Web/API/ReadableStream/pipeThrough) 을 통해 PNG file을 PNG 청크 스트림으로 변환하는 방식으로 ReadableStream을 다른 데이터 타입 스트림으로 전환하는 방법을 설명합니다.
+- [Simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/): ReadableStream에서 어떻게 데이터를 읽어들여 다른 곳으로 전달하는지 보여줍니다.
+- [Grayscale a PNG](https://mdn.github.io/dom-examples/streams/grayscale-png/): PNG file의 ReadableStream을 통해 grayscale로 변경하는 방법을 보여줍니다.
+- [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/): 커스텀 스트림을 통해 무작위 문자열을 생성하고, 데이터 청크로 큐잉한 뒤, 다시 읽어들이는 방법에 대해 설명합니다.
+- [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/): 이 예제는 simple random stream 예제를 확장하여, 스트림을 분할하고 각 스트림이 독립적으로 데이터를 읽는 방법을 보여줍니다.
+- [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): Writable stream에 데이터를 쓰는 방법을 설명하고, 스트림 데이터를 디코드하여 UI로 표현하는 방법을 보여줍니다.
+- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): [`pipeThrough()`](/ko/docs/Web/API/ReadableStream/pipeThrough) 을 통해 PNG file을 PNG 청크 스트림으로 변환하는 방식으로 ReadableStream을 다른 데이터 타입 스트림으로 전환하는 방법을 설명합니다.
 
 다른 개발자의 예제:
 

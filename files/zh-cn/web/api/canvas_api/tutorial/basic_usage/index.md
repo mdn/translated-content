@@ -48,7 +48,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 
 ## 渲染上下文（The rendering context）
 
-{{HTMLElement("canvas")}} 元素创造了一个固定大小的画布，它公开了一个或多个**渲染上下文**，其可以用来绘制和处理要展示的内容。我们将会将注意力放在 2D 渲染上下文中。其他种类的上下文也许提供了不同种类的渲染方式；比如， [WebGL](/zh-CN/docs/Web/WebGL) 使用了基于[OpenGL ES](http://www.khronos.org/opengles/)的 3D 上下文 ("experimental-webgl") 。
+{{HTMLElement("canvas")}} 元素创造了一个固定大小的画布，它公开了一个或多个**渲染上下文**，其可以用来绘制和处理要展示的内容。我们将会将注意力放在 2D 渲染上下文中。其他种类的上下文也许提供了不同种类的渲染方式；比如， [WebGL](/zh-CN/docs/Web/API/WebGL_API) 使用了基于[OpenGL ES](https://www.khronos.org/opengles/)的 3D 上下文 ("experimental-webgl") 。
 
 canvas 起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。{{HTMLElement("canvas")}} 元素有一个叫做 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 的方法，这个方法是用来获得渲染上下文和它的绘画功能。`getContext()`接受一个参数，即上下文的类型。对于 2D 图像而言，如本教程，你可以使用 {{domxref("CanvasRenderingContext2D")}}。
 

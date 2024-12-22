@@ -80,4 +80,4 @@ li.spacious.elegant {
 ## 参见
 
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
-- [学习 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- [学习 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

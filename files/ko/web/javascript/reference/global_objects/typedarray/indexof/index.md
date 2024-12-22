@@ -28,7 +28,7 @@ typedarray.indexOf(searchElement[, fromIndex = 0])
 
 ## 설명
 
-`indexOf` 메소드는 배열의 요소를 `searchElement` 와 비교할 때, [strict equality](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators)(===, _트리플 equals_) 를 사용하여 자료형의 일치 여부까지 비교한다.
+`indexOf` 메소드는 배열의 요소를 `searchElement` 와 비교할 때, [strict equality](/ko/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators)(===, _트리플 equals_) 를 사용하여 자료형의 일치 여부까지 비교한다.
 
 ## 예시
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_container_queries#naming_containment_contexts)の名前を指定します。
+**container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)の名前を指定します。
 
 ## 構成要素のプロパティ
 
@@ -100,7 +100,7 @@ container: unset;
 
 ## 関連情報
 
-- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)
+- [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("contain")}} 一括指定プロパティ
 - CSS {{Cssxref("container-type")}} プロパティ

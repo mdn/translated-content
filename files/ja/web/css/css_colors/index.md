@@ -46,7 +46,7 @@ l10n:
   - [`oklab()`](/ja/docs/Web/CSS/color_value/oklab)
   - [`oklch()`](/ja/docs/Web/CSS/color_value/oklch)
   - [`color()`](/ja/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/ja/docs/Web/CSS/color_value/color-contrast) {{experimental_inline}}
+- [`color-contrast()`](/ja/docs/Web/CSS/color_value) {{experimental_inline}}
 - [`color-mix()`](/ja/docs/Web/CSS/color_value/color-mix)
 - [`device-cmyk()`](/ja/docs/Web/CSS/color_value/device-cmyk)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}

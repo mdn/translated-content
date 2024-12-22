@@ -22,4 +22,4 @@ JIT компиляторы обычно прозрачны для вас и ис
 ### Обучающие ресурсы
 
 - [Введение в компиляторы](https://medium.com/basecs/a-deeper-inspection-into-compilation-and-interpretation-d98952ebc842)
-- [Большой список учебных материалов на StackOverflow](http://stackoverflow.com/a/1672/133203)
+- [Большой список учебных материалов на StackOverflow](https://stackoverflow.com/a/1672/133203)

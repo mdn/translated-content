@@ -19,7 +19,7 @@ var Früh = "foobar";
 
 Mas a variável `früh` não é a mesma que `Früh` porque JavaScript é case sensitive.
 
-No JavaScript, instruções são chamadas de {{Glossary("Statement", "declaração")}} e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula ([ASI](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a [gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar) do JavaScript.
+No JavaScript, instruções são chamadas de {{Glossary("Statement", "declaração")}} e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula ([ASI](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a [gramática léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar) do JavaScript.
 
 ## Comentários
 
@@ -52,7 +52,7 @@ Você usa variáveis como nomes simbólicos para os valores em sua aplicação. 
 
 Um identificador JavaScript deve começar com uma letra, underline (`_`), ou cifrão (`$`); os caracteres subsequentes podem também ser números (0-9). Devido JavaScript ser case-sensitive, letras incluem caracteres de "A" a "Z" (maiúsculos) e caracteres de "a" a "z" (minúsculos).
 
-Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals) como caracteres e identificadores.
+Você pode usar a ISO 8859-1 ou caracteres Unicode tal como os identificadores å e ü. Você pode também usar as [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) como caracteres e identificadores.
 
 Alguns exemplos de nomes legais são `Numeros_visitas`, `temp99`, e `_nome`.
 
@@ -62,7 +62,7 @@ Você pode declarar uma variável de três formas:
 
 - Com a palavra chave {{jsxref("Statements/var", "var")}}. Por exemplo, var `x = 42`. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.
 - Por simples adição de valor. Por exemplo, `x = 42`. Isso declara uma variável global. Essa declaração gera um aviso de advertência no JavaScript. Você não deve usar essa variante.
-- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#escopo_de_variável) abaixo.
+- Com a palavra chave {{jsxref("Statements/let", "let")}}. Por exemplo, `let y = 13`. Essa sintaxe pode ser usada para declarar uma variável local de escopo de bloco. Veja [escopo de variável](#escopo_de_variável) abaixo.
 
 ### Classificando variáveis
 
@@ -112,7 +112,7 @@ console.log(n * 32); // a saída para o console será 0.
 
 Quando você declara uma variável fora de qualquer função, ela é chamada de variável _global_, porque está disponível para qualquer outro código no documento atual. Quando você declara uma variável dentro de uma função, é chamada de variável _local_, pois ela está disponível somente dentro dessa função.
 
-JavaScript antes do ECMAScript 6 não possuía escopo de [declaração de bloco](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement); pelo contrário, uma variável declarada dentro de um bloco de uma _função_ é uma variável local (ou contexto _global_) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de `x` está na função (ou contexto global) no qual `x` é declarado, não o bloco, que neste caso é a declaração `if`.
+JavaScript antes do ECMAScript 6 não possuía escopo de [declaração de bloco](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#block_statement); pelo contrário, uma variável declarada dentro de um bloco de uma _função_ é uma variável local (ou contexto _global_) do bloco que está inserido a função. Por exemplo o código a seguir exibirá 5, porque o escopo de `x` está na função (ou contexto global) no qual `x` é declarado, não o bloco, que neste caso é a declaração `if`.
 
 ```js
 if (true) {
@@ -298,7 +298,7 @@ O exemplo a seguir cria um array `coffees` com três elementos e um comprimento 
 var coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-> **Nota:** **Nota :** Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers).
+> **Nota:** **Nota :** Um array literal é um tipo de inicializador de objetos. Veja [Usando inicializadores de Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#using_object_initializers).
 
 Se um array é criado usando um literal no topo do script, JavaScript interpreta o array cada vez que avalia a expressão que contêm o array literal. Além disso, um literal usado em uma função é criado cada vez que a função é chamada.
 
@@ -360,7 +360,7 @@ Alguns exemplos de inteiros literal são:
 0b11, 0b0011 and -0b11 (binário, base 2)
 ```
 
-Para maiores informações, veja [Literais numérico na referência Léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_literals).
+Para maiores informações, veja [Literais numérico na referência Léxica](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals).
 
 ### Literais de ponto flutuante
 
@@ -506,7 +506,7 @@ A tabela a seguir lista os caracteres especiais que podem ser usados em strings 
 |          |                                                                                                                                                                                                                                                                 |
 | `\xXX`   | Caractere com a codificação Latin-1 especificada por dois dígitos hexadecimal _XX_ entre 00 e FF. Por exemplo, \xA9 é a sequência hexadecimal para o símbolo de direitos autorais.                                                                              |
 |          |                                                                                                                                                                                                                                                                 |
-| `\uXXXX` | Caractere Unicode especificado por quatro dígitos hexadecimal _XXXX_. Por exemplo, \u00A9 é a sequência Unicode para o símbolo de direitos autorais. Veja [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#String_literals). |
+| `\uXXXX` | Caractere Unicode especificado por quatro dígitos hexadecimal _XXXX_. Por exemplo, \u00A9 é a sequência Unicode para o símbolo de direitos autorais. Veja [sequências de escape Unicode](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals). |
 
 #### Caracteres de escape
 
@@ -559,7 +559,7 @@ Este capítulo focou na sintaxe básica das declarações e tipos. Para saber ma
 - [Controle de fluxo e manipulação de erro](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Laços e iteração](/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [Funções](/pt-BR/docs/Web/JavaScript/Guide/Functions)
-- [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 No próximo capítulo, veremos a construção de controle de fluxos e manipulação de erro.
 

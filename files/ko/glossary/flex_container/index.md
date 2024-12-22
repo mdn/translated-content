@@ -25,7 +25,7 @@ l10n:
 
 ### 더 읽어보기
 
-- CSS Flexbox Guide: [Flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- CSS Flexbox Guide: [Flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - CSS Flexbox Guide: [flex container 항목 나열](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)
 - CSS Flexbox Guide: [flex items 래핑 마스터하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - Firefox Developer Tools > How to: [CSS Flexbox 검사기: Flexbox 레이아웃 검사](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)

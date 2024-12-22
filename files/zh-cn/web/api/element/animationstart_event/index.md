@@ -10,7 +10,7 @@ slug: Web/API/Element/animationstart_event
 ## 基本信息
 
 - 规格
-  - : [CSS Animations](http://www.w3.org/TR/css3-animations/#animation-events)
+  - : [CSS Animations](https://www.w3.org/TR/css3-animations/#animation-events)
 - 接口
   - : AnimationEvent
 - 是否冒泡
@@ -45,4 +45,4 @@ slug: Web/API/Element/animationstart_event
 
 ## 参见
 
-- [Using CSS Animations](/zh-CN/docs/CSS/Using_CSS_animations)
+- [Using CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)

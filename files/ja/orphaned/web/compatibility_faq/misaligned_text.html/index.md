@@ -99,4 +99,4 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
 
 - デフォルト値ではなく、明示的に値を指定することで、他のブラウザーで差異があった場合にも対応できます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

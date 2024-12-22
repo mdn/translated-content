@@ -98,7 +98,7 @@ console.log(object[bar]);
 
 ### 方法绑定
 
-一个方法没有绑定到对象上，那就意味着这个方法是不起作用的。特别要注意的是，在一个方法中`this`对象并不是固定的，例如，`this`不需要指向包含当前方法的对象。`this`可通过函数调用被传递过去的值所替换。详见[方法绑定](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#Method_binding)。
+一个方法没有绑定到对象上，那就意味着这个方法是不起作用的。特别要注意的是，在一个方法中`this`对象并不是固定的，例如，`this`不需要指向包含当前方法的对象。`this`可通过函数调用被传递过去的值所替换。详见[方法绑定](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#method_binding)。
 
 ### 注意`eval`
 

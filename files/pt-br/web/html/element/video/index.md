@@ -545,4 +545,4 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
 - {{htmlelement("audio")}}
 - [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Manipulando vídeo usando canvas](/pt-BR/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/HTTP/Configuring_servers_for_Ogg_media)
+- [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

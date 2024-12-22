@@ -80,4 +80,4 @@ function updateValue(e) {
 
 ## Voir aussi
 
-- Évènement associé&nbsp;: [`input`](/fr/docs/Web/API/HTMLElement/input_event)
+- Évènement associé&nbsp;: [`input`](/fr/docs/Web/API/Element/input_event)

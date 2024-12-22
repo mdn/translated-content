@@ -32,4 +32,4 @@ Here org is the TLD; mozilla.org is the second-level domain name; and developer 
 ### General knowledge
 
 - [トップレベルドメイン](https://ja.wikipedia.org/wiki/トップレベルドメイン) (Wikipedia)
-- [List of top-level domains](http://www.iana.org/domains/root/db)
+- [List of top-level domains](https://www.iana.org/domains/root/db)

@@ -75,11 +75,11 @@ When you use CSS to create a layout, you are moving the elements away from the n
 
 The methods that can change how elements are laid out in CSS are as follows:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow (see [Types of CSS boxes](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) for more information). We then have entire layout methods that are switched on via a value of `display`, for example [CSS Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox).
+- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow (see [Types of CSS boxes](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) for more information). We then have entire layout methods that are switched on via a value of `display`, for example [CSS Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top left of the browser viewport.
 - **Table layout** — features designed for styling the parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- **Multi-column layout** — The [Multi-column layout](/pt-BR/docs/Web/CSS/CSS_Columns) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
+- **Multi-column layout** — The [Multi-column layout](/pt-BR/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
 
 ## The display property
 
@@ -91,7 +91,7 @@ In addition to being able to change the default presentation by turning an item 
 
 ## Flexbox
 
-Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
+Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
 
 The HTML markup below gives us a containing element, with a class of `wrapper`, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.
 

@@ -86,7 +86,7 @@ arr.findIndex((n) => Number.isNaN(n)); // 2
 
 ### 눈에 띄게 구별되는 NaN 값
 
-`NaN`이 자신과 동등하지 않은 데는 동기가 있습니다. [IEEE 754 인코딩](https://en.wikipedia.org/wiki/NaN#Floating_point)에서 지수 `0x7ff`와 0이 아닌 가수부가 있는 부동 소수점 숫자는 `NaN`이기 때문에 서로 다른 이진 표현을 가진 두 개의 부동 소수점 숫자를 생성할 수 있지만 둘 다 `NaN`입니다. JavaScript에서 [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays)를 사용하여 비트 수준 조작을 수행할 수 있습니다.
+`NaN`이 자신과 동등하지 않은 데는 동기가 있습니다. [IEEE 754 인코딩](https://en.wikipedia.org/wiki/NaN#Floating_point)에서 지수 `0x7ff`와 0이 아닌 가수부가 있는 부동 소수점 숫자는 `NaN`이기 때문에 서로 다른 이진 표현을 가진 두 개의 부동 소수점 숫자를 생성할 수 있지만 둘 다 `NaN`입니다. JavaScript에서 [typed arrays](/ko/docs/Web/JavaScript/Guide/Typed_arrays)를 사용하여 비트 수준 조작을 수행할 수 있습니다.
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

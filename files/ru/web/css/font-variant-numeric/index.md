@@ -13,7 +13,7 @@ slug: Web/CSS/font-variant-numeric
 
 ## Syntax
 
-[Formal syntax](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("font-variant-numeric")}}
+[Formal syntax](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("font-variant-numeric")}}
 
 ```css
 font-variant-numeric: normal

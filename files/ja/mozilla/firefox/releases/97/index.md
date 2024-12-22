@@ -46,7 +46,7 @@ slug: Mozilla/Firefox/Releases/97
 
 ### API
 
-- [`DedicatedWorkerGlobalScope`](/ja/docs/Web/API/DedicatedWorkerGlobalScope) で `AnimationFrameProvider` が使用可能になりました。これは、専用ワーカーで [`requestAnimationFrame`](/ja/docs/Web/API/window/requestAnimationFrame) および [`cancelAnimationFrame`](/ja/docs/Web/API/Window/cancelAnimationFrame) メソッドが使用できることを意味します
+- [`DedicatedWorkerGlobalScope`](/ja/docs/Web/API/DedicatedWorkerGlobalScope) で `AnimationFrameProvider` が使用可能になりました。これは、専用ワーカーで [`requestAnimationFrame`](/ja/docs/Web/API/Window/requestAnimationFrame) および [`cancelAnimationFrame`](/ja/docs/Web/API/Window/cancelAnimationFrame) メソッドが使用できることを意味します
   (詳しくは [Firefox バグ 1388931](https://bugzil.la/1388931) をご覧ください)。
 
 #### DOM

@@ -15,4 +15,4 @@ Un utilisateur est dit **privilégié** lorsqu'il se voit attribuer des droits s
 
 ### Apprendre sur ce sujet
 
-- [Tutoriel sur la sécurité informatique](/fr/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)
+- [Tutoriel sur la sécurité informatique](/fr/docs/Apprendre/Tutoriels/Les_bases_de_la_sécurité_informatique)

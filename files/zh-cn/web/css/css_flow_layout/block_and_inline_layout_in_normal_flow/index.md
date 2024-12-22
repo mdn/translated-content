@@ -103,6 +103,6 @@ slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 ## 参见
 
 - [CSS Basic Box Model](/zh-CN/docs/Web/CSS/CSS_box_model)
-- _[Normal Flow](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
+- _[Normal Flow](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction)_ - Learn Layout
 - [Inline elements](/zh-CN/docs/Glossary/Inline-level_content)
 - [Block-level elements](/zh-CN/docs/Glossary/Block-level_content)

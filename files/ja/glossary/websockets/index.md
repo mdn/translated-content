@@ -21,5 +21,5 @@ _WebSocket_ は、{{Glossary("Server", "サーバー")}}とクライアント間
 
 ### 関連記事
 
-- [WebSocket クライアントアプリケーションの記述](/ja/docs/WebSockets/Writing_WebSocket_client_applications)
-- [WebSocket サーバーの記述](/ja/docs/WebSockets/Writing_WebSocket_servers)
+- [WebSocket クライアントアプリケーションの記述](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [WebSocket サーバーの記述](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

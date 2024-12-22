@@ -385,12 +385,12 @@ context.listener.setPosition(0, 0, 0);
 ### 教程
 
 - [使用 Canvas 处理视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [HTML playbackRate 解释](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate 解释](/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web 空间音效基础](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [将视频帧作为 WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#用视频帧作为纹理)（你也可以使用 [THREE.js](https://threejs.org/) WebGL 库（或其他库）来[实现这个效果](https://stemkoski.github.io/Three.js/Video.html)）
 - [WebGL 动画纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
-- [使用 Web Audio API 开发游戏音频（房间效果和滤镜）（2012）](https://web.dev/articles/webaudio-games#room_effects_and_filters)
+- [使用 Web Audio API 开发游戏音频（房间效果和滤镜）（2012）](https://web.developers.google.cn/articles/webaudio-games#room_effects_and_filters)
 
 ### 参考
 

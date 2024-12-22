@@ -9,7 +9,7 @@ slug: Web/API/console/timeEnd_static
 
 Interrompe um temporizador que foi anteriormente iniciado por uma chamada a {{domxref("console.time()")}}.
 
-Veja [Timers](/pt-BR/docs/DOM/console#Timers) na documentação de {{domxref("console")}} para detalhes e exemplos.
+Veja [Timers](/pt-BR/docs/Web/API/console#timers) na documentação de {{domxref("console")}} para detalhes e exemplos.
 
 ## Sintaxe
 
@@ -20,7 +20,7 @@ console.timeEnd(label);
 ### Parametros
 
 - `label`
-  - : O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no [Web Console](/pt-BR/docs/Tools/Web_Console).
+  - : O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 ## Especificação
 
@@ -33,4 +33,4 @@ Não é parte de qualquer especificação.
 ## Veja também
 
 - {{domxref("Console.time")}}
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

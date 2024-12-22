@@ -5,11 +5,11 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 {{QuickLinksWithSubPages("/ja/docs/Web/Media")}}
 
-他の記事で、 [ブラウザーに依存しない動画プレイヤーの構築](/ja/Apps/Build/Manipulating_media/cross_browser_video_player)を、 {{ domxref("HTMLMediaElement") }} 及び {{ domxref("Window.fullScreen") }} API を使用して行う方法と、[プレイヤーのスタイル付け](/ja/Apps/Build/Manipulating_media/Video_player_styling_basics)の方法について見てきました。この記事では、同じプレイヤーと使って、 {{ domxref("Web_Video_Text_Tracks_Format","WebVTT 形式") }}及び {{ htmlelement("track") }} 要素を用いてキャプションや字幕を追加する方法を紹介します。
+他の記事で、 [ブラウザーに依存しない動画プレイヤーの構築](/ja/docs/Web/Apps/Build/Manipulating_media/cross_browser_video_player)を、 {{ domxref("HTMLMediaElement") }} 及び {{ domxref("Window.fullScreen") }} API を使用して行う方法と、[プレイヤーのスタイル付け](/ja/docs/Web/Apps/Build/Manipulating_media/Video_player_styling_basics)の方法について見てきました。この記事では、同じプレイヤーと使って、 {{ domxref("Web_Video_Text_Tracks_Format","WebVTT 形式") }}及び {{ htmlelement("track") }} 要素を用いてキャプションや字幕を追加する方法を紹介します。
 
 ## キャプション付きの動画の例
 
-この記事ではキャプションが付いた動画プレイヤーの例を参照します。この例では [Blender Foundation](http://www.blender.org/foundation/) が作成した [Sintel open movie](http://www.sintel.org/) を使用します。
+この記事ではキャプションが付いた動画プレイヤーの例を参照します。この例では [Blender Foundation](https://www.blender.org/foundation/) が作成した [Sintel open movie](https://www.sintel.org/) を使用します。
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
@@ -22,7 +22,7 @@ slug: Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_
 
 ### キャプション V.S. 字幕
 
-[Captions and subtitles are not the same thing](http://web.archive.org/web/20160117160743/http://screenfont.ca/learn/): they have significantly different audiences, and convey different information, and it is recommended that you read up on the differences if you are not sure what they are. They are however implemented in the same way technically, so the material in this article will apply to both.
+[Captions and subtitles are not the same thing](https://web.archive.org/web/20160117160743/http://screenfont.ca/learn/): they have significantly different audiences, and convey different information, and it is recommended that you read up on the differences if you are not sure what they are. They are however implemented in the same way technically, so the material in this article will apply to both.
 
 For this article we will refer to the text tracks displayed as subtitles, as their content is aimed at hearing people who have difficulty understanding the language of the film, rather than deaf or hard-of-hearing people.
 
@@ -32,15 +32,15 @@ HTML5 allows us to specify subtitles for a video using the {{ htmlelement("track
 
 ### WebVTT
 
-The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the [Web Video Text Tracks](/ja/docs/HTML/WebVTT) (WebVTT) format. The [WebVTT specification](http://dev.w3.org/html5/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
+The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the [Web Video Text Tracks](/ja/docs/Web/API/WebVTT_API) (WebVTT) format. The [WebVTT specification](https://dev.w3.org/html5/webvtt/) is still being worked on, but major parts of it are stable so we can use it today.
 
-Video providers (such as the [Blender Foundation](http://www.blender.org/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter such as [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
+Video providers (such as the [Blender Foundation](https://www.blender.org/foundation/)) provide captions and subtitles in a text format with their videos, but they're usually in the SubRip Text (SRT) format. These can be easily converted to WebVTT using an online converter such as [srt2vtt](https://atelier.u-sub.net/srt2vtt/).
 
 ## Modifications to the HTML and CSS
 
 This section summarises the modifications made to the previous article's code in order to facilitate the addition of subtitles to the video. If you are not interested in this, and just want to get straight into the JavaScript and more relevant CSS, skip to the [Subtitle implementation](#subtitle_implementation) section.
 
-In this example we are using a different video, [Sintel](http://www.sintel.org/), as it actually has some speech in it and therefore is better for illustrating how subtitles work!
+In this example we are using a different video, [Sintel](https://www.sintel.org/), as it actually has some speech in it and therefore is better for illustrating how subtitles work!
 
 ### HTML Markup
 
@@ -141,7 +141,7 @@ for (var i = 0; i < video.textTracks.length; i++) {
 
 The `video.textTracks` property contains an array of all the text tracks attached to the video. We loop through each one and set its `mode` to `hidden`.
 
-Note: The [WebVTT API](http://dev.w3.org/html5/webvtt/#api) gives us access to all the text tracks that are defined for an HTML5 video using the `<track>` element.
+Note: The [WebVTT API](https://dev.w3.org/html5/webvtt/#api) gives us access to all the text tracks that are defined for an HTML5 video using the `<track>` element.
 
 ### Building a caption menu
 
@@ -260,7 +260,7 @@ We also added some rudimentary styling for the newly created subtitles menu:
 
 ## Styling the displayed subtitles
 
-One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via [CSS Extensions](http://dev.w3.org/html5/webvtt/#css-extensions).
+One of the less well known about and supported features of WebVTT is the ability to style the individual subtitles (something called text cues) via [CSS Extensions](https://dev.w3.org/html5/webvtt/#css-extensions).
 
 The `::cue` pseudo-element is the key to targetting individual text track cues for styling, as it matches any defined cue. There are only a handful of CSS properties that can be applied to a text cue:
 
@@ -282,7 +282,7 @@ For example, to change the text colour of the text track cues you can write:
 }
 ```
 
-If the WebVTT file uses [voice spans](http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
+If the WebVTT file uses [voice spans](https://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-voice-span), which allow cues to be defined as having a particular "voice":
 
 ```
 0
@@ -329,24 +329,24 @@ Firefox's implementation was completely broken due to a [bug](https://bugzilla.m
 
 If, after reading through this article you decide that you can't be bothered to do all of this and want someone else to do it for you, there are plenty of plugins out there that offer caption and subtitle support that you can use.
 
-- [plyr.io](http://plyr.io)
+- [plyr.io](https://plyr.io)
   - : This modern video player implements subtitles in both SRT and WebVTT file formats.
-- [playr](http://www.delphiki.com/html5/playr/)
+- [playr](https://www.delphiki.com/html5/playr/)
   - : This small plugin implements subtitles, captions, and chapters as well as both WebVTT and SRT file formats.
 - [Flowplayer](https://flowplayer.org/player/)
   - : HTML5 player supporting WebVTT.
-- [jwplayer](http://www.jwplayer.com/)
+- [jwplayer](https://www.jwplayer.com/)
   - : This video player is very extensive and does a lot more than simply support video captions. It supports the WebVTT, SRT and DFXP formats.
 - [MediaElement.js](http://mediaelementjs.com/)
   - : Another complete video player that also support video captions, albeit only in SRT format.
-- [LeanBack Player](http://www.leanbackplayer.com/)
+- [LeanBack Player](https://www.leanbackplayer.com/)
   - : Yet another video player that supports WebVTT captions as well as providing other standard player functionality.
-- [SublimeVideo](http://sublimevideo.net)
+- [SublimeVideo](https://sublimevideo.net)
   - : This player also supports captions through WebVTT and SRT files.
-- [Video.js](http://www.videojs.com/)
+- [Video.js](https://www.videojs.com/)
   - : Supports WebVTT video subtitles.
 - [Radiant Media Player](https://www.radiantmediaplayer.com)
   - : Supports multi-languages WebVTT closed captions
 
 > [!NOTE]
-> You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](http://praegnanz.de/html5video/).
+> You can find an excellent list of HTML5 Video Players and their current "state" at [HTML5 Video Player Comparison](https://praegnanz.de/html5video/).

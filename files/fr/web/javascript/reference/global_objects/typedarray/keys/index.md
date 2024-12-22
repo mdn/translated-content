@@ -56,10 +56,10 @@ console.log(eArr.next().value); // 4
 
 ## Voir aussi
 
-- [Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
 - {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
-- [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

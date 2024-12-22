@@ -37,7 +37,7 @@ const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
   - : Un objet qui contient les paramètres de votre requête. Les options possibles sont :
 
     - `method`
-      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
+      - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Les entêtes à ajouter à votre requête, contenues dans un objet {{domxref("Headers")}} ou dans un objet avec des {{domxref("ByteString")}} pour valeurs.
     - `body`
@@ -74,7 +74,7 @@ Une {{domxref("Promise")}} qui se résoud avec un object {{domxref("Response")}}
 
 ## Exemple
 
-Dans notre [exemple de requête avec fetch](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [cet exemple en direct](http://mdn.github.io/fetch-examples/fetch-request/)) nous créons une nouvelle {{domxref("Request")}} avec le constructeur correspondant, puis on l'envoie en appellant `fetch()`. Comme nous récupérons une image, nous utilisons la méthode {{domxref("Body.blob()")}} sur la réponse pour lui donner le bon type MIME pour qu'elle soit gérée correctement, puis l'on crée l'URL correspondant à cet objet et on l'affiche dans un élément {{htmlelement("img")}}.
+Dans notre [exemple de requête avec fetch](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (voir [cet exemple en direct](https://mdn.github.io/fetch-examples/fetch-request/)) nous créons une nouvelle {{domxref("Request")}} avec le constructeur correspondant, puis on l'envoie en appellant `fetch()`. Comme nous récupérons une image, nous utilisons la méthode {{domxref("Body.blob()")}} sur la réponse pour lui donner le bon type MIME pour qu'elle soit gérée correctement, puis l'on crée l'URL correspondant à cet objet et on l'affiche dans un élément {{htmlelement("img")}}.
 
 ```js
 const monImage = document.querySelector("img");
@@ -94,7 +94,7 @@ fetch(maRequete)
   });
 ```
 
-Dans notre [exemple fetch avec initialisation et requête](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request) (voir [cet exemple en direct](http://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) nous faisons la même chose à la différence que nous passons aussi un objet d'initalisation à la méthode `fetch` :
+Dans notre [exemple fetch avec initialisation et requête](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request) (voir [cet exemple en direct](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) nous faisons la même chose à la différence que nous passons aussi un objet d'initalisation à la méthode `fetch` :
 
 ```js
 const monImage = document.querySelector('img');
@@ -147,5 +147,5 @@ let maRequete = new Request("fleurs.jpg", monInit);
 
 - [Fetch API](/fr/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/HTTP/Access_control_CORS)
-- [HTTP](/fr/docs/HTTP)
+- [HTTP access control (CORS)](/fr/docs/Web/HTTP/CORS)
+- [HTTP](/fr/docs/Web/HTTP)

@@ -47,4 +47,4 @@ slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
 - 少ない調整で正しく表示を行えるようになります。
   - 要素内の px 指定の変更のみなので、他ブラウザーへの影響がありません。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

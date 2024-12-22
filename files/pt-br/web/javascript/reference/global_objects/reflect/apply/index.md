@@ -32,7 +32,7 @@ Um {{jsxref("TypeError")}}, se a função especificada no _target_ não for invo
 
 ## Descrição
 
-No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de `this e argumentos` fornecidos como um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+No ES5, tipicamente é usado o método {{jsxref("Function.prototype.apply()")}} para chamar uma função com o valor de `this e argumentos` fornecidos como um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

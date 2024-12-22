@@ -85,5 +85,5 @@ reset.addEventListener("click", () => document.location.reload());
 
 ## Смотрите также
 
-- [Сравнение разных Event Targets](/ru/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Сравнение разных Event Targets](/ru/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
 - [Всплытие и перехват событий](/ru/docs/Learn/JavaScript/Building_blocks/Events#всплытие_и_перехват_событий)

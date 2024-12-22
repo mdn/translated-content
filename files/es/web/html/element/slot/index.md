@@ -5,7 +5,7 @@ slug: Web/HTML/Element/slot
 
 {{HTMLSidebar}}
 
-**El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
+**El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/API/Web_components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
 
 <table class="properties">
   <tbody>
@@ -133,7 +133,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 ```
 
 > [!NOTE]
-> Puedes ver este ejemplo en accion en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (velo [running live](https://mdn.github.io/web-components-examples/element-details/)). Además, puedes encontrar una explicación en [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots).
+> Puedes ver este ejemplo en accion en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (velo [running live](https://mdn.github.io/web-components-examples/element-details/)). Además, puedes encontrar una explicación en [Using templates and slots](/es/docs/Web/API/Web_components/Using_templates_and_slots).
 
 ## Especificaciones
 

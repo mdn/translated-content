@@ -18,7 +18,7 @@ SyntaxError: unterminated string literal
 
 ## O que deu errado?
 
-Há uma {{jsxref("String")}} não finalizada em algum lugar do código. String literais devem se fechadas com aspas simples (`'`) ou duplas (`"`) . O JavaScript não faz distinção entre strings com aspas simples ou aspas duplas. [As sequências de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#Escape_notation) trabalham com strings criadas tanto com aspas simples, quanto com aspas duplas. Para consertar este erro, verifique se:
+Há uma {{jsxref("String")}} não finalizada em algum lugar do código. String literais devem se fechadas com aspas simples (`'`) ou duplas (`"`) . O JavaScript não faz distinção entre strings com aspas simples ou aspas duplas. [As sequências de escape](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation) trabalham com strings criadas tanto com aspas simples, quanto com aspas duplas. Para consertar este erro, verifique se:
 
 - você abriu e fechou sua string literal com aspas (simples ou duplas),
 - você escapou sua string literal corretamente,
@@ -37,7 +37,7 @@ var longString = "This is a very long string which needs
 // SyntaxError: unterminated string literal
 ```
 
-Ao invés disso, você deve utilizar o operador [+ operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition), uma barra invertida(\\), ou [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals). Uma forma de uso do operador `+`, seria assim:
+Ao invés disso, você deve utilizar o operador [+ operator](/pt-BR/docs/Web/JavaScript/Reference/Operators#addition), uma barra invertida(\\), ou [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals). Uma forma de uso do operador `+`, seria assim:
 
 ```js example-good
 var longString =

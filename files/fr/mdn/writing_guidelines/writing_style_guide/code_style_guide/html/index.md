@@ -29,7 +29,7 @@ Les directives suivantes couvrent la manière d'écrire du HTML pour les exemple
 ## Doctype et méta-données
 
 > [!NOTE]
-> Les directives de cette section ne s'appliquent que lorsque vous devez montrer un document HTML complet. La plupart du temps, vous n'aurez pas besoin de le faire ; un extrait est généralement suffisant pour démontrer une fonctionnalité. Lorsque vous utilisez la macro [EmbedLiveSample](/fr/docs/MDN/Structures/Code_examples#traditional_live_samples), il suffit d'inclure l'extrait HTML ; il sera automatiquement inséré dans un document HTML complet lors de son affichage.
+> Les directives de cette section ne s'appliquent que lorsque vous devez montrer un document HTML complet. La plupart du temps, vous n'aurez pas besoin de le faire ; un extrait est généralement suffisant pour démontrer une fonctionnalité. Lorsque vous utilisez la macro [EmbedLiveSample](/fr/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), il suffit d'inclure l'extrait HTML ; il sera automatiquement inséré dans un document HTML complet lors de son affichage.
 
 ### Doctype
 

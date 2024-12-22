@@ -42,7 +42,7 @@ analyser.getFloatFrequencyData(myDataArray);
 
 下面的示例展示了一个 {{domxref("AudioContext")}}对象连接 {{domxref("MediaElementAudioSourceNode")}}到`AnalyserNode 对象的基本用法（即用 AudioContext 将音频内容连接到分析节点，从而可以展开对音频数据的分析）`. 当音频播放时，我们使用 {{domxref("window.requestAnimationFrame()","requestAnimationFrame()")}}方法产生轮询从而不断地收集频率数据，进而在 {{htmlelement("canvas")}} 元素上绘制 winamp（windows 上的一款 MP3 播放软件）条形图风格的频谱。
 
-更多的应用示例和应用信息，可以参看我们 [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) 示例 (在 [source code](https://github.com/mdn/voice-change-o-matic-float-data) 同样有).
+更多的应用示例和应用信息，可以参看我们 [Voice-change-O-matic-float-data](https://mdn.github.io/voice-change-o-matic-float-data/) 示例 (在 [source code](https://github.com/mdn/voice-change-o-matic-float-data) 同样有).
 
 ```html
 <!doctype html>
@@ -122,4 +122,4 @@ analyser.getFloatFrequencyData(myDataArray);
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

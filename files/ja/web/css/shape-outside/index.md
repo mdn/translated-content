@@ -152,11 +152,11 @@ p {
 
 ## 関連情報
 
-- [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes)
-- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_Shapes/From_box_values)
-- [基本シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [画像からのシェイプ](/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)
+- [CSS シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
+- [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/From_box_values)
+- [基本シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
+- [画像からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

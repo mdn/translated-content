@@ -36,7 +36,7 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
 
 ### 嵌入任意 XML
 
-因为 SVG 是一个 XML 应用，所以你**总是**可以在 SVG 文档的任何位置嵌入任意 XML。但是你没有必要定义周围的 SVG 需要怎样反作用于这个内容。实际上，在一个遵从的浏览者中，根本没有反作用的方法，数据将简单被忽略。因此特地在 SVG 中添加了{{ SVGElement("foreignObject") }} 元素。它的唯一的目的是作为其他标记的容器和 SVG 样式属性的载体（更突出的`width`和`height`用来定义该对象占用的空间。）。
+因为 SVG 是一个 XML 应用，所以你**总是**可以在 SVG 文档的任何位置嵌入任意 XML。但是你没有必要定义周围的 SVG 需要怎样反作用于这个内容。实际上，在一个守规矩的浏览者中，根本没有反作用的方法，数据将简单被忽略。因此特地在 SVG 中添加了{{ SVGElement("foreignObject") }} 元素。它的唯一的目的是作为其他标记的容器和 SVG 样式属性的载体（更突出的`width`和`height`用来定义该对象占用的空间。）。
 
 foreignObject 元素是一个好办法，用来在 SVG 中嵌入 XHTML。如果你有更长的文本，该 HTML 布局比 SVG `text`元素更适合。另一个经常被引用的用例是用 MathML 写的方程式。对于 SVG 的科学应用，它是连接两个世界的一个很好的办法。
 

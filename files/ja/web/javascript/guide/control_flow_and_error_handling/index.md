@@ -71,7 +71,7 @@ if (condition) {
 }
 ```
 
-条件は、`true` または `false` と評価される任意の式にすることができます。（`true` と `false` の評価の説明については、[Boolean](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description) を参照してください。）
+条件は、`true` または `false` と評価される任意の式にすることができます。（`true` と `false` の評価の説明については、[Boolean](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description) を参照してください。）
 
 条件が `true` と評価された場合、`statement_1` が実行されます。そうでなければ、`statement_2` が実行されます。`statement_1` と `statement_2` は、入れ子になった `if` 文も含めて、任意の文にすることができます。
 
@@ -241,7 +241,7 @@ console.log("Is there anything else you'd like?");
 
 JavaScript では、ほぼどのようなオブジェクトでも例外として投げることができます。とはいえ、必ずしも投げられるオブジェクトすべてが同等に作られているわけではありません。数値や文字列をエラーとして投げる方法がよく用いられますが、こうした用途のために特別に作られた例外データ型を使用した方がより効率的な場合もあります。
 
-- [ECMAScript 例外](/ja/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
+- [ECMAScript 例外](/ja/docs/Web/JavaScript/Reference/Global_Objects#fundamental_objects)
 - {{domxref("DOMException")}} と {{domxref("DOMError")}}
 
 ### `throw` 文
@@ -438,7 +438,7 @@ try {
 1. `finally` ブロックを含む必要があります。そして、
 2. 囲んでいる `try...catch` 文の `catch` ブロックがエラーの照合先としてチェックされます。
 
-詳しくは、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) の中の [nested try-blocks](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks) を参照してください。
+詳しくは、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) の中の [nested try-blocks](/ja/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks) を参照してください。
 
 ### Error オブジェクトの活用
 

@@ -31,7 +31,7 @@ Não há código real em discussão porque ainda não escolhemos um framework we
 
 ## Web servers e HTTP (uma introdução)
 
-Navegadores Web se comunicam com [servidores Web](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server) usando o **H**yper**T**ext**T**ransfer **P**rotocol ([HTTP](/pt-BR/docs/Web/HTTP)). Quando você clica em um link em uma página web, envia um formulário, ou faz uma pesquisa, o browser envia uma Requisição HTTP para o servidor.
+Navegadores Web se comunicam com [servidores Web](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) usando o **H**yper**T**ext**T**ransfer **P**rotocol ([HTTP](/pt-BR/docs/Web/HTTP)). Quando você clica em um link em uma página web, envia um formulário, ou faz uma pesquisa, o browser envia uma Requisição HTTP para o servidor.
 
 A requisição inclui:
 
@@ -62,7 +62,7 @@ Os sites estáticos e dinâmicos (discutidos nas seções a seguir) usam exatame
 Você pode fazer uma simples requisição GET clicando em um link ou buscando em um site (como uma simples ferramenta de pesquisa). Por exemplo, a requisição HTTP enviada quando você realiza uma busa na MDN pelo termo "cliente servidor visão geral" será muito parecido com o texto mostrado abaixo (não será identico porque partes da mensagem depente de seu navegador/configuração.
 
 > [!NOTE]
-> O formato das mensagens HTTP é definido em um "padrão da web" ([RFC7230](http://www.rfc-editor.org/rfc/rfc7230.txt)). Você não precisa saber esse nível de detalhe, mas pelo menos agora você sabe de onde vem tudo isso.
+> O formato das mensagens HTTP é definido em um "padrão da web" ([RFC7230](https://www.rfc-editor.org/rfc/rfc7230.txt)). Você não precisa saber esse nível de detalhe, mas pelo menos agora você sabe de onde vem tudo isso.
 
 #### A requisição
 
@@ -190,7 +190,7 @@ Content-Length: 0
 ```
 
 > [!NOTE]
-> As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [WebSniffer](https://websniffer.com/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](/pt-BR/docs/Tools/Network_Monitor) no Firefox).
+> As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [WebSniffer](https://websniffer.com/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) no Firefox).
 
 ## Sites estáticos
 

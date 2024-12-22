@@ -340,6 +340,6 @@ Além dos exemplos variados acima, você encontrará as entradas de alcance demo
 
 ## See also
 
-- [HTML Forms](/pt-BR/docs/Learn/HTML/Forms)
+- [HTML Forms](/pt-BR/docs/Learn/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/pt-BR/docs/Web/HTML/Element/input/number)

@@ -270,7 +270,7 @@ fetch(url)
   );
 ```
 
-On envoie la requête en passant la variable `url` comme paramètre à la fonction [`fetch()`](/fr/docs/Web/API/fetch) puis on convertit le corps de la réponse avec la fonction [`json()`](/fr/docs/Web/API/Response/json) puis on passe le JSON ainsi obtenu à la fonction `displayResults()` afin que les données puissent être affichées dans l'interface utilisateur. On intercepte et affiche dans la console les éventuelles erreurs.
+On envoie la requête en passant la variable `url` comme paramètre à la fonction [`fetch()`](/fr/docs/Web/API/Window/fetch) puis on convertit le corps de la réponse avec la fonction [`json()`](/fr/docs/Web/API/Response/json) puis on passe le JSON ainsi obtenu à la fonction `displayResults()` afin que les données puissent être affichées dans l'interface utilisateur. On intercepte et affiche dans la console les éventuelles erreurs.
 
 ### Afficher les données
 

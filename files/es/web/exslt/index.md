@@ -5,15 +5,15 @@ slug: Web/EXSLT
 
 {{XsltRef}}EXSLT es un conjunto de extensiones de [XSLT](/es/XSLT). Existen varios módulos; aquellos que están implementados por Firefox se listan a continuación:
 
-- [Common](#Common) (`exsl`)
+- [Common](#common) (`exsl`)
   - : Proporciona elementos y funciones de extensión básicas.
-- [Math](#Math) (`math`)
+- [Math](#math) (`math`)
   - : Proporciona rutinas para la comparación de nodos.
-- [Regular expressions](#Regular_expressions) (`regexp`)
+- [Regular expressions](#regular_expressions) (`regexp`)
   - : Proporciona facilidades para usar expresiones regulares en sintaxis de JavaScript.
-- [Sets](#Sets) (`set`)
+- [Sets](#sets) (`set`)
   - : Proporciona rutinas para la manipulación de sets.
-- [Strings](#Strings) (`str`)
+- [Strings](#strings) (`str`)
   - : Proporciona funciones para la manipulación de cadenas.
 
 ### Uso de EXSLT

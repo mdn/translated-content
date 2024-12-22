@@ -156,4 +156,4 @@ function rotate() {
 ## 関連情報
 
 - [Mozilla CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
-- [CSS 背景と境界モジュール](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS 背景と境界モジュール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
