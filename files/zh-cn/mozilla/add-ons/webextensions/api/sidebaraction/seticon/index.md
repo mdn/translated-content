@@ -2,18 +2,18 @@
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 948f86c2251aa5234f075211fcaeb072e09cc75d
 ---
 
 {{AddonSidebar}}
 
 设置侧边栏的图标。
 
-你可以指定一个单一图标，作为一个图片文件的路径或一个 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象。
+你可以通过提供一个图片文件的路径，或一个 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象来指定单独一个图标。
 
-你可以通过提供一个包含多个路径或 `ImageData` 对象的字典来指定多个不同尺寸的图标，这样图标就不必为具有不同像素密度的设备进行缩放。
+你也可以通过提供一个包含多个路径或 `ImageData` 对象的字典来指定多个不同尺寸的图标，这样图标就不必为具有不同像素密度的设备进行缩放。
 
-这是一个异步函数，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 图标类型
 
@@ -21,11 +21,11 @@ l10n:
 
 如果你没有在 `sidebar_action` 键中指定图标，你将得到浏览器的默认图标。这被称为“_默认图标_”。
 
-如果你使用 `setIcon()` 设置一个新图标，并包含 `tabId` 选项，那么图标仅为给定的标签设置。这个图标称为“_标签特定图标_”。
+如果你使用 `setIcon()` 设置一个新图标，并包含 `tabId` 选项，那么将仅为指定的标签页设置图标。这个图标称为“_标签页特定图标_”。
 
-如果你使用 `setIcon()` 设置一个新图标，并包含 `windowId` 选项，那么图标仅为给定的窗口设置。这个图标称为“_窗口特定图标_”，并将出现在该窗口的所有没有设置标签特定图标的标签中。
+如果你使用 `setIcon()` 设置一个新图标，并包含 `windowId` 选项，那么将仅为给定的窗口设置图标。这个图标称为“_窗口特定图标_”，并将出现在该窗口的所有没有设置标签页特定图标的标签页中。
 
-如果你使用 `setIcon()` 设置一个新图标，并省略 `tabId` 和 `windowId` 选项，那么这将设置“_全局图标_”。全局图标将出现在所有没有设置标签特定图标的标签中，且其窗口没有设置窗口特定图标的标签中。
+如果你使用 `setIcon()` 设置一个新图标，并省略 `tabId` 和 `windowId` 选项，那么这将设置“_全局图标_”。全局图标将出现在所有没有设置标签页特定图标的标签中，且其窗口没有设置窗口特定图标的标签中。
 
 ## 语法
 
@@ -39,11 +39,11 @@ let settingIcon = browser.sidebarAction.setIcon(
 
 - `details`
 
-  - : `object`，包含如下属性的对象：
+  - : `object`。包含如下属性的对象：
 
     - `imageData` {{optional_inline}}
 
-      - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` 或 `object`。这要么是一个单一的 `ImageData` 对象，要么是一个字典对象。
+      - : {{WebExtAPIRef('sidebarAction.ImageDataType')}} 或 `object`。这要么是一个单一的 `ImageData` 对象，要么是一个字典对象。
 
         如果 `imageData` 是一个字典，那么每个属性的值是一个 `ImageData` 对象，其名称是其大小，如下所示：
 
@@ -56,7 +56,7 @@ let settingIcon = browser.sidebarAction.setIcon(
         });
         ```
 
-        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action#choosing_icon_sizes)。
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action#选择图标尺寸)。
 
         如果 `path` 是一个空字符串，浏览器将使用默认图标。
 
