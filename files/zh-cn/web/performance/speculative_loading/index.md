@@ -17,9 +17,9 @@ l10n:
 
 推测性加载有几种机制：
 
-- **预取（Prefetching）** 在需要之前获取渲染文档（或文档的一部分）所需的一些或全部资源，以便在将要渲染时更快地实现渲染。
-- **预渲染（Prerendering）** 更进一步，会实际渲染内容，以便在需要时可以展示。根据实现方式的不同，可以实现从旧页面到新页面的即时导航。
-- **预连接（Preconnecting）** 通过预先执行部分或全部的连接握手（即 DNS + TCP + TLS）来加速来自给定源的未来加载。
+- **预取（Prefetching）**在需要之前获取渲染文档（或文档的一部分）所需的一些或全部资源，以便在将要渲染时更快地实现渲染。
+- **预渲染（Prerendering）**更进一步，会实际渲染内容，以便在需要时可以展示。根据实现方式的不同，可以实现从旧页面到新页面的即时导航。
+- **预连接（Preconnecting）**通过预先执行部分或全部的连接握手（即 DNS + TCP + TLS）来加速来自给定源的未来加载。
 
 > [!NOTE]
 > 上述描述是高层次和泛化的。浏览器究竟将执行何种操作来实现预取和预渲染，取决于所使用的特性。更准确的特性描述在下面的[推测性加载特性](#推测性加载特性)部分给出。
@@ -77,7 +77,7 @@ Link: <https://example.com>; rel="preconnect"
 
 ```html
 <link rel="preload" href="main.js" as="script" />
-<!-- CORS-enabled preload -->
+<!-- 允许夸源的预加载 -->
 <link
   rel="preload"
   href="https://www.example.com/fonts/cicle_fina-webfont.woff2"
@@ -163,22 +163,22 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 ### 推测规则 API
 
-[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 用于指定一组规则，以确定浏览器应预取或预渲染哪些未来的文档。这些规则通过内联 [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) 元素和 {{httpheader("Speculation-Rules")}} 标头引用的外部文本文件中的 JSON 结构给出。
+[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 用于指定一组规则，以确定浏览器应预取或预渲染哪些未来的文档。这些规则通过内联 [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 元素和 {{httpheader("Speculation-Rules")}} 标头引用的外部文本文件中的 JSON 结构给出。
 
 ## 何时使用每个特性？
 
 下表总结了上述特性，并提供了何时使用每个特性的指导。
 
 | 推测性加载特性                                                                    | 目的                                   | 何时使用                                                                                                                                                                                                                                                                                            |
-| --------------------------------------------------------------------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------------------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`<link rel="preconnect">`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)       | 跨源连接预热                           | 在最关键的跨源连接上使用，以提供性能改进。                                                                                                                                                                                                                                                          |
 | [`<link rel="dns-prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/dns-prefetch)   | 跨源连接预热                           | 在所有跨源连接上使用，以提供连接时的小性能改进。                                                                                                                                                                                                                                                    |
 | [`<link rel="preload">`](/zh-CN/docs/Web/HTML/Attributes/rel/preload)             | 当前页面子资源的高优先级加载           | 用于更快地加载当前页面的高优先级资源，以实现战略性能改进。不要预加载所有内容，否则你不会看到好处。还有其他一些有趣的用途——参阅 Smashing Magazine 的[预加载：有什么好处？](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/)（2016）。                                           |
 | [`<link rel="modulepreload">`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) | 当前页面 JavaScript 模块的高优先级加载 | 用于预加载当前页面的高优先级 JavaScript 模块，以实现战略性能改进。                                                                                                                                                                                                                                  |
 | [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)           | 预填充 HTTP 缓存                       | 用于预取同站未来导航资源或这些页面上使用的子资源。使用 HTTP 缓存，因此在文档预取方面存在一些问题，例如可能被 [Cache-Control](/zh-CN/docs/Web/HTTP/Headers/Cache-Control) 标头阻止。相反，如果支持的话，使用[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 进行文档预取。 |
 | [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Attributes/rel/prerender)         | 为下一次导航做准备                     | 已弃用；建议不要使用。相反，如果支持的话，使用[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预渲染。                                                                                                                                                                      |
-| [推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预取         | 为下一次导航做准备                     | 用于预取同站或跨站未来导航文档。如果支持的话，建议广泛采用；确保页面[安全预取](/zh-CN/docs/Web/API/Speculation_Rules_API#不安全的预取)。它不处理子资源预取；为此你需要使用 `<link rel="prefetch">`。                                                                                    |
-| [推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预渲染         | 为下一次导航做准备                     | 用于预取同源未来导航资源，以实现几乎即时的导航。在支持的高优先级页面上使用；确保页面[安全预渲染](/zh-CN/docs/Web/API/Speculation_Rules_API#不安全的预渲染)。                                                                                                                                 |
+| [推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预取                    | 为下一次导航做准备                     | 用于预取同站或跨站未来导航文档。如果支持的话，建议广泛采用；确保页面[安全预取](/zh-CN/docs/Web/API/Speculation_Rules_API#不安全的预取)。它不处理子资源预取；为此你需要使用 `<link rel="prefetch">`。                                                                                    |
+| [推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 预渲染                  | 为下一次导航做准备                     | 用于预取同源未来导航资源，以实现几乎即时的导航。在支持的高优先级页面上使用；确保页面[安全预渲染](/zh-CN/docs/Web/API/Speculation_Rules_API#不安全的预渲染)。                                                                                                                                 |
 
 ## 参见
 
