@@ -13,7 +13,7 @@ original_slug: Learn/JavaScript/Building_blocks/Functions
     <tr>
       <th scope="row">先備知識：</th>
       <td>
-        基礎電腦術語、對 HTML 及 CSS 有基本認識、<a href="/zh-TW/docs/Learn/JavaScript/First_steps"
+        基礎電腦術語、對 HTML 及 CSS 有基本認識、<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >JavaScript 的第一步</a>。
       </td>
     </tr>

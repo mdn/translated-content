@@ -13,12 +13,12 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
     <tr>
       <th scope="row">先決條件：</th>
       <td>
-        熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a
-          href="/zh-TW/docs/Learn/CSS"
+        熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+          href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
-        >、<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+        >、<a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
         核心語言的基本；<a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-TW/docs/Learn_web_development/Extensions/Testing/Introduction"
           >跨瀏覽器測試的重要原則</a
         >。
       </td>

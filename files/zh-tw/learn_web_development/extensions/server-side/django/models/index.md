@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">前提:</th>
       <td>
-        <a href="/zh-TW/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
           >Django 教學 2: 創建骨架網站。</a
         >
       </td>

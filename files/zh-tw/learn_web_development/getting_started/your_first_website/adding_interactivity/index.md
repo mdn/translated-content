@@ -63,7 +63,7 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 接著我們來解釋一下 JavaScript 基本特性，以讓你更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果你可以充分理解這些基礎知識，你就可以撰寫程式來創造無限可能！
 
 > [!WARNING]
-> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
+> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。
 
 ### 變數（Variables）
 

@@ -31,7 +31,7 @@ original_slug: Learn/JavaScript/First_steps/Strings
 
 ## 字串 — 基礎
 
-剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)）。
+剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以另開一個頁籤或視窗[使用他](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ，或者使用瀏覽器的[開發者工具](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)）。
 
 ```html hidden
 <!doctype html>
@@ -389,7 +389,7 @@ I gave it a score of ${(score / highestScore) * 100}%.`;
 ## 測試你的技能！
 
 你已到達文章的結尾了，但你能記得最重要的資訊嗎?
-在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
+在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
 
 ## 結語
 

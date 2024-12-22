@@ -17,11 +17,11 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 如果想要完全掌控你發佈的網站，那你可能需要花錢買：
 
 - 主機：跟主機租借商（hosting company）的[網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)（web server）租一個放置檔案的空間。你把你建置的網頁檔案放到這個空間中，然後想要連結到網頁的人就能透過網頁伺服器連結到你的網站。
-- [網域名稱](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)(domain name)：人們可以透過這個獨特的網址來尋找你的網站，像是 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你需要向**網域名稱註冊商**（domain registrar）租借網域名稱。
+- [網域名稱](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)(domain name)：人們可以透過這個獨特的網址來尋找你的網站，像是 `http://www.mozilla.org` 或 `http://www.bbc.co.uk`。你需要向**網域名稱註冊商**（domain registrar）租借網域名稱。
 
 許多專業的網站是用這個方法發佈的。
 
-除此之外，你還會需要一個 {{Glossary("FTP", "File Transfer Protocol (FTP)")}} 程式（點選 [How much does it cost: software](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software) 來取得更多資訊），這樣才能真正的把你建置的網頁檔案傳達給伺服器。FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊，像是使用者名稱、密碼以及 host name 來登入你的網頁伺服器，它就會以兩個視窗的形式分別顯示你電腦裡的檔案和你網頁伺服器上的檔案，然後你就可以移動你的檔案。
+除此之外，你還會需要一個 {{Glossary("FTP", "File Transfer Protocol (FTP)")}} 程式（點選 [How much does it cost: software](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#software) 來取得更多資訊），這樣才能真正的把你建置的網頁檔案傳達給伺服器。FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊，像是使用者名稱、密碼以及 host name 來登入你的網頁伺服器，它就會以兩個視窗的形式分別顯示你電腦裡的檔案和你網頁伺服器上的檔案，然後你就可以移動你的檔案。
 
 ![](ftp.jpg)
 
@@ -37,7 +37,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 使用工具來發佈網站：
 
 - [GitHub](https://github.com/) 可以交流程式的平台，它提供你一個空間來存放程式碼，這個空間是基於 [Git](http://git-scm.com/) 的**版本控制系統，**你能夠透過系統共同編輯平台上的程式專案，而這個系統是開放資源，也就是說全世界的人都可以找到你的 GitHub code，包括使用它、從中學習並將它改得更好。GitHub 提供一個非常實用的工具— [GitHub Pages](https://pages.github.com/)，它能讓你發佈網站。
-- [Google App Engine](https://cloud.google.com/appengine/) 是一個強大的平台，不管是要從頭建置 multi-tiered web 程式還是託管靜態網站，它都能讓你在 Google 的基礎下建置和運行應用程式。點選 [How do you host your website on Google App Engine?](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) 以獲得更多資訊。
+- [Google App Engine](https://cloud.google.com/appengine/) 是一個強大的平台，不管是要從頭建置 multi-tiered web 程式還是託管靜態網站，它都能讓你在 Google 的基礎下建置和運行應用程式。點選 [How do you host your website on Google App Engine?](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) 以獲得更多資訊。
 
 這類工具和託管不同，通常他們都是免費的，不過功能當然也會受限。
 
@@ -77,8 +77,8 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 ## 參閱
 
 - [何謂網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
-- [Understanding domain names](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-- [How much does it cost to do something on the web?](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- [Understanding domain names](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
+- [How much does it cost to do something on the web?](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
 - [Cheap or Free Static Website Hosting](http://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 

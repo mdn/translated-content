@@ -14,12 +14,12 @@ original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
       <th scope="row">需求：</th>
       <td>
         我們在
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 入門</a
         >
         中介紹過的 HTML 基礎，以及在
         <a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML 的文字基礎知識</a
         >
         中介紹過的文字格式化技巧。
@@ -312,7 +312,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 ```
 
 > [!NOTE]
-> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method)來得知有那些常用的查詢記號。
+> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_get_method)來得知有那些常用的查詢記號。
 
 以下是 `mailto` URL 的其他例子：
 
@@ -324,7 +324,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ## 小試身手！
 
-你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
+你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)
 
 ## 總結
 

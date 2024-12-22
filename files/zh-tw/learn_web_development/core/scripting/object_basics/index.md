@@ -14,8 +14,8 @@ original_slug: Learn/JavaScript/Objects/Basics
       <th scope="row">必要條件：</th>
       <td>
         基本的電腦素養、對 HTML 與 CSS 已有初步認識、熟悉 JavaScript 基本概念
-        (參閱〈<a href="/zh-TW/docs/Learn/JavaScript/First_steps">First steps</a
-        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
+        (參閱〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting">First steps</a
+        >〉與〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >〉)。
       </td>

@@ -18,11 +18,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
       <td>
         <p>
           推薦你至少需熟悉基本的
-          <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           等程式語言且具備<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列環境</a
           >基本知識。
         </p>

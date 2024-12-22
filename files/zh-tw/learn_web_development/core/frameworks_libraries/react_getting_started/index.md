@@ -14,12 +14,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_g
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a
-            href="/zh-TW/docs/Learn/CSS"
+          熟悉基本的<a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+            href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
             >CSS</a
-          >、以及<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a
+          >、以及<a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a
           >程式語言，具備<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列環境</a
           >的基本知識。
         </p>
@@ -114,9 +114,9 @@ const header = React.createElement(
 
 為了使用[create-react-app](https://create-react-app.dev/)，你需要先安裝[Node.js](https://nodejs.org/en/)。建議你使用長期支援（LTS）版本。Node.js 包括 npm（Node.js 套件管理器）和 npx（Node.js 套件運行器）。
 
-你也可以使用 Yarn 套件管理器作為替代方案，但我們假設你在這個教學中使用 npm。參閱[Package management basics](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)可取得有關 npm 和 yarn 的更多資訊。
+你也可以使用 Yarn 套件管理器作為替代方案，但我們假設你在這個教學中使用 npm。參閱[Package management basics](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)可取得有關 npm 和 yarn 的更多資訊。
 
-如果你使用的系統是 Windows，你需要安裝一些軟體來讓 Windows 與 Unix/macOS 的終端機 terminal 保持同等環境，以便使用本教學中提到的 terminal 終端機指令。**Gitbash**（它包含在[git for Windows toolset](https://gitforwindows.org/)工具的其中之一）或者**[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）也同樣適合。有關這些以及一般終端指令的詳細資訊，可以參閱[Command line crash course](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)。
+如果你使用的系統是 Windows，你需要安裝一些軟體來讓 Windows 與 Unix/macOS 的終端機 terminal 保持同等環境，以便使用本教學中提到的 terminal 終端機指令。**Gitbash**（它包含在[git for Windows toolset](https://gitforwindows.org/)工具的其中之一）或者**[Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)**（**WSL**）也同樣適合。有關這些以及一般終端指令的詳細資訊，可以參閱[Command line crash course](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。
 
 另外要記住的是，React 和 ReactDOM 建立的應用程式只能在相當現代的瀏覽器上執行——通過一些 polyfills 才可以在 IE9+上運作。建議你使用現代瀏覽器來學習這些教學，例如：Firefox、Microsoft Edge、Safari 或 Chrome 等。
 
@@ -183,9 +183,9 @@ The **`src`** directory is where we'll spend most of our time, as it's where the
 
 The **`public`** directory contains files that will be read by your browser while you're developing the app; the most important of these is `index.html`. React injects your code into this file so that your browser can run it. There's some other markup that helps create-react-app function, so take care not to edit it unless you know what you're doing. You very much should change the text inside the [`<title>`](/zh-TW/docs/Web/HTML/Element/title) element in this file to reflect the title of your application. Accurate page titles are important for accessibility!
 
-The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) tutorial.
+The `public` directory will also be published when you build and deploy a production version of your app. We won't cover deployment in this tutorial, but you should be able to use a similar solution to that described in our [Deploying our app](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Deployment) tutorial.
 
-The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` file contains information about our project that Node.js/npm uses to keep it organized. This file is not unique to React applications; create-react-app merely populates it. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file \`package.json\`? on NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/); we also talk about it in our [Package management basics](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Package_management) tutorial.
 
 ## 探索我們的第一個 React 元件——`<App/>`
 

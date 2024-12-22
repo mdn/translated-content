@@ -48,7 +48,7 @@ myFunction();
 
 #### 函數作用域
 
-記得[函數有自己的作用域](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#函數作用域及衝突)——你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
+記得[函數有自己的作用域](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#函數作用域及衝突)——你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn_web_development/Core/Scripting/Return_values)。
 
 #### 在 return 敘述後執行語法
 
@@ -81,11 +81,11 @@ const myObject = {
 - [什麼是陣列？](/zh-TW/docs/Learn_web_development/Core/Scripting/Arrays#what_is_an_array)
 - [什麼是迴圈？](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops)
 - [什麼是函數？](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions)
-- [什麼是事件？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
+- [什麼是事件？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events)
 - [什麼是物件？](/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics#物件基礎概念)
-- [什麼是 JSON？]/zh-TW/docs/Learn/JavaScript/Objects/JSON#說真的，到底什麼是\_json？)
-- [什麼是 Web API？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#什麼是_api)
-- [什麼是 DOM？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)
+- [什麼是 JSON？](/zh-TW/docs/Learn_web_development/Core/Scripting/JSON#說真的，到底什麼是_json？)
+- [什麼是 Web API？](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#什麼是_api)
+- [什麼是 DOM？](/zh-TW/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)
 
 ## 基本使用例子
 
@@ -134,7 +134,7 @@ const myObject = {
 ### JavaScript 除錯
 
 - [有哪些 error 的基本型態？](/zh-TW/docs/Learn_web_development/Core/Scripting/What_went_wrong#錯誤類型)
-- [什麼是瀏覽器開發人員工具以及如何獲取？](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
+- [什麼是瀏覽器開發人員工具以及如何獲取？](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
 - [如何在 JavaScript 主控台輸出一個值？](/zh-TW/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#the_console_api)
 - [如何使用中斷點及其它 JavaScript 除錯功能？](/zh-TW/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#using_the_javascript_debugger)
 
@@ -166,12 +166,12 @@ const myObject = {
 
 - [如何在瀏覽器裡找到函數](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#瀏覽器內建函數)
 - [函數（function）與方法（method）的區別是什麼？](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#函數（function）_vs_方法（method）))
-- [如何創建自己的函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
+- [如何創建自己的函數？](/zh-TW/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
 - [如何執行（呼叫）一個函數？](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#呼叫函數)
 - [什麼是匿名函數？](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#匿名函數)
 - [如何在呼叫函數時指定參數？](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#函數參數)
 - [什麼是函數作用域？](/zh-TW/docs/Learn_web_development/Core/Scripting/Functions#函數作用域及衝突)
-- [什麼是回傳值以及如何利用它？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
+- [什麼是回傳值以及如何利用它？](/zh-TW/docs/Learn_web_development/Core/Scripting/Return_values)
 
 ### 物件
 
@@ -192,14 +192,14 @@ const myObject = {
 
 ### 事件
 
-- [什麼是事件處理器以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties)
-- [什麼是行內事件處理器？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)
-- [`addEventListener()`函數在做什麼以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#example_using_event_listeners)
-- [我該使用哪種機制來在網頁中新增事件程式嗎？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_I_use)
-- [什麼是事件物件以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
-- [如何阻止事件預設行為？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behaviour)
-- [如何在巢狀元素中觸發事件？（事件傳遞機制：事件冒泡與捕獲）](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)
-- [什麼是事件指派以及如何運作？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_delegation)
+- [什麼是事件處理器以及如何使用？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#event_handler_properties)
+- [什麼是行內事件處理器？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these)
+- [`addEventListener()`函數在做什麼以及如何使用？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#example_using_event_listeners)
+- [我該使用哪種機制來在網頁中新增事件程式嗎？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#what_mechanism_should_I_use)
+- [什麼是事件物件以及如何使用？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#event_objects)
+- [如何阻止事件預設行為？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#preventing_default_behaviour)
+- [如何在巢狀元素中觸發事件？（事件傳遞機制：事件冒泡與捕獲）](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture)
+- [什麼是事件指派以及如何運作？](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#event_delegation)
 
 ### JavaScript 物件導向
 
@@ -211,4 +211,4 @@ const myObject = {
 
 ### 網頁 Web API
 
-- [如何使用 JavaScript 操控 DOM（例如新增或移除元素）？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_basic_dom_manipulation)
+- [如何使用 JavaScript 操控 DOM（例如新增或移除元素）？](/zh-TW/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)

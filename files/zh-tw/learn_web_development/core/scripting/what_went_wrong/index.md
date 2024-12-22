@@ -44,7 +44,7 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ## 修復語法錯誤
 
-在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
+在前篇文章中我們讓你在[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中輸入了一些 JavaScript 指令（如果你不記得怎麼打開這個東西，點選前面的連結複習一下）。更重要的是，主控台在瀏覽器的 JavaScript 引擎讀取到有語法錯誤的 JavaScript 時會提示一些錯誤訊息。現在讓我們來看看：
 
 1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
 2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：

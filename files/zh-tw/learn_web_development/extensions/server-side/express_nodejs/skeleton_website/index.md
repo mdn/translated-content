@@ -16,7 +16,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
       <th scope="row">前置條件:</th>
       <td>
         <a
-          href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment"
           >架設一個Node 開發環境</a
         >。回顧Express 教程。
       </td>

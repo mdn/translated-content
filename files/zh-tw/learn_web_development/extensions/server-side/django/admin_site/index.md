@@ -14,7 +14,7 @@ original_slug: Learn/Server-side/Django/Admin_site
       <th scope="row">前提:</th>
       <td>
         先完成:
-        <a href="/zh-TW/docs/Learn/Server-side/Django/Models"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Models"
           >Django Tutorial Part 3: Using models</a
         >.
       </td>

@@ -14,7 +14,7 @@ HTML 的其中一件核心工作，就是給出文件的結構和含義（又稱
       <th scope="row">需求：</th>
       <td>
         熟悉基本 HTML、在
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >
         有講解。

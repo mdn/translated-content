@@ -150,7 +150,7 @@ function updateName() {
 
 這裡我們選擇了一個文字段落（第 1 行），然後加上事件偵聽器，所以當段落被點擊的時候，`updateName()` 程式區塊（5 到 8 行 ）會被執行。`updateName()` 程式區塊（這種可以重複使用的程式區塊被稱為「函數 function」）會向使用者要一個新的名字，然後將插到段落中，更新顯示的內容。
 
-如果你交換前兩行的程式碼，它將不再正常運作。取而代之的，[瀏覽器開發主控台](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)會回報一個錯誤訊息：「`TypeError: para is undefined`」，意思是 `para` 物件尚不存在，所以我們在它上頭增加事件偵聽器。
+如果你交換前兩行的程式碼，它將不再正常運作。取而代之的，[瀏覽器開發主控台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)會回報一個錯誤訊息：「`TypeError: para is undefined`」，意思是 `para` 物件尚不存在，所以我們在它上頭增加事件偵聽器。
 
 > [!NOTE]
 > 這是一個很常見的錯誤，在你嘗試對物件進行操作之前，你需要注意它們已經存在。
@@ -292,7 +292,7 @@ for (var i = 0; i < buttons.length ; i++) {
 
 ### 腳本載入策略
 
-在正確的時機載入腳本涉及一些要注意的東西。並不如它看起來的簡單！其中一個常見的問題是，所有的 HTML 是根據出現順序載入。假如你使用 JavaScript 操作頁面中的元素（精確地來說是 [DOM 元素](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)），如果 JavaScript 在這些 HTML 操作對象前被讀取及解析，你的程式將無法運作。
+在正確的時機載入腳本涉及一些要注意的東西。並不如它看起來的簡單！其中一個常見的問題是，所有的 HTML 是根據出現順序載入。假如你使用 JavaScript 操作頁面中的元素（精確地來說是 [DOM 元素](/zh-TW/docs/Learn_web_development/Core/Scripting/DOM_scripting#The_document_object_model)），如果 JavaScript 在這些 HTML 操作對象前被讀取及解析，你的程式將無法運作。
 
 上面的範例中，內部和外部 JavaScript 範例裡的程式碼都放在 HTML 的 head 區域，在 body 區被載入前就先被解析。這樣會造成一些問題，所以我們載入與執行在文件(HTML 檔)的開頭，是 HTML `body` 還沒解析之前。這可能會產生錯誤，所以我們使用一些模式來處理它。
 
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-這是一個事件偵聽器，它偵聽瀏覽器的「DOMContentLoaded」事件，它是在 HTML body 部分已經完全載入與解析發出。區塊內（... 的部分）的 JavaScript 直到事件被發出後才會執行，這樣子問題就被避開了。（你將會在這個課程中[學習到什麼是事件](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)）
+這是一個事件偵聽器，它偵聽瀏覽器的「DOMContentLoaded」事件，它是在 HTML body 部分已經完全載入與解析發出。區塊內（... 的部分）的 JavaScript 直到事件被發出後才會執行，這樣子問題就被避開了。（你將會在這個課程中[學習到什麼是事件](/zh-TW/docs/Learn_web_development/Core/Scripting/Events)）
 
 在外部程式的範例中，我們使用比較現代的 JavaScript 特性來解決這個問題，`defer` 屬性，它告訴瀏覽器碰到這種 `<script>` 標籤時，繼續下載後面其他的 HTML 內容。
 

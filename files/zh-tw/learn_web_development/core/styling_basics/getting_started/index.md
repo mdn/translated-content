@@ -14,13 +14,13 @@ original_slug: Learn/CSS/First_steps/Getting_started
       <th scope="row">先備知識：</th>
       <td>
         基本的電腦概念、能夠<a
-          href="/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >安裝基本軟體</a
         >，基本<a
-          href="/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >與各種檔案打交道</a
         >的能力，以及 HTML 的基礎（由<a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content"
           >HTML介紹</a
         >學到）。
       </td>
@@ -214,7 +214,7 @@ h1 + p {
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
 > [!NOTE]
-> 如你所見， CSS 提供我們一些方法來選擇元素，而目前為止我們只涉及到表面！我們將在課程後面的[選擇器](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)章節裡有更深入的探討。
+> 如你所見， CSS 提供我們一些方法來選擇元素，而目前為止我們只涉及到表面！我們將在課程後面的[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)章節裡有更深入的探討。
 
 ## 依狀態指定樣式
 

@@ -31,7 +31,7 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 - [1. 前端框架介紹](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Introduction)
   - : 我們從整體概述來探討框架、提供 JavaScript 與框架的簡要歷史、框架存在的理由、他們提供什麼東西、如何決定選擇哪個框架、以及前端框架的的替代方案。
-- [2. 框架的主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [2. 框架的主要功能](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Main_features)
   - : 大多數主要的 JavaScript 前端框架在更動 DOM、處理瀏覽器事件、還有提供良好的開發體驗方面，使出了不同的方法。這篇文章將探討「四大框架」的主要功能、看看他們如完成高層次工作、以及這四個框架的相異之處。
 
 ## React 教學
@@ -45,15 +45,15 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
   - : 在這裡我們將開始與 React 打招呼。我們將探索其背景和用途的一些細節、在自己的電腦建立 React 全家桶、還有建立與把玩簡單的程式，以理解 React 是怎麼跑的。
 - [2. 建立我們的 React todo list](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning)
   - : 我們的任務是驗證 React 的概念（proof-of-concept）：我們將建立一個能讓使用者添加、編輯、刪除需要的工作，同時在不刪除工作的情況下，將它們標記為完成。本文將完成 `App` 組件的基本架構與樣式，以便為下個文章將探討的組件定義與響應性做準備。
-- [3. 把 React app 組件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+- [3. 把 React app 組件化](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_components)
   - : 現在，我們的 app 整個黏在一起了。在做其他事情前，最好把這個程式切成一個個能管理，描述性也好的組件（component）。React 本身對組件的定義不多：那是取決於你的考量！我們將展示如何以聰明的方法，把程式切成一個個組件。
-- [4. 響應性 React：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+- [4. 響應性 React：事件與狀態](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state)
   - : 在組件化以後，現在開始把原本靜態的 UI，能開始與我們實際互動，並修改資料吧。在這裡除了做這件事以外，我們還會深入探討事件和狀態。
-- [5. 響應性 React：編輯、過濾、條件式過濾](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+- [5. 響應性 React：編輯、過濾、條件式過濾](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering)
   - : 在初學 React 之路即將結束前（至少從現在來說），我們將在 Todo list app 裡面，添加畫龍點睛的主要功能：包括編輯已存在的工作、透過給定條件過濾全部、已完成、或未完成的工作。我們將不斷探討條件式 UI 渲染。
-- [6. React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+- [6. React 無障礙](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_accessibility)
   - : 在教學最後，我們將削除最後的障礙：像是能增進可用性，同時降低鍵盤與螢幕報讀用戶困惑的 focus 管理。
-- [7. React 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+- [7. React 的資源](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/React_resources)
   - : 最後的最後，我們將提供鑽研 React 所需的資源。
 
 ## Ember 教學
@@ -63,17 +63,17 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 >
 > 如果想看看最新的程式，可以從我們的 [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) 或互動性的 <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> 看。注意：部分功能沒有放在教學裡面。
 
-- [1. 開始學 Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
+- [1. 開始學 Ember](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Ember_getting_started)
   - : 首先我們將探討 Ember 的原理與用途，還有如何安裝 Ember 全家桶，建立簡單的 app，最後還有完成開發環境。
-- [2. Ember app 架構與組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
+- [2. Ember app 架構與組件](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization)
   - : In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.
-- [3. 響應性 Ember：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
+- [3. 響應性 Ember：事件、類別、狀態](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state)
   - : 此時，我們將開始給 app 添加一些響應性，從而能夠添加和顯示新的待辦事項。在此過程中，我們將研究如何在 Ember 中使用事件，創建組件類以包含用於控制交互功能的 JavaScript 程式，以及設置服務來跟踪應用程序的資料狀態。
-- [4. 響應性 Ember：Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
+- [4. 響應性 Ember：Footer 功能、條件式渲染](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer)
   - : 現在是時候開始處理我們應用程序中的 Footer 功能了。在這裡，我們將更新待辦事項計數器，以顯示仍需完成的正確待辦事項數量，並將樣式正確應用於已完成待辦事項（即已選中復選框的位置）。我們還將連接「清除完成」按鈕。在此過程中，我們將學習在模板中使用條件式渲染的知識。
-- [5. Ember 的路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
+- [5. Ember 的路由](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Ember_routing)
   - : 在本文中，我們學習了路由，有時也稱為基於 URL 的過濾。我們將使用它為三個 Todo 視圖（「全部」、「活動」、「已完成」）中的每個視圖提供唯一的 URL。
-- [6. Ember 的資源與除錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+- [6. Ember 的資源與除錯](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Ember_resources)
   - : 最後的最後，我們將提供鑽研 Ember 所需的資源，以及好用的相關資訊。
 
 ## Vue 教學
@@ -87,19 +87,19 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
   - : 我們首先來介紹 Vue 吧。首先我們將聊聊 Vue 的背景、理解如何安裝新的專案、研究專案的整體架構與單一組件、如何讓專案在自己的電腦執行、並準備好建立一個新範例。
 - [2. 建立第一個 Vue 組件](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_first_component)
   - : 現在來開始鑽研 Vue 並建立第一個組件吧：我們將給 todo list 的各個單元建立獨立的組件。在此同時，我們將學習一些重要概念：比如說在組件內使用組件、透過 prop 傳送資料、還有儲存資料的狀態。
-- [3. 渲染 Vue 組件的列表](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
+- [3. 渲染 Vue 組件的列表](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists)
   - : 現在我們已經有了一個能動的組件；現在將要給我們的 App 添加 `ToDoItem` 這個組件了。在這裡，我們將專精於如何給 `App.vue` 組件，添加一組 todo 的資料，接著使用 `v-for` 指令（directive）讓 `ToDoItem` 透過迴圈顯示出來。
-- [4. 寫一個 todo 表單：Vue 的事件、方法、model](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+- [4. 寫一個 todo 表單：Vue 的事件、方法、model](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models)
   - : 我們已經放了一些資料，同時也透過迴圈把 `ToDoItem` 渲染出來了。接下來，我們將讓使用者輸入 todo 項目、同時需要文字 `<input>`、submit 之後的事件觸發、還有能控制資料的 model。這些就是我們會探討的重點。
-- [5. 透過 CSS 樣式化 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
+- [5. 透過 CSS 樣式化 Vue 組件](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_styling)
   - : 我們的程式看起來終於要漂亮一點了。我們將探討如何透過 CSS 樣式化 Vue 組件。
-- [6. 使用 Vue 的計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
+- [6. 使用 Vue 的計算屬性](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties)
   - : 在這裡我們將使用 Vue 的計算（computed）屬性，加上一個 counter 已便顯示完成工作的數量。計算屬性的功能與 methods 類似，但它只會在資料更新時變動資料。
-- [7. Vue 的條件式渲染：編輯已存在的待辦](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
+- [7. Vue 的條件式渲染：編輯已存在的待辦](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering)
   - : 現在來添加一個還沒探討到的重要功能吧：那就是編輯已經存在的項目。要完成這件事，我們將借用 Vue 在條件式渲染的長才——也就是 `v-if` 與 `v-else`——在現有 todo 項目視圖間切換，同時編輯能更新的視圖。我們還會探討如何添加刪除待辦的功能。
-- [8. 重點管理 Vue ref](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
+- [8. 重點管理 Vue ref](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management)
   - : 我們快講完 Vue 了。最後要看的功能是 focus 管理，或者換句話說，如何消除鍵盤用戶的障礙。我們會看看怎麼透過 Vue ref 完成這件事：這是一項能透過虛擬 DOM、或組件的內部 DOM 結構，直接訪問 DOM 節點的進階功能。
-- [9. Vue 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+- [9. Vue 的資源](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Vue_resources)
   - : 最後的最後，我們將提供鑽研 Vue 所需的資源，以及有用的資訊。
 
 ## Svelte 教學
@@ -115,15 +115,15 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
   - : Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a todo list. In this article we will first have a look at the desired functionality of our app, then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in subsequent articles.
 - [3. Dynamic behavior in Svelte: working with variables and props](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props)
   - : Now that we have our markup and styles ready we can start developing the required features for our Svelte To-Do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete todos, mark them as complete, and filter them by status.
-- [4. Componentizing our Svelte app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+- [4. Componentizing our Svelte app](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_components)
   - : The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.
-- [5. Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+- [5. Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility)
   - : In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. To avoid common pitfalls, we'll have to dig a little deeper into Svelte's reactivity system. We'll also look at solving some accessibility focus issues, and more besides.
-- [6. Working with Svelte stores](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+- [6. Working with Svelte stores](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_stores)
   - : In this article we will show another way to handle state management in Svelte — [Stores](https://svelte.dev/tutorial/writable-stores). Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.
-- [7. TypeScript support in Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+- [7. TypeScript support in Svelte](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript)
   - : We will now learn how to use TypeScript in Svelte applications. First we'll learn what TypeScript is and what benefits it can bring us. Then we'll see how to configure our project to work with TypeScript files. Finally we will go over our app and see what modifications we have to make to fully take advantage of TypeScript features.
-- [8. Deployment and next steps](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+- [8. Deployment and next steps](/zh-TW/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next)
   - : In this final article we will look at how to deploy your application and get it online, and also share some of the resources that you should go on to, to continue your Svelte learning journey.
 
 ## Angular 教學

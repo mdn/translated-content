@@ -105,7 +105,7 @@ original_slug: Learn/Accessibility/WAI-ARIA_basics
 
 在下一個章節我們將更仔細地看看這 4 個領域，並附帶實際的範例。在繼續之前，你應該將備妥螢幕報讀器測試設置，以便在過程中你可以測試這些範例。
 
-更多資訊請參見[螢幕報讀器測試](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)章節。
+更多資訊請參見[螢幕報讀器測試](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Screenreaders)章節。
 
 ### 路標/地標
 
@@ -232,7 +232,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 這將使螢幕報讀器在內容更新時讀出更新的內容。
 
 > [!NOTE]
-> 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 屬性到這個部分，再次更新你的 `<section>` 標籤如下所示：
 
@@ -258,7 +258,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 - `tabindex="0"` —如上述，此值允許正常不被 tab 遊走到的元素變得可以 tab 遊走，這是`tabindex`最有用的值。
 - `tabindex="-1"` — 此允許正常不被 tab 遊走到的元素，可以程式化地獲得焦點，如透過 JavaScript 或作為連結的對象。
 
-我們更詳細討論這一點並在我們的 HTML 無障礙文章中展示典型的實作—請參見 [Building keyboard accessibility back in](/zh-TW/docs/Learn/Accessibility/HTML#Building_keyboard_accessibility_back_in).
+我們更詳細討論這一點並在我們的 HTML 無障礙文章中展示典型的實作—請參見 [Building keyboard accessibility back in](/zh-TW/docs/Learn_web_development/Core/Accessibility/HTML#Building_keyboard_accessibility_back_in).
 
 ### 非語意控制措施的無障礙
 
@@ -266,7 +266,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 #### 表單驗證與錯誤警告
 
-首先，讓我們再看一次在我們的 CSS 與 JavaScript 無障礙文章中第一次看的表單範例(請閱讀 [Keeping it unobtrusive](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)完整回顧)。在本章節文末我們展示當你試著送出表單而驗證錯誤時，出現我們包含一些在錯誤訊息框的 ARIA 屬性。
+首先，讓我們再看一次在我們的 CSS 與 JavaScript 無障礙文章中第一次看的表單範例(請閱讀 [Keeping it unobtrusive](/zh-TW/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#Keeping_it_unobtrusive)完整回顧)。在本章節文末我們展示當你試著送出表單而驗證錯誤時，出現我們包含一些在錯誤訊息框的 ARIA 屬性。
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
@@ -343,7 +343,7 @@ function toggleMusician(bool) {
 
 #### 描述非語意按鈕為按鈕
 
-本課程我們已經談過幾次按鈕、連結或表單元素(參見 HTML 無障礙文章的 [UI controls](/zh-TW/docs/Learn/Accessibility/HTML#UI_controls) ，以及前述[增強鍵盤無障礙](#增強鍵盤無障礙)的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 `tabindex` 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。
+本課程我們已經談過幾次按鈕、連結或表單元素(參見 HTML 無障礙文章的 [UI controls](/zh-TW/docs/Learn_web_development/Core/Accessibility/HTML#UI_controls) ，以及前述[增強鍵盤無障礙](#增強鍵盤無障礙)的原生無障礙(以及在使用其他元素偽造背後的無障礙議題)。基本上，使用 `tabindex` 與一些 JavaScript，在很多情況下，你可以在沒有太多困難下增加鍵盤無障礙支援功能。
 
 但螢幕報讀器的情況如何呢？他們仍然無法將這些元素視為按鈕。如果我們用螢幕報讀器測試我們的 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 範例，我們偽造的按鈕將會用句子如 "Click me!, group"讀出，很顯然地令人困惑。
 
@@ -364,7 +364,7 @@ function toggleMusician(bool) {
 
 除了標準 HTML 可用外，還有一堆其他[角色](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)可以辨識非語意的元素結構作為一般的使用者介面特徵，例如 [`combobox`](https://www.w3.org/TR/wai-aria-1.1/#combobox), [`slider`](https://www.w3.org/TR/wai-aria-1.1/#slider), [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel), [`tree`](https://www.w3.org/TR/wai-aria-1.1/#tree)。你可在 [Deque university code library](https://dequeuniversity.com/library/)中找到很多有用的範例，可給你這些控制措施如何做到無障礙的想法。
 
-我們來看看我們自己的範例，我們回到我們簡單的絕對位置頁籤的介面(參見在我們的 CSS 與 JavaScript 無障礙文章中的 [Hiding things](/zh-TW/docs/Learn/Accessibility/CSS_and_JavaScript#Hiding_things) )，你可以找到 [頁籤資訊框範例](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)(看[原始碼](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
+我們來看看我們自己的範例，我們回到我們簡單的絕對位置頁籤的介面(參見在我們的 CSS 與 JavaScript 無障礙文章中的 [Hiding things](/zh-TW/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#Hiding_things) )，你可以找到 [頁籤資訊框範例](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)(看[原始碼](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)).
 
 本範例以鍵盤無障礙而言運作正常—你可以開心地在不同的頁籤間跳位，並且選擇他們顯示該頁籤的內容，也相當地容易操作—你可以滾動內容並使用標題來導覽，即使你看不到螢幕上正發生的事情。然而內容是甚麼並非很明顯—螢幕報讀器目前以連結的清單報讀內容，以及有三個標題的內容。這樣無法給你了解內容之間的關係。最好給予使用者更多關於內容結構的線索。
 

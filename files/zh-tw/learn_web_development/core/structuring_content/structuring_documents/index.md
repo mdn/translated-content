@@ -14,15 +14,15 @@ original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
       <th scope="row">預備知識:</th>
       <td>
         Basic HTML familiarity, as covered in
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >. HTML text formatting, as covered in
         <a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML text fundamentals</a
         >. How hyperlinks work, as covered in
         <a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >Creating hyperlinks</a
         >.
       </td>
@@ -306,7 +306,7 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
+You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
 
 ## Summary
 

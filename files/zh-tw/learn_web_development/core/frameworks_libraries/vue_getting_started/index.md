@@ -14,11 +14,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_get
       <th scope="row">預備知識</th>
       <td>
         <p>
-          熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a> 、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 、以及
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 、以及
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           的核心知識，知道如何使用<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列工具（ terminal/command line ）</a
           >。
         </p>
@@ -71,7 +71,7 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 2. npm 或 yarn
 
 > [!NOTE]
-> 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) 。
+> 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#adding_powerups) 。
 
 在你的終端機執行以下命令來安裝 CLI ：
 

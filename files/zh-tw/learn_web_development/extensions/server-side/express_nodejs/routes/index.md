@@ -14,10 +14,10 @@ original_slug: Learn/Server-side/Express_Nodejs/routes
       <th scope="row">先備知識:</th>
       <td>
         閱讀
-        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction"
           >Express/Node 介紹</a
         >。 完成先前教學主題 (包含
-        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose"
           >Express 教學 3: 使用資料庫 (Mongoose)</a
         >).
       </td>

@@ -14,12 +14,12 @@ original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
       <th scope="row">必備條件：</th>
       <td>
         基本的電腦素養、已了解 HTML 與 CSS 基本概念、熟悉 JavaScript 基礎
-        (可參閱〈<a href="/zh-TW/docs/Learn/JavaScript/First_steps"
+        (可參閱〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >First steps</a
-        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >〉) 與 OOJS 的基礎 (可參閱〈<a
-          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >〉)。
       </td>

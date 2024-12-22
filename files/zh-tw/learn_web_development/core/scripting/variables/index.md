@@ -23,7 +23,7 @@ original_slug: Learn/JavaScript/First_steps/Variables
 
 ## 你需要的工具
 
-在此篇文章中，你將被要求輸入程式碼行來測試你對內容的理解。如果你使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
+在此篇文章中，你將被要求輸入程式碼行來測試你對內容的理解。如果你使用的是網頁瀏覽器，最適合輸入代碼的地方便是 JavaScript 主控台, (請參閱[什麼是瀏覽器開發工具](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)這篇文章以取得更多關於此工具的資訊).
 
 ## 什麼是變量／變數？
 

@@ -142,7 +142,7 @@ h1 {
   </tbody>
 </table>
 
-還有很多值得探索的選擇器，你可以在我們的選擇器導引章節 [Selectors guide](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors) 看到更多介紹。
+還有很多值得探索的選擇器，你可以在我們的[選擇器導引](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)章節看到更多介紹。
 
 ## 文字與字體
 

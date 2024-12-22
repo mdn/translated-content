@@ -38,7 +38,7 @@ NPM 也可用來安裝 Express 應用程式產生器(全域用)，一個方便�
 > [!NOTE]
 > 與其他不包含單獨的 web 開發伺服器的 Web 框架不同。 在 Node / Express 中，Web 應用程式創建並運行自己的 Web 伺服器！
 
-典型的開發環境還包含其他工具，例如：編輯程式碼使用的[文字編輯器](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)、IDE，進行版本控置管理不同版本程式碼的[Git](/zh-TW/docs/Glossary/Git)。這邊假設你已經有這種工具了(尤其是文字編輯器)
+典型的開發環境還包含其他工具，例如：編輯程式碼使用的[文字編輯器](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)、IDE，進行版本控置管理不同版本程式碼的 [Git](/zh-TW/docs/Glossary/Git)。這邊假設你已經有這種工具了(尤其是文字編輯器)
 
 ### 哪些作業系統有支援?
 

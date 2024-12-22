@@ -13,12 +13,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
     <tr>
       <th scope="row">預備知識：</th>
       <td>
-        熟悉主要的 <a href="/zh-TW/docs/Learn/HTML">HTML</a>，<a
-          href="/zh-TW/docs/Learn/CSS"
+        熟悉主要的 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>，<a
+          href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
         >
-        和 <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 語言和<a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+        和 <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 語言和<a
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
           >terminal/command line</a
         >知識。
       </td>

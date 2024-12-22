@@ -13,11 +13,11 @@ original_slug: Learn/Server-side/Django/Introduction
     <tr>
       <th scope="row">先備知識:</th>
       <td>
-        基本的電腦知識.對<a href="/zh-TW/docs/Learn/Server-side/First_steps"
+        基本的電腦知識.對<a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >服務器端網站編程的一般了解</a
         >
         ,特別是<a
-          href="/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >網站中客戶端-服務器交互的機制</a
         >
         .

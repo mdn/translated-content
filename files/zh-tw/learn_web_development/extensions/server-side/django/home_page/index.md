@@ -14,10 +14,10 @@ original_slug: Learn/Server-side/Django/Home_page
       <th scope="row">前提:</th>
       <td>
         讀 the
-        <a href="/zh-TW/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >Django Introduction</a
         >. 完成上章節 (including
-        <a href="/zh-TW/docs/Learn/Server-side/Django/Admin_site"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >).
       </td>
