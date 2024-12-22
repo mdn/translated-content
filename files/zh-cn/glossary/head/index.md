@@ -12,4 +12,4 @@ l10n:
 ## 参见
 
 - MDN 里的 {{htmlelement("head")}} 元素参考
-- MDN 学习区域里的 [HTML \<head>](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- MDN 学习区域里的 [HTML \<head>](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)

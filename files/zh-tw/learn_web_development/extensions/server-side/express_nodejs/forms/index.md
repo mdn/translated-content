@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 original_slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在此教程中，我們會教你如何使用 Express ，並且結合 Pug 來實現 HTML 表單，並且如何從數據庫中創建、更新、和刪除文檔。
 
@@ -201,12 +201,12 @@ router.post("/genre/create", genre_controller.genre_create_post);
 
 以下子文件，將帶我們完成向示例應用程序添加所需表單的過程。在進入下一個文件之前，你需要依次閱讀並解決每個問題。
 
-1. [創建種類表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre`。
-2. [創建作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author` 的頁面。
-3. [創建書本表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form) — 定義頁面/表單以創建書本對象 `Book` 。
-4. [創建書本實例表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定義頁面/表單以創建書本實例對象 `BookInstance` 。
-5. [刪除作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form) — 定義要刪除作者對象 `Author`的頁面。
-6. [更新書本表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form) — 定義頁面以更新書本對象 `Book` 。
+1. [創建種類表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre`。
+2. [創建作者表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author` 的頁面。
+3. [創建書本表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_book_form) — 定義頁面/表單以創建書本對象 `Book` 。
+4. [創建書本實例表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form) — 定義頁面/表單以創建書本實例對象 `BookInstance` 。
+5. [刪除作者表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form) — 定義要刪除作者對象 `Author`的頁面。
+6. [更新書本表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form) — 定義頁面以更新書本對象 `Book` 。
 
 ## 挑戰自我
 
@@ -235,8 +235,8 @@ Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西
 
 你現在應該了解如何新增基本表單，以及表單處理代碼到你的 node 網站！
 
-## 請參閱
+## 參見
 
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm docs).
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

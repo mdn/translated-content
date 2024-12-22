@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_protot
 original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且與典型的物件導向 (OO) 程式語言相較，其運作方式有所差異。我們將透過本文說明相異之處、解釋原型鍊 (Prototype chain) 運作的方式，並了解原型屬性是如何將函式新增至現有的建構子 (Constructor) 之中。
 
@@ -14,12 +14,12 @@ JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且�
       <th scope="row">必備條件：</th>
       <td>
         基本的電腦素養、已初步了解 HTML 與 CSS、熟悉 JavaScript (參閱〈<a
-          href="/zh-TW/docs/Learn/JavaScript/First_steps"
+          href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >First steps</a
-        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >〉以及 OOJS 基礎概念 (參閱〈<a
-          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >〉。
       </td>
@@ -274,4 +274,4 @@ Test.prototype.y = function () { ... }
 
 接著我們將讓你在自己的任 2 個自訂物件之間，實作功能的繼承。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

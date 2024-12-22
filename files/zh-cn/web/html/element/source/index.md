@@ -151,7 +151,7 @@ l10n:
 </video>
 ```
 
-要了解更多示例，学习区的[视频与音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)一文是很好的资源。
+要了解更多示例，学习区的[视频与音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)一文是很好的资源。
 
 ### 将 `height` 与 `width` 属性与 `<picture>` 搭配使用
 
@@ -197,4 +197,4 @@ l10n:
 - {{HTMLElement("video")}} 元素
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
 - [媒体类型与格式指南](/zh-CN/docs/Web/Media/Formats)
-- [Web 性能](/zh-CN/docs/Learn/Performance)
+- [Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)

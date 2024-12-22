@@ -14,9 +14,9 @@ original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
       <th scope="row">要求：</th>
       <td>
         你要知道
-        <a href="/zh-TW/docs/Learn/How_the_Internet_works"
+        <a href="/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >Internet 是怎麼運作的</a
-        >、並<a href="/zh-TW/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        >、並<a href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >知道網頁、網站、網路伺服器的不同</a
         >。
       </td>
@@ -66,9 +66,9 @@ _目前還沒有好用的內容。[請考慮貢獻一下](/zh-TW/docs/MDN/Commun
 - 永遠都有相同的 IP 地址（不是所有{{Glossary("ISP", "網際網路提供者")}}都給家庭用戶提供固定的 IP 地址）
 - 由第三方提供者維護
 
-因此，找到優秀的託管提供者，是建立網站的重點之一。好好探索各大公司提供的服務、並選擇一個符合需求、預算也能負擔的方案（服務的價格從免費到上千美元都有）。你可以[在這篇文章](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting)找到更多資訊。
+因此，找到優秀的託管提供者，是建立網站的重點之一。好好探索各大公司提供的服務、並選擇一個符合需求、預算也能負擔的方案（服務的價格從免費到上千美元都有）。你可以[在這篇文章](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting)找到更多資訊。
 
-一旦找到適合的網絡託管解決方案，你只要[把文件上傳到網路伺服器](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)就行了。
+一旦找到適合的網絡託管解決方案，你只要[把文件上傳到網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)就行了。
 
 ### 透過 HTTP 溝通
 
@@ -107,6 +107,6 @@ HTTP 提供了用戶端與伺服器端，該如何溝通的明確規則。我們
 
 熟悉了伺服器以後可以：
 
-- 讀讀[how much it costs to do something on the web](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- 了解[various software you need to create a website](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- 移駕到[how to upload files on a web server](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)之類的實戰。
+- 讀讀[how much it costs to do something on the web](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- 了解[various software you need to create a website](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
+- 移駕到[how to upload files on a web server](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)之類的實戰。

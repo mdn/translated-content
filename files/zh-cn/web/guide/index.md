@@ -11,14 +11,14 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 ## HTML
 
-- [使用 HTML 构建网页](/zh-CN/docs/Learn/HTML)
+- [使用 HTML 构建网页](/zh-CN/docs/Learn_web_development/Core/Structuring_content)
   - : HTML 学习区会提供从头开始的 HTML 学习教程。
-- [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- [HTML 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : 这篇文章将会让你对 HTML 有一个基本的了解。在遵循本指南后，你可以进一步探索 HTML 学习区的资料。
 
 ## CSS
 
-- [学习使用 CSS 给 HTML 添加样式](/zh-CN/docs/Learn/CSS)
+- [学习使用 CSS 给 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : 我们完整的 CSS 指南将带你从头开始，学习如何给文字添加样式、创建布局等更多内容。
 - [CSS 布局指南](/zh-CN/docs/Web/Guide/CSS/CSS_Layout)
   - : MDN 上包含了很多有关 CSS 布局的指南，这个页面将它们收集到了一起。
@@ -27,7 +27,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 ## JavaScript
 
-- [JavaScript 学习区](/zh-CN/docs/Learn/JavaScript)
+- [JavaScript 学习区](/zh-CN/docs/Learn_web_development/Core/Scripting)
   - : 无论是完全的初学者，还是希望提升你的技能，这里都是好的开始。
 
 ## 媒体
@@ -60,5 +60,5 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 ## 用户界面开发
 
-- [用户输入和控制](/zh-CN/docs/Learn/Forms/User_input_methods)
+- [用户输入和控制](/zh-CN/docs/Learn_web_development/Extensions/Forms/User_input_methods)
   - : 现代 Web 用户输入已经超越了简单的鼠标和键盘：例如，他们在使用触摸屏。本文提供了管理用户输入和在开放网络应用中实现控制的建议，以及常见问题解答、真实世界的例子，并为需要更多底层技术详细信息的人提供了进一步的信息链接。

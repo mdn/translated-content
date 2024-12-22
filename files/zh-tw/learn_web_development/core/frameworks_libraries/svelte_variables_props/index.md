@@ -5,7 +5,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在我們已經準備好了標記語言及樣式，我們可以開始為 Svelte 待辦清單應用程式開發所需的功能。在此篇文章中，我們將使用變數及屬性使我們的應用程式動態化，允許我們新增及刪除待辦事項，標記它們為完成及藉由狀態過濾它們。
 
@@ -16,11 +16,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
       <td>
         <p>
           推薦你至少需熟悉基本的
-          <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           等程式語言且具備<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列環境</a
           >基本知識。
         </p>
@@ -493,4 +493,4 @@ npx degit opensas/mdn-svelte-tutorial/04-componentizing-our-app
 
 在下一篇文章中，我們將新增更多功能，允許使用者編輯待辦事項。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}

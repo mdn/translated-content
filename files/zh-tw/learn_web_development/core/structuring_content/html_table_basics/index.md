@@ -4,17 +4,17 @@ slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 original_slug: Learn/HTML/Tables/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 這篇文章將帶你從列、格、標頭，以及將各格以數欄、數列的方式合併等基礎開始探索 HTML 表格。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備知識:</th>
       <td>
         <p>
-          HTML的基礎(見<a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML"
+          HTML的基礎(見<a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content"
             >介紹HTML</a
           >)
         </p>
@@ -191,19 +191,19 @@ original_slug: Learn/HTML/Tables/Basics
 
 你也可以在 [GitHub](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) 上看看實際範例 ! 而你也許會注意到那裡的表格似乎更容易閱讀。那是因為這裡的表格只有加上很少樣式，而 GitHub 上的版本卻應用上了更多明顯的 CSS 。
 
-需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的 HTML 架構和 CSS 樣式資訊，但將在這個模組中聚焦在 HTML 的部分。若想瞭解 CSS 的部分，可以在完成這部分閱讀之後造訪[表格樣式設計](/zh-TW/docs/Learn/CSS/Building_blocks/Styling_tables)的文章。
+需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的 HTML 架構和 CSS 樣式資訊，但將在這個模組中聚焦在 HTML 的部分。若想瞭解 CSS 的部分，可以在完成這部分閱讀之後造訪[表格樣式設計](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Tables)的文章。
 
 在這個單元裡我們將不會聚焦在 CSS 上，但是我們提供基本的 CSS 樣式表讓你做使用，這將會使你製作的表格比起毫無修飾的預設樣式更方便閱讀。你能在這找到[樣式表](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css)，並且你也能找到一個適用於樣式表的[HTML 模版](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) — 他們能一起讓你有個好起點來實驗 HTML 表格。
 
 ### 當何時你不應該使用 HTML 表格?
 
 HTML 表格應該被使用在結構化資料(tabular data)上 — 這就是它們被設計的目的。
-不幸地是，許多人習慣使用 HTML 表格去排版他們的網頁，例如: 使用一列去當 header，一列當做內容欄位，一列當作 footer...等等，你能在我們的[輔助學習單元](/zh-TW/docs/Learn_web_development/Core/Accessibility)裡的[頁面輸出](/zh-TW/docs/Learn/Accessibility/HTML#Page_layouts)發現更多細節以及一個範例。它曾經被這麼使用是因為 CSS 過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。
+不幸地是，許多人習慣使用 HTML 表格去排版他們的網頁，例如: 使用一列去當 header，一列當做內容欄位，一列當作 footer...等等，你能在我們的[輔助學習單元](/zh-TW/docs/Learn_web_development/Core/Accessibility)裡的[頁面輸出](/zh-TW/docs/Learn_web_development/Core/Accessibility/HTML#Page_layouts)發現更多細節以及一個範例。它曾經被這麼使用是因為 CSS 過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。
 
 簡單來說，使用表格排版而非使用[CSS 排版技術](/zh-TW/docs/Learn_web_development/Core/CSS_layout)是一件很糟的事情。
 下列是主要原因:
 
-1. **表格排版會減少對視障使用者的輔助** : 視障者使用的[螢幕閱讀器](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)會翻譯存在於 HTML 網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於 CSS 排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。
+1. **表格排版會減少對視障使用者的輔助**: 視障者使用的[螢幕閱讀器](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Screenreaders)會翻譯存在於 HTML 網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於 CSS 排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。
 2. **表格會產生標籤雜燴(tag soup)**: 就像上面提到的，表格排版通常會比一般適當的輸出技術包含更複雜的標籤結構。這會導致程式碼本身更難撰寫、維護及 debug。
 3. **表格不會自適應(automatically responsive)**: 當你使用合適的排版容器(像是{htmlelement("header")}, {{htmlelement("section")}}) 或是 {{htmlelement("div")}}),它們的寬度相對於父層預設為 100%，而表格的預設大小是依據它們的內容物，所以當表格樣式要有效的在不同的裝置之間運行時，會需要做額外的測量調整。
 
@@ -536,4 +536,4 @@ See how you get on with the example. If you get stuck, or want to check your wor
 
 That just about wraps up the basics of HTML Tables. In the next article we will look at some slightly more advanced table features, and start to think how accessible they are for visually impaired people.
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

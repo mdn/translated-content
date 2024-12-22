@@ -608,7 +608,7 @@ tr:last-child td {
 
 这有助于借助辅助技术（如屏幕阅读器）进行导航的人、经历低视力状况的人和有认知问题的人。
 
-- [MDN：使用 \<caption> 元素为表格添加标题](/zh-CN/docs/Learn/HTML/Tables/Advanced#使用_caption_为你的表格增加一个标题)
+- [MDN：使用 \<caption> 元素为表格添加标题](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#使用_caption_为你的表格增加一个标题)
 - [标题和总结 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### 确定行和列的范围
@@ -647,7 +647,7 @@ tr:last-child td {
 
 在 {{HTMLElement("th")}} 元素上提供声明 `scope="col"`，将有助于描述该单元格处于一列的顶部。在 {{HTMLElement("th")}} 元素上提供声明 `scope="row"`，将有助于描述该单元格是某一行的第一个。
 
-- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn/HTML/Tables/Advanced#对于视力受损的用户的表格)
+- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#对于视力受损的用户的表格)
 - [有两个头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [有不标准头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63: 使用范围属性来关联数据表中的标题单元和数据单元 | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -660,7 +660,7 @@ tr:last-child td {
 
 如果表格不能被拆开，使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Element/td#headers) 属性的组合，以编程方式将每个表格单元与该单元所关联的标题相关联。
 
-- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn/HTML/Tables/Advanced#对于视力受损的用户的表格)
+- [MDN：对于视力受损用户的表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Table_accessibility#对于视力受损的用户的表格)
 - [有多级头部的表格 • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: 使用 id 和 headers 属性将数据单元与数据表中的标题单元联系起来 | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
@@ -674,7 +674,7 @@ tr:last-child td {
 
 ## 参见
 
-- [HTML 数据表格初步](/zh-CN/docs/Learn/HTML/Tables)
+- [HTML 数据表格初步](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - 可能特别有用的关于设定表格元素样式的 CSS 属性：
 
   - {{cssxref("width")}} 控制表格的宽度；

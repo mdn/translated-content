@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
 original_slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 的其中一件核心工作，就是給出文件的結構和含義（又稱{{glossary("semantics")}}），以便瀏覽器正確顯示。本文章旨在說明 {{glossary("HTML")}} 可透過增加標題、章節、強調、建立清單等，建立結構化的頁面。
 
@@ -14,7 +14,7 @@ HTML 的其中一件核心工作，就是給出文件的結構和含義（又稱
       <th scope="row">需求：</th>
       <td>
         熟悉基本 HTML、在
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >
         有講解。
@@ -1028,4 +1028,4 @@ Here's the best rule of thumb: it's likely appropriate to use `<b>`, `<i>`, or `
 
 That's it for now! This article should have given you a good idea of how to start marking up text in HTML, and introduced you to some of the most important elements in this area. There are a lot more semantic elements to cover in this area, and we'll look at a lot more in our 'More Semantic Elements' article, later on in the course. In the next article, we'll be looking in detail at how to [create hyperlinks](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links), possibly the most important element on the Web.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Emphasis_and_importance", "Learn_web_development/Core/Structuring_content")}}

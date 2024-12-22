@@ -41,7 +41,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 - [布局与包含块](/zh-CN/docs/Web/CSS/Containing_block)
 - [CSS 层叠介绍](/zh-CN/docs/Web/CSS/Cascade)
-- [层叠和继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [层叠和继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

@@ -21,7 +21,7 @@ slug: Web/Security/Practical_implementation_guides
 
 ## 内容安全
 
-- [正确配置服务器的 MIME 类型](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [正确配置服务器的 MIME 类型](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
   - : 不正确的 MIME 类型配置可以对你的站点造成潜在的安全问题。这篇文章解释了其中的几种方式，并且展示如何配置你的服务器，以让它使用正确的 MIME 类型提供文件服务。
 - [HTTP Strict Transport Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)
   - : `Strict-Transport-Security:` 这个 [HTTP](/zh-CN/docs/Web/HTTP) 头可以使得站点指定其只能通过 HTTPS 访问。
