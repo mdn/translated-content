@@ -138,7 +138,7 @@ in <polar-color-space>[ <hue-interpolation method>]
 }
 ```
 
-#### Result
+#### 结果
 
 {{EmbedLiveSample("重复渐变中的颜色插值", "100%", 250)}}
 
