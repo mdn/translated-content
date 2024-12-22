@@ -17,9 +17,9 @@ l10n:
 
 推测性加载有几种机制：
 
-- **预取（Prefetching）**在需要之前获取渲染文档（或文档的一部分）所需的一些或全部资源，以便在将要渲染时更快地实现渲染。
-- **预渲染（Prerendering）**更进一步，会实际渲染内容，以便在需要时可以展示。根据实现方式的不同，可以实现从旧页面到新页面的即时导航。
-- **预连接（Preconnecting）**通过预先执行部分或全部的连接握手（即 DNS + TCP + TLS）来加速来自给定源的未来加载。
+- **预取**（Prefetching）在需要之前获取渲染文档（或文档的一部分）所需的一些或全部资源，以便在将要渲染时更快地实现渲染。
+- **预渲染**（Prerendering）更进一步，会实际渲染内容，以便在需要时可以展示。根据实现方式的不同，可以实现从旧页面到新页面的即时导航。
+- **预连接**（Preconnecting）通过预先执行部分或全部的连接握手（即 DNS + TCP + TLS）来加速来自给定源的未来加载。
 
 > [!NOTE]
 > 上述描述是高层次和泛化的。浏览器究竟将执行何种操作来实现预取和预渲染，取决于所使用的特性。更准确的特性描述在下面的[推测性加载特性](#推测性加载特性)部分给出。
@@ -77,7 +77,7 @@ Link: <https://example.com>; rel="preconnect"
 
 ```html
 <link rel="preload" href="main.js" as="script" />
-<!-- 允许夸源的预加载 -->
+<!-- 允许跨源的预加载 -->
 <link
   rel="preload"
   href="https://www.example.com/fonts/cicle_fina-webfont.woff2"
@@ -141,7 +141,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 > **备注：** `<link rel="prefetch">` 在功能上等同于一个带有 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}} 调用，但前者通常具有更低的优先级，并且请求上会设置一个 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Headers/Sec-Purpose) 。
 
-> [!NOTE] > `prefetch` 操作的获取请求将产生一个包含 HTTP 标头 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Headers/Sec-Purpose) 的 HTTP 请求。服务器可能会使用此标头更改资源的缓存超时时间或执行其他特殊处理。
+> **备注：** `prefetch` 操作的获取请求将产生一个包含 HTTP 标头 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Headers/Sec-Purpose) 的 HTTP 请求。服务器可能会使用此标头更改资源的缓存超时时间或执行其他特殊处理。
 > 请求还将包括 {{HTTPHeader("Sec-Fetch-Dest")}} 标头，其值为 `empty`。
 > 请求中的 {{HTTPHeader("Accept")}} 标头将与正常导航请求中使用的值匹配。这允许浏览器在导航后找到匹配的缓存资源。
 > 如果返回响应，它将与请求一起缓存在 HTTP 缓存中。
