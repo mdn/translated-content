@@ -153,4 +153,4 @@ processor.computeFrame = function computeFrame() {
 
 ## 参见
 
-- [使用音频和视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [使用音频和视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

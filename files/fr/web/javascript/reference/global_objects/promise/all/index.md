@@ -18,7 +18,7 @@ Promise.all(iterable);
 ### Paramètres
 
 - `iterable`
-  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_») (tel qu'un tableau ({{jsxref("Array")}})) contenant des promesses.
+  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (tel qu'un tableau ({{jsxref("Array")}})) contenant des promesses.
 
 ### Valeur de retour
 

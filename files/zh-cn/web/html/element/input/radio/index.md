@@ -335,4 +335,4 @@ button:active {
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - {{domxref("RadioNodeList")}}：描述一系列单选按钮的接口
-- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

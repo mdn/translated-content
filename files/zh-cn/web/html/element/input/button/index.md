@@ -343,4 +343,4 @@ draw();
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - 更现代的 {{HTMLElement("button")}} 元素。
-- [表单控件 CSS 兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

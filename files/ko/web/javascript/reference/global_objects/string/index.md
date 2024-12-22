@@ -100,7 +100,7 @@ return "cat"[1]; // returns "a"
 
 ### 문자열 비교
 
-C 개발자는 문자열 비교를 위하여 `strcmp()` 함수를 사용합니다. JavaScript에서는 단지 [less-than와 greater-than 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)만을 사용하여 문자열을 비교할 수 있습니다:
+C 개발자는 문자열 비교를 위하여 `strcmp()` 함수를 사용합니다. JavaScript에서는 단지 [less-than와 greater-than 연산자](/ko/docs/Web/JavaScript/Reference/Operators)만을 사용하여 문자열을 비교할 수 있습니다:
 
 ```js
 var a = "a";

@@ -88,7 +88,7 @@ l10n:
 - {{domxref("Navigator.windowControlsOverlay")}} {{readonlyInline}}
   - : {{domxref("WindowControlsOverlay")}} 객체를 반환합니다. 데스크톱 PWA 제목표시줄의 형태에 대한 정보를 제공하고, 형태가 변화하는 것을 감지할 수 있는 이벤트도 발송합니다.
 - {{domxref("Navigator.xr")}} {{readonlyInline}} {{experimental_inline}}
-  - : [WebXR API](/ko/docs/Web/API/WebXR_API)의 진입점인 {{domxref("XR")}} 객체를 반환합니다.
+  - : [WebXR API](/ko/docs/Web/API/WebXR_Device_API)의 진입점인 {{domxref("XR")}} 객체를 반환합니다.
 
 ### 비표준 속성
 

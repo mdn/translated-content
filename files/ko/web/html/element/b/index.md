@@ -106,4 +106,4 @@ Keywords are displayed with the default style of the
 
 ## 같이 보기
 
-- [\<b>와 \<i> 요소 사용하기 (W3C)](http://www.w3.org/International/questions/qa-b-and-i-tags)
+- [\<b>와 \<i> 요소 사용하기 (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)

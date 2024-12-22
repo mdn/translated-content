@@ -39,4 +39,4 @@ slug: Web/API/XMLHttpRequestEventTarget
 ## Voir aussi
 
 - {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

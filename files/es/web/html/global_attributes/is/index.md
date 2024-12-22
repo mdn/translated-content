@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/is
 
 {{HTMLSidebar("Global_attributes")}}
 
-La construcción is [global attribute](/es/docs/Web/HTML/Atributos_Globales) permite especificar que un elemento HTML estándar se debería comportar como un elemento personalizado provisto originalmente por el lenguaje (para más detalles, vea [Utilizando elementos personalizados](/es/docs/Web/Web_Components/Using_custom_elements)).
+La construcción is [global attribute](/es/docs/Web/HTML/Global_attributes) permite especificar que un elemento HTML estándar se debería comportar como un elemento personalizado provisto originalmente por el lenguaje (para más detalles, vea [Utilizando elementos personalizados](/es/docs/Web/API/Web_components/Using_custom_elements)).
 
 Este atributo puede ser utilizado sólo si nombre del elemento personalizado especificado ha sido [definido](/es/docs/Web/API/CustomElementRegistry/define) extósamente en el documento actual, y extiende el tipo de elemento al que está siendo aplicado.
 
@@ -44,4 +44,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Vea también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).

@@ -7,7 +7,7 @@ slug: Web/API/Node/previousSibling
 
 ## Resumo
 
-Retorna o nó que precede o nó especificado na lista de [childNodes](/pt-BR/docs/Web/API/Node.childNodes) do nó pai, retorna null se o nó especificado é o primeiro desta lista.
+Retorna o nó que precede o nó especificado na lista de [childNodes](/pt-BR/docs/Web/API/Node/childNodes) do nó pai, retorna null se o nó especificado é o primeiro desta lista.
 
 ## Sintaxe
 
@@ -30,11 +30,11 @@ Navegador baseados na engine Gecko inserem nós de texto no documento para repre
 Portanto um nó obtido, por exemplo, usando [`Node.firstChild`](/pt-BR/docs/Web/API/Node/firstChild) ou [`Node.previousSibling`](/pt-BR/docs/Web/API/Node/previousSibling) pode fazer referência a um
 espaço em banco ao invés do elemento que o autor pretendia obter.
 
-Veja [Whitespace in the DOM](/pt-BR/docs/Web/Guide/DOM/Whitespace_in_the_DOM) e
+Veja [Whitespace in the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) e
 [W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)
 Para mais informações.
 
-Para navegar no sentido contrário da lista de nós filhos use [Node.nextSibling](/pt-BR/docs/Web/API/Node.nextSibling).
+Para navegar no sentido contrário da lista de nós filhos use [Node.nextSibling](/pt-BR/docs/Web/API/Node/nextSibling).
 
 ## Especificação
 

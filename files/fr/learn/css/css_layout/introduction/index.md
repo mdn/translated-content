@@ -74,11 +74,11 @@ Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les é
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
-- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.
-- **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/CSS_Columns) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
+- **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/CSS_multicol_layout) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
 
 ## La propriété «&nbsp;display »
 
@@ -90,7 +90,7 @@ En plus de pouvoir changer la présentation par défaut en faisant passer un él
 
 ## Flexbox
 
-Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
+Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_flexible_box_layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
 
 Le balisage HTML ci-dessous crée un élément conteneur de la classe `wrapper`, dans lequel nous plaçons 3 éléments {{htmlelement("div")}}. Par défaut ces éléments s'afficheront en tant qu'éléments blocs, les uns sous les autres, dans ce document en langue française.
 

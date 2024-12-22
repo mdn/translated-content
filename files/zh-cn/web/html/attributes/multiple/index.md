@@ -120,7 +120,7 @@ input:invalid {
 
 请注意设置了 `multiple` 的示例与未设置 `file` 的其他输入在外观上的区别。
 
-提交表单时，如果我们使用 [`method="get"`](/zh-CN/docs/Web/HTML/Element/form)，每个选定文件的名称都会以 `?uploads=img1.jpg&uploads=img2.svg` 的形式添加到 URL 参数中。但是，由于我们提交的是多部分表单数据，因此必须使用 post。更多信息请参阅 {{htmlelement('form')}} 元素和[发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)。
+提交表单时，如果我们使用 [`method="get"`](/zh-CN/docs/Web/HTML/Element/form)，每个选定文件的名称都会以 `?uploads=img1.jpg&uploads=img2.svg` 的形式添加到 URL 参数中。但是，由于我们提交的是多部分表单数据，因此必须使用 post。更多信息请参阅 {{htmlelement('form')}} 元素和[发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)。
 
 ### select 元素
 

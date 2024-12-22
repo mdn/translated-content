@@ -13,10 +13,10 @@ Si vous envoyez une extension différente, ajouter l'argument `extensionId` à l
 
 Les extensions ne peuvent pas envoyer de messages aux scripts de contenu en utilisant cette méthode. Pour envoyer des messages aux scripts de contenu, utilisez {{WebExtAPIRef('tabs.sendMessage')}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 > [!NOTE]
-> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communication_avec_les_scripts_darrière-plan).
+> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan).
 
 ## Syntaxe
 
@@ -32,7 +32,7 @@ var sending = browser.runtime.sendMessage(
 
 - `extensionId`{{optional_inline}}
 
-  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
+  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
 
     Si `extensionId` est omis, le message sera envoyé à votre propre extension.
 
@@ -66,7 +66,7 @@ Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 ar
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
 
 ## Exemples
 

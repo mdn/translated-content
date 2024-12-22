@@ -15,4 +15,4 @@ slug: Glossary/Operator
 
 ### Référence technique
 
-- [Opérateurs JavaScript](/fr/docs/Web/JavaScript/Reference/Opérateurs)
+- [Opérateurs JavaScript](/fr/docs/Web/JavaScript/Reference/Operators)

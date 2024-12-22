@@ -52,7 +52,7 @@ l10n:
 
 ![바보 같은 스토리 생성기 앱은 텍스트 필드, 라디오 버튼 2개, 무작위 스토리를 생성하는 버튼으로 구성되어 있습니다.](screen_shot_2018-09-19_at_10.01.38_am.png)
 
-더 많은 아이디어를 얻으려면 [완성된 예제](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/)를 살펴보세요. 하지만 소스 코드를 들여다보지 마세요!
+더 많은 아이디어를 얻으려면 [완성된 예제](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/)를 살펴보세요. 하지만 소스 코드를 들여다보지 마세요!
 
 ## 완료하기
 

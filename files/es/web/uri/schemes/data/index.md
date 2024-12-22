@@ -53,7 +53,7 @@ El URI de datos utilizará los datos codificados después de la cabezera inicial
 
 ### En la pagina Web, usando JavaScript
 
-Las Web tiene APIs primitivas para codificar o decodificar en base64: [codificación y decodificación Base64](/es/docs/Web/JavaScript/Base64_encoding_and_decoding).
+Las Web tiene APIs primitivas para codificar o decodificar en base64: [codificación y decodificación Base64](/es/docs/Glossary/Base64).
 
 ## Problemas comunes
 
@@ -62,7 +62,7 @@ Esta sección describe los problemas que comunmente ocurren cuando se crean o se
 - Sintaxis
   - : El formato de los datos URIs es muy simple, pero es facil olvidarse de poner una coma antes del segmento de la "data", o para codificar incorrectamente los datos en formato base64.
 - Formateando en HTML
-  - : Un dato URI provee un archivo dentro de un archivo, que potenciamente puede ser muy amplia con relación con el ancho del documento de cierre. Como una URL, los datos se les puede dar formato con espacios en blanco (avance de línea, pestaña, o espacios), pero hay cuestiones prácticas que se plantean [cuando se usa codificación base64](http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
+  - : Un dato URI provee un archivo dentro de un archivo, que potenciamente puede ser muy amplia con relación con el ancho del documento de cierre. Como una URL, los datos se les puede dar formato con espacios en blanco (avance de línea, pestaña, o espacios), pero hay cuestiones prácticas que se plantean [cuando se usa codificación base64](https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
 - Limitaciones de longitud
   - : Aunque Firefox soporta con URIs de datos de longitud esencialmente ilimitada, los navegadores no están obligados a apoyar cualquier longitud máxima de datos en particular. Por ejemplo, el navegador Opera 11 limita las URIs de datos cerca de los 65000 caracteres.
 - Falta de control de errores
@@ -93,8 +93,8 @@ Esta sección describe los problemas que comunmente ocurren cuando se crean o se
 
 ## Ver también
 
-- [Base64 codificación y decodificación](/es/docs/Web/JavaScript/Base64_encoding_and_decoding)
+- [Base64 codificación y decodificación](/es/docs/Glossary/Base64)
 - {{domxref("WindowBase64.atob","atob()")}}
 - {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/es/docs/Web/CSS/uri)
-- [URI](/es/docs/URI)
+- [CSS `url()`](/es/docs/Web/CSS/url_value)
+- [URI](/es/docs/Glossary/URI)

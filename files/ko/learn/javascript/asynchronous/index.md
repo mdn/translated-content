@@ -15,7 +15,7 @@ l10n:
 >
 > 목표를 향해 나아가기 위해 필요한 모든 필수 정보를 포함한 교육과정을 준비했습니다.
 >
-> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
+> [**시작하기**](/ko/docs/orphaned/Learn/Front-end_web_developer)
 
 ## 필요한 사전 지식
 

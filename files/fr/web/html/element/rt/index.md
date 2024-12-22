@@ -11,7 +11,7 @@ L'élément HTML **`<rt>`** indique la composante texte d'une annotation Ruby, i
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

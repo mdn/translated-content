@@ -33,7 +33,7 @@ slug: Web/XSLT/Element/element
 
 ### 정의
 
-[XSLT section 7.1.2, Creating Elements with xsl:element](http://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element)
+[XSLT section 7.1.2, Creating Elements with xsl:element](https://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element)
 
 ### Gecko 지원
 

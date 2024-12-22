@@ -41,14 +41,14 @@ O elemento `animateTransform` anima a transformação de um atributo em um eleme
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_processamento_condicional) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#atributos_de_processamento_condicional) »
 - [Atributos principais](</pt-BR/docs/Web/SVG/Attribute#Atributos principais>) »
-- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_eventos_da_animação) »
-- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#Atributos_XLink) »
-- [Atributos de destino do atributo da animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_destino_do_atributo_da_animação) »
-- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_cronometragem_da_animação) »
-- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_valor_de_animação) »
-- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Attribute#Atributos_de_animação_adicionais) »
+- [Atributos de eventos da animação](/pt-BR/docs/Web/SVG/Attribute#atributos_de_eventos_da_animação) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#atributos_xlink) »
+- [Atributos de destino do atributo da animação](/pt-BR/docs/Web/SVG/Attribute#atributos_de_destino_do_atributo_da_animação) »
+- [Atributos de cronometragem da animação](/pt-BR/docs/Web/SVG/Attribute#atributos_de_cronometragem_da_animação) »
+- [Atributos de valor de animação](/pt-BR/docs/Web/SVG/Attribute#atributos_de_valor_de_animação) »
+- [Atributos de animação adicionais](/pt-BR/docs/Web/SVG/Attribute#atributos_de_animação_adicionais) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos
@@ -60,4 +60,4 @@ O elemento `animateTransform` anima a transformação de um atributo em um eleme
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAnimateTransformElement`](/pt-BR/docs/DOM/SVGAnimateTransformElement).
+Este elemento implementa a interface do [`SVGAnimateTransformElement`](/pt-BR/docs/Web/API/SVGAnimateTransformElement).

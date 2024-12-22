@@ -100,7 +100,7 @@ slug: Web/HTML/Element/script
 
     - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade`（默认）：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）协议，{{HTTPHeader("Referer")}} 标头将不会被发送到{{Glossary("origin","源")}}上。
-    - `origin`：发送的 referrer 将被限制在 referrer 页面的源：其[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
+    - `origin`：发送的 referrer 将被限制在 referrer 页面的源：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
     - `origin-when-cross-origin`：将会限制发送至其他源的 referrer 的协议、主机和端口号。在同源的导航上仍然包括路径。
     - `same-origin`：在{{Glossary("Same-origin policy", "同源")}}内将发送 referrer，但是跨源请求不包含 referrer 信息。
     - `strict-origin`：只在协议安全等级相同时（如 HTTPS→HTTPS）发送文档的源作为 referrer，目标安全性降低（如 HTTPS→HTTP）时不发送。

@@ -58,7 +58,7 @@ View расширит базовый шаблон **layout.pug** и переоп
 
 ## На что это похоже?
 
-Запустите приложение (смотрите [тестирование маршрутов](/ru/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) для соответствующей команды) и откройте ваш браузер по адресу: <http://localhost:3000/>. Затем выберите ссылку: _All books_. Если все сделано корректно, то вы должны увидеть нечто подобное скриншоту ниже.
+Запустите приложение (смотрите [тестирование маршрутов](/ru/docs/Learn/Server-side/Express_Nodejs/routes#testing_the_routes) для соответствующей команды) и откройте ваш браузер по адресу: <http://localhost:3000/>. Затем выберите ссылку: _All books_. Если все сделано корректно, то вы должны увидеть нечто подобное скриншоту ниже.
 
 ![Book List Page - Express Local Library site](locallibary_express_book_list.png)
 

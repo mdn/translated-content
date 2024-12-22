@@ -9,9 +9,9 @@ IndexedDB est un moyen de stocker des données de manière persistante dans un n
 
 ## À propos de ce document
 
-Ce tutoriel vous guide à travers l'utilisation de l'API asynchrone de IndexedDB. Si vous n'êtes pas familier avec le principe de IndexedDB, vous devriez d'abord lire [les concepts basiques d'IndexedDB](/fr/docs/Web/API/Indexeddb_API/Basic_Concepts_Behind_IndexedDB).
+Ce tutoriel vous guide à travers l'utilisation de l'API asynchrone de IndexedDB. Si vous n'êtes pas familier avec le principe de IndexedDB, vous devriez d'abord lire [les concepts basiques d'IndexedDB](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology).
 
-Pour la documentation de référence sur l'API d'IndexedDB, voyez l'article [IndexedDB](/fr/docs/Web/API/Indexeddb_API) et ses sous-parties, qui détaille les types d'objets utilisés par IndexedDB, ainsi que les méthodes sur l'API asynchrone (l'API synchrone a été retirée de la spécification).
+Pour la documentation de référence sur l'API d'IndexedDB, voyez l'article [IndexedDB](/fr/docs/Web/API/IndexedDB_API) et ses sous-parties, qui détaille les types d'objets utilisés par IndexedDB, ainsi que les méthodes sur l'API asynchrone (l'API synchrone a été retirée de la spécification).
 
 ## Modèle de base
 
@@ -72,9 +72,9 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 Vous avez vu ? Ouvrir une base de données est comme n'importe quelle autre opération — vous avez juste à le "demander".
 
-La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction `open()` retourne un objet [`IDBOpenDBRequest`](/fr/docs/IndexedDB/IDBOpenDBRequest) avec un résultat (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet [`IDBRequest`](/fr/docs/IndexedDB/IDBRequest) avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de [`IDBDatabase`](/fr/docs/IndexedDB/IDBDatabase).
+La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction `open()` retourne un objet [`IDBOpenDBRequest`](/fr/docs/Web/API/IDBOpenDBRequest) avec un résultat (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest) avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de [`IDBDatabase`](/fr/docs/Web/API/IDBDatabase).
 
-Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération `open()`, puis, un événement `onupgradeneeded` est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement `onupgradeneeded` est déclenché immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans [Updating the version of the database](#Updating_the_version_of_the_database) plus bas et la page référence {{ domxref("IDBFactory.open") }}.
+Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération `open()`, puis, un événement `onupgradeneeded` est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement `onupgradeneeded` est déclenché immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans [Updating the version of the database](#updating_the_version_of_the_database) plus bas et la page référence {{ domxref("IDBFactory.open") }}.
 
 > [!WARNING]
 > Le numéro de version est un nombre "`unsigned long long`" ce qui signifie qu'il peut s'agir d'un entier très grand. Cela veut également dire que vous ne pouvez pas utiliser de réél, sinon, il sera converti au nombre entier le plus proche (inférieur) et la transaction peut ne pas démarrer ou ne pas déclencher l'événement `upgradeneeded`. Par exemple, n'utilisez pas 2.4 comme un numéro de version :
@@ -95,7 +95,7 @@ request.onsuccess = function (event) {
 
 Laquelle de ces deux fonctions, `onsuccess()` or `onerror()`, sera appelée ? Si tout se passe bien, un évènement success (qui est un évènement DOM dont la propriété `type` est à `"success"`) est déclenché avec `request` comme cible. Une fois déclenché, la fonction `onsuccess()` de `request` est lancée avec l'évènement success comme argument. S'il y avait un quelconque problème, un évènement erreur (qui est un évènement DOM dont la propriété `type` est définie à `"error"`) est lancée dans `request`. Cela déclenche la fonction `onerror()` avec l'évènement d'erreur comme argument.
 
-L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d'IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez [Limites de stockage](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)).
+L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d'IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez [Limites de stockage](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)).
 
 Évidemment, les navigateurs ne peuvent permettre qu'une publicité en ligne ou un site malicieux pollue votre ordinateur, donc ils informent l'utilisateur la première fois qu'une application web tente d'ouvrir un espace de stockage IndexedDB. L'utilisateur peut choisir de permettre ou refuser l'accès. En ce qui concerne l'utilisation d'IndexedDB en mode privé, les données restent en mémoire jusqu'à ce que la session privée soit close (Navigation privée pour Firefox et mode Incognito pour Chrome, mais dans Firefox, cela [n'est pas encore implémenté](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) depuis novembre 2015, aussi vous ne pouvez pas utiliser IndexedDB dans le mode privé de Firefo du tout).
 
@@ -250,7 +250,7 @@ request.onupgradeneeded = function (event) {
 };
 ```
 
-Pour plus de détails sur le générateur de clés, voyez ["W3C Key Generators"](http://www.w3.org/TR/IndexedDB/#key-generator-concept).
+Pour plus de détails sur le générateur de clés, voyez ["W3C Key Generators"](https://www.w3.org/TR/IndexedDB/#key-generator-concept).
 
 ## Ajouter, récupérer et supprimer des données
 
@@ -266,7 +266,7 @@ Pour lire les enregistrements d'un objet de stockage existant, la transaction pe
 Vous pouvez accélérer l'accès à vos données en utilisant le bon mode et la bonne portée dans la transaction. Voici deux astuces :
 
 - Lorsque vous définissez la portée, spécifiez uniquement les objets de stockage dont vous avez besoin. De cette manière, vous pouvez exécuter plusieurs transactions simultanément sans qu'elles se chevauchent.
-- Spécifier le mode `readwrite` pour une transaction seulement lorsque c'est nécessaire. Vous pouvez exécuter simulaténement plusieurs transactions `readonly` avec chevauchements, mais vous ne pouvez avoir qu'une seule transaction `readwrite` dans un objet de stockage. Pour en savoir plus, regardez la définition des _[transactions](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ dans l'article des [concepts de base](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+- Spécifier le mode `readwrite` pour une transaction seulement lorsque c'est nécessaire. Vous pouvez exécuter simulaténement plusieurs transactions `readonly` avec chevauchements, mais vous ne pouvez avoir qu'une seule transaction `readwrite` dans un objet de stockage. Pour en savoir plus, regardez la définition des _[transactions](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ dans l'article des [concepts de base](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology).
 
 ### Ajouter des données dans la base de données
 
@@ -354,8 +354,8 @@ Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage,
 
 Vous pouvez accélérer l'accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
 
-- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB#scope) _(portée)_, spécifiez seulement l'objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu'elles se chevauchent.
-- Spécifier une transaction en mode readwrite uniquement lorsque c'est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu'une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
+- Lors de la définition de la [scope](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB#scope) _(portée)_, spécifiez seulement l'objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu'elles se chevauchent.
+- Spécifier une transaction en mode readwrite uniquement lorsque c'est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu'une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction).
 
 ### Mettre à jour une entrée dans la base de données
 
@@ -1344,14 +1344,14 @@ input {
 Référence :
 
 - [Référence de l'API IndexedDB](/fr/docs/Web/API/IndexedDB_API)
-- [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
+- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/fr/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/fr/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
 - IndexedDB [interface files](https://searchfox.org/mozilla-central/search?q=dom%2FindexedDB%2F.*%5C.idl&path=&case=false&regexp=true) dans le code source de Firefox
 
 Tutoriels :
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 - [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 
 Bibliothèques :
@@ -1359,4 +1359,4 @@ Bibliothèques :
 - [localForage](https://localforage.github.io/localForage/)&nbsp;: un polyfill qui fournit un nom simple — la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
 - [dexie.js](https://www.dexie.org/)&nbsp;: une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
 - [ZangoDB](https://github.com/erikolson186/zangodb)&nbsp;: une interface comme MongoDB pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
-- [JsStore](http://jsstore.net/) : Une enveloppe d'IndexedDB simple et avancée ayant une syntaxe SQL.
+- [JsStore](https://jsstore.net/) : Une enveloppe d'IndexedDB simple et avancée ayant une syntaxe SQL.

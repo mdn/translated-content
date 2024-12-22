@@ -22,7 +22,7 @@ slug: Web/API/Server-sent_events
 
 ## 相關主題
 
-- [AJAX](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/zh-TW/docs/Web/JavaScript), [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)
+- [AJAX](/zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/zh-TW/docs/Web/JavaScript), [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)
 
 ## 規範
 

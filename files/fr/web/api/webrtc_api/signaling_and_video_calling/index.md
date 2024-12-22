@@ -5,7 +5,7 @@ slug: Web/API/WebRTC_API/Signaling_and_video_calling
 
 {{DefaultAPISidebar("WebRTC")}}
 
-Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
+Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/API/WebRTC_API/Connectivity), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
 
 ## Contenu semi-ancien, à partir de RTCPeerConnection
 
@@ -307,7 +307,7 @@ Il s'agit d'une chaîne qui agit comme une étiquette pour le nom de votre canal
 var channelOptions = {};
 ```
 
-Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça vide pour l'instant. Vérifiez le [RFC](http://dev.w3.org/2011/webrtc/editor/webrtc.html#attributes-7) pour plus d'informations sur les options.
+Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça vide pour l'instant. Vérifiez le [RFC](https://dev.w3.org/2011/webrtc/editor/webrtc.html#attributes-7) pour plus d'informations sur les options.
 
 ### Méthodes et événements de canal
 

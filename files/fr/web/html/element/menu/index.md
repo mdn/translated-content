@@ -19,7 +19,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Glo
 
 Les éléments `<menu>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) représentent tous les deux une liste non-ordonnée d'éléments. [`<ul>`](/fr/docs/Web/HTML/Element/ul) doit être utilisés pour des éléments qui doivent uniquement être affichés alors que `<menu>` était initialement conçu pour des éléments interactifs.
 
-L'élément connexe [`<menuitem>`](/fr/docs/Web/HTML/Element/menuitem) a été déprécié.
+L'élément connexe [`<menuitem>`](/fr/docs/conflicting/Web/HTML/Element) a été déprécié.
 
 > [!NOTE]
 > Dans d'anciennes versions de la spécification HTML, l'élément `<menu>` pouvait être utilisé pour représenter un menu contextuel. Cette fonctionnalité est désormais considérée comme obsolète et ne fait plus partie de la spécification.

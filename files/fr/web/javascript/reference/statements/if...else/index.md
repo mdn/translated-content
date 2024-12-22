@@ -171,5 +171,5 @@ Si vous devez affecter une variable de cette façon, [la documentation sur l'ins
 ## Voir aussi
 
 - [Bloc d'instructions (`{ /* … */ }`)](/fr/docs/Web/JavaScript/Reference/Statements/block)
-- [`switch`](/fr/docs/JavaScript/Reference/Statements/switch)
+- [`switch`](/fr/docs/Web/JavaScript/Reference/Statements/switch)
 - [L'opérateur conditionnel](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)

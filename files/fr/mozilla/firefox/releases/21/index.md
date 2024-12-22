@@ -17,7 +17,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 ### JavaScript
 
 - [E4X](/fr/docs/E4X), une ancienne extension JavaScript, a été retirée. Implementée seulement par Gecko, elle n'a jamais reçu suffisament de soutien ([bug Firefox 788293](https://bugzil.la/788293)).
-- [parseInt](/fr/docs/JavaScript/Reference/Global_Objects/parseInt) ne traite plus les chaînes de caractères commençant par "0" comme un octal ([bug Firefox 786135](https://bugzil.la/786135)).
+- [parseInt](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt) ne traite plus les chaînes de caractères commençant par "0" comme un octal ([bug Firefox 786135](https://bugzil.la/786135)).
 
 ### CSS
 
@@ -33,7 +33,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 - De nouveaux keyCodes pour contrôler le volume sont supportées ([bug Firefox 674739](https://bugzil.la/674739)).
 - De nouveaux keyCodes pour des anciennes disposition de touches de claviers tels que AS/400 sont maintenant supportées sur Windows et Linux ([bug Firefox 833719](https://bugzil.la/833719)).
 - Différentes valeurs keyCode pour des touches OEM spécifiques sur Windows sont maintenant supportées ([bug Firefox 833719](https://bugzil.la/833719)).
-- La fonction [`window.crypto.getRandomValues`](/fr/docs/DOM/window.crypto.getRandomValues) est maintenant implémentée ([bug Firefox 440046](https://bugzil.la/440046)).
+- La fonction [`window.crypto.getRandomValues`](/fr/docs/Web/API/Crypto/getRandomValues) est maintenant implémentée ([bug Firefox 440046](https://bugzil.la/440046)).
 
 ### SVG
 
@@ -47,7 +47,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 
 ### Worker
 
-- Les fonctions {{domxref("window.URL.createObjectURL", "URL.createObjectURL")}} et {{domxref("window.URL.revokeObjectURL", "URL.revokeObjectURL")}} font maintenant partie des [fonctions disponibles au workers](/fr/docs/Web/Guide/Needs_categorization/Functions_available_to_workers).
+- Les fonctions {{domxref("window.URL.createObjectURL", "URL.createObjectURL")}} et {{domxref("window.URL.revokeObjectURL", "URL.revokeObjectURL")}} font maintenant partie des [fonctions disponibles au workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Changement pour les add-ons et les développeurs Mozilla
 
@@ -100,7 +100,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 
 ## Voir aussi
 
-- [Firefox 21 Release Notes](http://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
+- [Firefox 21 Release Notes](https://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
 - [Site Compatibility for Firefox 21](/fr/docs/Site_Compatibility_for_Firefox_21)
 - [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
 

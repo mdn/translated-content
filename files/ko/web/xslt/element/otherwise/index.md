@@ -29,7 +29,7 @@ slug: Web/XSLT/Element/otherwise
 
 ### 정의
 
-[XSLT section 9.2, Conditional Processing with xsl:choose](http://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
+[XSLT section 9.2, Conditional Processing with xsl:choose](https://www.w3.org/TR/xslt#section-Conditional-Processing-with-xsl:choose)
 
 ### Gecko 지원
 

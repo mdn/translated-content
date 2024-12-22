@@ -28,7 +28,7 @@ _없음._
 
 ### 정의
 
-[XPath 1.0 4.3](http://www.w3.org/TR/xpath#function-sum)
+[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-sum)
 
 ### Gecko 지원
 

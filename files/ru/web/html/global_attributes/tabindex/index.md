@@ -16,7 +16,7 @@ slug: Web/HTML/Global_attributes/tabindex
 
 Элементы со значением 0, некорректным значением, или элементы с отсутствующим значением **tabindex** должны быть расположены после элементов с положительным целым числом.
 
-Для более полного объяснения навигации смотри [данную статью](/ru/docs/Web/HTML/Focus_management_in_HTML).
+Для более полного объяснения навигации смотри [данную статью](/ru/docs/Web/API/Document/hasFocus).
 
 ## Спецификации
 
@@ -30,4 +30,4 @@ slug: Web/HTML/Global_attributes/tabindex
 
 - Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 - {{domxref("HTMLElement.tabindex")}} отражает этот атрибут.
-- Проблемы доступности (юзабилити): смотри [Don't Use Tabindex Greater than 0 | Adrian Roselli](http://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).
+- Проблемы доступности (юзабилити): смотри [Don't Use Tabindex Greater than 0 | Adrian Roselli](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html).

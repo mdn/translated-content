@@ -10,7 +10,7 @@ L'événement `gamepaddisconnected` est déclenché lorsque le navigateur détec
 ## Informations générales
 
 - Spécification
-  - : [Gamepad](http://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
+  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
 - Interface
   - : {{domxref("Event")}}
 - Propagation
@@ -34,8 +34,8 @@ L'événement `gamepaddisconnected` est déclenché lorsque le navigateur détec
 
 ## Evénements liés
 
-- [gamepadconnected](/fr/docs/Web/Reference/Events/gamepadconnected)
+- [gamepadconnected](/fr/docs/Web/API/Window/gamepadconnected_event)
 
 ## Voir aussi
 
-- [Utilisation de l'API Gamepad](/fr/docs/API/Gamepad/Using_Gamepad_API)
+- [Utilisation de l'API Gamepad](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

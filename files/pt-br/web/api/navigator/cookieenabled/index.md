@@ -13,7 +13,7 @@ slug: Web/API/Navigator/cookieEnabled
 var cookieEnabled = navigator.cookieEnabled;
 ```
 
-- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossario/Booleano): `true` ou `false`.
+- `cookieEnabled` é um [Booleano](/pt-BR/docs/Glossary/Boolean): `true` ou `false`.
 
 ## Exemplo
 

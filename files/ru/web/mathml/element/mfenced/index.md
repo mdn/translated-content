@@ -10,15 +10,15 @@ slug: Web/MathML/Element/mfenced
 ## Атрибуты
 
 - class, id, style
-  - : Предполагается использование с [таблицами стилей](/ru/docs/CSS).
+  - : Предполагается использование с [таблицами стилей](/ru/docs/Web/CSS).
 - close
   - : Строка для закрывающего разделителя. Значением по умолчанию является `")"` и все пробелы обрезаются.
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста и также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет текста и также цвет линии дроби. Вы можете использовать `#rgb`, `#rrggbb` и [имена цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - open
   - : Строка для открывающего разделителя. Значением по умолчанию является `"("` и все пробелы обрезаются.
 - separators

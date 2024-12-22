@@ -16,14 +16,14 @@ elements = document.getElementsByTagNameNS(namespace, name);
 ```
 
 - `elements` es una lista del tipo `NodeList` de los elementos encontrados, en el orden en el que aparecen en el árbol.
-- `namespace` es el nombre URI en el que buscamos. (Véase [`element.namespaceURI`](/es/DOM/element.namespaceURI)).
-- `name` es bien el nombre local por el que buscamos, o bien el valor especial `"*"`, que representa todos los elementos (véase [`element.localName`](/es/DOM/element.localName)).
+- `namespace` es el nombre URI en el que buscamos. (Véase [`element.namespaceURI`](/es/docs/Web/API/Element/namespaceURI)).
+- `name` es bien el nombre local por el que buscamos, o bien el valor especial `"*"`, que representa todos los elementos (véase [`element.localName`](/es/docs/Web/API/Element/localName)).
 
 ### Ejemplo
 
 En el siguiente ejemplo, `getElementsByTagNameNS` comienza por un elemento padre determinado y busca recurrentemente, hacia abajo, por los elementos que tienen el parámetro `name` que concuerda.
 
-Es importante tener en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad estamos usando el método [element.getElementsByTagNameNS](/es/DOM/element.getElementsByTagNameNS).
+Es importante tener en cuenta que cuando el nodo en el que se invoca `getElementsByTagName`, no es el nodo `document`, en realidad estamos usando el método [element.getElementsByTagNameNS](/es/docs/Web/API/Element/getElementsByTagNameNS).
 
 Para usar el siguiente ejemplo, copia y pega en un documento con la extensión xhtml.
 

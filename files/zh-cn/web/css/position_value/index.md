@@ -82,7 +82,7 @@ bottom top
 ## 参见
 
 - [CSS 值与单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 值与单位介绍](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 值与单位介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - {{cssxref("background-position")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}

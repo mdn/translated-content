@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Roles/alertdialog_role
 
 ### 説明
 
-このテクニックは、[`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) ロールの使用方法を示しています。
+このテクニックは、[`alertdialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) ロールの使用方法を示しています。
 
 `alertdialog` ロールは、ユーザーの即時の注意を要する緊急情報をユーザーに通知するために使用されます。 その名前が示すように、`alertdialog` は一種のダイアログです。 これは、「[ARIA: `dialog` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)」で提供されているほとんどの指示が `alertdialog` ロールにも適用できることを意味します。
 
@@ -20,7 +20,7 @@ slug: Web/Accessibility/ARIA/Roles/alertdialog_role
 その緊急性のために、アラートダイアログは常にモーダルでなければなりません。
 
 > [!NOTE]
-> このロールは、インタラクティブなコントロールに関連付けられているアラートメッセージにのみ使用するべきです。 アラートダイアログに静的コンテンツしか含まれておらず、インタラクティブなコントロールがまったくない場合は、`alertdialog` がここで使用する適切なロールではない可能性があります。 その場合は、代わりに `alert` ロールを使用するべきです（[ARIA: `alert` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alert_Role)の説明を参照）。
+> このロールは、インタラクティブなコントロールに関連付けられているアラートメッセージにのみ使用するべきです。 アラートダイアログに静的コンテンツしか含まれておらず、インタラクティブなコントロールがまったくない場合は、`alertdialog` がここで使用する適切なロールではない可能性があります。 その場合は、代わりに `alert` ロールを使用するべきです（[ARIA: `alert` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/alert_role)の説明を参照）。
 
 ### ユーザーエージェントと支援技術への影響
 
@@ -74,7 +74,7 @@ TBD
 ### 関連する ARIA 技術
 
 - [ARIA: `dialog` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [ARIA: `alert` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alert_Role)
+- [ARIA: `alert` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/alert_role)
 
 ### 互換性
 

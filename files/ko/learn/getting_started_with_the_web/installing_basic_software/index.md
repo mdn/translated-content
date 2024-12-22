@@ -11,7 +11,7 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 - **컴퓨터**. 당연한 얘기로 들리겠지만, 여러분 중 누군가는 이 글을 휴대폰이나 도서관의 컴퓨터로 읽고 계실겁니다. 진지한 웹 개발을 위해서는 데스크탑 컴퓨터(윈도우, 맥, 또는 리눅스)에 투자하는것이 좋습니다.
 - 코드 작성을 위한 **텍스트 편집기**. 순수 텍스트 편집기([Sublime](https://www.sublimetext.com/), [Brackets](http://brackets.io/), [Atom](https://atom.io/), [Visual Studio Code](https://code.visualstudio.com/) 등) 또는 하이브리드 편집기([Dreamweaver](https://www.adobe.com/products/dreamweaver.html), [WebStorm](https://www.jetbrains.com/webstorm/) 등)를 사용하시면 됩니다. 사무용 문서 편집기는 웹 브라우저의 렌더링 엔진을 방해하는 숨겨진 요소를 사용하기 때문에 코드 작성 용도로는 적합하지 않습니다.
-- 코드를 테스트하기 위한 **웹 브라우저**. 현재 가장 널리 사용되는 브라우저로는 [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Safari](https://www.apple.com/kr/safari/), [Internet Explorer](https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads), 그리고 [Microsoft Edge](https://www.microsoft.com/ko-kr/windows/microsoft-edge)가 있습니다. 또, 여러분의 웹 사이트가 휴대용 장치와 오래된 브라우저(IE 8\~10 등)에서는 어떻게 동작하는지도 시험해보셔야 합니다.
+- 코드를 테스트하기 위한 **웹 브라우저**. 현재 가장 널리 사용되는 브라우저로는 [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/kr/safari/), [Internet Explorer](https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads), 그리고 [Microsoft Edge](https://www.microsoft.com/ko-kr/windows/microsoft-edge)가 있습니다. 또, 여러분의 웹 사이트가 휴대용 장치와 오래된 브라우저(IE 8\~10 등)에서는 어떻게 동작하는지도 시험해보셔야 합니다.
 - 웹 페이지를 위한 이미지를 만들 수 있는 **이미지 편집기.** [GIMP](http://www.gimp.org/), [Paint.NET](http://www.getpaint.net/), [Photoshop](https://www.adobe.com/kr/products/photoshop.html) 등이 있습니다.
 - 서버 파일 관리, 프로젝트 협업, 코드와 자원 공유, 수정 충돌 방지를 위한 **버전 관리 시스템**. 지금은 [Git](http://git-scm.com/)이 제일 대중적인 버전 관리 시스템이며 Git 기반의 코드 공유 서비스인 [GitHub](https://github.com/)도 매우 유명합니다.
 - 오래 된 웹 호스팅 계정에 파일을 올리기 위한 **FTP 프로그램**. 지금은 점점 Git이 FTP를 대체하고 있습니다. (S)FTP 프로그램은 [Cyberduck](https://cyberduck.io/), [Fetch](https://fetchsoftworks.com/), [FileZilla](https://filezilla-project.org/) 외에도 무수히 많습니다.
@@ -33,14 +33,14 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 이제, 코드를 테스트할 데스크탑 웹 브라우저를 몇 가지 설치할겁니다. 다음 목록에서 여러분의 운영체제를 고른 후 원하시는 브라우저의 링크로 들어가 설치하세요.
 
-- Linux: [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/).
-- Windows: [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Internet Explorer](https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads), [Microsoft Edge](https://www.microsoft.com/ko-kr/windows/microsoft-edge) (Window 10은 Edge를 탑재하고 있습니다. Windows 7 이상에선 Internet Explorer 11을 설치할 수 있습니다. 이외에는 다른 브라우저를 설치해야 합니다)
-- Mac: [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](http://www.opera.com/), [Safari](https://www.apple.com/kr/safari/) (Safari는 iOS와 macOS에 탑재되어 있습니다)
+- Linux: [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/).
+- Windows: [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Internet Explorer](https://support.microsoft.com/ko-kr/help/17621/internet-explorer-downloads), [Microsoft Edge](https://www.microsoft.com/ko-kr/windows/microsoft-edge) (Window 10은 Edge를 탑재하고 있습니다. Windows 7 이상에선 Internet Explorer 11을 설치할 수 있습니다. 이외에는 다른 브라우저를 설치해야 합니다)
+- Mac: [Firefox](https://www.mozilla.org/ko/firefox/new/), [Chrome](https://www.google.com/chrome/browser/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/kr/safari/) (Safari는 iOS와 macOS에 탑재되어 있습니다)
 
 다음으로 진행하기 전에, 테스트를 위해 최소 두 개 이상의 브라우저를 설치해야 합니다.
 
 ### 로컬 웹 서버 설치하기
 
-어떤 예제는 제대로 작동하려면 웹 서버가 필요합니다. [로컬 테스트 서버 설치하기](/ko/docs/Learn/Common_questions/set_up_a_local_testing_server)에서 설치하는 방법을 알아보세요!
+어떤 예제는 제대로 작동하려면 웹 서버가 필요합니다. [로컬 테스트 서버 설치하기](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)에서 설치하는 방법을 알아보세요!
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

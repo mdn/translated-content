@@ -46,7 +46,7 @@ var myCar = {
 myCar.color; // undefined
 ```
 
-JavaScript オブジェクトのプロパティは、ブラケット (角括弧) 記述法でもアクセスすることができます (詳しくは[プロパティのアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を参照してください)。個々のプロパティが文字列値と関連付けられてアクセスできるため、オブジェクトは*連想配列*と呼ばれることがあります。ですから例えば、`myCar` オブジェクトのプロパティに次のようにアクセスできます。
+JavaScript オブジェクトのプロパティは、ブラケット (角括弧) 記述法でもアクセスすることができます (詳しくは[プロパティのアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を参照してください)。個々のプロパティが文字列値と関連付けられてアクセスできるため、オブジェクトは*連想配列*と呼ばれることがあります。ですから例えば、`myCar` オブジェクトのプロパティに次のようにアクセスできます。
 
 ```js
 myCar["make"] = "Ford";
@@ -176,7 +176,7 @@ if (cond) var x = { greeting: "hi there" };
 var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 ```
 
-配列を作るためにオブジェクト初期化子を使うこともできます。[配列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals)を参照してください。
+配列を作るためにオブジェクト初期化子を使うこともできます。[配列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)を参照してください。
 
 ### コンストラクター関数の使用
 
@@ -287,7 +287,7 @@ fish.displayType(); // 出力 : Fishes
 
 ## 継承
 
-JavaScript のすべてのオブジェクトは、1 つ以上の他のオブジェクトを継承しています。継承元になるオブジェクトはプロトタイプと呼ばれ、継承されたプロパティはコンストラクターの `prototype` オブジェクトにあります。詳細は[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を参照してください。
+JavaScript のすべてのオブジェクトは、1 つ以上の他のオブジェクトを継承しています。継承元になるオブジェクトはプロトタイプと呼ばれ、継承されたプロパティはコンストラクターの `prototype` オブジェクトにあります。詳細は[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を参照してください。
 
 ## オブジェクトプロパティのインデックス付け
 
@@ -306,7 +306,7 @@ Car.prototype.color = null;
 car1.color = "black";
 ```
 
-詳しくは、[JavaScript リファレンス](/ja/docs/JavaScript/Reference)内にある、`Function` オブジェクトの [`prototype` プロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)を参照してください。
+詳しくは、[JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)内にある、`Function` オブジェクトの [`prototype` プロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function)を参照してください。
 
 ## メソッドの定義
 
@@ -417,10 +417,10 @@ Manager.howOldAmI(); // I am 27 years old.
 
 ゲッターとセッターは次のどちらの方法でも作れます。
 
-- [オブジェクト初期化子](#Object_initializers)を使用して定義する。
+- [オブジェクト初期化子](#object_initializers)を使用して定義する。
 - ゲッターやセッターを追加するメソッドを使用して、任意のオブジェクトへ後から追加する。
 
-[オブジェクト初期化子](#Object_initializers)を使用してゲッターとセッターを定義するには、ゲッターメソッドの前に `get` を、セッターメソッドの前に `set` を記述するだけです。当然ですがゲッターメソッドは引数を想定してはいけませんし、セッターメソッドは正確に 1 つの引数（新しい設定値）を期待します。
+[オブジェクト初期化子](#object_initializers)を使用してゲッターとセッターを定義するには、ゲッターメソッドの前に `get` を、セッターメソッドの前に `set` を記述するだけです。当然ですがゲッターメソッドは引数を想定してはいけませんし、セッターメソッドは正確に 1 つの引数（新しい設定値）を期待します。
 例えば、以下のようになります。
 
 ```js
@@ -520,11 +520,11 @@ fruit.name = "grape";
 console.log(fruitbear); // { name: "apple" } ではなく { name: "grape" } と出力される
 ```
 
-比較演算子についての詳細は、リファレンスの[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)の節をご覧ください。
+比較演算子についての詳細は、リファレンスの[比較演算子](/ja/docs/Web/JavaScript/Reference/Operators)の節をご覧ください。
 
 ## 関連情報
 
-- より詳しく知りたければ、当ガイドの[オブジェクトモデルの詳細](/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)をお読みください。
+- より詳しく知りたければ、当ガイドの[オブジェクトモデルの詳細](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)をお読みください。
 - ECMAScript 2015 のクラス (オブジェクトを作る新しい方法) について知りたければ、リファレンスの [JavaScript クラス](/ja/docs/Web/JavaScript/Reference/Classes)の節をお読みください。
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

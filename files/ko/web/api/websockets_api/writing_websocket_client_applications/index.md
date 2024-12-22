@@ -14,7 +14,7 @@ WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에
 
 ## WebSocket 객체 생성하기
 
-WebSocket 프로토콜을 사용하여 통신하기 위해서는 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket)객체를 생성해야 합니다. 이 객체는 자동으로 서버로의 연결을 열려고 할 것입니다.
+WebSocket 프로토콜을 사용하여 통신하기 위해서는 [`WebSocket`](/en-US/WebSockets/WebSockets_reference/WebSocket)객체를 생성해야 합니다. 이 객체는 자동으로 서버로의 연결을 열려고 할 것입니다.
 
 WebSocket 생성자는 하나의 필수 파라미터와 하나의 선택 파라미터를 받습니다.
 
@@ -37,9 +37,9 @@ WebSocket WebSocket(
 
 ### 연결 에러
 
-만약 연결 시도 중 에러가 발생하면, 먼저 "error"란 이름의 이벤트가 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onerror` 핸들러가 실행됩니다. 그 후에 연결이 종료되는 이유를 가리키는 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 이벤트가 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onclose` 핸들러가 실행됩니다.
+만약 연결 시도 중 에러가 발생하면, 먼저 "error"란 이름의 이벤트가 [`WebSocket`](/en-US/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onerror` 핸들러가 실행됩니다. 그 후에 연결이 종료되는 이유를 가리키는 [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent) 이벤트가 [`WebSocket`](/en-US/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onclose` 핸들러가 실행됩니다.
 
-Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫폼의 콘솔에 표시되며, [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent)로부터는 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4)에 정의되어 있는 연결 종료 코드를 받게 됩니다.
+Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫폼의 콘솔에 표시되며, [`CloseEvent`](/en-US/WebSockets/WebSockets_reference/CloseEvent)로부터는 [RFC 6455, Section 7.4](https://tools.ietf.org/html/rfc6455#section-7.4)에 정의되어 있는 연결 종료 코드를 받게 됩니다.
 
 ### 예제
 
@@ -90,7 +90,7 @@ exampleSocket.onopen = function (event) {
 
 ### 데이터 전송에 JSON 사용하기
 
-[JSON](/en/JSON) 을 사용하면 서버에 복잡한 데이터를 편리하게 보낼 수 있습니다. 예를 들어, 채팅 프로그램이 서버와 JSON으로 캡슐화된 패킷 데이터를 주고받는 프로토콜을 구현한것을 상상해 볼 수 있습니다.:
+[JSON](/en-US/JSON) 을 사용하면 서버에 복잡한 데이터를 편리하게 보낼 수 있습니다. 예를 들어, 채팅 프로그램이 서버와 JSON으로 캡슐화된 패킷 데이터를 주고받는 프로토콜을 구현한것을 상상해 볼 수 있습니다.:
 
 ```js
 // Send text to all users through the server
@@ -177,7 +177,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-여기서 우리는 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 를 통해 JSON 오브젝트를 JavaScript 오브젝트로 변환합니다. 그 다음 콘텐츠에 따라 분기하고 처리하는 로직을 가집니다.
+여기서 우리는 [`JSON.parse()`](/en-US/JavaScript/Reference/Global_Objects/JSON/parse) 를 통해 JSON 오브젝트를 JavaScript 오브젝트로 변환합니다. 그 다음 콘텐츠에 따라 분기하고 처리하는 로직을 가집니다.
 
 ### Text data format
 

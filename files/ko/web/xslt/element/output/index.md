@@ -56,7 +56,7 @@ slug: Web/XSLT/Element/output
 
 ### 정의
 
-[XSLT section 16, Output](http://www.w3.org/TR/xslt#output)
+[XSLT section 16, Output](https://www.w3.org/TR/xslt#output)
 
 ### Gecko 지원
 

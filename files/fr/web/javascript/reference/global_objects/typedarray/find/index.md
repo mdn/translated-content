@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 
 {{JSRef}}
 
-La méthode **`find()`** renvoie une **valeur** du tableau typé si un élément du tableau remplit la condition définie par la fonction de test fournie. Si aucun élément ne remplit la condition, la valeur {{jsxref("undefined")}} sera renvoyée. Pour la suite de cet article _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La méthode **`find()`** renvoie une **valeur** du tableau typé si un élément du tableau remplit la condition définie par la fonction de test fournie. Si aucun élément ne remplit la condition, la valeur {{jsxref("undefined")}} sera renvoyée. Pour la suite de cet article _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 Voir également la page sur la méthohde {{jsxref("TypedArray.findIndex", "findIndex()")}} qui renvoie l'**indice** de l'élément trouvé (et non sa valeur).
 

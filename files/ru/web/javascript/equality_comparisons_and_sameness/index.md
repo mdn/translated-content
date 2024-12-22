@@ -7,8 +7,8 @@ slug: Web/JavaScript/Equality_comparisons_and_sameness
 
 JavaScript предоставляет три оператора сравнения величин:
 
-- равенство ("двойное равно") использует [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality),
-- строгое равенство ("тройное равно" или "идентично") использует [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity),
+- равенство ("двойное равно") использует [==](/ru/docs/Web/JavaScript/Reference/Operators#equality),
+- строгое равенство ("тройное равно" или "идентично") использует [===](/ru/docs/Web/JavaScript/Reference/Operators#identity),
 - и [`Object.is`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (новшество из ECMAScript 6).
 
 Выбор оператора зависит от типа сравнения, которое необходимо произвести.
@@ -201,7 +201,7 @@ _Равенство одинаковых величин и нулей_ отли�
 
 ## Спецификации для равенства, строгого равенства и равенства одинаковых величин
 
-В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) находится в секции [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators) находится в секции [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 
 ### Как понимать все эти способы сравнения?
 
@@ -265,7 +265,7 @@ Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken int
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

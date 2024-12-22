@@ -243,6 +243,6 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 - [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Attribute)
 - [SVG Tutorial](/pt-BR/docs/Web/SVG/Tutorial)
-- [SVG interface reference](/pt-BR/docs/DOM/Referencia_do_DOM#SVG_interfaces)
+- [SVG interface reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

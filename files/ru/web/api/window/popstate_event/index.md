@@ -14,7 +14,7 @@ slug: Web/API/Window/popstate_event
 ## General info
 
 - Specification
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
 - Interface
   - : PopStateEvent
 - Bubbles
@@ -65,7 +65,7 @@ Note that even though the original history entry (for `http://example.com/exampl
 
 ## Related Events
 
-- [`hashchange`](/ru/docs/Mozilla_event_reference/hashchange)
+- [`hashchange`](/ru/docs/Web/API/Window/hashchange_event)
 
 ## See Also
 

@@ -35,7 +35,7 @@ Une chaîne de caractères qui représente l'heure de la date indiquée selon de
 ## Performances
 
 Lorsqu'on formate un grand nombre de dates, mieux vaudra créer un objet
-[`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) et utiliser la fonction fournie par sa propriété [`format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format)
+[`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) et utiliser la fonction fournie par sa propriété [`format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
 property.
 
 ## Exemples

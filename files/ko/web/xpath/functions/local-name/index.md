@@ -24,11 +24,11 @@ local-name( [node-set] )
 
 ### 주의
 
-- 지역 이름은 [expanded-name](http://www.w3.org/TR/xpath#dt-expanded-name)의 지역 부분입니다.
+- 지역 이름은 [expanded-name](https://www.w3.org/TR/xpath#dt-expanded-name)의 지역 부분입니다.
 
 ### 정의
 
-[XPath 1.0 4.1](http://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
 
 ### Gecko 지원
 

@@ -173,7 +173,7 @@ Django имеет методы обеспечения защиты от расп
 
 - [Безопасность в Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs)
 - [Веб безопасность](/ru/docs/Web/Security) (MDN)
-- [Безопасность вашего сайта](/ru/docs/Web/Security/Securing_your_site) (MDN)
+- [Безопасность вашего сайта](/ru/docs/Web/Security/Practical_implementation_guides) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 

@@ -108,7 +108,7 @@ map(
 // 結果會回傳 [0, 1, 8, 125, 1000]
 ```
 
-除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/zh-TW/docs/Web/JavaScript/Guide#function_object) 來定義，類似 [`eval()`](/zh-TW/docs/Web/JavaScript/Guide/Functions#eval_function)。
+除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/zh-TW/docs/Web/JavaScript/Guide#function_object) 來定義，類似 [`eval()`](#eval_function)。
 
 ## 呼叫函式
 

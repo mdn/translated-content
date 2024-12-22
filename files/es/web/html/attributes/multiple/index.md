@@ -108,7 +108,7 @@ Cuando se establece [`multiple`](/es/docs/Web/HTML/Element/input#multiple) en el
 
 Nota la diferencia en la apariencia entre el ejemplo con [`multiple`](/es/docs/Web/HTML/Element/input#multiple) establecido y el otro {{HTMLElement("input")}} sin `file`.
 
-Cuando se envía el formulario, utilizas el [method='get'](/es/docs/Web/HTML/Element/form) el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de [multipart](/es/docs/Web/API/XMLHttpRequest/multipart), usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y [envío de datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_method_attribute) para obtener más información.
+Cuando se envía el formulario, utilizas el [method='get'](/es/docs/Web/HTML/Element/form) el nombre de cada archivo seleccionado se habría agregado a los parámetros de la URL como `?uploads=img1.jpg&uploads=img2.svg`. Sin embargo, dado que estamos asumiendo datos de formularios de [multipart](/es/docs/Web/API/XMLHttpRequest/multipart), usamos mucho el `post`. Consulta el elemento {{HTMLElement('form')}} y [envío de datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) para obtener más información.
 
 ### `select`
 
@@ -181,4 +181,4 @@ Configurar [size](/es/docs/Web/HTML/Attributes/size) `="1"` en una selección m�
 
 - {{HTMLElement('input')}}
 - {{htmlelement('select')}}
-- [Permitir varias direcciones de correo electrónico](/es/docs/Web/HTML/Element/input/email#Allowing_multiple_e-mail_addresses)
+- [Permitir varias direcciones de correo electrónico](/es/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)

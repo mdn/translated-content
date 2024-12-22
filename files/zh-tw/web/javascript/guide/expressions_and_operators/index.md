@@ -48,25 +48,25 @@ JavaScript 同時具有二元運算子及一元運算子， 以及一種特殊�
 
 ### 賦值運算子
 
-一個 [賦值運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators) 將 基於其 右方的運算元 的值賦予其 左方的運算元。 最簡單的 賦值運算子 是 等於 (`=`)， 它將賦予 左方運算元 與 右方運算元相同之值。 也就是， `x = y` 會把 y 的值賦予給 x。
+一個 [賦值運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment) 將 基於其 右方的運算元 的值賦予其 左方的運算元。 最簡單的 賦值運算子 是 等於 (`=`)， 它將賦予 左方運算元 與 右方運算元相同之值。 也就是， `x = y` 會把 y 的值賦予給 x。
 
 也有一些復合的 賦值運算子 是為了縮短下面表中的運算:
 
-| 名稱                                                                                                                                                                                        | 簡化的運算子 | 意義          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------- |
-| [賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment)                                                                                                      | `x = y`      | `x = y`       |
-| [加法](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#addition_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment)       | `x += y`     | `x = x + y`   |
-| [減法](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#subtraction_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment)    | `x -= y`     | `x = x - y`   |
-| [乘法](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#multiplication_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment) | `x *= y`     | `x = x * y`   |
-| [除法](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#division_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment)       | `x /= y`     | `x = x / y`   |
-| [餘數](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#remainder_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment)      | `x %= y`     | `x = x % y`   |
-| [指數](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#exponentiation_assignment)[賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#assignment) | `x **= y`    | `x = x ** y`  |
-| [左移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#left_shift_assignment)                                                                                       | `x <<= y`    | `x = x << y`  |
-| [右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#right_shift_assignment)                                                                                      | `x >>= y`    | `x = x >> y`  |
-| [無號右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#unsigned_right_shift_assignment)                                                                         | `x >>>= y`   | `x = x >>> y` |
-| [位元 AND 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#bitwise_and_assignment)                                                                                 | `x &= y`     | `x = x & y`   |
-| [位元 XOR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#bitwise_xor_assignment)                                                                                 | `x ^= y`     | `x = x ^ y`   |
-| [位元 OR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators#bitwise_or_assignment)                                                                                   | `x \|= y`    | `x = x \| y`  |
+| 名稱                                                                                           | 簡化的運算子 | 意義          |
+| ---------------------------------------------------------------------------------------------- | ------------ | ------------- |
+| [賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Assignment)                              | `x = y`      | `x = y`       |
+| [加法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition_assignment)                 | `x += y`     | `x = x + y`   |
+| [減法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)              | `x -= y`     | `x = x - y`   |
+| [乘法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication_assignment)           | `x *= y`     | `x = x * y`   |
+| [除法賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division_assignment)                 | `x /= y`     | `x = x / y`   |
+| [餘數賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)                | `x %= y`     | `x = x % y`   |
+| [指數賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation_assignment)           | `x **= y`    | `x = x ** y`  |
+| [左移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)               | `x <<= y`    | `x = x << y`  |
+| [右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)              | `x >>= y`    | `x = x >> y`  |
+| [無號右移賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment) | `x >>>= y`   | `x = x >>> y` |
+| [位元 AND 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)         | `x &= y`     | `x = x & y`   |
+| [位元 XOR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)         | `x ^= y`     | `x = x ^ y`   |
+| [位元 OR 賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)           | `x \|= y`    | `x = x \| y`  |
 
 #### 解構
 

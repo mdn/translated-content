@@ -13,7 +13,7 @@ slug: Web/API/Node/ownerDocument
 document = element.ownerDocument;
 ```
 
-- `document` 는 element 의 부모 [`document`](/ko/docs/DOM/document) 객체입니다.
+- `document` 는 element 의 부모 [`document`](/ko/docs/Web/API/Document) 객체입니다.
 
 ## Example
 
