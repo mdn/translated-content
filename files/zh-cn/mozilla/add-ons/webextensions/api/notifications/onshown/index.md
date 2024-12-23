@@ -20,11 +20,11 @@ browser.notifications.onShown.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到这个事件。
+  - : 为此事件添加一个监听器。
 - `removeListener(listener)`
-  - : 停止监听这个事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到这个事件。若在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。若正在监听，返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
@@ -35,7 +35,7 @@ browser.notifications.onShown.hasListener(listener)
   - : 当此事件发生时调用的函数。该函数传入此参数：
 
     - `notificationId`
-      - : `string`. 已显示的通知的 ID。
+      - : `string`。已显示的通知的 ID。
 
 ## 浏览器兼容性
 
@@ -43,7 +43,7 @@ browser.notifications.onShown.hasListener(listener)
 
 ## 示例
 
-向 `notifications.onShown` 事件添加一个监听器并记录其详细信息：
+为 `notifications.onShown` 事件添加一个监听器并记录其详细信息：
 
 ```js
 function logShown(itemId) {
