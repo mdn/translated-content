@@ -15,9 +15,9 @@ l10n:
 `InputDeviceCapability` 的同一个实例。例如，当用户将手指从触摸屏上抬起时，可能会生成若干个 UIEvents，
 包括`touchend`、`mousedown`、`click` 和 `focus`。所有这些事件必须具有表示触摸屏的相同 `sourceCapability`。
 
-只有当该交互是Web平台提供的抽象的一部分时，设备才被视为对事件“负责”。
-例如，许多用户代理允许使用鼠标或键盘调整窗口大小，但这个细节不会以任何方式暴露给Web平台，
-因此resize事件的sourceCapability通常为null。
+只有当该交互是 Web 平台提供的抽象的一部分时，设备才被视为对事件“负责”。
+例如，许多用户代理允许使用鼠标或键盘调整窗口大小，但这个细节不会以任何方式暴露给 Web 平台，
+因此 resize 事件的 sourceCapability 通常为 null。
 
 ## 值
 
