@@ -12,7 +12,7 @@ l10n:
 接口的一个实例，该实例提供有关负责生成触摸事件的物理设备的信息。如果没有输入设备对事件负责，则返回`null`。
 
 当单个用户与输入设备的交互生成一系列不同的输入事件时，所有这些事件的 `sourceCapability` 属性将指向
-`InputDeviceCapability` 的同一个实例。例如，当用户将手指从触摸屏上抬起时，可能会生成若干个UIEvents，
+`InputDeviceCapability` 的同一个实例。例如，当用户将手指从触摸屏上抬起时，可能会生成若干个 UIEvents，
 包括`touchend`、`mousedown`、`click` 和 `focus`。所有这些事件必须具有表示触摸屏的相同 `sourceCapability`。
 
 只有当该交互是Web平台提供的抽象的一部分时，设备才被视为对事件“负责”。
