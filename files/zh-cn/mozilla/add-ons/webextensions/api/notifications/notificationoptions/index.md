@@ -2,19 +2,19 @@
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 l10n:
-  sourceCommit: 3f75d5aa47d734848e21f4f48eda9780e4b8eaa5
+  sourceCommit: bb0286344d812030e05e43214159f0740828190b
 ---
 
 {{AddonSidebar}}
 
-该类型包含所有用于进行下属操作的数据：
+该类型包含所有用于进行以下操作的数据：
 
 - 使用 {{WebExtAPIRef("notifications.create()")}} 创建通知，
 - 使用 {{WebExtAPIRef("notifications.update()")}} 更新现有通知。
 
 ## 类型
 
-该类型的取值为对象，包含下列属性：
+该类型的值为对象，包含下列属性：
 
 前三个属性 `type`、`title`、`message` 在 {{WebExtAPIRef("notifications.create()")}} 中是必需的，但在 {{WebExtAPIRef("notifications.update()")}} 中是可选的。Firefox 目前仅支持 `type`、`title`、`message` 和 `iconUrl` 属性，并且 `type` 属性的只支持取 `'basic'` 值。
 
