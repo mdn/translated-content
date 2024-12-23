@@ -56,7 +56,7 @@ let settingIcon = browser.sidebarAction.setIcon(
         });
         ```
 
-        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标尺寸)。
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
 
@@ -73,7 +73,7 @@ let settingIcon = browser.sidebarAction.setIcon(
         });
         ```
 
-        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标尺寸)。
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
         如果 `path` 是一个空字符串，浏览器将使用默认图标。
 
