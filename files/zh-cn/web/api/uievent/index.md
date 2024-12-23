@@ -27,7 +27,7 @@ _也继承了父代 {{domxref("Event")}} 的一些属性。_
 - {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : 返回输入设备功能接口的一个实例，它提供有关负责生成 touch 事件的物理设备的信息。
 - {{domxref("UIEvent.view")}}{{ReadOnlyInline}}
-  - : 返回一个包含了产生该事件的视图的 {{domxref("WindowProxy")}} 。
+  - : 返回一个包含了产生该事件的视图的 {{glossary("WindowProxy")}} 。
 - {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回一个对应（键盘）按下的数字类型的 `keyCode` ，或者一个字母数字键按下时的字符码 (`charCode`)。
 
