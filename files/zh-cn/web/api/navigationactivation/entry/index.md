@@ -30,4 +30,4 @@ l10n:
 ## 参见
 
 - [导航 API](/zh-CN/docs/Web/API/Navigation_API)
-- [View Transition API](/zh-CN/docs/Web/API/View_Transition_API)
+- [视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API)
