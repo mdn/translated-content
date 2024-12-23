@@ -54,7 +54,7 @@ cd borderify
 - [深入理解 content script](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [深入理解 about match pattern](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **警告：** [某些情況下，你需要給附加元件指定 ID](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
+> **警告：** [某些情況下，你需要給附加元件指定 ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/#when_do_you_need_an_add-on_id)。如果需要指定附加元件 ID，請在 `manifest.json` 引入 [`applications`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key，並設定 `gecko.id` 屬性：
 >
 > ```json
 > "applications": {
@@ -126,7 +126,7 @@ borderify/
 
 再做點小實驗吧。改一下腳本讓外框顏色改變，或是做其他更動。接著存檔，並按下 about:debugging 的 Reload 鍵重啟附加元件。現在你能看到更動了：
 
-- [多了解一點附加元件的載入](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+- [多了解一點附加元件的載入](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 
 ## 打包並發送
 

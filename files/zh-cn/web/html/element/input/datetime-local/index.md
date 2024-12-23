@@ -616,4 +616,4 @@ daySelect.onchange = () => {
 
 - 通用 {{HTMLElement("input")}} 元素以及操作它的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date) 和 [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time)
-- [日期和时间选择器教程](/zh-CN/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [日期和时间选择器教程](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#date_and_time_picker)

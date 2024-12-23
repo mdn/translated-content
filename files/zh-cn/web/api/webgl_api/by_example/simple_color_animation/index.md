@@ -3,7 +3,7 @@ title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
 这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例，通过定时器来逐秒填充不同的颜色来实现。
 

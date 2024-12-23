@@ -11,6 +11,6 @@ l10n:
 
 ## 参见
 
-- [学习：元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#元数据：meta_元素)
+- [学习：元数据](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
 - 维基百科上的[元数据](https://zh.wikipedia.org/wiki/元数据)
 - MDN 上的 {{htmlelement("meta")}} 元素
