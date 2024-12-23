@@ -1,6 +1,5 @@
 ---
-title: "UIEvent: sourceCapabilities 属性"
-short-title: sourceCapabilities
+title: UIEvent：sourceCapabilities 属性
 slug: Web/API/UIEvent/sourceCapabilities
 l10n:
   sourceCommit: 8cac4a3fed6a702840efd2deda67a922120732d0
