@@ -27,7 +27,7 @@ l10n:
 
 ```js
 window.addEventListener("pagereveal", async (e) => {
-  // 如果“来自”历史记录条目不存在，则返回
+  // 如果“from”历史记录条目不存在，则返回
   if (!navigation.activation.from) return;
 
   // 仅当存在活动视图过渡时才运行此操作
@@ -86,4 +86,4 @@ window.addEventListener("pagereveal", async (e) => {
 ## 参见
 
 - [导航 API](/zh-CN/docs/Web/API/Navigation_API)
-- [View Transition API](/zh-CN/docs/Web/API/View_Transition_API)
+- [视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API)
