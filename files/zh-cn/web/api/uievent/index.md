@@ -1,6 +1,8 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("UI Events")}}
@@ -20,23 +22,13 @@ slug: Web/API/UIEvent
 
 _也继承了父代 {{domxref("Event")}} 的一些属性。_
 
-- {{domxref("UIEvent.cancelBubble")}} {{Non-standard_inline}} {{Deprecated_inline}}
-  - : 返回一个 {{jsxref("Boolean")}}，表示该事件的冒泡是否被取消。
-- {{domxref("UIEvent.detail")}}{{readonlyinline}}
-  - : Returns a `long` with details about the event, depending on the event type.
-- {{domxref("UIEvent.layerX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : 返回事件相对于当前层的水平坐标。
-- {{domxref("UIEvent.layerY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : 返回事件相对于当前层的垂直坐标。
-- {{domxref("UIEvent.pageX")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : 返回事件相对于整个文档的水平坐标。
-- {{domxref("UIEvent.pageY")}} {{Non-standard_inline}} {{readonlyinline}}
-  - : 返回事件相对于整个文档的垂直坐标。
-- {{domxref("UIEvent.sourceCapabilities")}} {{non-standard_inline}} {{readonlyinline}}
+- {{domxref("UIEvent.detail")}}{{ReadOnlyInline}}
+  - : 返回一个 `long` 其中包含有关事件的详细信息，具体取决于事件类型。
+- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : 返回输入设备功能接口的一个实例，它提供有关负责生成 touch 事件的物理设备的信息。
-- {{domxref("UIEvent.view")}}{{readonlyinline}}
+- {{domxref("UIEvent.view")}}{{ReadOnlyInline}}
   - : 返回一个包含了产生该事件的视图的 {{domxref("WindowProxy")}} 。
-- {{domxref("UIEvent.which")}} {{Non-standard_inline}} {{readonlyinline}}
+- {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回一个对应（键盘）按下的数字类型的 `keyCode` ，或者一个字母数字键按下时的字符码 (`charCode`)。
 
 ## 方法
