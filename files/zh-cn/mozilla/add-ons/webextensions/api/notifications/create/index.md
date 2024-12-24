@@ -11,7 +11,7 @@ l10n:
 
 你可以传递 {{WebExtAPIRef("notifications.NotificationOptions")}} 来定义通知的内容和行为。
 
-你也可以为通知提供一个可选的 ID。如果省略 ID，则浏览器将为其生成一个 ID。你可以使用 ID 来{{WebExtAPIRef("notifications.update()", "更新", 1)}}或{{WebExtAPIRef("notifications.clear()", "清除", 1)}}通知。
+你也可以为通知提供一个可选的 ID。如果省略 ID，则浏览器将为其生成一个 ID。你可以使用 ID 来{{WebExtAPIRef("notifications.update()", "更新", "", 1)}}或{{WebExtAPIRef("notifications.clear()", "清除", "", 1)}}通知。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
