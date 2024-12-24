@@ -93,7 +93,7 @@ p:target i {
 
 #### 結果
 
-{{EmbedLiveSample('A_table_of_contents', "目錄表", 500, 300)}}
+{{EmbedLiveSample('目錄表', 500, 300)}}
 
 ## 規範
 
