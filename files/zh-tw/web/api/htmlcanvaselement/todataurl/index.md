@@ -9,7 +9,7 @@ l10n:
 
 **`HTMLCanvasElement.toDataURL()`** 方法會返回包含影像表示的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data)，格式由參數 `type` 指定。
 
-可以指定所需的檔案格式和影像品質。如果未指定檔案格式，或者指定的格式不受支援，則數據會以 `image/png` 格式匯出。換句話說，如果返回的值以 `data:image/png` 開頭，即使請求了其他格式，則表明該格式不受支援。
+可以指定所需的檔案格式和影像品質。如果未指定檔案格式，或者指定的格式不受支援，則數據會以 `image/png` 格式匯出。換句話說，如果對於任何其他類型（type）的請求地返回值是以 `data:image/png` 開頭，則表示該格式不受支援。
 
 瀏覽器必須支援 `image/png` 格式；許多瀏覽器也會支援額外的格式，例如 `image/jpeg` 和 `image/webp`。
 
@@ -36,12 +36,12 @@ toDataURL(type, quality)
 
 包含請求的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data) 的字串。
 
-如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Element/canvas#maximum_canvas_size)，將返回字串 `"data:,"`。
+如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Element/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
 
 ### 例外
 
 - `SecurityError`
-  - : 當畫布的點陣圖非來源乾淨，或其內容有部分可能來自與文件本身不同的網站時。
+  - : 當畫布的點陣圖非來源乾淨，或其內容有部分可能來自與載入的文件本身不同的網站時。
 
 ## 範例
 
@@ -61,7 +61,7 @@ console.log(dataURL);
 // blAAAADElEQVQImWNgoBMAAABpAAFEI8ARAAAAAElFTkSuQmCC"
 ```
 
-### 設定 JPEG 格式的影像品質
+### 設定 jpeg 格式的影像品質
 
 ```js
 const fullQuality = canvas.toDataURL("image/jpeg", 1.0);
@@ -137,4 +137,4 @@ function removeColors() {
 
 ## 參見
 
-- [數據 URL](/zh-TW/docs/Web/URI/Schemes/data) 在 [HTTP](/zh-TW/docs/Web/HTTP) 參考中。
+- [HTTP](/zh-TW/docs/Web/HTTP) 參考中的[數據 URL](/zh-TW/docs/Web/URI/Schemes/data)。
