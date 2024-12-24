@@ -2,7 +2,7 @@
 title: Web 性能
 slug: Web/Performance
 l10n:
-  sourceCommit: 035dd5ef748061d1997c1c79f972781dd680dfa4
+  sourceCommit: 514d1d2690c6374cd65921193ff6b166677395fd
 ---
 
 {{QuickLinksWithSubPages}}
@@ -15,27 +15,27 @@ Web 性能是客观的衡量标准，是用户对加载时间和运行时的直�
 
 ## 关键性能指南
 
-{{LandingPageListSubpages}}
+{{SubpagesWithSummaries}}
 
 ## 初学者教程
 
-MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要素的最新教程。如果你是性能方面的新手，请从这里开始：
+MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Performance)有着涵盖性能要素的最新教程。如果你是性能方面的新手，请从这里开始：
 
-- [Web 性能：概述](/zh-CN/docs/Learn/Performance/What_is_web_performance)
+- [Web 性能：概述](/zh-CN/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
   - : Web 性能学习路径概述。从这里开始你的旅程。
-- [什么是 Web 性能？](/zh-CN/docs/Learn/Performance/What_is_web_performance)
+- [什么是 Web 性能？](/zh-CN/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
   - : 本文从一个模块开始，很好地讲述了性能到底是什么——包括我们在考虑性能时需要考虑的工具、指标、API、网络和人群，以及如何使性能成为 Web 开发工作流程的一部分。
-- [用户如何看待性能？](/zh-CN/docs/Learn/Performance/Perceived_performance)
+- [用户如何看待性能？](/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
   - : 比网站在毫秒内的响应速度更重要的是，用户对网站的感知速度有多快。这些感知受到页面实际加载时间、空闲、用户交互响应以及滚动和其他动画的平滑度的影响。在本文中，我们将随着最佳实践来提升用户感知（而不是实际时间）并讨论各种加载指标、动画和响应性指标。
-- [Web 性能基础](/zh-CN/docs/Learn/Performance/Web_Performance_Basics)
+- [Web 性能基础](/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
   - : 除了 HTML、CSS、JavaScript 和媒体文件这些前端组件之外，还有其他导致应用程序变慢，或在主观和客观上使应用程序变快的因素。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不当做法。我们将在基础层面上介绍这些影响因素，并提供进阶优化其中每一项性能的链接。
-- [HTML 性能特性](/zh-CN/docs/Learn/Performance/HTML)
+- [HTML 性能特性](/zh-CN/docs/Learn_web_development/Extensions/Performance/HTML)
   - : 标记的某些属性和顺序可能会影响网站性能。通过最大程度地减少 DOM 节点的数量，确保使用最佳顺序和属性（包括样式、脚本、媒体和第三方脚本等内容），可以大大改善用户体验。该文详细介绍了如何使用 HTML 来确保最佳性能。
-- [多媒体：图像与视频](/zh-CN/docs/Learn/Performance/Multimedia)
+- [多媒体：图像与视频](/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia)
   - : Web 性能最容易提升的点通常是媒体优化。基于每个用户代理的能力、尺寸和像素密度来提供不同的媒体文件已成为可能。另外，如从背景视频中删除音轨，可进一步提升性能。该文讨论视频、音频和图像内容对性能的影响，以及确保将影响降至最低的方法。
-- [CSS 性能特性](/zh-CN/docs/Learn/Performance/CSS)
+- [CSS 性能特性](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS)
   - : CSS 对于提高性能来说可能是一个不太重要的优化点，但是某些 CSS 特性对性能的影响比其他特性更大。在该文中，我们将研究一些影响性能的 CSS 属性，并提供样式处理的建议方法，以确保性能不受负面影响。
-- [JavaScript 性能最佳实践](/zh-CN/docs/Learn/Performance/JavaScript)
+- [JavaScript 性能最佳实践](/zh-CN/docs/Learn_web_development/Extensions/Performance/JavaScript)
   - : 如果正确使用 JavaScript，则可以提供交互式和沉浸式的 Web 体验——否则可能会严重影响下载时间、渲染时间、应用内性能、电池寿命和用户体验。该文概述了一些值得思考的 JavaScript 最佳实践，以确保即使复杂的内容也尽可能地具有高性能。
 
 ## 使用 Performance API
@@ -63,16 +63,17 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn/Performance)有着涵盖性能要
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - {{glossary('Code splitting', '代码拆分')}}
 - {{glossary('CSSOM')}}
+- {{glossary('CLS', '累计布局偏移')}}
 - {{glossary('Domain sharding', '域名分片')}}
 - {{glossary('Effective connection type', '有效连接类型')}}
-- {{glossary('First contentful paint', '首次内容绘制')}}
+- {{glossary('First Contentful Paint', '首次内容绘制')}}
 - {{glossary('First CPU idle', '首次 CPU 空闲')}}
-- {{glossary('First input delay', '首次输入延迟')}}
-- {{glossary('First meaningful paint', '首次有效绘制')}}
-- {{glossary('First paint', '首次绘制')}}
+- {{glossary('First Paint', '首次绘制')}}
 - {{glossary('HTTP')}}
 - {{glossary('HTTP_2', 'HTTP/2')}}
+- {{glossary('Interaction to Next Paint', '交互到下次绘制')}}
 - {{glossary('Jank', '卡顿')}}
+- {{glossary('Largest Contentful Paint', '最大内容绘制')}}
 - {{glossary('Latency', '延迟')}}
 - {{glossary('Lazy load', '懒加载')}}
 - {{glossary('Long task', '长任务')}}
@@ -116,7 +117,7 @@ HTML
 - [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)
 - [`<img> srcset` 属性](/zh-CN/docs/Web/HTML/Element/img#属性)
 
-  - [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [响应式图片](/zh-CN/docs/Web/HTML/Responsive_images)
 
 - [使用 `rel="preload"` 以预加载内容](/zh-CN/docs/Web/HTML/Attributes/rel/preload)
 - <https://w3c.github.io/preload/>

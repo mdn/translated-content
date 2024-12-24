@@ -112,7 +112,7 @@ emsdk_env.bat
 现在使用一个支持 WebAssembly 的浏览器，加载生成的 `hello.html`。自从 Firefox 版本 52、Chrome 版本 57 和 Opera 版本 44 开始，已经默认启用了 WebAssembly。
 
 > [!NOTE]
-> 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
+> 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
 
 如果一切顺利，你应该可以在页面上的 Emscripten 控制台和浏览器控制台中看到“Hello World”的输出。
 

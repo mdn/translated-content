@@ -7,7 +7,7 @@ slug: Web/JavaScript/Language_overview
 
 ## 介紹
 
-為何需要重新介紹？因為 [JavaScript](/zh-TW/JavaScript) 堪稱是[全世界最被人誤解的程式語言](https://crockford.com/javascript/javascript.html)。儘管 JavaScript 再怎麼的被嘲諷為小兒科，在它誤導人的簡潔下隱藏著強大的語言功能。2005 年是個許多知名 JavaScript 應用程式推出的年度，在在證明：更加瞭解這項科技對任何網頁開發者來說皆是重要的技能。
+為何需要重新介紹？因為 [JavaScript](/zh-TW/docs/Web/JavaScript) 堪稱是[全世界最被人誤解的程式語言](https://crockford.com/javascript/javascript.html)。儘管 JavaScript 再怎麼的被嘲諷為小兒科，在它誤導人的簡潔下隱藏著強大的語言功能。2005 年是個許多知名 JavaScript 應用程式推出的年度，在在證明：更加瞭解這項科技對任何網頁開發者來說皆是重要的技能。
 
 先從該語言的歷史說起。1995 年，Brendan Eich，一位 Netscape （網景）的工程師，創造了 JavaScript。1996 年初，JavaScript 隨著 Netscape 2 首次推出。它原本要被命名為 LiveScript，結果因為行銷策略為了強調昇陽的 Java 程式語言的普遍性，而不幸的被改名 — 即便兩者之間沒有太大的關係。從此之後，這便成為了混淆的元兇。
 
@@ -461,7 +461,7 @@ for (var i = 0, item; (item = a[i]); i++) {
 
 這裡設定了兩個變數。`for` 迴圈中間指定變數值的部分會被測試是否為「真的」(truthy)－－如果成功了，迴圈便會繼續。由於 `i` 每次都會加一，陣列內的每個項目會被照順序指定到變數 item。當偵測到「假的」(falsy) 項目時（如 `undefined`）迴圈便會停止。
 
-注意－－這個小技巧只該用在你確定不會含有「假的」值的陣列（比如說一陣列的物件或 [DOM](/zh-TW/DOM) 節點）。假如你在可能含有 0 的數字資料或可能含有空字串的字串資料上做迴圈，最好還是用 `i, j` 的方式。
+注意－－這個小技巧只該用在你確定不會含有「假的」值的陣列（比如說一陣列的物件或 [DOM](/zh-TW/docs/Web/API/Document_Object_Model) 節點）。假如你在可能含有 0 的數字資料或可能含有空字串的字串資料上做迴圈，最好還是用 `i, j` 的方式。
 
 另外一個做迴圈的方法是用 [`for...in`](/zh-TW/Core_JavaScript_1.5_Reference/Statements/for...in) 迴圈。不過，假如有人用 `Array.prototype` 新增新的屬性，那些屬性也會被這種迴圈讀到：
 
@@ -601,7 +601,7 @@ var avg = function () {
 2
 ```
 
-JavaScript 能讓你遞迴地呼叫函式。這在處理樹狀結構的時候特別有用，比如瀏覽器的 [DOM](/zh-TW/DOM)。
+JavaScript 能讓你遞迴地呼叫函式。這在處理樹狀結構的時候特別有用，比如瀏覽器的 [DOM](/zh-TW/docs/Web/API/Document_Object_Model)。
 
 ```js
 function countChars(elm) {

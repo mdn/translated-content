@@ -341,7 +341,7 @@ input:valid + span::after {
 
 ### 指定模式
 
-可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[以正则表达式验证](/zh-CN/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)）。
+可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性指定输入值必须匹配才能被认为是有效的正则表达式（请参照[使用正则表达式校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)）。
 
 下面的示例将值限制为 4-8 个字符，并要求该值仅包含小写字母。
 
@@ -399,7 +399,7 @@ input:valid + span::after {
 
 ## 示例
 
-可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
+可以在[你的第一个 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)和[如何结构化 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)文章中看到一些好的示例。
 
 ## 规范
 
@@ -411,8 +411,8 @@ input:valid + span::after {
 
 ## 参阅
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}} 元素和其基于的接口 {{domxref("HTMLInputElement")}}
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}：多行文本输入元素
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

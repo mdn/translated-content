@@ -213,4 +213,4 @@ label {
 
 - 实现它的 {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 接口。
 - 在 `<input>` 元素的框架内改变图像的位置和大小：{{cssxref("object-position")}} 和 {{cssxref("object-fit")}}
-- [CSS 属性的兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性的兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

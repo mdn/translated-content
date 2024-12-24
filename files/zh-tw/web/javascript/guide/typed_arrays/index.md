@@ -109,7 +109,7 @@ int16View[0] = 32;
 console.log("現在32位元陣列的欄位0是" + int32View[0]);
 ```
 
-輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/docs/JavaScript_typed_arrays/ArrayBufferView#typed_array_subclasses) 也是同樣的情形。
+輸出為"現在 32 位元陣列的欄位 0 是 32"。也就是，這兩個陣列真的是同一個資料緩衝的在不同格式下的看法。其他 [view types](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typed_array_subclasses) 也是同樣的情形。
 
 ### 處理複雜的資料結構
 
