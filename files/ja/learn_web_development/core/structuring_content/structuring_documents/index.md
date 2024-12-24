@@ -154,9 +154,9 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
         <section>
           <h3>Another subsection</h3>
 
-        <p>
-          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-          soclis natoque penatibus et manis dis parturient montes, nascetur
+          <p>
+            Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+            soclis natoque penatibus et manis dis parturient montes, nascetur
             ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
             sem facilisis semper ac in est.
         </p>
