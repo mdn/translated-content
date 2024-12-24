@@ -54,9 +54,7 @@ background-attachment: unset;
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  大廳四周都有門，但它們都被鎖住了；當愛麗絲走到一邊又走到另一邊，試著每一扇門時，她悲傷地走到中間，想知道她該如何再次出去。
 </p>
 ```
 
@@ -81,17 +79,7 @@ p {
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+大廳四周都有門，但它們都被鎖住了；當愛麗絲走到一邊又走到另一邊，試著每一扇門時，她悲傷地走到中間，想知道她該如何再次出去。突然，她看到一張三條腿的小桌子，全是由實心玻璃製成的；桌上除了有一把小小的金鑰匙外，什麼也沒有。愛麗絲的第一個想法是這把鑰匙可能屬於大廳的某扇門，但可惜的是，不是鎖太大，就是鑰匙太小，總之它無法打開任何一扇門。然而，在第二次繞過大廳時，她發現了一個之前沒注意到的低矮窗簾，窗簾後面是一扇大約十五英寸高的小門。她試著將小金鑰匙插入鎖孔，令她非常高興的是，鑰匙正好合適！
 </p>
 ```
 
