@@ -143,7 +143,8 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
   font-family: "HeydingsControlsRegular";
   src: url("fonts/heydings_controls-webfont.eot");
   src:
-    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.eot?#iefix")
+      format("embedded-opentype"),
     url("fonts/heydings_controls-webfont.woff") format("woff"),
     url("fonts/heydings_controls-webfont.ttf") format("truetype");
   font-weight: normal;

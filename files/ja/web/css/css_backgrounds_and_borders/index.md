@@ -44,7 +44,9 @@ div {
       transparent 60%,
       currentcolor 60% 70%,
       transparent 70%
-    ), linear-gradient(45deg, currentcolor, white), linear-gradient(transparent, transparent);
+    ),
+    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(transparent, transparent);
   /* 3 枚目の透明な背景画像が追加され、背景色が透けて見えるスペースが確保された */
   background-color: currentcolor;
   background-position: center;
