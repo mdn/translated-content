@@ -27,7 +27,7 @@ background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
-`background-attachment` 屬性可設定為以下列舉值之一。
+`background-attachment` 屬性可設定為以下列舉的關鍵字值之一。
 
 ### 值
 
@@ -71,7 +71,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example", "簡單範例")}}
+{{EmbedLiveSample("簡單範例")}}
 
 ### 多重背景圖片
 
@@ -107,7 +107,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Multiple_background_images", "多重背景圖片")}}
+{{EmbedLiveSample("多重背景圖片")}}
 
 ## 規範
 
