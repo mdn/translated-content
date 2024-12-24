@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在來介紹我們的第三個框架 Vue 。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。
 
@@ -14,11 +14,11 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_get
       <th scope="row">預備知識</th>
       <td>
         <p>
-          熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a> 、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 、以及
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 、以及
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           的核心知識，知道如何使用<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列工具（ terminal/command line ）</a
           >。
         </p>
@@ -71,7 +71,7 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 2. npm 或 yarn
 
 > [!NOTE]
-> 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) 。
+> 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line#adding_powerups) 。
 
 在你的終端機執行以下命令來安裝 CLI ：
 
@@ -257,4 +257,4 @@ components: {
 
 在下一篇文章中，我們將會建立第一個客製元件，研究一些重要的概念，像是透過 props 傳遞資料及儲存它的資料狀態。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}

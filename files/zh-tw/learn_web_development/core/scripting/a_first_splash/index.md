@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/A_first_splash
 original_slug: Learn/JavaScript/First_steps/A_first_splash
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
 目前你已經學會了一些 JavaScript 的理論，以及你能用它做些什麼。我們現在要透過一個完整的實際範例給你一個 JavaScript 基本功能的速成班。你將能一步一步地做出一個簡單的"猜數字"遊戲
 
@@ -276,7 +276,7 @@ function checkGuess() {
 
 輸入函式名稱與括號便可以執行函式。
 
-讓我們來試試吧。儲存你的程式碼並重新整理瀏覽器畫面。進入 [開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), 並輸入下面這行：
+讓我們來試試吧。儲存你的程式碼並重新整理瀏覽器畫面。進入 [開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，並輸入下面這行：
 
 ```js
 checkGuess();
@@ -291,7 +291,7 @@ checkGuess();
 
 JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串等。
 
-儲存我們的程式碼並重整頁面，開啟 [開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) 。接下來你可以試著輸入以下的範例 —— 輸入跟每個「範例」欄位中一樣的內容，每輸入一個就按下<kbd>Return</kbd> / <kbd>Enter</kbd>， 接著看看回傳的結果。
+儲存我們的程式碼並重整頁面，開啟[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。接下來你可以試著輸入以下的範例 —— 輸入跟每個「範例」欄位中一樣的內容，每輸入一個就按下<kbd>Return</kbd> / <kbd>Enter</kbd>， 接著看看回傳的結果。
 
 如果你不能快速打開瀏覽器開發工具， 你可以使用内嵌的應用程式中輸入以下範例：
 
@@ -575,7 +575,7 @@ function resetGame() {
 
 上面的程式碼中，一個我們需要仔細看看的部份是 [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for) 迴圈。迴圈在程式設計中是一個非常重要的內容，可以讓你在滿足條件前反覆執行同一段程式碼。
 
-開始吧，打開你的 [開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)，然後輸入下面這行：
+開始吧，打開你的[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，然後輸入下面這行：
 
 ```js
 for (var i = 1; i < 21; i++) {
@@ -620,7 +620,7 @@ guessField.focus();
 var guessField = document.querySelector(".guessField");
 ```
 
-我們使用了 {{domxref("document.querySelector", "querySelector()")}} 來取得這個參照，前者是 {{domxref("document")}} 物件的方法。`querySelector()` 接受一個參數 — 一個 [CSS 選擇器](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)， 會回傳你想要的元素參照。
+我們使用了 {{domxref("document.querySelector", "querySelector()")}} 來取得這個參照，前者是 {{domxref("document")}} 物件的方法。`querySelector()` 接受一個參數——一個 [CSS 選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)，會回傳你想要的元素參照。
 
 因為現在 `guessField` 中存著一個指向 {{htmlelement("input")}} 元素的參照，它現在可以存取這個元素的屬性（基本上就是存在物件中的變數，其中有一些可能會是常數）和方法（基本上就是存在物件中的函式）了。文字輸入欄的其中一個方法便是 `focus()`，我們便可以透過呼叫這個方法來給予其焦點：
 
@@ -636,7 +636,7 @@ guessField.focus();
 讓我們來稍微玩一點瀏覽器內建的物件吧。
 
 1. 首先在瀏覽器中開啟你的程式。
-2. 接下來，打開你的[開發者工具 JavaScript console](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
+2. 接下來，打開你的[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。
 3. 輸入 `guessField`，可以看到主控台顯示這個變數儲存著一個 {{htmlelement("input")}} 元素。你還可以發現主控台會自動幫你完成已存在的物件名稱！
 4. 接下來輸入：
 
@@ -689,4 +689,4 @@ guessField.focus();
 
 這就是我們的範例 — 你順利地來到結尾了，做得不錯！試試你的最終成品，或試試[我們的版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你仍然有困難沒有解決，再看看[我們的原始碼](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}

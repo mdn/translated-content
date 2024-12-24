@@ -1388,6 +1388,6 @@ This article offers a list of events that can be sent; some are standard events 
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-TW/docs/Learn/JavaScript/Building_blocks/Events">事件介紹</a></li>
+    <li><a href="/zh-TW/docs/Learn_web_development/Core/Scripting/Events">事件介紹</a></li>
   </ol>{{ListSubpages}}
 </section>

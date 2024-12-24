@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 本文介紹如何為 [LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 網站定義模型。它解釋了模型是什麼、聲明的方式以及一些主要字段類型。它還簡要展示了你可以訪問模型數據的幾個主要方法。
 
@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">前提:</th>
       <td>
-        <a href="/zh-TW/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
           >Django 教學 2: 創建骨架網站。</a
         >
       </td>
@@ -442,4 +442,4 @@ _再來我們要稍微撇開建立網站，先來看看 Django 的管理站(Djan
 - [Making queries](https://docs.djangoproject.com/en/2.0/topics/db/queries/) (Django Docs)
 - [QuerySet API Reference](https://docs.djangoproject.com/en/2.0/ref/models/querysets/) (Django Docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}

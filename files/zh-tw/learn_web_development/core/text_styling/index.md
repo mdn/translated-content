@@ -19,18 +19,18 @@ original_slug: Learn/CSS/Styling_text
 
 這個單元包含以下的文章會教導你?設定 HTML 文字內容樣式的全部要領。
 
-- [基本的字形及文字樣式](/zh-TW/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的字形及文字樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling/Fundamentals)
   - : In this article we go through all the basics of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
-- [清單樣式](/zh-TW/docs/Learn/CSS/Styling_text/Styling_lists)
+- [清單樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling/Styling_lists)
   - : Lists behave like any other text for the most part, but there are some CSS properties specific to lists that you need to know about, and some best practices to consider. This article explains all.
-- [連結樣式](/zh-TW/docs/Learn/CSS/Styling_text/Styling_links)
+- [連結樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling/Styling_links)
   - : When styling links, it is important to understand how to make use of pseudo-classes to style link states effectively, and how to style links for use in common varied interface features such as navigation menus and tabs. We'll look at all these topics in this article.
-- [網頁字形](/zh-TW/docs/Learn/CSS/Styling_text/Web_fonts)
+- [網頁字形](/zh-TW/docs/Learn_web_development/Core/Text_styling/Web_fonts)
   - : Here we will explore web fonts in detail — these allow you to download custom fonts along with your web page, to allow for more varied, custom text styling.
 
 ## Assessments
 
 The following assessments will test your understanding of the text styling techniques covered in the guides above.
 
-- [Typesetting a community school homepage](/zh-TW/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Typesetting a community school homepage](/zh-TW/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage)
   - : In this assessment we'll test your understanding of styling text by getting you to style the text for a community school's homepage.

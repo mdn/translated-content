@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
 
 一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容......等。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
 
@@ -80,4 +80,4 @@ original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
 
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

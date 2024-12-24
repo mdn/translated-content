@@ -29,7 +29,7 @@ slug: Web/CSS
   - : 此模組讓你理解 CSS 工作原理，包含選擇器與屬性、撰寫 CSS 規則、在 HTML 套用 CSS、如何在 CSS 指定長度、色彩、還有其它單位、階層與繼承、box model 基礎、以及針對 CSS 除錯。
 - [文字樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling)
   - : 在這裡我們專注在文字樣式的基礎，包含設定字體、粗細、斜體、行距、字距、陰影以及其他文字屬性。最後以應用自訂字體、樣式化列表、樣式化連結結束。
-- [樣式化盒子](/zh-TW/docs/Learn/CSS/Building_blocks)
+- [樣式化盒子](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
   - : 接著，我們關注樣式化盒子，這是網頁排版中一個基礎的環節。在這個系列中我們會複習盒子模型，然後操作盒子的排版，像是設定留白、邊框、邊距、背景顏色或圖片以及其他特色，還有一些酷炫的功能像是陰影、過濾器。
 - [CSS 排版](/zh-TW/docs/Learn_web_development/Core/CSS_layout)
   - : 到了這裡，我們已經看完 CSS 的基礎（樣式化文字、樣式化與操作盒子使你的內容可以合適的展示）。現在該來看看如何把你的盒子放在相對於可視區正確的地方。我們已經擁有必要的知識，所以你可以更深入了解 CSS 排版、看不同的顯示設定、傳統排版方法如浮動或定位、新的排版方法如彈性盒子。

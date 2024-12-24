@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactiv
 original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript 是一個可以幫你在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助你踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
 
@@ -63,7 +63,7 @@ JavaScript 本身非常的簡潔，卻也充滿彈性，開發者們已經以 Ja
 接著我們來解釋一下 JavaScript 基本特性，以讓你更加地了解她是如何運作的。更好的事情是，這些特性基本上也存在於所有程式語言中。所以如果你可以充分理解這些基礎知識，你就可以撰寫程式來創造無限可能！
 
 > [!WARNING]
-> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)。
+> 在這篇文章中，請你試著將範例程式碼輸入到 JavaScript 主控台中，並觀察發生了什麼事。如果你想要了解更多 JavaScript 主控台的細節，請參閱 [Discover browser developer tools](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。
 
 ### 變數（Variables）
 
@@ -467,11 +467,11 @@ function setUserName() {
 
 在此，我們只稍稍體驗了 JavaScript 的一些皮毛。如果你非常享受這段學習的過程，並想要繼續深究，請你繼續瀏覽我們製作的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)。
 
-## See also
+## 參見
 
 - [JavaScript — Dynamic client-side scripting](/zh-TW/docs/Learn_web_development/Core/Scripting)
   - : Our JavaScript learning topic — dive into JavaScript in much more detail.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

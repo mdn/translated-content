@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_we
 original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 *你的網站看起來會是什麼樣子？*會說明你該為網站做的規劃與設計，決定自己的「網站該提供哪些資訊？」、「該使用哪些字型與色彩？」，以及「網站又該達到哪些目的？」
 
@@ -70,4 +70,4 @@ original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_li
 3. 點擊頁面底端的「使用 (Use)」按鈕。
 4. 進入下一頁，捲動到區塊 3 與區塊 4，將 Google 顯示的程式碼複製到你的文字編輯器中，儲存以待稍後利用。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

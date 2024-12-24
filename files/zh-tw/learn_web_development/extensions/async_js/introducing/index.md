@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。
 
@@ -168,7 +168,7 @@ fetch("products.json")
 我們可以透過練習來習慣這個概念；在動作上它感覺有點像是 [薛丁格的貓](https://zh.wikipedia.org/wiki/薛丁格的貓)。任何可能的結果已經發生，所以 fetch 指令正在等待瀏覽器在未來的某個時間點完成操作後並回傳的結果。我們接著在 `fetch()` 的結束會鏈結三個程式區塊：
 
 - 兩個 [`then()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 區塊。兩個都含有回呼函式且先前的操作成功時就會執行，每一個回呼函式都會收到上一個成功完成操作的結果，因此你可以繼續執行一些事情。每一個 `.then()` 區塊都會回傳另一個 promise ，代表你可以將多個 `.then()` 區塊彼此作連結，所以多個非同步操作可以一個接著一個被用來依序執行。
-- 如果任何一個 `.then()` 區塊失敗就會跑到 [`catch()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 區塊——類似像在同步區塊內部的 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 做法，在 `catch()` 內部會提供一個失敗的物件，可以用來報告是發生甚麼類型的錯誤。要注意到同步的 `try...catch` 不能與 promises 一起做使用，儘管它可以和 [async ／ await](/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises) 待配使用，這稍後將會學習到。
+- 如果任何一個 `.then()` 區塊失敗就會跑到 [`catch()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 區塊——類似像在同步區塊內部的 [`try...catch`](/zh-TW/docs/Web/JavaScript/Reference/Statements/try...catch) 做法，在 `catch()` 內部會提供一個失敗的物件，可以用來報告是發生甚麼類型的錯誤。要注意到同步的 `try...catch` 不能與 promises 一起做使用，儘管它可以和 [async ／ await](/zh-TW/docs/Learn_web_development/Extensions/Async_JS/Promises) 待配使用，這稍後將會學習到。
 
 > [!NOTE]
 > 你將會在稍後的單元學習到更多關於 promise 的觀念，即使現在尚未完全理解你也不需要太擔心。
@@ -257,14 +257,14 @@ TypeError: image is undefined; can't access its "src" property
 這是因為在這個時間點瀏覽器試著去執行最後的 `console.log()` 時 `fetch()` 還沒有完成執行，所以 `image` 變數尚未賦予值因而導致錯誤。
 
 > [!NOTE]
-> 由於安全性考量，你沒辦法呼叫 `fetch()` 從你的本地檔案系統抓取資料（或者其他在本地的相關操作）如果要在本地執行上面的範例，你需要在本地架起一個[網路伺服器](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)來執行。
+> 由於安全性考量，你沒辦法呼叫 `fetch()` 從你的本地檔案系統抓取資料（或者其他在本地的相關操作）如果要在本地執行上面的範例，你需要在本地架起一個[網路伺服器](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)來執行。
 
 ## 主動學習：讓一切非同步化！
 
 為了修復 `fetch()` 這個有問題的範例讓三個 `console.log()` 的敘述可以依序被執行你可以讓第三個 `console.log()` 也非同步的被執行。你可以新增一個新的 `.then()` 再將其放在裡面，這個新增的 `.then()` 再串連 promise 區塊的倒數第二個結尾；或者也可以將其放入原本的 `.then()` 中來解決這個問題。試著現在修復這個問題吧。
 
 > [!NOTE]
-> 如果你的想法卡住，你可以[在這裡](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html)找到解答（[線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html)）。你也可以在我們稍後的[優雅的使用 Promise 來處理非同步操作](/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises) 這個單元找到更多關於 promise 的資訊。
+> 如果你的想法卡住，你可以[在這裡](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html)找到解答（[線上範例](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html)）。你也可以在我們稍後的[優雅的使用 Promise 來處理非同步操作](/zh-TW/docs/Learn_web_development/Extensions/Async_JS/Promises) 這個單元找到更多關於 promise 的資訊。
 
 ## 結論
 
@@ -276,4 +276,4 @@ Javascript 基本上是一個同步性的、阻塞的，且是跑在單一執行
 
 如果我們正在執行一些需要花一點時間的操作，就好比查詢資料庫並將結果填充到模板上，最好的方式是不要在主執行緒上執行並用非同步的方法來完成。隨著時間的學習，你將會了解到在更多的情況下，選擇使用非同步的技巧會比選擇同步的方式來的更合理。
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
