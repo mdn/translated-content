@@ -152,7 +152,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
         </section>
 
         <section>
-        <h3>Another subsection</h3>
+          <h3>Another subsection</h3>
 
         <p>
           Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
