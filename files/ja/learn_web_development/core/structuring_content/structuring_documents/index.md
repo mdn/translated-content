@@ -143,8 +143,8 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
             dolor.
           </p>
 
-        <p>
-          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          <p>
+            Pelientesque auctor nisi id magna consequat sagittis. Curabitur
             dapibus, enim sit amet elit pharetra tincidunt feugiat nist
             imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
             odio eros.
