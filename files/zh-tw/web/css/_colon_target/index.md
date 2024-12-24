@@ -53,9 +53,7 @@ http://www.example.com/index.html#section2
   <li><a href="#p1">跳到第一段！</a></li>
   <li><a href="#p2">跳到第二段！</a></li>
   <li>
-    <a href="#nowhere">
-      此連結無效，因為目標不存在。
-    </a>
+    <a href="#nowhere"> 此連結無效，因為目標不存在。 </a>
   </li>
 </ol>
 
