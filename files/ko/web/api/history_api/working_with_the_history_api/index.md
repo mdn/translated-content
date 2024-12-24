@@ -2,22 +2,22 @@
 title: History API로 작업하기
 slug: Web/API/History_API/Working_with_the_History_API
 l10n:
-  sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
 
 {{DefaultAPISidebar("History API")}}
 
 History API는 웹사이트가 브라우저의 세션 기록과 상호작용할 수 있게 해줍니다. 세션 기록이란 사용자가 특정 창에서 방문한 페이지들의 목록을 말합니다. 예를 들어 사용자가 링크를 클릭하여 새로운 페이지를 방문하면, 그 새로운 페이지들이 세션 기록에 추가됩니다. 사용자는 브라우저의 "뒤로" 및 "앞으로" 버튼을 사용하여 기록을 앞뒤로 이동할 수도 있습니다.
 
-History API에서 정의된 주요 인터페이스는 {{domxref("History")}} 인터페이스이며, 이 인터페이스는 두 가지 전혀 다른 메서드 집합을 정의합니다:
+History API에서 정의된 주요 인터페이스는 {{domxref("History")}} 인터페이스이며, 이 인터페이스는 두 가지 전혀 다른 메서드 집합을 정의합니다.
 
-1. 세션 기록의 페이지로 이동하는 메서드:
+1. 세션 기록의 페이지로 이동하는 메서드
 
    - {{domxref("History.back()")}}
    - {{domxref("History.forward()")}}
    - {{domxref("History.go()")}}
 
-2. 세션 기록을 수정하는 메서드:
+2. 세션 기록을 수정하는 메서드
 
    - {{domxref("History.pushState()")}}
    - {{domxref("History.replaceState()")}}
@@ -32,18 +32,18 @@ History API에서 정의된 주요 인터페이스는 {{domxref("History")}} 인
 
 전통적으로, 웹사이트는 페이지 모음으로 구현됩니다. 사용자가 링크를 클릭하여 사이트의 다른 부분으로 이동할 때마다 브라우저는 매번 완전한 새 페이지를 로드합니다.
 
-이는 많은 사이트에 적합하지만, 몇 가지 단점이 있을 수 있습니다:
+이는 많은 사이트에 적합하지만, 몇 가지 단점이 있을 수 있습니다.
 
 - 페이지의 일부만 업데이트해야 할 때마다 전체 페이지를 로드하는 것은 비효율적일 수 있습니다.
 - 페이지 간 네비게이션 시 애플리케이션 상태를 유지하기 어렵습니다.
 
-이러한 이유로 웹 애플리케이션에서 인기 있는 패턴은 {{Glossary("SPA", "싱글 페이지 애플리케이션")}}(SPA)이며, 이 경우 사이트는 단일 페이지로 구성되고 사용자가 링크를 클릭할 때 페이지는 다음과 같이 동작합니다:
+이러한 이유로 웹 애플리케이션에서 인기 있는 패턴은 {{Glossary("SPA", "싱글 페이지 애플리케이션")}}(SPA)이며, 이 경우 사이트는 단일 페이지로 구성되고 사용자가 링크를 클릭할 때 페이지는 다음과 같이 동작합니다.
 
 1. 새 페이지를 로드하는 기본 동작을 방지합니다.
 2. {{domxref("Window/fetch", "Fetches", "", "nocode")}} 새로운 콘텐츠를 가져옵니다.
 3. 새로운 콘텐츠로 페이지를 업데이트합니다.
 
-예를 들어:
+다음의 예시를 살펴봅시다.
 
 ```js
 document.addEventListener("click", async (event) => {
@@ -66,7 +66,7 @@ document.addEventListener("click", async (event) => {
 
 이 클릭 핸들러에서, 링크에 `"data-creature"` 데이터 속성이 포함되어 있다면, 해당 속성의 값을 사용하여 페이지의 새로운 콘텐츠를 포함하는 JSON 파일을 가져옵니다.
 
-JSON 파일은 다음과 같을 수 있습니다:
+JSON 파일은 다음과 같을 수 있습니다.
 
 ```json
 {
@@ -79,7 +79,7 @@ JSON 파일은 다음과 같을 수 있습니다:
 }
 ```
 
-우리의 `displayContent()` 함수는 JSON으로 페이지를 업데이트합니다:
+`displayContent()` 함수는 JSON으로 페이지를 업데이트합니다.
 
 ```js
 // 새로운 콘텐츠으로 페이지 업데이트
@@ -105,7 +105,7 @@ function displayContent(content) {
 
 ## `pushState()` 사용하기
 
-위의 클릭 핸들러에 역사 항목을 추가할 수 있습니다:
+위의 클릭 핸들러에 역사 항목을 추가할 수 있습니다.
 
 ```js
 document.addEventListener("click", async (event) => {
@@ -126,7 +126,7 @@ document.addEventListener("click", async (event) => {
 });
 ```
 
-여기서 우리는 세 가지 인수로 `pushState()`를 호출하고 있습니다:
+여기서 우리는 세 가지 인수로 `pushState()`를 호출하고 있습니다.
 
 - `json`: 방금 가져온 콘텐츠입니다. 이는 역사 항목과 함께 저장되며, 나중에 사용자가 A로 네비게이션할 때 `popstate` 이벤트 핸들러에 전달되는 인수의 {{domxref("PopStateEvent.state", "state")}} 속성으로 포함됩니다.
 - `""`: 이는 레거시 사이트와의 하위 호환성을 위해 필요하며, 항상 빈 문자열이어야 합니다.
@@ -134,13 +134,13 @@ document.addEventListener("click", async (event) => {
 
 ## `popstate` 이벤트 사용하기
 
-사용자가 다음과 같이 동작한다고 가정해 봅시다:
+사용자가 다음과 같이 동작한다고 가정해 봅시다.
 
 1. SPA에서 링크를 클릭하여 페이지를 업데이트하고 `pushState()`를 사용하여 역사 항목 A를 추가합니다.
 2. SPA에서 다른 링크를 클릭하여 페이지를 업데이트하고 `pushState()`를 사용하여 역사 항목 B를 추가합니다.
 3. "뒤로" 버튼을 누릅니다.
 
-이제 새로운 현재 역사 항목은 A가 되므로, 브라우저는 `popstate` 이벤트를 발생시키고, 이벤트 핸들러 인수는 A로 네비게이션할 때 `pushState()`에 전달했던 JSON을 포함합니다. 이는 다음과 같은 이벤트 핸들러를 사용하여 올바른 콘텐츠를 복원할 수 있음을 의미합니다:
+이제 새로운 현재 역사 항목은 A가 되므로, 브라우저는 `popstate` 이벤트를 발생시키고, 이벤트 핸들러 인수는 A로 네비게이션할 때 `pushState()`에 전달했던 JSON을 포함합니다. 이는 다음과 같은 이벤트 핸들러를 사용하여 올바른 콘텐츠를 복원할 수 있음을 의미합니다.
 
 ```js
 // 앞으로/뒤로 버튼 처리
@@ -155,15 +155,15 @@ window.addEventListener("popstate", (event) => {
 
 ## `replaceState()` 사용하기
 
-추가해야 할 한 가지가 더 있습니다. 사용자가 SPA를 로드할 때, 브라우저는 역사 항목을 추가합니다. 이 항목은 실제 페이지 로드였기 때문에 상태가 연관되어 있지 않습니다. 따라서 사용자가 다음과 같이 동작한다고 가정해 봅시다:
+추가해야 할 한 가지가 더 있습니다. 사용자가 SPA를 로드할 때, 브라우저는 역사 항목을 추가합니다. 이 항목은 실제 페이지 로드였기 때문에 상태가 연관되어 있지 않습니다. 따라서 사용자가 다음과 같이 동작한다고 가정해 봅시다.
 
-1. SPA를 로드합니다: 브라우저는 역사 항목을 추가합니다.
+1. SPA를 로드합니다. 브라우저는 역사(History) 항목을 추가합니다.
 2. SPA 내의 링크를 클릭하여 페이지를 업데이트하고 `pushState()`를 사용하여 역사 항목을 추가합니다.
 3. "뒤로" 버튼을 누릅니다.
 
 이제 사용자는 SPA의 초기 상태로 돌아가길 원하지만, 이는 같은 문서 내에서의 네비게이션이기 때문에 페이지가 다시 로드되지 않으며, 초기 페이지의 역사 항목에는 상태가 없기 때문에 `popstate`를 사용하여 복원할 수 없습니다.
 
-해결책은 `replaceState()`를 사용하여 초기 페이지의 상태 객체를 설정하는 것입니다. 예를 들어:
+해결책은 `replaceState()`를 사용하여 초기 페이지의 상태 객체를 설정하는 것입니다. 예를 들면 다음과 같습니다.
 
 ```js
 // 페이지 로드 시 상태를 생성하고 현재 기록을 교체합니다.
@@ -186,5 +186,4 @@ history.replaceState(initialState, "", document.location.href);
 ## 같이 보기
 
 - [History API](/ko/docs/Web/API/History_API)
-- [History navigation 예제](/ko/docs/Web/API/History_API/Working_with_the_History_API)
 - {{domxref("window.history", "history")}} 전역 객체
