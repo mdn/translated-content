@@ -1,7 +1,6 @@
 ---
 title: Наследование в JavaScript
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}

@@ -1,7 +1,6 @@
 ---
 title: Как создавать пользовательские виджеты форм
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
-original_slug: Learn/Forms/How_to_build_custom_form_controls
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: "Руководство часть 10: Тестирование приложений Django"
 slug: Learn_web_development/Extensions/Server-side/Django/Testing
-original_slug: Learn/Server-side/Django/Testing
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}

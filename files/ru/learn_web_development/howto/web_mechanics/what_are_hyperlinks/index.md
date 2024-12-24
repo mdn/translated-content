@@ -1,7 +1,6 @@
 ---
 title: Разбираемся с веб ссылками
 slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-original_slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

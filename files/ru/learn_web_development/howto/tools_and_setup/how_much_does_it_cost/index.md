@@ -1,7 +1,6 @@
 ---
 title: Насколько дорого обойдётся сделать что-то с помощью Web?
 slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
-original_slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

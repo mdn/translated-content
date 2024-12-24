@@ -1,7 +1,6 @@
 ---
 title: "Учебник Express часть 4: Маршруты и контроллеры"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/routes
-original_slug: Learn/Server-side/Express_Nodejs/routes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}

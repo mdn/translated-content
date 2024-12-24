@@ -1,7 +1,6 @@
 ---
 title: "Руководство часть 7: Сессии"
 slug: Learn_web_development/Extensions/Server-side/Django/Sessions
-original_slug: Learn/Server-side/Django/Sessions
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}

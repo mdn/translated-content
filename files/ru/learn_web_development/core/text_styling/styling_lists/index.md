@@ -1,7 +1,6 @@
 ---
 title: Стилизация списков
 slug: Learn_web_development/Core/Text_styling/Styling_lists
-original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}

@@ -1,7 +1,6 @@
 ---
 title: Делаем асинхронное программирование более простым с async и await
 slug: Learn_web_development/Extensions/Async_JS/Promises
-original_slug: Learn/JavaScript/Asynchronous/Promises
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}

@@ -1,7 +1,6 @@
 ---
 title: Стилизация ссылок
 slug: Learn_web_development/Core/Text_styling/Styling_links
-original_slug: Learn/CSS/Styling_text/Styling_links
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

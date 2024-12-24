@@ -1,7 +1,6 @@
 ---
 title: Веб-страницы, веб-сайты, веб серверы и поисковики
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
-original_slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

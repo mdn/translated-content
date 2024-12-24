@@ -1,7 +1,6 @@
 ---
 title: "Руководство по Django: сайт местной библиотеки"
 slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
-original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

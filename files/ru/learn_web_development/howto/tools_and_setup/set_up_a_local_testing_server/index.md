@@ -1,7 +1,6 @@
 ---
 title: Как настроить локальный сервер для тестирования?
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

@@ -1,7 +1,6 @@
 ---
 title: Как работает Интернет
 slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
-original_slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

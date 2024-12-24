@@ -1,7 +1,6 @@
 ---
 title: "Учебник Express часть 5: Отображение данных библиотеки"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}

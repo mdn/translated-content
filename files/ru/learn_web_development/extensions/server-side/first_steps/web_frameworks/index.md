@@ -1,7 +1,6 @@
 ---
 title: Выполняемые на сервере веб-фреймворки
 slug: Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/First_steps/Web_frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}

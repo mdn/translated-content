@@ -1,7 +1,6 @@
 ---
 title: Реализация функции обнаружения
 slug: Learn_web_development/Extensions/Testing/Feature_detection
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}

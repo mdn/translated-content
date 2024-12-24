@@ -1,7 +1,6 @@
 ---
 title: Введение в серверную часть
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/First_steps/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

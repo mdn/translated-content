@@ -1,7 +1,6 @@
 ---
 title: Валидация форм на стороне клиента
 slug: Learn_web_development/Extensions/Forms/Form_validation
-original_slug: Learn/Forms/Form_validation
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}

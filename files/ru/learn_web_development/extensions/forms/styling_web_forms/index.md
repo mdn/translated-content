@@ -1,7 +1,6 @@
 ---
 title: Стили HTML форм
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
-original_slug: Learn/Forms/Styling_web_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}

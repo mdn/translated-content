@@ -1,7 +1,6 @@
 ---
 title: Как выбрать текстовый редактор?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
-original_slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

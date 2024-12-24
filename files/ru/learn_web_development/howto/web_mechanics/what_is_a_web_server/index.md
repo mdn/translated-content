@@ -1,7 +1,6 @@
 ---
 title: Что такое веб-сервер
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

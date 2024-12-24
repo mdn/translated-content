@@ -1,7 +1,6 @@
 ---
 title: Клиент-сервер
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}

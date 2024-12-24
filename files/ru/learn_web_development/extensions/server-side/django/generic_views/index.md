@@ -1,7 +1,6 @@
 ---
 title: "Руководство часть 6: Отображение списков и детальной информации"
 slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
-original_slug: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}

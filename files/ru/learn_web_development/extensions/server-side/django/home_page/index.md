@@ -1,7 +1,6 @@
 ---
 title: "Руководство часть 5: Создание домашней страницы"
 slug: Learn_web_development/Extensions/Server-side/Django/Home_page
-original_slug: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}

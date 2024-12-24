@@ -1,7 +1,6 @@
 ---
 title: Основы JavaScript
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

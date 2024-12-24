@@ -1,7 +1,6 @@
 ---
 title: Сторонние API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}

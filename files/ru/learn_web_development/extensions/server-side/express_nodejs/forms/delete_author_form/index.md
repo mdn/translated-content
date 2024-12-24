@@ -1,7 +1,6 @@
 ---
 title: Delete Author form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form
-original_slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
 
 В этой статье показано, как определить страницу для удаления объектов `Author`.

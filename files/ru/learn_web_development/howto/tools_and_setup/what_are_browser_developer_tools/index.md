@@ -1,7 +1,6 @@
 ---
 title: Обзор инструментов разработки в браузерах
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

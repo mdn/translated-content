@@ -1,7 +1,6 @@
 ---
 title: "Руководство по Django часть 2: создание скелета"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
-original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}

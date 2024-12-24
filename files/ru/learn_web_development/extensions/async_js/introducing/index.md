@@ -1,7 +1,6 @@
 ---
 title: Введение в асинхронный JavaScript
 slug: Learn_web_development/Extensions/Async_JS/Introducing
-original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}

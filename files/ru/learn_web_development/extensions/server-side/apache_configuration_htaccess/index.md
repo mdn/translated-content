@@ -1,7 +1,6 @@
 ---
 title: .htaccess ( hypertext access )
 slug: Learn_web_development/Extensions/Server-side/Apache_Configuration_htaccess
-original_slug: Learn/Server-side/Apache_Configuration_htaccess
 ---
 
 {{LearnSidebar}}

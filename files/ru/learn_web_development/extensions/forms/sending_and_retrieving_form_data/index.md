@@ -1,7 +1,6 @@
 ---
 title: Отправка данных формы
 slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
-original_slug: Learn/Forms/Sending_and_retrieving_form_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}

@@ -1,7 +1,6 @@
 ---
 title: Home page
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---

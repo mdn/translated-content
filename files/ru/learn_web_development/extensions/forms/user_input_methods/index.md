@@ -1,7 +1,6 @@
 ---
 title: Ввод пользователя и управление
 slug: Learn_web_development/Extensions/Forms/User_input_methods
-original_slug: Learn/Forms/User_input_methods
 ---
 
 Это руководство содержит рекомендации по обработке пользовательского ввода

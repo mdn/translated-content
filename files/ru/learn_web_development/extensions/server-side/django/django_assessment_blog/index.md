@@ -1,7 +1,6 @@
 ---
 title: "Задание: DIY Django мини блог"
 slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
-original_slug: Learn/Server-side/Django/django_assessment_blog
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}

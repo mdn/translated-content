@@ -1,7 +1,6 @@
 ---
 title: Что такое URL-адрес?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

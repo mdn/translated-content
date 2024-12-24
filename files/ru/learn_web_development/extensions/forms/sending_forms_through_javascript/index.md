@@ -1,7 +1,6 @@
 ---
 title: Отправка форм при помощи JavaScript
 slug: Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
-original_slug: Learn/Forms/Sending_forms_through_JavaScript
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Установка базового программного обеспечения
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
-original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

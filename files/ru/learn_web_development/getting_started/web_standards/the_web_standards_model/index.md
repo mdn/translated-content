@@ -1,7 +1,6 @@
 ---
 title: Всемирная сеть (веб) и веб-стандарты
 slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
-original_slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 ---
 
 {{learnsidebar}}

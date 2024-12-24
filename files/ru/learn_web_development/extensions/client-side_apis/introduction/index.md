@@ -1,7 +1,6 @@
 ---
 title: Введение в web APIs
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
-original_slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}

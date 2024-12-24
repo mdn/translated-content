@@ -1,7 +1,6 @@
 ---
 title: Прототипы объектов
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}Прототипы - это механизм, с помощью которого объекты JavaScript наследуют свойства друг от друга. В этой статье мы объясним, как работают цепочки прототипов, и рассмотрим, как свойство prototype можно использовать для добавления методов к существующим конструкторам.
