@@ -23,7 +23,7 @@ let updating = browser.notifications.update(
 ### 参数
 
 - `id`
-  - : `string`。要更新的通知 ID。与传递给 {{WebExtAPIRef('notifications.create()')}} 的回调函数的 ID 相同。
+  - : `string`。要更新的通知的 ID。与传递给 {{WebExtAPIRef('notifications.create()')}} 的回调函数的 ID 相同。
 - `options`
   - : {{WebExtAPIRef('notifications.NotificationOptions')}}，定义通知的新内容和新行为。
 
@@ -39,7 +39,7 @@ let updating = browser.notifications.update(
 
 这个示例使用 `update()` 来更新一个进度通知。点击浏览器操作按钮会显示通知并启动一个 {{WebExtAPIRef("alarms", "alarm")}}。我们将使用它来更新通知的进度指示器。
 
-请注意，你需要“alarms”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 来创建闹钟（以及“notifications”权限来创建通知）。还请注意，Firefox 不支持 `progress` 属性。
+请注意，你需要“alarms”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)来创建闹钟（以及“notifications”权限来创建通知）。还请注意，Firefox 不支持 `progress` 属性。
 
 ```js
 let cakeNotification = "cake-notification";
