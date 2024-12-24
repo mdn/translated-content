@@ -153,7 +153,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 相同的錯誤
 
 ## 使用注意事項
 
-`setInterval()` 函數常用來設定重複執行的延遲，比如動畫等。你可以使用 {{domxref("Window.clearInterval", "clearInterval()")}} 來取消定時器。
+`setInterval()` 函數常用來設定重複執行的延遲，比如動畫等。你可以使用 {{domxref("Window.clearInterval", "clearInterval()")}} 來取消間隔。
 
 如果你希望在指定的延遲後只執行一次函數，請使用 {{domxref("Window.setTimeout", "setTimeout()")}}。
 
