@@ -77,7 +77,7 @@ const lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 #### HTML
 
 ```html
-<img class="grayscale" src="myPicture.png" alt="Description of my picture" />
+<img class="grayscale" src="myPicture.png" alt="我的圖片描述" />
 ```
 
 #### JavaScript
