@@ -86,7 +86,7 @@ h2 + p::first-letter {
 
 #### 結果
 
-{{ EmbedLiveSample('Basic_drop_cap', "基本的首字母放大效果", '100%', 350) }}
+{{ EmbedLiveSample('基本的首字母放大效果', '100%', 350) }}
 
 ### 標點符號和非拉丁字符的效果
 
@@ -121,7 +121,7 @@ p::first-letter {
 
 #### 結果
 
-{{ EmbedLiveSample('Effect_on_special_punctuation_and_non-Latin_characters', "標點符號和非拉丁字符的效果", '100%', 350) }}
+{{ EmbedLiveSample('標點符號和非拉丁字符的效果', '100%', 350) }}
 
 ### 在 SVG 文本元素中設定首字母樣式
 
@@ -156,7 +156,7 @@ text::first-letter {
 
 #### 結果
 
-{{ EmbedLiveSample("styling_first_letter_in_SVG_text_element", "在 SVG 文本元素中設定首字母樣式", "100%", "100") }}
+{{ EmbedLiveSample('在 SVG 文本元素中設定首字母樣式', '100%', '100') }}
 
 ## 規範
 
