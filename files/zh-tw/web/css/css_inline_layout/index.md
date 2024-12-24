@@ -18,12 +18,12 @@ l10n:
 - {{cssxref("line-height")}}
 - {{cssxref("text-box-edge")}}
 - {{cssxref("text-box-trim")}}
-- {{cssxref("text-box")}} 縮寫
+- {{cssxref("text-box")}} 簡寫
 - {{cssxref("vertical-align")}}
 
 規範中還定義了以下屬性，但尚未被任何瀏覽器支援：`alignment-baseline`、`baseline-shift`、`baseline-source`、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge`。
 
-### 詞彙表條目
+### 術語表條目
 
 - {{glossary("baseline/typography", "基線")}}
 
@@ -42,6 +42,6 @@ l10n:
 
 ## 參見
 
-- [CSS 文本](/zh-TW/docs/Web/CSS/CSS_text) 模組
-- [CSS 字體](/zh-TW/docs/Web/CSS/CSS_fonts) 模組
-- [CSS 寫作模式](/zh-TW/docs/Web/CSS/CSS_writing_modes) 模組
+- [CSS 文本](/zh-TW/docs/Web/CSS/CSS_text)模組
+- [CSS 字體](/zh-TW/docs/Web/CSS/CSS_fonts)模組
+- [CSS 書寫模式](/zh-TW/docs/Web/CSS/CSS_writing_modes)模組
