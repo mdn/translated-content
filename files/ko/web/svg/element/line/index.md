@@ -1,7 +1,6 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
-page-type: svg-element
 l10n:
   sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
 ---
