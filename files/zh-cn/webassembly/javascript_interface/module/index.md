@@ -14,11 +14,11 @@ slug: WebAssembly/JavaScript_interface/Module
 
 ## 静态属性
 
-- [`WebAssembly.Module.customSections()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module/customSections)
+- [`WebAssembly.Module.customSections()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module/customSections_static)
   - : 给定一个 `Module` 和字符串，返回模块中具有给定字符串名称的所有自定义的部分的内容副本。
-- [`WebAssembly.Module.exports()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module/exports)
+- [`WebAssembly.Module.exports()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module/exports_static)
   - : 给定一个 `Module`，返回一个数组，其中包含所有声明的导出的描述。
-- [`WebAssembly.Module.imports()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module/imports)
+- [`WebAssembly.Module.imports()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module/imports_static)
   - : 给定一个 `Module`，返回一个数组，其中包含所有声明的导入的描述。
 
 ## 示例

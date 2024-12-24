@@ -36,10 +36,10 @@ svg {
 
 ### Attributs globaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel)&nbsp;;
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base)&nbsp;;
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique)&nbsp;;
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation)&nbsp;;
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#attributs_de_traitement_conditionnel)&nbsp;;
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#attributs_de_base)&nbsp;;
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'.c3.a9v.c3.a9nement_graphique)&nbsp;;
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#attributs_de_pr.c3.a9sentation)&nbsp;;
 - {{ SVGAttr("class") }}&nbsp;;
 - {{ SVGAttr("style") }}&nbsp;;
 - {{ SVGAttr("externalResourcesRequired") }}&nbsp;;
@@ -54,7 +54,7 @@ svg {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement).
+Cet élément implémente l'interface [`SVGLineElement`](/fr/docs/DOM/SVGLineElement).
 
 ## Compatibilité des navigateurs
 

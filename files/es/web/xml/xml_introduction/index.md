@@ -7,7 +7,7 @@ slug: Web/XML/XML_introduction
 
 XML es un lenguaje de marcado similar a HTML. Significa Extensible Markup Language (Lenguaje de Marcado Extensible) y es una especificación de [W3C](https://www.w3.org/TR/xml/) como lenguaje de marcado de propósito general. Esto significa que, a diferencia de otros lenguajes de marcado, XML no está predefinido, por lo que debes definir tus propias etiquetas. El propósito principal del lenguaje es compartir datos a través de diferentes sistemas, como Internet.
 
-Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/XHTML), [MathML](/es/docs/Web/MathML), [SVG](/es/docs/Web/SVG), [XUL](/es/docs/Mozilla/Tech/XUL), [XBL](/es/docs/XBL), [RSS](/es/docs/Archive/RSS), y [RDF](/es/docs/RDF). También puedes crear uno propio.
+Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/Glossary/XHTML), [MathML](/es/docs/Web/MathML), [SVG](/es/docs/Web/SVG), [XUL](/es/docs/Mozilla/Tech/XUL), [XBL](/es/docs/XBL), [RSS](/es/docs/Archive/RSS), y [RDF](/es/docs/RDF). También puedes crear uno propio.
 
 ## XML "Correcto" (válido y bien formado)
 
@@ -35,7 +35,7 @@ Ahora veamos una versión correcta del mismo documento:
 </message>
 ```
 
-Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/DTD)** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
+Para ser válido, un documento XML necesita cumplir ciertas reglas de semántica que son generalmente definidas en un esquema XML o en una **[Definición de Tipo de Documento](/es/docs/Glossary/Doctype)** (DTD). Un documento que contiene una etiqueta no definida es inválido. Por ejemplo, si nunca definimos la etiqueta `<warning>`, el documento anterior no sería válido.
 
 > [!NOTE]
 > La mayoría de los navegadores ofrecen un depurador que puede identificar documentos XML mal formados.
@@ -52,7 +52,7 @@ Al igual que HTML, XML ofrece métodos (llamados entidades) para referir a algun
 | \&quot; | "        | Comilla doble                  |
 | \&apos; | '        | Apóstrofe (o comilla sencilla) |
 
-Aunque solo hay cinco entidades declaradas, se pueden añadir más usando el [DTD](/es/docs/Glossary/DTD) del documento. Por ejemplo, para crear una nueva entidad `&warning;`, puedes hacer esto:
+Aunque solo hay cinco entidades declaradas, se pueden añadir más usando el [DTD](/es/docs/Glossary/Doctype) del documento. Por ejemplo, para crear una nueva entidad `&warning;`, puedes hacer esto:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -90,9 +90,9 @@ Aprender el Lenguaje de Marcado de Hipertexto ([HTML](/es/docs/Web/HTML)) te ayu
 
 ## Véase también
 
-- [XML.com](http://www.xml.com/)
+- [XML.com](https://www.xml.com/)
 - [Extensible Markup Language (XML) @ W3.org](https://www.w3.org/XML/)
-- [XML Example: A List Apart](http://www.alistapart.com/d/usingxml/xml_uses_a.html)
-- [Using XML: A List Apart](http://www.alistapart.com/articles/usingxml/)
+- [XML Example: A List Apart](https://www.alistapart.com/d/usingxml/xml_uses_a.html)
+- [Using XML: A List Apart](https://www.alistapart.com/articles/usingxml/)
 
-El artículo [Using XML](http://www.alistapart.com/articles/usingxml/) mostrado anteriormente es un gran recurso de información para transformar y crear tu propio lenguaje.
+El artículo [Using XML](https://www.alistapart.com/articles/usingxml/) mostrado anteriormente es un gran recurso de información para transformar y crear tu propio lenguaje.

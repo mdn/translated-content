@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 {{CSSRef}}
 
-Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec les boîtes flexibles (_flexbox_). Cette page détaille les aspects spécifiques relatifs à l'alignement et aux boîtes flexibles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_Box_Alignment).
+Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_box_alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec les boîtes flexibles (_flexbox_). Cette page détaille les aspects spécifiques relatifs à l'alignement et aux boîtes flexibles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_box_alignment).
 
 ## Exemple simple
 
@@ -80,12 +80,12 @@ Sur l'axe secondaire, `row-gap` permettra d'espace les lignes adjacentes. Aussi,
 
 ### Termes du glossaire
 
-- [Axe secondaire](/fr/docs/Glossaire/Axe_transversal)
-- [Axe principal](/fr/docs/Glossaire/Axe_principal)
+- [Axe secondaire](/fr/docs/Glossary/Cross_Axis)
+- [Axe principal](/fr/docs/Glossary/Main_Axis)
 
 ## Guides
 
-- [L'alignement avec _Flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)
+- [L'alignement avec _Flexbox_](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 
 ## Ressources externes
 

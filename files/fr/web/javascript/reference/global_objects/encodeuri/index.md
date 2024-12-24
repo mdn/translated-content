@@ -65,7 +65,7 @@ console.log(encodeURI("\uDFFF"));
 
 `encodeURI()` ne permet pas de former des requêtes HTTP GET ou POST (par exemple avec {{domxref("XMLHTTPRequest")}}) car "&", "+" et "=" ne sont pas encodés et sont traités comme des caractères spéciaux (toutefois, la méthode. {{jsxref("encodeURIComponent")}} pourra être utilisée pour encoder ces caractères).
 
-Si on souhaite suivre la [RFC3986](http://tools.ietf.org/html/rfc3986) qui concerne les URL et qui rend les crochets réservés (pour IPv6) (il ne faut donc plus encoder ces caractères lorsqu'ils font partie d'une URL (notamment pour la partie représentant l'hôte), on pourra utiliser le fragment de code suivant :
+Si on souhaite suivre la [RFC3986](https://tools.ietf.org/html/rfc3986) qui concerne les URL et qui rend les crochets réservés (pour IPv6) (il ne faut donc plus encoder ces caractères lorsqu'ils font partie d'une URL (notamment pour la partie représentant l'hôte), on pourra utiliser le fragment de code suivant :
 
 ```js
 function fixedEncodeURI(str) {

@@ -342,7 +342,7 @@ input:valid + span:after {
 }
 ```
 
-The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the [jQuery timepicker plugin](http://timepicker.co/).
+The best way to deal with times in forms in a cross-browser way, for the time being, is to get the user to enter the hours and minutes (and seconds if required) in separate controls ({{htmlelement("select")}} elements are popular; see below for an example), or use JavaScript libraries such as the [jQuery timepicker plugin](https://timepicker.co/).
 
 ## Examples
 
@@ -485,5 +485,5 @@ minuteSelect.onchange = setMinutesToZero;
 ## See also
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
-- [Date and Time picker tutorial](/pt-BR/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)
+- [Date and Time picker tutorial](/pt-BR/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [`<input type="datetime-local">`](/pt-BR/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/pt-BR/docs/Web/HTML/Element/input/date), [`<input type="week">`](/pt-BR/docs/Web/HTML/Element/input/week), and [`<input type="month">`](/pt-BR/docs/Web/HTML/Element/input/month)

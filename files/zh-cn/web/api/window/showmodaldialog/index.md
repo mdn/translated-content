@@ -39,7 +39,7 @@ Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox
 
 ## Examples
 
-[Try out `showModalDialog()`](/samples/domref/showModalDialog.html).
+[Try out `showModalDialog()`](https://mdn.dev/archives/media/samples/domref/showModalDialog.html).
 
 ## Notes
 
@@ -48,4 +48,4 @@ Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox
 ## Specification
 
 - [`showModalDialog()`](https://msdn.microsoft.com/en-us/library/ms536759%28VS.85%29.aspx?f=255&MSPPError=-2147217396)
-- [HTML5 Dialogs implemented using separate documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)
+- [HTML5 Dialogs implemented using separate documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)

@@ -169,6 +169,6 @@ var dv = new Float32Array([1, 2, 3]);
 
 ## Veja também
 
-- [JavaScript arrays tipadas](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript arrays tipadas](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

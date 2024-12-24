@@ -34,7 +34,7 @@ If you have created more than one context menu item or more than one tools menu 
 
 ## アイコン
 
-If you've specified icons for your extension using the ["icons" manifest key](/ja/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
+If you've specified icons for your extension using the ["icons" manifest key](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
 
 ![](menus-2.png)
 

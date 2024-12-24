@@ -22,7 +22,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Attributs
 
-À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autocapitalize` {{non-standard_inline}}
 
@@ -78,9 +78,9 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 
 ## Interaction avec CSS
 
-Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Élément_remplacé) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
+Pour CSS, un élément `<textarea>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element) qui possède des dimensions intrinsèques (comme une image matricielle). La valeur initiale de la propriété {{cssxref("display")}} pour cet élément est `block`.
 
-[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
+[Le guide sur la mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Styling_web_forms) fournit différentes indications pour mettre en forme les éléments `<textarea>`.
 
 ### Incohérences quant à la ligne de base
 

@@ -3,7 +3,7 @@ title: Challenge solutions
 slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 ---
 
-このページは、 [CSS Getting Started](/ja/CSS/Getting_Started) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
+このページは、 [CSS Getting Started](/ja/docs/Learn/CSS) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
 
 ## CSS をなぜ用いるか
 
@@ -12,7 +12,7 @@ slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 - Challenge
   - : Without looking up a reference, find five more color names that work in your stylesheet.
 - Solution
-  - : CSS supports common color names like `orange`, `yellow`, `blue`, `green`, or `black`. It also supports some more exotic color names like `chartreuse`, `fuschia`, or `burlywood`. See [CSS Color value](/ja/CSS/color_value) for a complete list as well as other ways of specifying colors.
+  - : CSS supports common color names like `orange`, `yellow`, `blue`, `green`, or `black`. It also supports some more exotic color names like `chartreuse`, `fuschia`, or `burlywood`. See [CSS Color value](/ja/docs/Web/CSS/color_value) for a complete list as well as other ways of specifying colors.
 
 ## どのように CSS は動作するのか
 

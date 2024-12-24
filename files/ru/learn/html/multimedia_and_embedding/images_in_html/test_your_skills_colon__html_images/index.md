@@ -5,7 +5,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_
 
 {{learnsidebar}}
 
-Цель этого теста навыков - оценить, поняли ли вы нашу статью [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML).
+Цель этого теста навыков - оценить, поняли ли вы нашу статью [Изображения в HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
 > [!NOTE]
 > Вы можете опробовать решения в интерактивных редакторах ниже, однако может быть полезно загрузить код и использовать онлайн-инструмент, такой как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/) для работы с задачами.

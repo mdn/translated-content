@@ -48,4 +48,4 @@ ul.addEventListener("click", hide, false);
 
 ## 参见
 
-- [事件冒泡](/zh-CN/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [事件冒泡](/zh-CN/docs/Learn_web_development/Core/Scripting/Event_bubbling)

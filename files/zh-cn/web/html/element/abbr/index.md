@@ -202,4 +202,4 @@ abbr {
 
 ## 参见
 
-- [使用 `<abbr>` 元素](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#缩略语)
+- [使用 `<abbr>` 元素](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#缩略语)

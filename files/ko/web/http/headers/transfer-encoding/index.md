@@ -45,7 +45,7 @@ Transfer-Encoding: gzip, chunked
   - : [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW) 알고리즘을 사용하는 형식. 값의 이름은 이 알고리즘을 구현한, UNIX _compress_ 프로그램에서 차용된 것입니다.
     대부분의 UNIX 배포판에서 제외된 압축 프로그램처럼, 이 content-encoding은 어느 정도는 (2003년에 기한이 만료된) 특허 문제로 인해 오늘날 거의 대부분의 브라우저에서 사용되지 않고 있습니다.
 - `deflate`
-  - : ([RFC 1951](http://tools.ietf.org/html/rfc1952)에 정의된) *[deflate](http://en.wikipedia.org/wiki/DEFLATE) *압축 알고리즘과 함께 ([RFC 1950](http://tools.ietf.org/html/rfc1950)에서 정의된) [zlib](http://en.wikipedia.org/wiki/Zlib) 구조체를 사용합니다.
+  - : ([RFC 1951](https://tools.ietf.org/html/rfc1952)에 정의된) *[deflate](http://en.wikipedia.org/wiki/DEFLATE) *압축 알고리즘과 함께 ([RFC 1950](https://tools.ietf.org/html/rfc1950)에서 정의된) [zlib](http://en.wikipedia.org/wiki/Zlib) 구조체를 사용합니다.
 - `gzip`
   - : 32비트 CRC를 이용한 [Lempel-Ziv coding](http://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) (LZ77)을 사용하는 형식. 이것은 근본적으로 UNIX _gzip_ 프로그램의 형식입니다. 또한, HTTP/1.1 표준은 이 content-encoding을 지원하는 서버는 호환성 목적을 위해 `x-gzip` 을 별칭으로 인지할 것을 권고하고 있습니다.
 - `identity`

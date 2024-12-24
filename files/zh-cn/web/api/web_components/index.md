@@ -42,7 +42,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
   - : 包含自定义元素相关功能，最值得注意的是 {{domxref("CustomElementRegistry.define()")}} 方法用来注册新的自定义元素，这样就可以在文档中使用它们。
 - {{domxref("Window.customElements")}}
   - : 返回 `CustomElementRegistry` 对象的引用。
-- [生命周期回调](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#Using_the_lifecycle_callbacks)
+- [生命周期回调](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : 定义在自定义元素的类定义中的特殊回调函数，影响其行为：
     - `connectedCallback`：当自定义元素第一次被连接到文档 DOM 时被调用。

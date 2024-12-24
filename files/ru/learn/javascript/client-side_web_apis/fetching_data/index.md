@@ -75,7 +75,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 4. Мы начнём нашу функцию с создания относительного URL-адреса, указывающего на текстовый файл, который мы хотим загрузить и который понадобится нам позже. Значение элемента {{htmlelement("select")}} в любой момент совпадает с текстом внутри выбранного {{htmlelement("option")}} (если вы не укажете другое значение в атрибуте value) - например, «Verse 1». Соответствующий текстовый файл стиха является «verse1.txt» и находится в том же каталоге, что и файл HTML, поэтому будет использоваться только имя файла.
 
-   Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой [конкатенации строк](/ru/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings). Добавьте следующие строки внутри функции `updateDisplay()`:
+   Тем не менее, веб-серверы, как правило, чувствительны к регистру, и имя файла не имеет символа "пробела". Чтобы преобразовать «Verse 1» в «verse1.txt», нам нужно преобразовать V в нижний регистр, удалить пробел и добавить .txt в конец. Это можно сделать с помощью {{jsxref("String.replace", "replace ()")}}, {{jsxref("String.toLowerCase", "toLowerCase ()")}} и простой [конкатенации строк](/ru/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings). Добавьте следующие строки внутри функции `updateDisplay()`:
 
    ```js
    verse = verse.replace(" ", "");
@@ -128,7 +128,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Некоторые браузеры (включая Chrome) не будут запускать запросы XHR, если вы просто запускаете пример из локального файла. Это связано с ограничениями безопасности (для получения дополнительной информации о безопасности в Интернете, ознакомьтесь с [Website security](/ru/docs/Learn/Server-side/First_steps/Website_security)).
 
-Чтобы обойти это, нам нужно протестировать пример, запустив его через локальный веб-сервер. Чтобы узнать, как это сделать, прочитайте [Как настроить локальный тестовый сервер?](/ru/docs/Learn/Common_questions/set_up_a_local_testing_server)
+Чтобы обойти это, нам нужно протестировать пример, запустив его через локальный веб-сервер. Чтобы узнать, как это сделать, прочитайте [Как настроить локальный тестовый сервер?](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
 
 ### Fetch
 
@@ -351,7 +351,7 @@ blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
 
 Однако в этой статье обсуждается много разных тем, которые только поцарапали поверхность. Для получения более подробной информации по этим темам, попробуйте следующие статьи:
 
-- [Введение в Ajax](/ru/docs/AJAX/Getting_Started)
+- [Введение в Ajax](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [Применение Fetch](/ru/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Работа с JSON данными](/ru/docs/Learn/JavaScript/Objects/JSON)

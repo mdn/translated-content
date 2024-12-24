@@ -17,8 +17,8 @@ O conteúdo do `missing-glyph` é renderizado se, para um determinado caractere,
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -32,10 +32,10 @@ O conteúdo do `missing-glyph` é renderizado se, para um determinado caractere,
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMissingGlyphElement`](/pt-BR/DOM/SVGMissingGlyphElement).
+Este elemento implementa a interface do [`SVGMissingGlyphElement`](/pt-BR/docs/DOM/SVGMissingGlyphElement).
 
 ## Relacionado
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("glyph") }}
-- [SVG tutorial: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts)
+- [SVG tutorial: SVG fonts](/pt-BR/docs/SVG/Tutorial/SVG_fonts)

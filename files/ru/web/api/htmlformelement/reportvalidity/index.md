@@ -5,7 +5,7 @@ slug: Web/API/HTMLFormElement/reportValidity
 
 {{ APIRef("HTML DOM") }}
 
-Метод **`HTMLFormElement.reportValidity()`** возвращает **`true`** если все дочерние элементы прошли проверку. Когда возвращается **`false`**, по каждому дочернему элементу не прошедшему проверку генерируется событие [`invalid`](/ru/docs/Web/Events/invalid) и пользователю сообщаются проблемы проверки.
+Метод **`HTMLFormElement.reportValidity()`** возвращает **`true`** если все дочерние элементы прошли проверку. Когда возвращается **`false`**, по каждому дочернему элементу не прошедшему проверку генерируется событие [`invalid`](/ru/docs/Web/API/HTMLInputElement/invalid_event) и пользователю сообщаются проблемы проверки.
 
 ## Синтаксис
 
@@ -27,7 +27,7 @@ document.forms["myform"].addEventListener('submit', function() {
 
 ## Спецификации
 
-[HTML 5.1 Forms: The Constraint Validation API](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api)
+[HTML 5.1 Forms: The Constraint Validation API](https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api)
 
 ## Совместимость с браузерами
 

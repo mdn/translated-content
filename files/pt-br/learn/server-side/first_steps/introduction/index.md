@@ -36,7 +36,7 @@ No mundo moderno do desenvolvimento web, aprender sobre desenvolvimento do lado 
 
 ## O que é programação de site do lado do servidor ?
 
-Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
+Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
 
 A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma [query string](https://en.wikipedia.org/wiki/Query_string)), como dados POST (dados enviados pelo método [HTTP POST](/pt-BR/docs/Web/HTTP/Methods/POST)), ou em associado {{glossary("Cookie", "cookies")}} .
 
@@ -48,7 +48,7 @@ O corpo de uma resposta bem-sucedida a uma solicitação conteria o recurso soli
 
 O diagrama abaixo mostra uma arquitetura básica de servidor da web para um site estático (um site estático é aquele que retorna o mesmo conteúdo embutido em código do servidor sempre que um determinado recurso é solicitado). Quando um usuário deseja navegar para uma página, o navegador envia uma solicitação HTTP "GET" especificando seu URL.
 
-O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Status#Successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Status#Client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Status#Server_error_responses)).
+O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Status#successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Status#client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Status#server_error_responses)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 

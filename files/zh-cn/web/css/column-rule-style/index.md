@@ -85,7 +85,7 @@ p {
 
 ## 参见
 
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [多列布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - {{CSSXref("column-rule")}}
 - {{CSSXref("column-rule-width")}}
 - {{CSSXref("column-rule-color")}}

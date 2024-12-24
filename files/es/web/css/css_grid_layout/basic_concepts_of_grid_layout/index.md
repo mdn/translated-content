@@ -3,7 +3,7 @@ title: Basic concepts of grid layout
 slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
-[CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
+[CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
 
 ## ¿Qué es una cuadrícula(grid)?
 
@@ -29,7 +29,7 @@ Grid contiene características de alineación para poder controlar la forma cóm
 
 Se puede colocar más de un elemento en una celda de la cuadrícula o área, las cuales pueden solaparse o superponerse total o parcialmente entre sí. Esta estratificación puede ser controlada con la propiedad {{cssxref("z-index")}}.
 
-Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
+Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
 
 ## El contenedor de Grid
 
@@ -77,7 +77,7 @@ Hago de `.wrapper` un contenedor de cuadrícula.
 
 {{ EmbedLiveSample('El_contenedor_de_Grid', '200', '330') }}
 
-Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual tiene disponible el [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor `grid`. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.
+Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual tiene disponible el [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor `grid`. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
@@ -472,7 +472,7 @@ El segundo elemento comienza en la línea de columna 1 de la cuadrícula y se ex
 
 {{ EmbedLiveSample('Líneas_de_cuadrícula', '230', '420') }}
 
-No olvide que puede utilizar [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) en las Herramientas de Desarrollador de Firefox para ver cómo se posicionan los elementos en las líneas de la cuadrícula.
+No olvide que puede utilizar [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) en las Herramientas de Desarrollador de Firefox para ver cómo se posicionan los elementos en las líneas de la cuadrícula.
 
 ## Celdas de cuadrícula
 
@@ -607,7 +607,7 @@ Si establezco `box1` a `display: grid` puedo darle una definición de vía y tam
 
 {{ EmbedLiveSample('anidamiento', '600', '340') }}
 
-En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/grid-gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
+En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
 
 ### Subgrid
 
@@ -750,7 +750,7 @@ Podemos controlar el orden en el que los artículos se apilan utilizando la prop
 
 ## Siguientes Pasos
 
-En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout).
+En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
 
 <section id="Quick_links">
 <ol>

@@ -32,7 +32,7 @@ En JavaScript, il est impossible d'écrire une expression d'exponentiation ambig
 // -4 en JavaScript, les parenthèses évitent l'ambiguité.
 ```
 
-Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR).
+Attnetion, certains langages de programmation utilisent l'accent circonflexe <kbd>^</kbd> pour exprimer l'exponentiaion mais JavaScript utilise ce symbole pour [l'opérateur binaire OU exclusif (XOR)](/fr/docs/Web/JavaScript/Reference/Operators#bitwise_xor).
 
 ## Exemples
 

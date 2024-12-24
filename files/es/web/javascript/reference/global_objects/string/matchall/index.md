@@ -22,7 +22,7 @@ cadena.matchAll(expresionRegular)
 
 ### Valor devuelto
 
-Un [iterador](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators) (el cual no es reiniciable).
+Un [iterador](/es/docs/Web/JavaScript/Guide/Iterators_and_generators) (el cual no es reiniciable).
 
 ## Ejemplo
 

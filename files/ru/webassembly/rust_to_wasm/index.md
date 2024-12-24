@@ -325,4 +325,4 @@ npm run serve
 
 На этом руководство заканчивается, мы надеемся, что вы сочли его для себя полезным.
 
-В этом направлении кипит бурная и при этом очень интересная деятельность, так что если вы бы хотели помочь что-то улучшить, то загляните в [the Rust Webassembly Working Group](http://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html).
+В этом направлении кипит бурная и при этом очень интересная деятельность, так что если вы бы хотели помочь что-то улучшить, то загляните в [the Rust Webassembly Working Group](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html).

@@ -7,7 +7,7 @@ slug: Web/API/FileReader
 
 藉由 `FileReader` 物件，Web 應用程式能以非同步（asynchronously）方式讀取儲存在用戶端的檔案（或原始資料暫存）內容，可以使用 {{domxref("File")}} 或 {{domxref("Blob")}} 物件指定要讀取的資料。
 
-File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案所回傳的 {{domxref("FileList")}} 物件當中取得，或是來自[拖放操作](/docs/Web/Guide/HTML/Drag_and_drop)所產生的 {{domxref("DataTransfer")}} 物件之中，也能由 {{domxref("HTMLCanvasElement")}} 物件（元素物件）執行 `mozGetAsFile()` 方法後回傳。
+File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案所回傳的 {{domxref("FileList")}} 物件當中取得，或是來自[拖放操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)所產生的 {{domxref("DataTransfer")}} 物件之中，也能由 {{domxref("HTMLCanvasElement")}} 物件（元素物件）執行 `mozGetAsFile()` 方法後回傳。
 
 {{AvailableInWorkers}}
 
@@ -16,7 +16,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : 建立新的 `FileReader` 物件。
 
-請參考[在網頁應用程式中使用本地檔案](/docs/Using_files_from_web_applications)的更多細節與範例。
+請參考[在網頁應用程式中使用本地檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)的更多細節與範例。
 
 ## 屬性
 
@@ -54,7 +54,7 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.onabort")}}
   - : [`abort`](/zh-TW/docs/Web/API/HTMLMediaElement/abort_event) 事件處理器，於讀取被中斷時觸發。
 - {{domxref("FileReader.onerror")}}
-  - : [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件處理器，於讀取發生錯誤時觸發。
+  - : [`error`](/zh-TW/docs/Web/API/HTMLElement/error_event) 事件處理器，於讀取發生錯誤時觸發。
 - {{domxref("FileReader.onload")}}
   - : [`load`](/zh-TW/docs/Web/API/Window/load_event) 事件處理器，於讀取完成時觸發。
 - {{domxref("FileReader.onloadstart")}}
@@ -89,6 +89,6 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 
 ## 參見
 
-- [在網頁應用程式中使用本地檔案](/docs/Using_files_from_web_applications)
+- [在網頁應用程式中使用本地檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}

@@ -12,7 +12,7 @@ Tanto {{domxref("Window")}} como {{domxref("WorkerGlobalScope")}} implementan `W
 
 Una promesa {{domxref("fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
 
-El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Security/CSP/CSP_policy_directives) en lugar de la directiva del recurso que se solicita.
+El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Web/HTTP/Headers/Content-Security-Policy) en lugar de la directiva del recurso que se solicita.
 
 > [!NOTE]
 > Los parámetros del método `fetch()` son indénticos a los del constructor de {{domxref("Request.Request","Request()")}}.
@@ -131,6 +131,6 @@ var myRequest = new Request("flowers.jpg", miInicializador);
 ## Ver también
 
 - [Fetch API](/es/docs/Web/API/Fetch_API)
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [Control de acceso HTTP (CORS)](/es/docs/Web/HTTP/CORS)
 - [HTTP](/es/docs/Web/HTTP)

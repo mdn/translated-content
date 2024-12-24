@@ -93,7 +93,7 @@ express
 
 ### Какие шаблонизаторы CSS следует использовать?
 
-_Express Application Generator_ позволяет создавать проекты, настроенные для применения шаблонизаторов CSS: [LESS](http://lesscss.org/), [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
+_Express Application Generator_ позволяет создавать проекты, настроенные для применения шаблонизаторов CSS: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
 
 > [!NOTE]
 > Простой CSS имеет некоторые ограничения, затрудняющие выполнение задач. Шаблонизаторы CSS позволяют использовать более эффективный подход для создании таблиц стилей CSS, но требуют компиляции файлов таблиц стилей в стандартный CSS для применения в браузере.

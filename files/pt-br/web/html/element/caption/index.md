@@ -61,7 +61,7 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`caption`** especifica a legenda (ou t
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ### Atributos obsoletos
 

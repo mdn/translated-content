@@ -18,7 +18,7 @@ l10n:
 - 문서의 루트 요소. (`<html>`)
 - {{cssxref("position")}}이 `absolute` 또는 `relative`이고, {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - {{cssxref("position")}}이 `fixed` 또는 `sticky`인 요소. (`sticky`는 모든 모바일 브라우저에서는 해당하지만 구형 데스크톱 브라우저에서는 해당하지 않음)
-- [container queries](/ko/docs/Web/CSS/CSS_container_queries)를 위한 {{cssxref("container-type")}}이 `size` 또는 `inline-size`인 요소.
+- [container queries](/ko/docs/Web/CSS/CSS_containment/Container_queries)를 위한 {{cssxref("container-type")}}이 `size` 또는 `inline-size`인 요소.
 - 플렉스({{cssxref("flexbox")}}) 컨테이너의 자식 중 {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - 그리드({{cssxref("grid")}}) 컨테이너의 자식 중 {{cssxref("z-index")}}가 `auto`가 아닌 요소.
 - {{cssxref("opacity")}}가 1보다 작은 요소. ([불투명도 명세](https://www.w3.org/TR/css3-color/#transparency) 참고)

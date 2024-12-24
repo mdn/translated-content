@@ -34,10 +34,10 @@ slug: Web/SVG/Element/g
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

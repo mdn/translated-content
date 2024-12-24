@@ -52,7 +52,7 @@ O site de largura fixa criava uma barra de rolagem horizontal em telas menores q
 > Veja este layout simples de largura fixa: [exemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [código-fonte](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Observe novamente o resultado ao alterar o tamanho da janela do navegador.
 
 > [!NOTE]
-> As capturas de tela acima foram tiradas usando o [Responsive Design Mode](/pt-BR/docs/Tools/Responsive_Design_Mode) no Firefox DevTools.
+> As capturas de tela acima foram tiradas usando o [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) no Firefox DevTools.
 
 À medida que a Web para dispositivos móveis começava a se tornar realidade com os primeiros telefones com essas características, empresas que desejavam adotar os dispositivos móveis geralmente criavam uma versão mobile do seu site, com uma URL diferente (geralmente algo como m.exemplo.com ou exemplo.mobi) Isso significava que duas versões separadas do site tinham que ser desenvolvidas e mantidas atualizadas.
 
@@ -60,7 +60,7 @@ Além disso, esses sites para celular geralmente ofereciam uma experiência muit
 
 ## Layouts flexiveis antes do design responsivo
 
-Várias abordagens foram desenvolvidas para tentar resolver as desvantagens dos métodos de largura líquida ou largura fixa da construção de sites. Em 2004, Cameron Adams escreveu um artigo intitulado [Resolution dependent layout](http://www.themaninblue.com/writing/perspective/2004/09/21/), descrevendo um método para criar um design que pudesse se adaptar a diferentes resoluções de tela. Essa abordagem necessitava do JavaScript para detectar a resolução da tela e carregar o CSS correto.
+Várias abordagens foram desenvolvidas para tentar resolver as desvantagens dos métodos de largura líquida ou largura fixa da construção de sites. Em 2004, Cameron Adams escreveu um artigo intitulado [Resolution dependent layout](https://www.themaninblue.com/writing/perspective/2004/09/21/), descrevendo um método para criar um design que pudesse se adaptar a diferentes resoluções de tela. Essa abordagem necessitava do JavaScript para detectar a resolução da tela e carregar o CSS correto.
 
 Zoe Mickley Gillenwater foi fundamental no [seu trabalho](http://zomigi.com/blog/voices-that-matter-slides-available/) de descrever e formalizar as diferentes maneiras pelas quais sites flexíveis poderiam ser criados, tentando encontrar um meio termo entre preencher a tela ou ter tamanho completamente fixo.
 
@@ -69,8 +69,8 @@ Zoe Mickley Gillenwater foi fundamental no [seu trabalho](http://zomigi.com/blog
 O termo design responsivo foi [cunhado por Ethan Marcotte em 2010](https://alistapart.com/article/responsive-web-design/), e descreveu o uso de três técnicas combinadas.
 
 1. A primeira foi a ideia de grids fluidas, que já estava sendo explorada por Gillenwater, e pode ser encontrada no artigo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado em 2009 em A List Apart).
-2. A segunda técnica foi a ideia de [imagens fluidas](http://unstoppablerobotninja.com/entry/fluid-images). Usando uma técnica muito simples que setava a propriedade `max-width` com `100%`, as imagens seriam reduzidas se a coluna que as continha se tornasse mais estreita que o tamanho intrínseco da imagem, mas nunca aumentariam. Isso permitiu que uma imagem fosse reduzida em tamanho para caber em uma coluna de tamanho flexível, em vez de transbordar, mas não aumentava e nem tornava-se pixelizada se a coluna fosse mais larga que a imagem.
-3. O terceiro componente-chave foi a [media query](/pt-BR/docs/Web/CSS/Media_Queries). Media Queries habilitavam o tipo de opção de layout usando o JavaScript, que Cameron Adams havia explorado anteriormente, usando apenas CSS. Em vez de ter um layout para todos os tamanhos de tela, o layout podia ser alterado. As barras laterais podiam ser reposicionadas para a tela menor ou uma navegação alternativa podia ser exibida.
+2. A segunda técnica foi a ideia de [imagens fluidas](https://unstoppablerobotninja.com/entry/fluid-images). Usando uma técnica muito simples que setava a propriedade `max-width` com `100%`, as imagens seriam reduzidas se a coluna que as continha se tornasse mais estreita que o tamanho intrínseco da imagem, mas nunca aumentariam. Isso permitiu que uma imagem fosse reduzida em tamanho para caber em uma coluna de tamanho flexível, em vez de transbordar, mas não aumentava e nem tornava-se pixelizada se a coluna fosse mais larga que a imagem.
+3. O terceiro componente-chave foi a [media query](/pt-BR/docs/Web/CSS/CSS_media_queries). Media Queries habilitavam o tipo de opção de layout usando o JavaScript, que Cameron Adams havia explorado anteriormente, usando apenas CSS. Em vez de ter um layout para todos os tamanhos de tela, o layout podia ser alterado. As barras laterais podiam ser reposicionadas para a tela menor ou uma navegação alternativa podia ser exibida.
 
 É importante entender que **o design responsivo não é uma tecnologia separada** — é um termo usado para descrever uma abordagem ao web design, ou um conjunto de melhores práticas, usado para criar um layout que possa _responder_ ao dispositivo que está sendo usado para visualizar o conteúdo. Na exploração original de Marcotte, isso significava grades flexíveis (usando floats) e media queries, no entanto, nos últimos 10 anos, desde que o artigo foi escrito, trabalhar de forma responsiva se tornou um padrão. Os métodos de layout CSS modernos são inerentemente responsivos, e temos coisas novas incorporadas à plataforma web para facilitar o design de sites responsivos.
 
@@ -94,7 +94,7 @@ Você pode adicionar múltiplos media queries dentro de uma folha de estilo, aju
 
 Uma abordagem comum ao utilizar Media Queries é criar um layout de única coluna para dispositivos de telas pequenas (e.g smartphones), então fazer a checagem para telas maiores e implementar um layout de múltiplas colunas quando houver largura suficiente. Esse design é frequentemente descrito como **mobile first**.
 
-Encontre mais detalhes na documentação MDN para [Media Queries](/pt-BR/docs/Web/CSS/Media_Queries).
+Encontre mais detalhes na documentação MDN para [Media Queries](/pt-BR/docs/Web/CSS/CSS_media_queries).
 
 ## Grids Flexíveis
 
@@ -155,7 +155,7 @@ If you instead specify a `column-width`, you are specifying a _minimum_ width. T
 
 In Flexbox, flex items will shrink and distribute space between the items according to the space in their container, as their initial behavior. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them.
 
-In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic [Flexbox: Flexible sizing of flex items](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#Flexible_sizing_of_flex_items).
+In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic [Flexbox: Flexible sizing of flex items](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
 
 ```css
 .container {

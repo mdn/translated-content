@@ -455,7 +455,7 @@ textarea.onkeyup = function () {
 >
 ```
 
-Если вы хотите вставить кавычки того же типа, то вы должны использовать [объекты HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html). Например, это работать не будет:
+Если вы хотите вставить кавычки того же типа, то вы должны использовать [объекты HTML](#entity_references_including_special_characters_in_html). Например, это работать не будет:
 
 ```html example-bad
 <a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
@@ -522,8 +522,8 @@ textarea.onkeyup = function () {
 - Добавьте заголовок страницы сразу за открывающим тегом {{htmlelement("body")}}. Текст должен находиться между открывающим тегом `<h1>` и закрывающим `</h1>` .
 - Напишите в параграфе о чём-нибудь, что кажется вам интересным.
 - Выделите важные слова, обернув их в открывающий тег `<strong>` и закрывающий `</strong>`
-- Добавьте ссылку на свой абзац так, как [объяснено ранее в статье](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element).
-- Добавьте изображение в свой документ под абзацем, как [объяснено ранее в статье](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#empty_elements). Если сможете использовать другую картинку (со своего компьютера или из интернета). Вы большой молодец!
+- Добавьте ссылку на свой абзац так, как [объяснено ранее в статье](#active_learning_adding_attributes_to_an_element).
+- Добавьте изображение в свой документ под абзацем, как [объяснено ранее в статье](#empty_elements). Если сможете использовать другую картинку (со своего компьютера или из интернета). Вы большой молодец!
 
 Если вы запутались, всегда можно запустить пример сначала кнопкой _Сбросить_. Сдаётесь — посмотрите ответ, нажав на _Показать решение_.
 
@@ -726,6 +726,6 @@ textarea.onkeyup = function () {
 
 ## Смотрите также
 
-- [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}

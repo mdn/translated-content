@@ -91,7 +91,7 @@ Think of the `min()` function as finding the maximum value allowed for a propert
 
 ## 无障碍问题
 
-当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#Relative_length_units) 这样就可以便于阅读，比如：
+当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#relative_length_units) 这样就可以便于阅读，比如：
 
 ```css
 small {
@@ -117,4 +117,4 @@ small {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

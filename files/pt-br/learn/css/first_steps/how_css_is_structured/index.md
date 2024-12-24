@@ -42,7 +42,7 @@ A primeira coisa que você vai olhar é, os três métodos de aplicação do CSS
 
 ### Folha de Estilos Externa
 
-Em [Começando com o CSS](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico) nós linkamos uma folha de estilos externas em nossa página. Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
+Em [Começando com o CSS](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics) nós linkamos uma folha de estilos externas em nossa página. Isso é o método mais comum utilizado para juntar CSS em um documento, podendo utilizar tal método em multiplas páginas, permitindo você estillizar todas as páginas como as mesmas folha de estilos. Na maioria dos casos, as diferentes páginas do site vão parecer bem iguais entre si e por isso você pode usar as mesmas regras para o estilo padrão da página.
 
 `Uma folha de estilos externa é quando você tem seu CSS escrito em um arquivo separado com uma extensão .css`, e você o refere dentro de um elemento `<link>` do HTML:
 
@@ -341,7 +341,7 @@ Até agora, não encontramos as regras, em inglês [`@rules`](/pt-BR/docs/Web/CS
 @import "styles2.css";
 ```
 
-Uma das `@rules` mais comuns que você encontrará é a `@media`, que permite usar [media queries](/pt-BR/docs/Web/CSS/Media_Queries) para aplicar CSS somente quando certas condições são verdadeiras (por exemplo, quando a resolução da tela está acima de um certo valor ou a tela é mais larga que uma largura específica).
+Uma das `@rules` mais comuns que você encontrará é a `@media`, que permite usar [media queries](/pt-BR/docs/Web/CSS/CSS_media_queries) para aplicar CSS somente quando certas condições são verdadeiras (por exemplo, quando a resolução da tela está acima de um certo valor ou a tela é mais larga que uma largura específica).
 
 Nesse CSS abaixo, temos um estilo que dá ao elemento `<body>` uma cor de fundo rosa. No entanto, usamos `@media` para criar uma seção do nosso estilo que será aplicada apenas em navegadores com uma viewport mais larga que 30em. Se o navegador for mais largo que 30em, a cor de fundo será azul.
 

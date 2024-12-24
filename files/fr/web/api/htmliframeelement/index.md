@@ -42,7 +42,7 @@ _Propriétés héritées de son parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}
   - : Retourne l'interface {{domxref("FeaturePolicy")}} qui fournit une API simple pour l'introspection des politiques de fonctionnalité appliquées à un document spécifique.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}
-  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`referrerPolicy`](/fr/docs/Web/HTML/Element/iframe#referrerPolicy) attribut HTML indiquant le référent à utiliser lors de l'extraction de la ressource liée.
+  - : Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML [`referrerPolicy`](/fr/docs/Web/HTML/Element/iframe#referrerpolicy) attribut HTML indiquant le référent à utiliser lors de l'extraction de la ressource liée.
 - {{domxref("HTMLIFrameElement.sandbox")}}
   - : Est un {{domxref("DOMSettableTokenList")}} qui reflète l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) indiquant des restrictions supplémentaires sur le comportement du contenu imbriqué.
 - {{domxref("HTMLIFrameElement.scrolling")}} {{deprecated_inline}}

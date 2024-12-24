@@ -5,7 +5,7 @@ slug: Web/CSS/transition
 
 {{CSSRef}}
 
-La propriété **`transition`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) pour les propriétés {{cssxref("transition-property")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-timing-function")}} et {{cssxref("transition-delay")}}.
+La propriété **`transition`** est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) pour les propriétés {{cssxref("transition-property")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-timing-function")}} et {{cssxref("transition-delay")}}.
 
 {{EmbedInteractiveExample("pages/css/transition.html")}}
 
@@ -66,7 +66,7 @@ Si la liste des valeurs est trop courte pour les différentes propriétés, les 
 
 ## Exemples
 
-Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
+Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 ## Spécifications
 
@@ -78,5 +78,5 @@ Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les tr
 
 ## Voir aussi
 
-- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

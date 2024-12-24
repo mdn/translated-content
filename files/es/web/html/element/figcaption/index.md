@@ -57,7 +57,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
 
 ## Atributos
 
-Este elemento sólo incluye los [global attributes](/es/docs/HTML/Global_attributes).
+Este elemento sólo incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
 
 ## Ejemplos
 

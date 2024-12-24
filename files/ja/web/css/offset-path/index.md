@@ -46,7 +46,7 @@ offset-path: unset;
   - : SVG 図形の ID の参照です。 — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, `rect` — のいずれかで、図形の形状をパスとして使用します。
 - `<basic-shape>`
 
-  - : [CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Basic_Shapes)、たとえば `circle()`, `ellipse()`, `inset()`, `polygon()`, `path()` を指定します。
+  - : [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)、たとえば `circle()`, `ellipse()`, `inset()`, `polygon()`, `path()` を指定します。
 
     - `path()`
     - : SVG 座標の構文で定義されたパス文字列です。

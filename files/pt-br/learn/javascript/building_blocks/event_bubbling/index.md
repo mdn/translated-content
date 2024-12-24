@@ -211,10 +211,10 @@ TODO: Adequado apenas para desenvolvedores de extensões?
 
 A propriedade `relatedTarget` do evento de `mouseover` mantém o nó de onde o mouse estava sobre anteriormente. Para o evento de `mouseout`, mantém o nó para onde o mouse se moveu.
 
-| Tipo de Evento | [event.target](/pt-BR/DOM/event.target)               | [event.relatedTarget](/pt-BR/DOM/event.relatedTarget) |
-| -------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `mouseover`    | O EventTarget do qual o dispositivo apontador entrou. | O EventTarget do qual o dispositivo apontador saiu.   |
-| `mouseout`     | O EventTarget do qual o dispositivo apontador saiu.   | O EventTarget do qual o dispositivo apontador entrou. |
+| Tipo de Evento | [event.target](/pt-BR/docs/DOM/event.target)          | [event.relatedTarget](/pt-BR/docs/DOM/event.relatedTarget) |
+| -------------- | ----------------------------------------------------- | ---------------------------------------------------------- |
+| `mouseover`    | O EventTarget do qual o dispositivo apontador entrou. | O EventTarget do qual o dispositivo apontador saiu.        |
+| `mouseout`     | O EventTarget do qual o dispositivo apontador saiu.   | O EventTarget do qual o dispositivo apontador entrou.      |
 
 TODO: Necessário descrição complemento sobre eventos de `dragenter` e `dragexit`.
 

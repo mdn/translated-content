@@ -66,7 +66,7 @@ function updateProgress(percentComplete) {
 
 - [ARIA 랜드마크를 사용하여 페이지 탐색 고도화](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : 스크린 리더 사용자들을 위해 ARIA 랜드마크를 사용하여 웹 페이지의 탐색 기능을 향상시키는 법을 소개해주는 좋은 글입니다. [이와 더불어서 ARIA 구현 노트](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) 및 실제 사이트에서의 활용 예시들을 참고하세요. (2011년 7월에 업데이트됨)
-- [폼 접근성 향상하기](/ko/docs/ARIA/forms)
+- [폼 접근성 향상하기](/ko/docs/Web/Accessibility/ARIA)
   - : ARIA는 동적 콘텐츠만을 위한 것이 아닙니다! ARIA 특성을 사용해 HTML 폼의 접근성을 높이는 방법을 알아보세요.
 
 ## 스크립트 처리된 위젯을 위한 ARIA
@@ -91,11 +91,11 @@ function updateProgress(percentComplete) {
 
 ## 버그 제출
 
-[브라우저, 스크린 리더, JavaScript 라이브러리의 ARIA 버그 제출하기](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
+[브라우저, 스크린 리더, JavaScript 라이브러리의 ARIA 버그 제출하기](/en-US/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
 ## 관련 주제
 
-{{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/JavaScript)
+{{glossary("Accessibility", "접근성")}}, {{glossary("AJAX")}}, [JavaScript](/ko/docs/Web/JavaScript)
 
 - [웹 개발](/ko/docs/Web/Guide)
 - [접근성과 Mozilla](/ko/docs/Mozilla/Accessibility)

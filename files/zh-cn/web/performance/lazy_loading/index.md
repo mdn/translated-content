@@ -44,7 +44,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 <link href="print.css" rel="stylesheet" media="print" />
 ```
 
-可以执行一些 [CSS 优化](/zh-CN/docs/Learn/Performance/CSS)来实现这一目标。
+可以执行一些 [CSS 优化](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS)来实现这一目标。
 
 ### 字体
 

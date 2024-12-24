@@ -44,11 +44,11 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : Récupère l'objet [Window](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : Ouvre une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
+  - : Ouvre une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
 - {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Obtient le fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) complet, sérialisé en tant qu'objet.
+  - : Obtient le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet, sérialisé en tant qu'objet.
 - {{WebExtAPIRef("runtime.getURL()")}}
-  - : Etant donné un chemin relatif de [manifest.json](/fr/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
+  - : Etant donné un chemin relatif de [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
 - {{WebExtAPIRef("runtime.setUninstallURL()")}}
   - : Définit une URL à visiter lorsque l'extension est désinstallée.
 - {{WebExtAPIRef("runtime.reload()")}}

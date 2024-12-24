@@ -28,7 +28,7 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 Блочный контекст форматирования применяется ко всему содержимому того элемента, который его создал.
 
-Блочные контексты форматирования важны для размещения плавающих элементов (см. {{ cssxref("float") }}) и отмены их обтекания (см.{{ cssxref("clear") }}) . Правила размещения плавающих элементов и сброса обтекания применяются только к элементам внутри одного и того же блочного контекста форматирования. Плавающие элементы не влияют на размещение содержимого внутри других блочных контекстов форматирования, и отмена обтекания распространяется только на плавающие элементы из того же самого контекста форматирования. [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) тоже происходит только между блоками из одного и того же блочного контекста форматирования.
+Блочные контексты форматирования важны для размещения плавающих элементов (см. {{ cssxref("float") }}) и отмены их обтекания (см.{{ cssxref("clear") }}) . Правила размещения плавающих элементов и сброса обтекания применяются только к элементам внутри одного и того же блочного контекста форматирования. Плавающие элементы не влияют на размещение содержимого внутри других блочных контекстов форматирования, и отмена обтекания распространяется только на плавающие элементы из того же самого контекста форматирования. [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) тоже происходит только между блоками из одного и того же блочного контекста форматирования.
 
 ## Примеры
 
@@ -89,7 +89,7 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 ### Схлопывание границ margin
 
-Создание нового блочного контекста форматирования предотвращает эффект [схлопывания границ](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) между двумя соседними div:
+Создание нового блочного контекста форматирования предотвращает эффект [схлопывания границ](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) между двумя соседними div:
 
 #### HTML
 
@@ -123,7 +123,7 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 ## Спецификации
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#q15)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#q15)
 - [CSS Display Level 3](https://drafts.csswg.org/css-display/#block-formatting-context)
 
 ## Статьи по теме
@@ -134,11 +134,11 @@ slug: Web/CSS/CSS_display/Block_formatting_context
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)
   - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/initial_value)
     - [вычисленные](/ru/docs/Web/CSS/computed_value)

@@ -33,7 +33,7 @@ createMediaStreamSource(stream)
 
 {{ htmlelement("video") }} 要素の下のスライダーはローパスフィルターの増幅量を操作します—スライダーで値を大きくすると、より低音が強くなります。
 
-> **メモ:** [この例の実行](http://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
+> **メモ:** [この例の実行](https://mdn.github.io/stream-source-buffer/)と[ソースの閲覧](https://github.com/mdn/stream-source-buffer)もできます。
 
 ```js
 const pre = document.querySelector("pre");

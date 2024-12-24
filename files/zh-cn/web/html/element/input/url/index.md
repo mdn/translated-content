@@ -65,17 +65,17 @@ slug: Web/HTML/Element/input/url
 
 用户可以输入到 `url` 输入框中的最大字符数（以 UTF-16 代码单元为单位）。必须为大于等于 0 的整数。如果未指定 `maxlength` 或指定了无效的值，则 `url` 输入框将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### minlength
 
 用户可以输入到 `url` 输入框中的最小字符数（以 UTF-16 代码单元为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则 `url` 输入将没有最小值。
 
-如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
+如果输入到字段中的文本的长度小于 `minlength` UTF-16 代码单元的长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)。约束验证仅作用于用户修改输入值的时候。
 
 ### pattern
 
-如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+如果指定了 `pattern` 属性，为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足该属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
 如果模式未指定或无效，则不应用任何正则表达式，并且将完全忽略此属性。
 
@@ -275,7 +275,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 支持 `url` 输入类型的浏览器会自动提供验证，以确保只有符合标准格式的 URL 文本被输入到输入框。
 
-URL 的语法是相当复杂的。它由 WHATWG 的 [URL 动态标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是 URL？](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)中为初学者做了描述。
+URL 的语法是相当复杂的。它由 WHATWG 的 [URL 动态标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是 URL？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)中为初学者做了描述。
 
 ### 使 URL 必填
 
@@ -382,8 +382,8 @@ input:valid + span::after {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/Input/tel)
-- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/Input/email)
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

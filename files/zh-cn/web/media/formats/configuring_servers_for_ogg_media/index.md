@@ -91,5 +91,5 @@ Vorbis: serialno 0708996688
 
 ## 参见
 
-- [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [常用媒体类型的编解码器](/zh-CN/docs/Web/Media/Formats/codecs_parameter)

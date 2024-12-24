@@ -3,7 +3,7 @@ title: Exemple 5
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_5
 ---
 
-Voici le dernier exemple expliquant [comment construire des widgets de formulaire personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets).
+Voici le dernier exemple expliquant [comment construire des widgets de formulaire personnalisés](/fr/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Changement d'état
 

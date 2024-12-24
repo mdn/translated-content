@@ -37,4 +37,4 @@ _`Geolocation` 介面沒有繼承也沒有時做任何方法_。
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
