@@ -134,7 +134,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
         </p>
 
         <section>
-        <h3>Subsection</h3>
+          <h3>Subsection</h3>
 
         <p>
             Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
