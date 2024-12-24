@@ -64,7 +64,7 @@ Math.atan2(90, 15); // 1.4056476493802699
 Math.atan2(15, 90); // 0.16514867741462683
 ```
 
-### 比較 Math.atan2(y, x) 和 Math.atan(y / x)
+### Math.atan2(y, x) 和 Math.atan(y / x) 的差別
 
 以下腳本會輸出所有 `Math.atan2(y, x)` 和 `Math.atan(y / x)` 結果不相等的輸入。
 
