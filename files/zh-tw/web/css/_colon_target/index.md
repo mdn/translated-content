@@ -25,7 +25,7 @@ http://www.example.com/index.html#section2
 當當前 URL 等於上述內容時，以下元素將被 `:target` 選擇器選中：
 
 ```html
-<section id="section2">Example</section>
+<section id="section2">範例</section>
 ```
 
 ## 語法
@@ -37,36 +37,34 @@ http://www.example.com/index.html#section2
 ```
 
 > [!NOTE]
-> 由於 [CSS 規範中的可能錯誤](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/)，`:target` 無法在 [Web 元件](/zh-TW/docs/Web/API/Web_components)中運作，因為 [shadow root](/zh-TW/docs/Web/API/ShadowRoot) 無法將目標元素傳遞到 shadow 樹中。
+> 由於 [CSS 規範中的可能錯誤](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/)，`:target` 無法在[網頁組件](/zh-TW/docs/Web/API/Web_components)中運作，因為[影子根](/zh-TW/docs/Web/API/ShadowRoot)無法將目標元素傳遞到影子樹中。
 
 ## 範例
 
-### 目錄表
+### 目錄
 
-`:target` 偽類可以用於高亮顯示從目錄表中連結到的頁面部分。
+`:target` 偽類可以用於高亮顯示從目錄中連結到的頁面部分。
 
 #### HTML
 
 ```html
-<h3>Table of Contents</h3>
+<h3>目錄</h3>
 <ol>
-  <li><a href="#p1">Jump to the first paragraph!</a></li>
-  <li><a href="#p2">Jump to the second paragraph!</a></li>
+  <li><a href="#p1">跳到第一段！</a></li>
+  <li><a href="#p2">跳到第二段！</a></li>
   <li>
     <a href="#nowhere">
-      This link goes nowhere, because the target doesn't exist.
+      此連結無效，因為目標不存在。
     </a>
   </li>
 </ol>
 
-<h3>My Fun Article</h3>
+<h3>我的有趣文章</h3>
 <p id="p1">
-  You can target <i>this paragraph</i> using a URL fragment. Click on the link
-  above to try out!
+  你可以使用 URL 片段來定位<i>這段文字</i>。點擊上面的連結試試看！
 </p>
 <p id="p2">
-  This is <i>another paragraph</i>, also accessible from the links above. Isn't
-  that delightful?
+  這是<i>另一段文字</i>，也可以從上面的連結訪問。是不是很有趣？
 </p>
 ```
 
@@ -93,7 +91,7 @@ p:target i {
 
 #### 結果
 
-{{EmbedLiveSample('目錄表', 500, 300)}}
+{{EmbedLiveSample('目錄', 500, 300)}}
 
 ## 規範
 
