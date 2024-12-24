@@ -15,7 +15,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("Plugin.description")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : 插件的可读描述。
+  - : 插件的人类可读的描述。
 - {{domxref("Plugin.filename")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : 插件文件的文件名。
 - {{domxref("Plugin.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
