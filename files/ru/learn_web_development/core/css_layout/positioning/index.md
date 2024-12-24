@@ -1,7 +1,6 @@
 ---
 title: Позиционирование
 slug: Learn_web_development/Core/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/Positioning
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}

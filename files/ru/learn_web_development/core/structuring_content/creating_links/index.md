@@ -1,7 +1,6 @@
 ---
 title: Создание гиперссылок
 slug: Learn_web_development/Core/Structuring_content/Creating_links
-original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

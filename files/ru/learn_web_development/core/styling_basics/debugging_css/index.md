@@ -1,7 +1,6 @@
 ---
 title: Отладка CSS
 slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
-original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}

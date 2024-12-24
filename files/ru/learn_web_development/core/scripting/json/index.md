@@ -1,7 +1,6 @@
 ---
 title: Работа с JSON
 slug: Learn_web_development/Core/Scripting/JSON
-original_slug: Learn/JavaScript/Objects/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

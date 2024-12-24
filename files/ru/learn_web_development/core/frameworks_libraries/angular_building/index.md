@@ -1,7 +1,6 @@
 ---
 title: Сборка Angular приложений и другие ресурсы
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

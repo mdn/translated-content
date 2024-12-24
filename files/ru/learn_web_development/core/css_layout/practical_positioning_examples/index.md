@@ -1,7 +1,6 @@
 ---
 title: Practical positioning examples
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
-original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

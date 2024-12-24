@@ -1,7 +1,6 @@
 ---
 title: Серверное программирование веб-сайтов
 slug: Learn_web_development/Extensions/Server-side
-original_slug: Learn/Server-side
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Использование HTML для решения общих задач
 slug: Learn_web_development/Howto/Solve_HTML_problems
-original_slug: Learn/HTML/Howto
 ---
 
 {{LearnSidebar}}

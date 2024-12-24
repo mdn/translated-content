@@ -1,7 +1,6 @@
 ---
 title: Руководство по HTML-формам
 slug: Learn_web_development/Extensions/Forms
-original_slug: Learn/Forms
 ---
 
 {{LearnSidebar}}

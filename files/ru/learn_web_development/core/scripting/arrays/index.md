@@ -1,7 +1,6 @@
 ---
 title: Массивы
 slug: Learn_web_development/Core/Scripting/Arrays
-original_slug: Learn/JavaScript/First_steps/Arrays
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "Learn/JavaScript/Первые_шаги")}}

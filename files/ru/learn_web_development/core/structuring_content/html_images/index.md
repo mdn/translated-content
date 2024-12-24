@@ -1,7 +1,6 @@
 ---
 title: Изображения в HTML
 slug: Learn_web_development/Core/Structuring_content/HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}

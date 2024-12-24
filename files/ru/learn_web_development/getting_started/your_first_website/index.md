@@ -1,7 +1,6 @@
 ---
 title: Начало работы с Вебом
 slug: Learn_web_development/Getting_started/Your_first_website
-original_slug: Learn/Getting_started_with_the_web
 ---
 
 {{LearnSidebar}}

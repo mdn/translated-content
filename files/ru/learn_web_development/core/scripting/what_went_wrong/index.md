@@ -1,7 +1,6 @@
 ---
 title: Что пошло не так? Устранение ошибок JavaScript
 slug: Learn_web_development/Core/Scripting/What_went_wrong
-original_slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги")}}

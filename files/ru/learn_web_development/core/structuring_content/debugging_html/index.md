@@ -1,7 +1,6 @@
 ---
 title: Отладка HTML
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
-original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

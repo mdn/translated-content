@@ -1,7 +1,6 @@
 ---
 title: "HTML: Хорошая основа для доступности"
 slug: Learn_web_development/Core/Accessibility/HTML
-original_slug: Learn/Accessibility/HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

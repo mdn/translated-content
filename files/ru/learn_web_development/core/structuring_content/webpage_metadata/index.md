@@ -1,7 +1,6 @@
 ---
 title: Что внутри "head"? Метаданные в HTML
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}

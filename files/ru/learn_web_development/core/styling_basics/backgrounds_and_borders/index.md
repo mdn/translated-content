@@ -1,7 +1,6 @@
 ---
 title: Фон и границы
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
@@ -23,8 +22,7 @@ CSS-свойство {{cssxref ("background")}} является сокраще�
         105deg,
         rgba(255, 255, 255, 0.2) 39%,
         rgba(51, 56, 57, 1) 96%
-      )
-      center center / 400px 200px no-repeat,
+      ) center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;
 }

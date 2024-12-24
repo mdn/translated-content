@@ -1,7 +1,6 @@
 ---
 title: Понимание JavaScript-фреймворков для фронтенда
 slug: Learn_web_development/Core/Frameworks_libraries
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
 {{LearnSidebar}}

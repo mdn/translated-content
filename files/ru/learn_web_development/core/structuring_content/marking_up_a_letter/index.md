@@ -1,7 +1,6 @@
 ---
 title: Разметка письма
 slug: Learn_web_development/Core/Structuring_content/Marking_up_a_letter
-original_slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}

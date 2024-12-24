@@ -1,7 +1,6 @@
 ---
 title: Продвинутое форматирование текста
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 l10n:
   sourceCommit: 5026c14bd6d2b6b377289aadac7eceae9282e806
 ---

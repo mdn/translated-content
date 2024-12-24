@@ -1,7 +1,6 @@
 ---
 title: Значения свойств CSS
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
-original_slug: Learn/CSS/Building_blocks/Values_and_units
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}

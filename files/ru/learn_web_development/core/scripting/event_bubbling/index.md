@@ -1,7 +1,6 @@
 ---
 title: Сравнение разных Event Targets
 slug: Learn_web_development/Core/Scripting/Event_bubbling
-original_slug: Learn/JavaScript/Building_blocks/Event_bubbling
 ---
 
 Легко запутаться в том, какую цель (target) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств target.

@@ -1,7 +1,6 @@
 ---
 title: Структура документа и веб-сайта
 slug: Learn_web_development/Core/Structuring_content/Structuring_documents
-original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}

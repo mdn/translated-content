@@ -1,7 +1,6 @@
 ---
 title: "Проверка ваших навыков: floats"
 slug: Learn_web_development/Core/CSS_layout/Floats_skills
-original_slug: Learn/CSS/CSS_layout/Floats_skills
 ---
 
 {{LearnSidebar}}

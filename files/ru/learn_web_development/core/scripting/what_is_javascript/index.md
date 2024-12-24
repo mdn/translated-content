@@ -1,7 +1,6 @@
 ---
 title: Что такое JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
-original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}

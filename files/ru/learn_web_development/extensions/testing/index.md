@@ -1,7 +1,6 @@
 ---
 title: Кросс-браузерное тестирование
 slug: Learn_web_development/Extensions/Testing
-original_slug: Learn/Tools_and_testing/Cross_browser_testing
 ---
 
 {{LearnSidebar}}

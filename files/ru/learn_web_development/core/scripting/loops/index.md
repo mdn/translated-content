@@ -1,7 +1,6 @@
 ---
 title: Зацикливание кода
 slug: Learn_web_development/Core/Scripting/Loops
-original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

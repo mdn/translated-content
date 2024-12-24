@@ -1,7 +1,6 @@
 ---
 title: Распространённые вопросы
 slug: Learn_web_development/Howto
-original_slug: Learn/Common_questions
 ---
 
 {{LearnSidebar}}

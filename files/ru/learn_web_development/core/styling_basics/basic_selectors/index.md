@@ -1,7 +1,6 @@
 ---
 title: Селекторы CSS
 slug: Learn_web_development/Core/Styling_basics/Basic_selectors
-original_slug: Learn/CSS/Building_blocks/Selectors
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: Git и GitHub
 slug: Learn_web_development/Core/Version_control
-original_slug: Learn/Tools_and_testing/GitHub
 ---
 
 {{LearnSidebar}}

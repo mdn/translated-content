@@ -1,7 +1,6 @@
 ---
 title: Что такое доступность?
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
-original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}

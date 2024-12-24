@@ -1,7 +1,6 @@
 ---
 title: Добавление векторной графики в веб-документ
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
-original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

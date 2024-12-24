@@ -1,7 +1,6 @@
 ---
 title: Каскад и наследование
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
-original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: Устройство CSS
 slug: Learn_web_development/Core/Styling_basics
-original_slug: Learn/CSS/Building_blocks
 ---
 
 {{LearnSidebar}}

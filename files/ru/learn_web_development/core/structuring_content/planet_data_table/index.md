@@ -1,7 +1,6 @@
 ---
 title: "Аттестация: Структурирование данных о планетах"
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
-original_slug: Learn/HTML/Tables/Structuring_planet_data
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

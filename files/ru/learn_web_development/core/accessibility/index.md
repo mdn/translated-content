@@ -1,7 +1,6 @@
 ---
 title: Доступность
 slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
 ---
 
 {{LearnSidebar}}

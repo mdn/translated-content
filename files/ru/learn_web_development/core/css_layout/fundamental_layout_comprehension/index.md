@@ -1,7 +1,6 @@
 ---
 title: Фундаментальное понимание раскладки
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-original_slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}

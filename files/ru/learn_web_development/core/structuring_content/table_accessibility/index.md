@@ -1,7 +1,6 @@
 ---
 title: HTML таблицы продвинутые возможности и доступность
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
-original_slug: Learn/HTML/Tables/Advanced
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

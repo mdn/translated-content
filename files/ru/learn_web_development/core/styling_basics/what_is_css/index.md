@@ -1,7 +1,6 @@
 ---
 title: Как работает CSS
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
-original_slug: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}

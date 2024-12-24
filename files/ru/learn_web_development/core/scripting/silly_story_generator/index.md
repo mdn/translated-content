@@ -1,7 +1,6 @@
 ---
 title: Генератор глупых историй
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
-original_slug: Learn/JavaScript/First_steps/Silly_story_generator
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}

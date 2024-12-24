@@ -1,7 +1,6 @@
 ---
 title: Изучение веб-разработки
 slug: Learn_web_development
-original_slug: Learn
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Введение в CSS вёрстку
 slug: Learn_web_development/Core/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}

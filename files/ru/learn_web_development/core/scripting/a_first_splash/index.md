@@ -1,7 +1,6 @@
 ---
 title: Первое погружение в JavaScript
 slug: Learn_web_development/Core/Scripting/A_first_splash
-original_slug: Learn/JavaScript/First_steps/A_first_splash
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/What_is_JavaScript", "Learn/JavaScript/Первые_шаги/Что_пошло_не_так", "Learn/JavaScript/Первые_шаги")}}

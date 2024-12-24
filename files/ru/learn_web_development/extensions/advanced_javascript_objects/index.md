@@ -1,7 +1,6 @@
 ---
 title: Введение в объекты JavaScript
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects
-original_slug: Learn/JavaScript/Objects
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Создаём свою функцию
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
-original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: "Изучение HTML: руководства и уроки"
 slug: Learn_web_development/Core/Structuring_content
-original_slug: Learn/HTML
 ---
 
 {{LearnSidebar}}

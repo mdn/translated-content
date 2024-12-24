@@ -1,7 +1,6 @@
 ---
 title: Макет с несколькими столбцами
 slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
-original_slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}

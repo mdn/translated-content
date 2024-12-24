@@ -1,7 +1,6 @@
 ---
 title: Переполнение содержимого
 slug: Learn_web_development/Core/Styling_basics/Overflow
-original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}

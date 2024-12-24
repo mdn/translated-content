@@ -1,7 +1,6 @@
 ---
 title: Полезные методы для строк
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
 {{LearnSidebar}}

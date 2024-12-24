@@ -1,7 +1,6 @@
 ---
 title: Фильтрация списка дел
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

@@ -1,7 +1,6 @@
 ---
 title: Работа с текстом — строки в JavaScript
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Math", "Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги")}}

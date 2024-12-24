@@ -1,7 +1,6 @@
 ---
 title: HTML таблицы основы
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

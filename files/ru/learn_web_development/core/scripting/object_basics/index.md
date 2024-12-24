@@ -1,7 +1,6 @@
 ---
 title: Основы объектов в JavaScript
 slug: Learn_web_development/Core/Scripting/Object_basics
-original_slug: Learn/JavaScript/Objects/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

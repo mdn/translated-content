@@ -1,7 +1,6 @@
 ---
 title: Использование ваших новых знаний
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

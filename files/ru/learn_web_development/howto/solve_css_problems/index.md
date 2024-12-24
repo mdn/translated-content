@@ -1,7 +1,6 @@
 ---
 title: Использование CSS для решения общих проблем
 slug: Learn_web_development/Howto/Solve_CSS_problems
-original_slug: Learn/CSS/Howto
 ---
 
 {{LearnSidebar}}

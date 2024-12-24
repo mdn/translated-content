@@ -1,7 +1,6 @@
 ---
 title: Блочная модель
 slug: Learn_web_development/Core/Styling_basics/Box_model
-original_slug: Learn/CSS/Building_blocks/The_box_model
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}Каждый элемент в CSS заключён в блок, и понимание поведения этих блоков — это ключ к умению задавать раскладку с помощью CSS, то есть выстраивать одни элементы относительно других элементов. В этом уроке мы надлежащим образом рассмотрим _блочную модель_ CSS, чтобы вы могли создавать более сложные раскладки, понимая принцип ее работы и терминологию, которая к ней относится.

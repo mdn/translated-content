@@ -1,7 +1,6 @@
 ---
 title: Структурные элементы JavaScript
 slug: Learn_web_development/Core/Scripting
-original_slug: Learn/JavaScript/Building_blocks
 ---
 
 {{LearnSidebar}}

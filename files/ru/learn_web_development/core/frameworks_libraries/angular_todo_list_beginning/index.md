@@ -1,7 +1,6 @@
 ---
 title: Начинаем приложение списка дел с использованием Angular
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
 {{LearnSidebar}}

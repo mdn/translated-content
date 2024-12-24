@@ -1,7 +1,6 @@
 ---
 title: Асинхронный JavaScript
 slug: Learn_web_development/Extensions/Async_JS
-original_slug: Learn/JavaScript/Asynchronous
 ---
 
 {{LearnSidebar}}

@@ -1,7 +1,6 @@
 ---
 title: Веб-производительность
 slug: Learn_web_development/Extensions/Performance
-original_slug: Learn/Performance
 ---
 
 {{LearnSidebar}}

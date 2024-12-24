@@ -1,7 +1,6 @@
 ---
 title: Начало работы с HTML
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
-original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}

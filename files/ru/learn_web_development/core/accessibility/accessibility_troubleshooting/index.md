@@ -1,7 +1,6 @@
 ---
 title: Устранение проблем доступности
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
-original_slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}

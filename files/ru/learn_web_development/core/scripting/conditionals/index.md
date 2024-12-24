@@ -1,7 +1,6 @@
 ---
 title: Принятие решений в вашем коде — условные конструкции
 slug: Learn_web_development/Core/Scripting/Conditionals
-original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}

@@ -1,7 +1,6 @@
 ---
 title: Float
 slug: Learn_web_development/Core/CSS_layout/Floats
-original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
