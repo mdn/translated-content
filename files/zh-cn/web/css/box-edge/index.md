@@ -83,4 +83,4 @@ l10n:
 
 ## 参见
 
-- [CSS 框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)模块
+- [CSS 盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)模块
