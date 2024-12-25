@@ -9,7 +9,7 @@ l10n:
 
 **`UIEvent`** 接口表示简单的用户界面事件。
 
-`UIEvent` 是从 {{domxref("Event")}} 派生出来的。尽管 {{domxref("UIEvent.initUIEvent()")}} 方法为了向后兼容而一直保留着，但是你应该使用 {{domxref("UIEvent.UIEvent"， "UIEvent()")}} 构造器来创建 `UIEvent` 对象。
+`UIEvent` 是从 {{domxref("Event")}} 派生出来的。尽管 {{domxref("UIEvent.initUIEvent()")}} 方法为了向后兼容而一直保留着，但是你应该使用 {{domxref("UIEvent.UIEvent", "UIEvent()")}} 构造器来创建 `UIEvent` 对象。
 
 某些接口是这个的直接或间接后代：{{domxref("MouseEvent")}}， {{domxref("TouchEvent")}}， {{domxref("FocusEvent")}}， {{domxref("KeyboardEvent")}}， {{domxref("WheelEvent")}}， {{domxref("InputEvent")}}，和{{domxref("CompositionEvent")}}。
 
