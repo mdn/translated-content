@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`UIEvent.view`** 只读属性返回 {{glossary("WindowProxy")}} 生成事件的对象。在浏览器中，这个是事件发生在 {{domxref("Window")}} 对象。
+**`UIEvent.view`** 只读属性返回 {{glossary("WindowProxy")}} 生成事件的对象。在浏览器中，这个事件发生在 {{domxref("Window")}} 对象。
 
 ## 语法
 
