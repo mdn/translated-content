@@ -11,7 +11,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fir
 > [!NOTE]
 > 如果你需要根据我们的版本检查你的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

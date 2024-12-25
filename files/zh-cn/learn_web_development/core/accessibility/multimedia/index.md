@@ -10,7 +10,7 @@ original_slug: Learn/Accessibility/Multimedia
 
 可能导致无障碍（accessibility）问题的另一类内容是多媒体——视频、音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先决条件：</th>

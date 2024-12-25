@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Testing
 
 随着网站的增长，他们越来越难以手动测试。不仅要进行更多的测试，而且随着组件之间的交互变得越来越复杂，一个区域的小改变可能会影响到其他区域，所以需要做更多的改变来确保一切正常运行，并且在进行更多更改时不会引入错误。减轻这些问题的一种方法是编写自动化测试，每当你进行更改时，都可以轻松可靠地运行测试。本教程演示如何使用 Django 的测试框架自动化你的网站的*单元测试*。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/First_steps/Website_security
 
 站点安全需要在网站设计和使用的各个方面保持警惕。这篇入门文章不会让你成为一个网站安全专家，但是可以帮助你理解威胁的来源以及如何保护你的 Web 应用来远离这些常见的攻击。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">准备内容：</th>

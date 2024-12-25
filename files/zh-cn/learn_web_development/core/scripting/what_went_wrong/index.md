@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 
 上一节中你创建了“猜数字”游戏，但它可能没有正常工作。别担心，本节将为你提供一些简单的提示，来帮助你查找并修复 JavaScript 程序中的错误，从而让你远离困扰。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

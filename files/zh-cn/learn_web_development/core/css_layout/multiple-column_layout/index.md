@@ -8,7 +8,7 @@ original_slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 多列布局声明提供了一种多列组织内容的方式，正如你在一些报纸中看到的那样。这篇文章介绍怎么使用这一特性。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

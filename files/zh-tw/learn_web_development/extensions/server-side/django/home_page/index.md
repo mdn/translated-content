@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 我們現在可以添加代碼，來顯示我們的第一個完整頁面 - [LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 網站的主頁，顯示每個模型類型有多少條記錄，並提供我們其他頁面的側邊欄導航鏈接。一路上，我們將獲得編寫基本 URL 地圖和視圖、從數據庫獲取記錄、以及使用模板的實踐經驗。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提:</th>
