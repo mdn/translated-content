@@ -2,7 +2,7 @@
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 l10n:
-  sourceCommit: 27180875516cc311342e74b596bfb589b7211e0c
+  sourceCommit: 86aba12ebfdca9fb1de77afb08cc78a0c9e44d45
 ---
 
 {{JSRef}}
