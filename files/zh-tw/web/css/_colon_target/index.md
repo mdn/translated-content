@@ -37,7 +37,7 @@ http://www.example.com/index.html#section2
 ```
 
 > [!NOTE]
-> 由於 [CSS 規範中的可能錯誤](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/)，`:target` 無法在[網頁組件](/zh-TW/docs/Web/API/Web_components)中運作，因為[影子根](/zh-TW/docs/Web/API/ShadowRoot)無法將目標元素傳遞到影子樹中。
+> 由於 [CSS 規範中的可能錯誤](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/)，`:target` 無法在 [Web 組件](/zh-TW/docs/Web/API/Web_components)中運作，因為[影子根](/zh-TW/docs/Web/API/ShadowRoot)無法將目標元素傳遞到影子樹中。
 
 ## 範例
 
@@ -53,7 +53,7 @@ http://www.example.com/index.html#section2
   <li><a href="#p1">跳到第一段！</a></li>
   <li><a href="#p2">跳到第二段！</a></li>
   <li>
-    <a href="#nowhere"> 此連結無效，因為目標不存在。 </a>
+    <a href="#nowhere">此連結無效，因為目標不存在。 </a>
   </li>
 </ol>
 
