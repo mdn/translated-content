@@ -95,7 +95,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
+  background-image: url(star-solid.gif);
   width: 144px;
   height: 84px;
 }
@@ -116,8 +116,7 @@ div {
 
 /* Несколько изображений */
 .five {
-  background-image: url(starsolid.gif),
-    url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

@@ -21,7 +21,7 @@ slug: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url> значения */
-list-style-image: url("starsolid.gif");
+list-style-image: url("star-solid.gif");
 
 /* Глобальные значения */
 list-style-image: inherit;
@@ -55,7 +55,7 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 
