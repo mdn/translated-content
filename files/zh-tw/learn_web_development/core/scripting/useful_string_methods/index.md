@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 
 現在我們已經了解了字符串的基礎知識，讓我們開始思考我們可以使用內置方法對字符串執行哪些有用的操作，例如查找文本字符串的長度，連接和拆分字符串 ，將字符串中的一個字符替換為另一個字符，等等。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備知識:</th>

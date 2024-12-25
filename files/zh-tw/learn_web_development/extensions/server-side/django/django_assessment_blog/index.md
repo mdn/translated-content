@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/django_assessment_blog
 
 在這個評估中，你將使用你在 [Django Web Framework (Python)](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row"><p>前提:</p></th>

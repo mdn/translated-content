@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Models
 
 本文介紹如何為 [LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 網站定義模型。它解釋了模型是什麼、聲明的方式以及一些主要字段類型。它還簡要展示了你可以訪問模型數據的幾個主要方法。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提:</th>
