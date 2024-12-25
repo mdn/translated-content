@@ -9,11 +9,7 @@ l10n:
 
 **`UIEvent.view`** 只读属性返回 {{glossary("WindowProxy")}} 生成事件的对象。在浏览器中，这个事件发生在 {{domxref("Window")}} 对象。
 
-## 语法
-
-```plain
-var view = event.view;
-```
+## 值
 
 - `view` 是对 `AbstractView` 对象的引用。
 

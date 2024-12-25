@@ -33,7 +33,7 @@ _此接口也继承了父接口 {{domxref("Event")}} 的一些属性。_
 - {{domxref("UIEvent.which")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : 返回一个对应（键盘）按下的数字类型的 `keyCode`，或者一个字母数字键按下时的字符码 （`charCode`）。
 
-## 方法
+## 实例方法
 
 _也继承了父接口 {{domxref("Event")}} 的一些方法。_
 
