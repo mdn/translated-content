@@ -247,7 +247,7 @@
 /ja/docs/CSS/Counters	/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /ja/docs/CSS/Descendant_selectors	/ja/docs/Web/CSS/Descendant_combinator
 /ja/docs/CSS/General_sibling_selectors	/ja/docs/Web/CSS/Subsequent-sibling_combinator
-/ja/docs/CSS/Getting_Started	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/CSS/Getting_Started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/CSS/Getting_Started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/CSS/Getting_Started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/CSS/Getting_Started/Challenge_solutions	/ja/docs/Web/Guide/CSS/Getting_started/Challenge_solutions
@@ -528,7 +528,7 @@
 /ja/docs/CSS::-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/CSS::default	/ja/docs/Web/CSS/:default
 /ja/docs/CSS:@-moz-document	/ja/docs/Web/CSS/@document
-/ja/docs/CSS:Getting_Started	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/CSS:Getting_Started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/CSS:Getting_Started:Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/CSS:Getting_Started:Color	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color
 /ja/docs/CSS:Getting_Started:Content	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
@@ -2063,7 +2063,7 @@
 /ja/docs/Learn/Accessibility/WAI-ARIA_basics	/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 /ja/docs/Learn/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA	/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
 /ja/docs/Learn/Accessibility/What_is_accessibility	/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
-/ja/docs/Learn/CSS	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/Learn/CSS	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box	/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
 /ja/docs/Learn/CSS/Building_blocks/Advanced_styling_effects	/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
@@ -2086,7 +2086,7 @@
 /ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators	/ja/docs/Learn_web_development/Core/Styling_basics/Combinators
 /ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements	/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /ja/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
-/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors
+/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors	/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 /ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/Sizing
 /ja/docs/Learn/CSS/Building_blocks/Sizing_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks
 /ja/docs/Learn/CSS/Building_blocks/Styling_tables	/ja/docs/Learn_web_development/Core/Styling_basics/Tables
@@ -2117,13 +2117,13 @@
 /ja/docs/Learn/CSS/CSS_layout/Responsive_Design	/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 /ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers	/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 /ja/docs/Learn/CSS/CSS_layout/rwd_skills	/ja/docs/Learn_web_development/Core/CSS_layout/rwd_skills
-/ja/docs/Learn/CSS/First_steps	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
+/ja/docs/Learn/CSS/First_steps	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/First_steps/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started
-/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started
+/ja/docs/Learn/CSS/First_steps/How_CSS_is_structured	/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /ja/docs/Learn/CSS/First_steps/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/Learn/CSS/First_steps/Styling_a_biography_page	/ja/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 /ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/ja/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-/ja/docs/Learn/CSS/First_steps/What_is_CSS	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
+/ja/docs/Learn/CSS/First_steps/What_is_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/Learn/CSS/Howto	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems
 /ja/docs/Learn/CSS/Howto/Add_a_shadow	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow
 /ja/docs/Learn/CSS/Howto/Add_a_text_shadow	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Add_a_text_shadow
@@ -2137,7 +2137,7 @@
 /ja/docs/Learn/CSS/Howto/Highlight_para_after_h1	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Highlight_para_after_h1
 /ja/docs/Learn/CSS/Howto/Make_box_transparent	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Make_box_transparent
 /ja/docs/Learn/CSS/Howto/Transition_button	/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Transition_button
-/ja/docs/Learn/CSS/Introduction_to_CSS	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics
+/ja/docs/Learn/CSS/Introduction_to_CSS	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors	/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors
 /ja/docs/Learn/CSS/Introduction_to_CSS/Box_model	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
@@ -2147,8 +2147,8 @@
 /ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works	/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ja/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements	/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 /ja/docs/Learn/CSS/Introduction_to_CSS/Selectors	/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
-/ja/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors
-/ja/docs/Learn/CSS/Introduction_to_CSS/Syntax	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started
+/ja/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors	/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
+/ja/docs/Learn/CSS/Introduction_to_CSS/Syntax	/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started
 /ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units
 /ja/docs/Learn/CSS/Styling_boxes	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Learn/CSS/Styling_boxes/A_cool_looking_box	/ja/docs/Learn_web_development/Core/Styling_basics/Cool-looking_box
@@ -2882,7 +2882,7 @@
 /ja/docs/View_source	https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html
 /ja/docs/WOFF	/ja/docs/Web/CSS/CSS_fonts/WOFF
 /ja/docs/Web-based_protocol_handlers	/ja/docs/Web/API/Navigator/registerProtocolHandler
-/ja/docs/Web-d/Guide/CSS/Getting_started	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/Web-d/Guide/CSS/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web-d/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Web-d/Guide/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/Web-d/Guide/CSS/Getting_started/Challenge_solutions	/ja/docs/Web/Guide/CSS/Getting_started/Challenge_solutions
@@ -4005,7 +4005,7 @@
 /ja/docs/Web/CSS/Flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /ja/docs/Web/CSS/General_sibling_combinator	/ja/docs/Web/CSS/Subsequent-sibling_combinator
 /ja/docs/Web/CSS/General_sibling_selectors	/ja/docs/Web/CSS/Subsequent-sibling_combinator
-/ja/docs/Web/CSS/Getting_started	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/Web/CSS/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web/CSS/Getting_started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Web/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/Web/CSS/Getting_started/Challenge_solutions	/ja/docs/Web/Guide/CSS/Getting_started/Challenge_solutions
@@ -4249,11 +4249,11 @@
 /ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /ja/docs/Web/Guide/Audio_and_video_manipulation	/ja/docs/Web/Media/Audio_and_video_manipulation
-/ja/docs/Web/Guide/CSS	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/Web/Guide/CSS	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web/Guide/CSS/Block_formatting_context	/ja/docs/Web/CSS/CSS_display/Block_formatting_context
 /ja/docs/Web/Guide/CSS/Counters	/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /ja/docs/Web/Guide/CSS/Flexible_boxes	/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-/ja/docs/Web/Guide/CSS/Getting_started	/ja/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
+/ja/docs/Web/Guide/CSS/Getting_started	/ja/docs/Learn_web_development/Core/Styling_basics
 /ja/docs/Web/Guide/CSS/Getting_started/Boxes	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
 /ja/docs/Web/Guide/CSS/Getting_started/Color	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color
