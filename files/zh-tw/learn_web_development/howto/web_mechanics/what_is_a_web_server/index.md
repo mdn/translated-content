@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("Learn_web_development/Howto")}}
 
 本文章將講解網路伺服器是什麼、如何運作、還有他們的重要性。
 
