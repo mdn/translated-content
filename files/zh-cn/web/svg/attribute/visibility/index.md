@@ -27,8 +27,8 @@ slug: Web/SVG/Attribute/visibility
 
 下列元素楞以使用`visibility`属性：
 
-- [图形元素](/zh-CN/SVG/Element#Graphics) »
-- [文本内容元素](/zh-CN/SVG/Element#Text_content_elements) »
+- [图形元素](/zh-CN/docs/Web/SVG/Element#graphics) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
 
 ## 规范
 

@@ -158,13 +158,13 @@ div {
 
 ## Voir aussi
 
-- [Manipuler les dégradés CSS](/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS)
+- [Manipuler les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("conic-gradient", "conic-gradient()")}}
 - {{cssxref("linear-gradient", "linear-gradient()")}}
 - {{cssxref("radial-gradient", "radial-gradient()")}}
 - {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}
 - {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [Les types de donnée en CSS](/fr/docs/Web/CSS/Types_CSS)
-- [Les unités et valeurs en CSS](/fr/docs/Web/CSS/Valeurs_et_unités_CSS)
-- [Introduction à CSS : les unités et les valeurs](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units)
+- [Les types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)
+- [Les unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Introduction à CSS : les unités et les valeurs](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)

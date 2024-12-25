@@ -43,7 +43,7 @@ CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值
    | 7   | 用户代理                   | `!important` |
    | 8   | css 过渡 (css transitions) |              |
 
-3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/CSS/Specificity)。
+3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/Web/CSS/Specificity)。
 
 ## 重置样式
 
@@ -53,7 +53,7 @@ all 属性让你能够立刻把所有的属性都还原到它们初始（默认�
 
 ## CSS 动画与层叠
 
-[CSS 动画](/zh-CN/docs/CSS/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
+[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)，指使用{{ cssxref("@keyframes")}} @规则定义状态间的动画。关键帧不参与层叠，意味着在任何时候 CSS 都是取单一的 @keyframes 的值而不会是某几个 @keyframe 的混合。
 
 当有多个满足条件的关键帧时，在最重要的文档里面最后定义的关键帧会被选中，而不会是将它们组合在一起。
 
@@ -140,14 +140,14 @@ margin-left: 3px;
 
 ## 参见
 
-- CSS 教程中层叠知识的[介绍](/zh-CN/docs/CSS/Getting_Started/Cascading_and_inheritance)。
+- CSS 教程中层叠知识的[介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)

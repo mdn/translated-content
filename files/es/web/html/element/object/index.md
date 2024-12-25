@@ -55,7 +55,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th scope="row">Padres permitidos</th>
@@ -110,9 +110,9 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `tabindex` only {{deprecated_inline}}
   - : The position of the element in the tabbing navigation order for the current document.
 - `type`
-  - : El [content type](/es/docs/Glossary/Content_type) del recurso especificado mediante **data**. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
+  - : El [content type](/es/docs/Glossary/MIME_type) del recurso especificado mediante **data**. Al menos uno de los dos atributos, **data** o **type**, deben estar definidos.
 - `typemustmatch`
-  - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/Content_type) real del recurso deben coincidir para porder ser usados.
+  - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/MIME_type) real del recurso deben coincidir para porder ser usados.
 - `usemap`
   - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
 - `width`

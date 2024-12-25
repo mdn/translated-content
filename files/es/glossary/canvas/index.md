@@ -17,11 +17,11 @@ Es a un bajo nivel, un modelo procedimental que actualiza un [mapa de bits](http
 
 ### Inicio del temario
 
-- [Tutorial de Canvas en MDN](/es/docs/Web/Guide/HTML/Canvas_tutorial)
+- [Tutorial de Canvas en MDN](/es/docs/Web/API/Canvas_API/Tutorial)
 
 ### Información técnica
 
 - El elemento HTML {{HTMLElement("canvas")}} en MDN
-- [La documentación general de Canvas en MDN](/es/docs/HTML/Canvas)
+- [La documentación general de Canvas en MDN](/es/docs/Web/API/Canvas_API)
 - {{domxref("CanvasRenderingContext2D")}}: La API de dibujo de Canvas 2D
-- [Canvas 2D, especificaciones del API](http://www.w3.org/TR/2dcontext/)
+- [Canvas 2D, especificaciones del API](https://www.w3.org/TR/2dcontext/)

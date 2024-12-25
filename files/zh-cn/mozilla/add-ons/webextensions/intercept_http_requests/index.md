@@ -48,7 +48,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 });
 ```
 
-这里我们在请求开始之前用 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 调用 `logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/zh-CN/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` 表示拦截发往所有 URL 的 HTTP 请求。
+这里我们在请求开始之前用 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 调用 `logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` 表示拦截发往所有 URL 的 HTTP 请求。
 
 测试方法是：[安装该扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)，[打开浏览器的控制台](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/)，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的 URL：
 
@@ -155,4 +155,4 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 ## 了解更多
 
-学习你能使用的所有`webRequest` API，查看 [reference documentation](/zh-CN/Add-ons/WebExtensions/API/WebRequest)。
+学习你能使用的所有`webRequest` API，查看 [reference documentation](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest)。

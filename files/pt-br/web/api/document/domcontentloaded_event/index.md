@@ -3,19 +3,19 @@ title: DOMContentLoaded
 slug: Web/API/Document/DOMContentLoaded_event
 ---
 
-O evento `DOMContentLoaded` é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - [`load`](/pt-BR/docs/Mozilla_event_reference/load) - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem [`load`](/pt-BR/docs/Mozilla_event_reference/load) quando `DOMContentLoaded` seria muito mais apropriado.
+O evento `DOMContentLoaded` é acionado quando todo o HTML foi completamente carregado e analisado, sem aguardar pelo CSS, imagens, e subframes para encerrar o carregamento. Um evento muito diferente - [`load`](/pt-BR/docs/Web/API/Window/load_event) - deve ser usado apenas para detectar uma página completamente carregada. É um engano comum as pessoas usarem [`load`](/pt-BR/docs/Web/API/Window/load_event) quando `DOMContentLoaded` seria muito mais apropriado.
 
 > [!NOTE]
 > Javascript Síncrono pausa a análise do DOM.
 
 ## Acelerando
 
-Se você quer que o DOM seja analisado o mais rápido possível após uma requisição do usuário, você deve usar recursos do [javascript assíncrono](/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) e [otimizar o carregamento de folhas de estilo](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) pois, caso contrário, a página será carregada mais lentamente pois muitos itens serão carregados paralelamente, atrasando a visualização da página.
+Se você quer que o DOM seja analisado o mais rápido possível após uma requisição do usuário, você deve usar recursos do [javascript assíncrono](/pt-BR/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) e [otimizar o carregamento de folhas de estilo](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) pois, caso contrário, a página será carregada mais lentamente pois muitos itens serão carregados paralelamente, atrasando a visualização da página.
 
 ## Informações gerais
 
 - Especificação
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end)
 - Interface
   - : Event
 - Propaga
@@ -86,8 +86,8 @@ if (document.readyState === "loading") {  // Ainda carregando
 
 ## Eventos Relacionados
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/pt-BR/docs/Web/API/Document/readystatechange_event)
+- [`load`](/pt-BR/docs/Web/API/Window/load_event)
+- [`beforeunload`](/pt-BR/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/pt-BR/docs/Web/API/Window/unload_event)

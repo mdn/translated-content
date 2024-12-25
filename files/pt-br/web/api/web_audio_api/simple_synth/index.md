@@ -458,7 +458,7 @@ setup();
 ```
 
 1. A tabela que mapeia o nome e oitavas das notas para suas respectivas frequências é criado ao chamar `createNoteTable()`.
-2. Um manipulador de eventos é estabelecido ao chamar nosso velho amigo {{domxref("EventTarget.addEventListener", "addEventListener()")}} para cuidar dos eventos do {{event("change")}} no controle de ganho geral. Isso vai simplesmente atualizar o módulo de ganho de volume para o novo valor.
+2. Um manipulador de eventos é estabelecido ao chamar nosso velho amigo {{domxref("EventTarget.addEventListener", "addEventListener()")}} para cuidar dos eventos do [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event) no controle de ganho geral. Isso vai simplesmente atualizar o módulo de ganho de volume para o novo valor.
 3. Em seguida, nós replicamos cada oitava na tabela de frequências das notas. Para cada oitava, usamos {{jsxref("Object.entries()")}} para conseguir uma lista de notas daquela oitava.
 4. Criar um {{HTMLElement("div")}} para contar as notas daquela oitava (para ter um pouco de espaço entre as oitavas), e mudar o nome de classe para "octave".
 5. Para cada tecla na oitava, checamos para ver se o nome daquela nota há mais de um caractere. Nós pulamos essas, pois estamos deixando notas sustenidas de fora deste exemplo. Do contrário, chamamos `createKey()`, especificando uma string, oitava, e frequência. O elemento retornado é anexado na elemento da oitava criada no passo 4.
@@ -529,7 +529,7 @@ A frequência do oscilador é colocada no valor especificado no paramêtro `freq
 
 #### Tocando uma nota
 
-Quando o evento {{event("mousedown")}} ou {{domxref("mouseover")}} ocorre em uma tecla, queremos que toque a nota correspondente. A função `notePressed()` é usada como o modificador de eventos para esses eventos.
+Quando o evento [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event) ou {{domxref("mouseover")}} ocorre em uma tecla, queremos que toque a nota correspondente. A função `notePressed()` é usada como o modificador de eventos para esses eventos.
 
 ```js
 function notePressed(event) {
@@ -545,7 +545,7 @@ function notePressed(event) {
 }
 ```
 
-Começamos checando se o botão esquerdo do mouse é pressionado, por dois motivos. Primeiro, queremos que apenas o botão esquerdo acione as notas. Segundo, e mais importante, estamos usando isso para cuidar do {{event("mouseover")}} para casos onde o usuário arrasta de tecla a tecla, e só queremos tocar uma nota se o mouse estiver pressionado quando entrar no elemento.
+Começamos checando se o botão esquerdo do mouse é pressionado, por dois motivos. Primeiro, queremos que apenas o botão esquerdo acione as notas. Segundo, e mais importante, estamos usando isso para cuidar do [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event) para casos onde o usuário arrasta de tecla a tecla, e só queremos tocar uma nota se o mouse estiver pressionado quando entrar no elemento.
 
 Se o botão do mouse estiver de fato sendo pressionado, recebemos o atributo de tecla pressionada [`dataset`](/pt-BR/docs/Web/HTML/Global_attributes#dataset) ; isso torna fácil o acesso das informações de atributo customizadas no elemento. Procuramos por um atributo `data-pressed` ; caso não haja um(o que indica que a nota não está tocando ainda), chamamos `playTone()` para começar a tocar a nota, passando no valor dos elementos do atributo `data-frequency`. O valor retornado do oscilador é guardado no `oscList` para refêrencia futura, e `data-pressed` é colocado como `yes` para indicar que a nota está tocando para que não iniciemos novamente na próxima vez que isso for chamado.
 
@@ -570,7 +570,7 @@ function noteReleased(event) {
 
 #### Mudando o volume geral
 
-A barra de rolagem do volume na barra de opções dá uma simples interface para mudar o valor do ganho no módulo de ganho geral, então mudando o volume de todas as notas sendo tocadas. O metódo `changeVolume()` é o modificador do evento {{event("change")}} na barra de rolagem.
+A barra de rolagem do volume na barra de opções dá uma simples interface para mudar o valor do ganho no módulo de ganho geral, então mudando o volume de todas as notas sendo tocadas. O metódo `changeVolume()` é o modificador do evento [`change`](/pt-BR/docs/Web/API/HTMLElement/change_event) na barra de rolagem.
 
 ```js
 function changeVolume(event) {

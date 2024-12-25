@@ -15,20 +15,20 @@ Este documento é uma visão geral do drag and drop no HTML. Ele inclui uma desc
 
 ## Eventos Drag
 
-O drag and drop em HTML usa o {{domxref("Event","modelo de eventos DOM")}} e os _{{domxref("DragEvent","eventos drag")}}_ são hereditários dos {{domxref("MouseEvent","eventos do mouse")}}. Uma operação típica de drag começa quando o usuário seleciona um elemento arrastável com o mouse, move o mouse até um elemento soltável (droppable) e solta o mouse. Durante as operações, diversos tipos de evento são acionados e alguns podem até ser acionados multiplas vezes (como por exemplo os tipos de evento {{event("drag")}} e {{event("dragover")}}.
+O drag and drop em HTML usa o {{domxref("Event","modelo de eventos DOM")}} e os _{{domxref("DragEvent","eventos drag")}}_ são hereditários dos {{domxref("MouseEvent","eventos do mouse")}}. Uma operação típica de drag começa quando o usuário seleciona um elemento arrastável com o mouse, move o mouse até um elemento soltável (droppable) e solta o mouse. Durante as operações, diversos tipos de evento são acionados e alguns podem até ser acionados multiplas vezes (como por exemplo os tipos de evento [`drag`](/pt-BR/docs/Web/API/HTMLElement/drag_event) e [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event).
 
 Todos os [tipos de evento drag](/pt-BR/docs/Web/API/DragEvent#Event_types) são associados a um [manipulador global de eventos](/pt-BR/docs/Web/API/DragEvent#GlobalEventHandlers). Cada tipo de evento drag e cada atributo drag global tem um documento de referência que o descreve. A tabela a seguir descreve brevemente os tipos de evento e um link de referência para seu documento.
 
-| Event                  | On Event Handler                                             | Description                                                                                                                                                                                                     |
-| ---------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{event('drag')}}      | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | Acionado quando um elemento ou seleção de texto está sendo arrastado.                                                                                                                                           |
-| {{event('dragend')}}   | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragend).) |
-| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/DragDrop/Drag_Operations#droptargets).)                    |
-| {{event('dragexit')}}  | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}   | Acionado quando um elemento não é mais o ponto de seleção imediata da operação drag.                                                                                                                            |
-| {{event('dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | Acionado quando um elemento arrastável ou seleção de texto abandona um ponto de soltura (drop target) válido.                                                                                                   |
-| {{event('dragover')}}  | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | Acionado quando um elemento ou seleção de texto está sendo arrastado sobre um ponto de soltura válido (a cada aproximadamente 100 milisegundos).                                                                |
-| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragstart).)                                       |
-| {{event('drop')}}      | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/DragDrop/Drag_Operations#drop).)                                     |
+| Event                                                          | On Event Handler                                             | Description                                                                                                                                                                                                                           |
+| -------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`drag`](/pt-BR/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | Acionado quando um elemento ou seleção de texto está sendo arrastado.                                                                                                                                                                 |
+| [`dragend`](/pt-BR/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).) |
+| [`dragenter`](/pt-BR/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).)                    |
+| [`dragexit`](/pt-BR/docs/Web/Events/dragexit)                  | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}   | Acionado quando um elemento não é mais o ponto de seleção imediata da operação drag.                                                                                                                                                  |
+| [`dragleave`](/pt-BR/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | Acionado quando um elemento arrastável ou seleção de texto abandona um ponto de soltura (drop target) válido.                                                                                                                         |
+| [`dragover`](/pt-BR/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | Acionado quando um elemento ou seleção de texto está sendo arrastado sobre um ponto de soltura válido (a cada aproximadamente 100 milisegundos).                                                                                      |
+| [`dragstart`](/pt-BR/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart).)                                       |
+| [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).)                                     |
 
 Note que eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo vindo do sistema operacional para o navegador.
 
@@ -48,7 +48,7 @@ Note: as interfaces {{domxref("DragEvent")}} e a {{domxref("DataTransfer")}} sã
 
 ### Interfaces específicas para o Gecko
 
-A Mozilla e o Firefox suportam algumas funcionalidades fora dos padrões do modelo drag and drop. Elas são _cfunções convenientes_ para facilitar o arraste múltiplo de elementos e a manipulação de dados que não são strings (como arquivos). Para mais informações, veja [Dragging and Dropping Multiple Items](/pt-BR/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Para mais informações, veja a página de referência {{domxref("DataTransfer")}} para todas as [propriedades específicas para o Gecko](/pt-BR/docs/Web/API/DataTransfer#Gecko_properties) e [Métodos específicos para o Gecko](/pt-BR/docs/Web/API/DataTransfer#Gecko_methods).
+A Mozilla e o Firefox suportam algumas funcionalidades fora dos padrões do modelo drag and drop. Elas são _cfunções convenientes_ para facilitar o arraste múltiplo de elementos e a manipulação de dados que não são strings (como arquivos). Para mais informações, veja [Dragging and Dropping Multiple Items](/pt-BR/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Para mais informações, veja a página de referência {{domxref("DataTransfer")}} para todas as [propriedades específicas para o Gecko](/pt-BR/docs/Web/API/DataTransfer#gecko_properties) e [Métodos específicos para o Gecko](/pt-BR/docs/Web/API/DataTransfer#gecko_methods).
 
 ## O básico
 
@@ -74,7 +74,7 @@ function dragstart_handler(ev) {
 </body>
 ```
 
-Veja a [referência do atributo draggable](/pt-BR/docs/Web/HTML/Global_attributes/draggable) e o [Guia de operações drag](/pt-BR/docs/Web/Guide/HTML/Drag_operations#draggableattribute) para mais informações.
+Veja a [referência do atributo draggable](/pt-BR/docs/Web/HTML/Global_attributes/draggable) e o [Guia de operações drag](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) para mais informações.
 
 ### Defina os dados do drag
 
@@ -91,7 +91,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Para uma lista de tipos de dados mais comuns utilizados pelo drag and drop (como texto, HTML, links, e files), veja [Tipos recomendados de Drag Types](/pt-BR/docs/DragDrop/Recommended_Drag_Types) e para mais informações sobre os dados do arraste (drag data), veja [Drag Data](/pt-BR/docs/Web/Guide/HTML/Drag_operations#dragdata).
+Para uma lista de tipos de dados mais comuns utilizados pelo drag and drop (como texto, HTML, links, e files), veja [Tipos recomendados de Drag Types](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) e para mais informações sobre os dados do arraste (drag data), veja [Drag Data](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
 
 ### Defina uma imagem de arraste (drag image)
 
@@ -108,7 +108,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Para aprender mais sobre arrastar imagens de retorno, veja [Definindo a imagem de retorno do arraste (Drag)](/pt-BR/docs/DragDrop/Drag_Operations#dragfeedback).
+Para aprender mais sobre arrastar imagens de retorno, veja [Definindo a imagem de retorno do arraste (Drag)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback).
 
 ### Defina o _efeito_ do arraste (_Drag effect_)
 
@@ -133,7 +133,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Veja [Efeitos do Arraste (Drag Effects)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#drageffects) para mais detalhes.
+Veja [Efeitos do Arraste (Drag Effects)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects) para mais detalhes.
 
 ### Defina uma zona de soltura _(drop zone)_
 
@@ -163,11 +163,11 @@ function drop_handler(ev) {
 
 Note que cada manipulador chama {{domxref("Event.preventDefault","preventDefault()")}} para previnir o processamento adicional de eventos (como eventos touch ou eventos pointer).
 
-Para mais informações, veja [Especificando pontos de soltura (Drop Targets)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#droptargets).
+Para mais informações, veja [Especificando pontos de soltura (Drop Targets)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).
 
 ### Manipulando o _efeito_ de soltura (drop)
 
-O manipulador do evento {{event("drop")}} é livre para processar os dados do arraste (drag) de maneira específica em uma aplicação. Tipicamente, uma aplicação usaria o método {{domxref("DataTransfer.getData","getData()")}} para reter os itens arrastados e processá-los de acordo. A semântica da aplicação pode ser diferente dependendo do valor do {{domxref("DataTransfer.dropEffect","dropEffect")}} e/ou o estado da chave que o modifica.
+O manipulador do evento [`drop`](/pt-BR/docs/Web/API/HTMLElement/drop_event) é livre para processar os dados do arraste (drag) de maneira específica em uma aplicação. Tipicamente, uma aplicação usaria o método {{domxref("DataTransfer.getData","getData()")}} para reter os itens arrastados e processá-los de acordo. A semântica da aplicação pode ser diferente dependendo do valor do {{domxref("DataTransfer.dropEffect","dropEffect")}} e/ou o estado da chave que o modifica.
 
 O exemplo a seguir mostra o manipulador de soltura (drop handler) pegando o id do elemento de origem atráves dos dados de drag (drag data) e então usando o id para mover o elemento de sua origem para o elemento de soltura (drop element).
 
@@ -201,13 +201,13 @@ function drop_handler(ev) {
 </body>;
 ```
 
-Para mais informações, veja [Realizando uma soltura (Drop)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#drop).
+Para mais informações, veja [Realizando uma soltura (Drop)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).
 
 ### Fim da soltura (Drag end)
 
-No início da operação de arraste (drag), o evento {{event("dragend")}} é acionado no elemento de origem (_source)_ - o elemento que foi o alvo do início do arraste (drag start). Este evento é acionado sempre quando o arraste é completado ou cancelado. O manipulador de eventos {{event("dragend")}} pode verificar o valor da propriedade {{domxref("DataTransfer.dropEffect","dropEffect")}} para determinar se a operação de arraste foi bem sucedida ou não.
+No início da operação de arraste (drag), o evento [`dragend`](/pt-BR/docs/Web/API/HTMLElement/dragend_event) é acionado no elemento de origem (_source)_ - o elemento que foi o alvo do início do arraste (drag start). Este evento é acionado sempre quando o arraste é completado ou cancelado. O manipulador de eventos [`dragend`](/pt-BR/docs/Web/API/HTMLElement/dragend_event) pode verificar o valor da propriedade {{domxref("DataTransfer.dropEffect","dropEffect")}} para determinar se a operação de arraste foi bem sucedida ou não.
 
-Para mais informações sobre manipular o final de uma operação de arraste, veja [Finalizando um arraste (Drag)](/pt-BR/docs/DragDrop/Drag_Operations#dragend).
+Para mais informações sobre manipular o final de uma operação de arraste, veja [Finalizando um arraste (Drag)](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).
 
 ## Interoperabilidade
 
@@ -216,7 +216,7 @@ Como podem ser visto no [DataTransferItem interface's Browser Compatibility tabl
 ## Exemplos e demonstrações
 
 - [Copiando e movendo elementos com a interface `DataTransfer`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copiando e movendo elementos com a interface `DataTransferListItem`](http://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
+- [Copiando e movendo elementos com a interface `DataTransferListItem`](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
 - Arrastando e soltando arquivos; Apenas para o Firefox: <https://jsfiddle.net/9C2EF/>
 - Arrastando e soltando arquivos; Todos os navegadores: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 

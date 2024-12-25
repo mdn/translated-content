@@ -1,6 +1,8 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
+l10n:
+  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
 {{CSSRef}}
@@ -17,6 +19,7 @@ forced-color-adjust: none;
 forced-color-adjust: inherit;
 forced-color-adjust: initial;
 forced-color-adjust: revert;
+forced-color-adjust: revert-layer;
 forced-color-adjust: unset;
 ```
 
@@ -26,14 +29,12 @@ forced-color-adjust: unset;
 
 - `auto`
   - : 強制カラーモードでは、要素の色が{{Glossary("user agent", "ユーザーエージェント")}}によって調整されます。これが既定値です。
-- **`none`**
+- `none`
   - : 強制カラーモードでも、要素の色は{{Glossary("user agent", "ユーザーエージェント")}}によって調整されません。
 
 ## 使用上のメモ
 
 このプロパティは、ユーザーの色とコントラストの要求に適応するための変更を行う場合にのみ使用してください。例えば、{{Glossary("user agent", "ユーザーエージェント")}}による色の最適化によって、ハイコントラストやダークモードでの使い勝手が悪くなることを認識した場合などです。このプロパティを使用すると、そのモードでの結果を微調整して、使い勝手を高めることができます。**ユーザーの選択を尊重しないために使用すべきではありません**。
-
-このプロパティは [-ms-high-contrast-adjust](https://docs.microsoft.com/en-us/previous-versions/hh771863%28v%3dvs.85%29) プロパティを標準化したものです。この接頭辞つきのプロパティは、 Internet Explorer 10 と EdgeHTML 版の Microsoft Edge において、同様の機能を実現します。
 
 ## 公式定義
 
@@ -99,6 +100,6 @@ forced-color-adjust: unset;
 
 ## 関連情報
 
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- {{cssxref("color-adjust")}}
+- {{cssxref("print-color-adjust")}}

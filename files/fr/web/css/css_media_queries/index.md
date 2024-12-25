@@ -17,7 +17,7 @@ Par exemple, on pourra utiliser une police de caractères plus petite pour les a
 
 C'est [la règle @](/fr/docs/Web/CSS/At-rule) [`@media`](/fr/docs/Web/CSS/@media) qui est utilisée en [CSS](/fr/docs/Web/CSS) pour appliquer de façon conditionnelle un fragment d'une feuille de styles selon le résultat d'une requête média. Si on souhaite appliquer de façon conditionnelle une feuille de styles entière, on utilisera [`@import`](/fr/docs/Web/CSS/@import).
 
-Lorsqu'on conçoit des composants HTML réutilisables, on peut également utiliser [les requêtes de conteneur](/fr/docs/Web/CSS/CSS_container_queries) qui permettent d'appliquer des mises en forme selon la taille de l'élément englobant plutôt que par rapport à la zone d'affichage ou aux caractéristiques de l'appareil.
+Lorsqu'on conçoit des composants HTML réutilisables, on peut également utiliser [les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries) qui permettent d'appliquer des mises en forme selon la taille de l'élément englobant plutôt que par rapport à la zone d'affichage ou aux caractéristiques de l'appareil.
 
 ### Les requêtes média en HTML
 
@@ -55,5 +55,5 @@ Pour en savoir plus sur les tests des requêtes média dans des programmes, voir
 
 ## Voir aussi
 
-- [Les requêtes de conteneur](/fr/docs/Web/CSS/CSS_container_queries)
+- [Les requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries)
 - La règle @ [`@supports`](/fr/docs/Web/CSS/@supports) afin d'appliquer une mise en forme selon que l'agent utilisateur prend ou non en charge certaines technologies CSS.

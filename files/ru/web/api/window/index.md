@@ -5,9 +5,9 @@ slug: Web/API/Window
 
 {{APIRef("DOM")}}
 
-Объект `window` представляет собой окно, содержащее DOM документ; свойство `document` указывает на [DOM document](/ru/docs/DOM/document), загруженный в данном окне. Окно текущего документа может быть получено с помощью свойства {{Domxref("document.defaultView")}}.
+Объект `window` представляет собой окно, содержащее DOM документ; свойство `document` указывает на [DOM document](/ru/docs/Web/API/Document), загруженный в данном окне. Окно текущего документа может быть получено с помощью свойства {{Domxref("document.defaultView")}}.
 
-Данный раздел содержит описание всех методов, свойств и событий, доступных через объект `window` DOM. Объект `window` реализует интерфейс `Window`, который наследуется от интерфейса [`AbstractView`](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Некоторые дополнительные глобальные функции, пространства имён объектов, интерфейсы и конструкторы, как правило, не связанные с окном, но доступные в нем, перечислены в [JavaScript ссылки](/ru/docs/JavaScript/Reference) и [DOM ссылки](/ru/docs/DOM/DOM_Reference).
+Данный раздел содержит описание всех методов, свойств и событий, доступных через объект `window` DOM. Объект `window` реализует интерфейс `Window`, который наследуется от интерфейса [`AbstractView`](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Некоторые дополнительные глобальные функции, пространства имён объектов, интерфейсы и конструкторы, как правило, не связанные с окном, но доступные в нем, перечислены в [JavaScript ссылки](/ru/docs/Web/JavaScript/Reference) и [DOM ссылки](/ru/docs/Web/API/Document_Object_Model).
 
 В браузерах, поддерживающих вкладки, таком как Firefox, каждая вкладка содержит свой собственный объект `window` (и если вы пишете расширение, окно браузера тоже является отдельным объектом window - см. [Работа с окнами в chrome коде](/ru/docs/Working_with_windows_in_chrome_code#Content_windows)). Таким образом, объект `window` не разделяется между разными вкладками в одном и том же окне. Некоторые методы, а именно {{Domxref("window.resizeTo")}} и {{Domxref("window.resizeBy")}} применяется для всего окна и не принадлежат объекту `window` отдельной вкладки. Как правило, если что-то логически нельзя отнести ко вкладке, это относят к окну.
 
@@ -102,7 +102,7 @@ _Данный интерфейс наследует свойства из инт
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : Возвращает ссылку на родителя текущего окна или встроенного фрейма.
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Обеспечивает главенствующее пространство для атрибутов, [относящихся к производительности](/ru/docs/Navigation_timing).
+  - : Обеспечивает главенствующее пространство для атрибутов, [относящихся к производительности](/ru/docs/Web/API/Performance_API/Navigation_timing).
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Возвращает объект personalbar, который может быть добавлен и убран из окна.
 - {{domxref("Window.pkcs11")}}
@@ -181,7 +181,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
   - : Принимает множество различных изображений и возвращает {{domxref("Promise")}}, который возвращает {{domxref("ImageBitmap")}}. Опционально ресурс может быть обрезан до прямоугольника, заданного в пикселях _(sx, sy)_ с шириной sw и высотой sh.
 - {{domxref("Window.disableExternalCapture()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Используется для вызова события.
 - {{domxref("Window.dump()")}}
@@ -189,7 +189,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("fetch", "Window.fetch()")}}
   - : Начинает процесс загрузки ресурса из сети.
 - {{domxref("Window.enableExternalCapture()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Ищет необходимую строку в окне window.
 - {{domxref("Window.focus()")}}
@@ -199,7 +199,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.getAttention()")}}
   - : Заставляет мигать иконку приложения.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Получает подсчитанные стили для определённого элемента. Подсчитанные стили включают подсчитанные значения всех CSS-свойств элемента.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -211,7 +211,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.matchMedia()")}}
   - : Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.
 - {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Минимизирует окно.
 - {{domxref("Window.moveBy()")}}
@@ -241,9 +241,9 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.resizeTo()")}}
   - : Динамически меняет размер окна.
 - {{domxref("Window.restore()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -265,7 +265,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("WindowTimers.setInterval()")}}
   - : Назначает выполнение функции каждые X миллисекунд.
 - {{domxref("Window.setResizable")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Устанавливает отложенное выполнение функции.
 - {{domxref("Window.showModalDialog()")}}
@@ -284,9 +284,9 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Обработчик события для отмены событий в окне.
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Вызывается, когда закрывается диалоговое окно распечатки. Смотри событие {{event("afterprint")}}.
+  - : Вызывается, когда закрывается диалоговое окно распечатки. Смотри событие [`afterprint`](/ru/docs/Web/API/Window/afterprint_event).
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Вызывается, когда открывается диалоговое окно распечатки. Смотри событие {{event("beforeprint")}}.
+  - : Вызывается, когда открывается диалоговое окно распечатки. Смотри событие [`beforeprint`](/ru/docs/Web/API/Window/beforeprint_event).
 - {{domxref("Window.onbeforeinstallprompt")}}
   - : Событие вызывается прежде чем пользователь согласится сохранить сайт на домашний экран на мобильном устройстве.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
@@ -314,27 +314,27 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.ondeviceproximity")}}
   - : Свойство обработчика событий для определения близости устройства.
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : Свойство обработчика событий для события {{event("error")}}, возникшего в окне.
+  - : Свойство обработчика событий для события [`error`](/ru/docs/Web/API/HTMLElement/error_event), возникшего в окне.
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : Свойство обработчика событий для события {{event("focus")}} в окне.
+  - : Свойство обработчика событий для события [`focus`](/ru/docs/Web/API/Element/focus_event) в окне.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : Свойство обработчика событий для отлова изменения хэша в окне; вызывается, когда часть URL после ("#") была изменена.
 - {{domxref("Window.onappinstalled")}}
-  - : Вызывается, когда страница установлена, как приложение. Смотри {{event('appinstalled')}} событие.
+  - : Вызывается, когда страница установлена, как приложение. Смотри [`appinstalled`](/ru/docs/Web/API/Window/appinstalled_event) событие.
 - {{domxref("Window.oninput")}}
   - : Вызывается, когда значение элемента \<input> было изменено.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : Свойство обработчика событий для события {{event("keydown")}} в окне.
+  - : Свойство обработчика событий для события [`keydown`](/ru/docs/Web/API/Element/keydown_event) в окне.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : Свойство обработчика событий для события {{event("keypress")}} в окне.
+  - : Свойство обработчика событий для события [`keypress`](/ru/docs/Web/API/Element/keypress_event) в окне.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : Свойство обработчика событий для события {{event("keyup")}} в окне.
+  - : Свойство обработчика событий для события [`keyup`](/ru/docs/Web/API/Element/keyup_event) в окне.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
   - : Свойство обработчика события {{domxref("Window.languagechange_event", "languagechange")}} в окне.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Свойство обработчика событий для загрузки окна.
 - {{domxref("WindowEventHandlers.onmessage")}}
-  - : {{event("Event_handlers", "event handler")}}, представляющий собой код, который будет вызван, когда произойдёт событие {{event("message")}}.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers), представляющий собой код, который будет вызван, когда произойдёт событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event).
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Свойство обработчика событий для события mousedown в окне.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
@@ -348,9 +348,9 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.onmozbeforepaint")}}
   - : Свойство обработчика событий для события `MozBeforePaint`, которое присылается прежде чем окно будет перерисовано, если событие необходимо из-за вызова метода {{domxref("Window.mozRequestAnimationFrame()")}}.
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Вызывается, когда было потеряно соединение с сетью. Смотри событие {{event("offline")}}.
+  - : Вызывается, когда было потеряно соединение с сетью. Смотри событие [`offline`](/ru/docs/Web/API/Window/offline_event).
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Вызывается, когда соединение с сетью было установлено. Смотри событие {{event("online")}}.
+  - : Вызывается, когда соединение с сетью было установлено. Смотри событие [`online`](/ru/docs/Web/API/Window/online_event).
 - {{domxref("WindowEventHandlers.onpageshow")}}
   - : Свойство обработчика событий для события pageshow в окне.
 - {{domxref("WindowEventHandlers.onpagehide")}}
@@ -372,7 +372,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Свойство обработчика событий для события выбора в окне.
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : {{event("Event_handlers", "event handler")}}, представляющий собой код, который будет вызван, когда произойдёт событие {{event("selectionchange")}}.
+  - : [`event handler`](/ru/docs/Web/Events/Event_handlers), представляющий собой код, который будет вызван, когда произойдёт событие [`selectionchange`](/ru/docs/Web/API/HTMLInputElement/selectionchange_event).
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Свойство обработчика событий для события submits в окне формы.
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}
@@ -382,15 +382,15 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("Window.onuserproximity")}}
   - : Свойство обработчика событий для события изменения близости пользователя к устройству.
 - {{domxref("Window.onvrdisplayconnected")}} {{experimental_inline}}
-  - : Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было присоединено к компьютеру (когда запускается событие {{event("vrdisplayconnected")}}).
+  - : Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было присоединено к компьютеру (когда запускается событие [`vrdisplayconnected`](/ru/docs/Web/API/Window/vrdisplayconnect_event)).
 - {{domxref("Window.onvrdisplaydisconnected")}} {{experimental_inline}}
-  - : Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было отсоединено от компьютера (когда запускается событие {{event("vrdisplaydisconnected")}}).
+  - : Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было отсоединено от компьютера (когда запускается событие [`vrdisplaydisconnected`](/ru/docs/Web/API/Window/vrdisplaydisconnect_event)).
 - {{domxref("Window.onvrdisplaypresentchange")}} {{experimental_inline}}
-  - : Представляет обработчик события, который будет запущен, когда изменится состояние устройства виртуальной реальности — т.е. перейдёт от представленного к непредставленному или наоборот (когда будет запущено событие {{event("onvrdisplaypresentchange")}}).
+  - : Представляет обработчик события, который будет запущен, когда изменится состояние устройства виртуальной реальности — т.е. перейдёт от представленного к непредставленному или наоборот (когда будет запущено событие [`onvrdisplaypresentchange`](/ru/docs/Web/Events/onvrdisplaypresentchange)).
 
 ## Конструкторы
 
-Смотрите также [DOM Interfaces](/ru/docs/DOM/DOM_Reference).
+Смотрите также [DOM Interfaces](/ru/docs/Web/API/Document_Object_Model).
 
 - {{domxref("Window.ConstantSourceNode")}}
   - : Создаёт экземпляр {{domxref("ConstantSourceNode")}}
@@ -398,27 +398,27 @@ _Этот интерфейс наследует методы от интерфе
 <!---->
 
 - {{domxref("Window.DOMParser")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Image")}}
   - : Создаёт {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Создаёт {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Worker")}}
-  - : Используется для создания [Web worker](/ru/docs/DOM/Using_web_workers)
+  - : Используется для создания [Web worker](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 
 ## Интерфейс
 
-Смотри [DOM Reference](/ru/docs/DOM/DOM_Reference)
+Смотри [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
 
 ## Смотрите также
 

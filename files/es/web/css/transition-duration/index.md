@@ -131,8 +131,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 0px;
   top: 0px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top -webkit-transform
-    color;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top
@@ -151,8 +151,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 150px;
   top: 25px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top -webkit-transform
-    transform color;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top
@@ -333,7 +333,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## También puede ver
 
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

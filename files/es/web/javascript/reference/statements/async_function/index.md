@@ -130,4 +130,4 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 - {{jsxref("Operators/async_function", "Expresión de función async")}}
 - Objeto {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}
-- [«Decorar funciones async de JavaScript» en innolitics.com](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)
+- [«Decorar funciones async de JavaScript» en innolitics.com](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) (en inglés)

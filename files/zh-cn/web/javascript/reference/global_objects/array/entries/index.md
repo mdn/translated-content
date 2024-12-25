@@ -98,7 +98,7 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## 参见
 
 - [`core-js` 中 `Array.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}

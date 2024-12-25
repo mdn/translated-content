@@ -2,7 +2,7 @@
 title: minmax()
 slug: Web/CSS/minmax
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
@@ -121,6 +121,6 @@ _min_ および _max_ の 2 つの引数を取る関数です。
 
 ## 関連情報
 
-- グリッドレイアウトガイド: _[グリッドレイアウトの基本概念 - minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#トラックのサイズ指定と_minmax)_
+- [グリッドレイアウトの基本概念: minmax() によるトラックの寸法制御](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#トラックのサイズ指定と_minmax)
 - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- 動画チュートリアル: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_
+- 動画: [Introducing minmax()](https://gridbyexample.com/video/series-minmax/)

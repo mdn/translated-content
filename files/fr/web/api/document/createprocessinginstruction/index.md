@@ -44,4 +44,4 @@ alert(new XMLSerializer().serializeToString(docu));
 
 ## Spécifications
 
-[DOM 4: createProcessingInstruction](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction)
+[DOM 4: createProcessingInstruction](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction)

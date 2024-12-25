@@ -13,7 +13,7 @@ L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant l
 
 ## Attributs
 
-Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -186,7 +186,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

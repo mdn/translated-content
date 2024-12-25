@@ -69,4 +69,4 @@ typeof symObj; // => "object"
 ## Voir aussi
 
 - [Prothèse d'émulation pour `Symbol` avec la bibliothèque d'émulation `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
-- [La page du glossaire sur le type de données symbole](/fr/docs/Glossary/Symbol)
+- [La page du glossaire sur le type de données symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)

@@ -89,7 +89,7 @@ O núcleo da linguagem JavaScript consiste em alguns benefícios comuns da progr
 
 - Armazenar conteúdo útil em variáveis. No exemplo acima, a propósito, nós pedimos que um novo nome seja inserido e armazenamos o nome em uma variável chamada `nome`.
 - Operações com pedaços de texto (conhecidos como "strings" em programação). No exemplo acima, nós pegamos a string "Jogador 1: " e concatenamos (juntamos) com a variável `nome` para criar o texto completo "Jogador 1: Chris".
-- Executar o código em resposta a determinados eventos que ocorrem em uma página da Web. Nós usamos o {{Event("click")}} no nosso exemplo acima para que quando clicassem no botão, rodasse o código que atualiza o texto.
+- Executar o código em resposta a determinados eventos que ocorrem em uma página da Web. Nós usamos o [`click`](/pt-BR/docs/Web/API/Element/click_event) no nosso exemplo acima para que quando clicassem no botão, rodasse o código que atualiza o texto.
 - E muito mais!
 
 O que é ainda mais empolgante é a funcionalidade construída no topo do núcleo da linguagem JavaScript. As APIs (Application Programming Interfaces - Interface de Programação de Aplicativos) proveem a você superpoderes extras para usar no seu código JavaScript.
@@ -105,7 +105,7 @@ Elas geralmente se dividem em duas categorias.
 - A [API DOM (Document Object Model)](/pt-BR/docs/Web/API/Document_Object_Model) permite a você manipular HTML e CSS, criando, removendo e mudando HTML, aplicando dinamicamente novos estilos para a sua página, etc. Toda vez que você vê uma janela pop-up aparecer em uma página, ou vê algum novo conteúdo sendo exibido (como nós vimos acima na nossa simples demonstração), isso é o DOM em ação.
 - A [API de Geolocalização](/pt-BR/docs/Web/API/Geolocation) recupera informações geográficas. É assim que o [Google Maps](https://www.google.com/maps) consegue encontrar sua localização e colocar em um mapa.
 - As APIs [Canvas](/pt-BR/docs/Web/API/Canvas_API) e [WebGL](/pt-BR/docs/Web/API/WebGL_API) permite a você criar gráficos 2D e 3D animados. Há pessoas fazendo algumas coisas fantásticas usando essas tecnologias web — veja [Chrome Experiments](https://www.chromeexperiments.com/webgl) e [webglsamples](https://webglsamples.org/).
-- [APIs de áudio e vídeo](/pt-BR/docs/Web/Guide/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) para ter uma ideia).
+- [APIs de áudio e vídeo](/pt-BR/docs/Web/Media/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) para ter uma ideia).
 
 > [!NOTE]
 > Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar [testes cross browser](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).

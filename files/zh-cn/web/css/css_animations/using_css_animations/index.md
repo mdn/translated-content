@@ -335,5 +335,5 @@ function listener(e) {
 ## 参见
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS 动画的技巧](/zh-CN/docs/Web/CSS/CSS_animations/Tips)
+- [CSS 动画的技巧](/zh-CN/docs/Web/API/Web_Animations_API/Tips)
 - [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

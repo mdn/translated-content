@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 
 {{JSRef}}
 
-这个 **`some()`** 方法检测 _TypedArray_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}} _相同。_ _TypedArray_ 是 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+这个 **`some()`** 方法检测 _TypedArray_ 的一些元素是否通过所提供函数的测试。这个方法和 {{jsxref("Array.prototype.some()")}} _相同。_ _TypedArray_ 是 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 之一。
 
 {{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
 

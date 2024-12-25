@@ -11,8 +11,8 @@ Bien que de nombreuses fonctionnalités activées par Houdini puissent être cr�
 
 ## Voir aussi
 
-- [Houdini](/fr/docs/Web/Houdini)
+- [Houdini](/fr/docs/Web/API/Houdini_APIs)
 - [Houdini: une introduction](/fr/docs/Web/Houdini/learn)
 - [CSSOM](/fr/docs/Web/API/CSS_Object_Model)
 - [CSS Paint API](/fr/docs/Web/API/CSS_Painting_API)
-- [CSS Typed OM](/fr/docs/Web/CSS_Typed_OM)
+- [CSS Typed OM](/fr/docs/Web/API/CSS_Typed_OM_API)

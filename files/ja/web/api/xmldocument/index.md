@@ -33,4 +33,4 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference)
+- [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)

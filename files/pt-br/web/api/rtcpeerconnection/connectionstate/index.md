@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/connectionState
 
 A propriedade **`connectionState`** do tipo somente leitura da interface {{domxref("RTCPeerConnection")}} indica o estado atual da conexão em par, devolvendo um valor em string específicado por um enum {{domxref("RTCPeerConnection")}}.
 
-Quando o valor da propriedade muda, o evento {{event("connectionstatechange")}} é enviado para a intância {{domxref("RTCPeerConnection")}}.
+Quando o valor da propriedade muda, o evento [`connectionstatechange`](/pt-BR/docs/Web/Events/connectionstatechange) é enviado para a intância {{domxref("RTCPeerConnection")}}.
 
 ## Syntax
 
@@ -17,9 +17,9 @@ var connectionState = RTCPeerConnection.connectionState;
 
 ### Value
 
-O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
+O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum).
 
-{{page("/pt-BR/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1) -->
 
 ## Example
 
@@ -43,5 +43,5 @@ var connectionState = pc.connectionState;
 
 - [Lifetime of a WebRTC session](/pt-BR/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
-- {{event("connectionstatechange")}}
-- [WebRTC](/pt-BR/docs/Web/Guide/API/WebRTC)
+- [`connectionstatechange`](/pt-BR/docs/Web/Events/connectionstatechange)
+- [WebRTC](/pt-BR/docs/Web/API/WebRTC_API)

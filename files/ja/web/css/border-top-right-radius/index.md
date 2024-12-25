@@ -1,6 +1,8 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
+l10n:
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -35,6 +37,7 @@ border-top-right-radius: inherit;
 border-top-right-radius: inherit;
 border-top-right-radius: initial;
 border-top-right-radius: revert;
+border-top-right-radius: revert-layer;
 border-top-right-radius: unset;
 ```
 
@@ -62,7 +65,7 @@ border-top-right-radius: unset;
 
 ## 例
 
-<h3 id="Arc_of_a_circle">Arc of a circle</h3>
+### 円の弧
 
 単一の `<length>` 値を指定すると、円弧を生成します。
 
@@ -82,7 +85,7 @@ div {
 
 {{EmbedLiveSample("Arc_of_a_circle")}}
 
-<h3 id="Arc_of_an_ellipse">楕円の弧</h3>
+### 楕円の弧
 
 2 つの異なる `<length>` 値を指定すると、楕円の弧を生成します。
 
@@ -102,7 +105,7 @@ div {
 
 {{EmbedLiveSample("Arc_of_an_ellipse")}}
 
-<h3 id="Square_element_with_percentage_radius">パーセントで半径を指定した正方形の要素</h3>
+### パーセントで半径を指定した正方形の要素
 
 正方形の要素に単一の `<percentage>` 値を指定すると、円弧を生成します。
 
@@ -122,7 +125,7 @@ div {
 
 {{EmbedLiveSample("Square_element_with_percentage_radius")}}
 
-<h3 id="Non-square_element_with_percentage_radius">パーセントで半径を指定した正方形ではない要素</h3>
+### パーセントで半径を指定した正方形ではない要素
 
 正方形ではない要素に単一の `<percentage>` 値を指定すると、楕円の弧を生成します。
 

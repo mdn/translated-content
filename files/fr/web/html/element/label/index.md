@@ -27,7 +27,7 @@ On peut également créer un lien implicite en imbriquant l'élément `<input>` 
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `for`
 
@@ -109,7 +109,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ### Titres
 
-Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#Navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
+Placer des [éléments de titres](/fr/docs/Web/HTML/Element/Heading_Elements) à l'intérieur d'un élément `label` causera des interférences avec de nombreux outils d'assistance car les titres sont généralement utilisés comme [une aide à la navigation](/fr/docs/Web/HTML/Element/Heading_Elements#navigation). Si le texte du libellé doit être ajusté visuellement, on utilisera une mise en forme via CSS.
 
 S'il faut associer un titre à un formulaire ou à une section d'un formulaire, on utilisera l'élément {{HTMLElement("legend")}} au sein d'un élément {{HTMLElement("fieldset")}}.
 
@@ -178,7 +178,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
     </tr>
     <tr>
       <th scope="row">Omission de balise</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

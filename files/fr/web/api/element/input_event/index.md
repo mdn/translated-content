@@ -12,7 +12,7 @@ De plus, l'évènement `input` se déclenche sur les éditeurs [`contenteditable
 ## Information générale
 
 - Spécification
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input), [DOM Level 3 Events](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#event-input-input), [DOM Level 3 Events](https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input)
 - Interface
   - : {{domxref("Event")}}, {{domxref("InputEvent")}}
 - Propagation
@@ -43,6 +43,6 @@ De plus, l'évènement `input` se déclenche sur les éditeurs [`contenteditable
 
 ## Voir aussi
 
-- [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
+- [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
 - [`change`](/fr/docs/Web/API/HTMLElement/change_event)
-- [`invalid`](/fr/docs/Web/API/HTMLElement/invalid_event)
+- [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event)

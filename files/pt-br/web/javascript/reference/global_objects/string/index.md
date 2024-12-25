@@ -70,7 +70,7 @@ Para acesso de caracteres usando uma notação de colchetes, tentando deletar ou
 
 ### Comparando strings
 
-Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador [maior que e menor que](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators):
+Desenvolvedores de C têm a função strcmp() para comparar strings. No JavaScript, basta usar o operador [maior que e menor que](/pt-BR/docs/Web/JavaScript/Reference/Operators):
 
 ```js
 var a = "a";
@@ -139,7 +139,7 @@ var num = 15;
 alert(String.replace(num, /5/, "2"));
 ```
 
-[Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#Array_generic_methods) também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.
+[Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.
 
 O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:
 
@@ -198,17 +198,17 @@ O seguinte é uma implementação para fornecer suporte a navegadores sem suport
 
 ### Propriedades
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Propriedades') -->
 
 ### Métodos
 
 #### Métodos não relacionados ao HTML
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_não_relacionados_ao_HTML') -->
 
 #### Métodos de envoltório HTML
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Métodos_de_envoltório_HTML') -->
 
 ## Exemplos
 
@@ -233,6 +233,6 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Veja também
 
-- [DOMString](/pt-BR/docs/Web/API/DOMString)
+- [DOMString](/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String)
 - [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays/StringView)
 - [Binary strings](/pt-BR/docs/Web/API/DOMString/Binary)

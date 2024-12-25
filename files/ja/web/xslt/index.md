@@ -12,15 +12,15 @@ slug: Web/XSLT
 
    1. [よくある XSLT のエラー](/ja/docs/Web/XSLT/Common_errors)
    2. [PI 引数](/ja/docs/Web/XSLT/PI_Parameters)
-   3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+   3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/API/XSLTProcessor)
    4. [XML を XSLT で変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
-   5. [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+   5. [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/API/XSLTProcessor)
 
-5. [XSLT Elements](/ja/docs/XSLT/Element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
+5. [XSLT Elements](/ja/docs/Web/XSLT/Element/element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 
-**Extensible Stylesheet Language Transformations (XSLT)** は [XML](/ja/docs/Web/XML/XML_Introduction) ベースの言語で、XML 文書の変換をするために特別な処理ソフトウェア (プロセッサー) とともに利用されます。
+**Extensible Stylesheet Language Transformations (XSLT)** は [XML](/ja/docs/Web/XML/XML_introduction) ベースの言語で、XML 文書の変換をするために特別な処理ソフトウェア (プロセッサー) とともに利用されます。
 
 この処理は「変換」と呼ばていれますが、元の文書は変更されません。この「変換」ではまず、新しい XML 文書が元の文書の内容をもとに作成され、プロセッサーによってそのまま、もしくは標準 XML や [HTML](/ja/docs/Web/HTML) やテキストなどの形式でシリアライズ (出力) されます。
 
@@ -32,7 +32,7 @@ XSLT は異なる XML スキーマ間でのデータの変換や、XML データ
   - : リファレンスです。
 - [XSLT を使った XML 変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT を使うと、スタイルシートの制作者は、元の XML 文書を二つの重要な手法で変換できます。すなわち、コンテンツの操作・選別（もしお望みならば大規模な並べ替えも含まれます）および、異なる形式への変換です。
-- [Mozilla JavaScript インターフェイスから XSLT を使う](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+- [Mozilla JavaScript インターフェイスから XSLT を使う](/ja/docs/Web/API/XSLTProcessor)
   - : Mozilla 1.2 以降の JavaScript から XSLT 処理エンジンへのインターフェイスを説明します。
 - [処理命令を使った引数の指定](/ja/docs/Web/XSLT/PI_Parameters)
   - : Firefox では `<?xml-stylesheet?>` 処理指令を使ってスタイルシートの引数を指定することができます。各引数は `<?xslt-param?>` 処理指令によって指定でき、この文書ではこれらを説明しています。
@@ -45,4 +45,4 @@ XSLT は異なる XML スキーマ間でのデータの変換や、XML データ
 
 ## 関連トピック
 
-- [XML](/ja/docs/Web/XML/XML_Introduction), [XPath](/ja/docs/Web/XPath)
+- [XML](/ja/docs/Web/XML/XML_introduction), [XPath](/ja/docs/Web/XPath)

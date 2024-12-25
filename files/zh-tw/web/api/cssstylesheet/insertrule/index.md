@@ -5,7 +5,7 @@ slug: Web/API/CSSStyleSheet/insertRule
 
 {{APIRef("CSSOM")}}
 
-**CSSStyleSheet.insertRule()** 方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些[限制](#Restrictions).
+**CSSStyleSheet.insertRule()** 方法新增一個新的 CSS 規則，到當前的樣式表，他伴隨著一些[限制](#restrictions).
 
 更明確的說，雖然 **insertRule()** 只是一個 {{domxref("CSSStyleSheet")}} 的方法， 他實際上插入這份規則到 {{domxref("CSSStyleSheet")}}._cssRules_, 在 {{domxref("CSSRuleList")}} 之中。
 
@@ -21,7 +21,7 @@ insertRule(rule, index)
 ### Parameters
 
 - `rule`
-  - : 一個 {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（[selector](/zh-TW/docs/Web/Guide/CSS/Getting_Started/Selectors)）和样式聲明，或 at 標識符和規則內容。
+  - : 一個 {{domxref("DOMString")}} 包含要被插入的規則，這份規則同時指定了選擇器（[selector](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)）和样式聲明，或 at 標識符和規則內容。
 - `index` {{optional_inline}}
   - : 無符號整數，代表在 `stylesheet.cssRules.length` 中插入的位置，其中 index-0 是第一個規則，而 index-max 就是最後一個規則，並且與 CSSStyleSheet 的長度相同。cssRules 在舊的實現中是必需的。查詢「瀏覽器兼容」取得詳細信息。 默認值為 0。
 
@@ -120,4 +120,4 @@ function addStylesheetRules(rules) {
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
 - [Cross-Browser CSS-rules ordering (CSS1)](https://www-archive.mozilla.org/docs/web-developer/css1technote/css1tojs.html#priority)
-- [Quirksmode - CSS](http://www.quirksmode.org/dom/w3c_css.html)
+- [Quirksmode - CSS](https://www.quirksmode.org/dom/w3c_css.html)

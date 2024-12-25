@@ -103,7 +103,7 @@ Google Chrome에서는 다음 그림처럼 보입니다.
 
 ### 높은 범위와 낮은 범위
 
-[`min`](/ko/docs/Web/HTML/Element/meter#min) 특성의 기본값이 0이므로 생략한 것을 참고하세요.
+[`min`](#min) 특성의 기본값이 0이므로 생략한 것을 참고하세요.
 
 #### HTML
 

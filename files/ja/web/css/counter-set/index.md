@@ -5,7 +5,7 @@ slug: Web/CSS/counter-set
 
 {{CSSRef}}
 
-**`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)を指定された値に設定します。これは既存のカウンターの値を操作し、その要素に指定された名前のカウンターがまだ存在しない場合は新しいカウンターを生成します。
+**`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値に設定します。これは既存のカウンターの値を操作し、その要素に指定された名前のカウンターがまだ存在しない場合は新しいカウンターを生成します。
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
@@ -78,7 +78,7 @@ h1 {
 
 ## 関連情報
 
-- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 - {{cssxref("counter-increment")}}
 - {{cssxref("counter-reset")}}
 - {{cssxref("@counter-style")}}

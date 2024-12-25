@@ -5,7 +5,7 @@ slug: Glossary/Boolean
 
 {{GlossarySidebar}}
 
-En informatique, un **booléen** est un type de données logique qui ne peut prendre que deux valeurs : `true` (vrai) ou `false` (faux). Par exemple, en JavaScript, les conditions booléennes sont souvent ouvertes pour décider quelle section de code doit être exécutée (comme dans l'[instruction If](/fr/docs/Web/JavaScript/Reference/Instructions/if...else)) ou répétée (comme pour une [boucle For](/fr/docs/Web/JavaScript/Reference/Instructions/for)).
+En informatique, un **booléen** est un type de données logique qui ne peut prendre que deux valeurs : `true` (vrai) ou `false` (faux). Par exemple, en JavaScript, les conditions booléennes sont souvent ouvertes pour décider quelle section de code doit être exécutée (comme dans l'[instruction If](/fr/docs/Web/JavaScript/Reference/Statements/if...else)) ou répétée (comme pour une [boucle For](/fr/docs/Web/JavaScript/Reference/Statements/for)).
 
 ```js
 /* JavaScript instruction if */
@@ -39,4 +39,4 @@ for (var i=0; i < 4; i++) {
 ### Informations techniques
 
 - L'objet JavaScript global : {{jsxref("Boolean")}}
-- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Structures_de_données) sur MDN
+- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Data_structures) sur MDN

@@ -2,7 +2,7 @@
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
 {{CSSRef}}
@@ -18,7 +18,7 @@ l10n:
 backdrop-filter: none;
 
 /* SVG フィルターへの URL */
-backdrop-filter: url(commonfilters.svg#filter);
+backdrop-filter: url(common-filters.svg#filter);
 
 /* <filter-function> 値 */
 backdrop-filter: blur(2px);

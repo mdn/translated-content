@@ -14,7 +14,7 @@ L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation 
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `cite`
   - : La valeur de cet attribut est une URL désignant la source du message ou de l'information citée. Cet attribut est prévu pour fournir des renseignements concernant le contexte ou la référence de cette citation.
@@ -72,7 +72,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

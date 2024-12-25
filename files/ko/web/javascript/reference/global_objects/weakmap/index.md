@@ -168,7 +168,7 @@ thing.showPrivate();
 // 1
 ```
 
-위 코드는 [비공개 필드](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)를 사용하는 아래 예제와 동일하다고 볼 수 있습니다.
+위 코드는 [비공개 필드](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)를 사용하는 아래 예제와 동일하다고 볼 수 있습니다.
 
 ```js
 class Thing {

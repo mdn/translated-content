@@ -11,10 +11,10 @@ slug: Web/SVG/Attribute/color
 
 ## 使用说明
 
-| 类别     | 外观属性                                                                     |
-| -------- | ---------------------------------------------------------------------------- |
-| 值       | [\<color>](/zh-CN/SVG/Content_type#Color) \| inherit                         |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/color.html#ColorProperty) |
+| 类别     | 外观属性                                                                      |
+| -------- | ----------------------------------------------------------------------------- |
+| 值       | [\<color>](/zh-CN/docs/SVG/Content_type#color) \| inherit                     |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/color.html#ColorProperty) |
 
 ## 示例
 
@@ -39,8 +39,8 @@ slug: Web/SVG/Attribute/color
 
 下列元素可以使用`color`属性：
 
-- [文本内容元素](/zh-CN/SVG/Element#Text_content_elements) »
-- [形状元素](/zh-CN/SVG/Element#Shape_elements) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#text_content_elements) »
+- [形状元素](/zh-CN/docs/Web/SVG/Element#shape_elements) »
 - {{ SVGElement("stop") }}
 - {{ SVGElement("feFlood") }}
 - {{ SVGElement("feDiffuseLighting") }}

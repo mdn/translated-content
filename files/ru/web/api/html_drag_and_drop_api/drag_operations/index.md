@@ -19,7 +19,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 Для перетаскивания других HTML-элементов, должны быть выполнены три пункта :
 
 1. Установить `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)="true"` на элемент, который вы хотите сделать перетаскиваемым.
-2. Добавить обработчик события `{{event("dragstart")}}`.
+2. Добавить обработчик события [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
 3. [Установить данные перетаскивания](/ru/docs/Web/API/DataTransfer/setData) в обработчик выше.
 
 Вот пример, который позволяет перетаскивать часть содержимого.
@@ -41,7 +41,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 ## Начало операции перетаскивания
 
-В примере, обработчик добавлен для события {{event("dragstart")}} с использованием атрибута`{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}`.
+В примере, обработчик добавлен для события [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event) с использованием атрибута`{{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}`.
 
 ```html
 <p
@@ -51,11 +51,11 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 </p>
 ```
 
-Когда пользователь начинает перетаскивание, запускается событие {{event("dragstart")}}.
+Когда пользователь начинает перетаскивание, запускается событие [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
 
-В этом примере обработчик {{event("dragstart")}} добавлен к самому перемещаемом элементу. Однако, вы можете слушать более высокого предка, так как событие перетаскивание всплывает вверх как и большинство событий.
+В этом примере обработчик [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event) добавлен к самому перемещаемом элементу. Однако, вы можете слушать более высокого предка, так как событие перетаскивание всплывает вверх как и большинство событий.
 
-Внутри события {{event("dragstart")}}, вы можете указать **drag данные**, **изображение отклика**, **drag-эффекты**, все это описано ниже. Однако, обязательны только **drag данные**. (Изображение и drag-эффекты по умолчанию, подходят в большинстве ситуаций)
+Внутри события [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event), вы можете указать **drag данные**, **изображение отклика**, **drag-эффекты**, все это описано ниже. Однако, обязательны только **drag данные**. (Изображение и drag-эффекты по умолчанию, подходят в большинстве ситуаций)
 
 ## Drag-данные
 
@@ -63,11 +63,11 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
 Когда происходит перетаскивание, данные должны быть связаны с перетаскиванием, которое определяет, что перетаскивается. Например, при перетаскивании выделенного текста в текстовое поле данные, связанные с элементом данных перетаскивания, являются самим текстом. Аналогично, при перетаскивании ссылки на веб-странице элемент данных перетаскивания является URL-адресом ссылки.
 
-{{domxref("DataTransfer","drag data")}} содержит два параметра, **тип** (или формат) данных, и **значение** данных. Формат это строковый тип (такой как [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text) текстовых данных), значение - строка текста. Когда начинается перетаскивание, вы добавляете данные, предоставляя тип и данные. Во время перетаскивания в обработчике события для событий `{{event("dragenter")}}` и `{{event("dragover")}}` , вы используете типы данных перетаскиваемых данных, чтобы проверить, разрешено ли удаление. Например, цель drop, которая принимает ссылки, будет проверять тип [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link). В течение события drop, обработчик будет получать данные тащат и вставить его на место.
+{{domxref("DataTransfer","drag data")}} содержит два параметра, **тип** (или формат) данных, и **значение** данных. Формат это строковый тип (такой как [`text/plain`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) текстовых данных), значение - строка текста. Когда начинается перетаскивание, вы добавляете данные, предоставляя тип и данные. Во время перетаскивания в обработчике событий `[`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event)` и `[`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event)`, вы используете типы данных перетаскиваемых данных, чтобы проверить, разрешено ли удаление. Например, цель drop, которая принимает ссылки, будет проверять тип [`text/uri-list`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link). В течение события drop, обработчик будет получать данные тащат и вставить его на место.
 
-Свойство {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} возвращает список MIME-типов {{domxref("DOMString")}}, таких как [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text) или [`image/jpeg`](/ru/docs/DragDrop/Recommended_Drag_Types#image). Вы также можете создавать свои собственные типы. Большинство основные используемых типов описаны в [Recommended Drag Types](/ru/docs/DragDrop/Recommended_Drag_Types).
+Свойство {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} возвращает список MIME-типов {{domxref("DOMString")}}, таких как [`text/plain`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) или [`image/jpeg`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#image). Вы также можете создавать свои собственные типы. Большинство основные используемых типов описаны в [Recommended Drag Types](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
 
-Перетаскивание может включать элементы данных нескольких различных типов. Это позволяет предоставлять данные в более специфических типах, часто пользовательских, но по предоставляет резервные данные для drop, которые не поддерживают более специфические типы. Как правило, наименее специфичным типом будут обычные текстовые данные, использующие тип [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text). Эти данные будут простым текстовым представлением.
+Перетаскивание может включать элементы данных нескольких различных типов. Это позволяет предоставлять данные в более специфических типах, часто пользовательских, но по предоставляет резервные данные для drop, которые не поддерживают более специфические типы. Как правило, наименее специфичным типом будут обычные текстовые данные, использующие тип [`text/plain`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text). Эти данные будут простым текстовым представлением.
 
 Установка элементов drag-данных {{domxref("DragEvent.dataTransfer","dataTransfer")}}, используя метод {{domxref("DataTransfer.setData","setData()")}}. Требуется два аргумента: тип данных и значение данных. Например:
 
@@ -75,7 +75,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-Здесь, значение - "Text to drag", формат - [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text).
+Здесь, значение - "Text to drag", формат - [`text/plain`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text).
 
 Вы можете предусмотреть данные в нескольких форматах. Сделаем это, вызовем метод {{domxref("DataTransfer.setData","setData()")}} несколько раз с различными форматами. Вы должны вызывать его с форматами от большей специфичности к меньшей.
 
@@ -90,7 +90,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 Предоставляя данные и в других типах, мы также можем поддерживать перетаскивание в другие приложения в менее специфичных формах. Тип `application/x.bookmark` может предоставлять данные с более подробной информацией для использования в приложении, в то время как другие типы могут включать только один URL-адрес или текстовую версию.
 
-Обратите внимание, что и [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link) и [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text) содержат одни и те же данные в этом примере. Это часто бывает так, но это не обязательно.
+Обратите внимание, что и [`text/uri-list`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) и [`text/plain`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#text) содержат одни и те же данные в этом примере. Это часто бывает так, но это не обязательно.
 
 Если вы попытаетесь добавить данные дважды с тем же форматом, новые данные заменят старые данные, но в той же позиции в списке типов, что и старые данные.
 
@@ -104,7 +104,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## Настройка изображения отклика drag
 
-Когда происходит перетаскивание, полупрозрачное изображение генерируется из цели перетаскивания (событие "{{event("dragstart")}}" элемента срабатывает), и следует за указателем пользователя во время перетаскивания. Это изображение создаётся автоматически, поэтому вам не нужно создавать его самостоятельно. Однако вы можете использовать {{domxref("DataTransfer.setDragImage","setDragImage()")}} для задания пользовательского изображения отклика перетаскивания.
+Когда происходит перетаскивание, полупрозрачное изображение генерируется из цели перетаскивания (возникает событие [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event)), и следует за указателем пользователя во время перетаскивания. Это изображение создаётся автоматически, поэтому вам не нужно создавать его самостоятельно. Однако вы можете использовать {{domxref("DataTransfer.setDragImage","setDragImage()")}} для задания пользовательского изображения отклика перетаскивания.
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -139,7 +139,7 @@ function dragWithCustomImage(event) {
 
 При перетаскивании можно выполнить несколько операций. Операция `copy` используется для указания на то, что перетаскиваемые данные будут скопированы из текущего местоположения в место перетаскивания. Операция `move` используется для указания на то, что перетаскиваемые данные будут перемещены, а операция `link` используется для указания на то, что между исходным и удаляемым местоположениями будет создана некоторая форма связи или соединения.
 
-Вы можете указать, какая из трёх операций разрешена для источника перетаскивания, установив свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}} в обработчике событий`{{event("dragstart")}}`.
+Вы можете указать, какая из трёх операций разрешена для источника перетаскивания, установив свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}} в обработчике событий [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
 
 ```js
 event.dataTransfer.effectAllowed = "copy";
@@ -170,11 +170,11 @@ event.dataTransfer.effectAllowed = "copy";
 
 Обратите внимание, что эти значения должны использоваться так, как указано выше. Например, установка свойства {{domxref("DataTransfer.effectAllowed","effectAllowed")}} на `copyMove` позволяет выполнять операцию копирования или перемещения, но не позволяет пользователю выполнять операцию связывания. Если вы не измените свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, то любая операция разрешена, как и со значением '`all`'. Поэтому вам не нужно настраивать это свойство, если вы не хотите исключить определённые типы.
 
-Во время операции перетаскивания, обработчик для событий `{{event("dragenter")}}` или `{{event("dragover")}}` может проверить свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}} , какие операции разрешены. Связанное свойство, {{domxref("DataTransfer.dropEffect","dropEffect")}}, должно быть установлено в пределах одного из этих событий, чтобы указать, какая единственная операция должна быть выполнена. Допустимые значения для {{domxref("DataTransfer.dropEffect","dropEffect")}} - `none`, `copy`, `move`, или `link`. Комбинированные значения для этого свойства не используются.
+Во время операции перетаскивания, обработчик для событий [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) или [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) может проверить свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}} , какие операции разрешены. Связанное свойство, {{domxref("DataTransfer.dropEffect","dropEffect")}}, должно быть установлено в пределах одного из этих событий, чтобы указать, какая единственная операция должна быть выполнена. Допустимые значения для {{domxref("DataTransfer.dropEffect","dropEffect")}} - `none`, `copy`, `move`, или `link`. Комбинированные значения для этого свойства не используются.
 
-С событиями `{{event("dragenter")}}` и `{{event("dragover")}}`, свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} инициализируется в соответствии с запросом пользователя. Пользователь может изменить желаемый эффект, нажав клавиши-модификаторы. Хотя точные используемые клавиши различаются в зависимости от платформы, обычно клавиши <kbd>Shift</kbd> и <kbd>Control</kbd> используются для переключения между копированием, перемещением и связыванием. Указатель мыши изменится, чтобы указать, какая операция требуется. Например, для `copy` курсор может появиться со знаком плюс рядом с ним.
+С событиями [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) и [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event), свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} инициализируется в соответствии с запросом пользователя. Пользователь может изменить желаемый эффект, нажав клавиши-модификаторы. Хотя точные используемые клавиши различаются в зависимости от платформы, обычно клавиши <kbd>Shift</kbd> и <kbd>Control</kbd> используются для переключения между копированием, перемещением и связыванием. Указатель мыши изменится, чтобы указать, какая операция требуется. Например, для `copy` курсор может появиться со знаком плюс рядом с ним.
 
-Вы можете изменять свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} во время событий `{{event("dragenter")}}` или `{{event("dragover")}}`, например, определённая drop-цель поддерживает только определённые операции. Вы можете изменить свойство {{domxref("DataTransfer.dropEffect","dropEffect")}}, чтобы переопределить действие пользователя, и обеспечить выполнение специфичной операции перетаскивания при её наступлении. Обратите внимание, что этот эффект должен быть указан в списке свойств {{domxref("DataTransfer.effectAllowed","effectAllowed")}}. В противном случае ему будет присвоено другое допустимое значение.
+Вы можете изменять свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} во время событий [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) или [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event), например, определённая drop-цель поддерживает только определённые операции. Вы можете изменить свойство {{domxref("DataTransfer.dropEffect","dropEffect")}}, чтобы переопределить действие пользователя, и обеспечить выполнение специфичной операции перетаскивания при её наступлении. Обратите внимание, что этот эффект должен быть указан в списке свойств {{domxref("DataTransfer.effectAllowed","effectAllowed")}}. В противном случае ему будет присвоено другое допустимое значение.
 
 ```js
 event.dataTransfer.dropEffect = "copy";
@@ -184,11 +184,11 @@ event.dataTransfer.dropEffect = "copy";
 
 Вы можете использовать значение `none`, чтобы указать, что в этом месте не допускается удаление, хотя в этом случае лучше не отменять событие.
 
-В событиях `{{event("drop")}}` и `{{event("dragend")}}`, вы можете проверить свойства {{domxref("DataTransfer.dropEffect","dropEffect")}} для определения того, какой эффект был в конечном итоге выбран. Если выбран эффект "`move`",то исходные данные должны быть удалены из источника перетаскивания в событии`{{event("dragend")}}`.
+В событиях [`drop`](/ru/docs/Web/API/HTMLElement/drop_event) и [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event), вы можете проверить свойства {{domxref("DataTransfer.dropEffect","dropEffect")}} для определения того, какой эффект был в конечном итоге выбран. Если выбран эффект "`move`",то исходные данные должны быть удалены из источника перетаскивания в событии [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event).
 
 ## Указание drop-целей
 
-Обработчик для событий `{{event("dragenter")}}` и `{{event("dragover")}}` используются для указания допустимых drop-целей, то есть мест, где могут быть сброшены перетаскиваемые элементы. Большинство областей веб-страницы или приложения не являются допустимыми местами для сброса данных. Таким образом, обработка этих событий по умолчанию не допускает сброса перетаскиваемых данных.
+Обработчик для событий [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) и [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) используются для указания допустимых drop-целей, то есть мест, где могут быть сброшены перетаскиваемые элементы. Большинство областей веб-страницы или приложения не являются допустимыми местами для сброса данных. Таким образом, обработка этих событий по умолчанию не допускает сброса перетаскиваемых данных.
 
 Если вы хотите разрешить сброс переносимых данных, вы должны предотвратить обработку по умолчанию, отменив оба события `dragenter` и `dragover`. Это можно сделать, либо вернув `false` из определённых атрибутом обработчика событий, либо вызвав метод {{domxref("Event.preventDefault","preventDefault()")}} событие. Последнее может быть более осуществимо в функции, определённой в отдельном скрипте.
 
@@ -198,7 +198,7 @@ event.dataTransfer.dropEffect = "copy";
 </div>
 ```
 
-Вызывая метод {{domxref("Event.preventDefault","preventDefault()")}} во время обоих событий `{{event("dragenter")}}` и `{{event("dragover")}}` укажите, что падение разрешено в этом месте. Однако обычно вы захотите вызвать метод {{domxref("Event.preventDefault","preventDefault()")}} события только в определённых ситуациях (например, только при перетаскивании ссылки).
+Вызывая метод {{domxref("Event.preventDefault","preventDefault()")}} во время обоих событий [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) и [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) укажите, что падение разрешено в этом месте. Однако обычно вы захотите вызвать метод {{domxref("Event.preventDefault","preventDefault()")}} события только в определённых ситуациях (например, только при перетаскивании ссылки).
 
 Для этого вызовите функцию, которая проверяет условие и отменяет событие только при его выполнении. Если условие не выполнено, не отменяйте событие, и сброс перетаскиваемых данных не произойдёт, если пользователь отпустит кнопку мыши.
 
@@ -213,7 +213,7 @@ function doDragOver(event) {
 }
 ```
 
-В этом примере мы используем метод `includes` чтобы проверить, присутствует ли тип [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link) в списке типов. Если это так, мы отменим событие, так что сброс становится разрешён. Если перетаскиваемые данные не содержат ссылки, событие не будет отменено, и сброс не может произойти в этом месте.
+В этом примере мы используем метод `includes` чтобы проверить, присутствует ли тип [`text/uri-list`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) в списке типов. Если это так, мы отменим событие, так что сброс становится разрешён. Если перетаскиваемые данные не содержат ссылки, событие не будет отменено, и сброс не может произойти в этом месте.
 
 Вы также можете установить либо свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, либо свойство{{domxref("DataTransfer.dropEffect","dropEffect")}}, либо оба одновременно, если вы хотите указать более конкретные сведения о типе операции, которая будет выполнена. Естественно, изменение любого свойства не будет иметь никакого эффекта, если вы не отмените событие.
 
@@ -231,24 +231,24 @@ However, you can also update the user interface with an insertion point or highl
 }
 ```
 
-In this example, the element with the class `droparea` will receive a 1 pixel black outline while it is a valid drop target, that is, if the {{domxref("Event.preventDefault","preventDefault()")}} method was called during the `{{event("dragenter")}}` event.
+In this example, the element with the class `droparea` will receive a 1 pixel black outline while it is a valid drop target, that is, if the {{domxref("Event.preventDefault","preventDefault()")}} method was called during the [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) event.
 
 > [!NOTE]
-> You must cancel the `{{event("dragenter")}}` event for this pseudoclass to apply, as this state is not checked for the `{{event("dragover")}}` event.
+> You must cancel the [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) event for this pseudoclass to apply, as this state is not checked for the [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) event.
 
-For more complex visual effects, you can also perform other operations during the `{{event("dragenter")}}` event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an [image](/ru/docs/XUL/image) or [separator](/ru/docs/XUL/separator) element and simply insert it into the document during the `{{event("dragenter")}}` event.
+For more complex visual effects, you can also perform other operations during the [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) event. For example, by inserting an element at the location where the drop will occur. This might be an insertion marker, or an element that represents the dragged element in its new location. To do this, you could create an [image](/ru/docs/XUL/image) or [separator](/ru/docs/XUL/separator) element and simply insert it into the document during the [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) event.
 
-The `{{event("dragover")}}` event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a `{{event("dragover")}}` event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
+The [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) event as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
 
-Finally, the `{{event("dragleave")}}` event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the `:-moz-drag-over` pseudoclass will be removed automatically. The `{{event("dragleave")}}` event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
+Finally, the [`dragleave`](/ru/docs/Web/API/HTMLElement/dragleave_event) event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the `:-moz-drag-over` pseudoclass will be removed automatically. The [`dragleave`](/ru/docs/Web/API/HTMLElement/dragleave_event) event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
 
 ## Performing a Drop
 
 When the user releases the mouse, the drag and drop operation ends.
 
-If the mouse is released over an element that is a valid drop target, that is, one that cancelled the last `{{event("dragenter")}}` or `{{event("dragover")}}` event, then the drop will be successful, and a `{{event("drop")}}` event will fire at the target. Otherwise, the drag operation is cancelled, and no `{{event("drop")}}` event is fired.
+If the mouse is released over an element that is a valid drop target, that is, one that cancelled the last [`dragenter`](/ru/docs/Web/API/HTMLElement/dragenter_event) or [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) event, then the drop will be successful, and a [`drop`](/ru/docs/Web/API/HTMLElement/drop_event) event will fire at the target. Otherwise, the drag operation is cancelled, and no [`drop`](/ru/docs/Web/API/HTMLElement/drop_event) event is fired.
 
-During the `{{event("drop")}}` event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired.
+During the [`drop`](/ru/docs/Web/API/HTMLElement/drop_event) event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine which drag operation was desired.
 
 As with all drag-related events, the event's `{{domxref("DataTransfer","dataTransfer")}}` property will hold the data that is being dragged. The {{domxref("DataTransfer.getData","getData()")}} method may be used to retrieve the data again.
 
@@ -260,13 +260,13 @@ function onDrop(event) {
 }
 ```
 
-The {{domxref("DataTransfer.getData","getData()")}} method takes one argument, the type of data to retrieve. It will return the string value that was set when {{domxref("DataTransfer.setData","setData()")}} was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. (Naturally, though, you would likely know that the right type of data was available, as it was previously checked during a `{{event("dragover")}}` event.)
+The {{domxref("DataTransfer.getData","getData()")}} method takes one argument, the type of data to retrieve. It will return the string value that was set when {{domxref("DataTransfer.setData","setData()")}} was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. (Naturally, though, you would likely know that the right type of data was available, as it was previously checked during a [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event) event.)
 
 In the example here, once the data has been retrieved, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a `p` or `div` element.
 
 In a web page, you should call the {{domxref("Event.preventDefault","preventDefault()")}} method of the event if you have accepted the drop, so that the browser's default handling is not triggered by the dropped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behavior will be prevented.
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
+You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link). You could then insert a link into the content.
 
 ```js
 function doDrop(event) {
@@ -283,7 +283,7 @@ function doDrop(event) {
 }
 ```
 
-This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
+This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types#link) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
 
 For simple cases, you can use the special type `URL` just to retrieve the first valid URL in the list. For example:
 
@@ -318,19 +318,19 @@ function doDrop(event) {
 
 ## Окончание перетаскивания
 
-Как только перетаскивание завершено, событие `{{event("dragend")}}` запускается в источнике перетаскивания (тот же элемент, который получил событие `{{event("dragstart")}}`). Это событие сработает, если перетаскивание было успешным\[1] или если оно было отменено. Однако вы можете использовать свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} для определения, какая операция удаления произошла.
+Как только перетаскивание завершено, событие [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event) запускается в источнике перетаскивания (тот же элемент, который получил событие [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event)). Это событие сработает, если перетаскивание было успешным\[1] или если оно было отменено. Однако вы можете использовать свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} для определения, какая операция удаления произошла.
 
-Если свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} имеет значение `none` во время события `{{event("dragend")}}`, то перетаскивание было отменено. В противном случае эффект указывает, какая операция была выполнена. Источник может использовать эту информацию после операции перемещения для удаления перетаскиваемого элемента из старого расположения. Свойство {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} будет присвоено значение `true`, если пользователь отменил перетаскивание (нажав <kbd>Escape</kbd>), и `false` если перетаскивание было отменено по другим причинам, таким как недопустимая цель перетаскивания, или если оно было успешным.
+Если свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} имеет значение `none` во время события [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event), то перетаскивание было отменено. В противном случае эффект указывает, какая операция была выполнена. Источник может использовать эту информацию после операции перемещения для удаления перетаскиваемого элемента из старого расположения. Свойство {{domxref("DataTransfer.mozUserCancelled","mozUserCancelled")}} будет присвоено значение `true`, если пользователь отменил перетаскивание (нажав <kbd>Escape</kbd>), и `false` если перетаскивание было отменено по другим причинам, таким как недопустимая цель перетаскивания, или если оно было успешным.
 
-Сброс может произойти внутри того же окна или над другим приложением. Событие `{{event("dragend")}}` будет срабатывать всегда, независимо от этого. Свойство события {{domxref("MouseEvent.screenX","screenX")}} и {{domxref("MouseEvent.screenY","screenY")}} будут установлены в координаты экрана, где произошёл сброс.
+Сброс может произойти внутри того же окна или над другим приложением. Событие [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event) будет срабатывать всегда, независимо от этого. Свойство события {{domxref("MouseEvent.screenX","screenX")}} и {{domxref("MouseEvent.screenY","screenY")}} будут установлены в координаты экрана, где произошёл сброс.
 
-Когда событие `{{event("dragend")}}` завершило распространение, операция перетаскивания завершена.
+Когда событие [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event) завершило распространение, операция перетаскивания завершена.
 
-\[1]: В Gecko, {{event("dragend")}} не отправляется, если исходный узел движется или удаляется во время перетаскивания (например, при сбрасывании или {{event("dragover")}}). [Bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)
+\[1]: В Gecko, [`dragend`](/ru/docs/Web/API/HTMLElement/dragend_event) не отправляется, если исходный узел движется или удаляется во время перетаскивания (например, при сбрасывании или [`dragover`](/ru/docs/Web/API/HTMLElement/dragover_event)). [Bug 460801](https://bugzilla.mozilla.org/show_bug.cgi?id=460801)
 
 ## Смотрите также
 
 - [HTML Drag and Drop API (Overview)](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Dragging and Dropping Multiple Items](/ru/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/ru/docs/Web/Guide/HTML/Recommended_Drag_Types)
+- [Recommended Drag Types](/ru/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

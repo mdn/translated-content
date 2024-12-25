@@ -17,7 +17,7 @@ new Uint16Array(objet);
 new Uint16Array(tampon [, décalage [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
+Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
 
 ## Propriétés
 
@@ -154,6 +154,6 @@ var uint16 = new Uint16Array(iterable);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

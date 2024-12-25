@@ -290,7 +290,7 @@ ball.draw();
 
 ## 增加滑鼠控制
 
-為了能控制球使它跟著滑鼠移動，在這個範例使用[`mousemove`](/zh-TW/docs/Web/Reference/Events/mousemove) 效果。當 [`click`](/zh-TW/docs/Web/Events/click) 事件觸發了這顆球，它又會開始彈跳。
+為了能控制球使它跟著滑鼠移動，在這個範例使用[`mousemove`](/zh-TW/docs/Web/API/Element/mousemove_event) 效果。當 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件觸發了這顆球，它又會開始彈跳。
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
@@ -374,6 +374,6 @@ ball.draw();
 ## 參見
 
 - {{domxref("Window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/zh-TW/docs/Games/Techniques/Efficient_animation_for_web_games)
+- [Efficient animation for web games](/zh-TW/docs/Games/Techniques)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

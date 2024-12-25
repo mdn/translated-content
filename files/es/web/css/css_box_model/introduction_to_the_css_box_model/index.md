@@ -33,7 +33,7 @@ El espesor de los bordes está determinado por la propiedad {{cssxref("border-wi
 
 El **área de margen** o **margin area**, delimitada por el límite de margen (Margin edge en la imagen), extiende el área de borde para incluir un área vacía, utilizada para separar al elemento del resto de sus vecinos. Sus dimensiones son _"margin-box width"_ para el ancho y _"margin-box height"_ para el alto.
 
-El tamaño del área de margen está determinado por las propiedades {{cssxref("margin-top")}} , {{cssxref("margin-right")}} , {{cssxref("margin-bottom")}} , {{cssxref("margin-left")}} y la propiedad resumida {{cssxref("margin")}} . Cuando se produce un [colapso de margen](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), el área de margen no está claramente definida ya que los márgenes se comparten entre cajas.
+El tamaño del área de margen está determinado por las propiedades {{cssxref("margin-top")}} , {{cssxref("margin-right")}} , {{cssxref("margin-bottom")}} , {{cssxref("margin-left")}} y la propiedad resumida {{cssxref("margin")}} . Cuando se produce un [colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), el área de margen no está claramente definida ya que los márgenes se comparten entre cajas.
 
 Por último, tenga en cuenta que para los elementos en línea no modificados, la cantidad de espacio ocupado (la contribución a la altura de la línea) está determinada por la propiedad {{cssxref("line-height")}} , aunque los bordes y el relleno sigan apareciendo alrededor del contenido.
 
@@ -43,14 +43,14 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
 - [Introducción a la cascada CSS](/es/docs/Web/CSS/Cascade)
 - [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - Conceptos clave de CSS
-  - [Sintaxis CSS](/es/docs/web/CSS/Syntax)
+  - [Sintaxis CSS](/es/docs/Web/CSS/Syntax)
   - [Reglas-At](/es/docs/Web/CSS/At-rule)
   - [Comentarios](/es/docs/Web/CSS/Comments)
   - [Especificidad](/es/docs/Web/CSS/Specificity)
-  - [Herencia](/es/docs/Web/CSS/inheritance)
+  - [Herencia](/es/docs/Web/CSS/Inheritance)
   - [Modo de diseño](/es/docs/Web/CSS/Layout_mode)
   - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
-  - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valores
     - [Valor inicial](/es/docs/Web/CSS/initial_value)
     - [Valor calculado](/es/docs/Web/CSS/computed_value)

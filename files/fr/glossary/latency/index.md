@@ -11,4 +11,4 @@ La latence peut être un facteur dans tout type de flux de données, mais le ter
 
 ## Voir aussi
 
-- [Understanding Latency](/fr/docs/Learn/Performance/Understanding_latency)
+- [Understanding Latency](/fr/docs/Web/Performance/Understanding_latency)

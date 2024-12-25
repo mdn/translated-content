@@ -19,7 +19,7 @@ Cookies são usados principalmente para três propósitos:
 Os cookies eram usados para armazenamento geral no lado do cliente. Embora isso fosse aceitável quando eram a única forma de armazenar dados no cliente, atualmente é recomendável utilizar APIs de armazenamento mais modernas. Os cookies são enviados em todas as requisições, por isso podem prejudicar a performance (especialmente em conexões móveis). APIs modernas de armazenamento no cliente são [Web storage API](/pt-BR/docs/Web/API/Web_Storage_API) (`localStorage` e `sessionStorage`) e [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API).
 
 > [!NOTE]
-> Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](/pt-BR/docs/Tools/Storage_Inspector) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
+> Para visualizar os cookies armazenados (e outros armazenamentos que uma página web pode usar), pode-se habilitar o [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) nas Ferramentas de Desenvolvimento e selecionar o item **Cookies** na árvore de armazenamento.
 
 ## Criando cookies
 
@@ -130,7 +130,7 @@ console.log(document.cookie);
 // logs "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Consulte as questões de segurança na seção [Segurança](/pt-BR/docs/Web/HTTP/Cookies#Security) a seguir. Os cookies disponíveis ao JavaScript podem ser roubados usando XSS.
+Consulte as questões de segurança na seção [Segurança](#Security) a seguir. Os cookies disponíveis ao JavaScript podem ser roubados usando XSS.
 
 ## Segurança
 
@@ -197,7 +197,7 @@ Uma abordagem mais radical aos cookies são os cookies zumbi ou _Evercookies_, q
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [Inspecionando cookies usando o Inspetor de Armazenamento](/pt-BR/docs/Tools/Storage_Inspector)
+- [Inspecionando cookies usando o Inspetor de Armazenamento](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Especificação dos cookies: RFC 6265](https://tools.ietf.org/html/rfc6265)
 - [Artigo de Nicholas Zakas sobre cookies](https://www.nczonline.net/blog/2009/05/05/http-cookies-explained/)
 - [Artigo de Nicholas Zakas sobre cookies e segurança](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/)

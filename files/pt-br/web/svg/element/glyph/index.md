@@ -46,8 +46,8 @@ O `glyph` determina um único glifo em uma fonte SVG.
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -66,10 +66,10 @@ O `glyph` determina um único glifo em uma fonte SVG.
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGGlyphElement`](/pt-BR/DOM/SVGGlyphElement).
+Este elemento implementa a interface do [`SVGGlyphElement`](/pt-BR/docs/DOM/SVGGlyphElement).
 
 ## Relacionado
 
 - {{ SVGElement("font") }}
 - {{ SVGElement("missing-glyph") }}
-- [Tutorial SVG: SVG fonts](/pt-BR/SVG/Tutorial/SVG_fonts)
+- [Tutorial SVG: SVG fonts](/pt-BR/docs/SVG/Tutorial/SVG_fonts)

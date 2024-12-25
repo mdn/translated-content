@@ -34,4 +34,4 @@ if ("paintWorklet" in CSS) {
 ## 関連情報
 
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [Houdini API](/ja/docs/Web/Guide/Houdini)
+- [Houdini API](/ja/docs/Web/API/Houdini_APIs)

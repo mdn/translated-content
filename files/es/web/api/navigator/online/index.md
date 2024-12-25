@@ -9,7 +9,7 @@ Retorna el estado en línea del navegador. La propiedad retorna un valor boolean
 
 Los navegadores implementan esta propiedad de forma diferente.
 
-En Chrome y Safari, si el navegador no puede conectarse a la red de area local (LAN) o al router, está `desconectado`; todas las otras condiciones retornan `true`. Así que puedes suponer que el navegador esta desconectado cuando retorna un valor `false`, no puedes suponer que un valor `true` signifique que el navegador puede acceder a internet. Podrías estar recibiendo falsos positivos, como en los casos en el que el ordenador este ejecutando un software de virtualización que tiene los adaptadores ethernet virtuales siempre "conectados". Por lo tanto, si tu quieres determinar el estado en linea de el navegador, tu debes desarrollar medios adicionales para comprobarlo. Para más información, consulte el artículo HTML5 Rocks article, [Working Off the Grid](http://www.html5rocks.com/en/mobile/workingoffthegrid.html).
+En Chrome y Safari, si el navegador no puede conectarse a la red de area local (LAN) o al router, está `desconectado`; todas las otras condiciones retornan `true`. Así que puedes suponer que el navegador esta desconectado cuando retorna un valor `false`, no puedes suponer que un valor `true` signifique que el navegador puede acceder a internet. Podrías estar recibiendo falsos positivos, como en los casos en el que el ordenador este ejecutando un software de virtualización que tiene los adaptadores ethernet virtuales siempre "conectados". Por lo tanto, si tu quieres determinar el estado en linea de el navegador, tu debes desarrollar medios adicionales para comprobarlo. Para más información, consulte el artículo HTML5 Rocks article, [Working Off the Grid](https://www.html5rocks.com/en/mobile/workingoffthegrid.html).
 
 En Firefox e Internet Explorer, cambiando el navegador al modo desconectado envía un valor `false`. Hasta Firefox 41, todas las demás condiciones retornaban un valor `true`; desde Firefox 41, en OS X y Windows, el valor sigue la actual conectividad de red.
 
@@ -63,10 +63,10 @@ window.addEventListener("online", function (e) {
 
 ## Notas
 
-See [Online/Offline Events‎](/es/docs/Online_and_offline_events) for a more detailed description of this property as well as new offline-related features introduced in Firefox 3.
+See [Online/Offline Events‎](/es/docs/Web/API/Navigator/onLine) for a more detailed description of this property as well as new offline-related features introduced in Firefox 3.
 
 ## Véase también
 
-- [HTML5 Rocks: Working Off the Grid With HTML5 Offline](http://www.html5rocks.com/en/mobile/workingoffthegrid.html)
-- [HTML5 Rocks: "Offline": What does it mean and why should I care?](http://www.html5rocks.com/en/tutorials/offline/whats-offline/)
-- [Mozilla Blog: Offline Web Applications](http://hacks.mozilla.org/2010/01/offline-web-applications/)
+- [HTML5 Rocks: Working Off the Grid With HTML5 Offline](https://www.html5rocks.com/en/mobile/workingoffthegrid.html)
+- [HTML5 Rocks: "Offline": What does it mean and why should I care?](https://www.html5rocks.com/en/tutorials/offline/whats-offline/)
+- [Mozilla Blog: Offline Web Applications](https://hacks.mozilla.org/2010/01/offline-web-applications/)

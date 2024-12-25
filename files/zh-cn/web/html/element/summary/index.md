@@ -17,7 +17,7 @@ slug: Web/HTML/Element/summary
 
 `<summary>` 元素的内容可以是任意标题内容、纯文本，或是可以在段落内使用的 HTML 代码。
 
-`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
+`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
 
 ### 默认标签文字
 

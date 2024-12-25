@@ -25,7 +25,7 @@ URL.revokeObjectURL(objectURL);
 
 ## 예제
 
-[객체 URL을 사용하여 이미지 표시하기](/ko/docs/Web/API/File/Using_files_from_web_applications#예시_객체_URL을_사용하여_이미지_표시하기)를 보세요.
+[객체 URL을 사용하여 이미지 표시하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications#예시_객체_url을_사용하여_이미지_표시하기)를 보세요.
 
 ## 명세
 
@@ -37,5 +37,5 @@ URL.revokeObjectURL(objectURL);
 
 ## 같이 보기
 
-- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File/Using_files_from_web_applications)
+- [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("URL.createObjectURL()")}}

@@ -80,4 +80,4 @@ L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec
 ## Voir aussi
 
 - {{domxref("NamedNodeMap")}}, l'interface de l'objet retourné
-- Considérations de compatibilité entre navigateurs : sur [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes) (en)
+- Considérations de compatibilité entre navigateurs : sur [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes) (en)

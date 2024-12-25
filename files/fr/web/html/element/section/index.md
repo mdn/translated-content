@@ -16,7 +16,7 @@ Ainsi, un menu de navigation devrait être délimité par un élément {{htmlele
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -71,7 +71,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -115,5 +115,5 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 ## Voir aussi
 
 - Les autres éléments HTML relatifs au plan du document : {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Structure et sections d'un document HTML5](/fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document)
+- [Structure et sections d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA : le rôle `region`](/fr/docs/Web/Accessibility/ARIA/Roles/Region_role)

@@ -16,7 +16,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 - {{WebExtAPIRef("extensionTypes.RunAt")}}
   - : タブに JavaScript か CSS が挿入されてほんのすぐ
 - `extensionTypes.CSSOrigin`
-  - : [`tabs.insertCSS`](/ja/Add-ons/WebExtensions/API/tabs/insertCSS) で挿入された CSS スタイルシートが "author" か "user" のスタイルシートのどちらであるかを示す
+  - : [`tabs.insertCSS`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) で挿入された CSS スタイルシートが "author" か "user" のスタイルシートのどちらであるかを示す
 
 ## ブラウザーの互換性
 

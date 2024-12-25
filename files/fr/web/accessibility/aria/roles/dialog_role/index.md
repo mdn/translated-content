@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 
 ### Description
 
-Cette technique présente l'utilisation du rôle [`dialog (en)`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).
+Cette technique présente l'utilisation du rôle [`dialog (en)`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog).
 
 Le rôle `dialog` est utilisé pour marquer une fenêtre ou une boîte de dialogue d'application web qui sépare le contenu ou l'UI du reste de l'application web ou de la page. Visuellement, les boîtes de dialogues sont généralement placées par dessus le contenu de la page, à l'aide d'un calque (ou « Overlay »). Les boîtes de dialogue peuvent être non-modales (ce qui signifie qu'il est toujours possible d'interagir avec le contenu situé hors de la boîte de dialogue) ou modales (ce qui signifie qu'on ne peut interagir qu'avec le contenu de la boîte de dialogue).
 
@@ -143,9 +143,9 @@ Pour prendre en charge les navigateurs ou les produits de technologies d'assista
 
 ### Attributs ARIA utilisés
 
-- [dialog (en)](http://www.w3.org/TR/wai-aria/roles#dialog)
-- [aria-labelledby (en)](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
-- [aria-describedby (en)](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby)
+- [dialog (en)](https://www.w3.org/TR/wai-aria/roles#dialog)
+- [aria-labelledby (en)](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)
+- [aria-describedby (en)](https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby)
 
 ### Techniques ARIA connexes
 

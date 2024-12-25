@@ -14,7 +14,7 @@ SPA 让用户在访问网站时无需加载新的页面，从而获得性能提�
 ## 参见
 
 - 维基百科上的[单页应用](https://zh.wikipedia.org/wiki/单页应用)
-- [理解客户端 JavaScript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [理解客户端 JavaScript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
 - [术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("API")}}

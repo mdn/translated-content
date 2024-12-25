@@ -45,7 +45,7 @@ cursor:
 ### 값
 
 - `<url>`
-  - : 이미지 파일을 가리키는 `url(…)`, 또는 쉼표로 구분한 `url(…), url(…), …` 목록. 일부 커서 이미지를 사용할 수 없을 때를 대비해 여러 이미지를 지정할 수 있습니다. 이미지를 사용할 경우 URL이 아닌 값(하나 이상의 키워드 값)을 목록의 맨 뒤에 붙여야 합니다. [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)를 참고하세요.
+  - : 이미지 파일을 가리키는 `url(…)`, 또는 쉼표로 구분한 `url(…), url(…), …` 목록. 일부 커서 이미지를 사용할 수 없을 때를 대비해 여러 이미지를 지정할 수 있습니다. 이미지를 사용할 경우 URL이 아닌 값(하나 이상의 키워드 값)을 목록의 맨 뒤에 붙여야 합니다. [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/cursor)를 참고하세요.
 - `<x>` `<y>` {{experimental_inline}}
 
   - : xy 좌표. 32 미만의 {{cssxref("&lt;number&gt;")}}여야 합니다.
@@ -349,5 +349,5 @@ cursor:
 
 ## 같이 보기
 
-- [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property)
+- [`cursor` 속성값으로 URL 사용하기](/ko/docs/Web/CSS/cursor)
 - {{cssxref("pointer-events")}}

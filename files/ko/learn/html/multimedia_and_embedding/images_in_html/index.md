@@ -46,7 +46,7 @@ l10n:
 [`alt` 속성은 아래에 설명되어 있습니다](#alternative_text).
 
 > [!NOTE]
-> 계속하기 전에 절대 URL, 상대 URL에 대해 복습하기 위해 [URL과 path에 대한 기본 지침](/ko/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url과_path에_대한_기본_지침)을 읽어보세요.
+> 계속하기 전에 절대 URL, 상대 URL에 대해 복습하기 위해 [URL과 path에 대한 기본 지침](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url과_path에_대한_기본_지침)을 읽어보세요.
 
 예를 들어, 당신의 이미지 파일 이름이 `dinosaur.jpg`이고, 당신의 HTML 페이지와 같은 디렉토리 아래에 위치한다면 이런 식으로 이미지를 삽입할 수 있습니다.
 

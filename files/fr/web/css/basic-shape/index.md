@@ -13,7 +13,7 @@ Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des
 
 Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs `<basic-shape>`. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.
 
-Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs)).
+Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Value_definition_syntax)).
 
 - `inset()`
 

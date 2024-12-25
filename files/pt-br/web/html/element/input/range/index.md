@@ -26,7 +26,7 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
     </tr>
     <tr>
       <td><strong>Events</strong></td>
-      <td>{{event("change")}} e {{event("input")}}</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
     </tr>
     <tr>
       <td><strong>Supported Common Attributes</strong></td>
@@ -340,6 +340,6 @@ Além dos exemplos variados acima, você encontrará as entradas de alcance demo
 
 ## See also
 
-- [HTML Forms](/pt-BR/docs/Learn/HTML/Forms)
+- [HTML Forms](/pt-BR/docs/Learn/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
 - [`<input type="number">`](/pt-BR/docs/Web/HTML/Element/input/number)

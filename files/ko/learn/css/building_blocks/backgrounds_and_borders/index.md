@@ -209,7 +209,7 @@ background-position:
 - `fixed`: 요소의 배경을 viewport 에 고정시켜, 페이지나 요소 내용을 스크롤할 때 스크롤되지 않도록 합니다. 항상 화면에서 동일한 위치에 유지됩니다.
 - `local`: 이 값은 나중에 추가 되었습니다 (Explorer 9 이상에서만 지원되지만, 다른 값은 IE4 이상에서 지원됨). 왜냐하면 `scroll` 값이 다소 혼란스럽고 많은 경우 실제로 원하는 것을 수행하지 않기 때문입니다. `local` 값은 배경을 설정된 요소로 고정하므로, 요소를 스크롤하면 배경과 함께 스크롤 됩니다.
 
-{{cssxref("background-attachment")}} 속성은 스크롤할 내용이 있을 때만 영향을 미치므로, 세 가지 값의 차이점을 보여주는 데모를 만들었습니다 — [background-attachment.html](http://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) 을 살펴보십시오 (여기에서 [소스 코드](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) 를 참조하십시오).
+{{cssxref("background-attachment")}} 속성은 스크롤할 내용이 있을 때만 영향을 미치므로, 세 가지 값의 차이점을 보여주는 데모를 만들었습니다 — [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) 을 살펴보십시오 (여기에서 [소스 코드](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds) 를 참조하십시오).
 
 ### 배경 속기 (shorthand) 속성 사용
 

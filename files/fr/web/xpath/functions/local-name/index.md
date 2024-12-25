@@ -24,11 +24,11 @@ Une chaîne.
 
 ### Notes
 
-- Le nom local est la partie locale d'un [nom étendu](http://www.w3.org/TR/xpath#dt-expanded-name).
+- Le nom local est la partie locale d'un [nom étendu](https://www.w3.org/TR/xpath#dt-expanded-name).
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-local-name).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
 
 ### Support Gecko
 

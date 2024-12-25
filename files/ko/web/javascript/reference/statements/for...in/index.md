@@ -137,7 +137,7 @@ investigating whether to remove the nonstandard behavior as well.
 - {{jsxref("Statements/for...of", "for...of")}} – a similar statement that iterates
   over the property _values_
 - {{jsxref("Statements/for", "for")}}
-- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usable with `for...of` syntax)
+- [Iterators and Generator functions](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) (usable with `for...of` syntax)
 - [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.hasOwn()")}}

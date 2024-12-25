@@ -150,6 +150,6 @@ Outras palavras chaves usadas nesta seção.
 ## Veja também
 
 - {{DOMxRef("Window.getSelection")}}, {{DOMxRef("Document.getSelection")}}, {{DOMxRef("Range")}}
-- Selection-related events: {{Event("selectionchange")}} and {{Event("selectstart")}}
+- Selection-related events: [`selectionchange`](/pt-BR/docs/Web/API/HTMLInputElement/selectionchange_event) and [`selectstart`](/pt-BR/docs/Web/API/Node/selectstart_event)
 - HTML inputs provide simpler helper APIs for working with selection (see {{DOMxRef("HTMLInputElement.setSelectionRange()")}})
 - {{DOMxRef("Document.activeElement")}}, {{DOMxRef("HTMLElement.focus()")}}, and {{DOMxRef("HTMLElement.blur()")}}

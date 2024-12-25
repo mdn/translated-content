@@ -21,7 +21,7 @@ O valor retornado por essa propriedade é um valor flutuante double como foi red
 
 ## Exemplo
 
-Este exemplo mostra as coordenadas do mouse quando você ativar o evento {{Event("mousemove")}}.
+Este exemplo mostra as coordenadas do mouse quando você ativar o evento [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event).
 
 ### HTML
 

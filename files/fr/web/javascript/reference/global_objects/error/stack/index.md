@@ -100,7 +100,7 @@ try {
 // @file:///C:/exemple.html:7:6
 ```
 
-Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) dans les docs [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), ainsi que ce [blog post](http://fitzgeraldnick.com/weblog/59/).
+Vous pouvez aussi utiliser la directive `//# sourceURL` pour nommer une source eval. Voir aussi [Déboguer des sources évaluées](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/debug_eval_sources/index.html) dans les docs [Débogueur](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html), ainsi que ce [blog post](https://fitzgeraldnick.com/weblog/59/).
 
 ## Spécifications
 

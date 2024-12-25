@@ -23,7 +23,7 @@ API Gamepad - это простой и последовательный спос
 - [`GamepadPose`](/ru/docs/Web/API/GamepadPose)
   - : Представляет собой позу контроллера (например, положение и ориентацию в трёхмерном пространстве) в случае контроллера WebVR. Это не используется в более новом стандарте WebXR.
 
-Сморите также [extensions to the Gamepad interface](/ru/docs/Web/API/Gamepad#Experimental_extensions_to_Gamepad) (расширения интерфейса геймпада) для функций, которые позволяют получить доступ к вышеуказанной информации.
+Сморите также [extensions to the Gamepad interface](/ru/docs/Web/API/Gamepad#experimental_extensions_to_gamepad) (расширения интерфейса геймпада) для функций, которые позволяют получить доступ к вышеуказанной информации.
 
 ### Расширения для других интерфейсов
 
@@ -35,7 +35,7 @@ API Gamepad - это простой и последовательный спос
 #### События окна
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : Представляет собой обработчик событий, который будет выполняться при подключении геймпада (когда срабатывает событие {{event('gamepadconnected')}}).
+  - : Представляет собой обработчик событий, который будет выполняться при подключении геймпада (когда срабатывает событие [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event)).
 - {{domxref("Window.ongamepaddisconnected")}}
   - : Представляет собой обработчик событий, который будет выполняться при отключении геймпада (когда срабатывает событие {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}).
 

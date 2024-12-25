@@ -15,7 +15,7 @@ Les modifications apportées à l'objet prototype de `Object` seront captées pa
 
 Le constructeur `Object` crée une enveloppe objet de la valeur passée en argument.
 
-- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il créera et renverra un objet vide.
+- Si la valeur est [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), il créera et renverra un objet vide.
 - Si la valeur est déjà un objet, il renverra la valeur.
 - Sinon, il renverra un objet dont le type objet correspond au type primitif de la valeur fournie.
 

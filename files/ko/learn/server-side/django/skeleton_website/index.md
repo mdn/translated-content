@@ -60,7 +60,7 @@ locallibrary/         # Website folder
 
 ## 프로젝트 만들기
 
-먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
+먼저 명령 프롬프트 또는 터미널을 열어서, 당신이 [virtual environment](/ko/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment) 안에 있는지 확인하고, 어디에 당신의 장고 앱을 (당신의 '문서'와 같이 찾기 쉬운 어딘가로 하세요) 저장하기 원하는지 탐색합니다. 그리고 당신의 새로운 웹사이트 폴더를 만드세요 (이 예제에서는: _locallibrary_). 그리고 cd 명령어를 사용하여 해당 폴더로 들어가세요:
 
 ```bash
 mkdir locallibrary

@@ -36,7 +36,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
   - : Isto define o recurso que você deseja buscar. Isto pode ser:
 
-    - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
+    - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
     - Um objeto {{domxref("Request")}}.
 
 - `init` {{optional_inline}}

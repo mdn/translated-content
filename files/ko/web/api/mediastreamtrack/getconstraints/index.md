@@ -7,7 +7,7 @@ slug: Web/API/MediaStreamTrack/getConstraints
 
 {{domxref("MediaStreamTrack")}} 인터페이스의 **`getConstraints()`** 메서드는 현재 트랙에서 마지막으로 호출한 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} 메서드로 설정한 제약을 포함한 객체를 반환합니다. 반환한 제약 값은 웹 사이트나 애플리케이션이 제약 속성에 지정한 특정 값 또는 값의 범위 조건을 나타냅니다.
 
-제약을 통해 미디어를 여러분의 선호 가이드라인에 맞출 수 있습니다. 예를 들면 고해상도 비디오를 선호하되 네트워크 사용량 폭증을 막기 위해 다소 낮은 프레임 레이트를 요구할 수 있습니다. 또한 이상적인 크기나, 허용 가능한 크기의 범위를 지정할 수도 있습니다. [기능, 제약, 설정](/ko/docs/Web/API/Media_Streams_API/Constraints) 문서의 [제약 적용](/ko/docs/Web/API/Media_Streams_API/Constraints#Applying_constraints) 항목에서 원하는 제약을 적용하는 방법에 대해 더 알아보세요.
+제약을 통해 미디어를 여러분의 선호 가이드라인에 맞출 수 있습니다. 예를 들면 고해상도 비디오를 선호하되 네트워크 사용량 폭증을 막기 위해 다소 낮은 프레임 레이트를 요구할 수 있습니다. 또한 이상적인 크기나, 허용 가능한 크기의 범위를 지정할 수도 있습니다. [기능, 제약, 설정](/ko/docs/Web/API/Media_Capture_and_Streams_API/Constraints) 문서의 [제약 적용](/ko/docs/Web/API/Media_Capture_and_Streams_API/Constraints#applying_constraints) 항목에서 원하는 제약을 적용하는 방법에 대해 더 알아보세요.
 
 ## 구문
 

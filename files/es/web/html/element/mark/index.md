@@ -27,7 +27,7 @@ El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado
     </tr>
     <tr>
       <th>Omisión de etiquetas</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Ninguna, tanto la etiqueta inicial como la final son obligatorias.</td>
     </tr>
     <tr>
       <th>Elementos padre permitidos</th>
@@ -64,7 +64,7 @@ El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado
 
 ## Atributos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Atributos_Globales), comunes a todos los elementos.
+Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
 
 ## Notas de uso
 
@@ -129,4 +129,4 @@ El resultado se vería:
 
 ## Consulta también
 
-- Otros [elementos de la semántica a nivel de texto](/en/HTML/Text-level_semantics_elements) : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }} , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.
+- Otros [elementos de la semántica a nivel de texto](/es/docs/HTML/Text-level_semantics_elements) : {{ HTMLElement("a") }}, {{ HTMLElement("em") }}, {{ HTMLElement("strong") }}, {{ HTMLElement("cite") }} , {{ HTMLElement("q") }} , {{ HTMLElement("dfn") }}, {{ HTMLElement("abbr") }}, {{ HTMLElement("time") }} , {{ HTMLElement("code") }} ,{{ HTMLElement("var") }}, {{ HTMLElement("samp") }} ,{{ HTMLElement("kbd") }} ,{{ HTMLElement("sub") }} , {{ HTMLElement("sup") }} ,{{ HTMLElement("i") }} , {{ HTMLElement("b") }}, {{ HTMLElement("mark") }} , {{ HTMLElement("ruby") }} , {{ HTMLElement("rp") }} , {{ HTMLElement("rt") }} , {{ HTMLElement("bdo") }}, {{ HTMLElement("span") }} , {{ HTMLElement("br") }} , {{ HTMLElement("wbr") }}.
