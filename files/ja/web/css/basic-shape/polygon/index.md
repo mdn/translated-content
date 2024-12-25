@@ -2,7 +2,7 @@
 title: polygon()
 slug: Web/CSS/basic-shape/polygon
 l10n:
-  sourceCommit: 9760ffbbd1720d09b7d36853edd421fe5447dbc4
+  sourceCommit: c5613708408042af5889be39cfb203799879175b
 ---
 
 {{CSSRef}}
@@ -14,7 +14,6 @@ l10n:
 ## 構文
 
 ```css-nolint
-
 /* 座標リストとして指定 */
 /* polygon(<length-percentage> <length-percentage>, ... )*/
 polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
@@ -35,7 +34,7 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ### 値
 
 - [`<fill-rule>`](/ja/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
-  - : オプションで `nonzero` (省略時の既定値) または `evenodd` のどちらかであり、塗りつぶしルールを指定します。
+  - : オプションで `nonzero` （省略時の既定値）または `evenodd` のどちらかであり、塗りつぶしルールを指定します。
 - {{cssxref("length-percentage")}}
   - : 多角形の各頂点は `<length-percentage>` の値の組で表します。この値は図形の[参照ボックス](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#参照ボックス)からの相対座標で頂点の x/y 座標を表します。
 
@@ -52,10 +51,11 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 <code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
 上記のように指定された場合、コンテナーの座標をマッピングすると、次のように視覚化できます。
-| 軸 | 点 1 | 点 2 | 点 3 | 点 4 | 点 n |
-| — | ---- | ---- | ---- | ---- | ------------- |
-| x | 0% | 100% | 100% | 0% | x<sub>n</sub> |
-| y | 0% | 0% | 100% | 100% | y<sub>n</sub> |
+
+| 軸名 | 点 1 | 点 2 | 点 3 | 点 4 | 点 n          |
+| ---- | ---- | ---- | ---- | ---- | ------------- |
+| x    | 0%   | 100% | 100% | 0%   | x<sub>n</sub> |
+| y    | 0%   | 0%   | 100% | 100% | y<sub>n</sub> |
 
 その座標を CSS の {{cssxref("clip-path")}} プロパティに、 `polygon()` 関数を使用して適用します。
 
@@ -100,7 +100,7 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 
 ### shape-outside のための多角形を設定
 
-この例では、 {{cssxref("shape-outside")}} プロパティを使用して、テキストが従う図形を作成しています。
+この例では、 {{cssxref("shape-outside")}} プロパティを使用して、テキストが沿う位置の図形を作成しています。
 
 ```html
 <div class="box">
