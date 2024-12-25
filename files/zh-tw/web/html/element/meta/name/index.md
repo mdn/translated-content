@@ -21,7 +21,7 @@ HTML 規範定義了以下標準後設資料名稱：
   > - 簡單的網頁不應該定義 `application-name`。
 
 - `author`：文件作者的名稱。
-- `description`：頁面內容的簡短且準確的摘要。搜索引擎如 [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) 可能使用此欄位來控制網頁在搜索結果中的顯示。
+- `description`：頁面內容的簡短且準確的摘要。搜尋引擎如 [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) 可能使用此欄位來控制網頁在搜尋結果中的顯示。
 - `generator`：生成此頁面的軟體標識。
 - `keywords`：與頁面內容相關的關鍵詞，以逗號分隔。
 - `referrer`：控制從文件發出的 HTTP {{httpheader("Referer")}} 標頭：
@@ -212,4 +212,4 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
 ## 參見
 
 - [Viewport `<meta>` 標籤](/zh-TW/docs/Web/HTML/Viewport_meta_tag)
-- [HTML 的後設資料：`<meta>` 元素](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element) 在 [HTML 中的標頭內容](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [HTML 的後設資料：`<meta>` 元素](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_meta_元素) 在 [HTML 中的標頭內容](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
