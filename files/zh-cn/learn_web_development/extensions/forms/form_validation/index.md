@@ -8,7 +8,7 @@ original_slug: Learn/Forms/Form_validation
 
 表单校验帮助我们确保用户以正确格式填写表单数据，确保提交的数据能使我们的应用程序正常工作。本文将告诉你需要了解的有关表单校验的内容。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

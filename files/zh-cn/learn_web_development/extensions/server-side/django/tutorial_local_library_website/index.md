@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 我们实战教程系列的第一篇教程会解释你将学到什么。并提供一个“本地图书馆”的例子作为概述。在接下来的教程里，我们会不断完善和改进这个网站。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

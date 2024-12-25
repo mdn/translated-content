@@ -8,7 +8,7 @@ original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_c
 
 这篇文章介绍了所有项目最重要的第一步：确定你想要做什么
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

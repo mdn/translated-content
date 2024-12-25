@@ -8,7 +8,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 
 本文作为本模块的开篇阐述了究竟什么是“无障碍” — 主要包括哪些用户群体是我们所需要和为什么需要考虑的，不同用户使用哪些工具与网页交互，以及我们在网站开发流程中如何构建无障碍。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

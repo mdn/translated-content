@@ -8,7 +8,7 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 
 通过在前几节课程中学到的知识，你应该学会了用 CSS 组织一个简单的文本文件，并且在其中添加自己的 CSS 样式。本节中你将实现这一功能。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

@@ -8,7 +8,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introdu
 
 在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">前提：</th>

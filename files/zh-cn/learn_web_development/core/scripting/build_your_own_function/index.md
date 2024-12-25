@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 
 我们在之前的文章里大多学的是理论，这篇文章将提供一个练习的机会——你将练习构建一些你自己风格的函数。在练习过程中，我们也会解释一些针对函数的更深层的实用细节。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先修知识：</th>
