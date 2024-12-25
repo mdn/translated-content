@@ -9,6 +9,8 @@ slug: Web/SVG/Element/a
 
 SVG の `<a>` 要素はコンテナーですので、 (HTML のような) テキストを囲むものだけでなく、図形を囲むリンクを生成することもできます。
 
+## 例
+
 ```css hidden
 @namespace svg url(http://www.w3.org/2000/svg);
 html,
@@ -57,7 +59,7 @@ svg|a:active {
 }
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample('例', 100, 100)}}
 
 > [!WARNING]
 > この要素は [HTML の `<a>` 要素](/ja/docs/Web/HTML/Element/a)と同じタグ名なので、 `a` を CSS や {{domxref("Document.querySelector", "querySelector")}} で選択すると、誤った種類の要素に適用してしまう可能性があります。 [`@namespace` 規則](/ja/docs/Web/CSS/@namespace)で二つを区別してみてください。
