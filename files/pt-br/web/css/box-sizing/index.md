@@ -3,6 +3,8 @@ title: box-sizing
 slug: Web/CSS/box-sizing
 ---
 
+{{CSSRef}}
+
 A propriedade CSS box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos. É possível usar essa propriedade para emular o comportamento dos navegadores (browsers) que não suportam corretamente a especificação da propriedade CSS box model.
 
 ## Sintaxe

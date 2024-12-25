@@ -3,6 +3,8 @@ title: O que são hyperlinks?
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 Neste artigo, veremos o que são hiperlinks e por que eles são importantes.
 
 <table class="learn-box standard-table">

@@ -3,6 +3,8 @@ title: Requisições síncronas e assíncronas
 slug: Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 ---
 
+{{DefaultAPISidebar("XMLHttpRequest API")}}
+
 `XMLHttpRequest` suporta comunicações síncronas e assíncronas. No geral, entretando, requisições assíncronas devem prevalecer sobre requisições síncronas por questões de performance.
 
 Requisições síncronas podem bloquear a execução do codigo, gerando um "congelamento" da tela, prejudicando a experiência do usuário.

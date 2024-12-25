@@ -3,6 +3,8 @@ title: <main>
 slug: Web/HTML/Element/main
 ---
 
+{{HTMLSidebar}}
+
 ## Resumo
 
 O elemento **`<main>`** define o conteúdo principal dentro do {{HTMLElement("body")}} em seu documento ou aplicação. Entende-se como conteúdo principal aquele relacionado diretamente com o tópico central da página ou com a funcionalidade central da aplicação. O mesmo deverá ser único na página, ou seja, dentro do elemento \<main> não deverão ser incluidas seções da página que sejam comuns a todo o site ou aplicação, tais como mecanismos de navegação, informações de copyright, logotipo e campos de busca (a não ser, é claro, caso a função principal do documento seja fazer algum tipo de busca).
