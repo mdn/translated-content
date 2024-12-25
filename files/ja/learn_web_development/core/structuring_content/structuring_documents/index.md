@@ -1,12 +1,13 @@
 ---
 title: 文書とウェブサイトの構造
 slug: Learn_web_development/Core/Structuring_content/Structuring_documents
-original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 l10n:
-  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 {{glossary("HTML")}} は、ページの個々の部分（「段落」や「画像」など）を定義するだけでなく、ウェブサイトの領域を定義するために使用される多数のブロックレベル要素（「ヘッダー」、「ナビゲーションメニュー」、「メインコンテンツ列」など）も備えています。この記事では、基本的なウェブサイト構造を計画し、この構造を表す HTML を記述する方法について説明します。
 
@@ -15,36 +16,35 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML を始めよう</a
-        >で説明されている基本的な HTML の理解。
-        <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >HTML テキストの基礎</a
-        >で説明されている HTML テキストの書式設定。
-        <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
-          >ハイパーリンクの作成</a
-        >で説明されている、ハイパーリンクのしくみ。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >見出しと段落</a
+        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >リスト</a
+        >などのテキストレベルの意味付け。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        意味づけタグを使用して文書を構造化する方法と、簡単なウェブサイトの構造を作り出す方法を学びます。
+        <ul>
+          <li>HTML は共通の意味づけ構造要素をもち、例えば、<code>&lt;main&gt;</code>、<code>&lt;section&gt;</code>、<code>&lt;article&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;nav&gt;</code>、<code>&lt;footer&gt;</code> などがあります。また、それらを正しく使用する方法についても説明します。</li>
+          <li>意味づけされた要素を適切な場所で使用する必要性、つまり、ブロックレベルのコンテナーが要求される場所であればどこでも <code>&lt;div&gt;</code> 要素を使用するのではなく、その利点（アクセシビリティの向上など）について説明します。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## 文書の基本部分
+## 文書の基本的な構造
 
 ウェブページはひとつひとつの見た目が異なるものですが、全画面表示のビデオやゲームを表示している場合やアートプロジェクトの一部分である場合や単にまずく構成されている場合を除いて、よく似た標準コンポーネントを共有している傾向にあります。
 
 - ヘッダー:
   - : 通常は大きな見出しやロゴの付いた上部の大きな部分。通常、ウェブページ間を移動しても、ウェブサイトに関する主な共通情報がととどまっている場所です。
 - ナビゲーションバー:
-  - : サイトの主要部分へのリンク。通常はメニューボタン、リンク、またはタブで表されます。ヘッダーと同様に、このコンテンツは通常、あるウェブページから別のウェブページへと一貫性を保っています — ウェブサイト上でナビゲーションが矛盾していると、ユーザーが混乱して欲求不満になるだけです。多くのウェブデザイナーは、ナビゲーションバーを個々のコンポーネントではなくヘッダーの一部と見なしていますが、これは必須ではありません。実際、スクリーンリーダーは 2 つの機能を別々にした方が読みやすくなるため、2 つの機能を別々に使用するほうが[アクセシビリティ](/ja/docs/Learn/Accessibility)に優れていると主張する人もいます。
+  - : サイトの主要部分へのリンク。通常はメニューボタン、リンク、またはタブで表されます。ヘッダーと同様に、このコンテンツは通常、あるウェブページから別のウェブページへと一貫性を保っています — ウェブサイト上でナビゲーションが矛盾していると、ユーザーが混乱して欲求不満になるだけです。多くのウェブデザイナーは、ナビゲーションバーを個々のコンポーネントではなくヘッダーの一部と見なしていますが、これは必須ではありません。実際、スクリーンリーダーは 2 つの機能を別々にした方が読みやすくなるため、2 つの機能を別々に使用するほうが[アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)に優れていると主張する人もいます。
 - メインコンテンツ:
   - : 中央の大きな領域で、指定されたウェブページの固有の内容のほとんどを含みます。例えば、見たい動画、読んでいる本編、見たい地図、ニュースの見出しなどです。この部分は、間違いなくページごとに異なるウェブサイトとなります。
 - サイドバー:
@@ -57,9 +57,7 @@ l10n:
 ![大見出し、ナビゲーションメニュー、本文、サイドバー、フッターのシンプルなウェブサイト構成例です。](sample-website.png)
 
 > [!NOTE]
-> 上の画像は、HTML で定義することができる文書の主要な節を示したものです。しかし、ここで示すページのレイアウトや色、フォントなどの「見た目」は、[CSS](/ja/docs/Learn/CSS) を HTML に適用することで実現されています。
->
-> このモジュールでは CSS は教えませんが、HTMLの基本的な理解ができたら、[CSS の第一歩](/ja/docs/Learn/CSS/First_steps)モジュールに進んで、サイトのスタイル設定を始めてみてください。
+> 上の画像は、HTML で定義することができる文書の主要な節を示したものです。しかし、ここで示すページのレイアウトや色、フォントなどの「見た目」は、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics) を HTML に適用することで実現されています。
 
 ## コンテンツを構造化する HTML
 
@@ -67,10 +65,10 @@ l10n:
 
 なぜならビジュアルがすべてを伝えるわけではないからです。私たちはナビゲーションメニューや関連リンクなど、コンテンツの最も有用な部分に目の見えるユーザーの注意を引くために、色とフォントサイズを使用します。しかし、例えば「ピンク」や「大きいフォント」のような概念があまり有用ではないと思われる視覚障碍者についてはどうでしょうか。
 
-> **メモ:** [およそ 8% の男性と 0.5% の女性](http://www.color-blindness.com/)が色覚障碍者です。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人の割合です。視覚障碍のある人々は世界の人口の約 4〜5 ％を占めています（2015 年には[全世界で 9 億 4,000 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 75 億人](https://en.wikipedia.org/wiki/World_population#/media/File:World_population_history.svg)でした）。
+> **メモ:** [およそ 8% の男性と 0.5% の女性](http://www.color-blindness.com/)が色覚障碍者です。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人の割合です。視覚障碍のある人々は世界の人口の約 4〜5 ％を占めています（2015 年には[全世界で 9 億 4,000 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 75 億人](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)でした）。
 
 HTML コードでは、それらの*機能*に基づいてコンテンツのセクションをマークアップすることができます — スクリーンリーダーのような支援技術はそれらの要素を認識し、「メインナビゲーションを見つける」や「メインコンテンツを見つける」といった作業を手助けすることができます。
-コースの前半で述べたように、[適切な役割に適切な要素構造とセマンティクスを使用しないことによる影響](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#なぜ構造が必要なのか)は多くあります。
+コースの前半で述べたように、[適切な役割に適切な要素構造とセマンティクスを使用しないことによる影響](/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#なぜ構造が必要なのか)は多くあります。
 
 このような意味づけしたマークアップを実装するために、HTML には、そのようなセクションを表すために使用できる専用のタグが用意されています。次に例を示します。
 
@@ -82,7 +80,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 
 ### アクティブラーニング: コード例を見てみる
 
-上記の例は次のコードで表されています ([この例は GitHub リポジトリーにもあります](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html))。上の例を見てから、下のリストを見て、どの部分がビジュアルのどの部分を構成しているかを確認してください。
+上記の例は次のコードで表されています ([この例は GitHub リポジトリーにもあります](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html))。上の例を見てから、下のリストを見て、どの部分がビジュアルのどの部分を構成しているかを確認してください。
 
 ```html
 <!doctype html>
@@ -99,7 +97,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
   </head>
 
   <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
+    <!-- The main header used across all the pages of our website -->
 
     <header>
       <h1>Header</h1>
@@ -113,7 +111,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
         <li><a href="#">Contact</a></li>
       </ul>
 
-      <!-- A Search form is another common non-linear way to navigate through a website. -->
+      <!-- A Search form: another common non-linear way to navigate through a site. -->
 
       <form>
         <input type="search" name="q" placeholder="Search query" />
@@ -121,9 +119,9 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
       </form>
     </nav>
 
-    <!-- Here is our page's main content -->
+    <!-- Our page's main content -->
     <main>
-      <!-- It contains an article -->
+      <!-- An article -->
       <article>
         <h2>Article heading</h2>
 
@@ -135,35 +133,41 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
           congue enim, ut porta lorem lacinia consectetur.
         </p>
 
-        <h3>Subsection</h3>
+        <section>
+          <h3>Subsection</h3>
 
-        <p>
-          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-        </p>
+          <p>
+            Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
+            gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
+            dolor.
+          </p>
 
-        <p>
-          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
-        </p>
+          <p>
+            Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+            dapibus, enim sit amet elit pharetra tincidunt feugiat nist
+            imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
+            odio eros.
+          </p>
+        </section>
 
-        <h3>Another subsection</h3>
+        <section>
+          <h3>Another subsection</h3>
 
-        <p>
-          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-          soclis natoque penatibus et manis dis parturient montes, nascetur
-          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-          facilisis semper ac in est.
-        </p>
+          <p>
+            Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+            soclis natoque penatibus et manis dis parturient montes, nascetur
+            ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
+            sem facilisis semper ac in est.
+          </p>
 
-        <p>
-          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-          diam iaculis velit, is fringille sem nunc vet mi.
-        </p>
+          <p>
+            Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+            tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+            ultricied. Curabitur ornare, ligula semper consectetur sagittis,
+            nisi diam iaculis velit, is fringille sem nunc vet mi.
+          </p>
+        </section>
       </article>
 
       <!-- the aside content can also be nested within the main content -->
@@ -180,7 +184,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
       </aside>
     </main>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
+    <!-- The footer that is used across all the pages of our website -->
 
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
@@ -197,9 +201,9 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 
 - {{HTMLElement('main')}} は、このページに固有のコンテンツ用です。`<main>` はページごとに 1 回だけ使用し、 {{HTMLElement('body')}} の中に直接入れてください。理想的には、これを他の要素の中に入れ子にしないでください。
 - {{HTMLElement('article')}} は、ページの残りの部分（例えば、単一のブログ記事）なしでそれ自体が意味をなす関連コンテンツのブロックを囲みます。
-- {{HTMLElement('section')}} は `<article>` に似ていますが、1 つの機能（例：ミニマップ、記事の見出しと要約のセット）を構成するページの単一部分をグループ化するためのものです。各セクションを[見出し](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#なぜ構造が必要なのか)で始めるのがベストプラクティスです。文脈に応じて、`<article>` を異なる `<section>` に、または `<section>` を異なる `<article>` に分割することもできます。
+- {{HTMLElement('section')}} は `<article>` に似ていますが、1 つの機能（例：ミニマップ、記事の見出しと要約のセット）を構成するページの単一部分をグループ化するためのものです。各セクションを[見出し](/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)で始めるのが最善の手法です。文脈に応じて、`<article>` を異なる `<section>` に、または `<section>` を異なる `<article>` に分割することもできます。
 - {{HTMLElement('aside')}} には、メインコンテンツに直接関連しないコンテンツが含まれていますが、それに間接的に関連する追加情報（用語集の項目、著者略歴、関連リンクなど）を提供することができます。
-- {{HTMLElement('header')}}は、導入部のコンテンツ群を表します。もしそれが {{HTMLElement('body')}} の子であれば、ウェブページのグローバルヘッダーを定義します。しかし、 {{HTMLElement('article')}} または {{HTMLElement('section')}} の子であれば、そのセクションのための特定のヘッダーを定義します（このことを[タイトルや見出し](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#タイトルをつける)と混同しないでください）。
+- {{HTMLElement('header')}}は、導入部のコンテンツ群を表します。もしそれが {{HTMLElement('body')}} の子であれば、ウェブページのグローバルヘッダーを定義します。しかし、 {{HTMLElement('article')}} または {{HTMLElement('section')}} の子であれば、そのセクションのための特定のヘッダーを定義します（このことを[タイトルや見出し](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#タイトルをつける)と混同しないでください）。
 - {{HTMLElement('nav')}} はページの主なナビゲーション機能を含みます。二次リンクなどはナビゲーションに入りません。
 - {{HTMLElement('footer')}} はページの終了コンテンツのグループを表します。
 
@@ -207,9 +211,9 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 
 ### 意味的ではないラッパー
 
-時にはいくつかのアイテムをまとめたり、コンテンツをラップしたりするための理想的な意味的要素が見つからない場合があります。いくつかの {{glossary("CSS")}} や {{glossary("JavaScript")}} を持つ単一のエンティティとしてそれらすべてに影響を与えるために単に要素のセットを一緒にグループ化したいことがあります。このような場合に、 HTML は {{HTMLElement("div")}} と {{HTMLElement("span")}} 要素を提供します。これらを適切な [`class`](/ja/docs/Web/HTML/Global_attributes#class) 属性と一緒に使用して、簡単にターゲティングできるようにそれらに何らかの種類のラベルを提供することをお勧めします。
+時にはいくつかのアイテムをまとめたり、コンテンツをラップしたりするための理想的な意味的要素が見つからない場合があります。いくつかの {{glossary("CSS")}} や {{glossary("JavaScript")}} を持つ単一のエンティティとしてそれらすべてに影響を与えるために単に要素のセットを一緒にグループ化したいことがあります。このような場合に、 HTML は {{HTMLElement("div")}} と {{HTMLElement("span")}} 要素を提供します。これらを適切な [`class`](/ja/docs/Web/HTML/Global_attributes/class) 属性と一緒に使用して、簡単にターゲティングできるようにそれらに何らかの種類のラベルを提供することをお勧めします。
 
-{{HTMLElement("span")}} はインラインの非意味的要素です。コンテンツをラップするより良い意味的なテキスト要素が思いつかないか、または特定の意味を加えたくない場合にだけ使うべきです。例えば、
+{{HTMLElement("span")}} はインラインの意味的ではない要素です。コンテンツをラップするより良い意味的なテキスト要素が思いつかないか、または特定の意味を加えたくない場合にだけ使うべきです。例えば、
 
 ```html
 <p>
@@ -263,7 +267,7 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 </p>
 ```
 
-`<br>` 要素がないと、段落は 1 行で表示されます (コースの前半で述べたように、[HTML はほとんどの空白を無視します](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_内のホワイトスペース))。コード内でこれらを使用すると、このマークアップは次のようにレンダリングされます。
+`<br>` 要素がないと、段落は 1 行で表示されます (コースの前半で述べたように、[HTML はほとんどの空白を無視します](/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_内のホワイトスペース))。コード内でこれらを使用すると、このマークアップは次のようにレンダリングされます。
 
 {{EmbedLiveSample('br_the_line_break_element', '100%', 150)}}
 
@@ -309,6 +313,6 @@ HTML コードでは、それらの*機能*に基づいてコンテンツのセ�
 
 ## まとめ
 
-この時点であなたはウェブページ/サイトをどのように構成するかについてより良い考えを持っているはずです。このモジュールの最後の記事では、[HTML をデバッグする](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)方法を学びます。
+この時点で、あなたはウェブページ/サイトをどのように構成するかについてより良い考えを持っているはずです。このモジュールの次の記事では、高度なテキストのテクニックを見ていきます。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
