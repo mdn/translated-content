@@ -27,7 +27,7 @@ valueOf()
 
 ## 描述
 
-{{jsxref("Boolean")}} 的 `valueOf()` 方法返回 `Boolean` 对象或字面量 `Boolean` 的原始值作为布尔数据类型。
+{{jsxref("Boolean")}} 的 `valueOf()` 方法返回 `Boolean` 对象或 `Boolean` 字面量的原始值作为布尔数据类型。
 
 该方法通常在 JavaScript 内部调用，而不是在代码中显式调用。
 
