@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当通知被关闭时触发（无论是系统关闭还是用户关闭）。
+当通知被关闭（无论是系统关闭还是用户关闭）时触发。
 
 ## 语法
 
@@ -20,11 +20,11 @@ browser.notifications.onClosed.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到这个事件。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听这个事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到这个事件。若在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。若正在监听，返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
@@ -32,10 +32,10 @@ browser.notifications.onClosed.hasListener(listener)
 
 - `listener`
 
-  - : 当这个事件发生时调用的函数。该函数需要你传递下列参数：
+  - : 当此事件发生时调用的函数。该函数需要你传递下列参数：
 
     - `notificationId`
-      - : `string`。要监听关闭事件的通知的 ID。
+      - : `string`。被关闭的通知的 ID。
     - `byUser`
       - : `boolean`。如果通知是由用户关闭的，则为 `true`，如果是由系统关闭的，则为 `false`。在 Firefox 中该参数不受支持。
 
@@ -45,7 +45,7 @@ browser.notifications.onClosed.hasListener(listener)
 
 ## 示例
 
-在这个简单的示例中，我们添加一个监听器到 `notifications.onClosed` 事件，以监听系统通知被关闭。当发生这种情况时，我们将打印一段适当的消息到控制台中。
+在这个简单的示例中，我们为 `notifications.onClosed` 事件添加一个监听器，以监听系统通知的关闭。当发生这种情况时，我们将打印一段适当的消息到控制台中。
 
 ```js
 browser.notifications.onClosed.addListener((notificationId) => {
