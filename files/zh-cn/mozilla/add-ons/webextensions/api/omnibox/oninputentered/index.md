@@ -25,15 +25,15 @@ browser.omnibox.onInputEntered.hasListener(listener)
 事件有三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到这个事件。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听这个事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到这个事件。若在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。若正在监听，返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
-该监听器函数接收两个参数：字符串 `text` 以及 {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}。
+该监听器函数需要传递两个参数：字符串 `text` 以及 {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}。
 
 ### 参数
 
