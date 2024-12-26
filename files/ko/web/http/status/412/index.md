@@ -1,8 +1,6 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
-page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.412
 l10n:
   sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
