@@ -122,10 +122,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 SVG に対応していないブラウザー（IE 8 以前、Android 2.3 以前）では、 `src` 属性から PNG または JPG を参照し、 [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性（最近のブラウザーのみが認識する）を使用して SVG を参照するようにすることができます。 この場合、対応しているブラウザーのみが SVG を読み込みます。古いブラウザーは代わりに PNG を読み込みます。
 
 ```html
-<img
-  src="equilateral.png"
-  alt="辺が等しい三角形"
-  srcset="equilateral.svg" />
+<img src="equilateral.png" alt="辺が等しい三角形" srcset="equilateral.svg" />
 ```
 
 以下に示すように、 SVG を CSS の背景画像として使用することもできます。 以下のコードでは、古いブラウザーでは理解できる PNG を使用しますが、新しいブラウザーでは SVG を読み込みます。
