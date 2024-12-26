@@ -234,5 +234,5 @@ TN99 8ZZ
 - {{htmlelement("select")}} 元素。
 - {{htmlelement("textarea")}} 元素。
 - {{htmlelement("form")}} 元素。
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。

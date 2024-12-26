@@ -26,13 +26,13 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 
 唯一一個強制的鍵只有 `default_icon`。
 
-指定工具列按鈕的方式有兩種： 有[彈出視窗](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Popups)跟沒有[彈出視窗](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Popups)。如果你不指定彈出視窗，當用戶點擊按鈕事件會被傳送到套件，而套件透過 [`browserAction.onClicked`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked) 監聽：
+指定工具列按鈕的方式有兩種： 有[彈出視窗](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)跟沒有[彈出視窗](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)。如果你不指定彈出視窗，當用戶點擊按鈕事件會被傳送到套件，而套件透過 [`browserAction.onClicked`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked) 監聽：
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-如果你指定彈出視窗，點擊事件不會被傳送，取而代之當用戶點擊按鈕時彈出視窗會被展開。用戶可以跟彈出視窗互動且當用戶點擊了彈出視窗外側它會自動關閉。更多建立與管理彈出視窗的細節請查看[彈出視窗](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Popups)文章。
+如果你指定彈出視窗，點擊事件不會被傳送，取而代之當用戶點擊按鈕時彈出視窗會被展開。用戶可以跟彈出視窗互動且當用戶點擊了彈出視窗外側它會自動關閉。更多建立與管理彈出視窗的細節請查看[彈出視窗](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)文章。
 
 註： 你的套件只能有一個工具列按鈕。
 

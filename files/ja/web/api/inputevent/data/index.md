@@ -1,9 +1,9 @@
 ---
 title: "InputEvent: data プロパティ"
+short-title: data
 slug: Web/API/InputEvent/data
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
-short-title: data
 ---
 
 {{APIRef("UI Events")}}

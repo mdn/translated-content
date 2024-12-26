@@ -126,7 +126,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 ##### Path 的默認值
 
-如果未設置 `Path` 屬性，則其默認值從設置 Cookie 的 URI 的[路徑](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#path_to_resource)計算，如下所示：
+如果未設置 `Path` 屬性，則其默認值從設置 Cookie 的 URI 的[路徑](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL#path_to_resource)計算，如下所示：
 
 - 如果路徑為空，不以 `"/"` 開頭，或者包含不超過一個 `"/"` 字符，則 `Path` 的默認值為 `"/"`。
 - 否則，`Path` 的默認值是從開始到最後一個 `"/"` 字符之前的路徑。

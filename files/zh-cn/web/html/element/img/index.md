@@ -18,7 +18,7 @@ slug: Web/HTML/Element/img
 
 - [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 [`crossorigin`](#crossorigin) 和 [`referrerpolicy`](#referrerpolicy) 属性。
 - 使用 [`width`](#width) 和 [`height`](#height) 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
-- 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
+- 使用 [`sizes`](#sizes) 和 [`srcset`](#srcset) 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程）。
 
 ## 支持的图像格式
 
@@ -142,7 +142,7 @@ Web 最常用的图像格式是：
 
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：若未使用 {{Glossary("TLS")}}（{{glossary("HTTPS")}}）导航到源站，则不发送 `Referer` 标头。
-    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`：发送到其他来源的来源地址会被限制为协议、主机和端口。同源导航仍将包含路径。
     - `same-origin`：仅{{Glossary("Same-origin policy", "同源")}}请求发送来源地址，而跨源请求则不包含来源地址信息。
     - `strict-origin`：仅在协议安全级别保持不变（HTTPS→HTTPS）的情况下将文档的来源作为来源地址发送。而在目标的安全性降低（HTTPS→HTTP）时则不发送来源地址。
@@ -176,7 +176,7 @@ Web 最常用的图像格式是：
 
     在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。
 
-    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程。
+    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)教程。
 
 - `width`
   - : 图像的宽度，以像素为单位。必须是没有单位的整数。
@@ -460,8 +460,8 @@ Web 最常用的图像格式是：
 
 ## 参见
 
-- [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
-- [响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
 - 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。

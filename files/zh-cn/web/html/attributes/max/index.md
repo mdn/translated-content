@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`max`** 属性定义了输入字段所能接受的最大值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 大于此值，则该元素将不能通过[校验](/zh-CN/docs/Learn/Forms/Form_validation)。此值必须大于等于 [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 属性的值。如果存在 `max` 属性但未指定或无效，则 `max` 值不会被应用。如果 `max` 属性有效，并且非空值大于 `max` 属性所允许的最大值，则约束验证将阻止表单提交。
+**`max`** 属性定义了输入字段所能接受的最大值。如果元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 大于此值，则该元素将不能通过[校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)。此值必须大于等于 [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 属性的值。如果存在 `max` 属性但未指定或无效，则 `max` 值不会被应用。如果 `max` 属性有效，并且非空值大于 `max` 属性所允许的最大值，则约束验证将阻止表单提交。
 
 max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "date")}}、{{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/time", "time")}}、{{HTMLElement("input/datetime-local", "datetime-local")}}、{{HTMLElement("input/number", "number")}} 和 {{HTMLElement("input/range", "range")}} 类型，以及 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素。它是一个数值，用于指定表单控件被认为有效的最大正值。
 
@@ -137,7 +137,7 @@ max 属性适用于数值类型的输入，包括 {{HTMLElement("input/date", "d
 - [`min`](/zh-CN/docs/Web/HTML/Attributes/min)
 - 其他 meter 属性：[`low`](/zh-CN/docs/Web/HTML/Attributes/low)、[`high`](/zh-CN/docs/Web/HTML/Attributes/high)、[`optimum`](/zh-CN/docs/Web/HTML/Attributes/optimum)
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [表单校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

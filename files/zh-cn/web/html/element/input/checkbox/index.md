@@ -307,4 +307,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - 基于当前状态的 {{cssxref(":checked")}} 和 {{cssxref(":indeterminate")}} CSS 选择器，可供赋予样式
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

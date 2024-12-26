@@ -435,5 +435,5 @@ const {self, prot} = obj;
 
 ## 參見
 
-- [Assignment operators](/zh-TW/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
+- [Assignment operators](/zh-TW/docs/Web/JavaScript/Reference/Operators#assignment_operators)
 - ["ES6 in Depth: Destructuring" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)

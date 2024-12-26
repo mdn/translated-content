@@ -224,5 +224,5 @@ td {
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [文本和字体样式基础](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [文本和字体样式基础](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块

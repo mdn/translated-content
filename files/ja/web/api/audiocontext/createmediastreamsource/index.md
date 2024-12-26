@@ -1,9 +1,9 @@
 ---
 title: "AudioContext: createMediaStreamSource() メソッド"
+short-title: createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 l10n:
   sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
-short-title: createMediaStreamSource()
 ---
 
 {{ APIRef("Web Audio API") }}

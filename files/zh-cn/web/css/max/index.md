@@ -88,4 +88,4 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ## 範例
 
-下面的範例中，重疊三個背景：Firefox logo、[線性漸層](/zh-TW/docs/CSS/linear-gradient)、一張泡泡的圖片
+下面的範例中，重疊三個背景：Firefox logo、[線性漸層](/zh-TW/docs/Web/CSS/gradient/linear-gradient)、一張泡泡的圖片
 
 ```css
 .multi_bg_example {
