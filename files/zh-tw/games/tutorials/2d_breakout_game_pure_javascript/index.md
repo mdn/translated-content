@@ -34,7 +34,7 @@ l10n:
 
 從純 JavaScript 開始是獲得網頁遊戲開發扎實知識的最佳方式。之後，你可以選擇任何你喜歡的框架並將其用於你的項目。框架只是用 JavaScript 語言構建的工具；所以即使你計劃使用它們，也最好先了解語言本身，以便知道底層發生了什麼。框架加快了開發時間，並幫助處理遊戲中無聊的部分，但如果某些東西沒有按預期工作，你可以嘗試調試它或僅用純 JavaScript 編寫自己的解決方案。
 
-> [!備註]
+> [!NOTE]
 > 這系列文章可以用作動手遊戲開發工作坊的材料。如果你想要進行有關遊戲開發的一般演講，也可以利用基於此教學的 [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit)。
 >
 > 如果你有興趣使用遊戲庫來學習 2D 網頁遊戲開發，請參見這系列的對應文章，[使用 Phaser 製作 2D 打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_breakout_game_Phaser)。
