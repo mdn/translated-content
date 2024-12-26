@@ -25,7 +25,7 @@ let gettingAll = browser.notifications.getAll()
 
 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将会以一个对象兑现。所有的活动通知都会是该对象的一个属性，其中属性名为通知 ID 而属性值为描述该通知的 {{WebExtAPIRef("notifications.NotificationOptions")}} 对象。
 
-需要注意，你可以通过将 ID 显式传递给 {{WebExtAPIRef("notifications.create()")}} 来显式定义通知的 ID。如果你不这样做，浏览器会生成一个 ID。显式指定的 ID 是字符串，而生成的 ID 是数字。
+需要注意，你可以通过将 ID 传递给 {{WebExtAPIRef("notifications.create()")}} 来显式定义通知的 ID。如果你不这样做，浏览器会生成一个 ID。显式指定的 ID 是字符串，而生成的 ID 是数字。
 
 ## 浏览器兼容性
 
@@ -43,11 +43,11 @@ function toggleAlarm(all) {
   if (ids.includes(myNotification)) {
     browser.notifications.clear(myNotification);
   } else {
-    console.log("showing");
+    console.log("显示");
 
     browser.notifications.create(myNotification, {
       type: "basic",
-      title: "一段标题",
+      title: "一个令人印象深刻的标题",
       message: "一些有意思的文本内容",
     });
   }
