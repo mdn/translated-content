@@ -67,7 +67,7 @@ font {
 
 - 控制继承：{{ cssxref("inherit") }}, {{cssxref("initial")}}, {{cssxref("unset")}}, and {{cssxref("revert")}}
 - [CSS 层叠](/zh-CN/docs/Web/CSS/Cascade)
-- [层叠和继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [层叠和继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

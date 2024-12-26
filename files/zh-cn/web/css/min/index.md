@@ -117,4 +117,4 @@ small {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

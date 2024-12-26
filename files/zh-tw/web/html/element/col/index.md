@@ -213,7 +213,7 @@ table {
 
 ## 參見
 
-- [學習：HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
+- [學習：HTML 表格](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他與表格相關的元素
 - {{cssxref("background-color")}}：設置每個欄單元格的背景顏色的 CSS 屬性
 - {{cssxref("border")}}：控制欄單元格邊框的 CSS 屬性

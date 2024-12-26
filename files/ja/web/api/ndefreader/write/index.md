@@ -1,9 +1,9 @@
 ---
 title: "NDEFReader: write() メソッド"
+short-title: write()
 slug: Web/API/NDEFReader/write
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
-short-title: write()
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}

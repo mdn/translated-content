@@ -18,25 +18,25 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 ## 主要资源
 
 - HTML 介绍
-  - : 如果你是 Web 开发新手，请务必阅读我们的 [HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)文章来了解什么是 HTML 以及如何使用它。
+  - : 如果你是 Web 开发新手，请务必阅读我们的 [HTML 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)文章来了解什么是 HTML 以及如何使用它。
 - HTML 教程
-  - : 关于如何使用 HTML 的文章，教程和完整的示例，查看我们的 [HTML 学习区](/zh-CN/docs/Learn/HTML)。
+  - : 关于如何使用 HTML 的文章，教程和完整的示例，查看我们的 [HTML 学习区](/zh-CN/docs/Learn_web_development/Core/Structuring_content)。
 - HTML 参考
   - : 在我们丰富的 [HTML 参考](/zh-CN/docs/Web/HTML/Reference)部分中，你可以找到在 HTML 中每一个元素和属性的详细信息。
 
 ## 初学者教程
 
-我们的 [HTML 学习区](/zh-CN/docs/Learn/HTML) 含有许多富有特色的模块，学习者可以在没有任何先前经验的情况下从零开始，掌握 HTML。
+我们的 [HTML 学习区](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 含有许多富有特色的模块，学习者可以在没有任何先前经验的情况下从零开始，掌握 HTML。
 
-- [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 介绍](/zh-CN/docs/Learn_web_development/Core/Structuring_content)
   - : 这一模块将为你打下基础，并为进一步的学习铺平道路。在这里，你将掌握一些重要的概念和语法，学习如何将 HTML 用于文本、如何创建超链接以及运用 HTML 去构建一个网页。
-- [多媒体与嵌入内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)
+- [多媒体与嵌入内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content)
   - : 这个模块将带领你探索如何使用 HTML 在你的网页中包含多媒体内容，包括通过许多不同的方式嵌入图片，以及如何嵌入视频、音频甚至整个其他网页。
-- [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : 如何用可理解并易于访问的形式在网页中展示表格化数据一向都是个不小的挑战。这个模块涵盖了基本的表格标记，以及一些更复杂的特性，比如实现标题和总结等。
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
   - : 表单是构成 Web 世界的重要组成部分——它们提供了大量你所需要用来与网站进行交互所需的功能。比如注册、登录、发送评论反馈、购买商品等等。这个模块将引导你建立一个客户端／前端部分的表单。
-- [用 HTML 解决常见问题](/zh-CN/docs/Learn/HTML/Howto)
+- [用 HTML 解决常见问题](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems)
   - : 该部分提供了一些链接，它们指向那些你在构建 Web 页面的过程中最常见的问题的解决方法：如何处理网页标题、添加图片或视频、强调某些内容、建立基本的表单等。
 
 ## 高级主题

@@ -41,4 +41,4 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ## 参见
 
-[Django 服务端开发文档](/zh-CN/docs/Learn/Server-side/Django)展示了 shell 提示符命令的良好演示方式。
+[Django 服务端开发文档](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django)展示了 shell 提示符命令的良好演示方式。

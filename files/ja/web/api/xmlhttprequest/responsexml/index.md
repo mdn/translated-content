@@ -1,9 +1,9 @@
 ---
 title: "XMLHttpRequest: responseXML プロパティ"
+short-title: responseXML
 slug: Web/API/XMLHttpRequest/responseXML
 l10n:
   sourceCommit: fe468a9966c87cac081d3986b3332d0a51c4e2ee
-short-title: responseXML
 ---
 
 {{APIRef("XMLHttpRequest API")}}

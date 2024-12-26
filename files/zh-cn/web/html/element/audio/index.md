@@ -112,7 +112,7 @@ slug: Web/HTML/Element/audio
 - 你还可以使用 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 以从 JavaScript 代码直接生成和操纵音频流，而非流式播放已存在的音频文件。
 - `<audio>` 元素不能像 `<video>` 元素一样附加副标题（subtitle）或说明标题（caption）。更多有用的信息和解决方法参见 Ian Devlin 的 [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio)。
 
-[视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 新手教程是一篇关于使用 HTML `<audio>` 的好文章。
+[视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) 新手教程是一篇关于使用 HTML `<audio>` 的好文章。
 
 ### 使用 CSS 设置样式
 
@@ -299,5 +299,5 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [Learning area: Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Learning area: Video and audio content](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Cross-browser audio basics](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics)

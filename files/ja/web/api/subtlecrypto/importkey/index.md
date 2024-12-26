@@ -1,9 +1,9 @@
 ---
 title: "SubtleCrypto: importKey() メソッド"
+short-title: importKey()
 slug: Web/API/SubtleCrypto/importKey
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
-short-title: importKey()
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}

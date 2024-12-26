@@ -120,6 +120,7 @@ WebAssembly 模块中的所有代码都是划分到函数里面。函数具有�
 
 ```wasm
 (func (param $p i32)
+  (result i32)
   local.get $p
   local.get $p
   i32.add)

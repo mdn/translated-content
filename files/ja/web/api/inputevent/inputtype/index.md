@@ -1,9 +1,9 @@
 ---
 title: "InputEvent: inputType プロパティ"
+short-title: inputType
 slug: Web/API/InputEvent/inputType
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
-short-title: inputType
 ---
 
 {{APIRef("UI Events")}}

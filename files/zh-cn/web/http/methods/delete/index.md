@@ -31,7 +31,7 @@ slug: Web/HTTP/Methods/DELETE
     </tr>
     <tr>
       <th scope="row">
-        允许在 <a href="/zh-CN/docs/Learn/Forms">HTML 表单</a>中使用
+        允许在 <a href="/zh-CN/docs/Learn_web_development/Extensions/Forms">HTML 表单</a>中使用
       </th>
       <td>不允许</td>
     </tr>

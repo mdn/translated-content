@@ -7,7 +7,7 @@ l10n:
 
 {{MDNSidebar}}
 
-👋 歡迎來到 MDN Web 文件，一個記載了 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[JavaScript](/zh-TW/docs/Web/JavaScript) 和 [Web API](/zh-TW/docs/Web/API) 等 Web 平台技術的開源協作專案。我們也為新手開發者和學生提供大量的[學習資源](/zh-TW/docs/Learn)。
+👋 歡迎來到 MDN Web 文件，一個記載了 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[JavaScript](/zh-TW/docs/Web/JavaScript) 和 [Web API](/zh-TW/docs/Web/API) 等 Web 平台技術的開源協作專案。我們也為新手開發者和學生提供大量的[學習資源](/zh-TW/docs/Learn_web_development)。
 
 ## 參與貢獻的方式
 
@@ -46,7 +46,7 @@ l10n:
 
 我們是一個努力維護可以跟上在不斷變化的 Web 環境中需求的文件的小團隊。不幸的是，我們無法幫助你解決一般性問題。如果你正在學習寫程式，你可以參考以下資料：
 
-- [學習 Web 開發](/zh-TW/docs/Learn)
+- [學習 Web 開發](/zh-TW/docs/Learn_web_development)
 - [MDN Web 文件學習論壇](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Stack Overflow](https://stackoverflow.com/questions/)
 

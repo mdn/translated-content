@@ -13,19 +13,19 @@ slug: Web/Accessibility
 
 ## 主要教程
 
-MDN [无障碍学习区](/zh-CN/docs/Learn/Accessibility)包含现代的最新教程，涵盖以下无障碍性要点：
+MDN [无障碍学习区](/zh-CN/docs/Learn_web_development/Core/Accessibility)包含现代的最新教程，涵盖以下无障碍性要点：
 
-- [什么是无障碍？](/zh-CN/docs/Learn/Accessibility/What_is_accessibility)
+- [什么是无障碍？](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : 这篇文章很好地初步介绍了无障碍化的实际情况——包括我们需要考虑哪些人群以及为什么，不同的人用什么工具与 Web 进行交互，以及如何在网站开发的流程中加入无障碍设计。
-- [HTML：无障碍性的良好基础](/zh-CN/docs/Learn/Accessibility/HTML)
+- [HTML：无障碍性的良好基础](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML)
   - : 只需确保以恰当的方式使用正确的 HTML 元素，很多 web 内容就能实现无障碍化。本文详细介绍如何使用 HTML 来实现最大程度的无障碍化。
-- [CSS 和 JavaScript 无障碍最佳做法](/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [CSS 和 JavaScript 无障碍最佳做法](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
   - : 如果使用得当，CSS 和 JavaScript 也能提供无障碍的 web 体验。倘若误用，无障碍性会明显受损。本文列出了一些 CSS 和 JavaScript 最佳实践，即使是复杂的内容，也能尽可地确保无障碍。
-- [WAI-ARIA 基础知识](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [WAI-ARIA 基础知识](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
   - : 如前文所述，在涉及无语义 HTML 和 JavaScript 动态更新的内容时，制作复杂的 UI 控件可能很困难。借助 WAI-ARIA 技术来添加额外的语义，使得浏览器和无障碍技术可以识别和使用这些控件，并让用户了解网页实际情况。这里我们将介绍这种技术的基础知识，并用它改善无障碍性。
-- [多媒体无障碍化](/zh-CN/docs/Learn/Accessibility/Multimedia)
+- [多媒体无障碍化](/zh-CN/docs/Learn_web_development/Core/Accessibility/Multimedia)
   - : 多媒体也是一类可能需要无障碍化的内容——视频、音频、图像等都需要给出适当的文本替代，以便可以被辅助性技术及其用户来理解。本文就介绍了以上内容。
-- [移动设备的无障碍](/zh-CN/docs/Learn/Accessibility/Mobile)
+- [移动设备的无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility/Mobile)
   - : 使用移动设备访问 web 越来越流行，而同时，iOS、Android 等主流移动平台也拥有日趋完善的辅助工具，让你的网站内容在这些平台上做到无障碍化自然很重要。本文将介绍移动设备领域的无障碍化注意事项。
 
 ## 其他文章

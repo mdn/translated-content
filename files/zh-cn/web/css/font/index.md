@@ -499,4 +499,4 @@ setCss();
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [文本和字体样式基础](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [文本和字体样式基础](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)

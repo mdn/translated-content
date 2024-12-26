@@ -74,7 +74,7 @@ Promise.allSettled([
 
 - [`core-js` 中 `Promise.allSettled` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
-- [使用 promise 的优雅异步编程](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
+- [使用 promise 的优雅异步编程](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
 - {{jsxref("Promise.any()")}}

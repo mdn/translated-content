@@ -1,9 +1,9 @@
 ---
 title: "Element: closest() メソッド"
+short-title: closest()
 slug: Web/API/Element/closest
 l10n:
   sourceCommit: dac3299ae197f40fcf3369f6f58d49e00538bb1e
-short-title: closest()
 ---
 
 {{APIRef('DOM')}}
