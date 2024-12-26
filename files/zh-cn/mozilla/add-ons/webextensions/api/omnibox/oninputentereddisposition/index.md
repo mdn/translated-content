@@ -7,9 +7,9 @@ l10n:
 
 {{AddonSidebar}}
 
-**`omnibox.OnInputEnteredDisposition`** 类型描述了扩展应如何处理用户在地址栏的下拉菜单中的推荐中选择的推荐。
+**`omnibox.OnInputEnteredDisposition`** 类型描述了扩展应如何处理用户在地址栏的下拉菜单中的推荐中的选择。
 
-它将与选择本身一起传递给 {{WebExtAPIRef("omnibox.onInputEntered")}} 事件监听器中。
+它将与选择本身一起传递到 {{WebExtAPIRef("omnibox.onInputEntered")}} 事件监听器中。
 
 ## 类型
 
