@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-**[OpenSearch 描述格式](https://github.com/dewitt/opensearch)**可用於描述搜尋引擎的網頁介面。這允許網站為自身描述搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。OpenSearch 受到（至少）Firefox、Edge、Safari 和 Chrome 的支援。（參見[參考資料](#參考資料)以獲取其他瀏覽器的文件連結。）
+__[OpenSearch 描述格式](https://github.com/dewitt/opensearch)__可用於描述搜尋引擎的網頁介面。這允許網站為自身描述搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。OpenSearch 受到（至少）Firefox、Edge、Safari 和 Chrome 的支援。（參見[參考資料](#參考資料)以獲取其他瀏覽器的文件連結。）
 
 Firefox 還支援 OpenSearch 標準中沒有的其他功能，例如搜尋建議和 `<SearchForm>` 元件。本文重點介紹如何創建支援這些額外 Firefox 功能的 OpenSearch 相容搜尋插件。
 
@@ -18,7 +18,7 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
 
 ## OpenSearch 描述文件
 
-描述搜尋引擎的 XML 文件遵循以下基本模板。*[方括號]*中的部分應根據你正在編寫的特定插件進行自訂。
+描述搜尋引擎的 XML 文件遵循以下基本模板。_[方括號]_ 中的部分應根據你正在編寫的特定插件進行自訂。
 
 ```xml
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
@@ -86,7 +86,7 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
   href="[pluginURL]" />
 ```
 
-根據以下說明替換*[方括號]*中的項目：
+根據以下說明替換 _[方括號]_ 中的項目：
 
 - searchTitle
   - : 要執行的搜尋名稱，例如「搜尋 MDC」或「Yahoo! 搜尋」。這必須與你的插件文件的 `<ShortName>` 匹配。
