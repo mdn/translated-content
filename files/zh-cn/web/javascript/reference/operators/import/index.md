@@ -7,9 +7,9 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-通常被称为*动态导入*的 **`import()`** 语法是一个函数式表达式，它允许异步和动态地将 ECMAScript 模块加载到一个潜在的非模块环境中。
+**`import()`** 语法（通常被称为*动态导入*）是一种允许异步和动态地将 ECMAScript 模块加载到一个潜在的非模块环境中的类函数表达式。
 
-跟[与之对应的声明式语法](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)不同，动态导入只有在被需要时才会求值，并提供了更强大的语法灵活性。
+跟[与之对应的声明式风格](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)不同，动态导入只有在被需要时才会求值，并提供了更强大的语法灵活性。
 
 ## 语法
 
@@ -18,9 +18,9 @@ import(moduleName)
 import(moduleName, options)
 ```
 
-`import()` 调用是一个类似于函数调用的语法，但 `import` 本身是一个关键字，而不是一个函数。你不能像 `const myImport = import` 那样对其进行别名处理，这会抛出一个 {{jsxref("SyntaxError")}}。
+`import()` 调用是一个类似于函数调用的语法，但 `import` 本身是一个关键字，而不是一个函数。你不能像 `const myImport = import` 那样为其添加别名，这会抛出 {{jsxref("SyntaxError")}}。
 
-只有在运行时也支持 `options` 时，[尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)才被允许使用。请查看[浏览器兼容性](#[浏览器兼容性)部分。
+只有在运行时也支持 `options` 时，[尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)才被允许使用。请查看[浏览器兼容性](#浏览器兼容性)部分。
 
 ### 参数
 
@@ -33,18 +33,18 @@ import(moduleName, options)
 
 ### 返回值
 
-返回一个 promise 对象：
+返回一个 promise：
 
 - 如果引用的模块被成功加载和求值，则兑现为一个[模块命名空间对象](#模块命名空间对象)：一个包含 `moduleName` 中所有导出的对象。
-- 如果对 `moduleName` 做[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)时抛出错误，则用抛出的错误作为拒绝原因。
-- 如果 `moduleName` 引用的模块不存在，则以实现定义的错误作为拒绝原因（Node 使用一个通用的 `Error`，而所有浏览器使用 `TypeError`）。
-- 如果引用的模块在求值时抛出错误，则用抛出的错误作为拒绝原因。
+- 如果对 `moduleName` 做[字符串强制转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)时抛出错误，则以抛出的错误拒绝。
+- 如果 `moduleName` 引用的模块不存在，则以实现定义的错误拒绝（Node 使用通用的 `Error`，而所有浏览器使用 `TypeError`）。
+- 如果引用的模块在求值时抛出错误，则以抛出的错误拒绝。
 
-> **注意：** `import()` 从来不会同步地抛出错误。
+> **备注：** `import()` 从来不会同步地抛出错误。
 
 ## 描述
 
-import 声明语法（`import something from "somewhere"`）是静态的，并且总是会在一加载时就对导入的模块求值。动态导入允许绕过 import 声明的语法刚性（syntactic rigidity），并有条件地或按需加载一个模块。以下是你可能需要使用动态导入的一些原因：
+import 声明语法（`import something from "somewhere"`）是静态的，并且总是会在一加载时就对导入的模块求值。动态导入允许绕过 import 声明的语法刚性（syntactic rigidity），并有条件地或按需加载模块。以下是你可能需要使用动态导入的一些原因：
 
 - 当静态导入显著减慢你的代码加载，或增加你的程序内存使用时，那么你很可能不需要正要导入的代码，或者以后才会需要它。
 - 当你正要导入的模块在加载时并不存在时。
@@ -66,11 +66,11 @@ import("./data.json", { with: { type: "json" } });
 
 ### 模块命名空间对象
 
-*模块命名空间对象*是一个描述模块所有导出的对象。它是一个静态对象，在模块被求值时创建。有两种方式可以访问模块的模块命名空间对象：通过[命名空间导入](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#命名空间导入)（`import * as name from moduleName`）或通过动态导入的 promise 兑现值。
+*模块命名空间对象*是一个描述模块所有导出的对象。它是一个静态对象，在模块被求值时创建。有两种方式可以访问模块的模块命名空间对象：通过[命名空间导入](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#命名空间导入)（`import * as name from moduleName`）或通过动态导入的兑现值。
 
-模块命名空间对象是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的对象，它具有 [null 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)。也就是说，对象的所有字符串键对应于模块的导出，并且永远不会有额外的键。所有键都是以字典序[可枚举的](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（即 [`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#描述) 的默认行为），默认导出名为 `default` 的键。此外，模块命名空间对象具有一个 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，值为 `"Module"`，在 {{jsxref("Object.prototype.toString()")}} 中被使用。
+模块命名空间对象是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的、具有 [`null` 原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)的对象。也就是说，对象的所有字符串键对应于模块的导出，并且永远不会有额外的键。所有键都是以字典序[可枚举的](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（即 [`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#描述) 的默认行为），默认导出以名为 `default` 的键可用。此外，模块命名空间对象具有一个值为 `"Module"` 的 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，在 {{jsxref("Object.prototype.toString()")}} 中被使用。
 
-在使用 {{jsxref("Object.getOwnPropertyDescriptors()")}} 获取它们的描述符时会发现，字符串属性是不可配置的和可写入的。然而它们实际上是只读的，因为你不能给属性重新赋一个新的值。这些值可以由导出它们的模块重新赋值，但不能由导入它们的模块重新赋值——这种行为反映了静态导入所创建的[实时绑定](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改)。属性的可写入性反映了值是可能变化的，因为不可配置和不可写入的属性必须是常量。例如，你可以重新给一个变量的导出赋值，并且可以在模块命名空间对象中观察到新的值。
+在使用 {{jsxref("Object.getOwnPropertyDescriptors()")}} 获取它们的描述符时会发现，字符串属性是不可配置的和可写入的。然而它们实际上是只读的，因为你不能给属性重新赋一个新的值。这些值可以由导出它们的模块重新赋值，但不能由导入它们的模块重新赋值——这种行为反映了静态导入所创建的“[实时绑定](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改)”。属性的可写入性反映了值是可能发生变化的，因为不可配置和不可写入的属性必须是常量。例如，你可以重新给一个导出的变量赋值，并且可以在模块命名空间对象中观察到新的值。
 
 每个模块标识符对应一个唯一的模块命名空间对象，所以下面的代码通常是正确的：
 
@@ -82,12 +82,12 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-除了一个奇怪的情况：由于 promise 对象永远不会兑现为 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，如果 `my-module.js` 模块恰好导出了一个名为 `then()` 的函数，那么该函数将在动态导入的 promise 兑现时自动被调用，因为这是 [resolve 函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolve_函数)的一部分。
+除了一个奇怪的情况：由于 promise 对象永远不会兑现为 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，如果 `my-module.js` 模块恰好导出了一个名为 `then()` 的函数，那么该函数将在动态导入的 promise 兑现时自动被调用，因为这是 [promise 解决](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolve_函数)处理流程的一部分。
 
 ```js
 // my-module.js
 export function then(resolve) {
-  console.log("then() called");
+  console.log("then() 已被调用");
   resolve(1);
 }
 ```
@@ -97,7 +97,7 @@ export function then(resolve) {
 import * as mod from "/my-module.js";
 
 import("/my-module.js").then((mod2) => {
-  // 打印 "then() called"
+  // 打印“then() 已被调用”
   console.log(mod === mod2); // false
 });
 ```
@@ -118,11 +118,11 @@ import("/my-module.js").then((mod2) => {
 })();
 ```
 
-如果你的项目使用导出 ESM 的包，你也可以仅导入它们以获取其副作用。这将仅在包等入口点文件（以及它导入的任何文件）中运行代码。
+如果你的项目使用导出 ESM 的包，你也可以仅导入它们以获取其副作用。这将仅运行包的入口点文件（以及它导入的任何文件）中的代码。
 
 ### 导入默认值
 
-如果你正在解构导入的模块命名空间对象，那么你必须重命名 `default` 键，因为 `default` 是一个保留字。
+如果你正在解构导入的模块命名空间对象，那么你必须重命名 `default` 键，因为 `default` 是保留字。
 
 ```js
 (async () => {
