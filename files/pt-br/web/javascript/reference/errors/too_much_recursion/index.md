@@ -67,4 +67,4 @@ loop(0);
 ## Veja também
 
 - {{Glossary("Recursion")}}
-- [Funções recursivas](/pt-BR/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Funções recursivas](/pt-BR/docs/Web/JavaScript/Guide/Functions#recursion)

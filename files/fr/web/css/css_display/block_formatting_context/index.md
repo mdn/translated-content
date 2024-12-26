@@ -25,7 +25,7 @@ Les contextes de formatage de blocs sont important pour le positionnement (voir 
 
 ## Spécifications
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#q15)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#q15)
 
 ## Voir aussi
 

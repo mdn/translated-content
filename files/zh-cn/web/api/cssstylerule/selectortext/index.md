@@ -7,7 +7,7 @@ slug: Web/API/CSSStyleRule/selectorText
 
 ## 概述
 
-**`CSSRule.selectorText`** 属性返回 CSS 规则的选择符文本，只读。动态设置 CSS 规则，请看 [Using dynamic styling information](/zh-CN/docs/DOM/Using_dynamic_styling_information).
+**`CSSRule.selectorText`** 属性返回 CSS 规则的选择符文本，只读。动态设置 CSS 规则，请看 [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information).
 
 ## 语法
 
@@ -30,4 +30,4 @@ alert(stylesheet.cssRules[0].selectorText); // body
 
 ## 标准
 
-- [Document Object Model CSS - #CSS-CSSRuleCSS](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)
+- [Document Object Model CSS - #CSS-CSSRuleCSS](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)

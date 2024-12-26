@@ -2,7 +2,7 @@
 title: 攻击类型
 slug: Web/Security/Types_of_attacks
 l10n:
-  sourceCommit: a3f170ea965a6c436bc0aeb1fdfdf6f61e09c3c8
+  sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 点击劫持
 
-[点击劫持](/zh-CN/docs/Glossary/Clickjacking)是欺骗用户点击一个并不是用户认知上的链接、按钮等的行为。这可用于窃取登录凭据或在用户不知情的情况下获取安装恶意软件的权限。点击劫持有时被称为“用户界面纠正”，尽管这是对“纠正”一词的误用。
+[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)是欺骗用户点击一个并不是用户认知上的链接、按钮等的行为。这可用于窃取登录凭据或在用户不知情的情况下获取安装恶意软件的权限。点击劫持有时被称为“用户界面纠正”，尽管这是对“纠正”一词的误用。
 
 ## 跨站脚本（XSS）
 
@@ -63,8 +63,8 @@ CSRF（有时也称为 XSRF）是一类相关的攻击。攻击者使用户的�
 - GET 端点应该是幂等的——执行更改但不检索数据的操作应该要发送 POST（或其他 HTTP 方法）请求。POST 端点不应接受带有查询字符串参数的 GET 请求。
 - 服务器应向浏览器提供会话唯一的 CSRF 令牌。然后，只要浏览器提交表单（在 `<form>` 元素的隐藏输入字段中），就可以包含此令牌。对于所有可能执行操作的非 GET 请求，服务器会将接收到的令牌与其存储的会话值进行比较。如果令牌不匹配，请求将被中止。
 - 这种保护方法依赖于攻击者无法预测用户分配的 CSRF 令牌。应在登录时重新生成令牌。
-- 用于敏感操作的 Cookie（例如会话 Cookie）应具有较短的生命周期，并且 SameSite 属性设置为 Strict 或 Lax。（参见 [SameSite](/zh-CN/docs/Web/HTTP/Cookies#samesite_attribute) cookie 属性）。在支持的浏览器中，这将确保会话 cookie 不会随跨站请求一起发送，因此对应用程序服务器来说这个请求是未经验证的。
-- 应一起部署 CSRF 令牌和 SameSite cookie。这可确保所有浏览器都受到保护，并在 SameSite cookie 无法提供帮助的情况下提供保护（例如来自单独子域的攻击）。
+- 用于敏感操作的 Cookie（例如会话 Cookie）应具有较短的生命周期，并且 [`SameSite` 属性](/zh-CN/docs/Web/HTTP/Cookies#samesite_属性)设置为 `Strict` 或 `Lax`。在支持的浏览器中，这将确保会话 cookie 不会随跨站请求一起发送，因此对应用程序服务器来说这个请求是未经验证的。
+- 应一起部署 CSRF 令牌和 `SameSite` cookie。这可确保所有浏览器都受到保护，并在 `SameSite` cookie 无法提供帮助的情况下提供保护（例如来自单独子域的攻击）。
 
 要了解更多防御技巧，请参阅 OWASP CSRF 防御备忘单。
 

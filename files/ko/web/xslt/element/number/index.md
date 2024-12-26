@@ -38,7 +38,7 @@ slug: Web/XSLT/Element/number
 
     - `multiple` 노드의 계층 위치를 반영하는 복합 sequence로 노드를 셉니다. 예를 들어, 1.2.2.5 (포개진 형식은 `format` 속성(예, A.1.1)으로 지정할 수 있습니다). 처리기는 만약 있다면 `from` 속성에 이르러 멈추며 현재 노드와 현재 노드의 모든 [`ancestors`](/ko/Transforming_XML_with_XSLT/Mozilla_XSLT%2f%2fXPath_Reference/Axes/ancestor)를 조사합니다. 일치하지 않으면, sequence는 빈 목록입니다.
 
-    - `any` (이번에 지원 안 함.) 수준을 무시하고 연속으로 일치하는 모든 노드를 셉니다. [`ancestor`](/ko/docs/Web/XPath/Axes/ancestor), [`self`](/ko/docs/Web/XPath/Axes/self), [`preceding`](/ko/docs/Web/XPath/Axes/preceding) 축을 모두 고려합니다. 처리기는 현재 노드에서 시작하여 `from` 속성과 일치할 때 멈추며 문서 역순으로 진행합니다. 발견한 `count` 속성과 일치하지 않으면, sequence는 빈 목록입니다. 이 수준은 이번에 지원하지 않습니다.
+    - `any` (이번에 지원 안 함.) 수준을 무시하고 연속으로 일치하는 모든 노드를 셉니다. [`ancestor`](/ko/docs/Web/XPath/Axes#ancestor), [`self`](/ko/docs/Web/XPath/Axes#self), [`preceding`](/ko/docs/Web/XPath/Axes#preceding) 축을 모두 고려합니다. 처리기는 현재 노드에서 시작하여 `from` 속성과 일치할 때 멈추며 문서 역순으로 진행합니다. 발견한 `count` 속성과 일치하지 않으면, sequence는 빈 목록입니다. 이 수준은 이번에 지원하지 않습니다.
 
 - from
   - : 번호 매기기를 시작하거나 다시 시작하면 좋을 곳을 지정합니다. 순서는 `from` 특성과 일치하는 노드의 첫 번째 자손(descendant)에서 시작합니다.
@@ -76,7 +76,7 @@ slug: Web/XSLT/Element/number
 
 ### 정의
 
-[XSLT section 7.7, Numbering](http://www.w3.org/TR/xslt#number)
+[XSLT section 7.7, Numbering](https://www.w3.org/TR/xslt#number)
 
 ### Gecko 지원
 

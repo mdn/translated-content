@@ -46,14 +46,14 @@ var args = Array.prototype.slice.call(arguments);
 var args = [].slice.call(arguments);
 ```
 
-`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 사용할 수도 있습니다.
+`arguments`를 실제 `Array`로 변환하기 위해 ES2015의 {{jsxref("Array.from()")}} 메서드 또는 [전개 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용할 수도 있습니다.
 
 ```js
 var args = Array.from(arguments);
 var args = [...arguments];
 ```
 
-당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
+당신이 형식상 받기로 선언된 것보다 많은 인수로 함수를 호출하는 경우 `arguments` 객체를 사용할 수 있습니다. 이 기법은 가변 인수가 전달될 수 있는 함수에 유용합니다. 함수에 전달된 인수의 수를 결정하기 위해 [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)를 쓰세요, 그 뒤에 `arguments` 객체를 사용하여 각 인수를 처리하세요. 함수 [signature](/ko/docs/Glossary/Signature/Function)에 매개변수의 수를 결정하기 위해서는, [`Function.length`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 속성을 쓰세요.
 
 ## 속성
 

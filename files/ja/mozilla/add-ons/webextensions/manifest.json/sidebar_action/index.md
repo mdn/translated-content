@@ -33,7 +33,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
   </tbody>
 </table>
 
-[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/Sidebars)はブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。ブラウザーはユーザーに現在利用できるサイドバーを表示して表示するサイドバーを選ぶ UI を提供します。
+[サイドバー](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)はブラウザーウィンドウの左側の、ウェブページの横に表示されるペインです。ブラウザーはユーザーに現在利用できるサイドバーを表示して表示するサイドバーを選ぶ UI を提供します。
 
 sidebar_action キーによりサイドバーの既定のプロパティを定義できます。このプロパティは {{WebExtAPIRef("sidebarAction")}} API.を使って変更できます。
 

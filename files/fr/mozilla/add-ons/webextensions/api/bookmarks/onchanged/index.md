@@ -41,7 +41,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `changeInfo`
-      - : [`object`](#changeInfo). Objet contenant deux propriétés : `title`, une chaîne contenant le titre de l'élément et `url`, une chaîne contenant l'URL de l'élément. Si l'élément est un dossier, l'`url` est omise.
+      - : [`object`](#changeinfo). Objet contenant deux propriétés : `title`, une chaîne contenant le titre de l'élément et `url`, une chaîne contenant l'URL de l'élément. Si l'élément est un dossier, l'`url` est omise.
 
 > [!NOTE]
 > Plusieurs événements peuvent se produire lorsqu'un signet change, et cet objet changeInfo peut contenir uniquement les données qui ont changé, plutôt que toutes les données du signet. En d'autres termes, si l'`url` d'un signet change, le changeInfo ne peut contenir que les nouvelles informations de l'`url`.

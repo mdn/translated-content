@@ -158,7 +158,7 @@ const flattened = [...flatten(arr, Infinity)];
 
 - [`Array.prototype.flatMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
 - [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 - [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
 - Prothèses d'émulation (<i lang="en">polyfills</i>)&nbsp;:
   - [Dans la bibliothèque in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)

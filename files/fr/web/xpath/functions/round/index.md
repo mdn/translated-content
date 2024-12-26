@@ -28,7 +28,7 @@ Le plus proche nombre entier, qu'il soit plus grand, plus petit ou égal à `dec
 
 ### Définition
 
-[XPath 1.0, section 4.4](http://www.w3.org/TR/xpath#function-round).
+[XPath 1.0, section 4.4](https://www.w3.org/TR/xpath#function-round).
 
 ### Support Gecko
 

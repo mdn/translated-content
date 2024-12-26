@@ -29,7 +29,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 
 Cette clé doit être présente si l'extension contient le répertoire \_locales, et doit être absente sinon. Il identifie un sous-répertoire de \_locales, et ce sous-répertoire sera utilisé pour trouver les chaînes par défaut pour votre extension.
 
-Voir [Internationalisation](/fr/Add-ons/WebExtensions/Internationalization).
+Voir [Internationalisation](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization).
 
 ## Exemple
 

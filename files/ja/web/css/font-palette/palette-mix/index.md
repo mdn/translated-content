@@ -38,7 +38,7 @@ palette-mix(method, palette1 [p1], palette2 [p2])
 ```
 
 - `method`
-  - : 混合する伊六区間を指定する {{cssxref("&lt;color-interpolation-method&gt;")}} です。。
+  - : 混合する伊六区間を指定する {{cssxref("&lt;color-interpolation-method&gt;")}} です。
 - `palette1`, `palette2`
   - : 互いに混合する {{cssxref("font-palette")}} 値です。これは任意の `font-palette` 値を取ることができます。 `palette-mix()` 関数、`normal`、`dark`、`light` などです。
 - `p1`, `p2` {{optional_inline}}

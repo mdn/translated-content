@@ -200,6 +200,6 @@ th {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
 - 広範なブラウザーの対応試験結果: [https://w3c.github.io/i18n-tests/results/writing-mode-vertical](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)

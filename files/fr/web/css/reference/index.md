@@ -43,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_syntaxe). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
+Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
 
 ### Syntaxe des règles @
 
@@ -52,15 +52,15 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 ## Index des mots-clés
 
 > [!NOTE]
-> Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
+> Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/Reference#index_des_mots-clés) lorsqu'ils sont différents des noms standards CSS.
 
 {{CSS_Ref}}
 
 ## Sélecteurs
 
-Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/CSS_Selectors), qui permettent aux styles d'être appliqués de façon conditionnelle selon diverses caractéristiques des éléments présents dans le DOM.
+Sont indiqués dans ce qui suit les divers [sélecteurs](/fr/docs/Web/CSS/CSS_selectors), qui permettent aux styles d'être appliqués de façon conditionnelle selon diverses caractéristiques des éléments présents dans le DOM.
 
-### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_Selectors#les_sélecteurs_simples/fr/docs/web/css/sélecteurs_css)
+### [Sélecteurs simples](/fr/docs/Web/CSS/CSS_selectors#les_s%c3%a9lecteurs_simples/fr/docs/web/css/s%c3%a9lecteurs_css)
 
 Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteurs les plus élémentaires qui sont fréquemment combinés pour créer d'autres sélecteurs plus complexes.
 
@@ -75,7 +75,7 @@ Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteu
 - [Sélecteur de conjonction](/fr/docs/Web/CSS/Selector_list) `A, B`
   - : Indique que les éléments des sélecteurs `A` et `B` doivent être sélectionnés. Il s'agit d'une méthode de groupement pour sélectionner des éléments selon plusieurs critères.
 
-### [Combinateurs](/fr/docs/Web/CSS/CSS_Selectors#les_combinateurs)
+### [Combinateurs](/fr/docs/Web/CSS/CSS_selectors#les_combinateurs)
 
 Les combinateurs sont des sélecteurs qui établissent une relation entre deux sélecteurs ou plus, tel que "A est un enfant de B" ou "A est adjacent à B".
 
@@ -110,7 +110,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [Commentaires](/fr/docs/Web/CSS/Comments)
 - [Descripteurs](</fr/docs/Glossary/Descriptor_(CSS)>)
-- [Héritage](/fr/docs/Web/CSS/inheritance)
+- [Héritage](/fr/docs/Web/CSS/Inheritance)
 - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
 - [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité)
 - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
@@ -127,13 +127,13 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 
 ### Disposition
 
-- [Contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context)
+- [Contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
 - [Bloc englobant](/fr/docs/Web/CSS/Containing_block)
 - [Modes de disposition](/fr/docs/Web/CSS/Layout_mode)
-- [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
-- [Contexte d'empilement](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [Contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

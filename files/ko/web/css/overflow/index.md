@@ -5,13 +5,13 @@ slug: Web/CSS/overflow
 
 {{CSSRef}}
 
-**`overflow`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 콘텐츠가 너무 커서 요소의 [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context)에 맞출 수 없을 때의 처리법을 지정합니다. {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}의 값을 설정합니다.
+**`overflow`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 콘텐츠가 너무 커서 요소의 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)에 맞출 수 없을 때의 처리법을 지정합니다. {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}의 값을 설정합니다.
 
 {{EmbedInteractiveExample("pages/css/overflow.html")}}
 
 적용 가능한 방법은 잘라내기, 스크롤바 노출, 넘친 콘텐츠 그대로 노출 등이 있습니다.
 
-`visible`(기본값)이 아닌 다른 값으로 `overflow` 속성을 사용할 경우 새로운 [블록 서식 문맥](/ko/docs/Web/Guide/CSS/Block_formatting_context)을 생성합니다. 이는 기술적인 요구사항으로, 만약 스크롤하는 요소와 float이 교차한다면, 각 스크롤 단계마다 내용물을 강제적으로 다시 감싸게 될 것입니다. 이는 결국 스크롤 속도를 느리게 할 것입니다.
+`visible`(기본값)이 아닌 다른 값으로 `overflow` 속성을 사용할 경우 새로운 [블록 서식 문맥](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)을 생성합니다. 이는 기술적인 요구사항으로, 만약 스크롤하는 요소와 float이 교차한다면, 각 스크롤 단계마다 내용물을 강제적으로 다시 감싸게 될 것입니다. 이는 결국 스크롤 속도를 느리게 할 것입니다.
 
 `overflow` 속성이 효력을 갖기 위해선 반드시 블록 레벨 컨테이너의 높이(`height` 또는 `max-height`)를 설정하거나, `white-space`를 `nowrap`으로 설정해야 합니다.
 

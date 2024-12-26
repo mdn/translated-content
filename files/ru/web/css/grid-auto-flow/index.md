@@ -130,5 +130,5 @@ function changeGridAutoFlow() {
 ## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Grid Layout Guide: _[Auto-placement in grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
+- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

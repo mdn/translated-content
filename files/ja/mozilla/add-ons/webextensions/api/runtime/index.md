@@ -44,7 +44,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : 拡張機能が動作しているバックグラウンドページの [Window](/ja/docs/Web/API/Window) オブジェクトを取得します。
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : 拡張機能の[オプションページ](/ja/Add-ons/WebExtensions/user_interface/Options_pages)を開きます。
+  - : 拡張機能の[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)を開きます。
 - {{WebExtAPIRef("runtime.getFrameId()")}}
   - : グローバルまたはフレーム要素のウィンドウのフレーム ID を取得します。
 - {{WebExtAPIRef("runtime.getManifest()")}}

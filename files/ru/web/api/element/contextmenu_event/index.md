@@ -9,7 +9,7 @@ slug: Web/API/Element/contextmenu_event
 
 Если стандартное поведение не будет предотвращено, то активируется контекстное меню браузера (В IE8 есть ошибка, связанная с тем что контекстное меню не будет активировано если определён обработчик события contextmenu).
 
-Обратите внимание что это событие будет происходить вместе с другими событиями right-click и не зависит от ["contextmenu" атрибута](http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/) элемента.
+Обратите внимание что это событие будет происходить вместе с другими событиями right-click и не зависит от ["contextmenu" атрибута](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/) элемента.
 
 ## Синтаксис
 

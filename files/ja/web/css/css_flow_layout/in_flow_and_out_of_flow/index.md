@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 {{CSSRef}}
 
-[前のガイド](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。
+[前のガイド](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)では、通常フロー内でのブロック及びインラインレイアウトを説明しました。フロー内のすべての要素は、この方法を使用して配置されます。
 
 以下の例では、見出し、段落、リスト、そして `strong` 要素を含む最後の段落があります。見出しと段落はブロックレベルで、 `strong` 要素はインラインです。リストはフレックスボックスを使用してアイテムを 1 行に配置していますが、ブロックレイアウトとインラインレイアウトの両方に対応しています。 - コンテナーは外側で `display` が `block` になっています。
 
@@ -53,7 +53,7 @@ slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 ## まとめ
 
-このガイドでは、特定の種類の位置指定を実現するために、要素をフローの外に持ち出す方法を紹介しました。次のガイドでは、 [Formatting Contexts Explained](/ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained) の中で、[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)を作成する上での関連する問題を見てみます。
+このガイドでは、特定の種類の位置指定を実現するために、要素をフローの外に持ち出す方法を紹介しました。次のガイドでは、 [Formatting Contexts Explained](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts) の中で、[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を作成する上での関連する問題を見てみます。
 
 ## 関連情報
 

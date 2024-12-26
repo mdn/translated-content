@@ -11,7 +11,7 @@ L'élément HTML **\<legend>** représente une légende pour le contenu de son �
 
 ## Attributs
 
-Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

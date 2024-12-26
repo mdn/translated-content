@@ -76,7 +76,7 @@ let stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 ```
 
-Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#Example_of_pushState_method)_.
+Объяснение этих двух строк можно найти в приведённом выше разделе _[пример метода pushState()](#example_of_pushstate_method)_.
 
 Далее, предположим, на странице `http://mozilla.org/bar.html` выполняется JavaScript-код:
 
@@ -107,5 +107,5 @@ let currentState = history.state;
 ## Смотрите также
 
 - [History API](/ru/docs/Web/API/History_API)
-- [Ajax navigation example](/ru/docs/Web/API/History_API/Example)
+- [Ajax navigation example](/ru/docs/Web/API/History_API/Working_with_the_History_API)
 - {{ domxref("window.history") }}

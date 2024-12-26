@@ -7,57 +7,57 @@ slug: Web/API/HTMLTableElement
 
 ## Interfaz del elemento tabla HTML
 
-Los objetos `table` revelan la interfaz del [`HTMLTableElement`](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425) la cual posee métodos y propiedades especiales (más allá del interfaz regular del objeto del [elemento](/es/docs/DOM/element) que también tienen disponibles mediante herencia) para manipular la vista y presentación de tablas en HTML.
+Los objetos `table` revelan la interfaz del [`HTMLTableElement`](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425) la cual posee métodos y propiedades especiales (más allá del interfaz regular del objeto del [elemento](/es/docs/Web/API/Element) que también tienen disponibles mediante herencia) para manipular la vista y presentación de tablas en HTML.
 
 ## Propiedades
 
-- [table.caption](/es/docs/DOM/table.caption)
+- [table.caption](/es/docs/Web/API/HTMLTableElement/caption)
   - : **caption** devuelve la leyenda de la tabla.
-- [table.tHead](/es/docs/DOM/table.tHead)
+- [table.tHead](/es/docs/Web/API/HTMLTableElement/tHead)
   - : **tHead** devuelve el encabezado de la tabla.
-- [table.tFoot](/es/docs/DOM/table.tFoot)
+- [table.tFoot](/es/docs/Web/API/HTMLTableElement/tFoot)
   - : **tFoot** devuelve el pie de la tabla.
-- [table.rows](/es/docs/DOM/table.rows)
+- [table.rows](/es/docs/Web/API/HTMLTableElement/rows)
   - : **rows** devuelve las filas de la tabla.
-- [table.tBodies](/es/docs/DOM/table.tBodies)
+- [table.tBodies](/es/docs/Web/API/HTMLTableElement/tBodies)
   - : **tBodies** devuelve los cuerpos de la tabla.
 
 <!---->
 
-- [table.align](/es/docs/DOM/table.align) {{Deprecated_inline}}
+- [table.align](/es/docs/Web/API/HTMLTableElement/align) {{Deprecated_inline}}
   - : **align** da/define el alineamiento de la tabla.
-- [table.bgColor](/es/docs/DOM/table.bgColor){{Deprecated_inline}}
+- [table.bgColor](/es/docs/Web/API/HTMLTableElement/bgColor){{Deprecated_inline}}
   - : **bgColor** da/define el color de fondo de la tabla.
-- [table.border](/es/docs/DOM/table.border) {{Deprecated_inline()}}
+- [table.border](/es/docs/Web/API/HTMLTableElement/border) {{Deprecated_inline()}}
   - : **border** da/define el borde de la tabla.
-- [table.cellPadding](/es/docs/DOM/table.cellPadding)
+- [table.cellPadding](/es/docs/Web/API/HTMLTableElement/cellPadding)
   - : **cellPadding** da/define el relleno interno de las celdas.
-- [table.cellSpacing](/es/docs/DOM/table.cellSpacing)
+- [table.cellSpacing](/es/docs/Web/API/HTMLTableElement/cellSpacing)
   - : **cellSpacing** da/define el espacio entre celdas.
-- [table.frame](/es/docs/DOM/table.frame)
+- [table.frame](/es/docs/Web/API/HTMLTableElement/frame)
   - : **frame** especifica que lados de la tabla tienen borde.
-- [table.rules](/es/docs/DOM/table.rules)
+- [table.rules](/es/docs/Web/API/HTMLTableElement/rules)
   - : **rules** especifica cuales de los bordes internos son visibles.
-- [table.summary](/es/docs/DOM/table.summary)
+- [table.summary](/es/docs/Web/API/HTMLTableElement/summary)
   - : **summary** da/define el resumen de la tabla.
-- [table.width](/es/docs/DOM/table.width)
+- [table.width](/es/docs/Web/API/HTMLTableElement/width)
   - : **width** da/define el ancho de la tabla.
 
 ## Métodos
 
-- [table.createTHead](/es/docs/DOM/table.createTHead)
+- [table.createTHead](/es/docs/Web/API/HTMLTableElement/createTHead)
   - : **createTHead** crea el encabezado de la tabla.
-- [table.deleteTHead](/es/docs/DOM/table.deleteTHead)
+- [table.deleteTHead](/es/docs/Web/API/HTMLTableElement/deleteTHead)
   - : **deleteTHead** elimina el encabezado de la tabla.
-- [table.createTFoot](/es/docs/DOM/table.createTFoot)
+- [table.createTFoot](/es/docs/Web/API/HTMLTableElement/createTFoot)
   - : **createTFoot** crea el pie de tabla.
-- [table.deleteTFoot](/es/docs/DOM/table.deleteTFoot)
+- [table.deleteTFoot](/es/docs/Web/API/HTMLTableElement/deleteTFoot)
   - : **deleteTFoot** elimina el pie de tabla.
-- [table.createCaption](/es/docs/DOM/table.createCaption)
+- [table.createCaption](/es/docs/Web/API/HTMLTableElement/createCaption)
   - : **createCaption** crea una nueva leyenda para la tabla.
-- [table.deleteCaption](/es/docs/DOM/table.deleteCaption)
+- [table.deleteCaption](/es/docs/Web/API/HTMLTableElement/deleteCaption)
   - : **deleteCaption** elimina la leyenda de tabla.
-- [table.insertRow](/es/docs/DOM/table.insertRow)
+- [table.insertRow](/es/docs/Web/API/HTMLTableElement/insertRow)
   - : **insertRow** inserta una nueva fila.
-- [table.deleteRow](/es/docs/DOM/table.deleteRow)
+- [table.deleteRow](/es/docs/Web/API/HTMLTableElement/deleteRow)
   - : **deleteRow** elimina una fila.

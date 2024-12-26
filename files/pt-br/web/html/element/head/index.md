@@ -77,7 +77,7 @@ Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attri
 
 ## Notas
 
-Moderno, HTML5-compatível browsers automaticamente constrói um elemento `<head>` se as tags forem omitidas na marcação. [Este comportamento não pode ser garantido por browsers antigos.](http://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)
+Moderno, HTML5-compatível browsers automaticamente constrói um elemento `<head>` se as tags forem omitidas na marcação. [Este comportamento não pode ser garantido por browsers antigos.](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)
 
 ## Especificações
 

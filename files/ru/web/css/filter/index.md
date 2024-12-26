@@ -1254,9 +1254,9 @@ table.standard-table td {
 
 ## Смотрите также
 
-- [Applying SVG effects to HTML content](/ru/docs/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/ru/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - The {{Cssxref("mask")}} property
 - [SVG](/ru/docs/Web/SVG)
-- [Understanding CSS filters](http://www.html5rocks.com/en/tutorials/filters/understanding-css/), HTML5Rocks! article
+- [Understanding CSS filters](https://www.html5rocks.com/en/tutorials/filters/understanding-css/), HTML5Rocks! article
 - [CSS 3 filters](http://techstream.org/Web-Design/CSS3-Image-Filters) Tech Stream article
-- [CSS filters](http://davidwalsh.name/css-filters) By David Walsh
+- [CSS filters](https://davidwalsh.name/css-filters) By David Walsh

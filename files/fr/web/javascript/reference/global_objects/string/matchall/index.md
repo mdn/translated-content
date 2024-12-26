@@ -22,7 +22,7 @@ str.matchAll(regexp);
 
 ### Valeur de retour
 
-Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_Generators).
+Un [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators).
 
 ## Exemples
 
@@ -43,7 +43,7 @@ while ((matches = regexp.exec(str)) !== null) {
 }
 ```
 
-Avec `matchAll()`, on peut éviter la boucle `while` et le marqueur global. On récupère l'itérateur et on utilise une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of), [la décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition) ou encore {{jsxref("Array.from()")}} :
+Avec `matchAll()`, on peut éviter la boucle `while` et le marqueur global. On récupère l'itérateur et on utilise une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of), [la décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) ou encore {{jsxref("Array.from()")}} :
 
 ```js
 const regexp = RegExp("foo*", "g");
@@ -66,7 +66,7 @@ Array.from(matches, (m) => m[0]);
 
 ### Meilleur accès aux groupes capturants
 
-Un autre avantage de `matchAll()` est un meilleur accès aux groupes capturants. De fait, les groupes capturants sont ignorés par [`match()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match) lorsqu'on utilise le marqueur global `/g` :
+Un autre avantage de `matchAll()` est un meilleur accès aux groupes capturants. De fait, les groupes capturants sont ignorés par [`match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match) lorsqu'on utilise le marqueur global `/g` :
 
 ```js
 var regexp = /t(e)(st(\d?))/g;

@@ -41,7 +41,7 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 
 Si les feuilles de style ne pouvaient appliquer qu'une déclaration à chaque élément d'une page Web, elles seraient plutôt inutiles. Le véritable objectif est d'appliquer différentes déclarations à différentes parties du document.
 
-Le CSS permet cela en associant des conditions à des blocs de déclarations. Chaque bloc de déclaration (valide) est précédé d'un ou plusieurs [**sélecteurs**](/fr/docs/Web/CSS/CSS_Selectors) séparés par des virgules, qui sont des conditions sélectionnant certains éléments de la page. Un [<i lang="en">groupe de sélecteurs</i>](/fr/docs/Web/CSS/Selector_list) et un bloc de déclarations associé, ensemble, forment ce qu'on appelle une **règle** (en anglais, le terme formel est <i lang="en">ruleset</i>, mais <i lang="en">rule</i> est également usité).
+Le CSS permet cela en associant des conditions à des blocs de déclarations. Chaque bloc de déclaration (valide) est précédé d'un ou plusieurs [**sélecteurs**](/fr/docs/Web/CSS/CSS_selectors) séparés par des virgules, qui sont des conditions sélectionnant certains éléments de la page. Un [<i lang="en">groupe de sélecteurs</i>](/fr/docs/Web/CSS/Selector_list) et un bloc de déclarations associé, ensemble, forment ce qu'on appelle une **règle** (en anglais, le terme formel est <i lang="en">ruleset</i>, mais <i lang="en">rule</i> est également usité).
 
 Une règle CSS est visualisé dans le diagramme ci-dessous.
 
@@ -62,7 +62,7 @@ Une **instruction** est un bloc de construction qui commence par n'importe quel 
 
 Il existe deux types de déclarations&nbsp;:
 
-- Les **règles** qui associent une collection de déclarations CSS à une condition décrite par un [sélecteur](/fr/docs/Web/CSS/CSS_Selectors).
+- Les **règles** qui associent une collection de déclarations CSS à une condition décrite par un [sélecteur](/fr/docs/Web/CSS/CSS_selectors).
 - Les **règles @** qui commencent par une arobase, '`@`' (`U+0040 COMMERCIAL AT`), suivie d'un identifiant et se poursuivant jusqu'à la fin de l'instruction, c'est-à-dire jusqu'à au prochain point-virgule (;) en dehors d'un bloc, ou à la fin du bloc suivant. Chaque type de [règles @](/fr/docs/Web/CSS/At-rule), défini par l'identifiant, peut avoir sa propre syntaxe interne, et bien sûr sa sémantique. Ils sont utilisés pour transmettre des informations de métadonnées (comme [`@charset`](/fr/docs/Web/CSS/@charset) ou [`@import`](/fr/docs/Web/CSS/@import)), des informations conditionnelles (comme [`@media`](/fr/docs/Web/CSS/@media) ou [`@document`](/fr/docs/Web/CSS/@document)), ou des informations descriptives (comme [`@font-face`](/fr/docs/Web/CSS/@font-face)).
 
 Toute instruction qui n'est pas une règle ou une règle @ est invalide et ignorée.
@@ -77,11 +77,11 @@ Il existe un autre groupe d'instructions&nbsp;: les **instructions imbriquées**
   - **Syntaxe CSS**
   - [Commentaires](/fr/docs/Web/CSS/Comments)
   - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Héritage](/fr/docs/Web/CSS/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Mode de mise en page](/fr/docs/Web/CSS/Layout_mode)
   - [Modèle de mise en forme visuelles](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
     - [Valeur initiale](/fr/docs/Web/CSS/initial_value)
     - [Valeur calculée](/fr/docs/Web/CSS/computed_value)

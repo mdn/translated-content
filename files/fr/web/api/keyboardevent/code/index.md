@@ -17,7 +17,7 @@ Pour déterminer quel caractère correspond à un `key event`, utilisez plutôt 
 
 ## Valeurs des codes
 
-Les valeurs de code pour Windows, Linux et macOS figurent dans la liste de la [KeyboardEvent: code values](/fr/docs/Web/API/KeyboardEvent/code/code_values).
+Les valeurs de code pour Windows, Linux et macOS figurent dans la liste de la [KeyboardEvent: code values](/fr/docs/Web/API/UI_Events/Keyboard_event_code_values).
 
 ## Exemples
 

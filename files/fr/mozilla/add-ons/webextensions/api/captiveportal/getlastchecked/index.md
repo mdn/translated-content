@@ -15,7 +15,7 @@ var state = browser.captivePortal.getLastChecked();
 
 ### Valeur retournée
 
-Une [Promise](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est remplie avec un nombre entier représentant le temps en millisecondes.
+Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est remplie avec un nombre entier représentant le temps en millisecondes.
 
 {{WebExtExamples}}
 

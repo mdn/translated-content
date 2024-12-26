@@ -324,7 +324,7 @@ l10n:
 
 - {{JSxRef("Classes/Constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
-- [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties)
 - [Поля открытого класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{JSxRef("Classes/static", "static")}}
 - [Статические блоки инициализации](/ru/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)

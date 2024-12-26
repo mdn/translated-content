@@ -67,7 +67,7 @@ function randomNotification() {
 
 技術はまだ非常に初期段階にあります — いくつかの実用的な例は Google Cloud Messaging プラットフォームを使用しますが、[VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)（Voluntary Application Server Identification、自発的アプリケーションサーバー識別）をサポートするように書き直されています。 [サービスワーカークックブックの例](https://github.com/mdn/serviceworker-cookbook/push-payload.html)（英語）を調べたり、[Firebase](https://firebase.google.com/) を使用してプッシュメッセージングサーバーをセットアップしたり、（例えば Node.js を使用して）独自のサーバーを構築したりすることができます。
 
-前述のように、プッシュメッセージを受信できるようにするには、サービスワーカーが必要です。 その基本については、[サービスワーカーで PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)の記事で既に説明しています。 サービスワーカーの内部には、プッシュサービス購読機構（push service subscription mechanism）が作成されています。
+前述のように、プッシュメッセージを受信できるようにするには、サービスワーカーが必要です。 その基本については、[サービスワーカーで PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)の記事で既に説明しています。 サービスワーカーの内部には、プッシュサービス購読機構（push service subscription mechanism）が作成されています。
 
 ```js
 registration.pushManager.getSubscription().then(/* ... */);

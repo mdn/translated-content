@@ -22,7 +22,7 @@ promise.allSettled(iterable);
 ### Parâmetros
 
 - `iterable`
-  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Guide/iterable), como um {{jsxref("Array")}}, onde cada membro é uma `Promise`.
+  - : Um objeto [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols), como um {{jsxref("Array")}}, onde cada membro é uma `Promise`.
 
 ### Valor retornado
 

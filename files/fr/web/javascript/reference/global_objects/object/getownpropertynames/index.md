@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 
 {{JSRef}}
 
-La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les propriétés (qu'elles soient énumérables ou non, tant qu'elles ne sont pas désignées par un [symbole](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol)) propres à un objet (c'est-à-dire n'étant pas héritées via la chaîne de prototypes).
+La méthode **`Object.getOwnPropertyNames()`** renvoie un tableau de toutes les propriétés (qu'elles soient énumérables ou non, tant qu'elles ne sont pas désignées par un [symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)) propres à un objet (c'est-à-dire n'étant pas héritées via la chaîne de prototypes).
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
 
@@ -137,7 +137,7 @@ Object.getOwnPropertyNames('toto')
 
 ## Voir aussi
 
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

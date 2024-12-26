@@ -39,4 +39,4 @@ x = n = z; // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
 
 ## Ver también
 
-- [Assignment operators in the JS guide](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Assignment operators in the JS guide](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)

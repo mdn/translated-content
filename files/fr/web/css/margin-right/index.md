@@ -9,7 +9,7 @@ La propriété **`margin-right`** d'un élément définit l'espace horizontal à
 
 {{EmbedInteractiveExample("pages/css/margin-right.html")}}
 
-Les marges des côtés droit et gauche de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+Les marges des côtés droit et gauche de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 ## Syntaxe
 

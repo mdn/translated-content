@@ -48,14 +48,14 @@ slug: MDN/Community
 
   - : 议题用于跟踪所有的错误（bug）和具有明确操作结果的工作。本文包含了有关创建和处理议题的指南。本文还涵盖了以下主题：
 
-    - [议题分类](/zh-CN/docs/MDN/Community/Issues/Issue_triage)
+    - [议题分类](/zh-CN/docs/MDN/Community/Issues)
     - [内容和功能建议](/zh-CN/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
 - [拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)
 
   - : 本节介绍了我们提交拉取请求的指南，以及你对审查过程应有的期望。
 
-- [用户和团队](/zh-CN/docs/MDN/Community/Users_teams)
+- [用户和团队](/zh-CN/docs/MDN/Community/Roles_teams)
 
   - : 本节概述了作为 MDN Web 文档项目组成部分的用户和团队，并详细说明了成为团队成员的意义。
 

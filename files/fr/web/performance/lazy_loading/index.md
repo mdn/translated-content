@@ -60,7 +60,7 @@ Très souvent, les pages web contiennent beaucoup d'images et cela contribue à 
 
 #### Attribut loading
 
-L'attribut [`loading`](/fr/docs/Web/HTML/Element/Img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
+L'attribut [`loading`](/fr/docs/Web/HTML/Element/img#attr-loading) utilisé sur un élément [`<img>`](/fr/docs/Web/HTML/Element/img) (ou sur un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut être utilisé pour demander au navigateur de différer le chargement des images et des iframes qui se situent en dehors de la zone affichée à l'écran, jusqu'à ce que la personne visitant le site ne les affiche en faisant défiler la page.
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />

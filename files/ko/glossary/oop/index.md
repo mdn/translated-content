@@ -9,7 +9,7 @@ l10n:
 
 **OOP**(객체 지향적 프로그래밍)는 데이터가 "객체" 내에 캡슐화되고 구성 요소 부분이 아닌, 객체 자체가 운용되는 프로그래밍 접근 방식입니다.
 
-{{glossary("JavaScript")}}는 매우 객체 지향적인 언어입니다. JavaScript는 [클래스 구문](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages) 기반의 것과는 대조적으로 [**프로토타입** 기반의 모델](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 따릅니다.
+{{glossary("JavaScript")}}는 매우 객체 지향적인 언어입니다. JavaScript는 [클래스 구문](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages) 기반의 것과는 대조적으로 [**프로토타입** 기반의 모델](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 따릅니다.
 
 ## 같이 보기
 

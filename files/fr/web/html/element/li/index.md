@@ -11,7 +11,7 @@ L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `value`
 
@@ -160,5 +160,5 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 - Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>` :
 
   - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal,
-  - les [compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), pour gérer des listes imbriquées complexes,
+  - les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), pour gérer des listes imbriquées complexes,
   - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.

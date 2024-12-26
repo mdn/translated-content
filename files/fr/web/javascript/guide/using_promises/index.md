@@ -123,7 +123,7 @@ faireQqc()
   .catch(failureCallback);
 ```
 
-Les arguments passés à `then` sont optionnels. La forme `catch(failureCallback)` est un alias plus court pour `then(null, failureCallback)`. Ces chaînes de promesses sont parfois construites avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) :
+Les arguments passés à `then` sont optionnels. La forme `catch(failureCallback)` est un alias plus court pour `then(null, failureCallback)`. Ces chaînes de promesses sont parfois construites avec [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) :
 
 ```js
 faireQqc()
@@ -196,7 +196,7 @@ try {
 }
 ```
 
-Cette symétrie entre le code asynchrone et le code synchrone atteint son paroxysme avec le couple d'opérateurs [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function) d'ECMAScript 2017:
+Cette symétrie entre le code asynchrone et le code synchrone atteint son paroxysme avec le couple d'opérateurs [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Statements/async_function) d'ECMAScript 2017:
 
 ```js
 async function toto() {
@@ -340,8 +340,8 @@ console.log(1); // 1, 2, 3, 4
 ## Voir aussi
 
 - {{jsxref("Promise.then()")}}
-- [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function)
-- [La spécification Promises/A+](http://promisesaplus.com/)
-- [Nolan Lawson : We have a problem with promises — Common mistakes with promises (article en anglais)](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [`async`/`await`](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
+- [La spécification Promises/A+](https://promisesaplus.com/)
+- [Nolan Lawson : We have a problem with promises — Common mistakes with promises (article en anglais)](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
 {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}

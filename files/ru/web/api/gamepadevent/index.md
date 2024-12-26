@@ -5,7 +5,7 @@ slug: Web/API/GamepadEvent
 
 {{APIRef("Gamepad API")}}
 
-`GamepadEvent` интерфейс {{ domxref("Gamepad API")}} содержит ссылки на геймпады, подключённые к системе, передающиеся при возникновении событий [Window.gamepadconnected](/ru/docs/Web/Events/gamepadconnected) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}.
+`GamepadEvent` интерфейс {{ domxref("Gamepad API")}} содержит ссылки на геймпады, подключённые к системе, передающиеся при возникновении событий [Window.gamepadconnected](/ru/docs/Web/API/Window/gamepadconnected_event) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}.
 
 ## Свойства
 
@@ -14,7 +14,7 @@ slug: Web/API/GamepadEvent
 
 ## Примеры
 
-Свойства геймпада передаются при возникновении события [Window.gamepadconnected](/ru/docs/Web/Events/gamepadconnected).
+Свойства геймпада передаются при возникновении события [Window.gamepadconnected](/ru/docs/Web/API/Window/gamepadconnected_event).
 
 ```js
 window.addEventListener("gamepadconnected", function (e) {
@@ -50,4 +50,4 @@ window.addEventListener("gamepaddisconnected", function (e) {
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/Guide/API/Gamepad)
+[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

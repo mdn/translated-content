@@ -70,7 +70,7 @@ La fuente de este ejemplo interactivo está almacenada en un repositorio de GitH
 
 ## Atributos
 
-Como todos los elementos de HTML, este elemento soporta los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
+Como todos los elementos de HTML, este elemento soporta los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `datetime`
   - : Este atributo indica la hora y/o fecha del elemento y debe estar escrito en uno de los formatos que se muestran posteriomente.

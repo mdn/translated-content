@@ -53,7 +53,7 @@ console.log("Cet élément a été enlevé :", premierÉlément);
 
 ### Utiliser `shift()` dans une boucle `while`
 
-La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
+La méthode `shift()` peut être utilisée dans une boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while). Dans l'exemple suivant, chaque itération de la boucle retire un élément du tableau et l'affiche dans la console, jusqu'à ce que ce dernier soit vide.
 
 ```js
 var noms = ["André", "Édouard", "Paul", "Christophe", "Jean"];

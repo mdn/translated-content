@@ -25,7 +25,7 @@ Ninguno.
 
 Este método devuelve el texto seleccionado.
 
-En [JavaScript](/es/JavaScript), este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):
+En [JavaScript](/es/docs/Web/JavaScript), este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):
 
 ```
 alert(window.getSelection()) // Lo que se llama.

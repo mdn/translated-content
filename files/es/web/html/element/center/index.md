@@ -7,17 +7,17 @@ slug: Web/HTML/Element/center
 
 ### Definición
 
-- El elemento obsoleto [center](/es/HTML/Elemento/center) (centro) crea una caja en bloque con el contenido centrado. En realidad es equivalente a un [div](/es/HTML/Elemento/div) con `align="center"`
+- El elemento obsoleto [center](/es/docs/Web/HTML/Element/center) (centro) crea una caja en bloque con el contenido centrado. En realidad es equivalente a un [div](/es/docs/Web/HTML/Element/div) con `align="center"`
 
   - : **Sus etiquetas son**: \<center> y \</center> (ambas obligatorias).
 
-    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento desaprobado](/es/HTML/Elemento/Tipos_de_elementos#desaprobado).
+    **Está definido como**: [Elemento desaprobado](/es/docs/HTML/Elemento/Tipos_de_elementos#desaprobado).
 
     > Actualmente la mejor [forma de centrar texto no es con html](https://juanmcastro.es/tutoriales/como-centrar-texto-en-html/), con css tenemos infinidad de posibilidales para centrar el texto vertical, horizontal, izquierda, dercha, justificado y todo lo que necesitemos.
 
-    **Puede contener**: cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque) y [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque) y [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 

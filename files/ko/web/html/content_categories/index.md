@@ -35,8 +35,8 @@ slug: Web/HTML/Content_categories
 특정 조건을 만족하는 경우 플로우 콘텐츠에 속하는 요소도 있습니다.
 
 - {{HTMLElement("area")}}는 {{HTMLElement("map")}} 요소의 자손인 경우.
-- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
-- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
+- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
+- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
 - {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Element/style#scoped) 특성을 가지고 있는 경우.
 
 ### 구획 콘텐츠

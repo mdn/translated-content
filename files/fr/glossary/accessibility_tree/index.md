@@ -9,7 +9,7 @@ l10n:
 
 L'**arbre d'accessibilité**, ou **modèle d'objets d'accessibilité** (**MOA**), contient des informations concernant l'[accessibilité](/fr/docs/Glossary/Accessibility) pour la plupart des éléments HTML.
 
-Les navigateurs convertissent le balisage en une représentation interne appelée [_arbre DOM_](/fr/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
+Les navigateurs convertissent le balisage en une représentation interne appelée [_arbre DOM_](/fr/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Le DOM contient un objet pour chaque balise, attribut et noeud de texte. Les navigateurs créent ensuite un arbre d'accessibilité basé sur l'arbre DOM, celui-ci est utilisé par les technologies d'assistance telles que les lecteurs d'écran via des APIs spécifiques à une plateforme.
 
 Un objet de l'arbre d'accessibilité contient quatre éléments&nbsp;:
 

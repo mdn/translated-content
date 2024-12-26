@@ -14,11 +14,11 @@ l10n:
 从上面的示例中可以看出，在我们期望文本中断的地方都包含了一个 `<br>` 元素。`<br>` 之后的文本从文本块的下一行开始
 
 > [!NOTE]
-> 不要用 `<br>` 来增加文本之间的行间隔；请使用 {{HTMLElement("p")}} 元素来包装文本，并使用 [CSS](/zh-CN/docs/CSS) {{cssxref('margin')}} 属性来控制间隔大小。
+> 不要用 `<br>` 来增加文本之间的行间隔；请使用 {{HTMLElement("p")}} 元素来包装文本，并使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('margin')}} 属性来控制间隔大小。
 
 ## 属性
 
-此元素的属性包括[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+此元素的属性包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ### 已弃用的属性
 
