@@ -50,7 +50,7 @@ browser.omnibox.onInputEntered.hasListener(listener)
 
 本示例将用户输入的内容解释为 CSS 属性名称，并为每个与输入内容匹配的 CSS 属性在下拉列表中填充一个 {{WebExtAPIRef("omnibox.SuggestResult")}} 对象。`SuggestResult` 的 `description` 属性将为该属性的全名，而 `content` 将是该属性的 MDN 页面。
 
-本示例还会监听 {{WebExtAPIRef("omnibox.onInputEntered")}} 并根据 {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} 参数打开与选择相对应的 MDN 页面。
+本示例还会监听 `omnibox.onInputEntered` 并根据 {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} 参数打开与选择相对应的 MDN 页面。
 
 ```js
 browser.omnibox.setDefaultSuggestion({
