@@ -2,7 +2,7 @@
 title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: c9bad2ef8b5655146481292f3bce7de0dd86ba68
 ---
 
 {{AddonSidebar}}
