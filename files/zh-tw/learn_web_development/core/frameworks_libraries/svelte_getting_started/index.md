@@ -5,22 +5,22 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此篇文章我們將摘要說明 [Svelte 框架](https://svelte.dev/)。我們將會看到 Svelte 如何運作，以及它與其它框架和工具的不同之處。接著我們將學習如何設置我們的開發環境並建立一個範例應用程式，了解其專案結構及如何在本地運行，最後可以將其建置於正式環境。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
       <td>
         <p>
           推薦你至少需熟悉基本的
-          <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           等程式語言且具備<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列環境</a
           >基本知識。
         </p>
@@ -81,9 +81,9 @@ Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以�
 
 ### 需求
 
-為了使用 Svelte，你會需要安裝 [Node.js](https://nodejs.org/en/)。推薦你使用長期支援版本（LTS）。Node 包含 npm（the node package manager）和 npx（the node package runner）。另外你也可以使用 Yarn 套件管理工具來代替 npm，但我們先假定你會用 npm 來走完這個教學系列。若想知道更多 npm 和 yarn 的相關資訊可以至[基礎套件管理](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)了解。
+為了使用 Svelte，你會需要安裝 [Node.js](https://nodejs.org/en/)。推薦你使用長期支援版本（LTS）。Node 包含 npm（the node package manager）和 npx（the node package runner）。另外你也可以使用 Yarn 套件管理工具來代替 npm，但我們先假定你會用 npm 來走完這個教學系列。若想知道更多 npm 和 yarn 的相關資訊可以至[基礎套件管理](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)了解。
 
-如果你是使用 Windows 的話，你將會需要安裝一些軟體來達到和 Unix/macOS 作業系統使用終端機一樣的行為，為的是接下來走教學系列時，可以使用到一些被提及的終端機指令。Gitbash（[適用於 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[適用於 Linux 的 Windows 子系統（WSL）](https://docs.microsoft.com/zh-TW/windows/wsl/about)，這些都是蠻合適的解決方案。若想知道更多命令列的相關資訊可以至[命令列課程](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)了解。
+如果你是使用 Windows 的話，你將會需要安裝一些軟體來達到和 Unix/macOS 作業系統使用終端機一樣的行為，為的是接下來走教學系列時，可以使用到一些被提及的終端機指令。Gitbash（[適用於 Windows 的 git 工具集](https://gitforwindows.org/)中的一部分功能）或使用[適用於 Linux 的 Windows 子系統（WSL）](https://docs.microsoft.com/zh-TW/windows/wsl/about)，這些都是蠻合適的解決方案。若想知道更多命令列的相關資訊可以至[命令列課程](/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)了解。
 
 若想知道更多相關資訊也可以至下列去閱讀：
 
@@ -140,7 +140,7 @@ moz-todo-svelte
 
 內容解釋如下：
 
-- `package.json` 和 `package-lock.json`：Node.js/npm 用它來組織化管理你的專案，相關資訊可以在這邊找到。在這個教學系列中，你不需要完全了解這個檔案，但如果你想要學習更多的話，你可以至 NodeJS.org 閱讀[什麼是 `package.json` 檔案](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)？我們在[基礎套件管理教學系列](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)也有談到。
+- `package.json` 和 `package-lock.json`：Node.js/npm 用它來組織化管理你的專案，相關資訊可以在這邊找到。在這個教學系列中，你不需要完全了解這個檔案，但如果你想要學習更多的話，你可以至 NodeJS.org 閱讀[什麼是 `package.json` 檔案](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)？我們在[基礎套件管理教學系列](/zh-TW/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)也有談到。
 - `node_modules`：這裡是 node 存放專案相依套件的地方。這些相依套件在正式環境不會看到，只有開發時才會被使用到。
 - `.gitignore`：告訴 git 有哪些檔案或資料夾不要納入專案版本控制——透過它可以決定哪些檔案要納入專案版本控制，還蠻實用的！
 - `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 做為模組包裝工具。這個組態檔案告訴 rollup 如何編譯和建構你的應用程式。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改執行 `npx degit sveltejs/template-webpack svelte-app` 來建構你的初始應用程式。
@@ -507,4 +507,4 @@ npx degit opensas/mdn-svelte-tutorial/01-getting-started
 - 元件中的頂層變數會構成其元件狀態。
 - 當指定新數值給頂層變數時，將會觸發其反應性。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

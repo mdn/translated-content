@@ -51,7 +51,7 @@ slug: Web/HTML/Element/button
 
 - `formnovalidate`
 
-  - : 如果按鈕是提交按鈕，此布林屬性指定提交表單時不應[驗證](/zh-TW/docs/Learn/Forms/Form_validation)表單。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`novalidate`](/zh-TW/docs/Web/HTML/Element/form#novalidate) 屬性。
+  - : 如果按鈕是提交按鈕，此布林屬性指定提交表單時不應[驗證](/zh-TW/docs/Learn_web_development/Extensions/Forms/Form_validation)表單。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`novalidate`](/zh-TW/docs/Web/HTML/Element/form#novalidate) 屬性。
 
     此屬性也適用於 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 和 [`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 元素。
 

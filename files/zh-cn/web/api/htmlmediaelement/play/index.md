@@ -95,6 +95,6 @@ function handlePlayButton() {
 ## 参见
 
 - [Web media technologies](/zh-CN/docs/Web/Media)
-- Learning: [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- Learning: [Video and audio content](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Autoplay_guide)
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -4,21 +4,21 @@ slug: Learn_web_development/Extensions/Testing/Automated_testing
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 每天在好幾個瀏覽器與設備上，運行手動測試數次，既乏味又浪費時間。要有效率的處理這種事，就要開始熟悉自動化工具。我們會在這篇文章看看有哪些可用的工具、如何使用它們、以及如何使用如 Sauce Labs 與 Browser Stack 的商業化瀏覽器測試程式之基本講述。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先決條件：</th>
       <td>
-        熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a
-          href="/zh-TW/docs/Learn/CSS"
+        熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
+          href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
           >CSS</a
-        >、<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+        >、<a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
         核心語言的基本；<a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/zh-TW/docs/Learn_web_development/Extensions/Testing/Introduction"
           >跨瀏覽器測試的重要原則</a
         >。
       </td>
@@ -413,4 +413,4 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 
 下篇文章我們來關注怎麼用 Selenium 設定你自己的區域自動化系統，並與 Sauce Labs 做結合。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}

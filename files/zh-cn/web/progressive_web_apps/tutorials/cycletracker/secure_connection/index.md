@@ -38,13 +38,13 @@ Service worker 以及 PWA，都[被限制在安全上下文中](/zh-CN/docs/Web/
 
 有几个 {{glossary("IDE")}} 扩展和特定编程语言的包可以通过单击或终端命令启动开发环境。你甚至可以启动多个本地服务器，每个使用不同的端口号。
 
-你可以使用 [VSCode 插件](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#使用文本编辑器的拓展)运行本地 HTTP 服务器，它可以在单个或不同端口上运行本地服务器。[VSCode](https://code.visualstudio.com/download) IDE 的 [Preview on Web Server 扩展](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)在编辑器当前打开的目录的根目录下创建一个服务器，默认端口为 `8080`。VS Code 扩展是可配置的。`previewServer.port` 设置项是 web 服务器的端口号。可以编辑和更改扩展的默认设置 `8080`。默认情况下，在浏览器的 URL 栏中输入 `localhost:8080` 将加载该页面。
+你可以使用 [VSCode 插件](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#使用文本编辑器的拓展)运行本地 HTTP 服务器，它可以在单个或不同端口上运行本地服务器。[VSCode](https://code.visualstudio.com/download) IDE 的 [Preview on Web Server 扩展](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)在编辑器当前打开的目录的根目录下创建一个服务器，默认端口为 `8080`。VS Code 扩展是可配置的。`previewServer.port` 设置项是 web 服务器的端口号。可以编辑和更改扩展的默认设置 `8080`。默认情况下，在浏览器的 URL 栏中输入 `localhost:8080` 将加载该页面。
 
 请注意，Preview on Web Server 扩展使用 browserSync。当你的开发环境由此扩展启动时，`localhost:3001` 提供当前服务器环境的概述。
 
 你还可以[使用 IntelliJ IDE 创建本地服务器](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html)，它搭载了一个[可配置的内置 PHP Web 服务器](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server)。
 
-了解如何使用 [Python](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#使用_python) 或本地服务器端语言（如 PHP）来[设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#在本地运行服务器端语言)。
+了解如何使用 [Python](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#使用_python) 或本地服务器端语言（如 PHP）来[设置本地测试服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#在本地运行服务器端语言)。
 
 ## 使用 npx 的 localhost
 
@@ -73,7 +73,7 @@ ws --https
 
 为了获得 PWA 的额外特性，包括单击安装、独立 UI 和应用商店许可，它需要成为一个 PWA，这意味着它需要一个 service worker（这意味这我们需要安全连接）。为了分发你的应用程序，使别人能够查看、使用和安装你的 PWA，你最好在安全的*远程*服务器上托管你的内容并使其可访问。
 
-正式发布 PWA 时，你可能希望投资[域名和 Web 托管](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#托管)。对于开源项目，开发人员可以从代码库中学习，甚至为项目做出贡献，你可以在 [GitHub Pages](https://pages.github.com/) 上托管你的进度。
+正式发布 PWA 时，你可能希望投资[域名和 Web 托管](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#托管)。对于开源项目，开发人员可以从代码库中学习，甚至为项目做出贡献，你可以在 [GitHub Pages](https://pages.github.com/) 上托管你的进度。
 
 ## GitHub pages
 

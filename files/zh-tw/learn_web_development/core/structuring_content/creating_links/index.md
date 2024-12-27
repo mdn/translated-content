@@ -4,22 +4,22 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
 original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 超連結(Hyperlinks)真的超級重要 — 它造就了我們現今所熟知的網路。這篇文章將會介紹超連結的使用語法，並且探討建立它們的最佳實踐方法。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">需求：</th>
       <td>
         我們在
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 入門</a
         >
         中介紹過的 HTML 基礎，以及在
         <a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML 的文字基礎知識</a
         >
         中介紹過的文字格式化技巧。
@@ -312,7 +312,7 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 ```
 
 > [!NOTE]
-> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method)來得知有那些常用的查詢記號。
+> 每一個欄位的值必須以 URL 編碼，也就是將空白及不可印字元(不可見的字元如縮排(tabs)、回車(carriage return)、換頁(page breaks)等等)轉換成[百分號編碼](http://en.wikipedia.org/wiki/Percent-encoding)。也請注意這裡使用問號(`?`)來分隔主要 URL 和其他欄位；以 & 來分隔 `mailto:` URL 中的不同的欄位，這是標準的 URL 查詢記號(query notation)。你可以閱讀 [GET 方法](/zh-TW/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_get_method)來得知有那些常用的查詢記號。
 
 以下是 `mailto` URL 的其他例子：
 
@@ -324,10 +324,10 @@ URL 利用路徑來找到檔案，而路徑會指出你所感興趣的檔案位�
 
 ## 小試身手！
 
-你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links)
+你已經讀完這個章節囉，但你有掌握箇中的重點嗎？你可以在繼續閱讀後面的章節之前，先進行一些測驗 — 請前往[小試身手：超連結。](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)
 
 ## 總結
 
 總而言之，以上就是超連結的介紹了！ 稍後你在後續的課程中學到如何位連結增添樣式時，還會再碰到它們。HTML 的下一章，我們將繼續討論文字語義(text semantics)，並看一些進階／不常見的特性，相信你會獲益良多的 — 下一站是：進階文字格式化技巧！
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

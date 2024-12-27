@@ -4,25 +4,25 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 original_slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 {{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如「段落」或「圖片」），還可以使用區塊級元素（例如「標題欄」、「導覽選單」、「主內容列」）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識:</th>
       <td>
         Basic HTML familiarity, as covered in
-        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >. HTML text formatting, as covered in
         <a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML text fundamentals</a
         >. How hyperlinks work, as covered in
         <a
-          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >Creating hyperlinks</a
         >.
       </td>
@@ -306,7 +306,7 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 ## Test your skills!
 
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
+You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
 
 ## Summary
 
@@ -316,4 +316,4 @@ At this point you should have a better idea about how to structure a web page/si
 
 - [Using HTML sections and outlines](/zh-TW/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

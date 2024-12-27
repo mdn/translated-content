@@ -84,7 +84,7 @@ input:invalid {
 
 ### 指定一种模式
 
-你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个正则表达式，输入的值必须与之匹配，才能被视为有效（参见[根据正则表达式进行验证](/zh-CN/docs/Learn/Forms/Form_validation#使用正则表达式校验)了解关于使用正则表达式来验证输入的简单速成课程）。
+你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个正则表达式，输入的值必须与之匹配，才能被视为有效（参见[根据正则表达式进行验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation#使用正则表达式校验)了解关于使用正则表达式来验证输入的简单速成课程）。
 
 下面的例子将值限制为 4-8 个字符，并要求它只包含小写字母。
 
@@ -158,5 +158,5 @@ input:valid + span::after {
 ## 参见
 
 - [约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)
-- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [表单数据校验](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)

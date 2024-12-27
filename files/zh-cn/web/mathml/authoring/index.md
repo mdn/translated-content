@@ -85,7 +85,7 @@ l10n:
 
 #### 数学公式字体
 
-正如 [MathML 字体](/zh-CN/docs/Web/MathML/Fonts)中所解释的，数学公式字体有助于更好地渲染 MathML 的内容。因此，选择分享[此类字体的安装说明](/zh-CN/docs/Web/MathML/Fonts#installation_instructions)或以 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)的形式提供它们是一个不错的主意。
+正如 [MathML 字体](/zh-CN/docs/Web/MathML/Fonts)中所解释的，数学公式字体有助于更好地渲染 MathML 的内容。因此，选择分享[此类字体的安装说明](/zh-CN/docs/Web/MathML/Fonts#installation_instructions)或以 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)的形式提供它们是一个不错的主意。
 
 [MathFonts 页面](https://fred-wang.github.io/MathFonts/)提供了此类 Web 字体，以及适合的样式表。例如，只要在文档 head 下插入以下内容，即可选择带有回退的 Web 字体的拉丁现代字体：
 

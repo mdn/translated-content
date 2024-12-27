@@ -4,24 +4,26 @@ slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}我們被賦予做出一個 React 原型 app 的任務--這個 app 將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。文章將會與你一起完成一個基本 `App` component 的結構與畫面，以便稍後與其他 component 互動。
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}
+
+我們被賦予做出一個 React 原型 app 的任務--這個 app 將允許使用者新增、編輯、刪除任務；且可以標記任務完成而不被刪除。文章將會與你一起完成一個基本 `App` component 的結構與畫面，以便稍後與其他 component 互動。
 
 > [!NOTE]
 > 如果你需要檢查自己的程式碼與範例之間的差異，可以連到 [todo-react repository](https://github.com/mdn/todo-react)，這裡有我們完整的程式碼。 Todo list 作品示範：<https://mdn.github.io/todo-react-build/>。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          知道 <a href="/zh-TW/docs/Learn/HTML">HTML</a>,
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a>與<a
-            href="/zh-TW/docs/Learn/JavaScript"
+          知道 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a>與<a
+            href="/zh-TW/docs/Learn_web_development/Core/Scripting"
             >JavaScript</a
           >的核心語法、操作基本終端機指令
           <a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -554,4 +556,4 @@ body {
 
 現在我們的待辦清單 app 終於比較像真正的 app 了！問題是它還沒真正提供功能，我們將在下一章解決這個問題。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_getting_started","Learn_web_development/Core/Frameworks_libraries/React_components", "Learn_web_development/Core/Frameworks_libraries")}}

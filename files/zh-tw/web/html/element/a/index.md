@@ -58,7 +58,7 @@ slug: Web/HTML/Element/a
 
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
-    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
+    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
     - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
     - `same-origin`：對於{{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
     - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文件的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。

@@ -4,17 +4,17 @@ slug: Learn_web_development/Core/Scripting/Loops
 original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 編程語言對於快速完成重複性任務非常有用，從多個基本計算到幾乎任何其他需要完成大量類似工作的情況。 在這裡，我們將看看 JavaScript 中可用於處理此類需求的循環結構。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
         Basic computer literacy, a basic understanding of HTML and CSS,
-        <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
+        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
           >JavaScript first steps</a
         >.
       </td>
@@ -886,4 +886,4 @@ If there is anything you didn't understand, feel free to read through the articl
 - [break](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) and [continue](/zh-TW/docs/Web/JavaScript/Reference/Statements/continue) references
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

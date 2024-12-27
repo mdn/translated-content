@@ -4,17 +4,17 @@ slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 original_slug: Learn/Server-side/Django/Authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到你的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展[本地圖書館](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面——分為用戶與員工兩種不同頁面。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提:</th>
       <td>
         完成至
-        <a href="/zh-TW/docs/Learn/Server-side/Django/Sessions"
+        <a href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Sessions"
           >Django 線上教學 7: 會話（Session）框架</a
         >為止的所有主題。
       </td>
@@ -699,4 +699,4 @@ class MyView(PermissionRequiredMixin, View):
 - [Using the (default) Django authentication system](https://docs.djangoproject.com/en/2.0/topics/auth/default//) (Django docs)
 - [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}

@@ -293,7 +293,7 @@ l10n:
 - 你可以使用 `<video>` 元素播放音频文件。如果你需要结合 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕进行音频播放，这会非常有用，因为 {{HTMLElement("audio")}} 元素不支持使用 WebVTT 提供字幕。
 - 要在支持该元素的浏览器上测试回退内容，你可以将 `<video>` 替换为不存在的元素，如 `<notavideo>`。
 
-关于使用 HTML `<video>` 元素的综合信息资源，请参考[视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)初学者教程。
+关于使用 HTML `<video>` 元素的综合信息资源，请参考[视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)初学者教程。
 
 ### 使用 CSS 设置样式
 
@@ -529,6 +529,6 @@ AddType video/webm .webm
 
 - 在框架内定位和调整图片大小：{{cssxref("object-position")}} 和 {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [使用 HTML 音频和视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [使用 HTML 音频和视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [使用 canvas 处理视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

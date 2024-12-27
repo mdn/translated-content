@@ -4,24 +4,24 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在是時候來更深入了解 Vue ，以及建立我們自訂的元件——我們將從建立一個元件開始，這個元件代表待辦清單裡的每一個項目。在過程中，我們會學到一些重要的概念，例如在元件裡面調用其他元件，使用 props 傳遞資料，以及儲存它的狀態（ state ）。
 
 > [!NOTE]
 > 如果你需要根據我們的版本來檢查你的程式碼，你可以從 [todo-vue 存放庫](https://github.com/mdn/todo-vue)找到 Vue 範例應用程式最終版本的程式碼。有關實際運行的版本，請看 <https://mdn.github.io/todo-vue/dist/> 。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a> 、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 以及
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 核心語言，具備
+          熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 以及
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 核心語言，具備
           <a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >terminal/command line</a
           >
           的知識。
@@ -350,4 +350,4 @@ And that will do for this article. At this point we have a nicely-working `ToDoI
 
 Now we're ready to add multiple `ToDoItem` components to our App. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -318,4 +318,4 @@ CSS 字体函数与 {{CSSxRef("font-variant-alternates")}} 属性一起使用，
 ## 参见
 
 - [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 介绍：值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

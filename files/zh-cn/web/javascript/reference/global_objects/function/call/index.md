@@ -126,4 +126,4 @@ slice(arguments);
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Reflect.apply()")}}
 - [展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
-- [JavaScript 对象入门](/zh-CN/docs/Learn/JavaScript/Objects)
+- [JavaScript 对象入门](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

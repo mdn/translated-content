@@ -4,20 +4,20 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginnin
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，你將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
       <td>
-        熟悉網頁核心語言 <a href="/zh-TW/docs/Learn/HTML">HTML</a> 、
-        <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-        <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> ，並具備
+        熟悉網頁核心語言 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 、
+        <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與
+        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> ，並具備
         <a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
           >terminal/command line</a
         >
         相關知識。
@@ -217,4 +217,4 @@ addItem(description: string) {
 
 目前為止，你應該已經在你的瀏覽器中顯示待辦事項列表。這是很大的進展！當然，我們仍有很多事要做。在下一篇文章，我們將研究在應用程式中加入一些樣式。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_getting_started","Learn_web_development/Core/Frameworks_libraries/Angular_styling", "Learn_web_development/Core/Frameworks_libraries")}}

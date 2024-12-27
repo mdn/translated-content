@@ -173,7 +173,7 @@ JavaScript フレームワークは、この種の作業をはるかに簡単に
 ```html
 <ul>
   <li v-for="task in tasks" v-bind:key="task.id">
-    <span>\{{task.name\}}</span>
+    <span>\{{task.name}}</span>
     <button type="button">Delete</button>
   </li>
 </ul>

@@ -4,11 +4,11 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 
 這篇文章給「到底什麼是無障礙網頁」的模塊，開了個好起頭：以下將包括我們該考慮什麼樣的用戶以及理由、不同的人要在 web 用什麼工具互動、還有如何令無障礙網頁成為 web 開發的一部分。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先決要求：</th>
@@ -51,7 +51,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 - 也有些是自由軟體，例如 [NVDA](http://www.nvaccess.org/)（Windows）、[ChromeVox](http://www.chromevox.com/)（Chrome、Windows、Mac OS X）、[Orca](https://wiki.gnome.org/Projects/Orca)（Linux）
 - 還有些是系統內建，例如 [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/)（Mac OS X 與 iOS）、[Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)（Microsoft Windows）、[ChromeVox](http://www.chromevox.com/)（ChromeOS）、[TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)（Android）。
 
-熟悉螢幕閱讀器是個好主意；你得設定好螢幕閱讀器、還要會使用它，以理解其工作原理。請參見[cross browser testing screen readers guide](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders)以深入理解。以下影片提供了簡單的體驗。
+熟悉螢幕閱讀器是個好主意；你得設定好螢幕閱讀器、還要會使用它，以理解其工作原理。請參見[cross browser testing screen readers guide](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Screenreaders)以深入理解。以下影片提供了簡單的體驗。
 
 {{EmbedYouTube("IK97XMibEws")}}
 
@@ -71,7 +71,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 
 這些殘疾也可能是老化的結果，而不是受到創傷或疾病，或可能是硬體的限制——有些使用者可能沒有滑鼠。
 
-通常影響開發者開發網站的需求是要能使用鍵盤操作網頁——我們會在後續的文內討論使用鍵盤操作網頁。雖然這個需求有些麻煩，但這是一個很好的主意，請開發者嘗試看看。例如：你可以使用 Tab 鍵在表單中切換填寫項目嗎？你可以在我們的[跨瀏覽器測試中找到更多關於使用鍵盤控制網頁的相關資訊](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Using_native_keyboard_accessibility)。
+通常影響開發者開發網站的需求是要能使用鍵盤操作網頁——我們會在後續的文內討論使用鍵盤操作網頁。雖然這個需求有些麻煩，但這是一個很好的主意，請開發者嘗試看看。例如：你可以使用 Tab 鍵在表單中切換填寫項目嗎？你可以在我們的[跨瀏覽器測試中找到更多關於使用鍵盤控制網頁的相關資訊](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Using_native_keyboard_accessibility)。
 
 統計數據顯示，許多人有行動障礙。 美國疾病控制和預防中心的[殘疾統計數據（涵蓋範圍為非法人的 18 歲以上成人）](http://www.cdc.gov/nchs/fastats/disability.htm)顯示，在美國，有身體機能障礙者佔成人人口的 15.1% 。
 
@@ -111,7 +111,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 如果在專案初期就考慮到無障礙網頁，大多數無障礙內容的成本可以最小化。
 
 當在規劃專案時，將無障礙測試納入你的測試中，就像測試其他功能一樣（例如：移動裝置 UI 測試）。
-及早測試、經常測試，理想情況是運行自動化測試以檢測缺少的功能（例如：圖片缺少[替代文字](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Text_alternatives)、不好的連結文字 － 請參見 [Element relationships and context](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Element_relationships_and_context)），並做一些測試，為了讓殘疾人士能夠操作更複雜的網站功能。例如：
+及早測試、經常測試，理想情況是運行自動化測試以檢測缺少的功能（例如：圖片缺少[替代文字](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Text_alternatives)、不好的連結文字 － 請參見 [Element relationships and context](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Element_relationships_and_context)），並做一些測試，為了讓殘疾人士能夠操作更複雜的網站功能。例如：
 
 - 日期選擇器是否可以提供給螢幕閱讀器的人使用？
 - 如果內容動態更新了，視障人士是否能馬上收到資訊？
@@ -128,7 +128,7 @@ original_slug: Learn/Accessibility/What_is_accessibility
 為了表明你對無障礙網頁的關心，請在你的網站上發佈無障礙網頁聲明，並詳細說明你為無障礙網頁做了哪些事情、採取了哪些步驟。如果有人抱怨你的網站存在無障礙問題，請他們回報給你們，並嘗試解決。
 
 > [!NOTE]
-> 我們的 [Handling common accessibility problems article](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) 包含了應該進行詳細測試的無障礙網頁規範。
+> 我們的 [Handling common accessibility problems article](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling) 包含了應該進行詳細測試的無障礙網頁規範。
 
 總而言之：
 
@@ -166,4 +166,4 @@ original_slug: Learn/Accessibility/What_is_accessibility
 
 本文應當使你對無障礙網頁有著概括性的認知、明白其重要性、並在知道如何在工作流程中安排它。你也該對知道如何實做無障礙網頁的細節有興趣。我們將在下個章節開始闡明為什麼 HTML 是無障礙網頁的好基礎。
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}

@@ -36,7 +36,7 @@ slug: Web/Tutorials
 
 - [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)
   - : 表單是網際網路一個非常重要的部分 - 這些涵蓋了網站互動所需的大部分功能，例如 : 註冊、登入、發送回饋，購買產品等。本文將幫助你開始創建客戶回饋表單。
-- **[給程式創作者快速載入 HTML 網頁的提示](/zh-TW/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)**
+- **[給程式創作者快速載入 HTML 網頁的提示](/zh-TW/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)**
   - : 優化網頁，為使用者提供響應式網站，減少 web 服務器和 Internet 連線的負擔。
 
 ## CSS 教學
@@ -47,7 +47,7 @@ slug: Web/Tutorials
   - : CSS（層疊樣式表）是用於設置網頁樣式的編碼。 CSS Basics 將帶領你了解入門所需的內容。 我們將回答以下問題，例如：如何將文字設為黑色或紅色？ 如何讓我的內容顯示在螢幕上的這些地方？ 如何用背景圖片和顏色布置我的網頁？
 - [介紹 CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
   - : 本單元深入介紹 CSS 應用，包括選擇器和屬性，編寫 CSS 規則，將 CSS 應用於 HTML，如何指定 CSS 中的長度，顏色和其他單位，並列和繼承，框框模組基本知識和 CSS 除錯。
-- [樣式框](/zh-TW/docs/Learn/CSS/Building_blocks)
+- [樣式框](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
   - : 接下來，我們來看看樣式框，這是建立網頁的基本步驟之一。 在本單元中，我們回顧一下框框模組，通過設置邊框和邊距，自定義背景顏色，圖像和其它以及酷炫的功能（如陰影和框上的濾鏡）來查看樣式框佈局。
 - [樣式文本](/zh-TW/docs/Learn_web_development/Core/Text_styling)
   - : 在此，我們看看文本樣式基礎，包括設置字體，粗體和斜體，線條和字母間距以及陰影和其他文本功能。 我們通過查看將自定義字體應用於頁面以及樣式列表和鏈接來完善模組。

@@ -140,7 +140,7 @@ margin-left: 3px;
 
 ## 参见
 
-- CSS 教程中层叠知识的[介绍](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)。
+- CSS 教程中层叠知识的[介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

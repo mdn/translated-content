@@ -41,11 +41,11 @@ Django 使用 Python 語言編寫，是一個廣受歡迎、且功能完整的�
   - : 本教程，我們將向你展示，如何允許使用者用自己的賬戶，登錄到你的網站，以及如何根據他們是否登錄、及其權限，來控制他們可以做什麼、和看到什麼。作為此次演示的一部分，我們將擴展本地圖書館網站，添加登錄和登出頁面，以及使用者和工作人員特定頁面，以查看已借用的書籍。
 - [Django 教學 9: 使用表單](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Forms)
   - : 本教程，我們將向你展示如何使用 Django 中的 [HTML Forms](/zh-TW/docs/Learn_web_development/Extensions/Forms) 表單，特別是編寫表單以創建、更新、和刪除模型實例的最簡單方法。作為此次演示的一部分，我們將擴展本地圖書館網站，以便圖書館員，可以使用我們自己的表單 (而不是使用管理應用程序) 來更新書籍，創建、更新、刪除作者。
-- [Django 教學 10: 測試 Django 網頁應用](/zh-TW/docs/Learn/Server-side/Django/Testing)
+- [Django 教學 10: 測試 Django 網頁應用](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Testing)
   - : 隨著網站的的發展，手工測試越來越難測試—不僅要測試更多，而且隨著組件之間的相互作用變得越來越複雜，一個領域的一個小的變化，可能需要許多額外的測試，來驗證其對其他領域的影響。減輕這些問題的一種方法，是編寫自動化測試，每次更改時，都可以輕鬆可靠地運行。本教程將介紹如何使用 Django 的測試框架，對你的網站進行單元測試自動化。
-- [Django 教學 11: 部署 Django 到生產環境](/zh-TW/docs/Learn/Server-side/Django/Deployment)
+- [Django 教學 11: 部署 Django 到生產環境](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Deployment)
   - : 現在，你已創建（並測試）一個很酷的 「本地圖書館網站」，你將要把它安裝在公共 Web 服務器上，以便圖書館員工和成員，可以通過 Internet 訪問。本文概述如何找到主機，來部署你的網站，以及你需要做什麼，才能使你的網站準備好投入生產環境。
-- [Django 網頁應用安全](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
+- [Django 網頁應用安全](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/web_application_security)
   - : 保護用戶數據，是任何網站設計的重要組成部分，我們以前解釋了 Web 安全文章中，一些更常見的安全威脅—本文提供了 Django 內置、如何保護處理這種危險的實際演示。
 
 ## 評估

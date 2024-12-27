@@ -5,24 +5,24 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在我們已經對 Svelte 運作機制有初步的了解後，就能開始建構我們的範例應用程式：一個待辦清單。此篇文章中，我們會先確認應用程式所需的功能有哪些，接著我們會建立 `Todos.svelte` 元件並寫一些靜態標記（markup）語言和樣式，待一切準備就緒後，就能開始開發我們待辦清單應用程式的相關功能，隨著後續文章會逐漸充實它。
 
 我們想要讓使用者們能夠瀏覽、新增和刪除任務，也能註記它們以視為完成。這將是我們在走這個教學系列時會開發到的基本功能，此外，在開發過程中我們將會看到一些更進階的概念。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
       <td>
         <p>
           推薦你至少需熟悉基本的
-          <a href="/zh-TW/docs/Learn/HTML">HTML</a>、
-          <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-          <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>
+          <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+          <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與
+          <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>
           等程式語言且具備<a
-            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >終端機/命令列環境</a
           >基本知識。
         </p>
@@ -729,4 +729,4 @@ npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior
 
 隨著我們對標記語言加上樣式後，待辦清單應用程式開始逐漸成形，我們終於可以專注在需要實現的功能上了。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}

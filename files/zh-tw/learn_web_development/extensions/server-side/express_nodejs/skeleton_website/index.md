@@ -1,22 +1,22 @@
 ---
-title: "Express 教學 2: 創建一個骨架網站"
+title: Express 教學 2：創建一個骨架網站
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
 original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在 [Express 教程](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)的第二篇文章，演示如何創建一個 "骨架" 網站項目，你可以接著在裡面加入網站特定的路由、模板/視圖、和數据庫調用。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前置條件:</th>
       <td>
         <a
-          href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment"
           >架設一個Node 開發環境</a
         >。回顧Express 教程。
       </td>
@@ -497,9 +497,9 @@ block content
 
 接下來我們將開始修改骨架，讓它能像一個圖書館網站一樣運作。
 
-## 參閱
+## 參見
 
 - [Express application generator](https://expressjs.com/en/starter/generator.html) (Express docs)
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -4,19 +4,19 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在讓我們來增加功能，讓使用者篩選待辦事項，這樣他們就可以選擇查看進行中、已完成，或是全部的事項。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
       <td>
-        熟悉基礎的 <a href="/zh-TW/docs/Learn/HTML">HTML</a> ，
-        <a href="/zh-TW/docs/Learn/CSS">CSS</a> 與
-        <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 語言，以及<a
-          href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+        熟悉基礎的 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> ，
+        <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與
+        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 語言，以及<a
+          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
           >終端機/命令列</a
         >的知識。
       </td>
@@ -91,4 +91,4 @@ class 屬性可以用使用方括號 `[]` 來綁定，控制按鍵上的文字�
 
 真是快！因為你已經有了 `filter` 的程式碼在 `app.component.ts` 中，你所需要做的就是編輯模板，以便於提供篩選項的控制項。我們的下一個，同時也是最後一個主題，探討了如何建立用於生產環境的 Angular 應用程式，並且提供了近一步的資源來帶領繼續你踏上學習之旅。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}

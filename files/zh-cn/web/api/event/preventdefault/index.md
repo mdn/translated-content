@@ -58,7 +58,7 @@ function checkboxClick(event) {
 
 ### 在编辑域中阻止按键
 
-下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/Forms/Form_validation)来代替。
+下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)来代替。
 
 #### HTML
 

@@ -4,11 +4,11 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">課成需求:</th>
@@ -105,13 +105,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 - **裝飾：** 你可以用 [CSS 背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
 - **內容：** 如果你的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
-- **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E)。在这种情况下，你可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
+- **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#使用明確的字詞)。在这种情况下，你可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
 - **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
 
 本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。你很快就會意識到，如果看不到圖片，替代文字會很有幫助。
 
 > [!NOTE]
-> For more information, see our guide to [Text Alternatives](/zh-TW/docs/Learn/Accessibility/HTML#Text_alternatives).
+> For more information, see our guide to [Text Alternatives](/zh-TW/docs/Learn_web_development/Core/Accessibility/HTML#Text_alternatives).
 
 ### 寬與高
 
@@ -139,7 +139,7 @@ However, you shouldn't alter the size of your images using HTML attributes. If y
 
 ### 圖片標題
 
-As [with links](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
+As [with links](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
 ```html
 <img
@@ -511,10 +511,10 @@ p {
 
 ## 試試看!
 
-你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已經來到了本文的末端，但是你還記得最重要的內容嗎？在繼續往下之前，這裡有些測驗讓你驗證看看你是否都學會了——[測驗：HTML 圖像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images)。
 
 ## 總結
 
 目前就是這樣啦。 我們已經詳細介紹了圖片和標題說明。 在下一篇文章中我們將進一步介紹，如何使用 HTML 將視頻和音頻嵌入在網頁中。
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
