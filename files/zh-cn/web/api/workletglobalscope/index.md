@@ -7,10 +7,10 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{SecureContext_Header}}
 
-**`WorkletGlobalScope`** 接口是一个抽象类，特定的 worklet 范围类从该类继承。每个 `WorkletGlobalScope` 都定义了一个新的全局环境。
+**`WorkletGlobalScope`** 接口是一个抽象类，特定的 worklet 作用域类从该类继承。每个 `WorkletGlobalScope` 都定义了一个新的全局环境。
 
 > [!NOTE]
-> 通常情况下，你不需要与此接口进行交互。它是一个基础接口，旨在被子类化。你将在 {{domxref("AudioWorklet")}} 对象中遇到子类 {{domxref("AudioWorkletGlobalScope")}}，或在 CSS 绘制 {{domxref("Worklet")}} 对象中遇到 {{domxref("PaintWorkletGlobalScope")}}。
+> 通常情况下，你不需要与此接口进行交互。它是一个基础接口，旨在被子类化。你将在 {{domxref("AudioWorklet")}} 对象中遇到子类 {{domxref("AudioWorkletGlobalScope")}}，或在 CSS 绘制 {{domxref("Worklet")}} 对象中遇到子类 {{domxref("PaintWorkletGlobalScope")}}。
 
 ## 实例属性
 
