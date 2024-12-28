@@ -14,7 +14,7 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
         基本的なコンピューターリテラシー、<a
           href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"

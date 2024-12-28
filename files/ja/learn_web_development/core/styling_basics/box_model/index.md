@@ -14,7 +14,7 @@ CSS にはボックスの概念があり、これを理解することは CSS �
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
         HTML の基本（
         <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
