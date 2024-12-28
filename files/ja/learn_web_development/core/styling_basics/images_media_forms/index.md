@@ -202,7 +202,7 @@ HTML には、ウェブ開発者が必須フィールド、さらには入力す
 
 以下の例では、 CSS を使用していくつかのテキスト入力にスタイルを設定しています。境界線、マージン、パディングなどがすべて期待どおりに適用されていることがわかります。属性セレクターを使用して、さまざまな入力型をターゲットにしています。境界線を調整し、フィールドに背景色を追加し、フォントとパディングを変更して、このフォームの外観を変更してみてください。
 
-```html live-sample___form
+```html-nolint live-sample___form
 <form>
   <div><label for="name">名前</label> <input id="name" type="text" /></div>
   <div><label for="email">メールアドレス</label> <input id="email" type="email" /></div>
