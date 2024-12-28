@@ -14,7 +14,7 @@ CSS の基本と目的、簡単なスタイルシートの書き方を学んで�
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
         基本的なコンピューターリテラシー、<a
           href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software"

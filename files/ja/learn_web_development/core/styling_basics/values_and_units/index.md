@@ -18,7 +18,7 @@ CSS を使用するそれぞれのプロパティには、どのような値を�
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
         <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
