@@ -18,7 +18,7 @@ Web Speech API предоставляет 2 основных типа функц
 
 ### Демо
 
-Для запуска демо достаточно перейти по [ссылке на приложение](https://ru.web-speech-api-example.cheliz.top/) или скачать [репозиторий](https://github.com/Oleg-Miniuk/ru_web_speech_example), установить зависимости (`npm install`) и запустить приложение (`npm run start`), после чего открыть **localhost:4001** в браузере.
+Для запуска демо достаточно перейти по [ссылке на приложение](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) или скачать [репозиторий](https://github.com/Oleg-Miniuk/ru_web_speech_example), установить зависимости (`npm install`) и запустить приложение (`npm run start`), после чего открыть **localhost:4001** в браузере.
 
 ![](https://pp.userapi.com/c831409/v831409509/1c0226/S_tm-BfW-U8.jpg)
 
@@ -192,7 +192,7 @@ recognition.onerror = function(event) {
 ### Демо
 
 То же самое приложение из предыдущего примера.
-[Ссылка на приложение](https://ru.web-speech-api-example.cheliz.top/) или [репозиторий](https://github.com/Oleg-Miniuk/ru_web_speech_example) (клонируем, затем `npm install && npm run start` в терминале, после чего открыть **localhost:4001** в браузере).
+[Ссылка на приложение](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) или [репозиторий](https://github.com/Oleg-Miniuk/ru_web_speech_example) (клонируем, затем `npm install && npm run start` в терминале, после чего открыть **localhost:4001** в браузере).
 
 Пользовательский интерфейс включает в себя набор элементов для ввода текста, задания высоты тона, скорости воспроизведения и непосредственного выбора голоса, которым будет текст произнесён.
 
