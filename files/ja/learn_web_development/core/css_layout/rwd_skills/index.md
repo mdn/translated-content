@@ -1,17 +1,17 @@
 ---
 title: "スキルテスト: レスポンシブウェブデザインとメディアクエリー"
 slug: Learn_web_development/Core/CSS_layout/rwd_skills
-original_slug: Learn/CSS/CSS_layout/rwd_skills
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-このスキルテストの目的は、[メディアクエリーの使用方法](/ja/docs/Learn/CSS/CSS_layout/Media_queries)を理解しているかどうかを評価し、実践的な課題でレスポンシブウェブデザインを身につけてもらうことです。この課題をクリアするために必要な知識は、 [CSS レイアウトモジュール](/ja/docs/Learn/CSS/CSS_layout)のレイアウトレッスンに完全に含まれています。
+このスキルテストの目的は、[メディアクエリーの使用方法](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)を理解しているかどうかを評価し、実践的な課題でレスポンシブウェブデザインを身につけてもらうことです。この課題をクリアするために必要な知識は、 [CSS レイアウトモジュール](/ja/docs/Learn_web_development/Core/CSS_layout)のレイアウトレッスンに完全に含まれています。
 
 > [!NOTE]
-> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
+> 複数の画面サイズでデザインを検査する必要があるため、このページには編集機能は持たせていません。
+> コードをローカルにコピーするか、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターを使用することができます。
 >
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
@@ -21,6 +21,6 @@ l10n:
 
 課題は、このレイアウトのデスクトップ版を作成し、画面の幅に余裕があるときに表示することです。最終結果は下記の画像のようになるはずです。
 
-![2 列組みのレイアウト。](rwd-task.png)
+![2 段組みのレイアウト。](rwd-task.png)
 
-デスクトップレイアウトを作成する方法はいくつもありますので、いろいろ試してみてください。また、 2 つ目のブレークポイントを追加して、タブレットで縦長モードで動作するレイアウトを作成することもできます。
+デスクトップレイアウトを作成する方法はいくつもありますので、いろいろ試してみてください。また、 2 つ目のブレークポイントを追加して、タブレットで縦長モードで動作するレイアウトを作成してもいいでしょう。
