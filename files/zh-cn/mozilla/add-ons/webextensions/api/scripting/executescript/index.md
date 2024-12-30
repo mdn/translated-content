@@ -37,7 +37,7 @@ let results = await browser.scripting.executeScript(
     - `args` {{optional_inline}}
       - : 传递到函数中的参数数组，仅在指定了 `func` 参数时有效。参数必须是可 JSON 序列化的。
     - `files` {{optional_inline}}
-      - : `string` 的 `array`。要注入的 JS 文件路径数组，路径相对于扩展的根目录。必须指定 `files` 和 `func` 其中之一。
+      - : `string` 的 `array`。要注入的 JavaScript 文件相对于扩展的根目录的路径的数组。必须指定 `files` 和 `func` 其中之一。
     - `func` {{optional_inline}}
       - : `function`。要注入的 JavaScript 函数。此函数在注入前被序列化并被反序列化，因此任何绑定的参数和执行上下文都将丢失。必须指定 `files` 和 `func` 其中之一。
     - `injectImmediately` {{optional_inline}}
