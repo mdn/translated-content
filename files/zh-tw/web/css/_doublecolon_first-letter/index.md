@@ -13,7 +13,7 @@ l10n:
 
 識別一個元素的第一個字母並不總是那麼簡單：
 
-- 在第一個字母前後的標點符號會被包含在匹配中。標點符號包括任何 Unicode 字符，這些字符定義在*右括號*（Ps）、_左括號_（Pe）、_起始引號_（Pi）、_結束引號_（Pf）和*其他標點符號*（Po）類別中。
+- 在第一個字母前後的標點符號會被包含在匹配中。標點符號包括任何 Unicode 字符，這些字符定義在*起始符號*（Ps）、_閉合符號_（Pe）、_起始引號_（Pi）、_結束引號_（Pf）和*其他標點符號*（Po）類別中。
 - 有些語言有雙字母組合（如荷蘭語中的 `IJ`），這些組合總是一起大寫。在這些情況下，`::first-letter` 偽元素應該匹配這個雙字母組合的兩個字母。
 - 結合 {{ cssxref("::before") }} 偽元素和 {{ cssxref("content") }} 屬性，可能會在元素的開頭插入一些文字。在這種情況下，`::first-letter` 將匹配這些生成內容的第一個字母。
 
@@ -30,7 +30,7 @@ l10n:
 - 所有背景屬性：{{ Cssxref("background") }}、{{ Cssxref("background-color") }}、{{ Cssxref("background-image") }}、{{cssxref("background-clip")}}、{{cssxref("background-origin")}}、{{ Cssxref("background-position") }}、{{ Cssxref("background-repeat") }}、{{ cssxref("background-size") }}、{{ Cssxref("background-attachment") }}、和 {{cssxref("background-blend-mode")}}
 - 所有邊距屬性：{{ Cssxref("margin") }}、{{ Cssxref("margin-top") }}、{{ Cssxref("margin-right") }}、{{ Cssxref("margin-bottom") }}、{{ Cssxref("margin-left") }}
 - 所有內邊距屬性：{{ Cssxref("padding") }}、{{ Cssxref("padding-top") }}、{{ Cssxref("padding-right") }}、{{ Cssxref("padding-bottom") }}、{{ Cssxref("padding-left") }}
-- 所有邊框屬性：簡寫形式 {{ Cssxref("border") }}、{{ Cssxref("border-style") }}、{{ Cssxref("border-color") }}、{{ cssxref("border-width") }}、{{ cssxref("border-radius") }}、{{cssxref("border-image")}}、以及長寫形式的屬性
+- 所有邊框屬性：簡寫形式 {{ Cssxref("border") }}、{{ Cssxref("border-style") }}、{{ Cssxref("border-color") }}、{{ cssxref("border-width") }}、{{ cssxref("border-radius") }}、{{cssxref("border-image")}}，以及長寫形式的屬性
 - {{ cssxref("color") }} 屬性
 - {{ cssxref("text-decoration") }}、{{cssxref("text-shadow")}}、{{ cssxref("text-transform") }}、{{ cssxref("letter-spacing") }}、{{ cssxref("word-spacing") }}（當適用時）、{{ cssxref("line-height") }}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}}、{{cssxref("box-shadow")}}、{{ cssxref("float") }}、{{ cssxref("vertical-align") }}（僅當 `float` 為 `none` 時）CSS 屬性
 
@@ -128,7 +128,7 @@ p::first-letter {
 在這個例子中，我們使用 `::first-letter` 偽元素來設定 SVG {{SVGElement("text")}} 元素中的首字母樣式。
 
 > [!NOTE]
-> 寫作時，這項功能的[支持有限](#瀏覽器相容性)。
+> 截至撰寫本文時，這項功能的[支持有限](#瀏覽器相容性)。
 
 #### HTML
 
