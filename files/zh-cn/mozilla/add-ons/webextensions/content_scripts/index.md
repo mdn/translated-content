@@ -106,7 +106,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()
 ]
 ```
 
-### WebExtension APIs
+### WebExtension API
 
 除了 standard DOM APIS，content script 还能使用以下 WebExtension APIS:
 
