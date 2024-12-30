@@ -7,10 +7,10 @@ l10n:
 
 {{AddonSidebar}}
 
-向网站中插入 JavaScript 与 CSS。该 API 提供了两种插入内容的方法：
+向网站中注入 JavaScript 与 CSS。该 API 提供了两种注入内容的方法：
 
-- {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}}，提供一次性注入。
-- {{WebExtAPIRef("scripting.registerContentScripts()")}} 用于动态注册内容脚本，然后可以使用 {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} 获取、使用 {{WebExtAPIRef("scripting.unregisterContentScripts()")}} 注销。
+- 用于一次性注入的 {{WebExtAPIRef("scripting.executeScript()")}}、{{WebExtAPIRef("scripting.insertCSS()")}} 和 {{WebExtAPIRef("scripting.removeCSS()")}} 方法。
+- 用于用于动态注册内容脚本的 {{WebExtAPIRef("scripting.registerContentScripts()")}} 方法，随后你将可以使用 {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}} 获取、使用 {{WebExtAPIRef("scripting.unregisterContentScripts()")}} 注销注入的脚本。
 
 > [!NOTE]
 > Chrome 限制该 API 仅在 Manifest V3 中可用。Firefox 和 Safari 在 Manifest V2 和 V3 中均支持该 API。
@@ -28,20 +28,20 @@ l10n:
 - {{WebExtAPIRef("scripting.InjectionTarget")}}
   - : 注入目标的详细信息。
 - {{WebExtAPIRef("scripting.RegisteredContentScript")}}
-  - : 注册或已注册的内容脚本的详细信息。
+  - : 需要注册或已注册的内容脚本的详细信息。
 
 ### 函数
 
 - {{WebExtAPIRef("scripting.executeScript()")}}
   - : 将 JavaScript 代码注入页面。
 - {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}}
-  - : 获取已注册内容脚本的列表。
+  - : 获取已注册的内容脚本的列表。
 - {{WebExtAPIRef("scripting.insertCSS()")}}
   - : 将 CSS 注入页面。
 - {{WebExtAPIRef("scripting.registerContentScripts()")}}
   - : 为未来的页面加载注册内容脚本。
 - {{WebExtAPIRef("scripting.removeCSS()")}}
-  - : 删除之前通过 {{WebExtAPIRef("scripting.insertCSS()")}} 注入的 CSS。
+  - : 移除之前通过 {{WebExtAPIRef("scripting.insertCSS()")}} 注入的 CSS。
 - {{WebExtAPIRef("scripting.updateContentScripts()")}}
   - : 更新已注册的一个或多个内容脚本。
 - {{WebExtAPIRef("scripting.unregisterContentScripts()")}}
