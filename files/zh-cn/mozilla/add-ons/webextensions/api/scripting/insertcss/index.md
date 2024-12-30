@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-向页面中插入 CSS。
+向页面中注入 CSS。
 
 > [!NOTE]
 > 该方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Safari 和 Firefox 102+ 中，你也可以在 Manifest V2 中使用该方法。
@@ -17,9 +17,9 @@ l10n:
 你只可以将 CSS 注入到 URL 可以使用[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)表达的页面中：这意味着其方案必须是“http”、“https”、“file”其中之一。这意味着你不能将 CSS 注入到浏览器的内置页面中，例如 about:debugging、about:addons 或打开新空标签页时打开的页面。
 
 > [!NOTE]
-> Firefox 解析注入的 CSS 文件中的 URL 时是相对于 CSS 文件解析的，而不是相对于插入的页面解析的。
+> Firefox 解析注入的 CSS 文件中的 URL 时是相对于 CSS 文件解析的，而不是相对于注入的页面解析的。
 
-插入的 CSS 可以通过调用 {{WebExtAPIRef("scripting.removeCSS()")}} 来移除。
+注入的 CSS 可以通过调用 {{WebExtAPIRef("scripting.removeCSS()")}} 来移除。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -35,7 +35,7 @@ await browser.scripting.insertCSS(
 
 - `details`
 
-  - : 描述要插入的 CSS 和插入位置的对象。它包含以下属性：
+  - : 描述要注入的 CSS 和注入位置的对象。它包含以下属性：
 
     - `css` {{optional_inline}}
       - : `string`。包含要注入的 CSS 的字符串。必须指定 `css` 或 `files` 其中之一。
@@ -45,7 +45,7 @@ await browser.scripting.insertCSS(
 
       - : `string`。注入的样式来源，可以是 `USER`（将 CSS 作为用户样式表添加）、`AUTHOR`（将其作为作者样式表添加）。默认为 `AUTHOR`。
 
-        - `USER` 允许你防止网站覆盖你插入的 CSS：参见[层叠顺序](/zh-CN/docs/Web/CSS/Cascade#层叠顺序)。
+        - `USER` 允许你防止网站覆盖你注入的 CSS：参见[层叠顺序](/zh-CN/docs/Web/CSS/Cascade#层叠顺序)。
         - `AUTHOR` 样式表的行为就好像它们出现在页面指定的所有作者规则之后一样。这种行为包括页面的脚本动态添加的任何作者样式表，即使这种添加发生在 `insertCSS` 调用完成之后。
 
     - `target`
