@@ -12,7 +12,7 @@ slug: Glossary/Hyperlink
 ### 一般知識
 
 - Wikipedia の [Hyperlink](https://ja.wikipedia.org/wiki/Hyperlink)
-- MDN の [ハイパーリンク](/ja/docs/Web/Guide/HTML/Hyperlink) ガイド
+- MDN の [ハイパーリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) ガイド
 
 ### 技術リファレンス
 

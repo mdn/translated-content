@@ -12,7 +12,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 
 - 当接收到一个代表错误的 HTTP 状态码时，从 `fetch()` 返回的 Promise **不会被标记为 reject**，即使响应的 HTTP 状态码是 404 或 500。相反，它会将 Promise 状态标记为 resolve（如果响应的 HTTP 状态码不在 200 - 299 的范围内，则设置 resolve 返回值的 {{domxref("Response/ok", "ok")}} 属性为 false），仅当网络故障时或请求被阻止时，才会标记为 reject。
-- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
+- `fetch` **不会发送跨域 cookie**，除非你使用了 _credentials_ 的[初始化选项](/zh-CN/docs/Web/API/Window/fetch#参数)。（自 [2018 年 8 月](https://github.com/whatwg/fetch/pull/585)以后，默认的 credentials 政策变更为 `same-origin`。Firefox 也在 61.0b13 版本中进行了修改）
 
 一个基本的 fetch 请求设置起来很简单。看看下面的代码：
 
@@ -311,7 +311,7 @@ console.log(myHeaders.get("X-Custom-Header")); // null
 
 虽然一些操作只能在 {{domxref("Service_Worker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
 
-如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#Guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
+如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
 
 ```js
 const myResponse = Response.error();

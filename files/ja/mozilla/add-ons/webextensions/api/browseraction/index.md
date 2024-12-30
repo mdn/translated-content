@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 ブラウザーのツールバーにボタンを追加します。
 
-[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_action)はブラウザーのツールバー内のボタンです。
+[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)はブラウザーのツールバー内のボタンです。
 
-これをボタンつきポップアップと関連付けられます。ポップアップは通常のウェブページ同様に、HTML, CSS, JavaScript を使って指定できます。ポップアップの中で動く JavaScript はバックグラウンドスクリプトとすべて同じ WebExtension API にアクセスできますが、グローバルコンテキストはブラウザーに表示される現在のページではなく、ポップアップになります。ウェブページに影響するには [messages](/ja/Add-ons/WebExtensions/Modify_a_web_page#Messaging) 経由で通信する必要があります。
+これをボタンつきポップアップと関連付けられます。ポップアップは通常のウェブページ同様に、HTML, CSS, JavaScript を使って指定できます。ポップアップの中で動く JavaScript はバックグラウンドスクリプトとすべて同じ WebExtension API にアクセスできますが、グローバルコンテキストはブラウザーに表示される現在のページではなく、ポップアップになります。ウェブページに影響するには [messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) 経由で通信する必要があります。
 
 ユーザーがアイコンをクリックした時に、ポップアップを指定していると、表示され — そしてコンテンツが読み込まれるでしょう 。ポップアップを指定していない時は、ユーザーがアイコンをクリックした時、拡張機能にイベントがディスパッチされます。
 

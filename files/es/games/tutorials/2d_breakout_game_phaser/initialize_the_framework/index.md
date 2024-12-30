@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
 
-Este es el primero de los 16 tutoriales para aprender a usar [Gamedev Phaser](/es/docs/Games/Workflows/2D_Breakout_game_Phaser). Luego de completar este tutorial, puede encontrar el código fuente de esta sección en [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
+Este es el primero de los 16 tutoriales para aprender a usar [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Luego de completar este tutorial, puede encontrar el código fuente de esta sección en [Gamedev-Phaser-Content-Kit/demos/lesson01.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html).
 
 Antes de que podamos comenzar a escribir la funcionalidad del juego, necesitamos crear una estructura básica para procesarlo. Esto podemos hacerlo usando HTML — el framework de Phaser va a generar el elemento {{htmlelement("canvas")}} requerido.
 
@@ -76,6 +76,6 @@ Aquí está el código fuente completo de la primera lección, ejecutándose en 
 
 ## Pasos siguientes
 
-Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Workflows/2D_Breakout_game_Phaser/Scaling).
+Ahora hemos configurado el HTML básico y aprendido un poco sobre la inicialización de Phaser, continuemos con la segunda lección y aprendamos sobre [scaling](/es/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}

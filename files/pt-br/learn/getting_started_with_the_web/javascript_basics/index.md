@@ -73,7 +73,7 @@ Em seguida, o código define o valor da propriedade {{domxref("Node.textContent"
 Para entender melhor como o JavaScript funciona, vamos explicar alguns dos principais recursos da linguagem. Vale a pena notar que esses recursos são comuns a todas as linguagens de programação. Se você dominar esses fundamentos, terá uma vantagem inicial na codificação em outras linguagens também!
 
 > [!WARNING]
-> neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variáveis
 

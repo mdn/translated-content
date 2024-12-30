@@ -18,7 +18,7 @@ When an English page is redirected/moved to a new location, but the target alrea
 
 ## How they are generated
 
-This "structure" synchronization between `mdn/content` and `mdn/translated-content` occurs daily with this GitHub Actions workflow <https://github.com/mdn/mdn-translated-content/blob/main/.github/workflows/sync-translated-content.yml> (the logic can be found at <https://github.com/mdn/yari/blob/main/build/sync-translated-content.ts>)
+This "structure" synchronization between `mdn/content` and `mdn/translated-content` occurs daily with this GitHub Actions workflow <https://github.com/mdn/mdn-translated-content/blob/main/.github/workflows/sync-translated-content.yml> (the logic can be found at <https://github.com/mdn/rari/blob/main/crates/rari-tools/src/sync_translated_content.rs>)
 
 Before #8378 (16th Sep. 2022), this synchronization automatically added commits (see [an example](https://github.com/mdn/translated-content/commit/81b40438ed59fc3d5990eae0d1eb333ad7b5dd27), or [another](https://github.com/mdn/translated-content/commit/51268ca7b9bdf3ead1c1775dee61bcc90445f0dc)). Now, a PR is created with the changes for each locale (see #9029, #9026).
 

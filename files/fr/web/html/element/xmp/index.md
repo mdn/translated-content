@@ -12,11 +12,11 @@ L'élément HTML **`<xmp>`** (pour _example_) affiche le texte entre les balises
 >
 > - Il a été déprécié depuis HTML3.2 et n'a pas été implémenté d'une manière cohérente. Il a été complètement retiré du langage dans HTML5.
 > - Utilisez l'élément {{HTMLElement("pre")}} ou, si sémantiquement approprié, l'élément {{HTMLElement("code")}}. Notez qu'il vous faudra échapper les caractères '`<`' et '`>`' pour qu'ils ne soient pas interprétés.
-> - Une police à chasse fixe peut être obtenu sur n'importe quel élément en utilisant des règles [CSS](/fr/docs/CSS), par la valeur `monospace` avec la propriété {{cssxref("font-family")}}.
+> - Une police à chasse fixe peut être obtenu sur n'importe quel élément en utilisant des règles [CSS](/fr/docs/Web/CSS), par la valeur `monospace` avec la propriété {{cssxref("font-family")}}.
 
 ## Attributs
 
-Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Attributs_universels), communs à tous les éléments.
+Cet élément n'a aucun autre attribut en dehors [des attributs universels](/fr/docs/Web/HTML/Global_attributes), communs à tous les éléments.
 
 ## Interface DOM
 

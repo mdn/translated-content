@@ -67,21 +67,21 @@ Content-Security-Policy: frame-ancestors <space separated list of sources>;
 - `'none'`
   - : 指向一个空集，意味着没有 URL 会被匹配。也需要单引号包裹设置。
 
-## Examples
+## 示例
 
-```bash
+```http
 Content-Security-Policy: frame-ancestors 'none';
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("X-Frame-Options")}}

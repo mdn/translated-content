@@ -63,7 +63,7 @@ Seu JavaScript precisa:
 - Anexe um manipulador `onclick` para cada `<img>` dentro do `thumb-bar <div>` para que, quando clicados, a imagem correspondente seja exibida no elemento `displayed-img <img>`.
 - Anexe um manipulador `onclick` ao `<button>` para que, ao ser clicado, um efeito de escurecimento seja aplicado à imagem em tamanho normal. Quando é clicado novamente, o efeito de escurecimento é removido novamente.
 
-Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (não espreite o código-fonte!)
+Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (não espreite o código-fonte!)
 
 ## Passos para concluir
 

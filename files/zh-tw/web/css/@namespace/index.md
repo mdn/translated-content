@@ -22,7 +22,7 @@ slug: Web/CSS/@namespace
 
 ## 說明
 
-`@namespace` 可以用来限制樣式的選擇器（包含[通用的](/zh-TW/docs/Web/CSS/Universal_selectors)、[元素選擇器](/zh-TW/docs/Web/CSS/Type_selectors)和[屬性](/zh-TW/docs/Web/CSS/Attribute_selectors)[選擇器](/zh-TW/docs/Learn/CSS/Building_blocks/Selectors)）僅套用於指定的命名空間。`@namespace` 通常在處理有多個命名空間的檔案時很有用——例如有內嵌 SVG 或 MathML 的 HTML、混和多個命名空間的 XML 等。
+`@namespace` 可以用来限制樣式的選擇器（包含[通用](/zh-TW/docs/Web/CSS/Universal_selectors)、[元素](/zh-TW/docs/Web/CSS/Type_selectors)和[屬性](/zh-TW/docs/Web/CSS/Attribute_selectors)[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)）僅套用於指定的命名空間。`@namespace` 通常在處理有多個命名空間的檔案時很有用——例如有內嵌 SVG 或 MathML 的 HTML、混和多個命名空間的 XML 等。
 
 `@namespace` 必须放在 {{cssxref("@charset")}} 和 {{cssxref("@import")}} 規則之後，在其他 at-rule 及 [Style Declaration](/zh-TW/docs/Web/API/CSSStyleDeclaration) 之前。
 

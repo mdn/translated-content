@@ -48,11 +48,11 @@ WebAssembly는 JavaScript와는 다른 언어이지만, JavaScript를 대체하�
 
 브라우저에 WebAssembly가 등장하면서 앞에서 이야기했던 가상머신(VM)은 이제 JavaScript와 WebAssembly 두 가지 유형의 코드를 불러오고 실행합니다.
 
-필요하면 다른 형식의 코드끼리 서로를 호출할 수도 있습니다. [WebAssembly JavaScript API](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)가 내보낸 WebAssembly 코드를 일반적으로 부를 수 있는 JavaScript 함수로 감싸고, WebAssembly 코드에서도 동기적으로 일반 JavaScript 함수를 호출할 수 있습니다. 사실 WebAssembly의 기본 단위는 모듈이라고 불리고, WebAssembly 모듈은 여러모로 ES6 모듈과 대칭적입니다.
+필요하면 다른 형식의 코드끼리 서로를 호출할 수도 있습니다. [WebAssembly JavaScript API](/ko/docs/WebAssembly/JavaScript_interface)가 내보낸 WebAssembly 코드를 일반적으로 부를 수 있는 JavaScript 함수로 감싸고, WebAssembly 코드에서도 동기적으로 일반 JavaScript 함수를 호출할 수 있습니다. 사실 WebAssembly의 기본 단위는 모듈이라고 불리고, WebAssembly 모듈은 여러모로 ES6 모듈과 대칭적입니다.
 
 ### WebAssembly의 핵심 컨셉
 
-WebAssembly가 브라우저에서 실행되는 방식을 이해하려면 필요한 몇가지 핵심 개념이 있습니다. 모든 개념은 [WebAssembly JavaScript API](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly)에 1대 1로 반영되어 있습니다.
+WebAssembly가 브라우저에서 실행되는 방식을 이해하려면 필요한 몇가지 핵심 개념이 있습니다. 모든 개념은 [WebAssembly JavaScript API](/ko/docs/WebAssembly/JavaScript_interface)에 1대 1로 반영되어 있습니다.
 
 - **모듈**: 브라우저에서 실행 가능한 기계어 코드로 컴파일된 WebAssembly 바이너리를 나타냅니다. 모듈은 stateless이며 [Blob](/ko/docs/Web/API/Blob)처럼 Windows와 [worker](/ko/docs/MDN/Doc_status/API/WebWorkers) 간에 [`postMessage()`](/ko/docs/Web/API/MessagePort/postMessage)를 통해 명시적으로 공유 할 수 있습니다. 모듈은 ES 모듈과 마찬가지로 가져오기 및 내보내기를 선언합니다.
 - **메모리**: WebAssembly의 저수준 메모리 접근 명령어에 의해 읽고 쓰여지는 바이트들의 선형 배열인, 크기 조절이 가능한 ArrayBuffer입니다.
@@ -107,7 +107,7 @@ JavaScript 접착제 코드가 아마 여러분이 상상하는 것만큼 간단
 
 생성된 HTML 문서는 JavaScript 접착제 코드를 불러오고 표준 출력(stdout)을 {{htmlelement("textarea")}}에 작성합니다. 만약 애플리케이션이 OpenGL을 사용하고 있으면, HTML 안에 렌더링 대상으로 사용되는 {{htmlelement("canvas")}} 요소가 포함됩니다. 이 Emscripten 출력을 여러분의 웹 애플리케이션에 맞게 뜯어고치는 작업은 매우 쉽습니다.
 
-Emscripten에 대한 전체 문서는 [emscripten.org](http://emscripten.org)에서 볼 수 있습니다. 툴체인을 구성하고 C/C++ 애플리케이션을 Wasm로 컴파일하는 방법은 [Compiling from C/C++ to WebAssembly](/ko/docs/WebAssembly/C_to_wasm) 문서를 참고하세요.
+Emscripten에 대한 전체 문서는 [emscripten.org](http://emscripten.org)에서 볼 수 있습니다. 툴체인을 구성하고 C/C++ 애플리케이션을 Wasm로 컴파일하는 방법은 [Compiling from C/C++ to WebAssembly](/ko/docs/WebAssembly/C_to_Wasm) 문서를 참고하세요.
 
 ### WebAssembly를 직접 작성하기
 
@@ -115,11 +115,11 @@ Emscripten에 대한 전체 문서는 [emscripten.org](http://emscripten.org)에
 
 실제 하드웨어 어셈블리 언어와 동일한 방식으로, WebAssembly의 바이너리 형식에도 1:1로 대응하는 문자형 표현이 존재합니다. [WebAssembly 텍스트를 바이너리로 바꿔주는 도구들](http://webassembly.org/getting-started/advanced-tools/)을 활용해서 직접 작성한 텍스트 형식을 바이너리 형식으로 변환시켜볼 수 있습니다.
 
-[WebAssembly 텍스트 형식을 Wasm으로 변환하기](/ko/docs/WebAssembly/Text_format_to_wasm)에서는 이를 어떻게 하는지 간단하게 설명해줍니다.
+[WebAssembly 텍스트 형식을 Wasm으로 변환하기](/ko/docs/WebAssembly/Text_format_to_Wasm)에서는 이를 어떻게 하는지 간단하게 설명해줍니다.
 
 ### Rust로 WebAssembly 작성하기
 
-Rust WebAssembly 워킹 그룹의 끊임없는 노력 덕분에, Rust 코드를 작성하고 WebAssembly로 컴파일 할 수 있습니다. 필요한 툴 체인을 설치하고, 샘플 Rust 프로그램을 WebAssembly npm 패키지로 컴파일하고, 샘플 웹 애플리케이션의 샘플 [Compiling from Rust to WebAssembly](/ko/docs/WebAssembly/Rust_to_wasm) 글을 통해 시작할 수 있습니다.
+Rust WebAssembly 워킹 그룹의 끊임없는 노력 덕분에, Rust 코드를 작성하고 WebAssembly로 컴파일 할 수 있습니다. 필요한 툴 체인을 설치하고, 샘플 Rust 프로그램을 WebAssembly npm 패키지로 컴파일하고, 샘플 웹 애플리케이션의 샘플 [Compiling from Rust to WebAssembly](/ko/docs/WebAssembly/Rust_to_Wasm) 글을 통해 시작할 수 있습니다.
 
 ### AssemblyScript 사용하기
 

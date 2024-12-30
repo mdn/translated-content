@@ -261,5 +261,5 @@ if (typeof Object.assign != "function") {
 ## Ver también
 
 - {{jsxref("Object.defineProperties()")}}
-- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/enumeracion_y_propietario_de_propiedades)
-- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Referencia/Operadores/Sintaxis_Spread#Spread_en_literales_tipo_Objeto)
+- [Enumeración y propietarios de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Spread en literales tipo Objeto](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_en_literales_tipo_objeto)

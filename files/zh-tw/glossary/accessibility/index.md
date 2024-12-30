@@ -10,7 +10,7 @@ slug: Glossary/Accessibility
 ## 參見
 
 - [MDN 上的無障礙資源](/zh-TW/docs/Web/Accessibility)
-- [MDN 上的無障礙學習專區](/zh-TW/docs/Learn/Accessibility)
+- [MDN 上的無障礙學習專區](/zh-TW/docs/Learn_web_development/Core/Accessibility)
 - [MDN 上的 ARIA 文件](/zh-TW/docs/Web/Accessibility/ARIA)
 - [WAI-ARIA 推薦標準](https://www.w3.org/TR/wai-aria/)
 - 維基百科上的 [Web 無障礙](https://zh.wikipedia.org/wiki/网站无障碍)

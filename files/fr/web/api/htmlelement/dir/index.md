@@ -45,7 +45,7 @@ parg.dir = "rtl";
 
 ## Voir aussi
 
-- [`document.dir`](/fr/docs/Web/API/document/dir)
+- [`document.dir`](/fr/docs/Web/API/Document/dir)
 - L'attribut universel HTML [`dir`](/fr/docs/Web/HTML/Global_attributes/dir)
 - La propriété CSS [`direction`](/fr/docs/Web/CSS/direction)
 - La pseudo-classe CSS [`:dir`](/fr/docs/Web/CSS/:dir)

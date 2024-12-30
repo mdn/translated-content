@@ -23,7 +23,7 @@ slug: orphaned/Web/Security/Information_Security_Basics
 
 - [ブラウザーセキュリティ](/ja/docs/Mozilla/Security)
 - [ウェブセキュリティ](/ja/docs/Web/Security)
-- [サイトを安全にする](/ja/docs/Web/Security/Securing_your_site)
+- [サイトを安全にする](/ja/docs/Web/Security/Practical_implementation_guides)
 - [開発者向け Firefox セキュリティの基本](/ja/docs/Security/Firefox_Security_Basics_For_Developers)
 - [プライバシー、アクセス制限、情報セキュリティ](/ja/docs/Web/Privacy)
 

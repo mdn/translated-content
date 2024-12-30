@@ -66,13 +66,13 @@ Los valores del atributo lista es el {{domxref("Element.id", "id")}} de un eleme
 
 ### `max`
 
-El valor máximo a aceptar para esta entrada. Si el [`value`](/es/docs/Web/HTML/Element/input#value) ingresado en el elemento lo excede, el elemento falla la [validación de restricciones](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `max` no es un número, entonces el elemento no tiene un valor máximo.
+El valor máximo a aceptar para esta entrada. Si el [`value`](/es/docs/Web/HTML/Element/input#value) ingresado en el elemento lo excede, el elemento falla la [validación de restricciones](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `max` no es un número, entonces el elemento no tiene un valor máximo.
 
 Este valor debe ser mayor que o igual al valor del atributo `min`.
 
 ### `min`
 
-El valor mínimo a aceptar para esta entrada. Si el [`value`](/es/docs/Web/HTML/Element/input#value) del elemento es menor, el elemento falla la [validación de restricciones](/es/docs/Web/Guide/HTML/Constraint_validation). Si el valor del atributo `min` no es un número, entonces el elemento no tiene un valor mínimo.
+El valor mínimo a aceptar para esta entrada. Si el [`value`](/es/docs/Web/HTML/Element/input#value) del elemento es menor, el elemento falla la [validación de restricciones](/es/docs/Web/HTML/Constraint_validation). Si el valor del atributo `min` no es un número, entonces el elemento no tiene un valor mínimo.
 
 Este valor debe ser menor que o igual al valor del atributo `max`.
 

@@ -27,11 +27,11 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 ## Tutoriels
 
-- [Utiliser les éléments personnalisés](/fr/docs/Web/Web_Components/Using_custom_elements)
+- [Utiliser les éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements)
   - : Un guide illustrant comment utiliser les fonctionnalités des éléments personnalisés afin de créer des composants web simples et abordant les fonctions de rappel pour le cycle de vie de l'élément ainsi que d'autres fonctionnalités avancées.
-- [Utiliser le DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/Web_Components/Using_shadow_DOM)
+- [Utiliser le DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)
   - : Un guide abordant les fondamentaux du <i lang="en">shadow DOM</i>, illustrant comment attacher un DOM sombre à un élément, l'ajouter à l'arbre DOM, le mettre en forme, etc.
-- [Utiliser les gabarits et emplacements](/fr/docs/Web/Web_Components/Using_templates_and_slots)
+- [Utiliser les gabarits et emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
   - : Un guide illustrant comment définir une structure HTML réutilisable avec les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot), avant d'utiliser cette structure à l'intérieur des composants web.
 
 ## Référence
@@ -42,7 +42,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
   - : Les fonctionnalités pour les éléments personnalisés et notamment la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define) qui est utilisée pour enregistrer de nouveaux éléments personnalisés afin qu'ils puissent être utilisés dans votre document.
 - [`Window.customElements`](/fr/docs/Web/API/Window/customElements)
   - : Renvoie une référence à l'objet `CustomElementRegistry`.
-- [Fonctions de rappel pour le cycle de vie](/fr/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks)
+- [Fonctions de rappel pour le cycle de vie](/fr/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : Des fonctions de rappel spéciales qui définissent le comportement d'un élément personnalisé&nbsp;:
 
@@ -63,15 +63,15 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
   - : Quelques pseudo-classes CSS sont spécifiquement liées aux éléments personnalisés&nbsp;:
 
     - [`:defined`](/fr/docs/Web/CSS/:defined) cible tout élément défini, c'est-à-dire les éléments natifs et les éléments personnalisés définis avec `CustomElementRegistry.define()`.
-    - [`:host`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
-    - [`:host()`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
-    - [`:host-context()`](</fr/docs/Web/CSS/:host-context()>) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
+    - [`:host`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
+    - [`:host()`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
+    - [`:host-context()`](</fr/docs/Web/CSS/:host-context()>) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
 
 - Des pseudo-éléments CSS&nbsp;:
 
   - : Un pseudo-élément CSS est spécifiquement lié aux éléments personnalisés&nbsp;:
 
-    - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Global_attributes/part) correspondant.
+    - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Global_attributes/part) correspondant.
 
 ### Le DOM sombre (<i lang="en">Shadow DOM</i>)
 

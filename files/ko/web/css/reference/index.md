@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-**CSS 참고서**를 이용해 [알파벳 순서로 정리한](#키워드_색인) 모든 표준 [CSS](/ko/docs/Web/CSS) 속성, [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes), [의사 요소](/ko/docs/Web/CSS/Pseudo-elements), [CSS 자료형](/ko/docs/Web/CSS/CSS_Types)과 [@규칙](/ko/docs/Web/CSS/At-rule)을 찾아보세요. 또한 [유형별로 정리한 CSS 선택자](#선택자)와 [주요 CSS 개념](#개념)도 찾아볼 수 있습니다. 추가로 간단한 [DOM-CSS / CSSOM](#DOM-CSS_CSSOM) 참조도 들어 있습니다.
+**CSS 참고서**를 이용해 [알파벳 순서로 정리한](#키워드_색인) 모든 표준 [CSS](/ko/docs/Web/CSS) 속성, [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes), [의사 요소](/ko/docs/Web/CSS/Pseudo-elements), [CSS 자료형](/ko/docs/Web/CSS/CSS_Types)과 [@규칙](/ko/docs/Web/CSS/At-rule)을 찾아보세요. 또한 [유형별로 정리한 CSS 선택자](#선택자)와 [주요 CSS 개념](#개념)도 찾아볼 수 있습니다. 추가로 간단한 [DOM-CSS / CSSOM](#dom-css_cssom) 참조도 들어 있습니다.
 
 ## 기본 규칙 구문
 
@@ -43,7 +43,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 자습서](/ko/docs/Learn/CSS/Introduction_to_CSS/%EC%84%A0%ED%83%9D%EC%9E%90)에서 찾아볼 수 있습니다. 규칙 정의에서 [구문](/ko/docs/Web/CSS/syntax) 오류가 하나라도 발생하면 규칙 전체가 유효하지 않다는 점을 명심하세요. 유효하지 않은 규칙은 브라우저가 무시합니다. CSS 규칙 정의는 모두 (ASCII) [텍스트에 기반](https://www.w3.org/TR/css-syntax-3/#intro)하지만, DOM-CSS / CSSOM (규칙 관리 시스템)은 [객체에 기반](https://www.w3.org/TR/cssom/#introduction)합니다.
+CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 자습서](/ko/docs/Learn/CSS/Introduction_to_CSS/%EC%84%A0%ED%83%9D%EC%9E%90)에서 찾아볼 수 있습니다. 규칙 정의에서 [구문](/ko/docs/Web/CSS/Syntax) 오류가 하나라도 발생하면 규칙 전체가 유효하지 않다는 점을 명심하세요. 유효하지 않은 규칙은 브라우저가 무시합니다. CSS 규칙 정의는 모두 (ASCII) [텍스트에 기반](https://www.w3.org/TR/css-syntax-3/#intro)하지만, DOM-CSS / CSSOM (규칙 관리 시스템)은 [객체에 기반](https://www.w3.org/TR/cssom/#introduction)합니다.
 
 ### @규칙 구문
 
@@ -52,13 +52,13 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 ## 키워드 색인
 
 > [!NOTE]
-> 이 색인에 있는 속성 이름에는 CSS 표준 이름과 다른 [JavaScript 이름](/ko/docs/Web/CSS/CSS_Properties_Reference)이 들어가지 않습니다.
+> 이 색인에 있는 속성 이름에는 CSS 표준 이름과 다른 [JavaScript 이름](/ko/docs/Web/CSS/Reference#index)이 들어가지 않습니다.
 
 {{CSS_Ref}}
 
 ## 선택자
 
-다음은 [선택자](/ko/docs/Web/CSS/CSS_Selectors) 목록입니다. 선택자를 사용하면 DOM 요소의 다양한 기능에 기반한 조건을 통해 스타일을 입힐 수 있습니다.
+다음은 [선택자](/ko/docs/Web/CSS/CSS_selectors) 목록입니다. 선택자를 사용하면 DOM 요소의 다양한 기능에 기반한 조건을 통해 스타일을 입힐 수 있습니다.
 
 ### 기본 선택자
 
@@ -81,7 +81,7 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 
 - [인접 형제 결합자](/ko/docs/Web/CSS/%EC%9D%B8%EC%A0%91_%ED%98%95%EC%A0%9C_%EC%84%A0%ED%83%9D%EC%9E%90) `A + B`
   - : 요소 *`A`*와 *`B`*가 같은 부모를 가지며 *`B`*가 *`A`*를 바로 뒤따라야 하도록 지정합니다.
-- [일반 형제 결합자](/ko/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [일반 형제 결합자](/ko/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : 요소 *`A`*와 *`B`*가 같은 부모를 가지며 *`B`*가 *`A`*를 뒤따라야 하도록 지정합니다. 그러나 *`B`*가 *`A`*의 바로 옆에 위치해야 할 필요는 없습니다.
 - [자식 결합자](/ko/docs/Web/CSS/Child_combinator) `A > B`
   - : 요소 *`B`*가 *`A`*의 바로 밑에 위치해야 하도록 지정합니다.
@@ -108,7 +108,7 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 - [종속](/ko/docs/Web/CSS/Cascade)
 - [주석](/ko/docs/Web/CSS/Comments)
 - [서술자](</ko/docs/Glossary/Descriptor_(CSS)>)
-- [상속](/ko/docs/Web/CSS/inheritance)
+- [상속](/ko/docs/Web/CSS/Inheritance)
 - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
 - [명시도](/ko/docs/Web/CSS/Specificity)
 - [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)
@@ -124,14 +124,14 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 
 ### 레이아웃
 
-- [블록 서식 맥락](/ko/docs/Web/Guide/CSS/Block_formatting_context)
-- [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block)
+- [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block)
 - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
-- [여백 상쇄](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [여백 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [대체 요소](/ko/docs/Web/CSS/Replaced_element)
-- [쌓임 맥락](/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
-- [시각적 서식 맥락](/ko/docs/Web/Guide/CSS/Visual_formatting_model)
+- [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [시각적 서식 맥락](/ko/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

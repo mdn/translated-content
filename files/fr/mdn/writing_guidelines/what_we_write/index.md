@@ -107,7 +107,7 @@ Voici quelques scénarios qui décrivent des situations où le contenu peut êtr
 - Des articles avec du contenu inapproprié pour MDN.
 - Des sections de MDN qui ne portent pas sur les technologies web ouvertes et qui sont un fardeau en termes de maintenance.
 
-Pour plus d'informations sur _comment_ supprimer des documents, voir [le guide sur la création, le déplacement et la suppression des pages](/fr/docs/MDN/Writing_guidelines/Creating_moving_deleting).
+Pour plus d'informations sur _comment_ supprimer des documents, voir [le guide sur la création, le déplacement et la suppression des pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
 
 ## Types de documents autorisés sur MDN
 

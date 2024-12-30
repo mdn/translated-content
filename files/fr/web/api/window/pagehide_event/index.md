@@ -10,7 +10,7 @@ L'évènement `pagehide` est émis lorsqu'une entrée dans un historique de sess
 ## Informations générales
 
 - Spécification
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pagehide)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pagehide)
 - Interface
   - : [PageTransitionEvent](/fr/docs/Web/API/PageTransitionEvent)
 - Bouillonne
@@ -34,5 +34,5 @@ L'évènement `pagehide` est émis lorsqu'une entrée dans un historique de sess
 
 ## Évènements liés
 
-- [`pageshow`](/fr/docs/Web/Events/pageshow)
-- [Utilisation du cache de Firefox 1.5 — L'évènement pagehide](/fr/docs/Utilisation_du_cache_de_Firefox_1.5#L.27.C3.A9v.C3.A8nement_pagehide)
+- [`pageshow`](/fr/docs/Web/API/Window/pageshow_event)
+- [Utilisation du cache de Firefox 1.5 — L'évènement pagehide](/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching#l.27.c3.a9v.c3.a8nement_pagehide)

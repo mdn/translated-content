@@ -213,7 +213,7 @@ import { default as randomSquare } from "./modules/square.js";
 ```
 
 > [!NOTE]
-> La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#Renombrar_impotaciones_y_exportaciones).
+> La sintaxis as para cambiar el nombre de los elementos exportados se explica a continuación en la sección [Renombrar importaciones y exportaciones](#renombrar_impotaciones_y_exportaciones).
 
 ## Evitar conflictos de nombres
 
@@ -454,7 +454,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 La parte más nueva de la funcionalidad de los módulos de JavaScript que estará disponible en los navegadores es la carga dinámica de módulos. Esto te permite cargar módulos dinámicamente solo cuando son necesarios, en lugar de tener que cargar todo por adelantado. Esto tiene algunas obvias ventajas de rendimiento; sigue leyendo y veamos cómo funciona.
 
-Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#Crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
+Esta nueva funcionalidad te permite llamar a {{jsxref("Statements/import", "import()", "#Importaciones_Dinámicas")}} como una función, pasándole la ruta al módulo como parámetro. Devuelve una {{jsxref("Promise")}}, que se cumple con un objeto `module` (consulta [Crear un objeto `module`](#crear_un_objeto_module)) que te da acceso a las exportaciones de ese objeto, p. ej.
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -507,6 +507,6 @@ Aquí hay algunos consejos que te pueden ayudar si tienes problemas para hacer q
 - [Uso de módulos JavaScript en la web](https://developers.google.com/web/fundamentals/primers/modules#mjs), por Addy Osmani y Mathias Bynens
 - [Módulos ES: un análisis profundo de dibujos animados](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), publicación en el blog Hacks de Lin Clark
 - [ES6 en profundidad: Módulos](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), publicación en el blog Hacks de Jason Orendorff
-- Libro de Axel Rauschmayer [Explorando JS: Módulos](http://exploringjs.com/es6/ch_modules.html)
+- Libro de Axel Rauschmayer [Explorando JS: Módulos](https://exploringjs.com/es6/ch_modules.html)
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

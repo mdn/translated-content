@@ -29,7 +29,7 @@ arr.lastIndexOf(searchElement, fromIndex)
 
 ## 描述
 
-`lastIndexOf` compares `searchElement` to elements of the Array using [strict equality](/zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (the same method used by the ===, or triple-equals, operator).
+`lastIndexOf` compares `searchElement` to elements of the Array using [strict equality](/zh-TW/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (the same method used by the ===, or triple-equals, operator).
 
 ## 範例
 

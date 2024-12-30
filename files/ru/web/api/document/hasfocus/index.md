@@ -74,4 +74,4 @@ focused = document.hasFocus();
 
 ## Смотрите также
 
-- [Using the Page Visibility API](/ru/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)
+- [Using the Page Visibility API](/ru/docs/Web/API/Page_Visibility_API)

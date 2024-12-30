@@ -89,7 +89,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 12.3](http://www.w3.org/TR/xslt#format-number).
+[XSLT 1.0, section 12.3](https://www.w3.org/TR/xslt#format-number).
 
 ### Support Gecko
 

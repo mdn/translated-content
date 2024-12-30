@@ -15,16 +15,16 @@ El tipo de datos [CSS](/es/docs/Web/CSS) **`<color>`** denota un color en el [sR
 
 Hay que destacar que la lista de valores de color aceptados ha ido creciendo conforme la especificación evolucionaba, para acabar con la lista de colores de CSS3.
 
-Asociado con el color en el espacio sRGB, un valor `<color>` también consiste en una coordenada [alpha-channel](http://en.wikipedia.org/wiki/Alpha_compositing) o valor de transparencia, indicando cómo se debe [composite](http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) o mezclar el color con su color de fondo.
+Asociado con el color en el espacio sRGB, un valor `<color>` también consiste en una coordenada [alpha-channel](http://en.wikipedia.org/wiki/Alpha_compositing) o valor de transparencia, indicando cómo se debe [composite](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) o mezclar el color con su color de fondo.
 
 Aunque los valores de colores en CSS son definidos de manera precisa existe la posibilidad de que parezcan distintos en dispositivos diferentes. La mayoría de ellos no están calibrados y algunos navegadores no soportan los [color profile](http://en.wikipedia.org/wiki/ICC_profile) de algunos dispositivos de salidas. En esta situación el color puede variar bastante.
 
 > [!NOTE]
-> La recomendación [WCAG 2.0](http://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
+> La recomendación [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) de la W3C aconseja a los autores web de manera clara que no usen _color_ como el único medido para especificar una información, acción o resultado concreto. Algunos usuarios tienen problemas para diferenciar colores y existe la posibilidad de que la información transmitida no sea captada. Por supuesto esto no impide que se use el color, sólo su uso como único medio para describir alguna información.
 
 ## Interpolación
 
-Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>`. En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/timing-function) asociada con la animación.
+Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>`. En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/easing-function) asociada con la animación.
 
 ## Valores
 

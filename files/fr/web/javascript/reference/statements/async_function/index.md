@@ -228,4 +228,4 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)

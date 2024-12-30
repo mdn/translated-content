@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference
 
 {{JsSidebar}}
 
-Esta parte de la sección de Javascript en MDN sirve como un repositorio de hechos sobre el lenguaje Javascript. Lee más [sobre esta referencia](/es/docs/Web/JavaScript/Reference/About).
+Esta parte de la sección de Javascript en MDN sirve como un repositorio de hechos sobre el lenguaje Javascript. Lee más [sobre esta referencia](/es/docs/conflicting/Web/JavaScript/Reference).
 
 ## Objetos globales
 

@@ -18,4 +18,4 @@ slug: Glossary/Regular_expression
 
 ### Технические
 
-- [Написание регулярных выражений в JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Написание регулярных выражений в JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_expressions)

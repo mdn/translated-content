@@ -45,7 +45,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 @media screen, print { ... }
 ```
 
-有关所有媒体类型的列表，请参见[Media types](#Media_types)。由于它们仅以非常广泛的术语描述设备，因此只有少数几种可用。要定位更具体的属性，请改用*媒体功能*。
+有关所有媒体类型的列表，请参见[Media types](#media_types)。由于它们仅以非常广泛的术语描述设备，因此只有少数几种可用。要定位更具体的属性，请改用*媒体功能*。
 
 ## 定位媒体特性
 
@@ -73,7 +73,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 @media speech and (aspect-ratio: 11/5) { ... }
 ```
 
-有关更多媒体功能[media feature](#Media_features)示例，请参阅每个特定功能的参考页。
+有关更多媒体功能[media feature](#media_features)示例，请参阅每个特定功能的参考页。
 
 ## 创建复杂查询
 
@@ -153,7 +153,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 媒体查询 4 级规范对语法进行了一些改进，以使用具有“范围”类型（例如宽度或高度，减少冗余）的功能进行媒体查询。级别 4 添加了用于编写此类的查询范围上下文。例如，使用最大宽度`max-` 功能，我们可以编写以下代码：
 
 > [!NOTE]
-> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 [`@media` browser compatibility table](/zh-CN/docs/Web/CSS/@media#Browser_compatibility)。
+> 媒体查询 4 级规范在现代浏览器中具有合理的支持，但某些媒体功能并未得到很好的支持。有关更多详细信息，请参见 [`@media` browser compatibility table](/zh-CN/docs/Web/CSS/@media#browser_compatibility)。
 
 ```css
 @media (max-width: 30em) { ... }
@@ -198,6 +198,6 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 ## 参见
 
 - [使用编程方法测试媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- [CSS Animations Between Media Queries](http://davidwalsh.name/animate-media-queries)
-- [Extended Mozilla media features](/zh-CN/docs/Web/CSS/Mozilla_Extensions#Media_features)
-- [Extended WebKit media features](/zh-CN/docs/Web/CSS/Webkit_Extensions#Media_features)
+- [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
+- [Extended Mozilla media features](/zh-CN/docs/Web/CSS/Mozilla_Extensions#media_features)
+- [Extended WebKit media features](/zh-CN/docs/Web/CSS/WebKit_Extensions#media_features)

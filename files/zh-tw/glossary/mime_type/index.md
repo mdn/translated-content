@@ -13,7 +13,7 @@ slug: Glossary/MIME_type
 
 - 維基百科上的[網際網路媒體型式](https://zh.wikipedia.org/wiki/互联网媒体类型)
 - [MIME 類型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
-- [正確的伺服器 MIME 類型配置](/zh-TW/docs/Learn/Server-side/Configuring_server_MIME_types)
-- [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)在 Web 上下文中的詳細用法
-- [MIME 類型的不完整列表](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+- [正確的伺服器 MIME 類型配置](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
+- [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)在 Web 上下文中的詳細用法
+- [MIME 類型的不完整列表](/zh-TW/docs/Web/HTTP/MIME_types/Common_types)
 - [MediaRecorder.mimeType](/zh-TW/docs/Web/API/MediaRecorder/mimeType)

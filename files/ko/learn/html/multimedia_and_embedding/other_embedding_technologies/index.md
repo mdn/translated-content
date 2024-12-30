@@ -258,7 +258,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 > **참고:** [클릭재킹](/ko/docs/Glossary/Clickjacking)은 iframe 공격 방식의 하나입니다. 눈에 보이지 않는 iframe을 여러분의 웹 문서에 삽입하거나, 해커들의 악성 웹사이트에 여러분의 웹페이지를 삽입하여 사용자들의 활동을 빼돌립니다. 이는 사용자들을 잘못된 행동으로 유도하거나 민감한 데이터를 훔쳐내는 일반적인 기술입니다.
 
-우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
+우선 간단한 예시를 보겠습니다. 위에서 보여드린 예제를 브라우저에 표시해 보세요. [GitHub에서 실시간 동작 확인](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 가능합니다([소스 코드](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)도 살펴보세요). 예상과 달리 "페이지를 열 수 없음"과 같은 문구가 표시될 겁니다. [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 열어 '콘솔' 창을 보면 그 이유를 알려주는 문구를 확인할 수 있습니다. Firefox 브라우저의 경우 "The loading of 'https\://developer.mozilla.org/ko/docs/Glossary' in a frame is denied by 'X-Frame-Options' directive set to 'DENY'"라는 문구가 적혀 있습니다. 이는 다른 사이트에서 MDN 웹페이지를 `<iframe>`안에 포함하지 못하도록 MDN 개발자들이 설정했기 때문입니다. (아래에 있는 [CSP 지시어를 설정하세요](#configure_csp_directives) 참고) 당연한 일입니다. 여러분의 웹사이트에 전체 MDN 페이지를 삽입해두고 자기 사이트라고 우기거나 [클릭재킹](/ko/docs/Glossary/Clickjacking)으로 데이터를 훔치려 들면 안 되잖아요. 게다가 모두가 MDN 페이지를 삽입한다면 대역폭이 추가로 들어 Mozilla에서 큰 비용을 지불해야 할 겁니다.
 
 #### 필요한 경우에만 삽입하세요
 
@@ -277,7 +277,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 웹사이트에 HTTPS를 적용하려면 특별한 보안 인증서를 설치해야 합니다. 여러 호스팅 업체에서는 직접 인증서를 설치하지 않아도 HTTPS를 적용할 수 있는 호스팅을 제공합니다. 하지만 직접 HTTPS를 적용해야 한다면, [Let's Encrypt](https://letsencrypt.org/)에서 Apache 웹 서버나 Nginx 등 널리 사용되는 웹 서버를 지원할 뿐만 아니라 자동으로 필요한 인증서를 생성하고 설치할 수 있는 도구와 설명서를 제공하고 있습니다. Let's Encrypt는 이 과정을 최대한 쉽게 만들도록 설계되었습니다. 그러니 웹페이지에 HTTPS를 적용하기 위하여 Let's Encrypt를 사용하지 않을 이유가 전혀 없습니다.
 
-> **참고:** [GitHub pages](/ko/docs/Learn/Common_questions/Using_Github_pages)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
+> **참고:** [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)는 기본적으로 HTTPS를 통해 콘텐츠 전송을 허용하므로 콘텐츠를 호스팅하기에 유용합니다. 만약 다른 호스팅 업체를 사용하는데 HTTPS 적용 여부가 확실하지 않다면 업체에 문의해보세요.
 
 #### 항상 `sandbox` 특성을 사용하세요
 

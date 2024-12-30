@@ -60,7 +60,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 ## Atributos
 
-Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
 
 ## Ejemplos
 

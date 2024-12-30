@@ -36,7 +36,7 @@ Reflect.set(target, propertyKey, value[, receiver])
 
 ## 解説
 
-`Reflect.set` メソッドは、オブジェクトにプロパティを設定します。これはプロパティの割り当てを行い、機能としては [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 構文のようなものです。
+`Reflect.set` メソッドは、オブジェクトにプロパティを設定します。これはプロパティの割り当てを行い、機能としては [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors) 構文のようなものです。
 
 ## 例
 
@@ -75,4 +75,4 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 ## 関連情報
 
 - {{jsxref("Reflect")}}
-- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)

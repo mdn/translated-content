@@ -44,12 +44,12 @@ Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/s
 
 Examples: [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/).
 
-Firefox 용 확장 프로그램은 확장 기능 개발을 위한 크로스 브라우저 시스템인 [WebExtensions APIs](/ko/docs/Mozilla/Add-ons/WebExtensions)를 사용하여 만들어집니다. 대부분의 경우 API는 Google 크롬 및 Opera에서 지원하는 [extension API](https://developer.chrome.com/docs/extensions)와 호환됩니다. 대부분의 경우 이러한 브라우저 용으로 작성된 확장 프로그램은 Firefox 또는 Microsoft Edge에서 몇 가지 [변경 사항](/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)만으로 실행됩니다. API는 [멀티프로세스 Firefox](/en-US/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
+Firefox 용 확장 프로그램은 확장 기능 개발을 위한 크로스 브라우저 시스템인 [WebExtensions APIs](/ko/docs/Mozilla/Add-ons/WebExtensions)를 사용하여 만들어집니다. 대부분의 경우 API는 Google 크롬 및 Opera에서 지원하는 [extension API](https://developer.chrome.com/docs/extensions)와 호환됩니다. 대부분의 경우 이러한 브라우저 용으로 작성된 확장 프로그램은 Firefox 또는 Microsoft Edge에서 몇 가지 [변경 사항](/ko/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension)만으로 실행됩니다. API는 [멀티프로세스 Firefox](/ko/docs/Mozilla/Firefox/Multiprocess_Firefox)와도 완벽하게 호환됩니다.
 
 질문 혹은 아이디어가 있거나, [기존 Extension을 WebExtensions API로 마이그레이션 할 때](https://extensionworkshop.com/documentation/develop/porting-a-legacy-firefox-extension/) 도움이 필요하다면 [Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)나 [Matrix](https://wiki.mozilla.org/Matrix)의 [Add-ons room](https://chat.mozilla.org/#/room/#addons:mozilla.org)로 요청해주세요.
 
 ## What's next?
 
-- 간단한 확장 기능을 만들어보려면 [Your first extension](/ko/Add-ons/WebExtensions/Your_first_WebExtension) 참조.
-- 확장 기능의 구조에 대한 내용은 [Anatomy of an extension](/ko/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) 참조
-- 확장 기능 예시를 확인하려면 [Example extensions](/ko/Add-ons/WebExtensions/Examples) 참조.
+- 간단한 확장 기능을 만들어보려면 [Your first extension](/ko/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension) 참조.
+- 확장 기능의 구조에 대한 내용은 [Anatomy of an extension](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) 참조
+- 확장 기능 예시를 확인하려면 [Example extensions](/ko/docs/Mozilla/Add-ons/WebExtensions/Examples) 참조.

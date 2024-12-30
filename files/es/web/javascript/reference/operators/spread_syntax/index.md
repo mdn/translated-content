@@ -3,7 +3,7 @@ title: Sintaxis Spread
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 
-{{jsSidebar("Operators")}}**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_Array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales)) son esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{jsSidebar("Operators")}}**La sintaxis extendida o spread** **syntax** permite a un elemento iterable tal como un arreglo o cadena ser expandido en lugares donde cero o más argumentos (para llamadas de función) o elementos (para [Array literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales_array)) son esperados, o a un objeto ser expandido en lugares donde cero o más pares de valores clave (para [literales Tipo Objeto](/es/docs/Web/JavaScript/Guide/Grammar_and_types#literales)) son esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 La fuente para este ejemplo interactivo está almacenada en el repositorio de GitHub. Si quieres contribuir al proyecto interactivo de ejemplos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de descarga (pull).
 
@@ -215,7 +215,7 @@ Cuando se usa la sintaxis spread para llamados de funciones, tenga en cuenta la 
 
 ## Sintaxis Rest (parámetros)
 
-La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado por la desestructuración de arreglos y objetos. De cierta forma, la sintaxis rest es la opuesta a la sintaxis spread: spread 'expande' un arreglo en sus elementos, mientras rest agrupa múltiples elementos y los 'condensa' en un único elemento. Consulta [parámetros rest.](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters)
+La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado por la desestructuración de arreglos y objetos. De cierta forma, la sintaxis rest es la opuesta a la sintaxis spread: spread 'expande' un arreglo en sus elementos, mientras rest agrupa múltiples elementos y los 'condensa' en un único elemento. Consulta [parámetros rest.](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 
 ## Especificaciones
 
@@ -227,4 +227,4 @@ La sintaxis Rest luce exactamente como la sintaxis spread, pero esto es usado po
 
 ## Vea también
 
-- [Rest parameters](/es/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (también '`...`')
+- [Rest parameters](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters) (también '`...`')

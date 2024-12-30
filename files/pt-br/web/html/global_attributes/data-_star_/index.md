@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 > **Note:** {{HTMLSidebar("Global_attributes")}}
 
-Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML) e sua representação [DOM](/pt-BR/docs/DOM) . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
+Os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) **data-\*** formam uma classe de atributos conhecida como **custom data attributes**, a qual permite que informações proprietárias sejam trocadas via script entre o [HTML](/pt-BR/docs/Web/HTML) e sua representação [DOM](/pt-BR/docs/Web/API/Document_Object_Model) . Todos esses dados personalizados estão disponíveis através da interface {{domxref("HTMLElement")}} do elemento, onde o atributo está definido. A propriedade {{domxref("HTMLElement.dataset")}} concede acesso a estes atributos .
 O `*` pode ser substituído por qualquer nome, desde que siga [a regra de criação de nomes xml](https://www.w3.org/TR/REC-xml/#NT-Name) com as seguintes restrições:
 
 - O nome não deve começar com xml, independente da caixa destas letras (Ex: XML, xml, XMl, XmL, ...);

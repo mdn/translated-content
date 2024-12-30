@@ -257,7 +257,7 @@ JSON.stringify([obj]);
 
 ### Le problème des références circulaires
 
-[Le format JSON](https://www.json.org/) ne prend pas en charge les références (bien [qu'un brouillon IETF existe](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)) et une exception {{jsxref("TypeError")}} sera levée si on tente d'encoder un objet possédant des références circulaires.
+[Le format JSON](https://www.json.org/) ne prend pas en charge les références (bien [qu'un brouillon IETF existe](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)) et une exception {{jsxref("TypeError")}} sera levée si on tente d'encoder un objet possédant des références circulaires.
 
 ```js example-bad
 const circularReference = {};

@@ -97,6 +97,6 @@ var docHTML = document.documentElement.outerHTML;
 
 ## Смотрите также
 
-- [XPath](/en/XPath)
+- [XPath](/en-US/XPath)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("Document")}}, {{domxref("XMLDocument")}}, and {{domxref("HTMLDocument")}}

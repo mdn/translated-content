@@ -20,7 +20,7 @@ var biquadFilter = audioCtx.createBiquadFilter();
 
 ## 示例
 
-这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For [voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) 样例（也可以查看 [源码](https://github.com/mdn/voice-change-o-matic) ）.
+这个例子展示了一个利用 AudioContext 创建四项滤波器节点（Biquad filter node）的例子。想要查看完整工作的示例，请查看我们的 For [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 样例（也可以查看 [源码](https://github.com/mdn/voice-change-o-matic) ）.
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -59,4 +59,4 @@ biquadFilter.gain.value = 25;
 
 ## 相关
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

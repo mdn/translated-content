@@ -114,7 +114,7 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 - offset
   - : 关键帧的 offset 偏移量指定为介于`0.0`和`1.0`之间的数字或为`null`。这相当于使用`@keyframes`在 CSS 样式表中以百分比指定开始和结束状态。如果此值为`null`或缺失，则关键帧将在相邻关键帧之间均匀分布。
 - easing
-  - : 从这个关键帧直到这一级中的下一个关键帧所使用的 [timing function](/zh-CN/docs/Web/CSS/timing-function)
+  - : 从这个关键帧直到这一级中的下一个关键帧所使用的 [timing function](/zh-CN/docs/Web/CSS/easing-function)
 - composite
   - : {{domxref("KeyframeEffect.composite")}} 操作用于将此关键帧中指定的值与基础值组合在一起。如果正在使用在效果上指定的复合操作，则不会出现这种情况。
 

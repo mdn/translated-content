@@ -131,7 +131,7 @@ Dentro de este contexto, el procesamiento de caracteres de espacio en blanco se 
 
 Es por eso que las personas que visitan la página web simplemente verán la frase "¡Hola mundo!" muy bien escrita en la parte superior de la página, en lugar de un "!Hola" con una sangría extraña, seguido de un "mundo!" en la línea debajo de esa.
 
-> **Nota:** [Firefox DevTools](/es/docs/Tools) ha admitido el resaltado de nodos de texto desde la versión 52, lo que facilita ver exactamente qué contenido hay dentro de los nodos de espacios en blanco. Los nodos de espacios en blanco puros están marcados con una etiqueta "`whitespace`".
+> **Nota:** [Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) ha admitido el resaltado de nodos de texto desde la versión 52, lo que facilita ver exactamente qué contenido hay dentro de los nodos de espacios en blanco. Los nodos de espacios en blanco puros están marcados con una etiqueta "`whitespace`".
 
 ### Espacio en blanco en contextos de formato de bloque
 
