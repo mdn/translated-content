@@ -13,7 +13,7 @@ l10n:
 
 ## 出発点
 
-この課題を開始するには、[マークアップする必要がある生のテキスト](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)と、HTML に[含める必要がある CSS](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt) を入手します。テキストエディターを使用して新しい `.html` ファイルを作成し、作業を行います（または、 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) などのサイトを使用して課題を行います）。
+この課題を開始するには、[マークアップする必要がある生のテキスト](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt)と、HTML に[含める必要がある CSS](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt) を入手します。テキストエディターを使用して新しい `.html` ファイルを作成し、作業を行います（または、 [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) などのサイトを使用して課題を行います）。
 
 > [!NOTE]
 > もし行き詰まったら、私たちに助けを求めてください。このページの下にある[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
