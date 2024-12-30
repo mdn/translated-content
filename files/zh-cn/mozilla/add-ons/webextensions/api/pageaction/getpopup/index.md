@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取设为该页面操作的弹窗的 HTML 文档。
+获取设为该页面操作的弹窗的 HTML 文档的 URL。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -30,7 +30,7 @@ let gettingPopup = browser.pageAction.getPopup(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现包含弹窗文档的 URL 的字符串。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将兑现包含弹窗文档的 URL 的字符串。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ let gettingPopup = browser.pageAction.getPopup(
 
 ## 示例
 
-添加一个上下文菜单项用于记录当前标签页的弹出 URL。请注意，创建上下文菜单项需要[清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中的 `contextMenus` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+添加一个上下文菜单项用于记录当前标签页的弹出 URL。请注意，要创建上下文菜单项，你需要在[清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中取得 `contextMenus` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ```js
 function gotPopup(popupURL) {
