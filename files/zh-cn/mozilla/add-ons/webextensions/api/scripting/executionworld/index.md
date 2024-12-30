@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-指定通过 {{WebExtAPIRef("scripting.executeScript()")}} 插入或  {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本的执行环境。
+指定通过 {{WebExtAPIRef("scripting.executeScript()")}} 插入或 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本的执行环境。
 
 ## 类型
 
@@ -15,7 +15,7 @@ l10n:
 
 - `ISOLATED`
 
-  默认的 [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 执行环境。该环境与页面上下文隔离：虽然它们共享同一个文档，但全局作用域和可用的 API 不同。
+  [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)的默认执行环境。该环境与页面上下文隔离：虽然它们共享同一个文档，但全局作用域和可用的 API 不同。
 
 - `MAIN`
 
