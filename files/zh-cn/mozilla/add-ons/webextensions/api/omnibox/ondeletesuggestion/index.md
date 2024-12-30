@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当用户删除一个建议的时候触发。{{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} 的 `.deletable` 为 `true` 的建议可以被删除。
+当用户删除一个建议的时候触发。如果 {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}} 的属性 `deletable` 值为 `true` 时，该建议可以被删除。
 
 ## 语法
 
@@ -53,5 +53,3 @@ browser.omnibox.onDeleteSuggestion.addListener(logDeletedSuggestion);
 
 > [!NOTE]
 > 该 API 基于 Chromium 的 [`chrome.omnibox`](https://developer.chrome.google.cn/docs/extensions/reference/api/omnibox) API。
->
-> Microsoft Edge 兼容性数据由微软集团提供，并在知识共享署名 3.0 美国协议下包含于本文中。
