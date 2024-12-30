@@ -33,7 +33,7 @@ await browser.scripting.removeCSS(
     - `css` {{optional_inline}}
       - : `string`。包含要注入的 CSS 的字符串。必须指定 `css` 或 `files` 其中之一，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
     - `files` {{optional_inline}}
-      - : `string` 的 `array`。要注入的 CSS 文件的路径，相对于扩展的根目录。必须指定 `files` 或 `css` 其中之一，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
+      - : `string` 的 `array`。要注入的 CSS 文件相对于扩展的根目录的路径。必须指定 `files` 或 `css` 其中之一，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
     - `origin` {{optional_inline}}
       - : `string`。注入的样式的来源，可以是 `USER` 或 `AUTHOR`。默认为 `AUTHOR`。必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表的来源匹配。
     - `target`
@@ -57,7 +57,7 @@ await browser.scripting.removeCSS(
 //   css: "* { background: #c0ffee }",
 // });
 //
-// 当用户点击扩展按钮时，我们可以移除它，就像这样：
+// 当用户点击扩展按钮时，我们可以这样移除它：
 browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.removeCSS({
