@@ -7,13 +7,13 @@ l10n:
 
 {{CSSRef}}
 
-**`matrix3d()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)将 3D 变换定义为一个 4x4 齐次矩阵。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
+**`matrix3d()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)以 4x4 齐次矩阵的形式定义一个 3D 变换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{EmbedInteractiveExample("pages/css/function-matrix3d.html")}}
 
 ## 语法
 
-`matrix3d()` 函数由 16 个值指定，这些值以列优先顺序排列。
+`matrix3d()` 函数由 16 个值指定，这些值以列优先顺序进行描述。
 
 ```css
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
@@ -23,9 +23,9 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
   _a3_ _b3_ _c3_ _d3_
-  - : 表示线性变换的 {{cssxref("&lt;number&gt;")}} 值。
+  - : 描述线性变换的 {{cssxref("&lt;number&gt;")}} 值。
 - _a4_ _b4_ _c4 d4_
-  - : 表示需要应用平移的 {{cssxref("&lt;number&gt;")}} 值。
+  - : 描述要应用的平移的 {{cssxref("&lt;number&gt;")}} 值。
 
 <table class="standard-table">
   <thead>
@@ -149,7 +149,7 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
 ```html
 <div class="foo">
-  那时候他认为必需与重要的是接触大自然，接触曾经生活过、思想过、接触过的前人（如接触哲学、诗歌），现在认为必需、与重要的是人为的规章制度，与跟同事们交往。
+  那时候他认为必需与重要的是接触大自然，接触曾经生活过、思想过、接触过的前人（如接触哲学、诗歌），现在认为必需、与重要的是人为的规章制度，与跟同事们交往。——列夫·托尔斯泰《复活》
 </div>
 ```
 
