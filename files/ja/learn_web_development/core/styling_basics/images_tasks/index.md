@@ -1,19 +1,18 @@
 ---
 title: "スキルテスト: 画像とフォーム要素"
 slug: Learn_web_development/Core/Styling_basics/Images_tasks
-original_slug: Learn/CSS/Building_blocks/Images_tasks
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-このスキルテストの目的は、[画像、メディア、フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)のような特殊な要素が CSS でどのように扱われるかを理解しているかどうかを評価することです。
+このスキルテストの目的は、[画像、メディア、フォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)のような特殊な要素が CSS でどのように扱われるかを理解しているかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -23,13 +22,45 @@ l10n:
 
 ![ボックス内の画像](mdn-images-object-fit.png)
 
-下記のライブコードを更新して、完成例を再現してみてください。
+下記のライブコードを更新して、画像がボックスからはみ出さない完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/object-fit.html", '100%', 1000)}}
+```html live-sample___object-fit
+<div class="box">
+  <img
+    alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+</div>
+```
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/object-fit-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```css live-sample___object-fit
+.box {
+  border: 5px solid #000;
+  width: 400px;
+  height: 200px;
+}
+
+img {
+  /* Add styles here */
+}
+```
+
+{{EmbedLiveSample("object-fit", "", "400px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+画像の一部が切り取られても問題ありません。
+`object-fit: cover` を用いるのが最善の選択ですが、幅と高さを `100%` に設定する必要があります。
+
+```css
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+```
+
+</details>
 
 ## 課題 2
 
@@ -46,8 +77,56 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/images/form.html", '100%', 600)}}
+```html live-sample___form
+<form action="" class="my-form" method="post">
+  <div>
+    <label for="fldSearch">Keywords</label>
+    <input id="fldSearch" name="keywords" type="search" />
+    <input name="btnSubmit" type="submit" value="Search" />
+  </div>
+</form>
+```
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/form-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```css live-sample___form
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.my-form {
+  border: 2px solid #000;
+  padding: 5px;
+}
+```
+
+{{EmbedLiveSample("form")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+この課題に対する解決策の例を以下に示します。
+
+```css
+.my-form {
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+.my-form input[type="search"] {
+  padding: 10px;
+  font-size: inherit;
+}
+
+.my-form input[type="submit"] {
+  padding: 10px;
+  font-size: inherit;
+  background-color: rebeccapurple;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+}
+```
+
+</details>
+
+## 関連情報
+
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
