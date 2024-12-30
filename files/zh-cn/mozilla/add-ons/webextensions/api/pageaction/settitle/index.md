@@ -37,14 +37,14 @@ browser.pageAction.setTitle(
 
 ## 示例
 
-当一个标签页被更新时，显示该标签页的页面操作，并将其标题设置为标签页的 ID：
+当一个标签页被更新时，在该标签页内显示页面操作，并将页面操作的标题设置为标签页的 ID：
 
 ```js
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   browser.pageAction.show(tabId);
   browser.pageAction.setTitle({
     tabId,
-    title: `Tab ID: ${tabId}`,
+    title: `标签页 ID：${tabId}`,
   });
 });
 ```
