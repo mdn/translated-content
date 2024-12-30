@@ -378,7 +378,7 @@ h1 {
 
 これは、見出しのフォントサイズを指定する必要があるのは一度だけで、モバイル用にメディアクエリーで再定義せずともよいことを意味します。ビューポートのサイズを大きくするにつれて、フォントは徐々に大きくなります。
 
-```html live-sample___type-vw
+```html-nolint live-sample___type-vw
 <div class="wrapper">
   <div class="col1">
     <h1>このサイズを見てください</h1>
