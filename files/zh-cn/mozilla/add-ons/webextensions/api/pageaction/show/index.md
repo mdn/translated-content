@@ -7,11 +7,11 @@ l10n:
 
 {{AddonSidebar}}
 
-在指定的 {{WebExtAPIRef("tabs/Tab", "tab")}} 中显示 {{WebExtAPIRef("pageAction")}}。只要指定的标签页是活动标签页就会显示页面操作。
+在指定的 {{WebExtAPIRef("tabs/Tab", "tab")}} 中显示 {{WebExtAPIRef("pageAction")}}。只要指定的标签页变为活动标签页，页面操作就会在其中显示。
 
-`show()` 会覆盖模式匹配，所以即使 [`show_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 不匹配 URL 或 [`hide_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 匹配 URL，页面操作也会显示在指定的标签页中。
+`show()` 会覆盖模式匹配，所以即使 [`show_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 不匹配 URL 或者 [`hide_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 匹配 URL，页面操作也会在指定的标签页中显示。
 
-请注意，在没有加载内容的标签页调用 `show()` 将不起作用。
+请注意，对没有加载内容的标签页调用 `show()` 将不起作用。
 
 ## 语法
 
@@ -28,7 +28,7 @@ browser.pageAction.show(
 
 ### 返回值
 
-[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将会被兑现为 `undefined`。
+[Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将以 `undefined` 兑现。
 
 ## 浏览器兼容性
 
