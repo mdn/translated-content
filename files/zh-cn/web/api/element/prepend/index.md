@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Element.prepend()`** 方法将在 {{domxref("Element")}} 的第一个子节点之前插入一组 {{domxref("Node")}} 对象或字符串。字符串将作为等效的 {{domxref("Text")}} 节点插入。
+**`Element.prepend()`** 方法将在当前{{domxref("Element", "元素", "", 1)}}的第一个子节点之前插入一组 {{domxref("Node")}} 对象或字符串。字符串将以等效的 {{domxref("Text")}} 节点插入。
 
 ## 语法
 
@@ -19,7 +19,7 @@ prepend(param1, param2, /* …, */ paramN)
 
 ### 参数
 
-- `param1`, …, `paramN`
+- `param1`、……、`paramN`
   - : 一组要插入的 {{domxref("Node")}} 对象或字符串。
 
 ### 返回值
@@ -42,7 +42,7 @@ let span = document.createElement("span");
 div.append(p);
 div.prepend(span);
 
-console.log(div.childNodes); // 节点列表 [ <span>, <p> ]
+console.log(div.childNodes); // NodeList [ <span>, <p> ]
 ```
 
 ### 在文本前插入
@@ -52,7 +52,7 @@ let div = document.createElement("div");
 div.append("一些文本");
 div.prepend("标题：");
 
-console.log(div.textContent); // "标题：一些文本"
+console.log(div.textContent); // “标题：一些文本”
 ```
 
 ### 在元素前插入元素和文本
@@ -62,12 +62,12 @@ let div = document.createElement("div");
 let p = document.createElement("p");
 div.prepend("一些文本", p);
 
-console.log(div.childNodes); // 节点列表 [ #text "一些文本", <p> ]
+console.log(div.childNodes); // NodeList [ #text "一些文本", <p> ]
 ```
 
-### prepend 方法是不可访问的
+### prepend 方法是不可绑定作用域的
 
-`prepend()` 方法不在 `with` 语句中作用域内。有关更多信息，请参阅 {{jsxref("Symbol.unscopables")}}。
+`prepend()` 方法无法绑定到 `with` 语句中的作用域。有关更多信息，请参阅 {{jsxref("Symbol.unscopables")}}。
 
 ```js
 let div = document.createElement("div");
