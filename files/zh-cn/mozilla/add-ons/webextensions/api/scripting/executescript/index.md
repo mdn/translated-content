@@ -20,7 +20,6 @@ l10n:
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
-
 ## 语法
 
 ```js-nolint
@@ -61,6 +60,7 @@ let results = await browser.scripting.executeScript(
 - `result` {{optional_inline}}
   - : `any`。脚本执行的结果。
 - `error` {{optional_inline}}
+
   - : `any`。如果发生错误，包含脚本抛出或拒绝的值。通常这是一个带有消息属性的错误对象，但它可以是任何值（包括原始值和 `undefined`）。
 
     Chrome 尚不支持 `error` 属性（参见 [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)）。作为替代，可以通过将要执行的代码包装在 try-catch 语句中来捕获运行时错误。未捕获的错误也会报告到目标标签页的控制台。
