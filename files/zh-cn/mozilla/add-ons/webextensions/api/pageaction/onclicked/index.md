@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当页面操作图标被点击时触发。如果页面操作有一个弹出窗口，则此事件不会触发。
+当页面操作图标被点击时触发。如果页面操作有弹窗，则该事件将不会被触发。
 
 要定义右键单击操作，请使用 {{WebExtAPIRef('contextMenus')}} API（使用 `page_action` {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}）。
 
@@ -43,9 +43,9 @@ browser.pageAction.onClicked.hasListener(listener)
       - : 包含有关点击的信息的对象。
 
         - `modifiers`
-          - : `array`。点击时激活的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
+          - : `array`。点击页面操作按钮时使用的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`
-          - : `integer`。指示用于点击页面操作图标的按钮：`0` 表示左键单击或不与鼠标相关的点击，例如键盘点击，`1` 表示中键或滚轮点击。请注意，此处并不支持右键单击，因为 Firefox 在触发此事件之前会消耗该点击以显示上下文菜单。
+          - : `integer`。指示用于点击页面操作图标的按钮：`0` 表示左键单击或不与鼠标相关的点击（例如键盘点击），`1` 表示中键或滚轮点击。请注意，此处并不支持右键单击，因为 Firefox 在触发此事件之前会消耗右键单击以显示上下文菜单。
 
 ## 浏览器兼容性
 
@@ -53,7 +53,7 @@ browser.pageAction.onClicked.hasListener(listener)
 
 ## 示例
 
-以下示例演示了如何在用户单击页面操作时隐藏该操作并将活动标签页导航到“<https://giphy.com/explore/cat>”：
+以下示例演示了如何在用户单击页面操作时隐藏该页面操作，并将活动标签页导航到“<https://giphy.com/explore/cat>”：
 
 ```js
 let catGifs = "https://giphy.com/explore/cat";
