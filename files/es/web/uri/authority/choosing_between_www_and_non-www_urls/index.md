@@ -53,7 +53,7 @@ Con estas técnicas, puedes configurar tu servidor para responder correctamente 
 
 ## Decidir el caso
 
-Este es un tema muy subjetivo que podría considerarse un problema de [bikeshedding](http://bikeshed.com/). Si desea leer más a fondo, lea algunos de los [muchos artículos](http://www.themezilla.com/should-you-use-www-in-your-url-or-not/) de este tema.
+Este es un tema muy subjetivo que podría considerarse un problema de [bikeshedding](https://bikeshed.com/). Si desea leer más a fondo, lea algunos de los [muchos artículos](http://www.themezilla.com/should-you-use-www-in-your-url-or-not/) de este tema.
 
 ## Ver también
 

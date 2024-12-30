@@ -104,6 +104,6 @@ Un sélecteur d'ID commence par un `#` plutôt que par un point, mais est essent
 
 ## Prochain article
 
-Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_d_atrribut).
+Notre exploration des sélecteurs se poursuit par l'étude des [sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}

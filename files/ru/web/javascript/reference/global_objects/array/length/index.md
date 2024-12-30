@@ -74,7 +74,7 @@ function printEntries(arr) {
 // === printed ===
 ```
 
-Таким образом, свойство `length` ничего не говорит о количестве определённых значений в массиве. Также смотрите раздел [Взаимосвязь свойства `length` с числовыми свойствами](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#Relationship_between_length_and_numerical_properties).
+Таким образом, свойство `length` ничего не говорит о количестве определённых значений в массиве. Также смотрите раздел [Взаимосвязь свойства `length` с числовыми свойствами](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#relationship_between_length_and_numerical_properties).
 
 {{js_property_attributes(1, 0, 0)}}
 

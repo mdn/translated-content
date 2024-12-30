@@ -15,25 +15,25 @@ Este elemento é destinado a apresentar datas e horas no dispositivo em um forma
 
 ## Contexto de uso
 
-| [Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories) | [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content) |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Permitted content                                             | [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), but no descendant `time` elements.                               |
-| Tag omission                                                  | None, both the start tag and the end tag are mandatory.                                                                                    |
-| Permitted parent elements                                     | Any element that accepts phrasing content.                                                                                                 |
-| Normative document                                            | [HTML5, section 4.6.10](http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)            |
+| [Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories) | [flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                 | [Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), but no descendant `time` elements.                                   |
+| Tag omission                                                      | None, both the start tag and the end tag are mandatory.                                                                                            |
+| Permitted parent elements                                         | Any element that accepts phrasing content.                                                                                                         |
+| Normative document                                                | [HTML5, section 4.6.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-time-element)                   |
 
 ## Atributos
 
-Como todo outro elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Como todo outro elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `datetime`
   - : Esse atributo indica a hora e a data do elemento e deve ser uma data válida com uma string de tempo opcional. Se o valor não puder ser analisado como uma data com uma string de tempo opcional, o elemento não possui um timestamp associado.
 - `pubdate`
-  - : (This feature is still being discussed by the WHATWG and the W3C HTML5 Working Group.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/pt-BR/docs/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
+  - : (This feature is still being discussed by the WHATWG and the W3C HTML5 Working Group.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/pt-BR/docs/Web/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
 
 ## DOM interface
 
-This element implements the [`HTMLTimeElement`](/pt-BR/docs/DOM/HTMLTimeElement) interface.
+This element implements the [`HTMLTimeElement`](/pt-BR/docs/Web/API/HTMLTimeElement) interface.
 
 ## Exemplos
 
@@ -77,4 +77,4 @@ The concert took place on May 15.
 
 ## Veja também
 
-- [The `time` element](http://www.whatwg.org/specs/web-apps/current-work/#the-time-element) (HTML5 specification)
+- [The `time` element](https://www.whatwg.org/specs/web-apps/current-work/#the-time-element) (HTML5 specification)

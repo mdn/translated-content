@@ -7,9 +7,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 
 Désinstalle une extension, compte tenu de son ID.
 
-Cette API requiert l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions). "management"
+Cette API requiert l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -33,7 +33,7 @@ var uninstalling = browser.management.uninstall(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
 
 ## Compatibilité des navigateurs
 

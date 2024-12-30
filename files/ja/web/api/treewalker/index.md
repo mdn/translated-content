@@ -7,7 +7,7 @@ slug: Web/API/TreeWalker
 
 **`TreeWalker`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。
 
-`TreeWalker` は [`document`](/ja/docs/Web/API/document) オブジェクトの {{domxref("Document.createTreeWalker()")}} メソッドを使用して作成可能です。
+`TreeWalker` は [`document`](/ja/docs/Web/API/Document) オブジェクトの {{domxref("Document.createTreeWalker()")}} メソッドを使用して作成可能です。
 
 ## プロパティ
 

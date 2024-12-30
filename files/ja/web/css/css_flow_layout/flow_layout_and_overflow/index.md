@@ -11,7 +11,7 @@ Giving an element a fixed height and width, then adding significant content to t
 
 {{EmbedGHLiveSample("css-examples/flow/overflow/overflow.html", '100%', 700)}}
 
-The content goes into the box. Once it fills the box, it continues to overflow in a visible way, displaying content outside the box, potentially displaying under subsequent content. The property that controls how overflow behaves is the [`overflow`](/ja/docs//Web/CSS/overflow) property which has an initial value of `visible`. This is why we can see the overflow content.
+The content goes into the box. Once it fills the box, it continues to overflow in a visible way, displaying content outside the box, potentially displaying under subsequent content. The property that controls how overflow behaves is the [`overflow`](/ja/docs/Web/CSS/overflow) property which has an initial value of `visible`. This is why we can see the overflow content.
 
 ## オーバーフローの制御
 
@@ -37,7 +37,7 @@ The overflow property is in reality a shorthand for the [`overflow-x`](/ja/docs/
 
 ## フロー関係のプロパティ
 
-In the guide to [Writing Modes and Flow Layout](/ja/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes), we looked at the newer properties of `block-size` and `inline-size` which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The Level 3 Overflow Module also includes flow relative properties for overflow - [`overflow-block`](/ja/docs/Web/CSS/@media/overflow-block) and [`overflow-inline`](/ja/docs/Web/CSS/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
+In the guide to [Writing Modes and Flow Layout](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes), we looked at the newer properties of `block-size` and `inline-size` which make more sense when working with different writing modes than tying our layout to the physical dimensions of the screen. The Level 3 Overflow Module also includes flow relative properties for overflow - [`overflow-block`](/ja/docs/Web/CSS/@media/overflow-block) and [`overflow-inline`](/ja/docs/Web/CSS/@media/overflow-inline). These correspond to `overflow-x` and `overflow-y` but the mapping depends on the writing mode of the document.
 
 These properties currently do not have implementations in browsers, so you will need to use the physical properties at the present time and adjust for your writing mode.
 

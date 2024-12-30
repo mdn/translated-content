@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference
 {{JsSidebar}}
 
 이 페이지는 JavaScript 언어에 대한 정보 보관소입니다.
-[이 참고서에 대해 더 읽어보세요](/ko/docs/Web/JavaScript/Reference/About).
+[이 참고서에 대해 더 읽어보세요](/ko/docs/Web/JavaScript/Reference).
 
 ## 내장 객체
 

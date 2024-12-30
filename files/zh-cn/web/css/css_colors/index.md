@@ -23,7 +23,7 @@ slug: Web/CSS/CSS_colors
 
 ## 教程
 
-- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
   - : 一份用 CSS 将颜色应用于许多不同类型内容上的教程。所有和颜色相关的 CSS 属性都会涉及。
 
 ## 工具

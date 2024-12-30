@@ -114,6 +114,6 @@ value2
 
 ## 参见
 
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTTPHeader("Content-Type")}} 中定义了消息中多部分主体的边界。
 - {{domxref("FormData")}} 接口可以用来操作在 {{domxref("XMLHttpRequest")}} API 中使用的表单数据。

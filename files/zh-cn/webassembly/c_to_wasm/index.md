@@ -16,7 +16,7 @@ slug: WebAssembly/C_to_Wasm
 你需要将下列工具安装在你的电脑上，首先让我们确认下都有哪些。
 
 - [Git](https://git-scm.com/) — Linux 和 macOS 的机器一般已经预装了，在 Windows 下你可以从这里下载 [Git for Windows installer](https://git-scm.com/download/win)。
-- CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 [brew](http://brew.sh/) 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 [CMake installer](https://cmake.org/download/)。
+- CMake — 在 Linux 或者 macOS 上，使用类似 apt-get 或 [brew](https://brew.sh/) 这样的包管理器来安装它，请确保依赖以及路径是否正确。在 Windows 上，使用 [CMake installer](https://cmake.org/download/)。
 - 主系统编译器 — 在 Linux 下，[安装 GCC](http://askubuntu.com/questions/154402/install-gcc-on-ubuntu-12-04-lts)。在 macOS 下，[安装 Xcode](https://itunes.apple.com/us/app/xcode/id497799835)。在 Windows 下，安装 [Visual Studio Community 2015 with Update 3 or newer](https://www.microsoft.com/zh-CN/download/details.aspx?id=48146)。
 - Python 2.7.x — On Linux and macOS, this is most likely provided out of the box. 从 [初学者指南](https://wiki.python.org/moin/BeginnersGuide/Downloadhere) 获取帮助。在 Windows 上，从 [Python 主页](https://www.python.org/downloads/)获取安装包。
 
@@ -112,7 +112,7 @@ emsdk_env.bat
 现在使用一个支持 WebAssembly 的浏览器，加载生成的 `hello.html`。自从 Firefox 版本 52、Chrome 版本 57 和 Opera 版本 44 开始，已经默认启用了 WebAssembly。
 
 > [!NOTE]
-> 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
+> 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
 
 如果一切顺利，你应该可以在页面上的 Emscripten 控制台和浏览器控制台中看到“Hello World”的输出。
 

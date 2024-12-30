@@ -68,7 +68,7 @@ document.getElementById("lyrics").textContent ||= "Нет слов.";
 ## Смотрите также
 
 - [Логическое ИЛИ(||)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Оператор присваивания побитового ИЛИ (`|=`)](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy", "Истиноподобное значение")}}
 - {{Glossary("Falsy", "Ложноподобное значение")}}

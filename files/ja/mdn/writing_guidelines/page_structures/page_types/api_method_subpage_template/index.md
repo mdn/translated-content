@@ -62,7 +62,7 @@ l10n:
 > - `\{{APIRef("GroupDataName")}}` — これは、現在のページに関連するクイックリファレンスリンクを示す左側のリファレンスサイドバーを生成します。
 >   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。
 >   API に適したサイドバーを生成するには、 KumaScript GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。
->   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)のガイドを参照してください。このページをコピーする際には、忘れずに `\{{MDNSidebar}}` マクロを除去してください。
+>   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。このページをコピーする際には、忘れずに `\{{MDNSidebar}}` マクロを除去してください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >

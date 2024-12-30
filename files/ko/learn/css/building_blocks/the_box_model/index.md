@@ -71,7 +71,7 @@ CSS에는 크게 두 가지 박스(**블록 박스**와 **인라인 박스**) �
 그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 플렉스 항목이 되고, 나중에 익히게 될 [플렉스박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
 
 > [!NOTE]
-> 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
+> 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
 
 CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예로 `flex`나 [`grid`](/ko/docs/Learn/CSS/CSS_layout/Grids)같은 박스가 취할 수 있는 그 밖의 다양한 내부 속성 값을 마주치게 될 겁니다.
 
@@ -183,7 +183,7 @@ html {
 
 ### 브라우저 개발자도구를 사용해 박스 모델 보기
 
-[브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. Firefox의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
+[브라우저 개발자 도구](/ko/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. Firefox의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
 
 ![FireFox의 DevTools를 이용한 박스 모델 검사](box-model-devtools.png)
 
@@ -218,7 +218,7 @@ html {
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
 
-여백이 축소될 때와 축소되지 않을 때를 말해주는 여러 가지 규칙이 있습니다. 자세한 내용은 [여백 축소 정복](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)에 대한 자세한 페이지를 참조하십시오. 당장 기억해야 할 주안점은 마진 축소란 것이 벌어지고 있다는 점이다. 여백이 있는 공간을 생성하고도 여러분이 기대하는 만큼의 공간을 얻지 못한다면, 아마도 그것은 여백 축소 현상일 것입니다.
+여백이 축소될 때와 축소되지 않을 때를 말해주는 여러 가지 규칙이 있습니다. 자세한 내용은 [여백 축소 정복](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)에 대한 자세한 페이지를 참조하십시오. 당장 기억해야 할 주안점은 마진 축소란 것이 벌어지고 있다는 점이다. 여백이 있는 공간을 생성하고도 여러분이 기대하는 만큼의 공간을 얻지 못한다면, 아마도 그것은 여백 축소 현상일 것입니다.
 
 ### 테두리
 

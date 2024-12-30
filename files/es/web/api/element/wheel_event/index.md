@@ -86,4 +86,4 @@ el.addEventListener("wheel", zoom);
 ## Véase también
 
 - {{domxref("WheelEvent")}}
-- [Document: `wheel` event](/es/docs/Web/API/Document/wheel_event)
+- [Document: `wheel` event](/es/docs/Web/API/Element/wheel_event)

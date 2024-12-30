@@ -9,7 +9,7 @@ Déplace un ou plusieurs onglets vers une nouvelle position dans la même fenêt
 
 Vous pouvez uniquement déplacer des onglets vers et à partir de fenêtres dont {{WebExtAPIRef('windows.WindowType', 'WindowType')}} est `"normal"`.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -40,7 +40,7 @@ var moving = browser.tabs.move(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera satisfaite avec un objet `{{WebExtAPIRef('tabs.Tab')}}` ou un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des détails sur les onglets déplacés. Si aucun onglet n'a été déplacé (par exemple, parce que vous avez essayé de déplacer un onglet non épinglé avant un onglet épinglé), il s'agira d'un tableau vide. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite avec un objet `{{WebExtAPIRef('tabs.Tab')}}` ou un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des détails sur les onglets déplacés. Si aucun onglet n'a été déplacé (par exemple, parce que vous avez essayé de déplacer un onglet non épinglé avant un onglet épinglé), il s'agira d'un tableau vide. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

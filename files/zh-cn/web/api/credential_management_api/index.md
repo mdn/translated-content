@@ -25,7 +25,7 @@ Credential Management API 允许网站存储和检索用户，联合账户和公
 - {{domxref("CredentialsContainer")}}
   - : 公开请求凭据的方法，并在发生令人关注的事件（如成功登录或注销）时通知用户代理。可以从`Navigator.credentials`访问此接口。
 - {{domxref("FederatedCredential")}}
-  - : 提供关于联合身份提供程序的凭据的信息，联合身份提供程序是网站信任的实体，可以正确地对用户进行身份验证，并为此提供 API。 [OpenID Connect](http://openid.net/developers/specs/) 就是这种框架的一个例子。
+  - : 提供关于联合身份提供程序的凭据的信息，联合身份提供程序是网站信任的实体，可以正确地对用户进行身份验证，并为此提供 API。 [OpenID Connect](https://openid.net/developers/specs/) 就是这种框架的一个例子。
 - {{domxref("PasswordCredential")}}
   - : 提供有关用户名/密码对的信息。
 - {{domxref("PublicKeyCredential")}}

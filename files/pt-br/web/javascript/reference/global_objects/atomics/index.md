@@ -65,7 +65,7 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 ## Veja Também
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API)
 - [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

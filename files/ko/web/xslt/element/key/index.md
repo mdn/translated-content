@@ -33,7 +33,7 @@ slug: Web/XSLT/Element/key
 
 ### 정의
 
-[XSLT section 12.2, Keys](http://www.w3.org/TR/xslt#key)
+[XSLT section 12.2, Keys](https://www.w3.org/TR/xslt#key)
 
 ### Gecko 지원
 

@@ -74,6 +74,6 @@ MyElement.prototype.loadData = function (url) {
 - {{domxref("Window.queueMicrotask()")}}
 - [`core-js` 中 `queueMicrotask()` 的 polyfill](https://github.com/zloirock/core-js#queuemicrotask)
 - [在 JavaScript 中通过 queueMicrotask() 使用微任务](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
 - [queueMicrotask 的解释](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [任务、微任务、队列和调度](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)（作者：Jake Archibald）

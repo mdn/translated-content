@@ -41,7 +41,7 @@ Os seguintes termos são usados quando se fala sobre a funcionalidade de proxies
 
 ## Handlers e traps
 
-A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja as [páginas de referência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) para explicações detalhadas e exemplos.
+A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja as [páginas de referência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy) para explicações detalhadas e exemplos.
 
 <table class="standard-table">
   <thead>
@@ -391,7 +391,7 @@ Reflect.has(Object, "assign"); // true
 
 ### Uma função `apply` melhorada
 
-Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

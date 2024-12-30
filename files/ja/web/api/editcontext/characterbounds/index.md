@@ -13,7 +13,7 @@ l10n:
 
 ウェブ開発者は、{{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} イベントと {{domxref("EditContext.updateCharacterBounds()")}} メソッドを組み合わせて用い、オペレーティングシステムが各文字の位置と大きさの情報を要求した時に各文字の領域を更新することに関心を持つ可能性が高いでしょう。
 
-`characterBounds()` メソッドは、、`updateCharacterBounds()` により最後に更新された各文字の領域のリストを返します。このリストには `EditContext` オブジェクト内のすべての文字に対応する要素が格納されているのではなく、`updateCharacterBounds()` で更新された文字に対応する要素のみが格納されています。これらの各文字が `EditContext` オブジェクト内のどこに位置するかを知るには、{{domxref("EditContext.characterBoundsRangeStart")}} プロパティを使用してください。
+`characterBounds()` メソッドは、`updateCharacterBounds()` により最後に更新された各文字の領域のリストを返します。このリストには `EditContext` オブジェクト内のすべての文字に対応する要素が格納されているのではなく、`updateCharacterBounds()` で更新された文字に対応する要素のみが格納されています。これらの各文字が `EditContext` オブジェクト内のどこに位置するかを知るには、{{domxref("EditContext.characterBoundsRangeStart")}} プロパティを使用してください。
 
 ## 構文
 

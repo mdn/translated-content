@@ -74,4 +74,4 @@ Una vez has hecho esto, ya puedes trabajar con los elementos en el espacio 3D.
 
 ## See also
 
-- [Using deviceorientation in 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms)
+- [Using deviceorientation in 3D Transforms](/en-US/Using_Deviceorientation_In_3D_Transforms)

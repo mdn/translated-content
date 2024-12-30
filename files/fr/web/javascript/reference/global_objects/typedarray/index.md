@@ -65,7 +65,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 
 - [`TypedArray.BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
   - : Renvoie un nombre indiquant la taille, exprimée en octets, de chaque élément du tableau typé.
-- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name)
+- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : Renvoie la chaîne de caractères correspondant au nom du constructeur (par exemple, `"Int8Array"`).
 - [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
@@ -124,9 +124,9 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 - [`TypedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
   - : Crée un nouveau tableau dont les éléments sont les résultats de l'appel de la fonction passée en argument pour chaque élément du tableau original. Voir aussi [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 - [`TypedArray.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
+  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
 - [`TypedArray.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight).
+  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight).
 - [`TypedArray.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse)
   - : Inverse l'ordre des éléments d'un tableau (le premier devenant le dernier, le dernier devenant le premier et ainsi de suite). Voir aussi [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse).
 - [`TypedArray.prototype.set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set)
@@ -236,7 +236,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les tableaux typés avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 - [TextDecoder](/fr/docs/Web/API/TextDecoder), une API utilitaire pour décoder des chaînes de caractères à partir de données numériques

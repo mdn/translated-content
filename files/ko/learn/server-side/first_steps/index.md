@@ -13,9 +13,9 @@ slug: Learn/Server-side/First_steps
 
 "웹이 어떻게 동작하는가" 를 이해해야 합니다. 다음의 토픽들을 우선 읽어보는 것을 추천합니다.
 
-- [웹 서버란 무엇인가 (What is a web server](/ko/docs/Learn/Common_questions/What_is_a_web_server))
-- [웹사이트를 만들기 위해서는 어떤 소프트웨어가 필요한가 (What software do I need to build a website?](/ko/docs/Learn/Common_questions/What_software_do_I_need))
-- [어떻게 웹 서버에 파일을 업로드 하는가 (How do you upload files to a web server?](/ko/docs/Learn/Common_questions/Upload_files_to_a_web_server))
+- [웹 서버란 무엇인가 (What is a web server](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server))
+- [웹사이트를 만들기 위해서는 어떤 소프트웨어가 필요한가 (What software do I need to build a website?](/ko/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need))
+- [어떻게 웹 서버에 파일을 업로드 하는가 (How do you upload files to a web server?](/ko/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server))
 
 이러한 기본적인 이해가 있다면, 이 섹션의 모듈들을 공부할 준비가 되었습니다.
 

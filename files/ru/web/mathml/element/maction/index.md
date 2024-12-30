@@ -20,13 +20,13 @@ slug: Web/MathML/Element/maction
       Синтаксис: `<maction actiontype="tooltip"> expression message </maction>.`
 
 - class, id, style
-  - : Предусматривается для использования с [таблицами стилей](/ru/docs/CSS).
+  - : Предусматривается для использования с [таблицами стилей](/ru/docs/Web/CSS).
 - href
   - : Используется для установки гиперссылки на указанный URI.
 - mathbackground
-  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет фона. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - mathcolor
-  - : Цвет текста и цвет пунктирной линии. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/CSS/color_value#Color_Keywords).
+  - : Цвет текста и цвет пунктирной линии. Вы можете использовать `#rgb`, `#rrggbb` и [названия цветов HTML](/ru/docs/Web/CSS/color_value#color_keywords).
 - selection
   - : Дочерний элемент, которому адресуется действие. Значение по умолчанию равно 1, что соответствует первому дочернему элементу.
 

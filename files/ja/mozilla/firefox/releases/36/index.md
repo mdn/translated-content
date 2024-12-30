@@ -53,7 +53,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
   - {{jsxref("Symbol.keyFor()")}}
   - {{jsxref("Object.getOwnPropertySymbols()")}}
 
-- [イテレート可能](/ja/docs/Web/JavaScript/Guide/iterable)なインターフェイスのプロパティキーのための、旧来のプレースホルダ文字列である `"@@iterator"` を、ES6 で周知のシンボルである {{jsxref("Symbol.iterator")}} に置き換えました ([Firefox バグ 918828](https://bugzil.la/918828))。
+- [イテレート可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)なインターフェイスのプロパティキーのための、旧来のプレースホルダ文字列である `"@@iterator"` を、ES6 で周知のシンボルである {{jsxref("Symbol.iterator")}} に置き換えました ([Firefox バグ 918828](https://bugzil.la/918828))。
 - 仕様内部の抽象的な演算である `ToNumber(string)` で 2 進 (`0b`) および 8 進 (`0o`) リテラルをサポートしました。これは潜在的に、ES5 からの破壊的な変更になります ([Firefox バグ 1079120](https://bugzil.la/1079120))。
 
   - `Number("0b11")` は、`NaN` ではなく `3` を返します。
@@ -112,7 +112,7 @@ _変更なし。_
 - RC4 は安全でないとみなすようになり、すべての UI インジケータがそのように対応します。また SSLv3 は Firefox 34 からデフォルトで無効になっていますが、何が起きているかをユーザーが理解しやすくなるように UI を変更しました ([Firefox バグ 1093595](https://bugzil.la/1093595))。
 - TLS の初期ハンドシェイクで RC4 を提示しないようになりました ([Firefox バグ 1088915](https://bugzil.la/1088915))。
 - CSP 1.1 の [`form-action`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) ディレクティブをサポートしました ([Firefox バグ 529697](https://bugzil.la/529697))。
-- Firefox のオプションで、[Do not track](/ja/docs/Web/Security/Do_not_track_field_guide) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。
+- Firefox のオプションで、[Do not track](/ja/docs/Web/HTTP/Headers/DNT) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
@@ -157,7 +157,7 @@ _変更なし。_
 
 ### その他
 
-- Firefox の `-remote` [コマンドラインオプション](/ja/docs/Mozilla/Command_Line_Options)を廃止しました ([Firefox バグ 1080319](https://bugzil.la/1080319))。
+- Firefox の `-remote` [コマンドラインオプション](https://wiki.mozilla.org/Firefox/CommandLineOptions)を廃止しました ([Firefox バグ 1080319](https://bugzil.la/1080319))。
 
 ## 過去のバージョン
 

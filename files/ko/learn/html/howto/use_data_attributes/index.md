@@ -64,7 +64,7 @@ article[data-columns="4"] {
 
 [JSBin 예제](https://jsbin.com/ujiday/2/edit)에서 함께 작동하는 것을 볼 수 있습니다.
 
-데이터 속성들은 게임 점수와 같이 계속 변하는 정보도 저장할 수 있습니다. CSS 선택자와 JavaScript 접근을 이용해서, display 규칙을 사용하지 않고도 훌륭한 효과를 만들 수도 있습니다. 생성된 content와 CSS transition의 예시를 보려면 [이 screencast](http://www.youtube.com/watch?v=On_WyUB1gOk)를 확인하세요([JSBin 예제](https://jsbin.com/atawaz/3/edit)).
+데이터 속성들은 게임 점수와 같이 계속 변하는 정보도 저장할 수 있습니다. CSS 선택자와 JavaScript 접근을 이용해서, display 규칙을 사용하지 않고도 훌륭한 효과를 만들 수도 있습니다. 생성된 content와 CSS transition의 예시를 보려면 [이 screencast](https://www.youtube.com/watch?v=On_WyUB1gOk)를 확인하세요([JSBin 예제](https://jsbin.com/atawaz/3/edit)).
 
 데이터 값은 문자열입니다. 스타일을 적용하려면 숫자 값은 선택자에 따옴표 안에 써주어야 합니다.
 
@@ -82,4 +82,4 @@ Firefox 49.0.2(아마도 이전/이후의 버전)에서는, 1022 데이터를 �
 
 - 이 글은 [hacks.mozilla.org에서 JavaScript 및 CSS의 데이터 속성 사용](https://hacks.mozilla.org/2012/10/using-data-attributes-in-javascript-and-css/)에서 발췌되었습니다.
 - 사용자 정의 속성은 SVG 2에서도 지원됩니다. 자세한 내용은 {{domxref("SVGElement.dataset")}} 및 {{SVGAttr("data-*")}}를 참조하세요.
-- Sitepoint의 [HTML5 데이터 속성 사용 방법](http://www.sitepoint.com/use-html5-data-attributes/)
+- Sitepoint의 [HTML5 데이터 속성 사용 방법](https://www.sitepoint.com/use-html5-data-attributes/)

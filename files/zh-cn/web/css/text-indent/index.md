@@ -170,7 +170,7 @@ p {
 
 ## 参见
 
-- [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)
+- [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - 相关 CSS 属性：
 
   - [`text-justify`](/zh-CN/docs/Web/CSS/text-justify)

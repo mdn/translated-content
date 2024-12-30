@@ -43,10 +43,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -59,7 +59,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了 [`SVGPathElement`](/zh-CN/docs/DOM/SVGPathElement) 接口。
+该元素实现了 [`SVGPathElement`](/zh-CN/docs/Web/API/SVGPathElement) 接口。
 
 ## 浏览器兼容性
 

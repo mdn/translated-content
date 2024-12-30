@@ -25,7 +25,7 @@ Une chaîne de caractères générées aléatoirement et qui est un UUID au form
 
 ## Exemples
 
-On accède à cette méthode à l'aide de la propriété globale [`crypto`](/fr/docs/Web/API/crypto_property).
+On accède à cette méthode à l'aide de la propriété globale [`crypto`](/fr/docs/Web/API/Window/crypto).
 
 ```js
 /* Si self.crypto.randomUUID() est bien disponible : */
@@ -45,5 +45,5 @@ console.log(uuid); // par exemple "36b8f84d-df4e-4d49-b662-bcde71a8764f"
 ## Voir aussi
 
 - [L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API)
-- La propriété globale [`crypto`](/fr/docs/Web/API/crypto_property) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto).
+- La propriété globale [`crypto`](/fr/docs/Web/API/Window/crypto) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto).
 - [`Crypto.getRandomValues()`](/fr/docs/Web/API/Crypto/getRandomValues) qui permet d'obtenir des valeurs aléatoires sécurisées sur autant d'octets que souhaité.

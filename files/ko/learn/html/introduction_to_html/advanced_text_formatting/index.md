@@ -39,7 +39,7 @@ l10n:
 
 ## 설명 목록
 
-HTML 텍스트 기본에서 [기본 목록을 마크업하는 방법](/ko/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists)을 안내했지만, 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 **설명 목록**에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다. 아래의 예시를 살펴봅시다.
+HTML 텍스트 기본에서 [기본 목록을 마크업하는 방법](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)을 안내했지만, 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 **설명 목록**에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다. 아래의 예시를 살펴봅시다.
 
 ```plain
 soliloquy

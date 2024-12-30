@@ -33,10 +33,10 @@ L'en-tête `Link:` peut également être spécifiée à l'intérieur d'un docume
 <meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch" />
 ```
 
-Le format pour l'en-tête `Link:` est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
+Le format pour l'en-tête `Link:` est décrit dans le [RFC 2068](https://tools.ietf.org/html/rfc2068) section 19.6.2.4.
 
 > [!NOTE]
-> Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente [RFC 2616](http://tools.ietf.org/html/rfc2616) ne décrit pas l'en-tête `Link:`. Bien que les en-têtes `Link:` ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.
+> Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente [RFC 2616](https://tools.ietf.org/html/rfc2616) ne décrit pas l'en-tête `Link:`. Bien que les en-têtes `Link:` ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.
 
 Le navigateur surveille toutes ces cibles et met en attente chaque requête unique qui doit ensuite être préchargée quand le navigateur est disponible. Il peut y avoir de multiples cibles par page, ainsi on peut comprendre l'utilité de précharger de multiples documents. Par exemple, le document suivant peut contenir plusieurs images lourdes.
 

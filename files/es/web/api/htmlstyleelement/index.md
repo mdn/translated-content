@@ -9,10 +9,10 @@ slug: Web/API/HTMLStyleElement
 
 Vea las siguientes páginas para información sobre alguno de los objetos utilizados para manipular propiedades CSS especificadas utilizando el DOM:
 
-- [Objeto DOM element.style](/Es/DOM/Element.style)
-- [Objeto DOM stylesheet](/Es/DOM/Stylesheet)
-- [Objeto DOM cssRule](/Es/DOM/CssRule)
-- [Lista de Propiedades DOM CSS](/Es/DOM/CSS)
+- [Objeto DOM element.style](/es/docs/Web/API/HTMLElement/style)
+- [Objeto DOM stylesheet](/es/docs/Web/API/StyleSheet)
+- [Objeto DOM cssRule](/es/docs/Web/API/CSSRule)
+- [Lista de Propiedades DOM CSS](/es/docs/Web/CSS)
 
 ### Material que se moverá a otras páginas
 
@@ -25,9 +25,9 @@ var ss = document.styleSheets[1];
 ss.cssRules[0].style.backgroundColor="blue";
 ```
 
-La lista de propiedades disponibles en el DOM se encuentra en la página: [DOM CSS Properties List](/Es/DOM/CSS).
+La lista de propiedades disponibles en el DOM se encuentra en la página: [DOM CSS Properties List](/es/docs/Web/CSS).
 
-El elemento propiedad [style](/es/DOM/style) puede ser usado también para leer o establecer el estilo de un elemento. Sin embargo, esta propiedad solo devuelve atributos de estilo que han sido establecidos in-line (por ejemplo: \<td style="background-color: lightblue"> devuelve la cadena "background-color: lightblue" o directamente para ese elemento usando element.style.propertyName, aún si hay otros estilos definidos para ese elemento en un stylesheet).
+El elemento propiedad [style](/es/docs/Web/API/HTMLStyleElement) puede ser usado también para leer o establecer el estilo de un elemento. Sin embargo, esta propiedad solo devuelve atributos de estilo que han sido establecidos in-line (por ejemplo: \<td style="background-color: lightblue"> devuelve la cadena "background-color: lightblue" o directamente para ese elemento usando element.style.propertyName, aún si hay otros estilos definidos para ese elemento en un stylesheet).
 
 De igual manera, cuando establecemos esa propiedad en un elemento, sobreescribimos y borramos cualquier estilo que hubiera sido fijado en alguna otra parte para la propiedad particular de ese elemento que estamos estableciendo. Por ejemplo, estableciendo la propiedad border sobreescribimos cualquier asignación que se establezca en la sección principal o en una hoja de estilo externa, sobre la propiedad border del elemento. Sin embargo, esto no afectará ninguna otra declaración de propiedad que se haga para el estilo del elemento, tales como padding o margin o font-size, por ejemplo.
 
@@ -70,11 +70,11 @@ function resetStyle(elemId) {
 </html>
 ```
 
-El método `getComputedStyle()` en el objeto `document.defaultView` devuelve todos los estilos que han sido asignados al elemento. Para una explicación del uso de este método, consulta el capítulo de ejemplos en: [Example 6: getComputedStyle](/en/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) (en).
+El método `getComputedStyle()` en el objeto `document.defaultView` devuelve todos los estilos que han sido asignados al elemento. Para una explicación del uso de este método, consulta el capítulo de ejemplos en: [Example 6: getComputedStyle](/en-US/Gecko_DOM_Reference/Examples#example_6:_getcomputedstyle) (en).
 
 #### El objeto estilo (`style`) de DOM
 
-El objeto `style` representa una sentencia de estilo individual. Al contrario de las reglas individuales disponibles en la colección: [`document.styleSheets`](/Es/DOM/Document.styleSheets), se accede al objeto style a partir del `document` o desde el elemento para el cual se aplica el estilo. Representa pues, el estilo _in-line_ de ese elemento.
+El objeto `style` representa una sentencia de estilo individual. Al contrario de las reglas individuales disponibles en la colección: [`document.styleSheets`](/es/docs/Web/API/Document/styleSheets), se accede al objeto style a partir del `document` o desde el elemento para el cual se aplica el estilo. Representa pues, el estilo _in-line_ de ese elemento.
 
 Más importante que los dos procedimientos que señalamos aquí, es el uso del objeto `style` para establecer las propiedades de un elemento:
 
@@ -99,7 +99,7 @@ Más importante que los dos procedimientos que señalamos aquí, es el uso del o
 </html>
 ```
 
-Los atributos **media** y **type** de style pueden o no estar presentes. Ten en cuenta que también puedes cambiar el estilo de un elemento haciendo una referencia a él y luego usando el método [`setAttribute`](/Es/DOM/Element.setAttribute) para especificar la propiedad CSS y su valor.
+Los atributos **media** y **type** de style pueden o no estar presentes. Ten en cuenta que también puedes cambiar el estilo de un elemento haciendo una referencia a él y luego usando el método [`setAttribute`](/es/docs/Web/API/Element/setAttribute) para especificar la propiedad CSS y su valor.
 
 ```
 var el = document.getElementById("some-element");
@@ -110,7 +110,7 @@ Ten presente, si embargo, que el método `setAttribute` eliminará cualquier otr
 
 ##### Propiedades
 
-- [style.media](/Es/DOM/Style.media)
+- [style.media](/es/docs/Web/API/StyleSheet/media)
   - : Especifica el destino intencionado de la información de estilo
-- [style.type](/Es/DOM/Style.type)
+- [style.type](/es/docs/Web/API/StyleSheet/type)
   - : Devuelve el tipo de estilo que esta siendo aplicado por esta declaración.

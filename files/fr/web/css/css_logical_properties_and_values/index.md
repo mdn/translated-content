@@ -11,7 +11,7 @@ Ce module définit également les propriétés logiques et les valeurs pour les 
 
 ### Dimension de bloc ou de ligne
 
-Les propriétés et valeurs logiques utilisent les termes abstraits _bloc_ (_block_) ou ligne (_inline_) afin de décrire leur direction. La signification physique de ces termes dépend du [mode d'écriture](/fr/docs/Web/CSS/CSS_Writing_Modes).
+Les propriétés et valeurs logiques utilisent les termes abstraits _bloc_ (_block_) ou ligne (_inline_) afin de décrire leur direction. La signification physique de ces termes dépend du [mode d'écriture](/fr/docs/Web/CSS/CSS_writing_modes).
 
 - Dimension de bloc
   - : C'est la dimension perpendiculaire au flux du texte sur une ligne. Autrement dit, il s'agit de la dimension verticale lorsque le texte est écrit dans un mode horizontal et de la dimension horizontale lorsque le texte est écrit verticalement (pour le français, cette dimension correspond donc à l'axe vertical).
@@ -106,10 +106,10 @@ Les propriétés et valeurs logiques utilisent les termes abstraits _bloc_ (_blo
 
 ## Guides
 
-- [Concepts de base pour les propriétés logiques et les valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts)
-- [Les propriétés logiques utiles au dimensionnement](/fr/docs/Web/CSS/CSS_Logical_Properties/Sizing)
-- [Les propriétés logiques utiles aux marges, bordures et remplissage (_padding_)](/fr/docs/Web/CSS/CSS_Logical_Properties/Margins_borders_padding)
-- [Les propriétés logiques utiles aux flottements et au positionnement](/fr/docs/Web/CSS/CSS_Logical_Properties/Floating_and_positioning)
+- [Concepts de base pour les propriétés logiques et les valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [Les propriétés logiques utiles au dimensionnement](/fr/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [Les propriétés logiques utiles aux marges, bordures et remplissage (_padding_)](/fr/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
+- [Les propriétés logiques utiles aux flottements et au positionnement](/fr/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
 
 ## Spécifications
 

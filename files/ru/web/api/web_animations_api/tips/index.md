@@ -9,7 +9,7 @@ CSS-анимация позволяет делать невероятные ве
 
 ## Запустить анимацию снова
 
-Спецификация [CSS Animations](/ru/docs/Web/CSS/CSS_Animations) не предлагает способа запустить анимацию снова. Нет никакого волшебного метода resetAnimation () для элементов, и вы даже не можете просто установить элемент {{cssxref ("animation-play-state")}} в" running " снова. Вместо этого вы должны использовать хитрые трюки, чтобы запустить остановленную анимацию для воспроизведения.
+Спецификация [CSS Animations](/ru/docs/Web/CSS/CSS_animations) не предлагает способа запустить анимацию снова. Нет никакого волшебного метода resetAnimation () для элементов, и вы даже не можете просто установить элемент {{cssxref ("animation-play-state")}} в" running " снова. Вместо этого вы должны использовать хитрые трюки, чтобы запустить остановленную анимацию для воспроизведения.
 
 Предлагаем вам один из способов, который мы считаем достаточно надёжным и стабильным.
 
@@ -157,5 +157,5 @@ Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
 
 ## Смотрите также
 
-- [Using CSS transitions](/ru/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("Window.requestAnimationFrame()")}}

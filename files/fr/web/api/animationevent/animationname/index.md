@@ -23,6 +23,6 @@ nom = AnimationEvent.animationName;
 
 ## Voir aussi
 
-- [Utiliser les animations CSS](/fr/docs/CSS/Animations_CSS)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations)
 - {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
 - L'interface {{domxref("AnimationEvent")}} à laquelle elle appartient.

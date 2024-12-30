@@ -113,7 +113,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
 > [!NOTE]
-> В [таблице совместимости](/ru/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility) вы можете найти информацию о том, как обрабатываются атрибуты в конкретных версиях браузеров.
+> В [таблице совместимости](/ru/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value#browser_compatibility) вы можете найти информацию о том, как обрабатываются атрибуты в конкретных версиях браузеров.
 
 #### Куки с префиксами
 
@@ -151,7 +151,7 @@ console.log(document.cookie);
 
 Куки, созданные с помощью JavaScript, не могут содержать атрибут `HttpOnly`.
 
-Пожалуйста, учитывайте вытекающие из этого проблемы, про которые рассказывается ниже в разделе [Безопасность](#Безопасность). Куки, доступные для JavaScript, могут быть похищены посредством XSS.
+Пожалуйста, учитывайте вытекающие из этого проблемы, про которые рассказывается ниже в разделе [Безопасность](#безопасность). Куки, доступные для JavaScript, могут быть похищены посредством XSS.
 
 ## Безопасность
 
@@ -201,7 +201,7 @@ new Image().src =
 Третья сторона, контролирующая внедрение сторонних кук, может создать профиль пользователя на основе истории его посещений разных сайтов с помощью кук, отправляемых одним и тем же браузером с разных сайтов. Firefox по умолчанию блокирует сторонние куки, про которые известно, что они используются для трекинга пользователей. Сторонние куки (или просто куки для трекинга) могут также быть заблокированы другими настройками браузера или расширениями. Блокировка кук в некоторых ситуациях может стать причиной некорректного поведения сторонних компонентов, например, виджетов социальных сетей.
 
 > [!NOTE]
-> Бэкенд может (и должен) устанавливать у кук [атрибут SameSite](/ru/docs/Web/HTTP/Headers/Set-Cookie/SameSite) для управления отправкой кук на сторонние серверы.
+> Бэкенд может (и должен) устанавливать у кук [атрибут SameSite](/ru/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) для управления отправкой кук на сторонние серверы.
 
 ### Законодательство, связанное с куки
 
@@ -233,7 +233,7 @@ new Image().src =
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [SameSite cookies](/ru/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [SameSite cookies](/ru/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 - [Inspecting cookies using the Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie specification: RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [Cookies, the GDPR, and the ePrivacy Directive](https://gdpr.eu/cookies/)

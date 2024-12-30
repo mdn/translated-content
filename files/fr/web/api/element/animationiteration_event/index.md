@@ -10,7 +10,7 @@ L'événement `animationiteration` est déclenché lorsqu'une itération d'une a
 ## Informations générales
 
 - Spécification
-  - : [CSS Animations](http://www.w3.org/TR/css3-animations/#animation-events)
+  - : [CSS Animations](https://www.w3.org/TR/css3-animations/#animation-events)
 - Interface
   - : AnimationEvent
 - Synchronisme
@@ -43,4 +43,4 @@ L'événement `animationiteration` est déclenché lorsqu'une itération d'une a
 
 ## Voir aussi
 
-- [Utilisation des animations CSS](/fr/docs/CSS/Using_CSS_animations)
+- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)

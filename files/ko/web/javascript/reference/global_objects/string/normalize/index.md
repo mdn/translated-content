@@ -115,6 +115,6 @@ console.log(second === third); // 같은 글자처럼 보이지만 false를 출�
 
 ## 같이 보기
 
-- [Unicode Standard Annex #15, Unicode Normalization Forms](http://www.unicode.org/reports/tr15/)
+- [Unicode Standard Annex #15, Unicode Normalization Forms](https://www.unicode.org/reports/tr15/)
 - [Unicode equivalence](http://en.wikipedia.org/wiki/Unicode_equivalence)
 - [유니코드 정규화](https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EC%A0%95%EA%B7%9C%ED%99%94)

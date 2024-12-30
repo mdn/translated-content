@@ -33,5 +33,5 @@ Feature-Policy: xr-spatial-tracking <allowlist>;
 - [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API)
 - {{DOMxRef("XRSystem/requestSession","navigator.xr.requestSession()")}}, {{DOMxRef("XRSystem/isSessionSupported","navigator.xr.isSessionSupported()")}}, {{DOMxRef("Navigator.xr","navigator.xr")}} の {{domxref("MediaDevices/devicechange_event", "devicechange")}} イベント
 - {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)
+- [機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

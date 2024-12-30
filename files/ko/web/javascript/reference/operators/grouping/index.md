@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 ## 설명
 
-그룹 연산자는 표현식이나 중첩 표현식 주위를 감싸는 한 쌍의 괄호로 이루어진 연산자로, 감싸인 식이 더 높은 우선순위를 갖도록 일반적인 [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)를 재정의합니다. 이름 그대로, 그룹 연산자는 괄호 안의 내용을 묶습니다.
+그룹 연산자는 표현식이나 중첩 표현식 주위를 감싸는 한 쌍의 괄호로 이루어진 연산자로, 감싸인 식이 더 높은 우선순위를 갖도록 일반적인 [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)를 재정의합니다. 이름 그대로, 그룹 연산자는 괄호 안의 내용을 묶습니다.
 
 ## 예제
 
@@ -51,6 +51,6 @@ a * c + b * c; // 9
 
 ## 같이 보기
 
-- [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

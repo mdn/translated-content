@@ -22,7 +22,7 @@ Otras causas posibles:
 - Intentar acceder a un recurso `https` que tenga un certificado no válido, causará este error.
 - Intentar acceder a un recurso `http` desde una página con un origen `https` también causará este error.
 - A partir de Firefox 68, las páginas `https` no pueden acceder a `http://localhost`, aunque esto puede ser modificado por el [Error 1488740](https://bugzilla.mozilla.org/show_bug.cgi?id=1488740).
-- El servidor no respondió a la solicitud actual (incluso si respondió la [solicitud Preflight](/es/docs/Glossary/Preflight_peticion). Un escenario podría ser un servicio HTTP en desarrollo que "entró en pánico" sin devolver ningún dato.
+- El servidor no respondió a la solicitud actual (incluso si respondió la [solicitud Preflight](/es/docs/Glossary/Preflight_request). Un escenario podría ser un servicio HTTP en desarrollo que "entró en pánico" sin devolver ningún dato.
 
 <!---->
 

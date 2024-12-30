@@ -66,4 +66,4 @@ Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x +
 
 ## Voir aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)

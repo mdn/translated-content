@@ -11,7 +11,7 @@ slug: Web/API/HTMLElement/outerText
 
 ## Example
 
-[StackOverflow의 이 답변을 보세요.](http://stackoverflow.com/a/18481435)
+[StackOverflow의 이 답변을 보세요.](https://stackoverflow.com/a/18481435)
 
 ## Specification
 

@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 Имя расширения. Используется для идентификации расширения в интерфейсе браузера и на сайтах, подобных addons.mozilla.org.
 
-Это [локализуемое свойство](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Это [локализуемое свойство](/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Пример
 

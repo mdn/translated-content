@@ -15,4 +15,4 @@ Une DMZ est un moyen de fournir une interface isolée et sécurisée entre un r�
 
 ### Apprendre à ce propos
 
-- [Serveurs web et pare-feu - Sécurité maximum contre les attaques](/fr/Apprendre/website) sur MDN
+- [Serveurs web et pare-feu - Sécurité maximum contre les attaques](/fr/docs/Apprendre/website) sur MDN

@@ -81,7 +81,7 @@ console.log(encodeURI("\uDFFF"));
 
 ### Codificando para IPv6
 
-Se você deseja seguir a [RFC3986](http://tools.ietf.org/html/rfc3986) mais recente para URLs, que faz colchetes ser reservado (para [IPv6](/pt-BR/docs/Glossary/IPv6)) e então não será codificado quando formando algo que possa ser parte da URL (como o host), o seguinte código pode ajudar:
+Se você deseja seguir a [RFC3986](https://tools.ietf.org/html/rfc3986) mais recente para URLs, que faz colchetes ser reservado (para [IPv6](/pt-BR/docs/Glossary/IPv6)) e então não será codificado quando formando algo que possa ser parte da URL (como o host), o seguinte código pode ajudar:
 
 ```js
 function fixedEncodeURI(str) {

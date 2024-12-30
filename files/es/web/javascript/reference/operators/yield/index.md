@@ -101,7 +101,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## Ve también
 
-- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

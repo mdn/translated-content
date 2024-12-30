@@ -73,7 +73,7 @@ slug: Web/API/Performance_API/User_timing
 
 ## 互操作性
 
-如{{domxref("Performance")}}接口的[浏览器兼容性](/zh-CN/docs/Web/API/Performance#Browser_compatibility)表所示，`User Timing` 方法被大多数桌面和移动浏览器（唯一的例外是桌面 Safari 和移动版 Safari，[Safari Technology Preview 24 已经支持该方法](https://developer.apple.com/safari/technology-preview/release-notes/#r24))。
+如{{domxref("Performance")}}接口的[浏览器兼容性](/zh-CN/docs/Web/API/Performance#browser_compatibility)表所示，`User Timing` 方法被大多数桌面和移动浏览器（唯一的例外是桌面 Safari 和移动版 Safari，[Safari Technology Preview 24 已经支持该方法](https://developer.apple.com/safari/technology-preview/release-notes/#r24))。
 
 想要测试你的浏览器是否支持该 API，运行[`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html)程序。
 

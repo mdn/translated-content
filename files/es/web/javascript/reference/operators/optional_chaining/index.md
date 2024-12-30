@@ -62,7 +62,7 @@ let result = someInterface.customMethod?.();
 
 #### Manejo de callbacks opcionales o manejadores de eventos
 
-Si utiliza callbacks o métodos de recuperación de un objeto con[una asignación de desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring), es posible que tenga valores inexistentes que no puede llamar como funciones a menos que haya probado su existencia. Usando `?.`, Puede evitar esta prueba adicional:
+Si utiliza callbacks o métodos de recuperación de un objeto con[una asignación de desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), es posible que tenga valores inexistentes que no puede llamar como funciones a menos que haya probado su existencia. Usando `?.`, Puede evitar esta prueba adicional:
 
 ```js
 // Escrito a partir de ES2019
@@ -91,7 +91,7 @@ function doSomething(onContent, onError) {
 
 ### Encadenamiento opcional con expresiones
 
-También puede usar el operador de encadenamiento opcional al acceder a propiedades con una expresión usando [la notación de corchetes](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation):
+También puede usar el operador de encadenamiento opcional al acceder a propiedades con una expresión usando [la notación de corchetes](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
 
 ```js
 let nestedProp = obj?.["prop" + "Name"];
