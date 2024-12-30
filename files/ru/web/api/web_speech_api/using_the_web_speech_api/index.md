@@ -18,13 +18,11 @@ Web Speech API предоставляет 2 основных типа функц
 
 ### Демо
 
-Для запуска демо достаточно перейти по [ссылке на приложение](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) или скачать [репозиторий](https://github.com/Oleg-Miniuk/ru_web_speech_example), установить зависимости (`npm install`) и запустить приложение (`npm run start`), после чего открыть **localhost:4001** в браузере.
+Демонстрацию использования распознавания речи можно увидеть в приложении [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer). При клике по экрану можно произнести название цвета, и фон приложения изменится на этот цвет.
 
-![](https://pp.userapi.com/c831409/v831409509/1c0226/S_tm-BfW-U8.jpg)
+![Пользовательский интерфейс приложения Speech Color changer. Он предлагает пользователю нажать на экран и произнести цвет, а затем окрашивает фон приложения в этот цвет. В данном случае фон стал красным.](speech-color-changer.png)
 
-после озвучки команды
-
-![](https://pp.userapi.com/c831409/v831409509/1c022e/uWRjlOvjopk.jpg)
+Для запуска демонстрации откройте [страницу приложения](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) в браузере мобильного устройства с поддержкой распознавания речи (например, в Chrome).
 
 ### HTML и CSS
 
