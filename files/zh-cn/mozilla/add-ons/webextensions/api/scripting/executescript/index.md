@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-将脚本注入目标上下文。默认情况下，脚本在 `document_idle` 时运行。
+将脚本注入目标上下文。默认情况下脚本将在 `document_idle` 时运行。
 
 > [!NOTE]
 > 此方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Safari 和 Firefox 102+ 中，此方法也在 Manifest V2 中可用。
@@ -16,7 +16,7 @@ l10n:
 
 在 Firefox 和 Safari 中，部分缺少主机权限可能导致执行部分成功（部分结果包含在兑现的 Promise 中）。在 Chrome 中，任何缺少的权限都会阻止执行（参见 [Issue 1325114](https://crbug.com/1325114)）。
 
-注入的脚本称为[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)。
+注入的脚本被称为[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -40,7 +40,7 @@ let results = await browser.scripting.executeScript(
     - `files` {{optional_inline}}
       - : `string` 的 `array`。要注入的 JS 文件路径数组，路径相对于扩展的根目录。必须指定 `files` 和 `func` 其中之一。
     - `func` {{optional_inline}}
-      - : `function`。要注入的 JavaScript 函数。此函数在注入前被序列化并反序列化，因此任何绑定的参数和执行上下文都将丢失。必须指定 `files` 和 `func` 其中之一。
+      - : `function`。要注入的 JavaScript 函数。此函数在注入前被序列化并被反序列化，因此任何绑定的参数和执行上下文都将丢失。必须指定 `files` 和 `func` 其中之一。
     - `injectImmediately` {{optional_inline}}
       - : `boolean`。注入目标是否尽早触发注入（但不一定在页面加载之前）。
     - `target`
@@ -50,7 +50,7 @@ let results = await browser.scripting.executeScript(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，兑现为 `InjectionResult` 对象数组，表示每个注入框架中注入脚本的结果。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将以 `InjectionResult` 对象数组兑现，表示在每个注入框架中注入脚本的结果。
 
 如果注入失败（例如注入目标无效）则该 Promise 将被拒绝。当脚本执行开始时，无论成功与否，脚本的结果将包含在结果中（`result` 或 `error`）。
 
@@ -97,7 +97,7 @@ browser.action.onClicked.addListener(async (tab) => {
 });
 ```
 
-以下示例执行一个名为 `"content-script.js"` 的脚本文件（随扩展一起打包）。脚本在活动标签页中执行，包括子框架和主文档：
+以下示例执行一个名为 `"content-script.js"` 的脚本文件（随扩展一起打包）。脚本在活动标签页中（包括子框架和主文档）执行：
 
 ```js
 browser.action.onClicked.addListener(async (tab) => {
