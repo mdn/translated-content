@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-返回所有使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本，或使用一个过滤器以获取已注册脚本的一部分。
+返回所有使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本，或使用一个过滤器以获取已注册的脚本的一部分。
 
 > [!NOTE]
 > 该方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Firefox 102+ 中，你也可以在 Manifest V2 中使用该方法。
@@ -31,11 +31,11 @@ let scripts = await browser.scripting.getRegisteredContentScripts(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，以 {{WebExtAPIRef("scripting.RegisteredContentScript")}} 的数组兑现。如果出现了错误，则 promise 会被拒绝。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，以 {{WebExtAPIRef("scripting.RegisteredContentScript")}} 数组兑现。如果出现了错误，则该 promise 会被拒绝。
 
 ## 示例
 
-该实例返回所有注册的内容脚本：
+该示例返回所有已注册的内容脚本：
 
 ```js
 // 注册两个内容脚本
