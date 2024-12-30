@@ -22,7 +22,7 @@ l10n:
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-```html live-sample___float1
+```html-nolint live-sample___float1
 <div class="box">
   <div class="float float1">One</div>
   <div class="float float2">Two</div>
