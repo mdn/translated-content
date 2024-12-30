@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-更新注册的内容脚本。如果在脚本解析和文件验证期间发生错误，或者指定的 ID 不存在，则不会更新任何脚本。
+更新已注册的内容脚本。如果在脚本解析和文件验证期间发生错误，或者指定的 ID 不存在，则不会更新任何脚本。
 
 > [!NOTE]
 > 该方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Firefox 102+ 中，你也可以在 Manifest V2 中使用该方法。
@@ -31,11 +31,11 @@ await browser.scripting.updateContentScripts(
 
 ### 返回值
 
-以 {{WebExtAPIRef("scripting.RegisteredContentScript")}} 的数组兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果发生任何错误，则该 promise 将被拒绝。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将以 {{WebExtAPIRef("scripting.RegisteredContentScript")}} 的数组兑现。如果发生任何错误，则该 promise 将被拒绝。
 
 ## 示例
 
-该示例更新一个使用 ID `a-script` 注册的内容脚本：将其 `allFrames` 设置为 `true`：
+该示例更新一个使用 ID `a-script` 注册的内容脚本：将其 `allFrames` 属性设置为 `true`：
 
 ```js
 try {
