@@ -62,7 +62,7 @@ Anteriormente, usamos o termo "pacotes" para descrever o formato no qual os dado
 
 ## Veja também
 
-- [Como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona)
+- [Como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
 
 ## Créditos
 
