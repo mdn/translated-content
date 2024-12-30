@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-如果在指定的标签页中页面操作正在显示中，则返回 `true`。
+如果页面操作在指定的标签页中正在显示则返回 `true`。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -30,7 +30,7 @@ let gettingIsShown = browser.pageAction.isShown(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果在指定的标签页中拓展的页面操作正在显示。则兑现为 `true`，否则兑现为 `false`。 
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果在指定的标签页中拓展的页面操作正在显示。则兑现为 `true`，否则兑现为 `false`。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ let gettingIsShown = browser.pageAction.isShown(
 
 ## 示例
 
-Check the state of the currently active tab:
+检查当前活动标签页的页面操作的状态。
 
 ```js
 async function shownInActiveTab() {
