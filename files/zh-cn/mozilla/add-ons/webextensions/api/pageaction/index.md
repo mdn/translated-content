@@ -7,19 +7,19 @@ l10n:
 
 {{AddonSidebar}}
 
-读取和修改使用 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器地址栏按钮的属性。
+读取和修改使用 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) 清单键定义的浏览器地址栏按钮的属性，并监听按钮的点击事件。
 
-[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)是添加到浏览器地址栏中的一个按钮。
+[地址栏按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)是一个添加到浏览器地址栏中的按钮。
 
 ![代表一个页面操作的脚印图标](page-action.png)
 
 你可以在后台脚本中监听该图标的点击事件，或者指定一个在图标被点击时打开的[弹窗](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups)。
 
-如果你指定了弹窗，可以使用 HTML、CSS 和 JavaScript 来定义其内容和行为。运行在弹出框中的 JavaScript 可以访问与后台脚本相同的 WebExtension API。尽管被称为 `pageAction`，该操作代码并不能直接访问网页内容。若需操作网页 DOM，你需要添加一个[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)并与其交互。
+如果你指定了弹窗，你可以使用 HTML、CSS 和 JavaScript 来定义其内容和行为。运行在弹出框中的 JavaScript 可以访问与后台脚本相同的 WebExtension API。尽管被称为 `pageAction`，该操作代码并不能直接访问网页内容。若需操作网页 DOM，你需要添加一个[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)并与其交互。
 
-该按钮还包含一个上下文菜单。借助 {{WebExtAPIRef("menus")}} API，你可以向该菜单添加项目（使用 `page_action` {{WebExtAPIRef("menus.ContextType")}}）。
+该按钮还包含一个上下文菜单。借助 {{WebExtAPIRef("menus")}} API，你可以通过使用 `page_action` {{WebExtAPIRef("menus.ContextType")}} 来向该菜单添加项目。
 
-页面操作适用于只与特定页面相关的功能（如“将当前标签页加入书签”）。如果功能与整个浏览器相关（如“显示所有书签”），请使用[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)代替。
+页面操作适用于只与特定页面相关的功能（如“将当前标签页加入书签”）。如果功能与整个浏览器相关（如“显示所有书签”），则请使用[浏览器操作](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)。
 
 ## 类型
 
@@ -29,13 +29,13 @@ l10n:
 ### 函数
 
 - {{WebExtAPIRef("pageAction.show()")}}
-  - : 显示指定标签页的页面操作按钮。
+  - : 在指定标签页中显示页面操作按钮。
 - {{WebExtAPIRef("pageAction.hide()")}}
-  - : 隐藏指定标签页的页面操作按钮。
+  - : 在指定标签页中隐藏页面操作按钮。
 - {{WebExtAPIRef("pageAction.isShown()")}}
   - : 检查页面操作按钮是否正在显示。
 - {{WebExtAPIRef("pageAction.setTitle()")}}
-  - : 设置页面操作的标题，该标题会显示在按钮的工具提示中。
+  - : 设置页面操作的标题。该标题会显示在按钮的工具提示中。
 - {{WebExtAPIRef("pageAction.getTitle()")}}
   - : 获取页面操作的标题。
 - {{WebExtAPIRef("pageAction.setIcon()")}}
@@ -45,12 +45,12 @@ l10n:
 - {{WebExtAPIRef("pageAction.getPopup()")}}
   - : 获取页面操作的弹窗的 URL。
 - {{WebExtAPIRef("pageAction.openPopup()")}}
-  - : 打开页面操作的弹出框。
+  - : 打开页面操作的弹窗。
 
 ## 事件
 
 - {{WebExtAPIRef("pageAction.onClicked")}}
-  - : 当页面操作图标被点击时触发。如果页面操作定义了弹窗则不会触发此事件。
+  - : 当页面操作图标被点击时触发。如果页面操作有弹窗，则该事件将不会被触发。
 
 ## 浏览器兼容性
 
