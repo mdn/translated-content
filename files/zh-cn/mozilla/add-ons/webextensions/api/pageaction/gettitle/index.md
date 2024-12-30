@@ -15,7 +15,7 @@ l10n:
 
 ```js-nolint
 let gettingTitle = browser.pageAction.getTitle(
-  details // object
+  details // 对象
 )
 ```
 
@@ -30,7 +30,7 @@ let gettingTitle = browser.pageAction.getTitle(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，会兑现包含页面操作的标题的字符串。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将兑现包含页面操作的标题的字符串。
 
 ## 浏览器兼容性
 
@@ -38,7 +38,7 @@ let gettingTitle = browser.pageAction.getTitle(
 
 ## 示例
 
-当用户点击页面操作的图标时，记录其标题：
+当用户点击页面操作的图标时记录其标题：
 
 ```js
 function gotTitle(title) {
