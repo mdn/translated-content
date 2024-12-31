@@ -36,7 +36,7 @@ let settingIcon = browser.pageAction.setIcon(
         使用字典对象来指定多个不同尺寸的 `ImageData` 对象，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `imageData` 是一个字典，那么每个属性的值是一个 `ImageData` 对象，其名称是其大小，例如：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.pageAction.setIcon({
           imageData: {
             16: image16,
             32: image32,
@@ -53,7 +53,7 @@ let settingIcon = browser.pageAction.setIcon(
         使用字典对象来指定多个不同尺寸的图标文件，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `path` 是一个字典，那么每个属性的值是一个相对路径，其名称是其大小，例如：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.pageAction.setIcon({
           path: {
             16: "path/to/image16.jpg",
             32: "path/to/image32.jpg",
