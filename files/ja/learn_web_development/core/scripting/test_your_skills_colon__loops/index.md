@@ -1,14 +1,13 @@
 ---
 title: "スキルテスト: ループ"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Loops
-original_slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Loops
 l10n:
-  sourceCommit: e92c9798c78de4c341ba3fbb14eab6516e033fb6
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが[ループするコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)を理解したかどうかを判定することです。
+このスキルテストの目的は、あなたが[ループするコード](/ja/docs/Learn_web_development/Core/Scripting/Loops)を理解したかどうかを判定することです。
 
 > [!NOTE]
 > コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
@@ -19,7 +18,7 @@ l10n:
 
 下記の問題の中には、 [DOM](/ja/docs/Glossary/DOM) を操作するコードを書くことを求められるものがあります。例えば、新しい HTML 要素を作成し、そのテキストコンテンツが特定の文字列値と等しくなるように設定し、ページ上の既存の要素の中にその要素を入れるというようなことです。すべて JavaScript を使用します。
 
-このコースの中ではまだ明確に教えていませんが、この API を使用する例をいくつか見ていると思いますので、問題にうまく答えるためにはどのような DOM API が必要なのかを調べてみてください。私たちの[文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)チュートリアルが良い出発点になるでしょう。
+このコースの中ではまだ明確に教えていませんが、この API を使用する例をいくつか見ていると思いますので、問題にうまく答えるためにはどのような DOM API が必要なのかを調べてみてください。私たちの [DOM スクリプト操作入門](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting)チュートリアルが良い出発点になるでしょう。
 
 ## ループ 1
 
@@ -33,7 +32,7 @@ l10n:
 
 この次の課題では、名前を指定されたら、名前と電話番号を保有する[オブジェクト](/ja/docs/Glossary/Object)の配列 (`phonebook`) を検索し、名前を見つけたら名前と電話番号を段落 (`para`) に出力し、ループを実行する前に終了する単純なプログラムを書いてもらいます。
 
-オブジェクトについてまだ読んでいなくても心配しないでください。これで知る必要があるのは、メンバーと値のペアにアクセスする方法だけです。オブジェクトについては [JavaScript オブジェクトの基礎](/ja/docs/Learn/JavaScript/Objects/Basics)チュートリアルで読むことができます。
+オブジェクトについてまだ読んでいなくても心配しないでください。これで知る必要があるのは、メンバーと値のペアにアクセスする方法だけです。オブジェクトについては [JavaScript オブジェクトの基礎](/ja/docs/Learn_web_development/Core/Scripting/Object_basics)チュートリアルで読むことができます。
 
 始めに 3 つの変数が与えられています。
 
