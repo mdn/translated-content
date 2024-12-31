@@ -2,7 +2,7 @@
 title: omnibox.onDeleteSuggestion
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onDeleteSuggestion
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 873e38320b7f7dbe0492f96a02e7e6503ac8c3b3
 ---
 
 {{AddonSidebar}}
