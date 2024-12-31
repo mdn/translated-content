@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-**[OpenSearch 描述格式](https://github.com/dewitt/opensearch)**可用於描述搜尋引擎的網頁介面。這允許網站為自身描述搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。OpenSearch 受到（至少）Firefox、Edge、Safari 和 Chrome 的支援。（參見[參考資料](#參考資料)以獲取其他瀏覽器的文件連結。）
+[**OpenSearch 描述格式**](https://github.com/dewitt/opensearch)可用於描述搜尋引擎的網頁介面。這允許網站為自身描述搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。OpenSearch 受到（至少）Firefox、Edge、Safari 和 Chrome 的支援。（參見[參考資料](#參考資料)以獲取其他瀏覽器的文件連結。）
 
 Firefox 還支援 OpenSearch 標準中沒有的其他功能，例如搜尋建議和 `<SearchForm>` 元件。本文重點介紹如何創建支援這些額外 Firefox 功能的 OpenSearch 相容搜尋插件。
 
@@ -43,7 +43,7 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
 
   - : 搜尋引擎圖標的 URL。盡可能包括一個 16×16 的 `image/x-icon` 類型圖像（例如 `/favicon.ico`）和一個 64×64 的 `image/jpeg` 或 `image/png` 類型圖像。
 
-    URL 也可以使用 [`data:` URL scheme](/zh-TW/docs/Web/URI/Schemes/data)。（你可以在 [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) 生成一個 `data:` URL。）
+    URL 也可以使用 [`data:` URL 方案](/zh-TW/docs/Web/URI/Schemes/data)。（你可以在 [`data:` URL 廚房](https://software.hixie.ch/utilities/cgi/data/data) 生成一個 `data:` URL。）
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -145,7 +145,7 @@ OpenSearch 插件可以自動更新。要支援此功能，請包含一個 `type
 
 - [OpenSearch 文件](https://github.com/dewitt/opensearch)
 - [Safari 8.0 發行說明：快速網站搜尋](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
-- [Microsoft Edge 開發指南：搜尋提供者探索](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge 開發指南：搜尋提供者探索](https://learn.microsoft.com/zh-tw/archive/microsoft-edge/legacy/developer/)
 - [Chromium 專案：Tab to Search](https://www.chromium.org/tab-to-search/)
 - imdb.com 有一個[有效的 `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
-- [Ready2Search](https://ready.to/search/en/) - 創建 OpenSearch 插件。[通過 Ready2Search 自訂搜尋](https://ready.to/search/make/en_make_plugin.htm)
+- [Ready2Search](https://ready.to/search/en/)——創建 OpenSearch 插件。[通過 Ready2Search 自訂搜尋](https://ready.to/search/make/en_make_plugin.htm)
