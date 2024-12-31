@@ -12,7 +12,7 @@ l10n:
 
 在本文中我们描述了各种与网络相关的概念：网页、网站、网络服务器以及搜索引擎。这些概念常被网络新手混淆，或被误用。让我们看看它们到底代指的是什么吧！
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

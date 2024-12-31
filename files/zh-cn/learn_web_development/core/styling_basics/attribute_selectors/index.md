@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 
 从 HTML 的学习中，你已经知道，元素可以带有属性，它提供了关于如何标记的更详细信息。CSS 中，你能用属性选择器来选中带有特定属性的元素。本节课中，我们将会为你展示如何使用这些很有用的选择器。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">学习前提：</th>

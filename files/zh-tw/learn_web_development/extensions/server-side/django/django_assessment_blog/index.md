@@ -4,11 +4,11 @@ slug: Learn_web_development/Extensions/Server-side/Django/django_assessment_blog
 original_slug: Learn/Server-side/Django/django_assessment_blog
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 在這個評估中，你將使用你在 [Django Web Framework (Python)](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django) 模組中獲得的知識，來創建一個非常基本的部落格。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row"><p>前提:</p></th>
@@ -281,4 +281,4 @@ The assessment for this task is [available on Github here](https://github.com/md
 
 Once you've completed this module you've also finished all the MDN content for learning basic Django server-side website programming! We hope you enjoyed this module and feel you have a good grasp of the basics!
 
-{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

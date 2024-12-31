@@ -1,29 +1,37 @@
 ---
-title: ヘッド部には何が入る? HTML のメタデータ
+title: ヘッド部には何が入る? ウェブページのメタデータ
 slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
-original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 l10n:
-  sourceCommit: 27a7cd721d227deb47b8b6837d8eba0a0ae06ffb
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}
 
-HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込まれてもウェブブラウザーには表示されない部分です。この部分には、例えば、 {{htmlelement("title")}} といった情報や {{glossary("CSS")}} へのリンク（HTML を CSS で修飾する場合）、独自のファビコンへのリンク、そしてほかのメタデータ（HTML を誰が書いたのかとかその HTML を表現する重要なキーワードなど）の情報を含んでいます。ウェブブラウザーは{{glossary("Head", "ヘッド")}}部の情報を、 HTML 文書を正しく描画するために使用します。この記事では、上記のすべてのことと、さらに、読者にマークアップ言語と頭に入れておくべきほかのコードについてよい基礎を与えます。
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
+
+HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込まれてもウェブブラウザーには表示されない部分です。この部分には、例えば、 {{htmlelement("title")}} といった情報や {{glossary("CSS")}} へのリンク（HTML を CSS で修飾する場合）、独自のファビコンへのリンク、そしてほかのメタデータ（HTML を誰が書いたのかとかその HTML を表現する重要なキーワードなど）の情報を含んでいます。
+
+ウェブブラウザーは{{glossary("Head", "ヘッド")}}部の情報を、 HTML 文書を正しく描画するために使用します。この記事では、上記のすべてのことと、さらに、読者にマークアップ言語と頭に入れておくべきほかのコードについてよい基礎を与えます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML を始めよう</a
-        >で扱っているような、基本的な HTML の知識。
+        ひとつ前のレッスンで扱っているような、基本的な HTML の知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        HTML のヘッド部について学ぶこと。ヘッド部の目的は何か、そしてヘッド部が含む情報の中で最も重要なのは何か、加えてそれが HTML 文書の中でどれほどの影響を持つか。
+        <ul>
+          <li>HTML のヘッド部、および文書内のメタデータコンテナーとしてのその目的。</li>
+          <li>文書の文字エンコード方式とタイトルの設定方法。</li>
+          <li>検索エンジンへのメタデータの提供。</li>
+          <li>ブラウザーやモバイルプラットフォームで使用するアイコンへのリンク。</li>
+          <li>このスタイルシートとスクリプトファイルへのリンク。</li>
+          <li>文書の言語を設定するために、 <code>lang</code> 属性を <code>&lt;html&gt;</code> 開始タグに設定する必要性。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -31,7 +39,7 @@ HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込
 
 ## HTML のヘッド部とは何か？
 
-[前の記事で扱った HTML 文書](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_文書の構成)をもう一度見てみましょう。
+[前の記事で扱った HTML 文書](/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_文書の構造)をもう一度見てみましょう。
 
 ```html
 <!doctype html>
@@ -55,7 +63,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 </head>
 ```
 
-しかし、より大きなページでは、ヘッド部がかなり大きくなることがあります。好きなウェブサイトで、[開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を使用して、ヘッド部の中身を確認してみてください。ここでの目的は、ヘッド部に記載できるすべてのものの使用方法を紹介することではなく、ヘッド部に記載したい主要な要素の使用方法を教え、ある程度慣れてもらうことです。では、始めましょう。
+しかし、より大きなページでは、ヘッド部がかなり大きくなることがあります。好きなウェブサイトで、[開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を使用して、ヘッド部の中身を確認してみてください。ここでの目的は、ヘッド部に記載できるすべてのものの使用方法を紹介することではなく、ヘッド部に記載したい主要な要素の使用方法を教え、ある程度慣れてもらうことです。では、始めましょう。
 
 ## タイトルをつける
 
@@ -87,7 +95,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 ## メタデータ: `<meta>` 要素
 
-メタデータはデータを説明するデータで、HTML には文書にメタデータを追加する「公式な」方法があります — {{htmlelement("meta")}} 要素です。もちろん、この記事で解説しているその他のものもメタデータと考えられます。様々な種類の `<meta>` 要素がページの `<head>` に入りますが、この段階では、ややこしすぎるため、すべては説明しません。その代わり、よく見かけるいくつかのものを説明し、理解を与えます。
+メタデータはデータを説明するデータで、HTML には文書にメタデータを追加する「公式な」方法があります — {{htmlelement("meta")}} 要素です。もちろん、この記事で取り上げている他の要素もメタデータとして考えることができます。ページの `<head>` に含めることができる `<meta>` 要素にはさまざまな種類がありますが、このコースではすべてを説明することはしません。代わりに、一般的な例をいくつか取り上げて、アイディアを提示します。
 
 ### HTML 文書の文字コードを指定する
 
@@ -204,39 +212,42 @@ and HTML Apps." />
 
 ブックマークパネルでファビコンが表示されている例です。
 
-![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
+![Firefox のブックマークパネル、ブックマークされた例の隣にファビコンが表示されている。](bookmark-favicon.png)
 
 最近では考慮するべきアイコンの種類がほかにもたくさんあります。例えば、 MDN Web Docs ホームページのソースコードには以下の行があります。
 
 ```html
-<!-- 第 3 世代の iPad の高解像度レティナ画面 -->
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+これは、 Apple の機器のホーム画面に保存されたときにアイコンを表示させる方法です。すべての端末でアイコンが適切に表示されるように、異なる端末ごとに異なるアイコンを指定することもできます。例えば次のようにします。
+
+```html
+<!-- iPad Pro の高解像度レティナ画面 -->
 <link
   rel="apple-touch-icon"
-  sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- iPhone の高解像度レティナ画面 -->
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!--  3 倍の解像度の iPhone -->
 <link
   rel="apple-touch-icon"
-  sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- 第 1、2 世代の iPad -->
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- レティナではない iPad、iPad mini、など -->
 <link
   rel="apple-touch-icon"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- レティナではない iPhone、iPod Touch、Android 2.1 以降の端末 -->
-<link
-  rel="apple-touch-icon"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2 倍の解像度の iPhone 及びその他の端末 -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- 基本的なファビコン -->
-<link
-  rel="icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
 
 コメントはそれぞれのアイコンの用途を説明しています。 — この要素は、ウェブサイトが iPad のホーム画面に保存された時のすばらしい高解像度なアイコンの提供といったことをカバーしています。
 
-これらの種類のアイコンをすべて実装することを今すぐには心配しないでください。これはかなり高度な機能であり、コースを進めるためにこのような知識があることを期待することはありません。そのため、他のウェブサイトのソースコードを閲覧しているときに、このようなものがあることに気付いたときのために、その内容を知っておくことが主な目的です。
+これらすべてのアイコンを正しい方法で実装することについて、今はあまり心配する必要はありません。これはかなり高度な機能であり、このコースの進行にこの知識を持っている必要はありません。ここで重要なのは、他にもウェブサイトのソースコードを閲覧している際に、このようなことがあり得るということを知っておくことです。これらの値すべてについて、また、その選び方を学びたい場合は、 {{HTMLElement("link")}} 要素のリファレンスページをご覧ください。
 
 > [!NOTE]
 > もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
@@ -251,7 +262,7 @@ and HTML Apps." />
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- {{htmlelement("script")}} 要素もヘッド部に入れるべきであり、読み込みたいJavaScriptのパスを含む `src` 属性と、基本的にページが HTML の解析を完了した後にJavaScriptを読み込むようにブラウザーに指示する `defer` を記載する必要があります。これは、JavaScriptを実行する前に HTML がすべて読み込まれていることを確認し、 JavaScript がまだページ上に存在しない HTML 要素にアクセスしようとした結果、エラーが発生しないようにするために有用なものです。ページでの JavaScript の読み込みを処理する方法は実際にはいくつかありますが、現代のブラウザーではこれが最も信頼できる方法です（他にも、[スクリプトの読み込み方針](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#スクリプトの読み込み方針)を参照してください）。
+- {{htmlelement("script")}} 要素もヘッド部に入れるべきであり、読み込みたいJavaScriptのパスを含む `src` 属性と、基本的にページが HTML の解析を完了した後にJavaScriptを読み込むようにブラウザーに指示する `defer` を記載する必要があります。これは、JavaScriptを実行する前に HTML がすべて読み込まれていることを確認し、 JavaScript がまだページ上に存在しない HTML 要素にアクセスしようとした結果、エラーが発生しないようにするために有用なものです。ページでの JavaScript の読み込みを処理する方法は実際にはいくつかありますが、現代のブラウザーではこれが最も信頼できる方法です（他にも、[スクリプトの読み込み方針](/ja/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88%e3%81%ae%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf%e6%96%b9%e9%87%9d)を参照してください）。
 
   ```html
   <script src="my-js-file.js" defer></script>
@@ -261,7 +272,7 @@ and HTML Apps." />
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
-1. アクティブラーニングを始めるにあたって、私たちの [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) ,[style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) をコピーしてローカルの同じフォルダーに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
+1. アクティブラーニングを始めるにあたって、 [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html)、[script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js)、[style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) をコピーして、ローカルの同じフォルダーに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
 2. HTML ファイルをブラウザーとテキストエディターで開いてください。
 3. 先に述べた情報に従って、 {{htmlelement("link")}} 要素と {{htmlelement("script")}} 要素を HTML に書き加えてください。すると CSS と JavaScript が HTML に適用されます。
 
@@ -297,6 +308,6 @@ and HTML Apps." />
 
 ## まとめ
 
-これで HTML のヘッド部の弾丸ツアーは終了します。ここでできることは他にもたくさんありますが、この段階では徹底的なツアーでは退屈で混乱を招くことになるでしょうから、もっとも一般的なことに関する考えだけを紹介したかったのです。たった今、そこに到達しました。次の記事では、 [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)について説明します。
+これで HTML のヘッド部の弾丸ツアーは終了します。ここでできることは他にもたくさんありますが、この段階では徹底的なツアーでは退屈で混乱を招くことになるでしょうから、もっとも一般的なことに関する考えだけを紹介したかったのです。たった今、そこに到達しました。次の記事では、 [HTML テキストの基礎](/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)について説明します。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content")}}
