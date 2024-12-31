@@ -2,7 +2,7 @@
 title: 標準後設資料名稱
 slug: Web/HTML/Element/meta/name
 l10n:
-  sourceCommit: 24d8a34da576f86b10923e426f66df48ab6201b9
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
