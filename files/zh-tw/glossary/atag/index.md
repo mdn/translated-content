@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**創作工具{{glossary("Accessibility, "無障礙")}}指南（ATAG）**是一項 {{Glossary("W3C")}} 建議，用於構建無障礙的創作工具，這些工具能夠產生無障礙的內容。
+**創作工具{{glossary("Accessibility", "無障礙")}}指南（ATAG）**是一項 {{Glossary("W3C")}} 建議，用於構建無障礙的創作工具，這些工具能夠產生無障礙的內容。
 
 創作工具是人們用來創建 web 內容的軟體應用程式。ATAG 解釋了如何：
 
