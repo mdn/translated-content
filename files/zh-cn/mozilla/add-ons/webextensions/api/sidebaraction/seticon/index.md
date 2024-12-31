@@ -2,7 +2,7 @@
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
 {{AddonSidebar}}
