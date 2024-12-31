@@ -2,7 +2,7 @@
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 l10n:
-  sourceCommit: 948f86c2251aa5234f075211fcaeb072e09cc75d
+  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
 {{AddonSidebar}}
@@ -65,7 +65,7 @@ let settingIcon = browser.sidebarAction.setIcon(
         使用字典对象来指定多个不同尺寸的图标文件，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `path` 是一个字典，那么每个属性的值是一个相对路径，其名称是其大小，例如：
 
         ```js
-        let settingIcon = browser.action.setIcon({
+        let settingIcon = browser.sidebarAction.setIcon({
           path: {
             16: "path/to/image16.jpg",
             32: "path/to/image32.jpg",
