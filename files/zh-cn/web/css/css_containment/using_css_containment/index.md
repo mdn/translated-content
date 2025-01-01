@@ -1,7 +1,6 @@
 ---
 title: 使用 CSS Containment
 slug: Web/CSS/CSS_containment/Using_CSS_containment
-page-type: guide
 ---
 
 {{CSSRef}}
@@ -38,9 +37,9 @@ article {
 }
 ```
 
-从逻辑上讲，每篇文章都是独立于页面上其他文章的。这些信息通常是已知的，并且对于创建页面的网页开发者来说可能相当明显。 然而，浏览器不了解内容的意图，无法假设文章或其他内容部分将完全自包含。
+从逻辑上讲，每篇文章都是独立于页面上其他文章的。这些信息通常是已知的，并且对于创建页面的网页开发者来说可能相当明显。然而，浏览器不了解内容的意图，无法假设文章或其他内容部分将完全自包含。
 
-这个属性提供了一种向浏览器解释这一点并明确授权其进行性能优化的方法。 它告诉浏览器元素的内部布局与页面的其余部分完全独立，元素的所有内容都在其边界内绘制。没有任何内容可以可见地溢出。
+这个属性提供了一种向浏览器解释这一点并明确授权其进行性能优化的方法。它告诉浏览器元素的内部布局与页面的其余部分完全独立，元素的所有内容都在其边界内绘制。没有任何内容可以可见地溢出。
 
 通过在每个 `<article>` 上设置 `contain: content`，我们已经表明了这一点；我们告诉浏览器每篇文章都是独立的。然后，浏览器可以利用这些信息来决定如何渲染每个 `<article>` 内容。例如，它可能不会渲染不在可视区域内的文章。
 
@@ -60,7 +59,7 @@ article {
 }
 ```
 
-布局通常限定在整个文档范围，这意味着如果移动一个元素，整个文档需要被视为可能有任何元素移动。通过使用 contain: layout，你可以告诉浏览器它只需要检查这个元素——元素内部的所有内容都限定在该元素内，并且不影响页面的其余部分，包含盒子建立了一个独立的[格式化上下文t](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)。
+布局通常限定在整个文档范围，这意味着如果移动一个元素，整个文档需要被视为可能有任何元素移动。通过使用 contain: layout，你可以告诉浏览器它只需要检查这个元素——元素内部的所有内容都限定在该元素内，并且不影响页面的其余部分，包含盒子建立了一个独立的[格式化上下文](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)。
 
 此外：
 
@@ -185,7 +184,7 @@ article {
 这两种情况下都会发生上述情况，但使用 `content-visibility: auto` 时，内容仍然可以被搜索、接收焦点，并且可以从不相关变为相关。而 `content-visibility: hidden` 则不具备这种情况。
 
 > [!NOTE]
-> 要对从 `content-visibility: hidden` 到可见值的过渡进行动画处理，需要设置 {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} 和 {{cssxref("@starting-style")}} 样式。请参阅 [过渡 display 和 content-visibility](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) 了解更多信息。
+> 要对从 `content-visibility: hidden` 到可见值的过渡进行动画处理，需要设置 {{cssxref("transition-behavior", "transition-behavior: allow-discrete")}} 和 {{cssxref("@starting-style")}} 样式。请参阅 [过渡 display 和 content-visibility](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) 了解更多信息。
 
 ## See also
 
