@@ -24,8 +24,8 @@ JavaScript の基本的な構成要素を見てきたところで、これから
 
 HTML、CSS と画像および数行の JavaScript のコードが提供されています。必要な JavaScript を書いて、これを動くプログラムにする必要があります。HTML の本体は次のようになっています。
 
-```html
-<h1>Image gallery example</h1>
+```html-nolint
+<h1>イメージギャラリーの例</h1>
 
 <div class="full-img">
   <img

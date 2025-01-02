@@ -277,7 +277,7 @@ btn.addEventListener("click", displayMessage());
 5. 更新された関数をテストしましょう。この `displayMessage()` 呼び出しを更新してください。
 
    ```js
-     displayMessage("おお、これは違うメッセージです。");
+   displayMessage("おお、これは違うメッセージです。");
    ```
 
    これらのうちのどちらかにしましょう。
