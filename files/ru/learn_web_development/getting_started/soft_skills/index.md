@@ -26,7 +26,7 @@ slug: Learn_web_development/Getting_started/Soft_skills
 
 ## Дополнительные материалы
 
-- [Обучение и получение помощи](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help)
+- [Обучение и получение помощи](/ru/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help)
   - : В этой статье вы найдёте приёмы, советы и рекомендации по дальнейшему изучению веб-разработки, в том числе советы по углубленному изучению отдельных тем и подтем, поиску дополнительной информации, если вы того захотите.
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Web_standards/How_browsers_load_websites", "Learn_web_development/Getting_started/Soft_skills/Research_and_learning", "Learn_web_development/Getting_started")}}
