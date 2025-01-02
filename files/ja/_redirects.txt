@@ -2352,7 +2352,7 @@
 /ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents	/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting
 /ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs	/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 /ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs	/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
-/ja/docs/Learn/JavaScript/First_steps	/ja/docs/conflicting/Learn_web_development/Core/Scripting
+/ja/docs/Learn/JavaScript/First_steps	/ja/docs/Learn_web_development/Core/Scripting
 /ja/docs/Learn/JavaScript/First_steps/A_first_splash	/ja/docs/Learn_web_development/Core/Scripting/A_first_splash
 /ja/docs/Learn/JavaScript/First_steps/Arrays	/ja/docs/Learn_web_development/Core/Scripting/Arrays
 /ja/docs/Learn/JavaScript/First_steps/Math	/ja/docs/Learn_web_development/Core/Scripting/Math
