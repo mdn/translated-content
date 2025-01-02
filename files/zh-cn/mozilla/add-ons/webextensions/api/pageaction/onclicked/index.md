@@ -9,7 +9,7 @@ l10n:
 
 当页面操作图标被点击时触发。如果页面操作有弹窗，则该事件将不会被触发。
 
-要定义右键单击操作，请使用 {{WebExtAPIRef('contextMenus')}} API（使用 `page_action` {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}）。
+要定义右键单击操作，请使用{{WebExtAPIRef('contextMenus', "上下文菜单", "", "nocode")}} API（使用 `page_action` {{WebExtAPIRef('contextMenus/ContextType', '上下文类型', '', 'nocode')}}）。
 
 ## 语法
 
