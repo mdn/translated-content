@@ -32,7 +32,7 @@ l10n:
 
 - [Web API](/zh-TW/docs/Web/API)
   - : 用於開發 Web 應用程式的 JavaScript API。
-  - [HTML](/zh-TW/docs/Web/HTML)
+- [HTML](/zh-TW/docs/Web/HTML)
   - : HTML 提供用於構建 Web 文件和應用程式的基本結構。
 - [CSS](/zh-TW/docs/Web/CSS)
   - : 階層式樣式表用於描述　Web 文件和應用程式的外觀。
