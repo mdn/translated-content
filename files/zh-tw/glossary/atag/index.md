@@ -16,11 +16,11 @@ l10n:
 
 ## 參見
 
-- [ATAG 作為 Web 無障礙倡議（WAI）的一部分](<https://zh.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)>)（維基百科）
+- [ATAG 作為 Web 無障礙倡議（WAI）的一部分](<https://en.wikipedia.org/wiki/Web_Accessibility_Initiative#Authoring_Tool_Accessibility_Guidelines_(ATAG)>)（維基百科）
 - [創作工具無障礙指南（ATAG）概述](https://www.w3.org/WAI/standards-guidelines/atag/)
 - [創作工具無障礙指南（ATAG）2.0 建議](https://www.w3.org/TR/ATAG20/)
 - 相關術語：
-  - {{Glossary("Accessibility")}}
+  - {{Glossary("Accessibility", "無障礙")}}
   - {{Glossary("WAI")}}
   - {{Glossary("WCAG")}}
   - {{Glossary("UAAG")}}
