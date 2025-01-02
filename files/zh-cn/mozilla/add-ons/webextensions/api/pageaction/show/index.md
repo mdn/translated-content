@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-在指定的 {{WebExtAPIRef("tabs/Tab", "tab")}} 中显示 {{WebExtAPIRef("pageAction")}}。只要指定的标签页变为活动标签页，页面操作就会在其中显示。
+在指定的 {{WebExtAPIRef("tabs/Tab", "标签页", "", "nocode")}} 中显示 {{WebExtAPIRef("pageAction")}}。只要指定的标签页是活动标签页就会显示页面操作。
 
 `show()` 会覆盖模式匹配，所以即使 [`show_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 不匹配 URL 或者 [`hide_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 匹配 URL，页面操作也会在指定的标签页中显示。
 
