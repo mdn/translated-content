@@ -1,7 +1,6 @@
 ---
 title: Soft skills
 slug: Learn_web_development/Getting_started/Soft_skills
-page-type: landing-page
 ---
 
 {{LearnSidebar}}
