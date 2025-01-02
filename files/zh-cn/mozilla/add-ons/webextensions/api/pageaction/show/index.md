@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-在指定的 {{WebExtAPIRef("tabs/Tab", "标签页", "", "nocode")}} 中显示 {{WebExtAPIRef("pageAction")}}。只要指定的标签页是活动标签页就会显示页面操作。
+在指定的{{WebExtAPIRef("tabs/Tab", "标签页", "", "nocode")}}中显示{{WebExtAPIRef("pageAction", "页面操作", "", "nocode")}}。只要指定的标签页是活动标签页就会显示页面操作。
 
 `show()` 会覆盖模式匹配，所以即使 [`show_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 不匹配 URL 或者 [`hide_matches`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 匹配 URL，页面操作也会在指定的标签页中显示。
 
@@ -17,14 +17,14 @@ l10n:
 
 ```js-nolint
 browser.pageAction.show(
-  tabId // integer
+  tabId // 整型
 )
 ```
 
 ### 参数
 
 - `tabId`
-  - : `integer`。要显示页面操作的 {{WebExtAPIRef("tabs/Tab", "tab")}} ID。
+  - : `integer`。要显示页面操作的{{WebExtAPIRef("tabs/Tab", "标签页", "", "nocode")}}ID。
 
 ### 返回值
 
@@ -36,7 +36,7 @@ browser.pageAction.show(
 
 ## 示例
 
-该示例在用户选择一个上下文菜单项时将在活动标签页中显示 {{WebExtAPIRef("pageAction")}}。
+该示例在用户选择一个上下文菜单项时将在活动标签页中显示{{WebExtAPIRef("pageAction", "页面操作", "", "nocode")}}。
 
 > [!NOTE]
 > 你需要在你的[清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中取得 `contextMenus` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)来创建上下文菜单项。
