@@ -28,4 +28,4 @@ HTML ゲームはモバイルアプリなどのネイティブゲームに比べ
 
 <!-- When you spend your time building, publishing and promoting your game, you will at some point consider earning money out of it. [Game monetization](/en-US/docs/Games/Publishing_games/Game_monetization) is essential to anyone who considers their game development work a serious endeavour on the path to becoming an independent game developer able to make a living, so read on and see what your options are. The technology is mature enough; it's just a matter of choosing the right approach. -->
 
-多くの時間を公開したりプロモーションしたりするのに費やすと、いつかそのゲームから収益を発生させることを考えるようになります。[ゲームの収益化](/en-US/docs/Games/Publishing_games/Game_monetization) は、ゲーム開発を生計を立てられる独立したゲーム開発者になるための真剣な取り組みと考える人にとって重要です。この記事を読み進めて、選択肢を確認してください。技術は十分に成熟しています。適切なアプローチを選択するだけです。
+多くの時間を公開したりプロモーションしたりするのに費やすと、いつかそのゲームから収益を発生させることを考えるようになります。[ゲームの収益化](/ja/docs/Games/Publishing_games/Game_monetization) は、ゲーム開発を生計を立てられる独立したゲーム開発者になるための真剣な取り組みと考える人にとって重要です。この記事を読み進めて、選択肢を確認してください。技術は十分に成熟しています。適切なアプローチを選択するだけです。
