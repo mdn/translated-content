@@ -1,12 +1,13 @@
 ---
 title: レスポンシブデザイン
 slug: Learn_web_development/Core/CSS_layout/Responsive_Design
-original_slug: Learn/CSS/CSS_layout/Responsive_Design
 l10n:
-  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
+  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 _レスポンシブウェブデザイン_ (RWD) は、ユーザビリティを確保しながら、すべての画面サイズと解像度でウェブページをうまく描画するためのウェブデザインの手法です。複数の端末に対応したウェブをデザインする方法です。この記事では、それを使いこなすために使用できるいくつかのテクニックを理解することをお手伝いします。
 
@@ -15,17 +16,23 @@ _レスポンシブウェブデザイン_ (RWD) は、ユーザビリティを�
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を学習してください）、および CSS の動作の概念（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>と<a href="/ja/docs/Learn/CSS/Building_blocks">CSS の構成要素</a
-        >を学習してください）
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
+        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        レスポンシブデザインを実装するために用いる基本的な目的と CSS 機能を理解すること。
+        <ul>
+          <li>レスポンシブデザインとは、ウェブレイアウトを柔軟に設計し、異なる端末の画面サイズや解像度などに対応してうまく動作するようにすること。</li>
+          <li>グリッドやフレックスボックスなどの最新のレイアウトツールとレスポンシブデザインの関係。</li>
+          <li>レスポンシブデザインにメディアクエリーを使用する背景にある概念。モバイルファーストやブレークポイントなどを含む。</li>
+          <li>ウェブ文書をモバイル端末で正しく表示するために、 <code>&lt;meta viewport=""&gt;</code> が必要な理由。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -57,7 +64,7 @@ HTML は基本的にレスポンシブ、つまり流動的です。CSS を含�
 
 レスポンシブウェブデザインは単体の技術ではなく、手法のひとつです。これは、コンテンツを表示するために使用するあらゆる端末に応じることができるレイアウトを作成するために使用される、ベストプラクティス群を表すために使用される用語です。
 
-レスポンシブデザインという用語は、[2010 年に Ethan Marcotte によって初めて作られ](https://alistapart.com/article/responsive-web-design/)、流動的グリッド、流動的画像、メディアクエリーを使用してレスポンシブなコンテンツを作成することを説明するものであり、 Zoe Mickley Gillenwater の書籍 [Flexible Web Design](http://flexiblewebbook.com/) で説明されています。
+レスポンシブデザインという用語は、[2010 年に Ethan Marcotte によって作られ](https://alistapart.com/article/responsive-web-design/)、流動的グリッド、流動的画像、メディアクエリーを使用してレスポンシブなコンテンツを作成することを説明するものです。
 
 当時は、レイアウトに CSS の `float` を使用し、メディアクエリーでブラウザーの幅を問い合わせ、様々なブレークポイントに対応したレイアウトを作成することが推奨されていました。流動的画像はコンテナーの幅を超えないように設定します。これらの画像は `max-width` プロパティを `100%` に設定しなければなりません。流動的画像は、その段組みが狭くなると縮小しますが、列が大きくなっても内在サイズより大きくなることはありません。これにより、画像はコンテンツをはみ出すことなく、そのコンテンツに合わせて拡大縮小することができ、コンテナーが画像よりも広くなっても、大きくなってピクセル化することはありません。
 
@@ -83,47 +90,25 @@ HTML は基本的にレスポンシブ、つまり流動的です。CSS を含�
 
 メディアクエリーを使用する場合の一般的なアプローチは、狭い画面の端末（携帯電話など）用に単純な単一列レイアウトを作成し、次に、より大きな画面であるかチェックして複数列レイアウトを処理するのに十分な画面幅があることがわかったら、複数列レイアウトを実装することです。これは多くの場合、**モバイルファースト**デザインと呼ばれます。
 
-ブレークポイントを使用する場合、ベストプラクティスとして、個々の端末の絶対サイズではなく、[相対的な単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#相対長の単位)でメディアクエリーのブレークポイントを定義することを推奨します。
+ブレークポイントを使用する場合、ベストプラクティスとして、個々の端末の絶対サイズではなく、[相対的な単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相対長の単位)でメディアクエリーのブレークポイントを定義することを推奨します。
 
 メディアクエリーブロック内で定義するスタイルにはさまざまなアプローチがあります。ブラウザーのサイズの範囲に基づいてスタイルシートの {{htmlelement("link")}} にメディアクエリーを使用するものから、カスタムプロパティ変数に、それぞれのブレークポイントに関連する値を格納するだけのものまであります。
 
-詳しくは MDN ドキュメント内の[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を探してください。
-
-メディアクエリーは RWD に役立ちますが、必須ではありません。柔軟なグリッド、相対的な単位、最小・最大の単位の値はクエリーなしで使用することができます。
+メディアクエリーは RWD で役立ちますが、必須のものではありません。柔軟なグリッド、相対的な単位、最小・最大の単位の値は、メディアクエリーを使用せずに使用することができます。
 
 ## レスポンシブレイアウト技術
 
-レスポンシブサイトは柔軟なグリッド上に構築されているため、全ての使用可能な端末サイズをピクセルパーフェクトなレイアウトで対象とする必要はありません。
+レスポンシブサイトは柔軟なグリッド上に構築されているため、ピクセル単位で正確なレイアウトで可能な限りの端末サイズをすべて対象とする必要はありません。
 
 柔軟なグリッドを使用することで、特性を変更したりブレークポイントを追加して、コンテンツの見てくれが悪くなり始めた時点でデザインを変更することができます。例えば、画面サイズが大きくなっても行の長さが読めないほど長くならないようにするには、{{cssxref('columns')}} を使用することができます。ボックスが狭くなって行あたりに 2 つしか単語が表示されなくなったら、ブレークポイントを設定します。
 
-[段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)、[グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)などの複数のレイアウト方法は、既定でレスポンシブです。これらはすべて、柔軟なグリッドを作成しようとしていることを想定しており、そのための簡単な方法を提供しています。
-
-### 段組み
-
-これらのレイアウトメソッドの中で最も古いものは段組み (multicol) です。`column-count` の指定で、コンテンツを分割する列の数を指定します。 ブラウザーはこれらのサイズを計算し、サイズが画面サイズに応じて変化します。
-
-```css
-.container {
-  column-count: 3;
-}
-```
-
-代わりに `column-width` を指定すると、*最小*幅を指定します。ブラウザーは、その幅の列をコンテナーに収まるだけ作成し、すべての列に残りの空間を分配します。 したがって、列の数は、どのくらいの空間があるかに応じて変化します。
-
-```css
-.container {
-  column-width: 10em;
-}
-```
-
-{{cssxref('columns')}} の一括指定を用いると、段組みの最大数と最小の段組み幅を指定することができます。これにより、画面サイズが大きくなっても行の長さが読めないほど長くなったり、画面サイズが小さくなっても行の長さが狭すぎたりしないように保証することができます。
+[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)や [CSS グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)などの複数のレイアウト方式は、既定でレスポンシブです。これらはすべて、柔軟なグリッドを作成しようとしていることを想定しており、そのための簡単な方法を提供しています。
 
 ### フレックスボックス
 
 フレックスボックス (Flexbox) では、フレックスアイテムは縮小したり拡大したりして、コンテナーの空間に応じてアイテム間の空間を分配します。`flex-grow` と `flex-shrink` の値を変更することで、アイテムの周りの空間が広くなったり狭くなったりしたときにどのように動作させたいかを示すことができます。
 
-次の例では、`flex: 1` という一括指定を使用して、フレックスアイテムがフレックスコンテナー内でそれぞれ同じ空間の大きさにしています。レイアウトのトピック「[フレックスボックス: フレックスアイテムの柔軟なサイズ変更](/ja/docs/Learn/CSS/CSS_layout/Flexbox#フレックスアイテムの柔軟なサイズ変更)」で記述されている通りです。
+次の例では、`flex: 1` という一括指定を使用して、フレックスアイテムがフレックスコンテナー内でそれぞれ同じ空間の大きさにしています。レイアウトのトピック「[フレックスボックス: フレックスアイテムの柔軟なサイズ変更](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスアイテムの柔軟なサイズ変更)」で記述されている通りです。
 
 ```css
 .container {
@@ -135,12 +120,68 @@ HTML は基本的にレスポンシブ、つまり流動的です。CSS を含�
 }
 ```
 
-> [!NOTE]
-> 例として、フレックスボックスを使用して上記の単純なレスポンシブレイアウトを構築しました。ブレークポイントを使用して画面が大きくなったときに段組みに切り替え、{{cssxref('max-width')}} で本文コンテンツのサイズを制限しています。[例](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html)。
+レスポンシブデザインでメディアクエリーとフレックスボックスを使用する方法を紹介します。
+
+```html-nolint live-sample___flex-based-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      このレイアウトはレスポンシブです。ブラウザーウィンドウの幅を広げたり狭めたりしたら何が起こるかを確認してください。
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+    </p>
+    <p>
+      その夜（後に証明されるように、記憶に残る夜）の何百万人もの人々は、発行される煙の輪を眺めていましたが、その事実から何か特別なインスピレーションを何も感じていませんでした。
+    </p>
+  </div>
+</div>
+```
+
+```css hidden live-sample___flex-based-rwd
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+```
+
+```css live-sample___flex-based-rwd
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .col1 {
+    flex: 1;
+    margin-right: 5%;
+  }
+
+  .col2 {
+    flex: 2;
+  }
+}
+```
+
+{{EmbedLiveSample("flex-based-rwd", "", "550px")}}
+
+画面のサイズを変更してみてください。上記の例のサイズが 600px 幅の閾値を超えるとレイアウトが変更されます。
 
 ### CSS グリッド
 
-CSS グリッドレイアウトでは、`fr` 単位を使用して、利用可能な空間をそれぞれのグリッドトラックに分配することができます。次の例では、サイズが `1fr` の 3 つのトラックを持つグリッドコンテナーを作成します。これにより、3 つの列トラックが作成され、それぞれがコンテナー内の使用可能な空間の一部を占めます。 グリッドを作成するこのアプローチの詳細については、CSS レイアウトのグリッドのトピックの [fr 単位での柔軟なグリッド](/ja/docs/Learn/CSS/CSS_layout/Grids#fr_単位での柔軟なグリッド)を参照してください。
+CSS グリッドレイアウトでは、`fr` 単位を使用して、利用可能な空間をそれぞれのグリッドトラックに分配することができます。次の例では、サイズが `1fr` の 3 つのトラックを持つグリッドコンテナーを作成します。これにより、3 つの列トラックが作成され、それぞれがコンテナー内の使用可能な空間の一部を占めます。 グリッドを作成するこのアプローチの詳細については、CSS レイアウトのグリッドのトピックの [fr 単位での柔軟なグリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids#fr_単位での柔軟なグリッド)を参照してください。
 
 ```css
 .container {
@@ -149,11 +190,59 @@ CSS グリッドレイアウトでは、`fr` 単位を使用して、利用可�
 }
 ```
 
-> **メモ:** `.wrapper` に列を定義することができるため、グリッドレイアウトのバージョンはさらに単純です。[例](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html)。
+Here's how we could use grid layout with a media query for responsive design.
+
+```html-nolint live-sample___grid-based-rwd
+<div class="wrapper">
+  <div class="col1">
+    <p>
+      このレイアウトはレスポンシブです。ブラウザーウィンドウの幅を広げたり狭めたりしたら何が起こるかを確認してください。
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+    </p>
+    <p>
+      その夜（後に証明されるように、記憶に残る夜）の何百万人もの人々は、発行される煙の輪を眺めていましたが、その事実から何か特別なインスピレーションを何も感じていませんでした。
+    </p>
+  </div>
+</div>
+```
+
+```css hidden live-sample___grid-based-rwd
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+```
+
+```css live-sample___grid-based-rwd
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+```
+
+{{EmbedLiveSample("grid-based-rwd", "", "550px")}}
 
 ## レスポンシブ画像とメディア
 
-メディアがそのコンテナーより大きくならないことを保証するには、次のようにすることができます。
+メディアがそのコンテナーより大きくならないことを保証するには、次の方法が利用できます。
 
 ```css
 img,
@@ -163,15 +252,10 @@ video {
 }
 ```
 
-これは、メディアがコンテナーからあふれないように確実に拡大縮小します。単一の大きな画像を使用し、小さな端末に合わせて拡大縮小すると、使用する画像よりも大きな画像をダウンロードして帯域幅を浪費します。
+これは、メディアがコンテナーからあふれないように確実に拡大縮小します。
 
-{{htmlelement("picture")}} 要素と {{htmlelement("img")}} の `srcset` 属性や `size` 属性を使用したレスポンシブ画像は、ユーザーのビューポートや端末の解像度に合わせた画像を提供することができます。例えば、モバイル用には正方形の画像を入れ、デスクトップ向けには同じシーンの広い画像を表示させることができます。
-
-`<picture>` 要素では、複数のサイズを「ヒント」（画像が最適な画面サイズと解像度を記述しているメタデータ）とともに指定することができ、ブラウザーはそれぞれの端末に最も適した画像を選びます。これにより、ユーザーは確実に使用する機器に適したサイズの画像をダウンロードすることができます。`<picture>` を `max-width` とともに使用することで、メディアクエリーで画像のサイズを調整する必要がなくなります。これにより、様々なサイズのビューポートに様々な{{glossary("aspect ratio", "アスペクト比")}}の画像を適用することができます。
-
-さまざまなサイズで使用される*アートディレクション*画像は、さまざまな画面サイズに対して、さまざまな切り抜きまたはまったく異なる画像を提供します。
-
-MDN の HTML の学習セクションで、[レスポンシブ画像の詳細なガイド](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)を見つけることができます。
+> [!NOTE]
+> 単一の大きな画像を使用し、それを小さな端末に合うように変倍すると、必要以上に大きな画像をダウンロードすることになり、帯域幅が無駄になります。また、見た目も悪くなります。例えば、ワイド画面のモニターでは横長の画像が適していますが、モバイル端末では縦向きの画像の方がよく合う可能性があるからです。このような問題は、 {{htmlelement("picture")}} 要素と、 {{htmlelement("img")}} の `srcset` および `sizes` 属性を使用することで解決できます。これらは高度な機能であり、このコースの対象範囲を超えるものですが、[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)に詳細なガイドがあります。
 
 その他の有用なコツです。
 
@@ -181,7 +265,7 @@ MDN の HTML の学習セクションで、[レスポンシブ画像の詳細な
 
 ## レスポンシブ書体
 
-レスポンシブ書体は、メディアクエリー内でフォントサイズを変更したり、ビューポート単位を使用したりして画面の面積の大小を反映したりする記述です。
+レスポンシブ書体は、メディアクエリー内やビューポート単位を使用してフォントサイズを変更し、画面の面積の大小を反映する記述です。
 
 ### レスポンシブ書体のためにメディアクエリーを使用
 
@@ -205,16 +289,70 @@ h1 {
 
 上記のレスポンシブグリッドの例を編集して、説明した方法を使用してレスポンシブ書体も含めました。 レイアウトが 2 段バージョンになると、見出しのサイズがどのように切り替わるかを確認できます。
 
-モバイルでは、次のように見出しが小さくなります。
+モバイル端末では見出しが小さくなりますが、デスクトップでは見出しが大きなサイズになります。
 
-![見出しサイズが小さい積み上げレイアウト。](mdn-rwd-font-mobile.png)
+```html-nolint live-sample___type-rwd
+<div class="wrapper">
+  <div class="col1">
+    <h1>このサイズを見てください</h1>
+    <p>
+      このレイアウトはレスポンシブです。ブラウザーウィンドウの幅を広げたり狭めたりしたら何が起こるかを確認してください。
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+    </p>
+    <p>
+      その夜（後に証明されるように、記憶に残る夜）の何百万人もの人々は、発行される煙の輪を眺めていましたが、その事実から何か特別なインスピレーションを何も感じていませんでした。
+    </p>
+  </div>
+</div>
+```
 
-しかし、デスクトップでは、次のようにより大きな見出しサイズで表示されます。
+```css live-sample___type-rwd
+html {
+  font-size: 1em;
+}
 
-![見出しが大きい 2 段レイアウト。](mdn-rwd-font-desktop.png)
+body {
+  font:
+    1.2em Helvetica,
+    Arial,
+    sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
 
-> [!NOTE]
-> この例を実際に見てください。[例](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html)。
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+```
+
+{{EmbedLiveSample("type-rwd", "", "550px")}}
 
 この書体へのアプローチが示すように、メディアクエリーをページのレイアウトの変更のみに制限する必要はありません。 これらを使用して任意の要素を微調整し、代わりとなる画面サイズでより使いやすく魅力的にすることができます。
 
@@ -234,18 +372,65 @@ h1 {
 
 ```css
 h1 {
-  font-size: calc(1.5rem + 3vw);
+  font-size: calc(1.5rem + 4vw);
 }
 ```
 
 これは、見出しのフォントサイズを指定する必要があるのは一度だけで、モバイル用にメディアクエリーで再定義せずともよいことを意味します。ビューポートのサイズを大きくするにつれて、フォントは徐々に大きくなります。
 
-> [!NOTE]
-> 実際のこの例を見てください。[例](https://mdn.github.io/css-examples/learn/rwd/type-vw.html)、[ソースコード](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html)。
+```html-nolint live-sample___type-vw
+<div class="wrapper">
+  <div class="col1">
+    <h1>このサイズを見てください</h1>
+    <p>
+      このレイアウトはレスポンシブです。ブラウザーウィンドウの幅を広げたり狭めたりしたら何が起こるかを確認してください。
+    </p>
+  </div>
+  <div class="col2">
+    <p>
+      1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+    </p>
+  </div>
+</div>
+```
+
+```css live-sample___type-vw
+body {
+  font: 1.2em / 1.5 sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #eee;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 2em auto;
+}
+
+h1 {
+  font-size: calc(1.5rem + 4vw);
+  margin: 0;
+}
+
+.col1,
+.col2 {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 5%;
+  }
+}
+```
+
+{{EmbedLiveSample("type-vw", "", "550px")}}
 
 ## ビューポートメタタグ
 
-レスポンシブなページの HTML ソースを見ると、通常、文書の `<head>` に次の {{htmlelement("meta")}} タグがあります。
+レスポンシブなページの HTML ソースを見ると、通常、次の {{htmlelement("meta")}} タグが文書の `<head>` の中にあります。
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -253,7 +438,7 @@ h1 {
 
 この[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
 
-なぜこれが必要でしょうか？ モバイルブラウザーは、ビューポートの幅について嘘をつく傾向があるためです。
+なぜこれが必要なのでしょうか？ モバイルブラウザーは、ビューポートの幅について嘘をつく傾向があるためです。
 
 このメタタグが存在するのは、スマートフォンが登場した当初、ほとんどのサイトがモバイルに最適化されていなかったからです。そのため、モバイルブラウザーはビューポート幅を 980 ピクセルに設定し、その幅でページをレンダリングし、その結果をデスクトップレイアウトの拡大版として表示していました。ユーザーはウェブサイトを拡大したり、パンしたりして、関心のある部分を見ることができましたが、見た目が悪いものでした。
 
@@ -267,11 +452,13 @@ h1 {
 
 また、これらのレッスンで学んだレイアウト方法の助けを借りて、レスポンシブデザインを実現することがはるかに容易になりました。今日、ウェブ開発を新しく始めた方は、レスポンシブデザインの初期の頃よりも自由に使えるツールがたくさんあります。そのため、使用している素材の古さを調べる価値があります。過去の記事は今でも有用ですが、現代の CSS と HTML を使用することで、訪問者がどんな端末でサイトを閲覧しても、エレガントで有益なデザインをはるかに簡単に作成することができます。
 
+次に、メディアクエリーについてさらに詳しく検討し、よくある問題の解決に役立てる方法を紹介します。
+
 ## 関連情報
 
 - タッチ画面端末での作業:
   - [タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチ画面やトラックパッド上の指（またはスタイラス）の動きを解釈する機能を提供し、複雑なタッチベースのユーザーインターフェイスの高品質な対応を可能にします。
   - [pointer](/ja/docs/Web/CSS/@media/pointer) または [any-pointer](/ja/docs/Web/CSS/@media/any-pointer) メディアクエリーを使用すると、タッチ対応端末で異なる CSS を読み込むことができます。
-- [CSS-Tricks Guide to Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+- [CSS-Tricks guide to media queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
