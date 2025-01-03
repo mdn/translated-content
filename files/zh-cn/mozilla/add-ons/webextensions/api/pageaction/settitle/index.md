@@ -21,7 +21,7 @@ browser.pageAction.setTitle(
 
 - `details`
 
-  - : `object`.
+  - : `object`。
 
     - `tabId`
       - : `integer`。要设置标题的标签页 ID。
