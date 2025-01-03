@@ -13,7 +13,6 @@ HTML ゲームはモバイルアプリなどのネイティブゲームに比べ
 
 [チュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を一つまたは[二つ](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)実行し、HTML ゲームを作成しました。素晴らしいですね！[ゲームの配布](/ja/docs/Games/Publishing_games/Game_distribution)では、新しく作成したゲームを配布する方法について必要な情報を説明します。
 
-
 ## ゲームのプロモーション
 
 ゲームを開発して完成させるだけでは十分ではありません。世界に対して、あなたが人々が楽しんで遊べる面白いゲームを作ったことを知らせる必要があります。 [ゲームプロモーション](/ja/docs/Games/Publishing_games/Game_promotion) の方法は多く存在しており、その多くは無料でできるものがほとんどです。
