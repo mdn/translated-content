@@ -24,7 +24,7 @@ browser.pageAction.show(
 ### 参数
 
 - `tabId`
-  - : `integer`。要显示页面操作的{{WebExtAPIRef("tabs/Tab", "标签页", "", "nocode")}}ID。
+  - : `integer`。要显示页面操作的{{WebExtAPIRef("tabs/Tab", "标签页", "", "nocode")}}的 ID。
 
 ### 返回值
 
