@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}} {{deprecated_header}}
 
-The **`UIEvent.initUIEvent()`** 方法在创建UI事件后对其进行初始化。
+The **`UIEvent.initUIEvent()`** 方法在创建 UI 事件后对其进行初始化。
 
 以这种方式初始化的事件必须使用 {{domxref("Document.createEvent()")}} 方法创建。使用 {{ domxref("EventTarget.dispatchEvent()") }} 派发前必须调用该方法来设置事件。一旦发出，它就什么都不做了。
 
