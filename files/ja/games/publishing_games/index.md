@@ -21,7 +21,7 @@ HTML ゲームはモバイルアプリなどのネイティブゲームに比べ
 
 <!-- Developing and finishing the game is not enough. You have to let the world know that you have made something interesting available, which people will enjoy playing. There are many [Game promotion](/en-US/docs/Games/Publishing_games/Game_promotion) techniques — many of them free — so even if you're struggling to make a living as an indie dev with zero budget you can still do a lot to let people know about your great new game. Promoting the game helps a lot in monetizing it later on too, so it's important to do it effectively. -->
 
-ゲームを開発して完成させるだけでは十分ではありません。世界に対して、あなたが人々が楽しんで遊べる面白いゲームを作ったことを知らせる必要があります。 [ゲームプロモーション](/en-US/docs/Games/Publishing_games/Game_promotion) の方法は多く存在しており、その多くは無料でできるものがほとんどです。
+ゲームを開発して完成させるだけでは十分ではありません。世界に対して、あなたが人々が楽しんで遊べる面白いゲームを作ったことを知らせる必要があります。 [ゲームプロモーション](/ja/docs/Games/Publishing_games/Game_promotion) の方法は多く存在しており、その多くは無料でできるものがほとんどです。
 なので、あなたがインディーゲームの開発者で予算がなく生活が苦しい場合でも、あなたが作った素晴らしい新作ゲームについて人々に知らせるためにできることはたくさんあります。ゲームのプロモーションは、後々ゲームの収益化にも大いに役立つので効果的に行うことが重要です。
 
 ## ゲームの収益化
