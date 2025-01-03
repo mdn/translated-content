@@ -15,7 +15,7 @@ HTML ゲームはモバイルアプリなどのネイティブゲームに比べ
 
 <!-- So you've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! [Game distribution](/en-US/docs/Games/Publishing_games/Game_distribution) provides all you need to know about the ways you can distribute your newly created game into the wild — including hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store. -->
 
-[チュートリアル](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を一つまたは[二つ](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser)実行し、HTML ゲームを作成しました。素晴らしいですね！[ゲームの配布](/en-US/docs/Games/Publishing_games/Game_distribution)では、新しく作成したゲームを配布する方法について必要な情報を説明します。
+[チュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を一つまたは[二つ](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)実行し、HTML ゲームを作成しました。素晴らしいですね！[ゲームの配布](/ja/docs/Games/Publishing_games/Game_distribution)では、新しく作成したゲームを配布する方法について必要な情報を説明します。
 
 ## ゲームのプロモーション
 
