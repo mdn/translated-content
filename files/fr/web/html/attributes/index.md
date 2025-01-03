@@ -2124,7 +2124,7 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 
 ```html
 <div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
-<div itemscope="itemscope">
+<div itemscope=itemscope>
   Ce fragment est du HTML valide mais du XML invalide.
 </div>
 <div itemscope="">Ce fragment est du HTML valide et du XML valide.</div>
