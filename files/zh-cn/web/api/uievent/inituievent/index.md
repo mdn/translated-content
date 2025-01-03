@@ -1,5 +1,5 @@
 ---
-title: UIEvent: initUIEvent() 方法
+title: UIEvent：initUIEvent() 方法
 slug: Web/API/UIEvent/initUIEvent
 l10n:
   sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
