@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("Navigation API", "导航 API", "", "nocode")}} 的 **`NavigateEvent`** 接口是 {{domxref("Navigation/navigate_event", "navigate")}} 事件的事件对象，当[任何类型的导航](https://github.com/WICG/navigation-api#appendix-types-of-navigations)启动时触发（这包括使用{{domxref("History API", "历史记录 API", "", "nocode")}} 功能，如 {{domxref("History.go()")}}）。`NavigateEvent` 对象提供对该导航信息的访问，并允许开发人员拦截和控制导航处理。
+{{domxref("Navigation API", "导航 API", "", "nocode")}} 的 **`NavigateEvent`** 接口是 {{domxref("Navigation/navigate_event", "navigate")}} 事件的事件对象，该事件会在[任何类型的导航](https://github.com/WICG/navigation-api#appendix-types-of-navigations)启动时触发（这包括使用{{domxref("History API", "历史记录 API", "", "nocode")}} 的特性，如 {{domxref("History.go()")}}）。`NavigateEvent` 对象提供对该导航信息的访问，并允许开发人员拦截和控制导航处理。
 
 {{InheritanceDiagram}}
 
@@ -21,7 +21,7 @@ l10n:
 _从其父接口 {{DOMxRef("Event")}} 继承属性。_
 
 - {{domxref("NavigateEvent.canIntercept", "canIntercept")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 如果导航可以被拦截，则返回 `true`，否则返回 `false`（例如，你无法拦截跨域导航）。
+  - : 如果导航可以被拦截，则返回 `true`，否则返回 `false`（例如，你无法拦截跨源导航）。
 - {{domxref("NavigateEvent.destination", "destination")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个 {{domxref("NavigationDestination")}} 对象，表示要导航到的目标。
 - {{domxref("NavigateEvent.downloadRequest", "downloadRequest")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -31,7 +31,7 @@ _从其父接口 {{DOMxRef("Event")}} 继承属性。_
 - {{domxref("NavigateEvent.hashChange", "hashChange")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 如果导航是片段导航（即导航到同一文档中的片段标识符），则返回 `true`，否则返回 `false`。
 - {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 返回由启动导航操作传递的 `info` 数据值（例如 {{domxref("Navigation.back()")}} 或 {{domxref("Navigation.navigate()")}}），如果没有传递 `info` 数据，则返回 `undefined`。
+  - : 返回由启动导航操作（例如 {{domxref("Navigation.back()")}} 或 {{domxref("Navigation.navigate()")}}）传递的 `info` 数据值，如果没有传递 `info` 数据，则返回 `undefined`。
 - {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回导航类型——`push`、`reload`、`replace` 或 `traverse`。
 - {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}} {{Experimental_Inline}}
