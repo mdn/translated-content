@@ -5,7 +5,7 @@ slug: Web/HTML/Attributes
 
 {{HTMLSidebar}}
 
-Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
+Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
 
 ## Liste des attributs
 
@@ -238,7 +238,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <p>Définit l'URL vers un fichier qui est une image.</p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Bien que les navigateurs et les clients
+            <strong>Note :</strong> Bien que les navigateurs et les clients
             <em>e-mails</em> prennent en charge cet attribut, cet attribut est
             obsolète. On utilisera plutôt la propriété
             <a href="/fr/docs/Web/CSS/background-image"
@@ -273,7 +273,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <p>Cet attribut indique la couleur d'arrière-plan pour l'élément.</p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
+            <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/background-color"
               ><code>background-color</code></a
@@ -295,7 +295,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <p>Cet attribut indique la largeur de la bordure.</p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
+            <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/border"><code>border</code></a
             >.
@@ -439,7 +439,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         </p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
+            <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/color"><code>color</code></a
             >.
@@ -966,7 +966,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         </p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Pour certains éléments comme
+            <strong>Note :</strong> Pour certains éléments comme
             <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a
             >,cet attribut est un reliquat et ne devrait plus être utilisé.
             C'est la propriété CSS
@@ -1289,7 +1289,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         cache.
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est obsolète, utilisez
+            <strong>Note :</strong> Cet attribut est obsolète, utilisez
             <a href="/fr/docs/Web/Manifest"
               ><code>&#x3C;link rel="manifest"></code></a
             >
@@ -2074,7 +2074,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         Pour ces éléments, cet attribut définit la largeur occupée sur l'écran.
         <div class="note">
           <p>
-            <strong>Note :</strong>Pour tous les autres éléments, comme
+            <strong>Note :</strong> Pour tous les autres éléments, comme
             <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a
             >, il faut utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/width"><code>width</code></a> afin de
@@ -2104,7 +2104,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
 
 ## Attribut de contenu ou attribut IDL ?
 
-En HTML, la plupart des attributs ont deux aspects : l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
+En HTML, la plupart des attributs ont deux aspects&nbsp;: l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
 
 L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
 
@@ -2120,9 +2120,9 @@ Les attributs IDL peuvent [refléter d'autres types](https://www.whatwg.org/spec
 
 Certains attributs de contenu (ex. `required`, `readonly`, `disabled`) sont des [attributs booléens](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). Si un attribut booléen est présent, sa valeur correspondra à _vrai_ (_true_), s'il est absent, sa valeur correspondra à _faux_ (_false_).
 
-HTML5 définit des restrictions sur les valeurs autorisées des attributs booléens : Si l'attribut est présent, sa valeur doit être soit la chaîne vide (équivalente, l'attribut peut avoir une valeur non attribuée), soit une valeur qui est une correspondance ASCII insensible à la casse pour le nom canonique de l'attribut, sans espace avant ou après. Les exemples suivants sont des façons valides de baliser un attribut booléen :
+HTML5 définit des restrictions sur les valeurs autorisées des attributs booléens&nbsp;: Si l'attribut est présent, sa valeur doit être soit la chaîne vide (équivalente, l'attribut peut avoir une valeur non attribuée), soit une valeur qui est une correspondance ASCII insensible à la casse pour le nom canonique de l'attribut, sans espace avant ou après. Les exemples suivants sont des façons valides de baliser un attribut booléen&nbsp;:
 
-```html
+```html-nolint
 <div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
 <div itemscope=itemscope>
   Ce fragment est du HTML valide mais du XML invalide.
@@ -2133,7 +2133,22 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 </div>
 ```
 
-Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions : si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
+Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions&nbsp;: si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
+
+## Attributs du gestionnaire d'événements
+
+> [!WARNING]
+> L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
+
+En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être spécifiée comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+
+Tous les attributs du gestionnaire d'événements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'événements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
+
+```html
+<div onclick="console.log(event)">Cliquez sur moi !</div>
+<!-- Le gestionnaire synthétisé a un nom ; vous pouvez le référencer lui-même -->
+<div onclick="console.log(onclick)">Cliquez sur moi !</div>
+```
 
 ## Voir aussi
 
