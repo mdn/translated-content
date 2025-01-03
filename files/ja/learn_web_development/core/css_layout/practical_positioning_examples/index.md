@@ -1,9 +1,8 @@
 ---
 title: 実践的な位置指定の例
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
-original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 l10n:
-  sourceCommit: b586b019eda9a3947f169381ce9ffb80747aa98a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
@@ -15,9 +14,9 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        HTML の基本（<a href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML 入門</a
-        >で学ぶ）、および CSS の機能の考え方（<a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>で学ぶ）。
+        >で学習）、 CSS の動作の考え方（<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>で学習）
       </td>
     </tr>
     <tr>
@@ -38,19 +37,41 @@ l10n:
 
 「別々のタブを別々のウェブページとして作成し、タブをクリックして別々のページに移動させて同様の効果を生み出すだけでよいのではないでしょうか？」と考えるかもしれません。 このコードならもっと簡単なものになりますが、実際には個々の「ページ」ビューは実際には新しくロードされたウェブページになるため、ビュー間で情報を保存し、この機能をより大きな UI デザインに統合するのは難しくなります。
 
-まず始めに、出発点の HTML ファイル [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html) のローカルコピーを作成してください。 これをローカルコンピューターの適当な場所に保存して、テキストエディターで開きます。 `body` に含まれる HTML を見てみましょう。
+まず始めに、出発点のファイル、 [info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box-start.html) および [tabs-manual.js](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabs-manual.js) のローカルコピーを作成してください。 これをローカルコンピューターの適当な場所に保存して、 `tabbed-info-box-start.html` をテキストエディターで開きます。 `body` に含まれる HTML を見てみましょう。
 
 ```html
 <section class="info-box">
-  <ul>
-    <li><a href="#" class="active-tab">Tab 1</a></li>
-    <li><a href="#">Tab 2</a></li>
-    <li><a href="#">Tab 3</a></li>
-  </ul>
-  <div class="panels">
-    <article class="active-panel">
-      <h2>The first tab</h2>
+  <div role="tablist" class="manual">
+    <button
+      id="tab-1"
+      type="button"
+      role="tab"
+      aria-selected="true"
+      aria-controls="tabpanel-1">
+      <span>Tab 1</span>
+    </button>
 
+    <button
+      id="tab-2"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tabpanel-2">
+      <span>Tab 2</span>
+    </button>
+    <button
+      id="tab-3"
+      type="button"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tabpanel-3">
+      <span>Tab 3</span>
+    </button>
+  </div>
+
+  <div class="panels">
+    <article id="tabpanel-1" role="tabpanel" aria-labelledby="tab-1">
+      <h2>The first tab</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
         turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
@@ -61,23 +82,22 @@ l10n:
         urna. Nulla facilisi.
       </p>
     </article>
-    <article>
-      <h2>The second tab</h2>
 
+    <article id="tabpanel-2" role="tabpanel" aria-labelledby="tab-2">
+      <h2>The second tab</h2>
       <p>
         This tab hasn't got any Lorem Ipsum in it. But the content isn't very
         exciting all the same.
       </p>
     </article>
-    <article>
-      <h2>The third tab</h2>
 
+    <article id="tabpanel-3" role="tabpanel" aria-labelledby="tab-3">
+      <h2>The third tab</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
         turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
         ordered list: how exciting!
       </p>
-
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
         <li>Aliquam ut porttitor urna.</li>
@@ -88,11 +108,11 @@ l10n:
 </section>
 ```
 
-それで、ここに {{htmlelement("ul")}} と {{htmlelement("div")}} を含む `info-box` のクラス（`class`）を持つ {{htmlelement("section")}} 要素があります。 番号なしリストには 3 つのリスト項目があり、その中にリンクがあります。 これは、コンテンツパネルを表示するためにクリックする実際のタブになります。 `div` には、各タブに対応するコンテンツパネルを構成する 3 つの {{htmlelement("article")}} 要素が含まれています。 各パネルにはいくつかのサンプルのコンテンツが含まれています。
+それでは、ここに {{htmlelement("section")}} 要素のクラス (`class`) が `info-box` であるものがあり、中に 2 つの {{htmlelement("div")}} が入っています。最初の div には 3 つのボタンがあり、その中にリンクがあります。 これは、コンテンツパネルを表示するためにクリックする実際のタブになります。 2 つ目の `div` には、各タブに対応するコンテンツパネルを構成する 3 つの {{htmlelement("article")}} 要素が含まれています。 各パネルにはいくつかのサンプルのコンテンツが含まれています。
 
-ここでの考え方は、標準の水平ナビゲーションメニューのようにタブをスタイルし、絶対位置指定を使用して互いの上に重なるようにパネルをスタイルするということです。 また、タブが押されたときに対応するパネルを表示し、タブ自体をスタイルするためにページに含める JavaScript も少し用意します。 現段階では JavaScript 自体を理解する必要はありませんが、基本的な [JavaScript](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics) をできるだけ早く学習することを検討するべきです — UI 機能が複雑になるほど、欲しい機能を実装するために JavaScript が必要になるでしょう。
+ここでの考え方は、標準の水平ナビゲーションメニューのようにタブをスタイルし、絶対位置指定を使用して互いの上に重なるようにパネルをスタイル設定するということです。 また、タブが押されたときに対応するパネルを表示し、タブ自体をスタイルするためにページに含める JavaScript も少し用意します。 現段階では JavaScript 自体を理解する必要はありませんが、基本的な [JavaScript](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) をできるだけ早く学習することを検討するべきです — UI 機能が複雑になるほど、欲しい機能を実装するために JavaScript が必要になるでしょう。
 
-### 一般的な設定
+### 全般的な設定
 
 まず、{{HTMLElement("style")}} の開始タグと終了タグの間に次を追加します。
 
@@ -116,61 +136,58 @@ body {
 
 ```css
 .info-box {
-  width: 450px;
+  width: 452px;
   height: 400px;
-  margin: 0 auto;
+  margin: 1.25rem auto 0;
 }
 ```
 
-これはコンテンツに特定の幅と高さを設定し、古い `margin: 0 auto` トリックを使用して画面の中央に配置します。 以前のコースでは、可能であればコンテンツのコンテナーに固定の高さを設定しないことをお勧めしました。 タブのコンテンツは固定されているので、この状況では問題ありません。 また、異なる高さで異なるタブを表示するのも少々不快です。
+これはコンテンツに特定の幅と高さを設定し、古い `margin: 1.25rem auto 0` トリックを使用して画面の中央に配置します。このコースでは以前、できるだけコンテンツのコンテナーに固定の高さを設定しないことをお勧めしました。 タブのコンテンツは固定されているので、この状況では問題ありません。
 
 ### タブのスタイル設定
 
-今度はタブをタブのようにスタイル設定します。基本的にこれらは水平ナビゲーションメニューですが、コースで以前見たようにクリックされたときに異なるウェブページをロードする代わりに異なるパネルを同じページに表示します。 まず、CSS の一番下に次のルールを追加して、番号なしリストからデフォルトの {{cssxref("padding-left")}} と {{cssxref("margin-top")}} を削除します。
+今度はタブをタブのようにスタイル設定します。基本的にこれらは水平ナビゲーションメニューですが、コースで以前見たようにクリックされたときに異なるウェブページを読み込む代わりに、異なるパネルを同じページに表示します。 まず、CSS の一番下に次のルールを追加して、 `tablist` を {{cssxref("flex")}} コンテナーとし、幅を 100% にします。
 
 ```css
-.info-box ul {
-  padding-left: 0;
-  margin-top: 0;
+.info-box [role="tablist"] {
+  min-width: 100%;
+  display: flex;
 }
 ```
 
 > [!NOTE]
 > この例では、チェーンの先頭に `.info-box` を持つ子孫セレクターを使用しています。 これは、他のコンテンツがすでに含まれているページに、ページの他の部分に適用されているスタイルを妨げることなく、この機能を挿入できるようにするためです。
 
-次に、水平方向のタブのスタイルを設定します。 リスト項目は、一列に並ぶようにすべて左にフロートさせ、行頭記号（bullet）を取り除くために {{cssxref("list-style-type")}} を `none` に設定し、{{cssxref("width")}} を `150px` に設定しているので、それらは情報ボックス全体にうまく収まります。 {{htmlelement("a")}} 要素は {{cssxref("display")}}`: inline-block` に設定されているので、一列に並んでいてもスタイル可能で、他のさまざまなプロパティを使用して、タブボタンに適したスタイルになっています。
-
-次の CSS を追加してください。
+次に、ボタンをタブのように見えるようにスタイル設定していきます。以下の CSS を追加します。
 
 ```css
-.info-box li {
-  float: left;
-  list-style-type: none;
-  width: 150px;
-}
-
-.info-box li a {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  line-height: 3;
-  background-color: red;
-  color: black;
-  text-align: center;
+.info-box [role="tab"] {
+  padding: 0 1rem 0 1rem;
+  line-height: 3rem;
+  background: white;
+  color: #b60000;
+  font-weight: bold;
+  border: none;
+  outline: none;
 }
 ```
 
-最後に、このセクションではリンクの状態にスタイルを設定します。最初に、タブの `:focus` と `:hover` 状態を設定し、フォーカス/ホバーされたときに異なる状態に見えるようにして、ユーザーに視覚的なフィードバックを提供します。 2 つ目は、タブの `class` に `active-tab` を説明しています。これはタブがクリックされたときに JavaScript を使用して設定します。以下の CSS を他のスタイルの下に配置します。
+次に、タブの `:focus` および `:hover` の状態を設定して、フォーカス/ホバー時の見た目を変え、ユーザーに視覚的なフィードバックを提供します。
 
 ```css
-.info-box li a:focus,
-.info-box li a:hover {
-  background-color: #a60000;
-  color: white;
+.info-box [role="tab"]:focus span,
+.info-box [role="tab"]:hover span {
+  outline: 1px solid blue;
+  outline-offset: 6px;
+  border-radius: 4px;
 }
+```
 
-.info-box li a.active-tab {
-  background-color: #a60000;
+次に、 [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) プロパティが `true` に設定されているタブを強調表示するルールを適用します。これは、タブがクリックされた際に JavaScript で設定します。以下の CSS を、他のスタイルのすぐ下に配置します。
+
+```css
+.info-box [role="tab"][aria-selected="true"] {
+  background-color: #b60000;
   color: white;
 }
 ```
@@ -179,77 +196,57 @@ body {
 
 次の仕事はパネルをスタイル設定することです。 さあ行きましょう！
 
-まず最初に、`.panels` の {{htmlelement("div")}} コンテナーをスタイルするために次の規則を追加します。 ここでは、パネルが情報ボックスの内側にぴったり収まるように固定の {{cssxref("height")}} を設定し、{{htmlelement("html")}} ではなくそれに対して相対的に位置指定子要素を配置できるように {{cssxref("position")}} `relative` で {{htmlelement("div")}} を位置指定コンテキストとして設定します。 最後にレイアウトに影響を与えないように、最後に上記 CSS で設定したフロートを {{cssxref("clear")}} します。
+まず最初に、`.panels` の {{htmlelement("div")}} コンテナーをスタイルするために次のルールを追加します。 ここでは、パネルが情報ボックスの内側にぴったり収まるように、 {{cssxref("position")}} を `relative` に設定して {{htmlelement("div")}} を位置指定コンテキストとすることで、位置指定された子要素を、初期ビューポートではなくその要素からの相対とし、最後に上記 CSS で設定した浮動を解除 ({{cssxref("clear")}}) することで、レイアウトに影響を与えないようにします。
 
 ```css
 .info-box .panels {
   height: 352px;
-  position: relative;
   clear: both;
+  position: relative;
 }
 ```
 
-このセクションの最後に、パネルを構成する個々の {{htmlelement("article")}} 要素をスタイルします。 最初に追加する規則は、パネルを絶対位置指定して、それらがすべて {{htmlelement("div")}} コンテナーの {{cssxref("top")}} と {{cssxref("left")}} にぴったり合うように配置することです — これは、パネルを互いの上に重ねて配置するという、このレイアウト機能全体にとって絶対に重要な部分です。 この規則はまた、パネルにコンテナーと同じ設定の高さを与え、コンテンツにいくつかの {{cssxref("padding")}}、テキストの {{cssxref("color")}}、および {{cssxref("background-color")}} を与えます。
-
-ここで追加する 2 番目の規則は、`active-panel` のクラスが設定されているパネルに 1 の `{{cssxref("z-index")}}` が適用されるようにすることです。 これにより、他のパネルの上に重ねて置かれます（位置指定要素は既定で 0 の `z-index` を持ち、これは他のパネルを下に置きます）。 繰り返しますが、適切なタイミングで JavaScript を使用してこのクラスを追加します。
+この節の最後に、パネルを構成する個々の {{htmlelement("article")}} 要素をスタイル設定します。 {{cssxref("position")}} を指定してパネルを絶対位置指定し、 {{cssxref("top")}} と {{cssxref("left")}} を指定することで、 {{htmlelement("div")}} コンテナーの左上に寄せて配置することです。 — これは、パネルを互いの上に重ねて配置するという、このレイアウト機能全体にとって絶対に重要な部分です。 このルールはまた、パネルの高さをコンテナーと同じにし、コンテンツにいくらかのパディング、テキストの {{cssxref("color")}}、および {{cssxref("background-color")}} を与えます。
 
 ```css
-.info-box article {
+.info-box [role="tabpanel"] {
+  background-color: #b60000;
+  color: white;
   position: absolute;
+  padding: 0.8rem 1.2rem;
+  height: 352px;
   top: 0;
   left: 0;
-  height: 352px;
-  padding: 10px;
-  color: white;
-  background-color: #a60000;
-}
-
-.info-box .active-panel {
-  z-index: 1;
 }
 ```
 
-### JavaScript を追加する
+ここで追加する2つ目のルールは、クラスが `is-hidden` に設定されたパネルが非表示になるようにします。 ここでも、適切なタイミングで JavaScript を使用してこのクラスを追加/除去します。 タブが選択されると、対応するパネルの `is-hidden` クラスが除去され、他にもパネルすべてに `is-hidden` クラスが設定されるため、一度に 1 つのパネルのみが表示されるようになります。
 
-この機能を動作させるための最後のステップは、JavaScript を追加することです。 {{htmlelement("script")}} の開始タグと終了タグの間に記述されているとおりに、次のコードブロックを挿入します（これらは HTML コンテンツの下方にあります）。
-
-```js
-const tabs = document.querySelectorAll(".info-box li a");
-const panels = document.querySelectorAll(".info-box article");
-
-for (let i = 0; i < tabs.length; i++) {
-  setTabHandler(tabs[i], i);
+```css
+.info-box [role="tabpanel"].is-hidden {
+  display: none;
 }
+```
 
-function setTabHandler(tab, tabPos) {
-  tab.onclick = () => {
-    for (const tab of tabs) {
-      tab.className = "";
-    }
+### JavaScript
 
-    tab.className = "active-tab";
+この機能を動作させるための最後のステップは、JavaScript を追加することです。 `tabs-manual.js` ファイルを、 [`<script>`](/ja/docs/Web/HTML/Element/script) タグを使用して含めます。
 
-    for (const panel of panels) {
-      panel.className = "";
-    }
-
-    panels[tabPos].className = "active-panel";
-  };
-}
+```html
+<script src="tabs-manual.js"></script>
 ```
 
 このコードは次のことを行います。
 
-- 最初に、すべてのタブとすべてのパネルへの参照を `tabs` と `panels` と呼ばれる 2 つの変数に保存するので、後で簡単に使うことができます。
-- 次に、`for` ループを使用してすべてのタブを巡回し、それぞれに対して `setTabHandler()` という関数を実行します。 これにより、各タブをクリックしたときに発生するべき機能が設定されます。 実行されると、関数はそれが実行されている特定のタブへの参照と、`tabs` 配列内のタブの位置を識別するインデックス番号 `i` が渡されます。
-- `setTabHandler()` 関数では、タブに `onclick` イベントハンドラーを設定していて、タブをクリックすると次のことが起こります。
+- [window の load イベント](/ja/docs/Web/API/Window/load_event)時に、 `TabsManual` [クラス](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)を `tablist` 要素すべてに対して初期化します。
+- `TabsManual` オブジェクトを作成すると、コンストラクターでタブとパネルへの参照すべてが `tabs` と `tabpanels` 変数に収集されるため、後でそれらに対して簡単にさまざまな処理を行うことができます。
+- コンストラクターは、すべてのタブに対して [`click`](/ja/docs/Web/API/Element/click_event) および [`keydown`](/ja/docs/Web/API/Element/keydown_event) イベントハンドラーも登録します。イベントハンドラーには、クリックまたはキー操作を使用してタブが選択された際に現れるべき内容についてのロジックが含まれます。
+- `setSelectedTab(currentTab)` 関数の中で、以下のことが行われます。。
 
-  - `for` ループで、すべてのタブを巡回し、それらに存在するクラスをすべて削除します。
-  - クリックされたタブに `active` のクラスが設定されます。 このクラスには、パネルのスタイル設定と同じ {{cssxref("color")}} と {{cssxref("background-color")}} をタブに設定する CSS の規則が関連付けられていることを以前にも説明しました。
-  - `for` ループは、すべてのパネルを巡回し、それらに存在するクラスをすべて削除します。
-  - クリックされたタブに対応するパネルに `active-panel` のクラスが設定されます。 このクラスには、{{cssxref("z-index")}} を 1 に設定して他のパネルの上に表示させる CSS の規則が関連付けられていることを以前にも説明しました。
+  - `for` ループを使用して、すべてのタブを巡回し、 `aria-selected` プロパティを `false` に設定し、対応するパネルに `is-hidden` クラスを設定することで、それらを選択解除します。
+  - 選択されたタブ (`currentTab`) では、 `aria-selected` を `true` に設定し、対応するパネルから `is-hidden` クラスを除去します。
 
-最初の例はこれで終わりです。 2 番目の例で追加しますので、コードを開いたままにしてください。
+- また、このコードは、`←キー`、`→キー`、`Home`、`End` キーを使用するキーボード操作に対応します。
 
 ## 固定位置のタブ付き情報ボックス
 
@@ -268,47 +265,48 @@ function setTabHandler(tab, tabPos) {
 
 ```html
 <section class="fake-content">
-  <h1>Fake content</h1>
+  <h1>擬似コンテンツ</h1>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    これは擬似コンテンツです。メインウェブページのコンテンツは、おそらくここに来ます。
   </p>
 </section>
 ```
 
 > [!NOTE]
-> お好みにより、偽のコンテンツを本物のコンテンツに変更してもかまいません。
+> お好みにより、擬似コンテンツを本物のコンテンツに変更してもかまいません。
 
 ### 既存の CSS への変更
 
-次に、情報ボックスを配置して位置指定するために、既存の CSS に若干の変更を加える必要があります。 `.info-box` の規則を変更して、`margin: 0 auto;` を取り除き（情報ボックスを中央に配置する必要はもうありません）、{{cssxref("position")}}`: fixed;` を追加して、ブラウザーのビューポートの {{cssxref("top")}} に貼り付けます。
+次に、情報ボックスを配置して位置指定するために、既存の CSS に若干の変更を加える必要があります。 `.info-box` のルールを変更して、`margin: 0 auto;` を取り除き（情報ボックスを中央に配置する必要はもうありません）、 {{cssxref("position", "position: fixed;")}} を追加して、ブラウザーのビューポートの {{cssxref("top")}} に貼り付けます。
 
 これは今、次のようになるはずです。
 
 ```css
 .info-box {
-  width: 450px;
+  width: 452px;
   height: 400px;
+  margin: 0 auto;
   position: fixed;
   top: 0;
 }
@@ -325,6 +323,10 @@ function setTabHandler(tab, tabPos) {
   padding: 10px;
   height: 2000px;
   margin-left: 470px;
+}
+
+.fake-content p {
+  margin-bottom: 200px;
 }
 ```
 
@@ -346,59 +348,54 @@ function setTabHandler(tab, tabPos) {
 まず始めに、Github リポジトリーから [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) のローカルコピーを作成します。 これは前の例から続いていないので、新鮮な出発点ファイルが必要です。 ファイル内の HTML を見てみましょう。
 
 ```html-nolint
-<label for="toggle">❔</label>
-<input type="checkbox" id="toggle" />
-<aside>
+<button
+  type="button"
+  id="menu-button"
+  aria-haspopup="true"
+  aria-controls="info-panel"
+  aria-expanded="false">
+      ❔
+</button>
 
+<aside id="info-panel" aria-labelledby="menu-button">
 …
-
 </aside>
 ```
 
-{{htmlelement("label")}} 要素と {{htmlelement("input")}} 要素から始めましょう — `<label>` 要素は通常、アクセシビリティの目的でテキストラベルをフォーム要素に関連付けるために使用します（スクリーンリーダーのユーザーが、どの説明がどのフォーム要素に対応しているかを確認できるようにします）。 ここでは、`for` 属性と `id` 属性を使用して `<input>` チェックボックスに関連付けられています。
+まず、ここではボタンテキストとして特別な疑問符文字を持つ {{htmlelement("button")}} 要素があります。 ボタンが押されると、 [`aside`](/ja/docs/Web/HTML/Element/aside) 情報パネルが表示または非表示になります。 下記では、これがどのように動作するのかを説明します。
 
-> [!NOTE]
-> 情報アイコンとして機能するために、HTML に特別な疑問符文字を入れました。 これは、パネルを表示/非表示にするために押されるボタンを表します。
+### ボタンのスタイル設定
 
-ここでは、これらの要素を少し異なる目的で使用します — `<label>` 要素のもう 1 つの便利な副作用は、チェックボックス自体だけでなく、チェックボックスのラベルをクリックしてチェックボックスをチェックできることです。 これはよく知られた[チェックボックスハック](https://css-tricks.com/the-checkbox-hack/)（英語）をもたらしました。 それはボタンを切り替えることによって要素を制御する JavaScript フリーの方法を提供します。 制御する要素は、他の 2 つに続く {{htmlelement("aside")}} 要素です（簡潔にするために、上記のコードリストからそのコンテンツを省略しました）。
-
-以下のセクションでは、これがどのように機能するのかを説明します。
-
-### フォーム要素のスタイル設定
-
-まずフォーム要素を扱いましょう — {{htmlelement("style")}} タグの間に次の CSS を追加します。
+まずボタンを扱いましょう — {{htmlelement("style")}} タグの間に次の CSS を追加します。
 
 ```css
-label[for="toggle"] {
-  font-size: 3rem;
+#menu-button {
   position: absolute;
-  top: 4px;
-  right: 5px;
+  top: 0.5rem;
+  right: 0.5rem;
   z-index: 1;
-  cursor: pointer;
-}
 
-input[type="checkbox"] {
-  position: absolute;
-  top: -100px;
+  font-size: 3rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 ```
 
-最初の規則は `<label>` をスタイルします。 ここでは、次のことをしています。
+最初のルールは `<button>` にスタイル設定します。ここでは、次のことをしています。
 
-- アイコンを見やすく大きくするには、大きい {{cssxref("font-size")}} を設定します。
-- それに {{cssxref("position")}}`: absolute` を設定し、それを右上隅にうまく配置するために {{cssxref("top")}} と {{cssxref("right")}} を使用しました。
-- それに 1 の {{cssxref("z-index")}} を設定します — これは、情報パネルがスタイル設定されて表示されるときに、アイコンが隠れないようにし、アイコンがその上に表示されるので、もう一度押すと情報パネルを非表示にできます。
-- アイコンが何か面白いことをしていることをユーザーに視覚的に知らせるために、{{cssxref("cursor")}} のプロパティを使用して、マウスポインターをアイコン上に移動したときにマウスポインターをハンドポインターに変更します（リンク上にあるときに表示されるもののように）。
-
-2 番目の規則は、実際のチェックボックスの `<input>` 要素に {{cssxref("position")}}`: absolute` を設定し、それを画面上部の範囲外に離すことで隠します。 実際の UI でこれを見たくありません。
+- 大きな {{cssxref("font-size")}} を設定して、アイコンを見やすく大きくします。
+- 境界線を除去し、背景を透明にして、ボタンの代わりに `?` アイコンのみを表示させます。
+- その {{cssxref("position")}} を `absolute` に設定し、それを右上隅にうまく配置するために {{cssxref("top")}} と {{cssxref("right")}} を使用します。
+- それに 1 の {{cssxref("z-index")}} を設定します。これは、情報パネルがスタイル設定されて表示されるときに、アイコンが隠れないようにし、アイコンがその上に表示されるので、もう一度押すと情報パネルを非表示にできます。
+- アイコンが何か面白いことをしていることをユーザーに視覚的に知らせるために、{{cssxref("cursor")}} のプロパティを使用して、マウスポインターをアイコン上に移動したときにマウスポインターを指ポインターに変更します（リンク上にあるときに表示されるもののように）。
 
 ### パネルのスタイル設定
 
-今度は実際のスライド式パネル自体をスタイルする時が来ました。 CSS の最後に次の規則を追加してください。
+実際のスライド式パネル自体をスタイルする時が来ました。 CSS の最後に次のルールを追加してください。
 
 ```css
-aside {
+#info-panel {
   background-color: #a60000;
   color: white;
 
@@ -410,32 +407,47 @@ aside {
   top: 0;
   right: -370px;
 
-  transition: 0.6s all;
+  transition: 0.6s right ease-out;
 }
 ```
 
-ここではたくさんのことが起こっています — 少しずつ説明しましょう。
+ここではたくさんのことが起こっています。少しずつ説明しましょう。
 
 - まず、情報ボックスに簡単な {{cssxref("background-color")}} と {{cssxref("color")}} を設定します。
 - 次に、パネルに固定の {{cssxref("width")}} を設定し、その {{cssxref("height")}} をブラウザーのビューポート全体の高さにします。
-- 少し間隔を空けるために水平方向の {{cssxref("padding")}} も含まれています。
-- 次に、パネルに {{cssxref("position")}}`: fixed;` を設定して、ページにスクロールするコンテンツがある場合でも、パネル上では常に同じ場所に表示されるようにします。 それをビューポートの {{cssxref("top")}} に接着し、デフォルトで {{cssxref("right")}} が画面外になるように設定します。
-- 最後に、要素に {{cssxref("transition")}} を設定します。 遷移は、単に突然「オン」、「オフ」になるのではなく、状態間の変化を滑らかに行わせることを可能にする興味深い機能です。 この場合、チェックボックスがオンになったときにパネルを画面上で滑らかにスライドさせることを目的としています。 （言い換えれば、疑問符のアイコンをクリックすると — `<label>` をクリックすると、関連するチェックボックスがオンになることを忘れないでください！ これは、ハックです。） あなたはもっと多くを学ぶでしょう...
+- 少し間隔を空けるために水平方向の {{cssxref("padding")}} も指定します。
+- 次に、パネルに {{cssxref("position", "position: fixed;")}} を設定して、ページにスクロールするコンテンツがある場合でも、パネル上では常に同じ場所に表示されるようにします。 それをビューポートの {{cssxref("top")}} に接着し、既定で {{cssxref("right")}} が画面外になるように設定します。
+- 最後に、要素に {{cssxref("transition")}} を設定します。トランジションは、単に突然「オン」、「オフ」になるのではなく、状態間の変化を滑らかに行わせることを可能にする興味深い機能です。 この場合、チェックボックスがオンになったとき（言い換えれば、疑問符のアイコンをクリックしたとき）にパネルを画面上で滑らかにスライドさせることを目的としています。
 
 ### チェック状態を設定する
 
 追加する CSS の最後の部分がもう 1 つあります。 CSS の下部に次のコードを追加してください。
 
 ```css
-input[type="checkbox"]:checked + aside {
+#info-panel.open {
   right: 0px;
 }
 ```
 
-セレクターはここではかなり複雑です — 私たちは `<input>` 要素に隣接する `<aside>` 要素を選択していますが、それがチェックされているときだけです（これを達成するための {{cssxref(":checked")}} 擬似クラスの使用に注意してください）。 この場合、`<aside>` の {{cssxref("right")}} プロパティを `0px` に設定しています。 これにより、パネルが再び画面に表示されるようになります（遷移により滑らかに）。 ラベルをもう一度クリックすると、チェックボックスがオフになり、パネルを再び隠します。
+この一連のルールでは、情報パネルに `.open` クラスが設定されている場合、 `<aside>` の {{cssxref("right")}} プロパティを `0px` に設定し、パネルが再び画面上に（トランジションによりスムーズに）表示されるようにします。 `.open` クラスが除去されると、パネルは再び非表示になります。
 
-これで、JavaScript を使用しない、かなり賢い方法でトグルボタン効果を作成できました。この効果にはいくつかの懸念があります。フォーム要素はそのために意図されたものではないので、これはフォーム要素のちょっとした乱用です。さらに、この効果はアクセシビリティの観点からはあまり良くありません。既定ではラベルはフォーカスされませんし、フォーム要素の非意味的な使用はスクリーンリーダーに問題を引き起こすことができます。JavaScript とリンクまたはボタンがより適切かもしれませんが、それでも試してみるのは楽しいことです。
+ボタンをクリックすると、情報パネルに `.open` クラスが追加または除去されるようにするには、 JavaScript を使用する必要があります。次のコードを {{htmlelement("script")}} タグの間に追加します。
+
+```js
+const button = document.querySelector("#menu-button");
+const panel = document.querySelector("#info-panel");
+
+button.addEventListener("click", () => {
+  panel.classList.toggle("open");
+  button.setAttribute("aria-expanded", panel.classList.contains("open"));
+});
+```
+
+このコードは、ボタンにクリックイベントハンドラーを追加します。クリックハンドラーは、 `open` クラスを情報ボックスパネル上で切り替えます。これにより、パネルがビューにスライドインまたはスライドアウトします。
+イベントハンドラーは、アクセシビリティを向上させるために、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) プロパティをボタンに設定します。
+
+以上です。トグル式の情報パネル効果を作成する最も簡単な方法です。
 
 ## まとめ
 
-それでは、位置指定の見方を締めくくります — これまでのところ、基本的な仕組みがどのように機能するのか、またこれらを適用して興味深い UI 機能を構築する方法を理解しているはずです。 これをすぐに理解できなくても心配しないでください — 位置指定はかなり高度なトピックであり、理解を助けるために記事をいつでも再び参照することができます。 次の話題はフレックスボックスです。
+それでは、位置指定の見方を締めくくります。これまでのところ、基本的な仕組みがどのように機能するのか、またこれらを適用して興味深い UI 機能を構築する方法を理解しているはずです。 これをすぐに理解できなくても心配しないでください。位置指定はかなり高度なトピックであり、理解を助けるために記事をいつでも再び参照することができます。

@@ -1,14 +1,11 @@
 ---
 title: 古いブラウザーの対応
 slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
-original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 l10n:
-  sourceCommit: 11bc346854854636796fe7fb9274ed2c094dcf53
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
 
 このモジュールでは、フレックスボックスとグリッドをデザインの主なレイアウト方法として使用することをお勧めしています。 しかしながら、サイトへの訪問者には、古いブラウザーや、使用している方法をサポートしていないブラウザーを使用している人がいます。 これはウェブ上で常に当てはまります — 新しい機能が開発されると、ブラウザーによって異なるものが優先されます。 この記事では、古い技術のユーザーを締め出すことなく最新のウェブテクニックを使用する方法について説明します。
 
@@ -17,11 +14,10 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        HTML の基礎（<a href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML 入門</a
         >で学習）、 CSS の動作の考え方（
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>、
-        <a href="/ja/docs/Learn/CSS/Building_blocks">ボックスのスタイル設定</a>で学習）
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>で学習）
       </td>
     </tr>
     <tr>
@@ -63,7 +59,7 @@ MDN では、すべての CSS プロパティページでブラウザー互換�
 
 ## CSS で代替手段を作成する
 
-CSS 仕様書には、レイアウトメソッドのような 2 つの類似した機能が同じアイテムに適用された場合に、ブラウザーがどのような処理を行うかを説明する情報が含まれています。例えば、アイテムが浮動要素であり、グリッドアイテムでもあり、CSS グリッドコンテナーの一部でもある場合にどうなるかを定義しています。要素に {{cssxref("margin-top")}} と {{cssxref("margin-block-start")}} プロパティが設定されている場合の定義もあります。
+CSS 仕様書には、レイアウトメソッドのような 2 つの類似した機能が同じアイテムに適用された場合に、ブラウザーがどのような処理を行うかを説明する情報が含まれています。例えば、アイテムが浮動ボックスであり、グリッドアイテムでもあり、CSS グリッドコンテナーの一部でもある場合にどうなるかを定義しています。要素に {{cssxref("margin-top")}} と {{cssxref("margin-block-start")}} プロパティが設定されている場合の定義もあります。
 
 ブラウザーは新しい機能を認識しない場合、その宣言を不正なものとして[エラーを発生させずに](/ja/docs/Web/CSS/CSS_syntax/Error_handling#css_パーサーのエラー)破棄します。ブラウザーが対応していない CSS のプロパティや数値は破棄されるため、古い値と新しい値の両方を同じルールセットで共存させることができます。ただ、新しい値の前に古い値を宣言し、対応している場合は新しい値が古い値を上書きするようにします（代替表示）。
 
@@ -76,11 +72,11 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 }
 ```
 
-同様に、この[エラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling#ベンダー接頭辞)は、古い CSS コードベースが、古い{{glossary("Vendor_prefix", "ベンダー接頭辞付き")}}機能が対応できなくなったとしても、動作し続けることを保証します。ベンダー接頭辞はもう一般的には使用されていませんが、ベンダー接頭辞のプロパティや値を記載する必要がある場合は、標準値の前に接頭辞つきの値を宣言し、対応している場合に新しい値が代替値を上書きするようにしてください。
+同様に、この[エラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling#ベンダー接頭辞)は、古い CSS コードベースが、古い{{glossary("Vendor_Prefix", "ベンダー接頭辞付き")}}機能が対応できなくなったとしても、動作し続けることを保証します。ベンダー接頭辞はもう一般的には使用されていませんが、ベンダー接頭辞のプロパティや値を記載する必要がある場合は、標準値の前に接頭辞つきの値を宣言し、対応している場合に新しい値が代替値を上書きするようにしてください。
 
 ### 新しいセレクターの使用
 
-すべてのブラウザーで対応していない新しいセレクターを記載することは、より慎重に処理する必要があります。セレクターのカンマ区切りリスト内の[セレクターが不正](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#セレクターの対応)な場合、スタイルブロック全体が無視されます。
+すべてのブラウザーで対応していない新しいセレクターを記載することは、より慎重に処理する必要があります。セレクターのカンマ区切りリスト内の[セレクターが不正](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#セレクターの対応)な場合、スタイルブロック全体が無視されます。
 
 ブラウザーの対応していないベンダー接頭辞付きの[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)や新しい[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)を使用する場合は、 {{cssxref(":is", ":is()")}} や {{cssxref(":where", ":where()")}} を使用して寛容なセレクターリスト内に接頭辞の値を記載して、セレクターブロック全体が[不正で無視されないように](/ja/docs/Web/CSS/Selector_list#無効なセレクターリスト)してください。
 
@@ -149,19 +145,17 @@ CSS 仕様書には、レイアウトメソッドのような 2 つの類似し�
 
 ## 古いブラウザーをテストする
 
-1 つの方法は、[ブラウザー横断テスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)のモジュールに詳述されているように、Sauce Labs のようなオンラインテストツールを使うことです。
+1 つの方法は、[ブラウザー横断テスト](/ja/docs/Learn_web_development/Extensions/Testing)のモジュールに詳述されているように、Sauce Labs のようなオンラインテストツールを使うことです。
 
 ## まとめ
 
 これで、古いブラウザーに代替 CSS を提供し、新しい機能を自信を持ってテストするための知識を持ちました。これで、新しいテクニックを自信を持って使用することができます。
 
-これで CSS レイアウトに関する記事を読み終えていると思いますので、このモジュールのアセスメント、[基本的なレイアウトの理解度](/ja/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)で理解度を試す時になりました。
+これで CSS レイアウトに関する記事を読み終えていると思いますので、このモジュールのアセスメント、[基本的なレイアウトの理解度](/ja/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension)で理解度を試す時になりました。
 
 ## 関連情報
 
-- [`@supports`](/ja/docs/Web/CSS/@supports) at-rule
+- [`@supports`](/ja/docs/Web/CSS/@supports) アットルール
 - [CSS アットルール](/ja/docs/Web/CSS/At-rule)
 - [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
-
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
