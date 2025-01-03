@@ -11,7 +11,7 @@ l10n:
 
 此事件将在以下情况下触发：同一文档导航（例如 {{domxref("Navigation.back", "back()")}} 或 {{domxref("Navigation.traverseTo", "traverseTo()")}}）、替换（即 {{domxref("Navigation.navigate", "navigate()")}} 调用，其中 `history` 设置为 `replace`），或其他更改条目状态的调用（例如 {{domxref("Navigation.updateCurrentEntry", "updateCurrentEntry()")}}，或{{domxref("History API", "历史记录 API", "", "nocode")}} 的 {{domxref("History.replaceState()")}}）。
 
-此事件在导航提交后触发，这意味着可见 URL 已更改，并且已发生 {{domxref("NavigationHistoryEntry")}} 更新。它对于从使用较旧的 API 功能（如 {{domxref("Window/hashchange_event", "hashchange")}} 或 {{domxref("Window/popstate_event", "popstate")}} 事件）迁移非常有用。
+此事件在导航提交后触发，这意味着可见 URL 已更改，并且已发生 {{domxref("NavigationHistoryEntry")}} 更新。它对于从使用较旧的 API 特性（如 {{domxref("Window/hashchange_event", "hashchange")}} 或 {{domxref("Window/popstate_event", "popstate")}} 事件）迁移非常有用。
 
 {{InheritanceDiagram}}
 
