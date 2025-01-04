@@ -155,7 +155,7 @@ const func2 = (x, y) => {
 
 ```js-nolint example-bad
 const func = () => { foo: 1 };
-// func()를 호출하면 정의되지 않은 값이 반환됩니다!
+// func()를 호출하면 정의되지 않은 값이 반환됩니다.
 
 const func2 = () => { foo: function () {} };
 // SyntaxError: function statement requires a name
