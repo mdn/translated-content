@@ -625,10 +625,6 @@
     "modified": "2019-03-23T22:57:17.449Z",
     "contributors": ["loella16", "davidgourde", "vanz", "Goofy", "htindon"]
   },
-  "Glossary/DOS_attack": {
-    "modified": "2019-03-23T22:38:58.117Z",
-    "contributors": ["xdelatour"]
-  },
   "Glossary/DTMF": {
     "modified": "2019-03-23T22:03:28.745Z",
     "contributors": ["loella16"]
@@ -2121,7 +2117,7 @@
     "modified": "2019-03-23T22:03:21.908Z",
     "contributors": ["loella16"]
   },
-  "Learn": {
+  "Learn_web_development": {
     "modified": "2020-10-08T14:43:04.373Z",
     "contributors": [
       "geraldventadour",
@@ -2155,7 +2151,7 @@
       "maxperchus"
     ]
   },
-  "Learn/Accessibility": {
+  "Learn_web_development/Core/Accessibility": {
     "modified": "2020-07-16T22:39:56.923Z",
     "contributors": [
       "smeden-lod",
@@ -2165,15 +2161,15 @@
       "Steph"
     ]
   },
-  "Learn/Accessibility/Accessibility_troubleshooting": {
+  "Learn_web_development/Core/Accessibility/Accessibility_troubleshooting": {
     "modified": "2020-07-16T22:40:35.382Z",
     "contributors": ["dragon38800"]
   },
-  "Learn/Accessibility/CSS_and_JavaScript": {
+  "Learn_web_development/Core/Accessibility/CSS_and_JavaScript": {
     "modified": "2020-07-16T22:40:16.805Z",
     "contributors": ["smeden-lod", "JNa0", "dragon38800"]
   },
-  "Learn/Accessibility/HTML": {
+  "Learn_web_development/Core/Accessibility/HTML": {
     "modified": "2020-11-16T16:49:01.676Z",
     "contributors": [
       "Mozinet",
@@ -2186,19 +2182,23 @@
       "tonybengue"
     ]
   },
-  "Learn/Accessibility/Mobile": {
+  "Learn_web_development/Core/Accessibility/Mobile": {
     "modified": "2020-07-16T22:40:29.992Z",
     "contributors": ["dragon38800"]
   },
-  "Learn/Accessibility/Multimedia": {
+  "Learn_web_development/Core/Accessibility/Multimedia": {
     "modified": "2020-07-16T22:40:26.301Z",
     "contributors": ["dragon38800"]
   },
-  "Learn/Accessibility/WAI-ARIA_basics": {
+  "Learn_web_development/Core/Accessibility/Tooling": {
+    "modified": "2020-07-16T22:39:16.445Z",
+    "contributors": ["Dralyab", "Azyme"]
+  },
+  "Learn_web_development/Core/Accessibility/WAI-ARIA_basics": {
     "modified": "2020-07-16T22:40:21.563Z",
     "contributors": ["JNa0", "dragon38800"]
   },
-  "Learn/Accessibility/What_is_accessibility": {
+  "Learn_web_development/Core/Accessibility/What_is_accessibility": {
     "modified": "2020-08-21T07:34:09.191Z",
     "contributors": [
       "geoffctn",
@@ -2208,79 +2208,508 @@
       "tonybengue"
     ]
   },
-  "Learn/CSS": {
-    "modified": "2020-10-08T16:01:55.051Z",
+  "Learn_web_development/Core/CSS_layout": {
+    "modified": "2020-07-16T22:26:30.167Z",
+    "contributors": ["Anonymous", "manuilambert", "Dralyab", "tonybengue"]
+  },
+  "Learn_web_development/Core/CSS_layout/Flexbox": {
+    "modified": "2020-07-16T22:26:52.633Z",
+    "contributors": ["Anonymous", "interfacteur", "_julien_", "Dralyab"]
+  },
+  "Learn_web_development/Core/CSS_layout/Flexbox_skills": {
+    "modified": "2020-07-16T22:27:33.960Z",
+    "contributors": ["Anonymous"]
+  },
+  "Learn_web_development/Core/CSS_layout/Floats": {
+    "modified": "2020-07-16T22:26:37.621Z",
+    "contributors": ["Anonymous", "Dralyab", "Alan_Braut"]
+  },
+  "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension": {
+    "modified": "2020-07-16T22:27:24.245Z",
+    "contributors": ["tristantheb", "junior-batilat"]
+  },
+  "Learn_web_development/Core/CSS_layout/Grids": {
+    "modified": "2020-07-16T22:26:59.113Z",
+    "contributors": ["Anonymous", "Dralyab"]
+  },
+  "Learn_web_development/Core/CSS_layout/Introduction": {
+    "modified": "2020-07-16T22:27:04.363Z",
+    "contributors": ["Anonymous", "Dralyab", "creposucre", "Alan_Braut"]
+  },
+  "Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods": {
+    "modified": "2020-07-16T22:27:13.887Z",
+    "contributors": ["Dralyab"]
+  },
+  "Learn_web_development/Core/CSS_layout/Multiple-column_Layout": {
+    "modified": "2020-07-16T22:27:09.504Z",
+    "contributors": ["Dralyab"]
+  },
+  "Learn_web_development/Core/CSS_layout/Positioning": {
+    "modified": "2020-11-08T08:33:26.641Z",
+    "contributors": ["CCR-G", "Anonymous", "Dralyab", "Alan_Braut"]
+  },
+  "Learn_web_development/Core/CSS_layout/Practical_positioning_examples": {
+    "modified": "2020-07-16T22:26:48.222Z",
+    "contributors": ["Anonymous"]
+  },
+  "Learn_web_development/Core/CSS_layout/Responsive_Design": {
+    "modified": "2020-07-16T22:27:27.744Z",
+    "contributors": ["xavier.boisnon", "tristantheb", "Anonymous"]
+  },
+  "Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers": {
+    "modified": "2020-07-16T22:27:18.222Z",
+    "contributors": ["tristantheb"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries": {
+    "modified": "2020-09-15T15:45:33.414Z",
+    "contributors": ["JNa0", "Voulto", "CodeDotJS"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_getting_started": {
+    "modified": "2020-11-21T12:01:48.747Z",
+    "contributors": ["tonybengue", "florestalclaudel878"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning": {
+    "modified": "2020-11-19T13:18:09.787Z",
+    "contributors": ["tonybengue"]
+  },
+  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
+    "modified": "2020-10-03T00:57:04.281Z",
+    "contributors": ["duduindo", "Anonymous"]
+  },
+  "Learn_web_development/Core/Scripting": {
+    "modified": "2020-07-16T22:31:07.626Z",
     "contributors": [
-      "geraldventadour",
-      "BAHLOUL_Farouk",
-      "nherbaut",
-      "Dralyab",
+      "smeden-lod",
+      "tonybengue",
       "SphinxKnight",
-      "dattaz",
-      "Oliviermoz"
+      "benjaminlepine",
+      "loella16",
+      "daufinsyd"
     ]
   },
-  "Learn/CSS/Building_blocks": {
+  "Learn_web_development/Core/Scripting/A_first_splash": {
+    "modified": "2020-07-16T22:30:17.669Z",
+    "contributors": [
+      "smeden-lod",
+      "Floles",
+      "Eric-ciccotti",
+      "clamb",
+      "Dralyab",
+      "tonybengue",
+      "jumperparis",
+      "Merkrynis",
+      "withedouard",
+      "moziyin76"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Arrays": {
+    "modified": "2020-07-16T22:30:53.940Z",
+    "contributors": ["smeden-lod", "tavax", "Dralyab", "tonybengue"]
+  },
+  "Learn_web_development/Core/Scripting/Build_your_own_function": {
+    "modified": "2020-07-16T22:31:29.138Z",
+    "contributors": [
+      "smeden-lod",
+      "EmerikC",
+      "Chaospherae",
+      "andyquin",
+      "Gasperowicz"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Conditionals": {
+    "modified": "2020-07-16T22:31:13.085Z",
+    "contributors": [
+      "Tendø",
+      "smeden-lod",
+      "Chomchaum",
+      "Eric-ciccotti",
+      "grandoc",
+      "tonybengue",
+      "Dralyab",
+      "OxyDesign"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/DOM_scripting": {
+    "modified": "2020-07-16T22:32:47.994Z",
+    "contributors": ["Vony", "a-mt"]
+  },
+  "Learn_web_development/Core/Scripting/Debugging_JavaScript": {
+    "modified": "2020-07-16T22:39:13.632Z",
+    "contributors": ["jedepaepe", "Azyme"]
+  },
+  "Learn_web_development/Core/Scripting/Event_bubbling": {
+    "modified": "2019-03-18T21:39:09.103Z",
+    "contributors": ["loella16"]
+  },
+  "Learn_web_development/Core/Scripting/Events": {
+    "modified": "2020-07-16T22:31:37.886Z",
+    "contributors": ["Chaospherae", "bubzy34", "tonybengue"]
+  },
+  "Learn_web_development/Core/Scripting/Functions": {
+    "modified": "2020-07-16T22:31:24.630Z",
+    "contributors": [
+      "Voltariuss",
+      "smeden-lod",
+      "vacarme",
+      "Mania",
+      "bubzy34",
+      "tonybengue"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Image_gallery": {
+    "modified": "2020-07-16T22:31:43.231Z",
+    "contributors": [
+      "tristantheb",
+      "Chaospherae",
+      "Jcninho87",
+      "SphinxKnight",
+      "tonybengue"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/JSON": {
+    "modified": "2020-07-16T22:32:25.278Z",
+    "contributors": [
+      "smeden-lod",
+      "FloppyJunior",
+      "ThCarrere",
+      "newick",
+      "manuwhat",
+      "sebastien_colbe",
+      "darthyoh"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Loops": {
+    "modified": "2020-07-16T22:31:19.091Z",
+    "contributors": [
+      "JNa0",
+      "baslumol",
+      "Eric-ciccotti",
+      "andyquin",
+      "ThCarrere",
+      "bubzy34",
+      "tonybengue",
+      "joan38",
+      "Abrams"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Math": {
+    "modified": "2020-10-27T06:47:01.734Z",
+    "contributors": [
+      "chuck2kill",
+      "Chomchaum",
+      "Jim-Arby",
+      "grandoc",
+      "Dralyab",
+      "tonybengue"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Network_requests": {
+    "modified": "2020-07-16T22:32:57.712Z",
+    "contributors": [
+      "nrdAio",
+      "smeden-lod",
+      "neytsumi",
+      "CcelestinC",
+      "BigBigDoudou",
+      "a-mt"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Object_basics": {
+    "modified": "2020-09-18T09:37:24.602Z",
+    "contributors": [
+      "GDFtj",
+      "FloppyJunior",
+      "franssu",
+      "grandoc",
+      "spike008t",
+      "srimko",
+      "LDCL",
+      "Halkeand",
+      "SphinxKnight",
+      "mouffy"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Return_values": {
+    "modified": "2020-07-16T22:31:33.181Z",
+    "contributors": ["Chaospherae", "andyquin", "tonybengue", "farantDEV"]
+  },
+  "Learn_web_development/Core/Scripting/Silly_story_generator": {
+    "modified": "2020-07-16T22:31:01.217Z",
+    "contributors": ["smeden-lod", "daftaupe", "Opsylac"]
+  },
+  "Learn_web_development/Core/Scripting/Strings": {
+    "modified": "2020-07-16T22:30:39.299Z",
+    "contributors": [
+      "smeden-lod",
+      "Jim-Arby",
+      "goofy_mdn",
+      "grandoc",
+      "Dralyab",
+      "be-math",
+      "tonybengue"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/Test_your_skills:_Arrays": {
+    "modified": "2020-10-17T18:40:31.138Z",
+    "contributors": ["tonybengue"]
+  },
+  "Learn_web_development/Core/Scripting/Useful_string_methods": {
+    "modified": "2020-07-16T22:30:46.814Z",
+    "contributors": ["smeden-lod", "Dralyab", "Iwazaru", "tonybengue"]
+  },
+  "Learn_web_development/Core/Scripting/Variables": {
+    "modified": "2020-07-16T22:29:58.969Z",
+    "contributors": [
+      "AntoineJT",
+      "innocenzi",
+      "smeden-lod",
+      "chrisdavidmills",
+      "Jim-Arby",
+      "Jumper754",
+      "Eric-ciccotti",
+      "grandoc",
+      "Dralyab",
+      "tonybengue"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/What_is_JavaScript": {
+    "modified": "2020-07-16T22:30:07.337Z",
+    "contributors": [
+      "smeden-lod",
+      "ludivinepoussier",
+      "chrisdavidmills",
+      "SphinxKnight",
+      "wkz3w59",
+      "abvll",
+      "Kinskikick",
+      "Eric-ciccotti",
+      "clamb",
+      "Dralyab",
+      "codingk8",
+      "TheStarrK",
+      "tonybengue",
+      "Idlus"
+    ]
+  },
+  "Learn_web_development/Core/Scripting/What_went_wrong": {
+    "modified": "2020-07-16T22:30:32.918Z",
+    "contributors": [
+      "smeden-lod",
+      "clamb",
+      "codeFighting",
+      "Dralyab",
+      "tonybengue",
+      "macjpster"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content": {
+    "modified": "2020-07-16T22:22:17.105Z",
+    "contributors": [
+      "Th0m4",
+      "Dralyab",
+      "zakaila",
+      "Ilphrin",
+      "interfacteur",
+      "Goofy",
+      "jlagneau",
+      "gillou58",
+      "SphinxKnight",
+      "DamienBertrand"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Advanced_text_features": {
+    "modified": "2020-11-29T07:50:37.082Z",
+    "contributors": ["Kinskikick", "Dralyab", "zakaila", "BartGui", "Goofy"]
+  },
+  "Learn_web_development/Core/Structuring_content/Basic_HTML_syntax": {
+    "modified": "2020-07-16T22:23:00.212Z",
+    "contributors": [
+      "aSeches",
+      "Chomchaum",
+      "Dralyab",
+      "bastosh",
+      "Lizie",
+      "KhalilSnaake"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Creating_links": {
+    "modified": "2020-11-27T09:49:15.655Z",
+    "contributors": [
+      "Chomchaum",
+      "goofy_mdn",
+      "Dralyab",
+      "_kud",
+      "NemoNobobyPersonne",
+      "zakaila",
+      "Ilphrin"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Debugging_HTML": {
+    "modified": "2020-07-16T22:24:12.781Z",
+    "contributors": ["chrisdavidmills", "LeMilitaire", "Dralyab", "Ilphrin"]
+  },
+  "Learn_web_development/Core/Structuring_content/General_embedding_technologies": {
+    "modified": "2020-07-16T22:25:01.620Z",
+    "contributors": ["Dralyab"]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_images": {
+    "modified": "2020-07-16T22:24:44.917Z",
+    "contributors": [
+      "BAHLOUL_Farouk",
+      "didierbroska",
+      "Chomchaum",
+      "daftaupe",
+      "zakaila",
+      "Dralyab"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_table_basics": {
+    "modified": "2020-12-13T07:01:09.726Z",
+    "contributors": [
+      "Kinskikick",
+      "ThCarrere",
+      "Dralyab",
+      "loella16",
+      "tonybengue"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/HTML_video_and_audio": {
+    "modified": "2020-07-16T22:24:52.741Z",
+    "contributors": ["Chomchaum", "LeMilitaire", "Dralyab", "zakaila"]
+  },
+  "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs": {
+    "modified": "2020-07-16T22:23:32.043Z",
+    "contributors": [
+      "aSeches",
+      "Chomchaum",
+      "LeMilitaire",
+      "Dralyab",
+      "gnoyaze",
+      "clamb",
+      "Ilphrin"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML": {
+    "modified": "2020-07-16T22:24:39.978Z",
+    "contributors": ["brundozer", "Dralyab", "carnival187", "SphinxKnight"]
+  },
+  "Learn_web_development/Core/Structuring_content/Marking_up_a_letter": {
+    "modified": "2020-12-05T16:03:44.361Z",
+    "contributors": [
+      "Kinskikick",
+      "chrisdavidmills",
+      "LeMilitaire",
+      "Dralyab",
+      "Ilphrin"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Mozilla_splash_page": {
+    "modified": "2020-07-16T22:25:07.018Z",
+    "contributors": ["zakaila"]
+  },
+  "Learn_web_development/Core/Structuring_content/Planet_data_table": {
+    "modified": "2020-07-16T22:25:29.724Z",
+    "contributors": ["Dralyab", "loella16", "tonybengue"]
+  },
+  "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content": {
+    "modified": "2020-07-16T22:24:18.719Z",
+    "contributors": ["LeMilitaire", "Dralyab", "Arkelis", "Ilphrin"]
+  },
+  "Learn_web_development/Core/Structuring_content/Structuring_documents": {
+    "modified": "2020-07-16T22:24:04.214Z",
+    "contributors": [
+      "tonybengue",
+      "fredckl",
+      "Dralyab",
+      "AntoineJacquet",
+      "olschneider",
+      "SamuChan",
+      "Ilphrin"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Table_accessibility": {
+    "modified": "2020-07-16T22:25:25.886Z",
+    "contributors": ["Dralyab", "loella16", "tonybengue"]
+  },
+  "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
+    "modified": "2020-11-17T15:11:05.138Z",
+    "contributors": [
+      "gauthier.delaserraz",
+      "lord128",
+      "Chomchaum",
+      "Dralyab",
+      "tonybengue",
+      "bastosh",
+      "loella16",
+      "Pethrow",
+      "KhalilSnaake"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics": {
     "modified": "2020-09-16T07:14:02.390Z",
     "contributors": ["Voulto", "smeden-lod", "AxelGiauffret", "chrisdavidmills"]
   },
-  "Learn/CSS/Building_blocks/A_cool_looking_box": {
-    "modified": "2020-07-16T22:28:26.748Z",
-    "contributors": ["Dralyab"]
-  },
-  "Learn/CSS/Building_blocks/Advanced_styling_effects": {
+  "Learn_web_development/Core/Styling_basics/Advanced_styling_effects": {
     "modified": "2020-07-16T22:28:21.276Z",
     "contributors": ["chrisdavidmills", "Dralyab"]
   },
-  "Learn/CSS/Building_blocks/Backgrounds_and_borders": {
-    "modified": "2020-10-12T10:29:46.948Z",
-    "contributors": ["chuck2kill", "pauline.chalus", "smeden-lod"]
-  },
-  "Learn/CSS/Building_blocks/Cascade_and_inheritance": {
-    "modified": "2020-10-17T12:41:21.832Z",
-    "contributors": ["geraldventadour", "smeden-lod"]
-  },
-  "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper": {
-    "modified": "2020-07-16T22:28:24.684Z",
-    "contributors": ["LeMilitaire", "Dralyab"]
-  },
-  "Learn/CSS/Building_blocks/Debugging_CSS": {
-    "modified": "2020-10-15T22:35:18.278Z",
-    "contributors": ["chuck2kill"]
-  },
-  "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension": {
-    "modified": "2020-07-16T22:28:12.063Z",
-    "contributors": ["Dralyab"]
-  },
-  "Learn/CSS/Building_blocks/Handling_different_text_directions": {
-    "modified": "2020-10-12T12:01:46.438Z",
-    "contributors": ["chuck2kill"]
-  },
-  "Learn/CSS/Building_blocks/Overflowing_content": {
-    "modified": "2020-10-13T05:02:31.498Z",
-    "contributors": ["chuck2kill", "JTR1103"]
-  },
-  "Learn/CSS/Building_blocks/Selectors": {
-    "modified": "2020-10-09T07:28:41.371Z",
-    "contributors": ["chuck2kill", "smeden-lod", "Zouayni"]
-  },
-  "Learn/CSS/Building_blocks/Selectors/Attribute_selectors": {
+  "Learn_web_development/Core/Styling_basics/Attribute_selectors": {
     "modified": "2020-07-16T22:28:49.665Z",
     "contributors": ["smeden-lod"]
   },
-  "Learn/CSS/Building_blocks/Selectors/Combinators": {
+  "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders": {
+    "modified": "2020-10-12T10:29:46.948Z",
+    "contributors": ["chuck2kill", "pauline.chalus", "smeden-lod"]
+  },
+  "Learn_web_development/Core/Styling_basics/Basic_selectors": {
+    "modified": "2020-10-09T07:28:41.371Z",
+    "contributors": ["chuck2kill", "smeden-lod", "Zouayni"]
+  },
+  "Learn_web_development/Core/Styling_basics/Box_model": {
+    "modified": "2020-10-31T20:40:32.362Z",
+    "contributors": ["Romain04", "devscipline", "cgz141413", "vvvaleee"]
+  },
+  "Learn_web_development/Core/Styling_basics/Combinators": {
     "modified": "2020-12-07T09:25:08.631Z",
     "contributors": ["francoistm", "chuck2kill"]
   },
-  "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements": {
+  "Learn_web_development/Core/Styling_basics/Cool-looking_box": {
+    "modified": "2020-07-16T22:28:26.748Z",
+    "contributors": ["Dralyab"]
+  },
+  "Learn_web_development/Core/Styling_basics/Debugging_CSS": {
+    "modified": "2020-10-15T22:35:18.278Z",
+    "contributors": ["chuck2kill"]
+  },
+  "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper": {
+    "modified": "2020-07-16T22:28:24.684Z",
+    "contributors": ["LeMilitaire", "Dralyab"]
+  },
+  "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension": {
+    "modified": "2020-07-16T22:28:12.063Z",
+    "contributors": ["Dralyab"]
+  },
+  "Learn_web_development/Core/Styling_basics/Getting_started": {
+    "modified": "2020-10-20T05:38:33.608Z",
+    "contributors": ["SebastienLatouche", "smeden-lod"]
+  },
+  "Learn_web_development/Core/Styling_basics/Handling_conflicts": {
+    "modified": "2020-10-17T12:41:21.832Z",
+    "contributors": ["geraldventadour", "smeden-lod"]
+  },
+  "Learn_web_development/Core/Styling_basics/Handling_different_text_directions": {
+    "modified": "2020-10-12T12:01:46.438Z",
+    "contributors": ["chuck2kill"]
+  },
+  "Learn_web_development/Core/Styling_basics/Overflow": {
+    "modified": "2020-10-13T05:02:31.498Z",
+    "contributors": ["chuck2kill", "JTR1103"]
+  },
+  "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements": {
     "modified": "2020-10-17T16:55:55.753Z",
     "contributors": ["geraldventadour", "chuck2kill", "time132", "smeden-lod"]
   },
-  "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors": {
-    "modified": "2020-07-16T22:28:39.961Z",
-    "contributors": ["smeden-lod"]
-  },
-  "Learn/CSS/Building_blocks/Sizing_items_in_CSS": {
+  "Learn_web_development/Core/Styling_basics/Sizing": {
     "modified": "2020-10-14T08:26:17.339Z",
     "contributors": [
       "chuck2kill",
@@ -2290,7 +2719,11 @@
       "smeden-lod"
     ]
   },
-  "Learn/CSS/Building_blocks/Styling_tables": {
+  "Learn_web_development/Core/Styling_basics/Styling_a_bio_page": {
+    "modified": "2020-07-16T22:28:03.815Z",
+    "contributors": ["SphinxKnight", "smeden-lod"]
+  },
+  "Learn_web_development/Core/Styling_basics/Tables": {
     "modified": "2020-07-16T22:28:15.930Z",
     "contributors": [
       "smeden-lod",
@@ -2300,238 +2733,126 @@
       "Dralyab"
     ]
   },
-  "Learn/CSS/Building_blocks/The_box_model": {
-    "modified": "2020-10-31T20:40:32.362Z",
-    "contributors": ["Romain04", "devscipline", "cgz141413", "vvvaleee"]
-  },
-  "Learn/CSS/Building_blocks/Values_and_units": {
+  "Learn_web_development/Core/Styling_basics/Values_and_units": {
     "modified": "2020-10-13T07:02:20.601Z",
     "contributors": ["chuck2kill"]
   },
-  "Learn/CSS/CSS_layout": {
-    "modified": "2020-07-16T22:26:30.167Z",
-    "contributors": ["Anonymous", "manuilambert", "Dralyab", "tonybengue"]
-  },
-  "Learn/CSS/CSS_layout/Flexbox": {
-    "modified": "2020-07-16T22:26:52.633Z",
-    "contributors": ["Anonymous", "interfacteur", "_julien_", "Dralyab"]
-  },
-  "Learn/CSS/CSS_layout/Flexbox_skills": {
-    "modified": "2020-07-16T22:27:33.960Z",
-    "contributors": ["Anonymous"]
-  },
-  "Learn/CSS/CSS_layout/Floats": {
-    "modified": "2020-07-16T22:26:37.621Z",
-    "contributors": ["Anonymous", "Dralyab", "Alan_Braut"]
-  },
-  "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension": {
-    "modified": "2020-07-16T22:27:24.245Z",
-    "contributors": ["tristantheb", "junior-batilat"]
-  },
-  "Learn/CSS/CSS_layout/Grids": {
-    "modified": "2020-07-16T22:26:59.113Z",
-    "contributors": ["Anonymous", "Dralyab"]
-  },
-  "Learn/CSS/CSS_layout/Introduction": {
-    "modified": "2020-07-16T22:27:04.363Z",
-    "contributors": ["Anonymous", "Dralyab", "creposucre", "Alan_Braut"]
-  },
-  "Learn/CSS/CSS_layout/Legacy_Layout_Methods": {
-    "modified": "2020-07-16T22:27:13.887Z",
-    "contributors": ["Dralyab"]
-  },
-  "Learn/CSS/CSS_layout/Multiple-column_Layout": {
-    "modified": "2020-07-16T22:27:09.504Z",
-    "contributors": ["Dralyab"]
-  },
-  "Learn/CSS/CSS_layout/Normal_Flow": {
-    "modified": "2020-07-16T22:27:21.075Z",
-    "contributors": ["Anonymous", "Dralyab"]
-  },
-  "Learn/CSS/CSS_layout/Positioning": {
-    "modified": "2020-11-08T08:33:26.641Z",
-    "contributors": ["CCR-G", "Anonymous", "Dralyab", "Alan_Braut"]
-  },
-  "Learn/CSS/CSS_layout/Practical_positioning_examples": {
-    "modified": "2020-07-16T22:26:48.222Z",
-    "contributors": ["Anonymous"]
-  },
-  "Learn/CSS/CSS_layout/Responsive_Design": {
-    "modified": "2020-07-16T22:27:27.744Z",
-    "contributors": ["xavier.boisnon", "tristantheb", "Anonymous"]
-  },
-  "Learn/CSS/CSS_layout/Supporting_Older_Browsers": {
-    "modified": "2020-07-16T22:27:18.222Z",
-    "contributors": ["tristantheb"]
-  },
-  "Learn/CSS/First_steps": {
-    "modified": "2020-10-08T12:02:37.318Z",
-    "contributors": [
-      "geraldventadour",
-      "ylerjen",
-      "smeden-lod",
-      "nherbaut",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/CSS/First_steps/Getting_started": {
-    "modified": "2020-10-20T05:38:33.608Z",
-    "contributors": ["SebastienLatouche", "smeden-lod"]
-  },
-  "Learn/CSS/First_steps/How_CSS_is_structured": {
-    "modified": "2020-11-27T19:02:59.051Z",
-    "contributors": ["Chomchaum", "smeden-lod", "mrbbp"]
-  },
-  "Learn/CSS/First_steps/How_CSS_works": {
+  "Learn_web_development/Core/Styling_basics/What_is_CSS": {
     "modified": "2020-07-16T22:28:00.239Z",
     "contributors": ["smeden-lod"]
   },
-  "Learn/CSS/First_steps/Styling_a_biography_page": {
-    "modified": "2020-07-16T22:28:03.815Z",
-    "contributors": ["SphinxKnight", "smeden-lod"]
-  },
-  "Learn/CSS/First_steps/What_is_CSS": {
-    "modified": "2020-10-15T22:25:55.680Z",
-    "contributors": ["geraldventadour", "SphinxKnight", "smeden-lod"]
-  },
-  "Learn/CSS/Howto": {
-    "modified": "2020-07-16T22:25:42.247Z",
-    "contributors": ["loella16", "SphinxKnight"]
-  },
-  "Learn/CSS/Howto/CSS_FAQ": {
-    "modified": "2020-07-16T22:25:44.957Z",
-    "contributors": [
-      "SphinxKnight",
-      "PetiPandaRou",
-      "MatthieuHa",
-      "teoli",
-      "laurent-thuy"
-    ]
-  },
-  "Learn/CSS/Howto/Create_fancy_boxes": {
-    "modified": "2020-07-16T22:25:49.335Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/CSS/Howto/Generated_content": {
-    "modified": "2020-07-16T22:25:47.662Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "grandoc",
-      "Mgjbot",
-      "Verruckt",
-      "BenoitL"
-    ]
-  },
-  "Learn/CSS/Styling_text": {
+  "Learn_web_development/Core/Text_styling": {
     "modified": "2020-07-16T22:25:57.902Z",
     "contributors": ["Dralyab", "zakaila", "loella16", "chrisdavidmills"]
   },
-  "Learn/CSS/Styling_text/Fundamentals": {
+  "Learn_web_development/Core/Text_styling/Fundamentals": {
     "modified": "2020-07-16T22:26:05.430Z",
     "contributors": ["Dralyab", "loella16", "Oliv"]
   },
-  "Learn/CSS/Styling_text/Styling_links": {
+  "Learn_web_development/Core/Text_styling/Styling_links": {
     "modified": "2020-11-15T18:10:36.319Z",
     "contributors": ["NemoNobobyPersonne", "Dralyab"]
   },
-  "Learn/CSS/Styling_text/Styling_lists": {
+  "Learn_web_development/Core/Text_styling/Styling_lists": {
     "modified": "2020-07-16T22:26:12.463Z",
     "contributors": ["Dralyab", "loella16", "BOBY2017"]
   },
-  "Learn/CSS/Styling_text/Typesetting_a_homepage": {
+  "Learn_web_development/Core/Text_styling/Typesetting_a_homepage": {
     "modified": "2020-07-16T22:26:26.346Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/CSS/Styling_text/Web_fonts": {
+  "Learn_web_development/Core/Text_styling/Web_fonts": {
     "modified": "2020-07-16T22:26:23.494Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Common_questions": {
-    "modified": "2020-08-07T08:34:09.122Z",
-    "contributors": ["ramakuzhou", "As-Sinder", "JeffD", "Willyntobila"]
+  "Learn_web_development/Core/Version_control": {
+    "modified": "2020-09-09T16:10:57.840Z",
+    "contributors": ["JNa0"]
   },
-  "Learn/Common_questions/Design_and_accessibility/Common_web_layouts": {
-    "modified": "2020-07-16T22:35:42.406Z",
-    "contributors": ["SphinxKnight", "Goofy", "ValPom"]
-  },
-  "Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users": {
-    "modified": "2020-07-16T22:35:50.809Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Design_and_accessibility/Thinking_before_coding": {
-    "modified": "2020-07-16T22:35:34.202Z",
-    "contributors": ["SphinxKnight", "rtabusse"]
-  },
-  "Learn/Common_questions/Design_and_accessibility/What_is_accessibility": {
-    "modified": "2020-07-16T22:35:46.786Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Available_text_editors": {
-    "modified": "2020-07-16T22:35:48.990Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
-    "modified": "2020-07-16T22:35:50.068Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/How_much_does_it_cost": {
-    "modified": "2020-07-16T22:35:45.519Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server": {
-    "modified": "2020-07-16T22:35:41.575Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:51.735Z",
-    "contributors": ["tonybengue", "SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
-    "modified": "2020-07-16T22:35:47.424Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/What_software_do_I_need": {
-    "modified": "2020-07-16T22:35:33.023Z",
-    "contributors": ["JNa0", "SphinxKnight"]
-  },
-  "Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server": {
-    "modified": "2020-07-16T22:35:52.861Z",
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects": {
+    "modified": "2020-07-16T22:31:49.517Z",
     "contributors": [
-      "Duth",
       "smeden-lod",
-      "ThCarrere",
-      "Zinavolia",
-      "fleuronvilik",
-      "TheStarrK",
-      "Albynton"
+      "tonybengue",
+      "elWombator",
+      "manuwhat",
+      "loella16",
+      "breizhrunner",
+      "chrisdavidmills"
     ]
   },
-  "Learn/Common_questions/Web_mechanics/How_does_the_Internet_work": {
-    "modified": "2020-07-16T22:35:36.757Z",
-    "contributors": ["TheStarrK", "Porkepix", "SphinxKnight", "ValPom"]
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features": {
+    "modified": "2020-07-16T22:32:34.729Z",
+    "contributors": ["AkwindFr", "tonybengue"]
   },
-  "Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines": {
-    "modified": "2020-07-16T22:35:39.748Z",
-    "contributors": ["SphinxKnight", "fndiaye", "ValPom"]
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:13.707Z",
+    "contributors": [
+      "franssu",
+      "loranger32",
+      "elWombator",
+      "lobertrand",
+      "manuwhat",
+      "Yopai",
+      "AntrHaxx",
+      "MartyO256",
+      "Alpha"
+    ]
   },
-  "Learn/Common_questions/Web_mechanics/What_are_hyperlinks": {
-    "modified": "2020-07-16T22:35:43.089Z",
-    "contributors": ["SphinxKnight"]
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice": {
+    "modified": "2020-07-16T22:32:31.265Z",
+    "contributors": ["smeden-lod", "loranger32", "manuwhat"]
   },
-  "Learn/Common_questions/Web_mechanics/What_is_a_URL": {
-    "modified": "2020-07-16T22:35:29.353Z",
-    "contributors": ["clamb", "Porkepix", "SphinxKnight"]
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes": {
+    "modified": "2020-07-16T22:32:19.975Z",
+    "contributors": [
+      "grandoc",
+      "Etheonor",
+      "aSeches",
+      "zoora",
+      "Jetinho",
+      "JonGarbayo",
+      "LDCL",
+      "Alpha"
+    ]
   },
-  "Learn/Common_questions/Web_mechanics/What_is_a_domain_name": {
-    "modified": "2020-07-16T22:35:44.035Z",
-    "contributors": ["Porkepix", "SphinxKnight"]
+  "Learn_web_development/Extensions/Client-side_APIs": {
+    "modified": "2020-07-16T22:32:39.093Z",
+    "contributors": ["a-mt", "Dralyab", "bretondev"]
   },
-  "Learn/Common_questions/Web_mechanics/What_is_a_web_server": {
-    "modified": "2020-07-16T22:35:31.313Z",
-    "contributors": ["jswisher", "adupays", "LooDom", "SphinxKnight"]
+  "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage": {
+    "modified": "2020-07-16T22:33:04.752Z",
+    "contributors": ["smeden-lod", "a-mt"]
   },
-  "Learn/Forms": {
+  "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics": {
+    "modified": "2020-07-16T22:33:01.225Z",
+    "contributors": ["CcelestinC", "a-mt"]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Introduction": {
+    "modified": "2020-07-16T22:32:44.687Z",
+    "contributors": [
+      "zoora",
+      "fuentesloic",
+      "BigBigDoudou",
+      "a-mt",
+      "Dralyab",
+      "elWombator",
+      "bretondev"
+    ]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs": {
+    "modified": "2020-07-16T22:32:54.118Z",
+    "contributors": ["SphinxKnight", "a-mt"]
+  },
+  "Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs": {
+    "modified": "2020-07-16T22:32:52.122Z",
+    "contributors": ["a-mt", "Naouak"]
+  },
+  "Learn_web_development/Extensions/Client-side_tools": {
+    "modified": "2020-09-04T08:38:04.330Z",
+    "contributors": ["Voulto", "chrisdavidmills"]
+  },
+  "Learn_web_development/Extensions/Forms": {
     "modified": "2020-07-16T22:20:56.659Z",
     "contributors": [
       "BAHLOUL_Farouk",
@@ -2546,11 +2867,11 @@
       "FredB"
     ]
   },
-  "Learn/Forms/Advanced_form_styling": {
+  "Learn_web_development/Extensions/Forms/Advanced_form_styling": {
     "modified": "2020-07-16T22:21:34.205Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/Basic_native_form_controls": {
+  "Learn_web_development/Extensions/Forms/Basic_native_form_controls": {
     "modified": "2020-12-12T09:57:29.663Z",
     "contributors": [
       "Idlus",
@@ -2561,39 +2882,39 @@
       "FredB"
     ]
   },
-  "Learn/Forms/Form_validation": {
+  "Learn_web_development/Extensions/Forms/Form_validation": {
     "modified": "2020-07-16T22:21:50.526Z",
     "contributors": ["ariasuni", "Dralyab", "SphinxKnight", "HereComesJuju"]
   },
-  "Learn/Forms/HTML_forms_in_legacy_browsers": {
+  "Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers": {
     "modified": "2020-07-16T22:22:03.313Z",
     "contributors": ["Dralyab", "eli.g"]
   },
-  "Learn/Forms/How_to_build_custom_form_controls": {
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls": {
     "modified": "2020-07-16T22:21:55.892Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/How_to_build_custom_form_controls/Example_1": {
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1": {
     "modified": "2020-07-16T22:21:58.979Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/How_to_build_custom_form_controls/Example_2": {
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2": {
     "modified": "2020-07-16T22:21:59.361Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/How_to_build_custom_form_controls/Example_3": {
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3": {
     "modified": "2020-07-16T22:21:59.707Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/How_to_build_custom_form_controls/Example_4": {
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4": {
     "modified": "2020-07-16T22:22:00.018Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/How_to_build_custom_form_controls/Example_5": {
+  "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5": {
     "modified": "2020-07-16T22:22:00.342Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/How_to_structure_a_web_form": {
+  "Learn_web_development/Extensions/Forms/How_to_structure_a_web_form": {
     "modified": "2020-07-16T22:21:11.591Z",
     "contributors": [
       "Dralyab",
@@ -2604,15 +2925,11 @@
       "FredB"
     ]
   },
-  "Learn/Forms/How_to_structure_a_web_form/Example": {
+  "Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example": {
     "modified": "2020-07-16T22:21:17.064Z",
     "contributors": ["Dralyab", "elseydi", "tregagnon", "FredB"]
   },
-  "Learn/Forms/Property_compatibility_table_for_form_controls": {
-    "modified": "2020-07-16T22:21:39.980Z",
-    "contributors": ["Dralyab"]
-  },
-  "Learn/Forms/Sending_and_retrieving_form_data": {
+  "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data": {
     "modified": "2020-07-16T22:21:26.847Z",
     "contributors": [
       "Dralyab",
@@ -2624,19 +2941,19 @@
       "rebeccachaix"
     ]
   },
-  "Learn/Forms/Sending_forms_through_JavaScript": {
+  "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript": {
     "modified": "2020-07-16T22:22:01.597Z",
     "contributors": ["Dralyab"]
   },
-  "Learn/Forms/Styling_web_forms": {
+  "Learn_web_development/Extensions/Forms/Styling_web_forms": {
     "modified": "2020-07-16T22:21:30.990Z",
     "contributors": ["Dralyab", "Goofy", "tregagnon", "FredB"]
   },
-  "Learn/Forms/User_input_methods": {
+  "Learn_web_development/Extensions/Forms/User_input_methods": {
     "modified": "2019-03-23T22:00:16.721Z",
     "contributors": ["chrisdavidmills", "a-mt"]
   },
-  "Learn/Forms/Your_first_form": {
+  "Learn_web_development/Extensions/Forms/Your_first_form": {
     "modified": "2020-11-20T03:07:01.051Z",
     "contributors": [
       "SphinxKnight",
@@ -2655,41 +2972,160 @@
       "tregagnon"
     ]
   },
-  "Learn/Getting_started_with_the_web": {
-    "modified": "2020-07-16T22:33:52.213Z",
+  "Learn_web_development/Extensions/Performance": {
+    "modified": "2020-11-10T09:39:07.479Z",
+    "contributors": ["Voulto", "estelle"]
+  },
+  "Learn_web_development/Extensions/Performance/CSS": {
+    "modified": "2020-11-10T09:14:31.465Z",
+    "contributors": ["Voulto", "Romain04"]
+  },
+  "Learn_web_development/Extensions/Performance/why_web_performance": {
+    "modified": "2020-11-10T09:10:02.087Z",
+    "contributors": ["Voulto"]
+  },
+  "Learn_web_development/Extensions/Server-side": {
+    "modified": "2020-08-31T06:16:11.413Z",
     "contributors": [
-      "Melanie.Almeida",
-      "Dralyab",
-      "Hirevo",
-      "Ilphrin",
-      "loella16",
+      "Voulto",
+      "AKAsebu",
+      "aurelieg",
+      "KurtC0ba1n",
       "tonybengue",
-      "Porkepix",
-      "Aminelahlou",
-      "allan.miro",
-      "SphinxKnight",
-      "mouloudia1981",
-      "Oliviermoz",
-      "qwincy",
-      "Luejni",
-      "Goofy",
-      "maxperchus"
+      "serorl",
+      "chrisdavidmills"
     ]
   },
-  "Learn/Getting_started_with_the_web/CSS_basics": {
-    "modified": "2020-07-16T22:34:58.312Z",
+  "Learn_web_development/Extensions/Server-side/Django": {
+    "modified": "2020-07-16T22:36:32.263Z",
     "contributors": [
-      "Melanie.Almeida",
-      "Dralyab",
-      "Ilphrin",
-      "loella16",
-      "Mozinet",
-      "marie-ototoi",
-      "bl4n",
-      "SphinxKnight"
+      "biface",
+      "skyfrigate",
+      "As-Sinder",
+      "KurtC0ba1n",
+      "pierrotmagic"
     ]
   },
-  "Learn/Getting_started_with_the_web/Dealing_with_files": {
+  "Learn_web_development/Extensions/Server-side/Django/Admin_site": {
+    "modified": "2020-07-16T22:37:03.285Z",
+    "contributors": ["biface"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Forms": {
+    "modified": "2020-07-16T22:37:31.019Z",
+    "contributors": ["BrRoman", "Elbofino", "ben5962"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Generic_views": {
+    "modified": "2020-08-10T12:14:32.253Z",
+    "contributors": ["BrRoman"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Home_page": {
+    "modified": "2020-07-16T22:37:08.874Z",
+    "contributors": ["biface"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Introduction": {
+    "modified": "2020-07-16T22:36:38.887Z",
+    "contributors": [
+      "olivierdupon",
+      "edaveau",
+      "biface",
+      "As-Sinder",
+      "KurtC0ba1n"
+    ]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Models": {
+    "modified": "2020-11-15T11:16:41.925Z",
+    "contributors": ["fsaid", "Moh-Said", "biface", "skyfrigate"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Testing": {
+    "modified": "2020-07-16T22:37:36.868Z",
+    "contributors": ["BrRoman"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website": {
+    "modified": "2020-07-16T22:36:48.972Z",
+    "contributors": ["biface", "skyfrigate"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/development_environment": {
+    "modified": "2020-07-16T22:36:44.147Z",
+    "contributors": ["edaveau"]
+  },
+  "Learn_web_development/Extensions/Server-side/Django/skeleton_website": {
+    "modified": "2020-11-14T22:07:57.460Z",
+    "contributors": ["ThuringEnigma", "skyfrigate", "biface"]
+  },
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs": {
+    "modified": "2020-07-16T22:37:52.128Z",
+    "contributors": ["smeden-lod", "PhilippePerret", "Alan_Braut", "serorl"]
+  },
+  "Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction": {
+    "modified": "2020-07-16T22:38:09.613Z",
+    "contributors": [
+      "JNa0",
+      "carlyne",
+      "ThCarrere",
+      "PhilippePerret",
+      "codingk8",
+      "Raulel"
+    ]
+  },
+  "Learn_web_development/Extensions/Server-side/First_steps": {
+    "modified": "2020-07-16T22:36:08.675Z",
+    "contributors": [
+      "Etheonor",
+      "smeden-lod",
+      "SphinxKnight",
+      "JeffD",
+      "KurtC0ba1n",
+      "ayshiff",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview": {
+    "modified": "2020-07-16T22:36:19.848Z",
+    "contributors": ["smeden-lod", "houckontape", "SphinxKnight", "ThCarrere"]
+  },
+  "Learn_web_development/Extensions/Server-side/First_steps/Introduction": {
+    "modified": "2020-07-16T22:36:13.996Z",
+    "contributors": ["smeden-lod", "SphinxKnight", "ThCarrere", "a-mt"]
+  },
+  "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks": {
+    "modified": "2020-07-16T22:36:24.273Z",
+    "contributors": ["smeden-lod", "houckontape", "SphinxKnight", "Mania"]
+  },
+  "Learn_web_development/Extensions/Server-side/First_steps/Website_security": {
+    "modified": "2020-07-16T22:36:28.165Z",
+    "contributors": [
+      "smeden-lod",
+      "ThCarrere",
+      "LeMilitaire",
+      "SphinxKnight",
+      "JeffD"
+    ]
+  },
+  "Learn_web_development/Extensions/Testing": {
+    "modified": "2020-11-23T17:27:15.888Z",
+    "contributors": ["Chomchaum", "Voulto", "wbamberg", "arai"]
+  },
+  "Learn_web_development/Extensions/Testing/HTML_and_CSS": {
+    "modified": "2020-07-16T22:39:09.777Z",
+    "contributors": ["NacimHarfouche", "Azyme"]
+  },
+  "Learn_web_development/Extensions/Testing/Introduction": {
+    "modified": "2020-07-16T22:39:03.351Z",
+    "contributors": ["Azyme"]
+  },
+  "Learn_web_development/Extensions/Testing/Testing_strategies": {
+    "modified": "2020-07-16T22:39:06.838Z",
+    "contributors": ["Azyme"]
+  },
+  "Learn_web_development/Getting_started/Environment_setup/Browsing_the_web": {
+    "modified": "2020-07-16T22:35:39.748Z",
+    "contributors": ["SphinxKnight", "fndiaye", "ValPom"]
+  },
+  "Learn_web_development/Getting_started/Environment_setup/Command_line": {
+    "modified": "2020-08-07T09:37:14.013Z",
+    "contributors": ["voronamanga"]
+  },
+  "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files": {
     "modified": "2020-07-16T22:34:33.292Z",
     "contributors": [
       "StrangeRocknRoller",
@@ -2701,34 +3137,7 @@
       "SphinxKnight"
     ]
   },
-  "Learn/Getting_started_with_the_web/HTML_basics": {
-    "modified": "2020-07-16T22:34:45.216Z",
-    "contributors": [
-      "aSeches",
-      "Chomchaum",
-      "StrangeRocknRoller",
-      "Dralyab",
-      "Ilphrin",
-      "loella16",
-      "tonybengue",
-      "KhalilSnaake",
-      "SphinxKnight"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/How_the_Web_works": {
-    "modified": "2020-07-16T22:34:00.161Z",
-    "contributors": [
-      "grandoc",
-      "Keyrolus",
-      "ValentinFlamand",
-      "Dralyab",
-      "TheStarrK",
-      "Ilphrin",
-      "loella16",
-      "SphinxKnight"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+  "Learn_web_development/Getting_started/Environment_setup/Installing_software": {
     "modified": "2020-10-20T05:04:23.584Z",
     "contributors": [
       "SebastienLatouche",
@@ -2750,7 +3159,45 @@
       "Goofy"
     ]
   },
-  "Learn/Getting_started_with_the_web/JavaScript_basics": {
+  "Learn_web_development/Getting_started/Web_standards/How_the_web_works": {
+    "modified": "2020-07-16T22:34:00.161Z",
+    "contributors": [
+      "grandoc",
+      "Keyrolus",
+      "ValentinFlamand",
+      "Dralyab",
+      "TheStarrK",
+      "Ilphrin",
+      "loella16",
+      "SphinxKnight"
+    ]
+  },
+  "Learn_web_development/Getting_started/Web_standards/The_web_standards_model": {
+    "modified": "2020-11-28T07:27:01.600Z",
+    "contributors": ["Kinskikick", "Chomchaum"]
+  },
+  "Learn_web_development/Getting_started/Your_first_website": {
+    "modified": "2020-07-16T22:33:52.213Z",
+    "contributors": [
+      "Melanie.Almeida",
+      "Dralyab",
+      "Hirevo",
+      "Ilphrin",
+      "loella16",
+      "tonybengue",
+      "Porkepix",
+      "Aminelahlou",
+      "allan.miro",
+      "SphinxKnight",
+      "mouloudia1981",
+      "Oliviermoz",
+      "qwincy",
+      "Luejni",
+      "Goofy",
+      "maxperchus"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity": {
     "modified": "2020-07-16T22:35:10.257Z",
     "contributors": [
       "edspeedy",
@@ -2771,7 +3218,21 @@
       "Aelerinya"
     ]
   },
-  "Learn/Getting_started_with_the_web/Publishing_your_website": {
+  "Learn_web_development/Getting_started/Your_first_website/Creating_the_content": {
+    "modified": "2020-07-16T22:34:45.216Z",
+    "contributors": [
+      "aSeches",
+      "Chomchaum",
+      "StrangeRocknRoller",
+      "Dralyab",
+      "Ilphrin",
+      "loella16",
+      "tonybengue",
+      "KhalilSnaake",
+      "SphinxKnight"
+    ]
+  },
+  "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website": {
     "modified": "2020-07-16T22:34:25.316Z",
     "contributors": [
       "edspeedy",
@@ -2782,11 +3243,20 @@
       "SphinxKnight"
     ]
   },
-  "Learn/Getting_started_with_the_web/The_web_and_web_standards": {
-    "modified": "2020-11-28T07:27:01.600Z",
-    "contributors": ["Kinskikick", "Chomchaum"]
+  "Learn_web_development/Getting_started/Your_first_website/Styling_the_content": {
+    "modified": "2020-07-16T22:34:58.312Z",
+    "contributors": [
+      "Melanie.Almeida",
+      "Dralyab",
+      "Ilphrin",
+      "loella16",
+      "Mozinet",
+      "marie-ototoi",
+      "bl4n",
+      "SphinxKnight"
+    ]
   },
-  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
+  "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like": {
     "modified": "2020-07-16T22:34:16.258Z",
     "contributors": [
       "Dralyab",
@@ -2798,34 +3268,64 @@
       "Luejni"
     ]
   },
-  "Learn/HTML": {
-    "modified": "2020-07-16T22:22:17.105Z",
+  "Learn_web_development/Howto": {
+    "modified": "2020-08-07T08:34:09.122Z",
+    "contributors": ["ramakuzhou", "As-Sinder", "JeffD", "Willyntobila"]
+  },
+  "Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts": {
+    "modified": "2020-07-16T22:35:42.406Z",
+    "contributors": ["SphinxKnight", "Goofy", "ValPom"]
+  },
+  "Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users": {
+    "modified": "2020-07-16T22:35:50.809Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:34.202Z",
+    "contributors": ["SphinxKnight", "rtabusse"]
+  },
+  "Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility": {
+    "modified": "2020-07-16T22:35:46.786Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Solve_CSS_problems": {
+    "modified": "2020-07-16T22:25:42.247Z",
+    "contributors": ["loella16", "SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ": {
+    "modified": "2020-07-16T22:25:44.957Z",
     "contributors": [
-      "Th0m4",
-      "Dralyab",
-      "zakaila",
-      "Ilphrin",
-      "interfacteur",
-      "Goofy",
-      "jlagneau",
-      "gillou58",
       "SphinxKnight",
-      "DamienBertrand"
+      "PetiPandaRou",
+      "MatthieuHa",
+      "teoli",
+      "laurent-thuy"
     ]
   },
-  "Learn/HTML/Cheatsheet": {
-    "modified": "2020-07-16T22:22:44.025Z",
-    "contributors": ["SphinxKnight", "Goofy"]
+  "Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes": {
+    "modified": "2020-07-16T22:25:49.335Z",
+    "contributors": ["SphinxKnight"]
   },
-  "Learn/HTML/Howto": {
+  "Learn_web_development/Howto/Solve_CSS_problems/Generated_content": {
+    "modified": "2020-07-16T22:25:47.662Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "grandoc",
+      "Mgjbot",
+      "Verruckt",
+      "BenoitL"
+    ]
+  },
+  "Learn_web_development/Howto/Solve_HTML_problems": {
     "modified": "2020-07-16T22:22:28.392Z",
     "contributors": ["Goofy", "SphinxKnight", "SisteSkygge"]
   },
-  "Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image": {
+  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
     "modified": "2020-07-16T22:22:42.935Z",
     "contributors": ["SphinxKnight"]
   },
-  "Learn/HTML/Howto/Author_fast-loading_HTML_pages": {
+  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
     "modified": "2020-07-16T22:22:32.522Z",
     "contributors": [
       "tbazin",
@@ -2837,694 +3337,81 @@
       "Shz"
     ]
   },
-  "Learn/HTML/Howto/Define_terms_with_HTML": {
+  "Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet": {
+    "modified": "2020-07-16T22:22:44.025Z",
+    "contributors": ["SphinxKnight", "Goofy"]
+  },
+  "Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML": {
     "modified": "2020-07-16T22:22:41.835Z",
     "contributors": ["SphinxKnight"]
   },
-  "Learn/HTML/Howto/Use_JavaScript_within_a_webpage": {
+  "Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage": {
     "modified": "2020-07-16T22:22:40.147Z",
     "contributors": ["RomainLanz", "SphinxKnight"]
   },
-  "Learn/HTML/Howto/Use_data_attributes": {
+  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
     "modified": "2020-07-16T22:22:34.977Z",
     "contributors": ["lotfire24", "SphinxKnight", "Goofy"]
   },
-  "Learn/HTML/Introduction_to_HTML": {
-    "modified": "2020-07-16T22:22:47.142Z",
+  "Learn_web_development/Howto/Tools_and_setup/Available_text_editors": {
+    "modified": "2020-07-16T22:35:48.990Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly": {
+    "modified": "2020-07-16T22:35:50.068Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost": {
+    "modified": "2020-07-16T22:35:45.519Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server": {
+    "modified": "2020-07-16T22:35:41.575Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages": {
+    "modified": "2020-07-16T22:35:51.735Z",
+    "contributors": ["tonybengue", "SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools": {
+    "modified": "2020-07-16T22:35:47.424Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need": {
+    "modified": "2020-07-16T22:35:33.023Z",
+    "contributors": ["JNa0", "SphinxKnight"]
+  },
+  "Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server": {
+    "modified": "2020-07-16T22:35:52.861Z",
     "contributors": [
-      "bfritscher",
-      "NerOcrO",
-      "Dralyab",
-      "Ilphrin",
-      "loella16",
-      "Porkepix",
-      "Jeremie",
-      "SphinxKnight"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
-    "modified": "2020-11-29T07:50:37.082Z",
-    "contributors": ["Kinskikick", "Dralyab", "zakaila", "BartGui", "Goofy"]
-  },
-  "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks": {
-    "modified": "2020-11-27T09:49:15.655Z",
-    "contributors": [
-      "Chomchaum",
-      "goofy_mdn",
-      "Dralyab",
-      "_kud",
-      "NemoNobobyPersonne",
-      "zakaila",
-      "Ilphrin"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Debugging_HTML": {
-    "modified": "2020-07-16T22:24:12.781Z",
-    "contributors": ["chrisdavidmills", "LeMilitaire", "Dralyab", "Ilphrin"]
-  },
-  "Learn/HTML/Introduction_to_HTML/Document_and_website_structure": {
-    "modified": "2020-07-16T22:24:04.214Z",
-    "contributors": [
-      "tonybengue",
-      "fredckl",
-      "Dralyab",
-      "AntoineJacquet",
-      "olschneider",
-      "SamuChan",
-      "Ilphrin"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Getting_started": {
-    "modified": "2020-07-16T22:23:00.212Z",
-    "contributors": [
-      "aSeches",
-      "Chomchaum",
-      "Dralyab",
-      "bastosh",
-      "Lizie",
-      "KhalilSnaake"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals": {
-    "modified": "2020-07-16T22:23:32.043Z",
-    "contributors": [
-      "aSeches",
-      "Chomchaum",
-      "LeMilitaire",
-      "Dralyab",
-      "gnoyaze",
-      "clamb",
-      "Ilphrin"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter": {
-    "modified": "2020-12-05T16:03:44.361Z",
-    "contributors": [
-      "Kinskikick",
-      "chrisdavidmills",
-      "LeMilitaire",
-      "Dralyab",
-      "Ilphrin"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
-    "modified": "2020-07-16T22:24:18.719Z",
-    "contributors": ["LeMilitaire", "Dralyab", "Arkelis", "Ilphrin"]
-  },
-  "Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
-    "modified": "2020-11-17T15:11:05.138Z",
-    "contributors": [
-      "gauthier.delaserraz",
-      "lord128",
-      "Chomchaum",
-      "Dralyab",
-      "tonybengue",
-      "bastosh",
-      "loella16",
-      "Pethrow",
-      "KhalilSnaake"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding": {
-    "modified": "2020-07-16T22:24:25.278Z",
-    "contributors": [
-      "tristantheb",
-      "Dralyab",
-      "AntoineJacquet",
-      "zakaila",
-      "Ilphrin"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web": {
-    "modified": "2020-07-16T22:24:39.978Z",
-    "contributors": ["brundozer", "Dralyab", "carnival187", "SphinxKnight"]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
-    "modified": "2020-07-16T22:24:44.917Z",
-    "contributors": [
-      "BAHLOUL_Farouk",
-      "didierbroska",
-      "Chomchaum",
-      "daftaupe",
-      "zakaila",
-      "Dralyab"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page": {
-    "modified": "2020-07-16T22:25:07.018Z",
-    "contributors": ["zakaila"]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies": {
-    "modified": "2020-07-16T22:25:01.620Z",
-    "contributors": ["Dralyab"]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Responsive_images": {
-    "modified": "2020-12-06T15:45:53.769Z",
-    "contributors": [
-      "Kinskikick",
-      "jwhitlock",
-      "ncodefun",
-      "Bpruneau",
-      "Dralyab",
-      "edspeedy",
-      "SphinxKnight"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
-    "modified": "2020-07-16T22:24:52.741Z",
-    "contributors": ["Chomchaum", "LeMilitaire", "Dralyab", "zakaila"]
-  },
-  "Learn/HTML/Tables": {
-    "modified": "2020-07-16T22:25:11.317Z",
-    "contributors": ["NerOcrO", "Dralyab", "loella16", "tonybengue"]
-  },
-  "Learn/HTML/Tables/Advanced": {
-    "modified": "2020-07-16T22:25:25.886Z",
-    "contributors": ["Dralyab", "loella16", "tonybengue"]
-  },
-  "Learn/HTML/Tables/Basics": {
-    "modified": "2020-12-13T07:01:09.726Z",
-    "contributors": [
-      "Kinskikick",
+      "Duth",
+      "smeden-lod",
       "ThCarrere",
-      "Dralyab",
-      "loella16",
-      "tonybengue"
-    ]
-  },
-  "Learn/HTML/Tables/Structuring_planet_data": {
-    "modified": "2020-07-16T22:25:29.724Z",
-    "contributors": ["Dralyab", "loella16", "tonybengue"]
-  },
-  "Learn/JavaScript": {
-    "modified": "2020-07-16T22:29:38.759Z",
-    "contributors": [
-      "mper",
-      "Dralyab",
-      "tonybengue",
-      "loella16",
-      "SphinxKnight",
-      "Thogusa"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks": {
-    "modified": "2020-07-16T22:31:07.626Z",
-    "contributors": [
-      "smeden-lod",
-      "tonybengue",
-      "SphinxKnight",
-      "benjaminlepine",
-      "loella16",
-      "daufinsyd"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Build_your_own_function": {
-    "modified": "2020-07-16T22:31:29.138Z",
-    "contributors": [
-      "smeden-lod",
-      "EmerikC",
-      "Chaospherae",
-      "andyquin",
-      "Gasperowicz"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Event_bubbling": {
-    "modified": "2019-03-18T21:39:09.103Z",
-    "contributors": ["loella16"]
-  },
-  "Learn/JavaScript/Building_blocks/Events": {
-    "modified": "2020-07-16T22:31:37.886Z",
-    "contributors": ["Chaospherae", "bubzy34", "tonybengue"]
-  },
-  "Learn/JavaScript/Building_blocks/Functions": {
-    "modified": "2020-07-16T22:31:24.630Z",
-    "contributors": [
-      "Voltariuss",
-      "smeden-lod",
-      "vacarme",
-      "Mania",
-      "bubzy34",
-      "tonybengue"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Image_gallery": {
-    "modified": "2020-07-16T22:31:43.231Z",
-    "contributors": [
-      "tristantheb",
-      "Chaospherae",
-      "Jcninho87",
-      "SphinxKnight",
-      "tonybengue"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Looping_code": {
-    "modified": "2020-07-16T22:31:19.091Z",
-    "contributors": [
-      "JNa0",
-      "baslumol",
-      "Eric-ciccotti",
-      "andyquin",
-      "ThCarrere",
-      "bubzy34",
-      "tonybengue",
-      "joan38",
-      "Abrams"
-    ]
-  },
-  "Learn/JavaScript/Building_blocks/Return_values": {
-    "modified": "2020-07-16T22:31:33.181Z",
-    "contributors": ["Chaospherae", "andyquin", "tonybengue", "farantDEV"]
-  },
-  "Learn/JavaScript/Building_blocks/conditionals": {
-    "modified": "2020-07-16T22:31:13.085Z",
-    "contributors": [
-      "Tendø",
-      "smeden-lod",
-      "Chomchaum",
-      "Eric-ciccotti",
-      "grandoc",
-      "tonybengue",
-      "Dralyab",
-      "OxyDesign"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs": {
-    "modified": "2020-07-16T22:32:39.093Z",
-    "contributors": ["a-mt", "Dralyab", "bretondev"]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Client-side_storage": {
-    "modified": "2020-07-16T22:33:04.752Z",
-    "contributors": ["smeden-lod", "a-mt"]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics": {
-    "modified": "2020-07-16T22:33:01.225Z",
-    "contributors": ["CcelestinC", "a-mt"]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
-    "modified": "2020-07-16T22:32:57.712Z",
-    "contributors": [
-      "nrdAio",
-      "smeden-lod",
-      "neytsumi",
-      "CcelestinC",
-      "BigBigDoudou",
-      "a-mt"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Introduction": {
-    "modified": "2020-07-16T22:32:44.687Z",
-    "contributors": [
-      "zoora",
-      "fuentesloic",
-      "BigBigDoudou",
-      "a-mt",
-      "Dralyab",
-      "elWombator",
-      "bretondev"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
-    "modified": "2020-07-16T22:32:47.994Z",
-    "contributors": ["Vony", "a-mt"]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs": {
-    "modified": "2020-07-16T22:32:54.118Z",
-    "contributors": ["SphinxKnight", "a-mt"]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs": {
-    "modified": "2020-07-16T22:32:52.122Z",
-    "contributors": ["a-mt", "Naouak"]
-  },
-  "Learn/JavaScript/First_steps": {
-    "modified": "2020-07-16T22:29:50.440Z",
-    "contributors": [
-      "smeden-lod",
-      "mauradelrosario",
-      "Dralyab",
-      "tonybengue",
-      "loella16",
-      "Badacadabra",
-      "daufinsyd",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/JavaScript/First_steps/A_first_splash": {
-    "modified": "2020-07-16T22:30:17.669Z",
-    "contributors": [
-      "smeden-lod",
-      "Floles",
-      "Eric-ciccotti",
-      "clamb",
-      "Dralyab",
-      "tonybengue",
-      "jumperparis",
-      "Merkrynis",
-      "withedouard",
-      "moziyin76"
-    ]
-  },
-  "Learn/JavaScript/First_steps/Arrays": {
-    "modified": "2020-07-16T22:30:53.940Z",
-    "contributors": ["smeden-lod", "tavax", "Dralyab", "tonybengue"]
-  },
-  "Learn/JavaScript/First_steps/Math": {
-    "modified": "2020-10-27T06:47:01.734Z",
-    "contributors": [
-      "chuck2kill",
-      "Chomchaum",
-      "Jim-Arby",
-      "grandoc",
-      "Dralyab",
-      "tonybengue"
-    ]
-  },
-  "Learn/JavaScript/First_steps/Silly_story_generator": {
-    "modified": "2020-07-16T22:31:01.217Z",
-    "contributors": ["smeden-lod", "daftaupe", "Opsylac"]
-  },
-  "Learn/JavaScript/First_steps/Strings": {
-    "modified": "2020-07-16T22:30:39.299Z",
-    "contributors": [
-      "smeden-lod",
-      "Jim-Arby",
-      "goofy_mdn",
-      "grandoc",
-      "Dralyab",
-      "be-math",
-      "tonybengue"
-    ]
-  },
-  "Learn/JavaScript/First_steps/Test_your_skills:_Arrays": {
-    "modified": "2020-10-17T18:40:31.138Z",
-    "contributors": ["tonybengue"]
-  },
-  "Learn/JavaScript/First_steps/Useful_string_methods": {
-    "modified": "2020-07-16T22:30:46.814Z",
-    "contributors": ["smeden-lod", "Dralyab", "Iwazaru", "tonybengue"]
-  },
-  "Learn/JavaScript/First_steps/Variables": {
-    "modified": "2020-07-16T22:29:58.969Z",
-    "contributors": [
-      "AntoineJT",
-      "innocenzi",
-      "smeden-lod",
-      "chrisdavidmills",
-      "Jim-Arby",
-      "Jumper754",
-      "Eric-ciccotti",
-      "grandoc",
-      "Dralyab",
-      "tonybengue"
-    ]
-  },
-  "Learn/JavaScript/First_steps/What_is_JavaScript": {
-    "modified": "2020-07-16T22:30:07.337Z",
-    "contributors": [
-      "smeden-lod",
-      "ludivinepoussier",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "wkz3w59",
-      "abvll",
-      "Kinskikick",
-      "Eric-ciccotti",
-      "clamb",
-      "Dralyab",
-      "codingk8",
+      "Zinavolia",
+      "fleuronvilik",
       "TheStarrK",
-      "tonybengue",
-      "Idlus"
+      "Albynton"
     ]
   },
-  "Learn/JavaScript/First_steps/What_went_wrong": {
-    "modified": "2020-07-16T22:30:32.918Z",
-    "contributors": [
-      "smeden-lod",
-      "clamb",
-      "codeFighting",
-      "Dralyab",
-      "tonybengue",
-      "macjpster"
-    ]
+  "Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work": {
+    "modified": "2020-07-16T22:35:36.757Z",
+    "contributors": ["TheStarrK", "Porkepix", "SphinxKnight", "ValPom"]
   },
-  "Learn/JavaScript/Objects": {
-    "modified": "2020-07-16T22:31:49.517Z",
-    "contributors": [
-      "smeden-lod",
-      "tonybengue",
-      "elWombator",
-      "manuwhat",
-      "loella16",
-      "breizhrunner",
-      "chrisdavidmills"
-    ]
+  "Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks": {
+    "modified": "2020-07-16T22:35:43.089Z",
+    "contributors": ["SphinxKnight"]
   },
-  "Learn/JavaScript/Objects/Adding_bouncing_balls_features": {
-    "modified": "2020-07-16T22:32:34.729Z",
-    "contributors": ["AkwindFr", "tonybengue"]
+  "Learn_web_development/Howto/Web_mechanics/What_is_a_URL": {
+    "modified": "2020-07-16T22:35:29.353Z",
+    "contributors": ["clamb", "Porkepix", "SphinxKnight"]
   },
-  "Learn/JavaScript/Objects/Basics": {
-    "modified": "2020-09-18T09:37:24.602Z",
-    "contributors": [
-      "GDFtj",
-      "FloppyJunior",
-      "franssu",
-      "grandoc",
-      "spike008t",
-      "srimko",
-      "LDCL",
-      "Halkeand",
-      "SphinxKnight",
-      "mouffy"
-    ]
+  "Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name": {
+    "modified": "2020-07-16T22:35:44.035Z",
+    "contributors": ["Porkepix", "SphinxKnight"]
   },
-  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
-    "modified": "2020-07-16T22:32:13.707Z",
-    "contributors": [
-      "franssu",
-      "loranger32",
-      "elWombator",
-      "lobertrand",
-      "manuwhat",
-      "Yopai",
-      "AntrHaxx",
-      "MartyO256",
-      "Alpha"
-    ]
-  },
-  "Learn/JavaScript/Objects/JSON": {
-    "modified": "2020-07-16T22:32:25.278Z",
-    "contributors": [
-      "smeden-lod",
-      "FloppyJunior",
-      "ThCarrere",
-      "newick",
-      "manuwhat",
-      "sebastien_colbe",
-      "darthyoh"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object_building_practice": {
-    "modified": "2020-07-16T22:32:31.265Z",
-    "contributors": ["smeden-lod", "loranger32", "manuwhat"]
-  },
-  "Learn/JavaScript/Objects/Object_prototypes": {
-    "modified": "2020-07-16T22:32:19.975Z",
-    "contributors": [
-      "grandoc",
-      "Etheonor",
-      "aSeches",
-      "zoora",
-      "Jetinho",
-      "JonGarbayo",
-      "LDCL",
-      "Alpha"
-    ]
-  },
-  "Learn/Performance": {
-    "modified": "2020-11-10T09:39:07.479Z",
-    "contributors": ["Voulto", "estelle"]
-  },
-  "Learn/Performance/CSS": {
-    "modified": "2020-11-10T09:14:31.465Z",
-    "contributors": ["Voulto", "Romain04"]
-  },
-  "Learn/Performance/why_web_performance": {
-    "modified": "2020-11-10T09:10:02.087Z",
-    "contributors": ["Voulto"]
-  },
-  "Learn/Server-side": {
-    "modified": "2020-08-31T06:16:11.413Z",
-    "contributors": [
-      "Voulto",
-      "AKAsebu",
-      "aurelieg",
-      "KurtC0ba1n",
-      "tonybengue",
-      "serorl",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/Server-side/Django": {
-    "modified": "2020-07-16T22:36:32.263Z",
-    "contributors": [
-      "biface",
-      "skyfrigate",
-      "As-Sinder",
-      "KurtC0ba1n",
-      "pierrotmagic"
-    ]
-  },
-  "Learn/Server-side/Django/Admin_site": {
-    "modified": "2020-07-16T22:37:03.285Z",
-    "contributors": ["biface"]
-  },
-  "Learn/Server-side/Django/Forms": {
-    "modified": "2020-07-16T22:37:31.019Z",
-    "contributors": ["BrRoman", "Elbofino", "ben5962"]
-  },
-  "Learn/Server-side/Django/Generic_views": {
-    "modified": "2020-08-10T12:14:32.253Z",
-    "contributors": ["BrRoman"]
-  },
-  "Learn/Server-side/Django/Home_page": {
-    "modified": "2020-07-16T22:37:08.874Z",
-    "contributors": ["biface"]
-  },
-  "Learn/Server-side/Django/Introduction": {
-    "modified": "2020-07-16T22:36:38.887Z",
-    "contributors": [
-      "olivierdupon",
-      "edaveau",
-      "biface",
-      "As-Sinder",
-      "KurtC0ba1n"
-    ]
-  },
-  "Learn/Server-side/Django/Models": {
-    "modified": "2020-11-15T11:16:41.925Z",
-    "contributors": ["fsaid", "Moh-Said", "biface", "skyfrigate"]
-  },
-  "Learn/Server-side/Django/Testing": {
-    "modified": "2020-07-16T22:37:36.868Z",
-    "contributors": ["BrRoman"]
-  },
-  "Learn/Server-side/Django/Tutorial_local_library_website": {
-    "modified": "2020-07-16T22:36:48.972Z",
-    "contributors": ["biface", "skyfrigate"]
-  },
-  "Learn/Server-side/Django/development_environment": {
-    "modified": "2020-07-16T22:36:44.147Z",
-    "contributors": ["edaveau"]
-  },
-  "Learn/Server-side/Django/skeleton_website": {
-    "modified": "2020-11-14T22:07:57.460Z",
-    "contributors": ["ThuringEnigma", "skyfrigate", "biface"]
-  },
-  "Learn/Server-side/Express_Nodejs": {
-    "modified": "2020-07-16T22:37:52.128Z",
-    "contributors": ["smeden-lod", "PhilippePerret", "Alan_Braut", "serorl"]
-  },
-  "Learn/Server-side/Express_Nodejs/Introduction": {
-    "modified": "2020-07-16T22:38:09.613Z",
-    "contributors": [
-      "JNa0",
-      "carlyne",
-      "ThCarrere",
-      "PhilippePerret",
-      "codingk8",
-      "Raulel"
-    ]
-  },
-  "Learn/Server-side/First_steps": {
-    "modified": "2020-07-16T22:36:08.675Z",
-    "contributors": [
-      "Etheonor",
-      "smeden-lod",
-      "SphinxKnight",
-      "JeffD",
-      "KurtC0ba1n",
-      "ayshiff",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/Server-side/First_steps/Client-Server_overview": {
-    "modified": "2020-07-16T22:36:19.848Z",
-    "contributors": ["smeden-lod", "houckontape", "SphinxKnight", "ThCarrere"]
-  },
-  "Learn/Server-side/First_steps/Introduction": {
-    "modified": "2020-07-16T22:36:13.996Z",
-    "contributors": ["smeden-lod", "SphinxKnight", "ThCarrere", "a-mt"]
-  },
-  "Learn/Server-side/First_steps/Web_frameworks": {
-    "modified": "2020-07-16T22:36:24.273Z",
-    "contributors": ["smeden-lod", "houckontape", "SphinxKnight", "Mania"]
-  },
-  "Learn/Server-side/First_steps/Website_security": {
-    "modified": "2020-07-16T22:36:28.165Z",
-    "contributors": [
-      "smeden-lod",
-      "ThCarrere",
-      "LeMilitaire",
-      "SphinxKnight",
-      "JeffD"
-    ]
-  },
-  "Learn/Tools_and_testing": {
-    "modified": "2020-07-16T22:38:55.131Z",
-    "contributors": ["gnoyaze", "KrySoar"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks": {
-    "modified": "2020-09-15T15:45:33.414Z",
-    "contributors": ["JNa0", "Voulto", "CodeDotJS"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started": {
-    "modified": "2020-11-21T12:01:48.747Z",
-    "contributors": ["tonybengue", "florestalclaudel878"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning": {
-    "modified": "2020-11-19T13:18:09.787Z",
-    "contributors": ["tonybengue"]
-  },
-  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started": {
-    "modified": "2020-10-03T00:57:04.281Z",
-    "contributors": ["duduindo", "Anonymous"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing": {
-    "modified": "2020-11-23T17:27:15.888Z",
-    "contributors": ["Chomchaum", "Voulto", "wbamberg", "arai"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Accessibility": {
-    "modified": "2020-07-16T22:39:16.445Z",
-    "contributors": ["Dralyab", "Azyme"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS": {
-    "modified": "2020-07-16T22:39:09.777Z",
-    "contributors": ["NacimHarfouche", "Azyme"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Introduction": {
-    "modified": "2020-07-16T22:39:03.351Z",
-    "contributors": ["Azyme"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/JavaScript": {
-    "modified": "2020-07-16T22:39:13.632Z",
-    "contributors": ["jedepaepe", "Azyme"]
-  },
-  "Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies": {
-    "modified": "2020-07-16T22:39:06.838Z",
-    "contributors": ["Azyme"]
-  },
-  "Learn/Tools_and_testing/GitHub": {
-    "modified": "2020-09-09T16:10:57.840Z",
-    "contributors": ["JNa0"]
-  },
-  "Learn/Tools_and_testing/Understanding_client-side_tools": {
-    "modified": "2020-09-04T08:38:04.330Z",
-    "contributors": ["Voulto", "chrisdavidmills"]
-  },
-  "Learn/Tools_and_testing/Understanding_client-side_tools/Command_line": {
-    "modified": "2020-08-07T09:37:14.013Z",
-    "contributors": ["voronamanga"]
+  "Learn_web_development/Howto/Web_mechanics/What_is_a_web_server": {
+    "modified": "2020-07-16T22:35:31.313Z",
+    "contributors": ["jswisher", "adupays", "LooDom", "SphinxKnight"]
   },
   "MDN": {
     "modified": "2020-02-08T12:54:31.725Z",
@@ -20570,6 +20457,18 @@
     "modified": "2019-09-09T07:17:11.858Z",
     "contributors": ["SphinxKnight", "wbamberg", "ts-informatique_Grenoble"]
   },
+  "Web/HTML/Responsive_images": {
+    "modified": "2020-12-06T15:45:53.769Z",
+    "contributors": [
+      "Kinskikick",
+      "jwhitlock",
+      "ncodefun",
+      "Bpruneau",
+      "Dralyab",
+      "edspeedy",
+      "SphinxKnight"
+    ]
+  },
   "Web/HTML/microformats": {
     "modified": "2019-07-21T06:21:36.960Z",
     "contributors": ["SphinxKnight", "marie-ototoi"]
@@ -27231,9 +27130,110 @@
     "modified": "2019-03-18T21:45:55.399Z",
     "contributors": ["loella16"]
   },
+  "conflicting/Glossary/Denial_of_Service": {
+    "modified": "2019-03-23T22:38:58.117Z",
+    "contributors": ["xdelatour"]
+  },
   "conflicting/Glossary/SLD": {
     "modified": "2019-01-16T21:52:29.757Z",
     "contributors": ["xdelatour"]
+  },
+  "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {
+    "modified": "2020-07-16T22:27:21.075Z",
+    "contributors": ["Anonymous", "Dralyab"]
+  },
+  "conflicting/Learn_web_development/Core/Scripting": {
+    "modified": "2020-07-16T22:29:50.440Z",
+    "contributors": [
+      "smeden-lod",
+      "mauradelrosario",
+      "Dralyab",
+      "tonybengue",
+      "loella16",
+      "Badacadabra",
+      "daufinsyd",
+      "chrisdavidmills"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792": {
+    "modified": "2020-07-16T22:29:38.759Z",
+    "contributors": [
+      "mper",
+      "Dralyab",
+      "tonybengue",
+      "loella16",
+      "SphinxKnight",
+      "Thogusa"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Structuring_content": {
+    "modified": "2020-07-16T22:22:47.142Z",
+    "contributors": [
+      "bfritscher",
+      "NerOcrO",
+      "Dralyab",
+      "Ilphrin",
+      "loella16",
+      "Porkepix",
+      "Jeremie",
+      "SphinxKnight"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics": {
+    "modified": "2020-07-16T22:25:11.317Z",
+    "contributors": ["NerOcrO", "Dralyab", "loella16", "tonybengue"]
+  },
+  "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b": {
+    "modified": "2020-07-16T22:24:25.278Z",
+    "contributors": [
+      "tristantheb",
+      "Dralyab",
+      "AntoineJacquet",
+      "zakaila",
+      "Ilphrin"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics": {
+    "modified": "2020-10-08T12:02:37.318Z",
+    "contributors": [
+      "geraldventadour",
+      "ylerjen",
+      "smeden-lod",
+      "nherbaut",
+      "chrisdavidmills"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors": {
+    "modified": "2020-07-16T22:28:39.961Z",
+    "contributors": ["smeden-lod"]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics/Getting_started": {
+    "modified": "2020-11-27T19:02:59.051Z",
+    "contributors": ["Chomchaum", "smeden-lod", "mrbbp"]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS": {
+    "modified": "2020-10-15T22:25:55.680Z",
+    "contributors": ["geraldventadour", "SphinxKnight", "smeden-lod"]
+  },
+  "conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1": {
+    "modified": "2020-10-08T16:01:55.051Z",
+    "contributors": [
+      "geraldventadour",
+      "BAHLOUL_Farouk",
+      "nherbaut",
+      "Dralyab",
+      "SphinxKnight",
+      "dattaz",
+      "Oliviermoz"
+    ]
+  },
+  "conflicting/Learn_web_development/Extensions/Forms": {
+    "modified": "2020-07-16T22:21:39.980Z",
+    "contributors": ["Dralyab"]
+  },
+  "conflicting/Learn_web_development/Extensions/Testing": {
+    "modified": "2020-07-16T22:38:55.131Z",
+    "contributors": ["gnoyaze", "KrySoar"]
   },
   "conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
     "modified": "2019-03-24T00:07:12.456Z",
