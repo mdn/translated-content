@@ -1,14 +1,13 @@
 ---
 title: "スキルテスト: 演算"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Math
-original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 l10n:
-  sourceCommit: 60358aa4fdd02bda2573dfd9fdf038b4ead2cd06
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn/JavaScript/First_steps/Math) の記事を理解しているかどうかを評価することです。
+このスキルテストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn_web_development/Core/Scripting/Math)の記事を理解しているかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
@@ -28,7 +27,7 @@ l10n:
 2. 最初の 2 つの変数を加算し、その結果を別の変数に格納してください。
 3. 3 番目の変数から 4 番目の変数を減算し、その結果を別の変数に格納してください。
 4. 上記の **2** および **3** の工程の結果を乗算し、 `finalResult` という変数に格納してください。
-5. 最後に、`finalResult` が偶数であるかどうかをチェックする計算式を、[算術演算子](/ja/docs/Learn/JavaScript/First_steps/Math#算術演算子)を使用して記述してください。結果を（偶数なら `0`、奇数なら `1`） `evenOddResult` という変数に格納してください。
+5. 最後に、`finalResult` が偶数であるかどうかをチェックする計算式を、[算術演算子](/ja/docs/Learn_web_development/Core/Scripting/Math#算術演算子)を使用して記述してください。結果を（偶数なら `0`、奇数なら `1`） `evenOddResult` という変数に格納してください。
 
 このテストに合格するためには、 `finalResult` の値が `48` で、 `evenOddResult` の値が `0` である必要があります。
 

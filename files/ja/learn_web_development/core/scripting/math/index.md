@@ -1,27 +1,36 @@
 ---
 title: JavaScript での基本演算 — 数値と演算子
 slug: Learn_web_development/Core/Scripting/Math
-original_slug: Learn/JavaScript/First_steps/Math
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 今回は JavaScript での数学的処理についてです。我々の命令を実行するために上手く数値を操作するのにどのように {{Glossary("Operator","演算子")}} や、その他の機能を使用できるのかを見ていきましょう。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        HTML と CSS の基本についての理解、
-        JavaScript が何かが分かっていること。
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
-      <td>JavaScript での基礎的な数値処理に慣れること。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>JavaScript の基本的な数値演算 — 加算、減算、乗算、除算。</li>
+          <li>数値が文字列として定義されている場合、それは数値ではなく、計算が間違ってしまう可能性があります。</li>
+          <li>文字列を数値に変換する <code>Number()</code>。</li>
+          <li>演算子の優先順位。</li>
+          <li>インクリメントとデクリメント。</li>
+          <li>代入演算子と比較演算子。</li>
+          <li>Math オブジェクトの基本的なメソッド、 <code>Math.random()</code>、<code>Math.floor()</code>、<code>Math.ceil()</code> など。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -38,24 +47,23 @@ l10n:
 
 - **整数** (integer) とは 10、400、-5 といった数値のことです。
 - **浮動小数点数** (float) とは小数以下の数と小数桁を持つ 12.5 や 56.7786543 といった数値のことです。
-- **倍精度浮動小数点数** (double) は浮動小数点数の特殊な型であり、通常の浮動小数点数よりも大きな精度を持ちます (つまりより大きい桁数まで精度を保つことを意味します)。
 
-さらに通常とは異なる数値表現も使います！今まで出てきた数値は 10 を基数 (0 ～ 9 を 1 つの桁として扱う) とした十進数でしたが、他にも以下のようなものがあります。
+さらに通常とは異なる数値表現も使います！今まで出てきた数値は 10 を基数 (0 ～ 9 を 1 つの桁として扱う) とした 10 進数でしたが、他にも以下のようなものがあります。
 
-- **二進数** — 0 と 1 だけで表現される、コンピューターの最も低レベルな言語です。
-- **八進数** — 8 を基数として、1 桁を 0 ～ 7 で表します。
-- **十六進数** — 16 を基数として、1 桁を 0 ～ 9、a ～ f で表します。もしかしたら [CSS の色](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values)を設定するときに見たかもしれませんね。
+- **2 進数** — 0 と 1 だけで表現される、コンピューターの最も低レベルな言語です。
+- **8 進数** — 8 を基数として、1 桁を 0 ～ 7 で表します。
+- **16 進数** — 16 を基数として、1 桁を 0 ～ 9、a ～ f で表します。もしかしたら [CSS の色](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#hexadecimal_values)を設定するときに見たかもしれませんね。
 
-**脳みそが溶けそうだと思う前に、少し待ってください！**まず、この講座では十進数しか扱いません。それに「もしかすれば」ですが、他の数値表現について考える機会は訪れないということだってあり得ます。
+**脳みそが溶けそうだと思う前に、少し待ってください！** まず、この講座では 10 進数しか扱いません。それに「もしかすれば」ですが、他の数値表現について考える機会は訪れないということだってあり得ます。
 
-さらにちょっといいことを教えましょう。いくつかの他のプログラミング言語とは違い、JavaScript には数値（整数と小数の両方）を表すデータ型が一つしかありません。わかりますか？{{jsxref("Number","数値型 (Number)")}} で、これは整数と小数の両方です。これは JavaScript でどんな型の数値を扱おうとも、それらを全く同じように扱うことが可能だということを意味します。
+さらにちょっといいことを教えましょう。いくつかの他のプログラミング言語とは違い、JavaScript には数値（整数と小数の両方）を表すデータ型が一つしかありません。わかりますか？数値型 ({{jsxref("Number")}}) で、これは整数と小数の両方です。これは JavaScript でどんな型の数値を扱おうとも、それらを全く同じように扱うことが可能だということを意味します。
 
 > [!NOTE]
-> 実は、JavaScript には 2 つ目の数値型である {{Glossary("BigInt")}} があり、これはとても大きな整数に使います。しかしこのコースの目的としては、`Number` の値だけに関心を持つことにします。
+> 実は、JavaScript には 2 つ目の数値型である長整数型 ({{Glossary("BigInt")}}) があり、これはとても大きな整数に使います。しかしこのコースの目的としては、数値型 (`Number`) の値だけに関心を持つことにします。
 
 ### 私にとってすべては数字
 
-書き方の復習を兼ねてちょっと数字で遊んでみましょう。以下に示すコマンドを[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)に入力してみましょう。もちろんこのページの埋め込みコンソールを使っても構いません。
+書き方の復習を兼ねてちょっと数字で遊んでみましょう。以下に示すコマンドを[開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に入力してみましょう。もちろんこのページの埋め込みコンソールを使っても構いません。
 
 1. まず、変数を 2 つ宣言して、それぞれ整数と浮動小数点数で初期化してみましょう。そして、変数の名前を入力して、期待通りに値が入っていることを確認してみましょう。
 
@@ -91,7 +99,7 @@ twoDecimalPlaces;
 
 ### 数値データ型への変換
 
-たまに、文字列型として格納されている数字で計算ができなくなってしまうことがあります。これは、データが[フォーム](/ja/docs/Learn/Forms)入力に入力され、[input の type が text](/ja/docs/Web/HTML/Element/input/text) である場合によく起こります。この問題を解決する方法があります - 文字列の値を [`Number()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) コンストラクターに渡すと、同じ値の数値バージョンを返します。
+たまに、文字列型として格納されている数字で計算ができなくなってしまうことがあります。これは、データが[フォーム](/ja/docs/Learn_web_development/Extensions/Forms)入力に入力され、[input の type が text](/ja/docs/Web/HTML/Element/input/text) である場合によく起こります。この問題を解決する方法があります - 文字列の値を [`Number()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) コンストラクターに渡すと、同じ値の数値バージョンを返します。
 
 例えば、これらの命令をコンソールに入力してみてください。
 
@@ -186,7 +194,7 @@ myNumber = Number(myNumber) + 3;
 > [!NOTE]
 > べき乗が、よく似た動作をする古い {{jsxref("Math.pow()")}} メソッドを使って表現されているのを見ることがあるかもしれません。たとえば、 `Math.pow(7, 3)` では、 `7` が基数で `3` が指数であるため、式の結果は `343` になります。 `Math.pow(7, 3)` は `7**3` と同じです。
 
-たぶん基本的な数学を教える必要はないでしょうが、ここに出てくる文法を理解しているかをテストしたいと思います。書き方を覚えるため、以下に示す例を[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)に入力してみましょう。
+たぶん基本的な数学を教える必要はないでしょうが、ここに出てくる文法を理解しているかをテストしたいと思います。書き方を覚えるため、以下に示す例を[開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に入力してみましょう。
 
 1. まずは次のような簡単な例を自分で試してみてください。
 
@@ -243,7 +251,7 @@ num2 + num1 / 8 + 2;
 
 ## インクリメント演算子とデクリメント演算子
 
-たまに、繰り返し値を足したり引いたりしたいときがあるでしょう。そんなときに便利なのがインクリメント演算子 (`++`) とデクリメント演算子 (`--`) です。もう既に、[JavaScript の最初の一歩](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)に出てくる「数字当てゲーム」で、ユーザーの残り予想回数を求めるために使用する `guessCount` 変数に 1 を加えるのに `++` を使用しました。
+たまに、繰り返し値を足したり引いたりしたいときがあるでしょう。そんなときに便利なのがインクリメント演算子 (`++`) とデクリメント演算子 (`--`) です。もう既に、[JavaScript の最初の一歩](/ja/docs/Learn_web_development/Core/Scripting/A_first_splash)に出てくる「数字当てゲーム」で、ユーザーの残り予想回数を求めるために使用する `guessCount` 変数に 1 を加えるのに `++` を使用しました。
 
 ```js
 guessCount++;
@@ -354,9 +362,9 @@ x *= y; // x は 12 になる
 > [!NOTE]
 > もっとたくさんの[代入演算子があります](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)が、とりあえず今は基本的なものだけ知っておけばよいでしょう。
 
-## アクティブラーニング: canvas のボックスのサイズを変更する
+## アクティブラーニング: キャンバスのボックスのサイズを変更する
 
-練習として、数値と演算子を使用してボックスのサイズを変更してみましょう。ブラウザーの {{domxref("Canvas API", "", "", "true")}} を使用してボックスを描きます。どうやって描くかについて気にする必要はありません。今は計算に集中しましょう。ボックスの幅と高さ (ピクセル単位で) 変数 `x` と `y` で宣言しています。最初は 50 になっています。
+練習として、数値と演算子を使用してボックスのサイズを変更してみましょう。ブラウザーの{{domxref("Canvas API", "キャンバス API", "", "true")}} を使用してボックスを描きます。どうやって描くかについて気にする必要はありません。今は計算に集中しましょう。ボックスの幅と高さ (ピクセル単位で) 変数 `x` と `y` で宣言しています。最初は 50 になっています。
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}
 
@@ -429,9 +437,9 @@ function updateBtn() {
 > [!NOTE]
 > 2 つの状態を行き来するこのような操作を一般的に**トグル**といいます。スイッチの ON/OFF のように、ある状態がもう一つの状態にトグル (切り替え) するといいます。
 
-## スキルをテストしよう!
+## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Math) を見てください。
+この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: 演算](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math) を見てください。
 
 ## まとめ
 
@@ -439,7 +447,9 @@ function updateBtn() {
 
 次の章では文字列と、文字列を JavaScript で操作する方法について見ていきます。
 
-> [!NOTE]
-> もし数学が好きで、 JavaScript にどう実装されているかをもっと知りたいのであれば、MDN の JavaScript のメインの章に詳細がたくさん載っています。まずは[数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)や[式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)辺りの記事から読むのがいいでしょう。
+## 関連情報
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+- [数値と日付](/ja/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [式と演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

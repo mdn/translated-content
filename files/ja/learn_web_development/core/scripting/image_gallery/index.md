@@ -1,31 +1,15 @@
 ---
-title: イメージギャラリー
+title: "課題: イメージギャラリー"
 slug: Learn_web_development/Core/Scripting/Image_gallery
-original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 l10n:
-  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 JavaScript の基本的な構成要素を見てきたところで、これからたくさんのウェブサイトで見かける項目、JavaScript で動作するイメージギャラリーをつくってみることで、あなたが得た繰り返し、関数、条件とイベントの知識を試してみましょう。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        この評価に挑戦する前に、このモジュールの記事をすべて読み終えている必要があります。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        JavaScript のループ、関数、条件、イベントの理解度をテストします。
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 出発点
 
@@ -40,14 +24,14 @@ JavaScript の基本的な構成要素を見てきたところで、これから
 
 HTML、CSS と画像および数行の JavaScript のコードが提供されています。必要な JavaScript を書いて、これを動くプログラムにする必要があります。HTML の本体は次のようになっています。
 
-```html
-<h1>Image gallery example</h1>
+```html-nolint
+<h1>イメージギャラリーの例</h1>
 
 <div class="full-img">
   <img
     class="displayed-img"
     src="images/pic1.jpg"
-    alt="Closeup of a blue human eye" />
+    alt="人間の青い目の拡大" />
   <div class="overlay"></div>
   <button class="dark">Darken</button>
 </div>
@@ -117,4 +101,4 @@ overlay.style.backgroundColor = xxx;
 
 - HTML と CSS は全く編集する必要はありません。
 
-{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}

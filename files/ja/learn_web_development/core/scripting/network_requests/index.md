@@ -1,35 +1,30 @@
 ---
-title: サーバーからのデータ取得
+title: ネットワークリクエストを JavaScript で作成
 slug: Learn_web_development/Core/Scripting/Network_requests
-original_slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 l10n:
-  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
 現代のウェブサイトやアプリケーションでとても一般的なもう一つのタスクは、新しいページ全体を読み込むことなくウェブページの一部を更新するために、サーバーから個々のデータ項目を取得することです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。そこでこの記事では、この概念を説明し、これを可能にする技術、特に[フェッチ API](/ja/docs/Web/API/Fetch_API) を見ていきます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        JavaScript の基本
-        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
-        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >構成要素</a
-        >,
-        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
-        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >クライアントサイド API の基本</a
-        >
-      </td>
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。</td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        サーバーからデータを取得し、そのデータを使用してウェブページのコンテンツを更新する方法を習得する。
+        <ul>
+          <li>非同期ネットワークリクエストは、ウェブ上で最も一般的な非同期 JavaScript の用途であること。</li>
+          <li>ネットワークから取得される一般的なリソースの型: JSON、メディア資産、RESTful API からのデータ。</li>
+          <li>非同期ネットワークリクエストの実装に <code>fetch()</code> を使用する方法。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -49,7 +44,7 @@ l10n:
 
 ![フェッチを使用したページ更新](fetch-update.svg)
 
-ここでの主な API は、[フェッチ API](/ja/docs/Web/API/Fetch_API) です。これは、ページ内で動作する JavaScript が、サーバーに対して [HTTP](/ja/docs/Web/HTTP) リクエストを行い、特定のリソースを取得できるようにするものです。サーバーがこれを提供すると、 JavaScript はそのデータを使用してページを更新することができます。通常は [DOM 操作 API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) を使用することになります。リクエストされるデータは、多くの場合 [JSON](/ja/docs/Learn/JavaScript/Objects/JSON)で、これは構造化データの転送に適した形式ですが、 HTML や単なるテキストであっても構いません。
+ここでの主な API は、[フェッチ API](/ja/docs/Web/API/Fetch_API) です。これは、ページ内で動作する JavaScript が、サーバーに対して [HTTP](/ja/docs/Web/HTTP) リクエストを行い、特定のリソースを取得できるようにするものです。サーバーがこれを提供すると、 JavaScript はそのデータを使用してページを更新することができます。通常は [DOM 操作 API](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting) を使用することになります。リクエストされるデータは、多くの場合 [JSON](/ja/docs/Learn_web_development/Core/Scripting/JSON)で、これは構造化データの転送に適した形式ですが、 HTML や単なるテキストであっても構いません。
 
 これは Amazon、YouTube、eBay など、データ駆動型のサイトによく見られるパターンです。このモデルを使うと次のようなことが実現できます。
 
@@ -57,7 +52,7 @@ l10n:
 - 更新のたびにダウンロードされるデータがいくらか減るので、帯域の無駄が少なくなります。これは、ブロードバンド接続のデスクトップではそれほど大きな問題ではないかもしれませんが、モバイル端末や高速なインターネットサービスを持たない国では大きな問題です。
 
 > [!NOTE]
-> 初期の頃、この一般的な技術は [Asynchronous](/ja/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/ja/docs/Glossary/AJAX)) と呼ばれていましたが、これは XML データをリクエストする傾向があるためでした。最近では通常このようなことはありませんが（JSON をリクエストすることの方が多いでしょう）、結果的には同じことであり、 "Ajax" という用語は今でもこの技術を説明するのによく使用されています。
+> 初期の頃、この一般的な技術は [Asynchronous](/ja/docs/Glossary/Asynchronous) JavaScript and XML ([AJAX](/ja/docs/Glossary/AJAX)) と呼ばれていましたが、これは XML データをリクエストする傾向があるためでした。最近では通常このようなことはありませんが（JSON をリクエストすることの方が多いでしょう）、結果的には同じことであり、 "AJAX" という用語は今でもこの技術を説明するのによく使用されています。
 
 さらに高速化するために、一部のサイトでは、最初にリクエストされたときにユーザーのコンピューターに資産や データを保存しています。つまり、その後の訪問では、ページを最初に読み込むたびに新しいコピーをダウンロードせずに、 ローカルバージョンを使用するのです。コンテンツは、更新されたときだけサーバーから再読み込みされます。
 
@@ -133,9 +128,9 @@ fetch(url)
 
 ここでは、かなり多くのことを解説します。
 
-まず、フェッチ API のエントリーポイントは {{domxref("fetch", "fetch()")}} というグローバル関数で、URL を引数として呼び出します（カスタム設定のために別のオプションの引数を取りますが、ここでは使用しません）。
+まず、フェッチ API のエントリーポイントは {{domxref("Window/fetch", "fetch()")}} というグローバル関数で、URL を引数として呼び出します（カスタム設定のために別のオプションの引数を取りますが、ここでは使用しません）。
 
-次に、 `fetch()` はプロミス ({{jsxref("Promise")}}) を返す非同期 API で す。もしこれが何かわからない場合は、[非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)のモジュール、特に[プロミス](/ja/docs/Learn/JavaScript/Asynchronous/Promises)を読んでからこの記事に戻ってきてください。この記事には `fetch()` API についても書かれていることが分かると思います。
+次に、 `fetch()` はプロミス ({{jsxref("Promise")}}) を返す非同期 API で す。もしこれが何かわからない場合は、[非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)のモジュール、特に[プロミス](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)を読んでからこの記事に戻ってきてください。この記事には `fetch()` API についても書かれていることが分かると思います。
 
 つまり、 `fetch()` はプロミスを返すので、返されたプロミスの {{jsxref("Promise/then", "then()")}} メソッドに関数を渡します。このメソッドは、 HTTP リクエストがサーバーからレスポンスを保有したときに呼び出されます。ハンドラーでは、リクエストが成功したかどうかを調べ、成功しなかった場合はエラーを発生させます。そうでない場合は {{domxref("Response/text", "response.text()")}} を呼び出して、レスポンスの本文をテキストで取得します。
 
@@ -143,7 +138,7 @@ fetch(url)
 
 最後に {{jsxref("Promise/catch", "catch()")}} ハンドラーを最後に連結し、呼び出された非同期関数やそのハンドラーで発生したエラーを捕捉しています。
 
-この例の問題点として、最初に読み込んだときに詩が表示されないことが挙げられます。これを修正するには、コードの一番下（閉じられた `</script>` タグのすぐ上）に以下の 2 行を追加して、既定で 1 節を読み込み、 {{htmlelement("select") }} 要素が常に正しい値を示していることを確認します。
+この例の問題点として、最初に読み込んだときに詩が表示されないことが挙げられます。これを修正するには、コードの一番下（閉じられた `</script>` タグのすぐ上）に以下の 2 行を追加して、既定で 1 節を読み込み、 {{htmlelement("select")}} 要素が常に正しい値を示していることを確認します。
 
 ```js
 updateDisplay("Verse 1");
@@ -152,9 +147,9 @@ verseChoose.value = "Verse 1";
 
 #### 例をサーバーから提供する
 
-現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)をお読みください)。
+現代のブラウザーは、ローカルファイルから例を実行しただけでは、 HTTP リクエストを動作させません。これは、セキュリティ上の制約があるためです（ウェブセキュリティについては、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)をお読みください)。
 
-これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルテストサーバーを設定するためのガイド](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を読んでください。
+これを回避するには、ローカルのウェブサーバーでこの例を動作させてテストする必要があります。この方法を探すには、[ローカルテストサーバーを設定するためのガイド](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を読んでください。
 
 ### 缶詰屋
 
@@ -187,7 +182,7 @@ fetch("products.json")
 この関数の中では、以下のようなことを行っています。
 
 - サーバーがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
-- レスポンスに対して {{domxref("Response.json", "json()")}} を呼び出します。これにより、データは [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)として取得されます。`response.json()` が返すプロミス値を返します。
+- レスポンスに対して {{domxref("Response.json","json()")}} を呼び出します。これにより、データは [JSON オブジェクト](/ja/docs/Learn_web_development/Core/Scripting/JSON)として取得されます。`response.json()` が返すプロミス値を返します。
 
 次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この関数は、ユーザーインターフェイスにすべての製品を表示する処理を開始します。
 
@@ -196,6 +191,8 @@ fetch("products.json")
 しかし、完全なウェブサイトであれば、ユーザーの画面にメッセージを表示したり、状況を改善するためのオプションを提供したりして、より上品にこのエラーを処理しますが、ここでは、単純な `console.error()` 以上のものは必要ありません。
 
 失敗のケースを自分でテストすることができます。
+
+<!-- cSpell:ignore produc -->
 
 1. 例のファイルのローカルコピーを作成してください。
 2. コードをウェブサーバーを通して実行するようにします（上記の[例はサーバーから提供すること](#例はサーバーから提供すること)で説明した通り）。
@@ -263,8 +260,8 @@ try {
 
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [JSON データの操作](/ja/docs/Learn/JavaScript/Objects/JSON)
+- [JSON データの操作](/ja/docs/Learn_web_development/Core/Scripting/JSON)
 - [HTTP の概要](/ja/docs/Web/HTTP/Overview)
-- [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)
+- [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
