@@ -1062,7 +1062,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <a href="/fr/docs/Web/HTML/Attributes/label"><code>label</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Optgroup"
+        <a href="/fr/docs/Web/HTML/Element/optgroup"
           ><code>&lt;optgroup&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a
@@ -1271,7 +1271,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
         >, <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
+        <a href="/fr/docs/Web/HTML/Element/fieldset"
           ><code>&lt;fieldset&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
