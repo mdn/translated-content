@@ -60,7 +60,7 @@ sayings.size; // 0
 
 詳細やサンプルコードについては、{{jsxref("WeakMap")}} リファレンスページの「なぜ WeakMap なのか？」もご覧ください。
 
-`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例は Nick Fitzgerald 氏のブログ投稿、["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgeraldnick.com/weblog/53/)（ECMAScript 6 WeakMaps を使って実装の詳細を隠蔽する）です。プライベートなデータとメソッドはオブジェクトの内部に属していて、プライベートな WeakMap オブジェクトに格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。`privates` はモジュールから export されていません。
+`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例は Nick Fitzgerald 氏のブログ投稿、["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)（ECMAScript 6 WeakMaps を使って実装の詳細を隠蔽する）です。プライベートなデータとメソッドはオブジェクトの内部に属していて、プライベートな WeakMap オブジェクトに格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。`privates` はモジュールから export されていません。
 
 ```js
 const privates = new WeakMap();
