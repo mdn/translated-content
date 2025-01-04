@@ -67,11 +67,11 @@ Vue は、 [AngularJS](https://angularjs.org/) と同様に、独自のコード
 
 ### React
 
-Facebook は 2013 年に [React](https://react.dev/) をリリースしました。この時点で、Facebook はすでに React を使用して社内の問題の多くを解決していました。技術的には、 React 自体はフレームワークではありません。これは UI コンポーネントをレンダリングするためのライブラリーです。 React は、アプリケーションを作成するために他のライブラリーと組み合わせて使用されます。 React と [React Native](https://reactnative.dev/) を使用すると、開発者はモバイルアプリケーションを作成できます。 React と [ReactDOM](https://react.dev/reference/react-dom) を使用すると、ウェブアプリケーションなどを作成できます。
+Facebook は 2013 年に [React](https://ja.react.dev/) をリリースしました。この時点で、Facebook はすでに React を使用して社内の問題の多くを解決していました。技術的には、 React 自体はフレームワークではありません。これは UI コンポーネントをレンダリングするためのライブラリーです。 React は、アプリケーションを作成するために他のライブラリーと組み合わせて使用されます。 React と [React Native](https://reactnative.dev/) を使用すると、開発者はモバイルアプリケーションを作成できます。 React と [ReactDOM](https://ja.react.dev/reference/react-dom) を使用すると、ウェブアプリケーションなどを作成できます。
 
 React と ReactDOM は一緒に使用されることが多いため、React は口語的に JavaScript フレームワークとして理解されています。このモジュールを読み進めるにつれて、その口語的な理解に基づいて作業していきます。
 
-React は、 [JSX](https://react.dev/learn/writing-markup-with-jsx) として知られる HTML のような構文で JavaScript を拡張します。
+React は、 [JSX](https://ja.react.dev/learn/writing-markup-with-jsx) として知られる HTML のような構文で JavaScript を拡張します。
 
 [React の学習を開始する](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 
@@ -258,12 +258,12 @@ JavaScript とブラウザーのネイティブ機能を使用してルーター
 
 新しいプロジェクトを選択するときは、フレームワークのサポートマトリックスと DSL を真剣に検討する必要があります。ブラウザーのサポートが一致しないと、ユーザーの障害となる可能性があります。 DSL サポートが一致しないと、あなたとあなたのチームメイトにとって障害となる可能性があります。
 
-| Framework | Browser support                     | Preferred DSL | Supported DSLs         | Citation                                                                           |
-| --------- | ----------------------------------- | ------------- | ---------------------- | ---------------------------------------------------------------------------------- |
-| Angular   | モダン                              | TypeScript    | HTML-based; TypeScript | [公式ドキュメント](https://angular.io/guide/browser-support)                       |
-| React     | モダン                              | JSX           | JSX; TypeScript        | [公式ドキュメント](https://react.dev/reference/react-dom/client#browser-support)   |
-| Vue       | モダン (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [公式ドキュメント](https://cli.vuejs.org/guide/browser-compatibility.html)         |
-| Ember     | モダン (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [公式ドキュメント](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
+| フレームワーク | ブラウザーの対応                    | 推奨される DSL | 対応している DSL       | 引用                                                                                |
+| -------------- | ----------------------------------- | -------------- | ---------------------- | ----------------------------------------------------------------------------------- |
+| Angular        | モダン                              | TypeScript     | HTML-based; TypeScript | [公式ドキュメント](https://angular.dev/guide/browser-support)                       |
+| React          | モダン                              | JSX            | JSX; TypeScript        | [公式ドキュメント](https://ja.react.dev/reference/react-dom/client#browser-support) |
+| Vue            | モダン (IE9+ in Vue 2)              | HTML-based     | HTML-based, JSX, Pug   | [公式ドキュメント](https://cli.vuejs.org/guide/browser-compatibility.html)          |
+| Ember          | モダン (IE9+ in Ember version 2.18) | Handlebars     | Handlebars, TypeScript | [公式ドキュメント](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/)  |
 
 > [!NOTE]
 > 「HTML-based」と説明した DSL には正式な名前がありません。これらは実際には真の DSL ではありませんが、非標準の HTML であるため、強調する価値があると考えられます。

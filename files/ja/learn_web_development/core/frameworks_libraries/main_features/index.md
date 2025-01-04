@@ -37,7 +37,7 @@ DSL はブラウザーで直接読み取ることはできません。最初に 
 
 ### JSX
 
-[JSX](https://react.dev/learn/writing-markup-with-jsx) は、JavaScript と XML の略で、JavaScript 環境に HTML のような構文をもたらす JavaScript の拡張機能です。これは React アプリケーションで使用するために React チームによって発明されましたが、 Vue アプリなどの他のアプリケーションの開発にも使用できます。
+[JSX](https://ja.react.dev/learn/writing-markup-with-jsx) は、 JavaScript と XML の略で、JavaScript 環境に HTML のような構文をもたらす JavaScript の拡張機能です。これは React アプリケーションで使用するために React チームによって発明されましたが、 Vue アプリなどの他のアプリケーションの開発にも使用できます。
 
 以下に簡単な JSX の例を示します。
 
@@ -180,7 +180,7 @@ function CounterButton() {
 }
 ```
 
-[`useState()`](https://react.dev/reference/react/useState) は **[React フック](https://react.dev/reference/react)**です。データ値は、更新されるたびにその値を追跡します。コードは最初、ブラウザーで次のように表示されます。
+[`useState()`](https://ja.react.dev/reference/react/useState) は **[React フック](https://ja.react.dev/reference/react)**です。データ値は、更新されるたびにその値を追跡します。コードは最初、ブラウザーで次のように表示されます。
 
 ```html
 <button>Clicked 0 times</button>
@@ -253,7 +253,7 @@ import AuthorCredit from "./components/AuthorCredit";
 
 プロップドリルを回避するために、フレームワークは依存関係注入として知られる機能を提供します。これは、特定のデータを、介在するレベルを介さずに、必要なコンポーネントに直接取得する方法です。各フレームワークは、異なる名前で異なる方法で依存性注入を実装しますが、結果は最終的には同じです。
 
-Angular では、このプロセスを[依存関係の注入](https://angular.io/guide/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[Context API](https://react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
+Angular では、このプロセスを[依存関係の注入](https://angular.dev/guide/di/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[Context API](https://ja.react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
 
 ### ライフサイクル
 
