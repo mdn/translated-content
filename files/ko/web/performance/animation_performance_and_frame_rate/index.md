@@ -60,4 +60,3 @@ CSS 속성을 통해 애니메이션화되는 동안 브라우저가 페이지�
 대부분의 웹 브라우저에는 페이지의 요소를 애니메이션화할 때 브라우저가 수행하는 작업에 대한 통찰력을 제공하는 도구가 포함되어 있습니다. 이러한 도구를 사용하면 애니메이션 프레임 속도을 측정하고, 성능 병목 현상을 진단할 수 있습니다.
 
 - [Chrome 성능 도구](https://developer.chrome.com/docs/devtools?hl=ko#performance)
-- [Firefox 성능 도구](https://firefox-source-docs.mozilla.org/devtools-user/performance/)
