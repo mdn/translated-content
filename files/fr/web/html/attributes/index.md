@@ -3,9 +3,9 @@ title: Référence des attributs HTML
 slug: Web/HTML/Attributes
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar("Attributes")}}
 
-Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
+Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
 
 ## Liste des attributs
 
@@ -23,9 +23,9 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/accept"><code>accept</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td>
         La liste des types acceptés par le serveur. Généralement, il s'agit de
@@ -34,12 +34,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-accept-charset"
+        <a href="/fr/docs/Web/HTML/Element/form#accept-charset"
           ><code>accept-charset</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a>
       </td>
       <td>La liste des jeux de caractères pris en charge.</td>
     </tr>
@@ -59,10 +59,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/action"><code>action</code></a>
+        <a href="/fr/docs/Web/HTML/Element/form#action"><code>action</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a>
       </td>
       <td>
         L'URI d'un programme qui traite les informations envoyées par le
@@ -71,44 +71,42 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/align"><code>align</code></a>
+        <code>align</code> {{deprecated_inline}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"><code>&#x3C;applet></code></a
-        >,
         <a href="/fr/docs/Web/HTML/Element/caption"
-          ><code>&#x3C;caption></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/col"><code>&#x3C;col></code></a
+          ><code>&lt;caption&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/hr"><code>&#x3C;hr></code></a
+          ><code>&lt;colgroup&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/hr"><code>&lt;hr&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a
+        <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&#x3C;tbody></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
+        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&lt;tbody&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&#x3C;tfoot></code></a>
-        , <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a
+        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a>
+        , <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/thead"><code>&#x3C;thead></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/tr"><code>&#x3C;tr></code></a>
+        <a href="/fr/docs/Web/HTML/Element/thead"><code>&lt;thead&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>
       </td>
       <td>Cet attribut définit l'alignement horizontal de l'élément.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe#attr-allow"
+        <a href="/fr/docs/Web/HTML/Element/iframe#allow"
           ><code>allow</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+          ><code>&lt;iframe&gt;</code></a
         >
       </td>
       <td>
@@ -121,11 +119,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/alt"><code>alt</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"><code>&#x3C;applet></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td>
         Un texte alternatif à afficher lorsque l'élément ne peut pas être
@@ -134,13 +131,22 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script#attr-async"
+        <code><a href="/fr/docs/Web/HTML/Element/link#as">as</a></code>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>
+      </td>
+      <td>Spécifie le type de contenu chargé par le lien.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/script#async"
           ><code>async</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+          ><code>&lt;script&gt;</code></a
         >
       </td>
       <td>
@@ -170,15 +176,15 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
       </td>
       <td>
         <p>
-          <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
+          <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a
           >,
-          <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+          <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
           >,
           <a href="/fr/docs/Web/HTML/Element/select"
-            ><code>&#x3C;select></code></a
+            ><code>&lt;select&gt;</code></a
           >,
-          <a href="/fr/docs/Web/HTML/Element/Textarea"
-            ><code>&#x3C;textarea></code></a
+          <a href="/fr/docs/Web/HTML/Element/textarea"
+            ><code>&lt;textarea&gt;</code></a
           >
         </p>
       </td>
@@ -189,36 +195,14 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/autofocus"
-          ><code>autofocus</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >
-      </td>
-      <td>
-        Cet attribut indique que l'élément doit recevoir le focus
-        automatiquement une fois que la page est chargée.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/fr/docs/Web/HTML/Attributes/autoplay"
           ><code>autoplay</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Cet attribut indique que l'élément audio ou vidéo doit être lancé dès
@@ -228,17 +212,17 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     <tr>
       <td><code>background</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/body"><code>&#x3C;body></code></a
+        <a href="/fr/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a>
       </td>
       <td>
         <p>Définit l'URL vers un fichier qui est une image.</p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Bien que les navigateurs et les clients
+            <strong>Note :</strong> Bien que les navigateurs et les clients
             <em>e-mails</em> prennent en charge cet attribut, cet attribut est
             obsolète. On utilisera plutôt la propriété
             <a href="/fr/docs/Web/CSS/background-image"
@@ -251,29 +235,29 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     <tr>
       <td><code>bgcolor</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/body"><code>&#x3C;body></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/col"><code>&#x3C;col></code></a
+        <a href="/fr/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
+          ><code>&lt;colgroup&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/marquee"
-          ><code>&#x3C;marquee></code></a
+          ><code>&lt;marquee&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a
+        <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&#x3C;tbody></code></a
+        <a href="/fr/docs/Web/HTML/Element/tbody"><code>&lt;tbody&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&#x3C;tfoot></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/tr"><code>&#x3C;tr></code></a>
+        <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>
       </td>
       <td>
         <p>Cet attribut indique la couleur d'arrière-plan pour l'élément.</p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
+            <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/background-color"
               ><code>background-color</code></a
@@ -285,17 +269,17 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     <tr>
       <td><code>border</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
+        <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a>
+        <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a>
       </td>
       <td>
         <p>Cet attribut indique la largeur de la bordure.</p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
+            <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/border"><code>border</code></a
             >.
@@ -305,26 +289,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/buffered"
-          ><code>buffered</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
-      </td>
-      <td>
-        Cet attribut contient la valeur de l'intervalle de temps d'ores et déjà
-        mis en mémoire tampon pour le média de l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/fr/docs/Web/HTML/Attributes/capture">capture</a></code>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td>
         À partir de la spécification <i lang="en">HTML Media Capture</i>, spécifie qu'un nouveau fichier peut être capturé.
@@ -332,13 +300,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/charset"><code>charset</code></a>
+        <a href="/fr/docs/Web/HTML/Element/meta#charset"><code>charset</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+        <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a
         >
       </td>
       <td>
@@ -348,13 +313,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/checked"><code>checked</code></a>
+        <a href="/fr/docs/Web/HTML/Element/input#checked"><code>checked</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si l'élément doit être vérifié au chargement de la
@@ -367,10 +329,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/blockquote"
-          ><code>&#x3C;blockquote></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/del"><code>&#x3C;del></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/ins"><code>&#x3C;ins></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/q"><code>&#x3C;q></code></a>
+          ><code>&lt;blockquote&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/del"><code>&lt;del&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/ins"><code>&lt;ins&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/q"><code>&lt;q&gt;</code></a>
       </td>
       <td>
         Cet attribut est une URI qui pointe vers la source de la citation ou de
@@ -393,44 +355,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
       </td>
     </tr>
     <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/applet#attr-code"
-          ><code>code</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"
-          ><code>&#x3C;applet></code></a
-        >
-      </td>
-      <td>
-        Cet attribut définit l'URL du fichier de classe qui doit être utilisé
-        pour le chargement et l'exécution de l'applet.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/applet#attr-codebase"
-          ><code>codebase</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/applet"
-          ><code>&#x3C;applet></code></a
-        >
-      </td>
-      <td>
-        Cet attribut fournit une URL absolue ou relative du dossier contenant
-        les fichiers <code>.class</code> de l'applet.
-      </td>
-    </tr>
-    <tr>
       <td><code>color</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/basefont"
-          ><code>&#x3C;basefont></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/font"><code>&#x3C;font></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/hr"><code>&#x3C;hr></code></a>
+        <a href="/fr/docs/Web/HTML/Element/font"><code>&lt;font&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/hr"><code>&lt;hr&gt;</code></a>
       </td>
       <td>
         <p>
@@ -439,7 +367,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         </p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Cet attribut est un attribut historique.
+            <strong>Note :</strong> Cet attribut est un attribut historique.
             Veuillez utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/color"><code>color</code></a
             >.
@@ -449,13 +377,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea#attr-cols"
+        <a href="/fr/docs/Web/HTML/Element/textarea#cols"
           ><code>cols</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -468,8 +396,8 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/colspan"><code>colspan</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a>
       </td>
       <td>
         Cet attribut définit le nombre de colonnes sur lequel une cellule doit
@@ -478,12 +406,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta#attr-content"
+        <a href="/fr/docs/Web/HTML/Element/meta#content"
           ><code>content</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a>
+        <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a>
       </td>
       <td>
         Une valeur associée avec <code>http-equiv</code> ou
@@ -503,29 +431,14 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/contextmenu"
-          ><code>contextmenu</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a>
-      </td>
-      <td>
-        Cet attribut fait référence à l'identifiant d'un élément
-        <a href="/fr/docs/Web/HTML/Element/menu"><code>&#x3C;menu></code></a>
-        qui sera utilisé comme menu contextuel pour l'élément.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/fr/docs/Web/HTML/Attributes/controls"
           ><code>controls</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si le navigateur doit afficher les contrôles de
@@ -534,12 +447,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/area#attr-coords"
+        <a href="/fr/docs/Web/HTML/Element/area#coords"
           ><code>coords</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a>
       </td>
       <td>
         Un ensemble de valeurs qui définit les coordonnées de la zone d'intérêt.
@@ -552,13 +465,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
+        <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>Cet attribut gère les requêtes de différentes origines.</td>
     </tr>
@@ -569,7 +482,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+          ><code>&lt;iframe&gt;</code></a
         >
       </td>
       <td>
@@ -579,13 +492,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/object#attr-data"
+        <a href="/fr/docs/Web/HTML/Element/object#data"
           ><code>data</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/object"
-          ><code>&#x3C;object></code></a
+          ><code>&lt;object&gt;</code></a
         >
       </td>
       <td>Cet attribut définit l'URL de la ressource.</td>
@@ -611,31 +524,31 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/del"><code>&#x3C;del></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/ins"><code>&#x3C;ins></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/time"><code>&#x3C;time></code></a>
+        <a href="/fr/docs/Web/HTML/Element/del"><code>&lt;del&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/ins"><code>&lt;ins&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/time"><code>&lt;time&gt;</code></a>
       </td>
       <td>Cet attribut indique la date et l'heure associées à l'élément.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-decoding"
+        <a href="/fr/docs/Web/HTML/Element/img#decoding"
           ><code>decoding</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a>
+        <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>
       </td>
       <td>Cet attribut indique la méthode préférée pour décoder l'image.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track#attr-default"
+        <a href="/fr/docs/Web/HTML/Element/track#default"
           ><code>default</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>
       </td>
       <td>
         Cet attribut indique que la piste devrait être activée sauf si les
@@ -644,13 +557,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script#attr-defer"
+        <a href="/fr/docs/Web/HTML/Element/script#defer"
           ><code>defer</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+          ><code>&lt;script&gt;</code></a
         >
       </td>
       <td>
@@ -675,10 +588,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/dirname"><code>dirname</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td></td>
@@ -690,25 +603,22 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
+        <a href="/fr/docs/Web/HTML/Element/fieldset"
+          ><code>&lt;fieldset&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
-          ><code>&#x3C;fieldset></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/optgroup"
+          ><code>&lt;optgroup&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Optgroup"
-          ><code>&#x3C;optgroup></code></a
+        <a href="/fr/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
+        <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -722,8 +632,8 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si l'hyperlien est utilisé afin de télécharger une
@@ -744,12 +654,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     <tr></tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-enctype"
+        <a href="/fr/docs/Web/HTML/Element/form#enctype"
           ><code>enctype</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a>
       </td>
       <td>
         Cet attribut définit le type de contenu des données de formulaire
@@ -758,24 +668,24 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/enterkeyhint"
+        <a href="/fr/docs/Web/HTML/Global_attributes/enterkeyhint"
           ><code>enterkeyhint</code></a
         >
-        {{experimental_inline}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Global_attributes/contenteditable"
           ><code>contenteditable</code></a
         >
       </td>
       <td>
-        Cet attribut indique le libellé ou l'icône à afficher sur la touche
-        entrée des claviers virtuels. Cet attribut peut être utilisé sur les
-        contrôles de formulaires ou sur les éléments qui sont éditables (par
-        exemple avec l'attribut <code>contenteditable</code>).
+        L'attribut <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code
+        > <sup>(angl.)</sup></a> indique le libellé ou l'icône à afficher sur la
+        touche entrée des claviers virtuels. Cet attribut peut être utilisé sur
+        les contrôles de formulaires ou sur les éléments qui sont éditables
+        (par exemple avec l'attribut <code>contenteditable</code>).
       </td>
     </tr>
     <tr>
@@ -783,10 +693,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/for"><code>for</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Label"><code>&#x3C;label></code></a
+        <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/output"
-          ><code>&#x3C;output></code></a
+          ><code>&lt;output&gt;</code></a
         >
       </td>
       <td>
@@ -798,28 +708,28 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/form"><code>form</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
-          ><code>&#x3C;fieldset></code></a
+        <a href="/fr/docs/Web/HTML/Element/fieldset"
+          ><code>&lt;fieldset&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Label"><code>&#x3C;label></code></a
+        <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
+        <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/output"><code>&#x3C;output></code></a
+        <a href="/fr/docs/Web/HTML/Element/output"><code>&lt;output&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Progress"
-          ><code>&#x3C;progress></code></a
+        <a href="/fr/docs/Web/HTML/Element/progress"
+          ><code>&lt;progress&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
+        <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>Cet attribut indique le formulaire auquel l'élément se rapporte.</td>
@@ -831,17 +741,17 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"
+          ><code>&lt;button&gt;</code></a
         >
       </td>
       <td>
         Cet attribut est l'URI du programme qui traite les données pour ces
         champs du formulaire. Il prend le pas sur l'attribut
         <code>action</code> défini pour
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a
         >.
       </td>
     </tr>
@@ -852,17 +762,17 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"
+          ><code>&lt;button&gt;</code></a
         >
       </td>
       <td>
         Si le bouton ou le champ sert à l'envoi (<code>type="submit"</code>),
         cet attribut indique l'encodage utilisé pour l'envoi des données. Si cet
         attribut est indiqué, il surcharge l'attribut <code>enctype</code> du
-        <a href="/fr/docs/Web/HTML/Element/Form">formulaire</a> auquel est
+        <a href="/fr/docs/Web/HTML/Element/form">formulaire</a> auquel est
         rattaché le bouton/champ.
       </td>
     </tr>
@@ -873,10 +783,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"
+          ><code>&lt;button&gt;</code></a
         >
       </td>
       <td>
@@ -894,10 +804,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"
+          ><code>&lt;button&gt;</code></a
         >
       </td>
       <td>
@@ -915,10 +825,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Button"
-          ><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"
+          ><code>&lt;button&gt;</code></a
         >
       </td>
       <td>
@@ -934,40 +844,40 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/headers"><code>headers</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a>
       </td>
       <td>
-        Les identifiants des éléments <code>&#x3C;th></code> qui s'appliquent à
+        Les identifiants des éléments <code>&lt;th&gt;</code> qui s'appliquent à
         cet élément.
       </td>
     </tr>
     <tr>
       <td><code>height</code></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/canvas"><code>&#x3C;canvas></code></a
+        <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
+        <a href="/fr/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
+        <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         <p>
           Pour ces éléments, cet attribut définit la hauteur occupée par
-          l'élément. Pour les autres éléments, on utilisera
-          <a href="/fr/docs/Web/CSS/height"><code>height</code></a> property.
+          l'élément. Pour les autres éléments, on utilisera la propriété CSS
+          <a href="/fr/docs/Web/CSS/height"><code>height</code></a>.
         </p>
         <div class="note">
           <p>
-            <strong>Note :</strong>Pour certains éléments comme
-            <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a
+            <strong>Note :</strong> Pour certains éléments comme
+            <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a
             >,cet attribut est un reliquat et ne devrait plus être utilisé.
             C'est la propriété CSS
             <a href="/fr/docs/Web/CSS/height"><code>height</code></a> qui est la
@@ -992,12 +902,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter#attr-high"
+        <a href="/fr/docs/Web/HTML/Element/meter#high"
           ><code>high</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a>
       </td>
       <td>Cet attribut indique la borne inférieure de l'intervalle haut.</td>
     </tr>
@@ -1006,10 +916,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/href"><code>href</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/base"><code>&#x3C;base></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/base"><code>&lt;base&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>
       </td>
       <td>L'URL de la ressource liée.</td>
     </tr>
@@ -1020,38 +930,25 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>
       </td>
       <td>Cet attribut indique la langue utilisée pour la ressource liée.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta#attr-http-equiv"
+        <a href="/fr/docs/Web/HTML/Element/meta#http-equiv"
           ><code>http-equiv</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a>
+        <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a>
       </td>
       <td>
         Définit une directive
         <a href="/fr/docs/Web/HTTP/Headers/Pragma">Pragma</a>.
       </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/command#attr-icon"
-          ><code>icon</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >
-      </td>
-      <td>Cet attribut indique une image qui représente la commande.</td>
     </tr>
     <tr>
       <td>
@@ -1068,36 +965,15 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/importance"
-          ><code>importance</code></a
-        >
-        {{experimental_inline}}
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
-        >
-      </td>
-      <td>
-        Cet attribut indique la priorité relative pour la récupération
-        (<em>fetch</em>) des ressources.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="/fr/docs/Web/Security/Subresource_Integrity"
           ><code>integrity</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
+        <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+          ><code>&lt;script&gt;</code></a
         >
       </td>
       <td>
@@ -1109,13 +985,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-intrinsicsize"
+        <a href="/fr/docs/Web/HTML/Element/img#intrinsicsize"
           ><code>intrinsicsize</code></a
         >
         {{deprecated_inline}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a>
+        <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>
       </td>
       <td>
         Cet attribut indique au navigateur qu'il faut ignorer la taille
@@ -1130,8 +1006,8 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Global_attributes/contenteditable"
           ><code>contenteditable</code></a
@@ -1147,12 +1023,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-ismap"
+        <a href="/fr/docs/Web/HTML/Element/img#ismap"
           ><code>ismap</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a>
+        <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a>
       </td>
       <td>
         Cet attribut indique que l'image contribue à une mosaïque d'images
@@ -1172,12 +1048,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track#attr-kind"
+        <a href="/fr/docs/Web/HTML/Element/track#kind"
           ><code>kind</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>
       </td>
       <td>Cet attribut définit le type de piste textuelle.</td>
     </tr>
@@ -1186,12 +1062,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/label"><code>label</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Optgroup"
-          ><code>&#x3C;optgroup></code></a
+        <a href="/fr/docs/Web/HTML/Element/optgroup"
+          ><code>&lt;optgroup&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
+        <a href="/fr/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>
       </td>
       <td>
         Cet attribut définit un titre, lisible par un utilisateur, pour
@@ -1209,36 +1085,25 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/script#attr-language"
+        <a href="/fr/docs/Web/HTML/Element/script#language"
           ><code>language</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+          ><code>&lt;script&gt;</code></a
         >
       </td>
       <td>Cet attribut définit le langage de script utilisé dans l'élément.</td>
     </tr>
     <tr>
-      <td><code>loading</code> {{experimental_inline}}</td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
-        >
-      </td>
-      <td>Cet attribut indique que l'élément doit être chargé à la demande.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-list"
+        <a href="/fr/docs/Web/HTML/Element/input#list"
           ><code>list</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td>
         Cet attribut constitue une liste d'options prédéfinie qui est suggérée à
@@ -1250,15 +1115,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/loop"><code>loop</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/bgsound"
-          ><code>&#x3C;bgsound></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/marquee"
-          ><code>&#x3C;marquee></code></a
+          ><code>&lt;marquee&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si le média courant doit recommencer au début une
@@ -1267,48 +1129,24 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter#attr-low"><code>low</code></a>
+        <a href="/fr/docs/Web/HTML/Element/meter#low"><code>low</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a>
       </td>
       <td>Cet attribut indique la borne supérieure de l'intervalle bas.</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/html#attr-manifest"
-          ><code>manifest</code></a
-        >
-        {{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/html"><code>&#x3C;html></code></a>
-      </td>
-      <td>
-        Cet attribut définit l'URL du manifeste du document pour la gestion du
-        cache.
-        <div class="note">
-          <p>
-            <strong>Note :</strong>Cet attribut est obsolète, utilisez
-            <a href="/fr/docs/Web/Manifest"
-              ><code>&#x3C;link rel="manifest"></code></a
-            >
-            à la place.
-          </p>
-        </div>
-      </td>
     </tr>
     <tr>
       <td>
         <a href="/fr/docs/Web/HTML/Attributes/max"><code>max</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Progress"
-          ><code>&#x3C;progress></code></a
+        <a href="/fr/docs/Web/HTML/Element/progress"
+          ><code>&lt;progress&gt;</code></a
         >
       </td>
       <td>Cet attribut indique la valeur maximale autorisée.</td>
@@ -1320,10 +1158,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -1338,10 +1176,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -1354,13 +1192,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/media"><code>media</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&#x3C;source></code></a
+        <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a>
+        <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>
       </td>
       <td>
         Cet attribut est indication à propos du type de média pour la ressource
@@ -1369,12 +1207,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-method"
+        <a href="/fr/docs/Web/HTML/Element/form#method"
           ><code>method</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a>
       </td>
       <td>
         Cet attribut définit la méthode <a href="/fr/docs/Web/HTTP">HTTP</a> à
@@ -1387,9 +1225,9 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/min"><code>min</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a>
       </td>
       <td>Cet attribut indique la valeur minimale autorisée.</td>
     </tr>
@@ -1400,10 +1238,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/select"
-          ><code>&#x3C;select></code></a
+          ><code>&lt;select&gt;</code></a
         >
       </td>
       <td>
@@ -1416,9 +1254,9 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/muted"><code>muted</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si le son de la vidéo doit être coupé lorsque la
@@ -1430,28 +1268,28 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/name"><code>name</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
-          ><code>&#x3C;fieldset></code></a
+        <a href="/fr/docs/Web/HTML/Element/fieldset"
+          ><code>&lt;fieldset&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
+        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
+        <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/output"><code>&#x3C;output></code></a
+        <a href="/fr/docs/Web/HTML/Element/output"><code>&lt;output&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
+        <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/map"><code>&#x3C;map></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/meta"><code>&#x3C;meta></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/map"><code>&lt;map&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/param"><code>&#x3C;param></code></a>
+        <a href="/fr/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a>
       </td>
       <td>
         Le nom de l'élément qui peut être utilisé par le serveur pour identifier
@@ -1460,12 +1298,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form#attr-novalidate"
+        <a href="/fr/docs/Web/HTML/Element/form#novalidate"
           ><code>novalidate</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a>
       </td>
       <td>
         Cet attribut indique que les données du formulaire ne doivent pas être
@@ -1474,13 +1312,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/details#attr-open"
+        <a href="/fr/docs/Web/HTML/Element/details#open"
           ><code>open</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/details"
-          ><code>&#x3C;details></code></a
+          ><code>&lt;details&gt;</code></a
         >
       </td>
       <td>
@@ -1490,12 +1328,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter#attr-optimum"
+        <a href="/fr/docs/Web/HTML/Element/meter#optimum"
           ><code>optimum</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a>
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a>
       </td>
       <td>Cet attribut indique la valeur numérique optimale.</td>
     </tr>
@@ -1504,7 +1342,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/pattern"><code>pattern</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td>
         Cet attribut définit une expression rationnelle contre laquelle valider
@@ -1513,11 +1351,11 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a#attr-ping"><code>ping</code></a>
+        <a href="/fr/docs/Web/HTML/Element/a#ping"><code>ping</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a>
       </td>
       <td></td>
     </tr>
@@ -1528,10 +1366,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -1541,12 +1379,25 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/video#attr-poster"
+        <code><a href="/fr/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
+      </td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
+      </td>
+      <td>
+        Un attribut booléen indiquant que la vidéo doit être lue « en ligne »&nbsp;;
+        c'est-à-dire dans la zone de lecture de l'élément. Notez que l'absence
+        de cet attribut n'implique pas que la vidéo sera toujours lue en plein écran.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/video#poster"
           ><code>poster</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Cet attribut est une URL qui indique l'image à afficher tant que
@@ -1558,9 +1409,9 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/preload"><code>preload</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si toute ou partie, voire aucune partie de la
@@ -1569,28 +1420,15 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/command#attr-radiogroup"
-          ><code>radiogroup</code></a
-        >
-      </td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
-        >
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
         <a href="/fr/docs/Web/HTML/Attributes/readonly"
           ><code>readonly</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>Cet attribut indique si l'élément peut être édité.</td>
@@ -1602,15 +1440,15 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
+        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/script"
-          ><code>&#x3C;script></code></a
+          ><code>&lt;script&gt;</code></a
         >
       </td>
       <td>
@@ -1623,9 +1461,9 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/rel"><code>rel</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>
       </td>
       <td>
         Cet attribut définit la relation entre l'objet cible et l'objet du lien.
@@ -1638,12 +1476,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/select"><code>&#x3C;select></code></a
+        <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -1653,12 +1491,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol#attr-reversed"
+        <a href="/fr/docs/Web/HTML/Element/ol#reversed"
           ><code>reversed</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol"><code>&#x3C;ol></code></a>
+        <a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>
       </td>
       <td>
         Cet attribut indique si la liste doit être affichée dans un ordre
@@ -1667,13 +1505,20 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea#attr-rows"
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+      </td>
+      <td><a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a></td>
+      <td>Définit un rôle explicite pour un élément destiné à être utilisé par les technologies d'assistance.</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/fr/docs/Web/HTML/Element/textarea#rows"
           ><code>rows</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>Cet attribut définit le nombre de lignes pour la zone de texte.</td>
@@ -1683,8 +1528,8 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/rowspan"><code>rowspan</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/td"><code>&#x3C;td></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a>
       </td>
       <td>
         Cet attribut définit le nombre de lignes sur lesquelles une cellule doit
@@ -1693,13 +1538,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe#attr-sandbox"
+        <a href="/fr/docs/Web/HTML/Element/iframe#sandbox"
           ><code>sandbox</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+          ><code>&lt;iframe&gt;</code></a
         >
       </td>
       <td>
@@ -1710,33 +1555,33 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/th#attr-scope"><code>scope</code></a>
+        <a href="/fr/docs/Web/HTML/Element/th#scope"><code>scope</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/th"><code>&#x3C;th></code></a>
+        <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a>
       </td>
       <td>Définit les cellules sur lesquelles porte la cellule d'en-tête.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/style#attr-scoped"
+        <a href="/fr/docs/Web/HTML/Element/style#scoped"
           ><code>scoped</code></a
         >{{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a>
+        <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>
       </td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Option#attr-selected"
+        <a href="/fr/docs/Web/HTML/Element/option#selected"
           ><code>selected</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Option"
-          ><code>&#x3C;option></code></a
+        <a href="/fr/docs/Web/HTML/Element/option"
+          ><code>&lt;option&gt;</code></a
         >
       </td>
       <td>
@@ -1749,8 +1594,8 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/shape"><code>shape</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a>
       </td>
       <td></td>
     </tr>
@@ -1759,10 +1604,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/size"><code>size</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/select"
-          ><code>&#x3C;select></code></a
+          ><code>&lt;select&gt;</code></a
         >
       </td>
       <td>
@@ -1776,11 +1621,11 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/sizes"><code>sizes</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/link"><code>&#x3C;link></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"
-          ><code>&#x3C;source></code></a
+        <a href="/fr/docs/Web/HTML/Element/source"
+          ><code>&lt;source&gt;</code></a
         >
       </td>
       <td></td>
@@ -1802,10 +1647,10 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/span"><code>span</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/col"><code>&#x3C;col></code></a
+        <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/colgroup"
-          ><code>&#x3C;colgroup></code></a
+          ><code>&lt;colgroup&gt;</code></a
         >
       </td>
       <td></td>
@@ -1829,46 +1674,46 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/src"><code>src</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/audio"><code>&#x3C;audio></code></a
+        <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
+        <a href="/fr/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
+        <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&#x3C;source></code></a
+        <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a
+        <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>Cet attribut indique l'URL du contenu embarqué.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/iframe#attr-srcdoc"
+        <a href="/fr/docs/Web/HTML/Element/iframe#srcdoc"
           ><code>srcdoc</code></a
         >
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/iframe"
-          ><code>&#x3C;iframe></code></a
+          ><code>&lt;iframe&gt;</code></a
         >
       </td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track#attr-srclang"
+        <a href="/fr/docs/Web/HTML/Element/track#srclang"
           ><code>srclang</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/track"><code>&#x3C;track></code></a>
+        <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>
       </td>
       <td></td>
     </tr>
@@ -1877,20 +1722,20 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/srcset"><code>srcset</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/source"
-          ><code>&#x3C;source></code></a
+          ><code>&lt;source&gt;</code></a
         >
       </td>
       <td>Une ou plusieurs images candidates adaptatives.</td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol#attr-start"><code>start</code></a>
+        <a href="/fr/docs/Web/HTML/Element/ol#start"><code>start</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/ol"><code>&#x3C;ol></code></a>
+        <a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a>
       </td>
       <td>
         Cet attribut définit le premier nombre de la liste si celui-ci est
@@ -1902,7 +1747,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/step"><code>step</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
       </td>
       <td></td>
     </tr>
@@ -1924,12 +1769,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/table#attr-summary"
+        <a href="/fr/docs/Web/HTML/Element/table#summary"
           ><code>summary</code></a
         >{{deprecated_inline}}
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/table"><code>&#x3C;table></code></a>
+        <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a>
       </td>
       <td></td>
     </tr>
@@ -1952,12 +1797,16 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/target"><code>target</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/a"><code>&#x3C;a></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&#x3C;area></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/base"><code>&#x3C;base></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Form"><code>&#x3C;form></code></a>
+        <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/base"><code>&lt;base&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a>
       </td>
-      <td></td>
+      <td>
+        Spécifie où ouvrir le document lié (dans le cas d'un élément
+        <code>&lt;a&gt;</code>) ou où afficher la réponse reçue
+        (dans le cas d'un élément <code>&lt;form&gt;</code>)
+      </td>
     </tr>
     <tr>
       <td>
@@ -1993,23 +1842,25 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/type"><code>type</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/command"
-          ><code>&#x3C;command></code></a
+        <a href="/fr/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
+        <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
+        <a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/script"><code>&#x3C;script></code></a
+        <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&#x3C;source></code></a
+        <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/style"><code>&#x3C;style></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/menu"><code>&#x3C;menu></code></a>
+        <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/menu"><code>&lt;menu&gt;</code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>
       </td>
       <td>Cet attribut définit le type de l'élément.</td>
     </tr>
@@ -2018,12 +1869,12 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/usemap"><code>usemap</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/object"
-          ><code>&#x3C;object></code></a
+          ><code>&lt;object&gt;</code></a
         >
       </td>
       <td></td>
@@ -2033,19 +1884,22 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/value"><code>value</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Button"><code>&#x3C;button></code></a
+        <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Option"><code>&#x3C;option></code></a
+        <a href="/fr/docs/Web/HTML/Element/data"><code>&lt;data&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/li"><code>&#x3C;li></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Meter"><code>&#x3C;meter></code></a
+        <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Progress"
-          ><code>&#x3C;progress></code></a
+        <a href="/fr/docs/Web/HTML/Element/meter"><code>&lt;meter&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/param"><code>&#x3C;param></code></a>
+        <a href="/fr/docs/Web/HTML/Element/option"><code>&lt;option&gt;</code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/progress"
+          ><code>&lt;progress&gt;</code></a
+        >,
+        <a href="/fr/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a>
       </td>
       <td>
         Cet attribut définit la valeur par défaut qui sera affichée dans
@@ -2057,25 +1911,25 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
         <a href="/fr/docs/Web/HTML/Attributes/width"><code>width</code></a>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/canvas"><code>&#x3C;canvas></code></a
+        <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/embed"><code>&#x3C;embed></code></a
+        <a href="/fr/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&#x3C;iframe></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/Img"><code>&#x3C;img></code></a
+        <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a
+        >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Input"><code>&#x3C;input></code></a
+        <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/object"><code>&#x3C;object></code></a
+        <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/video"><code>&#x3C;video></code></a>
+        <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>
       </td>
       <td>
         Pour ces éléments, cet attribut définit la largeur occupée sur l'écran.
         <div class="note">
           <p>
-            <strong>Note :</strong>Pour tous les autres éléments, comme
-            <a href="/fr/docs/Web/HTML/Element/div"><code>&#x3C;div></code></a
+            <strong>Note :</strong> Pour tous les autres éléments, comme
+            <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a
             >, il faut utiliser la propriété CSS standard
             <a href="/fr/docs/Web/CSS/width"><code>width</code></a> afin de
             définir la largeur.
@@ -2085,13 +1939,13 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea#attr-wrap"
+        <a href="/fr/docs/Web/HTML/Element/textarea#wrap"
           ><code>wrap</code></a
         >
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Textarea"
-          ><code>&#x3C;textarea></code></a
+        <a href="/fr/docs/Web/HTML/Element/textarea"
+          ><code>&lt;textarea&gt;</code></a
         >
       </td>
       <td>
@@ -2104,7 +1958,7 @@ Les éléments HTML ont des **attributs** ; ce sont des valeurs supplémentaires
 
 ## Attribut de contenu ou attribut IDL ?
 
-En HTML, la plupart des attributs ont deux aspects : l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
+En HTML, la plupart des attributs ont deux aspects&nbsp;: l'**attribut de contenu** et l'**attribut IDL** (pour _Interface Definition Language_ ou langage de définition des interfaces).
 
 L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes [`element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute) et [`element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute). L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une `maxlength` d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input) à 42, on utilisera `setAttribute("maxlength", "42")` sur cet élément.
 
@@ -2120,11 +1974,11 @@ Les attributs IDL peuvent [refléter d'autres types](https://www.whatwg.org/spec
 
 Certains attributs de contenu (ex. `required`, `readonly`, `disabled`) sont des [attributs booléens](https://www.w3.org/TR/html52/infrastructure.html#sec-boolean-attributes). Si un attribut booléen est présent, sa valeur correspondra à _vrai_ (_true_), s'il est absent, sa valeur correspondra à _faux_ (_false_).
 
-HTML5 définit des restrictions sur les valeurs autorisées des attributs booléens : Si l'attribut est présent, sa valeur doit être soit la chaîne vide (équivalente, l'attribut peut avoir une valeur non attribuée), soit une valeur qui est une correspondance ASCII insensible à la casse pour le nom canonique de l'attribut, sans espace avant ou après. Les exemples suivants sont des façons valides de baliser un attribut booléen :
+HTML5 définit des restrictions sur les valeurs autorisées des attributs booléens&nbsp;: Si l'attribut est présent, sa valeur doit être soit la chaîne vide (équivalente, l'attribut peut avoir une valeur non attribuée), soit une valeur qui est une correspondance ASCII insensible à la casse pour le nom canonique de l'attribut, sans espace avant ou après. Les exemples suivants sont des façons valides de baliser un attribut booléen&nbsp;:
 
-```html
+```html-nolint
 <div itemscope>Ce fragment est du HTML valide mais du XML invalide.</div>
-<div itemscope="itemscope">
+<div itemscope=itemscope>
   Ce fragment est du HTML valide mais du XML invalide.
 </div>
 <div itemscope="">Ce fragment est du HTML valide et du XML valide.</div>
@@ -2133,7 +1987,22 @@ HTML5 définit des restrictions sur les valeurs autorisées des attributs boolé
 </div>
 ```
 
-Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions : si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
+Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas autorisées pour les attributs booléens. Pour représenter une valeur fausse, il faudra ne pas écrire l'attribut du tout. Cette règle peut entraîner quelques incompréhensions&nbsp;: si on écrit `checked="false"` l'attribut `checked` sera présent et donc considéré comme _vrai_ (_true_).
+
+## Attributs du gestionnaire d'événements
+
+> [!WARNING]
+> L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
+
+En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/Events/Event_handlers#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être spécifiée comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
+
+Tous les attributs du gestionnaire d'événements acceptent une chaîne de caractères. La chaîne de caractères sera utilisée pour synthétiser une [fonction JavaScript](/fr/docs/Web/JavaScript/Reference/Functions) comme `function nom(/*argument*/) {corps}`, où `nom` est le nom de l'attribut , et `corps` est la valeur de l'attribut. Le gestionnaire reçoit les mêmes paramètres que son homologue du gestionnaire d'événements JavaScript — la plupart des gestionnaires ne reçoivent qu'un seul paramètre `event`, tandis que `onerror` en reçoit cinq&nbsp;: `event`, `source`, `lineno`, `colno`, `error`. Cela signifie que vous pouvez, en général, utiliser la variable `event` dans l'attribut.
+
+```html
+<div onclick="console.log(event)">Cliquez sur moi !</div>
+<!-- Le gestionnaire synthétisé a un nom ; vous pouvez le référencer lui-même -->
+<div onclick="console.log(onclick)">Cliquez sur moi !</div>
+```
 
 ## Voir aussi
 
