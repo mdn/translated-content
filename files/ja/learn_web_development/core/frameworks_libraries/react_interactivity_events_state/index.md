@@ -605,8 +605,8 @@ function App(props) {
     const updatedTasks = tasks.map((task) => {
       // このタスクが編集されたタスクと同じ ID を持っている場合
       if (id === task.id) {
-      // オブジェクトを開いて、 `completed` プロップが
-      // 反転された新しいオブジェクトを作成します。
+        // オブジェクトを開いて、 `completed` プロップが
+        // 反転された新しいオブジェクトを作成します。
         return { ...task, completed: !task.completed };
       }
       return task;
