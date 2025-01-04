@@ -95,4 +95,3 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 
 - {{domxref("Touch_events","Touch Events Overview")}}
 - {{domxref("GestureEvent")}}
-
