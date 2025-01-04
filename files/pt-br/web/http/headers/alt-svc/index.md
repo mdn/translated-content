@@ -3,6 +3,8 @@ title: Alt-Svc
 slug: Web/HTTP/Headers/Alt-Svc
 ---
 
+{{HTTPSidebar}}
+
 O cabeçalho de resposta HTTP **`Alt-Svc`** é usado para indicar que serviços alternativos que podem ser utilizados para alcançar o mesmo recurso. Um serviço alternativo é definido por uma combinação de protocolo/host/porta.
 
 ## Sintaxe
