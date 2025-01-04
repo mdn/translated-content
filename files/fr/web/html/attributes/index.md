@@ -3,7 +3,7 @@ title: Référence des attributs HTML
 slug: Web/HTML/Attributes
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar("Attributes")}}
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.
 
@@ -300,7 +300,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/charset"><code>charset</code></a>
+        <a href="/fr/docs/Web/HTML/Element/meta#charset"><code>charset</code></a>
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/meta"><code>&lt;meta&gt;</code></a
@@ -313,7 +313,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/checked"><code>checked</code></a>
+        <a href="/fr/docs/Web/HTML/Element/input#checked"><code>checked</code></a>
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>
@@ -668,10 +668,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/HTML/Attributes/enterkeyhint"
+        <a href="/fr/docs/Web/HTML/Global_attributes/enterkeyhint"
           ><code>enterkeyhint</code></a
         >
-        {{experimental_inline}}
       </td>
       <td>
         <a href="/fr/docs/Web/HTML/Element/textarea"
@@ -682,10 +681,11 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >
       </td>
       <td>
-        Cet attribut indique le libellé ou l'icône à afficher sur la touche
-        entrée des claviers virtuels. Cet attribut peut être utilisé sur les
-        contrôles de formulaires ou sur les éléments qui sont éditables (par
-        exemple avec l'attribut <code>contenteditable</code>).
+        L'attribut <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code
+        > <sup>(angl.)</sup></a> indique le libellé ou l'icône à afficher sur la
+        touche entrée des claviers virtuels. Cet attribut peut être utilisé sur
+        les contrôles de formulaires ou sur les éléments qui sont éditables
+        (par exemple avec l'attribut <code>contenteditable</code>).
       </td>
     </tr>
     <tr>
@@ -710,7 +710,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         <a href="/fr/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Fieldset"
+        <a href="/fr/docs/Web/HTML/Element/fieldset"
           ><code>&lt;fieldset&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a
@@ -1196,7 +1196,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a
         >, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a
+        <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>
       </td>
@@ -1505,9 +1505,9 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <code><a href="fr/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles">role</a></code>
       </td>
-      <td><a href="fr/docs/Web/HTML/Global_attributes">Attribut universel</a></td>
+      <td><a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a></td>
       <td>Définit un rôle explicite pour un élément destiné à être utilisé par les technologies d'assistance.</td>
     </tr>
     <tr>
@@ -1624,7 +1624,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a
         >, <a href="/fr/docs/Web/HTML/Element/img"><code>&lt;img&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"
+        <a href="/fr/docs/Web/HTML/Element/source"
           ><code>&lt;source&gt;</code></a
         >
       </td>
@@ -1685,7 +1685,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >,
         <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a
+        <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a
         >,
@@ -1854,7 +1854,7 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
         >,
         <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a
+        <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a
         >,
