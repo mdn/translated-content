@@ -1,6 +1,7 @@
 ---
 title: 自执行匿名函数
-slug: Glossary/Self-Executing_Anonymous_Function
+slug: conflicting/Glossary/IIFE
+original_slug: Glossary/Self-Executing_Anonymous_Function
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---

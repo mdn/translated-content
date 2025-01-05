@@ -529,6 +529,7 @@
 /zh-CN/docs/Glossary/Rendering_engine	/zh-CN/docs/Glossary/Engine/Rendering
 /zh-CN/docs/Glossary/Routers	/zh-CN/docs/Glossary/Router
 /zh-CN/docs/Glossary/Second-level_Domain	/zh-CN/docs/Glossary/SLD
+/zh-CN/docs/Glossary/Self-Executing_Anonymous_Function	/zh-CN/docs/conflicting/Glossary/IIFE
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Simple_header	/zh-CN/docs/Glossary/CORS-safelisted_request_header
 /zh-CN/docs/Glossary/Simple_response_header	/zh-CN/docs/Glossary/CORS-safelisted_response_header
