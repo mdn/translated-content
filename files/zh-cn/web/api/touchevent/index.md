@@ -20,7 +20,7 @@ l10n:
 
 ## 属性列表
 
-_{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domxref("Event")}}。_
+_此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
 
 - {{ domxref("event.altKey", "TouchEvent.altKey") }} {{readonlyInline}}
   - : 布尔值，指明触摸事件触发时，键盘 alt 键是否被按下。
@@ -81,7 +81,7 @@ _{{ domxref("TouchEvent") }}的属性继承了 {{domxref("UIEvent")}} 和 {{domx
 
 ## 示例
 
-请看 [example on the main Touch events article](/zh-CN/docs/Web/API/Touch_events#example).
+请看 [触摸事件的示例](/zh-CN/docs/Web/API/Touch_events#示例)。
 
 ## 规范
 
