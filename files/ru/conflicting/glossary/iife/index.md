@@ -1,6 +1,7 @@
 ---
 title: Self-Executing Anonymous Function
-slug: Glossary/Self-Executing_Anonymous_Function
+slug: conflicting/Glossary/IIFE
+original_slug: Glossary/Self-Executing_Anonymous_Function
 ---
 
 {{GlossarySidebar}}
