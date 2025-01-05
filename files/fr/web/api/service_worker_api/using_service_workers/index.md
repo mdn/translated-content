@@ -92,7 +92,7 @@ Un seul <i lang="en">service worker</i> peut contrôler de nombreuses pages. Cha
 > [!NOTE]
 > En utilisant la détection de fonctionnalité comme nous l'avons fait plus haut, cela permet aux navigateurs qui ne prennent pas en charge ces fonctionnalités de servir l'application en ligne normalement.
 
-#### Pourquoi est-ce l'enregistrement de mon <i lang="en">service worker</i> échoue&nbsp;?
+#### Pourquoi est-ce que l'enregistrement de mon <i lang="en">service worker</i> échoue&nbsp;?
 
 Il peut y avoir plusieurs raisons&nbsp;:
 
