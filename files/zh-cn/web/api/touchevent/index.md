@@ -16,7 +16,7 @@ l10n:
 ## 构造函数
 
 - {{ domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
-  - : 创建一个{{ domxref("TouchEvent") }}对象。
+  - : 创建一个 {{ domxref("TouchEvent") }} 对象。
 
 ## 属性列表
 
@@ -35,7 +35,7 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 - {{ domxref("TouchEvent.targetTouches") }} {{readonlyInline}}
   - : 一个 {{ domxref("TouchList") }} 对象，是包含了如下触点的 {{ domxref("Touch") }} 对象：触摸起始于当前事件的目标 {{ domxref("element") }} 上，并且仍然没有离开触摸平面的触点。
 - {{ domxref("TouchEvent.touches") }} {{readonlyInline}}
-  - : 一 个 {{ domxref("TouchList") }} 对象，包含了所有当前接触触摸平面的触点的 {{ domxref("Touch") }} 对象，无论它们的起始于哪个 {{ domxref("element") }} 上，也无论它们状态是否发生了变化。
+  - : 一个 {{ domxref("TouchList") }} 对象，包含了所有当前接触触摸平面的触点的 {{ domxref("Touch") }} 对象，无论它们的起始于哪个 {{ domxref("element") }} 上，也无论它们状态是否发生了变化。
 
 ## 触摸事件的类型
 
@@ -77,7 +77,7 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 很值得注意的是，在很多情况下，触摸事件和鼠标事件会一起触发（以使非触摸专用的代码仍然可以与用户交互）。如果你要使用触摸事件，你可以使用 {{domxref("Event.preventDefault","preventDefault()")}} 来取消鼠标事件。
 
-但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} and {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 `true`，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 `passive` 设置成 `false` 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。[Google Developer](https://developer.chrome.google.cn/blog/passive-event-listeners) 有一个简单的演示。
+但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} 和 {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 `true`，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 `passive` 设置成 `false` 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。[Google Developer](https://developer.chrome.google.cn/blog/passive-event-listeners) 有一个简单的演示。
 
 ## 示例
 
@@ -93,5 +93,5 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 ## 相关链接
 
-- {{domxref("Touch_events","Touch Events Overview")}}
+- [触摸事件](/zh-CN/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
