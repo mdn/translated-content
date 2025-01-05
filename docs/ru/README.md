@@ -1,6 +1,6 @@
 # Участие в переводе
 
-Для начала ознакомьтесь с [правилами внесения изменений в MDN][https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md], [информацией о переводе документов MDN](https://github.com/mdn/translated-content/blob/main/docs/README.md) и [Руководством по составлению документации](/ru/docs/MDN/Guidelines).
+Для начала ознакомьтесь с [правилами внесения изменений в MDN](https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md), [информацией о переводе документов MDN](https://github.com/mdn/translated-content/blob/main/docs/README.md) и [руководствами по составлению документации](/ru/docs/MDN/Writing_guidelines).
 
 ## Использование ссылок
 

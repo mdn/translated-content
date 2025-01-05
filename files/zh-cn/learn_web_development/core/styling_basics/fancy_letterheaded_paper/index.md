@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 
 如果你想给人留下好印象，把信写在一张精美的信纸上会是个不错的开始，在这个评估里我们希望你能创建一个在线模版来达到这样的效果。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

@@ -9,7 +9,7 @@ original_slug: Learn/CSS/First_steps/How_CSS_works
 
 我们已经知道了 CSS 是做什么的以及怎么写简单的样式这样基础的 CSS，接下来我将了解到浏览器如何获取 CSS、HTML 和将他们加载成网页。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前置知识：</th>

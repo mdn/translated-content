@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/What_went_wrong
 
 當你在練習撰寫上一節的「猜數字」遊戲時，你可能會發現它無法運作。不用擔心，本文將會把你從快被拔光的頭髮中拯救出來，並且給你一些小提示，讓你知道怎麼找出及修正 Javascript 的程式運行錯誤。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備：</th>

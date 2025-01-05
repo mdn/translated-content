@@ -1,12 +1,11 @@
 ---
-title: ウェブへのベクターグラフィックの追加
+title: HTML へのベクターグラフィックの追加
 slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
-original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 l10n:
-  sourceCommit: 2492742db9d7341fa74604a1b4cd97dc3c079cab
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
 ベクターグラフィックは多くの状況でとても便利です。ファイルサイズは小さく、スケーラビリティが高いため、ズームインしたり、大きなサイズに拡大したりしてもモザイクになりません。この記事では、ウェブページにそれを組み込む方法を説明します。
 
@@ -15,8 +14,8 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML の基本</a>と、
-        <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML の基本</a>と、
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >画像を文書に挿入する</a
         >方法を理解しておく必要があります。
       </td>
@@ -96,7 +95,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 
 ### 簡単な方法: `img` 要素
 
-{{htmlelement("img")}} 要素を介して SVG を埋め込むには、予想通り、 `src` 属性で参照する必要があります。 `height` 属性または `width` 属性 (または SVG に固有のアスペクト比がない場合は両方) が必要です。まだ[HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)を終了していない人は、こちらをお読みください。
+{{htmlelement("img")}} 要素を介して SVG を埋め込むには、予想通り、 `src` 属性で参照する必要があります。 `height` 属性または `width` 属性 (または SVG に固有のアスペクト比がない場合は両方) が必要です。まだ[HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)を終了していない人は、こちらをお読みください。
 
 ```html
 <img
@@ -164,7 +163,7 @@ SVG がまったく表示されない場合は、サーバーが正しく設定�
 
 ### SVG を `iframe` で埋め込む方法
 
-SVG 画像は、ウェブページのようにブラウザーで開くことができます。 したがって、SVG 文書を `<iframe>` に埋め込むことは、[\<object> から \<iframe> まで — その他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)で学んだように行われます。
+SVG 画像は、ウェブページのようにブラウザーで開くことができます。 したがって、SVG 文書を `<iframe>` に埋め込むことは、[\<object> から \<iframe> まで — その他の埋め込み技術](/ja/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)で学んだように行われます。
 
 ここで簡単なレビューです。
 
@@ -279,12 +278,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -327,13 +326,9 @@ textarea.onkeyup = function () {
 
 この記事では、ベクターグラフィックと SVG の概要、それらをなぜ知っておくと便利なのか、そして SVG をウェブページに組み込む方法について簡単に説明しました。 SVG を学ぶ上での完全なガイドとなることは決して考えられていませんでしたが、ウェブ上の旅行でそれに会っていれば、SVG が何であるかを知ることができます。 あなたがまだ SVG のエキスパートではないと感じたら心配しないでください。 もしそれがどう動くかについて詳しく知りたいなら助けになる以下のリンクを参考にしてください。
 
-このモジュールの最後の記事では、[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)を詳細に調査し、さまざまな端末間で画像をより良く動作させるための HTML ツールについて説明します。
-
-## 関連項目
+## 関連情報
 
 - MDN の [SVG チュートリアル](/ja/docs/Web/SVG/Tutorial/Getting_Started)
 - [Sara Soueidan のレスポンシブ SVG 画像に関するチュートリアル](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/) (英語)
 - [SVG のアクセシビリティ上の長所](https://www.w3.org/TR/SVG-access/) (英語)
 - [SVG を縮尺変更する方法](https://css-tricks.com/scale-svg/) (ラスターグラフィックほど簡単ではありません！) (英語)
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

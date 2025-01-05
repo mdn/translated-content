@@ -8,7 +8,7 @@ original_slug: Learn/CSS/First_steps/Getting_started
 
 在這個主題中，我們將 CSS 套用到一個簡單的 HTML 文件上，在過程中學習這個語言一些實際的東西。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備知識：</th>

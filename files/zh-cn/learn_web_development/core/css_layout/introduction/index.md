@@ -8,7 +8,7 @@ original_slug: Learn/CSS/CSS_layout/Introduction
 
 本文将回顾我们以前模块中已经介绍过的一些 CSS 布局特性——例如不同的{{cssxref("display")}}值——并介绍我们将在本模块中使用的一些概念。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

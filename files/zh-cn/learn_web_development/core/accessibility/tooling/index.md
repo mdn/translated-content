@@ -10,7 +10,7 @@ l10n:
 
 接下来，我们将关注无障碍，提供关于一些常见问题的信息，如何进行简单测试以及如何使用审核/自动化工具来查找无障碍问题。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

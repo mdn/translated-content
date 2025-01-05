@@ -8,7 +8,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_sit
 
 在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

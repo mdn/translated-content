@@ -2,7 +2,7 @@
 title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 l10n:
-  sourceCommit: 948f86c2251aa5234f075211fcaeb072e09cc75d
+  sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
 {{AddonSidebar}}
@@ -45,7 +45,7 @@ let settingIcon = browser.sidebarAction.setIcon(
 
       - : {{WebExtAPIRef('sidebarAction.ImageDataType')}} 或 `object`。这要么是一个单一的 `ImageData` 对象，要么是一个字典对象。
 
-        如果 `imageData` 是一个字典，那么每个属性的值是一个 `ImageData` 对象，其名称是其大小，如下所示：
+        使用字典对象来指定多个不同尺寸的 `ImageData` 对象，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `imageData` 是一个字典，那么每个属性的值是一个 `ImageData` 对象，其名称是其大小，例如：
 
         ```js
         let settingIcon = browser.sidebarAction.setIcon({
@@ -56,15 +56,32 @@ let settingIcon = browser.sidebarAction.setIcon(
         });
         ```
 
-        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action#选择图标尺寸)。
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
+
+    - `path` {{optional_inline}}
+
+      - : `string` 或 `object`。这要么是指向图标文件的相对路径，要么是一个字典对象。
+
+        使用字典对象来指定多个不同尺寸的图标文件，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `path` 是一个字典，那么每个属性的值是一个相对路径，其名称是其大小，例如：
+
+        ```js
+        let settingIcon = browser.sidebarAction.setIcon({
+          path: {
+            16: "path/to/image16.jpg",
+            32: "path/to/image32.jpg",
+          },
+        });
+        ```
+
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
         如果 `path` 是一个空字符串，浏览器将使用默认图标。
 
         如果 `path` 不为空但不指向图标文件，那么图标将被隐藏。
 
-        如果 `path` 是 `null`，并且指定了 `tabId`，并且指定的标签页设置了标签页特定图标：那么该标签页的特定图标将重置为全局图标（如果设置了全局图标）或清单图标。
+        如果 `path` 是 `null`，并且指定了 `tabId`，并且指定的标签页设置了标签页特定图标：那么如果设置了全局图标，该标签页的特定图标将重置为全局图标，否则将被重置为清单图标。
 
-        如果 `path` 是 `null`，并且省略了 `tabId`，并且设置了全局图标，那么它将重置为清单图标。
+        如果 `path` 是 `null`，并且省略了 `tabId`，并且设置了全局图标，那么它将被重置为清单图标。
 
     - `tabId` {{optional_inline}}
       - : `integer`。仅为指定的标签页设置图标。
@@ -78,7 +95,7 @@ let settingIcon = browser.sidebarAction.setIcon(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当图标被设置时将会不使用任何参数兑现。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当图标被设置时将会不带任何参数地兑现。
 
 ## 浏览器兼容性
 

@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Building_blocks/Looping_code
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

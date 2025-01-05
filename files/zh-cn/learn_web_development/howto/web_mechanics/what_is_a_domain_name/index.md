@@ -8,7 +8,7 @@ l10n:
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

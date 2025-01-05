@@ -64,7 +64,8 @@ const PLANETS_INFO = {
 
   venus: {
     title: "金星",
-    description: "金星是离太阳第二近的行星。它以罗马爱与美之女神金星命名。",
+    description:
+      "金星（英语：Venus）是离太阳第二近的行星。在英语中，它以罗马爱与美之女神“维纳斯（Venus）”命名。",
   },
 
   earth: {

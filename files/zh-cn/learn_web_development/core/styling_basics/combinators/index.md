@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Building_blocks/Selectors/Combinators
 
 我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">学习前提：</th>

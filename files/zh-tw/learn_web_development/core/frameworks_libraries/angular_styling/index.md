@@ -8,7 +8,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
 
 現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
