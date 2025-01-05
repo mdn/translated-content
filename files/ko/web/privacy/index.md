@@ -198,7 +198,7 @@ slug: Web/Privacy
 - {{htmlelement("iframe")}} `sandbox` 속성을 사용하여 `<iframe>`에 포함된 콘텐츠 내에서 특정 기능 사용을 허용하거나 허용하지 않습니다. 여기에는 다운로드, 양식 제출, 모달 및 스크립팅 등이 포함됩니다.
 
 > [!NOTE]
-> 감사 및 기타 유용한 정보는 web.dev의 [제3자](<(https://web.dev/learn/privacy/third-parties/)>)를 참조하십시오.
+> 감사 및 기타 유용한 정보는 web.dev의 [제3자](https://web.dev/learn/privacy/third-parties/)를 참조하십시오.
 
 ## 사용자 데이터 보호
 
