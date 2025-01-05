@@ -1,37 +1,38 @@
 ---
-title: カスケード、詳細度、継承
+title: 競合の処理
 slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
-original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}
 
 このレッスンの目的は、CSS の最も基本的な概念であるカスケード、詳細度、継承について理解を深めることです。これらの概念は、CSS を HTML に適用する方法とスタイル宣言の間の競合を解決する方法を制御するものです。
 
-このレッスンは、他の記事よりもすぐに役立つことが少なく、少し学問的に見えるかもしれませんが、これらの概念を理解することは、後で多くの困難から救ってくれることでしょう。この章を注意深く作業し、概念を理解していることを確認してから、次に進むことをお勧めします。
+このレッスンに取り組むことは、すぐに役立つものではなく、このコースの他の部分よりも理論的であるように思えるかもしれませんが、これらの概念を理解することは、後々、多くの苦労を回避することにつながります。この章を慎重に学習し、概念を理解したことを確認してから、次の章に移ることをお勧めします。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされている</a
-        >こと、<a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルの扱い</a
-        >、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >の学習）、CSS がどのように動作するかの考え（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>で学習）の基本的な知識を得ていること。
+        HTML の基本（
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター<a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        カスケードと詳細度、および CSS の継承の仕組みについて学ぶ。
+        <ul>
+          <li>CSS でどのようにルールが競合するかを理解すること。</li>
+          <li>継承。</li>
+          <li>カスケード。</li>
+          <li>競合の結果を左右する主な概念には、詳細度、ソース順序、重要性があります。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -53,7 +54,20 @@ CSS は **Cascading Style Sheets** の略で、最初の単語であるカスケ
 
 下記の例では、`<h1>` 要素に適用できる 2 つのルールがあります。`<h1>` のコンテンツは結果的に青く色づけされています。これは、どちらのルールも同じソースにあり、同じ要素セレクターを持ち、したがって詳細度が同じですが、ソース上の順番が最後のものが勝者となるからです。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 500)}}
+```html live-sample___cascade-simple
+<h1>これは見出し</h1>
+```
+
+```css live-sample___cascade-simple
+h1 {
+  color: red;
+}
+h1 {
+  color: blue;
+}
+```
+
+{{EmbedLiveSample("cascade-simple")}}
 
 ### 詳細度
 
@@ -64,7 +78,21 @@ CSS は **Cascading Style Sheets** の略で、最初の単語であるカスケ
 
 下記の例では、再び `<h1>` 要素に適用できる 2 つのルールがあります。下記の `<h1>` のコンテンツは、クラスセレクター `main-heading` によりそのルールが高い詳細度を持つため、結果として赤で表示されています。たとえ、`<h1>` 要素のセレクターを使用したルールがソースの順序でより下に現れても、クラスセレクターを使用して定義された、より高い詳細度を持つルールが使用されることになります。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 600)}}
+```html live-sample___specificity-simple
+<h1 class="main-heading">これは見出し</h1>
+```
+
+```css live-sample___specificity-simple
+.main-heading {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+```
+
+{{EmbedLiveSample("specificity-simple")}}
 
 詳細度のアルゴリズムについては、後ほど説明します。
 
@@ -74,7 +102,26 @@ CSS は **Cascading Style Sheets** の略で、最初の単語であるカスケ
 
 例えば、ある要素に `color` と `font-family` を設定すると、異なる色やフォントの値を直接適用しない限り、その中にあるすべての要素もその色やフォントでスタイル設定されます。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 650)}}
+```html-nolint live-sample___inheritance-simple
+<p>
+  body が青の色が設定されているため、これは子孫にも継承されます。
+</p>
+<p>
+  セレクターで要素を対象とすることで、色を変更することができます。例えば、このような <span>span</span> です。
+</p>
+```
+
+```css live-sample___inheritance-simple
+body {
+  color: blue;
+}
+
+span {
+  color: black;
+}
+```
+
+{{EmbedLiveSample("inheritance-simple")}}
 
 いくつかのプロパティは継承されません。例えば、要素に {{cssxref("width")}} 50% と設定した場合、すべての子孫要素は親の幅の 50% の幅を取得しません。もしそんなことになるのら CSS を使うととてもイライラするでしょう。
 
@@ -83,11 +130,7 @@ CSS は **Cascading Style Sheets** の略で、最初の単語であるカスケ
 
 ## これらの概念がどう連携するか理解する
 
-これら3つの概念（カスケード、詳細度、継承）は、どの CSS がどの要素に適用されるかを制御するものです。以下の節では、これらがどのように連携して動作するのかを見ていきます。少し複雑に感じることもあるかもしれませんが、CSS を取得するにつれて覚え始めるでしょうし、忘れたときには常に詳細を調べておくことができます 経験豊富な開発者でも、すべての詳細を覚えているわけではありません。
-
-以下の動画は、Firefox の開発ツールを使用して、ページのカスケードや詳細度などを検査する方法を示しています。
-
-{{EmbedYouTube("Sp9ZfSvpf7A")}}
+これら 3 つの概念（カスケード、詳細度、継承）は、どの CSS がどの要素に適用されるかを制御するものです。以下の節では、これらがどのように連携して動作するのかを見ていきます。少し複雑に感じることもあるかもしれませんが、CSS を経験していくにつれて覚え始めるでしょうし、忘れたときには常に詳細を調べておくことができます。経験豊富な開発者でも、すべての詳細を覚えているわけではありません。
 
 ## 継承を理解する
 
@@ -95,15 +138,54 @@ CSS は **Cascading Style Sheets** の略で、最初の単語であるカスケ
 
 `color` プロパティは継承されるプロパティです。よって、`color` プロパティの値は直接の子だけでなく、間接的な子にも適用されています。つまり直接の子である `<li>` 、それに最初のネストされたリスト内のものにも適用されています。そして 2 番目 にネストされたリストに `special` クラスを追加し、別の色が適用されています。これは子に継承します。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 1100)}}
+```html live-sample___inheritance
+<ul class="main">
+  <li>アイテム 1</li>
+  <li>
+    アイテム 2
+    <ul>
+      <li>2.1</li>
+      <li>2.2</li>
+    </ul>
+  </li>
+  <li>
+    アイテム 3
+    <ul class="special">
+      <li>
+        3.1
+        <ul>
+          <li>3.1.1</li>
+          <li>3.1.2</li>
+        </ul>
+      </li>
+      <li>3.2</li>
+    </ul>
+  </li>
+</ul>
+```
 
-（前述のように）`width` や `margin` 、 `padding` 、 `border` といったプロパティは継承されるプロパティではありません。もし、このリストの例で境界線が子プロパティに掲載されていたら、すべてのリストとリスト項目に境界線が追加されることになります。
+```css live-sample___inheritance
+.main {
+  color: rebeccapurple;
+  border: 2px solid #ccc;
+  padding: 1em;
+}
+
+.special {
+  color: black;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("inheritance", "", "280px")}}
+
+（前述のように）`width` や `margin`、`padding`、`border` といったプロパティは継承されるプロパティではありません。もし、このリストの例で境界線が子プロパティに掲載されていたら、すべてのリストとリスト項目に境界線が追加されることになります。
 
 CSS のプロパティのページには、そのプロパティが継承されるかどうかが掲載されていますが、プロパティの値がどのようなスタイルを設定するのかを知っていれば、直観的に同じことを推測できることが多いでしょう。
 
 ### 継承の制御
 
-CSS は、継承を制御するための 5 つ の特別なユニバーサルプロパティ値 _(universal property values)_ を提供します。すべての CSS プロパティはこれらの値を受け入れます。
+CSS は、継承を制御するための 5 つの特別なユニバーサルプロパティ値 _(universal property values)_ を提供します。すべての CSS プロパティはこれらの値を受け入れます。
 
 - {{cssxref("inherit")}}
   - : 選択した要素に適用されるプロパティ値を、その親要素と同じものに設定します。これは「継承を有効にする」ことを意味します。
@@ -126,9 +208,36 @@ CSS は、継承を制御するための 5 つ の特別なユニバーサルプ
 1. 2 番目 のリストアイテムには、`my-class-1` が適用されています。これは、内部にネストされた `<a>` 要素に色を継承 (`inherit`) します。ルールを削除すると、リンクの色はどのように変わるでしょうか？
 2. 3 つ目と 4 つ目のリンクがなぜそのような色になっているのか、お分かりでしょうか？ 3 つ目のリンクは `initial` に設定されています。これはプロパティの初期値（この場合は黒）を使用し、ブラウザーのリンクの既定値である青は使用しない、という意味です。4 番目のリンクは `unset` に設定されており、これはリンクテキストが親要素の色である緑を使用することを意味しています。
 3. `<a>` 要素に新しい色を定義した場合、どのリンクの色が変わるでしょうか。例えば、`a { color: red; }` のようにした場合です。
-4. 次の節の「すべてのプロパティ値のリセット」を読んだ後、また戻ってきて `color` プロパティを `all` に変更してみてください。2 つ目のリンクが新しい行になり、箇条書きがあることに注目してください。どのようなプロパティが継承されていると思いますか？
+4. 次の節の「すべてのプロパティ値のリセット」を読んだ後、また戻ってきて `color` プロパティを `all` に変更してみてください。2 つ目のリンクが新しい行になり、箇条書きがあることに注目してください。どのようなプロパティが継承されていると思いますか。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 800)}}
+```html live-sample___keywords
+<ul>
+  <li>既定の<a href="#">リンク</a>色</li>
+  <li class="my-class-1">継承した<a href="#">リンク</a>色</li>
+  <li class="my-class-2">リセットした<a href="#">リンク</a>色</li>
+  <li class="my-class-3">設定解除した<a href="#">リンク</a>色</li>
+</ul>
+```
+
+```css live-sample___keywords
+body {
+  color: green;
+}
+
+.my-class-1 a {
+  color: inherit;
+}
+
+.my-class-2 a {
+  color: initial;
+}
+
+.my-class-3 a {
+  color: unset;
+}
+```
+
+{{EmbedLiveSample("keywords")}}
 
 ### すべてのプロパティ値のリセット
 
@@ -136,7 +245,28 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 
 以下の例では 2 つ のブロック引用 (blockquote) 要素があります。最初のスタイルは blockquote 要素自体に適用されます。2 つ目には `all` に `unset` を設定するように blockquote に適用されるクラスがあります。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 800)}}
+```html live-sample___all
+<blockquote>
+  <p>この引用ブロックはスタイル設定されています。</p>
+</blockquote>
+
+<blockquote class="fix-this">
+  <p>この引用ブロックはスタイル設定されていません。</p>
+</blockquote>
+```
+
+```css live-sample___all
+blockquote {
+  background-color: orange;
+  border: 2px solid blue;
+}
+
+.fix-this {
+  all: unset;
+}
+```
+
+{{EmbedLiveSample("all")}}
 
 `all` の値を他の有効な値に設定してみて、違いを観察してみてください。
 
@@ -168,7 +298,29 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 
 この動作は、CSS の繰り返しを避けるのに役立ちます。一般的な方法としては、基本的な要素には一般的なスタイルを定義し、異なる形の要素にはクラスを作成することです。例えば、下記のスタイルシートでは、レベル 2 の見出しに対して一般的なスタイルを定義し、その後、一部のプロパティと値のみを変更するクラスをいくつか作成しています。最初に定義された値はすべての見出しに適用され、その後、より詳細度の高い値がクラスを持つ見出しに適用されます。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 1000)}}
+```html live-sample___mixing-rules
+<h2>クラスのない見出し</h2>
+<h2 class="small">small クラスのついた見出し</h2>
+<h2 class="bright">bright クラスのついた見出し</h2>
+```
+
+```css live-sample___mixing-rules
+h2 {
+  font-size: 2em;
+  color: #000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.small {
+  font-size: 1em;
+}
+
+.bright {
+  color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("mixing-rules", "", "240px")}}
 
 ブラウザーが詳細度を計算する方法を見てみましょう。要素セレクターの詳細度は低く、クラスで上書きできることはすでにわかったはずです。基本的に、セレクターの重みはポイント単位の値で与えられ、これらを合計して特定セレクターの重みが与えられて、他の一致するものと相対して評価することができます。
 
@@ -179,7 +331,7 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 - **要素**: この列は、要素セレクターまたは擬似要素が全体のセレクターの中に含まれている場合に 1 点ずつ評価します。
 
 > [!NOTE]
-> 全称セレクター ([`*`](/ja/docs/Web/CSS/Universal_selectors))、[結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`、`>`、`~`、' ')、詳細度調整セレクター[`:where()`](/ja/docs/Web/CSS/:where)とその引数は、詳細度に影響しません。
+> 全称セレクター ([`*`](/ja/docs/Web/CSS/Universal_selectors))、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`、`>`、`~`、' ')、詳細度調整セレクター[`:where()`](/ja/docs/Web/CSS/:where)とその引数は、詳細度に影響しません。
 
 否定 ([`:not()`](/ja/docs/Web/CSS/:not))、関係セレクター ([`:has()`](/ja/docs/Web/CSS/:has))、match-any ([`:is()`](/ja/docs/Web/CSS/:is)) 擬似クラス、 [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)自身は、詳細度に影響を与えませんが、それらの引数や入れ子ルールには影響を及ぼします。それぞれが詳細度重みアルゴリズムに寄与する詳細度の重みは、最も大きな重みを持っている引数または入れ子ルールのセレクターの詳細度です。
 
@@ -195,7 +347,73 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 
 先に進む前に、実例を見てみましょう。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 800)}}
+```html live-sample___specificity-boxes
+<div class="container" id="outer">
+  <div class="container" id="inner">
+    <ul>
+      <li class="nav"><a href="#">One</a></li>
+      <li class="nav"><a href="#">Two</a></li>
+    </ul>
+  </div>
+</div>
+```
+
+```css live-sample___specificity-boxes
+/* 1. 詳細度: 1-0-1 */
+#outer a {
+  background-color: red;
+}
+
+/* 2. 詳細度: 2-0-1 */
+#outer #inner a {
+  background-color: blue;
+}
+
+/* 3. 詳細度: 1-0-4 */
+#outer div ul li a {
+  color: yellow;
+}
+
+/* 4. 詳細度: 1-1-3 */
+#outer div ul .nav a {
+  color: white;
+}
+
+/* 5. 詳細度: 0-2-4 */
+div div li:nth-child(2) a:hover {
+  border: 10px solid black;
+}
+
+/* 6. 詳細度: 0-2-3 */
+div li:nth-child(2) a:hover {
+  border: 10px dashed black;
+}
+
+/* 7. 詳細度: 0-3-3 */
+div div .nav:nth-child(2) a:hover {
+  border: 10px double black;
+}
+
+a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+```
+
+{{EmbedLiveSample("specificity-boxes")}}
 
 何が起こっているのでしょうか？まず、この例の最初の 7 つ のルールにのみ関心があり、お気づきのように、各ルールの前に詳細度の値をコメントしてあります。
 
@@ -208,9 +426,15 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 >
 > 詳細度を評価する最良の方法は、詳細度の高いものから始めて、必要に応じて低いものへ移動しながら、個別に点数をつけることです。ある列のセレクターのスコアが同点である場合のみ、次の列を評価する必要があります。そうでない場合は、詳細度の低いセレクターは詳細度の高いセレクターを上書きすることができないため、無視することができます。
 
+#### ID とクラス
+
+ID セレクターは高い詳細度を持っています。つまり、 ID セレクターに一致するスタイルが適用されると、クラスや要素型セレクターなど、他のセレクターに基づいて適用されるスタイルが上書きされるということです。 ID はページに 1 つしか存在できず、 ID セレクターの詳細度が高いことから、 ID ではなくクラスを要素に追加するほうが望ましいです。
+
+ID を使用することが、その要素を対象とする唯一の方法である場合、例えば、マークアップにアクセスできず、編集できない場合などには、 `p[id="header"]` のように、 ID を[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)内で使用することを検討してください。
+
 ### インラインスタイル
 
-インラインスタイル、つまり [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性内のスタイル宣言は、その詳細度に関わらず、すべての通常のスタイルよりも優先されます。このような宣言はセレクターがありませんが、その固有性は 1-0-0-0 と解釈され、セレクターにいくつの ID があっても、常に他のどの詳細度よりも高い重みを持ちます。
+インラインスタイル、つまり [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性内のスタイル宣言は、その詳細度に関わらず、すべての通常のスタイルよりも優先されます。このような宣言はセレクターがありませんが、その固有性は 1-0-0-0 と解釈され、セレクターにいくつの ID があっても、常に他のどの詳細度よりも高い重みを持ちます。
 
 ### !important
 
@@ -220,13 +444,36 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 
 例を見てみましょう。2 つの段落があり、そのうちの 1 つ には ID がついています。
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 800)}}
+```html live-sample___important
+<p class="better">This is a paragraph.</p>
+<p class="better" id="winning">One selector to rule them all!</p>
+```
+
+```css live-sample___important
+#winning {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+```
+
+{{EmbedLiveSample("important")}}
 
 何が起きているのかを見てみましょう。理解しにくい場合は、いくつかのプロパティを削除しながら、どうなるか見てみてください。
 
 1. 3 番目のルールでは {{cssxref("color")}} と {{cssxref("padding")}} が適用されていますが、{{cssxref("background-color")}} は適用されていないことようです。なぜでしょうか？ソースオーダーの後の方は、普通は前の方のルールをオーバーライドするため、その観点では 3 つ すべてが適用されるはずです。
 2. とはいえ、クラスセレクターは要素セレクターよりも詳細度が高いため前者のルールが優先されます。
-3. 両方の要素には `better` という [`class`](/ja/docs/Web/HTML/Global_attributes#class) がありますが、2 番目 の要素には `winning` という [`id`](/ja/docs/Web/HTML/Global_attributes#id) もあります。ID はクラスよりも**より高い詳細度**があるため（ページ上では ID を持つ要素は一意に 1 つ しか置けないのに対し、同じクラスを持つ多くの要素がありえるため、ID セレクターの方が**非常に限定的**になります）、2 番目の要素には赤い背景色と 1 ピクセルの黒い境界線が適用され、最初の要素についてはクラスで指定されたように灰色の背景色となり、境界線は消えます。
+3. 両方の要素には `better` という [`class`](/ja/docs/Web/HTML/Global_attributes/class) がありますが、2 番目 の要素には `winning` という [`id`](/ja/docs/Web/HTML/Global_attributes/id) もあります。 ID はクラスよりも詳細度が高いため（ページ上では ID を持つ要素は一意に 1 つ しか置けないのに対し、同じクラスを持つ多くの要素がありえるため、ID セレクターの方がはるかに限定的になります）、2 番目の要素には赤い背景色と 1 ピクセルの黒い境界線が適用され、最初の要素についてはクラスで指定されたように灰色の背景色となり、境界線は消えます。
 4. 2 番目 の要素は赤い背景が適用されていますが、あるはずの境界線はありません。なぜでしょうか？ 2 つ目のルールに `!important` フラグがあるためです。`border: none` の後に `!important` フラグを追加すると、ID セレクターの方がより高い詳細度であっても、この宣言が前のルールの `border` 値に勝利するということです。
 
 > [!NOTE]
@@ -256,48 +503,16 @@ CSS の一括指定プロパティ [`all`](/ja/docs/Web/CSS/all) を使用して
 > [!NOTE]
 > 優先順位は `!important` でフラグづけされたスタイルでは逆転します。ウェブ開発者のスタイルシートがユーザーのスタイルシートを上書きするのは理にかなっているので、デザインは意図したとおりに保たれます。しかし、上記のように、ユーザーがウェブ開発者のスタイルを上書きするのに有益な理由がある場合もあり、その場合はルールに `!important` を使用して実現することができます。
 
-### カスケードレイヤーの順序
-
-[カスケードレイヤー](/ja/docs/Web/CSS/@layer)は高度なトピックで、すぐにこの機能を使用することはないでしょうが、レイヤーがどのようにカスケードされるかを理解することは重要です。
-
-CSS をカスケードレイヤーで宣言する場合、優先順位はレイヤーを宣言した順番で決まります。どのレイヤーの外でも宣言された CSS スタイルは、それらのスタイルが宣言された順に、あたかも最後に宣言されたレイヤーであるかのように、無名のレイヤーに結合されます。競合する通常の（重要でない）スタイルでは、後から定義されたレイヤーが先に定義されたレイヤーより優先されます。しかし、`!important` が付けられたスタイルでは、順序が逆転し、より早いレイヤーの重要なスタイルが、後続のレイヤーまたは任意のレイヤーの外側で宣言された重要なスタイルより優先されます。インラインスタイルは、レイヤーに関係なく、すべての作成者スタイルよりも優先されます。
-
-別々の形で複数のスタイルブロックを持っており、単一の要素のプロパティに競合する値を提供している場合、レイヤーが宣言されている順序で優先順位が決定されます。レイヤー間の詳細度は重要ではありませんが、単一のレイヤー内での詳細度は依然として重要です。
-
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-layers.html", '100%', 800)}}
-
-何が起こっているのかを理解するために、上の例からいくつかのことを説明してみましょう。`firstLayer` と `secondLayer` の 2 つのレイヤーが順に宣言されました。たとえ `secondLayer` の詳細度が最も高いとしても、その宣言のプロパティは使用されません。なぜか？レイヤー化されていない通常のスタイルは、詳細度に関係なく、レイヤー化された通常のスタイルよりも優先され、重要なレイヤーのスタイルは、これまた詳細度に関係なく、後のレイヤーで宣言された重要なスタイルより優先されるからです。
-
-この例の CSS の最初の行を `@layer secondLayer, firstLayer;` と変更すると、レイヤーの宣言順序が変わり、`firstLayer` の重要なスタイルはすべて `secondLayer` でそれぞれの値に変更されることになります。
-
-### スコープ近接性
-
-もう一つ、すぐに使用することはないかもしれませんが、将来的に理解する必要があるかもしれない高度なトピックに {{CSSxRef("@scope")}} があります。これは[アットルール](/ja/docs/Web/CSS/At-rule)で、ページ上の HTML の固有のサブセクションにのみ適用されるルールのブロックを作成することができます。例えば、 {{htmlelement("img")}} 要素が `feature` クラスのある要素の中に入れ子になっている場合にのみ適用されるスタイルを指定します。
-
-```css
-@scope (.feature) {
-  img {
-    border: 2px solid black;
-    display: block;
-  }
-}
-```
-
-**スコープ近接性**は、スコープされた要素間の競合を解決するメカニズムです。スコープ近接性は、2 つのスコープに競合するスタイル設定がある場合、 DOM ツリー階層からスコープルートへの移動数が最も少ないスタイルが優先されるという状態です。詳細と例は [`@scope` の競合の解決方法](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)を参照してください。
-
-> [!NOTE]
-> スコープの近接性はソースの順序よりも優先されますが、[重要度](/ja/docs/Web/CSS/important)、[レイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/Specificity)のような他にも優先度の高い仕様があれば、そちらが優先されます。
-
 ## スキルテスト
 
-この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を覚えているか検証するテストがあります。[スキルテスト: カスケード](/ja/docs/Learn/CSS/Building_blocks/Cascade_tasks)を見てください。
+この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を覚えているか検証するテストがあります。[スキルテスト: カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks)を見てください。
 
 ## まとめ
 
-この記事の内容をほぼ理解できたなら、よくやったと言えます。CSS の基本的な仕組みに慣れることには、着手できたのではないでしょうか。次は、[カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)について深く考えてみましょう。
+この記事のほとんどを理解できたのであれば、よくできました。 CSS の基本的な仕組みが分かり始めてきたでしょう。
 
 カスケード、詳細度、継承を完全に理解していなくても心配する必要はありません。このコースでこれまで取り上げてきたなかで、間違いなく最も複雑なことであり、プロのウェブ開発者でさえもたまに扱いにくく感じるものです。このコースを続行していくなかで、この記事にときどき戻り、それについて考え続けることをお勧めします。
 
 スタイルが期待どおりに適用されないという奇妙な問題に出くわした場合は、この記事を参照してください。詳細度の問題である可能性があります。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics")}}

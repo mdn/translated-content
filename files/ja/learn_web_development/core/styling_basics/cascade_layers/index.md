@@ -1,14 +1,13 @@
 ---
 title: カスケードレイヤー
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
-original_slug: Learn/CSS/Building_blocks/Cascade_layers
 l10n:
-  sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
-このレッスンはより高度な機能である[カスケードレイヤー](/ja/docs/Web/CSS/@layer) を、[CSS カスケード](/ja/docs/Web/CSS/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/Specificity)の基本概念を基に紹介することが目標です。
+このレッスンは、より高度な機能である[カスケードレイヤー](/ja/docs/Web/CSS/@layer) を、[CSS カスケード](/ja/docs/Web/CSS/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/Specificity)の基本概念を基に紹介することが目標です。
 
 CSS が初めての方は、このレッスンを学ぶことは、このコースの他の部分よりも関連性が低く、少し学術的に見えるかもしれません。しかし、カスケードレイヤーとは何かという基本的なことを知っておくことで、自分のプロジェクトでカスケードレイヤーに遭遇したときに役立ちます。CSS で作業すればするほど、カスケードレイヤーを理解し、その力を活用する方法を知っていれば、異なる関係者、プラグイン、開発チームからの CSS でコードベースを管理する苦痛から解放されるでしょう。
 
@@ -18,7 +17,7 @@ CSS が初めての方は、このレッスンを学ぶことは、このコー�
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>カスケードと詳細度を含む、CSS はどう動くかに関する知識（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>および<a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケード、詳細度、継承</a>を学習してください）。
+      <td>カスケードと詳細度を含む、CSS はどう動くかに関する知識（<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の第一歩</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts">カスケード、詳細度、継承</a>を学習してください）。
       </td>
     </tr>
     <tr>
@@ -34,7 +33,7 @@ CSS が初めての方は、このレッスンを学ぶことは、このコー�
 
 スタイルパネルには、適用されたスタイルに加えて、選択した要素に一致するが、カスケード、詳細度、ソース順のために適用されなかった値が、取り消し線で表示されます。取り消し線が引かれたスタイルは、優先順位は同じだが詳細度が低いオリジン間、またはオリジンと詳細度が一致するがコードベース内でより早く見つかったものである場合があります。適用されたプロパティ値には、多くの異なるソースから消し込まれた宣言がある可能性があります。もし、より詳細度の高いセレクターを持つスタイル設定が消された場合、その値はオリジンや重要度に欠けることを意味しています。
 
-サイトの複雑さが増すと、スタイルシートの数も増え、スタイルシートのソース順序がより重要になると同時に、より複雑になることがよくあります。カスケードレイヤーは、このようなコードベースのスタイルシートの維持を簡素化します。カスケードレイヤーは明示的な詳細度格納器であり、最終的に適用される CSS 宣言をよりシンプルに制御することができます。
+サイトの複雑さが増すにつれ、スタイルシートの数も増えることがよくあります。そのため、スタイルシートのソース順序はより重要になり、より複雑になります。 カスケードレイヤーは、このようなコードベース全体にわたるスタイルシートの管理を簡素化します。 カスケードレイヤーは、明示的な詳細度のコンテナーであり、最終的に適用される CSS 宣言をよりシンプルかつ効果的に制御できるため、ウェブ開発者は詳細度と戦うことなく CSS のセクションに優先順位を付けることができます。
 
 カスケードレイヤーを理解するためには、CSS のカスケードをよく理解する必要があります。下記の節では、カスケードの重要な概念を簡単にまとめています。
 
@@ -73,13 +72,25 @@ CSS の C は "Cascading" （カスケード）の略です。スタイルが連
 
 下記の例には、2 つのリンクがあります。最初のリンクは作成者スタイルが適用されていないため、ユーザーエージェントスタイルのみが適用されます（ユーザースタイルがある場合は、そのスタイルも）。2 つ目は、作成者スタイルシート内のセレクターの詳細度が [`0-0-0`](/ja/docs/Web/CSS/Specificity#selector_weight_categories) であるにもかかわらず、作成者スタイルによって [`text-decoration`](/ja/docs/Web/CSS/text-decoration) と [`color`](/ja/docs/Web/CSS/color) が設定されています。作成者スタイルが「勝つ」理由は、異なるオリジンからの競合スタイルがある場合、優先順位のないオリジンの詳細度に関係なく、優先順位のあるオリジンからのルールが適用されるからです。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/basic-cascade.html", '100%', 500)}}
+```html live-sample___basic-cascade
+<p><a href="https://example.org">ユーザーエージェントスタイル</a></p>
+<p><a class="author" href="https://example.org">作成者スタイル</a></p>
+```
 
-このスタイルシートが書かれた時点で、ユーザーエージェントのスタイルシートにおける「競合する」セレクターは `a:any-link` であり、これは `0-1-1` という詳細度の重みを持ちます。これは作成者スタイルシートの `0-0-0` セレクターよりも大きいですが、現在のユーザーエージェントのセレクターが異なっていても、それは問題ではありません。作成者とユーザーエージェント由来の詳細度の重みは、決して比較されることはありません。[詳細度の重みの計算方法](/ja/docs/Web/CSS/Specificity#how_is_specificity_calculated)について、もっと詳しく学んでください。
+```css live-sample___basic-cascade
+:where(a.author) {
+  text-decoration: overline;
+  color: red;
+}
+```
+
+{{EmbedLiveSample("basic-cascade")}}
+
+このスタイルシートが書かれた時点で、ユーザーエージェントのスタイルシートにおける「競合する」セレクターは `a:any-link` であり、これは `0-1-1` という詳細度の重みを持ちます。これは作成者スタイルシートの `0-0-0` セレクターよりも大きいですが、現在のユーザーエージェントのセレクターが異なっていても、それは問題ではありません。作成者とユーザーエージェント由来の詳細度の重みは、決して比較されることはありません。[詳細度の重みの計算方法](/ja/docs/Web/CSS/Specificity#詳細度の計算方法)について、もっと詳しく学んでください。
 
 オリジンの優先順位は、常にセレクターの詳細度よりも優先されます。要素プロパティが複数のオリジンで通常のスタイル宣言でスタイル設定されている場合、作成者スタイルシートは、ユーザーまたはユーサーエージェントスタイルシートで宣言された冗長な通常プロパティが常に優先されます。スタイルが重要な場合、 ユーザーエージェントスタイルシートは、常に作成者スタイルやユーザースタイルよりも優先されます。カスケードオリジンの優先順位は、オリジン間の詳細度競合が決して起こらないことを確実にします。
 
-移動する前にもう一つメモしておくと、現れる順番、または近接性は、優先されるオリジンで競合する宣言が同じ詳細度を持つ場合にのみ関係するようになります。
+移動する前にもう一つ注意しておくと、現れる順番、または近接性は、優先されるオリジンで競合する宣言が同じ詳細度を持つ場合にのみ関係するようになります。
 
 ## カスケードレイヤーの概要
 
@@ -127,13 +138,13 @@ CSS の C は "Cascading" （カスケード）の略です。スタイルが連
 
 ## カスケードレイヤーの作成
 
-レイヤーは、以下のいずれかのメソッドで作成することができます。
+レイヤーは、以下のいずれかの方法で作成することができます。
 
 - `@layer` 文のアットルールで、`@layer` の後に 1 つまたは複数のレイヤーの名前を続けて使用し、レイヤーを宣言します。これにより、スタイルを割り当てることなく、名前付きのレイヤーを作成することができます。
 - ブロック内のすべてのスタイル設定を名前または無名のレイヤーに追加する `@layer` ブロックのアットルールです。
-- [`@import`](/ja/docs/Web/CSS/@import)ルールに `layer` キーワードまたは `layer()` 関数を指定すると、取り込んだファイルのコンテンツがそのレイヤーに割り当てられます。
+- [`@import`](/ja/docs/Web/CSS/@import) ルールに `layer` キーワードまたは `layer()` 関数を指定すると、取り込んだファイルのコンテンツがそのレイヤーに割り当てられます。
 
-3 つのメソッドはすべて、その名前を持つレイヤーがまだ初期化されていない場合に、レイヤーを作成します。レイヤー名が `@layer` のアットルールまたは `layer()` による `@import` で指定されなかった場合、新しい無名 (unnamed) のレイヤーが作成されます。
+3 つの方法はすべて、その名前を持つレイヤーがまだ初期化されていない場合に、レイヤーを作成します。レイヤー名が `@layer` のアットルールまたは `layer()` による `@import` で指定されなかった場合、新しい無名 (unnamed) のレイヤーが作成されます。
 
 > [!NOTE]
 > レイヤーの優先順位は、作成された順番です。レイヤーに含まれないスタイル、すなわち「非レイヤースタイル」は、最終的な暗黙のラベルに一緒にカスケードされます。
@@ -206,16 +217,16 @@ body {
 }
 ```
 
-上記のCSSでは、`layout`, `<anonymous(01)>`, `theme`, `utilities`, `<anonymous(02)>` の5つのレイヤーをこの順番で作成し、6番目の暗黙のレイヤーとして `body` スタイルブロックに格納したスタイルを作成しました。レイヤーの順序は、レイヤーが作成される順序であり、レイヤーのないスタイルの暗黙のレイヤーは常に最後になります。一度作成したレイヤーの順序を変更する方法はありません。
+上記の CSS では、`layout`, `<anonymous(01)>`, `theme`, `utilities`, `<anonymous(02)>` の 5 つのレイヤーをこの順番で作成し、 6 番目の暗黙のレイヤーとして `body` スタイルブロックに格納したスタイルを作成しました。レイヤーの順序は、レイヤーが作成される順序であり、レイヤーのないスタイルの暗黙のレイヤーは常に最後になります。一度作成したレイヤーの順序を変更する方法はありません。
 
-ここでは、`layout` という名前のレイヤーにいくつかのスタイルを割り当ててみました。もし名前付きのレイヤーがまだ存在しない場合、レイヤーにスタイルを割り当てるかどうかにかかわらず、`@layer` アットルールで名前を指定すると、レイヤーが作成されます。これは、既存のレイヤー名のシリーズの終わりにレイヤーを追加します。指定したレイヤーがすでに存在する場合、指定したブロック内のすべてのスタイルは、以前に存在したレイヤーのスタイルに追加されます - 既存のレイヤー名を再利用してブロック内でスタイルを指定しても、新しいレイヤーは作成されません。
+ここでは、`layout` という名前のレイヤーにいくつかのスタイルを割り当ててみました。もし名前付きのレイヤーがまだ存在しない場合、レイヤーにスタイルを割り当てるかどうかにかかわらず、 `@layer` アットルールで名前を指定すると、レイヤーが作成されます。これは、既存のレイヤー名のシリーズの終わりにレイヤーを追加します。指定したレイヤーがすでに存在する場合、指定したブロック内のすべてのスタイルは、以前に存在したレイヤーのスタイルに追加されます - 既存のレイヤー名を再利用してブロック内でスタイルを指定しても、新しいレイヤーは作成されません。
 
 無名レイヤーは、レイヤーに名前を付けずにスタイルを割り当てることで作成されます。無名レイヤーにスタイルを追加することができるのは、その作成時のみです。
 
 > [!NOTE]
 > レイヤー名を指定せずに `@layer` を使用すると、さらに無名レイヤーが作成されます。これは、前回存在した無名レイヤーにスタイルを追加することはありません。
 
-アットルール `@layer` は、名前があってもなくてもレイヤーを作成し、名前があるレイヤーがすでに存在する場合はレイヤーにスタイルを追加します。最初の無名レイヤーを `<anonymous(01)>` と呼び、2つ目を `<anonymous(02)>` と呼びましたが、これは説明するためだけのものです。これらは実際には無名レイヤーです。これらを参照したり、追加のスタイルを設定したりする方法はありません。
+`@layer` アットルールは、名前があってもなくてもレイヤーを作成し、名前があるレイヤーがすでに存在する場合はレイヤーにスタイルを追加します。最初の無名レイヤーを `<anonymous(01)>` と呼び、2つ目を `<anonymous(02)>` と呼びましたが、これは説明するためだけのものです。これらは実際には無名レイヤーです。これらを参照したり、追加のスタイルを設定したりする方法はありません。
 
 レイヤーの外で宣言されたスタイルはすべて、暗黙のレイヤーで一斉に結合されます。上の例のコードでは、最初の宣言で `color: #333` プロパティを `body` に設定しています。これは、どのレイヤーの外側でも宣言されたものです。通常のレイヤー外宣言は、たとえレイヤー外スタイルの方が詳細度が低く、現れる順番が先であっても、通常のレイヤー宣言より優先されます。たとえコードブロックでレイヤー化されなかった CSS が最初に宣言されたとしても、これらのレイヤー化されなかったスタイルを格納した暗黙のレイヤーが、あたかも最後に宣言されたレイヤーであるかのように優先されるのは、このためです。
 
@@ -223,15 +234,62 @@ body {
 
 次の例では、2 つのレイヤーにスタイル設定を割り当てることで、レイヤーを作成し、その過程で名前を説明しています。これらは最初の使用時に作成され、すでに存在しているため、最後の行で宣言しても何の意味もありません。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-order.html", '100%', 500)}}
+```html live-sample___layer-order
+<h1>Is this heading underlined?</h1>
+```
 
-最後の行、`@layer site, page;` を最初の行に移動してみてください。どうなるでしょうか？
+```css live-sample___layer-order
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+
+/* this does nothing */
+@layer site, page;
+```
+
+{{EmbedLiveSample("layer-order")}}
+
+最後の行、 `@layer site, page;` を最初の行に移動してみてください。どうなるでしょうか？
 
 #### レイヤーの作成とメディアクエリー
 
 [メディア](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)クエリーまたは[機能](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)クエリーを使用してレイヤーを定義した場合、メディアが一致しないか 機能に対応していなければレイヤーは作成しません。下記の例では、機器やブラウザーなどのサイズを変更すると、レイヤーの順序が変わる可能性があることを示しています。この例では、幅の広いブラウザーでのみ `site` レイヤーを作成しています。そして、`page` レイヤーと `site` レイヤーの順にスタイル設定を割り当てています。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/media-order.html", '100%', 500)}}
+```html live-sample___media-order
+<h1>Is this heading underlined?</h1>
+```
+
+```css live-sample___media-order
+@media (min-width: 50em) {
+  @layer site;
+}
+
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+}
+
+@layer site {
+  h1 {
+    text-decoration: underline;
+    color: green;
+  }
+}
+```
+
+{{EmbedLiveSample("media-order")}}
 
 幅の広い画面では、`site` レイヤーは最初の行で宣言され、`site` は `page` より優先順位が低いことになります。そうでない場合は、`site` は狭い画面に後から宣言されるため、`page` より優先されます。もしうまく行かない場合は、メディアクエリーの `50em` を `10em` や `100em` に変更してみてください。
 
@@ -259,9 +317,9 @@ body {
 [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)と[機能クエリー](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)により、特定の条件に基づいてスタイルを読み込んでレイヤーを作成することが出来ます。次の例は、ブラウザーが `display: ruby` に対応していて、インポートするファイルが画面の内側へ依存する場合のみ、スタイルシートを `international` レイヤーにインポートします。
 
 ```css
-@import url("ruby-narrow.css") layer(international) supports(display: ruby) and
+@import url("ruby-narrow.css") layer(international) supports(display: ruby)
   (width < 32rem);
-@import url("ruby-wide.css") layer(international) supports(display: ruby) and
+@import url("ruby-wide.css") layer(international) supports(display: ruby)
   (width >= 32rem);
 ```
 
@@ -286,12 +344,12 @@ body {
 
 ```css
 @import url("components-lib.css") layer(components);
-@import url("narrowtheme.css") layer(components.narrow);
+@import url("narrow-theme.css") layer(components.narrow);
 ```
 
 最初の行では、`components-lib.css` を `components` レイヤーにインポートしています。このファイルにレイヤーが格納されている場合、ファイル名の有無にかかわらず、そのレイヤーは `components` レイヤーの入れ子となります。
 
-2 つ目の行は、`narrowtheme.css` を `components` のサブレイヤーである `narrow` レイヤーにインポートしています。入れ子になった `components.narrow` は、`components` レイヤーの最後のレイヤーとして作成されます。ただし、`components-lib.css` がすでに `narrow` レイヤーを格納している場合は、 `narrowtheme.css` の成分が `components.narrow` 入れ子のレイヤーに付加されることになります。入れ子の名前付きレイヤーは、`components.<layerName>`というパターンを使用して、`components` レイヤーに追加することができる。前述したように、名前のないレイヤーを作成することはできますが、その後にアクセスすることはできません。
+2 つ目の行は、`narrow-theme.css` を `components` のサブレイヤーである `narrow` レイヤーにインポートしています。入れ子になった `components.narrow` は、`components` レイヤーの最後のレイヤーとして作成されます。ただし、`components-lib.css` がすでに `narrow` レイヤーを格納している場合は、 `narrow-theme.css` の成分が `components.narrow` 入れ子のレイヤーに付加されることになります。入れ子の名前付きレイヤーは、`components.<layerName>`というパターンを使用して、`components` レイヤーに追加することができる。前述したように、名前のないレイヤーを作成することはできますが、その後にアクセスすることはできません。
 
 別な例を見てみましょう。 [`layers1.css` を名前付きレイヤーにインポートする](#名前付きまたは無名レイヤーのための_layer_ブロックのアットルール)場合、次の文を使用します。
 
@@ -342,7 +400,7 @@ body {
 
 インラインスタイルは [`style` 属性](/ja/docs/Web/HTML/Global_attributes/style) を使用して宣言されます。この方法で宣言された通常のスタイルは、非レイヤーおよびレイヤー化されたスタイルシート (`firstLayer - A.css`, `secondLayer - B.css`, `C.css`) で得られる通常のスタイルよりも優先されます。
 
-トランジション中のスタイルは、インラインの通常スタイルを含めるために、すべての通常スタイルよりも高い優先順位を持ちます。
+アニメーション中のスタイルは、インラインの通常スタイルを含めるために、すべての通常スタイルよりも高い優先順位を持ちます。
 
 重要スタイル設定、すなわち `!important` フラグを含むプロパティ値は、前回リストで紹介したどのスタイルよりも優先されます。これらは通常のスタイルと逆の順序で並べられます。レイヤーの外で宣言された重要スタイルは、レイヤー内で宣言されたスタイルよりも優先順位が低くなります。レイヤー内で得られる重要スタイルは、レイヤー作成順に並べられます。重要スタイルの場合、最後に作成されたレイヤーは最も低い優先順位を持ち、最初に作成されたレイヤーは宣言されたレイヤーの中で最も高い優先順位を持ちます。
 
@@ -350,7 +408,51 @@ body {
 
 トランジション中のスタイルは、最も高い優先順位を持ちます。通常のプロパティ値が遷移する場合、他のすべてのプロパティ値の宣言に優先し、インラインの重要スタイルにも優先します（ただし、トランジションの間のみ）。
 
-{{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
+```html live-sample___layer-precedence
+<div>
+  <h1 style="color: yellow; background-color: maroon !important;">
+    Inline styles
+  </h1>
+</div>
+```
+
+```css live-sample___layer-precedence
+@layer A, B;
+
+h1 {
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0.2em;
+  color: orange;
+  background-color: green;
+  text-decoration: overline pink !important;
+  box-shadow: 5px 5px lightgreen !important;
+}
+
+@layer A {
+  h1 {
+    color: grey;
+    background-color: black !important;
+    text-decoration: line-through grey;
+    box-shadow: -5px -5px lightblue !important;
+    font-style: normal;
+    font-weight: normal !important;
+  }
+}
+
+@layer B {
+  h1 {
+    color: aqua;
+    background: yellow !important;
+    text-decoration: underline aqua;
+    box-shadow: -5px 5px magenta !important;
+    font-style: italic;
+    font-weight: bold !important;
+  }
+}
+```
+
+{{EmbedLiveSample("layer-precedence")}}
 
 この例では、スタイル設定のないインラインレイヤー `A` と `B` の 2 つのレイヤー、レイヤー設定のないスタイルのブロック、レイヤー `A` と `B` の名前を付けたスタイルの 2 つのブロックがあります。
 
@@ -384,40 +486,66 @@ body {
 
 以下は、`components` レイヤーと `components.narrow` 入れ子のレイヤーにスタイルを作成・追加し、新しい `components.wide` レイヤーにスタイルを作成・追加しています。
 
+```html hidden
+<div>Text</div>
+```
+
+```css hidden
+div {
+  height: 150px;
+  width: 150px;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 3rem;
+}
+```
+
 ```css
-@import url("components-lib.css") layer(components);
-@import url("narrowtheme.css") layer(components.narrow);
+div {
+  background-color: wheat;
+  color: pink !important;
+}
 
 @layer components {
-  :root {
-    --theme: red;
-    font-family: serif !important;
+  div {
+    background-color: yellow;
+    border: 1rem dashed red;
+    color: orange !important;
   }
 }
+
 @layer components.narrow {
-  :root {
-    --theme: blue;
-    font-family: sans-serif !important;
+  div {
+    background-color: skyblue;
+    border: 1rem dashed blue;
+    color: purple !important;
+    border-radius: 50%;
   }
 }
+
 @layer components.wide {
-  :root {
-    --theme: purple;
-    font-family: cursive !important;
+  div {
+    background-color: limegreen;
+    border: 1rem dashed green;
+    color: seagreen !important;
+    border-radius: 20%;
   }
 }
 ```
 
-レイヤーのない通常スタイルは、レイヤーのある通常スタイルに優先し、レイヤー内では、入れ子のないスタイルは、入れ子のある通常スタイルに優先するので、`赤`は、他の`テーマ`色に優先します。
+{{EmbedLiveSample("Precedence order of nested cascade layers", "100%", "250")}}
 
-重要スタイルでは、レイヤースタイルは非レイヤースタイルより優先され、先に宣言されたレイヤーの重要スタイルが後に宣言されたレイヤーより優先されます。この例では、入れ子のレイヤーの作成順序は `components.narrow` の次に `components.wide` で、`components.narrow` の重要スタイルが `components.wide` の重要スタイルに優先し、つまり `sans-serif` が勝ちます。
+以下は、使用するプロパティの概要と、各宣言を適用する理由です。
+
+- `background-color`: レイヤー化されていない通常のスタイル設定はレイヤー化された通常のスタイル設定よりも優先されるため、 `wheat` 色が優先されます。
+- `border`: レイヤー内で、入れ子になっていないスタイル設定は、入れ子になっている通常のスタイル設定よりも優先されるため、`red`の色が優先されます。
+- `color`: 重要なスタイル設定では、レイヤー化されたスタイル設定がレイヤー化されていないスタイル設定よりも優先され、より早い段階で宣言されたレイヤーの重要なスタイル設定が、より遅い段階で宣言されたレイヤーの重要なスタイル設定よりも優先されます。この例では、入れ子になったレイヤーの作成順は `components.narrow` の次に `components.wide` であるため、 `components.narrow` の重要なスタイル設定は `components.wide` の重要なスタイル設定よりも優先され、つまり `purple` の色が優先されるということになります。
+- `border-radius`: プロパティは入れ子になったレイヤーにのみ設定されているので、宣言順で `20%` の半径が優先されます。
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: カスケードの課題 2](/ja/docs/Learn/CSS/Building_blocks/Cascade_tasks#課題_2) を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: カスケードの課題 2](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#課題_2) を見てください。
 
 ## まとめ
 
-この記事の内容をほぼ理解できたなら、上出来です。これで、CSS カスケードレイヤーの基本的な仕組みに慣れたことでしょう。次は、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)について詳しく見ていきます。
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+この記事の大半を理解できたのであれば、よくできました。これで、 CSS カスケードレイヤーの基本的な仕組みに慣れることができました。

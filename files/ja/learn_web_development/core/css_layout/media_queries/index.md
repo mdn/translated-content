@@ -1,31 +1,41 @@
 ---
-title: メディアクエリーの初心者向けガイド
+title: メディアクエリーの基本
 slug: Learn_web_development/Core/CSS_layout/Media_queries
-original_slug: Learn/CSS/CSS_layout/Media_queries
 l10n:
-  sourceCommit: 1f868ebd9f26b101ceef59c6cebea518e86862a8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}
 
-**CSS メディアクエリー**（CSS Media Query）を使用すると、例えば、「ビューポートは 480 ピクセルよりも広い」というような、ブラウザーとデバイスの環境が指定したルールに一致する場合にのみ CSS を適用できます。 メディアクエリーは、ビューポートのサイズに応じて異なるレイアウトを作成できるため、レスポンシブウェブデザイン (responsive web design) の重要な部分ですが、例えば、ユーザーはマウスではなくタッチパネルを使用しているというような、サイトが実行されている環境に関する他のものを検出するためにも使用できます。 このレッスンでは、最初にメディアクエリーで使用される構文について学習し、次に単純なデザインでどのようにレスポンシブにするかを示す実際の例で使用してみます。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
+
+**CSS メディアクエリー** (CSS Media Query) を使用すると、例えば、「ビューポートは 480 ピクセルよりも広い」というような、ブラウザーとデバイスの環境が指定したルールに一致する場合にのみ CSS を適用できます。 メディアクエリーは、ビューポートのサイズに応じて異なるレイアウトを作成できるため、レスポンシブウェブデザイン (responsive web design) の重要な部分ですが、例えば、ユーザーはマウスではなくタッチパネルを使用しているというような、サイトが実行されている環境に関する他のものを検出するためにも使用できます。
+
+このレッスンでは、最初にメディアクエリーで使用される構文について学習し、次に単純なデザインでどのようにレスポンシブにするかを示す実際の例で使用してみます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学習）、 CSS の動作の考え方（
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>、
-        <a href="/ja/docs/Learn/CSS/Building_blocks">CSS の構成要素</a>で学習）
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
+        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        メディアクエリーの使用方法、およびそれらを使用してレスポンシブデザインを作成するための最も一般的なアプローチを理解する。
+        <ul>
+          <li>メディアクエリーの構文。</li>
+          <li>メディアクエリーのよくある種別。</li>
+          <li><code>width</code> や <code>height</code> メディアクエリーを使用した、レスポンシブなレイアウトの作成。</li>
+          <li>ブレークポイントの選択。</li>
+          <li>メディアクエリーを使用したモバイルファーストデザインの実装。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -67,16 +77,14 @@ l10n:
 
 > [!NOTE]
 > ここでのメディア種別は、いわゆる {{glossary("MIME type","MIME タイプ")}}とは異なります。
-
-> [!NOTE]
 > レベル 3 のメディアクエリー仕様には、他にも多くのメディア種別が定義されています。 これらは非推奨であり、避けるべきです。
-
-> [!NOTE]
 > メディア種別はオプションです。 メディアクエリーでメディア種別を指定しない場合、メディアクエリーは既定ですべてのメディア種別用になります。
 
-### メディア特性の規則
+### メディア特性のルール
 
-タイプを指定したら、規則を使用してメディア特性 (media feature) を対象にできます。
+種別を指定したら、ルールを使用してメディア特性 (media feature) を対象にできます。
+以下の例では、さまざまなメディアクエリを使用する方法を示しています。
+画面の`width`を変更するには、ブラウザーのサイズを変更するか、携帯端末を回転させるかしてください。あるいは、ブラウザーの開発者ツールのサイズ変更機能を使用して、さまざまな端末の幅をシミュレートすることもできます。
 
 #### 幅と高さ
 
@@ -84,7 +92,7 @@ l10n:
 
 これらの特性は、さまざまな画面サイズに対応するレイアウトを作成するために使用されます。 例えば、ビューポートが正確に 600 ピクセルの場合に `body` のテキストの色を赤に変更するには、次のメディアクエリーを使用します。
 
-```css
+```css live-sample___width
 @media screen and (width: 600px) {
   body {
     color: red;
@@ -92,11 +100,17 @@ l10n:
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/width.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/width.html)します。
+```html-nolint live-sample___width
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
+
+{{EmbedLiveSample("width")}}
 
 `width`（および `height`）のメディア特性は範囲として使用でき、`min-` または `max-` を前に付けて、指定された値が最小または最大であることを示します。 例えば、ビューポートが 600 ピクセルより狭い場合に色を青にするには、次のように `max-width` を使用します。
 
-```css
+```css live-sample___max-width
 @media screen and (max-width: 600px) {
   body {
     color: blue;
@@ -104,17 +118,23 @@ l10n:
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/max-width.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/max-width.html)します。
+```html-nolint hidden live-sample___max-width
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
+
+{{EmbedLiveSample("max-width")}}
 
 実際には、レスポンシブデザインでは最小値または最大値を使用する方がはるかに便利であるため、`width` または `height` を単独で使用することはほとんどありません。
 
-テストできるメディア特性は他にも多数ありますが、メディアクエリー仕様のレベル 4 および 5 で導入された新しい特性の一部は、ブラウザーサポートが制限されています。 各特性は、ブラウザーサポート情報とともに MDN で文書化されていて、完全なリストは、[メディアクエリーの使用: メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で見つけることができます。
+テストできるメディア特性は他にも多数ありますが、メディアクエリー仕様のレベル 4 および 5 で導入された新しい特性の一部は、ブラウザーの対応が限定的です。各特性は、ブラウザー対応情報とともに MDN で文書化されていて、完全なリストは、[メディアクエリーの使用: 構文](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)で見ることができます。
 
 #### 画面の方向
 
 対応が進んでいるメディア特性の 1 つは `orientation` 、縦長 (portrait) または横長 (landscape) モードであるかどうかを検査できます。端末が横長 (landscape) の場合に本文の色を変更するには、次のメディアクエリーを使用します。
 
-```css
+```css live-sample___orientation
 @media (orientation: landscape) {
   body {
     color: rebeccapurple;
@@ -122,25 +142,38 @@ l10n:
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/orientation.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/orientation.html)します。
+```html-nolint hidden live-sample___orientation
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
+
+{{EmbedLiveSample("orientation")}}
 
 標準のデスクトップ表示は横長であり、この方向ではうまくいくデザインも、携帯電話やタブレットの縦長表示ではうまく動作しないことがあります。方向を検査することで、縦長モードの端末に最適化したレイアウトを作成することができます。
 
 #### ポインティングデバイスの使用
 
-レベル 4 仕様の一部として、ホバー (`hover`) メディア特性が導入されました。 この特性は、ユーザーが要素の上にポインターを乗せることができるかどうかをテストできることを意味します。 つまり、本質的に何らかのポインティングデバイスを使用していることを意味します。 タッチ画面とキーボード操作はホバーしません。
+レベル 4 仕様の一部として、ホバー (`hover`) メディア特性が導入されました。 この特性は、ユーザーが要素の上にポインターを乗せることができるかどうかをテストできることを意味します。 つまり、本質的に何らかのポインティングデバイスを使用していることを意味します。タッチ画面とキーボード操作はホバーがありません。
 
-```css
-@media (hover: hover) {
-  body {
-    color: rebeccapurple;
+```css live-sample___hover-example
+@media screen and (hover: hover) {
+  body:hover {
+    color: white;
+    background: black;
   }
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/hover.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/hover.html)します。
+```html-nolint hidden live-sample___hover-example
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
 
-ユーザーがホバーを利用できないことがわかっている場合、既定でいくつかのインタラクティブ機能を表示できます。ホバーが利用できるユーザーの場合、リンクの上にポインターを乗せたときにそれらを利用可能にすることを選択できます。
+{{EmbedLiveSample("hover-example")}}
+
+ユーザーがホバーを使用できないことが分かっている場合、既定ではいくつかの対話機能を表示できます。ホバーが可能なユーザーに対しては、リンクにポインターを当てたときに利用できるようにする、という選択肢もあります。
 
 レベル 4 には、ポインター (`pointer`) メディア特性もあります。 これには、`none`（なし）、`fine`（細かい）、`coarse`（粗い）の 3 つの値があります。 `fine` ポインターは、マウスやトラックパッドのようなものです。 これにより、ユーザーは狭い領域を正確に対象にすることができます。 `coarse` ポインターは、タッチ画面上の指です。 値 `none` は、ユーザーにポインティングデバイスがないことを意味し、おそらく、キーボードのみ、または音声コマンドでナビゲートしています。
 
@@ -165,7 +198,6 @@ l10n:
 ```
 
 この場合、ビューポートの幅が `30em` から `50em` の間にあるときにスタイル設定が適用されます。
-このスタイルを使用するための詳しい情報は、[メディアクエリーの使用: Level 4 での構文の拡張](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#level_4_での構文の拡張) を参照してください。
 
 ## より複雑なメディアクエリー
 
@@ -175,7 +207,7 @@ l10n:
 
 メディア特性を組み合わせるには、上記で `and` を使用してメディア種別とメディア特性を組み合わせるのとほぼ同じ方法で `and` を使用できます。 例えば、`min-width` と `orientation` をテストする場合があります。 ビューポートの幅が少なくとも 600 ピクセルで、端末が横長モードの場合にのみ `body` のテキストは青色になります。
 
-```css
+```css live-sample___and
 @media screen and (min-width: 600px) and (orientation: landscape) {
   body {
     color: blue;
@@ -183,13 +215,19 @@ l10n:
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/and.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/and.html)します。
+```html-nolint hidden live-sample___and
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
+
+{{EmbedLiveSample("and")}}
 
 ### メディアクエリーの "or" 論理
 
 クエリーのセットがあり、そのいずれかが一致する場合、これらのクエリーをカンマで区切ることができます。 次の例では、ビューポートの幅が少なくとも 600 ピクセルの場合、**または**端末が横長の場合、テキストは青になります。 これらのいずれかが当てはまる場合、クエリーは一致します。
 
-```css
+```css live-sample___or
 @media screen and (min-width: 600px), screen and (orientation: landscape) {
   body {
     color: blue;
@@ -197,21 +235,45 @@ l10n:
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/or.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/or.html)します。
+```html-nolint hidden live-sample___or
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
+
+{{EmbedLiveSample("or")}}
 
 ### メディアクエリーの "not" 論理
 
 `not` 演算子を使用して、メディアクエリー全体を否定することができます。 これにより、メディアクエリー全体の意味が逆になります。 したがって、次の例では、画面の方向が縦長の場合にのみテキストが青になります。
 
-```css
-@media not all and (orientation: landscape) {
+```css live-sample___not
+@media not (orientation: landscape) {
   body {
     color: blue;
   }
 }
 ```
 
-ブラウザーで[この例を開く](https://mdn.github.io/css-examples/learn/media-queries/not.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/not.html)します。
+```html-nolint hidden live-sample___not
+<p>
+  1782 年 11 月のある夜、 2 人の兄弟がフランスの小さな町アノネーで冬の暖炉の火を囲み、暖炉から立ち上る灰色の煙が広い煙突を登っていくのを見ながら、話を実行したという話があります。彼らの名前はステファンとジョセフ・モンゴルフィエで、紙職人でした。また、思慮深い頭脳を持ち、科学的な知識と新しい発見すべてに深い関心を持っていることで知られていました。
+</p>
+```
+
+{{EmbedLiveSample("not")}}
+
+また、 `not` を使って特定の式を否定することもできます。
+
+```css
+@media (not (width < 600px)) and (not (width > 1000px)) {
+  body {
+    color: blue;
+  }
+}
+```
+
+これは、ビューポートの幅が 600 ピクセルから 1000 ピクセルの場合にスタイル設定を適用します。これは、 `(600px <= width <= 1000px)` と同等です。
 
 ## ブレークポイントの選択方法
 
@@ -221,7 +283,7 @@ l10n:
 
 Firefox 開発者ツールの[レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html)では、これらのブレークポイントがどこに行くべきかを判断するのにとても便利です。 メディアクエリーを追加してデザインを微調整しながら、ビューポートを小さくしたり大きくしたりして、コンテンツが改善される場所を簡単に確認できます。
 
-![Firefox 開発ツールのモバイルビューのレイアウトのスクリーンショット。](rwd-mode.png)
+![Firefox 開発者ツールのモバイルビューのレイアウトのスクリーンショット。](rwd-mode.png)
 
 ## アクティブラーニング: モバイルファーストレスポンシブデザイン
 
@@ -234,8 +296,104 @@ Firefox 開発者ツールの[レスポンシブデザインモード](https://f
 ### チュートリアル: 単純なモバイルファーストのレイアウト
 
 出発点は、レイアウトのさまざまな部分に背景色を追加するために CSS を適用した HTML 文書です。
+下記ブロックのコードをテキストエディターにコピーし、HTML ファイルとしてコンピューターに保存し、ブラウザーで開いてください。 "Play" をクリックして MDN Playground でコードをレンダリングおよび編集することもできます。
 
-```css
+```html live-sample___walkthrough
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media Queries: a simple mobile first design, step 1</title>
+  <style>
+    /* Add styles here */
+  </style>
+</head>
+<div class="wrapper">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Meet the team</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <div class="content">
+        <h1>Veggies!</h1>
+        <p>
+          Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+          onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+        </p>
+
+        <p>
+          Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot
+          courgette tatsoi pea sprouts fava bean collard greens dandelion okra
+          wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+        </p>
+
+        <p>
+          Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+          kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+          winter purslane kale. Celery potato scallion desert raisin horseradish
+          spinach carrot soko. Lotus root water spinach fennel kombu maize
+          bamboo shoot green bean swiss chard seakale pumpkin onion chickpea
+          gram corn pea. Brussels sprout coriander water chestnut gourd swiss
+          chard wakame kohlrabi beetroot carrot watercress. Corn amaranth
+          salsify bunya nuts nori azuki bean chickweed potato bell pepper
+          artichoke.
+        </p>
+
+        <p>
+          Nori grape silver beet broccoli kombu beet greens fava bean potato
+          quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
+          turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant
+          winter purslane fennel azuki bean earthnut pea sierra leone bologi
+          leek soko chicory celtuce parsley jícama salsify.
+        </p>
+      </div>
+      <aside class="related">
+        <p>
+          All these veggies are brought to you by the
+          <a href="https://veggieipsum.com/">Veggie Ipsum generator</a>.
+        </p>
+      </aside>
+    </article>
+    <aside class="sidebar">
+      <h2>External vegetable-based links</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.thekitchn.com/how-to-cook-broccoli-5-ways-167323">
+            How to cook broccoli
+          </a>
+        </li>
+        <li>
+          <a href="https://www.bbcgoodfood.com/glossary/swiss-chard">
+            Swiss Chard
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.bbcgoodfood.com/recipes/collection/christmas-parsnip">
+            Christmas Parsnip Recipes
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+</div>
+```
+
+文書のソースは、コンテンツが読みやすいように並べられています。 これは重要な最初のステップであり、コンテンツがスクリーンリーダーで読み上げられる場合に理解できるようにするものです。
+以下は、始めるのに良い初期スタイルです。
+
+```css live-sample___walkthrough
 * {
   box-sizing: border-box;
 }
@@ -291,54 +449,13 @@ article {
 }
 ```
 
-レイアウトの変更は行っていませんが、文書のソースはコンテンツが読みやすいように並べられています。 これは重要な最初のステップであり、コンテンツがスクリーンリーダーで読み上げられる場合に理解できるようにするものです。
+開発ツールのレスポンシブデザインモードでレイアウトを見ると、サイトのモバイルビューそのものと同じように機能することがわかります。
 
-```html
-<body>
-  <div class="wrapper">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Meet the team</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <article>
-        <div class="content">
-          <h1>Veggies!</h1>
-          <p>…</p>
-        </div>
-        <aside class="related">
-          <p>…</p>
-        </aside>
-      </article>
-
-      <aside class="sidebar">
-        <h2>External vegetable-based links</h2>
-        <ul>
-          <li>…</li>
-        </ul>
-      </aside>
-    </main>
-
-    <footer><p>&copy;2019</p></footer>
-  </div>
-</body>
-```
-
-この単純なレイアウトはモバイルでもうまく機能します。 開発ツールのレスポンシブデザインモードでレイアウトを眺めると、サイトのモバイルビューそのものと同じように機能することがわかります。
-
-ブラウザーで[ステップ 1 を開く](https://mdn.github.io/css-examples/learn/media-queries/step1.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step1.html)します。
-
-**この例をフォローして実装してみたい場合は、コンピューターに [step1.html](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step1.html) のローカルコピーを作成してください。**
+{{EmbedLiveSample("walkthrough", "", "600px")}}
 
 このポイントから、行の長さが非常に長くなり、ナビゲーションのためのスペースが水平線で表示されるまで、レスポンシブデザインモードのビューのドラッグを始めます。 これが、最初のメディアクエリーを追加する場所です。 `em` を使用すると、ユーザーがテキストのサイズを大きくした場合、テキストのサイズが小さいユーザーよりも、同様の行長で広いビューポートでブレークポイントが発生します。
 
-**step1.html の CSS の下部に以下のコードを追加してください。**
+次のものを CSS に追加してください。
 
 ```css
 @media screen and (min-width: 40em) {
@@ -360,11 +477,9 @@ article {
 
 この CSS は、記事 (`article`) 内の 2 列のレイアウトで、記事のコンテンツ (`content`) および余談 (`aside`) 要素の関連 (`related`) 情報を提供します。 また、フレックスボックスを使用してナビゲーション (`nav`) を 1 行に配置します。
 
-ブラウザーで[ステップ 2 を開く](https://mdn.github.io/css-examples/learn/media-queries/step2.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step2.html)します。
-
 サイドバー (`sidebar`) が新しい列を形成するのに十分なスペースがあると感じるまで、幅を拡張し続けます。 メディアクエリー内で、主要な (`main`) 要素を 2 列のグリッドにします。 次に、2 つのサイドバーが互いに揃うように `article` の {{cssxref("margin-bottom")}} を削除する必要があります。 フッター (`footer`) の上部に {{cssxref("border")}} を追加します。 通常、これらの小さな調整は、各ブレークポイントでデザインをきれいに見せるために行うことです。
 
-**再び、step1.html の CSS の下部に以下のコードを追加してください。**
+スタイルに以下の CSS を追加してください。
 
 ```css
 @media screen and (min-width: 70em) {
@@ -384,8 +499,6 @@ article {
   }
 }
 ```
-
-ブラウザーで[ステップ 3 を開く](https://mdn.github.io/css-examples/learn/media-queries/step3.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/step3.html)します。
 
 さまざまな幅で最後の例を見ると、デザインがどのように反応し、利用可能な幅に応じて 1 列、2 列、または 3 列として機能するかを確認できます。 これは、モバイルファーストレスポンシブデザインの非常に単純な例です。
 
@@ -411,7 +524,7 @@ article {
 
 これは、次を使用して実現できます。
 
-```html
+```html live-sample___grid
 <ul class="grid">
   <li>
     <h2>Card 1</h2>
@@ -436,7 +549,10 @@ article {
 </ul>
 ```
 
-```css
+```css live-sample___grid
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
 .grid {
   list-style: none;
   margin: 0;
@@ -452,20 +568,22 @@ article {
 }
 ```
 
-ブラウザーで[グリッドレイアウトの例を開く](https://mdn.github.io/css-examples/learn/media-queries/grid.html)か、[ソースを表示](https://github.com/mdn/css-examples/blob/main/learn/media-queries/grid.html)します。
+{{EmbedLiveSample("grid", "", "350px")}}
 
 ブラウザーで例を開いた状態で、画面を拡大および縮小して、列トラック数の変更を確認します。 このメソッドの良い点は、グリッドがビューポートの幅ではなく、このコンポーネントで使用可能な幅を見ていることです。 メディアクエリーに関するセクションに、それがまったく必要ないかもしれないという提案をまとめるのは奇妙に思えるかもしれません！ しかしながら、実際には、メディアクエリーで強化された最新のレイアウト方法を適切に使用すると、最良の結果が得られることがわかります。
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: レスポンシブウェブデザイン](/ja/docs/Learn/CSS/CSS_layout/rwd_skills) を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: レスポンシブウェブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/rwd_skills) を参照してください。
 
 ## まとめ
 
 このレッスンでは、メディアクエリーについて学び、実際にそれらを使用してモバイルファースト レスポンシブデザインを作成する方法もみいだしました。
 
-作成した開始点を使用して、さらにメディアクエリーをテストできます。 例えば、`pointer` メディア特性を使用して、訪問者が粗いポインターを持つことを検出した場合、ナビゲーションのサイズを変更できます。
+私たちが作成した出発点を使用して、さらに多くのメディアクエリーを検査することができます。例えば、来訪者が粗いポインターを保有していることを検知した場合、メディア特性 `pointer` を使用してナビゲーションのサイズを変更できるかもしれません。
 
-また、さまざまなコンポーネントを追加して、メディアクエリーを追加するか、フレックスボックスやグリッドなどのレイアウト方法を使用するのがコンポーネントをレスポンシブにするのに最も適切な方法かどうかを試すこともできます。 多くの場合、正しい方法も間違った方法もありません。 あなたのデザインとコンテンツに最適な方法を試してみてください。
+また、さまざまなコンポーネントを追加して、メディアクエリーを追加したり、フレックスボックスやグリッドなどのレイアウト方式を使用したりすることが、レスポンシブにするのに最も適切な方法であるかどうかを試してみることもできます。正しい方法や間違った方法があるわけではなく、実験や業務で、デザインやコンテンツに最適な方法を見極めることが重要です。
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
+さて、このモジュールの終わりも間近です。最後に、理解度を検査する課題を皆さんにあげましょう。
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Fundamental_layout_comprehension", "Learn_web_development/Core/CSS_layout")}}
