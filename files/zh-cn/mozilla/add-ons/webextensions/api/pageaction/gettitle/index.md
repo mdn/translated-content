@@ -30,7 +30,7 @@ let gettingTitle = browser.pageAction.getTitle(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将兑现包含页面操作的标题的字符串。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将以包含页面操作的标题的字符串兑现。
 
 ## 浏览器兼容性
 
