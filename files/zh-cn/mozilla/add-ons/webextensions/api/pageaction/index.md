@@ -26,7 +26,7 @@ l10n:
 - {{WebExtAPIRef("pageAction.ImageDataType")}}
   - : 表示图像的像素数据。
 
-### 函数
+## 函数
 
 - {{WebExtAPIRef("pageAction.show()")}}
   - : 在指定标签页中显示页面操作按钮。
