@@ -15,9 +15,9 @@ l10n:
 > [!NOTE]
 > Chrome 限制该 API 仅在 Manifest V3 中可用。Firefox 和 Safari 在 Manifest V2 和 V3 中均支持该 API。
 
-该 API 需要 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 以及用于将 JavaScript 或 CSS 注入到标签页中目标的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
+此 API 需要 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)以及要将 JavaScript 或 CSS 注入到的标签页目标的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 
-或者，你也可以通过请求 [`"activeTab"` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_权限)临时地在活动标签页中获取权限，并且仅能在一个明确的用户操作的返回中使用该 API。不过你仍然需要 `"scripting"` 权限。
+或者，你也可以通过请求 [`"activeTab"` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)临时地在活动标签页中获取权限，并且仅能在一个明确的用户操作的返回中使用该 API。不过你仍然需要 `"scripting"` 权限。
 
 ## 类型
 
