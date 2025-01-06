@@ -21,7 +21,7 @@ browser.pageAction.setPopup(
 
 - `details`
 
-  - : `object`.
+  - : `object`。
 
     - `tabId`
       - : `integer`。要设置弹窗的标签页 ID。
