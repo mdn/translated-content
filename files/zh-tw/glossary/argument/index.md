@@ -1,7 +1,8 @@
 ---
 title: 引數
 slug: Glossary/Argument
-page-type: glossary-definition
+l10n:
+  sourceCommit: 50e5edd07155de2eec2a8b6b2ad95820748cfec7
 ---
 
 {{GlossarySidebar}}
