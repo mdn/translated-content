@@ -10,7 +10,7 @@ l10n:
 **`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
 
 > [!NOTE]
-> 尽管 `<color>` 被精确定义，但在不同的输出设备上仍然有可能表现不一致（甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
+> 尽管 `<color>` 被精确定义，但在不同的输出设备上仍然有可能表现不一致（有时甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
 
 ## 语法
 
@@ -64,7 +64,7 @@ light-dark(white, black)
 light-dark(rgb(255 255 255), rgb(0 0 0))
 ```
 
-一个 `<color>` 值可以使用如下方式定义：
+`<color>` 值可以使用如下方式定义：
 
 - 通过关键字：{{CSSXref("&lt;named-color&gt;")}}（例如 `blue` 或 `pink`）、{{CSSXref("&lt;system-color&gt;")}} 和 [`currentcolor`](#currentcolor_关键字)。
 - 通过十六进制标记：{{CSSXref("&lt;hex-color&gt;")}}（例如 `#ff0000`）。
