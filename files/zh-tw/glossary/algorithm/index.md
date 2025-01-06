@@ -13,7 +13,7 @@ l10n:
 
 例如：
 
-- 食譜是一種給人類使用的演算法。  
+- 食譜是一種給人類使用的演算法。
 - 排序演算法經常在程式設計中用來告訴機器如何對資料進行排序。
 
 常見的演算法包括尋路演算法，例如最佳化的[旅行推銷員問題](https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem)、[樹狀結構遍歷演算法](https://brilliant.org/wiki/traversals/)等。
@@ -22,6 +22,6 @@ l10n:
 
 ## 參見
 
-- [演算法](https://zh.wikipedia.org/wiki/Algorithm)（維基百科）  
-- [解釋排序演算法](https://www.toptal.com/developers/sorting-algorithms)  
+- [演算法](https://zh.wikipedia.org/wiki/Algorithm)（維基百科）
+- [解釋排序演算法](https://www.toptal.com/developers/sorting-algorithms)
 - [解釋演算法複雜度](https://www.bigocheatsheet.com/)
