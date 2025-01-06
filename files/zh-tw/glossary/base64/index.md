@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Base64** 是一組相似的[二進位到文字編碼](https://en.wikipedia.org/wiki/Binary-to-text_encoding)系統，透過將二進位資料轉換為底數為 64，使結果表示為 {{glossary("ASCII")}} 字串格式。_Base64_ 這個術語源自於一種特定的 [MIME 內容傳送編碼](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding)。
+**Base64** 是一組相似的[二進位到文字編碼](https://zh.wikipedia.org/wiki/Binary-to-text_encoding)系統，透過將二進位資料轉換為底數為 64，使結果表示為 {{glossary("ASCII")}} 字串格式。_Base64_ 這個術語源自於一種特定的 [MIME 內容傳送編碼](https://zh.wikipedia.org/wiki/MIME#Content-Transfer-Encoding)。
 
 當「Base64」單獨用於指代特定的{{glossary("algorithm", "演算法")}}時，通常指的是 [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 第 4 節中描述的 Base64 版本，它使用以下字母表來表示基數為 64 的數字，並使用 `=` 作為填充字元：
 
@@ -19,7 +19,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 
 Base64 編碼系統常用於將二進位資料進行編碼，以便在只能處理 ASCII 文字（或某種超集但仍無法接受任意二進位資料）的媒體上儲存或傳輸。這可確保資料在傳輸過程中保持完整且未被修改。Base64 的常見應用包括：
 
-- 透過 [MIME](https://en.wikipedia.org/wiki/MIME) 發送電子郵件
+- 透過 [MIME](https://zh.wikipedia.org/wiki/MIME) 發送電子郵件
 - 在 [XML](/zh-TW/docs/Web/XML) 中儲存複雜資料
 - 將二進位資料編碼後納入 [`data:` URL](/zh-TW/docs/Web/URI/Schemes/data) 中
 
@@ -60,5 +60,5 @@ Base64 字串可以分成 4 個字元為一組的區塊，最後一組可能少�
   - {{domxref("Window.btoa()")}}（也可在 {{domxref("WorkerGlobalScope.btoa()", "worker 中使用", "", "nocode")}} 中使用）
   - {{jsxref("Uint8Array")}}
 - [Data URLs](/zh-TW/docs/Web/URI/Schemes/data)
-- [Base64](https://en.wikipedia.org/wiki/Base64)（維基百科）
+- [Base64](https://zh.wikipedia.org/wiki/Base64)（維基百科）
 - [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 中描述的 Base64 演算法
