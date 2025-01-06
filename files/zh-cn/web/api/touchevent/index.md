@@ -9,7 +9,7 @@ l10n:
 
 **`TouchEvent`** 接口表示一种 {{domxref("UIEvent")}}，当具有触摸表面的接触状态改变时会发送该事件。例如，此表面可以是触摸屏或触控板。该事件可以描述与屏幕的一个或多个接触点，并且包括对检测移动、接触点的增加和移除等的支持。
 
-每个 {{ domxref("Touch") }} 对象代表一个触点; 每个触点都由其位置，大小，形状，压力大小，和目标 {{ domxref("element") }} 描述。 {{ domxref("TouchList") }} 对象代表多个触点的一个列表。
+每个 {{ domxref("Touch") }} 对象代表一个触点；每个触点都由其位置，大小，形状，压力大小，和目标 {{ domxref("element") }} 描述。 {{ domxref("TouchList") }} 对象代表多个触点的一个列表。
 
 {{InheritanceDiagram}}
 
@@ -81,7 +81,7 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 ## 示例
 
-请看 [触摸事件的示例](/zh-CN/docs/Web/API/Touch_events#示例)。
+请看[触摸事件的示例](/zh-CN/docs/Web/API/Touch_events#示例)。
 
 ## 规范
 
