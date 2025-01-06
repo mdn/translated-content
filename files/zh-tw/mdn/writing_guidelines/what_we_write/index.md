@@ -61,9 +61,9 @@ MDN Web Docs 上的文章必須保持[中立的觀點](https://en.wikipedia.org/
 > [!NOTE]
 > 後端技術通常有其獨立的文件，MDN Web Docs 並不嘗試取代它們，儘管我們[有一些例外](/zh-TW/docs/Learn_web_development/Extensions/Server-side)。
 
-MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢獻者應遵循這些 [MDN 撰寫指南](/en-US/docs/MDN/Writing_guidelines)，以確保在撰寫風格、程式碼範例和其他主題上保持一致性。
+MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢獻者應遵循這些 [MDN 撰寫指南](/zh-TW/docs/MDN/Writing_guidelines)，以確保在撰寫風格、程式碼範例和其他主題上保持一致性。
 
-關於某項技術是否可以在 MDN Web Docs 上進行紀錄的標準，請參閱[納入標準](/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)頁面以了解更多詳情。
+關於某項技術是否可以在 MDN Web Docs 上進行紀錄的標準，請參閱[納入標準](/zh-TW/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)頁面以了解更多詳情。
 
 ### 我們何時記錄新技術
 
@@ -92,7 +92,7 @@ MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢�
 - 非公開於網頁、僅特定瀏覽器使用的技術。
 - 與網頁無關的技術。
 - 面向最終使用者的文件。例如，Mozilla 產品的使用者指南應發布在 [Mozilla 支援網站](https://support.mozilla.org/)。
-- 自我連結或自我宣傳的外部連結。在添加外部連結之前，請參閱我們的[寫作風格指南](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links)。
+- 自我連結或自我宣傳的外部連結。在添加外部連結之前，請參閱我們的[寫作風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide#external_links)。
 
 ### 我們何時移除文件
 
@@ -107,7 +107,7 @@ MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢�
 - 文章包含不適合 MDN Web Docs 的內容。
 - MDN Web Docs 某些區段並未專注於開放網頁技術，且維護成本過高。
 
-有關*如何*刪除文件的更多資訊，請參閱 [建立、移動和刪除頁面](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) 指南。
+有關*如何*刪除文件的更多資訊，請參閱 [建立、移動和刪除頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) 指南。
 
 ## MDN Web Docs 上允許的文件類型
 
