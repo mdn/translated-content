@@ -15,7 +15,7 @@ l10n:
 
 ```js-nolint
 browser.pageAction.hide(
-  tabId // integer
+  tabId // 整型
 )
 ```
 
