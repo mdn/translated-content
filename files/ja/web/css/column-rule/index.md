@@ -83,7 +83,7 @@ p.abc {
 
 #### HTML
 
-```html
+```html-nolint
 <p class="content-box">
   これは 3 つ段に分割されたテキストの束です。 <code>column-rule</code> プロパティは、段と段の間に引かれる線のスタイル、太さ、色を変更するために使用されます。すばらしいと思いませんか？
 </p>
