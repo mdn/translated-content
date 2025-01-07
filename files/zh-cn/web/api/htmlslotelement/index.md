@@ -7,20 +7,20 @@ l10n:
 
 {{APIRef('Web Components')}}
 
-通过[影子 DOM API](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 **`HTMLSlotElement`** 接口，可以访问 HTML `<slot>` 元素的名称和指定节点。
+[影子 DOM API](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 **`HTMLSlotElement`** 接口用于访问 HTML `<slot>` 元素的名称和指定节点。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_继承了其父接口 {{domxref("HTMLElement")}} 的属性。_
+_还继承了其父接口 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref('HTMLSlotElement.name')}}
   - : 用于获取和设置插槽的名称的字符串。
 
 ## 实例方法
 
-_继承了其父接口 {{domxref("HTMLElement")}} 的方法。_
+_还继承了其父接口 {{domxref("HTMLElement")}} 的方法。_
 
 - {{domxref('HTMLSlotElement.assign()')}}
   - : 将此插槽的手动分配节点设置为给定的节点。
@@ -31,9 +31,9 @@ _继承了其父接口 {{domxref("HTMLElement")}} 的方法。_
 
 ## 事件
 
-_继承了其父接口 {{domxref("HTMLElement")}} 的事件。_
+_还继承了其父接口 {{domxref("HTMLElement")}} 的事件。_
 
-使用 {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} 监听这些事件，或通过将事件监听器分配给该接口的 `oneventname` 属性来监听。
+使用 {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} 或通过将事件监听器赋值给该接口的 `oneventname` 属性来监听这些事件。
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
   - : 当插槽中包含的节点发生变化时，在 `HTMLSlotElement` 实例（[`<slot>`](/zh-CN/docs/Web/HTML/Element/slot) 元素）上触发此事件。
@@ -47,7 +47,7 @@ let slots = this.shadowRoot.querySelectorAll("slot");
 slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
   console.log(
-    `插槽 "${slots[1].name}" 中的元素已更改为 "${nodes[0].outerHTML}"。`,
+    `插槽“${slots[1].name}”中的元素已更改为“${nodes[0].outerHTML}”。`,
   );
 });
 ```
