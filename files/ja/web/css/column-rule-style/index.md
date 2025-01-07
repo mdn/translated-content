@@ -55,7 +55,7 @@ column-rule-style: unset;
 
 #### HTML
 
-```html live-sample___setting_a_dashed_column_rule
+```html-nolint live-sample___setting_a_dashed_column_rule
 <p>
   これは 3 つ段に分割されたテキストの束です。 <code>column-rule-style</code> プロパティは、段と段の間に引かれる線のスタイルを変更するために使用されます。すばらしいと思いませんか？
 </p>
