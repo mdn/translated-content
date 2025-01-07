@@ -315,7 +315,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 
 しかし、やはり人々は HTML で何かと変なことをするものです。例えば、{{htmlelement("div")}} を使用してマークアップされたボタンなどを時々見かけますね。
 
-```html example-bad
+```html-nolint example-bad
 <div data-message="This is from the first button">クリックしてください</div>
 <div data-message="This is from the second button">こちらもクリックしてください</div>
 <div data-message="This is from the third button">こちらも！</div>
