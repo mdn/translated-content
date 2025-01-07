@@ -15,7 +15,7 @@ HTTP **`Accept`** {{Glossary("request header", "請求標頭")}}和{{Glossary("r
   <tbody>
     <tr>
       <th scope="row">標頭類型</th>
-      <td>{{Glossary("Request header", "請求標頭")}}，{{Glossary("Response header", "回應標頭")}}</tr>
+      <td>{{Glossary("Request header", "請求標頭")}}、{{Glossary("Response header", "回應標頭")}}</tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
       <td>否</td>
