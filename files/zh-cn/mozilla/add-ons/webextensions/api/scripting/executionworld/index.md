@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-指定通过 {{WebExtAPIRef("scripting.executeScript()")}} 插入或 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本的执行环境。
+指定通过 {{WebExtAPIRef("scripting.executeScript()")}} 插入或通过 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本的执行环境。
 
 ## 类型
 
