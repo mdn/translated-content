@@ -9,7 +9,7 @@ JavaScript поддерживает компактный набор инстру
 
 Более подробная информация об инструкциях, рассмотренных в данной главе, содержится в [справочнике по JavaScript](/ru/docs/Web/JavaScript/Reference/Statements). Точка с запятой (`;`) используется для разделения инструкций в коде.
 
-Любое выражение (expression) в JavaScript является также инструкцией (statement). Чтобы получить более подробную информацию о выражениях, прочитайте [Выражения и операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators).
+Любое выражение (expression) в JavaScript является также инструкцией (statement). Чтобы получить более подробную информацию о выражениях, прочитайте [Выражения и операторы](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
 ## Инструкция block
 
@@ -59,7 +59,7 @@ if (condition) {
 }
 ```
 
-Здесь `condition` может быть любым выражением, вычисляемым как истинное (true) или ложное (false). Чтобы получить более подробную информацию о значениях `true` и `false`, прочитайте [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description). Если условие оценивается как `true`, то выполняется `statement_1`, в противном случае - `statement_2`. Блоки `statement_1` и `statement_2` могут быть любыми блоками, включая также вложенные инструкции `if`.
+Здесь `condition` может быть любым выражением, вычисляемым как истинное (true) или ложное (false). Чтобы получить более подробную информацию о значениях `true` и `false`, прочитайте [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean#description). Если условие оценивается как `true`, то выполняется `statement_1`, в противном случае - `statement_2`. Блоки `statement_1` и `statement_2` могут быть любыми блоками, включая также вложенные инструкции `if`.
 
 Также вы можете объединить несколько инструкций, пользуясь `else if` для получения последовательности проверок условий:
 
@@ -192,7 +192,7 @@ console.log("Is there anything else you'd like?");
 
 Практически любой объект может быть выброшен как исключение. Тем не менее, не все выброшенные объекты создаются равными. Обычно числа или строки выбрасываются как исключения, но часто более эффективным является использование одного из типов исключений, специально созданных для этой цели:
 
-- [Исключения ECMAScript](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error#Error_types)
+- [Исключения ECMAScript](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - {{domxref("DOMException")}} и {{domxref("DOMError")}}
 
 ### Инструкция throw
@@ -361,7 +361,7 @@ try {
 
 #### Вложенные инструкции `try...catch`
 
-Вы можете вкладывать инструкции `try...catch` друг в друга. Если внутренняя инструкция `try...catch` не имеет блока `catch`, то она должна иметь блок finally, кроме того исключение будет перехвачено во внешнем блоке `catch`. Для получения большей информации ознакомьтесь с вложенными [try-блоками](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks).
+Вы можете вкладывать инструкции `try...catch` друг в друга. Если внутренняя инструкция `try...catch` не имеет блока `catch`, то она должна иметь блок finally, кроме того исключение будет перехвачено во внешнем блоке `catch`. Для получения большей информации ознакомьтесь с вложенными [try-блоками](/ru/docs/Web/JavaScript/Reference/Statements/try...catch#nested_try-blocks).
 
 ### Использование объекта Error
 

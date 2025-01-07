@@ -75,7 +75,7 @@ Nos exemplos anteriores, já usamos a propriedade font para tornar o texto um po
 
 Essas propriedades podem ser similares para você, se você trabalhou com CSS antes.
 
-O diagrama seguinte do [WHATWG](http://www.whatwg.org/) demonstra as várias baselines suportadas pela propriedade do `textBaseline`![The top of the em square is
+O diagrama seguinte do [WHATWG](https://www.whatwg.org/) demonstra as várias baselines suportadas pela propriedade do `textBaseline`![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
 where some glyphs like आ are anchored, the middle is half-way
 between the top of the em square and the bottom of the em square,

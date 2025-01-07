@@ -62,6 +62,6 @@ p {
 
 ## Voir aussi
 
-- [Appliquer des couleurs HTML à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs HTML à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - La propriété CSS {{cssxref("color")}}
 - Le type de donnée CSS {{cssxref("&lt;color&gt;")}}

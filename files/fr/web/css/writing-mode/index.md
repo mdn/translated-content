@@ -187,6 +187,6 @@ Voici un aperçu du résultat avec un navigateur qui prend en charge `writing-mo
 - {{cssxref("unicode-bidi")}}
 - {{cssxref("text-orientation")}}
 - {{cssxref("text-combine-upright")}}
-- [Les propriétés logiques en CSS](/fr/docs/Web/CSS/CSS_Logical_Properties)
+- [Les propriétés logiques en CSS](/fr/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Mettre en forme du texte vertical (chinois, coréen, japonais, mongol)](https://www.w3.org/International/articles/vertical-text/)
 - [Tests de prise en charge des navigateurs](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)

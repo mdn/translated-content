@@ -26,7 +26,7 @@ var port = browser.runtime.connect(
 ### Paramètres
 
 - `extensionId`{{optional_inline}}
-  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
+  - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
 - `connectInfo`{{optional_inline}}
 
   - : `object`. Détails de la connexion:

@@ -7,7 +7,7 @@ slug: Web/HTTP/CORS
 
 Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, использующий дополнительные {{Glossary("HTTP")}}-заголовки, чтобы дать возможность {{Glossary("user agent","агенту пользователя")}} получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника **(cross-origin HTTP request),** если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом.
 
-Пример cross-origin запроса: HTML страница, обслуживаемая сервером с `http://domain-a.com`, запрашивает [`<img> src`](/ru/docs/Web/HTML/Element/Img#Attributes) по адресу `http://domain-b.com/image.jpg`. Сегодня многие страницы загружают ресурсы вроде CSS-стилей, изображений и скриптов с разных доменов, соответствующих разным сетям доставки контента (Content delivery networks, CDNs).
+Пример cross-origin запроса: HTML страница, обслуживаемая сервером с `http://domain-a.com`, запрашивает [`<img> src`](/ru/docs/Web/HTML/Element/img#attributes) по адресу `http://domain-b.com/image.jpg`. Сегодня многие страницы загружают ресурсы вроде CSS-стилей, изображений и скриптов с разных доменов, соответствующих разным сетям доставки контента (Content delivery networks, CDNs).
 
 В целях безопасности браузеры ограничивают cross-origin запросы, инициируемые скриптами. Например, {{domxref("XMLHttpRequest")}} и [Fetch API](/ru/docs/Web/API/Fetch_API) следуют _политике одного источника_ ([same-origin policy](/ru/docs/Web/Security/Same-origin_policy)). Это значит, что web-приложения, использующие такие API, могут запрашивать HTTP-ресурсы только с того домена, с которого были загружены, пока не будут использованы CORS-заголовки.
 
@@ -19,7 +19,7 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 
 На самом деле, все.
 
-Конкретнее, эта статья для web-администраторов, разработчиков серверной стороны и front-end разработчиков. Современные браузеры поддерживают клиентские компоненты cross-origin обмена, включая заголовки и соблюдение правил политики. Но этот новый стандарт означает, что сервера также должны поддерживать новые заголовки запросов и ответов. Другая статья для разработчиков серверной части, описывающая [перспективы cross-origin обмена на стороне сервера (с примерами кода на PHP)](/ru/docs/Web/HTTP/Server-Side_Access_Control), к дополнительному прочтению.
+Конкретнее, эта статья для web-администраторов, разработчиков серверной стороны и front-end разработчиков. Современные браузеры поддерживают клиентские компоненты cross-origin обмена, включая заголовки и соблюдение правил политики. Но этот новый стандарт означает, что сервера также должны поддерживать новые заголовки запросов и ответов. Другая статья для разработчиков серверной части, описывающая [перспективы cross-origin обмена на стороне сервера (с примерами кода на PHP)](/ru/docs/Web/HTTP/CORS), к дополнительному прочтению.
 
 ## Какие запросы используют CORS?
 
@@ -46,7 +46,7 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 
 Фрагменты JavaScript-кода, включённые в эти секции (а также фрагменты кода, отвечающие за корректную обработку межсерверных запросов, которые запускаются на сервере) могут быть испытаны "в действии" на <http://arunranga.com/examples/access-control/>, и будут работать в браузерах, которые поддерживают {{domxref("XMLHttpRequest")}}.
 
-Обсуждение Cross-Origin Resource Sharing с точки зрения сервера (включая фрагменты кода на PHP) может быть найдено в статье [Server-Side Access Control (CORS)](/ru/docs/Web/HTTP/Server-Side_Access_Control).
+Обсуждение Cross-Origin Resource Sharing с точки зрения сервера (включая фрагменты кода на PHP) может быть найдено в статье [Server-Side Access Control (CORS)](/ru/docs/Web/HTTP/CORS).
 
 ### Простые запросы
 
@@ -133,7 +133,7 @@ Content-Type: application/xml
 
 ### Предварительные запросы
 
-В отличии от ["простых запросов"](/ru/docs/Web/HTTP/Access_control_CORS#Simple_requests), "предварительные" запросы сначала отправляют HTTP-запрос методом {{HTTPMethod("OPTIONS")}} к ресурсу на другом домене, чтобы определить, является ли фактический запрос безопасным для отправки. Кросс-сайтовые запросы предварительно просматриваются таким образом, так как они могут быть причастны к пользовательским данным.
+В отличии от ["простых запросов"](/ru/docs/Web/HTTP/CORS#simple_requests), "предварительные" запросы сначала отправляют HTTP-запрос методом {{HTTPMethod("OPTIONS")}} к ресурсу на другом домене, чтобы определить, является ли фактический запрос безопасным для отправки. Кросс-сайтовые запросы предварительно просматриваются таким образом, так как они могут быть причастны к пользовательским данным.
 
 В частности, запрос предварительно просматривается, если выполняется **любое из следующих условий:**
 
@@ -153,10 +153,10 @@ Content-Type: application/xml
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (но учтите дополнительные требования ниже)
   - {{HTTPHeader("Last-Event-ID")}}
-  - [`DPR`](http://httpwg.org/http-extensions/client-hints.html#dpr)
-  - [`Save-Data`](http://httpwg.org/http-extensions/client-hints.html#save-data)
-  - [`Viewport-Width`](http://httpwg.org/http-extensions/client-hints.html#viewport-width)
-  - [`Width`](http://httpwg.org/http-extensions/client-hints.html#width)
+  - [`DPR`](https://httpwg.org/http-extensions/client-hints.html#dpr)
+  - [`Save-Data`](https://httpwg.org/http-extensions/client-hints.html#save-data)
+  - [`Viewport-Width`](https://httpwg.org/http-extensions/client-hints.html#viewport-width)
+  - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
 
 - **Или если** заголовок {{HTTPHeader("Content-Type")}} содержит значение, отличное от следующих:
 
@@ -297,11 +297,11 @@ Access-Control-Max-Age: 86400
 Поэтому, пока браузеры не догонят спецификацию, вы можете обойти это ограничение, выполнив одно или оба из следующих действий:
 
 - изменить поведение на стороне сервера, чтобы избежать предварительной проверки и/или избежать переадресации — если у вас есть контроль над сервером, к которому делается запрос
-- изменить запрос так, чтобы это был [простой запрос](#Simple_requests), который не вызывает предварительную проверку
+- изменить запрос так, чтобы это был [простой запрос](#simple_requests), который не вызывает предварительную проверку
 
 Но если невозможно внести эти изменения, то возможен другой способ:
 
-1. Сделайте [простой запрос](/ru/docs/Web/HTTP/Access_control_CORS#Simple_requests) для определения (используя [Response.url](/ru/docs/Web/API/Response/url) для Fetch API, или [XHR.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL), чтобы определить, на каком URL завершится настоящий предварительный запрос).
+1. Сделайте [простой запрос](/ru/docs/Web/HTTP/CORS#simple_requests) для определения (используя [Response.url](/ru/docs/Web/API/Response/url) для Fetch API, или [XHR.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL), чтобы определить, на каком URL завершится настоящий предварительный запрос).
 2. Сделайте другой запрос ("настоящий" запрос), используя URL адрес, полученный вами из [Response.url](/ru/docs/Web/API/Response/url) или [XMLHttpRequest.responseURL](/ru/docs/Web/API/XMLHttpRequest/responseURL) на первом этапе.
 
 Однако, если запрос инициирует предварительную проверку из-за наличия в запросе заголовка `Authorization`, вы не сможете обойти ограничение, используя описанные выше шаги. И вы вообще не сможете обойти это, если у вас нет контроля над сервером, на который делается запрос.
@@ -425,7 +425,7 @@ The {{HTTPHeader("Access-Control-Allow-Credentials")}} header Indicates whether 
 Access-Control-Allow-Credentials: true
 ```
 
-[Credentialed requests](#Requests_with_credentials) are discussed above.
+[Credentialed requests](#requests_with_credentials) are discussed above.
 
 ### Access-Control-Allow-Methods
 
@@ -435,11 +435,11 @@ The {{HTTPHeader("Access-Control-Allow-Methods")}} header specifies the method o
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
-An example of a [preflight request is given above](#Preflighted_requests), including an example which sends this header to the browser.
+An example of a [preflight request is given above](#preflighted_requests), including an example which sends this header to the browser.
 
 ### Access-Control-Allow-Headers
 
-The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a [preflight request](#Preflighted_requests) to indicate which HTTP headers can be used when making the actual request.
+The {{HTTPHeader("Access-Control-Allow-Headers")}} header is used in response to a [preflight request](#preflighted_requests) to indicate which HTTP headers can be used when making the actual request.
 
 ```
 Access-Control-Allow-Headers: <field-name>[, <field-name>]*
@@ -472,7 +472,7 @@ The {{HTTPHeader("Access-Control-Request-Method")}} is used when issuing a prefl
 Access-Control-Request-Method: <method>
 ```
 
-Examples of this usage can be [found above.](#Preflighted_requests)
+Examples of this usage can be [found above.](#preflighted_requests)
 
 ### Access-Control-Request-Headers
 
@@ -482,7 +482,7 @@ The {{HTTPHeader("Access-Control-Request-Headers")}} header is used when issuing
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-Examples of this usage can be [found above](#Preflighted_requests).
+Examples of this usage can be [found above](#preflighted_requests).
 
 ## Спецификации
 
@@ -500,12 +500,12 @@ Examples of this usage can be [found above](#Preflighted_requests).
 ## Смотрите также
 
 - [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
-- [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/ru/docs/Web/HTTP/Server-Side_Access_Control)
-- [Cross-Origin Resource Sharing specification](http://www.w3.org/TR/cors/)
+- [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/ru/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing specification](https://www.w3.org/TR/cors/)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/ru/docs/Web/API/Fetch_API)
 - [Using CORS with All (Modern) Browsers](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
-- [Using CORS - HTML5 Rocks](http://www.html5rocks.com/en/tutorials/cors/)
+- [Using CORS - HTML5 Rocks](https://www.html5rocks.com/en/tutorials/cors/)
 - [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight

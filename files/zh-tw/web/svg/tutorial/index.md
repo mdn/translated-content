@@ -14,22 +14,22 @@ slug: Web/SVG/Tutorial
 
 ##### 從頭介紹 SVG
 
-- [導論](/zh-TW/SVG/Tutorial/Introduction)
-- [開始](/zh-TW/SVG/Tutorial/Getting_Started)
-- [坐標定位](/zh-TW/SVG/Tutorial/Positions)
-- [基本形状](/zh-TW/SVG/Tutorial/Basic_Shapes)
-- [路徑](/zh-TW/SVG/Tutorial/Paths)
-- [填充與邊框](/zh-TW/SVG/Tutorial/Fills_and_Strokes)
-- [漸變](/zh-TW/SVG/Tutorial/Gradients)
-- [模式](/zh-TW/SVG/Tutorial/Patterns)
-- [文字](/zh-TW/SVG/Tutorial/Texts)
-- [基本變换](/zh-TW/SVG/Tutorial/Basic_Transformations)
-- [裁剪和遮罩](/zh-TW/SVG/Tutorial/Clipping_and_masking)
-- [其他 SVG 内容](/zh-TW/SVG/Tutorial/Other_content_in_SVG)
-- [濾镜效果](/zh-TW/SVG/Tutorial/Filter_effects)
-- [SVG 字型](/zh-TW/SVG/Tutorial/SVG_fonts)
-- [SVG 的 Image 標籤](/zh-TW/SVG/Tutorial/SVG_Image_Tag)
-- [SVG 工具](/zh-TW/SVG/Tutorial/Tools_for_SVG)
+- [導論](/zh-TW/docs/Web/SVG/Tutorial/Introduction)
+- [開始](/zh-TW/docs/Web/SVG/Tutorial/Getting_Started)
+- [坐標定位](/zh-TW/docs/Web/SVG/Tutorial/Positions)
+- [基本形状](/zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes)
+- [路徑](/zh-TW/docs/Web/SVG/Tutorial/Paths)
+- [填充與邊框](/zh-TW/docs/Web/SVG/Tutorial/Fills_and_Strokes)
+- [漸變](/zh-TW/docs/Web/SVG/Tutorial/Gradients)
+- [模式](/zh-TW/docs/Web/SVG/Tutorial/Patterns)
+- [文字](/zh-TW/docs/Web/SVG/Tutorial/Texts)
+- [基本變换](/zh-TW/docs/Web/SVG/Tutorial/Basic_Transformations)
+- [裁剪和遮罩](/zh-TW/docs/Web/SVG/Tutorial/Clipping_and_masking)
+- [其他 SVG 内容](/zh-TW/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+- [濾镜效果](/zh-TW/docs/Web/SVG/Tutorial/Filter_effects)
+- [SVG 字型](/zh-TW/docs/Web/SVG/Tutorial/SVG_fonts)
+- [SVG 的 Image 標籤](/zh-TW/docs/Web/SVG/Tutorial/SVG_Image_Tag)
+- [SVG 工具](/zh-TW/docs/Web/SVG/Tutorial/Tools_for_SVG)
 
 下面陳列進階主题，需要單獨列出教學。
 

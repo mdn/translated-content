@@ -56,4 +56,4 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}_, and im
 
 ## Veja também
 
-- [The DOM interfaces index.](/pt-BR/docs/DOM/DOM_Reference)
+- [The DOM interfaces index.](/pt-BR/docs/Web/API/Document_Object_Model)

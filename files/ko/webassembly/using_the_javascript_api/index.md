@@ -5,7 +5,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-[Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
+[Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_Wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
 
 > [!NOTE]
 > 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)를 먼저 읽어보세요.
@@ -21,7 +21,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 
 1. 먼저 wasm 모듈이 필요합니다! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 파일을 로컬 컴퓨터의 새 디렉토리에 저장하세요.
 2. 다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
-3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
+3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
 
    ```rust
    (module
@@ -129,7 +129,7 @@ memory.grow(1);
 
 {{domxref("ArrayBuffer")}}의 byteLength는 불변이므로, {{jsxref("Memory.prototype.grow()")}} 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
 
-함수와 마찬가지로 선형 메모리를 모듈 내부에서 정의하거나 가져올 수 있습니다. 마찬가지로 모듈은 메모리를 선택적으로 내보낼수도 있습니다. 즉, JavaScript는 새 WebAssembly.Memory를 만들고 가져 오기로 전달하거나 [`Instance.prototype.exports`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)를 통해 메모리 내보내기를 하여 WebAssembly 인스턴스의 메모리에 액세스 할 수 있습니다.
+함수와 마찬가지로 선형 메모리를 모듈 내부에서 정의하거나 가져올 수 있습니다. 마찬가지로 모듈은 메모리를 선택적으로 내보낼수도 있습니다. 즉, JavaScript는 새 WebAssembly.Memory를 만들고 가져 오기로 전달하거나 [`Instance.prototype.exports`](/ko/docs/WebAssembly/JavaScript_interface/Instance/exports)를 통해 메모리 내보내기를 하여 WebAssembly 인스턴스의 메모리에 액세스 할 수 있습니다.
 
 ### 심화된 메모리 예제
 
@@ -162,7 +162,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer))에서 {{domxref ("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
+Memory 객체의 버퍼 ([`Memory.prototype.buffer`](/ko/docs/WebAssembly/JavaScript_interface/Memory/buffer))에서 {{domxref ("Uint32Array")}} 뷰를 만드는 방법에 유의하십시오.
 
 메모리 가져 오기는 함수 가져 오기와 마찬가지로 작동하며 메모리 개체 만 JavaScript 함수 대신 값으로 전달됩니다. 메모리 가져 오기는 다음과 같은 두 가지 이유로 유용합니다.
 
@@ -181,7 +181,7 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
 
 함수 포인터를 호출 할 때 WebAssembly 호출자는 인덱스를 제공합니다.이 호출자는 인덱싱 된 함수 참조를 인덱싱하고 호출하기 전에 테이블에 대해 safety bounds를 검사 할 수 있습니다. 따라서 테이블은 현재 저수준 프로그래밍 언어 기능을 안전하고 이식 가능하게 컴파일하는 데 사용되는 다소 낮은 수준의 프리미티브(primitive)입니다.
 
-테이블은 테이블의 값 중 하나를 업데이트하는 [`Table.prototype.set()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set)과 테이블에 저장할 수있는 값의 수를 늘리는 [`Table.prototype.grow()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow)를 통해 변형 될 수 있습니다. 이를 통해 간접적으로 호출 할 수있는 함수 집합이 시간이 지남에 따라 변경 될 수 있으며 이는 [dynamic linking techniques](http://webassembly.org/docs/dynamic-linking/)에 필요합니다. mutations는 JavaScript의 [`Table.prototype.get()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get)과 wasm 모듈을 통해 즉시 액세스 할 수 있습니다.
+테이블은 테이블의 값 중 하나를 업데이트하는 [`Table.prototype.set()`](/ko/docs/WebAssembly/JavaScript_interface/Table/set)과 테이블에 저장할 수있는 값의 수를 늘리는 [`Table.prototype.grow()`](/ko/docs/WebAssembly/JavaScript_interface/Table/grow)를 통해 변형 될 수 있습니다. 이를 통해 간접적으로 호출 할 수있는 함수 집합이 시간이 지남에 따라 변경 될 수 있으며 이는 [dynamic linking techniques](http://webassembly.org/docs/dynamic-linking/)에 필요합니다. mutations는 JavaScript의 [`Table.prototype.get()`](/ko/docs/WebAssembly/JavaScript_interface/Table/get)과 wasm 모듈을 통해 즉시 액세스 할 수 있습니다.
 
 ### 테이블 예제
 
@@ -210,7 +210,7 @@ WebAssembly 테이블은 JavaScript 및 WebAssembly 코드로 액세스 할 수 
    console.log(tbl.get(1)()); // 42
    ```
 
-이 코드는 테이블에 저장된 각 함수 참조를 차례로 액세스하고 인스턴스화하여 가지고 있는 값을 콘솔에 출력합니다. [`Table.prototype.get()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) 호출로 각 함수 참조를 검색 한 다음 추가 세트를 추가합니다 실제로 함수를 호출하려면 끝에 괄호를 사용하십시오.
+이 코드는 테이블에 저장된 각 함수 참조를 차례로 액세스하고 인스턴스화하여 가지고 있는 값을 콘솔에 출력합니다. [`Table.prototype.get()`](/ko/docs/WebAssembly/JavaScript_interface/Table/get) 호출로 각 함수 참조를 검색 한 다음 추가 세트를 추가합니다 실제로 함수를 호출하려면 끝에 괄호를 사용하십시오.
 
 > [!NOTE]
 > 우리의 완전한 데모는 [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html)에서 찾을 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html))
@@ -282,7 +282,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 - 하나의 모듈 인스턴스는 0-1 테이블 인스턴스를 사용할 수 있습니다. 이것은 C 함수 포인터를 구현하는 데 사용되는 인스턴스의 "함수 주소 공간"입니다. WebAssembly의 향후 버전에서는 향후 모듈 인스턴스 당 0-N 테이블 인스턴스를 허용 할 수 있습니다.
 - 하나의 메모리 또는 테이블 인스턴스는 0-N 모듈 인스턴스에서 사용할 수 있습니다.이 인스턴스는 모두 동일한 주소 공간을 공유하므로 [dynamic linking](http://webassembly.org/docs/dynamic-linking)이 가능합니다.
 
-Understanding text format에서 multiplicity in action를 확인 할 수있습니다. - [Mutating tables and dynamic linking section](/ko/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking)을 참조하십시오.
+Understanding text format에서 multiplicity in action를 확인 할 수있습니다. - [Mutating tables and dynamic linking section](/ko/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking)을 참조하십시오.
 
 ## 요약
 

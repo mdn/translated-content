@@ -14,7 +14,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : Это задаёт Тип операции композиции для применения при разработке новых форм, где Тип является строкой, идентифицирующей, какие из двенадцати операций композитинг в использовании.
 
-См. [примеры компоновки](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) кода из следующих примеров.
+См. [примеры компоновки](/ru/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) кода из следующих примеров.
 
 ## Обрезка контуров
 

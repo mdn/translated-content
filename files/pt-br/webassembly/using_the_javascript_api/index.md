@@ -41,7 +41,7 @@ Vamos percorrer alguns exemplos que explicam como usar a API WebAssembly JavaScr
 
 ### Transmitindo o módulo WebAssembly
 
-Uma novidade no Firefox 58 é a capacidade de compilar e instanciar módulos WebAssembly diretamente de fontes subjacentes. Isso é obtido usando [`WebAssembly.compileStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compileStreaming) e [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming). Esses métodos são mais fáceis do que suas contrapartes sem streaming, porque eles podem transformar o código de byte diretamente em instâncias `Module`/`Instance`, eliminando a necessidade de colocar separadamente o {{domxref("Response")}} em um {{jsxref("ArrayBuffer")}}.
+Uma novidade no Firefox 58 é a capacidade de compilar e instanciar módulos WebAssembly diretamente de fontes subjacentes. Isso é obtido usando [`WebAssembly.compileStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compileStreaming_static) e [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static). Esses métodos são mais fáceis do que suas contrapartes sem streaming, porque eles podem transformar o código de byte diretamente em instâncias `Module`/`Instance`, eliminando a necessidade de colocar separadamente o {{domxref("Response")}} em um {{jsxref("ArrayBuffer")}}.
 
 Este exemplo (consulte nossa demonstração [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) no GitHub e [visualize it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) também) mostra como usar `instantiateStreaming()` para buscar um módulo Wasm, importar uma função JavaScript nele, compilá-lo e instanciá-lo e acessar sua função exportada - tudo em uma única etapa.
 
@@ -60,7 +60,7 @@ O resultado disso é que chamamos nossa função WebAssembly exportada `exported
 
 ### Carregando nosso módulo Wasm sem streaming
 
-Se você não pode ou não quer usar os métodos de streaming descritos acima, você pode usar os métodos sem streaming [`WebAssembly.compile()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compile) / [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate) em vez disso.
+Se você não pode ou não quer usar os métodos de streaming descritos acima, você pode usar os métodos sem streaming [`WebAssembly.compile()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compile_static) / [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static) em vez disso.
 
 Esses métodos não acessam diretamente o código de byte, então requerem uma etapa extra para transformar a resposta em um {{jsxref("ArrayBuffer")}} antes de compilar/instanciar o módulo Wasm.
 

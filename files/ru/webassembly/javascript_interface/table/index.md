@@ -12,12 +12,12 @@ slug: WebAssembly/JavaScript_interface/Table
 
 ## Конструктор
 
-- [`WebAssembly.Table()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+- [`WebAssembly.Table()`](/ru/docs/WebAssembly/JavaScript_interface/Table/Table)
   - : Создаёт новый объект `Table`.
 
 ## Экземпляры `Table`
 
-Все экземпляры `Table` наследуются от [прототипа конструктора](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/prototype) `Table()`, следовательно изменения прототипа затронут все экземпляры `Table`.
+Все экземпляры `Table` наследуются от [прототипа конструктора](/ru/docs/WebAssembly/JavaScript_interface/Table) `Table()`, следовательно изменения прототипа затронут все экземпляры `Table`.
 
 ### Свойства экземпляра
 

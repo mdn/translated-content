@@ -38,7 +38,7 @@ WebAssembly.instantiateStreaming(source, importObject)
 
 ## 示例
 
-下面的示例（在 GitHub 上查看 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) 示例，也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从基础源传输一个 Wasm 模块，然后进行编译和实例化，Promise 会兑现 `ResultObject`。因为 `instantiateStreaming()` 函数接受兑现后返回 [`Response`](/zh-CN/docs/Web/API/Response) 对象的 Promise，你可以直接传递一个 [`fetch()`](/zh-CN/docs/Web/API/fetch) 调用，它会在兑现后将 response 传递给该函数。
+下面的示例（在 GitHub 上查看 [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) 示例，也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)）直接从基础源传输一个 Wasm 模块，然后进行编译和实例化，Promise 会兑现 `ResultObject`。因为 `instantiateStreaming()` 函数接受兑现后返回 [`Response`](/zh-CN/docs/Web/API/Response) 对象的 Promise，你可以直接传递一个 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 调用，它会在兑现后将 response 传递给该函数。
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };

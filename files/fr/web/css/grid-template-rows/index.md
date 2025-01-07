@@ -131,5 +131,5 @@ Cette propriété peut être définie avec le mot-clé `none` ou avec une valeur
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
 - {{cssxref("grid-template")}}
-- [Guide : les concepts de base pour les grilles CSS : les pistes](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#les_pistes)
+- [Guide : les concepts de base pour les grilles CSS : les pistes](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#les_pistes)
 - Tutoriel vidéo : [définir une grille (en anglais)](https://gridbyexample.com/video/series-define-a-grid/)

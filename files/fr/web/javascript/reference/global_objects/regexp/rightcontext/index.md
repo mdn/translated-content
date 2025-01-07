@@ -20,7 +20,7 @@ La propriété `rightContext` est une propriété statique et n'est pas liée à
 
 La valeur de la propriété `rightContext` n'est accessible qu'en lecture. Le moteur la modifie à chaque fois qu'une nouvelle correspondance est trouvée.
 
-L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$'`). En effet, l'analyseur (_parser_) attend un début de chaîne du fait de la simple quote, ce qui provoquerait une exception {{jsxref("SyntaxError")}}. Il faut donc utiliser [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
+L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$'`). En effet, l'analyseur (_parser_) attend un début de chaîne du fait de la simple quote, ce qui provoquerait une exception {{jsxref("SyntaxError")}}. Il faut donc utiliser [la notation à base de crochets](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors#notation_avec_crochets).
 
 ## Exemples
 

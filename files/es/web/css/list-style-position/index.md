@@ -81,9 +81,9 @@ list-style-position: inside | outside | inherit
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#list-style-position)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/generate.html#propdef-list-style-position)
-- [css3-lists](http://www.w3.org/TR/css3-lists/#list-style-position)
+- [CSS 1](https://www.w3.org/TR/CSS1#list-style-position)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/generate.html#propdef-list-style-position)
+- [css3-lists](https://www.w3.org/TR/css3-lists/#list-style-position)
 
 ### Compatibilidad con navegadores
 

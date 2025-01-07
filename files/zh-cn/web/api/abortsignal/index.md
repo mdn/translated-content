@@ -55,7 +55,7 @@ _也继承其父接口 {{domxref("EventTarget")}} 的事件。_
 
 我们首先使用 {{domxref("AbortController.AbortController", "AbortController()")}} 创建一个中止控制器，然后使用 {{domxref("AbortController.signal")}} 属性获取与它关联的 `AbortSignal` 对象的引用。
 
-当 [fetch 请求](/zh-CN/docs/Web/API/fetch)开始时，我们将 `AbortSignal` 作为一个选项传递进请求的 option 对象中（见下面的 `{signal}`）。这个将信号和控制器与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 中止它。你可以看见当中止按钮（`abortBtn`）被点击时，第二个事件监听器触发，使 fetch 操作被中止。
+当 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)开始时，我们将 `AbortSignal` 作为一个选项传递进请求的 option 对象中（见下面的 `{signal}`）。这个将信号和控制器与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 中止它。你可以看见当中止按钮（`abortBtn`）被点击时，第二个事件监听器触发，使 fetch 操作被中止。
 
 当 `abort()` 被调用时，`fetch()` promise 将以名为 `AbortError` 的 `DOMException` 拒绝。
 

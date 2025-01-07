@@ -40,7 +40,7 @@ slug: Web/Media/Formats
 
 ### 教程
 
-- [学习区：视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [学习区：视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : 本教程介绍了在 web 上使用媒体的方法和细节。
 - [处理 web 内容的媒体支持问题](/zh-CN/docs/Web/Media/Formats/Support_issues)
   - : 在本指南中，我们将探讨如何通过明智地选择媒体格式，并在有帮助的地方提供回退和替代格式，在提供尽可能广泛的兼容性的同时，最大限度地提高网页内容的质量或性能。

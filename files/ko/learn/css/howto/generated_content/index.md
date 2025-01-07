@@ -8,7 +8,7 @@ slug: Learn/CSS/Howto/Generated_content
 > [!WARNING]
 > 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/03/18)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.
 
-[CSS 시작하기](/en/CSS/Getting_Started) 안내서 9번째 장; 이번에는 CSS에서Document에 표시될 내용물을 추가 하는 방법을 알아보자. stylesheet를 수정해서 텍스트 내용과 이미지를 수정해 보자.
+[CSS 시작하기](/en-US/CSS/Getting_Started) 안내서 9번째 장; 이번에는 CSS에서Document에 표시될 내용물을 추가 하는 방법을 알아보자. stylesheet를 수정해서 텍스트 내용과 이미지를 수정해 보자.
 
 ## 정보: 내용물
 
@@ -42,9 +42,9 @@ CSS는 element 전후로 텍스트 내용물을 넣을 수 있다. 이를 위해
 
 좀더 자세히
 
-stylesheet의 코드셋은 UTF-8이 기본이다. 그러나 링크 내나 stylesheet내 혹은 다른 방법으로 코드셋을 설정 할 수 있다. CSS 사양서의 [4.4 CSS style sheet representation](http://www.w3.org/TR/CSS21/syndata.html#q23)를 참고 하라.
+stylesheet의 코드셋은 UTF-8이 기본이다. 그러나 링크 내나 stylesheet내 혹은 다른 방법으로 코드셋을 설정 할 수 있다. CSS 사양서의 [4.4 CSS style sheet representation](https://www.w3.org/TR/CSS21/syndata.html#q23)를 참고 하라.
 
-독특한 캐릭터도 백슬레쉬(\\)와 함께 사용하는 escape 표시법으로 사용 할 수 있다. 예를 들어 \256B는 블랙퀸 체스 심볼(♛)이다. 좀더 자세히는 CSS 사양서의 [문자열 코드표에 없는 문자열 참조](http://www.w3.org/TR/CSS21/syndata.html#q24)나 CSS 사양서의 [Characters and case](http://www.w3.org/TR/CSS21/syndata.html#q6)를 참고하라.
+독특한 캐릭터도 백슬레쉬(\\)와 함께 사용하는 escape 표시법으로 사용 할 수 있다. 예를 들어 \256B는 블랙퀸 체스 심볼(♛)이다. 좀더 자세히는 CSS 사양서의 [문자열 코드표에 없는 문자열 참조](https://www.w3.org/TR/CSS21/syndata.html#q24)나 CSS 사양서의 [Characters and case](https://www.w3.org/TR/CSS21/syndata.html#q6)를 참고하라.
 
 ### 이미지 내용물
 
@@ -125,4 +125,4 @@ p:before {
 
 ## 다음에는?
 
-Stylesheet에 내용물을 추가 하는 일반 방법으로 리스트로 표기하는 방법이 있다. 다음장에는 [specify style for 리스트 elements를 위한 스타일 표기법에 대해 알아보자.](/ko/docs/CSS/Getting_Started/Lists)
+Stylesheet에 내용물을 추가 하는 일반 방법으로 리스트로 표기하는 방법이 있다. 다음장에는 [specify style for 리스트 elements를 위한 스타일 표기법에 대해 알아보자.](/ko/docs/Learn/CSS/Styling_text/Styling_lists)

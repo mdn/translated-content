@@ -109,4 +109,4 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 ## 関連情報
 
 - [Document Object Model (DOM)](/ja/docs/Web/API/Document_Object_Model)
-- [Houdini](/ja/docs/Web/Guide/Houdini)
+- [Houdini](/ja/docs/Web/API/Houdini_APIs)

@@ -19,11 +19,11 @@ Firefox 56 は、米国時間 2017 年 9 月 28 日にリリースされまし�
 ### HTML
 
 - ラベル付け可能なフォームコントロールに `labels` プロパティを実装しました。例えば {{domxref("HTMLInputElement.labels")}} です ([Firefox バグ 556743](https://bugzil.la/556743))。
-- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Link_types/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
+- `<link rel="preload">` を実装しました。詳しくは [リンク種別: preload](/ja/docs/Web/HTML/Attributes/rel/preload) をご覧ください ([Firefox バグ 1222633](https://bugzil.la/1222633))。現在は Firefox だけがキャッシュ可能なリソースの先読みに対応していることに注意してください。
 
 ### CSS
 
-- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
+- Mozilla の独自仕様である {{cssxref("&lt;color&gt;")}} 値 `-moz-win-accentcolor` と `-moz-win-accentcolortext` ([Firefox バグ 1344910](https://bugzil.la/1344910))、および独自仕様のメディアクエリーである [`-moz-windows-accent-color-in-titlebar`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-windows-accent-color-in-titlebar) を実装しました ([Firefox バグ 1379938](https://bugzil.la/1379938))。
 
 ### SVG
 
@@ -117,8 +117,8 @@ _変更なし。_
 - [privacy.services](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/services) が passwordSavingEnabled プロパティを持つようになりました。
 - [privacy.websites.referrersEnabled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites) をサポートしました。
 - [protocol_handlers](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) で "gopher" をサポートしました。
-- proxy.registerProxyScript() を [proxy.register()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) に改名しました。
-- [proxy.unregister()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) をサポートしました。
+- proxy.registerProxyScript() を [proxy.register()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) に改名しました。
+- [proxy.unregister()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) をサポートしました。
 - [runtime.onInstalled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) で `temporary` フラグをサポートしました。
 - [tabs.print()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/print)、[tabs.PageSettings](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings)、[tabs.printPreview()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview)、[tabs.saveAsPDF()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) をサポートしました。
 - [tabs.Tab.lastAccessed](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) をサポートしました。

@@ -24,7 +24,7 @@ A regra CSS `@page` pode ser acessada via interface do modelo de objeto {{domxre
 
 ## Exemplos
 
-Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes) de `@page` por exemplo.
+Podemos fazer referência a vários [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) de `@page` por exemplo.
 
 - {{Cssxref(":first")}}
 - {{Cssxref(":left")}}

@@ -5,7 +5,7 @@ slug: Web/CSS/background-color
 
 {{CSSRef}}
 
-**`background-color`** [CSS](/zh-TW/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
+**`background-color`** [CSS](/zh-TW/docs/Web/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
 
 ## 語法
 
@@ -64,16 +64,16 @@ background-color: inherit;
 
 {{EmbedLiveSample("範例","200","150")}}
 
-## 規格定義
+## 規範
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
-- [複數背景](/zh-TW/CSS/Multiple_backgrounds)
+- [複數背景](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

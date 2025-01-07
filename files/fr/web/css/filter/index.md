@@ -154,7 +154,7 @@ filter: contrast(175%) brightness(103%);
 
 ### Interpolation
 
-Pour les animations, si les filtres du début et de la fin ont une liste de fonctions de la même taille, sans [`url()`](/fr/docs/Web/CSS/url) et dans le même ordre, chaque filtre est interpolé selon ses règles particulières.
+Pour les animations, si les filtres du début et de la fin ont une liste de fonctions de la même taille, sans [`url()`](/fr/docs/Web/CSS/url_value) et dans le même ordre, chaque filtre est interpolé selon ses règles particulières.
 
 Si les listes de filtres sont de longueurs différentes, la liste la plus courte est complétée à la fin par les filtres supplémentaires de la liste la plus longue. Les fonctions ajoutées utilisent leur valeur initiale (qui ne modifie pas l'image). Tous les filtres alors présents sont interpolés selon leurs règles particulières. Sinon, c'est une interpolation discrète qui est utilisée.
 

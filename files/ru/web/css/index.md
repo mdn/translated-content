@@ -30,7 +30,7 @@ slug: Web/CSS
   - [Единицы измерения в CSS](/ru/docs/Web/CSS/CSS_Values_and_Units) и [функции в CSS](/ru/docs/Web/CSS/CSS_Functions)
   - [Блоковая модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) и [схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [Содержащий блок](/ru/docs/Web/CSS/Containing_block)
-  - [Контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/Guide/CSS/Block_formatting_context)
+  - [Контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) и [блочный контекст форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
   - [Начальное](/ru/docs/Web/CSS/initial_value), [вычисленное](/ru/docs/Web/CSS/computed_value), [используемое](/ru/docs/Web/CSS/used_value) и [действительное](/ru/docs/Web/CSS/actual_value) значения
   - [Краткая форма записи CSS свойств](/ru/docs/Web/CSS/Shorthand_properties)
   - [Флексбокс-раскладка в CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout)

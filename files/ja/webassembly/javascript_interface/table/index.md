@@ -12,7 +12,7 @@ slug: WebAssembly/JavaScript_interface/Table
 
 ## コンストラクター
 
-- [`WebAssembly.Table()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+- [`WebAssembly.Table()`](/ja/docs/WebAssembly/JavaScript_interface/Table/Table)
   - : 新しい `Table` オブジェクトを生成します。
 
 ## インスタンスプロパティ

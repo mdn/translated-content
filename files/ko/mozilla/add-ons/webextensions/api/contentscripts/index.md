@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 `RegisteredContentScript`는 `register()`를 호출해 등록할 스크립트를 담는 객체다. 해제는 객체에 정의된 `unregister()` 메소드로 할 수 있다. 또한, 스크립트를 등록한 페이지를 없애면 스크립트는 자동으로 해제된다. 예를 들어, background 페이지에서 등록했으면 그것들은 background 페이지가 파괴될 때 자동으로 해제된다. 마찬가지로 사이드바나 팝업에서 등록했으면, 사이드바나 팝업이 닫힐 때 자동으로 해제된다.
 
-`contentScripts` API 자체는 권한 없이 사용할 수 있지만, `register()`에 전달할 패턴에 대해서는 [호스트 권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)을 가져야 한다.
+`contentScripts` API 자체는 권한 없이 사용할 수 있지만, `register()`에 전달할 패턴에 대해서는 [호스트 권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)을 가져야 한다.
 
 ## 자료형
 

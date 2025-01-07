@@ -10,7 +10,7 @@ A interface **`CustomElementRegistry`** provê métodos para registro de element
 ## Métodos
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : Define um novo [elemento customizado](/pt-BR/docs/Web/Web_Components/Custom_Elements).
+  - : Define um novo [elemento customizado](/pt-BR/docs/Web/API/Web_components/Using_custom_elements).
 - {{domxref("CustomElementRegistry.get()")}}
   - : Retorna o construtor do nome do elemento informado, ou `undefined` caso não tenha sido definido.
 - {{domxref("CustomElementRegistry.whenDefined()")}}

@@ -51,4 +51,4 @@ loop(0);
 ## 참조
 
 - {{Glossary("Recursion")}}
-- [Recursive functions](/ko/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/ko/docs/Web/JavaScript/Guide/Functions#recursion)

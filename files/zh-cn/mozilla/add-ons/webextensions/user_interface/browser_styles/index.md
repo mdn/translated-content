@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 
 {{AddonSidebar}}
 
-扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
+扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
 
 1. 创建一个 HTML 文件用于描述该 UI 组件的页面结构
 2. 在 manifest.json 中添加字段 ([`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), 或 [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)) 以指向其对应的页面

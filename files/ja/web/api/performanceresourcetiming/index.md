@@ -150,5 +150,5 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## 関連情報
 
-- [リソースタイミング（概要）](/ja/docs/Web/API/Resource_Timing_API)
-- [リソースタイミング API の使用](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [リソースタイミング（概要）](/ja/docs/Web/API/Performance_API/Resource_timing)
+- [リソースタイミング API の使用](/ja/docs/Web/API/Performance_API/Resource_timing)

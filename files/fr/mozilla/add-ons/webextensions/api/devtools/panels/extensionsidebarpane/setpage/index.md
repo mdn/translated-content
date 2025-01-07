@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/set
 
 Définit une page HTML à afficher dans le volet latéral.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,13 +24,13 @@ browser.devtools.panels.setPage(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera tenue sans arguments, une fois l'URL définie.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera tenue sans arguments, une fois l'URL définie.
 
 La page sélectionnée ne sera pas chargée tant que l'utilisateur n'aura pas sélectionné la barre latérale devtools.
 
 ## Exemples
 
-Créez un nouveau volet et remplissez-le d'une page HTML. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) de votre extension.
+Créez un nouveau volet et remplissez-le d'une page HTML. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) de votre extension.
 
 ```js
 function onCreated(sidebarPane) {

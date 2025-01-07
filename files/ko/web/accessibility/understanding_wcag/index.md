@@ -48,4 +48,4 @@ WCAG 2.1 은 다음을 포함합니다.
 
 이 가이드는 접근성이 높은 웹 사이트를 만들기 위한 실용적인 정보들을 제공하는 것을 목표합니다. 하지만 우리는 법조인이 아니기 때문에, 이 문서를 법률 자문으로 받아들여서는 안됩니다. 웹 접근성에 대한 법적 문제가 우려된다면, 해당 국가나 지역의 웹/공공 자원에 대한 접근성에 관련된 법률을 확인하고, 전문 변호사의 자문을 구하는 것이 좋습니다.
 
-[접근성이란 무엇인가?](/ko/docs/Learn/Accessibility/What_is_accessibility) 와, 특히 [접근성 지침과 관련 법률](/ko/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law) 섹션에서 관련된 추가 정보들을 제공합니다.
+[접근성이란 무엇인가?](/ko/docs/Learn/Accessibility/What_is_accessibility) 와, 특히 [접근성 지침과 관련 법률](/ko/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) 섹션에서 관련된 추가 정보들을 제공합니다.

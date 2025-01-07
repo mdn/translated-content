@@ -11,13 +11,13 @@ Por ejemplo, el método `CONNECT` puede ser usado para acceder a sitios web que 
 
 El método `CONNECT` es un método de salto entre servidores.
 
-| Contiene cuerpo la petición                               | No  |
-| --------------------------------------------------------- | --- |
-| La respuesta exitosa contiene cuerpo                      | Si  |
-| {{Glossary("Safe")}}                                      | No  |
-| {{Glossary("Idempotent")}}                                | No  |
-| {{Glossary("Cacheable")}}                                 | No  |
-| Permitido en [formas HTML](/es/docs/Web/Guide/HTML/Forms) | No  |
+| Contiene cuerpo la petición                      | No  |
+| ------------------------------------------------ | --- |
+| La respuesta exitosa contiene cuerpo             | Si  |
+| {{Glossary("Safe")}}                             | No  |
+| {{Glossary("Idempotent")}}                       | No  |
+| {{Glossary("Cacheable")}}                        | No  |
+| Permitido en [formas HTML](/es/docs/Learn/Forms) | No  |
 
 ## Sintaxis
 

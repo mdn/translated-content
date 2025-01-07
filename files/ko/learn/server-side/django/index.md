@@ -38,7 +38,7 @@ Django는 파이썬으로 구성된, 인기 많고 완벽한 기능을 갖춘 �
 - [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/Authentication)
   - : 이 수업에서는 유저들에게 그들의 계정으로 웹사이트에 로그인 하게 하는 방법에 대해 배웁니다. 그리고 로그인 상태에 따라 그들이 보고 작성할 수 있는 범위를 통제하는 방법, 그들에게 허가를 내주는 방법을 배웁니다. 우리는 연습을 위해서 로컬 라이브러리 웹사이트를 확장해 볼 것입니다. 로그인 및 로그아웃 페이지를 추가하고, 대출 도서를 보여주는 페이지를 사용자용, 관리자용 각각 따로 만들어 볼 것입니다.
 - [Django Tutorial Part 9: Working with forms](/ko/docs/Learn/Server-side/Django/Forms)
-  - : 여기서는 Django에서 [HTML Forms](/ko/docs/Web/Guide/HTML/Forms)을 어떻게 사용하는 살펴볼 것입니다. HTML은 특히 모델을 생성하고, 갱신하고, 지우는 등의 폼을 작성하는 가장 쉬운 방법입니다. 이번 연습에서는 로컬 라이브러리의 웹사이트를 확장하는 것도 포함되어 있습니다. 여기서 우리는 도서관 사서들이 (관리자 어플리케이션 보다는) 우리가 작성한 폼을 이용해서 책을 고치고, 생성하고, 업데이트하고 정보를 삭제할 수 있도록 웹사이트를 확장해 볼 것입니다.
+  - : 여기서는 Django에서 [HTML Forms](/ko/docs/Learn/Forms)을 어떻게 사용하는 살펴볼 것입니다. HTML은 특히 모델을 생성하고, 갱신하고, 지우는 등의 폼을 작성하는 가장 쉬운 방법입니다. 이번 연습에서는 로컬 라이브러리의 웹사이트를 확장하는 것도 포함되어 있습니다. 여기서 우리는 도서관 사서들이 (관리자 어플리케이션 보다는) 우리가 작성한 폼을 이용해서 책을 고치고, 생성하고, 업데이트하고 정보를 삭제할 수 있도록 웹사이트를 확장해 볼 것입니다.
 - [Django Tutorial Part 10: Testing a Django web application](/ko/docs/Learn/Server-side/Django/Testing)
   - : 웹사이트가 확장되어감에 따라 일일이 확인하기가 점점 어려워질 것입니다. 테스트해야할 요소 자체가 많아질 뿐만 아니라 요소간의 상호관계도 복잡해지면서 작은 요소의 변화가 다른 큰 요소들에까지 영향을 미치게됩니다. 이런 문제에 대한 걱정을 덜어줄 수 있는 방법은 자동 테스트 코드를 작성하는 것입니다. 자동 테스트 코드는 소스에 변화가 생길때마다 작동하는 코드입니다. 이번 강좌에서는 성능이 우수하면서도 작성이 간단한 Django의 테스트 프레임워크로 어떻게 당신의 웹사이트를 단위 테스트할수 있는지 알아봅니다.
 - [Django Tutorial Part 11: Deploying Django to production](/ko/docs/Learn/Server-side/Django/Deployment)

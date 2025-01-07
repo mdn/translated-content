@@ -19,4 +19,4 @@ Un **metodo** es una {{glossary("function", "función")}} la cual es {{glossary(
 
 ### Referencia Técnica
 
-- [Lista de los métodos integrados de JavaScript](/es/docs/Web/JavaScript/Reference/Methods_Index)
+- [Lista de los métodos integrados de JavaScript](/es/docs/Web/JavaScript/Reference)
