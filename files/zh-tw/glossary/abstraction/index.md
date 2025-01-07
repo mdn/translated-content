@@ -2,7 +2,7 @@
 title: 抽象化
 slug: Glossary/Abstraction
 l10n:
-sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+    sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
