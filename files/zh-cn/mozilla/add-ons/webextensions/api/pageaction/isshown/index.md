@@ -30,7 +30,7 @@ let gettingIsShown = browser.pageAction.isShown(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果在指定的标签页中拓展的页面操作正在显示。则兑现为 `true`，否则兑现为 `false`。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，如果在指定的标签页中拓展的页面操作正在显示，则兑现为 `true`，否则兑现为 `false`。
 
 ## 浏览器兼容性
 
