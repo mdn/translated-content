@@ -7,12 +7,12 @@ l10n:
 
 {{AddonSidebar}}
 
-返回所有使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本，或使用一个过滤器以获取已注册的脚本的一部分。
+返回所有使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本，或使用一个过滤器以获取已注册的一部分脚本。
 
 > [!NOTE]
 > 该方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Firefox 102+ 中，你也可以在 Manifest V2 中使用该方法。
 
-要使用该方法，你必须取得 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 以及页面的 URL 权限，可以是明确的 [主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，也可以使用 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)。
+要使用该方法，你必须取得 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)以及页面的 URL 权限，可以是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，也可以使用 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
