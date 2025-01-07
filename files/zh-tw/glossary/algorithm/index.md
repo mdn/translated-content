@@ -18,10 +18,10 @@ l10n:
 
 常見的演算法包括尋路演算法，例如最佳化的[旅行推銷員問題](https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem)、[樹狀結構遍歷演算法](https://brilliant.org/wiki/traversals/)等。
 
-也有[機器學習演算法](https://www.coursera.org/articles/machine-learning-algorithms)，例如[線性回歸](https://zh.wikipedia.org/wiki/Linear_regression)、邏輯回歸、決策樹、隨機森林、支援向量機、循環神經網路（RNN）、長短期記憶（LSTM）神經網路、卷積神經網路（CNN）、深度卷積神經網路等。
+也有[機器學習演算法](https://www.coursera.org/articles/machine-learning-algorithms)，例如[線性回歸](https://zh.wikipedia.org/wiki/線性回歸)、邏輯回歸、決策樹、隨機森林、支援向量機、循環神經網路（RNN）、長短期記憶（LSTM）神經網路、卷積神經網路（CNN）、深度卷積神經網路等。
 
 ## 參見
 
-- [演算法](https://zh.wikipedia.org/wiki/Algorithm)（維基百科）
+- [演算法](https://zh.wikipedia.org/wiki/算法)（維基百科）
 - [解釋排序演算法](https://www.toptal.com/developers/sorting-algorithms)
 - [解釋演算法複雜度](https://www.bigocheatsheet.com/)
