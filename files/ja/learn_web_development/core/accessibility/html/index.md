@@ -327,7 +327,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 
 そうした利点を呼び戻すように追加するには、ちょっとした作業が必要です（[fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) で例示的コードを試せます。[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) も参照してください）。ここでは、各ボタンに `tabindex="0"` という属性を付与することによって、見せかけの `<div>` ボタンにフォーカスを当てられるようにしました（タブキーを通じてのフォーカスを含みます）。
 
-```html
+```html-nolint
 <div data-message="This is from the first button" tabindex="0" role="button">
   クリックしてください
 </div>
