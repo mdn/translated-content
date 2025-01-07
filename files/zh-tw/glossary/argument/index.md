@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**引數**是傳遞給{{Glossary("function", "函式")}}的輸入（可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "物件")}}）。不要將引數與{{Glossary("parameter","參數")}}混淆，後者是用來指代函式定義中引數的名稱。
+**引數**是傳遞給{{Glossary("function", "函式")}}的輸入{{glossary("value", "值")}}（可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "物件")}}）。不要將引數與{{Glossary("parameter","參數")}}混淆，後者是用來指代函式定義中引數的名稱。
 
 例如：
 
