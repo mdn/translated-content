@@ -2,7 +2,7 @@
 title: Location：hash 属性
 slug: Web/API/Location/hash
 l10n:
-  sourceCommit: a2847ff3788f224ffb4cdf05cb0139e07fde7533
+  sourceCommit: 6033c369db35bf1df34430cc375705e2d959fc0b
 ---
 
 {{ APIRef("Location") }}
@@ -17,12 +17,11 @@ l10n:
 
 ## 示例
 
-```html
-<a id="myAnchor" href="/zh-CN/docs/Location.href#示例">示例</a>
-<script>
-  const anchor = document.getElementById("myAnchor");
-  console.log(anchor.hash); // '#%E7%A4%BA%E4%BE%8B'
-</script>
+假设用户已导航至 `https://example.org#examples`，以下代码将会打印 `#examples`：
+
+```js
+const result = location.hash;
+console.log(result);
 ```
 
 ## 规范
