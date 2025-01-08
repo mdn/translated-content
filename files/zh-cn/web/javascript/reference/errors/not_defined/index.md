@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-当某个地方引用了一个不存在的变量时，就会出现“_variable_ is not defined” JavaScript 异常。
+当某个地方引用了一个不存在的变量时，就会出现“_variable_ is not defined”JavaScript 异常。
 
 ## 错误信息
 
