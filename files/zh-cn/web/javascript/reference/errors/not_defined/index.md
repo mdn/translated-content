@@ -18,7 +18,7 @@ ReferenceError: Can't find variable: x (Safari)
 
 ## 错误类型
 
-{{jsxref("ReferenceError")}}.
+{{jsxref("ReferenceError")}}。
 
 ## 什么地方出错了？
 
