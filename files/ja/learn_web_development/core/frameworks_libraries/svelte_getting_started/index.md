@@ -55,7 +55,7 @@ Svelte は HTML と CSS、そして JavaScript という昔ながらのウェブ
 > [!NOTE]
 > 2020 年より、Svelteは最も要望の多かった機能の 1 つである [TypeScript を公式にサポート](https://svelte.jp/docs/typescript)するようになりました。このチュートリアルシリーズの後半で確認していきます。
 
-このチュートリアルシリーズに戻って、より詳細な作成方法について学ぶ前に [Svelte チュートリアル](https://learn.svelte.dev/)（英語）で基本的なコンセプトを簡単に確認することを推奨します。完了までの所要時間は約 30 分です。
+このチュートリアルシリーズに戻って、より詳細な作成方法について学ぶ前に [Svelte チュートリアル](https://svelte.jp/tutorial/svelte/welcome-to-svelte) で基本的なコンセプトを簡単に確認することを推奨します。完了までの所要時間は約 30 分です。
 
 ## ユースケース
 
