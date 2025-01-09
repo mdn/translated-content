@@ -1,5 +1,5 @@
 ---
-title: Data URLs
+title: Data URL
 slug: Web/URI/Schemes/data
 l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
