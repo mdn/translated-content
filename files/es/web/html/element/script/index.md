@@ -59,6 +59,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `render`: Se bloquea el renderizado del contenido en la pantalla.
 
 - [`crossorigin`](/es/docs/Web/HTML/Attributes/crossorigin)
+
   - : Los elementos `script` normales pasan información mínima al {{domxref('Window.error_event', 'window.onerror')}} para scripts que no superan las comprobaciones estándar de {{Glossary("CORS")}}. Para permitir el registro de errores en sitios que utilizan un dominio separado para medios estáticos, usa este atributo. Consulta [Atributos de configuración CORS](/es/docs/Web/HTML/Attributes/crossorigin) para una explicación más descriptiva de sus argumentos válidos.
 
 - `defer`
@@ -95,12 +96,15 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     Consulta {{domxref("HTMLScriptElement.fetchPriority")}} para obtener más información.
 
 - `integrity`
+
   - : Este atributo contiene metadatos en línea que un agente de usuario puede usar para verificar que un recurso obtenido se haya entregado sin manipulación inesperada. El atributo no debe especificarse si el atributo `src` no está especificado. Consulta [Integridad de subrecursos](/es/docs/Web/Security/Subresource_Integrity).
 
 - `nomodule`
+
   - : Este atributo booleano se establece para indicar que el script no debe ejecutarse en navegadores que admiten [módulos ES](/es/docs/Web/JavaScript/Guide/Modules), en efecto, esto puede usarse para servir scripts de respaldo a navegadores más antiguos que no admiten código JavaScript modular.
 
 - `nonce`
+
   - : Un nonce (número usado una vez) criptográfico para permitir scripts en una [política de seguridad de contenido script-src](/es/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). El servidor debe generar un valor único de nonce cada vez que transmite una política. Es fundamental proporcionar un nonce que no pueda adivinarse, ya que de lo contrario, eludir la política de un recurso sería trivial.
 
 - `referrerpolicy`
@@ -120,9 +124,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     > Un valor de cadena vacía (`""`) es tanto el valor predeterminado como un valor de respaldo si `referrerpolicy` no es compatible. Si no se especifica explícitamente `referrerpolicy` en el elemento `<script>`, adoptará una política de referer de nivel superior, es decir, una establecida en todo el documento o dominio. Si no hay una política de nivel superior disponible, la cadena vacía se trata como equivalente a `strict-origin-when-cross-origin`.
 
 - `src`
+
   - : Este atributo especifica la URI de un script externo; se puede usar como una alternativa a incrustar un script directamente dentro de un documento.
 
 - [`type`](/es/docs/Web/HTML/Element/script/type)
+
   - : Este atributo indica el tipo de script representado.
     El valor de este atributo será uno de los siguientes:
 
