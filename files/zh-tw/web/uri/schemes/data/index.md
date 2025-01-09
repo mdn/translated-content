@@ -101,9 +101,9 @@ lots of text…
 - 缺乏錯誤處理
   - : 媒體的無效參數，或在指定 `'base64'` 時的拼寫錯誤，會被忽略，但不會提供錯誤訊息。
 - 不支援查詢字串等
-  - :  Data URI 的資料部分是不可見的，因此嘗試使用查詢字串（具有語法 `<url>?parameter-data` 的頁面特定參數）只會將查詢字串包含在 Data URI 所表示的資料中。
+  - : Data URI 的資料部分是不可見的，因此嘗試使用查詢字串（具有語法 `<url>?parameter-data` 的頁面特定參數）只會將查詢字串包含在 Data URI 所表示的資料中。
 - 安全性問題
-  - :  Data URI 已經與多種安全性問題（例如，網絡釣魚）相關，特別是在瀏覽器的頂層導航中使用時。為了緩解此類問題，現代瀏覽器中阻止對 `data:` URL 的頂層導航。詳情請參見 [Mozilla 安全團隊的這篇博客文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
+  - : Data URI 已經與多種安全性問題（例如，網絡釣魚）相關，特別是在瀏覽器的頂層導航中使用時。為了緩解此類問題，現代瀏覽器中阻止對 `data:` URL 的頂層導航。詳情請參見 [Mozilla 安全團隊的這篇博客文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
 
 ## 規範
 
