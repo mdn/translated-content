@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef('Web Components')}}
 
-[影子 DOM API](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 **`HTMLSlotElement`** 接口用于访问 HTML `<slot>` 元素的名称和指定节点。
+[影子 DOM API](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的 **`HTMLSlotElement`** 接口用于访问 HTML {{HTMLElement("slot")}} 元素的名称和分配的节点。
 
 {{InheritanceDiagram}}
 
