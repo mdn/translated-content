@@ -7,8 +7,6 @@ l10n:
 
 {{QuickLinksWithSubPages("Web/Performance")}}
 
-## 애니메이션 성능과 프레임 속도
-
 웹에서의 애니메이션은 {{htmlelement('canvas')}} 와 {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, 애니메이션 GIF, 그리고 애니메이션 PNG 및 기타 이미지 유형과 {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}를 통해 구현할 수 있습니다. CSS 속성을 애니메이션화하는 데 드는 성능 비용은 각 속성에 따라 다를 수 있으며, 비용이 높은 CSS 속성을 애니메이션화하면 브라우저가 부드러운 {{glossary("FPS", "프레임 속도")}}를 유지하기 어려워지기 때문에 {{glossary('jank', '버벅거림')}} 현상이 발생할 수 있습니다.
 
 비디오와 애니메이션 GIF와 같은 애니메이션 미디어의 경우, 주요 성능 문제는 파일 크기입니다. 파일을 충분히 빠르게 다운로드하지 못하면 성능에 부정적인 영향을 미칠 수 있습니다. CSS, SVG, \<canvas>, WebGL 또는 기타 JavaScript 기반 애니메이션과 같은 코드 기반의 애니메이션은 대역폭 소비가 적더라도 CPU를 소모하거나 버벅거림을 유발하여 성능에 영향을 미칠 수 있습니다.
@@ -42,18 +40,21 @@ CSS 속성을 통해 애니메이션화되는 동안 브라우저가 페이지�
   - 스타일 재계산
   - 레이아웃
   - 리페인트
-  - 예: {{cssxref("left")}}, {{cssxref("max-width")}}, {{cssxref("border-width")}}, {{cssxref("margin-left")}}, {{cssxref("font-size")}}
+
+  예를 들어, {{cssxref("left")}}, {{cssxref("max-width")}}, {{cssxref("border-width")}}, {{cssxref("margin-left")}}, {{cssxref("font-size")}}
 
 - 기하 구조나 위치에 영향을 미치지 않으며 자체 레이어에서 렌더링되지 않는 속성은 레이아웃 과정을 유발하지 않습니다. 하지만 다음을 수행합니다.
 
   - 스타일 재계산
   - 리페인트
-  - 예: {{cssxref("color")}}
+
+  예를 들어, {{cssxref("color")}}
 
 - **자체 레이어**에서 렌더링되는 속성은 결합 과정에서만 업데이트되기 때문에 리페인트조차 트리거하지 않습니다. 대신 다음만 수행합니다.
 
   - 스타일 재계산
-  - 예를 들어, {{cssxref("transform")}}, {{cssxref("opacity")}}
+  
+  예를 들어, {{cssxref("transform")}}, {{cssxref("opacity")}}
 
 ### 개발자 도구
 
