@@ -38,7 +38,7 @@ let gettingPopup = browser.pageAction.getPopup(
 
 ## 示例
 
-添加一个上下文菜单项用于记录当前标签页的弹出 URL。请注意，要创建上下文菜单项，你需要在[清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中取得 `contextMenus` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+添加一个上下文菜单项以记录当前标签页的弹窗 URL。请注意，要创建上下文菜单项，你需要在[清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)中取得 `contextMenus` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ```js
 function gotPopup(popupURL) {
