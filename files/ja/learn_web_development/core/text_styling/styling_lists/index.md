@@ -1,20 +1,41 @@
 ---
-title: リストの装飾
+title: リストのスタイル設定
 slug: Learn_web_development/Core/Text_styling/Styling_lists
-original_slug: Learn/CSS/Styling_text/Styling_lists
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
 
-[リスト](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべきベストプラクティスがいくつかあります。 この記事はすべてを説明しています。
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
-| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ)、 CSS の基本 ([CSS 入門](/ja/docs/Learn/CSS/First_steps)を学ぶ)、[CSS のテキストとフォントの基礎](/ja/docs/Learn/CSS/Styling_text/Fundamentals)。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | リストの装飾に関連するベストプラクティスとプロパティに慣れること。                                                                                                                                                                                            |
+[リスト](/ja/docs/Learn_web_development/Core/Structuring_content/Lists)は他のテキストとほとんど同じようにふるまいますが、知っておくべきリスト固有の CSS プロパティと、考慮すべき最善の手法がいくつかあります。この記事はすべてを説明しています。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、および <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>で学習）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>リストアイテムの間隔、例えばマージンや行の高さ。</li>
+          <li><code>list-style</code> プロパティの使用方法。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 簡単なリストの例
 
-はじめに、簡単なリストの例を見てみましょう。 この記事を通して、順序なしリスト、順序付きリスト、そして説明リストを見ていきます。これらはどれも似たような装飾機能持っていますが、リストの種類に特有のものもあります。 [装飾していない例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html)は Github にあります ([ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html)もチェックしてください) 。
+はじめに、簡単なリストの例を見てみましょう。この記事を通して、順序なしリスト、順序付きリスト、そして説明リストを見ていきます。これらはどれも似たようなスタイル設定を機能持っていますが、リストの種類に特有のものもあります。 [スタイル設定していない例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html)は Github にあります ([ソースコード](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html)もチェックしてください) 。
 
 そのリストの例の HTML はこんな感じです。
 
@@ -74,19 +95,19 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
 </dl>
 ```
 
-ここで実際の例に行き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかの装飾の既定設定に気付くでしょう。
+ここで実際の例に行き、[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を使用してリスト要素を調べると、次のようないくつかの既定のスタイル設定に気付くでしょう。
 
-- {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。
+- {{htmlelement("ul")}} 要素と {{htmlelement("ol")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`)、{{cssxref("padding-left")}} は `40px` (`2.5em`) です。書字方向属性の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) が右書き（`rtl`）に設定されている場合、 `ul` および `ol` 要素では、 {{cssxref("padding-right")}} が効果を発揮し、その既定値は `40px` (`2.5em`) です。
 - リスト項目 ({{htmlelement("li")}} 要素) には、間隔の設定に関する既定はありません。
 - {{htmlelement("dl")}} 要素の上下の {{cssxref("margin")}} は `16px` (`1em`) ですが、パディングの設定はありません。
 - {{htmlelement("dd")}} 要素の {{cssxref("margin-left")}} は `40px` (`2.5em`) です。
 - 参照用に含めた {{htmlelement("p")}} 要素には、さまざまな種類のリストと同じ `16px` (`1em`) の上下の {{cssxref("margin")}} があります。
 
-## リストの間隔の取り扱い
+## リストの間隔の扱い
 
-リストを装飾するときは、 (段落や画像などの) 周囲の要素と同じ垂直方向の間隔 (バーティカルリズム (vertical rhythm) とも呼ばれる) と、互いに同じ水平方向の間隔を維持するように装飾を調整する必要があります (Github で[完成した装飾した例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/)を見ることができ、[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html)も見つけることができます) 。
+リストをスタイル設定するときは、 (段落や画像などの) 周囲の要素と同じ垂直方向の間隔 (バーティカルリズム (vertical rhythm) とも呼ばれる) と、互いに同じ水平方向の間隔を維持するようにスタイルを調整する必要があります (Github で[スタイル設定が完成した例](https://mdn.github.io/learning-area/css/styling-text/styling-lists/)を見ることができ、[ソースコード](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html)も見つけることができます) 。
 
-テキストの装飾と間隔調整に使用する CSS は次のとおりです。
+テキストのスタイル設定と間隔調整に使用する CSS は次のとおりです。
 
 ```css
 /* General styles */
@@ -124,12 +145,12 @@ dt {
 }
 ```
 
-- 1 番目の規則はサイト全体のフォントと `10px` の基準フォントサイズを設定します。 これらはページ上のすべてのものに継承されます。
-- 2 番目と 3 番目の規則では、見出し、さまざまなリストの種類 (リスト要素の子はこれらを継承) 、および段落に相対フォントサイズを設定します。 つまり、各段落とリストのフォントサイズ、上下の間隔は同じになり、バーティカルリズムを一定に保つのに役立ちます。
+- 1 番目のルールはサイト全体のフォントと 10px の基準フォントサイズを設定します。 これらはページ上のすべてのものに継承されます。
+- 2 番目と 3 番目のルールでは、見出し、さまざまなリストの種類 (リスト要素の子はこれらを継承) 、および段落に相対フォントサイズを設定します。 つまり、各段落とリストのフォントサイズ、上下の間隔は同じになり、バーティカルリズムを一定に保つのに役立ちます。
 - 4 番目では、段落とリスト項目に同じ {{cssxref("line-height")}} を設定しているため、段落と各個々のリスト項目のラインの間隔は同じになります。 これは、バーティカルリズムを一定に保つのにも役立ちます。
-- 説明リストには 5 番目と 6 番目の規則が適用されます。 説明リストの用語と説明には、段落とリスト項目の場合と同じ `line-height` を設定します。 繰り返しますが、一貫性があることは良いことです！ また、説明する用語は太字にして、視覚的に目立つようにしています。>
+- 説明リストには 5 番目と 6 番目のルールが適用されます。 説明リストの用語と説明には、段落とリスト項目の場合と同じ `line-height` を設定します。 繰り返しますが、一貫性があることは良いことです！ また、説明する用語は太字にして、視覚的に目立つようにしています。>
 
-## リスト固有の装飾
+## リスト固有のスタイル設定
 
 リストの一般的な間隔調整テクニックを見てきました。 次に、リスト固有のプロパティを調べてみましょう。 最初に知っておくべき 3 つのプロパティがあり、それらは {{htmlelement("ul")}} や {{htmlelement("ol")}} 要素に設定できます。
 
@@ -137,7 +158,7 @@ dt {
 - {{cssxref("list-style-position")}}: 行頭記号をリスト項目の内側に表示するか、その外側の各項目の先頭より前に表示するかを設定します。
 - {{cssxref("list-style-image")}}: 行頭記号に簡単な正方形や円ではなく、カスタム画像を使うことができます。
 
-### 行頭記号の装飾
+### 行頭記号のスタイル設定
 
 前述のように、{{cssxref("list-style-type")}} プロパティを使用して、行頭記号 (bullet point) に使用する行頭記号 (bullet) の種類を設定できます。 この例では、順序付きリストで大文字のローマ数字を使用するように設定しています。
 
@@ -178,9 +199,9 @@ ul {
 }
 ```
 
-ただし、このプロパティは、行頭記号の位置、サイズなどを制御するという点では少し制限があります。 {{cssxref("background")}} プロパティファミリーを使用するほうが得策です。 これについては、[ボックスの装飾](/ja/docs/Learn/CSS/Building_blocks)モジュールで詳しく説明します。とりあえず、その例をご紹介しましょう。
+ただし、このプロパティは、行頭記号の位置、サイズなどを制御するという点では少し制限があります。 {{cssxref("background")}} プロパティファミリーを使用するほうが得策です。 これについては、[背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)モジュールで詳しく説明します。とりあえず、その例をご紹介しましょう。
 
-完成した例では、 (既に上で見たものの上に) 次のように順序なしリストを装飾しました。
+完成した例では、 (既に上で見たものの上に) 次のように順序なしリストを設定しました。
 
 ```css
 ul {
@@ -301,22 +322,22 @@ ul {
 > [!NOTE]
 > 数値以外の {{cssxref("list-style-type")}} を使用している場合でも、`value` 属性に同等の数値を使用する必要があります。
 
-## アクティブラーニング: ネストしたリストの装飾
+## アクティブラーニング: ネストしたリストのスタイル設定
 
-このアクティブラーニングセッションでは、上で学んだことを取り入れて、ネストしたリストを装飾してください。 HTML を提供してあるので、次のことを行います。
+このアクティブラーニングセッションでは、上で学んだことを取り入れて、ネストしたリストをスタイル設定してください。 HTML を提供してあるので、次のことを行います。
 
 1. 順序なしリストに正方形の行頭記号を付けます。
 2. 順序なしリスト項目と順序付きリスト項目のフォントサイズの 1.5 のラインの高さを指定します。
 3. 順序付きリストに小文字のアルファベットの行頭記号を付けます。
 4. 行頭記号の種類、間隔、その他見つけられるものは何でも試して、好きなだけリストの例を試してみてください。
 
-間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。 本当に立ち往生したら、答えを見るために _Show solution_ ボタンを押してください。
+間違えた場合は、_リセット_ ボタンを使用していつでもリセットできます。 本当に立ち往生したら、答えを見るために _答えを見る_ ボタンを押してください。
 
-```html hidden
+```html-nolint hidden
 <div
   class="body-wrapper"
   style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
+  <h2>HTML 入力</h2>
   <textarea
     id="code"
     class="html-input"
@@ -331,16 +352,16 @@ ul {
       <li>The goblin statue</li>
     </ol>
   </li>
-</ul></textarea
-  >
+</ul>
+  </textarea>
 
-  <h2>CSS Input</h2>
+  <h2>CSS 入力</h2>
   <textarea
     id="code"
     class="css-input"
     style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></textarea>
 
-  <h2>Output</h2>
+  <h2>出力</h2>
   <div
     class="output"
     style="width: 90%;height: 12em;padding: 10px;border: 1px solid #0095dd;overflow: auto;"></div>
@@ -348,28 +369,28 @@ ul {
     <input
       id="reset"
       type="button"
-      value="Reset"
+      value="リセット"
       style="margin: 10px 10px 0 0;" />
     <input
       id="solution"
       type="button"
-      value="Show solution"
+      value="答えを見る"
       style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
 
 ```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+const htmlInput = document.querySelector(".html-input");
+const cssInput = document.querySelector(".css-input");
+const reset = document.getElementById("reset");
+const htmlCode = htmlInput.value;
+const cssCode = cssInput.value;
+const output = document.querySelector(".output");
+const solution = document.getElementById("solution");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -377,16 +398,26 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function () {
+reset.addEventListener("click", () => {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function () {
+solution.addEventListener("click", () => {
   htmlInput.value = htmlCode;
-  cssInput.value =
-    "ul {\n  list-style-type: square;\n}\n\nul li, ol li {\n  line-height: 1.5;\n}\n\nol {\n  list-style-type: lower-alpha\n}";
+  cssInput.value = `ul {
+  list-style-type: square;
+}
+
+ul li,
+ol li {
+  line-height: 1.5;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}`;
   drawOutput();
 });
 
@@ -395,24 +426,10 @@ cssInput.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 800) }}
-
-## 関連情報
-
-CSS カウンターは、リストの数え方と装飾をカスタマイズするための高度なツールを提供しますが、非常に複雑です。 あなたが自身を伸ばしたいと思うならば、これらを調べることを勧めます。 次を見てください。
-
-- {{cssxref("@counter-style")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("counter-reset")}}
-
-## 腕試し
-
-この記事の最後までたどり着き、アクティブラーニングのセクションでいくつかのスキルテストを行いましたが、今後も最も重要な情報を覚えていられますか？モジュールの最後には、あなたがこの情報を覚えているかどうかを確認するための評価があります — [コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)を参照してください。
-
-この評価は、このモジュールで説明されているすべての知識をテストするものなので、先に進む前に他の記事を読んでおくとよいでしょう。
+{{ EmbedLiveSample('Active_learning_Styling_a_nested_list', 700, 800) }}
 
 ## まとめ
 
-関連するいくつかの基本的な原則と特定のプロパティを知っていれば、リストの装飾のこつは比較的簡単です。 次の記事では、リンクの装飾テクニックについて説明します。
+リストは、関連付けられた基本原則と特定のプロパティをいくつか知れば、スタイル設定のコツをつかむのは比較的簡単です。次の記事では、リンクのスタイル設定のテクニックについて説明します。
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

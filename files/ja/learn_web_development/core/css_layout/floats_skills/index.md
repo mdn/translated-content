@@ -1,18 +1,17 @@
 ---
 title: "スキルテスト: 浮動ボックス"
 slug: Learn_web_development/Core/CSS_layout/Floats_skills
-original_slug: Learn/CSS/CSS_layout/Floats_skills
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-このスキルテストの目的は、 [CSS の浮動ボックス](/ja/docs/Learn/CSS/CSS_layout/Floats)を理解しているかを評価するために、 {{CSSxRef("float")}} と {{CSSxRef("clear")}} プロパティと値、そして浮動ボックスをクリアするその他の方法を使用することです。今までに扱った素材のさまざまな要素を使用する、 3 つの小さな課題に取り組んでいただきます。
+このスキルテストの目的は、 [CSS の浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Floats)を理解しているかを評価するために、 {{CSSxRef("float")}} と {{CSSxRef("clear")}} プロパティと値、そして浮動ボックスをクリアするその他の方法を使用することです。今までに扱った素材のさまざまな要素を使用する、 3 つの小さな課題に取り組んでいただきます。
 
 > [!NOTE]
-> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
->
+> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
@@ -23,11 +22,61 @@ l10n:
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/float/float1.html", '100%', 900)}}
+```html-nolint live-sample___float1
+<div class="box">
+  <div class="float float1">One</div>
+  <div class="float float2">Two</div>
+  <p>2 つのボックスを、このテキストの左右に浮動ボックスとして配置してください。</p>
+</div>
+```
 
-> [!CALLOUT]
->
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float1-download.html)しましょう。
+```css hidden live-sample___float1
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.box {
+  padding: 0.5em;
+}
+.float {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rebeccapurple;
+  color: #fff;
+  padding: 1em;
+}
+```
+
+```css live-sample___float1
+.float1 {
+}
+
+.float2 {
+}
+```
+
+{{EmbedLiveSample("float1", "", "210px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+次のように、両方のボックスに `float` を使用します。
+
+```css
+.float1 {
+  float: left;
+}
+
+.float2 {
+  float: right;
+}
+```
+
+</details>
 
 ## 課題 2
 
@@ -39,22 +88,131 @@ l10n:
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/float/float2.html", '100%', 800)}}
+```html live-sample___float2
+<div class="box">
+  <div class="float">浮動ボックス</div>
+  <p>この文は浮動ボックスの隣に現れます。</p>
+  <p class="below">この文を浮動ボックスの下記に現れるようにしてください。</p>
+</div>
+```
 
-> [!CALLOUT]
->
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float2-download.html)しましょう。
+```css hidden live-sample___float2
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.box {
+  padding: 0.5em;
+}
+.float {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rebeccapurple;
+  color: #fff;
+  padding: 1em;
+}
+```
+
+```css live-sample___float2
+.float {
+}
+
+.below {
+}
+```
+
+{{EmbedLiveSample("float2", "", "300px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+アイテムを左に配置し、 2 つ目の段落のクラスに `clear: left` を追加する必要があります。
+
+```css
+.float {
+  float: left;
+}
+
+.below {
+  clear: left;
+}
+```
+
+</details>
 
 ## 課題 3
 
-この課題では、浮動要素があります。浮動要素とテキストを包むボックスは、浮動要素の後ろに表示されています。利用できる最新の方法を使用して、下記の画像のようにボックスの背景を浮動要素の下まで拡張させてください。
+この課題では、浮動ボックスがあります。浮動ボックスとテキストを包むボックスは、浮動ボックスの後ろに表示されています。利用できる最新の方法を使用して、下記の画像のようにボックスの背景を浮動ボックスの下まで拡張させてください。
 
 ![テキストの右に表示されるブロックで、どちらも背景色のボックスで囲まれています。](float-task3.png)
 
 以下のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/float/float3.html", '100%', 800)}}
+```html live-sample___float3
+<div class="box">
+  <div class="float">浮動ボックス</div>
+  <p>この文は浮動ボックスの隣に現れます。</p>
+</div>
+```
 
-> [!CALLOUT]
->
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/float/float3-download.html)しましょう。
+```css hidden live-sample___float3
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 0.5em;
+}
+
+.float {
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207 232 220);
+  padding: 1em;
+  color: #fff;
+}
+
+.box {
+  background-color: rebeccapurple;
+  padding: 10px;
+  color: #fff;
+}
+```
+
+```css live-sample___float3
+.float {
+  float: right;
+}
+
+.box {
+}
+```
+
+{{EmbedLiveSample("float3", "", "300px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+浮動ボックスの下にあるボックスを解除するには、 `.box` のクラスに `display: flow-root` を追加します。
+他にも、 `overflow` や clearfix ハックを使用する方法もありますが、教材では、この目的を達成するための最新の方法として、 `flow-root` メソッドについて詳しく説明しています。
+
+```css
+.box {
+  display: flow-root;
+}
+```
+
+</details>
+
+## 関連情報
+
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)

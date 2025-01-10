@@ -1,31 +1,17 @@
 ---
-title: 惑星データの構造化
+title: "課題: 惑星データの構造化"
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
-original_slug: Learn/HTML/Tables/Structuring_planet_data
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 
 テーブルの評価では、太陽系の惑星に関するいくつかのデータを提供し、それを HTML テーブルに構造化しましょう。
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        この評価を行う前に、このモジュールのすべての記事について学んでいるべきです。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>HTML の表やそれに付随する機能に関する理解を確認する。</td>
-    </tr>
-  </tbody>
-</table>
-
-## はじめに
+## 出発点
 
 この評価を開始するには、ローカルコンピューターの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
 
@@ -64,4 +50,4 @@ l10n:
 
 また、[ここに掲載されている例を見る](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)こともできます（ソースコードを見ないでください — チートしないでください）。
 
-{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}

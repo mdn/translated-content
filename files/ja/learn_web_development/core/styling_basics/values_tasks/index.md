@@ -1,19 +1,18 @@
 ---
 title: "スキルテスト: 値と単位"
 slug: Learn_web_development/Core/Styling_basics/Values_tasks
-original_slug: Learn/CSS/Building_blocks/Values_tasks
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-このスキルテストの目的は、 [CSS プロパティで使われる様々な種類の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)を理解しているかどうかを評価することです。
+このスキルテストの目的は、 [CSS プロパティで使われる様々な種類の値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -29,11 +28,65 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/values/color.html", '100%', 1000)}}
+```html live-sample___color
+<ul>
+  <li class="hex">hex color</li>
+  <li class="rgb">RGB color</li>
+  <li class="hsl">HSL color</li>
+  <li class="transparency">Alpha value 0.6</li>
+</ul>
+```
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/values/color-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```css hidden live-sample___color
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 1em;
+  padding: 0.5em;
+}
+```
+
+```css live-sample___color
+.hex {
+  background-color: #86defa;
+}
+
+/* ここにスタイルを追加してください */
+```
+
+{{EmbedLiveSample("color", "", "300px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+[色変換ツール](https://convertingcolors.com/hex-color-86DEFA.html)を使用することで、異なる[色関数](/ja/docs/Web/CSS/color_value#構文)を使用して同じ色を異なる方法で定義できるようになります。
+
+```css
+.hex {
+  background-color: #86defa;
+}
+
+.rgb {
+  background-color: rgb(134 222 250);
+}
+
+.hsl {
+  background-color: hsl(194 92% 75%);
+}
+
+.transparency {
+  background-color: rgb(134 222 250 / 60%);
+}
+```
+
+</details>
 
 ## 課題 2
 
@@ -50,11 +103,66 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/values/length.html", '100%', 1000)}}
+```html live-sample___length
+<h1>Level 1 heading</h1>
+<p>
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+</p>
+<h2>Level 2 heading</h2>
+<p>
+  Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+  tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+  Dandelion cucumber earthnut pea peanut soko zucchini.
+</p>
+```
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/values/length-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```css hidden live-sample___length
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+```
+
+```css live-sample___length
+h1 {
+}
+
+h2 {
+}
+
+p {
+}
+
+h1 + p {
+}
+```
+
+{{EmbedLiveSample("length", "", "420px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+次の長さの値を使用することができます。
+
+```css
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 16px;
+}
+
+h1 + p {
+  font-size: 120%;
+}
+```
+
+</details>
 
 ## 課題 3
 
@@ -66,8 +174,41 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/values/position.html", '100%', 800)}}
+```html live-sample___position
+<div class="box"></div>
+```
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/values/position-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```css hidden live-sample___position
+.box {
+  border: 5px solid #000;
+  height: 350px;
+}
+```
+
+```css live-sample___position
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-repeat: no-repeat;
+}
+```
+
+{{EmbedLiveSample("position", "", "400px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+`background-position` に `center` キーワードとパーセント値を使用します。
+
+```css
+.box {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/purple-star.png);
+  background-repeat: no-repeat;
+  background-position: center 20%;
+}
+```
+
+</details>
+
+## 関連情報
+
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
