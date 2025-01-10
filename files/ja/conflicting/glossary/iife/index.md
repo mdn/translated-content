@@ -1,6 +1,7 @@
 ---
 title: Self-Executing Anonymous Function (自己実行無名関数)
-slug: Glossary/Self-Executing_Anonymous_Function
+slug: conflicting/Glossary/IIFE
+original_slug: Glossary/Self-Executing_Anonymous_Function
 l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
