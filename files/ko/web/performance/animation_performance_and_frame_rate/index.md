@@ -9,9 +9,9 @@ l10n:
 
 ## 애니메이션 성능과 프레임 속도
 
-웹에서의 애니메이션은 {{htmlelement('canvas')}} 와 {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('애니메이션')}}, {{htmlelement('video')}}, 애니메이션 GIF, 그리고 애니메이션 PNG 및 기타 이미지 유형과 {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}를 통해 구현할 수 있습니다. CSS 속성을 애니메이션화하는 데 드는 성능 비용은 각 속성에 따라 다를 수 있으며, 비용이 높은 CSS 속성을 애니메이션화하면 브라우저가 부드러운 {{glossary("FPS", "프레임 속도")}}를 유지하기 어려워지기 때문에 {{glossary('jank', '버벅거림')}} 현상이 발생할 수 있습니다.
+웹에서의 애니메이션은 {{htmlelement('canvas')}} 와 {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, 애니메이션 GIF, 그리고 애니메이션 PNG 및 기타 이미지 유형과 {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}를 통해 구현할 수 있습니다. CSS 속성을 애니메이션화하는 데 드는 성능 비용은 각 속성에 따라 다를 수 있으며, 비용이 높은 CSS 속성을 애니메이션화하면 브라우저가 부드러운 {{glossary("FPS", "프레임 속도")}}를 유지하기 어려워지기 때문에 {{glossary('jank', '버벅거림')}} 현상이 발생할 수 있습니다.
 
-비디오와 애니메이션 GIF와 같은 애니메이션 미디어의 경우, 주요 성능 문제는 파일 크기입니다. 파일을 충분히 빠르게 다운로드하지 못하면 성능에 부정적인 영향을 미칠 수 있습니다. CSS, SVG, `<canvas>`, WebGL 또는 기타 JavaScript 기반 애니메이션과 같은 코드 기반의 애니메이션은 대역폭 소비가 적더라도 CPU를 소모하거나 버벅거림을 유발하여 성능에 영향을 미칠 수 있습니다.
+비디오와 애니메이션 GIF와 같은 애니메이션 미디어의 경우, 주요 성능 문제는 파일 크기입니다. 파일을 충분히 빠르게 다운로드하지 못하면 성능에 부정적인 영향을 미칠 수 있습니다. CSS, SVG, \<canvas>, WebGL 또는 기타 JavaScript 기반 애니메이션과 같은 코드 기반의 애니메이션은 대역폭 소비가 적더라도 CPU를 소모하거나 버벅거림을 유발하여 성능에 영향을 미칠 수 있습니다.
 
 사용자는 모든 인터페이스 상호작용이 부드럽고 모든 사용자 인터페이스가 반응성이 있기를 기대합니다. 애니메이션은 사이트를 더 빠르고 반응성 있게 느껴지도록 도울 수 있지만, 잘못 구현되면 사이트를 느리고 버벅거리는 것처럼 느끼게 할 수도 있습니다. 반응형 사용자 인터페이스는 초당 60프레임(fps)으로 동작합니다. 항상 60fps를 유지하는 것은 불가능하지만, 모든 애니메이션에서 높은 프레임 속도과 일정한 프레임 속도를 유지하는 것이 중요합니다.
 
@@ -59,4 +59,5 @@ CSS 속성을 통해 애니메이션화되는 동안 브라우저가 페이지�
 
 대부분의 웹 브라우저에는 페이지의 요소를 애니메이션화할 때 브라우저가 수행하는 작업에 대한 통찰력을 제공하는 도구가 포함되어 있습니다. 이러한 도구를 사용하면 애니메이션 프레임 속도을 측정하고, 성능 병목 현상을 진단할 수 있습니다.
 
-- [Chrome 성능 도구](https://developer.chrome.com/docs/devtools?hl=ko#performance)
+- [Chrome 성능 도구](https://developer.chrome.com/docs/devtools/#performance)
+- [Firefox 성능 도구](https://firefox-source-docs.mozilla.org/devtools-user/performance/)
