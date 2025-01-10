@@ -1,19 +1,18 @@
 ---
 title: "スキルテスト: オーバーフロー"
 slug: Learn_web_development/Core/Styling_basics/Overflow_Tasks
-original_slug: Learn/CSS/Building_blocks/Overflow_Tasks
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-このスキルテストの目的は、 [CSS のオーバーフローとその管理方法](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)方法を理解しているかどうかを評価することです。
+このスキルテストの目的は、 [CSS のオーバーフローとその管理方法](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)方法を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -23,11 +22,48 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-scroll.html", '100%', 1000)}}
+```html live-sample___overflow-scroll
+<div class="box">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-scroll-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
+
+```css live-sample___overflow-scroll
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.box {
+  border: 5px solid black;
+  padding: 1em;
+  height: 200px;
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("overflow-scroll", "", "450px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+コンテンツがあふれたときにのみボックスにスクロールバーが追加されるように、`overflow: auto` を追加してください。
+
+```css
+.box {
+  overflow: auto;
+}
+```
+
+</details>
 
 ## 課題 2
 
@@ -39,8 +75,40 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/overflow/overflow-hidden.html", '100%', 1200)}}
+```html live-sample___overflow-hidden
+<div class="box">
+  <img
+    alt="flowers"
+    src="https://mdn.github.io/shared-assets/images/examples/flowers.jpg" />
+</div>
+```
 
-> [!CALLOUT]
->
-> [この課題の最初の段階のファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/overflow/overflow-hidden-download.html)すると、自分のエディターやオンラインエディターで取り組むことができます。
+```css live-sample___overflow-hidden
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 5px solid black;
+  height: 200px;
+  width: 300px;
+}
+```
+
+{{EmbedLiveSample("overflow-hidden", "", "300px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+`overflow: hidden` を `.box` セレクターに追加する必要があります。
+
+```css
+.box {
+  overflow: hidden;
+}
+```
+
+</details>
+
+## 関連情報
+
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)

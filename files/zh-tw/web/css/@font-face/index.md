@@ -2,7 +2,7 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 000726d71e4bae5780e9fe787555aed8cf38e316
 ---
 
 {{CSSRef}}
@@ -37,12 +37,7 @@ l10n:
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : 一個 {{cssxref("font-style")}} 值。接受兩個值以指定字型範圍，例如 `font-style: oblique 20deg 50deg;`
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-
   - : 一個 {{cssxref("font-weight")}} 值。接受兩個值以指定字型範圍，例如 `font-weight: 100 400;`
-
-    > [!NOTE]
-    > 字型變體參數值於 2018 年從規範中移除。{{cssxref("font-variant")}} 值屬性仍受支持，但沒有對應的描述符。
-
 - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : 允許控制 OpenType 字型的高級排版功能。
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}

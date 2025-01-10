@@ -1,22 +1,19 @@
 ---
 title: "スキルテスト: JSON"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_JSON
-original_slug: Learn/JavaScript/Objects/Test_your_skills:_JSON
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、[JSON の操作](/ja/docs/Learn/JavaScript/Objects/JSON)の記事を理解できたかどうかを評価することです。
+このスキルテストの目的は、[JSON の操作](/ja/docs/Learn_web_development/Core/Scripting/JSON)の記事を理解できたかどうかを評価することです。
 
 > [!NOTE]
-> 下記のインタラクティブエディターで解答を試すことができますが、コードをダウンロードして、[CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのオンラインツールを使用して作業すると便利です。
+> コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。
+> エラーがある場合、ページの結果パネルまたはブラウザーの JavaScript コンソールでログ出力するので、助けになります。
 >
-> もし行き詰まった場合は、このページの下にある「評価またはさらなる支援」(#評価またはさらなる支援)の節を参照して、私たちに支援を要求してください。
-
-> [!NOTE]
-> 下記の例では、コードにエラーがある場合、ページ上の結果パネルに出力されるので、答え合わせをするのに役立ちます（ダウンロードした場合には、ブラウザーの JavaScript コンソールに出力されます）。
+> もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## JSON 1
 
@@ -41,16 +38,3 @@ l10n:
 > [!CALLOUT]
 >
 > 自分自身でエディターやオンラインエディターで作業する場合は、[この作業の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/json/json1-download.html)しましょう。
-
-## 評価とさらなる支援
-
-これらの例は、上記のインタラクティブエディターで練習することができます。
-
-自分の作品を評価してほしい、行き詰っているので相談したい方は、次のようにしましょう。
-
-1. [MDN Discourse フォーラムの Learning カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に、評価や支援を求める投稿を（英語で）書き込んでください。投稿には次のことを書いてください。
-
-   - "Assessment wanted for JSON skill test" のような、説明的なタイトル。
-   - すでに試したことの詳細と、私たちに何をしてほしいか（例: 行き詰まり、助けが必要な場合、または評価が必要な場合）。
-   - コード。
-   - 実際の課題または評価ページへのリンクにより、助けを求めている問題を見つけることができます。

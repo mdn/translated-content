@@ -1,34 +1,37 @@
 ---
 title: 擬似クラスと擬似要素
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
-original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
-次に見ていくセレクターの集合は、**擬似クラス**と**擬似要素**と呼ばれるものです。これらのセレクターは多数あり、かなり特有の用途に使われることが多いです。これらがどのように動作するのかがわかれば、一覧を見て、達成しようとしている作業にとってうまくいくものがあるかどうかを確認することができます。ブラウザーの対応については、繰り返しになりますが、セレクターの MDN ページが参考になります。
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
+
+次に見ていく一連のセレクターは、**擬似クラス**および**擬似要素**と呼ばれるものです。これらのセレクターは多数あり、かなり特有の用途に使われることが多いです。それらの使用方法を理解したら、さまざまな種類を見ていき、自分が実現しようと取り組んでいる課題にうまくいくものがあるかどうかを確認しましょう。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアのインストール</a
-        >、<a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルの操作</a
-        >に関する基本的な知識、 HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を学んでください）、 CSS の動作に関する知識（<a href="/ja/docs/Learn/CSS/First_steps">CSS 第一歩</a>を学んでください）。
+        HTML の基本（
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター<a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>擬似クラスおよび擬似要素セレクターについて学習すること。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>擬似クラスと擬似要素。</li>
+          <li>2 つの違い。</li>
+          <li>擬似クラスと擬似要素の組み合わせ。</li>
+          <li>生成コンテンツ。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -43,11 +46,55 @@ l10n:
 
 簡単な例を見てみましょう。以下の最初の例に示すように、記事の最初の段落を大きく太字にしたい場合は、その段落にクラスを追加してから、そのクラスに CSS を追加できます。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-child.html", '100%', 800)}}
+```html live-sample___first-child
+<article>
+  <p class="first">
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___first-child
+.first {
+  font-size: 120%;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("first-child")}}
 
 しかし、これでは保守が面倒になります。文書の先頭に新しい段落が追加されたらどうでしょう？新しい段落にクラスを移さなければなりません。クラスを追加する代わりに、 {{cssxref(":first-child")}} 擬似クラスセレクターを使用することができます。これは常に記事の最初の子要素を対象としますので、 HTML を編集する必要がなくなります（これは、CMS によって生成された可能性があるため、とにかく常に可能であるとは限りません）。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-child2.html", '100%', 700)}}
+```html live-sample___first-child2
+<article>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___first-child2
+article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("first-child2")}}
 
 すべての擬似クラスは、この同じ方法で動作します。特定の状態にある文書の一部を対象にして、 HTML にクラスを追加したかのように動作します。 MDN の他の例をいくつか見てみましょう。
 
@@ -65,7 +112,23 @@ l10n:
 - [`:hover`](/ja/docs/Web/CSS/:hover) — 前述の通りです。これは、ユーザーが要素（通常はリンク）の上にポインターを載せた場合にのみ適用されます。
 - [`:focus`](/ja/docs/Web/CSS/:focus) — ユーザーがキーボードコントロールを使用して要素にフォーカスした場合にのみ適用されます。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
+```html live-sample___hover
+<p><a href="">ここにカーソルを当ててください</a></p>
+```
+
+```css live-sample___hover
+a:link,
+a:visited {
+  color: rebeccapurple;
+  font-weight: bold;
+}
+
+a:hover {
+  color: hotpink;
+}
+```
+
+{{EmbedLiveSample("hover")}}
 
 ## 擬似要素とは何か
 
@@ -80,7 +143,29 @@ l10n:
 
 `::first-line` 擬似要素セレクターは確実にあなたのためにこれを行います-それはまだ最初の行のみを選択します言葉の数が増加した場合と減少します。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-line.html", '100%', 800)}}
+```html live-sample___first-line
+<article>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___first-line
+article p::first-line {
+  font-size: 120%;
+  font-weight: bold;
+}
+```
+
+{{EmbedLiveSample("first-line")}}
 
 それはまるで最初の整形された行を `<span>` で魔法のように包み、行の長さが変更されるたびに更新されるかのように動作します。
 
@@ -103,21 +188,56 @@ CSS を使用してコンテンツを文書に挿入するための [`content`](
 
 以下のライブ例のように、これらを使用してテキストの文字列を挿入できます。{{cssxref("content")}} プロパティのテキスト値を変更してみて、出力でそれを確認してください。 `::before` 擬似要素を `::after` に変更して、要素の最初ではなく最後に挿入されたテキストを表示することもできます。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/before.html", '100%', 400)}}
+```html live-sample___before
+<p class="box">この HTML ページ内のボックスのコンテンツ</p>
+```
+
+```css live-sample___before
+.box::before {
+  content: "これは他のコンテンツの前に表示されます。";
+}
+```
+
+{{EmbedLiveSample("before")}}
 
 CSS からテキストを挿入することは、ウェブ上で実に多く使用することではありません。なぜなら、そのテキストはスクリーンリーダーによってはアクセスできず、将来誰かが見つけて編集するのが難しくなるからです。
 
 これらの擬似要素のより有効な使用法は、アイコンを挿入することです。たとえば、以下の例で追加された小さな矢印は、スクリーンリーダーで読みたくない視覚的なインジケーターです。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/after-icon.html", '100%', 400)}}
+```html live-sample___after-icon
+<p class="box">この HTML ページ内のボックスのコンテンツ</p>
+```
+
+```css live-sample___after-icon
+.box::after {
+  content: " ➥";
+}
+```
+
+{{EmbedLiveSample("after-icon")}}
 
 これらの擬似要素は、空の文字列を挿入するためにも頻繁に使用され、ページ上の要素と同じようにスタイルを設定できます。
 
 次の例では、 `::before` 擬似要素を使用して空の文字列を追加しています。幅と高さでスタイルを設定できるように、これを `display: block` に設定しました。次に、CSS を使用して、他の要素と同じようにスタイルを設定します。CSS をいじって、CSS の外観と動作を変更できます。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
+```html live-sample___before-styled
+<p class="box">この HTML ページ内のボックスのコンテンツ</p>
+```
 
-`::before` と `::after` 擬似要素を `content` プロパティとともに使用することは、CSS では「生成コンテンツ」と呼ばれ、この手法がさまざまなタスクに使用されているのをよく目にします。良い例は、 [CSS Arrow Please](http://www.cssarrowplease.com/) のサイトで、 [CSS で矢印](http://www.cssarrowplease.com/)を生成するのに役立てています。矢印を作成するときの CSS を見ると、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素が使用されていることがわかります。これらのセレクターが表示されたら、{{cssxref("content")}} プロパティを見て、文書に何が追加されているかを確認してください。
+```css live-sample___before-styled
+.box::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  border: 1px solid black;
+}
+```
+
+{{EmbedLiveSample("before-styled", "", "160")}}
+
+`::before` と `::after` 擬似要素を `content` プロパティとともに使用することは、CSS では「生成コンテンツ」と呼ばれ、この手法がさまざまなタスクに使用されているのをよく目にします。良い例は、 [CSS Arrow Please](http://cssarrowplease.com/) のサイトで、矢印を生成するのに役立てています。矢印を作成するときの CSS を見ると、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素が使用されていることがわかります。これらのセレクターが表示されたら、{{cssxref("content")}} プロパティを見て、文書に何が追加されているかを確認してください。
 
 ## まとめ
 
@@ -125,11 +245,11 @@ CSS からテキストを挿入することは、ウェブ上で実に多く使�
 
 擬似クラスを使用すると、要素が特定の状態にあるときに、その状態のクラスを DOM に追加したかのように、その要素を対象とすることができます。擬似要素は、あたかも DOM に新しい要素を追加したかのように動作し、その要素をスタイル設定することができます。擬似要素の `::before` と `::after` では、 CSS を使用して文書内のコンテンツを挿入することができます。
 
-次の記事では、[結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)について学びます。
+次の記事では、結合子について学びます。
 
 ## 関連情報
 
 - [擬似クラスリファレンス](/ja/docs/Web/CSS/Pseudo-classes)
 - [擬似要素リファレンス](/ja/docs/Web/CSS/Pseudo-elements)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

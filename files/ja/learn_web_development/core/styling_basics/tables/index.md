@@ -1,28 +1,37 @@
 ---
 title: 表のスタイル設定
 slug: Learn_web_development/Core/Styling_basics/Tables
-original_slug: Learn/CSS/Building_blocks/Styling_tables
 l10n:
-  sourceCommit: 4c60873643a5e0340aff4336190fe93ad1c7d997
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
-HTML の表を装飾することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。 この記事では、これまでに説明した機能のいくつかとともに、HTML の表を見栄え良くするためのガイドを提供します。
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+
+HTML の表をスタイル設定することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。 この記事では、これまでに説明した機能のいくつかとともに、HTML の表を見栄え良くするためのガイドを提供します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >の学習）、CSS がどのように動作するかの考え（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>で学習）の基本的な知識を得ていること。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >、<a href="/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics"
+          >HTML の表</a
+        >、 CSS の<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units">値と単位</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Sizing">サイズ設定</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>HTML の表を効果的に装飾する方法を学ぶこと。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>表の中の空間の扱い、境界線の統合も含みます。</li>
+          <li>見出し、キャプション、ヘッダー、本体、フッターなど、表のさまざまな領域を明確に強調表示すること。</li>
+          <li>縞模様を実装する方法、そしてそれがなぜ有益なのか。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -94,9 +103,9 @@ HTML の表を装飾することは、世界で最も魅力的な仕事ではあ
    <link href="style.css" rel="stylesheet" />
    ```
 
-### スペーシングとレイアウト
+### 空間とレイアウト
 
-最初にすべきことは、スペーシングやレイアウトを整理することです。既定のの表の装飾はとても窮屈です。これを行うには、`style.css` ファイルに次の CSS を追加します。
+最初にすべきことは、空間やレイアウトを整理することです。既定のの表の装飾はとても窮屈です。これを行うには、`style.css` ファイルに次の CSS を追加します。
 
 ```css
 /* spacing */
@@ -144,7 +153,7 @@ td {
 
 ![データを見やすくするために空間を設け、イギリスの有名パンクバンドの概要を表示させた半スタイル設定の表。](table-with-spacing.png)
 
-### 簡単な組版
+### 簡単な植字
 
 それでは、テキストを少し整理しましょう。
 
@@ -265,9 +274,9 @@ table {
 
 さて、これはあなたの好みではなく、少々限度を超えているかもしれませんが、ここで主張しようとしているのは、表が退屈で学術的である必要はないということです。
 
-### キャプションの装飾
+### キャプションのスタイル設定
 
-表でやるべきことがもう一つあります。キャプションの装飾です。 これを行うには、`style.css` ファイルの一番下に次のコードを追加します。
+表でやるべきことがもう一つあります。キャプションのスタイル設定です。 これを行うには、`style.css` ファイルの一番下に次のコードを追加します。
 
 ```css
 /* caption */
@@ -292,18 +301,18 @@ caption {
 先に進む前に、上に示した最も有用なポイントの簡単なリストをお送りします。
 
 - 表のマークアップをできる限り単純にし、物事を柔軟に保ちます。例えば、パーセントを使用することによって、デザインはよりレスポンシブになります。
-- {{cssxref("table-layout")}}`: fixed` を使用すると、見出し（{{htmlelement("th")}}）の {{cssxref("width")}} を設定して列幅を簡単に設定でき、より予測可能な表レイアウトを作成できます。
-- {{cssxref("border-collapse")}}`: collapse` を使用して、表要素の境界線を互いに折りたたみ、見た目をよりきれいにして制御しやすくします。
+- {{cssxref("table-layout", "table-layout: fixed")}} を使用すると、 {{cssxref("width")}} を見出し ({{htmlelement("th")}}) に設定して列幅を簡単に設定でき、より予測可能な表レイアウトを作成できます。
+- {{cssxref("border-collapse", "border-collapse: collapse")}} を使用して、表要素の境界線を互いに折りたたみ、見た目をよりきれいにして制御しやすくします。
 - {{htmlelement("thead")}}、{{htmlelement("tbody")}}、{{htmlelement("tfoot")}} を使用して表を論理的なまとまりに分割し、CSS を適用するための特別な場所を提供することで、必要に応じてスタイルを重ねることが容易になります。
-- 行を読みやすくするために、ゼブラストライピングを使用します。
+- 行を読みやすくするために、縞模様を使用します。
 - {{cssxref("text-align")}} を使用して、{{htmlelement("th")}} と {{htmlelement("td")}} のテキストを揃えることで、きれいにして見やすくします。
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 表](/ja/docs/Learn/CSS/Building_blocks/Tables_tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 表](/ja/docs/Learn_web_development/Core/Styling_basics/Tables_tasks)を見てください。
 
 ## まとめ
 
-表のスタイル設定も終わりに近づいてきたので、他にも何か時間を割くものが必要になってきました。次の記事では、[CSS をデバッグする](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)方法を探ります。レイアウトが思うように見えない、プロパティが適用されないなどの問題を解決する方法です。これには、ブラウザーの DevTools を使用して問題を解決する方法についての情報も含まれています。
+表のスタイル設定も終わりに近づいてきたので、他にも何か時間を割くものが必要になってきました。次の記事では、 CSS をデバッグする方法を探ります。レイアウトが思うように見えない、プロパティが適用されないなどの問題を解決する方法です。これには、ブラウザーの開発者ツールを使用して、問題を解決する方法についての情報も含まれています。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

@@ -1,41 +1,19 @@
 ---
-title: 経歴ページのスタイル設定
+title: "課題: 経歴ページのスタイル設定"
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-original_slug: Learn/CSS/First_steps/Styling_a_biography_page
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}
 
-ここ数回のレッスンで学んだことで、 CSS を使用して単純なテキスト文書を整形し、自分自身でスタイルを追加することができます。この評価試験では、その方法を学びます。
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        この評価試験に挑戦する前に、すでにこのモジュールの記事をすべて読み終えていて、HTML の基本を理解している必要があります（<a
-        href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML の入門</a
-        >で学ぶこと）。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>いくつかの CSS を試し、知識レベルを確認します。</td>
-    </tr>
-  </tbody>
-</table>
-
-## 開始点
-
-下のライブエディターで試すこともできますし、[開始点ファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/getting-started/biog-download.html/)して自分のエディターで作業することもできます。これは、 HTML と開始点の CSS （文書内の見出し）の両方を含む単一のページです。できれば、この CSS を別のファイルに移し、ローカルコンピューターで例を作成するときにリンクしてください。
+この課題では、単純な経歴ページのスタイル設定を行い、セレクターの書き方やテキストのスタイル設定など、これまでの数回のレッスンで学んだスキルのいくつかを試験します。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 以下のライブサンプルの "Play" をクリックすると、コードを MDN Playground で開くことができますし、自分の IDE や、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターにコードをコピー＆ペーストすることもできます。
+> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに問い合わせてみてください。
 
 ## プロジェクト概要
 
@@ -69,6 +47,62 @@ l10n:
 
 ![評価試験完了後の例のスクリーンショットです。](learn-css-basics-assessment.png)
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
+以下は、HTML と CSS のコードブロックと、それらを組み合わせた結果です。
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+```html live-sample___biog
+<h1>Jane Doe</h1>
+<div class="job-title">Web Developer</div>
+<p>
+  Far far away, behind the word mountains, far from the countries Vokalia and
+  Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
+  right at the coast of the Semantics, a large language ocean.
+</p>
+
+<p>
+  A small river named Duden flows by their place and supplies it with the
+  necessary regelialia. It is a paradisematic country, in which roasted parts of
+  sentences fly into your mouth.
+</p>
+
+<h2>Contact information</h2>
+<ul>
+  <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
+  <li>Web: <a href="http://example.com">http://example.com</a></li>
+  <li>Tel: 123 45678</li>
+</ul>
+```
+
+```css live-sample___biog
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #375e97;
+  font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-bottom: 1px solid #375e97;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.job-title {
+  color: #999999;
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: #fb6542;
+}
+
+a:hover {
+  text-decoration: none;
+}
+```
+
+{{EmbedLiveSample("biog", "", "400px")}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
