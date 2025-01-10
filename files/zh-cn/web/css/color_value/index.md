@@ -135,11 +135,11 @@ color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 
 | 类别 | 相似分量 |
 | ---- | -------- |
-| 红色 | `R`, `X` |
-| 绿色 | `G`, `Y` |
-| 蓝色 | `B`, `Z` |
+| 红色 | `R`、`X` |
+| 绿色 | `G`、`Y` |
+| 蓝色 | `B`、`Z` |
 | 明度 | `L`      |
-| 色度 | `C`, `S` |
+| 色度 | `C`、`S` |
 | 色相 | `H`      |
 | a    | `a`      |
 | b    | `b`      |
@@ -448,4 +448,4 @@ div:nth-child(6) {
 - {{CSSXref("color")}}、{{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("box-shadow")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-shadow")}}：使用 `<color>` 的常见属性
 - [使用 CSS 给 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 - [使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)
-- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](/zh-CN/blog/css-color-module-level-4/)（2023 年）
+- MDN 博客中的文章 [CSS 颜色（第 4 版）中的新功能、渐变和色调](/zh-CN/blog/css-color-module-level-4/)（2023 年）
