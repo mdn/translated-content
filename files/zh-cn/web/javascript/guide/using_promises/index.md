@@ -346,9 +346,9 @@ async function main() {
 当一个 Promise 拒绝事件未被任何处理器处理时，它会冒泡到调用栈的顶部，主机需要将其暴露出来。在 Web 上，当 Promise 被拒绝时，会有下文所述的两个事件之一被派发到全局作用域（通常而言，就是 {{domxref("window")}}；如果是在 web worker 中使用的话，就是 {{domxref("Worker")}} 或者其他基于 worker 的接口）。这两个事件如下所示：
 
 - {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
-  - : 当 Promise 被拒绝，但没有提供 `reject` 函数来处理该拒绝事件时，会派发此事件。
+  - : 当 Promise 被拒绝，但没有可用的拒绝处理程序时，会派发此事件。
 - {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
-  - : 当 Promise 被拒绝并触发了 `unhandledrejection` 事件后再处理该拒绝事件时，会派发此事件。
+  - : 当 Promise 被拒绝，并触发了 `unhandledrejection` 事件之后再处理该拒绝事件时，会派发此事件。
 
 上述两种事件（类型为 {{domxref("PromiseRejectionEvent")}}）都有两个属性，一个是 {{domxref("PromiseRejectionEvent.promise", "promise")}} 属性，该属性指向被拒绝的 Promise，另一个是 {{domxref("PromiseRejectionEvent.reason", "reason")}} 属性，该属性用来说明 Promise 被拒绝的原因。
 
