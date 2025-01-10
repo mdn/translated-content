@@ -16,8 +16,7 @@ l10n:
 ### 事件属性
 
 > [!NOTE]
-> 以下每个事件属性名称都链接到其对应的 {{domxref("Window")}} 接口事件。你可以使用 [> `addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 来监听这些事件，而不是将 `oneventname` 属性添加到
-> `<body>` 元素。
+> 以下每个事件属性名称都链接到其对应的 {{domxref("Window")}} 接口事件。你可以使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 来监听这些事件，而不是将 `oneventname` 属性添加到 `<body>` 元素。
 
 - [`onafterprint`](/zh-CN/docs/Web/API/Window/afterprint_event)
   - : 当用户打印文档后调用的函数。
@@ -72,8 +71,7 @@ l10n:
 > 请勿使用这些已弃用的属性；应选择每个弃用属性所列的 CSS 替代方案。
 
 - `alink` {{deprecated_inline}}
-  - : 选中时超链接文本的颜色。请结合使用 CSS {{cssxref("color")}} 属性，配合 {{cssxref(":active")}} 和 {{cssxref(":
-    focus")}} 伪类。
+  - : 选中时超链接文本的颜色。请结合使用 CSS {{cssxref("color")}} 属性，配合 {{cssxref(":active")}} 和 {{cssxref(":focus")}} 伪类。
 - `background` {{deprecated_inline}}
   - : 用作背景的图片的 URI。请改用 CSS 的 {{cssxref("background-image")}} 属性。
 - `bgcolor` {{deprecated_inline}}
