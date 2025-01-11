@@ -2,7 +2,7 @@
 title: CSS
 slug: Glossary/CSS
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{GlossarySidebar}}
@@ -30,7 +30,7 @@ p {
 
 ## 関連情報
 
-- [CSS を学ぶ](/ja/docs/Learn/CSS)
+- [CSS を学ぶ](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [CSS のドキュメント](/ja/docs/Web/CSS)
 - [CSS](https://ja.wikipedia.org/wiki/CSS) （ウィキペディア）
-- [MDN 上の CSS ドキュメント](/ja/docs/Web/CSS)
 - [The CSS Working Group current work](https://www.w3.org/Style/CSS/current-work)
