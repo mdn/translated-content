@@ -14,7 +14,7 @@ l10n:
 该类型的取值为对象。它包含以下属性：
 
 - `allFrames` {{optional_inline}}
-  - : `boolean`。若设置为 `true`，则该脚本将被注入到所有框架中（即便该框架不是在标签页中最顶层的框架）。各框架将相互独立地检查 URL 要求，并且如果不满足 URL 要求则不会注入到子框架中。默认设为 `false`，即只会匹配最顶层的框架。
+  - : `boolean`。若设置为 `true`，则该脚本将被注入到所有框架中（即便该框架不是标签页中最顶层的框架）。各框架将相互独立地检查 URL 要求；如果不满足 URL 要求，则不会注入到子框架中。默认设为 `false`，即只会匹配最顶层的框架。
 - `css` {{optional_inline}}
   - : `string` 的 `array`。要注入到匹配页面的 CSS 文件列表。将按照数组中的顺序注入。
 - `excludeMatches` {{optional_inline}}
