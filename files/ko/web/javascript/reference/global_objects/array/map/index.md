@@ -265,7 +265,7 @@ const elems = document.querySelectorAll("select option:checked");
 const values = Array.prototype.map.call(elems, ({ value }) => value);
 ```
 
-`elems`를 객체로 변환하기 위해 {{jsxref("Array.from()")}}를 사용할 수 있습니다. 그리고 나서 `map()` 메서더로 접근합니다.
+`elems`를 객체로 변환하기 위해 {{jsxref("Array.from()")}}를 사용할 수 있습니다. 그리고 나서 `map()` 메서드로 접근합니다.
 
 ## 명세서
 
