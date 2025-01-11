@@ -42,9 +42,9 @@ content-visibility: unset;
 
 ### content-visibility 속성에 애니메이션과 전환 적용하기
 
-[지원하는 브라우저는](#browser_compatibility) 는 [이산 애니메이션 타입](/ko/docs/Web/CSS/CSS_animated_properties#discrete)의 변형을 사용하여 content-`content-visibility` 를 애니메이션/전환합니다.
+[지원하는 브라우저는](#browser_compatibility) 는 [비연속 애니메이션 타입](/ko/docs/Web/CSS/CSS_animated_properties#discrete)의 변형을 사용하여 `content-visibility` 를 애니메이션/전환합니다.
 
-이산 애니메이션은 일반적으로 속성이 애니메이션이 진행되는 중간 지점 50% 에서 두 가지 값 사이를 즉각적으로 전환한다는 것을 의미합니다. 하지만 `content-visibility` 를 사용하는 경우에는 브라우저는 전체 애니메이션 지속 시간 동안 애니메이션 콘텐츠를 보여주기 위해 두 값 사이를 전환합니다. 예시를 확인해 보세요.
+비연속 애니메이션은 일반적으로 속성이 애니메이션이 진행되는 중간 지점 50% 에서 두 가지 값 사이를 즉각적으로 전환한다는 것을 의미합니다. 하지만 `content-visibility` 를 사용하는 경우에는 브라우저는 전체 애니메이션 지속 시간 동안 애니메이션 콘텐츠를 보여주기 위해 두 값 사이를 전환합니다. 예시를 확인해 보세요.
 
 - `content-visibility` 가 `hidden` 에서 `visible` 로 전환된다면, 애니메이션의 `0%` 시점에서 값이 `visible` 로 전환되어 애니메이션이 진행되는 동안 내용이 보이게 됩니다.
 - `content-visibility` 가 `visible` 에서 `hidden` 으로 전환된다면, 애니메이션의 `100%` 시점에서 값이 `hidden` 으로 전환되어 애니메이션이 진행되는 동안 내용이 보이게 됩니다.
@@ -238,7 +238,7 @@ div {
 
 #### JavaScript
 
-마침내, JavaScript를 사용하여 `.show` 및 `.hide` 클래스를 `<div>` 에 적절하게 적용하여 보이거나 숨겨지는 상태를 토글할 수 있는 애니메이션을을 구현합니다.
+JavaScript를 사용하여 `.show` 및 `.hide` 클래스를 `<div>` 에 적절하게 적용하여 보이거나 숨겨지는 상태를 토글할 수 있는 애니메이션을 구현합니다.
 
 ```js
 const divElem = document.querySelector("div");
