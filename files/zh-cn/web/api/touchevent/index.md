@@ -18,7 +18,7 @@ l10n:
 - {{ domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
   - : 创建一个 {{ domxref("TouchEvent") }} 对象。
 
-## 属性列表
+## 实例属性
 
 _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
 
