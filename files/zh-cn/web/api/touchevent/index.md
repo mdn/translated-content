@@ -47,24 +47,24 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 - {{domxref("Element/touchstart_event", "touchstart")}}
 
-  - : 当用户在触摸平面上放置了一个触点时触发。事件的目标 {{ domxref("element")}} 将是触点位置上的那个目标 {{domxref("element", "元素", "", 1)}}。
+  - : 当用户在触摸平面上放置了一个触点时触发。事件的目标{{domxref("element", "元素", "", 1)}}将是触点位置上的那个目标{{domxref("element", "元素", "", 1)}}。
 
 - {{domxref("Element/touchend_event", "touchend")}}
 
   - : 当一个触点被用户从触摸平面上移除（即用户的一个手指或手写笔离开触摸平面）时触发。当触点移出触摸平面的边界时也将触发。例如用户将手指划出屏幕边缘。
 
-    事件的目标 {{domxref("element", "元素", "", 1)}} 与触发 `touchstart` 事件的目标 {{domxref("element", "元素", "", 1)}} 相同，即使 `touchend` 事件触发时，触点已经移出了该 {{domxref("element", "元素", "", 1)}} 。
+    事件的目标{{domxref("element", "元素", "", 1)}}与触发 `touchstart` 事件的目标{{domxref("element", "元素", "", 1)}}相同，即使 `touchend` 事件触发时，触点已经移出了该 {{domxref("element", "元素", "", 1)}}。
 
     已经被从触摸平面上移除的触点，可以在 `changedTouches` 属性定义的 {{ domxref("TouchList") }} 中找到。
 
 - {{domxref("Element/touchmove_event", "touchmove")}}
 
-  - : 当用户在触摸平面上移动触点时触发。事件的目标 {{domxref("element", "元素", "", 1)}} 和触发 `touchstart` 事件的目标 {{domxref("element", "元素", "", 1)}} 相同，即使当 `touchmove` 事件触发时，触点已经移出了该 {{domxref("element", "元素", "", 1)}} 。
+  - : 当用户在触摸平面上移动触点时触发。事件的目标{{domxref("element", "元素", "", 1)}}和触发 `touchstart` 事件的目标{{domxref("element", "元素", "", 1)}}相同，即使当 `touchmove` 事件触发时，触点已经移出了该{{domxref("element", "元素", "", 1)}}。
 
     当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。
 
     > [!NOTE]
-    > 不同浏览器上 `touchmove` 事件的触发频率并不相同。这个触发频率还和硬件设备的性能有关。因此决不能让程序的运作依赖于某个特定的触发频率。
+    > 不同浏览器上 `touchmove` 事件的触发频率并不相同。这个触发频率还和硬件设备的性能有关。因此绝对不能让程序的运作依赖于某个特定的触发频率。
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
 
@@ -78,7 +78,7 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 很值得注意的是，在很多情况下，触摸事件和鼠标事件会一起触发（以使非触摸专用的代码仍然可以与用户交互）。如果你要使用触摸事件，你可以使用 {{domxref("Event.preventDefault","preventDefault()")}} 来取消鼠标事件。
 
-但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} 和 {{domxref("Element/touchmove_event", "touchmove")}} 的默认值就是 `true`，没有必要调用 {{domxref("Event.preventDefault","preventDefault()")}}。如果要重写这个行为，简单地将 `passive` 设置成 `false` 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。[Google Developer](https://developer.chrome.google.cn/blog/passive-event-listeners) 有一个简单的演示。
+但 Chrome 是例外，从版本 56（桌面版、安卓版和安卓 webview）开始，Chrome 中 {{domxref("Element/touchstart_event", "touchstart")}} 和 {{domxref("Element/touchmove_event", "touchmove")}} 的 `passive` 选项的默认值就是 `true`，调用 {{domxref("Event.preventDefault","preventDefault()")}} 无效。如果要重写这个行为，简单地将 `passive` 选项设置成 `false` 就行。这样设置可以阻止监听器在用户滚动时停止页面渲染。[Google Developer](https://developer.chrome.google.cn/blog/passive-event-listeners) 有一个简单的演示。
 
 ## 示例
 
