@@ -36,6 +36,10 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
   - : 一个 {{ domxref("TouchList") }} 对象，是包含了如下触点的 {{ domxref("Touch") }} 对象：触摸起始于当前事件的目标 {{ domxref("element") }} 上，并且仍然没有离开触摸平面的触点。
 - {{ domxref("TouchEvent.touches") }} {{readonlyInline}}
   - : 一个 {{ domxref("TouchList") }} 对象，包含了所有当前接触触摸平面的触点的 {{ domxref("Touch") }} 对象，无论它们的起始于哪个 {{ domxref("element") }} 上，也无论它们状态是否发生了变化。
+- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : 自事件开始以来旋转的变化（以度为单位）。正值表示顺时针旋转，负值表示逆时针旋转。默认值： `0.0` 。
+- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : 事件开始后两个触点之间的距离。表示为事件开始时触点之间的初始距离的浮点倍数。低于1.0的值表示向内收缩（缩小）。大于1.0的值表示向外的不收缩（放大）。默认值： `1.0` 。
 
 ## 触摸事件的类型
 
@@ -43,19 +47,19 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 - {{domxref("Element/touchstart_event", "touchstart")}}
 
-  - : 当用户在触摸平面上放置了一个触点时触发。事件的目标 {{ domxref("element")}} 将是触点位置上的那个目标 {{ domxref("element") }}
+  - : 当用户在触摸平面上放置了一个触点时触发。事件的目标 {{ domxref("element")}} 将是触点位置上的那个目标 {{domxref("element", "元素", "", 1)}}。
 
 - {{domxref("Element/touchend_event", "touchend")}}
 
   - : 当一个触点被用户从触摸平面上移除（即用户的一个手指或手写笔离开触摸平面）时触发。当触点移出触摸平面的边界时也将触发。例如用户将手指划出屏幕边缘。
 
-    事件的目标 {{ domxref("element") }} 与触发 `touchstart` 事件的目标 {{ domxref("element") }} 相同，即使 `touchend` 事件触发时，触点已经移出了该 {{ domxref("element") }} 。
+    事件的目标 {{domxref("element", "元素", "", 1)}} 与触发 `touchstart` 事件的目标 {{domxref("element", "元素", "", 1)}} 相同，即使 `touchend` 事件触发时，触点已经移出了该 {{domxref("element", "元素", "", 1)}} 。
 
     已经被从触摸平面上移除的触点，可以在 `changedTouches` 属性定义的 {{ domxref("TouchList") }} 中找到。
 
 - {{domxref("Element/touchmove_event", "touchmove")}}
 
-  - : 当用户在触摸平面上移动触点时触发。事件的目标 {{ domxref("element") }} 和触发 `touchstart` 事件的目标 {{ domxref("element") }} 相同，即使当 `touchmove` 事件触发时，触点已经移出了该 {{ domxref("element") }} 。
+  - : 当用户在触摸平面上移动触点时触发。事件的目标 {{domxref("element", "元素", "", 1)}} 和触发 `touchstart` 事件的目标 {{domxref("element", "元素", "", 1)}} 相同，即使当 `touchmove` 事件触发时，触点已经移出了该 {{domxref("element", "元素", "", 1)}} 。
 
     当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。
 
