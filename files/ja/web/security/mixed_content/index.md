@@ -86,8 +86,7 @@ URLのホストがドメイン名ではなくIPアドレスの場合、アップ
 - `https://secure.com` が `http://insecure.com` を読み込む — これは混在コンテンツのリクエストです。安全ではないリソース `http://insecure.com` が保護されたコンテキスト `https://secure.com` に読み込まれるからです。
 - `http://insecure.com` が `https://secure.com` を `<iframe>` に読み込み、さらに `http://also.insecure.com` を読み込む — `https://secure.com` を `http://insecure.com` に読み込むことは、混在コンテンツのリクエストではありません（保護されたコンテキストを保護されていないコンテキストに読み込むことに対する制限はありません）。
   しかし、 `http://also.insecure.com` を保護されたフレーム `https://secure.com` に読み込むことは、混在コンテンツのリクエストです。
-- `https://secure.com` が `data:` URL をフレーム化し、`http://insecure.com`
- を読み込む — これは混在コンテンツのリクエストです。 `https://secure.com` （したがって、`data:`）は安全に読み込まれ、 `http://insecure.com` は安全ではないからです。
+- `https://secure.com` が `data:` URL をフレーム化し、`http://insecure.com` を読み込む — これは混在コンテンツのリクエストです。 `https://secure.com` （したがって、`data:`）は安全に読み込まれ、 `http://insecure.com` は安全ではないからです。
 
 混在コンテキストのリクエストは、プラグインやワーカーなどの保護されたコンテキストからも行われ、同じ方法でアップグレード/ブロックされます。
 
