@@ -9,7 +9,7 @@ l10n:
 
 **`TouchEvent`** 接口表示一种 {{domxref("UIEvent")}}，当具有触摸表面的接触状态改变时会发送该事件。例如，此表面可以是触摸屏或触控板。该事件可以描述与屏幕的一个或多个接触点，并且包括对检测移动、接触点的增加和移除等的支持。
 
-每个 {{ domxref("Touch") }} 对象代表一个触点；每个触点都由其位置，大小，形状，压力大小，和目标 {{ domxref("element") }} 描述。 {{ domxref("TouchList") }} 对象代表多个触点的一个列表。
+触点由 {{domxref("Touch")}} 对象表示；每个触点都由其位置、大小、形状、压力大小和目标元素描述。触点列表则由 {{domxref("TouchList")}} 对象表示。
 
 {{InheritanceDiagram}}
 
@@ -40,9 +40,6 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 ## 触摸事件的类型
 
 为了区别触摸相关的状态改变，存在多种类型的触摸事件。可以通过检查触摸事件的 {{ domxref("event.type", "TouchEvent.type") }} 属性来确定当前事件属于哪种类型
-
-> [!NOTE]
-> 在很多情况下，触摸事件和鼠标事件会同时被触发（目的是让没有对触摸设备优化的代码仍然可以在触摸设备上正常工作）。如果你使用了触摸事件，可以调用 {{ domxref("event.preventDefault()") }} 来阻止鼠标事件被触发。
 
 - {{domxref("Element/touchstart_event", "touchstart")}}
 
@@ -91,7 +88,7 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [触摸事件](/zh-CN/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
