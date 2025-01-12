@@ -1,11 +1,13 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
+l10n:
+  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
 {{CSSRef}}
 
-**`text-align-last`** は CSS のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
+**`text-align-last`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
 
 {{EmbedInteractiveExample("pages/css/text-align-last.html")}}
 
@@ -25,6 +27,7 @@ text-align-last: justify;
 text-align-last: inherit;
 text-align-last: initial;
 text-align-last: revert;
+text-align-last: revert-layer;
 text-align-last: unset;
 ```
 
@@ -55,7 +58,7 @@ text-align-last: unset;
 
 ## 例
 
-<h3 id="Justifying_the_last_line">最後の行を中央揃えにする</h3>
+### 最後の行を中央揃えにする
 
 ```html hidden
 <p>
@@ -75,7 +78,7 @@ p {
 }
 ```
 
-#### 結果s
+#### 結果
 
 {{EmbedLiveSample('Justifying_the_last_line','560')}}
 
