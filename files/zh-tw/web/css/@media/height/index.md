@@ -7,11 +7,11 @@ l10n:
 
 {{CSSRef}}
 
-**`height`** [CSS](/zh-TW/docs/Web/CSS) [媒體功能](/zh-TW/docs/Web/CSS/@media#media_features)可用於根據{{glossary("viewport", "視區")}}的高度（或[分頁媒體](/zh-TW/docs/Web/CSS/CSS_paged_media)的頁框）套用樣式。
+**`height`** [CSS](/zh-TW/docs/Web/CSS) [媒體特性](/zh-TW/docs/Web/CSS/@media#媒體特性)可用於根據{{glossary("viewport", "視區")}}的高度（或[分頁媒體](/zh-TW/docs/Web/CSS/CSS_paged_media)的頁框）套用樣式。
 
 ## 語法
 
-`height` 功能被指定為 {{cssxref("&lt;length&gt;")}} 值，代表視區的高度。這是一個範圍功能，這意味著你也可以使用加上前綴的 **`min-height`** 和 **`max-height`** 變體，分別查詢最小值和最大值。
+`height` 特性被指定為 {{cssxref("&lt;length&gt;")}} 值，代表視區的高度。這是一個範圍特性，這意味著你也可以使用加上前綴的 **`min-height`** 和 **`max-height`** 變體，分別查詢最小值和最大值。
 
 ## 範例
 
