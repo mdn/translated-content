@@ -50,7 +50,7 @@ l10n:
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        一个 {{HTMLElement("dl")}} 或 （在 {{Glossary("WHATWG")}} HTML、{{Glossary("W3C")}} HTML 5.2 及以后版本中）作为 {{HTMLElement("dl")}} 子元素的 {{HTMLElement("div")}}。<br />该元素可以在 {{HTMLElement("dd")}} 或另一个 <code>&lt;dt&gt;</code> 元素之前使用。
+        一个 {{HTMLElement("dl")}} 或（在 {{Glossary("WHATWG")}} HTML、{{Glossary("W3C")}} HTML 5.2 及以后版本中）作为 {{HTMLElement("dl")}} 子元素的 {{HTMLElement("div")}}。<br />该元素可以在 {{HTMLElement("dd")}} 或另一个 <code>&lt;dt&gt;</code> 元素之前使用。
       </td>
     </tr>
     <tr>
