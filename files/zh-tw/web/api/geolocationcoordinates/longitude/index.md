@@ -53,7 +53,8 @@ button.addEventListener("click", () => {
 
 ```html
 <p>
-  你的位置是 <span id="latitude">0.00</span>° 緯度，<span id="longitude">0.00</span>° 經度。
+  你的位置是 <span id="latitude">0.00</span>° 緯度，
+  <span id="longitude">0.00</span>° 經度。
 </p>
 <button id="get-location">獲取我的位置</button>
 ```
