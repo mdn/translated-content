@@ -33,7 +33,7 @@ const attr = input.getAttributeNode("placeholder");
 console.log(attr.value);
 console.log(input.placeholder); // 輸出與 `attr.value` 一樣的結果
 
-// 修改 placeholder 的值也會修改反射的屬性的值。
+// 修改 placeholder 的值也會修改反射的屬性值。
 input.placeholder = "Modified placeholder";
 console.log(attr.value); // 打印 `Modified placeholder`
 ```
