@@ -51,7 +51,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
 - `<media-type>/*`
   - : 沒有子類型的媒體類型。例如，`image/*` 對應於 `image/png`、`image/svg`、`image/gif` 和其他圖片類型。
 - `*/*`
-  - : 任何媒體類型
+  - : 任何媒體類型。
 - `;q=`（q 因子加權）
   - : 使用相對{{Glossary("quality values", "品質值")}}表示的偏好值，稱為*權重*。
 
