@@ -14,7 +14,7 @@ l10n:
 
 ## 語法
 
-Data URI 由四個部分組成：前綴（`data:`）、表示資料類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)、可選的 `base64` 標記（若為非文字內容），以及資料本身：
+Data URL 由四個部分組成：前綴（`data:`）、表示資料類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/MIME_types)、可選的 `base64` 標記（若為非文字內容），以及資料本身：
 
 ```plain
 data:[<media-type>][;base64],<data>
@@ -39,7 +39,7 @@ data:[<media-type>][;base64],<data>
 
 ## 將資料編碼為 base64 格式
 
-Base64 是一組二進位轉文字的編碼方式，通過轉換為基數為 64 的表示法，將二進位資料表示為 {{Glossary("ASCII")}} 字串格式。由於僅包含符合 URL 語法的字元（「URL 安全」），我們可以安全地在 Data URI 中編碼二進位資料。Base64 使用字元 `+` 和 `/`，這些字元在 URL 中可能具有特殊含義。然而，因為 Data URI 沒有 URL 路徑段或查詢參數，在此情境中這種編碼是安全的。
+Base64 是一組二進位轉文字的編碼方式，通過轉換為基數為 64 的表示法，將二進位資料表示為 {{Glossary("ASCII")}} 字串格式。由於僅包含符合 URL 語法的字元（「URL 安全」），我們可以安全地在 Data URL 中編碼二進位資料。Base64 使用字元 `+` 和 `/`，這些字元在 URL 中可能具有特殊含義。然而，因為 Data URL 沒有 URL 路徑段或查詢參數，在此情境中這種編碼是安全的。
 
 ### 使用 JavaScript 編碼
 
@@ -63,7 +63,7 @@ base64 a.txt>b.txt
 
 ### 在 Microsoft Windows 上編碼
 
-在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://learn.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) 方法進行 base64 編碼：
+在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://learn.microsoft.com/zh-tw/dotnet/api/system.convert.tobase64string?view=net-5.0) 方法進行 base64 編碼：
 
 ```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
@@ -97,13 +97,13 @@ lots of text…
 - 在 HTML 中的格式化
   - : 一個 `data` URL 提供了一個嵌套於檔案內的檔案，可能相對於包裹文件的寬度非常寬。作為 URL，`data` 應該可以用空白（換行符號、Tab 或空格）格式化，但實際上在[使用 base64 編碼](https://bugzil.la/73026#c12)時可能會出現問題。
 - 長度限制
-  - : 瀏覽器對於 Data URI 的最大長度沒有特定要求。例如，Opera 11 瀏覽器將 URL 限制為 65535 字元，因此 Data URI 被限制為 65529 字元（65529 字元為編碼資料的長度，而非來源的長度，若使用純 `data:` 而不指定 MIME 類型）。Firefox 97 版及更新版本支援最大 32MB 的 Data URI（97 版之前的限制接近 256MB）。Chromium 對超過 512MB 的 URL 提出異議，而 WebKit（Safari）對超過 2048MB 的 URL 提出異議。
+  - : 不要求瀏覽器支援任何特定的最大資料長度。例如，Opera 11 瀏覽器將 URL 限制為 65535 字元，因此 Data URL 被限制為 65529 字元（65529 字元為編碼資料的長度，而非來源的長度，若使用純 `data:` 而不指定 MIME 類型）。Firefox 97 版及更新版本支援最大 32MB 的 Data URL（97 版之前的限制接近 256MB）。Chromium 拒絕超過 512MB 的 URL，而 WebKit（Safari）拒絕超過 2048MB 的 URL。
 - 缺乏錯誤處理
   - : 媒體的無效參數，或在指定 `'base64'` 時的拼寫錯誤，會被忽略，但不會提供錯誤訊息。
 - 不支援查詢字串等
-  - : Data URI 的資料部分是不可見的，因此嘗試使用查詢字串（具有語法 `<url>?parameter-data` 的頁面特定參數）只會將查詢字串包含在 Data URI 所表示的資料中。
+  - : Data URL 的資料部分是不可見的，因此嘗試使用查詢字串（具有語法 `<url>?parameter-data` 的頁面特定參數）只會將查詢字串包含在 Data URL 所表示的資料中。
 - 安全性問題
-  - : Data URI 已經與多種安全性問題（例如，網絡釣魚）相關，特別是在瀏覽器的頂層導航中使用時。為了緩解此類問題，現代瀏覽器中阻止對 `data:` URL 的頂層導航。詳情請參見 [Mozilla 安全團隊的這篇博客文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
+  - : Data URL 已經與多種安全性問題（例如，網路釣魚）相關，特別是在瀏覽器的頂層導航中使用時。為了緩解此類問題，現代瀏覽器中阻止對 `data:` URL 的頂層導航。詳情請參見 [Mozilla 安全團隊的這篇博客文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
 
 ## 規範
 
@@ -116,7 +116,7 @@ lots of text…
 ## 參見
 
 - {{Glossary("Base64")}}
-- {{Glossary("Percent-encoding")}}
+- {{Glossary("Percent-encoding", "百分比編碼")}}
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - CSS {{CSSXref("url_value", "&lt;url&gt;")}}
