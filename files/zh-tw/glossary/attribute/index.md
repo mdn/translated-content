@@ -1,5 +1,5 @@
 ---
-title: 標籤屬性
+title: 屬性
 slug: Glossary/Attribute
 l10n:
   sourceCommit: 26635ef6b1a40e538501bd81fdcf98725e14e6ea
@@ -13,9 +13,9 @@ l10n:
 
 許多 HTML 屬性是{{Glossary("Boolean/HTML", "布林屬性")}}。這些屬性的值僅由屬性的存在或不存在來控制。請參閱{{Glossary("Boolean/HTML", "布林屬性")}}以獲取更多資訊。
 
-## 標籤屬性的反射
+## 屬性的反射
 
-標籤屬性可能會被**反射**到一個指定的介面中的屬性，意味著標籤屬性的值可以通過介面屬性來讀取，也能通過設定介面屬性的值來修改標籤屬性的值。
+屬性可能會被**反射**到一個指定的介面中的屬性，意味著屬性的值可以通過介面屬性來讀取，也能通過設定介面屬性的值來修改屬性的值。
 
 例如，`placeholder` 就被反射到了 {{domxref("HTMLInputElement.placeholder")}}。
 
@@ -25,7 +25,7 @@ l10n:
 <input placeholder="Original placeholder" />
 ```
 
-我們可以檢查 {{domxref("HTMLInputElement.placeholder")}} 與標籤屬性之間的反射：
+我們可以檢查 {{domxref("HTMLInputElement.placeholder")}} 與屬性之間的反射：
 
 ```js
 const input = document.querySelector("input");
@@ -33,7 +33,7 @@ const attr = input.getAttributeNode("placeholder");
 console.log(attr.value);
 console.log(input.placeholder); // 輸出與 `attr.value` 一樣的結果
 
-// 修改 placeholder 的值也會修改反射的標籤屬性的值。
+// 修改 placeholder 的值也會修改反射的屬性的值。
 input.placeholder = "Modified placeholder";
 console.log(attr.value); // 打印 `Modified placeholder`
 ```
