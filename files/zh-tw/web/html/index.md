@@ -51,7 +51,7 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
   - : HTML 元素通常是「內聯級」或「區塊級」元素。內聯級元素僅佔據由定義它的標籤界定的空間。區塊級元素佔據其父元素（容器）的整個空間，從而創建一個「區塊框」。
 - [HTML 註釋](/zh-TW/docs/Web/HTML/Comments)
   - : HTML 註釋用於向標記添加說明性註釋或防止瀏覽器解釋文件的特定章節。
-- [ Web 上的媒體類型和格式指南](/zh-TW/docs/Web/Media/Formats)
+- [Web 上的媒體類型和格式指南](/zh-TW/docs/Web/Media/Formats)
   - : {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素允許你在內容中本地播放音訊和視訊媒體，而無需外部軟體支援。
 - [HTML 內容類型](/zh-TW/docs/Web/HTML/Content_categories)
   - : HTML 由幾種內容組成，每種內容允許在某些上下文中使用，而在其他上下文中不允許使用。同樣，每個上下文都有一組它可以包含的其他內容類型以及可以或不能在其中使用的元素。這是這些類型的指南。
