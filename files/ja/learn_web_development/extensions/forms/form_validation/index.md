@@ -125,7 +125,7 @@ input:valid {
 
 {{EmbedLiveSample("Simple_start_file", "100%", 80)}}
 
-始めるにあたって、ハードディスク内の新しいディレクトリーに [GitHub にある　`fruit-start.html` ファイル](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html)のコピーを作成してください。
+始めるにあたって、ハードディスク内の新しいディレクトリーに [GitHub にある `fruit-start.html` ファイル](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html)のコピーを作成してください。
 
 ### required 属性
 
