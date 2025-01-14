@@ -13,7 +13,6 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 
-
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
