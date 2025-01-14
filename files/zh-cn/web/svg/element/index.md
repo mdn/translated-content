@@ -2,7 +2,7 @@
 title: SVG 元素参考
 slug: Web/SVG/Element
 l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+  sourceCommit: 2befe9ec5792e13f720396535a4aa20111be96ef
 ---
 
 {{SVGRef}}
