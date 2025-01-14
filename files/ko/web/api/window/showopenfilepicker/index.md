@@ -1,9 +1,9 @@
 ---
 title: "Window: showOpenFilePicker() 메서드"
+short-title: showOpenFilePicker()
 slug: Web/API/Window/showOpenFilePicker
 l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
-short-title: showOpenFilePicker()
 ---
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}
