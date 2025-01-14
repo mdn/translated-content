@@ -50,7 +50,7 @@ _继承父类 {{domxref("Event")}} 的方法。_
 
 ## 示例
 
-在我们的基础共享线程示例 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/)) 中，我们有两个 HTML 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 worker 文件去执行计算 — 它们都可以访问那个 worker 文件，即使它们（scripts）运行在不同的窗口。
+在我们的基础共享线程示例 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](https://mdn.github.io/simple-shared-worker/)) 中，我们有两个 HTML 页，每一页都用简单的 js 代码去执行简单的计算。不同的脚本使用同一个 worker 文件去执行计算 — 它们都可以访问那个 worker 文件，即使它们（scripts）运行在不同的窗口。
 
 下面的代码片段展示了使用{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}构造器创建一个 `SharedWorker`对象。
 

@@ -11,7 +11,7 @@ slug: Web/HTML/Element/dl
 
 在 HTML5 之前， \<dl> 被大家以定义列表所熟知。
 
-- _[内容分类](/zh-CN/docs/HTML/Content_categories)_ [Flow content](/zh-CN/docs/HTML/Content_categories#Flow_content)(流体内容), 如果`<dl>` 元素的子元素包含一个键值对，则显示其中内容。
+- _[内容分类](/zh-CN/docs/Web/HTML/Content_categories)_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content)(流体内容), 如果`<dl>` 元素的子元素包含一个键值对，则显示其中内容。
 
 1. *允许的内容*一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。
 
@@ -21,7 +21,7 @@ slug: Web/HTML/Element/dl
 
 ## 属性
 
-该元素包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
@@ -137,7 +137,7 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 
 请不要将该元素（也不要用 {{HTMLElement("ul")}} 元素）用来在页面创建具有缩进效果的内容。虽然这样的结果样式看上去没问题，但是，这是很糟糕的做法，并且语义也不清晰。
 
-要改变描述列表中描述的缩进量，请使用 [CSS](/zh-CN/docs/CSS) {{cssxref("margin")}} 属性。
+要改变描述列表中描述的缩进量，请使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref("margin")}} 属性。
 
 ## 规范
 

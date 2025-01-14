@@ -39,4 +39,4 @@ document.body.appendChild(documentFragment);
 
 ## Voir aussi
 
-- [Index des interfaces DOM](/fr/docs/DOM/DOM_Reference)
+- [Index des interfaces DOM](/fr/docs/Web/API/Document_Object_Model)

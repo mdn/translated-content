@@ -50,7 +50,7 @@ RegExp(patrón[, banderas])
     - `s` («_dotAll_» o punto para todo)
       - : Permite que el punto (`.` coincida con nuevas líneas o no.
     - `u` (unicode)
-      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/DOMString/Binary)).
+      - : Trata el `patrón` como una secuencia de puntos de código Unicode. (Consulta también [Cadenas binarias](/es/docs/Web/API/Window/btoa)).
     - `y` (sticky)
       - : Coincide solo con el índice indicado por la propiedad `lastIndex` de esta expresión regular en la cadena destino. No intenta coincidir con índices posteriores.
 

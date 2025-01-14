@@ -20,7 +20,7 @@ slug: Web/SVG/Attribute/result
 
 下列元素可以使用`result`属性：
 
-- [滤镜元素](/zh-CN/SVG/Element#FilterPrimitive) »
+- [滤镜元素](/zh-CN/docs/Web/SVG/Element#filterprimitive) »
 
 ## 规范
 

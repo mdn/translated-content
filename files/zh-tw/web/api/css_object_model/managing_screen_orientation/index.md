@@ -7,9 +7,9 @@ slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 
 ## 摘要
 
-畫面方向（Screen Orientation）與[裝置方向（Device Orientation）](/zh-TW/docs/WebAPI/Detecting_device_orientation)略有不同。有時甚至裝置本身不具備方向偵測功能，但裝置的螢幕仍搭載方向功能。如果裝置可測知本身的方向又能控制畫面方向，就能隨時配合 Web Apps 而達到最佳效果。
+畫面方向（Screen Orientation）與[裝置方向（Device Orientation）](/zh-TW/docs/Web/API/Device_orientation_events/Detecting_device_orientation)略有不同。有時甚至裝置本身不具備方向偵測功能，但裝置的螢幕仍搭載方向功能。如果裝置可測知本身的方向又能控制畫面方向，就能隨時配合 Web Apps 而達到最佳效果。
 
-現有 2 種方法可處理畫面的方向，但均需搭配 CSS 與 JavaScript。第一種方法就是方向的 [Media Query](/zh-TW/docs/CSS/Media_queries#orientation)。根據瀏覽器視窗為橫放（寬度大於高度）或直放（高度大於寬度）狀態，而透過 CSS 調整網頁內容的配置。
+現有 2 種方法可處理畫面的方向，但均需搭配 CSS 與 JavaScript。第一種方法就是方向的 [Media Query](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)。根據瀏覽器視窗為橫放（寬度大於高度）或直放（高度大於寬度）狀態，而透過 CSS 調整網頁內容的配置。
 
 第二種方法就是 JavaScript Screen Orientation API，可取得畫面目前的方向並進一步鎖定。
 
@@ -152,7 +152,7 @@ screen.lockOrientation("landscape");
 
 ## Firefox OS and Android: Orientation lock using the manifest
 
-For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/zh-TW/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
+For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) specific way to lock orientation, you can set the [orientation](/zh-TW/docs/Web/Apps/Build/Manifest#orientation) field in app's your manifest file, for example:
 
 ```json
 "orientation": "portrait"
@@ -164,5 +164,5 @@ For a Firefox OS and Firefox Android (soon to work on Firefox desktop too) speci
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [方向的 Media Query](/zh-TW/docs/CSS/Media_queries#orientation)
-- [Firefox 3.5 的 Media Queries 簡介](http://hacks.mozilla.org/2009/06/media-queries/)
+- [方向的 Media Query](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [Firefox 3.5 的 Media Queries 簡介](https://hacks.mozilla.org/2009/06/media-queries/)

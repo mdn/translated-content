@@ -56,12 +56,12 @@ O evento `mousedown` é ativado quando um botão de um dispositivo apontador é 
 
 ## Veja também
 
-- [`mouseup`](/pt-BR/docs/Web/Events/mouseup)
-- [`mousemove`](/pt-BR/docs/Web/Events/mousemove)
+- [`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event)
 - [`click`](/pt-BR/docs/Web/API/Element/click_event)
-- [`dblclick`](/pt-BR/docs/Web/Events/dblclick)
+- [`dblclick`](/pt-BR/docs/Web/API/Element/dblclick_event)
 - [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event)
-- [`mouseout`](/pt-BR/docs/Web/Events/mouseout)
+- [`mouseout`](/pt-BR/docs/Web/API/Element/mouseout_event)
 - [`mouseenter`](/pt-BR/docs/Web/API/Element/mouseenter_event)
-- [`mouseleave`](/pt-BR/docs/Web/Events/mouseleave)
-- [`contextmenu`](/pt-BR/docs/Web/Events/contextmenu)
+- [`mouseleave`](/pt-BR/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/pt-BR/docs/Web/API/Element/contextmenu_event)

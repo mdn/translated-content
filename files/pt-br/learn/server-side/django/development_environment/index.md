@@ -36,7 +36,7 @@ O ambiente de desenvolvimento é uma instalação do Django em seu computador lo
 
 A principal ferramenta que Django fornece é um conjunto de scripts Python para criar e trabalhar com projetos Django, junto com um simples _webserver de desenvolvimento_ que você pode usar para testar localmente (i.e. no seu computador, não em um web server externo) aplicações web Django no seu navegador.
 
-Existem outras ferramentas secundárias que fazem parte do ambiente de desenvolvimento que não cobriremos aqui. Isso inclui coisas como um [editor de texto](/pt-BR/docs/Learn/Common_questions/Available_text_editors) ou IDE para edição de código, e uma ferramenta pra gerenciamento do controle de origem de códigos (como o [Git](https://git-scm.com/)) para administrar com segurança as diferentes versões de seu sistema. Nós estamos assumindo que você já tem um editor de texto instalado.
+Existem outras ferramentas secundárias que fazem parte do ambiente de desenvolvimento que não cobriremos aqui. Isso inclui coisas como um [editor de texto](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors) ou IDE para edição de código, e uma ferramenta pra gerenciamento do controle de origem de códigos (como o [Git](https://git-scm.com/)) para administrar com segurança as diferentes versões de seu sistema. Nós estamos assumindo que você já tem um editor de texto instalado.
 
 ### Quais são as opções de instalação do Django?
 
@@ -50,7 +50,7 @@ Django é extremamente flexível em termos de como e onde ele pode ser instalado
 Cada opção requer leves diferenças de configuração e instalação. As subseções abaixo explicam algumas de suas escolhas. No resto do artigo nós iremos mostrar como instalar o Django em um pequeno número de sistemas operacionais. No resto do módulo, assumiremos que você tenha instalado o Django em sua máquina.
 
 > [!NOTE]
-> Outras possíveis opções de instalação são cobertas pela documentação oficial do Django. Nós linkamos os [documents adequados abaixo](#Veja_também).
+> Outras possíveis opções de instalação são cobertas pela documentação oficial do Django. Nós linkamos os [documents adequados abaixo](#veja_também).
 
 #### Quais sistemas operacionais suportam Django?
 
@@ -184,7 +184,7 @@ pip3 list
 
 ## Usando Django em um ambiente virtual Python
 
-As bibliotecas que nós iremos usar para criar nossos ambientes virtuais são [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux e macOS) e [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), sendo que ambas usam a ferramenta [virtualenv](/pt-BR/docs/Python/Virtualenv). as bibliotecas criam uma interface consistente para manusear interfaces em todas plataformas;
+As bibliotecas que nós iremos usar para criar nossos ambientes virtuais são [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux e macOS) e [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), sendo que ambas usam a ferramenta [virtualenv](https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/virtualenv). as bibliotecas criam uma interface consistente para manusear interfaces em todas plataformas;
 
 ### Instalando o software de ambiente virtual
 

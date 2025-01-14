@@ -31,10 +31,10 @@ De plus `<flex>` peut se référer à [une longueur flexible](/fr/docs/Web/CSS/f
 ### En lire plus
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/) (en)_
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide Flexbox CSS : _[Les liens entre flexbox et les autres méthodes de disposition](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Liens_entre_flexbox_et_les_autres_dispositions)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
-- Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordering_Flex_Items)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)_
-- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)_
-- Guide Flexbox CSS : _[Cas d'utilisation classiques de flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox)_
+- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guide Flexbox CSS : _[Les liens entre flexbox et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)_
+- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
+- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
+- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
+- Guide Flexbox CSS : _[Cas d'utilisation classiques de flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)_

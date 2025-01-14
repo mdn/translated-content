@@ -49,9 +49,9 @@ console.log(ingredientsList[1].list);
 
 그러나 위 코드의 객체는 [직렬화](/ko/docs/Glossary/Serialization)할 수 있을 만큼 단순하지만, 많은 JavaScript 객체는 전혀 직렬화할 수 없습니다. 예를 들어, [함수](/ko/docs/Web/JavaScript/Guide/Functions) (클로저 포함), [심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol), [HTML DOM API](/ko/docs/Web/API/HTML_DOM_API)에서 HTML 요소를 나타내는 객체, 재귀 데이터, 그리고 많은 다른 경우가 있습니다. 이 경우 객체를 직렬화하기 위해 `JSON.stringify()`를 호출하면 실패할 것입니다. 그래서 이러한 객체의 깊은 복사본을 만드는 방법은 없습니다.
 
-Web API [`structuredClone()`](/ko/docs/Web/API/structuredClone)은 또한 깊은 복사본을 만들고 원본에서 [전송가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 복사하는 대신 새로운 복사본으로 전송할 수 있는 장점이 있습니다. 또한 `Error`와 같은 더 많은 데이터 타입을 처리합니다. 그러나 `structuredClone()`은 JavaScript 언어 자체의 기능이 아니라 web API를 실행하는 브라우저 및 다른 JavaScript 호스트의 기능입니다. 그리고 직렬화할 수 없는 객체를 복제하기 위해 `structuredClone()`을 호출하면, `JSON.stringify()`를 호출해 직렬화하는 것과 같은 방식으로 실패할 것입니다.
+Web API [`structuredClone()`](/ko/docs/Web/API/Window/structuredClone)은 또한 깊은 복사본을 만들고 원본에서 [전송가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 복사하는 대신 새로운 복사본으로 전송할 수 있는 장점이 있습니다. 또한 `Error`와 같은 더 많은 데이터 타입을 처리합니다. 그러나 `structuredClone()`은 JavaScript 언어 자체의 기능이 아니라 web API를 실행하는 브라우저 및 다른 JavaScript 호스트의 기능입니다. 그리고 직렬화할 수 없는 객체를 복제하기 위해 `structuredClone()`을 호출하면, `JSON.stringify()`를 호출해 직렬화하는 것과 같은 방식으로 실패할 것입니다.
 
 ## 같이 보기
 
 - [얕은 복사](/ko/docs/Glossary/Shallow_copy)
-- [`window.structuredClone()`](/ko/docs/Web/API/structuredClone)
+- [`window.structuredClone()`](/ko/docs/Web/API/Window/structuredClone)

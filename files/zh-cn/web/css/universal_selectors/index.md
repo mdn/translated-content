@@ -45,7 +45,7 @@ slug: Web/CSS/Universal_selectors
 {{EmbedLiveSample('示例')}}
 
 > [!NOTE]
-> 笔者不推荐使用通配选择器，因为它是[性能最低的一个 CSS 选择器](http://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/).
+> 笔者不推荐使用通配选择器，因为它是[性能最低的一个 CSS 选择器](https://www.stevesouders.com/blog/2009/06/18/simplifying-css-selectors/).
 
 ## 规范
 

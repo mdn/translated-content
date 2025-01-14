@@ -151,7 +151,7 @@ Redirect permanent / http://www.example.com
 Redirect 301 / http://www.example.com
 ```
 
-Также модуль [mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) может использоваться для создания перенаправлений. Они более гибкие, но сложнее в использовании.
+Также модуль [mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) может использоваться для создания перенаправлений. Они более гибкие, но сложнее в использовании.
 
 ### Nginx
 

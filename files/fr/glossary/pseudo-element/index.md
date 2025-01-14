@@ -11,4 +11,4 @@ En CSS, un sélecteur de **pseudo-élément** applique des styles à des parties
 
 ### Référence technique
 
-- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments)
+- [Pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)

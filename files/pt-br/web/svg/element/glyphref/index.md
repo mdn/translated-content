@@ -15,9 +15,9 @@ O elemento `glyphRef` fornece um único glifo possível referenciando a substitu
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
+- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -33,7 +33,7 @@ O elemento `glyphRef` fornece um único glifo possível referenciando a substitu
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGGlyphRefElement`](/pt-BR/DOM/SVGGlyphRefElement).
+Este elemento implementa a interface do [`SVGGlyphRefElement`](/pt-BR/docs/DOM/SVGGlyphRefElement).
 
 ## Compatibilidade com navegadores
 

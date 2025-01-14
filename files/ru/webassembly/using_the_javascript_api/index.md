@@ -5,7 +5,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-Если вы уже [компилировали модуль из другого языка, используя такие инструменты как Emscripten](/ru/docs/WebAssembly/C_to_wasm), или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.
+Если вы уже [компилировали модуль из другого языка, используя такие инструменты как Emscripten](/ru/docs/WebAssembly/C_to_Wasm), или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.
 
 > [!NOTE]
 > Если вы незнакомы с фундаментальными понятиями, упомянутыми в этой статье, и вам нужны дополнительные объяснения, то вам нужно сначала прочитать про [Основы WebAssembly](/ru/docs/WebAssembly/Concepts).
@@ -21,7 +21,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 
 1. Для начала нам нужен wasm-модуль! Возьмите наш файл [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) и сохраните копию в новой директории на своём локальном компьютере.
 2. Далее, давайте создадим в той же директории что и wasm-модуль простой HTML-файл и назовём его `index.html` (можно использовать [HTML шаблон](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) если вы этого ещё не сделали).
-3. Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
+3. Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)):
 
    ```
    (module
@@ -130,7 +130,7 @@ memory.grow(1);
 > [!NOTE]
 > Так как размер объекта {{domxref("ArrayBuffer")}} неизменен, после успешного вызова метода {{jsxref("Memory.prototype.grow()")}} свойство buffer объекта памяти будет возвращать уже новый объект {{domxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде "отсоединёнными", или отключёнными от низкоуровневой памяти, к которой они ранее относились.
 
-Подобно функциям, диапазоны линейной памяти могут быть импортированы или определены внутри модуля. Также, модуль имеет возможность экспортировать свою память. Это означает, что JavaScript-код может получить доступ к объекту памяти WebAssembly либо c помощью создания нового объекта через конструктор `WebAssembly.Memory` и передачи его в импортируемый объект, либо с помощью получения объекта памяти через экспортируемый объект (через [`Instance.prototype.exports`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
+Подобно функциям, диапазоны линейной памяти могут быть импортированы или определены внутри модуля. Также, модуль имеет возможность экспортировать свою память. Это означает, что JavaScript-код может получить доступ к объекту памяти WebAssembly либо c помощью создания нового объекта через конструктор `WebAssembly.Memory` и передачи его в импортируемый объект, либо с помощью получения объекта памяти через экспортируемый объект (через [`Instance.prototype.exports`](/ru/docs/WebAssembly/JavaScript_interface/Instance/exports)).
 
 ### Более сложный пример
 
@@ -164,7 +164,7 @@ memory.grow(1);
    console.log(sum);
    ```
 
-Обратите внимание на то, что мы создаём представление данных {{domxref("Uint32Array")}} с помощью свойства buffer объекта памяти ([`Memory.prototype.buffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), а не самого объекта памяти.
+Обратите внимание на то, что мы создаём представление данных {{domxref("Uint32Array")}} с помощью свойства buffer объекта памяти ([`Memory.prototype.buffer`](/ru/docs/WebAssembly/JavaScript_interface/Memory/buffer)), а не самого объекта памяти.
 
 Импорт памяти почти такой же как импорт функций, только вместо JavaScript функций передаются объекты памяти. Импорт памяти полезен по двум причинам:
 
@@ -184,7 +184,7 @@ memory.grow(1);
 
 Когда приходит время для вызова указателя на функцию, вызывающая сторона WebAssembly предоставляет индекс, который затем может быть проверен на безопасность по таблице перед индексацией и вызовом ссылки на индексированную функцию. Таким образом, таблицы в настоящее время являются лучшим низкоуровневым примитивом, используемым для безопасной и удобной компиляции низкоуровневых возможностей языка программирования.
 
-Таблицы могут изменятся с помощью метода [`Table.prototype.set()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set), который обновляет одно из значений в таблице, и метода [`Table.prototype.grow()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), который увеличивает количество значений, которое может быть размещено в таблице. Это позволяет этому "непрямо-вызываемому набору функций" изменяться со временем, что необходимо для [техник динамического связывания](http://webassembly.org/docs/dynamic-linking/). Изменения немедленно становятся доступными с помощью метода [`Table.prototype.get()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) в JavaScript-коде и wasm-модулях.
+Таблицы могут изменятся с помощью метода [`Table.prototype.set()`](/ru/docs/WebAssembly/JavaScript_interface/Table/set), который обновляет одно из значений в таблице, и метода [`Table.prototype.grow()`](/ru/docs/WebAssembly/JavaScript_interface/Table/grow), который увеличивает количество значений, которое может быть размещено в таблице. Это позволяет этому "непрямо-вызываемому набору функций" изменяться со временем, что необходимо для [техник динамического связывания](http://webassembly.org/docs/dynamic-linking/). Изменения немедленно становятся доступными с помощью метода [`Table.prototype.get()`](/ru/docs/WebAssembly/JavaScript_interface/Table/get) в JavaScript-коде и wasm-модулях.
 
 ### Пример таблицы
 
@@ -214,7 +214,7 @@ memory.grow(1);
    console.log(tbl.get(1)()); // 42
    ```
 
-Этот код получает доступ к каждой ссылке на функцию, которая размещена в таблице, после чего вызывает её и выводит хранимое значение в консоль. Обратите внимание, что каждая ссылка на функцию получена с помощью вызова метода [`Table.prototype.get()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get), после чего мы добавили пару круглых скобок для вызова самой функции.
+Этот код получает доступ к каждой ссылке на функцию, которая размещена в таблице, после чего вызывает её и выводит хранимое значение в консоль. Обратите внимание, что каждая ссылка на функцию получена с помощью вызова метода [`Table.prototype.get()`](/ru/docs/WebAssembly/JavaScript_interface/Table/get), после чего мы добавили пару круглых скобок для вызова самой функции.
 
 > [!NOTE]
 > Полную демонстрацию можно посмотреть в файле [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) (см. её также [вживую](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) — эта версия использует функцию [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js).
@@ -285,7 +285,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 - Один экземпляр модуля может использовать от 0 до 1 объекта таблицы - это "адресное пространство для функций" экземпляра модуля используется для реализации С/С++ указателей на функции. Будущие версии WebAssembly позволят иметь 0–N экземпляров таблиц на один экземпляр модуля.
 - Один объект памяти или объект таблицы может быть использован в 0-N экземплярах модулей - эти все экземпляры будут разделять одно и то же адресное пространство, позволяя выполнять [динамическое связывание](http://webassembly.org/docs/dynamic-linking).
 
-Чтобы ознакомится с множественностью в действии, смотрите нашу объясняющую статью [Изменяющиеся таблицы и динамическое связывание](/ru/docs/WebAssembly/Understanding_the_text_format#Mutating_tables_and_dynamic_linking).
+Чтобы ознакомится с множественностью в действии, смотрите нашу объясняющую статью [Изменяющиеся таблицы и динамическое связывание](/ru/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
 
 ## Резюме
 

@@ -5,8 +5,6 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 {{CSSRef}}
 
-« [CSS](/zh-TW/CSS) « [理解 CSS 的 z-index](/zh-TW/CSS/Understanding_z-index)
-
 ### 堆疊環境範例 1
 
 讓我們先從一個基本的例子。根堆疊情況下，我們有兩個 div（DIV＃1 和＃DIV 3），兩種相對定位的，但是如果沒有的 z-index 屬性。裡面 DIV＃1 有一個絕對定位的 div＃2，而在 DIV＃3 有一個絕對定位的 div＃4，雙方沒有的 z-index 屬性。
@@ -111,9 +109,9 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 ### 參見
 
-- [無堆疊的 z-index](/zh-TW/CSS/Understanding_z-index/Stacking_without_z-index)：默認規則疊加
-- [堆疊和浮動](/zh-TW/CSS/Understanding_z-index/Stacking_floating_elements)：如何浮動元素的處理方式
-- [添加 z-index](/zh-TW/CSS/Understanding_z-index/Using_z-index)：使用的 z-index 來改變默認的堆疊
-- [堆疊背景](/zh-TW/CSS/Understanding_z-index/Stacking_context)：在堆疊環境票據
-- [堆疊環境例子 2](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_2)：在所有層面上 2 級 HTML 層次，Z 指數
-- [堆疊上下文例 3](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_3)：3 級的 HTML 等級，在第二級上的 z 索引
+- [無堆疊的 z-index](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)：默認規則疊加
+- [堆疊和浮動](/zh-TW/docs/CSS/Understanding_z-index/Stacking_floating_elements)：如何浮動元素的處理方式
+- [添加 z-index](/zh-TW/docs/CSS/Understanding_z-index/Using_z-index)：使用的 z-index 來改變默認的堆疊
+- [堆疊背景](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)：在堆疊環境票據
+- [堆疊環境例子 2](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：在所有層面上 2 級 HTML 層次，Z 指數
+- [堆疊上下文例 3](/zh-TW/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：3 級的 HTML 等級，在第二級上的 z 索引

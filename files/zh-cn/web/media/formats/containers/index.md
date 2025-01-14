@@ -534,7 +534,7 @@ MPEG-1 和 MPEG-2 的主要区别在于媒体数据格式而非容器格式。MP
 
 虽然 Ogg 已经存在了很长时间，但它从未获得广泛的支持，因此无法成为媒体容器的首选。通常情况下，你最好使用 WebM，不过有时 Ogg 也能派上用场，比如当你希望支持尚未支持 WebM 的旧版本 Firefox 和 Chrome 浏览器时。例如，Firefox 3.5 和 3.6 支持 Ogg，但不支持 WebM。
 
-有关 Ogg 及其编解码器的更多信息，请参阅 [Theora Cookbook](http://en.flossmanuals.net/ogg-theora/)。
+有关 Ogg 及其编解码器的更多信息，请参阅 [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/)。
 
 | 音频        | 视频        |
 | ----------- | ----------- |

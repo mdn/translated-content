@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/dir
 
 {{HTMLSidebar("Global_attributes")}}
 
-El [atributo global](/es/docs/Web/HTML/Atributos_Globales) dir es un atributo enumerado que indica la direccionalidad del texto de los elementos . Puede tener los siguientes valores :
+El [atributo global](/es/docs/Web/HTML/Global_attributes) dir es un atributo enumerado que indica la direccionalidad del texto de los elementos . Puede tener los siguientes valores :
 
 - `ltr`, significa _izquierda_ a _derecha_ y es usado para los lenguajes que son escritos de izquierda a derecha ( como el Inglés ) .
 - `rtl`, significa _derecha_ a _izquierda_ y es usado para los lenguajes que son escritos de la derecha a la izquierda (como el árabe ) .

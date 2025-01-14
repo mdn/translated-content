@@ -13,7 +13,7 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ## ブラウザーが利用するモードを決定する方法
 
-[HTML](/ja/docs/HTML) 文書については、ブラウザーは文書の先頭にある DOCTYPE を使用して、後方互換モードで処理するか、標準準拠モードで処理するかを決定します。ページで確実に完全標準準拠モードが使用されるようにするには、以下のサンプルのような DOCTYPE を使用するようにしてください。
+[HTML](/ja/docs/Web/HTML) 文書については、ブラウザーは文書の先頭にある DOCTYPE を使用して、後方互換モードで処理するか、標準準拠モードで処理するかを決定します。ページで確実に完全標準準拠モードが使用されるようにするには、以下のサンプルのような DOCTYPE を使用するようにしてください。
 
 ```html
 <!doctype html>
@@ -36,7 +36,7 @@ HTML5 では、DOCTYPE の用途は完全標準準拠モードを適用させる
 
 ### XHTML
 
-`Content-Type` HTTP ヘッダーで `application/xhtml+xml` を使用して、ページを [XHTML](/ja/docs/XHTML) として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は `application/xhtml+xml` でページを提供すると、ページを表示せずに未知の形式のファイルを[ダウンロードするダイアログボックス](/ja/docs/XHTML#Support)を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
+`Content-Type` HTTP ヘッダーで `application/xhtml+xml` を使用して、ページを [XHTML](/ja/docs/Glossary/XHTML) として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は `application/xhtml+xml` でページを提供すると、ページを表示せずに未知の形式のファイルを[ダウンロードするダイアログボックス](/ja/docs/Glossary/XHTML#support)を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
 
 `text/html` の MIME タイプを使用して XHTML 形式のコンテンツを提供する場合は、ブラウザーが HTML として読み込みますので、標準準拠モードを使用するために DOCTYPE が必要です。
 

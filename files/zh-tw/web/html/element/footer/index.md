@@ -51,7 +51,7 @@ footer {
 
 ## 無障礙議題
 
-在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics#路標地標)未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
+在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#路標地標)未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
 
 - 相關：[WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 

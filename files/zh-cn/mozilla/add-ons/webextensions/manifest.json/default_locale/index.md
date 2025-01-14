@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 
 如果扩展名包含\_locales 目录，则该 key 必须存在，否则不得存在。它标识 \_locales 的一个子目录，该子目录将用于查找扩展名的默认字符串。
 
-见 [国际化](/zh-CN/Add-ons/WebExtensions/Internationalization) 。
+见 [国际化](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization) 。
 
 ## 范例
 

@@ -65,5 +65,5 @@ for (let i = 0; i < array.length; i++) {
 ## Voir aussi
 
 - [L'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API)
-- [`crypto`](/fr/docs/Web/API/crypto_property) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto)
+- [`crypto`](/fr/docs/Web/API/Window/crypto) qui permet d'obtenir un objet [`Crypto`](/fr/docs/Web/API/Crypto)
 - [`Math.random()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random), une fonction qui permet de générer des nombres aléatoires à des fins non-cryptographiques.

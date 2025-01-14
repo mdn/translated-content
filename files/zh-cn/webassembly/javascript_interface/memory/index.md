@@ -36,7 +36,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 
 ## `Memory` 实例
 
-所有 `Memory` 实例都继承自 `Memory()` 构造函数的 [原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype) — 这个原型可被修改并影响到所有的 `Memory` 实例。
+所有 `Memory` 实例都继承自 `Memory()` 构造函数的 [原型对象](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) — 这个原型可被修改并影响到所有的 `Memory` 实例。
 
 ### 实例属性
 

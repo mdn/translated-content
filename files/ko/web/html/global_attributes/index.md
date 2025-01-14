@@ -14,7 +14,7 @@ slug: Web/HTML/Global_attributes
 - `xml:lang`과 `xml:base`는 XHTML 명세에서 상속받은 것으로 더 사용하지 않지만, 호환성 유지를 위해 아직 존재합니다.
 - 여러 개의 **[`aria-\*`](/ko/docs/Web/Accessibility/ARIA)** 특성은 접근성 향상을 위해 사용됩니다.
 
-- [이벤트 처리기](/ko/docs/Web/Guide/Events/Event_handlers) 특성: **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
+- [이벤트 처리기](/ko/docs/Web/Events/Event_handlers) 특성: **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
 
 ## 전역 특성 목록
 
@@ -38,7 +38,7 @@ slug: Web/HTML/Global_attributes
 - [`dir`](/ko/docs/Web/HTML/Global_attributes/dir)
   - : 요소의 쓰기 방향을 나타내는 열거형 특성입니다.
 - [`draggable`](/ko/docs/Web/HTML/Global_attributes/draggable)
-  - : [Drag and Drop API](/ko/docs/Web/API/HTML_드래그_앤_드롭_API)를 사용해 요소를 드래그할 수 있는지 나타내는 열거형 특성입니다.
+  - : [Drag and Drop API](/ko/docs/Web/API/HTML_Drag_and_Drop_API)를 사용해 요소를 드래그할 수 있는지 나타내는 열거형 특성입니다.
 - [`exportparts`](/ko/docs/Web/HTML/Global_attributes/exportparts) {{experimental_inline}}
   - : 중첩 섀도우 트리에서 섀도우 파트를 전이적으로 라이트 파트에 내보낼 때 사용합니다.
 - [`hidden`](/ko/docs/Web/HTML/Global_attributes/hidden)
@@ -46,9 +46,9 @@ slug: Web/HTML/Global_attributes
 - [`id`](/ko/docs/Web/HTML/Global_attributes/id)
   - : 문서 전체에서 유일해야 하는 고유 식별자(ID)를 정의합니다. (프래그먼트 식별자를 사용한) 링크, 스크립트, 스타일 적용 시 요소를 식별할 때 사용합니다.
 - [`inputmode`](/ko/docs/Web/HTML/Global_attributes/inputmode)
-  - : 사용자가 요소나 요소의 콘텐츠를 편집할 때, 브라우저가 제공해야 하는 가상 키보드 설정을 알려줍니다. 주로 {{htmlelement("input")}} 요소에 사용하지만, [`contenteditable`](/ko/docs/Web/HTML/Global_attributes#contenteditable) 특성을 가진 요소라면 종류 불문하고 사용할 수 있습니다.
+  - : 사용자가 요소나 요소의 콘텐츠를 편집할 때, 브라우저가 제공해야 하는 가상 키보드 설정을 알려줍니다. 주로 {{htmlelement("input")}} 요소에 사용하지만, [`contenteditable`](#contenteditable) 특성을 가진 요소라면 종류 불문하고 사용할 수 있습니다.
 - [`is`](/ko/docs/Web/HTML/Global_attributes/is)
-  - : 표준 HTML 요소가 사용자 정의 기본 요소처럼 동작하도록 지정합니다. (자세한 내용은 [사용자 정의 요소 사용하기](/ko/docs/Web/Web_Components/Using_custom_elements)를 참고하세요[)](/ko/docs/Web/Web_Components/Using_custom_elements)
+  - : 표준 HTML 요소가 사용자 정의 기본 요소처럼 동작하도록 지정합니다. (자세한 내용은 [사용자 정의 요소 사용하기](/ko/docs/Web/API/Web_components/Using_custom_elements)를 참고하세요[)](/ko/docs/Web/API/Web_components/Using_custom_elements)
 
 > **참고:**`item*` 특성은 [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata)의 일부입니다.
 
@@ -59,7 +59,7 @@ slug: Web/HTML/Global_attributes
 - [`itemref`](/ko/docs/Web/HTML/Global_attributes/itemref)
   - : `itemscope` 특성을 가진 요소에 속하지 않는 특성들(properties)은 `itemref`를 사용하여 item에 연결할 수 있습니다. 여기에는 문서 내의 다른 위치에 있는 추가적인 특성을 갖는 요소 id(`itemid`s 가 아닌)목록이 제공됩니다.
 - [`itemscope`](/ko/docs/Web/HTML/Global_attributes/itemscope)
-  - : `itemscope`은 (일반적으로) [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)과 같이 사용하여 블록에 포함된 HTML이 특정 item에 대한 것임을 나타냅니다. `itemscope`은 item을 생성하고 그 item에 연결된 `itemtype`의 범위를 정의합니다. `itemtype`은 item과 특성 컨텍스트를 설명하는 ([schema.org](https://schema.org/)와 같은) 어휘(vocabulary)에 대한 유효한 URL입니다.
+  - : `itemscope`은 (일반적으로) [`itemtype`](#itemtype)과 같이 사용하여 블록에 포함된 HTML이 특정 item에 대한 것임을 나타냅니다. `itemscope`은 item을 생성하고 그 item에 연결된 `itemtype`의 범위를 정의합니다. `itemtype`은 item과 특성 컨텍스트를 설명하는 ([schema.org](https://schema.org/)와 같은) 어휘(vocabulary)에 대한 유효한 URL입니다.
 - [`itemtype`](/ko/docs/Web/HTML/Global_attributes/itemtype)
   - : 데이터 구조에서 `itemprop`s (item properties)을 정의하는 데 사용할 단어의 URL을 지정합니다. [`itemscope`](/ko/docs/Web/HTML/Global_attributes/itemscope)은 데이터 구조 내에서 `itemtype`에 의해 설정된 어휘가 활성화되는 범위를 설정하는 데 사용됩니다.
 - [`lang`](/ko/docs/Web/HTML/Global_attributes/lang)
@@ -67,7 +67,7 @@ slug: Web/HTML/Global_attributes
 - [`part`](/ko/docs/Web/HTML/Global_attributes/part)
   - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
 - [`slot`](/ko/docs/Web/HTML/Global_attributes/slot)
-  - : 요소에 [shadow DOM](/ko/docs/Web/Web_Components/Shadow_DOM)의 shadow tree에 있는 슬롯을 할당합니다: `slot` 특성을 가진 요소는 [`name`](/ko/docs/Web/HTML/Element/slot#name) 특성의 값이 해당 `slot` 특성의 값과 일치하는 {HTMLElement("slot")}} 요소가 생성한 슬롯에 할당됩니다.
+  - : 요소에 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM)의 shadow tree에 있는 슬롯을 할당합니다: `slot` 특성을 가진 요소는 [`name`](/ko/docs/Web/HTML/Element/slot#name) 특성의 값이 해당 `slot` 특성의 값과 일치하는 {HTMLElement("slot")}} 요소가 생성한 슬롯에 할당됩니다.
 - [`spellcheck`](/ko/docs/Web/HTML/Global_attributes/spellcheck)
   - : 요소의 맞춤법 검사 여부를 지정합니다.
 - [`style`](/ko/docs/Web/HTML/Global_attributes/style)

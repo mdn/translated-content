@@ -7,9 +7,9 @@ slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 
 ## Summary
 
-Screen orientation 은 [device orientation](/ko/docs/WebAPI/Detecting_device_orientation) 과는 조금 다르다. 비록 장치가 방향을 감지 못하더라도 화면은 언제나 방향을 가지고 있다. 그리고 만약 장치가 방향을 알 수 있더라도 웹 어플리케이션의 인터페이스를 유지하거나 적응하기 위해 화면의 방향을 조정하는 능력을 갖는게 좋다.
+Screen orientation 은 [device orientation](/ko/docs/Web/API/Device_orientation_events/Detecting_device_orientation) 과는 조금 다르다. 비록 장치가 방향을 감지 못하더라도 화면은 언제나 방향을 가지고 있다. 그리고 만약 장치가 방향을 알 수 있더라도 웹 어플리케이션의 인터페이스를 유지하거나 적응하기 위해 화면의 방향을 조정하는 능력을 갖는게 좋다.
 
-화면의 방향을 다루기 위한 여러 방법이 있는데, CSS 와 JavaScript 이다. 첫 번째는 [orientation media query](/ko/docs/CSS/Media_queries#orientation) 이다. 이것은 내용이 CSS를 사용해서 레이아웃을 조정하게 하는데, 브라우저 창이 가로 모드 (너비가 높이보다 큼) 또는 세로모드 (높이가 너비보다 큼) 여부에 달려 있다.
+화면의 방향을 다루기 위한 여러 방법이 있는데, CSS 와 JavaScript 이다. 첫 번째는 [orientation media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) 이다. 이것은 내용이 CSS를 사용해서 레이아웃을 조정하게 하는데, 브라우저 창이 가로 모드 (너비가 높이보다 큼) 또는 세로모드 (높이가 너비보다 큼) 여부에 달려 있다.
 
 두번째 방법은 JavaScript Screen orientation API 인데 이것은 화면의 현재 방향을 구하고 잠그는데 사용할 수 있다.
 
@@ -156,5 +156,5 @@ screen.lockOrientation("landscape");
 - {{domxref("window.screen.lockOrientation()","screen.lockOrientation()")}}
 - {{domxref("window.screen.unlockOrientation()","screen.unlockOrientation()")}}
 - {{domxref("window.screen.onorientationchange","screen.onorientationchange")}}
-- [The orientation media query](/ko/docs/CSS/Media_queries#orientation)
-- [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)
+- [The orientation media query](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [A short introduction to media queries in Firefox 3.5](https://hacks.mozilla.org/2009/06/media-queries/)

@@ -315,7 +315,7 @@ _不止一个“红色”可以被认为是“饱和”的红色_。例如，颜
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [无障碍学习路径](/zh-CN/docs/Learn/Accessibility)
+- [无障碍学习路径](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - CSS [`color`](/zh-CN/docs/Web/CSS/color) 属性
 - [`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型
 - [癫痫和身体反应的 web 无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)

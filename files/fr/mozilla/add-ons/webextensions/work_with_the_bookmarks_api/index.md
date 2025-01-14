@@ -215,4 +215,4 @@ browser.windows.onFocusChanged.addListener(updateActiveTab);
 
 ## Apprendre encore plus
 
-Si vous voulez en savoir plus, consultez la [référence de l'API Bookmarks](/fr/Add-ons/WebExtensions/API/bookmarks).
+Si vous voulez en savoir plus, consultez la [référence de l'API Bookmarks](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks).

@@ -5,14 +5,14 @@ slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 
 {{DefaultAPISidebar("DOM")}}
 
-L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds [`Element`](/fr/docs/Web/API/element) du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.
+L'API Selectors fournit des méthodes simples et rapides pour retrouver les noeuds [`Element`](/fr/docs/Web/API/Element) du DOM par correspondance avec un jeu de sélecteurs. C'est beaucoup plus rapide que les techniques passées, pour lesquelles il était nécessaire, par exemple, d'utiliser une boucle en code JavaScript pour localiser l'élément spécifique que l'on devait trouver.
 
 ## L'interface NodeSelector
 
-Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant en oeuvre les interfaces [`Document`](/fr/docs/Web/API/document), [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) ou [`Element`](/fr/docs/Web/API/element) :
+Cette spécification ajoute deux nouvelles méthodes à tous les objets mettant en oeuvre les interfaces [`Document`](/fr/docs/Web/API/Document), [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) ou [`Element`](/fr/docs/Web/API/Element) :
 
 - `querySelector`
-  - : Renvoie le premier noeud [`Element`](/fr/docs/Web/API/element) correspondant dans la sous-arborescence du noeud. Si aucun noeud correspondant n'est trouvé, `null` est renvoyé.
+  - : Renvoie le premier noeud [`Element`](/fr/docs/Web/API/Element) correspondant dans la sous-arborescence du noeud. Si aucun noeud correspondant n'est trouvé, `null` est renvoyé.
 - `querySelectorAll`
   - : Renvoie une [`NodeList`](/fr/docs/Web/API/NodeList) (_liste de noeuds_) contenant tous les noeuds `Element` correspondants dans la sous-arborescence du noeud, ou une `NodeList` vide si aucune correspondance n'a été trouvée.
 
@@ -41,7 +41,7 @@ Vous pouvez utiliser tous les sélecteurs CSS avec les méthodes `querySelector(
 
 ## Voir aussi
 
-- [API Selectors](http://www.w3.org/TR/selectors-api/) (en)
+- [API Selectors](https://www.w3.org/TR/selectors-api/) (en)
 - [`element.querySelector`](/fr/docs/Web/API/Element/querySelector)
 - [`element.querySelectorAll`](/fr/docs/Web/API/Element/querySelectorAll)
 - [`document.querySelector`](/fr/docs/Web/API/Document/querySelector)

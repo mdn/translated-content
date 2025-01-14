@@ -305,7 +305,7 @@ var func = ()
 
 ## Parsing order
 
-箭頭函式的箭頭儘管不是操作符，但藉著[運算子優先等級](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)，箭頭函式有著和普通函式不相同的特殊解析規則。
+箭頭函式的箭頭儘管不是操作符，但藉著[運算子優先等級](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，箭頭函式有著和普通函式不相同的特殊解析規則。
 
 ```js
 let callback;

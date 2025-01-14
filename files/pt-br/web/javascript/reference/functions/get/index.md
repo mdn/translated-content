@@ -26,7 +26,7 @@ slug: Web/JavaScript/Reference/Functions/get
 Note o seguinte quando for trabalhar com a sintaxe _get_:
 
 - Pode haver um identificador que seja um número ou uma string;
-- Deve haver exatamente zero parâmetros (veja [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mais informações)
+- Deve haver exatamente zero parâmetros (veja [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mais informações)
 - Não deve haver mais de um getter para a mesma propriedade nem uma propriedade comum como o mesmo nome do getter (`{ get x() { }, get x() { } }` and `{ x: ..., get x() { } }` são proibidos).
 
 Um getter pode ser removido usando o operador `delete.`
@@ -129,4 +129,4 @@ Para o Firefox, veja também o código do módulo XPCOMUtils.jsm, que define a f
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide
+- [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) in JavaScript Guide

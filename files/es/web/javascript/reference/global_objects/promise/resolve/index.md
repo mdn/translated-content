@@ -71,7 +71,7 @@ console.log("original === cast ? " + (original === cast));
 // valor: 33
 ```
 
-El orden invertido de los registros se debe al hecho de que los _handler_ `then` sean llamados asíncronamente. Vea cómo funciona `then` [aquí](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
+El orden invertido de los registros se debe al hecho de que los _handler_ `then` sean llamados asíncronamente. Vea cómo funciona `then` [aquí](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#return_value).
 
 ### Resolviendo thenables y arrojando Errores
 

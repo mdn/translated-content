@@ -24,11 +24,11 @@ name( [node-set] )
 
 ### 주의
 
-- [QName](http://www.w3.org/TR/REC-xml-names/#NT-QName)은 이름공간 접두사와 지역 이름을 포함하는 노드의 한정된(qualified) 이름입니다.
+- [QName](https://www.w3.org/TR/REC-xml-names/#NT-QName)은 이름공간 접두사와 지역 이름을 포함하는 노드의 한정된(qualified) 이름입니다.
 
 ### 정의
 
-[XPath 1.0 4.1](http://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
 
 ### Gecko 지원
 

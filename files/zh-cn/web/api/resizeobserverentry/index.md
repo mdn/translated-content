@@ -21,7 +21,7 @@ slug: Web/API/ResizeObserverEntry
   - : 对正在观察 {{domxref('Element')}} 或 {{domxref("SVGElement")}} 的引用。
 
 > [!NOTE]
-> 内容盒是放置内容的盒子，即边框盒减去内边距和边框宽度。边框盒包含内容、内边距和边框。更多解释参见[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)。
+> 内容盒是放置内容的盒子，即边框盒减去内边距和边框宽度。边框盒包含内容、内边距和边框。更多解释参见[盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)。
 
 ## 方法
 

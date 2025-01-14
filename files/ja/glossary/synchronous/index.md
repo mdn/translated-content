@@ -14,4 +14,4 @@ slug: Glossary/Synchronous
 ## 関連情報
 
 - {{glossary("Asynchronous")}}
-- [Synchronous and asynchronous requests](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) （[XMLHttpRequest()](/ja/docs/Web/API/XMLHttpRequest) {{glossary("API")}} を用いている）
+- [Synchronous and asynchronous requests](/ja/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) （[XMLHttpRequest()](/ja/docs/Web/API/XMLHttpRequest) {{glossary("API")}} を用いている）

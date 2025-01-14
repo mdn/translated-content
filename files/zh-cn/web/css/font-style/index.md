@@ -104,4 +104,4 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
-- [基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本文本和字体样式](/zh-CN/docs/Learn_web_development/Core/Text_styling/Fundamentals)

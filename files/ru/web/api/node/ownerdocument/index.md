@@ -13,7 +13,7 @@ slug: Web/API/Node/ownerDocument
 document = element.ownerDocument
 ```
 
-- `document` это объект [`document`](/ru/docs/DOM/document) родитель текущего элемента.
+- `document` это объект [`document`](/ru/docs/Web/API/Document) родитель текущего элемента.
 
 ## Пример
 
@@ -35,4 +35,4 @@ var html = d.documentElement;
 
 ## Спецификации
 
-- [DOM Level 2 Core: Node.ownerDocument](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#node-ownerDoc)
+- [DOM Level 2 Core: Node.ownerDocument](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#node-ownerDoc)

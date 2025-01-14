@@ -64,7 +64,7 @@ var obj = {
 [產生器方法](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)（Generator method）也可以透過簡短語法定義之。用的時候：
 
 - 簡短語法的星號（\*）必須放在產生器方法的屬性名前面。也就是說 `* g(){}` 能動但 `g *(){}` 不行；
-- 非產生器方法的定義可能不會有 `yield` 關鍵字。也就是說[過往的產生器函式](/zh-TW/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)動不了、並拋出{{jsxref("SyntaxError")}}。Always use `yield` in conjunction with the asterisk (\*).
+- 非產生器方法的定義可能不會有 `yield` 關鍵字。也就是說[過往的產生器函式](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)動不了、並拋出{{jsxref("SyntaxError")}}。Always use `yield` in conjunction with the asterisk (\*).
 
 ```js
 // Using a named property

@@ -98,7 +98,7 @@ typeof Math.sin === "function";
 typeof null === "object";
 ```
 
-В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. `null` был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для `null` равнялся нулю, поэтому возвращаемое значение `typeof` является фиктивным. ([подробнее](http://www.2ality.com/2013/10/typeof-null.html))
+В первой реализации JavaScript значения были представлены парой тип тега и значение. Тип тега для объектов равнялся 0. `null` был представлен как нулевой указатель (0x00 в большинстве платформ). Следовательно, тип тега для `null` равнялся нулю, поэтому возвращаемое значение `typeof` является фиктивным. ([подробнее](https://www.2ality.com/2013/10/typeof-null.html))
 
 Исправление было предложено в ECMAScript (через отключение), но [было отклонено](http://wiki.ecmascript.org/doku.php?id=harmony:typeof_null). Это привело бы к тому, что `typeof null === 'null'`.
 
@@ -130,7 +130,7 @@ typeof /s/ === "object"; // Firefox 5+  Соответствует ECMAScript 5.
 
 ### Ошибки, связанные с временными мёртвыми зонами
 
-До ECMAScript 2015, гарантировалось, что оператор `typeof` вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) с блочной областью видимости. Теперь, если переменные объявлены с помощью `let` и `const`, и для них вызывается `typeof` в блоке объявления переменных, но до объявления, то выбрасывается [`ReferenceError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Поведение отличается от необъявленных переменных, для которых `typeof` вернёт 'undefined'. Переменные с блочной областью видимости находятся в "[временной мёртвой зоне](/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.
+До ECMAScript 2015, гарантировалось, что оператор `typeof` вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) с блочной областью видимости. Теперь, если переменные объявлены с помощью `let` и `const`, и для них вызывается `typeof` в блоке объявления переменных, но до объявления, то выбрасывается [`ReferenceError`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Поведение отличается от необъявленных переменных, для которых `typeof` вернёт 'undefined'. Переменные с блочной областью видимости находятся в "[временной мёртвой зоне](/ru/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.
 
 ```js
 typeof undeclaredVariable === "undefined";

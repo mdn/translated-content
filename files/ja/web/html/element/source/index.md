@@ -43,7 +43,7 @@ l10n:
 
 - `media`
 
-  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)です。
+  - : リソースの志向するメディアの[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)です。
 
 - `height`
 
@@ -119,7 +119,7 @@ l10n:
 ### `picture` で `height` および `width` 属性を使う例
 
 この例では、`height` と `width` 属性を持つ 3 つの`<source>`要素が、{{HTMLElement("picture")}} 要素に含まれています。
-[メディアクエリー](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)により、[ビューポート](/ja/docs/Glossary/Viewport)の寸法に基づいて、`height` および `width` 属性により表示すべき画像をブラウザーに選択させます。
+[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)により、[ビューポート](/ja/docs/Glossary/Viewport)の寸法に基づいて、`height` および `width` 属性により表示すべき画像をブラウザーに選択させます。
 
 ```html
 <picture>

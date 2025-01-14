@@ -119,4 +119,4 @@ trees[3] = undefined;
 - [`delete`](/ko/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
-- [속성의, 소유와 셀 수 있는 성질](/ko/docs/Enumerability_and_ownership_of_properties)
+- [속성의, 소유와 셀 수 있는 성질](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

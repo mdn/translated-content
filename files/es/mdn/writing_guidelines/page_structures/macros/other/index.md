@@ -28,6 +28,6 @@ Tenemos una variedad de macros que se pueden usar para generar automáticamente 
 
 ### Enlaces rápidos
 
-Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Structures/Quicklinks):
+Tenemos una macro diseñada específicamente para crear [enlaces rápidos](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars):
 
 - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) crea un conjunto de enlaces rápidos compuestos por las páginas debajo de la página actual (o la página especificada, si se proporciona una). Se generan hasta dos niveles totales de profundidad.

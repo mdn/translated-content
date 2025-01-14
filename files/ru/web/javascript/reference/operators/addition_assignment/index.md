@@ -55,5 +55,5 @@ foo += "bar"; // "foobar"
 
 ## Смотрите также
 
-- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Assignment operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
 - [Оператор сложения](/ru/docs/Web/JavaScript/Reference/Operators/Addition)

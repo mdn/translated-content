@@ -3,9 +3,9 @@ title: フローレイアウトと書字方向
 slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 ---
 
-通常フローの動きについて詳細を説明している CSS 2.1 仕様書は、横書きを想定しています。[レイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)プロパティは縦書きモードでも同様に動作するべきです。このガイドでは、異なる文書の書字方向が使われた場合のフローレイアウトの動作を見てみましょう。
+通常フローの動きについて詳細を説明している CSS 2.1 仕様書は、横書きを想定しています。[レイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)プロパティは縦書きモードでも同様に動作するべきです。このガイドでは、異なる文書の書字方向が使われた場合のフローレイアウトの動作を見てみましょう。
 
-これは CSS での書字方向の使用に関する包括的なガイドではなく、ここでの目的は、フローレイアウトと書字方向の起こりうる相互作用が予想できないような領域を文書化することです。この文書の[外部リソース](#External_Resources)や[関連情報](#See_Also)の節で、書字方向に関するより多くのリソースを紹介します。
+これは CSS での書字方向の使用に関する包括的なガイドではなく、ここでの目的は、フローレイアウトと書字方向の起こりうる相互作用が予想できないような領域を文書化することです。この文書の[外部リソース](#external_resources)や[関連情報](#see_also)の節で、書字方向に関するより多くのリソースを紹介します。
 
 ## 書字方向の仕様書
 
@@ -63,7 +63,7 @@ vertical-rl の値は、次の例に見られるように、ブロックフロ�
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
 
-[CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_Logical_Properties)の仕様書は、マージン、パディング、境界の制御や、その他の通常は物理的な方向を使用して指定するものの論理バージョンのプロパティを含んでいます。
+[CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)の仕様書は、マージン、パディング、境界の制御や、その他の通常は物理的な方向を使用して指定するものの論理バージョンのプロパティを含んでいます。
 
 ## まとめ
 
@@ -71,7 +71,7 @@ vertical-rl の値は、次の例に見られるように、ブロックフロ�
 
 ## 関連情報
 
-- [書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)
+- [書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
 
 ## 外部リソース
 

@@ -39,7 +39,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 1. **Автоматическая загрузка скрипта на страницах с определёнными URL, объявленными при установке:** используя [`content_scripts`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) ключ в manifest.json, вы можете запросить браузер загружать встраиваемый скрипт каждый раз, когда браузер загружает веб-страницу, чей URL [совпадает с объявленными шаблонами](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
 2. **Автоматическая загрузка скрипта на страницах с определёнными URL, объявленными в момент работы расширения:** используя {{WebExtAPIRef("contentScripts")}} API, вы можете запросить браузер загружать встраиваемый скрипт каждый раз, когда браузер загружает веб-страницу, чей URL [совпадает с объявленными шаблонами](/ru/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Это очень похоже на первый метод, но позволяет добавлять и удалять правила динамически во время работы расширения.
-3. **Загрузка скрипта расширением в конкретную вкладку:** используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, вы можете загружать встраиваемые скрипты в определённые вкладки когда захотите: например, в ответ на нажатие пользователя на [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action).
+3. **Загрузка скрипта расширением в конкретную вкладку:** используя [`tabs.executeScript()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/executeScript) API, вы можете загружать встраиваемые скрипты в определённые вкладки когда захотите: например, в ответ на нажатие пользователя на [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).
 
 Существует только одна глобальная область видимости _для одного фрейма, для одного расширения_. Это означает, что значения из одного встраиваемого скрипта могут быть доступны для другого встраиваемого скрипта, не зависимо от того, как встраиваемый скрипт был загружен на страницу.
 
@@ -58,7 +58,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 - Встраиваемые скрипты не могут видеть JavaScript переменных, определённых страничными скриптами.
 - Если страничный скрипт переназначит встроенное свойство DOM, встраиваемый скрипт всё равно будет видеть его изначальное значение, а не переназначенное.
 
-В Firefox это поведение называется [Xray vision](/ru/docs/Mozilla/Tech/Xray_vision).
+В Firefox это поведение называется [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html).
 
 Например, рассмотрите эту веб-страницу:
 
@@ -137,18 +137,18 @@ window.confirm("Вы уверены?"); // вызывает оригинальн
 
 В дополнение стандартному DOM API, встраиваемый скрипт может использовать следующие методы WebExtension API:
 
-Из [`extension`](/ru/Add-ons/WebExtensions/API/extension):
+Из [`extension`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/extension):
 
 - [`getURL()`](</ru/Add-ons/WebExtensions/API/extension#getURL()>)
-- [`inIncognitoContext`](/ru/Add-ons/WebExtensions/API/extension#inIncognitoContext)
+- [`inIncognitoContext`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/extension#inincognitocontext)
 
-Из [`runtime`](/ru/Add-ons/WebExtensions/API/runtime):
+Из [`runtime`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime):
 
 - [`connect()`](</ru/Add-ons/WebExtensions/API/runtime#connect()>)
 - [`getManifest()`](</ru/Add-ons/WebExtensions/API/runtime#getManifest()>)
 - [`getURL()`](</ru/Add-ons/WebExtensions/API/runtime#getURL()>)
-- [`onConnect`](/ru/Add-ons/WebExtensions/API/runtime#onConnect)
-- [`onMessage`](/ru/Add-ons/WebExtensions/API/runtime#onMessage)
+- [`onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onconnect)
+- [`onMessage`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage)
 - [`sendMessage()`](</ru/Add-ons/WebExtensions/API/runtime#sendMessage()>)
 
 Из [`i18n`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/i18n):
@@ -171,7 +171,7 @@ window.confirm("Вы уверены?"); // вызывает оригинальн
 > [!NOTE]
 > В Firefox, запросы, совершаемые из встраиваемого скрипта (например, используя [fetch()](/ru/docs/Web/API/Fetch_API/Using_Fetch)) происходят в контексте расширения, так что вам необходимо предоставлять полный URL для доступа к контенту страниц. В Chrome, эти запросы совершаются в контексте страницы, так что URL может быть относительным, например `/api` будет трансформирован в `https://[current page URL]/api`.
 
-Встраиваемый скрипт имеет точно такие же кросс-доменные привилегии, как и всё остальное расширение: так что если расширение запросило кросс-доменный доступ на какой-либо домен используя [`permissions`](/ru/Add-ons/WebExtensions/manifest.json/permissions) ключ в manifest.json, тогда его встраиваемый скрипт тоже будет иметь доступ к этому домену.
+Встраиваемый скрипт имеет точно такие же кросс-доменные привилегии, как и всё остальное расширение: так что если расширение запросило кросс-доменный доступ на какой-либо домен используя [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ключ в manifest.json, тогда его встраиваемый скрипт тоже будет иметь доступ к этому домену.
 
 Это достигается, предоставляя встраиваемому скрипту более привилегированные XHR and fetch объекты. Что имеет побочный эффект, связанный с отсутствием [`Origin`](/ru/docs/Web/HTTP/Headers/Origin) и [`Referer`](/ru/docs/Web/HTTP/Headers/Referer) заголовков, которые имел бы запрос, выполняемый из страничного скрипта. Зачастую это предпочитаемо, для того чтобы предотвратить раскрытие кросс-доменной натуры запроса. Начиная с версии 58 и дальше, расширения, которым необходимо выполнять запросы, которые должны выглядеть будто они отправлены встраиваемым скриптом, могут использовать `content.XMLHttpRequest` и `content.fetch()`. Кросс-браузерные расширения должны проверять присутствие этих методов.
 
@@ -449,7 +449,7 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-Те же правила применимы к [`setTimeout()`](/ru/docs/Web/API/setTimeout), [`setInterval()`](/ru/docs/Web/API/setInterval), и [`Function()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function).
+Те же правила применимы к [`setTimeout()`](/ru/docs/Web/API/Window/setTimeout), [`setInterval()`](/ru/docs/Web/API/Window/setInterval), и [`Function()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function).
 
 > [!WARNING]
 > Будьте очень осторожны, запуская код в контексте страничного скрипта. Окружение страничного скрипта может контролироваться потенциально зловредным веб-страницей, которая может переопределить объекты, с которыми вы взаимодействуете, так что их поведение станет совершенно непредсказуемым:

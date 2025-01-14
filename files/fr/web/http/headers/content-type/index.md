@@ -38,7 +38,7 @@ Content-Type: multipart/form-data; boundary=something
 ## Directives
 
 - `media-type`
-  - : Le [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) de la ressource ou des données.
+  - : Le [type MIME](/fr/docs/Web/HTTP/MIME_types) de la ressource ou des données.
 - `charset`
   - : L'encodage utilisé pour les caractères des données.
 - `boundary`

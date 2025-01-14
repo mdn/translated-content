@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 `Reflect` オブジェクトは[プロキシーハンドラーのメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)と同じ名前をもつ、下記の関数を提供します。
 
-これらのメソッドの一部は {{jsxref("Object")}} の対応するメソッドとも同じですが、これらの間には[いくらか微妙な違い](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods)があります。
+これらのメソッドの一部は {{jsxref("Object")}} の対応するメソッドとも同じですが、これらの間には[いくらか微妙な違い](/ja/docs/Web/JavaScript/Reference/Global_Objects/Reflect)があります。
 
 ## 静的メソッド
 
