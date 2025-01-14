@@ -30,7 +30,7 @@ console.log(el.seeking); // true 或 false
 
 ## 参见
 
-- {{domxref("HTMLMediaElement.seeking_event", "seeking")}} event
-- {{domxref("HTMLMediaElement.seeked_event", "seeked")}} event
+- {{domxref("HTMLMediaElement.seeking_event", "seeking")}} 事件
+- {{domxref("HTMLMediaElement.seeked_event", "seeked")}} 事件
 - {{domxref("HTMLVideoElement")}}
 - {{domxref("HTMLAudioElement")}}
