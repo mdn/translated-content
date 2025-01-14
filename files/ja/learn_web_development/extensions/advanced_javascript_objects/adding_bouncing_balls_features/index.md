@@ -1,40 +1,24 @@
 ---
-title: バウンスボールのデモに機能を追加する
+title: "練習: バウンスボールのデモに機能を追加する"
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 この評価では、前の記事のバウンスボールのデモを出発点として用い、いくつかの面白い機能を新たに追加してもらいます。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        この評価を試みる前に、このモジュールのすべての記事を学習済みであること。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>
-        JavaScript オブジェクトとオブジェクト指向のインスタンス生成を理解しているかテストする。
-      </td>
-    </tr>
-  </tbody>
-  </table>
 
 ## 出発点
 
 この評価をスタートするためには、ローカル PC の新しいディレクトリーに最新記事から [index-finished.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/style.css)、[main-finshed.js](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) をコピーします。
 
-または、評価のために、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) を使うことができます。これらのオンラインエディターに HTML、CSS や JavaScript を貼り付けることができます。もしあなたが使用しているオンラインエディターが、別々の JavaScript/CSS のパネルを持っていない場合は、HTML内の `<script>`/`<style>` 要素を使って、インラインで書くことができます。
+または、評価のために、 [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) を使うことができます。これらのオンラインエディターに HTML、CSS や JavaScript を貼り付けることができます。もしあなたが使用しているオンラインエディターが、別々の JavaScript/CSS のパネルを持っていない場合は、HTML内の `<script>`/`<style>` 要素を使って、インラインで書くことができます。
 
 > [!NOTE]
-> 行き詰まった場合は、サポートを依頼してください。このページの下部にある[評価とさらなる支援](#評価とさらなる支援)の節を参照してください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## ヒントと tips
 
@@ -66,6 +50,9 @@ l10n:
 - 引数として、 `x`, `y`, `velX`, `velY`, `size`, `color` を受け取ります。
 - `super()` を使用して `Shape` コンストラクターを呼び出し、 `x`、`y`、`velX`、`velY` の各引数を渡します。
 - 与えられた引数から `color` と `size` のプロパティを初期化します。
+
+> [!NOTE]
+> 必ず既存の `Ball` クラスより上位に `Shape` クラスを作成してください。そうしないと、 "Uncaught ReferenceError: Cannot access 'Shape' before initialization" などのエラーが来ることになります。
 
 `Ball` コンストラクターは `exists` という新しいプロパティを定義する必要があります。これは、ボールがプログラム内に存在するかどうか（悪のサークルに食べられていないかどうか）を追跡するために使用されます。これは論理値 (`true`/`false`) で、コンストラクターの中で `true` に初期化する必要があります。
 
@@ -187,16 +174,4 @@ window.addEventListener("keydown", (e) => {
    - ボールをシーンに追加するたびにカウントを増加させ、更新されたボールの数を表示します。
    - 邪悪な円がボールを食べる（存在を消す）たびにカウントを減らし、更新されたボールの数を表示します。
 
-## 評価とさらなる支援
-
-自分の作品を評価してほしい、行き詰っているので相談したい方は、次のようにしましょう。
-
-1. 自分の作品を [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) などのオンラインで共有できるエディターに入れます。
-2. [MDN Discourse フォーラムの Learning カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に、評価や支援を求める投稿を（英語で）書き込んでください。投稿には次のことを書いてください。
-
-   - "Assessment wanted for Adding bouncing balls features" のような、説明的なタイトル。
-   - すでに試したことの詳細と、私たちに何をしてほしいか（例: 行き詰まり、助けが必要な場合、または評価が必要な場合）。
-   - 評価やヘルプが必要なサンプルへのリンクを、オンライン共有可能なエディター（上記のステップ 1 で述べたとおり）にて提供します。コードを見ることができなければ、コーディングの問題で誰かを助けることは非常に困難です。
-   - 実際の課題または評価ページへのリンクにより、助けを求めている問題を見つけることができます。
-
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
+{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
