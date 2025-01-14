@@ -73,7 +73,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLElement")}} Gecko 1.9.2(Firefox 4)부터 Firefox는 이 요소에 대한 HTMLSpanElement 인터페이스를 구현함.</td>
+      <td>{{domxref("HTMLElement")}} Gecko 1.9.2(Firefox 4)부터 Firefox는 이 요소에 대한 {{domxref("HTMLSpanElement")}} 인터페이스를 구현함.</td>
     </tr>
   </tbody>
 </table>
