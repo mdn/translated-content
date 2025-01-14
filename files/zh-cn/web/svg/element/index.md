@@ -119,7 +119,7 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 - {{SVGElement("view")}}
 
-> [!NOTE] [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，对于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
 
 ## 按类别划分的 SVG 元素
 
@@ -175,7 +175,7 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 {{SVGElement("a")}}、{{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("foreignObject")}}、{{SVGElement("g")}}、{{SVGElement("image")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}}、{{SVGElement("svg")}}、{{SVGElement("switch")}}、{{SVGElement("symbol")}}、{{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}}、{{SVGElement("use")}}
 
-> [!NOTE] [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，对于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
+> **备注：** [SVG 2 规范要求](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)，出于渲染目的，所有未知元素都应被视为 {{SVGElement("g")}} 元素处理。
 
 ### 形状元素
 
@@ -200,7 +200,7 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 ## 过时和弃用的元素
 
 > [!WARNING]
-> 这些都是过时的 SVG 元素，不应使用。**你不应在新的项目中使用它们，并且应尽快在旧项目中将其替换掉。** 在此列出这些信息仅供参考。
+> 这些都是旧的已弃用 SVG 元素，不应使用。**你不应在新的项目中使用它们，并且应尽快在旧项目中将其替换掉**。在此列出这些信息仅供参考。
 
 ### C
 
@@ -235,5 +235,3 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 - [SVG 属性参考](/zh-CN/docs/Web/SVG/Attribute)
 - [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial)
 - [SVG 接口参考](/zh-CN/docs/Web/API/Document_Object_Model#svg_dom)
-
-{{SVGRef}}
