@@ -57,4 +57,4 @@ div {
 
 ## Voir aussi
 
-- [`sign()`](/fr/docs/Web/CSS/sign_function)
+- [`sign()`](/fr/docs/Web/CSS/sign)

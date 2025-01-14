@@ -10,7 +10,7 @@ HTTP **`304 Not Modified`** クライアントリダイレクトレスポンス�
 {{HTTPStatus("200")}} `OK` と同等のレスポンスは {{HTTPHeader("Cache-Control")}}、{{HTTPHeader("Content-Location")}}、{{HTTPHeader("Date")}}、{{HTTPHeader("ETag")}}、{{HTTPHeader("Expires")}} および {{HTTPHeader("Vary")}} ヘッダーを含みます。
 
 > [!NOTE]
-> 多くのブラウザーの[開発ツールのネットワークパネル](/ja/docs/Tools/Network_Monitor)は `304` レスポンスにつながる追加のリクエストを作成するため、開発者はローカルキャッシュへのアクセスを見ることができます。
+> 多くのブラウザーの[開発ツールのネットワークパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)は `304` レスポンスにつながる追加のリクエストを作成するため、開発者はローカルキャッシュへのアクセスを見ることができます。
 
 ## ステータス
 

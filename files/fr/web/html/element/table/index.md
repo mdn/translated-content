@@ -11,7 +11,7 @@ L'élément HTML **`<table>`** permet de représenter un tableau de données, c'
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels). Les attributs listés ci-après sont désormais tous dépréciés.
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes). Les attributs listés ci-après sont désormais tous dépréciés.
 
 ### Attributs dépréciés
 
@@ -25,7 +25,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > [!NOTE]
     >
-    > - **Cet attribut ne doit pas être utilisé** car il a été déprécié : l'élément {{HTMLElement("table")}} devrait être stylisé en utilisant [CSS](/fr/docs/CSS). Pour obtenir un effet similaire à celui réalisé par l'attribut align, les propriétés [CSS](/fr/docs/CSS) {{cssxref("text-align")}} et {{cssxref("vertical-align")}} devraient être utilisées.
+    > - **Cet attribut ne doit pas être utilisé** car il a été déprécié : l'élément {{HTMLElement("table")}} devrait être stylisé en utilisant [CSS](/fr/docs/Web/CSS). Pour obtenir un effet similaire à celui réalisé par l'attribut align, les propriétés [CSS](/fr/docs/Web/CSS) {{cssxref("text-align")}} et {{cssxref("vertical-align")}} devraient être utilisées.
     > - Avant Firefox 4, Firefox supportait également, en mode quirks uniquement, les valeurs `middle`, `absmiddle`, et `abscenter` comme synonymes de `center`_._
 
 - `bgcolor` {{Deprecated_inline}}
@@ -37,7 +37,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 - `border` {{Deprecated_inline}}
 
-  - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut [`frame`](/fr/docs/Web/HTML/Element/table#frame) est vide.
+  - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut [`frame`](#frame) est vide.
 
     > [!NOTE]
     > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
@@ -239,7 +239,7 @@ Fournir un élément {{HTMLElement("caption")}} pour légender le tableau avec u
 
 Une telle légende fournit une aide pour les personnes qui naviguent avec des outils d'assistance comme des lecteurs d'écran.
 
-- [Ajouter une légende à un tableau grâce à `<caption>`](/fr/Apprendre/HTML/Tableaux/Advanced)
+- [Ajouter une légende à un tableau grâce à `<caption>`](/fr/docs/Learn/HTML/Tables/Advanced)
 - [Légendes et résumés • Tableaux • Tutoriels d'accessibilité du W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### Portées des lignes et des colonnes
@@ -282,7 +282,7 @@ L'attribut [`scope`](/fr/docs/Web/HTML/Element/th#scope) peut être redondant da
 
 Ajouter `scope="col"` sur un élément {{HTMLElement("th")}} permettra d'aider à décrire le fait que la cellule est en haut de la colonne. Indiquer `scope="row"` sur un élément {{HTMLElement("td")}} permettra d'indiquer que la cellule est la première de la ligne.
 
-- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
+- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn/HTML/Tables/Advanced#tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec deux en-têtes • Tutoriels d'accessibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Les tableaux avec des en-têtes hétérogènes • Tutoriels d'accessibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63 : Utiliser l'attribut `scope` afin d'associer les cellules de l'en-tête et celles des données dans les tableaux de données | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
@@ -295,7 +295,7 @@ Si possible, on présentera le tableau différemment, en le divisant en plusieur
 
 Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`id`](/fr/docs/Web/HTML/Global_attributes#id) et [`headers`](/fr/docs/Web/HTML/Element/td#headers) afin d'associer « informatiquement » les cellules du tableaux avec les en-têtes correspondantes.
 
-- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
+- [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/docs/Learn/HTML/Tables/Advanced#tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 

@@ -11,5 +11,5 @@ Web 服务器是一种通常运行在硬件服务器上的软件，为用户（�
 
 ## 参见
 
-- [介绍服务器](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [介绍服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - 维基百科上的[服务器](https://zh.wikipedia.org/wiki/服务器)

@@ -34,7 +34,7 @@ Reflect.get(target, propertyKey[, receiver])
 
 ## 설명
 
-`Reflect.get` 메서드는 객체 속성의 값을 가져올 수 있습니다. [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)의 함수판이라고 할 수 있습니다.
+`Reflect.get` 메서드는 객체 속성의 값을 가져올 수 있습니다. [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)의 함수판이라고 할 수 있습니다.
 
 ## 예제
 
@@ -69,4 +69,4 @@ Reflect.get(obj, "foo"); // "foobar"
 ## 같이 보기
 
 - {{jsxref("Reflect")}}
-- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
+- [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)

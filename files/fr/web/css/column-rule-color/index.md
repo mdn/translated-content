@@ -82,4 +82,4 @@ p {
 
 - Le type de donnée [`<color>`](/fr/docs/Web/CSS/color_value)
 - Les autres propriétés relatives aux couleurs&nbsp;: [`color`](/fr/docs/Web/CSS/color), [`background-color`](/fr/docs/Web/CSS/background-color), [`border-color`](/fr/docs/Web/CSS/border-color), [`outline-color`](/fr/docs/Web/CSS/outline-color), [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color), [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color), [`text-shadow`](/fr/docs/Web/CSS/color) et [`caret-color`](/fr/docs/Web/CSS/caret-color)
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)

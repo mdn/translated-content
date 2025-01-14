@@ -59,5 +59,5 @@ _Inherits methods from its parent,_ _{{domxref("HTMLMediaElement")}}, and_ _{{do
 ## Смотрите также
 
 - HTML element implementing this interface: {{HTMLElement("video")}}.
-- [Demo of video paint statistics](http://people.mozilla.org/~cpearce/paint-stats-demo.html)
-- [Supported media formats](/ru/docs/HTML/Supported_media_formats)
+- [Demo of video paint statistics](https://people.mozilla.org/~cpearce/paint-stats-demo.html)
+- [Supported media formats](/ru/docs/Web/Media/Formats)

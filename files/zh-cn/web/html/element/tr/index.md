@@ -405,7 +405,7 @@ th {
 
 ## 参见
 
-- [学习：HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [学习：HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}：其他与表格相关的元素
 - {{cssxref("background-color")}}：用于设置单元格背景颜色的 CSS 属性
 - {{cssxref("border")}}：用于控制行单元格边框的 CSS 属性

@@ -42,7 +42,7 @@ return x + y / 3;
 
 ### Ajout automatique de point-virgule
 
-L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
+L'instruction `return` peut être impactée par [l'ajout automatique de point-virgule (_ASI_ en anglais)](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules). Il est interdit d'avoir un caractère de fin de ligne entre le mot-clé `return` et l'expression :
 
 ```js
 return;

@@ -43,7 +43,7 @@ WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込
 
 ### WebAssembly モジュールをストリーミングする
 
-Firefox 58 の新機能として、 WebAssembly モジュールを基礎となるソースから直接コンパイルおよびインスタンス化する機能があります。これは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/compileStreaming) と [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) メソッドを使用して実現します。これらのメソッドは、バイトコードを直接 `Module`/`Instance` インスタンスに変換することができるので、{{domxref("Response")}} を {{jsxref("ArrayBuffer")}} に別途格納する必要がないため、ストリーミングではない対応するメソッドよりも簡単になっています。
+Firefox 58 の新機能として、 WebAssembly モジュールを基礎となるソースから直接コンパイルおよびインスタンス化する機能があります。これは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/compileStreaming_static) と [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) メソッドを使用して実現します。これらのメソッドは、バイトコードを直接 `Module`/`Instance` インスタンスに変換することができるので、{{domxref("Response")}} を {{jsxref("ArrayBuffer")}} に別途格納する必要がないため、ストリーミングではない対応するメソッドよりも簡単になっています。
 
 この例（GitHub の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) デモや、[ライブ版](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照してください）では、 `instantiateStreaming()` を使って wasm モジュールを取得し、そこに JavaScript 関数をインポートしてコンパイルしてインスタンス化し、そのエクスポート関数にアクセスするまで、すべて一度に行っています。
 
@@ -62,7 +62,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ### ストリーミングせずに wasm モジュールを読み込む
 
-上記のようなストリーミングメソッドを使用できない、または使用したくない場合は、代わりにストリーミングメソッドではない [`WebAssembly.compile()`](/ja/docs/WebAssembly/JavaScript_interface/compile) / [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate) を使用することができます。
+上記のようなストリーミングメソッドを使用できない、または使用したくない場合は、代わりにストリーミングメソッドではない [`WebAssembly.compile()`](/ja/docs/WebAssembly/JavaScript_interface/compile_static) / [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate_static) を使用することができます。
 
 これらのメソッドはバイトコードに直接アクセスしないので、 wasm モジュールをコンパイル/インスタンス化する前にレスポンスを {{jsxref("ArrayBuffer")}} に変換する余分な手順が必要になります。
 

@@ -10,7 +10,7 @@ l10n:
 {{domxref("Navigator")}} 接口的 **`platform`** 只读属性返回一个字符串，用于标识用户浏览器所在的平台。
 
 > [!NOTE]
-> 一般来说，你应该尽可能避免编写使用此类方法或属性来尝试查找有关用户环境的信息的代码，而是应该编写[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)的代码。
+> 一般来说，你应该尽可能避免编写使用此类方法或属性来尝试查找有关用户环境的信息的代码，而是应该编写[特性检测](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection)的代码。
 
 ## 值
 
@@ -18,7 +18,7 @@ l10n:
 
 ## 示例
 
-通常情况下，应尽量避免使用 `navigator.platform` 而改用[特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)。但是，在以下情况下，`navigator.platform` 可能是在你可用的选项中相对较好的选择：当你需要向用户显示有关键盘快捷键的修饰键是 `⌘` command 键（在 Apple 系统上）还是 `⌃` 控制键（在非 Apple 系统上）的建议时：
+通常情况下，应尽量避免使用 `navigator.platform` 而改用[特性检测](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection)。但是，在以下情况下，`navigator.platform` 可能是在你可用的选项中相对较好的选择：当你需要向用户显示有关键盘快捷键的修饰键是 `⌘` command 键（在 Apple 系统上）还是 `⌃` 控制键（在非 Apple 系统上）的建议时：
 
 ```js
 let modifierKeyPrefix = "^"; // 控制键

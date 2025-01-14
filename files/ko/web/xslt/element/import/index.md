@@ -28,7 +28,7 @@ slug: Web/XSLT/Element/import
 
 ### 정의
 
-[XSLT section 2.6.2, Stylesheet Import](http://www.w3.org/TR/xslt#import)
+[XSLT section 2.6.2, Stylesheet Import](https://www.w3.org/TR/xslt#import)
 
 ### Gecko 지원
 

@@ -11,11 +11,11 @@ slug: Web/SVG/Attribute/baseProfile
 
 ## 使用背景
 
-| 目录     | 无                                                                             |
-| -------- | ------------------------------------------------------------------------------ |
-| 值       | **none** \| full\| basic\| tiny                                                |
-| 动画特性 | 无                                                                             |
-| 规范文档 | [SVG 1.1 (第二版)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty) |
+| 目录     | 无                                                                              |
+| -------- | ------------------------------------------------------------------------------- |
+| 值       | **none** \| full\| basic\| tiny                                                 |
+| 动画特性 | 无                                                                              |
+| 规范文档 | [SVG 1.1 (第二版)](https://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty) |
 
 - none
   - : 代表了最小的 SVG 语言配置，没有描述作者关于正确渲染内容的观点。

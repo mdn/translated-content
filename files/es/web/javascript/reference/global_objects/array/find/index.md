@@ -30,7 +30,7 @@ arr.find(callback(element[, index[, array]])[, thisArg])
     - `array` {{optional_inline}}
       - : El array desde el que se llama al método `find`.
 - `thisArg` {{optional_inline}}
-  - : Objeto a usar como [`this`](/es/docs/Web/JavaScript/Referencia/Operadores/this) cuando se ejecuta `callback`.
+  - : Objeto a usar como [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) cuando se ejecuta `callback`.
 
 ### Valor devuelto
 

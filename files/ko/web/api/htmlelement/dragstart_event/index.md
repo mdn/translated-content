@@ -42,7 +42,7 @@ slug: Web/API/HTMLElement/dragstart_event
 
 `dragstart` 이벤트를 수신해서, 요소가 드래그 되기 시작하면 반투명하게 설정하는 예제입니다.
 
-[`drag`](/ko/docs/Web/API/Document/drag_event) 이벤트 문서에서 드래그 앤 드롭의 더 완전한 예제를 확인할 수 있습니다.
+[`drag`](/ko/docs/Web/API/HTMLElement/drag_event) 이벤트 문서에서 드래그 앤 드롭의 더 완전한 예제를 확인할 수 있습니다.
 
 #### HTML
 

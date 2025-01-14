@@ -290,7 +290,7 @@ ball.draw();
 
 ## Добавление управления мышью
 
-Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/ru/docs/Web/Reference/Events/mousemove). Событие [`click`](/ru/docs/Web/Events/click) отпускает мяч и позволяет ему снова прыгать.
+Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/ru/docs/Web/API/Element/mousemove_event). Событие [`click`](/ru/docs/Web/API/Element/click_event) отпускает мяч и позволяет ему снова прыгать.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
@@ -374,6 +374,6 @@ ball.draw();
 ## Смотрите также
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/ru/docs/Games/Techniques/Efficient_animation_for_web_games)
+- [Efficient animation for web games](/ru/docs/Games/Techniques)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

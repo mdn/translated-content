@@ -34,7 +34,7 @@ l10n:
     - `true` または _空文字列_: 要素が編集可能であることを示す
     - `false`: 要素は編集不可であることを示す
 
-- [`contextmenu`](/ja/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}} {{non-standard_inline}}
+- [`contextmenu`](/ja/docs/Web/HTML/Element/menu) {{deprecated_inline}} {{non-standard_inline}}
   - : その要素のコンテキストメニューとして使用する {{HTMLElement("menu")}} の [**`id`**](#id) を指定します。
 - [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*)
   - : これらの属性はカスタムデータ属性と呼ばれており、 [HTML](/ja/docs/Web/HTML) とその {{glossary("DOM")}} 表現との間で、固有の情報を交換できるようにします。すべてのカスタムデータは、その属性を設定した要素の {{DOMxRef("HTMLElement")}} インターフェイスを通して使用することができます。 {{DOMxRef("HTMLElement.dataset")}} プロパティでカスタムデータにアクセスできます。

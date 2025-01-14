@@ -39,23 +39,23 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
 
-  - : {{domxref("HTMLElement")}}: **Retorna** o elemento apontado pelo atributo [`list`](/pt-BR/docs/Web/HTML/Element/Input#list). A propriedade pode ser `null` se nenhum elemento HTML for encontrado na mesma árvore.
+  - : {{domxref("HTMLElement")}}: **Retorna** o elemento apontado pelo atributo [`list`](/pt-BR/docs/Web/HTML/Element/input#list). A propriedade pode ser `null` se nenhum elemento HTML for encontrado na mesma árvore.
 
 - {{domxref("HTMLInputElement.multiple", "multiple")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/Input#multiple) do elemento, indicando se mais de um valor é possível (ex. , vários arquivos).
+  - : `boolean`: **Retorna / Define** o atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) do elemento, indicando se mais de um valor é possível (ex. , vários arquivos).
 
 - {{domxref("HTMLInputElement.name", "name")}}
 
-  - : `string`: **Retorna / Define** o atributo [`name`](/pt-BR/docs/Web/HTML/Element/Input#name) do elemento, contendo um nome que identifica o elemento ao enviar o formulário.
+  - : `string`: **Retorna / Define** o atributo [`name`](/pt-BR/docs/Web/HTML/Element/input#name) do elemento, contendo um nome que identifica o elemento ao enviar o formulário.
 
 - {{domxref("HTMLInputElement.step", "step")}}
 
-  - : `string`: **Retorna / Define** o atributo [`step`](/pt-BR/docs/Web/HTML/Element/Input#step) do elemento, que funciona com [`min`](/pt-BR/docs/Web/HTML/Element/Input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) para limitar os incrementos nos quais um número ou data - valor de tempo pode ser definido. Pode ser a string `any` ou um número de ponto flutuante positivo. Se isso não for definido como `any`, o controle aceitará apenas valores em múltiplos do valor da etapa maior que o mínimo.
+  - : `string`: **Retorna / Define** o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) do elemento, que funciona com [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para limitar os incrementos nos quais um número ou data - valor de tempo pode ser definido. Pode ser a string `any` ou um número de ponto flutuante positivo. Se isso não for definido como `any`, o controle aceitará apenas valores em múltiplos do valor da etapa maior que o mínimo.
 
 - {{domxref("HTMLInputElement.type", "type")}}
 
-  - : `string`: **Retorna / Define** o atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) do elemento, indicando o tipo de controle a ser exibido. Para valores possíveis, consulte a documentação do atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type).
+  - : `string`: **Retorna / Define** o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) do elemento, indicando o tipo de controle a ser exibido. Para valores possíveis, consulte a documentação do atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type).
 
 - {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
 
@@ -80,36 +80,36 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
 
-  - : `string`: **Retorna / Define** o atributo [`formaction`](/pt-BR/docs/Web/HTML/Element/Input#formaction) do elemento, contendo a URL de um programa que processa as informações enviadas pelo elemento. Isso substitui o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formaction`](/pt-BR/docs/Web/HTML/Element/input#formaction) do elemento, contendo a URL de um programa que processa as informações enviadas pelo elemento. Isso substitui o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário pai.
 
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
 
-  - : `string`: **Retorna / Define** o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/Input#formenctype) do elemento, contendo o tipo de conteúdo que é usado para enviar o formulário para o servidor. Isso substitui o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formenctype`](/pt-BR/docs/Web/HTML/Element/input#formenctype) do elemento, contendo o tipo de conteúdo que é usado para enviar o formulário para o servidor. Isso substitui o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário pai.
 
 - {{domxref("HTMLInputElement.formMethod", "formMethod")}}
 
-  - : `string`: **Retorna / Define** o atributo [`formmethod`](/pt-BR/docs/Web/HTML/Element/Input#formmethod) do elemento, contendo o método HTTP que o navegador usa para enviar a forma. Isso substitui o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formmethod`](/pt-BR/docs/Web/HTML/Element/input#formmethod) do elemento, contendo o método HTTP que o navegador usa para enviar a forma. Isso substitui o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário pai.
 
 - {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`formnovalidate`](/pt-BR/docs/Web/HTML/Element/Input#formnovalidate) do elemento, indicando que o formulário não deve ser validado quando ele é submetido. Isso substitui o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário pai.
+  - : `boolean`: **Retorna / Define** o atributo [`formnovalidate`](/pt-BR/docs/Web/HTML/Element/input#formnovalidate) do elemento, indicando que o formulário não deve ser validado quando ele é submetido. Isso substitui o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário pai.
 
 - {{domxref("HTMLInputElement.formTarget", "formTarget")}}
-  - : `string`: **Retorna / Define** o atributo [`formtarget`](/pt-BR/docs/Web/HTML/Element/Input#formtarget) do elemento, contendo um nome ou palavra-chave indicando onde exibir o resposta recebida após o envio do formulário. Isso substitui o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário pai.
+  - : `string`: **Retorna / Define** o atributo [`formtarget`](/pt-BR/docs/Web/HTML/Element/input#formtarget) do elemento, contendo um nome ou palavra-chave indicando onde exibir o resposta recebida após o envio do formulário. Isso substitui o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário pai.
 
 ### Propriedades de instância que se aplicam a qualquer tipo de elemento de entrada que não esteja oculto
 
 - {{domxref("HTMLInputElement.autofocus", "autofocus")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/Input#autofocus) do elemento, que especifica que um controle de formulário deve ter foco de entrada quando a página é carregada, a menos que o usuário a substitua, por exemplo, digitando um controle diferente. Apenas um elemento de formulário em um documento pode ter o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/Input#autofocus).
+  - : `boolean`: **Retorna / Define** o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/input#autofocus) do elemento, que especifica que um controle de formulário deve ter foco de entrada quando a página é carregada, a menos que o usuário a substitua, por exemplo, digitando um controle diferente. Apenas um elemento de formulário em um documento pode ter o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/input#autofocus).
 
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`disabled`](/pt-BR/docs/Web/HTML/Element/Input#disabled) do elemento, indicando que o controle não está disponível para interação. Os valores de entrada não serão enviados com o formulário. Veja também [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly).
+  - : `boolean`: **Retorna / Define** o atributo [`disabled`](/pt-BR/docs/Web/HTML/Element/input#disabled) do elemento, indicando que o controle não está disponível para interação. Os valores de entrada não serão enviados com o formulário. Veja também [`readonly`](/pt-BR/docs/Web/HTML/Element/input#readonly).
 
 - {{domxref("HTMLInputElement.required", "required")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`required`](/pt-BR/docs/Web/HTML/Element/Input#required) do elemento, indicando que o usuário deve preencher um valor antes de enviar um formulário.
+  - : `boolean`: **Retorna / Define** o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) do elemento, indicando que o usuário deve preencher um valor antes de enviar um formulário.
 
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
 
@@ -139,25 +139,25 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.alt", "alt")}}
 
-  - : `string`: **Retorna / Define** o atributo [`alt`](/pt-BR/docs/Web/HTML/Element/Input#alt) do elemento, contendo texto alternativo a ser usado.
+  - : `string`: **Retorna / Define** o atributo [`alt`](/pt-BR/docs/Web/HTML/Element/input#alt) do elemento, contendo texto alternativo a ser usado.
 
 - {{domxref("HTMLInputElement.height", "height")}}
 
-  - : `string`: **Retorna / Define** o atributo [`height`](/pt-BR/docs/Web/HTML/Element/Input#height) do elemento, que define a altura da imagem exibida para o botão.
+  - : `string`: **Retorna / Define** o atributo [`height`](/pt-BR/docs/Web/HTML/Element/input#height) do elemento, que define a altura da imagem exibida para o botão.
 
 - {{domxref("HTMLInputElement.src", "src")}}
 
-  - : `string`: **Retorna / Define** o atributo [`src`](/pt-BR/docs/Web/HTML/Element/Input#src) do elemento, que especifica um URI para a localização de uma imagem para exibir no botão gráfico de envio.
+  - : `string`: **Retorna / Define** o atributo [`src`](/pt-BR/docs/Web/HTML/Element/input#src) do elemento, que especifica um URI para a localização de uma imagem para exibir no botão gráfico de envio.
 
 - {{domxref("HTMLInputElement.width", "width")}}
 
-  - : `string`: **Retorna / Define** o atributo [`width`](/pt-BR/docs/Web/HTML/Element/Input#width) do elemento, que define a largura da imagem exibida para o botão.
+  - : `string`: **Retorna / Define** o atributo [`width`](/pt-BR/docs/Web/HTML/Element/input#width) do elemento, que define a largura da imagem exibida para o botão.
 
 ### Propriedades de instância que se aplicam apenas a elementos do tipo arquivo
 
 - {{domxref("HTMLInputElement.accept", "accept")}}
 
-  - : `string`: **Retorna / Define** o atributo [`accept`](/pt-BR/docs/Web/HTML/Element/Input#accept) do elemento, contendo uma lista separada por vírgulas de tipos de arquivos que podem ser selecionado.
+  - : `string`: **Retorna / Define** o atributo [`accept`](/pt-BR/docs/Web/HTML/Element/input#accept) do elemento, contendo uma lista separada por vírgulas de tipos de arquivos que podem ser selecionado.
 
 - {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{Non-standard_Inline}}
 
@@ -169,7 +169,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
 
-  - : `boolean`: **Retorna** o atributo [`webkitdirectory`](/pt-BR/docs/Web/HTML/Element/Input#webkitdirectory). Se for verdadeiro, a interface do seletor do sistema de arquivos aceita apenas diretórios em vez de arquivos.
+  - : `boolean`: **Retorna** o atributo [`webkitdirectory`](/pt-BR/docs/Web/HTML/Element/input#webkitdirectory). Se for verdadeiro, a interface do seletor do sistema de arquivos aceita apenas diretórios em vez de arquivos.
 
 - {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}}
   - : {{domxref("FileSystemEntry")}} array: **Descreve** os arquivos ou diretórios atualmente selecionados.
@@ -178,35 +178,35 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
 
-  - : `string`: **Retorna / Define** o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/Input#autocomplete) do elemento, indicando se o valor do controle pode ser automaticamente preenchido pelo navegador.
+  - : `string`: **Retorna / Define** o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/input#autocomplete) do elemento, indicando se o valor do controle pode ser automaticamente preenchido pelo navegador.
 
 - {{domxref("HTMLInputElement.max", "max")}}
 
-  - : `string`: **Retorna / Define** o atributo [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) do elemento, contendo o valor (numérico ou data-hora) máximo para este item, que não deve ser menor que seu valor mínimo (atributo [`min`](/pt-BR/docs/Web/HTML/Element/Input#min)).
+  - : `string`: **Retorna / Define** o atributo [`max`](/pt-BR/docs/Web/HTML/Element/input#max) do elemento, contendo o valor (numérico ou data-hora) máximo para este item, que não deve ser menor que seu valor mínimo (atributo [`min`](/pt-BR/docs/Web/HTML/Element/input#min)).
 
 - {{domxref("HTMLInputElement.maxLength", "maxLength")}}
 
-  - : `unsigned long`: **Retorna / Define** o atributo [`maxlength`](/pt-BR/docs/Web/HTML/Element/Input#maxlength) do elemento, contendo o número máximo de caracteres (em pontos de código Unicode) que o valor pode ter.
+  - : `unsigned long`: **Retorna / Define** o atributo [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) do elemento, contendo o número máximo de caracteres (em pontos de código Unicode) que o valor pode ter.
 
 - {{domxref("HTMLInputElement.min", "min")}}
 
-  - : `string`: **Retorna / Define** o atributo [`min`](/pt-BR/docs/Web/HTML/Element/Input#min) do elemento, contendo o valor (numérico ou data-hora) mínimo para este item, que não deve ser maior que seu valor máximo (atributo [`max`](/pt-BR/docs/Web/HTML/Element/Input#max)).
+  - : `string`: **Retorna / Define** o atributo [`min`](/pt-BR/docs/Web/HTML/Element/input#min) do elemento, contendo o valor (numérico ou data-hora) mínimo para este item, que não deve ser maior que seu valor máximo (atributo [`max`](/pt-BR/docs/Web/HTML/Element/input#max)).
 
 - {{domxref("HTMLInputElement.minLength", "minLength")}}
 
-  - : `unsigned long`: **Retorna / Define** o atributo [`minlength`](/pt-BR/docs/Web/HTML/Element/Input#minlength) do elemento, contendo o número mínimo de caracteres (em Unicode pontos de código) que o valor pode ter.
+  - : `unsigned long`: **Retorna / Define** o atributo [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) do elemento, contendo o número mínimo de caracteres (em Unicode pontos de código) que o valor pode ter.
 
 - {{domxref("HTMLInputElement.pattern", "pattern")}}
 
-  - : `string`: **Retorna / Define** o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/Input#pattern) do elemento, contendo uma expressão regular em que o valor do controle é verificado contra. Use o atributo [`title`](/pt-BR/docs/Web/HTML/Element/Input#title) para descrever o padrão para ajudar o usuário. Este atributo só se aplica quando o valor do atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) é `text`, `search`, `tel`, `url` ou `e-mail`.
+  - : `string`: **Retorna / Define** o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) do elemento, contendo uma expressão regular em que o valor do controle é verificado contra. Use o atributo [`title`](/pt-BR/docs/Web/HTML/Element/input#title) para descrever o padrão para ajudar o usuário. Este atributo só se aplica quando o valor do atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) é `text`, `search`, `tel`, `url` ou `e-mail`.
 
 - {{domxref("HTMLInputElement.placeholder", "placeholder")}}
 
-  - : `string`: **Retorna / Define** o atributo [`placeholder`](/pt-BR/docs/Web/HTML/Element/Input#placeholder) do elemento, contendo uma dica para o usuário do que pode ser inserido no controle. O texto do espaço reservado não deve conter retornos de carro ou avanços de linha. Este atributo só se aplica quando o valor do atributo [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) é `text`, `search`, `tel`, `url` ou `e-mail`.
+  - : `string`: **Retorna / Define** o atributo [`placeholder`](/pt-BR/docs/Web/HTML/Element/input#placeholder) do elemento, contendo uma dica para o usuário do que pode ser inserido no controle. O texto do espaço reservado não deve conter retornos de carro ou avanços de linha. Este atributo só se aplica quando o valor do atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) é `text`, `search`, `tel`, `url` ou `e-mail`.
 
 - {{domxref("HTMLInputElement.readOnly", "readOnly")}}
 
-  - : `boolean`: **Retorna / Define** o atributo [`readonly`](/pt-BR/docs/Web/HTML/Element/Input#readonly) do elemento, indicando que o usuário não pode modificar o valor do controle. Isso é ignorado se o [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) for `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, ou um tipo de botão.
+  - : `boolean`: **Retorna / Define** o atributo [`readonly`](/pt-BR/docs/Web/HTML/Element/input#readonly) do elemento, indicando que o usuário não pode modificar o valor do controle. Isso é ignorado se o [`type`](/pt-BR/docs/Web/HTML/Element/input#type) for `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, ou um tipo de botão.
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 
@@ -221,7 +221,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
   - : `string`: **Retorna / Define** a direção em que a seleção ocorreu. Os valores possíveis são: `forward` (a seleção foi realizada na direção de início a fim do local atual), `backward` (a direção oposta) ou `none` (a direção é desconhecida).
 
 - {{domxref("HTMLInputElement.size", "size")}}
-  - : `unsigned long`: **Retorna / Define** o atributo [`size`](/pt-BR/docs/Web/HTML/Element/Input#size) do elemento, contendo o tamanho visual do controle. Este valor está em pixels, a menos que o valor de [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) seja `text` ou `password`, caso em que é um número inteiro indicando o número de caracteres. Aplica-se somente quando [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) é definido como `text`, `search`, `tel`, `url`, `email` ou `senha`.
+  - : `unsigned long`: **Retorna / Define** o atributo [`size`](/pt-BR/docs/Web/HTML/Element/input#size) do elemento, contendo o tamanho visual do controle. Este valor está em pixels, a menos que o valor de [`type`](/pt-BR/docs/Web/HTML/Element/input#type) seja `text` ou `password`, caso em que é um número inteiro indicando o número de caracteres. Aplica-se somente quando [`type`](/pt-BR/docs/Web/HTML/Element/input#type) é definido como `text`, `search`, `tel`, `url`, `email` ou `senha`.
 
 ## Métodos de instância
 
@@ -267,24 +267,24 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
-  - : Decrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/Input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
-    - se o método não for aplicável para o valor [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) atual,
-    - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/Input#step),
-    - se o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) não puder ser convertido em um número,
-    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
+  - : Decrementa o [`value`](/pt-BR/docs/Web/HTML/Element/input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
+    - se o método não for aplicável para o valor [`type`](/pt-BR/docs/Web/HTML/Element/input#type) atual,
+    - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/input#step),
+    - se o [`value`](/pt-BR/docs/Web/HTML/Element/input#value) não puder ser convertido em um número,
+    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
 
 - {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
-  - : Incrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/Input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
-    - se o método não for aplicável para o valor atual de [`type`](/pt-BR/docs/Web/HTML/Element/Input#type),
-    - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/Input#step),
-    - se o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) não puder ser convertido em um número,
-    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
+  - : Incrementa o [`value`](/pt-BR/docs/Web/HTML/Element/input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
+    - se o método não for aplicável para o valor atual de [`type`](/pt-BR/docs/Web/HTML/Element/input#type),
+    - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/input#step),
+    - se o [`value`](/pt-BR/docs/Web/HTML/Element/input#value) não puder ser convertido em um número,
+    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
 
 ## Eventos
 
 Ouça esses eventos usando [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener) ou atribuindo um ouvinte de evento à propriedade `oneventname` desta interface:
 
-- [`input`](/pt-BR/docs/Web/API/HTMLElement/input_event)
+- [`input`](/pt-BR/docs/Web/API/Element/input_event)
   - : Dispara quando o `value` de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLElement("textarea")}} foi alterado. Observe que na verdade isso é acionado na interface {{domxref("HTMLElement")}} e também se aplica a elementos [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable), mas também listamos aqui porque é mais comumente usado com elementos de entrada de formulário.
 - [`invalid`](/pt-BR/docs/Web/API/HTMLInputElement/invalid_event)
   - : Disparado quando um elemento não satisfaz suas restrições durante a validação da restrição.

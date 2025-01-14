@@ -19,5 +19,5 @@ l10n:
 
 ## 参见
 
-- [服务器介绍](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
+- [服务器介绍](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 - 维基百科上的[服务器](https://zh.wikipedia.org/wiki/服务器)

@@ -78,5 +78,5 @@ navigator.serviceWorker
 
 ## Смотрите также
 
-- [Использование Push API](/ru/docs/Web/API/Push_API/Using_the_Push_API)
+- [Использование Push API](/ru/docs/Web/API/Push_API)
 - [Push сообщения в Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt

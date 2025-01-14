@@ -31,7 +31,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 8](http://www.w3.org/TR/xslt#for-each).
+[XSLT 1.0, section 8](https://www.w3.org/TR/xslt#for-each).
 
 ### Support Gecko
 

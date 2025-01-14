@@ -45,11 +45,11 @@ WebAssembly é uma linguagem diferente do JavaScript, mas não foi pensada para 
 
 Com o advento do WebAssembly nos browsers, a máquina virtual a que nos referimos antes, vai carregar e executar dois tipos de código — JavaScript E WebAssembly.
 
-Os diferentes tipos de códigos podem invocar um ao outro conforme necessário — o [WebAssembly JavaScript API](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) encapsula código WebAssembly exportado com funções JavaScript que podem ser invocados normalmente, e código WebAssembly pode importar de forma síncrona, funções normais de JavaScript. Na verdade, a unidade básica do código WebAssembly é chamado de módulo, e módulos WebAssembly são semelhantes em vários níveis aos módulos de ES2015.
+Os diferentes tipos de códigos podem invocar um ao outro conforme necessário — o [WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/JavaScript_interface) encapsula código WebAssembly exportado com funções JavaScript que podem ser invocados normalmente, e código WebAssembly pode importar de forma síncrona, funções normais de JavaScript. Na verdade, a unidade básica do código WebAssembly é chamado de módulo, e módulos WebAssembly são semelhantes em vários níveis aos módulos de ES2015.
 
 ### Conceitos-chave do WebAssembly
 
-Existem diversos conceitos-chave que precisam ser compreendidos, sobre como o WebAssembly é executado no browser. Todos estes conceitos são refletidos 1:1 na [WebAssembly JavaScript API](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly).
+Existem diversos conceitos-chave que precisam ser compreendidos, sobre como o WebAssembly é executado no browser. Todos estes conceitos são refletidos 1:1 na [WebAssembly JavaScript API](/pt-BR/docs/WebAssembly/JavaScript_interface).
 
 - **Módulo**: Representa o binário do WebAssembly que foi compilado pelo browser, em código executável pela máquina. Um módulo não tem estado e, tal qual um [Blob](/pt-BR/docs/Web/API/Blob), pode ser explicitamente compartilhado entre janelas e workers (via [`postMessage()`](/pt-BR/docs/Web/API/MessagePort/postMessage)). Um Módulo declara imports e exports, assim com um módulo ES2015.
 - **Memória**: Um ArrayBuffer redimensionável que contém um array linear de bytes, lidos e escritos pelas intruções de memória de baixo nível do WebAssembly.
@@ -104,7 +104,7 @@ Portanto, parte do código está implementando a funcionalidade de cada bibliote
 
 O documento HTML gerado carrega o arquivo JavaScript e grava stdout em um {{htmlelement("textarea")}}. Se o aplicativo usar OpenGL, o HTML também conterá um elemento {{htmlelement("canvas")}} usado como destino de renderização. É muito fácil modificar a saída do Emscripten e transformá-la em qualquer aplicativo da web que você precisar.
 
-Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_wasm).
+Você pode encontrar a documentação completa em Emscripten em [emscripten.org](http://emscripten.org), e um guia para implementar a cadeia de ferramentas e compilar seu próprio aplicativo C/C ++ no wasm em [Compiling from C/C++ to WebAssembly](/pt-BR/docs/WebAssembly/C_to_Wasm).
 
 ### Escrevendo WebAssembly diretamente
 

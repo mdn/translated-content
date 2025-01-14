@@ -49,15 +49,15 @@ La sintaxis de cada capa es la siguiente:
 ## Valores
 
 - background-color
-  - : ver [`color`](/es/CSS/background-color).
+  - : ver [`color`](/es/docs/Web/CSS/background-color).
 - background-image
-  - : ver [`image`](/es/CSS/background-image).
+  - : ver [`image`](/es/docs/Web/CSS/background-image).
 - background-repeat
-  - : ver [`repeat`](/es/CSS/background-repeat).
+  - : ver [`repeat`](/es/docs/Web/CSS/background-repeat).
 - background-attachment
-  - : ver [`background-attachment`](/es/CSS/background-attachment).
+  - : ver [`background-attachment`](/es/docs/Web/CSS/background-attachment).
 - background-position
-  - : ver [`position`](/es/CSS/background-position).
+  - : ver [`position`](/es/docs/Web/CSS/background-position).
 
 ## Ejemplos
 

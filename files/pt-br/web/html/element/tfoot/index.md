@@ -75,7 +75,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     > **Note:**Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.- Para obter os mesmo efeitos `left`, `center`, `right` ou `justify`, use a propriedade {{cssxref("text-align")}} do CSS.
     >
-    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com o valor da propriedade {{cssxref("text-align")}}.
+    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](#char) com o valor da propriedade {{cssxref("text-align")}}.
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -96,10 +96,10 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - `char` {{Deprecated_inline}}
 
-  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se [`align`](/pt-BR/docs/Web/HTML/Element/tfoot#align) não é definido para `char`, este atributo é ignorado
+  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se [`align`](#align) não é definido para `char`, este atributo é ignorado
 
     > [!NOTE]
-    > Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) no CSS3, você pode usar o atributo [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com a propriedade {{cssxref("text-align")}}.
+    > Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use [`char`](#char) no CSS3, você pode usar o atributo [`char`](#char) com a propriedade {{cssxref("text-align")}}.
 
 - `charoff` {{Deprecated_inline}}
 

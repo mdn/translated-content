@@ -15,19 +15,19 @@ Este elemento foi implementado pela primeira vez no Internet Explorer 5.5 e foi 
 
 ## Contexto de uso
 
-| Permitida conteúdo       | Vazio                                                                                                    |
-| ------------------------ | -------------------------------------------------------------------------------------------------------- |
-| Tag omissão              | Este é um elemento vazio; ele deve ter uma marca de início, mas não deve ter uma tag de fechamento.      |
-| Elementos pai permitidas | Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content) . |
-| Documento normativo      | [HTML 5, seção 4.6.24](https://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)          |
+| Permitida conteúdo       | Vazio                                                                                                        |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Tag omissão              | Este é um elemento vazio; ele deve ter uma marca de início, mas não deve ter uma tag de fechamento.          |
+| Elementos pai permitidas | Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) . |
+| Documento normativo      | [HTML 5, seção 4.6.24](https://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)              |
 
 ## Atributos
 
-Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento só inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## DOM interface
 
-Este elemento implementa o [HTMLElement](/pt-BR/docs/DOM/HTMLElement) interface.
+Este elemento implementa o [HTMLElement](/pt-BR/docs/Web/API/HTMLElement) interface.
 
 ## Exemplo
 

@@ -40,6 +40,6 @@ a |= 2; // 7
 
 ## Voir aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
 - [L'opérateur OU binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
 - [L'opérateur d'affectation après OU logique (`||=`)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

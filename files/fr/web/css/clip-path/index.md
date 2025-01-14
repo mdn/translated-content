@@ -57,7 +57,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 
 - `<clip-source>`
 
-  - : Une [`url()`](/fr/docs/Web/CSS/url) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
+  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
 
 - [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
 
@@ -71,7 +71,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       - : Définit une ellipse avec ses deux demi-rayons et une position.
     - [`polygon()`](/fr/docs/Web/CSS/basic-shape/polygon)
       - : Définit un polygone en utilisant une règle de remplissage SVG et un ensemble d'arêtes.
-    - [`path()`](/fr/docs/Web/CSS/path)
+    - [`path()`](/fr/docs/Web/CSS/basic-shape/path)
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
 
 - `<geometry-box>`
@@ -79,13 +79,13 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec [`border-radius`](/fr/docs/Web/CSS/border-radius)) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
 
     - `margin-box`
-      - : La [boîte de marge](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
+      - : La [boîte de marge](/fr/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`
-      - : La [boîte de bordure](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#border-box) est utilisée comme boîte de référence.
+      - : La [boîte de bordure](/fr/docs/Web/CSS/CSS_shapes/From_box_values#border-box) est utilisée comme boîte de référence.
     - `padding-box`
-      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
+      - : La [boîte de remplissage (<i lang="en">padding</i>)](/fr/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) est utilisée comme boîte de référence.
     - `content-box`
-      - : La [boîte de contenu](/fr/docs/Web/CSS/CSS_Shapes/From_box_values#content-box) est utilisée comme boîte de référence.
+      - : La [boîte de contenu](/fr/docs/Web/CSS/CSS_shapes/From_box_values#content-box) est utilisée comme boîte de référence.
     - `fill-box`
       - : La boîte englobante (<i lang="en">bounding box</i>) est utilisée comme boîte de référence.
     - `stroke-box`
@@ -97,7 +97,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
   - : Aucun chemin de rognage n'est créé.
 
 > [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
+> Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
 
 ## Définition formelle
 

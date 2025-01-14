@@ -11,9 +11,9 @@ slug: Mozilla/Firefox/Releases/81
 
 ### 開発者ツール
 
-- [デバッガー](/ja/docs/Tools/Debugger) で、`.ts` および `.tsx` ファイルに対して TypeScript のアイコンを使用するようになりました ([Firefox バグ 1642769](https://bugzil.la/1642769))。以前は汎用ファイルのアイコンを使用していました。
-- [デバッガーのソースペイン](/ja/docs/Tools/Debugger/UI_Tour#Source_pane) で行の折り返しをサポートしました ([Firefox バグ 1590885](https://bugzil.la/1590885))。
-- [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) から、不必要な [色覚シミュレーション](/ja/docs/Tools/Accessibility_inspector/Simulation) (1 型 3 色覚、2 型 3 色覚、3 型 3 色覚) を削除して、1 色覚 (全色盲) のシミュレーションを追加しました ([Firefox バグ 1655053](https://bugzil.la/1655053))。
+- [デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) で、`.ts` および `.tsx` ファイルに対して TypeScript のアイコンを使用するようになりました ([Firefox バグ 1642769](https://bugzil.la/1642769))。以前は汎用ファイルのアイコンを使用していました。
+- [デバッガーのソースペイン](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#source_pane) で行の折り返しをサポートしました ([Firefox バグ 1590885](https://bugzil.la/1590885))。
+- [アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) から、不必要な [色覚シミュレーション](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/simulation/index.html) (1 型 3 色覚、2 型 3 色覚、3 型 3 色覚) を削除して、1 色覚 (全色盲) のシミュレーションを追加しました ([Firefox バグ 1655053](https://bugzil.la/1655053))。
 - [要素にクラスを追加する](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-and-changing-classes-on-an-element) 際のオートコンプリートをサポートしました。文書内にあるクラスに基づいて、クラスを提案します ([Firefox バグ 1492797](https://bugzil.la/1492797))。
 
 ### HTML
@@ -40,7 +40,7 @@ _変更なし。_
 ### HTTP
 
 - Firefox で、空白を含むクォートされていないファイル名を持つ非標準の [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) ヘッダーを受け入れるようになりました ([Firefox バグ 1440677](https://bugzil.la/1440677))。
-- Firefox で HTTP [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy) ヘッダーの [`web-share`](/ja/docs/Web/HTTP/Headers/Feature-Policy/web-share) ディレクティブをサポートしました。これは、[Web Share API](/ja/docs/Web/API/Navigator/share) へのアクセスを信頼されたオリジンに制限するために使用できます。現時点で Firefox は Web Share API 自体をサポートしていないことに注意してください ([Firefox バグ 1653199](https://bugzil.la/1653199))。
+- Firefox で HTTP [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Permissions-Policy) ヘッダーの [`web-share`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) ディレクティブをサポートしました。これは、[Web Share API](/ja/docs/Web/API/Navigator/share) へのアクセスを信頼されたオリジンに制限するために使用できます。現時点で Firefox は Web Share API 自体をサポートしていないことに注意してください ([Firefox バグ 1653199](https://bugzil.la/1653199))。
 
 ### API
 

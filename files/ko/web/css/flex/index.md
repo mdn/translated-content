@@ -5,7 +5,7 @@ slug: Web/CSS/flex
 
 {{CSSRef}}
 
-**`flex`** [CSS](/ko/docs/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
+**`flex`** [CSS](/ko/docs/Web/CSS) 속성은 하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다. `flex`는 {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}, {{cssxref("flex-basis")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.
 
 {{EmbedInteractiveExample("pages/css/flex.html")}}
 
@@ -148,5 +148,5 @@ flex.addEventListener("click", function () {
 
 ## 같이 보기
 
-- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 플렉스박스 안내서: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 플렉스박스 안내서: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

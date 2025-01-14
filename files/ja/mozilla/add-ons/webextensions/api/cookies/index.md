@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 拡張機能に cookie の取得と設定と、変更された時の通知を可能にします。
 
-この API を使用するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "cookies" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) があることと、同様にアクセスする cookie を持つ [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) も必要になります。[cookie パーミッション](/ja/Add-ons/WebExtensions/API/cookies#Permissions)を見てください。
+この API を使用するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) ファイルで "cookies" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) があることと、同様にアクセスする cookie を持つ [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) も必要になります。[cookie パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions)を見てください。
 
 ## 型
 
@@ -38,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## パーミッション
 
-この API を使うには、アドオンは manifest で "cookies" の [API パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) を指定せねばならず、同様に cookie がアクセスするあらゆるサイトの [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)も要ります。アドオンは host パーミッションにマッチする URL から読み書きされる cookie を読み書きできます。例えば:
+この API を使うには、アドオンは manifest で "cookies" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) を指定せねばならず、同様に cookie がアクセスするあらゆるサイトの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)も要ります。アドオンは host パーミッションにマッチする URL から読み書きされる cookie を読み書きできます。例えば:
 
 - `http://*.example.com/`
 

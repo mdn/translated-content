@@ -109,6 +109,6 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 - [`core-js` 中针对 `URL` 的 polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/zh-CN/docs/Web/API/URL_API)
-- [什么是 URL？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [什么是 URL？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - 获取 `URL` 对象的属性：{{domxref("URL")}}
 - {{domxref("URLSearchParams")}}

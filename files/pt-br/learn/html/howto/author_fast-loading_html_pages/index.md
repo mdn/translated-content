@@ -21,7 +21,7 @@ Ferramentas como [HTML Tidy](http://tidy.sourceforge.net/) podem automaticamente
 
 ### Minimize o número de arquivos
 
-Reduzir o número de arquivos referenciados por uma página diminui o número de conexões [HTTP](/pt-BR/docs/HTTP) requeridas para realizar o download da página.
+Reduzir o número de arquivos referenciados por uma página diminui o número de conexões [HTTP](/pt-BR/docs/Web/HTTP) requeridas para realizar o download da página.
 
 Dependendo das configurações de cache do _browser_, este pode enviar uma requisição `If-Modified-Since` ao servidor para cada arquivo CSS, JavaScript ou de imagem, perguntando se o arquivo foi modificado desde a última vez que foi baixado.
 
@@ -59,7 +59,7 @@ Quaisquer elementos dinâmicos que requeiram que a página complete seu carregam
 
 ### Reduza o número de scripts _inline_
 
-Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/AJAX) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
+Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser deve assumir que o script pode modificar a estrutura da página enquanto o processo de _parsing_ está em andamento. Reduzir o número de scripts _inline_ no geral e reduzir o uso de `document.write()` para a saída de conteúdo pode melhorar o carregamento da página. Use métodos [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) modernos para manipular o conteúdo da página, ao invés de abordagens antigas baseadas em `document.write()`.
 
 ### Use CSS moderno e marcação validada
 
@@ -71,7 +71,7 @@ Além do mais, marcação válida permite o livre uso de outras ferramentas que 
 
 ### Divida seu conteúdo
 
-Layout de tabelas é um método legado que não deve mais ser empregado. Layouts utilizando blocos {{ HTMLElement("div") }} e, no futuro próximo, [layout multi-colunas CSS3](/pt-BR/docs/CSS/Using_CSS_multi-column_layouts) ou [layout de caixas flexíveis CSS3](/pt-BR/docs/Usando_caixas_flexiveis_css), devem ser utilizadas ao invés disso.
+Layout de tabelas é um método legado que não deve mais ser empregado. Layouts utilizando blocos {{ HTMLElement("div") }} e, no futuro próximo, [layout multi-colunas CSS3](/pt-BR/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts) ou [layout de caixas flexíveis CSS3](/pt-BR/docs/Usando_caixas_flexiveis_css), devem ser utilizadas ao invés disso.
 
 Tabelas ainda são consideradas marcações válidas, mas devem ser usadas para exibir dados tabulares. Para ajudar o browser a renderizar sua página mais rapidamente, você deve evitar aninhar suas tabelas.
 
@@ -142,7 +142,7 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 ## Use async and defer, se possível
 
-Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/HTML/Element/script#Attributes) como [defer](/pt-BR/docs/HTML/Element/script#Attributes) e use [async](/pt-BR/docs/HTML/Element/script#Attributes) sempre que possível, especialmente se você tiver múltiplas tags de script.
+Faça com que scripts JavaScript sejam compatíveis tanto com [async](/pt-BR/docs/Web/HTML/Element/script#attributes) como [defer](/pt-BR/docs/Web/HTML/Element/script#attributes) e use [async](/pt-BR/docs/Web/HTML/Element/script#attributes) sempre que possível, especialmente se você tiver múltiplas tags de script.
 
 Com isso, a página pode parar de renderizar enquanto o JavaScript ainda estiver sendo carregado. Do contrário, o _browser_ não renderizará nada que estiver após as tags de script sem esses atributos.
 
@@ -151,7 +151,7 @@ Nota: Apesar desses atributos ajudarem muito na primeira vez que a página for c
 ## Links Relacionados
 
 - Livro: ["Speed Up Your Site" por Andy King](http://www.websiteoptimization.com/)
-- O excelente e muito completo [Melhores Práticas para Acelerar Seu Web Site](http://developer.yahoo.com/performance/rules.html) (Yahoo!)
+- O excelente e muito completo [Melhores Práticas para Acelerar Seu Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Ferramentas para analisar e otimizar a performance: [Google PageSpeed](https://developers.google.com/speed/pagespeed/)
 
 ## Informações do Documento Original

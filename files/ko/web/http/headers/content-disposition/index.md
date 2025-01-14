@@ -111,6 +111,6 @@ value2
 
 ## See also
 
-- [HTML Forms](/ko/docs/Web/Guide/HTML/Forms)
+- [HTML Forms](/ko/docs/Learn/Forms)
 - The {{HTTPHeader("Content-Type")}} defining the boundary of the multipart body.
 - The {{domxref("FormData")}} interface used to manipulate form data for use in the {{domxref("XMLHttpRequest")}} API.

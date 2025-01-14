@@ -13,7 +13,7 @@ A coisa mais importante para se entender antes de começarmos é que, mesmo que 
 
 ### Inicializando os shaders
 
-Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
+Shaders são especificados ao usar a [Linguagem de Shading OpenGL ES](https://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf). Com o intuito de tornar mais fácil para manter e atualizar nosso conteúdo, nós podemos escrever nosso código que carrega os shaders para buscá-los no documento HTML, ao invés de termos de criar tudo em JavaScript. Vamos dar uma olhada na nossa rotina `initShaders()`, que cuida dessa tarefa:
 
 ```js
 function initShaders() {
@@ -228,7 +228,7 @@ function setMatrixUniforms() {
 
 ## Ver Também
 
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) on Wolfram MathWorld
 - [Matriz](<http://en.wikipedia.org/wiki/Matrix_(mathematics)>) na Wikipedia
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

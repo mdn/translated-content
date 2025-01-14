@@ -41,7 +41,7 @@ Podes usar cualquier selector CSS con los metodos `querySelector()` y `querySele
 
 ## Ver tambien
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}

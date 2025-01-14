@@ -604,5 +604,5 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 看更多
 
-- [使用 CSS transitions](/zh-TW/docs/CSS/Using_CSS_transitions)
+- [使用 CSS transitions](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

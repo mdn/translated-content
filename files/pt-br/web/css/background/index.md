@@ -98,5 +98,5 @@ Um ou mais dos seguintes, por qualquer ordem:
 ## Veja também
 
 - {{Cssxref ( "- moz-fundo-inline-política")}}
-- [Usando gradientes](/pt-BR/docs/CSS/Using_CSS_gradients)
-- [Vários fundos](/pt-BR/docs/CSS/Multiple_backgrounds)
+- [Usando gradientes](/pt-BR/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Vários fundos](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator
 
 {{JSRef}}
 
-L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_») et [un itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
+L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérateur_») et [un itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»).
 
 ## Syntaxe
 
@@ -92,7 +92,7 @@ console.log(it.next()); // throws StopIteration (le générateur est clôturé)
 - {{jsxref("Instructions/Fonction_génératrice_historique", "Fonction génératrice historique", "", 1)}}
 - {{jsxref("Opérateurs/function*", "L'expression d'un générateur historique", "", 1)}}
 - {{jsxref("StopIteration")}}
-- [Le protocole itérateur historique](/fr/docs/Web/JavaScript/Guide/Le_protocole_itérateur_historique)
+- [Le protocole itérateur historique](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
 
 ### Générateurs ES2015
 
@@ -103,4 +103,4 @@ console.log(it.next()); // throws StopIteration (le générateur est clôturé)
 - {{jsxref("Instructions/function*", "function*")}}
 - L'expression {{jsxref("Opérateurs/function*", "function*")}}
 - {{jsxref("GeneratorFunction")}}
-- [Le protocole Iterator](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator)
+- [Le protocole Iterator](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

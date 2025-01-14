@@ -745,7 +745,7 @@ JavaScript は本質的に単一スレッドです。[並列処理](https://ja.w
 
 JavaScript で非同期コードを書く慣用的な方法は 3 つあります。
 
-- コールバックベース（[`setTimeout()`](/ja/docs/Web/API/setTimeout) など）
+- コールバックベース（[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) など）
 - プロミス ([`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)) ベース
 - プロミスの糖衣構文である [`async`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/ja/docs/Web/JavaScript/Reference/Operators/await)
 

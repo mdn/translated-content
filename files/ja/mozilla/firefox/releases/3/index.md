@@ -17,7 +17,7 @@ l10n:
   - : Firefox 3 における新機能を活用するためにウェブサイトやウェブアプリケーションで必要となるかもしれない変更についての情報を提供します。
 - [オンライン・オフラインイベント](/ja/docs/Web/API/Navigator/onLine)
   - : Firefox 3 は WHATWG のオンライン・オフラインイベントをサポートします。これは、ウェブアプリケーションや拡張機能から、インターネットに接続しているかどうかや、接続開始・終了のタイミングを検出できるようにします。
-- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler)
   - : `navigator.registerProtocolHandler()` メソッドを利用して、ウェブアプリケーションをプロトコルハンドラーとして登録できるようになりました。
 - [キャンバスを使用したテキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : Firefox 3 でサポートされた標準化されていない API を利用して、キャンバス内にテキストを描画できるようになりました。
@@ -64,7 +64,7 @@ l10n:
   - : パスワードマネージャーは、新しいログインマネージャーに置き換えられました。
 - [埋め込み XBL バインディング](/ja/docs/XBL/XBL_1.0_Reference/Elements#binding)
   - : XBL バインディングを、別の XML ファイルから読み込む代わりに、Chrome コードから `data:` URL スキーマを使って直接組み込むことができるようになりました。
-- [拡張機能の説明のローカライズ](/ja/docs/Localizing_extension_descriptions)
+- [拡張機能の説明のローカライズ](/ja/docs/orphaned/Localizing_extension_descriptions)
   - : Firefox 3 では、アドオンのメタデータをローカライズする新しい方法がサポートされました。これにより、アドオンのダウンロード直後や無効時にローカライズされた詳細説明が表示されるようになりました。
 - [ローカライズと複数形](/ja/docs/Localization_and_Plurals)
   - : Firefox 3 では、新しい PluralForm モジュールがサポートされました。このモジュールは、複数のローカライゼーションで複数形の単語を正しく扱うためのツールを提供します。

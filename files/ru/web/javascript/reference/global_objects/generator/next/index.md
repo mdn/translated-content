@@ -80,4 +80,4 @@ g.next(2);
 ## Смотрите также
 
 - [`function*`](/ru/docs/Web/JavaScript/Reference/Statements/function*)
-- [Итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Итераторы и генераторы](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators)

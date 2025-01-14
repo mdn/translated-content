@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("AbortController")}} 接口的 **`abort()`** 方法会在一个异步操作完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)、各种响应主体或者流的消耗。
+{{domxref("AbortController")}} 接口的 **`abort()`** 方法会在一个异步操作完成之前中止它。它能够中止 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)、各种响应主体或者流的消耗。
 
 ## 语法
 
@@ -31,7 +31,7 @@ abort(reason)
 
 我们首先使用 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数创建一个 controller，然后使用 {{domxref("AbortController.signal")}} 属性获取到它关联的 {{domxref("AbortSignal")}} 对象的引用。
 
-当 [fetch 请求](/zh-CN/docs/Web/API/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
+当 [fetch 请求](/zh-CN/docs/Web/API/Window/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
 const controller = new AbortController();

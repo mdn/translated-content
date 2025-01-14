@@ -141,5 +141,5 @@ l10n:
 ## 関連情報
 
 - 利用できるイベントの種類: [イベントリファレンス](/ja/docs/Web/Events)
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs. `currentTarget` vs. `relatedTarget` vs. `originalTarget`)
+- [イベントターゲットの比較](/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (`target` vs. `currentTarget` vs. `relatedTarget` vs. `originalTarget`)
 - [カスタムイベントの生成と発行](/ja/docs/Web/Events/Creating_and_triggering_events)

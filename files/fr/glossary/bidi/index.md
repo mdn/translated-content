@@ -15,4 +15,4 @@ slug: Glossary/BiDi
 
 ### Référence technique
 
-- [Développement d'applications Bidi](/fr/Apps/Build/Localization/Developing_Bidi_Apps)
+- [Développement d'applications Bidi](/fr/docs/Web/Apps/Build/Localization/Developing_Bidi_Apps)

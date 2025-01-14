@@ -22,7 +22,7 @@ _Hérite des propriétés de son parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTableCellElement.align")}} {{deprecated_inline}}
   - : Renvoie un chaîne {{domxref("DOMString")}} contenant la valeur énumérée de l'attribut [`align`](/fr/docs/Web/HTML/Element/td#align). Cette propriété décrit l'alignement du contenu de la cellule compte tenu du contexte ; ses valeurs possibles sont `"left"`, `"right"`, et `"center"`.
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
-  - : Renvoie une chaîne {{domxref("DOMString")}} contenant la couleur de fond des cellules. C'est une représentation de l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Element/td#bgColor).
+  - : Renvoie une chaîne {{domxref("DOMString")}} contenant la couleur de fond des cellules. C'est une représentation de l'attribut obsolète [`bgColor`](/fr/docs/Web/HTML/Element/td#bgcolor).
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
   - : Renvoie une chaîne {{domxref("DOMString")}} contenant un nom regroupant des cellules de manière virtuelle. C'est une représentation de l'attribut obsolète [`axis`](/fr/docs/Web/HTML/Element/td#axis).
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}

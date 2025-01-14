@@ -7,7 +7,7 @@ slug: Web/CSS/background-attachment
 
 ## Краткое описание
 
-Если указано {{Cssxref("background-image")}}, [CSS](/ru/docs/CSS) свойство `background-attachment` определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.
+Если указано {{Cssxref("background-image")}}, [CSS](/ru/docs/Web/CSS) свойство `background-attachment` определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.
 
 {{cssinfo}}
 
@@ -113,4 +113,4 @@ p {
 
 ## Смотрите также
 
-- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds)
+- [Несколько фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

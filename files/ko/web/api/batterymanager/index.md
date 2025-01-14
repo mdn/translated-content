@@ -46,4 +46,4 @@ slug: Web/API/BatteryManager
 ## 참고
 
 - {{ domxref("window.navigator.battery","navigator.battery") }}
-- [Battery Status API](/ko/docs/WebAPI/Battery_Status)
+- [Battery Status API](/ko/docs/Web/API/Battery_Status_API)

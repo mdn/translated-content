@@ -13,11 +13,11 @@ slug: Web/SVG/Attribute/fill
 
 ### 对动画元素
 
-| 类别     | 动画定时属性                                                                 |
-| -------- | ---------------------------------------------------------------------------- |
-| 值       | **remove** \| freeze                                                         |
-| 可变性   | No                                                                           |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FillAttribute) |
+| 类别     | 动画定时属性                                                                  |
+| -------- | ----------------------------------------------------------------------------- |
+| 值       | **remove** \| freeze                                                          |
+| 可变性   | No                                                                            |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#FillAttribute) |
 
 - remove（默认值）
   - : 在动画的激活持续时间结束后，动画效果会移除（不再应用）。在动画的激活结束后，动画不再对目标元素有影响（除非动画重新开始）。
@@ -26,11 +26,11 @@ slug: Web/SVG/Attribute/fill
 
 ### 对形状元素
 
-| 类别     | 外观属性                                                                     |
-| -------- | ---------------------------------------------------------------------------- |
-| 值       | [\<paint>](/zh-CN/SVG/Content_type#Paint)                                    |
-| 可变性   | Yes                                                                          |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
+| 类别     | 外观属性                                                                      |
+| -------- | ----------------------------------------------------------------------------- |
+| 值       | [\<paint>](/zh-CN/docs/SVG/Content_type#paint)                                |
+| 可变性   | Yes                                                                           |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillProperty) |
 
 ## 示例
 
@@ -38,6 +38,6 @@ slug: Web/SVG/Attribute/fill
 
 下列元素可以使用`fill`属性：
 
-- [动画元素](/zh-CN/SVG/Element#Animation_elements) »
-- [形状元素](/zh-CN/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
+- [动画元素](/zh-CN/docs/Web/SVG/Element#animation_elements) »
+- [形状元素](/zh-CN/docs/Web/SVG/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »

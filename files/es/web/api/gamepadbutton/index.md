@@ -68,4 +68,4 @@ function gameLoop() {
 
 ## Recomendado
 
-[Usando la API de Gamepad](/es/docs/Web/Guide/API/Gamepad)
+[Usando la API de Gamepad](/es/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

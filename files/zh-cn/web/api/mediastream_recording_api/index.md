@@ -26,7 +26,7 @@ MediaStream Recording API 由一个主接口{{domxref("MediaRecorder")}}组成�
 > [!NOTE]
 > 单单使用包含已经录制好媒体切片的{{domxref("Blob")}}s 将大可不能单独播放。媒体在重放之前需要重新组装。
 
-如果在录制过程中出错，[`error`](/zh-CN/docs/Web/API/Element/error_event) 事件将会传给`MediaRecorder`. 你可以设置{{domxref("MediaRecorder.onerror", "onerror")}}去监听 `error` 事件。
+如果在录制过程中出错，[`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) 事件将会传给`MediaRecorder`. 你可以设置{{domxref("MediaRecorder.onerror", "onerror")}}去监听 `error` 事件。
 
 例子中，我们使用 Canvas 作为{{domxref("MediaStream")}}的源，在 9 秒后停止录音。
 
