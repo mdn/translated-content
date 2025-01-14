@@ -167,7 +167,6 @@
 /ru/docs/Learn/Accessibility/CSS_and_JavaScript	/ru/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Accessibility/HTML	/ru/docs/Learn_web_development/Core/Accessibility/HTML
 /ru/docs/Learn/Accessibility/What_is_accessibility	/ru/docs/Learn_web_development/Core/Accessibility/What_is_accessibility
-/ru/docs/Learn/CSS	/ru/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1
 /ru/docs/Learn/CSS/Building_blocks	/ru/docs/Learn_web_development/Core/Styling_basics
 /ru/docs/Learn/CSS/Building_blocks/Advanced_styling_effects	/ru/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects
 /ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders	/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders

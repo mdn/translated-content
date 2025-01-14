@@ -15914,24 +15914,5 @@
   "conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS": {
     "modified": "2020-10-15T22:23:15.801Z",
     "contributors": ["Ivan961", "fedev", "Tortik217"]
-  },
-  "conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1": {
-    "modified": "2020-07-16T22:25:37.223Z",
-    "contributors": [
-      "Ivan961",
-      "binxer",
-      "skrikl",
-      "izhurav",
-      "alexbs",
-      "sborenko",
-      "niktariy",
-      "bezik",
-      "Shychara",
-      "kolanski",
-      "VladdOs",
-      "BychekRU",
-      "uleming",
-      "Andrew_Pfeiffer"
-    ]
   }
 }
