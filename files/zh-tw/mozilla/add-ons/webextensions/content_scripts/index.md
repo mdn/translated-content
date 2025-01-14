@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 {{AddonSidebar}}內容腳本（content script）是擴充套件的一部分，它會在在特定的網頁執行（與之相對的則是同樣屬於套件的後端腳本（background scripts）或者網站本身的腳本，像是那些那些透過 {{HTMLElement("script")}} 標籤讀取的內容）
 
-[後端腳本](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)可以使用所有的 [擴充套件 JavaScript APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。
+[後端腳本](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)可以使用所有的 [擴充套件 JavaScript API](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API)，但它們無法直接使用網頁中的內容。所以如果你的套件必須要透過 content scripts 才能使用它們。
 
 就像一般網頁裡的 scripts 一樣，content scripts 可以透過 standard DOM APIs 存取並修改頁面內容。
 
-Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)，但它們可以透過一個訊息系統[來與後端腳本溝通](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts)，從而間接地使用擴充套件 APIs。
+Content scripts 只能使用[一小部分的擴充套件 API](#擴充套件_api)，但它們可以透過一個訊息系統[來與後端腳本溝通](#與後端腳本溝通)，從而間接地使用擴充套件 API。
 
 > [!NOTE]
 > 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/CSP) 錯誤。
@@ -112,7 +112,7 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
 
 注意到 Firefox 提供了一些 API 來使用被頁面腳本產生的 Javascript 物件以及對頁面腳本公開自己的 Javascript 物件。詳閱[與頁面腳本共用物件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)。
 
-### 擴充套件 APIs
+### 擴充套件 API
 
 除標準 DOM APIs 之外，內容腳本可以使用下列 擴充套件 APIs：
 

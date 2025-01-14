@@ -15,5 +15,5 @@ _非同步_（Asynchronous，又稱異步）指的是各方在方便或可能時
 
 ### 技術資訊
 
-- [Fetching data from the server](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)（學習專區）
+- [Fetching data from the server](/zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests)（學習專區）
 - {{glossary("Synchronous","同步")}}

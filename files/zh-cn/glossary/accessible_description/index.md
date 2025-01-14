@@ -41,7 +41,7 @@ l10n:
 
 - [无障碍名称与描述计算 1.2（accname）](https://w3c.github.io/accname/#mapping_additional_nd_description)
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)
 - [Web Accessibility In Mind](https://webaim.org/)
 - [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)

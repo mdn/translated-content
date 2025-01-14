@@ -79,7 +79,7 @@ slug: Web/Security
 ## 参见
 
 - [Web 隐私](/zh-CN/docs/Web/Privacy)
-- [学习：站点安全](/zh-CN/docs/Learn/Server-side/First_steps/Website_security)
+- [学习：站点安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Mozilla 安全博客](https://blog.mozilla.org/security/)
 - [OWASP 备忘录](https://cheatsheetseries.owasp.org/index.html)
 

@@ -275,7 +275,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 支持 `url` 输入类型的浏览器会自动提供验证，以确保只有符合标准格式的 URL 文本被输入到输入框。
 
-URL 的语法是相当复杂的。它由 WHATWG 的 [URL 动态标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是 URL？](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)中为初学者做了描述。
+URL 的语法是相当复杂的。它由 WHATWG 的 [URL 动态标准](https://url.spec.whatwg.org/)定义，并在我们的文章[什么是 URL？](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)中为初学者做了描述。
 
 ### 使 URL 必填
 
@@ -382,8 +382,8 @@ input:valid + span::after {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel)
 - [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

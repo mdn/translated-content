@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在 CSS 中，元素的*固有尺寸*是指基于其内容的尺寸，不考虑它所在的上下文影响。例如，CSS [盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model)属性应用的尺寸。元素的固有尺寸由其 {{cssxref("min-content")}} 和 {{cssxref("max-content")}} 尺寸表示。
+在 CSS 中，元素的*固有尺寸*是指基于其内容的尺寸，不考虑它所在的上下文影响。例如，CSS [盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)属性应用的尺寸。元素的固有尺寸由其 {{cssxref("min-content")}} 和 {{cssxref("max-content")}} 尺寸表示。
 
 行级元素的尺寸是固有的：[尺寸](/zh-CN/docs/Web/CSS/CSS_box_sizing)和[盒](/zh-CN/docs/Web/CSS/CSS_box_model)属性，包括 {{cssxref("height")}}、{{cssxref("width")}}、{{cssxref("block-size")}}、{{cssxref("inline-size")}}、{{cssxref("padding-block")}} 和 {{cssxref("margin-block")}} 都对其没有影响（尽管 {{cssxref("margin-inline")}} 和 {{cssxref("padding-inline")}} 有影响）。
 

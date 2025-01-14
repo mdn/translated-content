@@ -13,5 +13,5 @@ l10n:
 
 ## 参见
 
-- [学习 Web 性能](/zh-CN/docs/Learn/Performance)
+- [学习 Web 性能](/zh-CN/docs/Learn_web_development/Extensions/Performance)
 - [感知性能](/zh-CN/docs/Glossary/Perceived_performance)

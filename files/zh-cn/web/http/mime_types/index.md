@@ -67,7 +67,7 @@ IANA 目前注册的独立类型如下：
 
 **多部分**类型指的是一类可分成不同部分的文件，其各部分通常是不同的 MIME 类型；也可用于——尤其在电子邮件中——表示属于同一事务的多个独立文件。它们代表一个**复合文档**。
 
-HTTP 不会特殊处理多部分文档：信息会被传输到浏览器（如果浏览器不知道如何显示文档，很可能会显示一个“另存为”窗口）。除了几个例外，在 [HTML 表单](/zh-CN/docs/Learn/Forms)的 {{HTTPMethod("POST")}} 方法中使用的 `multipart/form-data`，以及用来发送部分文档，与 {{HTTPStatus("206")}} `Partial Content` 一同使用的 `multipart/byteranges`。
+HTTP 不会特殊处理多部分文档：信息会被传输到浏览器（如果浏览器不知道如何显示文档，很可能会显示一个“另存为”窗口）。除了几个例外，在 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)的 {{HTTPMethod("POST")}} 方法中使用的 `multipart/form-data`，以及用来发送部分文档，与 {{HTTPStatus("206")}} `Partial Content` 一同使用的 `multipart/byteranges`。
 
 有两种多部分类型：
 
@@ -167,7 +167,7 @@ MIME 类型为 `image` 的文件包含图像数据。子类型指定数据所代
 
 ### multipart/form-data
 
-`multipart/form-data` 可用于 [HTML 表单](/zh-CN/docs/Learn/Forms)从浏览器发送信息给服务器。
+`multipart/form-data` 可用于 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)从浏览器发送信息给服务器。
 
 作为多部分文档格式，它由边界线（一个由双横滑线 `--` 开始的字符串）划分出的不同部分组成。每一部分有自己的实体，以及自己的 HTTP 请求头，{{HTTPHeader("Content-Disposition")}} 和 {{HTTPHeader("Content-Type")}} 用于文件上传字段。
 
@@ -291,5 +291,5 @@ MIME 类型不是传达文档类型信息的唯一方式：
 
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
 - [Web 媒体类型指南](/zh-CN/docs/Web/Media/Formats)
-- [正确配置服务器 MIME 类型](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
+- [正确配置服务器 MIME 类型](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
 - <https://www.iana.org/assignments/media-types/application/json>

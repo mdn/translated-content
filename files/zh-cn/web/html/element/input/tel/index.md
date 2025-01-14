@@ -503,10 +503,10 @@ input:valid + span::after {
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 相关的 {{HTMLElement("input")}} 元素
 
   - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)
 
-- [CSS 属性兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性](/zh-CN/docs/Learn_web_development/Extensions/Forms)

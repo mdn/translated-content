@@ -60,4 +60,4 @@ function hide(e) {
 
 ## 參見
 
-- [Comparison of Event Targets](/zh-TW/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+- [Comparison of Event Targets](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling)

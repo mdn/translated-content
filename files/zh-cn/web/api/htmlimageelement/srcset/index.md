@@ -105,7 +105,7 @@ box.appendChild(newElem);
 
 {{EmbedLiveSample("示例", 640, 320)}}
 
-有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)指南。
+有关其他示例，请参阅我们的[响应式图片](/zh-CN/docs/Web/HTML/Responsive_images)指南。
 
 ## 规范
 
@@ -117,6 +117,6 @@ box.appendChild(newElem);
 
 ## See also
 
-- [Images in HTML](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Images in HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
+- [Responsive images](/zh-CN/docs/Web/HTML/Responsive_images)
 - [Image file type and format guide](/zh-CN/docs/Web/Media/Formats/Image_types)

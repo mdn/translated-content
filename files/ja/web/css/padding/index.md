@@ -76,14 +76,14 @@ padding: unset;
 
 #### HTML
 
-```html
-<h4>This element has moderate padding.</h4>
-<h3>The padding is huge in this element!</h3>
+```html-nolint live-sample___setting_padding_with_pixels
+<h4>この要素には適度なパディングがあります。</h4>
+<h3>この要素のパディングが巨大です。</h3>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_padding_with_pixels
 h4 {
   background-color: lime;
   padding: 20px 50px;
@@ -97,7 +97,7 @@ h3 {
 
 #### 結果
 
-{{EmbedLiveSample('パディングをピクセル数で設定', '100%', 300)}}
+{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}
 
 ### パディングをピクセル数とパーセント値で設定
 

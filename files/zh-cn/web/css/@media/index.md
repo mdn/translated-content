@@ -141,9 +141,9 @@ _逻辑运算符_（logical operator）`not`、`and`、`only` 和 `or` 可用于
 
 ## 无障碍考虑
 
-为了最好地适应调整了网站文本大小的用户，当你需要在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)中使用 {{cssxref("&lt;length&gt;")}} 时，请使用 [`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 单位。
+为了最好地适应调整了网站文本大小的用户，当你需要在[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)中使用 {{cssxref("&lt;length&gt;")}} 时，请使用 [`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 单位。
 
-[`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#长度) 的效果会更好。
+[`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 和 [`px`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 都是有效单位，但如果用户更改浏览器文本大小，[`em`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#长度) 的效果会更好。
 
 考虑使用媒体查询第 4 版来改善用户体验。例如，使用 `prefers-reduced-motion` 以[检测用户是否已请求系统最小化其使用的动画](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)或动作。
 

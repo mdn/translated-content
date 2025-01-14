@@ -38,5 +38,5 @@ slug: Web/API/EventTarget
 ## 参见
 
 - [事件参考](/zh-CN/docs/Web/Events)——站点中列出的事件
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} 接口
