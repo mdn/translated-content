@@ -1,6 +1,8 @@
 ---
 title: <dt> 설명 용어
 slug: Web/HTML/Element/dt
+l10n:
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{HTMLSidebar}}
