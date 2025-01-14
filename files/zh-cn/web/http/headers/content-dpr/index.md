@@ -64,4 +64,4 @@ Content-DPR: <number>
   - {{HTTPHeader("Width")}}
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存：Vary](/zh-CN/docs/Web/HTTP/Caching#vary) 和 {{HTTPHeader("Vary")}}
-- developer.chrome.com 上的[利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints?hl=zh-cn)（2020）
+- developer.chrome.google.cn 上的[利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints?hl=zh-cn)（2020）
