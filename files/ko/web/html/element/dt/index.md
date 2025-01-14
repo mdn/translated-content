@@ -21,7 +21,7 @@ l10n:
 
 ## 예제
 
-[\<dl> 요소의 예제](/ko/docs/Web/HTML/Element/dl#예제)를 확인하세요.
+예시는 [`<dl>` 요소에 제공된 예제](https://github.com/en-US/docs/Web/HTML/Element/dl#예제)를 참고하세요.
 
 ## 기술 요약
 
