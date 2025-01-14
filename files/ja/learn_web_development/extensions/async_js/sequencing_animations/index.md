@@ -1,5 +1,5 @@
 ---
-title: 課題: アニメーションを順番に再生する
+title: "課題: アニメーションを順番に再生する"
 slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
