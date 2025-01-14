@@ -65,7 +65,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">암시적 ARIA 역할</th>
-      <td><a href='https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role'>해당 역할 없음</a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">해당 역할 없음</a></td>
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
