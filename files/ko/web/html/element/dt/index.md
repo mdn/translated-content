@@ -7,7 +7,9 @@ l10n:
 
 {{HTMLSidebar}}
 
-**HTML `<dt>` 요소**는 설명 혹은 정의 리스트에서 용어를 정의합니다. 따라서 반드시 {{htmlelement("dl")}}(설명 목록) 요소 안에 위치해야 합니다. 보통 하나의 `<dt>` 뒤에 하나의 {{htmlelement("dd")}} 요소가 뒤따르는 것이 일반적이나, 여러 개의 `<dt>` 요소가 연속으로 있는 경우, 바로 다음 {{htmlelement("dd")}} 요소가 앞의 `<dt>` 요소들을 한 번에 설명합니다.
+**`<dt>`** [HTML](https://github.com/en-US/docs/Web/HTML) 요소는 설명 또는 정의 목록에서 용어를 지정하며, 반드시 {{HTMLElement("dl")}} 요소 안에서 사용해야 합니다. 일반적으로 {{HTMLElement("dd")}} 요소가 뒤따르지만, 연속된 여러 `<dt>` 요소는 모두 다음에 나오는 단일 {{HTMLElement("dd")}} 요소에 의해 정의되는 여러 용어를 나타냅니다.
+
+뒤이어 나오는 {{HTMLElement("dd")}} (설명 세부사항) 요소는 `<dt>`로 지정된 용어와 관련된 정의나 기타 관련 텍스트를 제공합니다.
 
 {{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
 
