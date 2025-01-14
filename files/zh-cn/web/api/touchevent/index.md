@@ -16,26 +16,26 @@ l10n:
 ## 构造函数
 
 - {{ domxref("TouchEvent.TouchEvent", "TouchEvent()")}}
-  - : 创建一个 {{ domxref("TouchEvent") }} 对象。
+  - : 创建一个 `TouchEvent` 对象。
 
 ## 实例属性
 
 _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的属性。_
 
-- {{ domxref("event.altKey", "TouchEvent.altKey") }} {{readonlyInline}}
+- {{ domxref("TouchEvent.altKey") }} {{ReadOnlyInline}}
   - : 布尔值，指明触摸事件触发时，键盘 alt 键是否被按下。
-- {{ domxref("TouchEvent.changedTouches") }} {{readonlyInline}}
+- {{ domxref("TouchEvent.changedTouches") }} {{ReadOnlyInline}}
   - : 一个 {{ domxref("TouchList") }} 对象，包含了代表所有从上一次触摸事件到此次事件过程中，状态发生了改变的触点的 {{ domxref("Touch") }} 对象。
-- {{ domxref("event.ctrlKey", "TouchEvent.ctrlKey") }} {{readonlyInline}}
+- {{ domxref("TouchEvent.ctrlKey") }} {{ReadOnlyInline}}
   - : 布尔值，指明触摸事件触发时，键盘 ctrl 键是否被按下。
-- {{ domxref("event.metaKey", "TouchEvent.metaKey") }} {{readonlyInline}}
-  - : 布尔值，指明触摸事件触发时，键盘 meta 键（[Wikipedia - meta Key](http://en.wikipedia.org/wiki/Meta_key)）是否被按下。
-- {{ domxref("event.shiftKey", "TouchEvent.shiftKey") }} {{readonlyInline}}
+- {{ domxref("TouchEvent.metaKey") }} {{ReadOnlyInline}}
+  - : 布尔值，指明触摸事件触发时，键盘 meta 键是否被按下。
+- {{ domxref("TouchEvent.shiftKey") }} {{ReadOnlyInline}}
   - : 布尔值，指明触摸事件触发时，键盘 shift 键是否被按下。
-- {{ domxref("TouchEvent.targetTouches") }} {{readonlyInline}}
-  - : 一个 {{ domxref("TouchList") }} 对象，是包含了如下触点的 {{ domxref("Touch") }} 对象：触摸起始于当前事件的目标 {{ domxref("element") }} 上，并且仍然没有离开触摸平面的触点。
-- {{ domxref("TouchEvent.touches") }} {{readonlyInline}}
-  - : 一个 {{ domxref("TouchList") }} 对象，包含了所有当前接触触摸平面的触点的 {{ domxref("Touch") }} 对象，无论它们的起始于哪个 {{ domxref("element") }} 上，也无论它们状态是否发生了变化。
+- {{ domxref("TouchEvent.targetTouches") }} {{ReadOnlyInline}}
+  - : 一个 {{ domxref("TouchList") }} 对象，是包含了如下触点的 {{ domxref("Touch") }} 对象：触摸起始于当前事件的目标元素上，并且仍然没有离开触摸平面的触点。
+- {{ domxref("TouchEvent.touches") }} {{ReadOnlyInline}}
+  - : 一个 {{ domxref("TouchList") }} 对象，包含了所有当前接触触摸平面的触点的 {{ domxref("Touch") }} 对象，无论它们的起始于哪个元素上，也无论它们状态是否发生了变化。
 - {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : 自事件开始以来旋转的变化（以度为单位）。正值表示顺时针旋转，负值表示逆时针旋转。默认值： `0.0` 。
 - {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -43,23 +43,23 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
 ## 触摸事件的类型
 
-为了区别触摸相关的状态改变，存在多种类型的触摸事件。可以通过检查触摸事件的 {{ domxref("event.type", "TouchEvent.type") }} 属性来确定当前事件属于哪种类型
+为了区别触摸相关的状态改变，存在多种类型的触摸事件。可以通过检查触摸事件的 {{ domxref("event.type", "TouchEvent.type") }} 属性来确定当前事件属于哪种类型。
 
 - {{domxref("Element/touchstart_event", "touchstart")}}
 
-  - : 当用户在触摸平面上放置了一个触点时触发。事件的目标{{domxref("element", "元素", "", 1)}}将是触点位置上的那个目标{{domxref("element", "元素", "", 1)}}。
+  - : 当用户在触摸平面上放置了一个触点时触发。事件的目标将是发生触摸的{{domxref("element", "元素", "", 1)}}。
 
 - {{domxref("Element/touchend_event", "touchend")}}
 
   - : 当一个触点被用户从触摸平面上移除（即用户的一个手指或手写笔离开触摸平面）时触发。当触点移出触摸平面的边界时也将触发。例如用户将手指划出屏幕边缘。
 
-    事件的目标{{domxref("element", "元素", "", 1)}}与触发 `touchstart` 事件的目标{{domxref("element", "元素", "", 1)}}相同，即使 `touchend` 事件触发时，触点已经移出了该 {{domxref("element", "元素", "", 1)}}。
+    事件的目标{{domxref("element", "元素", "", 1)}}与触发 `touchstart` 事件的目标{{domxref("element", "元素", "", 1)}}相同，即使触点已经移出了该 {{domxref("element", "元素", "", 1)}}。
 
     已经被从触摸平面上移除的触点，可以在 `changedTouches` 属性定义的 {{ domxref("TouchList") }} 中找到。
 
 - {{domxref("Element/touchmove_event", "touchmove")}}
 
-  - : 当用户在触摸平面上移动触点时触发。事件的目标{{domxref("element", "元素", "", 1)}}和触发 `touchstart` 事件的目标{{domxref("element", "元素", "", 1)}}相同，即使当 `touchmove` 事件触发时，触点已经移出了该{{domxref("element", "元素", "", 1)}}。
+  - : 当用户在触摸平面上移动触点时触发。事件的目标{{domxref("element", "元素", "", 1)}}和触发 `touchstart` 事件的目标{{domxref("element", "元素", "", 1)}}相同，即使触点已经移出了该{{domxref("element", "元素", "", 1)}}。
 
     当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。
 
