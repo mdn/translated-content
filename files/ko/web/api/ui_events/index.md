@@ -265,7 +265,7 @@ clear.addEventListener("click", () => {
 
 {{EmbedLiveSample("Keyboard and input events", 0, 250)}}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
