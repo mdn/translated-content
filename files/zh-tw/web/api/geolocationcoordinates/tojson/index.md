@@ -1,6 +1,5 @@
 ---
 title: GeolocationCoordinates：toJSON() 方法
-short-title: toJSON()
 slug: Web/API/GeolocationCoordinates/toJSON
 l10n:
   sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
@@ -8,7 +7,7 @@ l10n:
 
 {{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面 **`toJSON()`** 方法是{{Glossary("Serialization","序列化工具")}}；它返回以 JSON 表示的 {{domxref("GeolocationCoordinates")}} 物件。
+{{domxref("GeolocationCoordinates")}} 介面的 **`toJSON()`** 方法是{{Glossary("Serialization","序列化工具")}}；它返回以 JSON 表示的 {{domxref("GeolocationCoordinates")}} 物件。
 
 ## 語法
 
