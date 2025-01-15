@@ -1,6 +1,8 @@
 ---
 title: 문서 객체 모델 (DOM)
 slug: Web/API/Document_Object_Model
+l10n:
+  sourceCommit: df2a728b3b3911a396a4b47d363e4a335a5c8065
 ---
 
 {{DefaultAPISidebar("DOM")}}
