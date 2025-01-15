@@ -91,7 +91,7 @@ HTML DOM API는 탭과 창, CSS 스타일과 스타일시트, 브라우저 히�
 
 {{Specifications}}
 
-## 참조
+## 같이 보기
 
 - [DOM 예제](/ko/docs/Web/API/Document_Object_Model/Examples)
 - [CSS 객체 모델 (CSSOM)](/ko/docs/Web/API/CSS_Object_Model)
