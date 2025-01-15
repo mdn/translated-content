@@ -1,10 +1,13 @@
 ---
 title: Angular アプリケーションのビルドとその他のリソース
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 この Angular の最後の記事では、本番環境に対応したアプリをビルドする方法について説明し、学習の旅を続けるためその他のリソースを提供します。
 
@@ -13,15 +16,14 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p>
-          <a href="/ja/docs/Learn/HTML">HTML</a>、
-          <a href="/ja/docs/Learn/CSS">CSS</a>、
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
-          <a
-            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ターミナル/コマンドライン</a
-          >に関する知識があること。
-        </p>
+        主要な
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> と
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a>
+        言語を扱うことができ、
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+          >端末/コマンドライン</a
+        >に関する知識があること。
       </td>
     </tr>
     <tr>
@@ -54,19 +56,30 @@ CLI はアプリケーションをコンパイルし、コンパイル結果を�
 - Java
 - .NET
 
-[Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website) などのバックエンドを使用できます
+[Firebase](https://firebase.google.com/docs/hosting), [Google Cloud](https://cloud.google.com/solutions/web-hosting), or [App Engine](https://cloud.google.com/appengine/docs/standard/hosting-a-static-website) などのバックエンドが利用できます。
 
-## その次
+### ローカルでホスティングする
 
-ここまで基本的なアプリケーションを作成しましたが、Angular の学びはまだ始まったばかりです。
+楽しむために、ビルド後に次のコマンドを実行して [`http-server`](https://www.npmjs.com/package/http-server) パッケージを使用すると、ビルドしたアプリを自分のマシンでホスティングすることができます。
+
+```bash
+npx http-server ./dist/todo/browser/ -o
+```
+
+このコマンドは、ポート `8080` 上の `dist/todo/browser` ディレクトリーでサービスを提供します。そのため、ブラウザーで `http://127.0.0.1:8080` を開いてアプリが動作していることを確認できます。
+HTTP サーバーを使用すると、ローカルネットワーク上の他の端末から、コンピューターの IP アドレスでアプリにアクセスすることもできます。このアドレスはコンソールで `127.0.0.1` アドレスの下に掲載されています。
+
+## その次は
+
+ここまで基本的なアプリケーションを作成しましたが、 Angular の学びはまだ始まったばかりです。
 以下の Angular のドキュメントを調べることで、さらに学ぶことができます。
 
-- [Tour of Heroes](https://angular.io/tutorial): サービスの使用、ナビゲーション、サーバーからのデータの取得など、Angular の機能に焦点を当てた詳細なチュートリアル。
-- Angular [Components](https://angular.io/guide/component-overview) ガイド: ライフサイクル、コンポーネントの相互作用、ビューのカプセル化などのトピックをカバーする一連の記事。
-- [Forms](https://angular.io/guide/forms-overview) ガイド: Angular でのリアクティブ フォームの作成、入力の検証、動的フォームの作成について説明する記事。
+- [チュートリアル](https://angular.dev/tutorials): サービスの使用、ナビゲーション、サーバーからのデータの取得など、 Angular の機能に焦点を当てた詳細なチュートリアル。
+- Angular [Components](https://angular.dev/guide/component-overview) ガイド: ライフサイクル、コンポーネントの相互作用、ビューのカプセル化などのトピックをカバーする一連の記事。
+- [Forms](https://angular.dev/guide/forms) ガイド: Angular でのリアクティブフォームの作成、入力の検証、動的フォームの作成について説明する記事。
 
 ## まとめ
 
 以上です。 Angular を楽しんでいただければ幸いです。
 
-{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -1,12 +1,13 @@
 ---
 title: 関数の返値
 slug: Learn_web_development/Core/Scripting/Return_values
-original_slug: Learn/JavaScript/Building_blocks/Return_values
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}
 
 最後にもうひとつ、関数に関する重要な概念、返値について説明します。関数の中には重要な値を返さないものもあれば、返すものもあります。返値が何なのか、それをコードでどのように使用するのか、関数を有益な値を返すようにするにはどうすればいいのかを理解することが重要です。下記でこれらすべてに応じた説明をします。
 
@@ -14,21 +15,18 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        <p>
-          基本的な HTML と CSS、それに
-          <a href="/ja/docs/Learn/JavaScript/First_steps"
-            >JavaScript の第一歩</a
-          >の理解。<a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions"
-            >関数 — 再利用可能なコードブロック</a
-          >。
-        </p>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。
+      </td>
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        関数の返値とその使い方を理解すること。
+        <ul>
+          <li>返値とは何なのか。</li>
+          <li>既存の関数の返値を使用する方法。</li>
+          <li>自分の関数に返値を追加する。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -38,7 +36,7 @@ l10n:
 
 **返値**は、その名が示すとおり関数の実行が完了した時に返される値です。返値についてそこまで意識してこなかったかもしれませんが、これまでに何度か返値を見てきているはずです。
 
-以下の見覚えのある例を見てみましょう（このシリーズの[過去の記事](/ja/docs/Learn/JavaScript/Building_blocks/Functions#ブラウザー組み込み関数)より）。
+以下の見覚えのある例を見てみましょう（このシリーズの[過去の記事](/ja/docs/Learn_web_development/Core/Scripting/Functions#ブラウザー組み込み関数)より）。
 
 ```js
 const myText = "今日は寒い";
@@ -60,11 +58,11 @@ console.log(newString); // "今日は暖かい" と出力
 
 関数によっては何も値を返しません。（この場合、リファレンスページでは返値を [`void`](/ja/docs/Web/JavaScript/Reference/Operators/void) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) として記載しています。）たとえば、前の記事で作った [`displayMessage()`](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) 関数では、関数が呼び出されたときに特定の値を返していません。ただ画面のどこかにボックスの表示を作るだけです。
 
-一般的に、返値は関数がある種の計算をしている途中の段階で使用されます。 関数で計算する必要があるいくつかの値を含む最終結果を取得したいとします。関数は値を計算した後、結果を返すことができるため、変数に格納できます。この変数は、計算の次の段階で使用できます。
+一般的に、返値は、関数が何らかの計算の中間段階である場合に用いられます。最終結果を取得したい場合、関数によって計算される必要がある値がいくつか関与します。関数が値を計算した後、結果を返すことで、変数に格納することができます。そして、この変数を次の段階の計算で使用することができます。
 
 ### 独自の関数における返値の使用
 
-カスタム関数から値を返すために、必要なことは、 [return](/ja/docs/Web/JavaScript/Reference/Statements/return) というキーワードを使うことです。直近の [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html) の例でこれを見たでしょう。`draw()` 関数は 100 のランダムな円を HTML の {{htmlelement("canvas")}} 内に表示します。
+カスタム関数から値を返すために、必要なことは、 [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) というキーワードを使うことです。直近の [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html) の例でこれを見たでしょう。`draw()` 関数は 100 のランダムな円を HTML の {{htmlelement("canvas")}} 内に表示します。
 
 ```js
 function draw() {
@@ -181,17 +179,17 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)を見てください。
 
 ## まとめ
 
 以上、関数は楽しく、とても便利で、構文や機能についてまだまだ話すことはたくさんありますが、それらはかなり理解しやすいものです。
 
-もし何か理解できなかったことがありましたら、何度もこの記事を読み込むか、または[お問い合わせ](/ja/docs/Learn#連絡方法)ください。
+もし何か理解できなかったことがありましたら、何度もこの記事を読み込むか、または[お問い合わせ](/ja/docs/MDN/Community/Communication_channels)ください。
 
 ## 関連情報
 
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions) — より高度な関数に関連した情報を網羅した詳細なガイド。
 - [Callback functions in JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — 一般的な JavaScript のパターンは、ある関数を別の関数に*引数として*渡すことです。それは受け取った関数の中で呼び出されます。これについては、このコースの範疇を少し超えていますが、すぐにでも勉強する価値はあります。
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events", "Learn_web_development/Core/Scripting")}}

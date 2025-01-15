@@ -1,15 +1,17 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、実際の段の幅はより狭くなることがあります。
+**`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、指定された幅よりも狭い単一の段になることがあります。
 
 {{EmbedInteractiveExample("pages/css/column-width.html")}}
 
-このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。
+このプロパティは様々な画面の大きさに合うレスポンシブデザインを作成するのに役立ちます。特に (優先度の高い) {{cssxref("column-count")}} プロパティがある場合、正確な段の幅を設定するには、すべての幅の値を指定する必要があります。横書きでは、これらは {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, {{cssxref('column-rule-width')}} です。
 
 ## 構文
 
@@ -26,6 +28,7 @@ column-width: 3.3vw;
 column-width: inherit;
 column-width: initial;
 column-width: revert;
+column-width: revert-layer;
 column-width: unset;
 ```
 
@@ -52,18 +55,18 @@ column-width: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_column_width_in_pixels
 <p class="content-box">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
   nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-  enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+  enim ad minim veniam, quis nostrud exercitation ullamcorper suscipit lobortis
   nisl ut aliquip ex ea commodo consequat.
 </p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_column_width_in_pixels
 .content-box {
   column-width: 100px;
 }
@@ -83,5 +86,5 @@ column-width: unset;
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) (レイアウトの学習)
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) （レイアウトの学習）
 - [段組みの基本概念](/ja/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)

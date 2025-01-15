@@ -1,12 +1,13 @@
 ---
 title: "HTML: アクセシビリティの良き基本"
 slug: Learn_web_development/Core/Accessibility/HTML
-original_slug: Learn/Accessibility/HTML
 l10n:
-  sourceCommit: 465c0633dccc141141ca54d1ca3af4f878b38986
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 正しい HTML 言語の要素を常に正しい目的のために使用するようにするだけで、多くのウェブコンテンツをアクセシビリティに対応させることができます。この記事では、アクセシビリティを確実にするために HTML を使用する方法について詳しく見ていきます。
 
@@ -14,18 +15,18 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        HTML に関する基本的な理解（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 概論</a
-        >を参照）、<a href="/ja/docs/Learn/Accessibility/What_is_accessibility"
-          >アクセシビリティとは何か</a
-        >に関する理解。
-      </td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識、<a href="/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基本的なアクセシビリティの概念の理解</a>。</td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        HTML のうち、どの機能にアクセシビリティ上の利点があるのか、また、自身のウェブドキュメントでそうした機能を適切に使うにはどうしたらよいのか、ということに精通すること。
+        <ul>
+          <li>「正しい要素を正しい役割に」という意味で、意味づけされた HTML を使用すること。ブラウザーにはアクセシビリティ用の多くの組み込みフックが指定されているため。</li>
+          <li>代替テキスト、適切なリンク、フォームラベル、表の見出しと行と列の数、スコープ指定など、アクセシビリティに優れた最善の手法。</li>
+          <li>可能な限り俗語や略語を避け、単純な平易な言葉を使用し、定義が必要な場合はそれを提供します。</li>
+          <li>キーボードアクセシビリティの概念と実践。</li>
+          <li>ソース順の重要性。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -57,9 +58,6 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 それでは、ここからアクセシブルな HTML をより詳しく見てゆきましょう。
 
-> [!NOTE]
-> 自分のローカルコンピューターにスクリーンリーダーを用意することは良い考えです。そうすれば、以下に示す例について、ある程度のテストができます。より詳しくは、[スクリーンリーダー](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#スクリーンリーダー)を参照してください。
-
 ## 良いセマンティクス
 
 良いセマンティクスの重要性について、そして、ふさわしい役割にふさわしい HTML 要素を使うべきである理由については、すでに述べました。このことは無視してはなりません。なぜなら、適切に扱わないとアクセシビリティがひどく損なわれてしまう主な箇所のうちの一つだからです。
@@ -74,7 +72,7 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 スクリーンリーダーのユーザーが得られる最良のアクセシビリティ支援の一つは、見出しや段落やリストなどの適切なコンテンツ構造です。きちんと意味を備えた例は、以下のようなものになるでしょう。
 
-```html example-good
+```html-nolint example-good
 <h1>見出し</h1>
 
 <p>これは文書のうちの最初のセクションです。</p>
@@ -96,12 +94,11 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 <h2>2 番目の下位見出し</h2>
 
 <p>
-  これはコンテンツのうちで 2
-  番目のサブセクションです。この前のものより面白いと思いますよ。
+  これはコンテンツのうちで 2 番目のサブセクションです。この前のものより面白いと思いますよ。
 </p>
 ```
 
-スクリーンリーダーを使って試せるように、より長いテキストのバージョンを用意してあります ([good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html) を参照)。これの全体をナビゲートしてみれば、これはとても見通しが得やすいものだということがわかるでしょう。
+スクリーンリーダーを使って試せるように、より長いテキストのバージョンを用意してあります（[good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html) を参照）。これの全体をナビゲートしてみれば、これはとても見通しが得やすいものだということがわかるでしょう。
 
 1. コンテンツの中を進んで行くのにつれて、スクリーンリーダーは各ヘッダーを読み上げて、どれが見出しでどれが段落なのかといったことを知らせてくれます。
 2. どのような速度が快適であるにせよ、その速度で進んでいけるように、スクリーンリーダーは各要素の後で停止します。
@@ -111,7 +108,7 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 ときには、たとえば以下のように、体裁用の HTML や改行を使って見出しや段落などを書く人もいます。
 
 ```html example-bad
-<span style="font-size: 3em">見出し</span><br /><br />
+<span style="font-size: 3em">見出し</span> <br /><br />
 これは文書のうちの最初のセクションです。
 <br /><br />
 ここにも、もう一つ段落を足すつもり。
@@ -134,11 +131,11 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 より長いバージョンをスクリーンリーダーで試してみれば（[bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) を参照）、とても良い体験が得られる、とはいかないことでしょう。スクリーンリーダーは、標識として使えるものが何も得られないので、有用な目次は取得できません。また、ページ全体を単一の巨大な塊として見ることになるので、ページ全体が一度にひとかたまりで読み上げられるだけなのです。
 
-アクセシビリティ以外の他の問題もあります。たとえば、CSS を使ってコンテンツにスタイルをつけることや、あるいは、JavaScript でコンテンツを操作することが、より難しくなるのです。なぜなら、セレクターとして使える要素がないからです。
+アクセシビリティ以外の他の問題もあります。たとえば、 CSS を使ってコンテンツにスタイルをつけることや、あるいは、JavaScript でコンテンツを操作することが、より難しくなるのです。なぜなら、セレクターとして使える要素がないからです。
 
 #### 明確な言葉を使う
 
-使っている言い回しもアクセシビリティに影響を与えることがあります。一般に、過度に複雑ではない、明確な言葉を使うべきです。また、不必要な専門用語（ジャーゴン）や俗語を使わないようにしましょう。これは、認知的な障碍またはその他の障碍を抱える人たちの助けとなるだけではありません。母語以外で書かれたテキストの読者や、年少者の助けにもなりますし、実際のところあらゆる人の助けになります! それに加えて、スクリーンリーダーによって明確に読み上げられない言い回しや文字を使うことを避けるように努めるべきです。たとえば、以下のようなことです。
+使っている言い回しもアクセシビリティに影響を与えることがあります。一般に、過度に複雑ではない、明確な言葉を使うべきです。また、不必要な専門用語（ジャーゴン）や俗語を使わないようにしましょう。これは、認知的な障碍またはその他の障碍を抱える人たちの助けとなるだけではありません。母語以外で書かれたテキストの読者や、年少者の助けにもなりますし、実際のところあらゆる人の助けになります。それに加えて、スクリーンリーダーによって明確に読み上げられない言い回しや文字を使うことを避けるように努めるべきです。たとえば、以下のようなことです。
 
 - やめられるものなら、ダッシュを使わないようにしましょう。「5–7」と書く代わりに「5 から 7」と書きましょう。
 - 略語を展開しましょう。"Jan" と書く代わりに "January" と書きましょう。
@@ -270,49 +267,45 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 > [!NOTE]
 > 開発者ツールで、ページのタブ順序を示すオーバーレイを有効にすることができます。詳細な情報は、[アクセシビリティインスペクター > タブ移動順序を表示](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order) を参照してください。
 
-その後、エンター / リターンキーを押すと、フォーカスの当たっているリンクをたどったり、ボタンを押したりすることもできますし（ボタンにメッセージ警告を出させるための JavaScript を含めておきました）、テキスト入力欄にテキストを入力するためのタイピングを開始することもできます。他のフォーム要素には別のコントロールがあります。たとえば、{{htmlelement("select")}} 要素は、選択肢を表示させ、上下の矢印キーを用いて選択肢の間を行き来することができます。
-
-> [!NOTE]
-> 異なるブラウザーでは、異なるキーボードコントロールオプションを使用可能としている場合があります。さらに詳しいことは、[ネイティブなキーボードアクセシビリティを使う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#ネイティブなキーボード・アクセシビリティを使う) を参照してください。
+その後、 Enter/Return キーを押すと、フォーカスの当たっているリンクをたどったり、ボタンを押したりすることもできますし（ボタンにメッセージ警告を出させるための JavaScript を含めておきました）、テキスト入力欄にテキストを入力するためのタイピングを開始することもできます。他のフォーム要素には別のコントロールがあります。たとえば、{{htmlelement("select")}} 要素は、選択肢を表示させ、上下の矢印キーを用いて選択肢の間を行き来することができます。
 
 基本的に、適切な要素を使用するだけで、この動作を自由に得ることができます。
 
-```html example-good
-<h1>Links</h1>
+```html-nolint example-good
+<h1>リンク</h1>
 
-<p>This is a link to <a href="https://www.mozilla.org">Mozilla</a>.</p>
-
-<p>
-  Another link, to the
-  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
-</p>
-
-<h2>Buttons</h2>
+<p>これは <a href="https://www.mozilla.org">Mozilla</a> へのリンクです。</p>
 
 <p>
-  <button data-message="This is from the first button">Click me!</button>
-  <button data-message="This is from the second button">Click me too!</button>
-  <button data-message="This is from the third button">And me!</button>
+  もう一つは、 <a href="https://developer.mozilla.org">Mozilla Developer Network</a> へのリンクです。
 </p>
 
-<h2>Form</h2>
+<h2>ボタン</h2>
+
+<p>
+  <button data-message="This is from the first button">クリックしてください</button>
+  <button data-message="This is from the second button">こちらもクリックしてください</button>
+  <button data-message="This is from the third button">こちらも！</button>
+</p>
+
+<h2>フォーム</h2>
 
 <form>
   <div>
-    <label for="name">Fill in your name:</label>
+    <label for="name">名前を入力してください:</label>
     <input type="text" id="name" name="name" />
   </div>
   <div>
-    <label for="age">Enter your age:</label>
+    <label for="age">年齢を入力してください:</label>
     <input type="text" id="age" name="age" />
   </div>
   <div>
-    <label for="mood">Choose your mood:</label>
+    <label for="mood">気分を選択してください:</label>
     <select id="mood" name="mood">
-      <option>Happy</option>
-      <option>Sad</option>
-      <option>Angry</option>
-      <option>Worried</option>
+      <option>嬉しい</option>
+      <option>悲しい</option>
+      <option>怒り</option>
+      <option>心配</option>
     </select>
   </div>
 </form>
@@ -322,10 +315,10 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 
 しかし、やはり人々は HTML で何かと変なことをするものです。例えば、{{htmlelement("div")}} を使用してマークアップされたボタンなどを時々見かけますね。
 
-```html example-bad
-<div data-message="This is from the first button">Click me!</div>
-<div data-message="This is from the second button">Click me too!</div>
-<div data-message="This is from the third button">And me!</div>
+```html-nolint example-bad
+<div data-message="This is from the first button">クリックしてください</div>
+<div data-message="This is from the second button">こちらもクリックしてください</div>
+<div data-message="This is from the third button">こちらも！</div>
 ```
 
 しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得する既定の CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべての既定のボタン動作を実装してください。
@@ -334,15 +327,15 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 
 そうした利点を呼び戻すように追加するには、ちょっとした作業が必要です（[fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) で例示的コードを試せます。[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) も参照してください）。ここでは、各ボタンに `tabindex="0"` という属性を付与することによって、見せかけの `<div>` ボタンにフォーカスを当てられるようにしました（タブキーを通じてのフォーカスを含みます）。
 
-```html
+```html-nolint
 <div data-message="This is from the first button" tabindex="0" role="button">
-  Click me!
+  クリックしてください
 </div>
 <div data-message="This is from the second button" tabindex="0" role="button">
-  Click me too!
+  こちらもクリックしてください
 </div>
 <div data-message="This is from the third button" tabindex="0" role="button">
-  And me!
+  こちらも！
 </div>
 ```
 
@@ -393,7 +386,7 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 ```
 
 > [!NOTE]
-> リンクの実装とベストプラクティスに関するさらなる情報を、[ハイパーリンクの生成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) という記事で知ることができます。また、いくつかの良い例と悪い例を、[good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) と [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) で見ることもできます。
+> リンクの実装とベストプラクティスに関するさらなる情報を、[ハイパーリンクの生成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links) という記事で知ることができます。また、いくつかの良い例と悪い例を、[good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) と [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) で見ることもできます。
 
 フォームラベルも重要です。各フォーム入力欄に何を入力する必要があるのかについての手がかりを与えてくれるからです。以下のものは、十分に筋の通った例のように見えます。
 
@@ -461,11 +454,11 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 - {{htmlelement("caption")}} 要素と、`<table>` の `summary` 属性は、どちらも似たような役割を果たします。表に対する代替テキストとして機能し、スクリーンリーダーのユーザーに対して、表の中身についての有用で手短な要約を示すのです。一般的には `<caption>` 要素の方が、目の見えるユーザーもそのコンテンツにアクセスでき、有益な情報を探すことができるため、好ましいとされています。実のところ、両方が必要であるわけではありません。
 
 > [!NOTE]
-> アクセシブルなデータ表にまつわる更なる詳細は、[HTML 表の発展的な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced) という記事を参照してください。
+> アクセシブルなデータ表にまつわる更なる詳細は、[HTML 表のアクセシビリティ](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)の記事を参照してください。
 
 ## 代替テキスト
 
-テキストによるコンテンツは本質的にアクセシブルですが、マルチメディアコンテンツについては必ずしも同じことが言えるわけではありません。画像や動画のコンテンツは視覚障碍者には見えず、音声コンテンツは聴覚障碍者には聞こえません。動画と音声のコンテンツについては、[アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia) という記事で後に詳しく扱うことにしますが、本記事では、ごく普通の {{htmlelement("img")}} 要素についてのアクセシビリティを見てゆきましょう。
+テキストによるコンテンツは本質的にアクセシブルですが、マルチメディアコンテンツについては必ずしも同じことが言えるわけではありません。画像や動画のコンテンツは視覚障碍者には見えず、音声コンテンツは聴覚障碍者には聞こえません。動画と音声のコンテンツについては、[アクセシブルなマルチメディア](/ja/docs/Learn_web_development/Core/Accessibility/Multimedia) という記事で後に詳しく扱うことにしますが、本記事では、ごく普通の {{htmlelement("img")}} 要素についてのアクセシビリティを見てゆきましょう。
 
 [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html) という簡単な例を書き上げました。これは、4 枚の同じ画像を含んでいます。
 
@@ -507,7 +500,8 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 考慮すべきことのひとつは、画像がコンテンツの中で意味をもっているのか、それとも純粋に視覚的な装飾であり、意味をもたないのか、ということです。もし装飾用であれば、`alt` 属性の値として空のテキストを書くか（[空の alt 属性](#空の_alt_属性)を参照）、CSS の背景画像としてページに記載するだけにした方がよいでしょう。
 
 > [!NOTE]
-> 画像の実装とベストプラクティスについての更なる多くの情報については、[HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)と[レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)をお読みください。
+> 画像の実装とベストプラクティスについての更なる多くの情報については、[HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)と[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)をお読みください。
+> また、さまざまな状況で画像にalt属性を使用する方法を学ぶために、代替の決定木を調べることもできます。また、 [alt の決定木](https://www.w3.org/WAI/tutorials/images/decision-tree/)を調べるために、さまざまな状況で画像に alt 属性を使用する方法を学ぶこともできます。
 
 文脈のある追加的な情報をどうしても提示したい場合、その情報は、画像の周囲のテキストの中か、あるいは、上記のように `title` 属性の内部に入れるべきです。この場合、ほとんどのスクリーンリーダーは、alt テキストと、title 属性と、ファイル名とを読み上げるでしょう。さらに、マウスオーバーしたときには、ブラウザーが title テキストをツールチップとして表示します。
 
@@ -523,7 +517,7 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 この場合、`alt` 属性をまったく使っていません。その代わり、画像についての説明を通常のテキスト段落として提示し、その段落に `id` を与え、そして、その `id` を参照するための `aria-labelledby` 属性を用いました。こうすると、スクリーンリーダーに、その段落をその画像についての代替テキスト / ラベルとして使わせることになります。これは、複数の画像に対して同じテキストをラベルとして使いたい場合に、とりわけ有用です（これは、`alt` ではできません）。
 
-> **メモ:** `aria-labelledby` は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。これがどのように機能するのかについての更なる情報を知るには、[WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) の記事をお読みください。
+> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
 
 ### figure と figcaption
 
@@ -625,10 +619,10 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn/Accessibility/Test_your_skills:_HTML_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## 要約
 
 これで、ほとんどの場合にアクセシブルな HTML を書くことについて、よく分かったでしょう。WAI-ARIA の基本の記事も、この知識の抜けを埋めてくれるでしょうが、本記事でもその基本には気を配ってきました。次は、CSS と JavaScript をよく使うか悪く使うかで、アクセシビリティがどのような影響を受けるのかを検討しましょう。
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
