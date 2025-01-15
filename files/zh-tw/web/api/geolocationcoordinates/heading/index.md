@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`heading`** 唯讀屬性是一個 `double` 值，表示裝置正在行進的方向。此值以度數表示，指示裝置偏離正北方向的程度。`0` 度表示正北，方向是順時針決定的（這意味著東是 `90` 度，西是 `270` 度）。如果 {{domxref("GeolocationCoordinates.speed")}} 為 `0`，或裝置無法提供方向資訊，`heading` 為 `null`。  
+{{domxref("GeolocationCoordinates")}} 介面的 **`heading`** 唯讀屬性是一個 `double` 值，表示裝置正在行進的方向。此值以度數表示，指示裝置偏離正北方向的程度。`0` 度表示正北，方向是順時針決定的（這意味著東是 `90` 度，西是 `270` 度）。如果 {{domxref("GeolocationCoordinates.speed")}} 為 `0`，或裝置無法提供方向資訊，`heading` 為 `null`。
 
 ## 值
 
