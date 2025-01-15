@@ -61,8 +61,7 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 
     当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。
 
-    > [!NOTE]
-    > `touchmove` 事件的触发频率因浏览器而异，其还与用户硬件设备的性能有关。你不能依赖于这些事件的特定粒度。
+    > **备注：** `touchmove` 事件的触发频率因浏览器而异，其还与用户硬件设备的性能有关。你不能依赖于这些事件的特定粒度。
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
 
