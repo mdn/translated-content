@@ -81,7 +81,7 @@ const clonedNode = xmlRef.importNode(myNode, true);
 xmlRef.appendChild(clonedNode);
 ```
 
-このスタイルシートがインポートされると、 `XSLTProcessor` は実際の変換を行うために 2 つのメソッド、すなわち {{domxref('XSLTProcessor.transformToDocument()')}} と {{domxref('XSLTProcessor.transformToFragment()')}} を実行する必要があります。 
+このスタイルシートがインポートされると、 `XSLTProcessor` は実際の変換を行うために 2 つのメソッド、すなわち {{domxref('XSLTProcessor.transformToDocument()')}} と {{domxref('XSLTProcessor.transformToFragment()')}} を実行する必要があります。
 {{domxref('XSLTProcessor.transformToDocument()')}} は完全な XML 文書を返し、 {{domxref('XSLTProcessor.transformToFragment()')}} は既存の文書に簡単に追加できる文書の断片を返します。 どちらも、変換される XML 文書を最初の引数として受け取ります。 {{domxref('XSLTProcessor.transformToFragment()')}} は、生成された断片を所有する文書オブジェクトである 2 番目の引数が必要です。 生成された断片が現在の HTML 文書に挿入される場合、文書を渡せば十分です。
 
 ### 文字列から XML 文書を作成する 'XML Soup'
