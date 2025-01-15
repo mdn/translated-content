@@ -1,6 +1,5 @@
 ---
 title: GeolocationCoordinates：accuracy 屬性
-short-title: accuracy
 slug: Web/API/GeolocationCoordinates/accuracy
 l10n:
   sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
@@ -8,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面 **`accuracy`** 唯讀屬性表示 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，以公尺為單位，並具有 95% 的可信度。
+{{domxref("GeolocationCoordinates")}} 介面的 **`accuracy`** 唯讀屬性是一個正 `double` 值，表示 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，以公尺為單位，並具有 95% 的可信度。
 
 ## 值
 
