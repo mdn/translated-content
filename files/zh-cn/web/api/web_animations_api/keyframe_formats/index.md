@@ -102,7 +102,7 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 
 ## 属性
 
-关键帧可以为任何的 css 动画属性指定 property-value。使用 camel-case 的属性名将变为 camelCase 格式，例如 {{cssxref("background-color")}} 变成 `backgroundColor` ，再如 {{cssxref("background-position-x")}} 变成 `backgroundPositionX`.。速记词，例如 {{cssxref("margin")}} 也是可以用的。.
+关键帧可以为任何的 css 动画属性指定 property-value。使用 camel-case 的属性名将变为 camelCase 格式，例如 {{cssxref("background-color")}} 变成 `backgroundColor` ，再如 {{cssxref("background-position-x")}} 变成 `backgroundPositionX`.。速记词，例如 {{cssxref("margin")}} 也是可以用的。
 
 两个特色的 css 属性：
 

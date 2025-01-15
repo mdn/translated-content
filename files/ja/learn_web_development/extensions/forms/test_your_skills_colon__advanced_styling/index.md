@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)および [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)の記事を理解したかどうかを評価することです。.
+このスキルテストの目的は、あなたが[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)および [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
