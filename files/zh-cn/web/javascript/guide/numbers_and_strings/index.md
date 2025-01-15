@@ -1,10 +1,11 @@
 ---
-title: 数字和日期
+title: 数字和字符串
 slug: Web/JavaScript/Guide/Numbers_and_strings
-original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}本章节介绍了在 JavaScript 中使用数字和日期来处理和执行计算的概念，对象和函数。
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+
+本章节介绍了在 JavaScript 中使用数字和日期来处理和执行计算的概念，对象和函数。
 
 本章节介绍如何掌握 Javascript 里的数字和日期类型
 
@@ -264,4 +265,4 @@ function JSClock() {
 
 最后，如果`hour`是 12 或者更大，条件表达式会在`temp`后拼接"P.M."，否则拼接"A.M."。
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}

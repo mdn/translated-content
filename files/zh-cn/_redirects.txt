@@ -2813,7 +2813,7 @@
 /zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /zh-CN/docs/Web/JavaScript/Guide/Sameness	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Statements	/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/zh-CN/docs/Web/JavaScript/Guide/Text_formatting	/zh-CN/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings
+/zh-CN/docs/Web/JavaScript/Guide/Text_formatting	/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings
 /zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol	/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols
 /zh-CN/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types
 /zh-CN/docs/Web/JavaScript/Guide/iterable	/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols
