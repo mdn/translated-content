@@ -1,6 +1,5 @@
 ---
 title: GeolocationCoordinates：altitude 屬性
-short-title: altitude
 slug: Web/API/GeolocationCoordinates/altitude
 l10n:
   sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
@@ -8,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面 **`altitude`** 唯讀屬性表示位置相對於 [WGS84](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf) 橢球（定義名義海平面）的高度（以公尺為單位）。如果實作無法提供此數據，則此值為 `null`。
+{{domxref("GeolocationCoordinates")}} 介面的 **`altitude`** 唯讀屬性是一個 `double` 值，表示位置相對於 [WGS84](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf) 橢球（定義名義海平面）的高度（以公尺為單位）。如果實作無法提供此數據，則此值為 `null`。
 
 ## 值
 
