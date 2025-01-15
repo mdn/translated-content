@@ -1,6 +1,5 @@
 ---
 title: GeolocationCoordinates：latitude 屬性
-short-title: latitude
 slug: Web/API/GeolocationCoordinates/latitude
 l10n:
   sourceCommit: 066d55a090927fa19ba19c2a4b2417470e1a979f
@@ -8,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面 **`latitude`** 唯讀屬性表示位置的緯度（十進位制）。
+{{domxref("GeolocationCoordinates")}} 介面的 **`latitude`** 唯讀屬性是一個 `double` 值，表示位置的緯度（十進位制）。
 
 ## 值
 
