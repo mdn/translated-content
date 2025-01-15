@@ -1,6 +1,8 @@
 ---
 title: UI 이벤트
 slug: Web/API/UI_Events
+l10n:
+  sourceCommit: 8c60ba86d4c10250eb80265a3be59add51540a82
 ---
 
 {{DefaultAPISidebar("UI Events")}}
