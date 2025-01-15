@@ -96,5 +96,5 @@ valueStrNorm.join(", "); //-> ae, g, h, s, æ, ġ, ĥ, ș
 
 ## Смотрите также
 
-- [Приложение №15 к стандарту Юникода: формы нормализации Юникода](http://www.unicode.org/reports/tr15/)
+- [Приложение №15 к стандарту Юникода: формы нормализации Юникода](https://www.unicode.org/reports/tr15/)
 - [Эквивалентность в Юникоде](http://en.wikipedia.org/wiki/Unicode_equivalence)

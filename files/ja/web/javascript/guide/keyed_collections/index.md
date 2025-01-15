@@ -60,7 +60,7 @@ sayings.size; // 0
 
 詳細やサンプルコードについては、{{jsxref("WeakMap")}} リファレンスページの「なぜ WeakMap なのか？」もご覧ください。
 
-`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例は Nick Fitzgerald 氏のブログ投稿、["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/)（ECMAScript 6 WeakMaps を使って実装の詳細を隠蔽する）です。プライベートなデータとメソッドはオブジェクトの内部に属していて、プライベートな WeakMap オブジェクトに格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。`privates` はモジュールから export されていません。
+`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例は Nick Fitzgerald 氏のブログ投稿、["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgeraldnick.com/weblog/53/)（ECMAScript 6 WeakMaps を使って実装の詳細を隠蔽する）です。プライベートなデータとメソッドはオブジェクトの内部に属していて、プライベートな WeakMap オブジェクトに格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。`privates` はモジュールから export されていません。
 
 ```js
 const privates = new WeakMap();
@@ -105,7 +105,7 @@ for (let item of mySet) console.log(item);
 
 ### `Array` と `Set` 間の変換
 
-{{jsxref("Array.from")}} または [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator) を使用して `Set` から {{jsxref("Array")}} を生成できます。また、`Set` コンストラクタを使って `Array` から `Set` へと逆変換することができます。
+{{jsxref("Array.from")}} または [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) を使用して `Set` から {{jsxref("Array")}} を生成できます。また、`Set` コンストラクタを使って `Array` から `Set` へと逆変換することができます。
 
 > **メモ:** `Set` オブジェクトは*一意の値*を格納することにくれぐれも注意してください、重複した要素は `Array` から変換するときに削除されます。
 

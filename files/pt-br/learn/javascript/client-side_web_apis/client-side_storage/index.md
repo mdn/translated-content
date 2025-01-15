@@ -40,7 +40,7 @@ Os navegadores modernos oferecem suporte a várias maneiras de os sites armazena
 
 ## Armazenamento do lado do cliente?
 
-Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre [sites estáticos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites) e [sites dinâmicos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites) . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do [lado do servidor](/pt-BR/docs/Learn/Server-side) para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.
+Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre [sites estáticos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#static_sites) e [sites dinâmicos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#dynamic_sites) . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do [lado do servidor](/pt-BR/docs/Learn/Server-side) para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.
 
 O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem usos diferentes. Consiste em APIs JavaScript que permitem armazenar dados no cliente (ou seja, na máquina do usuário) e recuperá-los quando necessário. Isso tem muitos usos distintos, como:
 
@@ -52,7 +52,7 @@ O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem 
 Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são usados juntos. Por exemplo, você pode baixar um lote de arquivos de música (talvez usados por um jogo da web ou aplicativo de reprodutor de música), armazená-los em um banco de dados do cliente e reproduzi-los conforme necessário. O usuário só teria que baixar os arquivos de música uma vez - em visitas subsequentes, eles seriam recuperados do banco de dados.
 
 > [!NOTE]
-> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte [Limites de armazenamento do navegador e critérios de despejo](/pt-BR/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) para obter mais informações..
+> : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consulte [Limites de armazenamento do navegador e critérios de despejo](/pt-BR/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) para obter mais informações..
 
 ### Old school: Cookies
 
@@ -673,7 +673,7 @@ This is where [Service workers](/pt-BR/docs/Web/API/Service_Worker_API) and the 
 
 A service worker is a JavaScript file that, simply put, is registered against a particular origin (web site, or part of a web site at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.
 
-When it intercepts a request, it can do anything you wish to it (see [use case ideas](/pt-BR/docs/Web/API/Service_Worker_API#Other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.
+When it intercepts a request, it can do anything you wish to it (see [use case ideas](/pt-BR/docs/Web/API/Service_Worker_API#other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a web site work completely offline.
 
 The Cache API is a another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.
 
@@ -744,7 +744,7 @@ Inside the handler we first log the URL of the requested asset. We then provide 
 
 Inside this block we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
 
-If a match is found, we simply return it as the custom response. If not, we [fetch()](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) the response from the network and return that instead.
+If a match is found, we simply return it as the custom response. If not, we [fetch()](/pt-BR/docs/Web/API/Window/fetch) the response from the network and return that instead.
 
 ```js
 self.addEventListener("fetch", function (e) {

@@ -59,7 +59,7 @@ wat2wasm simple.wat -v
 ## See also
 
 - [Understanding WebAssembly text format](/ko/docs/WebAssembly/Understanding_the_text_format) — 텍스트 형식 구문에 대한 자세한 설명.
-- [Compiling from C/C++ to WebAssembly](/ko/docs/WebAssembly/C_to_wasm) — Binaryen / Emscripten과 같은 도구는 소스 코드를 wasm으로 컴파일하고 JavaScript 컨텍스트에서 모듈을 실행하는 데 필요한 API 코드를 만듭니다. 그들을 사용하는 방법에 대해 자세히 알아보십시오.
+- [Compiling from C/C++ to WebAssembly](/ko/docs/WebAssembly/C_to_Wasm) — Binaryen / Emscripten과 같은 도구는 소스 코드를 wasm으로 컴파일하고 JavaScript 컨텍스트에서 모듈을 실행하는 데 필요한 API 코드를 만듭니다. 그들을 사용하는 방법에 대해 자세히 알아보십시오.
 - [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API) — WebAssembly API 코드가 작동하는 방식에 대해 자세히 알고 싶다면이 내용을 읽으십시오.
 - [Text format](https://github.com/WebAssembly/design/blob/master/TextFormat.md) — WebAssembly GitHub repo에서 텍스트 형식에 대한 자세한 설명.
 - [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — 이 모든 것을 처리하는 WebPack 용 로더입니다.

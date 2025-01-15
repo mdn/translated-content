@@ -34,7 +34,7 @@ Reflect.apply(target, thisArgument, argumentsList)
 
 ## Описание
 
-В ES5, обычно используется метод {{jsxref("Function.prototype.apply()")}}, чтобы вызвать функцию с указанным значением переменной `this` и `arguments`, переданными как массив (или [массивоподобный объект](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+В ES5, обычно используется метод {{jsxref("Function.prototype.apply()")}}, чтобы вызвать функцию с указанным значением переменной `this` и `arguments`, переданными как массив (или [массивоподобный объект](/ru/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

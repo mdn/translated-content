@@ -120,7 +120,7 @@ Pour un élément [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph), `
 
 ## Utilisation comme propriété CSS
 
-`d` est un attribut de présentation et peut donc être modifié à l'aide de CSS. La propriété peut prendre [`path()`](/fr/docs/Web/CSS/path) ou `none` comme valeur.
+`d` est un attribut de présentation et peut donc être modifié à l'aide de CSS. La propriété peut prendre [`path()`](/fr/docs/Web/CSS/basic-shape/path) ou `none` comme valeur.
 
 Dans l'exemple qui suit, on illustre comment appliquer un nouveau tracé au survol d'un élément. Le nouveau tracé est le même que le précédent, mais ajoute une ligne sur le cœur.
 

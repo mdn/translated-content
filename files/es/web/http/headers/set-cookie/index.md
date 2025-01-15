@@ -108,7 +108,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     Afirma que una cookie no debe ser enviada con peticiones cruzadas, proveiendo alguna protección contra ataques de falsificación de solicitudes cruzadas ({{Glossary("CSRF")}}).
 
     > [!NOTE]
-    > Los navegadores haciendo migraciones para que el comportamiento por defecto de las cookies en lugar de [default sea `SameSite=Lax`](https://www.chromestatus.com/feature/5088147346030592). Si una cookie necesita ser enviada en peticiones cruzadas, se tiene que optar por no restringir el mismo sitio (SameSite) usando la directiva `None`. La directiva `None` requiere el atributo [`Secure`](#Secure).
+    > Los navegadores haciendo migraciones para que el comportamiento por defecto de las cookies en lugar de [default sea `SameSite=Lax`](https://www.chromestatus.com/feature/5088147346030592). Si una cookie necesita ser enviada en peticiones cruzadas, se tiene que optar por no restringir el mismo sitio (SameSite) usando la directiva `None`. La directiva `None` requiere el atributo [`Secure`](#secure).
 
 ## Ejemplos
 

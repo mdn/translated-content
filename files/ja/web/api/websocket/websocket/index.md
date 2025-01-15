@@ -33,7 +33,7 @@ new WebSocket(url, protocols)
   - : 次のような場合に発生します。
     - [`url`](#url) の解釈に失敗した場合
     - [`url`](#url) のスキームが `ws` または `wss` 以外であった場合
-    - [`url`](#url) に[フラグメント](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#フラグメント)があった場合
+    - [`url`](#url) に[フラグメント](/ja/docs/Web/URI#フラグメント)があった場合
     - [`protocols`](#protocols) の何れかの値が複数回現れている、または WebSocket プロトコル仕様で定義された [`Sec-WebSocket-Protocol`](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) フィールドの値を構成する要素の要件に一致しない場合。
 
 ## 仕様書

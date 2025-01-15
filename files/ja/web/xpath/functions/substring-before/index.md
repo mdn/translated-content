@@ -38,7 +38,7 @@ substring-before(haystack ,needle )
 
 ### 定義元
 
-[XPath 1.0 4.2](http://www.w3.org/TR/xpath#function-substring-before)
+[XPath 1.0 4.2](https://www.w3.org/TR/xpath#function-substring-before)
 
 ### Gecko の対応
 

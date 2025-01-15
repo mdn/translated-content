@@ -5,7 +5,7 @@ slug: Web/CSS/@keyframes
 
 {{CSSRef}}
 
-**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_Transitions)よりも詳細に制御できます。
+**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/At-rule)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/CSS_transitions)よりも詳細に制御できます。
 
 ## 構文
 
@@ -141,7 +141,7 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ### CSS アニメーションの例
 
-[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)を参照してください。
+[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 ## 仕様書
 
@@ -153,5 +153,5 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ## 関連情報
 
-- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}

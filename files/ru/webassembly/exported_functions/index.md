@@ -13,8 +13,8 @@ slug: WebAssembly/Exported_functions
 
 Вы можете получить список экспортированных функций двумя способами:
 
-- Вызовите [`Table.prototype.get()`](/ru/docs/WebAssembly/API/Table/get) у существующей таблице;
-- Через [`Instance.exports`](/ru/docs/WebAssembly/API/Instance/exports) существующего экземпляра модуля.
+- Вызовите [`Table.prototype.get()`](/ru/docs/WebAssembly/JavaScript_interface/Table/get) у существующей таблице;
+- Через [`Instance.exports`](/ru/docs/WebAssembly/JavaScript_interface/Instance/exports) существующего экземпляра модуля.
 
 В любом случае вы получаете одну и туже обёртку функции вашего модуля. С точки зрения JavaScript, все экспортированные функции wasm являются функциями JavaScript, но они инкапсулированы экземпляром модуля wasm, и имеют только ограниченный способ доступа к ним.
 
@@ -44,9 +44,9 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 
 ## Они являются настоящими функциями
 
-В предыдущем примере возвращаемое значение каждого вызова [`Table.prototype.get()`](/ru/docs/WebAssembly/API/Table/get) является экспортированной функцией WebAssembly — это именно то, о чем мы говорили.
+В предыдущем примере возвращаемое значение каждого вызова [`Table.prototype.get()`](/ru/docs/WebAssembly/JavaScript_interface/Table/get) является экспортированной функцией WebAssembly — это именно то, о чем мы говорили.
 
-Стоит заметить что помимо того что они являются обёртками для функций WebAssembly, это обычные функции JavaScript. Если вы загрузите приведённый выше пример в [браузере с поддержкой WebAssembly](/ru/docs/WebAssembly#Browser_compatibility), и запустите следующие строки в консоли:
+Стоит заметить что помимо того что они являются обёртками для функций WebAssembly, это обычные функции JavaScript. Если вы загрузите приведённый выше пример в [браузере с поддержкой WebAssembly](/ru/docs/WebAssembly#browser_compatibility), и запустите следующие строки в консоли:
 
 ```js
 var testFunc = otherTable.get(0);

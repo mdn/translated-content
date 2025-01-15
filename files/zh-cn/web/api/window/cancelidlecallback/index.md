@@ -24,7 +24,7 @@ cancelIdleCallback(handle)
 
 ## 示例
 
-在文章 [Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API) 中可以查看 [完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#Example) 。
+在文章 [Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API) 中可以查看 [完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#example) 。
 
 ## 规范
 

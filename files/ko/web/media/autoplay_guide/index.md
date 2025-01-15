@@ -161,7 +161,7 @@ _상세한 내용 추가 예정; Mozilla는 아직 자동 재생 방지 기능�
 
 ## 자동 재생 기능 정책
 
-지금까지 설명한 브라우저 측의 자동 재생 관리 및 처리 기능도 있지만, 웹 서버도 자동 재생 여부를 결정할 수 있습니다. {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} 헤더의 [`autoplay`](/ko/docs/Web/HTTP/Headers/Feature-Policy/autoplay) 디렉티브가 해당 용도입니다. 존재만 하면 자동 재생할 때 쓸 수 있습니다. 기본적으로 `autoplay`의 allowlist는 `'self'` (_홑따옴표 포함_)이며, 현재 문서와 동일한 domain에만 허용하고 있습니다.
+지금까지 설명한 브라우저 측의 자동 재생 관리 및 처리 기능도 있지만, 웹 서버도 자동 재생 여부를 결정할 수 있습니다. {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} 헤더의 [`autoplay`](/ko/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) 디렉티브가 해당 용도입니다. 존재만 하면 자동 재생할 때 쓸 수 있습니다. 기본적으로 `autoplay`의 allowlist는 `'self'` (_홑따옴표 포함_)이며, 현재 문서와 동일한 domain에만 허용하고 있습니다.
 
 `'none'`으로 지정하여 전역으로 자동 재생을 막을 수 있습니다. `'*'` 는 모든 도메인에서 전송된 미디어를 자동 재생하도록 허용합니다. 오리진은 하나의 space 문자로 구분 됩니다.
 
@@ -271,4 +271,4 @@ Feature-Policy: autoplay 'none'
 - [Web media technologies](/ko/docs/Web/Media)
 - [Video and audio content](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) (Learning guide)
 - [Using the Web Audio API](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Cross-browser audio basics](/ko/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Cross-browser audio basics](/ko/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/search
 
 Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -52,7 +52,7 @@ var searching = browser.history.search(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.
 
 ## Exemples
 

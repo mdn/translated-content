@@ -168,6 +168,6 @@ Dans les leçons à venir, nous rencontrerons d'autres méthodes pour adapter le
 
 ## Et enfin
 
-Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
+Ce cours est presque achevé&nbsp;; il nous reste un seul point à voir. Dans la prochaine leçon, vous allez [mettre en œuvre vos nouvelles connaissances](/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page)&nbsp;: vous allez remettre en forme un exemple, une occasion d'appliquer tout ce que vous avez appris sur les CSS.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}

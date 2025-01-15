@@ -55,4 +55,4 @@ socket.addEventListener("error", function (event) {
 - [WebSocket: close event](/zh-CN/docs/Web/API/WebSocket/close_event)
 - [WebSocket: message event](/zh-CN/docs/Web/API/WebSocket/message_event)
 - [WebSocket: open event](/zh-CN/docs/Web/API/WebSocket/open_event)
-- [Writing WebSocket client applications](/zh-CN/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

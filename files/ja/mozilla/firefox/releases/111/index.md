@@ -52,7 +52,7 @@ l10n:
 
 ### API
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API) を使用するときに、[Origin private file system (OPFS)](/ja/docs/Web/API/File_System_Access_API#origin_private_file_system) をサポートしました。
+- [File System Access API](/ja/docs/Web/API/File_System_API) を使用するときに、[Origin private file system (OPFS)](/ja/docs/Web/API/File_System_API#origin_private_file_system) をサポートしました。
   このファイルシステムのデータはオリジンに固有です。ファイルへアクセスするために許可プロンプトは必須でなく、またサイトやオリジンがストレージを削除するとデータが消去されます。
   OPFS はメインスレッドまたは worker で `navigator.storage.getDirectory()` を呼び出すことにより、{{domxref("StorageManager.getDirectory()")}} メソッドでアクセスできます。
   詳しくは [Firefox bug 1785123](https://bugzil.la/1785123) をご覧ください。

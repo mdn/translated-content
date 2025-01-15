@@ -52,7 +52,7 @@ Los editores de JavaScript ahora pueden añadir obtenedores `[getters]` y modifi
 Esta referencia asume que usted tiene a su respaldo el siguiente conocimiento básico:
 
 - Un entendimiento general de la Internet y de la World Wide Web (WWW).
-- Un conocimiento práctico del lenguaje de marcas para Hipertexto `[HyperText Markup Language]` ([HTML](/es/HTML)).
+- Un conocimiento práctico del lenguaje de marcas para Hipertexto `[HyperText Markup Language]` ([HTML](/es/docs/Web/HTML)).
 
 Es beneficioso alguna experiencia en programación en lenguajes como C o Visual Basic, pero no es requerido.
 

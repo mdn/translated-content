@@ -247,7 +247,7 @@ slug: Web/HTML/Element/audio
 - `<audio>` 元素無法像 `<video>` 元素那樣與字幕或標題關聯。有關一些有用的信息和解決方法，請參見 Ian Devlin 的 [WebVTT 和音訊](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/)。
 - 為了測試在支援該元素的瀏覽器中的回退內容，你可以將 `<audio>` 替換為一個不存在的元素，例如 `<notanaudio>`。
 
-有關使用 HTML `<audio>` 的一般信息，請參見初學者教程[影片和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)。
+有關使用 HTML `<audio>` 的一般信息，請參見初學者教程[影片和音訊內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)。
 
 ### 使用 CSS 進行樣式設定
 
@@ -444,5 +444,5 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [學習區域：視訊和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [學習區域：視訊和音訊內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [跨瀏覽器音訊基礎知識](/zh-TW/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

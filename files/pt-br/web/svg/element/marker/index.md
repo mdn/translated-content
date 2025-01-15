@@ -19,8 +19,8 @@ O elemento `marker` define os gráficos quem devem ser usados para desenhar seta
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -39,7 +39,7 @@ O elemento `marker` define os gráficos quem devem ser usados para desenhar seta
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGMarkerElement`](/pt-BR/DOM/SVGMarkerElement).
+Este elemento implementa a interface do [`SVGMarkerElement`](/pt-BR/docs/DOM/SVGMarkerElement).
 
 ## Compatibilidade com navegadores
 

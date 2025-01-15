@@ -31,7 +31,7 @@ l10n:
 - `media-document()`
   - : 動画、画像、プラグイン、またはそのすべての引数
 - `regexp()`
-  - : 文書の URL が、指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)に一致する場合に一致します。正規表現は URL 全体に一致する必要があります。
+  - : 文書の URL が、指定された[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に一致する場合に一致します。正規表現は URL 全体に一致する必要があります。
 
 `url()`, `url-prefix()`, `domain()`, `media-document()` 関数に与える値は、単一引用符または二重引用符で囲ムこともできます。 `regexp()` 関数に与える値は、引用符で囲む*必要があります*。
 

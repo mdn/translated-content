@@ -14,7 +14,7 @@ Console API 最初是一个专有的 API，不同的浏览器以自己的实现�
 - [Google Chrome 开发者工具实现](https://developer.chrome.google.cn/docs/devtools/console/api)
 - [Safari 开发者工具实现](https://webkit.org/web-inspector/console-object-api/)
 
-用法非常简单 — {{domxref("console")}} 对象 — 可以通过{{domxref("window.console")}}获取到，在 workers 里面使用{{domxref("WorkerGlobalScope.console")}}获取，`console` — 包含许多方法，你可以调用它们来执行基本的调试任务，通常专注于将各种值记录到浏览器中 [WEB 控制台](/zh-CN/docs/Tools/Web_Console).
+用法非常简单 — {{domxref("console")}} 对象 — 可以通过{{domxref("window.console")}}获取到，在 workers 里面使用{{domxref("WorkerGlobalScope.console")}}获取，`console` — 包含许多方法，你可以调用它们来执行基本的调试任务，通常专注于将各种值记录到浏览器中 [WEB 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 到目前为止，最常用的方法是 console.log，它用于记录特定变量中包含的当前值。
 
@@ -32,7 +32,7 @@ let myString = "Hello world";
 console.log(myString);
 ```
 
-到[Console reference page](/zh-CN/docs/Web/API/Console#Usage)查看更多示例
+到[Console reference page](/zh-CN/docs/Web/API/console#usage)查看更多示例
 
 ## 规范
 
@@ -44,6 +44,6 @@ console.log(myString);
 
 ## 参见
 
-- [Tools](/zh-CN/docs/Tools)
-- [Web Console](/zh-CN/docs/Tools/Web_Console) — how the Web Console in Firefox handles console API calls
-- [Remote debugging](/zh-CN/docs/Tools/Remote_Debugging) — how to see console output when the debugging target is a mobile device
+- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web Console in Firefox handles console API calls
+- [Remote debugging](https://profiler.firefox.com/docs/) — how to see console output when the debugging target is a mobile device

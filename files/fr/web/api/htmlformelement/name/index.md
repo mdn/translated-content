@@ -28,5 +28,5 @@ if (form1name&nbsp;!= document.form.form1) {
 
 ## Spécification
 
-- [HTML 5, Section 4.10.3, The form Element](http://www.w3.org/TR/html5/forms.html#dom-form-name)
-- [DOM Level 2 HTML: name](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)
+- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-name)
+- [DOM Level 2 HTML: name](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22051454)

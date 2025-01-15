@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
 
 Renvoies des informations sur la plate-forme actuelle. Ceci ne peut être appelé que dans le contexte du script d'arrière-plan.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ None.
 
 ### Valeur rentournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
 
 ## Compatibilité des navigateurs
 

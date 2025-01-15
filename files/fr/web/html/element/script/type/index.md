@@ -14,7 +14,7 @@ L'attribut **`type`** de l'élément [`<script>`](/fr/docs/Web/HTML/Element/scri
 La valeur de cet attribut indique le type de données représenté par le script. La valeur pourra être&nbsp;:
 
 - Aucune valeur (l'attribut n'est pas défini), c'est le comportement par défaut. Ou une chaîne vide ou un type MIME JavaScript
-  - : La valeur indique que le script est un script «&nbsp;classique&nbsp;» qui contient du code JavaScript. Il est recommandé d'omettre l'attribut plutôt que de préciser un type MIME JavaScript si le script est un script JavaScript classique. Les types MIME JavaScript sont [listés dans la spécification des types de média IANA](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
+  - : La valeur indique que le script est un script «&nbsp;classique&nbsp;» qui contient du code JavaScript. Il est recommandé d'omettre l'attribut plutôt que de préciser un type MIME JavaScript si le script est un script JavaScript classique. Les types MIME JavaScript sont [listés dans la spécification des types de média IANA](/fr/docs/Web/HTTP/MIME_types#textjavascript).
 - `module`
   - : La valeur indique que le code doit être traité comme un module JavaScript. Le traitement du contenu du script est différé et les attributs `charset` et `defer` n'ont pas d'effet. Pour plus d'informations sur l'utilisation de `module`, voir [le guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules). À la différence des scripts classiques, les scripts des modules doivent implémenter et respecter les règles [CORS](/fr/docs/Web/HTTP/CORS) s'ils sont récupérés depuis une origine tierce.
 - [`importmap`](/fr/docs/Web/HTML/Element/script/type/importmap)

@@ -168,7 +168,7 @@ slug: Web/HTML/Element/form
 
 ## 参见
 
-- [HTML 表单指南](/zh-CN/docs/Learn/Forms)
+- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 还有其他的一些元素也用于创建表单：{{HTMLElement("button")}}、{{HTMLElement("datalist")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("label")}}、{{HTMLElement("legend")}}、{{HTMLElement("meter")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("option")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}}。
 - 获取表单中的元素列表：{{domxref("HTMLFormElement.elements")}}
 - [ARIA：Form 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role)

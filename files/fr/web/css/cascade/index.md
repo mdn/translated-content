@@ -9,7 +9,7 @@ l10n:
 
 La **cascade** est un algorithme qui définit comment les agents utilisateur combinent les valeurs des propriétés selon leurs différentes sources. La cascade définit l'origine et la couche qui l'emporte lorsque des déclarations présentes dans plusieurs [origines](#types_dorigine) ou [couches de cascade](/fr/docs/Web/CSS/@layer) définissent une valeur pour une propriété sur un élément.
 
-La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_Selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/Specificity) supérieure.
+La cascade est au cœur de CSS, et fait même partie de l'acronyme _**<i lang="en">Cascading</i>**_ <i lang="en">Style Sheets</i> qu'on traduit par feuilles de style en cascade. Lorsqu'un [sélecteur](/fr/docs/Web/CSS/CSS_selectors) cible un élément, la valeur de la propriété avec l'origine qui a la plus haute précédence est appliquée, même si un sélecteur d'une origine avec une précédence moindre ou d'une autre couche a une [spécificité](/fr/docs/Web/CSS/Specificity) supérieure.
 
 Dans cet article, on explique ce qu'est la cascade et l'ordre dans lequel les [déclarations](/fr/docs/Web/API/CSSStyleDeclaration) [CSS](/fr/docs/Glossary/CSS) cascadent. Nous aborderons également les couches de cascade et les types d'origine. Comprendre la précédence des origines est un prérequis fondamental pour comprendre le fonctionnement de la cascade.
 
@@ -407,7 +407,7 @@ Enfin, [`@charset`](/fr/docs/Web/CSS/@charset) est géré par d'autres algorithm
 
 ## Animations CSS et cascade
 
-[Les animations CSS](/fr/docs/Web/CSS/CSS_Animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/@keyframes), et ne mélange jamais plusieurs règles.
+[Les animations CSS](/fr/docs/Web/CSS/CSS_animations), qui utilisent des règles [`@keyframes`](/fr/docs/Web/CSS/@keyframes), définissent des animations entre différents états. Ces images clés (<i lang="en">keyframes</i>) ne participent pas à la cascade, ce qui signifie qu'à tout moment, le moteur CSS ne prend les valeurs qu'à partir d'une seule règle [`@keyframes`](/fr/docs/Web/CSS/@keyframes), et ne mélange jamais plusieurs règles.
 
 Si plusieurs images clés d'une animation sont définies avec le même nom, c'est la dernière règle `@keyframes` pour le type d'origine et la couche avec la précédence la plus élevée qui est considérée. Seule une définition `@keyframes` est utilisée, même si elle anime différentes propriétés. Les règles `@keyframes` partageant un même nom ne sont jamais mélangées.
 
@@ -472,11 +472,11 @@ Après que le contenu a fini de modifier les styles, on peut être dans une situ
 - Concepts clés de CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/Syntax)
   - [Spécificité](/fr/docs/Web/CSS/Specificity)
-  - [Héritage](/fr/docs/Web/CSS/inheritance)
+  - [Héritage](/fr/docs/Web/CSS/Inheritance)
   - [Modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
   - [Modes d'affichage](/fr/docs/Web/CSS/Layout_mode)
   - [Modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
-  - [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Valeurs
     - [Initiales](/fr/docs/Web/CSS/initial_value)
     - [Calculées](/fr/docs/Web/CSS/computed_value)

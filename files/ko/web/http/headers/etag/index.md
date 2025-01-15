@@ -32,7 +32,7 @@ ETag: "<etag_value>"
 ## 지시자
 
 - `W/` {{optional_inline}}
-  - : `'W/'` (대/소문자를 구분합니다.) [weak validator](/ko/docs/Web/HTTP/Conditional_requests#Weak_validation) 가 사용되었음을 나타냅니다. Weak validators 는 만들기는 쉽지만 비교하기에는 효율성이 떨어집니다. Strong validators 는 비교하기에는 이상적이지만 효율적으로 만들기가 어렵습니다. 동일한 자원의 두 가지 Weak `Etag` 값은 동일할 수 있지만, 바이트 단위까지 동일하진 않습니다.
+  - : `'W/'` (대/소문자를 구분합니다.) [weak validator](/ko/docs/Web/HTTP/Conditional_requests#weak_validation) 가 사용되었음을 나타냅니다. Weak validators 는 만들기는 쉽지만 비교하기에는 효율성이 떨어집니다. Strong validators 는 비교하기에는 이상적이지만 효율적으로 만들기가 어렵습니다. 동일한 자원의 두 가지 Weak `Etag` 값은 동일할 수 있지만, 바이트 단위까지 동일하진 않습니다.
 - "\<etag_value>"
   - : Entity tags 는 요청된 값을 ASCII 코드와 같이 고유한 형태로 나타냅니다. (예 : `"675af34563dc-tr34"`)
     `ETag` 의 값을 생성하는 방법(Method)은 단순히 한가지로 정해져있진 않습니다. 때때로, 콘텐츠의 해시, 마지막으로 수정된 타임스탬프의 해시, 혹은 그냥 개정번호를 이용합니다. 예를들어, MDN 는 wiki(콘텐츠)의 16진수 해시를 사용합니다.

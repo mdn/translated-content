@@ -36,7 +36,7 @@ Une promesse ({{jsxref("Promise")}}).
 
 ## Description
 
-La méthode `catch()` est utile pour gérer les cas d'erreur en cas de compositions de plusieurs promesses. Elle renvoie elle-même une promesse et peut donc être utilisée lorsqu'on [chaîne des promesses](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses#Chaînage_après_un_catch), à l'instar de la méthode sœur qu'est {{jsxref("Promise.prototype.then()")}}.
+La méthode `catch()` est utile pour gérer les cas d'erreur en cas de compositions de plusieurs promesses. Elle renvoie elle-même une promesse et peut donc être utilisée lorsqu'on [chaîne des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_après_un_catch), à l'instar de la méthode sœur qu'est {{jsxref("Promise.prototype.then()")}}.
 
 ## Exemples
 

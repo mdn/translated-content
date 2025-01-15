@@ -40,7 +40,7 @@ Content-Encoding: br
   - : [Lempel-Ziv-Welch](http://en.wikipedia.org/wiki/LZW) (LZW) 알고리즘을 사용하는 포맷. 그 값의 이름은 이 알고리즘을 구현한 UNIX _compress_ 프로그램으로부터 가져왔습니다.
     대부분의 UNIX 배포판으로부터 사라져 왔던 압축 프로그램처럼, 이 content-encoding은 (2013년에 만료된)특허권 이슈로 오늘날의 브라우저에서 사용되지 않습니다.
 - `deflate`
-  - : ([RFC 1951](http://tools.ietf.org/html/rfc1952)에 정의된) [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) 압축 알고리즘을 이용한, ([RFC 1950](http://tools.ietf.org/html/rfc1950)에 정의된) [zlib](http://en.wikipedia.org/wiki/Zlib) 스트럭쳐를 사용합니다.
+  - : ([RFC 1951](https://tools.ietf.org/html/rfc1952)에 정의된) [_deflate_](http://en.wikipedia.org/wiki/DEFLATE) 압축 알고리즘을 이용한, ([RFC 1950](https://tools.ietf.org/html/rfc1950)에 정의된) [zlib](http://en.wikipedia.org/wiki/Zlib) 스트럭쳐를 사용합니다.
 - `identity`
   - : identity 함수를 나타냅니다(즉, 압축 없음 혹은 변경 없음). 이 토큰은, 명시적으로 지정된 경우를 제외하고, 항상 수용 가능하다고 여겨집니다.
 - `br`

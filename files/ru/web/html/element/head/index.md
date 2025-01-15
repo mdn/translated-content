@@ -13,7 +13,7 @@ l10n:
 
 ## Атрибуты
 
-Этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `profile` {{deprecated_inline}}
   - : {{glossary("URI")}} одного или нескольких профилей метаданных, разделённые {{Glossary("whitespace", "пробелами")}}.

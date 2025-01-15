@@ -46,7 +46,7 @@ slug: Web/HTML/Element/pre
 这个元素只具有全局属性。
 
 - `cols` {{non-standard_inline}}{{Deprecated_Inline}}
-  - : 定义每行的最大字符数。这是一个非标准的属性，作用与[`width`](/zh-CN/docs/Web/HTML/Element/pre#width)相同。要实现这样的效果，应该使用 CSS。
+  - : 定义每行的最大字符数。这是一个非标准的属性，作用与[`width`](#width)相同。要实现这样的效果，应该使用 CSS。
 - `width` {{Deprecated_Inline}}
   - : 包含每行的最大字符数。虽然在技术上仍被实现，但这个属性没有视觉效果。要实现这样的效果，应该使用 CSS。
 - `wrap` {{non-standard_inline}}

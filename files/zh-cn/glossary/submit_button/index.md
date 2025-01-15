@@ -33,5 +33,5 @@ l10n:
 
 ## 参见
 
-- [基本的原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [基本的原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

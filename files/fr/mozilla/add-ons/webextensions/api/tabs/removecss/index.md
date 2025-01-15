@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 
 Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -43,7 +43,7 @@ var removing = browser.tabs.removeCSS(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque tous les CSS ont été supprimés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque tous les CSS ont été supprimés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

@@ -11,7 +11,7 @@ L'élément HTML **`<var>`** représente une variable dans une expression mathé
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Notes d'utilisation
 

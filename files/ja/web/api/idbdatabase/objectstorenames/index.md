@@ -8,13 +8,13 @@ l10n:
 
 {{ APIRef("IndexedDB") }}
 
-**`objectStoreNames`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
+**`objectStoreNames`** は {{domxref("IDBDatabase")}} インターフェイスのプロパティで、現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }} です。
 
 {{AvailableInWorkers}}
 
 ### 値
 
-現在接続しているデータベースの[オブジェクトストア](/ja/docs/IndexedDB#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
+現在接続しているデータベースの[オブジェクトストア](/ja/docs/Web/API/IndexedDB_API#gloss_object_store)名のリストを含む {{ domxref("DOMStringList") }}。
 
 ## 例
 

@@ -59,7 +59,7 @@ z-index: unset;
 
 #### HTML
 
-```html
+```html live-sample___visually_layering_elements
 <div class="wrapper">
   <div class="dashed-box">破線のボックス</div>
   <div class="gold-box">金色のボックス</div>
@@ -69,7 +69,7 @@ z-index: unset;
 
 #### CSS
 
-```css
+```css live-sample___visually_layering_elements
 .wrapper {
   position: relative;
 }
@@ -104,7 +104,7 @@ z-index: unset;
 
 #### 結果
 
-{{EmbedLiveSample('視覚的な階層を持つ要素', '550', '200')}}
+{{EmbedLiveSample('Visually_layering_elements', '550', '200')}}
 
 ## 仕様書
 

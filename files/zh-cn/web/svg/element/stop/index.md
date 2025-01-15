@@ -49,8 +49,8 @@ slug: Web/SVG/Element/stop
 
 ### 全局属性
 
-- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/docs/Web/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

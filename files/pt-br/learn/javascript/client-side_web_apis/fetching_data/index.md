@@ -3,16 +3,16 @@ title: AJAX
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
-**[Primeiros passos](/pt-BR/docs/AJAX/Getting_Started)** Uma introdução ao AJAX.
+**[Primeiros passos](/pt-BR/docs/conflicting/Web/Guide/AJAX)** Uma introdução ao AJAX.
 
-**AJAX** é o acrônimo para **JavaScript assíncrono + XML.** Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo [HTML](/pt-BR/docs/HTML) ou [XHTML](/pt-BR/docs/XHTML), [CSS](/pt-BR/docs/CSS), [JavaScript](/pt-BR/docs/JavaScript), [DOMl](/pt-BR/docs/DOM), [XML](/pt-BR/docs/XML), [XSLT](/pt-BR/docs/XSLT), e o mais importante: [objeto XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest).
+**AJAX** é o acrônimo para **JavaScript assíncrono + XML.** Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo [HTML](/pt-BR/docs/Web/HTML) ou [XHTML](/pt-BR/docs/Glossary/XHTML), [CSS](/pt-BR/docs/Web/CSS), [JavaScript](/pt-BR/docs/Web/JavaScript), [DOMl](/pt-BR/docs/Web/API/Document_Object_Model), [XML](/pt-BR/docs/Web/XML), [XSLT](/pt-BR/docs/Web/XSLT), e o mais importante: [objeto XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest).
 Quando essas tecnologias são combinadas no modelo AJAX, as aplicações web que a utilizam são capazes de fazer rapidamente atualizações incrementais para a interface do usuário sem recarregar a página inteira do navegador. Isso torna a aplicação mais rápida e sensível às ações do usuário.
 
-Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSON) é mais utilizado que o XML devido às suas vantagens, como ser mais leve e ser parte do JavaScript. Ambos (JSON e XML) são utilizados para obter informações do pacote no modelo AJAX.
+Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/Glossary/JSON) é mais utilizado que o XML devido às suas vantagens, como ser mais leve e ser parte do JavaScript. Ambos (JSON e XML) são utilizados para obter informações do pacote no modelo AJAX.
 
 ## Documentação
 
-- [AJAX: Primeiros passos](/pt-BR/docs/AJAX/Getting_Started)
+- [AJAX: Primeiros passos](/pt-BR/docs/conflicting/Web/Guide/AJAX)
   - : Este artigo orientará o básico sobre AJAX e fornecerá dois exemplos para você começar.
 - [Alternate Ajax Techniques](http://www.webreference.com/programming/ajax_tech/)
   - : Most articles on Ajax have focused on using XMLHttp as the means to achieving such communication, but Ajax techniques are not limited to just XMLHttp. There are several other methods.
@@ -24,7 +24,7 @@ Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSO
   - : Mike Stenhouse has penned this article, detailing some methods you can use to fix back button and bookmarking issues when developing AJAX applications.
 - [Ajax Mistakes](http://alexbosworth.backpackit.com/pub/67688)
   - : Alex Bosworth has written this article outlining some of the mistakes AJAX application developers can make.
-- [HTML no XMLHttpRequest](/pt-BR/docs/HTML_in_XMLHttpRequest)
+- [HTML no XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
   - : MDN guide
 - [Especificação XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest/)
   - : W3C Working draft
@@ -51,4 +51,4 @@ Embora a letra X em AJAX corresponda ao XML, atualmente o [JSON](/pt-BR/docs/JSO
 
 ## Tópicos relacionados
 
-[HTML](/pt-BR/docs/HTML), [XHTML](/pt-BR/docs/XHTML), [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM), [JavaScript](/pt-BR/docs/JavaScript), [XML](/pt-BR/docs/XML), [XMLHttpRequest](/pt-BR/docs/nsIXMLHttpRequest), [XSLT](/pt-BR/docs/XSLT), [DHTML](/pt-BR/docs/DHTML), [Canvas](/pt-BR/docs/HTML/Canvas)
+[HTML](/pt-BR/docs/Web/HTML), [XHTML](/pt-BR/docs/Glossary/XHTML), [CSS](/pt-BR/docs/Web/CSS), [DOM](/pt-BR/docs/Web/API/Document_Object_Model), [JavaScript](/pt-BR/docs/Web/JavaScript), [XML](/pt-BR/docs/Web/XML), [XMLHttpRequest](/pt-BR/docs/nsIXMLHttpRequest), [XSLT](/pt-BR/docs/Web/XSLT), [DHTML](/pt-BR/docs/DHTML), [Canvas](/pt-BR/docs/Web/API/Canvas_API)

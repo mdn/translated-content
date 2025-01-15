@@ -20,7 +20,7 @@ TypeError: Cannot assign to read only property '0' of [object Array] (Chrome)
 
 ## O que deu errado?
 
-A variável global ou propriedade do objeto foi definida como propriedade somente-leitura. (Tecnicamente, esse é um dado de [não-escrita](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Writable_attribute).)
+A variável global ou propriedade do objeto foi definida como propriedade somente-leitura. (Tecnicamente, esse é um dado de [não-escrita](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#writable_attribute).)
 
 Esse erro ocorre apenas em código no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode). No modo não strict mode, essa atribuição é ignorada silenciosamente.
 

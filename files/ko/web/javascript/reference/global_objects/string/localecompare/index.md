@@ -31,7 +31,7 @@ localeCompare(compareString, locales, options);
     완전히 구현에 의존합니다.
 
     매개변수의 상세 및 사용 방법은 [`Intl.Collator()`
-    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)를 참조하세요.
+    constructor](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)를 참조하세요.
 
 ### 반환 값
 

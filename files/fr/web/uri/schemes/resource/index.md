@@ -22,7 +22,7 @@ Voici un exemple :
 resource://gre/res/svg.css
 ```
 
-Pour plus de détails, vous pouvez consulter [Identifier des ressources sur le Web](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web).
+Pour plus de détails, vous pouvez consulter [Identifier des ressources sur le Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web).
 
 Dans cet article, nous abordons les URIs ressources qui sont utilisées par Firefox pour pointer vers des ressources internes.
 
@@ -59,6 +59,6 @@ resource: est disponible uniquement dans Firefox.
 
 ## Voir aussi
 
-- [Identifier des ressources sur le Web](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- [Identifier des ressources sur le Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [Liste des schémas URI maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` est [définie ici](https://www.iana.org/assignments/uri-schemes/prov/resource))

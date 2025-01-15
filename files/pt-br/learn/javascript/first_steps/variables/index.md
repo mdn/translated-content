@@ -13,7 +13,7 @@ Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript,
 
 ## Ferramentas que você precisa
 
-Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador) para mais informações sobre como acessar essa ferramenta).
+Ao longo deste artigo, pediremos que você digite linhas de código para testar seu entendimento do conteúdo. Se você estiver utilizando um navegador em um computador, o melhor lugar para digitar seus código de exemplos é o console JavaScript do seu navegador (veja o artigo [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) para mais informações sobre como acessar essa ferramenta).
 
 No entanto, nós também providenciamos um simples console JavaScript incorporado à página logo abaixo para que você inserir o código, caso não esteja usando um navegador com um console JavaScript facilmente disponível, ou se achar o console incorporado mais confortável.
 
@@ -199,7 +199,7 @@ Você pode chamar uma variável praticamente qualquer nome que queira, mas há l
 - Um último ponto — você também precisa evitar utilizar palavras reservadas pelo JavaScript como nome para suas variáveis — com isso, queremos dizer as palavras que fazem parte da sintaxe do JavaScript! Então você não pode usar palavras como `var`, `function`, `let` e `for` como nome de variáveis. Os navegadores vão reconhecê-las como itens de código diferentes e, portanto, você terá erros.
 
 > [!NOTE]
-> Você pode encontrar uma lista bem completa de palavras reservadas para evitar em [Gramática léxica — Palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#Palavras-chave).
+> Você pode encontrar uma lista bem completa de palavras reservadas para evitar em [Gramática léxica — Palavras-chave](/pt-BR/docs/Web/JavaScript/Reference/Lexical_grammar#palavras-chave).
 
 Exemplos de bons nomes:
 
@@ -346,7 +346,7 @@ diasNaSemana = 8;
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables).
 
 ## Sumário
 

@@ -66,5 +66,5 @@ a & b
 
 ## Смотрите также
 
-- [Bitwise operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/ru/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [Bitwise AND assignment operator](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)

@@ -66,5 +66,5 @@ for (const bird of birds) {
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - セレクターを使用するその他のメソッド: {{domxref("element.querySelector()")}} および {{domxref("element.closest()")}}

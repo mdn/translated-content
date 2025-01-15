@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-[L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
+[L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
 
 À la différence de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) qui fonctionne à l'aide de fonctions de rappel (<i lang="en">callbacks</i>), l'API <i lang="en">Fetch</i> utilise les promesses et fournit une meilleure alternative, qui peut être utilisée dans [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API). L'API <i lang="en">Fetch</i> intègre également des concepts HTTP avancés tels que [le CORS](/fr/docs/Web/HTTP/CORS) et d'autres extensions de HTTP.
 
@@ -34,7 +34,7 @@ Les requêtes de récupération sont contrôlées par la directive `connect-src`
 
 La méthode `fetch()` permet l'utilisation optionnelle d'un deuxième paramètre, un objet `init` pour contrôler différents paramètres.
 
-Voir [la page sur la méthode `fetch()`](/fr/docs/Web/API/fetch) pour plus de détails et l'exhaustivité des options disponibles.
+Voir [la page sur la méthode `fetch()`](/fr/docs/Web/API/Window/fetch) pour plus de détails et l'exhaustivité des options disponibles.
 
 ```js
 // Exemple d'implémentation pour une requête POST
@@ -131,7 +131,7 @@ fetch("https://example.com", {
 
 ## Téléverser des données JSON
 
-On peut utiliser [`fetch()`](/fr/docs/Web/API/fetch) pour envoyer des données au format JSON à un serveur avec une requête POST.
+On peut utiliser [`fetch()`](/fr/docs/Web/API/Window/fetch) pour envoyer des données au format JSON à un serveur avec une requête POST.
 
 ```js
 async function postJSON(donnees) {
@@ -157,7 +157,7 @@ postJSON(donnees);
 
 ## Téléverser un fichier
 
-Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/fetch).
+Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 async function upload(donneesFormulaires) {
@@ -184,7 +184,7 @@ upload(donneesFormulaires);
 
 ## Téléverser plusieurs fichiers
 
-On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/fetch).
+On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 async function uploadMultiple(donneesFormulaires) {
@@ -259,7 +259,7 @@ run();
 
 ## Vérifier la réussite de l'opération
 
-Une promesse [`fetch()`](/fr/docs/Web/API/fetch) échouera avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) s'il y a une erreur réseau ou que la politique CORS est incorrectement configurée côté serveur. En revanche, une réponse 404 qui indiquerait un problème de permission ou autre ne déclencherait pas une telle erreur. Aussi, pour bien vérifier que l'opération `fetch()` est réussie, il faudra vérifier que la promesse est tenue, mais aussi vérifier que la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) vaut `true`. Le code correspondant ressemblerait à&nbsp;:
+Une promesse [`fetch()`](/fr/docs/Web/API/Window/fetch) échouera avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) s'il y a une erreur réseau ou que la politique CORS est incorrectement configurée côté serveur. En revanche, une réponse 404 qui indiquerait un problème de permission ou autre ne déclencherait pas une telle erreur. Aussi, pour bien vérifier que l'opération `fetch()` est réussie, il faudra vérifier que la promesse est tenue, mais aussi vérifier que la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) vaut `true`. Le code correspondant ressemblerait à&nbsp;:
 
 ```js
 async function fetchImage() {
@@ -475,11 +475,11 @@ fetch("/login", {
 });
 ```
 
-Tant la requête que la réponse, ou la fonction `fetch()` essaieront de déterminer intelligemment le type de contenu. Une requête définira automatiquement un en-tête `Content-Type` si aucun n'a été fourni avec le paramètre [`options`](/fr/docs/Web/API/fetch#options).
+Tant la requête que la réponse, ou la fonction `fetch()` essaieront de déterminer intelligemment le type de contenu. Une requête définira automatiquement un en-tête `Content-Type` si aucun n'a été fourni avec le paramètre [`options`](/fr/docs/Web/API/Window/fetch#options).
 
 ## Détection de la fonctionnalité
 
-La prise en charge de l'API <i lang="en">Fetch</i> peut être détectée en vérifiant la présence de [`Headers`](/fr/docs/Web/API/Headers), [`Request`](/fr/docs/Web/API/Request), [`Response`](/fr/docs/Web/API/Response) ou [`fetch()`](/fr/docs/Web/API/fetch) au sein des portées [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker). Par exemple&nbsp;:
+La prise en charge de l'API <i lang="en">Fetch</i> peut être détectée en vérifiant la présence de [`Headers`](/fr/docs/Web/API/Headers), [`Request`](/fr/docs/Web/API/Request), [`Response`](/fr/docs/Web/API/Response) ou [`fetch()`](/fr/docs/Web/API/Window/fetch) au sein des portées [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker). Par exemple&nbsp;:
 
 ```js
 if (window.fetch) {
@@ -494,7 +494,7 @@ if (window.fetch) {
 La spécification de `fetch()` diffère de `jQuery.ajax()`&nbsp;:
 
 - La promesse renvoyée par `fetch()` ne lèvera pas d'exception en cas d'erreurs HTTP, même si le statut de la réponse HTTP est 404 ou 500. Dès que le serveur répond avec les en-têtes, la promesse sera bien résolue (la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) étant fixée à `false` si le statut de la réponse est en dehors de l'intervalle [200, 299]). La promesse sera uniquement rompue s'il y a une erreur réseau ou tout autre évènement qui a empêché sa complétion.
-- À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/fetch#credentials) valant `include`, `fetch()`&nbsp;:
+- À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/Window/fetch#credentials) valant `include`, `fetch()`&nbsp;:
   - N'enverra pas de cookies pour les requêtes vers d'autres origines
   - N'écrira pas de cookies provenant de réponses d'autres origines
 

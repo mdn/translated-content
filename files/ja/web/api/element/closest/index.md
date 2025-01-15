@@ -78,5 +78,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## 関連情報
 
-- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)モジュール
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュール
 - セレクターを取る他の {{domxref("Element")}} のメソッド: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}

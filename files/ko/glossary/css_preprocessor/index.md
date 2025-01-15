@@ -17,8 +17,8 @@ CSS 전처리기를 사용하기 위해서는, 당신의 웹 {{Glossary("server"
 
 - 가장 인기있는 CSS 전처리기들:
 
-  - [SASS](http://sass-lang.com/)
-  - [LESS](http://lesscss.org/)
+  - [SASS](https://sass-lang.com/)
+  - [LESS](https://lesscss.org/)
   - [Stylus](http://stylus-lang.com/)
   - [PostCSS](http://postcss.org/)
 

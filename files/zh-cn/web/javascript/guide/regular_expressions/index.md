@@ -3,7 +3,7 @@ title: 正则表达式
 slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript 中，正则表达式也是对象。这些模式被用于 {{jsxref("RegExp")}} 的 {{jsxref("RegExp.exec", "exec")}} 和 {{jsxref("RegExp.test", "test")}} 方法，以及 {{jsxref("String")}} 的 {{jsxref("String.match", "match")}}、{{jsxref("String.matchAll", "matchAll")}}、{{jsxref("String.replace", "replace")}}、{{jsxref("String.search", "search")}} 和 {{jsxref("String.split", "split")}} 方法。本章介绍 JavaScript 正则表达式。
 
@@ -19,7 +19,7 @@ var re = /ab+c/;
 
 脚本加载后，正则表达式字面量就会被编译。当正则表达式保持不变时，使用此方法可获得更好的性能。
 
-或者调用[`RegExp`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp)对象的构造函数，如下所示：
+或者调用[`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)对象的构造函数，如下所示：
 
 ```js
 var re = new RegExp("ab+c");
@@ -627,7 +627,7 @@ function escapeRegExp(string) {
 
 ## 使用正则表达式
 
-正则表达式可以被用于 [`RegExp`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp) 的 [`exec`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec) 和 [`test`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/test) 方法以及 [`String`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) 的 [`match`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/match)、[`replace`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/replace)、[`search`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/search) 和 [`split`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/split) 方法。这些方法在 [JavaScript 手册](/zh-CN/docs/JavaScript/Reference)中有详细的解释。
+正则表达式可以被用于 [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp) 的 [`exec`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 和 [`test`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) 方法以及 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 的 [`match`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)、[`replace`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)、[`search`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/search) 和 [`split`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 方法。这些方法在 [JavaScript 手册](/zh-CN/docs/Web/JavaScript/Reference)中有详细的解释。
 
 | 方法                                      | 描述                                                                                                   |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -939,4 +939,4 @@ console.log(output.join("\n"));
 </html>
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
