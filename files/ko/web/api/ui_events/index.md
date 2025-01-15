@@ -269,7 +269,7 @@ clear.addEventListener("click", () => {
 
 {{Specifications}}
 
-## 참조
+## 같이 보기
 
 - [포인터 이벤트 API](/ko/docs/Web/API/Pointer_events)
 - [터치 이벤트](/ko/docs/Web/API/Touch_events)
