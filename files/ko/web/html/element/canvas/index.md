@@ -5,7 +5,7 @@ slug: Web/HTML/Element/canvas
 
 {{HTMLSidebar}}
 
-**HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/HTML/Canvas) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
+**HTML `<canvas>` 요소**는 [캔버스 스크립팅 API](/ko/docs/Web/API/Canvas_API) 또는 [WebGL API](/ko/docs/Web/API/WebGL_API)와 함께 사용해 그래픽과 애니메이션을 그릴 수 있습니다.
 
 <table class="properties">
   <tbody>
@@ -43,7 +43,7 @@ slug: Web/HTML/Element/canvas
     </tr>
     <tr>
       <th scope="row">태그 생략</th>
-      <td>{{no_tag_omission}}</td>
+      <td>불가능, 시작과 끝에 태그를 추가하는 것은 필수입니다.</td>
     </tr>
     <tr>
       <th scope="row">가능한 부모 요소</th>
@@ -102,7 +102,8 @@ slug: Web/HTML/Element/canvas
 | Safari   | 32,767 픽셀 | 32,767 픽셀 | 268,435,456 픽셀 (i.e., 16,384 x 16,384) |
 | IE       | 8,192 픽셀  | 8,192 픽셀  | ?                                        |
 
-> **참고:** 최대 면적 또는 영역을 초과하면 그리기 명령이 동작하지 않으므로, 캔버스를 사용할 수 없습니다.
+> [!NOTE]
+> 최대 면적 또는 영역을 초과하면 그리기 명령이 동작하지 않으므로, 캔버스를 사용할 수 없습니다.
 
 ## 예제
 
@@ -153,7 +154,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 같이 보기
 
-- [Canvas API](/ko/docs/Web/HTML/Canvas)
-- [캔버스 자습서](/ko/docs/Web/HTML/Canvas/Tutorial)
+- [Canvas API](/ko/docs/Web/API/Canvas_API)
+- [캔버스 자습서](/ko/docs/Web/API/Canvas_API/Tutorial)
 - [캔버스 치트 시트](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 - [캔버스 관련 데모](/ko/docs/Web/Demos_of_open_web_technologies)

@@ -46,7 +46,8 @@ Además puedes, opcionalmente, incluir fotogramas que describan pasos intermedio
 
 ## Ejemplos
 
-> **Nota:** Los siguientes ejemplos no usan ningún prefijo en las propiedades CSS de animación. Los navegadores antiguos pueden necesitarlos. Al hacer click en "Ver el ejemplo vivo" se incluye el prefijo `-webkit`.
+> [!NOTE]
+> Los siguientes ejemplos no usan ningún prefijo en las propiedades CSS de animación. Los navegadores antiguos pueden necesitarlos. Al hacer click en "Ver el ejemplo vivo" se incluye el prefijo `-webkit`.
 
 ### Haciendo que un texto se delice por la ventana del navegador
 
@@ -232,7 +233,8 @@ p {
 }
 ```
 
-> **Nota:** Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
+> [!NOTE]
+> Puedes encontrar más detalles en la página de referencia {{cssxref("animation")}}
 
 ### Estableciendo multiples valores de propiedades animation
 
@@ -366,4 +368,4 @@ Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la p
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
 - [Detecting CSS animation support](/es/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

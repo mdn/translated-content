@@ -11,8 +11,6 @@ slug: Web/API/FormData/append
 
 Разница между {{domxref("FormData.set")}} и `append()` в том, что если заданный ключ уже существует, {{domxref("FormData.set")}} заменит данные в нем на новые, а `append()` добавит новое значение к остальным в конец.
 
-> **Примечание:** Данный метод также доступен в [Web Workers](/ru/docs/Web/API/Web_Workers_API).
-
 ## Синтаксис
 
 Существует две формы использования данной функции: с двумя и тремя параметрами:
@@ -31,7 +29,8 @@ formData.append(name, value, filename);
 - `filename` {{optional_inline}}
   - : Имя файла которое будет отправлено серверу ({{domxref("USVString")}}), когда {{domxref("Blob")}} или {{domxref("File")}} прошёл проверку как второй параметр. Стандартное имя файла для {{domxref("Blob")}} объектов это "blob".
 
-> **Примечание:** Если вы укажете {{domxref("Blob")}} в качестве данных для включения в объект `FormData`, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.
+> [!NOTE]
+> Если вы укажете {{domxref("Blob")}} в качестве данных для включения в объект `FormData`, имя файла будет указано для сервера в заголовке "Content-Disposition" и может отличаться от браузера к браузеру.
 
 ### Возвращает
 
@@ -72,6 +71,6 @@ formData.append("userpic[]", myFileInput2.files[0], "chris2.jpg");
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

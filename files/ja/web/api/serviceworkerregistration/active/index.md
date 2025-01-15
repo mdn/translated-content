@@ -11,9 +11,11 @@ l10n:
 
 クライアントの URL が登録のスコープ内にある場合、アクティブワーカーは {{domxref("Client")}} を制御します（{{domxref("ServiceWorkerContainer.register")}} が最初に呼び出されたときに設定された `scope` オプション）。
 
-> **メモ:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
+> [!NOTE]
+> この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
-> **メモ:** アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
+> [!NOTE]
+> アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
 
 ## 値
 

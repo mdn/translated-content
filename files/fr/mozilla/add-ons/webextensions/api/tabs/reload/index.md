@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 
 Rechargez un onglet, en contournant éventuellement le cache Web local.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -31,7 +31,7 @@ var reloading = browser.tabs.reload(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque l'onglet a été rechargé. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque l'onglet a été rechargé. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 
@@ -68,9 +68,9 @@ reloading.then(onReloaded, onError);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

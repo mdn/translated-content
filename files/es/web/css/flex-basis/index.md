@@ -42,9 +42,11 @@ flex-basis: unset;
 
   - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
 
-    > **Nota:** Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
+    > [!NOTE]
+    > Tenga en cuenta que éste valor no fue presentado en el lanzamiento inicial del Diseño de Caja Flexible, así que no será soportado por algunas implementaciones antiguas. El efecto equivalente puede tenerlo usando `auto` junto con un tamaño principal ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) o [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) en auto.
 
-    > **Nota:** Breve historia
+    > [!NOTE]
+    > Breve historia
     >
     > - Originalmente, "flex-basis:auto" significa "observa mi propiedad width o height".
     > - Después, flex-basis:auto fue cambiado a automatic-sizing, y fue introducido "main-size" como palabra clave "observa mi propiedad width o height". Ésto fue implementado en [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
@@ -177,5 +179,5 @@ flex-basis: unset;
 
 ## Ver también
 
-- [Using CSS flexible boxes](/es/docs/CSS/Using_CSS_flexible_boxes)
+- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - {{cssxref("width")}}

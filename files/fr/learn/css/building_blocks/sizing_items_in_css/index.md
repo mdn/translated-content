@@ -96,7 +96,8 @@ Dans l'exemple ci-dessous, nous avons utilisé trois fois la même image. La pre
 
 Cette technique est utilisée pour rendre les images _responsive_, de sorte que lorsqu'elles sont visualisées sur un appareil plus petit, elles sont réduites de manière appropriée. Vous ne devez cependant pas utiliser cette technique pour charger des images vraiment grandes et les réduire ensuite dans le navigateur. Les images doivent être correctement dimensionnées pour ne pas être plus grandes qu'elles ne doivent l'être pour la plus grande taille à laquelle elles sont affichées dans la conception. Le téléchargement d'images trop grandes ralentira votre site et peut coûter plus cher aux utilisateurs s'ils disposent d'une connexion limitée.
 
-> **Note :** En savoir plus sur [les techniques d'images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+> [!NOTE]
+> En savoir plus sur [les techniques d'images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 
 ## Unités de la fenêtre d'affichage
 

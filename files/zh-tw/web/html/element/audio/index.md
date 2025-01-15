@@ -21,7 +21,8 @@ slug: Web/HTML/Element/audio
 
   - : 一個布林屬性：如果指定，音訊將會在能夠開始播放時自動開始播放，而不需要等待整個音訊文件下載完成。
 
-    > **備註：** 自動播放音訊（或帶有音訊軌道的影片）的網站對用戶來說可能是一種不愉快的體驗，因此應盡可能避免。如果必須提供自動播放功能，你應該使其成為選擇加入的（需要用戶明確啟用）。然而，在創建源將在稍後由用戶控制的媒體元素時，這可能很有用。有關如何正確使用自動播放的其他信息，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Autoplay_guide)。
+    > [!NOTE]
+    > 自動播放音訊（或帶有音訊軌道的影片）的網站對用戶來說可能是一種不愉快的體驗，因此應盡可能避免。如果必須提供自動播放功能，你應該使其成為選擇加入的（需要用戶明確啟用）。然而，在創建源將在稍後由用戶控制的媒體元素時，這可能很有用。有關如何正確使用自動播放的其他信息，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Autoplay_guide)。
 
 - `controls`
 
@@ -67,7 +68,7 @@ slug: Web/HTML/Element/audio
 
     默認值對於每個瀏覽器是不同的。規範建議將其設置為 `metadata`。
 
-    > **備註：**
+    > [!NOTE]
     >
     > - `autoplay` 屬性優先於 `preload`。如果指定了 `autoplay`，瀏覽器顯然需要開始下載音訊以進行播放。
     > - 規範並不強制要求瀏覽器遵循此屬性的值；它僅僅是一個提示。
@@ -246,7 +247,7 @@ slug: Web/HTML/Element/audio
 - `<audio>` 元素無法像 `<video>` 元素那樣與字幕或標題關聯。有關一些有用的信息和解決方法，請參見 Ian Devlin 的 [WebVTT 和音訊](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/)。
 - 為了測試在支援該元素的瀏覽器中的回退內容，你可以將 `<audio>` 替換為一個不存在的元素，例如 `<notanaudio>`。
 
-有關使用 HTML `<audio>` 的一般信息，請參見初學者教程[影片和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)。
+有關使用 HTML `<audio>` 的一般信息，請參見初學者教程[影片和音訊內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)。
 
 ### 使用 CSS 進行樣式設定
 
@@ -271,7 +272,8 @@ slug: Web/HTML/Element/audio
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : 對此 {{domxref("TextTrackList")}} 添加 `addtrack` 事件監聽器，以在向元素添加新文本軌時收到通知。
 
-> **備註：** 即使它是一個 `<audio>` 元素，它仍然具有影片和文本軌道列表，實際上可以用來呈現影片，雖然用戶界面的影響可能有些奇怪。
+> [!NOTE]
+> 即使它是一個 `<audio>` 元素，它仍然具有影片和文本軌道列表，實際上可以用來呈現影片，雖然用戶界面的影響可能有些奇怪。
 
 例如，要檢測音軌何時添加到或從 `<audio>` 元素中移除，你可以使用以下代碼：
 
@@ -442,5 +444,5 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [學習區域：視訊和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [學習區域：視訊和音訊內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [跨瀏覽器音訊基礎知識](/zh-TW/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

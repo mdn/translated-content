@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-required
 
 ### Descripción
 
-El atributo [`aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) es usado para indicar al usuario que un input es requerido en un elemento antes de que un form pueda ser enviado. Este atributo puede ser usado en un form con cualquier elemento HTML típico; no se limita a elementosque tengan un `role` ARIA asignado.
+El atributo [`aria-required`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-required) es usado para indicar al usuario que un input es requerido en un elemento antes de que un form pueda ser enviado. Este atributo puede ser usado en un form con cualquier elemento HTML típico; no se limita a elementosque tengan un `role` ARIA asignado.
 
 HTML5 ahora tiene el atributo `required`, pero aria-required todavía es útil para un agente de usuario que no soporta HTML5.
 
@@ -21,7 +21,8 @@ Los lectores de pantalla deben anunciar el campo como requerido.
 
 Nota que este atributo no cambiará automáticamente la presentación del campo.
 
-> **Nota:** Las opiniones pueden diferir en cuanto a cómo esta técnica debería ser manejada por la tecnología asistente. La información prevista arribaes una de esas opciones y por lo tanto no es normativa.
+> [!NOTE]
+> Las opiniones pueden diferir en cuanto a cómo esta técnica debería ser manejada por la tecnología asistente. La información prevista arribaes una de esas opciones y por lo tanto no es normativa.
 
 ### Ejemplos
 
@@ -49,12 +50,12 @@ Nota que este atributo no cambiará automáticamente la presentación del campo.
 - Listbox
 - Radiogroup
 - Spinbutton
-- [Textbox](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role)
+- [Textbox](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_textbox_role)
 - Tree
 
 ### Técnicas relacionadas con ARIA
 
-- [Utilizando el atributo aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
+- [Utilizando el atributo aria-invalid](/en-US/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
 
 ### Compatibilidad
 
@@ -62,6 +63,6 @@ Por determinar: Agregar información de soporte para combinaciones comunes de pr
 
 ### Recursos adicionales
 
-- [Especificación WAI-ARIA para `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
-- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform)
-- [Constraint validation](/en/HTML/HTML5/Constraint_validation) in HTML5
+- [Especificación WAI-ARIA para `aria-required`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
+- [WAI-ARIA Authoring Practices for forms](https://www.w3.org/TR/wai-aria-practices/#ariaform)
+- [Constraint validation](/es/docs/Web/HTML/Constraint_validation) in HTML5

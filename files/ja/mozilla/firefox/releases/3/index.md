@@ -17,7 +17,7 @@ l10n:
   - : Firefox 3 における新機能を活用するためにウェブサイトやウェブアプリケーションで必要となるかもしれない変更についての情報を提供します。
 - [オンライン・オフラインイベント](/ja/docs/Web/API/Navigator/onLine)
   - : Firefox 3 は WHATWG のオンライン・オフラインイベントをサポートします。これは、ウェブアプリケーションや拡張機能から、インターネットに接続しているかどうかや、接続開始・終了のタイミングを検出できるようにします。
-- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [ウェブベースのプロトコルハンドラー](/ja/docs/Web/API/Navigator/registerProtocolHandler)
   - : `navigator.registerProtocolHandler()` メソッドを利用して、ウェブアプリケーションをプロトコルハンドラーとして登録できるようになりました。
 - [キャンバスを使用したテキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : Firefox 3 でサポートされた標準化されていない API を利用して、キャンバス内にテキストを描画できるようになりました。
@@ -40,7 +40,7 @@ l10n:
 - [EXSLT support](/ja/docs/Web/EXSLT)
   - : Firefox 3 は、 [XSLT](/ja/docs/Web/XSLT) の拡張となる [EXSLT](/ja/docs/Web/EXSLT) の実質的なサブセットのサポートを提供します。
 - [Firefox 3 での SVG の改良](/ja/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
-  - : Firefox 3 での SVG サポートは、24 を超える新しいフィルタ、いくつかの新しい要素と属性、そして、その他の改良を含み、大幅に強化されました。
+  - : Firefox 3 での SVG サポートは、24 を超える新しいフィルター、いくつかの新しい要素と属性、そして、その他の改良を含み、大幅に強化されました。
 - [アニメーション PNG グラフィック](/ja/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)
   - : Firefox 3 は、アニメーション PNG (APNG) 画像形式をサポートしています。
 
@@ -64,7 +64,7 @@ l10n:
   - : パスワードマネージャーは、新しいログインマネージャーに置き換えられました。
 - [埋め込み XBL バインディング](/ja/docs/XBL/XBL_1.0_Reference/Elements#binding)
   - : XBL バインディングを、別の XML ファイルから読み込む代わりに、Chrome コードから `data:` URL スキーマを使って直接組み込むことができるようになりました。
-- [拡張機能の説明のローカライズ](/ja/docs/Localizing_extension_descriptions)
+- [拡張機能の説明のローカライズ](/ja/docs/orphaned/Localizing_extension_descriptions)
   - : Firefox 3 では、アドオンのメタデータをローカライズする新しい方法がサポートされました。これにより、アドオンのダウンロード直後や無効時にローカライズされた詳細説明が表示されるようになりました。
 - [ローカライズと複数形](/ja/docs/Localization_and_Plurals)
   - : Firefox 3 では、新しい PluralForm モジュールがサポートされました。このモジュールは、複数のローカライゼーションで複数形の単語を正しく扱うためのツールを提供します。

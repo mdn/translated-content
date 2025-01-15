@@ -32,7 +32,8 @@ CSS.paintWorklet.addModule("csscomponent.js");
 
 この追加されたモジュールには、完全に構成可能なワークレットを登録する {{domxref("PaintWorkletGlobalScope.registerPaint")}} 関数が含まれています。
 
-> **メモ:** 自分自身でワークレットを書いたり、他にも作成した部品をインストールすることができます。
+> [!NOTE]
+> 自分自身でワークレットを書いたり、他にも作成した部品をインストールすることができます。
 > [Houdini.how](https://houdini.how/) ウェブサイトは、[使用する方法を説明した](https://houdini.how/usage/)ワークレットのコレクションです。
 
 CSS の `paint()` 関数は {{cssxref("image")}} 型で対応している追加関数です。
@@ -50,7 +51,8 @@ li {
 }
 ```
 
-> **メモ:** 大きな力には大きな責任が伴います。
+> [!NOTE]
+> 大きな力には大きな責任が伴います。
 > Houdini を使用すると、独自の石積み (masonry）)グリッド、リージョンの実装を開発することができますが、そうすることが必ずしも最良の考えであるとは限りません。
 > CSS ワーキンググループは、すべての機能が確実に実行され、すべてのエッジケースを処理し、セキュリティ、プライバシー、およびアクセシビリティを考慮するために多くの作業を行います。
 > Houdini で CSS を拡張するときは、これらの考慮事項を念頭に置き、より野心的なプロジェクトに進む前に、まずは小さいものから始めてください。
@@ -75,7 +77,7 @@ CSS 型付きオブジェクトモデルは、CSS 値を型付き JavaScript オ
 
 - [CSS 型付きオブジェクトモデルリファレンス](/ja/docs/Web/API/CSS_Typed_OM_API)
 - [CSS 型付きオブジェクトモデルガイド](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/docs/css-ui/cssom)
 
 ### CSS 描画 API
 

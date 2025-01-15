@@ -11,13 +11,13 @@ slug: Web/HTML/Element/style
 
   - : **Sus etiquetas son**: `<style>` y `</style>` (ambas obligatorias).
 
-    **Está definido como**: Elemento [de cabecera](/es/HTML/Elemento/Tipos_de_elementos#decabecera).
+    **Está definido como**: Elemento [de cabecera](/es/docs/HTML/Elemento/Tipos_de_elementos#decabecera).
 
     **Crea una caja**: No.
 
     **Puede contener**: Declaraciones de estilo.
 
-    **Debe ser contenido por**: Elementos [head](/es/HTML/Elemento/Tipos_de_elementos#head).
+    **Debe ser contenido por**: Elementos [head](/es/docs/HTML/Elemento/Tipos_de_elementos#head).
 
 #### Atributos
 
@@ -182,7 +182,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

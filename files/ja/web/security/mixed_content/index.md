@@ -51,7 +51,7 @@ Chrome と同様に、ウェブフォントやワーカーのようなリソー�
 
 [![Screen shot of the web console displaying a mixed content warning.](Mixed_content_-_Net_pane.png)](Mixed_content_-_Net_pane.png)
 
-これらの警告をウェブコンソールで見つけるのと同様に、 [Content Security Policy (CSP)](/ja/docs/Web/HTTP/CSP) を使用して問題を報告することができます。 [SSL-check](http://www.jitbit.com/sslcheck/) や [Missing Padlock](https://www.missingpadlock.com/) のようなオンラインクローラーと使用すると、ウェブサイトを再帰的にチェックし、安全ではないコンテンツのリンクを探すことができます。
+これらの警告をウェブコンソールで見つけるのと同様に、 [Content Security Policy (CSP)](/ja/docs/Web/HTTP/CSP) を使用して問題を報告することができます。 [SSL-check](https://www.jitbit.com/sslcheck/) や [Missing Padlock](https://www.missingpadlock.com/) のようなオンラインクローラーと使用すると、ウェブサイトを再帰的にチェックし、安全ではないコンテンツのリンクを探すことができます。
 
 Firefox 23 以降より、能動的な混在コンテンツはデフォルトでブロックされるようになりました (受動的な混在コンテンツは設定によりブロック可能です)。ウェブ開発者が混在コンテンツのエラーに気付きやすくなるよう、ブロックされた混在コンテンツへのリクエストはウェブコンソールのセキュリティペインにすべて記録されます。
 
@@ -59,7 +59,8 @@ Firefox 23 以降より、能動的な混在コンテンツはデフォルトで
 
 このエラーを修正するには、 HTTP コンテンツへのリクエストをすべて HTTPS コンテンツへのリクエストに差し替えてください。よくある混在コンテンツには JavaScript ファイルやスタイルシート、画像、動画、その他のメディアファイルなどがあります。
 
-> **メモ:** Firefox 55 以降、 `http://127.0.0.1/` で混在コンテンツの読み込みが許可されました ([Firefox バグ 903966](https://bugzil.la/903966) を参照)。 Chrome は `http://127.0.0.1/` 及び `http://localhost/` で混在コンテンツを許可しています。 Safari は混在コンテンツを許可しません。
+> [!NOTE]
+> Firefox 55 以降、 `http://127.0.0.1/` で混在コンテンツの読み込みが許可されました ([Firefox バグ 903966](https://bugzil.la/903966) を参照)。 Chrome は `http://127.0.0.1/` 及び `http://localhost/` で混在コンテンツを許可しています。 Safari は混在コンテンツを許可しません。
 
 ## 関連情報
 

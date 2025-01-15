@@ -58,4 +58,4 @@ _Наследует родительские методы, {{domxref("CharacterD
 
 ## Смотри(те) также
 
-- [The DOM interfaces index](/ru/docs/DOM/DOM_Reference).
+- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model).

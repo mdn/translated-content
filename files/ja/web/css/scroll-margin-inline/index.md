@@ -124,7 +124,8 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` のインラインの末尾から `1rem`、3 番目の `<div>` のインラインの末尾から `2rem` のところでスナップすることになります。
 
-> **メモ:** ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> [!NOTE]
+> ここでは `scroll-margin` をインライン軸 (この場合は X 軸) の先頭*と*末尾に一度に設定していますが、実際に関係するのは末尾側だけです。例えば `scroll-margin-inline: 0 1rem` や `scroll-margin-inline-end: 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 
@@ -142,5 +143,5 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
 - [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

@@ -32,7 +32,8 @@ JavaScript é uma das tecnologias da web modernas mais populares! À medida que 
 
 No entanto, familiarizar-se com JavaScript é mais desafiador do que familiarizar-se com HTML e CSS. Você pode ter que começar pequeno e progredir gradualmente. Para começar, vamos examinar como adicionar JavaScript à sua página para criar um exemplo _Hello world!_. (_Hello world!_ é [o padrão para exemplos de programação introdutória](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program).)
 
-> **Aviso:** Se você não está acompanhando o restante do nosso curso, [faça o download deste código de exemplo](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) e use-o como ponto de partida.
+> [!WARNING]
+> Se você não está acompanhando o restante do nosso curso, [faça o download deste código de exemplo](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages) e use-o como ponto de partida.
 
 1. Vá para o seu site de teste e crie uma nova pasta chamada `scripts`. Dentro da pasta scripts, crie um novo documento de texto chamado `main.js` e salve-o.
 2. Em seu arquivo `index.html`, insira este código em uma nova linha, logo antes da tag de fechamento `</body>`:
@@ -53,7 +54,8 @@ No entanto, familiarizar-se com JavaScript é mais desafiador do que familiariza
 
 ![Título "hello world" acima de um logotipo do firefox](hello-world.png)
 
-> **Nota:** A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que o navegador lê o código na ordem em que aparece no arquivo.
+> [!NOTE]
+> A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que o navegador lê o código na ordem em que aparece no arquivo.
 >
 > Se o JavaScript carregar primeiro e supostamente afetar o HTML que ainda não foi carregado, pode haver problemas. Colocar JavaScript perto da parte inferior de uma página HTML é uma maneira de acomodar essa dependência. Para saber mais sobre abordagens alternativas, consulte [Estratégias de carregamento de script](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies).
 
@@ -63,13 +65,15 @@ O texto do cabeçalho mudou para _Hello world!_ usando JavaScript. Você fez iss
 
 Em seguida, o código define o valor da propriedade {{domxref("Node.textContent", "textContent")}} da variável `myHeading` (que representa o conteúdo do cabeçalho) como _Hello world!_.
 
-> **Nota:** Ambos os recursos usados neste exercício são partes do [Modelo de Objeto de Document (DOM)](/pt-BR/docs/Web/API/Document_Object_Model), que tem a capacidade de manipular documentos.
+> [!NOTE]
+> Ambos os recursos usados neste exercício são partes do [Modelo de Objeto de Document (DOM)](/pt-BR/docs/Web/API/Document_Object_Model), que tem a capacidade de manipular documentos.
 
 ## Curso intensivo de fundamentos da linguagem
 
 Para entender melhor como o JavaScript funciona, vamos explicar alguns dos principais recursos da linguagem. Vale a pena notar que esses recursos são comuns a todas as linguagens de programação. Se você dominar esses fundamentos, terá uma vantagem inicial na codificação em outras linguagens também!
 
-> **Aviso:** neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> [!WARNING]
+> neste artigo, tente inserir as linhas de código de exemplo em seu console JavaScript para ver o que acontece. Para obter mais detalhes sobre consoles JavaScript, consulte [Descubra as ferramentas de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Variáveis
 
@@ -266,7 +270,8 @@ Um `{{Glossary("operator")}}` é um símbolo matemático que produz um resultado
 
 Existem muito mais operadores para explorar, mas isso é o suficiente por enquanto. Consulte [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators) para obter uma lista completa.
 
-> **Nota:** misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
+> [!NOTE]
+> misturar tipos de dados pode levar a alguns resultados estranhos ao realizar cálculos. Tenha cuidado para se referir às suas variáveis corretamente e obter os resultados esperados. Por exemplo, digite `'35' + '25'` em seu console. Por que você não consegue o resultado que esperava? Como as aspas transformam os números em strings, você acabou concatenando strings em vez de adicionar números. Se você inserir `35 + 25`, obterá o total dos dois números.
 
 ### Condicionais
 
@@ -318,7 +323,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Nota:** A instrução [`return`](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) diz ao navegador para retornar a variável `result` da função para que ela esteja disponível usar. Isso é necessário porque as variáveis definidas dentro das funções só estão disponíveis dentro dessas funções. Isso é chamado de variável {{Glossary("Scope", "scoping")}}. (Leia mais sobre [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope).)
+> [!NOTE]
+> A instrução [`return`](/pt-BR/docs/Web/JavaScript/Reference/Statements/return) diz ao navegador para retornar a variável `result` da função para que ela esteja disponível usar. Isso é necessário porque as variáveis definidas dentro das funções só estão disponíveis dentro dessas funções. Isso é chamado de variável {{Glossary("Scope", "scoping")}}. (Leia mais sobre [escopo de variável](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#variable_scope).)
 
 ### Eventos
 
@@ -416,7 +422,7 @@ Em seguida, vamos alterar o título da página para uma mensagem de boas-vindas 
      setUserName();
    } else {
      const storedName = localStorage.getItem("name");
-     myHeading.textContent = `Mozilla é legal, ${storedName`;
+     myHeading.textContent = `Mozilla é legal, ${storedName}`;
    }
    ```
 

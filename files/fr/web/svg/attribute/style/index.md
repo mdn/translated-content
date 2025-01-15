@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute/style
 
 {{SVGRef}}
 
-L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) pour son élément. Il fonctionne de manière identique à [l'attribut `style` en HTML](/fr/docs/Web/HTML/Attributs_universels/style).
+L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) pour son élément. Il fonctionne de manière identique à [l'attribut `style` en HTML](/fr/docs/Web/HTML/Global_attributes/style).
 
 ## Context d'utilisation
 
@@ -38,7 +38,8 @@ L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) po
 
   - : La syntaxe des données de style dépend du langage de la feuille de style. Par défaut, le langage est [CSS](/fr/docs/Web/CSS).
 
-    > **Note :** En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
+    > [!NOTE]
+    > En théorie, l'attribut {{SVGAttr("contentStyleType")}} pourrait être utilisé pour spécifier un language de style autre que CSS, comme [XSL(T)](/fr/docs/Web/XSLT). Cependant, cela n'a jamais été implémenté de manière satisfaisante dans les navigateurs, donc ne vous y fiez pas.
 
 ## Exemple
 
@@ -59,12 +60,12 @@ L'exemple suivant stylise le rectangle en utilisant l'attribut `style`, avec CSS
 
 Les éléments suivants peuvent utiliser l'attribut `style`:
 
-- [Éléments conteneur](/fr/docs/Web/SVG/Element#Éléments_conteneurs) »
-- [Éléments primitives de filtre](/fr/docs/Web/SVG/Element#Éléments_primitives_de_filtre) »
-- [Éléments de dégradés](/fr/docs/Web/SVG/Element#Éléments_de_dégradés) »
-- [Éléments graphiques](/fr/docs/Web/SVG/Element#Éléments_graphiques) »
-- [Éléments structurels](/fr/docs/Web/SVG/Element#Éléments_structurels) »
-- [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#Éléments_de_contenu_textuel) »
+- [Éléments conteneur](/fr/docs/Web/SVG/Element#éléments_conteneurs) »
+- [Éléments primitives de filtre](/fr/docs/Web/SVG/Element#éléments_primitives_de_filtre) »
+- [Éléments de dégradés](/fr/docs/Web/SVG/Element#éléments_de_dégradés) »
+- [Éléments graphiques](/fr/docs/Web/SVG/Element#éléments_graphiques) »
+- [Éléments structurels](/fr/docs/Web/SVG/Element#éléments_structurels) »
+- [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#éléments_de_contenu_textuel) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

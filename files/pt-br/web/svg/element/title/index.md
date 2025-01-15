@@ -31,7 +31,7 @@ O seguinte trecho de código demonstra a utilização da tag SVG `<title>`.
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -41,7 +41,7 @@ _Não existem atributos específicos._
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGTitleElement`](/pt-BR/DOM/SVGTitleElement).
+Este elemento implementa a interface do [`SVGTitleElement`](/pt-BR/docs/DOM/SVGTitleElement).
 
 ## Compatibilidade com navegadores
 

@@ -17,29 +17,30 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 一些函数在所有的 worker 和主线程中均可用（来自 `WindowOrWorkerGlobalScope`）：
 
-- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
-- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("clearTimeout()")}}
-- {{domxref("createImageBitmap()")}}
-- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
-- {{domxref("queueMicrotask()")}}
-- {{domxref("reportError()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("setTimeout()")}}
-- {{domxref("structuredClone()")}}
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}（仅专用 worker）
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}}（仅专用 worker）
+- {{domxref("WorkerGlobalScope.atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()")}}
+- {{domxref("WorkerGlobalScope.clearInterval()")}}
+- {{domxref("WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()")}} {{non-standard_inline}}
+- {{domxref("WorkerGlobalScope.fetch()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.reportError()")}}
+- {{domxref("WorkerGlobalScope.setInterval()")}}
+- {{domxref("WorkerGlobalScope.setTimeout()")}}
+- {{domxref("WorkerGlobalScope.structuredClone()")}}
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}（仅专用 worker）
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}（仅专用 worker）
 
 以下函数**仅**在 worker 中可用：
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}}（所有的 worker）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}}（仅专用 worker）
+- {{domxref("WorkerGlobalScope.importScripts()")}}（所有的 worker）
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}（仅专用 worker）
 
 ## Worker 中可用的 Web API
 
-> **备注：** 如果列出的 API 被某一平台的特定版本所支持，那么一般可以认为它在 web worker 中是可用的。你也可以使用网站来测试对某个特定对象/函数的支持：<https://worker-playground.glitch.me/>
+> [!NOTE]
+> 如果列出的 API 被某一平台的特定版本所支持，那么一般可以认为它在 web worker 中是可用的。你也可以使用网站来测试对某个特定对象/函数的支持：<https://worker-playground.glitch.me/>
 
 以下 Web API 在 worker 中可用：
 

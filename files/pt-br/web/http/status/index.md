@@ -16,7 +16,8 @@ As respostas são agrupadas em cinco classes:
 
 Os códigos de status listados abaixo são definidos por [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
-> **Nota:** Se você receber uma resposta que não esteja [nesta lista](#respostas_informativas), é uma resposta não padrão, possivelmente personalizada para o software do servidor.
+> [!NOTE]
+> Se você receber uma resposta que não esteja [nesta lista](#respostas_informativas), é uma resposta não padrão, possivelmente personalizada para o software do servidor.
 
 ## Respostas informativas
 

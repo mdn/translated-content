@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **注目:**
+> [!CALLOUT]
 >
 > [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html)
 
@@ -41,5 +41,5 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 ## MDN の関連資料
 
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [CSS ボックス配置のガイド](/ja/docs/Web/CSS/CSS_Box_Alignment)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [CSS ボックス配置のガイド](/ja/docs/Web/CSS/CSS_box_alignment)

@@ -13,7 +13,7 @@ slug: Games/Techniques/Controls_Gamepad_API
 
 ## API 状态与浏览器支持
 
-[Gamepad API](http://www.w3.org/TR/gamepad/) 在 W3C 的进程中仍然还是工作草案的状态，这意味着它的实现方法可能还会出现变动，但是就目前来说[浏览器的支持性](http://caniuse.com/gamepad)相当不错。Firefox 29+ 和 Chrome 35+ 对其支持得非常好。Opera 在版本 22+ 对 API 进行了支持 (一点也不奇怪，因为他们现在使用 Chrome 的引擎了。) 并且微软最近在 Edge 中对 API 实现了支持，也就是说四大主流浏览器现在都支持 Gamepad API。
+[Gamepad API](https://www.w3.org/TR/gamepad/) 在 W3C 的进程中仍然还是工作草案的状态，这意味着它的实现方法可能还会出现变动，但是就目前来说[浏览器的支持性](http://caniuse.com/gamepad)相当不错。Firefox 29+ 和 Chrome 35+ 对其支持得非常好。Opera 在版本 22+ 对 API 进行了支持 (一点也不奇怪，因为他们现在使用 Chrome 的引擎了。) 并且微软最近在 Edge 中对 API 实现了支持，也就是说四大主流浏览器现在都支持 Gamepad API。
 
 ## 哪种控制器最好？
 
@@ -35,7 +35,8 @@ Game API 的动作展示与 JavaScript 的源代码公布是在完整版的 Hung
 
 以下讨论的代码来自于完整的 Hungry Fridge 游戏中，除了原代码需要 `turbo` 变量来决定是否启动“超级涡轮模式”以外几乎一模一样。此代码可以独立运行，就算不连接控制器也可以。
 
-> **备注：** 一个彩蛋：点击界面右上角的控制器图标有个隐藏选项——不连接控制器也能启动“超级涡轮模式” 。你可以使用键盘上的 A 和 D 控制左右旋转，W 射击，方向键移动。
+> [!NOTE]
+> 一个彩蛋：点击界面右上角的控制器图标有个隐藏选项——不连接控制器也能启动“超级涡轮模式” 。你可以使用键盘上的 A 和 D 控制左右旋转，W 射击，方向键移动。
 
 ## 实现方法
 
@@ -224,11 +225,11 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 布局类型现在是一个可枚举的对象而不是字符串：
 
-```
+```ts
 enum GamepadMappingType {
-    "",
-    "standard"
-};
+  "",
+  "standard",
+}
 ```
 
 此枚举中定义了已知的控制器映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。

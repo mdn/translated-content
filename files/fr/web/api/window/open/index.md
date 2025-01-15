@@ -26,7 +26,7 @@ open(url, target, windowFeatures);
 
   - : Une chaîne de caractères sans espace qui indique le nom ([`Window.name`](/fr/docs/Web/API/Window/name)) du contexte de navigation dans lequel la ressource est chargée. Si le nom ne correspond pas à un contexte déjà existant, un nouveau contexte est créé avec ce nom. [Les mots-clés spécifiques pour `target`](/fr/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, et `_top`, peuvent également être utilisés.
 
-    Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Element/Form#attr-target).
+    Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Element/form#attr-target).
 
 - `windowFeatures` {{optional_inline}}
 
@@ -38,7 +38,8 @@ open(url, target, windowFeatures);
 
         Si `popup` n'est pas activée et qu'il n'y a pas d'autres fonctionnalités déclarées avec ce paramètre, le nouveau contexte de navigation sera un onglet.
 
-        > **Note :** Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
+        > [!NOTE]
+        > Indiquer n'importe quelle fonctionnalité avec `windowFeatures`, en dehors de `noopener` ou `noreferrer`, aura pour effet de demander l'ouverture d'une popup.
 
         Pour activer cette fonctionnalité, on indiquera simplement le nom `popup` sans valeur ou avec les valeurs `yes`, `1`, ou `true`.
 
@@ -69,7 +70,7 @@ open(url, target, windowFeatures);
         Lorsque `noopener` est utilisé, les noms de cibles qui ne sont pas vides et qui ne sont pas `_top`, `_self`, et `_parent`, sont traités comme `_blank` lorsqu'il s'agit de décider s'il faut ouvrir un nouveau contexte de navigation.
 
     - `noreferrer`
-      - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Link_types#noreferrer) pour plus d'informations.
+      - : Si cette fonctionnalité est utilisée, le navigateur ne fournira pas d'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) et fixera d'office `noopener` à `true`. Voir [`rel="noreferrer"`](/fr/docs/Web/HTML/Attributes/rel#noreferrer) pour plus d'informations.
 
 ### Valeur de retour
 
@@ -165,7 +166,7 @@ Le fragment de code qui précède corrige certains problèmes relatifs aux liens
 Pour en savoir plus sur l'attribut `target`, voir&nbsp;:
 
 - [La page de référence pour l'élément `<a>`](/fr/docs/Web/HTML/Element/a#target)
-- [La page de référence pour l'élément `<form>`](/fr/docs/Web/HTML/Element/Form#target)
+- [La page de référence pour l'élément `<form>`](/fr/docs/Web/HTML/Element/form#target)
 
 La fonction présentée ci-avant peut être réécrite pour qu'on puisse la réutiliser dans plusieurs situations&nbsp;:
 

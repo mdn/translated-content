@@ -9,7 +9,8 @@ slug: Web/API/Cache/keys
 
 Запросы возвращаются в том же порядке, в котором были добавлены.
 
-> **Примечание:** Запросы с дублирующимися URL, но с разными заголовками, могут быть возвращены, если в ответах на них установлен заголовок `VARY`.
+> [!NOTE]
+> Запросы с дублирующимися URL, но с разными заголовками, могут быть возвращены, если в ответах на них установлен заголовок `VARY`.
 
 ## Синтаксис
 
@@ -58,6 +59,6 @@ caches.open("v1").then(function (cache) {
 
 ## Смотрите также
 
-- [Использование сервис воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

@@ -23,7 +23,7 @@ Les CSS peuvent adapter les styles à des conditions particulières grâce aux r
 <!-- non bloquant sur grand écran -->
 ```
 
-Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
+Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
 
 ### Les animations sur le GPU
 

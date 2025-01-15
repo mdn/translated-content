@@ -58,7 +58,8 @@ l10n:
 
 只有在提供或计算的 `aria-colindex` 的值不具有意义或不反映出显示的索引时，才使用 `aria-colindextext`。每当包含 `aria-colindextext` 时，也要保留 `aria-colindex`，因为一些辅助技术依赖于数字列索引来跟踪用户的位置，并提供替代的表格导航。
 
-> **备注：** 虽然当所有存在的列都是连续的时，`aria-colindex` 可以添加到行中，因为可以推断出顺序值，但 `aria-colindextext` 不是 [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role) 的受支持属性。
+> [!NOTE]
+> 虽然当所有存在的列都是连续的时，`aria-colindex` 可以添加到行中，因为可以推断出顺序值，但 `aria-colindextext` 不是 [`row`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/row_role) 的受支持属性。
 
 请参阅相关的 [`aria-rowindextext`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext)。
 

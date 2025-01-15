@@ -29,7 +29,8 @@ var source = audioCtx.createMediaElementSource(myMediaElement);
 
 Простой пример создания аудио узла из элемента {{htmlelement("audio") }} используя `createMediaElementSource()`, и управления усилением звука через {{ domxref("GainNode") }} перед подачей в {{ domxref("AudioDestinationNode") }} для воспроизведения. При движении мыши вызывается функция `updatePage()`, вычисляющая текущее усиление как отношение Y позиции курсора к общей высоте окна. Таким образом вы можете увеличивать/уменьшать громкость звучания аудио движениями мыши вверх/вниз.
 
-> **Примечание:** вы можете также посмотреть [демонстрацию](http://mdn.github.io/media-source-buffer/) или [исходники](https://github.com/mdn/media-source-buffer).
+> [!NOTE]
+> Вы можете также посмотреть [демонстрацию](https://mdn.github.io/media-source-buffer/) или [исходники](https://github.com/mdn/media-source-buffer).
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -75,7 +76,8 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-> **Примечание:** Вызов `createMediaElementSource()` перенаправит выходной поток аудиоданных из {{domxref("HTMLMediaElement")}} в обрабатывающий граф AudioContext. Управление воспроизведением медиа все ещё будет осуществляться через API медиа элемента или его панель управления.
+> [!NOTE]
+> Вызов `createMediaElementSource()` перенаправит выходной поток аудиоданных из {{domxref("HTMLMediaElement")}} в обрабатывающий граф AudioContext. Управление воспроизведением медиа все ещё будет осуществляться через API медиа элемента или его панель управления.
 
 ## Спецификации
 
@@ -87,4 +89,4 @@ gainNode.connect(audioCtx.destination);
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

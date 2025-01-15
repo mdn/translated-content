@@ -69,7 +69,8 @@ Le DOM, quant à lui, ressemble à ça&nbsp;:
 
 ![](dom-screenshot.png)
 
-> **Note :** Ce diagramme du DOM a été créé en utilisant l'outil [<i lang="en">Live DOM viewer</i>](https://software.hixie.ch/utilities/js/live-dom-viewer/) de Ian Hickson.
+> [!NOTE]
+> Ce diagramme du DOM a été créé en utilisant l'outil [<i lang="en">Live DOM viewer</i>](https://software.hixie.ch/utilities/js/live-dom-viewer/) de Ian Hickson.
 
 Vous pouvez voir ici que chaque élément et morceau de texte dans le document possède sa propre entrée dans l'arbre — chacune étant appelée **nœud** (<i lang="en">node</i>). Vous rencontrerez également plusieurs termes pour décrire les différents type de nœuds ou leur position dans l'arbre les uns par rapport aux autres&nbsp;:
 
@@ -183,7 +184,7 @@ Supprimer des éléments est également plutôt simple, dès lors qu'on a une r�
 sect.removeChild(linkPara);
 ```
 
-Si vous souhaitez un élément uniquement à partir d'une référence à cet élément, comme c'est souvent le cas, vous pouvez utiliser [`Element.remove()`](/fr/docs/Web/API/Element/remove)&nbsp;:
+Si vous souhaitez supprimer un élément uniquement à partir d'une référence à cet élément, comme c'est souvent le cas, vous pouvez utiliser [`Element.remove()`](/fr/docs/Web/API/Element/remove)&nbsp;:
 
 ```js
 linkPara.remove();
@@ -224,7 +225,8 @@ La première d'entre elles consiste à ajouter des styles en ligne (<i lang="en"
    </p>
    ```
 
-> **Note :** Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) tandis que les versions CSS sont reliées par des tirets (par exemple `backgroundColor` au lieu de `background-color`). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.
+> [!NOTE]
+> Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) tandis que les versions CSS sont reliées par des tirets (par exemple `backgroundColor` au lieu de `background-color`). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.
 
 Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, que nous allons étudier maintenant.
 
@@ -257,7 +259,8 @@ Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, 
 
 Dans les deux prochaines sections, nous verrons un exemple d'utilisation plus concret des API du DOM.
 
-> **Note :** Vous pouvez trouver la [version finale de `dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) sur GitHub ([le voir en direct aussi](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> [!NOTE]
+> Vous pouvez trouver la [version finale de `dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) sur GitHub ([le voir en direct aussi](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Apprentissage actif&nbsp;: une liste de courses dynamique
 
@@ -274,18 +277,19 @@ La démo terminée doit ressembler à ça&nbsp;:
 Pour compléter l'exercice, suivez les étapes ci-dessous, et assurez-vous que votre exemple se comporte comme décrit ci-dessus.
 
 1. Tout d'abord, téléchargez une copie du fichier [`shopping-list.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html). Vous verrez qu'il contient un peu de CSS, une liste avec un titre, un champ, un bouton, une liste vide et un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Vous apporterez toutes vos modifications à l'intérieur du script.
-2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Element/ul), de champ [`<input>`](/fr/docs/Web/HTML/Element/Input) et de bouton [`<button>`](/fr/docs/Web/HTML/Element/Button).
+2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Element/ul), de champ [`<input>`](/fr/docs/Web/HTML/Element/input) et de bouton [`<button>`](/fr/docs/Web/HTML/Element/button).
 3. Créez une [fonction](/fr/docs/Learn/JavaScript/Building_blocks/Functions) qui sera déclenchée lorsqu'on clique sur le bouton.
 4. À l'intérieur du corps de la fonction, commencez par stocker la [valeur actuelle](/fr/docs/Web/API/HTMLInputElement#propriétés) (propriété `value`) du champ dans une variable.
 5. Ensuite, videz le champ en définissant sa valeur comme une chaîne vide — `''`.
-6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Element/li), un [`<span>`](/fr/docs/Web/HTML/Element/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Element/Button), et stockez-les chacun dans des variables.
+6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Element/li), un [`<span>`](/fr/docs/Web/HTML/Element/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), et stockez-les chacun dans des variables.
 7. Attachez le `<span>` et le `<button>` comme enfants de `<li>`.
 8. Définissez le contenu texte du `<span>` comme égal à la valeur du champ que vous avez récupéré précédemment, et le contenu du bouton à «&nbsp;Supprimer&nbsp;».
 9. Attachez l'article `<li>` comme enfant de la liste.
 10. Ajoutez un gestionnaire d'événement au bouton «&nbsp;Supprimer&nbsp;», de façon à ce que lorsqu'on le clique le `<li>` dans lequel il se situe soit supprimé.
 11. Enfin, utilisez la méthode [`HTMLElement.focus`](/fr/docs/Web/API/HTMLElement/focus) pour donner le focus au champ, qu'il soit prêt à recevoir la valeur du prochain article de la liste de courses.
 
-> **Note :** Si vous bloquez vraiment, jetez un œil à notre [liste de courses terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> [!NOTE]
+> Si vous bloquez vraiment, jetez un œil à notre [liste de courses terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
 ## Résumé
 

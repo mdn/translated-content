@@ -33,7 +33,8 @@ saveXML(str);
 
 この例は、{{domxref("Element.insertAdjacentHTML()")}} メソッドを使用して新しい DOM {{domxref("Node")}} を {{domxref("Document")}} の body に挿入します。これは、{{domxref("Element")}} オブジェクトをシリアライズすることにより作成された XML を基にしています。
 
-> **メモ:** 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう。
+> [!NOTE]
+> 実際は、{{domxref("Document.importNode", "importNode()")}} メソッドを呼び出して新しいノードを DOM に挿入する代わりに、以下のいずれかのメソッドを呼び出して DOM ツリーに追加することになるでしょう。
 >
 > - {{domxref("Element.append()")}} / {{domxref("Element.prepend()")}} および {{domxref("Document.append()")}} / {{domxref("Document.prepend()")}} メソッド
 > - {{domxref("Element.replaceWith()")}} メソッド（既存のノードを新しいノードと置き換えるため）
@@ -64,6 +65,6 @@ document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 
 ## 関連情報
 
-- [XML の解釈とシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XML の解釈とシリアライズ](/ja/docs/Web/XML/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("DOMParser")}}

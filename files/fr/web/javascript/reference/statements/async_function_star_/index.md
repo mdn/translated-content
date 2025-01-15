@@ -27,7 +27,8 @@ async function* nom(param0, param1, /* … ,*/ paramN) {
 }
 ```
 
-> **Note :** Il n'existe pas de notation équivalente aux fonctions fléchées pour les fonctions génératrices asynchrones.
+> [!NOTE]
+> Il n'existe pas de notation équivalente aux fonctions fléchées pour les fonctions génératrices asynchrones.
 
 ### Paramètres
 

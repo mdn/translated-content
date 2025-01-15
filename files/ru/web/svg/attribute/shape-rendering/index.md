@@ -11,11 +11,11 @@ slug: Web/SVG/Attribute/shape-rendering
 
 ## Контекст использования
 
-| Категория            | Атрибут представления                                                                    |
-| -------------------- | ---------------------------------------------------------------------------------------- |
-| Значения             | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit                 |
-| Анимация             | Да                                                                                       |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/painting.html#ShapeRenderingProperty) |
+| Категория            | Атрибут представления                                                                     |
+| -------------------- | ----------------------------------------------------------------------------------------- |
+| Значения             | **auto** \| optimizeSpeed \| crispEdges \| geometricPrecision \| inherit                  |
+| Анимация             | Да                                                                                        |
+| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#ShapeRenderingProperty) |
 
 - auto
   - : Указывает на то, что браузер должен внести соответствующие компромиссы, чтобы сбалансировать скорость рендеринга, чёткие края и геометрическую точность, но геометрической точности уделять более пристальное внимание, чем скорости и чётким краями.
@@ -49,4 +49,4 @@ slug: Web/SVG/Attribute/shape-rendering
 
 Следующие элементы могут использовать атрибут `shape-rendering`
 
-- [Shape elements](/en/SVG/Element#Shape)
+- [Shape elements](/en-US/SVG/Element#shape)

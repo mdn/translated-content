@@ -38,7 +38,8 @@ Vers 2006-2007, Mozilla commença à travailler sur une implémentation expérim
 
 Dans cet article, nous nous concentrerons surtout sur les canevas en deux dimensions (du code WebGL brut peut s'avérer très complexe). Nous verrons toutefois comment utiliser une bibliothèque WebGL afin de créer une scène 3D plus facilement et vous pourrez aussi consulter un tutoriel WebGL par ailleurs&nbsp;: [Démarrer avec WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
 
-> **Note :** Les fonctionnalités de base pour le canevas sont correctement prises en charge par l'ensemble des navigateurs à l'exception d'Internet Explorer 8 et antérieur pour le canevas 2D, et d'Internet Explorer 11 et antérieur pour WebGL.
+> [!NOTE]
+> Les fonctionnalités de base pour le canevas sont correctement prises en charge par l'ensemble des navigateurs à l'exception d'Internet Explorer 8 et antérieur pour le canevas 2D, et d'Internet Explorer 11 et antérieur pour WebGL.
 
 ## Apprentissage actif&nbsp;: démarrer avec un élément `<canvas>`
 
@@ -90,7 +91,8 @@ Commençons par créer notre propre canevas sur lequel on dessinera quelques exp
 
    Dans ce fragment de JavaScript, on peut voir qu'on effectue plusieurs affectations d'un coup en utilisant plusieurs fois le signe égal. C'est une syntaxe autorisée en JavaScript et qui permet d'affecter la même valeur à plusieurs variables d'un coup. On utilise deux constantes pour la largeur et la hauteur, car ce sont des valeurs intéressantes pour plus tard (par exemple si on veut dessiner quelque chose à la moitié du canevas).
 
-> **Note :** Le dimensionnement d'un canevas se fait généralement à l'aide des attributs HTML ou des propriétés du DOM. Il est possible d'utiliser CSS pour ce faire, mais le dimensionnement aura alors lieu après le rendu du canevas et l'image résultante pourrait alors apparaître pixelisée ou déformée.
+> [!NOTE]
+> Le dimensionnement d'un canevas se fait généralement à l'aide des attributs HTML ou des propriétés du DOM. Il est possible d'utiliser CSS pour ce faire, mais le dimensionnement aura alors lieu après le rendu du canevas et l'image résultante pourrait alors apparaître pixelisée ou déformée.
 
 ### Obtenir le contexte du canevas et réglages finaux
 
@@ -102,7 +104,8 @@ Dans ce cas, on veut un canevas en deux dimensions. Pour cela, ajoutez la ligne 
 const ctx = canvas.getContext("2d");
 ```
 
-> **Note :** Les autres valeurs de types de contexte incluent `webgl` pour WebGL, `webgl2` pour WebGL 2, etc. Nous n'aurons pas besoin de celles-ci dans cet article.
+> [!NOTE]
+> Les autres valeurs de types de contexte incluent `webgl` pour WebGL, `webgl2` pour WebGL 2, etc. Nous n'aurons pas besoin de celles-ci dans cet article.
 
 Et voilà, notre canevas est prêt pour le dessin&nbsp;! La variable `ctx` contient désormais un objet [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D) qu'on manipulera pour chaque opération de dessin sur le canevas.
 
@@ -178,7 +181,8 @@ Vous devriez voir que le contour blanc est désormais plus épais&nbsp;! Voici p
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **Note :** Le code terminé est disponible sur GitHub avec le répertoire [`2_canvas_rectangles`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
+> [!NOTE]
+> Le code terminé est disponible sur GitHub avec le répertoire [`2_canvas_rectangles`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
 
 ### Dessiner des chemins
 
@@ -272,7 +276,8 @@ Dessinons maintenant un cercle dans le canevas. Pour cela, on utilisera la méth
 
    `arc()` prend 6 paramètres. Les deux premiers indiquent les coordonnées horizontale et verticale du centre de l'arc. Le troisième définit le rayon du cercle et le quatrième et le cinquième correspondent aux angles de début et de fin pour l'arc (utiliser 0 et 360 degrés permettra de dessiner un cercle entier), et le sixième paramètre définit si le cercle doit être dessiné selon le sens anti-horaire ou horaire (`false` correspond au sens horaire, c'est-à-dire dans le sens des aiguilles d'une montre).
 
-   > **Note :** Un angle de 0 degré représente ici une ligne horizontale orientée vers la droite.
+   > [!NOTE]
+   > Un angle de 0 degré représente ici une ligne horizontale orientée vers la droite.
 
 2. Essayons d'ajouter un autre arc&nbsp;:
 
@@ -293,9 +298,11 @@ Et voilà pour cette section. Votre exemple final devrait ressembler à ceci&nbs
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **Note :** Le code finalisé est disponible sur GitHub dans le répertoire [`3_canvas_paths`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
+> [!NOTE]
+> Le code finalisé est disponible sur GitHub dans le répertoire [`3_canvas_paths`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
 
-> **Note :** Pour en apprendre plus à propos des fonctionnalités de dessin de chemin avancées, comme les courbes de Bézier, vous pouvez lire notre tutoriel [Dessiner des formes sur un canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes).
+> [!NOTE]
+> Pour en apprendre plus à propos des fonctionnalités de dessin de chemin avancées, comme les courbes de Bézier, vous pouvez lire notre tutoriel [Dessiner des formes sur un canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes).
 
 ### Texte
 
@@ -327,7 +334,8 @@ Nous avons dessiné ici deux lignes de texte, la première avec un contour et la
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note :** Le code terminé est disponible sur GitHub dans le répertoire [`4_canvas_text`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
+> [!NOTE]
+> Le code terminé est disponible sur GitHub dans le répertoire [`4_canvas_text`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
 
 Manipulez cet exemple et voyez ce que vous pouvez obtenir comme résultat. Vous pouvez trouver plus d'informations sur les options disponibles pour le dessin du texte sur un canevas dans [le tutoriel sur le dessin du texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -372,7 +380,8 @@ Le résultat final de cet exemple devrait ressembler à&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
 
-> **Note :** Vous pouvez récupérer le code finalisé de cet exemple sur GitHub avec le répertoire [`5_canvas_images`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
+> [!NOTE]
+> Vous pouvez récupérer le code finalisé de cet exemple sur GitHub avec le répertoire [`5_canvas_images`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
 
 ## Boucles et animations
 
@@ -450,15 +459,17 @@ Nous vous encourageons ici à manipuler cet exemple et à l'adapter comme bon vo
 - Modifier les valeurs des variables `length` et `moveOffset`.
 - Utiliser des nombres aléatoires en exploitant la fonction `rand()` que nous avons incluse mais pas utilisée.
 
-> **Note :** Le code de l'exemple terminé est disponible sur GitHub avec le répertoire [`6_canvas_for_loop`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
+> [!NOTE]
+> Le code de l'exemple terminé est disponible sur GitHub avec le répertoire [`6_canvas_for_loop`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
 
 ### Animations
 
 L'exemple de la boucle précédente était intéressante, mais ce n'est pas une boucle continue qui permet de dessiner en _live_ (comme pour un jeu vidéo ou un outil de visualisation en temps réel). Si on prend le canevas comme un film, on voudrait afficher une mise à jour à chaque <i lang="en">frame</i>, idéalement en affichant 60 images par secondes afin que le mouvement apparaisse fluide pour l'œil humain.
 
-Il existe plusieurs fonctions JavaScript qui permettent d'exécuter des fonctions de façon répétée, plusieurs fois par seconde. La plus adaptée ici est [`window.requestAnimationFrame()`](/fr/docs/Web/API/window/requestAnimationFrame). Cette fonction prend comme seul paramètre le nom de la fonction qu'on veut exécuter à chaque <i lang="en">frame</i>. La prochaine fois que le navigateur sera prêt à mettre à jour le contenu de l'écran, la fonction sera appelée. Si la fonction dessine une mise à jour d'une animation, on pourra appeler `requestAnimationFrame()` à nouveau, juste avant la fin de la fonction afin que la boucle de l'animation continue. La boucle se termine lorsqu'on arrête d'appeler `requestAnimationFrame()` ou si la méthode [`window.cancelAnimationFrame()`](/fr/docs/Web/API/window/cancelAnimationFrame) est appelée après `requestAnimationFrame()` et avant le rendu de la <i lang="en">frame</i>.
+Il existe plusieurs fonctions JavaScript qui permettent d'exécuter des fonctions de façon répétée, plusieurs fois par seconde. La plus adaptée ici est [`window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame). Cette fonction prend comme seul paramètre le nom de la fonction qu'on veut exécuter à chaque <i lang="en">frame</i>. La prochaine fois que le navigateur sera prêt à mettre à jour le contenu de l'écran, la fonction sera appelée. Si la fonction dessine une mise à jour d'une animation, on pourra appeler `requestAnimationFrame()` à nouveau, juste avant la fin de la fonction afin que la boucle de l'animation continue. La boucle se termine lorsqu'on arrête d'appeler `requestAnimationFrame()` ou si la méthode [`window.cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame) est appelée après `requestAnimationFrame()` et avant le rendu de la <i lang="en">frame</i>.
 
-> **Note :** C'est une bonne pratique que d'appeler `cancelAnimationFrame()` à partir du code principal lorsque l'animation est terminée, pour s'assurer qu'aucune mise à jour n'est en attente.
+> [!NOTE]
+> C'est une bonne pratique que d'appeler `cancelAnimationFrame()` à partir du code principal lorsque l'animation est terminée, pour s'assurer qu'aucune mise à jour n'est en attente.
 
 C'est le navigateur qui gèrera les détails complexes comme s'assurer que l'animation tourne à vitesse constante et ne pas gaspiller des ressources pour animer quelque chose qui n'est pas visible à l'écran.
 
@@ -495,7 +506,8 @@ En général, exécuter une animation sur un canevas consistera à suivre ces é
 4. On réinitialise éventuellement les paramètres enregistrés à l'étape 2, en utilisant [`restore()`](/fr/docs/Web/API/CanvasRenderingContext2D/restore)
 5. On appelle `requestAnimationFrame()` afin de planifier le dessin de la prochaine <i lang="en">frame</i>.
 
-> **Note :** Nous ne verrons pas les fonctions `save()` et `restore()` ici, mais elles sont expliquées dans [notre tutoriel sur les transformations](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations) (et ceux qui suivent).
+> [!NOTE]
+> Nous ne verrons pas les fonctions `save()` et `restore()` ici, mais elles sont expliquées dans [notre tutoriel sur les transformations](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations) (et ceux qui suivent).
 
 ### Une animation simple d'un personnage
 
@@ -587,7 +599,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
 
    Si le personnage n'a pas dépassé le bord droit de l'écran, on incrémente `posX` de 2, ce qui a pour effet de le déplacer légèrement à droite pour la prochaine itération.
 
-10. Enfin, on lance la boucle d'animation en appelant [`requestAnimationFrame()`](/fr/docs/Web/API/window/requestAnimationFrame) à la fin de la fonction `draw()`&nbsp;:
+10. Enfin, on lance la boucle d'animation en appelant [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) à la fin de la fonction `draw()`&nbsp;:
 
     ```js
     window.requestAnimationFrame(draw);
@@ -597,7 +609,8 @@ Et voilà&nbsp;! L'exemple terminé ressemble à ceci&nbsp;:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **Note :** Le code de l'exemple terminé est disponible sur GitHub avec le répertoire [`7_canvas_walking_animation`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+> [!NOTE]
+> Le code de l'exemple terminé est disponible sur GitHub avec le répertoire [`7_canvas_walking_animation`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
 
 ### Une application de dessin simple
 
@@ -668,7 +681,8 @@ function draw() {
 draw();
 ```
 
-> **Note :** Les contrôles [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et `color` sont plutôt bien pris en charge par les navigateurs sauf pour Internet Explorer avant la version 10 et pour Safari qui ne prend pas en charge `color`. Si votre navigateur ne prend pas en charge ces contrôles, il présentera à la place des champs texte et ce sera à la personne de saisir un nombre ou une couleur valide par elle-même.
+> [!NOTE]
+> Les contrôles [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et `color` sont plutôt bien pris en charge par les navigateurs sauf pour Internet Explorer avant la version 10 et pour Safari qui ne prend pas en charge `color`. Si votre navigateur ne prend pas en charge ces contrôles, il présentera à la place des champs texte et ce sera à la personne de saisir un nombre ou une couleur valide par elle-même.
 
 ## WebGL
 
@@ -794,7 +808,8 @@ Voyons le résultat obtenu avec cet exemple finalisé&nbsp;:
 
 Vous pouvez [trouver le code de l'exemple finalisé sur GitHub](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube).
 
-> **Note :** Notre dépôt GitHub contient également un autre exemple avec le cube 3D ([Vidéo sur un cube avec Three.js](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube), [voir la démonstration en <i lang="en">live</i>](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). Cet exemple utilise [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) afin de récupérer un flux vidéo depuis la webcam d'un ordinateur afin de la projeter sur le côté d'un cube comme texte&nbsp;!
+> [!NOTE]
+> Notre dépôt GitHub contient également un autre exemple avec le cube 3D ([Vidéo sur un cube avec Three.js](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube), [voir la démonstration en <i lang="en">live</i>](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). Cet exemple utilise [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) afin de récupérer un flux vidéo depuis la webcam d'un ordinateur afin de la projeter sur le côté d'un cube comme texte&nbsp;!
 
 ## Résumé
 

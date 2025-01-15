@@ -7,13 +7,14 @@ slug: Web/CSS/border
 
 ## 概览
 
-[CSS](/zh-CN/docs/CSS) 的 **`border`** 属性是一个用于设置各种单独的边界属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。`border` 可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`border`** 属性是一个用于设置各种单独的边界属性的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。`border` 可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}。
 
 {{EmbedInteractiveExample("pages/css/border.html")}}
 
 和所有的简写属性一样，如果有缺省值会被设置成对应属性的初始值。同时需要注意设置 border 对{{cssxref("border-image")}}属性的影响，虽然 border 属性不能设置这个属性，但会把该属性重置为初始值 none。这使得我们可以用 border 属性去重置整个样式表中的 border 设置。因为 W3C 计划在未来的标准中保留该属性，因此建议使用该属性重置边框设定。
 
-> **备注：** 虽然{{Cssxref("border-width")}},、{{Cssxref("border-style")}}和 {{Cssxref("border-color")}} 简写属性接受最多 4 个参数来为不同的边设置宽度、风格和颜色，但 boder 属性只接受三个参数，分别是宽度、风格和颜色，所以这样会使得四条边的边框相同。
+> [!NOTE]
+> 虽然{{Cssxref("border-width")}}、{{Cssxref("border-style")}}和 {{Cssxref("border-color")}} 简写属性接受最多 4 个参数来为不同的边设置宽度、风格和颜色，但 border 属性只接受三个参数，分别是宽度、风格和颜色，所以这样会使得四条边的边框相同。
 
 ### Borders vs. outlines
 
@@ -45,7 +46,8 @@ border: unset;
 
 可以使用下面列出的一个，两个或三个值来指定 `border` 属性。值的顺序无关紧要。
 
-> **备注：** 如果边框的样式未定义，它将不可见。这是因为样式默认为 none。
+> [!NOTE]
+> 如果边框的样式未定义，它将不可见。这是因为样式默认为 none。
 
 ### 取值
 

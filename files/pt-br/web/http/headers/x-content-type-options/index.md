@@ -5,13 +5,13 @@ slug: Web/HTTP/Headers/X-Content-Type-Options
 
 {{HTTPSidebar}}
 
-O header de resposta HTTP **X-Content-Type-Options** é um marcador usado pelo servidor para indicar que os [MIME types](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types) enviados pelos headers {{HTTPHeader("Content-Type")}} não devem ser alterados e seguidos. Isto permite que o usuário opte por não participar do chamado [MIME Type Sniffing](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing) ou, em outras palavras, é uma forma de dizer que os webmasters estão vendo o que você está fazendo.
+O header de resposta HTTP **X-Content-Type-Options** é um marcador usado pelo servidor para indicar que os [MIME types](/pt-BR/docs/Web/HTTP/MIME_types) enviados pelos headers {{HTTPHeader("Content-Type")}} não devem ser alterados e seguidos. Isto permite que o usuário opte por não participar do chamado [MIME Type Sniffing](/pt-BR/docs/Web/HTTP/MIME_types#mime_sniffing) ou, em outras palavras, é uma forma de dizer que os webmasters estão vendo o que você está fazendo.
 
 Este header foi incluído pela Microsoft no IE 8 como uma maneira de webmasters serem capazes de bloquear o _sniffing_ de conteúdo que acontecia na época, e podia transformar tipos MIME não executáveis em tipos executáveis. Desde então, outros browsers acataram a ideia mesmo que seus algoritmos de definição de MIME fossem menos agressivos.
 
 Experts em segurança da informação geralmente esperam que este header esteja presente.
 
-> **Nota:** Nota: `nosniff` só se aplica para tipos "script" e "style". Também, aplicar `nosniff` em tipos de imagem provou-se ser [incompatível com sites existentes](https://github.com/whatwg/fetch/issues/395).
+> **Nota:** `nosniff` só se aplica para tipos "script" e "style". Também, aplicar `nosniff` em tipos de imagem provou-se ser [incompatível com sites existentes](https://github.com/whatwg/fetch/issues/395).
 
 <table class="properties">
   <tbody>

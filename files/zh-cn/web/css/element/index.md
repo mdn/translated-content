@@ -13,7 +13,7 @@ slug: Web/CSS/element
 
 ## 语法
 
-```
+```css
 element(id)
 ```
 
@@ -24,7 +24,7 @@ element(id)
 
 ## 示例
 
-在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](/samples/cssref/moz-element.html)这些例子。
+在支持 `-moz-element()` 的 Firefox 中，可以[实地考察](https://mdn.dev/archives/media/samples/cssref/moz-element.html)这些例子。
 
 ### 一个比较现实的例子
 

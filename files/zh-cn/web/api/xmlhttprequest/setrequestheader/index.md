@@ -17,7 +17,8 @@ l10n:
 
 另外，[`Authorization`](/zh-CN/docs/Web/HTTP/Headers/Authorization) HTTP 标头可以添加到请求中，但如果请求被跨源重定向，则会被删除。
 
-> **备注：** 对于自定义字段，在跨域请求时可能遇到“**not allowed by Access-Control-Allow-Headers in preflight response**”异常，你可能需要在你的服务端设置 {{HTTPHeader("Access-Control-Allow-Headers")}}。
+> [!NOTE]
+> 对于自定义字段，在跨域请求时可能遇到“**not allowed by Access-Control-Allow-Headers in preflight response**”异常，你可能需要在你的服务端设置 {{HTTPHeader("Access-Control-Allow-Headers")}}。
 
 ## 语法
 

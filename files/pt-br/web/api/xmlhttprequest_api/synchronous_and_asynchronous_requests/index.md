@@ -136,11 +136,13 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 Here, we're specifying a timeout of 2000 ms.
 
-> **Nota:** Support for `timeout` was added in Gecko 12.0.
+> [!NOTE]
+> Support for `timeout` was added in Gecko 12.0.
 
 ## Synchronous request
 
-> **Nota:** Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> [!NOTE]
+> Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Em casos raros, o uso do método síncrono é preferível ao invés do método assíncrono.
 
@@ -164,7 +166,7 @@ Line 5 checks the status code after the transaction is completed. If the result 
 
 ### Example: Synchronous HTTP request from a `Worker`
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/pt-BR/DOM/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/pt-BR/docs/DOM/Worker).
 
 **`example.html`** (the main page):
 
@@ -187,13 +189,13 @@ One of the few cases in which a synchronous request does not usually block execu
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/pt-BR/DOM/XMLHttpRequest) invocation):
+**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) invocation):
 
 ```
 Hello World!!
 ```
 
-**`myTask.js`** (the [`Worker`](/pt-BR/DOM/Worker)):
+**`myTask.js`** (the [`Worker`](/pt-BR/docs/DOM/Worker)):
 
 ```js
 self.onmessage = function (event) {
@@ -206,13 +208,14 @@ self.onmessage = function (event) {
 };
 ```
 
-> **Nota:** The effect, because of the use of the `Worker`, is however asynchronous.
+> [!NOTE]
+> The effect, because of the use of the `Worker`, is however asynchronous.
 
-It could be useful in order to interact in background with the server or to preload some content. See [Using web workers](/En/DOM/Using_web_workers) for examples and details.
+It could be useful in order to interact in background with the server or to preload some content. See [Using web workers](/en-US/DOM/Using_web_workers) for examples and details.
 
 ### Adapting Sync XHR usecases to the Beacon API
 
-There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/pt-BR/DOM/window.onunload) and [`window.onbeforeunload`](/pt-BR/DOM/window.onbeforeunload) events. The [navigator.sendBeacon](/pt-BR/docs/Web/API/Navigator/sendBeacon) API can support these usecases typically while delivering a good UX.
+There are some cases in which the synchronous usage of XMLHttpRequest was not replaceable, like during the [`window.onunload`](/pt-BR/docs/DOM/window.onunload) and [`window.onbeforeunload`](/pt-BR/docs/DOM/window.onbeforeunload) events. The [navigator.sendBeacon](/pt-BR/docs/Web/API/Navigator/sendBeacon) API can support these usecases typically while delivering a good UX.
 
 The following example (from the [sendBeacon docs](/pt-BR/docs/Web/API/Navigator/sendBeacon)) shows a theoretical analytics code that attempts to submit data to a server by using a synchronous XMLHttpRequest in an unload handler. This results in the unload of the page to be delayed.
 
@@ -242,6 +245,6 @@ function logData() {
 ## See also
 
 - [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest)
-- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [AJAX](/pt-BR/docs/AJAX)
+- [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [`navigator.sendBeacon`](/pt-BR/docs/Web/API/Navigator/sendBeacon)

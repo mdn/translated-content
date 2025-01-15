@@ -7,7 +7,7 @@ slug: Web/SVG/Element/g
 
 元素`g`是用来组合对象的容器。添加到`g`元素上的变换会应用到其所有的子元素上。添加到`g`元素的属性会被其所有的子元素继承。此外，`g`元素也可以用来定义复杂的对象，之后可以通过{{SVGElement("use")}}元素来引用它们。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -34,10 +34,10 @@ slug: Web/SVG/Element/g
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/docs/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/docs/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/docs/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/docs/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/Web/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

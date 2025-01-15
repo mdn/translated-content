@@ -7,7 +7,7 @@ slug: Web/Security
 
 ## 内容安全
 
-- [CSP (内容安全策略)](/zh-CN/docs/Web/Security/CSP)
+- [CSP (内容安全策略)](/zh-CN/docs/Web/HTTP/CSP)
   - : **内容安全策略**（{{Glossary("CSP")}}）通过探测和减轻包括跨站脚本攻击 {{Glossary("XSS")}} 和数据注入攻击的攻击手段，更进一步提升安全性。上述攻击手段可以使用在数据窃取、网站污损、亦或是恶意软件的分发等场景中。
 
 ## 连接安全
@@ -22,7 +22,7 @@ slug: Web/Security
   - : **证书透明度**是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
 - [混合内容](/zh-CN/docs/Web/Security/Mixed_content)
   - : 如果一个 HTTPS 页面包含明文 HTTP 获取的内容，那么该页面就被称为**混合内容**页面。像这样的页面只能保证部分内容加密，未加密的部分仍然可以被嗅探器和中间人攻击者感知。
-- [如何修复含有混合内容的网站](/zh-CN/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [如何修复含有混合内容的网站](/zh-CN/docs/Web/Security/Mixed_content#developer_console)
   - : 如果你的网站传送了 HTTPS 页面，所有使用 HTTP 传送的[活跃混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_active_content)默认会被阻止。因而，你的网站可能会对客户不可用（例如 iframe 或插件不加载）。[被动的混合内容](/zh-CN/docs/Web/Security/Mixed_content#mixed_passivedisplay_content)默认是显示状态，但用户也可以通过首选设置来阻止这种类型的内容。这个页面解释了作为 web 开发人员需要注意的事情。
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
   - : 一个**安全的上下文**是一个 `Window` 或 `Worker`，对于它来说，有理由相信内容已经安全地通过 HTTPS/TLS 交付，并且与**不**安全的上下文进行通信的可能性有限。许多 Web API 和功能只能在安全上下文中访问。安全上下文的主要目标是防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的 API，从而进一步损害攻击受害者。
@@ -58,14 +58,14 @@ slug: Web/Security
 - [HTTP Access-Control-Allow-Origin](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** 响应头表明响应是否可以与来自给定{{glossary("origin","来源")}}的请求代码共享。
 - [HTTP X-Content-Type-Options](/zh-CN/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : **`X-Content-Type-Options`** 响应的 HTTP 头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)的方法，或者换句话说，MIME 类型是故意配置的。
+  - : **`X-Content-Type-Options`** 响应的 HTTP 头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/MIME_types#mime_嗅探)的方法，或者换句话说，MIME 类型是故意配置的。
 
 ## 点击劫持保护
 
-[点击劫持](/zh-CN/docs/Glossary/Clickjacking)描述了用户被愚弄，点击了一个产生用户意料之外行为的 UI 元素的现象。
+[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)描述了用户被愚弄，点击了一个产生用户意料之外行为的 UI 元素的现象。
 
 - [HTTP X-Frame-Options](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头可以用来表明是否应该允许浏览器在 [`<frame>`](/zh-CN/docs/Web/HTML/Element/frame)、[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)、[`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 或 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 中渲染页面。网站通过这些方法，保证它们的内容不被轻易嵌入至其他站点，可以避免[点击劫持](/zh-CN/docs/Glossary/Clickjacking)攻击。
+  - : **`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头可以用来表明是否应该允许浏览器在 [`<frame>`](/zh-CN/docs/Web/HTML/Element/frame)、[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)、[`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 或 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 中渲染页面。网站通过这些方法，保证它们的内容不被轻易嵌入至其他站点，可以避免[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)攻击。
 - [CSP: frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`frame-ancestors`** 指令指定了使用 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或{{HTMLElement("embed")}} 元素嵌入页面的合法父元素。
 
@@ -76,52 +76,13 @@ slug: Web/Security
 - [隐私性和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : 在大约 2010 年之前，[CSS](/zh-CN/docs/Web/CSS) {{cssxref(":visited")}} 选择器允许网站获取用户的浏览历史，弄清用户访问过哪些网站。为了缓解这个问题，浏览器已经限制了从访问过的链接中获得的信息量。
 
-## 与安全相关的术语
-
-- {{Glossary("Block cipher mode of operation")}}
-- {{Glossary("Certificate authority","认证机构")}}
-- {{Glossary("challenge", "挑战—响应认证")}}
-- {{Glossary("Cipher","密码")}}
-- {{Glossary("Cipher suite","密码套件")}}
-- {{Glossary("Ciphertext","密文")}}
-- {{Glossary("Clickjacking")}}
-- {{Glossary("CORS","跨源资源共享")}}
-- {{Glossary("CORS-safelisted request header")}}
-- {{Glossary("CORS-safelisted response header")}}
-- {{Glossary("Cross-site scripting","跨站脚本攻击")}}
-- {{Glossary("Cryptanalysis","密码分析学")}}
-- {{Glossary("Cryptographic hash function")}}
-- {{Glossary("Cryptography","密码学")}}
-- {{Glossary("CSP","内容安全策略")}}
-- {{Glossary("CSRF","跨站请求伪造")}}
-- {{Glossary("Decryption","解密")}}
-- {{Glossary("Digital certificate","数字证书")}}
-- {{Glossary("DTLS")}}
-- {{Glossary("Encryption","加密")}}
-- {{Glossary("Forbidden header name")}}
-- {{Glossary("Forbidden response header name")}}
-- {{Glossary("Hash")}}
-- {{Glossary("HMAC")}}
-- {{Glossary("HPKP")}}
-- {{Glossary("HSTS")}}
-- {{Glossary("HTTPS")}}
-- {{Glossary("Key","密钥")}}
-- {{Glossary("MitM","中间人攻击")}}
-- {{Glossary("OWASP")}}
-- {{Glossary("Preflight request","预检请求")}}
-- {{Glossary("Public-key cryptography","非对称密钥算法")}}
-- {{Glossary("Reporting directive")}}
-- {{Glossary("Robots.txt")}}
-- {{Glossary("Same-origin policy","同源策略")}}
-- {{Glossary("Session hijacking","会话劫持")}}
-- {{Glossary("SQL injection","SQL 注入")}}
-- {{Glossary("Symmetric-key cryptography","对称密钥算法")}}
-- {{Glossary("TOFU")}}
-- {{Glossary("TLS")}}
-
 ## 参见
 
+- [Web 隐私](/zh-CN/docs/Web/Privacy)
+- [学习：站点安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)
 - [Mozilla 安全博客](https://blog.mozilla.org/security/)
-- [Twitter 上的 @mozsec 账号](https://twitter.com/mozsec)
+- [OWASP 备忘录](https://cheatsheetseries.owasp.org/index.html)
 
-{{QuickLinksWithSubpages}}
+<section id="Quick_links">
+{{ListSubpages("/zh-CN/docs/Web/Security", "1", "0", "1")}}
+</section>

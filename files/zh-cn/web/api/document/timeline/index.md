@@ -13,7 +13,8 @@ l10n:
 
 此时间轴以毫秒为单位表示自 {{domxref("Performance.timeOrigin")}} 以来经过的时间。在时间原点（time origin）之前，时间轴为非活动状态，它的 {{domxref("AnimationTimeline.currentTime","currentTime")}} 值为 `null`。
 
-> **备注：** 与非活动文档（未与 {{domxref("Window")}}、{{htmlelement("iframe")}} 或 {{htmlelement("frame")}} 关联的 {{domxref("Document")}}）关联的文档时间轴也被认为是非活动的。
+> [!NOTE]
+> 与非活动文档（未与 {{domxref("Window")}}、{{htmlelement("iframe")}} 或 {{htmlelement("frame")}} 关联的 {{domxref("Document")}}）关联的文档时间轴也被认为是非活动的。
 
 ## 值
 

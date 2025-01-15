@@ -37,7 +37,8 @@ let duplicating = browser.tabs.duplicate(
 
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会在复制标签页后兑现一个 {{WebExtAPIRef('tabs.Tab')}} 对象，描述复制的标签页的详细信息。如果扩展具有 [`"tabs"` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)或匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，`Tab` 对象只包含 `url`、`title` 和 `favIconUrl`。如果发生任何错误，则该 promise 将以错误消息拒绝。
 
-> **备注：** 从 Firefox 68 开始，browser.tabs.duplicate() 返回的 promise 在标签页被复制后立即兑现。以前，promise 只有在标签页完全加载后才会兑现。
+> [!NOTE]
+> 从 Firefox 68 开始，browser.tabs.duplicate() 返回的 promise 在标签页被复制后立即兑现。以前，promise 只有在标签页完全加载后才会兑现。
 
 ## 示例
 
@@ -72,7 +73,8 @@ querying.then(duplicateFirstTab, onError);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-duplicate) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-duplicate) API。此文档源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

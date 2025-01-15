@@ -79,7 +79,7 @@ If like most games you have a static background image, use a plain {{HTMLElement
 
 ### Scaling canvas using CSS transforms
 
-[CSS transforms](/pt-BR/docs/Web/Guide/CSS/Using_CSS_transforms) are faster by using the GPU. Best case is to not scale the canvas or have a smaller canvas and scale up rather than a bigger canvas and scale down. For Firefox OS, target 480 x 320 px.
+[CSS transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster by using the GPU. Best case is to not scale the canvas or have a smaller canvas and scale up rather than a bigger canvas and scale down. For Firefox OS, target 480 x 320 px.
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -113,7 +113,7 @@ var ctx = canvas.getContext("2d", { alpha: false });
 
 ## See also
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

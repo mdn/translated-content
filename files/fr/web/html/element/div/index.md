@@ -92,7 +92,8 @@ En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi.
 
 Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-> **Note :** L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
+> [!NOTE]
+> L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 

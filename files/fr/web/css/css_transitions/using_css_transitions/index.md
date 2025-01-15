@@ -22,15 +22,18 @@ Les transitions CSS vous permettent de choisir :
 
 On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et [la liste des propriétés concernées est limitée](/fr/docs/Web/CSS/CSS_animated_properties).
 
-> **Note :** La gestion de la valeur `auto` représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec `auto`.
+> [!NOTE]
+> La gestion de la valeur `auto` représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec `auto`.
 
-> **Note :** Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via `.appendChild()` ou en supprimant la propriété `display: none;`. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer `window.setTimeout()` pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.
+> [!NOTE]
+> Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via `.appendChild()` ou en supprimant la propriété `display: none;`. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer `window.setTimeout()` pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.
 
 ## Les propriétés CSS relatives aux transitions
 
 Les transitions CSS sont généralement contrôlées grâce à la propriété raccourcie {{cssxref("transition")}}. Les différents composants d'une transition CSS peuvent être décrits dans le détail grâce aux propriétés détaillées suivantes :
 
-> **Note :** Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
+> [!NOTE]
+> Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.
 
 - {{cssxref("transition-property")}}
   - : Cette propriété définit le nom des propriétés CSS pour lesquelles on veut appliquer des transitions. Seules les propriétés listées ici seront sujettes aux transitions. Les modifications appliquées aux autres propriétés seront instantanées.
@@ -278,7 +281,8 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **Note :** L'événement `transitionend` n'est pas déclenché si la transition est interrompue avant la fin de la transition si {{cssxref("display")}}`: none` ou si la valeur de la propriété est modifiée.
+> [!NOTE]
+> L'événement `transitionend` n'est pas déclenché si la transition est interrompue avant la fin de la transition si {{cssxref("display")}}`: none` ou si la valeur de la propriété est modifiée.
 
 ## Spécifications
 

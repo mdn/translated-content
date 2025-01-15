@@ -11,7 +11,7 @@ Ces autres articles sur le sujet peuvent également être utiles&nbsp;:
 
 - Pour un tutoriel détaillé sur l'utilisation de cette API, voir [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB).
 - Pour la documentation de référence sur l'API IndexedDB, consulter l'article [IndexedDB API](/fr/docs/Web/API/IndexedDB_API) et ses sous-pages qui documentent chacune les types d'objets utilisés par IndexedDB.
-- Pour plus d'informations sur la façon dont le navigateur gère les données en arrière-plan, voir [Les limites de stockage du navigateur et les critères de nettoyage](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria).
+- Pour plus d'informations sur la façon dont le navigateur gère les données en arrière-plan, voir [Les limites de stockage du navigateur et les critères de nettoyage](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 
 ## Caractéristiques fondamentales
 
@@ -49,7 +49,8 @@ Si vous avez l'habitude de travailler avec d'autres types de base de données, I
 
   Cette règle de sécurité qui porte sur IndexedDB empêche les applications d'accéder aux données des autres origines. Ainsi, bien qu'une application ou une page située sur [http://www.example.com/app/](https://www.example.com/app/) puisse récupérer des données à propos de [http://www.example.com/dir/](https://www.example.com/dir/), car elles partagent la même origine&nbsp;; elle ne peut pas récupérer des données provenant de [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (le port est différent) ou de <https://www.example.com/dir/> (le protocole est différent), car les origines sont différentes.
 
-  > **Note :** Le contenu tiers d'une fenêtre (par exemple celui d'une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut accéder au magasin IndexedDB de l'origine dans laquelle il est embarqué, à moins que le navigateur soit paramétré [pour ne jamais accepter les cookies tiers](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (voir [le bug 1147821](https://bugzilla.mozilla.org/show_bug.cgi?id=1147821)).
+  > [!NOTE]
+  > Le contenu tiers d'une fenêtre (par exemple celui d'une [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)) peut accéder au magasin IndexedDB de l'origine dans laquelle il est embarqué, à moins que le navigateur soit paramétré [pour ne jamais accepter les cookies tiers](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (voir [le bug 1147821](https://bugzilla.mozilla.org/show_bug.cgi?id=1147821)).
 
 ### Limitations
 
@@ -178,7 +179,7 @@ Chaque enregistrement a une valeur. Il peut s'agir de n'importe quelle valeur qu
 - [Un tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array),
 - [Une expression rationnelle](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp),
 - [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined),
-- [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null).
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null).
 
 Lorsqu'un objet ou un tableau est enregistré, les propriétés et valeurs de cet objet ou de ce tableau peuvent également être n'importe quelle valeur valide.
 

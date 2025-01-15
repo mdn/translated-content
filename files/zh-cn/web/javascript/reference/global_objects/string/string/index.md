@@ -27,7 +27,8 @@ String(thing)
 
 当 `String` 作为函数被调用时，它会将参数强制转换为一个字符串原始类型。[Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 值会被转换成 `"Symbol(description)"`，其中 `description` 是该 Symbol 的 [description](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) 属性值，而不会抛出错误。
 
-> **警告：** 你应该很少需要使用 `String` 作为构造函数。
+> [!WARNING]
+> 你应该很少需要使用 `String` 作为构造函数。
 
 ## 示例
 
@@ -72,4 +73,4 @@ String(sym); // "Symbol(示例)"
 
 ## 参见
 
-- [JavaScript 指南中的文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+- [数字与字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)指南

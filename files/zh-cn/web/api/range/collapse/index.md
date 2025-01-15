@@ -13,8 +13,9 @@ slug: Web/API/Range/collapse
 
 ## 语法
 
-```
-range.collapse(toStart);
+```js-nolint
+collapse()
+collapse(toStart)
 ```
 
 ### 参数
@@ -22,7 +23,7 @@ range.collapse(toStart);
 - _toStart_ {{optional_inline}}
   - : 一个布尔值： `true` 折叠到 {{domxref("Range")}} 的 start 节点，`false` 折叠到 end 节点。如果省略，则默认为 false {{experimental_inline}}`.`
 
-## 例子
+## 示例
 
 ```js
 var range = document.createRange();
@@ -42,4 +43,4 @@ range.collapse(true);
 
 ## 参阅
 
-- [The DOM interfaces index](/zh-CN/docs/DOM/DOM_Reference)
+- [The DOM interfaces index](/zh-CN/docs/Web/API/Document_Object_Model)

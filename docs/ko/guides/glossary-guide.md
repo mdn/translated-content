@@ -1,6 +1,6 @@
 # 용어 안내서
 
-새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://kornorms.korean.go.kr/main/main.do)을 고려해 추가할 것을 권장합니다. [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
+새로운 용어를 추가할 때, 기존 문서의 레거시와 [국립 국어원 한국어 어문 규범](https://korean.go.kr/kornorms/main/main.do)을 고려해 추가할 것을 권장합니다. [국립 국어원 온라인가나다](https://www.korean.go.kr/front/onlineQna/onlineQnaList.do?mn_id=216)에서 어문 규범, 어법, 표준국어대사전 내용 등에 대하여 문의할 수 있습니다.
 
 ## 공통
 
@@ -22,9 +22,9 @@
 
 ## 용어 안내서 `참고 링크` 우선 순위
 
-- 1. 해당 단어에 대한 의견을 나눈 PR 링크
-- 2. 적절한 ko MDN 문서 링크
-- 3. 적절한 en-us MDN 문서 링크
+1. 해당 단어에 대한 의견을 나눈 PR 링크
+2. 적절한 ko MDN 문서 링크
+3. 적절한 en-us MDN 문서 링크
 
 ## Section Title
 
@@ -59,6 +59,7 @@
 | Polyfill               | 폴리필          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Recommendations        | 권장 사항       |                                                                                                                                         |
 | Reference              | 참고서          |                                                                                                                                         |
+| Return Value           | 반환 값         |                                                                                                                                         |
 | See also               | 같이 보기       | [링크][target]                                                                                                                          |
 | Specifications         | 명세서          | [링크](https://github.com/mdn/translated-content/pull/1779/files)                                                                       |
 | Static properties      | 정적 속성       |                                                                                                                                         |
@@ -86,6 +87,7 @@
 | Instruction         | 지침             | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Naming              | 이름 지정        |                                                                                        |
 | Parameters          | 매개변수         | [링크][AudioWorkletNode]                                                               |
+| Prerequisites       | 선행 지식        |                                                                                        |
 | Requirements        | 요구 사항        |                                                                                        |
 | Value               | 값               | [링크][target]                                                                         |
 
@@ -154,6 +156,8 @@
 | User agent          | 사용자 에이전트 |                                                                                |
 | Update              | 갱신            |                                                                                |
 | Workflow            | 워크플로우      |                                                                                |
+| Truthy              | 참 같은         |                                                                                |
+| Falsy               | 거짓 같은       |                                                                                |
 
 ## CSS
 

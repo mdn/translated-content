@@ -9,11 +9,13 @@ slug: Web/Accessibility/ARIA
 
 它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持无障碍 JavaScript 小部件、表单提示和错误消息、实时内容更新等。
 
-> **警告：** 许多这些小部件在现代浏览器中都已经完全支持。如果有正确语义的 HTML 元素存在的话，**开发人员应该更喜欢使用这样的元素而不是使用 ARIA**。例如，原生元素具有内置的[键盘无障碍](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)、角色和状态。但是，如果你选择使用 ARIA，则你有责任在脚本中模仿等效的浏览器行为。
+> [!WARNING]
+> 许多这些小部件在现代浏览器中都已经完全支持。如果有正确语义的 HTML 元素存在的话，**开发人员应该更喜欢使用这样的元素而不是使用 ARIA**。例如，原生元素具有内置的[键盘无障碍](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)、角色和状态。但是，如果你选择使用 ARIA，则你有责任在脚本中模仿等效的浏览器行为。
 
 使用 [ARIA 的第一规则](https://www.w3.org/TR/using-aria/#rule1)是“如果你能够使用原生的 HTML 元素或属性，并且有你需要但已经建立在里面的语义和行为，而不是重新调整元素的用途并添加 ARIA 角色、状态或者属性来使它更加无障碍，那么你就应该如此。”
 
-> **备注：** 有个说法叫做“ARIA 宁缺毋滥”。在 [WebAim 对超过 100 万个主页的调查](https://webaim.org/projects/million/#aria)中，他们发现，有 ARIA 存在的主页比那些没有 ARIA 的，多检测出了平均 41% 的错误。尽管 ARIA 是为了使网页更加无障碍而设计的，但是如果使用不当，可能适得其反。
+> [!NOTE]
+> 有个说法叫做“ARIA 宁缺毋滥”。在 [WebAim 对超过 100 万个主页的调查](https://webaim.org/projects/million/#aria)中，他们发现，有 ARIA 存在的主页比那些没有 ARIA 的，多检测出了平均 41% 的错误。尽管 ARIA 是为了使网页更加无障碍而设计的，但是如果使用不当，可能适得其反。
 
 这是进度条小部件的标记：
 
@@ -57,13 +59,14 @@ function updateProgress(percentComplete) {
 
 > **备注：** {{HTMLElement('progress')}} 元素不允许 `min` 属性，最小值永远为 0。
 
-> **备注：** HTML 地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
+> [!NOTE]
+> HTML 地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
 
 ## 支持
 
 与任何其他 Web 技术一样，ARIA 也有不同程度的支持。支持基于所使用的操作系统和浏览器，以及与之交互的辅助技术类型。此外，操作系统、浏览器和辅助技术的版本也是影响因素。较旧的软件版本可能不支持某些 ARIA 角色、仅部分支持或误报其功能。
 
-同样重要的是要承认一些依赖辅助技术的人不愿意升级他们的软件，因为害怕失去与他们的计算机和浏览器交互的能力。因此，尽可能[使用语义化的 HTML 元素](/zh-CN/docs/Learn/Accessibility/HTML)很重要，因为语义 HTML 对辅助技术的支持要好得多。
+同样重要的是要承认一些依赖辅助技术的人不愿意升级他们的软件，因为害怕失去与他们的计算机和浏览器交互的能力。因此，尽可能[使用语义化的 HTML 元素](/zh-CN/docs/Learn_web_development/Core/Accessibility/HTML)很重要，因为语义 HTML 对辅助技术的支持要好得多。
 
 使用实际辅助技术测试你编写的 ARIA 也很重要。就像浏览器模拟器和模拟器不是测试完全支持的有效解决方案一样，代理辅助技术解决方案不足以完全保证功能。
 

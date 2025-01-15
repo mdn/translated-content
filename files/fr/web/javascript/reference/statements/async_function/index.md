@@ -38,9 +38,11 @@ Une fonction `async` peut contenir une expression {{jsxref("Opérateurs/await", 
 
 Le mot-clé `await` est uniquement valide au sein des fonctions asynchrones. Si ce mot-clé est utilisé en dehors du corps d'une fonction asynchrone, cela provoquera une exception {{jsxref("SyntaxError")}}.
 
-> **Note :** Lorsqu'une fonction asynchrone est mise en pause, la fonction appelante continue son exécution (car elle a reçu la promesse implicite renvoyée par la fonction `async`).
+> [!NOTE]
+> Lorsqu'une fonction asynchrone est mise en pause, la fonction appelante continue son exécution (car elle a reçu la promesse implicite renvoyée par la fonction `async`).
 
-> **Note :** Le but des fonctions `async`/`await` est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des _callbacks_ structurés, `async`/`await` est semblable à la combinaison des générateurs et des promesses.
+> [!NOTE]
+> Le but des fonctions `async`/`await` est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des _callbacks_ structurés, `async`/`await` est semblable à la combinaison des générateurs et des promesses.
 
 ## Exemples
 
@@ -226,4 +228,4 @@ Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée
 - {{jsxref("Operators/async_function", "async function expression")}}
 - {{jsxref("AsyncFunction")}} object
 - {{jsxref("Operators/await", "await")}}
-- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)
+- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)

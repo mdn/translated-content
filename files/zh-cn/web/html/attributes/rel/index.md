@@ -103,7 +103,8 @@ slug: Web/HTML/Attributes/rel
 
     {{htmlelement('link')}} 元素代表了整个文档的作者信息。
 
-    > **备注：** 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
+    > [!NOTE]
+    > 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
 
 - `bookmark`
   - : 与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素的 `rel` 属性值相关。如果有的话，给最近的祖先 {{htmlelement('article')}} 元素提供一个固定链接。如果没有祖先 `<article>` 元素，则给出链接元素与之联系最紧密的部分的固定链接。
@@ -127,9 +128,11 @@ slug: Web/HTML/Attributes/rel
 
     如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#media)、[`type`](/zh-CN/docs/Web/HTML/Element/link#type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
 
-    > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
+    > [!NOTE]
+    > 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
-    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
+    > [!NOTE]
+    > 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
     > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
@@ -141,7 +144,8 @@ slug: Web/HTML/Attributes/rel
     <link rel="license" href="#license" />
     ```
 
-    > **备注：** 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
+    > [!NOTE]
+    > 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
 
 - `manifest`
   - : 代表 [Web 应用清单](/zh-CN/docs/Web/Manifest)。需要使用 CORS 协议进行跨源获取。

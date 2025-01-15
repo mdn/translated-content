@@ -19,7 +19,7 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 ## Что пошло не так?
 
-[Ключевые слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Ключевые_слова) используются в качестве идентификаторов. Ключевые слова зарезервированные и в строгом и обычном режиме:
+[Ключевые слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#ключевые_слова) используются в качестве идентификаторов. Ключевые слова зарезервированные и в строгом и обычном режиме:
 
 - `enum`
 
@@ -74,4 +74,4 @@ class DocArchiver {}
 
 ## Смотрите также
 
-- [Правильные имена переменных](http://wiki.c2.com/?GoodVariableNames)
+- [Правильные имена переменных](https://wiki.c2.com/?GoodVariableNames)

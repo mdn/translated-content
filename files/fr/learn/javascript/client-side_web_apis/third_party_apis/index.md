@@ -26,7 +26,8 @@ Les API tierces sont des API qui sont fournis par des tiers, généralement des 
 
 Regardons [cet exemple qui utilise l'API MapQuest](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/) et voyons avec lui les différences entre les API tierces et celles du navigateur.
 
-> **Note :** Vous pouvez [récupérer l'ensemble des exemples de code](/fr/docs/Learn#obtenir_nos_exemples_de_code) en une seule fois. Dans ce cas, il vous suffit de rechercher dans votre dépôt les fichiers utilisés pour chaque section.
+> [!NOTE]
+> Vous pouvez [récupérer l'ensemble des exemples de code](/fr/docs/Learn#obtenir_nos_exemples_de_code) en une seule fois. Dans ce cas, il vous suffit de rechercher dans votre dépôt les fichiers utilisés pour chaque section.
 
 ### Elles sont situées sur des serveurs tiers
 
@@ -70,7 +71,8 @@ Ici on crée une variable dans laquelle on enregistre les informations de la car
 
 C'est tout ce dont l'API MapQuest a besoin pour dessiner une carte. C'est le serveur auquel on se connecte qui gère les aspects plus compliqués (comme afficher les bonnes tuiles pour la zone géographique, etc.).
 
-> **Note :** Certaines API fonctionnent différemment pour l'accès aux fonctionnalités et passent par une requête HTTP sur une URL spécifique pour récupérer les données. Ces API sont appelées [API REST (ou _RESTful APIs_ en anglais) et nous les abordons plus bas dans l'article](#une_api_rest_du_nytimes).
+> [!NOTE]
+> Certaines API fonctionnent différemment pour l'accès aux fonctionnalités et passent par une requête HTTP sur une URL spécifique pour récupérer les données. Ces API sont appelées [API REST (ou _RESTful APIs_ en anglais) et nous les abordons plus bas dans l'article](#une_api_rest_du_nytimes).
 
 ### Des clés d'API sont nécessaires pour les utiliser
 
@@ -86,7 +88,8 @@ L.mapquest.key = 'VOTRE-CLE-D-API-ICI';
 
 Cette ligne indique une clé d'API utilisée par notre application. La personne qui développe l'application doit obtenir une clé et l'inclure dans le code de l'application afin de pouvoir accéder aux fonctionnalités de l'API. Pour cet exemple, il s'agit d'une valeur imaginaire.
 
-> **Note :** Lorsque vous construirez votre propre application, vous utiliserez une vraie valeur de clé et non la valeur de substitution fournie en exemple.
+> [!NOTE]
+> Lorsque vous construirez votre propre application, vous utiliserez une vraie valeur de clé et non la valeur de substitution fournie en exemple.
 
 Certaines API peuvent nécessiter de fournir la clé d'une façon différente mais le fonctionnement général reste similaire.
 
@@ -157,7 +160,8 @@ Enfin, on chaîne un appel à `.addTo(map)` pour ajouter le marqueur sur la cart
 
 Essayez les différentes options que vous trouverez dans la documentation et voyez quel résultat vous pouvez obtenir&nbsp;! MapQuest fournit certaines fonctionnalités relativement avancées (itinéraire, recherche, etc.).
 
-> **Note :** Si vous ne parvenez pas à faire fonctionner l'exemple, vous pouvez comparer votre code avec [notre version terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (et aussi [voir le résultat correspondant ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
+> [!NOTE]
+> Si vous ne parvenez pas à faire fonctionner l'exemple, vous pouvez comparer votre code avec [notre version terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (et aussi [voir le résultat correspondant ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
 
 ## Une API REST du NYTimes
 
@@ -242,9 +246,11 @@ Si on prend un exemple d'URL complète ainsi construite :
 https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=VOTRE-CLE-D-API&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **Note :** Pour en savoir plus sur les différents paramètres d'URL qui peuvent être utilisés, vous pouvez consulter [la documentation du NYTimes pour le développement](https://developer.nytimes.com/).
+> [!NOTE]
+> Pour en savoir plus sur les différents paramètres d'URL qui peuvent être utilisés, vous pouvez consulter [la documentation du NYTimes pour le développement](https://developer.nytimes.com/).
 
-> **Note :** Dans cet exemple, la validation du formulaire est assez rudimentaire&nbsp;: le terme recherché doit nécessairement être renseigné avant de pouvoir valider le formulaire grâce à l'attribut `required`. Les champs pour les dates doivent suivre un format particulier et elles ne seront pas envoyées tant que leur valeur ne se composera pas de 8 chiffres (en HTML, c'est ce qui est indiqué par l'attribut `pattern="[0-9]{8}"`). Voir la page sur [la validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation) pour en savoir plus sur ce fonctionnement.
+> [!NOTE]
+> Dans cet exemple, la validation du formulaire est assez rudimentaire&nbsp;: le terme recherché doit nécessairement être renseigné avant de pouvoir valider le formulaire grâce à l'attribut `required`. Les champs pour les dates doivent suivre un format particulier et elles ne seront pas envoyées tant que leur valeur ne se composera pas de 8 chiffres (en HTML, c'est ce qui est indiqué par l'attribut `pattern="[0-9]{8}"`). Voir la page sur [la validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation) pour en savoir plus sur ce fonctionnement.
 
 ### Récupérer des données depuis l'API
 
@@ -264,7 +270,7 @@ fetch(url)
   );
 ```
 
-On envoie la requête en passant la variable `url` comme paramètre à la fonction [`fetch()`](/fr/docs/Web/API/fetch) puis on convertit le corps de la réponse avec la fonction [`json()`](/fr/docs/Web/API/Response/json) puis on passe le JSON ainsi obtenu à la fonction `displayResults()` afin que les données puissent être affichées dans l'interface utilisateur. On intercepte et affiche dans la console les éventuelles erreurs.
+On envoie la requête en passant la variable `url` comme paramètre à la fonction [`fetch()`](/fr/docs/Web/API/Window/fetch) puis on convertit le corps de la réponse avec la fonction [`json()`](/fr/docs/Web/API/Response/json) puis on passe le JSON ainsi obtenu à la fonction `displayResults()` afin que les données puissent être affichées dans l'interface utilisateur. On intercepte et affiche dans la console les éventuelles erreurs.
 
 ### Afficher les données
 
@@ -372,7 +378,8 @@ En connaissant cela, on peut écrire une fonction pour gérer la pagination.
 
    La seconde fonction est similaire, mais on prend la précaution de vérifier que `pageNumber` ne vaut pas déjà 0 avant de diminuer sa valeur (si la requête est envoyée avec un paramètre négatif, on pourrait recevoir une erreur). Lorsque `pageNumber` vaut déjà 0, on sort de la fonction avec [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) afin d'éviter de lancer une requête pour rien (si on est déjà sur la première page, pas besoin de recharger les résultats à nouveau).
 
-> **Note :** Vous pouvez trouver [le code terminé de l'exemple utilisant l'API du NYTimes sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (et aussi [voir le résultat correspondant fonctionner ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
+> [!NOTE]
+> Vous pouvez trouver [le code terminé de l'exemple utilisant l'API du NYTimes sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (et aussi [voir le résultat correspondant fonctionner ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
 
 ## Exemple d'utilisation de l'API YouTube
 

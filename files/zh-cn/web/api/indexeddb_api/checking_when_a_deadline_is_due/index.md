@@ -9,7 +9,7 @@ slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 
 ![A screenshot of the sample app. A red main title saying To do app, a test to-do item, and a red form for users to enter new tasks](to-do-app.png)
 
-The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/zh-CN/docs/Web/API/notification), and [Vibration](/zh-CN/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
+The main example application we will be referring to in this article is **To-do list notifications**, a simple to-do list application that stores task titles and deadline times and dates via [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API), and then provides users with notifications when deadline dates are reached, via the [Notification](/zh-CN/docs/Web/API/Notification), and [Vibration](/zh-CN/docs/Web/API/Vibration_API) APIs. You can [download the To-do list notifications app from github](https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages) and play around with the source code, or [view the app running live](https://mdn.github.io/dom-examples/to-do-notifications/).
 
 ## 基本问题
 
@@ -76,7 +76,8 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
 In this section we create an object called `newItem` that stores the data in the format required to insert it into the database. The next few lines open the database transaction and provide messages to notify the user if this was successful or failed.Then an `objectStore` is created into which the new item is added. The `notified` property of the data object indicates that the to-do list item's deadline has not yet come up and been notified - more on this later!
 
-> **备注：** The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
+> [!NOTE]
+> The `db` variable stores a reference to the IndexedDB database instance; we can then use various properties of this variable to manipulate the data.
 
 ```js
     request.onsuccess = function(event) {

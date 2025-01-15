@@ -11,7 +11,8 @@ slug: Web/API/WaveShaperNode/curve
 
 如有必要，使用线性插值计算畸变曲线的中间值。
 
-> **备注：** 数组的值可以是 `null` : 在这个情况下，不会有畸变被应用到输入的信号上。
+> [!NOTE]
+> 数组的值可以是 `null` : 在这个情况下，不会有畸变被应用到输入的信号上。
 
 ## 语法
 
@@ -39,4 +40,4 @@ distortion.curve = myCurveDataArray; // myCurveDataArray is a Float32Array
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

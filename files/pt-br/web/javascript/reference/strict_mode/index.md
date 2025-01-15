@@ -9,11 +9,11 @@ O **strict mode** do [ECMAScript 5](https://www.ecma-international.org/publicati
 
 O strict mode faz várias mudanças nas semânticas normais do JavaScript. Primeiro, o strict mode elimina alguns erros silenciosos do JavaScript fazendo-os lançar exceções. Segundo, o strict mode evita equívocos que dificultam que motores JavaScript realizem otimizações: código strict mode pode às vezes ser feito para executar mais rápido que código idêntico não-strict mode. Terceiro, strict mode proíbe algumas sintaxes que provavelmente serão definidas em versões futuras do ECMAScript.
 
-Veja [transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode) se você quer mudar seu código para funcionar na variante restrita do JavaScript.
+Veja [transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) se você quer mudar seu código para funcionar na variante restrita do JavaScript.
 
 ## Invocando strict mode
 
-Strict mode se aplica a _scripts_ inteiros ou _funções individuais_. Ele não se aplica a declarações de bloco fechadas em chaves `{}`; tentar aplicá-lo a tais contextos não faz nada. Código `eval`, código `Function`, atributos _event handlers_, strings passadas para [`setTimeout`](/pt-BR/docs/Web/API/WindowTimers.setTimeout) e coisas do tipo são scripts inteiros, e invocar strict mode neles funciona como esperado.
+Strict mode se aplica a _scripts_ inteiros ou _funções individuais_. Ele não se aplica a declarações de bloco fechadas em chaves `{}`; tentar aplicá-lo a tais contextos não faz nada. Código `eval`, código `Function`, atributos _event handlers_, strings passadas para [`setTimeout`](/pt-BR/docs/Web/API/Window/setTimeout) e coisas do tipo são scripts inteiros, e invocar strict mode neles funciona como esperado.
 
 ### Strict mode para scripts
 
@@ -97,7 +97,8 @@ delete Object.prototype; // lança TypeError
 
 Quarto, strict mode anterior ao Gecko 34 requer que todas as propriedades nomeadas em um objeto literal sejam únicas. Código normal pode duplicar nomes de propriedades, sendo que a última ocorrência determina o valor da propriedade. Mas como apenas o último faz algo, a duplicação é meramente um vetor de bugs, se o código for modificado para mudar o valor da propriedade por outro meio que não modificando a última instância. Nomes de propriedades duplicados são erro de sintaxe em strict mode:
 
-> **Nota:** Não é mais o caso no ECMAScript 6 ([Erro do Firefox 1041128](https://bugzil.la/1041128)).
+> [!NOTE]
+> Não é mais o caso no ECMAScript 6 ([Erro do Firefox 1041128](https://bugzil.la/1041128)).
 
 ```js
 "use strict";
@@ -364,4 +365,4 @@ Os principais navegadores agora implementam strict mode. Entretanto, não depend
 - [John Resig - ECMAScript 5 Strict Mode, JSON, and More](https://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/)
 - [ECMA-262-5 in detail. Chapter 2. Strict Mode.](https://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/)
 - [Strict mode compatibility table](https://kangax.github.io/compat-table/es5/#Strict_mode)
-- [Transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode)
+- [Transitioning to strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)

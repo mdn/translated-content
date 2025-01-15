@@ -81,9 +81,9 @@ cd beastify
 ```
 
 - 最开始的三个属性：**`manifest_version`**, **`name`**, **`version`**, 是必须的并且包含了插件最基本的信息。
-- [description](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description) 和 [homepage_url](/zh-CN/Add-ons/WebExtensions/manifest.json/homepage_url) 是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。
-- [icons](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 也是可选但推荐的，它决定了插件在附加组件中的图标。
-- **`permissions`** 列出了插件所需要的权限。在这里我们仅需要 [activeTab permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)。
+- [description](/zh-CN/docs/Mozilla/Tech/XUL/Attribute/description) 和 [homepage_url](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 是可选的，但是推荐填写，因为它们提供关于扩展的有用信息。
+- [icons](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 也是可选但推荐的，它决定了插件在附加组件中的图标。
+- **`permissions`** 列出了插件所需要的权限。在这里我们仅需要 [activeTab permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)。
 - **`browser_action`** 指定了工具栏按钮。我们在这里提供了三个信息片段：
 
   - **`default_icon`** 是必须的，指定了按钮的图标。
@@ -313,7 +313,7 @@ browser.tabs
 
 从 96 行开始。只要弹出窗加载完，popup script 就会使用 [`browser.tabs.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) API 在活跃标签页执行 content script。如果执行 content script 成功，content script 会在页面中一直保持，直到标签被关闭或者用户导航到其他页面。
 
-`browser.tabs.executeScript()`调用失败的常见原因是你不能在所有页面执行 content scripts。例如，你不能在特权浏览器页面执行，像 about:debugging，你也不能在[addons.mozilla.org](https://addons.mozilla.org/)域执行。如果调用失败，`reportExecuteScriptError()`会隐藏`"popup-content"` `<div>`，并展示`"error-content"` `<div>`, 然后打印一个错误到[控制台](/zh-CN/Add-ons/WebExtensions/Debugging)。
+`browser.tabs.executeScript()`调用失败的常见原因是你不能在所有页面执行 content scripts。例如，你不能在特权浏览器页面执行，像 about:debugging，你也不能在[addons.mozilla.org](https://addons.mozilla.org/)域执行。如果调用失败，`reportExecuteScriptError()`会隐藏`"popup-content"` `<div>`，并展示`"error-content"` `<div>`, 然后打印一个错误到[控制台](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Debugging)。
 
 如果成功执行 content script，我们会调用 `listenForClicks()`。这个监听了弹窗上的点击事件。
 
@@ -323,12 +323,12 @@ browser.tabs
 `beastify()` 函数做了三件事：
 
 - 将被点击的按钮映射到一个指向特定动物图片的 URL
-- 通过[`browser.tabs.insertCSS()`](/zh-CN/Add-ons/WebExtensions/API/tabs/insertCSS) API 向页面注入一些 CSS 来隐藏整个页面的内容
+- 通过[`browser.tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) API 向页面注入一些 CSS 来隐藏整个页面的内容
 - 通过[`browser.tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API 向 content script 发送“beastify”信息，要求其 beastify 页面，同时向其传递一个指向动物图片的 URL
 
 `reset()` 函数实际上就是撤销 beastify :
 
-- 通过 [`browser.tabs.removeCSS()`](/zh-CN/Add-ons/WebExtensions/API/tabs/removeCSS) API 移除我们添加的 CSS
+- 通过 [`browser.tabs.removeCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS) API 移除我们添加的 CSS
 - 向 content script 发送“reset”信息要求其重置页面
 
 ### The content script
@@ -387,7 +387,7 @@ browser.tabs
 
 content script 做的第一件事是检查全局变量 `window.hasRun`：如果它被设置了，脚本直接返回，否则设置`window.hasRun`并继续。原因是每次用户打开弹出窗，弹出窗就会在活跃页面执行一个 content script，所以我们可能会在单个页面运行多个脚本实例。如果是这样的话，我们需要保证只有一个实例在做所有事情。
 
-然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用[`browser.runtime.onMessage`](/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage) API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。
+然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用[`browser.runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。
 
 - 如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的[`<img>`](/zh-CN/docs/Web/HTML/Element/img) 元素。
 - 如果信息是 "reset"，我们只需要移除所有被添加的动物片。
@@ -408,7 +408,7 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 请仔细确认项目目录如下所示：
 
-```
+```plain
 beastify/
 
   beasts/
@@ -445,7 +445,7 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 
 ## 用命令行开发
 
-你可以通过使用 [web-ext](/zh-CN/Add-ons/WebExtensions/Getting_started_with_web-ext) 工具来将临时安装的工作自动化，试试这个：
+你可以通过使用 [web-ext](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext) 工具来将临时安装的工作自动化，试试这个：
 
 ```bash
 cd beastify

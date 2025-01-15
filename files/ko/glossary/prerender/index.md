@@ -20,5 +20,5 @@ l10n:
 
 ## 같이 보기
 
-- [즉각적인 페이지 탐색을 위해 Chrome에서 페이지를 미리 렌더링합니다](https://developer.chrome.com/blog/prerender-pages/#prerendering-from-the-address-bar) 주소 표시줄의 URL 프리 렌더링 및 제안된 추측 규칙 API 사용과 같은 프리 렌더링을 위한 Chrome 전용 기능에 대해 설명합니다.
+- [즉각적인 페이지 탐색을 위해 Chrome에서 페이지를 미리 렌더링합니다](https://developer.chrome.com/docs/web-platform/prerender-pages#prerendering-from-the-address-bar) 주소 표시줄의 URL 프리 렌더링 및 제안된 추측 규칙 API 사용과 같은 프리 렌더링을 위한 Chrome 전용 기능에 대해 설명합니다.
 - [prefetch](/ko/docs/Glossary/Prefetch)

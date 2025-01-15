@@ -73,7 +73,8 @@ Si el elemento de una grilla es ubicado en una fila que no tiene un tamaño expl
 
   - : Es una palabra clave que es identica a contenido máximo si es un máximo. Como mínimo representa el valor mínimo más grande (como esté especificado por {{cssxref("min-width")}}/{{cssxref("min-height")}}) de los elementos de la grilla que ocupan la pista de la grilla.
 
-    > **Nota:** Nota: los tamaños de la pista `auto` (y sólo los tamaños de la pista `auto`) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}}.
+    > [!NOTE]
+    > Los tamaños de la pista `auto` (y sólo los tamaños de la pista `auto`) pueden ser estirados por las propiedades {{cssxref("align-content")}} y {{cssxref("justify-content")}}.
 
 ### Formal syntax
 
@@ -120,5 +121,5 @@ Si el elemento de una grilla es ubicado en una fila que no tiene un tamaño expl
 ## Ver también
 
 - Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#Sizing_rows_in_the_implicit_grid)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
+- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

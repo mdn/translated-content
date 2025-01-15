@@ -53,7 +53,8 @@ svg {
   - : この属性は {{SVGElement("pattern")}} の内容物の座標系を定義します。
     _値の型_: `userSpaceOnUse`|`objectBoundingBox`; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 
-    > **メモ:** この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
+    > [!NOTE]
+    > この属性は、`viewBox` 属性が `<pattern>` 上に指定された場合は効果がありません。
 
 - {{SVGAttr("patternTransform")}}
   - : この属性は、パターン座標系からターゲット座標系への任意の追加変換の定義が入ります。
@@ -86,13 +87,13 @@ svg {
 
 ### グローバル属性
 
-- [コア属性](/ja/docs/Web/SVG/Attribute/Core)
+- [コア属性](/ja/docs/Web/SVG/Attribute)
   - : 最重要なもの: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Attribute/Styling)
+- [スタイル付け属性](/ja/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
+- [条件処理属性](/ja/docs/Web/SVG/Attribute)
   - : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute)
   - : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink 属性
   - : 最重要なもの: {{SVGAttr("xlink:title")}}

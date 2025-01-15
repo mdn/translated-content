@@ -15,7 +15,8 @@ Para anular um objeto URL, execute o método {{domxref("URL.revokeObjectURL", "r
 
 {{AvailableInWorkers}}
 
-> **Nota:** Esta funcionalidade não está disponível em [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) devido ao potencial de criar vazamento de memória
+> [!NOTE]
+> Esta funcionalidade não está disponível em [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API) devido ao potencial de criar vazamento de memória
 
 ## Sintaxe
 
@@ -34,7 +35,7 @@ Uma {{domxref("DOMString")}} contendo o objeto URL e pode ser usado para referen
 
 ## Exemplos
 
-Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+Veja [Usando objeto URL para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
 
 ## Notas de uso
 
@@ -48,7 +49,8 @@ Os navegadores vão limpar objetos URLs automaticamente quando o documento for d
 
 Em versões antigas da especificação Media Source, anexar stream a um elemento {{HTMLElement("video")}} é obrigatório criar um objeto URL para o {{domxref("MediaStream")}}. Isto não é mais necessário, e os navegadores estão removendo o suporte para isso.
 
-> **Warning:** Se você ainda tem código com
+> [!WARNING]
+> Se você ainda tem código com
 > {{domxref("URL.createObjectURL", "createObjectURL()")}} para anexar streams em elementos
 > de media, você precisa atualizar seu código para {{domxref("HTMLMediaElement.srcObject","srcObject")}} to the `MediaStream` directly.
 
@@ -62,8 +64,8 @@ Em versões antigas da especificação Media Source, anexar stream a um elemento
 
 ## Veja também
 
-- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File/Using_files_from_web_applications)
-- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File/Using_files_from_web_applications#example_using_object_urls_to_display_images)
+- [Usando arquivos de aplicativos da web](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Usando objetos URLs para exibir imagens](/pt-BR/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

@@ -30,7 +30,8 @@ animation-composition: revert-layer;
 animation-composition: unset;
 ```
 
-> **メモ:** 複数の値をカンマ区切りで `animation-*` プロパティに指定すると、{{cssxref("animation-name")}}が出現した順にアニメーションに適用されます。アニメーションと合成の数が異なる場合、`animation-composition` プロパティに列挙されている値は、最初の `animation-name` から最後の `animation-name` まで循環し、すべてのアニメーションに `animation-composition` 値が割り当てるまで繰り返されます。より詳しい情報は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定)を参照してください。
+> [!NOTE]
+> 複数の値をカンマ区切りで `animation-*` プロパティに指定すると、{{cssxref("animation-name")}}が出現した順にアニメーションに適用されます。アニメーションと合成の数が異なる場合、`animation-composition` プロパティに列挙されている値は、最初の `animation-name` から最後の `animation-name` まで循環し、すべてのアニメーションに `animation-composition` 値が割り当てるまで繰り返されます。より詳しい情報は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定)を参照してください。
 
 ### 値
 
@@ -70,7 +71,8 @@ animation-composition: unset;
 - `add` を指定すると、 `0%` のキーフレームの合成効果値は `blur(5px) blur(10px)` になります。
 - `accumulate` を指定すると、 `0%` のキーフレームの合成効果値は `blur(15px)` になります。
 
-> **メモ:** 合成演算は、キーフレーム内で指定することもできます。その場合、指定した合成演算は、まずそのキーフレーム内の各プロパティに対して使用され、次に次のキーフレーム内の各プロパティに対して使用されます。
+> [!NOTE]
+> 合成演算は、キーフレーム内で指定することもできます。その場合、指定した合成演算は、まずそのキーフレーム内の各プロパティに対して使用され、次に次のキーフレーム内の各プロパティに対して使用されます。
 
 ## 公式定義
 

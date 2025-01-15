@@ -31,7 +31,8 @@ Observe que o seletor fornecido ao conjunto de regras define o escopo no qual a 
 
 No entanto, isso nem sempre precisa ser o caso: talvez você tenha um bom motivo para limitar o escopo de suas propriedades personalizadas.
 
-> **Nota:** Os nomes das propriedades personalizadas diferenciam maiúsculas de minúsculas — `--my-color` será tratado como uma propriedade personalizada separada de `--My-color`.
+> [!NOTE]
+> Os nomes das propriedades personalizadas diferenciam maiúsculas de minúsculas — `--my-color` será tratado como uma propriedade personalizada separada de `--My-color`.
 
 Conforme mencionado anteriormente, você usa o valor da propriedade personalizada especificando o nome da propriedade personalizada dentro da função {{cssxref("var", "var()")}}, no lugar de um valor de propriedade regular:
 
@@ -187,9 +188,10 @@ Lembre-se de que essas são propriedades personalizadas, não variáveis reais, 
 
 ## Valores alternativos de propriedade personalizada
 
-Usando a função [`var()`](/pt-BR/docs/Web/CSS/var), você pode definir vários **valores alternativos** quando a variável dada ainda não está definida; isso pode ser útil ao trabalhar com [Elementos personalizados](/pt-BR/docs/Web/Web_Components/Using_custom_elements) e [Shadow DOM](/pt-BR/docs/Web/Web_Components/Using_shadow_DOM).
+Usando a função [`var()`](/pt-BR/docs/Web/CSS/var), você pode definir vários **valores alternativos** quando a variável dada ainda não está definida; isso pode ser útil ao trabalhar com [Elementos personalizados](/pt-BR/docs/Web/API/Web_components/Using_custom_elements) e [Shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM).
 
-> **Nota:** os valores alternativos não são usados para corrigir a compatibilidade do navegador. Se o navegador não oferecer suporte a propriedades personalizadas de CSS, o valor de fallback não ajudará. É apenas um backup para o navegador que suporta propriedades personalizadas CSS para escolher um valor diferente se a variável fornecida não estiver definida ou tiver um valor inválido.
+> [!NOTE]
+> os valores alternativos não são usados para corrigir a compatibilidade do navegador. Se o navegador não oferecer suporte a propriedades personalizadas de CSS, o valor de fallback não ajudará. É apenas um backup para o navegador que suporta propriedades personalizadas CSS para escolher um valor diferente se a variável fornecida não estiver definida ou tiver um valor inválido.
 
 O primeiro argumento para a função é o nome da [propriedade personalizada](https://www.w3.org/TR/css-variables/#custom-property) a ser substituída. O segundo argumento para a função, se fornecido, é um valor de fallback, que é usado como valor de substituição quando a [propriedade personalizada](https://www.w3.org/TR/css-variables/#custom-property) referenciada é inválido. A função aceita apenas dois parâmetros, atribuindo tudo o que segue a primeira vírgula como segundo parâmetro. Se esse segundo parâmetro for inválido, o fallback falhará. Por exemplo:
 
@@ -212,7 +214,8 @@ O primeiro argumento para a função é o nome da [propriedade personalizada](ht
 
 Incluir uma propriedade personalizada como fallback, conforme visto no segundo exemplo acima, é a maneira correta de fornecer mais de um fallback. A técnica pode causar problemas de desempenho, pois leva mais tempo para analisar as variáveis.
 
-> **Nota:** A sintaxe do fallback, como a de [propriedades personalizadas](https://www.w3.org/TR/css-variables/#custom-property), permite vírgulas. Por exemplo, `var(--foo, red, blue)` define um fallback de `red, blue` — qualquer coisa entre a primeira vírgula e o final da função é considerado um valor fallback.
+> [!NOTE]
+> A sintaxe do fallback, como a de [propriedades personalizadas](https://www.w3.org/TR/css-variables/#custom-property), permite vírgulas. Por exemplo, `var(--foo, red, blue)` define um fallback de `red, blue` — qualquer coisa entre a primeira vírgula e o final da função é considerado um valor fallback.
 
 ## Tratamento de propriedades personalizadas inválidas
 
@@ -224,7 +227,7 @@ No entanto, quando os valores das propriedades personalizadas são analisados, o
 
 Infelizmente, esses valores válidos podem ser usados, através da notação funcional `var()`, em um contexto onde eles podem não fazer sentido. Propriedades e variáveis personalizadas podem levar a declarações CSS inválidas, levando ao novo conceito de _válido no tempo computado._
 
-Quando o navegador encontra uma substituição `var()` inválida, então o [inicial](/pt-BR/docs/Web/CSS/initial_value) ou [herdado](/pt-BR/docs/Web/CSS/inheritance) valor da propriedade é usado.
+Quando o navegador encontra uma substituição `var()` inválida, então o [inicial](/pt-BR/docs/Web/CSS/initial_value) ou [herdado](/pt-BR/docs/Web/CSS/Inheritance) valor da propriedade é usado.
 
 Os próximos dois exemplos ilustram isso.
 

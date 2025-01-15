@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-ind
 
 在接下来的例子中，相对和绝对定位的块元素的大小和位置刚好说明上述堆叠规则。
 
-> **备注：**
+> [!NOTE]
 >
 > - 在一组由不含有任何 z-index 属性的同类元素，如例子中的定位块元素（DIV #1 至 #4），这些元素按照它们在 HTML 结构中出现的顺序堆叠，而不管它们的定位属性如何。
 > - 普通流中不含有定位属性的标准块元素（DIV #5）始终先于定位元素渲染并出现在定位元素的下层，即便它们在 HTML 结构中出现的位置晚于定位元素也是如此。
@@ -120,15 +120,15 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-ind
 
 ### See also
 
-- [堆叠与浮动](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : 浮动元素的处理方式
-- [增加 z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : 使用 z-index 来改变堆放顺序
-- [堆叠上下文](/zh-CN/CSS/Understanding_z-index/Stacking_context) : 堆叠上下文的注意事项
-- [堆叠上下文示例 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 在两层元素的第二层上使用 z-index
-- [堆叠上下文示例 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 在两层元素的所有层上使用 z-index
-- [堆叠上下文示例 3](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_3) : 在三层元素的第二层上使用 z-index
+- [堆叠与浮动](/zh-CN/docs/CSS/Understanding_z-index/Stacking_floating_elements) : 浮动元素的处理方式
+- [增加 z-index](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index) : 使用 z-index 来改变堆放顺序
+- [堆叠上下文](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context) : 堆叠上下文的注意事项
+- [堆叠上下文示例 1](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 在两层元素的第二层上使用 z-index
+- [堆叠上下文示例 2](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 在两层元素的所有层上使用 z-index
+- [堆叠上下文示例 3](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_3) : 在三层元素的第二层上使用 z-index
 
 ### Original Document Information
 
 - Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005

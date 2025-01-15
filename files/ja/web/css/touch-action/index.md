@@ -31,7 +31,8 @@ touch-action: unset;
 
 ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
 
-> **メモ:** ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
+> [!NOTE]
+> ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
 
 ## 構文
 
@@ -113,4 +114,4 @@ touch-action: unset;
 - {{domxref("Pointer_events", "ポインターイベント", "", 1)}}
 - WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
 - Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
-- [スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)

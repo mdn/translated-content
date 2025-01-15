@@ -108,7 +108,7 @@ max-width: unset;
 
 {{EmbedLiveSample("fit-content-demo", 400, 100)}}
 
-## Проблемы доступности
+## Доступность
 
 Убедитесь, что элементы с `max-width` не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста.
 
@@ -128,4 +128,4 @@ max-width: unset;
 ## Смотрите также
 
 - {{ Cssxref("width") }}, {{ Cssxref("min-width") }}, {{ Cssxref("max-height") }}
-- [Блочная модель](/ru/docs/CSS/box_model), {{ Cssxref("box-sizing") }}
+- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("box-sizing") }}

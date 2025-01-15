@@ -11,13 +11,13 @@ T 更小，变化的幅度决定于属性值的变化大小
 
 ## 语法
 
-```
-perspective(l)
+```css
+perspective(d)
 ```
 
 ## 参数
 
-- _l_
+- _d_
   - : 这个{{cssxref("&lt;length&gt;")}} 得到的是距离 0 坐标的距离。被用作提供一个透视渐变属性给某个元素。如果这个值是 0 或者不合法的值，将不会产生透视的变化。
 
 <table class="standard-table">

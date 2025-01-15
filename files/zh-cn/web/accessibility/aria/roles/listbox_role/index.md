@@ -27,7 +27,7 @@ l10n:
 
 - [`option`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role) 角色
   - : 需要一个或多个嵌套的 `option`。所有被选择的选项都含有 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 且值为 `true`。所有未选中的选项都含有 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 且值为 `false`。如果某个选项不可选择，[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 会被忽略。
-- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role) 角色
+- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 角色
   - : 包含 `listitem` 元素的部分。
 
 #### 状态和属性
@@ -141,7 +141,8 @@ l10n:
 2. 更改选项的外观以反映其选定状态。
 3. 将 listbox 上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为用户刚刚与之交互的选项的 ID，即使他们将选项切换为取消选择。
 
-> **备注：** ARIA 使用的第一原则是你可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其具有无障碍性。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
+> [!NOTE]
+> ARIA 使用的第一原则是你可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其具有无障碍性。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
 
 ## 示例
 
@@ -210,7 +211,7 @@ l10n:
 - HTML {{HTMLElement("option")}} 元素
 - [ARIA：`combobox` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role)
 - [ARIA：`option` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role)
-- [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
-- [ARIA：`listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
-- [ARIA 最佳实践 – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
+- [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role)
+- [ARIA：`listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listitem_role)
+- [ARIA 最佳实践 – Listbox](https://www.w3.org/WAI/ARIA/apg/#Listbox)
 - [ARIA 角色模型 – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)

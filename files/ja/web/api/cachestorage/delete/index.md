@@ -3,15 +3,15 @@ title: "CacheStorage: delete() メソッド"
 short-title: delete()
 slug: Web/API/CacheStorage/delete
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 **`delete()`** は {{domxref("CacheStorage")}} インターフェイスのメソッドで、`cacheName` に一致する {{domxref("Cache")}} オブジェクトを見つけ、見つかった場合は {{domxref("Cache")}} オブジェクトを削除し、 `true` に解決される {{jsxref("Promise")}} を返します。
 {{domxref("Cache")}} オブジェクトが見つからない場合は、`false` に解決されます。
 
-`CacheStorage` には、グローバルな {{domxref("caches")}} プロパティを介してアクセスできます。
+`CacheStorage` には、ウィンドウの {{domxref("Window.caches")}} プロパティまたはワーカーの {{domxref("WorkerGlobalScope.caches")}} を介してアクセスできます。
 
 ## 構文
 
@@ -62,4 +62,4 @@ this.addEventListener("activate", (event) => {
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} および {{domxref("WorkerGlobalScope.caches")}}

@@ -3,7 +3,7 @@ title: Simple color animation
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_by_clicking","Web/API/WebGL_API/By_example/Color_masking")}}
 
 这是一个非常基础的{{Glossary("WebGL")}}色彩动画案例，通过定时器来逐秒填充不同的颜色来实现。
 
@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/By_example/Simple_color_animation
 
 本案例使用{{Glossary("WebGL")}}来实现简单的色彩动画和用户交互效果，用户可以通过按按钮来开始/暂停/重新开始动画。
 
-我们把 {{Glossary("WebGL")}}函数放在一个定时循环器里 (`setInterval`)。通过监听点击事件来让用户开始/暂停动画。并通过定时器来循环执行绘制指令 (通常是逐帧动画，这次我们设置为逐秒动画)
+我们把 {{Glossary("WebGL")}} 函数放在一个定时循环器里（`setInterval`）。通过监听点击事件来让用户开始/暂停动画。并通过定时器来循环执行绘制指令（通常是逐帧动画，这次我们设置为逐秒动画）
 
 ```html
 <p>一个色彩动画的简单 WebGl 程序</p>
@@ -115,4 +115,4 @@ window.addEventListener(
 
 在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/simple-color-animation).上查看源码
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_by_clicking","Web/API/WebGL_API/By_example/Color_masking")}}

@@ -25,7 +25,7 @@ slug: Web/Progressive_web_apps/Guides/Installing
 
 ### 添加到主屏幕
 
-2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非 PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和标题添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)到操作系统的主屏幕。
+2007 年的 iPhone 开始，智能手机增加了“保存到主屏幕”的功能。对于普通（非 PWA）网站，此功能类似于书签，但它不是将页面的 favicon 和标题添加到书签菜单（这是浏览器功能），而是通过这种方式[添加图标](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#在你的站点增加自定义图标)到操作系统的主屏幕。
 
 将非 PWA 网站添加到主屏幕不会在设备上安装该网站。相反，它会将开发者定义的图标添加到主屏幕，当点击图标时，会在默认浏览器中打开该书签链接。
 

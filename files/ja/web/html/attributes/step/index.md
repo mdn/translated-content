@@ -109,7 +109,8 @@ input:invalid {
 
 {{EmbedLiveSample("min_impact_on_step","100%",55)}}
 
-> **メモ:** ユーザーが入力したデータが刻みの設定に従っていない場合、制約検証では無効とみなされ、 {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}} の擬似クラスに一致します。
+> [!NOTE]
+> ユーザーが入力したデータが刻みの設定に従っていない場合、制約検証では無効とみなされ、 {{cssxref(":invalid")}} と {{cssxref(":out-of-range")}} の擬似クラスに一致します。
 
 詳しくは[クライアント側制約検証](/ja/docs/Web/HTML/Constraint_validation)と {{domxref("ValidityState.stepMismatch", "stepMismatch")}} を参照してください。
 

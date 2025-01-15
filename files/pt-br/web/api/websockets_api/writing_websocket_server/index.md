@@ -7,13 +7,14 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 Se você quiser usar uma API WebSocket, você precisara ter um servidor. Neste artigo vou mostrar como escrever um WebSocket em C#. Você pode fazer isso em qualquer linguagem server-side, mas para manter as coisas simples e mais compreensíveis eu escolhi uma linguagem Microsoft.
 
-Este servidor está em conformidade com a [RFC 6455](http://tools.ietf.org/html/rfc6455), por isso irá tratar apenas as conexões com os navegadores Chrome versão 16, Firefox 11, IE 10 ou superior.
+Este servidor está em conformidade com a [RFC 6455](https://tools.ietf.org/html/rfc6455), por isso irá tratar apenas as conexões com os navegadores Chrome versão 16, Firefox 11, IE 10 ou superior.
 
 ## Primeiros passos
 
 Os WebSocket´s se comunicam através de uma conexão TCP (Transmission Control Protocol), felizmente o C# possui a classe [TcpListener](https://msdn.microsoft.com/pt-br/library/system.net.sockets.tcplistener.aspx) que, como o nome sugere, tem a função de escutar (Listener) as comunicações via TCP. A classe TcpListener está no namespace System.Net.Sockets.
 
-> **Nota:** É uma boa idéia usar a palavra chave using para escrever menos. Isso significa que não é preciso você reescrever o namespace toda vez que usar uma classe dele.
+> [!NOTE]
+> É uma boa idéia usar a palavra chave using para escrever menos. Isso significa que não é preciso você reescrever o namespace toda vez que usar uma classe dele.
 
 ### TcpListener
 
@@ -25,7 +26,8 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 Aqui você define onde o servidor será acessível.
 
-> **Nota:** Para setar facilmente o tipo esperado no primeiro parâmetro, use o método estático Parse da classe IPAddress.
+> [!NOTE]
+> Para setar facilmente o tipo esperado no primeiro parâmetro, use o método estático Parse da classe IPAddress.
 
 Métodos:
 
@@ -105,7 +107,8 @@ while (true) {
 
 Quando um cliente se conecta a um servidor, ele envia uma solicitação GET para atualizar a conexão com o WebSocket a partir de uma simples requisição HTTP. Isto é conhecido como handshaking (aperto de mão).
 
-> **Aviso:** Este código tem um defeito. Digamos que a propriedade client.`Available` retorna o valor 2 porque somente a requisição GET está disponível até agora. a expressão regular iria falhar mesmo que os dados recebidos sejam perfeitamente válidos.
+> [!WARNING]
+> Este código tem um defeito. Digamos que a propriedade client.`Available` retorna o valor 2 porque somente a requisição GET está disponível até agora. a expressão regular iria falhar mesmo que os dados recebidos sejam perfeitamente válidos.
 
 ```cpp
 using System.Text;
@@ -168,13 +171,14 @@ Se nós enviarmos "MDN", nós obtemos estes bytes:
 | 1                             | 0    | 0    | 0    | 0x1=0001 |
 
 FIN: Você pode enviar sua mensagem em quadros (frames), mas agora as coisas ficaram mais simples.
-Opcode _0x1_ significa que este é um texto. Veja aqui a [lista completa de Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2).
+Opcode _0x1_ significa que este é um texto. Veja aqui a [lista completa de Opcodes](https://tools.ietf.org/html/rfc6455#section-5.2).
 
 \- 131:
 
 Se o segundo byte menos 128 estiver entre 0 e 125, este é o tamanho da mensagem. Se for 126, os 2 bytes seguintes (16-bit inteiro sem sinal) e se 127, os 8 bytes seguintes (64-bit inteiro sem sinal) são o comprimento.
 
-> **Nota:** Eu posso escolher 128, porque o primeiro bit sempre será 1.
+> [!NOTE]
+> Eu posso escolher 128, porque o primeiro bit sempre será 1.
 
 \- 61, 84, 35 e 6 são os bytes de chave para decodificar. Sempre mudam.
 
@@ -198,4 +202,4 @@ for (int i = 0; i < encoded.Length; i++) {
 
 ## Link Relacionado
 
-- [Writing WebSocket servers](/pt-BR/docs/WebSockets/Writing_WebSocket_servers)
+- [Writing WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)

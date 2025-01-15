@@ -7,11 +7,12 @@ slug: Web/HTML/Element/head
 
 L'élément HTML **\<head>** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.
 
-> **Note :** L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
+> [!NOTE]
+> L'élément `<head>` contient principalement des données destinées au traitement automatisé et pas nécessairement lisibles par des humains. Pour afficher des informations lisibles pour les utilisateurs dans des en-têtes ou titre, voir l'élément {{HTMLElement("header")}}.
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `profile`{{deprecated_inline}}
   - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.

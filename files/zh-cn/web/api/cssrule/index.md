@@ -48,7 +48,7 @@ An up-to-date informal list of constants can be found on the [CSSWG Wiki](https:
 
 使用 [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) 语法格式进行描述。
 
-```
+```plain
 interface CSSRule {
     const unsigned short STYLE_RULE = 1;
     const unsigned short CHARSET_RULE = 2;
@@ -82,4 +82,4 @@ interface CSSRule {
 
 ## 参见
 
-- [Using dynamic styling information](/zh-CN/docs/Web/Guide/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

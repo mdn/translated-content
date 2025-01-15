@@ -27,9 +27,9 @@ L'auditeur peut fournir des informations d'identification de manière synchrone 
 - dans addListener, passez `"blocking"` dans le paramère `extraInfoSpec`
 - dans l'auditeur, retourner une `Promise` qui est résolue avec un objet contenant une propriété `authCredentials`, définie sur les credentials à fournir.
 
-Voir [Exemples](/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired#Examples).
+Voir [Exemples](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired#examples).
 
-Si vous utilisez le `"blockage"` vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
+Si vous utilisez le `"blockage"` vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
 
 Si votre poste fournit de mauvaises informations d'identification, l'auditeur sera rappelé. Pour cette raison, veillez à ne pas entrer dans une boucle infinie en fournissant à plusieurs reprises de mauvaises informations d'identification.
 
@@ -71,7 +71,7 @@ Les événements ont trois fonctions :
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`détails`](#details) ci-dessous.
 
-    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
     - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
     - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
@@ -279,9 +279,9 @@ browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/extensions/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

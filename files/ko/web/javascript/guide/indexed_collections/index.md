@@ -54,7 +54,8 @@ const arr3 = [];
 arr3.length = arrayLength;
 ```
 
-> **참고:** 위의 예제 코드에서, `arrayLength`는 반드시 `Number`여야 합니다.
+> [!NOTE]
+> 위의 예제 코드에서, `arrayLength`는 반드시 `Number`여야 합니다.
 > 그렇지 않으면, 하나의 요소(주어진 값)을 가지는 배열이 생성됩니다.
 > `arr.length`를 호출하면 `arrayLength`가 반환이 되지만 해당 배열은 실제로 아무런 요소를 가지고 있지 않습니다.
 > {{jsxref("Statements/for...in","for...in")}} 반복문을 실행하면 해당 배열은 아무런 요소를 반환하지 않습니다.
@@ -130,7 +131,8 @@ emp[1] = "Phil Lesh";
 emp[2] = "August West";
 ```
 
-> **참고:** 위 코드에서 배열 연산자에 정수가 아닌 값을 제공하면 배열 요소 대신 배열을 나타내는 객체에 속성이 생성됩니다.
+> [!NOTE]
+> 위 코드에서 배열 연산자에 정수가 아닌 값을 제공하면 배열 요소 대신 배열을 나타내는 객체에 속성이 생성됩니다.
 >
 > ```js
 > const arr = [];
@@ -429,7 +431,8 @@ a.forEach((element) => {
 이 인수가 제공되면 `thisArg`는 콜백 함수 안에 있는 `this` 키워드의 값이 됩니다.
 제공되지 않으면, 함수가 명시적 객체 컨텍스트 외부에서 호출되는 다른 경우와 마찬가지로, `this`는 함수가 [엄격한 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)가 아닐 경우 전역 객체([`window`](/ko/docs/Web/API/Window), [`globalThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 등)을 참조하게 됩니다. 엄격할 모드일 경우 `undefined`을 참조합니다.
 
-> **참고:** 위에서 소개한 `sort()` 메서드는 콜백 함수가 오직 비교에만 사용되며 요소 순서에 따라 특정 순서로 호출하지 않을 수 있기 때문에 반복 메서드가 아닙니다. `sort()`는 `thisArg` 매개변수도 받지 않습니다.
+> [!NOTE]
+> 위에서 소개한 `sort()` 메서드는 콜백 함수가 오직 비교에만 사용되며 요소 순서에 따라 특정 순서로 호출하지 않을 수 있기 때문에 반복 메서드가 아닙니다. `sort()`는 `thisArg` 매개변수도 받지 않습니다.
 
 [`map()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 메서드는
 배열의 모든 요소에 대해 `callback` 함수를 실행하고 이 결과를 새로운 배열에 담아 반환합니다.
@@ -556,7 +559,7 @@ const a = Array(5); // [ <5 empty items> ]
 // 배열 리터럴의 연속된 쉼표
 const b = [1, 2, , , 5]; // [ 1, 2, <2 empty items>, 5 ]
 
-// array.length보다 큰 인덱스의 슬록에 직접적으로 값 설정하기
+// array.length보다 큰 인덱스의 슬롯에 직접적으로 값 설정하기
 const c = [1, 2];
 c[4] = 5; // [ 1, 2, <2 empty items>, 5 ]
 

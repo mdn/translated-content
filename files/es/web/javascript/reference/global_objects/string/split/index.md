@@ -16,7 +16,7 @@ cadena.split([separador][,limite])
 ### Parámetros
 
 - `separador`
-  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Referencia/Objetos_globales/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
+  - : Especifica el carácter a usar para la separación de la cadena. El `separador` es tratado como una cadena o como una [](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp){{jsxref("Objetos_globales/RegExp", "expresión regular", "", 1)}}. Si se omite el `separador`, el array devuelto contendrá un sólo elemento con la cadena completa.
 
 <!---->
 
@@ -31,7 +31,8 @@ Cuando se encuentra, el `separador` es eliminado de la cadena y las subcadenas o
 
 Si el `separador` es una expresión regular que contiene paréntesis de captura, entonces cada vez que el `separador` concuerda, los resultados (incluído cualquier resultado indefinido) de los paréntesis de captura son divididos en el array resultante. Sin embargo no todos los navegadores soportan esta característica.
 
-> **Nota:** Cuando la cadena está vacía, `split()` devuelve un array que contiene una cadena vacía, en lugar de un array vacío.
+> [!NOTE]
+> Cuando la cadena está vacía, `split()` devuelve un array que contiene una cadena vacía, en lugar de un array vacío.
 
 ## Ejemplos
 

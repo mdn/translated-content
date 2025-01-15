@@ -31,7 +31,8 @@ Com o que você aprendeu nas últimas lições, você deve perceber que pode for
 
 Você pode trabalhar com editor ao vivo abaixo, ou pode fazer o [download do ponto de partida](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) para trabalhar em seu próprio editor de texto. Esta é uma única página de HTML, além do ponto de partida no head do documento. Se preferir, você pode transferir este CSS para um arquivo separado quando criar o exemplo no seu computador. Ou ainda, você pode utilizar uma ferramenta online como por exemplo, o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar estas tarefas..
 
-> **Nota:** Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge#Assessment_or_further_help) no final da página.
+> [!NOTE]
+> Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn/CSS/First_steps/Styling_a_biography_page#assessment_or_further_help) no final da página.
 
 ## Trabalhando com CSS
 

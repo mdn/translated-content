@@ -30,7 +30,8 @@ Esos bloques son naturalmente llamados **bloques de declaraciones** y las declar
 
 ![css syntax - declarations block.png](css_syntax_-_declarations_block.png)
 
-> **Nota:** El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo `style de HTML`.
+> [!NOTE]
+> El contenido de un bloque de declaración CSS, que es una lista de declaraciones separadas por un punto y coma, sin las llaves de apertura y cierre, pueden ser colocadas dentro del atributo `style de HTML`.
 
 ## Sets de reglas CSS
 
@@ -42,7 +43,8 @@ CSS permite esto asociando condiciones con bloques de declaraciones. Cada declar
 
 Debido a que un elemento de la página puede ser seleccionado por varios selectores, y, por lo tanto, por varias reglas que pueden contener la misma propiedad más de una vez, con diferentes valores, el estandar CSS define cuál regla tiene precedencia por sobre las otras y debe ser aplicada: esto se conoce como el algoritmo [cascada](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-> **Nota:** Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
+> [!NOTE]
+> Es importante resaltar que si un set de reglas formado por un grupo de selectores es un atajo que reemplaza varios sets de reglas con un solo selector cada una, esto no aplica a la validez del set de reglas en sí.
 >
 > Esto tiene una consecuencia importante: si algún selector básico es inválido, como cuando se usa un pseudo-elemento o pseudo-clase inválida, el _selector_ entero es inválido y, por lo tanto, el set de reglas completo es ignorado (por ser inválido también).
 
@@ -61,8 +63,8 @@ Existen dos tipos de declaraciones:
 
 Toda declaración que no es un set de reglas ni una regla at es considerada inválida e ignorada.
 
-Existe otro grupo de declaraciones: las **declaraciones anidadas**. Estas son declaraciones que pueden ser usadas en un subset específico de reglas at (las _reglas de grupo condicionales_). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at `@media` se aplica sólo si el dispositivo en el que el navegador se encuentra corriendo cumple dadas condiciones; el contenido de la regla at `@document` se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en [_CSS Conditionals Level 3_](/es/docs/Web/CSS/CSS_Conditional_Rules). Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.
+Existe otro grupo de declaraciones: las **declaraciones anidadas**. Estas son declaraciones que pueden ser usadas en un subset específico de reglas at (las _reglas de grupo condicionales_). Estas declaraciones sólo aplican si una condición específica se cumple: el contenido de la regla at `@media` se aplica sólo si el dispositivo en el que el navegador se encuentra corriendo cumple dadas condiciones; el contenido de la regla at `@document` se aplica sólo si la página actual cumple dadas condiciones, y así. En CSS1 y CSS2.1, sólo los sets de reglas pueden ser usados dentro de reglas de grupo condicionales. Esto era muy restrictivo y se dejó de aplicar en [_CSS Conditionals Level 3_](/es/docs/Web/CSS/CSS_conditional_rules). Actualmente, aunque sigue siendo experimental y no es soportado por todos los navegadores, las reglas de grupo condicional pueden contener varios sets de reglas, e incluso, aunque no todas, reglas at.
 
 ## Ver también
 
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

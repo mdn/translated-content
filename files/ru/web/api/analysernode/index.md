@@ -81,7 +81,8 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Examples
 
-> **Примечание:** See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
+> [!NOTE]
+> See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
 
 ### Basic usage
 
@@ -150,4 +151,4 @@ draw();
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

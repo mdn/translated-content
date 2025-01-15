@@ -12,7 +12,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 ### セキュリティ
 
 - Mixed content のブロック。Firefox はセキュアな (https) ページでセキュアでない (http) リソースを読み込みません ([Firefox バグ 834836](https://bugzil.la/834836))。
-- [CSP](/ja/docs/Security/CSP) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
+- [CSP](/ja/docs/Web/HTTP/CSP) 1.0 ポリシーの標準的な構文を実装して、デフォルトで施行します。
 
 ### 開発者ツール
 
@@ -32,7 +32,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 
 ### DOM
 
-- D3E の [`KeyboardEvent.key`](/ja/docs/DOM/KeyboardEvent#Key_names_and_Char_values) を、文字入力可能ではないキーについてのみサポートしました ([Firefox バグ 842927](https://bugzil.la/842927))。
+- D3E の [`KeyboardEvent.key`](/ja/docs/Web/API/KeyboardEvent#key_names_and_char_values) を、文字入力可能ではないキーについてのみサポートしました ([Firefox バグ 842927](https://bugzil.la/842927))。
 - {{domxref("DOMImplementation.createHTMLDocument")}} の引数 `title` は、更新された DOM 仕様書のとおり省略可能になりました。
 - サイドバーパネルを追加する機能 (`window.sidebar.addPanel`) を削除しました ([Firefox バグ 691647](https://bugzil.la/691647))。
 - 接頭辞なしの {{domxref("window.requestAnimationFrame")}}、{{domxref("window.cancelAnimationFrame")}} メソッドが追加されました ([Firefox バグ 704063](https://bugzil.la/704063))。
@@ -48,7 +48,7 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 ### CSS
 
 - `text-decoration: blink;` の点滅効果を廃止しましたが、値そのものは現在も有効です ([Firefox バグ 857820](https://bugzil.la/857820))。
-- フロー内の {{cssxref("::after")}} 疑似要素や {{cssxref("::before")}} 疑似要素は、flex アイテムになりました ([Firefox バグ 867454](https://bugzil.la/867454))。
+- フロー内の {{cssxref("::after")}} 擬似要素や {{cssxref("::before")}} 擬似要素は、flex アイテムになりました ([Firefox バグ 867454](https://bugzil.la/867454))。
 
 ### MathML
 

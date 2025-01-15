@@ -9,11 +9,12 @@ L'élément HTML **`<tt>`** (pour _Teletype Text_) crée un élément en ligne, 
 
 Cet élément est désormais obsolète et un élément {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}} ou {{HTMLElement("var")}} pourra être utilisé à la place s'il faut afficher du texte en incise avec une police à chasse fixe. On pourra utiliser l'élément {{HTMLElement("pre")}} pour afficher un bloc de contenu préformaté (également généralement affiché dans une police à chasse fixe).
 
-> **Note :** Si aucun de ces éléments ne correspond à la sémantique portée par votre contenu (lorsque, par exemple, il ne s'agit que d'un effet de mise en forme), vous pouvez utiliser un élément {{HTMLElement("span")}} mis en forme avec CSS (par exemple la propriété {{cssxref("font-family")}}).
+> [!NOTE]
+> Si aucun de ces éléments ne correspond à la sémantique portée par votre contenu (lorsque, par exemple, il ne s'agit que d'un effet de mise en forme), vous pouvez utiliser un élément {{HTMLElement("span")}} mis en forme avec CSS (par exemple la propriété {{cssxref("font-family")}}).
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -65,7 +66,8 @@ tt {
 
 Par défaut, le contenu de l'élément `<tt>` est affiché avec la police à chasse fixe par défaut du navigateur. Comme vu dans l'exemple précédent, il est possible de surcharger cette police.
 
-> **Note :** Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
+> [!NOTE]
+> Les règles de style propres à l'utilisateur sont prioritaires par rapport aux feuilles de style d'un site ou d'une application web.
 
 Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, son utilisation a été déconseillée pour privilégier d'autres éléments HTML ou une mise en forme via CSS. L'élément `<tt>` est désormais obsolète en HTML5.
 
@@ -101,7 +103,7 @@ Bien que cet élément n'ait pas été officiellement déprécié en HTML 4.01, 
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>

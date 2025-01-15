@@ -52,6 +52,6 @@ function calcular_ventas(unidades_a, unidades_b, unidades_c) {
 
 ## Vea También
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
 - Operadores{{jsxref("Operadores/function", "function")}}

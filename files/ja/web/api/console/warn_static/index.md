@@ -9,7 +9,8 @@ slug: Web/API/console/warn_static
 
 {{AvailableInWorkers}}
 
-> **メモ:** Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
+> [!NOTE]
+> Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
 
 ## 構文
 

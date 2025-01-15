@@ -5,7 +5,7 @@ slug: Web/API/HTML_DOM_API/Microtask_guide
 
 {{APIRef("HTML DOM")}}
 
-**마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/EventLoop#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.
+**마이크로태스크**는 자신을 생성한 함수 또는 프로그램이 종료됐고 [JavaScript 실행 스택](/ko/docs/Web/JavaScript/Event_loop#스택)이 빈 후에, 그러나 {{glossary("user agent", "사용자 에이전트")}}가 스크립트 실행 환경을 운용하기 위해 사용하는 이벤트 루프로 통제권을 넘기기는 전에 실행되는 짧은 함수입니다.
 
 이때의 이벤트 루프는 브라우저의 주 이벤트 루프 또는 [웹 워커](/ko/docs/Web/API/Web_Workers_API)를 구동하는 이벤트 루프입니다. 따라서 마이크로태스크를 이용하면 다른 스크립트의 실행을 방해할 위험을 감수하지 않으면서도, 사용자 에이전트가 반응하기 전에 주어진 함수를 실행할 수 있습니다.
 
@@ -37,7 +37,8 @@ JavaScript [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promi
 
 두 번째로, 마이크로태스크가 {{domxref("queueMicrotask()")}}를 통해 더 많은 마이크로태스크를 큐에 추가하는 경우, 이렇게 새롭게 추가된 마이크로태스크 또한 다음 태스크 실행 전에 모두 실행됩니다. 이벤트 루프는 대기열이 텅 빌 때까지 마이크로태스크를 계속 호출하기 때문입니다.
 
-> **경고:** 마이크로태스크 스스로 더 많은 마이크로태스크를 큐에 넣을 수 있으며 큐가 빌 때까지 마이크로태스크 처리는 멈추지 않기 때문에, 이벤트 루프가 끝없는 마이크로태스크 처리 루프에 빠질 현실적인 위험이 있습니다. 재귀적으로 마이크로태스크를 추가할 때 주의하세요.
+> [!WARNING]
+> 마이크로태스크 스스로 더 많은 마이크로태스크를 큐에 넣을 수 있으며 큐가 빌 때까지 마이크로태스크 처리는 멈추지 않기 때문에, 이벤트 루프가 끝없는 마이크로태스크 처리 루프에 빠질 현실적인 위험이 있습니다. 재귀적으로 마이크로태스크를 추가할 때 주의하세요.
 
 ## 마이크로태스크 사용하기
 
@@ -285,8 +286,8 @@ log("주 프로그램 종료");
 - [심층 탐구: 마이크로태스크와 JavaScript 런타임 환경](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
 - [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
-  - [일반적인 비동기 프로그래밍 개념](/ko/docs/Learn/JavaScript/Asynchronous/Concepts)
+  - [일반적인 비동기 프로그래밍 개념](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
   - [비동기 JavaScript 소개](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [협조적인 비동기 JavaScript: 타임아웃과 인터벌](/ko/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [협조적인 비동기 JavaScript: 타임아웃과 인터벌](/ko/docs/Learn/JavaScript/Asynchronous)
   - [프로미스와 함께하는 우아한 비동기 프로그래밍](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [올바른 접근법 선택하기](/ko/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+  - [올바른 접근법 선택하기](/ko/docs/Learn/JavaScript/Asynchronous)

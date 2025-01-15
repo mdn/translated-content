@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 La méthode statique **`Object.defineProperty()`** permet de définir une nouvelle propriété ou de modifier une propriété existante, directement sur un objet. La méthode renvoie l'objet modifié.
 
-> **Note :** Cette méthode est directement appelée via le constructeur {{jsxref("Object")}} plutôt que sur les instances de type `Object`.
+> [!NOTE]
+> Cette méthode est directement appelée via le constructeur {{jsxref("Object")}} plutôt que sur les instances de type `Object`.
 
 {{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
 
@@ -362,7 +363,7 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 
 ## Voir aussi
 
-- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

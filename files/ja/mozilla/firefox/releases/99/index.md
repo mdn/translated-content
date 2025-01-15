@@ -24,7 +24,7 @@ slug: Mozilla/Firefox/Releases/99
 ### API
 
 - {{domxref("navigator.pdfViewerEnabled")}} が有効になり、PDF ファイルへ移動するときにブラウザーが PDF のインライン表示をサポートしているか判断するために推奨される方法になりました。
-  PDF ビューアーのサポートを推測するために非推奨の {{domxref("navigator.plugins")}} および {{domxref("navigator.mimeTypes")}} プロパティを使用してるサイトは、現時点で `pdfViewerEnabled` が提供するシグナルと一致するハードコードされた疑似的な値が返るとしても、新しいプロパティに移行するべきです ([Firefox バグ 1720353](https://bugzil.la/1720353))。
+  PDF ビューアーのサポートを推測するために非推奨の {{domxref("navigator.plugins")}} および {{domxref("navigator.mimeTypes")}} プロパティを使用してるサイトは、現時点で `pdfViewerEnabled` が提供するシグナルと一致するハードコードされた擬似的な値が返るとしても、新しいプロパティに移行するべきです ([Firefox バグ 1720353](https://bugzil.la/1720353))。
 
 #### Media、WebRTC、Web Audio
 

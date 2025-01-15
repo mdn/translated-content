@@ -116,7 +116,8 @@ self.addEventListener("fetch", (event) => {
 
 这意味着在许多情况下，即使网络连接不稳定，Web 应用程序也能正常运行。从主应用程序代码的角度来看，这完全是透明的：应用程序只需发出网络请求并获取响应。此外，由于 service worker 在单独的线程中运行，主应用程序代码可以保持对用户输入的响应，同时获取和缓存资源。
 
-> **备注：** 这里描述的策略只是 service worker 实现缓存的一种方式。具体来说，在缓存优先策略中，我们先从缓存中查找响应，然后再尝试从网络中获取，这意味着我们更有可能返回一个快速的响应而无需承担网络成本，但也更有可能返回一个过期的响应。
+> [!NOTE]
+> 这里描述的策略只是 service worker 实现缓存的一种方式。具体来说，在缓存优先策略中，我们先从缓存中查找响应，然后再尝试从网络中获取，这意味着我们更有可能返回一个快速的响应而无需承担网络成本，但也更有可能返回一个过期的响应。
 >
 > 另一种策略是*网络优先*策略，即首先尝试从服务器获取资源，如果设备离线，则回退到缓存。
 >
@@ -441,8 +442,8 @@ async function registerPeriodicSync() {
 
 ### 指南
 
-- web.dev 上的[介绍后台同步](https://developer.chrome.com/blog/background-sync/)（2017）
-- web.dev 上的[介绍后台获取](https://developer.chrome.com/blog/background-fetch/)（2022）
-- web.dev 上的[周期性后台同步 API](https://developer.chrome.com/articles/periodic-background-sync/)（2020）
-- web.dev 上的[通知](https://web.dev/explore/notifications)
-- web.dev 上的[具有离线流媒体的 PWA](https://web.dev/articles/pwa-with-offline-streaming)（2021）
+- developer.chrome.google.cn 上的[介绍后台同步](https://developer.chrome.google.cn/blog/background-sync)（2017）
+- developer.chrome.google.cn 上的[介绍后台获取](https://developer.chrome.google.cn/blog/background-fetch)（2022）
+- developer.chrome.google.cn 上的[周期性后台同步 API](https://developer.chrome.google.cn/docs/capabilities/periodic-background-sync)（2020）
+- web.developers.google.cn 上的[通知](https://web.developers.google.cn/explore/notifications)
+- web.developers.google.cn 上的[具有离线流媒体的 PWA](https://web.developers.google.cn/articles/pwa-with-offline-streaming)（2021）

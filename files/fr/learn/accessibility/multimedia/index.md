@@ -39,7 +39,7 @@ Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniqu
 
 ## Simple images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d'un texte alternatif que les lecteurs d'écran peuvent lire et lire à leurs utilisateurs.
+Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d'un texte alternatif que les lecteurs d'écran peuvent lire et lire à leurs utilisateurs.
 
 Par exemple:
 
@@ -238,11 +238,11 @@ Chaque fois que l'heure est mise à jour (une fois par seconde), nous activons c
 
 Cela vous donne une idée de base sur la manière d'ajouter des fonctionnalités de lecteur personnalisées aux instances de lecteur vidéo / audio. Pour plus d'informations sur l'ajout de fonctionnalités plus complexes aux lecteurs vidéo / audio, y compris les solutions de secours Flash pour les navigateurs plus anciens, voir aussi:
 
-- [Audio and video delivery](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
-- [Video player styling basics](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
+- [Audio and video delivery](/fr/docs/Web/Media/Audio_and_video_delivery)
+- [Video player styling basics](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
+- [Creating a cross-browser video player](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
 
-Nous avons également créé un exemple avancé pour montrer comment créer un système orienté objet permettant de rechercher tous les lecteurs vidéo et audio de la page (quel que soit leur nombre) et d'y ajouter nos contrôles personnalisés. Voir [custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) ( également [voir le code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
+Nous avons également créé un exemple avancé pour montrer comment créer un système orienté objet permettant de rechercher tous les lecteurs vidéo et audio de la page (quel que soit leur nombre) et d'y ajouter nos contrôles personnalisés. Voir [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) ( également [voir le code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
 
 ## Transcriptions audio
 
@@ -272,13 +272,15 @@ Dans de nombreux cas, il s'agira simplement d'une vidéo. Dans ce cas, vous pouv
 
 Cependant, il y a des cas extrêmes. Vous pouvez par exemple avoir un enregistrement audio d'une réunion qui fait référence à une ressource d'accompagnement telle qu'une feuille de calcul ou un graphique. Dans de tels cas, vous devez vous assurer que les ressources sont fournies avec la transcription audio +, et les lier spécifiquement aux endroits où elles sont mentionnées dans la transcription. Cela aidera évidemment tous les utilisateurs, pas seulement les sourds.
 
-> **Note :** Une transcription audio aidera en général plusieurs groupes d'utilisateurs. En plus de permettre aux utilisateurs sourds d'accéder aux informations contenues dans l'audio, pensez à un utilisateur disposant d'une connexion à faible bande passante et qui trouverait que le téléchargement de l'audio est gênant. Pensez également à un utilisateur dans un environnement bruyant, comme un pub ou un bar, qui tente d'accéder à l'information mais ne l'entend pas par dessus le bruit.
+> [!NOTE]
+> Une transcription audio aidera en général plusieurs groupes d'utilisateurs. En plus de permettre aux utilisateurs sourds d'accéder aux informations contenues dans l'audio, pensez à un utilisateur disposant d'une connexion à faible bande passante et qui trouverait que le téléchargement de l'audio est gênant. Pensez également à un utilisateur dans un environnement bruyant, comme un pub ou un bar, qui tente d'accéder à l'information mais ne l'entend pas par dessus le bruit.
 
 ## Pistes de texte vidéo
 
 Pour rendre la vidéo accessible aux sourds, aux aveugles ou même à d'autres groupes d'utilisateurs (par exemple, ceux dont la bande passante est faible ou qui ne comprennent pas la langue dans laquelle la vidéo est enregistrée), vous devez inclure des pistes de texte avec votre contenu vidéo. .
 
-> **Note :** Les pistes de texte sont également utiles pour n'importe quel utilisateur, pas seulement pour les personnes handicapées. Par exemple, certains utilisateurs peuvent ne pas être en mesure d'entendre le son car ils se trouvent dans des environnements bruyants (comme un bar bondé lorsqu'un match de sport est diffusé) ou peuvent ne pas déranger les autres s'ils sont dans un endroit calme (comme une bibliothèque). .)
+> [!NOTE]
+> Les pistes de texte sont également utiles pour n'importe quel utilisateur, pas seulement pour les personnes handicapées. Par exemple, certains utilisateurs peuvent ne pas être en mesure d'entendre le son car ils se trouvent dans des environnements bruyants (comme un bar bondé lorsqu'un match de sport est diffusé) ou peuvent ne pas déranger les autres s'ils sont dans un endroit calme (comme une bibliothèque). .)
 
 Ce n'est pas un nouveau concept - les sous-titres codés sont disponibles depuis assez longtemps dans les services de télévision:
 
@@ -334,9 +336,10 @@ Cela donnera une vidéo avec des sous-titres affichés, un peu comme ceci:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Pour plus de détails, veuillez lire [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/) qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
+Pour plus de détails, veuillez lire [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/) qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
 
-> **Note :** Les pistes de texte et les transcriptions vous aident également avec {{glossary ("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
+> [!NOTE]
+> Les pistes de texte et les transcriptions vous aident également avec {{glossary ("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
 
 ## Autre contenu multimédia
 
@@ -349,7 +352,7 @@ Les sections ci-dessus ne couvrent pas tous les types de contenu multimédia que
 Pour ce type de contenu, vous devez traiter les problèmes d'accessibilité au cas par cas. Dans certains cas, ce n'est pas si grave, par exemple:
 
 - Si vous intégrez du contenu audio à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez probablement simplement fournir une transcription audio de la même manière que celle décrite ci-dessus dans la section [Exemples de transcription](#exemples_de_transcription).
-- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
+- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir [Flash captions](https://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
 
 Cependant, il est difficile de rendre les autres multimédias accessibles. Si, par exemple, vous avez affaire à un jeu immersif en 3D ou à une application de réalité virtuelle, il est vraiment difficile de fournir des alternatives textuelles pour une telle expérience, et vous pouvez soutenir que les utilisateurs non-voyants ne sont pas vraiment dans le groupe-cible de telles applications.
 

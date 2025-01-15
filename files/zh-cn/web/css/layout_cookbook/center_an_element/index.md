@@ -17,7 +17,7 @@ slug: Web/CSS/Layout_cookbook/Center_an_element
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **标注：**
+> [!CALLOUT]
 >
 > [下载这份示例](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 

@@ -7,9 +7,11 @@ slug: Web/API/Screen/lockOrientation
 
 **`lockOrientation()`** は {{DOMxRef("Screen")}} インターフェイスのメソッドで、画面を特定の方向にロックします。
 
-> **警告:** この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
+> [!WARNING]
+> この機能は非推奨であり、仕様をさけてください。代わりに {{DOMxRef("ScreenOrientation.lock()")}} メソッドを使用してください。
 
-> **メモ:** このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
+> [!NOTE]
+> このメソッドはインストールされたウェブアプリまたは[全画面モード](/ja/docs/Web/API/Fullscreen_API)のウェブページでのみ動作します。
 
 ## 構文
 
@@ -44,7 +46,8 @@ lockOrientation(orientation);
     - `default`
       - : 端末に自然な向きによって `portrait-primary` または `landscape-primary` が選ばれます。たとえば、ディスプレイの解像度が 1280\*800 なら、 `default` は `landscape` になるでしょうし、800\*1280 なら、 `default` は `portrait` になるでしょう。
 
-> **メモ:** 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
+> [!NOTE]
+> 複数のロックが同時に指定されることがあります。そのため、 1 つの向きにのみロックがセットされた場合には、画面の向きはロックが解除されるまで決して変更されません。もしそうでなければ、端末がロックされた向きを含む複数の向きの間で、画面の向きが 1 つの向きから別の向きへと移り変わってしまうことになります。
 
 ### 返値
 
@@ -99,4 +102,4 @@ if (
 - {{DOMxRef("Screen.orientation")}}
 - {{DOMxRef("Screen.unlockOrientation()")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [画面の向きの管理](/ja/docs/Managing_screen_orientation)
+- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

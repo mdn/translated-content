@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - 已更新 {{cssxref("align-content")}} 属性，使其适用于 `display: block;` 布局。这将 `flex` 和 `grid` 中所有的布局定位带到 `block`，使开发人员能够对齐块级元素，而无需将其容器转换为 `flex` 或 `grid` 容器。（[Firefox bug 1882853](https://bugzil.la/1882853)）。
-- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
+- CSS 属性 [`transform-box`](/zh-CN/docs/Web/CSS/transform-box) 现已支持 `content-box` 和 `stroke-box` 值。对于参照的盒子，`content-box` 值使用[内容盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#盒模型的各个部分)，而 `stroke-box` 值使用包含 SVG 形状的描边边界框（stroke bounding box）（[Firefox bug 1868374](https://bugzil.la/1868374)）。
 - [`content-visibility`](/zh-CN/docs/Web/CSS/content-visibility) CSS 属性值 `auto` 现已默认启用。其允许在内容不[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)的情况下跳过对其的渲染。（[Firefox bug 1874874](https://bugzil.la/1874874)）。
 
 ### JavaScript
@@ -102,7 +102,8 @@ l10n:
 
   现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
 
-  > **备注：** 此特性的首选项是反向工作的：在 Nightly 版本中，它被设置为 `false`，从而移除嵌套在分段元素中的标题的用户代理样式。在所有其他更新通道中，它被设置为 `true`，从而保留了嵌套标题的现有用户代理样式。
+  > [!NOTE]
+  > 此特性的首选项是反向工作的：在 Nightly 版本中，它被设置为 `false`，从而移除嵌套在分段元素中的标题的用户代理样式。在所有其他更新通道中，它被设置为 `true`，从而保留了嵌套标题的现有用户代理样式。
 
 ## 更早期的版本
 

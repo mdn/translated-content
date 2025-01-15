@@ -68,17 +68,18 @@ Note here how the HTML is displayed in the exact order in which it appears in th
 
 The elements that appear one below the other are described as _block_ elements, in contrast to _inline_ elements, which appear one beside the other, like the individual words in a paragraph.
 
-> **Nota:** The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
+> [!NOTE]
+> The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
 
 When you use CSS to create a layout, you are moving the elements away from the normal flow, but for many of the elements on your page the normal flow will create exactly the layout you need. This is why starting with a well-structured HTML document is so important, as you can then work with the way things are laid out by default rather than fighting against it.
 
 The methods that can change how elements are laid out in CSS are as follows:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow (see [Types of CSS boxes](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes) for more information). We then have entire layout methods that are switched on via a value of `display`, for example [CSS Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox).
+- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow (see [Types of CSS boxes](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) for more information). We then have entire layout methods that are switched on via a value of `display`, for example [CSS Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example always fixed to the top left of the browser viewport.
 - **Table layout** — features designed for styling the parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- **Multi-column layout** — The [Multi-column layout](/pt-BR/docs/Web/CSS/CSS_Columns) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
+- **Multi-column layout** — The [Multi-column layout](/pt-BR/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
 
 ## The display property
 
@@ -90,7 +91,7 @@ In addition to being able to change the default presentation by turning an item 
 
 ## Flexbox
 
-Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
+Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
 
 The HTML markup below gives us a containing element, with a class of `wrapper`, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.
 
@@ -160,7 +161,8 @@ As a simple example of this, we can add the {{cssxref("flex")}} property to all 
 
 {{ EmbedLiveSample('Flex_2', '300', '200') }}
 
-> **Nota:** This has been a very short introduction to what is possible in Flexbox, to find out more, see our [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) article.
+> [!NOTE]
+> This has been a very short introduction to what is possible in Flexbox, to find out more, see our [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) article.
 
 ## Grid Layout
 
@@ -250,7 +252,8 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 {{ EmbedLiveSample('Grid_2', '300', '330') }}
 
-> **Nota:** These two examples are just a small part of the power of Grid layout; to find out more see our [Grid Layout](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) article.
+> [!NOTE]
+> These two examples are just a small part of the power of Grid layout; to find out more see our [Grid Layout](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) article.
 
 The rest of this guide covers other layout methods, which are less important for the main layout structures of your page but can still help you achieve specific tasks. By understanding the nature of each layout task, you will soon find that when you look at a particular component of your design the type of layout best suited to it will often be clear.
 
@@ -316,7 +319,8 @@ p {
 
 {{ EmbedLiveSample('Float_1', '100%', 600) }}
 
-> **Nota:** Floats are fully explained in our lesson on the [float and clear](/pt-BR/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> [!NOTE]
+> Floats are fully explained in our lesson on the [float and clear](/pt-BR/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/pt-BR/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Positioning techniques
 
@@ -619,7 +623,8 @@ body {
 
 {{ EmbedLiveSample('Sticky_1', '100%', 200) }}
 
-> **Nota:** to find more out about positioning, see our [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) article.
+> [!NOTE]
+> to find more out about positioning, see our [Positioning](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning) article.
 
 ## Table layout
 

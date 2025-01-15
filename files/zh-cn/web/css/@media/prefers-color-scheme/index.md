@@ -5,7 +5,7 @@ slug: Web/CSS/@media/prefers-color-scheme
 
 {{CSSRef}}
 
-**`prefers-color-scheme`** [CSS](/zh-CN/docs/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features)用于检测用户是否有将系统的主题色设置为亮色或者暗色。
+**`prefers-color-scheme`** [CSS](/zh-CN/docs/Web/CSS) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features)用于检测用户是否有将系统的主题色设置为亮色或者暗色。
 
 ## 语法
 
@@ -16,7 +16,8 @@ slug: Web/CSS/@media/prefers-color-scheme
 - `dark`
   - : 表示用户已告知系统他们选择使用暗色主题的界面。
 
-> **备注：** “未得知”、“已告知”等用语，英文原文如此。
+> [!NOTE]
+> “未得知”、“已告知”等用语，英文原文如此。
 > “未得知”可理解为：浏览器的宿主系统不支持设置主题色，或者支持主题色并默认为/被设为了未设置/无偏好。
 > “已告知”为：浏览器的宿主系统支持设置主题色，且被设置为了亮色或者暗色。
 >

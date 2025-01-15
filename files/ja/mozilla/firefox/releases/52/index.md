@@ -24,7 +24,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### HTML
 
-- `rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Link_types) を実装しました ([Firefox バグ 1222516](https://bugzil.la/1222516))。
+- `rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Attributes/rel) を実装しました ([Firefox バグ 1222516](https://bugzil.la/1222516))。
 
 ### CSS
 
@@ -40,7 +40,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - {{cssxref("align-self")}}|{{cssxref("justify-self")}}: \[ first | last ]? baseline 向けの Flexbox レイアウトを実装しました ([Firefox バグ 1221524](https://bugzil.la/1221524))。
 - {{cssxref("touch-action")}} プロパティを、すべてのプラットフォームにおいてデフォルトで有効にしました。(詳しくは [intent to ship mail #1](https://groups.google.com/forum/#!topic/mozilla.dev.platform/6CGjsm1XpD4) および [intent to ship mail #2](https://groups.google.com/forum/#!topic/mozilla.dev.platform/SYEzvXJKw9M) をご覧ください)
 - Flexbox の {{cssxref("align-content")}} の処理および単一ラインのサイズ調整が、ラインの数ではなく {{cssxref("flex-wrap")}} に依存するようになりました ([Firefox バグ 1090031](https://bugzil.la/1090031))。
-- 補間処理ができないプロパティのアニメーションに [CSS Animations](/ja/docs/Web/CSS/CSS_Animations) を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
+- 補間処理ができないプロパティのアニメーションに [CSS Animations](/ja/docs/Web/CSS/CSS_animations) を使用できるようになりました ([Firefox バグ 1064937](https://bugzil.la/1064937))。
 - `baseline|last-baseline` を `[ first | last ]? baseline` に変更しました ([Firefox バグ 1313254](https://bugzil.la/1313254)).
 - block-axis について、`left`/`right` の使用値を `start` にしました ([Firefox バグ 1221565](https://bugzil.la/1221565))。
 - 包含ブロックの長さが不定である、flexible tracks を伸長する際に、最小サイズや最大サイズを重視するようになりました ([Firefox バグ 1309407](https://bugzil.la/1309407))。
@@ -66,7 +66,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - グリッドコンテナーのベースラインを実装しました。 ([Firefox バグ 1151204](https://bugzil.la/1151204))。
 - スタイルシステムから、`<flex>` 値を最小値として使用する箇所を削除しました ([Firefox バグ 1305244](https://bugzil.la/1305244))。
 - 設定項目 `layout.css.masking.enabled` を削除しました ([Firefox バグ 1308239](https://bugzil.la/1308239))。
-- 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#メディア特性) を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
+- 独自の `-moz-images-in-menus` および `-moz-images-in-buttons` [メディア特性](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#メディア特性) を削除しました ([Firefox バグ 1302157](https://bugzil.la/1302157))。
 - 色のプロパティから `-moz-use-text-color` を削除しました。代わりに [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) を使用してください ([Firefox バグ 1306214](https://bugzil.la/1306214))。
 - \[css-grid] グリッドアイテムに 'max-width' を設定するとテキストがはみ出す問題を修正しました ([Firefox バグ 1330380](https://bugzil.la/1330380))。
 
@@ -106,8 +106,8 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
 - [Drag and drop API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
-- [Notifications API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
-- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Link_types) の機能を反映します。
+- [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
+- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Attributes/rel) の機能を反映します。
 - [Web Components API](/ja/docs/Web/API/Web_components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
 - [Pointer Event](/ja/docs/Web/API/Pointer_events) の {{domxref("PointerEvent.width","width")}} および {{domxref("PointerEvent.height","height")}} プロパティのデフォルト値が 1 になりました ([Firefox バグ 1304315](https://bugzil.la/1304315))。
 - [最新の仕様書](https://wicg.github.io/entries-api/) における変更点を含むように、[File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) を更新しました (詳しくは [Firefox バグ 1284987](https://bugzil.la/1284987) をご覧ください)。

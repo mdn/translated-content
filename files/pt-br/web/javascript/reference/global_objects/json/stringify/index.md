@@ -145,7 +145,8 @@ JSON.stringify({ x: obj }); // '{"x":"bar"}'
 
 No caso em que você deseja armazenar um objeto criado por seu usuário e permitir que ele seja restaurado mesmo após o fechamento do navegador, o exemplo a seguir é um modelo para a aplicabilidade de `JSON.stringify()`:
 
-> **Aviso:** As funções não são um tipo de dados JSON válido, portanto, elas não funcionarão. Também alguns objetos como {{jsxref("Date")}} será uma string depois {{jsxref("JSON.parse()")}}.
+> [!WARNING]
+> As funções não são um tipo de dados JSON válido, portanto, elas não funcionarão. Também alguns objetos como {{jsxref("Date")}} será uma string depois {{jsxref("JSON.parse()")}}.
 
 ```js
 // Criando um exemplo em JSON

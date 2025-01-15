@@ -38,7 +38,7 @@ localeCompare(compareString, locales, options);
     completamente dependientes de la implementación.
 
     Consulte el
-    [constructor de `Intl.Collator()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)
+    [constructor de `Intl.Collator()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
     para obtener detalles sobre estos parámetros y cómo usarlos.
 
 ### Valor de retorno

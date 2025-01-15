@@ -15,7 +15,7 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 
 举个例子，一个极限为 1.414 斜接，θ 小于 90 度的把斜接会转换成倒角，一个极限为 4.0 的斜接，θ 小于 29 度的斜接会转换成倒角，一个极限为 10.0 的斜接，θ 小于大约 11.5 度的斜接会转换成倒角。
 
-## 用法
+## 使用上下文
 
 | 类别   | 外观属性                 |
 | ------ | ------------------------ |
@@ -24,7 +24,7 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 | 可动性 | Yes                      |
 
 - \<miterlimit>
-  - : 对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。\<miterlimit>的值必须是一个大于或等于 1 的[\<number>](/zh-CN/SVG/Content_type#Number)。
+  - : 对斜角长度与{{ SVGAttr("stroke-width") }}的比率的限制。\<miterlimit>的值必须是一个大于或等于 1 的[\<number>](/zh-CN/docs/SVG/Content_type#number)。
 
 ## 示例
 
@@ -32,8 +32,8 @@ miterLength / stroke-width = 1 / sin ( theta / 2 )
 
 下列元素可以使用`stroke-miterlimit`属性：
 
-- [形状元素](/zh-CN/SVG/Element#Shape) »
-- [文本内容元素](/zh-CN/SVG/Element#TextContent) »
+- [形状元素](/zh-CN/docs/Web/SVG/Element#shape) »
+- [文本内容元素](/zh-CN/docs/Web/SVG/Element#textcontent) »
 
 ## 规范
 

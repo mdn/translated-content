@@ -126,7 +126,8 @@ function displayDataByIndex() {
 }
 ```
 
-> **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
+> [!NOTE]
+> Pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ## Spécifications
 
@@ -138,7 +139,7 @@ function displayDataByIndex() {
 
 ## Voir aussi
 
-- [Utiliser IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Utiliser IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Initier une connexion : {{domxref("IDBDatabase")}}
 - Utiliser les transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

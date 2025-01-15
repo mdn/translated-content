@@ -18,7 +18,7 @@ arr.sort([compareFunction])
 ### Parámetros
 
 - `compareFunction`
-  - : Opcional. Especifica una función que define el modo de ordenamiento. Si se omite, el array es ordenado atendiendo a la posición del valor [Unicode](/es/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode) de cada caracter, según la conversión a string de cada elemento.
+  - : Opcional. Especifica una función que define el modo de ordenamiento. Si se omite, el array es ordenado atendiendo a la posición del valor [Unicode](/es/docs/Web/JavaScript/Guide/Grammar_and_types#unicode) de cada caracter, según la conversión a string de cada elemento.
 - `firstEl`
   - : El primer elemento a comparar.
 - `secondEl`
@@ -75,7 +75,7 @@ Para comparar números en lugar de strings, la función de comparación puede si
 const compareNumbers = (a, b) => a - b;
 ```
 
-El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Guide/Closures)):
+El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Closures)):
 
 ```js
 const numbers = [4, 2, 5, 1, 3];
@@ -145,7 +145,7 @@ arr.sort(function (a, b) {
 }); // [ 1, 5, 40, 200 ]
 ```
 
-Lo mismo escrito más compacto mediante una [función flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions):
+Lo mismo escrito más compacto mediante una [función flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 
 ```js
 const arr = [40, 1, 5, 200];
@@ -154,7 +154,7 @@ arr.sort((a, b) => a - b); // [ 1, 5, 40, 200 ]
 
 ### Creando, mostrando, y ordenando un array
 
-El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparación. Además, ilustra una manera de mostrar un array una vez creado. El método [join](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join) es usado para convertir el array en una cadena de texto que imprimir. Al no pasarle un argumento que indique el separador, usará la coma por defecto para separar los elementos del array dentro de la cadena.
+El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparación. Además, ilustra una manera de mostrar un array una vez creado. El método [join](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/join) es usado para convertir el array en una cadena de texto que imprimir. Al no pasarle un argumento que indique el separador, usará la coma por defecto para separar los elementos del array dentro de la cadena.
 
 ```js
 const arr = ["80", "9", "700", 40, 1, 5, 200];

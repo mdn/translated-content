@@ -2,7 +2,7 @@
 title: 静的初期化ブロック
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 l10n:
-  sourceCommit: 9c4fb236cd9ced12b1eb8e7696d8e6fcb8d8bad3
+  sourceCommit: 11b75916ceb7379f4ca3ba9440b032efc284fe2d
 ---
 
 {{jsSidebar("Classes")}}
@@ -41,7 +41,7 @@ MyClass.init();
 これらのブロックは、宣言された順に、静的フィールド初期化子とともに[評価](/ja/docs/Web/JavaScript/Reference/Classes#評価の順序)されます。
 スーパークラスの静的初期化は、そのサブクラスの初期化よりも先に実行されます。
 
-静的ブロックの内部で宣言された変数のスコープは、そのブロックのローカルなものです。ここには初期化ブロック内で宣言された `var`, `function`, `const`, `let` は、そのブロックのローカル変数であるため、ブロック内の `var` 宣言は巻き上げされることはありません。
+静的ブロックの内部で宣言された変数のスコープは、そのブロックのローカルなものです。ここには初期化ブロック内で宣言された `var`, `function`, `const`, `let` は、そのブロックのローカル変数であるため、 `var` 宣言は静的ブロックの外に巻き上げされることはありません。
 
 ```js
 var y = "Outer y";
@@ -49,11 +49,15 @@ var y = "Outer y";
 class A {
   static field = "Inner y";
   static {
+    // var y はブロックの中にしか巻き上げられない
+    console.log(y); // undefined <-- not 'Outer y'
+
     var y = this.field;
   }
 }
 
-// 静的ブロックで定義された var は巻き上げられない
+// 静的ブロックで定義された var y は
+// ブロックの外に巻き上げられない
 console.log(y); // 'Outer y'
 ```
 
@@ -67,7 +71,8 @@ console.log(y); // 'Outer y'
 
 [静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)初期化子と静的初期化ブロックは、 1 つずつ評価されます。フィールド初期化子は、それより上のフィールド値を参照することはできますが、それより下のフィールド値を参照することはできません。静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されるフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
-> **メモ:** これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> [!NOTE]
+> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 静的初期化ブロックはデコレーターを持つことができません（クラス自身は持つことができます）。
 

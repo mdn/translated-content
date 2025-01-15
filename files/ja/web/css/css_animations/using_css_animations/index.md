@@ -46,7 +46,8 @@ CSS スタイルでアニメーションのタイミングを定義するため�
 
 ## 例
 
-> **メモ:** (2017年以前の) 古いブラウザーでは、接頭辞が必要かもしれません。 クリックして参照できるライブサンプルには、`-webkit` 接頭辞を付加したプロパティも含まれています。
+> [!NOTE]
+> (2017年以前の) 古いブラウザーでは、接頭辞が必要かもしれません。 クリックして参照できるライブサンプルには、`-webkit` 接頭辞を付加したプロパティも含まれています。
 
 ### 文字列がブラウザーのウィンドウを横切る
 
@@ -89,7 +90,8 @@ p {
 </p>
 ```
 
-> **メモ:** アニメーションを見るにはページを再読み込みしてください。
+> [!NOTE]
+> アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -142,7 +144,8 @@ p {
 
 これはブラウザーに、アニメーションの流れの 75% 経過時点で見出しの左マージンを 25% に、また幅を 150% にするよう設定します。
 
-> **メモ:** アニメーションを見るにはページを再読み込みしてください。
+> [!NOTE]
+> アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -244,7 +247,8 @@ p {
 }
 ```
 
-> **メモ:** 詳しくは、 {{cssxref("animation")}} のリファレンスページをご覧ください。
+> [!NOTE]
+> 詳しくは、 {{cssxref("animation")}} のリファレンスページをご覧ください。
 
 ### 複数のアニメーションプロパティ値の設定
 
@@ -374,12 +378,13 @@ function listener(event) {
 
 そしてこちらはライブ出力です。
 
-> **メモ:** アニメーションを見るにはページを再読み込みしてください。
+> [!NOTE]
+> アニメーションを見るにはページを再読み込みしてください。
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 
 ## 関連情報
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS アニメーションの対応の検出](/ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS アニメーションの対応の検出](/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

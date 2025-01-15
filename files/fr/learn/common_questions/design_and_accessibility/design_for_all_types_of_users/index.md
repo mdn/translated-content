@@ -38,7 +38,8 @@ Le {{Glossary("W3C")}} définit ce qui peut être une bonne association de coule
 
 Pour contrôler le contraste, vous pouvez télécharger et installer [l'analyseur de contraste](http://www.paciellogroup.com/resources/contrastanalyser/) du Groupe Paciello.
 
-> **Note :** Sinon, vous pouvez également trouver différents vérificateurs de contrastes disponibles en ligne, par exemple celui de WebAIM&nbsp;: [Color Contrast Checker](http://webaim.org/resources/contrastchecker/). Il est préférable d'utiliser un vérificateur qui fonctionne en local sur votre ordinateur car généralement, ceux-ci ont également une pipette qui permet de prélever la valeur d'une couleur sur tout l'écran.
+> [!NOTE]
+> Sinon, vous pouvez également trouver différents vérificateurs de contrastes disponibles en ligne, par exemple celui de WebAIM&nbsp;: [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). Il est préférable d'utiliser un vérificateur qui fonctionne en local sur votre ordinateur car généralement, ceux-ci ont également une pipette qui permet de prélever la valeur d'une couleur sur tout l'écran.
 
 Par exemple, testons les couleurs de cette page et voyons ce que cela donne avec l'outil d'analyse de contraste&nbsp;:
 
@@ -164,7 +165,8 @@ span.subheading {
 
 C'est plus facile de cette façon, n'est-ce pas&nbsp;? Cela fonctionne, à partir d'[Internet Explorer 9 et dans n'importe quel autre navigateur récent](http://caniuse.com/#search=rem), n'hésitez pas à l'utiliser.
 
-> **Note :** Vous remarquerez qu'Opera Mini ne supporte pas les tailles de police exprimées en rem, il utilisera sa propre taille de police.
+> [!NOTE]
+> Vous remarquerez qu'Opera Mini ne supporte pas les tailles de police exprimées en rem, il utilisera sa propre taille de police.
 
 #### Pourquoi aurais-je besoin d'utiliser des unités proportionnelles&nbsp;?
 
@@ -175,7 +177,8 @@ Il est généralement conseillé de&nbsp;:
 - Décrire les tailles de police en unité `rem`, cela ne posera aucun problème à la plupart des navigateurs&nbsp;;
 - Laisser les anciens navigateurs afficher les polices avec leurs moteurs internes. Les moteurs des navigateurs ignorent les propriétés ou valeurs CSS qu'ils ne reconnaissent pas et/ou qu'ils ne peuvent pas gérer. Votre site web est donc toujours utilisable, même s'il ne respecte pas nécessairement le design que vous souhaitiez. De toute façon et inexorablement, les anciens navigateurs seront de moins en moins utilisés.
 
-> **Note :** Votre utilisation de ces unités pourra varier. S'il est nécessaire pour vous de gérer les anciens navigateurs, vous aurez besoin d'utiliser des `em`s, quitte à faire un peu de mathématique en chemin.
+> [!NOTE]
+> Votre utilisation de ces unités pourra varier. S'il est nécessaire pour vous de gérer les anciens navigateurs, vous aurez besoin d'utiliser des `em`s, quitte à faire un peu de mathématique en chemin.
 
 ### Largeur de ligne
 
@@ -231,7 +234,8 @@ Les images d'une page web peuvent être décoratives ou informatives mais il n'e
 
 Si l'image peut être décrite succintement, vous pouvez fournir un attribut `alt` qui sera suffisant. En revanche, si l'image ne peut pas être décrite rapidement, il est préférable de fournir un contenu équivalent sous un autre format sur la page (par exemple, si l'image est un graphique en camembert, on pourra fournir le tableau des données numériques) ou sinon, on pourra recourir à un attribut `longdesc`. La valeur de cet attribut est un URL qui pointe vers une ressource dont le seul but est de décrire en détails le contenu de l'image.
 
-> **Note :** L'utilisation voire l'existence de `longdesc` ont toujours été débatues. Veuillez vous référer à la page du W3C' [Image Description Extension (longdesc)](http://www.w3.org/TR/html-longdesc/) pour une explication complète et des exemples détaillés.
+> [!NOTE]
+> L'utilisation voire l'existence de `longdesc` ont toujours été débatues. Veuillez vous référer à la page du W3C' [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) pour une explication complète et des exemples détaillés.
 
 #### Audio/Vidéo
 

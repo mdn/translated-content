@@ -62,13 +62,13 @@ console.log(o.d); // undefined
 
 [Code Link](https://repl.it/@khaled_hossain_code/prototype)
 
-Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceção às regras de obtenção e definição de comportamento é quando há uma propriedade herdada com um [getter or a setter](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters).
+Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceção às regras de obtenção e definição de comportamento é quando há uma propriedade herdada com um [getter or a setter](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
 
 ### Herança de "métodos"
 
 JavaScript não tem "métodos" como os que conhecemos em linguagens baseadas em classes. Em JavaScript, qualquer função pode ser adicionada em um objeto em forma de propriedade. Uma herança de funções age como a herança de quaisquer outras propriedades que não sejam funções, e podemos inclusive realizar sobre-escrita de função (_method overriding_)!
 
-Quando uma herança de função é executada, o valor de [`this`](/pt-BR/JavaScript/Reference/Operators/this) aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
+Quando uma herança de função é executada, o valor de [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this) aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
 
 ```js
 var o = {
@@ -120,7 +120,7 @@ function f() {
 
 ### Com um construtor
 
-Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/pt-BR/JavaScript/Reference/Operators/new).
+Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/pt-BR/docs/JavaScript/Reference/Operators/new).
 
 ```js
 function Graph() {
@@ -141,7 +141,7 @@ var g = new Graph();
 
 ### Com Object.create
 
-ECMAScript 5 introduziu o novo método: [Object.create](/pt-BR/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
+ECMAScript 5 introduziu o novo método: [Object.create](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
 
 ```js
 var a = { a: 1 };
@@ -165,11 +165,11 @@ O tempo de pesquisa para as propriedades que estão no alto da cadeia de protót
 
 Porém, quando estamos interagindo com as propriedades de um objeto, **toda** propriedade que está na cadeia do prototype (prototype chain) vai ser enumerada.
 
-Para verificar se um objeto tem uma propriedade definida em si mesmo e não em algum lugar na sua cadeia de protótipo, é necessário usar o método [`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) que todos os objetos herdam do Object.prototype.
+Para verificar se um objeto tem uma propriedade definida em si mesmo e não em algum lugar na sua cadeia de protótipo, é necessário usar o método [`hasOwnProperty`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) que todos os objetos herdam do Object.prototype.
 
-[`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) é a única alternativa em JavaScript que lida com propriedades sem atravessar a cadeia de protótipos.
+[`hasOwnProperty`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) é a única alternativa em JavaScript que lida com propriedades sem atravessar a cadeia de protótipos.
 
-> **Nota:** Observação: **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
+> **Nota:** **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
 
 ### Má Pratica: Estender protótipos nativos
 

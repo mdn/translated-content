@@ -56,6 +56,6 @@ browser.notifications.onShown.addListener(logShown);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/extensions/notifications).
+> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).

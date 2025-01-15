@@ -109,7 +109,7 @@ Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_Logical_Properties).
+Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ### Valeurs logiques
 
@@ -123,7 +123,8 @@ Ainsi, on peut faire flotter une image à gauche pour que le texte soit écrit a
 
 Ici, on utilise aussi les valeurs logiques pour les marges afin de s'assurer que les marges sont correctement positionnées, quel que soit le mode d'écriture.
 
-> **Note :** Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
+> [!NOTE]
+> Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
 
 ### Faut-il utiliser les propriétés physiques ou logiques&nbsp;?
 

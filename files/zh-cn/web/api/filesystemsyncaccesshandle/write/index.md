@@ -2,7 +2,7 @@
 title: FileSystemSyncAccessHandle：write() 方法
 slug: Web/API/FileSystemSyncAccessHandle/write
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
@@ -26,7 +26,8 @@ write(buffer, options)
     - `at`
       - : 一个表示应当从文件何处开始写入缓冲区的字节偏移量数字。
 
-> **备注：** 你无法直接操作 `ArrayBuffer` 中的内容，应该先创建一个像 {{jsxref("Int8Array")}} 或者 {{jsxref("DataView")}} 这样的类型化数组对象，用来把缓冲区表示成特定的格式，然后再用类型化数组对象来读写缓冲区的内容。
+> [!NOTE]
+> 你无法直接操作 `ArrayBuffer` 中的内容，应该先创建一个像 {{jsxref("Int8Array")}} 或者 {{jsxref("DataView")}} 这样的类型化数组对象，用来把缓冲区表示成特定的格式，然后再用类型化数组对象来读写缓冲区的内容。
 
 ### 返回值
 
@@ -81,7 +82,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
+> [!NOTE]
+> 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地规定为异步方法。某些浏览器的旧版本是依照异步方式来实现这些方法的，不过，现今所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 规范
 
@@ -94,4 +96,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.google.cn/docs/capabilities/web-apis/file-system-access)

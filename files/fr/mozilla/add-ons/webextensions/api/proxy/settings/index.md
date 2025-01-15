@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier les paramètres de proxy du navigateur.
 
-> **Note :** La possibilité de modifier les paramètres de proxy nécessite un accès à une fenêtre privée car les paramètres de proxy affectent à la fois les fenêtres privées et non privées. Par conséquent, si une extension n'a pas reçu l'autorisation de fenêtre privée, les appels à `proxy.settings.set()` lanceront une exception.
+> [!NOTE]
+> La possibilité de modifier les paramètres de proxy nécessite un accès à une fenêtre privée car les paramètres de proxy affectent à la fois les fenêtres privées et non privées. Par conséquent, si une extension n'a pas reçu l'autorisation de fenêtre privée, les appels à `proxy.settings.set()` lanceront une exception.
 
 La valeur sous-jacente est un objet avec les propriétés énumérées ci-dessous.
 

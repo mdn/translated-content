@@ -11,7 +11,8 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
 
-> **メモ:** optgroup 要素を入れ子にすることはできません。
+> [!NOTE]
+> optgroup 要素を入れ子にすることはできません。
 
 ## 属性
 

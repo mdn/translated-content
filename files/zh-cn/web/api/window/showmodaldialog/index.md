@@ -30,7 +30,8 @@ returnVal = window.showModalDialog(uri[, arguments][, options]);
 | `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | If this argument's value is `on`, `yes`, or 1, the dialog window can be resized by the user; otherwise its size is fixed. The default value is `no`. |
 | `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | If this argument's value is `on`, `yes`, or 1, the dialog window has scroll bars; otherwise its size is fixed. The default value is `no`.            |
 
-> **备注：** Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
+> [!NOTE]
+> Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
 
 ## Compatibility
 
@@ -38,7 +39,7 @@ Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox
 
 ## Examples
 
-[Try out `showModalDialog()`](/samples/domref/showModalDialog.html).
+[Try out `showModalDialog()`](https://mdn.dev/archives/media/samples/domref/showModalDialog.html).
 
 ## Notes
 
@@ -47,4 +48,4 @@ Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox
 ## Specification
 
 - [`showModalDialog()`](https://msdn.microsoft.com/en-us/library/ms536759%28VS.85%29.aspx?f=255&MSPPError=-2147217396)
-- [HTML5 Dialogs implemented using separate documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)
+- [HTML5 Dialogs implemented using separate documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)

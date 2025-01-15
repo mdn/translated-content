@@ -128,7 +128,8 @@ scroll-margin: unset;
 
 つまり、真ん中の子要素を過ぎてスクロールした場合、2 番目の `<div>` の左端から `1rem`、3 番目の `<div>` の左端から `2rem` のところでスナップすることになります。
 
-> **メモ:** ここでは `scroll-margin` をすべての辺に一度に設定していますが、実際に関係するのは先頭側だけです。例えば `scroll-margin-inline-start: 1rem` や `scroll-margin: 0 0 0 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
+> [!NOTE]
+> ここでは `scroll-margin` をすべての辺に一度に設定していますが、実際に関係するのは先頭側だけです。例えば `scroll-margin-inline-start: 1rem` や `scroll-margin: 0 0 0 1rem` などのように、一辺のみにスクロールマージンを設定しても同様に機能します。
 
 #### 結果
 
@@ -146,5 +147,5 @@ scroll-margin: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
 - [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)

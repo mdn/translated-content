@@ -11,7 +11,7 @@ HTML ドラッグ & ドロップインターフェイスは、ウェブアプリ
 
 ドラッグ & ドロップの主な手順は、ドロップゾーン（ファイルドロップの対象要素）を定義することと、 {{domxref("HTMLElement/drop_event", "drop")}} および {{domxref("HTMLElement/dragover_event", "dragover")}} イベントのイベントハンドラーを定義することです。これらの手順は、コード例を含め、下記で記述します。完全なソースコードは [MDN のドラッグ & ドロップリポジトリー](https://github.com/mdn/dom-examples/tree/main/drag-and-drop)で利用できます（プルリクエストや issue を歓迎します）。
 
-なお、 {{domxref("HTML_Drag_and_Drop_API","HTML ドラッグ & ドロップ", "", 1)}}では、ファイルのドラッグ & ドロップに対応するために 2 つの異なる形の API を定義しています。一方の API は {{domxref("DataTransfer")}} インターフェイスで、もう一方の API は {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスです。この例では、両方の API の使用方法を説明します （そして、Gecko 固有のインターフェースは一切使用しません）。
+なお、 {{domxref("HTML_Drag_and_Drop_API","HTML ドラッグ & ドロップ", "", 1)}}では、ファイルのドラッグ & ドロップに対応するために 2 つの異なる形の API を定義しています。一方の API は {{domxref("DataTransfer")}} インターフェイスで、もう一方の API は {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスです。この例では、両方の API の使用方法を説明します （そして、Gecko 固有のインターフェイスは一切使用しません）。
 
 ## ドロップゾーンの定義
 

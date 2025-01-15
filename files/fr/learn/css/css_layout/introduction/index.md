@@ -67,17 +67,18 @@ Notez que le HTML est affiché dans l'ordre exact où il est dans le code source
 
 Les éléments disposés en empilement sont désignés comme étant des éléments _blocs_, par opposition aux éléments _en ligne_ qui apparaissent l'un après l'autre telle la succession de mots distincts d'un paragraphe.
 
-> **Note :** «&nbsp;Block Direction&nbsp;» (Sens d'empilement) définit le sens dans lequel les éléments blocs sont disposés. Le sens d'empilement est vertical pour une langue comme l'anglais dont le mode d'écriture est horizontal. Ce sens sera horizontal pour toute langue avec un mode d'écriture vertical, comme le japonais. La «&nbsp;Inline Direction » (sens d'écriture) correspond à celle dont les contenus en ligne (comme une phrase) sont disposés.
+> [!NOTE]
+> «&nbsp;Block Direction&nbsp;» (Sens d'empilement) définit le sens dans lequel les éléments blocs sont disposés. Le sens d'empilement est vertical pour une langue comme l'anglais dont le mode d'écriture est horizontal. Ce sens sera horizontal pour toute langue avec un mode d'écriture vertical, comme le japonais. La «&nbsp;Inline Direction » (sens d'écriture) correspond à celle dont les contenus en ligne (comme une phrase) sont disposés.
 
 Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les éléments de leur cours normal&nbsp;; toutefois, pour la plupart des éléments de la page, ce cours normal crée exactement la mise en page dont vous avez besoin. C'est pourquoi il est si important de commencer avec un document HTML bien structuré, car vous pouvez alors travailler la façon dont les choses seront disposées par défaut au lieu de lutter contre cette disposition.
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
-- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.
-- **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/CSS_Columns) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
+- **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/CSS_multicol_layout) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
 
 ## La propriété «&nbsp;display »
 
@@ -89,7 +90,7 @@ En plus de pouvoir changer la présentation par défaut en faisant passer un él
 
 ## Flexbox
 
-Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
+Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_flexible_box_layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
 
 Le balisage HTML ci-dessous crée un élément conteneur de la classe `wrapper`, dans lequel nous plaçons 3 éléments {{htmlelement("div")}}. Par défaut ces éléments s'afficheront en tant qu'éléments blocs, les uns sous les autres, dans ce document en langue française.
 
@@ -163,7 +164,8 @@ En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe de
 
 {{ EmbedLiveSample('Définir_la_propriété_flex', '300', '200') }}
 
-> **Note :** Ce n'est qu'une très brève introduction aux possibilités de Flexbox&nbsp;: pour en apprendre plus, voyez notre article sur [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+> [!NOTE]
+> Ce n'est qu'une très brève introduction aux possibilités de Flexbox&nbsp;: pour en apprendre plus, voyez notre article sur [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 
 ## Disposition en trame
 
@@ -257,7 +259,8 @@ Une fois la trame créée, vous pouvez y placer explicitement les éléments au 
 
 {{ EmbedLiveSample('Placer_des_objets_sur_la_grille', '300', '330') }}
 
-> **Note :** Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées&nbsp;; pour en savoir plus, voyez l'article [Disposition tramée](/fr/docs/Learn/CSS/CSS_layout/Grids).
+> [!NOTE]
+> Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées&nbsp;; pour en savoir plus, voyez l'article [Disposition tramée](/fr/docs/Learn/CSS/CSS_layout/Grids).
 
 La suite de ce guide porte sur d'autres méthodes de mise en page. Elles ont moins d'importance pour la structure générale de la mise en page, mais peuvent tout de même vous aider à réaliser des tâches spécifiques. En comprenant la nature de chaque tâche de mise en page, vous découvrez rapidement, en regardant un composant particulier de votre design, que le type de mise en page le plus adapté est souvent évident.
 
@@ -323,7 +326,8 @@ p {
 
 {{ EmbedLiveSample('Flotteurs_boîtes_flottantes', '100%', 600) }}
 
-> **Note :** Les boîtes flottantes sont précisément expliquées dans la leçon à propos des propriétés [float et clear](/fr/docs/Learn/CSS/CSS_layout/Floats). Précédant les techniques telles que Flexbox et les trames, les boîtes flottantes étaient utilisées comme méthode pour créer des dispositions en colonnes. Vous rencontrerez peut‑être encore ce méthodes sur le Web ; nous les expliciterons dans la leçon sur les [Méthodes de mise en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> [!NOTE]
+> Les boîtes flottantes sont précisément expliquées dans la leçon à propos des propriétés [float et clear](/fr/docs/Learn/CSS/CSS_layout/Floats). Précédant les techniques telles que Flexbox et les trames, les boîtes flottantes étaient utilisées comme méthode pour créer des dispositions en colonnes. Vous rencontrerez peut‑être encore ce méthodes sur le Web ; nous les expliciterons dans la leçon sur les [Méthodes de mise en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Techniques de positionnement
 
@@ -626,7 +630,8 @@ body {
 
 {{ EmbedLiveSample('Positionnement_collant', '100%', 200) }}
 
-> **Note :** pour plus de précisions à propos du positionnement, voir l'article [Positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning).
+> [!NOTE]
+> Pour plus de précisions à propos du positionnement, voir l'article [Positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning).
 
 ## Les tableaux CSS
 

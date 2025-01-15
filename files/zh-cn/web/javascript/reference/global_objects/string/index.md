@@ -112,7 +112,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告：** 你应该基本不会将 `String` 作为构造函数使用。
+> [!WARNING]
+> 你应该基本不会将 `String` 作为构造函数使用。
 
 使用 {{jsxref("Global_Objects/eval", "eval()")}} 时，字符串原始值和 `String` 对象也会给出不同的结果。传递给 `eval` 的原始值被当作源代码处理；而 `String` 对象则被当作对象处理，返回对象。例如：
 
@@ -142,7 +143,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) 相同的算法转换数字。
 - 使用与 [`toString(10)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) 相同的算法转换 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 - [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 抛出 {{jsxref("TypeError")}}。
-- 对于对象，首先，通过依次调用其 [`[@@toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
+- 对于对象，首先，通过依次调用其 [`[Symbol.toPrimitive]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)（hint 为 `"string"`）、`toString()` 和 `valueOf()` 方法将其[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。然后将生成的原始值转换为一个字符串。
 
 有几种方法可以在 JavaScript 中实现几乎相同的效果。
 
@@ -167,7 +168,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
 除了 Unicode 字符之外，还有某些 Unicode 字符序列应视为一个视觉单元，被称为*字素簇*（grapheme cluster）。最常见的情况是 emoji：许多具有多种变体的 emoji 实际上是由多个 emoji 组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
 
-你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并将代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
+你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并将代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。另一方面，[`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -292,12 +293,13 @@ console.log(eval(s2.valueOf())); // 返回数字 4
   - : 修剪字符串开头的空格。
 - {{jsxref("String.prototype.valueOf()")}}
   - : 返回指定对象的原始值。重写 {{jsxref("Object.prototype.valueOf()")}} 方法。
-- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+- [`String.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : 返回一个新的迭代器对象，该对象迭代 String 值的码位，将每个码位作为 String 值返回。
 
 ## HTML 包装器方法
 
-> **警告：** 已弃用。请避免使用这些方法。
+> [!WARNING]
+> 已弃用。请避免使用这些方法。
 >
 > 它们的用途有限，因为它们基于非常古老的 HTML 标准并且仅提供当前可用的 HTML 标记和属性的一个子集。现在已经为它们创建了已弃用或非标准的标记。此外，它们在没有任何验证或清理的情况下进行简单的字符串连接，这使得它们在使用 [`innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML) 直接插入时成为潜在的安全威胁。请改用 [DOM API](/zh-CN/docs/Web/API/Document_Object_Model)，例如 [`document.createElement()`](/zh-CN/docs/Web/API/Document/createElement)。
 
@@ -366,5 +368,5 @@ String(undefinedVar); // "undefined"
 
 ## 参见
 
-- [文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)指南
+- [数字与字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)指南
 - {{jsxref("RegExp")}}

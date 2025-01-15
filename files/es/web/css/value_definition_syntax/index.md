@@ -103,11 +103,12 @@ Pero no con:
 - `bold` porque ambos componentes deben aparecer en el valor
 - `bold 1em bold` porque ambos componentes deben aparecer solo una vez
 
-> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length> bold thin` pero no a `bold <length> thin`.
+> [!NOTE]
+> Yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length> bold thin` pero no a `bold <length> thin`.
 
 ### Barra doble
 
-Separar dos o mas componentes por una _barra doble_, `||`, significa que todas las entidades son opcionales: **al menos una debe estar presente, y pueden aparecer en cualquier orden.** Típicamente ésto es usado para definir los diferentes valores de una [propiedad abreviada](/es/docs/CSS/Shorthand_properties).
+Separar dos o mas componentes por una _barra doble_, `||`, significa que todas las entidades son opcionales: **al menos una debe estar presente, y pueden aparecer en cualquier orden.** Típicamente ésto es usado para definir los diferentes valores de una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties).
 
 ```
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -124,7 +125,8 @@ Pero no con:
 - `blue yellow` porque un componente debe aparecer al menos una vez.
 - `bold` porque no es una palabra clave permitida como valor de ninguna de las entidades.
 
-> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length> bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente `thin && <length>`
+> [!NOTE]
+> El doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length> bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente `thin && <length>`
 
 ### Barra simple
 
@@ -150,7 +152,8 @@ Pero no
 - `center 3%` porque solo uno de los componentes debe estar presente
 - `3em 4.5em` porque un componente debe estar presente máximo una vez.
 
-> **Nota:** la barra doble tiene precedencia sobre la barra simple, quiere decir que `bold | thin || <length>` es equivalente a `bold | [ thin || <length> ]`. Describe `bold`, `thin`, `<length>`, `<length> thin`, o `thin <length>` pero no `bold <length>` porque solo una entidad de cada lado del combinador `|` puede estar presente.
+> [!NOTE]
+> La barra doble tiene precedencia sobre la barra simple, quiere decir que `bold | thin || <length>` es equivalente a `bold | [ thin || <length> ]`. Describe `bold`, `thin`, `<length>`, `<length> thin`, o `thin <length>` pero no `bold <length>` porque solo una entidad de cada lado del combinador `|` puede estar presente.
 
 ## Multiplicadores de valores de componentes
 
@@ -357,4 +360,4 @@ Pero no:
 
 ## Vea también
 
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

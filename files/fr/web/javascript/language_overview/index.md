@@ -11,7 +11,8 @@ Il peut être utile de commencer avec un aperçu de l'histoire de ce langage. Ja
 
 Quelques mois plus tard, Microsoft a lancé avec Internet Explorer 3 une version du langage globalement compatible, appelée JScript. Quelques mois après, Netscape a soumis le langage à l'[Ecma International](https://www.ecma-international.org/), une organisation de normalisation européenne, ce qui a permis d'aboutir à la première édition du standard [ECMAScript](/fr/docs/Glossary/ECMAScript) en 1997. Ce standard a reçu une mise à jour importante appelée [ECMAScript edition 3](https://www.ecma-international.org/publications/standards/Ecma-262.htm) en 1999, et est resté relativement stable depuis. La quatrième édition a été abandonnée suite à des différends portants sur la complexité du langage. De nombreuses sections de la quatrième édition ont été utilisées pour servir de fondation à la cinquième édition d'ECMAScript, publiée en décembre 2009. La sixième édition, qui apporte des nouveautés majeures, a été publiée en juin 2015.
 
-> **Note :** Dans la suite de cet article et à des fins de simplicité, nous utiliserons les termes «&nbsp;JavaScript&nbsp;» et «&nbsp;ECMAScript&nbsp;» pour désigner la même chose.
+> [!NOTE]
+> Dans la suite de cet article et à des fins de simplicité, nous utiliserons les termes «&nbsp;JavaScript&nbsp;» et «&nbsp;ECMAScript&nbsp;» pour désigner la même chose.
 
 Contrairement à la plupart des langages de programmation, JavaScript n'a pas de concept d'entrée ou de sortie. Il est conçu pour s'exécuter comme un langage de script dans un environnement hôte, et c'est à cet environnement de fournir des mécanismes de communication avec le monde extérieur. L'environnement hôte le plus commun est un navigateur, mais des interpréteurs JavaScript existent également dans Adobe Acrobat, Photoshop, les images SVG, le moteur de widgets de Yahoo!, et même au sein d'environnements côté serveur tels que [Node.js](https://nodejs.org/). Cette liste ne se limite pas qu'à ces éléments et on retrouve également JavaScript dans les bases de données NoSQL telles que [Apache CouchDB](https://couchdb.apache.org/), les ordinateurs embarqués ou encore des environnements de bureaux comme [GNOME](https://www.gnome.org/) (l'une des interfaces graphiques les plus populaires des systèmes d'exploitation GNU/Linux), etc.
 
@@ -29,7 +30,7 @@ Commençons par nous intéresser aux briques de base de tout langage : les types
 - Les objets : [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - Les symboles : [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (apparus avec la sixième édition d'ECMAScript, ES2015)
 
-On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), qui sont relativement étranges. Les [tableaux ou `Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) permettent d'organiser des séries d'objets au sein d'un même objet. Les [dates (`Date`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et les [expressions rationnelles (`RegExp`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) qui sont également des objets nativement disponibles en JavaScript. Afin d'être tout à fait précis, les fonctions sont aussi une sorte particulière d'objets, de sorte que le diagramme de types ressemble plutôt à ceci :
+On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), qui sont relativement étranges. Les [tableaux ou `Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) permettent d'organiser des séries d'objets au sein d'un même objet. Les [dates (`Date`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et les [expressions rationnelles (`RegExp`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) qui sont également des objets nativement disponibles en JavaScript. Afin d'être tout à fait précis, les fonctions sont aussi une sorte particulière d'objets, de sorte que le diagramme de types ressemble plutôt à ceci :
 
 - [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
@@ -43,7 +44,7 @@ On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Object
   - [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
   - [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-- [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)
 - [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 Enfin, il y a également quelques types natifs pour gérer les exceptions : [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error). Pour garder une approche simple, nous utiliserons la première de ces listes pour présenter les types.
@@ -158,7 +159,8 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
 
-> **Note :** Les fonctions [`parseFloat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) et [`parseInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt) traitent une chaîne de caractères jusqu'à ce qu'elles atteignent un caractère qui n'est pas valide pour le format numérique indiqué, puis renvoient le nombre traité jusqu'à ce point. Cependant, l'opérateur "+" convertit simplement la chaîne à `NaN` à partir du moment où la chaîne contient le moindre caractère non valide. Vous pouvez tester ce comportement en manipulant la chaîne "10.2abc" avec chaque méthode dans la console afin de mieux comprendre les différences.
+> [!NOTE]
+> Les fonctions [`parseFloat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) et [`parseInt()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt) traitent une chaîne de caractères jusqu'à ce qu'elles atteignent un caractère qui n'est pas valide pour le format numérique indiqué, puis renvoient le nombre traité jusqu'à ce point. Cependant, l'opérateur "+" convertit simplement la chaîne à `NaN` à partir du moment où la chaîne contient le moindre caractère non valide. Vous pouvez tester ce comportement en manipulant la chaîne "10.2abc" avec chaque méthode dans la console afin de mieux comprendre les différences.
 
 ## Les chaînes de caractères
 
@@ -182,7 +184,7 @@ C'est notre première rencontre avec les objets JavaScript ! Les chaînes peuven
 
 ## Les autres types
 
-JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), qui est un objet de type `object` indiquant une absence délibérée de valeur, et [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est un objet de type `undefined` indiquant une variable non initialisée — c'est-à-dire qui n'a pas encore été assignée. Nous parlerons des variables plus tard, mais en JavaScript il est possible de déclarer une variable sans lui assigner de valeur. Si vous faites cela, le type de la variable sera `undefined` qui est une constante.
+JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), qui est un objet de type `object` indiquant une absence délibérée de valeur, et [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est un objet de type `undefined` indiquant une variable non initialisée — c'est-à-dire qui n'a pas encore été assignée. Nous parlerons des variables plus tard, mais en JavaScript il est possible de déclarer une variable sans lui assigner de valeur. Si vous faites cela, le type de la variable sera `undefined` qui est une constante.
 
 JavaScript dispose d'un type booléen, dont les valeurs possibles sont `true` (vrai) et `false` (faux). L'un et l'autre sont des mots clés. Toute valeur peut être convertie en une valeur booléenne selon les règles suivantes :
 
@@ -503,11 +505,13 @@ obj.for = "Simon"; // erreur de syntaxe, car "for" est un mot réservé
 obj["for"] = "Simon"; // fonctionne très bien
 ```
 
-> **Note :** À partir d'ECMAScript 5, les mots réservés peuvent être utilisés comme noms de propriétés d'objets « en vrac ». Cela signifie qu'ils n'ont pas besoin d'être « habillés » de guillemets lors de la définition des littéraux d'objet. Voir [la spécification ES5](https://es5.github.io/#x7.6.1).
+> [!NOTE]
+> À partir d'ECMAScript 5, les mots réservés peuvent être utilisés comme noms de propriétés d'objets « en vrac ». Cela signifie qu'ils n'ont pas besoin d'être « habillés » de guillemets lors de la définition des littéraux d'objet. Voir [la spécification ES5](https://es5.github.io/#x7.6.1).
 
 Pour en savoir plus sur les objets et les prototypes, voir [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object). Pour une explication des prototypes d'objets et des chaînes de prototypes, voir [l'héritage et la chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
-> **Note :** À partir d'ECMAScript 2015, les clés des objets peuvent être définies par la variable en utilisant la notation entre parenthèses lors de sa création. `{[phoneType] : 12345}` est possible au lieu de simplement `var userPhone = {}; userPhone[phoneType] = 12345;`.
+> [!NOTE]
+> À partir d'ECMAScript 2015, les clés des objets peuvent être définies par la variable en utilisant la notation entre parenthèses lors de sa création. `{[phoneType] : 12345}` est possible au lieu de simplement `var userPhone = {}; userPhone[phoneType] = 12345;`.
 
 ## Les tableaux
 
@@ -769,7 +773,8 @@ En JavaScript, les fonctions sont également des objets. Il est donc possible de
 
 ## Les objets personnalisés
 
-> **Note :** Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects).
+> [!NOTE]
+> Pour une approche plus détaillée de la programmation orientée objet en JavaScript, voir l'[Introduction à JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects).
 
 Dans la programmation orientée objet classique, les objets sont des collections de données et de méthodes opérant sur ces données. Imaginons un objet personne avec les champs prénom et nom. Il y a deux manières d'afficher son nom complet : de la façon « prénom nom » ou de la façon « nom prénom ». À l'aide des fonctions et des objets vus précédemment, voici une manière de le faire :
 

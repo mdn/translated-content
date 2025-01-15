@@ -76,13 +76,15 @@ express
 
 Também pode ser escolhido um "view" (_template)_ usando`--view` e/ou um gerador de CSS usando `--css`.
 
-> **Nota:** As outras opções para escolher os mecanismos de modelo (e.g. `--hogan`, `--ejs`, `--hbs` etc.) são preteridas. Use `--view` (ou `-v`)!
+> [!NOTE]
+> As outras opções para escolher os mecanismos de modelo (e.g. `--hogan`, `--ejs`, `--hbs` etc.) são preteridas. Use `--view` (ou `-v`)!
 
 ### Qual _engine_ de "view" devo usar?
 
 O _Express Application Generator_ permite que você configure vários mecanismos populares de exibição/modelagem, incluindo [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), e [Vash](https://www.npmjs.com/package/vash), embora escolha Jade por padrão se você não especificar uma opção de visualização. O próprio Express também pode suportar um grande número de outras linguagens de modelagem [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
-> **Nota:** Se você deseja usar um mecanismo de modelo que não é suportado pelo gerador, consulte [Usando mecanismos de modelo com o Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) e a documentação para seu mecanismo de exibição de destino.
+> [!NOTE]
+> Se você deseja usar um mecanismo de modelo que não é suportado pelo gerador, consulte [Usando mecanismos de modelo com o Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) e a documentação para seu mecanismo de exibição de destino.
 
 De um modo geral, você deve selecionar um mecanismo de modelagem que forneça todas as funcionalidades de que você precisa e permita que você seja mais produtivo - ou em outras palavras, da mesma forma que você escolhe qualquer outro componente! Algumas das coisas a considerar ao comparar mecanismos de modelo:
 
@@ -106,7 +108,7 @@ Para este projeto, usaremos o [Pug](https://pugjs.org/api/getting-started.html) 
 
 ### What CSS stylesheet engine should I use?
 
-The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](http://lesscss.org/), [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
+The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](http://stylus-lang.com/).
 
 > **Nota:**CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 
@@ -161,7 +163,8 @@ The generator will create (and list) the project's files.
 
 At the end of the output, the generator provides instructions on how you install the dependencies (as listed in the **package.json** file) and then how to run the application (the instructions above are for Windows; on Linux/macOS they will be slightly different).
 
-> **Nota:** When using Windows, the && and & assumes you are using the Command Prompt. If you are using the new default PowerShell terminal do not concatenate the commands with && and &. Instead set the DEBUG environment variable with $ENV:DEBUG = "express-locallibrary-tutorial:\*";. The npm start can be followed by the npm start.
+> [!NOTE]
+> When using Windows, the && and & assumes you are using the Command Prompt. If you are using the new default PowerShell terminal do not concatenate the commands with && and &. Instead set the DEBUG environment variable with $ENV:DEBUG = "express-locallibrary-tutorial:\*";. The npm start can be followed by the npm start.
 
 ## Running the skeleton website
 
@@ -196,7 +199,8 @@ You should see a browser page that looks like this:
 
 You have a working Express application, serving itself to _localhost:3000_.
 
-> **Nota:** You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
+> [!NOTE]
+> You could also start the app just using the `npm start` command. Specifying the DEBUG variable as shown enables console logging/debugging. For example, when you visit the above page you'll see debug output like this:
 >
 > ```bash
 > >SET DEBUG=express-locallibrary-tutorial:* & npm start
@@ -256,7 +260,8 @@ We can now start the server in almost exactly the same way as previously, but wi
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **Nota:** Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
+> [!NOTE]
+> Now if you edit any file in the project the server will restart (or you can restart it by typing `rs` on the command prompt at any time). You will still need to reload the browser to refresh the page.
 >
 > We now have to call "`npm run <scriptname>`" rather than just `npm start`, because "start" is actually an NPM command that is mapped to the named script. We could have replaced the command in the _start_ script but we only want to use _nodemon_ during development, so it makes sense to create a new script command.
 
@@ -384,7 +389,8 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 ```
 
-> **Nota:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
+> [!NOTE]
+> At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
 
 Next, we create the `app` object using our imported _express_ module, and then use it to set up the view (template) engine. There are two parts to setting up the engine. First, we set the '`views`' value to specify the folder where the templates will be stored (in this case the subfolder **/views**). Then we set the '`view engine`' value to specify the template library (in this case "pug").
 
@@ -413,7 +419,8 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 ```
 
-> **Nota:** The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example, if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
+> [!NOTE]
+> The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example, if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
 
 The last middleware in the file adds handler methods for errors and HTTP 404 responses.
 

@@ -26,7 +26,8 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
     - _maximum {{optional_inline}}_
       - : 以 WebAssembly 页面为单位，可允许 WebAssembly 内存的 `最大值`。当存在此属性时，此参数用于提示引擎预先保留内存。但是，引擎可能会忽略或限制此预留请求。通常情况下大多数 WebAssembly 模块不需要设置 `最大值`。
 
-> **备注：** A WebAssembly 页面的大小为一个常量 65,536 字节，即 64KB。
+> [!NOTE]
+> A WebAssembly 页面的大小为一个常量 65,536 字节，即 64KB。
 
 ### 异常
 
@@ -35,7 +36,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 
 ## `Memory` 实例
 
-所有 `Memory` 实例都继承自 `Memory()` 构造函数的 [原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype) — 这个原型可被修改并影响到所有的 `Memory` 实例。
+所有 `Memory` 实例都继承自 `Memory()` 构造函数的 [原型对象](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) — 这个原型可被修改并影响到所有的 `Memory` 实例。
 
 ### 实例属性
 

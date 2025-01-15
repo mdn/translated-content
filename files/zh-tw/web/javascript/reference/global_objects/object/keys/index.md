@@ -125,7 +125,7 @@ if (!Object.keys) {
 
 請注意以上的代碼片段在 IE7 中( IE8 也有可能 )，從不同的 window 傳入物件將包含非可列舉的 key 。
 
-較精簡的瀏覽器 Polyfill，請參閱 [Javascript - Object.keys Browser Compatibility](http://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html).
+較精簡的瀏覽器 Polyfill，請參閱 [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com/2012/04/javascript-objectkeys-browser.html).
 
 ## 規範
 
@@ -137,7 +137,7 @@ if (!Object.keys) {
 
 ## 參見
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

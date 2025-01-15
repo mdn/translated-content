@@ -43,7 +43,8 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 可以通过移除不同级别的菜单之间的重叠，或者使用 ID 选择器指定独立的（不同的）z-index 值，或者减少 HTML 的层级来解决这个问题。
 
-> **备注：** 在源码中你会看到三级菜单和二级菜单是由一个绝对定位元素包含很多 div 来实现的，这种方式在需要同时定位一组元素时很有用。
+> [!NOTE]
+> 在源码中你会看到三级菜单和二级菜单是由一个绝对定位元素包含很多 div 来实现的，这种方式在需要同时定位一组元素时很有用。
 
 ### 示例源码
 
@@ -152,17 +153,17 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_examp
 
 ### 相关文章
 
-- [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/zh-CN/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
-- [Adding z-index](/zh-CN/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
-- [The stacking context](/zh-CN/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/zh-CN/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking without z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
+- [Stacking and float](/zh-CN/docs/CSS/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
+- [Adding z-index](/zh-CN/docs/CSS/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
+- [The stacking context](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/zh-CN/docs/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
 
 ### 原文信息
 
 - Author(s): Paolo Lombardi
-- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/)
+- This article is the english translation of an article I wrote in italian for [YappY](http://www.yappy.it). I grant the right to share all the content under [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/)
 - Last Updated Date: July 9th, 2005
 
 **Note**: the reason the sample image looks wrong - with the second level 2 overlapping the level 3 menus - is because level 2 has opacity, which creates a new stacking context. Basically, this whole sample page is incorrect and misleading.

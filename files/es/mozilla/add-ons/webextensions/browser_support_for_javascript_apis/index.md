@@ -9,7 +9,8 @@ l10n:
 
 {{WebExtAllCompatTables}}
 
-> **Nota:** Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la licencia Creative Commons Attribution 3.0 United States License.
+> [!NOTE]
+> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la licencia Creative Commons Attribution 3.0 United States License.
 
 ## Véase también
 

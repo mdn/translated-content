@@ -24,7 +24,8 @@ l10n:
 
 登録されインストールされると、Web Share Target API を用いる PWA は電子メール、メッセンジャー、そしてその他の共有されるコンテンツを受け取れるネイティブアプリといったシステム上の通常の共有先とともに、コンテンツの共有先として振る舞います。
 
-> **メモ:** Web Share API を用いてデータを共有したい場合、[Web Share API](/ja/docs/Web/API/Web_Share_API) および [`navigator.share()`](/ja/docs/Web/API/Navigator/share) を参照してください。
+> [!NOTE]
+> Web Share API を用いてデータを共有したい場合、[Web Share API](/ja/docs/Web/API/Web_Share_API) および [`navigator.share()`](/ja/docs/Web/API/Navigator/share) を参照してください。
 
 ## プロパティ
 
@@ -154,7 +155,7 @@ self.addEventListener("fetch", (event) => {
 
 ## セキュリティとプライバシー
 
-PWA は、インストールされている場合のみウェブ共有先として振る舞うことができます。[PWA をインストール可能にするには](/ja/docs/Web/Progressive_web_apps/Installable_PWAs)も参照してください。
+PWA は、インストールされている場合のみウェブ共有先として振る舞うことができます。[PWA をインストール可能にするには](/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs)も参照してください。
 
 HTML フォームから送信された場合と同様に、共有先としてアプリケーションに送られたデータは注意して扱うべきです。使う前に必ず入力データを検証してください。
 

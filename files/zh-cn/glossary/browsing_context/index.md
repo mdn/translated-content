@@ -15,4 +15,5 @@ l10n:
 
 ## 参见
 
-- 参见 {{glossary("origin")}}
+- 相关术语：
+  - {{glossary("Origin", "来源")}}

@@ -25,7 +25,8 @@ valueOf()
 
 指定されたオブジェクトのプリミティブ値を返します。
 
-> **メモ:** 型変換の際に `valueOf` が有益であるためには、プリミティブを返す必要があります。すべてのプリミティブ型は自分自身で `valueOf()` メソッドを持っているので、一般的に `aPrimitiveValue.valueOf()` を呼び出しても `Object.prototype.valueOf()` は呼び出されません。
+> [!NOTE]
+> 型変換の際に `valueOf` が有益であるためには、プリミティブを返す必要があります。すべてのプリミティブ型は自分自身で `valueOf()` メソッドを持っているので、一般的に `aPrimitiveValue.valueOf()` を呼び出しても `Object.prototype.valueOf()` は呼び出されません。
 
 ## 解説
 

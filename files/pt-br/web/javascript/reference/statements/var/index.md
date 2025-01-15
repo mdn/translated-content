@@ -66,7 +66,7 @@ console.log(a, b); // Throws a ReferenceError.
 // A propriedade 'b' foi deletada e não existe mais.
 ```
 
-Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. **Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global**. E o modo restrito ([strict mode](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.
+Por conta dessas três diferenças, falha para declarar variáveis, muito provavelmente, levar a resultados inesperados. **Então, é recomendado sempre declarar as variáveis, independentemente se as variáveis estão em escopo de função ou escopo global**. E o modo restrito ([strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode)) do ECMAScript 5 sempre lançará uma exceçao quando o código atribuir um valor a uma variável não declarada.
 
 ### var hoisting
 

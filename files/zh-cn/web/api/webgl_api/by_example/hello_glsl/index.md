@@ -3,11 +3,12 @@ title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
 
 该例子将演示一个绘制固态颜色的矩形的简单着色器程序。
 
-> **备注：** 本例子能在大多数现代桌面版浏览器上运行。但或许不能在移动端或者古老的浏览器上运行。如果 canvas 显示一片空白，你可以试着用下一个例子检查一下输出是否绘制的是同样的图形。但要记住在前往下一个例子之前，要仔细阅读本页并动手写代码。
+> [!NOTE]
+> 本例子能在大多数现代桌面版浏览器上运行。但或许不能在移动端或者古老的浏览器上运行。如果 canvas 显示一片空白，你可以试着用下一个例子检查一下输出是否绘制的是同样的图形。但要记住在前往下一个例子之前，要仔细阅读本页并动手写代码。
 
 ### 用 GLSL 语言写 Hello World 程序
 
@@ -148,4 +149,4 @@ function getRenderingContext() {
 
 该例子的源代码能在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl)获得。
 
-{{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}

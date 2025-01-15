@@ -34,7 +34,8 @@ isSupersetOf(other)
 
 ![2개의 원이 있는 벤 다이어그램. B는 완전하게 A에 속하기 때문에 A는 B의 상위집합입니다.](diagram.svg)
 
-> **참고:** 초집합 관계는 완벽한 상위집합이 아닙니다. `isSupersetOf()`는 `this`과 `other`에 동일한 요소가 포함되어 있으면 `true`를 반환합니다.
+> [!NOTE]
+> 초집합 관계는 완벽한 상위집합이 아닙니다. `isSupersetOf()`는 `this`과 `other`에 동일한 요소가 포함되어 있으면 `true`를 반환합니다.
 
 `isSupersetOf()`는 `other` 매개변수로 [유사 Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 어떠한 사용자 코드 호출없이 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Operators/this", "this")}} 인스턴스여야 합니다. 그러면 그 동작은 `this`와 `other`의 크기에 따라 달라집니다.
 

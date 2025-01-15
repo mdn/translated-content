@@ -57,7 +57,7 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 
 ## 描述
 
-`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species) 来创建一个新数组实例并返回。
+`splice()` 方法是一个[修改方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)。它可能会更改 `this` 的内容。如果指定的要插入的元素数量与要删除的元素数量不同，数组的 `length` 也将会更改。同时，它会使用 [`[Symbol.species]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species) 来创建一个新数组实例并返回。
 
 如果删除的部分是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则 `splice()` 返回的数组也是稀疏的，对应的索引为空槽。
 
@@ -206,7 +206,7 @@ console.log(arrayLike);
 
 ## 参见
 
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.concat()")}}
 - {{jsxref("Array.prototype.push()")}}

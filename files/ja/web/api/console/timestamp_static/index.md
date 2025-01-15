@@ -1,11 +1,11 @@
 ---
 title: console.timeStamp()
-slug: Web/API/console/timestamp_static
+slug: Web/API/console/timeStamp_static
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-**`console.timeStamp`** メソッドは、単一のマーカーをブラウザーのパフォーマンスツール（[Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/)）に追加します。これにより、コード内のポイントを、タイムライン上に記録されたほかのポイント、例えばレイアウトや描画のイベントなどと結びつけることができます。
+**`console.timeStamp`** メソッドは、単一のマーカーをブラウザーのパフォーマンスツール（[Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)）に追加します。これにより、コード内のポイントを、タイムライン上に記録されたほかのポイント、例えばレイアウトや描画のイベントなどと結びつけることができます。
 
 任意で、引数を指定してタイムラインにラベル付することができ、このラベルはマーカーのそばに表示されます。
 

@@ -5,13 +5,15 @@ slug: Web/HTML/Global_attributes/itemscope
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype) 通常表示表中一个有效的 URL（比如 [schema.org](http://schema.org/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
+**`itemscope`** 是一个布尔值的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 。它定义了一个与元数据关联的数据项。就是说一个元素的 **`itemscope`** 属性会创建一个项，包含了一组与元素相关的键值对。相关的属性 [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes#itemtype) 通常表示表中一个有效的 URL（比如 [schema.org](https://schema.org/)）来表述项目和上下文。下面每个例子中的概念表都来自 [schema.org](https://schema.org/).
 
 每个 HTML 元素都可以有指定的 `itemscope` 属性。一个具有 `itemscope` 属性的元素可以没有关联的 `itemtype` ，但必须有相关的 `itemref`。
 
-> **备注：** Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
+> [!NOTE]
+> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎：Google，Microsoft，Yandex 和 Yahoo！所支持。
 
-> **备注：** 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
+> [!NOTE]
+> 获取更多关于 `itemtype` 属性的信息： <http://schema.org/Thing>
 
 ### 简单示例
 
@@ -238,7 +240,8 @@ Directions: <br>
   </tbody>
 </table>
 
-> **备注：** Google 提供了一个方便地从 HTML 提取微数据结构的工具：[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)。你可以通过上面的 HTML 试一下。
+> [!NOTE]
+> Google 提供了一个方便地从 HTML 提取微数据结构的工具：[结构化数据测试工具](https://developers.google.cn/search/docs/appearance/structured-data)。你可以通过上面的 HTML 试一下。
 
 ## 规范
 

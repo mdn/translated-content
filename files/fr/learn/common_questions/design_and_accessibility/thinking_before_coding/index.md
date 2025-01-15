@@ -37,7 +37,7 @@ Se poser ces questions et y répondre constituent la _conceptualisation_ du proj
 
 ## Pédagogie active
 
-_Il n'y a pas la pédagogie active disponible pour l'instant. [S'il-vous-plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Getting_started)_
+_Il n'y a pas la pédagogie active disponible pour l'instant. [S'il-vous-plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Community/Contributing/Getting_started)_
 
 ## Aller plus loin
 
@@ -47,7 +47,8 @@ La technique est évidemment essentielle. Les musiciens doivent maîtriser leur 
 
 Une discussion d'une heure avec des amis est un bon début, mais ce sera insuffisant. Vous devez vous asseoir et structurer vos idées pour avoir une vision claire du chemin que vous devrez parcourir afin de concrétiser vos idées. Pour ce faire, il vous suffit d'un stylo, de quelques feuilles de papier et d'un peu de temps pour répondre au moins aux questions suivantes.
 
-> **Note :** Il existe d'innombrables moyens pour mener à bien des idées de projet. Nous ne pouvons pas tous les mentionner ici (un livre entier ne suffirait pas). Ce que nous allons présenter ici est une méthode simple pour gérer ce que les professionnels appellent [l'idéation](https://fr.wikipedia.org/wiki/Idéation), [la planification](https://fr.wikipedia.org/wiki/Planification) et [la gestion de projet](https://fr.wikipedia.org/wiki/Gestion_de_projet).
+> [!NOTE]
+> Il existe d'innombrables moyens pour mener à bien des idées de projet. Nous ne pouvons pas tous les mentionner ici (un livre entier ne suffirait pas). Ce que nous allons présenter ici est une méthode simple pour gérer ce que les professionnels appellent [l'idéation](https://fr.wikipedia.org/wiki/Idéation), [la planification](https://fr.wikipedia.org/wiki/Planification) et [la gestion de projet](https://fr.wikipedia.org/wiki/Gestion_de_projet).
 
 ### Qu'est-ce que je veux accomplir exactement ?
 
@@ -186,5 +187,5 @@ Comme vous pouvez le voir, l'idée simple: « Je veux faire un site » génère 
 
 ## Prochaines étapes
 
-- Commencer à apprendre la technique [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
-- Approfondir le design et la conception [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)
+- Commencer à apprendre la technique [Comment fonctionne l'Internet ?](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- Approfondir le design et la conception [Conception d'une page web](/fr/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts)

@@ -19,7 +19,8 @@ dateObj.getUTCMilliseconds();
 
 Un entier entre 0 et 999 correspondant au nombre de millisecondes pour la date indiquée, selon le temps universel.
 
-> **Note :** Le résultat de cette méthode n'est pas le temps "Epoch". Si on veut obtenir le nombre de millisecondes depuis le premier janvier 1970, on utilisera la méthode {{jsxref("Date.prototype.getTime()")}}.
+> [!NOTE]
+> Le résultat de cette méthode n'est pas le temps "Epoch". Si on veut obtenir le nombre de millisecondes depuis le premier janvier 1970, on utilisera la méthode {{jsxref("Date.prototype.getTime()")}}.
 
 ## Exemples
 

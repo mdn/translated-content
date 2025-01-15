@@ -32,7 +32,8 @@ Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr
 | `inline-grid`                                        | `grid`                                             |
 | _autre_                                              | _inchangée_                                        |
 
-> **Note :** Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), la plupart des navigateurs récents permettront d'utiliser `float`, mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
+> [!NOTE]
+> Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), la plupart des navigateurs récents permettront d'utiliser `float`, mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
 
 ## Syntaxe
 
@@ -147,5 +148,5 @@ Parfois, on veut forcer le déplacement d'un élément sous les éléments flott
 
 ## Voir aussi
 
-- [Le contexte de formatage des blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)
+- [Le contexte de formatage des blocs](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
 - La propriété [`clear`](/fr/docs/Web/CSS/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant

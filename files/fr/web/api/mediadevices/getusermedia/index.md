@@ -9,7 +9,8 @@ La méthode **`MediaDevices.getUserMedia()`** invite l'utilisateur à autoriser 
 
 Il renvoie un {{jsxref("Promise")}} qui est résolu avec succès si l'utilisateur donne son autorisation; {{domxref("MediaStream")}} est fourni à ce moment-là. Si l'utilisateur refuse ou si le média correspondant n'est pas disponible, le {{jsxref("Promise")}} est rejetée avec respectivement `PermissionDeniedError` ou `NotFoundError`.
 
-> **Note :** Il est possible que le {{jsxref("Promise")}} renvoyé ne soit _ni_ résolu ni rejeté, car l'utilisateur n'est pas tenu de faire un choix. .
+> [!NOTE]
+> Il est possible que le {{jsxref("Promise")}} renvoyé ne soit _ni_ résolu ni rejeté, car l'utilisateur n'est pas tenu de faire un choix. .
 
 Généralement, vous accédez à l'objet {{domxref("MediaDevices")}} avec {{domxref("navigator.mediaDevices")}} , comme ceci:
 
@@ -123,7 +124,8 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
   - : L'utilisateur a spécifié que l'instance de navigation actuelle n'a pas accès au périphérique; Ou l'utilisateur a refusé l'accès pour la session en cours; Ou l'utilisateur a refusé tout l'accès aux périphériques multimédias utilisateurs dans le monde entier.
 
-    > **Note :** Les versions plus anciennes de la spécification ont utilisé `SecurityError` pour cela à la place; `SecurityError` a pris une nouvelle signification.
+    > [!NOTE]
+    > Les versions plus anciennes de la spécification ont utilisé `SecurityError` pour cela à la place; `SecurityError` a pris une nouvelle signification.
 
 - `NotFoundError`
   - : Aucune piste multimédia du type spécifié n'a été trouvée satisfaisant les contraintes données.
@@ -133,7 +135,8 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
   - : Aucun dispositif candidat répondant aux critères demandés. L'erreur est un objet de type `OverconstrainedError` et possède une propriété de `constraint` dont la valeur de chaîne est le nom d'une contrainte impossible à honorer et une propriété `message` contenant une chaîne lisible par l'homme expliquant le problème.
 
-    > **Note :** Étant donné que cette erreur peut se produire même lorsque l'utilisateur n'a pas encore autorisé l'utilisation du périphérique sous-jacent, il peut être utilisé comme surface d'empreinte digitale.
+    > [!NOTE]
+    > Étant donné que cette erreur peut se produire même lorsque l'utilisateur n'a pas encore autorisé l'utilisation du périphérique sous-jacent, il peut être utilisé comme surface d'empreinte digitale.
 
 - `SecurityError`
   - : Le support multimédia utilisateur est désactivé sur le {{domxref("Document")}} sur lequel `getUserMedia()` été appelé. Le mécanisme par lequel le support média utilisateur est activé/désactivé est laissé à la discrétion de l'utilisateur.
@@ -241,7 +244,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## Permissions
 
-Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](/fr/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
+Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](/fr/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
 
 ```js
 "permissions": {
@@ -254,7 +257,7 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple, un
 }
 ```
 
-Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
+Voir [permission: audio-capture](/fr/docs/Web/Apps/Developing/App_permissions#audio-capture) et [permission: video-capture](/fr/docs/Web/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
 
 ## Spécifications
 
@@ -269,5 +272,5 @@ Voir [permission: audio-capture](/fr/Apps/Developing/App_permissions#audio-captu
 - L'ancienne API {{domxref("navigator.getUserMedia()")}}.
 - {{domxref("mediaDevices.enumerateDevices()")}} : Apprenez les types et le nombre de périphériques que l'utilisateur dispose.
 - [WebRTC API](/fr/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/fr/docs/Web/API/Media_Streams_API)
-- [Taking webcam photos](/fr/docs/Web/API/WebRTC_API/Taking_still_photos) : un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que de la vidéo.
+- [Media Capture and Streams API (Media Streams)](/fr/docs/Web/API/Media_Capture_and_Streams_API)
+- [Taking webcam photos](/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) : un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que de la vidéo.

@@ -7,7 +7,8 @@ slug: Web/API/FileList
 
 `FileList` 型別物件通常來自 HTML {{HTMLElement("input")}} 元素 {{domxref("Document_Object_Model", "DOM")}} 物件的 `files` 屬性（{{Glossary("property/JavaScript", "property")}}）。你可以操作 `FileList` 物件來存取使用者透過 `<input type="file">` 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 {{domxref("DataTransfer")}} 物件的更多使用細節）。
 
-> **備註：** 在 Gecko 1.9.2 之前，{{HTMLElement("input")}} 元素只支援一次選取一個檔案，這代表了 `FileList` 只能夠包含一個 `File` 物件。從 Gecko 1.9.2 開始，假如 `<input>` 元素的 `multiple` 屬性（attribute）為 true，則 FileList 就可能會包含多個檔案。
+> [!NOTE]
+> 在 Gecko 1.9.2 之前，{{HTMLElement("input")}} 元素只支援一次選取一個檔案，這代表了 `FileList` 只能夠包含一個 `File` 物件。從 Gecko 1.9.2 開始，假如 `<input>` 元素的 `multiple` 屬性（attribute）為 true，則 FileList 就可能會包含多個檔案。
 
 ## 使用 FileList
 
@@ -117,10 +118,10 @@ for (var i = 0; i < files.length; i++) {
 
 ## 規範
 
-- [File upload state](http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
+{{Specifications}}
 
 ## 參見
 
-- [在網頁應用程式中使用本地檔案](/zh-TW/docs/Using_files_from_web_applications)
+- [在網頁應用程式中使用本地檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("FileReader")}}

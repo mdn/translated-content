@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-[L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
+[L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
 
 À la différence de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) qui fonctionne à l'aide de fonctions de rappel (<i lang="en">callbacks</i>), l'API <i lang="en">Fetch</i> utilise les promesses et fournit une meilleure alternative, qui peut être utilisée dans [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API). L'API <i lang="en">Fetch</i> intègre également des concepts HTTP avancés tels que [le CORS](/fr/docs/Web/HTTP/CORS) et d'autres extensions de HTTP.
 
@@ -25,7 +25,8 @@ Dans cet exemple, nous récupérons un fichier JSON sur le Web, puis on analyse 
 
 L'objet [`Response`](/fr/docs/Web/API/Response) ne contient pas directement le corps de la réponse en JSON mais fournit une représentation de l'ensemble de la réponse HTTP. Aussi, pour extraire le corps en JSON de l'objet [`Response`](/fr/docs/Web/API/Response), on utilise la méthode [`json()`](/fr/docs/Web/API/Response/json), qui renvoie une deuxième promesse dont la résolution fournit le résultat de l'analyse du corps de la réponse au format JSON.
 
-> **Note :** Voir la section [corps](#corps) pour d'autres méthodes permettant d'extraire d'autres types de contenu du corps de la réponse.
+> [!NOTE]
+> Voir la section [corps](#corps) pour d'autres méthodes permettant d'extraire d'autres types de contenu du corps de la réponse.
 
 Les requêtes de récupération sont contrôlées par la directive `connect-src` de [la politique de sécurité du contenu (<i lang="en">Content Security Policy</i> ou CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qu'elles récupèrent.
 
@@ -33,7 +34,7 @@ Les requêtes de récupération sont contrôlées par la directive `connect-src`
 
 La méthode `fetch()` permet l'utilisation optionnelle d'un deuxième paramètre, un objet `init` pour contrôler différents paramètres.
 
-Voir [la page sur la méthode `fetch()`](/fr/docs/Web/API/fetch) pour plus de détails et l'exhaustivité des options disponibles.
+Voir [la page sur la méthode `fetch()`](/fr/docs/Web/API/Window/fetch) pour plus de détails et l'exhaustivité des options disponibles.
 
 ```js
 // Exemple d'implémentation pour une requête POST
@@ -104,9 +105,11 @@ fetch("https://example.com", {
 });
 ```
 
-> **Note :** On ne pourra pas utiliser `Access-Control-Allow-Origin: *` pour les requêtes avec `credentials: 'include'`. Pour ces cas-là, il faut fournir l'origine exacte. Même si une extension de débridage du CORS est utilisée, la requête échouera.
+> [!NOTE]
+> On ne pourra pas utiliser `Access-Control-Allow-Origin: *` pour les requêtes avec `credentials: 'include'`. Pour ces cas-là, il faut fournir l'origine exacte. Même si une extension de débridage du CORS est utilisée, la requête échouera.
 
-> **Note :** Les navigateurs ne devraient pas envoyer d'informations d'authentification dans les _requêtes préparatoires_ (<i lang="en">preflight requests</i>), quelle que soit la valeur de cette option. Pour plus d'informations, voir [la section de la page CORS sur les requêtes avec informations d'authentification](/fr/docs/Web/HTTP/CORS#requêtes_avec_informations_dauthentification).
+> [!NOTE]
+> Les navigateurs ne devraient pas envoyer d'informations d'authentification dans les _requêtes préparatoires_ (<i lang="en">preflight requests</i>), quelle que soit la valeur de cette option. Pour plus d'informations, voir [la section de la page CORS sur les requêtes avec informations d'authentification](/fr/docs/Web/HTTP/CORS#requêtes_avec_informations_dauthentification).
 
 Si on souhaite uniquement envoyer les informations d'authentification lorsque l'URL de la requête se situe sur la même origine que le script appelant, on utilisera `credentials: 'same-origin'`.
 
@@ -128,7 +131,7 @@ fetch("https://example.com", {
 
 ## Téléverser des données JSON
 
-On peut utiliser [`fetch()`](/fr/docs/Web/API/fetch) pour envoyer des données au format JSON à un serveur avec une requête POST.
+On peut utiliser [`fetch()`](/fr/docs/Web/API/Window/fetch) pour envoyer des données au format JSON à un serveur avec une requête POST.
 
 ```js
 async function postJSON(donnees) {
@@ -154,7 +157,7 @@ postJSON(donnees);
 
 ## Téléverser un fichier
 
-Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/fetch).
+Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 async function upload(donneesFormulaires) {
@@ -181,7 +184,7 @@ upload(donneesFormulaires);
 
 ## Téléverser plusieurs fichiers
 
-On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/fetch).
+On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 async function uploadMultiple(donneesFormulaires) {
@@ -256,7 +259,7 @@ run();
 
 ## Vérifier la réussite de l'opération
 
-Une promesse [`fetch()`](/fr/docs/Web/API/fetch) échouera avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) s'il y a une erreur réseau ou que la politique CORS est incorrectement configurée côté serveur. En revanche, une réponse 404 qui indiquerait un problème de permission ou autre ne déclencherait pas une telle erreur. Aussi, pour bien vérifier que l'opération `fetch()` est réussie, il faudra vérifier que la promesse est tenue, mais aussi vérifier que la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) vaut `true`. Le code correspondant ressemblerait à&nbsp;:
+Une promesse [`fetch()`](/fr/docs/Web/API/Window/fetch) échouera avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) s'il y a une erreur réseau ou que la politique CORS est incorrectement configurée côté serveur. En revanche, une réponse 404 qui indiquerait un problème de permission ou autre ne déclencherait pas une telle erreur. Aussi, pour bien vérifier que l'opération `fetch()` est réussie, il faudra vérifier que la promesse est tenue, mais aussi vérifier que la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) vaut `true`. Le code correspondant ressemblerait à&nbsp;:
 
 ```js
 async function fetchImage() {
@@ -311,7 +314,8 @@ const uneAutreRequete = new Request(maRequete, monInit);
 
 Ce mécanisme de duplication est plutôt utile, car les corps des requêtes et des réponses ne peuvent être utilisés qu'une seule fois. En construisant une telle copie, on peut à nouveau utiliser la requête ou la réponse tout en adaptant les options `init` si besoin. Attention, la copie doit être effectuée avant que le corps ait été lu.
 
-> **Note :** Il existe également la méthode [`clone()`](/fr/docs/Web/API/Request/clone) pour créer une copie. Ces deux méthodes de copie échoueront si le corps de la requête ou de la réponse originale a déjà été lu. En revanche, lire le corps d'une réponse ou d'une requête clonée ne modifiera pas l'état de lecture de l'original.
+> [!NOTE]
+> Il existe également la méthode [`clone()`](/fr/docs/Web/API/Request/clone) pour créer une copie. Ces deux méthodes de copie échoueront si le corps de la requête ou de la réponse originale a déjà été lu. En revanche, lire le corps d'une réponse ou d'une requête clonée ne modifiera pas l'état de lecture de l'original.
 
 ## En-têtes
 
@@ -398,7 +402,8 @@ Les valeurs pour `guard` sont&nbsp;:
 - `immutable`
   - : Une garde qui indique que l'objet d'en-têtes est en lecture seule. Elle est principalement utilisée pour les <i lang="en">service workers</i>.
 
-> **Note :** Il n'est pas possible d'ajouter ou de modifier l'en-tête `Content-Length` d'un objet d'en-têtes de réponse avec une garde. De même, on ne pourra pas insérer d'en-tête `Set-Cookie` pour une réponse&nbsp;: les <i lang="en">service workers</i> ne sont pas autorisés à écrire des cookies dans des réponses de synthèse.
+> [!NOTE]
+> Il n'est pas possible d'ajouter ou de modifier l'en-tête `Content-Length` d'un objet d'en-têtes de réponse avec une garde. De même, on ne pourra pas insérer d'en-tête `Set-Cookie` pour une réponse&nbsp;: les <i lang="en">service workers</i> ne sont pas autorisés à écrire des cookies dans des réponses de synthèse.
 
 ## Objets `Response`
 
@@ -433,7 +438,8 @@ Le constructeur [`Response()`](/fr/docs/Web/API/Response/Response) prend deux ar
 - Un corps pour la réponse
 - Un objet d'initialisation des paramètres, semblable à celui qu'on fournit au constructeur [`Request()`](/fr/docs/Web/API/Request/Request).
 
-> **Note :** La méthode statique [`error()`](/fr/docs/Web/API/Response/error_static) renvoie une réponse d'erreur. De même, [`redirect()`](/fr/docs/Web/API/Response/redirect_static) renvoie une réponse résultant en une redirection vers l'URL indiquée. Ces méthodes sont uniquement pertinentes dans le cadre des <i lang="en">service workers</i>.
+> [!NOTE]
+> La méthode statique [`error()`](/fr/docs/Web/API/Response/error_static) renvoie une réponse d'erreur. De même, [`redirect()`](/fr/docs/Web/API/Response/redirect_static) renvoie une réponse résultant en une redirection vers l'URL indiquée. Ces méthodes sont uniquement pertinentes dans le cadre des <i lang="en">service workers</i>.
 
 ## Corps
 
@@ -456,7 +462,8 @@ Les interfaces [`Request`](/fr/docs/Web/API/Request) et [`Response`](/fr/docs/We
 - [`Request.json()`](/fr/docs/Web/API/Request/json) / [`Response.json()`](/fr/docs/Web/API/Response/json)
 - [`Request.text()`](/fr/docs/Web/API/Request/text) / [`Response.text()`](/fr/docs/Web/API/Response/text)
 
-> **Note :** Ces méthodes permettent de travailler plus facilement avec du contenu non-textuel (par rapport à ce que permettait `XMLHttpRequest`).
+> [!NOTE]
+> Ces méthodes permettent de travailler plus facilement avec du contenu non-textuel (par rapport à ce que permettait `XMLHttpRequest`).
 
 On peut fournir des corps aux requêtes en utilisant le deuxième paramètre et sa propriété `form`&nbsp;:
 
@@ -468,11 +475,11 @@ fetch("/login", {
 });
 ```
 
-Tant la requête que la réponse, ou la fonction `fetch()` essaieront de déterminer intelligemment le type de contenu. Une requête définira automatiquement un en-tête `Content-Type` si aucun n'a été fourni avec le paramètre [`options`](/fr/docs/Web/API/fetch#options).
+Tant la requête que la réponse, ou la fonction `fetch()` essaieront de déterminer intelligemment le type de contenu. Une requête définira automatiquement un en-tête `Content-Type` si aucun n'a été fourni avec le paramètre [`options`](/fr/docs/Web/API/Window/fetch#options).
 
 ## Détection de la fonctionnalité
 
-La prise en charge de l'API <i lang="en">Fetch</i> peut être détectée en vérifiant la présence de [`Headers`](/fr/docs/Web/API/Headers), [`Request`](/fr/docs/Web/API/Request), [`Response`](/fr/docs/Web/API/Response) ou [`fetch()`](/fr/docs/Web/API/fetch) au sein des portées [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker). Par exemple&nbsp;:
+La prise en charge de l'API <i lang="en">Fetch</i> peut être détectée en vérifiant la présence de [`Headers`](/fr/docs/Web/API/Headers), [`Request`](/fr/docs/Web/API/Request), [`Response`](/fr/docs/Web/API/Response) ou [`fetch()`](/fr/docs/Web/API/Window/fetch) au sein des portées [`Window`](/fr/docs/Web/API/Window) ou [`Worker`](/fr/docs/Web/API/Worker). Par exemple&nbsp;:
 
 ```js
 if (window.fetch) {
@@ -487,7 +494,7 @@ if (window.fetch) {
 La spécification de `fetch()` diffère de `jQuery.ajax()`&nbsp;:
 
 - La promesse renvoyée par `fetch()` ne lèvera pas d'exception en cas d'erreurs HTTP, même si le statut de la réponse HTTP est 404 ou 500. Dès que le serveur répond avec les en-têtes, la promesse sera bien résolue (la propriété [`Response.ok`](/fr/docs/Web/API/Response/ok) étant fixée à `false` si le statut de la réponse est en dehors de l'intervalle [200, 299]). La promesse sera uniquement rompue s'il y a une erreur réseau ou tout autre évènement qui a empêché sa complétion.
-- À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/fetch#credentials) valant `include`, `fetch()`&nbsp;:
+- À moins que `fetch()` ne soit appelé avec l'option [`credentials`](/fr/docs/Web/API/Window/fetch#credentials) valant `include`, `fetch()`&nbsp;:
   - N'enverra pas de cookies pour les requêtes vers d'autres origines
   - N'écrira pas de cookies provenant de réponses d'autres origines
 

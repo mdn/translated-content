@@ -1,11 +1,12 @@
 ---
-title: Request.mode
+title: "Request: mode プロパティ"
+short-title: mode
 slug: Web/API/Request/mode
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`mode`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストのモード（たとえば、`cors`、`no-cors`、`same-origin`、`navigate`、`websocket`）を保持します。これは、オリジン間リクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。
 
@@ -18,7 +19,10 @@ l10n:
     - `same-origin`
       - : このモードを設定してほかのオリジンにリクエストをした場合、結果はエラーになります。リクエストが常に同一オリジンに行われることを保証するために使用できます。
     - `no-cors`
-      - : メソッドが `HEAD`、`GET`、`POST` 以外にならないようにし、ヘッダーが[単純ヘッダー](https://fetch.spec.whatwg.org/#simple-header)以外のものにならないようにします。サービスワーカーがこれらのリクエストに介入した場合、[単純ヘッダー](https://fetch.spec.whatwg.org/#simple-header)以外のヘッダーを追加したり上書きしたりすることはできません。さらに、 JavaScript で結果の {{domxref("Response")}} のプロパティにアクセスすることはできません。これは、サービスワーカーがウェブの意味づけに影響を与えないようにし、ドメイン間でデータが漏れることによって生じるセキュリティとプライバシーの問題を防ぐためです。
+      - : メソッドが `HEAD`、`GET`、`POST` 以外にならないようにし、ヘッダーが {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}以外のものにならないようにします。
+        サービスワーカーがこれらのリクエストに介入した場合 {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}以外のヘッダーを追加したり上書きしたりすることはできません。
+        さらに、 JavaScript で結果の {{domxref("Response")}} のプロパティにアクセスすることはできません。
+        これは、サービスワーカーがウェブの意味づけに影響を与えないようにし、ドメイン間でデータが漏れることによって生じるセキュリティとプライバシーの問題を防ぐためです。
     - `cors`
       - : オリジン間リクエストを許可します。たとえば、サードパーティベンダーが提供する様々な API にアクセスできます。これらは、[CORS プロトコル](/ja/docs/Web/HTTP/CORS)に則ることが期待されています。[制限された](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)ヘッダーしか {{domxref("Response")}} からは見えないようになりますが、本体は読み取り可能です。
     - `navigate`

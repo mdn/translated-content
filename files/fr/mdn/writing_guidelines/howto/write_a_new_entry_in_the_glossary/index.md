@@ -13,7 +13,8 @@ Le glossaire ne sera potentiellement jamais complet, car le Web est en perpétue
 
 Contribuer au glossaire est une façon simple de rendre le Web plus compréhensible pour tout le monde. Il n'est pas nécessaire d'avoir des compétences techniques approfondies pour le faire. Les entrées du glossaire sont conçues pour être simples et concises.
 
-> **Note :** La suite de cet article explique comment créer une entrée du glossaire. Toutefois, la structure du contenu de MDN utilise le contenu anglophone comme référence. Aussi, toute page devra d'abord être créée en anglais avant d'être localisée en français. Vous pouvez également aider à la traduction du glossaire en français, voir [Localiser MDN](/fr/docs/MDN/Community/Contributing/Translated_content).
+> [!NOTE]
+> La suite de cet article explique comment créer une entrée du glossaire. Toutefois, la structure du contenu de MDN utilise le contenu anglophone comme référence. Aussi, toute page devra d'abord être créée en anglais avant d'être localisée en français. Vous pouvez également aider à la traduction du glossaire en français, voir [Localiser MDN](/fr/docs/MDN/Community/Contributing/Translated_content).
 
 ## Comment rédiger une entrée
 
@@ -25,7 +26,8 @@ Si vous avez une idée pour une nouvelle entrée, [créez une nouvelle page](htt
 
 Pour toute page du glossaire, le premier paragraphe consiste en une description simple et concise du terme. Idéalement, ce paragraphe ne devrait pas dépasser deux phrases. Assurez-vous que toute personne qui lit cette description peut immédiatement comprendre le terme qui est défini.
 
-> **Note :** Veillez à ne pas copier-coller de définitions ou de contenus provenant d'autres pages sur Internet, notamment depuis Wikipédia (les versions de sa licence sont plus restreintes et incompatibles avec celle de MDN). Le contenu de votre entrée de glossaire doit être original.
+> [!NOTE]
+> Veillez à ne pas copier-coller de définitions ou de contenus provenant d'autres pages sur Internet, notamment depuis Wikipédia (les versions de sa licence sont plus restreintes et incompatibles avec celle de MDN). Le contenu de votre entrée de glossaire doit être original.
 
 #### Rédiger une bonne entrée dans le glossaire
 

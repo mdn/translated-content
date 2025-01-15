@@ -28,7 +28,8 @@ l10n:
   </tbody>
 </table>
 
-> **備註：** 用戶端提示僅在安全來源（通過 TLS）上可訪問。應該對所有安全請求持久化 `Accept-CH` 標頭，以確保可靠地發送用戶端提示。
+> [!NOTE]
+> 用戶端提示僅在安全來源（通過 TLS）上可訪問。應該對所有安全請求持久化 `Accept-CH` 標頭，以確保可靠地發送用戶端提示。
 
 ## 語法
 
@@ -43,7 +44,8 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **備註：** 請根據接受的用戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#快取和用戶端提示)。
+> [!NOTE]
+> 請根據接受的用戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#快取和用戶端提示)。
 
 ## 規範
 

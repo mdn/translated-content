@@ -19,7 +19,7 @@ dateObj.toLocaleString([locales[, options]])
 
 Los argumentos `locales` y de `options` personalizan el comportamiento de la función y permiten que las aplicaciones especifiquen el lenguaje cuyas convenciones de formato deben ser utilizadas. En las implementaciones, que ignoran los argumentos, `locales` y `options`, el locale utilizado y la forma de la cadena devuelta dependen totalmente de la implementación.
 
-Vea el [constructor](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) de [`Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/DateTimeFormat) para detalles en esos parametros y como se usan.
+Vea el [constructor](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) de [`Intl.DateTimeFormat()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) para detalles en esos parametros y como se usan.
 
 El valor por defecto para cada componente `date-time` es {{jsxref("undefined")}}, pero si las propiedades `weekday`, `year`, `month`, `day` son todas {{jsxref("undefined")}}, entonces `year`, `month`, y `day` son asumidas como `"numeric"`.
 
@@ -135,7 +135,8 @@ For this reason you cannot expect to be able to compare the results of `toLocale
 // false in IE and Edge
 ```
 
-> **Nota:** See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
+> [!NOTE]
+> See also this [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) for more details and examples.
 
 ## Performance
 

@@ -7,7 +7,8 @@ slug: Web/API/Web_components/Using_custom_elements
 
 Um dos principais recursos do padrão de Web Components é a capacidade de criar elementos personalizados que encapsulam sua funcionalidade em uma página HTML, em vez de ter que se contentar com um lote longo e aninhado de elementos que, juntos, fornecem um recurso de página personalizada. Este artigo apresenta o uso da API de Custom Elements.
 
-> **Nota:** Custom elements são suportados por padrão no Firefox, Chrome e Edge (76). Opera e Safari até agora suportam apenas custom elements autônomos.
+> [!NOTE]
+> Custom elements são suportados por padrão no Firefox, Chrome e Edge (76). Opera e Safari até agora suportam apenas custom elements autônomos.
 
 ## Visão de alto nível
 
@@ -125,7 +126,8 @@ Agora está disponível para uso em nossa página. Em nosso HTML, nós o usamos 
   back of your card."></popup-info>
 ```
 
-> **Nota:** Você pode ver o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) aqui.
+> [!NOTE]
+> Você pode ver o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) aqui.
 
 ### Estilos internos vs. externos
 
@@ -184,7 +186,8 @@ Usar o elemento integrado em um documento da web também parece um pouco diferen
 
 Você usa um elemento `<ul>` normalmente, mas especifica o nome do elemento personalizado dentro do atributo `is`.
 
-> **Nota:** Novamente, você pode ver o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) aqui.
+> [!NOTE]
+> Novamente, você pode ver o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js) aqui.
 
 ## Usando os callbacks do ciclo de vida
 
@@ -268,7 +271,8 @@ static get observedAttributes() { return ['c', 'l']; }
 
 Isso é colocado bem no topo do construtor, em nosso exemplo.
 
-> **Nota:** Encontre o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) aqui.
+> [!NOTE]
+> Encontre o [código-fonte JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js) aqui.
 
 ## Polyfills vs. classes
 
@@ -300,4 +304,4 @@ Observe que as classes ES2015 não podem ser transpiladas de forma confiável em
 
 ## Bibliotecas
 
-Existem várias bibliotecas que são construídas em Web Components com o objetivo de aumentar o nível de abstração ao criar elementos personalizados. Algumas dessas bibliotecas são [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](http://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com) e [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element).
+Existem várias bibliotecas que são construídas em Web Components com o objetivo de aumentar o nível de abstração ao criar elementos personalizados. Algumas dessas bibliotecas são [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), [Stencil](https://stenciljs.com) e [hyperHTML-Element](https://github.com/WebReflection/hyperHTML-Element).

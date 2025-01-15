@@ -38,9 +38,9 @@ Content-Security-Policy: script-src <source> <source>;
 
 ### Sources
 
-`<source>` can be any one of the values listed in [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+`<source>` can be any one of the values listed in [CSP Source Values](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/ko/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#relevant_directives)).
 
 ## 예제
 
@@ -72,7 +72,8 @@ document.getElementById("btn").addEventListener("click", doSomething);
 
 ### 안전하지 않은 인라인 스크립트
 
-> **참고:** 인라인 스타일 및 인라인 스크립트를 허용하지 않는 것이 CSP가 제공하는 가장 큰 보안 이점 중 하나 입니다. 그러나, 인라인 스크립트 및 스타일을 사용해야만 한다면 몇가지 방법을 제공합니다.
+> [!NOTE]
+> 인라인 스타일 및 인라인 스크립트를 허용하지 않는 것이 CSP가 제공하는 가장 큰 보안 이점 중 하나 입니다. 그러나, 인라인 스크립트 및 스타일을 사용해야만 한다면 몇가지 방법을 제공합니다.
 
 인라인 스크립트 및 인라인 이벤트 핸들러를 허용하려면, `'unsafe-inline'`, 인라인 태그에 정의한 값과 동일한 nonce-source 또는 hash-source를 지정할 수 있습니다.
 

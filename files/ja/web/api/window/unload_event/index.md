@@ -8,7 +8,8 @@ l10n:
 
 {{APIRef}}
 
-> **警告:** 開発者はこのイベントを使用するのを避けてください。下記の「使用上のメモ」を参照してください。
+> [!WARNING]
+> 開発者はこのイベントを使用するのを避けてください。下記の「使用上のメモ」を参照してください。
 
 **`unload`** イベントは、文書または子リソースがアンロードされるときに発生します。
 
@@ -63,7 +64,7 @@ onunload = (event) => {};
 
 ページのアンロードイベントを検出する場合は、 `pagehide` イベントを待ち受けするのがベストです。
 
-`unload` イベントに関連する問題についての詳しい情報は、[ページライフサイクル API](https://developer.chrome.com/blog/page-lifecycle-api/#the-unload-event) ガイドを参照してください。
+`unload` イベントに関連する問題についての詳しい情報は、[ページライフサイクル API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#the-unload-event) ガイドを参照してください。
 
 ## 例
 
@@ -127,6 +128,6 @@ onunload = (event) => {};
 - [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
 - [`visibilitychange`](/ja/docs/Web/API/Document/visibilitychange_event) イベント
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) は、 `beforeunload`/`unload` ではなく、 `visibilitychange` を使用する理由について詳しく説明しています。
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) は、ウェブアプリケーションでページのライフサイクル動作を処理するための最善の手法を提供します。
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) は、ウェブアプリケーションでページのライフサイクル動作を処理するための最善の手法を提供します。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): ページのライフサイクル動作におけるブラウザー間の不整合に対処する JavaScript ライブラリーです。
 - [Back/forward cache](https://web.dev/articles/bfcache) は前方/後方キャッシュとは何か、そして様々なページライフサイクルイベントに対するその意味について説明しています。

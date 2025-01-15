@@ -73,7 +73,7 @@ const observer = new PerformanceObserver(perfObserver);
 observer.observe({ type: "resource", buffered: true });
 ```
 
-通常、リソースタイミング項目はたくさんあり、これらの項目については、 {{domxref("performance.setResourceTimingBufferSize()")}} を使用してより大きなバッファを設定し、 {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントを監視することもできます。
+通常、リソースタイミング項目はたくさんあり、これらの項目については、 {{domxref("performance.setResourceTimingBufferSize()")}} を使用してより大きなバッファーを設定し、 {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントを監視することもできます。
 
 ## 仕様書
 

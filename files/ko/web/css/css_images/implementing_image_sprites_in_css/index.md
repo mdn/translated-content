@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 
 **이미지 스프라이트**는 여러 개의 이미지가 필요한 아주 많은 웹앱에서 사용합니다. 이미지 각각을 별도의 파일로 추가하는 대신, 이미지를 하나의 파일로 만들어서 포함하면 HTTP 요청 수가 줄기 때문에 메모리와 네트워크 사용량 측면에서 효율적입니다.
 
-> **참고:** HTTP/2를 사용할 땐 오히려 작은 요청을 여러 번 날리는 게 네트워크 사용량에 더 좋을 수도 있습니다.
+> [!NOTE]
+> HTTP/2를 사용할 땐 오히려 작은 요청을 여러 번 날리는 게 네트워크 사용량에 더 좋을 수도 있습니다.
 
 ## 구현
 
@@ -46,4 +47,4 @@ slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 
 ## 같이 보기
 
-- [Full working demo at CSS Tricks](http://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Full working demo at CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

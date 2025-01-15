@@ -18,15 +18,16 @@ Les systèmes de contrôles des versions sont nécessaires pour le développemen
 
 Les systèmes de contrôle des versions fournissent des outils pour répondre à ces besoins. [Git](https://git-scm.com/) est un exrmple d'un tel système, et [GitHub](https://github.com/) est un site web avec une infrastructure qui propose un serveur Git et d'autres outils très pratiques pour travailler avec des dépôts Git individuellement ou en équipe, tel que le rapportage de problèmes liés au code, la relecture et validation de code, la gestion de projet par différentes fonctions comme l'assignation de tâches et les statistiques sur l'utilisation de tâches, et plus encore.
 
-> **Note :** Git est en fait un système de contrôle des versions _distribué_, signifiant qu'une copie complète du dépôt contenant la base de code est fait sur votre ordinateur (et celui de tous les autres participants). Vous modifiez votre propre copie et puis vous les envoyez vers le serveur, où un administrateur pourra décider de les fusionner avec la copie commune ou non.
+> [!NOTE]
+> Git est en fait un système de contrôle des versions _distribué_, signifiant qu'une copie complète du dépôt contenant la base de code est fait sur votre ordinateur (et celui de tous les autres participants). Vous modifiez votre propre copie et puis vous les envoyez vers le serveur, où un administrateur pourra décider de les fusionner avec la copie commune ou non.
 
-> **Remarque :**
+> [!CALLOUT]
 >
 > Vous cherchez à devenir un développeur web front-end ?
 >
 > Nous avons mis ensemble un cours incluant toutes les informations nécessaires dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](/fr/docs/Learn/Front-end_web_developer)
+> [Commencer](/fr/curriculum/)
 
 ## Prérequis
 
@@ -40,7 +41,8 @@ En matière de connaissances prérequises, vous n'avez besoin de rien concernant
 
 Il est aussi préférable que vous ayiez quelques connaissances fondamentales sur le terminal, par exemple du déplacement entre dossiers, de la création de fichiers et de la modification du `PATH` du système.
 
-> **Note :** GitHub n'est pas le seul site et un ensemble d'outils que vous pouvez utiliser avec Git. Il existe d'autres alternatives telles que [GitLab](https://about.gitlab.com/) que vous pourriez essayer. Vous pouvez même tenter de configurer votre propre serveur Git et l'utiliser à la place de GitHub. Nous nous en sommes tenus à GitHub dans ce cours pour vous montrer une seule manière de faire.
+> [!NOTE]
+> GitHub n'est pas le seul site et un ensemble d'outils que vous pouvez utiliser avec Git. Il existe d'autres alternatives telles que [GitLab](https://about.gitlab.com/) que vous pourriez essayer. Vous pouvez même tenter de configurer votre propre serveur Git et l'utiliser à la place de GitHub. Nous nous en sommes tenus à GitHub dans ce cours pour vous montrer une seule manière de faire.
 
 ## Guides
 
@@ -57,7 +59,8 @@ Notez que les liens ci-après vous amènent à des ressources sur des sites exte
 - [Mastering issues (de GitHub)](https://guides.github.com/features/issues/)
   - : Les _issues_ (problèmes) sont comme un forum pour votre projet GitHub, où chacun peut venir poser des questions et rapporter des problèmes, et vous pouvez gérer les mises à jour (par exemple assigner certaines personnes à la résolution de problèmes, à la clarification de problèmes ou à l'information de la correction de problèmes). Cet article vous donne ce dont vous avez besoin de savoir à propos des _issues_.
 
-> **Note :** Il existe **beaucoup d'autres** choses que vous pouvez faire avec Git et GitHub, mais nous pensons que ce qui précède représente le minimum dont vous aurez besoin pour commencer à utiliser Git efficacement. Au fur et à mesure de votre progression avec Git, vous comprendrez de plus en plus qu'il est facile de faire des erreurs quand on commence à utiliser des commandes plus complexes. Ne vous inquiétez pas, même les développeurs web aguerris pensent que Git est parfois déroutant, et résolvent souvent des problèmes en cherchant des solutions sur internet ou en consultat des sites comme [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) et [Dangit, git!](https://dangitgit.com/)
+> [!NOTE]
+> Il existe **beaucoup d'autres** choses que vous pouvez faire avec Git et GitHub, mais nous pensons que ce qui précède représente le minimum dont vous aurez besoin pour commencer à utiliser Git efficacement. Au fur et à mesure de votre progression avec Git, vous comprendrez de plus en plus qu'il est facile de faire des erreurs quand on commence à utiliser des commandes plus complexes. Ne vous inquiétez pas, même les développeurs web aguerris pensent que Git est parfois déroutant, et résolvent souvent des problèmes en cherchant des solutions sur internet ou en consultat des sites comme [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) et [Dangit, git!](https://dangitgit.com/)
 
 ## Voir aussi
 

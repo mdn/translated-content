@@ -76,7 +76,7 @@ target.addEventListener("paste", (event) => {
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '120px') }}
+{{ EmbedLiveSample('ライブデモ', '100%', '120px') }}
 
 ## 仕様書
 

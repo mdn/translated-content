@@ -33,7 +33,7 @@ L'appel `addListener()` de chaque événement accepte un paramètre de filtre fa
 
 L'écouteur d'événement `onCommitted` reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "webNavigation".
+Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "webNavigation".
 
 ## Types
 
@@ -56,9 +56,9 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
   - : Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/Events/DOMContentLoaded) est déclenché dans la page.
+  - : Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event) est déclenché dans la page.
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement de [`chargement`](/fr/docs/Web/Events/load) du DOM.
+  - : Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement de [`chargement`](/fr/docs/Web/API/Window/load_event) du DOM.
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
   - : Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut se produire si une erreur réseau s'est produite ou si l'utilisateur a interrompu la navigation.
 - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
@@ -76,9 +76,9 @@ Pour utiliser cette API, vous devez avoir la [permission](/fr/Add-ons/WebExtensi
 
 {{WebExtExamples("h2")}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

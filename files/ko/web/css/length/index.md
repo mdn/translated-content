@@ -13,7 +13,8 @@ slug: Web/CSS/length
 
 `<length>` 자료형은 {{cssxref("&lt;number&gt;")}} 다음에 아래 나열한 단위 중 하나를 붙여 구성합니다. 다른 CSS 단위와 마찬가지로 숫자와 단위 문자 사이에 공백은 존재하지 않습니다. 숫자 `0` 뒤에는 단위를 붙이지 않아도 됩니다.
 
-> **참고:** 일부 속성은 음의 `<length>`를 받지만 다른 속성은 그렇지 않습니다.
+> [!NOTE]
+> 일부 속성은 음의 `<length>`를 받지만 다른 속성은 그렇지 않습니다.
 
 ### 단위
 
@@ -25,7 +26,8 @@ slug: Web/CSS/length
 
 글꼴 상대 길이는 `<length>` 값을 특정 문자나 현재 요소가 사용하는 글꼴의 특정 속성을 기준으로 설정합니다.
 
-> **참고:** 아래 단위들, 특히 `em`과 `rem`은 사용자가 글꼴 크기를 늘려도 [페이지의 수직 흐름을 유지](https://24ways.org/2006/compose-to-a-vertical-rhythm)하는, 확대 가능한 레이아웃을 만들기 위해 많이 쓰입니다.
+> [!NOTE]
+> 아래 단위들, 특히 `em`과 `rem`은 사용자가 글꼴 크기를 늘려도 [페이지의 수직 흐름을 유지](https://24ways.org/2006/compose-to-a-vertical-rhythm)하는, 확대 가능한 레이아웃을 만들기 위해 많이 쓰입니다.
 
 - `cap` {{experimental_inline}}
   - : 요소 {{cssxref("font")}}의 "cap height"(영문 대문자의 평균 높이 값)를 나타냅니다.
@@ -50,13 +52,13 @@ slug: Web/CSS/length
 뷰포트 백분율 길이는 `<length>` 값을 {{glossary("viewport", "뷰포트")}}, 즉 문서에서 볼 수 있는 부분의 크기를 기준으로 설정합니다. 뷰포트 길이는 {{cssxref("@page")}} 선언 블록에서는 유효하지 않습니다.
 
 - `vh`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이 1%와 같습니다.
 - `vw`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비 1%와 같습니다.
 - `vi` {{experimental_inline}}
-  - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_Logical_Properties#인라인_치수) 크기 1%와 같습니다.
+  - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vb` {{experimental_inline}}
-  - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_Logical_Properties#블록_치수) 크기 1%와 같습니다.
+  - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vmin`
   - : `vw`와 `vh` 중 작은 것과 같습니다.
 - `vmax`
@@ -70,7 +72,8 @@ slug: Web/CSS/length
 
 고해상도 장치에서 인치(`in`), 센티미터(`cm`), 밀리미터(`mm`)가 기준이 되어 물리적 거리와 동일합니다. 그래서 px 단위도 이에 맞춰 1인치의 1/96로 정의합니다.
 
-> **참고:** 많은 사용자가 {{glossary("user agent", "사용자 에이전트")}}의 기본 글꼴 크기를 늘려 읽기 쉽도록 설정합니다. 절대길이는 사용자 설정을 따르지 않기 때문에 접근성 문제를 유발할 수 있습니다. 따라서 `font-size`를 설정할 땐 `em`, `rem` 등 상대길이를 선택하세요.
+> [!NOTE]
+> 많은 사용자가 {{glossary("user agent", "사용자 에이전트")}}의 기본 글꼴 크기를 늘려 읽기 쉽도록 설정합니다. 절대길이는 사용자 설정을 따르지 않기 때문에 접근성 문제를 유발할 수 있습니다. 따라서 `font-size`를 설정할 땐 `em`, `rem` 등 상대길이를 선택하세요.
 
 - `px`
   - : 1 픽셀. 화면에서는 전통적으로 하나의 장치 픽셀(점)을 의미했지만, 프린터나 고해상도 화면에서는 1/96 `in`을 맞출 수 있도록 여러 개의 장치 픽셀을 의미합니다.
@@ -89,7 +92,7 @@ slug: Web/CSS/length
 
 ## 보간
 
-애니메이션에서 `<length>` 자료형의 값은 부동소수점 실수로 간주하며 보간은 [계산값](/ko/docs/Web/CSS/computed_value)을 사용합니다. 보간 속도는 애니메이션에 연결된 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션에서 `<length>` 자료형의 값은 부동소수점 실수로 간주하며 보간은 [계산값](/ko/docs/Web/CSS/computed_value)을 사용합니다. 보간 속도는 애니메이션에 연결된 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 예제
 

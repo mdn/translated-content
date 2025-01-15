@@ -36,5 +36,5 @@ a <<= 2; // 20
 
 ## 같이 보기
 
-- [JavaScript 가이드에서 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)
+- [JavaScript 가이드에서 할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
 - [왼쪽 시프트 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Left_shift)

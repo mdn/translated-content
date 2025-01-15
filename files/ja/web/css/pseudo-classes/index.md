@@ -2,7 +2,7 @@
 title: 擬似クラス
 slug: Web/CSS/Pseudo-classes
 l10n:
-  sourceCommit: ff07c2fc3bee874e6f1e7398c42cfa702d520009
+  sourceCommit: 4f81c863e2e5a4fb26585000bbdf7faca2b05f29
 ---
 
 {{CSSRef}}
@@ -20,7 +20,8 @@ button:hover {
 
 擬似クラスにより、文書ツリーのコンテンツに関するものだけでなく、閲覧履歴（例えば {{CSSxRef(":visited")}}）、内容物の状態（例えばフォーム要素における {{CSSxRef(":checked")}}）、マウスポインターの位置（例えばマウスポインターが要素上にあるかを知ることができる {{CSSxRef(":hover")}}）といった外的要因との関係についてスタイルを適用することができるようになります。
 
-> **メモ:** 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
+> [!NOTE]
+> 擬似クラスとは対照的に、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は要素の*特定の部分*にスタイルを適用するために使います。
 
 ## 表示状態擬似クラス
 
@@ -69,6 +70,8 @@ button:hover {
   - : フォーム要素が必須項目である場合に一致します。
 - {{CSSxRef(":optional")}}
   - : フォーム要素が省略可能である場合に一致します。
+- {{CSSxRef(":user-valid")}}
+  - : 正しく入力された要素を表します。ただし、ユーザーがその要素を操作した場合のみです。
 - {{CSSxRef(":user-invalid")}}
   - : 不正確な値が入力されている要素を表します。ただし、ユーザーがその要素を操作した場合のみです。
 
@@ -223,11 +226,11 @@ F
 - {{CSSxRef(":first")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 
 H
 
@@ -261,9 +264,7 @@ N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -277,9 +278,9 @@ O
 P
 
 - {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":paused")}}
 - {{CSSxRef(":playing")}}
 
 R

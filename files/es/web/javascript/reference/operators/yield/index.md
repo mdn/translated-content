@@ -39,7 +39,8 @@ Si se pasa un valor opcional al método `next()` del generador, ese valor se con
 
 Entre la ruta del código del generador, sus operadores `yield` y la capacidad de especificar un nuevo valor inicial pasándolo a {{jsxref("Generator.prototype.next()")}}, los generadores ofrecen enorme poder y control.
 
-> **Advertencia:** Desafortunadamente, `next()` es asimétrico, pero eso no se puede evitar: siempre envía un valor al `yield` actualmente suspendido, pero devuelve el operando del siguiente `yield`.
+> [!WARNING]
+> Desafortunadamente, `next()` es asimétrico, pero eso no se puede evitar: siempre envía un valor al `yield` actualmente suspendido, pero devuelve el operando del siguiente `yield`.
 
 ## Ejemplos
 
@@ -100,7 +101,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## Ve también
 
-- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [El protocolo `Iterator`](/es/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield*", "yield*")}}

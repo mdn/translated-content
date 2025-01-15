@@ -63,7 +63,8 @@ new Intl.DateTimeFormat(locales, options);
       - : Le style de formatage à utiliser pour les périodes du jour comme «&nbsp;dans la matinée&nbsp;», «&nbsp;à midi&nbsp;», etc. Les valeurs possibles sont&nbsp;:
         "`narrow`", "`short`", " `long`".
 
-        > **Note :** Cette option applique un effet uniquement si une horloge sur 12 heures est utilisée. De nombreuses locales utilisent la même chaîne de caractères quelle que soit la longueur indiquée.
+        > [!NOTE]
+        > Cette option applique un effet uniquement si une horloge sur 12 heures est utilisée. De nombreuses locales utilisent la même chaîne de caractères quelle que soit la longueur indiquée.
 
     - `numberingSystem`
       - : Le système de numération à utiliser. Les valeurs possibles sont&nbsp;: "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
@@ -159,7 +160,8 @@ new Intl.DateTimeFormat(locales, options);
         - "`shortGeneric`" pour la forme courte générique non-localisée (par exemple, `PT`, `Los Angeles Zeit`).
         - "`longGeneric`" pour la forme longue générique non-localisée (par exemple, `Pacific Time`, `Nordamerikanische Westküstenzeit`)
 
-        > **Note :** L'affichage du fuseau horaire pourra basculer sur un autre format si la chaîne de caractères nécessaire n'est pas disponible. Ainsi, les formats non-localisés devraient afficher le fuseau horaire sans indication de pays ou de ville, à la manière de "Pacific Time". Si ce n'est pas possible, le moteur pourra utiliser un nom de fuseau horaire localisé comme "Los Angeles Time".
+        > [!NOTE]
+        > L'affichage du fuseau horaire pourra basculer sur un autre format si la chaîne de caractères nécessaire n'est pas disponible. Ainsi, les formats non-localisés devraient afficher le fuseau horaire sans indication de pays ou de ville, à la manière de "Pacific Time". Si ce n'est pas possible, le moteur pourra utiliser un nom de fuseau horaire localisé comme "Los Angeles Time".
 
     La valeur par défaut pour chaque composante de l'horodatage est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), et si toutes les propriétés valent [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), ce sera la valeur "`numeric`" qui sera utilisée pour `year`, `month`, et `day`.
 

@@ -18,7 +18,7 @@ l10n:
 - 文書のルート要素 (`<html>`)
 - {{cssxref("position")}} の値が `absolute` または `relative` であり、かつ {{cssxref("z-index")}} の値が `auto` 以外の要素
 - {{cssxref("position")}} の値が `fixed` または `sticky` の要素（sticky はすべてのモバイルブラウザーにありますが、古いデスクトップブラウザーにはありません）。
-- {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/CSS_container_queries)のために `size` または `inline-size` に設定されているもの。
+- {{cssxref("container-type")}} の値が[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)のために `size` または `inline-size` に設定されているもの。
 - [フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - グリッド ({{cssxref("grid")}}) コンテナーの子であり、 {{cssxref("z-index")}} の値が `auto` 以外の要素。
 - {{cssxref("opacity")}} の値が `1` 未満である要素（[不透明度の仕様](https://www.w3.org/TR/css-color-3/#transparency)をご覧ください）。
@@ -45,7 +45,8 @@ l10n:
 - 重ね合わせコンテキストはすべて、その兄弟要素と完全に独立しています。重ね合わせ処理では、子孫要素だけが考慮されます。
 - 重ね合わせコンテキストははめ込み式です。要素の中身が重ねられた後、その要素がまるごと、今度は親の重ね合わせコンテキストの重ね合わせ順の中にあるとみなされます。
 
-> **メモ:** 重ね合わせコンテキストを作れるのは一部の要素に限定されるため、重ね合わせコンテキストは HTML 要素の階層構造の部分集合です。それ自身の重ね合わせコンテキストを作らない要素は、その親の重ね合わせコンテキストに*同化される*、と言えます。
+> [!NOTE]
+> 重ね合わせコンテキストを作れるのは一部の要素に限定されるため、重ね合わせコンテキストは HTML 要素の階層構造の部分集合です。それ自身の重ね合わせコンテキストを作らない要素は、その親の重ね合わせコンテキストに*同化される*、と言えます。
 
 ## 例
 

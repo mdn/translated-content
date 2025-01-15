@@ -89,7 +89,8 @@ page.next(); // Object {value: undefined, done: true}
 
 이 예제에서는 값과 함께 `next`를 호출합니다.
 
-> **참고:** 제너레이터가 처음에는 아무것도 생성하지 않았기 때문에 첫 번째 호출에서 기록되는 것은 없습니다.
+> [!NOTE]
+> 제너레이터가 처음에는 아무것도 생성하지 않았기 때문에 첫 번째 호출에서 기록되는 것은 없습니다.
 
 ```js
 function* gen() {
@@ -118,4 +119,4 @@ g.next(2);
 ## 같이 보기
 
 - {{jsxref("Statements/function*", "function*")}}
-- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [반복자와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)

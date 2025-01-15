@@ -11,7 +11,8 @@ A interface **`FormData`** fornece uma maneira fácil de construir um conjunto d
 
 Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` é o mesmo que `for (var p of myFormData.entries())`.
 
-> **Nota:** Esse recurso está disponível em [https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API](/pt-BR/docs/Web/API/Web_Workers_API)
+> [!NOTE]
+> Esse recurso está disponível em [https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API](/pt-BR/docs/Web/API/Web_Workers_API)
 
 ## Construtor
 
@@ -33,7 +34,8 @@ Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("State
 - {{domxref("FormData.set")}}
   - : Define um novo valor para uma chave existente dentro de um objeto `FormData`, ou adiciona a chave/valor se ele ainda não existir.
 
-> **Nota:** Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.
+> [!NOTE]
+> Para ser claro, a diferença entre {{domxref("FormData.set()")}} e {{domxref("FormData.append()")}} é que, se a chave especificada não existir, {{domxref("FormData.set()")}} irá substituir o valor existente por um novo, enquanto {{domxref("FormData.append()")}} irá acrescentar um novo valor no final dos valores existentes. Veja as suas páginas dedicadas para código de exemplo.
 
 ## Especificações
 
@@ -46,6 +48,6 @@ Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("State
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Usando objetos FormData](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Usando objetos FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

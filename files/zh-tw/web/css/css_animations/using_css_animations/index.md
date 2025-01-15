@@ -46,7 +46,8 @@ CSS animations 使 CSS style configuration 的轉變變得可行。在這種動�
 
 ## 範例
 
-> **備註：** 為了簡潔起見，以下的範例中我們只列出前綴為 `-moz-` 的部份。當你查看 Live Sample 的原始碼時，可以看到前綴為 `-webkit-` 的部份。
+> [!NOTE]
+> 為了簡潔起見，以下的範例中我們只列出前綴為 `-moz-` 的部份。當你查看 Live Sample 的原始碼時，可以看到前綴為 `-webkit-` 的部份。
 
 ### 使文字滑過畫面
 
@@ -343,4 +344,4 @@ function listener(e) {
 ## 更多資訊
 
 - {{ domxref("Event/AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/zh-TW/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detecting CSS animation support](/zh-TW/docs/CSS/CSS_animations/Detecting_CSS_animation_support)

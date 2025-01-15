@@ -18,7 +18,7 @@ l10n:
 
 ## 如何操作
 
-- [前端开发人员的无障碍性](https://accessibility.digital.gov/front-end/getting-started/)
+- [前端开发人员的无障碍性](https://digital.gov/guides/accessibility-for-teams/)
   - : 美国总务署技术转型服务提供的简要指南，涵盖了几个无障碍性主题，并提供了指南视频和相关 WCAG 参考资料的链接。
 - [无障碍网页编写](https://www.ibm.com/able/requirements/requirements/)
   - : IBM 公开了他们需要满足的无障碍性要求，并提供了交互式的界面。
@@ -28,8 +28,8 @@ l10n:
 使用工具快速检查浏览器中的常见错误：
 
 - [HTML CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/)
-- [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=zh-CN)
-- [Lighthouse Accessibility Audit](https://developer.chrome.com/docs/lighthouse/overview/)
+- [aXe](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+- [Lighthouse Accessibility Audit](https://developer.chrome.google.cn/docs/lighthouse/overview)
 - [Accessibility Insights](https://accessibilityinsights.io/)
 - [<abbr>WAVE</abbr>](https://wave.webaim.org/extension/)
 
@@ -37,11 +37,11 @@ l10n:
 
 - [axe-core](https://github.com/dequelabs/axe-core)
 - [jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
-- [Lighthouse Audits](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically)
+- [Lighthouse Audits](https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md#using-programmatically)
 - [AccessLint.js](https://github.com/accesslint/accesslint.js/tree/master)
 
 用于在 GitHub 拉取请求中查找无障碍性问题的持续集成工具：
 
-- [AccessLint](https://www.accesslint.com/)
+- [AccessLint](https://accesslint.com/)
 
-尽管最好使用真实用户测试你的 Web 应用程序，但你可以模拟色盲、低视力、低对比度和缩放。你应该始终在没有鼠标和触摸屏的情况下测试你的网站以测试键盘导航。你还可以尝试使用语音命令访问你的网站。尝试禁用鼠标并使用浏览器扩展，如 [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)。
+尽管最好使用真实用户测试你的 Web 应用程序，但你可以模拟色盲、低视力、低对比度和缩放。你应该始终在没有鼠标和触摸屏的情况下测试你的网站以测试键盘导航。你还可以尝试使用语音命令访问你的网站。尝试禁用鼠标并使用浏览器扩展，如 [Web Disability Simulator](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla)。

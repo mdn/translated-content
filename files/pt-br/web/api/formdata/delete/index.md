@@ -9,7 +9,8 @@ slug: Web/API/FormData/delete
 
 O metodo **`delete()`** da interface {{domxref("FormData")}} deleta uma chave/valor pares do Objecto `FormData` .
 
-> **Nota:** Este metodo esta Disponivel em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
+> [!NOTE]
+> Este metodo esta Disponivel em [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API).
 
 ## Sintaxe
 
@@ -51,6 +52,6 @@ formData.delete("username");
 ## Veja Tambem
 
 - {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Usando Objecto FormData](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Usando Objecto FormData](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

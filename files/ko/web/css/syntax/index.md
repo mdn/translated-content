@@ -18,7 +18,7 @@ CSS에서는 속성과 값 모두 대소문자를 구분합니다. 속성-값 �
 
 ![css syntax - declaration.png](css_syntax_-_declaration.png)
 
-CSS는 [100가지 이상의 속성](/ko/docs/Web/CSS/CSS_Reference)과 셀 수 없이 많은 값이 있습니다. 속성에 아무 값이나 넣는 것은 허용되지 않고, 대신 속성마다 유효한 값을 정의하고 있습니다. 주어진 속성에 대해 값이 유효하지 않은 경우, 그 선언은 부적합으로 간주하여 CSS 엔진이 완전히 무시합니다.
+CSS는 [100가지 이상의 속성](/ko/docs/Web/CSS/Reference)과 셀 수 없이 많은 값이 있습니다. 속성에 아무 값이나 넣는 것은 허용되지 않고, 대신 속성마다 유효한 값을 정의하고 있습니다. 주어진 속성에 대해 값이 유효하지 않은 경우, 그 선언은 부적합으로 간주하여 CSS 엔진이 완전히 무시합니다.
 
 ## CSS 선언 블록
 
@@ -32,7 +32,8 @@ CSS 선언 블록을 시각화하면 다음과 같습니다.
 
 ![css syntax - declarations block.png](declaration-block.png)
 
-> **참고:** CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
+> [!NOTE]
+> CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
 
 ## CSS 규칙집합
 
@@ -44,7 +45,8 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
 
 페이지 요소는 여러 선택자로 그리고 결국 주어진 속성을 서로 다른 값으로 여러 번 포함하는 여러 규칙에 의해 일치될 수 있기에, CSS 표준은 어느 게 다른 것보다 우선하고 적용되어야 하는 지를 정의합니다: 이를 종속([cascade](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)) 알고리즘이라고 합니다.
 
-> **참고:** 비록 선택자 그룹에 의해 특징지어진 규칙집합이 규칙집합을 각각 단일 선택자로 대체하는 일종의 단축(shorthand)일지라도, 이는 규칙집합 자체의 유효성에 적용되지는 않는다는 점에 유의하는 것이 중요합니다.
+> [!NOTE]
+> 비록 선택자 그룹에 의해 특징지어진 규칙집합이 규칙집합을 각각 단일 선택자로 대체하는 일종의 단축(shorthand)일지라도, 이는 규칙집합 자체의 유효성에 적용되지는 않는다는 점에 유의하는 것이 중요합니다.
 >
 > 이는 중요한 결과로 이어집니다: 단일 기본 선택자 하나가 무효한 경우, 무명(unknown) 가상 요소(pseudo-element) 또는 가상 클래스(pseudo-class)를 사용할 때처럼, 모든 *선택자*는 무효하고 따라서 전체 규칙은 무시됩니다(유효하지도 않기에).
 
@@ -63,7 +65,7 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
 
 규칙집합 또는 at-규칙이 아닌 모든 문은 유효하지 않고 무시됩니다.
 
-또 다른 문 그룹, **중첩 문**이 있습니다, 이들은 at-규칙, *조건부 그룹 규칙*의 특정 부분집합에서 사용될 수 있는 문입니다. 이러한 문은 오직 특정 조건이 일치되면 적용합니다: `@media` at-규칙 콘텐츠는 브라우저가 돌아가는 장치가 표현된 조건과 일치하는 경우에만 적용됩니다. 반면 `@document` at-규칙 콘텐츠는 현재 페이지가 일부 조건과 일치하는 경우에만 적용됩니다, 등등. CSS1 및 CSS2.1에서는, *규칙집합*만이 조건부 그룹 규칙 내에서 사용될 수 있습니다. 그것은 매우 제한됐고 이 제한은 [CSS Conditionals 레벨 3](/ko/docs/Web/CSS/CSS_Conditional_Rules)에서 해제되었습니다. 현재, 여전히 실험 중이고 모든 브라우저에서 지원되지는 않지만, 조건부 그룹 규칙은 광범위한 콘텐츠, 규칙집합뿐만 아니라 전부는 아니지만 일부 at-규칙을 포함할 수 있습니다.
+또 다른 문 그룹, **중첩 문**이 있습니다, 이들은 at-규칙, *조건부 그룹 규칙*의 특정 부분집합에서 사용될 수 있는 문입니다. 이러한 문은 오직 특정 조건이 일치되면 적용합니다: `@media` at-규칙 콘텐츠는 브라우저가 돌아가는 장치가 표현된 조건과 일치하는 경우에만 적용됩니다. 반면 `@document` at-규칙 콘텐츠는 현재 페이지가 일부 조건과 일치하는 경우에만 적용됩니다, 등등. CSS1 및 CSS2.1에서는, *규칙집합*만이 조건부 그룹 규칙 내에서 사용될 수 있습니다. 그것은 매우 제한됐고 이 제한은 [CSS Conditionals 레벨 3](/ko/docs/Web/CSS/CSS_conditional_rules)에서 해제되었습니다. 현재, 여전히 실험 중이고 모든 브라우저에서 지원되지는 않지만, 조건부 그룹 규칙은 광범위한 콘텐츠, 규칙집합뿐만 아니라 전부는 아니지만 일부 at-규칙을 포함할 수 있습니다.
 
 ## 같이 보기
 
@@ -73,11 +75,11 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
   - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/inheritance)
-  - [박스 모델](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
-  - [마진 중첩](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
     - [초깃값](/ko/docs/Web/CSS/initial_value)

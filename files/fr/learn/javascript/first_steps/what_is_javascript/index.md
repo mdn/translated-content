@@ -92,7 +92,7 @@ Le cœur de JavaScript est constitué de fonctionnalités communes de programmat
 
 - stocker des valeurs utiles dans des variables. Dans l'exemple plus haut, nous demandons un nouveau nom à l'utilisateur puis le stockons dans une variable appelée `name`.
 - faire des opérations sur des morceaux de texte (appelés en programmation «&nbsp;chaînes de caractères&nbsp;» ou «&nbsp;strings&nbsp;» en anglais). Dans l'exemple plus haut, nous prenons la chaîne de caractères "Player 1: " et lui adjoignons la variable `name` pour créer l'étiquette ''Player 1: Chris".
-- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement («&nbsp;event&nbsp;») [`click`](/fr//docs/Web/API/Element/click_event) pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
+- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement («&nbsp;event&nbsp;») [`click`](/fr_docs/Web/API/Element/click_event) pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
 - Et bien plus encore&nbsp;!
 
 Là où ça devient excitant, c'est que de nombreuses fonctionnalités sont basées sur ce cœur de JavaScript. Les «&nbsp;interfaces de programmation applicatives&nbsp;» (API pour «&nbsp;Application Programming Interfaces&nbsp;») donnent accès à des fonctionnalités presqu'illimitées dans votre code JavaScript.
@@ -108,16 +108,18 @@ Elles se divisent généralement en deux catégories&nbsp;:
 - l'[API DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model) permet de manipuler du HTML et du CSS (créer, supprimer et modifier du HTML, appliquer de nouveaux styles à la page de façon dynamique, etc.). Chaque fois que vous voyez une fenêtre popup sur une page ou du nouveau contenu apparaître (comme dans notre démonstration plus haut), il s'agit d'une action du DOM.
 - l'[API de géolocalisation](/fr/docs/Web/API/Geolocation) récupère des informations géographiques. C'est ainsi que [Google Maps](https://www.google.com/maps) peut trouver votre position et la situer sur une carte.
 - les API [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API) permettent de créer des animations 2D et 3D. On fait des choses incroyables avec ces technologies, voyez [Chrome Experiments](https://www.chromeexperiments.com/webgl) et [webglsamples](https://webglsamples.org/).
-- [les API Audio et Video](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
+- [les API Audio et Video](/fr/docs/Web/Media/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
 
-> **Note :** Beaucoup des exemples ci-dessus ne fonctionneront pas dans un ancien navigateur. Il vaut mieux utiliser un navigateur moderne comme Firefox, Chrome, Edge ou Opera pour exécuter votre code et faire vos tests. Si vous êtes amené à écrire du code de production (c'est-à-dire destiné à de véritables utilisateurs), il vous faudra prendre en compte la compatibilité pour différents navigateurs.
+> [!NOTE]
+> Beaucoup des exemples ci-dessus ne fonctionneront pas dans un ancien navigateur. Il vaut mieux utiliser un navigateur moderne comme Firefox, Chrome, Edge ou Opera pour exécuter votre code et faire vos tests. Si vous êtes amené à écrire du code de production (c'est-à-dire destiné à de véritables utilisateurs), il vous faudra prendre en compte la compatibilité pour différents navigateurs.
 
 Les **APIs tierces** ne font par défaut pas partie de votre navigateur, et vous devrez en général récupérer le code et les informations les concernant quelque part sur le web. Par exemple&nbsp;:
 
 - l'[API Twitter](https://dev.twitter.com/overview/documentation) vous permet par exemple d'afficher vos derniers tweets sur votre site.
 - l'[API Google Maps](https://developers.google.com/maps/) permet d'intégrer à votre site des cartes personnalisées et d'autres fonctionnalités de ce type.
 
-> **Note :** ces APIs sont d'un niveau avancé et nous ne couvrirons aucune d'entre elles dans ce cours, mais les liens ci-dessus fournissent une large documentation si vous voulez en savoir davantage.
+> [!NOTE]
+> Ces APIs sont d'un niveau avancé et nous ne couvrirons aucune d'entre elles dans ce cours, mais les liens ci-dessus fournissent une large documentation si vous voulez en savoir davantage.
 
 Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez pas en mesure de créer le nouveau Facebook, Google Maps ou Instagram après une journée de travail sur JavaScript, il y a d'abord beaucoup de bases à assimiler. Et c'est pourquoi vous êtes ici. Allons-y&nbsp;!
 
@@ -125,7 +127,7 @@ Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez
 
 Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS#Comment_fonctionnent_vraiment_les_CSS)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
 
 ![](execution.png)
 
@@ -137,7 +139,8 @@ C'est une bonne chose, étant donné qu'un usage fréquent de JavaScript est de 
 
 Chaque onglet du navigateur constitue un périmètre séparé dans lequel s'exécute le code (en termes techniques ces périmètres sont des «&nbsp;environnements d'exécution&nbsp;») ce qui signifie que, dans la plupart des cas, le code de chaque onglet est exécuté complètement séparément, et le code d'un onglet ne peut affecter directement le code d'un autre onglet ou d'un autre site. C'est une bonne mesure de sécurité. Si ce n'était pas le cas, des pirates pourraient par exemple écrire du code pour voler des informations sur d'autres sites web.
 
-> **Note :** il existe des moyens d'envoyer du code et des données entre différents sites/onglets de façon sécurisée, mais ce sont des techniques avancées que ne nous couvrirons pas dans ce cours.
+> [!NOTE]
+> Il existe des moyens d'envoyer du code et des données entre différents sites/onglets de façon sécurisée, mais ce sont des techniques avancées que ne nous couvrirons pas dans ce cours.
 
 ### Ordre d'exécution du JavaScript
 
@@ -158,7 +161,8 @@ Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un 
 
 Si vous échangiez les deux premières lignes de code, rien ne fonctionnerait plus, vous obtiendriez une erreur dans la console développeur du navigateur&nbsp;: `TypeError: para is undefined`. Cela signifie que l'objet `para` n'existe pas encore, donc nous ne pouvons pas y ajouter de gestionnaire d'évènement.
 
-> **Note :** c'est une erreur très fréquente. Il faut veiller à ce que les objets référencés dans votre code existent avant d'essayer de les utiliser.
+> [!NOTE]
+> C'est une erreur très fréquente. Il faut veiller à ce que les objets référencés dans votre code existent avant d'essayer de les utiliser.
 
 ### Code interprété contre code compilé
 
@@ -216,9 +220,11 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
 
 5. Enregistrez le fichier et actualisez le navigateur. Vous pouvez maintenant voir que, lorsque vous cliquez sur le bouton, un nouveau paragraphe est généré et placé en dessous.
 
-> **Note :** si l'exemple ne semble pas marcher, reprenez pas à pas chaque étape. Avez-vous bien enregistré le code de départ comme un fichier `.html`&nbsp;? Avez-vous bien ajouté l'élément {{htmlelement("script")}} juste après la balise `</head>`&nbsp;? Avez-vous collé le bon code JavaScript au bon endroit&nbsp;? **JavaScript est sensible à la casse, et assez tatillon, il faut donc respecter scrupuleusement la syntaxe indiquée, sans quoi il peut ne pas fonctionner.**
+> [!NOTE]
+> Si l'exemple ne semble pas marcher, reprenez pas à pas chaque étape. Avez-vous bien enregistré le code de départ comme un fichier `.html`&nbsp;? Avez-vous bien ajouté l'élément {{htmlelement("script")}} juste après la balise `</head>`&nbsp;? Avez-vous collé le bon code JavaScript au bon endroit&nbsp;? **JavaScript est sensible à la casse, et assez tatillon, il faut donc respecter scrupuleusement la syntaxe indiquée, sans quoi il peut ne pas fonctionner.**
 
-> **Note :** vous pouvez voir cette version sur GitHub avec [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([et aussi en live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+> [!NOTE]
+> Vous pouvez voir cette version sur GitHub avec [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([et aussi en live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
 
 ### JavaScript externe
 
@@ -274,7 +280,8 @@ for (let i = 0; i < buttons.length; i++) {
 
 Cela peut sembler un peu plus long que l'attribut `onclick`, mais cela fonctionnera pour tous les boutons peu importe leur nombre sur la page, et peu importe si des boutons sont ajoutés ou retirés, le code JavaScript n'aura pas besoin d'être modifié.
 
-> **Note :** essayez de modifier votre version de `apply-javascript.html` et d'y ajouter quelques boutons dans le fichier. En actualisant la page, tous les boutons devraient créer un paragraphe quand ils sont cliqués. Pas mal, non&nbsp;?
+> [!NOTE]
+> Essayez de modifier votre version de `apply-javascript.html` et d'y ajouter quelques boutons dans le fichier. En actualisant la page, tous les boutons devraient créer un paragraphe quand ils sont cliqués. Pas mal, non&nbsp;?
 
 ### Stratégies de chargement de script
 
@@ -290,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements) plus tard dans le cours).
+Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Learn/JavaScript/Building_blocks/Events) plus tard dans le cours).
 
 Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moderne pour résoudre le problème, l'attribut `async`, qui indique au navigateur de continuer à télécharger le contenu HTML une fois que l'élément de balise {{htmlelement("script")}} a été atteint.
 
@@ -300,7 +307,8 @@ Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moder
 
 Dans ce cas, le script et le code HTML se chargeront simultanément et le code fonctionnera.
 
-> **Note :** Dans le cas externe, nous n'avions pas besoin d'utiliser l'événement `DOMContentLoaded`, car l'attribut `async` a résolu le problème pour nous. Nous n'avons pas utilisé la solution `async` pour l'exemple JavaScript interne, car elle ne fonctionne que pour les scripts externes.
+> [!NOTE]
+> Dans le cas externe, nous n'avions pas besoin d'utiliser l'événement `DOMContentLoaded`, car l'attribut `async` a résolu le problème pour nous. Nous n'avons pas utilisé la solution `async` pour l'exemple JavaScript interne, car elle ne fonctionne que pour les scripts externes.
 
 Auparavant, une solution à ce problème consistait à placer votre élément de script juste au bas du corps (par exemple, juste avant la balise), afin qu'il soit chargé après que tout le code HTML a été analysé. Le problème de cette solution (et de la solution `DOMContentLoaded` vue ci-dessus) est que le chargement et l'analyse du script sont complètements bloqués jusqu'à ce que le DOM HTML soit chargé. Sur des sites plus importants avec beaucoup de JavaScript, cela peut entraîner un problème de performances majeur, ce qui ralentit votre site. C'est pourquoi `async` a été ajouté aux navigateurs !
 

@@ -1,11 +1,13 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
+l10n:
+  sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
 {{CSSRef}}
 
-CSS **`white-space`** 属性用于设置如何处理元素内的{{Glossary("whitespace", "空白字符")}}。
+**`white-space`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置如何处理元素内的{{Glossary("whitespace", "空白字符")}}。
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
@@ -14,7 +16,8 @@ CSS **`white-space`** 属性用于设置如何处理元素内的{{Glossary("whit
 - 空白字符是否[合并](#合并空白字符)，以及如何合并。
 - 是否换行，以及如何换行。
 
-> **备注：** 要使单词可以在*其内部*被截断，请使用 {{CSSxRef("overflow-wrap")}}、{{CSSxRef("word-break")}} 或 {{CSSxRef("hyphens")}} 代替。
+> [!NOTE]
+> 要使单词可以在*其内部*被截断，请使用 {{CSSxRef("overflow-wrap")}}、{{CSSxRef("word-break")}} 或 {{CSSxRef("hyphens")}} 代替。
 
 ## 语法
 
@@ -59,7 +62,7 @@ white-space: unset;
 
     - 任何保留的空白序列总是占用空间，包括行末的。
     - 每个保留的空白字符后（包括空白字符之间）都可以被截断。
-    - 这样保留的空间占用空间而不会挂起，从而影响盒子的固有尺寸（最小内容——`min-content`——大小和最大内容——`max-content`——大小）。
+    - 这样保留的空间占用空间而不会挂起，从而影响盒子的固有尺寸（{{cssxref("min-content")}} 尺寸和 {{cssxref("max-content")}} 尺寸）。
 
 下面的表格总结了各种 `white-space` 关键字值的行为：
 
@@ -126,6 +129,8 @@ white-space: unset;
   </tbody>
 </table>
 
+默认情况下，一个制表符等于 8 个空格，且可以使用 [`tab-size`](/zh-CN/docs/Web/CSS/tab-size) 属性。对于 `normal`、`nowrap` 和 `pre-line` 值，每个制表符都会被转化为一个空格（U+0020）字符。
+
 > **备注：** **空格**和**其他空白分隔符**之间存在区别。定义如下：
 >
 > - 空格
@@ -177,7 +182,6 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
-    <option>preserve nowrap</option>
   </select>
   }
 </div>
@@ -195,7 +199,7 @@ pre {
 
 ```css hidden
 .box {
-  width: 300px;
+  width: 350px;
   padding: 16px;
 }
 
@@ -207,6 +211,7 @@ pre {
 
 #css-code select {
   font-family: inherit;
+  width: 100px;
 }
 
 #results {
@@ -221,11 +226,83 @@ pre {
 const select = document.querySelector("#css-code select");
 const results = document.querySelector("#results p");
 select.addEventListener("change", (e) => {
-  results.setAttribute("style", `white-space: ${e.target.value}`);
+  results.style.setProperty("white-space", e.target.value);
 });
 ```
 
-{{EmbedLiveSample("试试看", "100%", 350)}}
+{{EmbedLiveSample("试试看", "100%", 450)}}
+
+### 控制表格中的换行
+
+#### HTML
+
+```html
+<table>
+  <tr>
+    <td></td>
+    <td>拆分后非常长的内容</td>
+    <td class="nw">未拆分非常长的内容</td>
+  </tr>
+  <tr>
+    <td class="nw">white-space:</td>
+    <td>normal</td>
+    <td>nowrap</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+  text-align: center;
+}
+.nw {
+  white-space: nowrap;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("控制表格中的换行", "100%", "100%")}}
+
+### SVG 文本元素的多行文本
+
+`white-space` CSS 属性可用于在 {{SVGElement("text")}} 元素中创建多行文本，该元素默认情况下不会换行。
+
+#### HTML
+
+`<text>` 元素内部的文本需要拆分成多行以便检测新行。从第二行开始，其余行的空白需要移除。
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20" x="10">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  white-space: break-spaces;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("SVG 文本元素的多行文本", "100%", 350)}}
 
 ## 规范
 
@@ -238,3 +315,4 @@ select.addEventListener("change", (e) => {
 ## 参见
 
 - 定义单词如何在*其内部*被截断的属性：{{CSSxRef("overflow-wrap")}}、{{CSSxRef("word-break")}}、{{CSSxRef("hyphens")}}
+- [`tab-size`](/zh-CN/docs/Web/CSS/tab-size)

@@ -58,9 +58,10 @@ Geralmente é recomendável que se utilize classes sempre que possível, utiliza
 
 - Usar classes torna seu código extensível — Mesmo que você tenha apenas um elemento a ser estilizado agora, você pode querer adicionar as mesmas regras a outros elementos futuramente.
 - Classes permitem que você estilize diversos elementos. Sendo assim, classes podem ajudar a desenvolver folhas de estilo menores; mais enchutas, já que regras podem ser facilmente reutilizadas entre elementos. Isso não só ajuda na manutenção da folha de estilo, como também agiliza a renderização de páginas, principalmente em conexões lentas.
-- Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
+- Seletores de classes tem menor [especificidade](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) do que seletores de id, o que torna as regras de estilização mais fáceis de serem sobrepostas.
 
-> **Nota:** Veja [Seletores](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) para mais informações.
+> [!NOTE]
+> Veja [Seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) para mais informações.
 
 ## Como eu redefino o valor padrão de uma propriedade?
 
@@ -76,7 +77,7 @@ h1 {
 }
 ```
 
-Isso mudou com CSS 2; a diretiva [initial](/es/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
+Isso mudou com CSS 2; a diretiva [initial](/pt-BR/docs/Web/CSS/initial) agora é um valor válido para uma propriedade CSS. Ela redefine tal propriedade para seu valor padrão, o qual é definido nas especificações CSS para tal propriedade.
 
 ```css
 /* A cor padrão do cabeçalho é preta */
@@ -90,7 +91,7 @@ h1 {
 
 ## Como eu derivo um estilo de outro?
 
-CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_variables) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
+CSS não exatamente permite que um estilo seja definido com os termos de outro. (Veja [as notas de Eric Meyer sobre a posição do grupo de trabalho a respeito do assunto](http://archivist.incutio.com/viewlist/css-discuss/2685)). Entretanto, é possível atingir o mesmo efeito designando diversas classes a um elemento, e [Variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties) agora providenciam uma forma de definir informações sobre um estilo em um lugar e reutilizar estas informações em diversos outros lugares.
 
 ## Como eu aplico diversas classes a um elemento?
 
@@ -226,7 +227,7 @@ O uso do seletor \* também deve ser minimizado por ser um seletor lento, especi
 
 ### Especificidade em CSS
 
-Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance#Specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
+Quando multiplas regras são aplicadas a um elemento, a regra a ser renderizada depende de sua [especificidade](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity). O estilo _inline_ (regras de estilo definidas no atributo `style` de um elemento HTML) tem a mais alta especificidade e irá sobrepor qualquer seletor. Seletores de ID tem a segunda mais alta especificidade, com seletores de classes vindo logo após e, eventualmente, seletores de elementos (tags). Tendo isso em mente, a cor do texto da {{htmlelement("div")}} abaixo terá a cor vermelha.
 
 ```html
 <style>
@@ -262,9 +263,11 @@ Caso você precise usar propriedades prefixadas em seu trabalho, você deve decl
 transform: rotate(90deg);
 ```
 
-> **Nota:** Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
+> [!NOTE]
+> Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
-> **Nota:** Veja a página [Extenções CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
+> [!NOTE]
+> Veja a página [Extenções CSS Mozilla](/pt-BR/docs/Web/CSS/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.
 
 ## Como `z-index` está relacionado a posicionamento?
 
@@ -272,4 +275,5 @@ A propriedade `z-index` especifica a ordem dos elementos da pilha.
 
 Um elemento com z-index/ordem na pilha maior sempre será renderizado à frente de um elemento com um z-index/ordem de pilha menor. `z-index` funcionará apenas em elementos que tenham uma posição especificada (Ou seja, só funcionará caso o elemento tenha `position:absolute`, `position:relative` ou `position:fixed`).
 
-> **Nota:** Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).
+> [!NOTE]
+> Para mais informações, veja nosso artigo de aprendizado sobre [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning), e em particular a seção [Introduzindo z-index](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning#Introducing_z-index).

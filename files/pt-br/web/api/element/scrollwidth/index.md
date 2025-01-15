@@ -7,7 +7,8 @@ slug: Web/API/Element/scrollWidth
 
 A propriedade de somente leitura **`Element.scrollWidth`** retorna a largura em pixels do conteúdo de um elemento ou a largura do elemento em si, o que for maior. Se o elemento for mais amplo do que a área de conteúdo (por exemplo, se houver barras de rolagem para percorrer o conteúdo), o `scrollWidth` é maior do que o `clientWidth`.
 
-> **Nota:** Esta propriedade irá arredondar o valor para um número inteiro. Se você precisar de um valor fracionário, use {{ domxref("element.getBoundingClientRect()") }}.
+> [!NOTE]
+> Esta propriedade irá arredondar o valor para um número inteiro. Se você precisar de um valor fracionário, use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Syntaxe
 
@@ -90,4 +91,4 @@ _xScrollWidth_ é a largura do conteúdo do _elemento_ em pixels.
 
 - {{domxref("Element.clientWidth")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determinando as dimensões dos elementos](/pt-BR/docs/Determining_the_dimensions_of_elements)
+- [Determinando as dimensões dos elementos](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

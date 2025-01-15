@@ -11,7 +11,8 @@ L'**API <i lang="en">Push</i>** permet aux applications web de recevoir des mess
 
 ## Concepts et usages de Push
 
-> **Attention :** Lorsqu'on implémente des abonnements via `PushManager`, il est primordial de se protéger contre les attaques CSRF/XSRF. Pour plus d'informations, voir les articles suivants&nbsp;:
+> [!WARNING]
+> Lorsqu'on implémente des abonnements via `PushManager`, il est primordial de se protéger contre les attaques CSRF/XSRF. Pour plus d'informations, voir les articles suivants&nbsp;:
 >
 > - [Anti-sèche pour se protéger contre les attaques CSRF (<i lang="en">Cross-Site Request Forgery</i>) (en anglais)](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Prévenir les attaques CSRF et XSRF (en anglais)](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)

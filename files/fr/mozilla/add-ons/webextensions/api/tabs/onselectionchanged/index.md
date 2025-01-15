@@ -5,7 +5,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
 
 {{AddonSidebar}}
 
-> **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
+> [!WARNING]
+> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 
 Se déclenche lorsque l'onglet sélectionné dans une fenêtre change.
 
@@ -40,7 +41,7 @@ Les événements ont trois fonctions:
     <!---->
 
     - `selectInfo`
-      - : [`object`](#selectInfo).
+      - : [`object`](#selectinfo).
 
 ## Objets supplémentaires
 
@@ -55,9 +56,9 @@ Les événements ont trois fonctions:
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

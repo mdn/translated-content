@@ -17,7 +17,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Примечание:** Когда вы используете `regexp` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка `TypeError`: "replaceAll must be called with a global RegExp".
+> [!NOTE]
+> Когда вы используете `regexp` вы должны установить флаг глобального поиска ("g"), иначе вернётся ошибка `TypeError`: "replaceAll must be called with a global RegExp".
 
 ### Parameters
 
@@ -26,9 +27,9 @@ const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 - `substr`
   - : Подстрока, которая заменится `newSubstr`. Обрабатывается как буквенная строка, не интерпретируется как регулярное выражение.
 - `newSubstr` (replacement)
-  - : Новая строка, которая заменяет найденные подстроки указанные в `regexp` или `substr` параметрах. Поддерживается ряд специальных шаблонов замены; смотрите "[Specifying a string as a parameter](#Specifying_a_string_as_a_parameter)" блок ниже.
+  - : Новая строка, которая заменяет найденные подстроки указанные в `regexp` или `substr` параметрах. Поддерживается ряд специальных шаблонов замены; смотрите "[Specifying a string as a parameter](#specifying_a_string_as_a_parameter)" блок ниже.
 - `function` (replacement)
-  - : Функция вызванная при создании новой строки которая используется для замены совпадений указанных в `regexp` or `substr`. Аргументы применяемы в этой функции описываются в "[Specifying a function as a parameter](#Specifying_a_function_as_a_parameter)" блок ниже.
+  - : Функция вызванная при создании новой строки которая используется для замены совпадений указанных в `regexp` or `substr`. Аргументы применяемы в этой функции описываются в "[Specifying a function as a parameter](#specifying_a_function_as_a_parameter)" блок ниже.
 
 ### Return value
 

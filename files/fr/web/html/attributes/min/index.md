@@ -5,9 +5,9 @@ slug: Web/HTML/Attributes/min
 
 {{HTMLSidebar}}
 
-L'attribut **`min`** définit la valeur minimale qui est acceptable et valide pour l'entrée contenant l'attribut. Si la [valeur](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément est inférieure à cette valeur, l'élément échoue lors de la [validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`. Si une valeur est spécifiée pour `min` qui n'est pas un nombre valide, l'entrée n'a pas de valeur minimale.
+L'attribut **`min`** définit la valeur minimale qui est acceptable et valide pour l'entrée contenant l'attribut. Si la [valeur](/fr/docs/Web/HTML/Element/input#attr-value) de l'élément est inférieure à cette valeur, l'élément échoue lors de la [validation des contraintes](/fr/docs/Web/HTML/Constraint_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`. Si une valeur est spécifiée pour `min` qui n'est pas un nombre valide, l'entrée n'a pas de valeur minimale.
 
-Valable pour les types de saisie numérique, y compris les types [`date`](/fr/docs/Web/HTML/Element/Input/date), [`month`](/fr/docs/Web/HTML/Element/Input/month), [`week`](/fr/docs/Web/HTML/Element/Input/week), [`time`](/fr/docs/Web/HTML/Element/Input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/Input/number) et [`range`](/fr/docs/Web/HTML/Element/Input/range), et l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `min` est un nombre qui spécifie la valeur la plus négative qu'un contrôle de formulaire doit considérer comme valide.
+Valable pour les types de saisie numérique, y compris les types [`date`](/fr/docs/Web/HTML/Element/input/date), [`month`](/fr/docs/Web/HTML/Element/input/month), [`week`](/fr/docs/Web/HTML/Element/input/week), [`time`](/fr/docs/Web/HTML/Element/input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/input/number) et [`range`](/fr/docs/Web/HTML/Element/input/range), et l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter), l'attribut `min` est un nombre qui spécifie la valeur la plus négative qu'un contrôle de formulaire doit considérer comme valide.
 
 ## Syntaxe
 
@@ -109,15 +109,16 @@ Valable pour les types de saisie numérique, y compris les types [`date`](/fr/do
   </tbody>
 </table>
 
-> **Note :** Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
+> [!NOTE]
+> Lorsque les données saisies par l'utilisateur ne respectent pas la valeur minimale définie, la valeur est considérée comme non valide dans la validation des contraintes et correspondra aux pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range).
 
-Voir la [validation côté client](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) et [`rangeUnderflow`](/fr/docs/Web/API/ValidityState/rangeUnderflow) pour plus d'informations.
+Voir la [validation côté client](/fr/docs/Web/HTML/Constraint_validation) et [`rangeUnderflow`](/fr/docs/Web/API/ValidityState/rangeUnderflow) pour plus d'informations.
 
-Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/Meter), l'attribut `min` définit la limite numérique inférieure de la plage mesurée. Celle-ci doit être inférieure à la valeur minimale (attribut [`max`](/fr/docs/Web/HTML/Attributes/max)), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
+Pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter), l'attribut `min` définit la limite numérique inférieure de la plage mesurée. Celle-ci doit être inférieure à la valeur minimale (attribut [`max`](/fr/docs/Web/HTML/Attributes/max)), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
 
 | Élément                                      | Syntaxe                               | Exemple                                                                                            |
 | -------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| [`<meter>`](/fr/docs/Web/HTML/Element/Meter) | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
+| [`<meter>`](/fr/docs/Web/HTML/Element/meter) | [`<number>`](/fr/docs/Web/CSS/number) | `<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"> at 40/100</meter>` |
 
 ### Impact sur `step`
 
@@ -160,8 +161,8 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 - L'attribut [`step`](/fr/docs/Web/HTML/Attributes/step)
 - L'attribut [`max`](/fr/docs/Web/HTML/Attributes/max)
 - Les autres attributs de mesure : [`low`](/fr/docs/Web/HTML/Element/meter#attr-low), [`high`](/fr/docs/Web/HTML/Element/meter#attr-high), [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum)
-- [Validation des contraintes](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- L'API [Constraint validation](/fr/docs/Web/API/Constraint_validation)
+- [Validation des contraintes](/fr/docs/Web/HTML/Constraint_validation)
+- L'API [Constraint validation](/fr/docs/Learn/Forms/Form_validation)
 - L'attribut JavaScript [`validityState.rangeUnderflow`](/fr/docs/Web/API/validityState/rangeUnderflow)
 - La pseudo-classe [`:out-of-range`](/fr/docs/Web/CSS/:out-of-range)
 - L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)

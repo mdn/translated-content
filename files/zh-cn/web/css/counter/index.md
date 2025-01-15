@@ -19,9 +19,17 @@ counter(countername, upper-roman)
 
 > **备注：** `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
 >
-> 在使用此功能之前，请仔细检查[浏览器兼容性表](#Browser_compatibility)。
+> 在使用此功能之前，请仔细检查[浏览器兼容性表](#browser_compatibility)。
 
 ## 语法
+
+```css
+/* 简单的用法 */
+counter(countername);
+
+/* 改变计数器的显示 */
+counter(countername, upper-roman)
+```
 
 ### 值
 
@@ -32,15 +40,7 @@ counter(countername, upper-roman)
 
 ### 形式语法
 
-```
-counter( <custom-ident>, <counter-style>? )
-
-where
-<counter-style> = <counter-style-name> | symbols()
-
-where
-<counter-style-name> = <custom-ident>
-```
+{{CSSSyntax}}
 
 ## 示例
 

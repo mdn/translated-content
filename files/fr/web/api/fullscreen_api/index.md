@@ -7,7 +7,8 @@ slug: Web/API/Fullscreen_API
 
 L'**API Fullscreen** _(plein écran)_ fournit un moyen simple de présenter du contenu web en utilisant l'ensemble de l'écran de l'utilisateur. L'API vous permet de diriger facilement le navigateur pour faire en sorte qu'un élément et ses enfants, le cas échéant, occupent entièrement l'écran, éliminant toute l'interface utilisateur du navigateur et les autres applications de l'écran pendant ce temps.
 
-> **Note :** Pour le moment, tous les navigateurs n'utilisent pas la version non préfixée de cet API. Consultez le tableau récapitulant les [préfixes](#Préfixes) et les différences de noms entre eux (vous pouvez également utiliser [Fscreen](https://github.com/rafrex/fscreen) pour l'accès du fournisseur à l'API).
+> [!NOTE]
+> Pour le moment, tous les navigateurs n'utilisent pas la version non préfixée de cet API. Consultez le tableau récapitulant les [préfixes](#préfixes) et les différences de noms entre eux (vous pouvez également utiliser [Fscreen](https://github.com/rafrex/fscreen) pour l'accès du fournisseur à l'API).
 
 ## Activation du mode plein écran
 
@@ -52,7 +53,8 @@ Quand le mode plein écran est activé, le document qui contient l'élément re�
 
 Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par exemple, les élements {{ HTMLElement("iframe") }} possèdent l'attribut [`allowfullscreen`](/fr/docs/HTML/Element/allowfullscreen#iframe) pour permettre à leur contenu d'être affiché en mode plein écran. Certains contenus comme les greffons fenêtrés ne peuvent être représentés en plein écran. Essayer de placer un élément qui ne peut être affiché en mode plein écran (ou le parent ou le descendant d'un tel élément) ne marchera pas. A la place, l'élément qui a demandé le mode plein écran recevra un événement `mozfullscreenerror` . Quand une demande de plein écran échoue, Firefox écrit un message d'erreur dans la console Web expliquant pourquoi la demande n'a pas pu aboutir. Dans Chrome et les versions plus récentes d'Opera, aucun avertissement de ce type n'est généré.
 
-> **Note :** Les requêtes de Fullscreen doivent être appelées depuis un gestionnaire d'évènements ou sinon, elles seront refusées.
+> [!NOTE]
+> Les requêtes de Fullscreen doivent être appelées depuis un gestionnaire d'évènements ou sinon, elles seront refusées.
 
 ## Sortie du mode plein écran
 
@@ -77,7 +79,7 @@ En même temps, naviguer sur une autre page, changer d'onglet, ou changer d'appl
 
 Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches <kbd>Retour</kbd> ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.
 
-[Voir l'exemple sur une page](/samples/domref/fullscreen.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### Action sur la touche <kbd>Entrée</kbd>
 
@@ -139,10 +141,10 @@ Pour le moment, tous les navigateurs n'ont pas implémenté la version sans pré
 
 ## Voir aussi
 
-- [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
+- [Utiliser le mode plein écran](/fr/docs/Web/API/Fullscreen_API)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- [`allowfullscreen`](/fr/docs/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)

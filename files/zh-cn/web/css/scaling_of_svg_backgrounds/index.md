@@ -60,7 +60,8 @@ SVG 相比其他格式为我们提供了更多的灵活性，与此同时当我�
 
 现在让我们来看看这些图片在各种缩放情景下怎么展现。以下例子都是宽 300 高 200 像素的矩形。此外， {{ cssxref("background-repeat") }} 都设为了 no-repeat，以便看得出来缩放的情况。
 
-> **备注：** 以下截屏只表达**符合预期的**渲染效果。目前不是所有的浏览器都能正确的渲染这些代码。
+> [!NOTE]
+> 以下截屏只表达**符合预期的**渲染效果。目前不是所有的浏览器都能正确的渲染这些代码。
 
 ### 两个维度都指定尺寸
 
@@ -338,4 +339,4 @@ The width is set by the CSS to 150px. The `auto` value for the height is compute
 ## See also
 
 - {{cssxref("background-size")}}
-- Blog post: [Properly resizing vector image backgrounds](http://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)
+- Blog post: [Properly resizing vector image backgrounds](https://whereswalden.com/2011/10/21/properly-resizing-vector-image-backgrounds/)

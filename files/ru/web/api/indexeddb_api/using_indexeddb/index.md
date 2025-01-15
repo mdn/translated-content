@@ -76,7 +76,8 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 Второй параметр метода open - это версия базы данных. Версия определяет схему базы данных - хранилище объектов и их структуру . Если база данных ещё не существует, то она создаётся операцией `open,` затем срабатывает триггер события `onupgradeneeded` и после этого ваш обработчик этого события создаёт схему базы данных. Если же база данных уже существует, а вы указываете новый номер версии, то сразу же срабатывает триггер события `onupgradeneeded,` позволяя вам обновить схему базы данных в обработчике. Подробнее об этом см. в [Обновление версии базы данных](#updating_the_version_of_the_database) ниже и на странице {{ domxref("IDBFactory.open") }} справочника
 
-> **Предупреждение:** Версия базы данных имеет внутреннее представление `unsigned long long` number (длинное длинное целое без знака), то есть может принимать очень большие целые значения. Имейте в виду также, что нет смысла использовать в качестве версии базы данных значение с плавающей точкой (float), потому что оно будет сконвертировано в ближайшее меньшее целое. В результате неожиданно может не запуститься транзакция или сработать триггер события `upgradeneeded`. Например, не используйте значение 2.4 как версию базы данных:
+> [!WARNING]
+> Версия базы данных имеет внутреннее представление `unsigned long long` number (длинное длинное целое без знака), то есть может принимать очень большие целые значения. Имейте в виду также, что нет смысла использовать в качестве версии базы данных значение с плавающей точкой (float), потому что оно будет сконвертировано в ближайшее меньшее целое. В результате неожиданно может не запуститься транзакция или сработать триггер события `upgradeneeded`. Например, не используйте значение 2.4 как версию базы данных:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // не делайте так, потому что версия будет округлена до 2
@@ -145,7 +146,8 @@ request.onupgradeneeded = function (event) {
 
 Версия числа без знака с длиной `long long, может быть очень большим.`
 
-> **Предупреждение:** Так же вы не можете использовать float, его значение будет округлено до ближайшего целого, со всеми вытекающими из этого ошибками:
+> [!WARNING]
+> Так же вы не можете использовать float, его значение будет округлено до ближайшего целого, со всеми вытекающими из этого ошибками:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // Будет округлено до 2
@@ -214,7 +216,7 @@ Object stores are created with a single call to `createObjectStore()`. The metho
 
 We've also asked for an index named "name" that looks at the `name` property of the stored objects. As with `createObjectStore()`, `createIndex()` takes an optional `options` object that refines the type of index that you want to create. Adding objects that don't have a `name` property still succeeds, but the object won't appear in the "name" index.
 
-We can now retrieve the stored customer objects using their `ssn` from the object store directly, or using their name by using the index. To learn how this is done, see the section on [using an index](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index).
+We can now retrieve the stored customer objects using their `ssn` from the object store directly, or using their name by using the index. To learn how this is done, see the section on [using an index](#using_an_index).
 
 ## Adding and removing data
 
@@ -340,7 +342,8 @@ objectStore.openCursor().onsuccess = function (event) {
 };
 ```
 
-> **Предупреждение:** The following function is not part of the IndexedDB standard!
+> [!WARNING]
+> The following function is not part of the IndexedDB standard!
 
 Mozilla has also implemented `getAll()` to handle this case. It isn't part of the IndexedDB standard, so it may disappear in the future. We've included it because we think it's useful. The following code does precisely the same thing as above:
 

@@ -11,7 +11,7 @@ Un certain nombre de changements présents dans Firefox 3 pourraient affecter vo
 
 Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
 [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](http://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
+de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](https://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
 
 Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
 alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
@@ -65,7 +65,8 @@ content mypackage location/ contentaccessible=yes
 
 Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre `contentaccessible`, étant donné qu'il constitue un risque potentiel de sécurité.
 
-> **Note :** Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
+> [!NOTE]
+> Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
 >
 > ```
 > content mypackage location/

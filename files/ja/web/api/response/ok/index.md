@@ -1,11 +1,12 @@
 ---
-title: Response.ok
+title: "Response: ok プロパティ"
+short-title: ok
 slug: Web/API/Response/ok
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`ok`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、このレスポンスが（ステータスが 200-299 で）成功したかどうかを表す論理値です。
 
@@ -15,7 +16,7 @@ l10n:
 
 ## 例
 
-[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照）では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
+[Fetch Response の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) （[Fetch Response のライブ](https://mdn.github.io/dom-examples/fetch/fetch-response/) を参照）では、新しい {{domxref("Request")}} オブジェクトを、 {{domxref("Request.Request","Request()")}} コンストラクターを使用して作成し、 JPG のパスを渡します。次に {{domxref("Window/fetch", "fetch()")}} を使用してこのリクエストをフェッチし、 {{domxref("Response.blob")}} を使用してリクエストから blob を抽出し、 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用してオブジェクト URL を作成し、これを {{htmlelement("img")}} に表示します。
 
 > **メモ:** `fetch()` ブロックの先頭で、レスポンスの `ok` 値をコンソールにログ出力します。
 

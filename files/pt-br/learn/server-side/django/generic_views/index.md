@@ -73,7 +73,8 @@ class BookListView(generic.ListView):
 
 É isso aí! A view genérica consultará o banco de dados para obter todos os registros para o modelo especificado (`Book`) em seguida, renderize um template localizado em **/locallibrary/catalog/templates/catalog/book_list.html** (que criaremos abaixo). Dentro do template, você pode acessar a lista de livros com a variável de template denominada `object_list` OU `book_list` (i.e. genericamente "`the_model_name_list`").
 
-> **Nota:** Esse caminho estranho para a localização do template não é um erro de impressão - as visualizações genéricas procuram modelos em `/application_name/the_model_name_list.html` (`catalog/book_list.html` nesse caso) dentro do aplicativo `/application_name/templates/` diretório (`/catalog/templates/)`.
+> [!NOTE]
+> Esse caminho estranho para a localização do template não é um erro de impressão - as visualizações genéricas procuram modelos em `/application_name/the_model_name_list.html` (`catalog/book_list.html` nesse caso) dentro do aplicativo `/application_name/templates/` diretório (`/catalog/templates/)`.
 
 Você pode adicionar atributos para alterar o comportamento padrão acima. Por exemplo, você pode especificar outro arquivo do template se precisar ter várias visualizações que usem esse mesmo modelo ou se desejar usar um nome de variável de template diferente se `book_list` não é intuitivo para o seu caso de uso de template específico. Possivelmente, a variação mais útil é alterar/filtrar o subconjunto de resultados retornados - portanto, em vez de listar todos os livros, você pode listar os cinco principais livros que foram lidos por outros usuários.
 
@@ -119,7 +120,8 @@ Ao fazer isso, é importante seguir o padrão usado acima:
 - Em seguida, adicione as novas informações de contexto.
 - Em seguida, retorne o novo contexto (atualizado).
 
-> **Nota:** Confira [Built-in class-based generic views](https://docs.djangoproject.com/pt-br/2.1/topics/class-based-views/generic-display/) (Django docs) para muitos mais exemplos do que você pode fazer.
+> [!NOTE]
+> Confira [Built-in class-based generic views](https://docs.djangoproject.com/pt-br/2.1/topics/class-based-views/generic-display/) (Django docs) para muitos mais exemplos do que você pode fazer.
 
 ### Criando o template List View
 
@@ -186,7 +188,8 @@ Acessamos os _campos_ do registro de livro associado usando a "notação de pont
 
 Também podemos chamar _funções_ no modelo de dentro do nosso template - nesse caso, chamamos `Book.get_absolute_url()` para obter um URL que você pode usar para exibir o registro de detalhe associado. Isso funciona desde que a função não tenha argumentos (não há como passar argumentos!)
 
-> **Nota:** Temos que ter um pouco de cuidado com os "efeitos colaterais" ao chamar funções em templates. Aqui apenas exibimos um URL, mas uma função pode fazer praticamente qualquer coisa - não queremos excluir nosso banco de dados (por exemplo) apenas renderizando nosso template!
+> [!NOTE]
+> Temos que ter um pouco de cuidado com os "efeitos colaterais" ao chamar funções em templates. Aqui apenas exibimos um URL, mas uma função pode fazer praticamente qualquer coisa - não queremos excluir nosso banco de dados (por exemplo) apenas renderizando nosso template!
 
 #### Atualize o template base
 
@@ -222,13 +225,15 @@ Para o path _book-detail_ o padrão de URL usa uma sintaxe especial para captura
 
 Neste caso, usamos `'<int:pk>'` para capturar o ID do livro, que deve ser uma sequência especialmente formatada e passá-la para a view como um parâmetro chamado `pk` (abreviatura de primary key). Esta é a id que está sendo usado para armazenar o livro exclusivamente no banco de dados, conforme definido no Book Model.
 
-> **Nota:** Como discutido anteriormente, nosso URL correspondente é realmente `catalog/book/<digits>` (porque estamos no aplicativo de **catalog**, `/catalog/` é assumido).
+> [!NOTE]
+> Como discutido anteriormente, nosso URL correspondente é realmente `catalog/book/<digits>` (porque estamos no aplicativo de **catalog**, `/catalog/` é assumido).
 
 > **Aviso:** **Importante**: A view de detalhes genérica class-based _espera_ receber um parâmetro chamado **pk**. Se você estiver escrevendo sua própria função view, poderá usar o nome de qualquer parâmetro que desejar, ou mesmo transmitir as informações em um argumento sem nome.
 
 #### Correspondência avançada de caminhos/iniciador de expressão regular
 
-> **Nota:** Você não precisará desta seção para concluir o tutorial! Nós fornecemos isso porque conhecer essa opção provavelmente será útil no seu futuro centrado no Django.
+> [!NOTE]
+> Você não precisará desta seção para concluir o tutorial! Nós fornecemos isso porque conhecer essa opção provavelmente será útil no seu futuro centrado no Django.
 
 The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.re_path) method.
 
@@ -268,7 +273,8 @@ Let's consider a few real examples of patterns:
 
 You can capture multiple patterns in the one match, and hence encode lots of different information in a URL.
 
-> **Nota:** Como desafio, considere como você pode codificar um URL para listar todos os livros lançados em um determinado ano, mês, dia e o RE que poderia ser usado para correspondê-lo.
+> [!NOTE]
+> Como desafio, considere como você pode codificar um URL para listar todos os livros lançados em um determinado ano, mês, dia e o RE que poderia ser usado para correspondê-lo.
 
 #### Passando opções adicionais em seus mapas de URL
 
@@ -279,7 +285,8 @@ path('url/', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl
 path('anotherurl/', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
 ```
 
-> **Nota:** As opções extras e os padrões capturados nomeados são passados para a view como argumentos _nomeados_. Se você usar o **mesmo nome** para um padrão capturado e uma opção extra, somente o valor do padrão capturado será enviado para a visualização (o valor especificado na opção adicional será descartado).
+> [!NOTE]
+> As opções extras e os padrões capturados nomeados são passados para a view como argumentos _nomeados_. Se você usar o **mesmo nome** para um padrão capturado e uma opção extra, somente o valor do padrão capturado será enviado para a visualização (o valor especificado na opção adicional será descartado).
 
 ### View (class-based)
 
@@ -354,7 +361,8 @@ Crie o arquivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html**
 {% endblock %}
 ```
 
-> **Nota:** O link do autor no template acima tem um URL vazio porque ainda não criamos uma página de detalhes do autor. Uma vez que isso exista, você deve atualizar o URL assim:
+> [!NOTE]
+> O link do autor no template acima tem um URL vazio porque ainda não criamos uma página de detalhes do autor. Uma vez que isso exista, você deve atualizar o URL assim:
 >
 > ```django
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
@@ -377,7 +385,8 @@ A única coisa interessante que não vimos antes é a função `book.bookinstanc
 
 Este método é necessário porque você declara um campo `ForeignKey` (um-para-muitos) somente no lado "um" do relacionamento. Como você não faz nada para declarar o relacionamento nos outros modelos ("muitos"), ele não possui nenhum campo para obter o conjunto de registros associados. Para superar esse problema, o Django constrói uma função "pesquisa reversa" chamada de forma apropriada, que você pode usar. O nome da função é construído com letras minúsculas no nome do modelo em que o `ForeignKey` foi declarado, seguido por `_set` (i.e. então a função criada em `Book` é `bookinstance_set()`).
 
-> **Nota:** Aqui usamos `all()` para obter todos os registros (o padrão). Enquanto você pode usar o método `filter()` para obter um subconjunto de registros no código, não é possível fazer isso diretamente nos modelos, porque não é possível especificar argumentos para funções.
+> [!NOTE]
+> Aqui usamos `all()` para obter todos os registros (o padrão). Enquanto você pode usar o método `filter()` para obter um subconjunto de registros no código, não é possível fazer isso diretamente nos modelos, porque não é possível especificar argumentos para funções.
 >
 > Observe também que, se você não definir um pedido (na sua class-based view ou modelo), também verá erros do servidor de desenvolvimento como este:
 >
@@ -422,7 +431,8 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 
 Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de livros e as páginas de detalhes do livro. Execute o servidor (`python3 manage.py runserver`) e abra no seu navegador `http://127.0.0.1:8000/`.
 
-> **Aviso:** Não clique em nenhum autor ou link de detalhes do autor ainda - você os criará no desafio!
+> [!WARNING]
+> Não clique em nenhum autor ou link de detalhes do autor ainda - você os criará no desafio!
 
 Clique no link **All books** para exibir a lista de livros.
 
@@ -501,10 +511,10 @@ The challenge in this article is to create the author detail and list views requ
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behaviour.
 
-> **Nota:**
+> [!NOTE]
 >
-> - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#Update_the_base_template) as we did when we updated the **All books** link.
-> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
+> - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#update_the_base_template) as we did when we updated the **All books** link.
+> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
 >
 >   ```django
 >   <p>

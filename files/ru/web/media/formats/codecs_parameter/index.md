@@ -39,7 +39,8 @@ slug: Web/Media/Formats/codecs_parameter
 
 Как и в случае с любым параметром MIME типа , `codecs` должен заменяться на `codecs*` (обратите внимание на символ звёздочки, `*`) , если какое-либо из свойств кодека использует специальные символы для указания дополнительной информации (языковые отметки, кодировка байтов в шестнадцатеричные значения и т.д.), входящие в {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. Можно использовать функции JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} для кодирования списка параметров, можно использовать {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} для декодирования предварительно закодированного списка параметров.
 
-> **Примечание:** Когда используется параметр `codecs`, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.
+> [!NOTE]
+> Когда используется параметр `codecs`, указанный список кодеков должен включать каждый кодек, используемый для содержимого файла Список также может содержать кодеки, которых нет в файле.
 
 ## Свойства кодеков для контейнеров
 
@@ -288,7 +289,7 @@ Thus, the syntaxes for each of the supported codecs look like this:
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](http://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority web site's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1.oo[.PPCCLL]` (AVC video)
@@ -336,13 +337,14 @@ When the value of an entry in the `codecs` list begins with `mp4a`, the syntax o
 mp4a.oo[.A]
 ```
 
-Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](http://mp4ra.org/), which maintains a [list of the possible OTI values](http://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
+Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](https://mp4ra.org/), which maintains a [list of the possible OTI values](https://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
 
 The Audio Object Type is specified as a one or two digit _decimal_ value (unlike most other values in the `codecs` parameter, which use hexadecimal). For example, MPEG-4's AAC-LC has an audio object type number of `2`, so the full `codecs` value representing AAC-LC is `mp4a.40.2`.
 
 Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full `codecs` value `mp4a.40.17`. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as `mp4a.40.02`.
 
-> **Примечание:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
+> [!NOTE]
+> The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
 
 The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object ypes provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
 
@@ -413,7 +415,7 @@ The strings `vp8.0` and `vp9.0` also work, but are not recommended.
 
 #### ISO Base Media File Format syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#ISO-BMFF). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
 
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 

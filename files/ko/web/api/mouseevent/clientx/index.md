@@ -21,7 +21,7 @@ CSSOM 뷰 모듈에 의해 재정의된 이중 부동 소수점 값. 원래 이 
 
 ## Example
 
-이 예에서는 {{Event("mousemove")}} 이벤트를 트리거할 때마다 마우스 좌표를 표시한다.
+이 예에서는 {{domxref("Element/mousemove_event", "mousemove")}} 이벤트를 트리거할 때마다 마우스 좌표를 표시한다.
 
 ### HTML
 

@@ -42,7 +42,7 @@ Emscripten SDK를 설치하기 위해, 아래 설명을 참고하세요.
    }
    ```
 
-2. Emscripten 컴파일 환경에 접속하는 데 사용한 terminal을 통ㅇ해 hello.c 파일과 동일한 폴더로 이동한 후 다음 명령을 실행하세요.
+2. Emscripten 컴파일 환경에 접속하는 데 사용한 terminal을 통해 hello.c 파일과 동일한 폴더로 이동한 후 다음 명령을 실행하세요.
 
    ```bash
    emcc hello.c -o hello.html
@@ -63,7 +63,8 @@ Emscripten SDK를 설치하기 위해, 아래 설명을 참고하세요.
 
 이제 WebAssembly를 지원하는 브라우저에서 `hello.html`을 로드해야합니다. Firefox 52, Chrome 57, Edge 57, Opera 44에서 기본적으로 활성화됩니다.
 
-> **참고:** 생성된 HTML 파일 (`hello.html`) 을 로컬 하드 드라이브(예: `file://your_path/hello.html`)에서 직접 열려고 하면 오류가 발생합니다(`Wasm의 동기, 비동기 가져오기가 모두 실패했습니다`라는 메시지가 표시됩니다). HTTP 서버(`http://`)로 HTML 파일을 실행해야 합니다. [로컬 테스팅 서버를 설정하는 방법](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)을 참고하세요.
+> [!NOTE]
+> 생성된 HTML 파일 (`hello.html`) 을 로컬 하드 드라이브(예: `file://your_path/hello.html`)에서 직접 열려고 하면 오류가 발생합니다(`Wasm의 동기, 비동기 가져오기가 모두 실패했습니다`라는 메시지가 표시됩니다). HTTP 서버(`http://`)로 HTML 파일을 실행해야 합니다. [로컬 테스팅 서버를 설정하는 방법](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)을 참고하세요.
 
 모든 것이 계획대로 작동했다면, Emscripten 콘솔의 "Hello world" 출력이 웹 페이지와 브라우저의 JavaScript 콘솔에 나타나야 합니다. 축하합니다. WebAssembly로 C를 컴파일하고 브라우저에서 실행했습니다!
 ![image](helloworld.png)
@@ -170,4 +171,4 @@ JavaScript에서 C 코드에 정의된 함수를 쓰고 싶은 경우 Emscripten
 - [ccall/cwrap을 사용하여 JavaScript에서 컴파일된 C 함수 호출](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [JavaScript로 컴파일할 때 C/C++ 소스 코드의 함수가 사라지거나, 처리할 함수가 없다는 메시지가 나타나는 이유는 무엇인가요?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [Mozilla Research의 WebAssembly](https://research.mozilla.org/webassembly/)
-- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/existing_C_to_wasm)
+- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/existing_C_to_Wasm)

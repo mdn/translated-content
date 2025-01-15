@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/User-Agent
 
 O cabeçalho de requisição **User-Agent** é uma cadeia de caracteres característica que permite servidores e pares de rede identificar a aplicação, sistema operacional, fornecedor, e/ou versão do agente de usuário requisitante.
 
-> **Aviso:** Por favor leia [Detectando o navegador usando o agente de usuário (Browser detection using the user agent)](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) para por quê servir diferentes páginas Web ou serviços para diferentes navegadores é geralmente uma má ideia.
+> [!WARNING]
+> Por favor leia [Detectando o navegador usando o agente de usuário (Browser detection using the user agent)](/pt-BR/docs/Web/HTTP/Browser_detection_using_the_user_agent) para por quê servir diferentes páginas Web ou serviços para diferentes navegadores é geralmente uma má ideia.
 
 <table class="properties">
   <tbody>

@@ -63,7 +63,8 @@ Cela fonctionne visuellement, mais les lecteurs d'écran ne peuvent pas interpr�
 
 Les attributs WAI-ARIA ne modifient en rien la page web en dehors des informations exposées aux API du navigateur portant sur l'accessibilité (ce qu'utilisent les lecteurs d'écran pour récupérer des informations). WAI-ARIA ne modifie pas la structure de la page web, le DOM, etc. On pourra toutefois utiliser ses attributs pour sélectionner certains éléments en CSS.
 
-> **Note :** La spécification WAI-ARIA liste l'ensemble des rôles ARIA et leurs utilisations possibles, avec des liens vers de plus amples informations&nbsp;: [définition des rôles (en anglais)](https://www.w3.org/TR/wai-aria-1.1/#role_definitions). Sur MDN, vous pouvez consulter [la section sur les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles).
+> [!NOTE]
+> La spécification WAI-ARIA liste l'ensemble des rôles ARIA et leurs utilisations possibles, avec des liens vers de plus amples informations&nbsp;: [définition des rôles (en anglais)](https://www.w3.org/TR/wai-aria-1.1/#role_definitions). Sur MDN, vous pouvez consulter [la section sur les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles).
 >
 > La spécification contient également la liste de l'ensemble des propriétés et des états, avec des liens vers de plus amples informations&nbsp;: [définition des états et propriétés (tous les attributs `aria-\*`)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
@@ -83,7 +84,8 @@ Il faut ensuite savoir si les navigateurs en question prennent en charge les fon
 
 Dans cet article, nous n'aborderons pas chaque fonctionnalité WAI-ARIA et les détails de chaque prise en charge. Nous nous intéresserons plutôt aux fonctionnalités essentielles de WAI-ARIA que vous devez connaître, et si nous ne mentionnons pas la compatibilité, vous pouvez partir du principe que la fonctionnalité en question est relativement bien prise en charge. Nous indiquerons clairement s'il y a des exceptions.
 
-> **Note :** Certaines bibliothèques JavaScript prennent en charge WAI-ARIA, ce qui signifie qu'elles ajoutent des attributs ARIA lorsqu'elles génèrent des éléments d'interface complexes comme des contrôles de formulaires. Si vous recherchez une bibliothèque JavaScript tierce pour vos composants d'interface, gardez en tête que l'accessibilité est un critère de choix. On pourra notamment citer jQuery UI (voir [à propos de jQuery UI&nbsp;: prise en charge étendue de l'accessibilité](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/), et [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html).
+> [!NOTE]
+> Certaines bibliothèques JavaScript prennent en charge WAI-ARIA, ce qui signifie qu'elles ajoutent des attributs ARIA lorsqu'elles génèrent des éléments d'interface complexes comme des contrôles de formulaires. Si vous recherchez une bibliothèque JavaScript tierce pour vos composants d'interface, gardez en tête que l'accessibilité est un critère de choix. On pourra notamment citer jQuery UI (voir [à propos de jQuery UI&nbsp;: prise en charge étendue de l'accessibilité](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/), et [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html).
 
 ### Quand faut-il utiliser WAI-ARIA&nbsp;?
 
@@ -92,7 +94,7 @@ Nous avons déjà abordé les problèmes qui ont amené à la création de WAI-A
 - Signes et repères
   - : Les valeurs utilisées pour l'attribut ARIA [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) agissent comme des repères qui répliquent la sémantique d'éléments HTML natifs (par exemple [`<nav>`](/fr/docs/Web/HTML/Element/nav)), ou qui vont au-delà en fournissant des points de repères pour des domaines fonctionnels comme&nbsp;:`search`, `tablist`, `tab`, `listbox`, etc.
 - Mises à jour dynamiques du contenu
-  - : Les lecteurs d'écran peuvent avoir des difficultés à constamment indiquer le contenu qui change sur la page. Avec ARIA, on peut utiliser l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) pour informer les personnes lorsqu'une zone de contenu est mise à jour (que ce soit avec [`fetch()`](/fr/docs/Web/API/fetch) et/ou [les API du DOM](/fr/docs/Web/API/Document_Object_Model).
+  - : Les lecteurs d'écran peuvent avoir des difficultés à constamment indiquer le contenu qui change sur la page. Avec ARIA, on peut utiliser l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) pour informer les personnes lorsqu'une zone de contenu est mise à jour (que ce soit avec [`fetch()`](/fr/docs/Web/API/Window/fetch) et/ou [les API du DOM](/fr/docs/Web/API/Document_Object_Model).
 - Amélioration de l'accessibilité au clavier
   - : Certains éléments HTML natifs peuvent être utilisés avec le clavier. Lorsqu'on utilise d'autres éléments avec JavaScript pour simuler des interactions analogues, l'accessibilité au clavier et la détection par les lecteurs d'écran peuvent en pâtir. WAI-ARIA fournit des outils pour permettre aux autres éléments de recevoir le focus, notamment grâce à `tabindex`).
 - Accessibilité des contrôles non-sémantiques
@@ -102,7 +104,8 @@ S'il y a une chose à se rappeler, c'est qu'**il faut uniquement utiliser WAI-AR
 
 Rappelons-le quand même&nbsp;: **n'utilisez WAI-ARIA que lorsque c'est nécessaire&nbsp;!**
 
-> **Note :** De façon générale, essayez autant que possible de tester votre site avec une diversité de personnes, avec un handicap ou non, utilisant des lecteurs d'écran, utilisant la navigation au clavier, etc. Elles sauront bien mieux vous dire si le résultat fonctionne bien.
+> [!NOTE]
+> De façon générale, essayez autant que possible de tester votre site avec une diversité de personnes, avec un handicap ou non, utilisant des lecteurs d'écran, utilisant la navigation au clavier, etc. Elles sauront bien mieux vous dire si le résultat fonctionne bien.
 
 ## Implémentations concrètes avec WAI-ARIA
 
@@ -207,7 +210,7 @@ Prenons un rapide exemple avec le fichier [`aria-no-live.html`](https://github.c
 </section>
 ```
 
-Grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le code JavaScript charge un fichier JSON contenant un ensemble de citations aléatoires avec leurs autrices et auteurs. Lorsque ce chargement est effectué, on démarre une boucle [`setInterval()`](/fr/docs/Web/API/setInterval) qui charge une nouvelle citation aléatoire dans la boîte toutes les 10 secondes&nbsp;:
+Grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le code JavaScript charge un fichier JSON contenant un ensemble de citations aléatoires avec leurs autrices et auteurs. Lorsque ce chargement est effectué, on démarre une boucle [`setInterval()`](/fr/docs/Web/API/Window/setInterval) qui charge une nouvelle citation aléatoire dans la boîte toutes les 10 secondes&nbsp;:
 
 ```js
 const intervalID = setInterval(showQuote, 10000);
@@ -232,7 +235,8 @@ Téléchargez un exemplaire du fichier [`aria-no-live.html`](https://github.com/
 
 Cela permettra au lecteur d'écran d'annoncer le contenu dès qu'il est mis à jour.
 
-> **Note :** Si vous voyez une exception de sécurité lors de l'appel `XMLHttpRequest`, c'est que le fichier est chargé localement plutôt que depuis un serveur. Voyez [comment mettre en place un serveur de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) pour que cela fonctionne.
+> [!NOTE]
+> Si vous voyez une exception de sécurité lors de l'appel `XMLHttpRequest`, c'est que le fichier est chargé localement plutôt que depuis un serveur. Voyez [comment mettre en place un serveur de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) pour que cela fonctionne.
 
 C'est mieux, mais seul le texte mis à jour est énoncé. Ce serait encore mieux d'avoir le titre qui est rappelé afin que la personne sache ce qui est énoncé. Pour cela, on peut ajouter la propriété [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) à la section. Reprenez la balise ouvrante `<section>` et modifiez-la ainsi&nbsp;:
 
@@ -242,9 +246,11 @@ C'est mieux, mais seul le texte mis à jour est énoncé. Ce serait encore mieux
 
 L'attribut `aria-atomic="true"` indique au lecteur d'écran d'énoncer l'intégralité du contenu de l'élément comme une seule unité et pas uniquement les fragments mis à jour.
 
-> **Note :** Vous pouvez consulter l'exemple terminé dans le fichier [`aria-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([et aussi voir le résultat avec cette démonstration](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+> [!NOTE]
+> Vous pouvez consulter l'exemple terminé dans le fichier [`aria-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([et aussi voir le résultat avec cette démonstration](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
 
-> **Note :** La propriété [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) peut aussi s'avérer utile pour contrôler ce qui est énoncé lorsqu'une zone dynamique est mise à jour. On peut par exemple la paramétrer pour n'énoncer que les ajouts ou les suppressions.
+> [!NOTE]
+> La propriété [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) peut aussi s'avérer utile pour contrôler ce qui est énoncé lorsqu'une zone dynamique est mise à jour. On peut par exemple la paramétrer pour n'énoncer que les ajouts ou les suppressions.
 
 ### Améliorer l'accessibilité au clavier
 
@@ -312,7 +318,8 @@ Nous pouvons aller plus loin avec ARIA et aider à la validation. Comment indiqu
 
 On veillera à toujours associer un élément [`<label>`](/fr/docs/Web/HTML/Element/label) à chaque champ du formulaire. Bien que certains lecteurs d'écran énoncent le texte de remplacement, ce n'est pas le cas de tous. Une solution complémentaire pour indiquer un nom accessible pourra être d'utiliser les attributs [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) et [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Toutefois, utiliser un élément `<label>` doté d'un attribut `for` restera la meilleure méthode, car elle améliore l'accessibilité pour toutes les personnes, y compris celles qui utilisent la souris.
 
-> **Note :** Vous pouvez voir l'exemple terminé dans le fichier [`form-validation-updated.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
+> [!NOTE]
+> Vous pouvez voir l'exemple terminé dans le fichier [`form-validation-updated.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
 
 En plus de [`<label>`](/fr/docs/Web/HTML/Element/label), WAI-ARIA permet certaines techniques avancées pour les libellés des formulaires. Nous avons déjà abordé la propriété [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) pour fournir un libellé qu'on ne souhaitait pas afficher visuellement (voir la section [Signes et repères](#signes_et_repères) ci-avant). D'autres techniques utilisent la propriété [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) qui permet de désigner un libellé qui n'est pas un élément `<label>` ou de libeller plusieurs champs avec le même texte. [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) quant à lui permet d'associer d'autres informations à un champ de formulaire afin qu'elles soient énoncées. Voir [le guide WebAIM sur les techniques avancées pour les libellés des formulaires (en anglais)](https://webaim.org/techniques/forms/advanced) pour plus de détails.
 
@@ -362,7 +369,8 @@ Cela peut être corrigé à l'aide d'un rôle WAI-ARIA. Téléchargez un exempla
 
 Maintenant, en utilisant un lecteur d'écran, les boutons seront indiqués par «&nbsp;Cliquez ici&nbsp;! bouton&nbsp;». Bien que ça soit déjà mieux, il faut encore ajouter les fonctionnalités natives auxquelles on s'attend quand on utilise un bouton comme la gestion de la touche <kbd>Entrée</kbd> et des évènements de clic, comme expliqué dans [la documentation du rôle `button`](/fr/docs/Web/Accessibility/ARIA/Roles/button_role).
 
-> **Note :** N'oubliez pas qu'il vaut mieux utiliser l'élément sémantique correct lorsque c'est possible. Si vous souhaitez créer un bouton et que vous pouvez utiliser un élément [`<button>`](/fr/docs/Web/HTML/Element/button), faites-le&nbsp;!
+> [!NOTE]
+> N'oubliez pas qu'il vaut mieux utiliser l'élément sémantique correct lorsque c'est possible. Si vous souhaitez créer un bouton et que vous pouvez utiliser un élément [`<button>`](/fr/docs/Web/HTML/Element/button), faites-le&nbsp;!
 
 #### Guider les utilisatrices et utilisateurs pour les contrôles complexes
 
@@ -409,7 +417,8 @@ Pour voir l'amélioration, vous pouvez télécharger le fichier [`aria-tabbed-in
 </div>
 ```
 
-> **Note :** Le changement le plus important est le retrait des liens. Seuls les éléments de la liste sont utilisés comme onglets. En effet, les liens n'avaient pas vraiment de destination, ils ne faisaient que changer la vue. De plus, cela permet une meilleure utilisation des attributs `aria-setsize` et `aria-posinset`, au lien de toujours énoncer «&nbsp;1 sur 1&nbsp;», le lecteur d'écran pourra maintenant indiquer «&nbsp;1 sur 3&nbsp;», «&nbsp;2 sur 3&nbsp;», etc.
+> [!NOTE]
+> Le changement le plus important est le retrait des liens. Seuls les éléments de la liste sont utilisés comme onglets. En effet, les liens n'avaient pas vraiment de destination, ils ne faisaient que changer la vue. De plus, cela permet une meilleure utilisation des attributs `aria-setsize` et `aria-posinset`, au lien de toujours énoncer «&nbsp;1 sur 1&nbsp;», le lecteur d'écran pourra maintenant indiquer «&nbsp;1 sur 3&nbsp;», «&nbsp;2 sur 3&nbsp;», etc.
 
 Les fonctionnalités ARIA utilisées ici sont&nbsp;:
 
@@ -433,7 +442,8 @@ Cette nouvelle structure apporte plusieurs améliorations&nbsp;:
 - Le lecteur d'écran indique également le numéro de l'onglet sur lequel on se situe.
 - De plus, grâce à `aria-hidden` (seul l'onglet affiché a `aria-hidden="false"`), le contenu non-masqué est le seul vers lequel on peut naviguer, le contenu sélectionné est donc plus simple à trouver.
 
-> **Note :** Si vous souhaitez explicitement que quelque chose ne soit pas énoncé par un lecteur d'écran, il faudra appliquer l'attribut `aria-hidden="true"` à l'élément correspondant.
+> [!NOTE]
+> Si vous souhaitez explicitement que quelque chose ne soit pas énoncé par un lecteur d'écran, il faudra appliquer l'attribut `aria-hidden="true"` à l'élément correspondant.
 
 ## Évaluez vos compétences&nbsp;!
 

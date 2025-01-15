@@ -2,7 +2,7 @@
 title: border
 slug: Web/CSS/border
 l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -15,9 +15,9 @@ l10n:
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-color`](/ja/docs/Web/CSS/border-color)
-- [`border-style`](/ja/docs/Web/CSS/border-style)
 - [`border-width`](/ja/docs/Web/CSS/border-width)
+- [`border-style`](/ja/docs/Web/CSS/border-style)
+- [`border-color`](/ja/docs/Web/CSS/border-color)
 
 ## 構文
 
@@ -44,7 +44,8 @@ border: unset;
 
 `border` プロパティは、以下に挙げる値の 1 ～ 3 つを使用して指定します。値の順序は関係ありません。
 
-> **メモ:** style が指定されていない場合は境界線は表示されません。 style の既定値が `none` だからです。
+> [!NOTE]
+> style が指定されていない場合は境界線は表示されません。 style の既定値が `none` だからです。
 
 ### 値
 
@@ -82,13 +83,13 @@ border: unset;
 
 #### HTML
 
-```html
-<div>I have a border, an outline, and a box shadow! Amazing, isn't it?</div>
+```html-nolint live-sample___setting_a_pink_outset_border
+<div>ここには境界線、概要、ボックスシャドウがあります！すごいと思いませんか？</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_a_pink_outset_border
 div {
   border: 0.5rem outset pink;
   outline: 0.5rem solid khaki;
@@ -103,7 +104,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('ピンク色の出っ張った境界の設定')}}
+{{EmbedLiveSample('Setting_a_pink_outset_border')}}
 
 ## 仕様書
 

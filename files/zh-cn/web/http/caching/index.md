@@ -256,7 +256,8 @@ If-None-Match: "deadbeef"
 
 但是，如果服务器确定请求的资源现在应该具有不同的 `ETag` 值，则服务器将其改为 `200 OK` 和资源的最新版本进行响应。
 
-> **备注：** 在评估如何使用 `ETag` 和 `Last-Modified` 时，请考虑以下几点：在缓存重新验证期间，如果 `ETag` 和 `Last-Modified` 都存在，则 `ETag` 优先。因此，如果你只考虑缓存，你可能会认为 `Last-Modified` 是不必要的。然而，`Last-Modified` 不仅仅对缓存有用；相反，它是一个标准的 HTTP 标头，内容管理 (CMS) 系统也使用它来显示上次修改时间，由爬虫调整爬取频率，以及用于其他各种目的。所以考虑到整个 HTTP 生态系统，最好同时提供 `ETag` 和 `Last-Modified`。
+> [!NOTE]
+> 在评估如何使用 `ETag` 和 `Last-Modified` 时，请考虑以下几点：在缓存重新验证期间，如果 `ETag` 和 `Last-Modified` 都存在，则 `ETag` 优先。因此，如果你只考虑缓存，你可能会认为 `Last-Modified` 是不必要的。然而，`Last-Modified` 不仅仅对缓存有用；相反，它是一个标准的 HTTP 标头，内容管理 (CMS) 系统也使用它来显示上次修改时间，由爬虫调整爬取频率，以及用于其他各种目的。所以考虑到整个 HTTP 生态系统，最好同时提供 `ETag` 和 `Last-Modified`。
 
 ### 强制重新验证
 
@@ -514,7 +515,7 @@ Cache-Control: no-cache, private
 
 因此，你可以使用包含基于版本号或哈希值的更改部分的 URL 来提供 JavaScript 和 CSS。一些方法如下所示。
 
-```
+```plain
 # version in filename
 bundle.v123.js
 
@@ -544,7 +545,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 一些常用的缓存头值如下所示。
 
-```
+```plain
 36 cache-control max-age=0
 37 cache-control max-age=604800
 38 cache-control max-age=2592000
@@ -563,7 +564,8 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 `public` 值具有使响应可存储的效果，即使存在 `Authorization` 标头。
 
-> **备注：** 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
+> [!NOTE]
+> 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
 
 因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果你对此感到担忧，你可以选择第二长的值 `38`（1 个月）。
 
@@ -605,7 +607,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 **缓存破坏**是一种通过在内容更改时更改 URL 来使响应在很长一段时间内可缓存的技术。该技术可以应用于所有子资源，例如图像。
 
-> **备注：** 在评估 `immutable` 和 QPACK 的使用时：如果你担心 `immutable` 会更改 QPACK 提供的预定义值，请考虑在这种情况下，`immutable` 部分可以通过将 `Cache-Control` 值分成两行来单独编码——尽管这取决于特定 QPACK 实现使用的编码算法。
+> [!NOTE]
+> 在评估 `immutable` 和 QPACK 的使用时：如果你担心 `immutable` 会更改 QPACK 提供的预定义值，请考虑在这种情况下，`immutable` 部分可以通过将 `Cache-Control` 值分成两行来单独编码——尽管这取决于特定 QPACK 实现使用的编码算法。
 
 ```http
 Cache-Control: public, max-age=31536000

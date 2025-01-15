@@ -46,7 +46,7 @@ document.body.style.border = "10px solid blue";
 
 これは単にページに青い枠をつけます。
 
-[この拡張機能をインストール](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)してテストします — お好みのあらゆるウェブページを開きます:
+[この拡張機能をインストール](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)してテストします — お好みのあらゆるウェブページを開きます:
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -144,15 +144,18 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 - 文書が読み込まれた時、"color" の値を [`storage.sync.get()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) を使ってストレージから取り出します。値が未設定なら、既定の "blue" を用います。これで値を `sync` ストレージ領域から取得できます。
 - ユーザーが "Save" を押して送信した時、テキストボックスの値を [`storage.sync.set()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) を用いて保存します。これで値を `sync` ストレージ領域に保存できます。
 
-> **メモ:** 別々の .js ファイルの指定が必要です。インライン JavaScript は使用できません。
+> [!NOTE]
+> 別々の .js ファイルの指定が必要です。インライン JavaScript は使用できません。
 
 ローカルストレージがふさわしいと感じる場合、代わりにローカルストレージに設定値を保存できます。
 
-> **メモ:** Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) キーに拡張機能の ID をセットしておく必要があります。
+> [!NOTE]
+> Firefox の `storage.sync` の実装はアドオン ID に依存しているのに注意します。`storage.sync` を使う場合、上記 manifest にあるように、manifest.json の [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーに拡張機能の ID をセットしておく必要があります。
 
 最後に、ストレージから枠の色を読むのに "borderify.js" を更新します:
 
-> **警告:** バージョン 52 より前の Firefox の [browser.storage.local.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) のバグにより、下記のコードは機能しません。バージョン 52 より前の Firefox で動作させるには、`onGot()` の中で 2 回出てくる `item.color` を `item[0].color` に変えないといけません。
+> [!WARNING]
+> バージョン 52 より前の Firefox の [browser.storage.local.get()](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) のバグにより、下記のコードは機能しません。バージョン 52 より前の Firefox で動作させるには、`onGot()` の中で 2 回出てくる `item.color` を `item[0].color` に変えないといけません。
 
 ```js
 function onError(error) {
@@ -183,7 +186,7 @@ settings/
 
 いま、次を行ってみます:
 
-- [拡張機能を再読み込み](/ja/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [拡張機能を再読み込み](/ja/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
 - ウェブページを読み込む
 - 設定ページを開いて枠の色を変える
 - ウェブページを再読み込みして違いを見る

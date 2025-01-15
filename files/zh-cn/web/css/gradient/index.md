@@ -173,4 +173,4 @@ div {
 - 渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
 - [CSS 单位和值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 介绍：值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

@@ -42,4 +42,4 @@ transition.skipTransition();
 
 ## 参见
 
-- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)

@@ -54,17 +54,18 @@ Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
 <link rel="dns-prefetch" href="https://fonts.gstatic.com/" />
 ```
 
-> **Примечание:** если приложению необходимо установить соединение со множеством доменов, использование preconnect контрпродуктивно. `preconnect` лучше использовать для наиболее критических соединений. Для менее важных достаточно использовать `<link rel="dns-prefetch">` для сокращения времени DNS запроса.
+> [!NOTE]
+> Если приложению необходимо установить соединение со множеством доменов, использование `preconnect` контрпродуктивно. `preconnect` лучше использовать для наиболее критических соединений. Для менее важных достаточно использовать `<link rel="dns-prefetch">` для сокращения времени DNS-запроса.
 
 В совместном использовании этих двух техник есть логика. Она заключается в том, что dns-prefetch поддерживается большим количеством браузеров, чем preconnect. Клиенты, которые ещё не поддерживают preconnect, все ещё будут получать бонусы от работы dns-prefetch. Так как эти инструкции относятся к HTML, они очень толерантны к ошибкам. Если какой-то устаревший браузер встречает dns-prefetch, ваш сайт не сломается. Вы просто не получите улучшений от этой инструкции.
 
-Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать [crossorigin](/ru/docs/Web/HTML/CORS_settings_attributes) атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.
+Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать [crossorigin](/ru/docs/Web/HTML/Attributes/crossorigin) атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.
 
 ## Смотрите также
 
 - [\<link>](/ru/docs/Web/HTML/Element/link)
 - [HTML атрибут: rel](/ru/docs/Web/HTML/Attributes/rel)
-- [crossorigin](/ru/docs/Web/HTML/CORS_settings_attributes)
+- [crossorigin](/ru/docs/Web/HTML/Attributes/crossorigin)
 - [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
 - [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
 - [HTTP заголовок Link](/ru/docs/Web/HTTP/Headers/Link)

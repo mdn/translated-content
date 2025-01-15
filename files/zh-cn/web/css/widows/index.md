@@ -5,7 +5,7 @@ slug: Web/CSS/widows
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/CSS_paged_media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)的**顶部**需要结合在一起的最小行数。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`widows`** 可以用来设置一个块级容器在新的[分页](/zh-CN/docs/Web/CSS/CSS_paged_media)，区域或者[列](/zh-CN/docs/Web/CSS/CSS_multicol_layout)的**顶部**需要结合在一起的最小行数。
 
 ```css
 /* <integer> values */
@@ -18,7 +18,8 @@ widows: initial;
 widows: unset;
 ```
 
-> **备注：** 在排版中，_widow_ 指的是在新页面顶部单独出现的段落的最后一行。（这一行来自于上一个页面的段落）
+> [!NOTE]
+> 在排版中，_widow_ 指的是在新页面顶部单独出现的段落的最后一行。（这一行来自于上一个页面的段落）
 
 ## 语法
 

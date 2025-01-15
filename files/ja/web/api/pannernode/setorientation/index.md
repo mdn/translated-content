@@ -3,12 +3,13 @@ title: "PannerNode: setOrientation() メソッド"
 short-title: setOrientation()
 slug: Web/API/PannerNode/setOrientation
 l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
 ---
 
 {{APIRef("Web Audio API")}}{{Deprecated_Header}}
 
-> **メモ:** この非推奨メソッドを置き換えるために推奨される方法は、 [`orientationX`](/ja/docs/Web/API/PannerNode/orientationX), [`orientationY`](/ja/docs/Web/API/PannerNode/orientationY), [`orientationZ`](/ja/docs/Web/API/PannerNode/orientationZ) 属性を直接設定することです。
+> [!NOTE]
+> この非推奨メソッドを置き換えるために推奨される方法は、 [`orientationX`](/ja/docs/Web/API/PannerNode/orientationX), [`orientationY`](/ja/docs/Web/API/PannerNode/orientationY), [`orientationZ`](/ja/docs/Web/API/PannerNode/orientationZ) 属性を直接設定することです。
 
 `setOrientation()` は {{ domxref("PannerNode") }} インターフェイスのメソッドで、音声ソースの再生方向を定義します。
 
@@ -31,9 +32,9 @@ setOrientation(x, y, z)
 - `z`
   - : 3D 空間におけるパンナーの方向ベクトルの z 値。
 
-### Return value
+### 返値
 
-None ({{jsxref("undefined")}}).
+なし ({{jsxref("undefined")}})。
 
 ## 例
 

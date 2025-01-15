@@ -15,7 +15,8 @@ slug: Web/CSS/Specificity
 
 当同一个元素有多个声明的时候，优先级才会有意义。因为每一个直接作用于元素的 CSS 规则总是会接管/覆盖（take over）该元素从祖先元素继承而来的规则。
 
-> **备注：** 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
+> [!NOTE]
+> 文档树中[元素的接近度](#无视_dom_树中的距离)对优先级没有影响。
 
 ### 选择器类型
 
@@ -27,7 +28,7 @@ slug: Web/CSS/Specificity
 
 **通配选择器**（universal selector）（{{CSSxRef("Universal_selectors", "*")}}）**关系选择器**（combinator）（{{CSSxRef("Next-sibling_combinator", "+")}}、{{CSSxRef("Child_combinator", "&gt;")}}、{{CSSxRef("Subsequent-sibling_combinator", "~")}}、[" "](/zh-CN/docs/Web/CSS/Descendant_combinator)、{{CSSxRef("Column_combinator", "||")}}）和 **否定伪类**（negation pseudo-class）（{{CSSxRef(":not", ":not()")}}）对优先级没有影响。（但是，在 `:not()` 内部声明的选择器会影响优先级）。
 
-你可以访问[层叠与继承中的“优先级”](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
+你可以访问[层叠与继承中的“优先级”](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#优先级_2)或者 [https://specifishity.com](https://specifishity.com/) 来了解更多关于优先级的详细信息。
 
 给元素添加的**内联样式**（例如，`style="font-weight:bold"`）总会覆盖外部样式表的任何样式，因此可看作是具有最高的优先级。
 
@@ -163,7 +164,7 @@ p.awesome {
 
 ### `:is()` 和 `:not()` 例外规则
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of [selector types](/zh-CN/docs/Web/CSS/Specificity#Selector_Types).
+The matches-any pseudo-class {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}} and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered a pseudo-class in the specificity calculation. But selectors placed into the pseudo-class count as normal selectors when determining the count of [selector types](#Selector_Types).
 
 `:not` 否定伪类在优先级计算中不会被看作是伪类。事实上，在计算选择器数量时还是会把其中的选择器当做普通选择器进行计数。
 
@@ -348,7 +349,7 @@ h1 {
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)

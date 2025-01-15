@@ -7,7 +7,8 @@ slug: Web/API/Element/animate
 
 Um {{domxref("Element")}} de interface do método **`animate()`** é um método de atalho o qual cria uma nova {{domxref("Animation")}}, e a aplica ao elemento, então executa a animação. Retorna a instância do objeto {{domxref("Animation")}} criado.
 
-> **Nota:** Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
+> [!NOTE]
+> Elementos podem ter múltiplas animações aplicadas a eles. Você pode obter uma lista de animações que afetam um elemento chamando {{domxref("Element.getAnimations()")}}.
 
 ## Syntax
 
@@ -27,7 +28,7 @@ var animation = element.animate(keyframes, options);
 
       - : Um propriedade única á animate(): uma `DOMString` com a qual a animação é referenciada.
 
-        {{Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
+        <!-- TODO: page macro not supported: Page("/pt-BR/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties") -->
 
 #### Opções Futuras
 

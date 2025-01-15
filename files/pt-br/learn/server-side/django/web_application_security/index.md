@@ -57,7 +57,8 @@ O sistema de _templates_ do Django protege você da maioria dos ataques XSS [esc
    `<script>alert('Test alert');</script>`.
    ![Author Form XSS test](author_create_form_alert_xss.png)
 
-   > **Nota:** Este é um script inofensivo que, se executado, exibirá uma caixa de alerta em seu navegador. Se o alerta é exibido quando você submeter o registro então o site está vulnerável a ameaças XSS.
+   > [!NOTE]
+   > Este é um script inofensivo que, se executado, exibirá uma caixa de alerta em seu navegador. Se o alerta é exibido quando você submeter o registro então o site está vulnerável a ameaças XSS.
 
 5. Pressione **Submit** para salvar o registro.
 6. Quando você salvar o autor, ele será exibido como mostrado abaixo. Por causa das proteções XSS o `alert()` não deve ser executado. Em vez disso o script é exibido como texto simples.![Author detail view XSS test](author_detail_alert_xss.png)
@@ -79,7 +80,8 @@ Também é possível que os ataques XSS se originem de outra fonte de dados não
 
 Ataques CSRF permitem que um usuário malicioso execute ações usando as credenciais de outro usuário sem o conhecimento ou consentimento desse usuário. Por exemplo, considere o caso em que temos um hacker que quer criar autores adicionais para nossa LocalLibrary.
 
-> **Nota:** Obviamente nosso hacker não está nisso por dinheiro! Um hacker mais ambicioso poderia usar a mesma abordagem em outros sites para realizar tarefas muito mais prejudiciais (ex. transferir dinheiro para suas prórpias contas, etc.)
+> [!NOTE]
+> Obviamente nosso hacker não está nisso por dinheiro! Um hacker mais ambicioso poderia usar a mesma abordagem em outros sites para realizar tarefas muito mais prejudiciais (ex. transferir dinheiro para suas prórpias contas, etc.)
 
 Para fazer isso, eles podem criar um arquivo HTML como o abaixo, que contém um form de criação de autor (como o que usamos na seção anterior) que é enviado assim que o arquivo é carregado. Eles então enviariam o arquivo para todos os bibliotecários e sugeririam que eles abrissem o arquivo (ele contém algumas informações inofensivas, honestamente!). Se o arquivo for aberto por qualquer bibliotecário logado, o formulário será enviado com suas credenciais e um novo autor será criado.
 
@@ -193,6 +195,6 @@ A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de a
 - [Segurança no Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs)
 - [Segurança de website no lado do servidor](/pt-BR/docs/Web/Security) (MDN)
 - [Segurança web](/pt-BR/docs/Web/Security) (MDN)
-- [Protegendo seu site](/pt-BR/docs/Web/Security/Securing_your_site) (MDN)
+- [Protegendo seu site](/pt-BR/docs/Web/Security/Practical_implementation_guides) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}

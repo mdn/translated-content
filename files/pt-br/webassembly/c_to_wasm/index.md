@@ -59,7 +59,8 @@ Neste ponto em seu diretório de origem, você deve ter:
 
 Agora tudo o que resta é você carregar o resultado `hello.html` em um navegador que suporte WebAssembly. Ele é ativado por padrão no Firefox 52, Chrome 57, Edge 57, Opera 44.
 
-> **Nota:** Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt-BR/docs/Learn/Common_questions/set_up_a_local_testing_server) Para maiores informações.
+> [!NOTE]
+> Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) Para maiores informações.
 
 Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no console do Emscripten aparecendo na página da Web e no console JavaScript do seu navegador. Parabéns, você acabou de compilar C para WebAssembly e executá-lo em seu navegador!
 ![image](helloworld.png)
@@ -94,7 +95,8 @@ Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no co
 
 4. Agora vamos executar este exemplo. O comando acima terá gerado `hello2.html`, que terá praticamente o mesmo conteúdo do modelo com algum código de cola adicionado para carregar o wasm gerado, executá-lo etc. Abra-o em seu navegador e você verá a mesma saída do último exemplo.
 
-> **Observação:** Você pode especificar a saída apenas do arquivo JavaScript "cola" em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
+> [!CALLOUT]
+> Você pode especificar a saída apenas do arquivo JavaScript "cola" em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
 >
 > - O Emscripten requer uma grande variedade de código JavaScript "cola" para lidar com alocação de memória, vazamentos de memória e uma série de outros problemas
 
@@ -126,7 +128,8 @@ Se você tiver uma função definida em seu código C que deseja chamar conforme
 
    Por padrão, o código gerado pelo Emscripten sempre chama a função `main()` e outras funções são eliminadas como código morto. Colocando `EMSCRIPTEN_KEEPALIVE` antes que um nome de função impeça que isso aconteça. Você também precisa importar a biblioteca `emscripten.h` para usar `EMSCRIPTEN_KEEPALIVE`.
 
-   > **Nota:** Estamos incluindo os blocos `#ifdef` para que, se você estiver tentando incluir isso no código C++, o exemplo ainda funcione. Devido às regras de desmembramento de nomes C versus C++, isso seria quebrado, mas aqui estamos definindo-o para que seja tratado como uma função C externa se você estiver usando C++.
+   > [!NOTE]
+   > Estamos incluindo os blocos `#ifdef` para que, se você estiver tentando incluir isso no código C++, o exemplo ainda funcione. Devido às regras de desmembramento de nomes C versus C++, isso seria quebrado, mas aqui estamos definindo-o para que seja tratado como uma função C externa se você estiver usando C++.
 
 2. Agora adicione `html_template/shell_minimal.html` com \{\{{ SCRIPT }}} como conteúdo neste novo diretório também, apenas por conveniência (você obviamente colocaria isso em um local central em seu ambiente de desenvolvimento real).
 

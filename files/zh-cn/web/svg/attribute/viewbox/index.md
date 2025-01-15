@@ -105,4 +105,4 @@ svg:not(:root) {
 
 ## 参见
 
-- [SVG Getting Started: Positions](/zh-CN/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/zh-CN/docs/SVG/Tutorial/Positions)

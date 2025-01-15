@@ -7,7 +7,8 @@ slug: Web/API/KeyboardEvent
 
 Los objetos **`KeyboardEvent`** describen una interacción del usuario con el teclado. Cada evento describe una tecla; el tipo de evento(`keydown`, `keypress`, o `keyup`) identifica el tipo de acción realizada.
 
-> **Nota:** El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/es/docs/DOM/DOM_event_reference/input) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
+> [!NOTE]
+> El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/es/docs/Web/API/Element/input_event) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
 
 ## Constructor
 
@@ -39,15 +40,18 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
   - : Devuelve un {{domxref("DOMString")}} representando el valor del carácter de la tecla. Si la tecla corresponde con un carácter imprimible, este valor es una cadena Unicode no vacía que contiene este carácter. Si la tecla no tiene una representación imprimible, esta es una cadena vacía.
 
-    > **Nota:** Si la tecla es usada como una macro que inserta múltiples caracteres, If the key is used as a macro that inserts multiple characters, el valor de este atributo es la cadena completa, no solo el primer carácter.
+    > [!NOTE]
+    > Si la tecla es usada como una macro que inserta múltiples caracteres, If the key is used as a macro that inserts multiple characters, el valor de este atributo es la cadena completa, no solo el primer carácter.
 
-    > **Advertencia:** Esta propiedad ha sido eliminada de los eventos del DOM de nivel 3. Esta es únicamente soportada en IE.
+    > [!WARNING]
+    > Esta propiedad ha sido eliminada de los eventos del DOM de nivel 3. Esta es únicamente soportada en IE.
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}
 
   - : Returns an `unsigned long` representing the Unicode reference number of the key; this attribute is used only by the `keypress` event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute. In Firefox 26 this returns codes for printable characters.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
+    > [!WARNING]
+    > This attribute is deprecated; you should use `key` instead, if available.
 
 - {{domxref("KeyboardEvent.code")}} {{Readonlyinline}}
   - : Returns a {{domxref("DOMString")}} with the code value of the key represented by the event.
@@ -63,13 +67,15 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
   - : Returns an `unsigned long` representing a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
+    > [!WARNING]
+    > This attribute is deprecated; you should use `key` instead, if available.
 
 - {{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}
 
   - : Returns a {{domxref("DOMString")}} representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
 
-    > **Nota:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
+    > [!NOTE]
+    > This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
 
 - {{domxref("KeyboardEvent.location")}} {{Readonlyinline}}
   - : Returns an `unsigned long` representing the location of the key on the keyboard or other input device.
@@ -87,7 +93,8 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
   - : Returns an `unsigned long` representing a system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
+    > [!WARNING]
+    > This attribute is deprecated; you should use `key` instead, if available.
 
 ## Notes
 

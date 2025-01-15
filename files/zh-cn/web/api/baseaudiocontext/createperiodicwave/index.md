@@ -9,8 +9,9 @@ slug: Web/API/BaseAudioContext/createPeriodicWave
 
 ## 语法
 
-```
-var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
+```js-nolint
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
 ```
 
 ### 返回值
@@ -29,7 +30,8 @@ var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
 
     - `disableNormalization`: 如果设置为 `true`，对周期波禁用规范化。默认值为 `false`.
 
-> **备注：** 如果使用规范化，生成波形的最大绝对峰值为 1。
+> [!NOTE]
+> 如果使用规范化，生成波形的最大绝对峰值为 1。
 
 ## 例子
 
@@ -74,4 +76,4 @@ osc.stop(2);
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

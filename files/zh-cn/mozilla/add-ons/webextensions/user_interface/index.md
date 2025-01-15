@@ -7,7 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
 
 为了能给用户提供在不同场景下都具有价值的功能，WebExtensions 提供了许多的用户界面选项。下面是这些选项的摘要，在本章中将会对每个选项做出更详细的说明。
 
-> **备注：** 想要使你的扩展能提供良好的用户体验吗？请查看文章[用户体验的最佳实践](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices) .
+> [!NOTE]
+> 想要使你的扩展能提供良好的用户体验吗？请查看文章[用户体验的最佳实践](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)。
 
 <table class="standard-table">
   <thead>
@@ -214,4 +215,4 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
 - [在工具栏中添加一个按钮](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
 - [实现一个设置页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
 - [扩展开发人员工具](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [浏览器样式](/zh-CN/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [浏览器样式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)

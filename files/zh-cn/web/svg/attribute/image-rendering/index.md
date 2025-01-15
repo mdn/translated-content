@@ -11,7 +11,8 @@ l10n:
 
 即使原始数据和/或目标设备是索引颜色的，也总是在真彩色（例如，24 位）颜色空间中进行重新采样。
 
-> **备注：** 作为一个表现属性，`image-rendering` 可以用作 CSS 属性。请参考 {{cssxref("image-rendering", "CSS image-rendering")}}，以获取更多的信息。
+> [!NOTE]
+> 作为一个表现属性，`image-rendering` 可以用作 CSS 属性。请参考 {{cssxref("image-rendering", "CSS image-rendering")}}，以获取更多的信息。
 
 你可以和下面的 SVG 元素一起使用该属性：
 

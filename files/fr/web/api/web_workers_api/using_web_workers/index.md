@@ -13,9 +13,10 @@ Un _worker_ est un objet créé à l'aide d'un constructeur (par exemple {{domxr
 
 Le contexte du _worker_ est représenté par un objet {{domxref("DedicatedWorkerGlobalScope")}} pour les _workers_ dédiés et par un objet {{domxref("SharedWorkerGlobalScope")}} sinon. Un _worker_ dédié est uniquement accessible au travers du script qui l'a déclenché tandis qu'un _worker_ partagé peut être utilisé par différents scripts.
 
-> **Note :** Voir [la page d'entrée pour l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) pour consulter la documentation de référence sur les _workers_ et d'autres guides.
+> [!NOTE]
+> Voir [la page d'entrée pour l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) pour consulter la documentation de référence sur les _workers_ et d'autres guides.
 
-Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/IndexedDB_API). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement [`message`](/fr/docs/Web/API/Worker/message_event) associé). Les données sont copiées dans le message, elles ne sont pas partagées.
 
@@ -87,9 +88,11 @@ monWorker.onmessage = function (e) {
 
 Ici, nous récupérons les données grâce à l'attribut `data` de l'évènement et nous mettons à jour le contenu du paragraphe avec l'attribut `textContent` de l'élément. Ainsi, l'utilisateur peut visualiser le résultat du calcul.
 
-> **Note :** On notera que `onmessage` et `postMessage()` doivent être rattachés à un objet `Worker` lorsqu'ils sont utilisés depuis le _thread_ principal (ici, c'était `monWorker`) mais pas lorsqu'ils sont employés depuis le _worker_. En effet, dans le _worker_, c'est le _worker_ qui constitue la portée globale et qui met à disposition ces méthodes.
+> [!NOTE]
+> On notera que `onmessage` et `postMessage()` doivent être rattachés à un objet `Worker` lorsqu'ils sont utilisés depuis le _thread_ principal (ici, c'était `monWorker`) mais pas lorsqu'ils sont employés depuis le _worker_. En effet, dans le _worker_, c'est le _worker_ qui constitue la portée globale et qui met à disposition ces méthodes.
 
-> **Note :** Lorsqu'un message est envoyé d'un _thread_ à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir [ci-après](#échange) pour plus d'explications à ce sujet.
+> [!NOTE]
+> Lorsqu'un message est envoyé d'un _thread_ à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir [ci-après](#échange) pour plus d'explications à ce sujet.
 
 ### Clôturer un _worker_
 
@@ -135,7 +138,8 @@ importScripts(
 
 Lors d'un import, le navigateur chargera chacun des scripts puis l'exécutera. Chaque script pourra ainsi mettre à disposition des objets globaux qui pourront être utilisés par le _worker_. Si le script ne peut pas être chargé, une exception `NETWORK_ERROR` sera levée et le code assicé ne sera pas exécuté. Le code exécuté précédemment (y compris celui-ci reporté à l'aide de {{domxref("window.setTimeout()")}}) continuera cependant d'être fonctionnel. Les déclarations de fonction situées **après** `importScripts()` sont également exécutées car évaluées avant le reste du code.
 
-> **Note :** Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à `importScripts()` . Cet exécution est effectuée de façon synchrone et `importScripts()` ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.
+> [!NOTE]
+> Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à `importScripts()` . Cet exécution est effectuée de façon synchrone et `importScripts()` ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.
 
 ## Les _workers_ partagés
 
@@ -143,9 +147,11 @@ Un _worker_ partagé est accessible par plusieurs scripts (même si ceux-ci prov
 
 Ici, nous nous intéresserons particulièrement aux différences entre les _workers_ dédiés et les _workers_ partagés. Dans cet exemple, nous aurons deux pages HTML, chacune utilisant du code JavaScript employant le même _worker_.
 
-> **Note :** Si on peut accéder à un _worker_ partagé depuis différents contextes de navigations, ces contextes de navigation doivent néanmoins partager la même origine (même protocole, même hôte, même port).
+> [!NOTE]
+> Si on peut accéder à un _worker_ partagé depuis différents contextes de navigations, ces contextes de navigation doivent néanmoins partager la même origine (même protocole, même hôte, même port).
 
-> **Note :** Dans Firefox, les _workers_ partagés ne peuvent pas être partagés entre les documents chargés en navigation privée et les documents chargés en navigation classique ([bug Firefox 1177621](https://bugzil.la/1177621)).
+> [!NOTE]
+> Dans Firefox, les _workers_ partagés ne peuvent pas être partagés entre les documents chargés en navigation privée et les documents chargés en navigation classique ([bug Firefox 1177621](https://bugzil.la/1177621)).
 
 ### Initier un _worker_ partagé
 
@@ -159,7 +165,8 @@ Une différence fondamentale avec les _workers_ dédiés est l'utilisation d'un 
 
 La connexion au port doit être démarrée implicitement avec l'utilisation du gestionnaire d'évènement `onmessage` ou explicitement avec la méthode `start()` avant qu'un message soit envoyé. On utilisera uniquement `start()` si l'évènement `message` est détecté avec la méthode `addEventListener()`.
 
-> **Note :** Lorsqu'on utilise la méthode `start()` afin d'ouvrir le port de connexion, celle-ci doit être appelée de part et d'autre (depuis le _thread_ parent **et** depuis le _worker_) si on souhaite disposer d'une connexion bidirectionnelle.
+> [!NOTE]
+> Lorsqu'on utilise la méthode `start()` afin d'ouvrir le port de connexion, celle-ci doit être appelée de part et d'autre (depuis le _thread_ parent **et** depuis le _worker_) si on souhaite disposer d'une connexion bidirectionnelle.
 
 ### Échanger des messages avec un _worker_ partagé et y réagir
 
@@ -216,7 +223,7 @@ Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui 
 Content-Security-Policy: script-src 'self'
 ```
 
-Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
+Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
 Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
 
@@ -224,7 +231,7 @@ Si l'origine du script du _worker_ est un identifiant global unique (si son URL 
 
 ## Échanger des données avec les _workers_ : plus de détails
 
-Les données échangées entre le document principal et les _workers_ sont **copiées** et non partagées. Lorsqu'ils sont envoyés au _worker_, les objets sont sérialisés (puis désérialisés à leur réception). La page et le _worker_ **ne partagent pas le même exemplaire** et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec [une clonage structurel](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure).
+Les données échangées entre le document principal et les _workers_ sont **copiées** et non partagées. Lorsqu'ils sont envoyés au _worker_, les objets sont sérialisés (puis désérialisés à leur réception). La page et le _worker_ **ne partagent pas le même exemplaire** et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec [une clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 Pour illustrer ce point, on prendra une fonction intitulée `emulateMessage()` et qui simule le comportement d'une valeur clonée (pas partagée) avec un _worker_ attaché à la page principale et réciproquement :
 
@@ -292,7 +299,7 @@ onmessage = function (oEvent) {
 };
 ```
 
-L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure) permet de sérialiser aussi bien des données JSON que d'autres formats et permet notamment de gérer les références circulaires (ce que JSON ne permet pas de gérer nativement).
+L'[algorithme de clonage structurel](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) permet de sérialiser aussi bien des données JSON que d'autres formats et permet notamment de gérer les références circulaires (ce que JSON ne permet pas de gérer nativement).
 
 ### Les objets transférables - échanger des données avec transfert de la propriété
 
@@ -308,7 +315,8 @@ for (var i = 0; i < uInt8Array.length; ++i) {
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```
 
-> **Note :** Pour plus d'informations quant aux objets transférables, aux performances associées et à la détection de ces fonctionnalités, on pourra lire [Transferable Objects: Lightning Fast](https://developers.google.com/web/updates/2011/12/Transferable-Objects-Lightning-Fast).
+> [!NOTE]
+> Pour plus d'informations quant aux objets transférables, aux performances associées et à la détection de ces fonctionnalités, on pourra lire [Transferable Objects: Lightning Fast](https://developers.google.com/web/updates/2011/12/Transferable-Objects-Lightning-Fast).
 
 ## _Workers_ embarqués
 
@@ -485,8 +493,8 @@ Les ordinateurs dotés de plusieurs coeurs se généralisent et il peut s'avére
 
 En plus des web _workers_ (dédiés et partagés), il existe d'autres types de _workers_ :
 
-- [Les service _workers_](/fr/docs/Web/API/ServiceWorker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
-- [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#Audio_processing_in_JavaScript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
+- [Les service _workers_](/fr/docs/Web/API/Service_Worker_API) peuvent notamment servir de serveurs mandataires (_proxy_) entre les applications web, le navigateur et le réseau (lorsque celui-ci est disponible). Ces _workers_ sont conçus afin de permettre des utilisations hors-ligne en interceptant les requêtes réseau et en déclenchant les actions nécessaires selon que le réseau est disponible ou non et que les ressources souhaitées sont disponibles sur le serveur. Ces _workers_ permettent de déclencher des notifications _push_ et d'utiliser des API de synchronisation en arrière-plan.
+- [Les _worklets_ audio](/fr/docs/Web/API/Web_Audio_API#audio_processing_in_javascript) permettent de traiter des signaux audios en arrière-plan (fonctionnalité expérimentale).
 
 ## Fonctions et interfaces disponibles pour les _workers_
 
@@ -499,7 +507,8 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.
 
-> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+> [!NOTE]
+> Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Spécifications
 
@@ -509,4 +518,4 @@ En revanche, un _worker_ ne pourra pas directement manipuler la page parente et 
 
 - [L'interface `Worker`](/fr/docs/Web/API/Worker)
 - [L'interface `SharedWorker`](/fr/docs/Web/API/SharedWorker)
-- [Les fonctions disponibles dans les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
+- [Les fonctions disponibles dans les _workers_](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)

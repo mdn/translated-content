@@ -33,7 +33,8 @@ Referrer-Policy: strict-origin-when-cross-origin
 Referrer-Policy: unsafe-url
 ```
 
-> **メモ:** 元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 `Referrer-Policy` ヘッダーはこのスペルミスをしていません。
+> [!NOTE]
+> 元のヘッダー名である {{HTTPHeader("Referer")}} は "referrer" という語のスペルミスです。 `Referrer-Policy` ヘッダーはこのスペルミスをしていません。
 
 ## ディレクティブ
 
@@ -54,13 +55,15 @@ Referrer-Policy: unsafe-url
 
   - : 同一オリジンのリクエストを行う際はオリジン、パス、クエリー文字列を送信します。オリジン間リクエストでは、プロトコルのセキュリティ水準が同じである場合 (HTTPS→HTTPS) にのみオリジンを送信します。安全性の低下する移動先 (HTTPS→HTTP) には {{HTTPHeader("Referer")}} ヘッダーを送信しません。
 
-    > **メモ:** これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
+    > [!NOTE]
+    > これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定のポリシーです (仕様書改訂 [November 2020](https://github.com/whatwg/fetch/pull/1066) を参照) 。以前の既定値は `no-referrer-when-downgrade` でした。
 
 - `unsafe-url`
 
   - : セキュリティに関係なく、どのリクエストを行った場合でも、オリジン、パス、クエリー文字列を送信します。
 
-    > **警告:** このポリシーは、 HTTPS リソースの URL から安全ではないオリジンへプライベートである可能性がある情報を漏洩します。設定する場合は影響をよく検討してください。
+    > [!WARNING]
+    > このポリシーは、 HTTPS リソースの URL から安全ではないオリジンへプライベートである可能性がある情報を漏洩します。設定する場合は影響をよく検討してください。
 
 ## HTML との統合
 
@@ -76,13 +79,14 @@ HTML 内でリファラーポリシーを設定することもできます。例
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Link_types)を `a`, `area`, `link` の各要素に設定することもできます。
+他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Attributes/rel)を `a`, `area`, `link` の各要素に設定することもできます。
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>
 ```
 
-> **警告:** 上記のように、 `noreferrer` link 関係はダッシュ記号を用いずに記述されます。 {{HTMLElement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em> `<meta name="referrer" content="no-referrer">` のように記述します。
+> [!WARNING]
+> 上記のように、 `noreferrer` link 関係はダッシュ記号を用いずに記述されます。 {{HTMLElement("meta")}} 要素で文書全体のリファラーポリシーを指定するときはダッシュを<em>つけて</em> `<meta name="referrer" content="no-referrer">` のように記述します。
 
 ## CSS との統合
 
@@ -160,7 +164,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 上記のシナリオでは、 `no-referrer` はブラウザーが `strict-origin-when-cross-origin` に対応していない場合のみ使用されます。
 
-> **メモ:** 複数の値を設定する方法は、 HTTP の `Referrer-Policy` ヘッダーのみが対応しており、 `referrerpolicy` 属性では対応していません。
+> [!NOTE]
+> 複数の値を設定する方法は、 HTTP の `Referrer-Policy` ヘッダーのみが対応しており、 `referrerpolicy` 属性では対応していません。
 
 ## ブラウザー固有の設定
 

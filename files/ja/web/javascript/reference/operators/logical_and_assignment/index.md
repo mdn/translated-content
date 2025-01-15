@@ -62,7 +62,7 @@ y &&= 0; // 0
 ## 関連情報
 
 - [論理積演算子 (&&)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [ビット論理積代入 (`&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

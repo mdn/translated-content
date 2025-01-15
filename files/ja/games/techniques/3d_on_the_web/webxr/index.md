@@ -7,7 +7,8 @@ slug: Games/Techniques/3D_on_the_web/WebXR
 
 仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。
 
-> **メモ:** WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
+> [!NOTE]
+> WebVR API は [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) に置き換えられました。 WebVR は標準として承認されることはなく、ごく少数のブラウザーが既定で実装および有効化し、少数の機器に対応していました。
 
 ## VR 機器
 
@@ -15,13 +16,15 @@ Oculus Rift の人気とその他の多くの機器が間もなく市場に登�
 
 ![](hmds.jpg)
 
-> **メモ:** 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
+> [!NOTE]
+> 詳細については [WebVR の概念](/ja/docs/Web/API/WebVR_API/Concepts) をご覧ください。
 
 ## WebVR API
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) は、コンピューターに接続された VR 機器の情報とヘッドセットの位置/向き/速度/加速度の情報をキャプチャし、それをゲームやその他のアプリケーションで使用できる有用なデータに変換するための中心的な API です。
 
-> **メモ:** もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/Events/Detecting_device_orientation) などです。
+> [!NOTE]
+> もちろん、ゲームの作成に役立つ他の API もあります。 例えば、コントロール入力用の [ゲームパッド API](/ja/docs/Web/API/Gamepad_API) や、モバイルでのディスプレイの方向を扱うための [Device Orientation API](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation) などです。
 
 ### ブラウザーの対応と仕様書の状態
 

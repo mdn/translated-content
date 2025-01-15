@@ -16,7 +16,7 @@ l10n:
 
 `identity` の値、つまりエンコードをしないということは、 `identity;q=0` または `*;q=0` で `identity` とは別な値が明確に設定されていない限り、サーバーは {{HTTPStatus("406")}} `Not Acceptable` エラーを返してはいけません。
 
-> **メモ:**
+> [!NOTE]
 >
 > - IANA レジストリーが[公式なコンテンツエンコーディングの完全なリスト](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)を管理しています。
 > - 他にも `bzip` および `bzip2` の 2 種類のエンコーディングが使用されることがありますが、標準ではありません。これはこれら 2 つの UNIX プログラムで使用されているアルゴリズムを実装しています。なお、前者は特許ライセンスの問題で開発終了しています。

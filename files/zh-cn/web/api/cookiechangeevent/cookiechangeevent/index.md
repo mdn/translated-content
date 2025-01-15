@@ -9,7 +9,8 @@ l10n:
 
 **`CookieChangeEvent()`** 构造函数创建一个新的 {{domxref("CookieChangeEvent")}} 对象，这是发生任何 cookie 更改时在 {{domxref("CookieStore")}} 上触发的 {{domxref("CookieStore/change_event", "change")}} 事件的事件类型。当变更事件发生时浏览器调用这个构造函数。
 
-> **备注：** 此事件构造函数通常不在生产环境的站点上使用。它主要用于测试需要此事件的实例。
+> [!NOTE]
+> 此事件构造函数通常不在生产环境的站点上使用。它主要用于测试需要此事件的实例。
 
 ## 语法
 

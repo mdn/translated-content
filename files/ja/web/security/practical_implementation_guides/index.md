@@ -6,11 +6,12 @@ original_slug: Web/Security/Securing_your_site
 
 サイトをより安全にする方法はいくつもあります。この記事では、その方法を紹介するとともに、他のより有益な記事へのリンクを掲載しています。
 
-> **メモ:** この記事は作成途中であり、以下の事項に従うことによりあなたのサイトが完全にセキュアになることを保証するものではありません。
+> [!NOTE]
+> この記事は作成途中であり、以下の事項に従うことによりあなたのサイトが完全にセキュアになることを保証するものではありません。
 
 ## ユーザー情報のセキュリティ
 
-- [フォームオートコンプリートを無効にするには](/ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion)
+- [フォームオートコンプリートを無効にするには](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)
   - : Geckoではフォームのオートコンプリートがサポートされています。つまり、ユーザがフォームに入力した値を記憶し、次回訪問時には自動的にその値が入力されることになります。ある特定のデータに関しては、この機能を無効にしたほうが適切かもしれません。
 - [プライバシーと :visited セレクター](/ja/docs/Web/CSS/Privacy_and_the_:visited_selector)
   - : この記事では悪質なサイトがユーザーの閲覧履歴を取得できないようにするために `getComputedStyle()` メソッドに加えられた変更について議論しています。

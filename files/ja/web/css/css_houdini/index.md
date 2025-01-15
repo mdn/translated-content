@@ -67,6 +67,6 @@ Houdini の機能の一つにワークレット ({{domxref("Worklet")}}) があ�
 
 ## 外部リソース
 
-- [Interactive introduction to Houdini](http://houdini.glitch.me/)
+- [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
 - [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)

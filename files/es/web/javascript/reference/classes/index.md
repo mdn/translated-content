@@ -61,7 +61,8 @@ console.log(Rectangulo.name);
 // output: "Rectangulo2"
 ```
 
-> **Nota:** Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
+> [!NOTE]
+> Las **expresiones** de clase están sujetas a las mismas restricciones de elevación que se describen en la sección [Class declarations](#class_declarations).
 
 ## Cuerpo de la clase y definición de métodos
 
@@ -323,7 +324,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 
 ## Ver también
 
-- [Funciones](/es/docs/Web/JavaScript/Referencia/Funciones)
+- [Funciones](/es/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/class", "class declaration")}}
 - {{jsxref("Operators/class", "class expression")}}
 - {{jsxref("Operators/super", "super")}}

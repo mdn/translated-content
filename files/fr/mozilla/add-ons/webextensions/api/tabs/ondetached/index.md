@@ -38,7 +38,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `detachInfo`
-      - : [`object`](#detachInfo). ID de la fenêtre précédente et index de l'onglet à l'intérieur.
+      - : [`object`](#detachinfo). ID de la fenêtre précédente et index de l'onglet à l'intérieur.
 
 ## Objets supplémentaires
 
@@ -69,9 +69,9 @@ browser.tabs.onDetached.addListener(handleDetached);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

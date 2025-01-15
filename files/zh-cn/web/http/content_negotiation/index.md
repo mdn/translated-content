@@ -7,7 +7,8 @@ slug: Web/HTTP/Content_negotiation
 
 在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，**_内容协商_**是一种机制，用于为同一 URI 提供资源不同的{{Glossary("Representation header","表示")}}形式，以帮助用户代理指定最适合用户的表示形式（例如，哪种文档语言、哪种图片格式或者哪种内容编码）。
 
-> **备注：** 你可以在[来自 WHATWG 的维基页面](https://wiki.whatwg.org/wiki/Why_not_conneg)发现 HTTP 内容协商的一些缺点。HTML5 提供其他的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)。
+> [!NOTE]
+> 你可以在[来自 WHATWG 的维基页面](https://wiki.whatwg.org/wiki/Why_not_conneg)发现 HTTP 内容协商的一些缺点。HTML5 提供其他的选择来进行内容协商，例如 [`<source>` 元素](/zh-CN/docs/Web/HTML/Element/source)。
 
 ## 内容协商的基本原则
 
@@ -24,11 +25,11 @@ slug: Web/HTTP/Content_negotiation
 
 ## 服务端驱动型内容协商机制
 
-在*服务端驱动型内容协商*或者主动内容协商中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的 HTTP 标头。这些标头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。如果它不能提供一个合适的资源，它可能使用 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）进行响应并为其支持的媒体类型设置标头（例如，分别对 POST 和 PATCH 请求使用 {{HTTPHeader("Accept-Post")}} 或 {{HTTPHeader("Accept-Patch")}} 标头）。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 [Apache 服务器的内容协商算法](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm)。
+在*服务端驱动型内容协商*或者主动内容协商中，浏览器（或者其他任何类型的用户代理）会随同 URL 发送一系列的 HTTP 标头。这些标头描述了用户倾向的选择。服务器则以此为线索，通过内部算法来选择最佳方案提供给客户端。如果它不能提供一个合适的资源，它可能使用 {{HTTPStatus("406")}}（Not Acceptable）、{{HTTPStatus("415")}}（Unsupported Media Type）进行响应并为其支持的媒体类型设置标头（例如，分别对 POST 和 PATCH 请求使用 {{HTTPHeader("Accept-Post")}} 或 {{HTTPHeader("Accept-Patch")}} 标头）。相关算法与具体的服务器相关，并没有在规范中进行规定。例如这里有一份 [Apache 服务器的内容协商算法](https://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm)。
 
 ![客户端请求一个 URL，其中标头表示对内容类型的偏好。服务器有多个由 URL 表示的资源并根据偏好的语言发回内容，然后根据客户端的请求标头压缩请求主体](httpnegoserver.png)
 
-HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型内容协商（{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Charset")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说 {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定表示形式，不过这种做法不提倡使用。服务器会使用 {{HTTPHeader("Vary")}} 标头来说明实际上哪些标头被用作内容协商的参考依据（确切来说是与之相关的响应标头），这样可以使[缓存](/zh-CN/docs/Web/HTTP/Caching)的运作更有效。
+HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型内容协商（{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept-Language")}}）。尽管严格来说 {{HTTPHeader("User-Agent")}} 并不在此列，有时候它还是会被用来确定给客户端发送的所请求资源的特定表示形式，不过这种做法不提倡使用。服务器会使用 {{HTTPHeader("Vary")}} 标头来说明实际上哪些标头被用作内容协商的参考依据（确切来说是与之相关的响应标头），这样可以使[缓存](/zh-CN/docs/Web/HTTP/Caching)的运作更有效。
 
 除此之外，有一个向可供选择的列表中增加更多标头的实验性提案，称为*客户端提示*（Client Hint）。客户端示意机制可以告知运行用户代理的设备类型（例如，是桌面计算机还是移动设备）。
 
@@ -46,7 +47,8 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 ### `Accept-CH` 标头{{experimental_inline}}
 
-> **备注：** 这是被称为*客户端提示*的**实验性**技术方案的一部分，目前仅在 Chrome 46 及以后的版本中得到了实现。Device-Memory 值在 Chrome 61 或更高版本中。
+> [!NOTE]
+> 这是被称为*客户端提示*的**实验性**技术方案的一部分，目前仅在 Chrome 46 及以后的版本中得到了实现。Device-Memory 值在 Chrome 61 或更高版本中。
 
 该实验性标头 {{HTTPHeader("Accept-CH")}} 列出了服务器可以用来选择合适响应的配置数据。合法值如下：
 
@@ -73,7 +75,8 @@ HTTP/1.1 规范指定了一系列的标准标头用于启动服务端驱动型�
 
 ### `User-Agent` 标头
 
-> **备注：** 尽管使用该标头来进行内容选择是合理的，但是依赖这个标头来确定用户代理都支持哪些功能特性通常[被认为是一个糟糕的做法](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)。
+> [!NOTE]
+> 尽管使用该标头来进行内容选择是合理的，但是依赖这个标头来确定用户代理都支持哪些功能特性通常[被认为是一个糟糕的做法](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)。
 
 {{HTTPHeader("User-Agent")}} 标头可以用来识别发送请求的浏览器。该字符串中包含有用空格间隔的*产品标记符*及*注释*的清单。
 

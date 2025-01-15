@@ -11,7 +11,8 @@ l10n:
 
 이 API의 권한은 보안 맥락에서 API를 사용하기 위한 모든 요구 사항, 문서에 적용된 권한 정책 제한, 사용자 프롬프트 등 맥락에 대한 모든 보안 제한을 효과적으로 집계합니다. 예를 들어 API가 [권한 정책](/ko/docs/Web/HTTP/Headers/Permissions-Policy)에 의해 제한되는 경우, 반환된 권한은 `거부(denied)`되고 사용자에게 접근 여부를 묻는 메시지가 표시되지 않습니다.
 
-> **참고:** 이 기능은 [WorkerNavigator.permissions](/ko/docs/Web/API/WorkerNavigator/permissions#browser_support) 속성을 지원하는 [Web Workers](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
+> [!NOTE]
+> 이 기능은 [WorkerNavigator.permissions](/ko/docs/Web/API/WorkerNavigator/permissions#browser_support) 속성을 지원하는 [Web Workers](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 있습니다.
 
 ## 개념 및 사용법
 

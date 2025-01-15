@@ -29,7 +29,8 @@ También puede configurar un sitio para permitirle el acceso desde cualquier otr
 Access-Control-Allow-Origin: *
 ```
 
-> **Advertencia:** Utilizar el comodín para permitir que todos los sitios accedan a una API privada es una mala idea.
+> [!WARNING]
+> Utilizar el comodín para permitir que todos los sitios accedan a una API privada es una mala idea.
 
 Para permitir que cualquier sitio realice peticiones CORS _sin_ usar el comodín `*` (por ejemplo, para activar credenciales), su servidor deberá leer el valor la cabecera `Origin` de la petición y usar dicho valor para `Access-Control-Allow-Origin` y además declarar una cabecera `Vary: Origin` para indicar que algunas cabeceras están siendo dinámicamente declaradas dependiendo del origen.
 

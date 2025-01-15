@@ -30,7 +30,8 @@ _固有のメソッドはありませんが、親の {{domxref("HTMLElement")}} 
 
 以下の {{domxref("Window")}} `onXYZ` イベントハンドラープロパティは対象の `window` オブジェクトへのエイリアスとして利用可能です。とはいえ、`HTMLFrameSetElement` でリッスンするのではなく、`window` オブジェクトで直接リッスンすることを推奨します。
 
-> **メモ:** 以下に挙げる `onXYZ` イベントにおいて、`HTMLFrameSetElement` で `addEventListener()` を使っても動きません。かわりに {{domxref("window")}} オブジェクトでイベントをリッスンしてください。
+> [!NOTE]
+> 以下に挙げる `onXYZ` イベントにおいて、`HTMLFrameSetElement` で `addEventListener()` を使っても動きません。かわりに {{domxref("window")}} オブジェクトでイベントをリッスンしてください。
 
 - {{domxref("window.afterprint_event", "HTMLFrameSetElement.onafterprint")}}
   - : 関連付けられたドキュメントの印刷を開始したか、印刷プレビューが閉じられた後発火します。
@@ -47,7 +48,7 @@ _固有のメソッドはありませんが、親の {{domxref("HTMLElement")}} 
 - {{domxref("window.languagechange_event", "HTMLFrameSetElement.onlanguagechange")}}
   - : ユーザーが好む言語が変更されたとき発火します。
 - {{domxref("window.message_event", "HTMLFrameSetElement.onmessage")}}
-  - : ウインドウが (たとえば他のブラウジングコンテキストで [`Window.postMessage()`](/ja/docs/Web/API/Window/postMessage) を呼び出して送信された) メッセージを受信したとき発火します。
+  - : ウインドウが (たとえば他の閲覧コンテキストで [`Window.postMessage()`](/ja/docs/Web/API/Window/postMessage) を呼び出して送信された) メッセージを受信したとき発火します。
 - {{domxref("window.messageerror_event", "HTMLFrameSetElement.onmessageerror")}}
   - : ウインドウがデシリアライズできないメッセージを受信したとき発火します。
 - {{domxref("window.offline_event", "HTMLFrameSetElement.onoffline")}}

@@ -2,7 +2,7 @@
 title: URLSearchParams
 slug: Web/API/URLSearchParams
 l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+  sourceCommit: e92950d09467164afc9dfd8b35be9c909b63a8ab
 ---
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
@@ -30,7 +30,7 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## 实例方法
 
-- `URLSearchParams.[@@iterator]()`
+- `URLSearchParams[Symbol.iterator]()`
   - : 返回一个 {{jsxref("Iteration_protocols","iterator")}}，允许以键/值对在查询字符串中出现的顺序迭代包含在该对象的键/值对。
 - {{domxref("URLSearchParams.append()")}}
   - : 插入一个指定的键/值对作为新的查询参数。
@@ -177,4 +177,4 @@ console.log(noEquals.toString()); // 'foo=&bar=baz'
 
 - [`core-js` 中 `URLSearchParams` 的 Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - {{domxref("URL")}} 接口
-- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.com/blog/urlsearchparams/)
+- [谷歌开发者：使用 URLSearchParams 轻松操作 URL](https://developer.chrome.google.cn/blog/urlsearchparams)

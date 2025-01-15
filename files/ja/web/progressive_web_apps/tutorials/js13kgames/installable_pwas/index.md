@@ -13,12 +13,13 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 ウェブサイトをインストール可能にするには、以下のものが必要になります。
 
-- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen#マニフェスト)ウェブマニフェスト
+- [正しくフィールドが入力された](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#マニフェスト)ウェブマニフェスト
 - 安全な (HTTPS) ドメインから提供されるウェブサイト
 - 端末上のアプリを表すアイコン
 - アプリをオフラインで動作させるために登録された[service worker](/ja/docs/Web/API/Service_Worker_API) (現時点では Android の Chrome にのみ必要です)
 
-> **メモ:** 現在、サービスワーカーが必要なのは、 Chrome, Edge, Samsung Internet などの Chromium ベースのブラウザーのみです。Firefox を使ってアプリを開発する場合は、 Chromium ベースのブラウザーと互換性を持たせるためにサービスワーカーが必要になるので注意が必要です。
+> [!NOTE]
+> 現在、サービスワーカーが必要なのは、 Chrome, Edge, Samsung Internet などの Chromium ベースのブラウザーのみです。Firefox を使ってアプリを開発する場合は、 Chromium ベースのブラウザーと互換性を持たせるためにサービスワーカーが必要になるので注意が必要です。
 
 ### マニフェストファイル
 
@@ -32,7 +33,8 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **メモ:** 過去にマニフェストに使用されてきた一般的な拡張機能がいくつかあります。 `manifest.webapp` は Firefox OS アプリのマニフェストで一般的でしたが、多くの場合、コンテンツは JSON 構造で編成されているためウェブマニフェストには `manifest.json` を使用します。 しかし、`.webmanifest` ファイル形式は [W3C マニフェスト仕様書](https://w3c.github.io/manifest/) (英語) で明示的に言及されており、ここでは使用するのはこれです。
+> [!NOTE]
+> 過去にマニフェストに使用されてきた一般的な拡張機能がいくつかあります。 `manifest.webapp` は Firefox OS アプリのマニフェストで一般的でしたが、多くの場合、コンテンツは JSON 構造で編成されているためウェブマニフェストには `manifest.json` を使用します。 しかし、`.webmanifest` ファイル形式は [W3C マニフェスト仕様書](https://w3c.github.io/manifest/) (英語) で明示的に言及されており、ここでは使用するのはこれです。
 
 ファイルの内容は次のようになります。
 
@@ -108,7 +110,7 @@ slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 
 この記事では、適切に設定されたウェブマニフェストで PWA をインストール可能にする方法と、その後でブラウザーの「ホーム画面に追加」機能を使って PWA をインストールする方法について学びました。
 
-a2hs の詳細については、必ず[ホーム画面に追加のガイド](/ja/docs/Web/Progressive_web_apps/Add_to_home_screen)をお読みください。 ブラウザーのサポートは現在、Android の Firefox 58 以降、Mobile Chrome および Android Webview 31 以降、および Android の Opera 32 以降に制限されていますが、近い将来に改善されるはずです。
+a2hs の詳細については、必ず[ホーム画面に追加のガイド](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)をお読みください。 ブラウザーのサポートは現在、Android の Firefox 58 以降、Mobile Chrome および Android Webview 31 以降、および Android の Opera 32 以降に制限されていますが、近い将来に改善されるはずです。
 
 それでは、PWA パズルの最後のピース、プッシュ通知を使用してユーザーとアナウンスを共有し、ユーザーがアプリに再び参加できるようにする方法に移りましょう。
 

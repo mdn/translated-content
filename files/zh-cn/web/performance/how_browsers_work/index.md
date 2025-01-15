@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f32c38c1245815c7f520730f0cdef54960e5cee1
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 在浏览网页时用户希望页面的内容能够快速加载且流畅交互。因此，开发者应力争实现这两个目标。
 
@@ -150,7 +150,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 #### 构建无障碍树
 
-浏览器还构建辅助设备用于分析和解释内容的[无障碍](/zh-CN/docs/Learn/Accessibility)树。无障碍对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改无障碍树。
+浏览器还构建辅助设备用于分析和解释内容的[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)树。无障碍对象模型（AOM）类似于 DOM 的语义版本。当 DOM 更新时，浏览器会更新辅助功能树。辅助技术本身无法修改无障碍树。
 
 在构建 AOM 之前，[屏幕阅读器](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)无法访问内容。
 

@@ -9,7 +9,8 @@ slug: Web/CSS/@media
 
 [CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/At-rule) **`@media`** может быть использовано для применения части стилей при соблюдении условия одного или нескольких [медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
-> **Примечание:** В JavaScript правила, созданные с помощью `@media` могут быть получены через интерфейс объектной модели CSS {{domxref("CSSMediaRule")}}.
+> [!NOTE]
+> В JavaScript правила, созданные с помощью `@media` могут быть получены через интерфейс объектной модели CSS {{domxref("CSSMediaRule")}}.
 
 ## Синтаксис
 
@@ -52,7 +53,8 @@ A `<media-query>` is composed of a optional media type and/or a number of media 
 - speech
   - : Предназначен для синтезаторов речи.
 
-> **Примечание:** CSS2.1 и Media Queries 3 определили несколько дополнительных значений (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), но они устарели в [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) и не рекомендуется к использованию.
+> [!NOTE]
+> CSS2.1 и Media Queries 3 определили несколько дополнительных значений (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), но они устарели в [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) и не рекомендуется к использованию.
 
 ## Media Features
 
@@ -67,7 +69,7 @@ Each _media feature_ tests for one specific feature of the browser or device.
 | [`resolution`](/ru/docs/Web/CSS/@media/resolution)                                                         | Pixel density of the output device                                                                                           |                                                                                                                                    |
 | [`scan`](/ru/docs/Web/CSS/@media/scan)                                                                     | Scanning process of the output device                                                                                        |                                                                                                                                    |
 | [`grid`](/ru/docs/Web/CSS/@media/grid)                                                                     | Is the device a grid or bitmap?                                                                                              |                                                                                                                                    |
-| [`update-frequency`](/ru/docs/Web/CSS/@media/update-frequency)                                             | How quickly (if at all) can the output device modify the appearance of the content                                           | Added in Media Queries Level 4                                                                                                     |
+| [`update-frequency`](/ru/docs/Web/CSS/@media/update)                                                       | How quickly (if at all) can the output device modify the appearance of the content                                           | Added in Media Queries Level 4                                                                                                     |
 | [`overflow-block`](/ru/docs/Web/CSS/@media/overflow-block)                                                 | How does the output device handle content that overflows the viewport along the block axis?                                  | Added in Media Queries Level 4                                                                                                     |
 | [`overflow-inline`](/ru/docs/Web/CSS/@media/overflow-inline)                                               | Can content that overflows the viewport along the inline axis be scrolled?                                                   | Added in Media Queries Level 4                                                                                                     |
 | [`color`](/ru/docs/Web/CSS/@media/color)                                                                   | Number of bits per color component of the output device, or zero if the device isn't color.                                  |                                                                                                                                    |

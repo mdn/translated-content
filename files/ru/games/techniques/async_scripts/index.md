@@ -27,7 +27,7 @@ document.body.appendChild(script);
 
 ## Когда асинхронный не асинхронный?
 
-Две распространённые ситуации, в которых сценарий не асинхронен (как [определено спецификацией HTML](http://www.w3.org/TR/html5/scripting-1.html) ):
+Две распространённые ситуации, в которых сценарий не асинхронен (как [определено спецификацией HTML](https://www.w3.org/TR/html5/scripting-1.html) ):
 
 ```html
 <script async src="file.js"></script>

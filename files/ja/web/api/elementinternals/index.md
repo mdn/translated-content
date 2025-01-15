@@ -2,10 +2,10 @@
 title: ElementInternals
 slug: Web/API/ElementInternals
 l10n:
-  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+  sourceCommit: f33c6e8a7204272b90d8f005f3d8c743333d7dbf
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 **`ElementInternals`** は [Document Object Model](/ja/docs/Web/API/Document_Object_Model) のインターフェイスで、カスタム要素を HTML フォームに完全に参加させる方法をウェブ開発者に提供します。標準的な HTML フォーム要素を扱うのと同じように、これらの要素を扱うためのユーティリティを提供し、 [Accessibility Object Model](https://wicg.github.io/aom/explainer.html) も要素で使えるようにします。
 
@@ -19,7 +19,7 @@ l10n:
   - : この要素に関連付けられた {{domxref("ShadowRoot")}} オブジェクトを返します。
 - {{domxref("ElementInternals.form")}} {{ReadOnlyInline}}
   - : この要素に関連付けられた {{domxref("HTMLFormElement")}} を返します。
-- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("ElementInternals.states")}} {{ReadOnlyInline}}
   - : この要素に関連付けられた {{domxref("CustomStateSet")}} を返します。
 - {{domxref("ElementInternals.willValidate")}} {{ReadOnlyInline}}
   - : 論理値で、要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の候補である送信可能要素である場合に true を返します。
@@ -32,9 +32,10 @@ l10n:
 
 ### ARIA から取り込まれたインスタンスプロパティ
 
-`ElementInternals` インターフェイスには以下のプロパティがあり、`ARIAMixin` ミックスインで定義されています。
+`ElementInternals` インターフェイスには以下のプロパティもあります。
 
-> **メモ:** これらは、カスタム要素に既定のアクセシビリティ上の意味を定義できるようにするために取り込まれています。これらは作者が定義した属性によって上書きされる可能性がありますが、作者が属性を削除したり追加しなかったりした場合でも、既定の意味が保持されるようにします。詳しくは、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
+> [!NOTE]
+> これらは、カスタム要素に既定のアクセシビリティ上の意味を定義できるようにするために取り込まれています。これらは作者が定義した属性によって上書きされる可能性がありますが、作者が属性を削除したり追加しなかったりした場合でも、既定の意味が保持されるようにします。詳しくは、 [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object) を参照してください。
 
 - {{domxref("ElementInternals.ariaAtomic")}}
   - : [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) 属性を反映した文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
@@ -48,6 +49,8 @@ l10n:
   - : [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッドの列数を定義します。
 - {{domxref("ElementInternals.ariaColIndex")}}
   - : [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスまたは位置を定義します。
+- {{domxref("ElementInternals.ariaColIndexText")}} {{experimental_inline}}
+  - : [`aria-colindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性を反映した文字列で、aria-colindex の人間が読むための代替テキストを定義します。
 - {{domxref("ElementInternals.ariaColSpan")}}
   - : [`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内のセルやグリッドセルにまたがる列の数を定義します。
 - {{domxref("ElementInternals.ariaCurrent")}}
@@ -69,7 +72,7 @@ l10n:
 - {{domxref("ElementInternals.ariaLevel")}}
   - : [`aria-level`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-level) 属性を反映した文字列で、構造内の要素の階層レベルを定義します。
 - {{domxref("ElementInternals.ariaLive")}}
-  - : [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性を反映した文字列で、要素が更新されることを示し、ユーザエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
+  - : [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-live) 属性を反映した文字列で、要素が更新されることを示し、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
 - {{domxref("ElementInternals.ariaModal")}}
   - : [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性を反映した文字列で、要素が表示されたときにモーダルであるかどうかを示します。
 - {{domxref("ElementInternals.ariaMultiline")}}
@@ -98,6 +101,8 @@ l10n:
   - : [`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性を反映した文字列で、これは、テーブル、グリッド、ツリーグリッドの行の総数を定義します。
 - {{domxref("ElementInternals.ariaRowIndex")}}
   - : [`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性を反映した文字列で、テーブル、グリッド、ツリーグリッド内の行の総数に対する要素の行インデックスまたは位置を定義します。
+- {{domxref("ElementInternals.ariaRowIndexText")}} {{experimental_inline}}
+  - : [`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性を反映した文字列で、aria-rowindex の人間が読むための代替テキストを定義します。
 - {{domxref("ElementInternals.ariaRowSpan")}}
   - : [`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性を反映した文字列で、これは、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがまたがる行の数を定義します。
 - {{domxref("ElementInternals.ariaSelected")}}
@@ -124,7 +129,7 @@ l10n:
 - {{domxref("ElementInternals.checkValidity()")}}
   - : 要素が、[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかをチェックします。
 - {{domxref("ElementInternals.reportValidity()")}}
-  - : 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかをチェックし、ユーザエージェントに検証メッセージを送信します。
+  - : 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかをチェックし、ユーザーエージェントに検証メッセージを送信します。
 
 ## 例
 

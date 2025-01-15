@@ -21,7 +21,7 @@ new URLSearchParams(init);
 - `init` {{optional_inline}}
   - : 다음 중 하나입니다.
     - 문자열. `application/x-www-form-urlencoded` 형식으로 파싱합니다. 선행 `'?'` 문자는 무시합니다.
-    - 이름-값 문자열 쌍을 생성하는 [순회기](/ko/docs/Web/JavaScript/Guide/Iterators_and_Generators#iterators)를 가지는 객체. {{domxref("FormData")}} 등의 객체가 이 범주에 속합니다. 참고로 {{domxref("File")}} 값은 파일 이름이 아니라 `[object File]`로 직렬화됩니다. (`application/x-www-form-urlencoded` 양식에서의 동작과 동일)
+    - 이름-값 문자열 쌍을 생성하는 [순회기](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators#iterators)를 가지는 객체. {{domxref("FormData")}} 등의 객체가 이 범주에 속합니다. 참고로 {{domxref("File")}} 값은 파일 이름이 아니라 `[object File]`로 직렬화됩니다. (`application/x-www-form-urlencoded` 양식에서의 동작과 동일)
     - 문자열 키와 문자열 값으로 구성된 레코드.
 
 ### 반환값

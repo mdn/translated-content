@@ -10,7 +10,8 @@ l10n:
 
 **`imageSmoothingQuality`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部です。画像の平滑化の品質を設定します。
 
-> **メモ:** このプロパティが効果を発揮するには、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} が `true` でなければなりません。
+> [!NOTE]
+> このプロパティが効果を発揮するには、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} が `true` でなければなりません。
 
 ## 値
 

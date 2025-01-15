@@ -105,13 +105,16 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 
 ### LIVE プロファイル
 
-MPEG-DASH を取り扱うための良いソフトウェアは [Dash Encoder](https://github.com/slederer/DASHEncoder) です。これは [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/dash/) を使ってメディアを MPEG-DASH フォーマットにエンコードします。
+MPEG-DASH を取り扱うための良いソフトウェアは [Dash Encoder](https://github.com/slederer/DASHEncoder) です。これは [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box/dash/) を使ってメディアを MPEG-DASH フォーマットにエンコードします。
 
-> **メモ:** You will need to be comfortable with make files and installing dependencies to get this software up and running.
+> [!NOTE]
+> You will need to be comfortable with make files and installing dependencies to get this software up and running.
 
-> **メモ:** Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
+> [!NOTE]
+> Since MPEG-DASH decoding is done partially using JavaScript and MSE files are often grabbed using XHR, keep same origin rules in mind.
 
-> **メモ:** If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/DASH_Adaptive_Streaming_for_HTML_5_Video).
+> [!NOTE]
+> If you use WebM you can use the methods shown in this tutorial [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video).
 
 エンコードされるとファイル構造はこのようになります。
 
@@ -182,7 +185,8 @@ main segment folder ->      /segments/main/
 
 MPD ファイルは、さまざまなメディアが配置されている場所をブラウザに伝え、 mimeType やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
 
-> **メモ:** 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
+> [!NOTE]
+> 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
 
 MPD ファイルを生成すれば、 {{ htmlelement("video") }} 要素で参照することができます。
 
@@ -201,11 +205,12 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 </video>
 ```
 
-> **メモ:** MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](http://dashif.org/reference/players/javascript/index.html) を参照してください。
+> [!NOTE]
+> MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](https://dashif.org/reference/players/javascript/index.html) を参照してください。
 
 ## HLS エンコーディング
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](http://www.jwplayer.com/html5/hls/).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/html5/hls/).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
@@ -213,11 +218,12 @@ Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into
 
 HLS エンコードのための役立つツールがいくつかあります。
 
-- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](http://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
+- For HLS live stream encoding [Adobe provide a Media Encoder for Mac](https://www.adobe.com/support/downloads/product.jsp?product=160&platform=Macintosh).
 - The Stream Segmenter — provided by Apple for Mac platforms — takes a media stream from a local network and splits media into equally sized media files together with an index file.
 - Apple also provides a File Segmenter for Mac — which takes a suitably encoded file, splits it up and produces a index file, in a similar fashion to the Stream Segmenter.
 
-> **メモ:** これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
+> [!NOTE]
+> これらのツールについて詳しくは [Using HTTP Live Streaming](https://developer.apple.com/library/mac/documentation/networkinginternet/conceptual/streamingmediaguide/UsingHTTPLiveStreaming/UsingHTTPLiveStreaming.html) を読んでください。
 
 ### インデックスファイル (プレイリスト)
 
@@ -241,7 +247,8 @@ http://media.example.com/segment2.ts
 #EXT-X-ENDLIST
 ```
 
-> **メモ:** Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
+> [!NOTE]
+> Comprehensive information on how to encode media for Apple's HLS format can be found on [Apple's Developer Pages](https://developer.apple.com/streaming/).
 
 ## 関連情報
 
@@ -249,7 +256,7 @@ Further resources on adaptive streaming.
 
 ### General information
 
-- [Adaptive Streaming in the Field](http://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
+- [Adaptive Streaming in the Field](https://www.streamingmedia.com/Articles/Editorial/Featured-Articles/Adaptive-Streaming-in-the-Field-73017.aspx)
 
 ### HLS overview and references
 
@@ -259,20 +266,20 @@ Further resources on adaptive streaming.
 
 ### MPEG-DASH overview and references
 
-- [Dynamic Adaptive Streaming over HTTP Dataset](http://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
+- [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
 - [MPEG-DASH and streaming reference and resources (MSDN)](<http://msdn.microsoft.com/en-us/library/dn551370(v=vs.85).aspx>)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/DASH_Adaptive_Streaming_for_HTML_5_Video)
-- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](http://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
+- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
 
 ### MPEG-DASH tools
 
 - [DASHEncoder](https://github.com/slederer/DASHEncoder)
-- [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box)
+- [MP4Box](https://gpac.wp.mines-telecom.fr/mp4box)
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
 - [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
 
 Adaptive streaming examples
 
-- [ITEC – Dynamic Adaptive Streaming over HTTP](http://www-itec.uni-klu.ac.at/dash/?page_id=207)
+- [ITEC – Dynamic Adaptive Streaming over HTTP](https://www-itec.uni-klu.ac.at/dash/?page_id=207)
 - [MPEG DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)

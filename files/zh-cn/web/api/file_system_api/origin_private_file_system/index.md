@@ -2,7 +2,7 @@
 title: 源私有文件系统
 slug: Web/API/File_System_API/Origin_private_file_system
 l10n:
-  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
+  sourceCommit: 2cba64f68aab9e233fecfc2bab8bea4118716c14
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
@@ -18,7 +18,7 @@ l10n:
 3. 调用 {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} 来请求用户的权限以保存更改。
 4. 如果用户接受了权限请求，更改就会保存回原文件。
 
-这个方法可行，但是有一些限制。这些更改是对用户可见的文件系统进行的，所以会有很多适当的安全性检查（比方说 Chrome 的[安全浏览](https://developers.google.com/safe-browsing)）来防止恶意内容被写入到文件系统。这些写入不是原地的，会先写入到一个临时文件。除非通过了所有的安全性检查，否则原文件不会被修改。
+这个方法可行，但是有一些限制。这些更改是对用户可见的文件系统进行的，所以会有很多适当的安全性检查（比方说 Chrome 的[安全浏览](https://developers.google.cn/safe-browsing)）来防止恶意内容被写入到文件系统。这些写入不是原地的，会先写入到一个临时文件。除非通过了所有的安全性检查，否则原文件不会被修改。
 
 因此，这些操作会相当缓慢。在你进行小规模的文本更新时没那么明显，但是当进行像 [SQLite](https://www.sqlite.org/wasm) 数据库更改这样的更显著、更大规模的文件更新时就会遇到性能问题。
 
@@ -41,7 +41,8 @@ OPFS 提供了页面所属源私有的、对用户不可见的、底层的逐字
 
 在主线程中访问 OPFS 时，你要使用基于 {{jsxref("Promise")}} 的异步 API。你可以调用代表 OPFS 根目录（以及其中被创建的子目录）的 {{domxref("FileSystemDirectoryHandle")}} 对象上的 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 和 {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} 方法来分别访问文件（{{domxref("FileSystemFileHandle")}}）和目录（{{domxref("FileSystemDirectoryHandle")}}）。
 
-> **备注：** 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
+> [!NOTE]
+> 在上述方法中传入 `{ create: true }` 会在文件或文件夹不存在时创建相应的文件或文件夹。
 
 ```js
 // 创建层级结构的文件和文件夹
@@ -101,7 +102,7 @@ await (await navigator.storage.getDirectory()).remove({ recursive: true });
 
 ### 列出文件夹中的内容
 
-{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await…of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
+{{domxref("FileSystemDirectoryHandle")}} 是一个[异步迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。所以，你可以用 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和诸如 [`entries()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries)、[`values()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 和 [`keys()`](/zh-CN/docs/Web/API/FileSystemDirectoryHandle/entries) 这样的标准方法对其进行迭代。
 
 例如：
 
@@ -122,7 +123,8 @@ Web Worker 不会阻塞主线程，这意味着你可以在其上下文中使用
 
 你可以通过在常规的 {{domxref("FileSystemFileHandle")}} 上调用 {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} 来同步地处理文件：
 
-> **备注：** 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
+> [!NOTE]
+> 虽然 `createSyncAccessHandle()` 的名称带有“Sync（同步）”字眼，但是这个方法本身是异步的。
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
@@ -177,7 +179,7 @@ size = accessHandle.getSize();
 const dataView = new DataView(new ArrayBuffer(size));
 
 // 将整个文件读取到数据视图。
-accessHandle.read(dataView);
+accessHandle.read(dataView, { at: 0 });
 // 打印 `"Some textMore content"`。
 console.log(textDecoder.decode(dataView));
 
@@ -192,4 +194,4 @@ accessHandle.truncate(4);
 
 ## 参见
 
-- web.dev 上的[源私有文件系统](https://web.dev/articles/origin-private-file-system)
+- web.developers.google.cn 上的[源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

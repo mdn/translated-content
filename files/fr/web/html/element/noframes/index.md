@@ -11,11 +11,12 @@ L'élément HTML obsolète **`<noframes>`** est utilisé par les navigateurs qui
 
 Cet élément pouvait être utilisé afin d'afficher un message explicatif, destiné à l'utilisateur. Idéalement, le contenu devait présenter des fonctionnalités analogues à la _frame_ qui n'était pas prise en charge.
 
-> **Note :** Cet élément est aussi entièrement obsolète en HTML5, et doit être evité pour se conformer au standard.
+> [!NOTE]
+> Cet élément est aussi entièrement obsolète en HTML5, et doit être evité pour se conformer au standard.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 

@@ -39,7 +39,7 @@ Les événements ont trois fonctions :
     - `tabId`
       - : `integer`. ID de l'onglet qui a été mis à jour.
     - `changeInfo`
-      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
+      - : [`object`](#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeinfo) ci-dessous.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.
 
@@ -125,7 +125,7 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
+Le journal ne change que pour les onglets dont la propriété `url` est [matched](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -163,7 +163,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Combiner les deux filtres précédents : changements de journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
+- Dont la propriété `url` est [matched](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
@@ -186,7 +186,7 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 Changements dans le journal seulement :
 
 - A la propriété `épinglée` des onglets
-- Dont la propriété `url` est [matched](/fr/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`
+- Dont la propriété `url` est [matched](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) par `https://developer.mozilla.org/*` ou `https://twitter.com/mozdevnet`
 - et qui font partie de la fenêtre actuelle du navigateur au moment où l'événement de mise à jour est déclenché :
 
 ```js
@@ -214,9 +214,9 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 
 {{Compat}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

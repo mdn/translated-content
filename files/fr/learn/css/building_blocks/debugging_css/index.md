@@ -78,7 +78,8 @@ Vous pouvez utiliser les outils de développement pour ajouter de nouvelles prop
 
 ![Le panneau des outils de développement avec l'ajout d'une nouvelle propriété aux règles, où on voit la liste ouverte des suggestions d'autocomplétion pour font-](inspecting3-font-size.png)
 
-> **Note :** L'inspecteur de règles contient d'autres fonctionnalités comme la mise en évidence des déclarations avec des valeurs invalides qui sont rayées. Pour en savoir plus, voir [Examiner et éditer le CSS (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
+> [!NOTE]
+> L'inspecteur de règles contient d'autres fonctionnalités comme la mise en évidence des déclarations avec des valeurs invalides qui sont rayées. Pour en savoir plus, voir [Examiner et éditer le CSS (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
 ## Comprendre le modèle de boîtes
 
@@ -94,7 +95,8 @@ L'élément avec la classe `box2` utilise `border-box`, ce qui signifie que le r
 
 ![La section Disposition des outils de développement.](inspecting4-box-model.png)
 
-> **Note :** Pour en savoir plus, voir [Examiner et inspecter le modèle de boîtes (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
+> [!NOTE]
+> Pour en savoir plus, voir [Examiner et inspecter le modèle de boîtes (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
 ## Résoudre des problèmes de spécificité
 

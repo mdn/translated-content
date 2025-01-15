@@ -50,8 +50,8 @@ pc.ondatachannel = function (event) {
 
 ## 참조
 
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
 - {{domxref("RTCDataChannel")}}
 - {{domxref("RTCDataChannel.ondatachannel")}}
 - [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
-- {{domxref("RTCPeerConnection")}} (the target interface for {{event("datachannel")}} events)
+- {{domxref("RTCPeerConnection")}} (the target interface for {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} events)

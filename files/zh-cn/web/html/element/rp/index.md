@@ -36,9 +36,9 @@ slug: Web/HTML/Element/rp
 
 ## 属性
 
-这个元素仅仅支持 [全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素仅仅支持 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 用法注解
+## 使用说明
 
 - Ruby 注解用于展示东亚文字的发音，例如使用日语罗马音和汉语拼音的文字。 `<rp>` 元素用于不支持 {{ HTMLElement("ruby") }} 元素的情况。 `<rp>` 的内容提供了应该展示的东西，通常是圆括号，以便表示 ruby 注解的存在。
 

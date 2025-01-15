@@ -60,5 +60,5 @@ if (connection) {
 
 ## Смотрите также
 
-- [Online and offline events](/ru/docs/Online_and_offline_events)
+- [Online and offline events](/ru/docs/Web/API/Navigator/onLine)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

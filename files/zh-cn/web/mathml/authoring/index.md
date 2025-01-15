@@ -54,9 +54,11 @@ l10n:
 </html>
 ```
 
-> **备注：** 要在 XML 文档（例如 XHTML、EPUB 或 OpenDocument）中使用 MathML，请在每个 `<math>` 元素中放置一个 `xmlns="http://www.w3.org/1998/Math/MathML"` 属性。
+> [!NOTE]
+> 要在 XML 文档（例如 XHTML、EPUB 或 OpenDocument）中使用 MathML，请在每个 `<math>` 元素中放置一个 `xmlns="http://www.w3.org/1998/Math/MathML"` 属性。
 
-> **备注：** 某些电子邮件或即时通讯客户端能够发送和接收 HTML 格式的消息。因此，可以在此类消息中嵌入数学公式，只要标记清理程序未将 MathML 标签过滤掉。
+> [!NOTE]
+> 某些电子邮件或即时通讯客户端能够发送和接收 HTML 格式的消息。因此，可以在此类消息中嵌入数学公式，只要标记清理程序未将 MathML 标签过滤掉。
 
 #### 对不支持 MathML 的浏览器的回退方案
 
@@ -78,11 +80,12 @@ l10n:
 <script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
 ```
 
-> **备注：** 这些脚本会执行特性检测（探测 [mspace](/zh-CN/docs/Web/MathML/Element/mspace) 元素和 [mpadded](/zh-CN/docs/Web/MathML/Element/mpadded) 元素），这优于[浏览器嗅探](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)。此外，它们是在开源许可证下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行调整。
+> [!NOTE]
+> 这些脚本会执行特性检测（探测 [mspace](/zh-CN/docs/Web/MathML/Element/mspace) 元素和 [mpadded](/zh-CN/docs/Web/MathML/Element/mpadded) 元素），这优于[浏览器嗅探](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)。此外，它们是在开源许可证下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行调整。
 
 #### 数学公式字体
 
-正如 [MathML 字体](/zh-CN/docs/Web/MathML/Fonts)中所解释的，数学公式字体有助于更好地渲染 MathML 的内容。因此，选择分享[此类字体的安装说明](/zh-CN/docs/Web/MathML/Fonts#installation_instructions)或以 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)的形式提供它们是一个不错的主意。
+正如 [MathML 字体](/zh-CN/docs/Web/MathML/Fonts)中所解释的，数学公式字体有助于更好地渲染 MathML 的内容。因此，选择分享[此类字体的安装说明](/zh-CN/docs/Web/MathML/Fonts#installation_instructions)或以 [Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)的形式提供它们是一个不错的主意。
 
 [MathFonts 页面](https://fred-wang.github.io/MathFonts/)提供了此类 Web 字体，以及适合的样式表。例如，只要在文档 head 下插入以下内容，即可选择带有回退的 Web 字体的拉丁现代字体：
 
@@ -100,7 +103,8 @@ l10n:
   href="https://fred-wang.github.io/MathFonts/STIX/mathfonts.css" />
 ```
 
-> **备注：** MathFonts 页面中的字体和样式表是在开源许可下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行修改。
+> [!NOTE]
+> MathFonts 页面中的字体和样式表是在开源许可下分发的，因此可以自由地将它们复制到你自己的服务器上，并根据需要进行修改。
 
 ## 从简单语法转换
 
@@ -245,7 +249,8 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/msp
 latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 ```
 
-> **备注：** 命令行工具可以在服务端使用，例如：[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) 使用 [Mathoid](https://github.com/wikimedia/mathoid) 以完成从 LaTeX 到 MathML 的转换。
+> [!NOTE]
+> 命令行工具可以在服务端使用，例如：[MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) 使用 [Mathoid](https://github.com/wikimedia/mathoid) 以完成从 LaTeX 到 MathML 的转换。
 
 ## 图形界面
 
@@ -257,13 +262,15 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ![Thunderbird 的 LaTeX 输入框](thunderbird.png)
 
-> **备注：** 你也可以使用 **Insert > HTML** 命令直接插入 MathML 内容。
+> [!NOTE]
+> 你也可以使用 **Insert > HTML** 命令直接插入 MathML 内容。
 
 [LibreOffice](https://www.libreoffice.org/) 的公式编辑器（文件 → 新建 → 公式）提供了增强功能：它的 _StartMath_ 语法输入框提供了额外的公式面板来插入预定义的数学公式结构。
 
 ![Libre Office 中的 StarMath 输入框](libreoffice.png)
 
-> **备注：** 要获取 libreoffice 的 MathML 代码，请将文档保存为 `mml` 格式，并在你喜欢的文本编辑器中打开它。
+> [!NOTE]
+> 要获取 libreoffice 的 MathML 代码，请将文档保存为 `mml` 格式，并在你喜欢的文本编辑器中打开它。
 
 ### 所见即所得编辑器
 
@@ -273,7 +280,8 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ![TeXmacs 的示例](texmacs.png)
 
-> **备注：** 默认情况下，Lyx 和 TeXmacs 会在它们的 HTML 输出中使用数学公式的图像。要使用 MathML，对于前者，请[参照这里的说明](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx)；对于后者，请选择 `User preference > Convert > Export mathematical formulas as MathML`。
+> [!NOTE]
+> 默认情况下，Lyx 和 TeXmacs 会在它们的 HTML 输出中使用数学公式的图像。要使用 MathML，对于前者，请[参照这里的说明](https://github.com/brucemiller/LaTeXML/wiki/Integrating-LaTeXML-into-TeX-editors#lyx)；对于后者，请选择 `User preference > Convert > Export mathematical formulas as MathML`。
 
 ### 光学字符和手写识别
 

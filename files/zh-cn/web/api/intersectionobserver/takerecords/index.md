@@ -1,40 +1,39 @@
 ---
-title: IntersectionObserver.takeRecords()
+title: IntersectionObserver：takeRecords() 方法
 slug: Web/API/IntersectionObserver/takeRecords
+l10n:
+  sourceCommit: d16706e4e930c57161d473287374a9286c663147
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserver")}} 的方法**`takeRecords()`** 返回一个 {{domxref("IntersectionObserverEntry")}} 对象数组，每个对象的目标元素都包含每次相交的信息，可以显式通过调用此方法或隐式地通过观察者的回调自动调用。
+{{domxref("IntersectionObserver")}} 的 **`takeRecords()`** 方法返回一个 {{domxref("IntersectionObserverEntry")}} 对象数组，每个对象包含目标元素自上次相交检查以来所经历的相交状态变化——可以显式地通过调用此方法或隐式地通过观察器的回调获得。
 
-> **备注：** 如果使用回调来监视这些更改，则无需调用此方法。调用此方法会清除挂起的相交状态列表，因此不会运行回调。
+> [!NOTE]
+> 如果使用回调来监视这些更改，则无需调用此方法。调用此方法会清除挂起的相交状态列表，因此不会运行回调。
 
 ## 语法
 
-```plain
-intersectionObserverEntries = intersectionObserver.takeRecords();
+```js-nolint
+takeRecords()
 ```
 
 ### 参数
 
-None.
+无。
 
 ### 返回值
 
-{{domxref("IntersectionObserverEntry")}} 对象数组，每个对象包含目标元素与根每次的相交信息。
+{{domxref("IntersectionObserverEntry")}} 对象数组，每个对象包含目标元素自上次相交检查以来与根的相交状态变化。
 
-## Examples
-
-<<<...>>>
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)
+- [交叉观察器 API](/zh-CN/docs/Web/API/Intersection_Observer_API)

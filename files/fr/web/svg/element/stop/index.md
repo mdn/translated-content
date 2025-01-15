@@ -15,8 +15,8 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<stop>`** définit une couleur supplémen
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Core_attributes)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Presentation_attributes)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#core_attributes)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

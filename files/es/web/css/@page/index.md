@@ -11,7 +11,8 @@ La regla @page es usada para modificar algunas propiedades CSS cuando se va a im
 
 La regla `@page` puede ser accesada por medio de la interfaz modelo objeto {{domxref("CSSPageRule")}}.
 
-> **Nota:** La W3C esta discutiendo como manejar las unidades relativas {{cssxref("&lt;length&gt;")}} : `vh`, `vw`, `vmin`, y `vmax`. Mientras tanto, se recomienda no usarlas en la regla `@page`.
+> [!NOTE]
+> La W3C esta discutiendo como manejar las unidades relativas {{cssxref("&lt;length&gt;")}} : `vh`, `vw`, `vmin`, y `vmax`. Mientras tanto, se recomienda no usarlas en la regla `@page`.
 
 ## Sintaxis
 
@@ -34,7 +35,7 @@ La regla `@page` puede ser accesada por medio de la interfaz modelo objeto {{dom
 
 ## Ejemplos
 
-Por favor dirígete a las [pseudo-classes](/es/docs/CSS/Pseudo-classes) de `@page` por ejemplos.
+Por favor dirígete a las [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) de `@page` por ejemplos.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

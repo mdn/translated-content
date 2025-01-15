@@ -13,20 +13,20 @@ WebAssembly 對於網路平台而言具有極大的意義 —— 它提供了一
 
 WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly 的 JavaScript API，你可以把 WebAssembly 模組載入至一個 JavaScript 應用程式，並在兩者間共享功能。這允許你在同一應用程式內彈性地發揮 WebAssembly 的高效能威力同時兼顧 JavaScript 的表達力與高靈活性，即便你可能不知道如何編寫 WebAssembly 程式碼。
 
-而且更棒的是，這是由 [W3C WebAssembly Working Group](https://www.w3.org/wasm/) 和 [Community Group](https://www.w3.org/community/webassembly/) 開發的一項網路標準，並也得到來自各大主要瀏覽器廠商的積極參與。
+而且更棒的是，這是由 [W3C WebAssembly Working Group](https://www.w3.org/groups/wg/wasm/) 和 [Community Group](https://www.w3.org/community/webassembly/) 開發的一項網路標準，並也得到來自各大主要瀏覽器廠商的積極參與。
 
 ## 指南
 
 - [WebAssembly 概念](/zh-TW/docs/WebAssembly/Concepts)
   - : 藉由閱讀 WebAssembly 後的高階概念開始 —— 也就是說，它為何是如此有用，是如何相容網路平台（及其他），和如何使用它。
-- [將 C/C++ 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/C_to_wasm)
+- [將 C/C++ 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/C_to_Wasm)
   - : 當你使用 C/C++ 編寫程式後，你可以使用諸如 [Emscripten](https://emscripten.org/) 等工具將其編譯為 .wasm 文件。讓我們看看它是如何實作的。
 - [從現有的 C 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/existing_C_to_wasm)
   - : WebAssembly 核心的使用案例是期望能讓開發者在 Web 環境中使用現存 C 的生態環境。
 - [將 Rust 程式碼編譯為 WebAssembly](/zh-TW/docs/WebAssembly/Rust_to_wasm)
   - : 你可以將 Rust 編譯為 WebAssembly！本教程將帶你了解將 Rust 項目編譯為 wasm 並在現有的 Web 應用程序中使用它所需的所有知識。
 - [載入並運行 WebAssembly 程式碼](/zh-TW/docs/WebAssembly/Loading_and_running)
-  - : 本文介紹如何透過把 [Fetch](/zh-TW/docs/Web/API/Fetch_API) 或 [XHR](/zh-TW/docs/Web/API/XMLHttpRequest) API 與 [WebAssembly JavaScript](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) API 結合起來、編譯及實例化 .wasm 文件。
+  - : 本文介紹如何透過把 [Fetch](/zh-TW/docs/Web/API/Fetch_API) 或 [XHR](/zh-TW/docs/Web/API/XMLHttpRequest) API 與 [WebAssembly JavaScript](/zh-TW/docs/WebAssembly/JavaScript_interface) API 結合起來、編譯及實例化 .wasm 文件。
 - [使用 WebAssembly 的 JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)
   - : 當你載入一個 .wasm 模組後，你就用到它。在本文中將向你展示如何透過 WebAssembly 的 JavaScript API 來使用 WebAssembly。
 - [導出 WebAssembly 函數](/zh-TW/docs/WebAssembly/Exported_functions)
@@ -38,8 +38,10 @@ WebAssembly 被設計來與 JavaScript 協同工作 —— 藉由 WebAssembly �
 
 ## API 參考
 
-- [WebAssembly control flow](/zh-TW/docs/WebAssembly/Reference/Control_flow)
-  - : Reference documentation for the set of WebAssembly control-flow operators.
+- [WebAssembly 參考指令](/zh-TW/docs/WebAssembly/Reference)
+  - : WebAssembly 運算子相關的說明文件，內含互動式範例。
+- [WebAssembly JavaScript 介面](/zh-TW/docs/WebAssembly/JavaScript_interface)
+  - : 該物件充當所有與 WebAssembly 相關的功能的命名空間。
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : This object acts as the namespace for all WebAssembly related functionality.
 - {{jsxref("Global_objects/WebAssembly/Global", "WebAssembly.Global()")}}

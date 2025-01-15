@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**CSS box model** 은 각 요소에 대해 [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)에 따라 생성되고 배치되는 안팎 여백을 포함한 사각형 박스를 위한 CSS 모듈입니다.
+**CSS box model** 은 각 요소에 대해 [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)에 따라 생성되고 배치되는 안팎 여백을 포함한 사각형 박스를 위한 CSS 모듈입니다.
 
 ## 박스 모델 개요
 
@@ -32,7 +32,8 @@ CSS에서 박스는 콘텐츠 영역을 포함하며, 이는 텍스트, 이미�
 
 ## 참고서
 
-> **참고:** 이 명세서는 물리적인 안쪽 여백과 바깥 여백 속성을 정의합니다. 글의 방향과 연관된 흐름과 연관된 속성은 [Logical Properties and Values](/ko/docs/Web/CSS/CSS_logical_properties_and_values)에 정의되어 있습니다.
+> [!NOTE]
+> 이 명세서는 물리적인 안쪽 여백과 바깥 여백 속성을 정의합니다. 글의 방향과 연관된 흐름과 연관된 속성은 [Logical Properties and Values](/ko/docs/Web/CSS/CSS_logical_properties_and_values)에 정의되어 있습니다.
 
 #### 박스의 바깥 여백을 제어하는 속성
 
@@ -66,11 +67,11 @@ CSS에서 박스는 콘텐츠 영역을 포함하며, 이는 텍스트, 이미�
 
 ## 안내서
 
-- [CSS 박스 모델 입문](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 박스 모델 입문](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - : CSS의 기초 개념 중 하나인 박스 모델을 설명합니다. 박스 모델은 CSS가 요소와 요소의 콘텐츠, 안쪽 여백, 테두리, 바깥 여백 영역을 배치하는 법을 정의합니다.
-- [여백 상쇄 정복](/ko/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [여백 상쇄 정복](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : 어떤 경우, 두 개의 인접한 바깥 여백은 하나로 상쇄됩니다. 이 글은 상쇄가 언제 어떻게 일어나고 이를 어떻게 제어하는지 설명합니다.
-- [시각적 서식 모델](/ko/docs/Web/Guide/CSS/Visual_formatting_model)
+- [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - : 시각적 서식 모델을 설명합니다.
 
 ## 명세

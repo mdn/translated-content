@@ -26,7 +26,7 @@ p {
 
 以上样式不会将 background 的 color 值设置为 `red`，而是 {{cssxref("background-color")}} 的默认值 `transparent`。
 
-关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 `inherit` 的普通属性（longhand property）。
+关键词 inherit 只可以应用于单独属性（individual properties），如果应用于一个简写属性（shorthand property），则必须整体应用，而能对简写属性值的每一个部分单独应用。由于单独属性的漏掉的值会被它们的初始值（initial value）替代，因此不可能允许单个属性通过省略继承的。这意味着让一个属性的值使用继承值的唯一方法就是使用值是 `inherit` 的全称属性（longhand property）。
 
 ### 属性的顺序
 
@@ -148,7 +148,7 @@ Margin 对于多个值有以下的简写规则：
 
 CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于文档里所有的属性。它的目的是改变属性的继承模型。
 
-查看[层叠与继承](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/Cascade)以了解更多关于继承的信息。
+查看[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/Cascade)以了解更多关于继承的信息。
 
 ## 参见
 
@@ -158,7 +158,7 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)

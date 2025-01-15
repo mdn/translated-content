@@ -7,7 +7,8 @@ l10n:
 
 {{JSRef}}{{Deprecated_Header}}
 
-> **警告:** オブジェクトの `[[Prototype]]` を変更することは、現行の JavaScript エンジンがプロパティアクセスを最適化する性質上、どのブラウザーや JavaScript エンジンでも現在とても遅い処理となります。さらに、継承を変更することの効果は微妙で広範囲に及び、 `obj.__proto__ = ...` 文に費やされる時間に限らず、`[[Prototype]]` が変更されたオブジェクトにアクセスする**あらゆる**コードに及ぶ可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) で説明されています。
+> [!WARNING]
+> オブジェクトの `[[Prototype]]` を変更することは、現行の JavaScript エンジンがプロパティアクセスを最適化する性質上、どのブラウザーや JavaScript エンジンでも現在とても遅い処理となります。さらに、継承を変更することの効果は微妙で広範囲に及び、 `obj.__proto__ = ...` 文に費やされる時間に限らず、`[[Prototype]]` が変更されたオブジェクトにアクセスする**あらゆる**コードに及ぶ可能性があります。詳しくは [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes) で説明されています。
 
 > **警告:** `__proto__` を使用することは議論の余地があり、推奨されません。その存在と正確な動作は、ウェブの互換性を確実に保持するための古い機能として標準化されただけであり、セキュリティ上のいくつかの課題と足かせを表示しています。対応をよりよくするためには、 {{jsxref("Object.getPrototypeOf()")}}/{{jsxref("Reflect.getPrototypeOf()")}} や {{jsxref("Object.setPrototypeOf()")}}/{{jsxref("Reflect.setPrototypeOf()")}} を推奨します。
 

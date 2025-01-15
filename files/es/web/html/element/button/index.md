@@ -370,10 +370,11 @@ Más información (en inglés):
 
 ## Referencia
 
-- El elemento [button](/es/docs/HTML/Elemento/button) en el estándar [HTML 4.01](http://html.conclase.net/w3c/html401-es/interact/forms.html#h-17.5)
+- El elemento [button](/es/docs/Web/HTML/Element/button) en el estándar [HTML 4.01](http://html.conclase.net/w3c/html401-es/interact/forms.html#h-17.5)
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga carencias y defectos. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta [MDC:Como ayudar](/es/docs/Project:Como_ayudar).

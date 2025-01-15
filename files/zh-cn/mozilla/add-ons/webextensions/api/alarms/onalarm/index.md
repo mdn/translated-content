@@ -55,4 +55,5 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.google.cn/docs/extensions/reference/api/alarms) API。

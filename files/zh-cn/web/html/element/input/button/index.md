@@ -15,7 +15,7 @@ slug: Web/HTML/Element/input/button
 
 ### 含有值的按钮
 
-`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/Input#值) 属性包含用作按钮标签的字符串。
+`<input type="button">` 的 [`value`](/zh-CN/docs/Web/HTML/Element/input#%e5%80%bc) 属性包含用作按钮标签的字符串。
 
 ```html
 <input type="button" value="点我" />
@@ -35,7 +35,7 @@ slug: Web/HTML/Element/input/button
 
 ## 使用按钮
 
-`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/Input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
+`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
 
 ### 简单的按钮
 
@@ -99,7 +99,8 @@ function updateButton() {
 }
 ```
 
-> **备注：** 当然，上述例子的问题是，用户将不知道访问键是什么！在一个真实的网站中，你必须以一种不影响网站设计的方式来提供这些信息（例如，提供一个容易访问的链接，指向关于网站访问键是什么的信息）。
+> [!NOTE]
+> 当然，上述例子的问题是，用户将不知道访问键是什么！在一个真实的网站中，你必须以一种不影响网站设计的方式来提供这些信息（例如，提供一个容易访问的链接，指向关于网站访问键是什么的信息）。
 
 ### 禁用和启用按钮
 
@@ -111,7 +112,7 @@ function updateButton() {
 
 #### 设置禁用属性
 
-你可以在运行时通过设置 `disabled` 为 `true` 或 `false` 来启用和禁用按钮。在这个例子中，我们的按钮一开始是启用的，但如果你按下它，就会用 `button.disabled = true` 将其禁用。然后，一个 {{domxref("setTimeout()")}} 函数被用来在两秒后将按钮重置为启用状态。
+你可以在运行时通过设置 `disabled` 为 `true` 或 `false` 来启用和禁用按钮。在这个例子中，我们的按钮一开始是启用的，但如果你按下它，就会用 `button.disabled = true` 将其禁用。然后，一个 {{domxref("Window.setTimeout", "setTimeout()")}} 函数被用来在两秒后将按钮重置为启用状态。
 
 ```html
 <input type="button" value="已启用" />
@@ -165,7 +166,8 @@ function disableButton() {
 
 {{EmbedLiveSample("继承禁用状态", 650, 100)}}
 
-> **备注：** Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性来控制这个特性。
+> [!NOTE]
+> Firefox 不像其他浏览器那样，它会在不同页面之间保持 {{HTMLElement("button")}} 的[动态禁用的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。请使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/button#autocomplete) 属性来控制这个特性。
 
 ## 验证
 
@@ -341,4 +343,4 @@ draw();
 
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口。
 - 更现代的 {{HTMLElement("button")}} 元素。
-- [表单控件 CSS 兼容性表格](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

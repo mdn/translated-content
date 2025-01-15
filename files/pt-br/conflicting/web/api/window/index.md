@@ -7,9 +7,9 @@ slug: conflicting/Web/API/Window
 
 ### Resumo
 
-`window.openDialog` é uma extensão para [window.open](/pt-BR/DOM/window.open). Ela se comporta da mesma maneira, exceto que pode opcionalmente usar um ou mais parâmetros passado por `windowFeatures`, e `windowFeatures` em si é tratado um pouco diferente.
+`window.openDialog` é uma extensão para [window.open](/pt-BR/docs/DOM/window.open). Ela se comporta da mesma maneira, exceto que pode opcionalmente usar um ou mais parâmetros passado por `windowFeatures`, e `windowFeatures` em si é tratado um pouco diferente.
 
-Parâmetros opcionais, se presentes, serão incluídos no JavaScript Array object e adicionados a nova janela criada como uma propriedade chamada [window.arguments](/pt-BR/DOM/window.arguments). Eles podem ser referenciados no javascript da janela a qualquer momento, incluindo durante a execução da `load` handler. Esses parâmetros podem ser usados, e depois, para passar argumentos para e da janela de diálogo.
+Parâmetros opcionais, se presentes, serão incluídos no JavaScript Array object e adicionados a nova janela criada como uma propriedade chamada [window.arguments](/pt-BR/docs/DOM/window.arguments). Eles podem ser referenciados no javascript da janela a qualquer momento, incluindo durante a execução da `load` handler. Esses parâmetros podem ser usados, e depois, para passar argumentos para e da janela de diálogo.
 
 Note que a chamada para `openDialog()` retorna imediatamente. Se você quer que a chamada seja bloqueada até o usuário fechar a janela de diálogo, forneça `modal` como um parâmetro `windowFeatures`. Note que isso significa que o usuário não poderá interagir com a janela que abriu a janela modal (modal dialog) enquanto o usuário não fechá-la.
 
@@ -24,9 +24,9 @@ newWindow = openDialog(url, name, features, arg1, arg2, ...)
 - url
   - : A URL a ser carregada na nova janela aberta.
 - name
-  - : O nome da janela (opcional). Veja a descrição de [window.open](/pt-BR/DOM/window.open) para informações detalhadas.
+  - : O nome da janela (opcional). Veja a descrição de [window.open](/pt-BR/docs/DOM/window.open) para informações detalhadas.
 - features
-  - : Consulte [window.open](/pt-BR/DOM/window.open) para descrição.
+  - : Consulte [window.open](/pt-BR/docs/DOM/window.open) para descrição.
 - arg1, arg2, ...
   - : Os argumentos podem ser passados para a nova janela (opcional).
 
@@ -40,11 +40,11 @@ var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);
 
 #### Novas funcionalidades
 
-`all` - Initially activates (or deactivates `("all=no")`) all chrome (except the behaviour flags `chrome`, `dialog` and `modal`). These can be overridden (so `"menubar=no,all"` turns on all chrome except the menubar.) This feature is explicitly ignored by [window.open](/pt-BR/DOM/window.open). `window.openDialog` finds it useful because of its different default assumptions.
+`all` - Initially activates (or deactivates `("all=no")`) all chrome (except the behaviour flags `chrome`, `dialog` and `modal`). These can be overridden (so `"menubar=no,all"` turns on all chrome except the menubar.) This feature is explicitly ignored by [window.open](/pt-BR/docs/DOM/window.open). `window.openDialog` finds it useful because of its different default assumptions.
 
 #### Comportamento padrão
 
-The `chrome` and `dialog` features are always assumed on, unless explicitly turned off ("`chrome=no`"). `openDialog` treats the absence of the features parameter as does [window.open](/pt-BR/DOM/window.open), (that is, an empty string sets all features to off) except `chrome` and `dialog`, which default to on. If the `features` parameter is a zero-length string, or contains only one or more of the behaviour features (`chrome`, `dependent`, `dialog` and `modal`) the chrome features are assumed "OS' choice." That is, window creation code is not given specific instructions, but is instead allowed to select the chrome that best fits a dialog on that operating system.
+The `chrome` and `dialog` features are always assumed on, unless explicitly turned off ("`chrome=no`"). `openDialog` treats the absence of the features parameter as does [window.open](/pt-BR/docs/DOM/window.open), (that is, an empty string sets all features to off) except `chrome` and `dialog`, which default to on. If the `features` parameter is a zero-length string, or contains only one or more of the behaviour features (`chrome`, `dependent`, `dialog` and `modal`) the chrome features are assumed "OS' choice." That is, window creation code is not given specific instructions, but is instead allowed to select the chrome that best fits a dialog on that operating system.
 
 #### Passando parâmetros extras para o diálogo
 

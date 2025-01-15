@@ -30,11 +30,11 @@ generate-id( [node-set] )
 
 - 生成された ID は、その後の変換では同じではない可能性があります
 
-この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリの一部ではありません。
+この関数は XPath への XSLT 固有の追加です。コア XPath 関数ライブラリーの一部ではありません。
 
 ### 定義
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-generate-id)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-generate-id)
 
 ### Gecko のサポート
 

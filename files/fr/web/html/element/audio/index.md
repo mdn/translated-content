@@ -5,11 +5,11 @@ slug: Web/HTML/Element/audio
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Element/Source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
+L'élément HTML **`<audio>`** est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut `src` ou l'élément [`<source>`](/fr/docs/Web/HTML/Element/source) : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un [`MediaStream`](/fr/docs/Web/API/MediaStream).
 
 {{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
 
-L'exemple qui précède illustre le fonctionnement simple d'un élément `<audio>`, à la façon de ce qui peut être fait pour une image avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) : on inclut un chemin vers la ressource grâce à l'attribut `src` et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc.
+L'exemple qui précède illustre le fonctionnement simple d'un élément `<audio>`, à la façon de ce qui peut être fait pour une image avec l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) : on inclut un chemin vers la ressource grâce à l'attribut `src` et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc.
 
 Le contenu présent à l'intérieur des balises `<audio></audio>` est affiché comme contenu alternatif lorsque le navigateur ne prend pas en charge l'élément.
 
@@ -21,7 +21,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Un attribut booléen : s'il est spécifié, l'audio commencera automatiquement la lecture dès qu'il pourra le faire, sans attendre la fin du téléchargement de l'ensemble du fichier audio.
 
-    > **Note :** Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Autoplay_guide) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
+    > [!NOTE]
+    > Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Autoplay_guide) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
 
 - **`controls`**
   - : Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.
@@ -40,7 +41,8 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir [cette proposition de spécification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
 
-    > **Note :** Dans Safari, vous pouvez utiliser [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
+    > [!NOTE]
+    > Dans Safari, vous pouvez utiliser [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
 
 - **`loop`**
   - : Un attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.
@@ -57,22 +59,22 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     La valeur par défaut peut varier d'un navigateur à l'autre. Les spécifications recommandent la valeur `metadata`.
 
-    > **Note :**
+    > [!NOTE]
     >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est spécifié, le navigateur devrait évidemment commencer à télécharger l'audio pour le lire.
     > - La spécification n'oblige pas le navigateur à suivre la valeur de cet attribut ; il s'agit d'une simple indication.
 
 - **`src`**
-  - : L'URL du fichier audio à intégrer. Cet élément est soumis aux [contrôles d'accès HTTP](/fr/docs/Web/HTTP/CORS). Cet attribut est facultatif ; vous pouvez utiliser l'élément [`<source>`](/fr/docs/Web/HTML/Element/Source) dans le bloc audio pour spécifier l'audio à intégrer.
+  - : L'URL du fichier audio à intégrer. Cet élément est soumis aux [contrôles d'accès HTTP](/fr/docs/Web/HTTP/CORS). Cet attribut est facultatif ; vous pouvez utiliser l'élément [`<source>`](/fr/docs/Web/HTML/Element/source) dans le bloc audio pour spécifier l'audio à intégrer.
 
 ## Évènements
 
 | Nom de l'évènement                                                         | Condition du déclenchement                                                                                                                                                                                                          |
 | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [audioprocess](/fr/docs/Web/Reference/Events/audioprocess)                 | La mémoire tampon en entrée d'un [`ScriptProcessorNode`](/fr/docs/Web/API/ScriptProcessorNode) peut désormais être traité.                                                                                                          |
+| [audioprocess](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event)    | La mémoire tampon en entrée d'un [`ScriptProcessorNode`](/fr/docs/Web/API/ScriptProcessorNode) peut désormais être traité.                                                                                                          |
 | [`canplay`](/fr/docs/Web/API/HTMLMediaElement/canplay_event)               | Le navigateur peut lire le média mais estime que trop peu de données ont été chargées pour lire le média jusqu'à sa fin (il faudra vraisemblablement un arrêt pour un chargement en mémoire tampon).                                |
 | [`canplaythrough`](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event) | Le navigateur estime qu'il peut lire le média jusqu'à sa fin, sans avoir à interrompre la lecture par du chargement en mémoire tampon.                                                                                              |
-| [complete](/fr/docs/Web/Reference/Events/complete)                         | Le rendu d'un [`OfflineAudioContext`](/fr/docs/Web/API/OfflineAudioContext) est terminé.                                                                                                                                            |
+| [complete](/fr/docs/Web/API/OfflineAudioContext/complete_event)            | Le rendu d'un [`OfflineAudioContext`](/fr/docs/Web/API/OfflineAudioContext) est terminé.                                                                                                                                            |
 | [`durationchange`](/fr/docs/Web/API/HTMLMediaElement/durationchange_event) | L'attribut `duration` a été mis à jour.                                                                                                                                                                                             |
 | [`emptied`](/fr/docs/Web/API/HTMLMediaElement/emptied_event)               | Le média est devenu vide. Cela peut par exemple se produire lorsque le média a déjà été (partiellement ou complètement) chargé et que la méthode [`load()`](/fr/docs/Web/API/HTMLMediaElement/load) est invoquée pour le recharger. |
 | [`ended`](/fr/docs/Web/API/HTMLMediaElement/ended_event)                   | La lecture a été interrompue car la fin du média est atteinte.                                                                                                                                                                      |
@@ -92,7 +94,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ## Notes d'utilisation
 
-Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/fr/docs/Web/Media/Formats/Containers) et [codecs audio](/fr/docs/Web/Media/Formats/Audio_codecs) ; vous pouvez fournir plusieurs sources à l'intérieur d'éléments [`<source>`](/fr/docs/Web/HTML/Element/Source) imbriqués, et le navigateur utilisera alors le premier qu'il comprend :
+Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/fr/docs/Web/Media/Formats/Containers) et [codecs audio](/fr/docs/Web/Media/Formats/Audio_codecs) ; vous pouvez fournir plusieurs sources à l'intérieur d'éléments [`<source>`](/fr/docs/Web/HTML/Element/source) imbriqués, et le navigateur utilisera alors le premier qu'il comprend :
 
 ```html
 <audio controls>
@@ -126,7 +128,7 @@ Les contrôles par défaut peuvent être mis en forme grâce à des propriétés
 
 Pour obtenir un aspect identique dans les différents navigateurs, il vous faudra créer vos propres contrôles afin de les baliser et de les mettre en forme à votre convenance puis d'utiliser JavaScript et l'API [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) pour manipuler les différentes fonctionnalités.
 
-[Le guide sur la mise en forme des lecteurs vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics) fournit quelques techniques utiles, bien qu'écrit à propos de l'élément `<video>`, certains concepts peuvent tout à fait s'appliquer aux éléments `<audio>`.
+[Le guide sur la mise en forme des lecteurs vidéo](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) fournit quelques techniques utiles, bien qu'écrit à propos de l'élément `<video>`, certains concepts peuvent tout à fait s'appliquer aux éléments `<audio>`.
 
 ### Détecter l'ajout et la suppression de pistes
 
@@ -139,7 +141,8 @@ Il est aussi possible de détecter lorsque des pistes sont ajoutées et supprim�
 - [`HTMLMediaElement.textTracks`](/fr/docs/Web/API/HTMLMediaElement/textTracks)
   - : Un écouteur `addtrack` peut être ajouté à cet objet [`TextTrackList`](/fr/docs/Web/API/TextTrackList) afin d'alerter lorsque de nouvelles pistes de texte sont ajoutées à l'élément.
 
-> **Note :** Bien qu'on parle ici d'un élément `<audio>`, il est possible qu'un tel élément possède des pistes vidéo et des pistes texte bien que la cohérence des interfaces puisse être mise à mal.
+> [!NOTE]
+> Bien qu'on parle ici d'un élément `<audio>`, il est possible qu'un tel élément possède des pistes vidéo et des pistes texte bien que la cohérence des interfaces puisse être mise à mal.
 
 Ainsi, on pourra utiliser un fragment de code analogue à celui qui suit pour détecter si de nouvelles pistes sont ajoutées ou supprimées d'un élément `<audio>` :
 
@@ -232,7 +235,7 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
 </audio>
 ```
 
-- [Sous-titrage sur le web](/fr/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions)
+- [Sous-titrage sur le web](/fr/docs/Glossary/Plugin)
 - [Web Video Text Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/) (en anglais)
 - [Comprendre les règles WCAG 1.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
@@ -351,7 +354,7 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
 
 - L'API [Web Audio](/fr/docs/Web/API/Web_Audio_API)
 - [`HTMLAudioElement`](/fr/docs/Web/API/HTMLAudioElement)
-- L'élément [`<source>`](/fr/docs/Web/HTML/Element/Source)
+- L'élément [`<source>`](/fr/docs/Web/HTML/Element/source)
 - L'élément [`<video>`](/fr/docs/Web/HTML/Element/video)
 - [Apprentissage : Contenu vidéo et audio](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Les bases de l'audio multi-navigateur](/fr/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Les bases de l'audio multi-navigateur](/fr/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

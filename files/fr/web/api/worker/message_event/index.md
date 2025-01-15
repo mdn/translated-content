@@ -7,7 +7,8 @@ slug: Web/API/Worker/message_event
 
 La propriété **`onmessage`** de l'interface {{domxref("Worker")}} représente un gestionnaire d'évènement, à savoir une fonction qui est appelée lorsque l'événement `message` survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c'est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).
 
-> **Note :** Le contenu du message est fourni par la propriété `data` de l'événement `message`.
+> [!NOTE]
+> Le contenu du message est fourni par la propriété `data` de l'événement `message`.
 
 ## Syntaxe
 
@@ -46,7 +47,7 @@ onmessage = function (e) {
 
 Remarquez comment dans le script principal, `onmessage` doit être appelée par `myWorker`, tandis que dans le script du worker vous avez juste besoin d'appeler `onmessage` parce que le worker est en réalité le contexte global ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-Pour un exemple complet, consulter notre [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([lancez le worker dédié](http://mdn.github.io/simple-web-worker/)).
+Pour un exemple complet, consulter notre [Exemple basique de worker dédié](https://github.com/mdn/simple-web-worker) ([lancez le worker dédié](https://mdn.github.io/simple-web-worker/)).
 
 ## Spécifications
 

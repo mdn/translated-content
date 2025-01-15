@@ -26,7 +26,8 @@ _继承自父接口，{{DOMxRef("HTMLElement")}}。_
 
 ### 过时的属性
 
-> **警告：** 以下属性已经过时，应当避免使用它们。
+> [!WARNING]
+> 以下属性已经过时，应当避免使用它们。
 
 - {{DOMxRef("HTMLTableElement.align")}} {{Deprecated_Inline}}
   - : Is a {{DOMxRef("DOMString")}} containing an enumerated value reflecting the [`align`](/zh-CN/docs/Web/HTML/Element/table#align) attribute. It indicates the alignment of the element's contents with respect to the surrounding context. The possible values are `"left"`, `"right"`, and `"center"`.

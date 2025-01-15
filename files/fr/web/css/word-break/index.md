@@ -37,7 +37,8 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 - `break-word`{{deprecated_inline}}
   - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap).
 
-> **Note :** Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
+> [!NOTE]
+> Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
 
 ## Définition formelle
 
@@ -127,4 +128,4 @@ La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci
 
 - [`overflow-wrap`](/fr/docs/Web/CSS/overflow-wrap)
 - [`hyphens`](/fr/docs/Web/CSS/hyphens)
-- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_Text/Wrapping_text)
+- [Guide sur le retour à la ligne et la césure dans le texte](/fr/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

@@ -1,36 +1,31 @@
 ---
-title: IDBCursor.direction
+title: "IDBCursor: direction プロパティ"
+short-title: direction
 slug: Web/API/IDBCursor/direction
 l10n:
-  sourceCommit: 96eac9a9130cdf8b95be7089c7b7fbd06ccdee45
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-{{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティ **`direction`** は、(たとえば {{domxref("IDBObjectStore.openCursor")}} で設定した) カーソルの走査の方向を表す文字列です。取りうる値は、以下の[値](#%E5%80%A4)の節を参照してください。
-
-{{AvailableInWorkers}}
+**`direction`** は {{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティで、(たとえば {{domxref("IDBObjectStore.openCursor")}} で設定した) カーソルの走査の方向を表す文字列です。取りうる値は、以下の[値](#%E5%80%A4)の節を参照してください。
 
 ## 値
 
 カーソルがデータを走査する方向を表す文字列です。以下の値を取りえます。
 
 - `next`
-  - : この方向は、カーソルを走査対象の最初で開きます。
+  - : この方向は、カーソルを走査対象の先頭で開きます。
 - `nextunique`
-  - : この方向は、カーソルを走査対象の最初で開きます。重複した値を持つキーについては、最初のレコードのみを返します。
+  - : この方向は、カーソルを走査対象の先頭で開きます。重複した値を持つキーについては、最初に訪れた（先頭に最も近い）レコードのみを返します。
 - `prev`
-  - : この方向は、カーソルを走査対象の最後で開きます。
+  - : この方向は、カーソルを走査対象の末尾で開きます。
 - `prevunique`
-  - : この方向は、カーソルを走査対象の最後で開きます。重複した値を持つキーについては、最初のレコードのみを返します。
+  - : この方向は、カーソルを走査対象の末尾で開きます。重複した値を持つキーについては、最初に訪れた（末尾に最も近い）レコードのみを返します。
 
 ## 例
 
-このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを使用してオブジェクトストア内の全レコードを走査します。それぞれの繰り返しにおいて、たとえば以下のようなカーソルの方向を記録します。
-
-```
-prev
-```
+このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを使用してオブジェクトストア内の全レコードを走査します。それぞれの繰り返しにおいて、カーソルの方向を記録します。
 
 > **メモ:** `direction` プロパティは読み取り専用なので、このプロパティを用いてカーソルが動く方向を変えることはできません。カーソルが動く方向は、{{domxref("IDBObjectStore.openCursor")}} の第 2 引数で設定します。
 
@@ -74,4 +69,4 @@ function backwards() {
 - キーの範囲の設定: {{domxref("IDBKeyRange")}}
 - データの取得と変更: {{domxref("IDBObjectStore")}}
 - カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

@@ -24,7 +24,7 @@ slug: Web/MathML/Element/mstyle
 - `scriptsizemultiplier`
   - : Определяет множитель, используемый для настройки размера шрифта в `scriptlevel`. Значение по умолчанию: 0.71.
 
-Элемент `<mstyle>` принимает [все атрибуты](/ru/docs/MathML/Attributes) всех элементов представления, за исключением:
+Элемент `<mstyle>` принимает [все атрибуты](/ru/docs/Web/MathML/Attribute) всех элементов представления, за исключением:
 
 - `height`, `depth` или `width` не применимы к {{ MathMLELement("mglyph") }}, {{ MathMLELement("mpadded") }} или {{ MathMLELement("mtable") }}.
 - `rowalign`, `columnalign` или `groupalign` не применимы {{ MathMLELement("mtr") }}, {{ MathMLELement("mlabeledtr") }}, {{ MathMLELement("mtd") }} или {{ MathMLELement("maligngroup") }}.

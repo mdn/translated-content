@@ -32,7 +32,8 @@ unescape(str)
 
 `unescape()` 函数将任何转移序列替换为它所代表的字符。具体来说，它将任何形式为 `%XX` 或 `%uXXXX`（其中 `X` 代表一个十六进制数字）的转义序列替换为十六进制值为 `XX`/`XXXX` 的字符。如果转义序列无效（例如，如果 `%` 后面跟着一个或未跟十六进制数字），则保持不变。
 
-> **备注：** 该函数主要用于 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)，其部分基于 {{rfc(1738)}} 中的转义格式。`unescape()` 函数*不会*对字符串字面量中的[转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#转义序列)进行求值。你可以将 `\xXX` 替换为 `%XX`，将 `\uXXXX` 替换为 `%uXXXX`，以获得一个可以被 `unescape()` 处理的字符串。
+> [!NOTE]
+> 该函数主要用于 [URL 编码](https://zh.wikipedia.org/wiki/百分号编码)，其部分基于 {{rfc(1738)}} 中的转义格式。`unescape()` 函数*不会*对字符串字面量中的[转义序列](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#转义序列)进行求值。你可以将 `\xXX` 替换为 `%XX`，将 `\uXXXX` 替换为 `%uXXXX`，以获得一个可以被 `unescape()` 处理的字符串。
 
 ## 示例
 

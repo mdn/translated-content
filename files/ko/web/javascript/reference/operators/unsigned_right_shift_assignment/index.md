@@ -46,5 +46,5 @@ c >>>= 2n; // 1n
 
 ## 같이 보기
 
-- [Assignment operators in the JS guide](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)
+- [Assignment operators in the JS guide](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ed%95%a0%eb%8b%b9_%ec%97%b0%ec%82%b0%ec%9e%90)
 - [Unsigned 오른쪽 시프트 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

@@ -106,7 +106,7 @@ slug: Web/HTML/Element/meta
       允许页面作者定义当前页面的[内容策略](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)。内容策略常用来指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
 
     - `content-type`
-      声明 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)和文档的字符编码。如果使用 `content-type` 属性，与之在同一个 `<meta>` 元素中使用的 [`content`](#content) 属性的值必须是 `"text/html; charset=utf-8"`。这相当于一个具有指定 `charset` 属性的 `<meta>` 元素，并对其在文档中的放置位置有相同的限制。**注意**：该属性只能用于 MIME 类型为 `text/html` 的文档，不能用于 MIME 类型为 XML 的文档。
+      声明 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)和文档的字符编码。如果使用 `content-type` 属性，与之在同一个 `<meta>` 元素中使用的 [`content`](#content) 属性的值必须是 `"text/html; charset=utf-8"`。这相当于一个具有指定 `charset` 属性的 `<meta>` 元素，并对其在文档中的放置位置有相同的限制。**注意**：该属性只能用于 MIME 类型为 `text/html` 的文档，不能用于 MIME 类型为 XML 的文档。
 
     - `default-style`
 
@@ -121,7 +121,7 @@ slug: Web/HTML/Element/meta
       - 页面重新加载的秒数——仅当 [`content`](#content) 属性包含非负整数时。
       - 页面重定向到指定链接的秒数——仅当 content 属性包含非负整数后跟字符串“`;url=`”和有效的 URL 时。
 
-      > **警告：**
+      > [!WARNING]
       >
       > 设置了 `refresh` 值的页面存在时间间隔过短的风险。借助屏幕阅读器等辅助技术进行导航的用户可能无法在自动重定向之前通读和理解页面内容。突然的、未通知的页面内容更新也可能会让视力低下的人迷失方向。
       >
@@ -155,5 +155,5 @@ slug: Web/HTML/Element/meta
 ## 参见
 
 - [标准元数据名称](/zh-CN/docs/Web/HTML/Element/meta/name)
-- [学习：`<meta>`](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [学习：`<meta>`](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#元数据：meta_元素)
 - [viewport 元标签](/zh-CN/docs/Web/HTML/Viewport_meta_tag)

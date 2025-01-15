@@ -1,8 +1,9 @@
 ---
 title: "PaymentRequest: shippingAddress プロパティ"
+short-title: shippingAddress
 slug: Web/API/PaymentRequest/shippingAddress
 l10n:
-  sourceCommit: f0cff08c44eae17b690ccf890f252a110f1374ac
+  sourceCommit: 0ee5b41dca22ac5c3cd7f2c6523f76125c2526e9
 ---
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
@@ -11,10 +12,10 @@ l10n:
 
 ## 値
 
-一般的に、ユーザーエージェントは `shippingAddress` プロパティ値を埋めます。
-これは、`PaymentRequest`コンストラクターを呼び出すときに `PaymentOptions.requestShipping` を `true` に設定することで行うことができます。
-
 ## 例
+
+一般的に、ユーザーエージェントは `shippingAddress` プロパティ値を埋めます。
+これは、`PaymentRequest`コンストラクターを呼び出すときに `options.requestShipping` を `true` に設定することで行うことができます。
 
 下記の例では、送料が地域によって異なります。{{domxref('PaymentRequest.shippingaddresschange_event','shippingaddresschange')}} が呼び出されると、`updateDetails()` が呼び出されて `PaymentRequest` の詳細を更新し、`shippingAddress` を使用して正しい送料を設定します。
 

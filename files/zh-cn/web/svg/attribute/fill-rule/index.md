@@ -7,7 +7,8 @@ slug: Web/SVG/Attribute/fill-rule
 
 **`fill-rule`** 是一个表现属性，它定义了用来确定一个多边形内部区域的算法。
 
-> **备注：** 作为一个表现属性，fill-rule 可以被用于 CSS。
+> [!NOTE]
+> 作为一个表现属性，fill-rule 可以被用于 CSS。
 
 作为一个表现属性，它可以被应用于任何元素，但只会在以下元素中有效：
 
@@ -52,14 +53,14 @@ svg {
 
 {{EmbedLiveSample('示例', '100%', 200)}}
 
-## 用法
+## 使用说明
 
-| 类别     | 外观属性                                                                         |
-| -------- | -------------------------------------------------------------------------------- |
-| 值       | nonzero \| evenodd                                                               |
-| 默认值   | nonzero                                                                          |
-| 可变性   | Yes                                                                              |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillRuleProperty) |
+| 类别     | 外观属性                                                                          |
+| -------- | --------------------------------------------------------------------------------- |
+| 值       | nonzero \| evenodd                                                                |
+| 默认值   | nonzero                                                                           |
+| 可变性   | Yes                                                                               |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillRuleProperty) |
 
 `fill-rule` 属性为如何确定一个形状的内部（即可以被填充的区域）提供了两个可选值：
 

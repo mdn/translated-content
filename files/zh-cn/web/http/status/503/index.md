@@ -21,10 +21,6 @@ slug: Web/HTTP/Status/503
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Retry-After")}}

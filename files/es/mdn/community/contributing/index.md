@@ -7,13 +7,14 @@ slug: MDN/Community/Contributing
 
 ¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar.
 
-> **Nota:** Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Contribute/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
+> [!NOTE]
+> Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Community/Contributing/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
 
 ## ¿Que puedo hacer para ayudar?
 
 Hay varias opciones que puedes tomar para contribuir a MDN según tus habilidades e intereses. Junto con cada tarea proporcionamos una breve descripción y el tiempo aproximado que normalmente toma cada tipo de tarea.
 
-Si no estás seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+Si no estás seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
 
 ### Tipos de contribución primaria
 
@@ -135,22 +136,23 @@ Si nuestras principales prioridades enumeradas anteriormente no te interesan, pu
 
 Si estás más interesado en las palabras, puedes hacer lo siguiente:
 
-- [Actualizar un artículo existente con nueva información](/es/docs/MDN/Contribute/Howto/Create_and_edit_pages#editing_an_existing_page) (5 minutos-1 hora)
-- [Escribe una nueva entrada en el Glosario](/es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) (15 minutos-1 hora)
+- [Actualizar un artículo existente con nueva información](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#editing_an_existing_page) (5 minutos-1 hora)
+- [Escribe una nueva entrada en el Glosario](/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary) (15 minutos-1 hora)
 
 Si estás más interesado en el código, puedes probar lo siguiente:
 
-- [Convierte ejemplos de código para que estén "en vivo"](/es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live) (30 minutos)
+- [Convierte ejemplos de código para que estén "en vivo"](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples) (30 minutos)
 - [Envía un parche al código base de Yari](https://github.com/mdn/yari) (1 hora)
 - [Escribe un ejemplo interactivo](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md) (1 hora)
 
 Si estás interesado en las palabras _y_ el código, puede intentar lo siguiente:
 
-- [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos a 2 horas, o más)
+- [Escribir o actualizar una referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference) (30 minutos a 2 horas, o más)
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
-- [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
+- [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Writing_guidelines/Page_structures) (30 minutos a 1 hora)
 
-> **Nota:** Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puedes reportarlo a través de un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigna Un título descriptivo al problema. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
+> [!NOTE]
+> Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puedes reportarlo a través de un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigna Un título descriptivo al problema. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
 
 ## Otras páginas útiles
 

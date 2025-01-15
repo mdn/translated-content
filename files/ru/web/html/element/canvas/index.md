@@ -9,16 +9,16 @@ slug: Web/HTML/Element/canvas
 
 Больше статей о canvas [canvas topic page](/ru/docs/Web/API/Canvas_API).
 
-| [Content categories](/ru/docs/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), [embedded content](/ru/docs/HTML/Content_categories#Embedded_content), palpable content.                                                                                                            |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                      | Transparent но без [interactive content](/ru/docs/HTML/Content_categories#Interactive_content) descendants except(соглашаться?) для {{HTMLElement("a")}} элементы, {{HTMLElement("button")}} элементы, {{HTMLElement("input")}} элементы как [`type`](/ru/docs/Web/HTML/Element/input#type) атрибут is `checkbox`, `radio`, или `button`. |
-| Tag omission                                           | {{no_tag_omission}}                                                                                                                                                                                                                                                                                                                       |
-| Permitted parent elements                              | Any element that accepts [phrasing_content](/ru/docs/HTML/Content_categories#Phrasing_content).                                                                                                                                                                                                                                           |
-| DOM interface                                          | {{domxref("HTMLCanvasElement")}}                                                                                                                                                                                                                                                                                                          |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), [embedded content](/ru/docs/Web/HTML/Content_categories#embedded_content), palpable content.                                                                                                    |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                          | Transparent но без [interactive content](/ru/docs/Web/HTML/Content_categories#interactive_content) descendants except(соглашаться?) для {{HTMLElement("a")}} элементы, {{HTMLElement("button")}} элементы, {{HTMLElement("input")}} элементы как [`type`](/ru/docs/Web/HTML/Element/input#type) атрибут is `checkbox`, `radio`, или `button`. |
+| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                                              |
+| Permitted parent elements                                  | Any element that accepts [phrasing_content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                           |
+| DOM interface                                              | {{domxref("HTMLCanvasElement")}}                                                                                                                                                                                                                                                                                                              |
 
 ## Атрибуты
 
-Этот элемент включает [global attributes](/ru/docs/HTML/Global_attributes).
+Этот элемент включает [global attributes](/ru/docs/Web/HTML/Global_attributes).
 
 - `height`
   - : Высота в координатном пространстве в CSS пикселях. По умолчанию 150.
@@ -64,5 +64,5 @@ slug: Web/HTML/Element/canvas
 - [MDN canvas portal](/ru/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas-related demos](/ru/docs/Web/Demos_of_open_web_technologies)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

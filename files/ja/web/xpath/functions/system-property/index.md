@@ -24,13 +24,13 @@ system-property(name)
 
 ### 注
 
-- xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサの場合、これは 1.0 です
+- xsl:version: プロセッサーによって実装された XSLT のバージョンを示す数字。このドキュメントで指定されているバージョンの XSLT を実装している XSLT プロセッサーの場合、これは 1.0 です
 - xsl:vendor: XSLT プロセッサーのベンダーを識別する文字列
 - xsl:vendor-url: XSLT プロセッサーのベンダーを識別する URL を含む文字列。通常これはベンダーのウェブサイトのホストページ (ホームページ) です
 
 ### 定義
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-system-property)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-system-property)
 
 ### Gecko での対応
 

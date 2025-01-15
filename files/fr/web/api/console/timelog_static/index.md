@@ -1,6 +1,6 @@
 ---
 title: "console : méthode statique timeLog()"
-slug: Web/API/console/timelog_static
+slug: Web/API/console/timeLog_static
 l10n:
   sourceCommit: 022399901bdc60df947ee15e11a49be029e290d0
 ---
@@ -105,4 +105,4 @@ On notera que le nom du chronomètre est affiché avec la durée lors de l'appel
 ## Voir aussi
 
 - [`console.time()`](/fr/docs/Web/API/console/time_static)
-- [`console.timeEnd()`](/fr/docs/Web/API/console/timeend_static)
+- [`console.timeEnd()`](/fr/docs/Web/API/console/timeEnd_static)

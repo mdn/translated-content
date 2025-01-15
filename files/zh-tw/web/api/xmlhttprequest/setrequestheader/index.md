@@ -17,7 +17,8 @@ l10n:
 
 此外，可以在請求中添加 [`Authorization`](/zh-TW/docs/Web/HTTP/Headers/Authorization) HTTP 標頭，但如果請求被跨域重定向，這個標頭將會被移除。
 
-> **備註：** 對於你的自訂字段，跨域發送請求時可能會遇到「**not allowed by Access-Control-Allow-Headers in preflight response**」的例外狀況。在這種情況下，你需要在伺服器端的回應標頭中設定 {{HTTPHeader("Access-Control-Allow-Headers")}}。
+> [!NOTE]
+> 對於你的自訂字段，跨域發送請求時可能會遇到「**not allowed by Access-Control-Allow-Headers in preflight response**」的例外狀況。在這種情況下，你需要在伺服器端的回應標頭中設定 {{HTTPHeader("Access-Control-Allow-Headers")}}。
 
 ## 語法
 

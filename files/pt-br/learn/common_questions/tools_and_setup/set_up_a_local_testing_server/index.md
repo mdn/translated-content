@@ -41,7 +41,7 @@ Se o caminho do endereço web começa com `file://` seguido pelo caminho para o 
 
 Alguns exemplos não serão executados se você os abrir como arquivos locais. Isto pode ser devido a uma série de razões, sendo o mais provável:
 
-- **Eles apresentam requisições assíncronas**. Alguns navegadores (incluindo o Chrome) não executarão requisições assíncronas (consulte [Buscando dados no servidor](/pt-BR/docs/Aprender/JavaScript/Client-side_web_APIs/Buscando_dados)) se você simplesmente executar o exemplo de um arquivo local. Isso ocorre devido a restrições de segurança (para mais informações sobre segurança na web, leia [Segurança do site](/pt-BR/docs/Learn/Server-side/First_steps/Seguranca_site)).
+- **Eles apresentam requisições assíncronas**. Alguns navegadores (incluindo o Chrome) não executarão requisições assíncronas (consulte [Buscando dados no servidor](/pt-BR/docs/Aprender/JavaScript/Client-side_web_APIs/Buscando_dados)) se você simplesmente executar o exemplo de um arquivo local. Isso ocorre devido a restrições de segurança (para mais informações sobre segurança na web, leia [Segurança do site](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
 - **Eles apresentam uma linguagem do site do servidor**. Linguagens do lado do servidor (como PHP ou Python) requerem um servidor especial para interpretar o código e entregar os resultados.
 
 ## Executando um servidor HTTP local simples
@@ -86,13 +86,14 @@ Para fazer isso:
 
 5. Por padrão, isso executará o conteúdo do diretório em um servidor web local, na porta 8000. Você pode ir para esse servidor acessando a URL `localhost:8000` no seu navegador web. Aqui você verá o conteúdo do diretório listado — clique no arquivo HTML que você deseja executar.
 
-> **Nota:** Se você já tiver algo em execução na porta 8000, você poderá escolher outra porta executando o comando do servidor seguido por um número de porta alternativo, por exemplo `python3 -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Você pode acessar seu conteúdo em `localhost:7800`.
+> [!NOTE]
+> Se você já tiver algo em execução na porta 8000, você poderá escolher outra porta executando o comando do servidor seguido por um número de porta alternativo, por exemplo `python3 -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Você pode acessar seu conteúdo em `localhost:7800`.
 
 ## Executando linguagens do lado do servidor localmente
 
 Os módulos `SimpleHTTPServer (python 2.0)` e `http.server (python 3.0)` do Python são úteis, mas não sabem como executar código escrito em linguagens como Python, PHP ou JavaScript. Para lidar com isso, você precisará de algo mais — exatamente o que você precisa depende da linguagem do lado do servidor que você está tentando executar. Aqui estão alguns exemplos:
 
-- Para executar o código Python no lado do servidor, você precisará usar um framework web em Python. Você pode descobrir como usar o framework Django lendo [Django Web Framework (Python)](/pt-BR/docs/Learn/Server-side/Django). O [Flask](http://flask.pocoo.org/) (em inglês) também é uma boa alternativa ao Django (um pouco menos pesada). Para executar isso, você precisará [instalar o Python/PIP](/pt-BR/docs/Learn/Server-side/Django/development_environment#Installing_Python_3) e em seguida, instalar o Flask usando `pip3 install flask`. Neste ponto, você deve ser capaz de executar os exemplos em Python com Flask usando, por exemplo `python3 python-example.py` e em seguida acessar `localhost:5000` no seu navegador.
+- Para executar o código Python no lado do servidor, você precisará usar um framework web em Python. Você pode descobrir como usar o framework Django lendo [Django Web Framework (Python)](/pt-BR/docs/Learn/Server-side/Django). O [Flask](http://flask.pocoo.org/) (em inglês) também é uma boa alternativa ao Django (um pouco menos pesada). Para executar isso, você precisará [instalar o Python/PIP](/pt-BR/docs/Learn/Server-side/Django/development_environment#installing_python_3) e em seguida, instalar o Flask usando `pip3 install flask`. Neste ponto, você deve ser capaz de executar os exemplos em Python com Flask usando, por exemplo `python3 python-example.py` e em seguida acessar `localhost:5000` no seu navegador.
 - Para executar o código Node.js (JavaScript) no lado do servidor, você precisará usar o nó bruto ou uma estrutura construída sobre ele. Express é uma boa escolha — veja [Express Web Framework (Node.js/JavaScript)](/pt-BR/docs/Learn/Server-side/Express_Nodejs).
 - Para executar o código PHP no lado do servidor, inicie o [servidor de desenvolvimento interno do PHP](https://www.php.net/manual/pt_BR/features.commandline.webserver.php):
 

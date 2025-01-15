@@ -24,9 +24,11 @@ Web Storage의 두 가지 방식은 다음과 같습니다.
 
 위의 방식은 {{domxref("Window.sessionStorage")}}와 {{domxref("Window.localStorage")}} 속성을 통해 사용할 수 있습니다. (보다 정확히 말하자면, 지원하는 브라우저에서는 `Window` 객체는 `localStorage` 및 `sessionStorage` 속성을 포함한 `WindowLocalStorage`와 `WindowSessionStorage` 객체를 구현합니다) 두 속성 중 하나에 접근하면 {{domxref("Storage")}} 객체의 인스턴스를 생성하게 되고, 그걸 사용해 데이터 항목을 추가, 회수, 제거할 수 있습니다. `sessionStorage`와 `localStorage`의 `Storage` 객체는 각각의 출처별로 다른 것을 사용하며 서로 독립적으로 기능합니다.
 
-> **참고:** Firefox 45 이후로는, 과도한 Web Storage 사용으로 인한 메모리 문제를 피하기 위해 브라우저가 충돌하거나 재시작할 때의 출처 당 저장 공간이 10MB로 제한됩니다.
+> [!NOTE]
+> Firefox 45 이후로는, 과도한 Web Storage 사용으로 인한 메모리 문제를 피하기 위해 브라우저가 충돌하거나 재시작할 때의 출처 당 저장 공간이 10MB로 제한됩니다.
 
-> **참고:** 사용자가 [서드 파티 쿠키를 비활성화](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)한 경우 서드 파티 IFrame에서 Web Storage에 접근할 수 없습니다. Firefox는 43부터 이 동작을 사용합니다.
+> [!NOTE]
+> 사용자가 [서드 파티 쿠키를 비활성화](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)한 경우 서드 파티 IFrame에서 Web Storage에 접근할 수 없습니다. Firefox는 43부터 이 동작을 사용합니다.
 
 ## Web Storage 인터페이스
 
@@ -62,4 +64,4 @@ Web Storage API에 의존하는 웹 사이트를 개발할 때, 개발자는 이
 ## 같이 보기
 
 - [Web Storage API 사용하기](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [브라우저 저장 공간 제한과 정리 기준](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)
+- [브라우저 저장 공간 제한과 정리 기준](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)

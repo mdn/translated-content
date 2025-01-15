@@ -28,10 +28,10 @@ _固有のメソッドはありません。親である {{domxref("HTMLElement")
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
-## ブラウザーの互換性
+## 関連情報
 
-- HTML element implementing this interface: {{ HTMLElement("map") }}.
+- このインターフェイスを実装している HTML 要素: {{ HTMLElement("map") }}

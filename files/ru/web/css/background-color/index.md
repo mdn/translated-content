@@ -89,7 +89,7 @@ background-color: unset;
 
 {{EmbedLiveSample("Примеры","200","150")}}
 
-## Проблемы доступности
+## Доступность
 
 Важно обеспечить достаточный цветовой контраст между цветом текста и фоном, чтобы люди со слабым зрением могли его прочитать, но при этом должна быть достаточная разница между введённым текстом и текстом placeholder, чтобы пользователь не путал их.
 
@@ -111,7 +111,7 @@ background-color: unset;
 
 ## Смотрите также
 
-- [Множественные фоны](/ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны)
+- [Множественные фоны](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - Тип данных {{cssxref("&lt;color&gt;")}}
 - Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, и {{cssxref("column-rule-color")}}
-- [Применение цвета к HTML элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)
+- [Применение цвета к HTML элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)

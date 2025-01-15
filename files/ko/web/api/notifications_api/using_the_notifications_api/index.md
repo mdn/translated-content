@@ -147,7 +147,8 @@ Firefox와 Safari는 알림을 자동으로 금방(약 4초) 닫습니다. 이�
 setTimeout(notification.close.bind(notification), 4000);
 ```
 
-> **참고:** "close" 이벤트를 받았을 때 알림을 닫은 것이 사용자인지는 보장할 수 없습니다. 이것은 규격과도 일치합니다. 규격에서는 "알림이 닫힐 때 그것이 기반 알림 플랫폼에 의한 것이든지 사용자에 의한 것이든지 닫기 절차가 실행돼야 한다."고 기술하고 있습니다.
+> [!NOTE]
+> "close" 이벤트를 받았을 때 알림을 닫은 것이 사용자인지는 보장할 수 없습니다. 이것은 규격과도 일치합니다. 규격에서는 "알림이 닫힐 때 그것이 기반 알림 플랫폼에 의한 것이든지 사용자에 의한 것이든지 닫기 절차가 실행돼야 한다."고 기술하고 있습니다.
 
 ## 알림 이벤트
 
@@ -257,5 +258,5 @@ window.addEventListener("load", function () {
 
 ## 참고
 
-- [사용자 알림 편람](/ko/Apps/Build/User_notifications)
+- [사용자 알림 편람](/ko/docs/Apps/Build/User_notifications)
 - {{ domxref("Notification") }}

@@ -30,7 +30,8 @@ polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 
 `polygon()` 的参数用逗号和可选的空格分隔。第一个参数是一个可选的 [`<fill-rule>`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 值。其他参数是定义多边形的点。每个点是一对 x/y 坐标 {{cssxref("length-percentage")}} 值，用空格分隔，例如左/上角和右下角的“0 0”和“100% 100%”。
 
-> **备注：** SVG [`<polygon>`](/zh-CN/docs/Web/SVG/Element/polygon) 元素有单独的属性用于 [`fill-rule`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 和 [`points`](/zh-CN/docs/Web/SVG/Attribute/points)，而 `points` 在使用空格和逗号分隔时是灵活的。CSS `polygon()` 规则对分隔符严格执行。
+> [!NOTE]
+> SVG [`<polygon>`](/zh-CN/docs/Web/SVG/Element/polygon) 元素有单独的属性用于 [`fill-rule`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) 和 [`points`](/zh-CN/docs/Web/SVG/Attribute/points)，而 `points` 在使用空格和逗号分隔时是灵活的。CSS `polygon()` 规则对分隔符严格执行。
 
 ### 参数
 

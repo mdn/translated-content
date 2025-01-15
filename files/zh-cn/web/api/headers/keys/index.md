@@ -7,12 +7,13 @@ slug: Web/API/Headers/keys
 
 **`Headers.keys()`** 方法返回一个 headers(Object) 对象所有 key 组成的迭代器，通过迭代器可以遍历 headers 这个对象，返回的迭代器中的元素 key 都是字符串。
 
-> **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 也可以使用。
+> [!NOTE]
+> 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 也可以使用。
 
 ## 语法
 
-```
-headers.keys();
+```js-nolint
+keys()
 ```
 
 ### 返回值
@@ -35,7 +36,7 @@ for (var key of myHeaders.keys()) {
 
 控制台打印结果：
 
-```
+```plain
 content-type
 vary
 ```

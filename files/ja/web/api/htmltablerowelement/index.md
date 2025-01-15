@@ -33,7 +33,8 @@ _親である {{domxref("HTMLElement")}} から継承したメソッドがあり
 
 ## 非推奨のプロパティ
 
-> **警告:** これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
+> [!WARNING]
+> これらのプロパティは{{Glossary("deprecated", "非推奨")}}になっており、もう使用するべきではありません。これらは主に古いコードベースを理解しやすくすることを目的に文書化されています。
 
 - {{domxref("HTMLTableRowElement.align")}} {{deprecated_inline}}
   - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/tr#align) 属性を反映した列挙値です。これは、周囲のコンテキストに対する要素の内容の整列を示す。指定できる値は `"left"`, `"right"`, `"center"` です。

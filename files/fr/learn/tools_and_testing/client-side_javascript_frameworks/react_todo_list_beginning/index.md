@@ -9,7 +9,8 @@ l10n:
 
 Disons que nous avons pour mission de créer une preuve de concept en React&nbsp;: une application qui permette d'ajouter, de modifier et de supprimer des tâches sur lesquelles on veut travailler, et de les marquer comme terminées sans les supprimer. Dans cet article, nous verrons comment mettre en place la structure de base et la mise en forme du composant `App` initial et qui servira de socle pour définir d'autres composants et implémenter l'interactivité par la suite.
 
-> **Note :** Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée du code de cette application React d'exemple dans notre dépôt [`todo-react`](https://github.com/mdn/todo-react). Pour voir l'application fonctionner en direct, consultez <https://mdn.github.io/todo-react-build/>.
+> [!NOTE]
+> Si vous avez besoin de vérifier votre code par rapport à notre version, vous pouvez trouver une version terminée du code de cette application React d'exemple dans notre dépôt [`todo-react`](https://github.com/mdn/todo-react). Pour voir l'application fonctionner en direct, consultez <https://mdn.github.io/todo-react-build/>.
 
 <table>
   <tbody>
@@ -66,9 +67,11 @@ rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
 cd ..
 ```
 
-> **Note :** Deux des fichiers que nous avons supprimés sont destinés à tester l'application. Nous ne ferons pas de tests ici.
+> [!NOTE]
+> Deux des fichiers que nous avons supprimés sont destinés à tester l'application. Nous ne ferons pas de tests ici.
 
-> **Note :** Si vous avez arrêté votre serveur d'application afin d'effectuer les actions précédentes dans votre terminal, vous devrez redémarrer le serveur en utilisant `npm start`.
+> [!NOTE]
+> Si vous avez arrêté votre serveur d'application afin d'effectuer les actions précédentes dans votre terminal, vous devrez redémarrer le serveur en utilisant `npm start`.
 
 ## Code de démarrage pour notre projet
 
@@ -191,7 +194,7 @@ Après avoir rafraîchi la page dans votre navigateur, vous pourrez voir quelque
 
 C'est plutôt laid et cela ne fonctionne pas encore, mais ce n'est pas grave&nbsp;: nous allons ajouter la mise en forme dans un instant. Tout d'abord, revoyons le JSX utilisé plus tôt et comment il correspond à nos scénarios d'utilisation&nbsp;:
 
-- Nous avons un élément [`<form>`](/fr/docs/Web/HTML/Element/Form), avec un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui permet d'écrire une nouvelle tâche, ainsi qu'un bouton pour soumettre le formulaire.
+- Nous avons un élément [`<form>`](/fr/docs/Web/HTML/Element/form), avec un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui permet d'écrire une nouvelle tâche, ainsi qu'un bouton pour soumettre le formulaire.
 - Nous avons une série de boutons qui seront utilisés pour filtrer nos tâches.
 - Nous avons également un titre qui nous indique le nombre de tâches restantes.
 - Nos trois tâches sont présentées sous forme de liste non-ordonnée. Chaque tâche est un élément de liste ([`<li>`](/fr/docs/Web/HTML/Element/li)), et dispose de boutons pour la modifier et la supprimer, ainsi qu'une case à cocher pour la marquer comme terminée.
@@ -242,9 +245,11 @@ L'attribut `defaultChecked` dans la balise `<input/ >` indique à React de coche
 
 L'attribut `htmlFor` correspond à l'attribut `for` utilisé en HTML. Il n'est pas possible d'utiliser `for` comme attribut en JSX, car `for` est un mot réservé en JavaScript, React utilise donc `htmlFor` à la place.
 
-> **Note :** Pour utiliser des valeurs booléennes (`true` and `false`) dans les attributs JSX, vous devez les mettre entre accolades. Si vous écrivez `defaultChecked="true"`, la valeur de `defaultChecked` sera `"true"`&nbsp;: une chaine de caractère. Souvenez-vous, ce qui est écrit en JSX est interprété comme du JavaScript, pas comme du HTML&nbsp;!
+> [!NOTE]
+> Pour utiliser des valeurs booléennes (`true` and `false`) dans les attributs JSX, vous devez les mettre entre accolades. Si vous écrivez `defaultChecked="true"`, la valeur de `defaultChecked` sera `"true"`&nbsp;: une chaine de caractère. Souvenez-vous, ce qui est écrit en JSX est interprété comme du JavaScript, pas comme du HTML&nbsp;!
 
-> **Note :** L'attribut `aria-pressed` utilisé dans notre exemple de code précédent vaut `"true"` parce que `aria-pressed` n'est pas un véritable attribut booléen comme `checked`.
+> [!NOTE]
+> L'attribut `aria-pressed` utilisé dans notre exemple de code précédent vaut `"true"` parce que `aria-pressed` n'est pas un véritable attribut booléen comme `checked`.
 
 ### Implémenter la mise en forme
 

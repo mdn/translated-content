@@ -282,9 +282,9 @@ console.table(nonEnglishText.match(regexpBMPWord));
 
 ## Смотрите также
 
-- [Руководство по Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions)
-  - [Assertions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [Руководство по Regular expressions](/ru/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Assertions](/ru/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Quantifiers](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers)
-  - [Unicode property escapes](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and ranges](/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Unicode property escapes](/ru/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [Groups and ranges](/ru/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 - [Конструктор `RegExp()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

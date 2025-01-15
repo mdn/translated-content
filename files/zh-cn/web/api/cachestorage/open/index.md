@@ -9,7 +9,8 @@ slug: Web/API/CacheStorage/open
 
 你可以通过窗口的 {{domxref("Window.caches")}} 属性或 worker 的 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `CacheStorage`。
 
-> **备注：** 如果指定的 {{domxref("Cache")}} 不存在，则使用该 `cacheName` 创建一个新的缓存，并返回一个兑现为这个新的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}}。
+> [!NOTE]
+> 如果指定的 {{domxref("Cache")}} 不存在，则使用该 `cacheName` 创建一个新的缓存，并返回一个兑现为这个新的 {{domxref("Cache")}} 对象的 {{jsxref("Promise")}}。
 
 ## 语法
 
@@ -62,6 +63,6 @@ self.addEventListener("install", (event) => {
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} 和 {{domxref("WorkerGlobalScope.caches")}}

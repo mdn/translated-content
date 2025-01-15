@@ -16,7 +16,7 @@ slug: Web/API/AudioNode
 
 {{InheritanceDiagram}}
 
-> **참고:**
+> [!NOTE]
 >
 > `AudioNode` 는 이벤트의 대상이 될 수 있으므로, `AudioNode`는 {{domxref("EventTarget")}} 인터페이스를 구현합니다.
 

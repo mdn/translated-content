@@ -26,15 +26,16 @@ Avec une API fonctionnant avec des promesses, la fonction asynchrone démarre l'
 
 ## Utiliser l'API `fetch()`
 
-> **Note :** Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
+> [!NOTE]
+> Dans cet article, nous étudierons les promesses en copiant des fragments de code dans la console JavaScript du navigateur. Pour ceci&nbsp;:
 >
 > 1. Ouvrez un nouvel onglet dans votre navigateur et allez sur la page <https://example.org>.
-> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools).
+> 2. Dans cet onglet, ouvrez la console JavaScript [des outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 > 3. Lorsqu'un exemple est présent dans cet article, copiez le contenu dans la console. Vous devrez recharger la page à chaque exemple pour éviter que la console affiche une erreur sur la redéclaration de `fetchPromise()`.
 
 Dans cet exemple, nous téléchargerons le fichier JSON situé à l'adresse <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, et nous afficherons des informations à son sujet.
 
-Pour cela, nous allons envoyer une **requête HTTP** au serveur. Lors d'une requête HTTP, on envoie un message à un serveur distant qui nous renvoie une réponse en retour. Ici, nous enverrons une requête pour obtenir le fichier JSON du serveur. Vous vous souvenez des requêtes HTTP utilisant l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) dans l'article précédent&nbsp;? Ici, nous utiliserons à la place l'API [`fetch()`](/fr/docs/Web/API/fetch), qui est un remplacement moderne de `XMLHttpRequest` et qui utilise les promesses.
+Pour cela, nous allons envoyer une **requête HTTP** au serveur. Lors d'une requête HTTP, on envoie un message à un serveur distant qui nous renvoie une réponse en retour. Ici, nous enverrons une requête pour obtenir le fichier JSON du serveur. Vous vous souvenez des requêtes HTTP utilisant l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) dans l'article précédent&nbsp;? Ici, nous utiliserons à la place l'API [`fetch()`](/fr/docs/Web/API/Window/fetch), qui est un remplacement moderne de `XMLHttpRequest` et qui utilise les promesses.
 
 Copiez ce qui suit dans la console JavaScript de votre navigateur&nbsp;:
 
@@ -390,7 +391,7 @@ Les promesses fonctionnent pour tous les navigateurs récents. Les seuls environ
 
 Nous n'avons pas couvert toutes les fonctionnalités des promesses dans cet article, nous avons seulement vu les aspects les plus utiles et les plus intéressants. Lorsque vous commencerez à en savoir plus sur les promesses, vous rencontrerez d'autres fonctionnalités et d'autres techniques.
 
-De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/Web/API/WebRTC_API), [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API), [l'API de flux média (<i lang="en">Media Streams API</i>)](/fr/docs/Web/API/Media_Streams_API), et bien d'autres.
+De nombreuses API web modernes utilisent les promesses, comme [WebRTC](/fr/docs/Web/API/WebRTC_API), [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API), [l'API de flux média (<i lang="en">Media Streams API</i>)](/fr/docs/Web/API/Media_Capture_and_Streams_API), et bien d'autres.
 
 ## Voir aussi
 

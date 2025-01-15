@@ -39,7 +39,8 @@ El método `findIndex()` ejecuta la función de _`callback`_ una vez por cada í
 
 Si dicho elemento es encontrado, `findIndex()` inmediatamente devuelve el índice del elemento. Si la función _`callback`_ nunca devuelve un valor verdadero (o el tamaño del array es 0), `findIndex` devuelve `-1`.
 
-> **Nota:** A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
+> [!NOTE]
+> A diferencia de otros métodos de arrays como {{jsxref("Array.some()")}}, `callback` se ejecuta incluso en índices sin valores asignados.
 
 _`callback`_ se invoca con tres argumentos:
 
@@ -51,7 +52,7 @@ Si el parámetro `thisArg` es provisto a findIndex, entonces será usado como el
 
 El rango de elementos procesados por `findIndex()` se establece antes de la primera invocación de la función _`callback`_. Los elementos añadidos al array después de que la llamada a `findIndex()` comience no serán visitados por el `callback`. Si un elemento existente que no ha sido visitado en el array es modificado por el _`callback`_, el valor pasado al _`callback`_ que lo visite será el valor en el momento en que `findIndex()` visite el índice del elemento.
 
-Los elementos [eliminados](/es/docs/Web/JavaScript/Referencia/Operadores/delete) aún son visitados.
+Los elementos [eliminados](/es/docs/Web/JavaScript/Reference/Operators/delete) aún son visitados.
 
 ## Ejemplos
 
@@ -140,7 +141,7 @@ if (!Array.prototype.findIndex) {
 }
 ```
 
-Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty) es mejor no emplear polyfills para métodos `Array.prototype`, ya que no puede hacerlos no-enumerables.
+Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) es mejor no emplear polyfills para métodos `Array.prototype`, ya que no puede hacerlos no-enumerables.
 
 ## Especificaciones
 

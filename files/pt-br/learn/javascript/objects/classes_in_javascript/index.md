@@ -39,7 +39,7 @@ Vamos explorar como fazer isso com um exemplo concreto.
 
 ## Começando
 
-Primeiro de tudo, faça uma cópia local do arquivo [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) (veja também [ao vivo](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)). Aqui dentro você encontrará o mesmo exemplo de construtor `Person()` que utilizamos durante todo o módulo, com uma pequena diferença — definimos apenas as propriedades dentro do construtor:
+Primeiro de tudo, faça uma cópia local do arquivo [oojs-class-inheritance-start.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-start.html) (veja também [ao vivo](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-start.html)). Aqui dentro você encontrará o mesmo exemplo de construtor `Person()` que utilizamos durante todo o módulo, com uma pequena diferença — definimos apenas as propriedades dentro do construtor:
 
 ```js
 function Person(first, last, age, gender, interests) {
@@ -61,7 +61,8 @@ Person.prototype.greeting = function () {
 };
 ```
 
-> **Nota:** No código fonte, você também verá os métodos `bio()` e `farewell()` definidos. Depois você verá como eles podem ser herdados por outros construtores.
+> [!NOTE]
+> No código fonte, você também verá os métodos `bio()` e `farewell()` definidos. Depois você verá como eles podem ser herdados por outros construtores.
 
 Digamos que quiséssemos criar uma classe `Teacher`, como a que descrevemos em nossa definição inicial orientada a objetos, que herda todos os membros de `Person`, mas também inclui:
 
@@ -222,19 +223,21 @@ teacher1.farewell();
 
 Tudo isso deve funcionar bem. As consultas nas linhas 1, 2, 3 e 6 acessam membros herdados do construtor genérico `Person()` (class). A consulta na linha 4 acessa um membro que está disponível somente no construtor mais especializado `Teacher()` (class). A consulta na linha 5 teria acessado um membro herdado de `Person()`, exceto pelo fato de que `Teacher()` tem seu próprio membro com o mesmo nome, portanto, a consulta acessa esse membro.
 
-> **Nota:** If you have trouble getting this to work, compare your code to our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (see it [running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) also).
+> [!NOTE]
+> If you have trouble getting this to work, compare your code to our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) also).
 
 A técnica que abordamos aqui não é a única maneira de criar classes herdadas em JavaScript, mas funciona bem e dá uma boa idéia sobre como implementar a herança em JavaScript.
 
 Você também pode estar interessado em conferir alguns dos novos recursos {{glossary("ECMAScript")}} que nos permitem fazer herança mais claramente em JavaScript (veja [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)). Nós não cobrimos esses aqui, pois eles ainda não são suportados amplamente pelos navegadores. Todas as outras construções de código que discutimos neste conjunto de artigos são suportadas desde o IE9 ou anterior, e existem maneiras de obter suporte anterior a isso.
 
-Uma maneira comum é usar uma biblioteca JavaScript — a maioria das opções populares tem um conjunto fácil de funcionalidade disponível para fazer herança com mais facilidade e rapidez. [CoffeeScript](http://coffeescript.org/#classes) por exemplo, fornece `class`, `extends`, etc.
+Uma maneira comum é usar uma biblioteca JavaScript — a maioria das opções populares tem um conjunto fácil de funcionalidade disponível para fazer herança com mais facilidade e rapidez. [CoffeeScript](https://coffeescript.org/#classes) por exemplo, fornece `class`, `extends`, etc.
 
 ## Um exercício adicional
 
-Em nossa [seção de teoria OOP](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters), incluímos também uma classe `Student` como um conceito, que herda todos os recursos de `Person`, e também tem um método `greeting()` diferente de `Person` que é muito mais informal do que a saudação do `Teacher`. Dê uma olhada na aparência da saudação do aluno nessa seção e tente implementar seu próprio construtor `Student()` que herda todos os recursos de `Person()`, e implemente a função `greeting()` diferente.
+Em nossa [seção de teoria OOP](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters), incluímos também uma classe `Student` como um conceito, que herda todos os recursos de `Person`, e também tem um método `greeting()` diferente de `Person` que é muito mais informal do que a saudação do `Teacher`. Dê uma olhada na aparência da saudação do aluno nessa seção e tente implementar seu próprio construtor `Student()` que herda todos os recursos de `Person()`, e implemente a função `greeting()` diferente.
 
-> **Nota:** If you have trouble getting this to work, have a look at our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (see it [running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html) also).
+> [!NOTE]
+> If you have trouble getting this to work, have a look at our [finished version](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (see it [running live](https://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html) also).
 
 ## Sumário de membro do objeto
 
@@ -250,7 +253,8 @@ Se você não tem certeza de qual é qual, não se preocupe com isso ainda — v
 
 O ECMAScript 2015 introduz a [sintaxe de classe](/pt-BR/docs/Web/JavaScript/Reference/Classes) em JavaScript como uma maneira de escrever classes reutilizáveis usando uma sintaxe mais fácil e mais limpa, que é mais semelhante a classes em C ++ ou Java. Nesta seção, converteremos os exemplos Pessoa e Professor da herança protótipo para as classes, para mostrar como é feito.
 
-> **Nota:** Essa forma moderna de escrever classes é suportada em todos os navegadores modernos, mas ainda vale a pena saber como a herança prototípica subjacente, caso você trabalhe em um projeto que exija suporte a um navegador que não suporte essa sintaxe (mais notavelmente o Internet Explorer) .
+> [!NOTE]
+> Essa forma moderna de escrever classes é suportada em todos os navegadores modernos, mas ainda vale a pena saber como a herança prototípica subjacente, caso você trabalhe em um projeto que exija suporte a um navegador que não suporte essa sintaxe (mais notavelmente o Internet Explorer) .
 
 Vejamos uma versão reescrita do exemplo Person, estilo de classe:
 
@@ -293,7 +297,8 @@ leia.farewell();
 // Leia has left the building. Bye for now
 ```
 
-> **Nota:** Sob o capô, suas classes estão sendo convertidas em modelos de herança protótipos — isso é apenas açúcar sintático. Mas tenho certeza que você concordará que é mais fácil escrever.
+> [!NOTE]
+> Sob o capô, suas classes estão sendo convertidas em modelos de herança protótipos — isso é apenas açúcar sintático. Mas tenho certeza que você concordará que é mais fácil escrever.
 
 ### Herança com sintaxe de classe
 
@@ -353,7 +358,8 @@ snape.subject; // Dark arts
 
 Como fizemos com Teachers, poderíamos criar outras subclasses de `Person` para torná-las mais especializadas sem modificar a classe base.
 
-> **Nota:** You can find this example on GitHub as [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html)).
+> [!NOTE]
+> You can find this example on GitHub as [es2015-class-inheritance.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html)).
 
 ## Getters e Setters
 
@@ -404,7 +410,8 @@ snape.subject = "Balloon animals"; // Sets _subject to "Balloon animals"
 console.log(snape.subject); // Returns "Balloon animals"
 ```
 
-> **Nota:** You can find this example on GitHub as [es2015-getters-setters.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html)).
+> [!NOTE]
+> You can find this example on GitHub as [es2015-getters-setters.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html)).
 
 ## Quando você usaria a herança em JavaScript?
 
@@ -414,7 +421,8 @@ De certa forma, você usa herança o tempo todo. Sempre que você usa vários re
 
 Em termos de usar a herança em seu próprio código, você provavelmente não a usará com frequência, principalmente no começo e em pequenos projetos. É uma perda de tempo usar objetos e herança apenas por causa dela quando você não precisa deles. Mas à medida que suas bases de código aumentam, é mais provável que você encontre uma necessidade para isso. Se você estiver começando a criar vários objetos com recursos semelhantes, criar um tipo de objeto genérico para conter toda a funcionalidade compartilhada e herdar esses recursos em tipos de objetos mais especializados pode ser conveniente e útil.
 
-> **Nota:** Por causa da maneira como o JavaScript funciona, com a cadeia de protótipos, etc., o compartilhamento de funcionalidade entre objetos é frequentemente chamado de **delegação**. Os objetos especializados delegam a funcionalidade a um tipo de objeto genérico.
+> [!NOTE]
+> Por causa da maneira como o JavaScript funciona, com a cadeia de protótipos, etc., o compartilhamento de funcionalidade entre objetos é frequentemente chamado de **delegação**. Os objetos especializados delegam a funcionalidade a um tipo de objeto genérico.
 
 Ao usar a herança, você é aconselhado a não ter muitos níveis de herança, e manter um controle cuidadoso de onde você define seus métodos e propriedades. É possível começar a escrever código que modifica temporariamente os protótipos dos objetos do navegador interno, mas você não deve fazer isso a menos que tenha um bom motivo. Demasiada herança pode levar a confusão sem fim, e dor infinita quando você tenta depurar esse código.
 
@@ -422,7 +430,7 @@ Em última análise, os objetos são apenas outra forma de reutilização de có
 
 ## Alternativas para estender a cadeia de protótipos
 
-Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain).
+Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#different_ways_to_create_objects_and_the_resulting_prototype_chain).
 
 ## Sumário
 

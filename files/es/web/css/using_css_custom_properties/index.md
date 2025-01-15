@@ -31,7 +31,8 @@ Ten en cuenta que el selector que usemos para las reglas de estilo define el ám
 
 Sin embargo, esto no tiene por qué ser siempre así: podrían haber muy buenas razones para querer limitar el ámbito de tus propiedades personalizadas.
 
-> **Nota:** Los nombres de propiedades personalizadas son case sensitive (distinguen entre mayúsuculas y minúsculas) — `--my-color` será tratado como una propiedad personalizada distinta a `--My-color`.
+> [!NOTE]
+> Los nombres de propiedades personalizadas son case sensitive (distinguen entre mayúsuculas y minúsculas) — `--my-color` será tratado como una propiedad personalizada distinta a `--My-color`.
 
 Como mencionamos anteriormente, para acceder al valor de una propiedad personalizada usamos el nombre de la propiedad dentro de la función {{cssxref("var()")}}, en lugar de cualquier otro valor normal:
 
@@ -176,7 +177,7 @@ Tenga en cuenta que éstas son propiedades personalizadas, no variables reales c
 
 ## Valores de sustitución (fallback) de propiedades personalizadas
 
-Utilizando [`var()`](/es/docs/Web/CSS/var) podemos definir múltiples **valores de sustitución (fallback)** que se usarán cuando la variable dada no está definida aún; esto puede ser útil cuando se trabaja con [Custom Elements](/es/docs/Web/Web_Components/Using_custom_elements) y [Shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM).
+Utilizando [`var()`](/es/docs/Web/CSS/var) podemos definir múltiples **valores de sustitución (fallback)** que se usarán cuando la variable dada no está definida aún; esto puede ser útil cuando se trabaja con [Custom Elements](/es/docs/Web/API/Web_components/Using_custom_elements) y [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM).
 
 > **Nota:** **Los valores de sustitución (fallback) no se usan para arreglar problemas de compatibilidad del navegador.** Si el navegador no tiene soporte para Propiedades Personalizadas de CSS, el valor de fallback no es de ayuda. **Es simplemente un respaldo para que aquellos navegadores que sí soportan Propiedades Personalizadas de CSS** puedan elegir un valor diferente en caso de que la variable no se haya definido o contenga un valor no válido.
 
@@ -205,7 +206,8 @@ El primer argumento a la función es el nombre de la [propiedad personalizada](h
 
 Como vemos en el segundo ejemplo de arriba, la manera correcta de incluir más de un fallback es usar una propiedad personalizada como fallback (la cual tiene su propio fallback). Esta técnica se ha visto que puede causar problemas de rendimiento al tomar más tiempo analizar las variables.
 
-> **Nota:** La sintaxis del fallback, como la de las [propiedades personalizadas](https://www.w3.org/TR/css-variables/#custom-property), permite comas. Por ejemplo, `var(--foo, red, blue)` define un fallback de `red, blue` — es decir, cualquier cosa entre la primera coma y el final de la función se considera un valor de fallback.
+> [!NOTE]
+> La sintaxis del fallback, como la de las [propiedades personalizadas](https://www.w3.org/TR/css-variables/#custom-property), permite comas. Por ejemplo, `var(--foo, red, blue)` define un fallback de `red, blue` — es decir, cualquier cosa entre la primera coma y el final de la función se considera un valor de fallback.
 
 ## Validez y valores
 

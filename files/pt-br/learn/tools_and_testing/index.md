@@ -11,11 +11,12 @@ A indústria de internet é um excitante lugar de trabalho, mas não é por ter 
 
 Saber quais ferramentas você deve utilizar pode ser um processo bem difícil, então escrevemos esses artigos para te manter informado de quais tipos de ferramentas estão disponíveis, e o que elas podem fazer pra você, e como usar as preferidas do mercado.
 
-> **Nota:** pelo fato de novas ferramentas e tecnologias aparecerem e saírem de moda o tempo todo, nós, deliberadamente, escrevemos este material para ser o mais neutro possível — queremos focar, antes de mais nada, nos tipos de tarefas gerais que essas ferramentas podem ajudar você a terminar, e endereçar ferramentas específicas o menos possível. Obviamente precisamos mostrar o uso das ferramentas para demonstrar técnicas específicas, mas que fique claro que com isso não estamos necessariamente, recomendando as ferramentas usadas nas demonstrações como as melhores, ou como único jeito, de se fazer as coisas — na maioria dos casos existem outras formas de se fazer, mas queremos dar a você a forma mais clara que funciona.
+> [!NOTE]
+> pelo fato de novas ferramentas e tecnologias aparecerem e saírem de moda o tempo todo, nós, deliberadamente, escrevemos este material para ser o mais neutro possível — queremos focar, antes de mais nada, nos tipos de tarefas gerais que essas ferramentas podem ajudar você a terminar, e endereçar ferramentas específicas o menos possível. Obviamente precisamos mostrar o uso das ferramentas para demonstrar técnicas específicas, mas que fique claro que com isso não estamos necessariamente, recomendando as ferramentas usadas nas demonstrações como as melhores, ou como único jeito, de se fazer as coisas — na maioria dos casos existem outras formas de se fazer, mas queremos dar a você a forma mais clara que funciona.
 
 ## Caminho de aprendizado
 
-Você realmente deve aprender os conceitos básicos de [HTML](/pt-BR/docs/Aprender/HTML), [CSS](/pt-BR/docs/Aprender/CSS) e [JavaScript](/pt-BR/docs/Aprender/JavaScript) antes de utilizar as ferramentas descritas aqui. Isto é, você precisará conhecer os principios fundamentais dessas linguagens antes de começar a debugar problemas em códigos mais complexos da internet, ou usar alguma biblioteca JavaScript, ou escrever testes e rodá-los no seu código com executores de testes, etc.
+Você realmente deve aprender os conceitos básicos de [HTML](/pt-BR/docs/Learn/HTML), [CSS](/pt-BR/docs/Learn/CSS) e [JavaScript](/pt-BR/docs/Learn/JavaScript) antes de utilizar as ferramentas descritas aqui. Isto é, você precisará conhecer os principios fundamentais dessas linguagens antes de começar a debugar problemas em códigos mais complexos da internet, ou usar alguma biblioteca JavaScript, ou escrever testes e rodá-los no seu código com executores de testes, etc.
 
 Você realmente precisa de uma base forte de conhecimento nessas tecnologias antes de ir mais além.
 

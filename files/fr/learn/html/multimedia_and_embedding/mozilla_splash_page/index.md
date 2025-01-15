@@ -36,7 +36,8 @@ Pour démarrer cette étude, vous devez aller chercher toutes les images et l'HT
 
 Allez dans le répertoire [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) chercher les différentes images et faites la même chose; vous aurez peut-être à les enregistrer dans un nouveau dossier pour l'instant, au cas où vous auriez besoin d'en manipuler certaines en utilisant un éditeur graphique avant de pouvoir les utiliser.
 
-> **Note :** le fichier HTML en exemple contient un bon nombre de CSS, pour styliser la page. Vous n'avez pas besoin de modifier le CSS, juste l'HTML dans l'élément {{htmlelement("body")}} — tant que vous insérez les bonnes balises, le style sera cohérent.
+> [!NOTE]
+> Le fichier HTML en exemple contient un bon nombre de CSS, pour styliser la page. Vous n'avez pas besoin de modifier le CSS, juste l'HTML dans l'élément {{htmlelement("body")}} — tant que vous insérez les bonnes balises, le style sera cohérent.
 
 ## Énoncé du projet
 
@@ -56,7 +57,8 @@ Continuons avec `mdn.svg`, ces images seront vos icônes pour lier aux ressource
 
 Puis, créez une version paysage de 1200px de large de `red-panda.jpg`, et une version portrait de 600px de large qui montre le panda en gros plan. Encore une fois, nommez-les de manière similaire pour les identifier facilement. Réservez toutes ces copies dans le même dossier que l'`index.html`.
 
-> **Note :** Vous devriez optimiser vos images JPG et PNG pour les rendre le plus petit possible tout en restant de bonne qualité. [tinypng.com](https://tinypng.com/) est une bonne aide pour faire ça aisément.
+> [!NOTE]
+> Vous devriez optimiser vos images JPG et PNG pour les rendre le plus petit possible tout en restant de bonne qualité. [tinypng.com](https://tinypng.com/) est une bonne aide pour faire ça aisément.
 
 ### Ajouter un logo à l'en-tête
 
@@ -74,7 +76,8 @@ Dans tous les cas (sauf un — lequel serait naturellement adaptatif ?) nous vou
 
 Assurez-vous de faire correspondre les bonnes images avec les liens corrects !
 
-> **Note :** Pour tester correctement les exemples `srcset`/`sizes`, vous devez charger votre site sur un serveur (utiliser [Github pages](/fr/docs/Learn/Common_questions/Using_Github_pages) est une solution simple et gratuite), ensuite vous pouvez tester si tout se déroule correctement en utilisant des outils de développeur, comme expliqué dans [Responsive images: useful developer tools](/fr/Learn/HTML/Multimedia_and_embedding/Responsive_images#Useful_developer_tools).
+> [!NOTE]
+> Pour tester correctement les exemples `srcset`/`sizes`, vous devez charger votre site sur un serveur (utiliser [Github pages](/fr/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) est une solution simple et gratuite), ensuite vous pouvez tester si tout se déroule correctement en utilisant des outils de développeur, comme expliqué dans [Responsive images: useful developer tools](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#useful_developer_tools).
 
 ### Un panda rouge créatif
 

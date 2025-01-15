@@ -14,7 +14,8 @@ l10n:
 
 このイベントは `selectionchange` のイベントリスナーを追加するか、`onselectionchange` イベントハンドラーを使用して処理することができます。
 
-> **メモ:** このイベントは {{HTMLElement("input")}} や {{HTMLElement("textarea")}} 要素のテキスト選択が変更されたときに発行される `selectionchange` イベントとは異なります。詳しくは{{domxref("HTMLInputElement.selectionchange_event")}}を参照してください。
+> [!NOTE]
+> このイベントは {{HTMLElement("input")}} や {{HTMLElement("textarea")}} 要素のテキスト選択が変更されたときに発行される `selectionchange` イベントとは異なります。詳しくは{{domxref("HTMLInputElement.selectionchange_event")}}を参照してください。
 
 ## 構文
 

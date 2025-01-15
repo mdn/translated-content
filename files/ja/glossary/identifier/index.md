@@ -17,7 +17,7 @@ slug: Glossary/Identifier
 
 - ウィキペディアの[識別子](https://ja.wikipedia.org/wiki/識別子#プログラミング言語における識別子)の記事
 
-1. [用語集](/ja/docs/Glossary)
+1. 関連用語:
 
    1. {{glossary("Identifier", "識別子")}}
    2. {{glossary("Scope", "スコープ")}}

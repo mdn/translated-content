@@ -23,12 +23,12 @@ Un objeto {{domxref("IDBTransaction")}}.
 
 Éste método puede invocar una excepción {{domxref("DOMException")}} de alguno de los siguientes tipos:
 
-| Excepción                        | Descripción                                                                                      |
-| -------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [`InvalidStateError`](/es/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
-| `NotFoundError`                  | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
-| `TypeError`                      | El valor para el parámetro `mode` es inválido.                                                   |
-| `InvalidAccessError`             | La función fue llamada con una lista vacía de nombres de almacenes.                              |
+| Excepción                           | Descripción                                                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [`InvalidStateError`](/es/docs/Web) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
+| `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.      |
+| `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                   |
+| `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                              |
 
 ## Ejemplo
 
@@ -101,7 +101,8 @@ var objectStore = transaction.objectStore("toDoList");
 
     Desde Firefox 40, las transacciones de IndexedDB tienen garantías de durabilidad relajadas para aumentar el rendimiento (ver [Error 1112702 en Firefox](https://bugzil.la/1112702)), lo cual es el mismo comportamiento de otros navegadores que soportan IndexedDB. Es decir, anteriormente en una transacción `readwrite` el evento {{domxref("IDBTransaction.oncomplete")}} era invocado sólo cuando se garantizaba que todos los datos habían sido vaciados al disco duro. En Firefox 40+ el evento `complete` es accionado después de indicársele al Sistema Operativo que escriba los datos al disco pero esta confirmación podría suceder poco antes de que los datos hayan sido verdaderamente escritos en él. Si bien dicho evento puede entonces ser entregado un poco antes de tiempo, de cualquier modo, existe una pequeña probabilidad de que la entera transacción se pierda si el SO se bloquea o si ha ocurrido una pérdida de energía antes de que los datos efectivamente se descarguen al disco duro. Como esas catastróficas circunstancias son más bien raras, la mayoría de los consumidores no deberían preocuparse demasiado.
 
-    > **Nota:** En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
+    > [!NOTE]
+    > En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
 
 ## Especificaciones
 

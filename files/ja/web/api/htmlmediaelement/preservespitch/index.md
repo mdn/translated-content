@@ -1,8 +1,9 @@
 ---
-title: HTMLMediaElement.preservesPitch
+title: "HTMLMediaElement: preservesPitch プロパティ"
+short-title: preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: c3be131cfd2c33822cb36b21cb4fca78980a6b4e
 ---
 
 {{APIRef("HTML DOM")}}
@@ -27,12 +28,12 @@ l10n:
   src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
 
 <div>
-  <label for="rate">Adjust playback rate:</label>
+  <label for="rate">再生レートを調整:</label>
   <input id="rate" type="range" min="0.25" max="3" step="0.05" value="1" />
 </div>
 
 <div>
-  <label for="pitch">Preserve pitch:</label>
+  <label for="pitch">ピッチを維持:</label>
   <input type="checkbox" id="pitch" name="pitch" checked />
 </div>
 ```
@@ -45,18 +46,11 @@ div {
 
 ```js
 const audio = document.querySelector("audio");
-
-const rate = document.querySelector("#rate");
-rate.addEventListener("input", () => (audio.playbackRate = rate.value));
-
-const pitch = document.querySelector("#pitch");
-pitch.addEventListener("change", () => {
-  if ("preservesPitch" in audio) {
-    audio.preservesPitch = pitch.checked;
-  } else if ("mozPreservesPitch" in audio) {
-    //deprecated
-    audio.mozPreservesPitch = pitch.checked;
-  }
+document.getElementById("rate").addEventListener("change", (e) => {
+  audio.playbackRate = e.target.value;
+});
+document.getElementById("pitch").addEventListener("change", (e) => {
+  audio.preservesPitch = e.target.checked;
 });
 ```
 
@@ -73,4 +67,4 @@ pitch.addEventListener("change", () => {
 ## 関連情報
 
 - {{domxref("HTMLMediaElement.playbackRate")}}
-- [ウェブオーディオの playbackRate の説明](/ja/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [ウェブオーディオの playbackRate の説明](/ja/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)

@@ -40,7 +40,8 @@ slug: Web/HTML/Element/Heading_Elements
 
 该元素包含所有[全局特性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** align 属性已废弃；不要继续使用它。
+> [!NOTE]
+> align 属性已废弃；不要继续使用它。
 
 ## 使用要点
 
@@ -181,7 +182,7 @@ Sectioning content can be labeled using a combination of the [`aria-labelledby`]
 
 In this example, screen reading technology would announce that there are two {{HTMLElement("nav")}} sections, one called "Primary navigation" and one called "Footer navigation". If labels were not provided, the person using screen reading software may have to investigate each `nav` element's contents to determine their purpose.
 
-- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Using the aria-labelledby attribute](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 规范

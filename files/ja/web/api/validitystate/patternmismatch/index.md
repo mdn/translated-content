@@ -62,7 +62,8 @@ input:invalid {
 
 この場合、値の長さを決定するのはパターンであるため、値が長すぎたり短すぎたりした場合に発生するのは `patternMismatch` であり、 {{domxref('validityState.tooLong')}} や {{domxref('validityState.tooShort')}} ではないことに注意してください。代わりに [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) と [`maxlength`](/ja/docs/Web/HTML/Attributes/maxlength) 属性を使用していたら、 {{domxref('validityState.tooLong')}} または {{domxref('validityState.tooShort')}} が true になるかもしれません。
 
-> **メモ:** pattern 属性がない場合、 `{{HTMLElement("input/email", "email")}}` 入力型は、少なくとも `x@y` に一致する必要があり、 `{{HTMLElement("input/url", "url")}}` 型は、少なくとも x: に一致する必要があります。無効な場合、pattern 属性がない場合（またはその入力型で pattern 属性が無効な場合）は {{domxref('validityState.typeMismatch')}} が true になります。
+> [!NOTE]
+> pattern 属性がない場合、 `{{HTMLElement("input/email", "email")}}` 入力型は、少なくとも `x@y` に一致する必要があり、 `{{HTMLElement("input/url", "url")}}` 型は、少なくとも x: に一致する必要があります。無効な場合、pattern 属性がない場合（またはその入力型で pattern 属性が無効な場合）は {{domxref('validityState.typeMismatch')}} が true になります。
 
 ## 仕様書
 
@@ -76,4 +77,4 @@ input:invalid {
 
 - [制約検証](/ja/docs/Web/HTML/Constraint_validation)
 - [フォーム: データフォームの検証](/ja/docs/Learn/Forms/Form_validation)
-- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)

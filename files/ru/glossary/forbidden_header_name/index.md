@@ -11,7 +11,6 @@ slug: Glossary/Forbidden_header_name
 
 Запрещённые имена заголовков начинаются с `Proxy-` или `Sec-`, или содержат следующие имена:
 
-- `Accept-Charset`
 - `Accept-Encoding`
 - `Access-Control-Request-Headers`
 - `Access-Control-Request-Method`
@@ -34,4 +33,5 @@ slug: Glossary/Forbidden_header_name
 - `Upgrade`
 - `Via`
 
-> **Примечание:** Заголовок `User-Agent` более не запрещён, [как указано в спецификации](https://fetch.spec.whatwg.org/#terminology-headers) — посмотрите список запрещённых заголовков (он был реализован в Firefox 43,) так что `User-Agent` может быть установлен через в объект [Headers](/ru/docs/Web/API/Headers) под Fetch через вызов метода [setRequestHeader()](/ru/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29).
+> [!NOTE]
+> Заголовок `User-Agent` более не запрещён, [как указано в спецификации](https://fetch.spec.whatwg.org/#terminology-headers) — посмотрите список запрещённых заголовков (он был реализован в Firefox 43,) так что `User-Agent` может быть установлен через в объект [Headers](/ru/docs/Web/API/Headers) под Fetch через вызов метода [setRequestHeader()](/ru/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29).

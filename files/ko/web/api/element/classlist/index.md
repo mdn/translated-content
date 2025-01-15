@@ -58,7 +58,8 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");
 ```
 
-> **참고:** Firefox 26 이전의 버전에서는 add/remove/toggle 메서드에서 여러 인수의 사용을 구현하지 않았다. <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> 링크를 참조하라.
+> [!NOTE]
+> Firefox 26 이전의 버전에서는 add/remove/toggle 메서드에서 여러 인수의 사용을 구현하지 않았다. <https://bugzilla.mozilla.org/show_bug.cgi?id=814014> 링크를 참조하라.
 
 ## 명세
 

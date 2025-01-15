@@ -61,7 +61,8 @@ slug: Web/HTML/Element/th
 
 ![演示表格单元的列和行跨越的插图：单元格 1、3 和 4 跨越两行；单元格 2 跨越两列；单元格 5 和 6 适配第二行第二列和第三列的可用单元格](column-row-span.png)
 
-> **备注：** 这些属性不能用于重叠单元格。
+> [!NOTE]
+> 这些属性不能用于重叠单元格。
 
 ## 示例
 
@@ -125,7 +126,7 @@ slug: Web/HTML/Element/th
 
 ## 参见
 
-- [学习：HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
+- [学习：HTML 表格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、 {{HTMLElement("tfoot")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他与表格相关的元素
 - {{cssxref("background-color")}}：用于设置每个表头单元格的背景颜色的 CSS 属性
 - {{cssxref("border")}}：用于控制表头单元格边框的 CSS 属性

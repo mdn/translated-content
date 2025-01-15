@@ -13,7 +13,8 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 该项目使用了 [glMatrix](https://glmatrix.net/) 库来执行其矩阵操作，因此需要引入它。本次示例通过 CDN 形式引入使用。
 
-> **备注：** 更新“index.html”文件，让它看起来像这样：
+> [!NOTE]
+> 更新“index.html”文件，让它看起来像这样：
 
 ```html
 <!doctype html>
@@ -42,7 +43,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 ### 着色器
 
-**着色器是**使用 [OpenGL ES 着色语言](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)(**GLSL**) 编写的程序，它携带着绘制形状的顶点信息以及构造绘制在屏幕上像素的所需数据，换句话说，它负责记录着像素点的位置和颜色。
+**着色器是**使用 [OpenGL ES 着色语言](https://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)(**GLSL**) 编写的程序，它携带着绘制形状的顶点信息以及构造绘制在屏幕上像素的所需数据，换句话说，它负责记录着像素点的位置和颜色。
 
 绘制 WebGL 时候有两种不同的着色器函数，**顶点着色器和片段着色器。**你需要通过用 GLSL 编写这些着色器，并将代码文本传递给 WebGL，使之在 GPU 执行时编译。顺便一提，顶点着色器和片段着色器的集合我们通常称之为**着色器程序。**
 
@@ -54,11 +55,12 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 顶点着色器需要对顶点坐标进行必要的转换，在每个顶点基础上进行其他调整或计算，然后通过将其保存在由 GLSL 提供的特殊变量（我们称为 gl_Position）中来返回变换后的顶点
 
-顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 {{Glossary("texel")}} 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/Web/API/WebGL_API/Data#varyings)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
+顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 {{Glossary("texel")}} 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/Web/API/WebGL_API/Data#varyings)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#attributes)属性中，以便与片段着色器共享
 
 以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里你可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)。
 
-> **备注：** 添加下面代码到 `main()` 函数中：
+> [!NOTE]
+> 添加下面代码到 `main()` 函数中：
 
 ```js
 // Vertex shader program
@@ -83,7 +85,8 @@ const vsSource = `
 
 在这种情况下，我们每次都会返回白色，因为我们只是在画一个白色的正方形，没有使用光照。
 
-> **备注：** 添加下面代码到 `main()` 函数中：
+> [!NOTE]
+> 添加下面代码到 `main()` 函数中：
 
 ```js
 const fsSource = `
@@ -97,7 +100,8 @@ const fsSource = `
 
 现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 `loadShader()`，为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
 
-> **备注：** 将下面两个函数添加到“webgl-demo.js”文件中：
+> [!NOTE]
+> 将下面两个函数添加到“webgl-demo.js”文件中：
 
 ```js
 //
@@ -167,7 +171,8 @@ loadShader 函数将 WebGL 上下文，着色器类型和`源码`作为参数输
 
 我们可以像这样调用这段代码
 
-> **备注：** 添加下面代码到 `main()` 函数中：
+> [!NOTE]
+> 添加下面代码到 `main()` 函数中：
 
 ```js
 const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
@@ -175,7 +180,8 @@ const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 
 在创建着色器程序之后，我们需要查找 WebGL 返回分配的输入位置。在上述情况下，我们有一个属性和两个 [Uniform](/zh-CN/docs/Web/API/WebGL_API/Data#uniforms) 。属性从缓冲区接收值。顶点着色器的每次迭代都从分配给该属性的缓冲区接收下一个值。uniform 类似于 JavaScript 全局变量。它们在着色器的所有迭代中保持相同的值。由于属性和统一的位置是特定于单个着色器程序的，因此我们将它们存储在一起以使它们易于传递
 
-> **备注：** 添加下面代码到 `main()` 函数中：
+> [!NOTE]
+> 添加下面代码到 `main()` 函数中：
 
 ```js
 const programInfo = {
@@ -194,7 +200,8 @@ const programInfo = {
 
 在画正方形前，我们需要创建一个缓冲器来存储它的顶点。我们会用到名字为 initBuffers() 的函数。当我们了解到更多 WebGL 的高级概念时，这段代码会将有更多参数，变得更加复杂，并且用来创建更多的三维物体。
 
-> **备注：** 创建一个新文件叫“init-buffers.js”，并填写如下内容：
+> [!NOTE]
+> 创建一个新文件叫“init-buffers.js”，并填写如下内容：
 
 ```js
 function initBuffers(gl) {
@@ -235,7 +242,8 @@ export { initBuffers };
 
 当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
-> **备注：** 创建一个新文件叫“draw-scene.js”，并填写如下内容：
+> [!NOTE]
+> 创建一个新文件叫“draw-scene.js”，并填写如下内容：
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -353,14 +361,16 @@ export { drawScene };
 
 最后，让我们引入 `initBuffers()` 和 `drawScene()`。
 
-> **备注：** 在“webgl-demo.js”文件头部添加如下代码：
+> [!NOTE]
+> 在“webgl-demo.js”文件头部添加如下代码：
 
 ```js
 import { initBuffers } from "./init-buffers.js";
 import { drawScene } from "./draw-scene.js";
 ```
 
-> **备注：** 在 `main()` 函数结尾处添加如下代码：
+> [!NOTE]
+> 在 `main()` 函数结尾处添加如下代码：
 
 ```js
 // Here's where we call the routine that builds all the
@@ -377,12 +387,12 @@ drawScene(gl, programInfo, buffers);
 
 ## 矩阵通用计算
 
-矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](http://glmatrix.net/).
+矩阵计算是一个很复杂的运算。没人会想去自己写完所有代码来处理这些运算。通常人们使用一个矩阵运算库，而不会自己实现矩阵运算。在这个例子中我们使用的是[glMatrix library](https://glmatrix.net/).
 
 ## 参见
 
 - [Matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) WebGLFundamentals
-- [Matrices](http://mathworld.wolfram.com/Matrix.html) 线上数学百科全书
+- [Matrices](https://mathworld.wolfram.com/Matrix.html) 线上数学百科全书
 - 维基百科上的[矩阵](https://zh.wikipedia.org/wiki/矩阵)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

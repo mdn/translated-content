@@ -5,7 +5,7 @@ slug: Web/Events/Event_handlers
 
 事件是浏览器窗口内触发的信号，用于通知浏览器或操作系统环境的变化。程序员可以创建用于在事件触发时运行的*事件处理器*代码，使网页能够适当地响应变化。
 
-本页提供了有关如何使用事件和事件处理器的非常简短的“提醒”。新开发人员应阅读[事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)。
+本页提供了有关如何使用事件和事件处理器的非常简短的“提醒”。新开发人员应阅读[事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)。
 
 ## 有哪些可用事件？
 
@@ -17,7 +17,8 @@ slug: Web/Events/Event_handlers
 
 有两种推荐的注册处理器的方法。可以将事件处理器代码赋值给目标元素对应的 _onevent_ 属性，或使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理器注册为元素的监听器，从而在事件触发时运行事件处理器的代码。无论哪种情况，处理器都将接收一个符合 [`Event` 接口](/zh-CN/docs/Web/API/Event)的对象。主要区别在于可以使用事件监听器方法添加（或删除）多个事件处理器。
 
-> **警告：** 不推荐使用 HTML onevent 属性设置事件处理器的第三种方法！它们会使标签变长，从而降低了可读性且变得难以调试。有关详细信息，请参阅[内联事件处理器](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events#内联事件处理器——不要使用)。
+> [!WARNING]
+> 不推荐使用 HTML onevent 属性设置事件处理器的第三种方法！它们会使标签变长，从而降低了可读性且变得难以调试。有关详细信息，请参阅[内联事件处理器](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#内联事件处理器——不要使用)。
 
 ### 使用 onevent 属性
 
@@ -43,7 +44,8 @@ btn.onclick = greet;
 
 在元素上设置事件处理器的最灵活的方法是使用 {{domxref("EventTarget.addEventListener")}} 方法。这种方法允许为一个元素分配多个监听器，并在需要时*删除*监听器（使用 {{domxref("EventTarget.removeEventListener")}} 方法）。
 
-> **备注：** 添加和删除事件处理器的功能允许你在不同情况下执行不同的操作，例如，让同一个按钮执行不同的操作。此外，在更复杂的程序中，清理旧的或未使用的事件处理器可以提高效率。
+> [!NOTE]
+> 添加和删除事件处理器的功能允许你在不同情况下执行不同的操作，例如，让同一个按钮执行不同的操作。此外，在更复杂的程序中，清理旧的或未使用的事件处理器可以提高效率。
 
 下面我们展示了如何将一个简单的 `greet()` 函数设置为 `click` 事件的监听器/事件处理器（如果需要，你可以使用匿名函数代替具名函数）。请再次注意，事件（event）会作为第一个参数传递给事件处理器。
 
@@ -85,7 +87,7 @@ controller.abort(); // 移除与此控制器关联的任何/所有事件处理�
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Events">事件介绍</a></li>
+    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
     <li><a href="/zh-CN/docs/Web/Events">事件参考</a></li>
   </ol>
 </section>

@@ -33,7 +33,8 @@ slug: Web/Manifest/related_applications
 
 Поле `related_applications` field is an array of objects specifying native applications that are installable by, or accessible to, the underlying platform — for example, a native Android application obtainable through the Google Play Store. Предполагается, что такие приложения являются альтернативами веб-сайту манифеста, который предоставляет аналогичные/эквивалентные функции - как эквивалент нативного приложения.
 
-> **Примечание:** Разработчик может указать, что нативные приложения предпочтительнее, чем веб-приложение, установив значение `prefer_related_applications` в `true`.
+> [!NOTE]
+> Разработчик может указать, что нативные приложения предпочтительнее, чем веб-приложение, установив значение `prefer_related_applications` в `true`.
 
 ## Пример
 

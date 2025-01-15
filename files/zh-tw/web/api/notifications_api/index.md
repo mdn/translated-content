@@ -24,15 +24,17 @@ btn.addEventListener("click", function () {
 
 用戶可以從此處選擇允許、屏蔽來自此來源的通知，也可以不做選擇。 一旦選定，該設置通常將在當前會話中保持不變。
 
-> **備註：** 從 Firefox 44 開始，Notifications 和 [Push](/zh-TW/docs/Web/API/Push_API) 的權限已合併。如果授予通知權限則推送也將被啟用。
+> [!NOTE]
+> 從 Firefox 44 開始，Notifications 和 [Push](/zh-TW/docs/Web/API/Push_API) 的權限已合併。如果授予通知權限則推送也將被啟用。
 
 下一步，使用 {{domxref("Notification.Notification","Notification()")}} 構造函數創建一個新通知。 這必須要傳遞一個標題參數(title)，並且可以選擇性的傳遞選擇物件指定諸如文字方向、正文、圖標、撥放通知的聲音等等。
 
 {{AvailableInWorkers}}
 
-另外，Notifications API 規範指定了 [ServiceWorker API](/zh-TW/docs/Web/API/ServiceWorker_API) 的許多附加功能，以允許服務人員觸發通知。
+另外，Notifications API 規範指定了 [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API) 的許多附加功能，以允許服務人員觸發通知。
 
-> **備註：** 要了解有關在自己的應用程序中使用通知的更多信息，請閱讀 [Using the Notifications API](/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
+> [!NOTE]
+> 要了解有關在自己的應用程序中使用通知的更多信息，請閱讀 [Using the Notifications API](/zh-TW/docs/Web/API/Notifications_API/Using_the_Notifications_API)。
 
 ## Notifications 介面
 

@@ -17,7 +17,8 @@ l10n:
 
   - : `string`。此属性只适用于 cookie 和 indexedDB 项。删除仅限于通过 ID 指定的 [cookie 存储](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore)中的项目。有关更多信息，请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 
-    > **备注：** Firefox Nightly 还支持通过 `cookieStoreId` 删除 localStorage 项目。
+    > [!NOTE]
+    > Firefox Nightly 还支持通过 `cookieStoreId` 删除 localStorage 项目。
 
 - `hostnames` {{optional_inline}}
 
@@ -46,7 +47,8 @@ l10n:
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.browsingData`](https://developer.chrome.google.cn/docs/extensions/reference/api/browsingData) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

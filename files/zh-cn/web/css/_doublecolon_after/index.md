@@ -24,7 +24,8 @@ l10n:
 
 如果未指定 [`content`](/zh-CN/docs/Web/CSS/content) 属性、属性值无效或属性值为 `normal` 或 `none`，则不会渲染 `::after` 伪元素。其行为与设置了 `display: none` 相同。
 
-> **备注：** CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持较早引入的 `:after`。
+> [!NOTE]
+> CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持较早引入的 `:after`。
 
 ## 示例
 

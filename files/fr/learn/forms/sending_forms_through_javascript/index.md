@@ -19,13 +19,14 @@ Lorsqu'on utilise un envoi de formulaire HTML standard, comme décrit dans l'art
 
 Une interface utilisateur moderne utilisera généralement des formulaires HTML pour récupérer des données saisies par la personne, pas nécessairement pour les envoyer. Lorsque la personne soumet le formulaire, l'application prend le contrôle et transmet les données en arrière-plan, de façon asynchrone, mettant uniquement à jour les éléments de l'interface qui le nécessitent.
 
-L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Web/Guide/AJAX), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
+L'envoi de données arbitraires de façon asynchrone est généralement désigné par l'acronyme [AJAX](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), qui signifie **<i lang="en">Asynchronous JavaScript And XML</i>** en anglais (qu'on pourrait traduire par «&nbsp;JavaScript et XML asynchrones&nbsp;»).
 
 ### En quoi est-ce différent&nbsp;?
 
 L'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (souvent abrégé en XHR) fourni par le DOM permet de construire des requêtes HTTP, de les envoyer et d'en utiliser le résultat. À l'origine, [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) fut conçu pour échanger des données au format XML, mais il permet désormais aussi d'échanger des données [JSON](/fr/docs/Glossary/JSON). Toutefois, ni XML ni JSON ne sont des formats appropriés pour l'encodage des données de formulaire dans une requête HTTP. Les données de formulaire, décrite avec le type (`application/x-www-form-urlencoded`), prennent la forme d'une liste de paires clé/valeur encodées en URL. Pour la transmission de données binaires, la requête HTTP utilise le type `multipart/form-data`.
 
-> **Note :** Désormais, c'est [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) qui est utilisée à la place de XHR, en raison de ses avantages. La plupart du code présenté dans cet article pourrait être réécrit pour utiliser <i lang="en">Fetch</i> à la place de XHR.
+> [!NOTE]
+> Désormais, c'est [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) qui est utilisée à la place de XHR, en raison de ses avantages. La plupart du code présenté dans cet article pourrait être réécrit pour utiliser <i lang="en">Fetch</i> à la place de XHR.
 
 Si vous contrôlez la partie cliente (celle exécutée dans le navigateur) et la partie serveur, vous pouvez échanger du JSON et du XML et les traiter comme bon vous semble. Cependant, si vous utilisez un service tiers, vous devez envoyer les données dans un format bien défini.
 
@@ -109,7 +110,8 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("", "100%", 50)}}
 
-> **Note :** Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/CORS).
+> [!NOTE]
+> Cette utilisation de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est sujette aux [règles de même origine (<i lang="en">same-origin policy</i>)](/fr/docs/Glossary/Same-origin_policy). Si vous souhaitez effectuer des requêtes entre différentes origines, vous devrez paramétrer [le contrôle d'accès CORS](/fr/docs/Web/HTTP/CORS).
 
 ### Utiliser `XMLHttpRequest` et `FormData`
 
@@ -117,7 +119,7 @@ Construire une requête HTTP manuellement peut s'avérer laborieux. Heureusement
 
 On peut utiliser un objet [`FormData`](/fr/docs/Web/API/FormData) pour construire des données de formulaire à transmettre ou pour obtenir les données provenant d'un formulaire afin de gérer leur envoi.
 
-L'article [Utiliser les objets `FormData`](/fr/docs/Web/API/FormData/Using_FormData_Objects) couvre ce sujet en particulier, mais voici deux exemples&nbsp;:
+L'article [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects) couvre ce sujet en particulier, mais voici deux exemples&nbsp;:
 
 #### Construire un objet `FormData` autonome
 
@@ -172,7 +174,7 @@ btn.addEventListener("click", () => {
 
 #### Utiliser un objet `FormData` couplé à un élément `<form>`
 
-Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Element/Form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
+Il est aussi possible de rattacher un objet `FormData` à un élément [`<form>`](/fr/docs/Web/HTML/Element/form). On obtient ainsi un objet `FormData` qui représente les données contenues dans le formulaire.
 
 ##### HTML
 

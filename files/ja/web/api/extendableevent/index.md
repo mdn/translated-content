@@ -11,13 +11,15 @@ l10n:
 
 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} が `ExtendableEvent` ハンドラーの外で呼び出された場合、ブラウザーは `InvalidStateError` 例外を発生させます。 また、複数の呼び出しが積み重なり、その結果のプロミスが[存続期間延長プロミス](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises)のリストに追加されることにも注意してください。
 
-> **メモ:** 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（[Firefox バグ 1180274](https://bugzil.la/1180274) を参照）。
+> [!NOTE]
+> 上記の段落で説明した振る舞いは、Firefox 43 で修正されました（[Firefox バグ 1180274](https://bugzil.la/1180274) を参照）。
 
 このインターフェイスは、 {{domxref("Event")}} インターフェイスを継承しています。
 
 {{InheritanceDiagram}}
 
-> **メモ:** このインターフェイスは、グローバルスコープが {{domxref("ServiceWorkerGlobalScope")}} の場合にのみ使用できます。 {{domxref("Window")}} または別の種類のワーカーのスコープの場合は使用できません。
+> [!NOTE]
+> このインターフェイスは、グローバルスコープが {{domxref("ServiceWorkerGlobalScope")}} の場合にのみ使用できます。 {{domxref("Window")}} または別の種類のワーカーのスコープの場合は使用できません。
 
 ## コンストラクター
 
@@ -33,7 +35,7 @@ _特定のプロパティを実装していませんが、親である {{domxref
 _親である {{domxref("Event")}} からメソッドを継承しています。_
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : イベントの存続期間を延長します。 これは、インストール中 ({{domxref("ServiceWorkerRegistration.installing", "installing")}}) のワーカーの [`install`](/ja/docs/Web/API/ServiceWorkerGlobalScope/install) [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) と、アクティブ ({{domxref("ServiceWorkerRegistration.active", "active")}}) ワーカーの [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate) [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) で呼び出すためのものです。
+  - : イベントの存続期間を延長します。 これは、インストール中 ({{domxref("ServiceWorkerRegistration.installing", "installing")}}) のワーカーの [`install`](/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event) [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) と、アクティブ ({{domxref("ServiceWorkerRegistration.active", "active")}}) ワーカーの [`activate`](/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [イベントハンドラー](/ja/docs/Web/Events/Event_handlers) で呼び出すためのものです。
 
 ## 例
 
@@ -41,7 +43,8 @@ _親である {{domxref("Event")}} からメソッドを継承しています。
 
 コードスニペットは、サービスワーカーが使用するキャッシュのバージョン管理のベストプラクティスも示しています。 この例ではキャッシュは 1 つしかありませんが、同じアプローチを複数のキャッシュに使用できます。 キャッシュの一括指定識別子を特定のバージョン管理されたキャッシュ名にマップします。
 
-> **メモ:** Chrome では、ログ文は、chrome://serviceworker-internals を介してアクセスされる関連サービスワーカーの "Inspect" インターフェイスを介して表示されます。
+> [!NOTE]
+> Chrome では、ログ文は、chrome://serviceworker-internals を介してアクセスされる関連サービスワーカーの "Inspect" インターフェイスを介して表示されます。
 
 ```js
 const CACHE_VERSION = 1;
@@ -82,7 +85,8 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-> **メモ:** リソースをフェッチするとき、リソースが {{glossary("CORS")}} をサポートしていないサーバーから提供される可能性がある場合は、`{mode: 'no-cors'}` を使用することが非常に重要です。 この例では、 [www.chromium.org](https://www.chromium.org/) は CORS をサポートしていません。
+> [!NOTE]
+> リソースをフェッチするとき、リソースが {{glossary("CORS")}} をサポートしていないサーバーから提供される可能性がある場合は、`{mode: 'no-cors'}` を使用することが非常に重要です。 この例では、 [www.chromium.org](https://www.chromium.org/) は CORS をサポートしていません。
 
 ## 仕様書
 

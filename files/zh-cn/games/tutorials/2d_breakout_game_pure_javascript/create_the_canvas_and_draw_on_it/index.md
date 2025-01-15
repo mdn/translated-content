@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_dra
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
+本篇是 [Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 10 节教程中的第一节。如果你完成了本篇教程之后，你可以从 [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html) 看到源码。
 
 在我们开始编写游戏功能之前，我们可以通过 HTML 的 canvas 标签创建支撑游戏的基本结构。
 
@@ -105,10 +105,11 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-> **备注：** 练习：尝试改变给定几何图形的大小和颜色。
+> [!NOTE]
+> 练习：尝试改变给定几何图形的大小和颜色。
 
 ## 下一节
 
-现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来 — [让球动起来](/zh-CN/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball)。
+现在我们已经创建了基本的 HTML 和关于画布的基本知识。我们继续第二节，如何让球在游戏中动起来 — [让球动起来](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)。
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

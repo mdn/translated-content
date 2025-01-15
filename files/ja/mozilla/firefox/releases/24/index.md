@@ -19,7 +19,7 @@ Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリ�
 
 ### JavaScript
 
-- `"use strict"` により明示的に要求される場合を除き、[Arrow functions](/ja/docs/Web/JavaScript/Reference/arrow_functions) は自動的に strict モードにならないようにしました。([Firefox バグ 852762](https://bugzil.la/852762))
+- `"use strict"` により明示的に要求される場合を除き、[Arrow functions](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) は自動的に strict モードにならないようにしました。([Firefox バグ 852762](https://bugzil.la/852762))
 - [`String.prototype.repeat`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) JS メソッドを実装しました ([Firefox バグ 815431](https://bugzil.la/815431))。
 
 ### DOM
@@ -37,7 +37,7 @@ Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリ�
 
 ### 開発者ツール
 
-- ネットワークインスペクタで、コンテンツタイプ (CSS/画像/フォント など) による絞り込みと、絞り込み結果についてサイズや読み込み時間を確認できるようになりました。
+- ネットワークインスペクターで、コンテンツタイプ (CSS/画像/フォント など) による絞り込みと、絞り込み結果についてサイズや読み込み時間を確認できるようになりました。
 - 左側にある開発ツールのオプションパネルで、JavaScript を一時的に無効化/有効化できるようになりました。
 - 拡張機能の開発者は chrome レベルのスクリプトに対して、新たに[ブラウザーコンソール](http://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console)を使用できるようになりました (エラーコンソールを置き換えます)。
 

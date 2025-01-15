@@ -7,14 +7,15 @@ slug: Mozilla/Firefox/Releases/83
 
 このページでは、開発者に影響する Firefox 83 の変更点をまとめています。Firefox 83 は、2020 年 11 月 17 日にリリースされました。
 
-> **メモ:** Mozilla hacks の [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) もご覧ください。
+> [!NOTE]
+> Mozilla hacks の [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) もご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) を使用するとき、`--fullpage` を使用して全画面のスクリーンショットを撮影する場合も `--dpr` 引数を無視しないようになりました ([Firefox バグ 1645284](https://bugzil.la/1645284))。
-- 開発者が [スクロール可能なオーバーフローをデバッグする](/ja/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow) ために、[インスペクター](/ja/docs/Tools/Page_Inspector) で `スクロール` バッジを使用できるようになりました。バッジを選択すると、オーバーフローを*発生させている*要素を強調して、`オーバーフロー` バッジをつけます ([Firefox バグ 1669129](https://bugzil.la/1669129))。
+- 開発者が [スクロール可能なオーバーフローをデバッグする](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html) ために、[インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) で `スクロール` バッジを使用できるようになりました。バッジを選択すると、オーバーフローを*発生させている*要素を強調して、`オーバーフロー` バッジをつけます ([Firefox バグ 1669129](https://bugzil.la/1669129))。
 
 ### HTML/XML
 
@@ -23,12 +24,12 @@ slug: Mozilla/Firefox/Releases/83
 
 ### CSS
 
-- ベンダー接頭辞がつく `:-moz-any()` を、標準の {{CSSxRef(":is", ":is()")}} CSS 疑似クラス関数の別名にしました ([Firefox バグ 1666086](https://bugzil.la/1666086))。
-- [CSS Conic Gradients](/ja/docs/Web/CSS/conic-gradient) をサポートしました ([Firefox バグ 1632351](https://bugzil.la/1632351)) および ([Firefox バグ 1175958](https://bugzil.la/1175958))。
+- ベンダー接頭辞がつく `:-moz-any()` を、標準の {{CSSxRef(":is", ":is()")}} CSS 擬似クラス関数の別名にしました ([Firefox バグ 1666086](https://bugzil.la/1666086))。
+- [CSS Conic Gradients](/ja/docs/Web/CSS/gradient/conic-gradient) をサポートしました ([Firefox バグ 1632351](https://bugzil.la/1632351)) および ([Firefox バグ 1175958](https://bugzil.la/1175958))。
 
 ### JavaScript
 
-- [`Intl[@@toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) を追加しました。既定値 `Intl` を返します (最近 ECMA 仕様書に追加されました)。([Firefox バグ 1670053](https://bugzil.la/1670053))
+- [`Intl[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Symbol.toStringTag) を追加しました。既定値 `Intl` を返します (最近 ECMA 仕様書に追加されました)。([Firefox バグ 1670053](https://bugzil.la/1670053))
 
 ### HTTP
 

@@ -11,7 +11,7 @@ slug: Web/HTML/Element/frame
 
   - : **Sus etiquetas son**: `<frame>` (solo tiene una).
 
-    **Está definido como**: Elemento [para marcos](/es/HTML/Elemento/Tipos_de_elementos#paramarcos).
+    **Está definido como**: Elemento [para marcos](/es/docs/HTML/Elemento/Tipos_de_elementos#paramarcos).
 
     **Crea una caja**: .
 
@@ -282,7 +282,8 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ---
 
-> **Nota:** Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
+> [!NOTE]
+> Estamos ampliando este documento, posiblemente contenga defectos y carencias. ¡Estamos en obras!... disculpen las molestias.
 >
 > ¿Quieres participar en su elaboración? Para saber cómo hacerlo consulta MDC:Como ayudar.
 

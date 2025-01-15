@@ -76,7 +76,8 @@ page.next(); // { value: undefined, done: true }
 
 この例では `next` を値付きで呼び出しています。
 
-> **メモ:** 最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しません。
+> [!NOTE]
+> 最初の呼び出しではジェネレーターが何も生成していないため、何もログを記録しません。
 
 ```js
 function* gen() {
@@ -105,4 +106,4 @@ g.next(2);
 ## 関連情報
 
 - {{jsxref("Statements/function*", "function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)

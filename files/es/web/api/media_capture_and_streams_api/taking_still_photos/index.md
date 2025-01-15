@@ -113,7 +113,8 @@ Entonces, ¿Qué es lo que sucede aquí? Lo analizaremos paso por paso.
 
 Empezamos por encerrar el script entero en una función anónima para evitar las variables globales. Tomamos los elementos HTML que necesitamos y definimos el ancho (width) del video a 320 y la altura (height) a 0, ya que calcularemos la altura apropiada posteriormente.
 
-> **Advertencia:** En estos momentos existe una diferencia entre los tamaños de video proporcionados por getUserMedia. Firefox Nightly utiliza una resolución de 352x288 y Opera y Chrome utiliza una resolución de 640x400. Esto cambiará en el futuro, pero cambiando el tamaño con la proporción que usaremos más abajo, nos aseguraremos de no obtener sorpresas desagradables.
+> [!WARNING]
+> En estos momentos existe una diferencia entre los tamaños de video proporcionados por getUserMedia. Firefox Nightly utiliza una resolución de 352x288 y Opera y Chrome utiliza una resolución de 640x400. Esto cambiará en el futuro, pero cambiando el tamaño con la proporción que usaremos más abajo, nos aseguraremos de no obtener sorpresas desagradables.
 
 ### Obtener el video
 

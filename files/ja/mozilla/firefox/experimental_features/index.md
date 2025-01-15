@@ -14,7 +14,8 @@ slug: Mozilla/Firefox/Experimental_features
 
 実験的な機能は、 [Firefox 設定エディター](https://support.mozilla.org/ja/kb/about-config-editor-firefox) (Firefox のアドレスバーに `about:config` と入力) を使って、以下に示す関連する*設定*を変更することで、有効または無効にすることができます。
 
-> **メモ:** 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
+> [!NOTE]
+> 編集者の方へ - これらの表に機能を追加する際には、リンク `[Firefox バグ <number>](https://bugzil.la/<number>)` を使って関連するバグへのリンクを含めるようにしてください。
 
 ## HTML
 
@@ -225,7 +226,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 
 ### メディアクエリーで縦横比として 1 つの数値を使用
 
-[メディアクエリー](/ja/docs/Web/CSS/Media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は [Firefox バグ 1565562](https://bugzil.la/1565562) を参照してください。)
+[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)で縦横比を指定する際に、 1 つの {{cssxref("number")}} を {{cssxref("ratio")}} として使用できるようになりました。 (詳細は [Firefox バグ 1565562](https://bugzil.la/1565562) を参照してください。)
 
 <table>
   <thead>
@@ -428,7 +429,7 @@ CSS の {{cssxref("initial-letter")}} プロパティは、 [CSS インライン
 ### スクロール連動レイアウト
 
 {{cssxref('@scroll-timeline')}} アットルールと {{cssxref('animation-timeline')}} プロパティで、（時間ではなく）コンテナーのスクロール進行に連動するアニメーションを定義することができます。
-指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations) に `animation-timeline` プロパティを用いて関連付けられます。
+指定されたスクロールタイムラインは、 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations) に `animation-timeline` プロパティを用いて関連付けられます。
 詳しくは [Firefox バグ 1676791](https://bugzil.la/1676791) と [Firefox バグ 1676782](https://bugzil.la/1676782) を参照してください。
 
 <table>
@@ -727,7 +728,7 @@ jsxref("Array.prototype.groupBy()")}} と {{jsxref("Array.prototype.groupByToMap
 
 ### WebRTC とメディア
 
-[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Streams_API) にある以下の機能は実験的なものです。
+[WebRTC API](/ja/docs/Web/API/WebRTC_API)、[Web Audio API](/ja/docs/Web/API/Web_Audio_API)、[Media Source Extensions API](/ja/docs/Web/API/Media_Source_Extensions_API)、[Encrypted Media Extensions API](/ja/docs/Web/API/Encrypted_Media_Extensions_API)、[Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API) にある以下の機能は実験的なものです。
 
 非同期の SourceBuffer の追加と削除
 
@@ -1391,11 +1392,11 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
   </tbody>
 </table>
 
-### 支払いリクエスト API
+### 決済リクエスト API
 
-#### 主要な支払いの扱い
+#### 主要な決済の扱い
 
-[支払いリクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの支払いを処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
+[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) は、ウェブコンテンツやアプリ内でウェブベースの決済を処理するためのサポートを提供します。ユーザーインターフェイスのテスト中にバグが発生したため、 API の変更を検討している間、この API の出荷を延期することにしました。作業は継続中です。(詳細は [Firefox バグ 1318984](https://bugzil.la/1318984) をご参照ください。)
 
 <table>
   <thead>
@@ -1659,7 +1660,7 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 ### 機能ポリシー
 
-[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
+[機能ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)は、ウェブ開発者がブラウザーの特定の機能や API の動作を選択的に有効化、無効化、変更することを可能にします。 CSP と似ていますが、セキュリティの動作ではなく機能を制御します。
 
 > **メモ:** `Feature-Policy` ヘッダーは、仕様書では `Permissions-Policy` に名称が変更されており、本記事もいずれその変更を反映して更新される予定です。
 
@@ -1705,7 +1706,8 @@ Android 版 Firefox で、 [AV1 形式のメディア](/ja/docs/Web/Media/Format
 
 [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP レスポンスヘッダーの `cache` ディレクティブは、リクエストしているウェブサイトのブラウザーキャッシュをクリアします。
 
-> **メモ:** これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
+> [!NOTE]
+> これは元々既定で有効でしたが、バージョン 9 4で優先順位が付けられました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
 
 <table>
   <thead>

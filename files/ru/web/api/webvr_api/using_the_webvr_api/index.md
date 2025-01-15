@@ -7,7 +7,8 @@ slug: Web/API/WebVR_API/Using_the_WebVR_API
 
 WebVR API - фантастическое дополнение к набору инструментов веб-разработчика, позволяющее отображать WebGL сцены на устройствах виртуальной реальности, таких как Oculus Rift и HTC Vive. Но как же начать разработку VR для Веба? Эта статья познакомит вас с основами.
 
-> **Примечание:** Наиболее стабильная версия WebVR API — 1.1 — была недавно реализована в Firefox 55 (для Windows в релизной версии, для Mac OS X только в Nightly версии). Так же она доступна в Chrome при использовании Google Daydream. Существует спецификация для следующей версии — 2.0 — но процесс разработки всё ещё находится на ранней стадии. Последнюю информацию можно найти на [WebVR Spec Version List](https://w3c.github.io/webvr/).
+> [!NOTE]
+> Наиболее стабильная версия WebVR API — 1.1 — была недавно реализована в Firefox 55 (для Windows в релизной версии, для Mac OS X только в Nightly версии). Так же она доступна в Chrome при использовании Google Daydream. Существует спецификация для следующей версии — 2.0 — но процесс разработки всё ещё находится на ранней стадии. Последнюю информацию можно найти на [WebVR Spec Version List](https://w3c.github.io/webvr/).
 
 ## С чего начать
 
@@ -31,11 +32,14 @@ WebVR API - фантастическое дополнение к набору и
 
 ![](capture1.png)
 
-> **Примечание:** вы можете найти [исходный код примера](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) на GitHub, а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvr-tests/raw-webgl-example/).
->
-> Примечание: если вы решили просто посмотреть на этот пример, не подключая VR устройство и не используя Firefox , то есть вероятность, что он не будет корректно отображаться при том, что [простой A-Frame пример](https://mdn.github.io/webvr-tests/aframe-demo/) работает. В таком случае установите одну из последних версий Firefox, и пример должен отобразиться как на рисунке выше, плюс должна присутствовать анимация.
+> [!NOTE]
+> Вы можете найти [исходный код примера](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) на GitHub, а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvr-tests/raw-webgl-example/).
 
-> **Примечание:** Если WebVR не работает в вашем браузере, то возможно вам следует убедиться, что работа идёт через видеокарту. Например, для видеокарт фирмы NVIDIA, если у вас успешно установлена панель управления NVIDIA, по клику правой кнопки на ярлык Firefox появится контекстное меню, в котором можно будет выбрать _Run with graphics processor > High-performance NVIDIA processor_.
+> [!NOTE]
+> Если вы решили просто посмотреть на этот пример, не подключая VR устройство и не используя Firefox , то есть вероятность, что он не будет корректно отображаться при том, что [простой A-Frame пример](https://mdn.github.io/webvr-tests/aframe-demo/) работает. В таком случае установите одну из последних версий Firefox, и пример должен отобразиться как на рисунке выше, плюс должна присутствовать анимация.
+
+> [!NOTE]
+> Если WebVR не работает в вашем браузере, то возможно вам следует убедиться, что работа идёт через видеокарту. Например, для видеокарт фирмы NVIDIA, если у вас успешно установлена панель управления NVIDIA, по клику правой кнопки на ярлык Firefox появится контекстное меню, в котором можно будет выбрать _Run with graphics processor > High-performance NVIDIA processor_.
 
 Наш пример это своеобразный святой Грааль примеров WebGL — вращающийся куб в 3D. Реализован этот пример с помощью чистого [WebGL API](/ru/docs/Web/API/WebGL_API). Мы не будем объяснять основы JavaScript или WebGL, а только то, что касается WebVR.
 
@@ -46,7 +50,8 @@ WebVR API - фантастическое дополнение к набору и
 
 При просмотре исходного кода [основного JavaScript файла нашего примера](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js), вы легко сможете найти части, относящиеся к WebVR, по предваряющим их комментариям. Просто забейте в строку поиска по документу строчку "WebVR".
 
-> **Примечание:** Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn/JavaScript) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
+> [!NOTE]
+> Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn/JavaScript) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
 
 ## Как это работает?
 
@@ -152,7 +157,8 @@ Inside the promise `then()` block, we check whether the array length is more tha
           console.log('Display found');
 ```
 
-> **Примечание:** It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.
+> [!NOTE]
+> It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.
 
 ### Starting and stopping the VR presentation
 
@@ -453,11 +459,11 @@ You should note that we've used a conditional expression to detect whether the l
 
 ## WebVR events
 
-The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/ru/docs/Web/API/WebVR_API#Window_events)). For example:
+The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/ru/docs/Web/API/WebVR_API#window_events)). For example:
 
-- {{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-- {{event("vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
-- {{event("vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
+- [`vrdisplaypresentchange`](/ru/docs/Web/API/Window/vrdisplaypresentchange_event) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
+- [`vrdisplayconnect`](/ru/docs/Web/API/Window/vrdisplayconnect_event) — Fires when a compatible VR display has been connected to the computer.
+- [`vrdisplaydisconnect`](/ru/docs/Web/API/Window/vrdisplaydisconnect_event) — Fires when a compatible VR display has been disconnected from the computer.
 
 To demonstrate how they work, our simple demo includes the following example:
 

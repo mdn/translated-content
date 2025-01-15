@@ -25,7 +25,8 @@ l10n:
 
 ## 使用上の注意
 
-> **メモ:** Firefox では、`loading` 属性は `src` 属性の前に定義しなければならず、そうでなければ効果がありません（[Firefox バグ 1647077](https://bugzil.la/1647077)）。
+> [!NOTE]
+> Firefox では、`loading` 属性は `src` 属性の前に定義しなければならず、そうでなければ効果がありません（[Firefox バグ 1647077](https://bugzil.la/1647077)）。
 
 ### JavaScript を有効にする必要がある
 

@@ -58,7 +58,7 @@ console.log(A() && B());
 
 ### Précédence des opérateurs
 
-Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js-nolint
 true || false && false; // renvoie true, car && est exécuté en premier
@@ -125,8 +125,8 @@ bCondition1 || (bCondition2 && bCondition3);
 
 sera toujours égale à :
 
-```js
-bCondition1 || (bCondition2 && bCondition3);
+```js-nolint
+bCondition1 || bCondition2 && bCondition3;
 ```
 
 ## Spécifications

@@ -22,7 +22,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 
 #### 新機能
 
-- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/CSS_Masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
+- すべての `mask-*` 個別指定プロパティ ([CSS マスク](/ja/docs/Web/CSS/CSS_masking) をご覧ください) が、デフォルトで使用可能になりました ([Firefox バグ 1251161](https://bugzil.la/1251161))。
 - {{cssxref("caret-color")}} プロパティを追加しました ([Firefox バグ 1063162](https://bugzil.la/1063162))。
 - {{cssxref("place-items")}}/{{cssxref("place-self")}}/{{cssxref("place-content")}} 一括指定プロパティを実装しました ([Firefox バグ 1319958](https://bugzil.la/1319958))。
 - {{cssxref("display")}} プロパティに値 `flow-root` を追加しました ([Firefox バグ 1322191](https://bugzil.la/1322191))。
@@ -57,7 +57,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - {{domxref("CompositionEvent.CompositionEvent", "CompositionEvent")}} コンストラクターを実装しました ([Firefox バグ 1002256](https://bugzil.la/1002256))。
 - {{domxref("MouseEvent.clientX")}}/{{domxref("MouseEvent.clientY")}} の別名である {{domxref("MouseEvent.x")}} および {{domxref("MouseEvent.y")}} を実装しました ([Firefox バグ 424390](https://bugzil.la/424390))。
 - {{domxref("Element/auxclick_event", "auxclick")}} イベントと、これに対応するイベントハンドラーを実装しました ([Firefox バグ 1304044](https://bugzil.la/1304044))。
-- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/CSS_Transitions) をキャンセルした後に発生するようになりました。
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}} イベントが、[トランジション](/ja/docs/Web/CSS/CSS_transitions) をキャンセルした後に発生するようになりました。
 
 ### DOM
 
@@ -68,7 +68,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 - 非推奨の {{domxref("Node.rootNode")}} プロパティを置き換える、{{domxref("Node.getRootNode()")}} を実装しました ([Firefox バグ 1269155](https://bugzil.la/1269155))。
 - {{domxref("Plugin")}} および {{domxref("PluginArray")}} オブジェクト特有のプロパティが、enumerable ではなくなりました ([Firefox バグ 1270366](https://bugzil.la/1270366))。
 - {{domxref("MimeTypeArray")}} オブジェクトの名前付きプロパティが、enumerable ではなくなりました ([Firefox バグ 1270364](https://bugzil.la/1270364))。
-- [Permissions API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query()")}} で使用するパーミッション名で、新たに `persistent-storage` が使用可能になりました ([Firefox バグ 1270038](https://bugzil.la/1270038))。これは [Storage API](https://storage.spec.whatwg.org/) による、持続的なボックス (すなわち [persistent storage](https://storage.spec.whatwg.org/#persistence)) をオリジンに許可します。
+- [権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.query()")}} で使用するパーミッション名で、新たに `persistent-storage` が使用可能になりました ([Firefox バグ 1270038](https://bugzil.la/1270038))。これは [Storage API](https://storage.spec.whatwg.org/) による、持続的なボックス (すなわち [persistent storage](https://storage.spec.whatwg.org/#persistence)) をオリジンに許可します。
 
 ### ワーカーおよびサービスワーカー
 
@@ -128,7 +128,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 
 ### CSS
 
-- {{cssxref(":dir", ":dir()")}} 疑似クラスの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1270406](https://bugzil.la/1270406))。
+- {{cssxref(":dir", ":dir()")}} 擬似クラスの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1270406](https://bugzil.la/1270406))。
 - {{cssxref("text-align-last")}} の、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1276808](https://bugzil.la/1276808))。
 - {{cssxref("calc", "calc()")}} メソッドの、`-moz` 接頭辞がついた派生形を削除しました ([Firefox バグ 1331296](https://bugzil.la/1331296))。
 - 独自仕様である `-moz-samplesize` media fragment (メモリーが少ない Firefox OS 端末にダウンサンプリングした画像を提供することを支援するために追加しました。[Firefox バグ 854795](https://bugzil.la/854795) をご覧ください) を削除しました ([Firefox バグ 1311246](https://bugzil.la/1311246))。
@@ -158,7 +158,7 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 向上した API:
 
 - [`storage.sync`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage/sync)
-- [`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus) の [context タイプ](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType) として `page_action`、`browser_action`、`password`, `tab`
+- [`contextMenus`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus) の [context タイプ](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) として `page_action`、`browser_action`、`password`, `tab`
 - [`webRequest.onBeforeRequest`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) で `requestBody` をサポート
 - [`tabs.insertCSS`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) で `cssOrigin` をサポート。ユーザースタイルシートが挿入可能になります。
 

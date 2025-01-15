@@ -5,7 +5,8 @@ slug: Web/CSS/page-break-inside
 
 {{CSSRef}}
 
-> **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.
+> [!WARNING]
+> Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.
 
 La propriété **`page-break-inside`** ajuste la façon dont sont appliqués les sauts de page au sein de l'élément courant.
 

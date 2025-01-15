@@ -1,13 +1,14 @@
 ---
-title: Blob.stream()
+title: "Blob: stream() メソッド"
+short-title: stream()
 slug: Web/API/Blob/stream
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("Blob")}} インターフェイスの **`stream()`** メソッドは、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、`Blob` に含まれるデータを返します。
+**`stream()`** は {{domxref("Blob")}} インターフェイスのメソッドで、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、`Blob` に含まれるデータを返します。
 
 ## 構文
 

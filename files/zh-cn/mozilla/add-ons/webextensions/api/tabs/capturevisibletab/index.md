@@ -9,7 +9,8 @@ l10n:
 
 创建一个编码了给定标签页区域图像的数据 URL。你必须拥有 `<all_urls>` 或 `activeTab` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
-> **备注：** 在 Firefox 125 及更早版本中，此方法仅在拥有 `<all_urls>` 权限时可用。
+> [!NOTE]
+> 在 Firefox 125 及更早版本中，此方法仅在拥有 `<all_urls>` 权限时可用。
 
 除了扩展通常可以访问的站点之外，这种方法还允许扩展捕获那些通常受限制的敏感站点，包括浏览器用户界面页面和其他扩展的页面。只有通过 `activeTab` 权限才能捕获这些敏感站点。当扩展获得文件访问权限时，Chrome 也允许捕获文件 URL。
 
@@ -58,7 +59,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-captureVisibleTab) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.google.cn/docs/extensions/reference/api/tabs#method-captureVisibleTab) API。本文档内容源自 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

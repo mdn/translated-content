@@ -7,7 +7,7 @@ slug: Web/Manifest
 
 Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
 
-Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Apps/Progressive) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
+Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Progressive_web_apps) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
 
 ## Déployer un manifeste
 
@@ -79,7 +79,8 @@ Définit la couleur de fond attendue pour l'application web. Cette valeur répè
 "background_color": "red"
 ```
 
-> **Note :** Le membre Background_color est uniquement destiné à améliorer l'expérience de l'utilisateur alors qu'une application Web est en cours de chargement et ne doit pas être utilisé par l'agent utilisateur comme couleur d'arrière-plan lorsque la feuille de style de l'application Web est disponible
+> [!NOTE]
+> Le membre Background_color est uniquement destiné à améliorer l'expérience de l'utilisateur alors qu'une application Web est en cours de chargement et ne doit pas être utilisé par l'agent utilisateur comme couleur d'arrière-plan lorsque la feuille de style de l'application Web est disponible
 
 ### `description`
 
@@ -105,7 +106,8 @@ Il peut contenir l'une des valeurs suivantes :
 - `rtl` (de droite à gauche)
 - `auto` (conseille au navigateur d'utiliser l'algorithme bidirectionnel Unicode pour mieux comprendre la direction du texte.)
 
-> **Note :** si la valeur est omise, c'est auto par défaut.
+> [!NOTE]
+> Si la valeur est omise, c'est auto par défaut.
 
 ### `display`
 
@@ -124,7 +126,8 @@ Les valeurs valides sont :
 | `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
 
-> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> [!NOTE]
+> Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant la fonction [display-mode](/fr/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
 
 ### `icons`
 
@@ -231,7 +234,8 @@ Une valeur boléenne qui indique à l'agent utilisateur si une application liée
 "prefer_related_applications": "false"
 ```
 
-> **Note :** Si elle est omise, la valeur par défaut est "false".
+> [!NOTE]
+> Si elle est omise, la valeur par défaut est "false".
 
 ### `related_applications`
 

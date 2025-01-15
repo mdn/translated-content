@@ -46,7 +46,8 @@ animation-timing-function: revert-layer;
 animation-timing-function: unset;
 ```
 
-> **备注：** 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#setting_multiple_animation_property_values)。
+> [!NOTE]
+> 当你在 `animation-*` 属性上指定多个以逗号分隔的值时，它们将根据值的数量以不同的方式分配给 {{cssxref("animation-name")}} 属性中指定的动画。有关更多信息，请参阅[设置多个动画属性值](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)。
 
 ### 值
 
@@ -245,7 +246,7 @@ animation-timing-function: unset;
 
 ## 参见
 
-- [使用 CSS 动画](/zh-CN/docs/CSS/Tutorials/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
 - [cubic-bezier.com](https://cubic-bezier.com)

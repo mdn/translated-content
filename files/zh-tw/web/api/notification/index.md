@@ -68,7 +68,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 - {{domxref("Notification.onclick")}}
   - : 一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件的 handler。每次使用者點擊 Notification 都會被觸發。
 - {{domxref("Notification.onerror")}}
-  - : 一個 [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
+  - : 一個 [`error`](/zh-TW/docs/Web/API/HTMLElement/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
 
 #### 停止支援的事件處理器
 
@@ -90,7 +90,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 
 ### 實例方法
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+These properties are available only on an instance of the `Notification` object or through its [`prototype`](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
 - {{domxref("Notification.close()")}}
   - : 透過這個方法關閉 Notification 。
@@ -135,7 +135,7 @@ function notifyMe() {
 
 {{EmbedLiveSample('範例', '100%', 30)}}
 
-在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)) 之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：
+在很多時候，你應該不會想要這麼冗長的程式碼。 比如說，在我們的 [Emogotchi demo](https://chrisdavidmills.github.io/emogotchi/) ([see source code](https://github.com/chrisdavidmills/emogotchi)) 之中，我們只寫了 {{domxref("Notification.requestPermission")}} 而不用進一步檢查是否已經獲得了權限：
 
 ```js
 Notification.requestPermission();

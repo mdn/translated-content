@@ -9,7 +9,8 @@ l10n:
 
 **`Document.contentType`** 只读属性表示返回文档正在渲染的 MIME 类型。这可能来自 HTTP 标头或其他 MIME 信息源，并且可能会受到浏览器或扩展程序执行的自动类型转换的影响。
 
-> **备注：** 该属性不受 {{HTMLElement("meta")}} 元素的影响。
+> [!NOTE]
+> 该属性不受 {{HTMLElement("meta")}} 元素的影响。
 
 ## 值
 

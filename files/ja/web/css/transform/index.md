@@ -2,18 +2,21 @@
 title: transform
 slug: Web/CSS/transform
 l10n:
-  sourceCommit: fca9bb892a6016c09620a1e3aed3d84ce3780615
+  sourceCommit: 8dd227b90abeed60434970aff3da9776d1f24d67
 ---
 
 {{CSSRef}}
 
-**`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。
+**`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
+これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)の座標空間を変更します。
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-このプロパティに `none` 以外の値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
+このプロパティに `none` とは異なる値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。
+この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
 
-> **警告:** 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
+> [!WARNING]
+> 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
 
 ## 構文
 
@@ -46,7 +49,7 @@ transform: skewY(1.07rad);
 
 /* 複数の関数値 */
 transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+transform: perspective(500px) translate3d(10px, 0, 20px) rotateY(30deg);
 
 /* グローバル値 */
 transform: inherit;
@@ -58,16 +61,15 @@ transform: unset;
 
 `transform` プロパティには、キーワード値 `none` か 1 つ以上の `<transform-function>` の値のいずれかが指定されます。
 
-複数の関数値に {{cssxref("transform-function/perspective", "perspective()")}} が含まれる場合は、先頭に置く必要があります。
-
 ### 値
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。座標変換関数は、左から右へ順に重ねられ、つまり[右から左の順に座標変換の合成の効果が適用されます](#座標変換の順序)。
+  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。
+    座標変換関数は、左から右へ順に重ねられ、つまり[右から左の順に座標変換の合成の効果が適用されます](#座標変換の順序)。
 - `none`
   - : 座標変換を何も適用しないことを指定します。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
 
@@ -92,13 +94,13 @@ transform: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___translating_and_rotating_an_element
 <div>座標変換された要素</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___translating_and_rotating_an_element
 div {
   border: solid red;
   transform: translate(30px, 20px) rotate(20deg);
@@ -109,7 +111,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("要素の移動と回転", "400", "160")}}
+{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
 ### 座標変換の順序
 
@@ -117,7 +119,7 @@ div {
 
 #### HTML
 
-```html
+```html live-sample___transform_order
 <div class="original"></div>
 <div class="one">1</div>
 <div class="two">2</div>
@@ -125,7 +127,7 @@ div {
 
 #### CSS
 
-```css hidden
+```css hidden live-sample___transform_order
 div {
   height: 200px;
   width: 200px;
@@ -160,7 +162,7 @@ div {
 }
 ```
 
-```css
+```css live-sample___transform_order
 .one {
   transform: translateX(200px) rotate(135deg);
 }
@@ -192,4 +194,4 @@ div {
 - [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} データ型にすべての座標変換関数の説明があります
 - 独立した CSS プロパティ: {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} （`skew` プロパティはありません）
-- CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)
+- CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)（英語）

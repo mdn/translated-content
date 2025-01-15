@@ -162,7 +162,7 @@ td {
 
 ## 參見
 
-- [學習：HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
+- [學習：HTML 表格](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - {{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他與表格相關的元素
 - {{cssxref("caption-side")}}：CSS 屬性，用於將 `<caption>` 定位相對於其父元素 {{HTMLElement("table")}}
 - {{cssxref("text-align")}}：CSS 屬性，用於水平對齊 `<caption>` 的文本內容

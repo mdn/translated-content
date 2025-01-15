@@ -7,7 +7,7 @@ slug: Web/API/Navigator/getBattery
 
 ## Resumo
 
-O objeto `battery` fornece informações sobre o nível de carga da bateria do sistema; você pode também escutar eventos enviados por ele que fornecem atualizações sobre o status atual da carga. Isso implementa a [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status); consulte essa documentação para mais detalhes, um guia de utilização da API e códigos de exemplo.
+O objeto `battery` fornece informações sobre o nível de carga da bateria do sistema; você pode também escutar eventos enviados por ele que fornecem atualizações sobre o status atual da carga. Isso implementa a [Battery Status API](/pt-BR/docs/Web/API/Battery_Status_API); consulte essa documentação para mais detalhes, um guia de utilização da API e códigos de exemplo.
 
 ## Sintaxe
 
@@ -21,16 +21,16 @@ var battery = window.navigator.battery;
 
 ## Especificações
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## Veja também
 
 - {{domxref("BatteryManager")}}
-- the [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status) article
-- [Blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
-- [David Walsh on the JavaScript Battery Api](http://davidwalsh.name/battery-api)
+- the [Battery Status API](/pt-BR/docs/Web/API/Battery_Status_API) article
+- [Blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [David Walsh on the JavaScript Battery Api](https://davidwalsh.name/battery-api)
 - [battery.js - a tiny cross-browser wrapper](https://github.com/pstadler/battery.js)

@@ -13,7 +13,8 @@ l10n:
 
 只有可以应用于 {{cssxref("::first-line")}} 伪元素的 CSS 属性子集可以在使用了 `::placeholder` 选择器的规则中使用。
 
-> **备注：** 对于大多数浏览器，占位文本的外观默认为半透明或浅灰色。
+> [!NOTE]
+> 对于大多数浏览器，占位文本的外观默认为半透明或浅灰色。
 
 ## 语法
 
@@ -134,4 +135,4 @@ input::placeholder {
 
 - {{cssxref(":placeholder-shown")}} 伪类用于设置*具有*激活的占位符的元素的样式。
 - 相关的 HTML 元素：{{HTMLElement("input")}}、{{HTMLElement("textarea")}}
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)

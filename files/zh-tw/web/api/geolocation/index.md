@@ -9,7 +9,8 @@ slug: Web/API/Geolocation
 
 {{domxref("Navigator")}} 此物件實作了 {{domxref("Navigator.geolocation")}} 介面。
 
-> **備註：** 因為隱私的因素，當網頁要求存取位置資訊時，用戶會被提示通知並且詢問授權與否。注意不同的瀏覽器在詢問授權時有各自不同的策略和方式。
+> [!NOTE]
+> 因為隱私的因素，當網頁要求存取位置資訊時，用戶會被提示通知並且詢問授權與否。注意不同的瀏覽器在詢問授權時有各自不同的策略和方式。
 
 ## 性質
 
@@ -36,4 +37,4 @@ _`Geolocation` 介面沒有繼承也沒有時做任何方法_。
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)

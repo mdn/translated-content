@@ -67,7 +67,7 @@ l10n:
 > - `\{{APIRef("GroupDataName")}}` — esto genera un menú lateral de referencia del lado izquierdo que muestra enlaces de referencia rápida relacionados con la página actual.
 >   Por ejemplo, cada página en la [WebVR API](/es/docs/Web/API/WebVR_API) tiene el mismo menú lateral, que apunta a las otras páginas en la API.
 >   Para generar el menú lateral correcto para su API, debe agregar una entrada `GroupData` a nuestro repositorio de GitHub e incluir el nombre de la entrada dentro de la llamada a la macro en lugar de _GroupDataName_.
->   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
+>   Vea nuestra [guía de menús laterales de referencia de API](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) para obtener información sobre cómo hacerlo. Recuerde eliminar el macro `\{{MDNSidebar}}` cuando copie esta página.
 >
 > Se muestran ejemplos de los banners **Experimental**, **Contexto seguro** y **Desaprobado** justo después de este bloque de notas.
 >
@@ -115,7 +115,8 @@ Cada ejemplo debe tener un encabezado H3 que nombre el ejemplo. El encabezado de
 
 Consulte nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
-> **Nota:** A veces querrá enlazar a ejemplos dados en otra página.
+> [!NOTE]
+> A veces querrá enlazar a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos más en otra página:
 >

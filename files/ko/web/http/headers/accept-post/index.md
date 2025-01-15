@@ -7,13 +7,14 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Post`** 응답 HTTP 헤더는 HTTP 포스트 요청에 대해 서버가 수락하는 [미디어 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)을 알립니다.
+**`Accept-Post`** 응답 HTTP 헤더는 HTTP 포스트 요청에 대해 서버가 수락하는 [미디어 유형](/ko/docs/Web/HTTP/MIME_types)을 알립니다.
 
 모든 메소드에 대한 응답으로 **`Accept-Post`** 를 사용하면 요청된 리소스에서 `POST`가 허용됨을 의미합니다. 헤더의 모든 문서/미디어 형식은 해당 문서 형식이 허용됨을 추가로 나타냅니다.
 
 예를 들어, 지원되지 않는 미디어 유형이 포함된 `POST` 요청을 수신하는 서버는 {{HTTPStatus("415")}} `Unsupported Media Type`과 하나 이상의 지원되는 미디어 유형을 참조하는 **`Accept-Post`** 헤더를 사용하여 응답할 수 있습니다.
 
-> **참고:** IANA 레지스트리는 [공식 콘텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 유지 관리합니다.
+> [!NOTE]
+> IANA 레지스트리는 [공식 콘텐츠 인코딩의 전체 목록](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)을 유지 관리합니다.
 
 <table class="properties">
   <tbody>

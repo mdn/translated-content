@@ -94,5 +94,5 @@ window.onload = function () {
 
 ## 参见
 
-- [Hyperaudio's Playback Rate Test](http://hyperaud.io/lab/pbr-test/)
+- [Hyperaudio's Playback Rate Test](https://hyperaud.io/lab/pbr-test/)
 - [HTMLMediaElement reference](/zh-CN/docs/Web/API/HTMLMediaElement)

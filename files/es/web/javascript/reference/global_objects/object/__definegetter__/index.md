@@ -5,7 +5,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 
 {{JSRef}}
 
-> **Advertencia:** Esta característica está obsoleta en favor de definir getters usando el [object initializer syntax](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer) o la API {{jsxref("Object.defineProperty()")}}.
+> [!WARNING]
+> Esta característica está obsoleta en favor de definir getters usando el [object initializer syntax](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer) o la API {{jsxref("Object.defineProperty()")}}.
 >
 > En todo caso, como es ampliamente implementada y usada en la Web, es poco probable que los navegadores dejen de implementarla.
 
@@ -74,6 +75,6 @@ console.log(o.gimmeFive); // 5
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JS Guide: Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [JS Guide: Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - [Error 647423 en Firefox](https://bugzil.la/647423)

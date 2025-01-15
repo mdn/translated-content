@@ -19,7 +19,7 @@ Un {{domxref("USVString")}} conteniendo la ruta del archivo relativa al director
 
 ## Ejemplo
 
-En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento [`change`](/es/docs/Web/Reference/Events/change) ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.
+En este ejemplo,un seleccionador de directorios es mostrado al usuario para permitirle seleccionar uno o mas directorios. Cuando el evento [`change`](/es/docs/Web/API/HTMLElement/change_event) ocurre, una lista de todos los archivos contenidos dentro de la gerarquia de directorio seleccionado es generado y mostrado.
 
 ### HTML
 

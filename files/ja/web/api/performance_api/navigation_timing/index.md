@@ -1,80 +1,62 @@
 ---
-title: Navigation Timing API
+title: ナビゲーションタイミング
 slug: Web/API/Performance_API/Navigation_timing
+l10n:
+  sourceCommit: 6af9224dbbd5263ffa46dd63e742cd2471e46f95
 ---
 
-{{DefaultAPISidebar("Navigation Timing")}}
+{{DefaultAPISidebar("Performance API")}}
 
-**Navigation Timing API** は、ウェブサイトのパフォーマンス計測に使用できるデータを提供します。同じ目的に使用される他の JavaScript ベースの機構と異なり、この API はエンドツーエンドのさらに役立つ正確な遅延データを提供できます。
+ナビゲーションタイミングは、パフォーマンスAPI の一部であり、1 つのページから別のページへの移動に関連する測定基準を指定します。例えば、文書内の読み込みまたは読み込み解除に要する時間を決定したり、{{Glossary("DOM")}} の構築が完了し、DOM 操作が可能な状態になるまでの時間を記録したりすることができます。
 
-以下の例は、知覚できる読み込み時間の計測方法です:
+現在の文書のみが含まれているため、通常は観察するオブジェクトは {{domxref("PerformanceNavigationTiming")}} の 1 つだけです。これは、 {{domxref("PerformanceEntry")}} インターフェイスを `"navigation"` の {{domxref("PerformanceEntry.entryType","entryType")}} で拡張し、{{domxref("PerformanceResourceTiming")}} も継承しているため、文書を読み取るプロセスにおけるタイムスタンプもすべて利用できます。
 
-```
-function onLoad() {
-  var now = new Date().getTime();
-  var page_load_time = now - performance.timing.navigationStart;
-  console.log("User-perceived page loading time: " + page_load_time);
-}
-```
+{{InheritanceDiagram("PerformanceNavigationTiming")}}
 
-数ミリ秒の間に多くの計測イベントが発生し、これらは {{domxref("PerformanceTiming")}} インターフェイスを通してアクセスできます。以下は発生順のイベントリストです:
+## ナビゲーションタイムスタンプ
 
-- navigationStart
-- unloadEventStart
-- unloadEventEnd
-- redirectStart
-- redirectEnd
-- fetchStart
-- domainLookupStart
-- domainLookupEnd
-- connectStart
-- connectEnd
-- secureConnectionStart
-- requestStart
-- responseStart
-- responseEnd
-- domLoading
-- domInteractive
-- domContentLoadedEventStart
-- domContentLoadedEventEnd
-- domComplete
-- loadEventStart
-- loadEventEnd
+![文書内のタイムスタンプが、取得した順番に列挙されているタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
+図 1 ナビゲーションタイムスタンプ（[引用元](https://w3c.github.io/navigation-timing/#process)）
 
-`window.performance.navigation` オブジェクトは 2 個の属性を格納しており、ページの読み込みが何によって起こされたか (リダイレクト、戻る・進むボタン、通常の URL 読み込み) を知るために使用します。
+文書のナビゲーションタイムスタンプは（[リソースタイミング](/ja/docs/Web/API/Performance_API/Resource_timing)からのものに加えて）次のとおりです。
 
-window\.performance.navigation.type:
+1. {{domxref("PerformanceEntry.startTime","startTime")}}: 常に 0 です。
+2. {{domxref("PerformanceNavigationTiming.unloadEventStart","unloadEventStart")}}: （直前のの文書がある場合）現在の文書で [`unload`](/ja/docs/Web/API/Window/unload_event) イベントハンドラーが開始する直前のタイムスタンプ。
+3. {{domxref("PerformanceNavigationTiming.unloadEventEnd","unloadEventEnd")}}: （直前のの文書がある場合）現在の文書で [`unload`](/ja/docs/Web/API/Window/unload_event) イベントハンドラーが完了した直後のタイムスタンプ。
+4. {{domxref("PerformanceNavigationTiming.domInteractive","domInteractive")}}: DOM の構築が完了し、JavaScript で操作可能な状態になったことを示すタイムスタンプ。
+5. {{domxref("PerformanceNavigationTiming.domContentLoadedEventStart","domContentLoadedEventStart")}}: 現在の文書で [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントハンドラーが開始する直前のタイムスタンプ。
+6. {{domxref("PerformanceNavigationTiming.domContentLoadedEventEnd","domContentLoadedEventEnd")}}: 現在の文書で [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントハンドラーが完了した直後のタイムスタンプ。
+7. {{domxref("PerformanceNavigationTiming.domComplete","domComplete")}}: 文書内のすべてのサブリソースの読み込みが完了した時点のタイムスタンプ。
+8. {{domxref("PerformanceNavigationTiming.loadEventStart","loadEventStart")}}: 現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントハンドラーが開始する直前のタイムスタンプ。
+9. {{domxref("PerformanceNavigationTiming.loadEventEnd","loadEventEnd")}}: 現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントハンドラーが完了した直後のタイムスタンプ。
 
-| 定数                | 値  | 説明                                                                                                                                                                                                                  |
-| ------------------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TYPE_NAVIGATE`     | 0   | リンクのクリックにより開始されたナビゲーション、ユーザーエージェントのアドレスバーへの URL 入力、フォーム送信、または下記の TYPE_RELOAD および TYPE_BACK_FORWARD の使用によるもの以外のスクリプト操作を通した初期化。 |
-| `TYPE_RELOAD`       | 1   | 再読み込み操作を通したナビゲーションまたは location.reload() メソッド。                                                                                                                                               |
-| `TYPE_BACK_FORWARD` | 2   | 履歴をたどる操作を通したナビゲーション。 Navigation through a history traversal operation.                                                                                                                            |
-| `TYPE_UNDEFINED`    | 255 | 上記に定義されていない形式の任意のナビゲーション。                                                                                                                                                                    |
+## その他のプロパティ
 
-`window.performance.navigation.redirectCount` は、リダイレクトが発生した場合の、最終的なページへ到達するまでの間のリダイレクト数を示します。
-
-Navigation Timing API は、クライアント側でパフォーマンスデータを収集して XHR 経由でサーバーへ送信することに使用できます。また、前のページのアンロード時間やドメインの検索時間、window\.onload の合計時間など、計測が困難なデータの計測に使用できます。
+{{domxref("PerformanceNavigationTiming")}} インターフェイスは、リダイレクトの回数を返す {{domxref("PerformanceNavigationTiming.redirectCount","redirectCount")}} や、ナビゲーションの種類を示す {{domxref("PerformanceNavigationTiming.type","type")}} など、追加のプロパティを提供しています。
 
 ## 例
 
-ページの読み込みに必要な合計時間を計算します:
+`domContentLoadedEventEnd` と `domContentLoadedEventStart` のタイムスタンプを使用して、 [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントハンドラーの処理に要した時間を測定することができます。
 
+例えば、{{domxref("PerformanceObserver")}} を使用すると、ブラウザーのパフォーマンスタイムラインに新しい `navigation` パフォーマンス項目が記録されるたびに、呼び出し側に通知されます。例えば、オブザーバーが作成される前に記録された項目にアクセスするために、`buffered` オプションを使用します。
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const domContentLoadedTime =
+      entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
+    console.log(
+      `${entry.name}: DOMContentLoaded 処理時間: ${domContentLoadedTime}ms`,
+    );
+  });
+});
+
+observer.observe({ type: "navigation", buffered: true });
 ```
-var perfData = window.performance.timing;
-var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-```
 
-リクエストの応答時間を計算します:
+その他の例については、{{domxref("PerformanceNavigationTiming")}} リファレンスドキュメント内のプロパティページを参照してください。
 
-```
-var connectTime = perfData.responseEnd - perfData.requestStart;
-```
+## 関連情報
 
-### 仕様
-
-- <https://w3c.github.io/navigation-timing/>
-
-## ブラウザーの実装状況
-
-{{Compat}}
+- {{domxref("PerformanceNavigationTiming")}}
+- {{domxref("PerformanceResourceTiming")}}

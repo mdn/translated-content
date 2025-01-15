@@ -59,14 +59,15 @@ var obj = {
 };
 ```
 
-> **备注：** 简写语法使用具名函数而不是匿名函数（如…`foo: function() {}`…）。具名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。
+> [!NOTE]
+> 简写语法使用具名函数而不是匿名函数（如…`foo: function() {}`…）。具名函数可以从函数体调用（这对匿名函数是不可能的，因为没有标识符可以引用）。详细信息，请参阅{{jsxref("Operators/function","function","#Examples")}}。
 
 ### 生成器方法
 
 [生成器方法](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)也可以用这种简写语法定义。使用它们时，
 
 - 简写语法中的星号（\*）必须出现在生成器名前，也就是说`* g(){}`可以正常工作，而`g *(){}`不行。
-- 非生成器方法定义可能不包含`yield`关键字。这意味着[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用`yield`与星号（\*）结合使用。
+- 非生成器方法定义可能不包含`yield`关键字。这意味着[遗留的生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)也不会工作，并且将抛出 {{jsxref("SyntaxError")}}。始终使用`yield`与星号（\*）结合使用。
 
 ```js
 // 用有属性名的语法定义方法（ES6 之前）：

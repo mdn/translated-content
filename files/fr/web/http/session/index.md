@@ -17,9 +17,10 @@ Dans les protocoles client-serveur, comme HTTP, les sessions se composent de tro
 
 Dans les protocoles client-serveur, c'est le client qui établit la connexion. L'ouverture d'une connexion en HTTP signifie l'initiation d'une connexion dans la couche de transport sous-jacente, généralement TCP.
 
-Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le port 80. D'autres ports peuvent également être utilisés, comme 8000 ou 8080. L'URL d'une page à récupérer contient à la fois le nom de domaine et le numéro de port, Ce dernier peut être omis s'il en est à 80. Voir [Identifying resources on the Web](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) pour plus de details.
+Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le port 80. D'autres ports peuvent également être utilisés, comme 8000 ou 8080. L'URL d'une page à récupérer contient à la fois le nom de domaine et le numéro de port, Ce dernier peut être omis s'il en est à 80. Voir [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) pour plus de details.
 
-> **Note :** Le modèle client-serveur n'autorise pas le serveur à envoyer des données au client sans une demande explicite. Pour contourner ce problème, les développeurs Web utilisent plusieurs techniques: effectuer un ping sur le serveur périodiquement via le {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} API, en utilisant le HTML [WebSockets API](/fr/WebSockets), ou des protocoles similaires.
+> [!NOTE]
+> Le modèle client-serveur n'autorise pas le serveur à envoyer des données au client sans une demande explicite. Pour contourner ce problème, les développeurs Web utilisent plusieurs techniques: effectuer un ping sur le serveur périodiquement via le {{domxref("XMLHTTPRequest")}}, {{domxref("Fetch")}} API, en utilisant le HTML [WebSockets API](/fr/WebSockets), ou des protocoles similaires.
 
 ## Envoi d'une demande client
 
@@ -58,14 +59,14 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### Méthodes de demande
 
-HTTP définit un ensemble de [méthodes de requête](/fr/docs/HTTP/Méthode) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
+HTTP définit un ensemble de [méthodes de requête](/fr/docs/Web/HTTP/Methods) indiquant l'action souhaitée à effectuer sur une ressource. Bien qu'ils puissent également être des noms, ces méthodes de requêtes sont parfois appelées verbes HTTP. Les requêtes les plus courantes sont `GET` et `POST` :
 
 - La méthode {{HTTPMethod ("GET")}} demande une représentation de données de la ressource spécifiée. Les requêtes utilisant `GET` ne doivent que récupérer les données.
-- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires).
+- La méthode {{HTTPMethod ("POST")}} envoie des données à un serveur afin qu'il puisse changer son état. C'est la méthode souvent utilisée pour les [formulaires HTML](/fr/docs/Learn/Forms).
 
 ## Structure d'une réponse du serveur
 
-Une fois que l'agent connecté a envoyé sa requête, le serveur Web le traite et finalement renvoie une réponse. Similaire à une demande de client, une réponse de serveur est formée de directives de texte, séparées par [CRLF](/fr/docs/Glossaire/CRLF), mais divisées en trois blocs :
+Une fois que l'agent connecté a envoyé sa requête, le serveur Web le traite et finalement renvoie une réponse. Similaire à une demande de client, une réponse de serveur est formée de directives de texte, séparées par [CRLF](/fr/docs/Glossary/CRLF), mais divisées en trois blocs :
 
 1. La première ligne, _la ligne d'état_, consiste en une reconnaissance de la version HTTP utilisée, suivie d'une demande d'état (et sa brève signification dans un texte lisible par l'homme).
 2. Les lignes suivantes représentent des en-têtes HTTP spécifiques, en donnant aux clients des informations sur les données envoyées (par exemple, type, taille de données, algorithme de compression utilisé, conseils sur la mise en cache). De la même manière que le bloc d'en-têtes HTTP pour une demande de client, ces en-têtes HTTP forment un bloc se terminant par une ligne vide.
@@ -140,7 +141,7 @@ Content-Type: text/html
 
 ## Voir aussi
 
-- [Identifying resources on the Web](/fr/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) (en anglais)
+- [Identifying resources on the Web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) (en anglais)
 - [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- [Méthode de requête HTTP](/fr/docs/HTTP/Méthode)
+- [Méthode de requête HTTP](/fr/docs/Web/HTTP/Methods)
 - [Codes de réponse HTTP](/fr/docs/Web/HTTP/Status)

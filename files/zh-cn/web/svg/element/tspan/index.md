@@ -7,7 +7,7 @@ slug: Web/SVG/Element/tspan
 
 在 {{SVGElement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
 
-## 用法
+## 使用上下文
 
 {{svginfo}}
 
@@ -47,10 +47,10 @@ svg {
 
 ### 全局属性
 
-- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [条件处理属性](/zh-CN/docs/SVG/Attribute#conditionalproccessing) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [图形事件属性](/zh-CN/docs/SVG/Attribute#graphicalevent) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -67,7 +67,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了 [`SVGTSpanElement`](/zh-CN/DOM/SVGTSpanElement) 接口。
+该元素实现了 [`SVGTSpanElement`](/zh-CN/docs/DOM/SVGTSpanElement) 接口。
 
 ## 浏览器兼容性
 

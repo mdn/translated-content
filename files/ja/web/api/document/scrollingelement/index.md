@@ -23,7 +23,7 @@ const scrollElm = document.scrollingElement;
 scrollElm.scrollTop = 0;
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

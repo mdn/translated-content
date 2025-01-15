@@ -11,7 +11,8 @@ l10n:
 
 最新版本的规范对返回的 MIME 类型集合进行了硬编码。如果支持 PDF 文件内联查看，则会列出 `application/pdf` 和 `text/pdf`。否则返回空列表。
 
-> **备注：** 使用 {{domxref("Navigator.pdfViewerEnabled")}} 来判断是否支持 PDF 内联查看。请不要根据此属性推断。
+> [!NOTE]
+> 使用 {{domxref("Navigator.pdfViewerEnabled")}} 来判断是否支持 PDF 内联查看。请不要根据此属性推断。
 
 旧版浏览器不会硬编码此属性返回的列表，并可能返回其他 MIME 类型。
 

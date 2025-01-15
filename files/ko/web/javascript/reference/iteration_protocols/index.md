@@ -59,7 +59,8 @@ l10n:
 - `throw(exception)` {{optional_inline}}
   - : 0개 또는 1개의 인수를 허용하고 `IteratorResult` 인터페이스를 준수하는 객체를 반환하는 함수입니다. 일반적으로 `done`은 `true`입니다. 이 메서드를 호출하면 반복자에게 호출자가 오류 조건을 감지했음을 알리며, `exception`은 일반적으로 {{jsxref("Error")}} 인스턴스입니다.
 
-> **참고:** 특정 객체가 반복자 프로토콜을 구현하는지 여부를 반사적으로(즉, 실제로 `next()`를 호출하고 반환된 결과를 확인하지 않고는) 알 수 없습니다.
+> [!NOTE]
+> 특정 객체가 반복자 프로토콜을 구현하는지 여부를 반사적으로(즉, 실제로 `next()`를 호출하고 반환된 결과를 확인하지 않고는) 알 수 없습니다.
 
 반복자를 순회 가능으로 만드는 것은 매우 쉽습니다. `this`를 반환하는 `[@@iterator]()` 메서드를 구현하기만 하면 됩니다.
 
@@ -345,7 +346,7 @@ console.log(it.next().value); // 2
 
 ### 클래스로 반복자 정의하기
 
-상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)으로도 수행할 수 있습니다.
+상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)으로도 수행할 수 있습니다.
 
 ```js
 class SimpleClass {
@@ -391,7 +392,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
+`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
 
 ```js
 const iterator = someString[Symbol.iterator]();

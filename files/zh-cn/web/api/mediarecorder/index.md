@@ -68,84 +68,84 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - [`error`](/zh-CN/docs/Web/API/MediaRecorder/error_event)
   - : Fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
-    Also available via the [`onerror`](/zh-CN/docs/Web/API/MediaRecorder/onerror) property.
+    Also available via the [`onerror`](/zh-CN/docs/Web/API/MediaRecorder/error_event) property.
 
-## 例子
+## 示例
 
-```
+```js
 if (navigator.mediaDevices) {
-  console.log('getUserMedia supported.');
+  console.log("支持 getUserMedia。");
 
-  var constraints = { audio: true };
-  var chunks = [];
+  const constraints = { audio: true };
+  let chunks = [];
 
-  navigator.mediaDevices.getUserMedia(constraints)
-  .then(function(stream) {
+  navigator.mediaDevices
+    .getUserMedia(constraints)
+    .then((stream) => {
+      const mediaRecorder = new MediaRecorder(stream);
 
-    var mediaRecorder = new MediaRecorder(stream);
+      record.onclick = () => {
+        mediaRecorder.start();
+        console.log(mediaRecorder.state);
+        console.log("录制开始");
+        record.style.background = "red";
+        record.style.color = "black";
+      };
 
-    visualize(stream);
+      stop.onclick = () => {
+        mediaRecorder.stop();
+        console.log(mediaRecorder.state);
+        console.log("录制停止");
+        record.style.background = "";
+        record.style.color = "";
+      };
 
-    record.onclick = function() {
-      mediaRecorder.start();
-      console.log(mediaRecorder.state);
-      console.log("recorder started");
-      record.style.background = "red";
-      record.style.color = "black";
-    }
+      mediaRecorder.onstop = (e) => {
+        console.log("数据将在调用 MediaRecorder.stop() 后可用。");
 
-    stop.onclick = function() {
-      mediaRecorder.stop();
-      console.log(mediaRecorder.state);
-      console.log("recorder stopped");
-      record.style.background = "";
-      record.style.color = "";
-    }
+        const clipName = prompt("输入音频片段的名称");
 
-    mediaRecorder.onstop = function(e) {
-      console.log("data available after MediaRecorder.stop() called.");
+        const clipContainer = document.createElement("article");
+        const clipLabel = document.createElement("p");
+        const audio = document.createElement("audio");
+        const deleteButton = document.createElement("button");
+        const mainContainer = document.querySelector("body");
 
-      var clipName = prompt('Enter a name for your sound clip');
+        clipContainer.classList.add("clip");
+        audio.setAttribute("controls", "");
+        deleteButton.textContent = "Delete";
+        clipLabel.textContent = clipName;
 
-      var clipContainer = document.createElement('article');
-      var clipLabel = document.createElement('p');
-      var audio = document.createElement('audio');
-      var deleteButton = document.createElement('button');
+        clipContainer.appendChild(audio);
+        clipContainer.appendChild(clipLabel);
+        clipContainer.appendChild(deleteButton);
+        mainContainer.appendChild(clipContainer);
 
-      clipContainer.classList.add('clip');
-      audio.setAttribute('controls', '');
-      deleteButton.innerHTML = "Delete";
-      clipLabel.innerHTML = clipName;
+        audio.controls = true;
+        const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+        chunks = [];
+        const audioURL = URL.createObjectURL(blob);
+        audio.src = audioURL;
+        console.log("录制停止");
 
-      clipContainer.appendChild(audio);
-      clipContainer.appendChild(clipLabel);
-      clipContainer.appendChild(deleteButton);
-      soundClips.appendChild(clipContainer);
+        deleteButton.onclick = (e) => {
+          const evtTgt = e.target;
+          evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
+        };
+      };
 
-      audio.controls = true;
-      var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-      chunks = [];
-      var audioURL = URL.createObjectURL(blob);
-      audio.src = audioURL;
-      console.log("recorder stopped");
-
-      deleteButton.onclick = function(e) {
-        evtTgt = e.target;
-        evtTgt.parentNode.parentNode.removeChild(evtTgt.parentNode);
-      }
-    }
-
-    mediaRecorder.ondataavailable = function(e) {
-      chunks.push(e.data);
-    }
-  })
-  .catch(function(err) {
-    console.log('The following error occured: ' + err);
-  })
+      mediaRecorder.ondataavailable = (e) => {
+        chunks.push(e.data);
+      };
+    })
+    .catch((err) => {
+      console.error(`发生以下错误：${err}`);
+    });
 }
 ```
 
-> **备注：** This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/web-dictaphone/) for the complete code.
+> [!NOTE]
+> This code sample is inspired by the Web Dictaphone demo. Some lines have been omitted for brevity; [refer to the source](https://github.com/mdn/web-dictaphone/) for the complete code.
 
 ## Specifications
 
@@ -157,7 +157,7 @@ if (navigator.mediaDevices) {
 
 ## See also
 
-- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
 - [Recording a media element](/zh-CN/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).

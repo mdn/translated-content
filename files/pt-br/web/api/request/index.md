@@ -64,7 +64,8 @@ Você pode criar um novo objeto `Request` usando o construtor {{domxref("Request
 - {{domxref("Body.text()")}}
   - : Retorna um objeto do tipo promise que resolve um {{domxref("USVString")}} (texto) com a representação do corpo da requisição.
 
-> **Nota:** Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
+> [!NOTE]
+> Os métodos de {{domxref("Body")}} só poderão ser executadas apenas uma vez; As chamadas subsequentes serão resolvidas com strings/ArrayBuffers vazias.
 
 ## Exemplos
 
@@ -102,7 +103,8 @@ const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed; // true
 ```
 
-> **Nota:** O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
+> [!NOTE]
+> O tipo do corpo poderá ser apenas: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}}. Para adicionar um objeto JSON ao corpo, é necessário converter esse objeto para string.
 
 Você poderá, então, solicitar uma nova requisição passando o objeto `Request` como parâmetro para a chamada {{domxref("GlobalFetch.fetch()")}}, por exemplo, e poderá capturar a resposta da seguinte forma:
 
@@ -134,6 +136,6 @@ fetch(myRequest)
 
 ## Veja também
 
-- [ServiceWorker API](/pt-BR/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)

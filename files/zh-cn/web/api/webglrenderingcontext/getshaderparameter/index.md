@@ -9,8 +9,8 @@ slug: Web/API/WebGLRenderingContext/getShaderParameter
 
 ## 语法
 
-```
-any gl.getShaderParameter(shader, pname);
+```js-nolint
+getShaderParameter(shader, pname)
 ```
 
 ### 参数

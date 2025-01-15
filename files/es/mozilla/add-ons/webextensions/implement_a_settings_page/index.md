@@ -13,7 +13,8 @@ Con WebExtensions, los ajustes generalmente se almacenan utilizando la API [`sto
 - Escribir un script, incluido desde el archivo HTML , que establece la página de configuración desde su almacenamiento y actualiza los ajustes seleccionados cuando el usuario los modifica.
 - Establecer la ruta al archivo HTML como la clave [`options_ui`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) en manifest.json. Haciendo esto, el documento HTML se mostrará en el administrador de complementos del navegador, junto al nombre del complemento y su descripción.
 
-> **Nota:** También puedes abrir esta página mediante programación utilizando la función [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) .
+> [!NOTE]
+> También puedes abrir esta página mediante programación utilizando la función [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) .
 
 ## Una sencilla ExtensionWeb
 
@@ -44,7 +45,7 @@ Crea un nuevo directorio llamado "configuración", a continuación crea un archi
 
 Este complemento da instrucciones al navegador para cargar un script de contenido llamado "borderify.js" en todas las páginas web que el usuario visita.
 
-Ten en cuenta que también hemos incluido la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) . Necesitaremos esto (solamente en Firefox ) porque si hay un error, debemos establecer explícitamente (la identidad del complemento) [add-on ID](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) , y también incluimos la clave de manifiesto `options_ui`. Aunque no utilicemos la clave `options_ui` en ese momento, lo haremos en la siguiente sección. Ver el [bug 1269545](https://bugzilla.mozilla.org/show_bug.cgi?id=1269454).
+Ten en cuenta que también hemos incluido la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) . Necesitaremos esto (solamente en Firefox ) porque si hay un error, debemos establecer explícitamente (la identidad del complemento) [add-on ID](https://extensionworkshop.com/documentation/develop/extensions-and-the-add-on-id/) , y también incluimos la clave de manifiesto `options_ui`. Aunque no utilicemos la clave `options_ui` en ese momento, lo haremos en la siguiente sección. Ver el [bug 1269545](https://bugzilla.mozilla.org/show_bug.cgi?id=1269454).
 
 A continuación, crea un archivo llamado "borderify.js" en el directorio "configuración" , y añade el siguiente contenido :
 
@@ -54,7 +55,7 @@ document.body.style.border = "10px solid blue";
 
 Esto solo añade un borde azul a la página.
 
-Ahora [instala WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y comprueba — abre cualquier página web que te guste:
+Ahora [instala WebExtension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) y comprueba — abre cualquier página web que te guste:
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -167,7 +168,7 @@ settings/
 
 Ahora:
 
-- [recarga WebExtension.](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [recarga WebExtension.](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
 - carga una página web.
 - abre la página de configuración y cambia el color del borde.
 - recarga la página web para ver la diferencia.

@@ -5,7 +5,7 @@ slug: Glossary/Grid_Lines
 
 {{GlossarySidebar}}
 
-Las **Líneas de Cuadrícula** se crean cuando defines las {{glossary("tracks", "Pistas de Cuadrícula")}} esto sucede dentro de un contenedor que este usando [CSS Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout).
+Las **Líneas de Cuadrícula** se crean cuando defines las {{glossary("tracks", "Pistas de Cuadrícula")}} esto sucede dentro de un contenedor que este usando [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout).
 
 En el siguiente ejemplo hay una cuadrícula con tres pistas de columna y dos pistas de filas. Esto nos da **4 Líneas de Columnas** y **3 Líneas de Fila**.
 
@@ -50,7 +50,7 @@ En el siguiente ejemplo hay una cuadrícula con tres pistas de columna y dos pis
 }
 ```
 
-Podemos referenciar a **Las Líneas** de nuestra plantilla usando su número de línea. De manera izquierda-a-derecha y de arriba-a-abajo; la línea 1 de la columna 1 estará en la izquierda de la cuadrícula, la línea 1 de la fila 1 estará al inicio de la cuadrícula. Los números de líneas siguen el tipo de "[modo de escritura](/es/docs/Web/CSS/CSS_Writing_Modes)" de el documento, por ejemplo, si es de derecha-a-izquierda, la columna 1 estará a la derecha de la cuadrícula. La imagen de abajo muestra, en fondo gris los números de línea, asumiendo que el "modo de escritura" es de izquierda-a-derecha.
+Podemos referenciar a **Las Líneas** de nuestra plantilla usando su número de línea. De manera izquierda-a-derecha y de arriba-a-abajo; la línea 1 de la columna 1 estará en la izquierda de la cuadrícula, la línea 1 de la fila 1 estará al inicio de la cuadrícula. Los números de líneas siguen el tipo de "[modo de escritura](/es/docs/Web/CSS/CSS_writing_modes)" de el documento, por ejemplo, si es de derecha-a-izquierda, la columna 1 estará a la derecha de la cuadrícula. La imagen de abajo muestra, en fondo gris los números de línea, asumiendo que el "modo de escritura" es de izquierda-a-derecha.
 
 ![Diagrama mostrando la cuadrícula con líneas numeradas.](1_diagram_numbered_grid_lines.png)
 
@@ -171,8 +171,8 @@ Las líneas creadas _en la cuadrícula explícita_, pueden ser nombradas, asign�
 
 ### Otras lecturas
 
-- Guía de Grid Layout CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- Guía de Grid Layout CSS: _[Colocación basada en línea con Grid CSS](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
-- Guía de Grid Layout CSS: _[Diseño usando líneas de cuadrícula con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)_
-- Guía de Grid Layout CSS: _[Cuadrículas CSS, Valores Lógicos y Modos de Escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)_
+- Guía de Grid Layout CSS: _[Conceptos básicos de grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- Guía de Grid Layout CSS: _[Colocación basada en línea con Grid CSS](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Guía de Grid Layout CSS: _[Diseño usando líneas de cuadrícula con nombre](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)_
+- Guía de Grid Layout CSS: _[Cuadrículas CSS, Valores Lógicos y Modos de Escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)_
 - [Definición de Línea de Cuadrícula en la especificación de Grid Layout CSS](https://drafts.csswg.org/css-grid/#grid-line-concept)

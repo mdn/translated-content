@@ -70,9 +70,11 @@ display: unset;
     - `inline`
       - : 该元素生成一个或多个行级盒子，它们之前或者之后并不会产生换行。在正常的流中，如果有空间，下一个元素将会在同一行上。
 
-> **备注：** 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**外部**值（例如 `display: block` 或 `display: inline`）时，内部值会被设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
+> [!NOTE]
+> 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**外部**值（例如 `display: block` 或 `display: inline`）时，内部值会被设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
 
-> **备注：** 为了保证布局在旧浏览器生效，你可以使用单值语法，例如，对于 `display: inline flex`，可以设置以下回退
+> [!NOTE]
+> 为了保证布局在旧浏览器生效，你可以使用单值语法，例如，对于 `display: inline flex`，可以设置以下回退
 >
 > ```css
 > .container {
@@ -108,7 +110,8 @@ display: unset;
     - `ruby`
       - : 该元素的行为类似行级元素并且根据 ruby 格式化模型布局它的内容。它的行为像关联的 HTML 的 {{HTMLElement("ruby")}} 元素。
 
-> **备注：** 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**内部**值（例如 `display: flex` 或 `display: grid`）时，外部值会被设置为 `block`（例如 `display: block flex` 和 `display: block grid`）。
+> [!NOTE]
+> 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**内部**值（例如 `display: flex` 或 `display: grid`）时，外部值会被设置为 `block`（例如 `display: block flex` 和 `display: block grid`）。
 
 ### 列表元素
 
@@ -119,7 +122,8 @@ display: unset;
 
 `list-item` 也可以与任意的 {{CSSxRef("&lt;display-outside&gt;")}} 关键字和 {{CSSxRef("&lt;display-inside&gt;")}} 中的 `flow` 或 `flow-root` 关键字组合。
 
-> **备注：** 在支持多关键字语法的浏览器中，如果没有指定内部值，其值默认为 `flow`。如果没有指定外部值，主体盒子将具有 `block` 的外部显示类型。
+> [!NOTE]
+> 在支持多关键字语法的浏览器中，如果没有指定内部值，其值默认为 `flow`。如果没有指定外部值，主体盒子将具有 `block` 的外部显示类型。
 
 ### 内部
 
@@ -288,20 +292,20 @@ display: unset;
 
 ### display: none
 
-在一个元素中使用 `display` 的值为 `none` 将会从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍_api)移除它。这将导致该元素及其所有后代元素不再通过屏幕阅读器技术展示。
+在一个元素中使用 `display` 的值为 `none` 将会从[无障碍树中](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍_api)移除它。这将导致该元素及其所有后代元素不再通过屏幕阅读器技术展示。
 
 如果你想要从视觉上隐藏元素，一个更好的替代方案是使用[属性的组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)将其直观地从屏幕删除，但是通过屏幕阅读器等辅助技术依然可以解析。
 
 ### display: contents
 
-当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍_api)移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读器技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
+当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍_api)中移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读器技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
 
 - [更多带有 display: contents 的无障碍标记 | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: 内容不是 CSS 重置 | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### 表格
 
-有些浏览器，将 {{HTMLElement("table")}} 元素的 `display` 值改为 `block`、`grid` 或 `flex`，这将改变它在[无障碍树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍_api)中的显示。这将导致表格不再通过屏幕阅读技术展示。
+有些浏览器，将 {{HTMLElement("table")}} 元素的 `display` 值改为 `block`、`grid` 或 `flex`，这将改变它在[无障碍树](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍_api)中的显示。这将导致表格不再通过屏幕阅读技术展示。
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)

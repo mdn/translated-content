@@ -14,7 +14,7 @@ A propriedade vertical-align pode ser usada em dois contextos:
 - Para alinhar verticalmente a caixa de um elemento inline dentro da caixa de linha que a contém. Por exemplo, pode ser usado para [posicionar verticalmente uma imagem em uma linha de texto](#vertical_alignment_in_a_line_box).
 - Para alinhar verticalmente [o conteúdo de uma célula em uma tabela](#vertical_alignment_in_a_table_cell).
 
-Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Web/HTML/Block-level_elements).
+Observe que `vertical-align` só se aplica a elementos inline, inline-block e table-cell: você não pode usá-lo para alinhar verticalmente [elementos em nível de bloco](/pt-BR/docs/Glossary/Block-level_content).
 
 ## Sintaxe
 

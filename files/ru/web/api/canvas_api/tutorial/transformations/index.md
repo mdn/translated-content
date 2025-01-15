@@ -20,7 +20,7 @@ slug: Web/API/Canvas_API/Tutorial/Transformations
 
 - Трансформации, которые были применены (например, `translate`, `rotate` and `scale` – см. ниже).
 - Текущее значение следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
-- Текущее значение границ вырезанного холста ([clipping path](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths)), которые будут рассматриваться в следующем разделе.
+- Текущее значение границ вырезанного холста ([clipping path](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing#clipping_paths)), которые будут рассматриваться в следующем разделе.
 
 Вы можете вызывать метод `save()` столько раз, сколько захотите. В то же время, при вызове метода `restore()` последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.
 
@@ -120,7 +120,8 @@ draw();
 
 В этом примере мы сначала используем `rotate()` для поворота прямоугольника относительно начала координат, а затем, используя `translate()` совместно с `rotate()` поворачиваем прямоугольник относительно его центра.
 
-> **Примечание:** Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {

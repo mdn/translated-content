@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 
 Renvoie `"locked"` si le système est vérouillé, `"inactif"` si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou `"actif"` dans le cas contraire.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ var querying = browser.idle.queryState(
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.
 
 ## Compatibilité des navigateurs
 
@@ -49,9 +49,9 @@ querying.then(onGot);
 
 {{WebExtExamples}}
 
-> **Note :**
+> [!NOTE]
 >
-> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/extensions/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

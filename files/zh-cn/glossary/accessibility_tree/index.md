@@ -2,7 +2,7 @@
 title: 无障碍树
 slug: Glossary/Accessibility_tree
 l10n:
-  sourceCommit: 1f44fd905e4acbe867ca945b26a8b06ddb646328
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -19,7 +19,7 @@ l10n:
   - : 除了无障碍名称，我们还可以如何描述这个东西？一个表格的描述可以解释这个表格包含了什么样的信息。
 - [**角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
   - : 这个是什么？例如，这是按钮、导航栏，还是列表？
-- **状态**
+- [**状态**](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
   - : 它有状态吗？例如，复选框被选中与否、[`<summary>`](/zh-CN/docs/Web/HTML/Element/summary) 元素被展开与否。
 
 除此之外，无障碍树经常包含可以对这个元素进行操作的行为：一个链接可以被*访问*，一个文本输入框可以被*输入*，等等。
@@ -28,6 +28,15 @@ l10n:
 
 ## 参见
 
-- [术语](/zh-CN/docs/Glossary)
+- [无障碍](/zh-CN/docs/Web/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
+- 维基百科的 [Web 无障碍](https://zh.wikipedia.org/wiki/网站无障碍)
+- [Web Accessibility In Mind](https://webaim.org/)
+- [无障碍富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA)
+- [Web 无障碍倡议（WAI）](https://www.w3.org/WAI/)
+- [WAI-ARIA 推荐](https://w3c.github.io/aria/)
+- 相关术语：
   - {{Glossary("Accessibility", "无障碍")}}
+  - {{Glossary("Accessible description", "无障碍描述")}}
+  - {{Glossary("Accessible name", "无障碍名称")}}
   - {{Glossary("ARIA")}}

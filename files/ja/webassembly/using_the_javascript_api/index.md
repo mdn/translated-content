@@ -9,13 +9,15 @@ l10n:
 
 これまでに [Emscripten などのツールを使用して他の言語からモジュールをコンパイルしたり](/ja/docs/WebAssembly/C_to_Wasm)、[自分自身のコードを読み込んでして実行したりしました](/ja/docs/WebAssembly/Loading_and_running)。次のステップは他の WebAssembly JavaScript API の使い方について学ぶことです。この記事では知る必要があることを説明します。
 
-> **メモ:** もし、この記事で説明している基本的な概念がよくわからない場合、 [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)を先に読んでからこの記事に戻ってきてください。
+> [!NOTE]
+> もし、この記事で説明している基本的な概念がよくわからない場合、 [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)を先に読んでからこの記事に戻ってきてください。
 
 ## シンプルな例
 
 WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込んでウェブページ内で使用する方法を、ステップバイステップの例を通して実行してみましょう。
 
-> **メモ:** サンプルコードは [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub リポジトリーから参照してください。
+> [!NOTE]
+> サンプルコードは [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub リポジトリーから参照してください。
 
 ### 例の準備
 
@@ -41,7 +43,7 @@ WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込
 
 ### WebAssembly モジュールをストリーミングする
 
-Firefox 58 の新機能として、 WebAssembly モジュールを基礎となるソースから直接コンパイルおよびインスタンス化する機能があります。これは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/compileStreaming) と [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming) メソッドを使用して実現します。これらのメソッドは、バイトコードを直接 `Module`/`Instance` インスタンスに変換することができるので、{{domxref("Response")}} を {{jsxref("ArrayBuffer")}} に別途格納する必要がないため、ストリーミングではない対応するメソッドよりも簡単になっています。
+Firefox 58 の新機能として、 WebAssembly モジュールを基礎となるソースから直接コンパイルおよびインスタンス化する機能があります。これは [`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/compileStreaming_static) と [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) メソッドを使用して実現します。これらのメソッドは、バイトコードを直接 `Module`/`Instance` インスタンスに変換することができるので、{{domxref("Response")}} を {{jsxref("ArrayBuffer")}} に別途格納する必要がないため、ストリーミングではない対応するメソッドよりも簡単になっています。
 
 この例（GitHub の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) デモや、[ライブ版](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照してください）では、 `instantiateStreaming()` を使って wasm モジュールを取得し、そこに JavaScript 関数をインポートしてコンパイルしてインスタンス化し、そのエクスポート関数にアクセスするまで、すべて一度に行っています。
 
@@ -55,11 +57,12 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 この結果、エクスポートした WebAssembly の `exported_func` 関数を呼び出し、インポートした JavaScript の `imported_func` 関数を呼び出し、WebAssembly インスタンスの中で提供した値 (42) をコンソールに記録することになりました。サンプルのコードを保存して、WebAssembly に対応しているブラウザーで読み込むと、これが実際に動作しているのがわかります。
 
-> **メモ:** これは複雑で長い例のほんの一部ですが、ウェブアプリケーション内で WebAssembly をどのように JavaScript と組み合わせて動作させることができるかを説明しています。別の場所でも言及していますが、 WebAssembly は JavaScript の置き換えを目指しているわけではありません。両方が協力して、お互いの強みを活かすことができます。
+> [!NOTE]
+> これは複雑で長い例のほんの一部ですが、ウェブアプリケーション内で WebAssembly をどのように JavaScript と組み合わせて動作させることができるかを説明しています。別の場所でも言及していますが、 WebAssembly は JavaScript の置き換えを目指しているわけではありません。両方が協力して、お互いの強みを活かすことができます。
 
 ### ストリーミングせずに wasm モジュールを読み込む
 
-上記のようなストリーミングメソッドを使用できない、または使用したくない場合は、代わりにストリーミングメソッドではない [`WebAssembly.compile()`](/ja/docs/WebAssembly/JavaScript_interface/compile) / [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate) を使用することができます。
+上記のようなストリーミングメソッドを使用できない、または使用したくない場合は、代わりにストリーミングメソッドではない [`WebAssembly.compile()`](/ja/docs/WebAssembly/JavaScript_interface/compile_static) / [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/JavaScript_interface/instantiate_static) を使用することができます。
 
 これらのメソッドはバイトコードに直接アクセスしないので、 wasm モジュールをコンパイル/インスタンス化する前にレスポンスを {{jsxref("ArrayBuffer")}} に変換する余分な手順が必要になります。
 
@@ -135,7 +138,8 @@ Memory インスタンスの作成時に最大値が指定していて、この�
 
 1. `memory.wasm` のローカルコピーを以前と同じディレクトリーに作成します。
 
-   > **メモ:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
+   > [!NOTE]
+   > モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
 
 2. `memory.html` サンプルファイルに戻って、以前と同じように wasm モジュールを読み取り、コンパイル、インスタンス化します。以下のものをスクリプトの最後に追加してください。
 
@@ -167,7 +171,8 @@ Memory オブジェクト自体でなく、Memory オブジェクトの buffer (
 - モジュールをコンパイルする前、もしくは並行して、メモリーの初期コンテンツを JavaScript で読み取り、または作成することができます。
 - 単一の Memory オブジェクトを複数のモジュールインスタンスにインポートすることができます。これは WebAssembly で動的リンクを実装するための重要な構成要素です。
 
-> **メモ:** 完全なデモは [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) を参照してください。
+> [!NOTE]
+> 完全なデモは [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) を参照してください。
 
 ## テーブル
 
@@ -187,7 +192,8 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
 1. `table.wasm` をローカルの新しいディレクトリーにコピーします。
 
-   > **メモ:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
+   > [!NOTE]
+   > このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
 
 2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) を `table.html` という名前で同じディレクトリーにコピーします。
 3. 前と同じように、wasm モジュールを読み取り、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加してください。
@@ -208,7 +214,8 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
 このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。 [`Table.prototype.get()`](/ja/docs/WebAssembly/JavaScript_interface/Table/get) で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。
 
-> **メモ:** 完全なデモは [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) を参照してください。
+> [!NOTE]
+> 完全なデモは [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) を参照してください。
 
 ## グローバル値
 

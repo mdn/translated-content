@@ -58,7 +58,8 @@ Que voulons‑nous dire par permissif&nbsp;? Et bien, quand vous faites une erre
 
 HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de manière permissive&nbsp;: la page s'affiche toujours même s'il y a des erreurs de syntaxe. Les navigateurs intègrent des règles indiquant comment interpréter un balisage incorrectement écrit, de sorte que vous obtiendrez toujours quelque chose à l'exécution, même si ce n'est pas ce que vous attendiez. Mais cela reste, bien sûr, toujours un problème !
 
-> **Note :** HTML est analysé de façon permissive parce que, lorsque le Web a été créé pour la première fois, on a décidé qu'il était plus important de permettre aux gens de publier leur contenu que de s'assurer d'une syntaxe absolument correcte. Le web ne serait probablement pas aussi populaire qu'il l'est aujourd'hui, s'il avait été plus strict dans ses débuts.
+> [!NOTE]
+> HTML est analysé de façon permissive parce que, lorsque le Web a été créé pour la première fois, on a décidé qu'il était plus important de permettre aux gens de publier leur contenu que de s'assurer d'une syntaxe absolument correcte. Le web ne serait probablement pas aussi populaire qu'il l'est aujourd'hui, s'il avait été plus strict dans ses débuts.
 
 ### Apprentissage actif&nbsp;: étude avec un code permissif
 
@@ -97,7 +98,7 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
    - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
    - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Element/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
-5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs).
+5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 6. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
 7. Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
 
@@ -161,7 +162,8 @@ Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu
   exemple: <a href="https://www.mozilla.org/>lien à la page d'accueil de Mozilla</a> ↩ </ul>↩ </body>↩</html>
   ```
 
-  > **Note :** un attribut sans guillemet fermant peut entraîner un élément ouvert car le reste du document est interprété comme le contenu de l'attribut.
+  > [!NOTE]
+  > Un attribut sans guillemet fermant peut entraîner un élément ouvert car le reste du document est interprété comme le contenu de l'attribut.
 
 - «&nbsp;Unclosed element `ul`&nbsp;»&nbsp;: n'est pas vraiment utile, car l'élément {{htmlelement("ul")}} _est_ correctement fermé. Cette erreur ressort car l'élément {{htmlelement("a")}} n'est pas fermé en raison de l'absence de guillemet fermant.
 

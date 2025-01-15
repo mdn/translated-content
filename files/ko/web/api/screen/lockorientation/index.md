@@ -7,7 +7,8 @@ slug: Web/API/Screen/lockOrientation
 
 `lockOrientation` 함수는 지정된 방향으로 화면을 고정시킨다.
 
-> **참고:** 이 함수는 오직 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/Guide/DOM/Using_full_screen_mode) 의 웹페이지에서만 동작한다..
+> [!NOTE]
+> 이 함수는 오직 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/API/Fullscreen_API) 의 웹페이지에서만 동작한다..
 
 ## Syntax
 
@@ -35,7 +36,8 @@ var locked = window.screen.lockOrientation(orientation);
 - `landscape`
   - : `landscape-primary` 와 `landscape-secondary 둘 다 이다.`
 
-> **참고:** 한번에 여러개의 고정 값을 가질 수 있다. 만약 한방향으로만 설정 하면 화면의 방향은 unlock 하기 전 까지는 절대로 변하지 않는다. 그렇지 않다면 (여러값을 가진 다면) 지정 된 방향들로 화면의 방향이 변할 것이다.
+> [!NOTE]
+> 한번에 여러개의 고정 값을 가질 수 있다. 만약 한방향으로만 설정 하면 화면의 방향은 unlock 하기 전 까지는 절대로 변하지 않는다. 그렇지 않다면 (여러값을 가진 다면) 지정 된 방향들로 화면의 방향이 변할 것이다.
 
 ### Return value
 
@@ -64,4 +66,4 @@ if (window.screen.mozLockOrientation("landscape-primary")) {
 - {{domxref("window.screen.orientation")}}
 - {{domxref("window.screen.unlockOrientation()")}}
 - {{domxref("window.screen.onorientationchange")}}
-- [Managing screen orientation](/ko/docs/Managing_screen_orientation)
+- [Managing screen orientation](/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

@@ -5,7 +5,7 @@ slug: Web/SVG/Attribute
 
 {{SVGRef}}
 
-« [SVG](/ru/docs/Web/SVG) / [Справочник SVG элементов](/ru/docs/Web/SVG/Элемент) »
+« [SVG](/ru/docs/Web/SVG) / [Справочник SVG элементов](/ru/docs/Web/SVG/Element) »
 
 Элементы SVG можно изменять с помощью атрибутов, которые задают подробные сведения о том, каким образом элемент должен обрабатываться или визуализироваться. Ниже приведён список всех атрибутов, доступных в SVG, а также ссылки на справочную документацию, помогающие узнать, какие элементы поддерживают их и как они работают.
 
@@ -393,7 +393,8 @@ slug: Web/SVG/Attribute
 
 ### Атрибуты представления
 
-> **Примечание:** Заметьте, что все атрибуты представления SVG можно использовать как CSS-свойства.
+> [!NOTE]
+> Заметьте, что все атрибуты представления SVG можно использовать как CSS-свойства.
 
 {{ SVGAttr("alignment-baseline") }}, {{ SVGAttr("baseline-shift") }}, {{ SVGAttr("clip") }}, {{ SVGAttr("clip-path") }}, {{ SVGAttr("clip-rule") }}, {{ SVGAttr("color") }}, {{ SVGAttr("color-interpolation") }}, {{ SVGAttr("color-interpolation-filters") }}, {{ SVGAttr("color-profile") }}, {{ SVGAttr("color-rendering") }}, {{ SVGAttr("cursor") }}, {{ SVGAttr("direction") }}, {{ SVGAttr("display") }}, {{ SVGAttr("dominant-baseline") }}, {{ SVGAttr("enable-background") }}, {{ SVGAttr("fill") }}, {{ SVGAttr("fill-opacity") }}, {{ SVGAttr("fill-rule") }}, {{ SVGAttr("filter") }}, {{ SVGAttr("flood-color") }}, {{ SVGAttr("flood-opacity") }}, {{ SVGAttr("font-family") }}, {{ SVGAttr("font-size") }}, {{ SVGAttr("font-size-adjust") }}, {{ SVGAttr("font-stretch") }}, {{ SVGAttr("font-style") }}, {{ SVGAttr("font-variant") }}, {{ SVGAttr("font-weight") }}, {{ SVGAttr("glyph-orientation-horizontal") }}, {{ SVGAttr("glyph-orientation-vertical") }}, {{ SVGAttr("image-rendering") }}, {{ SVGAttr("kerning") }}, {{ SVGAttr("letter-spacing") }}, {{ SVGAttr("lighting-color") }}, {{ SVGAttr("marker-end") }}, {{ SVGAttr("marker-mid") }}, {{ SVGAttr("marker-start") }}, {{ SVGAttr("mask") }}, {{ SVGAttr("opacity") }}, {{ SVGAttr("overflow") }}, {{ SVGAttr("pointer-events") }}, {{ SVGAttr("shape-rendering") }}, {{ SVGAttr("stop-color") }}, {{ SVGAttr("stop-opacity") }}, {{ SVGAttr("stroke") }}, {{ SVGAttr("stroke-dasharray") }}, {{ SVGAttr("stroke-dashoffset") }}, {{ SVGAttr("stroke-linecap") }}, {{ SVGAttr("stroke-linejoin") }}, {{ SVGAttr("stroke-miterlimit") }}, {{ SVGAttr("stroke-opacity") }}, {{ SVGAttr("stroke-width") }}, {{ SVGAttr("text-anchor") }}, {{ SVGAttr("text-decoration") }}, {{ SVGAttr("text-rendering") }}, {{ SVGAttr("unicode-bidi") }}, {{ SVGAttr("visibility") }}, {{ SVGAttr("word-spacing") }}, {{ SVGAttr("writing-mode") }}
 

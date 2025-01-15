@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
@@ -30,8 +30,8 @@ Il est possible de modifier la couleur du symbole d'insertion grâce à la propr
 
 ## Voir aussi
 
-- [Rendre le contenu éditable](/fr/docs/Web/HTML/Contenu_editable)
-- [Tous les attributs universels](/fr/docs/Web/HTML/Attributs_universels)
+- [Rendre le contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} et {{domxref("HTMLElement.isContentEditable")}}
 - {{cssxref("caret-color")}}
-- [L'évènement `input` pour l'objet DOM `HTMLElement`](/fr/docs/Web/API/HTMLElement/input_event)
+- [L'évènement `input` pour l'objet DOM `HTMLElement`](/fr/docs/Web/API/Element/input_event)

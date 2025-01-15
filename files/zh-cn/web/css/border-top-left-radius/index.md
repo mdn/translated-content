@@ -13,7 +13,8 @@ slug: Web/CSS/border-top-left-radius
 
 盒模型的背景，可以是一张图片或一种颜色，会在边框处被剪裁，更甚至可以是一个圆；剪切的额外定位通过另一个 CSS 属性"background-clip"来定义。
 
-> **备注：** 在 border-top-left-radius 属性值之后，如果作用的元素上没有设置“border-radius”属性，那么这个属性值就会通过[简写属性](/zh-CN/CSS/Shorthand_properties)重新设置成它的初始值。
+> [!NOTE]
+> 在 border-top-left-radius 属性值之后，如果作用的元素上没有设置“border-radius”属性，那么这个属性值就会通过[简写属性](/zh-CN/docs/CSS/Shorthand_properties)重新设置成它的初始值。
 
 ## 语法
 

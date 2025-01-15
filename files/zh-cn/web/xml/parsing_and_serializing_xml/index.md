@@ -57,7 +57,8 @@ fetch("example.xml")
 
 如果文档是 {{Glossary("HTML")}}，上面的代码将返回一个 {{domxref("Document")}}。如果文档是 XML，那得到的对象实际上是一个 `XMLDocument`。这两种类型实质上是一样的，不同点大部分是历史遗留的，尽管区分它们也会有一些实际好处。
 
-> **备注：** 事实上，{{domxref("HTMLDocument")}} 也是一个接口，但是它不必是一个独立的类型。在一些浏览器上它是，但在另外一些浏览器上它仅仅是 `Document` 接口的别名。
+> [!NOTE]
+> 事实上，{{domxref("HTMLDocument")}} 也是一个接口，但是它不必是一个独立的类型。在一些浏览器上它是，但在另外一些浏览器上它仅仅是 `Document` 接口的别名。
 
 ## 序列化 XML 文档
 

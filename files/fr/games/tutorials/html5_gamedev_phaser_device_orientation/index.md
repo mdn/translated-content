@@ -5,17 +5,17 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 {{GamesSidebar}}
 
-Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
+Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](https://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
 
 ## Exemple de jeu
 
-A la fin de ce tutoriel, vous aurez une démo entièrement fonctionnelle du jeu : [Cyber Orb](http://orb.enclavegames.com/). Il ressemblera à quelque chose comme cela :
+A la fin de ce tutoriel, vous aurez une démo entièrement fonctionnelle du jeu : [Cyber Orb](https://orb.enclavegames.com/). Il ressemblera à quelque chose comme cela :
 
 ![](cyber-orb.png)
 
 ## Le framework Phaser
 
-[Phaser](http://phaser.io/) est un framework pour créer des jeux mobiles et PC en utilisant les technologies HTML5. Malgré son manque de maturité, la communauté est assez active, et il évolue rapidement. Les sources sont [sur GitHub](https://github.com/photonstorm/phaser), lisez y la [documentation](http://docs.phaser.io/) de base, jetez un œil aux [exemples](http://examples.phaser.io/). Le framework Phaser offre un ensemble d'outils qui permettent d'accélérer le développement et aident à mettre en oeuvre les tâches courantes nécessaires au développement d'un jeu.
+[Phaser](https://phaser.io/) est un framework pour créer des jeux mobiles et PC en utilisant les technologies HTML5. Malgré son manque de maturité, la communauté est assez active, et il évolue rapidement. Les sources sont [sur GitHub](https://github.com/photonstorm/phaser), lisez y la [documentation](http://docs.phaser.io/) de base, jetez un œil aux [exemples](http://examples.phaser.io/). Le framework Phaser offre un ensemble d'outils qui permettent d'accélérer le développement et aident à mettre en oeuvre les tâches courantes nécessaires au développement d'un jeu.
 
 ## Mise en place du projet
 
@@ -82,7 +82,8 @@ La ligne ci-dessus va initialiser l'instance de Phaser - les arguments sont la l
 
 La chose importante à retenir est que le framework met en place des méthodes utiles pour accélérer beaucoup de choses comme la manipulation d'images ou la gestion des éléments, ce qui serait beaucoup plus difficile à faire manuellement.
 
-> **Note :** Vous pouvez lire l'article [Building Monster Wants Candy](http://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) pour une introduction approfondie aux fonctions et méthodes de base de Phaser.
+> [!NOTE]
+> Vous pouvez lire l'article [Building Monster Wants Candy](https://webdesign.tutsplus.com/getting-started-with-phaser-building-monster-wants-candy--cms-21723t) pour une introduction approfondie aux fonctions et méthodes de base de Phaser.
 
 Retour aux états du jeu : la ligne ci-dessous ajoute un nouvel état appelé Boot au jeu :
 
@@ -322,7 +323,8 @@ Plus l'appareil est incliné, plus la force appliquée à la balle et sa véloci
 
 ![](cyber-orb-flame-orientation.png)
 
-> **Note :** Pour en savoir plus sur l'implémentation de l'orientation du périphérique et sur le code brut, lisez [Gardez-le au niveau : en réponse aux changements d'orientation du périphérique](/fr/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
+> [!NOTE]
+> Pour en savoir plus sur l'implémentation de l'orientation du périphérique et sur le code brut, lisez [Gardez-le au niveau : en réponse aux changements d'orientation du périphérique](/fr/docs/Web/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
 
 ### Ajout du trou
 
@@ -533,6 +535,6 @@ Ceci est simplement une démonstration de travail d'un jeu qui pourrait avoir be
 
 ## Résumé
 
-J'espère que ce tutoriel vous aidera à plonger dans le développement de jeux en 2D et vous inspirera pour créer des jeux géniaux par vous-même. Vous pouvez jouer au jeu de démonstration [Cyber Orb](http://orb.enclavegames.com/) et consulter son [code source sur GitHub](https://github.com/EnclaveGames/Cyber-Orb).
+J'espère que ce tutoriel vous aidera à plonger dans le développement de jeux en 2D et vous inspirera pour créer des jeux géniaux par vous-même. Vous pouvez jouer au jeu de démonstration [Cyber Orb](https://orb.enclavegames.com/) et consulter son [code source sur GitHub](https://github.com/EnclaveGames/Cyber-Orb).
 
-HTML5 nous donne des outils bruts, les frameworks construits au-dessus deviennent plus rapides et meilleurs, alors c'est un bon moment pour le développement de jeux web. Dans ce tutoriel, nous avons utilisé Phaser, mais il existe un certain nombre d' [autres frameworks](http://html5devstarter.enclavegames.com/#frameworks) qui méritent d'être considérés aussi, comme [ImpactJS](http://impactjs.com/), [Construct 2](https://www.scirra.com/construct2) ou [PlayCanvas](http://playcanvas.com/) — cela dépend de vos préférences, de vos compétences en codage (ou de leur absence), de l'échelle du projet, des exigences et d'autres aspects. Vous devriez les regarder tous et décider lequel convient le mieux à vos besoins.
+HTML5 nous donne des outils bruts, les frameworks construits au-dessus deviennent plus rapides et meilleurs, alors c'est un bon moment pour le développement de jeux web. Dans ce tutoriel, nous avons utilisé Phaser, mais il existe un certain nombre d' [autres frameworks](https://html5devstarter.enclavegames.com/#frameworks) qui méritent d'être considérés aussi, comme [ImpactJS](https://impactjs.com/), [Construct 2](https://www.construct.net/en/make-games/games-editor) ou [PlayCanvas](https://playcanvas.com/) — cela dépend de vos préférences, de vos compétences en codage (ou de leur absence), de l'échelle du projet, des exigences et d'autres aspects. Vous devriez les regarder tous et décider lequel convient le mieux à vos besoins.

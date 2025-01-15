@@ -13,7 +13,8 @@ slug: Web/HTML/Content_categories
 - Категории контента для элементов форм, описывающие общие правила для элементов форм;
 - Особые категории контента, описывающие редкие категории, актуальные только для нескольких элементов, возможно, лишь в особом контексте.
 
-> **Примечание:** Более подробное обсуждение данных категорий контента и их сравнительных особенностей выходит за рамки данной статьи; можно обратиться к [соответствующим разделам спецификации HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (на английском).
+> [!NOTE]
+> Более подробное обсуждение данных категорий контента и их сравнительных особенностей выходит за рамки данной статьи; можно обратиться к [соответствующим разделам спецификации HTML](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content) (на английском).
 
 ![Диаграмма Венна, показывающая, как взаимодействуют различные категории контента.](content_categories_venn.png)
 
@@ -50,9 +51,8 @@ slug: Web/HTML/Content_categories
 
 Данной категории принадлежат такие элементы, как {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} и {{HTMLElement("hgroup")}}.
 
-> **Примечание:** *Э*лемент {{HTMLElement("header")}} сам по себе не является заголовочным, хотя с большой вероятностью содержит контент такого типа.
-
-> **Примечание:** Стоит заметить, что элемент {{HTMLElement("hgroup")}} был удалён из спецификации W3C HTML до приведения HTML 5 к окончательному варианту, но до сих пор является частью спецификации WHATWG и по крайней мере частично поддерживается большинством браузеров.
+> [!NOTE]
+> Элемент {{HTMLElement("header")}} сам по себе не является заголовочным, хотя с большой вероятностью содержит контент такого типа.
 
 ### Фразовый контент
 
@@ -108,7 +108,7 @@ slug: Web/HTML/Content_categories
 Данная категория включает несколько подкатегорий:
 
 - listed
-  - : Элементы, перечисленные в IDL коллекциях [form.elements](/ru/docs/DOM/form.elements) и fieldset.elements. Включают {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.
+  - : Элементы, перечисленные в IDL коллекциях [form.elements](/ru/docs/Web/API/HTMLFormElement/elements) и fieldset.elements. Включают {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, и {{HTMLElement("textarea")}}.
 - labelable
   - : Элементы, которые могут ассоциироваться с элементами {{HTMLElement("label")}}. Включают {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
 - submittable

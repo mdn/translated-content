@@ -48,19 +48,6 @@ svg {
 
 ## Атрибуты
 
-### Глобальные атрибуты
-
-- [Условные атрибуты обработки](/ru/docs/Web/SVG/Attribute#Conditional_processing_attributes)
-- [Основные атрибуты](/ru/docs/Web/SVG/Attribute#Core_attributes)
-- [Графические атрибуты событий](/ru/docs/Web/SVG/Attribute#Graphical_event_attributes)
-- [Атрибуты представления](/ru/docs/Web/SVG/Attribute#Presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
-- {{SVGAttr("externalResourcesRequired")}}
-
-### Специфические атрибуты
-
 - {{SVGAttr("х")}}
 - {{SVGAttr("у")}}
 - {{SVGAttr("dx")}}
@@ -185,7 +172,7 @@ svg {
 
 {{Specifications}}
 
-Таблица составлена по информации из [этого источника](/ru/docs/Web/SVG/Compatibility_sources).
+Таблица составлена по информации из [этого источника](/ru/docs/Web/SVG).
 
 ## Совместимость с браузерами
 

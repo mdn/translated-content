@@ -9,7 +9,7 @@ l10n:
 
 HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスを公開しています。これは `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて）提供します。
 
-JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で提供されます。しかし、ブラウザーは寛大であり、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
+JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)で提供されます。しかし、ブラウザーは寛大であり、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
 
 {{InheritanceDiagram}}
 
@@ -18,7 +18,7 @@ JavaScript ファイルは `text/javascript` の [MIME タイプ](/ja/docs/Web/H
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLScriptElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
-  - : {{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Element/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[属性ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[属性トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。
+  - : {{htmlelement("script")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Element/script#attributionsrc) 属性をプログラムで取得・設定し、その属性値を反映します。`attributionsrc` はブラウザーにスクリプトリソースリクエストと一緒に {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信するトリガーとして用いられ、それぞれ JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。
 - {{domxref("HTMLScriptElement.async")}}
   - : スクリプトの実行方法を論理値で制御します。クラシックスクリプトの場合、`async` プロパティを `true` に設定すると、構文解析と並列に外部スクリプトが取得され、利用できるようになるとすぐに評価されます。[モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)の場合、`async` プロパティを `true` に設定すると、スクリプトとその依存関係がすべて並列に取得され、利用できるようになるとすぐに評価されます。
 - {{domxref("HTMLScriptElement.blocking")}} {{Experimental_Inline}}

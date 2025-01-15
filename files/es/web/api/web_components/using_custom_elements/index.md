@@ -7,7 +7,8 @@ slug: Web/API/Web_components/Using_custom_elements
 
 Una de las características claves del estándar de Componentes Web es la capacidad de crear elementos personalizados que encapsulan tu funcionalidad en una página HTML, en vez de tener que hacerlo con una larga lista de elementos anidados que juntos proveen una funcionalidad o característica personalizada en una página. Este artículo presenta el uso del API de Elementos Personalizados.
 
-> **Nota:** Los Elementos Personalizados funcionan por defecto en Firefox, Chrome, y Edge (76). Opera y Safari solo adminten Elementos Personalizados autónomos (que extienden HTMLElement).
+> [!NOTE]
+> Los Elementos Personalizados funcionan por defecto en Firefox, Chrome, y Edge (76). Opera y Safari solo adminten Elementos Personalizados autónomos (que extienden HTMLElement).
 
 ## Vista de alto nivel
 
@@ -137,9 +138,11 @@ Ahora ya está disponible para usarse en nuestra página. En nuestro HTML, lo us
   back of your card."></popup-info>
 ```
 
-> **Nota:** Puedes ver el código [fuente JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) aquí.
+> [!NOTE]
+> Puedes ver el código [fuente JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/popup-info-box-web-component/main.js) aquí.
 
-> **Nota:** Recuerda que para que los elementos personalizados funcionen, el script que los registra tiene que cargarse después de que el DOM lo interprete. Esto puede hacerse incluyendo un elemento `<script>` al final del `<body>`, o poniendo el atributo `defer` en tu elemento `<script>`.
+> [!NOTE]
+> Recuerda que para que los elementos personalizados funcionen, el script que los registra tiene que cargarse después de que el DOM lo interprete. Esto puede hacerse incluyendo un elemento `<script>` al final del `<body>`, o poniendo el atributo `defer` en tu elemento `<script>`.
 
 ### Estilos internos vs. externos
 
@@ -198,7 +201,8 @@ El uso de un elemento preconstruido en un documento web también es algo distint
 
 Usas el elemento `<ul>` como siempre, pero especificas el nombre del elemento personalizado mediante un atributo `is` .
 
-> **Nota:** De nuevo, puedes ver el código [fuente JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)aquí.
+> [!NOTE]
+> De nuevo, puedes ver el código [fuente JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/expanding-list-web-component/main.js)aquí.
 
 ## Usando callbacks de ciclo de vida
 
@@ -282,7 +286,8 @@ static get observedAttributes() { return ['c', 'l']; }
 
 Este código se coloca en la parte de arriba del constructor en nuestro ejemplo.
 
-> **Nota:** Busca el [código JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)aquí.
+> [!NOTE]
+> Busca el [código JavaScript completo](https://github.com/mdn/web-components-examples/blob/master/life-cycle-callbacks/main.js)aquí.
 
 ## Polyfills vs. clases
 
@@ -314,4 +319,4 @@ Nótese que las clases ES2015 no pueden transpilarse con Babel 6 o TypeScript pa
 
 ## Librerías
 
-Existen varias librerías que se han construido sobre Web Components con la intención de incrementar el nivel de abstracción cuando se crean elementos personalizados. Algunas de estas librerías son [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](http://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), y [Stencil](https://stenciljs.com).
+Existen varias librerías que se han construido sobre Web Components con la intención de incrementar el nivel de abstracción cuando se crean elementos personalizados. Algunas de estas librerías son [snuggsi ツ](https://github.com/devpunks/snuggsi), [X-Tag](https://x-tag.github.io/), [Slim.js](https://slimjs.com/), [LitElement](https://lit-element.polymer-project.org/), [Smart](https://www.htmlelements.com/), y [Stencil](https://stenciljs.com).

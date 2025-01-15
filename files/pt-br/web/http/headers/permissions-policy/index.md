@@ -7,7 +7,8 @@ slug: Web/HTTP/Headers/Permissions-Policy
 
 O cabeçalho HTTP **`Feature-Policy`** provê um mecanismo para permitir ou proibir o uso de funcionalidades do navegador no seu próprio enquadramento, e o conteúdo dentro de quaisquer elementos {{HTMLElement("iframe")}} no documento.
 
-> **Nota:** Este cabeçalho ainda está em estado experimental, e é sujeito a mudança a qualquer momento. Tenha cautela quando implementando isso no seu site. O cabeçalho agora foi renomeado para `Permissions-Policy` na especificação, e este artigo irá eventualmente ser atualizado para refletir estas atualizações.
+> [!NOTE]
+> Este cabeçalho ainda está em estado experimental, e é sujeito a mudança a qualquer momento. Tenha cautela quando implementando isso no seu site. O cabeçalho agora foi renomeado para `Permissions-Policy` na especificação, e este artigo irá eventualmente ser atualizado para refletir estas atualizações.
 
 Para mais informação, veja o artigo principal [Policy Feature](/docs/Web/HTTP/Feature_Policy).
 
@@ -33,7 +34,7 @@ Feature-Policy: <directive> <allowlist>
 - `<directive>`
   - : A diretiva Feature Policy que irá aplicar a `allowlist`. Veja [Diretivas](#diretivas) abaixo para a lista de nomes de diretivas.
 - `<allowlist>`
-  - : {{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}
+  - : <!-- TODO: page macro not supported: page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist") -->
 
 ## Diretivas
 
@@ -44,7 +45,7 @@ Feature-Policy: <directive> <allowlist>
 - {{httpheader('Feature-Policy/autoplay','autoplay')}}
   - : Controla se o documento atual é permitido de tocar a mídia requisitada automaticamente através da interface {{domxref("HTMLMediaElement")}}. Quando esta política é desabilitada e não há ação do usuário, o {{domxref("Promise")}} retornado pelo {{domxref("HTMLMediaElement.play()")}} irá rejeitar com uma {{domxref("DOMException")}}. O atributo _autoplay_ em elementos {{HTMLELement("audio")}} e {{HTMLElement("video")}} será ignorado.
 - {{httpheader('Feature-Policy/battery','battery')}}
-  - : Controla se o uso da [API de Status de Bateria](/docs/Web/API/Battery_Status_API) é permitido. Quando esta política está desabilitada, o {{JSxRef("Promise")}} retornado pelo{{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
+  - : Controla se o uso da [API de Status de Bateria](/pt-BR/docs/Web/API/Battery_Status_API) é permitido. Quando esta política está desabilitada, o {{JSxRef("Promise")}} retornado pelo{{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{httpheader('Feature-Policy/camera', 'camera')}}
   - : Controla se o documento atual é permitido de usar entradas de dispositivos de vídeo. Quando esta política está desabilitada, o {{jsxref("Promise")}} retornado pelo {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} irá rejeitar com um {{DOMxRef("NotAllowedError")}} {{DOMxRef("DOMException")}}.
 - {{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}
@@ -116,7 +117,7 @@ Especificando a palavra-chave `'none'` para a lista de origem, as funcionalidade
 
 ## Veja também
 
-- [Feature Policy](/pt-BR/docs/Web/HTTP/Feature_Policy)
+- [Feature Policy](/pt-BR/docs/Web/HTTP/Permissions_Policy)
 - [Usando Feature Policy](/pt-BR/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
 - {{DOMxRef("Document.featurePolicy")}} and {{DOMxRef("FeaturePolicy")}}
 - [Feature-Policy Tester (Chrome Developer Tools extensão)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)

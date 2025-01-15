@@ -7,7 +7,8 @@ slug: Web/CSS/CSS_box_alignment
 
 CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型，如块布局，表布局，弹性布局和网格布局中，与盒子对齐有关的 CSS 功能。该模块旨在建立一种能一致地在 CSS 中指定对齐的方法。这份文档详述了出现在该规范中的一般概念。
 
-> **备注：** 每种布局方法的文档都将详细说明在其中是如何应用“盒子对齐”的
+> [!NOTE]
+> 每种布局方法的文档都将详细说明在其中是如何应用“盒子对齐”的
 
 ## 较老的对齐方法
 
@@ -173,7 +174,7 @@ CSS 盒子对齐 (Box Alignment) 模块指定了在各种 CSS 盒子布局模型
 - [Box alignment in Flexbox](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)
 - [Box alignment in multiple-column layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_in_Multi-column_Layout)
-- [Box alignment for block, absolutely positioned and table layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Block_Abspos_Tables)
+- [Box alignment for block, absolutely positioned and table layout](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
 
 ## 参考
 

@@ -80,7 +80,7 @@ img.src = "myImage.png"; // ソースのパスを設定
 
 ### data: URL で画像を埋め込む
 
-画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
+画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
 
 ```js
 const img = new Image(); // 新たな img 要素を作成
@@ -116,7 +116,8 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
   - : 引数 `image` で指定した画像を、座標 (`x`, `y`) に描画します。
 
-> **メモ:** SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
+> [!NOTE]
+> SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
 
 ### 例: シンプルな折れ線グラフ
 
@@ -166,7 +167,8 @@ draw();
 
 以下の例は画像を壁紙として使用して、キャンバス上で数回繰り返して貼り付けています。ループ処理によって、さまざまな場所に縮小した画像を貼り付けました。以下のコードでは、最初の `for` ループで行の繰り返し処理を行います。2 番目の `for` ループで列の繰り返し処理を行います。画像は元のサイズの 3 分の 1 である、 50x38 ピクセルに縮小しています。
 
-> **メモ:** 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
+> [!NOTE]
+> 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
 
 ```html hidden
 <html lang="en">
@@ -187,7 +189,7 @@ function draw() {
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
 ```
 
@@ -219,19 +221,27 @@ draw();
 以下の例では前の例と同じサイの画像を使用していますが、頭の部分を切り抜いて額縁の中に合成しています。額縁の画像は、ドロップシャドウを含む 24 ビット PNG 画像です。GIF や 8 ビット PNG 画像と異なり、24 ビット PNG 画像は 8 ビットのアルファチャンネルが含まれていますので、マットカラーに悩まされることなく背景に重ねることができます。
 
 ```html
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
+async function draw() {
+  // すべての画像が読み込まれるまで待つ
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
@@ -251,6 +261,7 @@ function draw() {
   // フレームを描く
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
 draw();
 ```
 

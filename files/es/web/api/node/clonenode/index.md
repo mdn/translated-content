@@ -20,7 +20,8 @@ var dupNode = node.cloneNode(deep);
 - _deep {{optional_inline}}_
   - : `true` si los hijos del nodo también deben ser clonados, o `false` para clonar únicamente al nodo.
 
-> **Nota:** En la especificación DOM4 (como se implementó en Gecko 13.0 (Firefox 13 / Thunderbird 13 / SeaMonkey 2.10)), `deep` es un argumento opcional. Si éste se omite, el método actua como si el valor se estableciera en **`true`**, estableciendo el uso de la clonación profunda como el comportamiento por defecto. Para crear un clon superficial, `deep` debe establecerse en `false`.
+> [!NOTE]
+> En la especificación DOM4 (como se implementó en Gecko 13.0 (Firefox 13 / Thunderbird 13 / SeaMonkey 2.10)), `deep` es un argumento opcional. Si éste se omite, el método actua como si el valor se estableciera en **`true`**, estableciendo el uso de la clonación profunda como el comportamiento por defecto. Para crear un clon superficial, `deep` debe establecerse en `false`.
 >
 > Este comportamiento ha sido modificado en la última especificación, si es omitido, el método se comportará como si `deep` fuera **`false`**. Aunque sigue siendo opcional, usted siempre debería proporcionar el argumento `deep` tanto para la compatibilidad con las nuevas y anteriores especificaciones. Con Gecko 28.0 (Firefox 28 / Thunderbird 28 / SeaMonkey 2.25 / Firefox OS 1.3))), la consola advierte a los desarrolladores a no omitir el argumento. Desde Gecko 29.0 (Firefox 29 / Thunderbird 29 / SeaMonkey 2.26)), una copia superficial, es el comportamiento por defecto en lugar de una copia profunda.
 
@@ -33,7 +34,7 @@ var p_prime = p.cloneNode(true);
 
 ## Notas
 
-Al clonar un nodo se copian todos sus atributos y valores, incluyendo escuchadores intrínsecos (en–línea). No copia los escuchadores de evento añadidos utilizando [`addEventListener()`](/es/docs/DOM/element.addEventListener) o aquellos asignados a las propiedades de un elemento. (ej. `node.onclick = fn`). Además, para un elemento `<canvas>`, la imagen pintada no se copia.
+Al clonar un nodo se copian todos sus atributos y valores, incluyendo escuchadores intrínsecos (en–línea). No copia los escuchadores de evento añadidos utilizando [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) o aquellos asignados a las propiedades de un elemento. (ej. `node.onclick = fn`). Además, para un elemento `<canvas>`, la imagen pintada no se copia.
 
 El nodo duplicado devuelto por `cloneNode()` no formará parte del documento hasta que sea añadido a otro nodo que sea parte del documento utilizando {{domxref("Node.appendChild()")}} o un método similar. Tampoco tiene padre hasta que sea añadido a otro nodo.
 

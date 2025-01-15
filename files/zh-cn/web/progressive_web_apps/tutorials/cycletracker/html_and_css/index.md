@@ -13,7 +13,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 
 我们创建一个 HTML 文件，其头部包含元数据，静态网页包含一个表单和一个用于显示用户输入数据的占位符。然后我们将添加一个外部 CSS 样式表来提升网站的外观。
 
-要完成本教程，最好对 [HTML](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)、[CSS](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics) 和 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 有基本的了解。如果你对这些不熟悉，MDN 提供了入门指南[入门指南](/zh-CN/docs/Learn/Getting_started_with_the_web)——一套介绍 Web 开发的系列教程。
+要完成本教程，最好对 [HTML](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)、[CSS](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) 有基本的了解。如果你对这些不熟悉，MDN 提供了入门指南[入门指南](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website)——一套介绍 Web 开发的系列教程。
 
 在接下来的章节中，我们将设置一个[本地开发环境](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)，然后在添加 [JavaScript 功能](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)来将本节中创建的静态内容转换为功能性的 Web 应用程序之前，我们会看看我们的进展。一旦我们有了一个功能性的应用，我们就会有可以渐进增强为可安装的、离线工作的 PWA 的东西。
 
@@ -79,7 +79,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 弁言（preamble），可以
 
 {{HTMLelement("head")}} 包含了关于网页应用程序的不能被读者看到的机器可读信息，除了 `<title>` 之外，它显示在浏览器标签的标题中。
 
-`<head>` 包含了所有的[元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)，和 [viewport](/zh-CN/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
+`<head>` 包含了所有的[元数据](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)，和 [viewport](/zh-CN/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
 
 ```html
 <head>
@@ -163,7 +163,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 </form>
 ```
 
-我们鼓励你[学习更多关于制作无障碍 web 表单的知识](/zh-CN/docs/Learn/Forms)。
+我们鼓励你[学习更多关于制作无障碍 web 表单的知识](/zh-CN/docs/Learn_web_development/Extensions/Forms)。
 
 ### 临时硬编码结果文本
 
@@ -191,7 +191,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 ### JavaScript 链接
 
-在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_和_defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
+在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Web/HTML/Element/script#defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
 
 ```html
 <script src="app.js" defer></script>
@@ -314,13 +314,13 @@ li:nth-of-type(even) {
 }
 ```
 
-如果你仍然不太熟悉上面的 CSS，你可以查看 [CSS 属性](/zh-CN/docs/Glossary/Property/CSS)和[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)，或者学习 [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)教程。
+如果你仍然不太熟悉上面的 CSS，你可以查看 [CSS 属性](/zh-CN/docs/Glossary/Property/CSS)和[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)，或者学习 [CSS 入门](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Getting_started)教程。
 
 无论你是逐字使用上面的 CSS，根据自己的偏好编辑上述样式，还是从头开始编写自己的 CSS，请将所有 CSS 放在一个新文件中，并将其保存为与 `index.html` 文件位于同一目录下的 [`style.css`](https://github.com/mdn/pwa-examples/tree/master/cycletracker/html_and_css/style.css)。
 
 ### 完成我们 PWA 的静态 HTML 和 CSS
 
-在继续之前，[注释](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments)或者删除假的过去月经周期数据和标题：
+在继续之前，[注释](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_注释)或者删除假的过去月经周期数据和标题：
 
 ```html
 <section id="past-periods">

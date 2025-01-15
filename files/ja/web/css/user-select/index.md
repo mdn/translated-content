@@ -2,7 +2,7 @@
 title: user-select
 slug: Web/CSS/user-select
 l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+  sourceCommit: 6732005dce0503eebc227e4fb3cc1c72f21d9d81
 ---
 
 {{CSSRef}}
@@ -18,7 +18,6 @@ l10n:
 user-select: none;
 user-select: auto;
 user-select: text;
-user-select: contain;
 user-select: all;
 
 /* グローバル値 */
@@ -40,20 +39,16 @@ user-select: unset;
   - : `auto` の使用値は下記のように決められます。
 
     - `::before` と `::after` の擬似要素では、使用値は `none` になります。
-    - 編集可能な要素の場合、使用値は `contain` になります。
-    - 上記以外で、親要素の `user-select` の使用値が `all` の場合、対象要素の使用値も `all` になります。
-    - 上記以外で、親要素の `user-select` の使用値が `none` の場合、対象要素の使用値も `none` になります。
+    - この要素の親要素の `user-select` の使用値が `none` の場合、使用値は `none` になります。
+    - 上記以外で、親要素の `user-select` の使用値が `all` の場合、使用値は `all` になります。
     - 上記以外の場合、使用値は `text` になります。
 
 - `text`
   - : ユーザーはテキストを範囲選択できます。
 - `all`
   - : この要素の内容は不可分的に選択されます。選択範囲が要素の一部を含んだ場合、選択範囲はすべての子孫要素を含む要素全体が含まれなければなりません。子孫要素でダブルクリックや右クリックを行うと、この値が付けられている最も上位の先祖要素が範囲選択されます。
-- `contain`
 
-  - : 要素の内部から選択を始めることができます。しかし、選択範囲は要素の境界内のみに限定されます。
-
-> **メモ:** CSS UI 4 では、 [`user-select: element` が `contain` に名称が変わります。](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05)
+> **メモ:** [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)モジュールでは、 `contain` 値を `user-select` プロパティに定義して、要素の境界で囲まれた要素内で選択を開始できるようにしていますが、これはどのブラウザーも対応していません。
 
 ## 公式定義
 
@@ -101,6 +96,5 @@ user-select: unset;
 
 ## 関連情報
 
-- [`user-select: contain` のポリフィル](https://github.com/github/user-select-contain-polyfill)
 - {{Cssxref("::selection")}} 擬似要素
 - JavaScript の {{domxref("Selection")}} オブジェクト

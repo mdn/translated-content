@@ -22,7 +22,8 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 - `a4` `b4 c4`
   - : Les coefficients de type [`<number>`](/fr/docs/Web/CSS/number) qui définissent la translation à appliquer.
 
-> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
+> [!NOTE]
+> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs [`<length>`](/fr/docs/Web/CSS/length) pour les coefficients `a4`, `b4` et `c4`.
 
 <table class="standard-table">
   <thead>

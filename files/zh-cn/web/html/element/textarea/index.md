@@ -68,7 +68,8 @@ l10n:
 
   - : 对用户关于可在该控件中输入内容的提示。在占位符文本内部的回车或换行符在渲染提示时必须被视为换行处理。
 
-    > **备注：** 占位符仅应用于显示应输入到表单中的数据类型示例；它们*不能*替代与输入字段关联的正确 {{HTMLElement("label")}} 元素。有关详细说明，请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#labels)。
+    > [!NOTE]
+    > 占位符仅应用于显示应输入到表单中的数据类型示例；它们*不能*替代与输入字段关联的正确 {{HTMLElement("label")}} 元素。有关详细说明，请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#labels)。
 
 - `readonly`
   - : 此布尔属性表示用户无法修改该控件的值。与 `disabled` 属性不同，`readonly` 属性不会阻止用户点击或选择该控件。只读控件的值仍随表单一起提交。
@@ -98,7 +99,7 @@ l10n:
 
 `<textarea>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)——它具有与光栅图像类似的固有尺寸。默认情况下，其 {{cssxref("display")}} 值为 `inline-block`。与其他表单元素相比，它的样式设计相对容易，其盒模型、字体、配色方案等属性均可通过常规 CSS 方式轻松调整。
 
-[样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)提供了一些有关样式化 `<textarea>` 元素的实用技巧。
+[样式化 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)提供了一些有关样式化 `<textarea>` 元素的实用技巧。
 
 ### 基线不一致
 
@@ -195,7 +196,8 @@ textarea {
 
 {{EmbedLiveSample('使用“占位符”示例')}}
 
-> **备注：** 占位符仅用于显示应输入表单的数据类型；它们不能替代与输入相关的正确 {{HTMLElement("label")}} 元素。请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#labels)了解完整说明。
+> [!NOTE]
+> 占位符仅用于显示应输入表单的数据类型；它们不能替代与输入相关的正确 {{HTMLElement("label")}} 元素。请参阅 [`<input>` 标签](/zh-CN/docs/Web/HTML/Element/input#labels)了解完整说明。
 
 ### 禁用和只读文本区
 

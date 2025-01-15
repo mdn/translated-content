@@ -15,7 +15,8 @@ La programmation orientée objet est un paradigme de programmation fondamental p
 
 Nous décrirons ces concepts sans référence particulière à JavaScript, les exemples seront écrits en [pseudo-code](/fr/docs/Glossary/Pseudocode).
 
-> **Note :** Pour être tout à fait précis, les fonctionnalités décrites ici appartiennent à un style particulier de programmation orienté objet basé sur les classes. La plupart du temps, quand on parle de programmation orientée objet, on parle de ce modèle utilisant des classes.
+> [!NOTE]
+> Pour être tout à fait précis, les fonctionnalités décrites ici appartiennent à un style particulier de programmation orienté objet basé sur les classes. La plupart du temps, quand on parle de programmation orientée objet, on parle de ce modèle utilisant des classes.
 
 Après ces descriptions, nous verrons en JavaScript comment les constructeurs et la chaîne de prototypes peuvent être rapprochés de ces concepts objets et leurs différences. Dans l'article suivant, nous verrons d'autres fonctionnalités de JavaScript qui simplifient l'implémentation de programmes orientés objet.
 

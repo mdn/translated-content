@@ -9,8 +9,8 @@ slug: Web/API/Document/getElementsByTagName
 
 ## 语法
 
-```
-var elements = document.getElementsByTagName(name);
+```js-nolint
+getElementsByTagName(name)
 ```
 
 - `elements` 是一个由发现的元素出现在树中的顺序构成的动态的 HTML 集合 {{domxref("HTMLCollection")}} (但是看下面的提示) 。
@@ -92,5 +92,5 @@ var elements = document.getElementsByTagName(name);
 
 ## 参考
 
-- [DOM Level 2 Core: Document.getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [DOM Level 2 Core: Document.getElementsByTagName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094)
+- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

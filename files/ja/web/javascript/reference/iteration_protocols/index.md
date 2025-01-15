@@ -60,7 +60,8 @@ l10n:
 - `throw(exception)` {{optional_inline}}
   - : 0 個または 1 個の引数を受け入れ、`IteratorResult` インターフェースに適合したオブジェクトを返す関数であり、通常 `done` は `true` に等しくなります。このメソッドを呼び出すと、呼び出し側がエラー状態を検出したことをイテレーターに指示し、`exception` は通常 {{jsxref("Error")}} インスタンスとなります。
 
-> **メモ:** 特定のオブジェクトがイテレータープロトコルを実装しているかどうかを反射的に（つまり、実際に `next()` を呼び出して、返された結果を検証することなく）知ることは不可能です。
+> [!NOTE]
+> 特定のオブジェクトがイテレータープロトコルを実装しているかどうかを反射的に（つまり、実際に `next()` を呼び出して、返された結果を検証することなく）知ることは不可能です。
 
 イテレーターはとても簡単に反復可能オブジェクトにすることができます。`[@@iterator]()` メソッドを実装して `this` を返すだけです。
 
@@ -347,7 +348,7 @@ console.log(it.next().value); // 2
 
 ### クラスで反復可能プロトコルを定義
 
-状態のカプセル化は、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields)でも行うことができます。
+状態のカプセル化は、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)でも行うことができます。
 
 ```js
 class SimpleClass {
@@ -392,7 +393,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String` の[既定のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)は、文字列のコードポイントを 1 つずつ返します。
+`String` の[既定のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)は、文字列のコードポイントを 1 つずつ返します。
 
 ```js
 const iterator = someString[Symbol.iterator]();

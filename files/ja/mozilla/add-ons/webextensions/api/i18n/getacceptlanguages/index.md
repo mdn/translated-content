@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 
 {{AddonSidebar}}
 
-ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
+ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#the_accept-language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
 
 これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
@@ -41,7 +41,8 @@ gettingAcceptLanguages.then(onGot);
 
 {{WebExtExamples}}
 
-> **メモ:** この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/extensions/i18n#method-getAcceptLanguages) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
+> [!NOTE]
+> この API は、Chromium の [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getAcceptLanguages) API を基にしています。このドキュメンテーションは、Chromium コード内の [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) に由来しています。Microsoft Edge 互換性データは、Microsoft Corporation より供給され、Creative Commons Attribution 3.0 United States License の下で含まれています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

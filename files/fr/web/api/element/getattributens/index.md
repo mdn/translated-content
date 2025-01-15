@@ -28,7 +28,8 @@ getAttributeNS(namespace, name)
 
 Une chaîne de caractères avec la valeur de l'attribut recherché. Si l'attribut n'existe pas, le résultat est `null`.
 
-> **Note :** Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car `null` a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner `null` pour les attributs inexistants.
+> [!NOTE]
+> Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car `null` a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner `null` pour les attributs inexistants.
 
 ## Exemples
 

@@ -9,7 +9,8 @@ slug: Web/API/Window/requestIdleCallback
 
 你可以在空闲回调函数中调用 **`requestIdleCallback()`**，以便在下一次通过事件循环之前调度另一个回调。
 
-> **备注：** 强烈建议为必要的工作设置 `timeout` 选项，否则在回调触发之前可能已经过去了多秒。
+> [!NOTE]
+> 强烈建议为必要的工作设置 `timeout` 选项，否则在回调触发之前可能已经过去了多秒。
 
 ## 语法
 
@@ -44,10 +45,10 @@ requestIdleCallback(callback, options)
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
-- {{domxref("window.cancelIdleCallback()")}}
+- {{domxref("Window.cancelIdleCallback()")}}
 - {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- {{domxref("Window.setTimeout()")}}
+- {{domxref("Window.setInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

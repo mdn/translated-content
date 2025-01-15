@@ -5,7 +5,7 @@ slug: Web/API/Window/afterprint_event
 
 {{APIRef}}
 
-Свойство `WindowEventHandlers.onafterprint` устанавливает и возвращает обработчик {{event("Event_handlers", "event handler")}} события {{event("afterprint")}} в текущем окне.
+Свойство `WindowEventHandlers.onafterprint` устанавливает и возвращает обработчик [`event handler`](/ru/docs/Web/Events/Event_handlers) события [`afterprint`](/ru/docs/Web/API/Window/afterprint_event) в текущем окне.
 
 ## Синтаксис
 
@@ -31,4 +31,4 @@ window.onafterprint = код обработки события
 
 - {{domxref("window.print")}}
 - {{domxref("window.onbeforeprint")}}
-- [Printing](/ru/docs/Printing)
+- [Printing](/ru/docs/Web/CSS/CSS_media_queries/Printing)

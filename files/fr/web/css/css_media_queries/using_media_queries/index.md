@@ -10,10 +10,11 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 Les requêtes média sont utilisées afin :
 
 - D'appliquer certains styles de façon conditionnelle avec le [CSS](/fr/docs/Web/CSS) grâce [aux règles @](/fr/docs/Web/CSS/At-rule) [`@media`](/fr/docs/Web/CSS/@media) et [`@import`](/fr/docs/Web/CSS/@import).
-- De cibler certains médias pour les éléments [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<source>`](/fr/docs/Web/HTML/Element/Source) et d'autres éléments [HTML](/fr/docs/Web/HTML) grâce à l'attribut `media=`.
-- De [tester et surveiller l'état d'un média](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries) grâce aux méthodes [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener).
+- De cibler certains médias pour les éléments [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<source>`](/fr/docs/Web/HTML/Element/source) et d'autres éléments [HTML](/fr/docs/Web/HTML) grâce à l'attribut `media=`.
+- De [tester et surveiller l'état d'un média](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) grâce aux méthodes [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener).
 
-> **Note :** Les exemples de cet article utilisent `@media` à des fins d'illustration. Toutefois, la syntaxe est la même pour les différents types de requêtes média.
+> [!NOTE]
+> Les exemples de cet article utilisent `@media` à des fins d'illustration. Toutefois, la syntaxe est la même pour les différents types de requêtes média.
 
 ## Syntaxe
 
@@ -21,7 +22,8 @@ Une requête média se compose d'un _type de média_ optionnel et d'une ou plusi
 
 Une requête média vaut `true` si le type de média correspond à l'appareil utilisé pour l'affichage du document et si toutes les expressions relatives aux caractéristiques sont vraies. Les requêtes qui utilisent des types de média inconnus valent toujours `false`.
 
-> **Note :** Lorsqu'une feuille de style est attachée à un élément [`<link>`](/fr/docs/Web/HTML/Element/link) comportant une requếte média, cette feuille de style [sera toujours téléchargée](http://scottjehl.github.com/CSS-Download-Tests/), même si la requête renvoie `false`. Toutefois, le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas `true`.
+> [!NOTE]
+> Lorsqu'une feuille de style est attachée à un élément [`<link>`](/fr/docs/Web/HTML/Element/link) comportant une requếte média, cette feuille de style [sera toujours téléchargée](http://scottjehl.github.com/CSS-Download-Tests/), même si la requête renvoie `false`. Toutefois, le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas `true`.
 
 ### Types de média
 
@@ -30,13 +32,14 @@ Un type de média définit une catégorie générale d'appareil. Le type de méd
 - `all`
   - : Correspond pour tous les appareils.
 - `print`
-  - : Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur [les médias paginés](/fr/docs/Web/CSS/Paged_Media).
+  - : Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur [les médias paginés](/fr/docs/Web/CSS/CSS_paged_media).
 - `screen`
   - : Correspond aux appareils dotés d'un écran.
 - `speech`
   - : Correspond aux outils de synthèse vocale.
 
-> **Note :** Les types de média dépréciés CSS2.1 et [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini plusieurs types additionnels (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`) qui ont ensuite été dépréciés avec [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types). Ces types ne doivent donc plus être utilisés. Le type `aural` a été remplacé par le type `speech`.
+> [!NOTE]
+> Les types de média dépréciés CSS2.1 et [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini plusieurs types additionnels (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`) qui ont ensuite été dépréciés avec [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types). Ces types ne doivent donc plus être utilisés. Le type `aural` a été remplacé par le type `speech`.
 
 ### Caractéristiques média (<i lang="en">media features</i>)
 
@@ -87,7 +90,8 @@ L'opérateur `and` permet de combiner plusieurs requêtes média en une seule. P
 
 L'opérateur `not` est utilisé afin d'obtenir le résultat opposé d'une requête média (il renvoie `true` si l'opérande renvoie `false`). S'il est utilisé dans une liste de requêtes séparées par des virgules, il ne nie que la requête sur laquelle il est appliqué. Si l'opérateur `not` est utilisé, la requête doit nécessairement contenir un type de média.
 
-> **Note :** Pour la spécification de niveau 3, l'opérateur `not` ne peut pas être utilisé afin de prendre l'opposé d'une expression de caractéristique de média, il ne peut servir qu'à l'échelle d'une requête média entière.
+> [!NOTE]
+> Pour la spécification de niveau 3, l'opérateur `not` ne peut pas être utilisé afin de prendre l'opposé d'une expression de caractéristique de média, il ne peut servir qu'à l'échelle d'une requête média entière.
 
 #### `only`
 
@@ -127,7 +131,8 @@ De nombreuses caractéristiques média sont des caractéristiques portant sur un
 @media (max-width: 1250px) { ... }
 ```
 
-> **Note :** Selon la spécification du W3C, les barres de défilement font partie des dimensions de la page. Ainsi la barre de défilement vertical s'ajoute à la largeur du document tandis que la barre de défilement horizontal s'ajoute à la hauteur du document. Cependant tous les navigateurs n'ont pas adopté cette recommandation (Chrome par exemple) et tous n'ont pas opté pour la même taille de barre de défilement, ce qui mène à un développement plus difficile pour assurer une comptabilité sur tous les navigateurs.
+> [!NOTE]
+> Selon la spécification du W3C, les barres de défilement font partie des dimensions de la page. Ainsi la barre de défilement vertical s'ajoute à la largeur du document tandis que la barre de défilement horizontal s'ajoute à la hauteur du document. Cependant tous les navigateurs n'ont pas adopté cette recommandation (Chrome par exemple) et tous n'ont pas opté pour la même taille de barre de défilement, ce qui mène à un développement plus difficile pour assurer une comptabilité sur tous les navigateurs.
 
 Si on utilise une caractéristique média sans indiquer de valeur, la requête sera vérifiée tant que la valeur de cette caractéristique n'est pas nulle (ou `none` pour la spécification de niveau 4). Ainsi, la requête suivante permettra d'appliquer les styles qu'elle contient si l'appareil peut afficher des couleurs :
 
@@ -149,7 +154,8 @@ Il est parfois nécessaire d'avoir une requête qui repose sur plusieurs conditi
 
 Dans l'exemple précédent, on a utilisé l'opérateur `and` afin de combiner un type de média et une caractéristique média. Cet opérateur peut également servir à assembler plusieurs requêtes média pour en former la conjonction logique. L'opérateur `not` permet d'obtenir la négation d'une requête média tandis que l'opérateur `only` empêche les anciens navigateurs d'appliquer les styles qu'une requête contient.
 
-> **Note :** Dans la plupart des cas, le type de média `all` est utilisé par défaut si aucun autre type n'est fourni. Toutefois, lorsqu'on utilise les opérateurs `not` ou `only`, il est nécessaire de fournir un type de média explicite.
+> [!NOTE]
+> Dans la plupart des cas, le type de média `all` est utilisé par défaut si aucun autre type n'est fourni. Toutefois, lorsqu'on utilise les opérateurs `not` ou `only`, il est nécessaire de fournir un type de média explicite.
 
 ### Combiner plusieurs types ou caractéristiques
 
@@ -261,7 +267,7 @@ Il est possible d'utiliser l'opérateur `or` pour tester une correspondance sur 
 
 ## Voir aussi
 
-- [Tester des requêtes média en script](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Tester des requêtes média en script](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [Utiliser les animations CSS entre les requêtes média (en anglais)](https://davidwalsh.name/animate-media-queries)
 - [Les caractéristiques média spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions#caractéristiques)
 - [Les caractéristiques média spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions#caractéristiques_média)

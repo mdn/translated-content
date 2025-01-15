@@ -6,7 +6,7 @@ slug: Web/API/FileReader/readAsDataURL
 {{APIRef("File API")}}
 
 O método `readAsDataURL` é usado para ler o conteúdo do tipo {{domxref("Blob")}} ou {{domxref("File")}}.
-Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para **DONE** e o evento {{event("loadend")}} é disparado.
+Quando a operação de leitura acaba, a flag {{domxref("FileReader.readyState","readyState")}} muda para **DONE** e o evento [`loadend`](/pt-BR/docs/Web/API/XMLHttpRequest/loadend_event) é disparado.
 Então o atributo {{domxref("FileReader.result","result")}} irá conter a URL codificada em base64 do arquivo.
 
 ## Sintaxe
@@ -96,15 +96,16 @@ function previewFiles() {
 }
 ```
 
-> **Nota:** O construtor do [`FileReader()`](/pt-BR/docs/Web/API/FileReader) não é suportado por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos [prévia de imagem básica](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) ou [prévia de imagem avançada](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
+> [!NOTE]
+> O construtor do [`FileReader()`](/pt-BR/docs/Web/API/FileReader) não é suportado por versões anteriores à 10 do Internet Explorer. Para uma maior compatibilidade você pode ver os exemplos [prévia de imagem básica](https://mdn.mozillademos.org/files/3699/crossbrowser_image_preview.html) ou [prévia de imagem avançada](https://mdn.mozillademos.org/files/3698/image_upload_preview.html).
 
 ## Especificações
 
-{{page("/pt-BR/docs/Web/API/FileReader","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidade
 
-{{page("/pt-BR/docs/Web/API/FileReader","Browser compatibility")}}
+<!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/FileReader","Browser compatibility") -->
 
 ## Veja também
 

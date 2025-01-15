@@ -11,9 +11,10 @@ Il est possible d'utiliser des valeurs négatives pour chacun des côtés.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/Élément_remplacé) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
+Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/Replaced_element) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
 
-> **Note :** Les marges créent un espace supplémentaire à l'extérieur de l'élément. Le _« remplissage »_ ({{cssxref("padding")}}) permet quant à lui de créer un espace supplémentaire à l'intérieur de l'élément.
+> [!NOTE]
+> Les marges créent un espace supplémentaire à l'extérieur de l'élément. Le _« remplissage »_ ({{cssxref("padding")}}) permet quant à lui de créer un espace supplémentaire à l'intérieur de l'élément.
 
 ## Syntaxe
 
@@ -124,7 +125,7 @@ Les anciens navigateurs comme IE8-9 ne gèrent pas ces valeurs. Aussi, il faudra
 
 ### Fusion des marges
 
-Les marges haute et basse des éléments sont parfois fusionnées en une seule marge qui est égale à la plus grande des deux marges. Pour plus d'informations, lire [l'article sur la fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+Les marges haute et basse des éléments sont parfois fusionnées en une seule marge qui est égale à la plus grande des deux marges. Pour plus d'informations, lire [l'article sur la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 ## Spécifications
 
@@ -136,6 +137,6 @@ Les marges haute et basse des éléments sont parfois fusionnées en une seule m
 
 ## Voir aussi
 
-- [Fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [Le modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}

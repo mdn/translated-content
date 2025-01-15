@@ -19,7 +19,8 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 
   - : Un {{jsxref("Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Element/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
 
-    > **Nota:** Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
+    > [!NOTE]
+    > Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
 
 - {{domxref("HTMLMediaElement.buffered")}} {{readonlyinline}}
   - : Devuelve un objeto {{domxref("TimeRanges")}} que indica los rangos de la fuente de medios que el navegador ha almacenado en el búfer (si existe) en el momento en que se accede a la propiedad almacenada en el búfer.
@@ -61,7 +62,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 
   - : Is a `unsigned long` that indicates the number of samples that will be returned in the framebuffer of each `MozAudioAvailable` event. This number is a total for all channels, and by default is set to be the number of channels \* 1024 (e.g., 2 channels \* 1024 samples = 2048 total).
 
-    The `mozFrameBufferLength` property can be set to a new value for lower latency, larger amounts of data, etc. The size given _must_ be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the [loadedmetadata](/es/docs/Web/Events/loadedmetadata) event fires, when the audio info is known, but before the audio has started or `MozAudioAvailable` events have begun firing.
+    The `mozFrameBufferLength` property can be set to a new value for lower latency, larger amounts of data, etc. The size given _must_ be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the [loadedmetadata](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires, when the audio info is known, but before the audio has started or `MozAudioAvailable` events have begun firing.
 
 - {{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : Returns a `double` representing the number of samples per second that will be played. For example, 44100 samples per second is the sample rate used by CD audio.
@@ -97,7 +98,8 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 
   - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
 
-    > **Nota:** Gecko sólo soporta la reproducción de una sola pista, y el análisis de los metadatos de las pistas sólo está disponible para los medios con el formato de contenedor Ogg.
+    > [!NOTE]
+    > Gecko sólo soporta la reproducción de una sola pista, y el análisis de los metadatos de las pistas sólo está disponible para los medios con el formato de contenedor Ogg.
 
 - {{domxref("HTMLMediaElement.volume")}}
   - : Is a `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
@@ -146,7 +148,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}
-  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/es/docs/Web/Events/loadedmetadata) event fires.
+  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
 - {{domxref("HTMLMediaElement.pause()")}}
   - : Pauses the media playback.
 - {{domxref("HTMLMediaElement.play()")}}
@@ -182,6 +184,6 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 - Articles
 
-  - [Using HTML5 audio and video](/es/docs/Using_HTML5_audio_and_video)
-  - [Media formats supported by the audio and video elements](/es/docs/Media_formats_supported_by_the_audio_and_video_elements)
-  - [Web Audio API](/es/docs/Web_Audio_API)
+  - [Using HTML5 audio and video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - [Media formats supported by the audio and video elements](/es/docs/Web/Media/Formats)
+  - [Web Audio API](/es/docs/Web/API/Web_Audio_API)

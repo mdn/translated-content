@@ -41,7 +41,8 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 - 每个层叠上下文都完全独立于它的兄弟元素：当处理层叠时只考虑子元素。
 - 每个层叠上下文都是自包含的：当一个元素的内容发生层叠后，该元素将被作为整体在父级层叠上下文中按顺序进行层叠。
 
-> **备注：** 层叠上下文的层级是 HTML 元素层级的一个子级，因为只有某些元素才会创建层叠上下文。可以这样说，没有创建自己的层叠上下文的元素会被父层叠上下文*同化*。
+> [!NOTE]
+> 层叠上下文的层级是 HTML 元素层级的一个子级，因为只有某些元素才会创建层叠上下文。可以这样说，没有创建自己的层叠上下文的元素会被父层叠上下文*同化*。
 
 ## 示例
 
@@ -61,7 +62,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 
 请一定要注意 DIV #4，DIV #5 和 DIV #6 是 DIV #3 的子元素，所以它们的层叠完全在 DIV #3 中被处理。一旦 DIV #3 中的层叠和渲染处理完成，DIV #3 元素就被作为一个整体传递与兄弟元素的 DIV 在 root（根）元素进行层叠。
 
-> **备注：**
+> [!NOTE]
 >
 > - DIV #4 被渲染在 DIV #1 之下，因为 DIV #1 的 z-index (5) 在 root 元素的层叠上下文中生效，而 DIV #4 的 z-index (6) 在 DIV #3 的层叠上下文中生效。因此，DIV #4 在 DIV #1 之下，因为 DIV #4 归属于 z-index 值较低的 DIV #3 元素。
 > - 由此可得 DIV #2 (z-index 2) 被渲染在 DIV #5 (z-index 1) 之下，因为 DIV #5 归属于 z-index 较高的 DIV #3 元素。
@@ -83,40 +84,52 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 
 ### HTML
 
-```
+```html
 <div id="div1">
   <h1>Division Element #1</h1>
-  <code>position: relative;<br/>
-  z-index: 5;</code>
+  <code
+    >position: relative;<br />
+    z-index: 5;</code
+  >
 </div>
 
 <div id="div2">
   <h1>Division Element #2</h1>
-  <code>position: relative;<br/>
-  z-index: 2;</code>
+  <code
+    >position: relative;<br />
+    z-index: 2;</code
+  >
 </div>
 
 <div id="div3">
   <div id="div4">
     <h1>Division Element #4</h1>
-    <code>position: relative;<br/>
-    z-index: 6;</code>
+    <code
+      >position: relative;<br />
+      z-index: 6;</code
+    >
   </div>
 
   <h1>Division Element #3</h1>
-  <code>position: absolute;<br/>
-  z-index: 4;</code>
+  <code
+    >position: absolute;<br />
+    z-index: 4;</code
+  >
 
   <div id="div5">
     <h1>Division Element #5</h1>
-    <code>position: relative;<br/>
-    z-index: 1;</code>
+    <code
+      >position: relative;<br />
+      z-index: 1;</code
+    >
   </div>
 
   <div id="div6">
     <h1>Division Element #6</h1>
-    <code>position: absolute;<br/>
-    z-index: 3;</code>
+    <code
+      >position: absolute;<br />
+      z-index: 3;</code
+    >
   </div>
 </div>
 ```
@@ -194,7 +207,7 @@ h1 {
 }
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample('示例源码', '100%', '396') }}
 
@@ -210,5 +223,5 @@ h1 {
 ## 原始文档信息
 
 - 作者：Paolo Lombardi
-- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license](http://creativecommons.org/licenses/by-sa/2.0/) 将所有内容分享。
+- 此文是我用意大利语写给 [YappY](http://www.yappy.it) 的英文版本。我授权以 [Creative Commons: Attribution-Sharealike license](https://creativecommons.org/licenses/by-sa/2.0/) 将所有内容分享。
 - 上次更新时间：July 9th, 2005

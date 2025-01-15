@@ -141,7 +141,8 @@ Así como la propiedad `flex-grow` se encarga de añadir espacio sobre el eje pr
 
 El tamaño mínimo del ítem tendrá que ser considerado cuando se determine un valor de contracción que pueda funcionar, esto significa que flex-shrink tiene el potencial de comportarse menos consistentemente que flex-grow . Por lo tanto, haremos una revisión más detallada de cómo este algoritmo trabaja en el artículo Controlling Ratios de los ítems sobre el eje principal.
 
-> **Nota:** Nótese que los valores de `flex-grow` y `flex-shrink` son proporciones. Típicamente si pusiéramos todos los ítems flex: `1 1 200px` y luego quisiéramos que un ítem creciera al doble, deberíamos ponerlo con flex: `2 1 200px`. Aunque igualmente podemos colocar flex: `10 1 200px` y flex: `20 1 200px` si quisiéramos.
+> [!NOTE]
+> Nótese que los valores de `flex-grow` y `flex-shrink` son proporciones. Típicamente si pusiéramos todos los ítems flex: `1 1 200px` y luego quisiéramos que un ítem creciera al doble, deberíamos ponerlo con flex: `2 1 200px`. Aunque igualmente podemos colocar flex: `10 1 200px` y flex: `20 1 200px` si quisiéramos.
 
 ### Valores abreviados para las propiedades flex
 

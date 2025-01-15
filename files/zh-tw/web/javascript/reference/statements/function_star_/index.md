@@ -138,7 +138,7 @@ const bar = foo();console.log(bar.next()); // {value: 10, done: false}
 
 #### Generators and iterators in Firefox versions before 26
 
-Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function) for further information.
+Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) for further information.
 
 #### `IteratorResult` object returned instead of throwing
 
@@ -158,6 +158,6 @@ Starting with Gecko 29, the completed generator function no longer throws a {{js
 - Other web resources:
 
   - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](http://www.youtube.com/watch?v=qbKWsbJ76-s)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)
   - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)

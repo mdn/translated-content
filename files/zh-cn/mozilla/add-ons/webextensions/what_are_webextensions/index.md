@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **备注：** 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考资料](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#参考资料)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
+> [!NOTE]
+> 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考资料](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#参考资料)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
 
 扩展为浏览器添加了特性与功能。它通过我们所熟悉的 Web 技术——HTML、CSS 和 JavaScript 来创建。扩展可以利用与网页中的 JavaScript 相同的 Web API，但是扩展也可以访问它自己专有的 JavaScript API。这意味着，和在网页里编码相比，在扩展中你可以做到更多的事情。以下是其中你可以做到的一些事情：
 
@@ -47,7 +48,7 @@ l10n:
 
 ![Axe 辅助功能测试扩展显示在网页中发现的辅助功能问题。](axe_developer_tools_add_on.png)
 
-Firefox 扩展使用 [WebExtensions API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 来构建，这是一种用以开发扩展的跨浏览器系统。在很大程度上，它与 Google Chrome 和 Opera 所支持的[扩展 API](https://developer.chrome.com/extensions) 兼容。在大多数情况下，为这些浏览器所写的扩展只需要少量[修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 和 Microsoft Edge 上运行。
+Firefox 扩展使用 [WebExtensions API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 来构建，这是一种用以开发扩展的跨浏览器系统。在很大程度上，它与 Google Chrome 和 Opera 所支持的[扩展 API](https://developer.chrome.google.cn/docs/extensions) 兼容。在大多数情况下，为这些浏览器所写的扩展只需要少量[修改](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/)就可以在 Firefox 和 Microsoft Edge 上运行。
 
 如果你有想法或者问题，可以在 [dev-addons 讨论版块](https://discourse.mozilla.org/c/add-ons/35)或者 [Matrix](https://chat.mozilla.org/#/room/#addons:mozilla.org) 上的 [Add-ones room](https://wiki.mozilla.org/Matrix) 与我们联系。
 

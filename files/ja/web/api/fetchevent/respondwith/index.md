@@ -25,7 +25,7 @@ Firefox 59 以降、サービスワーカーが {{domxref("FetchEvent.respondWit
 
 たいていのネットワークリクエストに対して、最終 URL を観測できないためこの変更は影響ありません。しかし、少しだけ関係する場合があります。
 
-- {{domxref("fetch()")}} が介入された場合、結果の {{domxref("Response.url")}} で最終 URL を観測できます。
+- {{domxref("Window/fetch", "fetch()")}} が介入された場合、結果の {{domxref("Response.url")}} で最終 URL を観測できます。
 - [ワーカー](/ja/docs/Web/API/Web_Workers_API)スクリプトが介入された場合、最終 URL は [`self.location`](/ja/docs/Web/API/WorkerGlobalScope/location) をセットするのに使われ、ワーカースクリプトの相対 URL の代わりのベース URL として使われます。
 - スタイルシートが介入された場合、最終 URL は相対的な {{cssxref("@import")}} 読み込みの代わりのベース URL として使われます。
 

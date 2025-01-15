@@ -7,7 +7,8 @@ l10n:
 
 {{AddonSidebar}}
 
-> **备注：** 尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.com/docs/extensions/mv3/devtools/)，但 Firefox 中仍有许多特性尚未实现，因此这里未记录。要查看当前缺少哪些特性，请参阅 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
+> [!NOTE]
+> 尽管这些 API 基于 [Chrome devtools API](https://developer.chrome.google.cn/docs/extensions/how-to/devtools/extend-devtools)，但 Firefox 中仍有许多特性尚未实现，因此这里未记录。要查看当前缺少哪些特性，请参阅 [devtools API 的局限性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#devtools_api_的局限性)。
 
 `devtools.panels` API 允许 devtools 扩展在 devtools 窗口内定义其用户界面。
 
@@ -49,7 +50,8 @@ devtools 窗口托管了多个独立的工具——JavaScript 调试器、网络
 
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API。
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.devtools.panels`](https://developer.chrome.google.cn/docs/extensions/reference/api/devtools/panels) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

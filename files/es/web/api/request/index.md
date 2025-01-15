@@ -64,7 +64,8 @@ Puedes crear un nuevo objeto `Request` usando el constructor {{domxref("Request.
 - {{domxref("Body.text()")}}
   - : Devuelve una promesa que se resuelve con una representación {{domxref("USVString")}} (text) del cuerpo de la solicitud.
 
-> **Nota:** Las funciones {{domxref("Body")}} solo pueden ser ejecutadas una vez; Las siguientes llamadas se resolverán con strings/ArrayBuffers vacíos.
+> [!NOTE]
+> Las funciones {{domxref("Body")}} solo pueden ser ejecutadas una vez; Las siguientes llamadas se resolverán con strings/ArrayBuffers vacíos.
 
 ## Ejemplos
 
@@ -102,7 +103,8 @@ const myCred = myRequest.credentials; // omit
 const bodyUsed = myRequest.bodyUsed; // true
 ```
 
-> **Nota:** El tipo de cuerpo solo puede ser {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} o tipo {{domxref("ReadableStream")}}, así que para añadir un objeto JSON a la carga útil, necesitas convertir a string (stringify) dicho objeto.
+> [!NOTE]
+> El tipo de cuerpo solo puede ser {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} o tipo {{domxref("ReadableStream")}}, así que para añadir un objeto JSON a la carga útil, necesitas convertir a string (stringify) dicho objeto.
 
 Puede obtener esta solicitud de API pasando el objeto `Request` como parámetro a una llamada {{domxref("GlobalFetch.fetch()")}}, por ejemplo, y obtener la respuesta:
 
@@ -134,6 +136,6 @@ fetch(myRequest)
 
 ## Ver también
 
-- [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
 - [HTTP](/es/docs/Web/HTTP)

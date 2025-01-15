@@ -40,7 +40,8 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: _source_). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
 
-> **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks#url) pour vous rafraîchir la mémoire avant de continuer.
+> [!NOTE]
+> Vous devriez lire [Une brève présentation des URL et des chemins](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url) pour vous rafraîchir la mémoire avant de continuer.
 
 Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est située dans le même répertoire que votre page HTML, vous pouvez intégrer cette image comme ceci (URL relative) :
 
@@ -56,7 +57,8 @@ Et si cette image se trouve dans un sous-répertoire `images` situé dans le mê
 
 Ainsi de suite.
 
-> **Note :** Les moteurs de recherche lisent aussi les noms de fichiers image et s'en servent pour optimiser la recherche. Donc, donnez à vos images des noms de fichiers descritifs et qui ont du sens. `dinosaur.jpg` est infiniment mieux que `img835.png`.
+> [!NOTE]
+> Les moteurs de recherche lisent aussi les noms de fichiers image et s'en servent pour optimiser la recherche. Donc, donnez à vos images des noms de fichiers descritifs et qui ont du sens. `dinosaur.jpg` est infiniment mieux que `img835.png`.
 
 Vous pouvez intégrer l'image en utilisant son URL absolue, par exemple :
 
@@ -66,7 +68,8 @@ Vous pouvez intégrer l'image en utilisant son URL absolue, par exemple :
 
 Ce n'est pas trés efficace, cela fait travailler le navigateur plus qu'il ne devrait, il cherche l'adresse IP depuis le serveur DNS à chaque fois etc... Vous devriez autant que possible garder vos images du site sur le même serveur que la page HTML.
 
-> **Attention :** La plupart des images ont des droits d'auteur. N'affichez jamais une image sur votre site à moins que :
+> [!WARNING]
+> La plupart des images ont des droits d'auteur. N'affichez jamais une image sur votre site à moins que :
 >
 > 1\) Ce soit votre image (vous en êtes le créateur),
 > 2\) vous ayez reçu une permission explicite et écrite du propriètaire de l'image ou,
@@ -78,9 +81,11 @@ Le code au-dessus vous donnera, à peu prés, le résultat suivant :
 
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
-> **Note :** Les éléments comme {{htmlelement("img")}} et {{htmlelement("video")}} sont souvent désignés comme des éléments "remplacés". C'est parce que le contenu et la taille de ces éléments sont définies par une ressource externe (comme un fichier image ou video), pas par le contenu de l'élément lui-même.
+> [!NOTE]
+> Les éléments comme {{htmlelement("img")}} et {{htmlelement("video")}} sont souvent désignés comme des éléments "remplacés". C'est parce que le contenu et la taille de ces éléments sont définies par une ressource externe (comme un fichier image ou video), pas par le contenu de l'élément lui-même.
 
-> **Note :** Vous trouverez les exemples finis de cette section sur [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (regardez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html).)
+> [!NOTE]
+> Vous trouverez les exemples finis de cette section sur [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (regardez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html).)
 
 ### Texte alternatif
 
@@ -109,12 +114,13 @@ Que devriez-vous noter dans vos attributs `alt` ? En premier lieu, cela dépend 
 
 - **Decoration.** Vous devriez utiliser [des images d'arrière-plan CSS](#images_darrière-plan_css) pour les images décoratives mais si vous devez utiliser du HTML, ajoutez un `alt=""` vide. Si l'image ne fait pas vraiment partie du contenu, un lecteur d'écran ne perdra pas de temps à la lire.
 - **Contenu.** Si votre image fournit une ou plusieurs informations supplémentaires significatives, inscrivez ces mêmes informations dans un _bref_ `alt` text – ou mieux, dans le texte principal, que tout le monde puisse les voir. N'écrivez pas de `alt` text redondants. Imaginez combien ce serait ennuyeux pour un lecteur si tous les paragraphes étaient écrits en double... Si l'image est décrite de manière adéquate dans le corps de texte principal, vous pouvez utiliser simplement `alt=""`.
-- **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
+- **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
 - **Texte.** Vous ne devez pas mettre de texte dans les images. Si votre titre principal a besoin d'un peu d'ombrage par exemple, [utilisez CSS](/fr/docs/Web/CSS/text-shadow) pour ça, plutôt que de mettre du texte dans une image. De toutes manières, si vous ne pouvez pas éviter de faire ça, vous devez ajouter le texte dans l'attribut `alt` .
 
 Le but est de livrer essentiellement une expérience de qualité, même quand les images ne peuvent être vues. Cela assure à tous les utilisateurs de ne rien manquer du contenu. Essayez de ne pas afficher les images dans votre navigateur et regardez ce qu'il se passe. Vous allez vite réaliser que le texte fourni à la place est réellement utile.
 
-> **Note :** Pour plus d'informations, voyez notre guide [Textes Alternatifs](/fr/docs/Learn/Accessibility/HTML#Text_alternatives)
+> [!NOTE]
+> Pour plus d'informations, voyez notre guide [Textes Alternatifs](/fr/docs/Learn/Accessibility/HTML#text_alternatives)
 
 ### Largeur et hauteur (width-height)
 
@@ -137,11 +143,12 @@ C'est une bonne pratique, cela donne une page se chargeant plus rapidement et en
 
 De toutes manières, vous ne devez pas altérer la taille de vos images avec les attributs HTML . Si vous réglez la taille de l'image trop grande, vous aurez un résultat avec beaucoup de "grain", flou ou trop petit et vous dépensez de la bande passante en téléchargeant une image qui ne convient pas aux besoins de l'utilisateur. Votre image peut aussi sortir distordue, si vous n'en maintenez pas le bon [Format d'image](https://fr.wikipedia.org/wiki/Format_d%27image). Vous devriez utiliser un éditeur d'images pour la mettre à la bonne taille avant de la mettre dans votre page web.
 
-> **Note :** Si vous devez absolument modifier une taille d' image, vous devriez vous servir de [CSS](/fr/Apprendre/CSS) .
+> [!NOTE]
+> Si vous devez absolument modifier une taille d' image, vous devriez vous servir de [CSS](/fr/docs/Learn/CSS) .
 
 ### Titre d'images
 
-Comme décrit dans le chapitre [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks), vous pouvez aussi ajouter un attribut `title` aux images, pour fournir un supplément d'information si nécessaire. Dans notre exemple, nous pourrions faire ceci :
+Comme décrit dans le chapitre [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), vous pouvez aussi ajouter un attribut `title` aux images, pour fournir un supplément d'information si nécessaire. Dans notre exemple, nous pourrions faire ceci :
 
 ```html
 <img
@@ -343,7 +350,8 @@ Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelem
 
 L'élément {{htmlelement("figcaption")}} dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 
-> **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte [`alt`](/fr/docs/Web/HTML/Element/img#alt). Le texte [`alt`](/fr/docs/Web/HTML/Element/img#alt) ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
+> [!NOTE]
+> D'un point de vue accessibilité, les légendes ont un rôle différent du texte [`alt`](/fr/docs/Web/HTML/Element/img#alt). Le texte [`alt`](/fr/docs/Web/HTML/Element/img#alt) ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
 Un objet \<figure> n'est pas forcé de contenir une image. C'est une unité de contenu indépendante qui :
 
@@ -505,7 +513,8 @@ Le résultat est probablement plus facile à positionner et contrôler qu'une im
 
 En résumé : si une image a du sens, en terme de contenu, vous devriez utiliser une image HTML. Si une image n'est que pure décoration, il vaut mieux utiliser les images d'arrière-plan CSS.
 
-> **Note :** Vous en apprendrez beaucoup plus sur les [CSS background images](/fr/docs/Learn/CSS/Styling_boxes/Backgrounds) dans notre topic [CSS](/fr/Apprendre/CSS) .
+> [!NOTE]
+> Vous en apprendrez beaucoup plus sur les [CSS background images](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) dans notre topic [CSS](/fr/docs/Learn/CSS) .
 
 C'est tout pour l'instant. Nous avons découvert en détails les images et légendes. Dans le prochain article, nous monterons en régime pour aborder la manière d'utiliser HTML pour intégrer des vidéos et de l'audio dans une page web.
 

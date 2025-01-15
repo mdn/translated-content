@@ -13,7 +13,7 @@ slug: Web/HTTP/Headers
 
 - {{Glossary("Request header", "请求标头")}}包含有关要获取的资源或客户端或请求资源的客户端的更多信息。
 - {{Glossary("Response header", "响应标头")}}包含有关响应的额外信息，例如响应的位置或者提供响应的服务器。
-- {{Glossary("Representation header", "表示标头")}}包含资源主体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)或者应用的编码/压缩方案。
+- {{Glossary("Representation header", "表示标头")}}包含资源主体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
 - {{Glossary("Payload header","有效负荷标头")}}包含有关有效载荷数据表示的单独信息，包括内容长度和用于传输的编码。
 
 标头也可以根据{{Glossary("Proxy_server", "代理")}}处理它们的方式进行分组：
@@ -364,8 +364,6 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
   - : 包含消息发出的日期和时间。
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : 指示请求已在 TLS 早期数据中传送。
-- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
-  - : 告诉浏览器正在加载的页面将要执行大量分配。
 - {{HTTPHeader("Link")}}
   - : [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) 实体标头字段提供了一种在 HTTP 标头中序列化一个或多个链接的方法。它在语义上等同于 HTML 的 {{HTMLElement("link")}} 元素。
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
@@ -393,7 +391,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("X-Requested-With")}}
   - : 待定
 - {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP 标头用于指示网页如何在公共搜索引擎结果中编入索引。标头实际上等同于 `<meta name="robots" content="...">`。
+  - : [`X-Robots-Tag`](https://developers.google.cn/search/docs/crawling-indexing/robots-meta-tag) HTTP 标头用于指示网页如何在公共搜索引擎结果中编入索引。标头实际上等同于 `<meta name="robots" content="...">`。
 - {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : 由 Internet Explorer 用来指示要使用的文档模式。
 
@@ -403,6 +401,6 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 
 ## 参见
 
-- [维基百科中的 HTTP 标头列表](https://zh.wikipedia.org/wiki/HTTP%E5%A4%B4%E5%AD%97%E6%AE%B5)
+- [维基百科中的 HTTP 标头列表](https://zh.wikipedia.org/wiki/HTTP头字段)
 - [IANA 注册表](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers)
 - [HTTP 工作组](https://httpwg.org/specs/)

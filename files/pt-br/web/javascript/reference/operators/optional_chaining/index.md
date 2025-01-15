@@ -59,11 +59,12 @@ Usar encadeamento opcional com chamadas de função faz com que a expressão aut
 let result = someInterface.customMethod?.();
 ```
 
-> **Nota:** Se existe uma propriedade com tal nome e que não é uma função, usando `?.` ainda lançará a exceção {{JSxRef("TypeError")}} (`x.y is not a function`).
+> [!NOTE]
+> Se existe uma propriedade com tal nome e que não é uma função, usando `?.` ainda lançará a exceção {{JSxRef("TypeError")}} (`x.y is not a function`).
 
 #### Lidando com callbacks opcionais ou manipuladores de eventos
 
-Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao#Object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
+Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
 
 ```js
 // Escrito como ES2019
@@ -92,7 +93,7 @@ function doSomething(onContent, onError) {
 
 ### Encadeamento opcional com expressões
 
-Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation):
+Você também pode usar o operador de encadeamento opcional ao acessar propriedades com uma expressão usando [assessores de propriedade](/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation):
 
 ```js
 let nestedProp = obj?.["prop" + "Name"];

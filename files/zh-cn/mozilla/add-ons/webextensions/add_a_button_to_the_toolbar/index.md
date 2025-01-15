@@ -75,7 +75,7 @@ button/
     manifest.json
 ```
 
-安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
+安装这个[WebExtension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -171,7 +171,7 @@ document.addEventListener("click", function (e) {
 
 附加组件的结构最后看上去应该像下面这样：
 
-```
+```plain
 button/
     icons/
         page-16.png
@@ -189,7 +189,7 @@ button/
 
 ## 页面行为
 
-页面行为[（Page actions）](/zh-CN/Add-ons/WebExtensions/User_interface_components#Page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
+页面行为[（Page actions）](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#page_actions) 类似浏览器行为，只是页面行为仅针对特定页面，而浏览器行为则全局有效。
 
 由于浏览器行为总是发生，而页面行为只在特定页面显示。所以页面行为按钮在 URL 地址栏中显示，而浏览器行为按钮则在浏览器工具栏中显示。
 

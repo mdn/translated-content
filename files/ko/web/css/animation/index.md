@@ -56,7 +56,8 @@ animation:
 
 - 애니메이션의 선택적인 이름. `none`, {{cssxref("&lt;custom-ident&gt;")}}, 또는 {{cssxref("&lt;string&gt;")}}일 수 있음.
 
-> **참고:** 현재 구현은 재설정 전용이므로 {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, 그리고 {{cssxref("animation-range-end")}}가 현재 이 목록에 포함되어 있지 않습니다. 즉, `animation`을 포함하면 이전에 선언된 `animation-timeline` 값이 `auto`로 재설정되고, 이전에 선언된 `animation-range-start`와 `animation-range-end` 값은 `normal`로 재설정되지만, 이러한 속성은 `animation`을 통해 설정할 수 없습니다. [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 만들 때 적용하려면 애니메이션 단축을 선언한 후 이러한 속성을 선언해야 합니다.
+> [!NOTE]
+> 현재 구현은 재설정 전용이므로 {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, 그리고 {{cssxref("animation-range-end")}}가 현재 이 목록에 포함되어 있지 않습니다. 즉, `animation`을 포함하면 이전에 선언된 `animation-timeline` 값이 `auto`로 재설정되고, 이전에 선언된 `animation-range-start`와 `animation-range-end` 값은 `normal`로 재설정되지만, 이러한 속성은 `animation`을 통해 설정할 수 없습니다. [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 만들 때 적용하려면 애니메이션 단축을 선언한 후 이러한 속성을 선언해야 합니다.
 
 ### 값
 
@@ -299,5 +300,5 @@ animation:
 
 ## 같이 보기
 
-- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

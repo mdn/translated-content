@@ -30,7 +30,7 @@ createTreeWalker(root, whatToShow, filter)
 
     | 定数                                                     | 数値         | 説明                                                      |
     | -------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | すべて絵のノードを出力します。                            |
+    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | すべてのノードを出力します。                              |
     | `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`        | {{domxref("Attr")}} ノードを出力します。                  |
     | `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`        | {{domxref("CDATASection")}} ノードを出力します。          |
     | `NodeFilter.SHOW_COMMENT`                                | `0x80`       | {{domxref("Comment")}} ノードを出力します。               |

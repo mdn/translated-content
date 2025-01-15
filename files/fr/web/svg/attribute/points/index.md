@@ -45,7 +45,8 @@ svg {
 
 Pour un élément {{SVGElement('polyline')}}, `points` défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.
 
-> **Note :** Un polygone est une forme ouverte, ce qui implique que le dernier point n'est pas connecté au premier point.
+> [!NOTE]
+> Un polygone est une forme ouverte, ce qui implique que le dernier point n'est pas connecté au premier point.
 
 <table class="properties">
   <tbody>
@@ -87,7 +88,8 @@ svg {
 
 Pour un élément {{SVGElement('polyline')}}, `points` défini une liste de point, chaqu'un représente le vecteur pour tracer la ligne. Chaque point est défini par X et Y dans le système de coordonées de l'utilisateur.
 
-> **Note :** Un polygone est une forme fermée, ce qui implique que le dernier point est connecté au premier.
+> [!NOTE]
+> Un polygone est une forme fermée, ce qui implique que le dernier point est connecté au premier.
 
 <table class="properties">
   <tbody>

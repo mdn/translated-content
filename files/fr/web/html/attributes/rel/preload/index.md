@@ -80,9 +80,11 @@ De nombreux différents types de contenu peuvent être préchargés. Les valeurs
 
 - `video`&nbsp;: un fichier vidéo, typiquement intégré avec l'élément {{htmlelement("video")}}.
 
-> **Note :** le préchargement de l'élément `video` est inclut dans la spécification <i lang="en">Preload</i> mais n'est pas encore implémenté par les navigateurs.
+> [!NOTE]
+> Le préchargement de l'élément `video` est inclut dans la spécification <i lang="en">Preload</i> mais n'est pas encore implémenté par les navigateurs.
 
-> **Note :** pour davantage de détails sur ces valeurs et sur la façon dont la spécification <i lang="en">Preload</i> prévoit de les traiter, consultez [<i lang="en">link element extensions</i> (en anglais)](https://w3c.github.io/preload/#link-element-extensions). Notez également que la liste complète des valeurs acceptées par l'attribut `as` est déterminé par la spécification <i lang="en">Fetch</i> — voir la spécification [<i lang="en">request destinations</i> (en anglais)](https://fetch.spec.whatwg.org/#concept-request-destination).
+> [!NOTE]
+> Pour davantage de détails sur ces valeurs et sur la façon dont la spécification <i lang="en">Preload</i> prévoit de les traiter, consultez [<i lang="en">link element extensions</i> (en anglais)](https://w3c.github.io/preload/#link-element-extensions). Notez également que la liste complète des valeurs acceptées par l'attribut `as` est déterminé par la spécification <i lang="en">Fetch</i> — voir la spécification [<i lang="en">request destinations</i> (en anglais)](https://fetch.spec.whatwg.org/#concept-request-destination).
 
 ## Inclure un type MIME
 
@@ -119,7 +121,7 @@ Cependant, l'absence de préchargement n'empêche pas la vidéo `video/webm` d'�
 
 ## Récupération de l'activation du <i lang="en">CORS</i>
 
-Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/CORS) (partage des ressources entre origines multiples), comme par exemple [`fetch()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch), [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou [fonts](/fr/docs/Web/CSS/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/link#crossorigin) sur l'élément [`<link>`](/fr/docs/Web/HTML/Element/link). L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
+Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/CORS) (partage des ressources entre origines multiples), comme par exemple [`fetch()`](/fr/docs/Web/API/Window/fetch), [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou [fonts](/fr/docs/Web/CSS/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/link#crossorigin) sur l'élément [`<link>`](/fr/docs/Web/HTML/Element/link). L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
 
 Comme mentionné ci-dessus, un cas de figure intéressant est celui qui s'applique aux fichiers de polices. Pour plusieurs raisons, celles-ci doivent être analysées en utilisant le mode anonyme du <i lang="en">CORS</i> (voir cet article en anglais&nbsp;: [<i lang="en">Font fetching requirements</i>](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -154,7 +156,7 @@ En plus de fournir un type MIME avec l'attribut `type`, ce code utilise un attri
 
 ## Inclure des médias
 
-Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Element/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Media_Queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
+Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Element/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
 
 Voici un exemple. Vous pouvez consulter son [code source sur GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media) ou étudier un [exemple de démonstration](https://mdn.github.io/html-examples/link-rel-preload/media/)&nbsp;:
 
@@ -194,7 +196,7 @@ Voici un exemple. Vous pouvez consulter son [code source sur GitHub](https://git
 </body>
 ```
 
-Dans cet exemple nous incluons les attributs `media` dans notre élément `<link>` pour qu'une image plus fine soit préchargée si la personne visitant le site dispose d'un écran plus petit, et pour qu'une image plus large soit chargée sur les écrans plus larges. Pour cela, nous utilisons {{domxref("Window.matchMedia")}} et {{domxref("MediaQueryList")}} (consultez la page [Tester les requêtes média en JavaScript](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries) pour en savoir plus).
+Dans cet exemple nous incluons les attributs `media` dans notre élément `<link>` pour qu'une image plus fine soit préchargée si la personne visitant le site dispose d'un écran plus petit, et pour qu'une image plus large soit chargée sur les écrans plus larges. Pour cela, nous utilisons {{domxref("Window.matchMedia")}} et {{domxref("MediaQueryList")}} (consultez la page [Tester les requêtes média en JavaScript](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries) pour en savoir plus).
 
 Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit «&nbsp;flash de texte sans mis en forme&nbsp;» en français).
 
@@ -226,7 +228,7 @@ C'est utile lorsque vous voulez précharger un script mais repousser son exécut
 
 D'autres fonctionnalités de préchargement sont disponibles, mais sachez qu'aucune d'entre elle n'est aussi adaptée à l'objectif recherché que `<link rel="preload">`. En voici la liste&nbsp;:
 
-- `<link rel="prefetch">` est pris en charge depuis quelque temps par les navigateurs, mais est destinée à la récupération préalable des ressources qui vont être utilisées lors de la **_prochaine_** page visitée/chargée (par exemple lorsque vous vous rendrez sur une autre page du site). C'est une bonne chose, mais ce n'est pas utile pour la page en cours de chargement&nbsp;! Par ailleurs, les navigateurs donnent une priorité plus faible à `prefetch` qu'à `preload` — la page courante est prioritaire par rapport à la page suivante. Consultez la [FAQ sur le préchargement des liens](/fr/docs/Web/HTTP/Link_prefetching_FAQ) pour plus de détails&nbsp;;
+- `<link rel="prefetch">` est pris en charge depuis quelque temps par les navigateurs, mais est destinée à la récupération préalable des ressources qui vont être utilisées lors de la **_prochaine_** page visitée/chargée (par exemple lorsque vous vous rendrez sur une autre page du site). C'est une bonne chose, mais ce n'est pas utile pour la page en cours de chargement&nbsp;! Par ailleurs, les navigateurs donnent une priorité plus faible à `prefetch` qu'à `preload` — la page courante est prioritaire par rapport à la page suivante. Consultez la [FAQ sur le préchargement des liens](/fr/docs/Glossary/Prefetch) pour plus de détails&nbsp;;
 - `<link rel="prerender">` effectue le rendu une page spécifiée en arrière-plan, ce qui permet d'accélerer son chargement si la personne visitant le site se rend sur cette page par la suite. Du fait du gaspillage potentiel de bande passante pour les visiteurs (on charge des éléments sans savoir si on en aura besoin), Chrome traite l'instruction `prerender` comme une instruction [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch)&nbsp;;
 - `<link rel="subresource">` {{non-standard_inline}} était pris en charge par Chrome il y a quelques temps et était destiné à gérer la même chose que `preload`, mais il y avait un problème&nbsp;: il n'y avait aucun moyen de définir une priorité sur les éléments à charger (`as` n'existait pas encore), donc toutes les ressources étaient chargées avec la même priorité (la plus faible)&nbsp;;
 - Il y a un grand nombre de scripts de chargements de ressources disponibles un peu partout, mais aucun ne peut avoir la puissance d'une file de priorisation gérée directement par le navigateur. De plus, ces scripts sont sujets à des problèmes de performances similaires.

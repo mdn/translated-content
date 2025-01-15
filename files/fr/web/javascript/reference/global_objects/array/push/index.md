@@ -63,7 +63,8 @@ Array.prototype.push.apply(legumes, autresLegumes);
 console.log(legumes); // ['navet', 'pomme de terre', 'céleri', 'radis']
 ```
 
-> **Note :** Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
+> [!NOTE]
+> Attention à ne pas utiliser cette méthode lorsque les tableaux sont très grands car une fonction n'accepte qu'un nombre limité d'arguments. Voir {{jsxref("Function.apply","apply()")}} pour plus d'informations sur ces limites.
 
 L'exemple qui suit utilise [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour ajouter les éléments d'un second tableau à la fin du premier tableau.
 

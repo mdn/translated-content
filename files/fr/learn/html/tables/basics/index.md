@@ -190,17 +190,17 @@ Lorsque cela est fait correctement, même les personnes malvoyantes peuvent inte
 
 Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un CSS plus signifiant.
 
-Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn/CSS), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables) quand vous aurez fini ici.
+Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn/CSS), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables) quand vous aurez fini ici.
 
 Nous n'approfondirons pas le CSS dans ce module, mais nous avons écrit une feuille de style minimale CSS à utiliser ici, feuille de style qui rendra les tableaux plus lisibles qu'avec un format par défaut sans style. Vous trouverez cette [feuille de style ici](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), et également [un exemple HTML d'application de cette feuille de style là](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) — ensemble ils vous donneront un bon point de départ pour expérimenter sur les tableaux HTML.
 
 ### Quand NE PAS utiliser de tableaux en HTML ?
 
-Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#Page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette disposition a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
+Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette disposition a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
 
 Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
 
-1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), utilisés par les non-voyants, interprètent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
+1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders), utilisés par les non-voyants, interprètent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
 2. **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
 3. **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
 
@@ -261,7 +261,8 @@ Il devrait en résulter un tableau qui ressemble à :
   </tbody>
 </table>
 
-> **Note :** Vous pouvez également trouver cela sur GitHub [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> Vous pouvez également trouver cela sur GitHub [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([voir en direct aussi](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Ajouter des en-têtes avec \<th>
 
@@ -359,13 +360,15 @@ Améliorons ce tableau.
 2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
 3. Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
 
-> **Note :** Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!NOTE]
+> Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Pourquoi les en-têtes sont-ils utiles&nbsp;?
 
 Nous avons déjà partiellement répondu à cette question — il vous est plus facile de trouver les données que vous cherchez quand les en-têtes sont marqués clairement, et la conception globale du tableau paraît meilleure.
 
-> **Note :** Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.
+> [!NOTE]
+> Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.
 
 Les en-têtes de tableau ont un autre avantage — avec l'attribut `scope` (que nous étudierons dans le prochain article), ils rendent les tableaux plus accessibles en associant chaque en-tête à toutes les données des cellules d'une ligne ou d'une colonne. Les lecteurs d'écran peuvent alors lire toute une ligne ou une colonne de données, ce qui peut être très utile.
 
@@ -442,7 +445,8 @@ Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 3. Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
 4. Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
 
-> **Note :** Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Attribuer un style commun aux colonnes
 
@@ -529,7 +533,7 @@ Recréez le tableau en suivant les étapes ci-dessous.
 7. Ajoutez une couleur de fond différente et une bordure pour la sixième colonne, pour signifier que c'est une journée spéciale et qu'elle enseigne à une nouvelle classe. Les valeurs de votre attribut `style` sont `background-color:#DCC48E; border:4px solid #C1437A;`
 8. Les deux derniers jours sont libres, alors pas de couleur de fond mais une largeur à spécifier ; la valeur de votre attribut `style` est `width: 42px;`
 
-Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (à [voir aussi](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) directement) sur GitHub .
+Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (à [voir aussi](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) directement) sur GitHub .
 
 ## Résumé
 

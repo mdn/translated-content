@@ -1,6 +1,8 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
@@ -20,6 +22,7 @@ font-optical-sizing: auto; /* default */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
 font-optical-sizing: revert;
+font-optical-sizing: revert-layer;
 font-optical-sizing: unset;
 ```
 
@@ -76,7 +79,8 @@ p {
 }
 ```
 
-> **メモ:** 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
+> [!NOTE]
+> 上記で参照されているフォント — 光学的サイズを含みライセンスフリーであるもの — がテストに適しています。 [GitHub からダウンロード](https://github.com/googlefonts/amstelvar/releases)できます。
 
 ## 仕様書
 

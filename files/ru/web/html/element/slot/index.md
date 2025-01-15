@@ -5,14 +5,14 @@ slug: Web/HTML/Element/slot
 
 {{HTMLSidebar}}
 
-HTML-элемент **`<slot>`** является частью набора технологии [Web Components](/ru/docs/Web/Web_Components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.
+HTML-элемент **`<slot>`** является частью набора технологии [Web Components](/ru/docs/Web/API/Web_components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content) |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#phrasing_content) |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
-| События                                                    | {{event("slotchange")}}                                                                                                                               |
-| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                                   |
-| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                      |
+| Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#transparent_content_model)                                                                          |
+| События                                                    | [`slotchange`](/ru/docs/Web/API/HTMLSlotElement/slotchange_event)                                                                                     |
+| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                      |
+| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#phrasing_content)                                      |
 | Допустимые ARIA-роли                                       | Нет                                                                                                                                                   |
 | DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                                        |
 
@@ -69,7 +69,8 @@ HTML-элемент **`<slot>`** является частью набора те
 </template>
 ```
 
-> **Примечание:** вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/Web_Components/Using_templates_and_slots).
+> [!NOTE]
+> Вы можете увидеть этот полный пример в действии на странице [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (смотрите его [в режиме реального времени](https://mdn.github.io/web-components-examples/element-details/)). Кроме того, вы можете найти в разделе [Использование шаблонов и слотов](/ru/docs/Web/API/Web_components/Using_templates_and_slots).
 
 ## Спецификации
 

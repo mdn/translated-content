@@ -17,7 +17,7 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 
 このモードでは、ウェブ作成者は、キーボード入力、フォーカス管理、その他のインタラクションを全て処理する責任があり、支援技術が最終的に何らかの処理を行うとは想定できません。
 
-アプリケーション (`application`) ロールに包まれるウェブアプリケーションに、通常のウェブコンテンツと同様に扱われるべき部分が含まれている場合は、文書 ([`document`](/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role)) ロールや記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role)) ロールを使用するべきです。
+アプリケーション (`application`) ロールに包まれるウェブアプリケーションに、通常のウェブコンテンツと同様に扱われるべき部分が含まれている場合は、文書 ([`document`](/ja/docs/Web/Accessibility/ARIA/Roles/document_role)) ロールや記事 ([`article`](/ja/docs/Web/Accessibility/ARIA/Roles/article_role)) ロールを使用するべきです。
 
 ### 背景
 
@@ -31,7 +31,7 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [`document`](/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role), [`article`](/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role)
+- [`document`](/ja/docs/Web/Accessibility/ARIA/Roles/document_role), [`article`](/ja/docs/Web/Accessibility/ARIA/Roles/article_role)
   - : 通常のウェブコンテンツとして扱われるべきアプリケーションの部分を示すために使用します。
 - aria-activedescendant
   - : アプリケーション内でのフォーカスの管理に使用します。
@@ -57,7 +57,8 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 - 属性値の変更
   - : `aria-activedescendant` は、アプリケーションコンテナー内のフォーカスを管理するために使用します。 フォーカスやインタラクションのポイントを変更するキーボードやその他のアプリケーションのイベントに応じて設定します。
 
-> **メモ:** アプリケーション (`application`) ロールには、関連する HTML ウィジェットがないため、完全に自由形式です。 アプリケーションの作成者は、ユーザーがフォーカスのリンボに拘束されたり、ユーザーが抜け出せないものの中にフォーカスを閉じ込められたりしないようにするために全面的な責任を負う必要があります。 ページの他の部分にある通常のウェブコンテンツに戻ることを含む、インタラクションの全ての側面を処理する必要があります。 賢明に、そして慎重に使用してください！
+> [!NOTE]
+> アプリケーション (`application`) ロールには、関連する HTML ウィジェットがないため、完全に自由形式です。 アプリケーションの作成者は、ユーザーがフォーカスのリンボに拘束されたり、ユーザーが抜け出せないものの中にフォーカスを閉じ込められたりしないようにするために全面的な責任を負う必要があります。 ページの他の部分にある通常のウェブコンテンツに戻ることを含む、インタラクションの全ての側面を処理する必要があります。 賢明に、そして慎重に使用してください！
 
 ## 例
 
@@ -71,7 +72,7 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 
 アプリケーション (`application`) ロールを不適切に使用すると、意図せずにウェブページの情報からのアクセスを奪う可能性があるので、使用には十分注意してください。 あなたが実際にそれを必要とし、他の既知のウィジェットのセットを使って同じことができない場合に、真剣に考えます。 使用する場合は、アプリケーション (`application`) ロールは、例えば `<body>` 要素ではなく、可能な最も低い共通コンテナーに追加するべきです。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

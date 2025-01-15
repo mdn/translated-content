@@ -9,7 +9,7 @@ l10n:
 
 HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
 
-`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/CORS_settings_attributes) 를 참고하세요.
+`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin) 를 참고하세요.
 
 ## 보안과 오염된 canvas들
 
@@ -73,7 +73,7 @@ function startDownload() {
 }
 ```
 
-여기서는 하드코딩된 URL(`imageURL`)을 사용하고 있지만 어디에서나 쉽게 찾을 수 있습니다. 다운로드를 시작하려면 {{domxref("HTMLImageElement.Image", "Image()")}} 생성자를 사용하여 새로운 {{domxref("HTMLImageElement")}} 객체를 생성합니다. 그런다음 `crossOrigin` 속성을 `"Anonymous"`으로 설정하여 교차 출처 다운로드를 허용하도록 이미지를 구성합니다. (이미지 교차 출처의 인증이 되지 않은 다운로드를 허용). 이미지 요소에서 발생하는 {{event("load")}} 이벤트에 대한 이벤트 수신기가 추가되며 이는 이미지 데이터가 수신되었음을 의미 합니다.
+여기서는 하드코딩된 URL(`imageURL`)을 사용하고 있지만 어디에서나 쉽게 찾을 수 있습니다. 다운로드를 시작하려면 {{domxref("HTMLImageElement.Image", "Image()")}} 생성자를 사용하여 새로운 {{domxref("HTMLImageElement")}} 객체를 생성합니다. 그런다음 `crossOrigin` 속성을 `"Anonymous"`으로 설정하여 교차 출처 다운로드를 허용하도록 이미지를 구성합니다. (이미지 교차 출처의 인증이 되지 않은 다운로드를 허용). 이미지 요소에서 발생하는 {{domxref("Window/load_event", "load")}} 이벤트에 대한 이벤트 수신기가 추가되며 이는 이미지 데이터가 수신되었음을 의미 합니다.
 
 마지막으로 이미지의 {{domxref("HTMLImageElement.src", "src")}} 속성을 다운로드할 이미지의 URL로 설정하면 다운로드가 시작됩니다.
 
@@ -108,6 +108,6 @@ function imageReceived() {
 
 ## See also
 
-- [WebGL 과 Chrome 13에서 교차출처 이미지 사용하기](http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
+- [WebGL 과 Chrome 13에서 교차출처 이미지 사용하기](https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html)
 - [HTML 명세 - `crossorigin` 속성](http://whatwg.org/html#attr-img-crossorigin)
 - [Web Storage API](/ko/docs/Web/API/Web_Storage_API)

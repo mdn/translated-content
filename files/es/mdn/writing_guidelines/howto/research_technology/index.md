@@ -50,7 +50,8 @@ Además, tenemos una guía sobre [Información contenida en un archivo WebIDL](/
 
 Escribirá ejemplos de código o creará demostraciones muchas veces durante el proceso de documentación de una tecnología, pero es muy útil comenzar dedicando tiempo a familiarizarse con cómo funciona la tecnología. Este es un ejercicio realmente valioso porque le brinda una buena comprensión de cuáles son los casos de uso (_por qué_ un desarrollador usaría esta tecnología) y le ayuda a crear algunos ejemplos de código al mismo tiempo.
 
-> **Nota:** Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrá que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
+> [!NOTE]
+> Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrá que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
 > Si necesita ayuda, consulte las demostraciones que haya encontrado o consulte a un contacto de ingeniería.
 
 ## Crear la lista de páginas para escribir o actualizar
@@ -59,7 +60,7 @@ Las diferentes páginas que necesitas escribir desde cero o actualizar varían s
 
 ### Menús laterales
 
-Es posible que también sea necesario definir o actualizar el menú lateral de las páginas que escribe. Para saber si esto es necesario y cómo hacerlo, [consulte nuestra guía del menú lateral](/es/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars).
+Es posible que también sea necesario definir o actualizar el menú lateral de las páginas que escribe. Para saber si esto es necesario y cómo hacerlo, [consulte nuestra guía del menú lateral](/es/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars).
 
 ### Ejemplos de código
 

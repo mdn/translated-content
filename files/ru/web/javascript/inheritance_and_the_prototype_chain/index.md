@@ -203,7 +203,8 @@ var square = new Square(2);
 
 [`hasOwnProperty`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) — единственная существующая в JavaScript возможность работать со свойствами, не затрагивая цепочку прототипов.
 
-> **Примечание:** Примечание: Для проверки существования свойства недостаточно проверять, эквивалентно ли оно [`undefined`](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined). Свойство может вполне себе существовать, но при этом ему может быть присвоено значение `undefined`.
+> [!NOTE]
+> Для проверки существования свойства недостаточно проверять, эквивалентно ли оно [`undefined`](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined). Свойство может вполне себе существовать, но при этом ему может быть присвоено значение `undefined`.
 
 ### Плохая практика: расширение базовых прототипов
 

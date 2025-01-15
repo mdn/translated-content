@@ -8,7 +8,8 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-> **警告:** このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
+> [!WARNING]
+> このメソッドを使わないでください。代わりに {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} コンストラクターを使用してください。
 >
 > このメソッドは DOM 仕様から削除され、現在のどのブラウザーも対応していません。
 > Firefox はバージョン 93 からこのメソッドを環境設定 (`dom.keyboardevent.init_key_event.enabled`) に隠蔽しており、その後まもなく削除される予定になっています。

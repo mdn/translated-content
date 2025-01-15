@@ -9,7 +9,8 @@ l10n:
 
 La méthode statique **`WebAssembly.compileStreaming()`** permet de compiler un module WebAssembly (c'est-à-dire un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)) depuis un flux source. Cette fonction est utile si on doit compiler un module avant de l'instancier séparement, sinon on utilisera plutôt [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static).
 
-> **Note :** Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!NOTE]
+> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntaxe
 
@@ -35,7 +36,7 @@ Un objet `Promise` dont la valeur de résolution est un objet [`WebAssembly.Modu
 
 ## Exemples
 
-Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`compile-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). La fonction `compileStreaming()` acceptant une promesse pour un objet [`Response`](/fr/docs/Web/API/Response), on peut directement passer l'appel à [`fetch()`](/fr/docs/Web/API/fetch) qui transfèrera la réponse dès que la promesse sera tenue.
+Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`compile-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). La fonction `compileStreaming()` acceptant une promesse pour un objet [`Response`](/fr/docs/Web/API/Response), on peut directement passer l'appel à [`fetch()`](/fr/docs/Web/API/Window/fetch) qui transfèrera la réponse dès que la promesse sera tenue.
 
 ```js
 const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
