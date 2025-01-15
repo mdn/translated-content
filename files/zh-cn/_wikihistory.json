@@ -24164,7 +24164,7 @@
       "hotbaby"
     ]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-12-12T05:50:13.576Z",
     "contributors": [
       "柳涤尘",
@@ -24293,19 +24293,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-06-28T13:50:25.946Z",
     "contributors": ["srq18211"]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-07-13T05:48:34.741Z",
-    "contributors": [
-      "laampui",
-      "zhangchen",
-      "niccoming",
-      "evolighting",
-      "i-PeterZhang",
-      "456wyc",
-      "redman9",
-      "guangxiyu"
-    ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
     "modified": "2020-10-15T21:26:17.964Z",
@@ -32361,6 +32348,19 @@
       "kingysu",
       "skyfore",
       "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
+    "modified": "2020-07-13T05:48:34.741Z",
+    "contributors": [
+      "laampui",
+      "zhangchen",
+      "niccoming",
+      "evolighting",
+      "i-PeterZhang",
+      "456wyc",
+      "redman9",
+      "guangxiyu"
     ]
   }
 }
