@@ -1,6 +1,7 @@
 ---
 title: Форматирование текста
-slug: Web/JavaScript/Guide/Text_formatting
+slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
+original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}

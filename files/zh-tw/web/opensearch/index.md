@@ -2,14 +2,14 @@
 title: OpenSearch 描述格式
 slug: Web/OpenSearch
 l10n:
-  sourceCommit: 5309f49a300166809b098f1b7604d563f3332af2
+  sourceCommit: 62bf567f9ab13aaf07cf4d6e624d5eb33ce13987
 ---
 
 {{AddonSidebar}}
 
 [**OpenSearch 描述格式**](https://github.com/dewitt/opensearch)可用於描述搜尋引擎的網頁介面。這允許網站為自身描述搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。OpenSearch 受到（至少）Firefox、Edge、Safari 和 Chrome 的支援。（參見[參考資料](#參考資料)以獲取其他瀏覽器的文件連結。）
 
-Firefox 還支援 OpenSearch 標準中沒有的其他功能，例如搜尋建議和 `<SearchForm>` 元件。本文重點介紹如何創建支援這些額外 Firefox 功能的 OpenSearch 相容搜尋插件。
+Firefox 還支援 OpenSearch 標準中沒有的其他功能，例如搜尋建議。本文重點介紹如何創建支援這些額外 Firefox 功能的 OpenSearch 相容搜尋插件。
 
 OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件的自動探索)中所述進行廣告宣傳。
 
@@ -29,7 +29,6 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
   <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image>
   <Url type="text/html" template="[searchURL]"/>
   <Url type="application/x-suggestions+json" template="[suggestionURL]"/>
-  <moz:SearchForm>[https://example.com/search]</moz:SearchForm>
 </OpenSearchDescription>
 ```
 
