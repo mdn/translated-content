@@ -19,7 +19,7 @@ l10n:
 
 - `frameIds` {{optional_inline}}
 
-  - : `number` 数组。要注入的框架的 ID 数组。
+  - : `number` 数组（`array`）。要注入的框架的 ID 数组。
 
 - `tabId`
   - : `number`。要注入的标签页的 ID。
