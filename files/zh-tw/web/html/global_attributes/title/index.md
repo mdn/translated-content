@@ -84,7 +84,7 @@ output.textContent = span.title;
 - 具有精細動作控制障礙的用戶
 - 具有認知障礙的用戶
 
-這是因為瀏覽器支援度不一致，再加上輔助技術對瀏覽器渲染頁面的額外解析，導致了這個問題。如果您需要工具提示效果，最好透過 [使用更易於訪問的技術](https://inclusive-components.design/tooltips-toggletips/) 進行瀏覽。
+這是因為瀏覽器支援度不一致，再加上輔助技術對瀏覽器渲染頁面的額外解析，導致了這個問題。如果你需要工具提示效果，最好透過 [使用更易於訪問的技術](https://inclusive-components.design/tooltips-toggletips/) 進行瀏覽。
 
 - [3.2.5.1. title 屬性 | W3C HTML 5.2: 3.HTML 文件的語義、結構和 API](https://html.spec.whatwg.org/multipage/dom.html#the-title-attribute)
 - [使用HTML title 屬性(更新版) | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
