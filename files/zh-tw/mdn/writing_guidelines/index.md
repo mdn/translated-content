@@ -11,7 +11,7 @@ MDN Web Docs 是一個開源專案。以下各章節說明了我們在 MDN Web D
 
 - [我們撰寫的內容](/zh-TW/docs/MDN/Writing_guidelines/What_we_write)
 
-  - : 本章節涵蓋我們在 MDN Web Docs 上包含哪些內容、哪些不包含，以及其他多項政策，例如何時撰寫新技術、內容建議流程，以及我們是否接受外部連結。如果你正在考慮為我們撰寫或更新內容，這是一個很好的起點。本章節還包括：
+  - : 本章節涵蓋我們在 MDN Web Docs 上包含哪些內容、不包含哪些內容，以及其他多項政策，例如何時撰寫新技術、內容建議流程，以及我們是否接受外部連結。如果你正在考慮為我們撰寫或更新內容，這是一個很好的起點。本章節還包括：
 
     - [納入標準](/zh-TW/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
 
