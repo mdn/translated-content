@@ -114,7 +114,7 @@ function setStyles() {
 
 ## Сохранение значений в хранилище
 
-{{domxref("Storage.setItem()")}} используется как для создания новых пар "ключ-значение", так и для изменения существующих при наличии. Эта функция принимает два аргумента - ключ для поиска информации и саму информацию для хранения.
+Метод {{domxref("Storage.setItem()")}} используется как для создания новых, так и для изменения существующих элементов. Он принимает два аргумента — ключ элемента и значение для хранения.
 
 ```js
 function populateStorage() {
@@ -136,7 +136,7 @@ fontForm.onchange = populateStorage;
 imageForm.onchange = populateStorage;
 ```
 
-## Реакция на событие изменения значений в хранилище (StorageEvent)
+## Отслеживание изменений в хранилище с помощью StorageEvent
 
 The {{domxref("StorageEvent")}} is fired whenever a change is made to the {{domxref("Storage")}} object. This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 
