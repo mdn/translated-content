@@ -12,16 +12,16 @@ l10n:
 ## 信息
 
 ```plain
-TypeError: The comparison function must be either a function or undefined (V8-based)
+TypeError: The comparison function must be either a function or undefined（V8-based）
 
-TypeError: invalid Array.prototype.sort argument (Firefox)
-TypeError: non-function passed to Array.prototype.toSorted (Firefox)
-TypeError: invalid %TypedArray%.prototype.sort argument (Firefox)
+TypeError: invalid Array.prototype.sort argument（Firefox）
+TypeError: non-function passed to Array.prototype.toSorted（Firefox）
+TypeError: invalid %TypedArray%.prototype.sort argument（Firefox）
 
-TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)
-TypeError: Array.prototype.toSorted requires the comparator argument to be a function or undefined (Safari)
-TypeError: TypedArray.prototype.sort requires the comparator argument to be a function or undefined (Safari)
-TypeError: TypedArray.prototype.toSorted requires the comparator argument to be a function or undefined (Safari)
+TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined（Safari）
+TypeError: Array.prototype.toSorted requires the comparator argument to be a function or undefined（Safari）
+TypeError: TypedArray.prototype.sort requires the comparator argument to be a function or undefined（Safari）
+TypeError: TypedArray.prototype.toSorted requires the comparator argument to be a function or undefined（Safari）
 ```
 
 ## 错误类型
