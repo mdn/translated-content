@@ -9,7 +9,7 @@ l10n:
 
 当 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时，会触发 JavaScript 异常“invalid Array.prototype.sort argument”
 
-## 错误信息
+## 信息
 
 ```plain
 TypeError: The comparison function must be either a function or undefined (V8-based)
