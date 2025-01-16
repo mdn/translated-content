@@ -10,9 +10,9 @@ l10n:
 移除一个通过调用 {{WebExtAPIRef("scripting.insertCSS()")}} 注入的 CSS 样式表。
 
 > [!NOTE]
-> 该方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Safari 和 Firefox 102+ 中，你也可以在 Manifest V2 中使用该方法。
+> 该方法在 Chrome 和 Firefox 101 的 Manifest V3 或更高版本中可用。在 Safari 和 Firefox 102+ 中，该方法也在 Manifest V2 中可用。
 
-要使用该方法，你必须取得 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 以及页面的 URL 权限，可以是明确的 [主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，也可以使用 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)。
+要使用该方法，你必须取得 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)以及页面的 URL 权限，可以是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，也可以使用 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -33,7 +33,7 @@ await browser.scripting.removeCSS(
     - `css` {{optional_inline}}
       - : `string`。包含要注入的 CSS 的字符串。必须指定 `css` 或 `files` 其中之一，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
     - `files` {{optional_inline}}
-      - : `string` 的 `array`。要注入的 CSS 文件相对于扩展的根目录的路径。必须指定 `files` 或 `css` 其中之一，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
+      - : `string` 数组（`array`）。要注入的 CSS 文件相对于扩展的根目录的路径。必须指定 `files` 或 `css`，并且必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表匹配。
     - `origin` {{optional_inline}}
       - : `string`。注入的样式的来源，可以是 `USER` 或 `AUTHOR`。默认为 `AUTHOR`。必须与通过 {{WebExtAPIRef("scripting.insertCSS()")}} 插入的样式表的来源匹配。
     - `target`
@@ -41,7 +41,7 @@ await browser.scripting.removeCSS(
 
 ### 返回值
 
-[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有 CSS 都被移除时将不带参数地兑现。如果发生了错误，则该 promise 将被拒绝。将不会尝试移除不存在的样式表。
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当所有 CSS 都被移除时将不带参数地兑现。如果发生了错误，则该 promise 将被拒绝。移除不存在的样式表的尝试将被忽略。
 
 ## 示例
 
