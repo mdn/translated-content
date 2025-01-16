@@ -21,7 +21,7 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 {{ListSubpages("/zh-TW/docs/Web/Manifest")}}
 
->  **備註：** `dir`、`lang`、`iarc_rating_id` 和 `note_taking` 成員尚未實作。
+> **備註：** `dir`、`lang`、`iarc_rating_id` 和 `note_taking` 成員尚未實作。
 
 ## 範例清單
 
