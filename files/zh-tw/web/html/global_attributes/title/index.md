@@ -9,7 +9,7 @@ slug: Web/HTML/Global_attributes/title
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-`title` 屬性的主要用途是為輔助技術標記 {{HTMLElement("iframe")}} 元素。
+`title` 屬性的主要用途是為輔助技術標記 {{HTMLElement("iframe")}} 元素。 
 
 `title` 屬性也可以用於標記[表格元素](/zh-TW/docs/Web/HTML/Element/table)中的元素。 
 
