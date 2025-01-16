@@ -2,7 +2,7 @@
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Element/fencedframe
 l10n:
-  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
+  sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -77,7 +77,7 @@ l10n:
   height="320"></fencedframe>
 ```
 
-如果沒有此標題，他們必須進入 `<iframe>` 才能確定其嵌入的內容。這種上下文轉換可能會令人困惑和耗時，特別是對於包含多個 `<iframe>` 的頁面和／或嵌入包含互動內容（如視訊或音訊）的情況。
+如果沒有此標題，他們必須進入 `<fencedframe>` 才能確定其嵌入的內容。這種上下文轉換可能會令人困惑和耗時，特別是對於包含多個 `<fencedframe>` 的頁面和／或嵌入包含互動內容（如視訊或音訊）的情況。
 
 ## 範例
 
