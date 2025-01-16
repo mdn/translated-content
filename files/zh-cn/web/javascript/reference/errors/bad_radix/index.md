@@ -7,13 +7,13 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-{{jsxref("Number.prototype.toString()")}} 或 {{jsxref("BigInt.prototype.toString()")}} 方法的可选 `radix` 参数被指定，但其值不在 2 到 36 之间时，会触发“radix must be an integer at least 2 and no greater than 36”JavaScript 异常。
+JavaScript 异常“radix must be an integer at least 2 and no greater than 36”会在 {{jsxref("Number.prototype.toString()")}} 或 {{jsxref("BigInt.prototype.toString()")}} 方法的可选 `radix` 参数被指定，但其值不在 2 到 36 之间时触发。
 
-## 错误信息
+## 消息
 
 ```plain
-RangeError: toString() radix argument must be between 2 and 36 (V8-based & Safari)
-RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
+RangeError: toString() radix argument must be between 2 and 36（基于 V8 & Safari）
+RangeError: radix must be an integer at least 2 and no greater than 36（Firefox）
 ```
 
 ## 错误类型
