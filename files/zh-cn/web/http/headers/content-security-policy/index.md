@@ -1,21 +1,22 @@
 ---
-title: Content-Security-Policy
+title: Content-Security-Policy (CSP)
+short-title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: 6368e2b112a343fa00ae1a8cf51ceb0b0b845834
+  sourceCommit: 232dc9186a6d79d7e12b3000999ad026d63e995e
 ---
 
 {{HTTPSidebar}}
 
-HTTP 响应头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定源服务器和脚本端点。这将帮助防止{{Glossary("cross-site scripting", "跨站脚本攻击")}}。
+HTTP 响应首部 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定源服务器和脚本端点。这将帮助防止{{Glossary("cross-site scripting", "跨站脚本攻击")}}。
 
-如需更多信息，请查阅[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)。
+参见[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)，以查看 CSP 发送到浏览器的细节，它长什么样，及其用例和部署策略。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
-      <td>{{Glossary("Response header", "响应头")}}</td>
+      <td>{{Glossary("Response header", "响应首部")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
@@ -104,9 +105,9 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 例如：
 
-- 如果没有 `img-src` 而有 `default-src`，那么 `default-src` 提供的策略将应用于图片。
-- 如果没有 `script-src-elem` 而有 `script-src`，那么 `script-src` 提供的策略将应用于 `<script>` 元素。
-- 如果 `script-src-elem` 和 `script-src` 都没有提供，却提供了 `default-src`，那么 `default-src` 提供的策略将应用于 `<script>` 元素。
+- 如果没有提供 `img-src`，但包含了 `default-src`，那么 `default-src` 定义的策略将应用于图像。
+- 如果没有提供 `script-src-elem`，但包含了 `script-src`，那么 `script-src` 定义的策略将应用于 `<script>` 元素。
+- 如果 `script-src-elem` 和 `script-src` 都没有提供，但包含了 `default-src`，那么 `default-src` 定义的策略将应用于 `<script>` 元素。
 
 ### 文档指令
 
@@ -137,7 +138,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
     > [!WARNING]
     > 此指令意图替换 [`report-uri`](#report-uri)；在支持 `report-to` 的浏览器，`report-uri` 会被忽略。
-    > 但是，在 `report-to` 被广泛支持前，你应该两者均指定（其中`endpoint_name`是单独提供的端点的名字）：
+    > 但是，在 `report-to` 被广泛支持前，你应该两者均指定（其中 `endpoint_name` 是单独提供的端点的名字）：
     >
     > ```http
     > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
@@ -157,13 +158,13 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
   - : 当页面使用 HTTPS 时，阻止使用 HTTP 的资源加载。
 - {{CSP("report-uri")}} {{deprecated_inline}}
-  - : 给浏览器提供发送 CSP 违规报告的 URL。已经被[`report-to`](#report-to)指令取代。
+  - : 给浏览器提供发送 CSP 违规报告的 URL。已经被 [`report-to`](#report-to) 指令取代。
 
 ### Fetch 指令语法
 
 所有的 Fetch 指令可以指定为以下形式之一：
 
-- 单独的值 `'none'`，表示应完全阻止加载特定资源类型。
+- 单独 `'none'` 值，表示应完全阻止加载特定资源类型。
 - 一个或多个*源表达式*值，表示该资源类型的合法来源。
 
 每个来源表达式可以采用以下列出的形式之一。需要注意的是，并非所有形式都适用于所有 Fetch 指令：请参阅每个 Fetch 指令的文档，了解适用的形式。
@@ -186,7 +187,8 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 有关更多用法信息，请参阅 CSP 指南中的 [Nonce](/zh-CN/docs/Web/HTTP/CSP#nonces)。
 
-> [!NOTE] Nonce 来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
+> [!NOTE]
+> Nonce 来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
 
 ### '\<hash_algorithm>-<hash_value>'
 
@@ -209,11 +211,12 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 有关更多用法信息，请参阅 CSP 指南中的[哈希值](/zh-CN/docs/Web/HTTP/CSP#hash)。
 
-> [!NOTE] 哈希来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
+> [!NOTE]
+> 哈希来源表达式仅适用于 {{htmlelement("script")}} 和 {{htmlelement("style")}} 元素。
 
 ### \<host-source>
 
-{{glossary("host", "主机")}} 的 [URL](/zh-CN/docs/Web/URI) 或 IP 地址，是资源的有效来源。
+{{glossary("host", "主机")}}的 [URL](/zh-CN/docs/Web/URI) 或 IP 地址，是资源的有效来源。
 
 协议、端口号和路径是可选的。
 
@@ -260,7 +263,8 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 `unsafe-eval` 关键字可用于撤销此保护，允许动态计算字符串为 JavaScript。
 
-> [!WARNING] 开发人员应避免使用`'unsafe-eval'`，因为它破坏了 CSP 的大部分保护目的。
+> [!WARNING]
+> 开发人员应避免使用`'unsafe-eval'`，因为它破坏了 CSP 的大部分保护目的。
 
 有关更多用法信息，请参阅 CSP 指南中的 [`eval()` 和类似的 API](/zh-CN/docs/Web/HTTP/CSP#eval_and_similar_apis)。
 
@@ -275,8 +279,8 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则禁止执行内联 JavaScript。这包括：
 
 - 内联 `<script>` 标签
-- 内联事件属性
-- `javascript:`URL。
+- 内联事件处理器属性
+- `javascript:` URL
 
 类似地，如果 CSP 包含 `default-src` 或 `style-src` 指令，则内联 CSS 也不会被加载，包括：
 
@@ -285,7 +289,8 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 `unsafe-inline` 关键字可用于撤销此保护，允许加载所有这些形式的资源。
 
-> [!WARNING] 开发人员应避免使用 `'unsafe-inline'`，因为它破坏了 CSP 的大部分保护目的。
+> [!WARNING]
+> 开发人员应避免使用 `'unsafe-inline'`，因为它破坏了 CSP 的大部分保护目的。
 
 有关更多用法信息，请参阅 CSP 指南中的[内联 JavaScript](/zh-CN/docs/Web/HTTP/CSP#inline_javascript)。
 
@@ -301,7 +306,8 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 如果哈希值与内联事件处理程序属性值或 `style` 属性值的哈希值匹配，则允许代码执行。
 
-> [!WARNING] `'unsafe-hashes'` 值是不安全的。
+> [!WARNING]
+> `'unsafe-hashes'` 值是不安全的。
 >
 > 特别是，攻击者可以将内联事件处理程序属性的内容注入到内联 `<script>` 元素中，以此实现攻击。例如，假设内联事件处理程序是：
 >
@@ -315,13 +321,13 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'inline-speculation-rules'
 
-默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则不允许执行内联 JavaScript。`'inline-speculation-rules'`允许浏览器加载 [`type`](/zh-CN/docs/Web/HTML/Element/script/type) 属性为 [`speculationrules`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 的内联`<script>`元素。
+默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则不允许执行内联 JavaScript。`'inline-speculation-rules'` 允许浏览器加载 [`type`](/zh-CN/docs/Web/HTML/Element/script/type) 属性为 [`speculationrules`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 的内联 `<script>` 元素。
 
 有关更多信息，请参阅[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API)。
 
 ### 'strict-dynamic'
 
-`'strict-dynamic'`关键字使得通过 [nonce](#nonce-nonce_value) 或 [hash](#hash_algorithm-hash_value) 信任的脚本扩展到此脚本动态加载的脚本，例如通过使用 {{domxref("Document.createElement()")}} 创建新的`<script>`标签，然后通过 {{domxref("Node.appendChild()")}} 将其插入文档中。
+`'strict-dynamic'` 关键字使得通过 [nonce](#nonce-nonce_value) 或 [hash](#hash_algorithm-hash_value) 信任的脚本扩展到此脚本动态加载的脚本，例如通过使用 {{domxref("Document.createElement()")}} 创建新的 `<script>` 标签，然后通过 {{domxref("Node.appendChild()")}} 将其插入文档中。
 
 如果此关键字出现在指令中，则以下来源表达式值都将被忽略：
 
@@ -338,11 +344,11 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ## Worker 中的 CSP
 
-[Worker](/zh-CN/docs/Web/API/Worker) 一般来说*不*被创建他的文档（或者父级 Worker）的 CSP 管理。如果要为 Worker 指定 CSP，可以为 Worker 脚本的请求设置 CSP 响应头 `Content-Security-Policy`。
+[Worker](/zh-CN/docs/Web/API/Worker) 一般来说*不*被创建他的文档（或者父级 Worker）的 CSP 管理。如果要为 Worker 指定 CSP，可以为 Worker 脚本的请求设置 CSP 响应首部 `Content-Security-Policy`。
 
 例外的情况是，如果 Worker 脚本的来源是一个全局唯一 ID（比如，它的 URL 是一个结构化的数据或者 blob）。在这种情况下，这个 Worker 会继承它所属的文档或者创建它的 Worker 的 CSP。
 
-## 多内容安全策略
+## 多重内容安全策略
 
 CSP 允许在一个资源中指定多个策略，包括通过 `Content-Security-Policy` 标头，以及 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 标头，和 {{HTMLElement("meta")}} 元素。
 
@@ -383,7 +389,7 @@ Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; objec
 
 此示例设置了与前一个例子相同的限制，但使用了 {{httpheader("Content-Security-Policy-Report-Only")}} 首部和 {{CSP("report-to")}} 指令。这种方法在测试期间使用，用于报告违规行为但不阻止代码执行。
 
-报告端点（URL）使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应头定义。
+报告端点（URL）使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应首部定义。
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
