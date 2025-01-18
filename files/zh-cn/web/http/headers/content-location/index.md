@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`Content-Location`** {{Glossary("representation header", "表示标头")}}指定的是返回数据的另一个地址。最主要的用途是用来指定要访问的资源经过[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)后的结果的 URL。
 
-`Content-Location` 首部和 {{HTTPHeader("Location")}} 首部是不同的。`Content-Location` 表示在[内容协商](/en-US/docs/Web/HTTP/Content_negotiation)发生时访问资源的直接 URL，允许客户端绕过该资源未来的内容协商。`Location` 表示 `3XX` 重定向的目标或者 {{HTTPStatus("201", "201 Created")}} 回应中新创建的资源的 URL。
+`Content-Location` 首部和 {{HTTPHeader("Location")}} 首部是不同的。`Content-Location` 表示在[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)发生时访问资源的直接 URL，允许客户端绕过该资源未来的内容协商。`Location` 表示 `3XX` 重定向的目标或者 {{HTTPStatus("201", "201 Created")}} 回应中新创建的资源的 URL。
 
 <table class="properties">
   <tbody>
@@ -41,7 +41,7 @@ Content-Location: <url>
 
 假设，一个站点的 API 可以返回 {{glossary("JSON")}}、{{glossary("XML")}} 或 [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) 格式。如果某个文件的 URL 是 `https://example.com/documents/foo`，站点可以根据请求的 {{HTTPHeader("Accept")}} 首部返回不同的 `Content-Location`：
 
-| 请求首部                               | 响应首部                                |
+| 请求首部                              | 响应首部                                |
 | ------------------------------------- | --------------------------------------- |
 | `Accept: application/json, text/json` | `Content-Location: /documents/foo.json` |
 | `Accept: application/xml, text/xml`   | `Content-Location: /documents/foo.xml`  |
