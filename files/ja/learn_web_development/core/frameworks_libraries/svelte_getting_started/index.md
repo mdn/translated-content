@@ -1,15 +1,15 @@
 ---
-title: Svelte をはじめる
+title: Svelte を始める
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-この記事では [Svelte](https://svelte.jp/) というフレームワークの簡単な紹介を行います。Svelte の仕組みと、今までのフレームワークやツールとの違いを見ていきましょう。その後は開発環境の構築、サンプルアプリの作成、プロジェクトの構造、ローカル環境での実行方法と本番環境でのビルド方法を学びます。
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+
+この記事では、[Svelte フレームワーク](https://svelte.jp/)の簡単な紹介をします。Svelteの動作と、これまで見てきた他のフレームワークやツールとの違いについて見ていきます。その後は開発環境の構築、サンプルアプリの作成、プロジェクトの構造、ローカル環境での実行方法と本番環境でのビルド方法を学びます。
 
 <table>
   <tbody>
@@ -18,18 +18,17 @@ l10n:
       <td>
         <p>
           最低限、主要な
-          <a href="/ja/docs/Learn/HTML">HTML</a> と
-          <a href="/ja/docs/Learn/CSS">CSS</a>、
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a>
-          に精通していて、
-          <a href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">
-            ターミナル / コマンドライン
-          </a>
-          に関する知識があることが推奨されます。
+          <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> と
+          <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+          <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a>
+          を扱うことができ、
+          <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+            >端末/コマンドライン</a
+          >に関する知識があることが推奨されます。
         </p>
         <p>
           Svelte はソースコードから最小かつ高度に最適化された JavaScript を生成するコンパイラーです。
-          アプリのコンパイルとビルドには、node と npm がインストールされたターミナルが必要です。
+          アプリをコンパイルしてビルドするには、node + npm がインストールされた端末が必要です。
         </p>
       </td>
     </tr>
@@ -54,9 +53,9 @@ Svelte は HTML と CSS、そして JavaScript という昔ながらのウェブ
 現時点での主な欠点はまだ若いフレームワークであるということです。若いということは、そのエコシステムは成熟したフレームワークよりもツール、サポート、プラグイン、明確な使用パターンなどが限られており、求人も少ないです。しかし、今まで紹介した利点は、あなたが Svelte を探究することへの関心を持ってもらうのに十分なはずです。
 
 > [!NOTE]
-> 2020 年より、Svelteは最も要望の多かった機能の 1 つである [TypeScript を公式にサポート](https://svelte.jp/blog/svelte-and-typescript)するようになりました。このチュートリアルシリーズの後半で確認していきます。
+> 2020 年より、Svelteは最も要望の多かった機能の 1 つである [TypeScript を公式にサポート](https://svelte.jp/docs/typescript)するようになりました。このチュートリアルシリーズの後半で確認していきます。
 
-このチュートリアルシリーズに戻って、より詳細な作成方法について学ぶ前に [Svelte チュートリアル](https://svelte.jp/tutorial/basics)で基本的なコンセプトを簡単に確認することを推奨します。完了までの所要時間は約 30 分です。
+このチュートリアルシリーズに戻って、より詳細な作成方法について学ぶ前に [Svelte チュートリアル](https://svelte.jp/tutorial/svelte/welcome-to-svelte) で基本的なコンセプトを簡単に確認することを推奨します。完了までの所要時間は約 30 分です。
 
 ## ユースケース
 
@@ -68,7 +67,9 @@ Svelte はインターフェイスの一部またはアプリケーション全�
 - 高度にインタラクティブなページや複雑な視覚化: 多くの DOM 要素を表示する必要があるデータ視覚化を構築する場合、ランタイムオーバーヘッドのないフレームワークから得られるパフォーマンスの向上により、ユーザーとのインタラクションが迅速かつ応答性が高くなることを保証します。
 - ウェブ開発の基礎知識がある人のオンボーディング: Svelte は学習曲線が浅いのが特徴です。HTML、CSS、JavaScript の基礎知識を持つウェブ開発者であれば、短期間で簡単に Svelte の仕様を理解してウェブアプリケーションの構築を開始することができます。
 
-さらに Svelte をベースにしたフレームワークである [Sapper (en-US)](https://sapper.svelte.dev/) を利用すればサーバーサイドレンダリング、コード分割、ファイルベースのルーティング、オフラインサポートなどの高度な機能を備えたアプリケーションを開発することも可能です。またネイティブなモバイルアプリケーションを構築できる [Svelte Native (en-US)](https://svelte-native.technology/) もあります。
+Svelte チームは、 [SvelteKit](https://kit.svelte.jp/) をリリースしました。これは、 Svelte を使用してウェブアプリケーションを構築するためのフレームワークです。ファイルシステムベースのルーティング、サーバーサイドレンダリング (SSR)、ページ固有のレンダリングモード、オフラインサポートなど、最新のウェブフレームワークに見られる機能が含まれています。 SvelteKit の詳細については、[公式チュートリアル](https://learn.svelte.jp/)と[ドキュメント](https://kit.svelte.jp/docs/introduction)を参照してください。
+
+Svelte はモバイル開発を [Svelte Native](https://svelte-native.technology/)（英語）で行うこともできます。
 
 ## Svelte の仕組みについて
 
@@ -80,27 +81,26 @@ Svelte はインターフェイスの一部またはアプリケーション全�
 
 コンパイラーは非常に特殊な状況でのみ、Svelte コンポーネントのコンテキストにだけ介入します。JavaScript 自体の拡張は最小限であり、JavaScript の構文を壊さないように、また開発者を遠ざけることのないように、慎重に選択されています。実際にほとんどの場合はバニラ JavaScript で作業することになるでしょう。
 
-## Svelte との第一歩
+## Svelte での第一歩
 
 Svelte はコンパイラーであるため、`<script src="svelte.js">` タグをページに追加してアプリにインポートすることはできません。コンパイラーを動かすためには開発環境をセットアップする必要があります。
 
 ### 必要条件
 
-Svelte を動作させるためには [Node.js](https://nodejs.org/ja/) がインストールされている必要があります。ここでは長期サポート (LTS) バージョンを使用することを推奨します。Node には npm (node パッケージマネージャー) と npx (node パッケージランナー) が含まれます。npm の代わりに Yarn パッケージマネージャーを使用することもできますが、このチュートリアルでは npm を使用していることを前提としています。npm と Yarn の詳細については、[パッケージ管理の基礎](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)を参照してください。
+Svelte を動作させるためには [Node.js](https://nodejs.org/ja/) がインストールされている必要があります。ここでは長期サポート (LTS) バージョンを使用することを推奨します。Node には npm （node パッケージマネージャー）と npx （node パッケージランナー）が含まれます。npm の代わりに Yarn パッケージマネージャーを使用することもできますが、このチュートリアルでは npm を使用していることを前提としています。npm と Yarn の詳細については、[パッケージ管理の基礎](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)を参照してください。
 
-Windows を使用している場合、このチュートリアルで説明されているターミナルコマンドを使うためには Unix/macOS のターミナルと同等になるように何らかのソフトウェアをインストールする必要があります。Gitbash ([git for Windows ツールセット (en-US)](https://gitforwindows.org/) の一部として提供されています) と [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) はどちらとも適した選択肢です。これらの一般的なターミナルコマンドについての詳細は [コマンドライン短期集中講座](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) を参照してください。
+Windows を使用している場合、このチュートリアルで説明されている端末コマンドを使うためには Unix/macOS のターミナルと同等になるように何らかのソフトウェアをインストールする必要があります。Gitbash ([git for Windows ツールセット](https://gitforwindows.org/)（英語）の一部として提供されています) と [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/windows/wsl/about) はどちらとも適した選択肢です。これらの一般的な端末コマンドについての詳細は[コマンドライン短期集中講座](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)を参照してください。
 
 詳細については以下もご覧ください。
 
-- ["What is npm" (en-US)](https://nodejs.org/ja/knowledge/getting-started/npm/what-is-npm/) - nodejs.org
-- ["Introducing npx" (en-US)](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) - npm Blog
-- ["Svelte の一番簡単な始め方"](https://svelte.jp/blog/the-easiest-way-to-get-started) - Svelte Blog
+- ["About npm"](https://docs.npmjs.com/about-npm/) （英語、npm のドキュメント）
+- ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) （英語、npm blog）
 
 ### 最初の Svelte アプリを作成する
 
 スターターアプリのテンプレートを作成する最も簡単な方法は、スターターテンプレートのアプリケーションをダウンロードすることです。GitHub の [sveltejs/template](https://github.com/sveltejs/template) にアクセスすればダウンロードが可能ですが、[degit](https://github.com/Rich-Harris/degit) を使用すればダウンロードや解凍の手間を省くことができます。
 
-スターターアプリのテンプレートを作成するためには、以下のターミナルコマンドを実行します。
+スターターアプリのテンプレートを作成するためには、以下の端末コマンドを実行します。
 
 ```bash
 npx degit sveltejs/template moz-todo-svelte
@@ -110,7 +110,7 @@ npm run dev
 ```
 
 > [!NOTE]
-> degit は魔法のようなものではありません。ただ最新バージョンにあたる git リポジトリーの内容をダウンロードして解凍しているだけです。これは `git clone` を使うよりもはるかに高速です。なぜならリポジトリーの履歴全てをダウンロードしたり、完全なローカルクローンを作ったりしないためです。
+> degit は魔法のようなものではありません。ただ最新バージョンにあたる git リポジトリーの内容をダウンロードして解凍しているだけです。これは `git clone` を使うよりもはるかに高速です。リポジトリーの履歴全てをダウンロードしたり、完全なローカルクローンを作ったりしないためです。
 
 `npm run dev` を実行すると Svelte がアプリケーションのコンパイルとビルドを行います。するとローカルサーバーとして `localhost:8080` が起動します。Svelte はファイルの更新を監視して、ソースファイルに変更があった場合、アプリを自動的に再コンパイルして更新を行います。なおブラウザーには次のように表示されます。
 
@@ -120,7 +120,7 @@ npm run dev
 
 スターターテンプレートは以下のような構造で提供されています。
 
-```
+```plain
 moz-todo-svelte
 ├── README.md
 ├── package.json
@@ -145,10 +145,10 @@ moz-todo-svelte
 
 内容は以下のとおりです。
 
-- `package.json` と `package-lock.json`: Node.js/npm プロジェクトを整理するために使用する情報が含まれています。このチュートリアルを完了するためにこれらのファイルを理解する必要は全くありませんが、詳細を学びたい場合は NodeJS.org の [`package.json` とはどのようなファイルか？ (en-US)](https://nodejs.org/ja/knowledge/getting-started/npm/what-is-the-file-package-json/)、もしくは [パッケージ管理の基礎](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) でも説明しています。
+- `package.json` と `package-lock.json`: Node.js/npm プロジェクトを整理するために使用する情報が含まれています。このチュートリアルを完了するためにこれらのファイルを理解する必要は全くありませんが、詳細を学びたい場合は NodeJS.org の [`package.json` の扱い](https://docs.npmjs.com/cli/configuring-npm/package-json/)、もしくは [パッケージ管理の基礎](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Package_management) でも説明しています。
 - `node_modules`: これは node がプロジェクトの依存関係を保存しておく場所です。これらの依存関係は本番環境に送られることはなく、開発目的にのみ使用されます。
 - `.gitignore`: プロジェクトから無視するファイルもしくはフォルダーを git に指示します。アプリを git リポジトリーに含める場合に便利です。
-- `rollup.config.js`: Svelte ではモジュールバンドラーとして [rollup.js (en-US)](https://rollupjs.org/) を使用しています。この設定ファイルはアプリのコンパイルとビルドの方法を rollup に指示します。 [webpack (en-US)](https://webpack.js.org/) が好きな方は `npx degit sveltejs/template-webpack svelte-app` でスタータープロジェクトを作成することもできます。
+- `rollup.config.js`: Svelte ではモジュールバンドラーとして [rollup.js](https://rollupjs.org/)（英語）を使用しています。この設定ファイルはアプリのコンパイルとビルドの方法を rollup に指示します。 [webpack](https://webpack.js.org/)（英語）が好きな方は `npx degit sveltejs/template-webpack svelte-app` でスタータープロジェクトを作成することもできます。
 - `scripts`: 必要に応じてセットアップスクリプトが含まれます。現在は `setupTypeScript.js` のみを含める必要があります。
 
   - `setupTypeScript.js`: このスクリプトは Svelte の TypeScript サポートを設定するものです。最後の記事で詳しく説明します。
@@ -187,7 +187,7 @@ moz-todo-svelte
 ```
 
 > [!NOTE]
-> コンポーネントの形式についての詳細は、[Svelte のドキュメント](https://svelte.jp/docs#component-format) を参照してください。
+> コンポーネントの形式についての詳細は、[Svelte のドキュメント](https://svelte.jp/docs/svelte-components) を参照してください。
 
 以上を踏まえてスターターテンプレートに付属の `src/App.svelte` ファイルを見てみましょう。以下のようになっているはずです。
 
@@ -199,7 +199,7 @@ moz-todo-svelte
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -247,13 +247,13 @@ Svelte では変数の宣言をプロパティ (または prop) としてマー�
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
 ```
 
-Svelte は `{#if}`、`{#each}`、`{#await}` などのタグもサポートしています。これらはそれぞれ、マークアップの一部を条件付きでレンダリングしたり、要素のリストを反復処理したり、非同期的な値を扱う処理ができます。
+Svelte は `{#if}`、`{#each}`、`{#await}` などのタグにも対応しています。これらはそれぞれ、マークアップの一部を条件付きでレンダリングしたり、要素のリストを反復処理したり、非同期的な値を扱う処理ができます。
 
 ### `<style>` セクション
 
@@ -293,7 +293,7 @@ Svelte ではコンポーネントの `<style>` ブロック内の CSS は、そ
 
 アプリをコンパイルする際、Svelte は `h1` のスタイル定義を `h1.svelte-1tky8bj` に変更します。そしてコンポーネント内全ての `<h1>` 要素を `<h1 class="svelte-1tky8bj">` に置き換え、そのコンポーネントが必要とするスタイルを取得できるようにします。
 
-> **メモ:** `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` ドキュメント](https://svelte.jp/docs#component-format-style) を参照してください)。
+> **メモ:** `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` のドキュメント](https://svelte.jp/docs/svelte-components#style) を参照してください)。
 
 ## 少しだけ変更を加える
 
@@ -331,7 +331,7 @@ Svelte では、コンポーネント内の任意のトップレベル変数に�
   <h1>Hello {name}!</h1>
   <button on:click="{toggleName}">Toggle name</button>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -427,7 +427,7 @@ npm install
 npm run dev
 ```
 
-Git と GitHub について詳しく知りたい場合は、有益なガイドへのリンクがまとめられている [Git と GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を参照してください。
+Git と GitHub について詳しく知りたい場合は、有益なガイドへのリンクがまとめられている [Git と GitHub](/ja/docs/Learn_web_development/Core/Version_control) を参照してください。
 
 > [!NOTE]
 > Git リポジトリーをクローンせずにファイルだけをダウンロードしたい場合は、`npx degit opensas/mdn-svelte-tutorial` のように degit ツールを使うことができます。`npx degit opensas/mdn-svelte-tutorial/01-getting-started` で特定のフォルダーをダウンロードすることもできます。degit はローカルの git リポジトリーを作成せずに指定したフォルダーのファイルだけをダウンロードします。
@@ -444,7 +444,7 @@ REPL ([Read-Eval-Print Loop](https://ja.wikipedia.org/wiki/REPL)) とはコマ�
 
 ![動作中の Svelte REPL、それぞれ左側に表示されるのがコンポーネントコード、右側が出力結果](03-svelte-repl-in-action.png)
 
-REPL を使い始めるには、ブラウザーを開いて <https://svelte.dev/repl> に移動します。
+REPL を使い始めるには、ブラウザーを開いて <https://svelte.jp/repl> に移動します。
 
 - 画面の左側にはコンポーネントのコードが表示され、右側にはアプリの実行中の出力が表示されます。
 - コードの上にあるバーで `.svelte` と `.js` のファイルの作成や並べ替えができます。フォルダー内にファイルを作成する場合は、`components/MyComponent.svelte` のように完全なパス名を指定してください。そうすることで自動的にフォルダーが作成されます。
@@ -511,4 +511,4 @@ Svelte の基礎知識:
 - コンポーネントのトップレベルで宣言された変数が、状態の構成要素となります。
 - トップレベルの変数に新しい値を代入するだけでリアクティビティが発動します。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

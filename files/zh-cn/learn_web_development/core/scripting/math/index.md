@@ -350,7 +350,4 @@ function updateBtn() {
 
 在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。
 
-> [!NOTE]
-> 如果你喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
