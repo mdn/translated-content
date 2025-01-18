@@ -15,7 +15,7 @@ JavaScript 是一个基于原型的语言——一个对象的行为取决于它
 
 ## 类的概述
 
-如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对[这个](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)很熟悉：
+如果你已经有动手实践过 JavaScript 的经历，或是阅读指南一路过来，你可能已经用过类了，即便你还没有自己创建过。例如，你可能会对[这个](/zh-CN/docs/Web/JavaScript/Guide/Representing_dates_times)很熟悉：
 
 ```js
 const bigDay = new Date(2019, 6, 19);

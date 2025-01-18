@@ -1,6 +1,6 @@
 ---
 title: Числа и даты
-slug: Web/JavaScript/Guide/Numbers_and_dates
+slug: Web/JavaScript/Guide/Numbers_and_strings
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
