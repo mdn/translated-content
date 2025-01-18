@@ -1,8 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-page-type: http-header
-browser-compat: http.headers.Content-Language
 l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
@@ -43,7 +41,6 @@ HTTP **`Content-Language`** {{Glossary("representation header", "表示标头")}
 </table>
 
 \* 值只能是 `0-9`、`A-Z`、`a-z`、空格或者 `*,-.;=`。
-
 
 ## 语法
 
