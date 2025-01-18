@@ -22547,7 +22547,7 @@
     "modified": "2020-10-15T22:25:34.684Z",
     "contributors": ["mpcjazz", "daisuke-f"]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-11-14T07:27:42.991Z",
     "contributors": [
       "mfuji09",
@@ -22605,17 +22605,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-10-15T22:19:14.166Z",
     "contributors": ["Potappo", "segayuu"]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-10-29T08:45:40.355Z",
-    "contributors": [
-      "mpcjazz",
-      "segayuu",
-      "kaiji",
-      "nyamadan",
-      "x2357",
-      "shide55"
-    ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
     "modified": "2020-10-22T11:51:55.103Z",
@@ -30275,6 +30264,17 @@
   "conflicting/Web/CSS/transform-function/skewX": {
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
+  },
+  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
+    "modified": "2020-10-29T08:45:40.355Z",
+    "contributors": [
+      "mpcjazz",
+      "segayuu",
+      "kaiji",
+      "nyamadan",
+      "x2357",
+      "shide55"
+    ]
   },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-10-21T02:00:03.457Z",

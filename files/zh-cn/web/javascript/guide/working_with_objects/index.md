@@ -3,7 +3,7 @@ title: 使用对象
 slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
 JavaScript 的设计是一个简单的基于对象的范式。一个对象就是一系列属性的集合，一个属性包含一个名和一个值。一个属性的值可以是函数，这种情况下属性也被称为*方法*。除了浏览器里面预定义的那些对象之外，你也可以定义你自己的对象。本章节讲述了怎么使用对象、属性、函数和方法，怎样实现自定义对象。
 
@@ -547,11 +547,11 @@ fruit == fruitbear; // return true
 fruit === fruitbear; // return true
 ```
 
-了解更多关于比较操作符的用法，查看 [Comparison operators](/zh-CN/docs/Web/JavaScript/Reference/Operators).
+了解更多关于比较运算符的用法，查看[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#相等运算符)。
 
-## 附加参考
+## 参见
 
-- 想要深入了解，请阅读[details of javaScript's objects model](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。
-- 想要学习 ECMAScript 2015 中类（一种创建对象的新方式），请阅读 [JavaScript classes](/zh-CN/docs/Web/JavaScript/Reference/Classes) 章节。
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 
-{{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}

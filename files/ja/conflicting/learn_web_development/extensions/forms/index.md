@@ -1441,7 +1441,7 @@ l10n:
   </tbody>
 </table>
 
-Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方法はありません。.
+Firefox では`{{htmlelement("select")}}` 要素の下矢印を変更する方法はありません。
 
 ### セレクトボックス (複数行)
 
