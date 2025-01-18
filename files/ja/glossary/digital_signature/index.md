@@ -1,5 +1,5 @@
 ---
-title: Digital signature
+title: Digital signature(デジタル署名)
 slug: Glossary/Digital_signature
 l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
@@ -7,25 +7,25 @@ l10n:
 
 {{GlossarySidebar}}
 
-A **digital signature** is an object that can be used to {{glossary("authentication", "authenticate")}} the author of a document or message.
+**デジタル署名**は、ドキュメントまたはメッセージの作成者を {{glossary("authentication", "authenticate")}} するために使用できるオブジェクトです。
 
-Digital signatures are usually based on {{glossary("public-key cryptography")}}, in which a key is created as a pair of keys, with the property that, if some input is encrypted with one key, it can only be decrypted with the other key, and vice versa.
+デジタル署名は通常、 {{glossary("public-key cryptography")}} (公開鍵暗号) に基づいています。この暗号化では、キーが 2 つのキーのペアとして作成され、入力が 1 つのキーで暗号化されている場合は、もう 1 つのキーでのみ復号化でき、その逆も同様です。
 
-The creator of the key pair makes one of the keys public and keeps the other one private. To sign a document, the key pair's owner creates a {{glossary("hash")}} of the document and encrypts it with the private key.
+キーペアの作成者は、キーの 1 つを公開し、もう 1 つを非公開にします。ドキュメントに署名するには、キー ペアの所有者がドキュメントの {{glossary("hash")}} (ハッシュ)を作成し、それを秘密キーで暗号化します。
 
-The document and signature are sent to the verifier, who hashes the document, retrieves the public key, and decrypts the signature: if this matches the hash, then the signature has been verified, and the verifier can be confident that it was created by an entity with access to the private key.
+文書と署名は検証者に送信され、検証者は文書をハッシュし、公開鍵を取得し、署名を復号化します。これがハッシュと一致する場合、署名は検証済みであり、検証者は署名が秘密鍵にアクセスできるエンティティによって作成されたことを確信できます。
 
-The security of a digital signature system depends (among other things) on:
+デジタル署名システムのセキュリティは、(他の要素の中でも) 以下の要素に依存します。
 
-- The private key's owner keeping it safe: if other entities can access the private key, they can impersonate the owner.
+- 秘密鍵の所有者がそれを安全に保管すること: 他のエンティティが秘密鍵にアクセスできる場合、所有者になりすますことができます。
 
-- The public key used by the verifier being the genuine counterpart of the owner's private key: if an attacker could trick the verifier into trusting the wrong public key, they could impersonate the owner.
+- 検証者が使用する公開鍵が所有者の秘密鍵の正規の対応物であること: 攻撃者が検証者を騙して間違った公開鍵を信頼させることができれば、所有者になりすますことができます。
 
-Verifiers often use {{glossary("digital certificate", "digital certificates")}} to check that public keys are genuine.
+検証者は、公開鍵が本物であるかどうかを確認するために、多くの場合 {{glossary("digital certificate", "digital certificates")}} (デジタル証明書) を使用します。
 
-## See also
+## 関連情報
 
-- Related glossary terms:
-  - {{glossary("Digital certificate")}}
-  - {{glossary("Hash")}}
-  - {{glossary("Public-key cryptography")}}
+- 関連用語集
+  - {{glossary("Digital certificate")}} (デジタル証明書)
+  - {{glossary("Hash")}} (ハッシュ)
+  - {{glossary("Public-key cryptography")}} (公開鍵暗号)
