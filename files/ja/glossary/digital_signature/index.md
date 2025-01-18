@@ -1,7 +1,8 @@
 ---
 title: Digital signature
 slug: Glossary/Digital_signature
-page-type: glossary-definition
+l10n:
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
