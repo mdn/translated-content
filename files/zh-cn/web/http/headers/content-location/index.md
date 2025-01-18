@@ -51,7 +51,7 @@ Content-Location: <url>
 
 这样，客户端就能记住 JSON 版本在这个 URL。下次请求该文档时，就可以跳过内容协商。
 
-服务器也可以考虑其他[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)标头，例如 {{HTTPHeader(“Accept-Language”)}}。
+服务器也可以考虑其他[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)标头，例如 {{HTTPHeader("Accept-Language")}}。
 
 ### 表示交易结果的 URL
 
