@@ -43,8 +43,7 @@ sayings.size; // 0
 
 伝統的に、{{jsxref("Object", "objects", "", 1)}} は文字列を値に対応付けするのに使われてきました。オブジェクトを使うことで、キーを値に設定し、その値を取得し、キーを削除し、キーに対応する何かが格納されているかどうかを調べることができます。しかし、 `Map` オブジェクトには、より優れたマップとなるいくつかの利点があります。
 
-- `Object` のキーは[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-であるのに対して、 `Map` はどのような値でも利用できます。
+- `Object` のキーは[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String)または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)であるのに対して、 `Map` はどのような値でも利用できます。
 - サイズを取得する場合、 `Map` は `size` で簡単に取得できるのに対し、 `Object` は手動で追跡する必要があります。
 - Map の反復処理は要素の挿入順に行われます。
 - `Object` はプロトタイプを持っているので、マップ内に既定のキーが存在します（これは `map = Object.create(null)` を使って回避できます）。
