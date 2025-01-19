@@ -466,7 +466,7 @@ JavaScript で数値リテラルには、様々な形の整数リテラルと、
 
 以下にオブジェクトリテラルの例を示します。`car` オブジェクトの最初の要素には `myCar` プロパティが定義され、新規文字列 `"Saturn"` が割り当てられています。2 番目の要素、`getCar` プロパティには関数 `(carTypes("Honda"))`; によって呼び出された結果が即座に割り当てられます。3 番目の要素、`special` プロパティには既存の変数 (`sales`) が使われています。
 
-```js
+```js-nolint
 const sales = "トヨタ";
 
 function carTypes(name) {
