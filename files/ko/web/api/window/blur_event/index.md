@@ -16,7 +16,7 @@ l10n:
 
 ## 구문
 
-메서드의 이벤트 이름을 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 처럼 사용하거나 이벤트 핸들러 속성을 설정해야 합니다.
+이벤트 이름을 {{domxref("EventTarget.addEventListener", "addEventListener()")}}와 같은 메서드에서 사용하거나 이벤트 핸들러 속성을 설정해야 합니다.
 
 ```js
 addEventListener("blur", (event) => {});
