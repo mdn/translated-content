@@ -15,7 +15,7 @@ l10n:
 
 ## 规范
 
-在 2016 年，整个媒体控制器功能从 [HTML 规范中移除](https://github.com/w3c/html/issues/246)。它不再成为标准的开发方向。
+在 2016 年，整个媒体控制器特性[从 HTML 规范中移除](https://github.com/w3c/html/issues/246)。其不再被标准化轨道跟踪。
 
 ## 浏览器兼容性
 
