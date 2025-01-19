@@ -92,7 +92,7 @@ Un seul <i lang="en">service worker</i> peut contrôler de nombreuses pages. Cha
 > [!NOTE]
 > En utilisant la détection de fonctionnalité comme nous l'avons fait plus haut, cela permet aux navigateurs qui ne prennent pas en charge ces fonctionnalités de servir l'application en ligne normalement.
 
-#### Pourquoi est-ce l'enregistrement de mon <i lang="en">service worker</i> échoue&nbsp;?
+#### Pourquoi est-ce que l'enregistrement de mon <i lang="en">service worker</i> échoue&nbsp;?
 
 Il peut y avoir plusieurs raisons&nbsp;:
 
@@ -100,7 +100,7 @@ Il peut y avoir plusieurs raisons&nbsp;:
 - Le chemin vers le fichier du <i lang="en">service worker</i> n'est pas écrit correctement&nbsp;: il doit être relatif à l'origine et pas à la racine du répertoire de l'application. Pour notre exemple, le script du <i lang="en">worker</i> est situé à `https://bncb2v.csb.app/sw.js`, et la racine de l'application est `https://bncb2v.csb.app/`, mais il faut écrire le chemin ainsi&nbsp;: `/sw.js`.
 - Il est interdit de pointer vers un <i lang="en">service worker</i> dont l'origine est différente de celle de l'application.
 - La page concernée ne fait pas partie de la portée du <i lang="en">service worker</i>.
-- La portée maximale d'un <i lang="en">service worker</i> correspond par défaut à l'emplacement du <i lang="en">worker</i>. Il est possible d'indiquer une liste de portées maximales plus larges avec l'en-tête HTTP [`Service-Worker-Allowed`](/fr/docs/Web/HTTP/Header/Service-Worker-Allowed).
+- La portée maximale d'un <i lang="en">service worker</i> correspond par défaut à l'emplacement du <i lang="en">worker</i>. Il est possible d'indiquer une liste de portées maximales plus larges avec l'en-tête HTTP [`Service-Worker-Allowed`](/fr/docs/Web/HTTP/Headers/Service-Worker-Allowed).
 - Pour Firefox, les API <i lang="en">Service Worker</i> sont inaccessibles [en navigation privée](https://bugzilla.mozilla.org/show_bug.cgi?id=1320796), lorsque l'historique est désactivé ou que les données de navigation (dont les cookies) sont supprimés à la fermeture de Firefox.
 - Pour Chrome, l'enregistrement échoue si l'option «&nbsp;Bloquer tous les cookies (non recommandé)&nbsp;» est activée.
 

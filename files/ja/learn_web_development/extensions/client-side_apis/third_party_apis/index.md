@@ -1,12 +1,13 @@
 ---
 title: サードパーティ API
 slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 l10n:
-  sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 これまで説明してきた API はブラウザーに組み込まれていましたが、すべての API がそうというわけではありません。Google マップ、Twitter、Facebook、PayPal などの大規模なサイトやサービスの多くは開発者がそれらのデータ（ブログに Twitter のストリームを表示するなど）やサービス（ユーザーのログインに Facebook ログインを利用するなど）を利用できるように API を提供しています。この記事ではブラウザー API とサードパーティ API の違いを見て、後者の典型的な使い方について説明します。
 
@@ -15,38 +16,32 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        JavaScript の基本
-        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
-        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >構成要素</a
-        >,
-        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
-        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >クライアントサイド API の基本</a
-        >
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> に親しんでおくこと、特に <a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript オブジェクトの基本</a>と <a href="/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM スクリプティング</a>や<a href="/ja/docs/Learn_web_development/Core/Scripting/Network_requests">ネットワークリスクエスト</a>などのコア API を扱っているものを理解しておくこと。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        サードパーティ API の仕組み、それらを利用してウェブサイトを強化する方法を学習すること。
+        <ul>
+          <li>サードパーティ API の背後にある概念と、 API キーなどの関連パターン。</li>
+          <li>サードパーティの地図 API を使用すること。</li>
+          <li>RESTful API を使用すること。</li>
+          <li>Google の YouTube API を使用すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## サードパーティ API とは?
+## サードパーティ API とは
 
 サードパーティ API は、サードパーティ（通常は Facebook、Twitter、Google などの企業）が提供する API で、JavaScript を介して機能にアクセスしてサイトで使用することができます。最もわかりやすい例の 1 つとして、マッピング API を使用してページにカスタム地図を表示することがあります。
 
 [Simple Mapquest API の例](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> [!NOTE]
-> 一度に[すべてのコード例を取得](/ja/docs/Learn#コード例の入手)したいかもしれませんが、その場合は、それぞれの節で必要な例ファイルをリポジトリーから検索すればよいでしょう。
-
 ### サードパーティのサーバーにある
 
-ブラウザー API はブラウザーに組み込まれており、すぐに JavaScript からアクセスできます。たとえば、[紹介記事で見た](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#api_はどのように動作するのか)ウェブオーディオ API は、ネイティブの {{domxref("AudioContext")}} オブジェクトを使ってアクセスします。例えば以下のようにします。
+ブラウザー API はブラウザーに組み込まれており、すぐに JavaScript からアクセスできます。たとえば、[紹介記事で見た](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#api_はどのように動作するのか)ウェブオーディオ API は、ネイティブの {{domxref("AudioContext")}} オブジェクトを使ってアクセスします。例えば以下のようにします。
 
 ```js
 const audioCtx = new AudioContext();
@@ -80,14 +75,14 @@ const map = L.mapquest.map("map", {
 
 ここでは、地図情報を格納するための変数を作成し、次に `mapquest.map()` メソッドを使用して新しい地図を作成します。このメソッドは、必要な {{htmlelement("div")}} 要素の ID を受け取ります。('map') で地図を表示し、表示したい特定の地図の詳細を含む options オブジェクトを表示します。この場合は、地図の中心座標、表示する `map` 型の地図レイヤー (`mapquest.tileLayer()` メソッドを使用して作成)、および既定のズームレベルを指定します。
 
-これが、Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
+これが、 Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
 
 > [!NOTE]
 > API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](#restful_api_—_nytimes)。
 
-### 通常は API キーが必要です
+### 通常は API キーが必要
 
-[最初の記事で説明した](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#必要に応じて追加のセキュリティ機構がある)ように、ブラウザー API のセキュリティは許可プロンプトによって処理される傾向があります。これらの目的は、ユーザーが訪問したウェブサイトで何が起こっているのかをユーザー自身が認識できるようにし、悪意のある方法で API を使用している人の被害にあう可能性を低くすることです。
+[最初の記事で説明した](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#必要に応じて追加のセキュリティ機構がある)ように、ブラウザー API のセキュリティは許可プロンプトによって処理される傾向があります。これらの目的は、ユーザーが訪問したウェブサイトで何が起こっているのかをユーザー自身が認識できるようにし、悪意のある方法で API を使用している人の被害にあう可能性を低くすることです。
 
 サードパーティの API には、少し異なる権限システムがあります。開発者が API 機能にアクセスできるようにするために開発者キーを使用する傾向があります。
 
@@ -104,14 +99,14 @@ L.mapquest.key = "YOUR-API-KEY-HERE";
 
 他の API では、少し異なる方法でキーを含める必要があるかもしれませんが、ほとんどのパターンは比較的似ています。
 
-キーを要求することで、API プロバイダーは API のユーザーに自分のアクションに対する責任を持たせることができます。開発者がキーを登録すると、それらは API プロバイダに認識され、彼らが API に悪意のあることをし始めたらアクション（たとえば、人々の位置を追跡したり、API を機能させないために大量のリクエストで API をスパムしようとするなど）を取ることができます。最も簡単なアクションは、単にそれらの API 特権を取り消すことです。
+キーを必須とすることで、API プロバイダーは API のユーザーに自分のアクションに対する責任を持たせることができます。開発者がキーを登録すると、それらは API プロバイダに認識され、彼らが API に悪意のあることをし始めたらアクション（たとえば、人々の位置を追跡したり、API を機能させないために大量のリクエストで API をスパムしようとするなど）を取ることができます。最も簡単なアクションは、単にそれらの API 権限を取り消すことです。
 
 ## Mapquest の例を拡張する
 
-API の他の機能の使用方法を示すために、Mapquest の例にさらに機能を追加しましょう。
+API の他の機能の使用方法を示すために、 Mapquest の例にさらに機能を追加しましょう。
 
-1. この節を始めるにあたり、新しいディレクトリーに [mapquest starter file](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) をコピーしましょう。もしもすでに[例のリポジトリー](/ja/docs/Learn#コード例の入手)をクローンしているようなら、必要な _javascript/apis/third-party-apis/mapquest/start_ を見つけてコピーしてください。
-2. 次に [Mapquest developer site](https://developer.mapquest.com/) に行ってください。アカウントを作り、開発者キーを使用してサンプルに利用してください。（アカウント作成時、開発者キーは "consumer key" と呼ばれています。そして、"callback URL" を尋ねられると思いますが、その入力欄は空欄でかまいません。）
+1. この節を始めるにあたり、新しいディレクトリーに [mapquest starter file](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) をコピーしましょう。もしもすでに[例のリポジトリー](https://github.com/mdn/learning-area)をクローンしているようなら、必要な _javascript/apis/third-party-apis/mapquest/start_ を見つけてコピーしてください。
+2. 次に [Mapquest developer site](https://developer.mapquest.com/) に行ってください。アカウントを作り、開発者キーを使用してサンプルに利用してください。（アカウント作成時、開発者キーは "consumer key" と呼ばれています。そして、 "callback URL" を尋ねられると思いますが、その入力欄は空欄でかまいません。）
 3. starting file を開き、API キーのプレースホルダーに自分のキーを入力してください。
 
 ### 地図の種類を変更する
@@ -173,7 +168,7 @@ L.marker([53.480759, -2.242631], {
 
 ## RESTful API — NYTimes
 
-では、もう一つの API の例を見てみましょう — [New York Times API](https://developer.nytimes.com/) です。この API を使用すると、New York Times のニュースストーリー情報を取得して、サイトに表示することができます。この種類の API は **RESTful API** として知られています。Mapquest で行ったように JavaScript ライブラリーの機能を使用してデータを取得するのではなく、特定の URL に HTTP リクエストを行い、検索語やその他のプロパティのようなデータを URL 内にエンコードしてデータを取得します（多くの場合、URL 引数として）。これは、API でよく見られるパターンです。
+では、もう一つの API の例を見てみましょう。 [New York Times API](https://developer.nytimes.com/) です。この API を使用すると、New York Times のニュースストーリー情報を取得して、サイトに表示することができます。この種類の API は **RESTful API** として知られています。Mapquest で行ったように JavaScript ライブラリーの機能を使用してデータを取得するのではなく、特定の URL に HTTP リクエストを行い、検索語やその他のプロパティのようなデータを URL 内にエンコードしてデータを取得します（多くの場合、URL 引数として）。これは、API でよく見られるパターンです。
 
 以下では、 NYTimes API の使用方法を示すエクササイズを紹介しますが、新しい API を使用するためのアプローチとして、より一般的なステップのセットを提供します。
 
@@ -187,7 +182,7 @@ L.marker([53.480759, -2.242631], {
 
 1. 記事検索 API のキーを要求してみよう — 新規アプリを作成し、これを利用したい API として選択します (名前と説明を記入し、「記事検索 API 」の下のスイッチをオンに切り替えて「作成」をクリックします)。
 2. 結果のページから API キーを取得します。
-3. さて、例題を始めるために、 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) ディレクトリー内のすべてのファイルをコピーしてください。すでに [examples リポジトリーをクローン](/ja/docs/Learn#コード例の入手)している場合は、 _javascript/apis/third-party-apis/nytimes_ ディレクトリーに既にこれらのファイルのコピーがあります。最初に `script.js` ファイルには、例のセットアップに必要な変数がいくつか含まれています。以下では、必要な機能を埋めていきます。
+3. さて、例題を始めるために、 [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start) ディレクトリー内のすべてのファイルをコピーしてください。すでに [examples リポジトリー](https://github.com/mdn/learning-area)をクローンしている場合は、 _javascript/apis/third-party-apis/nytimes_ ディレクトリーに既にこれらのファイルのコピーがあります。最初に `script.js` ファイルには、例のセットアップに必要な変数がいくつか含まれています。以下では、必要な機能を埋めていきます。
 
 このアプリは、検索用語とオプションの開始日と終了日を入力することを可能にし、 Article Search API をクエリーして検索結果を表示するために使用します。
 
@@ -256,7 +251,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HE
 > どのような URL 引数を含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
 
 > [!NOTE]
-> この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は[フォームデータ検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
+> この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は[フォームデータ検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)を参照してください。
 
 ### API からデータを要求する
 
@@ -265,7 +260,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HE
 以下のコードブロックを `fetchResults()` 関数の中に追加してください。
 
 ```js
-// Use fetch() to make the request to the API
+// fetch() を使用して、 API へのリクエストを作成する
 fetch(url)
   .then((response) => response.json())
   .then((json) => displayResults(json))
@@ -388,7 +383,7 @@ function displayResults(json) {
 
 この例は、2 つの関連するサードパーティ API を一緒に使用してアプリを構築していることを示しているので興味深いです。1 つ目は RESTful API で、2 つ目は Mapquest のように動作します (API 固有のメソッドなどがあります)。ただし、どちらの API もページに適用するために JavaScript ライブラリーを必要とする点は注目に値します。RESTful API には、HTTP リクエストを行い、結果を返すための関数が用意されています。
 
-![関連する 2 つの API を使用した Youtube 動画検索のサンプルのスクリーンショット。画像の横に並んでいるのは、 YouTube Data API を使用した検索クエリーのサンプルです。画像の横に並んでいるのは、 Youtube Iframe Player API を使用して検索した結果を表示しています。](youtube-example.png)
+![関連する 2 つの API を使用した Youtube 動画検索のサンプルのスクリーンショット。画像の横に並んでいるのは、 YouTube Data API を使用した検索クエリーのサンプルです。画像の横に並んでいるのは、 YouTube Iframe Player API を使用して検索した結果を表示しています。](youtube-example.png)
 
 この例については、記事の中ではあまり多くを語るつもりはありません。[ソースコード](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube)には、それがどのように動作するかを説明するために、その中に詳細なコメントが挿入されています。
 
@@ -404,4 +399,4 @@ function displayResults(json) {
 
 この記事では、サードパーティ API を使用してウェブサイトに機能を追加するための便利な方法を紹介しました。
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}

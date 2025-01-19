@@ -1,27 +1,30 @@
 ---
 title: JavaScript の最初の一歩
 slug: Learn_web_development/Core/Scripting/A_first_splash
-original_slug: Learn/JavaScript/First_steps/A_first_splash
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
 JavaScript の理論や何ができるかを学んだところで、実践的なチュートリアルをガイドすることで、単純な JavaScript プログラムを作成するプロセスがどのようなものなのかを解説します。ここでは単純な「数当てゲーム」を手順を追って作っていきます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        HTML と CSS の基本的な理解、 JavaScript とは何かを理解していること。
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        JavaScript を書く最初の経験をし、少なくとも JavaScript プログラムを書くことの基本的な理解を得ること。
+        <ul>
+          <li>プログラマーのように考えられるようになること。</li>
+          <li>JavaScript で書くことがどんなものかという体験。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -143,7 +146,7 @@ let resetButton;
 - 最後の 2 つの変数は、プレイヤーが予想した回数を記録するため 1 を（プレイヤーが何回予想したかの回数を追跡します）、そしてまだ存在していない（あとで追加する）リセットボタンへの参照を保持します。
 
 > [!NOTE]
-> 変数や定数についてはこのコースの間、[必要な情報を保管する — 変数](/ja/docs/Learn/JavaScript/First_steps/Variables)を始めとして何度も出てきます。
+> 変数や定数についてはこのコースの間、[必要な情報を保管する — 変数](/ja/docs/Learn_web_development/Core/Scripting/Variables)を始めとして何度も出てきます。
 
 ### 関数
 
@@ -159,22 +162,22 @@ function checkGuess() {
 
 関数を実行したい場合には、関数の名前に続いて括弧を書きます。
 
-それでは試してみましょう。コードを保存してブラウザーを再読み込みしてみてください。[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を開いてください。そして次のコードを実行します。
+それでは試してみましょう。コードを保存してブラウザーを再読み込みしてみてください。[開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を開いてください。そして次のコードを実行します。
 
 ```js
 checkGuess();
 ```
 
-<kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、"ここはプレースホルダです"という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。
+<kbd>Return</kbd>/<kbd>Enter</kbd> を押した後で、 "I am a placeholder" という警告が表示されましたね。呼び出すと、いつでも警告が表示される関数を定義することができました。
 
 > [!NOTE]
-> 関数については後の記事、[関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)で詳しく学びます。
+> 関数については後の記事、[関数 — 再利用可能なコードブロック](/ja/docs/Learn_web_development/Core/Scripting/Functions)で詳しく学びます。
 
 ### 演算子
 
 JavaScript で演算子を使用して値の確認をしたり、計算したり、文字を結合したりなど、いろいろなことができます。
 
-コードを保存してブラウザーを再読み込みしてみてください。まだ開いていなければ、[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を開いて、表の「例」の列に書いてある通りに入力してみましょう。例を一つ入力したら、その都度 <kbd>Return</kbd>/<kbd>Enter</kbd> キーを押してください。結果が表示されるはずです。
+コードを保存してブラウザーを再読み込みしてみてください。まだ開いていなければ、[開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を開いて、表の「例」の列に書いてある通りに入力してみましょう。例を一つ入力したら、その都度 <kbd>Return</kbd>/<kbd>Enter</kbd> キーを押してください。結果が表示されるはずです。
 
 まずは算術演算子の例を見てください。
 
@@ -332,11 +335,11 @@ function checkGuess() {
 - 次に、テンプレートリテラルを使用して、現在の `userGuess` 変数の値を空白と共に `guesses` の段落の末尾に追加しています。
 - 次の部分には、確認すべきことがいくつかあります。
 
-  - 最初の `if(){ }` は、プレイヤーの予想が、JavaScript のコードの先頭で設定したランダムな数字を格納した `randomNumber` 変数の値と等しいかどうかを調べています。もし等しければ、プレイヤーは正解し勝ちとなるため、祝福のメッセージを素敵な緑色で表示します。さらに、数字の大小を表示する段落をクリアして、後で説明する `setGameOver()` 関数を実行します。
-  - 今度は `else if(){ }` という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザーの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。
-  - このコードに連なる最後のブロック (`else { }`) は、前の二つの条件がどちらも真とならなかった場合にのみ実行されます。(つまり、プレイヤーは間違えてはいるものの、予想回数が残っている場合です。) この場合、プレイヤーに予想が間違っていることを伝え、入力された数字が大きいか小さいかを伝えるため、さらなる条件の確認を行います。
+  - 最初の `if (){ }` は、プレイヤーの予想が、JavaScript のコードの先頭で設定したランダムな数字を格納した `randomNumber` 変数の値と等しいかどうかを調べています。もし等しければ、プレイヤーは正解し勝ちとなるため、祝福のメッセージを素敵な緑色で表示します。さらに、数字の大小を表示する段落をクリアして、後で説明する `setGameOver()` 関数を実行します。
+  - 今度は `else if (){ }` という部分で、ひとつ前の条件に続けて条件を書いています。この条件はユーザーの最後のターンかどうかを調べています。もし最後の回ならば、プログラムは祝福のメッセージの代わりにゲームオーバーメッセージとする以外は、ひとつ前の部分と同じことをします。
+  - このコードに連なる最後のブロック (`else { }`) は、前の二つの条件がどちらも真とならなかった場合にのみ実行されます（つまり、プレイヤーは間違えてはいるものの、予想回数が残っている場合です）。この場合、プレイヤーに予想が間違っていることを伝え、その後、予想が正解より高かったか低かったかを調べるために別の条件テストを行い、さらにメッセージを表示して、高かったか低かったかをプレイヤーに伝えます。
 
-- 最後の 3 行 (26 行目～ 28 行目) は、次の予想の入力を受け取るための準備です。`guessCount` 変数に 1 を加算して、プレイヤーの予想回数を数えます。(`++` はインクリメント演算子で、1 だけインクリメント(増加)します。) そして、入力フォームのテキストフィールドを空にしてからフォーカスを当て、プレイヤーの次の入力に備えます。
+- 最後の 3 行は、次の予想の入力を受け取るための準備です。`guessCount` 変数に 1 を加算して、プレイヤーの予想回数を数えます。(`++` はインクリメント演算子で、1 だけインクリメント(増加)します。) そして、入力フォームのテキストフィールドを空にしてからフォーカスを当て、プレイヤーの次の入力に備えます。
 
 ### イベント
 
@@ -412,7 +415,7 @@ function resetGame() {
 
 上のコードでもう少し詳しく説明しなければならないのは、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループです。ループはプログラミングにおいてとても重要な概念です。ある条件に達するまで何度も何度もコードを繰り返し実行することができます。
 
-[ブラウザーの開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) をもう一度開いて次のコードを入力してみましょう。
+[ブラウザーの開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) をもう一度開いて次のコードを入力してみましょう。
 
 ```js
 const fruits = ["apples", "bananas", "cherries"];
@@ -423,7 +426,7 @@ for (const fruit of fruits) {
 
 どうなりましたか。 `'apples', 'bananas', 'cherries'` の文字列がコンソールに出力されましたね。
 
-これはループのためです。 `const fruits = ['apples', 'bananas', 'cherries'];` の行は配列を作成します。このモジュールの後半で、[配列の完全ガイド](/ja/docs/Learn/JavaScript/First_steps/Arrays)を読み終えてから作業しますが、とりあえず、配列は項目（この場合は文字列）の集合です。
+これはループのためです。 `const fruits = ['apples', 'bananas', 'cherries'];` の行は配列を作成します。このモジュールの後半で、[配列の完全ガイド](/ja/docs/Learn_web_development/Core/Scripting/Arrays)を読み終えてから作業しますが、とりあえず、配列は項目（この場合は文字列）の集合です。
 
 `for...of` ループは配列でそれぞれの項目を取得し、それに対して JavaScript を実行する方法を提供します。 `for (const fruit of fruits)`という行は次のような意味です。
 
@@ -464,7 +467,7 @@ guessField.focus();
 const guessField = document.querySelector(".guessField");
 ```
 
-この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)) を受け取ります。
+この参照を得るため、{{domxref("document")}} オブジェクトの{{domxref("document.querySelector", "querySelector()")}} メソッドを使用しています。`querySelector()` はある情報 (必要な要素を選択する [CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)) を受け取ります。
 
 `guessField` に {{htmlelement("input")}} 要素の参照が得られたので、これでたくさんのプロパティ（基本的にはオブジェクトの内部に保持されている変数のことですが、中には値を変えられないものもあります）とメソッド（基本的にはオブジェクトの内部に保持されている関数のこと）にアクセスできるようになりました。ようやく input 要素のメソッドの一つである `focus()` メソッドを使ってテキストフィールドにフォーカスを当てられます。
 
@@ -479,7 +482,7 @@ guessField.focus();
 少しブラウザーが持っているオブジェクトで遊んでみましょう。
 
 1. まずブラウザーでプログラムを開いてください
-2. 次に[開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を開き、 JavaScript コンソールのタブが開いたのを確認します
+2. 次に[開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を開き、 JavaScript コンソールのタブが開いたのを確認します
 3. `guessField` と入力してみてください。するとコンソールに {{htmlelement("input")}} 要素を含む変数が表示されます。また、気づいたと思いますが、コンソールは実行中の環境にある変数名を含んだオブジェクト名を自動的に補完しました!
 4. さらに下のように入力してみてください。
 
@@ -515,8 +518,10 @@ guessField.focus();
 
    ページ内に存在するすべての要素は `style` プロパティを持っていて、そのオブジェクトを介して CSS のインラインスタイルで要素に適用されるすべてのプロパティにアクセスすることができます。これを使うことで、JavaScript から動的に要素の CSS のスタイルを設定できるのです。
 
-## ここで一息
+## まとめ
 
 これで数当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。（最後のプログラムは[こちらでも遊べます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。）もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+次のレッスンも役立つかもしれません。そのレッスンでは、 JavaScript コードを記述する際に何が問題となるかを説明し、その過程で「数字当てゲーム」を参照しています。
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}

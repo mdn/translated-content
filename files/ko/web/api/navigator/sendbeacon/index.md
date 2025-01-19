@@ -1,9 +1,9 @@
 ---
 title: "Navigator: sendBeacon() 메서드"
+short-title: sendBeacon()
 slug: Web/API/Navigator/sendBeacon
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
-short-title: sendBeacon()
 ---
 
 {{APIRef("HTML DOM")}}

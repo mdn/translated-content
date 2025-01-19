@@ -978,10 +978,6 @@
     "modified": "2020-04-24T15:33:30.579Z",
     "contributors": ["hisbvdis"]
   },
-  "Glossary/Self-Executing_Anonymous_Function": {
-    "modified": "2019-03-18T21:20:03.779Z",
-    "contributors": ["Hiker-Hope"]
-  },
   "Glossary/Semantics": {
     "modified": "2020-05-29T09:05:50.440Z",
     "contributors": ["mriabokliach", "EternalCosmos"]
@@ -11383,7 +11379,7 @@
     "modified": "2020-11-22T19:25:09.183Z",
     "contributors": ["rsvato"]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-03-12T19:42:19.176Z",
     "contributors": [
       "pirimow",
@@ -11439,18 +11435,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-06-17T18:30:16.759Z",
     "contributors": ["dknight"]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-03-12T19:42:07.543Z",
-    "contributors": [
-      "pirimow",
-      "Aparin",
-      "drugoi",
-      "Grumvol",
-      "redishko",
-      "PavelG94",
-      "Prographer"
-    ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
     "modified": "2020-03-12T19:45:54.627Z",
@@ -15817,6 +15801,10 @@
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
   },
+  "conflicting/Glossary/IIFE": {
+    "modified": "2019-03-18T21:20:03.779Z",
+    "contributors": ["Hiker-Hope"]
+  },
   "conflicting/Learn_web_development/Core/CSS_layout/Introduction": {
     "modified": "2020-10-13T15:21:40.503Z",
     "contributors": ["mvictorl", "nsvintitskiy", "SoMuchEffort"]
@@ -15932,6 +15920,18 @@
       "BychekRU",
       "uleming",
       "Andrew_Pfeiffer"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
+    "modified": "2020-03-12T19:42:07.543Z",
+    "contributors": [
+      "pirimow",
+      "Aparin",
+      "drugoi",
+      "Grumvol",
+      "redishko",
+      "PavelG94",
+      "Prographer"
     ]
   }
 }

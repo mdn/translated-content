@@ -1,12 +1,13 @@
 ---
 title: モバイルのアクセシビリティ
 slug: Learn_web_development/Core/Accessibility/Mobile
-original_slug: Learn/Accessibility/Mobile
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 モバイル端末でのウェブアクセスは非常に人気があり、iOS や Android などの一般的なプラットフォームには本格的なアクセシビリティツールが備わっているため、これらのプラットフォームでのウェブコンテンツのアクセシビリティを考慮することが重要です。この記事では、モバイル固有のアクセシビリティについて検討します。
 
@@ -14,17 +15,17 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        HTML、CSS、JavaScript に対する基本的な理解、
-        <a href="/ja/docs/Learn/Accessibility"
-          >このコースの前回までの記事</a
-        >に対する理解。
-      </td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識と、このモジュールのこれまでのレッスンで学んだようなアクセシビリティのベストプラクティス。</td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        モバイル端末のアクセシビリティにどのような問題があるのか、またそれらを克服する方法を理解すること。
+        <ul>
+          <li>iOS と Android のスクリーンリーダーに慣れること。</li>
+          <li>特定のイベントの裏に潜むアクセシビリティの課題に慣れること。</li>
+          <li>モバイル端末でより使いやすいユーザー入力メカニズムを実現するための特定の技術。</li>
+          <li>モバイルブラウザーは仕様上、特定の <code>&lt;input&gt;</code> 型、例えば <code>number</code> や <code>tel</code> などに対して、特定のユーザビリティ上の利点を提供していること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -34,7 +35,7 @@ l10n:
 
 アクセシビリティの状態、そしてウェブ標準全般への対応は、現行のモバイル端末では良好です。モバイル端末がデスクトップのブラウザーとは完全に異なるウェブ技術を実行し、開発者がブラウザー検出を使用し、完全に別個のサイトを提供することを余儀なくされていた時代はとうの昔に過ぎ去りました（いくつかの企業はまだモバイル端末の使用を検出し、モバイルドメインを別個に提供していますが）。
 
-最近の一般的なモバイル端末は、「脂肪分たっぷり」のウェブサイトを扱うことができ、主なプラットフォームには視覚障害のあるユーザーがそれらをうまく使えるようにスクリーンリーダーが組み込まれています。最近のモバイルブラウザーは [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) もよくサポートしています。
+最近の一般的なモバイル端末は、「脂肪分たっぷり」のウェブサイトを扱うことができ、主なプラットフォームには視覚障害のあるユーザーがそれらをうまく使えるようにスクリーンリーダーが組み込まれています。最近のモバイルブラウザーは [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) もよくサポートしています。
 
 ウェブサイトをモバイルでアクセス可能かつ使用可能にするには、一般的な優れたウェブデザインとアクセシビリティのベストプラクティスに従う必要があるだけです。
 
@@ -109,7 +110,7 @@ TalkBack を使用すると、端末上のどこに移動しても、グロー�
 
    - URL バーが得られるまで左右にスワイプしてから、ダブルタップして URL バーを選択します。
    - 目的の文字が得られるまで仮想キーボードに指を置いたまま動かしてから、指を離して入力します。これを各文字について繰り返します。
-   - 終わったら、 <kbd>Enter</kbd> キーを見つけて押します。
+   - 終わったら、 Enter キーを見つけて押します。
 
 4. 左右にスワイプすると、ページ上のさまざまな項目間を移動できます。
 5. 連続した動きで上にスワイプしてから右にスワイプして、ローカルコンテキストメニューに入ります。
@@ -118,13 +119,13 @@ TalkBack を使用すると、端末上のどこに移動しても、グロー�
 8. デフォルトモードに戻るには、上にスワイプしてから右にスワイプしてローカルコンテキストメニューに再度入り、\[デフォルト] を選択してからダブルタップしてアクティブにします。
 
 > [!NOTE]
-> より完全なドキュメントは [Android で TalkBack を使ってみる](https://support.google.com/accessibility/android/answer/6283677)をご覧ください。
+> より完全なドキュメントは [Android で TalkBack を使ってみる](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932)をご覧ください。
 
 ### iOS VoiceOver
 
 VoiceOver のモバイル版は iOS オペレーティングシステムに組み込まれています。
 
-VoiceOver　を有効にするには、「設定」アプリで _アクセシビリティ > VoiceOver_ を選択します。　VoiceOver のスライダーを押して有効にします（このページには他にも　VoiceOver　関連のオプションがいくつかあります）。
+VoiceOver を有効にするには、「設定」アプリで _アクセシビリティ > VoiceOver_ を選択します。 VoiceOver のスライダーを押して有効にします（このページには他にも VoiceOver 関連のオプションがいくつかあります）。
 
 > [!NOTE]
 > 古い iOS 端末では VoiceOver メニューは _設定_ > _一般_ > _アクセシビリティ_ > *VoiceOver*にあります。
@@ -165,7 +166,7 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 
    - URL バーが得られるまで左右にスワイプしてダブルタップし、URL バーを選択します。
    - 各文字について、目的の文字が得られるまで仮想キーボードに指を置いたまま動かしてから、指を離して選択します。ダブルタップして入力します。
-   - 終わったら、 <kbd>Enter</kbd> キーを見つけて押します。
+   - 終わったら、 Enter キーを見つけて押します。
 
 4. 左右にスワイプすると、ページ上の項目間を移動できます。項目をダブルタップして選択することができます（例えば、リンクをたどる）。
 5. デフォルトでは、選択されたローターオプションは話す速度です。現在は上下にスワイプして話す速度を上げ下げできます。
@@ -180,13 +181,13 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 
 7. 見出しを選択します。これで、上下にスワイプしてページ上の見出し間を移動できます。
 
-注: 利用可能な VoiceOver ジェスチャおよび iOS でのアクセシビリティテストに関するその他のヒントを網羅した詳細なリファレンスについては、[VoiceOver を使用して端末のアクセシビリティをテストする](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)（英語）を参照してください。
+注: 利用可能な VoiceOver ジェスチャおよび iOS でのアクセシビリティテストに関するその他のヒントを網羅した詳細なリファレンスについては、 [Apple の VoiceOver のドキュメント](https://developer.apple.com/documentation/accessibility/voiceover/)（英語）を参照してください。
 
 ## 制御機構
 
-CSS および JavaScript のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
+CSS および JavaScript のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
 
-例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して <kbd>Enter</kbd> / <kbd>Return</kbd> キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
+例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して Enter / Return キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
 
 あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
 
@@ -221,13 +222,13 @@ panel.ontouchend = stopMove;
 
 ## レスポンシブデザイン
 
-[レスポンシブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)は、画面のサイズや解像度などの要因に応じて、レイアウトやその他のアプリの機能を動的に変更することです。だから、さまざまな種類の端末のユーザーにとって使用可能でアクセス可能です。
+[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)は、画面のサイズや解像度などの要因に応じて、レイアウトやその他のアプリの機能を動的に変更することです。だから、さまざまな種類の端末のユーザーにとって使用可能でアクセス可能です。
 
 特に、モバイルに関して対処する必要がある最も一般的な問題は次のとおりです。
 
-- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
-- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)を使用してこれを扱えます。
-- 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、SVG ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。SVG はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)を参照）。
+- モバイル端末用のレイアウトの適合性。例えば、複数列のレイアウトは狭い画面ではうまくいきませんし、見やすくするためにテキストサイズを大きくする必要があるかもしれません。このような問題は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)などの技術を使用してレスポンシブレイアウトを作成することで解決できます。
+- ダウンロードした画像サイズを節約する。一般的に、小型画面の端末は、デスクトップと同等の大きさの画像を必要としませんし、低速のネットワーク接続上にある可能性が高くなります。したがって、必要に応じて狭い画面の端末に小さい画像を提供することが賢明です。[レスポンシブ画像のテクニック](/ja/docs/Web/HTML/Responsive_images)を使用してこれを扱えます。
+- 高解像度について考える。多くのモバイル端末は高解像度の画面を持っているため、ディスプレイがくっきりと鮮明に見えるようにするために、より高解像度の画像が必要です。ここでも、レスポンシブ画像テクニックを使用して、必要に応じて画像を提供できます。さらに、SVG ベクター画像フォーマットを使用して多くの画像要件を満たすことができます。これは今日のブラウザー間で十分にサポートされています。SVG はファイルサイズが小さく、表示されているサイズに関係なく鮮明に保たれます（詳細は[ウェブにベクターグラフィックスを追加する](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)を参照）。
 
 > [!NOTE]
 > レスポンシブデザインのテクニックについては、MDN の他の場所で説明されているため、ここでは詳しく説明しません（上記のリンクを参照）。
@@ -265,7 +266,7 @@ panel.ontouchend = stopMove;
 - 番号 (`number`)、電話番号 (`tel`)、電子メール (`email`) の入力では、番号や電話番号を入力するための適切な仮想キーボードを表示します。
 - 日時 (`date`, `time`) の入力では、日時を選択するための適切なピッカーを表示します。
 
-デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。さまざまな入力タイプの検出に関する生の情報については[入力タイプ](http://diveinto.html5doctor.com/detect.html#input-types)（英語）を参照してください。また、より多くの情報については[機能検出の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)をチェックしてください。
+デスクトップとは別の解決策を提供したい場合は、機能検出を使用して、モバイル端末に常に別のマークアップを提供できます。さまざまな入力タイプの検出に関する生の情報については[入力タイプ](http://diveinto.html5doctor.com/detect.html#input-types)（英語）を参照してください。また、より多くの情報については[機能検出の記事](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection)をチェックしてください。
 
 ## まとめ
 
@@ -276,4 +277,4 @@ panel.ontouchend = stopMove;
 - [モバイルウェブ開発のためのガイドライン](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)（英語） — モバイルウェブデザインのためのさまざまな技術を網羅した _Smashing Magazine_ の記事のリスト。
 - [サイトをタッチ端末で機能させる](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)（英語） — タッチイベントを使用してモバイル端末で対話を機能させるための便利な記事。
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
