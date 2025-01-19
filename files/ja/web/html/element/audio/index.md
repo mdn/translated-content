@@ -466,5 +466,5 @@ elem.audioTrackList.onremovetrack = (event) => {
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [学習領域: HTML動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_Video_and_audio)
+- [学習領域: HTML動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [ブラウザーに依存しない音声の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
