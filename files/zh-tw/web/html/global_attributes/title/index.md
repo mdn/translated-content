@@ -27,13 +27,12 @@ slug: Web/HTML/Global_attributes/title
 
 ```html
 <p>
-  Newlines in <code>title</code> should be taken into account. This
+  需要考量 <code>title</code> 中的換行問題。例如：
   <span
-    title="This is a
-multiline title">
-    example span
-  </span>
-  has a title a attribute with a newline.
+    title="這是
+多行的標題">
+    範例
+  </span>  
 </p>
 <hr />
 <pre id="output"></pre>
@@ -63,8 +62,8 @@ output.textContent = span.title;
 
 ```html
 <div title="CoolTip">
-  <p>Hovering here will show "CoolTip".</p>
-  <p title="">Hovering here will show nothing.</p>
+  <p>當滑鼠移動到這上面則會顯示"CoolTip"。</p>
+  <p title="">當移動到這裡則不會顯示任何資訊。</p>
 </div>
 ```
 
