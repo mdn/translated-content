@@ -30,9 +30,7 @@ slug: Web/HTML/Global_attributes/title
   需要考量 <code>title</code> 中的換行問題。例如：
   <span
     title="這是
-多行的標題">
-    範例
-  </span>  
+多行的標題">範例</span>  
 </p>
 <hr />
 <pre id="output"></pre>
