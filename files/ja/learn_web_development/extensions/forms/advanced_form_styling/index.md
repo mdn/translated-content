@@ -1,22 +1,21 @@
 ---
 title: フォームへの高度なスタイル設定
 slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
-original_slug: Learn/Forms/Advanced_form_styling
 l10n:
-  sourceCommit: d54192c90e24a1ca5d3a4a65b7d5bf8b1c0ef1e5
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
-この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、より問題のある部分のスタイル設定を掘り下げます。
+この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、より問題のある部分のスタイル設定を掘り下げます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> および
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> に対する基本的な理解。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> および
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> に対する基本的な理解。
       </td>
     </tr>
     <tr>
@@ -35,11 +34,11 @@ l10n:
 - チェックボックスやラジオボタン
 - [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 
-**劣悪**: 一部の要素は CSS でスタイル設定できません。含まれているのは以下のものです。
+**劣悪**: 一部の要素は CSS でスタイル設定できません。例えば以下のものです。
 
-- ドロップダウンウィジェットを作成する要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む
+- ドロップダウンウィジェットを作成する要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む
 - [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日付関連コントロール
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local) のような日付関連コントロール
 - [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
 - [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
 - {{HTMLElement("progress")}} および {{HTMLElement("meter")}}
@@ -93,7 +92,7 @@ input {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
-たいていの場合、効果は枠線を除去し、 CSS でのスタイル設定を少し簡単にしますが、それは本質できありません。いくつかの場合 — 検索やラジオボタン/チェックボックスでは、もっと便利です。これを見ていきましょう。
+たいていの場合、効果は枠線を除去し、 CSS でのスタイル設定を少し簡単にしますが、それは本質的ではありません。いくつかの場合、検索やラジオボタン/チェックボックスでは、もっと便利です。これを見ていきましょう。
 
 ### 検索ボックスの変更
 
@@ -116,7 +115,7 @@ input[type="search"] {
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
 > [!NOTE]
-> 検索フィールドでは、Edge と Chrome で入力がフォーカスされないときに "x" の削除アイコンが消えるが、Safari では残ることに気づくこともあるでしょう。CSS で消すには、`input[type="search"]::-webkit-search-cancel-button { display: none; }`を使用できますが、フォーカス時のアイコンも取り除き、見た目が元に戻らないようです。
+> 検索フィールドでは、 Edge と Chrome で入力がフォーカスされていないときに "x" の削除アイコンが消えますが、Safari では残ることに気づくかもしれません。CSS で消すには、 `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }` を使用することができます。
 
 ### チェックボックスとラジオボタンのスタイル設定
 
@@ -145,7 +144,7 @@ input[type="checkbox"] {
 }
 ```
 
-ブラウザーによってチェックボックスとスパンの扱いは異なっており多くは劣悪なものです。
+ブラウザーによってチェックボックスとスパンの扱いは異なっており、多くは劣悪なものです。
 
 | ブラウザー                          | 描画結果                                                                         |
 | ----------------------------------- | -------------------------------------------------------------------------------- |
@@ -157,12 +156,12 @@ input[type="checkbox"] {
 
 #### ラジオボタン/チェックボックスで appearance: none を使う
 
-これまで見てきたように、チェックボックスやラジオボタンの既定の見た目を {{cssxref('appearance')}}`:none;` で削除できます。この HTML の例を見てみましょう。
+これまで見てきたように、チェックボックスやラジオボタンの既定の見た目を {{cssxref("appearance", "appearance: none;")}} で削除できます。この HTML の例を見てみましょう。
 
 ```html
 <form>
   <fieldset>
-    <legend>Fruit preferences</legend>
+    <legend>果物の好み</legend>
 
     <p>
       <label>
@@ -229,7 +228,7 @@ input[type="checkbox"]:disabled {
 }
 ```
 
-こうした擬似クラスなどは、[次の記事](/ja/docs/Learn/Forms/UI_pseudo-classes)で見つけられますが、上記は次のことをしています。
+こうした擬似クラスなどは、[次の記事](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)で見つけられますが、上記は次のことをしています。
 
 - `:checked` — チェックボックス (やラジオボタン) がチェックされた状態にあります — ユーザーがクリック/有効化しています。
 - `:disabled` — チェックボックス (やラジオボタン) が無効な状態にあります — 操作することができますせん.
@@ -379,7 +378,7 @@ select {
 }
 ```
 
-次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置きました。それは[`::before`](/ja/docs/Web/CSS/::before)/[`::after`](/ja/docs/Web/CSS/::after) が `<select>` 要素では動作しないためです（これは生成されたコンテンツが要素がフォーマットするボックスに対し相対的に配置されますが、フォーム入力は置換された要素 — 表示がブラウザーによって生成されて順番に配置されるもの — として動作するので、1 つもないためです）。
+次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置きました。それは[`::before`](/ja/docs/Web/CSS/::before)/[`::after`](/ja/docs/Web/CSS/::after) が `<select>` 要素では動作しないためです（これはコンテンツが完全にブラウザーによって制御されているからです）。
 
 ```html
 <label for="select">Select a fruit</label>
@@ -408,7 +407,7 @@ select {
 }
 ```
 
-2 つ目の、もう少し重要な問題は、 `<select>` ボックスをクリックして開いたときに現れる、選択肢の入ったボックスを操作することができないことです。親要素に設定されているフォントを継承することはできますが、間隔や色などを設定することはできません。{{HTMLElement("datalist")}} で現れる自動補完リストも同様です。
+2 つ目の、もう少し重要な問題は、 `<select>` ボックスをクリックして開いたときに現れる、選択肢の入ったボックスを操作することができないことです。親要素に設定されているフォントを継承することはできますが、間隔や色などを設定することはできません。 {{HTMLElement("datalist")}} で現れる自動補完リストも同様です。
 
 本当に選択肢をスタイル設定する必要がある場合、カスタムコントロールを生成するライブラリーを使用するか、独自のカスタムコントロールを作成するかのどちらかが必要で、あるいは `multiple` 属性を使う select の場合、これはページ上に出てくるすべての選択肢を作成し、この特殊な問題を避けることができます。
 
@@ -483,7 +482,7 @@ input[type="file"] {
 label[for="file"] {
   box-shadow: 1px 1px 3px #ccc;
   background: linear-gradient(to bottom, #eee, #ccc);
-  border: 1px solid rgb(169, 169, 169);
+  border: 1px solid rgb(169 169 169);
   border-radius: 5px;
   text-align: center;
   line-height: 1.5;
@@ -508,18 +507,17 @@ label[for="file"]:active {
 
 スタイル設定を制御したい場合は、この機能のカスタムソリューションを作ったり、[progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#例) のようなサードパーティのソリューションを使ったりした方が簡単です。
 
-[カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)の記事には、HTML、CSS、JavaScript を用いた独自デザインの選択フィールドを構築する方法の例があります。
+[カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)の記事には、HTML、CSS、JavaScript を用いた独自デザインの選択フィールドを構築する方法の例があります。
 
 ## まとめ
 
 HTML フォームで CSS を使用するのはまだ困難ですが、しばしばそれらを回避する方法があります。クリーンでユニバーサルな解決方法はありませんが、最新のブラウザーでは新しい可能性があります。今のところ、最良の解決策は、HTML フォームウィジェットに適用されたときに異なるブラウザーが CSS をサポートする方法の詳細を学ぶことです。
 
-このガイドの次の記事では、現代のブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)を見ていきます。
+このガイドの次の記事では、現代のブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)を見ていきます。
 
-{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 ### 高度なトピック
 
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)

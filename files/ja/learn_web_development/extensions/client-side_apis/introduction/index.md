@@ -1,12 +1,13 @@
 ---
 title: Web API の紹介
 slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
-original_slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 まずは API を高い視点から見ていきます — これは何なのか、どう働くのか、あなたのコードでどう使うのか、どういう風に作られているのか? また様々なクラスの API は何なのか、どのような使い方があるのかも見ていきます。
 
@@ -15,20 +16,16 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
-        <a href="/ja/docs/Learn/HTML">HTML</a>、
-        <a href="/ja/docs/Learn/CSS">CSS</a>、JavaScript の基本
-        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
-        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >構成要素</a
-        >、
-        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）の基本的な理解。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> に親しんでおくこと、特に <a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript オブジェクトの基本</a>と <a href="/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM スクリプティング</a>や<a href="/ja/docs/Learn_web_development/Core/Scripting/Network_requests">ネットワークリスクエスト</a>などのコア API を扱っているものを理解しておくこと。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        API に親しみ、API で何ができるのか、API をどのようにコードで使用するのかを知ること。
+        <ul>
+          <li>Web API とは何か、 API を使って何ができるのか。</li>
+          <li>API がどのように使われるか。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -53,7 +50,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 クライアントサイド API では、実際とてもたくさんの API が使えます、それらは JavaScript 言語本体の一部ではなく、あなたにスーパーパワーを与えるべく JavaScript 言語のコアの上に築かれた代物です。それらはおおよそ二つのカテゴリーに分けられます。
 
-- **ブラウザー API** はウェブブラウザーに組み込まれていて、ブラウザーやコンピューターの環境の情報を取得し、これを使って役に立つ複雑なことを行えるようにするものです。 例えば [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) は、ブラウザー内での音声を操作、たとえば音声トラックの取得、音量の変更、エフェクトの適用などを行うための JavaScript の仕組みを提供します。実際には、裏でブラウザーは低レベル（例えば C++ や Rust）の複雑なコードを使って実際の音声処理を行います。しかし、この複雑さを API が抽象化して隠蔽します。
+- **ブラウザー API** はウェブブラウザーに組み込まれていて、ブラウザーやコンピューターの環境の情報を取得し、これを使って役に立つ複雑なことを行えるようにするものです。 例えば [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) は、ブラウザー内での音声の操作、たとえば音声トラックの取得、音量の変更、エフェクトの適用などを行うための JavaScript の仕組みを提供します。実際には、裏でブラウザーは低レベル（例えば C++ や Rust）の複雑なコードを使って実際の音声処理を行います。しかし、この複雑さを API が抽象化して隠蔽します。
 - **サードパーティ API** は既定ではブラウザーに組み込まれておらず、一般的にウェブのどこかから、コードと情報を取得する必要があります。例えば [Twitter API](https://developer.twitter.com/ja/docs) を使うと、自分のウェブサイトに自分の最新のツイートを表示したりすることができます。これは、 Twitter サービスに問い合わせを行い、特定の情報を返すために使用することができる特別な一連の仕組みを提供します。
 
 ![ブラウザーに firefox ブラウザーのホームページを開いた状態のスクリーンショット。既定でブラウザーに組み込まれている API があります。サードパーティの API は既定でブラウザーに組み込まれているわけではありません。それらのコードや情報を利用するためには、ウェブ上のどこかから取得する必要があります。](browser.png)
@@ -62,10 +59,10 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 ここまででクライアントサイド API とは何か、JavaScript 言語とどう関係しているのかお話しました。もっとはっきりさせるために一度おさらいして、ついでに他の JavaScript ツールがどう関係してくるのかもお話しましょう。
 
-- JavaScript — ブラウザーに組込まれた高水準スクリプト言語で、ウェブページやアプリに機能を実装するのに使うことができます。 [Node](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction) のようなブラウザー以外の他のプログラミング環境でも使えます。
+- JavaScript — ブラウザーに組込まれた高水準スクリプト言語で、ウェブページやアプリに機能を実装するのに使うことができます。 [Node](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction) のようなブラウザー以外の他のプログラミング環境でも使えます。
 - ブラウザー API — JavaScript 言語の上に乗って、より簡単に機能を実装するためにブラウザーに組み込まれた仕組みです。
 - サードパーティ API — サードパーティのプラットフォーム（Twitter や Facebook など）上に作られた構造で、それらのプラットフォームの機能をウェブページで利用できるようにします（例えば自分の最新のツイートを自分のウェブページに表示するなど）。
-- JavaScript ライブラリー — 多くは、[独自の関数](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)を含んだ 1 つ以上の JavaScript ファイルで、ウェブページに装着することで、スピードアップさせたりよくある機能を書いたりできるものです。例えば、jQuery、Mootools、React などがあります。
+- JavaScript ライブラリー — 多くは、[独自の関数](/ja/docs/Learn_web_development/Core/Scripting/Build_your_own_function)を含んだ 1 つ以上の JavaScript ファイルで、ウェブページに装着することで、スピードアップさせたりよくある機能を書いたりできるものです。例えば、jQuery、Mootools、React などがあります。
 - JavaScript フレームワーク — ライブラリーの一階層上にあたる JavaScript フレームワーク（Angular や Ember など）は、HTML、CSS、JavaScript などの技術をパッケージ化してインストールする傾向があり、これを使用してウェブアプリケーション全体をゼロから書きます。ライブラリーとフレームワークの大きな違いは、「制御の逆転 (Inversion of Control)」です。ライブラリーからメソッドを呼び出す場合、制御するのは開発者です。フレームワークでは、制御が逆転しています。フレームワークが開発者のコードを呼び出すのです。
 
 ## API で何ができる?
@@ -76,28 +73,26 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 特に、使用する（このモジュールでより詳細に取り上げる）ブラウザー API の最も一般的なカテゴリーは、次のとおりです。
 
-- ブラウザーに読み込まれた**文書を操作するための API**。最も顕著な例は [DOM (Document Object Model) API](/ja/docs/Web/API/Document_Object_Model) で、 HTML と CSS を操作することができます。 HTML を作成、削除、書き換えしたり、動的に新しいスタイルをページに適用したり、などなど。例えばページにポップアップウィンドウが表われたり、何か新しい中身が表示されたりする時、DOM が使われています。この種の API について、詳しくは[文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#ドキュメントオブジェクトモデル)で分かります。
-- **サーバーからのデータ取得 API** で、ウェブページの小さな部分を自分自身で更新するために、とてもよく使用されています。この一見すると些細なことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。株価リストや利用できる新着記事のリストを更新するだけなら、ページ全体をサーバーから再読み込みすることなく瞬時に行うことで、サイトやアプリの応答性や「キビキビ感」がずっと良くなります。このために使用される主な API は [Fetch API](/ja/docs/Web/API/Fetch_API) ですが、古いコードではまだ [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) API を使用している場合があります。また、この技術を記述した **Ajax** という用語に出会うこともあります。このような API については、[サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)で詳しく調べてください。
+- ブラウザーに読み込まれた**文書を操作するための API**。最も顕著な例は [DOM (Document Object Model) API](/ja/docs/Web/API/Document_Object_Model) で、 HTML と CSS を操作することができます。 HTML を作成、削除、書き換えしたり、動的に新しいスタイルをページに適用したり、などなど。例えばページにポップアップウィンドウが表われたり、何か新しい中身が表示されたりする時、DOM が使われています。この種の API について、詳しくは[文書の操作](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting#ドキュメントオブジェクトモデル)で分かります。
+- **サーバーからのデータ取得 API** で、ウェブページの小さな部分を自分自身で更新するために、とてもよく使用されています。この一見すると些細なことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。株価リストや利用できる新着記事のリストを更新するだけなら、ページ全体をサーバーから再読み込みすることなく瞬時に行うことで、サイトやアプリの応答性や「キビキビ感」がずっと良くなります。このために使用される主な API は [Fetch API](/ja/docs/Web/API/Fetch_API) ですが、古いコードではまだ [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) API を使用している場合があります。また、この技術を記述した **AJAX** という用語に出会うこともあります。このような API については、[サーバーからのデータ取得](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)で詳しく調べてください。
 - **グラフィックの描画や操作のための API** は、ブラウザーが広く対応しています。最も普及しているのは[キャンバス](/ja/docs/Web/API/Canvas_API)と [WebGL](/ja/docs/Web/API/WebGL_API) で、HTML の {{htmlelement("canvas")}} 要素に含まれるピクセルデータをプログラムで更新して 2D や 3D の場面を作成することが可能です。例えば、矩形や円などの図形を描いたり、画像をキャンバス上に取り込んで、キャンバス API を使用してセピアやグレースケールなどのフィルターを適用したり、WebGL を使用して照明やテクスチャを含む複雑な 3D シーンを作成したりすることができます。こうした API は、アニメやゲームのように常に更新される場面を作るために、アニメーションのループを作成する API（{{domxref("window.requestAnimationFrame()")}} など）とよく組み合わせて使用されます。
 - **[動画と音声の API](/ja/docs/Web/Media/Audio_and_video_delivery)** 、例えば {{domxref("HTMLMediaElement")}}、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[WebRTC](/ja/docs/Web/API/WebRTC_API) などを使用すると、音声や動画を再生するためのカスタム UI コントロールを作成したり、動画と一緒にキャプションや字幕などのテキストトラックを表示したり、ウェブカメラから動画を取得してキャンバス（上記参照）を介して操作したり、ウェブ会議で他の人のコンピューターに表示したり、音声にエフェクト（ゲイン、歪曲、パンニングなど）を追加したりと、マルチメディアを使って実に興味深いことを行うことができます。
 - **端末 API** は、端末のハードウェアと対話することができます。例えば、[位置情報 API](/ja/docs/Web/API/Geolocation_API) を使用すると、端末の GPS にアクセスしてユーザーの位置を特定することが可能です。
-- **クライアント側でのデータ保持 API** は今多くのブラウザーに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、たとえデバイスがオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。いくつもの選択肢があり、例えば [Web Storage API](/ja/docs/Web/API/Web_Storage_API) を使ったキーバリューストアや、 [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使ったもっと複雑なテーブル型データ保存などです。
+- **クライアント側でのデータ保持 API** は今多くのブラウザーに普及しつつあります。— クライアント側にデータを保存できると、ページを移動しても状態を保存したり、たとえデバイスがオフラインでも動作するようなアプリを作成したいような場合、とても役に立ちます。いくつもの選択肢があり、例えば[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) を使ったキーバリューストアや、 [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) を使ったもっと複雑なテーブル型データ保存などです。
 
 ### 一般的なサードパーティ API
 
 サードパーティ API はバラエティーに富んでいます。遅かれ早かれ使うことになりそうな、世間でよく使われているものには以下のようなものがあります。
 
-- [Twitter API](https://developer.twitter.com/ja/docs)、これで自分の最新のツイート自分のウェブサイトにしたりすることができます。
 - [Mapquest](https://developer.mapquest.com/) や [Google Maps API](https://developers.google.com/maps/) のような地図の API で、ウェブページ上の地図で様々なことをすることができます。
 - [Facebook API スイート](https://developers.facebook.com/docs/)によって Facebook エコシステムの様々な部品を使ってあなたのアプリを強化できます。例えばアプリへのログインを Facebook のログインで行なったり、アプリ内での支払い、ターゲット広告を出したりなどです。
 - [Telegram API](https://core.telegram.org/api) を使用すると、ボットのサポートに加えて、Telegram チャネルのコンテンツをウェブサイトに埋め込むことができます。
 - [YouTube API](https://developers.google.com/youtube/) を使うと、サイトに YouTube の動画を埋め込んだり、 YouTube を検索したり、プレイリストを作成したりすることができます。
 - [Pinterest API](https://developers.pinterest.com/) は、 Pinterest のボードとピンを管理して、ウェブサイトに表示するためのツールを提供します。
 - [Twilio API](https://www.twilio.com/) は、自分のアプリに音声や動画の通話機能を作成したり、SMS/MMS を送信したりなどするためのフレームワークを提供します。
+- [Disqus API](https://disqus.com/api/docs/) は、自分のサイトに統合できるコメントプラットフォームを提供します。
 - [Mastodon API](https://docs.joinmastodon.org/api/) を使用すると、Mastodon ソーシャルネットワークの機能をプログラムで操作できます。
-
-> [!NOTE]
-> サードパーティ API については [Programmable Web API directory](http://www.programmableweb.com/category/all/apis) でもっと多くの情報を見られます。
+- [IFTTT API](https://ifttt.com/developers) は、 1 つのプラットフォームで複数の API を統合できます。
 
 ## API はどのように動作するのか
 
@@ -105,10 +100,10 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 ### オブジェクトベース
 
-コードは 1 つ以上の [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を使用して API と対話します。オブジェクトは API が使用するデータ（オブジェクトプロパティに含まれる）、および API が利用可能にする機能（オブジェクトメソッドに含まれる）のコンテナーとして機能します。
+コードは 1 つ以上の [JavaScript オブジェクト](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)を使用して API と対話します。オブジェクトは API が使用するデータ（オブジェクトプロパティに含まれる）、および API が利用可能にする機能（オブジェクトメソッドに含まれる）のコンテナーとして機能します。
 
 > [!NOTE]
-> もし、まだオブジェクトがどのように動作するのかよくわからない場合は、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)モジュールに戻って練習をしてください。
+> もし、まだオブジェクトがどのように動作するのかよくわからない場合は、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)モジュールに戻って練習をしてください。
 
 ウェブオーディオ API の例に戻ってみましょう。ウェブオーディオ API はとても複雑な API で、たくさんのオブジェクトから成り立っています。わかりやすいものでいうと下記が挙げられます。
 
@@ -133,7 +128,6 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 まず、トラックを操作するための `AudioContext` インスタンスを作成します。
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 ```
 
@@ -231,11 +225,11 @@ Ball.prototype.draw = function () {
 ```
 
 > [!NOTE]
-> この実例を[弾むボールのデモ](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) で見られます（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てください）。
+> この例を[バウンスボールのデモ](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) で見られます（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) も見てください）。
 
-### 状態の変化を捉えるのにイベントを使う
+### イベントを使用して状態の変化を捉えることが多い
 
-イベントについては、このコースの早い段階で、[イベントへの入門](/ja/docs/Learn/JavaScript/Building_blocks/Events)という記事ですでに説明しましたが、この記事ではクライアントサイドのウェブイベントとは何か、そしてそれらがコードでどのように使用されるかについて詳細に見ています。もしあなたがクライアントサイドのウェブ API イベントがどのように動作するかについてまだよく知らないのであれば、先にこの記事を読んでから続きを読んでください。
+イベントについては、このコースの早い段階で、[イベントへの入門](/ja/docs/Learn_web_development/Core/Scripting/Events)という記事ですでに説明しましたが、この記事ではクライアントサイドのウェブイベントとは何か、そしてそれらがコードでどのように使用されるかについて詳細に見ています。もしあなたがクライアントサイドのウェブ API イベントがどのように動作するかについてまだよく知らないのであれば、先にこの記事を読んでから続きを読んでください。
 
 ウェブ API の中にはイベントを含まないものもありますが、ほとんどは少なくともいくつかのイベントを含んでいます。イベントが発行されたときに関数を動作させるためのハンドラープロパティは、一般に、リファレンス資料の中で個々の「イベントハンドラー」の節に掲載されています。
 
@@ -280,10 +274,10 @@ WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オ�
 ウェブオーディオ API や {{domxref("HTMLMediaElement")}} API には、[自動再生ポリシー](/ja/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy)と呼ばれるセキュリティ機構が適用されます。これは、基本的に、ページの読み込み時に音声を自動的に再生できないことを意味します。ユーザーに次のことを許可する必要があります。ボタンのようなコントロールを介して音声再生を開始します。これは、音声の自動再生は通常非常に煩わしいものであり、ユーザーにそれを課すべきではないためです。
 
 > [!NOTE]
-> ブラウザーの厳格さによっては、このようなセキュリティ機構により、例がローカルでは動作しなくなる場合があります。つまり、ローカルの例のファイルをウェブサーバーから実行するのではなく、ブラウザーに読み込んだ場合です。執筆時点では、ウェブオーディオ API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
+> ブラウザーの厳格さ次第では、このようなセキュリティ機構により、例がローカル、つまり、例のファイルをウェブサーバーから実行するのではなく、ローカルからブラウザーに読み込んだ場合には動作しなくなる場合があります。執筆時点では、ウェブオーディオ API の例はローカルでは Google Chrome で動作しません。動作する前に、GitHub にアップロードする必要がありました。
 
 ## まとめ
 
-この時点で、 API が何であるか、それがどのように動作するか、そして JavaScript コードで API を使って何ができるかについて、よく分かったはずです。おそらく、実際に特定の API を使って楽しいことを始めることに期待していることでしょうから、さっそく始めましょう。次は、 Document Object Model (DOM) を使った文書内の操作について見ていきます。
+この時点で、 API が何であるか、それがどのように動作するか、そして JavaScript コードで API を使って何ができるかについて、よく分かったはずです。おそらく、実際に特定の API を使って楽しいことを始めることに期待していることでしょうから、さっそく始めましょう。次は、動画と音声の API を見てみましょう。
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

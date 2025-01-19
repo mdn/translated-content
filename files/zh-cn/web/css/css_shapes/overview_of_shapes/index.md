@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 
 [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) 在 CSS 中描述了几何图形的 shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。
 
-举个例子：你在左侧设计一个浮动元素，它可以令文本环绕于该浮动元素的右侧和底部，并且以一种矩形的样式。如果你接着指定一个圆形的样式，文本就会以圆形的样式环绕。.
+举个例子：你在左侧设计一个浮动元素，它可以令文本环绕于该浮动元素的右侧和底部，并且以一种矩形的样式。如果你接着指定一个圆形的样式，文本就会以圆形的样式环绕。
 
 事实上，我们有多种方式去创建这类形状，并且我们在指导中将会发现 CSS 形状是怎么工作的，然后就可以跟着感觉走了。
 
@@ -16,7 +16,7 @@ slug: Web/CSS/CSS_shapes/Overview_of_shapes
 Specification 定义了三种新的权限：
 
 - {{cssxref("shape-outside")}} — 允许定义基本形状。
-- {{cssxref("shape-image-threshold")}} — 设定一个渗出阈值。如果一幅图像被用于定义形状，那么只有在大于等于渗出阈值的部分才会显示，其他部分不会显示出来。.
+- {{cssxref("shape-image-threshold")}} — 设定一个渗出阈值。如果一幅图像被用于定义形状，那么只有在大于等于渗出阈值的部分才会显示，其他部分不会显示出来。
 - {{cssxref("shape-margin")}} — 在形状外面加上边框。
 
 ## 定义基本的形状
