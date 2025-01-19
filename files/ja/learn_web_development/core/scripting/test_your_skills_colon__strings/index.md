@@ -1,19 +1,18 @@
 ---
 title: "スキルテスト: 文字列"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Strings
-original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、[テキストの扱い — JavaScript での文字列](/ja/docs/Learn/JavaScript/First_steps/Strings)および[便利な文字列メソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)の記事を理解しているかどうかを評価することです。
+このスキルテストの目的は、[テキストの扱い — JavaScript での文字列](/ja/docs/Learn_web_development/Core/Scripting/Strings)および[便利な文字列メソッド](/ja/docs/Learn_web_development/Core/Scripting/Useful_string_methods)の記事を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
->
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 > [!NOTE]
 > 下記の例では、コードにエラーがある場合、ページ上の結果パネル（またはダウンロードするバージョンの場合は、 ブラウザーの JavaScript コンソール）に出力されるので、答えを見つけるのに役立ちます。

@@ -10119,7 +10119,7 @@
       "FDSoil"
     ]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-09-14T23:27:03.154Z",
     "contributors": [
       "Nachec",
@@ -10175,17 +10175,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Quantifiers": {
     "modified": "2020-09-15T21:48:26.513Z",
     "contributors": ["Nachec"]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-09-15T10:00:50.941Z",
-    "contributors": [
-      "Nachec",
-      "surielmx",
-      "IsraelFloresDGA",
-      "diegarta",
-      "Enesimus",
-      "jalmeida"
-    ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
     "modified": "2020-10-15T21:37:33.978Z",
@@ -14329,6 +14318,17 @@
       "inma_610",
       "RickieesES",
       "StripTM"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
+    "modified": "2020-09-15T10:00:50.941Z",
+    "contributors": [
+      "Nachec",
+      "surielmx",
+      "IsraelFloresDGA",
+      "diegarta",
+      "Enesimus",
+      "jalmeida"
     ]
   },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {

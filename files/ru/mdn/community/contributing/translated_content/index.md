@@ -24,8 +24,8 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### Испанский (`es`)
 
-- Обсуждения: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- Активные участники: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
+- Обсуждения: [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
+- Активные участники: [JuanVqz](https://github.com/JuanVqz), [Graywolf9](https://github.com/Graywolf9)
 
 ### Китайский (`zh-CN`, `zh-TW`)
 

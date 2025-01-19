@@ -1,10 +1,11 @@
 ---
 title: item コンポーネントの作成
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 コンポーネントは、アプリケーションを構成する方法を提供します。 この記事では、リスト内の個々の item を処理するコンポーネントを作成し、チェック、編集、および削除機能を追加する方法について説明します。 ここでは、Angular イベントモデルについて説明します。
 
@@ -13,15 +14,14 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p>
-          <a href="/ja/docs/Learn/HTML">HTML</a>、
-          <a href="/ja/docs/Learn/CSS">CSS</a>、
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
-          <a
-            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ターミナル/コマンドライン</a
-          >に関する知識があること。
-        </p>
+        主要な
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> と
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a>
+        言語を扱うことができ、
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+          >端末/コマンドライン</a
+        >に関する知識があること。
       </td>
     </tr>
     <tr>
@@ -45,19 +45,30 @@ ng generate component item
 ここで、フォルダーとコンポーネントの名前は `item` です。
 `item` ディレクトリーは `app` フォルダー内にあります。
 
+```plain
+src/app/item
+├── item.component.css
+├── item.component.html
+├── item.component.spec.ts
+└── item.component.ts
+```
+
 `AppComponent` と同様に、 `ItemComponent` は次のファイルで構成されています。
 
-- `item.component.html` は、 HTML ファイルです。
-- `item.component.ts` は、 logic ファイルです。
-- `item.component.css` は、 styles ファイルです。
+- `item.component.html` は HTML です
+- `item.component.ts` はロジックです
+- `item.component.css` はスタイルです
+- `item.component.spec.ts` は、コンポーネントをテストするためのものです
 
 HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の `@Component()` デコレーターメタデータで確認できます。
 
 ```js
 @Component({
   selector: 'app-item',
+  standalone: true,
+  imports: [],
   templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css'],
+  styleUrl: './item.component.css'
 })
 ```
 
@@ -76,13 +87,16 @@ HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の 
     [checked]="item.done" />
   <label [for]="item.description">\{{item.description}}</label>
 
-  <div class="btn-wrapper" *ngIf="!editable">
+  @if (!editable) {
+  <div class="btn-wrapper">
     <button class="btn" (click)="editable = !editable">Edit</button>
     <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
   </div>
+  }
 
-  <!-- This section shows only if user clicks Edit button -->
-  <div *ngIf="editable">
+  <!-- このセクションは、ユーザーが Edit ボタンをクリックした場合のみ表示されます -->
+  @if (editable) {
+  <div>
     <input
       class="sm-text-input"
       placeholder="edit item"
@@ -97,35 +111,38 @@ HTML ファイルと CSS ファイルへの参照は、 `item.component.ts` の 
       </button>
     </div>
   </div>
+  }
 </div>
 ```
 
-最初の入力はチェックボックスであるため、ユーザーはアイテムが完了したときにアイテムをチェックできます。
-チェックボックスの `<input>` と `<label>` にある二重中括弧 `\{{}}` は、Angular の補間を示します。
+最初の入力フィールドはチェックボックスであるため、ユーザーはアイテムが完了したときにアイテムをチェックできます。
+チェックボックスの `<label>` にある二重中括弧 `\{{}}` は、Angular の補間を示します。
 Angular は `\{{item.description}}` を使用して、 `items` 配列から現在の `item` の説明を取得します。
 次のセクションでは、コンポーネントがデータを共有する方法について詳しく説明します。
 
 現在のアイテムを編集および削除するための次の 2 つのボタンは、 `<div>` 内にあります。
-この `<div>` には `*ngIf` があります。これは、DOM の構造を動的に変更するために使用できる組み込みの Angular ディレクティブです。
-
-この `*ngIf` は、 `editable` が `false` の場合、この `<div>` が DOM にあることを意味します。 `editable` が `true` の場合、Angular はこの `<div>` を DOM から削除します。
+この `<div>` は `@if` ブロックであり、条件に基づいてテンプレートの一部をレンダリングするために使用することができます。
+この `@if` は、 `editable` が `false` の場合、この `<div>` が DOM にあることを意味します。 `editable` が `true` の場合、Angular はこの `<div>` を DOM から削除します。
 
 ```html
-<div class="btn-wrapper" *ngIf="!editable">
+@if (!editable) {
+<div class="btn-wrapper">
   <button class="btn" (click)="editable = !editable">Edit</button>
   <button class="btn btn-warn" (click)="remove.emit()">Delete</button>
 </div>
+}
 ```
 
-ユーザーが **Edit** ボタンをクリックすると、「編集可能」が true になり、この `<div>` とその子が DOM から削除されます。
+ユーザーが **Edit** ボタンをクリックすると、 `editable` が true になり、この `<div>` とその子が DOM から削除されます。
 ユーザーが **Edit** をクリックする代わりに **Delete** をクリックすると、 `ItemComponent` は `AppComponent` に削除を通知するイベントを発生させます。
 
-`*ngIf` も次の `<div>` にありますが、 `editable` 値 `true` に設定されています。
-この場合、 `editable` が `true` の場合、Angular は `<div>` とその子要素 `<input>` と `<button>` を DOM に配置します。
+`@if` も次の `<div>` にありますが、 `editable` 値 `true` に設定されています。
+この場合、 `editable` が `true` の場合、 Angular は `<div>` とその子要素 `<input>` と `<button>` を DOM に配置します。
 
 ```html
-<!-- This section shows only if user clicks Edit button -->
-<div *ngIf="editable">
+<!-- このセクションは、ユーザーが Edit ボタンをクリックした場合のみ表示されます -->
+@if (editable) {
+<div>
   <input
     class="sm-text-input"
     placeholder="edit item"
@@ -140,6 +157,7 @@ Angular は `\{{item.description}}` を使用して、 `items` 配列から現�
     </button>
   </div>
 </div>
+}
 ```
 
 `[value]="item.description"` を使用すると、 `<input>` の値は現在のアイテムの `description` にバインドされます。
@@ -159,33 +177,49 @@ Angular は `\{{item.description}}` を使用して、 `items` 配列から現�
 ## AppComponent の準備
 
 次のセクションでは、 `AppComponent` と `ItemComponent` の通信に依存するコードを追加します。
-`app.component.ts` に以下を追加して、最初に AppComponent を構成します。
+`app.component.ts` ファイルの先頭付近に以下の行を追加し、`Item` をインポートします。
+
+```ts
+import { Item } from "./item";
+import { ItemComponent } from "./item/item.component";
+```
+
+次に、同じファイルのクラスに次の内容を追加することで、 AppComponent を構成可能な状態にします。
 
 ```js
-remove(item) {
+remove(item: Item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }
 ```
 
 `remove()` メソッドは JavaScript の `Array.splice()` メソッドを使用して、関連するアイテムの `indexOf` にある 1 つのアイテムを削除します。
 平易な英語では、これは `splice()` メソッドが配列からアイテムを削除することを意味します。
-`splice()` メソッドの詳細については、[`Array.prototype.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) に関する MDN Web Docs の記事を参照してください。 。
+`splice()` メソッドの詳細については、[`Array.prototype.splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) のドキュメントを参照してください。
 
 ## ItemComponent にロジックを追加
 
 `ItemComponent` UI を使用するには、関数やデータの出入り方法などのロジックをコンポーネントに追加する必要があります。
-
 `item.component.ts` で、JavaScript インポートを次のように編集します。
 
 ```js
 import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { Item } from "../item";
 ```
 
 `Input`, `Output`, および `EventEmitter` を追加すると、 `ItemComponent` が `AppComponent` とデータを共有できるようになります。
 `Item` をインポートすることにより、 `ItemComponent` は `item` が何であるかを理解することができます。
+`@Component` を更新して [`CommonModule`](https://angular.dev/api/common/CommonModule) を `app/item/item.component.ts` で使用するように更新すると、 `@if` ブロックを使用することができます。
 
-Further down `item.component.ts`, replace the generated `ItemComponent` class with the following:
+```js
+@Component({
+  selector: 'app-item',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './item.component.html',
+  styleUrl: './item.component.css',
+})
+```
 
 `item.component.ts` 内で、生成された `ItemComponent` クラスを次のように置き換えます。
 
@@ -194,12 +228,12 @@ export class ItemComponent {
 
   editable = false;
 
-  @Input() item: Item;
-  @Input() newItem: string;
+  @Input() item!: Item;
   @Output() remove = new EventEmitter<Item>();
 
-  saveItem(description) {
+  saveItem(description: string) {
     if (!description) return;
+
     this.editable = false;
     this.item.description = description;
   }
@@ -207,12 +241,15 @@ export class ItemComponent {
 ```
 
 `editable` プロパティは、ユーザーがアイテムを編集できるテンプレートのセクションを切り替えるのに役立ちます。
-`editable` は、 `*ngIf` ステートメント `*ngIf="editable"` と同じ HTML のプロパティです。
+`editable` は、 `@if` 文 `@if(editable)` と同じ HTML のプロパティです。
 テンプレートでプロパティを使用する場合は、クラスでも宣言する必要があります。
 
 `@Input()`, `@Output()`, 及び `EventEmitter` は、2 つのコンポーネント間の通信を容易にします。
 `@Input()` は、データがコンポーネントに入るための出入り口として機能し、 `@Output()` は、データがコンポーネントから出て行くための出入り口として機能します。
 `@Output()` は `EventEmitter` 型である必要があります。これにより、別のコンポーネントと共有する準備ができているデータがあるときに、コンポーネントがイベントを発生させることができます。
+
+> [!NOTE]
+> クラスのプロパティ宣言内の `!` は、[確定代入アサーション](https://www.typescriptlang.org/docs/handbook/2/classes.html#--strictpropertyinitialization)と呼ばれます。この演算子は、コンストラクターの定義から TypeScript が判断できない場合でも、 `item` フィールドが常に初期化され、 `undefined` ではないことを TypeScript に伝えます。この演算子をコードに記載しておらず、 TypeScript のコンパイル設定が厳格な場合、アプリのコンパイルに失敗します。
 
 `@Input()` を使用して、プロパティの値がコンポーネントの外部から取得できることを指定します。
 `@Output()` を `EventEmitter` と組み合わせて使用して、プロパティの値がコンポーネントを離れることができるように指定して、別のコンポーネントがそのデータを受け取れるようにします。
@@ -222,9 +259,9 @@ export class ItemComponent {
 この `description` は、 `#editedItem` テンプレート変数を持つ `<input>` からの同じ文字列です。
 
 ユーザーが値を入力せずに **Save** をクリックした場合、 `saveItem()` は何も返さず、 `description` を更新しません。
-この `if` ステートメントがない場合、ユーザーは HTML の `<input>` に何も入力せずに **Save** をクリックすると、 `description` は空の文字列になります。
+この `if` 文がない場合、ユーザーは HTML の `<input>` に何も入力せずに **Save** をクリックすると、 `description` は空の文字列になります。
 
-ユーザーがテキストを入力して save をクリックすると、 `saveItem()` は `editable` を false に設定します。これにより、テンプレートの `*ngIf` が編集機能を削除し、再び **Edit** と **Delete** ボタンをレンダリングします。
+ユーザーがテキストを入力して save をクリックすると、 `saveItem()` は `editable` を false に設定します。これにより、テンプレートの `@if` が編集機能を削除し、再び **Edit** と **Delete** ボタンをレンダリングします。
 
 この時点でアプリケーションをコンパイルする必要がありますが、ブラウザーで新機能を確認できるように、 `AppComponent` で `ItemComponent` を使用する必要があります。
 
@@ -241,9 +278,7 @@ Angular は、 `@Component()` デコレーターのメタデータ内にある�
 ```js
 @Component({
   selector: 'app-item',
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
-})
+  // ...
 ```
 
 `AppComponent` 内で `ItemComponent` セレクターを使用するには、コンポーネントクラスに定義したセレクターに対応する要素 `<app-item>` を `app.component.html` に追加します。
@@ -252,33 +287,43 @@ Angular は、 `@Component()` デコレーターのメタデータ内にある�
 ```html
 <h2>
   \{{items.length}}
-  <span *ngIf="items.length === 1; else elseBlock">item</span>
-  <ng-template #elseBlock>items</ng-template>
+  <span> @if (items.length === 1) { item } @else { items } </span>
 </h2>
 
 <ul>
-  <li *ngFor="let item of items">
+  @for (item of items; track item.description) {
+  <li>
     <app-item (remove)="remove(item)" [item]="item"></app-item>
   </li>
+  }
 </ul>
 ```
 
-The double curly brace syntax, `\{{}}`, in the `<h2>` interpolates the length of the `items` array and displays the number.
-`<h2>` の二重中括弧構文 `\{{}}` は、 `items` 配列の長さを取得し、数値を表示します。
+`app.component.ts` の `imports` を変更し、 `ItemComponent` と `CommonModule` を含めます。
 
-`<h2>` の `<span>` は `*ngIf` と `else` を使用して、 `<h2>` が "item" と "items" のどちらを表示するかを決定します。
+```js
+@Component({
+  standalone: true,
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
+  imports: [CommonModule, ItemComponent],
+})
+```
+
+`<h2>` の中の二重中括弧構文 `\{{}}` は、 `items` 配列の長さを取得し、数値を表示します。
+
+`<h2>` の `<span>` は `@if` と `else` を使用して、 `<h2>` が "item" と "items" のどちらを表示するかを決定します。
 リストに item が 1 つしかない場合は、 "item" を含む `<span>` が表示されます。
-それ以外の場合、 `items` 配列の長さが `1` 以外の場合、構文 `#elseBlock` で `elseBlock`と名付けた `<ng-template>` の代わりに `<span>` が表示されます。
-デフォルトでコンテンツをレンダリングしたくない場合は、Angular の `<ng-template>` を使用できます。
-この場合、 `items` 配列の長さが `1` でない場合、 `*ngIf` は `<span>` ではなく `elseBlock` を表示します。
+それ以外の場合、 `items` 配列の長さが `1` 以外の場合、 `<span>` は "items" と表示します。
 
-`<li>` は、Angular の repeater directive `*ngFor` を使用して、 `items` 配列内のすべてのアイテムを反復処理します。
-`*ngIf`のような Angular の `*ngFor` は、より少ないコードを記述しながら DOM の構造を変更するのに役立つもう 1 つの directive です。
-`items` ごとに、Angular は `<li>` とその中のすべてを繰り返します。これには `<app-item>` が含まれます。
-これは、配列内のアイテムごとに、Angular が `<app-item>` の別のインスタンスを作成することを意味します。
-配列内の任意の数のアイテムに対して、Angular はその数の `<li>` 要素を作成します。
+`@for` - Angular の制御フローブロックを、 `items` 配列のすべてのアイテムを反復処理するために使用します。
+Angular の `@for` は`@if` のように、より少ないコードを記述しながら DOM の構造を変更するのに役立つもう 1 つのディレクティブです。
+それぞれの `item` に対して、 Angular は `<li>` とその中のすべてを繰り返します。これには `<app-item>` が含まれます。
+これは、配列内のアイテムごとに、 Angular が `<app-item>` の別のインスタンスを作成することを意味します。
+配列内の任意の数のアイテムに対して、 Angular はその数の `<li>` 要素を作成します。
 
-いくつか例を挙げると、 `<div>`, `<span>`, や `<p>`, などの他の要素にも `*ngFor` を使用できます。
+いくつか例を挙げると、 `<div>`, `<span>`, や `<p>`, などの他の要素にも `@for` を使用できます。
 
 `AppComponent` には、アイテムを削除するための `remove()` メソッドがあります。これは、 `ItemComponent` の `remove` プロパティにバインドされています。
 角括弧内の `item` プロパティ `[]` は、 `AppComponent` と `ItemComponent` の間の `item` の値をバインドします。
@@ -416,7 +461,7 @@ Adapted from https://css-tricks.com/the-checkbox-hack/#custom-designed-radio-but
 
 ## まとめ
 
-これで、アイテムを追加、編集、および削除できるスタイル付きの AngularToDo リストアプリケーションができました。
+これで、アイテムを追加、編集、および削除できるスタイル付きの Angular の ToDo リストアプリケーションができました。
 次のステップは、特定の条件を満たすアイテムを確認できるようにフィルタリングを追加することです。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
