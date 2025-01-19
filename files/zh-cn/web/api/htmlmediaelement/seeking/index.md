@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLMediaElement")}} 接口的 **`seeking`** 只读属性是一个布尔值，表示 {{htmlelement("audio")}} 或 {{htmlelement("video")}} 是否正在定位到新的播放位置。
+{{domxref("HTMLMediaElement")}} 接口的 **`seeking`** 只读属性是一个表示 {{htmlelement("audio")}} 或 {{htmlelement("video")}} 是否正在定位到新的播放位置的布尔值。
 
 ## 值
 
