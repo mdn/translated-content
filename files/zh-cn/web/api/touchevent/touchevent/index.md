@@ -1,5 +1,5 @@
 ---
-title: "TouchEvent: TouchEvent() 构造函数"
+title: "TouchEvent：TouchEvent() 构造函数"
 slug: Web/API/TouchEvent/TouchEvent
 l10n:
   sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
@@ -32,13 +32,13 @@ new TouchEvent(type, options)
     - `changedTouches` {{optional_inline}}
       - : 默认为 `[]`，类型为 `Touch[]`，是促成事件的每个接触点的对象列表。
     - `ctrlKey` {{optional_inline}}
-      - : 一个布尔值，默认为 `false`指示是否同时按下了 <kbd>ctrl</kbd> 键。
+      - : 一个布尔值，默认为 `false`。指示是否同时按下了 <kbd>ctrl</kbd> 键。
     - `shiftKey` {{optional_inline}}
-      - : 一个布尔值，默认为 `false`指示是否同时按下了 <kbd>shift</kbd> 键。
+      - : 一个布尔值，默认为 `false`。指示是否同时按下了 <kbd>shift</kbd> 键。
     - `altKey` {{optional_inline}}
-      - : 一个布尔值，默认为 `false`指示是否同时按下了 <kbd>alt</kbd> 键。
+      - : 一个布尔值，默认为 `false`。指示是否同时按下了 <kbd>alt</kbd> 键。
     - `metaKey` {{optional_inline}}
-      - : 一个布尔值，默认为 `false`指示是否同时按下了 <kbd>meta</kbd> 键。
+      - : 一个布尔值，默认为 `false`。指示是否同时按下了 <kbd>meta</kbd> 键。
 
 ### 返回值
 
