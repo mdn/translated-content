@@ -1,6 +1,8 @@
 ---
 title: TouchEvent：altKey 属性
 slug: Web/API/TouchEvent/altKey
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
 {{APIRef("Touch Events") }}
