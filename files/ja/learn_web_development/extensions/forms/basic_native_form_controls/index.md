@@ -1,14 +1,13 @@
 ---
 title: 基本的なネイティブフォームコントロール
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
-original_slug: Learn/Forms/Basic_native_form_controls
 l10n:
-  sourceCommit: 238e8acc4909bb7f2ba783e9198379502399effc
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
-[一つ前の記事](/ja/docs/Learn/Forms/How_to_structure_a_web_form)では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます。 — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からありすべてのブラウザーで利用できる、元からあるフォームコントロールを見ていきます。
+[一つ前の記事](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます。 — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からありすべてのブラウザーで利用できる、元からあるフォームコントロールを見ていきます。
 
 <table>
   <tbody>
@@ -16,7 +15,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         基本的な
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML の理解</a
         >。
       </td>
@@ -76,7 +75,7 @@ l10n:
 この文書内で使用しているスクリーンショットは、macOS 上の Chrome ブラウザーで撮影したものです。ブラウザーによって、これらのフィールドやボタンに若干の違いがあるかもしれませんが、基本的なハイライト手法は同じです。
 
 > [!NOTE]
-> 特定の検証制約を強制する [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値、例えば color、email、url 入力型については、次の記事の [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)で説明します。
+> 特定の検証制約を強制する [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値、例えば color、email、url 入力型については、次の記事の [HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)で説明します。
 
 #### パスワードフィールド
 
@@ -88,9 +87,9 @@ l10n:
 
 以下のスクリーンショットでは、パスワードの入力フィールドがドットで表示されています。
 
-![Password field in chrome 115 on macOS](password.png)
+![macOS の Chrome 115 におけるパスワードフィールド](password.png)
 
-`password` の値は、入力されるテキストに特別な制約を加えるものではありませんが、フィールドに入力された値を (ドットやアスタリスクなどで) 不明瞭にして、他の人が簡単に読めないようにします。
+`password` の値は、入力されるテキストに特別な制約を加えるものではありませんが、フィールドに入力された値を（点やアスタリスクなどで）不明瞭にして、他の人が簡単に読めないようにします。
 
 これはユーザーインターフェイスの機能でしかないことに注意してください。テキストは JavaScript を使用してあなた自身でエンコードしなければ、平文で送信されてしまい、セキュリティ上で好ましくありません。 — 悪意のある第三者がデータを傍受し、パスワードやクレジットカード情報などを盗む可能性があります。このようなことからユーザーを保護する最善の方法は、フォームを含むページを安全な接続（すなわち、 `https://` ... を指すアドレス）でホストし、データを送信する前に暗号化することです。
 
@@ -106,7 +105,7 @@ l10n:
 
 このような要素を作成する場合は、 `name` 属性と `value` 属性の設定が必要です。この値は JavaScript にて動的にセットできます。`hidden` 入力型には関連したラベルはありません。
 
-その他のテキスト型、{{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/tel", "tel")}}, は次のチュートリアルの [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)にて扱います。
+その他のテキスト型、{{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/tel", "tel")}}, は次のチュートリアルの [HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)にて扱います。
 
 ## チェック可能項目: チェックボックスとラジオボタン
 
@@ -221,7 +220,7 @@ l10n:
 ```
 
 ```html hidden
-<div class="buttondemo">
+<div class="button-demo">
   <p>&lt;input> を使用</p>
   <p>
     <input type="submit" value="このフォームを送信" />
@@ -242,8 +241,8 @@ button,
 input {
   display: none;
 }
-.buttondemo button,
-.buttondemo input {
+.button-demo button,
+.button-demo input {
   all: revert;
 }
 ```
@@ -308,11 +307,11 @@ input {
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-これは「ホットマップ」を作成するためにとても便利な手段です。これらの値がどのように送信あるいは取得されるかについては、[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)の記事で詳しく説明します。
+これは「ホットマップ」を作成するためにとても便利な手段です。これらの値がどのように送信あるいは取得されるかについては、[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)の記事で詳しく説明します。
 
 ## ファイルピッカー
 
-初期の HTML にあった `<input>` 型がもう一つあります。ファイル入力型です。フォームで、ファイルをサーバーに送信することができます (この具体的な操作については、[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)の記事でも詳しく触れます)。ファイルピッカーウィジェットで、ユーザーは送信するファイルを 1 つ以上選択することができます。
+初期の HTML にあった `<input>` 型がもう一つあります。ファイル入力型です。フォームで、ファイルをサーバーに送信することができます (この具体的な操作については、[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)の記事でも詳しく触れます)。ファイルピッカーウィジェットで、ユーザーは送信するファイルを 1 つ以上選択することができます。
 
 [ファイルピッカーウィジェット](/ja/docs/Web/HTML/Element/input/file)を作成するには、 {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `file` に設定します。 [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性を使用して、受け入れるファイルの種類を制限することができます。加えて、ユーザーが複数のファイルを選択できるようにしたい場合は、 [`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性を付加します。
 
@@ -401,16 +400,15 @@ http://foo.com?pos.x=123&pos.y=456
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 基本的なコントロール](/ja/docs/Learn/Forms/Test_your_skills:_Basic_controls)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 基本的なコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls)を見てください。
 
 ## まとめ
 
 この記事では古い入力型を扱ってきました。 — これは HTML の初期の頃に導入された元からのもので、すべてのブラウザーがよく対応しています。次の節では、もっと新しい `type` 属性の値を見ていきます。
 
-{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 ### 高度なトピック
 
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
