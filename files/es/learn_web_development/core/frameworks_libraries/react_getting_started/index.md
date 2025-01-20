@@ -85,11 +85,10 @@ const header = (
 > [!NOTE]
 > Los paréntesis en el fragmento anterior no son exclusivos de JSX y no tienen ningún efecto en la aplicación. Son una señal para ti (y tu computadora) de que las múltiples líneas de código que contiene forman parte de una misma expresión. También podríamos escribir la expresión del encabezado de esta manera:
 >
-> ```jsx
-> const header = 
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>;
+> ```jsx-nolint
+> const header = <header>
+>   <h1>Mozilla Developer Network</h1>
+> </header>;
 >
 > ```
 >
