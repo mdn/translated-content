@@ -1,5 +1,5 @@
 ---
-title: "TouchEvent：TouchEvent() 构造函数"
+title: TouchEvent：TouchEvent() 构造函数
 slug: Web/API/TouchEvent/TouchEvent
 l10n:
   sourceCommit: 22080a7cc403f7f45c8e85065b182c9f0d4d383c
