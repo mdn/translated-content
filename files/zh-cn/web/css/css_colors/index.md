@@ -13,7 +13,7 @@ l10n:
 
 ### 色彩运用
 
-下面的颜色语法转换器显示了当前选定颜色在 [红 - 绿-蓝](/zh-CN/docs/Web/CSS/color_value/rgb)（RGB）、[十六进制](/zh-CN/docs/Web/CSS/hex-color)（HEX）、[色相、饱和度和亮度](/zh-CN/docs/Web/CSS/color_value/hsl)（HSL）以及[色相、白度和黑度](/zh-CN/docs/Web/CSS/color_value/hwb)（HWB）CSS 颜色格式中的值。这里所有的 RGB、HEX、HSL 和 HWB 颜色值虽然书写方式不同，但表示的是相同的颜色值。
+下面的颜色语法转换器显示了当前选定颜色在 [红——绿——蓝](/zh-CN/docs/Web/CSS/color_value/rgb)（RGB）、[十六进制](/zh-CN/docs/Web/CSS/hex-color)（HEX）、[色相、饱和度和亮度](/zh-CN/docs/Web/CSS/color_value/hsl)（HSL）以及[色相、白度和黑度](/zh-CN/docs/Web/CSS/color_value/hwb)（HWB）CSS 颜色格式中的值。这里所有的 RGB、HEX、HSL 和 HWB 颜色值虽然书写方式不同，但表示的是相同的颜色值。
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
