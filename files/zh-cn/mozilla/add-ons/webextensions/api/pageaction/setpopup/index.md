@@ -29,7 +29,7 @@ browser.pageAction.setPopup(
 
       - : `string` 或 `null`。指向要在弹窗中显示的 HTML 页面的 URL。
 
-        如果传入了一个空字符串 `""`，则弹窗将被禁用且扩展将收到 {{WebExtAPIRef("pageAction.onClicked")}} 事件。
+        如果传入了一个空字符串（`""`），则弹窗将被禁用且扩展将收到 {{WebExtAPIRef("pageAction.onClicked")}} 事件。
 
         如果传入了 `null`，则弹窗将重置为在 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 清单键中指定的弹窗。
 
