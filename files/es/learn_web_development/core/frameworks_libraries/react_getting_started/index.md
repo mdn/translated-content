@@ -89,7 +89,6 @@ const header = (
 > const header = <header>
 >   <h1>Mozilla Developer Network</h1>
 > </header>;
->
 > ```
 >
 > Sin embargo, esto luce un poco raro, ya que la etiqueta [`<header>`](/es/docs/Web/HTML/Element/header) que inicia la expresión no tiene sangría en la misma posición que su correspondiente etiqueta de cierre.
