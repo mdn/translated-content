@@ -117,8 +117,8 @@ l10n:
 - {{glossary("Interpolation")}} 术语
 - [`@font-palette-values`](/zh-CN/docs/Web/CSS/@font-palette-values) At 规则 [`override-colors`](/zh-CN/docs/Web/CSS/@font-palette-values/override-colors) 描述符
 - [`@color-profile`](/zh-CN/docs/Web/CSS/@color-profile) At 规则
-- [`color-gamut`](/zh-CN/docs/Web/CSS/@media/color-gamut) @media 特征
-- [`forced-colors`](/zh-CN/docs/Web/CSS/@media/forced-colors) @media 特征
+- [`color-gamut`](/zh-CN/docs/Web/CSS/@media/color-gamut) @media 特性
+- [`forced-colors`](/zh-CN/docs/Web/CSS/@media/forced-colors) @media 特性
 
 ## 规范
 
