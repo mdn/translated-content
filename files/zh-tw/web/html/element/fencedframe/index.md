@@ -58,17 +58,15 @@ l10n:
 
 ## 定位和縮放
 
-作為一個[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
+作為[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
-> [!NOTE]
->
-> {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
+> **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
 
 嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 物件的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文件將被視覺縮放以適應。嵌入文件的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
 
-## 無障礙議題
+## 無障礙
 
-使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedframe>` 上的 [`title` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/title) 來標記其內容。標題的值應該簡要描述嵌入的內容：
+使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedframe>` 的 [`title` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/title)來標記其內容。標題的值應該簡要描述嵌入的內容：
 
 ```html
 <fencedframe
