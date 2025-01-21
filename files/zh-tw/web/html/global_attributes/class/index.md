@@ -1,13 +1,11 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-page-type: html-attribute
-browser-compat: html.global_attributes.class
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
- **`class`** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes) 是一個以 [ASCII 空白字元](/zh-TW/docs/Glossary/Whitespace#in_html) 分隔的元素類別列表。
+**`class`** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes) 是一個以 [ASCII 空白字元](/zh-TW/docs/Glossary/Whitespace#in_html) 分隔的元素類別列表。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
 
@@ -35,7 +33,7 @@ browser-compat: html.global_attributes.class
 
 ## 參見
 
-- 所有 [全域屬性](/en-US/docs/Web/HTML/Global_attributes).
+- 所有 [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes).
 - {{domxref('element.className')}}
 - {{domxref('element.classList')}}
 - [CSS 入門](/zh-TW/docs/Learn_web_development/Core/Styling_basics)
