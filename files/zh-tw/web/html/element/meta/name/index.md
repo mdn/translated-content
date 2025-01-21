@@ -215,4 +215,4 @@ CSS Device Adaptation 規範定義了以下的後設資料名稱：
 ## 參見
 
 - [Viewport `<meta>` 標籤](/zh-TW/docs/Web/HTML/Viewport_meta_tag)
-- [後設資料：`<meta>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
+- [後設資料：`<meta>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_meta_元素)
