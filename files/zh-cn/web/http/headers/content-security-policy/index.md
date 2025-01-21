@@ -1,6 +1,5 @@
 ---
-title: Content-Security-Policy (CSP)
-short-title: Content-Security-Policy
+title: Content-Security-Policy（CSP）
 slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
   sourceCommit: 232dc9186a6d79d7e12b3000999ad026d63e995e
@@ -43,7 +42,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
   - : 为 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 和其他嵌套浏览上下文（例如用 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 加载到页面的内容）指定合法源。
 
-    `frame-src`和`worker-src`的[后备值](#后备值)。
+    `frame-src` 和 `worker-src` 的[后备值](#后备值)。
 
 - {{CSP("connect-src")}}
   - : 限制能通过脚本接口加载的 URL。
