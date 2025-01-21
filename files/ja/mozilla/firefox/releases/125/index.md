@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - {{cssxref("align-content")}} プロパティを、`display: block;` レイアウトで動作するように更新しました。これは `flex` や `grid` から `block` まですべてのレイアウト位置で、開発者はコンテナーを `flex` や `grid` に変換することなくブロックレベル要素を整列できるようになります ([Firefox bug 1882853](https://bugzil.la/1882853))。
-- CSS の [`transform-box`](/ja/docs/Web/CSS/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [content box](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します ([Firefox bug 1868374](https://bugzil.la/1868374))。
+- CSS の [`transform-box`](/ja/docs/Web/CSS/transform-box) プロパティで、値 `content-box` および `stroke-box` をサポートしました。値 `content-box` は [content box](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成) を参照ボックスとして使用します。また、値 `stroke-box` は SVG の図形を包含するストロークのバウンディングボックスを参照ボックスとして使用します ([Firefox bug 1868374](https://bugzil.la/1868374))。
 - [`content-visibility`](/ja/docs/Web/CSS/content-visibility) CSS プロパティの値 `auto` をデフォルトで有効にしました。これは、[ユーザーとの関連性](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user) がない場合にコンテンツのレンダリングを省くことを可能にします。([Firefox bug 1874874](https://bugzil.la/1874874))
 
 ### JavaScript
