@@ -1,5 +1,5 @@
 ---
-title: Content-Security-Policy（CSP）
+title: Content-Security-Policy (CSP)
 slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
   sourceCommit: 232dc9186a6d79d7e12b3000999ad026d63e995e
@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP 响应首部 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定源服务器和脚本端点。这将帮助防止{{Glossary("cross-site scripting", "跨站脚本攻击")}}。
+HTTP 响应标头 **`Content-Security-Policy`** 允许站点管理者控制用户代理能够为指定的页面加载哪些资源。除了少数例外情况，设置的政策主要涉及指定源服务器和脚本端点。这将帮助防止{{Glossary("cross-site scripting", "跨站脚本攻击")}}。
 
 参见[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)，以查看 CSP 发送到浏览器的细节，它长什么样，及其用例和部署策略。
 
@@ -15,7 +15,7 @@ HTTP 响应首部 **`Content-Security-Policy`** 允许站点管理者控制用�
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
-      <td>{{Glossary("Response header", "响应首部")}}</td>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
@@ -133,7 +133,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("report-to")}}
 
   - : 提供代表一个或多个报告端点的 token，用于发送 CSP 违规信息。
-    token 代表的断点通过其他 HTTP 首部提供，比如 {{HTTPHeader("Reporting-Endpoints")}} 和 {{HTTPHeader("Report-To")}} {{deprecated_inline}}。
+    token 代表的断点通过其他 HTTP 标头提供，比如 {{HTTPHeader("Reporting-Endpoints")}} 和 {{HTTPHeader("Report-To")}} {{deprecated_inline}}。
 
     > [!WARNING]
     > 此指令意图替换 [`report-uri`](#report-uri)；在支持 `report-to` 的浏览器，`report-uri` 会被忽略。
@@ -342,7 +342,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ## Worker 中的 CSP
 
-[Worker](/zh-CN/docs/Web/API/Worker) 一般来说*不*被创建他的文档（或者父级 Worker）的 CSP 管理。如果要为 Worker 指定 CSP，可以为 Worker 脚本的请求设置 CSP 响应首部 `Content-Security-Policy`。
+[Worker](/zh-CN/docs/Web/API/Worker) 一般来说*不*被创建他的文档（或者父级 Worker）的 CSP 管理。如果要为 Worker 指定 CSP，可以为 Worker 脚本的请求设置 CSP 响应标头 `Content-Security-Policy`。
 
 例外的情况是，如果 Worker 脚本的来源是一个全局唯一 ID（比如，它的 URL 是一个结构化的数据或者 blob）。在这种情况下，这个 Worker 会继承它所属的文档或者创建它的 Worker 的 CSP。
 
@@ -363,7 +363,7 @@ Content-Security-Policy: connect-src http://example.com/;
 
 ### 禁用不安全的内联代码，只允许 HTTPS 资源
 
-这个 HTTP 首部设置默认策略为只允许用 HTTPS 加载资源。由于没有设置 `unsafe-inline` 和 `unsafe-eval`，内联代码被禁用。
+这个 HTTP 标头设置默认策略为只允许用 HTTPS 加载资源。由于没有设置 `unsafe-inline` 和 `unsafe-eval`，内联代码被禁用。
 
 ```http
 Content-Security-Policy: default-src https:
@@ -385,9 +385,9 @@ Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; objec
 
 ### 测试时报告但不施加限制
 
-此示例设置了与前一个例子相同的限制，但使用了 {{httpheader("Content-Security-Policy-Report-Only")}} 首部和 {{CSP("report-to")}} 指令。这种方法在测试期间使用，用于报告违规行为但不阻止代码执行。
+此示例设置了与前一个例子相同的限制，但使用了 {{httpheader("Content-Security-Policy-Report-Only")}} 标头和 {{CSP("report-to")}} 指令。这种方法在测试期间使用，用于报告违规行为但不阻止代码执行。
 
-报告端点（URL）使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应首部定义。
+报告端点（URL）使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头定义。
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
@@ -416,5 +416,5 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
 - [内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/CSP)
 - [浏览器插件中的 CSP](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Adopting a strict policy](https://csp.withgoogle.com/docs/strict-csp.html)
-- [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy
+- [采用严格的策略](https://csp.withgoogle.com/docs/strict-csp.html)
+- [CSP 评估器](https://github.com/google/csp-evaluator)——评估你的内容安全策略
