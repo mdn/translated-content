@@ -80,27 +80,26 @@ L'élément `<linearGradient>` peut également prendre différents attributs pou
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"></linearGradient>
 ```
 
-### xlink:href
-
-Vous pouvez également utiliser l'attribut `xlink:href` sur les dégradés. Quand il est utilisé, les attributs et stops d'un dégradé peuvent être réutilisé sur un autre. Ainsi, dans l'exemple précédent, on aurait pu ne pas redéfinir tous les stops dans Gradient2, comme ceci:
-
-```html
-<linearGradient id="Gradient1">
-  <stop id="stop1" offset="0%" />
-  <stop id="stop2" offset="50%" />
-  <stop id="stop3" offset="100%" />
-</linearGradient>
-<linearGradient
-  id="Gradient2"
-  x1="0"
-  x2="0"
-  y1="0"
-  y2="1"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xlink:href="#Gradient1" />
-```
-
-Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+> [!NOTE]
+> Vous pouvez également utiliser l'attribut `href` sur les dégradés. Quand il est utilisé, les attributs et stops d'un dégradé peuvent être réutilisé sur un autre. Ainsi, dans l'exemple précédent, on aurait pu ne pas redéfinir tous les stops dans Gradient2, comme ceci:
+> 
+> ```html
+> <linearGradient id="Gradient1">
+>   <stop id="stop1" offset="0%" />
+>   <stop id="stop2" offset="50%" />
+>   <stop id="stop3" offset="100%" />
+> </linearGradient>
+> <linearGradient
+>   id="Gradient2"
+>   x1="0"
+>   x2="0"
+>   y1="0"
+>   y2="1"
+>   xmlns:xlink="http://www.w3.org/1999/xlink"
+>   href="#Gradient1" />
+> ```
+> 
+> Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
 
 ## Dégradé Radial
 
