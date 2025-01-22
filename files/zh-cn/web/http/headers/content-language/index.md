@@ -11,12 +11,12 @@ HTTP **`Content-Language`** {{Glossary("representation header", "表示标头")}
 
 举个例子，`Content-Language: de-DE` 说明这份文件是为说德语的人提供的。这个文件可能是用英文写的，而非德语——它可能是为说德语的人开设的英语教程的一部分。要说明文档是用什么语言**写**的，应该用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性。
 
-如果没有指明 `Content-Language`，那么默认地，文件内容是提供给所有语言的访问者使用的。多个语言标签也是合法的。同样的，这个首部还可以用来描述不同媒体类型的文件，而不单单局限于文本型文档。
+如果没有指明 `Content-Language`，那么默认地，文件内容是提供给所有语言的访问者使用的。多个语言标签也是合法的。同样地，`Content-Language` 标头还适用于不同媒体类型的文件，而不单单局限于文本型文档。
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">首部类型</th>
+      <th scope="row">标头类型</th>
       <td>{{Glossary("Representation header", "表示标头")}}</td>
     </tr>
     <tr>
@@ -34,13 +34,13 @@ HTTP **`Content-Language`** {{Glossary("representation header", "表示标头")}
         {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
       </th>
       <td>
-        否*
+        是*
       </td>
     </tr>
   </tbody>
 </table>
 
-\* 值只能是 `0-9`、`A-Z`、`a-z`、空格或者 `*,-.;=`。
+\* 值只能是 `0-9`、`A-Z`、`a-z`、空格或字符 `*,-.;=`。
 
 ## 语法
 
@@ -56,7 +56,7 @@ Content-Language: de-DE, en-CA
   - : 多个语言标签需要用逗号隔开。每一个语言标签都是由一个或多个不区分大小写的子标签构成的，子标签之间用连字号（`-`）隔开。通常情况下，一个语言标签是由标识一个大的语言家族的主语言子标签（例如 `en` = English），以及后面可选的用来缩小语言范围使更确切的一系列子标签（`en-CA` 表示在加拿大范围使用的英语的变种）构成的。
 
 > [!NOTE]
-> 语言标签在 [RFC 5646](https://tools.ietf.org/html/rfc5646) 中被正式定义，它使用的[语言代码](https://zh.wikipedia.org/wiki/語言代碼)依赖于 [ISO 639](https://zh.wikipedia.org/wiki/ISO_639) 标准（通常为 [ISO 639-1 code list](https://zh.wikipedia.org/wiki/ISO_639-1%E4%BB%A3%E7%A0%81%E5%88%97%E8%A1%A8)）。
+> 语言标签在 [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) 中被正式定义，它使用的[语言代码](https://zh.wikipedia.org/wiki/語言代碼)依赖于 [ISO 639](https://zh.wikipedia.org/wiki/ISO_639) 标准（通常为 [ISO 639-1 代码列表](https://zh.wikipedia.org/wiki/ISO_639-1代码列表)）。
 
 ## 示例
 
@@ -78,7 +78,7 @@ Content-Language: de-DE, en-CA
 
 ### 为资源指定目标访问者
 
-`Content-Language` 首部用于指定**页面的目标受众**，并且可以指定多种语言。
+`Content-Language` 标头用于指定**页面的目标受众**，并且可以指定多种语言。
 
 ```http
 Content-Language: de, en
@@ -95,5 +95,5 @@ Content-Language: de, en
 ## 参见
 
 - {{HTTPHeader("Accept-Language")}}
-- [HTTP headers, meta elements and language information](https://www.w3.org/International/questions/qa-http-and-lang.en)
+- [HTTP 标头、meta 元素和语言信息](https://www.w3.org/International/questions/qa-http-and-lang.en)
 - [HTML `lang` 属性](/zh-CN/docs/Web/HTML/Global_attributes/lang)
