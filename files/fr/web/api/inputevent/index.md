@@ -44,5 +44,5 @@ Cette interface hérite des méthodes de ses parents, {{domxref("UIEvent")}} et 
 
 ## Voir aussi
 
-- L'évènement [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
-- L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event)
+- L'évènement [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
+- L'évènement [`input`](/fr/docs/Web/API/Element/input_event)

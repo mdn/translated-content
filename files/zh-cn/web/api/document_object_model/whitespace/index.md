@@ -278,7 +278,7 @@ Firefox 开发者工具 HTML 检查器将突出显示文本节点，并准确显
 
 有一些方法来解决这个问题：
 
-使用[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
+使用[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
 
 ```css
 ul {

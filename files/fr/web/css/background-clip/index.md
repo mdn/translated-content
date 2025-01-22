@@ -109,4 +109,4 @@ p {
   - {{cssxref("background-image")}}
   - {{cssxref("background-origin")}}
 
-- [Le modèle de boîtes CSS](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+- [Le modèle de boîtes CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model)

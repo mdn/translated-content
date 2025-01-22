@@ -65,7 +65,7 @@ Para fazer com que toda a página tenha o esquema de cores de preferência do us
 
 ## Veja também
 
-- [Aplicando cores em elementos HTML com CSS](/pt-BR/docs/Web/HTML/Applying_color)
+- [Aplicando cores em elementos HTML com CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)
 - Outras propriedades de cores relacionadas: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}

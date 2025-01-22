@@ -93,6 +93,6 @@ this.addEventListener("fetch", function (event) {
 
 ## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

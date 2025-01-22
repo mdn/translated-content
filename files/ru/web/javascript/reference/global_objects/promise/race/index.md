@@ -18,7 +18,7 @@ Promise.race(iterable);
 ### Параметры
 
 - `iterable`
-  - : Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри [iterable](/ru/docs/Web/JavaScript/Guide/iterable).
+  - : Итерируемый объект, такой как ({{jsxref("Array")}}). Смотри [iterable](/ru/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ### Возвращаемое значение
 

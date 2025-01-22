@@ -24,7 +24,7 @@ array.indexOf(elementoDePesquisa, [pontoInicial = 0])
 
 ## Descrição
 
-`indexOf()` compara o `elementoDePesquisa` com os elementos do Array usando [igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (o mesmo método usado pelo ===, ou triple-equals operator).
+`indexOf()` compara o `elementoDePesquisa` com os elementos do Array usando [igualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (o mesmo método usado pelo ===, ou triple-equals operator).
 
 ## Exemplos
 

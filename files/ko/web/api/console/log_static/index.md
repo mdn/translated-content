@@ -28,7 +28,7 @@ log(msg, subst1, /* …, */ substN)
 - `subst1` … `substN`
   - : `msg` 내의 치환 문자열들을 치환할 JavaScript 객체들입니다. 출력 형식에 추가 제어를 할 수 있게 해줍니다.
 
-자세한 내용은 {{domxref("console")}} 문서의 [콘솔에 텍스트 출력](/ko/docs/Web/API/Console#콘솔에_텍스트_출력하기)을 참고하세요.
+자세한 내용은 {{domxref("console")}} 문서의 [콘솔에 텍스트 출력](/ko/docs/Web/API/console#%ec%bd%98%ec%86%94%ec%97%90_%ed%85%8d%ec%8a%a4%ed%8a%b8_%ec%b6%9c%eb%a0%a5%ed%95%98%ea%b8%b0)을 참고하세요.
 
 ### 반환 값
 
@@ -52,7 +52,7 @@ obj.prop = 123;
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-브라우저에서 [`structuredClone()`](/ko/docs/Web/API/structuredClone)와 같은 다른 대안들도 있습니다. 이들은 다양한 유형의 객체를 복제하는 데 더 효과적입니다.
+브라우저에서 [`structuredClone()`](/ko/docs/Web/API/Window/structuredClone)와 같은 다른 대안들도 있습니다. 이들은 다양한 유형의 객체를 복제하는 데 더 효과적입니다.
 
 ## 명세
 

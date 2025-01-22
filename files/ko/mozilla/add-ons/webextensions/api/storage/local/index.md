@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 
 브라우저는 local 저장소에 저장할 수 있는 데이터의 양을 제한한다:
 
-- ["unlimitedStorage" 권한](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Unlimited_storage)이 없으면 크롬은 데이터의 양을 5M로 제한한다.
+- ["unlimitedStorage" 권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage)이 없으면 크롬은 데이터의 양을 5M로 제한한다.
 - Firefox는 버전 56부터 "unlimitedStorage" 권한을 요청할 수 있다. 아직은 저장 용량을 제한하지는 않지만, 앞으로 그렇게 할 것이므로 큰 용량의 저장할 의도라면 지금 "unlimitedStorage" 권한을 요청하는 것이 좋다.
 
 확장이 제거되면, 그것과 연결된 local 저장소는 지워진다.

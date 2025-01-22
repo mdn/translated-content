@@ -55,4 +55,4 @@ var sab = new SharedArrayBuffer(1024);
 
 - {{jsxref("Atomics")}}
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)

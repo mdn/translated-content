@@ -128,7 +128,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-Véase también: [`clearInterval()`](/es/docs/Web/API/clearInterval).
+Véase también: [`clearInterval()`](/es/docs/Web/API/Window/clearInterval).
 
 ## El problema con "this"
 
@@ -181,7 +181,7 @@ Si desea que su función sea llamada _una vez_ después del retardo especificado
 Es posible anidar intervalos; Es decir, la llamada de retorno de `setInterval()` puede llamar a su vez a otro `setInterval()` para iniciar otro intervalo, y que este sea ejecutado aunque el primero siga corriendo aún. Para mitigar el impacto potencial que esto puede tener en el rendimiento, una vez que los intervalos son anidados más allá de cinco niveles de profundidad, el navegador impondrá automáticamente un valor mínimo de cuatro milisegundos para el intervalo. Intenta especificar un valor menor a cuatro ms en llamadas profundamente anidadas a `setInterval()` . Estas serán fijadas a 4 ms.
 
 Los navegadores pueden imponer valores mínimos aún más estrictos para el intervalo en determinadas circunstancias, aunque no deberían ser habituales. Tenga también en cuenta que la cantidad real de tiempo que transcurre entre las llamadas a la función callback puede ser mayor que el propio retardo (delay); Ver
-[Reasons for delays longer than specified](/es/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) para ver ejemplos.
+[Reasons for delays longer than specified](/es/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) para ver ejemplos.
 
 ### Garantizar que la duración de la ejecución sea inferior a la frecuecia del intervalo
 

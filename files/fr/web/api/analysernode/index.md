@@ -52,7 +52,7 @@ L'interface hérite des parents suivants:
 _Hérite des propriétés de son parent._ _{{domxref("AudioNode")}}_.
 
 - {{domxref("AnalyserNode.fftSize")}}
-  - : Entier long non signé qui représente la taille de la [FFT](/fr/docs/) (transformation de Fourier rapide) qui sera utilisé pour déterminer le domaine fréquentiel.
+  - : Entier long non signé qui représente la taille de la [FFT](/fr/docs/Web) (transformation de Fourier rapide) qui sera utilisé pour déterminer le domaine fréquentiel.
 - {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
   - : Entier long non signé égal à la moitié fftSize. C'est en général le nombre de valeurs qu'on manipule pour la visualisation.
 - {{domxref("AnalyserNode.minDecibels")}}

@@ -107,5 +107,5 @@ for await (const fileHandle of getFilesRecursively(directoryHandle)) {
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_Access_API)
+- [File System Access API](/ja/docs/Web/API/File_System_API)
 - [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

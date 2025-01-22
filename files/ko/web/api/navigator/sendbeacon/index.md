@@ -13,7 +13,7 @@ l10n:
 {{domxref("XMLHttpRequest","XMLHttpRequest")}} 같은 오래된 기술로 웹 서버에 분석 정보를 전송할 때 생길 수 있는 일부 문제를 피하기 위해 고안됐습니다.
 
 > [!NOTE]
-> 요청을 `POST` 외의 다른 메서드로 보내야 하거나, 어떤 요청 속성을 바꾸어서 보내야 하거나, 서버로부터의 응답을 받아야 하면 [`fetch()`](/ko/docs/Web/API/fetch)의 [`keepalive`](/ko/docs/Web/API/fetch#keepalive)를 `true`로 설정한 것을 대신 사용하세요.
+> 요청을 `POST` 외의 다른 메서드로 보내야 하거나, 어떤 요청 속성을 바꾸어서 보내야 하거나, 서버로부터의 응답을 받아야 하면 [`fetch()`](/ko/docs/Web/API/Window/fetch)의 [`keepalive`](/ko/docs/Web/API/Window/fetch#keepalive)를 `true`로 설정한 것을 대신 사용하세요.
 
 ## 구문
 

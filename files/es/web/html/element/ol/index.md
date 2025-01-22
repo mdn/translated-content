@@ -11,11 +11,11 @@ slug: Web/HTML/Element/ol
 
   - : **Sus etiquetas son**: \<ol> y \</ol> (ambas obligatorias).
 
-    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento de lista](/es/HTML/Elemento/Tipos_de_elementos#de_lista).
+    **Está definido como**: [Elemento de lista](/es/docs/HTML/Elemento/Tipos_de_elementos#de_lista).
 
-    **Puede contener**: uno o más elementos [li](/es/HTML/Elemento/li)
+    **Puede contener**: uno o más elementos [li](/es/docs/Web/HTML/Element/li)
 
 #### Atributos
 

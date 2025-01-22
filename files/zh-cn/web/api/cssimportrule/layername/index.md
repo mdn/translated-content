@@ -42,5 +42,5 @@ console.log(myRules[2].layerName); // 返回 `null`
 
 ## 参见
 
-- 学习区：[层叠层](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- 学习区：[层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - {{cssxref("@import")}} 和 {{cssxref("@layer")}}

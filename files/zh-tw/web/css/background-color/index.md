@@ -64,16 +64,16 @@ background-color: inherit;
 
 {{EmbedLiveSample("範例","200","150")}}
 
-## 規格定義
+## 規範
 
 {{Specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
-- [複數背景](/zh-TW/docs/CSS/Multiple_backgrounds)
+- [複數背景](/zh-TW/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

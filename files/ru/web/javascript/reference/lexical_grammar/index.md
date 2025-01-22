@@ -36,7 +36,7 @@ ECMAScript также определяет ключевые слова и лит
 
 В дополнение к пробельным символам, символы окончания строк тоже используются для читабельности исходного кода. Однако, в некоторых случаях, символы окончания строк могут влиять на выполнение JavaScript-кода, т.к. есть некоторые места, где они запрещены.
 
-Окончания строк также затрагивают процесс [автоматического проставления точки с запятой](#Automatic_semicolon_insertion). Также окончания строк попадают под условия [регулярных выражений](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) при поиске **\s** класса.
+Окончания строк также затрагивают процесс [автоматического проставления точки с запятой](#automatic_semicolon_insertion). Также окончания строк попадают под условия [регулярных выражений](/ru/docs/Web/JavaScript/Guide/Regular_expressions) при поиске **\s** класса.
 
 В ECMAScript, в качестве окончания строк можно использовать только ниже перечисленные Юникод символы. Другие символы окончания строк будут интерпретированы, как пробельные символы (например, Next Line, NEL, U+0085 будут интерпретироваться, как пробельные символы).
 
@@ -445,8 +445,8 @@ a + b;
 
 ## Смотрите также
 
-- [Jeff Walden: Двоичные и восьмеричные числа](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Двоичные и восьмеричные числа](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

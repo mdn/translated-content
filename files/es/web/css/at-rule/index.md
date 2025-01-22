@@ -5,7 +5,7 @@ slug: Web/CSS/At-rule
 
 {{cssref}}
 
-Una **regla-at** es una [declaración CSS](/es/docs/Web/CSS/Syntax#CSS_statements) que comienza con el símbolo arroba, '@' (U+0040 COMMERCIAL AT), seguido por un identificador, e incluye todo el contenido hasta el siguiente punto y coma, ';' (U+003B SEMICOLON), o el siguiente [bloque CSS](/es/docs/Web/CSS/Syntax#CSS_declarations_blocks), lo que sea primero.
+Una **regla-at** es una [declaración CSS](/es/docs/Web/CSS/Syntax#css_statements) que comienza con el símbolo arroba, '@' (U+0040 COMMERCIAL AT), seguido por un identificador, e incluye todo el contenido hasta el siguiente punto y coma, ';' (U+003B SEMICOLON), o el siguiente [bloque CSS](/es/docs/Web/CSS/Syntax#css_declarations_blocks), lo que sea primero.
 
 Hay varias reglas-at, designadas por sus identificadores, cada una con sintaxis distinta:
 
@@ -28,7 +28,7 @@ Hay varias reglas-at, designadas por sus identificadores, cada una con sintaxis 
 
 Así como los valores de las propiedades, cada regla-at tiene sintaxis propia. Sin embargo, muchas de esas reglas pueden ser agrupadas en categorías especiales, llamadas **conditional group rules**. Estas declaraciones comparten sintáxis común y cada una puede incluir _nested statements_—ya sean _conjuntos de reglas_ o _reglas-at anidadas_. Además, pueden transmitir un significado semántico común—todas incluyen algun tipo de condición, que devuelve un resultado que puede ser **verdadero** o **falso**. Si el valor de la condición resulta **verdadero**, todas las declaraciones del grupo serán aplicadas.
 
-Los grupos de reglas condicionales están definidos en [CSS Conditionals Level 3](http://dev.w3.org/csswg/css3-conditional/) y son:
+Los grupos de reglas condicionales están definidos en [CSS Conditionals Level 3](https://dev.w3.org/csswg/css3-conditional/) y son:
 
 - {{cssxref("@media")}},
 - {{cssxref("@supports")}},
@@ -43,4 +43,4 @@ Como cada grupo de condición puede incluir también declaraciones anidadas, pue
 ## Véase también
 
 - [CSS Reference](/es/docs/Web/CSS/Reference)
-- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/Inheritance), the [box](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

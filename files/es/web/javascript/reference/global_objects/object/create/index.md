@@ -86,7 +86,7 @@ MyClass.prototype.myMethod = function () {
 };
 ```
 
-{{jsxref("Object.assign()")}} copia las propiedades del prototipo _OtherSuperClass_ al prototipo de _MyClass_, haciéndolas disponibles en todas las instancias de _MyClass_. `Object.assign()` se introdujo con ES2015 y [tiene polyfill](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign#Polyfill). Si el soporte para navegadores antiguos es necesario, se puede utilizar [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) o [`_.assign()`](https://lodash.com/docs/#assign).
+{{jsxref("Object.assign()")}} copia las propiedades del prototipo _OtherSuperClass_ al prototipo de _MyClass_, haciéndolas disponibles en todas las instancias de _MyClass_. `Object.assign()` se introdujo con ES2015 y [tiene polyfill](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#polyfill). Si el soporte para navegadores antiguos es necesario, se puede utilizar [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) o [`_.assign()`](https://lodash.com/docs/#assign).
 
 ### Usando el argumento `propertiesObject` con `Object.create()`
 

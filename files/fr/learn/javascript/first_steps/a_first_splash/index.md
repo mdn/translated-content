@@ -194,7 +194,7 @@ Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous all
 
 ### Configuration initiale
 
-Pour commencer ce didacticiel, faites une copie locale du fichier [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) (à voir [directement ici](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Ouvrez-le dans votre éditeur de code et votre navigateur web. Pour l'instant, vous ne verrez qu'un titre, un paragraphe d'instructions et un formulaire pour entrer une estimation, mais le formulaire est pour l'instant inactif.
+Pour commencer ce didacticiel, faites une copie locale du fichier [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) (à voir [directement ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Ouvrez-le dans votre éditeur de code et votre navigateur web. Pour l'instant, vous ne verrez qu'un titre, un paragraphe d'instructions et un formulaire pour entrer une estimation, mais le formulaire est pour l'instant inactif.
 
 L'endroit où nous allons ajouter tout notre code se trouve dans l'élément {{htmlelement ("script")}} au bas du code HTML&nbsp;:
 
@@ -262,7 +262,7 @@ Les fonctions sont des blocs de code réutilisables que vous pouvez écrire une 
 
 Quand nous voulons exécuter le code, nous saisissons le nom de la fonction suivi des parenthèses.
 
-Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/Apprendre/Découvrir_outils_développement_navigateurs) et entrez la ligne suivante :
+Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) et entrez la ligne suivante :
 
 ```js
 checkGuess();
@@ -277,7 +277,7 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/Découvrir_outils_développement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
 <!doctype html>
@@ -406,7 +406,7 @@ let greeting = name + hello;
 greeting;
 ```
 
-Des raccourcis d'opérateurs sont également disponibles, appelés [opérateurs d'assignation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation) augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :
+Des raccourcis d'opérateurs sont également disponibles, appelés [opérateurs d'assignation](/fr/docs/Web/JavaScript/Reference/Operators) augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :
 
 ```js
 name += " dit bonjour&nbsp;!";
@@ -418,7 +418,7 @@ Cela équivaut à :
 name = name + " dit bonjour&nbsp;!";
 ```
 
-Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir [ci-dessous](#structures_conditionnelles), nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), par exemple :
+Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir [ci-dessous](#structures_conditionnelles), nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators), par exemple :
 
 | Operator | Name                                                 | Example                    |
 | -------- | ---------------------------------------------------- | -------------------------- |
@@ -561,9 +561,9 @@ Pour finir, c'est le moment de faire une synthèse sur quelques caractéristique
 
 ### Boucles
 
-Dans le code précédent, une partie à examiner de plus près est la boucle [for](/fr/docs/Web/JavaScript/Reference/Instructions/for). Les boucles sont un concept très important dans la programmation, qui vous permet de continuer à exécuter un morceau de code encore et encore, jusqu'à ce qu'une certaine condition soit remplie.
+Dans le code précédent, une partie à examiner de plus près est la boucle [for](/fr/docs/Web/JavaScript/Reference/Statements/for). Les boucles sont un concept très important dans la programmation, qui vous permet de continuer à exécuter un morceau de code encore et encore, jusqu'à ce qu'une certaine condition soit remplie.
 
-Pour commencer, allez sur votre [console developpeur Javascript](/fr/Apprendre/Découvrir_outils_développement_navigateurs) et entrez ce qui suit :
+Pour commencer, allez sur votre [console developpeur Javascript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) et entrez ce qui suit :
 
 ```js
 for (let i = 1; i < 21; i++) {
@@ -606,7 +606,7 @@ Dans ce cas particulier, nous avons d'abord créé une variable `guessField` qui
 let guessField = document.querySelector(".guessField");
 ```
 
-Pour obtenir cette référence, nous avons utilisé la méthode {{domxref("document.querySelector", "querySelector()")}} de l'objet {{domxref ("document")}}. `querySelector()` prend une information - un [sélecteur CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Les_sélecteurs) qui sélectionne l'élément auquel vous voulez faire référence.
+Pour obtenir cette référence, nous avons utilisé la méthode {{domxref("document.querySelector", "querySelector()")}} de l'objet {{domxref ("document")}}. `querySelector()` prend une information - un [sélecteur CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors) qui sélectionne l'élément auquel vous voulez faire référence.
 
 Parce que `guessField` contient maintenant une référence à un élément {{htmlelement ("input")}}, il aura maintenant accès à un certain nombre de propriétés (essentiellement des variables stockées dans des objets, dont certaines ne peuvent pas être modifiées) et des méthodes (essentiellement des fonctions stockées dans des objets). Une méthode disponible pour entrer des éléments est `focus()`, donc nous pouvons maintenant utiliser cette ligne pour focaliser l'entrée de texte :
 
@@ -621,7 +621,7 @@ Les variables qui ne contiennent pas de références aux éléments de formulair
 Jouons un peu avec certains objets du navigateur.
 
 1. Tout d'abord, ouvrez votre programme dans un navigateur.
-2. Ensuite, ouvrez les [outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) de votre navigateur et assurez-vous que l'onglet de la console JavaScript est ouvert.
+2. Ensuite, ouvrez les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) de votre navigateur et assurez-vous que l'onglet de la console JavaScript est ouvert.
 3. Tapez `guessField` et la console vous montrera que la variable contient un élément {{htmlelement ("input")}}. Vous remarquerez également que la console complète automatiquement les noms d'objets existant dans l'environnement d'exécution, y compris vos variables!
 4. Maintenant, tapez ce qui suit :
 

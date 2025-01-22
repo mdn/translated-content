@@ -2,7 +2,7 @@
 title: border-width
 slug: Web/CSS/border-width
 l10n:
-  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
+  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
 {{CSSRef}}
@@ -83,7 +83,7 @@ border-width: unset;
 
 #### HTML
 
-```html-nolint
+```html-nolint live-sample___a_mix_of_values_and_lengths
 <p id="one-value">1 つの値: 6px 幅が全 4 辺の境界に適用</p>
 <p id="two-values">
   異なる値 2 つの値: 2px 幅が上下の境界に、 10px 幅が左右の境界に適用
@@ -98,7 +98,7 @@ border-width: unset;
 
 #### CSS
 
-```css
+```css live-sample___a_mix_of_values_and_lengths
 #one-value {
   border: ridge #ccc;
   border-width: 6px;
@@ -124,7 +124,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('値と長さの組み合わせ', 320, 320) }}
+{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
 
 ## 仕様書
 

@@ -3,7 +3,7 @@ title: 清除画布
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Detect_WebGL","Web/API/WebGL_API/By_example/Clearing_by_clicking")}}
 
 这个例子将展示如何用一个单色清除画布
 
@@ -87,4 +87,4 @@ window.addEventListener(
 
 这个例子的代码可以在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-with-colors) 上下载。
 
-{{PreviousNext("Learn/WebGL/By_example/Detect_WebGL","Learn/WebGL/By_example/Clearing_by_clicking")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Detect_WebGL","Web/API/WebGL_API/By_example/Clearing_by_clicking")}}

@@ -11,7 +11,7 @@ L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'uti
 
 Pour implémenter ce module, il nous faut :
 
-- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
+- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
 
   - d'une icône, nommée "beasts-32.png"
   - d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.
@@ -391,7 +391,7 @@ La première chose que fait le script de contenu est de vérifier une variable g
 
 Après ça, on voit plus loin que le script de contenu utilise [`browser.runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Cela permet de faire le lien avec le script de popup qui envoyait deux messages : "beastify" et "reset".
 
-- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/Img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
+- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
 - Si le message est "reset", on retire toute image de bête ayant été ajoutée.
 
 ### Les bêtes
@@ -454,5 +454,5 @@ Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouv
 
 - [Explorer l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_expérience_d'apprentissage).
+- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage).

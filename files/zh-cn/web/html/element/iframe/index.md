@@ -75,7 +75,7 @@ l10n:
     - `no-referrer-when-downgrade`
       - : 向不受 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）保护的{{Glossary("origin", "源")}}发送请求时，不发送 {{HTTPHeader("Referer")}} 标头。
     - `origin`
-      - : 发送的 referrer 仅包含来源（referring）页面的源（origin）：其[协议](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+      - : 发送的 referrer 仅包含来源（referring）页面的源（origin）：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
     - `origin-when-cross-origin`
       - : 当 referrer 被发送到其他源时，其仅限于协议、主机和端口。同源的导航仍会包含路径。
     - `same-origin`

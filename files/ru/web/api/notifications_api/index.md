@@ -22,7 +22,7 @@ Notifications API позволяют web-страницам контролиро
 
 {{AvailableInWorkers}}
 
-В дополнение, спецификация Notifications API определить несколько дополнений для [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), чтобы позволить им отправлять уведомления.
+В дополнение, спецификация Notifications API определить несколько дополнений для [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API), чтобы позволить им отправлять уведомления.
 
 > [!NOTE]
 > Чтобы найти больше об использовании уведомлений в вашем приложении, читайте [Использование Notifications API](/ru/docs/Web/API/Notifications_API/Using_the_Notifications_API).

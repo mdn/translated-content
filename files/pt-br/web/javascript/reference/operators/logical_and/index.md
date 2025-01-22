@@ -75,7 +75,7 @@ console.log(A() && B());
 
 ### Operador precedente
 
-O operador AND tem uma precedência maior que o operador OR, o que significa que o operador `&&` é executado antes do operador `||` (consulte [precedência de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+O operador AND tem uma precedência maior que o operador OR, o que significa que o operador `&&` é executado antes do operador `||` (consulte [precedência de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
 true || (false && false); // true

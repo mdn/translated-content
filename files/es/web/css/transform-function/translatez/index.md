@@ -139,7 +139,7 @@ Si el valor `perspective()` es menor que el valor `translateZ()`, como `transfor
 
 ## Compatibilidad con navegador
 
-Por favor observe la propiedad [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
+Por favor observe la propiedad [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) para información de compatibilidad.
 
 ## Véase también
 

@@ -68,7 +68,7 @@ for (let i = 0; i < str.length; i++) {
 // '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-대신 코드 포인트별로 반복하는 문자열의 [`@@iterator`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)를 호출하는 [`for...of`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 문이나 [문자열 전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용합니다. 그런 다음 `codePointAt(0)`을 사용하여 각 요소의 코드 포인트를 가져옵니다.
+대신 코드 포인트별로 반복하는 문자열의 [`@@iterator`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)를 호출하는 [`for...of`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 문이나 [문자열 전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용합니다. 그런 다음 `codePointAt(0)`을 사용하여 각 요소의 코드 포인트를 가져옵니다.
 
 ```js
 for (const codePoint of str) {

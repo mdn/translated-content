@@ -9,7 +9,7 @@ Stocke une paire clé / valeur à associer à un onglet donné. Vous pouvez ensu
 
 Notez que ces données ne seront visibles que par l'extension qui l'a définie, et non par les autres extensions.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -32,7 +32,7 @@ var storing = browser.sessions.setTabValue(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue sans argument si l'appel a réussi. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue sans argument si l'appel a réussi. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 
@@ -40,7 +40,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Définissez une valeur sur l'onglet actif lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
+Définissez une valeur sur l'onglet actif lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
 
 ```js
 async function setOnActiveTab() {

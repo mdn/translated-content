@@ -74,5 +74,5 @@ La section [CSS - Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modu
 
 ## Voir aussi
 
-- [Quelques démonstrations en CSS](/fr/docs/Web/Demos#css)
+- [Quelques démonstrations en CSS](/fr/docs/orphaned/Web/Demos#css)
 - Les langages du Web auxquels CSS s'applique&nbsp;: [HTML](/fr/docs/Web/HTML), [SVG](/fr/docs/Web/SVG), [MathML](/fr/docs/Web/MathML), [XHTML](/fr/docs/Glossary/XHTML), et [XML](/fr/docs/Web/XML/XML_introduction).

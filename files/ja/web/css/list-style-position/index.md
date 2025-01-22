@@ -92,7 +92,7 @@ list-style-position: unset;
 
 .inside-img {
   list-style-position: inside;
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 

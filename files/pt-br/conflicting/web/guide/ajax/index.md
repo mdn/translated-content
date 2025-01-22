@@ -7,7 +7,7 @@ Esse artigo guia você através dos princípios do AJAX e oferece dois exemplos 
 
 ### O que é AJAX?
 
-AJAX significa Asynchronous JavaScript e XML. Em poucas palavras, é o uso do objeto [`XMLHttpRequest`](/pt-BR/DOM/XMLHttpRequest) para se comunicar com os scripts do lado do servidor. Ele pode enviar bem como receber informações em uma variedade de formatos, incluindo JSON, XML, HTML, e até mesmo arquivos de texto. Porém a característica mais atraente do AJAX, é a sua natureza "assíncrona", o que significa que ele pode fazer tudo isso sem a necessidade de atualizar a página. Isso permite a você atualizar partes de uma página com base em eventos do usuário.
+AJAX significa Asynchronous JavaScript e XML. Em poucas palavras, é o uso do objeto [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) para se comunicar com os scripts do lado do servidor. Ele pode enviar bem como receber informações em uma variedade de formatos, incluindo JSON, XML, HTML, e até mesmo arquivos de texto. Porém a característica mais atraente do AJAX, é a sua natureza "assíncrona", o que significa que ele pode fazer tudo isso sem a necessidade de atualizar a página. Isso permite a você atualizar partes de uma página com base em eventos do usuário.
 
 Os dois recursos em questão que você pode utilizar são:
 
@@ -54,7 +54,7 @@ httpRequest.send(null);
 ```
 
 - O primeiro parâmetro da chamada `para open()` é o método da requisição HTTP – GET, POST, HEAD ou qualquer outro método que você deseja usar e que é suportado pelo seu servidor. Mantenha o método em letras maiúsculas de acordo com o padrão HTTP; caso contrário, alguns navegadores (como o Firefox) podem não processar a requisição. Para mais informações sobre os possíveis métodos de requisição HTTP verifique as [especificações do W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
-- O segundo parâmetro é a URL da página que você está requisitando. Como um recurso de segurança, você não pode chamar páginas em domínios de terceiros. Certifique-se de usar o nome exato do domínio em todas as suas páginas ou irá obter um erro de "permissão negada" quando chamar o `open()`. Uma cilada comum é acessar o seu site pelo `domain.tld`, mas tentar chamar páginas com `www.domain.tld`. Se você realmente precisa enviar uma requisição para outro domínio, veja [controle de acesso HTTP](/En/HTTP_access_control).
+- O segundo parâmetro é a URL da página que você está requisitando. Como um recurso de segurança, você não pode chamar páginas em domínios de terceiros. Certifique-se de usar o nome exato do domínio em todas as suas páginas ou irá obter um erro de "permissão negada" quando chamar o `open()`. Uma cilada comum é acessar o seu site pelo `domain.tld`, mas tentar chamar páginas com `www.domain.tld`. Se você realmente precisa enviar uma requisição para outro domínio, veja [controle de acesso HTTP](/en-US/HTTP_access_control).
 - O terceiro parâmetro opcional define se a requisição é assíncrona. Se `TRUE` (o padrão), a execução da função JavaScript irá continuar enquanto a resposta do servidor não chegar. Isso é o A no AJAX.
 
 O parâmetro para o método `send()` pode ser qualquer dado que você deseja enviar para o servidor se a requisição for `POST`. Dados de formulário devem ser enviados em um formato que o servidor possa facilmente analisar. Isso pode ser feito através de uma string de consulta, como:
@@ -180,9 +180,9 @@ Neste exemplo:
 > [!NOTE]
 > Se você está enviando uma solicitação para um pedaço de código que retornará XML, ao invés de um arquivo XML estático, é necessário definir alguns cabeçalhos de resposta se a sua página é para trabalhar com o Internet Explorer e com o Mozilla. Se você não definir cabeçalho `Content-Type: application/xml`, o IE irá lançar um erro JavaScript, "Objeto esperado", após a linha onde você tentar acessar um elemento XML..
 
-> **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)).
+> **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#bypassing_the_cache)).
 
-> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando `makeRequest()` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](/pt-BR/JavaScript/Guide/Closures) contendo as funções AJAX impede a condição de corrida.
+> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando `makeRequest()` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](/pt-BR/docs/Web/JavaScript/Closures) contendo as funções AJAX impede a condição de corrida.
 
 Caso ocorra um erro de comunicação (tal como a queda de do servidor web), uma exceção será lançada no método onreadystatechange quando o campo status for acessado. Tenha a certeza de envolver sua declaração if...then dentro de um bloco try...catch.
 
@@ -299,4 +299,4 @@ $array = ['userName' => $name, 'computedString' => $computedString];
 echo json_encode($array);
 ```
 
-Para mais métodos DOM, não deixe de conferir a documentação [Mozilla's DOM implementation](http://www.mozilla.org/docs/dom/).
+Para mais métodos DOM, não deixe de conferir a documentação [Mozilla's DOM implementation](https://www.mozilla.org/docs/dom/).

@@ -16,4 +16,4 @@ slug: Glossary/SOAP
 
 ### Référence technique
 
-- [Spécification](http://www.w3.org/TR/soap12-part1/)
+- [Spécification](https://www.w3.org/TR/soap12-part1/)

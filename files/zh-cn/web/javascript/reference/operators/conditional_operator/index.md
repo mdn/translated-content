@@ -97,5 +97,5 @@ function example() {
 - [if 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
 - [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [可选链运算符（`?.`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [在代码中做决定——条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [在代码中做决定——条件语句](/zh-CN/docs/Learn_web_development/Core/Scripting/Conditionals)
 - [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)

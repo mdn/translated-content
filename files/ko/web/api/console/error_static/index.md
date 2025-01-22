@@ -25,7 +25,7 @@ console.error(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : `msg` 안의 대체할 하위 문자열을 포함하는 JavaScript 객체. 출력 형식에 추가 제어를 할 수 있게 해줍니다.
 
-자세한 내용은 [콘솔에 텍스트 출력하기](/ko/docs/Web/API/Console#콘솔에_텍스트_출력하기)를 확인하세요.
+자세한 내용은 [콘솔에 텍스트 출력하기](/ko/docs/Web/API/console#%ec%bd%98%ec%86%94%ec%97%90_%ed%85%8d%ec%8a%a4%ed%8a%b8_%ec%b6%9c%eb%a0%a5%ed%95%98%ea%b8%b0)를 확인하세요.
 
 ## 명세
 

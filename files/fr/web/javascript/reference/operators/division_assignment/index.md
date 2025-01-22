@@ -38,5 +38,5 @@ truc /= "toto"; // NaN
 
 ## Voir aussi
 
-- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment)
 - [L'opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)

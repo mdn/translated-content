@@ -79,7 +79,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### Масштабирование холста с использованием CSS-преобразований
 
-[CSS-преобразования](/ru/docs/Web/Guide/CSS/Using_CSS_transforms) быстрее, поскольку они используют графический процессор. В идеале, не стоит не масштабировать canvas, или можно использовать меньший canvas и увеличивать его при необходимости, но не уменьшать.
+[CSS-преобразования](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) быстрее, поскольку они используют графический процессор. В идеале, не стоит не масштабировать canvas, или можно использовать меньший canvas и увеличивать его при необходимости, но не уменьшать.
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -113,7 +113,7 @@ var ctx = canvas.getContext("2d", { alpha: false });
 
 ## Смотрите также
 
-- [Improving HTML5 Canvas Performance – HTML5 Rocks](http://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
+- [Improving HTML5 Canvas Performance – HTML5 Rocks](https://www.html5rocks.com/en/tutorials/canvas/performance/#toc-ref)
 - [Optimizing your JavaScript game for Firefox OS – Mozilla Hacks](https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}

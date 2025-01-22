@@ -199,7 +199,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 この節では、[Web/XSLT](/ja/docs/Web/XSLT)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
 - `xslt-element`: XSLT の要素。例えば [`<xsl:message>`](/ja/docs/Web/XSLT/Element/message) など。
-- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor) など。
+- `xslt-axis`: XSLT の軸。例えば [`ancestor`](/ja/docs/Web/XPath/Axes) など。
 
 ### EXSLT のページ型
 

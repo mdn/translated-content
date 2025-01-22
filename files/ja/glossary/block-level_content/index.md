@@ -43,6 +43,6 @@ p {
 ## 関連情報
 
 - [インラインレベルコンテンツ](/ja/docs/Glossary/Inline-level_content)
-- [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
+- [ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{cssxref("display")}}
 - [`writing-mode`](/ja/docs/Web/CSS/writing-mode)

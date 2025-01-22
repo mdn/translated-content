@@ -34,7 +34,7 @@ choose( boolean , object1, object2 )
 
 ### 定義
 
-[XForms 1.1](http://www.w3.org/TR/xforms11/#fn-choose)
+[XForms 1.1](https://www.w3.org/TR/xforms11/#fn-choose)
 
 ### Gecko のサポート状況
 

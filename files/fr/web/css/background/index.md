@@ -117,7 +117,7 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 }
 
 .banniere {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
@@ -136,5 +136,5 @@ Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assi
 ## Voir aussi
 
 - [`box-decoration-break`](/fr/docs/Web/CSS/box-decoration-break)
-- [Les dégradés](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Les dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -40,7 +40,7 @@ Ce screenshot vous donne une idée du résultat final :
 
 ![](bouncing-evil-circle.png)
 
-Si vous voulez en savoir plus, regardez [l'exemple fini](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
+Si vous voulez en savoir plus, regardez [l'exemple fini](https://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
 
 ## Vos objectifs
 
