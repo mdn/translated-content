@@ -144,7 +144,7 @@ Les dégradés radiaux (_radial gradient_ en anglais) sont similaires aux dégra
 
 ### Définir le dégradé
 
-Les stops utilisés ici sont les mêmes que précédemment, la différence étant que désormais l'objet sera rouge en son centre, et que la couleur changera progressivement vers le bleu en approchant des contours. Comme pour les dégradés linéaires, le noeud `<radialGradient>` peut prendre différents attributs pour décrire sa position et son orientation. Cependant, la définition est un peu plus complexe. Le dégradé linéaire est défini par deux points, qui déterminent où sont situé le centre et les bords:
+Les stops utilisés ici sont les mêmes que précédemment, la différence étant que désormais l'objet sera rouge en son centre, et que la couleur changera progressivement vers le bleu en approchant des contours. Comme pour les dégradés linéaires, le noeud `<radialGradient>` peut prendre différents attributs pour décrire sa position et son orientation. Cependant, la définition est un peu plus complexe. Le dégradé radial est défini par deux points, qui déterminent où sont situé le centre et les bords:
 
 - Le premier point définit le cercle où le dégradé se termine. Il requiert un point central, spécifié par les attributs `cx` et `cy`, et un rayon, `r`. Définir ces trois attributs vous permettra de déplacer le dégradé et de changer sa taille, comme illusté dans le deuxième `rect` de notre exemple.
 - Le second point est appelé le point focal et il est définit par les attributs `fx` et `fy`. Tandis que le premier point décrit où sont les bords du dégradé, le point focal décrit où est son centre. C'est plus facile à voir avec un exemple (voir la section qui suit).
