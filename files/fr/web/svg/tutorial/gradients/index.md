@@ -98,7 +98,7 @@ L'élément `<linearGradient>` peut également prendre différents attributs pou
 >   xmlns:xlink="http://www.w3.org/1999/xlink"
 >   href="#Gradient1" />
 > ```
-> 
+>
 > Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
 
 ## Dégradé Radial
