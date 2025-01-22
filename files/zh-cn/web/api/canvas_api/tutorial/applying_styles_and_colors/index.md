@@ -106,8 +106,9 @@ draw();
 
 ```js
 // 指定透明颜色，用于描边和填充样式
-ctx.strokeStyle = "rgba(255,0,0,0.5)";
-ctx.fillStyle = "rgba(255,0,0,0.5)";
+
+ctx.strokeStyle = "rgb(255 0 0 / 50%)";
+ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ```
 
 `rgba()` 方法与 `rgb()` 方法类似，就多了一个用于设置色彩透明度的参数。它的有效范围是从 0.0（完全透明）到 1.0（完全不透明）。
