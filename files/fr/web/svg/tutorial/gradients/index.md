@@ -82,7 +82,7 @@ L'élément `<linearGradient>` peut également prendre différents attributs pou
 
 > [!NOTE]
 > Vous pouvez également utiliser l'attribut `href` sur les dégradés. Quand il est utilisé, les attributs et stops d'un dégradé peuvent être réutilisé sur un autre. Ainsi, dans l'exemple précédent, on aurait pu ne pas redéfinir tous les stops dans Gradient2, comme ceci:
-> 
+>
 > ```html
 > <linearGradient id="Gradient1">
 >   <stop id="stop1" offset="0%" />
