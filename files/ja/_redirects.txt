@@ -2237,8 +2237,8 @@
 /ja/docs/Learn/Forms/How_to_structure_an_HTML_form	/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /ja/docs/Learn/Forms/How_to_structure_an_HTML_form/Example	/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example
 /ja/docs/Learn/Forms/Other_form_controls	/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls
-/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls	/ja/docs/conflicting/Learn_web_development/Extensions/Forms
-/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets	/ja/docs/conflicting/Learn_web_development/Extensions/Forms
+/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls	/ja/docs/Learn_web_development/Extensions/Forms
+/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Learn/Forms/Sending_and_retrieving_form_data	/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /ja/docs/Learn/Forms/Sending_forms_through_JavaScript	/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /ja/docs/Learn/Forms/Styling_HTML_forms	/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
@@ -2326,7 +2326,7 @@
 /ja/docs/Learn/HTML/Tables/Advanced	/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /ja/docs/Learn/HTML/Tables/Basics	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /ja/docs/Learn/HTML/Tables/Structuring_planet_data	/ja/docs/Learn_web_development/Core/Structuring_content/Planet_data_table
-/ja/docs/Learn/JavaScript	/ja/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792
+/ja/docs/Learn/JavaScript	/ja/docs/Learn_web_development/Core/Scripting
 /ja/docs/Learn/JavaScript/Asynchronous	/ja/docs/Learn_web_development/Extensions/Async_JS
 /ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn_web_development/Extensions/Async_JS
 /ja/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API	/ja/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API
@@ -2624,7 +2624,7 @@
 /ja/docs/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/XML/Parsing_and_serializing_XML
 /ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
-/ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/conflicting/Learn_web_development/Extensions/Forms
+/ja/docs/Property_compatibility_table_for_form_widgets	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Quirks_Mode_and_Standards_Mode	/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ja/docs/SVG	/ja/docs/Web/SVG
 /ja/docs/SVG/Element	/ja/docs/Web/SVG/Element
@@ -4564,6 +4564,7 @@
 /ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ja/docs/Web/JavaScript/Guide/JavaScript_Overview	/ja/docs/Web/JavaScript/Guide/Introduction
+/ja/docs/Web/JavaScript/Guide/Numbers_and_dates	/ja/docs/Web/JavaScript/Guide/Numbers_and_strings
 /ja/docs/Web/JavaScript/Guide/Objects_and_Properties	/ja/docs/Web/JavaScript/Guide/Working_with_objects
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
@@ -4584,6 +4585,7 @@
 /ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges	/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 /ja/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes	/ja/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 /ja/docs/Web/JavaScript/Guide/Statements	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+/ja/docs/Web/JavaScript/Guide/Text_formatting	/ja/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings
 /ja/docs/Web/JavaScript/Guide/Using_the_arguments_object	/ja/docs/Web/JavaScript/Guide/Functions
 /ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ja/docs/Web/JavaScript/Guide/Grammar_and_types
 /ja/docs/Web/JavaScript/Guide/Variables	/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations
