@@ -28,9 +28,10 @@
   },
   "dependencies": {
     "autocorrect-node": "2.13.0",
-    "cld": "^2.10.0",
     "fdir": "^6.4.3",
+    "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
+    "html-to-text": "^9.0.5",
     "husky": "9.1.7",
     "lint-staged": "15.4.3",
     "markdown-it": "^14.1.0",
