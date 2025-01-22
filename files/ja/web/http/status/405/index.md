@@ -44,7 +44,7 @@ Allow: GET, POST, HEAD
 
 ## 関連情報
 
-- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
 - {{HTTPHeader("Allow")}}
 - {{HTTPStatus("501", "501 Not Implemented")}}, {{HTTPStatus("510", "510 Not Extended")}}
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.405)
