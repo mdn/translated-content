@@ -5,9 +5,9 @@ slug: Web/CSS/Visual_formatting_model
 
 {{CSSRef}}
 
-CSS **视觉格式化模型**（visual formatting model）是用来处理和在视觉媒体上显示文档时使用的计算规则。该模型是 CSS 的基础概念之一。
+在 CSS 中，**视觉格式化模型**（visual formatting model）描述了用户代理如何获取文档树，并将其处理后显示在视觉媒体上。这包括{{glossary("continuous media", "连续媒体")}}（例如电脑屏幕，以及书籍或浏览器打印功能打印的文档等[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)）。大部分信息同样适用于连续媒体和分页媒体。
 
-视觉格式化模型会根据 [CSS 盒子模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)将文档中的元素转换为一个个盒子，每个盒子的布局由以下因素决定：
+在视觉格式化模型中，文档树中的每个元素都会根据盒子模型生成一个个的盒子。这些盒子的布局由以下因素决定：
 
 - 盒子的尺寸和类型。
 - 定位方案（常规流定位、浮动定位和绝对定位）。
@@ -24,7 +24,7 @@ CSS **视觉格式化模型**（visual formatting model）是用来处理和在�
 
 当元素的 {{ cssxref("display") }} 为 `block`、`list-item` 或 `table` 时，该元素将成为块级元素。一个块级元素会被格式化成一个块（例如文章的一个段落），默认按照垂直方向依次排列。
 
-每个块级盒子都会参与[块格式化上下文（block formatting context）](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（_principal block-level_ *box）。有*一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。
+每个块级盒子都会参与[块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)的创建，而每个块级元素都会至少生成一个块级盒子，即主块级盒子（_principal block-level_ *box）。有*一些元素，比如列表项会生成额外的盒子来放置项目符号，而那些会生成列表项的元素可能会生成更多的盒子。不过，多数元素只生成一个主块级盒子。
 
 主块级盒子包含由后代元素生成的盒子以及内容，同时它也会参与[定位方案](/zh-CN/docs/CSS/Positioning_scheme)。
 
