@@ -613,27 +613,25 @@ function draw() {
 
   // 创建新 image 对象，用作图案
   var img = new Image();
-  img.src = "canvas_createpattern.png";
+  img.src = "canvas_create_pattern.png";
   img.onload = function () {
     // 创建图案
-    var ptrn = ctx.createPattern(img, "repeat");
-    ctx.fillStyle = ptrn;
+    var pattern = ctx.createPattern(img, "repeat");
+    ctx.fillStyle = pattern;
     ctx.fillRect(0, 0, 150, 150);
   };
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
 draw();
 ```
 
-The result looks like this:
-
-{{EmbedLiveSample("createPattern 的示例")}}
+{{EmbedLiveSample("A_createPattern_example", "", "160")}}
 
 ## 阴影
 
