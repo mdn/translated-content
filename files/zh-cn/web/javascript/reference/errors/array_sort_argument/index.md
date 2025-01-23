@@ -14,14 +14,14 @@ JavaScript 异常“invalid Array.prototype.sort argument”会在以下情况�
 ```plain
 TypeError: The comparison function must be either a function or undefined（基于 V8）
 
-TypeError: invalid Array.prototype.sort argument（Firefox）
-TypeError: non-function passed to Array.prototype.toSorted（Firefox）
-TypeError: invalid %TypedArray%.prototype.sort argument（Firefox）
+TypeError: invalid Array.prototype.sort argument (Firefox)
+TypeError: non-function passed to Array.prototype.toSorted (Firefox)
+TypeError: invalid %TypedArray%.prototype.sort argument (Firefox)
 
-TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined（Safari）
-TypeError: Array.prototype.toSorted requires the comparator argument to be a function or undefined（Safari）
-TypeError: TypedArray.prototype.sort requires the comparator argument to be a function or undefined（Safari）
-TypeError: TypedArray.prototype.toSorted requires the comparator argument to be a function or undefined（Safari）
+TypeError: Array.prototype.sort requires the comparator argument to be a function or undefined (Safari)
+TypeError: Array.prototype.toSorted requires the comparator argument to be a function or undefined (Safari)
+TypeError: TypedArray.prototype.sort requires the comparator argument to be a function or undefined (Safari)
+TypeError: TypedArray.prototype.toSorted requires the comparator argument to be a function or undefined (Safari)
 ```
 
 ## 错误类型
