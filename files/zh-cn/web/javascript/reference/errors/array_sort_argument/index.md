@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-JavaScript 异常“invalid Array.prototype.sort argument”会在以下情况下触发：当 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时。
+JavaScript 异常“invalid Array.prototype.sort argument”会在 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时触发。
 
 ## 消息
 
