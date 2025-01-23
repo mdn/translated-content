@@ -47,7 +47,7 @@ original_slug: Learn/HTML/Tables/Advanced
 
 ### 动手练习：添加一个标题
 
-我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。.
+我们来试试看吧，回顾一下我们在之前的文章中第一次遇到的例子。
 
 1. 打开你的语言老师的学校时间表，就是 [HTML 表格基础](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#动手练习：colgroup_和_col) 结尾中的例子，或者把 [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) 文件复制到本地。
 2. 为表格添加一个合适的标题。

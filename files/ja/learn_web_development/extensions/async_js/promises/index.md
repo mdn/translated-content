@@ -1,12 +1,13 @@
 ---
 title: プロミスの使い方
 slug: Learn_web_development/Extensions/Async_JS/Promises
-original_slug: Learn/JavaScript/Asynchronous/Promises
 l10n:
-  sourceCommit: 4f6ba2f5a1615fe155292cac416c7ab6b9d711ec
+  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
 
 **プロミス**は、現代の JavaScript で非同期プログラミングを行う際の基礎となるものです。プロミスは非同期関数から返されるオブジェクトで、操作の現在の状態を表します。プロミスが呼び出し元に返される時点では、操作が完了していないことが多いのですが、プロミスオブジェクトは最終的な操作の成功や失敗を処理するためのメソッドを提供しています。
 
@@ -15,19 +16,26 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、イベント処理を含む JavaScript の基本をそれなりに理解していること。
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript の基本</a>をしっかりと理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
-      <td>JavaScript でプロミスを使用する方法を理解する。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>JavaScript でプロミスを使うための概念と基礎。</li>
+          <li>プロミスの連鎖と結合。</li>
+          <li>プロミスでのエラー処理。</li>
+          <li><code>async</code> と <code>await</code>: どのようにプロミスと関係しているのか、そしてなぜ有用なのか。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
-前の記事で、非同期関数を実装するためにコールバックを使用することをお話しました。この設計では、コールバック関数を渡しながら、非同期関数を呼び出します。関数はすぐに返値を返し、処理が完了したらコールバックを呼び出します。
+[前の記事](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)で、非同期関数を実装するためにコールバックを使用することをお話しました。この設計では、コールバック関数を渡しながら、非同期関数を呼び出します。関数はすぐに返値を返し、処理が完了したらコールバックを呼び出します。
 
-プロミスベースの API では、非同期関数が処理を開始し、{{jsxref("Promise")}}オブジェクトを返します。その後、このプロミスオブジェクトにハンドラーを割り当てれば、操作が成功したとき、失敗したときにハンドラーが実行されます。
+プロミスベースの API では、非同期関数が処理を開始し、 {{jsxref("Promise")}} オブジェクトを返します。その後、このプロミスオブジェクトにハンドラーを割り当てれば、操作が成功したとき、失敗したときにハンドラーが実行されます。
 
 ## fetch() API の使用
 
@@ -35,12 +43,12 @@ l10n:
 > この記事では、ページからブラウザーの JavaScript コンソールにコードサンプルをコピーすることで、プロミスを探ります。設定するには、以下のようにしてください。
 >
 > 1. ブラウザーのタブを開いて <https://example.org> を開いてください。
-> 2. その他部の中で、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)の JavaScript コンソールを開いてください。
+> 2. その他部の中で、[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)の JavaScript コンソールを開いてください。
 > 3. 例を示したら、それをコンソールにコピーしてください。新しい例を入力するたびにページを再読み込みする必要があります。そうしないと、コンソールが `fetchPromise` を再宣言したことにクレームを付けてくるでしょう。
 
 この例では、 <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> から JSON ファイルをダウンロードし、それに関するいくつかの情報をログに記録します。
 
-これを行うには、サーバーに **HTTP リクエスト**を行います。 HTTP リクエストでは、リクエストメッセージをリモートサーバーに送信し、サーバーからレスポンスが返されます。この例では、サーバーから JSON ファイルを取得するためのリクエストを送信します。前の記事で、 {{domxref("XMLHttpRequest")}} API を使用して HTTP リクエストを作成したのを覚えていますか？この記事では {{domxref("fetch", "fetch()")}} API を使用します。これは `XMLHttpRequest` に代わる現代のプロミスベースの API です。
+これを行うには、サーバーに **HTTP リクエスト**を行います。 HTTP リクエストでは、リクエストメッセージをリモートサーバーに送信し、サーバーからレスポンスが返されます。この例では、サーバーから JSON ファイルを取得するためのリクエストを送信します。前の記事で、 {{domxref("XMLHttpRequest")}} API を使用して HTTP リクエストを作成したのを覚えていますか？この記事では {{domxref("Window/fetch", "fetch()")}} API を使用します。これは `XMLHttpRequest` に代わる現代のプロミスベースの API です。
 
 これをブラウザーの JavaScript コンソールにコピーしてください。
 
@@ -67,19 +75,19 @@ console.log("リクエストを開始…");
 
 出力の全体像は、次のようなものです。
 
-```
+```plain
 Promise { <state>: "pending" }
 リクエストを開始…
 レスポンスを受信: 200
 ```
 
-`リクエストを開始...` は、レスポンスを受け取る前にログに記録されることに注意してください。同期関数とは異なり、 `fetch()` はリクエストが進行している間に値を返すので、プログラムが応答し続けることができます。レスポンスは `200` (OK) [ステータスコード](/ja/docs/Web/HTTP/Status) を示し、リクエストに成功したことを意味しています。
+`リクエストを開始…` は、レスポンスを受け取る前にログに記録されることに注意してください。同期関数とは異なり、 `fetch()` はリクエストが進行している間に値を返すので、プログラムが応答し続けることができます。レスポンスは `200` (OK) [ステータスコード](/ja/docs/Web/HTTP/Status) を示し、リクエストに成功したことを意味しています。
 
 この例は、前の記事の {{domxref("XMLHttpRequest")}} オブジェクトにイベントハンドラーを追加した例とよく似ていると思われるでしょう。その代わりに、返されたプロミスの `then()` メソッドにハンドラーを渡しています。
 
 ## プロミスの連鎖
 
-`fetch()` API では、`Response` オブジェクトを取得したら、別の関数を呼び出してレスポンスデータを取得する必要があります。今回は、レスポンスデータを JSON として取得したいので、 `Response` オブジェクトの {{domxref("Response/json", "json()")}} メソッドを呼び出すことになります。 `json()` も非同期であることがわかりました。つまり、これは 2 つの連続した非同期関数を呼び出さなければならないケースなのです。
+`fetch()` API では、 `Response` オブジェクトを取得したら、別の関数を呼び出してレスポンスデータを取得する必要があります。今回は、レスポンスデータを JSON として取得したいので、 `Response` オブジェクトの {{domxref("Response/json", "json()")}} メソッドを呼び出すことになります。 `json()` も非同期であることがわかりました。つまり、これは 2 つの連続した非同期関数を呼び出さなければならないケースなのです。
 
 これを実行してみましょう。
 
@@ -228,7 +236,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 私たちが指定した URL では、すべてのリクエストが成功するはずです。ただし、2 つ目のリクエストでは、リクエストしたファイルが存在しないため、サーバーは `200` (OK) の代わりに `404` (Not Found) を返します。したがって、出力は次のようになるはずです。
 
-```
+```plain
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json: 200
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found: 404
 https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json: 200
@@ -260,7 +268,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 そして、`catch()` ハンドラーが実行され、次のような表示になることが期待できます。
 
-```
+```plain
 Failed to fetch: TypeError: Failed to fetch
 ```
 
@@ -357,23 +365,27 @@ console.log(promise[0].name); // "promise" は Promise オブジェクトなの�
 
 ```js
 async function fetchProducts() {
-  try {
-    const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
-    );
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Could not get products: ${error}`);
+  const response = await fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+  );
+  if (!response.ok) {
+    throw new Error(`HTTP error: ${response.status}`);
   }
+  const data = await response.json();
+  return data;
 }
 
 const promise = fetchProducts();
-promise.then((data) => console.log(data[0].name));
+promise
+  .then((data) => {
+    console.log(data[0].name);
+  })
+  .catch((error) => {
+    console.error(`Could not get products: ${error}`);
+  });
 ```
+
+ここでは、`try...catch` を返されたプロミスの `catch` ハンドラーに戻しました。これにより、 `fetchProducts` 関数の内部でエラーが発生して `data` が `undefined` になった場合でも、 `then` ハンドラーで処理する必要がなくなります。プロミスチェーンの最後のステップとしてエラーを処理します。
 
 また、[JavaScriptモジュール](/ja/docs/Web/JavaScript/Guide/Modules)の中にコードがない限り、 `await` は `async` 関数の中でしか使用できないことに注意してください。つまり、通常のスクリプトではこの機能は使えません。
 
@@ -390,6 +402,7 @@ try {
   console.log(data[0].name);
 } catch (error) {
   console.error(`Could not get products: ${error}`);
+  throw error;
 }
 ```
 
@@ -405,7 +418,7 @@ try {
 
 プロミスは現代のすべてのブラウザーの最新版で動作します。プロミスの対応が問題になるのは、 Opera Mini と IE11 およびそれ以前のバージョンだけです。
 
-この記事ではプロミスのすべての機能には触れず，最も興味深く有用なものだけを取り上げました。プロミスについて学び始めると，もっと多くの機能やテクニックに出会うでしょう。
+この記事ではプロミスのすべての機能には触れず、最も興味深く有用なものだけを取り上げました。プロミスについて学び始めると、もっと多くの機能やテクニックに出会うでしょう。
 
 [WebRTC](/ja/docs/Web/API/WebRTC_API)、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)、[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)などなど、多くの現代的なウェブ API は、プロミスベースになっています。
 
@@ -416,4 +429,4 @@ try {
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) (Nolan Lawson)（英語）
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)（英語）
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
