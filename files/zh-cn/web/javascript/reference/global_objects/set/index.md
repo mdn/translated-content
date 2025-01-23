@@ -1,7 +1,7 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-i10n:
+l10n:
   sourceCommit: 9575097ee96531811fb8af7dd5f5e103cacf653d
 ---
 
@@ -211,7 +211,6 @@ interface GPUSupportedFeatures {
 - [`Set.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : 返回一个新的迭代器对象，该对象按插入顺序生成 `Set` 对象中每个元素的**值**。
 
-
 ## 示例
 
 ### 使用 Set 对象
@@ -255,16 +254,19 @@ console.log(mySet1); // Set(5) { 1, "some text", {…}, {…}, 5 }
 for (const item of mySet1) {
   console.log(item);
 }
+// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
 // 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 for (const item of mySet1.keys()) {
   console.log(item);
 }
+// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
 // 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 for (const item of mySet1.values()) {
   console.log(item);
 }
+// 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
 // 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 // 键和值是相同的
@@ -389,7 +391,7 @@ console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 ### 与字符串的关系
 
 ```js
-// 大小写敏感 （包含 "F" 和 "f"）
+// 大小写敏感（包含 "F" 和 "f"）
 new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
 // 忽略重复项（"f" 出现了两次，但是只包含一个）
@@ -397,7 +399,6 @@ new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ### 使用集合来确保一列值的唯一性
-
 
 ```js
 const array = Array.from(document.querySelectorAll("[id]")).map((e) => e.id);
