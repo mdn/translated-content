@@ -15,7 +15,7 @@ l10n:
 
 请参阅[定位类型](/zh-CN/docs/Web/CSS/position#定位类型)以了解定位元素和非定位元素的解释。
 
-请记住，当 {{cssxref("order")}} 属性在 {{cssxref("flex")}} 容器内改变渲染顺序（_基于 HTML 中的出现顺序_）时，它也会影响堆叠上下文的顺序。
+请记住，当 {{cssxref("order")}} 属性在 {{cssxref("flex")}} 容器内改变渲染顺序（_基于 HTML 中的出现顺序_）时，它也会影响层叠上下文的顺序。
 
 ## 示例
 
@@ -113,7 +113,7 @@ div {
 
 - [堆叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)：浮动元素如何与堆叠一起处理。
 - [使用 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)：如何使用 `z-index` 来更改默认堆叠。
-- [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)：关于堆叠上下文的说明。
-- [堆叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
-- [堆叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：2 级 HTML 层级，z-index 在所有层级
-- [堆叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
+- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)：关于堆叠上下文的说明。
+- [层叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：2 级 HTML 层级，z-index 在最后一级
+- [层叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：2 级 HTML 层级，z-index 在所有层级
+- [层叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：3 级 HTML 层级，z-index 在第二级
