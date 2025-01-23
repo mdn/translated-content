@@ -62,7 +62,7 @@ sayings.size; // 0
 
 可以在 {{jsxref("WeakMap")}} 参考页的“为什么使用 WeakMap”小节查看更多信息和示例。
 
-`WeakMap` 对象的一个用例是存储一个对象的私有数据或隐藏实现细节。Nick Fitzgerald 的博文[“使用 ECMAScript 6 WeakMap 隐藏实现细节”](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)提供了一个例子。对象内部的私有数据和方法被存储在 `WeakMap` 类型的 `privates` 变量中。所有暴露出的原型和实例都是公开的，而其他内容都是外界不可访问的，因为模块并未导出 `privates` 对象。
+`WeakMap` 对象的一个用例是存储一个对象的私有数据或隐藏实现细节。Nick Fitzgerald 的博文[“使用 ECMAScript 6 WeakMap 隐藏实现细节”](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)提供了一个例子。对象内部的私有数据和方法被存储在 `WeakMap` 类型的 `privates` 变量中。所有暴露出的原型和实例都是公开的，而其他内容都是外界不可访问的，因为模块并未导出 `privates` 对象。
 
 ```js
 const privates = new WeakMap();

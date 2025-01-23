@@ -153,7 +153,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 ```
 
-視圖函數的第一部分使用模型類上的 `objects.all()` 屬性獲取記錄數。 它還獲取具有狀態字段值為「 a」（可用）的`BookInstance` 物件列表。 在上一教程([Django Tutorial Part 3: Using models > Searching for records](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records))中，你可以找到更多有關如何從模型進行訪問的信息。.
+視圖函數的第一部分使用模型類上的 `objects.all()` 屬性獲取記錄數。 它還獲取具有狀態字段值為「 a」（可用）的`BookInstance` 物件列表。 在上一教程([Django Tutorial Part 3: Using models > Searching for records](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records))中，你可以找到更多有關如何從模型進行訪問的信息。
 
 在函數的最後，我們調用 `render()` 函數來創建並返回 HTML 頁面作為響應（此快捷功能包裝了許多其他函數，從而簡化了這種非常常見的用例）。它以原始 `request` 物件 (一個 `HttpRequest`), 帶有數據佔位符的 HTML 模板以及上下文 `context` 變量包含將插入到這些佔位符中的數據的 Python 字典）為參數。
 

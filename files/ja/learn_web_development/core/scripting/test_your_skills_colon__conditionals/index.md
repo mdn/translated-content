@@ -1,14 +1,13 @@
 ---
 title: "スキルテスト: 条件文"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals
-original_slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 l10n:
-  sourceCommit: fbad3a4737fd118d0a9f85fae487a67a0072c2d2
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが[コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)を理解したかどうかを判定することです。
+このスキルテストの目的は、あなたが[コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)を理解したかどうかを判定することです。
 
 > [!NOTE]
 > コードをダウンロードして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに入力することで解答を試すことができます。

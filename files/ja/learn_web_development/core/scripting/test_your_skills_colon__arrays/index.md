@@ -1,19 +1,18 @@
 ---
 title: "スキルテスト: 配列"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_Arrays
-original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)の記事を理解しているかどうかを評価することです。
+このスキルテストの目的は、[配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)の記事を理解しているかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
 >
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 配列 1
 
@@ -67,7 +66,7 @@ l10n:
 このタスクでは、出発点として鳥の名前を列挙した配列が与えられています。
 
 - `"Eagles"` 要素のインデックスを特定し、そのインデックスを用いて `"Eagles"` 要素を削除しましょう。
-- この配列から、名前が"E"で始まる鳥だけを含む `eBirds` という名前の新しい配列を作成しましょう。ちなみに、 {{jsxref("String.prototype.startsWith()", "startsWith()")}} は文字列が特定の文字で始まるかどうかを調べるのにとても役立ちます。
+- この配列から、名前が "E" で始まる鳥だけを含む `eBirds` という名前の新しい配列を作成しましょう。ちなみに、 {{jsxref("String.prototype.startsWith()", "startsWith()")}} は文字列が特定の文字で始まるかどうかを調べるのにとても役立ちます。
 
 `"Emus,Egrets"` と表示されたら成功です。
 
