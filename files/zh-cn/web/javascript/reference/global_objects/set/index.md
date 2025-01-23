@@ -59,7 +59,7 @@ l10n:
       <td>
         <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="一个维恩图，其中两个圆重叠。A和B的对称差集（symmetric）是包含任一圆但不包含两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="一个维恩图，其中两个圆重叠。A 和 B 的对称差集（symmetric）是包含任一圆但不包含两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/union", "A.union(B)")}}</td>
@@ -67,7 +67,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="一个维恩图，其中两个圆重叠。A和B的并集（union）是包含任一圆或两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="一个维恩图，其中两个圆重叠。A 和 B 的并集（union）是包含任一圆或两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
@@ -75,7 +75,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="一个维恩图，其中有两个圆。A和B是互不相交的（disjoint），因为圆没有重叠区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="一个维恩图，其中有两个圆。A 和 B 是互不相交的（disjoint），因为圆没有重叠区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
@@ -83,7 +83,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="一个维恩图，其中有两个圆。A是B的子集（subset），因为A完全包含在B中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="一个维恩图，其中有两个圆。A 是 B 的子集（subset），因为A完全包含在B中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
@@ -91,7 +91,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="一个维恩图，其中两个圆。A是B的超集（superset），因为B完全包含在A中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="一个维恩图，其中两个圆。A 是 B 的超集（superset），因为B完全包含在A中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
   </tbody>
 </table>
@@ -255,19 +255,16 @@ for (const item of mySet1) {
   console.log(item);
 }
 // 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 for (const item of mySet1.keys()) {
   console.log(item);
 }
 // 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 for (const item of mySet1.values()) {
   console.log(item);
 }
 // 1、"some text"、{ "a": 1, "b": 2 }、{ "a": 1, "b": 2 }、5
-// 1, "some text", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
 // 键和值是相同的
 for (const [key, value] of mySet1.entries()) {
