@@ -39,7 +39,7 @@ let results = await browser.scripting.executeScript(
     - `files` {{optional_inline}}
       - : `string` 的 `array`。要注入的 JavaScript 文件相对于扩展的根目录的路径的数组。必须指定 `files` 和 `func` 其中之一。
     - `func` {{optional_inline}}
-      - : `function`。要注入的 JavaScript 函数。此函数在注入前被序列化并被反序列化，因此任何绑定的参数和执行上下文都将丢失。必须指定 `files` 和 `func` 其中之一。
+      - : `function`。要注入的 JavaScript 函数。该函数将被序列化、反序列化以注入，因此任何绑定在函数上的参数和函数的执行上下文都将被丢失。必须指定 `files` 和 `func` 其中之一。
     - `injectImmediately` {{optional_inline}}
       - : `boolean`。注入目标是否尽早触发注入（但不一定在页面加载之前）。
     - `target`
@@ -51,17 +51,17 @@ let results = await browser.scripting.executeScript(
 
 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将以 `InjectionResult` 对象数组兑现，表示在每个注入框架中注入脚本的结果。
 
-如果注入失败（例如注入目标无效）则该 Promise 将被拒绝。当脚本执行开始时，无论成功与否，脚本的结果将包含在结果中（`result` 或 `error`）。
+如果注入失败（例如注入目标无效）则该 Promise 将被拒绝。当脚本执行开始时，无论成功与否（`result` 或 `error`），脚本的结果将包含在结果中。
 
 每个 `InjectionResult` 对象具有以下属性：
 
 - `frameId`
-  - : `number`。与注入相关的框架 ID。
+  - : `number`。与注入相关联的框架 ID。
 - `result` {{optional_inline}}
   - : `any`。脚本执行的结果。
 - `error` {{optional_inline}}
 
-  - : `any`。如果发生错误，包含脚本抛出或拒绝的值。通常这是一个带有消息属性的错误对象，但它可以是任何值（包括原始值和 `undefined`）。
+  - : `any`。如果发生错误，包含脚本抛出或拒绝的值。通常这是一个带有消息（message）属性的错误对象，但它可以是任何值（包括原始值和 `undefined`）。
 
     Chrome 尚不支持 `error` 属性（参见 [Issue 1271527: Propagate errors from scripting.executeScript to InjectionResult](https://crbug.com/1271527)）。作为替代，可以通过将要执行的代码包装在 try-catch 语句中来捕获运行时错误。未捕获的错误也会报告到目标标签页的控制台。
 
