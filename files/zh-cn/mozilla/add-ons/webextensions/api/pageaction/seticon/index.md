@@ -9,7 +9,7 @@ l10n:
 
 设置页面操作的图标。
 
-你可以通过提供一个图片文件的路径，或一个 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象来指定单独一个图标。
+你可以指定图片文件的路径或 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象作为单个图标。
 
 你也可以通过提供一个包含多个路径或 `ImageData` 对象的字典来指定多个不同尺寸的图标，这样图标就不必为具有不同像素密度的设备进行缩放。
 
@@ -44,7 +44,7 @@ let settingIcon = browser.pageAction.setIcon(
         });
         ```
 
-        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标尺寸)。
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
 
@@ -61,7 +61,7 @@ let settingIcon = browser.pageAction.setIcon(
         });
         ```
 
-        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标尺寸)。
+        浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
         如果 `path` 为 `null`，则会重置页面操作的图标为在 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 清单键中指定的图标。
 
@@ -70,7 +70,7 @@ let settingIcon = browser.pageAction.setIcon(
         如果 `path` 指向的图标无效，则不会显示图标。
 
     - `tabId`
-      - : `integer`。要设置的标签页的 ID。
+      - : `integer`。要设置图标的标签页的 ID。
 
 ### 返回值
 
