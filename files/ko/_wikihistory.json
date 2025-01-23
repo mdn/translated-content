@@ -7576,7 +7576,7 @@
     "modified": "2020-10-15T22:18:56.791Z",
     "contributors": ["raccoonback", "DeadIntegral"]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-11-19T02:20:24.044Z",
     "contributors": [
       "n2ptune",
@@ -7618,16 +7618,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences": {
     "modified": "2020-03-12T19:49:33.624Z",
     "contributors": ["limkukhyun"]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-03-12T19:41:34.500Z",
-    "contributors": [
-      "limkukhyun",
-      "jungpaeng",
-      "kr-leeteahoon",
-      "wertgw",
-      "SooYeonKim"
-    ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
     "modified": "2020-03-12T19:44:00.798Z",
@@ -10782,6 +10772,16 @@
   "conflicting/Web/HTTP/Headers": {
     "modified": "2020-10-15T21:49:17.720Z",
     "contributors": ["jkpark", "devcken"]
+  },
+  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
+    "modified": "2020-03-12T19:41:34.500Z",
+    "contributors": [
+      "limkukhyun",
+      "jungpaeng",
+      "kr-leeteahoon",
+      "wertgw",
+      "SooYeonKim"
+    ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",

@@ -1,6 +1,7 @@
 ---
 title: 배경 및 테두리
-slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
+slug: conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
+original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 l10n:
   sourceCommit: 198d4613e48ec627c860551526131f363f244d36
 ---
