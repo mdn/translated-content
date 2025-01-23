@@ -4681,7 +4681,6 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Float32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Float32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Float64Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Float64Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance
-/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Int16Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Int16Array
