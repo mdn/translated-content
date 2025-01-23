@@ -7,12 +7,12 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-当 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时，会触发 JavaScript 异常“invalid Array.prototype.sort argument”
+JavaScript 异常“invalid Array.prototype.sort argument”会在以下情况下触发：当 {{jsxref("Array.prototype.sort()")}} 方法（以及其相关方法：{{jsxref("Array.prototype.toSorted()")}}、{{jsxref("TypedArray.prototype.sort()")}}、{{jsxref("TypedArray.prototype.toSorted()")}}）的参数既不是 {{jsxref("undefined")}} 也不是用于比较其操作数的函数时。
 
-## 信息
+## 消息
 
 ```plain
-TypeError: The comparison function must be either a function or undefined (V8-based)
+TypeError: The comparison function must be either a function or undefined（基于 V8）
 
 TypeError: invalid Array.prototype.sort argument (Firefox)
 TypeError: non-function passed to Array.prototype.toSorted (Firefox)
