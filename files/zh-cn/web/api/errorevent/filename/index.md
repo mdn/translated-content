@@ -17,7 +17,7 @@ l10n:
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("文件中出现错误：" + ev.filename);
+  console.log("文件 " + ev.filename + " 中出现错误");
 });
 ```
 
