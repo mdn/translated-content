@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<use>`** 元素从 SVG 文档中获取节点，并将它们复制到其他地方。其效果与将这些节点深度克隆到一个不可访问的 DOM 中，然后粘贴到 `use` 元素所在的位置相同，这与克隆的 [template 元素](/zh-CN/docs/Web/HTML/Element/template)类似。
+**`<use>`** 元素从 SVG 文档中获取节点，并将它们复制到其他地方。其效果与将这些节点深度克隆到一个不可访问的 DOM 中，然后粘贴到 `use` 元素所在的位置相同，这与克隆的[模版元素](/zh-CN/docs/Web/HTML/Element/template)类似。
 
 ## 示例
 
