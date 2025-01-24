@@ -59,7 +59,7 @@ l10n:
       <td>
         <math><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="一个维恩图，其中两个圆重叠。A 和 B 的对称差集（symmetric）是包含任一圆但不包含两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="一个维恩图，其中两个圆重叠。A 和 B 的对称差集（symmetric）是包含在任一圆但不包含在两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/union", "A.union(B)")}}</td>
@@ -67,7 +67,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="一个维恩图，其中两个圆重叠。A 和 B 的并集（union）是包含任一圆或两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="一个维恩图，其中两个圆重叠。A 和 B 的并集（union）是包含在任一圆或两个圆的区域。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
