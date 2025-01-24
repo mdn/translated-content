@@ -113,7 +113,7 @@ jobs:
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
           echo Y|yarn rari update
-          ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $PWD/files#g")
+          ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $CONTENT_TRANSLATED_ROOT#g")
           yarn rari build --no-basic --json-issues --data-issues $ARGS
           yarn yari-render-html
 
