@@ -7,17 +7,12 @@
 name: PR Test
 
 on:
-  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
-  # is granted read/write repository access.
-  # Please pay attention to limit the permissions of each job!
-  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
 jobs:
   tests:
-    # do not run on PRs in forks
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
     # Set the permissions to `read-all`, preventing the workflow from
@@ -112,14 +107,14 @@ jobs:
 
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          mkdir -p ${BUILD_OUT_ROOT}
+          mkdir -p $BUILD_OUT_ROOT
 
           # Don't use `yarn build` (from mdn/content) because that one hardcodes
           # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
           node node_modules/@mdn/yari/build/cli.js ${GIT_DIFF_CONTENT}
 
           echo "Disk usage size of build"
-          du -sh ${BUILD_OUT_ROOT}
+          du -sh $BUILD_OUT_ROOT
 
           # Save the PR number into the build
           echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
@@ -130,16 +125,13 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
-          # Set the output variable so the next job could skip if there are no assets
-          echo "has_assets=true" >> "$GITHUB_OUTPUT"
-
       - name: Merge static assets with built documents
         if: env.GIT_DIFF_CONTENT
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ ${BUILD_OUT_ROOT}
           # Show the final disk usage size of the build.
-          du -sh ${BUILD_OUT_ROOT}
+          du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
         if: env.GIT_DIFF_CONTENT
@@ -154,16 +146,6 @@ jobs:
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          echo ${GIT_DIFF_FILES}
+          echo $GIT_DIFF_FILES
 
-          yarn filecheck ${GIT_DIFF_FILES}
-
-  review:
-    needs: tests
-    if: needs.tests.outputs.has_assets
-    # write permissions are required to create a comment in the corresponding PR
-    permissions: write-all
-    uses: ./.github/workflows/pr-review-companion.yml
-    # inherit the secrets from the parent workflow
-    # https://docs.github.com/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
-    secrets: inherit
+          yarn filecheck $GIT_DIFF_FILES
