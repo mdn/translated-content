@@ -110,4 +110,4 @@ mailto:help@supercyberhelpdesk.info
 
 ## 関連情報
 
-- [URL とは何か](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
