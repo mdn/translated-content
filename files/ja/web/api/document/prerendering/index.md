@@ -3,7 +3,7 @@ title: "Document: prerendering プロパティ"
 short-title: prerendering
 slug: Web/API/Document/prerendering
 l10n:
-  sourceCommit: 67a5e464f835677f78c744fc69a84cc83186b988
+  sourceCommit: 420ee5d00e14eec60923ada0e48325e44d613a1b
 ---
 
 {{ APIRef("Speculation Rules API") }}{{seecompattable}}

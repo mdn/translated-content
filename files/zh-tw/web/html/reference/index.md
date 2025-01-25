@@ -2,7 +2,7 @@
 title: HTML 參考
 slug: Web/HTML/Reference
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
 ---
 
 {{HTMLSidebar}}
@@ -17,5 +17,7 @@ l10n:
   - : 全域屬性是所有 HTML 元素共有的屬性，可以用於所有元素，儘管它們可能對於某些元素無效。
 - [內容類型](/zh-TW/docs/Web/HTML/Content_categories)
   - : 每個 HTML 元素都是一個或多個內容類型的成員──這些類別會將具有共同特性的元素分組。
+- [HTML 註解](/zh-TW/docs/Web/HTML/Comments)
+  - : HTML 註解用於向標記說明性註釋或防止瀏覽器解讀文件的特定部分。
 - [HTML 中使用的日期與時間格式](/zh-TW/docs/Web/HTML/Date_and_time_formats)
   - : 某些 HTML 元素可讓你將日期及時間指定為值或作為屬性之值，其中包括 {{HTMLElement("input")}} 之 `type` 屬性值為 [`date`](/zh-TW/docs/Web/HTML/Element/input/date) 或 [`time`](/zh-TW/docs/Web/HTML/Element/input/time) 的元素，以及 {{HTMLElement("ins")}} 與 {{HTMLElement("del")}} 元素。

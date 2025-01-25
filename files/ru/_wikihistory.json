@@ -11379,7 +11379,7 @@
     "modified": "2020-11-22T19:25:09.183Z",
     "contributors": ["rsvato"]
   },
-  "Web/JavaScript/Guide/Numbers_and_dates": {
+  "Web/JavaScript/Guide/Numbers_and_strings": {
     "modified": "2020-03-12T19:42:19.176Z",
     "contributors": [
       "pirimow",
@@ -11435,18 +11435,6 @@
   "Web/JavaScript/Guide/Regular_expressions/Character_classes": {
     "modified": "2020-06-17T18:30:16.759Z",
     "contributors": ["dknight"]
-  },
-  "Web/JavaScript/Guide/Text_formatting": {
-    "modified": "2020-03-12T19:42:07.543Z",
-    "contributors": [
-      "pirimow",
-      "Aparin",
-      "drugoi",
-      "Grumvol",
-      "redishko",
-      "PavelG94",
-      "Prographer"
-    ]
   },
   "Web/JavaScript/Guide/Typed_arrays": {
     "modified": "2020-03-12T19:45:54.627Z",
@@ -15932,6 +15920,18 @@
       "BychekRU",
       "uleming",
       "Andrew_Pfeiffer"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
+    "modified": "2020-03-12T19:42:07.543Z",
+    "contributors": [
+      "pirimow",
+      "Aparin",
+      "drugoi",
+      "Grumvol",
+      "redishko",
+      "PavelG94",
+      "Prographer"
     ]
   }
 }

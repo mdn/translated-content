@@ -1,12 +1,13 @@
 ---
 title: グラフィックの描画
 slug: Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics
-original_slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 l10n:
-  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 ブラウザーには、Scalable Vector Graphics ([SVG](/ja/docs/Web/SVG)) 言語から HTML の {{htmlelement("canvas")}} 要素に描画するための API まで、とても強力なグラフィックプログラミングツールが含まれています（[キャンバス API](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) を参照）。この記事では、キャンバスについて紹介し、さらに詳しく学ぶためのリソースを提供します。
 
@@ -15,21 +16,17 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        JavaScript の基本
-        （<a href="/ja/docs/Learn/JavaScript/First_steps">第一歩</a>、
-        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >構成要素</a
-        >,
-        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript のオブジェクト</a>）、
-        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >クライアントサイド API の基本</a
-        >
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> に親しんでおくこと、特に <a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript オブジェクトの基本</a>と <a href="/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM スクリプティング</a>や<a href="/ja/docs/Learn_web_development/Core/Scripting/Network_requests">ネットワークリスクエスト</a>などのコア API を扱っているものを理解しておくこと。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        JavaScript　で<code>&#x3C;canvas></code>　要素に描画するための基本を学ぶこと。
+        <ul>
+          <li>このレッスンで取り上げる API によって実現される概念と用途。</li>
+          <li><code>&lt;canvas&gt;</code> の基本構文と使用方法、および関連する API。</li>
+          <li>タイマーと <code>requestAnimationFrame()</code> を使用してループするアニメーションを作成すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -37,21 +34,21 @@ l10n:
 
 ## ウェブでのグラフィック
 
-HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding) モジュールで話したように、ウェブはもともとテキストだけでした、それはとても退屈だったので、画像が登場しました。最初は {{htmlelement("img")}} 要素によって、後には {{cssxref("background-image")}} といった CSS のプロパティを経て、 [SVG](/ja/docs/Web/SVG) が導入されました。
+ウェブはもともとテキストだけでした、それではとてもつまらなかったので、画像が登場しました。最初は {{htmlelement("img")}} 要素によって、後には {{cssxref("background-image")}} といった CSS のプロパティを経て、 [SVG](/ja/docs/Web/SVG) が導入されました。
 
-しかし、これではまだ十分ではありません。 [CSS](/ja/docs/Learn/CSS) や [JavaScript](/ja/docs/Learn/JavaScript) を使用して、マークアップで表わされた SVG ベクター画像をアニメーションさせたり操作したりすることはできますが、ビットマップ画像に対して同じことをする方法はまだなく、利用できるツールもかなり限定されていたのです。ウェブでは、アニメーションやゲーム、 3D シーンなど、 C++ や Java といった低水準の言語が扱う要件を効果的に作成する方法がまだありませんでした。
+しかし、これではまだ十分ではありませんでした。 [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) や [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) を使用して、マークアップで表現された SVG ベクター画像をアニメーションさせたり操作したりすることはできますが、ビットマップ画像に対して同じことをする方法はまだなく、利用できるツールもかなり限定されていたのです。ウェブでは、アニメーションやゲーム、 3D シーンなど、 C++ や Java といった低水準の言語が扱う要件を効果的に作成する方法がまだありませんでした。
 
 ブラウザーが {{htmlelement("canvas")}} 要素と関連する[キャンバス API](/ja/docs/Web/API/Canvas_API) に対応し始めた頃から状況は改善されました。後述するように、キャンバスは 2D アニメーション、ゲーム、データの視覚化、その他の種類のアプリケーションを作成するためのいくつかの有用なツールを提供し、特にウェブプラットフォームが提供する他の API と組み合わせたときにその威力を発揮しますが、アクセシブルにするには難しかったり不可能であったりします。
 
-以下の例は、もともと [JavaScript オブジェクト入門](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)モジュールで出会った、キャンバスベースのシンプルな 2D の弾むボールアニメーションを示しています。
+以下の例は、もともと [JavaScript オブジェクト入門](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)モジュールで出会った、キャンバスベースのシンプルな 2D の弾むボールアニメーションを示しています。
 
 {{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
 
-2006〜2007年頃、Mozilla は 3D キャンバスの実装を実験的に行うために動作を開始しました。これが [WebGL](/ja/docs/Web/API/WebGL_API) となり、ブラウザーベンダーの間で評判となり、2009 年から 2010 年頃に標準化されました。WebGL を使うと、ウェブブラウザーの中で本格的な 3D グラフィックを作成することができます。以下の例では、単純な回転する WebGL 立方体を示しています。
+2006〜2007 年頃、Mozilla は 3D キャンバスの実装を実験的に行うために作業を開始しました。これが [WebGL](/ja/docs/Web/API/WebGL_API) となり、ブラウザーベンダーの間で評判となり、 2009 年から 2010 年頃に標準化されました。 WebGL を使うと、ウェブブラウザーの中で本格的な 3D グラフィックを作成することができます。以下の例では、単純な回転する WebGL 立方体を示しています。
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-この記事では、生の WebGL コードはとても複雑であるため、主に 2D キャンバスに焦点を当てます。しかし、WebGL ライブラリーを使用してより簡単に 3D シーンを作成する方法を紹介します。また、生の WebGL を使用するチュートリアルは他の場所にあります。 [WebGL 入門](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)を参照してください。
+この記事では、生の WebGL コードはとても複雑であるため、主に 2D キャンバスに焦点を当てます。しかし、 WebGL ライブラリーを使用してより簡単に 3D シーンを作成する方法を紹介します。また、生の WebGL を使用するチュートリアルは他の場所にあります。 [WebGL 入門](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)を参照してください。
 
 ## アクティブラーニング: \<canvas> を始めよう
 
@@ -63,7 +60,7 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
 これにより、ページ上に 320 × 240 ピクセルの大きさのキャンバスが作成されます。
 
-`<canvas>` タグの中には、代替コンテンツを記述してください。これは、キャンバスに対応していないブラウザのユーザーや、スクリーンリーダーのユーザーに対して、キャンバスのコンテンツを記述するものです。
+`<canvas>` タグの中には、代替コンテンツを記述してください。これは、キャンバスに対応していないブラウザのユーザーや、スクリーンリーダーのユーザーに対して、キャンバスのコンテンツを説明するものです。
 
 ```html
 <canvas width="320" height="240">
@@ -71,10 +68,10 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 </canvas>
 ```
 
-代替コンテンツは、キャンバスのコンテンツに代わる有益なコンテンツを提供する必要があります。例えば、常に更新される株価のグラフをレンダリングしている場合、代替コンテンツは最新の株価グラフの静止画像で、`alt` テキストで株価の内容を言ったり、個々の株価ページへのリンクのリストを表示したりすることができます。
+代替コンテンツは、キャンバスのコンテンツに代わる有益なコンテンツを提供する必要があります。例えば、常に更新される株価のグラフをレンダリングしている場合、代替コンテンツは最新の株価グラフの静止画像で、 `alt` テキストで株価の内容を言ったり、個々の株価ページへのリンクのリストを表示したりすることができます。
 
 > [!NOTE]
-> キャンバスのコンテンツはスクリーンリーダーにアクセスできません。キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値として説明テキストを含めるか、開始タグと閉じられた `<canvas>` タグ内に代替コンテンツを記述してください。キャンバスのコンテンツは DOM に所属しませんが、その中にある代替コンテンツは所属します。
+> キャンバスのコンテンツはスクリーンリーダーにとってアクセシブルではありません。キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値として説明テキストを含めるか、開始タグと閉じられた `<canvas>` タグ内に代替コンテンツを記述するかしてください。キャンバスのコンテンツは DOM に所属しませんが、その中にある代替コンテンツは所属します。
 
 ### キャンバスの作成とサイズ変更
 
@@ -88,7 +85,7 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
    ```html
    <canvas class="myCanvas">
-     <p>Add suitable fallback here.</p>
+     <p>ここに最適な代替テキストを追加します。</p>
    </canvas>
    ```
 
@@ -102,7 +99,7 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
    const height = (canvas.height = window.innerHeight);
    ```
 
-   ここでは、定数 `canvas` にキャンバスへの参照を格納しています。2 つ目の行では、新しい定数 `width` とキャンバスの `width` プロパティを {{domxref("Window.innerWidth")}} （ビューポート幅に等しい値）に設定しています。3 行目では、新しい定数 `height` とキャンバスの `height` プロパティを {{domxref("Window.innerHeight")}} （ビューポートの高さを指定）に等しくなるように設定しています。これで、ブラウザーウィンドウの幅と高さをすべて満たすキャンバスを保有することができます。
+   ここでは、定数 `canvas` にキャンバスへの参照を格納しています。 2 つ目の行では、新しい定数 `width` とキャンバスの `width` プロパティを {{domxref("Window.innerWidth")}} （ビューポート幅に等しい値）に設定しています。3 行目では、新しい定数 `height` とキャンバスの `height` プロパティを {{domxref("Window.innerHeight")}} （ビューポートの高さを指定）に等しくなるように設定しています。これで、ブラウザーウィンドウの幅と高さをすべて満たすキャンバスを保有することができます。
 
    また、複数の等号で代入を一斉に連結しているのがわかると思います。これは JavaScript で許可されており、複数の変数をすべて同じ値にしたい場合に有効なテクニックです。キャンバスの幅と高さは、変数 width/height で簡単にアクセスできるようにしたいと思いました。後で利用できるようにするために有用な値だからです（たとえば、キャンバスの幅のちょうど半分の大きさのものを描きたい場合など）。
 
@@ -131,19 +128,19 @@ ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
-ここでは、キャンバスの {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} プロパティを使用して塗り色を設定し（これは、CSS のプロパティと同様に [color values](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors) をとります）、次に {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} メソッドを用いてキャンバスの全領域を占める矩形を描画しています（最初の 2 つの引数は矩形の左上隅の座標です。最後の 2 つは矩形を描く幅と高さで、変数 `width` と `height` は有用であることは既に示しました）。
+ここでは、キャンバスの {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} プロパティを使用して塗りつぶし色を設定し（これは、CSS のプロパティと同様の[色値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#色)をとります）、次に {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} メソッドを用いてキャンバスの全領域を占める長方形を描画しています（最初の 2 つの引数は長方形の左上隅の座標です。最後の 2 つは長方形を描く幅と高さで、変数 `width` と `height` は有用であることは既に示しました）。
 
 さて、テンプレートが完成しましたので、次に移動させます。
 
 ## 2D キャンバスの基本
 
-上で述べたように、すべての描画処理は {{domxref("CanvasRenderingContext2D")}} オブジェクト（ここでは `ctx` ）に対する操作で行われます。多くの処理では、どこに何を描くかを正確に指定するために座標を与える必要があります。キャンバスの左上は点 (0, 0) で、水平 (x) 軸は左から右へ、垂直 (y) 軸は上から下へ走ります。
+上で述べたように、すべての描画処理は {{domxref("CanvasRenderingContext2D")}} オブジェクト（ここでは `ctx`）に対する操作で行われます。多くの処理では、どこに何を描くかを正確に指定するために座標を与える必要があります。キャンバスの左上は点 (0, 0) で、水平 (x) 軸は左から右へ、垂直 (y) 軸は上から下へ走ります。
 
 ![小さな正方形がその領域を覆い、真ん中にスチールブルーの正方形がある格子状のグラフ用紙。キャンバスの左上隅は、キャンバスの X 軸と Y 軸の点 (0, 0) である。横軸 (x) は左から右に動作して幅を表し、縦軸 (y) は上から下に動作して高さを表す。青い正方形の左上隅は、 Y 軸から x 単位、 X 軸から y 単位の距離であることがラベル付けされている。](canvas_default_grid.png)
 
-図形を描くには、矩形図形プリミティブを使用するか、一定のパスに沿って線をなぞり、その図形を塗りつぶす方法を取る傾向があるようです。以下では、その両方の方法を示します。
+図形を描くには、長方形図形プリミティブを使用するか、一定のパスに沿って線をなぞり、その図形を塗りつぶす方法を取る傾向があるようです。以下では、その両方の方法を示します。
 
-### 簡単な矩形
+### 簡単な長方形
 
 まずは簡単な長方形から始めてみましょう。
 
@@ -155,16 +152,16 @@ ctx.fillRect(0, 0, width, height);
    ctx.fillRect(50, 50, 100, 150);
    ```
 
-   保存して更新すると、キャンバスには赤い矩形が現れるはずです。その左上隅はキャンバスの上端と左端から 50 ピクセル離れており（最初の 2 つの引数で定義）、幅は 100 ピクセル、高さは 150 ピクセルです（3 番目と 4 番目の引数で定義）。
+   保存して更新すると、キャンバスには赤い長方形が現れるはずです。その左上隅はキャンバスの上端と左端から 50 ピクセル離れており（最初の 2 つの引数で定義）、幅は 100 ピクセル、高さは 150 ピクセルです（3 番目と 4 番目の引数で定義）。
 
-3. もうひとつ矩形を追加してみましょう。今度は緑色の矩形です。 JavaScript の一番下に以下のものを追加してください。
+3. もうひとつ長方形を追加してみましょう。今度は緑色の長方形です。 JavaScript の一番下に以下のものを追加してください。
 
    ```js
    ctx.fillStyle = "rgb(0 255 0)";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
-   保存して更新すると、新しい矩形が表示されます。この点は重要です。矩形や行を描くなどのグラフィック処理は、発生した順番に実行されます。たとえば、壁にペンキを塗るとき、ペンキが重なり合うと、その下にあるものが隠れてしまうことがあります。これは何らかの方法で変更することはできないので、グラフィックを描く順序を注意深く考える必要があります。
+   保存して更新すると、新しい長方形が表示されます。この点は重要です。長方形や行を描くなどのグラフィック処理は、発生した順番に実行されます。たとえば、壁にペンキを塗るとき、ペンキが重なり合うと、その下にあるものが隠れてしまうことがあります。これは何らかの方法で変更することはできないので、グラフィックを描く順序を注意深く考える必要があります。
 
 4. 半透明の色を指定することで、例えば `rgb()` を使用して半透明のグラフィックを描画することができることに注意してください。「アルファチャンネル」は、色が持つ透明度の量を定義します。この値が高いほど、その背後にあるものをより見えなくすることができます。コードに以下のように追加してください。
 
@@ -177,7 +174,7 @@ ctx.fillRect(0, 0, width, height);
 
 ### ストロークと線の幅
 
-これまで、塗りつぶされた長方形の描画について見てきましたが、輪郭だけの長方形（グラフィックデザインでは**ストローク**と呼びます）を描画することも可能です。ストロークに必要な色を設定するには、{{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} プロパティを使用します。ストロークの長方形を描くには {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect")}} を使用して行われます。
+これまで、塗りつぶされた長方形の描画について見てきましたが、輪郭だけの長方形（グラフィックデザインでは**ストローク**と呼びます）を描画することも可能です。ストロークに必要な色を設定するには、 {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} プロパティを使用します。ストロークの長方形を描くには {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect")}} を使用して行われます。
 
 1. 前の例に以下のものを追加してください。また、前の JavaScript の行の下に追加してください。
 
@@ -207,9 +204,9 @@ ctx.fillRect(0, 0, width, height);
 
 以下の節すべてにおいて、いくつかの共通のメソッドとプロパティを使用します。
 
-- {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} — キャンバス上で現在ペンがあるこの点からパスの描画を開始します。新しいキャンバスには、ペンは (0, 0) から開始されます。
+- {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} — キャンバス上で現在ペンがある点からパスの描画を開始します。新しいキャンバスの場合、ペンは (0, 0) から開始されます。
 - {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} — ペンをキャンバス上の異なる点に移動させると、線を記録したりトレースしたりせずに、ペンは新しい位置に「ジャンプ」します。
-- {{domxref("CanvasRenderingContext2D.fill", "fill()")}} — これまでなぞったパスを埋めて、塗りつぶした図形を描きます。
+- {{domxref("CanvasRenderingContext2D.fill", "fill()")}} — これまでなぞったパスの中身を塗りつぶして、塗りつぶした図形を描きます。
 - {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} — これまでに描いたパスに沿ってストロークを描き、アウトライン図形を描きます。
 - また、長方形だけでなく、パスに対しても `lineWidth` や `fillStyle`/`strokeStyle` のような機能を使用することができます。
 
@@ -227,7 +224,7 @@ ctx.fill();
 
 キャンバスには正三角形を描いてみましょう。
 
-1. まずはじめに、以下のヘルパー関数をコードの一番下に追加してください。これは度数の値をラジアンに変換するもので、 JavaScript で角度の値を指定する必要があるときは常にラジアン単位で指定されますが、人間は通常度数で考えるので有用です。
+1. まずはじめに、以下のヘルパー関数をコードの一番下に追加してください。これは度数の値をラジアンに変換するもので、 JavaScript で角度の値を指定する必要があるときは、常にラジアン単位で指定しますが、人間は通常度数で考えるので有用です。
 
    ```js
    function degToRad(degrees) {
@@ -260,12 +257,12 @@ ctx.fill();
    次に、この正三角形の高さを、簡単な三角法を使用して算出します。基本的には、三角形は下向きに描かれています。正三角形の角度は常に 60 度です。高さを計算するには、正三角形を真ん中から 2 つに分割し、それぞれ 90 度、 60 度、 30 度の角度を持つようにすればいいのです。それぞれの辺は次のように呼びます。
 
    - 一番長い辺は、**斜辺 (hypotenuse)** と呼ばれます。
-   - 60度の角度の横にある辺は、**隣辺 (adjacent)** と呼ばれています。これは、先ほど引いた線の半分なので、50ピクセルであることが分かっています。
+   - 60 度の角度の横にある辺は、**隣辺 (adjacent)** と呼ばれています。これは、先ほど引いた線の半分なので、50ピクセルであることが分かっています。
    - 60度の角と反対側にある辺は、**対辺 (opposite)** と呼ばれています。これが計算したい三角形の高さになります。
 
    ![角と辺にラベル付けされた下向きの正三角形。上部の水平線は「隣辺」とラベル付けされている。隣接する線の中央から「対辺」とラベル付けされた垂直な点線が三角形を分割し、2つの等しい直角三角形が作成される。三角形の右辺は、「対辺」と書かれた行によって形成された直角三角形の斜辺であるため、「斜辺」と書かれる。三角形のすべての三辺の長さが同じであるのに対し、斜辺は直角三角形の最も長い辺となる。](trigonometry.png)
 
-   三角測量の基本的な公式の1つは、隣接する角度の長さに角度の正接（タンジェント）を掛けたものは、その反対側に等しいという状態です。したがって、 `50 * Math.tan(degToRad(60))` と結論づけられます。 {{jsxref("Math.tan()")}} はラジアン単位の入力値を想定しているので、 60 度をラジアンに変換するために `degToRad()` 関数を使用しています。
+   三角測量の基本的な公式の 1 つは、隣辺の長さに角度の正接（タンジェント）を掛けたものは、対辺に等しいということです。したがって、 `50 * Math.tan(degToRad(60))` といえます。 {{jsxref("Math.tan()")}} はラジアン単位の入力値を想定しているので、 60 度をラジアンに変換するために `degToRad()` 関数を使用しています。
 
 4. 高さが計算できたので、 `(100, 50 + triHeight)` へもう一本線を引きます。X 座標は単純で、前に設定した 2 つの X 値の中間の値でなければなりません。一方 Y 値は、三角形の頂点がキャンバスの頂点から 50 ピクセル離れていることが分かっているため、50 に三角形の高さを足した値でなければなりません。
 5. 次の行は、三角形の開始点まで戻る線を描きます。
@@ -287,7 +284,7 @@ ctx.fill();
    `arc()` は 6 つの引数を取ります。最初の 2 つは円弧の中心の位置を指定します (それぞれ X と Y)。3 番目は円の半径、4 番目と 5 番目は円を描く開始角度と終了角度を指定し（つまり 0 と 360 度を指定すると完全な円になります）、6 番目は円を反時計回りに描くか（反時計回り）時計回りに描くか（`false` は時計回り）を定義します。
 
    > [!NOTE]
-   > 0度は水平方向で右側です。
+   > 0 度は水平方向で右側です。
 
 2. もうひとつ、円弧を加えてみましょう。
 
@@ -302,7 +299,7 @@ ctx.fill();
    こちらのパターンもとてもよく似ていますが、 2 つの違いがあります。
 
    - `arc()` の最後の引数を `true` に設定しています。これは、反時計回りに弧を描くという意味で、たとえ弧が -45 度から始まって 45 度で終わるように指定されていても、この部分の内側ではなく 270 度の周囲に弧を描くということになります。もし、 `true` を `false` に変更してからコードを再実行すると、 90 度の輪切りだけが描画されます。
-   - fill()`を呼び出す前に、円の中心に線を引いています。これは、パックマンスタイルの切り抜きレンダリングを得ることを意味しています。この行を削除して（試してみてください！）コードを再実行すると、円弧の開始点と終了点の間で円の端が切り落とされただけの状態になります。これは、キャンバスのもう一つの重要な点を示しています。不完全なパス（つまり、閉じられていないパス）を塗りつぶそうとすると、ブラウザーは始点と終点の間を直線で埋めてから、それを塗りつぶします。
+   - `fill()` を呼び出す前に、円の中心に線を引いています。これは、パックマンスタイルの切り抜きレンダリングになります。この行を削除して（試してみてください！）コードを再実行すると、円弧の開始点と終了点の間で円の端が切り落とされただけの状態になります。これは、キャンバスのもう一つの重要な点を示しています。不完全なパス（つまり、閉じられていないパス）を塗りつぶそうとすると、ブラウザーは始点と終点の間を直線で埋めてから、それを塗りつぶします。
 
 最終的には以下のような例となります。
 
@@ -316,7 +313,7 @@ ctx.fill();
 
 ### テキスト
 
-キャンバスには、テキストを描画するための機能も保有されています。これらを簡単に調べてみましょう。キャンバステンプレート（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）を新しくコピーし、そこに新しい例を描画することから始めましょう。
+キャンバスには、テキストを描画するための機能あります。これらを簡単に探検してみましょう。キャンバスのテンプレート（[1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)）を新しくコピーし、そこに新しい例を描画することから始めましょう。
 
 テキストは2つのメソッドを使用して描画されます。
 
@@ -325,7 +322,7 @@ ctx.fill();
 
 どちらも基本的な使い方として、描画する文字列と、テキストの描画を開始する点の X 座標と Y 座標の 3 つのプロパティを取ります。これは、**テキストボックス**（文字通り、描画するテキストを囲むボックス）の**左下**隅となりますが、他の描画処理は左上隅から開始する傾向があるので混乱するかもしれません。気を付けてください。
 
-また、テキスト レンダリングをコントロールするのに役立つプロパティもいくつかあります。このプロパティは、CSSの{{cssxref("font")}}プロパティと同じ構文を値として受け取ります。
+また、テキストのレンダリングを制御するのに役立つプロパティも、 {{domxref("CanvasRenderingContext2D.font", "font")}} をはじめとしていくつかあります。このプロパティは、 CSS の {{cssxref("font")}} プロパティと同じ構文を値として受け取ります。
 
 キャンバスのコンテンツはスクリーンリーダーに対するアクセシビリティがありません。キャンバスに描かれたテキストは DOM では利用できませんが、アクセシビリティを確保するためには利用できるようにする必要があります。この例では、テキストを `aria-label` の値として記載しています。
 
@@ -368,9 +365,9 @@ canvas.setAttribute("aria-label", "Canvas text");
    image.src = "firefox.png";
    ```
 
-   ここでは {{domxref("HTMLImageElement.Image()", "Image()")}} コンストラクターを使用して、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成しています。返されるオブジェクトは、既存の {{htmlelement("img")}} 要素への参照を取得したときに返されるオブジェクトと同じ型です。次に、その [`src`](/ja/docs/Web/HTML/Element/img#src) 属性を、Firefox ロゴ画像と同じになるように設定します。この時点で、ブラウザーは画像の読み込みを開始します。
+   ここでは新しい {{domxref("HTMLImageElement")}} オブジェクトを、 {{domxref("HTMLImageElement.Image()", "Image()")}} コンストラクターを使用して作成しています。返されるオブジェクトは、既存の {{htmlelement("img")}} 要素への参照を取得したときに返されるオブジェクトと同じ型です。次に、その [`src`](/ja/docs/Web/HTML/Element/img#src) 属性を、 Firefox のロゴ画像と同じになるように設定します。この時点で、ブラウザーは画像の読み込みを開始します。
 
-3. ここで、`drawImage()` を使用して画像を埋め込むことができますが、最初に画像ファイルが読み込まれたことを確認する必要があり、そうでなければコードは失敗してしまいます。これは `load` イベントを使用して実現することができます。このイベントは画像の読み込みが完了したときにのみ発行されます。前のブロックの下に、以下のブロックを追加してください。
+3. ここで、 `drawImage()` を使用して画像を埋め込むことができますが、最初に画像ファイルが読み込まれたことを確認する必要があり、そうでなければコードは失敗してしまいます。これは `load` イベントを使用して実現することができます。このイベントは画像の読み込みが完了したときにのみ発行されます。前のブロックの下に、以下のブロックを追加してください。
 
    ```js
    image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
@@ -378,7 +375,7 @@ canvas.setAttribute("aria-label", "Canvas text");
 
    今、ブラウザーで例を読み込むと、キャンバスに埋め込まれた画像が表示されるはずです。
 
-4. でも、まだあります。 画像の一部分だけを表示したり、サイズを変更したりしたい場合はどうすればよいのでしょうか。 `drawImage()` のより複雑なバージョンを使用すれば、どちらも可能です。 `ctx.drawImage()` の行を次のように更新してください。
+4. でも、まだあります。 画像の一部だけを表示したり、サイズを変更したりしたい場合はどうすればよいのでしょうか。 `drawImage()` のより複雑なバージョンを使用すれば、どちらも可能です。 `ctx.drawImage()` の行を次のように更新してください。
 
    ```js
    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
@@ -409,7 +406,7 @@ canvas.setAttribute("aria-label", "Canvas text");
 
 ### ループの作成
 
-キャンバスでループを使うのはなかなか楽しいものです。他の JavaScript コードと同じように、[`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) （または他の種類のの）ループの中でキャンバスのコマンドを実行することができます。
+キャンバスでループを使うのはなかなか楽しいものです。他の JavaScript コードと同じように、 [`for`](/ja/docs/Web/JavaScript/Reference/Statements/for) （または他の種類のの）ループの中でキャンバスのコマンドを実行することができます。
 
 簡単な例を作ってみましょう。
 
@@ -649,7 +646,7 @@ loop();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app/index.html", '100%', 600)}}
 
-最も興味深い部分を見ていきましょう。まず最初に、マウスの X と Y の座標と、クリックされているかどうかを `curX`、`curY`、`pressed` という 3 つの変数で記録しています。マウスが移動したら、 `mousemove` イベントハンドラーとして設定された関数を発行し、現在の X と Y の値を取得します。また、`mousedown` と `mouseup` イベントハンドラーを使用して、マウスボタンが押されたときに `pressed` の値を `true` に変更し、離したときに再び `false` に戻しています。
+最も興味深い部分を見ていきましょう。まず最初に、マウスの X と Y の座標と、クリックされているかどうかを `curX`、`curY`、`pressed` という 3 つの変数で記録しています。マウスが移動したら、 `onmousemove` イベントハンドラーとして設定された関数を発行し、現在の X と Y の値を取得します。また、`onmousedown` と `onmouseup` イベントハンドラーを使用して、マウスボタンが押されたときに `pressed` の値を `true` に変更し、離したときに再び `false` に戻しています。
 
 ```js
 let curX;
@@ -716,11 +713,11 @@ WebGL は [OpenGL](/ja/docs/Glossary/OpenGL) (Open Graphics Library) に基づ�
 
 ### 立方体の作成
 
-WebGLライブラリーを使って何かを作成する簡単な例を見てみましょう。ここでは、最も人気のあるものの 1 つである [Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) を選んでみましょう。このチュートリアルでは、先ほど見た 3D の回転する立方体を作成します。
+WebGL ライブラリーを使って何かを作成する簡単な例を見てみましょう。ここでは、最も人気のあるものの 1 つである [Three.js](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) を選んでみましょう。このチュートリアルでは、先ほど見た 3D の回転する立方体を作成します。
 
 1. まず、新しいフォルダーに [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) をローカルにコピーし、同じフォルダーに [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) をコピーして保存してください。これは、後で立方体の表面テクスチャとして使用する画像です。
 2. 次に、 `script.js` というファイルを新規に作成し、これも先ほどと同じフォルダーに保存します。
-3. 次に、Three.js ライブラリーがインストールしてある必要があります。[Three.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)で記述されている環境構築の段階に従って、Three.js が期待通りに動作するようにしてください。
+3. 次に、 Three.js ライブラリーがインストールしてある必要があります。[Three.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)で記述されている環境構築の段階に従って、Three.js が期待通りに動作するようにしてください。
 4. これで `three.js` をページに割り当てることができたので、これを使用する JavaScript を `script.js` に書き始めることができます。まず、新しいシーンを作成することから始めましょう。`script.js` ファイルに以下のように追加してください。
 
    ```js
@@ -843,4 +840,4 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 - [Violent theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) — 音声を生成するためにウェブオーディオ API を使用し、それと一緒に美しく視覚化するためにキャンバスを使用します。
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — ウェブオーディオ API からのリアルタイムの音声データを視覚化するためにキャンバスを使用します。
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}

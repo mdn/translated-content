@@ -269,7 +269,7 @@ navigator.mediaDevices
 - `<audio>` 要素は `<video>` 要素と同じような方法で字幕を持つことができません。 Ian Devlin による [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio) で、役立つ情報や作業があります。
 - この要素を対応しているブラウザーで代替コンテンツをテストするには、`<audio>` を `<notanaudio>` のような存在しない要素に置き換えることで行うことができます。
 
-HTML の `<audio>` 要素の使用に関する良い情報源として、[映像および音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)の初心者向けチュートリアルがあります。
+HTML の `<audio>` 要素の使用に関する良い情報源として、 [HTML 動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)の初心者向けチュートリアルがあります。
 
 ### CSS でのスタイル付け
 
@@ -466,5 +466,5 @@ elem.audioTrackList.onremovetrack = (event) => {
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
-- [学習りゅいき: 動画及び音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [学習領域: HTML 動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [ブラウザーに依存しない音声の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
