@@ -7,7 +7,7 @@ slug: WebAssembly/JavaScript_interface/instantiate_static
 
 **`WebAssembly.instantiate()`** 允许你编译和实例化 WebAssembly 代码。这个方法有两个重载方式：
 
-- 第一种主要重载方式使用 WebAssembly 二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 `Promise` 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.
+- 第一种主要重载方式使用 WebAssembly 二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays) 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 `Promise` 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.
 - 第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 `Promise` 携带一个 `Module`的实例化对象 `Instance`. 如果这个 `Module` 已经被编译了或者是从缓存中获取的 ( [retrieved from cache](/zh-CN/docs/WebAssembly/Caching_modules)), 那么这种重载方式是非常有用的。
 
 > [!WARNING]
@@ -24,9 +24,9 @@ Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
 #### 参数
 
 - _bufferSource_
-  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
+  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
 - _importObject_ {{optional_inline}}
-  - : 一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出 [WebAssembly.LinkError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError)。
+  - : 一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出 [WebAssembly.LinkError](/zh-CN/docs/WebAssembly/JavaScript_interface/LinkError)。
 
 #### 返回值
 

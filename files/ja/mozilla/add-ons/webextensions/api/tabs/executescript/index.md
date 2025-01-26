@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 
 JavaScript のコードをページに挿入します。
 
-コードを挿入できるページの URL は、[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な [host パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)、または [activeTab パーミッション](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)が必要です。
+コードを挿入できるページの URL は、[マッチパターン](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) により指定できます。 つまり、URL の scheme 部は、"http", "https", "file", "ftp" のいずれかでなければなりません。そして、その URL に対する明示的な [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)、または [activeTab パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)が必要です。
 
 また、自らの拡張機能パッケージに含まれるページに対してであれば、次の方法でコードを挿入することも可能です。
 
@@ -61,7 +61,7 @@ var executing = browser.tabs.executeScript(
 
 オブジェクト配列を使って fulfilled 状態にされる [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。
 
-スクリプトの結果とは最後に評価された文のことです。これは、[ウェブコンソール](/ja/docs/Tools/Web_Console)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
+スクリプトの結果とは最後に評価された文のことです。これは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
 
 ```js
 var foo = "my result";

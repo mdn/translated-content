@@ -194,6 +194,6 @@ slug: Web/HTML/Element/ol
 - `<ol>` 요소와 유용하게 사용할 수 있는 CSS 속성
 
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
-  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxref("line-height")}}
   - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.

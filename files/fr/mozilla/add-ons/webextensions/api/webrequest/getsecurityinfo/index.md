@@ -5,13 +5,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 
 {{AddonSidebar}}
 
-Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossaire/TLS) associée à une demande particulière..
+Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossary/TLS) associée à une demande particulière..
 
-Vous passez à cette fonction la `requestId` pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
+Vous passez à cette fonction la `requestId` pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
 
 Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La `requestId` peut être trouvée dans l'objet `details` object qui est passé dans l'écouteur.
 
-Vous devez également passer l'option "blocking" à `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest` (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour le hôte).
+Vous devez également passer l'option "blocking" à `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest` (la permission "webRequest" et la [permission hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour le hôte).
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se résout en un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
 
 ## Compatibilité des navigateurs
 

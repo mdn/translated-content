@@ -84,7 +84,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Mejora de la navegación de páginas con referencias de ARIA](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011).
-- [Mejorando la accesibilidad de los formularios](/es/docs/Web/Accessibility/ARIA/forms)
+- [Mejorando la accesibilidad de los formularios](/es/docs/conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793)
   - : ¡ARIA no es solo para contenido dinámico! Aprenda a mejorar la accesibilidad de los formularios HTML utilizando atributos ARIA adicionales.
 
 ## ARIA para widgets con scripts
@@ -122,4 +122,4 @@ Las siguientes charlas son una excelente manera de entender ARIA:
 
 ## Temas relacionados
 
-[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Web/Guide/AJAX), [JavaScript](/es/docs/Web/JavaScript)
+[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/es/docs/Web/JavaScript)

@@ -189,7 +189,8 @@ a:focus {
 
 ## JavaScript 示例
 
-> ** 备注：** 在以下场景之后，应注意过渡的使用：
+> [!NOTE]
+> 在以下场景之后，应注意过渡的使用：
 >
 > - 使用 `.appendChild()` 向 DOM 中添加元素
 > - 移除元素的 `display: none;` 属性

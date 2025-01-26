@@ -56,15 +56,15 @@ padding-block-end: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_block_end_padding_for_vertical_text
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_block_end_padding_for_vertical_text
 div {
   background-color: yellow;
   width: 120px;
@@ -80,7 +80,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("縦書きテキストにおけるブロック方向の末尾のパディングの設定", 140, 140)}}
+{{EmbedLiveSample("Setting_block_end_padding_for_vertical_text", 140, 140)}}
 
 ## 仕様書
 

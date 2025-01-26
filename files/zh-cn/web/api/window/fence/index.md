@@ -38,5 +38,5 @@ window.fence.reportEvent({
 
 ## 参见
 
-- developers.google.com 上的[围栏框架](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- developers.google.com 上的[隐私沙盒](https://developers.google.com/privacy-sandbox)
+- developers.google.com 上的[围栏框架](https://developers.google.cn/privacy-sandbox/private-advertising/fenced-frame)
+- developers.google.com 上的[隐私沙盒](https://developers.google.cn/privacy-sandbox)

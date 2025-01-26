@@ -30,17 +30,17 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 
 ### 面向纯新手
 
-如果你想学习 JavaScript，却从未接触过 JavaScript 或编程，你可以投入到我们的 [JavaScript 主题学习区](/zh-CN/docs/Learn/JavaScript)。下面列出了这部分的所有章节：
+如果你想学习 JavaScript，却从未接触过 JavaScript 或编程，你可以投入到我们的 [JavaScript 主题学习区](/zh-CN/docs/Learn_web_development/Core/Scripting)。下面列出了这部分的所有章节：
 
-- [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
+- [JavaScript 第一步](/zh-CN/docs/Learn_web_development/Core/Scripting)
   - : 回答一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，还谈及如变量、字符串、数字、数组等 JavaScript 关键特性。
-- [创建 JavaScript 代码块](/zh-CN/docs/Learn/JavaScript/Building_blocks)
+- [创建 JavaScript 代码块](/zh-CN/docs/Learn_web_development/Core/Scripting)
   - : 继续介绍 JavaScript 的关键基本特性，将注意力转向常见的代码块类型，如条件语句、循环、函数、事件等。
-- [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
+- [介绍 JavaScript 对象](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : 如果你想进一步提高对语言的了解并编写出更高效的代码，理解 JavaScript 面向对象的本质很重要，因此我们为你准备了这个模块。
-- [异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous)
+- [异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
   - : 探讨异步 JavaScript、为什么它很重要、如何使用它有效地处理潜在的阻塞操作（如从服务器获取资源）。
-- [客户端 web API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)
+- [客户端 web API](/zh-CN/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : 探讨 API 是什么、如何使用一些开发工作中最常见的 API。
 
 ### JavaScript 指南
@@ -50,7 +50,7 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 
 ### 中级
 
-- [理解客户端 Javascript 框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [理解客户端 Javascript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript 框架是现代前端 Web 开发必不可少的一部分，为开发者构建可扩展、交互式的 Web 应用程序提供了经过验证的工具。这个模块讨论一些客户端框架如何工作以及如何集成到工具集的基础背景知识，接着是一个讨论现在最流行框架的系列教程。
 - [JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Language_overview)
   - : JavaScript 基础语法和语义概述：帮助来自其他编程语言的读者加速学习。
@@ -65,7 +65,7 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 
 ### 高级
 
-- [继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
   - : 解释被广泛误解与低估的基于原型的继承。
 - [内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)
   - : JavaScript 的内存生命周期和垃圾回收。

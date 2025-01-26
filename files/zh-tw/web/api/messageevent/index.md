@@ -9,9 +9,9 @@ slug: Web/API/MessageEvent
 
 ## 屬性
 
-| 屬性   | 形態                                                                                                               | 描述               |
-| ------ | ------------------------------------------------------------------------------------------------------------------ | ------------------ |
-| `data` | {{ domxref("DOMString") }} \| {{ domxref("Blob") }} \| [`ArrayBuffer`](/zh_tw/JavaScript_typed_arrays/ArrayBuffer) | 伺服器傳來的資料。 |
+| 屬性   | 形態                                                                                                                                    | 描述               |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `data` | {{ domxref("DOMString") }} \| {{ domxref("Blob") }} \| [`ArrayBuffer`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | 伺服器傳來的資料。 |
 
 ## 規範
 
@@ -23,4 +23,4 @@ slug: Web/API/MessageEvent
 
 ## 參見
 
-- [`WebSocket`](/zh_tw/WebSockets/WebSockets_reference/WebSocket)
+- [`WebSocket`](/zh-TW/WebSockets/WebSockets_reference/WebSocket)

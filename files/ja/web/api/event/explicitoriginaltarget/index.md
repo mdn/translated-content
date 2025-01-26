@@ -50,4 +50,4 @@ _これは Mozilla 固有のプロパティであり、現在のどの仕様に�
 
 ## 関連情報
 
-- [イベントターゲットの比較](/ja/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [イベントターゲットの比較](/ja/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

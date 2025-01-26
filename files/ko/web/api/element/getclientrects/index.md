@@ -5,9 +5,9 @@ slug: Web/API/Element/getClientRects
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.
+{{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.
 
-대부분의 엘리먼트는 각각 하나의 border box만을 갖지만, 여러 줄의 [인라인 엘리먼트](/ko/docs/Web/HTML/Inline_elements)(예를 들면, 여러 줄의 {{HTMLElement("span")}} 엘리먼트)는 각각의 줄을 감싸는 테두리 박스를 갖습니다.
+대부분의 엘리먼트는 각각 하나의 border box만을 갖지만, 여러 줄의 [인라인 엘리먼트](/ko/docs/Glossary/Inline-level_content)(예를 들면, 여러 줄의 {{HTMLElement("span")}} 엘리먼트)는 각각의 줄을 감싸는 테두리 박스를 갖습니다.
 
 ## 구문
 

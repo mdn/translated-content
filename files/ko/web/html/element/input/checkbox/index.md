@@ -53,7 +53,7 @@ l10n:
 
 - `value`
 
-  - : The `value` 특성은 {{HTMLElement("input")}} 요소가 공유하는 특성입니다. 하지만, `checkbox` 유형의 `input`에서는 특별한 용도로 사용됩니다. 폼이 제출될 때, 현재 활성화되어 있는 체크박스만이 서버 측에 전달됩니다. 그리고 `value` 특성에 지정된 값이 바로 전달되는 값이 됩니다. 만약 `value` 특성의 값이 지정되어 있지 않다면, 서버 측에는 기본 값으로 `on`이 전달됩니다. 이는 위의 [Value](#Value) 구획에서도 설명하고 있습니다.
+  - : The `value` 특성은 {{HTMLElement("input")}} 요소가 공유하는 특성입니다. 하지만, `checkbox` 유형의 `input`에서는 특별한 용도로 사용됩니다. 폼이 제출될 때, 현재 활성화되어 있는 체크박스만이 서버 측에 전달됩니다. 그리고 `value` 특성에 지정된 값이 바로 전달되는 값이 됩니다. 만약 `value` 특성의 값이 지정되어 있지 않다면, 서버 측에는 기본 값으로 `on`이 전달됩니다. 이는 위의 [Value](#value) 구획에서도 설명하고 있습니다.
 
 ## 체크박스 Input 사용하기
 
@@ -170,7 +170,7 @@ function updateDisplay() {
 
 ## 유효성 검증하기
 
-체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/Guide/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 [`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
+체크박스는 모든 {{HTMLElement("input")}} 요소들에 제공되는 [유효성 검증](/ko/docs/Web/HTML/Constraint_validation) 을 지원합니다. 하지만 대부분의 {{domxref("ValidityState")}} 값은 `false`입니다. 만약 체크박스가 [`required`](/ko/docs/Web/HTML/Element/input#required) 특성을 가졌지만 활성화되지 않은 경우에, {{domxref("ValidityState.valueMissing")}} 값은 `true`가 됩니다.
 
 ## 예제
 

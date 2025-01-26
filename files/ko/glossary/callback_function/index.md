@@ -27,7 +27,7 @@ console.log(value);
 
 `doSomething`이 동기식으로 콜백을 호출하는 경우, `value = 2`가 동기식으로 실행되기 때문에 마지막 코드 실행문(console.log 문)은 `2`를 기록합니다. 그렇지 않고, 콜백 함수가 비동기인 경우 `value = 2`가 `console.log` 문 다음에 실행되기 때문에 마지막 코드 실행문(console.log 문)은 `1`를 기록합니다.
 
-동기식 콜백(synchronous callbacks)의 예는 {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}에 전달된 콜백 함수가 포함됩니다. 비동기식 콜백(asynchronous callbacks)은 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 및 {{jsxref("Promise.prototype.then()")}}에 전달된 콜백 함수들을 예제가 될 수 있습니다.
+동기식 콜백(synchronous callbacks)의 예는 {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.forEach()")}}에 전달된 콜백 함수가 포함됩니다. 비동기식 콜백(asynchronous callbacks)은 [`setTimeout()`](/ko/docs/Web/API/Window/setTimeout) 및 {{jsxref("Promise.prototype.then()")}}에 전달된 콜백 함수들을 예제가 될 수 있습니다.
 
 [promises 사용](/ko/docs/Web/JavaScript/Guide/Using_promises#timing) 가이드에는 비동기 콜백의 타이밍에 대한 자세한 정보가 있습니다.
 

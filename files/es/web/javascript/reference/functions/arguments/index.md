@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Functions/arguments
 > Si estás escribiendo código compatible con ES6, entonces se deben preferir los {{jsxref("Functions/rest_parameters", "parámetros resto")}}.
 
 > [!NOTE]
-> "Similar a Array" significa que `arguments` tiene una propiedad {{jsxref("Functions/arguments/length", "lenght")}} y propiedades indexadas desde cero, pero no tiene métodos integrados de {{jsxref("Array")}} como {{jsxref("Array.forEach", "forEach()")}} o {{jsxref("Array.map", "map()")}}. Ve la [§Descripción](#Descripción) para obtener más detalles.
+> "Similar a Array" significa que `arguments` tiene una propiedad {{jsxref("Functions/arguments/length", "lenght")}} y propiedades indexadas desde cero, pero no tiene métodos integrados de {{jsxref("Array")}} como {{jsxref("Array.forEach", "forEach()")}} o {{jsxref("Array.map", "map()")}}. Ve la [§Descripción](#descripción) para obtener más detalles.
 
 El objeto `arguments` es una variable local disponible en todas las funciones que no son {{jsxref("Functions/Arrow_functions", "funciones flecha")}}. Puedes hacer referencia a los argumentos de una función dentro de esa función utilizando su objeto `arguments`. Tiene entradas para cada argumento con el que se llamó a la función, con el índice de la primera entrada en `0`.
 
@@ -151,7 +151,7 @@ function foo(...args) {
 foo(1, 2, 3); // [1, 2, 3]
 ```
 
-Si bien la presencia de parámetros `rest`, predeterminados o desestructurados no altera [el comportamiento del objeto `arguments` en el código de modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode#Haciendo_eval_y_arguments_más_simples), existen sutiles diferencias para el código no estricto.
+Si bien la presencia de parámetros `rest`, predeterminados o desestructurados no altera [el comportamiento del objeto `arguments` en el código de modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode#haciendo_eval_y_arguments_más_simples), existen sutiles diferencias para el código no estricto.
 
 En el código de modo estricto, el objeto `arguments` se comporta de la misma manera independientemente de que se pasen parámetros `rest`, predeterminados o desestructurados a una función. Es decir, asignar nuevos valores a las variables en el cuerpo de la función no afectará al objeto `arguments`. La asignación de nuevas variables al objeto `arguments` tampoco afectará el valor de las variables.
 

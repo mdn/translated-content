@@ -32,7 +32,7 @@ console.assert(afirmación, msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : Objetos de JavaScript con el que reemplaza las cadenas dentro de `msg`. Esto te da más control sobre el formato de salida.
 
-Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#Outputting_text_to_the_console) en la documentación de {{domxref("console")}}.
+Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#outputting_text_to_the_console) en la documentación de {{domxref("console")}}.
 
 ## Especificaciones
 
@@ -44,6 +44,6 @@ Para más detalles ver [Salida de texto a la consola](/es/docs/Web/API/console#O
 
 ## Ver también
 
-- [Opera Dragonfly documentación: Consola](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentación: Consola](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN: Usando F12 Herramientas de Consola para ver Errores y Estados](http://msdn.microsoft.com/library/gg589530)
 - [Herramientas de Desarrollo de Chrome: Usando la Consola](https://developer.chrome.com/docs/devtools/console/)

@@ -21,7 +21,7 @@ slug: Web/API/TouchList
 
 ## 範例
 
-See the [example on the main Touch events article](/zh-TW/docs/DOM/Touch_events#Example).
+See the [example on the main Touch events article](/zh-TW/docs/Web/API/Touch_events#example).
 
 ## 規範
 
@@ -33,5 +33,5 @@ See the [example on the main Touch events article](/zh-TW/docs/DOM/Touch_events#
 
 ## 參見
 
-- [Touch events](/zh-TW/docs/DOM/Touch_events)
+- [Touch events](/zh-TW/docs/Web/API/Touch_events)
 - {{domxref("Document.createTouchList()")}}

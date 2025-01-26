@@ -5,7 +5,7 @@ slug: Web/API/WindowClient
 
 {{APIRef("Service Workers API")}}
 
-Интерфейс `WindowClient` [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API) представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.
+Интерфейс `WindowClient` [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API) представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.
 
 ## Методы
 
@@ -63,9 +63,9 @@ self.addEventListener("notificationclick", function (event) {
 
 ## Смотрите также
 
-- [Использование сервис-воркеров](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Использование сервис-воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Пример базового кода сервис-воркеров](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Использование веб-воркеров](/ru/docs/Web/Guide/Performance/Using_web_workers)
+- [Использование веб-воркеров](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Channel Messaging API](/ru/docs/Web/API/Channel_Messaging_API)

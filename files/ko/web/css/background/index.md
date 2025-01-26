@@ -110,7 +110,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
@@ -129,5 +129,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## 같이 보기
 
 - {{cssxref("box-decoration-break")}}
-- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [CSS 그레이디언트 사용하기](/ko/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [한 번에 여러 배경 사용하기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

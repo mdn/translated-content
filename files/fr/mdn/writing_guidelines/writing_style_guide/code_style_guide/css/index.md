@@ -40,7 +40,7 @@ Les directives suivantes couvrent la manière d'écrire les CSS pour les exemple
 
 ### N'utilisez pas de préprocesseurs
 
-N'utilisez pas la syntaxe des préprocesseurs, ex. [Sass](https://sass-lang.com/), [Less](http://lesscss.org/), ou [Stylus,](http://stylus-lang.com/) dans votre code d'exemple MDN. MDN documente le langage CSS classique, et l'utilisation de préprocesseurs ne sert qu'à élever la barre pour comprendre les exemples, ce qui peut potentiellement perdre les lecteurs.
+N'utilisez pas la syntaxe des préprocesseurs, ex. [Sass](https://sass-lang.com/), [Less](https://lesscss.org/), ou [Stylus,](http://stylus-lang.com/) dans votre code d'exemple MDN. MDN documente le langage CSS classique, et l'utilisation de préprocesseurs ne sert qu'à élever la barre pour comprendre les exemples, ce qui peut potentiellement perdre les lecteurs.
 
 ### N'utilisez pas de méthodologies CSS spécifiques
 
@@ -216,7 +216,7 @@ Lorsque vous incluez différents ensembles de styles pour différentes tailles d
 }
 ```
 
-Cela présente de nombreux avantages, exposés dans notre article [Priorité aux mobiles](/fr/docs/Web/Progressive_web_apps/Responsive/Mobile_first).
+Cela présente de nombreux avantages, exposés dans notre article [Priorité aux mobiles](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
 
 ## Sélecteurs
 

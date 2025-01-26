@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial
 
 {{DefaultAPISidebar("WebGL")}}
 
-[WebGL](http://www.khronos.org/webgl/) 使得网页在支持 HTML {{HTMLElement("canvas")}} 标签的浏览器中，不需要使用任何插件，便可以使用基于 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 的 API 在 canvas 中进行 3D 渲染。WebGL 程序由 javascript 的控制代码，和在计算机的图形处理单元（GPU, Graphics Processing Unit）中执行的特效代码 (shader code，渲染代码) 组成。WebGL 元素可以和其他 HTML 元素混合，并且会和页面的其他部分或页面背景相合成。
+[WebGL](https://www.khronos.org/webgl/) 使得网页在支持 HTML {{HTMLElement("canvas")}} 标签的浏览器中，不需要使用任何插件，便可以使用基于 [OpenGL ES](https://www.khronos.org/opengles/) 2.0 的 API 在 canvas 中进行 3D 渲染。WebGL 程序由 javascript 的控制代码，和在计算机的图形处理单元（GPU, Graphics Processing Unit）中执行的特效代码 (shader code，渲染代码) 组成。WebGL 元素可以和其他 HTML 元素混合，并且会和页面的其他部分或页面背景相合成。
 
 此教程从基础开始讲解如何使用`<canvas>` 元素来画 WebGL 图形。提供的例子会让你对 WebGL 有更清晰的认识，并且会提供代码片段方便你构建自己的内容。
 

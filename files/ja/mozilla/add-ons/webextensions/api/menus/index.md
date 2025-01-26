@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザーでも動くコードを書くことできます。
 
-この API を使用するためには `menus` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 必要です。 `menus` の代わりにエイリアスの `contextMenus` を使用することができますが、もし使用するのであれば`browser.contextMenus` で API にアクセスしなければなりません。.
+この API を使用するためには `menus` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 必要です。 `menus` の代わりにエイリアスの `contextMenus` を使用することができますが、もし使用するのであれば`browser.contextMenus` で API にアクセスしなければなりません。
 
 この API は[`menus.getTargetElement()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)以外はコンテンツスクリプトからは使用できません。バックグラウンドページからは使えます。
 
@@ -34,7 +34,7 @@ If you have created more than one context menu item or more than one tools menu 
 
 ## アイコン
 
-If you've specified icons for your extension using the ["icons" manifest key](/ja/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
+If you've specified icons for your extension using the ["icons" manifest key](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), your menu item will display the specified icon next to its label. The browser will try to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display:
 
 ![](menus-2.png)
 

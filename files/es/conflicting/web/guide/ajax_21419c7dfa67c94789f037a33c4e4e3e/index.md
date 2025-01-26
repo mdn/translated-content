@@ -57,7 +57,7 @@ http_request.open('GET', 'http://www.example.org/algun.archivo', true);
 http_request.send();
 ```
 
-- El primer parámetro de la llamada a `open()` es el método HTTP request – GET, POST, HEAD o cualquier otro método que se quiera usar y sea aceptado por el servidor. El nombre del método se escribe en mayúsculas, sino algunos navegadores (como Firefox) podrían no procesar la petición. Para más información sobre los métodos HTTP request visitar [W3C specs](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)
+- El primer parámetro de la llamada a `open()` es el método HTTP request – GET, POST, HEAD o cualquier otro método que se quiera usar y sea aceptado por el servidor. El nombre del método se escribe en mayúsculas, sino algunos navegadores (como Firefox) podrían no procesar la petición. Para más información sobre los métodos HTTP request visitar [W3C specs](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html)
 - El segundo parámetro es el URL de la página que se esta pidiendo. Por medida de seguridad no es posible llamar páginas en dominios de terceras personas. Se debe saber el dominio exacto de todas las páginas o se obtendrá un error de 'permiso denegado' al llamar open(). Una falla común es acceder al sitio por domain.tld e intentar llamar las páginas como www\.domain.tld.
 - El tercer parámetro establece si la petición es asíncrona. Si se define `TRUE`, la ejecución de la función de JavaScript continuará aún cuando la respuesta del servidor no haya llegado. Por esta capacidad es la A en AJAX.
 
@@ -99,7 +99,7 @@ La lista completa de valores para la propiedad `readyState` es:
 
 ([Source](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/readystate_1.asp))
 
-Ahora es necesario revisar el código de status de la respuesta HTTP. La lista completa de códigos aparece en el [sitio de la W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). Para el próposito de este artículo sólo es importante el código `200 OK`.
+Ahora es necesario revisar el código de status de la respuesta HTTP. La lista completa de códigos aparece en el [sitio de la W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). Para el próposito de este artículo sólo es importante el código `200 OK`.
 
 ```
 if (http_request.status == 200) {
@@ -181,7 +181,7 @@ En este ejemplo:
 - La petición es realizada y después (`onreadystatechange`) la ejecución pasa a `alertContents()`;
 - `alertContents()` verifica si la respuesta fue recibida y si es OK, si es así utiliza `alert()` con el contenido de `test.html`.
 
-Puedes probar el ejemplo [aquí](http://www.w3clubs.com/mozdev/httprequest_test.html) y puedes ver el archivo de prueba [aquí](http://www.w3clubs.com/mozdev/test.html).
+Puedes probar el ejemplo [aquí](https://www.w3clubs.com/mozdev/httprequest_test.html) y puedes ver el archivo de prueba [aquí](https://www.w3clubs.com/mozdev/test.html).
 
 **Nota**: La línea `http_request.overrideMimeType('text/xml');` arriba causaría problemas en la consola de Javascript de Firefox 1.5b, como esta descrito en <https://bugzilla.mozilla.org/show_bug.cgi?id=311724>, si la página llamada por XMLHttpRequest no es XML válido (por ejemplo, si es texto).
 
@@ -216,6 +216,6 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 ```
 
-De esta manera se utiliza el objeto `XMLDocument` dado por `responseXML` y se usan métodos del DOM para acceder a la información contenida en el documento XML. El archivo `test.xml` se encuentra [aquí](http://www.w3clubs.com/mozdev/test.xml) y el script actualizado está [aquí](http://www.w3clubs.com/mozdev/httprequest_test_xml.html).
+De esta manera se utiliza el objeto `XMLDocument` dado por `responseXML` y se usan métodos del DOM para acceder a la información contenida en el documento XML. El archivo `test.xml` se encuentra [aquí](https://www.w3clubs.com/mozdev/test.xml) y el script actualizado está [aquí](https://www.w3clubs.com/mozdev/httprequest_test_xml.html).
 
-Para más información sobre los metodos del DOM, visita los documentos de la [implementación del DOM de Mozilla](http://www.mozilla.org/docs/dom/).
+Para más información sobre los metodos del DOM, visita los documentos de la [implementación del DOM de Mozilla](https://www.mozilla.org/docs/dom/).

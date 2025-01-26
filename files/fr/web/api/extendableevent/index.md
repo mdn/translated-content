@@ -95,8 +95,8 @@ self.addEventListener("install", function (event) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Un exemple de base pour un service worker](https://github.com/mdn/sw-test)
 - [Peut-on utiliser les service workers ?](https://jakearchibald.github.io/isserviceworkerready/)
 - [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Utiliser les web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)
+- [Utiliser les web workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)

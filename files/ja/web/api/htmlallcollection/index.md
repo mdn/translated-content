@@ -41,7 +41,7 @@ l10n:
 - 論理値コンテキストでは[偽値](/ja/docs/Glossary/Falsy)です。
 - [`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) は `"undefined"` です。
 
-これらの特別な動作によって、、次のようなコードを保証します。
+これらの特別な動作によって、次のようなコードを保証します。
 
 ```js
 if (document.all) {

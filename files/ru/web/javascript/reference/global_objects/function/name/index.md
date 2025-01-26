@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/name
 
 {{JSRef}}
 
-Read-only свойство **`name`** глобального объекта {{jsxref("Function")}} и его [экземпляров](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function#Function_instances) содержит название функции созданное во время определения функции или присваивания ссылки на функцию переменной, свойству, аргументу и т. п. Для анонимных функций это свойство может иметь значение `"anonymous"` или пустую строку `""`.
+Read-only свойство **`name`** глобального объекта {{jsxref("Function")}} и его [экземпляров](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function#function_instances) содержит название функции созданное во время определения функции или присваивания ссылки на функцию переменной, свойству, аргументу и т. п. Для анонимных функций это свойство может иметь значение `"anonymous"` или пустую строку `""`.
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}
 

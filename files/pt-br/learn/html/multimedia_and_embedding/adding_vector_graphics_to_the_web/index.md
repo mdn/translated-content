@@ -139,7 +139,7 @@ background-size: contain;
 
 Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers).
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
 
 ### How to include SVG code inside your HTML
 
@@ -154,7 +154,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 #### Pros
 
 - Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.
-- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/pt-BR/docs/Web/SVG/Attribute#Presentation_attributes) as a CSS property.
+- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/pt-BR/docs/Web/SVG/Attribute#presentation_attributes) as a CSS property.
 - Inlining SVG is the only approach that lets you use CSS interactions (like `:focus`) and CSS animations on your SVG image (even in your regular stylesheet.)
 - You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.
 

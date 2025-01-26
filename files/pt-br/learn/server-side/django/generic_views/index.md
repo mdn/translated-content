@@ -513,8 +513,8 @@ The code required for the URL mappers and the views should be virtually identica
 
 > [!NOTE]
 >
-> - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#Update_the_base_template) as we did when we updated the **All books** link.
-> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
+> - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#update_the_base_template) as we did when we updated the **All books** link.
+> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
 >
 >   ```django
 >   <p>

@@ -17,7 +17,7 @@ var connectionState = RTCPeerConnection.connectionState;
 
 ### Value
 
-O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
+O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum).
 
 <!-- TODO: page macro not supported: page("/pt-BR/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1) -->
 
@@ -44,4 +44,4 @@ var connectionState = pc.connectionState;
 - [Lifetime of a WebRTC session](/pt-BR/docs/Web/API/WebRTC_API/Session_lifetime)
 - {{domxref("RTCPeerConnection")}}
 - [`connectionstatechange`](/pt-BR/docs/Web/Events/connectionstatechange)
-- [WebRTC](/pt-BR/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/pt-BR/docs/Web/API/WebRTC_API)

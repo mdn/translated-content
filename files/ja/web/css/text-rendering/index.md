@@ -140,7 +140,7 @@ p {
 ## 関連情報
 
 - [`<canvas>` に文字を描く](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_Text_Decoration) モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) モジュール
 - 関連する CSS プロパティ
 
   - [`text-decoration`](/ja/docs/Web/CSS/text-decoration) (および [`text-decoration-line`](/ja/docs/Web/CSS/text-decoration-line), [`text-decoration-style`](/ja/docs/Web/CSS/text-decoration-style), [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness) などの個別指定プロパティ)

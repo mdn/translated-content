@@ -5,9 +5,9 @@ slug: Mozilla/Add-ons/WebExtensions/API
 
 {{AddonSidebar}}
 
-Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des [scripts d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) de l'extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une [action navigateur](/fr/Add-ons/WebExtensions/user_interface/Browser_action) ou [action de page](/fr/Add-ons/WebExtensions/user_interface/Page_actions), [barres latérales](/fr/Add-ons/WebExtensions/user_interface/barres_laterales), [pages d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages), ou [pages de nouvel onglet](/fr/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Certaines de ces APIs peuvent également être interrogées par des [scripts de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) de l'extension (voir la [liste dans le guide des scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) de l'extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une [action navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions), [barres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), ou [pages de nouvel onglet](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Certaines de ces APIs peuvent également être interrogées par des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts) de l'extension (voir la [liste dans le guide des scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)).
 
-Pour utiliser les APIs plus puissantes, vous devez en [demander la permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) dans le manifest.json de votre extension.
+Pour utiliser les APIs plus puissantes, vous devez en [demander la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans le manifest.json de votre extension.
 
 Vous pouvez accéder aux APIs en utilisant l'espace de noms `browser` :
 
@@ -40,7 +40,7 @@ Firefox implémente également ces API sous l'espace de noms Chrome à l'aide de
 
 Microsoft Edge utilise l'espace de noms `browser`, mais ne supporte pas encore les APIs asynchrones basées sur les promesses. Avec Edge, à l'heure actuelle, les API asynchrones doivent utiliser des fonctions de rappel.
 
-Tous les navigateurs ne sont pas compatibles avec toutes les APIs : pour de plus amples informations, consultez [la compatibilité navigateur pour les APIs JavaScript](/fr/Add-ons/WebExtensions/prise_en_charge_du_navigateur_pour_les_api_javascript).
+Tous les navigateurs ne sont pas compatibles avec toutes les APIs : pour de plus amples informations, consultez [la compatibilité navigateur pour les APIs JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
 Conseil : dans les listes d'API JavaScript, vous trouverez des exemples de codes courts qui illustrent la manière dont l'API est utilisée. Vous pouvez utiliser ces exemples, sans avoir besoin de créer une extension web, en utilisant la console de la [boîte à outils](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox). Par exemple, voici le premier exemple de code sur cette page fonctionnant dans la console de la boîte à outils dans Firefox Developpeur Edition :
 

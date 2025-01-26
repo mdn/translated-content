@@ -31,7 +31,7 @@ Este es un artículo general sobre el uso compartido de recursos de origen cruza
 
 ## Resumen funcional
 
-El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Authentication)) con las solicitudes.
+El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](/es/docs/Web/HTTP/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Authentication)) con las solicitudes.
 
 Los fallos de CORS provocan errores, pero por razones de seguridad, los detalles del error _no están disponibles para JavaScript_. Todo lo que el código sabe es que se ha producido un error. La única forma de determinar específicamente qué salió mal, es mirar en la consola del navegador para obtener más detalles.
 
@@ -423,7 +423,7 @@ La cabecera {{HTTPHeader("Access-Control-Allow-Credentials")}} indica si la resp
 Access-Control-Allow-Credentials: true
 ```
 
-Las [Solicitudes con credenciales](#Solicitudes_con_credenciales) se han tratado anteriormente.
+Las [Solicitudes con credenciales](#solicitudes_con_credenciales) se han tratado anteriormente.
 
 ### Access-Control-Allow-Methods
 
@@ -470,7 +470,7 @@ La cabecera de solicitud {{HTTPHeader("Access-Control-Request-Method")}} se util
 Access-Control-Request-Method: <method>
 ```
 
-Puede encontrar ejemplos de este uso [arriba](#Solicitudes_verificadas_previamente)
+Puede encontrar ejemplos de este uso [arriba](#solicitudes_verificadas_previamente)
 
 ### Access-Control-Request-Headers
 
@@ -480,7 +480,7 @@ La cabecera {{HTTPHeader("Access-Control-Request-Headers")}} se utiliza cuando s
 Access-Control-Request-Headers: <field-name>[, <field-name>]*
 ```
 
-Puede encontrar ejemplos de este uso [arriba](#Solicitudes_verificadas_previamente)
+Puede encontrar ejemplos de este uso [arriba](#solicitudes_verificadas_previamente)
 
 ## Especificaciones
 

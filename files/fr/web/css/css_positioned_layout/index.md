@@ -22,7 +22,7 @@ slug: Web/CSS/CSS_positioned_layout
 
 ## Guides
 
-- [Comprendre `z-index` en CSS](/fr/docs/Web/CSS/Comprendre_z-index)
+- [Comprendre `z-index` en CSS](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : Présente la notion de contexte d'empilement et explique comment fonctionne le tri sur z avec plusieurs exemples.
 
 ## Spécifications

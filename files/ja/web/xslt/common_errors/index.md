@@ -13,7 +13,7 @@ Firefox 6 以降では、公式の XSLT mimetype である `application/xslt+xml
 
 ### 名前空間
 
-XSLT 1.0 の名前空間は[`http://www.w3.org/1999/XSL/Transform`](http://www.w3.org/1999/XSL/Transform)です。IE の古いバージョンでは、異なる名前空間が使用されていました。 しかしこれらのバージョンでは、最終的に XSLT 1.0 仕様となったものと互換性のない XSLT のドラフト版も使用されていました。Firefox は公式の XSLT 1.0 バージョンのみをサポートしています。
+XSLT 1.0 の名前空間は[`http://www.w3.org/1999/XSL/Transform`](https://www.w3.org/1999/XSL/Transform)です。IE の古いバージョンでは、異なる名前空間が使用されていました。 しかしこれらのバージョンでは、最終的に XSLT 1.0 仕様となったものと互換性のない XSLT のドラフト版も使用されていました。Firefox は公式の XSLT 1.0 バージョンのみをサポートしています。
 
 ### 不足している機能
 

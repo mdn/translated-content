@@ -24,7 +24,7 @@ element-available(QName )
 
 ### 定義
 
-[XSLT 1.0 15](http://www.w3.org/TR/xslt#function-element-available)
+[XSLT 1.0 15](https://www.w3.org/TR/xslt#function-element-available)
 
 ### Gecko のサポート
 

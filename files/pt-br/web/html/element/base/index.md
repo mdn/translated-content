@@ -10,7 +10,7 @@ O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por 
 > [!NOTE]
 > Se multiplos elementos `<base>` forem especificados, apenas o primeiro valor de **href** e **target** serão utilizados, os demais serão ignorados.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ Metadata content.
+- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ Metadata content.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ There must be no closing tag.
 - _Permitted parent elements_ Any {{HTMLElement("head")}} that doesn't contain any other {{HTMLElement("base")}} element
@@ -18,7 +18,7 @@ O _elemento HTML Base_ (**\<base>**) especifica o endereço (URL) utilizada por 
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `href`
   - : O URL de base para ser usado em todo o documento para endereços URL relativos.Se este atributo for especificado, este elemento deve vir antes de quaisquer outros elementos com atributos cujos valores são URLs.Endereços (URLs) absolutos e relativos são permitidos (mas ver seção nota abaixo).

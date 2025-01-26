@@ -135,7 +135,7 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 
   - : さまざまな状態のフォームをスタイル設定するために利用できる、さまざまな UI 擬似クラスについて学びます。
 
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 
   - : セレクター API を使用すると、 JavaScript でセレクターを使用して DOM から要素ノードを取得できます。
 

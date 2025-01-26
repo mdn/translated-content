@@ -9,7 +9,7 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `version`{{deprecated_inline}}
   - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
@@ -34,7 +34,7 @@ Le DOCTYPE utilisé dans l'exemple suivant indique que le document est un docume
 
 ## Notes
 
-Puisque l'élément `<html>` est le premier élément dans un document, autre que les commentaires, il est désigné comme l'élément racine du document. Bien que cette balise soit implicite, ou non requise dans un document [HTML](/fr/docs/Web/HTML), il est requis dans un document [XHTML](/fr/docs/XHTML) (à la fois pour la balise ouvrante et pour la balise fermante).
+Puisque l'élément `<html>` est le premier élément dans un document, autre que les commentaires, il est désigné comme l'élément racine du document. Bien que cette balise soit implicite, ou non requise dans un document [HTML](/fr/docs/Web/HTML), il est requis dans un document [XHTML](/fr/docs/Glossary/XHTML) (à la fois pour la balise ouvrante et pour la balise fermante).
 
 ## Accessibilité
 

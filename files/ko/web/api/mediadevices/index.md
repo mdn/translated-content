@@ -15,7 +15,7 @@ slug: Web/API/MediaDevices
 
 - [`devicechange`](/ko/docs/Web/API/MediaDevices/devicechange_event)
   - : 사용자 컴퓨터에 미디어 입출력 장치가 추가되거나 제거됐을 때 발생합니다.
-    [`ondevicechange`](/ko/docs/Web/API/MediaDevices/ondevicechange) 속성으로도 사용할 수 있습니다.
+    [`ondevicechange`](/ko/docs/Web/API/MediaDevices/devicechange_event) 속성으로도 사용할 수 있습니다.
 
 ## 메서드
 
@@ -85,7 +85,7 @@ function errorMsg(msg, error) {
 
 ## 같이 보기
 
-- 인터페이스가 속한 [Media Capture and Streams API](/ko/docs/Web/API/Media_Streams_API)
+- 인터페이스가 속한 [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} 메서드를 정의하는 [Screen Capture API](/ko/docs/Web/API/Screen_Capture_API)
 - [WebRTC API](/ko/docs/Web/API/WebRTC_API)
 - 장치에 접근할 때 사용할 `MediaDevices` 객체의 참조를 반환하는 {{domxref("Navigator.mediaDevices")}}

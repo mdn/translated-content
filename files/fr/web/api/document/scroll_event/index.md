@@ -88,7 +88,7 @@ window.addEventListener("scroll", function (e) {
 
 ### Autres exemples
 
-Pour plus d'exemples similaires, voir l'évènement [resize](/fr/docs/Web/Events/resize#Example).
+Pour plus d'exemples similaires, voir l'évènement [resize](/fr/docs/Web/API/Window/resize_event#example).
 
 ## Spécifications
 

@@ -42,7 +42,7 @@ Les résultats indiqués ici sont génériques et, en pratique, peuvent varier e
 
 ### Utiliser `locales`
 
-Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare) varient selon les locales. Afin d'obtenir le bon ordre lexicographique dans votre application, il est nécessaire de spécifier la locale de l'utilisatrice ou l'utilisateur (et éventuellement des locales pour des cas de replis) en utilisant l'argument `locales`&nbsp;:
+Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) varient selon les locales. Afin d'obtenir le bon ordre lexicographique dans votre application, il est nécessaire de spécifier la locale de l'utilisatrice ou l'utilisateur (et éventuellement des locales pour des cas de replis) en utilisant l'argument `locales`&nbsp;:
 
 ```js
 // en allemand, 'ä' est équivalent à 'a' pour le tri
@@ -56,7 +56,7 @@ console.log(new Intl.Collator("sv").compare("ä", "z"));
 
 ### Utiliser `options`
 
-Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator/compare) peuvent être adaptés grâce à l'argument `options`&nbsp;:
+Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare) peuvent être adaptés grâce à l'argument `options`&nbsp;:
 
 ```js
 // en allemand, 'ä' est composé de la lettre de base 'a'

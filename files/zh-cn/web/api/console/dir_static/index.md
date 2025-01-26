@@ -38,5 +38,6 @@ dir(object);
 
 ## 参见
 
-- [MSDN：使用 F12 工具控制台查看错误和状态](http://msdn.microsoft.com/library/gg589530)
-- [Chrome 控制台 API 参考](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+- [Microsoft Edge 关于 `console.dir()` 的文档](https://learn.microsoft.com/zh-cn/microsoft-edge/devtools-guide-chromium/console/api#dir)
+- [Node.js 关于 `console.dir()` 的文档](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
+- [Google Chrome 关于 `console.dir()` 的文档](https://developer.chrome.google.cn/docs/devtools/console/api/#dir)

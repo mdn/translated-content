@@ -24,7 +24,7 @@ function-available(name )
 
 ### 定義
 
-[XPath 1.0 15](http://www.w3.org/TR/xslt#function-function-available)
+[XPath 1.0 15](https://www.w3.org/TR/xslt#function-function-available)
 
 ### Gecko のサポート
 

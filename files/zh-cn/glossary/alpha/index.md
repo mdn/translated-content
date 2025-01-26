@@ -18,7 +18,7 @@ l10n:
 ## 参见
 
 - [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)
-- [CSS 的值与单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 的值与单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
 - 维基百科上的 [Alpha 合成](https://zh.wikipedia.org/wiki/Alpha合成)
 - 维基百科上的 [RGBA](https://zh.wikipedia.org/wiki/RGBA)

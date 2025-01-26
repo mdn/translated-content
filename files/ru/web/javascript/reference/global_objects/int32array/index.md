@@ -17,7 +17,7 @@ new Int32Array(object);
 new Int32Array(buffer [, byteOffset [, length]]);
 ```
 
-Для получения дополнительной информации о синтаксисе конструктора и параметрах _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+Для получения дополнительной информации о синтаксисе конструктора и параметрах _[TypedArray](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_.
 
 ## Свойства
 
@@ -166,6 +166,6 @@ var dv = new Int32Array([1, 2, 3]);
 
 ## Смотрите также
 
-- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
