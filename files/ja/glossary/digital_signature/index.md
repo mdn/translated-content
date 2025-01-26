@@ -1,5 +1,5 @@
 ---
-title: Digital signature(デジタル署名)
+title: Digital signature (デジタル署名)
 slug: Glossary/Digital_signature
 l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
