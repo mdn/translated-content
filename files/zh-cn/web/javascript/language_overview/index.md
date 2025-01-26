@@ -785,7 +785,7 @@ async function readFile(filename) {
 
 实际上，单线程模型让 Node.js 成为服务器端编程的热门选择，因为它非阻塞的 IO，使得处理大量的数据库或文件系统请求非常高效。然而，纯 JavaScript 的 CPU 密集型（计算密集型）任务仍会阻塞主线程。为了实现真正的并行，你需要使用 [worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)。
 
-想要学习更多有关异步编程的知识，你可以阅读[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)，或者关注[异步 JavaScript](/zh-CN/docs/Learn/JavaScript/Asynchronous) 教程。
+想要学习更多有关异步编程的知识，你可以阅读[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)，或者关注[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS) 教程。
 
 ## 模块
 
@@ -810,7 +810,7 @@ export const a = 1;
 
 ## 语言和运行时
 
-在本文中，我们不断提及地特定特性是*语言级别的*，而其他则是*运行时级别的*。
+在本文中，我们不断提及某个特性是*语言级别的*，而其他的则是*运行时级别的*。
 
 JavaScript 是通用型脚本语言。[核心语言规范](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_核心语言（ecmascript）)专注于纯计算逻辑。它不处理任何的输入/输出——实际上，没有额外的运行时级别的 API（特别是 [`console.log()`](/zh-CN/docs/Web/API/console/log_static)），JavaScript 程序的行为是完全不可预测的。
 

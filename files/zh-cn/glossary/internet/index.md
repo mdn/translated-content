@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [互联网是如何工作的](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)（给初学者的介绍）
+- [互联网是如何工作的](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)（给初学者的介绍）

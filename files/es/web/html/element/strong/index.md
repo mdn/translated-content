@@ -11,11 +11,11 @@ slug: Web/HTML/Element/strong
 
   - : **Sus etiquetas son**: \<strong> y \</strong> (ambas obligatorias)
 
-    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 

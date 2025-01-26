@@ -21,5 +21,5 @@ Exemples avec le nombre `0x12345678` (i.e. 305 419 896 en décimal) :
 
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [Tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Tableaux typés](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [Boutisme](https://fr.wikipedia.org/wiki/Boutisme) sur Wikipédia

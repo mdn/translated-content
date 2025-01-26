@@ -53,7 +53,7 @@ encrypt(algorithm, key, data)
 
 これらのアルゴリズムの 1 つである RSA-OAEP は{{Glossary("public-key cryptography", "公開鍵暗号システム")}}です。
 
-ここにある他の3つの暗号化アルゴリズムはすべて{{Glossary("Symmetric-key cryptography", "対象か偽アルゴリズム")}}で、すべて同じ基盤である AES (Advanced Encryption Standard) をベースにしています。
+ここにある他の3つの暗号化アルゴリズムはすべて{{Glossary("Symmetric-key cryptography", "対称鍵アルゴリズム")}}で、すべて同じ基盤である AES (Advanced Encryption Standard) をベースにしています。
 これらの違いは{{Glossary("Block cipher mode of operation", "モード")}}です。
 ウェブ暗号 API は 3 つの異なる AES モードに対応しています。
 
@@ -98,7 +98,7 @@ CTR モードでは、メッセージのブロックが暗号化されるたび�
 
 ### AES-GCM
 
-これは AES の がロア/カウンターモードにおける表現であり、 [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) で定義されています。
+これは AES の ガロア/カウンターモードにおける表現であり、 [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) で定義されています。
 
 このモードと他のモードとの大きな違いの一つは、GCM が「認証された」モードであり、暗号文が攻撃者によって変更されていないことのチェックが含まれていることを意味しています。
 

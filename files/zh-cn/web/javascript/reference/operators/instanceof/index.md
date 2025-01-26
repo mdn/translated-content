@@ -141,6 +141,6 @@ if (!mycar instanceof Car)
 
 ## 参见
 
-- [typeof](/zh-CN/docs/JavaScript/Reference/Operators/typeof)
+- [typeof](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)
 - {{jsxref("Symbol.hasInstance")}}
 - {{jsxref("Object.prototype.isPrototypeOf")}}

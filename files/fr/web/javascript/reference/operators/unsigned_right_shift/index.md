@@ -54,5 +54,5 @@ Toutefois, ce n'est pas le cas pour les nombres négatifs : `-9 >>> 2` renverra 
 
 ## Voir aussi
 
-- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise)
 - [L'opérateur de décalage binaire à droite non-signé et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

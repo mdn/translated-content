@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
 
 名前が UI に表示されるよう長すぎないようにするのは良い習慣です。Google Chrome と Microsoft Edge は名前を 45 文字に制限しています。
 
-これは[国際化できるプロパティ](/ja/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json)です。
+これは[国際化できるプロパティ](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)です。
 
 ## 例
 

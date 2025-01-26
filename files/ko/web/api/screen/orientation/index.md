@@ -10,7 +10,7 @@ slug: Web/API/Screen/orientation
 `orientation` 속성은 화면의 현재 방향을 알려 준다.
 
 > [!NOTE]
-> 이 함수는 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/Guide/DOM/Using_full_screen_mode) 의 웹페이지에서 동작한다.
+> 이 함수는 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/API/Fullscreen_API) 의 웹페이지에서 동작한다.
 
 ## Syntax
 
@@ -52,4 +52,4 @@ if (orientation === "landscape-primary") {
 - {{domxref("window.screen.orientation")}}
 - {{domxref("window.screen.unlockOrientation()")}}
 - {{domxref("window.screen.onorientationchange")}}
-- [Managing screen orientation](/ko/docs/Managing_screen_orientation)
+- [Managing screen orientation](/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

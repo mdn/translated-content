@@ -11,11 +11,11 @@ Para usar um pré-processador, você deve instalar um compilador CSS no seu serv
 
 1. Alguns dos pré-processadores CSS mais populares:
 
-   1. [Sass](http://sass-lang.com/)
-   2. [LESS](http://lesscss.org/)
+   1. [Sass](https://sass-lang.com/)
+   2. [LESS](https://lesscss.org/)
    3. [Stylus](http://stylus-lang.com/)
    4. [PostCSS](http://postcss.org/)
 
-2. [MDN Web Docs Glossário](/pt-BR/docs/Glossario)
+2. [MDN Web Docs Glossário](/pt-BR/docs/Glossary)
 
    1. {{Glossary("CSS")}}

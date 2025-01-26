@@ -144,7 +144,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
+  background-image: url(star-solid.gif);
   width: 160px;
   height: 70px;
 }
@@ -171,7 +171,7 @@ div {
 
 /* Plusieurs images */
 .sept {
-  background-image: url(starsolid.gif), url(favicon.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
@@ -193,4 +193,4 @@ Dans cet exemple, chaque élément de la liste illustre une valeur différente d
 
 ## Voir aussi
 
-- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

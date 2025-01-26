@@ -79,7 +79,7 @@ slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 
 {{ EmbedLiveSample('column_width','700px', '', '') }}
 
-정확한 세부사항은 [CSS3 스펙](http://www.w3.org/TR/css3-multicol/)에 설명되어 있습니다.
+정확한 세부사항은 [CSS3 스펙](https://www.w3.org/TR/css3-multicol/)에 설명되어 있습니다.
 
 다단 블록에서, 콘텐츠는 필요에 따라 한 단에서 다음 단으로 자동으로 흐릅니다. 모든 HTML, CSS 및 DOM 기능은 단 내에서 지원됩니다, 편집 및 인쇄 중일 때.
 

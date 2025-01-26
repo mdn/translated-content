@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 
 Позволяет расширениям взаимодействовать с менеджером загрузки браузера. Этот модуль API можно использовать для загрузки, отмены, приостановки, возобновления загрузки файлов и отображения загруженных файлов в файловом менеджере.
 
-Для использования этого API вам необходимо указать "downloads" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) файле.
+Для использования этого API вам необходимо указать "downloads" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) в вашем [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) файле.
 
 ## Types
 

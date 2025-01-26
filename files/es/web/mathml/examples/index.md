@@ -35,4 +35,4 @@ Las siguientes demostraciones combinan MathML con otras tecnologías web para pr
 - [Ecuación de Pell](https://people.igalia.com/fwang/pell-bigint-mathml/)
   - : Un programa de JavaScript para resolver la ecuación de Pell usando [`BigInt`](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 - [Programa de Lovelace para números de Bernoulli](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
-  - : Un emulador del programa de Ada Lovelace para calcular números de Bernoulli, utilizando [Características de clase privada](/es/docs/Web/JavaScript/Reference/Classes/Private_Class_Fields).
+  - : Un emulador del programa de Ada Lovelace para calcular números de Bernoulli, utilizando [Características de clase privada](/es/docs/Web/JavaScript/Reference/Classes/Private_properties).

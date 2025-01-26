@@ -92,7 +92,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("starsolid.gif") #99f repeat-y fixed;
+  background: url("star-solid.gif") #99f repeat-y fixed;
 }
 ```
 
@@ -111,5 +111,5 @@ background: no-repeat center/80% url("../img/image.png");
 ## 参见
 
 - {{ cssxref("-moz-background-size") }}, {{ cssxref("-moz-background-inline-policy") }}
-- [使用渐变背景](/zh-CN/docs/CSS/Using_CSS_gradients)
-- [多重背景](/zh-CN/docs/CSS/Multiple_backgrounds)
+- [使用渐变背景](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [多重背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

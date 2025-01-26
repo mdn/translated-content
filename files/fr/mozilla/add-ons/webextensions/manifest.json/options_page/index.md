@@ -27,9 +27,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 {{Deprecated_Header}}
 
 > [!WARNING]
-> Cette clé du manifest a été dépréciée. Utilisez [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)à la place.
+> Cette clé du manifest a été dépréciée. Utilisez [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)à la place.
 
-Utilisez la clé d'`options_page` pour définir une [page d'options](/fr/Add-ons/WebExtensions/Options_pages) pour votre extension.
+Utilisez la clé d'`options_page` pour définir une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Options_pages) pour votre extension.
 
 La page des options contient les paramètres de l'extension. L'utilisateur peut y accéder depuis le gestionnaire d'add-ons du navigateur, et vous pouvez l'ouvrir depuis votre extension en utilisant {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
@@ -47,5 +47,5 @@ Contrairement aux pages d'options spécifiées à l'aide de la nouvelle clé `op
 
 ## Voir aussi
 
-- [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)
-- [Options pages](/fr/Add-ons/WebExtensions/user_interface/Options_pages)
+- [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
+- [Options pages](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)

@@ -343,6 +343,6 @@ cursor:
 - [Using URL values for the cursor property](/zh-CN/docs/CSS/Using_URL_values_for_the_cursor_property)
 - {{ cssxref("pointer-events") }}
 - {{cssxref("url()", "url()")}} function
-- [Webkit's cursor demos](http://trac.webkit.org/export/37902/trunk/WebCore/manual-tests/cursor.html) (including the extended ones: `zoom`, `zoom-out`, `grab`, `grabbing`)
+- [Webkit's cursor demos](https://trac.webkit.org/export/37902/trunk/WebCore/manual-tests/cursor.html) (including the extended ones: `zoom`, `zoom-out`, `grab`, `grabbing`)
 - [Cursor Property (MSDN)](http://msdn.microsoft.com/en-us/library/aa358795.aspx)
 - [CSS 2.1 and CSS 3 cursor propery test](http://www.elektronotdienst-nuernberg.de/bugs/cursor.html)

@@ -12,16 +12,16 @@ Es útil al embeber o incrustart texto del que se desconoce la direccionalidad, 
 > [!NOTE]
 > Aunque el mismo efecto visual se puede conseguir usando la regla CSS {{cssxref("unicode-bidi")}}`: isolate` en un elemento {{HTMLElement("span")}} u otro elemento de formateado de texto, el significado semántico sólo se consigue usando el elemento `<bdi>`. En especial los navegadores permiten ignorar los estilos CSS. En tal caso el texto se mostrará correctamente usando el elemento HTML pero será basura usando CSS para fijar la semántica.
 
-| [Content categories](/es/docs/HTML/Content_categories) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content), contenido palpable. |
-| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                    | [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
-| Omisión de etiqueta                                    | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                        |
-| Elementos padre permitidos                             | Any element that accepts [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                           |
-| Interfaz DOM                                           | {{domxref("HTMLElement")}}                                                                                                                                |
+| [Content categories](/es/docs/Web/HTML/Content_categories) | [Flow content](/es/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content), contenido palpable. |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                        | [Phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                                                        |
+| Omisión de etiqueta                                        | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                |
+| Elementos padre permitidos                                 | Any element that accepts [phrasing content](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                               |
+| Interfaz DOM                                               | {{domxref("HTMLElement")}}                                                                                                                                        |
 
 ## Atributos
 
-Como los demás elementos HTML , este elemento tiene los [global attributes](/es/docs/HTML/Global_attributes), pero con una pequeña diferencia semántica: el atributo **dir** no se hereda. Si no está definidio, su valor por defecto es `auto` y permitirá a los navegadores decidir la dirección basándose en el contexto del elemento.
+Como los demás elementos HTML , este elemento tiene los [global attributes](/es/docs/Web/HTML/Global_attributes), pero con una pequeña diferencia semántica: el atributo **dir** no se hereda. Si no está definidio, su valor por defecto es `auto` y permitirá a los navegadores decidir la dirección basándose en el contexto del elemento.
 
 ## Ejemplo
 

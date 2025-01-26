@@ -54,9 +54,9 @@ for (var i = 0; i < myNodeList.length; ++i) {
 }
 ```
 
-Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/JavaScript/Reference/Instructions/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
+Ne soyez pas tenté d'utiliser [`for… in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou [`for each… in`](/fr/docs/JavaScript/Reference/Instructions/for_each…in) pour énumérer les éléments de la liste, car cela énumère également la taille (`length`) et les propriétés du `NodeList` et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, `for… in` ne garantit pas de visiter les propriétés dans un ordre particulier.
 
-Les boucles [`for… of`](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of) boucleront correctement sur les objets `NodeList` :
+Les boucles [`for… of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucleront correctement sur les objets `NodeList` :
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

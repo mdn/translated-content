@@ -5,7 +5,7 @@ slug: Web/CSS/background-repeat
 
 {{CSSRef}}
 
-**`background-repeat`** [CSS](/zh-CN/docs/CSS) 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。
+**`background-repeat`** [CSS](/zh-CN/docs/Web/CSS) 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。
 
 {{EmbedInteractiveExample("pages/css/background-repeat.html")}}
 
@@ -96,9 +96,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
-  width: 144px;
-  height: 84px;
+  background-image: url(star-solid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* 因为 space 和 round 当前没有被广泛支持的，所以没有添加*/
@@ -117,7 +117,7 @@ div {
 
 /* Multiple images */
 .five {
-  background-image: url(starsolid.gif), url(favicon32.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

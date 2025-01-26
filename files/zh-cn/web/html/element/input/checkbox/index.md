@@ -9,7 +9,7 @@ slug: Web/HTML/Element/input/checkbox
 
 {{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-> **备注：** [单选按钮](/zh-CN/docs/Web/HTML/Element/Input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
+> **备注：** [单选按钮](/zh-CN/docs/Web/HTML/Element/input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
 
 <table class="properties">
   <tbody>
@@ -204,7 +204,7 @@ function updateDisplay() {
 
 ## 验证方式
 
-复选框支持提供给所有 {{HTMLElement("input")}} 元素的[验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)功能。然而，大部分的 {{domxref("ValidityState")}} 值将永远为 `false`。如果复选框具有 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，但没有被选中，那么 {{domxref("ValidityState.valueMissing")}} 将为 `true`。
+复选框支持提供给所有 {{HTMLElement("input")}} 元素的[验证](/zh-CN/docs/Web/HTML/Constraint_validation)功能。然而，大部分的 {{domxref("ValidityState")}} 值将永远为 `false`。如果复选框具有 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性，但没有被选中，那么 {{domxref("ValidityState.valueMissing")}} 将为 `true`。
 
 ## 示例
 
@@ -307,4 +307,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - 基于当前状态的 {{cssxref(":checked")}} 和 {{cssxref(":indeterminate")}} CSS 选择器，可供赋予样式
-- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

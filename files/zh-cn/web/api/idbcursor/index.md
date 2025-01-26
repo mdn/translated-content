@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/IndexedDB) 中的 `IDBCursor` 接口表示一个游标，用于遍历或迭代数据库中的多条记录。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中的 `IDBCursor` 接口表示一个游标，用于遍历或迭代数据库中的多条记录。
 
 游标有一个源，指示需要遍历哪一个索引或者对象存储区。它在所属区间范围内有一个位置，根据记录键（存储字段）的顺序递增或递减方向移动。游标使应用程序能够异步处理在游标范围内的所有记录。
 

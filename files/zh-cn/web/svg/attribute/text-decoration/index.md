@@ -20,7 +20,7 @@ slug: Web/SVG/Attribute/text-decoration
 后代元素可以继承 text-decoration 这个属性
 ```
 
-- [Text content elements](/zh-CN/SVG/Element#TextContent) »
+- [Text content elements](/zh-CN/docs/Web/SVG/Element#textcontent) »
 
 ## 规范
 

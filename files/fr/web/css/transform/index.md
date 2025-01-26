@@ -12,7 +12,7 @@ La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la
 Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont `position: fixed;` ou `position: absolute;`.
 
 > [!WARNING]
-> Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle#Les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
+> Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](/fr/docs/Web/CSS/Visual_formatting_model#les_éléments_en_ligne_et_les_boîtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
 
 ## Syntaxe
 
@@ -80,7 +80,7 @@ La propriété `transform` peut être définie avec le mot-clé [`none`](#none) 
 
 ## Exemples
 
-Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), {(cssxref("\<transform-function>")}} ou l'exemple suivant.
+Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms), {(cssxref("\<transform-function>")}} ou l'exemple suivant.
 
 ### HTML
 
@@ -125,6 +125,6 @@ Pour en savoir plus :
 
 ## Voir aussi
 
-- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - Le type de donnée {{cssxref("&lt;transform-function&gt;")}}
 - [Plus d'informations sur les rotations CSS3 et les filtres matriciels sur le blog de Paul Irish](https://paulirish.com/2010/introducing-css3please/#comment-36380)

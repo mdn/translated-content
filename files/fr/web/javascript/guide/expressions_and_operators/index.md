@@ -36,7 +36,7 @@ const x = 1 + 2 * 3;
 const y = 2 * 3 + 1;
 ```
 
-Bien que `*` et `+` soit placés dans un ordre différent, ces deux expressions produisent la valeur `7`, car `*` a une précédence qui l'emporte sur celle de `+`. L'expression formée par les deux opérandes entourant `*` est donc toujours évaluée en premier ici. Vous pouvez passer outre la précédence des opérateurs en utilisant les parenthèses (ce qui crée [une expression groupée](#opérateur_de_groupement), qui est une expression de base). Pour un tableau complet détaillant la précédence des opérateurs et les éventuels pièges, voir [la page de référence sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#tableau).
+Bien que `*` et `+` soit placés dans un ordre différent, ces deux expressions produisent la valeur `7`, car `*` a une précédence qui l'emporte sur celle de `+`. L'expression formée par les deux opérandes entourant `*` est donc toujours évaluée en premier ici. Vous pouvez passer outre la précédence des opérateurs en utilisant les parenthèses (ce qui crée [une expression groupée](#opérateur_de_groupement), qui est une expression de base). Pour un tableau complet détaillant la précédence des opérateurs et les éventuels pièges, voir [la page de référence sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence#tableau).
 
 JavaScript possède des opérateurs _binaires_ et _unaires_, ainsi qu'un opérateur ternaire spécial (l'opérateur conditionnel).
 Un opérateur binaire a besoin de deux opérandes, un placé avant l'opérateur (à sa gauche) et un placé après l'opérateur (à sa droite)&nbsp;:
@@ -79,11 +79,11 @@ Il existe également des opérateurs d'affectation composites qui sont des racco
 | [Affectation après OU binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                            | `x \|= f()`   | `x = x \| f()`     |
 | [Affectation après ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                           | `x &&= f()`   | `x && (x = f())`   |
 | [Affectation après OU logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                            | `x \|\|= f()` | `x \|\| (x = f())` |
-| [Affectation après coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)             | `x ??= f()`   | `x ?? (x = f())`   |
+| [Affectation après coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)          | `x ??= f()`   | `x ?? (x = f())`   |
 
 ### Affectation aux propriétés
 
-Si une expression est évaluée en [un objet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects), le côté gauche d'une expression d'affectation pourra être utilisé pour des affectations sur les propriétés de cette expression. Par exemple&nbsp;:
+Si une expression est évaluée en [un objet](/fr/docs/Web/JavaScript/Guide/Working_with_objects), le côté gauche d'une expression d'affectation pourra être utilisé pour des affectations sur les propriétés de cette expression. Par exemple&nbsp;:
 
 ```js
 const obj = {};
@@ -98,7 +98,7 @@ console.log(obj[key]); // Affiche 5.
 console.log(obj); // Affiche { x: 3, y: 5 }.
 ```
 
-Pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects).
+Pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects).
 
 Si une expression n'est pas évaluée en un objet, les affectations aux propriétés de cette expression ne fonctionneront pas&nbsp;:
 
@@ -235,7 +235,7 @@ x[f()] = g();
 
 #### Exemple d'évaluation n°3
 
-`x[f()] = g()` est également évaluée de gauche à droite. Dans cet exemple, on part du principe que la valeur de `x` est déjà un objet (pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects)).
+`x[f()] = g()` est également évaluée de gauche à droite. Dans cet exemple, on part du principe que la valeur de `x` est déjà un objet (pour plus d'informations sur les objets, voir [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects)).
 
 1. L'évaluation de l'expression d'affectation `x[f()] = g()` commence.
    1. L'évaluation de l'accès à la propriété `x[f()]` situé à gauche de l'opérateur d'affectation commence.
@@ -243,7 +243,7 @@ x[f()] = g();
       2. Ensuite, l'appel `f()` affiche "F!" dans la console et renvoie la valeur `2`.
    2. L'évaluation de `x[f()]` est maintenant terminée et son résultat est une variable qui référence la propriété `x[2]`.
    3. Ensuite, l'appel à la fonction `g()` affiche "G!" dans la console et renvoie la valeur `3`.
-   4. Ce résultat, `3`, est affecté à `x[2]` (cette étape réussira uniquement si la valeur de `x` est un [objet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects))?
+   4. Ce résultat, `3`, est affecté à `x[2]` (cette étape réussira uniquement si la valeur de `x` est un [objet](/fr/docs/Web/JavaScript/Guide/Working_with_objects))?
 2. L'évaluation de l'expression d'affectation `x[f()] = g()` est maintenant terminée. Son résultat est la nouvelle valeur de `x[2]`, qui est `3`. `3` a été affecté à `x[2]` et la console a affiché "F!" puis "G!".
 
 ### Éviter les enchaînements d'affectation
@@ -260,7 +260,7 @@ On pourrait penser que cela permet de déclarer les variables `x`, `y`, et `z`. 
 
 ## Opérateurs de comparaison
 
-Un opérateur de comparaison compare ses opérandes et renvoie une valeur logique selon que la comparaison est vraie ou non. Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des [objets](/fr/docs/Web/JavaScript/Guide/Working_with_Objects). Les chaînes de caractères sont comparées selon l'ordre lexicographique standard en utilisant les valeurs Unicode.
+Un opérateur de comparaison compare ses opérandes et renvoie une valeur logique selon que la comparaison est vraie ou non. Les opérandes peuvent être des nombres, des chaînes de caractères, des booléens ou des [objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects). Les chaînes de caractères sont comparées selon l'ordre lexicographique standard en utilisant les valeurs Unicode.
 
 Dans la plupart des cas, si les deux opérandes ne sont pas du même type, le moteur JavaScript tentera de les convertir dans un type approprié pour la comparaison. Cela entraîne généralement une comparaison numérique des opérandes.
 
@@ -653,7 +653,7 @@ Les expressions logiques étant évaluées de gauche à droite, le moteur d'exé
 
 Les règles logiques garantissent la véracité de ces évaluations. On notera que l'opérande `nimportequoi` dans les expressions précédentes n'est _pas_ évalué et que tout effet de bord lié à cette évaluation n'aura donc pas lieu.
 
-Pour le deuxième exemple, on pourra utiliser [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator) (`??`) qui fonctionne comme `||`, en renvoyant uniquement la deuxième expression lorsque la première est [équivalente à `null`](/fr/docs/Glossary/Nullish), c'est-à-dire qu'elle vaut [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+Pour le deuxième exemple, on pourra utiliser [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) qui fonctionne comme `||`, en renvoyant uniquement la deuxième expression lorsque la première est [équivalente à `null`](/fr/docs/Glossary/Nullish), c'est-à-dire qu'elle vaut [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
 L'opérateur de coalescence des nuls est donc une meilleure solution lorsqu'il s'agit de fournir des valeurs par défaut, notamment lorsque `''` ou `0` sont des valeurs valides.
 
@@ -719,7 +719,7 @@ maChaine += "bet"; // sera évalué en "alphabet" et affectera cette valeur à m
 
 ## Opérateur conditionnel (ternaire)
 
-[L'opérateur conditionnel](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) est le seul opérateur JavaScript à prendre trois opérandes. Il permet de se résoudre en une valeur ou en une autre selon une condition donnée. Sa syntaxe est la suivante&nbsp;:
+[L'opérateur conditionnel](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator) est le seul opérateur JavaScript à prendre trois opérandes. Il permet de se résoudre en une valeur ou en une autre selon une condition donnée. Sa syntaxe est la suivante&nbsp;:
 
 ```js
 condition ? val1 : val2;
@@ -737,7 +737,7 @@ Cette instruction affecte la valeur `"adulte"` à la variable `statut` si `age` 
 
 ## Opérateur virgule
 
-[L'opérateur virgule](/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator) (`,`) évalue les deux opérandes et renvoie la valeur du dernier opérande. Cet opérateur est généralement utilisé dans les boucles `for` afin de mettre à jour plusieurs variables à chaque itération de la boucle. L'utiliser ailleurs est considéré comme une mauvaise pratique et on privilégiera plusieurs instructions séparées.
+[L'opérateur virgule](/fr/docs/Web/JavaScript/Reference/Operators/Comma_operator) (`,`) évalue les deux opérandes et renvoie la valeur du dernier opérande. Cet opérateur est généralement utilisé dans les boucles `for` afin de mettre à jour plusieurs variables à chaque itération de la boucle. L'utiliser ailleurs est considéré comme une mauvaise pratique et on privilégiera plusieurs instructions séparées.
 
 Par exemple, si on a `a` qui est un tableau en deux dimensions avec 10 éléments pour chaque ligne. Le code qui suit utilise l'opérateur virgule afin de mettre à jour deux variables à la fois. Dans cet exemple, on affiche les valeurs des éléments situés sur la diagonale du tableau&nbsp;:
 

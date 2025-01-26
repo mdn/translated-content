@@ -82,7 +82,7 @@ p {
 
 ### 結果
 
-{{EmbedLiveSample("例", "100%", 250)}}
+{{EmbedLiveSample("Examples", "100%", 250)}}
 
 ## 仕様書
 

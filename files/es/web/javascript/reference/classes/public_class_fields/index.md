@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 {{JsSidebar("Classes")}}
 
 > [!NOTE]
-> Las declaraciones de campos públicos y privados son una [característica experimental (en estado 3)](https://github.com/tc39/proposal-class-fields) propuesta por el [TC39](https://tc39.github.io/beta/), el comite de estandares de JavaScript. El soporte y funcionamiento en navegadores es limitado, pero la funcionalidad puede ser usada a través de un paso durante el proceso del build por medio de sistemas como [Babel](https://babeljs.io/). Revise [compat information](#Browser_compatibility) mas abajo.
+> Las declaraciones de campos públicos y privados son una [característica experimental (en estado 3)](https://github.com/tc39/proposal-class-fields) propuesta por el [TC39](https://tc39.github.io/beta/), el comite de estandares de JavaScript. El soporte y funcionamiento en navegadores es limitado, pero la funcionalidad puede ser usada a través de un paso durante el proceso del build por medio de sistemas como [Babel](https://babeljs.io/). Revise [compat information](#browser_compatibility) mas abajo.
 
 Los campos públicos y estáticos son propieades editables, enumerables, y configurables. A diferencia de su contraparte privada, estos participan en la herencia de prototipo.
 

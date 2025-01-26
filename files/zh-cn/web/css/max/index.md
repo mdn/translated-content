@@ -65,7 +65,7 @@ Think of the `max()` function as finding the minimum value allowed for a propert
 
 ## 无障碍
 
-When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/zh-CN/docs/Web/CSS/length#Relative_length_units) that is always large enough to read. For example:
+When `max()` is used for controlling text size, make sure the text is always large enough to read. A suggestion is to use the {{CSSxRef("min", "min()")}} function nested within a `max()` that has as its second value a [relative length unit](/zh-CN/docs/Web/CSS/length#relative_length_units) that is always large enough to read. For example:
 
 ```css
 small {
@@ -88,4 +88,4 @@ This ensures a minimum size of _1rem_, with a text size that scales if the page 
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("min", "min()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

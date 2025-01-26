@@ -94,8 +94,8 @@ O termo **marcação de apresentação** é usado para descrever a estrutura da 
 ### Other elements
 
 - {{ MathMLElement("semantics") }} (Container for semantic annotations)
-- [`<annotation>`](/pt-BR/docs/MathML/Element/semantics) (Anotações de dados)
-- [`<annotation-xml>`](/pt-BR/docs/MathML/Element/semantics) (Anotações XML)
+- [`<annotation>`](/pt-BR/docs/Web/MathML/Element/semantics) (Anotações de dados)
+- [`<annotation-xml>`](/pt-BR/docs/Web/MathML/Element/semantics) (Anotações XML)
 
 ## Ver também
 

@@ -24,7 +24,7 @@ arr.lastIndexOf(searchElement[, fromIndex = arr.length])
 
 ## Описание
 
-Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (тот же метод используется оператором `===`, тройное равно).
+Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (тот же метод используется оператором `===`, тройное равно).
 
 ## Примеры
 

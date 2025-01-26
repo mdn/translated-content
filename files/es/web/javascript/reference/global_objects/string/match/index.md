@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/match
 
 {{JSRef}}
 
-El método **`match()`** devuelve todas las ocurrencias de una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_Expressions) dentro de una _cadena_.
+El método **`match()`** devuelve todas las ocurrencias de una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) dentro de una _cadena_.
 
 {{EmbedInteractiveExample('pages/js/string-match.html', 'shorter')}}
 
@@ -91,7 +91,7 @@ console.log(matches);
 ```
 
 > [!NOTE]
-> Véase también {{jsxref("String.prototype.matchAll()")}} y [Búsqueda avanzada con banderas](/es/docs/Web/JavaScript/Guide/Regular_Expressions#búsqueda_avanzada_con_banderas).
+> Véase también {{jsxref("String.prototype.matchAll()")}} y [Búsqueda avanzada con banderas](/es/docs/Web/JavaScript/Guide/Regular_expressions#b%c3%basqueda_avanzada_con_banderas).
 
 ### Uso de grupos de captura con nombre
 

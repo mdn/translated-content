@@ -5,16 +5,16 @@ slug: WebAssembly/JavaScript_interface/Exception/stack
 
 {{WebAssemblySidebar}}
 
-La propriété en lecture seule **`stack`**, rattachée à une instance d'[`Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) _peut_ contenir une trace de pile d'appels pour une exception levée par du code WebAssembly.
+La propriété en lecture seule **`stack`**, rattachée à une instance d'[`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception) _peut_ contenir une trace de pile d'appels pour une exception levée par du code WebAssembly.
 
-Par défaut, les exceptions levées par du code WebAssembly n'incluent pas la pile d'appels. Si le code WebAssembly doit fournir une pile d'appels, il doit appeler une fonction JavaScript pour créer l'exception et passer le paramètre `options.traceStack=true` au [constructeur](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/Exception). La machine virtuelle peut ensuite attacher la pile d'appels à l'exception lorsqu'elle est levée.
+Par défaut, les exceptions levées par du code WebAssembly n'incluent pas la pile d'appels. Si le code WebAssembly doit fournir une pile d'appels, il doit appeler une fonction JavaScript pour créer l'exception et passer le paramètre `options.traceStack=true` au [constructeur](/fr/docs/WebAssembly/JavaScript_interface/Exception/Exception). La machine virtuelle peut ensuite attacher la pile d'appels à l'exception lorsqu'elle est levée.
 
 > [!NOTE]
 > Les traces de pile d'appels ne sont pas envoyées par défaut depuis du code WebAssembly afin d'améliorer les performances. La possibilité d'ajouter les traces de pile d'appels à ces exceptions est un outil pour le développement, il ne s'agit pas d'une pratique recommandée plus largement.
 
 ## Valeur
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) contenant la pile d'appels, ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si aucune trace n'a été affectée.
+Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant la pile d'appels, ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si aucune trace n'a été affectée.
 
 La chaîne de caractères décrivant la pile d'appels liste les emplacements de chaque opération de la pile, au format WebAssembly. Il s'agit d'une chaîne de caractères, lisible par un humain, qui indique l'URL, le nom du type de fonction appelé, l'indice de la fonction et son décalage au sein du module binaire. Elle a approximativement ce format (voir [les conventions quant à la pile d'appels](https://webassembly.github.io/spec/web-api/index.html#conventions) dans la spécification pour plus d'informations)&nbsp;:
 

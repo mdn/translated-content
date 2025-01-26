@@ -12,7 +12,7 @@ slug: Mozilla/Firefox/Releases/3
 - [Online / Offline 事件](zh_tw/Firefox_3_Online_and_Offline_Events)
   - : Firefox 3 支援 [WHATWG](http://wiki.whatwg.org/wiki/FAQ#What_is_the_WHATWG.3F) 的 online/offline event，讓 applications/extensions 可以偵測目前是否有 active 的網際網路連線、目前是在線上還是斷線中。
 - [Cross-site XMLHttpRequest](zh_tw/Firefox_3_supports_Cross-site_XMLHttpRequest)
-  - : Firefox 3 支援了 [W3C Access Control](http://www.w3.org/TR/access-control/) working draft，這讓你可以對其他網站作 XMLHttpRequests 以取得其他網站的資料，並加以管理，這讓你可以在自己建立的網站中，混入來自多個其他網站的內容。
+  - : Firefox 3 支援了 [W3C Access Control](https://www.w3.org/TR/access-control/) working draft，這讓你可以對其他網站作 XMLHttpRequests 以取得其他網站的資料，並加以管理，這讓你可以在自己建立的網站中，混入來自多個其他網站的內容。
 - Alternate style sheet
   - : Firefox 3 支援 CSS object model alternate style sheet API。(見 [Bug 200930](https://bugzilla.mozilla.org/show_bug.cgi?id=200930))
 - [Web-based protocol handlers](zh_tw/Firefox_3_Web-based_protocol_handler)
@@ -26,7 +26,7 @@ slug: Mozilla/Firefox/Releases/3
 - [Drag / drop](zh_tw/Firefox_3_Drag_and_Drop_Events) 事件
   - : Firefox 3 支援兩個新的 events，在「拖放」開始與結束的時候，可以傳給「拖放操作」的 source node。
 - HTML 5 的 focus 相關屬性
-  - : Firefox 3 支援 HTML 5 新增給 DOM 的兩個屬性 [activeElement](/zh-TW/docs/DOM:document.activeElement) 與 [hasFocus](/zh-TW/docs/DOM:document.hasFocus)。
+  - : Firefox 3 支援 HTML 5 新增給 DOM 的兩個屬性 [activeElement](/zh-TW/docs/Web/API/Document/activeElement) 與 [hasFocus](/zh-TW/docs/Web/API/Document/hasFocus)。
 - [Offline resources on Firefox](zh_tw/Offline_resources_on_Firefox)
   - : Firefox 3 現在支援讓 web application 可以要求將 resources 存入快取，以便我們離線時可以執行 web applications。
 - [CSS 的改善](zh_tw/Firefox_3_CSS_Improvement)
@@ -44,13 +44,6 @@ slug: Mozilla/Firefox/Releases/3
 - [\<a ping>](zh_tw/Firefox_3_ping_attribute_support_for_anchor_element) 的支援
   - : Firefox 3 現在支援用 \<a ping> 去 ping URL，並且預設是 enable 的。
 
-### 參考資料
+## 參見
 
-[Firefox 3 for developers](/zh-TW/docs/Firefox_3_for_developers#For_web_site_and_application_developers)
-
-### 延伸閱讀
-
-- [Updating extensions for Firefox 3](/zh-TW/docs/Updating_extensions_for_Firefox_3)
-- [Updating web applications for Firefox 3](/zh-TW/docs/Updating_web_applications_for_Firefox_3)
-- [Firefox 2 for developers](/zh-TW/docs/Firefox_2_for_developers)
-- [Firefox 1.5 for developers](/zh-TW/docs/Firefox_1.5_for_developers)
+{{Firefox_for_developers}}

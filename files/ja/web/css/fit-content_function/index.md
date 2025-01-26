@@ -2,12 +2,12 @@
 title: fit-content()
 slug: Web/CSS/fit-content_function
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
 
-**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(最小サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
+**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(最大サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
 
 {{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
 
@@ -48,7 +48,7 @@ fit-content(40%)
 
 #### HTML
 
-```html-nolint
+```html-nolint live-sample___sizing_grid_columns_with_fit-content
 <div id="container">
   <div>コンテンツの幅のアイテム。</div>
   <div>
@@ -60,7 +60,7 @@ fit-content(40%)
 
 #### CSS
 
-```css
+```css live-sample___sizing_grid_columns_with_fit-content
 #container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
@@ -80,7 +80,7 @@ fit-content(40%)
 
 #### 結果
 
-{{EmbedLiveSample("グリッドカラムの大きさを_fit-content_で指定", "100%", 200)}}
+{{EmbedLiveSample("Sizing_grid_columns_with_fit-content", "100%", 200)}}
 
 ## 仕様書
 
@@ -92,7 +92,15 @@ fit-content(40%)
 
 ## 関連情報
 
-- 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("max-content")}}
-- 関連する CSS グリッドプロパティ: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}
-- グリッドレイアウトガイド: _[線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- グリッドレイアウトガイド: _[グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)_
+- {{cssxref("min-content")}} キーワード
+- {{cssxref("max-content")}} キーワード
+- [CSS ボックスサイズ設定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
+- {{cssxref("grid-template")}}
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-rows")}}
+- {{cssxref("grid-auto-flow")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [グリッドテンプレート領域 - グリッド定義の一括指定](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#グリッド定義の一括指定)

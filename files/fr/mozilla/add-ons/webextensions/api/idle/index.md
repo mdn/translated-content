@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 
 Découvrez quand le système de l'utilisateur est inactif, vérouillé ou actif.
 
-Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "idle" .
+Pour utiliser cette API, vous disposez de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "idle" .
 
 ## Types
 

@@ -146,10 +146,10 @@ A sintaxe do parâmetro rest permite representar um número indefinido de argume
 
 Você pode referenciar aos argumentos da função dentro da função utilizando o objeto arguments. Veja [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments).
 
-- [`arguments`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
-- [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
+- [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments): Um objeto array-like contendo os argumentos passados para a função atualmente em execução.
+- [`arguments.callee`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/callee) {{Deprecated_inline}}: A função atualmente em execução.
 - [`arguments.caller`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/caller): A função que invocou a função atualmente em execução.
-- [`arguments.length`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length): O número de argumentos passados para a função.
+- [`arguments.length`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments/length): O número de argumentos passados para a função.
 
 ## Definindo Métodos de Funções
 
@@ -386,6 +386,6 @@ Note that in the `if` test, a reference to `noFunc` is used—there are no brack
 
 ## Veja também
 
-- [`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)
-- [`function` statement](/pt-BR/docs/JavaScript/Reference/Statements/function)
-- [`function` operator](/pt-BR/docs/JavaScript/Reference/Operators/function)
+- [`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`function` statement](/pt-BR/docs/Web/JavaScript/Reference/Statements/function)
+- [`function` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)

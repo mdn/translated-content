@@ -65,7 +65,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 主体大致可分为两类：
 
 - 单一资源（Single-resource）主体，由一个单文件组成。该类型的主体由两个标头定义：{{HTTPHeader("Content-Type")}} 和 {{HTTPHeader("Content-Length")}}。
-- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)，由多部分主体组成，每一部分包含不同的信息位。通常是和 [HTML 表单](/zh-CN/docs/Learn/Forms)连系在一起。
+- [多资源（Multiple-resource）主体](/zh-CN/docs/Web/HTTP/MIME_types#multipartform-data)，由多部分主体组成，每一部分包含不同的信息位。通常是和 [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)连系在一起。
 
 ## HTTP 响应
 

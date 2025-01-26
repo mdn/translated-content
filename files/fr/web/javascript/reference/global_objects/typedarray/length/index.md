@@ -17,7 +17,7 @@ typedarray.length;
 
 ## Description
 
-La propriété `length` est un accesseur dont le mutateur correspondant vaut `undefined`, ce qui signifie qu'elle n'est accessible qu'en lecture. La valeur de la propriété est déterminée lors de la construction du _TypedArray_ et ne peut pas être modifiée. Si le _TypedArray_ n'utilise pas de `byteOffset` ou de `length`, le résultat correspondra à la longueur du {{jsxref("ArrayBuffer")}} correspondant. _TypedArray_ est l'un des objets [TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
+La propriété `length` est un accesseur dont le mutateur correspondant vaut `undefined`, ce qui signifie qu'elle n'est accessible qu'en lecture. La valeur de la propriété est déterminée lors de la construction du _TypedArray_ et ne peut pas être modifiée. Si le _TypedArray_ n'utilise pas de `byteOffset` ou de `length`, le résultat correspondra à la longueur du {{jsxref("ArrayBuffer")}} correspondant. _TypedArray_ est l'un des objets [TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
 ## Exemples
 
@@ -44,5 +44,5 @@ uint8.length; // 6 (correspond à la longueur en prenant en compte le décalage 
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

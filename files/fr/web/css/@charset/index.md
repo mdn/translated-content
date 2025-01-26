@@ -5,7 +5,7 @@ slug: Web/CSS/@charset
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/Règles_@) **`@charset`** définit l'encodage des caractères utilisés dans la feuille de style. Cette règle doit être le premier élément de la feuille de style (aucun caractère ne doit être écrit avant). Cette règle ne fait pas partie des [instructions imbriquées](/fr/Apprendre/CSS/Les_bases/La_syntaxe#Les_instructions_CSS) et ne peut donc pas être utilisée [à l'intérieur des groupes conditionnels](/fr/docs/Web/CSS/Règles_@#R.C3.A8gles_conditionnelles_de_groupe). Si plusieurs règles `@charset` sont définies, seule la première sera utilisée. Cette règle ne pourra pas être utilisée au sein d'un attribut `style` d'un élément HTML ou avec l'élément {{HTMLElement("style")}} car c'est l'encodage du document HTML qui est alors pris en compte.
+La [règle @](/fr/docs/Web/CSS/At-rule) **`@charset`** définit l'encodage des caractères utilisés dans la feuille de style. Cette règle doit être le premier élément de la feuille de style (aucun caractère ne doit être écrit avant). Cette règle ne fait pas partie des [instructions imbriquées](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_instructions_css) et ne peut donc pas être utilisée [à l'intérieur des groupes conditionnels](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe). Si plusieurs règles `@charset` sont définies, seule la première sera utilisée. Cette règle ne pourra pas être utilisée au sein d'un attribut `style` d'un élément HTML ou avec l'élément {{HTMLElement("style")}} car c'est l'encodage du document HTML qui est alors pris en compte.
 
 ```css
 @charset "utf-8";

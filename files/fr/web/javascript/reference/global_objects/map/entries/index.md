@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 
 {{JSRef}}
 
-La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérateurs) qui contient les paires `[clé, valeur]` pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
+La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérateurs) qui contient les paires `[clé, valeur]` pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 

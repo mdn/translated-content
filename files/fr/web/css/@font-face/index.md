@@ -241,6 +241,6 @@ On notera dans ce cas que les descripteurs `src` sont essayés dans l'ordre inve
 
 ## Voir aussi
 
-- [À propos de WOFF](/fr/docs/Web/Guide/WOFF)
+- [À propos de WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
 - [Générateur `@font-face` de FontSquirrel](https://www.fontsquirrel.com/tools/webfont-generator) (en anglais)
 - [<i lang="en">Font Library</i>](https://fontlibrary.org/), un site cataloguant des polices (en anglais)

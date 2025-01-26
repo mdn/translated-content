@@ -27,7 +27,7 @@ console.log(value);
 
 もし `doSomething` がコールバックを同期的に呼び出すのであれば、`value = 2` が同期的に実行されるので、最後の文は `2` をログ出力します。もしコールバックが非同期的であれば、`value = 2` が実行されるのは `console.log` 文の後なので、最後の文は `1` をログ出力します。
 
-同期コールバックの例としては、{{jsxref("Array.prototype.map()")}} や {{jsxref("Array.prototype.forEach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、[`setTimeout()`](/ja/docs/Web/API/setTimeout) や {{jsxref("Promise.prototype.then()")}} に渡すコールバックがあります。
+同期コールバックの例としては、{{jsxref("Array.prototype.map()")}} や {{jsxref("Array.prototype.forEach()")}} などに渡されるコールバックが挙げられます。非同期コールバックの例としては、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) や {{jsxref("Promise.prototype.then()")}} に渡すコールバックがあります。
 
 [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises#タイミング)ガイドには、非同期コールバックのタイミングについての詳しい情報があります。
 

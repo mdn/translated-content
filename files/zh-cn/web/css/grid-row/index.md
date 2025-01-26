@@ -123,4 +123,4 @@ IE11 不支持网格单元的自动布置。除非显式地注释 `-ms-`{{cssxre
 
 - Related CSS properties: {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Video tutorial: _[Line-based placement](http://gridbyexample.com/video/series-line-based-placement/)_
+- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

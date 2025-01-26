@@ -202,4 +202,4 @@ function updateAll(event) {
 
 ## 参见
 
-- [CSS 属性兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 属性兼容性列表](/zh-CN/docs/Learn_web_development/Extensions/Forms)

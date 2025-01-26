@@ -180,7 +180,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 ```
 
 > [!NOTE]
-> Você pode encontrar este exemplo no GitHub como [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Consulte também [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming) para obter mais detalhes sobre a função instanciar.
+> Você pode encontrar este exemplo no GitHub como [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Consulte também [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) para obter mais detalhes sobre a função instanciar.
 
 ## Explorando fundamentos
 
@@ -234,7 +234,7 @@ WebAssembly tem um namespace de dois níveis, então a declaração de importaç
 
 As funções importadas são como funções normais: elas têm uma assinatura que a validação do WebAssembly verifica estaticamente e recebem um índice e podem ser nomeadas e chamadas.
 
-As funções JavaScript não têm noção de assinatura, portanto qualquer função JavaScript pode ser passada, independentemente da assinatura declarada na importação. Depois que um módulo declara uma importação, o chamador de [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate) deve passar um objeto de importação que tenha as propriedades correspondentes.
+As funções JavaScript não têm noção de assinatura, portanto qualquer função JavaScript pode ser passada, independentemente da assinatura declarada na importação. Depois que um módulo declara uma importação, o chamador de [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static) deve passar um objeto de importação que tenha as propriedades correspondentes.
 
 Para o exposto acima, precisamos de um objeto (vamos chamá-lo de `importObject`) de modo que `importObject.console.log` seja uma função JavaScript.
 
@@ -488,7 +488,7 @@ Como o JavaScript tem acesso total às referências de função, o objeto Tabela
 
 Como as tabelas são mutáveis, elas podem ser usadas para implementar [esquemas de vinculação dinâmica] sofisticados de tempo de carregamento e tempo de execução (https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). Quando um programa é vinculado dinamicamente, várias instâncias compartilham a mesma memória e tabela. Isso é simétrico para um aplicativo nativo onde vários `.dll`s compilados compartilham o espaço de endereço de um único processo.
 
-Para ver isso em ação, criaremos um único objeto de importação contendo um objeto de memória e um objeto de tabela e passaremos esse mesmo objeto de importação para várias chamadas [`instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate).
+Para ver isso em ação, criaremos um único objeto de importação contendo um objeto de memória e um objeto de tabela e passaremos esse mesmo objeto de importação para várias chamadas [`instantiate()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiate_static).
 
 Nossos exemplos de `.wat` são assim:
 

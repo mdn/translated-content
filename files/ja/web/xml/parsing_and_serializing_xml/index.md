@@ -75,7 +75,7 @@ document が {{Glossary("HTML")}} である場合、上記のコードは {{domx
 
 ### DOM ツリーを文字列にシリアライズ
 
-まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)で説明された方法で DOM ツリーを作成します。もしくは、{{ domxref("XMLHttpRequest") }} で取得した DOM ツリーを用います。
+まず、[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)で説明された方法で DOM ツリーを作成します。もしくは、{{ domxref("XMLHttpRequest") }} で取得した DOM ツリーを用います。
 
 DOM ツリー `doc` を XML 文字列にシリアライズするには、以下のように {{domxref("XMLSerializer.serializeToString()")}} を呼び出します。
 

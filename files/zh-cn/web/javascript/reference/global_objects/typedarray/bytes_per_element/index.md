@@ -45,5 +45,5 @@ Float64Array.BYTES_PER_ELEMENT; // 8
 
 ## 参见
 
-- [JavaScript 强类型数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 强类型数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

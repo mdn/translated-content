@@ -42,5 +42,5 @@ warn(msg, subst1, /* …, */ substN)
 
 ## 参见
 
-- [Opera Dragonfly 文档：控制台](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly 文档：控制台](https://www.opera.com/dragonfly/documentation/console/)
 - [MSDN：使用 F12 工具控制台来查看错误和状态](http://msdn.microsoft.com/library/gg589530)

@@ -28,4 +28,4 @@ chaine = elem.style.cssText;
 
 ## Spécification
 
-- [DOM Level 2 Style CSS - Interface CSSStyleDeclaration (introduced in DOM Level 2)](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration)
+- [DOM Level 2 Style CSS - Interface CSSStyleDeclaration (introduced in DOM Level 2)](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration)

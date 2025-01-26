@@ -2,7 +2,7 @@
 title: margin-top
 slug: Web/CSS/margin-top
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
@@ -59,7 +59,7 @@ margin-top: unset;
 .content {
   margin-top: 5%;
 }
-.sidebox {
+.side-box {
   margin-top: 10px;
 }
 .logo {
@@ -80,5 +80,8 @@ margin-top: unset;
 
 ## 関連情報
 
-- {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} と {{cssxref("margin")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}} および一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
+- 一括指定の {{cssxref("margin")}}
+- {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, {{cssxref("margin-inline-end")}}
+- 一括指定の {{cssxref("margin-block")}} と {{cssxref("margin-inline")}}
+- [CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)モジュール

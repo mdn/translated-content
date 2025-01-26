@@ -11,7 +11,7 @@ slug: Web/CSS/Tutorials
 
 ## CSS 初级教程
 
-- [CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
+- [CSS 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
   - : 这篇教程完全面向新手。假如你还没写过一行 CSS——这篇很适合你。这篇文章介绍了 CSS 的一些基础概念，引导你编写基础的样式表。
 - [使用丰富多彩的背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : 背景是优美样式的基础。CSS 允许你对每个容器设置不同的背景。这篇教程会讲述 CSS 与背景之间是如何相互影响，以及你如何得到想要的结果。

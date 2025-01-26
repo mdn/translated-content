@@ -50,7 +50,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `decreaseFontSize`
   - : 给选中文字加上 {{HTMLElement("small")}} 标签，或在选中点插入该标签。(IE 浏览器不支持)
 - `defaultParagraphSeparator`
-  - : 更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅[标记生成的差异](/zh-CN/docs/Web/Guide/HTML/Content_Editable#Differences_in_markup_generation)。
+  - : 更改在可编辑文本区域中创建新段落时使用的段落分隔符。有关更多详细信息，请参阅[标记生成的差异](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation)。
 - `delete`
   - : 删除选中部分。
 - `enableAbsolutePositionEditor`

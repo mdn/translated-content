@@ -11,7 +11,7 @@ slug: Web/HTML/Element/ins
 
   - : **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias).
 
-    **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: a veces [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**:
 
