@@ -246,7 +246,7 @@ wasm-pack build --target web
 
 このファイルのスクリプトは、js グルーコードをインポートし、Wasm モジュールを初期化し、rust で書いた `greet` 関数を呼び出します。
 
-プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server`）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#シンプルなローカル_http_サーバーの実行)を参考にしてください。
+プロジェクトのルートディレクトリーに、ローカルのウェブサーバーを用意します（例: `python3 -m http.server`）。やり方がよくわからない場合は、[シンプルなローカル HTTP サーバーの実行](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#シンプルなローカル_http_サーバーの実行)を参考にしてください。
 
 > [!NOTE]
 > 必ず `application/wasm` という MIME 型に対応している最新のウェブサーバーを使用してください。古いウェブサーバーでは、まだ対応していないかもしれません。

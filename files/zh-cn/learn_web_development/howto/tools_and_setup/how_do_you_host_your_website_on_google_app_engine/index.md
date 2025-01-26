@@ -58,7 +58,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_websi
    gcloud app deploy
    ```
 
-6. 输入一个数字以选择你希望应用程序所在的区域。.
+6. 输入一个数字以选择你希望应用程序所在的区域。
 7. 键入 `Y` 确认。
 8. 现在你可以在浏览器中访问你的站点了，比如对于项目 ID 是*gaesamplesite 的网站*, go 输入 [_gaesamplesite_.appspot.com](http://gaesamplesite.appspot.com/)访问。
 

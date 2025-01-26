@@ -21,7 +21,7 @@ slug: Web/CSS/list-style-image
 list-style-image: none;
 
 /* <url>  値 */
-list-style-image: url("starsolid.gif");
+list-style-image: url("star-solid.gif");
 
 /* 有効な画像値 */
 list-style-image: linear-gradient(to left bottom, red, blue);
@@ -65,7 +65,7 @@ list-style-image: unset;
 
 ```css
 ul {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
 }
 ```
 
