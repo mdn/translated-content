@@ -1,39 +1,30 @@
 ---
 title: React を始める
 slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 l10n:
-  sourceCommit: 420f761d5883416e606ddf21a3e7bcc079bf0c9f
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
 
-この記事では React のはじめかたを説明します。React の背景と使い方について説明し、ローカル環境で基本的な React ツールチェーンを設定します。また、シンプルな基本アプリを作成して、React がどのようなプロセスで機能するのかを学んでいきます。
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+
+この記事では React のはじめかたを説明します。 React の背景と使い方について説明し、ローカル環境で基本的な React ツールチェーンを設定します。また、シンプルな基本アプリを作成して、React がどのようなプロセスで機能するのかを学んでいきます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p>
-          基本的な <a href="/ja/docs/Learn/HTML">HTML</a>,
-          <a href="/ja/docs/Learn/CSS">CSS</a>,
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語に親しんでいること、<a
-            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ターミナル/コマンドライン</a
-          >に関する知識があること。
-        </p>
-        <p>
-          React は JSX (JavaScript と XML) と呼ばれる HTML-in-JavaScript を使用します。HTML と JavaScript の両方に精通していると、JSX の学習に役立ち、アプリケーションのバグが JavaScript に関連しているか、React のより具体的なドメインに関連しているかを特定するのに役立つます。
-        </p>
+        コアの <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">端末/コマンドライン</a>が分かっていること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        <p>
-          ローカルの React 開発環境をセットアップし、開始アプリを作成して、それがどのように機能するかの基本を理解すること。
-        </p>
+          React の開発環境をローカルに設定し、アプリを作成して、これがどのように動作するのかの基本を理解すること。
       </td>
     </tr>
   </tbody>
@@ -41,33 +32,33 @@ l10n:
 
 ## React の基礎
 
-公式のキャッチフレーズにあるように、[React](https://react.dev/) はユーザーインターフェイスを構築するためのライブラリーです。React はフレームワークではなく、ウェブに限定されるものでもありません。他のライブラリーと共に使用して、特定の環境にレンダリングします。たとえば、[React Native](https://reactnative.dev/) はモバイルアプリケーションの構築に使用できます。
+公式のキャッチフレーズにあるように、 [React](https://ja.react.dev/) はユーザーインターフェイスを構築するためのライブラリーです。 React はフレームワークではなく、ウェブに限定されるものでもありません。他のライブラリーと共に使用して、特定の環境にレンダリングします。たとえば、 [React Native](https://reactnative.dev/) はモバイルアプリケーションの構築に使用できます。
 
-ウェブ向けに構築するには、開発者は [ReactDOM](https://react.dev/reference/react-dom) と連携して React を使用します。React と ReactDOM は、他の本当のウェブ開発フレームワークと同じ土台で頻繫に議論され、同じような問題を解決するために用いられます。React を「フレームワーク」と呼ぶとき、それは口語的な理解として扱います。
+ウェブ向けに構築するには、開発者は [ReactDOM](https://ja.react.dev/reference/react-dom) と連携して React を使用します。React と ReactDOM は、他の本当のウェブ開発フレームワークと同じ土台で頻繫に議論され、同じような問題を解決するために用いられます。React を「フレームワーク」と呼ぶとき、それは口語的な理解として扱います。
 
-React が目指すところは、開発者が UI を構築しているときに発生するバグを最小限に抑えることです。これは、コンポーネント（ユーザーインターフェイスの一部を記述する自己完結型の論理的なコード）を使用して行われます。これらのコンポーネントを組み合わせて完全な UI を作成でき、React はレンダリング作業の大部分を抽象化して、UI デザインに集中できるようにします。
+React が目指すところは、開発者が UI を構築しているときに発生するバグを最小限に抑えることです。これは、コンポーネント（ユーザーインターフェイスの一部を記述する自己完結型の論理的なコード）を使用して行われます。これらのコンポーネントを組み合わせて完全な UI を作成でき、 React はレンダリング作業の大部分を抽象化して、UI デザインに集中できるようにします。
 
 ## 用途
 
-このモジュールで取り上げられている他のフレームワークとは異なり、React はコード規則やファイル編成に関する厳密なルールを適用しません。これにより、チームは自分に最適な規則を設定し、React を好きなように採用することができます。React は、単一のボタン、一部のインターフェイス、またはアプリのユーザーインターフェイス全体を処理できます。
+このモジュールで取り上げられている他のフレームワークとは異なり、 React はコード規則やファイル編成に関する厳密なルールを適用しません。これにより、チームは自分に最適な規則を設定し、 React を好きなように採用することができます。 React は、単一のボタン、一部のインターフェイス、またはアプリのユーザーインターフェイス全体を処理できます。
 
-React は[インターフェイスの一部](https://react.dev/learn/add-react-to-an-existing-project)に適用することが _できます_ が、jQuery のようなライブラリーや Vue のようなフレームワークほどアプリケーションに「ドロップ」するのは簡単ではありません。React でアプリ全体を構築するのに適しています。
+React は[インターフェイスの一部](https://ja.react.dev/learn/add-react-to-an-existing-project)に適用することが _できます_ が、jQuery のようなライブラリーや Vue のようなフレームワークほどアプリケーションに「ドロップ」するのは簡単ではありません。React でアプリ全体を構築するのに適しています。
 
 さらに、JSX のインターフェイスの作成など、React アプリの開発者体験にはコンパイルプロセスが必要とします。Babel のようなコンパイラーをウェブサイトに追加すると、コードの実行が遅くなるため、開発者はビルドステップでそのようなツールをセットアップすることがよくあります。間違いなく React には厳しいツール要件がありますが、学習することはできます。
 
-この記事では、現行のフロントエンドビルドツールである [Vite](https://vitejs.dev/) に対応し、アプリケーションのユーザーインターフェイス全体をレンダリングするために React を使用する用途に焦点を当てます。
+この記事では、現行のフロントエンドビルドツールである [Vite](https://vite.dev/) に対応し、アプリケーションのユーザーインターフェイス全体をレンダリングするために React を使用する用途に焦点を当てます。
 
 ## React における JavaScript の書き方
 
-React は、そのパターンの多くに最新の JavaScript の機能を利用しています。JavaScript からの最大の違いは、[JSX](https://reactjs.org/docs/introducing-jsx.html) 構文を使うことです。JSX は JavaScript の構文を拡張して、HTML のようにコードを書くことができます。例えば次のようになります。
+React は、そのパターンの多くに最新の JavaScript の機能を利用しています。 JavaScript からの最大の違いは、 [JSX](https://ja.react.dev/learn/writing-markup-with-jsx) 構文を使うことです。 JSX は JavaScript の構文を拡張して、HTML のようにコードを書くことができます。例えば次のようになります。
 
 ```jsx
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-この定数 heading は、**JSX 式**と呼ばれます。React はこのように [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) タグをレンダリングすることができます。
+この定数 heading は、 **JSX 式**と呼ばれます。 React はこのように [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) タグをレンダリングすることができます。
 
-セマンティックの観点で、 [`<header>`](/ja/docs/Web/HTML/Element/header) タグで、見出しを囲みたいとします。JSX では、HTML のように、要素を相互にネストすることができます。
+意味論の観点から、 [`<header>`](/ja/docs/Web/HTML/Element/header) タグで見出しを囲みたいとします。JSX では、 HTML のように、要素を相互にネストすることができます。
 
 ```jsx
 const header = (
@@ -98,21 +89,21 @@ const header = React.createElement(
 );
 ```
 
-コンパイルステップとコンパイル自体をスキップし、[`React.createElement()`](https://react.dev/reference/react/createElement) を使って、独自の UI を自分で書くことができます。ただし、こうすると JSX の宣言的なメリットが失われ、コードが読みにくくなってしまいます。コンパイルは開発プロセスとは別のステップですが、React コミュニティの多くの開発者は、JSX の読みやすさに価値があると考えています。さらに、現代のフロントエンド開発は常にビルドプロセスを伴います。古いブラウザーとの互換性を保つために現代の構文をダウンレベルしなければなりませんし、読み込みパフォーマンスを最適化するためにコードを[ミニファイ](/ja/docs/Glossary/Minification)したくなることがあります。 Babel のような人気のあるツールはすでに JSX 対応をしているので、コンパイラーを自分で設定する必要はありません。
+コンパイルステップとコンパイル自体をスキップし、 [`React.createElement()`](https://ja.react.dev/reference/react/createElement) を使って、独自の UI を自分で書くことができます。ただし、こうすると JSX の宣言的なメリットが失われ、コードが読みにくくなってしまいます。コンパイルは開発プロセスとは別のステップですが、 React コミュニティの多くの開発者は、JSX の読みやすさに価値があると考えています。さらに、現代のフロントエンド開発は常にビルドプロセスを伴います。古いブラウザーとの互換性を保つために現代の構文をダウンレベルしなければなりませんし、読み込みパフォーマンスを最適化するためにコードを[ミニファイ](/ja/docs/Glossary/Minification)したくなることがあります。 Babel のような人気のあるツールはすでに JSX 対応をしているので、コンパイラーを自分で設定する必要はありません。
 
-JSX は HTML と JavaScript を交ぜたものなので、一部の開発者にとっては直感的に使うことができます。しかしそうでない人にとってはは、交ぜられてされていることで混乱させられると言います。ただし、慣れれば、ユーザーインターフェイスをより迅速かつ直感的に構築できるようになり、他の人がコードを一目で理解しやすくなります。
+JSX は HTML と JavaScript の混合であるため、直感的に使えると考える開発者もいます。一方で、その混合性により混乱を招くという意見もあります。しかし、慣れてしまえば、ユーザーインターフェイスをより直感的にすばやく構築でき、他の人にもコードベースを一目で理解してもらえるようになります。
 
-JSX の詳細については、React チームの [Writing Markup with JSX](https://react.dev/learn/writing-markup-with-jsx) の記事をご覧ください。
+JSX の詳細については、React チームの [JSX でマークアップを記述する](https://ja.react.dev/learn/writing-markup-with-jsx)の記事をご覧ください。
 
 ## 最初の React アプリをセットアップする
 
 新しい React アプリケーションを作成する方法はたくさんあります。今回は Vite を使用してコマンドラインから新しいアプリケーションを作成します。
 
-[既存のプロジェクトに React を追加する](https://react.dev/learn/add-react-to-a-website.html)には、いくつかの [`<script>`](/ja/docs/Web/HTML/Element/script) を HTML ファイルにコピーすることで可能ですが、Vite を使用することで、より多くの時間をアプリの構築に費やすことができ、セットアップに費やす時間を減らすことができます。
+[既存のプロジェクトに React を追加する](https://ja.react.dev/learn/add-react-to-an-existing-project)には、いくつかの [`<script>`](/ja/docs/Web/HTML/Element/script) を HTML ファイルにコピーすることで可能ですが、 Vite を使用することで、より多くの時間をアプリの構築に費やすことができ、セットアップに費やす時間を減らすことができます。
 
 ### 必要条件
 
-Viteを使用するには、[Node.js](https://nodejs.org/en/) がインストールされている必要があります。Vite 5.0 の時点では、少なくとも Node のバージョン18以降が要求されており、できる限り最新の長期サポート (LTS) バージョンを実行するのがよい考えです。2023 年 10 月 24 日現在、ノード 20 が最新の LTS バージョンです。Node には npm（Node パッケージマネージャ）が含まれています。
+Vite を使用するには、[Node.js](https://nodejs.org/en/) がインストールされている必要があります。Vite 5.0 の時点では、少なくとも Node のバージョン18以降が要求されており、できる限り最新の長期サポート (LTS) バージョンを実行するのがよい考えです。2023 年 10 月 24 日現在、ノード 20 が最新の LTS バージョンです。Node には npm（Node パッケージマネージャ）が含まれています。
 
 Node のバージョンを調べるには、端末で以下を実行してください。
 
@@ -120,11 +111,11 @@ Node のバージョンを調べるには、端末で以下を実行してくだ
 node -v
 ```
 
-ノードがインストールされていれば、バージョン番号が表示されます。インストールされていない場合は、エラーメッセージが表示されます。Node をインストールするには、[Node.js のウェブサイト](https://nodejs.org/en/)の指示に従ってください。
+ノードがインストールされていれば、バージョン番号が表示されます。インストールされていない場合は、エラーメッセージが表示されます。Node をインストールするには、 [Node.js のウェブサイト](https://nodejs.org/en/)の指示に従ってください。
 
-npm の代替として Yarn パッケージマネージャを使用することもできますが、この一連のチュートリアルでは npm を使用していることを想定します。npm と yarn の詳細情報は[パッケージ管理の基本](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)を参照してください。
+npm の代替として Yarn パッケージマネージャを使用することもできますが、この一連のチュートリアルでは npm を使用していることを想定します。npm と yarn の詳細情報は[パッケージ管理の基本](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)を参照してください。
 
-Windows を使用している場合、このチュートリアルで言及されている端末コマンドを使用するには、Unix / macOS 端末と同等のソフトウェアをインストールする必要があります。 **Gitbash** （[git for Windows のツールセット](https://gitforwindows.org/)の一部として提供）または **[Linux 用の Windows サブシステム](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) の両方が適しています。これら、および一般的な端末コマンドの詳細については、[コマンドライン短期集中講座](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)を参照してください。
+Windows を使用している場合、このチュートリアルで言及されている端末コマンドを使用するには、Unix / macOS 端末と同等のソフトウェアをインストールする必要があります。 **Gitbash** （[git for Windows のツールセット](https://gitforwindows.org/)の一部として提供）または **[Linux 用の Windows サブシステム](https://learn.microsoft.com/windows/wsl/about)** (**WSL**) の両方が適しています。これら、および一般的な端末コマンドの詳細については、[コマンドライン短期集中講座](/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)を参照してください。
 
 また、このチュートリアルを読み終えて作業する際には、React と ReactDOM は Firefox、Microsoft Edge、Safari、Chrome のようなかなり新しいブラウザーでなければ動作しないアプリを作成することも念頭に置いてください。
 
@@ -132,7 +123,7 @@ Windows を使用している場合、このチュートリアルで言及され
 
 - ["About npm" on the npm blog](https://docs.npmjs.com/about-npm/)
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
-- [Vite's documentation](https://vitejs.dev/guide/)
+- [Vite's documentation](https://vite.dev/guide/)
 
 ### アプリの初期化
 
@@ -142,7 +133,7 @@ npm パッケージマネージャには、テンプレートから新しい自�
 npm create vite@latest moz-todo-react -- --template react
 ```
 
-これは `moz-todo-react` ディレクトリーを作成し、Vite の `react` テンプレートを使用します。
+これは `moz-todo-react` ディレクトリーを作成し、 Vite の `react` テンプレートを使用します。
 
 > [!NOTE]
 > npm コマンドに `create` などの引数を渡すには `--` が必要で、 `--template react` 引数は Vite に React テンプレートを使用するように指示します。
@@ -155,13 +146,13 @@ cd moz-todo-react && npm install
 
 プロセスが完全に完了したら、アプリを実行するためにローカル開発サーバーを起動する必要があります。ここでは、サーバーが起動したらすぐにブラウザーでアプリを開き、Vite の既定の提案としてポート 3000 を使用するためのコマンドラインフラグを追加します。
 
-端末で以下を実行します。
+端末で次のように実行します。
 
 ```bash
 npm run dev -- --open --port 3000
 ```
 
-サーバーが起動したら、Reactアプリを格納した新しいブラウザータブが表示されるはずです。
+サーバーが起動したら、 React アプリを格納した新しいブラウザータブが表示されるはずです。
 
 ![MacOS 版 Firefox で localhost:3000 を開いたスクリーンショット。Vite の React テンプレートから作成したアプリケーションを表示させています。](default-vite.png)
 
@@ -188,13 +179,13 @@ moz-todo-react
 └── vite.config.js
 ```
 
-**`index.html`** は最も重要な最上位のファイルです。Viteはコードをこのファイルに注入し、ブラウザーが実行できるようにします。チュートリアル中にこのファイルを編集する必要はありませんが、このファイルの [`<title>`](/ja/docs/Web/HTML/Element/title) 要素内のテキストをアプリケーションのタイトルを反映するように変更してください。正確なページタイトルはアクセシビリティにとって重要です。
+**`index.html`** は最も重要な最上位のファイルです。 Vite はコードをこのファイルに注入し、ブラウザーが実行できるようにします。チュートリアル中にこのファイルを編集する必要はありませんが、このファイルの [`<title>`](/ja/docs/Web/HTML/Element/title) 要素内のテキストをアプリケーションのタイトルを反映するように変更してください。正確なページタイトルはアクセシビリティにとって重要です。
 
-**`public`** ディレクトリーには、Vite のビルドツールによって処理されることなく、ブラウザーに直接提供される静的ファイルが格納されます。これで、Vite のロゴだけが格納されます。
+**`public`** ディレクトリーには、 Vite のビルドツールによって処理されることなく、ブラウザーに直接提供される静的ファイルが格納されます。これで、 Vite のロゴだけが格納されます。
 
 **`src`** ディレクトリーにはアプリケーションのソースコードが格納されています。このディレクトリーにあるいくつかの JavaScript ファイルが `.jsx` という拡張子で終わっていることにお気づきでしょう。この拡張子は JSX を格納するファイルに必要で、JSX 構文をブラウザーが理解できる JavaScript に変換するように Vite に指示します。`src/assets` ディレクトリーには、ブラウザーで見た React のロゴが格納されています。
 
-`package.json` ファイルと `package-lock.json` ファイルには、自分のプロジェクトに関するメタデータが格納されています。これらのファイルは React アプリケーション固有のものではありません。 Vite は `package.json` を作成し、npm はアプリの依存関係をインストールするときのために `package-lock.json` を作成しました。このチュートリアルを完了するために、これらのファイルを理解する必要はまったくありません。しかし、これらのファイルについて詳しく知りたい場合は、npm のドキュメントで [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) と [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json) について読むことができます。[パッケージ管理の基本](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)チュートリアルでも `package.json` について説明しています。
+`package.json` ファイルと `package-lock.json` ファイルには、自分のプロジェクトに関するメタデータが格納されています。これらのファイルは React アプリケーション固有のものではありません。 Vite は `package.json` を作成し、npm はアプリの依存関係をインストールするときのために `package-lock.json` を作成しました。このチュートリアルを完了するために、これらのファイルを理解する必要はまったくありません。しかし、これらのファイルについて詳しく知りたい場合は、npm のドキュメントで [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) と [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json) について読むことができます。[パッケージ管理の基本](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Package_management)チュートリアルでも `package.json` について説明しています。
 
 ### dev スクリプトのカスタマイズ
 
@@ -214,7 +205,7 @@ moz-todo-react
 
 React では、**コンポーネント**はアプリケーション全体の一部をレンダリングする再利用可能なモジュールです。コンポーネントは大きくても小さくても構いませんが、通常は明確に定義されています。
 
-ブラウザーが編集を促しているので、`src/App.jsx` を開いてみましょう。このファイルには最初のコンポーネント `<App />` が格納されています。
+ブラウザーが編集を促しているので、 `src/App.jsx` を開いてみましょう。このファイルには最初のコンポーネント `<App />` が格納されています。
 
 ```jsx
 import { useState } from "react";
@@ -228,10 +219,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://ja.react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -271,7 +262,7 @@ import "./App.css";
 
 その後、 `reactLogo` と `viteLogo` をインポートします。インポートパスはそれぞれ `./` と `/` で始まり、最後に `.svg` という拡張子があることに注意してください。これは、これらのインポートがローカルであり、npm パッケージではなく自分自身でファイルを参照していることを指示しています。
 
-最後の文は、`<App />` コンポーネント関連の CSS をインポートしています。変数名と `from` ディレクティブがないことに注意してください。これは[副作用インポート](/ja/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only)と呼ばれ、JavaScript ファイルに値をインポートしませんが、参照する CSS ファイルを最終的なコード出力に追加し、ブラウザーで使用することができるように Vite に指示します。
+最後の文は、`<App />` コンポーネント関連の CSS をインポートしています。変数名と `from` ディレクティブがないことに注意してください。これは[副作用インポート](/ja/docs/Web/JavaScript/Reference/Statements/import#副作用のためだけにモジュールをインポートする)と呼ばれ、JavaScript ファイルに値をインポートしませんが、参照する CSS ファイルを最終的なコード出力に追加し、ブラウザーで使用することができるように Vite に指示します。
 
 ### `App()` 関数
 
@@ -286,10 +277,10 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://ja.react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
@@ -312,7 +303,7 @@ function App() {
 
 この `App()` 関数は JSX 式を返します。この式には、ブラウザーが最終的に DOM にレンダリングするものを定義します。
 
-`return` キーワードのすぐ下に、特別な構文 `<>` があります。これは[フラグメント](https://react.dev/reference/react/Fragment)です。React コンポーネントは単一の JSX 要素を返す必要がありますが、フラグメントを使用することで、ブラウザーに任意の `<div>` をレンダリングせずにそれを行うことができます。多くの React アプリケーションでフラグメントを見かけるでしょう。
+`return` キーワードのすぐ下に、特別な構文 `<>` があります。これは[フラグメント](https://ja.react.dev/reference/react/Fragment)です。React コンポーネントは単一の JSX 要素を返す必要がありますが、フラグメントを使用することで、ブラウザーに任意の `<div>` をレンダリングせずにそれを行うことができます。多くの React アプリケーションでフラグメントを見かけるでしょう。
 
 ### `export` 文
 
@@ -353,14 +344,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 よろしければ、React API について以下の記事を読んでみてください。
 
-- [`ReactDOM.createRoot()`](https://react.dev/reference/react-dom/client/createRoot)
-- [`React.StrictMode`](https://react.dev/reference/react/StrictMode)
+- [`ReactDOM.createRoot()`](https://ja.react.dev/reference/react-dom/client/createRoot)
+- [`React.StrictMode`](https://ja.react.dev/reference/react/StrictMode)
 
 ## 新しく始める
 
 アプリを作り始めるには、Vite が指定された定型コードを削除する必要があります。
 
-まず最初の練習として、`App.jsx` の [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素を "Hello, World!" となるように変更し、ファイルを保存しましょう。この変更は、ブラウザーで `http://localhost:3000` で実行している開発サーバーですぐにレンダリングされることがわかるでしょう。このことを念頭に置いてアプリを動作させてください。
+まず最初の練習として、 `App.jsx` の [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素を "Hello, World!" となるように変更し、ファイルを保存しましょう。この変更は、ブラウザーで `http://localhost:3000` で実行している開発サーバーですぐにレンダリングされることがわかるでしょう。このことを念頭に置いてアプリを動作させてください。
 
 残りのコードは使用しません。`App.jsx` の内容を以下のもので置き換えます。
 
@@ -421,28 +412,28 @@ function App() {
 
 ファイルを保存して、ブラウザーでチェックしてください。"Hello, React!" とレンダリングされているはずです。
 
-`subject` を囲む中括弧は、JSX の構文のもう一つの機能です。中括弧は、文字列 `"subject"` をレンダリングするのではなく、変数 `subject` の値を読み込みたいことを React に指示します。JSX で中括弧の中に何か有効な JavaScript の式を書くことができます。React はそれを評価し、最終的なコンテンツとして式の結果をレンダリングします。以下は次の例で、それぞれの式が何をレンダリングするかをコメントで説明しています。
+`subject` を囲む中括弧は、JSX の構文のもう一つの機能です。中括弧は、文字列 `"subject"` をレンダリングするのではなく、変数 `subject` の値を読み込みたいことを React に指示します。JSX で中括弧の中に何か有効な JavaScript の式を書くことができます。 React はそれを評価し、最終的なコンテンツとして式の結果をレンダリングします。以下は次の例で、それぞれの式が何をレンダリングするかをコメントで説明しています。
 
 ```jsx-nolint
 {/* Hello, React :)! */}
 <h1>Hello, {subject + ' :)'}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
-{/* Hello, 4 */}
+{/* Hello, 4! */}
 <h1>Hello, {2 + 2}!</h1>
 ```
 
 JSX のコメントも中括弧の中に書きます。コメントも技術的には JavaScript の式だからです。 `/* ブロックコメント構文 */` は、プログラムがコメントの始まりと終わりを知るために必要です。
 
-### コンポーネントの prop
+### コンポーネントの props
 
-**prop** とは、React コンポーネントに渡されるデータのことです。 React の prop は HTML の属性に相当します。 HTML 要素が属性を持つのに対し、 React コンポーネントは prop を持ちます。 prop はコンポーネント呼び出しの中に記述され、 HTML の属性と同じ構文 `prop="value"` を使用します。
+**props** とは、React コンポーネントに渡されるデータのことです。 React の props は HTML の属性に相当します。 HTML 要素が属性を持つのに対し、 React コンポーネントは props を持ちます。 props はコンポーネント呼び出しの中に記述され、 HTML の属性と同じ構文 `prop="value"` を使用します。
 
-React では、データフローは一方向です。 prop は親コンポーネントから子コンポーネントにのみ渡すことができます。また prop は読み取り専用です。
+React では、データフローは一方向です。 props は親コンポーネントから子コンポーネントにのみ渡すことができます。また props は読み取り専用です。
 
-`main.jsx`を開き、`<App />` に最初の prop を渡しましょう。
+`main.jsx`を開き、`<App />` に最初の props を渡しましょう。
 
-`<App/>` コンポーネントに `subject` という prop を追加して、値は `Clarice` とします。完了すると、コードは次のようになります。
+`<App/>` コンポーネントに `subject` という props を追加して、値は `Clarice` とします。完了すると、コードは次のようになります。
 
 ```jsx
 <App subject="Clarice" />
@@ -462,17 +453,18 @@ function App(props) {
 ファイルを保存し、ブラウザーで調べてください。何もコンテンツがない空白の背景が見えるでしょう。これは、もう定義されていない `subject` 変数を読み込もうとしているためです。`<h1>Hello {subject}!</h1>` の行をコメントアウトすることで修正されます。
 
 > [!NOTE]
-> コードエディターが JSX の構文解析を理解している場合（現行のエディターはほとんど理解しています）、内蔵のコメントショートカット `Ctrl + /`（Windows の場合）または `Cmd + /`（macOS の場合）を使用して、すばやくコメントを作成することができます。
+> コードエディターが JSX の構文解析方法を理解している場合（最近のエディターはほとんどが理解しています）、内蔵のコメントショートカット `Ctrl + /`（Windows の場合）または `Cmd + /`（macOS の場合）を使用して、すばやくコメントを作成することができます。
 
-その行をコメントアウトしてファイルを保存してください。今度は、"Click me!" ボタンが表示されるはずです。ブラウザーの開発者コンソールを開くための、次のようなメッセージが表示されます。
+その行をコメントアウトしてファイルを保存してください。
+今度は、"Click me!" ボタンが表示されるはずです。ブラウザーの開発者コンソールを開くための、次のようなメッセージが表示されます。
 
 ```plain
 Object { subject: "Clarice" }
 ```
 
-オブジェクトプロパティ `subject` は、`<App />` コンポーネント呼び出しに追加した `subject` プロパティに対応し、文字列 `Clarice` はその値に対応します。React のコンポーネントプロップは、常にこのようにオブジェクトに集約されます。
+オブジェクトプロパティ `subject` は、`<App />` コンポーネント呼び出しに追加した `subject` プロパティに対応し、文字列 `Clarice` はその値に対応します。 React のコンポーネントの props は、常にこのようにオブジェクトに集約されます。
 
-この `subject` prop を使用して、アプリのエラーを修正してみましょう。`<h1>Hello,{subject}!</h1>` の行のコメントを解除して、`<h1>Hello,{props.subject}!</h1>` に変更し、`console.log()` 文を削除します。コードはこのようになっているはずです。
+この `subject` prop を使用して、アプリのエラーを修正してみましょう。 `<h1>Hello,{subject}!</h1>` の行のコメントを解除して、 `<h1>Hello,{props.subject}!</h1>` に変更し、 `console.log()` 文を削除します。コードはこのようになっているはずです。
 
 ```jsx
 function App(props) {
@@ -489,12 +481,13 @@ function App(props) {
 }
 ```
 
-保存すると、アプリは「Hello、Clarice！」と挨拶するはずです。`index.js` に戻り、`subject` の値を編集して保存すると、テキストが変更されます。
-なお、この変更を通して `Hello` の行を残したければ、JSX 変数を `{props.subject}` に更新することもできます。
+保存すると、アプリは "Hello, Clarice!" と挨拶するはずです。 `main.jsx` に戻り、`subject` の値を編集して保存すると、テキストが変更されます。
+
+追加の練習として、 `greeting` prop を `main.jsx` 内の `<App />` コンポーネントの呼び出しに、追加し、それを `App.jsx` 内の `subject` プロパティの横に並んだ状態で使用してみることもできます。
 
 ## まとめ
 
-これで、React をローカルでインストールする方法、スターターアプリを作成する方法、基本的にどのように機能するかなど、React の入門が終わりました。次の記事では、最初に適したアプリケーションである todo リストの作成を開始します。ただし、その前に、私たちが学んだことのいくつかをおさらいしましょう。
+これで、 React をローカルでインストールする方法、スターターアプリを作成する方法、基本的にどのように機能するかなど、 React の入門が終わりました。次の記事では、最初に適したアプリケーションである todo リストの作成を開始します。ただし、その前に、私たちが学んだことのいくつかをおさらいしましょう。
 
 React では:
 
@@ -502,6 +495,11 @@ React では:
 - コンポーネント関数は `PascalCase` で名前が付けられます。
 - JSX 内では、JavaScript 式を `{so}` のように中括弧で囲むことで出力することができます。
 - 一部の JSX 属性は HTML 属性とは異なるため、JavaScript の予約語と競合しません。例えば `class`、HTML では `className` JSX に変換されます。
-- prop は、コンポーネント呼び出し内の属性と同じように記述され、コンポーネントに渡されます。
+- props は、コンポーネント呼び出し内の属性と同じように記述され、コンポーネントに渡されます。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+## 関連情報
+
+- [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ コースは、 React の初心者にとって完璧な出発点ととなる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
+
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

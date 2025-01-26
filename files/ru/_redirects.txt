@@ -86,6 +86,7 @@
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
+/ru/docs/Glossary/Self-Executing_Anonymous_Function	/ru/docs/conflicting/Glossary/IIFE
 /ru/docs/Glossary/Simple_header	/ru/docs/Glossary/CORS-safelisted_request_header
 /ru/docs/Glossary/Simple_response_header	/ru/docs/Glossary/CORS-safelisted_response_header
 /ru/docs/Glossary/XHR_(XMLHttpRequest)	/ru/docs/Glossary/XMLHttpRequest
@@ -954,7 +955,9 @@
 /ru/docs/Web/JavaScript/Guide/EventLoop	/ru/docs/Web/JavaScript/Event_loop
 /ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /ru/docs/Web/JavaScript/Guide/Ispolzovanie_promisov	/ru/docs/Web/JavaScript/Guide/Using_promises
+/ru/docs/Web/JavaScript/Guide/Numbers_and_dates	/ru/docs/Web/JavaScript/Guide/Numbers_and_strings
 /ru/docs/Web/JavaScript/Guide/Statements	/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
+/ru/docs/Web/JavaScript/Guide/Text_formatting	/ru/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings
 /ru/docs/Web/JavaScript/Guide/The_Iterator_protocol	/ru/docs/Web/JavaScript/Reference/Iteration_protocols
 /ru/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ru/docs/Web/JavaScript/Guide/Grammar_and_types
 /ru/docs/Web/JavaScript/Guide/Введение_в_JavaScript	/ru/docs/Web/JavaScript/Guide/Introduction
@@ -1243,7 +1246,7 @@
 /ru/docs/Словарь/SGML	/ru/docs/Glossary/SGML
 /ru/docs/Словарь/SVG	/ru/docs/Glossary/SVG
 /ru/docs/Словарь/Scroll_container	/ru/docs/Glossary/Scroll_container
-/ru/docs/Словарь/Self-Executing_Anonymous_Function	/ru/docs/Glossary/Self-Executing_Anonymous_Function
+/ru/docs/Словарь/Self-Executing_Anonymous_Function	/ru/docs/conflicting/Glossary/IIFE
 /ru/docs/Словарь/Semantics	/ru/docs/Glossary/Semantics
 /ru/docs/Словарь/Sloppy_mode	/ru/docs/Glossary/Sloppy_mode
 /ru/docs/Словарь/Specification	/ru/docs/Glossary/Specification

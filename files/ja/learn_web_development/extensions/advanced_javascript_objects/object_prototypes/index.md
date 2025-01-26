@@ -1,12 +1,13 @@
 ---
 title: オブジェクトのプロトタイプ
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-original_slug: Learn/JavaScript/Objects/Object_prototypes
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 プロトタイプは、JavaScript オブジェクトが他のものから機能を継承する仕組みです。この記事では、プロトタイプとは何か、プロトタイプチェーンの動作方法、オブジェクトのプロトタイプを設定するにはどうすればよいかを解説していきます。
 
@@ -15,16 +16,19 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        JavaScript 関数の理解、JavaScript の基礎知識（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>と<a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >JavaScript の構成要素</a
-        >を参照）、OOJS の基礎（<a href="/ja/docs/Learn/JavaScript/Objects/Basics"
-          >オブジェクトの基本</a>を参照）。
+        JavaScript の基本
+        （特に<a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">オブジェクトの基本</a>を参照）。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        JavaScript のオブジェクトのプロトタイプ、プロトタイプチェーンの動作方法、prototype プロパティに新しいメソッドを追加する方法を理解する。
+        <ul>
+          <li>JavaScript のプロトタイプチェーン。</li>
+          <li>プロパティのシャドウ化の概念。</li>
+          <li>プロトタイプの設定。</li>
+          <li>プロトタイプと継承の概念。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -47,7 +51,7 @@ myObject.greet(); // Greetings from Madrid
 
 これは、1 つのデータプロパティ `city` と 1 つのメソッド `greet()` を持つオブジェクトです。オブジェクトの名前の後にピリオドを付けて `myObject.` のようにコンソールに入力すると、このオブジェクトで利用できるすべてのプロパティのリストがポップアップ表示されます。`city`と `greet` だけでなく、他にもたくさんのプロパティがあることがわかると思います。
 
-```
+```plain
 __defineGetter__
 __defineSetter__
 __lookupGetter__
@@ -70,7 +74,7 @@ valueOf
 myObject.toString(); // "[object Object]"
 ```
 
-これはうまくいきます（たとえ `toString()` が何をするのかが明らかでないとしても）。
+これはうまくいきます（たとえ `toString()` が何をするのかがよく分からないとしても）。
 
 これらの追加のプロパティは何でしょうか、そしてそれはどこから来ているのでしょうか？
 
@@ -117,7 +121,7 @@ do {
 
 ![Prototype chain for myDate](mydate-prototype-chain.svg)
 
-実際、`myDate2.getMonth()`のような馴染みのあるメソッドを呼び出す場合、`Date.prototype`で定義されたメソッドを呼び出していることになります。
+実際、`myDate2.getTime()`のような馴染みのあるメソッドを呼び出す場合、`Date.prototype`で定義されたメソッドを呼び出していることになります。
 
 ## プロパティのシャドウ化
 
@@ -126,16 +130,16 @@ do {
 ```js
 const myDate = new Date(1995, 11, 17);
 
-console.log(myDate.getYear()); // 95
+console.log(myDate.getTime()); // 819129600000
 
-myDate.getYear = function () {
+myDate.getTime = function () {
   console.log("something else!");
 };
 
-myDate.getYear(); // 'something else!'
+myDate.getTime(); // 'something else!'
 ```
 
-これは、プロトタイプチェーンの説明から予想できることです。`getYear()` を呼び出すと、ブラウザーはまず `myDate` にその名前のプロパティがないか探し、`myDate` で定義されていない場合にのみプロトタイプを調べます。つまり、`myDate` に `getYear()` を追加すると、`myDate` のバージョンが呼ばれることになります。
+これは、プロトタイプチェーンの説明から予想できることです。`getTime()` を呼び出すと、ブラウザーはまず `myDate` にその名前のプロパティがないか探し、`myDate` で定義されていない場合にのみプロトタイプを調べます。つまり、`myDate` に `getTime()` を追加すると、`myDate` のバージョンが呼ばれることになります。
 
 これはプロパティの「シャドウ化」と呼ばれます。
 
@@ -239,4 +243,4 @@ JavaScript で、`Professor` と `Student` のオブジェクトが `Person` プ
 
 次の記事では、オブジェクト指向プログラミングの基盤となる概念について見ていきます。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
