@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("Bluetooth API") }}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 **`BluetoothDevice.gatt`** 只读属性返回对设备的 {{DOMxRef("BluetoothRemoteGATTServer")}} 的引用。
 
