@@ -17,7 +17,7 @@ l10n:
 
 ### CSS
 
-- {{CSSXRef("align-self")}}、{{CSSXRef("justify-self")}} CSS プロパティおよび {{CSSXRef("place-self")}} CSS ショートハンドプロパティを [絶対位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning#absolute_positioning) の要素でサポートしました ([Firefox bug 1920160](https://bugzil.la/1920160))。
+- {{CSSXRef("align-self")}}、{{CSSXRef("justify-self")}} CSS プロパティおよび {{CSSXRef("place-self")}} CSS ショートハンドプロパティを [絶対位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning#絶対位置指定) の要素でサポートしました ([Firefox bug 1920160](https://bugzil.la/1920160))。
 
 ### JavaScript
 
