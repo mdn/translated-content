@@ -2,7 +2,7 @@
 title: Navigator
 slug: Web/API/Navigator
 l10n:
-  sourceCommit: 8bb6752a4d3ed3d54ab681636d16602e6bf1d74d
+  sourceCommit: c1fd7dc9410c14ec9e00b3ec35b7b94d43296389
 ---
 
 {{APIRef("DOM")}}
@@ -70,7 +70,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个当前文档的 {{domxref("Scheduling")}} 对象。
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 返回一个 {{domxref("Serial")}} 对象，代表了进入 {{domxref("Web Serial API")}} 的入口点，用于控制串行端口。
+  - : 返回一个 {{domxref("Serial")}} 对象，代表了进入 [Web Serial API](/zh-CN/docs/Web/API/Web_Serial_API) 的入口点，用于控制串行端口。
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回一个 {{domxref("ServiceWorkerContainer")}} 对象，它提供了注册、移除、升级以及与[相关文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorker")}} 对象进行通信的功能。
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
@@ -106,7 +106,7 @@ _不继承任何属性_。
 ### 已弃用的属性
 
 - {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 返回一个包含所有当前正在呈现（{{domxref("VRDisplay.ispresenting")}} 为 `true`）的 {{domxref("VRDisplay")}} 对象的数组。
+  - : 返回一个包含所有当前正在呈现（{{domxref("VRDisplay.isPresenting")}} 为 `true`）的 {{domxref("VRDisplay")}} 对象的数组。
 - {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : 在任何浏览器中始终返回 `'Mozilla'`。
 - {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -141,7 +141,7 @@ _不继承任何方法_。
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : 清除当前应用图标的徽标，并返回一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
-  - : 针对给定的不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性，在映射 URL 中替换指定字符串。此方法作为临时措施（标记为“已弃用”）提供，以支持对围栏框架 URL 执行此类替换，帮助广告技术提供商将现有的实现迁移到[隐私沙盒](https://developer.google.com/privacy-sandbox) API。
+  - : 针对给定的不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性，在映射 URL 中替换指定字符串。此方法作为临时措施（标记为“已弃用”）提供，以支持对围栏框架 URL 执行此类替换，帮助广告技术提供商将现有的实现迁移到[隐私沙盒](https://developers.google.cn/privacy-sandbox?hl=zh-cn) API。
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : 返回一个值，表示指定的媒体元素、音频上下文或媒体特性“类型”是否允许自动播放。
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}

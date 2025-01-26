@@ -2,10 +2,10 @@
 title: Navigator：globalPrivacyControl 属性
 slug: Web/API/Navigator/globalPrivacyControl
 l10n:
-  sourceCommit: ec4de01e84cb892379c9130d6fbff1e2abc4f486
+  sourceCommit: c1fd7dc9410c14ec9e00b3ec35b7b94d43296389
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`Navigator.globalPrivacyControl`** 只读属性返回用户对当前网站的[全球隐私控制](https://globalprivacycontrol.org/)设置。此设置指示用户是否同意网站或服务将其个人信息出售或共享给第三方。
 
