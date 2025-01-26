@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLMediaElement")}} 方法 **`canPlayType()`** 用于报告当前浏览器播放指定 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)媒体的可能性。
+{{domxref("HTMLMediaElement")}} 的 **`canPlayType()`** 方法用于报告当前浏览器播放指定 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)媒体的可能性。
 
 ## 语法
 
@@ -24,7 +24,7 @@ canPlayType(type)
 
 一个表示媒体可播放的可能性的字符串。该字符串将是以下值之一：
 
-- `""` （空字符串）
+- `""`（空字符串）
   - : 当前设备无法播放该媒体。
 - `probably`
   - : 该媒体可能可以在此设备上播放。
@@ -50,6 +50,6 @@ console.log(obj.canPlayType("video/mp4")); // “maybe”
 
 - {{domxref("HTMLMediaElement")}}：用于定义 `HTMLMediaElement.canPlayType()` 方法的接口
 - {{domxref("MediaCapabilities")}}
-- [处理网页内容中的媒体支持问题](/zh-CN/docs/Web/Media/Formats/Support_issues)
+- [处理 Web 内容中的媒体支持问题](/zh-CN/docs/Web/Media/Formats/Support_issues)
 - [媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
 - [常见媒体类型的编解码器](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
