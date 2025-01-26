@@ -68,8 +68,8 @@ flex-grow: unset;
 ```html
 <h1>これは <code>flex-grow</code> の例です</h1>
 <p>
-  A、B、C、F は <code>flex-grow: 1</code> が設定されています。
-  D と E は <code>flex-grow: 2</code> が設定されています。
+  A、B、C、F は <code>flex-grow: 1</code> が設定されています。 D と E は
+  <code>flex-grow: 2</code> が設定されています。
 </p>
 <div id="content">
   <div class="small" style="background-color:red;">A</div>
