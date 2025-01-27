@@ -41,8 +41,8 @@ order: unset;
 
 使用 `order` 属性会导致内容的视觉呈现与 DOM 顺序之间产生脱节。这将对借助屏幕阅读器等辅助技术导航的低视力用户造成不利影响。如果视觉顺序与 DOM 顺序不一致，用户访问内容时的体验将因其访问方式的不同而有所差异。
 
-- [Flexbox 与键盘导航的脱节](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/) via Tink (2016)
-- [源代码顺序至关重要](https://adrianroselli.com/2015/09/source-order-matters.html) via Adrian Roselli (2015)
+- [Flexbox 与键盘导航的脱节](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)——来自 Tink（2016）
+- [源代码顺序至关重要](https://adrianroselli.com/2015/09/source-order-matters.html)——来自 Adrian Roselli（2015）
 - [理解 WCAG，指南 1.2 说明](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [了解成功标准 1.3.2 | W3C 对 WCAG 2.0 的理解](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
