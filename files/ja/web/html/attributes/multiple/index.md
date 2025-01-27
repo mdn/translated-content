@@ -3,7 +3,7 @@ title: "HTML 属性: multiple"
 short-title: multiple
 slug: Web/HTML/Attributes/multiple
 l10n:
-  sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -48,7 +48,7 @@ l10n:
 
 `multiple` を指定すると、ほとんどのブラウザーでは 1 行のドロップダウンではなく、スクロールするリストボックスが表示されます。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ユーザーがフォームに記入する方法を理解し、個々のフォームコントロールを使用するための指示を提供してください。入力が必須であるか任意であるか、データの書式、その他の関連する情報です。 `multiple` 属性を使用する場合は、ユーザーに複数の値が許可されていることを知らせ、「複数のメールアドレスをカンマ区切りで入力してください」などのように、複数の値を入力する方法を指示してください。
 
@@ -123,7 +123,7 @@ input:invalid {
 
 `multiple` が設定された `file` 入力欄と、設定されていない入力欄との外見の違いに注意してください。
 
-フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
+フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、マルチパートフォームデータを送信しているので、 post を使用する必要があります。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
 
 ### select
 
