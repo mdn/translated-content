@@ -68,7 +68,7 @@ order: unset;
 <header>页眉</header>
 <main>
   <article>内容</article>
-  <nav>导航</nav>
+  <nav>导航栏</nav>
   <aside>侧边栏</aside>
 </main>
 <footer>页脚</footer>
