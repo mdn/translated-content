@@ -32,7 +32,7 @@
     "fdir": "^6.4.3",
     "front-matter": "^4.0.2",
     "husky": "9.1.7",
-    "lint-staged": "15.4.2",
+    "lint-staged": "15.4.3",
     "markdown-it": "^14.1.0",
     "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
