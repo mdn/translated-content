@@ -1,12 +1,13 @@
 ---
 title: オブジェクト指向プログラミング
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
-original_slug: Learn/JavaScript/Objects/Object-oriented_programming
 l10n:
-  sourceCommit: 920bb9e8e56340d3fe9e288fceabe8c36fe67f65
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 オブジェクト指向プログラミング (OOP) は、Java や C++ をはじめとする多くのプログラミング言語の基本となるプログラミングパラダイムです。この記事では、OOP の基本的な概念について説明します。主に**クラスとインスタンス**、**継承**、**カプセル化**の 3 つの概念を説明します。これは、特に JavaScript を参照することなくこれらの概念を記述することになるので、すべての例は{{Glossary("Pseudocode", "擬似コード")}}で示されます。
 
@@ -18,18 +19,19 @@ l10n:
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提知識:</th>
+      <th scope="row">前提条件:</th>
       <td>
-        JavaScript 関数の理解、JavaScript の基礎知識（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>と <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >JavaScript の構成要素</a
-        >を参照）、OOJS の基礎（<a href="/ja/docs/Learn/JavaScript/Objects/Basics"
-          >オブジェクトの基本</a>、<a href="/ja/docs/Learn/JavaScript/Objects/Object_prototypes">オブジェクトのプロトタイプ</a>を参照）。
+        JavaScript の基本
+        （特に<a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">オブジェクトの基本</a>を参照）、およびこのモジュールのこれまでのレッスンで扱ってきたオブジェクト指向 JavaScript の概念。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        クラスベースのオブジェクト指向プログラミングの基本的な概念を理解すること。
+        <ul>
+          <li>オブジェクト指向プログラミング (OOP) の概念: クラス、インスタンス、継承、カプセル化。</li>
+          <li>これらのオブジェクト指向の概念が JavaScript でどのように適用されるか、また、 Java や C++ などの言語との違いは何か。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -45,7 +47,7 @@ OOP でオブジェクトの観点から問題をモデル化する場合、シ�
 
 擬似コードでは、`Professor` クラスは次のように書くことができます。
 
-```
+```plain
 class Professor
     properties
         name
@@ -64,7 +66,7 @@ class Professor
 
 一般に、コンストラクターはクラス定義の一部として書き出され、通常はクラスそのものと同じ名前を持っています。
 
-```
+```plain
 class Professor
     properties
         name
@@ -99,7 +101,7 @@ lillian.introduceSelf(); // 'My name is Professor Lillian and I will be your Poe
 
 しかし、学生は名前を持ち、自己紹介をすることもできるので、学生クラスの定義を次のように書くことにします。
 
-```
+```plain
 class Student
     properties
         name
@@ -114,7 +116,7 @@ class Student
 
 まず、学生も教授も人間であり、人間には名前があり、自己紹介をしたいということを観察することから始めます。このモデルは新しいクラス `Person` を定義することで実現でき、そこで人に共通するプロパティをすべて定義します。そして、`Professor` と `Student` は `Person` から**派生**することができ、それぞれのプロパティを追加することができます。
 
-```
+```plain
 class Person
     properties
         name
@@ -178,7 +180,7 @@ if (student.year > 1) {
 
 問題は、もし生徒がアーチェリーを学ぶことを許可する基準を変更することにした場合、例えば親や 保護者からの許可も必要とした場合、このテストを実行するシステム内のすべての場所を更新する必要があることです。そこで、`Student` オブジェクトに `canStudyArchery()` メソッドを用意し、1 か所でロジックを実装するようにしたほうがよいでしょう。
 
-```
+```plain
 class Student : extends Person
     properties
        year
@@ -199,7 +201,7 @@ if (student.canStudyArchery()) {
 
 多くの OOP 言語では、いくつかのプロパティを `private` としてマークすることで、他のコードがオブジェクトの内部状態にアクセスするのを防ぐことができます。これにより、オブジェクトの外のコードがそれらにアクセスしようとすると、エラーが発生するようになります。
 
-```
+```plain
 class Student : extends Person
     properties
        private year
@@ -219,7 +221,7 @@ student.year // error: 'year' is a private property of Student
 
 この記事では、Java や C++ などの言語で実装されているクラスベースのオブジェクト指向プログラミングの基本的な機能のいくつかを記述しました。
 
-前回までの 2 つの記事では、JavaScript の中核となる機能をいくつか見ていきました。[コンストラクター](/ja/docs/Learn/JavaScript/Objects/Basics)と[プロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)です。これらの機能は、確かに記述した OOP 概念のいくつかと何らかの関連があります。
+前回までの 2 つの記事では、JavaScript の中核となる機能をいくつか見ていきました。[コンストラクター](/ja/docs/Learn_web_development/Core/Scripting/Object_basics)と[プロトタイプ](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)です。これらの機能は、確かに記述した OOP 概念のいくつかと何らかの関連があります。
 
 - JavaScript の**コンストラクター**は、クラス定義のようなもので、オブジェクトの「形状」を定義することができ、そのオブジェクトに格納するメソッドも含めて、単一の場所で定義することができます。しかし、ここでもプロトタイプを使用することができます。例えば、あるメソッドがコンストラクターの `prototype` プロパティで定義されている場合、そのコンストラクターを使用して作成されたすべてのオブジェクトは、そのプロトタイプを介してそのメソッドを取得するので、コンストラクターの中でメソッドを定義する必要はありません。
 
@@ -239,4 +241,4 @@ student.year // error: 'year' is a private property of Student
 
 次の記事では、JavaScript がクラスベースのオブジェクト指向プログラミングに対応するために提供している機能について見ていきます。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

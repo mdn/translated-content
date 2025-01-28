@@ -1,12 +1,11 @@
 ---
 title: UI 擬似クラス
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
-original_slug: Learn/Forms/UI_pseudo-classes
 l10n:
-  sourceCommit: b9f3d089aaf999b287db9a917788633755fe5f93
+  sourceCommit: f6844f5e30882a6a4843da9b026bc0166ade9c41
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 これまでの記事では、様々なフォームコントロールのスタイル設定について、一般的な方法で説明しました。これには、例えばチェックボックスが選択されたときだけターゲットにするために `:checked` を使用するような、擬似クラスの使用方法も記載しました。この記事では、さまざまな状態のフォームをスタイル設定するために利用できる、さまざまな UI 擬似クラスについて詳しく説明します。
 
@@ -16,10 +15,10 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         基本的な
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> および
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> を理解していること（一般的な
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> および
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> を理解していること（一般的な
         <a
-          href="/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements"
+          href="/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements"
           >擬似クラスと擬似要素</a
         >の知識を含む）。
       </td>
@@ -39,15 +38,7 @@ l10n:
 
 - {{cssxref(":hover")}}: マウスポインターを当てたときだけ要素を選択します。
 - {{cssxref(":focus")}}: フォーカスされているとき（キーボードからタブで移動しているとき）にのみ、要素を選択します。
-- {{cssxref(":active")}}: その要素がアクティブ化されているとき（つまり、クリックされたとき、またはキーボード操作の場合は
-
-  <kbd>Return</kbd>
-
-  /
-
-  <kbd>Enter</kbd>
-
-  キーが押されたとき）だけ、要素を選択します。
+- {{cssxref(":active")}}: その要素がアクティブ化されているとき（つまり、クリックされたとき、またはキーボード操作の場合は <kbd>Return</kbd> / <kbd>Enter</kbd> キーが押されたとき）だけ、要素を選択します。
 
 これらの基本的な擬似クラスについては、 もう慣れたことでしょう。 [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)では、他にも HTML フォームに関連する擬似クラスをいくつか提供しています。これらは、これらは、利用することができる有用なターゲット条件をいくつか提供しています。以下の節で詳しく説明しますが、簡単に説明すると、主なものは以下のとおりです。
 
@@ -60,7 +51,7 @@ l10n:
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。中にはとても特殊でニッチな問題を解決することを目的としたものもあります。上に挙げた UI 擬似クラスはブラウザーの対応が充実していますが、もちろん、対象とするユーザーに対して確実に動作するよう、フォームの実装を慎重にテストする必要があります。
 
 > [!NOTE]
-> ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation)」で詳しく説明しますが、今は混乱しないようにフォーム検証に関して単純にしておきます。
+> ここで説明する多くの擬似クラスは、検証状態（データが有効か無効か）に基づくフォームコントロールのスタイル設定に関係しています。検証制約の設定と操作については、次の記事「[クライアントサイドのフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)」で詳しく説明しますが、今は混乱しないようにフォーム検証に関して単純にしておきます。
 
 ## 入力が必須か否かによるスタイル設定
 
@@ -222,7 +213,7 @@ input:required + span::after {
 - `required` が設定されているコントロールで、値がないものは無効とみなされ、 `:invalid` および `:required` と一致します。
 - 組み込みの検証機能を持つコントロール、たとえば `<input type="email">` や `<input type="url">` は、入力されたデータが検索するパターンと一致しない場合、 `:invalid` に一致します（ただし、空の場合は有効になります）。
 - 現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
-- 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
+- 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
 それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
 
@@ -264,7 +255,7 @@ input:valid + span::before {
 }
 ```
 
-先ほどと同様に、`<span>` を `position: relative` に設定し、生成されるコンテンツを相対的に配置できるようにします。そして、フォームのデータが有効か無効かによって、それぞれ緑色のチェックと赤色のクロスで、異なる生成コンテンツを絶対に配置するようにします。無効なデータに少し緊急性を追加するために、無効なときに入力フィールドに太い赤のボーダーを指定しました。
+これまでと同様に、`<span>`を `position: relative` に設定し、生成されたコンテンツを相対的に位置指定できるようにします。次に、フォームのデータが有効か無効かによって、異なる生成コンテンツを絶対位置指定します。無効なデータには、少し緊急性を追加するために、入力フィールドに太い赤の境界線が指定されました。
 
 > [!NOTE]
 > ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
@@ -330,7 +321,7 @@ input:out-of-range + span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-数値の入力フィールドが必須であると同時に範囲外である可能性もありますが、その場合はどうなるのでしょうか？ `:out-of-range` のルールは `:required` のルールよりもソースコード上の後で現れるため、[カスケードルール](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#カスケードを理解する)が作用して、範囲外のメッセージが表示されます。
+数値の入力フィールドが必須であると同時に範囲外である可能性もありますが、その場合はどうなるのでしょうか？ `:out-of-range` のルールは `:required` のルールよりもソースコード上の後で現れるため、[カスケードルール](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#カスケードを理解する)が作用して、範囲外のメッセージが表示されます。
 
 これはとてもうまく動作します。最初にページを読み込むと、赤いバツ印と枠線とともに "Required" が表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力フィールドは有効になります。しかし、年齢を範囲外の値に変更すると、 "Required" の代わりに "Outside allowable value range" というメッセージが表示されます。
 
@@ -358,8 +349,8 @@ input:out-of-range + span::after {
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">Zip/postal code: </label>
-      <input id="pcode1" name="pcode1" type="text" required />
+      <label for="zip-code1">Zip/postal code: </label>
+      <input id="zip-code1" name="zip-code1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
@@ -379,10 +370,10 @@ input:out-of-range + span::after {
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
-      <label for="pcode2" class="billing-label disabled-label">
+      <label for="zip-code2" class="billing-label disabled-label">
         Zip/postal code:
       </label>
-      <input id="pcode2" name="pcode2" type="text" disabled required />
+      <input id="zip-code2" name="zip-code2" type="text" disabled required />
     </div>
   </fieldset>
 
@@ -398,7 +389,7 @@ input[type="text"]:disabled {
   border: 1px solid #ccc;
 }
 
-.disabled-label {
+label:has(+ :disabled) {
   color: #aaa;
 }
 ```
@@ -423,20 +414,10 @@ document.addEventListener(
 function toggleBilling() {
   // Select the billing text fields
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
-  // Select the billing text labels
-  const billingLabels = document.querySelectorAll(".billing-label");
 
-  // Toggle the billing text fields and labels
+  // Toggle the billing text fields
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
-
-    if (
-      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
-    ) {
-      billingLabels[i].setAttribute("class", "billing-label");
-    } else {
-      billingLabels[i].setAttribute("class", "billing-label disabled-label");
-    }
   }
 }
 ```
@@ -498,7 +479,7 @@ textarea:read-write {
 
 チェックされたときは、 {{cssxref(":checked")}} 擬似クラスで照合できます。
 
-これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
+これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
 
 おさらいですが、 [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) の例の `:checked` コードは以下のようになっています。
 
@@ -623,10 +604,15 @@ input[type="radio"]:indeterminate {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling)を見てください。
 
 ## まとめ
 
-これで、フォーム入力に関連する UI 擬似クラスについての説明は完全に終了しました。どんどん使って、楽しいフォームスタイルを作成してください。次は別のもの、[クライアントサイドフォーム検証](/ja/docs/Learn/Forms/Form_validation)に移動しましょう。
+これで、フォーム入力に関連する UI 擬似クラスについての説明は完全に終了しました。どんどん使って、楽しいフォームスタイルを作成してください。次は別のもの、[クライアントサイドフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に移動しましょう。
 
-{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+
+### 高度なトピック
+
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
