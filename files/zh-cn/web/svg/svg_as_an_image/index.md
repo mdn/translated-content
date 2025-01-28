@@ -2,7 +2,7 @@
 title: 作为图片的 SVG
 slug: Web/SVG/SVG_as_an_Image
 l10n:
-  sourceCommit: 4a350ee6ef10402ec862849f628c5370e118f81c
+  sourceCommit: bd6d98893c48e00bfcbdafd60c684bf30e0fa406
 ---
 
 {{SVGRef}}
@@ -17,7 +17,7 @@ SVG 图像可以在多种场景中用作一种图像格式。浏览器在以下�
 - SVG {{SVGElement("feImage")}} 元素
 - Canvas [`drawImage`](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images#绘制图片) 函数
 
-### 限制
+## 限制
 
 出于安全考虑，Gecko 对作为图像使用的 SVG 内容施加了一些限制：
 
