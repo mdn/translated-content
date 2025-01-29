@@ -9,7 +9,7 @@ l10n:
 
 [`<script>` 元素](/zh-CN/docs/Web/HTML/Element/script)的 [`type`](/zh-CN/docs/Web/HTML/Element/script/type) 属性的 **`importmap`** 值表示元素的主体包含一个导入映射。
 
-导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
+导入映射（import map）是一个 JSON 对象，它允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，它会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
 
 导入映射用于解析静态和动态导入中的模块标识符，因此必须在使用映射表中声明的标识符导入模块的任何 `<script>` 元素之前声明和处理。注意，导入映射仅适用于在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中的模块标识符；它不适用于 `<script>` 元素的 `src` 属性中指定的路径，也不适用加载到 worker 或 worklet 中的模块。
 
@@ -38,9 +38,9 @@ l10n:
 
 ## 描述
 
-当导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，[`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)和 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)都有一个“模块标识符”，其指示要导入的模块。浏览器必须能够将此标识符解析为绝对路径，才能导入模块。
+当导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，[`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)和 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)都有一个“模块标识符”，它指示了要导入的模块。浏览器必须能够将此标识符解析为绝对路径，才能导入模块。
 
-例如，以下语句从模块标识符 `"./modules/shapes/square.js"` 导入元素，其是一个相对于文档的基础 URL 路径，而模块标识符 `"https://example.com/shapes/circle.js"` 是一个绝对路径。
+例如，以下语句从模块标识符 `"./modules/shapes/square.js"` 导入元素，这是一个相对于文档的基础 URL 路径，而模块标识符 `"https://example.com/shapes/circle.js"` 是一个绝对路径。
 
 ```js
 import { name as squareName, draw } from "./modules/shapes/square.js";
@@ -142,7 +142,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 - `imports` {{optional_inline}}
 
-  - : 该值是[模块标识符映射](#module_specifier_map)，它提供可能在 `import` 语句或 `import()` 运算符中出现的模块标识符文本，其会在解析时与替换它的文本之间建立映射。
+  - : 该值是[模块标识符映射](#module_specifier_map)，它提供可能在 `import` 语句或 `import()` 运算符中出现的模块标识符文本，这会在解析时与替换它的文本之间建立映射。
 
     如果没有 `scopes` 路径 URL 匹配，或者如果匹配 `scopes` 路径中的模块标识符映射不包含与模块标识符匹配的键，这将是搜索匹配模块标识符的回退映射。
 
@@ -161,7 +161,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
   - : 作用域定义了特定于路径的[模块标识符映射](#module_specifier_map)，这允许映射的选择取决于导入模块的代码路径。
 
-    作用域对象是一个有效的 JSON 对象，其每个属性都是一个 `<scope key>`（URL 路径），并且相应的值是一个 `<module specifier map>`。
+    作用域对象是一个有效的 JSON 对象，它的每个属性都是一个 `<scope key>`（URL 路径），并且相应的值是一个 `<module specifier map>`。
 
     如果导入模块脚本的 URL 匹配 `<scope key>` 路径，则首先检查与该键关联的 `<module specifier map>` 值是否匹配标识符符。如果有多个匹配的作用域键，则首先检查与最具体/嵌套的作用域路径关联的值是否匹配模块标识符。如果任何匹配的作用域模块标识符映射中没有匹配的模块标识符键，则使用 `imports` 中，备用的模块标识符映射。
 
