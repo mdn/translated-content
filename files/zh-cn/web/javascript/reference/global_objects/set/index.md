@@ -83,7 +83,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的子集（subset），因为A完全包含在B中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的子集（subset），因为 A 完全包含在 B 中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
     <tr>
       <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
@@ -91,7 +91,7 @@ l10n:
       <td>
         <math><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math>
       </td>
-      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的超集（superset），因为B完全包含在A中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
+      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="具有两个相互重叠的圆的维恩图。A 是 B 的超集（superset），因为 B 完全包含在 A 中。" style="margin:0;border:0;border-radius:0" width="200" /></td>
     </tr>
   </tbody>
 </table>
@@ -100,7 +100,7 @@ l10n:
 
 ### 类集合对象
 
-所有[集合运算方法](#集合运算)要求 {{jsxref("Operators/this", "this")}} 是一个实际的 `Set` 实例，但它们的参数只需要是类集合对象。一个*类集合对象*是一个提供以下内容的对象：
+所有[集合运算方法](#集合运算)要求 {{jsxref("Operators/this", "this")}} 是一个实际的 `Set` 实例，但它们的参数只需要是类集合对象。*类集合对象*是提供以下内容的对象：
 
 - 一个 {{jsxref("Set/size", "size")}} 属性，包含一个数字。
 - 一个 {{jsxref("Set/has", "has()")}} 方法，接受一个元素并返回一个布尔值。
@@ -111,9 +111,9 @@ l10n:
 ```js
 const a = new Set([1, 2, 3]);
 const b = new Map([
-  [1, "one"],
-  [2, "two"],
-  [4, "four"],
+  [1, "一"],
+  [2, "二"],
+  [4, "四"],
 ]);
 console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
