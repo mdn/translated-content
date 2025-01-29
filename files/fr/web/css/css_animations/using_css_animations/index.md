@@ -417,6 +417,7 @@ Voici un exemple où nous utilisons **Flexbox** et **@keyframes** pour animer le
 ```
 
 Dans cet exemple :
+
 - **Flexbox** est utilisé pour aligner les éléments horizontalement.
 - L'animation **déplace** chaque élément sur l'axe X pour créer un effet de mouvement fluide.
 - On pourrait également animer des changements de `order`, `align-items` ou `justify-content` pour des effets encore plus dynamiques.
@@ -426,7 +427,6 @@ Dans cet exemple :
 - **Utiliser `flex-grow` et `flex-shrink`** : On peut animer ces propriétés pour **agrandir ou réduire la taille des éléments de manière fluide**.
 - **Modifier l'ordre des éléments (`order`)** : Une animation sur `order` peut donner un effet de réorganisation automatique.
 - **Jouer avec `align-items` et `justify-content`** : En animant ces propriétés, on peut déplacer des groupes d'éléments sans changer leur structure HTML.
-
 
 ## Voir aussi
 
