@@ -2,7 +2,7 @@
 title: 関数
 slug: Web/JavaScript/Guide/Functions
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
@@ -21,7 +21,7 @@ l10n:
 - 関数への引数のリスト。丸括弧でくくり、カンマで区切ります。
 - 関数を定義する JavaScript の文。波括弧 `{ /* … */ }` でくくります。
 
-例えば、次のコードは `square` という名前の簡単な関数を定義します。
+例えば、次のコードは `square` という名前の関数を定義します。
 
 ```js
 function square(number) {

@@ -42,7 +42,6 @@ Uma {{jsxref("String")}} cuja composição vem da string original, completada po
 Rodando o seguinte código antes de qualquer código irá criar o método `String.prototype.padEnd()` caso ele não esteja disponível nativamente:
 
 ```js
-// https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 if (!String.prototype.padEnd) {
   String.prototype.padEnd = function padEnd(targetLength, padString) {
