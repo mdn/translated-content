@@ -9,7 +9,7 @@ l10n:
 
 **`::view-transition-group`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、単一のビュー遷移グループを表します。
 
-ビュー遷移の間、 `::view-transition-group` はは、[ビュー遷移プロセス](/ja/docs/Web/API/View_Transitions_API/Using#ビュー遷移のプロセス) で説明されているように、関連する擬似要素ツリーに含まれています。これは{{cssxref("::view-transition")}}の唯一の子であり、{{cssxref("::view-transition-image-pair")}}を子として持ちます。
+ビュー遷移の間、 `::view-transition-group` はは、[ビュー遷移プロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス) で説明されているように、関連する擬似要素ツリーに含まれています。これは{{cssxref("::view-transition")}}の唯一の子であり、{{cssxref("::view-transition-image-pair")}}を子として持ちます。
 
 `::view-transition-group` は UA スタイルシートで以下の既定のスタイルを与えられています。
 
@@ -70,5 +70,5 @@ view-transition-group(embed-container) {
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [ビュー遷移 API によるスムーズでシンプルなトランジション](https://developer.chrome.com/docs/web-platform/view-transitions/)

@@ -29,7 +29,7 @@ _変更なし。_
 
 #### 廃止
 
-- `-moz-` 接頭辞がついた [マルチカラムレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) 関連のプロパティを削除しました ([Firefox バグ 1308636](https://bugzil.la/1308636))。詳しくは [Firefox サイト互換性情報をご覧ください](https://www.fxsitecompat.dev/docs/2020/prefixed-css-multi-column-properties-have-been-removed/)。
+- `-moz-` 接頭辞がついた [マルチカラムレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) 関連のプロパティを削除しました ([Firefox バグ 1308636](https://bugzil.la/1308636))。詳しくは [Firefox サイト互換性情報をご覧ください](https://www.fxsitecompat.dev/docs/2020/prefixed-css-multi-column-properties-have-been-removed/)。
 
 ### SVG
 
