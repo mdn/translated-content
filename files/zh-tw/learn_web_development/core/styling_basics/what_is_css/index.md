@@ -9,7 +9,7 @@ original_slug: Learn/CSS/First_steps/How_CSS_works
 
 我們已經學會基本 CSS 的用途與用法了，這堂課我們就來看看瀏覽器是如何將 CSS 和 HTML 變化成網頁的吧。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">需求：</th>

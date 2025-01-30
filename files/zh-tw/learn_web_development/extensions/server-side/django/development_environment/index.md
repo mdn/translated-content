@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/development_environment
 
 現在，你知道什麼是 Django。那麼我們將向你展示如何在 Windows，Linux（Ubuntu）和 Mac OSX 上設置和測試 Django 開發環境—無論你常用哪種操作系統，本文應該都能讓你開始開發 Django 應用程序。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備知識:</th>

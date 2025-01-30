@@ -1,12 +1,11 @@
 ---
-title: object から iframe まで — その他の埋め込み技術
+title: object から iframe まで — 一般的な埋め込み技術
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
-original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
 そろそろ、画像、動画、音声を含め、ウェブページに何かを埋め込むコツを実際に使用されていることでしょう。この点では、少し横道にそれて、様々な種類のコンテンツをウェブページに埋め込むことができる要素、{{htmlelement("iframe")}}、{{htmlelement("embed")}}、{{htmlelement("object")}} を見てみたいと思います。 `<iframe>` は他のウェブページを埋め込むためのもので、他の 2 つの要素は PDF ファイルのような外部リソースを埋め込むことができます。
 
@@ -16,13 +15,13 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >インストール済みの基本的なソフトウェア</a
         >、基本的な
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >ファイル操作</a
-        >の知識、 HTML の基礎知識になじんでいること（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        >の知識、 HTML の基礎知識になじんでいること（<a href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML を始めよう</a
         >にあるような）、およびこのモジュールの前の記事。
       </td>
@@ -48,7 +47,7 @@ l10n:
 
 ## アクティブラーニング: 従来の埋め込みを使う
 
-この記事では、埋め込み技術がどのような用途に使用されるかを実感していただくために、アクティブラーニングの節に直接飛び込んでいきます。ネットの世界では [YouTube](https://www.youtube.com) がとても有名ですが、その共有機能が利用できることを知らない人がたくさんいます。 YouTube では、 {{htmlelement("iframe")}} を使用して、どのようなページにでも動画を埋め込むことができるのかを見てみましょう。
+この記事では、埋め込み技術がどのような用途に使用されるかを実感していただくために、アクティブラーニングの節に直接飛び込んでいきます。ネットの世界では [YouTube](https://www.youtube.com/) がとても有名ですが、その共有機能が利用できることを知らない人がたくさんいます。 YouTube では、 {{htmlelement("iframe")}} を使用して、どのようなページにでも動画を埋め込むことができるのかを見てみましょう。
 
 1. まず、YouTubeにアクセスして、気に入った動画を探します。
 2. 動画の下に \[共有] ボタンがあるので、これを選択すると共有オプションが表示されます。
@@ -151,12 +150,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -233,7 +232,7 @@ textarea.onkeyup = function () {
 Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
 ```
 
-後述の[セキュリティ](#セキュリティの懸念)の節では、このエラーが発生する原因について詳しく説明していますが、最初のうちは、このコードが何を行っているのかを見ていきましょう。
+後述の[セキュリティ](#セキュリティ上の懸念)の節では、このエラーが発生する原因について詳しく説明していますが、最初のうちは、このコードが何を行っているのかを見ていきましょう。
 
 この例には、`<iframe>` の使用に必要な基本的な要素が含まれています。
 
@@ -257,9 +256,9 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 ブラウザーメーカーやウェブ開発者は、 iframe がウェブ上の悪意ある人物（しばしば**ハッカー**、またはより正確には**クラッカー**と呼ばれます）の共通のターゲット（公式の用語: **攻撃ベクター**）であるということを苦労して学びました。悪意ある人物は、あなたのウェブページを悪意を持って改ざんすることや、ユーザー名やパスワードなどの機密情報を明らかにするなど、人を騙し望んでいないことを行います。このため、仕様技術者とブラウザー開発者は、`<iframe>` をより安全にするためのさまざまなセキュリティメカニズムを開発しました。また、考慮すべき最善の措置もあります。これらのいくつかを以下で説明します。
 
-> **メモ:** [クリックジャッキング](/ja/docs/Glossary/Clickjacking)は、ハッカーが目に見えない iframe を文書に埋め込んだり（文書を自分の悪意のあるウェブサイトに埋め込んだり）して、ユーザーの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザーを誤解させたり機密データを盗む一般的な方法です。
+> **メモ:** [クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)は、ハッカーが目に見えない iframe を文書に埋め込んだり（文書を自分の悪意のあるウェブサイトに埋め込んだり）して、ユーザーの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザーを誤解させたり機密データを盗む一般的な方法です。
 
-簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください）。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。 Firefox では、`The loading of "https://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"` （フレーム内への `https://developer.mozilla.org/en-US/docs/Glossary` の読み込みは、 X-Frame-Options ディレクティブが "DENY" に設定されているため、拒否されました）というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです（下記の [CSP ディレクティブの設定](#csp_ディレクティブの設定)を参照してください）。これは実に理にかなっています。MDN のページ全体を他のページに埋め込むことは、自分のサイトに埋め込んで自分自身で主張するようなことをしない限り、実に意味がありませんし、また[クリックジャッキング](/ja/docs/Glossary/Clickjacking)によってデータを盗もうとすることも、どちらも本当に悪いことです。さらに、もしみんながこれをやり始めたら、必要な通信帯域が増え、 Mozilla にたくさん課金されてしまうでしょう。
+簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください）。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。 Firefox では、`The loading of "https\://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"` （フレーム内への `https://developer.mozilla.org/en-US/docs/Glossary` の読み込みは、 X-Frame-Options ディレクティブが "DENY" に設定されているため、拒否されました）というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです（下記の [CSP ディレクティブの設定](#csp_ディレクティブの設定)を参照してください）。これは実に理にかなっています。MDN のページ全体を他のページに埋め込むことは、自分のサイトに埋め込んで自分自身で主張するようなことをしない限り、実に意味がありませんし、また[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)によってデータを盗もうとすることも、どちらも本当に悪いことです。さらに、もしみんながこれをやり始めたら、必要な通信帯域が増え、 Mozilla にたくさん課金されてしまうでしょう。
 
 #### 必要なときのみ埋め込む
 
@@ -278,7 +277,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 サイトで HTTPS を有効にするには、特別なセキュリティ証明書をインストールする必要があります。多くのホスティングプロバイダーは、自分自身で資格情報を所有するための設定をすることなく、 HTTPS 対応のホスティングを提供しています。しかし、自分自身でサイトの HTTPS 対応を設定する必要がある場合、 [Let's Encrypt](https://letsencrypt.org/) は、必要な証明書を自動的に作成してインストールするためのツールや手順を、Apache web server、Nginx など、最も広く使用されているウェブサーバーの組み込み対応で使用する方法を提供しています。 Let's Encrypt のツールは、可能な限りプロセスを簡単にするように設計されているので、サイトを HTTPS 化するために、このツールまたは他に使用できる手段を避ける理由は、実に何もないのです。
 
-> **メモ:** [GitHub ページ](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できます。
+> **メモ:** [GitHub ページ](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できます。
 > 別のホスティングプロバイダーを使用している場合は、 HTTPS でコンテンツを提供するためにどのような対応をしているかを調べる必要があります。
 
 #### 常に `sandbox` 属性を使用する
@@ -294,7 +293,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### CSP ディレクティブの設定
 
-{{Glossary("CSP")}} は **[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)** の略で、HTML 文書のセキュリティを強化するために設計された[一連の HTTP ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)（ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ）を提供します。`<iframe>` を保護する場合、[適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成](/ja/docs/Web/HTTP/Headers/X-Frame-Options)できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます（[クリックジャッキング](/ja/docs/Glossary/Clickjacking)や他の攻撃のホストを可能にする）。以前に見たように、これはまさに MDN 開発者が行ったことです。
+{{Glossary("CSP")}} は **[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)** の略で、HTML 文書のセキュリティを強化するために設計された[一連の HTTP ヘッダー](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)（ウェブサーバーから配信されたときにウェブページとともに送信されるメタデータ）を提供します。`<iframe>` を保護する場合、[適切な X-Frame-Options ヘッダーを送信するようにサーバーを構成](/ja/docs/Web/HTTP/Headers/X-Frame-Options)できます。これにより、他のウェブサイトがそのウェブページにあなたのコンテンツを埋め込むのを防ぐことができます（[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)や他の攻撃のホストを可能にする）。以前に見たように、これはまさに MDN 開発者が行ったことです。
 
 > [!NOTE]
 > Frederik Braun 氏の投稿 [X-Frame-Options セキュリティヘッダーについて](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)（英語）で、このトピックの背景情報を読むことができます。明らかに、これは、この記事の説明の範囲外です。
@@ -342,18 +341,10 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
       </td>
     </tr>
     <tr>
-      <td>プラグインに引数として供給するための名前と値</td>
-      <td>その場限りの属性とその名前と値</td>
-      <td>
-        単一タグの {{htmlelement("param")}} 要素を <code>&#x3C;object></code> の中に書く
-      </td>
-    </tr>
-    <tr>
       <td>利用不可能なリソースに対する代替として独立した HTML コンテンツ</td>
       <td>対応なし（<code>&#x3C;noembed></code> は廃止）</td>
       <td>
-        <code>&#x3C;object></code> 内の
-        <code>&#x3C;param></code> 要素の後に入れる
+        <code>&#x3C;object></code> の開始・終了タグの間に入れる
       </td>
     </tr>
   </tbody>
@@ -362,24 +353,18 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 次に、PDF をページに埋め込む `<object>` の例を見てみましょう（[ライブ例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)と[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)を参照）。
 
 ```html
-<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+<object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
     PDF プラグインはありませんが、
-    <a href="mypdf.pdf">PDF ファイルをダウンロードできます。</a>
+    <a href="my-pdf.pdf">PDF ファイルをダウンロードできます。</a>
   </p>
 </object>
 ```
 
 PDF は紙とデジタルの間の必要な足がかりでしたが、多くの[アクセシビリティ上の課題](https://webaim.org/techniques/acrobat/acrobat)（英語）があり、小さな画面では読みにくい場合があります。まだいくつかのサークルで人気がある傾向がありますが、ウェブページに埋め込むのではなく、ダウンロードしたり、別のページで読むことができるように、リンクする方がはるかに優れています。
 
-## スキルをテストしましょう
-
-この記事はここまでですが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます — [スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)を参照してください。
-
 ## まとめ
 
 ウェブ文書に他のコンテンツを埋め込むという話題は、すぐに複雑になりがちです。そこでこの記事では、関連する技術のより高度な機能のいくつかを示唆しつつ、すぐに関連性が感じられるような、シンプルで身近な方法でそれを紹介しようと試みました。はじめのうちは、地図や動画のようなサードパーティーのコンテンツをページに記載する以上の目的で、埋め込みを使用することはあまりないと思われます。しかし、経験を積むにつれて、より多くの使用方法を見つけることができるようになるはずです。
 
 ここで説明したもの以外にも、外部コンテンツの埋め込みを含む他の多くの技術があります。以前の記事では {{htmlelement("video")}}、{{htmlelement("audio")}}、{{htmlelement("img")}} などいくつかを見ましたが、JavaScript で生成された 2D および 3D グラフィックの場合は {{htmlelement("canvas")}}、ベクターグラフィックス埋め込む場合は {{SVGElement("svg")}} など、他にも見い出されるものがあります。モジュールの次の記事では [SVG](/ja/docs/Web/SVG) を見ていきます。
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

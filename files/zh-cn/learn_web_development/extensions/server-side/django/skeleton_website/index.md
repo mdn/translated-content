@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 [Django 教程](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)的第二篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings，urls，模型 (models)，视图 (views) 和模板 (templates)。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

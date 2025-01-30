@@ -83,7 +83,7 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 
 例えば、次の2つのレスポンスの例では、JavaScript および CSS の資産は、JavaScript では `text/javascript` を、CSS では `text/css` を使用して配信されます。
 これらのリソースに正しいコンテンツタイプを入力することで、ブラウザーにそれらをより安全に、より高いパフォーマンスで処理してもらうことができます。
-詳しくは[サーバーで MIME タイプを正しく設定する](/ja/docs/Learn/Server-side/Configuring_server_MIME_types)を参照してください。
+詳しくは[サーバーで MIME タイプを正しく設定する](/ja/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)を参照してください。
 
 ```http
 HTTP/1.1 200

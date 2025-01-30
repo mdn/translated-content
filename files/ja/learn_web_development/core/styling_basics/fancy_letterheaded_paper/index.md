@@ -1,32 +1,15 @@
 ---
-title: 美しいレターヘッド付きの便箋の作成
+title: "課題: 美しいレターヘッド付きの便箋の作成"
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-original_slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks/A_cool_looking_box", "Learn/CSS/Building_blocks")}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 
 好印象を与えたいのなら、素敵なレターヘッドの便箋に手紙を書くのはとても良い考えです。この評価では、そのような見た目のオンラインテンプレートの作成に挑戦します。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        CSS ボックスモデルの理解と、背景の実装などの他のボックス関連機能をテストすること。
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 出発点
 
@@ -75,4 +58,4 @@ l10n:
 
 ![左上に 2 つの三角図形（最初の図形は緑、 2 つ目は赤）、右上に濃い赤の台形。緑色の三角形の下記には、緑色の星と白い文字で塗りつぶされた赤い円： 素晴らしい会社です。ページ左下、濃い赤の台形、以下 2 つの三角形が続きます。緑色の三角形の上には、郵便物の宛先が黒文字で表示されています。](letterhead.png)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks/A_cool_looking_box", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}

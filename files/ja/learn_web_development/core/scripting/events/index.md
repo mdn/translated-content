@@ -1,32 +1,34 @@
 ---
 title: イベント入門
 slug: Learn_web_development/Core/Scripting/Events
-original_slug: Learn/JavaScript/Building_blocks/Events
 l10n:
-  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}
 
-イベントは、あなたがプログラミングしているシステムで起こることで、あなたのコードがそれらに反応できるようにシステムがあなたに伝えるものです。
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 
-例えば、ユーザーがウェブページ上でボタンを押したとき、ある情報を表示するように反応させたいと思うかもしれません。この記事では、イベントに関する重要な概念を取り上げ、ブラウザーの中でのイベントの振る舞いを見ていきます。ここでは、全てを説明するのではなく、この段階で知っておくべき内容を取り上げます。
+イベントは、プログラミングしているシステムで発生するもので、コードがそれらに反応できるようにシステムが伝えるものです。
+例えば、ユーザーがウェブページ上でボタンを押したとき、ある情報を表示するように反応させたいと思うかもしれません。この記事では、イベントに関する重要な概念を取り上げ、ブラウザーの中でのイベントの振る舞いを見ていきます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        基本的な HTML および CSS、および
-        <a href="/ja/docs/Learn/JavaScript/First_steps"
-          >JavaScript の第一歩</a
-        >について理解していること。
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。
+      </td>
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        イベントの基本的な理論を理解すること。ブラウザーでの振る舞いを理解し、プログラミング環境が変わると、イベントの振る舞いが変わることを理解すること。
+        <ul>
+          <li>イベントとは、何か重要なことが起こった際にブラウザーから発行されるシグナルであり、開発者はレスポンスとしてコードを実行することができること。</li>
+          <li>イベントハンドラーを設定するには、 <code>addEventListener()</code> （および <code>removeEventListener()</code> ）やイベントハンドラープロパティを使用すること。/li>
+          <li>インラインイベントハンドラー属性、およびそれらを使用すべきではない理由。</li>
+          <li>イベントオブジェクト。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -144,7 +146,7 @@ btn.addEventListener("click", changeBackground);
 
 一部のイベント、たとえば `click` などは、ほぼすべての要素で利用できます。他のイベントはより具体的で、特定の状況でのみ使用することができます。例えば、[`play`](/ja/docs/Web/API/HTMLMediaElement/play_event) イベントは {{htmlelement("video")}} のようないくつかの要素でのみ利用することができます。
 
-### リスナーの除去
+### リスナーの除去方法
 
 `addEventListener()` を用いてイベントハンドラーを追加した場合、[`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) メソッドを用いて再び除去することができます。例えば、この例では `changeBackground()` イベントハンドラーが除去されます。
 
@@ -187,12 +189,6 @@ myElement.addEventListener("click", functionB);
 
 これで要素がクリックされると両方の関数が実行されるようになりました。
 
-### さらに学ぶ
-
-他にも `addEventListener()` で利用できる強力な機能やオプションがあります。
-
-これらはこの記事の範囲からは少し外れますが、もし読みたければ、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) と [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) のリファレンスページを参照してください。
-
 ## イベントリスナーの他の機構
 
 イベントハンドラーの登録には `addEventListener()` を使用することを推奨します。これは最も強力なメソッドで、より複雑なプログラムで最も有効に機能します。しかし、イベントハンドラーを登録する方法として、他にも 2 種類あります。イベントハンドラープロパティとインラインイベントハンドラーです。
@@ -202,7 +198,7 @@ myElement.addEventListener("click", functionB);
 イベントを発行することができるオブジェクト（ボタンなど）は通常、 `on` にイベント名が続くプロパティを持っています。例えば、要素には `onclick` というプロパティがあります。
 これは、イベントハンドラープロパティと呼ばれます。イベントを待ち受けるには、ハンドラー関数をプロパティに割り当てることで実現できます。
 
-例えば、ランダムカラーの例を次のように書き換えることができます。
+例えば、ランダムな色の例を次のように書き換えることができます。
 
 ```js
 const btn = document.querySelector("button");
@@ -253,7 +249,7 @@ element.onclick = function2;
 あなたのコードにもこのようなパターンがあるかもしれません。
 
 ```html
-<button onclick="bgChange()">Press me</button>
+<button onclick="bgChange()">押してね</button>
 ```
 
 ```js
@@ -263,16 +259,16 @@ function bgChange() {
 }
 ```
 
-イベントハンドラーを登録するための最も初期の方法は、 [HTML のイベントハンドラー属性](/ja/docs/Web/HTML/Attributes#event_handler_attributes)（またはインラインイベントハンドラー）を使うものでした。属性の値は、文字通り、イベントが発生したときに実行したい JavaScript コードです。
+イベントハンドラーを登録するための最も初期の方法は、 [HTML のイベントハンドラー属性](/ja/docs/Web/HTML/Attributes#イベントハンドラー属性)（またはインラインイベントハンドラー）を使うものでした。属性の値は、文字通り、イベントが発生したときに実行したい JavaScript コードです。
 上記の例では、同じページの {{htmlelement("script")}} 要素の中で定義した関数を呼び出していますが、例えば次のように、属性の中に直接 JavaScript を挿入することもできます。
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">
-  Press me
+<button onclick="alert('こんにちは、これは古い形のイベントハンドラーです。');">
+  押してね
 </button>
 ```
 
-イベント ハンドラー プロパティの多くに対応する HTML 属性が見つかりますが、これらを使用すべきではありません。これらは悪い習慣と見なされています。
+イベントハンドラープロパティの多くに対応する HTML 属性が見つかりますが、これらを使用すべきではありません。これらは悪い習慣と見なされています。
 イベントハンドラー属性を使用することは、実に素早く何かを行う場合には簡単に思えるかもしれませんが、すぐに手に負えなくなり、非効率的になります。
 
 まず、 HTML と JavaScript を混在させるのは良い考えとは言えません。 JavaScript を分けておくことは良い習慣です。 JavaScript を別のファイルにすれば、複数の HTML 文書に適用することができます。
@@ -289,9 +285,9 @@ for (const button of buttons) {
 }
 ```
 
-最後に、多くの一般的なサーバー設定は、セキュリティ対策としてインラインJavaScriptを許可しません。
+最後に、多くの一般的なサーバー設定は、セキュリティ対策としてインライン JavaScript を許可しません。
 
-**HTMLのイベントハンドラー属性を使用しないようにしましょう**。これらは時代遅れで、使用するのは悪い習慣です。
+**HTML のイベントハンドラー属性を使用しないようにしましょう**。これらは時代遅れで、使用するのは悪い習慣です。
 
 ## イベントオブジェクト
 
@@ -321,9 +317,6 @@ btn.addEventListener("click", bgChange);
 イベントオブジェクト **e** が関数に含まれていて、関数内で `e.target` — これはボタン自身 — の背景色スタイルを設定しているのがわかるでしょう。
 イベントオブジェクトの `target` プロパティは、常にイベントが生じた要素への参照となっています。
 ですから、この例ではページではなく、ボタンの背景色がランダムに変わります。
-
-> [!NOTE]
-> 下記の[イベントの移譲](#イベントの移譲)の節で、 `event.target` を使用している例があります。
 
 > [!NOTE]
 > イベントオブジェクトには好きな名前が使えます。イベントハンドラー関数のカッコの中に使いたい名前を書くだけです。
@@ -365,7 +358,8 @@ div {
 最も一般的な例は、例えばカスタム登録フォームのようなウェブフォームです。
 詳細を入力して送信ボタンをクリックすると、データは処理のためにサーバー上の指定したページに送信され、ブラウザーは何らかの「成功メッセージ」ページ（または別のページが指定されていない場合は同じページ）にリダイレクトされるのが自然な動作です。
 
-ユーザーが適切なデータを送信しなかった場合に問題が発生します。開発者として、サーバーへのデータ送信を抑止し、どこに問題があってデータを適切なものにするにはどうすればいいのか示す、ユーザーへのエラーメッセージを表示したいことでしょう。ブラウザーの中にはフォームデータの自動検証機能を備えたものもありますが、多くはないので、それには頼らず自前の検証機能を実装すべきです。簡単な例を見てみましょう。
+ユーザーが適切なデータを送信しなかった場合に問題が発生します。開発者として、サーバーへのデータ送信を抑止し、どこに問題があってデータを適切なものにするにはどうすればいいのか示す、ユーザーへのエラーメッセージを表示したいことでしょう。
+ブラウザーの中にはフォームデータの自動検証機能を備えたものもありますが、多くはないので、それには頼らず自前の検証機能を実装すべきです。簡単な例を見てみましょう。
 
 まず、姓と名を入力させる単純な HTML フォームです。
 
@@ -417,357 +411,14 @@ form.addEventListener("submit", (e) => {
 > [!NOTE]
 > ソースコード全体については、 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) を（および[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)も）ご覧ください。
 
-## イベントのバブリング
-
-イベントのバブリングは、ブラウザーが入れ子になった要素を対象とするイベントをどのように処理するかを記述しています。
-
-### 親要素にリスナーを設定
-
-次の様なウェブページがあったとします。
-
-```html
-<div id="container">
-  <button>クリックしてください</button>
-</div>
-<pre id="output"></pre>
-```
-
-ここではボタンは別の要素 {{HTMLElement("div")}} の中にあります。ここでは、 `<div>` 要素が、内包する要素の**親**であるといいます。親要素にクリックイベントハンドラーを追加し、ボタンをクリックするとどうなるでしょうか？
-
-```js
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `${e.currentTarget.tagName} 要素をクリックしました\n`;
-}
-
-const container = document.querySelector("#container");
-container.addEventListener("click", handleClick);
-```
-
-{{ EmbedLiveSample('Setting a listener on a parent element', '100%', 200, "", "") }}
-
-ユーザーがボタンをクリックすると、親がクリックイベントを発生させることがわかります。
-
-```plain
-DIV 要素をクリックしました
-```
-
-これは意味があります。ボタンは `<div>` の中にあるので、ボタンをクリックすると、その中にある要素も暗黙のうちにクリックしたことになります。
-
-### バブリングの例
-
-ボタンと親にイベントリスナーを追加したらどうなるでしょうか？
-
-```html
-<body>
-  <div id="container">
-    <button>クリックしてください</button>
-  </div>
-  <pre id="output"></pre>
-</body>
-```
-
-ボタンとその親 (`<div>`)、そしてどちらも内包する {{HTMLElement("body")}} 要素にクリックイベントハンドラーを追加してみましょう。
-
-```js
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `${e.currentTarget.tagName} 要素をクリックしました\n`;
-}
-
-const container = document.querySelector("#container");
-const button = document.querySelector("button");
-
-document.body.addEventListener("click", handleClick);
-container.addEventListener("click", handleClick);
-button.addEventListener("click", handleClick);
-```
-
-{{ EmbedLiveSample('Bubbling example', '100%', 200, "", "") }}
-
-ユーザーがボタンをクリックすると、 3 つの要素すべてがクリックイベントを発行することがわかります。
-
-```plain
-BUTTON 要素をクリックしました
-DIV 要素をクリックしました
-BODY 要素をクリックしました
-```
-
-この場合、次のようになります。
-
-- 最初にボタン上で click が発生します
-- 続いて click が親（`<div>` 要素）で発生します
-- 続いて `<div>` 要素の親（`<body>` 要素）で発生します
-
-これを、クリックされた最も内側の要素からイベントが**バブルアップ**すると言います。
-
-この動作は有益なこともあれば、予期せぬ問題を発生させることもあります。次の節では、この動作が発生させる問題を見て、解決策を探ります。
-
-### 動画プレイヤーの例
-
-この例では、最初は非表示になっている動画と、"動画を表示" とラベル付けされたボタンがページに表示されています。私たちは以下のような操作をしたいと思います。
-
-- ユーザーが「動画を表示」ボタンをクリックしたら、動画を格納したボックスを表示させますが、動画の再生はまだ始めません。
-- ユーザーが動画をクリックしたら、動画の再生を始めます。
-- ユーザーが動画外のボックスのどこかをクリックしたら、ボックスを非表示にします。
-
-HTML は次のようになります。
-
-```html
-<button>動画を表示</button>
-
-<div class="hidden">
-  <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
-    <p>
-      お使いのブラウザーは HTML 動画に対応していません。代わりに<a
-        href="rabbit320.mp4"
-        >動画へのリンク</a
-      >をご利用ください。
-    </p>
-  </video>
-</div>
-```
-
-これには以下のものが含まれます。
-
-- `<button>` 要素
-- `<div>` 要素、最初は `class="hidden"` 属性つき
-- `<video>` 要素（`<div>` 要素の中に入れ子になっている）
-
-`"hidden"` クラスが設定されている要素を非表示にするために CSS を使用しています。
-
-```css hidden
-div {
-  width: 100%;
-  height: 100%;
-  background-color: #eee;
-}
-
-.hidden {
-  display: none;
-}
-
-div video {
-  padding: 40px;
-  display: block;
-  width: 400px;
-  margin: 40px auto;
-}
-```
-
-JavaScript　はこのようになっています。
-
-```js
-const btn = document.querySelector("button");
-const box = document.querySelector("div");
-const video = document.querySelector("video");
-
-btn.addEventListener("click", () => box.classList.remove("hidden"));
-video.addEventListener("click", () => video.play());
-box.addEventListener("click", () => box.classList.add("hidden"));
-```
-
-これは 3 つの `'click'` イベントリスナーを追加します。
-
-- 一つは `<button>`、これは `<video>` を含んでいる `<div>` を表示します
-- 一つは `<video>`、これは動画の再生を開始します
-- 一つは `<div>`、これは動画を非表示にします
-
-この動作を確認してみましょう。
-
-{{ EmbedLiveSample('Video_player_example', '100%', 500) }}
-
-ボタンをクリックすると、ボックスとそれを含む動画が表示されます。しかし、次に動画をクリックすると、動画の再生が始まりますが、ボックスは再び非表示になります。
-
-動画は `<div>` の中にあり、その一部です。そのため、動画をクリックすると両方のイベントハンドラーが実行され、この動作が発生します。
-
-### stopPropagation() による問題の修正
-
-前節で見たように、イベントバブリングは時に問題を引き起こすことがありますが、それを防ぐ方法があります。
-[`Event`](/ja/docs/Web/API/Event) オブジェクトには [`stopPropagation()`](/ja/docs/Web/API/Event/stopPropagation) と呼ばれる関数があり、イベントハンドラーの中で呼び出されると、イベントが他の要素にバブリングするのを防ぎます。
-
-JavaScript をこのように変更することで、現在の問題を修正することができます。
-
-```js
-const btn = document.querySelector("button");
-const box = document.querySelector("div");
-const video = document.querySelector("video");
-
-btn.addEventListener("click", () => box.classList.remove("hidden"));
-
-video.addEventListener("click", (event) => {
-  event.stopPropagation();
-  video.play();
-});
-
-box.addEventListener("click", () => box.classList.add("hidden"));
-```
-
-ここでやっていることはすべて、 `<video>` 要素の `'click'` イベントハンドラーのイベントオブジェクトに対して `stopPropagation()` を呼び出しているだけです。これにより、そのイベントがボックスまで上がってくるのを止めることができます。これで、ボタンと動画の両方をクリックしてみてください。
-
-{{EmbedLiveSample("Fixing the problem with stopPropagation()", '100%', 500)}}
-
-```html hidden
-<button>動画を表示</button>
-
-<div class="hidden">
-  <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
-    <p>
-      お使いのブラウザーは HTML 動画に対応していません。代わりに<a
-        href="rabbit320.mp4"
-        >動画へのリンク</a
-      >をご利用ください。
-    </p>
-  </video>
-</div>
-```
-
-```css hidden
-div {
-  width: 100%;
-  height: 100%;
-  background-color: #eee;
-}
-
-.hidden {
-  display: none;
-}
-
-div video {
-  padding: 40px;
-  display: block;
-  width: 400px;
-  margin: 40px auto;
-}
-```
-
-### イベントのキャプチャ
-
-イベントの伝播の別の形式として、イベントキャプチャがあります。これはイベントバブリングと似ていますが、順序が逆になります。つまり、イベントは対象となる最も内側の要素で最初に発生し、その後、入れ子が浅くなる要素に向けて発生するのではなく、入れ子の最も浅い要素で最初に発生し、その後、対象とする要素に到達するまで、入れ子が深い要素に向けて発生します。
-
-イベントのキャプチャは既定では無効です。有効にするには `addEventListener()` で `capture` オプションを渡す必要があります。
-
-この例は、 `capture` オプションを使用していることを除けば、先ほど見た[バブリングの例](#バブリングの例)と同じです。
-
-```html
-<body>
-  <div id="container">
-    <button>クリックしてください</button>
-  </div>
-  <pre id="output"></pre>
-</body>
-```
-
-```js
-const output = document.querySelector("#output");
-function handleClick(e) {
-  output.textContent += `${e.currentTarget.tagName} 要素をクリックしました\n`;
-}
-
-const container = document.querySelector("#container");
-const button = document.querySelector("button");
-
-document.body.addEventListener("click", handleClick, { capture: true });
-container.addEventListener("click", handleClick, { capture: true });
-button.addEventListener("click", handleClick);
-```
-
-{{ EmbedLiveSample('Event capture', '100%', 200, "", "") }}
-
-この場合、メッセージの順番は逆になります。 `<body>` のイベントハンドラーが最初に発生し、続いて `<div>` のイベントハンドラーが発生し、続いて `<button>` のイベントハンドラーが発生します。
-
-```plain
-BODY 要素をクリックしました
-DIV 要素をクリックしました
-BUTTON 要素をクリックしました
-```
-
-なぜわざわざキャプチャとバブリングの両方があるのでしょうか？ブラウザー間の互換性が今よりもずっと低かった悪い時代には、ネットスケープはイベントキャプチャのみを使用し、インターネットエクスプローラーはイベントバブリングのみを使用していました。 W3C が動作を標準化し、コンセンサスを得ようと決めたとき、両者を含めるためにこのシステムに行き着き、現代のブラウザーに実装されました。
-
-既定では、ほとんどすべてのイベントハンドラーはバブリングフェーズで登録され、この方がほとんどの場合、意味があります。
-
-## イベントの移譲
-
-前回の節では、イベントバブリングによって発生させられる問題と、それを修正する方法について見ていきました。しかし、イベントバブリングは単に煩わしいだけではありません。特に、**イベントの委譲**を可能にします。この方法では、ユーザーが多数の子要素のいずれかを操作したときに何らかのコードを実行したい場合、子要素に個別にイベントリスナーを設定するのではなく、子要素の親要素にイベントリスナーを設定し、子要素で発生したイベントが親要素にバブリングされるようにします。
-
-最初の例に戻り、ユーザーがボタンをクリックしたときにページ全体の背景色を設定しましょう。その代わりに、ページが 16 のタイルに分割されていて、ユーザーがそのタイルをクリックしたときに各タイルにランダムな色を設定したいとします。
-
-これがその HTML です。
-
-```html
-<div id="container">
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-</div>
-```
-
-タイルのサイズと位置を設定するために、ちょっとした CSS を設けています。
-
-```css
-.tile {
-  height: 100px;
-  width: 25%;
-  float: left;
-}
-```
-
-さて、JavaScript では、すべてのタイルにクリックイベントハンドラーを追加することができます。しかし、よりシンプルで効率的なオプションは、親にクリックイベントハンドラーを設定し、ユーザーがタイルをクリックしたときにハンドラーが確実に実行されるようにイベントバブリングに頼ることです。
-
-```js
-function random(number) {
-  return Math.floor(Math.random() * number);
-}
-
-function bgChange() {
-  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-  return rndCol;
-}
-
-const container = document.querySelector("#container");
-
-container.addEventListener("click", (event) => {
-  event.target.style.backgroundColor = bgChange();
-});
-```
-
-出力は次の通りです（クリックしてみてください）。
-
-{{ EmbedLiveSample('Event delegation', '100%', 430, "", "") }}
-
-> [!NOTE]
-> この例では、 `event.target` を使用して、イベントの対象となった要素（つまり、最も内側の要素）を取得しています。もし、このイベントを処理した要素（この場合はコンテナー）にアクセスしたい場合は、 `event.currentTarget` を使用することができます。
-
-> [!NOTE]
-> 完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/useful-eventtarget.html) を参照してください。こちらから[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html)も確認してください。
-
 ## ウェブページだけではない
 
 イベントは JavaScript 固有のものではありません。ほとんどのプログラミング言語には何らかのイベントモデルがあり、そのモデルの動作する方法は JavaScript の方法とは異なることが多いのです。
 実際、ウェブページ用の JavaScript でのイベントモデルは、他の環境で使用する JavaScript のイベントモデルとは異なります。
 
-例えば、 [Node.js](/ja/docs/Learn/Server-side/Express_Nodejs) はとても人気のある JavaScript ランタイムで、開発者が JavaScript を使用してネットワークやサーバーサイドのアプリケーションを構築することができます。
+例えば、 [Node.js](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) はとても人気のある JavaScript ランタイムで、開発者が JavaScript を使用してネットワークやサーバーサイドのアプリケーションを構築することができます。
 [Node.js イベントモデル](https://nodejs.org/api/events.html)は、イベントを待ち受けするリスナーと、定期的にイベントを発信するエミッターによってできています。それほど異なるものには聞こえませんが、コードはかなり異なり、イベントリスナーを登録するための `on()` や、一度実行した後に登録を解除するイベントリスナーを登録するための `once()` などの関数を使用しています。
-The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) provide a good example.
+[HTTP の connect イベントのドキュメント](https://nodejs.org/api/http.html#event-connect)には、良い例があります。
 
 また、 JavaScript を使用し、 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) と呼ばれる技術を使って、クロスブラウザーのアドオン（ブラウザー機能拡張）を構築することもできます。
 イベントモデルはウェブイベントモデルに似ていますが、少し異なります。イベントリスナーのプロパティは{{Glossary("camel_case", "キャメルケース")}}で書かれ（`onmessage` ではなく `onMessage` など）、 `addListener` 関数と組み合わせる必要があります。
@@ -775,25 +426,10 @@ The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) pr
 
 この段階では、他の環境について何かを理解する必要はありません。プログラミング環境が異なると、イベントが異なる可能性があることを明確にしたかっただけです。
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)を見てください。
-
 ## まとめ
 
-ウェブイベントについて、今の学習初期段階で知るべき事は全部わかったはずです。上で述べたように、実のところイベントは JavaScript のコアには属しません。それらはブラウザーのウェブ API に属するものです。
+この章では、イベントとは何か、イベントを待ち受けする方法、イベントへの対応方法について学びました。
 
-また、JavaScript が使用されるさまざまなコンテキストには、異なるイベントモデルがあることを理解することも重要です。ウェブ API から、ブラウザー WebExtensions や Node.js (サーバーサイド JavaScript) など、他にもさまざまな分野があります。
-これでこれらの領域をすべて理解できるとは思っていませんが、ウェブ開発者を学習していく上で、イベントの基本的なことを理解しておくことはとても役に立ちます。
+ウェブページの要素は、他にも要素を入れ子にできることがこれで分かったでしょう。例えば、[既定の動作の抑制](#既定の動作の抑制)の例では、いくつかのテキストボックスが、それぞれが {{htmlelement("div")}} 要素内に配置され、さらにそれらが {{htmlelement("form")}} 要素内に配置されています。 `<form>` 要素にクリックイベントリスナーが追加され、ユーザーがテキストボックスの 1 つをクリックすると何が起こるでしょうか？ 関連付けられたイベントハンドラー関数は、イベントバブリングと呼ばれるプロセスによって発行されます。このプロセスについては、次のレッスンで説明します。
 
-> [!NOTE]
-> もし行き詰まったら、私たちの[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
-
-## 関連情報
-
-- [domevents.dev](https://domevents.dev/) — 探索を通して DOM Event システムの動作について学ぶことができる、とても有益なインタラクティブな遊び場アプリです。
-- [イベントリファレンス](/ja/docs/Web/Events)
-- [Event order](https://www.quirksmode.org/js/events_order.html) （キャプチャリングとバブリングについての考察） - Peter-Paul Koch による非常に詳細な記事。
-- [Event accessing](https://www.quirksmode.org/js/events_access.html) （イベントオブジェクトについての考察）- Peter-Paul Koch によるこれまた素晴らしく詳細な作品。
-
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}

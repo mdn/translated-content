@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Building_blocks/Return_values
 
 函数返回值 - 是本章中最后一个基础概念，让我们一起来瞧瞧.。有些函数在执行完毕后不会返回一个有用的值，但有些会，重要的是理解返回的是什么，怎样使用这些值在你的代码中，我们将在下面讨论这些。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

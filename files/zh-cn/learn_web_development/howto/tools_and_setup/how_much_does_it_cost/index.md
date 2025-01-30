@@ -8,7 +8,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 
 参与互联网（运营网站）并不像看起来那么便宜。本文中我们将讨论你所需的花费及理由。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">准备工作：</th>

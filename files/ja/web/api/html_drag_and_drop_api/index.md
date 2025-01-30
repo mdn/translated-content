@@ -49,7 +49,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 {{domxref("DataTransferItemList")}} オブジェクトは {{domxref("DataTransferItem")}} オブジェクトのリストです。このリストオブジェクトはリストにドラッグ項目を追加したり、リストからドラッグ項目を削除したり、ドラッグ項目のリストをクリアするメソッドを持ちます。
 
-{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。.
+{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。
 
 > **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#相互運用性)を見てください。
 

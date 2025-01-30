@@ -1,12 +1,13 @@
 ---
 title: 独自の関数を作る
 slug: Learn_web_development/Core/Scripting/Build_your_own_function
-original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 前の記事で扱った重要な理屈をたくさん使って、この記事では実践的な練習を行ないます。ここではあなたが自力で独自関数を作成するための練習を行なっていきます。同時に、関数を扱う上で役に立つ細々の説明もしていきます。
 
@@ -14,19 +15,17 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        基本的な HTML と CSS、それに
-        <a href="/ja/docs/Learn/JavaScript/First_steps"
-          >JavaScript の第一歩</a
-        >の理解。<a href="/ja/docs/Learn/JavaScript/Building_blocks/Functions"
-          >関数 — 再利用可能なコードブロック</a
-        >。
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        カスタム関数を構築するための練習を提供し、関連する有益な詳細をいくつか説明します。
+        <ul>
+          <li>自分自身でカスタム関数を作成する経験。</li>
+          <li>関数に引数を追加すること。</li>
+          <li>自分の関数を呼び出すこと。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -52,7 +51,7 @@ alert("これはメッセージです");
 最初に、基本的な関数を組み立てていきましょう。
 
 > [!NOTE]
-> 関数に名前を付ける方針としては、[変数の名前付けのルール](/ja/docs/Learn/JavaScript/First_steps/Variables#変数の名前付けのルール)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです。関数ならすぐ後に括弧が付きますが、変数には付きません。
+> 関数に名前を付ける方針としては、[変数の名前付けのルール](/ja/docs/Learn_web_development/Core/Scripting/Variables#変数の名前付けのルール)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです。関数ならすぐ後に括弧が付きますが、変数には付きません。
 
 1. [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) ファイルにアクセスして、ローカルコピーを作成するところから始めます。HTML は単純です。 body にはボタン一つしかありません。特製メッセージボックス用の基本的な CSS スタイルと、JavaScript を追加していく用の空の {{htmlelement("script")}} 要素が含まれています。
 2. 次に、`<script>` 要素の中に以下を追加して下さい。
@@ -121,7 +120,7 @@ panel.appendChild(closeBtn);
 
 最後に、 {{domxref("EventTarget/addEventListener", "addEventListener()")}} を呼び出して、ユーザーが「閉じる」ボタンをクリックしたときに呼ばれる関数を追加します。このコードは、メッセージボックスを閉じるために、ページからパネル全体を削除します。
 
-簡単に説明すると、 `addEventListener()` メソッドはボタン（または実際にはページ上の任意の要素）で使用でき、関数とイベントの名前を渡すことができます。この場合、イベントの名前は `click` なので、ユーザーがボタンをクリックしたときに関数が実行されます。イベントについては[イベントの記事](/ja/docs/Learn/JavaScript/Building_blocks/Events)の記事で、もっと詳しく学びます。関数内の行では、 {{domxref("Node.removeChild()")}} DOM API を使用して HTML 要素の特定の子要素（この場合は `<div>` パネル）を削除することを指定します。
+簡単に説明すると、 `addEventListener()` メソッドはボタン（または実際にはページ上の任意の要素）で使用でき、関数とイベントの名前を渡すことができます。この場合、イベントの名前は `click` なので、ユーザーがボタンをクリックしたときに関数が実行されます。イベントについては[イベントの記事](/ja/docs/Learn_web_development/Core/Scripting/Events)の記事で、もっと詳しく学びます。関数内の行では、 {{domxref("Node.removeChild()")}} DOM API を使用して HTML 要素の特定の子要素（この場合は `<div>` パネル）を削除することを指定します。
 
 ```js
 closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
@@ -278,7 +277,7 @@ btn.addEventListener("click", displayMessage());
 5. 更新された関数をテストしましょう。この `displayMessage()` 呼び出しを更新してください。
 
    ```js
-     displayMessage("おお、これは違うメッセージです。"),
+   displayMessage("おお、これは違うメッセージです。");
    ```
 
    これらのうちのどちらかにしましょう。
@@ -295,10 +294,10 @@ btn.addEventListener("click", displayMessage());
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 関数](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)を見てください。このテストは次の記事でカバーしているスキルを求めていますので、テストの前にそちらを読むほうが良いかもしれません。
 
 ## まとめ
 
 最後までしました。おめでとうございます。この記事では、実用的なカスタム関数を作り上げるための全プロセスを示しましたが、これはもう少し作業することで実際のプロジェクトに応用することができます。次の記事では、関数のもうひとつの重要な関連概念である返値について説明します。
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}

@@ -1,12 +1,13 @@
 ---
 title: 動画と音声のコンテンツ
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
 
 ウェブページに簡単な画像を追加するのができるようになったので、次のステップは HTML 文書に動画と音声のプレイヤーを追加することです。この記事では {{htmlelement("video")}} と {{htmlelement("audio")}} 要素を使って実現することを見ていきます。それから動画にキャプションや字幕を追加する方法を見て完了します。
 
@@ -15,25 +16,24 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >インストール済みの基本的なソフトウェア</a
-        >、基本的な
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイル操作</a
-        >の知識、 HTML の基礎知識になじんでいること（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML を始めよう</a
-        >にあるような）、および
-        <a href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
-          >HTML の画像</a
-        >。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >見出しと段落</a
+        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >リスト</a
+        >などのテキストレベルの意味付け。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        動画や音声のコンテンツをウェブページに埋め込み、動画にキャプションや字幕を追加する方法を学びます。
+        <ul>
+          <li><code>&lt;video&gt;</code> や <code>&lt;audio&gt;</code> タグの基本的な構文</li>
+          <li>動画と音声の特定の属性（コントロールやミュートなど）</li>
+          <li><code>&lt;source&gt;</code> 要素を使用してさまざまな動画または音声ソースを提供すること。</li>
+          <li>キャプションや字幕などのテキストトラックを使用方法の基本。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -55,7 +55,7 @@ l10n:
 ```html
 <video src="rabbit320.webm" controls>
   <p>
-    お使いのブラウザーは HTML 動画をサポートしていません。その代わりに<a
+    お使いのブラウザーは HTML 動画に対応していません。その代わりに<a
       href="rabbit320.webm"
       >動画へのリンク</a
     >があります。
@@ -88,7 +88,7 @@ l10n:
 
 ある WebM ファイルに、メイン映像トラックと別アングルのトラック、英語とスペイン語の音声、英語のコメンタリートラックの音声がある映画が含まれている場合、下図のような概念で考えることができます。また、長編映画の字幕、映画のスペイン語字幕、コメンタリーの英語字幕を含むテキストトラックも記載されています。
 
-[![メディアファイルの中身をトラック単位で概念化した図。](containersandtracks.png)](containersandtracks.png)
+![メディアファイルの中身をトラック単位で概念化した図。](containersandtracks.png)
 
 コンテナー内の音声トラックと映像トラックは、そのメディアをエンコードするために使用されるコーデックに適した形式のデータを保持します。音声トラックと映像トラックでは、異なる形式が使用されます。それぞれの音声トラックは [音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs) を使用してエンコードされ、一方映像トラックは、 （おそらく予想通り） [映像コーデック](/ja/docs/Web/Media/Formats/Video_codecs)を使用してエンコードされます。前にお話ししたように、さまざまなブラウザーでは、多様な動画と音声の形式、および多様なコンテナー形式（MP3、MP4、WebM など、さまざまな種類の動画と音声を順番に入力することができる形式）に対応しています。
 
@@ -119,7 +119,7 @@ l10n:
 
 もう一つ覚えておいていただきたいのは、モバイル用のブラウザーは、デスクトップ版と同じ形式をすべて対応しているわけではない場合があるのと同様、デスクトップ版で対応していない形式にも追加で対応している場合があるということです。さらに、デスクトップとモバイルのブラウザーは、メディア再生の処理をオフロードするように設計されている場合があります（すべてのメディアに対して、または内部で処理できない特定の型に対してのみ、オフロードする）。つまり、メディアへの対応は、ユーザーがインストールしているソフトウェアに部分的に依存しているのです。
 
-だから私たちはこれをどうやってやるのか? 以下の[更新された例](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)を見てください（それを[ここでライブで試して](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)みてください）。
+だから私たちはこれをどうやってやるのか? 以下の[更新された例](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)を見てください（それを[ここでライブで試して](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)みてください）。
 
 ```html
 <video controls>
@@ -174,7 +174,7 @@ HTML 動画に含めることができる他の多くの機能があります。
 - [`width`](/ja/docs/Web/HTML/Element/video#width) と [`height`](/ja/docs/Web/HTML/Element/video#height)
   - : これらの属性または {{Glossary("CSS")}} を使用して動画サイズを制御することができます。どちらの場合も、動画は元の縦横比 (**アスペクト比**) を維持します。アスペクト比が設定したサイズによって維持されない場合、動画は水平方向にスペースを埋めるように拡大し、デフォルトでは満たされていないスペースには無地の背景色が与えられます。
 - [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay)
-  - : この属性は、ページの残りの部分がロードされている間に音声または動画の再生をすぐに開始します。ユーザーに実際に迷惑をかけることがあるので、サイトで動画 (または音声) を自動再生することはお勧めしません。
+  - : この属性は、ページの残りの部分が読み込まれている間に音声または動画の再生をすぐに開始します。ユーザーに実際に迷惑をかけることがあるので、サイトで動画 (または音声) を自動再生することはお勧めしません。
 - [`loop`](/ja/docs/Web/HTML/Element/video#loop)
   - : この属性は、動画 (または音声) が終了するたびに再生を開始させます。これは迷惑になることもありますので、本当に必要な場合にのみ使用してください。
 - [`muted`](/ja/docs/Web/HTML/Element/video#muted)
@@ -189,7 +189,7 @@ HTML 動画に含めることができる他の多くの機能があります。
     - `"auto"` はメディアファイルをバッファリングする
     - `"metadata"` はファイルのメタデータのみをバッファリングする
 
-上記の例は [Github でライブで再生する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)ことができます ([ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)も参照してください)。ライブバージョンには `autoplay` 属性は含まれていません — ページが読み込まれるとすぐに動画が再生され始めると、ポスターを見ることはできません!
+上記の例は [Github でライブで再生する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)ことができます ([ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)も参照してください)。ライブバージョンには `autoplay` 属性は含まれていません — ページが読み込まれるとすぐに動画が再生され始めると、ポスターを見ることはできません!
 
 ### \<audio> 要素
 
@@ -213,7 +213,7 @@ HTML 動画に含めることができる他の多くの機能があります。
 ![再生ボタン、タイマー、音量コントロール、および進行状況バーを備えたシンプルなオーディオプレーヤー](audio-player.png)
 
 > [!NOTE]
-> Github で[音声デモをライブで実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)こともできます (オーディオプレーヤーの[ソースコード](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)も参照してください)。
+> Github で[音声デモをライブで実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)こともできます (オーディオプレーヤーの[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)も参照してください)。
 
 ビジュアルコンポーネントがないため、動画プレーヤーよりもスペースが小さくなります。音声を再生するコントロールを表示するだけで済みます。 HTML 動画とのその他の相違点は次のとおりです。
 
@@ -266,7 +266,7 @@ WEBVTT
 1. 適切な場所に `.vtt` ファイルとして保存します。
 2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
 
-ここに例があります。
+こちらが例です。
 
 ```html
 <video controls>
@@ -276,11 +276,11 @@ WEBVTT
 </video>
 ```
 
-これにより、字幕が表示された動画になります。これは次のようなものです。
+これを試すには、[ローカルの HTTP サーバー](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)にファイルをホストする必要があります。ブラウザーの出力には、字幕付きの動画が表示されます。以下のような感じです。
 
 ![再生、停止、音量、キャプションのオン/オフなどのスタンドコントロールを備えたビデオプレーヤー。 動画の再生には、槍のような武器を持つ男のシーンが表示され、キャプションには "Esta hoja tiene pasado oscuro." と表示されます。](video-player-with-captions.png)
 
-詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](http://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
+詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](https://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
 
 > [!NOTE]
 > テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
@@ -301,22 +301,12 @@ WEBVTT
 
 さらに、テキストトラックを研究し、動画にキャプションを追加する方法をうまくいくようにすることもできます。
 
-## スキルをテストしましょう
+## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding) を見てください。 なお、このテストの 3 番目の評価問題は、[次の記事](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)で取り上げられるいくつかの技術の知識を前提としますので、挑戦する前にそれを読んでおくとよいでしょう。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding) を見てください。
 
 ## まとめ
 
-以上、ウェブページに動画や音声を保有する楽しさを味わっていただけたでしょうか？次の記事では、{{htmlelement("iframe")}} や {{htmlelement("object")}} といった技術を使用して、ウェブ上の[コンテンツを埋め込む他の方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)について見ていきましょう。
+以上で終了です。ウェブページの動画と音声で遊んで楽しんでいただけたことを期待しています。次に、 HTML メディアでスキルを評価する課題を紹介します。
 
-## 関連情報
-
-- HTML メディア要素: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}
-- [HTML5 の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [音声と動画の配信](/ja/docs/Web/Media/Audio_and_video_delivery): HTML と JavaScript を使用して音声と動画をウェブページに配置することに関する詳細。
-- [音声と動画の加工](/ja/docs/Web/Media/Audio_and_video_manipulation): JavaScript を使用して音声や動画を操作する方法について詳しく説明します（たとえばフィルターを追加するなど）。
-- [ウェブメディア技術](/ja/docs/Web/Media)
-- [ウェブ上のメディア種別とファイル形式のガイド](/ja/docs/Web/Media/Formats)
-- [イベントリファレンス > メディア](/ja/docs/Web/Events#メディア)
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}

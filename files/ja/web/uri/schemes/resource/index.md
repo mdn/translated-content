@@ -71,5 +71,5 @@ resource: は Firefox のみ対応
 ## 関連情報
 
 - [ウェブ上のリソースの識別](/ja/docs/Web/URI)
-- [URL とは何か](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))

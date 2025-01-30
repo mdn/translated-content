@@ -1,31 +1,39 @@
 ---
-title: グリッド
+title: CSS グリッドレイアウト
 slug: Learn_web_development/Core/CSS_layout/Grids
-original_slug: Learn/CSS/CSS_layout/Grids
 l10n:
-  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}
 
-[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout) (Grid Layout) は、ウェブ用の 2 次元レイアウトシステムです。 コンテンツを行と列にまとめることができ、複雑なレイアウトの作成を簡素化する多くの機能を提供します。この記事では、グリッドレイアウトを始めるに当たって知っておくべきことをすべて説明します。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
+
+CSS グリッドレイアウト (Grid Layout) は、ウェブ用の 2 次元レイアウトシステムです。 コンテンツを行と列に整理することができ、複雑なレイアウトの作成を簡素化する多くの機能を提供します。この記事では、グリッドレイアウトを始めるに当たって知っておくべきことをすべて説明します。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学習）、 CSS の動作の考え方（
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>、
-        <a href="/ja/docs/Learn/CSS/Building_blocks">ボックスのスタイル設定</a>で学習）
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
+        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        グリッドレイアウトシステムの背後にある基本概念と、CSS グリッドを使用してグリッドレイアウトを実装する方法を理解すること。
+        <ul>
+          <li>CSS グリッドの目的を理解すること。一連のブロック要素やインライン要素を、 2 次元で柔軟にレイアウトします。</li>
+          <li>グリッドの用語を理解すること。行、列、間隔、溝。</li>
+          <li>既定で <code>display: grid</code> が何をもたらすかを理解すること。</li>
+          <li>グリッド行、列、間隔の定義。</li>
+          <li>グリッドでの要素の配置。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -106,7 +114,7 @@ body {
 
 ### fr 単位を使用した柔軟なグリッド
 
-長さとパーセントを使用してグリッドを作成するだけでなく、 `fr` 単位を使用して柔軟にグリッドの行と列のサイズを変更できます。 この単位は、グリッドコンテナー内の使用可能スペースの割合を表します。
+長さとパーセントを使用してグリッドを作成するだけでなく、 [`fr`](/ja/docs/Web/CSS/flex_value) 単位を使用して柔軟にグリッドの行と列のサイズを変更できます。 この単位は、グリッドコンテナー内の使用可能な空間の割合を表します。
 
 トラックのリストを次の定義に変更し、 `1fr` のトラックを 3 つ作成します。
 
@@ -161,14 +169,14 @@ body {
 
 {{ EmbedLiveSample('Flexible_grids_with_the_fr_unit', '100%', 200) }}
 
-> **メモ:** `fr` 単位は、*すべて*のスペースではなく、*使用可能*なスペースを分配します。そのため、トラックの中に何か大きなものがある場合、共有できる自由空間は少なくなります。
+> **メモ:** `fr` 単位は、*すべて*の空間ではなく、*使用可能*な空間を分配します。そのため、トラックの中に何か大きなものがある場合、共有できる自由空間は少なくなります。
 
-### トラック間の間隔
+### トラックの間隔
 
-トラック間の間隔を作成するには、次のプロパティを使用してください。
+トラックの間隔を作成するには、次のプロパティを使用してください。
 
-- {{cssxref("column-gap")}} は列間の間隔
-- {{cssxref("row-gap")}} は行間の間隔
+- {{cssxref("column-gap")}} は列の間隔
+- {{cssxref("row-gap")}} は行の間隔
 - {{cssxref("gap")}} は両方の一括指定
 
 ```css
@@ -214,21 +222,9 @@ body {
 
 {{ EmbedLiveSample('Gaps_between_tracks', '100%', 250) }}
 
-> [!NOTE]
-> gap` プロパティ（`column-gap`、`row-gap`、`gap`）は、接頭辞として `grid-` を使用していました。仕様は変更されましたが、接頭辞は別名として維持されます。安全な側に立ち、コードをより強固なものにするのであれば、両方のプロパティを追加することができます。
->
-> ```css
-> .container {
->   display: grid;
->   grid-template-columns: 2fr 1fr 1fr;
->   grid-gap: 20px;
->   gap: 20px;
-> }
-> ```
-
 ### トラックリストの繰り返し
 
-反復記法を使用して、トラックリストの全部または一部を繰り返すことができます。
+CSS の `repeat()` 関数を使用して、トラックリストの全部または一部を繰り返すことができます。
 トラックリストを次のように変更します。
 
 ```css
@@ -362,9 +358,9 @@ body {
 
 ## 線に基づいた配置
 
-これでグリッドの作成からグリッドに配置することに移動します。グリッドには常に線があります。これらは 1 から始まり、文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に関連しています。例えば、英語（左書き）の場合、列線 1 はグリッドの左端であり、行線 1 はグリッドの上端となり、アラビア語（右書き）の場合、列線 1 は右端になります。
+ここで、グリッドの作成からグリッドへの配置に移ります。グリッドには常に線があります。これらは 1 から始まり、文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に関連しています。例えば、英語（左書き）の場合、列線 1 はグリッドの左端であり、行線 1 はグリッドの上端となり、アラビア語（右書き）の場合、列線 1 は右端になります。
 
-これらの線に沿ってアイテムを配置するには、アイテムを配置するグリッド領域の開始線と終了線を指定します。このために使用することができます4つのプロパティがあります。
+これらの線に沿ってアイテムを配置するには、アイテムを配置するグリッド領域の開始線と終了線を指定します。このために使用することができる 4 つのプロパティがあります。
 
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
@@ -478,7 +474,7 @@ aside {
 
 ## grid-template-areas での配置
 
-アイテムをグリッドに配置する別の方法は、{{cssxref("grid-template-areas")}} プロパティを使用して、デザインのさまざまな要素に名前を付けることです。
+アイテムをグリッドに配置する別の方法は、 {{cssxref("grid-template-areas")}} プロパティを使用して、デザインのさまざまな要素に名前を付けることです。
 
 最後の例から線に基づいた配置を削除して（またはファイルを再ダウンロードして新しい出発点にして）、次の CSS を追加します。
 
@@ -712,7 +708,7 @@ article {
 入れ子グリッドのレイアウトを簡単に作業するために、 `grid-template-rows` と `grid-template-columns` プロパティに `subgrid` を使用することができます。これにより、親グリッドで定義したトラックを活用することができます。
 
 次の例では、[線に基づいた配置](#線に基づいた配置)を使用しており、入れ子グリッドを親グリッドの複数の列や行にまたがるようにすることができます。
-`subgrid` を追加し、親グリッドの列を継承しつつ、入れ子グリッド内の行に異なるレイアウトを追加しています。
+`subgrid` を追加し、親グリッドの列を継承しつつ、入れ子グリッド内の行に異なるレイアウトを追加します。
 
 ```css hidden live-sample___subgrid
 body {
@@ -770,12 +766,22 @@ body {
 
 {{ EmbedLiveSample('subgrid', '100%', 300) }}
 
-## グリッドフレームワーク
+## グリッドシステム
 
 コンテンツのレイアウトに役立つ、 12 列または 16 列のグリッドを提供する数多くのグリッドフレームワークが利用できます。
 良い知らせは、グリッドベースのレイアウトを作成するのにサードパーティ製のフレームワークはおそらく必要ないということです。グリッド機能はすでに仕様に記載されており、ほとんどの現行ブラウザーで対応しています。
 
 [出発点ファイルをダウンロードしてください](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html)。 これには、12 列のグリッドが定義されたコンテナーと、前の 2 つの例で使用したのと同じマークアップが含まれています。 線に基づいた配置を使用して、次のようにコンテンツを 12 列のグリッドに配置できます。
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+```
+
+これで、行ベースの配置を使用して、 12 列のグリッドにコンテンツを配置することができます。
 
 ```css
 header {
@@ -808,12 +814,6 @@ body {
     0.9em/1.2 Arial,
     Helvetica,
     sans-serif;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 20px;
 }
 
 header,
@@ -867,7 +867,7 @@ aside {
 </div>
 ```
 
-{{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
+{{ EmbedLiveSample('Grid frameworks in CSS grid', '100%', 600) }}
 
 [Firefox のグリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)を使用してデザイン上のグリッド線をオーバーレイすると、12 列グリッドがどのように機能するかがわかります。
 
@@ -875,7 +875,7 @@ aside {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: グリッド](/ja/docs/Learn/CSS/CSS_layout/Grid_skills) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grid_skills) を見てください。
 
 ## まとめ
 
@@ -883,10 +883,11 @@ aside {
 
 ## 関連情報
 
-- CSS グリッドレイアウトに関する[ガイドの一覧](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)
-- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)ガイド
-- [CSS grid inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (firefox-source-docs)
-- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/), a visual guide on CSS-Tricks (2023)
-- [Grid Garden](https://cssgridgarden.com/), an educational game to learn and better understand the basics of grid on cssgridgarden.com
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)
+  - : CSS グリッドレイアウトモジュールのメインページで、多数の追加リソースを格納しています。
+- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/)（英語）
+  - : 視覚的なガイド（CSS-Tricks、2023）
+- [Grid Garden](https://cssgridgarden.com/)（英語）
+  - : グリッドの基本を学び、より理解を深めるための教育用ゲームです。
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}

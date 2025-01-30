@@ -1,11 +1,13 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
-**`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線 (段間罫) のスタイルを設定します。
+**`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/column-rule-style.html")}}
 
@@ -28,6 +30,7 @@ column-rule-style: outset;
 column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: revert;
+column-rule-style: revert-layer;
 column-rule-style: unset;
 ```
 
@@ -52,17 +55,15 @@ column-rule-style: unset;
 
 #### HTML
 
-```html
+```html-nolint live-sample___setting_a_dashed_column_rule
 <p>
-  This is a bunch of text split into three columns. The `column-rule-style`
-  property is used to change the style of the line that is drawn between
-  columns. Don't you think that's wonderful?
+  これは 3 つ段に分割されたテキストの束です。 <code>column-rule-style</code> プロパティは、段と段の間に引かれる線のスタイルを変更するために使用されます。すばらしいと思いませんか？
 </p>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_a_dashed_column_rule
 p {
   column-count: 3;
   column-rule-style: dashed;
@@ -83,7 +84,7 @@ p {
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)（レイアウトの学習）
 - {{CSSXref("column-rule")}}
 - {{CSSXref("column-rule-width")}}
 - {{CSSXref("column-rule-color")}}

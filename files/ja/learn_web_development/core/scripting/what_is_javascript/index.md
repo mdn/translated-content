@@ -1,12 +1,13 @@
 ---
 title: JavaScript とは
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
-original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 l10n:
-  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
+  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
 MDN 初心者向け JavaScript コースへようこそ！ この最初の記事では、高水準から JavaScript を見ていき、「JavaScript とは何か？」「これを使うと何ができるか？」などの質問に答えます。 JavaScript の用途にきっちりと親しめるようになります。
 
@@ -14,12 +15,18 @@ MDN 初心者向け JavaScript コースへようこそ！ この最初の記事
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>HTML および CSS の基本的な理解。</td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解していること。
+      </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習目標:</th>
       <td>
-        JavaScript とは何か、何ができるか、どのようにウェブサイトに適用できるかについて親しむ。
+        <ul>
+          <li>JavaScriptとは何か、そしてウェブサイトにどのように組み込まれるのか。</li>
+          <li>JavaScript でできること。</li>
+          <li>ウェブページに JavaScript を追加すること。</li>
+          <li>JavaScript でコメントを書く。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -28,7 +35,7 @@ MDN 初心者向け JavaScript コースへようこそ！ この最初の記事
 ## 高水準の定義
 
 JavaScript はウェブページに複雑な機能を実装することを可能にするスクリプトまたはプログラミング言語です。ウェブページがただそこに座って静的な情報を表示する以上のことをする場合、タイムリーなコンテンツの更新、操作可能な地図、アニメーションする 2D/3D グラフィック、スクロールする動画ジュークボックスなどがある場合、 JavaScript が関わっていることは間違いないでしょう。
-これはウェブ標準技術のレイヤーケーキの 3 層目であり、そのうちの 2 種類([HTML](/ja/docs/Learn/HTML)と[CSS](/ja/docs/Learn/CSS))は学習領域の他の部分で詳しく述べました。
+これはウェブ標準技術のレイヤーケーキの 3 層目であり、そのうちの 2 種類([HTML](/ja/docs/Learn_web_development/Core/Structuring_content)と[CSS](/ja/docs/Learn_web_development/Core/Styling_basics))は学習領域の他の部分で詳しく述べました。
 
 ![ウェブの標準技術である HTML、CSS、JavaScript の 3 つのレイヤー。](cake.png)
 
@@ -102,24 +109,20 @@ API は大まかに 2 種類に分けられます。
 
 **ブラウザー API** はウェブブラウザーに組み込まれていて、コンピューターを取り巻く環境からデータを取り出したり、複雑で便利なことをしてくれたりします。例えば、
 
-- {{domxref("Document_Object_Model","DOM (Document Object Model) API")}} は HTML と CSS の操作を行うことができます。 HTML を生成し、削除し、変更し、動的にページの見た目を変更することなどができます。
+- [DOM (Document Object Model) API](/ja/docs/Web/API/Document_Object_Model) は HTML と CSS の操作を行うことができます。 HTML を生成し、削除し、変更し、動的にページの見た目を変更することなどができます。
   例えば、ページにポップアップウィンドウが現れたり、新しいコンテンツが表示されたり（この例では単純なデモで見たように）するのは、すべて DOM の働きによるものです。
-- {{domxref("Geolocation","位置情報 API")}} は地理的な情報を取得します。これは [Google マップ](https://www.google.com/maps)が現在の所在地を見つけて地図上にプロットする場合に使用されています。
-- {{domxref("Canvas_API","Canvas")}} と {{domxref("WebGL_API","WebGL")}} の API は 2D や 3D グラフィックでのアニメーションを可能とします。
+- [位置情報 API](/ja/docs/Web/API/Geolocation_API) は地理的な情報を取得します。これは [Google マップ](https://www.google.com/maps)が現在の所在地を見つけて地図上にプロットする場合に使用されています。
+- [キャンバス](/ja/docs/Web/API/Canvas_API)と [WebGL](/ja/docs/Web/API/WebGL_API) の API は 2D や 3D グラフィックでのアニメーションを可能とします。
   このウェブ技術を使用してすごいことをやってのける人たちがいます。 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) や [webglsamples](https://webglsamples.org/) などのページを見てください。
-- [音声と動画の API](/ja/docs/Web/Media/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や {{domxref("WebRTC API", "WebRTC")}} などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
-
-> [!NOTE]
-> 上記の多くは古いブラウザーでは動作しません。試すには Firefox、Chrome、Edge、Opera といった最近のブラウザーを使うとよいでしょう。
-> プロダクションコードを提供する（顧客に実際のコードを納品する）段になったら、[クロスブラウザーテスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を読んでみるとよいでしょう。
+- [音声と動画の API](/ja/docs/Web/Media/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や [WebRTC](/ja/docs/Web/API/WebRTC_API) などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
 
 **サードパーティ API** はブラウザーには組み込まれておらず、さらに普通はウェブ上のどこかからそのコードと情報を探さなければなりません。例えば、
 
-- [Twitter API](https://developer.twitter.com/en/docs) を使用すると、ウェブサイトに最新のツイートを表示させることができます。
+- [Twitter API](https://developer.x.com/ja/docs) を使用すると、ウェブサイトに最新のツイートを表示させることができます。
 - [Google マップ API](https://developers.google.com/maps/) や [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) を使用すると、ウェブサイトに専用の地図を埋め込み、付加機能を付けることもできます。
 
 > [!NOTE]
-> このような API は先進的ですが、このモジュールでは扱いません。詳しく知りたければ [クライアントサイドウェブ API モジュール](/ja/docs/Learn/JavaScript/Client-side_web_APIs) で扱っています。
+> このような API は先進的ですが、このモジュールでは扱いません。詳しく知りたければ [クライアントサイドウェブ API モジュール](/ja/docs/Learn_web_development/Extensions/Client-side_APIs) で扱っています。
 
 ワクワクすることはもっとたくさんあります！ ですが、まだ興奮しすぎないでください。24 時間程度の勉強だけでは、Facebook や Google マップや Instagram は作れません。まずはやらなければならない基本がたくさんあるのです。さあ、先に進みましょう！
 
@@ -127,14 +130,11 @@ API は大まかに 2 種類に分けられます。
 
 まずは実際にコードを見てみましょう。そしてページで JavaScript を動かすと何が起きるのか見てみましょう。
 
-ブラウザーをウェブページに読み込んだときの話を簡単に説明します（[CSS の仕組み](/ja/docs/Learn/CSS/First_steps/How_CSS_works#css_は実際にはどう機能するのか？)の記事で最初に出てきました）。ウェブページをブラウザーで見たとき、実行環境 (ブラウザーのタブ) の中で、コード (HTML、CSS、JavaScript) が実行されます。これは素材 (コード) を加工して製品 (ウェブページ) を出力する工場のようなものです。
+ブラウザーをウェブページに読み込んだときの話を簡単に説明します（[CSS とは何か](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#どのように_css_は_html_に適用されるのか)の記事で最初に出てきました）。ウェブページをブラウザーで見たとき、実行環境 (ブラウザーのタブ) の中で、コード (HTML、CSS、JavaScript) が実行されます。これは素材 (コード) を加工して製品 (ウェブページ) を出力する工場のようなものです。
 
 ![HTML、CSS、JavaScript のコードが組み合わされ、ページが読み込まれたときにブラウザーのタブに表示されるコンテンツを作成します。](execution.png)
 
-JavaScript のごく一般的な用途は、(先ほど例示した) Document Object Model API を介して動的に HTML と CSS を変更し、ユーザーインターフェイスを更新することです。
-なお、ウェブ文書上のコードは通常、ページ上に現れる順序で読み込まれて実行されます。
-もし JavaScript が読み込まれ、影響を受ける HTML および CSS が読み込まれる前に実行しようとすると、エラーが発生する可能性があります。
-この回避策については、記事の後半の「[スクリプトの読み込み方針](#スクリプトの読み込み方針)」の節でで学習します。
+JavaScript のごく一般的な用途は、（先ほど言及した） Document Object Model API を介して動的に HTML と CSS を変更し、ユーザーインターフェイスを更新することです。
 
 ### ブラウザーのセキュリティ
 
@@ -163,7 +163,7 @@ function updateName() {
 
 このコードではボタンを選択して (1 行目)、イベントリスナーを登録して (3 行目) ボタンがクリックされたとき、`updateName()` というコードブロック (5 行目から 8 行目) が実行されるようにしています。`updateName()` というコードブロック (再利用可能なコードブロックで「関数」と呼びます) は、ユーザーに新しい名前を尋ねて、表示内容を変更するため、ボタンテキストにその名前を挿入します。
 
-もし、最初の 2 行を入れ替えた場合、動かなくなってしまいます。代わりに[ブラウザーの開発者コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)に `Uncaught ReferenceError: Cannot access 'button' before initialization` というエラーが出るでしょう。
+もし、最初の 2 行を入れ替えた場合、動かなくなってしまいます。代わりに[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に `Uncaught ReferenceError: Cannot access 'button' before initialization` というエラーが出るでしょう。
 この意味は `button` オブジェクトがまだ初期化されていないため、イベントリスナーが設定できないということを表しています。
 
 > [!NOTE]
@@ -195,7 +195,7 @@ JavaScript は軽量なインタープリター型プログラミング言語で
 
 一方、サーバーサイドコードはサーバー上で実行され、結果がブラウザーにダウンロードされて表示されます。
 ウェブで人気のあるサーバーサイドの言語は、PHP、Python、Ruby、ASP.NET など。そして JavaScript です！
-JavaScript はサーバーサイドの言語としても使われます。人気のある Node.js 環境がその例です。サーバーサイドの JavaScript については[動的なウェブサイト – サーバーサイドプログラミング](/ja/docs/Learn/Server-side)のトピックを見てください。
+JavaScript はサーバーサイドの言語としても使われます。人気のある Node.js 環境がその例です。サーバーサイドの JavaScript については[動的なウェブサイト – サーバーサイドプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side)のトピックを見てください。
 
 ### 動的コードと静的コード
 
@@ -214,7 +214,7 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
 
 1. まずは [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html) ファイルを自分のコンピューターにコピーします。どこか適当な場所に保存してください。
 2. テキストエディターとウェブブラウザーでそのファイルを開いてください。クリックできるボタンが 1 つあるウェブページを作る HTML だということがわかりますね。
-3. 次に、テキストエディターで `</head>` タグの直前に以下のコードを追加します。
+3. 次に、テキストエディターで `</body>` タグの直前に以下のコードを追加します。
 
    ```html
    <script>
@@ -222,22 +222,22 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
    </script>
    ```
 
+   ウェブ文書のコードは通常、ページに表示されている順番で読み込まれ実行されることに注意してください。JavaScript を文書の最後に配置することで、HTML 要素がすべて読み込まれることを確保しています。（下記「[スクリプトの読み込み方針](#スクリプトの読み込み方針)」も参照してください。）
+
 4. それでは {{htmlelement("script")}} 要素内に JavaScript を書いて、もうちょっと面白いことをしてみましょう。「// JavaScript をここに書きます」と書いてあるすぐ下に、以下のコードを追加してください。
 
    ```js
-   document.addEventListener("DOMContentLoaded", () => {
-     function createParagraph() {
-       const para = document.createElement("p");
-       para.textContent = "ボタンが押されました!";
-       document.body.appendChild(para);
-     }
+   function createParagraph() {
+     const para = document.createElement("p");
+     para.textContent = "ボタンが押されました!";
+     document.body.appendChild(para);
+   }
 
-     const buttons = document.querySelectorAll("button");
+   const buttons = document.querySelectorAll("button");
 
-     for (const button of buttons) {
-       button.addEventListener("click", createParagraph);
-     }
-   });
+   for (const button of buttons) {
+     button.addEventListener("click", createParagraph);
+   }
    ```
 
 5. ファイルを保存してブラウザーを更新してください。ボタンを押す度に新しい段落が作られて、下に表示されるようになりましたね。
@@ -245,7 +245,7 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
 > [!NOTE]
 > もし上記の例が上手く動いていないとしたら、もう一度最初から手順を確認してください。
 > コピーしてコードを書いたファイルは `.html` というファイル名ですか？
-> {{htmlelement("script")}} 要素を `</head>` タグの直前に追加しましたか？
+> {{htmlelement("script")}} 要素を `</body>` タグの直前に追加しましたか？
 > JavaScript を上の例の通りに書きましたか？ **JavaScript は大文字小文字を区別しますので、見えている通りに書かなければなりません。正しく書いていなければ、動いてくれません。**
 
 > [!NOTE]
@@ -256,10 +256,10 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
 これで JavaScript が動きましたね。しかし、 JavaScript を外部のファイルに書きたいときはどうすればよいでしょうか？ 次の例を見てみましょう。
 
 1. まず、先ほどの HTML ファイルと同じディレクトリーに新しいファイルを作ります。これを `script.js` と名付けます。 .js という拡張子であることを確認してください。それで JavaScript であると認識されるのです。
-2. {{htmlelement("script")}} 要素を以下のコードで置き換えます。
+2. 現在の `</body>` の下にある {{htmlelement("script")}} を除去し、`</head>` 終了タグの直前に次のコードを追加します（この方法では、ブラウザーはファイルを読み込むのを下部に配置した場合よりも早く始めることができます）。
 
    ```html
-   <script src="script.js" defer></script>
+   <script type="module" src="script.js"></script>
    ```
 
 3. `script.js` に、次のスクリプトを追加します。
@@ -278,10 +278,12 @@ CSS では {{htmlelement("link")}} 要素を使用することで外部のスタ
    }
    ```
 
-4. HTML ファイルを保存して、ブラウザーを更新してください。同じページが見えますね！
-   同じように動いていますが、今回は外部の JavaScript ファイルです。
-   コードを整理して、複数の HTML ファイルから再利用できるようにするには、このようにするのが良いでしょう。
-   大きなスクリプトの塊がないほうが、HTML も読みやすくなります。
+4. 保存してブラウザーを更新してください。ボタンをクリックしても効果がないことが分かるでしょう。ブラウザーのコンソールを確認すると、 `Cross-origin request blocked` という内容のエラーが表示されます。これは、多くの外部リソースと同様に、JavaScript モジュールは HTML と[同じオリジン](/ja/docs/Web/Security/Same-origin_policy)から読み込む必要があり、 `file://` URL は適格ではないためです。この問題を修正するには、 2 つの方法があります。
+   - お勧めする解決策は、[ローカルテストサーバーをセットアップ](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)することです。サーバープログラムが動作し、ポート `8000` で `apply-javascript-external.html` と `script.js` ファイルを配信している状態で、ブラウザーを開き、 `http://localhost:8000` にアクセスします。
+   - ローカルサーバーが実行できない場合は、 `<script type="module" src="script.js"></script>` の代わりに `<script defer src="script.js"></script>` を使用することもできます。 詳細は下記[スクリプトの読み込み方針](#スクリプトの読み込み方針)を参照してください。 しかし、チュートリアルの他の部分で使用する機能は、いずれにせよローカルの HTTP サーバーが必要となる場合があることに注意してください。
+5. これでウェブサイトは以前と同じように動作しますが、 JavaScript は外部ファイルから取得するようになります。
+   これは一般的に、コードを整理し、複数の HTML ファイル間で再利用できるようにするという点で良いことです。
+   さらに、 HTML に巨大なスクリプトの塊が含まれなくなるため、読みやすくなります。
 
 > [!NOTE]
 > GitHub でこちらのバージョンも見られます。[apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) と [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) です ([ライブでも見られます](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))。
@@ -313,7 +315,7 @@ function createParagraph() {
 
 ### 代わりに addEventListner を使用する
 
-HTML に JavaScript を含めるのではなく、純粋な JavaScript の構成使用してください。
+HTML に JavaScript を含めるのではなく、純粋な JavaScript による構築を使用してください。
 `querySelectorAll()` 関数を使うと、ページ上のすべてのボタンを選択することができます。
 そして、ループ処理でそれぞれのボタンに対して、 `addEventListener()` を使ってハンドラーを割り当てることができます。
 このためのコードを以下に示します。
@@ -336,95 +338,19 @@ JavaScript は変更する必要がありません。
 
 ### スクリプトの読み込み方針
 
-スクリプトを適切なタイミングで読み込むためには、いくつかの問題があります。それは見掛けほど簡単ではありません。
-一般的な問題は、ページ上のすべての HTML が、現れた順に読み込まれることです。
-JavaScript を使用してページ上の要素（またはより正確には、[ドキュメントオブジェクトモデル](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#ドキュメントオブジェクトモデル)）を操作する場合、何かをしようとする対象の HTML よりも前に JavaScript が読み込まれて解釈されても、コードは動作しません。
+ページ上の HTML はすべて、現れる順番に読み込まれます。
+JavaScript を使用してページ上の要素（より正確に言えば、[ドキュメントオブジェクトモデル](/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)）を操作する場合、 JavaScript が HTML より先に読み込まれ構文解析されると、コードは動作しません。
 
-上のコード例では、内蔵の例と外部の例では、HTML 本文が解釈される前に JavaScript が読み込まれて文書の head で実行されています。
-これによりエラーが発生する可能性があるため、いくつかの構文を使用して回避しています。
+HTML が解釈できるようになった後にのみ JavaScript を実行するようにするには、いくつか方法があります。
 
-内蔵の例では、コードの周りにこの構造を見ることができます。
+- 前述の内蔵 JavaScript の例では、スクリプト要素は文書本体の一番下に配置されているため、 HTML 本体の残りの部分が構文解析された後にのみ実行されます。
+- 上記のような外部 JavaScript の例では、スクリプト要素は HTML 本体の構文解析が行われる前に文書のヘッド部に配置されます。しかし、 `<script type="module">` を使用しているため、コードは[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)として扱われ、ブラウザーは HTML がすべて処理されるまで JavaScript モジュールの実行を待ちます。（外部スクリプトを本体の最後に配置することもできます。しかし、 HTML の量が多くネットワークが遅い場合、ブラウザーがスクリプトを取得し読み込むことを開始するまでに多くの時間がかかる可能性があるため、外部スクリプトをヘッド部に配置する方が通常は望ましいです。）
+- それでも文書のヘッド部でモジュール以外のスクリプトを使用したい場合は、ページ全体が表示されないようにブロックされたり、 HTML が解釈される前に実行されてエラーが発生したりする可能性があります。
 
-```js
-document.addEventListener("DOMContentLoaded", () => {
-  // …
-});
-```
+  - 外部スクリプトにおいては、 `defer` （または HTML が利用できるようになるまで待つ必要がないのであれば `async`）属性を {{htmlelement("script")}} 要素に設定してください。
+  - 内蔵スクリプトにおいては、コードを [`DOMContentLoaded` イベントリスナー](/ja/docs/Web/API/Document/DOMContentLoaded_event)で囲んでください。
 
-これはブラウザーの `DOMContentLoaded` イベントを待ち受けするイベントリスナーで、 HTML の本体がが完全に読み込まれて解釈されたことを示します。
-このブロック内の JavaScript は、そのイベントが発生するまで実行されないため、エラーは回避されます（コースの後半で[イベントについて学習](/ja/docs/Learn/JavaScript/Building_blocks/Events)します）。
-
-外部の例では、より現代的な JavaScript 機能の `defer` 属性を使用して問題を解決し、`<script>` 要素に達した後も HTML コンテンツのダウンロードを続行するようブラウザーに指示します。
-
-```html
-<script src="script.js" defer></script>
-```
-
-この場合、スクリプトと HTML の両方が同時に読み込まれ、コードが機能します。
-
-> [!NOTE]
-> 外部の場合は、`defer` 属性が問題を解決したため、`DOMContentLoaded` イベントを使用する必要はありませんでした。
-> `defer` は外部スクリプトに対してのみ機能するため、内蔵の例では `defer` による解決策を使用しませんでした。
-
-この問題に対する昔ながらの解決策は、すべての HTML が解釈された後に読み込まれるように、 body の下部に（たとえば `</body>` タグの直前に） script 要素を置くことでした。
-この解決の問題点は、HTML DOM が読み込まれるまでスクリプトの読み込みと解釈が完全にブロックされることです。
-JavaScript がたくさんある大規模なサイトでは、これは大きなパフォーマンス上の問題を引き起こす可能性があり、サイトを遅くします。
-
-#### async と defer
-
-実際には、スクリプトのブロッキングの問題を回避できる現代的な機能が 2 つあります。 `async` と `defer` （すでに見てきました）です。これらの 2 つの違いを見てみましょう。
-
-`async` 属性を使用して読み込まれたスクリプトは、スクリプトを取得する間、ページをブロックすることなくスクリプトをダウンロードします。
-しかし、ダウンロードが完全に完了すると、スクリプトが実行され、ページのレンダリングがブロックされます。これは、スクリプトの実行が完了するまで、ウェブページの残りのコンテンツが処理されず、ユーザーに表示されないことを意味します。
-スクリプトが特定の順序で実行される保証はありません。
-ページ内のスクリプトが互いに独立して実行し、ページ上の他のスクリプトに依存しない場合に `async` を使用するのが最善です。
-
-`defer` 属性で読み込まれたスクリプトは、ページに表示されている順番に読み込まれます。
-ページのコンテンツがすべて読み込まれるまで実行されません。これは、スクリプトが DOM に依存している場合（例えば、ページ上の 1 つ以上の要素を変更する場合）に便利です。
-
-ここでは、スクリプトの読み込み方法の違いと、それがページにとってどのような意味を持つかを視覚的に表現しています。
-
-![3 種類のスクリプト読み込み方法の仕組みです。既定では、 JavaScript の取得と実行の間、解釈がブロックされます。 async を使用すると、解釈は実行時のみ一時停止します。 defer を使用すると、解釈は一時停止しません、すべてが解釈された後に実行されます。](async-defer.jpg)
-
-_この画像は [HTML 仕様書](https://html.spec.whatwg.org/images/asyncdefer.svg)からのもので、 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ライセンス条件に基づきコピーと縮小版への切り抜きを行っています。_
-
-たとえば、次のスクリプト要素があるとします。
-
-```html
-<script async src="js/vendor/jquery.js"></script>
-
-<script async src="js/script2.js"></script>
-
-<script async src="js/script3.js"></script>
-```
-
-スクリプトが読み込まれる順序に頼ることはできません。
-`jquery.js` が読み込まれるのは `script2.js` と `script3.js` よりも前かもしれませんし、後かもしれません。この場合、これらのスクリプトの関数が `jquery` に依存していると、スクリプトの実行時に `jquery` が定義されないため、エラーが発生します。
-
-読み込むバックグラウンドスクリプトがいくつもあって、それらをできるだけ早く実行したい場合には `async` を使用するべきです。
-例えば、ゲームを実際に開始するときに必要になるいくつかの読み込むべきゲームデータファイルがあるとして、今のところは、スクリプトを読み込むことによってブロックされずに、ゲームのイントロ、タイトル、ロビーを表示したいだけ、という場合です。
-
-`defer` 属性つきのスクリプト（下記のようなもの）は、ページに現れた順序でスクリプトを実行し、スクリプトとコンテンツがダウンロードされるとすぐにスクリプトを実行します。
-
-```html
-<script defer src="js/vendor/jquery.js"></script>
-
-<script defer src="js/script2.js"></script>
-
-<script defer src="js/script3.js"></script>
-```
-
-`defer` 属性を持つすべてのスクリプトは、ページに現れた順序で読み込まれます。したがって、2 番目の例では、 `jquery.js` が `script2.js` と `script3.js` の前に読み込まれ、`script2.js` が `script3.js` の前に読み込まれることは確実です。
-ページコンテンツがすべて読み込まれるまでは、実行せず、これはスクリプトが DOM 配置に依存している場合に便利です（例: ページの要素を変更する場合）。
-
-要約すると、
-
-- `async` と `defer` のどちらも、ページのその他の部分（DOM など）と並行して、ブラウザーにスクリプトを別スレッドでダウンロードするよう指示するので、読み取りの過程で読み取りプロセスがブロックされることはなくなります。
-- `async` 属性を付けたスクリプトは、ダウンロードが完了し次第、すぐに実行されます。
-  これはページをブロックし、特定の実行順序を保証することはありません。
-- `defer` 属性を付けたスクリプトは、出現順に読み込まれ、すべての読み込みが終了した後に実行されます。
-- スクリプトを直ちに実行するべきであり、依存関係がない場合は、 `async` を使用してください。
-- スクリプトが解釈を待つ必要があり、他のスクリプトや DOM 上の位置に依存する場合は、 `defer` を使用して読み込んでください。対応する `<script>` 要素をブラウザーに実行させたい順に配置してください。
+  これは現時点ではチュートリアルの範囲を超えていますが、ごく古いブラウザーに対応する必要がない場合は、これを行う必要はなく、代わりに `<script type="module">` を使用することができます。
 
 ## コメント
 
@@ -481,7 +407,7 @@ for (const button of buttons) {
 なぜ JavaScript を使い、何ができるのかということに慣れるため、まずは理論から始めました。
 進むにつれ、少しでしたが例を見て、何よりも JavaScript がどのようにウェブサイトの他のコードに組み込まれているかを学習しました。
 
-JavaScript が少し大変だと思いましたか。でも心配は無用です。このコースを受講することで一歩ずつ、理解しながら前に進んで行きましょう。
-次の記事で、まっすぐに飛び込んで自分で JavaScript のページを作って[実践に突入しましょう](/ja/docs/Learn/JavaScript/First_steps/A_first_splash)。
+現時点では JavaScript はこれで正しいのか不安になるかもしれませんが、心配しないでください。このコースでは、単純な段階を踏んで、意味が分かるようにしていきます。
+次の記事では、すぐに実践的な内容に入り、自分自身で JavaScript の例を作成してもらいます。
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
