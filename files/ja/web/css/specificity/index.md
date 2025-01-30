@@ -2,12 +2,12 @@
 title: 詳細度
 slug: Web/CSS/Specificity
 l10n:
-  sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn/CSS/First_steps/What_is_CSS#css_の構文)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
+**詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文の基本)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
 
 > [!NOTE]
 > ブラウザーは、[カスケードのオリジンと重要度](/ja/docs/Web/CSS/Cascade)を決定した**後**に、詳細度を検討します。言い換えれば、プロパティ宣言が競合している場合、そのプロパティの優先順位を保有する 1 つの[カスケードのオリジンとレイヤー](/ja/docs/Web/CSS/@layer)のセレクター間でのみ、詳細度が関連し比較されます。優先順位を持つカスケードレイヤーで競合する宣言のセレクターの詳細度が等しいとき、[スコープの詳細度](/ja/docs/Web/CSS/@scope#scope_の競合の解決方法)と出現順序が関連するようになります。
@@ -491,7 +491,7 @@ input[type="password"]:required {
 
 ## 関連情報
 
-- [「カスケードと継承」の「詳細度」](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#詳細度)
+- [「カスケードと継承」の「詳細度」](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#詳細度)
 - [SpeciFISHity](https://specifishity.com/)
 - [Specificity Calculator](https://specificity.keegan.st/): 自身の CSS ルールをテストし、理解するための対話型ウェブサイト
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) 詳細度クイズ（英語）
@@ -502,7 +502,7 @@ input[type="password"]:required {
 - [継承](/ja/docs/Web/CSS/Inheritance)
 - [初期値](/ja/docs/Web/CSS/initial_value)、[計算値](/ja/docs/Web/CSS/computed_value)、[使用値](/ja/docs/Web/CSS/used_value)、[実効値](/ja/docs/Web/CSS/actual_value)
 - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-- [構成要素: CSS カスケード](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [構成要素: カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)モジュール
