@@ -77,7 +77,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("script-src-elem")}}
   - : 指定 JavaScript {{HTMLElement("script")}} 元素的合法源。
 - {{CSP("script-src-attr")}}
-  - : 指定 JavaScript 内联事件属性的合法源。
+  - : 指定 JavaScript 内联事件处理器的合法源。
 - {{CSP("style-src")}}
 
   - : 指定层叠样式表文件的合法源。
