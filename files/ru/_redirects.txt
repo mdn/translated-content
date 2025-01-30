@@ -353,7 +353,6 @@
 /ru/docs/Learn/HTML/Введение_в_HTML/Структура_документа_и_веб-сайта	/ru/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
 /ru/docs/Learn/HTML/Рецепты	/ru/docs/Learn_web_development/Howto/Solve_HTML_problems
 /ru/docs/Learn/How_the_Internet_works	/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
-/ru/docs/Learn/JavaScript	/ru/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792
 /ru/docs/Learn/JavaScript/Asynchronous	/ru/docs/Learn_web_development/Extensions/Async_JS
 /ru/docs/Learn/JavaScript/Asynchronous/Async_await	/ru/docs/Learn_web_development/Extensions/Async_JS/Promises
 /ru/docs/Learn/JavaScript/Asynchronous/Introducing	/ru/docs/Learn_web_development/Extensions/Async_JS/Introducing
@@ -482,7 +481,6 @@
 /ru/docs/Learn/Understanding_URLs	/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 /ru/docs/Learn/Understanding_domain_names	/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 /ru/docs/Learn/Understanding_links_on_the_web	/ru/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
-/ru/docs/Learn/Джаваскрипт	/ru/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792
 /ru/docs/Learn/Доступность	/ru/docs/Learn_web_development/Core/Accessibility
 /ru/docs/Learn/Доступность/Accessibility_troubleshooting	/ru/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript
