@@ -100,7 +100,7 @@ img {
 
 #### 結果
 
-{{ EmbedLiveSample('Positioning_image_content', '100%','600px') }}
+{{ EmbedLiveSample('画像の内容の配置を設定', '100%','600px') }}
 
 ## 仕様書
 
