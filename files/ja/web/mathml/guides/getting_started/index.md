@@ -1,41 +1,15 @@
 ---
 title: MathML を始めよう
 slug: Web/MathML/Guides/Getting_started
-original_slug: Learn/MathML/First_steps/Getting_started
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
 
 この記事では、単純な HTML 文書を使い、そこに MathML 数式を追加する方法を、いくつかの要素を紹介しながら見ていきます。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされていること</a
-        >、
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルでの作業</a
-        >に関する基本的な知識、 HTML の基本（
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を学ぶこと）
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>
-        MathML の基本構文と HTML ページへの組み込み方を理解すること。
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## HTML に \<math> 要素で数式を挿入する
 
@@ -196,9 +170,7 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 
 ## まとめ
 
-この記事では、 HTML 文書内に数式を挿入するために `<math>` 要素を使用する方法を見ていきました。 `display="block"` を使用する場合としない場合の `<math>` 要素のレンダリングの違いについて学びました。さらに、他にもいくつかの MathML 要素に出会いました。分数を表す `<mfrac>`、グループ化を表す `<mrow>`、そして最後にいくつかのテキスト要素です。これらの[テキストコンテナー](/ja/docs/Learn/MathML/First_steps/Text_containers)については次の記事で詳しく分析します。
-
-{{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
+この記事では、 HTML 文書内に数式を挿入するために `<math>` 要素を使用する方法を見ていきました。 `display="block"` を使用する場合としない場合の `<math>` 要素のレンダリングの違いについて学びました。さらに、他にもいくつかの MathML 要素に出会いました。分数を表す `<mfrac>`、グループ化を表す `<mrow>`、そして最後にいくつかのテキスト要素です。これらの[テキストコンテナー](/ja/docs/Web/MathML/Guides/Text_containers)については次の記事で詳しく分析します。
 
 ## 関連情報
 
@@ -208,3 +180,5 @@ MathML は HTML と同じ構文を用いて要素と属性のツリーを表し�
 - [`<mrow>` 要素](/ja/docs/Web/MathML/Element/mrow)
 - [`math-style` プロパティ](/ja/docs/Web/CSS/math-style)
 - [`math-depth` プロパティ](/ja/docs/Web/CSS/math-depth)
+
+{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}

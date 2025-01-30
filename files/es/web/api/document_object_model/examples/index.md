@@ -150,10 +150,11 @@ En este ejemplo sencillo, algunas propiedades de estilo básicas de un elemento 
 La propiedad de las hojas de estilo en un objeto de documento muestra una lista de las hojas de estilo que acompañan a ése documento. Usando los objetos de la hoja de estilo, del estilo y de las reglas de CSS se puede acceder individualmente a esas hojas de estilo y sus reglas, como se demuestra en este ejemplo, el cual muestra todos los selectores de reglas de estilo en la consola.
 
 ```js
-ss = document.styleSheets;
-for (i = 0; i < ss.length; i++) {
-  for (j = 0; j < ss[0].cssRules.length; j++) {
-    dump(ss[i].cssRules[j].selectorText + "\n");
+const ss = document.styleSheets;
+
+for (let i = 0; i < ss.length; i++) {
+  for (let j = 0; j < ss[i].cssRules.length; j++) {
+    console.log(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```

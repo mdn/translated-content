@@ -1,6 +1,7 @@
 ---
 title: 숫자와 날짜
-slug: Web/JavaScript/Guide/Numbers_and_dates
+slug: Web/JavaScript/Guide/Numbers_and_strings
+original_slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
