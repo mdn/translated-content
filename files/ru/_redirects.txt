@@ -325,7 +325,6 @@
 /ru/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter	/ru/docs/Learn_web_development/Core/Structuring_content/Marking_up_a_letter
 /ru/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content	/ru/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
 /ru/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML	/ru/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata
-/ru/docs/Learn/HTML/Multimedia_and_embedding	/ru/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web	/ru/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images	/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
