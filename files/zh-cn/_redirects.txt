@@ -2629,8 +2629,10 @@
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics
 /zh-CN/docs/Web/Guide/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+/zh-CN/docs/Web/Guide/CSS/CSS_Layout	/zh-CN/docs/Web/CSS/Guides
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
+/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions	/zh-CN/docs/Learn_web_development/Core/Challenges
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Content	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content
 /zh-CN/docs/Web/Guide/CSS/Getting_started/Media	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /zh-CN/docs/Web/Guide/CSS/Getting_started/SVG_and_CSS	/zh-CN/docs/Web/SVG/Tutorial/SVG_and_CSS
