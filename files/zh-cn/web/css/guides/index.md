@@ -1,6 +1,7 @@
 ---
 title: CSS 布局
-slug: Web/Guide/CSS/CSS_Layout
+slug: Web/CSS/Guides
+original_slug: Web/Guide/CSS/CSS_Layout
 l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
