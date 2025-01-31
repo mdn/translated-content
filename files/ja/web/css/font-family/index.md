@@ -2,7 +2,7 @@
 title: font-family
 slug: Web/CSS/font-family
 l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -224,4 +224,4 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
