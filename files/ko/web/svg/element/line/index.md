@@ -34,7 +34,7 @@ svg {
 
 - {{SVGAttr('x1')}}
   - : 선의 시작 지점의 x축 좌표를 설정합니다.
-    _값의 타입_: [**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/ko/docs/Web/SVG/Content_type#number) ; _기본 값_: `0`; _애니메이션 설정 여부_: **yes**
+    값의 타입: [**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/ko/docs/Web/SVG/Content_type#number) ; 기본 값: `0`; 애니메이션 설정 여부: **yes**
 - {{SVGAttr('x2')}}
   - : 선의 마지막 지점의 x축 좌표를 설정합니다.
     _값의 타입_: [**\<length>**](/ko/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/ko/docs/Web/SVG/Content_type#percentage)|[**\<number>**](/ko/docs/Web/SVG/Content_type#number) ; _기본 값_: `0`; _애니메이션 설정 여부_: **yes**
