@@ -1,12 +1,13 @@
 ---
 title: 基本的なテキストとフォントのスタイル設定
 slug: Learn_web_development/Core/Text_styling/Fundamentals
-original_slug: Learn/CSS/Styling_text/Fundamentals
 l10n:
-  sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 この記事では、 {{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。 ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。
 
@@ -15,26 +16,32 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学習）、 CSS の基本（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>で学習）。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、および <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>で学習）。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。
+        <ul>
+          <li>フォントファミリー、フォントスタック、ウェブセーフフォントの概念を理解すること。</li>
+          <li>フォントの色、太さ、サイズ、スタイルを設定すること。</li>
+          <li>テキストの配置、変換、装飾を設定すること。</li>
+          <li>行の高さを設定すること。</li>
+          <li>他にもいくつかのフォントやテキストのスタイル設定プロパティがあることを知り、それらを探索してみたいと思うこと。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## CSS でテキストの装飾には何が関係しているか
+## CSS でテキストの装飾に関連するものは何か
 
-HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素の[コンテンツボックス](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスの構成)内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。
+HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素の[コンテンツボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。
 
 > [!NOTE]
-> 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の記事に戻って見直してください。
+> 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)の記事に戻って見直してください。
 
 テキストを装飾するために使用される CSS プロパティは、一般的に次の 2 つのカテゴリーに分類されます。 この記事では、これらのプロパティを個別に説明します。
 
@@ -68,17 +75,17 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 
 {{cssxref("color")}} プロパティは、選択された要素の前景のコンテンツの色を設定します（通常はテキストですが、{{cssxref("text-decoration")}} プロパティを使用してテキストに下線や上線を配置するなど、他のいくつかの要素を含めることもできます）。
 
-`color` は次のように任意の [CSS カラー単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors)を受け入れることができます。
+`color` は次のように任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#色)を受け入れることができます。
 
-```css
+```css live-sample___color
 p {
   color: red;
 }
 ```
 
-これにより、次のように段落は標準のブラウザーのデフォルトの黒ではなく赤になります。
+これにより、次のように段落は標準のブラウザー既定の黒ではなく赤になります。
 
-```html hidden
+```html hidden live-sample___color
 <h1>Tommy the cat</h1>
 
 <p>Well I remember it as though it were a meal ago…</p>
@@ -96,11 +103,11 @@ p {
 
 ### フォントファミリー
 
-テキストに別のフォントを設定するには、{{cssxref("font-family")}} プロパティを使用します — これにより、選択した要素に適用するブラウザーのフォント（またはフォントのリスト）を指定できます。 ウェブサイトにアクセスしているマシンで利用可能な場合にのみ、ブラウザーはフォントを適用します。 そうでない場合は、ブラウザーの[デフォルトフォント](#default_fonts)を使用するだけです。 簡単な例はこんな感じです。
+テキストに別のフォントを設定するには、{{cssxref("font-family")}} プロパティを使用します — これにより、選択した要素に適用するブラウザーのフォント（またはフォントのリスト）を指定できます。 ウェブサイトにアクセスしているマシンで利用可能な場合にのみ、ブラウザーはフォントを適用します。 そうでない場合は、ブラウザーの[既定のフォント](#既定のフォント)を使用するだけです。 簡単な例はこんな感じです。
 
 ```css
 p {
-  font-family: arial;
+  font-family: Arial;
 }
 ```
 
@@ -118,7 +125,7 @@ p {
   <thead>
     <tr>
       <th scope="col">名前</th>
-      <th scope="col">総称タイプ</th>
+      <th scope="col">総称型</th>
       <th scope="col">メモ</th>
     </tr>
   </thead>
@@ -165,10 +172,10 @@ p {
 </table>
 
 > [!NOTE]
-> さまざまなリソースの中で、[cssfontstack.com](http://www.cssfontstack.com/) ウェブサイトには、Windows および macOS オペレーティングシステムで利用可能なウェブセーフフォントのリストがあり、使用しても安全と見なせるものについて判断を下すことができます。
+> さまざまなリソースの中で、[cssfontstack.com](https://www.cssfontstack.com/) ウェブサイトには、Windows および macOS オペレーティングシステムで利用可能なウェブセーフフォントのリストがあり、使用しても安全と見なせるものについて判断を下すことができます。
 
 > [!NOTE]
-> ウェブページとともにカスタムフォントをダウンロードして、フォントの使用方法を自由にカスタマイズできる方法があります。 それは、**ウェブフォント**（web fonts）です。 これはもう少し複雑で、このモジュールの後の別の記事でこれを議論するでしょう。
+> ウェブページとともにカスタムフォントをダウンロードして、フォントの使用方法を自由にカスタマイズできる方法があります。 それは、**ウェブフォント**（web fonts）です。 これはもう少し複雑で、このモジュールの後の[別な記事](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)で説明します。
 
 #### 既定のフォント
 
@@ -261,7 +268,7 @@ body {
 
 #### フォントスタック
 
-ウェブページで使用したいフォントの可用性を保証することはできないため（ウェブフォントでさえ何らかの理由で失敗する*可能性*もあります）、ブラウザーに複数のフォントから選択できるように**フォントスタック** (font stack) を指定できます。 これは単に、次のようにカンマで区切られた複数のフォント名からなる `font-family` の値です。
+ウェブページで使用したいフォントの可用性を保証することはできないため（ウェブフォントでさえ何らかの理由で失敗する*可能性*もあります）、ブラウザーに複数のフォントから選択できるように**フォントスタック** (font stack) が指定できます。 これは単に、次のようにカンマで区切られた複数のフォント名からなる `font-family` の値です。
 
 ```css
 p {
@@ -282,7 +289,7 @@ p {
 
 前の例に追加して、次のように段落に sans-serif フォントを付けます。
 
-```css
+```css live-sample___a_font-family_example
 p {
   color: red;
   font-family: Helvetica, Arial, sans-serif;
@@ -291,7 +298,7 @@ p {
 
 これにより、次のような結果が得られます。
 
-```html hidden
+```html hidden live-sample___a_font-family_example
 <h1>Tommy the cat</h1>
 
 <p>Well I remember it as though it were a meal ago…</p>
@@ -309,7 +316,7 @@ p {
 
 ### フォントサイズ
 
-前のモジュールの [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)の記事で、[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#長さ)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
+前のモジュールの [CSS の値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)の記事で、[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
 
 - `px` (pixels): テキストを表示したい高さのピクセル数。 これは絶対的な単位です。それはほとんどどんな状況でもページ上のフォントの同じ最終的な計算値になります。
 - `em`: 1 `em`は、現在スタイル設定している要素の親要素に設定されているフォント サイズ（具体的には、親要素の中に格納されている大文字の M の幅）に等しくなります。異なるフォントサイズを設定した入れ子要素がたくさんある場合、これは動作がトリッキーになる可能性がありますが、下記で説明するように実現可能です。面倒でしょうか？慣れてしまえばとても自然なことですし、 `em` を使用することで、テキストだけでなくすべてのもののサイズを設定することができます。ウェブサイト全体のサイズを `em` を使用して設定することができるので、メンテナンスが簡単になります。
@@ -414,10 +421,10 @@ text-shadow: 4px 4px 5px red;
 
 4 つのプロパティは次のとおりです。
 
-1. 元のテキストからの影の水平方向のオフセット。これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#長さ)を取ることができますが、最も一般的には `px` を使用します。この値は含める必要があります。
+1. 元のテキストからの影の水平方向のオフセット。これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができますが、最も一般的には `px` を使用します。この値は含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット。基本的に水平方向のオフセットと同じようにふるまいますが、影を左右ではなく上下に移動する点が異なります。 この値は含める必要があります。
-3. ぼかし半径。値が大きいほど、影はより広く拡散されます。 この値が含まれていない場合、既定値は 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#長さ)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/color) プロパティから導かれます。
+3. ぼかし半径。値が大きいほど、影はより広く拡散されます。 この値が含まれていない場合、既定値は 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors) を取ります。含まれていない場合、既定値は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) であり、影の色は要素の [`color`](/ja/docs/Web/CSS/color) プロパティから導かれます。
 
 #### 複数の影
 
@@ -468,7 +475,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('複数の影', '100%', 260) }}
+{{ EmbedLiveSample('Multiple_shadows', '100%', 260) }}
 
 > [!NOTE]
 > Sitepoint の記事 [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
@@ -531,7 +538,7 @@ p {
 
 ### 行の高さ
 
-{{cssxref("line-height")}} プロパティはテキストの各行の高さを設定します。これはほとんどの[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#長さ)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます。 {{cssxref("font-size")}} が乗算されて `line-height` が得られます。 本文は行が離れていると、一般的に見栄えがよく、読みやすくなります。 推奨される行の高さは約 1.5 〜 2 （倍の高さ）です。テキストの行をフォントの高さの 1.6 倍に設定するには、次のようにします。
+{{cssxref("line-height")}} プロパティはテキストの各行の高さを設定します。これはほとんどの[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます。 {{cssxref("font-size")}} が乗算されて `line-height` が得られます。 本文は行が離れていると、一般的に見栄えがよく、読みやすくなります。 推奨される行の高さは約 1.5 〜 2 （倍の高さ）です。テキストの行をフォントの高さの 1.6 倍に設定するには、次のようにします。
 
 ```css
 p {
@@ -585,7 +592,7 @@ p {
 
 ### 文字と単語の間隔設定
 
-{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#長さ)を取ることができます。
+{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#長さ)を取ることができます。
 
 例として、この例の {{htmlelement("p")}} 要素の最初の行に次を適用したとします。
 
@@ -767,6 +774,11 @@ window.addEventListener("load", drawOutput);
 
 ## まとめ
 
-この記事のテキストで遊んで楽しんでください。次の記事では、[HTML リストのスタイル設定](/ja/docs/Learn/CSS/Styling_text/Styling_lists)について知っておくべきことをすべて説明します。
+この記事のテキストで遊んで楽しんでください。次の記事では、HTML リストのスタイル設定について知っておくべきことをすべて説明します。
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+## 関連情報
+
+- [Web-safe fonts](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
+  - : この対話型のレッスンでは、ウェブセーフフォントを見ていき、単純な例に適用する方法を指定されたフォントを使って楽しく学んでいきます。
+
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

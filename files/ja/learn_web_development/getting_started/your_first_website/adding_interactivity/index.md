@@ -1,22 +1,43 @@
 ---
-title: JavaScript の基本
+title: "JavaScript: 操作の追加"
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 l10n:
-  sourceCommit: b51eff9e06b5f8c2542f151f272ada1145cef92c
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
 
-JavaScript は、ウェブサイトに対話性を追加するプログラミング言語です。ゲーム、ボタンを押したときの反応、フォームへのデータ入力、動的なスタイル付け、アニメーションなどがこれにあたります。
-この記事は、 JavaScript を使い始め、何ができるのかについての理解を深めるのに役立ちます。
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
+
+JavaScript は、ウェブサイトに対話性を追加するプログラミング言語です。ゲーム、ボタンを押したときの反応、フォームへのデータ入力、動的なスタイル付け、アニメーションなどがこれにあたります。この記事は、 JavaScript を使い始め、何ができるのかについての理解を深めるのに役立ちます。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        コンピューターのオペレーティングシステム、ウェブサイトを構築する際に使用する基本ソフトウェア、およびファイルシステムに概ね慣れておくこと。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>JavaScript の機能と目的。</li>
+          <li>JavaScript の基本的な機能（変数、演算子、条件分岐、関数、イベントなど）。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## JavaScript とは何か
 
 {{Glossary("JavaScript")}} は強力なプログラミング言語であり、ウェブサイトに対話操作を追加することができます。
 Brendan Eich によって考案されました。
 
-JavaScript は汎用性が高く、初心者にもやさしいものです。経験を積めば、ゲーム、 2D や 3D のアニメーション、包括的なデータベース駆動型のアプリなどが作れるようになります。
+JavaScript は汎用性が高く、初心者にもやさしいものです。
+経験を積めば、ゲーム、 2D や 3D のアニメーション、包括的なデータベース駆動型のアプリなどが作れるようになります。
 
 JavaScript は比較的コンパクトですが、一方でとても柔軟性があります。開発者は JavaScript 言語のコアをベースに多種多様なツールを作成し、最小限の労力で膨大な様々な機能を利用できるようにしました。例えば以下のようなものがあります。
 
@@ -24,7 +45,7 @@ JavaScript は比較的コンパクトですが、一方でとても柔軟性が
 - 開発者が他のコンテンツプロバイダーのサイト（Twitter や Facebook など）から機能を組み込むことを可能にする、サードパーティの API。
 - すばやくサイトやアプリケーションを構築することができ、 HTML に組み込み可能なサードパーティのフレームワークやライブラリー。
 
-コアの JavaScript 言語が上記のツールとどのように違うのか、その詳細を紹介することは、 JavaScript の軽い入門者向けの書籍であるこの記事の範囲外です。詳細は MDN の [JavaScript 学習領域](/ja/docs/Learn/JavaScript)や、 MDN の他の部分で詳しく学ぶことができます。
+コアの JavaScript 言語が上記のツールとどのように違うのか、その詳細を紹介することは、 JavaScript の軽い入門者向けの書籍であるこの記事の範囲外です。詳細は[コアモジュール](/ja/docs/Learn_web_development/Core)や、 MDN の他の部分で詳しく学ぶことができます。
 
 以下では、コア言語のいくつかの側面について紹介します。またブラウザーの API 機能についてもいくつか説明します。楽しみましょう！
 
@@ -32,19 +53,21 @@ JavaScript は比較的コンパクトですが、一方でとても柔軟性が
 
 JavaScript は、最も人気のある現代のウェブ技術のひとつです。 JavaScript のスキルが上がれば、ウェブサイトのパワーと創造性は新たな次元に入るでしょう。
 
-しかし、 JavaScript を使いこなせるようになるのは HTML や CSS よりも少し難しいです。小さなものから始め、小さく確実な手順で作業を続ける必要があるかもしれません。始めるにあたって、_"hello world!"_ を表示する例（[基本的なプログラミング例の標準](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)）を作りながら、基本的な JavaScript をページに追加する方法を紹介しましょう。
+しかし、 JavaScript を使いこなせるようになるのは HTML や CSS よりも少し難しいです。小さなものから始め、小さく確実な手順で作業を続ける必要があるかもしれません。始めるにあたって、_hello world!_ を表示する例（[基本的なプログラミング例の標準](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)）を作りながら、基本的な JavaScript をページに追加する方法を紹介しましょう。
 
 > [!WARNING]
 > これまでこのコースに沿って進めてきていない場合は、[このサンプルコードをダウンロードして](https://codeload.github.com/mdn/beginner-html-site-styled/zip/refs/heads/gh-pages)作業を進めてください。
 
-1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。それから、この scripts フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
-2. `index.html` ファイルの `</body>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
+1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。
+2. それから、この `scripts` フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
+3. `index.html` ファイルの `</body>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
 
    ```html
    <script src="scripts/main.js"></script>
    ```
 
-3. これは CSS の {{htmlelement("link")}} 要素の時の作業と基本的に同じです。これは JavaScript をページに適用するので、（CSS の時と同じく、ページ上の何に対しても） HTML に影響を与えることができます。
+   これは CSS の {{htmlelement("link")}} 要素の時の作業と基本的に同じです。これは JavaScript をページに適用するので、（CSS の時と同じく、ページ上の何に対しても） HTML に影響を与えることができます。
+
 4. `main.js` ファイルに次のコードを追加してください。
 
    ```js
@@ -59,7 +82,7 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
 > [!NOTE]
 > 上記の説明で {{htmlelement("script")}} 要素を HTML ファイルの末尾付近に置いたのは、**ブラウザーがファイルに現れる順番でコードを読み込むからです**。
 >
-> JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。その他の方法については、[スクリプトの読み込み方針](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#スクリプトの読み込み方針)をご覧ください。
+> JavaScript が先に読み込まれ、まだ読み込まれていない HTML に影響を与えることになると、問題が生じる可能性があります。 JavaScript を HTML ページの下部に配置することは、この依存関係に対応する一つの方法です。
 
 ### 何が起きたのか
 
@@ -75,7 +98,7 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 どのように動作するかをよりよく理解できるように、 JavaScript 言語の基本機能のいくつかを説明しましょう。これらの機能はすべてのプログラミング言語に共通しているので、これらの基本をマスターすれば、ほとんど何でもプログラムできるようになります！
 
 > [!WARNING]
-> この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を参照してください。
+> この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を参照してください。
 
 ### 変数
 
@@ -85,14 +108,11 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 let myVariable;
 ```
 
-> [!NOTE]
-> 行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/) を参照してください。
+行末のセミコロンは文が終わる場所を示します。単一の行で複数の文を区切る場合には絶対に必要です。しかし、個々の文の末尾に置くことが良い習慣だと信じている人もいます。使用する場面と使用しない場合については他のルールもあります。詳しくは [Your Guide to Semicolons in JavaScript](https://www.codecademy.com/resources/blog/your-guide-to-semicolons-in-javascript/) を参照してください。
 
-> [!NOTE]
-> 変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
+変数にはほとんど何でも名前を付けることができますが、いくらかの制約があります([変数の命名規則についてはこの記事](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数)を参照してください)。自信がない場合は、有効かどうか[変数名を調べる](https://mothereff.in/js-variables)ことができます。
 
-> [!NOTE]
-> JavaScript は大文字と小文字を区別します。 `myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
+JavaScript は大文字と小文字を区別します。 `myVariable` は `myvariable` とは異なる変数です。コードで問題が発生している場合は、大文字・小文字をチェックしてください。
 
 変数を宣言したら、以下のように値を割り当てることができます。
 
@@ -197,7 +217,7 @@ myVariable = "Steve";
   <thead>
     <tr>
       <th scope="row">演算子</th>
-      <th scope="col">説明</th>
+      <th scope="col">解説</th>
       <th scope="col">記号</th>
       <th scope="col">例</th>
     </tr>
@@ -294,7 +314,7 @@ let myVariable = document.querySelector("h1");
 alert("hello!");
 ```
 
-これらの関数、 `document.querySelector` と `alert` は、必要なときにいつでも使えるようブラウザーに組み込まれています。
+これらの関数、 `document.querySelector` と `alert()` は、必要なときにいつでも使えるようブラウザーに組み込まれています。
 
 もし変数名に見えるものがあったとしても、その後に括弧 `()` が付いていれば、おそらくそれは関数です。関数は普通、仕事をするのに必要な小さなデータである{{Glossary("Argument", "引数")}}を取ります。引数は括弧の中に入れ、複数の引数がある場合はカンマで区切ります。
 
@@ -455,15 +475,13 @@ function setUserName() {
 
 ![ヘッダー、中央の大きなロゴ、内容、ボタンなどの要素を作成した後の HTML ページの最終的な外観](website-screen-scripted.png)
 
-行き詰まったら、自分の作業を [GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)と比べてみてください。
+行き詰まったら、自分の作業を [GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js)と比べてみてください。
 
-私たちは JavaScript に少し触れただけです。楽しく遊んだり、もっと上達したい場合は、[JavaScript の学習トピック](/ja/docs/Learn/JavaScript)に進んでください。
+私たちは JavaScript に少し触れただけです。[コア](/ja/docs/Learn_web_development/Core)モジュールと[応用](/ja/docs/Learn_web_development/Extensions)モジュール、[JavaScript での動的スクリプト](/ja/docs/Learn_web_development/Core/Scripting)からの部分には、さらに多くの JavaScript があります。
 
 ## 関連情報
 
-- [JavaScript による動的なクライアント側スクリプト](/ja/docs/Learn/JavaScript)
-  - : もっと詳細な JavaScript に飛び込みましょう。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : ウェブ開発者を目指す方に最適な教材です! インタラクティブな環境で、短いレッスンとインタラクティブなテスト、自動評価によるガイドで、 JavaScript を学ぶことができます。最初の 40 レッスンは無料です。全コースは少額の一括払いでご利用いただけます。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

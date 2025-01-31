@@ -1,37 +1,37 @@
 ---
 title: ボックスモデル
 slug: Learn_web_development/Core/Styling_basics/Box_model
-original_slug: Learn/CSS/Building_blocks/The_box_model
 l10n:
-  sourceCommit: 033285c99a8e1bc05b646ff19b70d2e8b86dff46
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 CSS にはボックスの概念があり、これを理解することは CSS でレイアウトを作成したりアイテム同士を揃えたりするためのコツとなります。このレッスンでは CSS ボックスモデルを詳しく解説し、その仕組みと関連する用語を理解することでより複雑なレイアウトができるようにします。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされている</a
-        >こと、
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルの扱い</a
-        >、
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学習）、および CSS の動作に関する考え（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>で学習）に関する基本的な知識を得ている。
+        HTML の基本（
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >を学んでいること）。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        CSS のボックスモデルとその構成要素、代替モデルへの切り替えについて学ぶこと。
+        <ul>
+          <li>ブロック要素とインライン要素。</li>
+          <li>要素を構成するさまざまなボックスと、それらのスタイル設定方法（コンテンツ、マージン、境界、パディング）</li>
+          <li>代替ボックスモデル（<code>box-sizing: border-box</code> でアクセス）と、通常のボックスモデルとの違いについて説明します。</li>
+          <li>マージンの相殺。</li>
+          <li>基本的な display の値（<code>block</code>, <code>inline</code>, <code>inline-block</code>, <code>none</code>）とボックスの動作にどう影響するか。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -43,18 +43,16 @@ CSS にはいくつかの種類のボックスがあり、一般的に**ブロ�
 
 一般的に、様々な値を持つことができる {{cssxref("display")}} プロパティを使用して、表示型に様々な値を設定することができます。
 
-## 外側の表示型
+ボックスの表示型が `block` である場合は、次のように動作します。
 
-ボックスの外側の表示型が `block` である場合は、次のように動作します。
-
-- ボックスは新しい行に分割されます。
+- ボックスは新しい行に現れます。
 - {{cssxref("width")}} および {{cssxref("height")}} プロパティが尊重されます。
 - パディング、マージン、境界により、このボックスから他の要素が遠ざけられます。
 - {{cssxref("width")}} が指定されていない場合、ボックスはインライン方向に伸びて、コンテナーで使用可能な空間を埋めます。多くの場合、ボックスがコンテナーと同じ幅になり、利用可能な空間の 100% を占めるということです。
 
 HTML 要素の中には `<h1>` や `<p>` のように、既定で `block` を外側の表示型として使用するものがあります。
 
-ボックスの外側の表示型が `inline` である場合は、次のように動作します。
+ボックスの表示型が `inline` である場合は、次のように動作します。
 
 - ボックスは新しい行に分割されません。
 - {{cssxref("width")}} および {{cssxref("height")}} プロパティは適用されません。
@@ -63,18 +61,17 @@ HTML 要素の中には `<h1>` や `<p>` のように、既定で `block` を外
 
 HTML 要素の中には、 `<a>`、`<span>`、`<em>`、`<strong>` のように、既定で `inline` を外側の表示型として使用するものがあります。
 
-## 内側の表示型
+ブロックおよびレイアウトは、ウェブにおける既定の振る舞いです。既定では、他に指示がない限り、ボックス内の要素は **[通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow)** でレイアウトされ、ブロックボックスやインラインボックスとして振る舞います。
 
-ボックスには内側の表示型もあり、ボックス内の要素をどのようにレイアウトするかを指定します。
+## 内側の表示型と外側の表示型
 
-ブロックおよびレイアウトは、ウェブにおける既定の振る舞いです。既定では、他に指示がない限り、ボックス内の要素は **[通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)** でレイアウトされ、ブロックボックスやインラインボックスとして振る舞います。
+`block`および`inline`の表示値は、**外側の表示**型と言います。ボックスが、その周囲の他のボックスと関連してどのようにレイアウトされるかに影響します。ボックスには、**内側の表示**型もあり、ボックス内の要素がどのようにレイアウトされるかを決定します。
 
-内側の表示型は、例えば`display: flex;`を設定することで変更することができます。この要素は外側の表示型に `block` を使用しますが、内側の表示型は `flex` に変更されます。このボックスの直接の子要素はフレックスアイテムとなり、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)の仕様に従って動作します。
+内側の表示型は、例えば `display: flex;` を設定することで変更することができます。この要素は外側の表示型に `block` を使用しますが、内側の表示型は `flex` に変更されます。このボックスの直接の子要素はフレックスアイテムとなり、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)の仕様に従って動作します。
 
-CSS のレイアウトのより詳しい学習をする段階では、 [`flex`](/ja/docs/Learn/CSS/CSS_layout/Flexbox) を始めとしたボックスが持つことができる他の様々な内部値、例えば [`grid`](/ja/docs/Learn/CSS/CSS_layout/Grids) などに出会うでしょう。
+CSS のレイアウトのより詳しい学習をしていくと、 [`flex`](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox) や、ボックスが持つことができる他の様々な、例えば [`grid`](/ja/docs/Learn_web_development/Core/CSS_layout/Grids) などに出会うでしょう。
 
-> [!NOTE]
-> display の値、およびブロックおよびインラインレイアウトでのボックスの動作の詳細については、[ブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)に関する MDN ガイドを参照してください。
+現時点で内側と外側の用語についてあまり心配する必要はありません。これは内部的に現れるもので、他の場所でこれを見かける可能性がある場合に備えてここで言及しただけです。通常は単一の `display` 値を処理するだけで、それについて深く考える必要はありません。
 
 ## さまざまな表示型の例
 
@@ -188,7 +185,7 @@ ul {
 
 CSS でブロックボックスを構成するものとしては、以下のものがあります。
 
-- **コンテンツボックス**: コンテンツが表示される領域。サイズは {{cssxref("inline-size")}} と {{cssxref("block-size")}}、または {{cssxref("width")}} と {{cssxref("height")}} などのプロパティを使用して制御します。
+- **コンテンツボックス**: コンテンツが表示される領域。サイズは {{cssxref("width")}} や {{cssxref("height")}} などのプロパティを使用して制御します。
 - **パディングボックス**: パディングはコンテンツの周囲に空白として配置されます。サイズは {{cssxref("padding")}} および関連するプロパティを使用して制御します。
 - **境界ボックス**: 境界ボックスは、コンテンツとパディングを囲みます。サイズは {{cssxref("border")}} および関連するプロパティを使用して制御します。
 - **マージンボックス**: マージンは最も外側のレイヤーで、このボックスと他の要素の間の空白としてコンテンツ、パディング、および境界線を囲みます。サイズは {{cssxref("margin")}} および関連するプロパティを使用して制御できます。
@@ -199,7 +196,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 
 ### CSS 標準ボックスモデル
 
-標準ボックスモデルでは、ボックスに `inline-size` と `block-size` （または `width` と `height`）を指定すると、*コンテンツボックス*のインライン方向のサイズととブロック方向のサイズ（横書きの言語では幅と鷹さ）が定義されます。すべての padding と border がその幅と高さに追加され、ボックスが占める合計サイズが取得されます。
+標準ボックスモデルでは、ボックスに `width` と `height` を指定すると、*コンテンツボックス*のインライン方向のサイズととブロック方向のサイズ（横書きの言語では幅と鷹さ）が定義されます。すべてのパディングと境界がその幅と高さに追加され、ボックスが占める合計サイズが算出されます。
 
 以下の CSS をボックスに適用した場合、
 
@@ -237,9 +234,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 ```css
 .box {
   width: 350px;
-  inline-size: 350px;
   height: 150px;
-  block-size: 150px;
   margin: 10px;
   padding: 25px;
   border: 5px solid black;
@@ -250,7 +245,7 @@ CSS でブロックボックスを構成するものとしては、以下のも�
 
 ![代替ボックスモデルを使用している場合のボックスのサイズを示した図。](alternate-box-model.png)
 
-すべての要素に代替ボックスモデルを使用するには（開発者の間では一般的な選択です）、 `<html>` 要素に `box-sizing` プロパティを設定し、他の要素はすべてその値を継承するように設定します。
+すべての要素に代替ボックスモデルを使用するには（開発者の間ではよくある選択です）、 `<html>` 要素に `box-sizing` プロパティを設定し、他の要素はすべてその値を継承するように設定します。
 
 ```css
 html {
@@ -297,7 +292,7 @@ html {
 
 ### ブラウザーの開発者ツールを使用してボックスモデルを見る
 
-[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を使用すると、ボックスモデルをはるかに簡単に理解できます。 Firefox の開発者ツールで要素を調べると、要素のサイズに加えて、マージン、パディング、境界が確認できます。この方法で要素を検査することは、ボックスが本当に思っているサイズであるかどうかを知る素晴らしい方法です。
+[ブラウザーの開発者ツール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)を使用すると、ボックスモデルをはるかに簡単に理解できます。 Firefox の開発者ツールで要素を調べると、要素のサイズに加えて、マージン、パディング、境界が確認できます。この方法で要素を検査することは、ボックスが本当に思っているサイズであるかどうかを知る素晴らしい方法です。
 
 ![Firefox の開発者ツールを使用した要素のボックスモデルの検査](box-model-devtools.png)
 
@@ -574,7 +569,7 @@ span {
 
 これが役立つのは、 `padding` を追加して、リンクのヒット領域を大きくしたい場合です。 `<a>` は `<span>` のようなインライン要素です。 `display: inline-block` を使用してパディングを設定できるようにし、ユーザーがリンクをクリックしやすくします。
 
-これはナビゲーションバーでとてもよく見られます。下記のナビゲーションはフレックスボックスを使って一列に表示されていますが、 `<a>` 要素にパディングを追加しています。パディングは `<ul>` 要素の境界線に重なって現れます。これは `<a>` がインライン要素だからです。
+次のナビゲーションはフレックスボックスを使用して1列で表示されており、`<a>` 要素にパディングを追加しています。これは、`<a>` にポインターを置いた際に `background-color` を変更できるようにしたいからです。パディングが `<ul>` 要素の境界線と重なって現れているように見えます。これは、`<a>` がインライン要素であるためです。
 
 `display: inline-block` を `.links-list a` セレクターを使用してルールに追加すると、他の要素でパディングが尊重されるようになり、この課題が修正されたことがわかります。
 
@@ -617,12 +612,12 @@ li {
 
 ## スキルテスト
 
-この記事の最後まで到達しましたが、最も重要な情報を覚えていますか？移動される前に、この情報が記憶されているかどうかを確認するためのテストを探すことができます。[スキルテスト: ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/Box_Model_Tasks)を参照してください。
+この記事の最後まで到達しましたが、最も重要な情報を覚えていますか？移動される前に、この情報が記憶されているかどうかを確認するためのテストを探すことができます。[スキルテスト: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks)を参照してください。
 
 ## まとめ
 
 以上が、ボックスモデルについて理解する必要があるほとんどのことです。レイアウト内の大きなボックスの大きさについて混乱している場合は、このレッスンに戻ってください。
 
-次のレッスンでは[背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)を使用してプレーンボックスをより面白くする方法を見ていきます。
+次の記事では、 CSS が競合を処理する方法を見ていきます。複数のルールで同じ要素が選択された場合、どのスタイルが適用されるのでしょうか？
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}

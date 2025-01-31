@@ -8,7 +8,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_l
 
 在你的开发过程中，你无疑需要在终端上运行一些命令 (或者在“命令行”上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">预备条件：</th>

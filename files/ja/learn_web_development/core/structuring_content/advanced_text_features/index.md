@@ -1,236 +1,44 @@
 ---
-title: 高度なテキスト整形
+title: 高度なテキスト装飾
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 l10n:
-  sourceCommit: 960b382072f417a71194bf906261d9a6d1519df1
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}
 
-テキストの整形のための HTML には他にも多くの要素がありますが、これは [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+
+テキストの装飾のための HTML には他にも多くの要素がありますが、これは[強調と重要性](/ja/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)の記事には書かれていません。この記事で説明されている要素はあまり知られていませんが、知っていると役に立ちます（これはまだいかなる意味でも完全なリストではありません）。ここでは、注釈、説明リスト、コンピューターコードとその他の関連テキスト、下付き文字と上付き文字、連絡先情報などのマークアップについて学習します。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML を始めよう</a
-        >に載っている、基本的な HTML を理解していること。
-        <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >HTML テキストの基礎</a
-        >に載っている、 HTML のテキスト整形。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >見出しと段落</a
+        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >リスト</a
+        >などのテキストレベルの意味付け。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        高度な意味付け機能をマークアップするための、あまり知られていない HTML 要素を学ぶ。
+        <ul>
+          <li>引用。</li>
+          <li>略語と頭字語。</li>
+          <li>連絡先。</li>
+          <li>時刻と日付。</li>
+          <li>上付き・下付き文字。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
-
-## 説明リスト
-
-HTML テキストの基礎では、HTML で [基本的なリストをマークアップする](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#リスト)方法を見てきました、しかしたまに出てくる第 3 のリスト — **説明リスト** — については触れていませんでした。このリストの目的は、項目とそれに関連する説明を一緒にマークアップすることで、用語の定義や、質問と回答などに使います。用語の定義の例を見てみましょう。
-
-```plain
-独り言 (soliloquy)
-ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。
-独白 (monologue)
-ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋るものです。
-傍白 (aside)
-ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
-```
-
-説明リストは他の種類のリストと違うラッパー — {{htmlelement("dl")}} を使います。それぞれの用語を {{htmlelement("dt")}} （description term、説明用語）要素で囲み、それぞれの説明は {{htmlelement("dd")}} （description definition、説明定義）要素で囲みます。
-
-### 説明リストの例
-
-例をマークアップしましょう。
-
-```html
-<dl>
-  <dt>独り言 (soliloquy)</dt>
-  <dd>
-    ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。
-  </dd>
-  <dt>独白 (monologue)</dt>
-  <dd>
-    ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋るものです。
-  </dd>
-  <dt>傍白 (aside)</dt>
-  <dd>
-    ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
-  </dd>
-</dl>
-```
-
-ブラウザーの既定のスタイルでは、説明を用語からいくらかインデントします。 MDN のスタイルはこの慣習にほぼ従いますが、用語を太字にします。
-
-{{EmbedLiveSample('Description_list_example', '100%', '285px')}}
-
-### 1 つの用語に複数の説明
-
-なお、例えば、単一の用語に複数の説明を持たせることも可能です。
-
-```html
-<dl>
-  <dt>傍白 (aside)</dt>
-  <dd>
-    ドラマでは、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
-  </dd>
-  <dd>
-    文章では、現在のトピックに関連するコンテンツの一部ですが、本文の流れに直接合わないため、近くに表示されます（多くの場合、横に並んでいる枠の中に入ります）。
-  </dd>
-</dl>
-```
-
-{{EmbedLiveSample('Multiple_descriptions_for_one_term', '100%', '193px')}}
-
-### アクティブラーニング: 定義リストのマークアップ
-
-説明リストを作ってみましょう。入力欄の生テキストに要素を追加して、出力欄に説明文のリストとして現れるようにしましょう。お望みなら、自身の用語や説明文を使用してみるのもいいでしょう。
-
-間違えたら、常に _リセット_ ボタンを使用してリセットすることができます。本当に行き詰まったら、_答えを表示_ ボタンを押して、答えを見ることができます。
-
-```html hidden
-<h2>ライブ出力</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>編集可能なコード</h2>
-<p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
-</p>
-
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-Bacon
-The glue that binds the world together.
-Eggs
-The glue that binds the cake together.
-Coffee
-The drink that gets the world running in the morning.
-A light brown color.
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="答えを表示" />
-</div>
-```
-
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  "<dl>\n <dt>Bacon</dt>\n <dd>The glue that binds the world together.</dd>\n <dt>Eggs</dt>\n <dd>The glue that binds the cake together.</dd>\n <dt>Coffee</dt>\n <dd>The drink that gets the world running in the morning.</dd>\n <dd>A light brown color.</dd>\n</dl>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "答えを表示";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "答えを表示") {
-    textarea.value = solutionEntry;
-    solution.value = "答えを隠す";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "答えを表示";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "答えを表示") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('Active_learning_Marking_up_a_set_of_definitions', 700, 350) }}
 
 ## 引用
 
@@ -333,15 +141,14 @@ HTML には引用をマークアップするための機能もあります。ど
 
 間違えた場合は、 _リセット_ ボタンを使用していつでもリセットできます。本当に動けなくなったら、_答えを表示_ ボタンを押して答えを見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
@@ -420,12 +227,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -581,12 +388,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -677,7 +484,7 @@ HTML には連絡先の詳細をマークアップするための要素 — {{ht
 
 {{ EmbedLiveSample('Superscript_and_subscript', '100%', 160) }}
 
-## コンピューターのコードを表現する
+## コンピューターのコードの表現
 
 HTML を使用してコンピューターのコードをマークアップするために利用可能な要素がいくつかあります。
 
@@ -768,12 +575,12 @@ HTML には、時間と日付を機械可読形式でマークアップするた
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```
 
-## スキルをテストしましょう
+## スキルテスト
 
-この記事の最後にたどり着きましたが、最も重要な情報を覚えていますか？次に移動する前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります - [スキルのテスト: 高度な HTML テキスト](/ja/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Advanced_HTML_text) をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルのテスト: 高度な HTML テキスト](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text)を見てください。
 
 ## まとめ
 
-これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。より多くの HTML 要素を探すには、 [HTML 要素リファレンス](/ja/docs/Web/HTML/Element) を参照してください（[インラインテキスト意味づけ](/ja/docs/Web/HTML/Element#インラインテキスト意味付け)の節はよい出発点となることでしょう）。次の記事では、 HTML 要素を [HTML 文書のさまざまな部分を構造化する](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)ために使用する方法ついて見ていきます。
+これで HTML のテキストの意味づけに関する学習は終了です。このコースで見てきたものは、 HTML テキスト要素の完全なリストではないことに留意してください。私たちは、基本的なものと、より一般的なものをカバーしようとしました。次に、ウェブの最も重要な機能の 1 つであるリンクを見ていきます。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

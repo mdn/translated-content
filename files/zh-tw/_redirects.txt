@@ -607,7 +607,7 @@
 /zh-TW/docs/Web/HTML/HTML5	/zh-TW/docs/Glossary/HTML5
 /zh-TW/docs/Web/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/Learn_web_development/Core/Structuring_content
 /zh-TW/docs/Web/HTML/HTML5_表單	/zh-TW/docs/Learn_web_development/Extensions/Forms
-/zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
+/zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/Learn_web_development/Core/Structuring_content
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/zh-TW/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
@@ -624,6 +624,7 @@
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀（JavaScript_Overview）	/zh-TW/docs/Web/JavaScript/Guide/Introduction
+/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_dates	/zh-TW/docs/Web/JavaScript/Guide/Numbers_and_strings
 /zh-TW/docs/Web/JavaScript/Guide/Obsolete_Pages	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types
 /zh-TW/docs/Web/JavaScript/Guide_old	/zh-TW/docs/Web/JavaScript/Guide

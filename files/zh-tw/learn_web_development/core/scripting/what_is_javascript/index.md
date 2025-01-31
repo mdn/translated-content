@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 
 歡迎來到 MDN 的 JavaScript 初學者課程！我們將在這個章節綜觀 JavaScript ，回答一些像是「它什麼？」和「可以使用它作什麼？」之的問題，並確保你了解 JavaScript 的特性。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先備條件：</th>
@@ -27,7 +27,7 @@ JavaScript 是一種腳本，也能稱它為程式語言，可以讓你在網頁
 
 ![](cake.png)
 
-- {{glossary("HTML")}} 是一種標記語言，我們使用它組織網頁裡的內容並給予定義， 例如：定義段落、標題、資料表格，或是在頁面嵌入圖片和影片。.
+- {{glossary("HTML")}} 是一種標記語言，我們使用它組織網頁裡的內容並給予定義， 例如：定義段落、標題、資料表格，或是在頁面嵌入圖片和影片。
 - {{glossary("CSS")}} 是一種樣式規則的語言，用來幫我們的 HTML 內容上套用樣式，例如：設置背景顏色、字型，或讓內容以多欄的方式呈現。
 - {{glossary("JavaScript")}} 是一種腳本語言，它使你能夠動態的更新內容、控制多媒體、動畫……幾乎所有事。（好吧，不是所有事情，但神奇的是你可以通過短短幾行 JavaScript 程式碼實現。）
 

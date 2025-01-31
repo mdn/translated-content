@@ -1,30 +1,15 @@
 ---
-title: 三大数式
+title: "課題: 三大数式"
 slug: Web/MathML/Guides/Three_famous_mathematical_formulas
-original_slug: Learn/MathML/First_steps/Three_famous_mathematical_formulas
 l10n:
-  sourceCommit: 5fe849524a16c019b6ac201b0d9bcc65f7bc9bc8
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        この評価に挑戦する前に、すでにこのモジュールのすべての記事を読み終えていて、
-        HTML の基礎 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >) も理解している必要があります。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>MathML を利用して遊び、新しく得た知識を試すこと。</td>
-    </tr>
-  </tbody>
-</table>
+{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+
+この記事で指定されたいくつかの記事で学んだことを活用すれば、すでに相対的に洗練された MathML 数式を書くことができるはずです。この課題は、それを実行するチャンスです。
 
 ## 小さな数学の記事
 
@@ -86,7 +71,7 @@ using the following expression:
 \end{document}
 ```
 
-## 開始点
+## 出発点
 
 この評価を始めるには、いつもの HTML テンプレートに従ってください。既定では UTF-8 エンコード方式を用い、 `<body>` タグと `<math>` タグには特別なウェブフォントを使用しています（LaTeX 出力と同じような外見になります）。目標は疑問符 `???` を実際の MathML コンテンツに置き換えることです。
 
@@ -127,7 +112,7 @@ using the following expression:
 - 高度な構造（分数？根号？添字？行列？）を見ていき、それぞれに使用する適切な MathML 要素を決定します。
 - 部分式のグループ化には `<mrow>` を使用することを忘れないでください。
 - 伸縮性のある演算子や大きな演算子に注意してください！
-- [W3C Validator](https://validator.w3.org/nu/) を使用して、 HTML/MathML マークアップの意図しない間違いを見つけてください。
-- もし行き詰まったり、手作業で MathML を書くのが苦痛に感じたりした場合は、 [TeXZilla](https://fred-wang.github.io/TeXZilla/) のような [MathML を書く](/ja/docs/Web/MathML/Authoring)ためのツールを使用することもできます。
+- [W3C validator](https://validator.w3.org/nu/) を使用して、 HTML/MathML マークアップの意図しない間違いを見つけてください。
+- もし行き詰まったり、手作業で MathML を書くのが苦痛に感じたりした場合は、 [MathML を書く](/ja/docs/Web/MathML/Authoring)ためのツール、たとえば [TeXZilla](https://fred-wang.github.io/TeXZilla/) など使用することもできます。
 
-{{LearnSidebar}}{{PreviousMenu("Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

@@ -11,7 +11,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_t
 > [!NOTE]
 > 如果你需要檢查自己的程式碼與範例之間的差異，可以連到 [todo-react repository](https://github.com/mdn/todo-react)，這裡有我們完整的程式碼。 Todo list 作品示範：<https://mdn.github.io/todo-react-build/>。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>

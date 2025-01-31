@@ -1,14 +1,13 @@
 ---
 title: "スキルテスト: 変数"
 slug: Learn_web_development/Core/Scripting/Test_your_skills:_variables
-original_slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが[/ja/docs/Learn/JavaScript/First_steps/Variables](/ja/docs/Learn/JavaScript/First_steps/Variables)の記事を理解したかどうかを評価することです。
+このスキルテストの目的は、あなたが[必要な情報を保管する — 変数](/ja/docs/Learn_web_development/Core/Scripting/Variables)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。

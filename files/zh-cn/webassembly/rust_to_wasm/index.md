@@ -325,4 +325,4 @@ npm run serve
 
 本教程到此结束。希望你觉得它有用。
 
-在这个领域，有很多工作正在推进当中。如果你希望它变得更好，可以参阅 [Rust Webassembly 工作组](https://fitzgeraldnick.com/2018/02/27/wasm-domain-working-group.html)。
+在这个领域，有很多工作正在推进当中。如果你希望它变得更好，可以参阅 [Rust Webassembly 工作组](https://github.com/rustwasm/team/blob/master/README.md#get-involved)。

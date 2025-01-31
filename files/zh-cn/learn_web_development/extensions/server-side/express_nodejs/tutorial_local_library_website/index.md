@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 在实战教程第一节中，你将了解要学习哪些内容，对「本地图书馆」示例网站有一个初步的印象。本章接下来的内容就是逐步完成这个网站。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

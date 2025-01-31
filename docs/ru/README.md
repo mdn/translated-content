@@ -1,6 +1,10 @@
 # Участие в переводе
 
-Для начала ознакомьтесь с [правилами внесения изменений в MDN][https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md], [информацией о переводе документов MDN](https://github.com/mdn/translated-content/blob/main/docs/README.md) и [Руководством по составлению документации](/ru/docs/MDN/Guidelines).
+<!-- markdownlint-disable search-replace -->
+
+Для начала ознакомьтесь с [правилами внесения изменений в MDN](https://github.com/mdn/translated-content/blob/main/CONTRIBUTING.md), [информацией о переводе документов MDN](https://github.com/mdn/translated-content/blob/main/docs/README.md) и [руководствами по составлению документации](https://developer.mozilla.org/ru/docs/MDN/Writing_guidelines).
+
+<!-- markdownlint-enable search-replace -->
 
 ## Использование ссылок
 

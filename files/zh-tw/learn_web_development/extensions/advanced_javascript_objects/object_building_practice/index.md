@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Objects/Object_building_practice
 
 我們解說完必要的 JavaScript 物件理論以及語法細節，想先幫你把根紮好。接著就透過實作範例，讓你實際建立自己有趣又多彩的 JavaScript 物件。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">必備條件：</th>

@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/Math
 
 在本次课程中，我们讨论 JavaScript 中的数学 — 我们如何使用 {{Glossary("Operator","运算符")}} 和其他功能来成功地操作数字以完成我们的请求。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
@@ -349,8 +349,5 @@ function updateBtn() {
 在本文中，我们已经介绍了现在需要了解 JavaScript 中数字的基本信息。你会发现，在你学习 JavaScript 过程中，num 类型的数据一直都在被使用，所以熟练的掌握它是一个不错的选择。如果你是那些不喜欢数学的人之一，你应该庆幸这一章内容很简短。
 
 在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。
-
-> [!NOTE]
-> 如果你喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

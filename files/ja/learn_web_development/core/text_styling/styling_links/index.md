@@ -1,58 +1,52 @@
 ---
 title: リンクのスタイル設定
 slug: Learn_web_development/Core/Text_styling/Styling_links
-original_slug: Learn/CSS/Styling_text/Styling_links
 l10n:
-  sourceCommit: 68da45a87043a9d1bb33db8ae8c4b5393fc1c501
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
 
-[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)をスタイル設定するときは、擬似クラスを使用してリンク状態を効果的にスタイル設定する方法を理解することが重要です。 また、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクのスタイル設定方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
+
+[リンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)をスタイル設定するときは、擬似クラスを使用してリンク状態を効果的にスタイル設定する方法を理解することが重要です。 また、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクのスタイル設定方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を学ぶ）、CSS の基本（<a href="/ja/docs/Learn/CSS/First_steps"
-          >CSS 入門</a
-        >を学ぶ）、<a href="/ja/docs/Learn/CSS/Styling_text/Fundamentals"
-          >CSS のテキストとフォントの基礎</a
-        >。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、および <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>で学習）。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        リンクの状態をスタイル設定する方法と、ナビゲーションメニューのような一般的な UI 機能でリンクを効果的に使用する方法を学ぶこと。
+        <ul>
+          <li>既定のリンクスタイルがウェブのユーザビリティにとって重要である理由を理解すること。これらは見慣れているもので、ユーザーがリンクを認識しやすくなります。</li>
+          <li>リンクの状態のスタイル設定: <code>:hover</code>, <code>:focus</code>, <code>:visited</code>, <code>:active</code></li>
+          <li>リンク状態がアクセシビリティとユーザビリティに必要である理由を理解すること。</li>
+          <li>リンクにアイコンを加えること。</li>
+          <li>リストとリンクを含むナビゲーションメニューを作成すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## いくつかのリンクを見てみましょう
-
-[ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)のベストプラクティスに従って、HTML がリンクをどのように実装するかを調べました。 この記事では、この知識を基にして、リンクのスタイル設定のためのベストプラクティスを示します。
-
 ### リンク状態
 
-最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは様々な[擬似クラス](/ja/docs/Learn/CSS/Building_blocks/Selectors#擬似クラス)を使ってスタイル設定することができます。
+最初に理解するべきことはリンク状態の概念です。リンクが存在できる様々な状態のことで、それらは様々な[擬似クラス](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#擬似クラス)を使ってスタイル設定することができます。
 
 - **リンク**: リンク先があるリンク（つまり、単なる名前付きアンカーではないもの）で、{{cssxref(":link")}} 擬似クラスを使用してスタイル設定します。
 - **訪問済み**: 既に訪問済みの（ブラウザーの履歴に存在する）リンクで、{{cssxref(":visited")}} 擬似クラスを使用してスタイル設定します。
 - **ホバー**: リンクにユーザーのマウスポインターが合わせられているときのリンクで、{{cssxref(":hover")}} 擬似クラスを使用してスタイル設定します。
-- **フォーカス**: フォーカスしたときのリンク（例えば、
-
-  <kbd>Tab</kbd>
-
-  キーなどを使用してキーボードユーザーによって移動してきたか、{{domxref("HTMLElement.focus()")}} を使用してプログラムでフォーカスした）。これは {{cssxref(":focus")}} 擬似クラスを使用してスタイル設定します。
-
+- **フォーカス**: フォーカスしたときのリンク（例えば、 <kbd>Tab</kbd> キーなどを使用してキーボードユーザーによって移動してきたか、 {{domxref("HTMLElement.focus()")}} を使用してプログラムでフォーカスした）。これは {{cssxref(":focus")}} 擬似クラスを使用してスタイル設定します。
 - **アクティブ**: アクティブ化している（例えばクリックされている）ときのリンクで、{{cssxref(":active")}} 擬似クラスを使用してスタイル設定します。
 
-### 既定のスタイル
+## 既定のスタイル
 
 下記の例は、既定ではリンクがどのように見え、どのように動作するかを示しています。ただし、CSS はテキストをより目立たせるために拡大し、中央に配置しています。この例では、既定のスタイル設定の見た目や 動作と、より多くの CSS スタイルが適用されているこのページの他のリンクの見た目や 動作を比較することができます。
 
@@ -60,23 +54,7 @@ l10n:
 - 未訪問のリンクは青になります。
 - 訪問済みのリンクは紫になります。
 - リンクにポインターを当てると、マウスポインターが小さな手のアイコンに変わります。
-- フォーカスされたリンクには輪郭線が表示されます。このページのリンクはキーボードでタブキーを押すことでフォーカスできるはずです。（Mac の場合、
-
-  <kbd>option</kbd>
-
-  \+
-
-  <kbd>tab</kbd>
-
-  を使用するか、[Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) オプションを、
-
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>F7</kbd>
-
-  を押して有効にする必要があります。
+- フォーカスされたリンクには輪郭線が表示されます。このページのリンクはキーボードでタブキーを押すことでフォーカスできるはずです。
 
 - アクティブなリンクは赤です。クリック時にマウスボタンを押しっぱなしにしてみてください。
 
@@ -110,7 +88,7 @@ p {
 > [!NOTE]
 > リンクのスタイルは上記のプロパティに限定されているいるわけではありません。好きなプロパティを自由に使用できます。
 
-### リンクのスタイル設定
+## リンクのスタイル設定
 
 既定の状態を少し詳しく見てきたので、典型的なリンクのスタイル設定のセットを見てみましょう。
 
@@ -200,7 +178,7 @@ CSS を適用するためのサンプル HTML も提供します。
 - 次の 2 つのルールでは、`a:focus` と `a:hover` を使用して、フォーカスされたリンクとホバーされたリンクを異なる背景色に設定し、さらにリンクを目立たせるために下線を使用します。
 - 最後に、`a:active` は、リンクがアクティブになっている間に反転色にするために使用され、重要なことが起こっていることが分かりやすくします。
 
-### アクティブラーニング: 自分のリンクをスタイル設定する
+## アクティブラーニング: 自分のリンクをスタイル設定する
 
 このアクティブラーニングセッションでは、空のルールセットに自分で宣言を追加して、リンクを本当にかっこよく見せてください。 想像力を駆使して、ワイルドに。上記の例と同じように、よりかっこよく機能的なものを思いつくことができると確信しています。
 
@@ -374,13 +352,13 @@ a[href^="http"]::after {
 
 それでは、ここで何が起こっているのでしょうか？ これまで見てきたのと同じ情報なので、CSS の大部分はスキップします。 しかし最後のルールは興味深いもので、{{cssxref("::after")}} 擬似要素を使用しています。`0.8rem x 0.8rem` の擬似要素が、アンカーテキストの後にインライングロックとして置かれています。アイコンは擬似要素の {{cssxref("background")}} として描画されます。
 
-ここでは[相対的な単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
+ここでは[相対的な単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
 
-最後の一言です。どのように外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性が "http" で始まるものに限り選択します。
+最後んび。どうやって外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性が "http" で始まるものに限り選択します。
 
 以上です。上のアクティブラーニングの節を再検討して、この新しいテクニックを試してみてください！
 
-> **メモ:** [背景](/ja/docs/Learn/CSS/Building_blocks)や[レスポンシブウェブデザイン](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
+> **メモ:** [背景](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)や[レスポンシブウェブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にまだ慣れていなくても心配しないでください。 これらは他の場所で説明します。
 
 ## リンクをボタンとしてスタイル設定
 
@@ -449,7 +427,7 @@ HTML では、{{HTMLElement("nav")}} 要素に `"container"` クラスをつけ�
 CSS には、コンテナーとそこに含まれるリンクのスタイル設定が記述されています。
 
 - 2 番目のルールは次のように指定しています。
-  - コンテナーは[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)です。その中に含まれるアイテムは、この場合はリンクが、フレックスアイテムになります。
+  - コンテナーは[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)です。その中に含まれるアイテムは、この場合はリンクが、フレックスアイテムになります。
   - フレックスアイテム間の溝は、コンテナーの幅の `0.625%` です。
 - 3 番目のルールはリンクをスタイル設定しています。
   - 最初の宣言である `flex: 1` は、アイテムの幅が調整されることを表しますので、コンテナーの利用可能な空間をすべて使用します。
@@ -458,6 +436,6 @@ CSS には、コンテナーとそこに含まれるリンクのスタイル設�
 
 ## まとめ
 
-この記事が、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています — 今のところは！ テキストのスタイル設定モジュールの最後の記事では、ウェブサイトでの[カスタムフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)（またの名をウェブフォント）の使用方法について詳しく説明しています。
+この記事が、今のところは、リンクについて知っておく必要があるすべての情報を提供してくれることを願っています。 テキストのスタイル設定モジュールの最後の記事では、ウェブサイトでのカスタムフォント（またの名をウェブフォント）の使用方法について詳しく説明しています。
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

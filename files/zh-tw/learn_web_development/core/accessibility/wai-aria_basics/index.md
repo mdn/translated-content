@@ -8,7 +8,7 @@ original_slug: Learn/Accessibility/WAI-ARIA_basics
 
 接續之前的文章，有時在涉及非語意 HTML 與動態 JavaScript 更新的內容製作複雜的 UI 控制措施將是個難題。WAI-ARIA 即是一個能藉由添加進一步的語意幫助處理這種問題的技術 ，讓瀏覽器與輔助科技可以辨識及用以讓使用者知道發生甚麼事情。這裡我們將展示如何以基本水準的運用來增進無障礙使用。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先決條件：</th>

@@ -8,7 +8,7 @@ original_slug: Learn/Forms/How_to_structure_a_web_form
 
 有了基礎後，我們就能探討表單元素，所提供的結構與文意之詳細資訊；還有各表單部份的相異之處。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先決條件：</th>

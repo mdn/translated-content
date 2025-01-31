@@ -63,7 +63,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
   - : `array`. If `includeRangeData` was given in the `options` parameter, then this property will be included. It is provided as an array of `RangeData` objects, one for each match. `それぞれのRangeData` は DOM ツリー構造をしています。検索語の周りを表示することなどにも使えます。
 
-    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。.
+    次の `rectData`, も同様に配列で `rangeData[i]` と `rectData[i]`は 1 対 1 で対応します。
 
     Each `RangeData` contains the following properties:
 
@@ -80,7 +80,7 @@ A [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) that wil
 
 - `rectData`{{optional_inline}}
 
-  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。.
+  - : `array`. 呼び出し時に`optionsで` `includeRectData` 引数を与えると結果を返します。 `RectData` objects の配列です。それらはマッチしたワードを含む、client rectangles を返します。拡張機能でハイライトなどに使えるでしょう。
 
     Each `RectData` object はそれぞれ 1 つのマッチに対して 2 つのプロパティを持ちます。
 

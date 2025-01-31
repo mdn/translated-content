@@ -29,7 +29,7 @@ CSS の sRGB 色における `<color>` の値 sRGB 色空間には、{{cssxref("
 
 HSV （色相、彩度、明度）の色空間および同義語である HSB （色相、彩度、輝度）は、 CSS では [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) として表されます。名前付きの色は、特定の 16 進数値にマッピングされた単なるキーワードです。これらのさまざまな色表記を sRGB に変換するのは、数学的には簡単です。なお、 {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} は任意の色を使用でき、 sRGB に限定されるものではありません。
 
-`rgb()` 色関数は、sRGB色空間を表現できる唯一の色関数ではありません。 [`HSL`](/ja/docs/Web/CSS/color_value/hsl) （色相-彩度-明度）や [`HWB`](/ja/docs/Web/CSS/color_value/hwb) （色相-白色度-黒度）のような円筒座標系も、ウェブ上で sRGB 色を表現するために使用されています。.
+`rgb()` 色関数は、sRGB色空間を表現できる唯一の色関数ではありません。 [`HSL`](/ja/docs/Web/CSS/color_value/hsl) （色相-彩度-明度）や [`HWB`](/ja/docs/Web/CSS/color_value/hwb) （色相-白色度-黒度）のような円筒座標系も、ウェブ上で sRGB 色を表現するために使用されています。
 
 - `srgb` 色空間
 
