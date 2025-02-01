@@ -2,7 +2,6 @@
 title: MDN Web Docs のリポジトリー
 slug: MDN/Community/Our_repositories
 original_slug: MDN/Community/Contributing/Our_repositories
-sidebar: mdnsidebar
 l10n:
   sourceCommit: db32c2f103885a65715e2cce48bda44be03f44f7
 ---
