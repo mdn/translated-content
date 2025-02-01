@@ -67,4 +67,3 @@ console.log(myElement.get("display").value); // 'initial'
 - {{domxref('CSSPositionValue')}}
 - {{domxref('CSSTransformValue')}}
 - {{domxref('CSSUnparsedValue')}}
-
