@@ -30,7 +30,7 @@ DOM　ツリーをプロパティから読み込んでシリアライズした�
 ### 例外
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - :  `innerHTML` の値を、正しくない形の HTML の文字列を使用して設定しようとした場合に発生します。
+  - : `innerHTML` の値を、正しくない形の HTML の文字列を使用して設定しようとした場合に発生します。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : 親が {{domxref("Document")}} であるノードに HTML を挿入しようとした場合に発生します。
 
