@@ -2463,8 +2463,8 @@
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
 /ja/docs/MDN/About	/ja/docs/MDN/Writing_guidelines
-/ja/docs/MDN/At_ten	/ja/docs/orphaned/MDN/At_ten
-/ja/docs/MDN/At_ten/History_of_MDN	/ja/docs/orphaned/MDN/At_ten/History_of_MDN
+/ja/docs/MDN/At_ten	/ja/docs/MDN
+/ja/docs/MDN/At_ten/History_of_MDN	/ja/docs/MDN
 /ja/docs/MDN/Changelog	/ja/docs/MDN/Writing_guidelines/Changelog
 /ja/docs/MDN/Community/Contributing	/ja/docs/MDN/Community
 /ja/docs/MDN/Community/Contributing/Getting_started	/ja/docs/MDN/Community/Getting_started
@@ -2557,9 +2557,9 @@
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/MDN_Product_Advisory_Board	/ja/docs/orphaned/MDN/MDN_Product_Advisory_Board
-/ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/orphaned/MDN/MDN_Product_Advisory_Board
-/ja/docs/MDN/MDN_Product_Advisory_Board/Membership	/ja/docs/orphaned/MDN/MDN_Product_Advisory_Board/Membership
+/ja/docs/MDN/MDN_Product_Advisory_Board	/ja/docs/MDN
+/ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/MDN
+/ja/docs/MDN/MDN_Product_Advisory_Board/Membership	/ja/docs/MDN
 /ja/docs/MDN/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
@@ -2584,9 +2584,9 @@
 /ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/Writing_guidelines/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto
 /ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars
-/ja/docs/MDN_at_ten	/ja/docs/orphaned/MDN/At_ten
+/ja/docs/MDN_at_ten	/ja/docs/MDN
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Community
-/ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/orphaned/MDN/At_ten/History_of_MDN
+/ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN
 /ja/docs/Map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map
 /ja/docs/MathML	/ja/docs/Web/MathML
 /ja/docs/MathML/Element	/ja/docs/Web/MathML/Element
