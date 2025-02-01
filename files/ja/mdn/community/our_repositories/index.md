@@ -1,7 +1,6 @@
 ---
 title: MDN Web Docs のリポジトリー
 slug: MDN/Community/Our_repositories
-page-type: mdn-community-guide
 original_slug: MDN/Community/Contributing/Our_repositories
 sidebar: mdnsidebar
 l10n:
