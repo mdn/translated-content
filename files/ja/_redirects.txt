@@ -4407,7 +4407,6 @@
 /ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/menuitem	/ja/docs/Web/HTML/Element
-/ja/docs/Web/HTML/Element/portal	/ja/docs/orphaned/Web/HTML/Element/portal
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn_web_development/Extensions/Forms
