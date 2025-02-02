@@ -1,7 +1,6 @@
 ---
 title: Загрузка и запуск кода WebAssembly
 slug: WebAssembly/Guides/Loading_and_running
-original_slug: WebAssembly/Loading_and_running
 ---
 
 {{WebAssemblySidebar}}
