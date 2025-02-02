@@ -1,7 +1,6 @@
 ---
 title: orientation
 slug: Web/Manifest/Reference/orientation
-original_slug: Web/Manifest/orientation
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
