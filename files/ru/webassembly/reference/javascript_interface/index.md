@@ -1,7 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/Reference/JavaScript_interface
-original_slug: WebAssembly/JavaScript_interface
 ---
 
 {{WebAssemblySidebar}}{{SeeCompatTable}}
