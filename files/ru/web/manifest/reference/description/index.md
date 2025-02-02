@@ -1,7 +1,6 @@
 ---
 title: description
 slug: Web/Manifest/Reference/description
-original_slug: Web/Manifest/description
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
