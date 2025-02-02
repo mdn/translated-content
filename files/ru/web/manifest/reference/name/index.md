@@ -1,7 +1,6 @@
 ---
 title: name
 slug: Web/Manifest/Reference/name
-original_slug: Web/Manifest/name
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
