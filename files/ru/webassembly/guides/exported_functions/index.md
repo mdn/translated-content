@@ -1,7 +1,6 @@
 ---
 title: Экспортируемые функции WebAssembly
 slug: WebAssembly/Guides/Exported_functions
-original_slug: WebAssembly/Exported_functions
 ---
 
 {{WebAssemblySidebar}}
