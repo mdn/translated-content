@@ -1,7 +1,6 @@
 ---
 title: display
 slug: Web/Manifest/Reference/display
-original_slug: Web/Manifest/display
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
