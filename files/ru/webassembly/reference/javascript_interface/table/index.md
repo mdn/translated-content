@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table
 slug: WebAssembly/Reference/JavaScript_interface/Table
-original_slug: WebAssembly/JavaScript_interface/Table
 ---
 
 {{WebAssemblySidebar}}
