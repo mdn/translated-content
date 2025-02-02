@@ -1,7 +1,6 @@
 ---
 title: scope
 slug: Web/Manifest/Reference/scope
-original_slug: Web/Manifest/scope
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
