@@ -2,7 +2,7 @@
 title: CSS カスタムプロパティ（変数）の使用
 slug: Web/CSS/Using_CSS_custom_properties
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -26,7 +26,7 @@ CSS では、プロパティ名の接頭辞として ダッシュ 2 本を使用
 
 ### ダッシュ 2 本 (`--`) の接頭辞の使用
 
-ダッシュ 2 本で始まるカスタムプロパティは、`--` で始まってプロパティ名（例: `--my-property`）が続くもので、[有効な CSS 値](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)であればどのような値でも指定できます。
+ダッシュ 2 本で始まるカスタムプロパティは、`--` で始まってプロパティ名（例: `--my-property`）が続くもので、[有効な CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)であればどのような値でも指定できます。
 他のプロパティと同様に、これはルールのセット内に記述します。次の例では、カスタムプロパティ `--main-bg-color` を作成し、[`<named-color>`](/ja/docs/Web/CSS/named-color) 値として `brown` を使用する方法を示しています。
 
 ```css
@@ -374,6 +374,8 @@ div {
 
 `var()` を使用する以外に、`@property` アットルールで定義された `initial-value` を代替メカニズムとして使用することができます。実際、これはすでに [`@property` の継承](#property_を使用して継承を制御)の節で見てきました。
 
+<!-- cSpell:ignore aqumarine -->
+
 次の例では、`@property` アットルールを使用して、`--box-color` の初期値を `cornflowerblue` に設定しています。
 アットルールに続くルールセットでは、`--box-color` を `aquamarine` に設定したいのですが、値の名前にタイプミスがあります。
 3 番目の `<div>` でも同じことが言有効な [`<color>` 値](/ja/docs/Web/CSS/color_value)を期待するカスタムプロパティに `2rem` を使用しています。
@@ -434,7 +436,7 @@ div {
 
 ## 無効なカスタムプロパティ
 
-CSS の各プロパティには、定義された[値のセット](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)を割り当てることができます。
+CSS の各プロパティには、定義された[値のセット](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)を割り当てることができます。
 プロパティに有効な値の集合から外れた値を割り当てた場合、そのプロパティは「無効」とみなされます。
 
 ブラウザーが通常の CSS プロパティの無効な値（例えば、{{cssxref("color")}} プロパティにおける `16px` という値）に遭遇すると、その宣言は破棄され、要素には宣言が存在しなかった場合の値が割り当てられます。
