@@ -1,7 +1,6 @@
 ---
 title: icons
 slug: Web/Manifest/Reference/icons
-original_slug: Web/Manifest/icons
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
