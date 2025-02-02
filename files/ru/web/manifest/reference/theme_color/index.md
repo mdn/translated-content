@@ -1,7 +1,6 @@
 ---
 title: theme_color
 slug: Web/Manifest/Reference/theme_color
-original_slug: Web/Manifest/theme_color
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
