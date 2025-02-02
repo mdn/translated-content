@@ -1,7 +1,6 @@
 ---
 title: Компиляция кода C/C++ в WebAssembly
 slug: WebAssembly/Guides/C_to_Wasm
-original_slug: WebAssembly/C_to_Wasm
 l10n:
   sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
 ---
