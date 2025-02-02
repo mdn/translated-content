@@ -2,7 +2,7 @@
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: e626fb706bfef0d496f0a209554f80a2d9313c0c
 ---
 
 {{HTTPSidebar}}
