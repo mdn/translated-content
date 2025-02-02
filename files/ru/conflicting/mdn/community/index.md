@@ -1,9 +1,7 @@
 ---
 title: Участие в развитии MDN Web Docs
 slug: conflicting/MDN/Community
-page-type: mdn-community-guide
 original_slug: MDN/Community/Contributing
-sidebar: mdnsidebar
 l10n:
   sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
