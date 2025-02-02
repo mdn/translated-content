@@ -1,7 +1,6 @@
 ---
 title: Использование WebAssembly JavaScript API
 slug: WebAssembly/Guides/Using_the_JavaScript_API
-original_slug: WebAssembly/Using_the_JavaScript_API
 ---
 
 {{WebAssemblySidebar}}
