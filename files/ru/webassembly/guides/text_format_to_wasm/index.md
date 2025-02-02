@@ -1,7 +1,6 @@
 ---
 title: Перевод из текстового формата WebAssembly в Wasm
 slug: WebAssembly/Guides/Text_format_to_Wasm
-original_slug: WebAssembly/Text_format_to_Wasm
 l10n:
   sourceCommit: fe898ddf33314ee129256c3862c5c53106eeec1f
 ---
