@@ -1,7 +1,6 @@
 ---
 title: prefer_related_applications
 slug: Web/Manifest/Reference/prefer_related_applications
-original_slug: Web/Manifest/prefer_related_applications
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
