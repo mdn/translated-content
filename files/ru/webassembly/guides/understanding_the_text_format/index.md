@@ -1,7 +1,6 @@
 ---
 title: Описание текстового формата WebAssembly
 slug: WebAssembly/Guides/Understanding_the_text_format
-original_slug: WebAssembly/Understanding_the_text_format
 ---
 
 {{WebAssemblySidebar}}
