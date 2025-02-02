@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.compileStreaming()
 slug: WebAssembly/Reference/JavaScript_interface/compileStreaming_static
-original_slug: WebAssembly/JavaScript_interface/compileStreaming_static
 ---
 
 {{WebAssemblySidebar}}
