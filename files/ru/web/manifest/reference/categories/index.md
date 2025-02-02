@@ -1,7 +1,6 @@
 ---
 title: categories
 slug: Web/Manifest/Reference/categories
-original_slug: Web/Manifest/categories
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
