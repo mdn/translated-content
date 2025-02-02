@@ -1,7 +1,6 @@
 ---
 title: Локализация MDN Web Docs
 slug: MDN/Community/Translated_content
-original_slug: MDN/Community/Contributing/Translated_content
 ---
 
 {{MDNSidebar}}
