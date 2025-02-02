@@ -1,7 +1,6 @@
 ---
 title: Начало работы с MDN Web Docs
 slug: MDN/Community/Getting_started
-original_slug: MDN/Community/Contributing/Getting_started
 ---
 
 {{MDNSidebar}}
