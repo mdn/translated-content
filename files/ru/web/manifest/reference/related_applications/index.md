@@ -1,7 +1,6 @@
 ---
 title: related_applications
 slug: Web/Manifest/Reference/related_applications
-original_slug: Web/Manifest/related_applications
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
