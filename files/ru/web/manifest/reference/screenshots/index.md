@@ -1,7 +1,6 @@
 ---
 title: screenshots
 slug: Web/Manifest/Reference/screenshots
-original_slug: Web/Manifest/screenshots
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Manifest")}}
