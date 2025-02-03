@@ -3,6 +3,8 @@ title: Propriedades shorthand
 slug: Web/CSS/Shorthand_properties
 ---
 
+{{CSSRef}}
+
 ## Definição
 
 _Propriedades shorthand (tradução literal: Propriedades abreviadas) são propriedades de CSS que deixam você setar os valores de outras propriedades de CSS simultaneamente. Usando shorthand property, um desenvolvedor web pode escrever folhas de estilo mais concisas e legíveis,economizando tempo e energia._

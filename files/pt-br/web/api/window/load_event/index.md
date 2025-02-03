@@ -3,6 +3,8 @@ title: load
 slug: Web/API/Window/load_event
 ---
 
+{{APIRef}}
+
 ```
 O evento de load é acionado quando um recurso e seus recursos
 dependentes terminaram de carregar.

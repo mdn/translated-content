@@ -3,6 +3,8 @@ title: meter
 slug: Web/HTML/Element/meter
 ---
 
+{{HTMLSidebar}}
+
 ## Sumário
 
 O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de um intervalo conhecido ou um valor fracionário.

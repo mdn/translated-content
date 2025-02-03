@@ -3,6 +3,8 @@ title: <time>
 slug: Web/HTML/Element/time
 ---
 
+{{HTMLSidebar}}
+
 ## Resumo
 
 O elemento HTML _time_ (`<time>`) representa o tempo tanto no formato de 24 horas ou como uma data precisa no calendário Gregoriano (com informações opcionais de tempo e fuso horário)

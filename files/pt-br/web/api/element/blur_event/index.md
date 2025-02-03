@@ -3,6 +3,8 @@ title: blur (evento)
 slug: Web/API/Element/blur_event
 ---
 
+{{APIRef}}
+
 O evento `blur` é acionado quando um elemento perde foco. A diferença principal entre este evento e [`focusout`](/pt-BR/docs/Web/API/Element/focusout_event) é que apenas o segundo 'borbulha'.
 
 ## Informação geral
