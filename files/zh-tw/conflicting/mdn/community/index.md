@@ -1,6 +1,9 @@
 ---
 title: 為 MDN 貢獻
-slug: MDN/Community/Contributing
+slug: conflicting/MDN/Community
+page-type: mdn-community-guide
+original_slug: MDN/Community/Contributing
+sidebar: mdnsidebar
 ---
 
 {{MDNSidebar}}

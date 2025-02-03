@@ -1,6 +1,7 @@
 ---
 title: MDN 10 週年
-slug: MDN/At_ten
+slug: orphaned/MDN/At_ten
+original_slug: MDN/At_ten
 l10n:
   sourceCommit: 6a489877196f27cadd5b51545b68b9e31884a86f
 ---
