@@ -3,13 +3,13 @@ title: "Element: scroll イベント"
 short-title: scroll
 slug: Web/API/Element/scroll_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{APIRef}}
 
 **`scroll`** イベントは、要素がスクロールしたときに発行されます。
-スクロールの終了を検出するには、 {{domxref("Element/scrollend_event", "Element: scrollend イベント")}}を参照してください。
+スクロールの終了を検出するには、 `Element` の {{domxref("Element/scrollend_event", "scrollend")}} イベントを参照してください。
 
 ## 構文
 
@@ -27,9 +27,9 @@ onscroll = (event) => {};
 
 ## 例
 
-以下の例では、`scroll` イベントをイベントリスナーと `onscroll` イベントハンドラープロパティによって使用する方法を示しています。
-`scroll` イベントは高頻度で発行されるため、{{DOMxRef("setTimeout()")}} メソッドを使用してイベントハンドラーをスロットルで制御しています。
-その他の {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame")}} を使用した例については、{{domxref("Document/scroll_event", "Document: scroll イベント")}}ページを参照してください。
+以下の例では、 `scroll` イベントをイベントリスナーと `onscroll` イベントハンドラープロパティによって使用する方法を示しています。
+`scroll` イベントは高頻度で発行されるため、 {{DOMxRef("Window.setTimeout", "setTimeout()")}} メソッドを使用してイベントハンドラーを{{glossary("throttle","スロットル")}}で制御しています。
+その他の {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame")}} を使用した例については、 `Document` の {{domxref("Document/scroll_event", "scroll")}} イベントページを参照してください。
 
 ### `scroll` をイベントリスナーで使用
 
@@ -39,9 +39,9 @@ onscroll = (event) => {};
 <div
   id="scroll-box"
   style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+  <p style="height: 200px; width: 200px;">スクロールしてね</p>
 </div>
-<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+<p style="text-align: center;" id="output">scroll イベントを待っています...</p>
 ```
 
 ```js
@@ -49,9 +49,9 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.innerHTML = "Scroll event fired!";
+  output.textContent = "scroll イベントが発生しました！";
   setTimeout(() => {
-    output.innerHTML = "Waiting on scroll events...";
+    output.textContent = "scroll イベントを待っています...";
   }, 1000);
 });
 ```
@@ -66,9 +66,9 @@ element.addEventListener("scroll", (event) => {
 <div
   id="scroll-box"
   style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+  <p style="height: 200px; width: 200px;">スクロールしてね</p>
 </div>
-<p id="output" style="text-align: center;">Waiting on scroll events...</p>
+<p id="output" style="text-align: center;">scroll イベントを待っています...</p>
 ```
 
 ```js
@@ -76,9 +76,9 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.onscroll = (event) => {
-  output.innerHTML = "Element scroll event fired!";
+  output.textContent = "scroll イベントが発生しました！";
   setTimeout(() => {
-    output.innerHTML = "Waiting on scroll events...";
+    output.textContent = "scroll イベントを待っています...";
   }, 1000);
 };
 ```
