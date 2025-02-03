@@ -3,10 +3,10 @@ title: "Element: webkitmouseforceup イベント"
 short-title: webkitmouseforceup
 slug: Web/API/Element/webkitmouseforceup_event
 l10n:
-  sourceCommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef("Force Touch Events")}}{{Non-standard_header}}
 
 標準外の **`webkitmouseforceup`** イベントは Safari によって {{domxref("Element")}} で {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} イベントのしばらく後に発生します。
 
@@ -24,7 +24,7 @@ onwebkitmouseforceup = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("MouseEvent")}} です。 {{domxref("UIEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -90,8 +90,7 @@ _どの仕様書にも含まれていません。_ Apple は [Mac Developer Libr
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [タッチ圧力イベント](/ja/docs/Web/API/Force_Touch_events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}
