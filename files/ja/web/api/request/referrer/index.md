@@ -3,10 +3,10 @@ title: "Request: referrer プロパティ"
 short-title: referrer
 slug: Web/API/Request/referrer
 l10n:
-  sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`referrer`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントによってリクエストのリファラーが設定されます（`client` や `no-referrer`、URL、など）。
 
