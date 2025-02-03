@@ -9,7 +9,22 @@ l10n:
 
 剰余演算子 (`%`) は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときの余りである剰余を返します。これは常に被除数の符号を取ります。
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(13 % 5);
+// Expected output: 3
+
+console.log(-13 % 5);
+// Expected output: -3
+
+console.log(4 % 2);
+// Expected output: 0
+
+console.log(-4 % 2);
+// Expected output: -0
+
+```
 
 ## 構文
 

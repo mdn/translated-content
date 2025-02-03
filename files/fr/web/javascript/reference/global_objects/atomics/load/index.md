@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 
 La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.
 
-{{EmbedInteractiveExample("pages/js/atomics-load.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 + 2 = 7
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+
+```
 
 ## Syntaxe
 

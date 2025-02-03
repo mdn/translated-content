@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
 La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en minuscules.
 
-{{EmbedInteractiveExample("pages/js/string-tolowercase.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+console.log(sentence.toLowerCase());
+// Expected output: "the quick brown fox jumps over the lazy dog."
+
+```
 
 ## Syntaxe
 

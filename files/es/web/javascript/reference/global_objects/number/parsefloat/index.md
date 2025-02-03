@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 
 El método **`Number.parseFloat()`** analiza un argumento y devuelve un número de punto flotante. Si un número no se puede analizar a partir del argumento, devuelve {{jsxref("NaN")}}.
 
-{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function circumference(r) {
+  if (Number.isNaN(Number.parseFloat(r))) {
+    return 0;
+  }
+  return parseFloat(r) * 2.0 * Math.PI;
+}
+
+console.log(circumference('4.567abcdefgh'));
+// Expected output: 28.695307297889173
+
+console.log(circumference('abcdefgh'));
+// Expected output: 0
+
+```
 
 ## Sintaxis
 

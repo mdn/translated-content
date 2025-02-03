@@ -9,7 +9,22 @@ l10n:
 
 **加算 (`+`)** 演算子は、数値オペランドの合計または文字列の連結を生成します。
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log('hello ' + 'everyone');
+// Expected output: "hello everyone"
+
+console.log(2001 + ': A Space Odyssey');
+// Expected output: "2001: A Space Odyssey"
+
+```
 
 ## 構文
 

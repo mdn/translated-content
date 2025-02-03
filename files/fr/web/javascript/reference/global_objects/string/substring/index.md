@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substring
 
 La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const str = 'Mozilla';
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+
+```
 
 ## Syntaxe
 

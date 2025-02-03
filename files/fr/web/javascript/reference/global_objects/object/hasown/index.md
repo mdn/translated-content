@@ -9,7 +9,23 @@ La méthode statique **`Object.hasOwn()`** renvoie `true` si l'objet indiqué po
 
 > **Note :** `Object.hasOwn()` est conçu comme une méthode de remplacement pour [`Object.hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty).
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const object1 = {
+  prop: 'exists',
+};
+
+console.log(Object.hasOwn(object1, 'prop'));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, 'toString'));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, 'undeclaredPropertyValue'));
+// Expected output: false
+
+```
 
 ## Syntaxe
 

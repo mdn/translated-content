@@ -9,7 +9,15 @@ l10n:
 
 **`getMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const birthday = new Date('March 13, 08 04:20');
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+
+```
 
 ## 構文
 

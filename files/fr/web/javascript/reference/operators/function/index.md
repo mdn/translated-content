@@ -10,7 +10,17 @@ Le mot-clé **`function`** permet de définir une fonction à l'intérieur d'une
 > [!NOTE]
 > Il est également possible de définir des fonctions grâce au constructeur [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et aux [déclarations de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function).
 
-{{EmbedInteractiveExample("pages/js/expressions-functionexpression.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const getRectArea = function (width, height) {
+  return width * height;
+};
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+```
 
 ## Syntaxe
 

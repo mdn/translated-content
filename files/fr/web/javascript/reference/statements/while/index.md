@@ -9,7 +9,19 @@ l10n:
 
 L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
 
-{{EmbedInteractiveExample("pages/js/statement-while.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// Expected output: 3
+
+```
 
 ## Syntaxe
 

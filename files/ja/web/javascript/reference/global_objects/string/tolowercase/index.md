@@ -9,7 +9,15 @@ l10n:
 
 **`toLowerCase()`** メソッドは、呼び出す文字列の値を小文字に変換して返します。
 
-{{EmbedInteractiveExample("pages/js/string-tolowercase.html","shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+console.log(sentence.toLowerCase());
+// Expected output: "the quick brown fox jumps over the lazy dog."
+
+```
 
 ## 構文
 

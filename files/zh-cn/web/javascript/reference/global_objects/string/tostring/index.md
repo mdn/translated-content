@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toString
 
 {{jsxref("String")}} 的 **`toString()`** 方法返回该字符串的值。
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const stringObj = new String('foo');
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+
+```
 
 ## 语法
 

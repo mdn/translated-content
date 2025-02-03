@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 **`Infinity`** 전역 속성은 무한대를 나타내는 숫자 값입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const maxNumber = Math.pow(10, 1000); // Max positive number
+
+if (maxNumber === Infinity) {
+  console.log("Let's call it Infinity!");
+  // Expected output: "Let's call it Infinity!"
+}
+
+console.log(1 / maxNumber);
+// Expected output: 0
+
+```
 
 ## 값
 

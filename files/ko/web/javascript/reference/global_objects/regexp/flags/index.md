@@ -9,7 +9,18 @@ l10n:
 
 **`flags`** 접근자 속성은 현재 정규식 객체의 [플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+// Outputs RegExp flags in alphabetical order
+
+console.log(/foo/gi.flags);
+// Expected output: "gi"
+
+console.log(/bar/muy.flags);
+// Expected output: "muy"
+
+```
 
 ## 설명
 

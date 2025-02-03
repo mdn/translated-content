@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Equality
 
 L'opérateur d'égalité (`==`) vérifie si ses deux opérandes sont égaux et renvoie un booléen indiquant le résultat de la comparaison. À la différence de l'opérateur [d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality), l'opérateur d'égalité tente de convertir ses opérandes avant la comparaison si ceux-ci sont de types différents.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log('hello' == 'hello');
+// Expected output: true
+
+console.log('1' == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+
+```
 
 ## Syntaxe
 

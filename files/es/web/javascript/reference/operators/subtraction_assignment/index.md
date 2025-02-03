@@ -9,7 +9,18 @@ l10n:
 
 El **operador de asignación de sustracción (`-=`)** realiza una [resta](/es/docs/Web/JavaScript/Reference/Operators/Subtraction) en los dos operandos y asigna el resultado al operando izquierdo.
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a -= 3));
+// Expected output: -1
+
+console.log((a -= 'Hello'));
+// Expected output: NaN
+
+```
 
 ## Sintaxis
 

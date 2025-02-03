@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 
 L'objet **`Intl.Collator`** permet de comparer des chaînes de caractères en tenant compte de la locale.
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(['Z', 'a', 'z', 'ä'].sort(new Intl.Collator('de').compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(['Z', 'a', 'z', 'ä'].sort(new Intl.Collator('sv').compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ['Z', 'a', 'z', 'ä'].sort(
+    new Intl.Collator('de', { caseFirst: 'upper' }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+
+```
 
 ## Constructeur
 

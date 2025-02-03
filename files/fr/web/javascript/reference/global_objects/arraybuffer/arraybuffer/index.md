@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
 
 Le **constructeur `ArrayBuffer()`** permet de créer des objets [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+```
 
 ## Syntaxe
 

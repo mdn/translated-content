@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Strict_equality
 
 El operador de estricta igualdad (`===`) revisa si dos operandos son iguales y produce un resultado Booleano. A diferencia del operador de igualdad regular (==), el operador de estricta igualdad siempre considera que los operandos de distinto tipo de valor son diferentes y nunca similares.
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(1 === 1);
+// Expected output: true
+
+console.log('hello' === 'hello');
+// Expected output: true
+
+console.log('1' === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+
+```The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
 
 ## Sintaxis
 

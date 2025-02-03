@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 
 La méthode statique **`Reflect.getOwnPropertyDescriptor()`** est similaire à {{jsxref("Object.getOwnPropertyDescriptor()")}}. Elle renvoie un descripteur de propriété pour la propriété visée si elle existe sur l'objet, sinon, elle renvoie {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, 'property1').value);
+// Expected output: 42
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, 'property2'));
+// Expected output: undefined
+
+console.log(Reflect.getOwnPropertyDescriptor(object1, 'property1').writable);
+// Expected output: true
+
+```
 
 ## Syntaxe
 

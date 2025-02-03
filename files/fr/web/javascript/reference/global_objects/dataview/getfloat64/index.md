@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 
 La méthode **`getFloat64()`** permet de lire un entier signé sur 64 bits (type _double_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat64(1, Math.PI);
+
+console.log(view.getFloat64(1));
+// Expected output: 3.141592653589793
+
+```
 
 ## Syntaxe
 

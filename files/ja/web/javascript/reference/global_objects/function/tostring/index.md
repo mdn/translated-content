@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 **`toString()`** メソッドは、関数のソースコードを表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/function-tostring.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.toString());
+// Expected output: "function sum(a, b) {
+//                     return a + b;
+//                   }"
+
+console.log(Math.abs.toString());
+// Expected output: "function abs() { [native code] }"
+
+```
 
 ## 構文
 

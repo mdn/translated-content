@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 El método **`pop()`** elimina el **último** elemento de un array y lo devuelve. Este método cambia la longitud del array.
 
-{{EmbedInteractiveExample("pages/js/array-pop.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+
+```
 
 ## Sintaxis
 

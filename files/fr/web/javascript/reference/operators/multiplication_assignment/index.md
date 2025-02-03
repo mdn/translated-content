@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 
 L'opérateur de multiplication et d'affectation (`*=`) multiplie une variable fournie par l'opérande gauche par la valeur fournie par l'opérande droit puis affecte le résultat de l'opération à la variable représentée par l'opérande gauche.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// Expected output: 6
+
+console.log((a *= 'hello'));
+// Expected output: NaN
+
+```
 
 ## Syntaxe
 

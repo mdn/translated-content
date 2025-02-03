@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/in
 
 **`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const car = { make: 'Honda', model: 'Accord', year: 1998 };
+
+console.log('make' in car);
+// Expected output: true
+
+delete car.make;
+if ('make' in car === false) {
+  car.make = 'Suzuki';
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+
+```
 
 ## 構文
 

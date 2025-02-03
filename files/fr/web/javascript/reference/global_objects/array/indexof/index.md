@@ -10,7 +10,22 @@ La méthode **`indexOf()`** renvoie le premier indice pour lequel on trouve un �
 > [!NOTE]
 > Pour la méthode associée aux chaînes de caractères, voir la page {{jsxref("String.prototype.indexOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison'));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf('bison', 2));
+// Expected output: 4
+
+console.log(beasts.indexOf('giraffe'));
+// Expected output: -1
+
+```
 
 ## Syntaxe
 

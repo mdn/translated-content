@@ -9,7 +9,22 @@ l10n:
 
 La propiedad **`description`** de sólo lectura es una cadena que devuelve la descripción opcional de los objetos {{JSxRef("Symbol")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(Symbol('desc').description);
+// Expected output: "desc"
+
+console.log(Symbol.iterator.description);
+// Expected output: "Symbol.iterator"
+
+console.log(Symbol.for('foo').description);
+// Expected output: "foo"
+
+console.log(`${Symbol('foo').description}bar`);
+// Expected output: "foobar"
+
+```
 
 ## Descripción
 

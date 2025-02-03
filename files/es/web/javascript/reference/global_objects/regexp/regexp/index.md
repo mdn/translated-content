@@ -9,7 +9,22 @@ El constructor **`RegExp`** crea un objeto de expresión regular para hacer coin
 
 Para ver la introducción a las expresiones regulares, lee el {{JSxRef("../Guide/Regular_Expressions", "capítulo sobre expresiones regulares")}} en la {{JSxRef("../Guide", "Guía de JavaScript")}}.
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp('\\w+');
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
 

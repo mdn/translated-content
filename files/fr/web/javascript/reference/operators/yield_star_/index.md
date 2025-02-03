@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 Une **expression `yield*`** est utilisée afin de déléguer le mécanisme d'itération/génération à un autre {{jsxref("Instructions/function*", "générateur")}} ou à un autre objet itérable.
 
-{{EmbedInteractiveExample("pages/js/expressions-yieldasterisk.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function* func1() {
+  yield 42;
+}
+
+function* func2() {
+  yield* func1();
+}
+
+const iterator = func2();
+
+console.log(iterator.next().value);
+// Expected output: 42
+
+```
 
 ## Syntaxe
 

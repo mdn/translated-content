@@ -10,7 +10,22 @@ l10n:
 Оператор **нестрогого равенства (`==`)** проверяет, являются ли два его операнда равными, возвращая логическое значение.
 В отличие от оператора [строгого равенства](/ru/docs/Web/JavaScript/Reference/Operators/Strict_equality) пытается привести и сравнить операнды разных типов.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log('hello' == 'hello');
+// Expected output: true
+
+console.log('1' == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+
+```
 
 ## Синтаксис
 

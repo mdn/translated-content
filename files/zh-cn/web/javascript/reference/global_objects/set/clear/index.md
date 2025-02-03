@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 
 {{jsxref("Set")}} 实例的 **`clear()`** 方法移除该集合中的所有元素。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(1);
+set1.add('foo');
+
+console.log(set1.size);
+// Expected output: 2
+
+set1.clear();
+
+console.log(set1.size);
+// Expected output: 0
+
+```
 
 ## 语法
 

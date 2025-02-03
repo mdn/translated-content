@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/continue
 
 L'instruction **`continue`** arrête l'exécution des instructions pour l'itération de la boucle courante ou de la boucle étiquetée. L'exécution est reprise à l'itération suivante.
 
-{{EmbedInteractiveExample("pages/js/statement-continue.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+let text = '';
+
+for (let i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text = text + i;
+}
+
+console.log(text);
+// Expected output: "012456789"
+
+```
 
 ## Syntaxe
 

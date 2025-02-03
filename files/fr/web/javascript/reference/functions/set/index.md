@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Functions/set
 
 La syntaxe **`set`** permet de lier une propriété d'un objet à une fonction qui sera appelée à chaque tentative de modification de cette propriété.
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = 'EN';
+language.current = 'FA';
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+
+```
 
 ## Syntaxe
 

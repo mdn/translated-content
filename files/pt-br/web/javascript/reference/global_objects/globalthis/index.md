@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 A propriedade global **`globalThis`** retorna um objeto global de nível superior.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === 'function';
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+
+```
 
 ## Sintaxe
 

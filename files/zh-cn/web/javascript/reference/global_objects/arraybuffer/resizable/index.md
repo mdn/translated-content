@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("ArrayBuffer")}} 实例的 **`resizable`** 访问器属性返回此数组缓冲区是否可以调整大小。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-resizable.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const buffer1 = new ArrayBuffer(8, { maxByteLength: 16 });
+const buffer2 = new ArrayBuffer(8);
+
+console.log(buffer1.resizable);
+// Expected output: true
+
+console.log(buffer2.resizable);
+// Expected output: false
+
+```
 
 ## 描述
 

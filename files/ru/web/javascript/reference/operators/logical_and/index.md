@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 
 В целом, оператор вернёт значение первого {{Glossary("falsy", "ложноподобного")}} операнда при вычислении, либо значение последнего операнда, если все операнды оказались {{Glossary("truthy", "истиноподобными")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+
+```
 
 ## Синтаксис
 

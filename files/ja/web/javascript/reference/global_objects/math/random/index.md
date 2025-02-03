@@ -11,7 +11,23 @@ l10n:
 
 > **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えていません。セキュリティに関連する目的では使用しないでください。代わりにウェブ暗号 API (より具体的には {{domxref("Crypto.getRandomValues()")}} メソッド) を使用してください。
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+
+```
 
 ## 構文
 

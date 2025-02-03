@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 **`eval()`** 은 문자로 표현된 JavaScript 코드를 실행하는 함수입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(eval('2 + 2'));
+// Expected output: 4
+
+console.log(eval(new String('2 + 2')));
+// Expected output: 2 + 2
+
+console.log(eval('2 + 2') === eval('4'));
+// Expected output: true
+
+console.log(eval('2 + 2') === eval(new String('2 + 2')));
+// Expected output: false
+
+```
 
 ## 구문
 

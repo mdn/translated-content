@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 
 La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set('bar', 'baz');
+map1.set(1, 'foo');
+
+console.log(map1.size);
+// Expected output: 2
+
+map1.clear();
+
+console.log(map1.size);
+// Expected output: 0
+
+```
 
 ## Syntaxe
 

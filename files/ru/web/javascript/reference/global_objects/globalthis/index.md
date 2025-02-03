@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 Глобальное свойство **`globalThis`** содержит значение глобального `this`, который является глобальным объектом.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === 'function';
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+
+```
 
 ## Синтаксис
 

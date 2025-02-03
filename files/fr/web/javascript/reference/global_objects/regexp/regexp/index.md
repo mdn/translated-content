@@ -9,7 +9,22 @@ Le constructeur **`RegExp`** crée une expression rationnelle pour manipuler les
 
 Pour une introduction au sujet des expressions rationnelles, nous vous conseillons de lire [le chapitre sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp('\\w+');
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+
+```
 
 ## Syntaxe
 

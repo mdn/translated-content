@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Division
 
 L'opérateur de division (`/`) fournit le quotient de l'opérande gauche (le numérateur) divisé par l'opérande droite (le dénominateur).
 
-{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(12 / 2);
+// Expected output: 6
+
+console.log(3 / 2);
+// Expected output: 1.5
+
+console.log(6 / '3');
+// Expected output: 2
+
+console.log(2 / 0);
+// Expected output: Infinity
+
+```
 
 ## Syntaxe
 

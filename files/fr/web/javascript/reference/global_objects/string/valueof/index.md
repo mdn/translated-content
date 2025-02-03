@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 
 La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("String")}}.
 
-{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const stringObj = new String('foo');
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.valueOf());
+// Expected output: "foo"
+
+```
 
 ## Syntaxe
 

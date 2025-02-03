@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substr
 
 O método `substr()` retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.
 
-{{EmbedInteractiveExample("pages/js/string-substr.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const str = 'Mozilla';
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
+
+```
 
 ## Sintaxe
 

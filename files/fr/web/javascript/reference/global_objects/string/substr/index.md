@@ -10,7 +10,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substr
 
 La méthode **`substr()`** retourne la partie d'une chaîne de caractères comprise entre l'indice de départ et un certain nombre de caractères après celui-ci.
 
-{{EmbedInteractiveExample("pages/js/string-substr.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const str = 'Mozilla';
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
+
+```
 
 ## Syntaxe
 

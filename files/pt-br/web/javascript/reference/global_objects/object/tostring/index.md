@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toString
 
 O método `toString()` retorna uma string representando o objeto.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog('Gabby');
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+
+```
 
 ## Sintaxe
 

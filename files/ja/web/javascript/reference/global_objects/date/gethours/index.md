@@ -9,7 +9,15 @@ l10n:
 
 **`getHours()`** メソッドは、地方時に基づき、指定された日時の「時」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html","shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const birthday = new Date('March 13, 08 04:20');
+
+console.log(birthday.getHours());
+// Expected output: 4
+
+```
 
 ## 構文
 

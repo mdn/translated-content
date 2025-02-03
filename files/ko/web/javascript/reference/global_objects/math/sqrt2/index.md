@@ -9,7 +9,17 @@ l10n:
 
 **`Math.SQRT2`** 정적 데이터 속성은 2의 제곱근을 나타내고 약 1.414 입니다
 
-{{EmbedInteractiveExample("pages/js/math-sqrt2.html", "shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+function getRoot2() {
+  return Math.SQRT2;
+}
+
+console.log(getRoot2());
+// Expected output: 1.4142135623730951
+
+```
 
 ## 값
 

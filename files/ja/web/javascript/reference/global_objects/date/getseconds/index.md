@@ -9,7 +9,15 @@ l10n:
 
 **`getSeconds()`** メソッドは、地方時に基づき、指定した日時の「秒」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const moonLanding = new Date('July 20, 69 00:20:18');
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+
+```
 
 ## 構文
 

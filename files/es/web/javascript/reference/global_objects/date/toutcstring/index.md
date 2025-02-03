@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 
 `El método`**`toUTCString()`** convierte una fecha en una cadena, utilizando la zona horaria UTC.
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const event = new Date('14 Jun 2017 00:00:00 PDT');
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+
+```
 
 ## Sintaxis
 

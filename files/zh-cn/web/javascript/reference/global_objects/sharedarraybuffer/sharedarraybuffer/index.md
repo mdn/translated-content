@@ -11,7 +11,16 @@ l10n:
 
 **`SharedArrayBuffer()`** 构造函数创建 {{jsxref("SharedArrayBuffer")}} 对象。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html", "shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+```
 
 ## 语法
 

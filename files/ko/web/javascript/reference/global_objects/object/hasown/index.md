@@ -11,7 +11,23 @@ l10n:
 
 > **참고:** `Object.hasOwn()`은 {{jsxref("Object.prototype.hasOwnProperty()")}}를 대체하기 위한 것입니다.
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const object1 = {
+  prop: 'exists',
+};
+
+console.log(Object.hasOwn(object1, 'prop'));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, 'toString'));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, 'undeclaredPropertyValue'));
+// Expected output: false
+
+```
 
 ## 구문
 

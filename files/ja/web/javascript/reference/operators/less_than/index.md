@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Less_than
 
 小なり演算子 (`<`) は、左辺のオペランドが右辺のオペランドより小さい場合は `true` を返し、それ以外の場合は `false` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(5 < 3);
+// Expected output: false
+
+console.log(3 < 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n < 5);
+// Expected output: true
+
+console.log('aa' < 'ab');
+// Expected output: true
+
+```
 
 ## 構文
 

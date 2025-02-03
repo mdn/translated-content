@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/typeof
 
 L'opérateur **`typeof`** renvoie une chaîne qui indique le type de son opérande.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof 'blubber');
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+
+```
 
 ## Syntaxe
 

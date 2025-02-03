@@ -9,7 +9,19 @@ l10n:
 
 El símbolo conocido como **`Symbol.toStringTag`** es una propiedad con valor de cadena que se utiliza en la creación de la descripción de cadena por defecto de un objeto. Se accede a ella internamente mediante el método {{jsxref("Object.prototype.toString()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-tostringtag.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample}}
+
+```js interactive-example
+class ValidatorClass {
+  get [Symbol.toStringTag]() {
+    return 'Validator';
+  }
+}
+
+console.log(Object.prototype.toString.call(new ValidatorClass()));
+// Expected output: "[object Validator]"
+
+```{{js_property_attributes(0,0,0)}}
 
 ## Ejemplos
 

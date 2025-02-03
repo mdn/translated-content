@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 La propiedad global **undefined** representa el valor primitivo `{{Glossary("Undefined", "undefined")}}`. Es uno de los {{Glossary("Primitive", "valores primitivos")}} de JavaScript.
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return 'Undefined value!';
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+
+```
 
 ## Valor
 

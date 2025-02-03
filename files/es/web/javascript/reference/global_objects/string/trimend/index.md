@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 
 El método **`trimEnd()`** elimina los espacios en blanco al final de una cadena de carácteres. `trimRight()` es el alias de este método.
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const greeting = '   Hello world!   ';
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+
+```
 
 ## Sintaxis
 

@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 
 Le constructeur **`Promise()`** est principalement utilisé afin d'envelopper des fonctions qui ne prennent pas en charge les promesses.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html", "taller")}}
+{{InteractiveExample("taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+
+```
 
 ## Syntaxe
 

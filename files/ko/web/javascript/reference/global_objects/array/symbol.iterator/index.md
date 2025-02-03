@@ -12,7 +12,21 @@ l10n:
 
 이 속성의 초기 값은 {{jsxref("Array.prototype.values")}} 속성의 초기 값과 동일한 함수 객체입니다.
 
-{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const array1 = ['a', 'b', 'c'];
+const iterator1 = array1[Symbol.iterator]();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+
+```
 
 ## 구문
 

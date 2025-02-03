@@ -9,7 +9,19 @@ l10n:
 
 El método **`set()`** de las instancias {{jsxref("Map")}} agrega o actualiza una entrada en este _map_ con la llave y valor especificados.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set('bar', 'foo');
+
+console.log(map1.get('bar'));
+// Expected output: "foo"
+
+console.log(map1.get('baz'));
+// Expected output: undefined
+
+```
 
 ## Sintaxis
 

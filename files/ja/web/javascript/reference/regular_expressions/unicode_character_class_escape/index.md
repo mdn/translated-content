@@ -9,7 +9,24 @@ l10n:
 
 **Unicode 文字クラスエスケープ**は[文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)の一種で、Unicode プロパティで指定された一連の文字に一致します。これは [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)でのみ対応しています。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグが有効である場合、有限長の文字列と照合するために使用することもできます。
 
-{{EmbedInteractiveExample("pages/js/regexp-unicode-property-escapes.html", "taller")}}
+{{InteractiveExample("taller")}}
+
+```js interactive-example
+const sentence = 'A ticket to 大阪 costs ¥2000 👌.';
+
+const regexpEmojiPresentation = /\p{Emoji_Presentation}/gu;
+console.log(sentence.match(regexpEmojiPresentation));
+// Expected output: Array ["👌"]
+
+const regexpNonLatin = /\P{Script_Extensions=Latin}+/gu;
+console.log(sentence.match(regexpNonLatin));
+// Expected output: Array [" ", " ", " 大阪 ", " ¥2000 👌."]
+
+const regexpCurrencyOrPunctuation = /\p{Sc}|\p{P}/gu;
+console.log(sentence.match(regexpCurrencyOrPunctuation));
+// Expected output: Array ["¥", "."]
+
+```
 
 ## 構文
 

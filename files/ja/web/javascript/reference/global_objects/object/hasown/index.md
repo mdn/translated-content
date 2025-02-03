@@ -11,7 +11,23 @@ l10n:
 
 > **メモ:** `Object.hasOwn()` 静的メソッドは {{jsxref("Object.hasOwnProperty()")}} インスタンスメソッドに代わるものとして意図されています。
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const object1 = {
+  prop: 'exists',
+};
+
+console.log(Object.hasOwn(object1, 'prop'));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, 'toString'));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, 'undeclaredPropertyValue'));
+// Expected output: false
+
+```
 
 ## 構文
 

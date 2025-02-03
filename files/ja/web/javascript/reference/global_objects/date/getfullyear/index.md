@@ -11,7 +11,15 @@ l10n:
 
 {{jsxref("Date.prototype.getYear()", "getYear()")}} メソッドの代わりに、このメソッドを使用してください。
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const moonLanding = new Date('July 20, 69 00:20:18');
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+
+```
 
 ## 構文
 

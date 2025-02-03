@@ -15,7 +15,22 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(Math.cosh(0));
+// Expected output: 1
+
+console.log(Math.cosh(1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(-1));
+// Expected output: 1.543080634815244 (approximately)
+
+console.log(Math.cosh(2));
+// Expected output: 3.7621956910836314
+
+```
 
 ## 구문
 

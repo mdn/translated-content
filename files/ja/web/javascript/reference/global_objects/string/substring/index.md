@@ -9,7 +9,18 @@ l10n:
 
 **`substring()`** メソッドは `string` の一部、開始インデックスから終了インデックスの手前まで、または終了インデックスが指定されなかった場合は文字列の最後までを返します。
 
-{{EmbedInteractiveExample("pages/js/string-substring.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const str = 'Mozilla';
+
+console.log(str.substring(1, 3));
+// Expected output: "oz"
+
+console.log(str.substring(2));
+// Expected output: "zilla"
+
+```
 
 ## 構文
 

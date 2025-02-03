@@ -15,7 +15,22 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-atanh.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+console.log(Math.atanh(-1));
+// Expected output: -Infinity
+
+console.log(Math.atanh(0));
+// Expected output: 0
+
+console.log(Math.atanh(0.5));
+// Expected output: 0.549306144334055 (approximately)
+
+console.log(Math.atanh(1));
+// Expected output: Infinity
+
+```
 
 ## 語法
 

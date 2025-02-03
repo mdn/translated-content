@@ -9,7 +9,19 @@ l10n:
 
 **`Object.keys()`** 정적 메서드는 주어진 객체 자체의 열거 가능한 문자열 키를 가진 속성들의 이름을 배열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const object1 = {
+  a: 'somestring',
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+
+```
 
 ## 구문
 

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 
 El método **`getSeconds()`** devuelve los segundos en la fecha especificada de acuerdo a la hora local.
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const moonLanding = new Date('July 20, 69 00:20:18');
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+
+```
 
 ## Sintaxis
 

@@ -9,7 +9,20 @@ l10n:
 
 {{jsxref("Boolean")}} 值的 **`valueOf()`** 方法返回 {{jsxref("Boolean")}} 对象的原始值。
 
-{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+const x = new Boolean();
+
+console.log(x.valueOf());
+// Expected output: false
+
+const y = new Boolean('Mozilla');
+
+console.log(y.valueOf());
+// Expected output: true
+
+```
 
 ## 语法
 

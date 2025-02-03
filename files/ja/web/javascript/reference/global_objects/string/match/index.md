@@ -9,7 +9,17 @@ l10n:
 
 **`match()`** は {{jsxref("String")}} 値のメソッドで、この文字列の[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)に対する照合結果を受け取ります。
 
-{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
+{{InteractiveExample("shorter")}}
+
+```js interactive-example
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+const regex = /[A-Z]/g;
+const found = paragraph.match(regex);
+
+console.log(found);
+// Expected output: Array ["T", "I"]
+
+```
 
 ## 構文
 

@@ -13,7 +13,21 @@ l10n:
   <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{the unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ such that } \tan(y) = x</annotation></semantics>
 </math>
 
-{{EmbedInteractiveExample("pages/js/math-atan.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+// Calculates angle of a right-angle triangle in radians
+function calcAngle(opposite, adjacent) {
+  return Math.atan(opposite / adjacent);
+}
+
+console.log(calcAngle(8, 10));
+// Expected output: 0.6747409422235527
+
+console.log(calcAngle(5, 3));
+// Expected output: 1.0303768265243125
+
+```
 
 ## 語法
 

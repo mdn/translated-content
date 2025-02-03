@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{js_property_attributes(0,0,0)}}
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return 'Undefined value!';
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+
+```
 
 ## 语法
 
