@@ -1,6 +1,7 @@
 ---
 title: 開始入門 MDN
-slug: MDN/Community/Contributing/Getting_started
+slug: MDN/Community/Getting_started
+original_slug: MDN/Community/Contributing/Getting_started
 ---
 
 {{MDNSidebar}}
