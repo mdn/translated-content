@@ -3,10 +3,10 @@ title: "Request: clone() メソッド"
 short-title: clone()
 slug: Web/API/Request/clone
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 5045ba92ac9503b2a00ec85efae4b7d613a64b58
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`clone()`** は {{domxref("Request")}} インターフェイスのメソッドで、現在の `Request` オブジェクトのコピーを生成します。
 
