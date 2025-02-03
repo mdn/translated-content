@@ -63,7 +63,7 @@ current()
 
 ### 定義
 
-[XSLT 1.0 12.4](http://www.w3.org/TR/xslt#function-current)
+[XSLT 1.0 12.4](https://www.w3.org/TR/xslt#function-current)
 
 ### Gecko のサポート状況
 

@@ -55,4 +55,4 @@ console.log(clésDenses); // [0, 1, 2]
 
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

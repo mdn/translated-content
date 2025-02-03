@@ -75,7 +75,7 @@ draw();
 
 如果你之前使用过 CSS，那么这些选项你会很熟悉。
 
-下面的图片（from the [WHATWG](http://www.whatwg.org/)）展示了 textBaseline 属性支持的不同的基线情况：
+下面的图片（from the [WHATWG](https://www.whatwg.org/)）展示了 textBaseline 属性支持的不同的基线情况：
 
 ![The top of the em square is
 roughly at the top of the glyphs in a font, the hanging baseline is
@@ -158,6 +158,6 @@ function draw() {
 
 ## Geoko 特性说明
 
-在 Geoko（Firefox，Firefox OS 及基于 Mozilla 的应用的渲染引擎）中，曾有一些版本较早的 [API](/zh-CN/docs/Web/API/CanvasRenderingContext2D#Prefixed_APIs) 实现了在 canvas 上对文本作画的功能，但它们现在已不再使用。
+在 Geoko（Firefox，Firefox OS 及基于 Mozilla 的应用的渲染引擎）中，曾有一些版本较早的 [API](/zh-CN/docs/Web/API/CanvasRenderingContext2D#prefixed_apis) 实现了在 canvas 上对文本作画的功能，但它们现在已不再使用。
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

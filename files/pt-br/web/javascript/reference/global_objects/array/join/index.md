@@ -3,7 +3,7 @@ title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 
-{{JSRef}}O método **`join()`** junta todos os elementos de um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) em uma string e retorna esta string.
+{{JSRef}}O método **`join()`** junta todos os elementos de um array (ou um [array-like object](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)) em uma string e retorna esta string.
 
 {{EmbedInteractiveExample("pages/js/array-join.html")}}
 

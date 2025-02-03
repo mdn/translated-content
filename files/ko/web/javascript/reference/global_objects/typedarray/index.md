@@ -248,7 +248,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## 같이 보기
 
 - [`core-js`에서의 형식화 배열 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays) 안내서
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays) 안내서
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - {{domxref("TextDecoder")}}

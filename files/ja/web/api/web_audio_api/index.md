@@ -212,11 +212,11 @@ GitHub の [webaudio-example リポジトリー](https://github.com/mdn/webaudio
 - [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
 - [Using IIR filters](/ja/docs/Web/API/Web_Audio_API/Using_IIR_filters)
 - [ウェブオーディオ API による視覚化](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
+- [ウェブオーディオの空間設定の基本](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [ConstantSourceNode で複数の引数を制御する](/ja/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Mixing Positional Audio and WebGL](https://www.html5rocks.com/tutorials/webaudio/positional_audio/)
 - [Developing Game Audio with the Web Audio API](https://www.html5rocks.com/tutorials/webaudio/games/)
-- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [webkitAudioContext のコードを標準ベースの AudioContext に移植する](/ja/docs/Web/API/Web_Audio_API)
 
 ### ライブラリー
 

@@ -39,7 +39,7 @@ pointer-events: unset;
 - `auto`
   - : Элемент ведёт себя так же, как и если бы свойство `pointer-events` не было задано. В SVG это значение даёт такой же эффект, как и значение `visiblePainted`.
 - `none`
-  - : Элемент не может быть целью ([target](/ru/docs/Web/API/event/target)) событий мыши; тем не менее, целью событий мыши могут быть его потомки, если их `pointer-events` имеет какое-либо другое значение. В этом случае события мыши вызовут ожидаемое срабатывание обработчиков на этом родительском элементе на пути к/от потомк(у)/(а) во время фазы захвата/[всплытия](/ru/docs/Web/API/event/bubbles)`.`
+  - : Элемент не может быть целью ([target](/ru/docs/Web/API/Event/target)) событий мыши; тем не менее, целью событий мыши могут быть его потомки, если их `pointer-events` имеет какое-либо другое значение. В этом случае события мыши вызовут ожидаемое срабатывание обработчиков на этом родительском элементе на пути к/от потомк(у)/(а) во время фазы захвата/[всплытия](/ru/docs/Web/API/Event/bubbles)`.`
 - `visiblePainted`
   - : Только SVG. Элемент может быть целью события мыши только когда свойство `visibility` установлено в значение `visible` и когда курсор мыши находится над внутренней частью ('fill') элемента, при этом свойство `fill` установлено в значение отличное от `none`, или над периметром элемента ('stroke'), при этом свойство `stroke` установлено в значение отличное от `none`.
 - `visibleFill`
@@ -110,5 +110,5 @@ a[href="http://example.com"]
 
 - Атрибут SVG {{SVGAttr("pointer-events")}}
 - Атрибут SVG {{SVGAttr("visibility")}}
-- [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
+- [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
 - [60fps scrolling using pointer-events: none](http://www.thecssninja.com/javascript/pointer-events-60fps)

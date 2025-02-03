@@ -113,7 +113,7 @@ Para ter mais controle sobre os elementos _flex_ é possível alterá-los direta
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-basis")}}
 
-Na presente seção, examinar-se-á brevemente tais propriedades. Para se aprofundar neste conteúdo sugere-se o tutorial [Taxas de Controle de Elementos Flex ao Longo do Eixo Principal](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax) (em inglês).
+Na presente seção, examinar-se-á brevemente tais propriedades. Para se aprofundar neste conteúdo sugere-se o tutorial [Taxas de Controle de Elementos Flex ao Longo do Eixo Principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis) (em inglês).
 
 Antes que essas propriedades possam fazer sentido, é preciso compreender o conceito de **espaço disponível**. Quando se modifica o valor das propriedades acima, altera-se a forma que o espaço disponível é distribuído entre os elementos. Tal conceito de espaço disponível também é relevante quando se trata do alinhamento.
 
@@ -211,7 +211,7 @@ Tente os seguintes valores da propriedada `justify-content` no exemplo prático 
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
 
-No artigo [Alinhando Elementos em um Contêiner Flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) (em inglês) tais propriedades serão abordadas mais detalhadamente, de modo a compreender melhor o seu funcionamento. Contudo, os exemplos simples abordados aqui serão úteis na maioria dos casos.
+No artigo [Alinhando Elementos em um Contêiner Flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) (em inglês) tais propriedades serão abordadas mais detalhadamente, de modo a compreender melhor o seu funcionamento. Contudo, os exemplos simples abordados aqui serão úteis na maioria dos casos.
 
 ## Próximos passos
 

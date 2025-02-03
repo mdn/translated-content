@@ -5,7 +5,7 @@ slug: Web/CSS/transition-duration
 
 {{CSSRef}}
 
-**`transition-duration`** [CSS](/zh-TW/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
+**`transition-duration`** [CSS](/zh-TW/docs/Web/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
 
 {{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
@@ -129,8 +129,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 0px;
   top: 0px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top -webkit-transform
-    color;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top
@@ -149,8 +149,8 @@ var intervalID = window.setInterval(updateTransition, 7000);
   left: 150px;
   top: 25px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top -webkit-transform
-    transform color;
+  -webkit-transition-property: width height background-color font-size left
+    top -webkit-transform transform color;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
   transition-property: width height background-color font-size left top

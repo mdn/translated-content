@@ -52,10 +52,10 @@ API геолокации может быть вызвано через {{domxref
 
 ### Доступность
 
-Так как местоположение, основанное на WiFi, часто предоставляется Google, API местоположения может быть не доступен в Китае. Вы можете использовать местных провайдеров, таких как [Baidu](http://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation) или [Tencent](http://lbs.qq.com/tool/component-geolocation.html). Эти сервисы используют IP-адрес пользователя и/или приложение для предоставления наиболее точной позиции.
+Так как местоположение, основанное на WiFi, часто предоставляется Google, API местоположения может быть не доступен в Китае. Вы можете использовать местных провайдеров, таких как [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation) или [Tencent](https://lbs.qq.com/tool/component-geolocation.html). Эти сервисы используют IP-адрес пользователя и/или приложение для предоставления наиболее точной позиции.
 
 ## Смотрите также
 
-- [Использование API местоположения](/ru/docs/Web/API/Geolocation_API/Using)
+- [Использование API местоположения](/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - [API местоположения на w3.org](https://www.w3.org/TR/geolocation-API/)
 - [Кто изменил моё местоположение?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks блог)

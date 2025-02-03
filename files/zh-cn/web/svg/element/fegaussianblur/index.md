@@ -64,9 +64,9 @@ slug: Web/SVG/Element/feGaussianBlur
 
 ### 全局属性
 
-- [核心属性](/zh-CN/SVG/Attribute#Core) »
-- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
-- [滤镜属性](/zh-CN/SVG/Attribute#Filter) »
+- [核心属性](/zh-CN/docs/SVG/Attribute#core) »
+- [外观属性](/zh-CN/docs/SVG/Attribute#presentation) »
+- [滤镜属性](/zh-CN/docs/SVG/Attribute#filter) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 
@@ -77,7 +77,7 @@ slug: Web/SVG/Element/feGaussianBlur
 
 ## DOM 接口
 
-该元素实现了 [`SVGFEGaussianBlurElement`](/zh-CN/DOM/SVGFEGaussianBlurElement) 接口。
+该元素实现了 [`SVGFEGaussianBlurElement`](/zh-CN/docs/DOM/SVGFEGaussianBlurElement) 接口。
 
 ## 参见
 
@@ -97,4 +97,4 @@ slug: Web/SVG/Element/feGaussianBlur
 - {{ SVGElement("feSpecularLighting") }}
 - {{ SVGElement("feTile") }}
 - {{ SVGElement("feTurbulence") }}
-- [SVG 教程：滤镜效果](/zh-CN/docs/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/docs/Web/SVG/Tutorial/Filter_effects)

@@ -54,7 +54,7 @@ for (var i = 0; i < myNodeList.length; ++i) {
 
 Não caia na tentação de usar [for...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) ou [for each...in](/pt-BR/docs/Web/JavaScript/Reference/Statements/for_each...in) para enumerar os items de uma lista, já que também serão enumeradas as propriedades `length` e `item` da `NodeList`, o que causará erros se o seu script assumir que processará apenas objetos {{ domxref("element") }}. Não esquecendo que `for..in` **não** garante a iteração nas propriedades de forma ordenada.
 
-[`for...of`](/pt-BR/docs/JavaScript/Reference/Statements/for...of) iterará sobre os objetos da `NodeList` de maneira correta:
+[`for...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) iterará sobre os objetos da `NodeList` de maneira correta:
 
 ```js
 var list = document.querySelectorAll("input[type=checkbox]");

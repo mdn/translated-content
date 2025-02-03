@@ -59,7 +59,7 @@ Uma diferença para objetos `Map` é que chaves `WeakMap` não são enumeráveis
 
 Para mais informações e código de exemplo, veja também "Por quê WeakMap?" na página de referência {{jsxref("WeakMap")}}.
 
-Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](http://fitzgeraldnick.com/weblog/53/) em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado` não é exportado pelo módulo.
+Um caso de uso de objetos `WeakMap` é armazenar dados privados para um objeto ou ocultar detalhes de implementação. O exemplo a seguir é Nick Fitzgerald a partir de um post ["Ocultando detalhes de implementação com WeakMaps ECMAScript 6"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) em seu blog. Os dados privados e métodos pertencem ao objeto e são armazenados nos objetos WeakMap `privados`. Tudo exposto na instância e o protótipo é público, todo o restante é inacessível a partir do mundo externo por que `privado` não é exportado pelo módulo.
 
 ```js
 const privates = new WeakMap();
@@ -104,7 +104,7 @@ for (let item of mySet) console.log(item);
 
 ### Conversão entre Array e Set
 
-Você pode criar um {{jsxref("Array")}} a partir de um Set usando {{jsxref("Array.from")}} ou o [operador de propagação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator). Além disso, o construtor `Set` aceita um `Array` para converter em outra direção. Observe novamente que objetos `Set` armazenam valores únicos, então quaisquer elementos duplicados de um Array são excluídos quando convertidos.
+Você pode criar um {{jsxref("Array")}} a partir de um Set usando {{jsxref("Array.from")}} ou o [operador de propagação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax). Além disso, o construtor `Set` aceita um `Array` para converter em outra direção. Observe novamente que objetos `Set` armazenam valores únicos, então quaisquer elementos duplicados de um Array são excluídos quando convertidos.
 
 ```js
 Array.from(mySet);

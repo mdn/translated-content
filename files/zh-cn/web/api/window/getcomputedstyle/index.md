@@ -86,7 +86,7 @@ function dumpComputedStyles(elem, prop) {
 
 ## 与伪元素一起使用
 
-getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `::before`, `::marker`, `::line-marker`—查看 [详情](http://dev.w3.org/csswg/css3-content/#pseudo-elements) 这里).
+getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `::before`, `::marker`, `::line-marker`—查看 [详情](https://dev.w3.org/csswg/css3-content/#pseudo-elements) 这里).
 
 ```html
 <style>

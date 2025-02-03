@@ -115,7 +115,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
+  background-image: url(star-solid.gif);
   width: 160px;
   height: 70px;
 }
@@ -142,7 +142,7 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(starsolid.gif), url(favicon32.png);
+  background-image: url(star-solid.gif), url(favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
@@ -164,4 +164,4 @@ En este ejemplo,cada elemento de la listcoincide con un valor diferente de `back
 
 ## Mira también
 
-- [Usando diferentes fondos](/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Usando diferentes fondos](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

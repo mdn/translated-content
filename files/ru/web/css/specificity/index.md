@@ -7,11 +7,11 @@ slug: Web/CSS/Specificity
 
 ## Определение
 
-**Специфичность** - это способ, с помощью которого браузеры определяют, какие значения свойств CSS наиболее соответствуют элементу и, следовательно, будут применены. Специфичность основана на правилах соответствия, состоящих из [селекторов CSS](/ru/docs/Web/CSS/Reference#Selectors) различных типов.
+**Специфичность** - это способ, с помощью которого браузеры определяют, какие значения свойств CSS наиболее соответствуют элементу и, следовательно, будут применены. Специфичность основана на правилах соответствия, состоящих из [селекторов CSS](/ru/docs/Web/CSS/Reference#selectors) различных типов.
 
 ## Как вычисляется специфичность?
 
-Специфичность представляет собой вес, придаваемый конкретному правилу CSS. Вес правила определяется количеством каждого из [типов селекторов](#Selector_Types) в данном правиле. Если у нескольких правил специфичность одинакова, то к элементу применяется последнее по порядку правило CSS. Специфичность имеет значение только в том случае, если один элемент соответствует нескольким правилам. Согласно спецификации CSS, правило для непосредственно соответствующего элемента всегда будет иметь больший приоритет, чем правила, унаследованные от предка.
+Специфичность представляет собой вес, придаваемый конкретному правилу CSS. Вес правила определяется количеством каждого из [типов селекторов](#selector_types) в данном правиле. Если у нескольких правил специфичность одинакова, то к элементу применяется последнее по порядку правило CSS. Специфичность имеет значение только в том случае, если один элемент соответствует нескольким правилам. Согласно спецификации CSS, правило для непосредственно соответствующего элемента всегда будет иметь больший приоритет, чем правила, унаследованные от предка.
 
 > [!NOTE]
 > Взаимное расположение элементов в дереве документа не влияет на специфичность.
@@ -119,15 +119,15 @@ td {
 
 **С более подробной информацией можно ознакомиться по следующим ссылкам:**
 
-[Когда надо использовать `!important` в CSS?](http://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css)
+[Когда надо использовать `!important` в CSS?](https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css)
 
-[Что означает `!important` в CSS?](http://stackoverflow.com/questions/9245353/what-does-important-in-css-mean)
+[Что означает `!important` в CSS?](https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean)
 
-[Когда в CSS надо использовать модификатор `!important`](http://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css)
+[Когда в CSS надо использовать модификатор `!important`](https://stackoverflow.com/questions/5701149/when-to-use-important-property-in-css)
 
-[Как преодолеть `!important`](http://stackoverflow.com/questions/11178673/how-to-override-important)
+[Как преодолеть `!important`](https://stackoverflow.com/questions/11178673/how-to-override-important)
 
-[Как использовать модификатор `!important` в CSS чтобы сэкономить время](http://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css)
+[Как использовать модификатор `!important` в CSS чтобы сэкономить время](https://stackoverflow.com/questions/2042497/when-to-use-important-to-save-the-day-when-working-with-css)
 
 ### Не исключение - `:not()`
 
@@ -255,11 +255,11 @@ h1 {
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)
   - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/initial_value)
     - [вычисленные](/ru/docs/Web/CSS/computed_value)

@@ -36,4 +36,4 @@ for (var i = 0; i < ps.length; i++) {
 
 ## 參見
 
-- [事件指向的比較](/zh-TW/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [事件指向的比較](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling)

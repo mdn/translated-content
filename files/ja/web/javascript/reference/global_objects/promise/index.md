@@ -107,7 +107,7 @@ myPromise
 > [!NOTE]
 > より高速に実行するためには、できればすべての同期アクションを 1 つのハンドラー内で行うようにしてください。そうしなければ、すべてのハンドラーを順番に実行するのに数カウントかかることになります。
 
-JavaScript は[ジョブキュー](/ja/docs/Web/JavaScript/Event_loop)を維持します。 JavaScript は毎回、キューからジョブを選択し、それを完全に実行します。毎回、JavaScript でキューからジョブが選択され、完全に実行されます。 ジョブは、`Promise()` コンストラクターの実行者、`then` に渡されたハンドラー、またはプロミスを返すプラットフォーム API によって定義されます。 連鎖するプロミスは、これらのジョブ間の依存関係を表します。 プロミスが確定すると、それに関連付けられた各ハンドラーがジョブキューの最後に追加されます。
+JavaScript は[ジョブキュー](/ja/docs/Web/JavaScript/Event_loop)を維持します。 JavaScript は毎回、キューからジョブを選択し、それを完全に実行します。 ジョブは、`Promise()` コンストラクターの実行者、`then` に渡されたハンドラー、またはプロミスを返すプラットフォーム API によって定義されます。 連鎖するプロミスは、これらのジョブ間の依存関係を表します。 プロミスが確定すると、それに関連付けられた各ハンドラーがジョブキューの最後に追加されます。
 
 プロミスは複数の連鎖に参加できます。次のコードにおいて、`promiseA` が履行されると、`handleFulfilled1` と `handleFulfilled2` の両方がジョブキューに追加されます。`handleFulfilled1` が最初に登録されているため、最初に呼び出されます。
 
@@ -166,7 +166,7 @@ Promise.resolve(aThenable); // プロミスは 42 で履行
 - {{jsxref("Promise.race()")}}
   - : **いずれか**のプロミスが決定されたときに決定されます。すなわち、いずれかのプロミスが履行されれば履行され、いずれかのプロミスが拒否されれば拒否されます。
 
-これらのメソッドはすべて、プロミスの[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト（正確には [Thenable](#thenable)）を受け取り、新しいプロミスを返します。これらはすべてサブクラス化に対応しています。つまり、 `Promise` のサブクラスに対して呼び出すことができ、その結果はサブクラスの種類を持つプロミスになります。そのためには、サブクラスのコンストラクターに [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) と同じ定義を実装する必要があります。すなわち、単一の `executor` 関数を取り、これが `resolve` と `reject` コールバック関数を引数として取るようにします。また、サブクラスには静的メソッドの `resolve` も必要です。これは {{jsxref("Promise.resolve()")}} のように呼び出すことができ、値をプロミスに解決するためのメソッドです。
+これらのメソッドはすべて、プロミス（正確には [Thenable](#thenable)）の[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクトを受け取り、新しいプロミスを返します。これらはすべてサブクラス化に対応しています。つまり、 `Promise` のサブクラスに対して呼び出すことができ、その結果はサブクラスの種類を持つプロミスになります。そのためには、サブクラスのコンストラクターに [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) と同じ定義を実装する必要があります。すなわち、単一の `executor` 関数を取り、これが `resolve` と `reject` コールバック関数を引数として取るようにします。また、サブクラスには静的メソッドの `resolve` も必要です。これは {{jsxref("Promise.resolve()")}} のように呼び出すことができ、値をプロミスに解決するためのメソッドです。
 
 JavaScript はもともと[シングルスレッド](/ja/docs/Glossary/Thread)なので、異なるプロミス間で制御が移り、プロミスの実行が同時に行われるように見えても、指定された瞬間には 1 つのタスクしか実行されないことに注意してください。JavaScript で[並列実行](https://ja.wikipedia.org/wiki/並列計算)を行うには、[ワーカースレッド](/ja/docs/Web/API/Web_Workers_API)を使うしかありません。
 

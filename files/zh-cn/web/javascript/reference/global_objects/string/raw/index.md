@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 
 {{JSRef}}
 
-**`String.raw()`** 静态方法是[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/template_strings)的标签函数。它的作用类似于 Python 中的 `r` 前缀或 C# 中用于字符串字面量的 `@` 前缀。它用于获取模板字符串的原始字符串形式——即，替换表达式（例如 `${foo}`）会被替换处理，但转义序列（例如 `\n`）不会被处理。
+**`String.raw()`** 静态方法是[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)的标签函数。它的作用类似于 Python 中的 `r` 前缀或 C# 中用于字符串字面量的 `@` 前缀。它用于获取模板字符串的原始字符串形式——即，替换表达式（例如 `${foo}`）会被替换处理，但转义序列（例如 `\n`）不会被处理。
 
 {{EmbedInteractiveExample("pages/js/string-raw.html")}}
 
@@ -24,7 +24,7 @@ String.raw`templateString`
 - `...substitutions`
   - : 包含的替换表达式对应的值。
 - `templateString`
-  - : 一个[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/template_strings)，可以包含替换表达式（`${...}`）。
+  - : 一个[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)，可以包含替换表达式（`${...}`）。
 
 ### 返回值
 
@@ -126,4 +126,4 @@ String.raw({ raw: "test" }, 0, 1, 2); // 't0e1s2t'
 - [`core-js` 中 `String.raw` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [模版字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)
 - {{jsxref("String")}}
-- [词法文法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [词法语法](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar)

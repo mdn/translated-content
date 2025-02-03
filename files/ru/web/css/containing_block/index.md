@@ -5,7 +5,7 @@ slug: Web/CSS/Containing_block
 
 {{cssref}}
 
-На размер и позицию элемента часто влияет его **содержащий блок** (containing block). Чаще всего содержащим блоком является content область ([content area](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)) ближайшего блочного ([block-level](/ru/docs/Web/HTML/Block-level_elements)) предка, но это не всегда так. В этой статье мы рассмотрим факторы, которые определяют содержащий блок элемента.
+На размер и позицию элемента часто влияет его **содержащий блок** (containing block). Чаще всего содержащим блоком является content область ([content area](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)) ближайшего блочного ([block-level](/ru/docs/Glossary/Block-level_content)) предка, но это не всегда так. В этой статье мы рассмотрим факторы, которые определяют содержащий блок элемента.
 
 Когда пользовательский агент (такой как ваш браузер) делает разметку документа, он создаёт бокс (box) для каждого элемента. Каждый бокс разделяется на следующие области:
 
@@ -258,11 +258,11 @@ p {
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)
   - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/initial_value)
     - [вычисленные](/ru/docs/Web/CSS/computed_value)

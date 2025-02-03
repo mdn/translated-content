@@ -53,7 +53,7 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 ## `order` 属性
 
-除了颠倒显示弹性项目的顺序之外，你还可以使用{{cssxref("order")}} 属性指定单个项目并更改其在视觉顺序中的显示位置。.
+除了颠倒显示弹性项目的顺序之外，你还可以使用{{cssxref("order")}} 属性指定单个项目并更改其在视觉顺序中的显示位置。
 
 `order`属性旨在按顺序排列项目。这意味着为项目分配了代表其组的整数。然后，按照该整数（最低的值）首先按照视觉顺序放置项目。如果多个项目具有相同的整数值，则在该组中按照源顺序对项目进行布局。
 
@@ -98,7 +98,7 @@ Order 还会更改项目的绘制顺序; 对于`order`较低的项目将首先�
 通过浏览此页面上的任何实时示例，你可以了解订单如何给不使用某种指点设备的任何人带来奇怪的体验。要了解有关视觉顺序和逻辑顺序的这种分离以及它为无障碍带来的一些潜在问题的更多信息，请参见以下资源。
 
 - [Flexbox and the keyboard navigation disconnect](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
-- [HTML Source Order vs CSS Display Order](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)
+- [HTML Source Order vs CSS Display Order](https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)
 - [The Responsive Order Conflict for Keyboard Focus](https://alastairc.ac/2017/06/the-responsive-order-conflict)
 
 ## order 使用示例

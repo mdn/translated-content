@@ -135,6 +135,6 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("DataView")}}

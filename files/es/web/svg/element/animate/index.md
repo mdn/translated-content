@@ -13,14 +13,14 @@ slug: Web/SVG/Element/animate
 
 ### Atributos globales
 
-- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#Conditional_processing_attributes) »
-- [Core attributes](/es/docs/Web/SVG/Attribute#Core_attributes) »
-- [Animation event attributes](/es/docs/Web/SVG/Attribute#Animation_event_attributes) »
-- [Xlink attributes](/es/docs/Web/SVG/Attribute#XLink_attributes) »
-- [Animation attribute target attributes](/es/docs/Web/SVG/Attribute#AnimationAttributeTarget) »
-- [Animation timing attributes](/es/docs/Web/SVG/Attribute#Animation_timing_attributes) »
-- [Animation value attributes](/es/docs/Web/SVG/Attribute#Animation_value_attributes) »
-- [Animation addition attributes](/es/docs/Web/SVG/Attribute#Animation_addition_attributes) »
+- [Conditional processing attributes](/es/docs/Web/SVG/Attribute#conditional_processing_attributes) »
+- [Core attributes](/es/docs/Web/SVG/Attribute#core_attributes) »
+- [Animation event attributes](/es/docs/Web/SVG/Attribute#animation_event_attributes) »
+- [Xlink attributes](/es/docs/Web/SVG/Attribute#xlink_attributes) »
+- [Animation attribute target attributes](/es/docs/Web/SVG/Attribute#animationattributetarget) »
+- [Animation timing attributes](/es/docs/Web/SVG/Attribute#animation_timing_attributes) »
+- [Animation value attributes](/es/docs/Web/SVG/Attribute#animation_value_attributes) »
+- [Animation addition attributes](/es/docs/Web/SVG/Attribute#animation_addition_attributes) »
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Atributos específicos

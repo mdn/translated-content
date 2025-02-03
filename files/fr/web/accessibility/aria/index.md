@@ -55,14 +55,14 @@ function updateProgress(percentComplete) {
 
 Tout le contenu qui est disponible pour les personnes qui n'utilisent pas d'outils d'assistance doit également être disponible pour celles qui en utilisent. Réciproquement, aucune fonctionnalité ne devrait cibler uniquement les personnes utilisant des outils d'assistance. Dans notre exemple, la barre de progression doit être mise en forme afin de ressembler effectivement à une barre de progression.
 
-À la place, il aurait été beaucoup plus simple d'utiliser l'élément natif [`<progress>`](/fr/docs/Web/HTML/Element/Progress) à la place&nbsp;:
+À la place, il aurait été beaucoup plus simple d'utiliser l'élément natif [`<progress>`](/fr/docs/Web/HTML/Element/progress) à la place&nbsp;:
 
 ```HTML
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
 > [!NOTE]
-> L'attribut `min` n'est pas autorisé pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress), sa valeur minimale est toujours `0`.
+> L'attribut `min` n'est pas autorisé pour l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress), sa valeur minimale est toujours `0`.
 
 > [!NOTE]
 > Les éléments qui sont des points de repère dans la navigation du document ([`<main>`](/fr/docs/Web/HTML/Element/main), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<nav>`](/fr/docs/Web/HTML/Element/nav), etc.) ont des rôles ARIA implicites natifs, il n'est pas nécessaire de les dupliquer.
@@ -92,7 +92,7 @@ Il est aussi important de tester l'ARIA écrit avec des technologies d'assistanc
 ## ARIA pour les widgets scriptés
 
 - [Implémenter des widgets JavaScript navigables au clavier](/fr/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : Les éléments natifs tels que [`<input>`](/fr/docs/Web/HTML/Element/input), [`<button>`](/fr/docs/Web/HTML/Element/Button) disposent d'une accessibilité au clavier native. Si on imite ces fonctionnalités avec des éléments [`<div>`](/fr/docs/Web/HTML/Element/div) et ARIA, il faudra s'assurer que les widgets ainsi créés restent accessibles au clavier.
+  - : Les éléments natifs tels que [`<input>`](/fr/docs/Web/HTML/Element/input), [`<button>`](/fr/docs/Web/HTML/Element/button) disposent d'une accessibilité au clavier native. Si on imite ces fonctionnalités avec des éléments [`<div>`](/fr/docs/Web/HTML/Element/div) et ARIA, il faudra s'assurer que les widgets ainsi créés restent accessibles au clavier.
 - [Régions dynamiques (<i lang="en">live regions</i>)](/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Les régions dynamiques fournissent des suggestions aux lecteurs d'écran sur la façon de gérer les modifications apportées au contenu d'une page.
 

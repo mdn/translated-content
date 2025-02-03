@@ -646,7 +646,7 @@ Mozilla 已经在 Firefox 43+ 中实现了对 IndexedDB 数据进行本地化排
 
 ### 教程和指南
 
-- [将 IndexedDB 中的数据绑定到 UI 元素（2012）](https://web.dev/articles/indexeddb-uidatabinding)
+- [将 IndexedDB 中的数据绑定到 UI 元素（2012）](https://web.developers.google.cn/articles/indexeddb-uidatabinding)
 - [IndexedDB——浏览器中的存储](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### 函数库

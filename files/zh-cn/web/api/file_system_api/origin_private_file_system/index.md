@@ -18,7 +18,7 @@ l10n:
 3. 调用 {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} 来请求用户的权限以保存更改。
 4. 如果用户接受了权限请求，更改就会保存回原文件。
 
-这个方法可行，但是有一些限制。这些更改是对用户可见的文件系统进行的，所以会有很多适当的安全性检查（比方说 Chrome 的[安全浏览](https://developers.google.com/safe-browsing)）来防止恶意内容被写入到文件系统。这些写入不是原地的，会先写入到一个临时文件。除非通过了所有的安全性检查，否则原文件不会被修改。
+这个方法可行，但是有一些限制。这些更改是对用户可见的文件系统进行的，所以会有很多适当的安全性检查（比方说 Chrome 的[安全浏览](https://developers.google.cn/safe-browsing)）来防止恶意内容被写入到文件系统。这些写入不是原地的，会先写入到一个临时文件。除非通过了所有的安全性检查，否则原文件不会被修改。
 
 因此，这些操作会相当缓慢。在你进行小规模的文本更新时没那么明显，但是当进行像 [SQLite](https://www.sqlite.org/wasm) 数据库更改这样的更显著、更大规模的文件更新时就会遇到性能问题。
 
@@ -194,4 +194,4 @@ accessHandle.truncate(4);
 
 ## 参见
 
-- web.dev 上的[源私有文件系统](https://web.dev/articles/origin-private-file-system)
+- web.developers.google.cn 上的[源私有文件系统](https://web.developers.google.cn/articles/origin-private-file-system)

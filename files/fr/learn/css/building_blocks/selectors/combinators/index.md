@@ -111,6 +111,6 @@ Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des i
 
 ## Passer à la suite
 
-Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Apprendre/CSS/Building_blocks/Le_modele_de_boite).
+Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

@@ -135,4 +135,4 @@ input::placeholder {
 
 - {{cssxref(":placeholder-shown")}} 伪类用于设置*具有*激活的占位符的元素的样式。
 - 相关的 HTML 元素：{{HTMLElement("input")}}、{{HTMLElement("textarea")}}
-- [HTML 表单](/zh-CN/docs/Learn/Forms)
+- [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)

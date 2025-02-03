@@ -2,7 +2,7 @@
 title: font-size
 slug: Web/CSS/font-size
 l10n:
-  sourceCommit: 9380313d8884045dbb31d390a7104d5dbeac2e20
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -224,4 +224,4 @@ span {
 - {{cssxref("font-weight")}}
 - {{cssxref("math-depth")}}
 - {{cssxref("math-style")}}
-- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

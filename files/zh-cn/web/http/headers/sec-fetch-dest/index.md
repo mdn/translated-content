@@ -80,7 +80,7 @@ Sec-Fetch-Dest: xslt
 - `image`
   - : 目标是图片。这可能源自 HTML {{HTMLElement("image")}}、SVG {{SVGElement("image")}}、CSS {{cssxref("background-image")}}、CSS {{cssxref("cursor")}}、CSS {{cssxref("list-style-image")}} 等等。
 - `manifest`
-  - : 目标是 mainfest。这可能源自 HTML [\<link rel=manifest>](/zh-CN/docs/Web/HTML/Link_types/manifest)。
+  - : 目标是 mainfest。这可能源自 HTML [\<link rel=manifest>](/zh-CN/docs/Web/HTML/Attributes/rel/manifest)。
 - `object`
   - : 目标是对象，这可能源自 {{HTMLElement("object")}} 标签。
 - `paintworklet`
@@ -130,5 +130,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/articles/fetch-metadata) (web.dev)
-- [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
+- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.developers.google.cn）
+- [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/)（secmetadata.appspot.com）

@@ -44,7 +44,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 <link href="print.css" rel="stylesheet" media="print" />
 ```
 
-可以执行一些 [CSS 优化](/zh-CN/docs/Learn/Performance/CSS)来实现这一目标。
+可以执行一些 [CSS 优化](/zh-CN/docs/Learn_web_development/Extensions/Performance/CSS)来实现这一目标。
 
 ### 字体
 
@@ -92,5 +92,5 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 ## 参见
 
-- [渲染阻塞 CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
-- [使用延迟加载来提高加载速度](https://web.dev/articles/lazy-loading)
+- [渲染阻塞 CSS](https://web.developers.google.cn/articles/critical-rendering-path/render-blocking-css)
+- [使用延迟加载来提高加载速度](https://web.developers.google.cn/articles/browser-level-image-lazy-loading)

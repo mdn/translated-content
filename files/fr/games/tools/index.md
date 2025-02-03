@@ -19,8 +19,8 @@ Sur cette page, vous trouverez des liens vers nos articles sur les outils de dé
   - : Shumway est un moteur de rendu pour Adobe Flash entièrement construit en JavaScript, WebGL, etc., comblant le fossé entre Flash et les standards Web. Cet article explique comment utiliser Shumway et comment apporter des correctifs et des bogues au projet.
 - Chaîne d'outils pour développer et déboguer des jeux
 
-  - : En quoi cela diffère-t-il du débogage normal des applications Web? Quels outils spécialisés sont disponibles? Une grande partie de cela va être couverte par Will dans les [outils](/fr/docs/Tools), mais ici, nous devrions fournir une sorte de tutoriel pratique sur la chaîne d'outils pour le débogage de jeux, avec des liens vers les éléments de Will :
+  - : En quoi cela diffère-t-il du débogage normal des applications Web? Quels outils spécialisés sont disponibles? Une grande partie de cela va être couverte par Will dans les [outils](https://firefox-source-docs.mozilla.org/devtools-user/index.html), mais ici, nous devrions fournir une sorte de tutoriel pratique sur la chaîne d'outils pour le débogage de jeux, avec des liens vers les éléments de Will :
 
     - Présentation des outils de base
-    - [Éditeur de Shader](/fr/docs/Tools/Shader_Editor)
+    - [Éditeur de Shader](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Outils de performance (toujours en production, estimé début 2014)

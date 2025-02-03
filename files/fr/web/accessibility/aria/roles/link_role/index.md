@@ -7,11 +7,11 @@ slug: Web/Accessibility/ARIA/Roles/link_role
 
 ### Description
 
-Cette technique présente l'utilisation du rôle [link](http://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
+Cette technique présente l'utilisation du rôle [link](https://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
 
 Le rôle `link` est utilisé pour identifier un élément qui crée un hyperlien vers une ressource qui peut être dans l'application ou à l'extérieur. Lorsque ce rôle est ajouté à un élément, la tabulation peut être utilisée pour donner le focus au lien et la barre d'espace ou la touche Entrée peuvent exécuter le lien.
 
-L'attribut [`tabindex`](http://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l'élément dans l'ordre de tabulation.
+L'attribut [`tabindex`](https://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l'élément dans l'ordre de tabulation.
 
 ### Effets possibles sur les agents utilisateurs et les technologies d'assistance
 
@@ -70,16 +70,16 @@ function navigateLink(evt) {
 
 ### Notes
 
-Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](http://www.w3.org/TR/wai-aria/roles#button) au lieu du rôle `link`.
+Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](https://www.w3.org/TR/wai-aria/roles#button) au lieu du rôle `link`.
 
 ### Attributs ARIA utilisés
 
-- [`link`](http://www.w3.org/TR/wai-aria/roles#link)
+- [`link`](https://www.w3.org/TR/wai-aria/roles#link)
 
 ### Techniques ARIA connexes
 
-- Rôle [button](http://www.w3.org/TR/wai-aria/roles#button).
+- Rôle [button](https://www.w3.org/TR/wai-aria/roles#button).
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](http://www.w3.org/TR/wai-aria-practices/#link)
+- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](https://www.w3.org/TR/wai-aria-practices/#link)

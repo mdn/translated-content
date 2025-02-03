@@ -89,7 +89,7 @@ _Esta interface não herda nenhuma propriedade._
 - {{domxref("Event.type")}} {{readonlyinline}}
   - : O nome do evento (case-insensitive).
 - {{domxref("Event.isTrusted")}} {{readonlyinline}}
-  - : Indica se ou não o evento foi iniciado pelo navegador (depois de um clique do usuário, por exemplo) ou por um script (usando um método de criação de evento, como [event.initEvent](/pt-BR/docs/DOM/event.initEvent))
+  - : Indica se ou não o evento foi iniciado pelo navegador (depois de um clique do usuário, por exemplo) ou por um script (usando um método de criação de evento, como [event.initEvent](/pt-BR/docs/Web/API/Event/initEvent))
 
 ## Metodos
 
@@ -113,9 +113,9 @@ _Esta interface não herda nenhum método._
 
 ## Veja também
 
-- Tipos de eventos disponíveis: [Referência de eventos](/pt-BR/docs/Web/Reference/Events)
-- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets) (target vs currentTarget vs relatedTarget vs originalTarget)
-- [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- Tipos de eventos disponíveis: [Referência de eventos](/pt-BR/docs/Web/Events)
+- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
+- [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Events/Creating_and_triggering_events)
 - Para desenvolvedores de extensões para o Firefox:
 
   - [Escutando eventos em extensões do Firefox](/pt-BR/docs/Listening_to_events_in_Firefox_extensions)

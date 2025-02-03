@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - 现已支持 {{CSSXref("color_value/light-dark", "light-dark()")}} CSS 颜色值函数。这允许在不需要 `prefers-color-scheme` 媒体特性的情况下设置浅色和深色的颜色（[Firefox bug 1856999](https://bugzil.la/1856999)）。
-- 现已支持 [`lh` 和 `rlh`](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#行距单位)行距单位。这允许设置相对于元素的行距属性，例如，将背景装饰与多行文本精确对齐（[Firefox bug 1310170](https://bugzil.la/1310170)）。
+- 现已支持 [`lh` 和 `rlh`](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units#行距单位)行距单位。这允许设置相对于元素的行距属性，例如，将背景装饰与多行文本精确对齐（[Firefox bug 1310170](https://bugzil.la/1310170)）。
 
 #### 移除
 

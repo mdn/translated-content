@@ -56,7 +56,7 @@ La función {{jsxref("WebAssembly.instantiate()")}} tiene dos formas de sobrecar
 > Generalmente solo nos preocupamos de la instancia, pero resulta útil tener el módulo en caso de que querramos almacenarlo temporalmente (cache), compartirlo con otro proceso o ventana vía [`postMessage()`](/es/docs/Web/API/MessagePort/postMessage), o simplemente crear mas instancias.
 
 > [!NOTE]
-> La segunda forma de sobrecarga utiliza un objeto del tipo {{jsxref("WebAssembly.Module")}} como argumento y regresa un compromiso directo conteniendo la instancia del objeto como resultado. Vea el [Segundo ejemplo de sobrecarga](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
+> La segunda forma de sobrecarga utiliza un objeto del tipo {{jsxref("WebAssembly.Module")}} como argumento y regresa un compromiso directo conteniendo la instancia del objeto como resultado. Vea el [Segundo ejemplo de sobrecarga](/es/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
 
 ### Ejecutando su código WebAssembly
 

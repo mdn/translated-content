@@ -317,7 +317,7 @@ car.model = Mustang;
 
 ## `for...of` 陳述式
 
-[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 陳述式在[iterable objects](/zh-TW/docs/Web/JavaScript/Guide/iterable)(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。
+[`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 陳述式在[iterable objects](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)(可迭代的物件)上建立了一個循環 (包含 {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, [arguments](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)(參數) 物件 等等), 對每個獨特屬性的值使用一個準備被執行的有陳述式的自訂迭代掛勾。
 
 ```plain
 for (variable of object) {

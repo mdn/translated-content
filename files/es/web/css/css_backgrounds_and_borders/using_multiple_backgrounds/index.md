@@ -23,7 +23,7 @@ Puedes hacerlo con la propiedad atajo {{ cssxref("background") }} y con las prop
 
 ## Ejemplo
 
-En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lineal](/es/docs/Web/CSS/linear-gradient), y una imagen de burbujas:
+En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lineal](/es/docs/Web/CSS/gradient/linear-gradient), y una imagen de burbujas:
 
 ### HTML
 
@@ -66,4 +66,4 @@ Como puedes ver aquí, el logo de Firefox (primero enlistado) está hasta arriba
 
 ## Véase también
 
-- [Usando gradientes con CSS](/es/docs/CSS/Using_CSS_gradients)
+- [Usando gradientes con CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)

@@ -128,5 +128,5 @@ Dans cet exemple, on utilise `<aside>` afin de baliser un paragraphe d'un articl
 ## Voir aussi
 
 - Les autres éléments en rapport avec les sections : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer), [`<address>`](/fr/docs/Web/HTML/Element/address)
-- [Structures et sections d'un document HTML5](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [Structures et sections d'un document HTML5](/fr/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA : le rôle `complementary`](/fr/docs/Web/Accessibility/ARIA/Roles/Complementary_role)

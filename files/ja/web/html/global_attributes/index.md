@@ -2,14 +2,14 @@
 title: グローバル属性
 slug: Web/HTML/Global_attributes
 l10n:
-  sourceCommit: cadbe0302438480b936973dee5323e1179bb851f
+  sourceCommit: 8d5d18805ad96e1c56d72de5c26de60e86dfa817
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
 **グローバル属性**は、すべての HTML 要素で共通の属性です。すべての要素で使用できますが、要素によっては効果がないこともあります。
 
-グローバル属性は、_標準仕様で定義されていない要素を含む_、すべての [HTML 要素](/ja/docs/Web/HTML/Element)で指定することができます。つまり、その要素を使用することで文書が HTML5 に準拠しなくなるような標準外の要素であっても、これらの属性は受け入れなければなりません。例えば、 `<foo hidden>…</foo>` とマークアップされたコンテンツは、 `<foo>` が妥当な HTML 要素ではなくても、 HTML5 準拠のブラウザーは非表示にします。
+グローバル属性は、標準仕様で定義されていない要素を含む、すべての [HTML 要素](/ja/docs/Web/HTML/Element)で指定することができます。つまり、その要素を使用することで文書が HTML5 に準拠しなくなるような標準外の要素であっても、これらの属性は受け入れなければなりません。例えば、 `<foo hidden>…</foo>` とマークアップされたコンテンツは、 `<foo>` が妥当な HTML 要素ではなくても、 HTML5 準拠のブラウザーは非表示にします。
 
 基本的な HTML グローバル属性に加えて、以下のグローバル属性も存在します。
 
@@ -21,8 +21,13 @@ l10n:
 
 - [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey)
   - : 現在の要素に対するキーボードショートカットを生成するヒントを与えます。この属性の値は、空白区切りの文字のリストです。ブラウザーは、この文字リストの中から、コンピューターのキーボードレイアウトに存在する最初の文字を使用します。
+- [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+  - : 位置指定要素をアンカー要素に関連付けます。この属性の値は、位置指定要素をアンカーする要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) 値です。これにより、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using)を使用して要素を位置指定することができます。
 - [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize)
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。
+- [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect)
+  - : 入力テキストのスペルミスを自動的に修正するかどうかを制御します。
+    これは、 {{HTMLElement("input")}} 要素の [`type="password"`](/ja/docs/Web/HTML/Element/input/password)、[`type="email"`](/ja/docs/Web/HTML/Element/input/email)、[`type="url"`](/ja/docs/Web/HTML/Element/input/url) を除いたテキストが編集可能な要素に適用することができます。
 - [`autofocus`](/ja/docs/Web/HTML/Global_attributes/autofocus)
   - : ページの読み込み時、またはその一部である {{HTMLElement("dialog")}} が表示された時点で、その要素がフォーカスされるようにすることを示す。この属性は論理値で、初期値は false です。
 - [`class`](/ja/docs/Web/HTML/Global_attributes/class)
@@ -31,11 +36,10 @@ l10n:
 
   - : ユーザーによる要素の編集が可能かどうかを示す[列挙型](/ja/docs/Glossary/Enumerated)属性です。編集可能な場合、ブラウザーはその要素を編集可能なものに変更します。この属性の値は、以下のどちらかでなければなりません。
 
-    - `true` または _空文字列_: 要素が編集可能であることを示す
+    - `true` または 空文字列: 要素が編集可能であることを示す
     - `false`: 要素は編集不可であることを示す
+    - `plaintext-only`: これは、要素の生テキストは編集可能であるが、リッチテキストの書式設定は無効であることを示します。
 
-- [`contextmenu`](/ja/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}} {{non-standard_inline}}
-  - : その要素のコンテキストメニューとして使用する {{HTMLElement("menu")}} の [**`id`**](#id) を指定します。
 - [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*)
   - : これらの属性はカスタムデータ属性と呼ばれており、 [HTML](/ja/docs/Web/HTML) とその {{glossary("DOM")}} 表現との間で、固有の情報を交換できるようにします。すべてのカスタムデータは、その属性を設定した要素の {{DOMxRef("HTMLElement")}} インターフェイスを通して使用することができます。 {{DOMxRef("HTMLElement.dataset")}} プロパティでカスタムデータにアクセスできます。
 - [`dir`](/ja/docs/Web/HTML/Global_attributes/dir)
@@ -97,7 +101,7 @@ l10n:
   - : 列挙型属性で、要素でスペルチェックを行うかどうかを定義します。以下の値が利用できます。
 
     - 空文字列または `true`: 可能であればその要素でスペルチェックを行うことを示す
-    - `false`: その要素でスペルチェックを行わないことを示す
+    - `false` は、その要素でスペルチェックを行わないことを示します。
 
 - [`style`](/ja/docs/Web/HTML/Global_attributes/style)
   - : 要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を設定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用することです。
@@ -120,10 +124,17 @@ l10n:
 
 - [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
 
-  - : [列挙型](/ja/docs/Glossary/Enumerated)属性で、タブレットやモバイル端末などのハードウェアキーボードが利用できない端末において、コンテンツが編集可能な要素（例えば、 {{htmlelement("input")}} や {{htmlelement("textarea")}} 要素、あるいは [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を設定した要素）において画面上の仮想キーボードの動作を制御するために使用します。
+  - : {{Glossary("enumerated", "列挙型")}}属性で、タブレットやモバイル端末などのハードウェアキーボードが利用できない端末において、コンテンツが編集可能な要素（例えば、 {{htmlelement("input")}} や {{htmlelement("textarea")}} 要素、あるいは [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を設定した要素）において画面上の仮想キーボードの動作を制御するために使用します。
 
     - `auto` または空文字列: 要素がフォーカスまたはタップされたときに、自動的に仮想キーボードを示します。
     - `manual`: 要素へのフォーカスやタップを仮想キーボードの状態から切り離します。
+
+- [`writingsuggestions`](/ja/docs/Web/HTML/Global_attributes/writingsuggestions)
+
+  - : {{glossary("enumerated", "列挙型")}}属性であり、ブラウザーが指定した入力補完を要素のスコープで有効にするかどうかを示します。
+
+    - `false`: ブラウザーの入力補完を無効にします。
+    - `true` または空文字列: 入力補間を有効にします。
 
 ## 仕様書
 

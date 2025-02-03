@@ -5,7 +5,7 @@ slug: Web/CSS/Containing_block
 
 {{CSSRef}}
 
-要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Web/HTML/Block-level_elements)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
+要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
 
 ユーザーエージェント (ブラウザーなど) が文書をレイアウトする時、それぞれの要素にボックスを生成します。それぞれのボックスは４つの領域に分かれます。
 

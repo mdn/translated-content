@@ -11,20 +11,20 @@ Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました
 
 ### 開発者ツール
 
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) で [ユーザーエージェントをスプーフィング](/ja/docs/Browser_detection_using_the_user_agent) する
-- メモリーツールの [Retaining paths パネル](/ja/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel)
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で [ユーザーエージェントをスプーフィング](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent) する
+- メモリーツールの [Retaining paths パネル](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining_paths_panel)
 - [Service Worker](/ja/docs/Web/API/ServiceWorker) と [Push API](/ja/docs/Web/API/Push_API) のデバッグ
 
-  - Worker 用の [about:debugging](/ja/docs/Tools/about:debugging) ダッシュボード
-  - キャッシュされたリクエストを [ネットワークモニター](/ja/docs/Tools/Network_Monitor) で表示
-  - [キャッシュストレージ](/ja/docs/Web/API/Cache) を [ストレージインスペクター](/ja/docs/Tools/Storage_Inspector) でサポート
+  - Worker 用の [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) ダッシュボード
+  - キャッシュされたリクエストを [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で表示
+  - [キャッシュストレージ](/ja/docs/Web/API/Cache) を [ストレージインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) でサポート
 
-- [ストレージインスペクター](/ja/docs/Tools/Storage_Inspector) で項目をフィルターする機能
-- [コンソール](/ja/docs/Tools/Web_Console) が不完全なコマンド入力を検出して、自動的に複数行モードに切り替える
-- [デバッガー](/ja/docs/Tools/Debugger) でブレークポイントのスタイルを更新
-- ブラウザーやアドオンのデバッグを支援するため、[ブラウザーツールボックス](/ja/docs/Tools/Browser_Toolbox) の使用中はパネルを自動的に閉じないようにする
-- [フォントインスペクター](/ja/docs/Tools/Page_Inspector/UI_Tour#Fonts_view) をデフォルトで無効化 ([Firefox バグ 1247723](https://bugzil.la/1247723))
-- [3D ビュー](/ja/docs/Tools/3D_View) を削除
+- [ストレージインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) で項目をフィルターする機能
+- [コンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) が不完全なコマンド入力を検出して、自動的に複数行モードに切り替える
+- [デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) でブレークポイントのスタイルを更新
+- ブラウザーやアドオンのデバッグを支援するため、[ブラウザーツールボックス](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html) の使用中はパネルを自動的に閉じないようにする
+- [フォントインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#fonts_view) をデフォルトで無効化 ([Firefox バグ 1247723](https://bugzil.la/1247723))
+- [3D ビュー](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) を削除
 - 開発ツールのテーマを更新
 - フォントパネルを無効化 ([Firefox バグ 1247723](https://bugzil.la/1247723))
 
@@ -89,7 +89,7 @@ _変更なし。_
 - [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) のメソッドで、RSA-PSS 暗号化アルゴリズムが使用可能になりました ([Firefox バグ 1191936](https://bugzil.la/1191936))。
 - [権限 API](/ja/docs/Web/API/Permissions_API) の {{domxref("Permissions.revoke()")}} メソッドを追加しました ([Firefox バグ 1197461](https://bugzil.la/1197461))。
 - HTML を使用してウェブコンテンツを表示するフレームを作成できるようにするため {{htmlelement("iframe")}} の機能を拡張する、[Browser API](/ja/docs/Web/API/Browser_API) (以前は Firefox OS のみサポートしていました) が、デスクトップ版の chrome コードでも使用可能になりました ([Firefox バグ 1238160](https://bugzil.la/1238160))。
-- [Notification API](/ja/docs/Web/API/notification) の {{domxref("Notification.requestPermission()","requestPermission()")}} メソッドを、コールバックベースの構文から Promise ベースの構文に更新しました ([Firefox バグ 1241278](https://bugzil.la/1241278))。
+- [Notification API](/ja/docs/Web/API/Notification) の {{domxref("Notification.requestPermission()","requestPermission()")}} メソッドを、コールバックベースの構文から Promise ベースの構文に更新しました ([Firefox バグ 1241278](https://bugzil.la/1241278))。
 - [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) を最新の仕様に合わせて更新して、接頭辞を削除しました。一部のメソッドは改名および大文字・小文字を変更しました ([Firefox バグ 743198](https://bugzil.la/743198))。これは設定項目 `full-screen-api.unprefix.enabled` で制御されており、デフォルトで無効化していることに注意してください ([Firefox バグ 1268749](https://bugzil.la/1268749))。
 
 ### Audio/Video
@@ -107,7 +107,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- `view-source:` プロトコルの URL をウェブページから使用したときに、[ソース表示](/ja/docs/Tools/View_source) ツールを開かないようになりました ([Firefox バグ 1172165](https://bugzil.la/1172165))。
+- `view-source:` プロトコルの URL をウェブページから使用したときに、[ソース表示](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) ツールを開かないようになりました ([Firefox バグ 1172165](https://bugzil.la/1172165))。
 - Firefox の [click-to-activate プラグインのホワイトリスト](https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/) を削除しました。アクティブにするためクリックする必要がないプラグインは、Flash だけです。 ([Firefox バグ 1263630](https://bugzil.la/1263630))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点

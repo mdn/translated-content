@@ -121,6 +121,6 @@ ball.body.velocity.set(150, -150);
 
 ## Следующий шаг
 
-Мы можем управлять платформой и сделали так, чтобы мячик отскакивал от неё. Но какой от этого толк, если мячик отскакивает и от нижней грани экрана? В следующей главе мы добавим [логику проигрыша и экран "Game over"](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over).
+Мы можем управлять платформой и сделали так, чтобы мячик отскакивал от неё. Но какой от этого толк, если мячик отскакивает и от нижней грани экрана? В следующей главе мы добавим [логику проигрыша и экран "Game over"](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over).
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Game_over")}}

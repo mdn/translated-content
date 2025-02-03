@@ -41,7 +41,7 @@ slug: Web/XSLT/Element/sort
 
 ### 정의
 
-[XSLT section 10, Sorting](http://www.w3.org/TR/xslt#sorting)
+[XSLT section 10, Sorting](https://www.w3.org/TR/xslt#sorting)
 
 ### Gecko 지원
 

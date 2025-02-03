@@ -10,7 +10,7 @@ slug: Web/API/Window/storage_event
 ## Общая информация
 
 - Specification
-  - : _[Web Storage](http://www.w3.org/TR/webstorage/#the-storage-event)_
+  - : _[Web Storage](https://www.w3.org/TR/webstorage/#the-storage-event)_
 - Interface
   - : {{domxref("StorageEvent")}}
 - Bubbles

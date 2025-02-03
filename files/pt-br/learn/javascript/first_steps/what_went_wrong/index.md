@@ -50,7 +50,7 @@ Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamo
 
 ## Consertando erros de sintaxe
 
-Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
+Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
 
 1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
    ![](nao-e-uma-funcao.png)
@@ -68,7 +68,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
    envioPalpite.addeventListener('click', conferir Palpite);
    ```
 
-4. O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn _nome-da-funcionalidade_" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: [`addEventListener()`](/pt-BR/docs/Web/API/Element/addEventListener).
+4. O erro diz o seguinte "envioPalpite.addeventListener is not a function", que significa envioPalpite.addeventListener não é uma funçao. Então provavelmente digitamos algo errado. Se você não estiver certo da digitação correta de parte da sintaxe, é uma boa ideia procurar a funcionalidade no MDN docs. A melhor forma de fazer isso atualmente é pesquisar por "mdn _nome-da-funcionalidade_" em seu mecanismo de buscas favorito. Aqui está um atalho para te salvar algum tempo nesse caso: [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener).
 5. Então, olhando nessa essa página, o erro parece ser termos digitado o nome da função errado! Lembre-se de que o JavaScript diferencia letras maiúsculas de minúsculas, então qualquer diferença na digitação ou no uso de letras maiúsculas irá causar um erro. Alterar `addeventListener` para `addEventListener` deverá corrigir esse erro. Faça essa alteração no código do seu arquivo.
 
 > [!NOTE]
@@ -104,7 +104,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
    console.log(baixoOuAlto);
    ```
 
-   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
+   > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/console/log_static) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
 
 7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
    ![](console-log-saida.png)
@@ -202,7 +202,7 @@ var palpiteUsuario === Number(campoPalpite.value);
 Exibe esse erro porque pensa que você está fazendo algo diferente. Você deve se certificar de não misturar o operador de atribuição (`=`) — que configura uma variável para ser igual a determinado valor — com o operador de igualdade restrita (`===`), que testa se um valor é exatamente igual a outro, e retorna um resultado `true`/`false` (verdadeiro ou falso).
 
 > [!NOTE]
-> Veja nossa página de referência [SyntaxError: missing ; before statement](/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) para mais detalhes sobre esse erro.
+> Veja nossa página de referência [SyntaxError: missing ; before statement](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) para mais detalhes sobre esse erro.
 
 ### O programa sempre diz que você ganhou, independentemente do palpite que insira
 
@@ -254,7 +254,7 @@ Erro de sintaxe: esperado uma expressão, obtido uma 'string' e Erro de sintaxe:
 Para todos esses erros, pense em como nós abordamos os exemplos em que olhamos no passo a passo. Quando um erro surge, olha o número da linha que é informado, vá até essa linha e veja se consegue localizar o que há de errado. Mantenha em mente que o erro não estará necessariamente nessa linha, e também que o erro pode não ter sido causado exatamente pelo mesmo problema que citamos acima!
 
 > [!NOTE]
-> Veja nossas páginas de referência [SyntaxError: Unexpected token](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) e [SyntaxError: unterminated string literal](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) para mais detalhes sobre esses erros.
+> Veja nossas páginas de referência [SyntaxError: Unexpected token](/pt-BR/docs/Web/JavaScript/Reference/Errors/Unexpected_token) e [SyntaxError: unterminated string literal](/pt-BR/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) para mais detalhes sobre esses erros.
 
 ## Sumário
 

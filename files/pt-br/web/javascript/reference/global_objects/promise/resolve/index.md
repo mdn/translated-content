@@ -62,7 +62,7 @@ cast.then(function (v) {
 });
 ```
 
-A ordem invertida dos logs acontece devido ao fato de que os handlers são chamados assincronamente. Veja como o `then` funciona [aqui](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value).
+A ordem invertida dos logs acontece devido ao fato de que os handlers são chamados assincronamente. Veja como o `then` funciona [aqui](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#return_value).
 
 ### Resolvendo thenables e disparando Errors
 

@@ -24,11 +24,11 @@ slug: Web/SVG/Attribute/keyTimes
 
 ## Usage context
 
-| Categories         | Animation value attribute                                                        |
-| ------------------ | -------------------------------------------------------------------------------- |
-| Value              | \<list>                                                                          |
-| Animatable         | No                                                                               |
-| Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute) |
+| Categories         | Animation value attribute                                                         |
+| ------------------ | --------------------------------------------------------------------------------- |
+| Value              | \<list>                                                                           |
+| Animatable         | No                                                                                |
+| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#KeyTimesAttribute) |
 
 ## Пример
 

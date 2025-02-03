@@ -79,4 +79,4 @@ column-count: unset;
 ## Voir aussi
 
 - [Apprendre - la disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Les concepts de bases pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)
+- [Les concepts de bases pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
