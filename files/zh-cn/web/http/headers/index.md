@@ -450,14 +450,14 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : 指示请求已在 TLS 早期数据中传送。
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
-  - : 由联合身份提供者（IdP）发送的响应标头，用于设置其登录状态，这意味着是否有任何用户在当前浏览器上登录到IdP。
+  - : 由联合身份提供者（IdP）发送的响应标头，用于设置其登录状态，这意味着是否有任何用户在当前浏览器上登录到 IdP。
     这由浏览器存储，并用于 [FedCM API](/zh-CN/docs/Web/API/FedCM_API)。
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1) 标头字段传达交换的签名列表，每个签名都附有有关如何确定签名的权限和刷新该签名的信息。
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) 标头字段标识要包含在签名中的响应标头字段的有序列表。
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
-  - : 提供URL列表，指向[推测规则](/zh-CN/docs/Web/API/Speculation_Rules_API)的 JSON 定义资源。当响应是 HTML 文档时，这些规则将被添加到文档的推测规则集中。
+  - : 提供 URL 列表，指向[推测规则](/zh-CN/docs/Web/API/Speculation_Rules_API)的 JSON 定义资源。当响应是 HTML 文档时，这些规则将被添加到文档的推测规则集中。
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/zh-CN/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.由导航目标设置，以选择使用各种高风险加载模式。例如，跨源、同站[预渲染](/zh-CN/docs/Web/API/Speculation_Rules_API#using_prerendering)需要 `Supports-Loading-Mode` 值为 `credentialed-prerender`。
 
