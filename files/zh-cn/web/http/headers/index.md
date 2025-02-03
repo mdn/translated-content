@@ -88,9 +88,9 @@ l10n:
 - {{HTTPHeader("Accept-Language")}}
   - : 通知希望服务器返回的人类语言。这是一个提示，不一定在用户的完全控制之下：服务器应该始终注意不要覆盖明确的用户选择（比如从下拉列表中选择一种语言）。
 - {{HTTPHeader("Accept-Patch")}}
-  - : *请求内容协商*响应标头，在{{HTTPMethod("PATCH")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+  - : *请求内容协商*响应标头，在 {{HTTPMethod("PATCH")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
 - {{HTTPHeader("Accept-Post")}}
-  - : *请求内容协商*响应标头，在{{HTTPMethod("POST")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
+  - : *请求内容协商*响应标头，在 {{HTTPMethod("POST")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
 
 ## 控制
 
@@ -136,7 +136,7 @@ l10n:
 - {{HTTPHeader("Content-Disposition")}}
   - : 指示传输的资源是否应内联显示（没有标头的默认行为），或者是否应像下载一样处理并且浏览器应显示“另存为”对话框。
 
-## Integrity digests
+## 完整性摘要
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
   - : 提供 HTTP 消息中构建的字节流（消息内容）的{{Glossary("digest", "摘要")}}，依赖于 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}}。
@@ -145,10 +145,10 @@ l10n:
     不同于 {{HTTPHeader("Content-Digest")}}，这个摘要不考虑 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}}。
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : 表达希望使用 {{HTTPHeader("Content-Digest")}}。
-    类似于{{HTTPHeader("Want-Repr-Digest")}}，但是使用 `Content-`。
+    类似于 {{HTTPHeader("Want-Repr-Digest")}}，但是使用 `Content-`。
 - {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
   - : 表达希望使用 {{HTTPHeader("Repr-Digest")}}。
-    类似于{{HTTPHeader("Want-Content-Digest")}}，但是使用 `Repr-`。
+    类似于 {{HTTPHeader("Want-Content-Digest")}}，但是使用 `Repr-`。
 
 ## 消息主体信息
 
@@ -170,7 +170,7 @@ l10n:
 - {{HTTPHeader("Via")}}
   - : 由代理添加，包括正向和反向代理，并且可以出现在请求标头和响应标头中。
 
-## Range requests
+## 范围请求
 
 HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务器请求资源的一部分。范围请求可用于支持随机访问的媒体播放器、知道只需要大文件的一部分的数据工具以及允许用户暂停和恢复下载的下载管理器等应用程序。
 
@@ -223,11 +223,11 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : 允许 Web 开发人员通过监控而不是强制执行其效果来试验策略。这些由 {{Glossary("JSON")}} 文档组成的违规报告包含通过 HTTP `POST` 请求发送到指定的 URI。
 - {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
-  - : 允许网站选择报告和执行[证书透明度](zh-CN/docs/Web/Security/Certificate_Transparency)要求，以检测该网站使用的错误颁发的证书。
+  - : 允许网站选择报告和执行[证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，以检测该网站使用的错误颁发的证书。
 - {{HTTPHeader("Permissions-Policy")}}
   - : 提供一种机制来允许和拒绝在网站自己的框架和它嵌入的 {{htmlelement("iframe")}} 中使用浏览器特性。
   - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
-  - : 响应标头，允许网站所有者指定一个或多个用于接收错误的端点，如CSP违规报告、{{HTTPHeader("Cross-Origin-Opener-Policy")}} 报告或其他一般违规。
+  - : 响应标头，允许网站所有者指定一个或多个用于接收错误的端点，如 CSP 违规报告、{{HTTPHeader("Cross-Origin-Opener-Policy")}} 报告或其他一般违规。
 - {{HTTPHeader("Strict-Transport-Security")}}（{{Glossary("HSTS")}}）
   - : 强制通信使用 HTTPS 而不用 HTTP。
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
@@ -237,7 +237,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : 指示是否应允许浏览器在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("object")}} 中呈现页面。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : 跨域策略文件可能会授予客户端，例如 Adobe Acrobat 或 Apache Flex等，处理跨域数据的权限，否则这些客户端将因[同源（Same-Origin）策略](/zh-CN/docs/Web/Security/Same-origin_policy)而受到限制。`X-Permitted-Cross-Domain-Policies` 标头会覆盖该策略文件，此时客户端仍然阻止不希望的请求。
+  - : 跨域策略文件可能会授予客户端，例如 Adobe Acrobat 或 Apache Flex 等，处理跨域数据的权限，否则这些客户端将因[同源（Same-Origin）策略](/zh-CN/docs/Web/Security/Same-origin_policy)而受到限制。`X-Permitted-Cross-Domain-Policies` 标头会覆盖该策略文件，此时客户端仍然阻止不希望的请求。
 - {{HTTPHeader("X-Powered-By")}}
   - : 可能由托管环境或其他框架设置，并包含有关它们的信息，但不会为应用程序或其访问者提供任何用处。取消设置此标头以避免暴露潜在的漏洞。
 - {{HTTPHeader("X-XSS-Protection")}}
@@ -376,7 +376,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : 用户代理的底层操作系统版本。
 - {{HTTPHeader("Sec-CH-UA-WoW64")}} {{experimental_inline}}
-  - : 用户代理二进制文件是否在64位Windows上以32位模式运行。
+  - : 用户代理二进制文件是否在 64 位 Windows 上以 32 位模式运行。
 - {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} {{experimental_inline}}
   - : 用户的深色或浅色模式偏好。
 - {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
@@ -385,7 +385,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
   - : 请求标头指示用户代理对降低透明度的偏好。
 
 > [!NOTE]
-> 用户代理客户端提示在[围栏框架](/zh-CN/docs/Web/API/Fenced_frame_API)内不可用，因为它们依赖于[权限策略](/zh-US/docs/Web/HTTP/Permissions_Policy)委派，这可能会被用来泄露数据。
+> 用户代理客户端提示在[围栏框架](/zh-CN/docs/Web/API/Fenced_frame_API)内不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)委派，这可能会被用来泄露数据。
 
 #### 设备客户端提示
 
@@ -419,7 +419,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
   - : 请求标头，指示用户的跟踪偏好（Do Not Track）。
     为了支持全球隐私控制（GPC）而被弃用，其使用 {{HTTPHeader("Sec-GPC")}} 表头与服务器通信，使用{{domxref("navigator.globalPrivacyControl")}}与客户端通信。
 - {{HTTPHeader("Tk")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 响应标头，指示应用于相应请求的跟踪状态。与DNT结合使用。
+  - : 响应标头，指示应用于相应请求的跟踪状态。与 DNT 结合使用。
 - {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}} {{experimental_inline}}
   - : 表示用户是否同意网站或服务向第三方出售或共享其个人信息。
 
@@ -439,7 +439,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 主题 API 为开发人员提供了一种机制来实现诸如基于兴趣的广告（IBA）之类的用例。见[主题 API](/zh-CN/docs/Web/API/Topics_API)。
 
 - {{HTTPHeader("Observe-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
-  - : 响应头，用于标记从调用站点的URL推断出的感兴趣的主题，正如在对[启用主题 API 的功能](/zh-CN/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)生成的请求的响应中观察到的。
+  - : 响应头，用于标记从调用站点的 URL 推断出的感兴趣的主题，正如在对[启用主题 API 的功能](/zh-CN/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)生成的请求的响应中观察到的。
 - {{HTTPHeader("Sec-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
   - : 请求标头，为当前用户和相关请求发送选定的主题，广告技术平台使用这些主题来选择要显示的个性化广告。
 
@@ -450,16 +450,16 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : 指示请求已在 TLS 早期数据中传送。
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
-  - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
-    This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
+  - : 由联合身份提供者（IdP）发送的响应标头，用于设置其登录状态，这意味着是否有任何用户在当前浏览器上登录到IdP。
+    这由浏览器存储，并用于 [FedCM API](/zh-CN/docs/Web/API/FedCM_API)。
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1) 标头字段传达交换的签名列表，每个签名都附有有关如何确定签名的权限和刷新该签名的信息。
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) 标头字段标识要包含在签名中的响应标头字段的有序列表。
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
-  - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
+  - : 提供URL列表，指向[推测规则](/zh-CN/docs/Web/API/Speculation_Rules_API)的 JSON 定义资源。当响应是 HTML 文档时，这些规则将被添加到文档的推测规则集中。
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
-  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
+  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/zh-CN/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.由导航目标设置，以选择使用各种高风险加载模式。例如，跨源、同站[预渲染](/zh-CN/docs/Web/API/Speculation_Rules_API#using_prerendering)需要 `Supports-Loading-Mode` 值为 `credentialed-prerender`。
 
 ## 非标准标头
 
@@ -472,7 +472,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : 控制 DNS 预取，这是一种浏览器主动对用户可能选择的链接以及文档引用的项目（包括图像、CSS、JavaScript 等）的 URL 执行域名解析的功能。
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP 标头用于指示如何在公共搜索引擎结果中对网页进行索引。标头实际上相当于`<meta name="robots" content="…">`。
+  - : [`X-Robots-Tag`](https://developers.google.cn/search/docs/crawling-indexing/robots-meta-tag) HTTP 标头用于指示如何在公共搜索引擎结果中对网页进行索引。标头实际上相当于 `<meta name="robots" content="…">`。
 
 ## 弃用的标头
 
