@@ -3,10 +3,10 @@ title: "Request: blob() メソッド"
 short-title: blob()
 slug: Web/API/Request/blob
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`blob()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、それを {{domxref("Blob")}} で解決するプロミスとして返します。
 
