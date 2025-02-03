@@ -90,9 +90,7 @@ l10n:
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 Esc 键将焦点从代码区移开（按 Tab 可插入制表符）。
-</p>
+<p class="a11y-label">按 Esc 键将焦点从代码区移开（按 Tab 可插入制表符）。</p>
 
 <textarea id="code" class="input" style="min-height: 200px; width: 95%">
 <h1>AlphaGo 李世乭五番棋</h1>
