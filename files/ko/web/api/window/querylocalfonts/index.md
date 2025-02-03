@@ -1,8 +1,6 @@
 ---
 title: "Window: queryLocalFonts() method"
 slug: Web/API/Window/queryLocalFonts
-status:
-  - experimental
 l10n:
   sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
 ---
@@ -19,7 +17,7 @@ l10n:
 queryLocalFonts(options)
 ```
 
-### 파라미터
+### 매개변수
 
 - `options` {{optional_inline}}
   - : 선택적인 설정 파라미터를 포함합니다. 현재는 하나의 속성이 정의되어 있습니다.
@@ -86,12 +84,12 @@ async function computeOutlineFormat() {
       postscriptNames: ["ComicSansMS"],
     });
     for (const fontData of availableFonts) {
-      // `blob()` returns a Blob containing valid and complete
-      // SFNT-wrapped font data.
+      // `blob()`은 유효하고 완전한 SFNT 래핑된 폰트 데이터를 포함하는
+      // Blob을 반환합니다.
       const sfnt = await fontData.blob();
-      // Slice out only the bytes we need: the first 4 bytes are the SFNT
-      // version info.
-      // Spec: https://learn.microsoft.com/ko/typography/opentype/spec/otff#organization-of-an-opentype-font
+      // 필요한 바이트만 잘라냅니다. 처음 4바이트는 SFNT
+      // 버전의 정보입니다.
+      // 명세: https://learn.microsoft.com/ko/typography/opentype/spec/otff#organization-of-an-opentype-font
       const sfntVersion = await sfnt.slice(0, 4).text();
 
       let outlineFormat = "UNKNOWN";
@@ -125,4 +123,4 @@ async function computeOutlineFormat() {
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
 - [로컬 폰트와 함께 향상된 타이포그래피 사용하기](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
-- {{cssxref("@font-face")}}[권한 정책](/ko/docs/Web/HTTP/Permissions_Policy)
+- {{cssxref("@font-face")}}
