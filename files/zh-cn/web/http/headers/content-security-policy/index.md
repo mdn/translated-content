@@ -2,7 +2,7 @@
 title: Content-Security-Policy (CSP)
 slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: 232dc9186a6d79d7e12b3000999ad026d63e995e
+  sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
 ---
 
 {{HTTPSidebar}}
@@ -269,7 +269,7 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 
 ### 'wasm-unsafe-eval'
 
-默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则页面不允许使用诸如 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/compileStreaming_static) 之类的函数编译 WebAssembly。
+默认情况下，如果 CSP 包含 `default-src` 或 `script-src` 指令，则页面不允许使用诸如 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) 之类的函数编译 WebAssembly。
 
 `wasm-unsafe-eval` 关键字可用于撤销此保护。这是比 `'unsafe-eval'` 更安全的替代方案，因为它不会启用 JavaScript 的一般计算。
 
@@ -305,7 +305,8 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 如果哈希值与内联事件处理程序属性值或 `style` 属性值的哈希值匹配，则允许代码执行。
 
-> [!WARNING] > `'unsafe-hashes'` 值是不安全的。
+> **警告：**
+> `'unsafe-hashes'` 值是不安全的。
 >
 > 特别是，攻击者可以将内联事件处理程序属性的内容注入到内联 `<script>` 元素中，以此实现攻击。例如，假设内联事件处理程序是：
 >
