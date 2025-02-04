@@ -1,6 +1,7 @@
 ---
 title: Floor
-slug: Web/XPath/Functions/floor
+slug: Web/XPath/Reference/Functions/floor
+original_slug: Web/XPath/Functions/floor
 ---
 
 {{XsltSidebar}}
