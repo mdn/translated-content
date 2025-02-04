@@ -18420,7 +18420,7 @@
       "osvaldobaeza"
     ]
   },
-  "Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video": {
+  "Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video": {
     "modified": "2019-03-23T22:46:14.015Z",
     "contributors": [
       "AzazelN28",
@@ -18779,7 +18779,17 @@
       "Jorolo"
     ]
   },
-  "Web/XPath/Axes": {
+  "Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript": {
+    "modified": "2019-05-08T19:05:57.937Z",
+    "contributors": [
+      "AlbertoPrado70",
+      "caber",
+      "chrisdavidmills",
+      "fscholz",
+      "joakku"
+    ]
+  },
+  "Web/XPath/Reference/Axes": {
     "modified": "2019-03-18T20:59:19.791Z",
     "contributors": [
       "SphinxKnight",
@@ -18789,14 +18799,14 @@
       "Cmayo"
     ]
   },
-  "Web/XPath/Functions": {
+  "Web/XPath/Reference/Functions": {
     "modified": "2019-03-23T22:09:03.742Z",
     "contributors": [
       "ExE-Boss",
       "Zoditu"
     ]
   },
-  "Web/XPath/Functions/contains": {
+  "Web/XPath/Reference/Functions/contains": {
     "modified": "2019-01-16T15:50:22.864Z",
     "contributors": [
       "ExE-Boss",
@@ -18804,7 +18814,7 @@
       "Cmayo"
     ]
   },
-  "Web/XPath/Functions/substring": {
+  "Web/XPath/Reference/Functions/substring": {
     "modified": "2019-01-16T15:50:01.578Z",
     "contributors": [
       "ExE-Boss",
@@ -18812,23 +18822,13 @@
       "Cmayo"
     ]
   },
-  "Web/XPath/Functions/true": {
+  "Web/XPath/Reference/Functions/true": {
     "modified": "2019-03-18T20:59:19.925Z",
     "contributors": [
       "SphinxKnight",
       "ExE-Boss",
       "Mgjbot",
       "Cmayo"
-    ]
-  },
-  "Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
-    "modified": "2019-05-08T19:05:57.937Z",
-    "contributors": [
-      "AlbertoPrado70",
-      "caber",
-      "chrisdavidmills",
-      "fscholz",
-      "joakku"
     ]
   },
   "Web/XSLT": {

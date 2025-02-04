@@ -1,6 +1,7 @@
 ---
 title: Introducción al uso de XPath en Javascript
-slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
+slug: Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
+original_slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 ---
 
 {{XsltSidebar}}

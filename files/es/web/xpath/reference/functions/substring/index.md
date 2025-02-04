@@ -1,6 +1,7 @@
 ---
 title: substring
-slug: Web/XPath/Functions/substring
+slug: Web/XPath/Reference/Functions/substring
+original_slug: Web/XPath/Functions/substring
 ---
 
 {{XsltSidebar}}{{ XsltRef() }}

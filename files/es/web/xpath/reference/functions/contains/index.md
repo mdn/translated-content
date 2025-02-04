@@ -1,6 +1,7 @@
 ---
 title: contains
-slug: Web/XPath/Functions/contains
+slug: Web/XPath/Reference/Functions/contains
+original_slug: Web/XPath/Functions/contains
 ---
 
 {{XsltSidebar}}{{ XsltRef() }}
