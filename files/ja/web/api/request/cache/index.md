@@ -3,10 +3,10 @@ title: "Request: cache プロパティ"
 short-title: cache
 slug: Web/API/Request/cache
 l10n:
-  sourceCommit: 74206b3f81736bac558470f36222544cc67ba9e2
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`cache`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストのキャッシュモードを保持します。リクエストがブラウザーの [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching) とどのように作用するかを制御します。
 

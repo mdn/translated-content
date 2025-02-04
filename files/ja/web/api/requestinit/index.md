@@ -2,12 +2,12 @@
 title: RequestInit
 slug: Web/API/RequestInit
 l10n:
-  sourceCommit: c0e43030605b6f12bc4d550c0d5b8bf8a633eff3
+  sourceCommit: 0ffc63a13598470ddb4a4d3281800eeb2bf6ae2b
 ---
 
 {{APIRef("Fetch API")}}
 
-**`RequestInit`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) の辞書で、フェッチリクエストを構成するのに使用する一連のオプションを表します。
+**`RequestInit`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) の辞書で、[フェッチリクエスト](/ja/docs/Web/API/Window/fetch)を構成するのに使用する一連のオプションを表します。
 
 `RequestInit` オブジェクトは {{domxref("Request.Request()", "Request()")}} コンストラクターに渡したり、直接 [`fetch()`](/ja/docs/Web/API/Window/fetch) 関数呼び出しに渡したりすることができます。
 
@@ -17,12 +17,12 @@ l10n:
 
 - `attributionReporting` {{optional_inline}} {{experimental_inline}}
 
-  - : このリクエストのレスポンスに JavaScript ベースの[属性ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[属性トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録できるようにしたいことを示します。`attributionReporting` は以下のプロパティを格納するオブジェクトです。
+  - : このリクエストのレスポンスに JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録できるようにしたいことを示します。`attributionReporting` は以下のプロパティを格納するオブジェクトです。
 
     - `eventSourceEligible`
-      - : 論理値。`true` に設定すると、このリクエストのレスポンスは属性ソースの登録の対象となります。`false` に設定すると、対象になりません。
+      - : 論理値。`true` に設定すると、このリクエストのレスポンスは帰属ソースの登録の対象となります。`false` に設定すると、対象になりません。
     - `triggerEligible`
-      - : 論理値。`true` に設定すると、このリクエストのレスポンスは属性トリガーの登録の対象となります。`false` に設定すると、対象になりません。
+      - : 論理値。`true` に設定すると、このリクエストのレスポンスは帰属トリガーの登録の対象となります。`false` に設定すると、対象になりません。
 
     詳しくは [Attribution Reporting API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
@@ -38,6 +38,7 @@ l10n:
     - {{domxref("FormData")}}
     - {{jsxref("TypedArray")}}
     - {{domxref("URLSearchParams")}}
+    - {{domxref("ReadableStream")}}
 
     詳しくは[本体の設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#本体の設定)を参照してください。
 
@@ -113,7 +114,7 @@ l10n:
 
     詳しくは[ヘッダーの設定](/ja/docs/Web/API/Fetch_API/Using_Fetch#ヘッダーの設定)を参照してください。
 
-- `integrity`
+- `integrity` {{optional_inline}}
 
   - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
 
@@ -128,9 +129,15 @@ l10n:
 
 - `keepalive` {{optional_inline}}
 
-  - : 論理値。`true` の場合、リクエストが完了する前にリクエストを行ったページがアンロードされても、ブラウザーはリクエストを中止しません。これにより、セッションの終わりにアナリティクスを送信するときに、{{domxref("Navigator.sendBeacon()")}} の代わりとしてフェッチリクエストを機能させることができます。
+  - : 論理値。
+    `true` に設定すると、リクエストが完全に完了する前にリクエストを開始したページが読み込まれなくなった場合でも、関連付けられたリクエストが中止されなくなります。
+    これにより、ユーザーがページから離れたり閉じたりした場合でも、 {{domxref('Window.fetch','fetch()')}} リクエストによりセッションの終わりに分析データを送信することができます。
 
-    キープアライブリクエストの本体サイズは 64 キロバイトに制限されています。
+    これは、同じ目的で {{domxref("Navigator.sendBeacon()")}} を使用するよりもいくつかの利点があります。
+    例えば、 [`POST`](/ja/docs/Web/HTTP/Methods/POST) 以外の HTTP メソッドを使用することができます。また、リクエストプロパティをカスタマイズしたり、フェッチのプロミス ({{jsxref("Promise")}}) の履行を通じて、サーバーレスポンスにアクセスしたりすることができます。
+    [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)でも利用可能です。
+
+    `keepalive` リクエストの本体サイズは 64 キロバイトに制限されています。
 
     既定値は `false` です。
 
@@ -142,18 +149,28 @@ l10n:
 
 - `mode` {{optional_inline}}
 
-  - : 以下の値のいずれかです。
+  - : オリジン間リクエストの動作を設定します。以下の値のいずれかです。
 
     - `same-origin`
-      - : 完全にオリジン間リクエストを許可しません。
+
+      - : オリジン間リクエストを許可しません。 `same-origin` リクエストが異なるオリジンに送信された場合、ネットワークエラーが発生します。
+
     - `cors`
-      - : このリクエストがオリジン間リクエストであった場合、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用します。
+
+      - : このリクエストがオリジン間リクエストであった場合、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用します。 {{glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}のみがレスポンスに公開されます。
+
     - `no-cors`
-      - : このリクエストは[単純リクエスト](/ja/docs/Web/HTTP/CORS#単純リクエスト)でなければならず、設定するヘッダーを {{glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}に制限し、メソッドを `GET`、`HEAD`、`POST` に制限します。
+
+      - : オリジン間リクエストで CORS を無効にします。このオプションには、次の制限があります。
+
+        - メソッドは `HEAD`、`GET`、`POST` のいずれかである必要があります。
+        - ヘッダーは {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}} のみですが、さらなる制約として {{httpheader("Range")}} ヘッダーも許可されません。これはサービスワーカーが追加したヘッダーにも適用されます。
+        - レスポンスは不透明となり、ヘッダーと本体は JavaScript から利用できず、{{domxref("Response.status", "ステータスコード", "", "nocode")}}は常に `0` になります。
+
+        `no-cors` の主な適用例はサービスワーカーです。 `no-cors` リクエストに対するレスポンスは JavaScript で読み取ることができませんが、サービスワーカーでキャッシュし、横取りしたフェッチリクエストに対するレスポンスとして使用することができます。この状況ではリクエストが成功したかどうかがわからないため、キャッシュされたレスポンスをネットワークから更新できるキャッシュ戦略を採用すべきです（例えば、[キャッシュ更新付きのキャッシュ優先](/ja/docs/Web/Progressive_web_apps/Guides/Caching#キャッシュ更新付きのキャッシュ優先)など）。
+
     - `navigate`
       - : HTML ナビゲーションでのみ使用します。`navigate` リクエストは文書間を移動するときにのみ作成されます。
-    - `websocket`
-      - : [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続を確立するときのみ使用します。
 
     詳しくは、[オリジン間リクエストを行う](/ja/docs/Web/API/Fetch_API/Using_Fetch#オリジン間リクエストを行う)を参照してください。
 
@@ -168,7 +185,8 @@ l10n:
     - `low`
       - : 同じ種類の他のリクエストと相対した、優先度の低いフェッチリクエスト。
     - `auto`
-      - : 同じ種類の他のリクエストに対するフェッチリクエストの優先度を自動的に決定します。
+      - : フェッチの優先度をユーザーが設定しません。
+        これは値を設定しない場合や無効な値が設定された場合に使用されます。
 
     既定値は `auto` です。
 
