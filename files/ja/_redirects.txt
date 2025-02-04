@@ -3856,7 +3856,7 @@
 /ja/docs/Web/Accessibility/Community	/ja/docs/Web/Accessibility
 /ja/docs/Web/Accessibility/FAQ	/ja/docs/Web/Accessibility
 /ja/docs/Web/Accessibility/Index	/ja/docs/Web/Accessibility
-/ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/conflicting/Web/Media/Guides/Audio_and_video_delivery
+/ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Media/Guides/Audio_and_video_delivery
 /ja/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ja/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /ja/docs/Web/Apps/Build/Manipulating_media/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
@@ -4247,9 +4247,9 @@
 /ja/docs/Web/Guide/API	/ja/docs/Web/API
 /ja/docs/Web/Guide/API/Gamepad	/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
-/ja/docs/Web/Guide/Audio_and_video_delivery	/ja/docs/conflicting/Web/Media/Guides/Audio_and_video_delivery
+/ja/docs/Web/Guide/Audio_and_video_delivery	/ja/docs/Web/Media/Guides/Audio_and_video_delivery
 /ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-/ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/conflicting/Web/Media/Guides/Audio_and_video_delivery
+/ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Media/Guides/Audio_and_video_delivery
 /ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /ja/docs/Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 /ja/docs/Web/Guide/Audio_and_video_manipulation	/ja/docs/Web/Media/Guides/Audio_and_video_manipulation
@@ -4913,7 +4913,7 @@
 /ja/docs/Web/Manifest/theme_color	/ja/docs/Web/Manifest/Reference/theme_color
 /ja/docs/Web/MathML/Attribute/Values	/ja/docs/Web/MathML/Values
 /ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
-/ja/docs/Web/Media/Audio_and_video_delivery	/ja/docs/conflicting/Web/Media/Guides/Audio_and_video_delivery
+/ja/docs/Web/Media/Audio_and_video_delivery	/ja/docs/Web/Media/Guides/Audio_and_video_delivery
 /ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ja/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources	/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
