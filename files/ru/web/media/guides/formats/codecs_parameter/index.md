@@ -1,7 +1,6 @@
 ---
 title: Параметр "codecs" для распространённых типов носителей
 slug: Web/Media/Guides/Formats/codecs_parameter
-original_slug: Web/Media/Formats/codecs_parameter
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
