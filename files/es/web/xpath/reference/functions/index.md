@@ -1,6 +1,7 @@
 ---
 title: Funciones
-slug: Web/XPath/Functions
+slug: Web/XPath/Reference/Functions
+original_slug: Web/XPath/Functions
 ---
 
 {{XsltSidebar}}

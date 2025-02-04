@@ -1,6 +1,7 @@
 ---
 title: Ejes
-slug: Web/XPath/Axes
+slug: Web/XPath/Reference/Axes
+original_slug: Web/XPath/Axes
 l10n:
   sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
 ---
