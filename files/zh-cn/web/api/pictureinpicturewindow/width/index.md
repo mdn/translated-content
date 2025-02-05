@@ -2,7 +2,7 @@
 title: PictureInPictureWindow：width 属性
 slug: Web/API/PictureInPictureWindow/width
 l10n:
-  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
+  sourceCommit: 5e3c69527de87e8ff9407de62e919db9254f0627
 ---
 
 {{APIRef("Picture-in-Picture API")}}
