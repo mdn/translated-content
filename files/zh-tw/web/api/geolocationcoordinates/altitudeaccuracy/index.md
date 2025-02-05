@@ -7,11 +7,11 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`altitudeAccuracy`** 唯讀屬性是一個正 `double` 值，表示 `altitude` 的準確度，以公尺為單位，並具有 95% 的可信度。如果實作不支援測量高度，則此值為 `null`。
+{{domxref("GeolocationCoordinates")}} 介面的 **`altitudeAccuracy`** 唯讀屬性是一個正 `double` 值，表示以公尺表示的 `altitude` 的準確度，並具有 95% 的可信度。如果實作不支援測量高度，則此值為 `null`。
 
 ## 值
 
-一個正的 `double`，表示 `altitude` 的準確度，以公尺為單位，並具有 95% 的可信度。
+一個正的 `double`，表示以公尺表示的 `altitude` 的準確度，並具有 95% 的可信度。
 
 ## 規範
 
