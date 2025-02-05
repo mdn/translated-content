@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`toJSON()`** 方法是{{Glossary("Serialization","序列化工具")}}；它返回以 JSON 表示的 {{domxref("GeolocationCoordinates")}} 物件。
+{{domxref("GeolocationCoordinates")}} 介面的 **`toJSON()`** 方法是{{Glossary("Serialization","序列化器")}}；它返回以 JSON 表示的 {{domxref("GeolocationCoordinates")}} 物件。
 
 ## 語法
 
@@ -21,13 +21,13 @@ toJSON()
 
 ### 返回值
 
-一個 {{jsxref("JSON")}} 物件，它是序列化 {{domxref("GeolocationCoordinates")}} 物件。
+一個 {{jsxref("JSON")}} 物件，它是 {{domxref("GeolocationCoordinates")}} 物件的序列化表示。
 
 ## 範例
 
 ### 使用 `toJSON()` 方法
 
-在這個範例中，調用 `position.coords.toJSON()` 返回以 JSON 表示的 `GeolocationCoordinates` 物件。
+在這個範例中，調用 `position.coords.toJSON()` 返回 `GeolocationCoordinates` 物件的 JSON 表示。
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
