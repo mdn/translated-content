@@ -7,11 +7,11 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`accuracy`** 唯讀屬性是一個正 `double` 值，表示 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，以公尺為單位，並具有 95% 的可信度。
+{{domxref("GeolocationCoordinates")}} 介面的 **`accuracy`** 唯讀屬性是一個正 `double` 值，表示以公尺表示的 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，並具有 95% 的可信度。
 
 ## 值
 
-一個正的 `double`，表示 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，以公尺為單位，並具有 95% 的可信度。
+一個正的 `double`，表示以公尺表示的 {{domxref("GeolocationCoordinates.latitude")}} 和 {{domxref("GeolocationCoordinates.longitude")}} 屬性的準確度，並具有 95% 的可信度。
 
 ## 規範
 
@@ -23,5 +23,5 @@ l10n:
 
 ## 參見
 
-- [使用 Geolocation API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [使用地理位置 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationCoordinates")}}
