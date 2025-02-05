@@ -50,7 +50,7 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 ## 部署清單
 
-Web 應用程式清單是在 HTML 頁面中透過 `<link>` 元素部署的，該元素應該放置在文件的 `<head>` 區塊內：
+在 HTML 頁面中，Web 應用程式清單是透過 {{HTMLElement("link")}} 元素部署的，該元素應該放置在文件的 {{HTMLElement("head")}} 區塊內：
 
 ```html
 <link rel="manifest" href="manifest.json" />
