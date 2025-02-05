@@ -49,9 +49,7 @@ A segunda boa notícia é que, diferentemente de outras linguagens de programaç
 
 ### Tudo é número para mim
 
-Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), ou use o console simples incorporado abaixo, se preferir.
-
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/variables/index.html", '100%', 300)}}
+Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
 
 **[Abra em uma nova janela](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
