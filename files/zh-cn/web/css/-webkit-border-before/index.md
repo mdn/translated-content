@@ -46,9 +46,9 @@ l10n:
 
 ## 描述
 
-`-webkit-border-before` 属性根据元素的书写模式、方向性和文本方向映射到物理边框。它对应于 {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}} 或 {{cssxref("border-left")}} 属性，具体取决于为 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}}。
+`-webkit-border-before` 属性根据元素的书写模式、方向性和文本方向映射到物理边框。它对应于 {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}} 或 {{cssxref("border-left")}} 属性，具体取决于为 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 定义的值。
 
-它与 {{cssxref("-webkit-border-after")}}、{{cssxref("-webkit-border-start")}} 和 {{cssxref("-webkit-border-end")}}，这些属性定义了元素的其他边框。
+它与 {{cssxref("-webkit-border-after")}}、{{cssxref("-webkit-border-start")}} 和 {{cssxref("-webkit-border-end")}}（这些属性定义了元素的其他边框）相关。
 
 该属性的标准跟踪等效属性是 {{cssxref("border-block-start")}}。
 
@@ -65,7 +65,7 @@ l10n:
 
 ## 示例
 
-### 在垂直文本中应用边框
+### 对垂直文本应用边框
 
 #### HTML
 
@@ -92,7 +92,7 @@ div {
 
 #### 结果
 
-{{EmbedLiveSample("在垂直文本中应用边框", 140, 140)}}
+{{EmbedLiveSample("对垂直文本应用边框", 140, 140)}}
 
 ## 规范
 
