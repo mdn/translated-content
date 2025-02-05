@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-inner-spin-button"
+title: ::-webkit-inner-spin-button
 slug: Web/CSS/::-webkit-inner-spin-button
 l10n:
   sourceCommit: 13d979ec8bc1daf315fc6a17e38cb855cf2e4ef1

@@ -1,5 +1,5 @@
 ---
-title: "-moz-appearance (-webkit-appearance)"
+title: -moz-appearance (-webkit-appearance)
 slug: Web/CSS/appearance
 ---
 
