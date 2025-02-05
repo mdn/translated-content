@@ -1,5 +1,5 @@
 ---
-title: -webkit-line-clamp
+title: "-webkit-line-clamp"
 slug: Web/CSS/line-clamp
 original_slug: Web/CSS/-webkit-line-clamp
 l10n:
