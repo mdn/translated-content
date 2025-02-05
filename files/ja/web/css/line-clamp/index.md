@@ -1,6 +1,7 @@
 ---
-title: "-webkit-line-clamp"
-slug: Web/CSS/-webkit-line-clamp
+title: -webkit-line-clamp
+slug: Web/CSS/line-clamp
+original_slug: Web/CSS/-webkit-line-clamp
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
