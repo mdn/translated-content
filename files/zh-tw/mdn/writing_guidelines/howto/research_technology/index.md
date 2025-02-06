@@ -2,8 +2,6 @@
 title: 如何研究一項技術  
 short-title: 研究一項技術  
 slug: MDN/Writing_guidelines/Howto/Research_technology  
-page-type: mdn-writing-guide  
-sidebar: mdnsidebar
 ---
 
 本文提供了一些有用的資訊，說明在撰寫技術相關文件時應如何著手進行研究。
@@ -51,17 +49,17 @@ sidebar: mdnsidebar
 
 ## 建立需要撰寫或更新的頁面清單
 
-你需要從零開始撰寫或更新的不同頁面取決於你所撰寫的技術。請參考 [頁面類型](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) 以及與你所文件化技術相關的部分。你很可能也需要更新既有的文件，所以請在 MDN Web Docs 上搜尋與你所撰寫主題相關的頁面。
+你需要從零開始撰寫或更新的不同頁面取決於你所撰寫的技術。請參考 [頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types) 以及與你所文件化技術相關的部分。你很可能也需要更新既有的文件，所以請在 MDN Web Docs 上搜尋與你所撰寫主題相關的頁面。
 
 ### 側邊欄
 
-你撰寫的頁面的側邊欄也可能需要重新定義或更新。要了解是否需要這麼做以及如何進行，請參考 [側邊欄指南](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)。
+你撰寫的頁面的側邊欄也可能需要重新定義或更新。要了解是否需要這麼做以及如何進行，請參考 [側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)。
 
 ### 程式碼範例
 
 MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名的例子包括參考頁面中「試一試」區塊的互動範例，以及指南中需要的大型示範程式碼。如果你需要新增或修改這些版本庫中的內容，建議你在清單中做個記錄。
 
-關於 MDN Web Docs 所使用的不同類型程式碼範例，請參考 [程式碼範例](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) 文章。
+關於 MDN Web Docs 所使用的不同類型程式碼範例，請參考 [程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples) 文章。
 
 ### 範例
 
@@ -112,4 +110,4 @@ MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名�
 
 ## 建立頁面
 
-接下來，建立你所需要的頁面。要建立新頁面，請參考我們的指南 [如何建立、移動、刪除及編輯頁面](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。同時，也請參考我們的 [頁面類型](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) 指南，以瞭解哪些頁面範本可能對你有幫助。
+接下來，建立你所需要的頁面。要建立新頁面，請參考我們的指南 [如何建立、移動、刪除及編輯頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。同時，也請參考我們的 [頁面類型](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) 指南，以瞭解哪些頁面範本可能對你有幫助。
