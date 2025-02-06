@@ -9,7 +9,7 @@ l10n:
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
-在本文中，我們將討論需要哪些軟體來進行簡單的網頁開發，以及現在需要安裝哪些軟體，包括一個程式碼編輯器和一些現代 Web 瀏覽器。
+在本文中，我們將討論需要哪些軟體來進行簡單的 Web 開發，以及現在需要安裝哪些軟體，包括一個程式碼編輯器和一些現代 Web 瀏覽器。
 
 <table>
   <tbody>
