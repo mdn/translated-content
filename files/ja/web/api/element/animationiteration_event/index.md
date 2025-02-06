@@ -3,7 +3,7 @@ title: "Element: animationiteration イベント"
 short-title: animationiteration
 slug: Web/API/Element/animationiteration_event
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef}}
@@ -96,11 +96,11 @@ animated.onanimationiteration = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(100%) scaleX(3);
   }
@@ -170,5 +170,3 @@ applyAnimation.addEventListener("click", () => {
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationend_event", "animationend")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationiteration_event", "animationiteration")}}
-- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/animationiteration_event", "animationiteration")}}
