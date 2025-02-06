@@ -1,7 +1,7 @@
 ---
-title: 如何研究一項技術  
-short-title: 研究一項技術  
-slug: MDN/Writing_guidelines/Howto/Research_technology  
+title: 如何研究一項技術
+short-title: 研究一項技術
+slug: MDN/Writing_guidelines/Howto/Research_technology
 ---
 
 本文提供了一些有用的資訊，說明在撰寫技術相關文件時應如何著手進行研究。
