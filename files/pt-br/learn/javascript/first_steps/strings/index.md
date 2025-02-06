@@ -31,7 +31,7 @@ Muitos dos programas que temos visto até agora no curso está envolvido em algu
 
 ## Strings — O básico
 
-Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós vamos fornecer abaixo (você pode também [abrir isto no console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma guia ou janela separada, ou usar o [console do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se você preferir).
+Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>

@@ -29,7 +29,7 @@ Arrays são geralmente descritas como "lista de objetos"; elas são basicamente 
 
 Se nós não tivessemos arrays, teríamos que armazenar cada item em uma variável separada, então chamar o código para mostrar e adicionar separadamente cada item. Isto seria muito mais longo de escrever, menos eficiente e mais suscetível a erros. Se nós temos 10 itens para adicionar na fatura, isto é ruim o bastante, mas e se fosse 100 itens ou 1000? Nós vamos retornar a este exemplo mais tarde neste artigo.
 
-Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (você também pode [abrir este console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) em uma aba separada ou janela, ou usar o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+Como no artigo anterior, vamos aprender o básico de arrays introduzindo com alguns exemplos dentro de um console JavaScript. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>
