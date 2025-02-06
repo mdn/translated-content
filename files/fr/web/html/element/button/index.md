@@ -99,7 +99,7 @@ Un bouton de soumission avec l'attribut `formaction` défini, mais sans formulai
 
 Les éléments `<button>` sont beaucoup plus faciles à styliser que les éléments [`<input>`](/fr/docs/Web/HTML/Element/input). Vous pouvez ajouter du contenu HTML interne (pensez à `<i>`, `<br>`, ou même `<img>`), et utiliser les pseudo-éléments [`::after`](/fr/docs/Web/CSS/::after) et [`::before`](/fr/docs/Web/CSS/::before) pour un rendu complexe.
 
-Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `bouton`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
+Si vos boutons ne servent pas à soumettre des données de formulaire à un serveur, assurez-vous de définir leur attribut `type` à `button`. Sinon, ils tenteront de soumettre des données de formulaire et de charger la réponse (inexistante), détruisant éventuellement l'état actuel du document.
 
 Bien que `<button type="button">` n'ait pas de comportement par défaut, on peut utiliser des gestionnaires d'évènements scriptés pour déclencher certaines actions. Un bouton pourra déclencher des actions grâce à [JavaScript](/fr/docs/Learn/JavaScript), par exemple pour retirer un élément d'une liste.
 
