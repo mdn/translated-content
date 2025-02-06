@@ -110,4 +110,4 @@ MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名�
 
 ## 建立頁面
 
-接下來，建立你所需要的頁面。要建立新頁面，請參考我們的指南 [如何建立、移動、刪除及編輯頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。同時，也請參考我們的 [頁面類型](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) 指南，以瞭解哪些頁面範本可能對你有幫助。
+接下來，建立你所需要的頁面。要建立新頁面，請參考我們的指南 [如何建立、移動、刪除及編輯頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。同時，也請參考我們的 [頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types) 指南，以瞭解哪些頁面範本可能對你有幫助。
