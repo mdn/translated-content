@@ -256,12 +256,23 @@ HTML-таблицы следует использовать для таблич�
   </tr>
   <tr>
     <th>Chicken</th>
-    <td>Cock</td>
+    <td>Hen</td>
   </tr>
   <tr>
     <td>Rooster</td>
   </tr>
 </table>
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 Но результат не такой, как хотелось бы:
