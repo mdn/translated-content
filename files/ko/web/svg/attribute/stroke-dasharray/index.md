@@ -1,7 +1,6 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
-page-type: svg-attribute
 l10n:
   sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
 ---
