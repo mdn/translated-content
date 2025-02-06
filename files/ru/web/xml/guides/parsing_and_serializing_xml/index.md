@@ -1,6 +1,6 @@
 ---
 title: Прямая и обратная обработка XML
-slug: Web/XML/Parsing_and_serializing_XML
+slug: Web/XML/Guides/Parsing_and_serializing_XML
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/XML")}}
