@@ -20948,7 +20948,7 @@
       "humantom88"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
+  "Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
     "modified": "2019-03-18T20:51:42.020Z",
     "contributors": [
       "chrisdavidmills",
@@ -20956,7 +20956,7 @@
       "faafaafuu"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges": {
+  "Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges": {
     "modified": "2019-03-18T20:51:42.284Z",
     "contributors": [
       "chrisdavidmills",
@@ -20965,20 +20965,20 @@
       "wcoder"
     ]
   },
-  "Web/Media/Audio_and_video_manipulation": {
+  "Web/Media/Guides/Audio_and_video_manipulation": {
     "modified": "2020-08-20T10:18:57.056Z",
     "contributors": [
       "bogpok"
     ]
   },
-  "Web/Media/Formats/WebRTC_codecs": {
+  "Web/Media/Guides/Formats/WebRTC_codecs": {
     "modified": "2020-11-27T19:05:43.474Z",
     "contributors": [
       "nikolaifedorov",
       "mechtool"
     ]
   },
-  "Web/Media/Formats/codecs_parameter": {
+  "Web/Media/Guides/Formats/codecs_parameter": {
     "modified": "2020-03-16T06:34:09.362Z",
     "contributors": [
       "mechtool"
@@ -21825,7 +21825,7 @@
       "boxa6"
     ]
   },
-  "Web/XPath/Functions/floor": {
+  "Web/XPath/Reference/Functions/floor": {
     "modified": "2019-01-16T14:55:28.337Z",
     "contributors": [
       "ExE-Boss",

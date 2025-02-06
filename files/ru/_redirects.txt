@@ -737,8 +737,8 @@
 /ru/docs/Web/API/setInterval	/ru/docs/Web/API/Window/setInterval
 /ru/docs/Web/API/setTimeout	/ru/docs/Web/API/Window/setTimeout
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
-/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/CSS/:-moz-focusring	/ru/docs/Web/CSS/:focus-visible
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
@@ -844,9 +844,9 @@
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
 /ru/docs/Web/Guide/AJAX	/ru/docs/Learn_web_development/Core/Scripting/Network_requests
-/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
-/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
-/ru/docs/Web/Guide/Audio_and_video_manipulation	/ru/docs/Web/Media/Audio_and_video_manipulation
+/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/Guide/Audio_and_video_manipulation	/ru/docs/Web/Media/Guides/Audio_and_video_manipulation
 /ru/docs/Web/Guide/CSS/Block_formatting_context	/ru/docs/Web/CSS/CSS_display/Block_formatting_context
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
@@ -1076,7 +1076,12 @@
 /ru/docs/Web/MathML/Примеры	/ru/docs/Web/MathML/Examples
 /ru/docs/Web/MathML/Примеры/Deriving_the_Quadratic_Formula	/ru/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
 /ru/docs/Web/MathML/Примеры/MathML_Pythagorean_Theorem	/ru/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem
-/ru/docs/Web/Media/Formats/WebRTC_кодеки	/ru/docs/Web/Media/Formats/WebRTC_codecs
+/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
+/ru/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/Media/Audio_and_video_manipulation	/ru/docs/Web/Media/Guides/Audio_and_video_manipulation
+/ru/docs/Web/Media/Formats/WebRTC_codecs	/ru/docs/Web/Media/Guides/Formats/WebRTC_codecs
+/ru/docs/Web/Media/Formats/WebRTC_кодеки	/ru/docs/Web/Media/Guides/Formats/WebRTC_codecs
+/ru/docs/Web/Media/Formats/codecs_parameter	/ru/docs/Web/Media/Guides/Formats/codecs_parameter
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Installable_PWAs	/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
@@ -1115,7 +1120,8 @@
 /ru/docs/Web/Web_Components	/ru/docs/Web/API/Web_components
 /ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
-/ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
+/ru/docs/Web/XPath/Functions/floor	/ru/docs/Web/XPath/Reference/Functions/floor
+/ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Reference/Functions/floor
 /ru/docs/WebAssembly/C_to_Wasm	/ru/docs/WebAssembly/Guides/C_to_Wasm
 /ru/docs/WebAssembly/Concepts	/ru/docs/WebAssembly/Guides/Concepts
 /ru/docs/WebAssembly/Exported_functions	/ru/docs/WebAssembly/Guides/Exported_functions
@@ -1135,7 +1141,7 @@
 /ru/docs/WebSockets	/ru/docs/Web/API/WebSockets_API
 /ru/docs/WebSockets/Writing_WebSocket_client_applications	/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
-/ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
+/ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Reference/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
