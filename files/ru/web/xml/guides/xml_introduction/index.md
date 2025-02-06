@@ -1,7 +1,6 @@
 ---
 title: XML Введение
 slug: Web/XML/Guides/XML_introduction
-original_slug: Web/XML/XML_introduction
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Web/XML")}}

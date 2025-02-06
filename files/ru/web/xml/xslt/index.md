@@ -1,7 +1,6 @@
 ---
 title: XSLT
 slug: Web/XML/XSLT
-original_slug: Web/XSLT
 ---
 
 {{XsltSidebar}}
