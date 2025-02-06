@@ -2,8 +2,6 @@
 title: 如何用 Markdown 撰寫
 short-title: 用 Markdown 撰寫
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-page-type: mdn-writing-guide
-sidebar: mdnsidebar
 ---
 
 這一頁描述了我們如何在 MDN Web Docs 上使用 Markdown 撰寫文件。我們以 GitHub 風格 Markdown (GitHub-Flavored Markdown, GFM) 為基礎，並增加了一些擴展，以支援 MDN 上需要但 GFM 本身未能直接支援的功能。
@@ -98,7 +96,7 @@ GFM 規範定義了兩種基本類型的連結：
   - `django` - Django 範本
   - `svelte` - Svelte 範本
   - `handlebars` - Handlebars 範本
-  - `pug` - [Pug 範本](https://pugjs.org/api/getting-started.html)（可用於 [Express](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer)）
+  - `pug` - [Pug 範本](https://pugjs.org/api/getting-started.html)（可用於 [Express](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Template_primer)）
 - 其他
   - `plain` - 純文字
   - `diff` - Diff 檔案
@@ -114,7 +112,7 @@ const greeting = "I will get JavaScript syntax highlighting";
 ```
 ````
 
-如果你希望使用的語法高亮不在上述列表中，應將程式碼區塊標記為 `plain`。  
+如果你希望使用的語法高亮不在上述列表中，應將程式碼區塊標記為 `plain`。
 在這個過程中，也可以根據 [GitHub 上的討論](https://github.com/orgs/mdn/discussions/170#discussioncomment-3404366) 請求新增其他語言。
 
 ### 抑制 lint 檢查
@@ -581,7 +579,7 @@ GFM 表格語法的主要限制如下：
 
 ## 頁面摘要
 
-**頁面摘要**是頁面中第一個「內容」段落，也就是頁面前置資料（front matter）以及任何 [sidebar](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#sidebar_generation) 或 [page banner](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) 巨集後出現的第一段文字。
+**頁面摘要**是頁面中第一個「內容」段落，也就是頁面前置資料（front matter）以及任何 [sidebar](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#sidebar_generation) 或 [page banner](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#page_or_section_header_indicators) 巨集後出現的第一段文字。
 
 此摘要用於搜尋引擎最佳化（SEO），同時也會自動與頁面列表一起被某些巨集包含。因此，第一段應既簡潔又具資訊性。
 
@@ -605,4 +603,4 @@ The top and bottom margins have no effect on replaced inline elements, such as
 \{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
 ```
 
-更多有關巨集的資訊請參見 [使用巨集](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)。
+更多有關巨集的資訊請參見 [使用巨集](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Macros)。
