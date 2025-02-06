@@ -20,7 +20,7 @@ Las matrices se describen como "objetos tipo lista"; básicamente son objetos in
 
 Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variable separada, luego llamar al código que hace la impresión y agregarlo por separado para cada artículo. Esto sería mucho más largo de escribir, menos eficiente y más propenso a errores. si tuviéramos 10 elementos para agregar a la factura, ya sería suficientemente malo, pero ¿ qué pasa con 100 o 1000 artículos? Volveremos a este ejemplo más adelante en el artículo.
 
-Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes [abrir en consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separadas, o usar la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
+Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (o utilice la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
 <!doctype html>
