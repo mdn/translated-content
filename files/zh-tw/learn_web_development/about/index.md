@@ -96,7 +96,7 @@ l10n:
   <p>
     此課程基於
     <a href="https://developer.mozilla.org/zh-TW/curriculum/"
-      > MDN【學習該如何開發 Web】</a
+      >MDN【學習該如何開發 Web】</a
     >.
   </p>
   ```
