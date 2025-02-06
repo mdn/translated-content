@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Math.PI`** 静态数据属性表示圆的周长与直径的比值，其值约为 3.14159。
+**`Math.PI`** 静态数据属性表示圆的周长与直径的比例，其值约为 3.14159。
 
 {{EmbedInteractiveExample("pages/js/math-pi.html")}}
 
