@@ -57,4 +57,4 @@ jobs:
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          yarn content:legacy validate-redirects --strict
+          yarn content validate-redirects

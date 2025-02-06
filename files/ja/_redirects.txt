@@ -3896,6 +3896,7 @@
 /ja/docs/Web/CSS/-moz-zoom-in	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-line-clamp	/ja/docs/Web/CSS/line-clamp
 /ja/docs/Web/CSS/-webkit-mask-attachment	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-focusring	/ja/docs/Web/CSS/:focus-visible
