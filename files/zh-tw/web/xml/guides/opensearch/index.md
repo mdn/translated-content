@@ -1,11 +1,9 @@
 ---
 title: OpenSearch 描述格式
-slug: Web/OpenSearch
+slug: Web/XML/Guides/OpenSearch
 l10n:
-  sourceCommit: 62bf567f9ab13aaf07cf4d6e624d5eb33ce13987
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{AddonSidebar}}
 
 [**OpenSearch 描述格式**](https://github.com/dewitt/opensearch)可用於描述搜尋引擎的網頁介面。這允許網站為自身描述搜尋引擎，以便瀏覽器或其他用戶端應用程式可以使用該搜尋引擎。OpenSearch 受到（至少）Firefox、Edge、Safari 和 Chrome 的支援。（參見[參考資料](#參考資料)以獲取其他瀏覽器的文件連結。）
 

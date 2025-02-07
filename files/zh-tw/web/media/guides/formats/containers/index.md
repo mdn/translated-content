@@ -1,13 +1,11 @@
 ---
-title: Media container formats (file types)
-slug: Web/Media/Formats/Containers
+title: 媒體容器格式（檔案類型）
+slug: Web/Media/Guides/Formats/Containers
 ---
-
-{{QuickLinksWithSubpages("/zh-TW/docs/Web/Media")}}
 
 視訊與音訊的檔案格式被定義成兩個部分（當然如果一個檔案同時擁有影、音的話，那就有三個）：一個是音訊或/和視訊的編解碼器(codecs，由 compress 和 decompress 所組成的詞語)，另一個是媒體封裝的格式(media container format，即檔案類型)。在本次導覽中，我們將會看到網路上最常見的封裝格式，並介紹它們的基本規格、優點、限制，以及理想的使用情形。
 
-[網頁即時通訊(WebRTC)](/zh-TW/docs/Web/API/WebRTC_API)並不採用容器(container)，而是以 {{domxref("MediaStreamTrack")}} 物件來表示編碼過的影軌和音軌(一個物件表示一種媒體軌)，直接從一端串流到另一端。你可以參閱 [WebRTC 使用的編解碼器](/zh-TW/docs/Web/Media/Formats/WebRTC_codecs)來了解進行 WebRTC 時常用的編解碼器，以及瀏覽器對它們的相容性。
+[網頁即時通訊(WebRTC)](/zh-TW/docs/Web/API/WebRTC_API)並不採用容器(container)，而是以 {{domxref("MediaStreamTrack")}} 物件來表示編碼過的影軌和音軌(一個物件表示一種媒體軌)，直接從一端串流到另一端。你可以參閱 [WebRTC 使用的編解碼器](/zh-TW/docs/Web/Media/Guides/Formats/WebRTC_codecs)來了解進行 WebRTC 時常用的編解碼器，以及瀏覽器對它們的相容性。
 
 ## 常見的封裝格式
 
@@ -48,7 +46,7 @@ slug: Web/Media/Formats/Containers
 | `audio/3gpp2` | `video/3gpp2` |
 | `audio/3gp2`  | `video/3gp2`  |
 
-上表是基本的 3GP 媒體型態，依照使用的編解碼器的不同，可能還會有其他型態。此外，你可以在媒體型態字串中[添加 `codecs` 參數](/zh-TW/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF)來指明你的音軌和/或影軌所採用的編解碼器，也可以提供 組態(profile)、層級(level)等其他編解碼器的配置細節。
+上表是基本的 3GP 媒體型態，依照使用的編解碼器的不同，可能還會有其他型態。此外，你可以在媒體型態字串中[添加 `codecs` 參數](/zh-TW/docs/Web/Media/Guides/Formats/codecs_parameter#ISO-BMFF)來指明你的音軌和/或影軌所採用的編解碼器，也可以提供 組態(profile)、層級(level)等其他編解碼器的配置細節。
 
 <table class="standard-table">
   <caption>
@@ -395,7 +393,7 @@ MPEG-1 和 MPEG-2 最主要的差別在於媒體資料格式而非封裝格式�
 | ----------- | ----------- |
 | `audio/mp4` | `video/mp4` |
 
-上表是基本的 MPEG-4 媒體型態，依照使用的編解碼器的不同，可能還會有其他型態。此外，當指出 MPEG-4 媒體型態時 (`audio/mp4` 或 `video/mp4`)，你可以在媒體型態字串中[加上 `codecs` 參數](/zh-TW/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF)來指明你的音軌和/或影軌所採用的編解碼器，也可以提供組態(profile)、層級(level)等其他編解碼器的配置細節。
+上表是基本的 MPEG-4 媒體型態，依照使用的編解碼器的不同，可能還會有其他型態。此外，當指出 MPEG-4 媒體型態時 (`audio/mp4` 或 `video/mp4`)，你可以在媒體型態字串中[加上 `codecs` 參數](/zh-TW/docs/Web/Media/Guides/Formats/codecs_parameter#ISO-BMFF)來指明你的音軌和/或影軌所採用的編解碼器，也可以提供組態(profile)、層級(level)等其他編解碼器的配置細節。
 
 <table class="standard-table">
   <caption>
@@ -526,7 +524,7 @@ You can get more information about Ogg and its codecs in the [Theora Cookbook](h
 
 The `application/ogg` MIME type can be used when you don't necessarily know whether the media contains audio or video. If at all possible, you should use one of the specific types, but fall back to `application/ogg` if you don't know the content format or formats.
 
-You can also [add the `codecs` parameter](/zh-TW/docs/Web/Media/Formats/codecs_parameter#Ogg) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.
+You can also [add the `codecs` parameter](/zh-TW/docs/Web/Media/Guides/Formats/codecs_parameter#Ogg) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally further describe the track media formats.
 
 <table class="standard-table">
   <caption>
@@ -632,7 +630,7 @@ Because QuickTime support is, for all intents and purposes, primarily available 
 
 The `video/quicktime` MIME type is the fundamental type for the QuickTime media container. It's worth noting that QuickTime (the media framework on Mac operating systems) supports a wide variety of containers and codecs, so it actually supports many other MIME types.
 
-You can [add the `codecs` parameter](/zh-TW/docs/Web/Media/Formats/codecs_parameter#ISO-BMFF) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
+You can [add the `codecs` parameter](/zh-TW/docs/Web/Media/Guides/Formats/codecs_parameter#ISO-BMFF) to the MIME type string to indicate which codecs are used for the audio and/or video tracks, and to optionally provide details about the profile, level, and/or other codec configuration specifics.
 
 <table class="standard-table">
   <caption>
