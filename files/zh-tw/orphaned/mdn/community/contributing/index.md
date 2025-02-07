@@ -1,6 +1,7 @@
 ---
 title: 為 MDN 貢獻
-slug: MDN/Community/Contributing
+slug: orphaned/MDN/Community/Contributing
+original_slug: MDN/Community/Contributing
 ---
 
 {{MDNSidebar}}

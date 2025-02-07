@@ -1,6 +1,7 @@
 ---
 title: WebAssembly 的概念
-slug: WebAssembly/Concepts
+slug: WebAssembly/Guides/Concepts
+original_slug: WebAssembly/Concepts
 ---
 
 {{WebAssemblySidebar}}

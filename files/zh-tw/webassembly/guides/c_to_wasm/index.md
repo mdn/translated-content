@@ -1,6 +1,7 @@
 ---
 title: 從 C/C++ 編譯 WebAssembly
-slug: WebAssembly/C_to_Wasm
+slug: WebAssembly/Guides/C_to_Wasm
+original_slug: WebAssembly/C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
