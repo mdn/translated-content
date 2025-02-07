@@ -869,7 +869,7 @@
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/conflicting/Learn_web_development/Core/Structuring_content
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
-/ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Parsing_and_serializing_XML
+/ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Guides/Parsing_and_serializing_XML
 /ru/docs/Web/Guide/User_input_methods	/ru/docs/Learn_web_development/Extensions/Forms/User_input_methods
 /ru/docs/Web/Guide/WOFF	/ru/docs/Web/CSS/CSS_fonts/WOFF
 /ru/docs/Web/HTML/Applying_color	/ru/docs/Web/CSS/CSS_colors/Applying_color
@@ -1120,8 +1120,12 @@
 /ru/docs/Web/Web_Components	/ru/docs/Web/API/Web_components
 /ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
-/ru/docs/Web/XPath/Functions/floor	/ru/docs/Web/XPath/Reference/Functions/floor
-/ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Reference/Functions/floor
+/ru/docs/Web/XML/Parsing_and_serializing_XML	/ru/docs/Web/XML/Guides/Parsing_and_serializing_XML
+/ru/docs/Web/XML/XML_introduction	/ru/docs/Web/XML/Guides/XML_introduction
+/ru/docs/Web/XPath/Functions/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/Web/XPath/Reference/Functions/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/Web/XSLT	/ru/docs/Web/XML/XSLT
 /ru/docs/WebAssembly/C_to_Wasm	/ru/docs/WebAssembly/Guides/C_to_Wasm
 /ru/docs/WebAssembly/Concepts	/ru/docs/WebAssembly/Guides/Concepts
 /ru/docs/WebAssembly/Exported_functions	/ru/docs/WebAssembly/Guides/Exported_functions
@@ -1141,8 +1145,8 @@
 /ru/docs/WebSockets	/ru/docs/Web/API/WebSockets_API
 /ru/docs/WebSockets/Writing_WebSocket_client_applications	/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
-/ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Reference/Functions/floor
-/ru/docs/XSLT	/ru/docs/Web/XSLT
+/ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/XSLT	/ru/docs/Web/XML/XSLT
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_overview
