@@ -5659,6 +5659,42 @@
       "jswisher"
     ]
   },
+  "MDN/Guides": {
+    "modified": "2020-01-12T11:59:05.782Z",
+    "contributors": [
+      "mfuji09",
+      "snakada",
+      "silverskyvicto",
+      "dskmori",
+      "hideo54",
+      "szk0u",
+      "Uemmra3",
+      "DonburiDon",
+      "stingray",
+      "mantaroh",
+      "momoi",
+      "fucsm",
+      "ethertank",
+      "Sheppy"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2019-06-10T15:05:39.813Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "hamasaki",
+      "Uemmra3",
+      "higechira",
+      "takubokudori",
+      "horichiyo",
+      "t-cool",
+      "karaage-kun",
+      "taiyaki32lp64",
+      "YuichiKamiki",
+      "Mohawk"
+    ]
+  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
     "contributors": [
@@ -29700,25 +29736,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide": {
-    "modified": "2020-01-12T11:59:05.782Z",
-    "contributors": [
-      "mfuji09",
-      "snakada",
-      "silverskyvicto",
-      "dskmori",
-      "hideo54",
-      "szk0u",
-      "Uemmra3",
-      "DonburiDon",
-      "stingray",
-      "mantaroh",
-      "momoi",
-      "fucsm",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-11-24T06:54:13.469Z",
     "contributors": [
@@ -42741,23 +42758,6 @@
       "silverskyvicto",
       "mfuji09",
       "hashedhyphen"
-    ]
-  },
-  "Web/Tutorials": {
-    "modified": "2019-06-10T15:05:39.813Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "hamasaki",
-      "Uemmra3",
-      "higechira",
-      "takubokudori",
-      "horichiyo",
-      "t-cool",
-      "karaage-kun",
-      "taiyaki32lp64",
-      "YuichiKamiki",
-      "Mohawk"
     ]
   },
   "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {

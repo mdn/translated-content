@@ -1,6 +1,7 @@
 ---
 title: 開発者ガイド
-slug: Web/Guide
+slug: MDN/Guides
+original_slug: Web/Guide
 l10n:
   sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
