@@ -11898,209 +11898,6 @@
       "pekechis"
     ]
   },
-  "Web/EXSLT": {
-    "modified": "2019-03-18T20:59:19.473Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Mgjbot",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/exsl": {
-    "modified": "2019-01-16T15:21:39.795Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/exsl/node-set": {
-    "modified": "2019-03-18T20:59:21.647Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Mgjbot",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/exsl/object-type": {
-    "modified": "2019-03-23T23:51:27.324Z",
-    "contributors": [
-      "ExE-Boss",
-      "lajaso",
-      "Mgjbot",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/math": {
-    "modified": "2019-01-16T15:25:29.279Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/math/highest": {
-    "modified": "2019-03-18T20:59:18.500Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "lajaso",
-      "Mgjbot",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/math/lowest": {
-    "modified": "2019-03-18T20:59:17.805Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "lajaso",
-      "Mgjbot",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/math/max": {
-    "modified": "2019-03-18T20:59:18.804Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "lajaso",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/math/min": {
-    "modified": "2019-03-18T20:59:20.254Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "lajaso",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/regexp": {
-    "modified": "2019-01-16T15:23:22.952Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/regexp/match": {
-    "modified": "2019-03-18T20:59:21.504Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/regexp/replace": {
-    "modified": "2019-03-18T20:59:20.093Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/regexp/test": {
-    "modified": "2019-03-18T20:59:20.575Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/set": {
-    "modified": "2019-01-16T15:23:27.004Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/set/difference": {
-    "modified": "2019-03-18T20:59:18.953Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/set/distinct": {
-    "modified": "2019-03-18T20:59:22.067Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/set/has-same-node": {
-    "modified": "2019-03-18T20:59:20.421Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/set/intersection": {
-    "modified": "2019-03-18T20:59:18.660Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/set/leading": {
-    "modified": "2019-03-18T20:59:17.662Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "teoli",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/set/trailing": {
-    "modified": "2019-03-18T20:59:19.267Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "teoli",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/str": {
-    "modified": "2019-01-16T15:24:51.477Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/str/concat": {
-    "modified": "2019-03-18T20:59:20.717Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/str/split": {
-    "modified": "2019-03-18T20:59:17.504Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
-  "Web/EXSLT/str/tokenize": {
-    "modified": "2019-03-18T20:59:19.116Z",
-    "contributors": [
-      "SphinxKnight",
-      "ExE-Boss",
-      "Talisker"
-    ]
-  },
   "Web/Events": {
     "modified": "2019-03-23T23:21:27.399Z",
     "contributors": [
@@ -18427,19 +18224,6 @@
       "vltamara"
     ]
   },
-  "Web/OpenSearch": {
-    "modified": "2019-03-24T00:00:08.096Z",
-    "contributors": [
-      "teoli",
-      "Etrigan",
-      "tbusca",
-      "Nukeador",
-      "Rodrigoknascimento",
-      "Citora",
-      "Mgjbot",
-      "Fenomeno"
-    ]
-  },
   "Web/Performance": {
     "modified": "2019-04-04T19:28:41.844Z",
     "contributors": [
@@ -18751,13 +18535,229 @@
       "uclides"
     ]
   },
-  "Web/XML/Parsing_and_serializing_XML": {
+  "Web/XML/EXSLT": {
+    "modified": "2019-03-18T20:59:19.473Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Mgjbot",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/exsl": {
+    "modified": "2019-01-16T15:21:39.795Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/exsl/node-set": {
+    "modified": "2019-03-18T20:59:21.647Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Mgjbot",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/exsl/object-type": {
+    "modified": "2019-03-23T23:51:27.324Z",
+    "contributors": [
+      "ExE-Boss",
+      "lajaso",
+      "Mgjbot",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math": {
+    "modified": "2019-01-16T15:25:29.279Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math/highest": {
+    "modified": "2019-03-18T20:59:18.500Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "lajaso",
+      "Mgjbot",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math/lowest": {
+    "modified": "2019-03-18T20:59:17.805Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "lajaso",
+      "Mgjbot",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math/max": {
+    "modified": "2019-03-18T20:59:18.804Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "lajaso",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math/min": {
+    "modified": "2019-03-18T20:59:20.254Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "lajaso",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/regexp": {
+    "modified": "2019-01-16T15:23:22.952Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/regexp/match": {
+    "modified": "2019-03-18T20:59:21.504Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/regexp/replace": {
+    "modified": "2019-03-18T20:59:20.093Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/regexp/test": {
+    "modified": "2019-03-18T20:59:20.575Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set": {
+    "modified": "2019-01-16T15:23:27.004Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set/difference": {
+    "modified": "2019-03-18T20:59:18.953Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set/distinct": {
+    "modified": "2019-03-18T20:59:22.067Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set/has-same-node": {
+    "modified": "2019-03-18T20:59:20.421Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set/intersection": {
+    "modified": "2019-03-18T20:59:18.660Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set/leading": {
+    "modified": "2019-03-18T20:59:17.662Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "teoli",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/set/trailing": {
+    "modified": "2019-03-18T20:59:19.267Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "teoli",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/str": {
+    "modified": "2019-01-16T15:24:51.477Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/str/concat": {
+    "modified": "2019-03-18T20:59:20.717Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/str/split": {
+    "modified": "2019-03-18T20:59:17.504Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/str/tokenize": {
+    "modified": "2019-03-18T20:59:19.116Z",
+    "contributors": [
+      "SphinxKnight",
+      "ExE-Boss",
+      "Talisker"
+    ]
+  },
+  "Web/XML/Guides/OpenSearch": {
+    "modified": "2019-03-24T00:00:08.096Z",
+    "contributors": [
+      "teoli",
+      "Etrigan",
+      "tbusca",
+      "Nukeador",
+      "Rodrigoknascimento",
+      "Citora",
+      "Mgjbot",
+      "Fenomeno"
+    ]
+  },
+  "Web/XML/Guides/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:10:22.365Z",
     "contributors": [
       "FenixAlive"
     ]
   },
-  "Web/XML/XML_introduction": {
+  "Web/XML/Guides/XML_introduction": {
     "modified": "2019-07-25T12:38:17.842Z",
     "contributors": [
       "jugonzalez40",
@@ -18770,7 +18770,7 @@
       "Jorolo"
     ]
   },
-  "Web/XPath": {
+  "Web/XML/XPath": {
     "modified": "2019-01-16T14:32:30.886Z",
     "contributors": [
       "ExE-Boss",
@@ -18779,7 +18779,7 @@
       "Jorolo"
     ]
   },
-  "Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript": {
+  "Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-05-08T19:05:57.937Z",
     "contributors": [
       "AlbertoPrado70",
@@ -18789,7 +18789,7 @@
       "joakku"
     ]
   },
-  "Web/XPath/Reference/Axes": {
+  "Web/XML/XPath/Reference/Axes": {
     "modified": "2019-03-18T20:59:19.791Z",
     "contributors": [
       "SphinxKnight",
@@ -18799,14 +18799,14 @@
       "Cmayo"
     ]
   },
-  "Web/XPath/Reference/Functions": {
+  "Web/XML/XPath/Reference/Functions": {
     "modified": "2019-03-23T22:09:03.742Z",
     "contributors": [
       "ExE-Boss",
       "Zoditu"
     ]
   },
-  "Web/XPath/Reference/Functions/contains": {
+  "Web/XML/XPath/Reference/Functions/contains": {
     "modified": "2019-01-16T15:50:22.864Z",
     "contributors": [
       "ExE-Boss",
@@ -18814,7 +18814,7 @@
       "Cmayo"
     ]
   },
-  "Web/XPath/Reference/Functions/substring": {
+  "Web/XML/XPath/Reference/Functions/substring": {
     "modified": "2019-01-16T15:50:01.578Z",
     "contributors": [
       "ExE-Boss",
@@ -18822,7 +18822,7 @@
       "Cmayo"
     ]
   },
-  "Web/XPath/Reference/Functions/true": {
+  "Web/XML/XPath/Reference/Functions/true": {
     "modified": "2019-03-18T20:59:19.925Z",
     "contributors": [
       "SphinxKnight",
@@ -18831,7 +18831,7 @@
       "Cmayo"
     ]
   },
-  "Web/XSLT": {
+  "Web/XML/XSLT": {
     "modified": "2019-03-23T23:44:23.657Z",
     "contributors": [
       "chrisdavidmills",
@@ -18842,7 +18842,7 @@
       "Piltrafeta"
     ]
   },
-  "Web/XSLT/Guides/Transforming_XML_with_XSLT": {
+  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT": {
     "modified": "2019-01-16T16:11:59.562Z",
     "contributors": [
       "chrisdavidmills",
@@ -18854,7 +18854,7 @@
       "Nukeador"
     ]
   },
-  "Web/XSLT/Reference/Element": {
+  "Web/XML/XSLT/Reference/Element": {
     "modified": "2019-03-18T20:59:16.316Z",
     "contributors": [
       "SphinxKnight",
@@ -18865,7 +18865,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/apply-imports": {
+  "Web/XML/XSLT/Reference/Element/apply-imports": {
     "modified": "2019-03-18T20:59:15.544Z",
     "contributors": [
       "SphinxKnight",
@@ -18874,7 +18874,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/apply-templates": {
+  "Web/XML/XSLT/Reference/Element/apply-templates": {
     "modified": "2019-03-18T20:59:18.352Z",
     "contributors": [
       "SphinxKnight",
@@ -18883,7 +18883,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/attribute": {
+  "Web/XML/XSLT/Reference/Element/attribute": {
     "modified": "2019-03-18T20:59:20.857Z",
     "contributors": [
       "SphinxKnight",
@@ -18892,7 +18892,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/attribute-set": {
+  "Web/XML/XSLT/Reference/Element/attribute-set": {
     "modified": "2019-03-18T20:59:20.997Z",
     "contributors": [
       "SphinxKnight",
@@ -18901,7 +18901,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/call-template": {
+  "Web/XML/XSLT/Reference/Element/call-template": {
     "modified": "2019-03-18T20:59:16.448Z",
     "contributors": [
       "SphinxKnight",
@@ -18910,7 +18910,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/choose": {
+  "Web/XML/XSLT/Reference/Element/choose": {
     "modified": "2019-03-18T20:59:21.136Z",
     "contributors": [
       "SphinxKnight",
@@ -18920,7 +18920,7 @@
       "Cmayo"
     ]
   },
-  "Web/XSLT/Reference/Element/comment": {
+  "Web/XML/XSLT/Reference/Element/comment": {
     "modified": "2019-03-18T20:59:15.680Z",
     "contributors": [
       "SphinxKnight",
@@ -18930,7 +18930,7 @@
       "Cmayo"
     ]
   },
-  "Web/XSLT/Reference/Element/copy": {
+  "Web/XML/XSLT/Reference/Element/copy": {
     "modified": "2019-03-18T20:59:16.879Z",
     "contributors": [
       "SphinxKnight",
@@ -18939,7 +18939,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/copy-of": {
+  "Web/XML/XSLT/Reference/Element/copy-of": {
     "modified": "2019-03-18T20:59:18.212Z",
     "contributors": [
       "SphinxKnight",
@@ -18948,7 +18948,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/decimal-format": {
+  "Web/XML/XSLT/Reference/Element/decimal-format": {
     "modified": "2019-03-18T20:59:17.054Z",
     "contributors": [
       "SphinxKnight",
@@ -18957,7 +18957,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/element": {
+  "Web/XML/XSLT/Reference/Element/element": {
     "modified": "2019-03-18T20:59:21.788Z",
     "contributors": [
       "SphinxKnight",
@@ -18967,7 +18967,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/fallback": {
+  "Web/XML/XSLT/Reference/Element/fallback": {
     "modified": "2019-03-18T20:59:15.971Z",
     "contributors": [
       "SphinxKnight",
@@ -18976,7 +18976,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/for-each": {
+  "Web/XML/XSLT/Reference/Element/for-each": {
     "modified": "2019-03-18T20:59:16.114Z",
     "contributors": [
       "SphinxKnight",
@@ -18985,7 +18985,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/if": {
+  "Web/XML/XSLT/Reference/Element/if": {
     "modified": "2019-03-18T20:59:17.200Z",
     "contributors": [
       "SphinxKnight",
@@ -18995,7 +18995,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/import": {
+  "Web/XML/XSLT/Reference/Element/import": {
     "modified": "2019-03-18T20:59:15.818Z",
     "contributors": [
       "SphinxKnight",
@@ -19004,7 +19004,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/include": {
+  "Web/XML/XSLT/Reference/Element/include": {
     "modified": "2019-03-18T20:59:17.940Z",
     "contributors": [
       "SphinxKnight",
@@ -19013,7 +19013,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/key": {
+  "Web/XML/XSLT/Reference/Element/key": {
     "modified": "2019-03-18T20:59:21.931Z",
     "contributors": [
       "SphinxKnight",
@@ -19022,7 +19022,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/message": {
+  "Web/XML/XSLT/Reference/Element/message": {
     "modified": "2019-03-18T20:59:16.585Z",
     "contributors": [
       "SphinxKnight",
@@ -19032,7 +19032,7 @@
       "Cmayo"
     ]
   },
-  "Web/XSLT/Reference/Element/namespace-alias": {
+  "Web/XML/XSLT/Reference/Element/namespace-alias": {
     "modified": "2019-03-18T20:59:19.621Z",
     "contributors": [
       "SphinxKnight",
@@ -19041,7 +19041,7 @@
       "ErickCastellanos"
     ]
   },
-  "Web/XSLT/Reference/Element/otherwise": {
+  "Web/XML/XSLT/Reference/Element/otherwise": {
     "modified": "2019-03-18T20:59:16.726Z",
     "contributors": [
       "SphinxKnight",
@@ -19051,7 +19051,7 @@
       "Cmayo"
     ]
   },
-  "Web/XSLT/Reference/Element/when": {
+  "Web/XML/XSLT/Reference/Element/when": {
     "modified": "2019-03-18T20:59:18.078Z",
     "contributors": [
       "SphinxKnight",
@@ -19061,7 +19061,7 @@
       "Cmayo"
     ]
   },
-  "Web/XSLT/Reference/Element/with-param": {
+  "Web/XML/XSLT/Reference/Element/with-param": {
     "modified": "2019-03-18T20:59:17.348Z",
     "contributors": [
       "SphinxKnight",

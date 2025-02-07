@@ -1,5 +1,5 @@
 ---
-title: "::first-letter"
+title: ::first-letter
 slug: Web/CSS/::first-letter
 l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856
