@@ -70,6 +70,7 @@
 | Exceptions             | 异常         |                    |                                                                              |
 | Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
 | Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
+| Learning outcomes      | 学习成果     | 在学习区表格中使用 |                                                                              |
 | Objective              | 目标         | 在学习区表格中使用 |                                                                              |
 | Parameters             | 参数         |                    |                                                                              |
 | Prerequisites          | 前提         | 在学习区表格中使用 |                                                                              |

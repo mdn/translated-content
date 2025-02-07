@@ -1,5 +1,5 @@
 ---
-title: ":seeking"
+title: :seeking
 slug: Web/CSS/:seeking
 l10n:
   sourceCommit: c3be131cfd2c33822cb36b21cb4fca78980a6b4e

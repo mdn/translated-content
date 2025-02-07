@@ -2,7 +2,7 @@
 title: JavaScript モジュール
 slug: Web/JavaScript/Guide/Modules
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
@@ -13,13 +13,13 @@ l10n:
 
 JavaScript のプログラムはとても小さいものから始まりました。初期の用途は、必要に応じてウェブページにちょっとした対話的な機能を追加する独立したスクリプト処理がほとんどであったため、大きなスクリプトは通常必要ありませんでした。そして何年かが過ぎ、今や大量の JavaScript を持つ完全なアプリケーションをブラウザーで実行することはもちろん、JavaScript を他のコンテキスト（例えば [Node.js](/ja/docs/Glossary/Node.js)）で使うこともあります。
 
-複雑なプロジェクトでは、必要に応じて JavaScript プログラムを別個のモジュールに分割し、インポートできる仕組みが必要です。 Node.js は長年この機能を提供しており、モジュールの利用を可能にする JavaScript ライブラリーやフレームワークも数多くあります（例えば、他の [CommonJS](https://ja.wikipedia.org/wiki/CommonJS) や、[AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) ベースのモジュールシステムである [RequireJS](https://requirejs.org/)、 [Webpack](https://webpack.js.org/) や [Babel](https://babeljs.io/)）。
+複雑なプロジェクトでは、必要に応じて JavaScript プログラムを別個のモジュールに分割し、インポートできる仕組みが必要です。 Node.js は長年この機能を提供しており、モジュールの利用を可能にする JavaScript ライブラリーやフレームワークも数多くあります（例えば、他の [CommonJS](https://ja.wikipedia.org/wiki/CommonJS) や、[AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) ベースのモジュールシステムである [RequireJS](https://requirejs.org/)、 [webpack](https://webpack.js.org/) や [Babel](https://babeljs.io/)）。
 
-現行のブラウザーはすべて、トランスパイルを必要とせずにモジュール機能にネイティブで対応しています。これは良いことであるに違いありません。ブラウザーはモジュールの読み込みを最適化することができ、ライブラリーを使用してクライアント側で余分な処理や余分なラウンドトリップを行うよりも効率的です。しかし、 Webpack のようなバンドラーが不要になるわけではありません。バンドラーは、コードを合理的なサイズの塊に分割する作業に依然として優れており、また、ミニファイ、デッドコードの排除、ツリーシェイクなどの最適化も可能です。
+現行のブラウザーはすべて、トランスパイルを必要とせずにモジュール機能にネイティブで対応しています。これは良いことであるに違いありません。ブラウザーはモジュールの読み込みを最適化することができ、ライブラリーを使用してクライアント側で余分な処理や余分なラウンドトリップを行うよりも効率的です。しかし、 webpack のようなバンドラーが不要になるわけではありません。バンドラーは、コードを合理的なサイズの塊に分割する作業に依然として優れており、また、ミニファイ、デッドコードの排除、ツリーシェイクなどの最適化も可能です。
 
 ## 例の紹介
 
-モジュールの使い方を紹介するために、GitHub 上に[簡単な例](https://github.com/mdn/js-examples/tree/main/module-examples)を作りました。これらは、ウェブページに [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素を追加し、そのキャンバス上にいくつかの異なる図形（と、それに関するレポート）を描画する簡単なモジュールの例です。
+モジュールの使い方を紹介するために、GitHub 上に[一連の例](https://github.com/mdn/js-examples/tree/main/module-examples)を作りました。これらは、ウェブページに [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素を追加し、そのキャンバス上にいくつかの異なる図形（と、それに関するレポート）を描画するモジュールの例です。
 
 このような機能はあまり役に立ちませんが、モジュールの説明が明確になるように意図的に単純にしています。
 
@@ -779,7 +779,7 @@ squareBtn.addEventListener("click", () => {
 
 ## 最上位の await
 
-最上位の await は、モジュール内で利用できる機能です。つまり、`await` キーワードを使用することができます。これは、モジュールが大きな[非同期関数](/ja/docs/Learn/JavaScript/Asynchronous/Introducing)として動作できるようにするもので、親モジュールで使用する前にコードを評価できますが、兄弟モジュールの読み込みをブロックすることはしません。
+最上位の await は、モジュール内で利用できる機能です。つまり、`await` キーワードを使用することができます。これは、モジュールが大きな[非同期関数](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing)として動作できるようにするもので、親モジュールで使用する前にコードを評価できますが、兄弟モジュールの読み込みをブロックすることはしません。
 
 例を見ていきましょう。この節で記述するすべてのファイルとコードは [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) ディレクトリーにあり、前回までの例から拡張されています。
 
