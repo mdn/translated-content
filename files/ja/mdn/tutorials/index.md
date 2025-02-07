@@ -1,6 +1,7 @@
 ---
 title: チュートリアル
-slug: Web/Tutorials
+slug: MDN/Tutorials
+original_slug: Web/Tutorials
 l10n:
   sourceCommit: 8906ca75f60f205a6dd18fe3c824bbee228802b2
 ---
