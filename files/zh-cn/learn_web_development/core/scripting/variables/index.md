@@ -85,7 +85,7 @@ let myName;
 let myAge;
 ```
 
-在这里我们声明了两个变量 `myName` 和 `myAge`. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端. 此外，你也可以多声明几个变量。
+在这里我们声明了两个变量 `myName` 和 `myAge`. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端。此外，你也可以多声明几个变量。
 
 ```html hidden
 <!doctype html>
