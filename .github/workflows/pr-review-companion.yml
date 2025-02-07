@@ -18,7 +18,10 @@ on:
       - completed
 
 permissions:
+  # Required to download artifact.
   actions: read
+  # Required to post comment.
+  issues: write
 
 jobs:
   review:
