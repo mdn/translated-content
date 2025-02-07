@@ -5,7 +5,7 @@ slug: Web/API/AudioBuffer/getChannelData
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioBuffer") }} 接口的 getChannelData() 方法返回一{{domxref("Float32Array")}} ，其中包含与通道关联的 PCM 数据，通道参数定义 (0 表示第一个通道)。
+{{ domxref("AudioBuffer") }} 接口的 getChannelData() 方法返回一{{domxref("Float32Array")}} ，其中包含与通道关联的 PCM 数据，由通道参数定义 (0 表示第一个通道)。
 
 ## 语法
 
@@ -17,7 +17,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);
 ### 参数
 
 - channel
-  - : channel 属性是要获取特定通道数据的索引。0 代表第一个通道。如果索引值大于或等于{{domxref("AudioBuffer.numberOfChannels")}}, 会抛出一个索引大小异常（`INDEX_SIZE_ERR` ）的错误。
+  - : channel 属性是要获取特定通道数据的索引。0 代表第一个通道。如果 `channel` 索引值大于或等于{{domxref("AudioBuffer.numberOfChannels")}}, 会抛出 `INDEX_SIZE_ERR` 异常。
 
 ### 返回值
 
@@ -25,7 +25,7 @@ var nowBuffering = myArrayBuffer.getChannelData(channel);
 
 ## 例子
 
-在下例中，我们创建一个 2 秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它。评论应该会清楚的解释发生的事情。你也可以[实时运行代码](https://mdn.github.io/webaudio-examples/audio-buffer/)，或者[查看源代码](https://github.com/mdn/webaudio-examples)。
+在下例中，我们创建一个 2 秒钟的缓冲区，用白噪声填充它，然后通过{{domxref("AudioBufferSourceNode") }}来播放它。注释应该清楚地解释了正在做的事情。你也可以[实时运行代码](https://mdn.github.io/webaudio-examples/audio-buffer/)，或者[查看源代码](https://github.com/mdn/webaudio-examples)。
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
