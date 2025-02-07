@@ -1,10 +1,7 @@
 ---
 title: 将 WebAssembly 文本格式转换为 wasm
 slug: WebAssembly/Guides/Text_format_to_Wasm
-original_slug: WebAssembly/Text_format_to_Wasm
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly 有一个基于 S-表达式的文本表示形式，设计为在文本编辑器，浏览器开发人员工具等中暴露的一个中间形式。本文解释了它是如何工作的一些内容以及如何使用可用的工具把文本格式文件转换为.wasm 汇编格式文件。
 
@@ -59,7 +56,7 @@ wat2wasm simple.wat -v
 
 ## 参见
 
-- [理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)——详细解释文本格式语法。
-- [从 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_Wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。
+- [理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format)——详细解释文本格式语法。
+- [从 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/Guides/C_to_Wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。
 - 使用 WebAssembly 的 JavaScript API——如果你想探究关于 WebAssembly API 代码是如何工作的更多内容，可以阅读这篇文章。
 - [文本格式](https://github.com/WebAssembly/design/blob/master/TextFormat.md)——在 WebAssembly 的 GitHub 仓库上面关于文本格式的更多解释。

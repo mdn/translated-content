@@ -3,8 +3,6 @@ title: 社区讨论
 slug: MDN/Community/Discussions
 ---
 
-{{MDNSidebar}}
-
 在 MDN Web 文档，我们鼓励社区就与整个项目相关的主题开始或参与讨论。讨论按不同的主题进行分类。我们要求你将每次讨论集中在当前的主题上，而不是在一次讨论中涵盖多个主题。
 
 _注意_：`mdn-community/discussions` 不是报告问题的地方。对于在 MDN Web 文档中遇到的任何问题，最好是在[相关项目](https://github.com/mdn/)中创建议题。如果你对是否要创建议题或讨论有任何疑问，请考虑以下准则：

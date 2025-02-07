@@ -1,7 +1,6 @@
 ---
 title: background_color
 slug: Web/Manifest/Reference/background_color
-original_slug: Web/Manifest/background_color
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Manifest")}}{{SeeCompatTable}}

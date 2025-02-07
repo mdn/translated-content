@@ -1,10 +1,7 @@
 ---
 title: 编译 C/C++ 为 WebAssembly
 slug: WebAssembly/Guides/C_to_Wasm
-original_slug: WebAssembly/C_to_Wasm
 ---
-
-{{WebAssemblySidebar}}
 
 当你在用 C/C++ 之类的语言编写模块时，你可以使用 [Emscripten](https://emscripten.org/) 来将它编译到 WebAssembly。让我们来看看它是如何工作的。
 

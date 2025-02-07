@@ -1,10 +1,7 @@
 ---
 title: WebAssembly.CompileError()
 slug: WebAssembly/Reference/JavaScript_interface/CompileError
-original_slug: WebAssembly/JavaScript_interface/CompileError
 ---
-
-{{WebAssemblySidebar}}
 
 **`WebAssembly.CompileError()`**构造函数创建一个新的 WebAssembly `CompileError`对象，该对象表示 WebAssembly 解码或验证期间的错误。
 
@@ -79,6 +76,6 @@ try {
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
-- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -1,10 +1,7 @@
 ---
 title: 音频与视频处理
 slug: Web/Media/Guides/Audio_and_video_manipulation
-original_slug: Web/Media/Audio_and_video_manipulation
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
 Web 的迷人之处在于你可以结合各种技术创造出新的形式。拥有浏览器中的原生音频和视频意味着我们可在像 {{htmlelement("canvas")}}、[WebGL](/zh-CN/docs/Web/API/WebGL_API) 或 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 等技术的辅助下使用这类数据流，例如：为音频添加混响和压缩效果，或为视频添加灰度/暗色滤镜。本文将为你提供相关的参考。
 
@@ -386,7 +383,7 @@ context.listener.setPosition(0, 0, 0);
 ### 教程
 
 - [使用 Canvas 处理视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [HTML playbackRate 解释](/zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [HTML playbackRate 解释](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained)
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web 空间音效基础](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [将视频帧作为 WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#用视频帧作为纹理)（你也可以使用 [THREE.js](https://threejs.org/) WebGL 库（或其他库）来[实现这个效果](https://stemkoski.github.io/Three.js/Video.html)）

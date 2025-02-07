@@ -1,12 +1,14 @@
 ---
 title: line-clamp
 slug: Web/CSS/line-clamp
-original_slug: Web/CSS/-webkit-line-clamp
 ---
 
 {{CSSRef}}
 
-**`-webkit-line-clamp`** CSS 属性可以把{{Glossary("Block", "块容器")}}中的内容限制为指定的行数。
+**`line-clamp`** [CSS](/zh-CN/docs/Web/CSS) 属性可以把{{Glossary("Block", "块容器")}}中的内容限制为指定的行数。
+
+> [!NOTE]
+> 为了兼容旧版本，供应商前缀的 `-webkit-line-clamp` 属性仅在与 {{cssxref("display")}} 属性设置为 `-webkit-box` 或 `-webkit-inline-box` 且 {{cssxref("box-orient", "-webkit-box-orient")}} 属性设置为 `vertical` 时生效。尽管这些带前缀的属性已被废弃，但这三个属性的相互依赖关系是一种完全规范化的行为，并将继续得到支持。
 
 它只有在 {{cssxref("display")}} 属性设置成 `-webkit-box` 或者 `-webkit-inline-box` 并且 {{cssxref("box-orient")}} 属性设置成 `vertical`时才有效果。
 
@@ -14,25 +16,22 @@ original_slug: Web/CSS/-webkit-line-clamp
 
 当应用于锚（anchor）元素时，截断可以发生在文本中间，而不必在末尾。
 
-> [!NOTE]
-> 该属性最初在 WebKit 中实现的，但存在一些问题。由于需要支持旧版本的浏览器，该属性已在 [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) 中被标准化。[CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp) 规范还定义了一个 {{cssxref("line-clamp")}} 属性，用来代替此属性并避免一些问题。
-
 ## 语法
 
 ```css
 /* 关键词值 */
--webkit-line-clamp: none;
+line-clamp: none;
 
 /* 整数值 */
--webkit-line-clamp: 3;
--webkit-line-clamp: 10;
+line-clamp: 3;
+line-clamp: 10;
 
 /* 全局值 */
--webkit-line-clamp: inherit;
--webkit-line-clamp: initial;
--webkit-line-clamp: revert;
--webkit-line-clamp: revert-layer;
--webkit-line-clamp: unset;
+line-clamp: inherit;
+line-clamp: initial;
+line-clamp: revert;
+line-clamp: revert-layer;
+line-clamp: unset;
 ```
 
 - `none`
@@ -87,5 +86,4 @@ p {
 
 ## 参见
 
-- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
-- {{cssxref("line-clamp")}}
+- [行截断（截断多行文本）](https://css-tricks.com/line-clampin/)

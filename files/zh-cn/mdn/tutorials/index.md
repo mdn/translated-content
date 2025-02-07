@@ -1,7 +1,6 @@
 ---
 title: 教程
 slug: MDN/Tutorials
-original_slug: Web/Tutorials
 l10n:
   sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
 ---

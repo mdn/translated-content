@@ -1,16 +1,13 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/Reference/JavaScript_interface/Global
-original_slug: WebAssembly/JavaScript_interface/Global
 ---
-
-{{WebAssemblySidebar}}
 
 **`WebAssembly.Global`** 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问，跨越一个或多个 {{jsxref("WebAssembly.Module")}} 实例。他允许被多个模块动态连接。
 
 ## 构造函数
 
-- [`WebAssembly.Global()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Global/Global)
+- [`WebAssembly.Global()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Global/Global)
   - : 创建一个新的 `Global` 对象。
 
 ## Global 实例
@@ -73,9 +70,9 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 ```
 
 > [!NOTE]
-> 你可以查看 [GitHub 上运行的实时](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)示例；也可以查看[源代码](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)。
+> 你可以查看 [GitHub 上运行的实时](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)示例；也可以查看[源代码](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)。
 
-## 规格
+## 规范
 
 {{Specifications}}
 
@@ -85,7 +82,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
-- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
 - [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

@@ -1,10 +1,7 @@
 ---
 title: Web Audio playbackRate explained
 slug: Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
-original_slug: Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
 html 元素“audio”和“video”的 `playbackRate` 属性允许我们改变一段正在播放的网页音频或者视频的速度，或速率。本文详细解释了 `playbackRate`。
 

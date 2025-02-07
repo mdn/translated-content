@@ -14,7 +14,7 @@ original_slug: Web/XML/Parsing_and_serializing_XML
   - : 通过解析一个包含 XML 的字符串来构建 DOM 树，返回一个基于输入数据的适当的 {{domxref("XMLDocument")}} 或者是 {{domxref("Document")}}。
 - {{domxref("XMLHttpRequest")}}
   - : 从一个 URL 中加载内容；XML 的内容被作为一个带有内建 XML 的 DOM 树的 XML {{domxref("Document")}} 对象返回。
-- [XPath](/zh-CN/docs/Web/XPath)
+- [XPath](/zh-CN/docs/Web/XML/XPath)
   - : 一种创建包含 XML 文档特定部分的地址，并基于这些地址进行 XML 节点定位的字符串的技术。
 
 ## 创建一个 XML 文档
@@ -96,7 +96,7 @@ const docOuterHtml = document.documentElement.outerHTML;
 
 ## 参见
 
-- [XPath](/zh-CN/docs/Web/XPath)
+- [XPath](/zh-CN/docs/Web/XML/XPath)
 - {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("Document")}}、{{domxref("XMLDocument")}} 和 {{domxref("HTMLDocument")}}

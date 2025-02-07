@@ -4,8 +4,6 @@ slug: WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static
 original_slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
 ---
 
-{{WebAssemblySidebar}}
-
 **`WebAssembly.instantiateStreaming()`** 函数直接从流式底层源编译并实例化 WebAssembly 模块。这是加载 Wasm 代码的最有效、最优化的方式。
 
 > [!NOTE]
@@ -22,20 +20,20 @@ WebAssembly.instantiateStreaming(source, importObject)
 - `source`
   - : 一个 [`Response`](/zh-CN/docs/Web/API/Response) 对象或一个会兑现为 Response 的 promise，其表示你想要传输、编译和实例化的 Wasm 模块的底层源。
 - `importObject` {{optional_inline}}
-  - : 包含一些想要导入到新创建的 `Instance` 中的值的对象，例如函数或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory) 对象。每个已编译模块的声明导入必须有一个匹配属性，否则抛出 [`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/JavaScript_interface/LinkError) 异常。
+  - : 包含一些想要导入到新创建的 `Instance` 中的值的对象，例如函数或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象。每个已编译模块的声明导入必须有一个匹配属性，否则抛出 [`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 异常。
 
 ### 返回值
 
 一个 `Promise`，会兑现为一个包含两个属性的 `ResultObject`：
 
-- `module`：[`WebAssembly.Module`](/zh-CN/docs/WebAssembly/JavaScript_interface/Module) 对象，表示编译完成的 WebAssembly 模块。这个 `Module` 能够再次被实例化或通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 共享。
-- `instance`：[`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance) 对象，包含所有[导出的 WebAssembly 方法](/zh-CN/docs/WebAssembly/Exported_functions)。
+- `module`：[`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，表示编译完成的 WebAssembly 模块。这个 `Module` 能够再次被实例化或通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 共享。
+- `instance`：[`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance) 对象，包含所有[导出的 WebAssembly 方法](/zh-CN/docs/WebAssembly/Guides/Exported_functions)。
 
 ### 异常
 
 - 如果任意参数的类型或结构存在错误，则抛出 {{jsxref("TypeError")}}。
-- 如果操作失败，Promise 根据失败原因以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/JavaScript_interface/LinkError) 或
-  [`WebAssembly.RuntimeError`](/zh-CN/docs/WebAssembly/JavaScript_interface/RuntimeError) 拒绝。
+- 如果操作失败，Promise 根据失败原因以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 或
+  [`WebAssembly.RuntimeError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 拒绝。
 
 ## 示例
 
@@ -64,6 +62,6 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概述页
-- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Concepts)
-- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

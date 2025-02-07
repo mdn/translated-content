@@ -1,10 +1,7 @@
 ---
 title: MDN Web 文档仓库
-slug: orphaned/MDN/Community/Contributing/Our_repositories
-original_slug: MDN/Community/Contributing/Our_repositories
+slug: MDN/Community/Our_repositories
 ---
-
-{{MDNSidebar}}
 
 [MDN Web 文档](/)是一个复杂的项目，有很多不同的部分。熟悉项目的不同仓库（repository）是个好主意。本文档旨在帮助你找到在为 MDN Web 文档项目中不同部分做出贡献时可能需要的不同仓库。
 

@@ -1,12 +1,9 @@
 ---
 title: 在 HTML 中使用图像
 slug: Web/Media/Guides/Images
-original_slug: Web/Media/images
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 {{Glossary("HTML")}} {{HTMLElement("img")}} 元素可让你在 HTML 文档中嵌入图像，而 {{HTMLElement("picture")}} 元素则可启用[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)。在本指南中，你可以找到有关在网站中添加图像的资源链接。
 
@@ -34,7 +31,7 @@ l10n:
 
 这些文章为选择和配置图像类型提供了指导。
 
-- [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
+- [图片文件类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)
   - : 本指南介绍 web 浏览器通常支持的各种图像文件类型，包括它们各自的使用情况、功能和兼容性因素的详细信息。此外，本文还提供了针对特定情况选择最佳图像文件类型的指导。
 - [包含 `width` 和 `height` 属性以防止卡顿](/zh-CN/docs/Learn_web_development/Extensions/Performance/Multimedia#渲染策略：在加载图像时避免卡顿)
   - : 这就改变了浏览器加载图像的方式，使浏览器可以在加载图像前就计算出图像的宽高比，然后再利用宽高比预留图像的显示尺寸。

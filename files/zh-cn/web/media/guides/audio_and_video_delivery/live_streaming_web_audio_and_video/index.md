@@ -1,10 +1,7 @@
 ---
 title: 实时传输 Web 音频与视频
 slug: Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-original_slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
 实时流技术经常应用在一些现场输出的转播活动，类似体育活动、演唱会和更平常的电视播放及广播节目。这通常称为流媒体，实时流就是将媒体“实时”传输到计算机和设备的过程。这是一个包含多个元素的、非常复杂且较为新生的主题，所以我们会通过这篇文章，向你介绍它并让你知道如何开始。
 
@@ -82,7 +79,7 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 一些基于 HTTP 的实时流视频格式开始得到跨浏览器支持。
 
 > [!NOTE]
-> 你可以通过 [设置自适应流媒体源](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources) 找到在 web 中使用的 HLS 和 MPEG-DASH 的编码指南。
+> 你可以通过 [设置自适应流媒体源](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources) 找到在 web 中使用的 HLS 和 MPEG-DASH 的编码指南。
 
 ### MPEG-DASH
 
@@ -180,7 +177,7 @@ GStreamer 的插件如 [souphttpclientsink](https://gstreamer.freedesktop.org/do
 - [HLS 浏览器支持](https://jwplayer.com/html5/hls/)
 - [基于 HTTP Live Streaming 的 JavaScript 播放器](https://github.com/RReverser/mpegts)
 - [HTTP Live Streaming 的基础知识](https://larryjordan.com/articles/basics-of-http-live-streaming/)
-- [用于 HTML 5 视频的 DASH 自适应流](/zh-CN/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [用于 HTML 5 视频的 DASH 自适应流](/zh-CN/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video)
 - [HTTP 上的动态自适应流式传输 (MPEG-DASH)](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH 媒体源演示](https://dash-mse-test.appspot.com/media.html)
 - [DASH 参考客户端](https://dashif.org/reference/players/javascript/1.0.0/index.html)

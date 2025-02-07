@@ -1,14 +1,9 @@
 ---
-title: Introduction to using XPath in JavaScript
+title: 在 JavaScript 中使用 XPath 的简介
 slug: Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
-original_slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 ---
 
-{{XsltSidebar}}
-
-该篇文档描述了如何在扩展和网站内部通过 JavaScript 调用 [XPath](/zh-CN/XPath) 接口。Mozilla 实现了相当多的 [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)，意味着 Xpath 表达式已经可以在 HTML 和 XML 文档中使用。
-
-使用 XPath 的主要接口是 [document](/zh-CN/docs/Web/API/Document) 对象的 [evaluate](/zh-CN/docs/Web/API/Document/evaluate) 方法。
+该篇文档描述了如何在 JavaScript 中调用 [XPath](/zh-CN/docs/Web/XML/XPath) 接口。使用 XPath 的主要接口是 [document](/zh-CN/docs/Web/API/Document) 对象的 [evaluate](/zh-CN/docs/Web/API/Document/evaluate) 函数。
 
 ## document.evaluate
 
@@ -32,16 +27,16 @@ var xpathResult = document.evaluate(
 - `contextNode`：应评估 `xpathExpression` 的文档中的节点，包括其任何和所有子节点。document 节点是最常用的。
 - `namespaceResolver`：将传递包含在 `xpathExpression` 中的任何命名空间前缀的函数，它返回一个表示与该前缀关联的命名空间 URI 的字符串。这使得能够在 XPath 表达式中使用的前缀和文档中使用的可能不同的前缀之间进行转换。该转换函数可以是：
 
-  - 使用 [`XPathEvaluator`](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#node-specific_evaluator_function) 对象的 [`createNSResolver`](/zh-CN/docs/Web/API/Document/createNSResolver) 方法[创建](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#implementing_a_default_namespace_resolver)。
+  - 使用 [`XPathEvaluator`](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#node-specific_evaluator_function) 对象的 [`createNSResolver`](/zh-CN/docs/Web/API/Document/createNSResolver) 方法[创建](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#implementing_a_default_namespace_resolver)。
   - `null`。其可以用于 HTML 文档或者当不使用命名空间前缀时。注意，如果 `xpathExpression` 包含命名空间前缀，这将导致一个带有 `NAMESPACE_ERR` 的 `DOMException` 抛出。
-  - 用户定义的函数。有关详细信息，请参阅附录中的 [使用一个用户定义的命名空间解析器](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#implementing_a_user_defined_namespace_resolver) 部分。
+  - 用户定义的函数。有关详细信息，请参阅附录中的 [使用一个用户定义的命名空间解析器](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#implementing_a_user_defined_namespace_resolver) 部分。
 
-- `resultType`：指定作为评估结果返回的所需结果类型的[常数](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#xpathresult_defined_constants)。最常传递的常量是 `XPathResult.ANY_TYPE`，它将返回 XPath 表达式的结果作为最自然的类型。附录中有一个部分，其中包含[可用常数](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#xpathresult_defined_constants)的完整列表。它们在下面“[指定返回类型](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#specifying_the_return_type)”部分中进行解释。
+- `resultType`：指定作为评估结果返回的所需结果类型的[常数](#xpathresult_定义的常量)。最常传递的常量是 `XPathResult.ANY_TYPE`，它将返回 XPath 表达式的结果作为最自然的类型。附录中有一个部分，其中包含[可用常数](#xpathresult_定义的常量)的完整列表。它们在下面“[指定返回类型](#指定返回类型)”部分中进行解释。
 - `result`：如果指定了现有的 `XPathResult` 对象，它将被重用以返回结果。指定 `null` 将创建一个新的 `XPathResult` 对象。
 
 ### 返回值
 
-返回 `xpathResult`，它是 `resultType` 参数中[指定的](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#specifying_the_return_type)类型的 `XPathResult` 对象。`XPathResult` 在[这里](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xpath/nsIDOMXPathResult.idl)定义。
+返回 `xpathResult`，它是 `resultType` 参数中[指定的](#指定返回类型)类型的 `XPathResult` 对象。`XPathResult` 在[这里](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xpath/nsIDOMXPathResult.idl)定义。
 
 ### 实现默认的命名空间解析器
 
@@ -68,7 +63,7 @@ var nsResolver = xpEvaluator.createNSResolver(
 
 然后传递 `document.evaluate`，将 `nsResolver` 变量作为 `namespaceResolver` 参数。
 
-注意：XPath 定义不带前缀的 QNames，以仅匹配 null 命名空间中的元素。XPath 没有办法选择应用于常规元素引用的默认命名空间（例如，`p[@id='_myid']` 对应于 `xmlns='http://www.w3.org/1999/xhtml'`）。要匹配非命名空间中的默认元素，你必须使用如 `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_id']`（[这种方法](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#using_xpath_functions_to_reference_elements_with_a_default_namespace)适用于命名空间未知的动态 XPath），或者使用前缀名测试，并创建一个命名空间解析器将前缀映射到命名空间。如果你想采取后一种方法，阅读更多关于[如何创建一个用户定义的命名空间解析器](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#implementing_a_user_defined_namespace_resolver)。
+注意：XPath 定义不带前缀的 QNames，以仅匹配 null 命名空间中的元素。XPath 没有办法选择应用于常规元素引用的默认命名空间（例如，`p[@id='_myid']` 对应于 `xmlns='http://www.w3.org/1999/xhtml'`）。要匹配非命名空间中的默认元素，你必须使用如 `[namespace-uri()='http://www.w3.org/1999/xhtml' and name()='p' and @id='_id']`（[这种方法](#使用_xpath_函数引用具有默认命名空间的元素)适用于命名空间未知的动态 XPath），或者使用前缀名测试，并创建一个命名空间解析器将前缀映射到命名空间。如果你想采取后一种方法，阅读更多关于[实现用户定义的命名空间解析器](#实现用户定义的命名空间解析器)。
 
 ### 注意
 
@@ -76,15 +71,15 @@ var nsResolver = xpEvaluator.createNSResolver(
 
 ### 指定返回类型
 
-`document.evaluate` 返回的变量 `xpathResult` 可以由单个节点（[简单类型](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#simple_types)）或节点集合（[节点集类型](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#node-set_types)）组成。
+`document.evaluate` 返回的变量 `xpathResult` 可以由单个节点（[简单类型](#简单类型)）或节点集合（[节点集类型](#节点集类型)）组成。
 
 #### 简单类型
 
 当 `resultType` 中的所需结果类型指定为：
 
-- `NUMBER_TYPE` - a double
-- `STRING_TYPE` - a string
-- `BOOLEAN_TYPE` - a boolean
+- `NUMBER_TYPE`——双精度浮点数
+- `STRING_TYPE`——字符串
+- `BOOLEAN_TYPE`——布尔值
 
 我们通过分别访问 `XPathResult` 对象的以下属性来获取表达式的返回值。
 
@@ -94,7 +89,7 @@ var nsResolver = xpEvaluator.createNSResolver(
 
 ##### 示例
 
-以下使用 XPath 表达式 [`count(//p)`](/zh-CN/docs/Web/XPath/Functions/count) 来获取 HTML 文档中的 `<p>` 元素数：
+以下使用 XPath 表达式 [`count(//p)`](/zh-CN/docs/Web/XML/XPath/Reference/Functions/count) 来获取 HTML 文档中的 `<p>` 元素数：
 
 ```js
 var paragraphCount = document.evaluate(
@@ -115,7 +110,7 @@ alert(
 虽然 JavaScript 允许我们将数字转换为一个字符串进行显示，但 XPath 接口不会自动转换数字结果，如果 `stringValue` 属性被请求，所以下面的代码将**不**工作：
 
 ```js
-var paragraphCount = document.evaluate(
+const paragraphCount = document.evaluate(
   "count(//p)",
   document,
   null,
@@ -123,11 +118,7 @@ var paragraphCount = document.evaluate(
   null,
 );
 
-alert(
-  "This document contains " +
-    paragraphCount.stringValue +
-    " paragraph elements",
-);
+console.log(`改文档包含 ${paragraphCount.numberValue} 个段落元素`);
 ```
 
 相反，它将返回一个带有 `NS_DOM_TYPE_ERROR` 的异常。
@@ -136,11 +127,11 @@ alert(
 
 `XPathResult` 对象允许以 3 种主要不同类型返回节点集：
 
-- [Iterators](#iterators)
-- [Snapshots](#snapshots)
-- [First Nodes](#first_node)
+- [迭代器](#迭代器)
+- [快照](#快照)
+- [首个节点](#首个节点)
 
-##### Iterators
+##### 迭代器
 
 当 `resultType` 参数中的指定结果类型为：
 
@@ -174,7 +165,7 @@ try {
 }
 ```
 
-##### Snapshots
+##### 快照
 
 当 `resultType` 参数中的指定结果类型为：
 
@@ -199,7 +190,7 @@ for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
 }
 ```
 
-##### First Node
+##### 首个节点
 
 当 `resultType` 参数中的指定结果类型为：
 
@@ -231,7 +222,7 @@ dump(
 
 它可以是任何简单类型（`NUMBER_TYPE`，`STRING_TYPE`，`BOOLEAN_TYPE` ），**但**如果返回的结果类型是节点集，那么它将**只**是一个 `UNORDERED_NODE_ITERATOR_TYPE`。
 
-要在评估后确定类型，我们使用 `XPathResult` 对象的 `resultType` 属性。此属性的[常量](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#xpathresult_defined_constants)值在附录中定义。None Yet =====Any_Type Example===== \<pre> \</pre>
+要在评估后确定类型，我们使用 `XPathResult` 对象的 `resultType` 属性。此属性的[常量](#xpathresult_定义的常量)值在附录中定义。
 
 ## 示例
 
@@ -365,7 +356,7 @@ document.evaluate(
 
 #### 为 XML 文档实现默认命名空间
 
-如前面[实现默认命名空间解析器](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript#implementing_a_default_namespace_resolver)中所述，默认解析器不处理 XML 文档的默认命名空间。例如使用本文档：
+如前面[实现默认命名空间解析器](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#implementing_a_default_namespace_resolver)中所述，默认解析器不处理 XML 文档的默认命名空间。例如使用本文档：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -399,7 +390,7 @@ doc.evaluate("//myns:entry", doc, resolver, XPathResult.ANY_TYPE, null);
 
 如果希望在命名空间（像预期的那样）中提供灵活性，当发现命名空间元素或属性时不一定需要使用特定的前缀，必须使用特殊技术。
 
-虽然可以修改上述部分中的方法来测试命名空间元素，而不管选择的前缀（使用 [`local-name()`](/zh-CN/docs/Web/XPath/Functions/local-name) 结合 [`namespace-uri()`](/zh-CN/docs/Web/XPath/Functions/namespace-uri) 而不是 [`name()`](/zh-CN/docs/Web/XPath/Functions/name)），但是会发生更具挑战性的情况，如果希望在谓词中获取具有特定命名空间属性的元素（假设在 XPath 1.0 中没有与实现无关的变量）。
+虽然可以修改上述部分中的方法来测试命名空间元素，而不管选择的前缀（使用 [`local-name()`](/zh-CN/docs/Web/XML/XPath/Reference/Functions/local-name) 结合 [`namespace-uri()`](/zh-CN/docs/Web/XML/XPath/Reference/Functions/namespace-uri) 而不是 [`name()`](/zh-CN/docs/Web/XML/XPath/Reference/Functions/name)），但是会发生更具挑战性的情况，如果希望在谓词中获取具有特定命名空间属性的元素（假设在 XPath 1.0 中没有与实现无关的变量）。
 
 例如，可能尝试（不正确地）使用 namespaced 属性获取元素，如下所示： `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
@@ -499,11 +490,10 @@ var thisitemEl = thislevel.iterateNext();
 
 ## 参见
 
-- [Using XPath](/zh-CN/Using_XPath)
+- [XPath](/zh-CN/docs/Web/XML/XPath)
+- [XML 路径语言](https://www.xml.com/pub/a/2000/08/holman/index.html?page=2#xpath-info)源自[_什么是 XSLT？_](https://www.xml.com/pub/a/2000/08/holman/)（由 G. Ken Holman 撰写）
 
-## Original Document Information
+## 原文档信息
 
-- Based Upon Original Document [Mozilla XPath Tutorial](https://www-xray.ast.cam.ac.uk/~jgraham/mozilla/xpath-tutorial.html)
-- Original Source Author: James Graham.
-- Other Contributors: James Thompson.
-- Last Updated Date: 2006-3-25.
+- 基于 James Graham 撰写的源文档。
+- 其他贡献者：James Thompson。

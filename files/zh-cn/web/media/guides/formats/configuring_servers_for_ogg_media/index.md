@@ -1,12 +1,9 @@
 ---
 title: 为 Ogg 媒体配置服务器
 slug: Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media
-original_slug: Web/Media/Formats/Configuring_servers_for_Ogg_media
 l10n:
   sourceCommit: 4d12b3e4f9afb311f2656641260e42c0b6f8f4c6
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 HTML {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 标签无需用户安装任何插件或软件即可播放媒体文件。本指南包括了一些服务器配置修改，这些修改对于 web 服务器提供 Ogg 媒体文件是必要的。这些信息在遇到服务器未配置为可识别的其他媒体类型文件时也可能提供帮助。
 
@@ -27,7 +24,7 @@ AddType video/ogg .ogv
 AddType application/ogg .ogg
 ```
 
-在配置服务器以正确托管媒体时，[媒体容器格式](/zh-CN/docs/Web/Media/Formats/Containers)这篇文章尤其有帮助。
+在配置服务器以正确托管媒体时，[媒体容器格式](/zh-CN/docs/Web/Media/Guides/Formats/Containers)这篇文章尤其有帮助。
 
 ## 正确处理范围请求
 
@@ -93,4 +90,4 @@ Vorbis: serialno 0708996688
 ## 参见
 
 - [视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [常用媒体类型的编解码器](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
+- [常用媒体类型的编解码器](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)

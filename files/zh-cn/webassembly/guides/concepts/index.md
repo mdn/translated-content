@@ -1,12 +1,9 @@
 ---
 title: WebAssembly 概念
 slug: WebAssembly/Guides/Concepts
-original_slug: WebAssembly/Concepts
 l10n:
   sourceCommit: b9a41e258e656b57f41e8aaf88f93e51bb27974d
 ---
-
-{{WebAssemblySidebar}}
 
 本文解释了 WebAssembly 如何工作的概念，包括它的目标、它解决的问题以及它是如何在网络浏览器的渲染引擎中运行的。
 
@@ -48,11 +45,11 @@ WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来�
 
 随着 WebAssembly 出现在了浏览器中，我们前面提到的虚拟机将会加载和运行两种类型的代码——JavaScript 和 WebAssembly。
 
-不同类型的代码能够按需进行相互调用——[WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/JavaScript_interface) 将需要导出的 WebAssembly 代码封装成 JavaScript 函数，使其能够像常规 JavaScript 函数一样被调用，并且 WebAssembly 代码还可以导入并同步调用常规 JavaScript 函数。事实上，WebAssembly 代码的基本单元被称作模块，并且 WebAssembly 的模块在很多方面都和 ES 的模块是等价的。
+不同类型的代码能够按需进行相互调用——[WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface) 将需要导出的 WebAssembly 代码封装成 JavaScript 函数，使其能够像常规 JavaScript 函数一样被调用，并且 WebAssembly 代码还可以导入并同步调用常规 JavaScript 函数。事实上，WebAssembly 代码的基本单元被称作模块，并且 WebAssembly 的模块在很多方面都和 ES 的模块是等价的。
 
 ### WebAssembly 关键概念
 
-为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念在 [WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/JavaScript_interface) 中都存在一一映射。
+为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念在 [WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface) 中都存在一一映射。
 
 - **模块**：表示一个已经被浏览器编译为可执行机器码的 WebAssembly 二进制代码。一个模块是无状态的，并且像一个[二进制大对象](/zh-CN/docs/Web/API/Blob)（`Blob`）一样在 Window 和 Worker 之间进行共享（通过 [`postMessage()`](/zh-CN/docs/Web/API/MessagePort/postMessage) 函数）。一个模块能够像一个 ES 的模块一样声明导入和导出。
 - **内存**：一个可变长的 ArrayBuffer。本质上是连续的字节数组，WebAssembly 的低级内存存取指令可以对它进行读写操作。
@@ -106,7 +103,7 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 生成的 HTML 文档加载 JavaScript 胶水文件，并且将 stdout 输出到 {{htmlelement("textarea")}}。如果应用程序使用了 OpenGL，HTML 文档还会包含一个用来渲染目标的 {{htmlelement("canvas")}} 标签。修改 Emscripten 的输出文件并将其转换为需要的 Web App 是很容易的。
 
-你可以在 [emscripten.org](http://emscripten.org) 找到关于 Emscripten 的完整文档以及在[将 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_Wasm) 找到一个实现工具链并交叉编译你自己的 C/C++ 应用程序为 wasm 的指南。
+你可以在 [emscripten.org](http://emscripten.org) 找到关于 Emscripten 的完整文档以及在[将 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/Guides/C_to_Wasm) 找到一个实现工具链并交叉编译你自己的 C/C++ 应用程序为 wasm 的指南。
 
 ### 直接编写 WebAssembly 代码
 
@@ -114,11 +111,11 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 就像真实的汇编语言一样，WebAssembly 的二进制格式也有文本表示——两者之间 1:1 对应。你可以手工书写或者生成这种格式然后使用这些工具（[WebAssembly 文本转化为二进制工具](http://webassembly.org/getting-started/advanced-tools/)）中的任何一个把它转换为二进制格式。
 
-有关如何完成此操作的简单指南，请参阅我们的[转换 WebAssembly 文本格式为 Wasm](/zh-CN/docs/WebAssembly/Text_format_to_Wasm) 指南。
+有关如何完成此操作的简单指南，请参阅我们的[转换 WebAssembly 文本格式为 Wasm](/zh-CN/docs/WebAssembly/Guides/Text_format_to_Wasm) 指南。
 
 ### 编写以 WebAssembly 为目标的 Rust 代码
 
-在 Rust WebAssembly 工作组（Rust WebAssembly Working Group）的不懈努力下，编写 Rust 代码并编译到 WebAssembly 也成为可能。你可以在我们的[从 Rust 编译到 WebAssembly](/zh-CN/docs/WebAssembly/Rust_to_Wasm) 一文中开始安装必要的工具链，将 Rust 示例程序编译到 WebAssembly npm 包中，并在示例 Web 应用程序中使用。
+在 Rust WebAssembly 工作组（Rust WebAssembly Working Group）的不懈努力下，编写 Rust 代码并编译到 WebAssembly 也成为可能。你可以在我们的[从 Rust 编译到 WebAssembly](/zh-CN/docs/WebAssembly/Guides/Rust_to_Wasm) 一文中开始安装必要的工具链，将 Rust 示例程序编译到 WebAssembly npm 包中，并在示例 Web 应用程序中使用。
 
 ### 使用 AssemblyScript
 
@@ -132,5 +129,5 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 - [Mozilla Hacks 博客上关于 WebAssembly 的文章](https://hacks.mozilla.org/category/webassembly/)
 - [Mozilla Research 上关于 WebAssembly 的文章](https://research.mozilla.org/webassembly/)
-- [加载运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Loading_and_running)——探究如何把你自己的 WebAssembly 模块加载到网页中。
-- [使用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)——探究如何使用 WebAssembly 的 JavaScript API 的其他主要特性。
+- [加载运行 WebAssembly 代码](/zh-CN/docs/WebAssembly/Guides/Loading_and_running)——探究如何把你自己的 WebAssembly 模块加载到网页中。
+- [使用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)——探究如何使用 WebAssembly 的 JavaScript API 的其他主要特性。

@@ -1,16 +1,13 @@
 ---
 title: 媒体容器格式（文件类型）
 slug: Web/Media/Guides/Formats/Containers
-original_slug: Web/Media/Formats/Containers
 l10n:
   sourceCommit: d68dc0cf0f0caff5572ce83cb28df898ac815e40
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
-
 音频和视频媒体文件格式由两部分组成（当然，如果文件中同时包含音频和视频，则由三部分组成）：使用的音频和/或视频编解码器以及使用的媒体容器格式（或文件类型）。在本指南中，我们将介绍网络上最常用的容器格式，包括它们的基本规范、优点、限制和理想的使用案例。
 
-[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 完全不使用容器。相反，它使用 {{domxref("MediaStreamTrack")}} 对象代表每个音轨，直接将编码后的音频和视频音轨从一个对等点串流到另一个对等点。请参见 [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)，了解有关 WebRTC 通话常用编解码器的信息，以及有关 WebRTC 中编解码器支持的浏览器兼容性信息。
+[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 完全不使用容器。相反，它使用 {{domxref("MediaStreamTrack")}} 对象代表每个音轨，直接将编码后的音频和视频音轨从一个对等点串流到另一个对等点。请参见 [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Guides/Formats/WebRTC_codecs)，了解有关 WebRTC 通话常用编解码器的信息，以及有关 WebRTC 中编解码器支持的浏览器兼容性信息。
 
 ## 常见容器格式
 
@@ -96,7 +93,7 @@ l10n:
 | `audio/3gpp2` | `video/3gpp2` |
 | `audio/3gp2`  | `video/3gp2`  |
 
-这些 MIME 类型是 3GP 媒体容器的基本类型；根据使用的特定编解码器，还可能使用其他类型。此外，还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指明音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
+这些 MIME 类型是 3GP 媒体容器的基本类型；根据使用的特定编解码器，还可能使用其他类型。此外，还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指明音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
 
 <table class="standard-table">
   <caption>
@@ -403,13 +400,13 @@ MPEG-1 和 MPEG-2 的主要区别在于媒体数据格式而非容器格式。MP
 
 最初的 MPEG-4 第 1 部分文件格式于 1999 年推出；第 14 部分定义的第 2 版格式于 2003 年加入。MP4 文件格式源于 [ISO 基本媒体文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而后者直接源于 [Apple](https://www.apple.com/) 开发的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
 
-在指定 MPEG-4 媒体类型（`audio/mp4` 或 `video/mp4`）时，可在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指明音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
+在指定 MPEG-4 媒体类型（`audio/mp4` 或 `video/mp4`）时，可在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指明音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
 
 | 音频        | 视频        |
 | ----------- | ----------- |
 | `audio/mp4` | `video/mp4` |
 
-这些 MIME 类型是 MPEG-4 媒体容器的基本类型；根据容器中使用的特定编解码器，可能会使用其他 MIME 类型。此外，还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指示音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
+这些 MIME 类型是 MPEG-4 媒体容器的基本类型；根据容器中使用的特定编解码器，可能会使用其他 MIME 类型。此外，还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指示音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
 
 <table class="standard-table">
   <caption>
@@ -543,7 +540,7 @@ MPEG-1 和 MPEG-2 的主要区别在于媒体数据格式而非容器格式。MP
 
 当不一定知道媒体是否包含音频或视频时，可以使用 `application/ogg` MIME 类型。如果可能，应使用其中一种特定类型，但如果不知道内容格式，则应使用 `application/ogg` 类型。
 
-你还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)，以指示音频和/或视频轨道使用了哪些编解码器，并可选择进一步描述轨道媒体格式。
+你还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)，以指示音频和/或视频轨道使用了哪些编解码器，并可选择进一步描述轨道媒体格式。
 
 <table class="standard-table">
   <caption>
@@ -649,7 +646,7 @@ QuickTime 文件支持任何类型的基于时间的数据，包括音频和视�
 
 `video/Quicktime` MIME 类型是 QuickTime 媒体容器的基本类型。值得注意的是，QuickTime（Mac 操作系统上的媒体框架）支持多种容器和编解码器，因此它实际上支持许多其他 MIME 类型。
 
-你还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指示音频和/或视频轨道使用了哪些编解码器，并可选择进一步描述轨道媒体格式。
+你还可以在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指示音频和/或视频轨道使用了哪些编解码器，并可选择进一步描述轨道媒体格式。
 
 <table class="standard-table">
   <caption>

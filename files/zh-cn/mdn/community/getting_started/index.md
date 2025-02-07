@@ -1,10 +1,7 @@
 ---
 title: 初识 MDN Web 文档
 slug: MDN/Community/Getting_started
-original_slug: MDN/Community/Contributing/Getting_started
 ---
-
-{{MDNSidebar}}
 
 我们是一个由开发者、技术写作人员和学习者组成的开放社区，目标是为更好的 Web 构建资源，而无关品牌、浏览器或平台。任何人都可以贡献自己的力量，每一个为此做出贡献的人都会让我们更加强大。与我们一起，持续推动 Web 技术向更伟大的方向革新。让我们与你一起从这里开始。
 

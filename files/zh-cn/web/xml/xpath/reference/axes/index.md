@@ -4,11 +4,9 @@ slug: Web/XML/XPath/Reference/Axes
 original_slug: Web/XPath/Axes
 ---
 
-{{XsltSidebar}}
+[XPath](/zh-CN/docs/Web/XML/XPath) 规范中定义了 13 种不同的轴（axes）。轴表示与上下文节点的关系，并用于定位树上相对于该节点的节点。
 
-[XPath](/zh-CN/docs/Web/XPath) 规范中定义了 13 种不同的轴（axes）。轴表示与上下文节点的关系，并用于定位树上相对于该节点的节点。
-
-有关使用 XPath 表达式的更多信息，请参阅[使用 XSLT 转换 XML](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT)的[扩展阅读](/zh-CN/docs/Web/XSLT/Transforming_XML_with_XSLT#扩展阅读)部分，以及 [xpath 规范的“axes”部分](https://www.w3.org/TR/xpath-30/#axes)。
+有关使用 XPath 表达式的更多信息，请参阅[使用 XSLT 转换 XML](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)的[扩展阅读](/zh-CN/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#扩展阅读)部分，以及 [xpath 规范的“axes”部分](https://www.w3.org/TR/xpath-30/#axes)。
 
 - `ancestor`
   - : 表示上下文节点的所有祖先，从父节点开始，一直到根节点。

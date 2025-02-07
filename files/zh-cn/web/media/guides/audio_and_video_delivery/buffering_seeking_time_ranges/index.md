@@ -1,12 +1,9 @@
 ---
 title: 媒体缓冲、拖动和时间范围
 slug: Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
-original_slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 l10n:
   sourceCommit: 5aa89c0c0dd2aded106b8d6674fe5370e270f5e6
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
 有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不经过延迟直接播放是有用的——音频和视频的缓冲进度条就是一个很好的例子。本文讨论如何使用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges) 和媒体 API 的其他特性创建一个缓冲/拖动条。
 

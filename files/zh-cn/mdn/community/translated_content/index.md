@@ -1,12 +1,9 @@
 ---
 title: MDN Web 文档的本地化
 slug: MDN/Community/Translated_content
-original_slug: MDN/Community/Contributing/Translated_content
 l10n:
   sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
-
-{{MDNSidebar}}
 
 自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 GitHub 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。这是因为在我们的非英语本地化语言中，有很多内容未经维护且已经过时，我们希望将来能更好地管理这些内容。
 

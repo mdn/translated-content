@@ -1,10 +1,7 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/Reference/JavaScript_interface/instantiate_static
-original_slug: WebAssembly/JavaScript_interface/instantiate_static
 ---
-
-{{WebAssemblySidebar}}
 
 **`WebAssembly.instantiate()`** 允许你编译和实例化 WebAssembly 代码。这个方法有两个重载方式：
 
@@ -27,14 +24,14 @@ Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
 - _bufferSource_
   - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
 - _importObject_ {{optional_inline}}
-  - : 一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出 [WebAssembly.LinkError](/zh-CN/docs/WebAssembly/JavaScript_interface/LinkError)。
+  - : 一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出 [WebAssembly.LinkError](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
 
 #### 返回值
 
 解析为包含两个字段的 `ResultObject` 的一个 `Promise`:
 
 - `module`: 一个被编译好的 {{jsxref("WebAssembly.Module")}} 对象。这个模块可以被再次实例化，通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 被分享，或者缓存到 [IndexedDB](/zh-CN/docs/WebAssembly/Caching_modules)。
-- `instance`: 一个包含所有 [Exported WebAssembly functions](/zh-CN/docs/WebAssembly/Exported_functions)的{{jsxref("WebAssembly.Instance")}}对象。
+- `instance`: 一个包含所有 [Exported WebAssembly functions](/zh-CN/docs/WebAssembly/Guides/Exported_functions)的{{jsxref("WebAssembly.Instance")}}对象。
 
 #### 异常
 
@@ -70,7 +67,7 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ### 第一种重载示例
 
-使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的 [Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
+使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的 [Exported WebAssembly](/zh-CN/docs/WebAssembly/Guides/Exported_functions) 方法。
 
 ```js
 var importObject = {
@@ -93,11 +90,11 @@ fetch("simple.wasm")
 ```
 
 > [!NOTE]
-> 查看 GitHub（[在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)）的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) 库函数
+> 查看 GitHub（[在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)）的 [index.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index.html) 中一个相似的例子。
 
 ### 第二种重载示例
 
-下面的例子（查看我们 GitHub 的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) 例子，可在线演示）使用 `compile()` 方法编译了 simple.wasm 字节码，然后通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个线程 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
+下面的例子（查看我们 GitHub 的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 例子，可在线演示）使用 `compile()` 方法编译了 simple.wasm 字节码，然后通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个线程 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ```js
 var worker = new Worker("wasm_worker.js");
@@ -108,7 +105,7 @@ fetch("simple.wasm")
   .then((mod) => worker.postMessage(mod));
 ```
 
-在线程中 (查看 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)) 我们定义了一个导入对象供模块使用，然后设置了一个事件处理函数来接收主线程发来的模块。当模块被接收到后，我们使用{{jsxref("WebAssembly.instantiate()")}} 方法创建一个实例并且调用它从内部导出的函数。
+在线程中（查看 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js)）我们定义了一个导入对象供模块使用，然后设置了一个事件处理函数来接收主线程发来的模块。当模块被接收到后，我们使用{{jsxref("WebAssembly.instantiate()")}} 方法创建一个实例并且调用它从内部导出的函数。
 
 ```js
 var importObject = {
@@ -139,6 +136,6 @@ onmessage = function (e) {
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
-- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

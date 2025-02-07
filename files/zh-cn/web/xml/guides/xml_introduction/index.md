@@ -107,7 +107,7 @@ XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如�
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
-当然，也有其他更有效的方法去展示 XML，**Extensible Stylesheet Language Transformations**（[XSLT](/zh-CN/docs/Web/XSLT)）可以将 XML 转换为其他语言（例如 HTML）。这使得 XML 非常地有力。
+当然，也有其他更有效的方法去展示 XML，**Extensible Stylesheet Language Transformations**（[XSLT](/zh-CN/docs/Web/XML/XSLT)）可以将 XML 转换为其他语言（例如 HTML）。这使得 XML 非常地有力。
 
 ```xml
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>

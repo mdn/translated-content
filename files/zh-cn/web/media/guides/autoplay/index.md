@@ -1,10 +1,7 @@
 ---
 title: 媒体和 Web Audio API 的自动播放指南
 slug: Web/Media/Guides/Autoplay
-original_slug: Web/Media/Autoplay_guide
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio API 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
@@ -269,4 +266,4 @@ Permissions-Policy: autoplay 'none'
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
 - [视频和音频内容](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)（学习指南）
 - [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [跨浏览器音频基础](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [跨浏览器音频基础](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)

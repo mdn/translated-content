@@ -1,10 +1,7 @@
 ---
 title: 导出的 WebAssembly 函数
 slug: WebAssembly/Guides/Exported_functions
-original_slug: WebAssembly/Exported_functions
 ---
-
-{{WebAssemblySidebar}}
 
 导出 WebAssembly 函数的过程，其实就是指这些函数在 JavaScript 中如何用表示。本文更详细的介绍它们。
 
@@ -14,14 +11,14 @@ original_slug: WebAssembly/Exported_functions
 
 你可以通过两种方式来获得导出的 WebAssembly 函数：
 
-- 在一个已经存在的表格上调用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get)。
-- 通过 [`Instance.exports`](/zh-CN/docs/WebAssembly/JavaScript_interface/Instance/exports) 从一个 wasm 模块实例获取导出的函数。
+- 在一个已经存在的表格上调用 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Table/get)。
+- 通过 [`Instance.exports`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) 从一个 wasm 模块实例获取导出的函数。
 
 无论哪种方式，你得到的都是底层函数的相同封装。从 JavaScript 的角度来看，每一个 wasm 函数看起来也是一个 JavaScript 函数——但是，它们被封装在导出的 wasm 函数对象实例中，并且只有有限的方式来获取它们。
 
 ## 一个例子
 
-让我们看个例子从而让事情更清晰（你可以在 GitHub 上找到这个例子 [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html)；或者[实时运行](https://mdn.github.io/webassembly-examples/other-examples/table-set.html)然后查看 wasm [文本表示](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table.wat)）：
+让我们看个例子从而让事情更清晰（你可以在 GitHub 上找到这个例子 [table-set.html](https://github.com/mdn/webassembly-examples/blob/main/other-examples/table-set.html)；或者[实时运行](https://mdn.github.io/webassembly-examples/other-examples/table-set.html)然后查看 wasm [文本表示](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat)）：
 
 ```js
 const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
@@ -37,15 +34,15 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-在这里，我们使用 [`WebAssembly.Table`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table) 构造函数在 JavaScript 中创建了一个表格（`otherTable`），然后使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) 把 `table.wasm` 加载到我们的页面。
+在这里，我们使用 [`WebAssembly.Table`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Table) 构造函数在 JavaScript 中创建了一个表格（`otherTable`），然后使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 把 `table.wasm` 加载到我们的页面。
 
-然后，我们得到了从模块中导出的函数，通过 [`tbl.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 获取引用的函数并且把每一次的调用结果输出到控制台。接下来，我们使用 `set()` 使得 `otherTable` 表格包含了与 `tbl` 表格相同的函数。
+然后，我们得到了从模块中导出的函数，通过 [`tbl.get()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Table/get) 获取引用的函数并且把每一次的调用结果输出到控制台。接下来，我们使用 `set()` 使得 `otherTable` 表格包含了与 `tbl` 表格相同的函数。
 
 为了证明这一点，我们从 `otherTable` 中获取了这些引用并且也把他们的结果打印到控制台，结果是一样的。
 
 ## 它们确实是函数
 
-在前面的例子中，每次 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Table/get) 调用的返回值都是一个导出的 WebAssembly 函数——这正是我们一直在讨论的。
+在前面的例子中，每次 [`Table.prototype.get()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Table/get) 调用的返回值都是一个导出的 WebAssembly 函数——这正是我们一直在讨论的。
 
 它们确实是 JavaScript 函数也是对 WebAssembly 函数的封装。如果你把上面的例子加载到[支持 WebAssembly 的浏览器](/zh-CN/docs/WebAssembly#浏览器兼容性)中，然后在你的控制台运行下面几行代码：
 

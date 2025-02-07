@@ -1,10 +1,7 @@
 ---
 title: 图像文件类型与格式指南
 slug: Web/Media/Guides/Formats/Image_types
-original_slug: Web/Media/Formats/Image_types
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 在本指南中，我们将介绍 web 浏览器普遍支持的图像文件类型，并提供一些关于它们的信息与见解，帮助你为你的网站选择最合适的图像格式。
 
@@ -1453,9 +1450,9 @@ PNG 可能是最好的选择，但无损 WebP 的压缩效果可能更好。
 
 ## 参见
 
-- [媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
-- [web 视频编解码器指南](/zh-CN/docs/Web/Media/Formats/Video_codecs)
+- [web 视频编解码器指南](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)
 - {{Glossary("HTML")}} {{HTMLElement("img")}} 和 {{HTMLElement("picture")}} 元素
 - CSS {{cssxref("background-image")}} 属性
 - {{domxref("HTMLImageElement.Image()", "Image()")}} 构造函数和 {{domxref("HTMLImageElement")}} 接口
