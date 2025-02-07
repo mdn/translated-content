@@ -21,7 +21,7 @@ permissions:
   # Required to download artifact.
   actions: read
   # Required to post comment.
-  issues: write
+  pull-requests: write
 
 jobs:
   review:
