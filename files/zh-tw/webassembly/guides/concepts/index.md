@@ -1,10 +1,7 @@
 ---
 title: WebAssembly 的概念
 slug: WebAssembly/Guides/Concepts
-original_slug: WebAssembly/Concepts
 ---
-
-{{WebAssemblySidebar}}
 
 這篇文章解釋了這些概念背後 WebAssembly 是如何運作的，以及 WebAssembly 的目標、它能解決的問題和它是如何在瀏覽器 JavaScript 引擎中運作的。
 
@@ -46,11 +43,11 @@ WebAssembly 是一種有別於 JavaScript 的語言，但它并不是一種替�
 
 隨著 WebAssembly 出現在瀏覽器，我們稍早提及的虛擬機現在要加載並運行兩種程式碼——Javascript 與 WebAssembly。
 
-按照需求，兩種不同形態的語言要可以彼此互相呼叫。[WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/JavaScript_interface) 用 JavaScript 函式打包了輸出的 WebAssembly 程式碼，讓他可以被正常的呼叫。且 WebAssembly 可以被載入與同步的呼叫 JavaScript 函式。事實上，一個基本的 WebAssembly 單元被稱之爲模組，然後 WebAssembly 模組和 ES 模組在很多情況下是對稱的。
+按照需求，兩種不同形態的語言要可以彼此互相呼叫。[WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface) 用 JavaScript 函式打包了輸出的 WebAssembly 程式碼，讓他可以被正常的呼叫。且 WebAssembly 可以被載入與同步的呼叫 JavaScript 函式。事實上，一個基本的 WebAssembly 單元被稱之爲模組，然後 WebAssembly 模組和 ES 模組在很多情況下是對稱的。
 
 ### WebAssembly 關鍵觀念
 
-要理解 WebAssembly 是如何在瀏覽器運作的，有很多重要觀念需要理解。所有觀念都可以一對一的對應到 [WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/JavaScript_interface)。
+要理解 WebAssembly 是如何在瀏覽器運作的，有很多重要觀念需要理解。所有觀念都可以一對一的對應到 [WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface)。
 
 - **模組**（Module）：代表一個已經被瀏覽器編譯成可執行機器碼的 WebAssembly 二進制檔案。模組是無狀態的，因此可以像 `Blob` 一樣，透過 `postMessage()` 方法明確地在視窗和工作線程間共享。一個模組就像 ES 模組一樣宣告輸入和輸出。
 - **記憶體**（Memory）：一個可調整大小的 ArrayBuffer，包含 WebAssembly 低層記憶體訪問指令讀寫的線性位元組陣列。
@@ -105,7 +102,7 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 被生成的 HTML 文件會加載 JavaScript 膠水文件並將標準輸出寫入到一個 {{htmlelement("textarea")}}。如果應用程式是 OpenGL，那它也會包含一個 {{htmlelement("canvas")}} 元素來顯示畫面。修改 Emscripten 來修改輸出並將它改造成一個你需要的 Web 應用程式是很簡單的一件事。
 
-你可以找到完整的 Emscripten 文件在 [emscripten.org](https://emscripten.org/)，以及一個完整的指南來實作工具鏈以及編譯你自己的 C、C++ 應用程式成 Wasm，參見 [Compiling from C/C++ to WebAssembly](/zh-TW/docs/WebAssembly/C_to_Wasm)。
+你可以找到完整的 Emscripten 文件在 [emscripten.org](https://emscripten.org/)，以及一個完整的指南來實作工具鏈以及編譯你自己的 C、C++ 應用程式成 Wasm，參見 [Compiling from C/C++ to WebAssembly](/zh-TW/docs/WebAssembly/Guides/C_to_Wasm)。
 
 ### 直接撰寫 WebAssembly
 
@@ -113,11 +110,11 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 與實體的組合語言有一樣的潮流，WebAssembly 二進制格式具有文本表達式，兩者具備一對一的對應關係。你可以親手撰寫或生成這個格式并且可以藉由多種工具轉換成二進制格式，參見 [WebAssembly text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/)。
 
-來看一篇簡單的文章來説明你要如何[將 WebAssembly 文本格式轉換成 Wasm](/zh-TW/docs/WebAssembly/Text_format_to_Wasm)。
+來看一篇簡單的文章來説明你要如何[將 WebAssembly 文本格式轉換成 Wasm](/zh-TW/docs/WebAssembly/Guides/Text_format_to_Wasm)。
 
 ### 撰寫 Rust 指定目標 WebAssembly
 
-也有可能可以撰寫 Rust 的程式碼然後編譯成 WebAssembly，感謝 Rust Assembly 的工作團隊不懈的努力，你可以開始安裝必要工具鏈，編譯一個範例 Rust 程式成 WebAssembly 的 npm 包，然後在範例 Web 應用中使用它，參見 [Compiling from Rust to WebAssembly](/zh-TW/docs/WebAssembly/Rust_to_Wasm)。
+也有可能可以撰寫 Rust 的程式碼然後編譯成 WebAssembly，感謝 Rust Assembly 的工作團隊不懈的努力，你可以開始安裝必要工具鏈，編譯一個範例 Rust 程式成 WebAssembly 的 npm 包，然後在範例 Web 應用中使用它，參見 [Compiling from Rust to WebAssembly](/zh-TW/docs/WebAssembly/Guides/Rust_to_Wasm)。
 
 ### 使用 AssemblyScript
 
@@ -131,5 +128,5 @@ Emscripten 工具可以將任何 C、C++ 原始碼編譯成一個 Wasm 模組，
 
 - [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/)
-- [Loading and running WebAssembly code](/zh-TW/docs/WebAssembly/Loading_and_running)——一探究竟如何將 WebAssembly Code 載入 Web
-- [Using the WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/Using_the_JavaScript_API)——搞清楚如何使用其他 WebAssembly JavaScript API 的特性
+- [Loading and running WebAssembly code](/zh-TW/docs/WebAssembly/Guides/Loading_and_running)——一探究竟如何將 WebAssembly Code 載入 Web
+- [Using the WebAssembly JavaScript API](/zh-TW/docs/WebAssembly/Guides/Using_the_JavaScript_API)——搞清楚如何使用其他 WebAssembly JavaScript API 的特性

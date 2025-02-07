@@ -1,10 +1,7 @@
 ---
 title: 從 C/C++ 編譯 WebAssembly
 slug: WebAssembly/Guides/C_to_Wasm
-original_slug: WebAssembly/C_to_Wasm
 ---
-
-{{WebAssemblySidebar}}
 
 當你使用 C/C++ 之類的語言編寫模組時，你可以使用 [Emscripten](https://emscripten.org/) 等工具將它編譯成 WebAssembly。讓我們來看看它是如何做到的。
 

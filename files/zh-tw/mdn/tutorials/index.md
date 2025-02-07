@@ -1,7 +1,6 @@
 ---
 title: 教學
 slug: MDN/Tutorials
-original_slug: Web/Tutorials
 ---
 
 這個頁面提供了許多關於網路相關技術的說明及學習文件。無論你是正在打基礎的新手或有經驗的老手，相信在這個頁面你都能找到許多有用的資源。這些開發資源是由具有前瞻思維的公司及擁抱開放標準的開發者所提供，允許任何人翻譯它並以 Creative Commons 的條款釋出。
@@ -9,7 +8,7 @@ original_slug: Web/Tutorials
 ## Web 完全新手
 
 - [Web 新手上路](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)
-  - : 本系列文章簡介 web 開發 (web development) 是怎麼一回事。你將會設置所需要的工具、製作一個簡易的網頁，然後發表你的程式碼。
+  - : 本系列文章簡介 web 開發是怎麼一回事。你將會設置所需要的工具、製作一個簡易的網頁，然後發表你的程式碼。
 
 ## HTML 教學
 

@@ -1,7 +1,6 @@
 ---
 title: Web 開發者指引
 slug: MDN/Guides
-original_slug: Web/Guide
 ---
 
 這些文章提供了如何幫助你使用特定技術和 APIs 的資訊。
