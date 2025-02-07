@@ -1,11 +1,10 @@
 ---
 title: MDN 線上文件的在地化
-slug: MDN/Community/Contributing/Translated_content
+slug: MDN/Community/Translated_content
+original_slug: MDN/Community/Contributing/Translated_content
 l10n:
   sourceCommit: c7f070e3ea133365dc9bba78c88dde17aab4f066
 ---
-
-{{MDNSidebar}}
 
 自從 2020 年 12 月 14 日起，MDN 便改成在基於 GitHub 的新平臺 [Yari](https://github.com/mdn/yari) 上運作。這個操作雖然帶給了 MDN 很多好處，但我們也需要改革我們處理在地化的方法：因為在英語以外的語言中，有許多沒有維護與過時的內容，而我們希望在未來更妥善地管理這件事。
 

@@ -1,9 +1,7 @@
 ---
 title: 開始入門 MDN
-slug: MDN/Community/Contributing/Getting_started
+slug: MDN/Community/Getting_started
 ---
-
-{{MDNSidebar}}
 
 這是一個開放的開發者和作家社區，不分品牌、瀏覽器、平台，為更好的 Web 構建提供更多資源。每個人都能做出貢獻，而每個貢獻者的付出都讓我們變得更為壯大。要想持續推動 Web 創新、成就更為偉大的事物？就讓我們和你一起，從這裡開始。
 
@@ -17,7 +15,7 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。你不必得�
 
 ### 步驟 1：建立 MDN 帳號
 
-加入貢獻的第一步是要有 MDN 帳號，請參考[建立帳號說明](/zh-TW/docs/MDN/Community/Contributing)。注意，在建立 MDN 帳號之前，你需要有一個 [GitHub 帳號](https://github.com/join)，因為我們已經使用 GitHub 作為登入驗證。
+加入貢獻，你需要有一個 [GitHub 帳號](https://github.com/join)，因為我們已經使用 GitHub 作為登入驗證。
 
 如果你想創建一個新的頁面，請參考[編輯以及新增頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#新增一個新頁面)，這裏有關於如何獲得創建新頁面許可的重要信息；出於安全考慮，新賬戶默認沒有此功能。
 
@@ -44,8 +42,6 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。你不必得�
 
 你可以幫我們審查或編輯現有的文件，並為其加上正確的標籤。
 
-- [撰寫文件摘要](/zh-TW/docs/MDN/Community/Contributing) （5-15 分鐘）
-- [編輯審查](/zh-TW/docs/MDN/Community/Contributing)（5–30 分鐘）
 - [在詞彙表中加上新的詞彙](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary)（15 分鐘-1 小時）
 - [撰寫幫助大眾了解 Web 的文章](/zh-TW/docs/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web)（1 小時-3 小時）
 
@@ -66,7 +62,6 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。你不必得�
 我們有需要的技術和語言技能的任務，像寫新文章，審查技術的準確性，或調整文檔。
 
 - [在你的網站推廣 MDN](/zh-TW/docs/MDN/About/Promote)（5 分鐘）
-- [技術評論](/zh-TW/docs/MDN/Community/Contributing)（30 分鐘）
 - [撰寫當前主題所需要的文章](/zh-TW/docs/Contribute_to_docs_that_are_currently_needed)（1 小時以上）
 - [撰寫能幫人理解 web 的互動示範](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Live_samples)（1 小時以上）
 - 從[MDN category in Bugs Ahoy](http://www.joshmatthews.net/bugsahoy/?mdn=1)修復[文件錯誤](/zh-TW/docs/MDN/Contribute/Howto/Resolve_a_mentored_developer_doc_request)（1 小時以上）
@@ -86,4 +81,3 @@ MDN 是一個 wiki，**每個人**都可以添加、編撰內容。你不必得�
 
 - [加入 MDN 社群](/zh-TW/docs/MDN/Community)
 - [填寫你的個人資料](/zh-TW/settings)以便其他人能更瞭解你
-- 多理解如何[貢獻 MDN](/zh-TW/docs/MDN/Community/Contributing)
