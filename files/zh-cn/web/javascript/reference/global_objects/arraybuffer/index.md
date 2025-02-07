@@ -21,7 +21,7 @@ l10n:
 
 `ArrayBuffer` 对象可以通过在调用 {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer()")}} 构造函数时包含 `maxByteLength` 选项来使其大小可变。你可以通过访问其 {{jsxref("ArrayBuffer/resizable", "resizable")}} 和 {{jsxref("ArrayBuffer/maxByteLength", "maxByteLength")}} 属性来查询 `ArrayBuffer` 的大小是否可变以及其最大值。你可以通过调用 {{jsxref("ArrayBuffer/resize", "resize()")}} 为可变大小的 `ArrayBuffer` 分配一个新的大小。新的字节会被初始化为 0。
 
-这些特性使得调整 `ArrayBuffer` 的大小更加高效——否则，你必须使用新的大小创建一个缓冲副本。这也使得 JavaScript 在这方面与 WebAssembly 相当（Wasm 线性内存可以使用 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/JavaScript_interface/Memory/grow) 调整大小）。
+这些特性使得调整 `ArrayBuffer` 的大小更加高效——否则，你必须使用新的大小创建一个缓冲副本。这也使得 JavaScript 在这方面与 WebAssembly 相当（Wasm 线性内存可以使用 [`WebAssembly.Memory.prototype.grow()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 调整大小）。
 
 ### 传输 ArrayBuffer
 
