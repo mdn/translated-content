@@ -1,5 +1,5 @@
 ---
-title: ":nth-child()"
+title: :nth-child()
 slug: Web/CSS/:nth-child
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41

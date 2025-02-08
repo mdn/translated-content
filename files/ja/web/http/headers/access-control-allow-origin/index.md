@@ -2,7 +2,7 @@
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 l10n:
-  sourceCommit: 808b7d39103c946ca1b7dd5edbe7afd203c92efd
+  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
 {{HTTPSidebar}}

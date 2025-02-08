@@ -49,7 +49,7 @@ original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 
 ## 主動學習
 
-_目前還沒有好用的內容。[請考慮貢獻一下](/zh-TW/docs/MDN/Community/Contributing/Getting_started)。_
+_目前還沒有好用的內容。[請考慮貢獻一下](/zh-TW/docs/MDN/Community/Getting_started)。_
 
 ## 深入一點……
 

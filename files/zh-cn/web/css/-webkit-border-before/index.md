@@ -1,5 +1,5 @@
 ---
-title: "-webkit-border-before"
+title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 l10n:
   sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
