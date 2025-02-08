@@ -2,7 +2,7 @@
 title: -webkit-border-before
 slug: Web/CSS/-webkit-border-before
 l10n:
-  sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
 {{CSSRef}}{{Non-standard_header}}
