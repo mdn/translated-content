@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-{{domxref("ErrorEvent")}} 接口的 **`colno`** 只读属性返回一个发生错误脚本文件列号的整数。
+{{domxref("ErrorEvent")}} 接口的 **`colno`** 只读属性返回一个整数，表示发生的错误在脚本文件中所位于的列号。
 
 ## 值
 
