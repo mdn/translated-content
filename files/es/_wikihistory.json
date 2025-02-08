@@ -3503,6 +3503,49 @@
       "cototion"
     ]
   },
+  "MDN/Guides": {
+    "modified": "2019-07-18T20:35:32.528Z",
+    "contributors": [
+      "clarii",
+      "D3Portillo",
+      "Breaking Pitt",
+      "VictorAbdon",
+      "n2nand",
+      "Puchoti",
+      "DrTrucho",
+      "DanielCarron",
+      "daroswing",
+      "osodi",
+      "LeoHirsch",
+      "hjaguen",
+      "ethertank",
+      "Sheppy"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2020-11-30T04:19:10.869Z",
+    "contributors": [
+      "blanchart",
+      "mastertrooper",
+      "Enesimus",
+      "ewan-m",
+      "Yes197",
+      "VlixesItaca",
+      "pucherico",
+      "CristopherAE",
+      "fperaltaN",
+      "isabelcarrod",
+      "Sheppy",
+      "iKenshu",
+      "JuanC_01",
+      "ubermensch79",
+      "cynthia",
+      "rubencidlara",
+      "fmagrosoto",
+      "CarlosQuijano",
+      "diegogaysaez"
+    ]
+  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-03T01:47:58.469Z",
     "contributors": [
@@ -11906,25 +11949,6 @@
       "gabo8611"
     ]
   },
-  "Web/Guide": {
-    "modified": "2019-07-18T20:35:32.528Z",
-    "contributors": [
-      "clarii",
-      "D3Portillo",
-      "Breaking Pitt",
-      "VictorAbdon",
-      "n2nand",
-      "Puchoti",
-      "DrTrucho",
-      "DanielCarron",
-      "daroswing",
-      "osodi",
-      "LeoHirsch",
-      "hjaguen",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-12-10T12:38:08.697Z",
     "contributors": [
@@ -18494,30 +18518,6 @@
       "ojgarciab",
       "robertsallent",
       "Abelhg"
-    ]
-  },
-  "Web/Tutorials": {
-    "modified": "2020-11-30T04:19:10.869Z",
-    "contributors": [
-      "blanchart",
-      "mastertrooper",
-      "Enesimus",
-      "ewan-m",
-      "Yes197",
-      "VlixesItaca",
-      "pucherico",
-      "CristopherAE",
-      "fperaltaN",
-      "isabelcarrod",
-      "Sheppy",
-      "iKenshu",
-      "JuanC_01",
-      "ubermensch79",
-      "cynthia",
-      "rubencidlara",
-      "fmagrosoto",
-      "CarlosQuijano",
-      "diegogaysaez"
     ]
   },
   "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {

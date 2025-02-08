@@ -22,7 +22,7 @@ slug: Web/HTML/Element/audio
   - : 布尔值属性；声明该属性，音频会尽快自动播放，不会等待整个音频文件下载完成。
 
     > [!NOTE]
-    > 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+    > 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如果正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay)。
 
 - `controls`
   - : 如果声明了该属性，浏览器将提供一个包含声音，播放进度，播放暂停的控制面板，让用户可以控制音频的播放。
@@ -90,7 +90,7 @@ slug: Web/HTML/Element/audio
 
 ## 使用说明
 
-浏览器对 [文件类型](/zh-CN/docs/Web/Media/Formats/Containers) 和 [音频编码](/zh-CN/docs/Web/Media/Formats/Audio_codecs) 的支持各有不同，你可以使用内嵌的 {{htmlelement("source")}} 元素提供不同的播放源。浏览器会使用第一个它支持的播放源：
+浏览器对 [文件类型](/zh-CN/docs/Web/Media/Guides/Formats/Containers) 和 [音频编码](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs) 的支持各有不同，你可以使用内嵌的 {{htmlelement("source")}} 元素提供不同的播放源。浏览器会使用第一个它支持的播放源：
 
 ```html
 <audio controls>
@@ -103,7 +103,7 @@ slug: Web/HTML/Element/audio
 </audio>
 ```
 
-我们提供了全面细致的 [音频文件类型指南](/zh-CN/docs/Web/Media/Formats) 和 [这些类型可以使用的音频编码](/zh-CN/docs/Web/Media/Formats/Audio_codecs)。此外，还有 [视频编码支持指南](/zh-CN/docs/Web/Media/Formats/Video_codecs)。
+我们提供了全面细致的 [音频文件类型指南](/zh-CN/docs/Web/Media/Guides/Formats) 和 [这些类型可以使用的音频编码](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)。此外，还有 [视频编码支持指南](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)。
 
 其他使用说明：
 
@@ -124,7 +124,7 @@ slug: Web/HTML/Element/audio
 
 如果在跨浏览器中得到一致的外观和体验，你需要创建自定义控件；自定义控件可以根据你的需求任意设置样式，还可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来设置更多功能。
 
-[视频播放器样式基础](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) 提供了一些有用的样式技术，这篇文章围绕 `<video>` 而写，但大部分都可以用于 `<audio>`。
+[视频播放器样式基础](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics) 提供了一些有用的样式技术，这篇文章围绕 `<video>` 而写，但大部分都可以用于 `<audio>`。
 
 ### 检测音轨添加和移除
 
@@ -171,7 +171,7 @@ elem.audioTrackList.onremovetrack = function (event) {
 </audio>
 ```
 
-如果想获得更多信息，包括何时自动播放生效，如何获取自动播放权限，并且通过何种方式，在何时应用自动播放才是合适的，请看我们的 [autoplay guide](/zh-CN/docs/Web/Media/Autoplay_guide)。
+如果想获得更多信息，包括何时自动播放生效，如何获取自动播放权限，并且通过何种方式，在何时应用自动播放才是合适的，请看我们的 [autoplay guide](/zh-CN/docs/Web/Media/Guides/Autoplay)。
 
 ### \<audio> 元素与 \<source> 元素
 
@@ -292,8 +292,8 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 
 - [Web media technologies](/zh-CN/docs/Web/Media)
 
-  - [Media container formats (file types)](/zh-CN/docs/Web/Media/Formats/Containers)
-  - [Guide to audio codecs used on the web](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
+  - [Media container formats (file types)](/zh-CN/docs/Web/Media/Guides/Formats/Containers)
+  - [Guide to audio codecs used on the web](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)
 
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
 - {{domxref("HTMLAudioElement")}}

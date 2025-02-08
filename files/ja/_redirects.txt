@@ -3955,7 +3955,7 @@
 /ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 /ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes	/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
+/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/ja/docs/Web/CSS/CSS_grid_layout
 /ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /ja/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid	/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /ja/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout	/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
@@ -3997,6 +3997,7 @@
 /ja/docs/Web/CSS/CSS_charsets	/ja/docs/Web/CSS/CSS_syntax
 /ja/docs/Web/CSS/CSS_container_queries	/ja/docs/Web/CSS/CSS_containment/Container_queries
 /ja/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/ja/docs/Glossary/Flexbox
+/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement	/ja/docs/Web/CSS/CSS_grid_layout
 /ja/docs/Web/CSS/CSS_miscellaneous	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/CSS_transforms_の利用	/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /ja/docs/Web/CSS/CSS_values_serialization	/ja/docs/Web/CSS
@@ -4248,6 +4249,7 @@
 /ja/docs/Web/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
 /ja/docs/Web/Events/waiting	/ja/docs/Web/API/HTMLMediaElement/waiting_event
+/ja/docs/Web/Guide	/ja/docs/MDN/Guides
 /ja/docs/Web/Guide/AJAX	/ja/docs/Learn_web_development/Core/Scripting/Network_requests
 /ja/docs/Web/Guide/AJAX/Community	/ja/docs/Learn_web_development/Core/Scripting/Network_requests
 /ja/docs/Web/Guide/AJAX/Getting_Started	/ja/docs/Learn_web_development/Core/Scripting/Network_requests
@@ -4347,7 +4349,7 @@
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/Guide/HTML/XHTML	/ja/docs/Glossary/XHTML
 /ja/docs/Web/Guide/Houdini	/ja/docs/Web/API/Houdini_APIs
-/ja/docs/Web/Guide/Index	/ja/docs/Web/Guide
+/ja/docs/Web/Guide/Index	/ja/docs/MDN/Guides
 /ja/docs/Web/Guide/Introduction_to_Web_development	/ja/docs/Learn_web_development
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Mobile	/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
@@ -5018,6 +5020,7 @@
 /ja/docs/Web/Security/Securing_your_site	/ja/docs/Web/Security/Practical_implementation_guides
 /ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /ja/docs/Web/Text_fragments	/ja/docs/Web/URI/Fragment/Text_fragments
+/ja/docs/Web/Tutorials	/ja/docs/MDN/Tutorials
 /ja/docs/Web/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/Web/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -5341,7 +5344,7 @@
 /ja/docs/WebSockets/WebSockets_reference	/ja/docs/Web/API/WebSockets_API
 /ja/docs/WebSockets/Writing_WebSocket_client_applications	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ja/docs/Web_Developer_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/60
-/ja/docs/Web_Development	/ja/docs/Web/Guide
+/ja/docs/Web_Development	/ja/docs/MDN/Guides
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn_web_development/Core/Structuring_content
 /ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Learn_web_development
 /ja/docs/Web_Development/Mobile	/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design

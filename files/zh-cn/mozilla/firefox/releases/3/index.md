@@ -38,10 +38,10 @@ l10n:
 - [JavaScript 1.8 的支持](/zh-CN/docs/New_in_JavaScript_1.8)
   - : Firefox 3 提供了 JavaScript 1.8 的支持。
 - [EXSLT 支持](/zh-CN/docs/Web/EXSLT)
-  - : Firefox 3 提供了对 [EXSLT](/zh-CN/docs/Web/EXSLT)（[XSLT](/zh-CN/docs/Web/XSLT) 的扩展）的一个基本子集的支持。
+  - : Firefox 3 提供了对 [EXSLT](/zh-CN/docs/Web/EXSLT)（[XSLT](/zh-CN/docs/Web/XML/XSLT) 的扩展）的一个基本子集的支持。
 - [Firefox 3 中 SVG 的改进](/zh-CN/docs/Mozilla/Firefox/Releases/3/SVG_improvements)
   - : Firefox 3 对 SVG 的支持有了长足的改进：支持二十余个新滤镜、一些新的元素和属性，以及一些其他改进。
-- [动态可移植网络图形](/zh-CN/docs/Web/Media/Formats/Image_types#apng（动态可移植网络图形）)
+- [动态可移植网络图形](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#apng（动态可移植网络图形）)
   - : Firefox 3 提供了对动态可移植网络图形（APNG）图像格式的支持。
 
 ### 对 XUL 和扩展插件的开发者
