@@ -3,8 +3,6 @@ title: MDN Web 文档的收录标准
 slug: MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 ---
 
-{{MDNSidebar}}
-
 本文详细描述了 MDN Web 文档收录内容的标准，以及申请记录新的文档的流程，以及对申请方的期望和指南。
 
 这是针对较大的项目的。如果要建议新增页面或文章，请参阅“MDN 收录规则”页面上的[建议内容](/zh-CN/docs/MDN/Writing_guidelines/What_we_write#内容建议)部分。

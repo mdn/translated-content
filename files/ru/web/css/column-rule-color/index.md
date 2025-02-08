@@ -12,7 +12,7 @@ slug: Web/CSS/column-rule-color
 ## Синтаксис
 
 ```css
-/* Значения <color>  */
+/* Значения <color> */
 column-rule-color: red;
 column-rule-color: rgb(192, 56, 78);
 column-rule-color: transparent;

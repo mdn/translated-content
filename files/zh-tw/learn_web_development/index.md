@@ -1,7 +1,6 @@
 ---
 title: 學習該如何開發 Web
 slug: Learn_web_development
-original_slug: Learn
 ---
 
 {{LearnSidebar}}
@@ -76,11 +75,11 @@ MDN 學習專區不是要讓「初學者」變成「專家」；而是想讓「�
 
 ## 聯絡我們
 
-如果你想向我們詢問任何事情，最快的方式就是透過[學習專區討論串](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [IRC 頻道](/zh-TW/docs/MDN/Community/Conversations#Chat_in_IRC)留下訊息。不論你覺得網站有哪個地方做錯或缺漏，想看到新的學習主題、對自己不了解的地方尋求協助，或其他疑難雜症，都歡迎你提供意見給我們。
+如果你想向我們詢問任何事情，最快的方式就是透過[溝通渠道](/zh-TW/docs/MDN/Community/Communication_channels)留下訊息。不論你覺得網站有哪個地方做錯或缺漏，想看到新的學習主題、對自己不了解的地方尋求協助，或其他疑難雜症，都歡迎你提供意見給我們。
 
-如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Community/Contributing)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
+如果你想幫我們添增＼改善內容，則請先了解[該如何協助](/zh-TW/docs/MDN/Community)並聯絡我們！不論你是學生、教師、Web 開發老手，或是想幫我們改善學習經驗，都歡迎和我們聯絡。
 
-## 另可參閱
+## 參見
 
 - [Mozilla Developer Newsletter](https://www.mozilla.org/zh-TW/newsletter/developer/)
   - : 我們針對網頁開發者發行的電子報，對於所有程度的開發者都是很好的學習資源。

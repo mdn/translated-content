@@ -2,7 +2,7 @@
 title: <slot>：Web 组件插槽元素
 slug: Web/HTML/Element/slot
 l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+  sourceCommit: f47d71927e4dc46f3aabde0a56c7f940da988d9f
 ---
 
 {{HTMLSidebar}}
@@ -17,7 +17,7 @@ l10n:
 
   - : 插槽名称。
 
-    **_具名插槽_**是具有 `name` 属性的 `<slot>` 元素。
+    **具名插槽**是具有 `name` 属性的 `<slot>` 元素。
 
 ## 示例
 
@@ -142,4 +142,5 @@ l10n:
 - HTML {{HTMLElement("template")}} 元素
 - HTML [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 属性
 - CSS {{CSSXref("::slotted")}} 伪元素
+- CSS {{cssxref(":has-slotted")}} 伪类
 - [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块

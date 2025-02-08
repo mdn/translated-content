@@ -2,7 +2,7 @@
 title: font-weight
 slug: Web/CSS/font-weight
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -267,5 +267,5 @@ span {
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-style")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS フォント](/ja/docs/Web/CSS/CSS_fonts)モジュール
