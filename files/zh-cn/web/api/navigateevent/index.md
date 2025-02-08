@@ -2,7 +2,7 @@
 title: NavigateEvent
 slug: Web/API/NavigateEvent
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 875b84034211b6e83150ba33efac9b0665074f17
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
@@ -30,6 +30,8 @@ _从其父接口 {{DOMxRef("Event")}} 继承属性。_
   - : 如果是 `POST` 表单提交，则返回表示已提交数据的 {{domxref("FormData")}} 对象，否则返回 `null`。
 - {{domxref("NavigateEvent.hashChange", "hashChange")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 如果导航是片段导航（即导航到同一文档中的片段标识符），则返回 `true`，否则返回 `false`。
+- {{domxref("NavigateEvent.hasUAVisualTransition", "hasUAVisualTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 如果用户代理在派发此事件之前为此导航执行了用户可见的视图过渡，则返回 `true`，否则返回 `false`。
 - {{domxref("NavigateEvent.info", "info")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回由启动导航操作（例如 {{domxref("Navigation.back()")}} 或 {{domxref("Navigation.navigate()")}}）传递的 `info` 数据值，如果没有传递 `info` 数据，则返回 `undefined`。
 - {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
