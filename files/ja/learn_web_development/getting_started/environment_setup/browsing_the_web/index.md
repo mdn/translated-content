@@ -211,7 +211,7 @@ AIが生成した検索結果は、情報を受け取るための非常に一般
   - 「intitle:cheese」は、ページのメインタイトルに「cheese」が含まれる結果のみを返します。
 
   > [!NOTE]
-  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930)などがあります。
+  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [高度な検索オプション](https://support.microsoft.com/ja-jp/topic/%E9%AB%98%E5%BA%A6%E3%81%AA%E6%A4%9C%E7%B4%A2%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-b92e25f1-0085-4271-bdf9-14aaea720930)などがあります。
 
 
 
