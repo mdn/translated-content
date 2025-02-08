@@ -31,13 +31,11 @@ l10n:
 ### セキュリティ
 
 - [証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency) は、ブラウザーが証明書を信頼する前に、その証明書が公開されていることを保証するための標準仕様です。デスクトップ版の Firefox でこの機能をサポートしました (Android 版は未サポート)。
-  これは、Mozilla の ルート CA プログラムに含まれている認証局が発行した証明書を使用するサーバーにのみ影響があります 
-  ([Firefox bug 1938242](https://bugzil.la/1938242))。
+  これは、Mozilla の ルート CA プログラムに含まれている認証局が発行した証明書を使用するサーバーにのみ影響があります ([Firefox bug 1938242](https://bugzil.la/1938242))。
 
 ### API
 
-- {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} 静的メソッドをサポートしました。これはウェブアプリがユーザーエージェント・スニッフィングに頼る必要なく、ブラウザーで特定の [WebAuthn](/ja/docs/Web/API/Web_Authentication_API) の機能や [拡張機能](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) が有効かを確認できます 
-  ([Firefox bug 1884466](https://bugzil.la/1884466))。
+- {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} 静的メソッドをサポートしました。これはウェブアプリがユーザーエージェント・スニッフィングに頼る必要なく、ブラウザーで特定の [WebAuthn](/ja/docs/Web/API/Web_Authentication_API) の機能や [拡張機能](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions) が有効かを確認できます ([Firefox bug 1884466](https://bugzil.la/1884466))。
 
 #### DOM
 
@@ -80,8 +78,7 @@ l10n:
 - **Temporal API** (Nightly 版): <code>javascript.options.experimental.temporal</code>。[Temporal オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal) は組み込みのタイムゾーンやカレンダーの表現によって、さまざまな状況における日付や時刻の扱いを簡素化することを目指しています ([Firefox bug 1912511](https://bugzil.la/1912511))。
 - **Prioritized Task Scheduling API**: <code>dom.enable_web_task_scheduling</code>。
   [Prioritized Task Scheduling API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API) は、Webサイトの開発者のコードであるかサードパーティのライブラリーやフレームワークであるかに関わらず、アプリケーションに所属するすべてのタスクに優先度をつけるための標準化された方法を提供します。
-  これは [実運用での不具合](https://bugzil.la/1937232) を避けるため、Nightly ビルドで一時的に無効化しています 
-  ([Firefox bug 1938242](https://bugzil.la/1938242))。
+  これは [実運用での不具合](https://bugzil.la/1937232) を避けるため、Nightly ビルドで一時的に無効化しています ([Firefox bug 1938242](https://bugzil.la/1938242))。
 
 ## 過去のバージョン
 
