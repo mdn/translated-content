@@ -46,8 +46,7 @@ svg {
 ## 属性
 
 - {{SVGAttr("to")}}
-  - : This attribute defines the value to be applied to the target attribute for the duration of the animation. The value must match the requirements of the target attribute.
-    _值类型_：[**\<anything>**](/zh-CN/docs/Web/SVG/Content_type#anything)；_默认值_：无；_动画性_：**否**
+  - : 此属性定义了在动画持续时间内应用于目标属性的值。该值必须符合目标属性的要求。_值类型_：[**\<anything>**](/zh-CN/docs/Web/SVG/Content_type#anything)；_默认值_：无；_动画性_：**否**
 
 ## 使用上下文
 
