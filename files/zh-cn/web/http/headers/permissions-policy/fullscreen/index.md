@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-HTTP {{HTTPHeader("Permissions-Policy")}} 标头 `fullscreen` 指令控制当前文档是否允许使用 {{domxref('Element.requestFullscreen()')}}。
+HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 `fullscreen` 指令控制当前文档是否允许使用 {{domxref('Element.requestFullscreen()')}}。
 
 默认情况下，顶级文档及其同源子框架可以请求并进入全屏模式。此指令允许或阻止跨源框架使用全屏模式。这包括同源框架。
 
@@ -53,7 +53,7 @@ Permissions-Policy: fullscreen=(self)
 <iframe src="https://other.com/videoplayer" allow="fullscreen"></iframe>
 ```
 
-iframe 属性可以选择性地启用某些框架中的功能，而不启用其他框架中的功能，即使这些框架包含同源的文档。
+iframe 属性可以选择性地在某些框架中的启用特性，而不在其他框架中启用特性，即使这些框架包含同源的文档。
 
 ## 规范
 
