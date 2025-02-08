@@ -2,15 +2,12 @@
 title: ウェブの閲覧
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: dedba82f11d06e50a2742ed285a321820baf4977
 ---
 
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
-
-> [!NOTE]
-> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
 
 このモジュールのこの時点では、少なくとも 2 つのウェブブラウザーをコンピューターにインストールしておく必要があります。この記事では、ブラウザーの使用についてもう少し詳しく説明し、ウェブブラウザーの作業方法、操作する一般的なアイテムの一部の違い、情報検索方法について見ていきます。
 
@@ -37,10 +34,6 @@ l10n:
     </tr>
   </tbody>
 </table>
-
-## ウェブはどのように動作するか: 基本事項
-
-TODO
 
 ## ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い
 
@@ -115,7 +108,7 @@ TODO
 
 ![Firefoxのナイトリー版でカスタマイズしたGoogleページを既定で表示した例](search-engine.jpg)
 
-## 情報の検索
+## ウェブはどのようにして動くのか
 
 TODO
 
