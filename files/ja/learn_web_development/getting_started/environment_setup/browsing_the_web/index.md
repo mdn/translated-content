@@ -205,10 +205,10 @@ AIが生成した検索結果は、情報を受け取るための非常に一般
 - コードが特定のエラーメッセージを返す場合は、そのエラーを検索エンジンやAIプロンプトに入力してみてください。他の人々も過去に同じエラーに直面し、解決策をどこかに公開している可能性が高いです。
 - 可能な限り、MDNや[StackOverflow](https://stackoverflow.com)のような推奨サイトを利用しましょう。
 - 検索エンジンには、単純な検索語句以上の結果を得られる高度な検索テクニックが多くあります。`ant fish cheese`のような単純な検索語句を入力すると、それらの単語の任意の組み合わせを含む結果が返されます。しかし、ほとんどの検索エンジンは以下のような形式をサポートしています：
-  - 「"ant fish cheese"」（引用符付き）と入力すると、その正確なフレーズを含む結果のみが返されます。
-  - 「"ant cheese" -fish」は、「ant」や「cheese」を含むが、「fish」を含まない結果を返します。
-  - 「ant OR cheese」は、両方ではなく、どちらか一方の用語を含む結果のみを返します。私たちのテストでは、これはGoogleでのみ効果的に機能するようでした。
-  - 「intitle:cheese」は、ページのメインタイトルに「cheese」が含まれる結果のみを返します。
+  - `"ant fish cheese"`（引用符付き）と入力すると、その正確なフレーズを含む結果のみが返されます。
+  - `"ant cheese" -fish`は、`ant`や`cheese`を含むが、`fish`を含まない結果を返します。
+  - `ant OR cheese`は、両方ではなく、どちらか一方の用語を含む結果のみを返します。私たちのテストでは、これはGoogleでのみ効果的に機能するようでした。
+  - `intitle:cheese`は、ページのメインタイトルに`cheese`が含まれる結果のみを返します。
 
   > [!NOTE]
   > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Google 検索の結果を絞り込む](https://support.google.com/websearch/answer/2466433?hl=ja), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [高度な検索オプション](https://support.microsoft.com/ja-jp/topic/%E9%AB%98%E5%BA%A6%E3%81%AA%E6%A4%9C%E7%B4%A2%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3-b92e25f1-0085-4271-bdf9-14aaea720930)などがあります。
