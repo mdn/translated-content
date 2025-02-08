@@ -1,6 +1,7 @@
 ---
 title: CSS 网格布局和渐进增强
-slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
+slug: conflicting/Web/CSS/CSS_grid_layout
+original_slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
 ---
 
 {{CSSRef}}

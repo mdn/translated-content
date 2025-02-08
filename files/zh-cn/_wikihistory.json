@@ -24112,13 +24112,6 @@
       "comehope"
     ]
   },
-  "Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement": {
-    "modified": "2020-06-22T07:00:15.555Z",
-    "contributors": [
-      "suvyme",
-      "cheetooo"
-    ]
-  },
   "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
     "modified": "2019-05-31T04:50:27.843Z",
     "contributors": [
@@ -43098,6 +43091,13 @@
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": [
       "Cyandev"
+    ]
+  },
+  "conflicting/Web/CSS/CSS_grid_layout": {
+    "modified": "2020-06-22T07:00:15.555Z",
+    "contributors": [
+      "suvyme",
+      "cheetooo"
     ]
   }
 }
