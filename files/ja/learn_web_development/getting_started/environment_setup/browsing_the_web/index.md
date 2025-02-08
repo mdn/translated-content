@@ -169,7 +169,7 @@ l10n:
 
 ### AIの活用
 
-AIが生成した検索結果は、情報を受け取るための非常に一般的な方法です。AIは基本的にはとても強力な検索能力を発揮します。バックグラウンドで大量の検索を実行し、その結果を一つのわかりやすい回答にまとめます。一般的な選択肢としては[ChatGPT](https://chatgpt.com)、 [Google Gemini](https://gemini.google.com/app)、 そして [Microsoft Copilot](https://copilot.microsoft.com)で、チャット形式で直接アクセスするか、AIを利用したアプリ内ヘルプや自動化システムを介してアクセスします。
+AIが生成した検索結果は、情報を受け取るための非常に一般的な方法です。AIは基本的にはとても強力な検索能力を発揮します。バックグラウンドで大量の検索を実行し、その結果を一つのわかりやすい回答にまとめます。一般的な選択肢としては[ChatGPT](https://chatgpt.com)、 [Google Gemini](https://gemini.google.com/app)、 そして [Microsoft Copilot](https://copilot.microsoft.com)があり、チャット形式で直接アクセスするか、AIを利用したアプリ内ヘルプや自動化システムを介してアクセスします。
 
 コーディングを学習するときも、AIのチャットプロンプトはさまざまな方法で役立ちます:
 - 上記のような従来の検索を行うことができます。
