@@ -2412,7 +2412,7 @@
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
-/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/zh-CN/docs/conflicting/Web/CSS/CSS_grid_layout
+/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/zh-CN/docs/Web/CSS/CSS_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
@@ -2443,7 +2443,7 @@
 /zh-CN/docs/Web/CSS/CSS_animations/Tips	/zh-CN/docs/Web/API/Web_Animations_API/Tips
 /zh-CN/docs/Web/CSS/CSS_container_queries	/zh-CN/docs/Web/CSS/CSS_containment/Container_queries
 /zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
-/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement	/zh-CN/docs/conflicting/Web/CSS/CSS_grid_layout
+/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement	/zh-CN/docs/Web/CSS/CSS_grid_layout
 /zh-CN/docs/Web/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
 /zh-CN/docs/Web/CSS/CSS_values_syntax	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/CSS_分片	/zh-CN/docs/Web/CSS/CSS_fragmentation
