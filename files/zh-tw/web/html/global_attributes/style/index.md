@@ -1,6 +1,8 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
+l10n:
+  sourceCommit: 476fb44932d56c0f50628a620348cd77f411b5ab
 ---
 
 {{HTMLSidebar("Global_attributes")}}
