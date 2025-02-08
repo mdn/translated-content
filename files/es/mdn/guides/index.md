@@ -1,6 +1,7 @@
 ---
 title: Guía de Desarrollo Web
-slug: Web/Guide
+slug: MDN/Guides
+original_slug: Web/Guide
 ---
 
 Este artículo proporciona información para ayudarte a hacer uso de tecnologías y APIs.

@@ -2192,6 +2192,7 @@
 /es/docs/Web/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/Events/wheel	/es/docs/Web/API/Element/wheel_event
+/es/docs/Web/Guide	/es/docs/MDN/Guides
 /es/docs/Web/Guide/AJAX	/es/docs/Learn_web_development/Core/Scripting/Network_requests
 /es/docs/Web/Guide/AJAX/Community	/es/docs/conflicting/Web/Guide/AJAX
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
@@ -3045,7 +3046,8 @@
 /es/docs/Web/Security/Securing_your_site	/es/docs/Web/Security/Practical_implementation_guides
 /es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
-/es/docs/Web/Tutoriales	/es/docs/Web/Tutorials
+/es/docs/Web/Tutoriales	/es/docs/MDN/Tutorials
+/es/docs/Web/Tutorials	/es/docs/MDN/Tutorials
 /es/docs/Web/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/Web/WebGL/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/Web_Components	/es/docs/Web/API/Web_components
