@@ -15,7 +15,7 @@ l10n:
 
 以下は `PerformanceNavigationTiming` で定義するタイムスタンププロパティをすべて表示させたものです。
 
-![文書内の取得したタイムスタンプを記録順に並べたタイムスタンプ図](timestamp-diagram.svg)
+![文書内の取得したタイムスタンプを記録順に並べたタイムスタンプ図](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 ## インスタンスプロパティ
 
