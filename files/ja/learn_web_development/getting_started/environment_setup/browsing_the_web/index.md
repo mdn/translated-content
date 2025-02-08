@@ -183,36 +183,35 @@ AIが生成した検索結果は、情報を受け取るための非常に一般
 >
 > いくつかのAIツールを使用して検索を試してみてください。
 
-### A cautionary tale
+### AI使用への警鐘
 
-In truth, AI can do so much that you may start to wonder why you need to learn to code.
+実際のところ、AIはとても多くのことができるため、なぜプログラミングを学ぶ必要があるのかと疑問に思うかもしれません。
 
-But wait! The following is important: **You still need to understand what you are trying to do at a high level, what the code is doing, and where each piece of code needs to be used**. If you don't, you won't be very useful when trying to solve real-world problems. This means that you still need to learn to code. AI can be a really useful tool to help you find answers more quickly, but if you just type every question you are asked into an AI prompt, you won't understand how anything works.
+しかし、待ってください！以下のことが重要です：**あなたは依然として、高いレベルで何をしようとしているのか、コードが何をしているのか、そしてどこでどのコードを使うべきかを理解する必要があります**。そうでなければ、実際の問題を解決しようとする時に、あまり役に立てないでしょう。つまり、プログラミングを学ぶ必要はやはりあるのです。AIは答えをより早く見つけるのに役立つ優れたツールになり得ますが、尋ねられた質問をただAIプロンプトに入力するだけでは、何がどのように機能しているのか理解できません。
 
-In addition:
+さらに:
 
-- AI tools present their answers in a confident, authoritative voice, but they can often be misleading or just plain wrong. Some of the errors they make can be very subtle. They don't have any innate intelligence of their own — they are basically advanced pattern matching tools. AI tools compile their answers from other sources out there, so will hoover up wrong information as well as correct information. Even two correct sources can be combined to create an answer that is incorrect.
-- Newer information may not be available, or answers may be skewed to older and more prevalent documentation, so "how to do X in JS" might give you outdated guidance.
+- AIツールは自信に満ちた権威ある口調で回答を提示しますが、誤解を招く場合や、完全に間違っている場合も少なくありません。AIツールが犯すエラーの中には、非常に微妙なものもあります。AIツールには本来の知能はなく、基本的には高度なパターンマッチングツールです。AIツールは他のソースから回答を編集するため、正しい情報だけでなく間違った情報も収集します。2つの正しいソースを組み合わせても、不正確な回答が作成されることがあります。
+- 新しい情報が利用できなかったり、古くて一般的なドキュメントに偏った回答になる可能性があるため、「JavaScriptでhogehogeを行う方法」といった質問に対して、時代遅れの手順が提供されることがあります。
 
-As a result, you need to be careful to check the answers they give you, and not just trust everything without question.
+そのため、AIが提供する回答を慎重に確認し、何でも疑問を持たずに信じ込まないようにする必要があります。
 
-**When you are learning, spend time trying to solve the problem yourself before searching for an answer, whether you are using AI or a conventional search engine. It will make you a better developer.**
+**学習している段階では、AIであれ従来の検索エンジンであれ、答えを探す前に自分で問題を解決しようと時間をかけてください。そうすることで、より優れた開発者になれます。**
 
 ### 検索のコツ
 
-- You should include the language you are using in the search term, as shown in the examples above. If you just typed in `how to print out the fibonacci sequence`, you would likely end up with several solutions in Python, C++, Java, Ruby, or other languages — not quite as helpful when you are trying to learn JavaScript!
-- When you find a useful answer, bookmark or make a copy of it somewhere so you can find it again later. You'll be amazed how many times you run into the same problem.
-- If your code is returning a specific error message, try entering the error into a search engine or AI prompt. Other people will probably have already tackled the same error in the past and recorded solutions publicly somewhere.
-- If possible, stick with recommended sites like MDN and [StackOverflow](https://stackoverflow.com).
-- There are many advanced search techniques you can use in search engines that will give you better results than just typing a plain search term. Typing in a plain search term such as `ant fish cheese` will return results that contain any combination of those words. However, most search engines support variations of the following formats:
-
-  - Typing in `"ant fish cheese"` (with the quotes) will only return results that contain that exact phrase.
-  - `"ant cheese" -fish` will return results that contain `ant` and/or `cheese` but not `fish`.
-  - `ant OR cheese` will only return results with one term or the other, not both. From our testing, this one only seemed to work effectively in Google.
-  - `intitle:cheese` will only return results that have "cheese" in the main title of the page.
+- 上記の例で示したように、検索語句には使用している言語を含めるべきです。単に`フィボナッチ数列を出力する方法`と入力すると、Python、C++、Java、Rubyなど、さまざまな言語での解決策が表示されてしまいます。JavaScriptを学ぼうとしているときには、あまり役立ちません！
+- 役立つ回答を見つけたら、後で再び見つけられるようにブックマークするか、どこかにコピーを保存しておきましょう。同じ問題に何度も遭遇することに驚くはずです。
+- コードが特定のエラーメッセージを返す場合は、そのエラーを検索エンジンやAIプロンプトに入力してみてください。他の人々も過去に同じエラーに直面し、解決策をどこかに公開している可能性が高いです。
+- 可能な限り、MDNや[StackOverflow](https://stackoverflow.com)のような推奨サイトを利用しましょう。
+- 検索エンジンには、単純な検索語句以上の結果を得られる高度な検索テクニックが多くあります。`ant fish cheese`のような単純な検索語句を入力すると、それらの単語の任意の組み合わせを含む結果が返されます。しかし、ほとんどの検索エンジンは以下のような形式をサポートしています：
+  - 「"ant fish cheese"」（引用符付き）と入力すると、その正確なフレーズを含む結果のみが返されます。
+  - 「"ant cheese" -fish」は、「ant」や「cheese」を含むが、「fish」を含まない結果を返します。
+  - 「ant OR cheese」は、両方ではなく、どちらか一方の用語を含む結果のみを返します。私たちのテストでは、これはGoogleでのみ効果的に機能するようでした。
+  - 「intitle:cheese」は、ページのメインタイトルに「cheese」が含まれる結果のみを返します。
 
   > [!NOTE]
-  > There are many other techniques you can use in various different search engines. Try seeing what others you can find — some useful resources are [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930).
+  > さまざまな検索エンジンで使用できる技術は他にもたくさんあります。他にどのような技術があるか探してみてください。参考になるリソースとして [Refine Google Searches](https://support.google.com/websearch/answer/2466433?hl=en), [How to use advanced syntax on DuckDuckGo Search](https://duckduckgo.com/duckduckgo-help-pages/results/syntax/), and [Microsoft: Advanced search options](https://support.microsoft.com/en-us/topic/advanced-search-options-b92e25f1-0085-4271-bdf9-14aaea720930)などがあります。
 
 
 
