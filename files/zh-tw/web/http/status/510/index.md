@@ -2,12 +2,12 @@
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`510 Not Extended`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is sent when the client request declares an HTTP Extension ({{RFC("2774")}}) that should be used to process the request, but the extension is not supported.
+HTTP **`510 Not Extended`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#server_error_responses)狀態碼會在用戶端的請求中宣告一個 HTTP 擴展 ({{RFC("2774")}})，該擴展應被用來處理請求，但並不支援發送。
 
 ## 狀態
 
@@ -15,14 +15,11 @@ The HTTP **`510 Not Extended`** [server error response](/en-US/docs/Web/HTTP/Sta
 510 Not Extended
 ```
 
-## Examples
+## 範例
 
-### Extension not supported
+### 擴展不支援
 
-In the following example, a client sends a request with a mandatory extension specified in the `C-MAN` header.
-The {{HTTPHeader("Connection")}} header specifies that these extensions are to be handled on a [hop-by-hop](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers) basis.
-A {{Glossary("Proxy_server", "proxy")}} forwards the extended request, but the {{HTTPHeader("Connection")}} header is stripped out in transit.
-Because the origin server doesn't receive any information about the `M-GET` method, it sends a `510` in response:
+在以下範例中，用戶端發送一個包含在 `C-MAN` 標頭中指定的必須擴展的請求。{{HTTPHeader("Connection")}} 標頭指定這些擴展將以[逐跳](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers)的方式處理。{{Glossary("Proxy_server", "代理")}}轉發這個擴展請求，但在傳輸過程中 {{HTTPHeader("Connection")}} 標頭被剝除。由於原始伺服器未收到有關 `M-GET` 方法的任何資訊，因此回傳 `510` 作為回應：
 
 ```http
 M-GET /document HTTP/1.1
@@ -38,7 +35,6 @@ HTTP/1.1 510 Not Extended
 ## 規格
 
 {{Specifications}}
-
 
 ## 參見
 
