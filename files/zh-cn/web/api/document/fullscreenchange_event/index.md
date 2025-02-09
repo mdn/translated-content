@@ -2,7 +2,7 @@
 title: Document：fullscreenchange 事件
 slug: Web/API/Document/fullscreenchange_event
 l10n:
-  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -82,7 +82,7 @@ function log(message) {
   logger.textContent = `${logger.textContent}\n${message}`;
 }
 
-function fullscreenchanged(event) {
+function fullscreenchangeHandler(event) {
   // 如果有元素处于全屏模式，则 document.fullscreenElement 将指向该元素。如果没有元素处于全屏模式，则该属性的值为 null。
   if (document.fullscreenElement) {
     log(`元素：${document.fullscreenElement.id} 进入全屏模式。`);
@@ -91,7 +91,7 @@ function fullscreenchanged(event) {
   }
 }
 
-document.addEventListener("fullscreenchange", fullscreenchanged);
+document.addEventListener("fullscreenchange", fullscreenchangeHandler);
 
 // 在切换按钮被点击时，将会进入或退出全屏模式
 document.getElementById("toggle-fullscreen").addEventListener("click", () => {
