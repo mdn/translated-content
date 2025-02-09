@@ -2,18 +2,16 @@
 title: 507 Insufficient Storage
 slug: Web/HTTP/Status/507
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`507 Insufficient Storage`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code indicates that an action could not be performed because the server does not have enough available storage to successfully complete the request.
+HTTP **`507 Insufficient Storage`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器無法執行某個動作，因為它沒有足夠的可用儲存空間以成功完成該請求。
 
-This status code was first used in the context of Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}), but has propagated into other use cases to describe situations where server resources are exhausted.
-Common causes of this error can be from server directories running out of available space, not enough available RAM for an operation, or internal limits reached (such as application-specific memory limits, for example).
-The request causing this error does not necessarily need to include content, as it may be a request that would create a resource on the server if it was successful.
+該狀態碼最初在基於Web的分散式編寫和版本控制（{{Glossary("WebDAV")}}）情境中使用，但後來擴展至其他情境，用以描述伺服器資源耗盡的狀況。導致此錯誤的常見原因可能包括伺服器目錄的可用空間耗盡、執行操作時可用記憶體不足，或達到內部限制（例如應用程式專用記憶體限制等）。導致此錯誤的請求不一定必須包含內容，因為該請求在成功時可能會在伺服器上建立資源。
 
-This issue is considered temporary, as opposed to a {{HTTPStatus("413", "413 Content Too Large")}}, which indicates that the client request is too large for the server to process regardless of server resource constraints.
+此問題被視為暫時性問題，與 {{HTTPStatus("413", "413 Content Too Large")}} 不同，後者表示用戶的請求對伺服器來說過大導致無法處理，不論伺服器資源限制如何。
 
 ## 狀態
 
@@ -21,12 +19,11 @@ This issue is considered temporary, as opposed to a {{HTTPStatus("413", "413 Con
 507 Insufficient Storage
 ```
 
-## Examples
+## 範例
 
-### 507 response indicating storage issues
+### 507 回應表示儲存空間問題
 
-The following request attempts to upload a file to a server which has insufficient storage available.
-The server responds with a `507` to indicate that its resources are exhausted:
+下列請求嘗試將一個檔案上傳至儲存空間不足的伺服器。伺服器以 `507` 回應以表示其資源已耗盡：
 
 ```http
 POST /upload HTTP/1.1
@@ -46,12 +43,12 @@ Content-Length: 230
 
 <html>
 <head>
-<title>507 Insufficient Storage</title>
+<title>507 儲存空間不足</title>
 </head>
 <body>
-<h1>Insufficient Storage</h1>
-<p>The server is unable to store the included resource to complete the request.</p>
-<p>Please try again later.</p>
+<h1>儲存空間不足</h1>
+<p>伺服器無法儲存所包含的資源以完成該請求。</p>
+<p>請稍後再試。</p>
 </body>
 </html>
 ```
@@ -62,5 +59,5 @@ Content-Length: 230
 
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus("413", "413 Content Too Large")}}
