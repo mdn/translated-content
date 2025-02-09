@@ -28,23 +28,23 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
   "overview": ["name_of_the_overview_page"],
   "guides": [
     "name_of_guide_1",
-    (...)
+    (…)
   ],
   "interfaces": [
     "name_of_interface_1",
-    (...)
+    (…)
   ],
   "methods": [
     "name_of_additional_method_1",
-    (...)
+    (…)
   ],
   "properties": [
     "name_of_additional_property_1",
-    (...)
+    (…)
   ],
   "events": [
     "name_of_additional_property_1",
-    (...)
+    (…)
   ]
 }
 ```
