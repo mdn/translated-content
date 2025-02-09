@@ -2,15 +2,14 @@
 title: 508 Loop Detected
 slug: Web/HTTP/Status/508
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: e626fb706bfef0d496f0a209554f80a2d9313c0c
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`508 Loop Detected`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code indicates that the entire operation failed because it encountered an infinite loop while processing a request with `Depth: infinity`.
+HTTP **`508 Loop Detected`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#server_error_responses)狀態碼表示整個操作失敗，因為在處理帶有 `Depth: infinity` 的請求時遇到了無限迴圈。
 
-The status may be given in the context of the Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}).
-It was introduced as a fallback for cases where WebDAV clients do not support {{HTTPStatus("208", "208 Already Reported")}} responses (when requests do not explicitly include a `DAV` header).
+此狀態碼可能會出現在基於Web的分散式編寫和版本控制（{{Glossary("WebDAV")}}）的情境中。它作為後備方案被引入，用於處理當請求中未明確包含 `DAV` 標頭而使 WebDAV 用戶端不支援 {{HTTPStatus("208", "208 Already Reported")}} 回應的情況。
 
 ## 狀態
 
@@ -20,7 +19,7 @@ It was introduced as a fallback for cases where WebDAV clients do not support {{
 
 ## 範例
 
-### 在 WebDAV 搜尋中無限迴圈
+### 在 WebDAV 搜尋中遇到無限迴圈
 
 ```http
 PROPFIND /Coll/ HTTP/1.1
@@ -51,8 +50,7 @@ Content-Length: 72
 
 {{Specifications}}
 
-
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus("208", "208 Already Reported")}}
