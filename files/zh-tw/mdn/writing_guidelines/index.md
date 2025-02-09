@@ -19,6 +19,10 @@ MDN Web Docs 是一個開源專案。以下各章節說明了我們在 MDN Web D
 
   - : 寫作風格指南涵蓋了我們在 MDN Web Docs 上使用的語言和風格，還包括如何[格式化程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
 
+  - [Learn web development writing guidelines](/en-US/docs/MDN/Writing_guidelines/Learning_content)
+
+  - : The [Learn web development](/en-US/docs/Learn_web_development) section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. This articles provides guidelines for writing learning content.
+
 - [如何為 MDN Web Docs 撰寫內容](/zh-TW/docs/MDN/Writing_guidelines/Howto)
 
   - : 本章節涵蓋了建立和編輯頁面的所有資訊，包括我們遵循的特定流程和技術。本章節提供了入門資訊、頁面結構的概覽，以及特定任務的操作指南。本章節包括以下主題：
