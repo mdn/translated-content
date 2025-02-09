@@ -122,10 +122,8 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 
 ## SpecData：規範資訊
 
-> [!WARNING]
-> `SpecData.json` 檔案已不再維護。正式的規範資訊儲存在 w3c/browser-spec 與 mdn/browser-compat-data 中各功能的 `spec_url` 鍵中。
+> [!WARNING]`SpecData.json` 檔案已不再維護。正式的規範資訊儲存在 w3c/browser-spec 與 mdn/browser-compat-data 中各功能的 `spec_url` 鍵中。
 
 我們正在移除使用 `SpecData.json` 檔案的 `\{{SpecName}}` 與 `\{{Spec2}}` 巨集，不再接受對 `SpecData.json` 檔案的任何進一步貢獻；取而代之的是，請嘗試使用 `\{{Specifications}}` 巨集來插入規範表格，或直接硬編碼（且良好的）規範連結。請注意，多數情況下，在 _Specifications_ 區段之外提及或連結規範，都代表該部分在 MDN 上的文件記錄不完整。
 
 `SpecData.json` 檔案位於 [這裡](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json)（GitHub）。
-```
