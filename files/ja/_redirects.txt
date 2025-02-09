@@ -580,7 +580,7 @@
 /ja/docs/DOM/DOMString	/ja/docs/Glossary/String
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Glossary/Unix_time
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
+/ja/docs/DOM/DOM_Reference/Events	/ja/docs/Learn_web_development/Core/Scripting/Events
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
 /ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
@@ -3046,10 +3046,11 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/getSelection	/ja/docs/Web/API/Document/getSelection
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
-/ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
+/ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/Learn_web_development/Core/Scripting/Events
 /ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
