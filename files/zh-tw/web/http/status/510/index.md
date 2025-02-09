@@ -7,9 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-超文本傳輸協定（HTTP）**`510 Not Extended`** 回應狀態碼在 HTTP 擴展框架的上下文中發送，該框架在 [RFC 2774](https://datatracker.ietf.org/doc/html/rfc2774) 中定義。
-
-在該規範中，用戶端可以發送包含擴展宣告的請求，描述要使用的擴展。如果伺服器收到這樣的請求，但是未支援請求的任何描述的擴展，則伺服器以 510 狀態碼回應。
+The HTTP **`510 Not Extended`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is sent when the client request declares an HTTP Extension ({{RFC("2774")}}) that should be used to process the request, but the extension is not supported.
 
 ## 狀態
 
@@ -17,6 +15,31 @@ l10n:
 510 Not Extended
 ```
 
+## Examples
+
+### Extension not supported
+
+In the following example, a client sends a request with a mandatory extension specified in the `C-MAN` header.
+The {{HTTPHeader("Connection")}} header specifies that these extensions are to be handled on a [hop-by-hop](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers) basis.
+A {{Glossary("Proxy_server", "proxy")}} forwards the extended request, but the {{HTTPHeader("Connection")}} header is stripped out in transit.
+Because the origin server doesn't receive any information about the `M-GET` method, it sends a `510` in response:
+
+```http
+M-GET /document HTTP/1.1
+Host: example.com
+C-Man: "http://www.example.org/"
+Connection: C-Man
+```
+
+```http
+HTTP/1.1 510 Not Extended
+```
+
 ## 規格
 
 {{Specifications}}
+
+
+## 參見
+
+- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
