@@ -2,16 +2,17 @@
 title: WebSocket
 slug: Web/API/WebSocket
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
 `WebSocket` オブジェクトは、サーバーへの [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続の作成と管理、および接続上のデータの送受信に使用する API を提供します。
 
 `WebSocket` を構築するには、 [`WebSocket()`](/ja/docs/Web/API/WebSocket/WebSocket) コンストラクターを使用してください。
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> `WebSocket` API には[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を適用する方法がないため、メッセージがアプリケーションの処理速度よりも速く到着すると、アプリケーションはメッセージをバッファリングすることで端末のメモリーを一杯にしたり、 CPU 使用率が 100% になって応答不能になったり、あるいはその両方になったりします。自動的に背圧を提供する代替案については、 {{domxref("WebSocketStream")}} を参照してください。
 
 {{InheritanceDiagram}}
 
