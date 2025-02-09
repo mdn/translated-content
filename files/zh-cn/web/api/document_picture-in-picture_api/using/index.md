@@ -211,8 +211,7 @@ documentPictureInPicture.addEventListener("enter", (event) => {
 });
 ```
 
-> [!NOTE]
-> {{domxref("DocumentPictureInPictureEvent")}} 事件对象包含一个 `window` 属性，用于访问画中画窗口。
+> **备注：** {{domxref("DocumentPictureInPictureEvent")}} 事件对象包含一个 `window` 属性，用于访问画中画窗口。
 
 ## 访问元素并处理事件
 
