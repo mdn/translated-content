@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLBRElement`** 接口表示 HTML 换行元素 ({{htmlelement("br")}})。它继承自 {{domxref("HTMLElement")}}。
+**`HTMLBRElement`** 接口表示 HTML 换行元素（{{htmlelement("br")}}）。它继承自 {{domxref("HTMLElement")}}。
 
 {{InheritanceDiagram}}
 
