@@ -1,5 +1,5 @@
 ---
-title: "-webkit-transform-3d"
+title: -webkit-transform-3d
 slug: Web/CSS/@media/-webkit-transform-3d
 ---
 
@@ -52,6 +52,6 @@ slug: Web/CSS/@media/-webkit-transform-3d
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](http://www.quirksmode.org/css/tests/mediaqueries/animation.html)
+- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 
 {{ CSSRef }}

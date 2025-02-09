@@ -33,33 +33,33 @@ _Не имеет специфичных методов; наследует ме�
 _Не имеет специфичных обработчиков событий; наследует обработчики событий от его родителя, {{domxref("HTMLElement")}} и от {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("WindowEventHandlers.onafterprint")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющий собой код который будет вызван когда {{event("afterprint")}} событие будет вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющий собой код который будет вызван когда [`afterprint`](/ru/docs/Web/API/Window/afterprint_event) событие будет вызвано.
 - {{domxref("WindowEventHandlers.onbeforeprint")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("beforeprint")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`beforeprint`](/ru/docs/Web/API/Window/beforeprint_event) вызвано.
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("beforeunload")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event) вызвано.
 - {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("hashchange")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`hashchange`](/ru/docs/Web/API/Window/hashchange_event) вызвано.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код, который будет вызван при появлении события {{domxref("Window.languagechange_event", "languagechange")}}.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код, который будет вызван при появлении события {{domxref("Window.languagechange_event", "languagechange")}}.
 - {{domxref("WindowEventHandlers.onmessage")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("message")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) вызвано.
 - {{domxref("WindowEventHandlers.onoffline")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("offline")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`offline`](/ru/docs/Web/API/Window/offline_event) вызвано.
 - {{domxref("WindowEventHandlers.ononline")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("online")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`online`](/ru/docs/Web/API/Window/online_event) вызвано.
 - {{domxref("WindowEventHandlers.onpagehide")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("pagehide")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`pagehide`](/ru/docs/Web/API/Window/pagehide_event) вызвано.
 - {{domxref("WindowEventHandlers.onpageshow")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("pageshow")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`pageshow`](/ru/docs/Web/API/Window/pageshow_event) вызвано.
 - {{domxref("WindowEventHandlers.onpopstate")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("popstate")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`popstate`](/ru/docs/Web/API/Window/popstate_event) вызвано.
 - {{domxref("WindowEventHandlers.onresize")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("resize")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`resize`](/ru/docs/Web/API/Window/resize_event) вызвано.
 - {{domxref("WindowEventHandlers.onstorage")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("storage")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`storage`](/ru/docs/Web/API/Window/storage_event) вызвано.
 - {{domxref("WindowEventHandlers.onunload")}}
-  - : Это {{event("Event_handlers", "event handler")}} представляющее собой код который будет вызван когда событие {{event("unload")}} вызвано.
+  - : Это [`event handler`](/ru/docs/Web/Events/Event_handlers) представляющее собой код который будет вызван когда событие [`unload`](/ru/docs/Web/API/Window/unload_event) вызвано.
 
 ## Спецификации
 

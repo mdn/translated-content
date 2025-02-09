@@ -97,7 +97,7 @@ A saída também é "value", já que ambos foo e bar são convertidos para a mes
 
 ### Ligação de método
 
-Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#Method_binding).
+Um método não é limitado ao objeto de quem é metodo. Especificamente, `this` não é fixo em um método, i.e., `this` não se referece necessariamente ao objeto contendo o método. Ao invés disso, `this` é "passado" pela função call. Veja [method binding](/pt-BR/docs/Web/JavaScript/Reference/Operators/this#method_binding).
 
 ### Nota sobre `eval`
 

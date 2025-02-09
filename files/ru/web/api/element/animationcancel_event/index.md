@@ -5,7 +5,7 @@ slug: Web/API/Element/animationcancel_event
 
 {{APIRef("CSS3 Animations")}}
 
-Обработчик события {{event("animationcancel")}} . Это событие вызывается когда CSS Анимация ([CSS Animation](/ru/docs/Web/CSS/CSS_Animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения {{event("animationend")}} ), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
+Обработчик события [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) . Это событие вызывается когда анимация ([CSS Animation](/ru/docs/Web/CSS/CSS_animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения [`animationend`](/ru/docs/Web/API/Element/animationend_event)), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
 
 ## Синтаксис
 
@@ -17,7 +17,7 @@ target.onanimationcancel = {{jsxref("Function")}}
 
 ### Значения
 
-Функция {{jsxref("Function")}} вызывается когда {{event("animationcancel")}} происходит событие, указывающее, что CSS-анимация запустилась на объекте _target_, где объект _target_ object это HTML-элемент ({{domxref("HTMLElement")}}), документ ({{domxref("Document")}}), или окно ({{domxref("Window")}}). Эта функция принимает один параметр {{domxref("AnimationEvent")}} - объект, описывающий событие, которое произошло.
+Функция {{jsxref("Function")}} вызывается когда происходит событие [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event), указывающее, что CSS-анимация запустилась на объекте _target_, который представляет HTML-элемент ({{domxref("HTMLElement")}}), документ ({{domxref("Document")}}) или окно ({{domxref("Window")}}). Эта функция принимает один параметр {{domxref("AnimationEvent")}} — объект, описывающий событие, которое произошло.
 
 ## Пример
 
@@ -137,7 +137,7 @@ function log(msg, event) {
 }
 ```
 
-Затем мы устанавливаем обработчик событий `handleCancelEvent() - функцию`, которая вызывается в ответ на событие {{event("animationcancel")}}. Все, что мы делаем здесь - это выводим информацию в консоль, но вы можете использовать это для запуска новой анимацию или других эффектов, связанных с окончанием некоторой операции.
+Затем мы устанавливаем обработчик событий `handleCancelEvent()`, который вызывается в ответ на событие [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event). Все, что мы делаем здесь — это выводим информацию в консоль, но вы можете использовать это для запуска новой анимацию или других эффектов, связанных с окончанием некоторой операции.
 
 ```js
 function handleCancelEvent(event) {
@@ -145,7 +145,7 @@ function handleCancelEvent(event) {
 }
 ```
 
-Теперь добавим переключение {{cssxref("display")}} между `"flex"` и `"none"` и установим обработчик события щелчка {{event("click")}} на кнопке "Hide/Show":
+Теперь добавим переключение {{cssxref("display")}} между `"flex"` и `"none"` и установим обработчик события [`click`](/ru/docs/Web/API/Element/click_event) на кнопке "Hide/Show":
 
 ```js
 document.getElementById("toggleBox").addEventListener("click", function () {
@@ -159,7 +159,7 @@ document.getElementById("toggleBox").addEventListener("click", function () {
 });
 ```
 
-Таким образом переключение стилей элемента `display: none` приводит к прерыванию анимации. In browsers that support {{event("animationcancel")}}, the event is fired and this handler is called.
+Таким образом переключение стилей элемента `display: none` приводит к прерыванию анимации. In browsers that support [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event), the event is fired and this handler is called.
 
 > [!NOTE]
 > At this time, no major browser supports `animationcancel`.
@@ -182,5 +182,5 @@ If your browser supports `animationcancel`, hiding the box using the button will
 
 ## Смотрите также
 
-- The {{event("animationcancel")}} event this event handler is triggered by.
+- The [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

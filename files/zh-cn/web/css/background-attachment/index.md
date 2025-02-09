@@ -5,7 +5,7 @@ slug: Web/CSS/background-attachment
 
 {{CSSRef}}
 
-**`background-attachment`** [CSS](/zh-CN/docs/CSS) 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。
+**`background-attachment`** [CSS](/zh-CN/docs/Web/CSS) 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。
 
 {{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
@@ -44,7 +44,7 @@ background-attachment: unset;
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -71,7 +71,7 @@ p {
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -111,4 +111,4 @@ p {
 
 ## 参见
 
-- [更多背景图](/zh-CN/docs/CSS/Multiple_backgrounds)
+- [更多背景图](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -35,7 +35,7 @@ console.log(worldString.big()); // <big>Olá, mundo</big>
 console.log(worldString.fontsize(7)); // <font size="7">Olá, mundo</fontsize>
 ```
 
-Com o objeto [element.style](/pt-BR/docs/Web/API/ElementCSSInlineStyle/style) você pode pegar o atributo de estilo do elemento e manipulá-lo de forma mais genérica, por exemplo:
+Com o objeto [element.style](/pt-BR/docs/Web/API/HTMLElement/style) você pode pegar o atributo de estilo do elemento e manipulá-lo de forma mais genérica, por exemplo:
 
 ```js
 document.getElementById("#oIdDoElemento").style.fontSize = "0.7em";

@@ -103,4 +103,4 @@ slug: orphaned/Web/Compatibility_FAQ/Misaligned_Icon.html
 
 - 他のブラウザーでも互換性を維持することができます。
 
-[戻る](/ja/docs/Web/Compatibility_FAQ)
+[戻る](/ja/docs/orphaned/Web/Compatibility_FAQ)

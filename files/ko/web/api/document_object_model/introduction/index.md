@@ -11,7 +11,7 @@ slug: Web/API/Document_Object_Model/Introduction
 
 웹 페이지는 일종의 문서(document)다. 이 문서는 웹 브라우저를 통해 그 내용이 해석되어 웹 브라우저 화면에 나타나거나 HTML 소스 자체로 나타나기도 한다. 동일한 문서를 사용하여 이처럼 다른 형태로 나타날 수 있다는 점에 주목할 필요가 있다. DOM 은 동일한 문서를 표현하고, 저장하고, 조작하는 방법을 제공한다. DOM 은 웹 페이지의 객체 지향 표현이며, JavaScript와 같은 스크립팅 언어를 이용해 DOM 을 수정할 수 있다.
 
-[W3C DOM](http://www.w3.org/DOM/), [WHATWG DOM](https://dom.spec.whatwg.org) 표준은 대부분의 브라우저에서 DOM 을 구현하는 기준이다. 많은 브라우저들이 표준 규약에서 제공하는 기능 외에도 추가적인 기능들을 제공하기 때문에 사용자가 작성한 문서들이 각기 다른 DOM 이 적용된 다양한 브라우저 환경에서 동작할 수 있다는 사실을 항상 인지하고 있어야 한다.
+[W3C DOM](https://www.w3.org/DOM/), [WHATWG DOM](https://dom.spec.whatwg.org) 표준은 대부분의 브라우저에서 DOM 을 구현하는 기준이다. 많은 브라우저들이 표준 규약에서 제공하는 기능 외에도 추가적인 기능들을 제공하기 때문에 사용자가 작성한 문서들이 각기 다른 DOM 이 적용된 다양한 브라우저 환경에서 동작할 수 있다는 사실을 항상 인지하고 있어야 한다.
 
 예를 들어, 표준 DOM 에서는 문서 안에서 모든 `<P>` elements 에 대한 list 를 리턴하는 `getElementsByTagName` method 를 정의하고 있다:
 
@@ -48,7 +48,7 @@ p_list = doc.getElementsByTagName("para");
 
 DOM 을 사용하기 위해 특별히 해야할 일은 없다. 각각의 브라우저는 자신만의 방법으로 DOM 구현하였으며, 이로 인해 실제 DOM 기준을 따르는지 확인해야 하는 번거로움이 발생하였다. (이 문제는 이 문서에서 피하고 싶어하는 주제이기도 하다.) 모든 웹 브라우저는 스크립트가 접근할 수 있는 웹 페이지를 만들기 위해 어느 정도의 DOM 을 항상 사용한다.
 
-스크립트를 작성할 때(인라인 `<script>` 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/DOM/window) elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/DOM/window) object 로 부터 [`alert()`](/ko/docs/DOM/window.alert) 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
+스크립트를 작성할 때(인라인 `<script>` 요소를 사용하거나 웹 페이지 안에 있는 스크립트 로딩 명령을 사용하여), 문서 자체를 조작하거나 문서의 children 을 얻기 위해 {{domxref("document")}} 또는 [`window`](/ko/docs/Web/API/Window) elements 를 위한 API 를 즉시 사용할 수 있다. DOM 프로그래밍은 아래처럼 [`window`](/ko/docs/Web/API/Window) object 로 부터 [`alert()`](/ko/docs/Web/API/Window/alert) 함수를 사용하여 alert message 를 표시하는 매우 간단한 것일 수도 있고 다음번 예제처럼 새로운 content 를 작성하는 복잡한 DOM 이 될 수도 있다.
 
 ```html
 <body onload="window.alert('welcome to my home page!');"></body>
@@ -202,10 +202,10 @@ table.summary = "note: increased border";
 - `element.setAttribute`
 - `element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/ko/docs/DOM/window.content)
-- [`window.onload`](/ko/docs/DOM/window.onload)
-- [`window.dump`](/ko/docs/DOM/window.dump)
-- [`window.scrollTo`](/ko/docs/DOM/window.scrollTo)
+- [`window.content`](/ko/docs/Web/API/Window)
+- [`window.onload`](/ko/docs/Web/API/Window/load_event)
+- [`window.dump`](/ko/docs/Web/API/Window/dump)
+- [`window.scrollTo`](/ko/docs/Web/API/Window/scrollTo)
 
 ## DOM API 테스팅
 
@@ -278,7 +278,7 @@ table.summary = "note: increased border";
 
 - [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ko/docs/Web/API/Document_Object_Model/Events)
+- [Events and the DOM](/ko/docs/Learn/JavaScript/Building_blocks/Events)
 - [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

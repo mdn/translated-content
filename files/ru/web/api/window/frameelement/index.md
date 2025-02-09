@@ -33,7 +33,7 @@ if (frameEl) {
 
 ## Спецификации
 
-[WHATWG](http://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
+[WHATWG](https://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
 
 ## Совместимость с браузерами
 

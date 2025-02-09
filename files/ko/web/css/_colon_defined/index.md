@@ -1,5 +1,5 @@
 ---
-title: ":defined"
+title: :defined
 slug: Web/CSS/:defined
 ---
 
@@ -97,4 +97,4 @@ simple-custom:defined {
 
 ## 같이 보기
 
-- [웹 컴포넌트](/ko/docs/Web/Web_Components)
+- [웹 컴포넌트](/ko/docs/Web/API/Web_components)

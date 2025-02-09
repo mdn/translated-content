@@ -2,7 +2,7 @@
 title: flex-direction
 slug: Web/CSS/flex-direction
 l10n:
-  sourceCommit: 1a07a1f7f623d94a8454414d1a4df9add04ddd5e
+  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
 {{CSSRef}}
@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Global_attributes#dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
+なお、 `row` および `row-reverse` の値は、フレックスコンテナーの書字方向に影響されます。 [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性が `ltr` である場合は、 `row` は左から右へ向かう水平軸を表し、また `row-reverse` は右から左へ向かう水平軸を表します。一方、 `dir` 属性が `rtl` である場合は、 `row` は右から左へ向かう水平軸を表し、また `row-reverse` は左から右へ向かう水平軸を表します。
 
 ## 構文
 
@@ -49,7 +49,7 @@ flex-direction: unset;
 - `column-reverse`
   - : `column` と同様ですが、 **main-start** および **main-end** の位置が入れ替わります。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 `flex-direction` プロパティを `row-reverse` または `column-reverse` の値で使うと、視覚上の表示と DOM の順序が一致しなくなります。これは、スクリーンリーダーなどの支援技術を使っている視覚障害者に不利な影響を及ぼします。視覚的な (CSS の) 順序が重要である場合は、スクリーンリーダーの利用者は正しい読み上げ順序でアクセスすることができなくなります。
 
@@ -72,7 +72,7 @@ flex-direction: unset;
 
 #### HTML
 
-```html
+```html live-sample___reversing_flex_container_columns_and_rows
 <h4>これは Column-Reverse です</h4>
 <div id="col-rev" class="content">
   <div class="box red">A</div>
@@ -89,7 +89,7 @@ flex-direction: unset;
 
 #### CSS
 
-```css
+```css live-sample___reversing_flex_container_columns_and_rows
 .content {
   width: 200px;
   height: 200px;
@@ -125,7 +125,7 @@ flex-direction: unset;
 
 #### 結果
 
-{{EmbedLiveSample('フレックスコンテナーの列と行の反転', '', '550')}}
+{{EmbedLiveSample('Reversing_flex_container_columns_and_rows', '', '550')}}
 
 ## 仕様書
 

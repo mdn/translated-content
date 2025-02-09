@@ -1,11 +1,11 @@
 ---
-title: ":read-only"
+title: :read-only
 slug: Web/CSS/:read-only
 ---
 
 {{CSSRef}}
 
-**`:read-only`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/CSS/Pseudo-classes) 表示元素不可被用户编辑的状态（如锁定的文本输入框）。
+**`:read-only`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示元素不可被用户编辑的状态（如锁定的文本输入框）。
 
 ```css
 /* Selects any <input> element that is read-only */

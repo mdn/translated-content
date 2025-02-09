@@ -28,4 +28,4 @@ _Esta interface não adiciona nenhum método novo._
 
 ## Veja também
 
-- [Indice de interfaces DOM](/pt-BR/docs/DOM/DOM_Reference)
+- [Indice de interfaces DOM](/pt-BR/docs/Web/API/Document_Object_Model)

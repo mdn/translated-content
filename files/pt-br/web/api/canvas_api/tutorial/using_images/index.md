@@ -41,7 +41,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/pt-BR/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+Using the [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/pt-BR/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
 
 ### Using other canvas elements
 
@@ -78,7 +78,7 @@ If you're only using one external image this can be a good approach, but once yo
 
 ### Embedding an image via data: URL
 
-Another possible way to include images is via the [data: url](/pt-BR/docs/Web/HTTP/data_URIs). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
+Another possible way to include images is via the [data: url](/pt-BR/docs/Web/URI/Schemes/data). Data URLs allow you to completely define an image as a Base64 encoded string of characters directly in your code.
 
 ```js
 var img = new Image(); // Create new img element

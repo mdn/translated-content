@@ -57,7 +57,7 @@ console.log(container.firstChild.nodeName); // логирует "P"
 
 ## Примечания
 
-Если у элемента нет родительской ветки, которая не является корневой веткой документа, установка его свойства `outerHTML` выбросит исключение [`DOMException`](/en/DOM/DOMException) с кодом ошибки `NO_MODIFICATION_ALLOWED_ERR`. Например:
+Если у элемента нет родительской ветки, которая не является корневой веткой документа, установка его свойства `outerHTML` выбросит исключение [`DOMException`](/en-US/DOM/DOMException) с кодом ошибки `NO_MODIFICATION_ALLOWED_ERR`. Например:
 
 ```js
 document.documentElement.outerHTML = "test"; // бросает DOMException

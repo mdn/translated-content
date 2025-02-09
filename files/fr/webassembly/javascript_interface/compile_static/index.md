@@ -21,11 +21,11 @@ WebAssembly.compile(bufferSource);
 ### Paramètres
 
 - `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant le <i lang="en">bytecode</i> du module WebAssembly qu'on souhaite compiler.
+  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant le <i lang="en">bytecode</i> du module WebAssembly qu'on souhaite compiler.
 
 ### Valeur de retour
 
-Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
+Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
 
 ### Exceptions
 

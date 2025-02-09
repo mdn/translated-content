@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
 
 {{AddonSidebar}}Supprime une fenêtre fermée de la liste des fenêtres récemment fermées du navigateur.Notez que les sites visités par cette fenêtre ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} ou {{WebExtAPIRef("history")}} pour supprimer l'historique.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ var forgettingWindow = browser.sessions.forgetClosedWindow(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Cela sera accompli sans arguments lorsque la session a été supprimée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Cela sera accompli sans arguments lorsque la session a été supprimée.
 
 Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 

@@ -1,6 +1,8 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
+l10n:
+  sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
 {{CSSRef}}
@@ -20,6 +22,7 @@ font-optical-sizing: auto; /* default */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
 font-optical-sizing: revert;
+font-optical-sizing: revert-layer;
 font-optical-sizing: unset;
 ```
 

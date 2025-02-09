@@ -1,44 +1,49 @@
 ---
-title: Coordinates
+title: GeolocationCoordinates
 slug: Web/API/GeolocationCoordinates
+l10n:
+  sourceCommit: 68c5b12ed1e9a55b86cd32e242216f1b88a8ccc7
 ---
 
-{{APIRef("Geolocation API")}}
+{{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`Coordinates`** 這個介面用來存取裝置的經緯度，速度以及這些數值的準確度。
+**`GeolocationCoordinates`** 介面表示設備在地球上的位置和高度，以及計算這些屬性的準確性。地理位置訊息是以世界大地測量系統座標（WGS84）提供的。
 
-## 屬性
+## 實例屬性
 
-_`Coordinates` 這個介面沒有繼承任何屬性_。
+_`GeolocationCoordinates` 介面不繼承任何屬性。_
 
-- {{domxref("Coordinates.latitude")}} {{readonlyInline}}
-  - : 回傳一個十進位的 double 代表緯度。
-- {{domxref("Coordinates.longitude")}} {{readonlyInline}}
-  - : 回傳一個十進位的 double 代表經度。
-- {{domxref("Coordinates.altitude")}} {{readonlyInline}}
-  - : 回傳一個 double 代表距離海平面的高度，單位為公尺。如果無法提供這個值則回傳 null。
-- {{domxref("Coordinates.accuracy")}} {{readonlyInline}}
-  - : 回傳一個 double 代表經緯度的精準值，單位為公尺。
-- {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}
-  - : 回傳一個 double 代表高度的精準度，單位為公尺。如果無法提供這個值則回傳 null。
-- {{domxref("Coordinates.heading")}} {{readonlyInline}}
-  - : 回傳一個 double 代表裝置前進的方向，這個數值代表你偏離北方多少度，0 度代表你向著正北方，照著順時針的方向遞增(90 度代表正東方，270 度代表正西方) 。如果速度值為 0 度，則此值為 [`NaN`](/zh-TW/docs/JavaScript/Reference/Global_Objects/NaN)。如果無法提供這個值則回傳 null。
-- {{domxref("Coordinates.speed")}} {{readonlyInline}}
-  - : 回傳一個 double 代表速度，單位為公尺/秒。如果無法提供這個值則回傳 null。
+- {{domxref("GeolocationCoordinates.latitude")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示位置的緯度（十進制度）。
+- {{domxref("GeolocationCoordinates.longitude")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示位置的經度（十進制度）。
+- {{domxref("GeolocationCoordinates.altitude")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示相對於名義海平面的高度（以公尺為單位）。如果實現無法提供數據，則此值可以為 `null`。
+- {{domxref("GeolocationCoordinates.accuracy")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示 `latitude` 和 `longitude` 屬性的準確性（以公尺為單位）。
+- {{domxref("GeolocationCoordinates.altitudeAccuracy")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示高度的準確性（以公尺為單位）。如果實現無法提供數據，則此值可以為 `null`。
+- {{domxref("GeolocationCoordinates.heading")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示設備面向的方向。此值以度為單位，表示設備偏離真北的程度。`0` 度表示真北，方向順時針確定（這意味著東是 `90` 度，西是 `270` 度）。如果 `speed` 為 `0` 或設備無法提供 `heading` 訊息，則 `heading` 為 `null`。
+- {{domxref("GeolocationCoordinates.speed")}} {{ReadOnlyInline}}
+  - : 返回一個 `double`，表示設備的速度（以公尺每秒為單位）。此值可以為 `null`。
 
-## 方法
+## 實例方法
 
-**`Coordinates` 這個介面**，沒有實作也沒有繼承自任何的方法。
+_`GeolocationCoordinates` 介面不繼承任何方法。_
 
-## 規格
+- {{domxref("GeolocationCoordinates.toJSON()")}}
+  - : 返回以 JSON 表示的 `GeolocationCoordinates` 物件，並啟用使用 {{jsxref("JSON.stringify()")}} 進行序列化。
+
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器的相容性
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 請參考
+## 參見
 
-- [Using geolocation](/zh-TW/docs/WebAPI/Using_geolocation)
-- {{domxref("Geolocation")}} 介面使用此物件。
+- [使用地理位置 API](/zh-TW/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- {{domxref("Geolocation")}}

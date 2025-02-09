@@ -1,9 +1,9 @@
 ---
-title: ":where()"
+title: :where()
 slug: Web/CSS/:where
 ---
 
-{{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:where()`** в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
+{{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:where()`** в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
 
 ```css
 /* Выбирает любой параграф внутри header, main
@@ -155,4 +155,4 @@ footer a {
 
 - {{CSSxRef(":is", ":is()")}}
 - [Список селекторов](/ru/docs/Web/CSS/Selector_list)
-- [Веб-компоненты](/ru/docs/Web/Web_Components)
+- [Веб-компоненты](/ru/docs/Web/API/Web_components)

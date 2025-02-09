@@ -5,7 +5,7 @@ slug: Web/API/console/timeLog_static
 
 {{APIRef("Console API")}}Выводит в консоль текущее значение таймера, запущенного вызовом {{domxref("console.time()")}}.
 
-Подробности и примеры смотрите в документации [Timers](/ru/docs/Web/API/console#Timers).
+Подробности и примеры смотрите в документации [Timers](/ru/docs/Web/API/console#timers).
 
 {{AvailableInWorkers}}
 
@@ -74,4 +74,4 @@ console.timeEnd("answer time");
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)

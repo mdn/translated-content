@@ -17,4 +17,4 @@ string = document.referrer;
 
 ## Specification
 
-- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)

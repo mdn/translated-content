@@ -11,10 +11,10 @@ Este elemento é útil ao incorporar o texto com uma direção desconhecida, de 
 
 Apesar do mesmo efeito visual pode ser alcançado usando a regra de CSS{{cssxref("unicode-bidi")}}: isolar um {{HTMLElement("span")}} ou outro elemento de formatação de texto, o significado semântico só é transportado pelo elemento de\<bdi>. Especialmente, os navegadores podem ignorar estilos CSS. Nesse caso, o texto seria ainda corretamente exibido usando o elemento HTML, mas se tornará lixo quando usando o estilo CSS para transmitir semântica.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
-- _Permitted content_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), palpable content.
+- _Permitted content_[Phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
+- _Tag omission_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Atributos

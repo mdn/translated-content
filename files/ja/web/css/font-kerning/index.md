@@ -1,11 +1,13 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
+l10n:
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`font-kerning`** CSS プロパティはフォントに存在するカーニング情報の使用を制御します。
+**`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
 
 {{EmbedInteractiveExample("pages/css/font-kerning.html")}}
 
@@ -26,6 +28,7 @@ font-kerning: none;
 font-kerning: inherit;
 font-kerning: initial;
 font-kerning: revert;
+font-kerning: revert-layer;
 font-kerning: unset;
 ```
 
@@ -48,25 +51,25 @@ font-kerning: unset;
 
 ## 例
 
-<h3 id="Enabling_and_disabling_kerning">カーニングの有無</h3>
+### カーニングの有無
 
 #### HTML
 
-```html
+```html live-sample___enabling_and_disabling_kerning
 <div id="kern"></div>
-<div id="nokern"></div>
+<div id="no-kern"></div>
 <textarea id="input">AV T. ij</textarea>
 ```
 
 #### CSS
 
-```css
+```css live-sample___enabling_and_disabling_kerning
 div {
   font-size: 2rem;
-  font-family: serif;
+  font-family: "Times New Roman";
 }
 
-#nokern {
+#no-kern {
   font-kerning: none;
 }
 
@@ -77,18 +80,18 @@ div {
 
 #### JavaScript
 
-```js
-let input = document.getElementById("input");
-let kern = document.getElementById("kern");
-let nokern = document.getElementById("nokern");
+```js live-sample___enabling_and_disabling_kerning
+const input = document.getElementById("input");
+const kern = document.getElementById("kern");
+const noKern = document.getElementById("no-kern");
 
-input.addEventListener("keyup", function () {
-  kern.textContent = input.value; /* Update content */
-  nokern.textContent = input.value;
+input.addEventListener("keyup", () => {
+  kern.textContent = input.value; /* コンテンツを更新 */
+  noKern.textContent = input.value;
 });
 
-kern.textContent = input.value; /* Initialize content */
-nokern.textContent = input.value;
+kern.textContent = input.value; /* コンテンツを初期化 */
+noKern.textContent = input.value;
 ```
 
 {{ EmbedLiveSample('Enabling_and_disabling_kerning') }}

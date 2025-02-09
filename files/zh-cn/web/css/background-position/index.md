@@ -151,15 +151,15 @@ div {
 
 /* 这些例子使用 `background` 缩写 */
 .exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
 .examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
     right 3em bottom 2em;

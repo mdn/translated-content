@@ -2,7 +2,7 @@
 title: CSS セレクター
 slug: Web/CSS/CSS_selectors
 l10n:
-  sourceCommit: 620e8846e0c617e1b93b7aa92f8bb86ce7fb975b
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -19,7 +19,7 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 
 - `+` （[次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator)）
 - `>` （[子結合子](/ja/docs/Web/CSS/Child_combinator)）
-- `||` （[列結合子](/ja/docs/Web/CSS/Column_combinator)）{{Experimental_Inline}}
+- `||` （[列結合子](/ja/docs/Web/CSS/Column_combinator)）
 - `~` （[後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)）
 - " " （[子孫結合子](/ja/docs/Web/CSS/Descendant_combinator)）
 - `|` （[名前空間セパレーター](/ja/docs/Web/CSS/Namespace_separator)）
@@ -102,10 +102,10 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - {{glossary("Pseudo-class", "擬似クラス")}}（用語集の用語）
 - [関数記法の擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
 - [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
-- [単純セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#単純セレクター)
-- [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#複合セレクター)
-- [複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#複雑セレクター)
-- [関連セレクター](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#関連セレクター)
+- [単純セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#単純セレクター)
+- [複合セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複合セレクター)
+- [複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)
+- [関連セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#関連セレクター)
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [詳細度](/ja/docs/Web/CSS/Specificity)
 
@@ -123,29 +123,28 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 
   - : 擬似クラスは、文書ツリーには含まれない状態情報に基づいて要素を選択できるようにするセレクターの一覧で、さまざまな CSS モジュールや HTML で定義されています。
 
-- [学習: CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+- [学習: CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-  - : CSS の構成要素の一部で、チュートリアルとして[要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)、[属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)、[擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)、[結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)、[カスケード、詳細度、継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)、[カスケードレイヤー](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)があります。
+  - : CSS の構成要素の一部で、チュートリアルとして[要素・クラス・ID によるセレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)、[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)、[擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)、[カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)があります。
 
 - [セレクターでの `:target` 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
 
   - : {{CSSXref(":target")}} 擬似クラスを使って、 URL のフラグメント識別子をターゲット要素にスタイルを設定する方法を学びます。
 
-- [学習: UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
+- [学習: UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
 
   - : さまざまな状態のフォームをスタイル設定するために利用できる、さまざまな UI 擬似クラスについて学びます。
 
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 
   - : セレクター API を使用すると、 JavaScript でセレクターを使用して DOM から要素ノードを取得できます。
 
 ## 関連概念
 
 - {{CSSXref(":popover-open")}} 擬似クラス
-- [CSS nesting](/ja/docs/Web/CSS/CSS_nesting) モジュール
-
-  - : [`&` nesting selector](/ja/docs/Web/CSS/Nesting_selector)
-
+- {{CSSXref(":state","state()")}} 擬似クラス
+- [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュール
+  - : [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
 - [CSS scoping](/ja/docs/Web/CSS/CSS_scoping) モジュール
 
   - {{CSSXref(":host")}} 擬似クラス
@@ -178,7 +177,6 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - その他の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
 
   - {{CSSxRef("::cue")}}
-  - {{CSSxRef("::cue-region")}}
 
 - {{CSSXref("@namespace")}} アットルール
 

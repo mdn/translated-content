@@ -36,7 +36,7 @@ var ohGodWhy = "foo";
 
 ### Зарезервированные ключевые слова не могут использоваться как имена переменных
 
-Есть несколько имён, которые являются [зарезервированными ключевыми словами](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Ключевые_слова). Их нельзя использовать. Увы :(
+Есть несколько имён, которые являются [зарезервированными ключевыми словами](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#ключевые_слова). Их нельзя использовать. Увы :(
 
 ```js example-bad
 var debugger = "whoop";
@@ -85,6 +85,6 @@ var arr = [1, 2, 3, 4, 5];
 
 ## Смотрите также
 
-- [Хорошие имена переменных (на англ.)](http://wiki.c2.com/?GoodVariableNames)
+- [Хорошие имена переменных (на англ.)](https://wiki.c2.com/?GoodVariableNames)
 - [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)
-- [Объявления переменных в Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#Объявления)
+- [Объявления переменных в Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#объявления)

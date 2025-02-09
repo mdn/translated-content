@@ -1,5 +1,5 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
@@ -231,4 +231,4 @@ CSS における類似の構成は `.abc:has(+ .xyz)` です。これは、次�
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)

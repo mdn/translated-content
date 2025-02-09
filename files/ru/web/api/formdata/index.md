@@ -12,7 +12,7 @@ XMLHttpRequest 2 добавляет поддержку для нового ин�
 FormData использует такой же формат на выходе, как если бы мы отправляли обыкновенную форму с encoding установленным в "multipart/form-data".
 
 > [!NOTE]
-> О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects).
+> О деталях использования FormData можно прочитать в статье [Использование объекта FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).
 
 ## Конструктор
 
@@ -54,6 +54,6 @@ FormData использует такой же формат на выходе, к
 ## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Использование объектов FormData](/ru/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Использование объектов FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

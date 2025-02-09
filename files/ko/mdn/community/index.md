@@ -41,13 +41,13 @@ MDN Web Docs에 기여할 수 있는 방법 목록은 다음과 같습니다.
 
 - [Issues](/ko/docs/MDN/Community/Issues)
 
-  - : 이슈는 버그 뿐만 아니라, 확실한 결과를 낳을 작업들을 추적할 때도 사용합니다. 이 글에서는 새로운 이슈를 열 때와, 이슈를 처리할 때의 가이드라인을 제공합니다. [이슈 분류](/ko/docs/MDN/Community/Issues/Issue_triage)와 [콘텐츠와 기능 제안](/ko/docs/MDN/Community/Issues/Content_suggestions_feature_proposals) 주제들도 다룹니다.
+  - : 이슈는 버그 뿐만 아니라, 확실한 결과를 낳을 작업들을 추적할 때도 사용합니다. 이 글에서는 새로운 이슈를 열 때와, 이슈를 처리할 때의 가이드라인을 제공합니다. [이슈 분류](/ko/docs/MDN/Community/Issues)와 [콘텐츠와 기능 제안](/ko/docs/MDN/Community/Issues/Content_suggestions_feature_proposals) 주제들도 다룹니다.
 
 - [Pull requests](/ko/docs/MDN/Community/Pull_requests)
 
   - : 이 섹션에서는 풀 리퀘스트 제출 지침과 리뷰 과정에서 예상할 수 있는 내용을 다룹니다.
 
-- [역할과 팀](/ko/docs/MDN/Community/Users_teams)
+- [역할과 팀](/ko/docs/MDN/Community/Roles_teams)
 
   - : 이 섹션에서는 MDN Web Docs 프로젝트에 속한 사용자와 팀의 개요를 제공하며, 팀의 일원이 된다는 것의 의미를 설명합니다.
 

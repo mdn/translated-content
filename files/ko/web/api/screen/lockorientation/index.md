@@ -8,7 +8,7 @@ slug: Web/API/Screen/lockOrientation
 `lockOrientation` 함수는 지정된 방향으로 화면을 고정시킨다.
 
 > [!NOTE]
-> 이 함수는 오직 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/Guide/DOM/Using_full_screen_mode) 의 웹페이지에서만 동작한다..
+> 이 함수는 오직 설치된 웹앱 또는 [full-screen mode](/ko/docs/Web/API/Fullscreen_API) 의 웹페이지에서만 동작한다..
 
 ## Syntax
 
@@ -66,4 +66,4 @@ if (window.screen.mozLockOrientation("landscape-primary")) {
 - {{domxref("window.screen.orientation")}}
 - {{domxref("window.screen.unlockOrientation()")}}
 - {{domxref("window.screen.onorientationchange")}}
-- [Managing screen orientation](/ko/docs/Managing_screen_orientation)
+- [Managing screen orientation](/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)

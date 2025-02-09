@@ -5,10 +5,10 @@ slug: Web/API/Worker/message_event
 
 {{APIRef("Web Workers API")}}
 
-Свойство **`onmessage`** интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .
+Свойство **`onmessage`** интерфейса {{domxref("Worker")}} представляет собой обработчик [`event handler`](/ru/docs/Web/Events/Event_handlers), который будет вызван когда произойдёт событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event). Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .
 
 > [!NOTE]
-> Данные события доступны в свойстве data события {{event("message")}}.
+> Данные события доступны в свойстве data события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event).
 
 ## Синтаксис
 
@@ -47,7 +47,7 @@ onmessage = function (e) {
 
 Посмотрите как в скрипте `worker.js` вызывается обработчик `onmessage`. В нем присутствует только глобальное свойство `onmessage`, потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).
 
-Для полного примера смотрите наш [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+Для полного примера смотрите наш [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
 
 ## Спецификации
 

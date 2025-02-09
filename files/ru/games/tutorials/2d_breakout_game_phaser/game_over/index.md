@@ -37,6 +37,6 @@ ball.events.onOutOfBounds.add(function () {
 
 ## Следующий шаг
 
-Базовый геймплей готов. Но какой арканоид без разбивания [кирпичиков](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей)?
+Базовый геймплей готов. Но какой арканоид без разбивания [кирпичиков](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)?
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Создание_кирпичей")}}

@@ -35,7 +35,7 @@ for (const [index, element] of arr.entries()) {
 
 ### Boucle `for...of`
 
-On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) :
+On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) :
 
 ```js
 var arr = ["a", "b", "c"];
@@ -64,5 +64,5 @@ for (let e of eArr) {
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.some()")}}
-- [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
-- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)

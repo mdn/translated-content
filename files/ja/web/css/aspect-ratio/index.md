@@ -2,7 +2,7 @@
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 l10n:
-  sourceCommit: d7a5a9761b68e13cdd3bffafdd238a8712eb23d4
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -101,7 +101,7 @@ div:nth-child(5) {
 }
 ```
 
-{{EmbedLiveSample('固定の幅に対する aspect-ratio の効果の実験', '100%', '300px')}}
+{{EmbedLiveSample('Exploring aspect-ratio effects with fixed width', '100%', '300px')}}
 
 ### 自然なアスペクト比への代替
 
@@ -127,7 +127,7 @@ img {
 
 置換コンテンツではない最初の画像は、縦横比が `3/2` のままですが、コンテンツが読み込まれた後の 2 番目の画像は、画像の自然な縦横比を使用していることに注目してください。
 
-{{EmbedLiveSample('自然なアスペクト比への代替', '100%', '300px')}}
+{{EmbedLiveSample('Fallback to natural aspect ratio', '100%', '300px')}}
 
 ## 仕様書
 
@@ -139,7 +139,7 @@ img {
 
 ## 関連情報
 
-- [メディアのコンテナー要素の幅と高さの属性をアスペクト比にマッピングする](/ja/docs/Learn/Performance/Multimedia)
-- [画像の aspect-ratio: ジャンクの防止](/ja/docs/Learn/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
+- [アスペクト比を理解する](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [画像の aspect-ratio: ジャンクの防止](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

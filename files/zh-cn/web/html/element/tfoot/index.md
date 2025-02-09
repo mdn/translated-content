@@ -3,6 +3,8 @@ title: <tfoot>
 slug: Web/HTML/Element/tfoot
 ---
 
+{{HTMLSidebar}}
+
 HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 <table class="properties">
@@ -53,7 +55,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
     > 此属性在最新标准中已被废弃（不支持），所以请勿使用。
     >
     > - 为达到与`left`, `center`, `right`或`justify`相同的效果，请使用 CSS {{cssxref("text-align")}}属性。
-    > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char) 的值用作 {{cssxref("text-align")}} 的属性值。
+    > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](#char) 的值用作 {{cssxref("text-align")}} 的属性值。
 
 - `bgcolor` {{Non-standard_inline}}
 
@@ -64,10 +66,10 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 - `char` {{Deprecated_inline}}
 
-  - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](/zh-CN/docs/Web/HTML/Element/tfoot#align)未设置为`char`，此属性将被忽略。
+  - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](#align)未设置为`char`，此属性将被忽略。
 
     > [!NOTE]
-    > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](/zh-CN/docs/Web/HTML/Element/tfoot#char)的属性值。
+    > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](#char)的属性值。
 
 - `charoff` {{Deprecated_inline}}
 
@@ -78,15 +80,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 - `valign` {{Deprecated_inline}}
 
-  - : 此属性指定表头（译者注：英文原文为 table header，疑似错误）中每一行内的文本的垂直对齐方式。此属性的可选值为：
-
-    - `baseline`，会使文本尽可能接近单元格底部，但并不向底部对齐，而将它们以字符[基线](https://zh.wikipedia.org/wiki/%E5%9F%BA%E7%B7%9A)对齐。如果所有字符的大小相同，此值与`bottom`的效果相同；
-    - `bottom`，设置文本向下对齐；
-    - `middle`，设置文本居中对齐；
-    - and `top`，设置文本向上对齐。
-
-    > [!NOTE]
-    > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）：使用 CSS 属性{{cssxref("vertical-align")}}作为替代。
+  - : 指定每个表脚单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有：`baseline`、`bottom`、`middle` 和 `top`。此属性已被弃用，请使用 CSS 属性 {{cssxref("vertical-align")}} 代替。
 
 ## 示例
 
@@ -107,5 +101,3 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
   - {{cssxref(":nth-child")}}伪类：设置列内元素的对齐方式；
   - {{cssxref("text-align")}}属性：可设置单元格内容与同一字符对齐，例如'.'。
-
-{{HTMLSidebar}}

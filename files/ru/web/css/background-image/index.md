@@ -7,9 +7,9 @@ slug: Web/CSS/background-image
 
 ## Краткое описание
 
-Свойство [CSS](/ru/docs/CSS) **`background-image`** устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.
+Свойство [CSS](/ru/docs/Web/CSS) **`background-image`** устанавливает одно или несколько фоновых изображений для элемента. Изображения рисуются в слоях контекстов наложения одно поверх другого. Первый слой выводится так, чтобы он был ближе всего к пользователю.
 
-[Границы](/ru/CSS/border) {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS-свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.
+[Границы](/ru/docs/CSS/border) {{cssxref("border")}} элемента затем рисуются поверх них, и {{cssxref("background-color")}} рисуется под ними. То, как изображения отрисовываются относительно рамки и её границ, определяется CSS-свойствами {{cssxref("background-clip")}} и {{cssxref("background-origin")}}.
 
 Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением `none`.
 
@@ -32,7 +32,7 @@ background-image: inherit;
 - `none`
   - : Это ключевое слово обозначает отсутствие изображений.
 - `<image>`
-  - : {{cssxref("&lt;image&gt;")}} обозначает изображение для отображения. Их может быть несколько, разделённых запятыми, поскольку поддерживается[несколько фонов](/ru/docs/CSS/Multiple_backgrounds).
+  - : {{cssxref("&lt;image&gt;")}} обозначает изображение для отображения. Их может быть несколько, разделённых запятыми, поскольку поддерживается[несколько фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
 
 ### Официальный синтаксис
 
@@ -74,7 +74,7 @@ p {
 }
 
 .catsandstars {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-color: transparent;
 }
 ```
@@ -91,6 +91,6 @@ p {
 
 ## Смотрите также
 
-- [CSS спрайты изображений](/ru/docs/Web/Guide/CSS/CSS_Image_Sprites)
+- [CSS спрайты изображений](/ru/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
 - {{HTMLElement("img")}}
 - Статьи, связанные с изображениями:: {{cssxref("&lt;image&gt;")}}, {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("element")}}.

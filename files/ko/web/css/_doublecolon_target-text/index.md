@@ -1,5 +1,5 @@
 ---
-title: "::target-text"
+title: ::target-text
 slug: Web/CSS/::target-text
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::target-text`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 브라우저가 [텍스트 조각](/ko/docs/Web/Text_fragments)을 지원하는 경우에 스크롤된 텍스트를 나타냅니다. 이는 작성자가 해당 텍스트의 일부를 강조하는 방법을 선택할 수 있게 합니다.
+**`::target-text`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 브라우저가 [텍스트 조각](/ko/docs/Web/URI/Fragment/Text_fragments)을 지원하는 경우에 스크롤된 텍스트를 나타냅니다. 이는 작성자가 해당 텍스트의 일부를 강조하는 방법을 선택할 수 있게 합니다.
 
 ```css
 ::target-text {
@@ -46,4 +46,4 @@ CSS의 동작 방식을 확인하려면 [scroll-to-text demo](https://mdn.github
 
 ## 같이 보기
 
-- [텍스트 조각](/ko/docs/Web/Text_fragments)
+- [텍스트 조각](/ko/docs/Web/URI/Fragment/Text_fragments)

@@ -23,7 +23,7 @@ var controller = new AbortController();
 
 Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
 
-Когда [fetch запрос](/ru/docs/Web/API/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
+Когда [fetch запрос](/ru/docs/Web/API/Window/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
 
 ```js
 var controller = new AbortController();

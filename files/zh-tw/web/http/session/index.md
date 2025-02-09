@@ -2,7 +2,7 @@
 title: 典型的 HTTP 會話
 slug: Web/HTTP/Session
 l10n:
-  sourceCommit: 46a16cc28c5da14b45a6f65e478d032532764122
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTTPSidebar}}
@@ -64,7 +64,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 HTTP 定義了一組[請求方法](/zh-TW/docs/Web/HTTP/Methods)，指示對資源執行的所需操作。雖然它們也可以是名詞，但這些請求方法有時被稱為 HTTP 動詞。最常見的請求是 `GET` 和 `POST`：
 
 - {{HTTPMethod("GET")}} 方法請求指定資源的數據表示。使用 `GET` 的請求應僅檢索數據。
-- {{HTTPMethod("POST")}} 方法將數據發送到伺服器，以便它可以更改其狀態。這是通常用於 [HTML 表單](/zh-TW/docs/Learn/Forms)的方法。
+- {{HTTPMethod("POST")}} 方法將數據發送到伺服器，以便它可以更改其狀態。這是通常用於 [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)的方法。
 
 ## 伺服器回應的結構
 
@@ -95,7 +95,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 Age: 7
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -122,7 +122,7 @@ Via: Moz-Cache-zlb05
 Connection: Keep-Alive
 Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 通知請求的資源不存在：
@@ -144,7 +144,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 X-Cache: Error from cloudfront
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 ### 回應狀態碼

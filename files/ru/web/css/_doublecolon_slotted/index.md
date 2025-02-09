@@ -1,13 +1,13 @@
 ---
-title: "::slotted()"
+title: ::slotted()
 slug: Web/CSS/::slotted
 ---
 
 {{ CSSRef }}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::slotted()`** представляет собой любой элемент, помещённый в слот внутри HTML-шаблона (дополнительная информация в [Using templates and slots](/ru/docs/Web/Web_Components/Using_templates_and_slots)).
+[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::slotted()`** представляет собой любой элемент, помещённый в слот внутри HTML-шаблона (дополнительная информация в [Using templates and slots](/ru/docs/Web/API/Web_components/Using_templates_and_slots)).
 
-Это работает только при использовании внутри CSS, помещённого в [shadow DOM](/ru/docs/Web/Web_Components/Using_shadow_DOM). Обратите также внимание, что этот селектор не будет выбирать текстовый узел, помещённый в слот; он нацелен только на фактические элементы.
+Это работает только при использовании внутри CSS, помещённого в [shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM). Обратите также внимание, что этот селектор не будет выбирать текстовый узел, помещённый в слот; он нацелен только на фактические элементы.
 
 ```css
 /* Выбирает любой элемент, помещённый в слот */
@@ -94,4 +94,4 @@ customElements.define(
 
 ## Смотрите также
 
-- [Web components](/ru/docs/Web/Web_Components)
+- [Web components](/ru/docs/Web/API/Web_components)

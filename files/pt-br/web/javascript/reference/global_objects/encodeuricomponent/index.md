@@ -37,9 +37,9 @@ console.log(encodeURIComponent("\uDFFF"));
 
 Para previnir requisões inesperadas ao servidor, deve-se chamar `encodeURIComponent` ou qualquer parâmetro fornecido pelo usuário que será passado como parte da URI. Por exemplo, um usuário poderia digitar "`Thyme &time=again`" para uma variável `commentario`. Ao não usar `encodeURIComponent` nessa variável irá ser obetido `commentario=Thyme%20&time=again`. Note que o ampersa e o sinal de igual marcam um novo par de chave e valor. Então ao invés de ter um POST com a chave `commentario` igual a "`Thyme &time=again`", tem-se chaves em POST, uma igual a "`Thyme`" e outra (`time`) igual a `again`.
 
-Para [`application/x-www-form-urlencoded`](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), espaços são substituídos por '+', então pode-se querer seguir um `encodeURIComponent` substituição com uma substituição adicional de "%20" com "+".
+Para [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), espaços são substituídos por '+', então pode-se querer seguir um `encodeURIComponent` substituição com uma substituição adicional de "%20" com "+".
 
-Para ser mais rigoroso à aderência da [RFC 3986](http://tools.ietf.org/html/rfc3986) (qual reserva !, ', (, ), e \*), mesmo que esses caracteres não tenham usos formalizados de delimitação de URI, o seguinte pode ser usado com segurança:
+Para ser mais rigoroso à aderência da [RFC 3986](https://tools.ietf.org/html/rfc3986) (qual reserva !, ', (, ), e \*), mesmo que esses caracteres não tenham usos formalizados de delimitação de URI, o seguinte pode ser usado com segurança:
 
 ```js
 function ajustadoEncodeURIComponent(str) {

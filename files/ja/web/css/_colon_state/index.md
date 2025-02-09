@@ -1,5 +1,5 @@
 ---
-title: ":state()"
+title: :state()
 slug: Web/CSS/:state
 l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023

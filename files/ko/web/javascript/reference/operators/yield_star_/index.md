@@ -112,7 +112,7 @@ console.log(result); // "foo"
 
 ## 같이 보기
 
-- [The Iterator protocol](/ko/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

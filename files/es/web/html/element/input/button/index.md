@@ -102,18 +102,18 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
 
 ## Atributos
 
-Este elemento puede tener cualquiera de los [atributos globales](/es/docs/HTML/Global_attributes) además de los siguientes:
+Este elemento puede tener cualquiera de los [atributos globales](/es/docs/Web/HTML/Global_attributes) además de los siguientes:
 
 - `disabled`
 
   - : Este atributo booleano indica que el usuario no puede interactuar con el botón. Si este atributo no está especificado, el botón hereda su configuración del elemento contenedor, por ejemplo, {{HTMLElement("fieldset")}}; si no hay elemento contenedor con el atributo **`disabled`** establecido, el botón estará habilitado. El valor de control desactivado no es enviado con el formulario y el evento `click` [no será enviado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) en los controles desactivados.
 
-    Firefox, al contrario que otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Use el atributo [`autocomplete`](/es/docs/Web/HTML/Element/button#autocomplete) para controlar esta característica.
+    Firefox, al contrario que otros navegadores, [mantiene por defecto el estado de desactivación dinámico](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Use el atributo [`autocomplete`](/es/docs/Web/HTML/Element/button#autocomplete) para controlar esta característica.
 
 - `autofocus`
   - : Este atributo booleano le permite especificar que el botón deba tener el foco cuando la página se cargue, a no ser que el usuario lo anule, por ejemplo, escribiendo en otro cuadro de texto. Únicamente un elemento asociado con los formularios en un documento puede tener este atributo especificado.
 - `autocomplete` {{non-standard_inline}}
-  - : El uso de este atributo en un {{HTMLElement("button")}} es algo fuera de lo común, y específico de Firefox. Firefox, por defecto y al contrario de otros navegadores, [mantiene por defecto el estado de desactivación dinámico](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Establecer el valor de este atributo a `off` (`autocomplete="off"`) desactiva esta característica.
+  - : El uso de este atributo en un {{HTMLElement("button")}} es algo fuera de lo común, y específico de Firefox. Firefox, por defecto y al contrario de otros navegadores, [mantiene por defecto el estado de desactivación dinámico](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un {{HTMLElement("button")}} a lo largo de las cargas de la página. Establecer el valor de este atributo a `off` (`autocomplete="off"`) desactiva esta característica.
 - `form`
   - : El elemento del formulario con el que el botón está asociado (es _dueño del formulario_). El valor del atributo debe ser el atributo **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si este atributo no está especificado, el elemento `<button>` debe ser hijo de un elemento "formulario". Este atributo le permite colocar elementos `<button>` en cualquier lugar de un documento, y no únicamento como hijos del elemento {{HTMLElement("form")}}.
 - `formenctype`

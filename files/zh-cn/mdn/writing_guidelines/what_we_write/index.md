@@ -3,8 +3,6 @@ title: MDN 收录规则
 slug: MDN/Writing_guidelines/What_we_write
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档的内容是通用的，并不偏向某一个浏览器。这使得 Web 开发人员可以编写与任何浏览器都兼容的代码。本文介绍了在 MDN Web 文档上应该包含哪些主题或类型的内容的有关信息。
 
 ## 编辑准则
@@ -55,10 +53,10 @@ MDN Web 文档上记录的 Web 技术应该朝着标准方向发展，并且必�
 - [Web API](/zh-CN/docs/Web/API)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 
-我们还记录了一些更广泛的主题，例如 [SVG](/zh-CN/docs/Web/SVG)、[XML](/zh-CN/docs/Web/XML)、[WebAssembly](/zh-CN/docs/WebAssembly) 和[无障碍](/zh-CN/docs/Learn/Accessibility)。此外，我们还为这些技术提供了广泛的[学习指南](/zh-CN/docs/Learn/Accessibility)，还有相关的[术语表](/zh-CN/docs/Glossary)。
+我们还记录了一些更广泛的主题，例如 [SVG](/zh-CN/docs/Web/SVG)、[XML](/zh-CN/docs/Web/XML)、[WebAssembly](/zh-CN/docs/WebAssembly) 和[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)。此外，我们还为这些技术提供了广泛的[学习指南](/zh-CN/docs/Learn_web_development/Core/Accessibility)，还有相关的[术语表](/zh-CN/docs/Glossary)。
 
 > [!NOTE]
-> 后端技术通常在其他地方有自己的文档，MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/Learn/Server-side)。
+> 后端技术通常在其他地方有自己的文档，MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/Learn_web_development/Extensions/Server-side)。
 
 MDN Web 文档上的所有内容都必须与其出现的技术部分相关。贡献者应遵循这些 MDN 的编写风格、代码示例以及一些其他主题的[撰写指南](/zh-CN/docs/MDN/Writing_guidelines)。
 

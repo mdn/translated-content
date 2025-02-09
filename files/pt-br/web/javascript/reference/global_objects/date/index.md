@@ -31,7 +31,7 @@ Nota: Quando Date for chamado como um construtor com mais de um argumento, se os
 
 - _`dataString`_
 
-  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
+  - : Um valor do tipo String que representa uma data. A string deverá estar uma formato reconhecido pelo método {{jsxref("Date.parse()")}} ([IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) e também uma [versão da ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)).
 
 - _`year`_
 
@@ -91,7 +91,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 ### Métodos
 
-{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+<!-- TODO: page macro not supported:  page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods")  -->
 
 ## Exemplos
 

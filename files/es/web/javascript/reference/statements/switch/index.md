@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 {{jsSidebar("Statements")}}
 
-La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators), comparando el valor de esa expresión con una instancia **`case`**, y ejecuta [declaraciones](/es/docs/Web/JavaScript/Referencia/Sentencias) asociadas a ese `case`, así como las declaraciones en los `case` que siguen.
+La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScript/Guide/Expressions_and_operators), comparando el valor de esa expresión con una instancia **`case`**, y ejecuta [declaraciones](/es/docs/Web/JavaScript/Reference/Statements) asociadas a ese `case`, así como las declaraciones en los `case` que siguen.
 
 ## Syntaxis
 
@@ -40,7 +40,7 @@ switch (expresión) {
 
 Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas correspondientes. Si la expresión coincide con múltiples entradas, la primera será la seleccionada, incluso si las mayúsculas son tenidas en cuenta.
 
-El programa primero busca la primer instacia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando [comparación estricta](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===)` y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
+El programa primero busca la primer instacia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando [comparación estricta](/es/docs/Web/JavaScript/Reference/Operators), `===)` y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
 
 La declaración [`break`](/es/docs/Web/JavaScript/Reference/Statements/break) es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
 
@@ -123,7 +123,7 @@ Al estar el `case 1:` a continuación de `default`, y al no haber un `break` de 
 
 La fuente de esta técnica esta aquí:
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
+[Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
 
 #### Operación única con múltiples casos
 

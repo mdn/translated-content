@@ -17,5 +17,5 @@ slug: Web/API/ValidityState/tooLong
 
 ## Смотрите также
 
-- [Валидация ограничений](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
 - [Валидация форм на стороне клиента](/ru/docs/Learn/Forms/Form_validation)

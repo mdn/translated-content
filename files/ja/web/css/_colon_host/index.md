@@ -1,5 +1,5 @@
 ---
-title: ":host"
+title: :host
 slug: Web/CSS/:host
 l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8

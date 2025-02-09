@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-[도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게 됩니다.
+[도형 그리기](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수 있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게 됩니다.
 
 > [!NOTE]
 > 캔버스 속 내용은 스크린 리더를 사용하는 유저가 접근할 수 없습니다. 만약 캔버스가 순수히 꾸미는 용으로 사용하는 경우, `<canvas>` 시작 태그에 `role="presentation"`을 넣어줘야 합니다. 그렇지 않다면 캔버스 요소에 설명하는 내용을 [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label) 속성의 값으로 넣거나, 캔버스 태그 안에 대체 내용을 넣어야 합니다. 캔버스 속 내용은 DOM의 일부가 아니지만, 중첩 대체 내용은 일부가 될 수 있습니다.
@@ -52,6 +52,8 @@ function draw() {
         Math.floor(255 - 42.5 * j) +
         ", 0)";
       ctx.fillRect(j * 25, i * 25, 25, 25);
+    }
+  }
 }
 ```
 

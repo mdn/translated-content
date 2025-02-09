@@ -51,7 +51,7 @@ if (condicao) {
 Aqui nós temos:
 
 1. A palavra reservada `if` seguida de um par de parênteses.
-2. Um teste condicional, localizado dentro dos parênteses (normalmente "este valor é maior que esse", ou "este valor existe"). Esta condição pode fazer uso dos [operadores de comparação](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que discutimos no último módulo, e podem retornar `true` ou `false`.
+2. Um teste condicional, localizado dentro dos parênteses (normalmente "este valor é maior que esse", ou "este valor existe"). Esta condição pode fazer uso dos [operadores de comparação](/pt-BR/docs/Learn/JavaScript/First_steps/Math#comparison_operators) que discutimos no último módulo, e podem retornar `true` ou `false`.
 3. Um par de chaves, e dentro dele temos código — pode ser qualquer código que queiramos, e só vai ser executado se o teste condicional retornar `true`.
 4. A palavra reservada `else`.
 5. Outro par de chaves, dentro dele temos mais um pouco de código — pode ser qualquer código que queiramos, e só vai executar se o teste condicional retornar um valor diferente de `true`, neste caso `not true`, ou `false`.
@@ -96,7 +96,7 @@ if (comprasFeitas === true) {
 Esse código como mostrado irá sempre resultar na variável `comprasFeitas` retornando `false`, sendo um desapontamento para nossas pobres crianças. Cabe a nós fornecer um mecanismo para o pai definir a variável `comprasFeitas` como `true` se o filho fez as compras.
 
 > [!NOTE]
-> Você pode ver a versão completa desse exemplo no [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (também veja [live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> Você pode ver a versão completa desse exemplo no [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (também veja [live](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
@@ -152,11 +152,11 @@ function setWeather() {
 4. A última escolha, dentro do bloco `else {...}`, é basicamente uma opção de "último recurso" — o código dentro dele será executado se nenhuma das condições for `true`. Nesse caso, ele serve para esvaziar o texto do parágrafo, se nada for selecionado, por exemplo, se um usuário decidir selecionar novamente a opção de espaço reservado "- Make a choice--" mostrada no início.
 
 > [!NOTE]
-> Você pode também [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([veja ele sendo executado](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) lá também.)
+> Você pode também [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([veja ele sendo executado](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) lá também.)
 
 ### Uma nota sobre os operadores de comparação
 
-Operadores de comparação são usados para testar as condições dentro de nossas declarações condicionais. Nós primeiro olhamos para operadores de comparação de volta em nosso artigo [Matemática básica em JavaScript - números e operadores](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators). Nossas escolhas são:
+Operadores de comparação são usados para testar as condições dentro de nossas declarações condicionais. Nós primeiro olhamos para operadores de comparação de volta em nosso artigo [Matemática básica em JavaScript - números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math#comparison_operators). Nossas escolhas são:
 
 - `===` e `!==` — testar se um valor é idêntico ou não idêntico a outro.
 - `<` e `>` — teste se um valor é menor ou maior que outro.
@@ -214,7 +214,7 @@ Mesmo que o código trabalhe em conjunto, cada uma das instruções `if...else` 
 
 ### Operadores lógicos: AND, OR e NOT
 
-Se você quiser testar várias condições sem escrever instruções aninhadas `if...else`, os [operadores lógicos](/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators) poderão ajudá-lo. Quando usado em condições, os dois primeiros fazem o seguinte:
+Se você quiser testar várias condições sem escrever instruções aninhadas `if...else`, os [operadores lógicos](/pt-BR/docs/Web/JavaScript/Reference/Operators) poderão ajudá-lo. Quando usado em condições, os dois primeiros fazem o seguinte:
 
 - `&&` — AND; permite encadear duas ou mais expressões para que todas elas tenham que ser avaliadas individualmente como `true` assim toda a expressão retorna `true`.
 - `||` — OR; permite encadear duas ou mais expressões para que uma ou mais delas tenham que ser avaliadas individualmente como `true` assim toda a expressão retorna `true`.
@@ -371,11 +371,11 @@ function setWeather() {
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
 > [!NOTE]
-> Você pode [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (veja-o em [execução](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) lá também.)
+> Você pode [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (veja-o em [execução](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) lá também.)
 
 ## Operador ternário
 
-Há um bit final de sintaxe que queremos apresentar a você antes de começar a brincar com alguns exemplos. O [operador ternário ou condicional](/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) é um pequeno bit de sintaxe que testa uma condição e retorna um valor / expressão se for `true`, e outro caso seja `false` — isso pode ser útil em algumas situações e pode ocupar muito menos código que um bloco `if...else` se você simplesmente tiver duas opções escolhidas entre uma condição `true`/`false` condition. O pseudocódigo é assim:
+Há um bit final de sintaxe que queremos apresentar a você antes de começar a brincar com alguns exemplos. O [operador ternário ou condicional](/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_operator) é um pequeno bit de sintaxe que testa uma condição e retorna um valor / expressão se for `true`, e outro caso seja `false` — isso pode ser útil em algumas situações e pode ocupar muito menos código que um bloco `if...else` se você simplesmente tiver duas opções escolhidas entre uma condição `true`/`false` condition. O pseudocódigo é assim:
 
 ```
 ( condition ) ? run this code : run this code instead
@@ -426,10 +426,10 @@ select.onchange = function () {
 
 Aqui nós temos um elemento {{htmlelement('select')}} para escolher um tema (preto ou branco), além de um simples {{htmlelement('h1')}} para exibir um título do site. Nós também temos uma função chamada `update()`, que leva duas cores como parâmetros (entradas). A cor do plano de fundo do site é definida para a primeira cor fornecida e sua cor de texto é definida para a segunda cor fornecida.
 
-Finalmente, nós também temos um evento listener [onchange](/pt-BR/docs/Web/API/GlobalEventHandlers/onchange) que serve para executar uma função que contém um operador ternário. Começa com uma condição de teste — `select.value === 'black'`. Se este retornar `true`, nós executamos a função `update()` com parâmetros de preto e branco, o que significa que acabamos com a cor de fundo do preto e cor do texto de branco. Se retornar `false`, nós executamos a função `update()` com parâmetros de branco e preto, o que significa que a cor do site está invertida.
+Finalmente, nós também temos um evento listener [onchange](/pt-BR/docs/Web/API/HTMLElement/change_event) que serve para executar uma função que contém um operador ternário. Começa com uma condição de teste — `select.value === 'black'`. Se este retornar `true`, nós executamos a função `update()` com parâmetros de preto e branco, o que significa que acabamos com a cor de fundo do preto e cor do texto de branco. Se retornar `false`, nós executamos a função `update()` com parâmetros de branco e preto, o que significa que a cor do site está invertida.
 
 > [!NOTE]
-> Você pode também [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (veja-o [executando](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) lá também.)
+> Você pode também [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (veja-o [executando](https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) lá também.)
 
 ## Aprendizado ativo: um calendário simples
 
@@ -637,14 +637,14 @@ window.addEventListener("load", updateCode);
 
 ## Conclusão
 
-E isso é tudo que você realmente precisa saber sobre estruturas condicionais no JavaScript por agora! Tenho certeza que você terá entendido esses conceitos e trabalhou com os exemplos com facilidade; se houver algo que você não tenha entendido, sinta-se à vontade para ler o artigo novamente ou [contate-nos](/en-US/Learn#Contact_us) para pedir ajuda.
+E isso é tudo que você realmente precisa saber sobre estruturas condicionais no JavaScript por agora! Tenho certeza que você terá entendido esses conceitos e trabalhou com os exemplos com facilidade; se houver algo que você não tenha entendido, sinta-se à vontade para ler o artigo novamente ou [contate-nos](/pt-BR/docs/Learn#contact_us) para pedir ajuda.
 
 ## Veja também
 
-- [Operadores de comparação](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)
-- [Declarações condicionais em detalhes](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+- [Operadores de comparação](/pt-BR/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Declarações condicionais em detalhes](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [Referência if...else](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Referência do operador condicional (ternário)](/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+- [Referência do operador condicional (ternário)](/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
 ## Teste suas habilidades!
 

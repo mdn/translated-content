@@ -68,7 +68,7 @@ document.getElementById("lyrics").textContent ||= "No lyrics.";
 ## 関連情報
 
 - [論理和演算子 (||)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [ビット論理和代入演算子 (`|=`)](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

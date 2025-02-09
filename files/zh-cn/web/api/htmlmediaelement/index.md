@@ -582,7 +582,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
 
 ## Events
 
-Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/Guide/Events/Media_events).
+Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/Events#media).
 
 ## Specifications
 
@@ -601,6 +601,6 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 
 - Articles
 
-  - [Using HTML5 audio and video](/zh-CN/docs/Using_HTML5_audio_and_video)
-  - [Media formats supported by the audio and video elements](/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements)
-  - [Web Audio API](/zh-CN/docs/Web_Audio_API)
+  - [Using HTML5 audio and video](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+  - [Media formats supported by the audio and video elements](/zh-CN/docs/Web/Media/Guides/Formats)
+  - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

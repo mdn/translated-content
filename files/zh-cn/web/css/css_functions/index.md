@@ -197,8 +197,6 @@ selector {
   - : 指定一个特定的色彩空间，而不是隐含的 sRGB 色彩空间。
 - {{CSSxRef("color_value/color-mix", "color-mix()")}} {{Experimental_Inline}}
   - : 在一个给定的色彩空间中，将两个颜色值按给定的数量混合。
-- {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
-  - : 从一个颜色列表中选择最高的颜色对比度，与一个基础颜色值相比较。
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
   - : 以独立于设备的方式定义 CMYK 颜色。
 
@@ -320,4 +318,4 @@ CSS 字体函数与 {{CSSxRef("font-variant-alternates")}} 属性一起使用，
 ## 参见
 
 - [CSS 值和单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 介绍：值和单位](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

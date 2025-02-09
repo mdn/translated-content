@@ -46,7 +46,7 @@ const myCar = {
 myCar.color; // undefined
 ```
 
-JavaScript의 객체 속성은 대괄호 표기법([속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors))을 사용해 접근할 수도 있습니다. 객체를 때때로 '연관 배열'(associative array)이라고 부르기도 하는데, 속성은 자신에 접근할 수 있는 문자열 값과 연관되어 있기 때문입니다. 그러므로 `myCar` 객체의 속성에 아래와 같이 접근할 수도 있을 것입니다.
+JavaScript의 객체 속성은 대괄호 표기법([속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors))을 사용해 접근할 수도 있습니다. 객체를 때때로 '연관 배열'(associative array)이라고 부르기도 하는데, 속성은 자신에 접근할 수 있는 문자열 값과 연관되어 있기 때문입니다. 그러므로 `myCar` 객체의 속성에 아래와 같이 접근할 수도 있을 것입니다.
 
 ```js
 myCar["make"] = "Ford";
@@ -514,7 +514,7 @@ console.log(fruitbear); // 출력: { name: "사과" }가 아니라 { name: "포�
 
 ## 같이 보기
 
-- 더 깊게 들어가려면 [JavaScript 객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을 읽어보세요.
+- 더 깊게 들어가려면 [JavaScript 객체 모델의 세부 사항](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 읽어보세요.
 - 객체를 생성하는 다른 방법인 ECMAScript 2015 클래스에 대해 알아보려면 [JavaScript 클래스](/ko/docs/Web/JavaScript/Reference/Classes) 참고서를 방문하세요.
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

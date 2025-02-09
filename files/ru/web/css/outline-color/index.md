@@ -17,7 +17,7 @@ CSS-свойство **`outline-color`** задаёт цвет обводки э
 /* Ключевые слова */
 outline-color: invert;
 
-/* Значения типа <color> */
+/* Значения <color> */
 outline-color: #f92525;
 outline-color: rgb(30, 222, 121);
 outline-color: blue;

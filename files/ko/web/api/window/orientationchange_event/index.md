@@ -10,7 +10,7 @@ slug: Web/API/Window/orientationchange_event
 ## General info
 
 - Specification
-  - : [Screen Orientation](http://www.w3.org/TR/screen-orientation/#event-handlers)
+  - : [Screen Orientation](https://www.w3.org/TR/screen-orientation/#event-handlers)
 - Interface
   - : Event
 - Bubbles

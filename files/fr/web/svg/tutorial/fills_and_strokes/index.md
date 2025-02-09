@@ -165,7 +165,7 @@ Il existe d'autres propriétés disponibles:
 En plus de définir des attributs sur des objets, vous pouvez également utiliser CSS pour styliser les remplissages et les contours. Tous les attributs ne peuvent pas être définis via CSS. Ceux qui traitent le remplissage et le contour le sont généralement, `fill`, `stroke`, `stroke-dasharray`, etc... peuvent donc être définis de cette manière. Les attributs tels que `width`, `height`, ou les commandes des paths, ne peuvent pas être définis par CSS. Le plus simple est de tester pour découvrir ce qui est disponible et ce qui ne l'est pas.
 
 > [!NOTE]
-> La [spécification SVG](http://www.w3.org/TR/SVG/propidx.html) décide strictement entre les attributs qui sont des _propriétés_ et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.
+> La [spécification SVG](https://www.w3.org/TR/SVG/propidx.html) décide strictement entre les attributs qui sont des _propriétés_ et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.
 
 #### En ligne
 
@@ -177,7 +177,7 @@ CSS peut être inséré en ligne avec l'élément via l'attribut `style`:
 
 #### Dans un section style
 
-Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/SVG/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
+Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer dans une section `<head>` comme vous le feriez en HTML, on la place dans la zone [`<defs>`](/fr/docs/SVG/Element/defs) du SVG. `<defs>` (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.
 
 ```xml
 <?xml version="1.0" standalone="no"?>
@@ -205,7 +205,7 @@ Déplacer les styles dans une zone comme ceci peut rendre les choses plus simple
 
 #### Dans un fichier externe
 
-Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la [syntaxe XML pour les stylesheets](http://www.w3.org/TR/xml-stylesheet/):
+Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la [syntaxe XML pour les stylesheets](https://www.w3.org/TR/xml-stylesheet/):
 
 ```xml
 <?xml version="1.0" standalone="no"?>

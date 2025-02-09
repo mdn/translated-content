@@ -7,7 +7,7 @@ slug: Web/CSS/used_value
 
 После того как {{glossary("user agent")}} закончил свои расчёты каждое свойство CSS имеет своё значение. Используемые значения (например, {{cssxref("width")}}, {{cssxref("line-height")}}) в пикселях. Используемые значения сокращённых свойств (например, {{cssxref("background")}}) согласуются с теми из свойств компонентов (например, {{cssxref("background-color")}} или {{cssxref("background-size")}}) и с {{cssxref("position")}} и {{cssxref("float")}}.
 
-> **Примечание:** {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/), которое может быть [численным значением](/ru/docs/) или [используемым значением](/ru/docs/), в зависимости от свойства.
+> **Примечание:** {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API возвращает [решённое значение](/ru/docs/Web), которое может быть [численным значением](/ru/docs/Web) или [используемым значением](/ru/docs/Web), в зависимости от свойства.
 
 ## Пример
 
@@ -80,7 +80,7 @@ window.addEventListener("resize", updateAllUsedWidths);
 
 ## Difference from computed value
 
-CSS 2.0 defined only _computed value_ as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., `display`, `font-size`, or `line-height`), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
+CSS 2.0 defined only _computed value_ as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., `display`, `font-size`, or `line-height`), the computed values and used values are the same. The following are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q36)):
 
 - `background-position`
 - `bottom`, `left`, `right`, `top`
@@ -102,11 +102,11 @@ CSS 2.0 defined only _computed value_ as the last step in a property's calculati
   - [@-правила](/ru/docs/Web/CSS/At-rule)
   - [комментарии](/ru/docs/Web/CSS/Comments)
   - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [наследование](/ru/docs/Web/CSS/Inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
   - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
     - [начальные](/ru/docs/Web/CSS/initial_value)
     - [вычисленные](/ru/docs/Web/CSS/computed_value)

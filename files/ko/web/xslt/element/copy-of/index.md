@@ -28,7 +28,7 @@ slug: Web/XSLT/Element/copy-of
 
 ### 정의
 
-[XSLT section 11.3, Using Values of Variables and Parameters with xsl:copy-of](http://www.w3.org/TR/xslt#copy-of)
+[XSLT section 11.3, Using Values of Variables and Parameters with xsl:copy-of](https://www.w3.org/TR/xslt#copy-of)
 
 ### Gecko 지원
 

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-device-pixel-ratio"
+title: -webkit-device-pixel-ratio
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 
@@ -80,7 +80,7 @@ slug: Web/CSS/@media/-webkit-device-pixel-ratio
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("resolution")}}
 - [`-webkit-transform-2d`](/ja/docs/Web/CSS/@media/-webkit-transform-2d)
 - [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d)

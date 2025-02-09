@@ -3,10 +3,10 @@ title: "Element: webkitmouseforcedown イベント"
 short-title: webkitmouseforcedown
 slug: Web/API/Element/webkitmouseforcedown_event
 l10n:
-  sourceCommit: 757f33efcbdf2de4995920e41ab7dd20f0a9192b
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{APIRef("Force Touch Events")}}{{Non-standard_header}}
 
 要素で{{domxref("Element.mousedown_event", "mousedown")}}イベントが発生した後、マウスまたはトラックパッドのボタンに十分な圧力がかかり、「圧力クリック」と認定された場合、Safari は要素に **`webkitmouseforcedown`** イベントの送信を開始します。
 
@@ -24,7 +24,7 @@ onwebkitmouseforcedown = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("MouseEvent")}} です。 {{domxref("UIEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -90,8 +90,7 @@ _どの仕様書にも含まれていません。_ Apple は [Mac Developer Libr
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [タッチ圧力イベント](/ja/docs/Web/API/Force_Touch_events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-box-reflect"
+title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
 ---
 
@@ -58,6 +58,6 @@ slug: Web/CSS/-webkit-box-reflect
 
 ## 参见
 
-- Apple [文档](http://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)。
+- Apple [文档](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)。
 - Webkit [文档](https://www.webkit.org/blog/182/css-reflections/)。
-- Lea Verou 撰写的有关使用 [CSS 特性创建反射效果的文章已经纳入标准跟踪](http://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/)。
+- Lea Verou 撰写的有关使用 [CSS 特性创建反射效果的文章已经纳入标准跟踪](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/)。

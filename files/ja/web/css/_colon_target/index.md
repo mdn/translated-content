@@ -1,5 +1,5 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 l10n:
   sourceCommit: 259a7061abfce122ff8bb3a6687b02509263ef38
@@ -203,4 +203,4 @@ p:target i {
 
 ## 関連情報
 
-- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [セレクターでの :target 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

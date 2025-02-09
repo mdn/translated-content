@@ -3,8 +3,6 @@ title: 社区准则
 slug: MDN/Community
 ---
 
-{{MDNSidebar}}
-
 👋 欢迎来到 MDN Web 文档，这是一个记录了包括 [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [Web API](/zh-CN/docs/Web/API) 等 web 平台技术的开源协作项目。我们还为初级开发者和学生提供了大量的[学习资源](/zh-CN/docs/Learn)。
 
 要参与并为我们的项目作出贡献、参与相关讨论，你需要阅读并遵守 [Mozilla 社区参与准则](https://github.com/mdn/mdn-community/blob/main/CODE_OF_CONDUCT.md)。
@@ -28,7 +26,7 @@ slug: MDN/Community
   - : 本节说明了你如何开始贡献，以及我们接受的贡献的类型。本节涵盖以下主题：
 
     - [入门](/zh-CN/docs/MDN/Community/Contributing/Getting_started)
-    - [我们的仓库](/zh-CN/docs/MDN/Community/Contributing/Our_repositories)
+    - [我们的仓库](/zh-CN/docs/MDN/Community/Our_repositories)
     - [翻译内容](/zh-CN/docs/MDN/Community/Contributing/Translated_content)
     - [安全漏洞响应步骤](/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response)
 
@@ -48,14 +46,14 @@ slug: MDN/Community
 
   - : 议题用于跟踪所有的错误（bug）和具有明确操作结果的工作。本文包含了有关创建和处理议题的指南。本文还涵盖了以下主题：
 
-    - [议题分类](/zh-CN/docs/MDN/Community/Issues/Issue_triage)
+    - [议题分类](/zh-CN/docs/MDN/Community/Issues)
     - [内容和功能建议](/zh-CN/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)
 
 - [拉取请求](/zh-CN/docs/MDN/Community/Pull_requests)
 
   - : 本节介绍了我们提交拉取请求的指南，以及你对审查过程应有的期望。
 
-- [用户和团队](/zh-CN/docs/MDN/Community/Users_teams)
+- [用户和团队](/zh-CN/docs/MDN/Community/Roles_teams)
 
   - : 本节概述了作为 MDN Web 文档项目组成部分的用户和团队，并详细说明了成为团队成员的意义。
 

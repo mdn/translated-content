@@ -154,16 +154,16 @@ div {
 
 /* これらの例は background 一括指定プロパティを使用しています */
 .exampleone {
-  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
 }
 
 /* 複数の背景画像: 各画像は対応する位置スタイルに、
    最初に指定されたものから順に対応付けられます。 */
 .examplethree {
-  background-image: url("startransparent.gif"), url("catfront.png");
+  background-image: url("star-transparent.gif"), url("cat-front.png");
   background-position:
     0px 0px,
     right 3em bottom 2em;

@@ -7,7 +7,7 @@ slug: Web/API/console/timeLog_static
 
 在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 
-参阅文档中的 [Timers](/zh-CN/docs/Web/API/console#Timers) 部分获取详细说明和示例。
+参阅文档中的 [Timers](/zh-CN/docs/Web/API/console#timers) 部分获取详细说明和示例。
 
 {{AvailableInWorkers}}
 
@@ -79,4 +79,4 @@ console.timeEnd("answer time");
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
