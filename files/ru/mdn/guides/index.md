@@ -1,6 +1,7 @@
 ---
 title: Руководства Web-разработчика
-slug: Web/Guide
+slug: MDN/Guides
+original_slug: Web/Guide
 ---
 
 **Эти статьи помогут изучить веб-технологии и интерфейсы API.**
