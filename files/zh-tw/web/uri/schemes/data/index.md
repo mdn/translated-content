@@ -2,7 +2,7 @@
 title: Data URL
 slug: Web/URI/Schemes/data
 l10n:
-  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
+  sourceCommit: 48fc59029d83dbc53748561d30be41f6a0ae62c1
 ---
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Web/URI")}}
