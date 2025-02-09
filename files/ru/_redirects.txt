@@ -843,6 +843,7 @@
 /ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
+/ru/docs/Web/Guide	/ru/docs/MDN/Guides
 /ru/docs/Web/Guide/AJAX	/ru/docs/Learn_web_development/Core/Scripting/Network_requests
 /ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
@@ -1112,6 +1113,7 @@
 /ru/docs/Web/SVG/Элемент/svg	/ru/docs/Web/SVG/Element/svg
 /ru/docs/Web/SVG/Элемент/use	/ru/docs/Web/SVG/Element/use
 /ru/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ru/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/ru/docs/Web/Tutorials	/ru/docs/MDN/Tutorials
 /ru/docs/Web/WebGL	/ru/docs/Web/API/WebGL_API
 /ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

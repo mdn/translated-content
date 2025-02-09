@@ -3929,10 +3929,38 @@
       "ksam"
     ]
   },
+  "MDN/Guides": {
+    "modified": "2020-09-02T11:11:23.452Z",
+    "contributors": [
+      "bogpok",
+      "Didar83",
+      "soctim",
+      "jwhitlock",
+      "netpatriciapussy",
+      "Tihoem",
+      "galinakulinich@mail.ru",
+      "Sheppy"
+    ]
+  },
   "MDN/Structures/Live_samples": {
     "modified": "2020-09-30T12:57:23.093Z",
     "contributors": [
       "chrisdavidmills"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2019-10-02T16:11:49.043Z",
+    "contributors": [
+      "Termaro",
+      "mmbl",
+      "ukrlex01",
+      "rhiter",
+      "anastasiya-solodkaya",
+      "GraceAredel",
+      "Tihoem",
+      "uleming",
+      "Steln",
+      "aleks_root"
     ]
   },
   "MDN/Writing_guidelines": {
@@ -13426,19 +13454,6 @@
       "teoli"
     ]
   },
-  "Web/Guide": {
-    "modified": "2020-09-02T11:11:23.452Z",
-    "contributors": [
-      "bogpok",
-      "Didar83",
-      "soctim",
-      "jwhitlock",
-      "netpatriciapussy",
-      "Tihoem",
-      "galinakulinich@mail.ru",
-      "Sheppy"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
     "contributors": [
@@ -21785,21 +21800,6 @@
       "iamvector",
       "vladlipski",
       "ZVanoZ"
-    ]
-  },
-  "Web/Tutorials": {
-    "modified": "2019-10-02T16:11:49.043Z",
-    "contributors": [
-      "Termaro",
-      "mmbl",
-      "ukrlex01",
-      "rhiter",
-      "anastasiya-solodkaya",
-      "GraceAredel",
-      "Tihoem",
-      "uleming",
-      "Steln",
-      "aleks_root"
     ]
   },
   "Web/URI/Schemes/data": {
