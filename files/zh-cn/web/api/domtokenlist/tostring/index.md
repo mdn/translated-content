@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("DOMTokenList")}} 接口的 **`toString()`** {{Glossary("stringifier", "字符串化器")}}方法将标记（token）列表的值序列化为字符串返回。返回值是一个以空格分隔的标记列表，与 {{domxref("DOMTokenList.value")}} 属性值相等。
+{{domxref("DOMTokenList")}} 接口的 **`toString()`** {{Glossary("stringifier", "字符串化器")}}方法将标记（token）列表的值序列化为字符串返回。返回值是以空格分隔的标记列表，与 {{domxref("DOMTokenList.value")}} 属性值相等。
 
 ## 语法
 
