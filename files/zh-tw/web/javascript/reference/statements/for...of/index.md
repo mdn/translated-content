@@ -31,7 +31,10 @@ for (variable of iterable)
 
 當 `for...of` 迴圈在可迭代物件上進行迭代時，它首先調用可迭代物件的 [`[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 方法，該方法回傳一個[迭代器](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議)，然後重複調用得到的迭代器的 [`next()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法，以生成要賦予 `variable` 的值序列。
 
-`for...of` 迴圈在迭代器完成時退出（即迭代器的 `next()` 方法回傳一個包含 `done: true` 的物件）。你也可以使用流程控制語句來改變正常的控制流程。[`break`](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) 會退出迴圈並轉到迴圈區塊後的第一個語句，而 [`continue`](/zh-TW/docs/Web/JavaScript/Reference/Statements/continue) 會跳過當前迭代的其餘語句並進行下一次迭代。
+A `for...of` loop exits when the iterator has completed (the `next()` result is an object with `done: true`). Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and goes to the next iteration of the loop.
 
 如果 `for...of` 迴圈提前退出（例如遇到 `break` 語句或拋出錯誤），則會調用迭代器的 [`return()`](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器協議) 方法來執行任何清理動作。
 
