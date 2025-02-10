@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`longitude`** 唯讀屬性是一個數字，表示地理位置的經度（十進位制）。連同時間戳記（以毫秒為單位的 {{Glossary("Unix time", "Unix 時間)}}），表示測量時間，`GeolocationCoordinates` 物件是 {{domxref("GeolocationPosition")}} 介面的一部分，該介面是 Geolocation API 函式獲取並返回地理位置時返回的物件類型。
+{{domxref("GeolocationCoordinates")}} 介面的 **`longitude`** 唯讀屬性是一個數字，表示地理位置的經度（十進位制）。連同時間戳記（以毫秒為單位的 {{Glossary("Unix time", "Unix 時間")}}），表示測量時間，`GeolocationCoordinates` 物件是 {{domxref("GeolocationPosition")}} 介面的一部分，該介面是 Geolocation API 函式獲取並返回地理位置時返回的物件類型。
 
 ## 值
 
