@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<feGaussianBlur>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语根据 {{SVGAttr("stdDeviation")}} 指定的值对输入图像进行模糊处理，该值定义了模糊的钟形曲线。
+**`<feGaussianBlur>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语根据 {{SVGAttr("stdDeviation")}} 指定的值（其定义了模糊的钟形曲线）对输入图像进行模糊处理。
 
 ## 使用上下文
 
