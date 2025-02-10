@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-{{domxref("ErrorEvent")}} 接口的 **`lineno`** 只读属性返回一个整数，表示发生的错误在脚本文件中所位于的列号。
+{{domxref("ErrorEvent")}} 接口的 **`lineno`** 只读属性返回一个整数，表示发生的错误在脚本文件中所位于的行号。
 
 ## 值
 
@@ -17,7 +17,7 @@ l10n:
 
 ```js
 window.addEventListener("error", (ev) => {
-  console.log("错误发生在第 " + ev.lineno + " 列");
+  console.log("错误发生在第 " + ev.lineno + " 行");
 });
 ```
 
