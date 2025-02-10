@@ -104,6 +104,8 @@ document.getElementById("toggle-fullscreen").addEventListener("click", () => {
 });
 ```
 
+{{EmbedLiveSample("打印 fullscreenchange 事件", 640, 250, "", "", "", "fullscreen")}}
+
 ## 规范
 
 {{Specifications}}
