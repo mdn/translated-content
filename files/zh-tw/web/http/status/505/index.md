@@ -2,14 +2,14 @@
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 6bef243050a1f49bf5b7f37e9c4552f7aa30e24d
 ---
 
 {{HTTPSidebar}}
 
 HTTP **`505 HTTP Version Not Supported`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示伺服器不支援請求中使用的 HTTP 版本。
 
-It's common to see this error when a request line is improperly formed such as `GET /path to resource HTTP/1.1` or with `\n` terminating the request line instead of `\r\n`. For example, intermediaries such as load balancers may not handle request lines of a forwarded request as illustrated in the example below.
+當請求行格式不正確時，這種錯誤可能會發生。例如請求行為 `GET /path to resource HTTP/1.1` 或以 `\n` 作為結尾而非 `\r\n`。例如，中介設備（如負載平衡器）可能無法正確處理轉發請求中的請求行，如以下範例。
 
 ## 狀態
 
@@ -17,13 +17,11 @@ It's common to see this error when a request line is improperly formed such as `
 505 HTTP Version Not Supported
 ```
 
-## Examples
+## 範例
 
-### A 505 due to malformed request-line
+### 由於格式錯誤的請求行而產生 505
 
-In the following example, a client requests `example.com/dog%20trainers`, but due to incorrect load balancer configuration, the {{Glossary("Percent-encoding", "percent encoding")}} in the URL is not handled properly.
-In this case, the origin server sees `trainers` instead of the HTTP version, and a `505` response is returned instead.
-A request identifier is contained in the response body for illustration of a way that may help server administrators narrow down the root cause of the problem:
+在下列範例中，用戶端請求 `example.com/dog%20trainers`，但由於負載平衡器組態不正確，URL 中的{{Glossary("Percent-encoding", "百分號編碼")}}未被正確解析。在這種情況下，原始伺服器看到的是 `trainers` 而非 HTTP 版本，因此回傳了一個 `505` 回應。回應主體中包含了一個請求識別碼，這可能有助於伺服器管理員追蹤並診斷問題根源：
 
 ```http
 GET /dog trainers HTTP/1.1
@@ -38,12 +36,12 @@ Content-Length: 123
 <!doctype html>
 <html lang="en">
 <head>
-<title>505 HTTP Version Not Supported</title>
+<title>505 HTTP 版本不支援</title>
 </head>
 <body>
-<h1>505 HTTP Version Not Supported</h1>
-<p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
-<p>Server logs contain details of this error with request ID: ABC-123.</p>
+<h1>505 HTTP 版本不支援</h1>
+<p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
+<p>伺服器日誌中包含此錯誤的詳細訊息，請求識別碼：ABC-123。</p>
 </body>
 </html>
 ```
@@ -54,5 +52,5 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPHeader("Upgrade")}} 標頭
