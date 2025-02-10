@@ -2,14 +2,14 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`504 Gateway Timeout`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示在充當閘道器或{{Glossary("Proxy_server", "代理")}}未能及時從上游伺服器獲得回應，以完成請求。This is similar to a {{HTTPStatus("502", "502 Bad Gateway")}}, except that in a `504` status, the proxy or gateway did not receive any HTTP response from the origin within a certain time.
+HTTP **`504 Gateway Timeout`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示當伺服器充當閘道器或{{Glossary("Proxy_server", "代理")}}時，未能及時從上游伺服器獲得回應，以完成請求。這與 {{HTTPStatus("502", "502 Bad Gateway")}} 類似，不同之處在於 `504` 狀態碼表示代理或閘道器在一定時間內未從源伺服器接收到任何 HTTP 回應。
 
-There are many causes of `504` errors, and fixing such problems likely requires investigation and debugging by server administrators, or the site may work again at a later time.Exceptions are client networking errors, particularly if the service works for other visitors, and if clients use VPNs or other custom networking setups.In such cases, clients should check network settings, firewall setup, proxy settings, DNS configuration, etc.
+導致 `504` 錯誤的原因有很多，解決此類問題通常需要伺服器管理員進行調查和偵錯，或者該網站可能在稍後自行恢復。例外情況是用戶端的網路錯誤，特別是如果該服務對其他訪客仍然有效，且用戶端使用 VPN 或其他自訂網路設定。在這種情況下，用戶端應檢查網路設定、防火牆配置、代理設定、DNS 組態等。
 
 ## 狀態
 
@@ -17,12 +17,11 @@ There are many causes of `504` errors, and fixing such problems likely requires 
 504 Gateway Timeout
 ```
 
-## Examples
+## 範例
 
-### 504 gateway timeout response
+### 504 Gateway Timeout 回應
 
-The following request tries to fetch a webpage, but receives a `504` response in return.
-The response body contains a page describing the server state with a link to a support page for visitors.
+以下請求嘗試獲取一個網頁，但收到 `504` 回應。回應主體包含描述伺服器狀態的頁面，並提供給訪客的支援頁面連結。
 
 ```http
 GET /highlights HTTP/1.1
@@ -43,8 +42,8 @@ Content-Length: 123
 </head>
 <body>
 <h1>Gateway timeout</h1>
-<p>The server did not respond in time. Please try again later.</p>
-<p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
+<p>伺服器未能及時回應。請稍後再試。</p>
+<p>如果此問題持續發生，請 <a href="https://example.com/support">聯繫支援</a>。</p>
 </body>
 </html>
 ```
@@ -55,5 +54,5 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus("502", "502 Bad Gateway")}}
