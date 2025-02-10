@@ -9,7 +9,6 @@ l10n:
 
 HTTP **`506 Variant Also Negotiates`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼於在內容協商中出現選擇資源的過程中出現遞迴循環時回傳。
 
-
 [代理驅動內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation#代理驅動內容協商)使用戶端與伺服器在伺服器具有多個變體時，能夠協同決定最適合的資源變體。伺服器因組態錯誤而在建立回應時產生循環參考，故送出 `506` 狀態碼。
 
 由於缺乏標準化規範以指導用戶端自動從回應中選擇，加上額外往返延緩了用戶端與伺服器間的互動，此機制極少被使用。[伺服器驅動內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation#伺服器驅動內容協商)更為常見，在此方式中，伺服器根據請求標頭（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} 等）直接選擇最適合用戶端的資源。
