@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-{{domxref("ErrorEvent")}} 接口的 **`message`** 只读属性返回包含描述问题的易于理解的错误信息。
+{{domxref("ErrorEvent")}} 接口的 **`message`** 只读属性返回包含描述问题的人类可读的错误信息。
 
 ## 值
 
-字符串
+字符串。
 
 ## 示例
 
