@@ -1,5 +1,5 @@
 ---
-title: "y"
+title: y
 slug: Web/SVG/Attribute/y
 l10n:
   sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae

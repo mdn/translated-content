@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
 ---
 
-{{MDNSidebar}}
-
 MDN Web Docs 是一個開源專案。以下各章節說明了我們在 MDN Web Docs 上紀錄*什麼*以及*如何*紀錄的指南。若要了解*如何貢獻*，請參閱我們的[貢獻指南](/zh-TW/docs/MDN/Community)。
 
 - [我們撰寫的內容](/zh-TW/docs/MDN/Writing_guidelines/What_we_write)

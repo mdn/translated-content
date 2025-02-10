@@ -84,7 +84,8 @@ l10n:
   .className {
     @font-face {
       font-family: "MyHelvetica";
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
@@ -127,7 +128,8 @@ body {
 ```css
 @font-face {
   font-family: "MyHelvetica";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }
