@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<use>`** 元素从 SVG 文档中获取节点，并将它们复制到其他地方。其效果与将这些节点深度克隆到一个不可访问的 DOM 中，然后粘贴到 `use` 元素所在的位置相同，这与克隆的[模版元素](/zh-CN/docs/Web/HTML/Element/template)类似。
+**`<use>`** 元素从 SVG 文档中获取节点，并将它们复制到其他地方。其效果与将这些节点深度克隆到一个不可导出的 DOM 中，然后粘贴到 `use` 元素所在的位置相同，这与克隆的[模版元素](/zh-CN/docs/Web/HTML/Element/template)类似。
 
 ## 示例
 
@@ -46,7 +46,8 @@ svg {
 - {{SVGAttr("height")}}
   - : use 元素的高度。<br/> _值类型_：[**`<length>`**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：`0`；_动画性_：**是**
 
-> **备注：** 除非引用的元素具有 [viewBox](/zh-CN/docs/Web/SVG/Attribute/viewBox)，否则 `width` 和 `height` 对 `use` 元素没有任何影响。仅在 `use` 指向 `svg` 或 `symbol` 元素时才有效。
+> [!NOTE]
+> 除非引用的元素具有 [viewBox](/zh-CN/docs/Web/SVG/Attribute/viewBox)，否则 `width` 和 `height` 对 `use` 元素没有任何影响。仅在 `use` 指向 `svg` 或 `symbol` 元素时才有效。
 
 > [!NOTE]
 > 从 SVG2 开始，`x`、`y`、`width` 和 `height` 是*几何属性*，这意味着这些属性也可以作为该元素的 CSS 属性使用。
@@ -55,7 +56,7 @@ svg {
 
 如果 `use` *引用*的元素上已经定义了相应的属性，则大多数 `use` 元素上的属性将被忽略。（这与 CSS 样式属性在层叠中如何覆盖“先前”设置的属性有所不同）。**只有**在 `use` 元素上的 {{SVGAttr("x")}}、{{SVGAttr("y")}}、{{SVGAttr("width")}}、{{SVGAttr("height")}} 和 {{SVGAttr("href")}} 属性，若引用的元素已经定义了相应的属性，才会或可能产生一些效果，稍后会进行描述。然而，*任何其他属性*如果没有在引用的元素上设置，**将**应用于 `use` 元素。
 
-由于克隆的节点不可访问，因此在使用 [CSS](/zh-CN/docs/Web/CSS) 样式化 `use` 元素及其克隆的后代时必须小心。除非通过 [CSS 继承](/zh-CN/docs/Web/CSS/Inheritance)显式请求，否则无法保证克隆的 DOM 会继承 CSS 属性。
+由于克隆的节点不可访问，因此在使用 [CSS](/zh-CN/docs/Web/CSS) 为 `use` 元素及其克隆的后代添加样式时必须小心。除非通过 [CSS 继承](/zh-CN/docs/Web/CSS/Inheritance)显式请求，否则无法保证克隆的 DOM 会继承 CSS 属性。
 
 出于安全原因，浏览器可能会对 `use` 元素应用[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)，并可能拒绝加载 {{SVGAttr("href")}} 属性中的跨源 URL。目前没有定义的方式为 `use` 元素设置跨源策略。
 
