@@ -7,36 +7,27 @@
 name: PR Test
 
 on:
-  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
-  # is granted read/write repository access.
-  # Please pay attention to limit the permissions of each job!
-  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
 jobs:
   tests:
-    # do not run on PRs in forks
     if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
     # Set the permissions to `read-all`, preventing the workflow from
     # any accidental write access to the repository.
     permissions: read-all
-    outputs:
-      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-      # If we don't do this the built files will end up in
+      # If we don't do this the built files may end up in
       # `node_modules/@mdn/yari/client/build/` and we don't want that
       # to get pushed into the cache.
       BUILD_OUT_ROOT: /tmp/build
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: "${{ env.HEAD_SHA }}"
 
       - name: Get changed files
         run: |
@@ -46,7 +37,7 @@ jobs:
             --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
           # filter out files that are not markdown files
-          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
           echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
 
           # filter out files that are not attachments
@@ -57,13 +48,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/checkout@v4
-        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
         with:
           repository: mdn/content
           path: mdn/content
 
       - name: Setup Node.js environment
-        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
@@ -71,7 +62,7 @@ jobs:
           cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages
-        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
         working-directory: ${{ github.workspace }}/mdn/content
         run: yarn --frozen-lockfile
         env:
@@ -80,7 +71,7 @@ jobs:
 
       - name: Build changed content
         id: build-content
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: env.GIT_DIFF_CONTENT
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
@@ -110,16 +101,23 @@ jobs:
           # Playground
           REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
 
+          # rari
+          LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          INTERACTIVE_EXAMPLES_BASE_URL: https://interactive-examples.mdn.allizom.net
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          mkdir -p ${BUILD_OUT_ROOT}
+          mkdir -p $BUILD_OUT_ROOT
 
-          # Don't use `yarn build` (from mdn/content) because that one hardcodes
-          # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
-          node node_modules/@mdn/yari/build/cli.js ${GIT_DIFF_CONTENT}
+          # The reason this script isn't in `package.json` is because
+          # you don't need that script as a writer. It's only used in CI
+          # and it can't use the default CONTENT_ROOT that gets set in
+          # package.json.
+          ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $CONTENT_TRANSLATED_ROOT#g")
+          yarn rari build --no-basic --json-issues --data-issues $ARGS
+          yarn yari-render-html
 
-          echo "Disk usage size of build"
-          du -sh ${BUILD_OUT_ROOT}
+          echo "Disk usage size of the build"
+          du -sh $BUILD_OUT_ROOT
 
           # Save the PR number into the build
           echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
@@ -130,40 +128,27 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
-          # Set the output variable so the next job could skip if there are no assets
-          echo "has_assets=true" >> "$GITHUB_OUTPUT"
-
       - name: Merge static assets with built documents
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: env.GIT_DIFF_CONTENT
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
-          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ ${BUILD_OUT_ROOT}
+          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
           # Show the final disk usage size of the build.
-          du -sh ${BUILD_OUT_ROOT}
+          du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: ${{ env.GIT_DIFF_CONTENT }}
+        if: env.GIT_DIFF_CONTENT
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
-        if: ${{ env.GIT_DIFF_FILES }}
+        if: env.GIT_DIFF_FILES
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          echo ${GIT_DIFF_FILES}
+          echo $GIT_DIFF_FILES
 
-          yarn filecheck ${GIT_DIFF_FILES}
-
-  review:
-    needs: tests
-    if: ${{ needs.tests.outputs.has_assets }}
-    # write permissions are required to create a comment in the corresponding PR
-    permissions: write-all
-    uses: ./.github/workflows/pr-review-companion.yml
-    # inherit the secrets from the parent workflow
-    # https://docs.github.com/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
-    secrets: inherit
+          yarn filecheck $GIT_DIFF_FILES

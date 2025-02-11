@@ -162,8 +162,8 @@ CSS-свойство {{cssxref ("background")}} является сокраще�
 Другие свойства `background- *` также могут иметь значения, разделённые запятыми, как и `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,

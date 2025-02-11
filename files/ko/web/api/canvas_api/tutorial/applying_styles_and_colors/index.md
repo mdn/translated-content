@@ -52,6 +52,8 @@ function draw() {
         Math.floor(255 - 42.5 * j) +
         ", 0)";
       ctx.fillRect(j * 25, i * 25, 25, 25);
+    }
+  }
 }
 ```
 

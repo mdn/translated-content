@@ -1,27 +1,33 @@
 ---
 title: 配列
 slug: Learn_web_development/Core/Scripting/Arrays
-original_slug: Learn/JavaScript/First_steps/Arrays
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}
 
 このモジュールの最後に、配列について見ていきましょう。配列は 1 つの変数名でリスト形式のデータを保持するのに好都合です。ここでは、どう便利なのか、どのように作るのか、そして配列の項目を追加したり削除したり取得したりする方法について学びます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        HTML と CSS への基本的な理解、JavaScript についての理解。
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        JavaScript において、配列とは何か、どのように操作するのかを理解すること。
+        <ul>
+          <li>配列とは何か。それは、変数のリストを保持する構造です。</li>
+          <li>配列の構文 — <code>[a, b, c]</code> およびアクセサー構文、<code>myArray[x]</code>。</li>
+          <li>配列の値の変更。</li>
+          <li><code>length</code>、<code>push()</code>、<code>pop()</code>、<code>join()</code>、<code>split()</code> などの一般的なプロパティやメソッドを使用した配列操作。</li>
+          <li><code>forEach()</code>、<code>map()</code>、<code>filter()</code> などの高度な配列メソッド。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -33,7 +39,7 @@ l10n:
 
 もし配列がなかったとしたら、別々の変数にそれぞれの値を格納しなければならず、各変数を表示するのと計算するので別々に呼び出さなければならなかったでしょう。こうなると、書き出すのがとても長く、非効率的でエラーを起こしやすいプログラムとなるでしょう。例えば、10 個の項目を請求書に出すだけでも最悪ですが、それが 100 個や 1000 個だったらどうでしょう。この記事の最後に実例としてやってみましょう。
 
-前回までの記事と同様に、JavaScript コンソールに配列の基礎となるコード例を[ブラウザーの開発者コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)に入力しながら学びましょう。
+前回までの記事と同様に、JavaScript コンソールに配列の基礎となるコード例を[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に入力しながら学びましょう。
 
 ## 配列の作成
 
@@ -66,7 +72,7 @@ console.log(shopping.length); // 5
 
 ## 配列の項目を取得し変更する
 
-配列の項目には 0 から始まる番号が振られます。この番号は項目のインデックス（添字）と呼ばれます。つまり、最初の項目はインデックス 0、2 番目の項目はインデックス 1、のようになります。配列の各項目は、角括弧 (`[]`) を使用してその項目のインデックスを与えることで、[文字列中の文字を取得するときのように](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods#文字列の特定の文字を受け取る)取得することができます。
+配列の項目には 0 から始まる番号が振られます。この番号は項目のインデックス（添字）と呼ばれます。つまり、最初の項目はインデックス 0、2 番目の項目はインデックス 1、のようになります。配列の各項目は、角括弧 (`[]`) を使用してその項目のインデックスを与えることで、[文字列中の文字を取得するときのように](/ja/docs/Learn_web_development/Core/Scripting/Useful_string_methods#文字列の特定の文字を受け取る)取得することができます。
 
 1. 次のコードをコンソールに入力してください。
 
@@ -228,7 +234,7 @@ console.log(longer); // [ "名古屋", "鹿児島" ]
 データが長い長い文字列の中に含まれていて、それを使いやすい形に分割して操作したいときがあります。例えばデータを表形式で表示するというようなときです。それには{{jsxref("String.prototype.split()","split()")}} メソッドが使用できます。このメソッドは文字列を分割するのに使用する文字を引数として取り、文字列をその文字で区切った部分文字列の配列に分割します。
 
 > [!NOTE]
-> 実際のところ、これは配列ではなく文字列のメソッドです。しかし、ここで紹介するのが一番だと思い取り上げています。
+> 厳密には、これは配列ではなく文字列のメソッドです。しかし、ここで紹介するのが一番だと思い取り上げています。
 
 1. それではどのように動くか試してみましょう。まずは文字列をコンソールに作ります。
 
@@ -266,15 +272,15 @@ console.log(longer); // [ "名古屋", "鹿児島" ]
    dogNames.toString(); //ポチ,ハチ,タロウ,モコ
    ```
 
-## アクティブラーニング: 商品を印字しよう！
+## アクティブラーニング: 商品を印字する
 
-商品の名前と価格、合計金額を請求書に印字するという最初の話に戻りましょう。以下に示す編集可能なコードのコメントの中に数字が書かれています。この数字はコードを書くべき場所を示しています。各数字の場所に次のようなコードを書いてください。次のようにします。
+先ほど記述した例に戻りましょう。請求書に製品名と価格を印刷し、価格を合計して下部に印刷します。下記に記述されている編集可能な例には、数字を含むコメントがあります。これらのコメントは、コードに何かを追加しなければならない場所を示しています。次のようにします。
 
 1. `// No.1` というコメントの下に、商品の名前と価格をコロン (:) で繋げた、いくつか文字列が並んでいます。これを `products` という名前の配列にしてください。
 2. `// No.2` というコメントの下で、 `for...of()` ループを始めて `products` 配列のすべての項目を繰り返すようにしてください。
-3. `// No.3` のコメントの下に 1 行で、現在の配列の項目 (`name:price`) を 2 つに分割するコードを書いてください。一方は商品の名前、もう一方は価格です。もしどうすればいいのかわからなければ、[便利な文字列のメソッド](/ja/docs/Learn/JavaScript/First_steps/Useful_string_methods)の記事を参照してください。さらに[文字列と配列を相互に変換する](#文字列と配列を相互に変換する)も役に立つでしょう。
-4. 上記のコードの一部として、価格を文字列から数値に変換する必要もあるでしょう。どのようにすべきか思い出せなければ、[文字列の最初の記事](/ja/docs/Learn/JavaScript/First_steps/Strings#数値と文字列)を確認してみましょう。
-5. コードの先頭に `total` という名前の変数が宣言されて、0 で初期化されています。ループの中で (`// No.4` *の*下) 繰り返している現在の項目の価格を `total` 変数に加算するコードを一行で書いてください。そうすれば、コードの最後で正しい合計が請求書に印字されます。恐らく[代入演算子](/ja/docs/Learn/JavaScript/First_steps/Math#代入演算子)が役に立つでしょう。
+3. `// No.3` のコメントの下に 1 行で、現在の配列の項目 (`name:price`) を 2 つに分割するコードを書いてください。一方は商品の名前、もう一方は価格です。もしどうすればいいのかわからなければ、[便利な文字列のメソッド](/ja/docs/Learn_web_development/Core/Scripting/Useful_string_methods)の記事を参照してください。さらに[文字列と配列を相互に変換する](#文字列と配列を相互に変換する)も役に立つでしょう。
+4. 上記のコードの一部として、価格を文字列から数値に変換する必要もあるでしょう。どのようにすべきか思い出せなければ、[文字列の最初の記事](/ja/docs/Learn_web_development/Core/Scripting/Strings#数値と文字列)を確認してみましょう。
+5. コードの先頭に `total` という名前の変数が宣言されて、0 で初期化されています。ループの中で (`// No.4` *の*下) 繰り返している現在の項目の価格を `total` 変数に加算するコードを一行で書いてください。そうすれば、コードの最後で正しい合計が請求書に印字されます。恐らく[代入演算子](/ja/docs/Learn_web_development/Core/Scripting/Math#代入演算子)が役に立つでしょう。
 6. `// No.5` のコメントの直下のコードを `itemText` 変数が「現在の項目の商品名 — $現在の項目の価格」となるように変更してください。「靴 — $23.99」という感じです。そうすれば正しい情報が請求書に印字されます。これはもう慣れたはずの単純な文字列結合で実現できます。
 7. 最後に、 `// No.6` のコメントの下に、 `}` を追加して `for...of()` ループの最後を示す必要があるでしょう。
 
@@ -297,8 +303,8 @@ console.log(longer); // [ "名古屋", "鹿児島" ]
 const list = document.querySelector('.output ul');
 const totalBox = document.querySelector('.output p');
 let total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+list.textContent = "";
+totalBox.textContent = "";
 // No.1
                 'パンツ:6.99'
                 '靴下:5.99'
@@ -363,8 +369,8 @@ solution.addEventListener("click", () => {
 const jsSolution = `const list = document.querySelector('.output ul');
 const totalBox = document.querySelector('.output p');
 let total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+list.textContent = "";
+totalBox.textContent = "";
 
 const products = [
   'パンツ:6.99',
@@ -395,15 +401,12 @@ window.addEventListener("load", updateCode);
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-const KEY_TAB = 9;
-const KEY_ESC = 27;
-
 textarea.onkeydown = (event) => {
-  if (event.keyCode === KEY_TAB) {
+  if (event.code === "Tab") {
     event.preventDefault();
     insertAtCaret("\t");
   }
-  if (event.keyCode === KEY_ESC) {
+  if (event.code === "Escape") {
     textarea.blur();
   }
 };
@@ -467,12 +470,12 @@ body {
 
 {{jsxref("Array.prototype.push()","push()")}} や{{jsxref("Array.prototype.pop()","pop()")}} といったメソッドを使用するよい例は、ウェブアプリでデータの中で有効な項目だけを抜き出して維持したいときなどです。例えば、アニメーションのあるシーンで、現在表示中の背景イメージを保持している配列があり、一度に表示するイメージをパフォーマンスなどの理由で 50 に制限したいとします。その際、新しいオブジェクトを配列に追加したと同時に、古いオブジェクトを削除して配列を希望のサイズに維持します。
 
-次の例では、もう少し単純に、検索ボックスのある、ダミーの検索サイトを用意しました。検索ボックスに文字が入力されたら、直前 5 つの検索語がリストに表示されます。検索された語が 5 を超えたら最後の検索語が削除されるようになります。新しい検索語が先頭に追加されるので、常に 5 つの検索語が表示されます。
+この例では、よりシンプルな使用方法を示します。ここでは、検索ボックスを備えた模擬の検索サイトを提供します。検索ボックスに語句が入力されると、過去 5 回分の検索語句がリストに表示されるという仕組みです。 時間経過に伴う検索語句の数が 5 つを超えると、新しい語句をリストの一番上に追加するたびに、最後の語句が削除されます。これにより、常に過去 5 回分の検索語句がリストに表示されます。
 
 > [!NOTE]
-> 本当の検索アプリでは、前回の検索語をクリックすることでその検索に戻れて、実際に検索結果が表示されることでしょう！ただし、今は単純にしておきましょう。
+> 実際の検索アプリでは、以前の検索語をクリックすることができ、そうすれば実際の検索結果が表示されるでしょう。今のところは単純にしておきましょう。
 
-アプリを完成させるには...
+アプリを完成させるには、次のようにする必要があります。
 
 1. `// No.1` コメントの下に、検索ボックスに入力された検索語を配列の先頭に追加するコードを書いてください。検索語は `searchInput.value` と書いて取得します。
 2. `// No.2` コメントの下に、配列の最後の項目を削除するコードを書いてください。
@@ -591,7 +594,7 @@ const jsSolution = `const list = document.querySelector('.output ul');
 const searchInput = document.querySelector('.output input');
 const searchBtn = document.querySelector('.output button');
 
-list.innerHTML = '';
+list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
@@ -603,7 +606,7 @@ searchBtn.onclick = () => {
 
     // 表示中の一覧を空にして、同じ項目が表示されないようにして、
     // 結果は検索語が入力される度に毎回作り直される
-    list.innerHTML = '';
+    list.textContent = "";
 
     // 配列をループして、リスト内の全ての検索語を表示する
     for (const itemText of myHistory) {
@@ -630,15 +633,12 @@ window.addEventListener("load", updateCode);
 // タブキーでテキストエリアから抜けてしまうのを防ぎ、
 // 代わりにカーソル位置にタブ文字を挿入する
 
-const KEY_TAB = 9;
-const KEY_ESC = 27;
-
 textarea.onkeydown = (event) => {
-  if (event.keyCode === KEY_TAB) {
+  if (event.code === "Tab") {
     event.preventDefault();
     insertAtCaret("\t");
   }
-  if (event.keyCode === KEY_ESC) {
+  if (event.code === "Escape") {
     textarea.blur();
   }
 };
@@ -678,7 +678,7 @@ textarea.onkeyup = () => {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 配列](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 配列](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays)を見てください。
 
 ## 結論
 
@@ -690,5 +690,7 @@ textarea.onkeyup = () => {
 
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections) — 配列とそのいとこにあたる型付き配列についての高度なガイドです。
 - {{jsxref("Array")}} — `Array` オブジェクトのリファレンスページです。詳細なガイドと機能については、このリファレンスページで紹介されています。
+- [Aside: Intro to arrays](https://v2.scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn), Scrimba <sup>_MDN カリキュラムパートナー_</sup>
+  - : 配列の入門として提供された対話形式のレッスン。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting")}}

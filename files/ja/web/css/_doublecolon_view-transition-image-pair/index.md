@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-image-pair"
+title: ::view-transition-image-pair
 slug: Web/CSS/::view-transition-image-pair
 l10n:
   sourceCommit: 1a27ade8c981c8a98c8fac9881b362e881a4d236
@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::view-transition-image-pair`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ビュー遷移](/ja/docs/Web/API/View_Transitions_API)の「古い」および「新しい」ビュー状態、すなわちトランジションの前と後のコンテナーを表します。
+**`::view-transition-image-pair`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ビュー遷移](/ja/docs/Web/API/View_Transition_API)の「古い」および「新しい」ビュー状態、すなわちトランジションの前と後のコンテナーを表します。
 
-ビュー遷移の間、 `::view-transition-image-pair` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transitions_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素のツリーとして表現されます。これは {{cssxref("::view-transition-group")}} の子にしかなりません。子という意味では、 {{cssxref("::view-transition-new")}} または {{cssxref("::view-transition-old")}}、あるいはその両方を持つことができます。
+ビュー遷移の間、 `::view-transition-image-pair` は[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API/Using#ビュー遷移のプロセス)で説明されているように、関連する擬似要素のツリーとして表現されます。これは {{cssxref("::view-transition-group")}} の子にしかなりません。子という意味では、 {{cssxref("::view-transition-new")}} または {{cssxref("::view-transition-old")}}、あるいはその両方を持つことができます。
 
 UA スタイルシートでは `::view-transition-image-pair` に以下の既定値が指定されています。
 
@@ -60,5 +60,5 @@ html::view-transition-image-pair(*) {
 
 ## 関連情報
 
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [ビュー遷移 API によるスムーズでシンプルなトランジション](https://developer.chrome.com/docs/web-platform/view-transitions/)

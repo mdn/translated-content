@@ -1,5 +1,5 @@
 ---
-title: "-moz-user-modify"
+title: -moz-user-modify
 slug: Web/CSS/user-modify
 ---
 

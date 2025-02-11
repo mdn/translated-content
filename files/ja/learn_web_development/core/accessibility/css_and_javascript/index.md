@@ -1,12 +1,13 @@
 ---
 title: CSS と JavaScript のアクセシビリティのベストプラクティス
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
-original_slug: Learn/Accessibility/CSS_and_JavaScript
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 CSS と JavaScript も、適切に使えばアクセシブルなウェブ体験を可能にしてくれる可能性がありますが、誤用すると、大幅にアクセシビリティを悪化させることがあります。本記事では、複雑なコンテンツでもできる限りアクセシブルにすることを保証するために考慮すべき、CSS と JavaScript のベストプラクティスのいくつかを概観します。
 
@@ -14,18 +15,20 @@ CSS と JavaScript も、適切に使えばアクセシブルなウェブ体験�
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        基本的なコンピューターの知識、HTML と CSS と
-        JavaScript に関する基本的な理解、
-        <a href="/ja/docs/Learn/Accessibility/What_is_accessibility"
-          >アクセシビリティとは何か</a
-        >に関する理解。
-      </td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識、<a href="/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基本的なアクセシビリティの概念の理解</a>。</td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        アクセシビリティを損わず、最大化するように、自身のウェブドキュメントで CSS と JavaScript を適切に使うことに慣れること。
+        <ul>
+          <li>アクセシブルなテキストのサイズとレイアウト。</li>
+          <li>色のコントラスト。</li>
+          <li><code>:focus</code> および <code>:hover</code> スタイル設定の重要性。</li>
+          <li>賢明なアニメーションの使用 — 控え目にアニメーションを使用し、それをオフにするためのコントロールを提供してください。</li>
+          <li>コンテンツを非表示にしてアクセス不能にならないようにするための最善の手法。</li>
+          <li>JavaScript の使い過ぎということがあり、控えめな JavaScript の値があること。</li>
+          <li>イベントを賢く使用することで、特定のコントロール型をロックアウトしないようにすること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -41,7 +44,7 @@ CSS を見ることから始めましょう。
 
 ### 正しい意味づけと、ユーザーの予期すること
 
-CSS を使って、どのような HTML 要素を*どのように*見せかけることも可能です。しかし、このことは、そうすべきだと意味しているわけではありません。「[HTML: アクセシビリティの良き基本](/ja/docs/Learn/Accessibility/HTML)」という記事でしばしば述べたように、可能な場合にはいつでも、役割にふさわしい意味の要素を使うべきです。そうしないと、混乱を巻き起こしかねませんし、あらゆる人にとっての——とりわけ障碍のあるユーザーにとっての——使い勝手の問題を引き起こしかねません。正しいセマンティクスを使うことは、ユーザーの予期することと大いに関係があります。つまり、要素とは、その機能にしたがって、特定の見かけをしており特定のふるまいをするものであり、こうした通常の慣習をユーザーは予期するものなのです。
+CSS を使って、どのような HTML 要素を*どのように*見せかけることも可能です。しかし、このことは、そうすべきだと意味しているわけではありません。「[HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML)」という記事でしばしば述べたように、可能な場合にはいつでも、役割にふさわしい意味の要素を使うべきです。そうしないと、混乱を巻き起こしかねませんし、あらゆる人にとっての——とりわけ障碍のあるユーザーにとっての——使い勝手の問題を引き起こしかねません。正しいセマンティクスを使うことは、ユーザーの予期することと大いに関係があります。つまり、要素とは、その機能にしたがって、特定の見かけをしており特定のふるまいをするものであり、こうした通常の慣習をユーザーは予期するものなのです。
 
 一例として、開発者が見出し要素を適切に使ってコンテンツをマークアップしていなかった場合には、スクリーンリーダーのユーザーは、見出し要素を通じてページの見通しを得ることができないでしょう。同様に、見出しのようには見えないように見出しにスタイルをつけた場合には、見出しは視覚的な目的を失ってしまいます。
 
@@ -82,7 +85,7 @@ li {
 - 見出しが本文と区別できる (典型的には、デフォルトのスタイル付けと同様に、大きくて太い文字になっている) ようにしましょう。リストは、リストであるように見えるべきです。
 - テキストの色は、背景色と十分に異なっているべきです。
 
-より詳しくは、[HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)と[テキストのスタイリング](/ja/docs/Learn/CSS/Styling_text)を参照してください。
+より詳しくは、[HTML の見出しと段落](/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)と[CSS によるテキストのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling)を参照してください。
 
 #### 強調したテキスト
 
@@ -105,7 +108,7 @@ em {
 }
 ```
 
-けれども、なんらかの目立つ方法で強調要素をスタイル付けする必要はめったにないでしょう。太字とイタリック体のテキストという標準的慣習はとても認識しやすく、そのスタイルを変更することは混乱を招きかねません。強調についてのさらなる情報は、[強調と重要性](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)を参照してください。
+けれども、なんらかの目立つ方法で強調要素をスタイル付けする必要はめったにないでしょう。太字とイタリック体のテキストという標準的慣習はとても認識しやすく、そのスタイルを変更することは混乱を招きかねません。強調についてのさらなる情報は、[強調と重要性](/ja/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)を参照してください。
 
 #### 略語
 
@@ -125,7 +128,7 @@ abbr {
 }
 ```
 
-略語に対する公認のスタイル付けの慣習は、点線の下線です。そして、点線の下線から大きく逸脱するのは愚かしいことです。略語についてのさらなる情報は、[略語](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#略語)を参照してください。
+略語に対する公認のスタイル付けの慣習は、点線の下線です。そして、点線の下線から大きく逸脱するのは愚かしいことです。略語についてのさらなる情報は、[略語](/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#略語)を参照してください。
 
 #### リンク
 
@@ -201,7 +204,7 @@ a:active {
 
 ### ものごとを隠す
 
-視覚的なデザインでは、すべてのコンテンツを一度に表示させないことが要求される場合が多くあります。たとえば、[Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) の例 ([ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)を参照) では、 3 つの情報パネルがありますが、それらをお互いの上に[配置](/ja/docs/Learn/CSS/CSS_layout/Positioning)しており、クリックするとそれぞれの情報パネルを表示できるタブを設けています (これはキーボード・アクセシブルでもあります。つまり、情報パネルを選ぶのに、クリックする代わりに、タブキーとエンターキー / リターンキーとを使うこともできます)。
+視覚的なデザインでは、すべてのコンテンツを一度に表示させないことが要求される場合が多くあります。たとえば、[Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) の例 ([ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)を参照) では、 3 つの情報パネルがありますが、それらをお互いの上に[配置](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)しており、クリックするとそれぞれの情報パネルを表示できるタブを設けています (これはキーボード・アクセシブルでもあります。つまり、情報パネルを選ぶのに、クリックする代わりに、タブキーとエンターキー / リターンキーとを使うこともできます)。
 
 ![タブ 1 が選択され、そのコンテンツのみが表示される 3 タブインターフェイス。他のタブのコンテンツは非表示です。タブが選択されると、そのタブの文字色が黒から白に、背景色がオレンジレッドからサドルブラウンに変わります。](tabbed-info-box.png)
 
@@ -226,14 +229,14 @@ JavaScript も、その使い方によっては、アクセシビリティをぶ
 
 モダンな JavaScript は強力な言語です。簡単なコンテンツと UI の更新から、本格的な 2D ゲームや 3D ゲームに至るまで、近頃では JavaScript を使ってとても多くのことができます。すべてのコンテンツがすべての人々にとって 100% アクセシブルであるべきだ、といった決まりはありません。自分にできることをし、自分のアプリをできる限りアクセシブルにする必要があるだけなのです。
 
-単純なコンテンツと機能——たとえば、テキスト、画像、テーブル、フォーム、関数を起動する押しボタン——は、まず間違いなく、アクセシブルにするのが簡単です。[HTML: アクセシビリティの良き基本](/ja/docs/Learn/Accessibility/HTML) の記事で見たように、考慮すべき重要な事項は以下のとおりです。
+単純なコンテンツと機能——たとえば、テキスト、画像、テーブル、フォーム、関数を起動する押しボタン——は、まず間違いなく、アクセシブルにするのが簡単です。[HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML) の記事で見たように、考慮すべき重要な事項は以下のとおりです。
 
 - 正しい目的に正しい要素を使うことが良い意味づけです。たとえば、見出しと段落を使い、{{htmlelement("button")}} 要素と {{htmlelement("a")}} 要素を使うようにします。
-- コンテンツを、テキストとして利用可能にすること——テキスト・コンテンツや、フォーム要素に対する適切なテキストラベルの形で、直接的に利用可能とするか、あるいは、たとえば画像に対する alt テキストのような[代替テキスト](/ja/docs/Learn/Accessibility/HTML#代替テキスト)として、利用可能にすること。
+- コンテンツを、テキストとして利用可能にすること——テキスト・コンテンツや、フォーム要素に対する適切なテキストラベルの形で、直接的に利用可能とするか、あるいは、たとえば画像に対する alt テキストのような[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)として、利用可能にすること。
 
-機能が欠けているところに機能を盛り込むように JavaScript を使う方法の例も見ました ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。この例は理想的ではありません。実際、ただふさわしい要素をふさわしい役割に使うべきなのです。が、この例は、使われるマークアップを何らかの理由で統制できない状況においては、こうしたこともあり得るのだと示しています。非意味的な、 JavaScript で実装されたウィジェットについて、アクセシビリティを向上させる別の方法は、WAI-ARIA を用いて追加的な意味づけをスクリーンリーダーのユーザーに提供することです。次の記事では、このことも詳しく扱います。
+機能が欠けているところに機能を盛り込むように JavaScript を使う方法の例も見ました ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。この例は理想的ではありません。実際、ただふさわしい要素をふさわしい役割に使うべきなのです。が、この例は、使われるマークアップを何らかの理由で統制できない状況においては、こうしたこともあり得るのだと示しています。非意味的な、 JavaScript で実装されたウィジェットについて、アクセシビリティを向上させる別の方法は、WAI-ARIA を用いて追加的な意味づけをスクリーンリーダーのユーザーに提供することです。次の記事では、このことも詳しく扱います。
 
-3D ゲームのような複雑な機能は、アクセシブルにするのがそう簡単ではありません。[WebGL](/ja/docs/Web/API/WebGL_API) を使って作られた複雑な 3D ゲームは {{htmlelement("canvas")}} 要素上に描画されるでしょうが、今のところ {{htmlelement("canvas")}} 要素には、重度の視覚障碍のあるユーザーが利用できるように代替テキストもしくは他の情報を提供する手段がないのです。 そうしたゲームは、こうした人々のグループを実際に主要な対象者の一部としてはいないのだ、というのはもっともです。それに、そのゲームを、目の見えない人々にとって 100% アクセシブルにせよ、と期待するのも不合理でしょう。しかし、マウスを使わないユーザーにとって利用可能なように[キーボードコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を実装することや、 色覚障碍のある人々にとって利用可能なようにカラー・スキームに十分なコントラストを持たせることならできるでしょう。
+3D ゲームのような複雑な機能は、アクセシブルにするのがそう簡単ではありません。[WebGL](/ja/docs/Web/API/WebGL_API) を使って作られた複雑な 3D ゲームは {{htmlelement("canvas")}} 要素上に描画されるでしょうが、今のところ {{htmlelement("canvas")}} 要素には、重度の視覚障碍のあるユーザーが利用できるように代替テキストもしくは他の情報を提供する手段がないのです。 そうしたゲームは、こうした人々のグループを実際に主要な対象者の一部としてはいないのだ、というのはもっともです。それに、そのゲームを、目の見えない人々にとって 100% アクセシブルにせよ、と期待するのも不合理でしょう。しかし、マウスを使わないユーザーにとって利用可能なように[キーボードコントロール](/ja/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)を実装することや、 色覚障碍のある人々にとって利用可能なようにカラースキームに十分なコントラストを持たせることならできるでしょう。
 
 ### 過度の JavaScript にともなう問題
 
@@ -270,7 +273,7 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = "";
+  errorList.textContent = "";
   for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
     if (testItem.input.value === "") {
@@ -279,7 +282,7 @@ function validate(e) {
     }
   }
 
-  if (errorList.innerHTML !== "") {
+  if (errorList.hasChildNodes()) {
     e.preventDefault();
   }
 }
@@ -319,7 +322,7 @@ function createLink(testItem) {
 </div>
 ```
 
-もっと詳細に [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) を扱う次の記事で、これらの属性について説明します。
+もっと詳細に [WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) を扱う次の記事で、これらの属性について説明します。
 
 > [!NOTE]
 > HTML フォームには `required` 属性や `min`/`minlength` 属性や `max`/`maxlength` 属性のような組み込みの検査の仕組みがあること (より詳しくは、{{htmlelement("input")}} 要素のリファレンスを参照) について考える読者もおそらくいることでしょう。このデモでは、結局これらの属性は使いませんでした。これらの属性についてのブラウザー間での対応が当てにならないからです（たとえば IE10 以上のみでの対応だったり、Safari が対応していなかったりします）。
@@ -351,11 +354,11 @@ imgThumb.onblur = hideImg;
 
 最初の 2 行は、それぞれ、マウスポインターがサムネイル上にホバーしたときと、マウスポインターがサムネイル上にホバーするのをやめたときに、関数を動作させます。しかしこれだと、ズームしたビューにキーボードを通じてアクセスすることはできません。それをできるようにするために、後ろの方の 2 行を含めました。この 2 行は、画像にフォーカスが当たったときと、画像からフォーカスが外れた (フォーカスが停止した) ときに、関数を動作させます。こうしたことは、タブキーで画像上に移動することでできることです。なぜなら、画像に `tabindex="0"` を含めておいたからです。
 
-[click](/ja/docs/Web/API/Element/click_event) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター/リターンが押された後に、あるいは、そうした要素がタッチ画面装置上でタップされたときに、 [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを起動します。しかしこれは、 tabindex を用いて、既定ではフォーカス可能ではないイベントがフォーカスを持つようにしていると、既定のままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。
+[click](/ja/docs/Web/API/Element/click_event) クリックイベントは興味深いものです。マウス依存のように聞こえる名前ですが、ほとんどのブラウザーは、フォーカスの当たっているリンクまたはフォーム要素上でエンター/リターンが押された後に、あるいは、そうした要素がタッチ画面装置上でタップされたときに、 [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを起動します。しかしこれは、 tabindex を用いて、既定ではフォーカス可能ではないイベントがフォーカスを持つようにしていると、既定のままではうまく機能しません。そうした場合では、まさにそのキーが具体的にはいつ押されたのかを検出する必要があります ([キーボードアクセシビリティを呼び戻すように盛り込む](/ja/docs/Learn_web_development/Core/Accessibility/HTML#キーボードアクセシビリティを呼び戻すように盛り込む) を参照)。
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## まとめ
 
@@ -363,4 +366,4 @@ imgThumb.onblur = hideImg;
 
 次は WAI-ARIA の番です!
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

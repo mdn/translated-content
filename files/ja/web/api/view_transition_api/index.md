@@ -1,12 +1,11 @@
 ---
 title: ビュー遷移 API
 slug: Web/API/View_Transition_API
-original_slug: Web/API/View_Transitions_API
 l10n:
-  sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
+  sourceCommit: 0f7f19a62e8dadb2da69f8801db76c2eab2ff8f8
 ---
 
-{{DefaultAPISidebar("View Transitions API")}}
+{{DefaultAPISidebar("View Transition API")}}
 
 **ビュー遷移 API** は、異なるウェブサイトのビュー間のアニメーション遷移を簡単に作成するための仕組みを提供します。これには、単一ページアプリケーション (SPA) における DOM 状態変化のアニメーション、および複数ページアプリケーション (MPA) における文書内の移動時のアニメーションを含みます。
 
@@ -28,7 +27,7 @@ l10n:
 
 ブラウザーの既定では、ビュー遷移を作成するアニメーションはすばやく実行されます。また、SPA と MPA のビュー遷移の両方で、遷移アニメーションをカスタマイズしたり、ビュー遷移自体を操作したり（例えば、アニメーションをスキップする状況を指定したり）できる機能があります。
 
-詳しくは[ビュー遷移 API の使用](/ja/docs/Web/API/View_Transitions_API/Using)を参照してください。
+詳しくは[ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)を参照してください。
 
 ## インターフェイス
 
@@ -95,5 +94,6 @@ l10n:
 
 ## 関連情報
 
-- [ビュー遷移 API によるスムーズでシンプルな遷移](https://developer.chrome.com/docs/web-platform/view-transitions/)
-- [View Transitions API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/)
+- [View Transition API によるスムーズな遷移](https://developer.chrome.com/docs/web-platform/view-transitions/) (developer.chrome.com, 2024)
+- [View Transition API: Creating Smooth Page Transitions](https://stackdiary.com/view-transitions-api/) (stackdiary.com, 2023)
+- [View Transitions API: Single Page Apps Without a Framework](https://www.debugbear.com/blog/view-transitions-spa-without-framework) (www.debugbear.com, 2024)

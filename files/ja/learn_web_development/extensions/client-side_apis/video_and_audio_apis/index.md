@@ -1,12 +1,13 @@
 ---
 title: 動画と音声の API
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 HTML にはリッチメディアを文書内に埋め込むための要素、 {{htmlelement("video")}} と {{htmlelement("audio")}} があり、それらには再生やシークなどを制御するための独自の API が付属しています。この記事では、カスタム再生コントロールの作成など、よくある作業の方法を紹介します。
 
@@ -15,20 +16,17 @@ HTML にはリッチメディアを文書内に埋め込むための要素、 {{
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        JavaScript の基本（<a href="/ja/docs/Learn/JavaScript/First_steps">最初のステップ</a>、
-        <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >構成要素</a
-        >、
-        <a href="/ja/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a>）、
-        <a href="/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >クライアント側 API の基本</a
-        >
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> に親しんでおくこと、特に <a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">JavaScript オブジェクトの基本</a>と <a href="/ja/docs/Learn_web_development/Core/Scripting/DOM_scripting">DOM スクリプティング</a>や<a href="/ja/docs/Learn_web_development/Core/Scripting/Network_requests">ネットワークリスクエスト</a>などのコア API を扱っているものを理解しておくこと。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        ブラウザー API を使用して動画や音声の再生を操作する方法を学ぶこと。
+        <ul>
+          <li>コーデックとは何か、そして異なる動画と音声の形式について。</li>
+          <li>音声と動画に関連付けられた主な機能（再生、一時停止、停止、早送り・巻き戻し、再生時間、現在時点）を理解すること。</li>
+          <li><code>HTMLMediaElement</code> API を使用して、基本的なカスタムメディアプレーヤーを構築することで、アクセシビリティが向上し、すべてのブラウザーで十分に対応できるようになります。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -36,17 +34,14 @@ HTML にはリッチメディアを文書内に埋め込むための要素、 {{
 
 ## HTML での動画と音声
 
-{{htmlelement("video")}} と {{htmlelement("audio")}} 要素で、ウェブページに動画や音声を埋め込むことができます。[動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)で示したように、典型的な実装はこのような形になります。
+{{htmlelement("video")}} と {{htmlelement("audio")}} 要素で、ウェブページに動画や音声を埋め込むことができます。[動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)で示したように、典型的な実装はこのような形になります。
 
-```html
+```html-nolint
 <video controls>
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーは HTML 動画に対応していません。代わりに<a
-      href="rabbit320.mp4"
-      >動画へのリンク</a
-    >があります。
+    お使いのブラウザーは HTML 動画に対応していません。代わりに<a href="rabbit320.mp4">動画へのリンク</a>があります。
   </p>
 </video>
 ```
@@ -102,7 +97,6 @@ HTML のインデックスファイルを開いてください。多くの機能
 ```
 
 - プレイヤー全体は {{htmlelement("div")}} 要素で囲まれているため、必要に応じて 1 つの単位としてスタイル設定することができます。
-
 - {{htmlelement("video")}} 要素には 2 つの {{htmlelement("source")}} 要素が含まれているので、サイトを表示しているブラウザーに応じて異なる形式を読み込むことができます。
 - 最も興味深いのは、操作用の HTML でしょう。
 
@@ -170,7 +164,7 @@ button:before {
 次に、生成コンテンツを使用して、各ボタンにアイコンを表示します。
 
 - {{cssxref("::before")}} セレクターを、それぞれの {{htmlelement("button")}} 要素の前にコンテンツを表示するために、使用しています。
-- それぞれの場合に表示するコンテンツは、 {{cssxref("content")}} プロパティを使って、[`data-icon`](/ja/docs/Learn/HTML/Howto/Use_data_attributes) 属性のコンテンツと等しくなるよう設定しています。再生ボタンの場合、 `data-icon` は大文字の "P" を含んでいます。
+- それぞれの場合に表示するコンテンツは、 {{cssxref("content")}} プロパティを使って、[`data-icon`](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 属性のコンテンツと等しくなるよう設定しています。再生ボタンの場合、 `data-icon` は大文字の "P" を含んでいます。
 - ボタンには {{cssxref("font-family")}} を使用して、カスタムウェブフォントを適用しています。このフォントでは、 "P" は実際には「再生」アイコンであるため、再生ボタンには「再生」アイコンが保有されています。
 
 アイコンフォントは多くの理由でとてもクールです。アイコンを画像ファイルとしてダウンロードする必要がないため HTTP リクエストを削減でき、拡張性が高く、また {{cssxref("color")}} や {{cssxref("text-shadow")}} のようにテキストのプロパティを使用してスタイルを設定することも可能だからです。
@@ -190,7 +184,7 @@ button:before {
 
 .timer div {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 20%);
   left: 0;
   top: 0;
   width: 0;
@@ -205,7 +199,7 @@ button:before {
 }
 ```
 
-- 外側の `.timer` `<div>` に flex: 5 を持つように設定して、コントロールバーの幅のほとんどを受け取れるようにしています。また、 {{cssxref("position")}}`: relative` を指定して、 {{htmlelement("body")}} 要素の境界線ではなく、その境界線に従って内側の要素を便利に配置できるようにします。
+- 外側の `.timer` `<div>` に flex: 5 を持つように設定して、コントロールバーの幅のほとんどを受け取れるようにしています。また、 {{cssxref("position", "position: relative")}} を指定して、 {{htmlelement("body")}} 要素の境界線ではなく、その境界線に従って内側の要素を便利に配置できるようにします。
 - 内側の `<div>` は、外側の `<div>` の上に直接置かれるように絶対配置されます。また、初期状態では幅が 0 に指定されているため、まったく見えません。動画が再生されるにつれて、 JavaScript によって幅が拡大されます。
 - また、`<span>` はタイマーバーの左側付近に絶対的な位置が決まっています。
 - また、内側の `<div>` と `<span>` には正しい {{cssxref("z-index")}} を与え、タイマーが上に、内側の `<div>` がその下に表示されるようにしました。こうすることで、すべての情報が見えるようになり、あるボックスが他のボックスを隠してしまうことがなくなります。
@@ -299,7 +293,7 @@ button:before {
 
    後は、表示されているアイコンを「再生」アイコンに設定するだけです。停止ボタンが押されたときに動画が一時停止していたか再生していたかに関係なく、その後再生できる状態にしたいのです。
 
-#### 前後をシーク
+#### 前後にシーク
 
 巻き戻しや早送りの機能を実装する方法はたくさんあります。ここでは、比較的複雑な方法を紹介します。この方法では、異なるボタンが予期しない順番で押されても壊れることはありません。
 
@@ -351,12 +345,12 @@ button:before {
 
    それでは `mediaBackward()` を実行してみましょう（`mediaForward()` の機能はまったく同じですが、逆になっています）。
 
-   1. これは、 `fwd` ボタンを押した後に `rwd` ボタンを押すと、早送り機能が取り消され、巻き戻し機能に置き換わるからです。もし、両方を一度に行おうとすると、プレイヤーが壊れてしまいます。
-   2. `if`ステートメントを使用して、 `active` クラスが `rwd` ボタンに設定されているかどうかを調べ、すでに押されていることを示します。 {{domxref("Element.classList", "classList")}} はすべての要素に存在する便利なプロパティで、要素に設定されているすべてのクラスのリストと、クラスを追加/削除するためのメソッドなどが含まれています。 `classList.contains()` メソッドを使用して、リストに `active` クラスが含まれているかどうかを調べています。これは論理値 `true`/`false` の結果を返します。
+   1. 早送り機能に設定されているクラスや間隔をすべてクリアします。これは、 `fwd` ボタンを押した後に `rwd` ボタンを押すと、早送り機能が取り消され、巻き戻し機能に置き換わるからです。もし、両方を一度に行おうとすると、プレイヤーが壊れてしまいます。
+   2. `if` 文を使用して、 `active` クラスが `rwd` ボタンに設定されているかどうかを調べ、すでに押されていることを示します。 {{domxref("Element.classList", "classList")}} はすべての要素に存在する便利なプロパティで、要素に設定されているすべてのクラスのリストと、クラスを追加/削除するためのメソッドなどが含まれています。 `classList.contains()` メソッドを使用して、リストに `active` クラスが含まれているかどうかを調べています。これは論理値 `true`/`false` の結果を返します。
    3. `rwd` ボタンに `active` が設定されている場合は、 `classList.remove()` を使用してそれを削除し、最初にボタンが使用されたときに設定された間隔をクリアし（詳細は以下を参照）、 {{domxref("HTMLMediaElement.play()")}} を使用して巻き戻しを取り消し、通常の動画の再生を開始しています。
-   4. まだ設定されていない場合は、`classList.add()` を使用して `rwd` ボタンに `active` クラスを追加し、 {{domxref("HTMLMediaElement.pause()")}} を使用して動画を一時停止し、 `intervalRwd` 変数を {{domxref("setInterval()")}} 呼び出しを使用して等しい値にセットしています。 `setInterval()` が呼び出されると、アクティブなインターバルを作成します。つまり、最初の引数で指定された関数を x ミリ秒ごとに実行します（ここで x は 2 番目の引数の値）。つまり、ここでは200ミリ秒ごとに `windBackward()` 関数を実行しています。この関数は、動画を常に逆方向に巻き戻すために使用します。domxref("setInterval()")}} の実行を停止するには、 {{domxref("clearInterval", "clearInterval()")}} を呼び出す必要があります。このときクリアする間隔の識別名、この場合は変数名 `intervalRwd` （関数内で先に呼び出した `clearInterval()` を参照）を持つようにしてください。
+   4. まだ設定されていない場合は、 `active` クラスを `rwd` ボタンに `classList.add()` を使って追加し、 {{domxref("HTMLMediaElement.pause()")}} を使用して動画を一時停止し、 `intervalRwd` 変数を {{domxref("Window.setInterval", "setInterval()")}} 呼び出しと同じ値に設定しています。 `setInterval()` が呼び出されると、アクティブなインターバルタイマーを作成します。つまり、最初の引数で指定された関数を x ミリ秒ごとに実行します（ここで x は 2 番目の引数の値）。つまり、ここでは 200 ミリ秒ごとに `windBackward()` 関数を実行しています。この関数は、動画を常に逆方向に巻き戻すために使用します。 {{domxref("Window.setInterval", "setInterval()")}} の実行を停止するには、 {{domxref("Window.clearInterval", "clearInterval()")}} を呼び出す必要があります。このときクリアする間隔の識別名、この場合は変数名 `intervalRwd` （関数内で先に呼び出した `clearInterval()` を参照）を持つようにしてください。
 
-3. 最後に、 `setInterval()` の呼び出しで呼び出される `windBackward()` と `windForward()` の関数を定義する必要があります。前の 2 つの関数の下に、以下を追加してください。
+3. 最後に、 `setInterval()` の呼び出しで呼び出される `windBackward()` と `windForward()` の関数を定義する必要があります。前の 2 つの関数の下に、以下のものを追加してください。
 
    ```js
    function windBackward() {
@@ -380,14 +374,14 @@ button:before {
    }
    ```
 
-   繰り返しますが、この関数の最初のものは、ほとんど同じように動作しますが、互いに逆に動作するので、読み終えておきます。windBackward()` では、以下のことを行っています。インターバルが有効な場合、この関数は 200 ミリ秒に一度実行されることを覚えておいてください。
+   繰り返しますが、この関数の最初のものは、ほとんど同じように動作しますが、互いに逆に動作するので、読み終えておきます。 `windBackward()` では、以下のことを行っています。インターバルが有効な場合、この関数は 200 ミリ秒に一度実行されることに留意してください。
 
    1. まず最初に `if` 文で、現在の時刻が 2 つ目よりも小さいかどうか、つまりあと 3 秒巻き戻せば動画の開始時刻を過ぎてしまうかどうかを調べます。これは奇妙な動作を発生させるので、この場合は `stopMedia()` を呼び出して動画の再生を停止し、巻き戻しボタンから `active` クラスを削除し、巻き戻し機能を停止するために `intervalRwd` 間隔をクリアしています。もし、この最後のステップを行わなければ、動画は永遠に巻き戻し続けることになります。
-   2. もし現在時刻が動画の開始時刻から 3 秒以内でなければ、`media.currentTime -= 3` を実行して現在時刻から 3 秒を削除しています。つまり、実質的には 200 ミリ秒に一度、動画を 3 秒ずつ巻き戻していることになります。
+   2. もし現在時刻が動画の開始時刻から 3 秒以内でなければ、 `media.currentTime -= 3` を実行して現在時刻から 3 秒を削除しています。つまり、実質的には 200 ミリ秒に一度、動画を 3 秒ずつ巻き戻していることになります。
 
 #### 経過時間の更新
 
-メディアプレイヤーの実装する最後の部分は、経過時間の表示です。そのために、 {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} イベントが `<video>` 要素で発行されるたびに、時間表示を更新する関数を実行することになります。このイベントが発行される頻度は、ブラウザーや CPU パワーなどに依存します（[StackOverflow のこの投稿を参照](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+メディアプレイヤーの実装する最後の部分は、経過時間の表示です。そのために、 {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}} イベントが `<video>` 要素で発行されるたびに、時間表示を更新する関数を実行することになります。このイベントが発行される頻度は、ブラウザーや CPU パワーなどに依存します（[Stack Overflow のこの投稿を参照](https://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 他にも、以下の `addEventListener()` 行を追加してください。
 
@@ -416,10 +410,10 @@ function setTime() {
 
 かなり長い関数なので、順を追って読んでいきましょう。
 
-1. まず最初に、 {{domxref("HTMLMediaElement.currentTime")}} の値から分と秒の数を計算して、この著作物を動作させます。
-2. 次に、さらに二つの変数、 `minuteValue` と `secondValue` を初期化します。 {{jsxref("String/padStart", "padStart()")}} を使用して、たとえ数値が一桁であっても、それぞれの値を2文字の長さにしています。
+1. まず最初に、 {{domxref("HTMLMediaElement.currentTime")}} の値から分と秒の値を計算します。
+2. 次に、さらに 2 つの変数、 `minuteValue` と `secondValue` を初期化します。 {{jsxref("String/padStart", "padStart()")}} を使用して、数値が 1 桁であっても、それぞれの値を 2 文字の長さにしています。
 3. 実際に表示する時刻の値は、 `minuteValue` ＋コロン文字＋ `secondValue` と設定する。
-4. タイマーの {{domxref("Node.textContent")}} 値に時間の値を設定し、UIに表示します。
+4. タイマーの {{domxref("Node.textContent")}} 値に時間の値を設定し、 UI に表示します。
 5. 内側の `<div>` に設定すべき長さは、まず外側の `<div>` の幅を計算し（任意の要素の {{domxref("Element.clientWidth", "clientWidth")}} プロパティにその長さが入ります）、それを {{domxref("HTMLMediaElement.currentTime")}} で割ってメディアの合計 {{domxref("HTMLMediaElement.duration")}} に乗じることによって計算されます。
 6. 内側の`<div>`の幅は、計算されたバーの長さに "px" を加えたものに設定します。
 
@@ -461,10 +455,10 @@ clearInterval(intervalFwd);
 ## 関連情報
 
 - {{domxref("HTMLMediaElement")}}
-- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — `<video>` および `<audio>` の HTML の簡単なガイド
+- [動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — `<video>` および `<audio>` の HTML の簡単なガイド
 - [音声と動画の配信](/ja/docs/Web/Media/Audio_and_video_delivery) — ブラウザーにメディアを配信するための詳細なガイドで、多くのヒント、トリック、さらに高度なチュートリアルへのリンクがあります。
 - [音声と動画の加工](/ja/docs/Web/Media/Audio_and_video_manipulation) — [キャンバス API](/ja/docs/Web/API/Canvas_API) や[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) など、音声や動画を操作するための詳しいガイドを掲載しています。
 - {{htmlelement("video")}} および {{htmlelement("audio")}} のリファレンスページ
 - [ウェブ上のメディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}

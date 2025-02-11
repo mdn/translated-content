@@ -1,12 +1,13 @@
 ---
 title: アクセシブルなマルチメディア
 slug: Learn_web_development/Core/Accessibility/Multimedia
-original_slug: Learn/Accessibility/Multimedia
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
 アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアでです。映像、音声、画像といったコンテンツは、支援技術 (assistive technologies) とそのユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。
 
@@ -14,17 +15,15 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        HTML、CSS、JavaScript に対する基本的な理解、
-        <a href="/ja/docs/Learn/Accessibility"
-          >前回までの記事</a
-        >に対する理解。
-      </td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識、<a href="/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基本的なアクセシビリティの概念の理解</a>。</td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        マルチメディアが引き起こすアクセシビリティの問題、およびその解決方法を理解すること。
+        <ul>
+          <li>ネイティブメディアプレーヤーの課題と、カスタムプレーヤーを作成する方法。</li>
+          <li>音声コンテンツと映像コンテンツにアクセシビリティを持たせるため、音声文字起こしとテキストトラック（キャプション、字幕など）が用意されています。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -32,7 +31,7 @@ l10n:
 
 ## マルチメディアとアクセシビリティ
 
-このモジュールまで、様々なコンテンツに対してそのアクセシビリティを保証するために何が必要かを見てきました。シンプルな文章から始まって、データテーブル、画像、フォーム要素やボタンといったネイティブのコントロール、より複雑なマークアップ構造 ([WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) 属性) などです。
+このモジュールまで、様々なコンテンツに対してそのアクセシビリティを保証するために何が必要かを見てきました。シンプルな文章から始まって、データテーブル、画像、フォーム要素やボタンといったネイティブのコントロール、より複雑なマークアップ構造 ([WAI-ARIA](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 属性) などです。
 
 一方こちらの記事は、アクセシビリティの保証が難しい別のマルチメディアのコンテンツ群について扱っています。画像、映像、{{htmlelement("canvas")}} 要素などは、スクリーンリーダーによる理解やキーボードによるナビゲーションが容易ではないため、私たちが手を差し伸べる必要があります。
 
@@ -40,7 +39,7 @@ l10n:
 
 ## シンプルな画像
 
-私達は既に [HTML: アクセシビリティの良き基本](/ja/docs/Learn/Accessibility/HTML) で HTML 画像のシンプルな代替テキストについてカバーしました — 詳細を確認するために、そこに戻っても良いです。簡単に言うと、ビジュアルコンテンツとなり得るものは、スクリーンリーダーがユーザーのために読み上げることができるよう、代替テキストが利用可能であることを保証するべきです。
+私達は既に [HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML) で HTML 画像のシンプルな代替テキストについてカバーしました — 詳細を確認するために、そこに戻っても良いです。簡単に言うと、ビジュアルコンテンツとなり得るものは、スクリーンリーダーがユーザーのために読み上げることができるよう、代替テキストが利用可能であることを保証するべきです。
 
 例えば:
 
@@ -330,12 +329,6 @@ HTML のメディア再生と共に表示させるためには、次のことを
 > [!NOTE]
 > テキストトラックは {{glossary("SEO")}} でも役に立ちます。検索エンジンはテキストによって更新されるためです。検索エンジンは、テキストトラックによって映像の途中に直接リンクすることさえできます。
 
-## スキルをテストしましょう
-
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？
-
-この記事のために新しい評価試験のセットがあるわけではありません。というのも、[HTML マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding)モジュールの中で、ここで説明している情報の知識をテストする設定があるからです。もしまだなら、[スキルテスト: HTML 画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images) と [スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)の評価試験を試してみてください。
-
 ## まとめ
 
 このチャプターでは、マルチメディアにおけるアクセシビリティの関心ごとの要約をいくつかの実践的なソリューションと共に提供しました。
@@ -344,4 +337,4 @@ HTML のメディア再生と共に表示させるためには、次のことを
 
 しかし、そのようなアプリは、弱視や色覚異常の人が知覚できるように、十分な色のコントラストと明確な表示をしていることを確認し、キーボードでアクセスできるようにすることはできます。アクセシビリティとは、 100% のアクセシビリティを常に目指すことではなく、できる限りのことをすることであり、それは多くの場合不可能であることを忘れないでください。
 
-{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}

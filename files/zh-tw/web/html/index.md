@@ -25,7 +25,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 
 - HTML 參考資料
 
-  在我們廣泛的 [HTML 參考資料](/zh-TW/docs/Web/HTML/Reference)章節，你可以找到構成 HTML 每個元素和屬性的細節。.
+  在我們廣泛的 [HTML 參考資料](/zh-TW/docs/Web/HTML/Reference)章節，你可以找到構成 HTML 每個元素和屬性的細節。
 
 ## 初學者教學
 
@@ -40,7 +40,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 - [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)
   - : 表單是網頁相當重要的部分，能夠提供與網頁互動時所需的各式的功能性。例如：註冊和登入、發送回饋意見、購買產品以及更多實用的功能。這個單元將帶領你建立網頁端的表單功能。
 - [用 HTML 解決常見問題](/zh-TW/docs/Learn_web_development/Howto/Solve_HTML_problems)
-  - : 提供部分內容註釋連結。 當你建立一個網頁時，如何解決 HTML 中常見問題，例如 : 處理標題、增加圖片或影片、強調內文、建立基本表單等。.
+  - : 提供部分內容註釋連結。 當你建立一個網頁時，如何解決 HTML 中常見問題，例如 : 處理標題、增加圖片或影片、強調內文、建立基本表單等。
 
 ## 進階部份
 
@@ -69,7 +69,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
   - : HTML 元素通常為**行內**或**區塊**。行內元素佔據由標籤所定義的其餘空白位置，區塊元素則占據母元素的所有空白位置。
 - [超連結類型](/zh-TW/docs/Web/HTML/Attributes/rel)
   - : 在 HTML 中有多種超連結類型能夠使用，並解定義兩個頁面間的關係，超連結元素包含了[`<a>`](/zh-TW/docs/Web/HTML/Element/a), [`<area>`](/zh-TW/docs/Web/HTML/Element/area), [`<link>`](/zh-TW/docs/Web/HTML/Element/link)
-- [HTML audio 及 video 元素對媒體的支援程度](/zh-TW/docs/Web/Media/Formats)
+- [HTML audio 及 video 元素對媒體的支援程度](/zh-TW/docs/Web/Media/Guides/Formats)
   - : [`<audio>`](/zh-TW/docs/Web/HTML/Element/audio) 及 [`<video>`](/zh-TW/docs/Web/HTML/Element/video) 元素允許播放聲音和影像檔。這些元素提供了瀏覽器替代 Adobe Flash 和其它類似外掛功能的方案。
 - [HTML 內容種類](/zh-TW/docs/Web/HTML/Content_categories)
   - : HTML 由多個不同類別的內容組合, 每種內容在特殊情況下在前後關係中有效，而在其它前後關系中無效。相似地，每一組內容，也指定了可以被包含在一起的類別，以及可以或不可以在其中使用的元素。此篇提供了這些類別的指南。

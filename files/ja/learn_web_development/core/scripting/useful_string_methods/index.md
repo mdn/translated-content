@@ -1,28 +1,25 @@
 ---
 title: 便利な文字列メソッド
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 文字列の基本についてはすでに見ました。ここからはレベルを上げて、組み込みのメソッドを使用して文字列に対して実行できる便利な操作について考えてみましょう。例えば、文字列の長さを調べたり、繋げたり、分割したり、ある文字を他の文字に置き換えたりなどです。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        HTML と CSS の基本の理解、
-        JavaScript が何かを知っていること。
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解していること。<a href="/ja/docs/Learn_web_development/Core/Scripting/Strings">文字列の基本</a>の知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        文字列がオブジェクトであることを理解し、そのオブジェクトで使用できる基本的なメソッドを使って文字列を操作する方法を身に付ける。
+          JavaScript で組み込まれた一般的なプロパティとメソッドを使用する文字列操作。
       </td>
     </tr>
   </tbody>
@@ -30,19 +27,19 @@ l10n:
 
 ## オブジェクトとしての文字列
 
-JavaScript ではほとんどのものはオブジェクトです。たとえば、次のように文字列を作った時も、
+JavaScript におけるオブジェクトは、ではほとんどのものはオブジェクトです。たとえば、次のように文字列を作った時も、
 
 ```js
 const string = "This is my string";
 ```
 
-この変数は文字列オブジェクトのインスタンスになり、大量のプロパティとメソッドが使用可能となります。{{jsxref("String")}} オブジェクトのページに行って、横にある一覧を眺めてみてください！
+変数自体はオブジェクトではありませんが、プロパティにアクセスする時にはオブジェクトとして利用できるため、数多くのプロパティやメソッドを利用できます。このことは、 {{jsxref("String")}} オブジェクトのページにアクセスし、ページの横に並んでいるリストを見ればわかります。
 
-**また、脳が溶け出しそうかもしれませんが、安心してください！**先ほどのページにある、ほとんどのメソッドは学習の初期に覚える必要はありません。しかし、今から紹介する、文字列操作のメソッドはとてもよく使いますのでぜひ覚えましょう。
+**また、脳が溶け出しそうかもしれませんが、安心してください！** 先ほどのページにある、ほとんどのメソッドは学習の初期に覚える必要はありません。しかし、今から紹介する、文字列操作のメソッドはとてもよく使いますのでぜひ覚えましょう。
 
-[ブラウザーの開発者コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)にいくつかの例を入力してみましょう。
+[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)にいくつかの例を入力してみましょう。
 
-### 文字列の長さを調べる
+## 文字列の長さを調べる
 
 ただ {{jsxref("String.prototype.length", "length")}} プロパティを使用すればよいので、とても簡単です。次の行を入力してみましょう。
 
@@ -55,7 +52,7 @@ browserType.length;
 
 ## 文字列の特定の文字を受け取る
 
-前の例と関連していますが、文字列に対して**角括弧記法**を使用することで文字列中の任意の 1 文字が得られます。つまり角括弧 (`[]`) を変数名の後ろに付け、その中に数値を入れることで、その番目にある文字が返ってきます。例えば最初の一文字を取得するには次のようにします。
+前の例と関連していますが、文字列に対して**ブラケット記法**を使用することで文字列中の任意の 1 文字が得られます。つまり角括弧 (`[]`) を変数名の後ろに付け、その中に数値を入れることで、その位置にある文字が返ってきます。例えば最初の 1 文字を取得するには次のようにします。
 
 ```js
 browserType[0];
@@ -120,7 +117,7 @@ const tagline = "MDN - Resources for developers, by developers";
 console.log(tagline.indexOf("developers")); // 20
 ```
 
-`0` から始めて、文字列の先頭から文字数（空白を含む）を数えると、部分文字列 `"developers"` の最初の出現位置はインデックス `20` です。
+`0` から始めて、文字列の先頭から文字数（空白を含む）を数えると、部分文字列 `"developers"` の最初の出現位置のインデックスは `20` です。
 
 ```js
 console.log(tagline.indexOf("x")); // -1
@@ -214,9 +211,9 @@ console.log(quote); // "To code or not to code"
 
 ## アクティブラーニングの例
 
-この章では、文字列を操作するコードを実際に書いてみましょう。下記のそれぞれの演習では、文字列の配列と、配列の各値を処理して箇条書きリストに表示するループがあります。配列やループについて、これで正しく理解する必要はありません。それぞれのケースで必要なのは、文字列を必要な書式で出力するコードを書くことだけです。
+この節では、文字列の処理コードを実際に書いてみることにします。 以下のそれぞれの練習問題では、文字列の配列と、その配列の各値を処理して箇条書きで表示するループを用意しています。 現在、配列やループについて正しい理解は必要ありません。これらは将来の記事で説明します。 それぞれのケースで必要なのは、文字列を希望する形式で出力するコードを書くことです。
 
-どの例も「リセット」ボタンがあるので、コードが動かなくなった場合は使用してみてください。もし本当に行き詰まってしまった場合には、「答えを見る」ボタンを押すことで、回答を見ることができます。
+どの例にも「リセット」ボタンがあるので、コードが動かなくなった場合は使用してみてください。もし本当に行き詰まってしまった場合には、「答えを見る」ボタンを押すことで、回答を見ることができます。
 
 ### 挨拶メッセージの選別
 
@@ -238,14 +235,12 @@ console.log(quote); // "To code or not to code"
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
-const greetings = [
-  'Happy Birthday!',
+list.textContent = "";
+const greetings = ['Happy Birthday!',
   'Merry Christmas my love',
   'A happy Christmas to all the family',
   'You\'re all I want for Christmas',
-  'Get well soon',
-];
+                 'Get well soon'];
 
 for (const greeting of greetings) {
   // 検査条件は下記の行の括弧の中に入れ、
@@ -317,7 +312,7 @@ solution.addEventListener("click", () => {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const greetings = [
   'Happy Birthday!',
   'Merry Christmas my love',
@@ -345,12 +340,12 @@ window.addEventListener("load", updateCode);
 // 代わりにカーソル位置にタブ文字を挿入する
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -391,7 +386,7 @@ textarea.onkeyup = () => {
 
 ### 単語の最初の文字を大文字に直す
 
-この課題ではイギリスの都市名を題材にします。ところが、単語の大文字と小文字がぐちゃぐちゃになっています。そこで最初の文字を大文字にし、残りをすべて小文字にしてみましょう。こういう手順でやってみます:
+この課題ではイギリスの都市名を題材にします。ところが、単語の大文字と小文字がぐちゃぐちゃになっています。そこで最初の文字を大文字にし、残りをすべて小文字にしてみましょう。こういう手順でやってみます。
 
 1. 変数 `city` に格納されている文字列全体を小文字に変換し、新しい変数に格納します。
 2. この新しい変数で文字列の最初の文字を取得し、別の変数に格納します。
@@ -415,7 +410,7 @@ textarea.onkeyup = () => {
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
 for (const city of cities) {
@@ -487,7 +482,7 @@ solution.addEventListener("click", function () {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
 for (const city of cities) {
@@ -510,12 +505,12 @@ window.addEventListener("load", updateCode);
 // 代わりにカーソル位置にタブ文字を挿入する
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -562,7 +557,7 @@ textarea.onkeyup = function () {
 MAN675847583748sjt567654;Manchester Piccadilly
 ```
 
-駅コードと駅名を抽出し、それを文字列にまとめてこのような形にします:
+駅コードと駅名を抽出し、それを文字列にまとめてこのような形にします。
 
 ```plain
 MAN: Manchester Piccadilly
@@ -590,7 +585,7 @@ MAN: Manchester Piccadilly
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'GNF576746573fhdg4737dh4;Greenfield',
                   'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
@@ -666,7 +661,7 @@ solution.addEventListener("click", function () {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = '';
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'GNF576746573fhdg4737dh4;Greenfield',
                   'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
@@ -693,12 +688,12 @@ window.addEventListener("load", updateCode);
 // 代わりにカーソル位置にタブ文字を挿入する
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -739,10 +734,10 @@ textarea.onkeyup = function () {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 文字列](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 文字列](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings)を見てください。
 
 ## 結論
 
 プログラミング、特に JavaScript では単語や文を処理できるようになることが大事であるという現実から逃れることはできません。それはウェブサイトは人とのコミュニケーションがすべてとなるためです。この記事では、文字列を処理するのに当面知っておくべき基礎を解説しました。今後もっと複雑なトピックに進んで行くときに役立つはずです。次に、配列を見てみます。重要なデータ型のうち、短期間で押さえておくべき最後の 1 つです。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}

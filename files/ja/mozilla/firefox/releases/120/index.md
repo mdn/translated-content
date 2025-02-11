@@ -18,7 +18,7 @@ l10n:
 ### CSS
 
 - {{CSSXref("color_value/light-dark", "light-dark()")}} CSS カラー関数をサポートしました。これは、`prefers-color-scheme` メディア特性を必要とせずにライトおよびダークの色を設定できます ([Firefox bug 1856999](https://bugzil.la/1856999))。
-- 行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) をサポートしました。これらは、たとえば複数行のテキストと背景の装飾を正確に揃えるなど、要素の行の高さに対して相対的にプロパティを設定できます ([Firefox bug 1310170](https://bugzil.la/1310170))。
+- 行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) をサポートしました。これらは、たとえば複数行のテキストと背景の装飾を正確に揃えるなど、要素の行の高さに対して相対的にプロパティを設定できます ([Firefox bug 1310170](https://bugzil.la/1310170))。
 
 #### 廃止
 

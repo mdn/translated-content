@@ -110,7 +110,8 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
    ```css
    html {
      font-size: 10px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
-     font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+     font-family:
+       "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
    }
    ```
 
