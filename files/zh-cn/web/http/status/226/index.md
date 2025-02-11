@@ -1,8 +1,6 @@
 ---
 title: 226 IM Used
 slug: Web/HTTP/Status/226
-page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +16,6 @@ HTTP **`226 IM Used`** [成功响应](/zh-CN/docs/Web/HTTP/Status#successful_res
 > 相反，大多数系统只依靠 [压缩请求](/zh-CN/docs/Web/HTTP/Compression) 来减少带宽，不过也可以将压缩和 delta 编码结合起来。
 >
 > 即使客户端和服务器支持 delta 编码，代理或缓存可能不支持，且实现 HTTP 增量编码的复杂性可能超过其带来的收益。
-
 
 ## 状态
 
