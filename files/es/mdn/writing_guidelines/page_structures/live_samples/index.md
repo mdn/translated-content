@@ -424,7 +424,7 @@ Presiona el botón para agregar nuevo contenido al registro.
 
 {{EmbedLiveSample("Displaying a single entry log", "100%", "80px")}}
 
-Aquí tienes la traducción manteniendo el formato y las convenciones adecuadas:  
+Aquí tienes la traducción manteniendo el formato y las convenciones adecuadas:
 
 ---
 
@@ -573,4 +573,3 @@ Reinicia el ejemplo presionando el botón "Reiniciar".
   - Cuando no haya ambigüedad (por ejemplo, si la muestra está en una sección "Ejemplos"), los encabezados deben ser directos y usar solo el nombre del lenguaje correspondiente: HTML, CSS, JavaScript, SVG, etc. (ver arriba). No se deben usar encabezados como "Contenido HTML" o "Contenido JavaScript". Sin embargo, si un encabezado tan corto hace que el contenido sea poco claro, se puede usar un título más descriptivo.
 - Uso de un bloque "Resultado"
   - Después de los diferentes bloques de código, por favor usa un último bloque "Resultado" antes de utilizar la macro `EmbedLiveSample` (ver arriba). De esta manera, la semántica del ejemplo es más clara tanto para el lector como para cualquier herramienta que analice la página (por ejemplo, lectores de pantalla, rastreadores web).
-
