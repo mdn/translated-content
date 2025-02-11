@@ -12,7 +12,17 @@ l10n:
 주어진 크기가 정수 타입의 형식화 배열의 [BYTES_PER_ELEMENT](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
 속성 중 하나가 아닌 경우 `false`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+
+```js interactive-example
+console.log(Atomics.isLockFree(3));
+// 3 is not one of the BYTES_PER_ELEMENT values
+// Expected output: false
+
+console.log(Atomics.isLockFree(4));
+// 4 is one of the BYTES_PER_ELEMENT values
+// Expected output: true
+```
 
 ## 구문
 

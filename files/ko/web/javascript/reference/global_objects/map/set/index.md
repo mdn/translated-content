@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("Map")}} 인스턴스의 **`set()`** 메서드는 이 Map에서 명시진 키와 값을 추가하거나 갱신합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## 구문
 

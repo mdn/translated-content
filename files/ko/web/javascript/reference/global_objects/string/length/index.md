@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/String/length
 
 **`length`** 속성은 UTF-16 코드 유닛을 기준으로 문자열의 길이를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/string-length.html")}}
+{{InteractiveExample("JavaScript Demo: String.length")}}
+
+```js interactive-example
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// Expected output: "Life, the universe and everything. Answer: 42"
+```
 
 ## 설명
 

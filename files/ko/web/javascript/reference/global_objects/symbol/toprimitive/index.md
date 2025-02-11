@@ -10,7 +10,21 @@ l10n:
 **`Symbol.toPrimitive`** 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `@@toPrimitive`를 나타냅니다.
 모든 [타입 강제 변환](/ko/docs/Web/JavaScript/Data_structures#type_coercion) 알고리즘은 객체에서 이 심볼을 찾아서 선호하는 유형을 허용하고 객체의 원시 표현을 반환하는 메서드를 찾은 다음 객체의 `valueOf()` 및 `toString()` 메서드를 다시 사용합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 ## 값
 
