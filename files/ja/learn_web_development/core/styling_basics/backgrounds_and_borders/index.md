@@ -344,8 +344,8 @@ span {
 他の `background-*` プロパティも、 `background-image` と同じ方法でカンマ区切りの値を持つことができます。
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image4.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -376,7 +376,8 @@ background-position:
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+  background-image:
+    url(https://mdn.github.io/shared-assets/images/examples/star.png),
     url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
 }
 ```

@@ -1,5 +1,5 @@
 ---
-title: ":nth-of-type"
+title: :nth-of-type
 slug: Web/CSS/:nth-of-type
 l10n:
   sourceCommit: f22e72998f4e8f48b18ef358521bfc9ad1ae9446
