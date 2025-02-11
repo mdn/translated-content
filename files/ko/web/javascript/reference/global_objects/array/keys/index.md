@@ -9,7 +9,20 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`keys()`** 메서드는 배열의 각 인덱스에 대한 키를 포함하는 새로운 [배열 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
 
 ## 구문
 

@@ -11,7 +11,24 @@ l10n:
 
 > **경고:** `Symbol.species`가 존재하면 임의의 코드가 실행될 수 있으며 보안 취약점이 발생할 수 있습니다. 또한 특정 최적화를 훨씬 더 어렵게 만듭니다. 엔진 구현자는 [이 기능을 제거할지 여부를 조사](https://github.com/tc39/proposal-rm-builtin-subclassing)하고 있습니다. 가능하면 이 기능을 사용하지 마세요.
 
-{{EmbedInteractiveExample("pages/js/symbol-species.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+
+```js interactive-example
+class Array1 extends Array {
+  static get [Symbol.species]() {
+    return Array;
+  }
+}
+
+const a = new Array1(1, 2, 3);
+const mapped = a.map((x) => x * x);
+
+console.log(mapped instanceof Array1);
+// Expected output: false
+
+console.log(mapped instanceof Array);
+// Expected output: true
+```
 
 ## 값
 

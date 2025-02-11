@@ -9,7 +9,20 @@ l10n:
 
 **`setMonth()`** 메서드는 현재 설정된 연도에 따라 지정된 날짜의 월을 설정합니다.
 
-{{EmbedInteractiveExample("pages/js/date-setmonth.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setMonth()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setMonth(3);
+
+console.log(event.getMonth());
+// Expected output: 3
+
+console.log(event);
+// Expected output: "Sat Apr 19 1975 23:15:30 GMT+0100 (CET)"
+// Note: your timezone may vary
+```
 
 ## 구문
 

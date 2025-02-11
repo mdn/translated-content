@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 
 **`Object.getOwnPropertyNames()`** 메서드는 전달된 객체의 모든 속성 (심볼을 사용하는 속성을 제외한 열거할 수 없는 속성 포함) 들을 배열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+
+```js interactive-example
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 구문
 

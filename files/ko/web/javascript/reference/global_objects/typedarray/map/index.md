@@ -9,7 +9,15 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`map()`** 메서드는 호출하는 형식화 배열의 모든 요소에 제공된 함수의 호출 결과로 채워진 새로운 형식화 배열을 생성합니다. 이 메서드는 {{jsxref("Array.prototype.map()")}}와 동일한 알고리즘을 가집니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-map.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.map()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([25, 36, 49]);
+const roots = uint8.map(Math.sqrt);
+
+console.log(roots);
+// Expected output: Uint8Array [5, 6, 7]
+```
 
 ## 구문
 
