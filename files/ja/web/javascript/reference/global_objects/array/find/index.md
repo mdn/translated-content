@@ -15,7 +15,16 @@ l10n:
 - 配列内に値が**存在する**かどうかを調べる必要がある場合は、 {{jsxref("Array/includes", "includes()")}} を使用してください。
 - 指定したテスト関数を満たす要素があるかどうかを調べる必要がある場合は、 {{jsxref("Array/some", "some()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/array-find.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 ## 構文
 

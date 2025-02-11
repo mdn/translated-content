@@ -9,7 +9,23 @@ l10n:
 
 **`slice()`** メソッドは、元の文字列を変更せず、文字列の一部分を取り出し、それを新しい文字列として返します。
 
-{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## 構文
 

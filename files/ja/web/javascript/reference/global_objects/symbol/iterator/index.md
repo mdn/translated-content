@@ -9,7 +9,20 @@ l10n:
 
 **`Symbol.iterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.iterator` を表します。[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)は、オブジェクトのイテレーターを返すメソッドを、このシンボルで探します。オブジェクトが反復可能であるためには、`[Symbol.iterator]` キーを持っていなければなりません。
 
-{{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.iterator")}}
+
+```js interactive-example
+const iterable1 = {};
+
+iterable1[Symbol.iterator] = function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+};
+
+console.log([...iterable1]);
+// Expected output: Array [1, 2, 3]
+```
 
 ## 値
 
