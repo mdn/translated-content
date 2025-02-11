@@ -2,7 +2,7 @@
 title: 我們撰寫的內容
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
 {{MDNSidebar}}
@@ -11,17 +11,20 @@ MDN Web Docs 包含*中立於瀏覽器*的文件，讓 Web 開發者能夠撰寫
 
 ## 編輯政策
 
-本節說明由 Mozilla MDN 團隊制定的政策，這些政策用於管理 MDN Web Docs 上的內容。所有 MDN Web Docs 的貢獻者都應遵守這些政策。
+本節說明由 Mozilla MDN 工作人員制定的政策，這些政策用於管理 MDN Web Docs 上的內容。所有 MDN Web Docs 的貢獻者都應遵守這些政策。
 
 ### 相關性
 
-MDN Web Docs 上的所有內容必須與其所在技術區塊相關。垃圾內容（商業廣告）及其他無關內容將永遠不被接受。持續提交垃圾內容的貢獻者可能會由 Mozilla MDN 團隊禁止。
+MDN Web Docs 上的所有內容必須與其所在技術區塊相關。垃圾內容（商業廣告）及其他無關內容將永遠不被接受。持續提交垃圾內容的貢獻者，可能會根據 Mozilla MDN 工作人員的判斷被禁止參與 MDN。
 
 指向商業網站的外部連結（如果與主題相關）將根據具體情況進行判斷。這些連結在協助 Web 開發者方面的價值必須大於為所連結網站帶來的商業利益。
 
+> [!NOTE]
+> 在MDN的[學習 Web 開發](/zh-TW/docs/Learn_web_development)部分，你會看到指向商業網站的連結，但這些連結使用得很節制，且我們僅鏈接到受信任的教育合作夥伴。你可以在[學習 Web 開發寫作指南 > 外部連結和嵌入](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#外部連結和嵌入)中閱讀更多關於這方面的內容。
+
 ### 中立性
 
-MDN Web Docs 上的文章必須保持[中立的觀點](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view)，在描述不同瀏覽器的差異時不得帶有偏見。任何關於瀏覽器或使用者代理的貶低性言論都是不可接受的。
+MDN Web Docs 上的文章必須保持[中立的觀點](https://zh.wikipedia.org/wiki/Wikipedia:中立的观点)，在描述不同瀏覽器的差異時不得帶有偏見。任何關於瀏覽器或使用者代理的貶低性言論都是不可接受的。
 
 ### 標準化
 
@@ -92,7 +95,7 @@ MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢�
 - 非公開於網頁、僅特定瀏覽器使用的技術。
 - 與網頁無關的技術。
 - 面向最終使用者的文件。例如，Mozilla 產品的使用者指南應發布在 [Mozilla 支援網站](https://support.mozilla.org/)。
-- 自我連結或自我宣傳的外部連結。在添加外部連結之前，請參閱我們的[寫作風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide#external_links)。
+- 自我連結或自我宣傳的外部連結。在添加外部連結之前，請參閱我們的[寫作風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide#外部連結)。
 
 ### 我們何時移除文件
 
@@ -107,7 +110,7 @@ MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢�
 - 文章包含不適合 MDN Web Docs 的內容。
 - MDN Web Docs 某些區段並未專注於開放網頁技術，且維護成本過高。
 
-有關*如何*刪除文件的更多資訊，請參閱 [建立、移動和刪除頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting) 指南。
+有關*如何*刪除文件的更多資訊，請參閱[建立、移動和刪除頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)指南。
 
 ## MDN Web Docs 上允許的文件類型
 
@@ -115,7 +118,7 @@ MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢�
 
 - 參考文件
 - 指南
-- 術語表
+- 術語
 - 學習／教學
 
 一般來說，MDN Web Docs 是用於*產品*文件，而不是*項目*或*流程*文件。因此，如果文件是關於「如何使用某個東西」或「某個東西如何運作」（其中「某個東西」屬於上述主題類別之一），那麼它可以發布在 MDN Web Docs 上。
