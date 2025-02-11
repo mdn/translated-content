@@ -24,9 +24,7 @@ l10n:
 <canvas id="canvas" width="300" height="300" moz-opaque></canvas>
 ```
 
-你可以获取或设置 `mozOpaque` 属性。
-
-例如，当不需要透明效果时，你可以在 `mimeType === 'image/jpeg'` 或类似条件下将其设置为 `true`，以提升应用性能。
+你可以获取或设置 `mozOpaque` 属性。例如，当不需要透明效果时，你可以在 `mimeType === 'image/jpeg'` 或类似条件下将其设置为 `true`，以提升应用性能。
 
 ```js
 const canvas = document.getElementById("canvas");
