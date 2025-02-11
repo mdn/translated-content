@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 **`Object.assign()`** 静态方法将一个或者多个*源对象*中所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}的{{jsxref("Object/hasOwn", "自有属性", "", 1)}}复制到*目标对象*，并返回修改后的目标对象。
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## 语法
 

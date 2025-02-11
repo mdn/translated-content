@@ -13,7 +13,14 @@ l10n:
 - 箭头函数不能用作[构造函数](/zh-CN/docs/Glossary/Constructor)。使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用它们会引发 {{jsxref("TypeError")}}。它们也无法访问 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new.target) 关键字。
 - 箭头函数不能在其主体中使用 [`yield`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield)，也不能作为生成器函数创建。
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## 语法
 

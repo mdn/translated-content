@@ -9,7 +9,19 @@ l10n:
 
 **`Math.PI`** 静态数据属性表示圆的周长与直径的比例，其值约为 3.14159。
 
-{{EmbedInteractiveExample("pages/js/math-pi.html")}}
+{{InteractiveExample("JavaScript Demo: Math.PI")}}
+
+```js interactive-example
+function calculateCircumference(radius) {
+  return 2 * Math.PI * radius;
+}
+
+console.log(Math.PI);
+// Expected output: 3.141592653589793
+
+console.log(calculateCircumference(10));
+// Expected output: 62.83185307179586
+```
 
 ## 值
 
