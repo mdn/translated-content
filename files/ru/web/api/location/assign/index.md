@@ -14,7 +14,7 @@ slug: Web/API/Location/assign
 ## Синтаксис
 
 ```
-object.assign(url);
+location.assign(url);
 ```
 
 ### Параметры

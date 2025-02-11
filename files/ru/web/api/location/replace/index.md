@@ -14,7 +14,7 @@ slug: Web/API/Location/replace
 ## Синтаксис
 
 ```
-object.replace(url);
+location.replace(url);
 ```
 
 ### Параметры
