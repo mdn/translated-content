@@ -11,7 +11,7 @@ l10n:
 
 `CryptoKeyPair` 对象可以通过使用 {{domxref("SubtleCrypto.generateKey()")}} 方法获得，当选定的算法是以下非对称算法之一时：RSASSA-PKCS1-v1_5、RSA-PSS、RSA-OAEP、ECDSA 或 ECDH。
 
-它包含两个属性，都是[`CryptoKey`](/zh-CN/docs/Web/API/CryptoKey) 对象：`privateKey` 属性包含私钥，`publicKey` 属性包含公钥。
+它包含两个属性，都是 [`CryptoKey`](/zh-CN/docs/Web/API/CryptoKey) 对象：`privateKey` 属性包含私钥，`publicKey` 属性包含公钥。
 
 ## 实例属性
 

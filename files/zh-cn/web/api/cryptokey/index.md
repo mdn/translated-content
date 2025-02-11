@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
-[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`CryptoKey`** 接口表示从特定 {{domxref("SubtleCrypto")}} 方法（{{domxref("SubtleCrypto.generateKey", "generateKey()")}}、{{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}、{{domxref("SubtleCrypto.importKey", "importKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}）导出的{{glossary("key", "密钥")}}。
+[Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`CryptoKey`** 接口表示从特定 {{domxref("SubtleCrypto")}} 方法（{{domxref("SubtleCrypto.generateKey", "generateKey()")}}、{{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}、{{domxref("SubtleCrypto.importKey", "importKey()")}} 或 {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}）导出的密码学{{glossary("key", "密钥")}}。
 
 出于安全考虑，`CryptoKey` 接口仅在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中可用。
 
