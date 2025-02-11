@@ -9,7 +9,21 @@ l10n:
 
 El operador de **exponenciación (`**`)\*\* retorna el resultado de elevar el primer operando a la potencia del segundo operando. Es equivalente a {{jsxref("Math.pow()")}}, exepto que también acepta [BigInts](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt) como operandos.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Sintaxis
 
