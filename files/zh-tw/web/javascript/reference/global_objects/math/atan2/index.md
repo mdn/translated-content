@@ -9,7 +9,22 @@ l10n:
 
 **`Math.atan2()`** 靜態方法返回平面上由 (0, 0) 到點 (x, y) 的射線與正 x 軸之間的角度（以弧度表示），即 `Math.atan2(y, x)`。
 
-{{EmbedInteractiveExample("pages/js/math-atan2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+
+```js interactive-example
+function calcAngleDegrees(x, y) {
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+
+console.log(calcAngleDegrees(5, 5));
+// Expected output: 45
+
+console.log(calcAngleDegrees(10, 10));
+// Expected output: 45
+
+console.log(calcAngleDegrees(0, 10));
+// Expected output: 90
+```
 
 ## 語法
 

@@ -9,7 +9,19 @@ JavaScript **函式內的 `this` 關鍵字**表現，和其他語言相比略有
 
 通常，`this` 值由被呼叫的函式來決定。它不能在執行期間被指派，每次函式呼叫調用的值也可能不同。ES5 引入了 [`bind`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 方法去[設置函式的 `this` 值，而不管它怎麼被呼叫。](#the_bind_method)ECMAScript 2015 也導入了定義 `this` 詞法範圍的[箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（它的 `this` 值會維持在詞法作用域）。
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## 語法
 
