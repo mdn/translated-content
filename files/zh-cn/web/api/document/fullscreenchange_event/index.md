@@ -41,7 +41,7 @@ onfullscreenchange = (event) => {};
 
 对于示例代码，这意味着，如果元素当前处于全屏模式，则 `fullscreenchange` 处理器在控制台中打印全屏元素的 `id`。如果 `document.fullscreenElement` 为 `null`，则代码记录消息表示更改是为了退出全屏模式。
 
-### HTML
+#### HTML
 
 ```html
 <h1>fullscreenchange 事件示例</h1>
@@ -72,7 +72,7 @@ onfullscreenchange = (event) => {};
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const logger = document.querySelector("#logger");
