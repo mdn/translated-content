@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/String/at
 
 La méthode **`at()`** prend un entier en argument et renvoie une nouvelle chaîne de caractères ([`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) contenant le codet UTF-16 présent dans la chaîne courante à l'emplacement indiqué en argument. Cette méthode permet d'utiliser des arguments positifs ou négatifs. Lorsque le paramètre passé est un entier négatif, la recherche s'effectue depuis la fin de la chaîne de caractères.
 
-{{EmbedInteractiveExample("pages/js/string-at.html")}}
+{{InteractiveExample("JavaScript Demo: String.at()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+let index = 5;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of 5 returns the character u"
+
+index = -4;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of -4 returns the character d"
+```
 
 ## Syntaxe
 

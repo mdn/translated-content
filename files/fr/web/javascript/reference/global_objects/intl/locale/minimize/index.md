@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 
 La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informations qui auraient pu être ajoutée à une locale lors d'un appel à {{jsxref("Locale/maximize", "Locale.maximize()")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.minimize()")}}
+
+```js interactive-example
+const english = new Intl.Locale("en-Latn-US");
+const korean = new Intl.Locale("ko-Kore-KR");
+const arabic = new Intl.Locale("ar-Arab-EG");
+
+console.log(english.minimize().baseName);
+// Expected output: "en"
+
+console.log(korean.minimize().baseName);
+// Expected output: "ko"
+
+console.log(arabic.minimize().baseName);
+// Expected output: "ar"
+```
 
 ## Syntaxe
 

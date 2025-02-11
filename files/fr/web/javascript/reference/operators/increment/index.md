@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Increment
 
 L'opérateur d'incrémentation (`++`) permet d'incrémenter (c'est-à-dire d'ajouter un) à son opérande et de renvoyer une valeur qui est le résultat avant ou après la modification.
 
-{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+```
 
 ## Syntaxe
 

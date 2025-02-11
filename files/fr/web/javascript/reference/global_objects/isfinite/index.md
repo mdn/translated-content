@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 
 La fonction globale **`isFinite()`** détermine si la valeur passée en argument est un nombre fini. Si nécessaire, le paramètre est d'abord converti en nombre.
 
-{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+
+```js interactive-example
+function div(x) {
+  if (isFinite(1000 / x)) {
+    return "Number is NOT Infinity.";
+  }
+  return "Number is Infinity!";
+}
+
+console.log(div(0));
+// Expected output: "Number is Infinity!""
+
+console.log(div(1));
+// Expected output: "Number is NOT Infinity."
+```
 
 ## Syntaxe
 

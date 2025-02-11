@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 
 La fonction **`Math.floor(x)`** renvoie le plus grand entier qui est inférieur ou égal à un nombre `x`.
 
-{{EmbedInteractiveExample("pages/js/math-floor.html")}}
+{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+
+```js interactive-example
+console.log(Math.floor(5.95));
+// Expected output: 5
+
+console.log(Math.floor(5.05));
+// Expected output: 5
+
+console.log(Math.floor(5));
+// Expected output: 5
+
+console.log(Math.floor(-5.05));
+// Expected output: -6
+```
 
 ## Syntaxe
 

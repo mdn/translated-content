@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 
 La méthode **`Object.getPrototypeOf()`** renvoie le prototype d'un objet donné (i.e. la valeur de la propriété `[[Prototype]]` interne).
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()")}}
+
+```js interactive-example
+const prototype1 = {};
+const object1 = Object.create(prototype1);
+
+console.log(Object.getPrototypeOf(object1) === prototype1);
+// Expected output: true
+```
 
 ## Syntaxe
 

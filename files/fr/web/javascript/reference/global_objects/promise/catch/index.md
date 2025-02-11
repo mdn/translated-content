@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 La méthode **`catch()`** renvoie un objet {{jsxref("Promise")}} et ne traite que des cas où la promesse initiale est rejetée. Elle a le même effet qu'un appel à {{jsxref("Promise.then", "Promise.prototype.then(undefined, siRejetée)")}} (c'est en fait ce qui se passe dans le moteur, `obj.catch(onRejected)` est traduit en `obj.then(undefined, onRejected)`). Cela signifie qu'il est nécessaire de fournir une fonction `onRejected`, même si on souhaite avoir une valeur de secours qui est `undefined` (par exemple avec `obj.catch(() => {})`.
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## Syntaxe
 

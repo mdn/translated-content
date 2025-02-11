@@ -12,7 +12,18 @@ La méthode **`toDateString()`** renvoie la date contenue dans un objet {{jsxref
 3. Les deux chiffres suivants indiquent le jour du mois (et sont complétés avec un 0 devant si besoin)
 4. Les quatre chiffres restants indiquent l'année (si besoin complétées avec des 0 comme préfixe)
 
-{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+
+```js interactive-example
+const event = new Date(1993, 6, 28, 14, 39, 7);
+
+console.log(event.toString());
+// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toDateString());
+// Expected output: "Wed Jul 28 1993"
+```
 
 ## Syntaxe
 

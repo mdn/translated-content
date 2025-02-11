@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
 
 La méthode **`padEnd()`** permet de compléter la chaîne courante avec une chaîne de caractères donnée afin d'obtenir une chaîne de longueur fixée. Pour atteindre cette longueur, la chaîne complémentaire peut être répétée. La chaîne courante est complétée depuis la fin.
 
-{{EmbedInteractiveExample("pages/js/string-padend.html")}}
+{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+
+```js interactive-example
+const str1 = "Breaded Mushrooms";
+
+console.log(str1.padEnd(25, "."));
+// Expected output: "Breaded Mushrooms........"
+
+const str2 = "200";
+
+console.log(str2.padEnd(5));
+// Expected output: "200  "
+```
 
 ## Syntaxe
 

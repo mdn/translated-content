@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOp
 
 La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les valeurs temporelles relatives, calculées pendant l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.resolvedOptions")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "narrow" });
+const options1 = rtf1.resolvedOptions();
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+const options2 = rtf2.resolvedOptions();
+
+console.log(`${options1.locale}, ${options1.style}, ${options1.numeric}`);
+// Expected output: "en, narrow, always"
+
+console.log(`${options2.locale}, ${options2.style}, ${options2.numeric}`);
+// Expected output: "es, long, auto"
+```
 
 ## Syntaxe
 

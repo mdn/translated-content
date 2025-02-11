@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 
 La méthode **`Intl.Segmenter.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent la locale et les options de granularité calculées lors de l'initialisation de cet objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.resolvedOptions")}}
+
+```js interactive-example
+const segmenter1 = new Intl.Segmenter("fr-FR");
+const options1 = segmenter1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output: "fr-FR"
+
+console.log(options1.granularity);
+// Expected output: "grapheme"
+```
 
 ## Syntaxe
 

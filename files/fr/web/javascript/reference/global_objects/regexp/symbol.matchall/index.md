@@ -8,7 +8,23 @@ original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 
 La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()")}}
+
+```js interactive-example
+class MyRegExp extends RegExp {
+  [Symbol.matchAll](str) {
+    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
+    if (!result) {
+      return null;
+    }
+    return Array.from(result);
+  }
+}
+
+const re = new MyRegExp("-[0-9]+", "g");
+console.log("2016-01-02|2019-03-07".matchAll(re));
+// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+```
 
 ## Syntaxe
 

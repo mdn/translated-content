@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 
 La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un objet {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/bigint-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.valueOf()")}}
+
+```js interactive-example
+console.log(typeof Object(1n));
+// Expected output: "object"
+
+console.log(typeof Object(1n).valueOf());
+// Expected output: "bigint"
+```
 
 ## Syntaxe
 

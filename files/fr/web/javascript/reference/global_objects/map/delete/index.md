@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 
 La méthode **`delete()`** permet de retirer un élément donné d'un objet `Map` grâce à sa clé.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.delete("bar"));
+// Expected result: true
+// True indicates successful removal
+
+console.log(map1.has("bar"));
+// Expected result: false
+```
 
 ## Syntaxe
 

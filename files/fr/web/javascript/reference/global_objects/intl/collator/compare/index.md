@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 
 La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare")}}
+
+```js interactive-example
+const enCollator = new Intl.Collator("en");
+const deCollator = new Intl.Collator("de");
+const svCollator = new Intl.Collator("sv");
+
+console.log(enCollator.compare("z", "a") > 0);
+// Expected output: true
+
+console.log(deCollator.compare("z", "ä") > 0);
+// Expected output: true
+
+console.log(svCollator.compare("z", "ä") > 0);
+// Expected output: false
+```
 
 ## Syntaxe
 

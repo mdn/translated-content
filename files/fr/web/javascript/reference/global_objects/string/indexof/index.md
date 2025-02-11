@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 La méthode **`indexOf()`** renvoie l'indice de la première occurence de la valeur cherchée au sein de la chaîne courante (à partir de `indexDébut`). Elle renvoie -1 si la valeur cherchée n'est pas trouvée.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.indexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 > [!NOTE]
 > Pour la méthode associée aux tableaux, voir la page {{jsxref("Array.prototype.indexOf()")}}.

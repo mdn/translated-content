@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 
 La méthode statique **`Reflect.getPrototypeOf()`** est semblable à la méthode {{jsxref("Object.getPrototypeOf()")}}. Elle renvoie le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet donné.
 
-{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const proto1 = Reflect.getPrototypeOf(object1);
+
+console.log(proto1);
+// Expected output: Object {  }
+
+console.log(Reflect.getPrototypeOf(proto1));
+// Expected output: null
+```
 
 ## Syntaxe
 

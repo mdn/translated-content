@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/slice
 
 La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html")}}
+{{InteractiveExample("JavaScript Demo: String.slice()")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## Syntaxe
 

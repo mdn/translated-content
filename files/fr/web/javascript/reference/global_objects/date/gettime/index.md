@@ -9,7 +9,15 @@ La méthode **`getTime()`** renvoie la valeur numérique correspondant au temps 
 
 Vous pouvez utiliser cette méthode pour vous affecter une date et un temps à une autre instance de `Date`. Cette méthode est fonctionnellement équivalente à la méthode {{jsxref("Date.valueof", "valueOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getTime()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+console.log(moonLanding.getTime());
+// Expected output: -14182940000
+```
 
 ## Syntaxe
 

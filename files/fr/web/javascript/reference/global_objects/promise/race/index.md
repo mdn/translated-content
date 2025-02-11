@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 La méthode **`Promise.race()`** renvoie une promesse qui est résolue ou rejetée dès qu'une des promesses de l'itérable passé en argument est résolue ou rejetée. La valeur (dans le cas de la résolution) ou la raison (dans le cas d'un échec) utilisée est celle de la promesse de l'itérable qui est resolue/qui échoue.
 
-{{EmbedInteractiveExample("pages/js/promise-race.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## Syntaxe
 

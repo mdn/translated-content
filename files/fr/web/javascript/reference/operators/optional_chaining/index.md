@@ -11,7 +11,23 @@ Ceci résulte en des expressions plus courtes et plus simples lors de l'accès �
 
 Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexistant. Il ne remplace pas les vérifications du type `if (typeof a == "undefined")`.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Syntaxe
 

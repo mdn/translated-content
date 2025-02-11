@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt16
 
 La méthode **`getInt16()`** permet de lire un entier signé sur 16 bits (type _short_ par analogie avec C) à l'octet donné par rapport au début de {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt16(1, 32767); // Max signed 16-bit integer
+
+console.log(view.getInt16(1));
+// Expected output: 32767
+```
 
 ## Syntaxe
 

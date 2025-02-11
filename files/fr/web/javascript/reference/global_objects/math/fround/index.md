@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/fround
 
 La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision) sur 32 bits qui est le plus proche du nombre fourni.
 
-{{EmbedInteractiveExample("pages/js/math-fround.html")}}
+{{InteractiveExample("JavaScript Demo: Math.fround()")}}
+
+```js interactive-example
+console.log(Math.fround(5.5));
+// Expected output: 5.5
+
+console.log(Math.fround(5.05));
+// Expected output: 5.050000190734863
+
+console.log(Math.fround(5));
+// Expected output: 5
+
+console.log(Math.fround(-5.05));
+// Expected output: -5.050000190734863
+```
 
 ## Syntaxe
 

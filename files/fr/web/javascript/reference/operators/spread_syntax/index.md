@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Spread_syntax
 
 La **syntaxe de décomposition** permet d'étendre un itérable (par exemple une expression de tableau ou une chaîne de caractères) en lieu et place de plusieurs arguments (pour les appels de fonctions) ou de plusieurs éléments (pour les littéraux de tableaux) ou de paires clés-valeurs (pour les littéraux d'objets).
 
-{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+
+```js interactive-example
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
 
 ## Syntaxe
 
