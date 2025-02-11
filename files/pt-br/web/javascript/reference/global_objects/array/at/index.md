@@ -9,7 +9,21 @@ O método **`at()`** recebe um valor inteiro e retorna o item referente ao index
 
 Isto não quer dizer que exista alguma coisa errada em utilizar a notação com colchetes. Por exemplo `array[0]` retornaria o primeiro item. Porém ao invés de utilizar o {{jsxref('Array.prototype.length','array.length')}} para os últimos items; e.g `array[array.length-1]` para o último item, você pode utilizar o `array.at(-1)`. [(Veja os exemplos abaixo)](#examples)
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## Sintaxe
 

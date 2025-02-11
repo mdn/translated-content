@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Division
 
 O operador de divisão (`/`) produz o quociente de seus operandos onde o operando esquerdo é o dividendo e o operando direito é o divisor.
 
-{{EmbedInteractiveExample("pages/js/expressions-division.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+
+```js interactive-example
+console.log(12 / 2);
+// Expected output: 6
+
+console.log(3 / 2);
+// Expected output: 1.5
+
+console.log(6 / "3");
+// Expected output: 2
+
+console.log(2 / 0);
+// Expected output: Infinity
+```
 
 ## Sintaxe
 

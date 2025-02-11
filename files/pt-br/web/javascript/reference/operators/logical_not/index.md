@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 O operador lógico **NOT (`!`)** (complemento lógico, negação) leva a verdade à falsidade e a falsidade à verdade, por isso, é conhecido como um operador de "negação". Normalmente é usado com valores booleanos (lógicos). Quando usado com valores não booleanos, retorna `false` se seu único operando puder ser convertido em `true`; caso contrário, retorna `true`.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+```
 
 ## Sintaxe
 

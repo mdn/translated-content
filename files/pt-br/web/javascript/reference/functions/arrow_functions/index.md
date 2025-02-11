@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 
 Uma **expressão _arrow function_** possui uma sintaxe mais curta quando comparada a uma expressão de função (_[function expression](/pt-BR/docs/Web/JavaScript/Reference/Operators/function)_) e não tem seu próprio _[this](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)_, _[arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)_, _[super](/pt-BR/docs/Web/JavaScript/Reference/Operators/super)_ ou _[new.target](/pt-BR/docs/Web/JavaScript/Reference/Operators/new.target)_. Estas expressões de funções são melhor aplicadas para funções que não sejam métodos, e elas não podem ser usadas como construtores (_constructors_).
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## Sintaxe
 

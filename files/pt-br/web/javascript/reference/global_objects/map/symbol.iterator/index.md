@@ -10,7 +10,22 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
  é o mesmo objeto função que o valor inicial do método {{jsxref("Map.prototype.entries()", "entries")}}
 </p>
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## Sintaxe
 

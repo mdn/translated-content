@@ -11,7 +11,21 @@ O **operador de exponenciação (`**`)** retorna o resultado de elevar o primeir
 segundo operando. É equivalente ao método `Math.pow`, exceto que também aceita números do tipo BigInt
 como operandos.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Sintaxe
 

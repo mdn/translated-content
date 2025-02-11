@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 
 O método **`setHours()`** atribui as horas para uma data especificada de acordo com a hora local e retorna o número de milissegundos desde do dia 1 de Janeiro de 1970 00:00:00 UTC até o tempo representado pela instância {{jsxref("Date")}} atualizada.
 
-{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+event.setHours(20);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+event.setHours(20, 21, 22);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+```
 
 ## Sintaxe
 

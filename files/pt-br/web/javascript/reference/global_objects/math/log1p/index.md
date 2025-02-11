@@ -9,7 +9,21 @@ A função **`Math.log1p()`** retorna o logaritmo natural (base {{jsxref("Math.E
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mo>-</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log1p</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\forall x > -1, \mathtt{\operatorname{Math.log1p}(x)} = \ln(1 + x)</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-log1p.html")}}
+{{InteractiveExample("JavaScript Demo: Math.log1p()")}}
+
+```js interactive-example
+console.log(Math.log1p(1));
+// Expected output: 0.6931471805599453
+
+console.log(Math.log1p(0));
+// Expected output: 0
+
+console.log(Math.log1p(-1));
+// Expected output: -Infinity
+
+console.log(Math.log1p(-2));
+// Expected output: NaN
+```
 
 ## Sintaxe
 

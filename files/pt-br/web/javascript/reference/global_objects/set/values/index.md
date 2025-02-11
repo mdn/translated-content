@@ -9,7 +9,21 @@ O método **`values()`** retorna um novo objeto `Iterator` que contem os valores
 
 O método **`keys()`** é um alias desse método (por similaridade com os objetos {{jsxref("Map")}}); ele se comporta exatamente da mesma forma e retorna os **valores** dos elementos do `Set`.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.values();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## Sintaxe
 
