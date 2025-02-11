@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("NavigationDestination")}} 接口的 **`key`** 只读属性在 {{domxref("NavigateEvent.navigationType")}} 为 `traverse` 时返回目标 {{domxref("NavigationHistoryEntry")}} 的 {{domxref("NavigationHistoryEntry.key", "key")}} 值，否则返回空字符串。
 
-`key` 是一个唯一的 UA 生成值，表示历史条目在历史条目列表中的位置，用于通过 {{domxref("Navigation.traverseTo()")}} 导航到历史记录中的此位置。它将被替换列表中的其他条目重用（即，如果 {{domxref("NavigateEvent.navigationType")}} 为 `replace`）。
+`key` 是一个唯一的、由 UA 生成的值，表示历史条目在历史条目列表中的位置，用于通过 {{domxref("Navigation.traverseTo()")}} 导航到历史记录中的此位置。它将被替换列表中条目的其他条目重用（即，如果 {{domxref("NavigateEvent.navigationType")}} 为 `replace`）。
 
 ## 值
 
