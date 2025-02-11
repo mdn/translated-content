@@ -5,7 +5,7 @@ slug: MDN/Writing_guidelines/Page_structures/Live_samples
 
 {{MDNSidebar}}
 
-MDN admite la visualización de bloques de código dentro de los artículos como *ejemplos en vivo*, lo que permite a los lectores ver tanto el código como su salida tal como se vería en una página web. Esta característica permite a los lectores comprender exactamente qué produciría el código ejecutado, haciendo que la documentación sea dinámica e instructiva. También permite a los autores asegurarse de que los bloques de código en la documentación tengan la salida esperada y funcionen correctamente cuando se usen con diferentes navegadores.
+MDN admite la visualización de bloques de código dentro de los artículos como _ejemplos en vivo_, lo que permite a los lectores ver tanto el código como su salida tal como se vería en una página web. Esta característica permite a los lectores comprender exactamente qué produciría el código ejecutado, haciendo que la documentación sea dinámica e instructiva. También permite a los autores asegurarse de que los bloques de código en la documentación tengan la salida esperada y funcionen correctamente cuando se usen con diferentes navegadores.
 
 El sistema de ejemplos en vivo puede procesar bloques de código escritos en HTML, CSS y JavaScript, sin importar el orden en el que estén escritos en la página. Esto garantiza que la salida corresponda al código fuente combinado porque el sistema ejecuta el código directamente dentro de la página.
 
@@ -19,7 +19,6 @@ El sistema de ejemplos en vivo agrupa bloques de código, los combina en HTML y 
 - Una llamada a una macro que muestra el resultado de los bloques de código combinados en un {{HTMLElement("iframe")}}
 
 Cada [bloque de código](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) que contiene código para la salida tiene un identificador de lenguaje—`html`, `css` o `js`—que especifica si es código HTML, CSS o JavaScript. Los identificadores de lenguaje deben estar en los bloques de código correspondientes, y debe haber una llamada a la macro (`EmbedLiveSample`) en la página para mostrar la salida:
-
 
 ````md
 ## Ejemplos
@@ -36,7 +35,6 @@ Cada [bloque de código](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#e
 ````
 
 El sistema de ejemplos en vivo permite agrupar bloques de código de diferentes maneras para mostrar efectivamente la salida. La siguiente sección describe estos métodos.
-
 
 ### Agrupación de bloques de código
 
@@ -432,31 +430,31 @@ Aquí tienes la traducción manteniendo el formato y las convenciones adecuadas:
 
 ### Mostrar un registro que agrega elementos
 
-Este ejemplo muestra cómo implementar una simple "consola de registro" en tu ejemplo interactivo.  
-La consola agrega una nueva línea al final de la salida cada vez que se añade un nuevo registro, desplazando el nuevo elemento a la vista.  
+Este ejemplo muestra cómo implementar una simple "consola de registro" en tu ejemplo interactivo.
+La consola agrega una nueva línea al final de la salida cada vez que se añade un nuevo registro, desplazando el nuevo elemento a la vista.
 
-Para mayor claridad, este ejemplo separa el código de registro del código que lo utiliza y muestra primero el código de registro.  
-Generalmente, al implementar tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.  
+Para mayor claridad, este ejemplo separa el código de registro del código que lo utiliza y muestra primero el código de registro.
+Generalmente, al implementar tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
 
-> [!NOTA]  
-> Mostrar la salida del registro como parte del ejemplo proporciona una experiencia de usuario mucho mejor que usar `console.log()`.  
+> [!NOTA]
+> Mostrar la salida del registro como parte del ejemplo proporciona una experiencia de usuario mucho mejor que usar `console.log()`.
 
-> [!NOTA]  
-> Consulta [`DataTransfer.effectAllowed`](/es/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) para ver un ejemplo más completo.  
+> [!NOTA]
+> Consulta [`DataTransfer.effectAllowed`](/es/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) para ver un ejemplo más completo.
 
-#### HTML  
+#### HTML
 
-Crea un elemento {{HTMLElement("pre")}} con un `id` de `"log"` para mostrar la salida del registro.  
+Crea un elemento {{HTMLElement("pre")}} con un `id` de `"log"` para mostrar la salida del registro.
 
 ```html
 <pre id="log"></pre>
 ```
 
-#### JavaScript  
+#### JavaScript
 
-A continuación, define la función de registro `log()`.  
-Esta toma el texto a registrar como argumento y lo agrega al contenido del elemento de registro como una nueva línea.  
-La función también establece `scrollTop` en `scrollHeight` del elemento, lo que fuerza el desplazamiento del nuevo texto de registro a la vista.  
+A continuación, define la función de registro `log()`.
+Esta toma el texto a registrar como argumento y lo agrega al contenido del elemento de registro como una nueva línea.
+La función también establece `scrollTop` en `scrollHeight` del elemento, lo que fuerza el desplazamiento del nuevo texto de registro a la vista.
 
 ```js
 const logElement = document.querySelector("#log");
@@ -466,12 +464,12 @@ function log(text) {
 }
 ```
 
-Al igual que en el ejemplo anterior, el contenido del elemento de registro se establece usando la propiedad `innerText`, ya que esto es menos susceptible a código malicioso que `innerHTML`.  
+Al igual que en el ejemplo anterior, el contenido del elemento de registro se establece usando la propiedad `innerText`, ya que esto es menos susceptible a código malicioso que `innerHTML`.
 
-#### CSS  
+#### CSS
 
-El CSS añade barras de desplazamiento si el contenido del elemento excede su tamaño, establece la altura del elemento de registro y agrega un borde.  
-Ten en cuenta que el código JavaScript anterior asegura que, si el contenido desborda, la adición de nuevos registros desplazará el texto a la vista.  
+El CSS añade barras de desplazamiento si el contenido del elemento excede su tamaño, establece la altura del elemento de registro y agrega un borde.
+Ten en cuenta que el código JavaScript anterior asegura que, si el contenido desborda, la adición de nuevos registros desplazará el texto a la vista.
 
 ```css
 #log {
@@ -482,10 +480,10 @@ Ten en cuenta que el código JavaScript anterior asegura que, si el contenido de
 }
 ```
 
-#### Código de prueba de registro  
+#### Código de prueba de registro
 
-Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "qué se registra" no es tan importante.  
-Por lo tanto, se implementa de manera trivial como un botón que el usuario puede presionar para incrementar un valor.  
+Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "qué se registra" no es tan importante.
+Por lo tanto, se implementa de manera trivial como un botón que el usuario puede presionar para incrementar un valor.
 
 ```html
 <button id="increment" type="button">Presióname varias veces</button>
@@ -500,23 +498,23 @@ incrementButton.addEventListener("click", () => {
 });
 ```
 
-#### Resultado  
+#### Resultado
 
-Presiona el botón para agregar un nuevo contenido de registro.  
+Presiona el botón para agregar un nuevo contenido de registro.
 
-{{EmbedLiveSample("Displaying a log that appends items elementos", "100%", "180px")}}  
+{{EmbedLiveSample("Displaying a log that appends items elementos", "100%", "180px")}}
 
-### Mostrar un botón de reinicio  
+### Mostrar un botón de reinicio
 
-Un botón de reinicio puede ser útil para ejemplos que no pueden restaurarse a su estado inicial sin recargar la página.  
-Por ejemplo, el [ejemplo de `Highlight.priority` "estableciendo prioridad"](/es/docs/Web/API/Highlight/priority#resultado_2) necesita un botón de reinicio, ya que una vez que se ha establecido cualquier prioridad, el estado inicial ya no está disponible.  
+Un botón de reinicio puede ser útil para ejemplos que no pueden restaurarse a su estado inicial sin recargar la página.
+Por ejemplo, el [ejemplo de `Highlight.priority` "estableciendo prioridad"](/es/docs/Web/API/Highlight/priority#resultado_2) necesita un botón de reinicio, ya que una vez que se ha establecido cualquier prioridad, el estado inicial ya no está disponible.
 
-Este ejemplo muestra cómo agregar un botón de reinicio al ejemplo [Mostrar un registro que agrega elementos](#mostrar_un_registro_que_agrega_elementos) anterior.  
-Ten en cuenta que el código JavaScript y CSS para el registro es el mismo que en el ejemplo anterior, por lo que ese código se oculta.  
+Este ejemplo muestra cómo agregar un botón de reinicio al ejemplo [Mostrar un registro que agrega elementos](#mostrar_un_registro_que_agrega_elementos) anterior.
+Ten en cuenta que el código JavaScript y CSS para el registro es el mismo que en el ejemplo anterior, por lo que ese código se oculta.
 
-#### HTML  
+#### HTML
 
-El HTML del ejemplo ahora incluye un botón de reinicio.  
+El HTML del ejemplo ahora incluye un botón de reinicio.
 
 ```html
 <button id="increment" type="button">Presióname varias veces</button>
@@ -524,9 +522,9 @@ El HTML del ejemplo ahora incluye un botón de reinicio.
 <pre id="log"></pre>
 ```
 
-#### JavaScript  
+#### JavaScript
 
-El código para el botón agrega un manejador de eventos `click` que simplemente recarga el marco que contiene el ejemplo actual.  
+El código para el botón agrega un manejador de eventos `click` que simplemente recarga el marco que contiene el ejemplo actual.
 
 ```js
 const reload = document.querySelector("#reset");
@@ -560,13 +558,12 @@ incrementButton.addEventListener("click", () => {
 });
 ```
 
-#### Resultado  
+#### Resultado
 
-Haz clic en el botón "Presióname varias veces" varias veces.  
-Reinicia el ejemplo presionando el botón "Reiniciar".  
+Haz clic en el botón "Presióname varias veces" varias veces.
+Reinicia el ejemplo presionando el botón "Reiniciar".
 
-{{EmbedLiveSample("Displaying a reset button", "100%", "180px")}}  
-
+{{EmbedLiveSample("Displaying a reset button", "100%", "180px")}}
 
 ### Convenciones sobre muestras en vivo
 
