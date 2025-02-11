@@ -9,7 +9,24 @@ l10n:
 
 **`Number.isNaN()`** は静的メソッドで、渡された値が数値型の {{jsxref("NaN")}} であるかどうかを判定します。入力が数値型でなかった場合は `false` を返します。元となるグローバルの {{jsxref("isNaN", "isNaN()")}} よりも堅牢な版です。
 
-{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.isNaN()", "taller")}}
+
+```js interactive-example
+function typeOfNaN(x) {
+  if (Number.isNaN(x)) {
+    return "Number NaN";
+  }
+  if (isNaN(x)) {
+    return "NaN";
+  }
+}
+
+console.log(typeOfNaN("100F"));
+// Expected output: "NaN"
+
+console.log(typeOfNaN(NaN));
+// Expected output: "Number NaN"
+```
 
 ## 構文
 

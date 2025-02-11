@@ -9,7 +9,18 @@ l10n:
 
 **`Date.UTC()`** メソッドは、コンストラクターと同じ最も長い書式の引数を受け入れ、協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間を表す {{jsxref("Date")}} オブジェクトのミリ秒単位の数値を返します。
 
-{{EmbedInteractiveExample("pages/js/date-utc.html")}}
+{{InteractiveExample("JavaScript Demo: Date.UTC()")}}
+
+```js interactive-example
+const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
+
+console.log(utcDate1.toUTCString());
+// Expected output: "Fri, 02 Feb 1996 03:04:05 GMT"
+
+console.log(utcDate2.toUTCString());
+// Expected output: "Sun, 31 Dec 1899 00:00:00 GMT"
+```
 
 ## 構文
 

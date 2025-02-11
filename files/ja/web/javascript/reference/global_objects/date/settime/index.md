@@ -9,7 +9,23 @@ l10n:
 
 **`setTime()`** メソッドは、{{jsxref("Date")}} オブジェクトを協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 からの経過時間をミリ秒単位で表す時刻に設定します。
 
-{{EmbedInteractiveExample("pages/js/date-settime.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Date.setTime()", "taller")}}
+
+```js interactive-example
+const launchDate = new Date("July 1, 1999, 12:00:00");
+const futureDate = new Date();
+futureDate.setTime(launchDate.getTime());
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+
+const fiveMinutesInMillis = 5 * 60 * 1000;
+futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 構文
 

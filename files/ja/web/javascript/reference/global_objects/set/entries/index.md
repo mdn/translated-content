@@ -9,7 +9,21 @@ l10n:
 
 **`entries()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これは **`[value, value]` の配列**の形で集合の各要素を挿入順に返します。 `Set` オブジェクトは、`Map` オブジェクトのように `key` を持つことはありません。しかしながら、`Map` オブジェクトと似た API をもつために、それぞれの項目は _key_ と _value_ に対して同じ値を持ちます。そのため、配列 `[value, value]` が返されます。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.entries();
+
+for (const entry of iterator1) {
+  console.log(entry);
+  // Expected output: Array [42, 42]
+  // Expected output: Array ["forty two", "forty two"]
+}
+```
 
 ## 構文
 

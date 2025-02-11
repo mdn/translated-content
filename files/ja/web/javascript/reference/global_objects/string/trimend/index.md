@@ -9,7 +9,17 @@ l10n:
 
 **`trimEnd()`** メソッドは、元の文字列を変更せずに、文字列の末尾のホワイトスペースを削除した新しい文字列を返します。`trimRight()` はこのメソッドの別名です。
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## 構文
 

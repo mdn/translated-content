@@ -9,7 +9,22 @@ l10n:
 
 **`Number.isInteger()`** は静的メソッドで、渡された値が整数かどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+
+```js interactive-example
+function fits(x, y) {
+  if (Number.isInteger(y / x)) {
+    return "Fits!";
+  }
+  return "Does NOT fit!";
+}
+
+console.log(fits(5, 10));
+// Expected output: "Fits!"
+
+console.log(fits(5, 11));
+// Expected output: "Does NOT fit!"
+```
 
 ## 構文
 

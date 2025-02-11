@@ -9,7 +9,15 @@ l10n:
 
 **`slice()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の一部を `start` から `end` （`end` は含まれない）まで選択された新しい型付き配列オブジェクトにコピーして返します。元の型付き配列は変更されません。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-slice.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.slice()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.slice(1, 3);
+
+console.log(array1);
+// Expected output: Uint8Array [20, 30]
+```
 
 ## 構文
 

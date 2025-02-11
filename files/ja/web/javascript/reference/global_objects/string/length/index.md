@@ -9,7 +9,14 @@ l10n:
 
 **`length`** データプロパティは、{{jsxref("String")}} オブジェクトの文字列長を UTF-16 コード単位の数で表します。
 
-{{EmbedInteractiveExample("pages/js/string-length.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.length", "shorter")}}
+
+```js interactive-example
+const str = "Life, the universe and everything. Answer:";
+
+console.log(`${str} ${str.length}`);
+// Expected output: "Life, the universe and everything. Answer: 42"
+```
 
 ## 値
 

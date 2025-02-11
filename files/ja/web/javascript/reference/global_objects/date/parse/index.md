@@ -11,7 +11,18 @@ l10n:
 
 対応するよう明示的に指定されているのは [ISO 8601 形式](https://tc39.es/ecma262/#sec-date-time-string-format) (`YYYY-MM-DDTHH:mm:ss.sssZ`) のみです。他の形式は実装で定義されており、すべてのブラウザーで動作するとは限りません。多くの様々な形式に対応するためには、ライブラリーが役に立ちます。
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+
+```js interactive-example
+const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Expected output: 0
+
+console.log(javaScriptRelease);
+// Expected output: 818035920000
+```
 
 ## 構文
 

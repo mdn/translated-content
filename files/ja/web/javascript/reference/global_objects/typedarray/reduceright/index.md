@@ -9,7 +9,18 @@ l10n:
 
 **`reduceRight()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、アキュームレーターと型付き配列のそれぞれの値に対して（右から左へ）関数を適用していき、単一の値にまとめます。このメソッドは、{{jsxref("Array.prototype.reduceRight()")}}と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-reduceright.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.reduceRight()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30]);
+
+const result = uint8.reduceRight(
+  (accumulator, currentValue) => `${accumulator}, ${currentValue}`,
+);
+
+console.log(result);
+// Expected output: "30, 20, 10"
+```
 
 ## 構文
 

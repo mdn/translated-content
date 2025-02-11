@@ -9,7 +9,16 @@ l10n:
 
 **`every()`** は {{jsxref("Array")}} インスタンスのメソッドは、列内のすべての要素が指定された関数で実装されたテストに合格するかどうかをテストします。これは論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/array-every.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## 構文
 

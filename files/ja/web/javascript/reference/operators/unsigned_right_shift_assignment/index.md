@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 
 **符号なし右シフト代入演算子** (`>>>=`) は、指定された数だけビットを右に移動し、結果を変数に代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift assignment operator")}}
+
+```js interactive-example
+let a = 5; //  00000000000000000000000000000101
+
+a >>>= 2; //  00000000000000000000000000000001
+console.log(a);
+// Expected output: 1
+
+let b = -5; // -00000000000000000000000000000101
+
+b >>>= 2; //  00111111111111111111111111111110
+console.log(b);
+// Expected output: 1073741822
+```
 
 ## 構文
 

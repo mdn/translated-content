@@ -9,7 +9,18 @@ l10n:
 
 **`lastIndexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最後に出現するインデックスを返します。オプションで開始位置を取り、指定した数値以下のインデックスにおいて、指定した部分文字列が最後にに出現するインデックスを返します。
 
-{{EmbedInteractiveExample("pages/js/string-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+
+console.log(
+  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+```
 
 ## 構文
 

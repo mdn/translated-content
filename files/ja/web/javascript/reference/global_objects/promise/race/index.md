@@ -9,7 +9,23 @@ l10n:
 
 **`Promise.race()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、最初に決定したプロミスの最終的な状態で決定されます。
 
-{{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## 構文
 

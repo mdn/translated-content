@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Inequality
 
 不等価演算子 (`!=`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[厳密不等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)演算子とは異なり、異なる型のオペランドを変換して比較を行おうとします。
 
-{{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
+
+```js interactive-example
+console.log(1 != 1);
+// Expected output: false
+
+console.log("hello" != "hello");
+// Expected output: false
+
+console.log("1" != 1);
+// Expected output: false
+
+console.log(0 != false);
+// Expected output: false
+```
 
 ## 構文
 

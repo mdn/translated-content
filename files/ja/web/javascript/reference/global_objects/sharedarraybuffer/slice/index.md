@@ -9,7 +9,20 @@ l10n:
 
 **`SharedArrayBuffer.prototype.slice()`** メソッドは、新しい {{jsxref("SharedArrayBuffer")}} を生成し、その内容にこの `SharedArrayBuffer` のバイトを先頭位置 (含む) から末尾位置 (含まない) までをコピーして返します。先頭または末尾が負の値であった場合は、配列の先頭からではなく、末尾からの位置になります。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const int32View = new Int32Array(buffer); // Create the view
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+
+console.log(sliced);
+// Expected output: Int32Array [42, 0]
+```
 
 ## 構文
 

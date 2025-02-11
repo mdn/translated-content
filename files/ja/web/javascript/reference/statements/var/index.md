@@ -9,7 +9,21 @@ l10n:
 
 **`var`** 文は関数スコープまたはグローバルスコープの変数を宣言し、任意でそれをある値に初期化します。
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## 構文
 

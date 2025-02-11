@@ -11,7 +11,15 @@ l10n:
 
 このメソッドは、日付と時刻を別の {{jsxref("Date")}} オブジェクトへ代入する助けとして使用できます。このメソッドは、{{jsxref("Date/valueof", "valueOf()")}} メソッドと機能的に同等です。
 
-{{EmbedInteractiveExample("pages/js/date-gettime.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getTime()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
+
+// Milliseconds since Jan 1, 1970, 00:00:00.000 GMT
+console.log(moonLanding.getTime());
+// Expected output: -14182940000
+```
 
 ## 構文
 

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 
 **`isNaN()`** 関数は引数が {{jsxref("NaN")}} (非数) かどうかを判定します。`isNaN` 関数の型強制は[意外なもの](#解説)になる可能性があるため、他の {{jsxref("Number.isNaN()")}} を使用した方が良いかもしれません。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## 構文
 

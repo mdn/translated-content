@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 
 **`Intl.NumberFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("NumberFormat")}} オブジェクトの初期化時に計算されたロケールと数値整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions")}}
+
+```js interactive-example
+const numberFormat1 = new Intl.NumberFormat("de-DE");
+const options1 = numberFormat1.resolvedOptions();
+
+console.log(options1.locale);
+// Expected output (Firefox / Safari): "de-DE"
+// Expected output (Chrome): "de"
+
+console.log(options1.numberingSystem);
+// Expected output: "latn"
+
+console.log(options1.style);
+// Expected output: "decimal"
+```
 
 ## 構文
 
