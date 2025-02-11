@@ -143,4 +143,4 @@ Report-To: { "group": "nel",
 
 ## 參見
 
-- [報告 API](/en-US/docs/Web/API/Reporting_API)
+- [報告 API](/zh-TW/docs/Web/API/Reporting_API)
