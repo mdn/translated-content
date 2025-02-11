@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Assignment
 
 Простой оператор присваивания (`=`) используется для присваивания значения переменной. Операция присваивания вычисляется в присваиваемую величину. Присваивание по цепочке (_chaining_) используется для назначения нескольким переменным одинакового значения.
 
-{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+
+```js interactive-example
+let x = 2;
+const y = 3;
+
+console.log(x);
+// Expected output: 2
+
+console.log((x = y + 1)); // 3 + 1
+// Expected output: 4
+
+console.log((x = x * y)); // 4 * 3
+// Expected output: 12
+```
 
 ## Синтаксис
 

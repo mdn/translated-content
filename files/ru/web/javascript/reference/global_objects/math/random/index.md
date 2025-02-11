@@ -12,7 +12,22 @@ l10n:
 > [!NOTE]
 > Метод `Math.random()` _не предоставляет_ криптографически стойкие случайные числа. Не используйте его ни для чего, связанного с безопасностью. Для таких целей используйте Web Crypto API и более точный метод {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}}.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## Синтаксис
 

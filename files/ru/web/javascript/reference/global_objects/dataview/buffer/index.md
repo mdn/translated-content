@@ -9,7 +9,18 @@ l10n:
 
 Свойство **`buffer`** экземпляров {{jsxref("DataView")}} возвращает значение {{jsxref("ArrayBuffer")}} или {{jsxref("SharedArrayBuffer")}}, на которое ссылается `DataView` при создании.
 
-{{EmbedInteractiveExample("pages/js/dataview-buffer.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.buffer")}}
+
+```js interactive-example
+// Create an ArrayBuffer
+const buffer = new ArrayBuffer(123);
+
+// Create a view
+const view = new DataView(buffer);
+
+console.log(view.buffer.byteLength);
+// Expected output: 123
+```
 
 ## Описание
 

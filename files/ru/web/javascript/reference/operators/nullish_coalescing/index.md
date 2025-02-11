@@ -12,7 +12,17 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 Оператор нулевого слияния вместе с `||` находится на [четвёртом по приоритетности месте](/ru/docs/Web/JavaScript/Reference/Operators/Operator_precedence), непосредственно перед ним следует [условный (тернарный) оператор](/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Синтаксис
 

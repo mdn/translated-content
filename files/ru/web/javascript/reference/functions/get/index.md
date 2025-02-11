@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Functions/get
 
 Синтаксис **`get`** связывает свойство объекта с функцией, которая будет вызываться при обращении к этому свойству.
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## Синтаксис
 

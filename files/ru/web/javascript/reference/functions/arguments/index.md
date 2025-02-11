@@ -13,7 +13,22 @@ slug: Web/JavaScript/Reference/Functions/arguments
 > [!NOTE]
 > "Подобный массиву" означает, что `arguments` имеет свойство {{jsxref("Functions/arguments/length", "length")}}, а элементы индексируются начиная с нуля. Но при этом он не может обращаться к встроенным методам {{JSxRef("Array")}}, таким как {{jsxref("Array.forEach", "forEach()")}} или {{jsxref("Array.map", "map()")}}. Подробнее об этом в [§Описании](#Описание).
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## Синтаксис
 

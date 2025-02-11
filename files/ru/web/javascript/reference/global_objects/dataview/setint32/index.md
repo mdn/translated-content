@@ -9,7 +9,18 @@ l10n:
 
 Метод **`setInt32()`** экземпляров {{jsxref("DataView")}} принимает число и сохраняет его в форме 32-битного целого числа со знаком в 4 байтах начиная с определённого в этом `DataView` смещении. Ограничений по выравниванию нет, многобайтовые значения могут храниться с любым смещением в пределах границ.
 
-{{EmbedInteractiveExample("pages/js/dataview-setint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setInt32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt32(1, 2147483647); // Max signed 32-bit integer
+
+console.log(view.getInt32(1));
+// Expected output: 2147483647
+```
 
 ## Синтаксис
 

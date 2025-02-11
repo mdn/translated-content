@@ -9,7 +9,19 @@ slug: Web/JavaScript/Reference/Operators/this
 
 В большинстве случаев значение `this` определяется тем, каким образом вызвана функция. Значение `this` не может быть установлено путём присваивания во время исполнения кода и может иметь разное значение при каждом вызове функции. В ES5 представлен метод {{jsxref('Function.prototype.bind()', 'bind()')}}, который используется для {{jsxref('Operators/this','привязки значения ключевого слова this независимо от того, как вызвана функция','Метод_bind')}}. Также в ES2015 представлены {{jsxref('Functions/Arrow_functions', 'стрелочные функции')}}, которые не создают собственные привязки к `this` (они сохраняют значение `this` лексического окружения, в котором были созданы).
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## Синтаксис
 
