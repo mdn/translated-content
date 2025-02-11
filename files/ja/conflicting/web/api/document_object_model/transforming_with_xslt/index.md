@@ -1,6 +1,7 @@
 ---
 title: 序文
-slug: Web/API/XSLTProcessor/Introduction
+slug: conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT
+original_slug: Web/API/XSLTProcessor/Introduction
 ---
 
 {{APIRef("XSLT")}}

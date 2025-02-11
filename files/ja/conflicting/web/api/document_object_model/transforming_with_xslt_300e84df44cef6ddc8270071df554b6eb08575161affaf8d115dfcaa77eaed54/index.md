@@ -1,6 +1,7 @@
 ---
 title: XSLT の基本的な例
-slug: Web/API/XSLTProcessor/Basic_Example
+slug: conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT_300e84df44cef6ddc8270071df554b6eb08575161affaf8d115dfcaa77eaed54
+original_slug: Web/API/XSLTProcessor/Basic_Example
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
