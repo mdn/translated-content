@@ -8,7 +8,22 @@ slug: Web/JavaScript/Reference/Operators/delete
 El **operador `delete`** de JavaScript remueve una propiedad de un objeto; si no se
 mantienen más referencias a la misma propiedad, eventualmente se libera automáticamente.
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## Sintaxis
 

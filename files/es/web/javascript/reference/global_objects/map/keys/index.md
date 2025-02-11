@@ -9,7 +9,22 @@ l10n:
 
 El método **`keys()`** de las instancias {{jsxref("Map")}} regresa un nuevo objeto _[iterator de map](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ que contiene las llaves para cada elemento en este _map_ en orden de inserción.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.keys()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.keys();
+
+console.log(iterator1.next().value);
+// Expected output: "0"
+
+console.log(iterator1.next().value);
+// Expected output: 1
+```
 
 ## Sintaxis
 
