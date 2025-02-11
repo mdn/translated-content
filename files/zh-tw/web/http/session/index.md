@@ -2,7 +2,7 @@
 title: 典型的 HTTP 會話
 slug: Web/HTTP/Session
 l10n:
-  sourceCommit: 46a16cc28c5da14b45a6f65e478d032532764122
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTTPSidebar}}
@@ -95,7 +95,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 Age: 7
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -122,7 +122,7 @@ Via: Moz-Cache-zlb05
 Connection: Keep-Alive
 Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 通知請求的資源不存在：
@@ -144,7 +144,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 X-Cache: Error from cloudfront
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 ### 回應狀態碼

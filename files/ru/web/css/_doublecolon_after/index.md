@@ -1,5 +1,5 @@
 ---
-title: "::after (:after)"
+title: ::after
 slug: Web/CSS/::after
 ---
 

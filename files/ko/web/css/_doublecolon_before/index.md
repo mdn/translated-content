@@ -1,5 +1,5 @@
 ---
-title: "::before"
+title: ::before
 slug: Web/CSS/::before
 l10n:
   sourceCommit: 632289fcc10e926d166e1b49e5ba3505de182856

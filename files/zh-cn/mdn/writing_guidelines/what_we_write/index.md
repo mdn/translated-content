@@ -3,8 +3,6 @@ title: MDN 收录规则
 slug: MDN/Writing_guidelines/What_we_write
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档的内容是通用的，并不偏向某一个浏览器。这使得 Web 开发人员可以编写与任何浏览器都兼容的代码。本文介绍了在 MDN Web 文档上应该包含哪些主题或类型的内容的有关信息。
 
 ## 编辑准则

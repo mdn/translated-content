@@ -3,8 +3,6 @@ title: 常用的宏
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 ---
 
-{{MDNSidebar}}
-
 本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读[使用宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros)这篇文章。
 
 还有一些不常用或只在特定上下文中使用的，以及一些弃用的宏的信息，参见[其他宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other)。

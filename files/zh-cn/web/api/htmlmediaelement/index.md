@@ -602,5 +602,5 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 - Articles
 
   - [Using HTML5 audio and video](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-  - [Media formats supported by the audio and video elements](/zh-CN/docs/Web/Media/Formats)
+  - [Media formats supported by the audio and video elements](/zh-CN/docs/Web/Media/Guides/Formats)
   - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

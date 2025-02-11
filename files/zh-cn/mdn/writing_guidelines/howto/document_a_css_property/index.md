@@ -3,8 +3,6 @@ title: 如何记录 CSS 属性
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 ---
 
-{{MDNSidebar}}
-
 新的属性随着 [CSS](/zh-CN/docs/Web/CSS) 标准的发展而不断添加。MDN Web 文档上的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)需要紧跟其发展。本文提供了创建 CSS 属性参考页面的步骤说明。
 
 每个 CSS 属性参考页面都遵循相同的结构。这有助于读者更容易地找到信息，特别是在他们熟悉标准参考页面的格式之后。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9e804ddae5a375983996218409b80f6bfd71eb82
 ---
 
-{{MDNSidebar}}
-
 下面的指南涵盖了如何为 MDN Web 文档编写 shell 提示符示例代码。
 
 ## 什么是“shell”

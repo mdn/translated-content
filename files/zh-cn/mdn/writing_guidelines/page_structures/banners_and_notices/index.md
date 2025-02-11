@@ -3,8 +3,6 @@ title: 横幅和通知
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 ---
 
-{{MDNSidebar}}
-
 横幅被添加到一些页面中，特别是 API 参考页面，以突出影响所描述内容使用的重要因素。例如，横幅可以强调一个特定的接口、方法或属性被废弃，并且不应该在生产代码中使用时的情况。
 
 本文描述了最重要的横幅以及它们的使用方法。

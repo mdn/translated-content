@@ -1,5 +1,5 @@
 ---
-title: ":is()"
+title: :is()
 slug: Web/CSS/:is
 ---
 

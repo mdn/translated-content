@@ -1,5 +1,5 @@
 ---
-title: ":only-of-type"
+title: :only-of-type
 slug: Web/CSS/:only-of-type
 l10n:
   sourceCommit: 71d9840f3da24005b015d3d103b358d4f9f46819

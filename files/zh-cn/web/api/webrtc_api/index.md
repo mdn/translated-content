@@ -178,7 +178,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
   - : **完美协商**是一种建议你的信令流程遵循的设计模式，它在协商过程中提供了透明性，同时允许双方都是提供方或应答方，而无需进行大量的编码来区分两者。
 - [信令和双向视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
   - : 它将一个之前的示例创建的、基于 WebSocket 的聊天系统转换为教程和示例，并添加了参与者之间进行视频通话的支持。聊天服务器的 WebSocket 连接用于 WebRTC 信令。
-- [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)
+- [WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Guides/Formats/WebRTC_codecs)
   - : 介绍了 WebRTC 需要浏览器支持的编解码器以及各种流行浏览器支持的可选编解码器。本文还包括了一个帮助你选择最适合你需求的编解码器的指南。
 - [使用 WebRTC 数据通道](/zh-CN/docs/Web/API/WebRTC_API/Using_data_channels)
   - : 本指南介绍了如何使用对等连接和相关的 {{DOMxRef("RTCDataChannel")}} 在两个对等方之间交换任意数据。

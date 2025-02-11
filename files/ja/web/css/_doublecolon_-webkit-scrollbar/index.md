@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-scrollbar"
+title: ::-webkit-scrollbar
 slug: Web/CSS/::-webkit-scrollbar
 l10n:
   sourceCommit: 4e002d26cb032c915aeee366f922f23cbacd8bf1

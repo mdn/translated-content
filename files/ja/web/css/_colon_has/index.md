@@ -1,5 +1,5 @@
 ---
-title: ":has()"
+title: :has()
 slug: Web/CSS/:has
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879

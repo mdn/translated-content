@@ -1,5 +1,5 @@
 ---
-title: ":disabled"
+title: :disabled
 slug: Web/CSS/:disabled
 l10n:
   sourceCommit: 5fef5d3c2b35846676218d5c9f7c5cfad10aa94b

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4680281518d584657960f984b3b720d79b3119ab
 ---
 
-{{MDNSidebar}}
-
 下面的指南涵盖了如何为 MDN Web 文档编写 CSS 示例代码。
 
 ## CSS 代码示例常规指南

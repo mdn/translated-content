@@ -139,7 +139,8 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
   .className {
     @font-face {
       font-family: "MyHelvetica";
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
@@ -193,7 +194,8 @@ Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui 
 ```css
 @font-face {
   font-family: "MyHelvetica";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }

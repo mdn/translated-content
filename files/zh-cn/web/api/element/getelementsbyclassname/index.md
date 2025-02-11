@@ -45,9 +45,7 @@ document.getElementById("main").getElementsByClassName("test");
 var testElements = document.getElementsByClassName("test");
 var testDivs = Array.prototype.filter.call(
   testElements,
-  function (testElement) {
-    return testElement.nodeName === "div";
-  },
+  (testElement) => testElement.nodeName === "DIV",
 );
 ```
 

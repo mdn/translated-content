@@ -110,7 +110,8 @@ Ahora que has explorado lo básico de CSS, empieza por añadir información y al
    ```css
    html {
      font-size: 10px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
-     font-family: "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
+     font-family:
+       "Open Sans", sans-serif; /* Este debe ser el resto del resultado que obtuviste de Google fonts */
    }
    ```
 

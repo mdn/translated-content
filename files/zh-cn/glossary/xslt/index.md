@@ -14,4 +14,4 @@ XSLT 有它自己的可接受 XML 输入或任何可转换为 XQuery 和 XPath �
 ## 参见
 
 - 维基百科上的 [XSLT](https://zh.wikipedia.org/wiki/XSLT)
-- [MDN 中的 XSLT 文档](/zh-CN/docs/Web/XSLT)
+- [MDN 中的 XSLT 文档](/zh-CN/docs/Web/XML/XSLT)

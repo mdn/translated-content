@@ -1,5 +1,5 @@
 ---
-title: ":empty"
+title: :empty
 slug: Web/CSS/:empty
 l10n:
   sourceCommit: e1608631832f2608632569d0bd4061372adc5199

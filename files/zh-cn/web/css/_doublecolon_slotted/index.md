@@ -1,5 +1,5 @@
 ---
-title: "::slotted()"
+title: ::slotted()
 slug: Web/CSS/::slotted
 l10n:
   sourceCommit: cebbd9095ac12557c55157355181672027fffc14

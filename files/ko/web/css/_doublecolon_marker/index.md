@@ -1,5 +1,5 @@
 ---
-title: "::marker"
+title: ::marker
 slug: Web/CSS/::marker
 l10n:
   sourceCommit: 679f5893a4734fd136b80140e13262422d76b123

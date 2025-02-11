@@ -3,8 +3,6 @@ title: 如何撰写 API 参考文档
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 ---
 
-{{MDNSidebar}}
-
 本篇指南将带你了解在 MDN 上编写 API 参考文档所需的所有知识。
 
 ## 做好准备

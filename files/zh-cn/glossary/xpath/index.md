@@ -2,7 +2,7 @@
 title: XPath
 slug: Glossary/XPath
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
 {{GlossarySidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 参见
 
-- [MDN 上的 XPath 文档](/zh-CN/docs/Web/XPath)
+- [MDN 上的 XPath 文档](/zh-CN/docs/Web/XML/XPath)
 - [XPath 规范](https://www.w3.org/TR/xpath-30/)
 - [官方网站](https://www.w3.org/TR/?tag=xml)
 - 维基百科上的 [XPath](https://zh.wikipedia.org/wiki/XPath)

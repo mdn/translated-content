@@ -3,8 +3,6 @@ title: 編輯以及新增頁面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 ---
 
-{{MDNSidebar}}
-
 幾乎每位 MDN 的貢獻者在 MDN 中都會做的兩件基本工作，即為編輯一個已存在的頁面或者是新增一個頁面。這篇文章將介紹如何編輯文件的基本技能。
 
 ## 編輯一個已存在的頁面

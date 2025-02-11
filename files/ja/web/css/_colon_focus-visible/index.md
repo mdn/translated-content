@@ -1,5 +1,5 @@
 ---
-title: ":focus-visible"
+title: :focus-visible
 slug: Web/CSS/:focus-visible
 l10n:
   sourceCommit: fe36fe6e46bc87566759c0f167f315b3779d2ed6

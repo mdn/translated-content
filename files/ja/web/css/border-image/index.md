@@ -162,8 +162,8 @@ border-image: unset;
   border: 10px solid transparent;
   padding: 20px;
   border-radius: 20px;
-  background-image: linear-gradient(white, white),
-    linear-gradient(to right, cyan, lime);
+  background-image:
+    linear-gradient(white, white), linear-gradient(to right, cyan, lime);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }

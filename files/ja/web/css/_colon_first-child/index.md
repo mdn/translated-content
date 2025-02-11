@@ -1,5 +1,5 @@
 ---
-title: ":first-child"
+title: :first-child
 slug: Web/CSS/:first-child
 l10n:
   sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5

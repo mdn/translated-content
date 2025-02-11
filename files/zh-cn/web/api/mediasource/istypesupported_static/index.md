@@ -18,7 +18,7 @@ isTypeSupported(type)
 ### 参数
 
 - `type`
-  - : 一个指定媒体 MIME 类型的字符串和（可选）包含一个使用逗号分隔的受支持的编解码器集合的[`编解码器`参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)。
+  - : 一个指定媒体 MIME 类型的字符串和（可选）包含一个使用逗号分隔的受支持的编解码器集合的[`编解码器`参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)。
 
 ### 返回值
 
@@ -73,7 +73,7 @@ function sourceOpen() {
 ## 参见
 
 - [Media Source Extensions API](/zh-CN/docs/Web/API/Media_Source_Extensions_API)
-- [Guide to media types and formats on the web](/zh-CN/docs/Web/Media/Formats)
-- [The "codecs" parameter in common media types](/zh-CN/docs/Web/Media/Formats/codecs_parameter)
+- [Guide to media types and formats on the web](/zh-CN/docs/Web/Media/Guides/Formats)
+- [The "codecs" parameter in common media types](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)
 - {{domxref("SourceBuffer")}}
 - {{domxref("SourceBufferList")}}

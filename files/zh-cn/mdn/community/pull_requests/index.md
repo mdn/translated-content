@@ -3,8 +3,6 @@ title: 拉取请求的提交和审查指南
 slug: MDN/Community/Pull_requests
 ---
 
-{{MDNSidebar}}
-
 本文档描述了贡献者应如何对 MDN Web 文档进行更改，以及这些更改是如何进行审查并发布到网站上的。MDN Web 文档的内容更改包括：
 
 - API 文档、CSS 属性、平台更新和内容添加的**日常改进**。这通常由 Mozilla、谷歌、Open Web Docs、三星的 MDN Web 文档员工以及社区志愿者完成。

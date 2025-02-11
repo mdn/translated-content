@@ -326,8 +326,8 @@ div {
 
 ```css
 .layered-image {
-  background: linear-gradient(to right, transparent, mistyrose),
-    url("critters.png");
+  background:
+    linear-gradient(to right, transparent, mistyrose), url("critters.png");
 }
 ```
 
@@ -350,11 +350,8 @@ div {
 
 ```css
 .stacked-linear {
-  background: linear-gradient(
-      217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
+  background:
+    linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
     linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
@@ -705,7 +702,8 @@ div {
 
 ```css
 .multi-repeating-linear {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       190deg,
       rgba(255, 0, 0, 0.5) 40px,
       rgba(255, 153, 0, 0.5) 80px,
@@ -760,7 +758,8 @@ div {
 
 ```css
 .plaid-gradient {
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent,
       transparent 50px,
@@ -805,7 +804,8 @@ div {
       rgba(143, 77, 63, 0.25) 10px
     );
 
-  background: repeating-linear-gradient(
+  background:
+    repeating-linear-gradient(
       90deg,
       transparent 0 50px,
       rgba(255, 127, 0, 0.25) 50px 56px,
