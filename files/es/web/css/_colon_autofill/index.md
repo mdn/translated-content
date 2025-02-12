@@ -1,5 +1,5 @@
 ---
-title: ":-webkit-autofill"
+title: :-webkit-autofill
 slug: Web/CSS/:autofill
 ---
 

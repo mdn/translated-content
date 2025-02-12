@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`copyWithin()`** 메서드는 이 형식화 배열의 일부를 같은 형식화 배열의 다른 장소에 얕은 복사를 수행하며 배열의 길이를 수정하지 않고 해당 배열을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.copyWithin()")}}와 같은 알고리즘을 가집니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.copyWithin()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
+
+// Insert position, start position, end position
+uint8.copyWithin(3, 1, 3);
+
+console.log(uint8);
+// Expected output: Uint8Array [1, 2, 3, 2, 3, 6, 7, 8]
+```
 
 ## 구문
 

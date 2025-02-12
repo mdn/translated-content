@@ -153,7 +153,7 @@ select:focus {
 
 有时候，无法避免键盘无障碍性的丧失。你可能继承了一个语义结构不佳的网站（比如，你不得不使用一个生成 `<div>` 按钮的糟糕内容管理系统），或者你正在使用一个缺乏内置键盘无障碍性支持的复杂控件，例如 HTML {{htmlelement("video")}} 元素（令人意外的是，Opera 是唯一支持 Tab 键导航 `<video>` 元素的默认浏览器控件的浏览器）。以下是一些可行的解决方案：
 
-1. 使用 `<button>` 元素（默认情况下我们可以通过 Tab 键导航至该元素！）和 JavaScript 来创建自定义控件，并实现其功能。请参见[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)了解一些很好的示例。
+1. 使用 `<button>` 元素（默认情况下我们可以通过 Tab 键导航至该元素！）和 JavaScript 来创建自定义控件，并实现其功能。请参见[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)了解一些很好的示例。
 2. 通过 JavaScript 创建键盘快捷键，以便在按下某些键时激活功能。请参见[桌面鼠标和键盘控制](/zh-CN/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard)了解一些可以适用于任何目的的游戏相关示例。
 3. 使用一些有趣的技巧来模拟按钮行为。例如，我们的 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 示例（参见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。在这里，我们给我们的假 `<div>` 按钮添加了 `tabindex="0"` 属性，使它们可以获得焦点（包括通过 tab 键）。参见 WebAIM 的 [tabindex 文章](https://webaim.org/techniques/keyboard/tabindex)获取更多有用的细节。虽然这使我们能够通过 Tab 键导航到按钮，但无法通过 Enter/Return 键激活它们。要做到这一点，我们必须添加以下 JavaScript 技巧：
 
@@ -180,7 +180,7 @@ select:focus {
 
 可以通过多种方法来测试缺少的替代文本，例如，使用无障碍[审计工具](#审计工具)。
 
-视频和音频内容的替代文本稍微更加复杂一些。有一种方式可以定义文本轨道（如字幕），并在播放视频时显示它们，那就是使用 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式（参见[为 HTML 视频添加字幕和字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)的详细教程）。这些特性在[浏览器兼容性](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#浏览器兼容性)方面相当好，但如果你想为音频提供文本替代方案或支持较旧的浏览器，在同一页面上或单独的页面上提供一个简单的文本记录可能是个不错的主意。
+视频和音频内容的替代文本稍微更加复杂一些。有一种方式可以定义文本轨道（如字幕），并在播放视频时显示它们，那就是使用 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式（参见[为 HTML 视频添加字幕和字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)的详细教程）。这些特性在[浏览器兼容性](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#浏览器兼容性)方面相当好，但如果你想为音频提供文本替代方案或支持较旧的浏览器，在同一页面上或单独的页面上提供一个简单的文本记录可能是个不错的主意。
 
 #### 元素关系和上下文
 

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 **`delete`** 运算符用于删除对象的一个属性；如果该属性的值是一个对象，并且没有更多对该对象的引用，该属性所持有的对象最终会自动释放。
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 语法
 

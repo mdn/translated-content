@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 **`Object.assign()`** 메서드는 출처 객체들의 모든 {{jsxref("Object/propertyIsEnumerable", "열거 가능", "", 1)}}한 {{jsxref("Object/hasOwnProperty", "자체 속성", "", 1)}}을 복사해 대상 객체에 붙여넣습니다. 그 후 대상 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## 구문
 

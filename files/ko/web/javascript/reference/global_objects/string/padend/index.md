@@ -11,7 +11,19 @@ l10n:
 이 문자열을 주어진 문자열(필요한 경우 반복됨)로 채워서 결과 문자열이 지정된 길이에 도달하도록 합니다.
 패딩은 이 문자열의 끝에서부터 적용됩니다.
 
-{{EmbedInteractiveExample("pages/js/string-padend.html")}}
+{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+
+```js interactive-example
+const str1 = "Breaded Mushrooms";
+
+console.log(str1.padEnd(25, "."));
+// Expected output: "Breaded Mushrooms........"
+
+const str2 = "200";
+
+console.log(str2.padEnd(5));
+// Expected output: "200  "
+```
 
 ## 구문
 

@@ -10,7 +10,17 @@ El método **`some()`** comprueba si al menos un elemento del array cumple con l
 > [!NOTE]
 > Este método devuelve `false` para cualquier condición puesta en un array vacío.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Sintaxis
 

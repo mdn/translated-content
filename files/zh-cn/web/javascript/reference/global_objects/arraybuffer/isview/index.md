@@ -9,7 +9,15 @@ l10n:
 
 **`ArrayBuffer.isView()`** 静态方法判断传入值是否是 `ArrayBuffer` 视图之一，例如[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}}。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+console.log(ArrayBuffer.isView(new Int32Array()));
+// Expected output: true
+```
 
 ## 语法
 

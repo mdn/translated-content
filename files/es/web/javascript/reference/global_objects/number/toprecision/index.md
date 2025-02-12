@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 
 El método **`toPrecision()`** devuelve una cadena que representa un objeto {{jsxref("Number")}} según la precisión especificada.
 
-{{EmbedInteractiveExample("pages/js/number-toprecision.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+
+```js interactive-example
+function precise(x) {
+  return x.toPrecision(4);
+}
+
+console.log(precise(123.456));
+// Expected output: "123.5"
+
+console.log(precise(0.004));
+// Expected output: "0.004000"
+
+console.log(precise(1.23e5));
+// Expected output: "1.230e+5"
+```
 
 ## Sintaxis
 

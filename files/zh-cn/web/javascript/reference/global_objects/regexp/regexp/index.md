@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## 语法
 

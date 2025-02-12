@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`findLastIndex()`** 메서드는 배열을 역순으로 순회하며 주어진 판별 함수를 만족하는 배열의 첫번째 요소의 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.findLastIndex()")}}와 알고리즘이 같습니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-findlastindex.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.findLastIndex()")}}
+
+```js interactive-example
+function isNegative(element /*, index, array */) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, -20, 30, -40, 50]);
+
+console.log(int8.findLastIndex(isNegative));
+// Expected output: 3
+```
 
 ## 구문
 

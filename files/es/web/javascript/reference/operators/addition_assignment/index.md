@@ -9,7 +9,18 @@ l10n:
 
 El **operador de asignación de adición (`+=`)** realiza una [suma](/es/docs/Web/JavaScript/Reference/Operators/Addition) (que puede ser una suma numérica o una concatenación de cadenas) en los dos operandos y asigna el resultado al operando izquierdo.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition assignment operator")}}
+
+```js interactive-example
+let a = 2;
+let b = "hello";
+
+console.log((a += 3)); // Addition
+// Expected output: 5
+
+console.log((b += " world")); // Concatenation
+// Expected output: "hello world"
+```
 
 ## Sintaxis
 

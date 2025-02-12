@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Equality
 
 El operador de comparacion (`==`) comprueba si sus dos operandos son iguales y devuelve un resultado booleano. A diferencia del operador de igualdad estricta (`===`), es que este convierte y compara operandos que son de diferentes tipos.
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## Sintaxis
 

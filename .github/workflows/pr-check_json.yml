@@ -10,6 +10,8 @@ on:
       - "**/*.jsonc"
       - .github/workflows/pr-check_json.yml
 
+permissions: {}
+
 jobs:
   docs:
     # do not run on PRs in forks
