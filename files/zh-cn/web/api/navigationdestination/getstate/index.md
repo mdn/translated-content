@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("NavigationDestination")}} 接口的 **`getState()`** 方法根据需要返回与目标 {{domxref("NavigationHistoryEntry")}} 或导航操作（例如 {{domxref("Navigation.navigate()", "navigate()")}}）相关的开发人员提供的状态的克隆。
+{{domxref("NavigationDestination")}} 接口的 **`getState()`** 方法根据需要返回由开发人员提供且与目标 {{domxref("NavigationHistoryEntry")}} 或导航操作（例如 {{domxref("Navigation.navigate()", "navigate()")}}）相关联的状态的克隆。
 
 ## 语法
 
