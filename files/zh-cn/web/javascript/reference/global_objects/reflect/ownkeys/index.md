@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 
 静态方法 **`Reflect.ownKeys()`** 返回一个由目标对象自身的属性键组成的数组。
 
-{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+  property2: 13,
+};
+
+const array1 = [];
+
+console.log(Reflect.ownKeys(object1));
+// Expected output: Array ["property1", "property2"]
+
+console.log(Reflect.ownKeys(array1));
+// Expected output: Array ["length"]
+```
 
 ## 语法
 

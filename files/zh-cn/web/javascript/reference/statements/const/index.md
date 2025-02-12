@@ -9,7 +9,22 @@ l10n:
 
 **`const`** 声明用于声明块作用域的局部变量。常量的值不能通过使用[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)重新赋值来更改，但是如果常量是一个[对象](/zh-CN/docs/Web/JavaScript/Data_structures#objects)，它的属性可以被添加、更新或删除。
 
-{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## 语法
 

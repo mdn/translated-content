@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Functions/get
 
 **`get`** 语法将对象属性绑定到查询该属性时将被调用的函数。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 语法
 

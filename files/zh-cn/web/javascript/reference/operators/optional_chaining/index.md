@@ -9,7 +9,23 @@ l10n:
 
 **可选链运算符（`?.`）** 用于访问对象的属性或调用函数。如果使用此运算符访问的对象或调用的函数是 {{jsxref("undefined")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，则表达式会短路并计算为 {{jsxref("undefined")}}，而不是抛出错误。
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 语法
 

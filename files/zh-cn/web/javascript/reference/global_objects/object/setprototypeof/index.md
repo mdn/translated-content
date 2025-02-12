@@ -12,7 +12,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 >
 > 由于这个特性是语言的一部分，因此引擎开发人员实现该特性的性能（理想情况下）仍然是一个负担。在引擎开发人员解决这个问题之前，如果你担心性能问题，应该避免设置对象的 `[[Prototype]]` 属性。而是使用 {{jsxref("Object.create()")}} 创建一个具有所需 `[[Prototype]]` 属性的新对象。
 
-{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.setPrototypeOf()")}}
+
+```js interactive-example
+const obj = {};
+const parent = { foo: "bar" };
+
+console.log(obj.foo);
+// Expected output: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// Expected output: "bar"
+```
 
 ## 语法
 

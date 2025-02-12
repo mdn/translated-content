@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("DataView")}} 实例的 **`getFloat16()`** 方法从相对于当前 `DataView` 的起始位置偏移指定个字节处读取 2 个字节，并将其解释为 16 位浮点数。如果没有对齐约束；则可以从边界内的任意偏移位置处获取多字节值。
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getFloat16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat16(1, Math.PI);
+
+console.log(view.getFloat16(1));
+// Expected output: 3.140625
+```
 
 ## 语法
 
