@@ -21,13 +21,13 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
 
 - [你的第一個網站：創建內容](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : 這篇文章提供了一個簡短的 HTML 簡介和使用方法，適合完全新手的 Web 開發者。
-- [使用 HTML 結構化內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
+- [使用 HTML 建構內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
   - : 我們的[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節的 HTML 模塊從頭開始教授所有 HTML 基礎知識。
 
 ## 指南
 
 - [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)
-  - : 表單是 Web 非常重要的一章節——它們提供了與網站互動所需的大章節功能，例如註冊和登錄、發送反饋、購買產品等。此模塊將幫助你開始創建表單的用戶端/前端章節。
+  - : 表單是 Web 非常重要的一章節——它們提供了與網站互動所需的大章節功能，例如註冊和登錄、發送反饋、購買產品等。此模塊將幫助你開始創建表單的用戶端/前端部分。
 - [啟用 CORS 的圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
   - : [`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性與適當的 {{glossary("CORS")}} 標頭結合使用，允許由 {{HTMLElement("img")}} 元素定義的圖像從外部來源加載，並在 {{HTMLElement("canvas")}} 元素中使用，就像它們是從當前來源加載的一樣。
 - [CORS 設定屬性](/zh-TW/docs/Web/HTML/Attributes/crossorigin)
@@ -50,7 +50,7 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
 - [內聯級元素](/zh-TW/docs/Glossary/Inline-level_content)和[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)
   - : HTML 元素通常是「內聯級」或「區塊級」元素。內聯級元素僅佔據由定義它的標籤界定的空間。區塊級元素佔據其父元素（容器）的整個空間，從而創建一個「區塊框」。
 - [HTML 註釋](/zh-TW/docs/Web/HTML/Comments)
-  - : HTML 註釋用於向標記添加說明性註釋或防止瀏覽器解釋文件的特定章節。
+  - : HTML 註釋用於向標記添加說明性註釋或防止瀏覽器解釋文件的特定部分。
 - [Web 上的媒體類型和格式指南](/zh-TW/docs/Web/Media/Guides/Formats)
   - : {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素允許你在內容中本地播放音訊和視訊媒體，而無需外部軟體支援。
 - [HTML 內容類型](/zh-TW/docs/Web/HTML/Content_categories)
@@ -61,4 +61,4 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
 ## 相關主題
 
 - [使用 CSS 為 HTML 元素應用顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
-  - : 這篇文章涵蓋了使用 CSS 為 HTML 內容添加顏色的大章節方法，列出了 HTML 文件的哪些章節可以著色以及在進行著色時應使用哪些 CSS 屬性。
+  - : 這篇文章涵蓋了使用 CSS 為 HTML 內容添加顏色的的大部分方法，列出了 HTML 文件的哪些部分可以著色以及在進行著色時應使用哪些 CSS 屬性。
