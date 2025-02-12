@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 
 **`unshift()`** 方法會添加一個或多個元素至陣列的開頭，並且回傳陣列的新長度。
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## 語法
 

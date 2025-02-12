@@ -5659,6 +5659,42 @@
       "jswisher"
     ]
   },
+  "MDN/Guides": {
+    "modified": "2020-01-12T11:59:05.782Z",
+    "contributors": [
+      "mfuji09",
+      "snakada",
+      "silverskyvicto",
+      "dskmori",
+      "hideo54",
+      "szk0u",
+      "Uemmra3",
+      "DonburiDon",
+      "stingray",
+      "mantaroh",
+      "momoi",
+      "fucsm",
+      "ethertank",
+      "Sheppy"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2019-06-10T15:05:39.813Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "hamasaki",
+      "Uemmra3",
+      "higechira",
+      "takubokudori",
+      "horichiyo",
+      "t-cool",
+      "karaage-kun",
+      "taiyaki32lp64",
+      "YuichiKamiki",
+      "Mohawk"
+    ]
+  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
     "contributors": [
@@ -11360,6 +11396,13 @@
       "mfuji09",
       "ethertank",
       "RobinEgg"
+    ]
+  },
+  "Web/API/Document_Object_Model/Transforming_with_XSLT": {
+    "modified": "2020-04-13T14:02:19.940Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf"
     ]
   },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
@@ -22804,28 +22847,6 @@
       "erikadoyle"
     ]
   },
-  "Web/API/XSLTProcessor/Basic_Example": {
-    "modified": "2020-04-13T14:02:55.964Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "Marsf"
-    ]
-  },
-  "Web/API/XSLTProcessor/Generating_HTML": {
-    "modified": "2020-04-13T14:02:19.940Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
-  "Web/API/XSLTProcessor/Introduction": {
-    "modified": "2020-04-13T14:03:23.203Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
   "Web/API/console": {
     "modified": "2020-10-15T21:08:48.807Z",
     "contributors": [
@@ -29696,25 +29717,6 @@
       "WhiteHawk-taka",
       "Marsf",
       "ssw",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
-  "Web/Guide": {
-    "modified": "2020-01-12T11:59:05.782Z",
-    "contributors": [
-      "mfuji09",
-      "snakada",
-      "silverskyvicto",
-      "dskmori",
-      "hideo54",
-      "szk0u",
-      "Uemmra3",
-      "DonburiDon",
-      "stingray",
-      "mantaroh",
-      "momoi",
-      "fucsm",
       "ethertank",
       "Sheppy"
     ]
@@ -42743,23 +42745,6 @@
       "hashedhyphen"
     ]
   },
-  "Web/Tutorials": {
-    "modified": "2019-06-10T15:05:39.813Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "hamasaki",
-      "Uemmra3",
-      "higechira",
-      "takubokudori",
-      "horichiyo",
-      "t-cool",
-      "karaage-kun",
-      "taiyaki32lp64",
-      "YuichiKamiki",
-      "Mohawk"
-    ]
-  },
   "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-12-06T15:11:17.468Z",
     "contributors": [
@@ -44116,6 +44101,21 @@
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT": {
+    "modified": "2020-04-13T14:03:23.203Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT_300e84df44cef6ddc8270071df554b6eb08575161affaf8d115dfcaa77eaed54": {
+    "modified": "2020-04-13T14:02:55.964Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "Marsf"
     ]
   },
   "conflicting/Web/API/Element/clientHeight": {

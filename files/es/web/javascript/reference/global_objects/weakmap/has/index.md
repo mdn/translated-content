@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 
 El método **`has()`** devuelve un boleano indicando ya sea, si el elemento con la llave específica existe o no en el objeto `WeakMap`.
 
-{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakMap.prototype.has()")}}
+
+```js interactive-example
+const weakmap1 = new WeakMap();
+const object1 = {};
+const object2 = {};
+
+weakmap1.set(object1, "foo");
+
+console.log(weakmap1.has(object1));
+// Expected output: true
+
+console.log(weakmap1.has(object2));
+// Expected output: false
+```
 
 ## Sintaxis
 

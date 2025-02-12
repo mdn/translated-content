@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 **`reduce()`** 方法將一個累加器及陣列中每項元素（由左至右）傳入回呼函式，將陣列化為單一值。
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 ## 語法
 

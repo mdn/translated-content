@@ -10,7 +10,18 @@ l10n:
 {{jsxref("DataView")}} 인스턴스의 **`getInt8()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
 1바이트를 읽고 이를 8비트 부호 있는 정수로 해석합니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt8(1, 127); // Max signed 8-bit integer
+
+console.log(view.getInt8(1));
+// Expected output: 127
+```
 
 ## 구문
 

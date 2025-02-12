@@ -9,7 +9,20 @@ l10n:
 
 **`for...in`** 语句迭代一个对象的所有[可枚举字符串属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（除 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 以外），包括继承的可枚举属性。
 
-{{EmbedInteractiveExample("pages/js/statement-forin.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+
+```js interactive-example
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// Expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+```
 
 ## 语法
 

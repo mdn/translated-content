@@ -9,7 +9,22 @@ l10n:
 
 `Symbol.unscopables` 정적 데이터 속성은 [잘 알려진 심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol#잘_알려진_심볼) `@@unscopables`를 나타냅니다. {{jsxref("Statements/with", "with")}} 문은 범위 객체에서 이 심볼을 조회하여 `with` 환경 내에서 바인딩되지 않아야 하는 속성들의 집합을 포함하는 속성을 찾습니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+object1[Symbol.unscopables] = {
+  property1: true,
+};
+
+with (object1) {
+  console.log(property1);
+  // Expected output: Error: property1 is not defined
+}
+```
 
 ## 값
 

@@ -9,7 +9,15 @@ l10n:
 
 {{jsxref("SharedArrayBuffer")}} 实例的 **`byteLength`** 访问器属性返回该 `SharedArrayBuffer` 的大小（以字节为单位）。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.byteLength", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 描述
 

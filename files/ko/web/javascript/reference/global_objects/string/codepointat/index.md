@@ -9,7 +9,14 @@ l10n:
 
 {{jsxref("String")}} 값의 **`codePointAt()`** 메서드는 주어진 인덱스에서 시작하는 문자의 유니코드 코드 포인트 값인 음수가 아닌 정수를 반환합니다. 인덱스는 여전히 유니코드 코드 포인트가 아닌 UTF-16 코드 단위를 기반으로 한다는 점에 유의하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+
+```js interactive-example
+const icons = "☃★♲";
+
+console.log(icons.codePointAt(1));
+// Expected output: "9733"
+```
 
 ## 구문
 

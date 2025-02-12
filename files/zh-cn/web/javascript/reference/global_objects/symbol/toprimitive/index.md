@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 
 **`Symbol.toPrimitive`** 是内置的 symbol 属性，其指定了一种接受首选类型并返回对象原始值的表示的方法。它被所有的[强类型转换制](/zh-CN/docs/Web/JavaScript/Data_structures#强制类型转换)算法优先调用。
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 {{js_property_attributes(0,0,0)}}
 

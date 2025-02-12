@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Statements/block
 블록은 한 쌍의 중괄호로 구성하며 선택적으로 {{jsxref("Statements/label", "레이블",
   "", 1)}}을 붙일 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
+
+```js interactive-example
+var x = 1;
+let y = 1;
+
+if (true) {
+  var x = 2;
+  let y = 2;
+}
+
+console.log(x);
+// Expected output: 2
+
+console.log(y);
+// Expected output: 1
+```
 
 ## 문법
 

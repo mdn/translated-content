@@ -9,7 +9,21 @@ l10n:
 
 **标记语句**是任何带有标识符前缀的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。你可以使用嵌套在标记语句中的 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句跳转到对应标记。
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
 
 ## 语法
 

@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/create
 
 El método **`Object.create()`** crea un objeto nuevo, utilizando un objeto existente como el prototipo del nuevo objeto creado.
 
-{{EmbedInteractiveExample("pages/js/object-create.html")}}La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción (pull request).
+{{InteractiveExample("JavaScript Demo: Object.create()")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## Sintaxis
 

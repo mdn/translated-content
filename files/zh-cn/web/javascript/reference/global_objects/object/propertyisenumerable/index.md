@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 
 **`propertyIsEnumerable()`** 方法返回一个布尔值，表示指定的属性是否是对象的[可枚举自有](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)属性。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
+
+```js interactive-example
+const object1 = {};
+const array1 = [];
+object1.property1 = 42;
+array1[0] = 42;
+
+console.log(object1.propertyIsEnumerable("property1"));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable(0));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable("length"));
+// Expected output: false
+```
 
 ## 语法
 

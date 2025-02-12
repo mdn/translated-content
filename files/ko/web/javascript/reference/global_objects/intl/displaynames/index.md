@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.DisplayNames`** 객체를 사용하면 언어, 지역 그리고 문자 체계 표시 이름을 일관되게 번역할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## 생성자
 

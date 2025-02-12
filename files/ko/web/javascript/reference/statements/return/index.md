@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/return
 
 **`return` 명령문**은 함수 실행을 종료하고, 주어진 값을 함수 호출 지점으로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 구문
 
