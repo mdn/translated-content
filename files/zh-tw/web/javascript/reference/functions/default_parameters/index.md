@@ -1,16 +1,27 @@
 ---
-title: 預設參數（Default parameters）
-short-title: 預設參數
+title: 預設參數
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 l10n:
-  sourceCommit: 1b2c87c20466d2a3eec9b3551c269f9aff8f5762
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{jsSidebar("Functions")}}
 
-**函式預設參數** 允許沒有值傳入或是傳入值為 `undefined` 的情況下，參數能以指定的預設值初始化。
+**函式預設參數**允許沒有傳入值或是傳入值為 `undefined` 的情況下，參數能以指定的預設值初始化。
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## 語法
 
@@ -24,7 +35,7 @@ function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {
 
 在 JavaScript 中，函式的參數預設值都為 {{jsxref("undefined")}}。然而，某些情況下可能需要指定不同的預設值。這也是函式參數預設值可以幫上忙的地方。
 
-在下列範例裡，若函式被呼叫時，並沒有提供 `b` 的值，它的值就會是 `undefined`，在計算 `a * b` 時，以及呼叫 `multiply` 時，就會回傳 `NaN`。
+在下列範例裡，若 `multiply` 被呼叫時，並沒有提供 `b` 的值，`b` 的值就會是 `undefined`，計算 `a * b` 和 `multiply` 就會回傳 `NaN`。
 
 ```js
 function multiply(a, b) {
@@ -32,7 +43,7 @@ function multiply(a, b) {
 }
 
 multiply(5, 2); // 10
-multiply(5); // NaN !
+multiply(5); // NaN！
 ```
 
 以往設定預設值的常用方式，是在函式裡檢查傳入參數是否為 `undefined`，是的話就爲它指定一個值。在以下範例裡，如果 `multiply` 被呼叫時只有傳入一個參數，`b` 就會被設定成 `1`：
@@ -75,7 +86,7 @@ f(2); // [2, undefined]
 
 預設參數的初始值設定位於自身的作用域內，該作用域是函式主體所建立作用域的父作用域。
 
-這表示稍早宣告的參數可以在後續參數的初始值設置中被引用。然而，在函式主體內宣告的函式與變數，無法在預設參數的初始值中被引用；若嘗試這麼做，將會拋出執行時期的 {{jsxref("ReferenceError")}}。這也包含在函式主體內以 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數。
+這表示稍早宣告的參數可以在後續參數的初始值設置中被引用。然而，在函式主體內宣告的函式與變數，無法在預設參數的初始值中被引用；若嘗試這麼做，將會拋出執行階段的 {{jsxref("ReferenceError")}}。這也包含在函式主體內以 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 宣告的變數。
 
 例如，以下函式在呼叫時會拋出 `ReferenceError`，因為預設參數值無法存取函式主體的子作用域：
 
@@ -101,7 +112,7 @@ f(); // undefined
 f(5); // 5
 ```
 
-預設參數允許使用任何運算式，但不可使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}，因為這些運算子會導致預設運算式的評估暫停。參數的初始化必須是*同步*完成的。
+預設參數允許使用任何運算式，但不可使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}，因為這些運算子會導致預設運算式的計算暫停。參數的初始化必須是*同步*完成的。
 
 ```js example-bad
 async function f(a = await Promise.resolve(1)) {
@@ -110,13 +121,13 @@ async function f(a = await Promise.resolve(1)) {
 ```
 
 > [!NOTE]
-> 由於預設參數是在函式被呼叫時評估，而不是在函式被定義時，因此 `await` 和 `yield` 運算子的有效性取決於該函式本身，而非其外圍函式。例如，如果當前函式不是 `async`，則 `await` 會被解析為識別字，並遵循一般的[識別字語法規則](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers)，即便該函式嵌套於 `async` 函式內也是如此。
+> 由於預設參數是在函式被呼叫時計算，而不是在函式被定義時，因此 `await` 和 `yield` 運算子的有效性取決於該函式本身，而非其外圍函式。例如，如果當前函式不是 `async`，則 `await` 會被解析為識別字，並遵循一般的[識別字語法規則](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#識別字)，即便該函式嵌套於 `async` 函式內也是如此。
 
 ## 範例
 
-### 傳入 `undefined` vs. 其它假值
+### 傳入 undefined 和其它假值
 
-在以下範例的第二次呼叫中，即使第一個參數被明確設定為 `undefined`（但不是 `null` 或其他 {{Glossary("falsy")}} 值），`num` 參數的值仍然是預設值。
+在以下範例的第二次呼叫中，即使第一個參數被明確設定為 `undefined`（但不是 `null` 或其他{{Glossary("falsy", "假")}}值），`num` 參數的值仍然是預設值。
 
 ```js
 function test(num = 1) {
@@ -131,9 +142,9 @@ test(""); // 'string'（num 被設定為空字串 ''）
 test(null); // 'object'（num 被設定為 null）
 ```
 
-### 呼叫時賦予值
+### 呼叫時計算值
 
-預設引數會在*呼叫時*進行評估。與 Python（例如）不同，每次呼叫函式時都會建立一個新的物件。
+預設引數會在*呼叫時*進行計算。與 Python（例如）不同，每次呼叫函式時都會建立一個新的物件。
 
 ```js
 function append(value, array = []) {
@@ -167,30 +178,15 @@ callSomething(); // 2
 較早（位於左側）定義的參數可供後續的預設參數使用：
 
 ```js
-function singularAutoPlural(
-  singular,
-  plural = singular + "們",
-  rallyingCry = plural + "，進攻啊!!!",
-) {
-  return [singular, plural, rallyingCry];
+function greet(greeting, name, message = `${greeting}，${name}`) {
+  return [greeting, name, message];
 }
 
-//["壁虎","壁虎們", "壁虎們，進攻啊!!!"]
-singularAutoPlural("壁虎");
-
-//["狐狸","火紅的狐狸們", "火紅的狐狸們，進攻啊!!!"]
-singularAutoPlural("狐狸", "火紅的狐狸們");
-
-//["鹿兒", "鹿兒們", "鹿兒們 ... 有所好轉"]
-singularAutoPlural(
-  "鹿兒",
-  "鹿兒們",
-  "鹿兒們平心靜氣的 \
-   向政府請願，希望事情有所好轉。",
-);
+greet("你好", "大衛"); // ["你好", "大衛", "你好，大衛"]
+greet("你好", "大衛", "生日快樂！"); // ["你好", "大衛", "生日快樂！"]
 ```
 
-以下範例展示了此功能許多邊界情況的處理方式：
+這個函式可以近似如下，它展示了處理許多邊緣情況：
 
 ```js
 function go() {
@@ -272,7 +268,6 @@ preFilledObject({ z: 2 }); // 2
 ## 參見
 
 - [函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)指南
-- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)參考
-- [剩餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [空值合併運算子（`??`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:parameter_default_values)
