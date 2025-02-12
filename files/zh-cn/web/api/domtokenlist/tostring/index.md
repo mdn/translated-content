@@ -1,5 +1,5 @@
 ---
-title: "DOMTokenList: toString() 方法"
+title: DOMTokenList：toString() 方法
 slug: Web/API/DOMTokenList/toString
 l10n:
   sourceCommit: 494edeb208c312a26b7f5efb0902799d89a2bb33
