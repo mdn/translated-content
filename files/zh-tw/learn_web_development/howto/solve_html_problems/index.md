@@ -1,6 +1,5 @@
 ---
 title: 使用 HTML 解決日常問題
-short-title: 使用 HTML 解決日常問題
 slug: Learn_web_development/Howto/Solve_HTML_problems
 original_slug: Learn/HTML/Howto
 ---

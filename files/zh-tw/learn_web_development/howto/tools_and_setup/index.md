@@ -1,6 +1,5 @@
 ---
 title: 工具與設定
-short-title: 工具與設定
 slug: Learn_web_development/Howto/Tools_and_setup
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc

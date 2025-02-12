@@ -1,6 +1,5 @@
 ---
 title: 使用 JavaScript 解決常見問題
-short-title: 使用 JavaScript 解決常見問題
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 original_slug: Learn/JavaScript/Howto
 ---

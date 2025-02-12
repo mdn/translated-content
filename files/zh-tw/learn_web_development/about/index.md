@@ -1,5 +1,5 @@
 ---
-title: 關於【學習該如何開發 Web】專區
+title: 關於學習該如何開發 Web 專區
 short-title: 關於
 slug: Learn_web_development/About
 l10n:
@@ -8,13 +8,13 @@ l10n:
 
 {{LearnSidebar}}
 
-【學習該如何開發 Web】專區旨在教授前端開發人員在當今業界維持就業優勢與不可替代性所應具備的基本技能與知識。它體現了我們認為網路應具備的價值觀——親合性、可延續性、可用性、效能及社群。我們希望教育工作者、開發人員與學生能善用這些資源，並在他們的工作、教學及開發的產品中倡導這些價值觀。
+學習該如何開發 Web 專區旨在教授前端開發人員在當今業界維持就業優勢與不可替代性所應具備的基本技能與知識。它體現了我們認為網路應具備的價值觀——親合性、可延續性、可用性、效能及社群。我們希望教育工作者、開發人員與學生能善用這些資源，並在他們的工作、教學及開發的產品中倡導這些價值觀。
 
 此內容由 MDN 社群創建，並經過了 Mozilla 內部及整個網路社群的專家審查與回饋。謝謝你寶貴的意見！
 
 ## 背景與動機
 
-我們最初[在 2016 年推出了【學習該如何開發 Web】區塊](https://hacks.mozilla.org/2016/06/learning-to-code-for-the-web-the-mdn-learning-area-welcomes-you/)，旨在讓非專家更容易接觸到 MDN，並幫助初級網路開發者「從初學者到得心應手」。
+我們最初[在 2016 年推出了學習該如何開發 Web 區塊](https://hacks.mozilla.org/2016/06/learning-to-code-for-the-web-the-mdn-learning-area-welcomes-you/)，旨在讓非專家更容易接觸到 MDN，並幫助初級網路開發者「從初學者到得心應手」。
 
 原本過程相當順利，但幾年後我們注意到其結構未達標準。初學者非常希望有條方便遵循的完整途徑來習得所需知識，而非被要求自己搞懂哪個環節要學什麼。
 
@@ -25,9 +25,9 @@ l10n:
 - 在瀏覽器基本工作原理、它們如何顯示資訊以及免費交互性方面的知識上出現斷層。這將導致解決方案過於複雜，並且通常無法存取。
 - 有限的解決問題、團隊合作、研究與其它重要軟實力。
 
-因此，我們創建了一套課程，旨在幫助大家習得更佳技能，提高就業能力，從而開發一個更好、更容易存取、更負責任的明日網路。我們希望大家的成功機會最大化。我們[在 2024 年初推出了【MDN 課程】](/en-US/blog/mdn-curriculum-launch/)。
+因此，我們創建了一套課程，旨在幫助大家習得更佳技能，提高就業能力，從而開發一個更好、更容易存取、更負責任的明日網路。我們希望大家的成功機會最大化。我們[在 2024 年初推出了 MDN 課程](/en-US/blog/mdn-curriculum-launch/)。
 
-然而，我們很快收到反映，使用者認為 MDN 上擁有兩個學習資源令人困擾：課程/學習途徑在一處，學習內容卻在另一處。於是，我們[於 2024 年 12 月將【MDN 課程】合併到學習專區](/zh-TW/docs/Learn_web_development/Changelog)。
+然而，我們很快收到反映，使用者認為 MDN 上擁有兩個學習資源令人困擾：課程/學習途徑在一處，學習內容卻在另一處。於是，我們[於 2024 年 12 月將 MDN 課程合併到學習專區](/zh-TW/docs/Learn_web_development/Changelog)。
 
 ## 目標受眾
 
@@ -43,14 +43,14 @@ l10n:
 
 教育工作者在為網路相關大學學位、大學課程、學校程式設計課程或類似課程創建教學計劃、單元和評量規範時，可將本內容用作指南。達成我們文章中的學習目標，有助於確保課程教授當前最新技術與最佳實踐，並避免不良實踐與過時資訊。
 
-要瞭解更多資訊，請參閱我們的【[教育工作者導向資源](/zh-TW/docs/Learn_web_development/Educators)】頁面。
+要瞭解更多資訊，請參閱我們的[教育工作者導向資源](/zh-TW/docs/Learn_web_development/Educators)頁面。
 
 > [!NOTE]
-> 完整的 MDN【學習該如何開發 Web】課程以方便的 PDF 格式提供，供你的學生與同事使用。[下載課程表](https://github.com/mdn/curriculum/releases/latest/download/MDN-Curriculum.pdf)。
+> 完整的 MDN 學習該如何開發 Web 課程以方便的 PDF 格式提供，供你的學生與同事使用。[下載課程表](https://github.com/mdn/curriculum/releases/latest/download/MDN-Curriculum.pdf)。
 
 ## 範圍
 
-術語 _前端開發人員（front-end developer）_ 有時顯得模棱兩可；它對不同人可能代表不同意思，而在前端開發者有可能被期望完成各式各樣的任務。
+術語*前端開發人員*（front-end developer）有時顯得模棱兩可；它對不同人可能代表不同意思，而在前端開發者有可能被期望完成各式各樣的任務。
 
 ### 涵蓋內容
 
@@ -83,7 +83,7 @@ l10n:
 - 後端語言/平台的詳盡內容。我們的確提供了 [Node.js（Express）](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)和 [Python（Django）](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django)的簡要介紹，因為它對每個網路開發者瞭解 HTTP 和伺服器端技術的工作原理很有幫助。但是，我們並未提供橫跨多個平台的詳盡內容，因為這將超出 MDN 的範疇。
 - 深入覆蓋傳統關係型資料庫（例如 [MySQL](https://dev.mysql.com/doc/) 或 [Postgres](https://www.postgresql.org/)）和其它伺服器端資料儲存（例如 [MongoDB](https://www.mongodb.com/) 或 [Google Cloud Datastore](https://cloud.google.com/datastore/) 等雲端資料庫）。我們在伺服器端網站程式設計模組中簡要介紹此類技術。
 - 深入探討 DevOps 主題，例如用於配置與自動化的雲端平臺（例如 [Amazon AWS](https://aws.amazon.com/)、[Google Cloud Platform](https://console.cloud.google.com/) 和 [Microsoft Azure](https://azure.microsoft.com/)）和容器化工具（例如 [Kubernetes](https://kubernetes.io/) 和 [Docker](https://www.docker.com/)）。我們略微提及一些被認為屬於 DevOps 範疇的工具，例如 GitHub 及自動化測試工具，但這些工具與前端開發人員領域有著明顯交叉。
-- 超出【[開發人員導向設計](/zh-TW/docs/Learn_web_development/Core/Design_for_developers)】講概述範圍的圖形設計。
+- 超出[開發人員導向設計](/zh-TW/docs/Learn_web_development/Core/Design_for_developers)講概述範圍的圖形設計。
 - 與職位相關的技能，例如產品和計劃管理（例如組織、研究與規劃）。
 
 ## 歸屬
@@ -95,9 +95,9 @@ l10n:
   ```html
   <p>
     此課程基於
-    <a href="https://developer.mozilla.org/zh-TW/curriculum/"
-      >MDN【學習該如何開發 Web】</a
-    >.
+    <a href="https://developer.mozilla.org/en-US/curriculum/"
+      >MDN 學習該如何開發 Web</a
+    >。
   </p>
   ```
 
@@ -118,7 +118,7 @@ l10n:
 
 #### MDN 如何知道 Scrimba 的課程是高品質的且遵循最佳實踐？
 
-在我們開始與他們討論合作夥伴關係之前，Scrimba 便已享有盛譽。然而，我們並非僅僅聽信社群。我們對 Scrimba 的【[前端開發人員職涯（FDCP）](https://v2.scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn)】進行了廣泛審查，並提供相關改進建議，主要著重在涵蓋更多最佳實踐內容與貼近我們的[核心模組](/zh-TW/docs/Learn_web_development/Core)。Scrimba 採納了我們所有的回饋，如今 FDCP 甚至比以前更好了。由於現在它符合我們的核心課程內容，我們相信它能與 MDN 的標準保持一致。
+在我們開始與他們討論合作夥伴關係之前，Scrimba 便已享有盛譽。然而，我們並非僅僅聽信社群。我們對 Scrimba 的[前端開發人員職涯（FDCP）](https://v2.scrimba.com/the-frontend-developer-career-path-c0j:details?via=mdn)進行了廣泛審查，並提供相關改進建議，主要著重在涵蓋更多最佳實踐內容與貼近我們的[核心模組](/zh-TW/docs/Learn_web_development/Core)。Scrimba 採納了我們所有的回饋，如今 FDCP 甚至比以前更好了。由於現在它符合我們的核心課程內容，我們相信它能與 MDN 的標準保持一致。
 
 #### MDN 是否與 Scrimba 共用用戶資料？
 
@@ -130,8 +130,8 @@ l10n:
 
 Scrimba 有很多內容都需要付費訂閱，但他們也提供了幾門註冊後即可免費獲得的完整課程。
 
-值得一提的是，Scrimba 課程並非 MDN【學習該如何開發 Web】所必需的——對於想付費獲得涵蓋我們核心課程的結構化課堂的人來說，這是一種升級。你仍可閱讀我們的文章來免費了解我們所有的學習目標。
+值得一提的是，Scrimba 課程並非 MDN 學習該如何開發 Web 所必需的——對於想付費獲得涵蓋我們核心課程的結構化課堂的人來說，這是一種升級。你仍可閱讀我們的文章來免費了解我們所有的學習目標。
 
-#### 完成 Scrimba 的【前端開發人員職涯】能否獲得證書？
+#### 完成 Scrimba 的前端開發人員職涯能否獲得證書？
 
-是的，當你完成了【前端開發人員職涯】的所有主題，就能獲得結業證書來展示給潛在雇主看或加到你的履歷裡。參見【[我能在哪找到我的結業證書？](https://forum.scrimba.com/t/where-can-i-find-my-completion-certificate/43?via=mdn)】以獲取更多資訊。
+是的，當你完成了前端開發人員職涯的所有主題，就能獲得結業證書來展示給潛在雇主看或加到你的履歷裡。參見[我能在哪找到我的結業證書](https://forum.scrimba.com/t/where-can-i-find-my-completion-certificate/43?via=mdn)以獲取更多資訊。

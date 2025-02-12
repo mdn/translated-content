@@ -1,6 +1,5 @@
 ---
 title: 設計與網頁親和力
-short-title: 設計與網頁親和力
 slug: Learn_web_development/Howto/Design_and_accessibility
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc

@@ -1,6 +1,5 @@
 ---
 title: 如何解決常見問題
-short-title: 如何解決常見問題
 slug: Learn_web_development/Howto
 l10n:
   sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
