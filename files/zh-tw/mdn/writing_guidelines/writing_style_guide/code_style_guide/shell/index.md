@@ -1,6 +1,5 @@
 ---
 title: Shell 提示字程式碼範例寫作指南
-short-title: Shell 範例寫作指南
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 l10n:
   sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
