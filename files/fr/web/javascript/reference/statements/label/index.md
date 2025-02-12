@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/label
 
 Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec les instructions {{jsxref("Instructions/break", "break")}} ou {{jsxref("Instructions/continue", "continue")}}. Un label permet d'identifier une instruction avec un identifiant pour y faire référence plus tard.
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
 
 > [!NOTE]
 > Les boucles ou les blocs étiquetés sont très rares et on peut généralement utiliser des appels de fonction plutôt que des sauts de boucle.

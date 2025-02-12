@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 
 La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.
 
-{{EmbedInteractiveExample("pages/js/string-touppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toUpperCase()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toUpperCase());
+// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+```
 
 ## Syntaxe
 

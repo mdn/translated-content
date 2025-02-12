@@ -10,7 +10,22 @@ La méthode **`call()`** réalise un appel à une fonction avec une valeur `this
 > [!NOTE]
 > Bien que la syntaxe de cette fonction ressemble à celle de {{jsxref("Function.apply", "apply()")}}, la différence fondamentale réside dans le fait que `call()` accepte **une liste d'arguments**, tandis que la méthode `apply()` accepte **un unique tableau d'arguments**.
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## Syntaxe
 

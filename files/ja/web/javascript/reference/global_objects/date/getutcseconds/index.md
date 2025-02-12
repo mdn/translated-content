@@ -9,7 +9,14 @@ l10n:
 
 **`getUTCSeconds()`** メソッドは、協定世界時に基づき、指定された日時の「秒」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+
+console.log(moonLanding.getUTCSeconds());
+// Expected output: 4
+```
 
 ## 構文
 

@@ -9,7 +9,20 @@ l10n:
 
 **`getUTCDay()`** メソッドは、協定世界時に基づき、指定された日時の「曜日」を返します。0 は日曜日を表します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcday.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCDay()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+// Tuesday
+console.log(date1.getUTCDay());
+// Expected output: 2
+
+// Wednesday
+console.log(date2.getUTCDay());
+// Expected output: 3
+```
 
 ## 構文
 

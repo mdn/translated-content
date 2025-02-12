@@ -9,7 +9,20 @@ l10n:
 
 **`Math.max()`** 関数は、入力引数として与えられた 0 個以上の数値のうち最大の数を返します。引数がなかった場合は -{{jsxref("Infinity")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/math-max.html")}}
+{{InteractiveExample("JavaScript Demo: Math.max()")}}
+
+```js interactive-example
+console.log(Math.max(1, 3, 2));
+// Expected output: 3
+
+console.log(Math.max(-1, -3, -2));
+// Expected output: -1
+
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1));
+// Expected output: 3
+```
 
 ## 構文
 

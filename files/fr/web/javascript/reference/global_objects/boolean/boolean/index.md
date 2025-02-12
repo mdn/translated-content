@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 
 Le **constructeur `Boolean()`** permet de créer des objets [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
 
-{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
+
+```js interactive-example
+const flag = new Boolean();
+
+console.log(flag);
+// Expected output: false
+```
 
 ## Syntaxe
 

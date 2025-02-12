@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/size
 
 L'accesseur **`size`** est une propriété renvoyant le nombre d'éléments d'un objet {{jsxref("Map")}}.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", "alpha");
+map1.set("b", "beta");
+map1.set("g", "gamma");
+
+console.log(map1.size);
+// Expected output: 3
+```
 
 ## Description
 

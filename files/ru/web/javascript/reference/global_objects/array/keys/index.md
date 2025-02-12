@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 
 Метод **`keys()`** возвращает новый **итератор массива** **`Array Iterator`**, содержащий ключи каждого индекса в массиве.
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
 
 ## Синтаксис
 

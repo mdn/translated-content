@@ -9,7 +9,16 @@ l10n:
 
 **`Math.LOG2E`** プロパティは 2 を底とした [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) の対数、約 1.442 を表します。
 
-{{EmbedInteractiveExample("pages/js/math-log2e.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.log2e()", "shorter")}}
+
+```js interactive-example
+function getLog2e() {
+  return Math.LOG2E;
+}
+
+console.log(getLog2e());
+// Expected output: 1.4426950408889634
+```
 
 ## Value
 

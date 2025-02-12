@@ -9,7 +9,16 @@ l10n:
 
 **`getDay()`** メソッドは、地方時に基づき、指定された日付の曜日を返します。 0 は日曜日を表します。「日」を取得する方法は {{jsxref("Date.prototype.getDate()")}} をご覧ください。
 
-{{EmbedInteractiveExample("pages/js/date-getday.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getDay()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("August 19, 1975 23:15:30");
+const day1 = birthday.getDay();
+// Sunday - Saturday : 0 - 6
+
+console.log(day1);
+// Expected output: 2
+```
 
 ## 構文
 

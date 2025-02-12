@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 La méthode **`findIndex()`** renvoie l'**index** du **premier élément** du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1.
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **valeur** (et non l'index) d'un des éléments trouvés.
 

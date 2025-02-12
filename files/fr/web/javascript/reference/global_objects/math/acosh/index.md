@@ -9,7 +9,21 @@ La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.El
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-acosh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+
+```js interactive-example
+console.log(Math.acosh(0.999999999999));
+// Expected output: NaN
+
+console.log(Math.acosh(1));
+// Expected output: 0
+
+console.log(Math.acosh(2));
+// Expected output: 1.3169578969248166
+
+console.log(Math.acosh(2.5));
+// Expected output: 1.566799236972411
+```
 
 ## Syntaxe
 

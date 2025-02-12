@@ -9,7 +9,22 @@ l10n:
 
 **`Number.NEGATIVE_INFINITY`** プロパティは負の無限大を表す値です。
 
-{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}
+{{InteractiveExample("JavaScript Demo: Number.NEGATIVE_INFINITY")}}
+
+```js interactive-example
+function checkNumber(smallNumber) {
+  if (smallNumber === Number.NEGATIVE_INFINITY) {
+    return "Process number as -Infinity";
+  }
+  return smallNumber;
+}
+
+console.log(checkNumber(-Number.MAX_VALUE));
+// Expected output: -1.7976931348623157e+308
+
+console.log(checkNumber(-Number.MAX_VALUE * 2));
+// Expected output: "Process number as -Infinity"
+```
 
 ## 値
 

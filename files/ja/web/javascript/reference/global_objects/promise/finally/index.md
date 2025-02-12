@@ -11,7 +11,30 @@ l10n:
 
 これによって、プロミスの {{jsxref("Promise/then", "then()")}} ハンドラーと {{jsxref("Promise/catch", "catch()")}} ハンドラーでコードが重複することを避けることができます。
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## 構文
 

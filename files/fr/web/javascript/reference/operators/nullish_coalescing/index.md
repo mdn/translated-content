@@ -9,7 +9,17 @@ L'**opérateur de coalescence des nuls** (`??`), est un opérateur logique qui r
 
 Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Operators), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossary/Falsy) qui n'est ni `null`, ni `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Syntaxe
 

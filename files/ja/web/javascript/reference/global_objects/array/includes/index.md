@@ -9,7 +9,22 @@ l10n:
 
 **`includes()`** は {{jsxref("Array")}} インスタンスのメソッドで、特定の要素が配列に含まれているかどうかを `true` または `false` で返します。
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## 構文
 

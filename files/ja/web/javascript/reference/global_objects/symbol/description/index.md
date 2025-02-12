@@ -9,7 +9,21 @@ l10n:
 
 **`description`** は {{JSxRef("Symbol")}} 値のアクセサープロパティで、このシンボルの説明を格納した文字列を返し、シンボルに説明がない場合は `undefined` を返します。
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+
+```js interactive-example
+console.log(Symbol("desc").description);
+// Expected output: "desc"
+
+console.log(Symbol.iterator.description);
+// Expected output: "Symbol.iterator"
+
+console.log(Symbol.for("foo").description);
+// Expected output: "foo"
+
+console.log(`${Symbol("foo").description}bar`);
+// Expected output: "foobar"
+```
 
 ## 解説
 

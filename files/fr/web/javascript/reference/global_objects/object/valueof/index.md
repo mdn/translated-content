@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 La méthode **`valueOf()`** renvoie la valeur primitive d'un objet donné.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## Syntaxe
 

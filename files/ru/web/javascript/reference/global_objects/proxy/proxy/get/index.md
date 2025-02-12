@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 
 Метод **`handler.get()`** является ловушкой для получения значения свойства.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  secret: "easily scared",
+  eyeCount: 4,
+};
+
+const handler1 = {
+  get: function (target, prop, receiver) {
+    if (prop === "secret") {
+      return `${target.secret.substring(0, 4)} ... shhhh!`;
+    }
+    return Reflect.get(...arguments);
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(proxy1.eyeCount);
+// Expected output: 4
+
+console.log(proxy1.secret);
+// Expected output: "easi ... shhhh!"
+```
 
 ## Syntax
 

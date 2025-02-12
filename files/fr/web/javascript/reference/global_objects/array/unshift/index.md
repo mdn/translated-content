@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 
 La méthode **`unshift()`** ajoute un ou plusieurs éléments au début d'un tableau et renvoie la nouvelle longueur du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## Syntaxe
 

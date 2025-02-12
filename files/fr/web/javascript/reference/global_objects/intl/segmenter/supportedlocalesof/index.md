@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 
 La méthode **`Intl.Segmenter.supportedLocalesOf()`** renvoie un tableau contenant les locales, parmi celles fournies en argument, qui sont prises en charge sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter.supportedLocalesOf")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup", granularity: "string" };
+
+console.log(Intl.Segmenter.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## Syntaxe
 

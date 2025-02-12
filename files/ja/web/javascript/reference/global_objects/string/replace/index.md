@@ -9,7 +9,18 @@ l10n:
 
 **`replace()`** は {{jsxref("String")}} 値のメソッドで、`pattern` に一致する文字列の一部またはすべてを `replacement` で置き換えた新しい文字列を返します。`pattern` には文字列または正規表現 ({{jsxref("RegExp")}}) を指定することができ、 `replacement` には文字列または一致するごとに呼び出される関数を指定することができます。`pattern` が文字列の場合、最初に一致した箇所のみを置き換えます。元の文字列は変更されません。
 
-{{EmbedInteractiveExample("pages/js/string-replace.html")}}
+{{InteractiveExample("JavaScript Demo: String.replace()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replace("Ruth's", "my"));
+// Expected output: "I think my dog is cuter than your dog!"
+
+const regex = /Dog/i;
+console.log(paragraph.replace(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your dog!"
+```
 
 ## 構文
 

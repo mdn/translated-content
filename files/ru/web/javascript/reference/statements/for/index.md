@@ -9,7 +9,18 @@ slug: Web/JavaScript/Reference/Statements/for
 
 Оператор **for** создаёт цикл, состоящий из трех необязательных выражений, заключенных в круглые скобки и разделенных точкой с запятой, за которыми следует инструкция (часто [блок инструкций](/ru/docs/Web/JavaScript/Reference/Statements/block)), которая должна выполняться в цикле.
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## Синтаксис
 

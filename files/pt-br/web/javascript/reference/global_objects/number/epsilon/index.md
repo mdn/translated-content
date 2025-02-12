@@ -9,7 +9,19 @@ A propriedade **`Number.EPSILON`** representa a diferença entre 1 e o menor pon
 
 Você não tem que criar um objeto {{jsxref("Number")}} para acessar esta propriedade estática (use `Number.EPSILON`).
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// Expected output: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// Expected output: true
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Descrição
 

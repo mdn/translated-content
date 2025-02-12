@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 
 La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/typedarray-entries.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const eArr = uint8.entries();
+
+eArr.next();
+eArr.next();
+
+console.log(eArr.next().value);
+// Expected output: Array [2, 30]
+```
 
 ## Syntaxe
 

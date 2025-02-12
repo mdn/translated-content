@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 
 Le **constructeur `Function()`** permet de créer un nouvel **objet** `Function`. Appeler le constructeur directement permet de créer des fonctions de façon dynamique, mais souffre des mêmes problèmes de sécurité et de performance, néanmoins dans une moindre mesure, que [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, à la différence de `eval()`, le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée locale.
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+
+```js interactive-example
+const sum = new Function("a", "b", "return a + b");
+
+console.log(sum(2, 6));
+// Expected output: 8
+```
 
 ## Syntaxe
 

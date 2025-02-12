@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 O método `forEach()` executa uma dada função em cada elemento de um array.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Sintaxe
 

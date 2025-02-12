@@ -9,7 +9,19 @@ l10n:
 
 **`setMilliseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を設定します。
 
-{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setMilliseconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.getMilliseconds());
+// Expected output: 0
+
+event.setMilliseconds(456);
+
+console.log(event.getMilliseconds());
+// Expected output: 456
+```
 
 ## 構文
 

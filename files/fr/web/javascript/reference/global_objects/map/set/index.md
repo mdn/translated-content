@@ -9,7 +9,18 @@ l10n:
 
 La méthode **`set()`** ajoute ou met à jour un élément avec une `clé` et une `valeur` données à un objet `Map`.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Syntaxe
 

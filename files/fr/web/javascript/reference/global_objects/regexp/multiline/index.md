@@ -7,7 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 
 La propriété **`multiline`** indique si le drapeau (_flag_) "`m`" a été utilisé ou non pour l'expression rationnelle. `multiline` est une propriété liée à l'instance, accessible en lecture seule.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.multiline", "taller")}}
+
+```js interactive-example
+const regex1 = new RegExp("^football");
+const regex2 = new RegExp("^football", "m");
+
+console.log(regex1.multiline);
+// Expected output: false
+
+console.log(regex2.multiline);
+// Expected output: true
+
+console.log(regex1.test("rugby\nfootball"));
+// Expected output: false
+
+console.log(regex2.test("rugby\nfootball"));
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 

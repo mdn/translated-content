@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 Объект **`Promise`** используется для отложенных и асинхронных вычислений.
 
-{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Promise Constructor")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("foo");
+  }, 300);
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "foo"
+});
+
+console.log(promise1);
+// Expected output: [object Promise]
+```
 
 ## Синтаксис
 

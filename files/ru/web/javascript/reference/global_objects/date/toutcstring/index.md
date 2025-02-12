@@ -11,7 +11,14 @@ l10n:
 
 Метод **`toUTCString()`** экземпляров {{jsxref("Date")}} возвращает строку, представляющую дату в формате [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1), отрицательные значения допускаются. Временная зона всегда UTC. `toGMTString()` является синонимом этого метода.
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toUTCString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("14 Jun 2017 00:00:00 PDT");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+```
 
 ## Синтаксис
 

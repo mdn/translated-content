@@ -11,7 +11,17 @@ l10n:
 
 При сравнении большого количества строк, например при сортировке больших массивов, лучше создать объект {{jsxref("Intl.Collator")}} и использовать предоставляемый им метод {{jsxref("Intl/Collator/compare", "compare()")}}.
 
-{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
+{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+
+```js interactive-example
+const a = "réservé"; // With accents, lowercase
+const b = "RESERVE"; // No accents, uppercase
+
+console.log(a.localeCompare(b));
+// Expected output: 1
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+// Expected output: 0
+```
 
 ## Синтаксис
 

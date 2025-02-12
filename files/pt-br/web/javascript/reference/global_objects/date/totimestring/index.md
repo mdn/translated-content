@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 
 O método **`toTimeString()`** retorna uma porção de tempo de um objeto {{jsxref("Date")}} de forma legível para um ser humano em Inglês Americano.
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toTimeString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Sintaxe
 

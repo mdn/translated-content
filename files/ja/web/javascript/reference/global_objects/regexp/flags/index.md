@@ -9,7 +9,17 @@ l10n:
 
 **`flags`** は {{jsxref("RegExp")}} インスタンスのプロパティで、現在の正規表現オブジェクトの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)から成る文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}
+
+```js interactive-example
+// Outputs RegExp flags in alphabetical order
+
+console.log(/foo/gi.flags);
+// Expected output: "gi"
+
+console.log(/bar/muy.flags);
+// Expected output: "muy"
+```
 
 ## 解説
 

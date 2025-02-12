@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 La méthode **`toLocaleLowerCase()`** renvoie la chaîne de caractères qui appelle la méthode en une chaîne de caractères représentées en minuscules, en tenant compte des correspondances de caractères propres aux différentes locales.
 
-{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+
+```js interactive-example
+const dotted = "İstanbul";
+
+console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
+// Expected output: "i̇stanbul"
+
+console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
+// Expected output: "istanbul"
+```
 
 ## Syntaxe
 

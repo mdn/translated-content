@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 
 L'opérateur d'affectation après soustraction (`-=`) calcule la soustraction de l'opérande gauche par l'opérande droit puis affecte le résultat à la variable représentée par l'opérande gauche.
 
-{{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a -= 3));
+// Expected output: -1
+
+console.log((a -= "Hello"));
+// Expected output: NaN
+```
 
 ## Syntaxe
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/break
 
 L'instruction **`break`** permet de terminer la boucle en cours ou l'instruction {{jsxref("Instructions/switch", "switch")}} ou {{jsxref("Instructions/label", "label")}} en cours et de passer le contrôle du programme à l'instruction suivant l'instruction terminée.
 
-{{EmbedInteractiveExample("pages/js/statement-break.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+
+```js interactive-example
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+
+console.log(i);
+// Expected output: 3
+```
 
 ## Syntaxe
 

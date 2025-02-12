@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 
 La propriété **`ignoreCase`** indique si le drapeau (_flag_) "`i`" est utilisé ou non pour cette expression rationnelle. `ignoreCase` est une propriété accessible en lecture seule d'une instance d'expression rationnelle donnée.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-ignorecase.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo");
+const regex2 = new RegExp("foo", "i");
+
+console.log(regex1.test("Football"));
+// Expected output: false
+
+console.log(regex2.ignoreCase);
+// Expected output: true
+
+console.log(regex2.test("Football"));
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 
