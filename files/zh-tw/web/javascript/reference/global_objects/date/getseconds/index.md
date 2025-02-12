@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 
 **`getSeconds()`** 方法基於本地時區回傳指定日期的秒數。
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getSeconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## 語法
 
