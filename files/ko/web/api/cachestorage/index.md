@@ -170,4 +170,4 @@ try {
 - [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
-- [Private Browsing / Incognito modes](/ko/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)
+- [Private Browsing / Incognito modes](/ko/docs/Web/API/Web_Storage_API#사생활_보호_시크릿_모드)
