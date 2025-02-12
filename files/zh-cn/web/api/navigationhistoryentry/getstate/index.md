@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-{{domxref("NavigationHistoryEntry")}} 接口的 **`getState()`** 方法返回与此历史记录条目相关的开发人员提供的状态的克隆。
+{{domxref("NavigationHistoryEntry")}} 接口的 **`getState()`** 方法返回由开发人员提供且与当前历史记录条目相关联的状态的克隆。
 
 ## 语法
 
