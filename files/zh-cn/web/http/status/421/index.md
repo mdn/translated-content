@@ -28,7 +28,7 @@ GET / HTTP/1.1
 Host: abc.example.com
 ```
 
-在诸如通配符证书（`*.example.com`）且连接被多个域名（`abc.example.com`、`def.example.com`）复用时，服务器可能会返回 421 响应：
+在使用了通配符证书（`*.example.com`）且连接复用于多个域名（`abc.example.com`、`def.example.com`）等情况下，服务器可能会返回 421 响应：
 
 ```http
 HTTP/1.1 421 Misdirected Request
