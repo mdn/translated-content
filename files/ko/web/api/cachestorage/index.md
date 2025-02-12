@@ -100,6 +100,7 @@ self.addEventListener("fetch", (event) => {
 ```
 
 다음 코드 스니펫은 서비스 워커 컨텍스트 외부에서 API를 사용하는 방법을 보여주며, `await` 연산자를 사용하여 훨씬 가독성이 높은 코드를 작성하는 예시입니다.
+
 ```js
 // 캐시에서 데이터를 가져오되, 없으면 네트워크에서 가져옵니다.
 async function getData() {
@@ -161,6 +162,7 @@ try {
 {{Specifications}}
 
 ## 브라우저 호환성
+
 {{Compat}}
 
 ## 같이 보기
