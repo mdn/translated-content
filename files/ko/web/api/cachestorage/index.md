@@ -20,22 +20,22 @@ l10n:
 
 윈도우에서는 {{domxref("Window.caches")}} 속성을, 워커에서는 {{domxref("WorkerGlobalScope.caches")}} 속성을 통해 `CacheStorage` 에 접근할 수 있습니다.
 
-> **Note:** 신뢰할 수 없는 출처(즉, HTTPS를 사용하지 않는 출처)에서는 `CacheStorage`가 항상 `SecurityError`로 거부됩니다(이 정의는 향후 더 복잡해질 수 있습니다). Firefox에서 테스트할 경우, Firefox DevTools 옵션/설정 메뉴에서 **Enable Service Workers over HTTP (when toolbox is open)** 옵션을 활성화하여 이를 우회할 수 있습니다. 또한, `CacheStorage`는 파일 시스템 접근이 필요하기 때문에 Firefox의 개인 모드에서 사용할 수 없을 수도 있습니다.
+> [!NOTE] 신뢰할 수 없는 출처(즉, HTTPS를 사용하지 않는 출처)에서는 `CacheStorage`가 항상 `SecurityError`로 거부됩니다(이 정의는 향후 더 복잡해질 수 있습니다). Firefox에서 테스트할 경우, Firefox DevTools 옵션/설정 메뉴에서 **Enable Service Workers over HTTP (when toolbox is open)** 옵션을 활성화하여 이를 우회할 수 있습니다. 또한, `CacheStorage`는 파일 시스템 접근이 필요하기 때문에 Firefox의 개인 모드에서 사용할 수 없을 수도 있습니다.
 
-> **Note:** {{domxref("CacheStorage.match()")}} 는 편의 메서드입니다. 캐시 항목과 일치하는 기능은 {{domxref("CacheStorage.keys()")}} 로부터 캐시 이름 배열을 반환하고, 각 캐시를 {{domxref("CacheStorage.open()")}} 으로 연 다음, 원하는 항목을 {{domxref("Cache.match()")}} 으로 일치시킴으로써 구현할 수 있습니다.
+> [!NOTE] {{domxref("CacheStorage.match()")}} 는 편의 메서드입니다. 캐시 항목과 일치하는 기능은 {{domxref("CacheStorage.keys()")}} 로부터 캐시 이름 배열을 반환하고, 각 캐시를 {{domxref("CacheStorage.open()")}} 으로 연 다음, 원하는 항목을 {{domxref("Cache.match()")}} 으로 일치시킴으로써 구현할 수 있습니다.
 
 ## 인스턴스 메서드
 
 - {{domxref("CacheStorage.match()")}}
-  - : 주어진 {{domxref("Request")}} 가 `CacheStorage` 객체가 추적하는 {{domxref("Cache")}} 객체 중 어느 곳의 키인지 확인하고, 그 일치 항목을 resolve 하는 {{jsxref("Promise")}} 를 반환합니다.
+  - : 주어진 {{domxref("Request")}} 가 `CacheStorage` 객체가 추적하는 {{domxref("Cache")}} 객체 중 어느 곳의 키인지 확인하고, 그 일치 항목을 이행하는 {{jsxref("Promise")}} 를 반환합니다.
 - {{domxref("CacheStorage.has()")}}
-  - : `cacheName` 에 해당하는 {{domxref("Cache")}} 객체가 존재하면 `true`를 resolve 하는 {{jsxref("Promise")}} 를 반환합니다.
+  - : `cacheName` 에 해당하는 {{domxref("Cache")}} 객체가 존재하면 `true`를 이행하는 {{jsxref("Promise")}} 를 반환합니다.
 - {{domxref("CacheStorage.open()")}}
-  - : `cacheName` 에 해당하는 {{domxref("Cache")}} 객체를 resolve 하는 {{jsxref("Promise")}} 를 반환합니다(존재하지 않을 경우 새로운 캐시가 생성됩니다).
+  - : `cacheName` 에 해당하는 {{domxref("Cache")}} 객체를 이행하는 {{jsxref("Promise")}} 를 반환합니다(존재하지 않을 경우 새로운 캐시가 생성됩니다).
 - {{domxref("CacheStorage.delete()")}}
-  - : `cacheName` 에 해당하는 {{domxref("Cache")}} 객체를 찾아, 존재한다면 해당 객체를 삭제한 후 `true`를 resolve 하는 {{jsxref("Promise")}} 를 반환합니다. 만약 해당 객체가 없으면 `false`를 resolve 합니다.
+  - : `cacheName` 에 해당하는 {{domxref("Cache")}} 객체를 찾아, 존재한다면 해당 객체를 삭제한 후 `true`를 이행하는 {{jsxref("Promise")}} 를 반환합니다. 만약 해당 객체가 없으면 `false`를 이행합니다.
 - {{domxref("CacheStorage.keys()")}}
-  - : `CacheStorage` 가 추적하는 모든 이름이 지정된 {{domxref("Cache")}} 객체에 해당하는 문자열 배열을 resolve 하는 {{jsxref("Promise")}} 를 반환합니다. 이 메서드를 사용하여 모든 {{domxref("Cache")}} 객체 목록을 순회할 수 있습니다.
+  - : `CacheStorage` 가 추적하는 모든 이름이 지정된 {{domxref("Cache")}} 객체에 해당하는 문자열 배열을 이행하는 {{jsxref("Promise")}} 를 반환합니다. 이 메서드를 사용하여 모든 {{domxref("Cache")}} 객체 목록을 순회할 수 있습니다.
 
 ## 예제
 
@@ -170,4 +170,4 @@ try {
 - [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
-- [Private Browsing / Incognito modes](/ko/docs/Web/API/Web_Storage_API#사생활_보호_시크릿_모드)
+- [Private Browsing / Incognito modes](/ko/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)
