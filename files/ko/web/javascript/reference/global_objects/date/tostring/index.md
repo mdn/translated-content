@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 
 **`toString()`** 메서드는 {{jsxref("Date")}} 객체의 시간을 문자열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 구문
 

@@ -9,7 +9,16 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`length`** 접근자 속성은 이 형식화 배열의 요소의 수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-length.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.length);
+// Expected output: 6
+```
 
 ## 설명
 

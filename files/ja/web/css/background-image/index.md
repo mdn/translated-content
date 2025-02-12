@@ -28,7 +28,8 @@ background-image: linear-gradient(black, white);
 background-image: url("cat-front.png");
 
 /* 複数の画像 */
-background-image: radial-gradient(circle, #0000 45%, #000f 48%),
+background-image:
+  radial-gradient(circle, #0000 45%, #000f 48%),
   radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
 
 /* グローバル値 */

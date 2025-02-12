@@ -10,7 +10,21 @@ l10n:
 **`Atomics.add()`** 정적 메서드는 배열의 지정된 위치에 지정된 값을 추가하고 해당 위치의 이전 값을 반환합니다.
 이 아토믹 연산은 수정된 값 쓰기가 완료되기 전까지 다른 쓰기가 발생하지 않도록 보장합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-add.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 + 2 = 9
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 9
+```
 
 ## 구문
 

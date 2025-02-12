@@ -11,7 +11,18 @@ l10n:
 2바이트를 읽고 이를 16비트 부호 있는 정수로 해석합니다. 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서
 멀티바이트 값을 가져올 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-getint16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getInt16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setInt16(1, 32767); // Max signed 16-bit integer
+
+console.log(view.getInt16(1));
+// Expected output: 32767
+```
 
 ## 구문
 

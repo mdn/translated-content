@@ -9,7 +9,23 @@ l10n:
 
 {{jsxref("String")}} 값의 **`slice()`** 메서드는 이 문자열의 일부를 추출하여 이를 새로운 문자열로 반환합니다. 원본 문자열은 수정하지 않습니다.
 
-{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.slice()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+console.log(str.slice(31));
+// Expected output: "the lazy dog."
+
+console.log(str.slice(4, 19));
+// Expected output: "quick brown fox"
+
+console.log(str.slice(-4));
+// Expected output: "dog."
+
+console.log(str.slice(-9, -5));
+// Expected output: "lazy"
+```
 
 ## 문법
 

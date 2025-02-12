@@ -1,6 +1,7 @@
 ---
 title: HTML の生成
-slug: Web/API/XSLTProcessor/Generating_HTML
+slug: Web/API/Document_Object_Model/Transforming_with_XSLT
+original_slug: Web/API/XSLTProcessor/Generating_HTML
 l10n:
   sourceCommit: 457f4ed29a1eed6ac732e0982bb4c1631fa0226c
 ---

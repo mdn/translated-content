@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/if...else
 
 **`if` 문**은 지정한 조건이 {{glossary("truthy", "참")}}인 경우 명령문(statement)을 실행합니다. 조건이 {{glossary("falsy", "거짓")}}인 경우 또 다른 명령문이 실행 될 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - If...Else")}}
+
+```js interactive-example
+function testNum(a) {
+  let result;
+  if (a > 0) {
+    result = "positive";
+  } else {
+    result = "NOT positive";
+  }
+  return result;
+}
+
+console.log(testNum(-5));
+// Expected output: "NOT positive"
+```
 
 ## 구문
 
