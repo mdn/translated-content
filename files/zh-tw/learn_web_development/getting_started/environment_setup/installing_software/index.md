@@ -9,7 +9,7 @@ l10n:
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
-在本文中，我們將討論需要哪些軟體來進行簡單的 Web 開發，以及現在需要安裝哪些軟體，包括一個程式碼編輯器和一些現代 Web 瀏覽器。
+在本文中，我們將討論需要哪些軟體來進行簡單的 Web 開發，以及現在需要安裝哪些軟體，包括程式碼編輯器和一些現代 Web 瀏覽器。
 
 <table>
   <tbody>
@@ -24,7 +24,7 @@ l10n:
       <td>
         <ul>
           <li>了解開始所需軟體。</li>
-          <li>安裝程式碼編輯器、一些現代瀏覽器，以及一個本機測試伺服器。</li>
+          <li>安裝程式碼編輯器、一些現代瀏覽器，以及本機測試伺服器。</li>
           <li>探索其他常見應用程式的選項。</li>
         </ul>
       </td>
@@ -45,16 +45,16 @@ l10n:
 > [!NOTE]
 > 大多數瀏覽器會自動安裝更新，並在重新啟動時套用變更。你通常可以在瀏覽器「關於」頁面中檢查更新，例如在 _Firefox_ > _關於 Firefox_ 或 _Chrome_ > _關於 Google Chrome_（macOS 上的 Firefox/Chrome），或在選單圖示 > _說明_ > _關於 Firefox_ 或選單圖示 > _說明_ > _關於 Google Chrome_（Windows 上的 Firefox/Chrome）。
 
-目前，你應該安裝幾款桌面以及行動／其他裝置的瀏覽器，以便測試你的程式碼。你最常會在桌面、筆記型電腦和行動裝置上遇到 Web 瀏覽器，但也可能在平板、手錶和電視等其他裝置上發現 Web 瀏覽器。如果可能，請確保每個渲染引擎系列中至少安裝一款瀏覽器（這樣你就不會只在多個基於相同渲染引擎的瀏覽器中進行測試）：
+目前，你應該安裝幾款桌面以及行動／其他裝置的瀏覽器，以便測試你的程式碼。你最常會在桌面、筆記型電腦和行動裝置上接觸到 Web 瀏覽器，但也可能在平板電腦、手錶和電視等其他裝置上接觸到 Web 瀏覽器。如果可能，請確保每個渲染引擎系列中至少安裝一款瀏覽器（這樣你就不會只在多個基於相同渲染引擎的瀏覽器中進行測試）：
 
 - 桌面瀏覽器：
-  - Chromium： [Google Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/en-us/edge)、[Vivaldi](https://vivaldi.com/)。
-  - Gecko： [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)。
-  - WebKit： [Apple Safari](https://www.apple.com/safari/)。
+  - Chromium：[Google Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-tw/edge)、[Vivaldi](https://vivaldi.com/zh-hant)。
+  - Gecko：[Mozilla Firefox](https://www.mozilla.org/zh-TW/firefox/new/)。
+  - WebKit：[Apple Safari](https://www.apple.com/safari/)。
 - 行動／其他裝置瀏覽器：
-  - Chromium（Android）： [Google Chrome](https://www.google.com/chrome/go-mobile/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/en-us/edge/mobile)、[Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet)、[Vivaldi](https://vivaldi.com/android/)。
-  - Gecko（Android）： [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/mobile/android/)。
-  - WebKit（iOS）： [Apple Safari](https://www.apple.com/safari/)。
+  - Chromium（Android）：[Google Chrome](https://www.google.com/chrome/go-mobile/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-tw/edge/mobile)、[Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet)、[Vivaldi](https://vivaldi.com/zh-hant/android/)。
+  - Gecko（Android）：[Mozilla Firefox](https://www.mozilla.org/zh-TW/firefox/browsers/mobile/android/)。
+  - WebKit（iOS）：[Apple Safari](https://www.apple.com/safari/)。
     > [!NOTE]
     > 上述大部分 Android 瀏覽器在 iOS 上都有版本，但由於蘋果的 App Store 規定，歷史上它們皆使用蘋果的 WebKit 引擎。撰寫本文時，由於規範變更，各瀏覽器正開始推出基於自家渲染引擎的 iOS 版本。請參閱 [Apple 終於允許 iPhone 上運行完整版本的 Chrome 和 Firefox](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu)。
 
@@ -84,8 +84,8 @@ MDN 的學習文章均不要求你自行建立圖形，但部分文章可能要�
 
 例如：
 
-- macOS 附帶一個名為 [Preview](https://support.apple.com/en-gb/guide/preview/welcome/mac) 的工具。該工具主要用於檢視影像和 PDF，但也提供調整大小、旋轉、裁切、註記以及不同檔案類型轉換等實用的影像編輯功能。
-- 內建於 Windows 的[相片應用程式](https://support.microsoft.com/en-gb/windows/manage-photos-and-videos-with-microsoft-photos-app-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b)具備許多類似功能。
+- macOS 附帶一個名為 [Preview](https://support.apple.com/zh-tw/guide/preview/welcome/mac) 的工具。該工具主要用於檢視影像和 PDF，但也提供調整大小、旋轉、裁切、註記以及不同檔案類型轉換等實用的影像編輯功能。
+- 內建於 Windows 的[相片應用程式](https://support.microsoft.com/zh-tw/windows/使用-microsoft相片-應用程式管理相片和影片-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b)具備許多類似功能。
 - [tinypng](https://tinypng.com/) 網站提供免費服務，讓你壓縮 PNG、JPEG 等檔案。這是在準備網站資產時你常需執行的任務。
 
 若你有更進階的圖形編輯／建立需求，你會需要一套完整的圖形軟體套件。就商業產品而言，[Adobe Photoshop](https://www.adobe.com/products/photoshop.html) 長期以來一直是業界標準，而其他熱門產品還包括 [Figma](https://www.figma.com/)、[Sketch](https://www.sketch.com/) 以及 [Canva](https://www.canva.com/)。
@@ -100,10 +100,10 @@ MDN 的學習文章均不要求你自行建立圖形，但部分文章可能要�
 
 ## 網站部署應用程式
 
-當你完成在本機或開發伺服器上的網站或應用程式開發後，你會希望將它部署到遠端 Web 伺服器上，讓用戶可以透過網址存取並瀏覽！
+當你完成在本機或開發伺服器上的網站或應用程式開發後，你會希望將它部署到遠端 Web 伺服器上，讓用戶可以輸入與它相關的網址，並在網路上檢視它！
 
 你可以透過多種方式進行部署，從購買虛擬主機並使用 [SFTP 應用程式](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp)、使用 [GitHub Pages](https://pages.github.com/) 或 [Netlify](https://www.netlify.com/) 等服務，甚至使用 [Glitch](https://glitch.com/) 或 [CodePen](https://codepen.io/) 等方式快速建立展示版與他人分享。
 
-這樣的選項清單可能看起來令人眼花繚亂，但請放心——目前你無需了解任何有關網站發布的知識。我們在後續課程中會多次探討這個主題。你將在[你的第一個網站](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)中獲得實際經驗。
+這樣的選項清單可能看起來令人眼花繚亂，但請放心——目前你無需了解任何有關網站發布的知識。我們在後續課程中會多次探討這個主題。你將在[你的第一個網站](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website)模組中獲得實際經驗。
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
