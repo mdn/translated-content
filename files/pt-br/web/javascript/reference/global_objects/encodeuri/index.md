@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 A função **`encodeURI()`** codifica a [URI](/pt-BR/docs/Glossary/URI) substituindo cada instância de certos caracteres por um, dois, três ou quatro sequências de escape representando a codificação [UTF-8](/pt-BR/docs/Glossary/UTF-8) do caracter (será somente quatro sequências de escape para caracteres compostos de dois caracteres substitutos).
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## Sintaxe
 

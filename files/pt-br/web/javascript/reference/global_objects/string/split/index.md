@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 O método `split()` divide uma {{jsxref ("String")}} em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## Sintaxe
 

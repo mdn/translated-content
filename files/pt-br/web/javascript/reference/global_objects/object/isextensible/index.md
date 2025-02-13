@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 O método **`Object.isExtensible()`** verifica se um objeto pode ser extendido (se é ou não possível adicinar novas propriedades).
 
-{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isExtensible()")}}
+
+```js interactive-example
+const object1 = {};
+
+console.log(Object.isExtensible(object1));
+// Expected output: true
+
+Object.preventExtensions(object1);
+
+console.log(Object.isExtensible(object1));
+// Expected output: false
+```
 
 ## Sintaxe
 
