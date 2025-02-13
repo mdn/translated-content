@@ -1,6 +1,7 @@
 ---
 title: フロー内とフローの外
-slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
+slug: Web/CSS/CSS_display/In_flow_and_out_of_flow
+original_slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 ---
 
 {{CSSRef}}

@@ -1,6 +1,7 @@
 ---
 title: CSS カスタムプロパティ（変数）の使用
-slug: Web/CSS/Using_CSS_custom_properties
+slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+original_slug: Web/CSS/Using_CSS_custom_properties
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

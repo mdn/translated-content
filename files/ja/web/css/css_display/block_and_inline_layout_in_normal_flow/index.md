@@ -1,6 +1,7 @@
 ---
 title: 通常フローでのブロック及びインラインレイアウト
-slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
+slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
+original_slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 ---
 
 {{CSSRef}}
