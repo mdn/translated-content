@@ -7,7 +7,31 @@ slug: Web/HTML/Element/main
 
 HTML **`<main>` 元素**呈现了文档的 {{HTMLElement("body")}} 或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。
 
-{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<header>Gecko facts</header>
+
+<main>
+  <p>
+    Geckos are a group of usually small, usually nocturnal lizards. They are
+    found on every continent except Antarctica.
+  </p>
+
+  <p>
+    Many species of gecko have adhesive toe pads which enable them to climb
+    walls and even windows.
+  </p>
+</main>
+```
+
+```css interactive-example
+header {
+  font:
+    bold 7vw Arial,
+    sans-serif;
+}
+```
 
 - _[内容](/zh-CN/docs/Web/HTML/Content_categories)类别_[Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content), palpable content.
 - _允许内容_ [Flow content](/zh-CN/docs/Web/HTML/Content_categories#flow_content).

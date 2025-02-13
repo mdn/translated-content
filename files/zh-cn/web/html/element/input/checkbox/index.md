@@ -7,7 +7,36 @@ slug: Web/HTML/Element/input/checkbox
 
 **`checkbox`** 类型的 {{htmlelement("input")}} 元素在默认情况下被呈现为激活时被选中（打勾）的方框，就像你在官方的政府文件表格中看到的那样。具体外观取决于浏览器运行的操作系统配置。一般来说，这是一个正方形，但它可能有圆角。复选框允许你在表格中选择单一的数值进行提交（或不提交）。
 
-{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **备注：** [单选按钮](/zh-CN/docs/Web/HTML/Element/input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
 

@@ -7,7 +7,41 @@ slug: Web/HTML/Element/input/range
 
 Элементы {{HTMLElement("input")}} с типом **`range`** позволяют пользователю определить числовое значение, которое должно быть в пределах указанного промежутка. Однако, точное значение должно быть не слишком важно. Обычно они представляет собой слайдер или контроллер, но не текстовое поле как {{HTMLElement('input/number', 'number')}}. Так как этот виджет неточен, его не следует использовать, в случае, если важно установить точное значение .
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Если используемый браузер не поддерживает тип `range`, он будет отображаться как input`{{HTMLElement('input/text', 'text')}}.`
 

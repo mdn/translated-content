@@ -7,7 +7,26 @@ slug: Web/HTML/Element/address
 
 L'élément HTML **`<address>`** indique des informations de contact pour une personne, un groupe de personnes ou une organisation.
 
-{{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+```
+
+```css interactive-example
+a[href^="mailto"]::before {
+  content: "📧 ";
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+```
 
 L'information de contact fournie via cet élément peut prendre n'importe quelle forme pertinente : ce peut être une adresse physique, une URL, une adresse électronique, un numéro de téléphone, des coordonnées géographiques, etc. Ces informations devraient contenir le nom de la personne, du groupe de personne ou de l'organisation à laquelle le contact fait référence.
 

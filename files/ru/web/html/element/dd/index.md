@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dd
 
 **HTML-элемент `<dd>`** (_от англ. Description Details_) предоставляет подробности или определение предшествующего термина ({{HTMLElement("dt")}}) в списке определений ({{HTMLElement("dl")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                                                            |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

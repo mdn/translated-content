@@ -7,7 +7,23 @@ slug: Web/HTML/Element/q
 
 **HTML `<q>`요소**는 둘러싼 텍스트가 짧은 인라인 인용문이라는것을 나타냅니다. 대부분의 브라우저에서는 앞과 뒤에 따옴표를 붙여 표현합니다. `<q>`는 줄 바꿈이 없는 짧은 경우에 적합합니다. 긴 인용문은 {{htmlelement("blockquote")}} 요소를 사용하세요.
 
-{{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  When Dave asks HAL to open the pod bay door, HAL answers:
+  <q
+    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
+    I'm sorry, Dave. I'm afraid I can't do that.
+  </q>
+</p>
+```
+
+```css interactive-example
+q {
+  font-style: italic;
+}
+```
 
 <table class="properties">
   <tbody>

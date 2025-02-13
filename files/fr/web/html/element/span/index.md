@@ -7,7 +7,26 @@ slug: Web/HTML/Element/span
 
 L'élément HTML **`<span>`** est un conteneur générique en ligne (_inline_) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Global_attributes#class) ou [`id`](/fr/docs/Web/HTML/Global_attributes#id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Global_attributes#lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément `<div>` est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est [un élément en ligne](/fr/docs/Glossary/Inline-level_content).
 
-{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Add the <span class="ingredient">basil</span>,
+  <span class="ingredient">pine nuts</span> and
+  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+</p>
+
+<p>
+  Gradually add the <span class="ingredient">olive oil</span> while running the
+  blender slowly.
+</p>
+```
+
+```css interactive-example
+span.ingredient {
+  color: #f00;
+}
+```
 
 ## Attributs
 

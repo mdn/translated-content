@@ -7,7 +7,73 @@ slug: Web/HTML/Element/tr
 
 L'élément HTML **`<tr>`** définit une ligne de cellules dans un tableau. Une ligne peut être constituée d'éléments [`<td>`](/fr/docs/Web/HTML/Element/td) (les données des cellules) et [`<th>`](/fr/docs/Web/HTML/Element/th) (les cellules d'en-têtes).
 
-{{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;tr&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Alien football stars
+  </caption>
+  <tr>
+    <th scope="col">Player</th>
+    <th scope="col">Gloobles</th>
+    <th scope="col">Za'taak</th>
+  </tr>
+  <tr>
+    <th scope="row">TR-7</th>
+    <td>7</td>
+    <td>4,569</td>
+  </tr>
+  <tr>
+    <th scope="row">Khiresh Odo</th>
+    <td>7</td>
+    <td>7,223</td>
+  </tr>
+  <tr>
+    <th scope="row">Mia Oolong</th>
+    <td>9</td>
+    <td>6,219</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+th[scope="row"] {
+  background-color: #d6ecd4;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #eee;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+```
 
 Si on veut qu'une cellule s'étende sur plusieurs lignes/colonnes, on pourra utiliser l'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan) ou [`rowspan`](/fr/docs/Web/HTML/Element/td#attr-rowspan) qui indiquent respectivement le nombre de colonnes / lignes sur lequel s'étendre (la valeur par défaut étant 1).
 

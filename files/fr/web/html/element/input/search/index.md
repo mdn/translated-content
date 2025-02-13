@@ -7,7 +7,28 @@ slug: Web/HTML/Element/input/search
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`search`** permettent de saisir des termes de recherche. Sur le plan fonctionnel, ils sont identiques aux champs de saisie textuels ([`<input type="text">`](/fr/docs/Web/HTML/Element/input/text)), c'est leur mise en forme qui peut être différente selon [les agents utilisateurs](/fr/docs/Glossary/User_agent).
 
-{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q" />
+
+<button>Search</button>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
   <tbody>

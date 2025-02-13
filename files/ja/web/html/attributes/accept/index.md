@@ -9,7 +9,28 @@ l10n:
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accept.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accept", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="movie">Choose a movie to upload:</label>
+
+<input type="file" id="movie" name="movie" accept="video/*" />
+
+<label for="poster">Choose a poster:</label>
+
+<input type="file" id="poster" name="poster" accept="image/png, image/jpeg" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+```
 
 ## 概要
 

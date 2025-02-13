@@ -7,7 +7,29 @@ slug: Web/HTML/Element/small
 
 L'élément HTML **`<small>`** permet de représenter des commentaires ou des textes à écrire en petits caractères (des termes d'un contrat, des mentions relatives au droit d'auteur, etc.) quelle que soit la présentation.
 
-{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  MDN Web Docs is a learning platform for Web technologies and the software that
+  powers the Web.
+</p>
+
+<hr />
+
+<p>
+  <small
+    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+    Generic License.</small
+  >
+</p>
+```
+
+```css interactive-example
+small {
+  font-size: 0.7em;
+}
+```
 
 ## Attributs
 

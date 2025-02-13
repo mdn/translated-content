@@ -7,7 +7,17 @@ slug: Web/HTML/Element/ruby
 
 **HTML `<ruby>` 元素**的意思是旁註標記。旁註標記用於標示東亞文字的發音。
 
-{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 | [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [流內容](/zh-TW/docs/Web/HTML/Content_categories#flow_content)、[段落型內容](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content)、捫及內容 |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |

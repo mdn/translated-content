@@ -7,7 +7,22 @@ slug: Web/HTML/Element/abbr
 
 **Элемент HTML «аббревиатура» (`<abbr>`)** представляет собой аббревиатуру и, опционально, может показывать её расшифровку. Расшифровка записывается в атрибут [`title`](/ru/docs/Web/HTML/Global_attributes#title). Иные значения `title`, кроме расшифровки аббревиатуры не допускаются.
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
+  Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
+  separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 Статья _[Как помечать аббревиатуры и сделать их потянутыми](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/Advanced_text_formatting#%D0%90%D0%B1%D0%B1%D1%80%D0%B5%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D1%8B)_ поможет понять как использовать `<abbr>` и связанные элементы.
 

@@ -9,7 +9,19 @@ l10n:
 
 **`<rt>`** は [HTML](/ja/docs/Web/HTML) の要素で、ルビによる注釈（振り仮名）のルビテキストの部分を指定します。東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 より多くの例については {{HTMLElement("ruby")}} 要素についての記事を参照してください。
 

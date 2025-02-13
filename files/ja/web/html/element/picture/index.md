@@ -11,7 +11,22 @@ l10n:
 
 ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Element/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="
+      https://interactive-examples.mdn.mozilla.net/media/cc0-images/surfer-240-200.jpg
+    "
+    media="(orientation: portrait)" />
+  <img
+    src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/painted-hand-298-332.jpg"
+    alt="" />
+</picture>
+```
 
 どの URL を読み込むかを選択するには、{{Glossary("user agent","ユーザーエージェント")}}はそれぞれの `<source>` 要素の [`srcset`](/ja/docs/Web/HTML/Element/source#srcset), [`media`](/ja/docs/Web/HTML/Element/source#media), [`type`](/ja/docs/Web/HTML/Element/source#type) 属性を調べて、現在のページのレイアウトや表示装置の能力に最も合う画像を検討します。
 

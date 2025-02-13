@@ -9,7 +9,29 @@ slug: Web/HTML/Global_attributes/lang
 
 > **참고:** `lang`의 기본값은 "알 수 없음"이므로 항상 적절한 값을 지정하는 것이 좋습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+
+```html interactive-example
+<p>This paragraph is English, but the language is not specifically defined.</p>
+
+<p lang="en-GB">This paragraph is defined as British English.</p>
+
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+```css interactive-example
+p::before {
+  padding-right: 5px;
+}
+
+[lang="en-GB"]::before {
+  content: "(In British English) ";
+}
+
+[lang="fr"]::before {
+  content: "(In French) ";
+}
+```
 
 특성의 값이 빈 문자열(`lang=""`)일 때의 값은 "알 수 없음"(unknown)이며, 지정한 값이 BCP47의 유효한 값이 아닌 경우 "유효하지 않음"(invalid)입니다.
 

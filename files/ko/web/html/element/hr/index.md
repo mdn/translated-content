@@ -7,7 +7,34 @@ slug: Web/HTML/Element/hr
 
 **HTML `<hr>` 요소**는 이야기 장면 전환, 구획 내 주제 변경 등, 문단 레벨 요소에서 주제의 분리를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+
+<hr />
+
+<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+```
+
+```css interactive-example
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+```
 
 역사적으로 `<hr>`은 가로줄로 표현했습니다. 시각적 브라우저에서도 가로줄로 그려질 수 있지만, 이제 시각 표현에 그치지 않고 의미를 가지게 됐습니다. 따라서 가로줄을 그리고 싶다면 적절한 CSS를 사용해야 합니다.
 

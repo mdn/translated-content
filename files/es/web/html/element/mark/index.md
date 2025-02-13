@@ -7,7 +7,29 @@ slug: Web/HTML/Element/mark
 
 El **Elemento HTML Mark `<mark>`** representa un texto **marcado** o **resaltado** como referencia o anotación, debido a su relevancia o importancia en un contexto particular.
 
-{{EmbedInteractiveExample("pages/tabbed/mark.html", "tabbed-shorter")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Search results for "salamander":</p>
+
+<hr />
+
+<p>
+  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
+  the Pacific Northwest.
+</p>
+
+<p>
+  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
+  other small creatures.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+mark {
+}
+```
 
 <table class="properties">
   <tbody>

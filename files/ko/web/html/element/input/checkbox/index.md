@@ -9,7 +9,36 @@ l10n:
 
 공문서에서 볼 법한 **`checkbox`** 유형의 {{htmlelement("input")}} 요소는 기본적으로 활성화될 시에 체크되는 박스로 렌더링 됩니다. 박스의 정확한 외형은 브라우저가 실행 중인 운영체제의 시스템 구성에 따라 달라질 수 있습니다. 일반적으로는 사각형의 모습이지만, 둥근 모서리를 가질 수도 있습니다. **`checkbox`** 는 폼 안에서 선택된 단일 값들을 제출할 수 있는 기능을 제공합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **참고:** [라디오 버튼](/ko/docs/Web/HTML/Element/input/radio) 은 체크박스와 비슷하지만 중요한 차이점이 하나 있습니다. 여러 라디오 버튼은 하나의 집합으로 그룹화되어 그 안에서 단 하나만 선택될 수 있지만, 체크박스의 경우는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나의 요소에 대한 선택만을 허용하고, 체크박스는 여러 개의 요소가 선택되는 것을 허용합니다.
 

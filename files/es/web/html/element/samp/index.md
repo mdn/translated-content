@@ -7,7 +7,21 @@ slug: Web/HTML/Element/samp
 
 El elemento HTML Sample (**`<samp>`**) se utiliza para incluir texto en línea que representa una muestra (o cita) de la salida de un programa de ordenador. El contenido de esta etiqueta es renderizado generalmente usando la tipografía monoespaciada por defecto del navegador.
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)and send us a pull request.
 

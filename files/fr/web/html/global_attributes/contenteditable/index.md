@@ -7,7 +7,44 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`contenteditable`** est un attribut à valeur contrainte qui indique si l'élément courant doit pouvoir être édité par l'utilisateur ou non. Lorsque c'est le cas, des éléments de l'interface du navigateur (ou de l'agent utilisateur) sont modifiés afin de permettre l'édition.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
+
+```html interactive-example
+<blockquote contenteditable="true">
+  <p>Edit this content to add your own quote</p>
+</blockquote>
+
+<cite contenteditable="true">-- Write your own name here</cite>
+```
+
+```css interactive-example
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+  margin: 16px 0;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+cite {
+  margin: 16px 32px;
+  font-weight: bold;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+[contenteditable="true"] {
+  caret-color: red;
+}
+```
 
 Les valeurs autorisées pour cet attribut sont :
 

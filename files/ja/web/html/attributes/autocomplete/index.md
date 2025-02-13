@@ -12,7 +12,25 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 
 入力値としてテキストまたは数値を取る {{HTMLElement("input")}} 要素、 {{HTMLElement("textarea")}} 要素、 {{HTMLElement("select")}} 要素、 {{HTMLElement("form")}} 要素で利用できます。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="lastName">Last Name:</label>
+<input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+<label for="email">Email:</label>
+<input name="email" id="email" type="email" autocomplete="off" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## 解説
 

@@ -9,7 +9,29 @@ l10n:
 
 **`<small>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表旁注和小字印刷（如版权和法律文本），与其样式的呈现方式无关。默认情况下，它以比其中的文本小一号的字体大小呈现，例如从 `small` 变为 `x-small`。
 
-{{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  MDN Web Docs is a learning platform for Web technologies and the software that
+  powers the Web.
+</p>
+
+<hr />
+
+<p>
+  <small
+    >The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+    Generic License.</small
+  >
+</p>
+```
+
+```css interactive-example
+small {
+  font-size: 0.7em;
+}
+```
 
 ## 属性
 

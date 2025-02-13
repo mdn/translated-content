@@ -7,7 +7,35 @@ slug: Web/HTML/Element/input/url
 
 **`url`** 类型的 {{HTMLElement("input")}} 元素用来让用户输入和编辑 URL。
 
-{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<form>
+  <label for="url">Enter an https:// URL:</label>
+  <input
+    type="url"
+    name="url"
+    id="url"
+    placeholder="https://example.com"
+    pattern="https://.*"
+    size="30"
+    required />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 所输入的值在表单提交前会自动经过验证，以确认它为空，或为一个合法的 URL 格式。{{cssxref(":valid")}} 和 {{cssxref(":invalid")}} CSS 伪类会适当地自动应用，以在视觉上表示当前值是否为一个合法的 URL 值。
 

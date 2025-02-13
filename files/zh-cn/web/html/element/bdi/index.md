@@ -7,7 +7,33 @@ slug: Web/HTML/Element/bdi
 
 **HTML** 双向隔离元素（**`<bdi>`**）告诉浏览器的双向算法将其包含的文本与周围的文本隔离，当网站动态插入一些文本且不知道所插入文本的方向性时，此功能特别有用。
 
-{{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>World wrestling championships</h1>
+
+<ul>
+  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+  <li><span class="name">سما</span>: 3rd place</li>
+  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+  <li><span class="name" dir="auto">سما</span>: 5th place</li>
+</ul>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdi {
+}
+
+.name {
+  color: red;
+}
+```
 
 尽管同样的显示效果可以通过使用 CSS 规则 {{cssxref("unicode-bidi")}}：隔离{{HTMLElement("span")}}或者其他文本格式化元素，但语义信息只能通过\<bdi>元素传递。特别是，当浏览器允许忽略 CSS 样式时，在这种情况下，使用\<bdi>仍然可以保证文本正确显示，而使用 CSS 样式来传递语义时就显得毫无用处。
 

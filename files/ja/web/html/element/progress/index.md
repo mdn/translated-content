@@ -9,7 +9,20 @@ l10n:
 
 **`<progress>`** は [HTML](/ja/docs/Web/HTML) の要素で、タスクの進捗状況を表示します。ふつうはプログレスバーとして表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

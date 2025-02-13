@@ -9,7 +9,27 @@ Los elementos {{HTMLElement("input")}} del tipo **`number`** son usados para per
 
 El navegador puede optar por proveer flechas de pasos para permitir al usuario, usando su ratón o simplemente pulsando con la punta del dedo, incrementar y decrementar el valor.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 En navegadores que no soportan entradas de tipo `number`, una entrada `number` recurre al tipo `text`.
 

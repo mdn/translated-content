@@ -9,7 +9,21 @@ l10n:
 
 **`dir`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素のテキストの書字方向を示します。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
+
+```html interactive-example
+<p dir="rtl">
+  This paragraph is in English but incorrectly goes right to left.
+</p>
+<p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+
+<hr />
+
+<p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
+<p dir="auto">
+  هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.
+</p>
+```
 
 次の値を使用することができます。
 

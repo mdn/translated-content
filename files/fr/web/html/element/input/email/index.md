@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`email`** permettent à une utilisatrice ou un utilisateur de saisir et d'éditer une adresse mail ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) est indiqué, une liste d'adresses mail. La valeur saisie est automatiquement validée afin de vérifier que le champ est vide ou que l'adresse (ou la liste d'adresses) est correcte. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas.
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 La valeur saisie dans le champ est automatiquement validée pour vérifier s'il s'agit d'une chaîne de caractères vide ou d'une adresse mail valide (ou une liste de telles adresses) avant que le formulaire soit envoyé. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont automatiquement appliquées selon la validité des champs afin d'indiquer visuellement si la valeur courante du champ est une adresse mail valide ou non.
 

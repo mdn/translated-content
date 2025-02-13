@@ -7,7 +7,26 @@ slug: Web/HTML/Element/span
 
 **`<span>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個通用的行級容器，用於包裹詞組內容，本身並不代表任何特定含義。它可用於為樣式目的（使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性）對元素進行分組，或因它們共享屬性值（如 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)）而使用。僅在沒有其他語義元素適用時應使用 `<span>`。`<span>` 非常類似於 {{HTMLElement("div")}} 元素，但 {{HTMLElement("div")}} 是一個[塊級元素](/zh-TW/docs/Glossary/Block-level_content)，而 `<span>` 是一個[行級元素](/zh-TW/docs/Glossary/Inline-level_content)。
 
-{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Add the <span class="ingredient">basil</span>,
+  <span class="ingredient">pine nuts</span> and
+  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+</p>
+
+<p>
+  Gradually add the <span class="ingredient">olive oil</span> while running the
+  blender slowly.
+</p>
+```
+
+```css interactive-example
+span.ingredient {
+  color: #f00;
+}
+```
 
 ## 屬性
 

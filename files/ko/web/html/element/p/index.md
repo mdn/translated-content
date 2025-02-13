@@ -9,7 +9,27 @@ slug: Web/HTML/Element/p
 
 문단은 블록 레벨 요소이며, 자신의 닫는 태그(`</p>`) 이전에 다른 블록 레벨 태그가 분석되면 자동으로 닫힙니다. 아래의 "태그 생략" 항목을 참고하세요.
 
-{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Geckos are a group of usually small, usually nocturnal lizards. They are found
+  on every continent except Antarctica.
+</p>
+
+<p>
+  Some species live in houses where they hunt insects attracted by artificial
+  light.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+}
+```
 
 <table class="properties">
   <tbody>

@@ -9,7 +9,39 @@ l10n:
 
 참과 거짓 중 하나의 값을 갖는 **`disabled`** 속성이 있을 경우 해당 요소는 수정하거나 포커스를 맞출 수 없고, 폼을 통해 제출될 수도 없습니다. 사용자는 컨트롤이나 폼 컨트롤의 자손 요소들을 편집하거나 포커스할 수 없습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-disabled.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <label for="name">Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="emp">Employed:</label>
+  <select id="emp" name="emp" disabled>
+    <option>No</option>
+    <option>Yes</option>
+  </select>
+
+  <label for="empDate">Employment Date:</label>
+  <input id="empDate" name="empDate" type="date" disabled />
+
+  <label for="resume">Resume:</label>
+  <input id="resume" name="resume" type="file" />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+```
 
 ## 개요
 

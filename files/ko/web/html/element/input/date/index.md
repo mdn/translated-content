@@ -9,7 +9,33 @@ slug: Web/HTML/Element/input/date
 
 입력 칸의 값은 연, 월, 일을 포함하지만 시간은 포함하지 않습니다. {{HTMLElement("input/time", "time")}}과 {{HTMLElement("input/datetime-local", "datetime-local")}} 입력 유형이 시간과 시간+날짜 조합을 지원합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 입력 UI는 브라우저마다 다릅니다. [브라우저 호환성](#브라우저_호환성)에서 더 자세한 정보를 알아보세요. 날짜 입력 유형을 지원하지 않는 브라우저에서는 우아하게 [`<input type="text">`](/ko/docs/Web/HTML/Element/input/text)로 저하됩니다.
 

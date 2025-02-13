@@ -9,7 +9,21 @@ l10n:
 
 **`<strong>`** [HTML](/ko/docs/Web/HTML) 요소는 강한 중요성, 중대함 혹은 긴급한 내용임을 나타냅니다. 브라우저는 일반적으로 이 내용을 굵은 글씨로 렌더링합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;strong&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  ... the most important rule, the rule you can never forget, no matter how much
+  he cries, no matter how much he begs:
+  <strong>never feed him after midnight</strong>.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+}
+```
 
 ## 특성
 

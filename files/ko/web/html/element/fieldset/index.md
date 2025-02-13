@@ -7,7 +7,36 @@ slug: Web/HTML/Element/fieldset
 
 **HTML `<fieldset>` 요소**는 웹 양식의 여러 컨트롤과 레이블({{htmlelement("label")}})을 묶을 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 위의 예제에서 보듯, `<fieldset>` 요소는 HTML 양식 속에서 그룹을 만들 수 있으며 {{htmlelement("legend")}} 요소로 그룹의 설명을 제공할 수 있습니다. 여러 특성을 지정할 수 있는데, 그 중 중요한 것 하나는 페이지 내 {{htmlelement("form")}} 요소의 `id`를 받을 수 있는 `form` 특성으로, `<form>` 바깥의 `<fieldset>` 요소를 해당 양식에 포함해야 할 때 사용합니다. 다른 하나는 `disabled`로, `<fieldset>`의 모든 콘텐츠를 한 번에 비활성화할 수 있습니다.
 

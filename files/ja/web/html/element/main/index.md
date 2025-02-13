@@ -9,7 +9,31 @@ l10n:
 
 **`<main>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書の {{HTMLElement("body")}} の主要なコンテンツを表します。メインコンテンツ領域は、文書の中心的なトピック、またはアプリケーションの中心的な機能に直接関連する、または展開されたコンテンツで構成されます。
 
-{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<header>Gecko facts</header>
+
+<main>
+  <p>
+    Geckos are a group of usually small, usually nocturnal lizards. They are
+    found on every continent except Antarctica.
+  </p>
+
+  <p>
+    Many species of gecko have adhesive toe pads which enable them to climb
+    walls and even windows.
+  </p>
+</main>
+```
+
+```css interactive-example
+header {
+  font:
+    bold 7vw Arial,
+    sans-serif;
+}
+```
 
 文書には [`hidden`](/ja/docs/Web/HTML/Global_attributes#hidden) 属性が指定されていない `<main>` 要素を 2 つ以上置くことはできません。
 

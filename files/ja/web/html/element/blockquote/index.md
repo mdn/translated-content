@@ -9,7 +9,40 @@ l10n:
 
 **`<blockquote>`** は [HTML](/ja/docs/Web/HTML) 要素で、内包する要素のテキストが引用文であることを示します。通常、字下げして表示されます（整形方法については[注意](#使用上の注意)の項を参照してください）。引用元の URL は `cite` 属性により与えることができ、引用元のテキスト表現は {{HTMLElement("cite")}} 要素を用いて与えることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+
+```css interactive-example
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+```
 
 ## 属性
 

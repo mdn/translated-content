@@ -9,7 +9,21 @@ l10n:
 
 **`<var>`** は [HTML](/ja/docs/Web/HTML) の要素で、数式やプログラムコード内の変数の名前を表します。挙動はブラウザーに依存しますが、通常は現在のフォントのイタリック体を使って表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;var&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where
+  <var>l</var> represents the length, <var>w</var> the width and
+  <var>h</var> the height of the box.
+</p>
+```
+
+```css interactive-example
+var {
+  font-weight: bold;
+}
+```
 
 ## 属性
 

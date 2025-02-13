@@ -9,7 +9,35 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`tel`** 型は、ユーザーに電話番号を入力または編集させるために使用します。 [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) や [`<input type="url">`](/ja/docs/Web/HTML/Element/input/url) とは異なり、送信前に値が特定の書式であると自動的には検証されません。電話番号の書式は世界中で様々だからです。
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 `tel` の入力欄は機能的に標準の `text` 入力欄と同じであるという事実にもかかわらず、便利な用途を提供します。もっとも手っ取り早く表れるのは、モバイルブラウザー — 特に携帯電話のもの — では、電話番号の入力に最適化された専用のキーパッドを表示することがあります。電話番号の専用の入力型を使用すると、カスタム検証を追加して電話番号の扱いをもっと便利にすることができます。
 

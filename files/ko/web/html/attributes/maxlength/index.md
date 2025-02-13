@@ -17,7 +17,39 @@ l10n:
 
 일반적으로 브라우저는 maxlength의 범위보다 더 긴 텍스트를 입력하는 것을 방지하지만, 텍스트의 길이가 maxlength보다 커진 경우에는 {{domxref("ValidityState")}} 객체의 읽기 전용 속성 {{domxref("ValidityState.tooLong", "tooLong")}}이 true가 됩니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-maxlength.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: maxlength", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Product name:</label>
+<input
+  id="name"
+  name="name"
+  type="text"
+  value="Shampoo"
+  minlength="3"
+  maxlength="20"
+  required />
+
+<label for="description">Product description:</label>
+<textarea
+  id="description"
+  name="description"
+  minlength="10"
+  maxlength="40"
+  required></textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid,
+textarea:valid {
+  background-color: palegreen;
+}
+```
 
 ## 예제
 

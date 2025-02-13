@@ -7,7 +7,36 @@ slug: Web/HTML/Element/track
 
 O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/WebVTT_API) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 
-{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="https://mdn.github.io/shared-assets/misc/friday.vtt" />
+  Download the
+  <a
+    href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"
+    >MP4</a
+  >
+  video, and
+  <a href="https://mdn.github.io/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+```
+
+```css interactive-example
+video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

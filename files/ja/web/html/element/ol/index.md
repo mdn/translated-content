@@ -9,7 +9,26 @@ l10n:
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ol>
+  <li>Mix flour, baking powder, sugar, and salt.</li>
+  <li>In another bowl, mix eggs, milk, and oil.</li>
+  <li>Stir both mixtures together.</li>
+  <li>Fill muffin tray 3/4 full.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+```
+
+```css interactive-example
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 属性
 

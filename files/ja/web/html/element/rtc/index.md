@@ -9,7 +9,27 @@ l10n:
 
 **`<rtc>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+    <rbc>
+        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+    </rbc>
+    <rtc xml:lang="en" style="ruby-position: over;">
+        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+    </rtc>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## 属性
 

@@ -9,7 +9,56 @@ l10n:
 
 **`for`** 属性は {{htmlelement("label")}} と {{htmlelement("output")}} で利用できる属性です。 `<label>` 要素上で使用された場合、このラベルが説明するフォーム要素を示します。 `<output>` 要素上で使用された場合、その出力欄で使用される値を表す要素間の関係を明示的に示すことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-for.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: for", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  <label>First Name (no "for" attribute):</label>
+  <input id="first" type="text" value="Jane" />
+</p>
+<p>
+  <label for="last">Last Name (w/ "for" attribute):</label>
+  <input id="last" type="text" value="Doe" />
+</p>
+<p id="result">
+  <strong id="result-label">Full Name:</strong>
+  <output for="first last" aria-labelledby="result-label" id="output"></output>
+</p>
+```
+
+```css interactive-example
+label[for="paragraph"] {
+  color: rebbeccapurple;
+}
+
+#result {
+  text-align: center;
+}
+
+#result-label {
+  font-size: 16pt;
+}
+
+#result-label,
+#output {
+  display: block;
+}
+```
+
+```js interactive-example
+const firstNameEl = document.getElementById("first");
+const lastNameEl = document.getElementById("last");
+const outputEl = document.getElementById("output");
+
+function updateOutput() {
+  const value = `${firstNameEl.value} ${lastNameEl.value}`;
+  outputEl.innerText = value;
+}
+
+updateOutput();
+firstNameEl.addEventListener("input", updateOutput);
+lastNameEl.addEventListener("input", updateOutput);
+```
 
 ## 使用方法
 

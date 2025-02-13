@@ -9,7 +9,26 @@ l10n:
 
 **`<address>`** は [HTML](/ja/docs/Web/HTML) の要素で、この中の HTML が個人、団体、組織の連絡先情報を提供していることを示します。
 
-{{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+```
+
+```css interactive-example
+a[href^="mailto"]::before {
+  content: "📧 ";
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+```
 
 `<address>` 要素の内容で提供される連絡先情報は、その文脈で適切であればどのような形でもよく、必要とされるあらゆる形の連絡先情報（住所、 URL、メールアドレス、電話番号、ソーシャルメディアのアカウント、地理上の座標など）を含めることができます。`<address>` には、連絡先情報が参照する個人、団体、組織の名前を含めてください。
 

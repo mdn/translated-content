@@ -13,7 +13,23 @@ l10n:
 
 オプションの [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性で、略語や頭字語の完全な展開形が存在しない場合に、その展開形を提供することができます。これは、ユーザーエージェントがコンテンツをどのように告知/表示するかのヒントを提供し、同時にすべてのユーザーにその略語が意味していることを知らせます。設定する場合、`title` はこの完全な説明のみを含み、それ以外を含んではいけません。
 
-{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
+  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
+  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
+  layer separate. This is called "separation of concerns."
+</p>
+```
+
+```css interactive-example
+abbr {
+  font-style: italic;
+  color: chocolate;
+}
+```
 
 ## 属性
 

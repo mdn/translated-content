@@ -9,7 +9,19 @@ l10n:
 
 **`<rp>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("ruby")}} 要素によるルビの表示に対応していないブラウザー向けの代替表示用の括弧を提供するために使用します。それぞれ 1 つの `<rp>` 要素で、注釈の文字列を含む {{HTMLElement("rt")}} 要素を囲む開き括弧と閉じ括弧をそれぞれ囲む必要があります。
 
-{{EmbedInteractiveExample("pages/tabbed/rp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## 属性
 

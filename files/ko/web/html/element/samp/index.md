@@ -7,7 +7,21 @@ slug: Web/HTML/Element/samp
 
 **HTML `<samp>` 요소**는 컴퓨터 프로그램 출력의 예시(혹은 인용문)를 나타냅니다. 보통 브라우저의 기본 고정폭 글씨체(보통 Courier, Lucida Console)를 사용해 렌더링합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;samp&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>I was trying to boot my computer, but I got this hilarious message:</p>
+
+<p>
+  <samp>Keyboard not found <br />Press F1 to continue</samp>
+</p>
+```
+
+```css interactive-example
+samp {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>

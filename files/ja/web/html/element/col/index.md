@@ -9,7 +9,67 @@ l10n:
 
 **`<col>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内の列を定義して、すべての一般セルに共通の意味を定義するために使用します。この要素は通常、{{HTMLElement("colgroup")}} 要素内にみられます。
 
-{{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
+{{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<table>
+  <caption>
+    Superheros and sidekicks
+  </caption>
+  <colgroup>
+    <col />
+    <col span="2" class="batman" />
+    <col span="2" class="flash" />
+  </colgroup>
+  <tr>
+    <td></td>
+    <th scope="col">Batman</th>
+    <th scope="col">Robin</th>
+    <th scope="col">The Flash</th>
+    <th scope="col">Kid Flash</th>
+  </tr>
+  <tr>
+    <th scope="row">Skill</th>
+    <td>Smarts, strong</td>
+    <td>Dex, acrobat</td>
+    <td>Super speed</td>
+    <td>Super speed</td>
+  </tr>
+</table>
+```
+
+```css interactive-example
+.batman {
+  background-color: #d7d9f2;
+}
+
+.flash {
+  background-color: #ffe8d4;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
+}
+
+td {
+  text-align: center;
+}
+```
 
 `<col>` では CSS を使用して列にスタイルを設定できますが、列に対して効果があるプロパティは限定されています（[CSS 2.1 仕様書](https://www.w3.org/TR/CSS21/tables.html#columns)をご覧ください）。
 

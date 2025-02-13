@@ -7,7 +7,23 @@ slug: Web/HTML/Element/sub
 
 **HTML** **`<sub>`** 요소는 활자 배치를 아래 첨자로 해야 하는 인라인 텍스트를 지정합니다. 아래 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 아래로 내려 렌더링 합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/sub.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Almost every developer's favorite molecule is
+  C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as
+  "caffeine."
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 <table class="properties">
   <tbody>

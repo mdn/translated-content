@@ -9,7 +9,27 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `typ
 
 Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 > [!NOTE]
 > Si un navigateur ne prend pas en charge le type `number`, le contrôle affiché sera le contrôle standard pour la saisie d'un texte (cf. [`text`](/fr/docs/Web/HTML/Element/input/text)).

@@ -7,7 +7,28 @@ slug: Web/HTML/Global_attributes/id
 
 **`id`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)定义了一个全文档唯一的标识符（ID）。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
+
+```html interactive-example
+<p>A normal, boring paragraph. Try not to fall asleep.</p>
+
+<p id="exciting">The most exciting paragraph on the page. One of a kind!</p>
+```
+
+```css interactive-example
+#exciting {
+  background: linear-gradient(to bottom, #ffe8d4, #f69d3c);
+  border: 1px solid #696969;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 1px black;
+}
+
+#exciting:before {
+  content: "ℹ️";
+  margin-right: 5px;
+}
+```
 
 ## 描述
 

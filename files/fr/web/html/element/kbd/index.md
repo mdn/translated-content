@@ -9,7 +9,32 @@ L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant l
 
 `<kbd>` peut être imbriqué dans diverses combinaisons avec {{HTMLElement("samp")}} (Sample Output) pour représenter diverses formes d'entrée ou d'entrée basées sur des repères visuels.
 
-{{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an
+  MDN page.
+</p>
+```
+
+```css interactive-example
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+```
 
 ## Attributs
 

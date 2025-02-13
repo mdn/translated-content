@@ -9,7 +9,20 @@ l10n:
 
 **`<dfn>`** は [HTML](/ja/docs/Web/HTML) の要素で、定義句や文の文脈の中で定義している用語を示すために用いられます。祖先である {{HTMLElement("p")}} 要素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、または直近の {{HTMLElement("section")}} 要素が用語の定義とみなされます。
 
-{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
+  errors in code or documents.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+dfn {
+}
+```
 
 ## 属性
 

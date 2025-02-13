@@ -7,7 +7,26 @@ slug: Web/HTML/Element/address
 
 **HTML `<address>` 요소**는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/address.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Contact the author of this page:</p>
+
+<address>
+  <a href="mailto:jim@example.com">jim@example.com</a><br />
+  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+```
+
+```css interactive-example
+a[href^="mailto"]::before {
+  content: "📧 ";
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+```
 
 `<address>` 요소의 콘텐츠가 제공하는 연락처 정보는 현재 맥락에 적절한 아무 형태나 취할 수 있으며, 물리적 주소, URL, 이메일 주소, 전화번호, SNS 식별자, 좌표 등 어떠한 정보라도 포함할 수 있습니다. 반드시 포함해야 하는 정보는 연락처가 가리키는 개인, 조직, 단체의 이름입니다.
 

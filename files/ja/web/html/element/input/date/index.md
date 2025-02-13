@@ -11,7 +11,33 @@ l10n:
 
 結果の値には年、月、日が含まれますが、時刻は含まれません。 {{HTMLElement("input/time", "time")}} および {{HTMLElement("input/datetime-local", "datetime-local")}} 入力型は時刻や日付と時刻の入力に対応しています。
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## 値
 

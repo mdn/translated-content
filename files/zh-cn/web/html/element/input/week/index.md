@@ -7,7 +7,33 @@ slug: Web/HTML/Element/input/week
 
 {{HTMLElement("input")}} 类型为 **`week`** 的元素会创建输入字段，以便轻松输入年份以及该年（即第 1 周到第 [52 或 53](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法) 周）的 [ISO 8601 星期数](https://zh.wikipedia.org/zh-cn/ISO_8601#日历星期表示法)
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 相同的功能。
 

@@ -7,7 +7,35 @@ slug: Web/HTML/Element/input/tel
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 Bien que les champs de saisie de numéro de téléphone soient fonctionnellement identiques aux champs de saisie textuels (`<input type="text">`), ils permettent, notamment pour les navigateurs mobiles, de présenter un clavier optimisé pour la saisie d'un numéro de téléphone. L'utilisation d'un tel champ permet également d'appliquer une validation personnalisée de façon ciblée.
 

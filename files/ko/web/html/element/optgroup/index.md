@@ -7,7 +7,30 @@ slug: Web/HTML/Element/optgroup
 
 **HTML `<optgroup>` 요소**는 {{HTMLElement("select")}} 요소의 옵션을 묶을 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+  <optgroup label="Theropods">
+    <option>Tyrannosaurus</option>
+    <option>Velociraptor</option>
+    <option>Deinonychus</option>
+  </optgroup>
+  <optgroup label="Sauropods">
+    <option>Diplodocus</option>
+    <option>Saltasaurus</option>
+    <option>Apatosaurus</option>
+  </optgroup>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 <table class="properties">
   <tbody>

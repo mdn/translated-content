@@ -7,7 +7,23 @@ slug: Web/HTML/Element/a
 
 L'élément HTML **`<a>`** (pour ancre ou _anchor_ en anglais), avec [son attribut `href`](#href), crée un lien hypertexte vers des pages web, des fichiers, des adresses e-mail, des emplacements se trouvant dans la même page, ou tout ce qu'une URL peut adresser. Le contenu de chaque élément `<a>` **doit** indiquer la destination du lien. Si [l'attribut `href`](#href) est présent, appuyer sur la touche entrée en se concentrant sur l'élément `<a>` l'activera.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Attributs
 

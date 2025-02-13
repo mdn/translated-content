@@ -9,7 +9,38 @@ slug: Web/HTML/Element/dt
 
 Последующий элемент {{HTMLElement("dd")}} (_от англ. Description Details)_ предоставляет определение или другой связанный текст, относящийся к термину, указанным с помощью `<dt>`.
 
-{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Please use the following paint colors for the new house:</p>
+
+<dl>
+  <dt>Denim (semigloss finish)</dt>
+  <dd>Ceiling</dd>
+
+  <dt>Denim (eggshell finish)</dt>
+  <dt>Evening Sky (eggshell finish)</dt>
+  <dd>Layered on the walls</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dl {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+dl > dt {
+  font-weight: normal;
+  font-style: oblique;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                                                  |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

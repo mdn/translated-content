@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 **HTML `<form>` 요소**는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 `<form>` 요소를 꾸밀 땐, 모든 {{domxref("HTMLFormElement.elements", "elements")}}의 유효성을 나타내는 CSS {{cssxref(":valid")}}와 {{cssxref(":invalid")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용할 수 있습니다.
 

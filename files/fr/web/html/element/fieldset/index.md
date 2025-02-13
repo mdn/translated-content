@@ -7,7 +7,36 @@ slug: Web/HTML/Element/fieldset
 
 L'élément HTML **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ([`<label>`](/fr/docs/Web/HTML/Element/label)) dans un formulaire HTML.
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Comme on peut le voir dans l'exemple ci-avant, l'élément `<fieldset>` permet de regrouper une partie d'un formulaire HTML et d'associer une légende ([`<legend>`](/fr/docs/Web/HTML/Element/legend)) décrivant ce groupe. Cet élément utilise quelques attributs et notamment `form` dont la valeur correspond à la valeur de l'attribut `id` d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) de la même page. De cette façon, on peut avoir un élément `<fieldset>` qui soit rattaché à un formulaire mais qui ne soit pas imbriqué dans ce formulaire. L'attribut `disabled` permet de désactiver l'élément `<fieldset>` ainsi que l'ensemble de son contenu via une seule valeur.
 

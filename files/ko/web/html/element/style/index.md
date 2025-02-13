@@ -7,7 +7,33 @@ slug: Web/HTML/Element/style
 
 **HTML `<style>` 요소**는 문서나 문서 일부에 대한 스타일 정보를 포함합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
+
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
 
 `<style>` 요소는 문서의 {{htmlelement("head")}} 안에 위치해야 합니다. 그러나, 일반적으로 스타일은 외부 스타일 시트에 작성하고, {{htmlelement("link")}} 요소로 연결하는 편이 좋습니다.
 

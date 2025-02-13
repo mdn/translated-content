@@ -7,7 +7,28 @@ slug: Web/HTML/Element/input/search
 
 **`search`** 类型的 {{HTMLElement("input")}} 是专为用户输入查询文本而设计的字段。功能上与 [`text`](/zh-CN/docs/Web/HTML/Element/input/text) 输入相同，但是根据{{Glossary("user agent","用户代理")}}不同，可能会有不同的样式表现。
 
-{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="site-search">Search the site:</label>
+<input type="search" id="site-search" name="q" />
+
+<button>Search</button>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 <table class="properties">
  <tbody>

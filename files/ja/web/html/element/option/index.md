@@ -9,7 +9,34 @@ l10n:
 
 **`<option>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("select")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("datalist")}} の各要素内で項目を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。
 
-{{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 ## 属性
 

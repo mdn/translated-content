@@ -9,7 +9,44 @@ l10n:
 
 **`contenteditable`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、ユーザーによる要素の編集が可能かを示す列挙型属性です。可能である場合、ブラウザーは要素のウィジェットを編集可能なものに変更します。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
+
+```html interactive-example
+<blockquote contenteditable="true">
+  <p>Edit this content to add your own quote</p>
+</blockquote>
+
+<cite contenteditable="true">-- Write your own name here</cite>
+```
+
+```css interactive-example
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+  margin: 16px 0;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+cite {
+  margin: 16px 32px;
+  font-weight: bold;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+[contenteditable="true"] {
+  caret-color: red;
+}
+```
 
 この属性は、以下の値のうち一つを取る必要があります。
 

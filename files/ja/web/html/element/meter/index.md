@@ -9,7 +9,22 @@ l10n:
 
 **`<meter>`** は [HTML](/ja/docs/Web/HTML) の要素で、既知の範囲内のスカラー値、または小数値を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+  at 50/100
+</meter>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 ## 属性
 

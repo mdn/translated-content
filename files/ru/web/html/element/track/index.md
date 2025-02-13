@@ -7,7 +7,36 @@ slug: Web/HTML/Element/track
 
 HTML-элемент **`<track>`** используется как дочерний элемент медиа-элементов {{HTMLElement("audio")}} and {{HTMLElement("video")}}. Позволяет указать синхронизированные текстовые дорожки (или данные на основе времени), например, для автоматической обработки субтитров. Файлы треков используют [формат WebVTT](/ru/docs/Web/API/WebVTT_API) (`.vtt` файлы) — Web Video Text Tracks или [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 
-{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video
+  controls
+  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="https://mdn.github.io/shared-assets/misc/friday.vtt" />
+  Download the
+  <a
+    href="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"
+    >MP4</a
+  >
+  video, and
+  <a href="https://mdn.github.io/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+```
+
+```css interactive-example
+video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                             |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

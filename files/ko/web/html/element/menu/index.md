@@ -9,7 +9,33 @@ l10n:
 
 [HTML](/ko/docs/Web/HTML) **`<menu>`** 요소는 {{HTMLElement("ul")}}의 의미론적 대안으로 설명되지만, 브라우저에 의해서는 {{HTMLElement("ul")}}과 다르지 않게 다루어집니다. {{HTMLElement("li")}} 요소들로 표현되는 항목들의 비정렬 목록을 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="news">
+  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <menu>
+    <li><button id="save">Save for later</button></li>
+    <li><button id="share">Share this news</button></li>
+  </menu>
+</div>
+```
+
+```css interactive-example
+.news {
+  background-color: bisque;
+  padding: 1em;
+  border: solid thin black;
+}
+
+menu {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+  gap: 1em;
+}
+```
 
 ## 특성
 

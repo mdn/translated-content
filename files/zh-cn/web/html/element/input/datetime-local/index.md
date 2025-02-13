@@ -7,7 +7,33 @@ slug: Web/HTML/Element/input/datetime-local
 
 {{htmlelement("input")}} 元素的 **`datetime-local`** 类型创建让用户便捷输入日期和时间的输入控件，包括“年”、“月”、“日”，以及“时”和“分”。
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 此控件的 UI 因浏览器而异。在不支持的浏览器中，其会优雅地降级为简单的 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 控件。
 

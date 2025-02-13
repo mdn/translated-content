@@ -9,7 +9,34 @@ l10n:
 
 **`<hr>`** は [HTML](/ja/docs/Web/HTML) の要素で、段落レベルの要素間において、テーマの意味的な区切りを表します。例えば、話の場面の切り替えや、節内での話題の転換などです。
 
-{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+
+<hr />
+
+<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+```
+
+```css interactive-example
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+```
 
 以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な CSS を使用して行うようにしてください。
 

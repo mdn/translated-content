@@ -7,7 +7,20 @@ slug: Web/HTML/Element/dfn
 
 **Элемент определения HTML** (**_\<dfn>_**) используется для указания термина, определяемого в контексте фразы или предложения. Элемент{{HTMLElement("p")}}, пара{{HTMLElement("dt")}}/{{HTMLElement("dd")}} или {{HTMLElement("section")}} элемент, который является ближайшим предком `<dfn>` считается определением термина.
 
-{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  A <dfn id="def-validator">validator</dfn> is a program that checks for syntax
+  errors in code or documents.
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+dfn {
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), явный контент. |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |

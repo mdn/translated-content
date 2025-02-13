@@ -7,7 +7,19 @@ slug: Web/HTML/Element/s
 
 L'élément HTML **`<s>`** permet d'afficher du texte qui est barré car il n'est plus pertinent ou car il est obsolète. `<s>` ne doit pas être employé pour indiquer des éditions dans un document (on utilisera alors {{HTMLElement("del")}} et {{HTMLElement("ins")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p><s>There will be a few tickets available at the box office tonight.</s></p>
+
+<p>SOLD OUT!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+s {
+}
+```
 
 ## Attributs
 
