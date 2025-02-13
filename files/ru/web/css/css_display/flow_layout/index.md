@@ -1,7 +1,6 @@
 ---
 title: Поточная раскладка CSS
 slug: Web/CSS/CSS_display/Flow_layout
-original_slug: Web/CSS/CSS_flow_layout
 ---
 
 {{CSSRef}}
