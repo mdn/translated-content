@@ -1,13 +1,17 @@
 ---
-title: Navigator.serviceWorker
+title: Navigator：serviceWorker 属性
 slug: Web/API/Navigator/serviceWorker
+l10n:
+  sourceCommit: 5d29bef0815f8cc4b5b152b9ee1ab53f002ee617
 ---
 
-{{APIRef("Service Workers API")}}
+{{securecontext_header}}{{APIRef("Service Workers API")}}
 
-**`Navigator.serviceWorker`** 只读属性，返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，它提供了对 {{domxref("ServiceWorker")}} 的注册、删除、更新以及通信的访问。
+{{domxref("Navigator")}} 接口的 **`serviceWorker`** 只读属性返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，用于管理 {{domxref("ServiceWorker")}} 的注册、移除、升级和通信的访问权限。
 
-该功能可能无法在无痕模式下使用。
+该功能可能在无痕模式下不可用。
+
+请注意，worker 同样可以通过 {{domxref("WorkerNavigator.serviceWorker")}} 访问文档的 {{domxref("ServiceWorkerContainer")}}。
 
 ## 值
 
@@ -15,11 +19,11 @@ slug: Web/API/Navigator/serviceWorker
 
 ## 示例
 
-此代码检查浏览器是否支持 service worker。
+此代码用于检查浏览器是否支持 service workers。
 
 ```js
 if ("serviceWorker" in navigator) {
-  // Supported!
+  // 支持！
 }
 ```
 
@@ -33,5 +37,5 @@ if ("serviceWorker" in navigator) {
 
 ## 参见
 
-- [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Service Worker API", "", "", "nocode")}}
+- [使用 Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
