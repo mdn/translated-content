@@ -1,17 +1,17 @@
 ---
-title: 流布局和书写模式
-slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
+title: 流式布局和书写模式
+slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
 ---
 
 {{CSSRef}}
 
-CSS 2.1 规范详细描述了正常流的行为，它采用了水平书写模式。[布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)属性在垂直写入模式中的工作方式应该相同。在本指南中，我们将研究流布局在与不同的文档写入模式一起使用时的行为。
+CSS 2.1 规范详细描述了正常流的行为，它采用了水平书写模式。[布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)属性在垂直写入模式中的工作方式应该相同。在本指南中，我们将研究流式布局在与不同的文档写入模式一起使用时的行为。
 
-这不是 CSS 中书写模式使用的全面指南，这里的目的是以可能未预料到的方式记录流布局与书写模式交互的区域。本文档的[参见](#参见)章节链接了更多书写模式的资源。
+这不是 CSS 中书写模式使用的全面指南，这里的目的是以可能未预料到的方式记录流式布局与书写模式交互的区域。本文档的[参见](#参见)章节链接了更多书写模式的资源。
 
 ## 书写模式规范
 
-CSS 编写模式级别 3 规范定义了文档编写模式更改对流布局的影响。在书写模式介绍中，[规范提到](https://drafts.csswg.org/css-writing-modes-3/#text-flow)：
+CSS 编写模式级别 3 规范定义了文档编写模式更改对流式布局的影响。在书写模式介绍中，[规范提到](https://drafts.csswg.org/css-writing-modes-3/#text-flow)：
 
 > “CSS 中的书写模式由 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性决定。它主要是根据其内联基础方向和块流方向来定义的。”
 

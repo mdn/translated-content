@@ -1,6 +1,6 @@
 ---
-title: 流布局和溢出
-slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
+title: 流式布局和溢出
+slug: Web/CSS/CSS_display/Flow_layout_and_overflow
 ---
 
 {{CSSRef}}
@@ -39,7 +39,7 @@ slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 
 ## 流相对属性
 
-在[书写模式和流布局指南](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)中，我们研究了 `block-size` 和 `inline-size` 这两个较新的属性，这些属性在使用不同的编写模式时比将布局与屏幕的物理尺寸联系起来更有意义。3 级溢出模块还包括溢出——[`overflow-block`](/zh-CN/docs/Web/CSS/@media/overflow-block) 和 [`overflow-inline`](/zh-CN/docs/Web/CSS/@media/overflow-inline) 的流相关属性。这些对应于 `overflow-x` 和 `overflow-y`，但映射取决于文档的书写模式。
+在[书写模式和流式布局指南](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)中，我们研究了 `block-size` 和 `inline-size` 这两个较新的属性，这些属性在使用不同的编写模式时比将布局与屏幕的物理尺寸联系起来更有意义。3 级溢出模块还包括溢出——[`overflow-block`](/zh-CN/docs/Web/CSS/@media/overflow-block) 和 [`overflow-inline`](/zh-CN/docs/Web/CSS/@media/overflow-inline) 的流相关属性。这些对应于 `overflow-x` 和 `overflow-y`，但映射取决于文档的书写模式。
 
 这些属性当前在浏览器中没有实现，因此你需要在当前使用物理属性并根据你的书写模式进行调整。
 

@@ -42,7 +42,7 @@ padding-inline: unset;
 - {{CSSXref("&lt;length&gt;")}}
   - : 以固定值指定的内边距尺寸。必须非负。
 - {{CSSXref("&lt;percentage&gt;")}}
-  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
+  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行向尺寸（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
 
 ## 描述
 

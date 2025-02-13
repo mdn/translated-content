@@ -79,5 +79,5 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 
 ## 参见
 
-- [使用 CSS 变量](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- [使用 CSS 变量](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - {{CSSXref("var", "var()")}} 函数

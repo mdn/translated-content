@@ -1,6 +1,7 @@
 ---
 title: 布局和包含块
-slug: Web/CSS/Containing_block
+slug: Web/CSS/CSS_display/Containing_block
+original_slug: Web/CSS/Containing_block
 ---
 
 {{CSSRef}}
@@ -255,7 +256,7 @@ p {
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)

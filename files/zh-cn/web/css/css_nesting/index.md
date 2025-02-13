@@ -40,6 +40,6 @@ CSS 嵌套帮助增强 CSS 样式表的可读性、模块化程度和可维护�
 
 ## 参见
 
-- [优先级](/zh-CN/docs/Web/CSS/Specificity)
+- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS 层叠与继承模块](/zh-CN/docs/Web/CSS/CSS_cascade)
 - [CSS 选择器模块](/zh-CN/docs/Web/CSS/CSS_selectors)

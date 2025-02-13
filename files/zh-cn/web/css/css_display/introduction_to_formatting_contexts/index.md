@@ -1,17 +1,19 @@
 ---
-title: Introduction to formatting contexts 格式化上下文简介
-slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+title: 格式化上下文简介
+slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
 ---
 
 {{CSSRef}}
-本文介绍格式化上下文的概念，其中有几种类型，包括块格式化上下文 block formatting contexts、内联格式化上下文 inline formatting contexts 和灵活格式化上下文 flex formatting contexts。还介绍了它们的基本行为以及如何利用这些行为。
-页面上的所有内容都是**格式化上下文 formatting context** 的一部分，或者是一个以特定方式显示的区域。**块格式上下文（BFC）**将根据块布局规则布局子元素，**灵活格式上下文 flex formatting context** 将其子元素布局为灵活项{{Glossary("flex item", "flex items")}}等。每个格式上下文在其上下文中都有特定的布局规则。
 
-## Block formatting contexts 块格式化上下文
+本文介绍格式化上下文的概念，其中有几种类型，包括区块（block）格式化上下文、行内（inline）格式化上下文和弹性（flex）格式化上下文。还介绍了它们的基本行为以及如何利用这些行为。
 
-文档最外层元素使用块布局规则或称为**初始块格式上下文**。这意味着`<html>`元素块中的每个元素都是按照正常流程遵循块和内联布局规则进行布局的。参与 BFC 的元素使用 CSS 框模型概述的规则，该模型定义了元素的边距、边框和填充如何与同一上下文中的其他块交互。
+页面上的所有内容都是**格式化上下文**的一部分，或者是一个以特定方式显示的区域。**区块格式上下文**（BFC）将根据块布局规则布局子元素，**弹性格式上下文**将其子元素布局为{{Glossary("flex item", "弹性元素")}}等。每个格式上下文在其上下文中都有特定的布局规则。
 
-### 创建新的块格式上下文
+## 区块格式化上下文
+
+文档最外层元素使用块布局规则或称为**初始块格式上下文**。这意味着 `<html>` 元素块中的每个元素都是按照正常流程遵循块和内联布局规则进行布局的。参与 BFC 的元素使用 CSS 框模型概述的规则，该模型定义了元素的边距、边框和填充如何与同一上下文中的其他块交互。
+
+### 创建新的区块格式上下文
 
 {{HTMLElement("html")}} 元素不是唯一能够创建块格式上下文的元素。任何块级元素都可以通过应用某些 CSS 属性来创建一个 BFC
 
@@ -36,7 +38,7 @@ slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 
 让我们看看几个例子，来理解创建 BFC 的效果。
 
-在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如流入和流出元素指南[guide to in-flow and out of flow elements](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
+在下面的示例中，我们在应用了边框的 `<div>` 中有一个浮动元素。该 `div` 的内容与浮动元素一起浮动。由于 float 的内容比它旁边的内容高，所以现在 DIV 的边框贯穿了 float。如[应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)中所述，浮动已脱离文档流，因此 DIV 的背景和边框仅包含内容，而不包含浮动。
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
@@ -71,7 +73,7 @@ box model 不完全适用于参与内联格式上下文。在水平书写模式�
 
 ## 总结
 
-在本指南中，我们更详细地介绍了块和内联格式上下文以及创建块格式上下文（BFC）的重要主题。在下一个指南中，我们将了解[正常流如何与不同的写入模式交互](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)。
+在本指南中，我们更详细地介绍了块和内联格式上下文以及创建块格式上下文（BFC）的重要主题。在下一个指南中，我们将了解[正常流如何与不同的写入模式交互](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)。
 
 ## 参见
 
