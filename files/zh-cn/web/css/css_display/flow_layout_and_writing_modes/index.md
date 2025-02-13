@@ -1,6 +1,7 @@
 ---
 title: 流布局和书写模式
-slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
+slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
+original_slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 ---
 
 {{CSSRef}}

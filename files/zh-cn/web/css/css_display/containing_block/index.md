@@ -1,6 +1,7 @@
 ---
 title: 布局和包含块
-slug: Web/CSS/Containing_block
+slug: Web/CSS/CSS_display/Containing_block
+original_slug: Web/CSS/Containing_block
 ---
 
 {{CSSRef}}

@@ -1,6 +1,7 @@
 ---
 title: 使用 CSS 自定义属性（变量）
-slug: Web/CSS/Using_CSS_custom_properties
+slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+original_slug: Web/CSS/Using_CSS_custom_properties
 ---
 
 {{CSSRef}}

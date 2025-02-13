@@ -1,6 +1,7 @@
 ---
 title: 流布局和溢出
-slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
+slug: Web/CSS/CSS_display/Flow_layout_and_overflow
+original_slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 ---
 
 {{CSSRef}}

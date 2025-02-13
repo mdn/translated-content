@@ -1,6 +1,7 @@
 ---
 title: Introduction to formatting contexts 格式化上下文简介
-slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
+original_slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
 ---
 
 {{CSSRef}}
