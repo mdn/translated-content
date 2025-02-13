@@ -165,9 +165,29 @@ Like this.
 这是一个示例。我们不应该断行写这一段话。就像这样。
 ```
 
+### 添加图片/媒体
+
+在添加图片或媒体时，请注意以下几点：
+
+1. 若直接插入与英文文档相同的图片或媒体，则无需将相应文件复制到当前仓库中，只需在文档中引用即可。
+
+   例如，英文文档中的图片引用为：
+
+   ```md
+   ![The task bar in Windows](task-bar.png)
+   ```
+
+   在中文文档中，无需将 `task-bar.png` 文件复制到当前仓库中，只需引用即可：
+
+   ```md
+   ![Windows 中的任务栏](task-bar.png)
+   ```
+
+2. 若要对图片或媒体进行本地化，请将新文件复制到对应的中文文档文件夹中，并使用相同的文件名。有关如何添加图片或媒体的详细步骤，请参阅[如何添加图像和媒体][]。
+
 ### 词语翻译
 
-### 代名词
+#### 代名词
 
 <!-- markdownlint-disable search-replace -->
 
@@ -175,7 +195,7 @@ Like this.
 
 <!-- markdownlint-enable search-replace -->
 
-### 复数形式
+#### 复数形式
 
 英文文档中，为了使语句的语法正确，会使用大量的复数形式。在中文翻译中，则无需保留这些复数的形式（未翻译的英文名词也同理）。
 
@@ -184,15 +204,16 @@ Like this.
 - 不宜：`应用程序接口（APIs）`
 - 不宜：`应用程序接口们（APIs）`
 
-### 术语表
+#### 术语表
 
 我们在仓库中维护了一个[术语表](glossary.md)，旨在统一目前还未有明确中文翻译的术语。在翻译文档时，请尽量使用术语表中的术语，以保证文档的一致性。
 
 > 如果术语表中缺少某些术语，或者你对其中的术语翻译有任何疑问，欢迎提出[议题](https://github.com/mdn/translated-content/issues/new/choose)或发起 PR。
 
-### 常用标题
+#### 常用标题
 
 英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，请在翻译时参考术语表中的[标题和表格的翻译](glossary.md#标题表格)。
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [运行实例]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
+[如何添加图像和媒体]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Images_media
