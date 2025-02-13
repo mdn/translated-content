@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 이는 Pyhon의 `r` 접두사 또는 C#의 문자열 리터럴의 `@` 접두사와 유사합니다.(그러나 동일 하지는 않습니다. 이 문제에 관해서는 여기 [이슈](https://bugs.chromium.org/p/v8/issues/detail?id=5016)를 참조하십시오.)
 이 메서드는 템플릿 리터럴의 윈시 문자열을 가져오는데 사용됩니다. 즉, 대체(예: `${foo}`)는 처리되지만 이스케이프(예: `\n`)는 처리되지 않습니다.
 
-{{EmbedInteractiveExample("pages/js/string-raw.html")}}
+{{InteractiveExample("JavaScript Demo: String.raw()")}}
+
+```js interactive-example
+// Create a variable that uses a Windows
+// path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\aboutme.html`;
+
+console.log(`The file was uploaded from: ${filePath}`);
+// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+```
 
 ## 구문
 

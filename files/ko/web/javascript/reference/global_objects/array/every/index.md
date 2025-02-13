@@ -9,7 +9,16 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`every()`** 메서드는 배열의 모든 요소가 제공된 함수로 구현된 테스트를 통과하는지 테스트합니다. 이 메서드는 불리언 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-every.html", 'shorter')}}
+{{InteractiveExample("JavaScript Demo: Array.every()", 'shorter')}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## 구문
 

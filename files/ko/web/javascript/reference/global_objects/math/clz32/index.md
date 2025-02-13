@@ -9,7 +9,21 @@ l10n:
 
 **`Math.clz32()`** 정적 메서드는 숫자의 32비트 이진 표현에서 선행 0 비트의 갯수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-clz32.html")}}
+{{InteractiveExample("JavaScript Demo: Math.clz32()")}}
+
+```js interactive-example
+// 00000000000000000000000000000001
+console.log(Math.clz32(1));
+// Expected output: 31
+
+// 00000000000000000000000000000100
+console.log(Math.clz32(4));
+// Expected output: 29
+
+// 00000000000000000000001111101000
+console.log(Math.clz32(1000));
+// Expected output: 22
+```
 
 ## 구문
 

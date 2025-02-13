@@ -1,5 +1,5 @@
 ---
-title: "-webkit-touch-callout"
+title: -webkit-touch-callout
 slug: Web/CSS/-webkit-touch-callout
 l10n:
   sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c

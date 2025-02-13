@@ -5,6 +5,8 @@ on:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   check_redirects:
     # do not run on PRs in forks
@@ -17,7 +19,7 @@ jobs:
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
       # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@v3
+      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
         name: See if any file needs checking
         id: filter
         with:
@@ -57,4 +59,4 @@ jobs:
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          yarn content:legacy validate-redirects --strict
+          yarn content validate-redirects

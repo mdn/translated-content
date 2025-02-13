@@ -9,7 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 
 {{jsxref("Date.prototype.getYear()", "getYear()")}} 메서드 대신 이 메서드를 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## 구문
 

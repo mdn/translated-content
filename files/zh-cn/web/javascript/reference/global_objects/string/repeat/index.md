@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 **`repeat()`** 方法构造并返回一个新字符串，其中包含指定数量的所调用的字符串副本，这些副本连接在一起。
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.repeat()", "shorter")}}
+
+```js interactive-example
+const mood = "Happy! ";
+
+console.log(`I feel ${mood.repeat(3)}`);
+// Expected output: "I feel Happy! Happy! Happy! "
+```
 
 ## 语法
 

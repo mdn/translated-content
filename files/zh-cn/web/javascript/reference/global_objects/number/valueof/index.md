@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 
 {{jsxref("Number")}} 值的 **`valueOf()`** 方法返回该数字的值。
 
-{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+
+```js interactive-example
+const numObj = new Number(42);
+console.log(typeof numObj);
+// Expected output: "object"
+
+const num = numObj.valueOf();
+console.log(num);
+// Expected output: 42
+
+console.log(typeof num);
+// Expected output: "number"
+```
 
 ## 语法
 

@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 
 一般来说，当从左到右求值时，该操作符返回第一个{{Glossary("falsy","假值")}}操作数的值；如果它们都是{{Glossary("truthy","真值")}}，则返回最后一个操作数的值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 语法
 

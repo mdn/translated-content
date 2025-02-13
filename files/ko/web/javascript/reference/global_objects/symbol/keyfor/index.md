@@ -9,7 +9,22 @@ l10n:
 
 **`Symbol.keyFor()`** 정적 메서드는 주어진 심볼에 해당하는 공유 심볼의 키를 전역 심볼 레지스트리에서 검색합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+
+```js interactive-example
+const globalSym = Symbol.for("foo"); // Global symbol
+
+console.log(Symbol.keyFor(globalSym));
+// Expected output: "foo"
+
+const localSym = Symbol(); // Local symbol
+
+console.log(Symbol.keyFor(localSym));
+// Expected output: undefined
+
+console.log(Symbol.keyFor(Symbol.iterator));
+// Expected output: undefined
+```
 
 ## 구문
 

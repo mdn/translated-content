@@ -1857,23 +1857,7 @@
       "Sheppy"
     ]
   },
-  "MDN/At_ten": {
-    "modified": "2019-03-23T22:49:37.556Z",
-    "contributors": [
-      "alk03073135"
-    ]
-  },
-  "MDN/Community/Contributing": {
-    "modified": "2019-01-16T19:25:51.462Z",
-    "contributors": [
-      "wbamberg",
-      "iigmir",
-      "irvinfly",
-      "PHIDIAS",
-      "emmanuelodenyire"
-    ]
-  },
-  "MDN/Community/Contributing/Getting_started": {
+  "MDN/Community/Getting_started": {
     "modified": "2020-09-30T17:17:21.724Z",
     "contributors": [
       "chrisdavidmills",
@@ -1891,6 +1875,26 @@
       "anna.hp.huang",
       "zzzzpaul",
       "wildsky"
+    ]
+  },
+  "MDN/Guides": {
+    "modified": "2019-03-23T23:29:55.855Z",
+    "contributors": [
+      "Rocker",
+      "jackblackevo",
+      "alk03073135",
+      "ethertank",
+      "Sheppy"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2019-09-03T07:07:31.640Z",
+    "contributors": [
+      "lalasoqTW",
+      "katsmin",
+      "mgrn",
+      "KevinHuang.lds",
+      "sailplaneTW"
     ]
   },
   "MDN/Writing_guidelines": {
@@ -4045,16 +4049,6 @@
       "jackblackevo"
     ]
   },
-  "Web/Guide": {
-    "modified": "2019-03-23T23:29:55.855Z",
-    "contributors": [
-      "Rocker",
-      "jackblackevo",
-      "alk03073135",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-10-16T05:00:10.652Z",
     "contributors": [
@@ -5927,17 +5921,6 @@
       "learnfromfail"
     ]
   },
-  "Web/OpenSearch": {
-    "modified": "2019-03-23T22:00:23.747Z",
-    "contributors": [
-      "jackblackevo",
-      "iigmir",
-      "teoli",
-      "Mgjbot",
-      "Sam268276",
-      "BobChao"
-    ]
-  },
   "Web/Performance": {
     "modified": "2019-12-05T10:33:09.898Z",
     "contributors": [
@@ -6087,14 +6070,15 @@
       "leVirve"
     ]
   },
-  "Web/Tutorials": {
-    "modified": "2019-09-03T07:07:31.640Z",
+  "Web/XML/Guides/OpenSearch": {
+    "modified": "2019-03-23T22:00:23.747Z",
     "contributors": [
-      "lalasoqTW",
-      "katsmin",
-      "mgrn",
-      "KevinHuang.lds",
-      "sailplaneTW"
+      "jackblackevo",
+      "iigmir",
+      "teoli",
+      "Mgjbot",
+      "Sam268276",
+      "BobChao"
     ]
   },
   "WebAssembly": {

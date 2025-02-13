@@ -9,7 +9,23 @@ l10n:
 
 **`for await...of`** 문은 [동기 이터러블](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)뿐만 아니라 [비동기 이터러블 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)를 순환하는 루프를 생성합니다. 이 문은 [비동기 함수](/ko/docs/Web/JavaScript/Reference/Statements/async_function) 본문 내부 와 [모듈](/ko/docs/Web/JavaScript/Guide/Modules) 내부를 포함하여 [`await`](/ko/docs/Web/JavaScript/Reference/Operators/await)를 사용할 수 있는 맥락에서만 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## 구문
 

@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 **`Promise.race()`** 메소드는 Promise 객체를 반환합니다. 이 프로미스 객체는 iterable 안에 있는 프로미스 중에 가장 먼저 완료된 것의 결과값으로 그대로 이행하거나 거부합니다.
 
-{{EmbedInteractiveExample("pages/js/promise-race.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.race()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, "one");
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+```
 
 ## 구문
 

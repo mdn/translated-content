@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 {{jsxref("Function")}} 实例的 **`bind()`** 方法创建一个新函数，当调用该新函数时，它会调用原始函数并将其 `this` 关键字设置为给定的值，同时，还可以传入一系列指定的参数，这些参数会插入到调用新函数时传入的参数的前面。
 
-{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Function.bind()", "taller")}}
+
+```js interactive-example
+const module = {
+  x: 42,
+  getX: function () {
+    return this.x;
+  },
+};
+
+const unboundGetX = module.getX;
+console.log(unboundGetX()); // The function gets invoked at the global scope
+// Expected output: undefined
+
+const boundGetX = unboundGetX.bind(module);
+console.log(boundGetX());
+// Expected output: 42
+```
 
 ## 语法
 

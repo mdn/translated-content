@@ -1,9 +1,8 @@
 ---
 title: ボックスを半透明にするには
 slug: Learn_web_development/Howto/Solve_CSS_problems/Make_box_transparent
-original_slug: Learn/CSS/Howto/Make_box_transparent
 l10n:
-  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
@@ -22,7 +21,53 @@ l10n:
 
 下記の例で、不透明度とアルファチャンネルの値を変えてみて、ボックスの後ろの背景画像が見える割合を上下させてみてください。
 
-{{EmbedGHLiveSample("css-examples/howto/opacity.html", '100%', 770)}}
+```html live-sample___opacity
+<div class="wrapper">
+  <div class="box box1">This box uses opacity</div>
+  <div class="box box2">
+    This box has a background color with an alpha channel
+  </div>
+</div>
+```
+
+```css hidden live-sample___opacity
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  height: 200px;
+  display: flex;
+  gap: 20px;
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/balloon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.box {
+  flex: 1;
+  border: 5px solid #000;
+  border-radius: 0.5em;
+  font-size: 140%;
+  padding: 20px;
+}
+```
+
+```css live-sample___opacity
+.box1 {
+  background-color: #000;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.box2 {
+  background-color: rgb(0 0 0 / 0.5);
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("opacity", "", "280px")}}
 
 > [!NOTE]
 > 画像を重ねる場合は、テキストと背景のコントラストが十分に保たれるように注意してください。そうしないと、コンテンツが読みづらくなる可能性があります。

@@ -9,7 +9,16 @@ l10n:
 
 **`Math.LN10`** 靜態數據屬性表示 10 的自然對數值，約為 2.303。
 
-{{EmbedInteractiveExample("pages/js/math-ln10.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.LN10", "shorter")}}
+
+```js interactive-example
+function getNatLog10() {
+  return Math.LN10;
+}
+
+console.log(getNatLog10());
+// Expected output: 2.302585092994046
+```
 
 ## 值
 

@@ -185,8 +185,8 @@ Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los 
 Las otras propiedades `background-*` también pueden tener valores múltiples separados por comas, de la misma manera que `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,

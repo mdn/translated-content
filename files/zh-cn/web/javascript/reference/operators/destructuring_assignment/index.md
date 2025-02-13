@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 **解构赋值**语法是一种 Javascript 表达式。可以将数组中的值或对象的属性取出，赋值给其他变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 语法
 

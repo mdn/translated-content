@@ -9,7 +9,21 @@ l10n:
 
 **相等**（**`==`**）运算符检查其两个操作数是否相等，返回一个布尔值结果。与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符不同，它会尝试转换不同类型的操作数，并进行比较。
 
-{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
+
+```js interactive-example
+console.log(1 == 1);
+// Expected output: true
+
+console.log("hello" == "hello");
+// Expected output: true
+
+console.log("1" == 1);
+// Expected output: true
+
+console.log(0 == false);
+// Expected output: true
+```
 
 ## 语法
 

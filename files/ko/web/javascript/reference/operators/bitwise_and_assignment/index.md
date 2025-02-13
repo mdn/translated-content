@@ -9,7 +9,15 @@ l10n:
 
 **비트 AND 할당 (`&=`)** 연산자는 두 피연산자의 이진 표현을 사용하고, 피연산자에 대한 AND 비트 연산 수행 결과를 변수에 할당합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND assignment", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a &= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## 구문
 

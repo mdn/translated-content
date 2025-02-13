@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 **`split()`** 方法接受一个模式，通过搜索模式将{{jsxref("String", "字符串", "", 1)}}分割成一个有序的子串列表，将这些子串放入一个数组，并返回该数组。
 
-{{EmbedInteractiveExample("pages/js/string-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## 语法
 

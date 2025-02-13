@@ -9,7 +9,16 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`concat()`** 메서드는 두 개 이상의 배열을 병합하는 데 사용됩니다. 이 메서드는 기존 배열을 변경하지 않고, 새 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 구문
 

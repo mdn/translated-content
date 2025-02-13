@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Decrement
 
 遞減運算子（`--`）遞減（減一）它的運算元並將結果回傳。
 
-{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x--;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:2, y:3"
+
+let a = 3;
+const b = --a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:2, b:2"
+```
 
 ## 語法
 

@@ -3,8 +3,6 @@ title: 撰写指南
 slug: MDN/Writing_guidelines
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们在 MDN Web 文档上撰写*什么*文档以及*如何*撰写文档的指南。学习*如何做出贡献*，请参见我们的[贡献指南](/zh-CN/docs/MDN/Community)。
 
 - [撰写的文档内容](/zh-CN/docs/MDN/Writing_guidelines/What_we_write)

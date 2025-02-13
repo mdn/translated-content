@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 **`getHours()`** 方法基於本地時區回傳指定日期的小時數。
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getHours()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## 語法
 
