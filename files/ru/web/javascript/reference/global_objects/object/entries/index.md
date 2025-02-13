@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/entries
 
 **`Object.entries()`** метод возвращает массив собственных перечисляемых свойств указанного объекта в формате `[key, value]`, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается **`Object.entries()`** не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то массив должен быть отсортирован до вызова метода, например `Object.entries(obj).sort((a, b) => a[0] - b[0]);`.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## Синтаксис
 

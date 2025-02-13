@@ -5,7 +5,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
 
 {{JSRef}}Метод **`Symbol.keyFor(sym)`** получает ключ для заданного символа из глобального реестра символов.
 
-{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+
+```js interactive-example
+const globalSym = Symbol.for("foo"); // Global symbol
+
+console.log(Symbol.keyFor(globalSym));
+// Expected output: "foo"
+
+const localSym = Symbol(); // Local symbol
+
+console.log(Symbol.keyFor(localSym));
+// Expected output: undefined
+
+console.log(Symbol.keyFor(Symbol.iterator));
+// Expected output: undefined
+```
 
 ## Синтаксис
 

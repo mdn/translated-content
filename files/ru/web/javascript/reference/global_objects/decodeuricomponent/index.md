@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 
 Метод **`decodeURIComponent()`** декодирует управляющие последовательности символов в компоненте Uniform Resource Identifier (URI), созданные с помощью метода {{jsxref("encodeURIComponent")}} или другой подобной процедуры.
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+
+```js interactive-example
+function containsEncodedComponents(x) {
+  // ie ?,=,&,/ etc
+  return decodeURI(x) !== decodeURIComponent(x);
+}
+
+console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
+// Expected output: true
+
+console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
+// Expected output: false
+```
 
 ## Синтаксис
 

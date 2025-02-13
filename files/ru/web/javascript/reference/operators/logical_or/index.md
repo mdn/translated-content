@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR
 
 Обычно используется с {{jsxref("Boolean", "булевыми")}} (логическими) значениями. Тогда возвращается булевое значение. Однако фактически оператор `||` возвращает значение одного из операндов, поэтому если этот оператор используется с небулевыми значениями, он вернет небулевое значение.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 || b > 0);
+// Expected output: true
+```
 
 ## Синтаксис
 
