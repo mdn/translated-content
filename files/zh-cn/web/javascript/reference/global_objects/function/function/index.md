@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 
 **`Function()`** 构造函数创建 {{jsxref("Function")}} 对象。直接调用构造函数可以动态创建函数，但可能会面临一些安全性和类似于 {{jsxref("Global_Objects/eval", "eval()")}} 的性能问题（但相对较小）。然而，与具有访问本地作用域的 `eval` 不同，`Function` 构造函数创建的函数仅在全局作用域中执行。
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+
+```js interactive-example
+const sum = new Function("a", "b", "return a + b");
+
+console.log(sum(2, 6));
+// Expected output: 8
+```
 
 ## 语法
 

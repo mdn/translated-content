@@ -3929,10 +3929,38 @@
       "ksam"
     ]
   },
+  "MDN/Guides": {
+    "modified": "2020-09-02T11:11:23.452Z",
+    "contributors": [
+      "bogpok",
+      "Didar83",
+      "soctim",
+      "jwhitlock",
+      "netpatriciapussy",
+      "Tihoem",
+      "galinakulinich@mail.ru",
+      "Sheppy"
+    ]
+  },
   "MDN/Structures/Live_samples": {
     "modified": "2020-09-30T12:57:23.093Z",
     "contributors": [
       "chrisdavidmills"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2019-10-02T16:11:49.043Z",
+    "contributors": [
+      "Termaro",
+      "mmbl",
+      "ukrlex01",
+      "rhiter",
+      "anastasiya-solodkaya",
+      "GraceAredel",
+      "Tihoem",
+      "uleming",
+      "Steln",
+      "aleks_root"
     ]
   },
   "MDN/Writing_guidelines": {
@@ -13426,19 +13454,6 @@
       "teoli"
     ]
   },
-  "Web/Guide": {
-    "modified": "2020-09-02T11:11:23.452Z",
-    "contributors": [
-      "bogpok",
-      "Didar83",
-      "soctim",
-      "jwhitlock",
-      "netpatriciapussy",
-      "Tihoem",
-      "galinakulinich@mail.ru",
-      "Sheppy"
-    ]
-  },
   "Web/HTML": {
     "modified": "2020-05-09T08:33:52.357Z",
     "contributors": [
@@ -20948,7 +20963,7 @@
       "humantom88"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
+  "Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
     "modified": "2019-03-18T20:51:42.020Z",
     "contributors": [
       "chrisdavidmills",
@@ -20956,7 +20971,7 @@
       "faafaafuu"
     ]
   },
-  "Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges": {
+  "Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges": {
     "modified": "2019-03-18T20:51:42.284Z",
     "contributors": [
       "chrisdavidmills",
@@ -20965,20 +20980,20 @@
       "wcoder"
     ]
   },
-  "Web/Media/Audio_and_video_manipulation": {
+  "Web/Media/Guides/Audio_and_video_manipulation": {
     "modified": "2020-08-20T10:18:57.056Z",
     "contributors": [
       "bogpok"
     ]
   },
-  "Web/Media/Formats/WebRTC_codecs": {
+  "Web/Media/Guides/Formats/WebRTC_codecs": {
     "modified": "2020-11-27T19:05:43.474Z",
     "contributors": [
       "nikolaifedorov",
       "mechtool"
     ]
   },
-  "Web/Media/Formats/codecs_parameter": {
+  "Web/Media/Guides/Formats/codecs_parameter": {
     "modified": "2020-03-16T06:34:09.362Z",
     "contributors": [
       "mechtool"
@@ -21787,21 +21802,6 @@
       "ZVanoZ"
     ]
   },
-  "Web/Tutorials": {
-    "modified": "2019-10-02T16:11:49.043Z",
-    "contributors": [
-      "Termaro",
-      "mmbl",
-      "ukrlex01",
-      "rhiter",
-      "anastasiya-solodkaya",
-      "GraceAredel",
-      "Tihoem",
-      "uleming",
-      "Steln",
-      "aleks_root"
-    ]
-  },
   "Web/URI/Schemes/data": {
     "modified": "2020-10-15T22:23:29.676Z",
     "contributors": [
@@ -21812,27 +21812,27 @@
   "Web/XML": {
     "modified": "2019-03-24T13:24:33.354Z"
   },
-  "Web/XML/Parsing_and_serializing_XML": {
+  "Web/XML/Guides/Parsing_and_serializing_XML": {
     "modified": "2020-10-11T12:29:17.772Z",
     "contributors": [
       "Akhat",
       "bogpok"
     ]
   },
-  "Web/XML/XML_introduction": {
+  "Web/XML/Guides/XML_introduction": {
     "modified": "2019-03-25T08:08:08.506Z",
     "contributors": [
       "boxa6"
     ]
   },
-  "Web/XPath/Functions/floor": {
+  "Web/XML/XPath/Reference/Functions/floor": {
     "modified": "2019-01-16T14:55:28.337Z",
     "contributors": [
       "ExE-Boss",
       "Android"
     ]
   },
-  "Web/XSLT": {
+  "Web/XML/XSLT": {
     "modified": "2019-03-23T23:58:47.674Z",
     "contributors": [
       "niktariy",

@@ -43,7 +43,7 @@ play()
 
 > **备注：** `play()` 方法可能会让用户被询问是否给予播放媒体的权限，这可能会使返回的 promise 延迟解决。你应该确保你的代码不需要即时响应。
 
-关于自动播放和禁止自动播放的更多深度内容，参见我们的文章 [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Autoplay_guide)。
+关于自动播放和禁止自动播放的更多深度内容，参见我们的文章 [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Guides/Autoplay)。
 
 ## 示例
 
@@ -96,5 +96,5 @@ function handlePlayButton() {
 
 - [Web media technologies](/zh-CN/docs/Web/Media)
 - Learning: [Video and audio content](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Autoplay_guide)
+- [Autoplay guide for media and Web Audio APIs](/zh-CN/docs/Web/Media/Guides/Autoplay)
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

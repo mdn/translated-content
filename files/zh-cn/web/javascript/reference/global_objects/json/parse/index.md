@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 **`JSON.parse()`** 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。提供可选的 **reviver** 函数用以在返回之前对所得到的对象执行变换 (操作)。
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## 语法
 

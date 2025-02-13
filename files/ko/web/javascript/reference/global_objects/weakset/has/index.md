@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("WeakSet")}}인스턴스의 **`has()`** 메서드는 어떤 객체가 이 `WeakSet`에 있는지 여부를 가리키는 부울을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+const object2 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+console.log(weakset1.has(object2));
+// Expected output: false
+```
 
 ## 구문
 

@@ -3,10 +3,10 @@ title: "Request: destination プロパティ"
 short-title: destination
 slug: Web/API/Request/destination
 l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`destination`** は **{{domxref("Request")}}** インターフェイスの読み取り専用プロパティで、リクエストされたコンテンツの種類を記述した文字列を返します。
 

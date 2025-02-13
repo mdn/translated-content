@@ -1,5 +1,5 @@
 ---
-title: "::-webkit-file-upload-button"
+title: ::-webkit-file-upload-button
 slug: Web/CSS/::file-selector-button
 ---
 

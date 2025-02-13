@@ -9,7 +9,21 @@ La función **`Math.cbrt()`** nos retorna la raíz del cubo del numero, eso es
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>c</mi><mi>b</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{Math.cbrt(x)} = \sqrt[3]{x} = \text{un unico} \; y \; \text{de tal manera que} \; y^3 = x</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+
+```js interactive-example
+console.log(Math.cbrt(-1));
+// Expected output: -1
+
+console.log(Math.cbrt(1));
+// Expected output: 1
+
+console.log(Math.cbrt(Infinity));
+// Expected output: Infinity
+
+console.log(Math.cbrt(64));
+// Expected output: 4
+```
 
 ## Sintaxis
 

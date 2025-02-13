@@ -11,7 +11,22 @@ l10n:
 {{jsxref("Array.prototype.concat()")}} 메서드는 연결된 각 객체에서 이 심볼을 찾아 유사 배열과 객체로 취급하고
 해당 배열 요소로 평탄화해야 하는지 여부를 결정합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
+
+```js interactive-example
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
+let alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", 1, 2, 3]
+
+numeric[Symbol.isConcatSpreadable] = false;
+alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", Array [1, 2, 3]]
+```
 
 ## 값
 
