@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/seal
 
 La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouvelles propriétés, en marquant les propriétés existantes comme non-configurables. Les valeurs des propriétés courantes peuvent toujours être modifiées si elles sont accessibles en écriture.
 
-{{EmbedInteractiveExample("pages/js/object-seal.html")}}
+{{InteractiveExample("JavaScript Demo: Object.seal()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// Expected output: 33
+
+delete object1.property1; // Cannot delete when sealed
+console.log(object1.property1);
+// Expected output: 33
+```
 
 ## Syntaxe
 

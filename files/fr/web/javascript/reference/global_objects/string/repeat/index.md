@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/String/repeat
 
 La méthode **`repeat()`** construit et renvoie une nouvelle chaine de caractères qui contient le nombre de copie demandée de la chaine de caractères sur laquelle la méthode a été appelée, concaténées les unes aux autres.
 
-{{EmbedInteractiveExample("pages/js/string-repeat.html")}}
+{{InteractiveExample("JavaScript Demo: String.repeat()")}}
+
+```js interactive-example
+const mood = "Happy! ";
+
+console.log(`I feel ${mood.repeat(3)}`);
+// Expected output: "I feel Happy! Happy! Happy! "
+```
 
 ## Syntaxe
 

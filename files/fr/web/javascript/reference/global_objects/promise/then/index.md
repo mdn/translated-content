@@ -9,7 +9,18 @@ l10n:
 
 La méthode **`then()`**, disponible sur les instances [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), prend jusqu'à deux arguments qui sont les fonctions de rappel respectivement utilisées pour la réussite ou l'échec de la promesse. Cette méthode renvoie immédiatement un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) équivalent, ce qui permet [d'enchaîner](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses) les appels aux autres méthodes des promesses.
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.then()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## Syntaxe
 

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 
 La méthode **`some()`** teste si certains éléments du tableau typé remplissent une condition décrite par la fonction de test donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.some()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).
 
-{{EmbedInteractiveExample("pages/js/typedarray-some.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.some()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const positives = new Int8Array([10, 20, 30, 40, 50]);
+
+console.log(int8.some(isNegative));
+// Expected output: true
+
+console.log(positives.some(isNegative));
+// Expected output: false
+```
 
 ## Syntaxe
 

@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 L'instruction **`switch`** évalue une expression et, selon le résultat obtenu et le cas associé, exécute les instructions correspondantes.
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## Syntaxe
 

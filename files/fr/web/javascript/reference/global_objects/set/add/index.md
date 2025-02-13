@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 La méthode **`add()`** permet d'ajouter un nouvel élément ayant une valeur donnée à un ensemble `Set`. Cette valeur sera ajoutée à la fin de l'objet `Set`.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## Syntaxe
 

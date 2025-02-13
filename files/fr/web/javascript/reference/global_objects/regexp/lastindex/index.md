@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 
 La propriété **`lastIndex`** est un entier en lecture/écriture qui permet de définir l'indice (position) à partir duquel chercher la prochaine correspondance pour une instance d'expression rationnelle donnée.
 
-{{EmbedInteractiveExample("pages/js/regexp-lastindex.html")}}{{js_property_attributes(1,0,0)}}
+{{InteractiveExample("JavaScript Demo: RegExp.lastIndex")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+const str1 = "table football, foosball";
+
+regex1.test(str1);
+
+console.log(regex1.lastIndex);
+// Expected output: 9
+
+regex1.test(str1);
+
+console.log(regex1.lastIndex);
+// Expected output: 19
+```
+
+{{js_property_attributes(1,0,0)}}
 
 ## Syntaxe
 

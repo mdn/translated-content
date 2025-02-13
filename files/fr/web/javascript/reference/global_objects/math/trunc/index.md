@@ -9,7 +9,21 @@ La fonction **`Math.trunc()`** retourne la troncature entière d'un nombre en re
 
 <math><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.trunc</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mrow><mo>⌊</mo><mi>x</mi><mo>⌋</mo></mrow></mtd><mtd><mtext>si</mtext></mtd><mtd><mi>x</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>⌈</mo><mi>x</mi><mo>⌉</mo></mrow></mtd><mtd><mtext>si</mtext></mtd><mtd><mi>x</mi><mo>&#x3C;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.trunc}(x)} = \begin{cases} \left\lfloor x \right\rfloor &#x26; \text{if} &#x26; x \geq 0 \\ \left\lceil x \right\rceil &#x26; \text{if} &#x26;x &#x3C; 0 \end{cases}</annotation></semantics></math>
 
-{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
+{{InteractiveExample("JavaScript Demo: Math.trunc()")}}
+
+```js interactive-example
+console.log(Math.trunc(13.37));
+// Expected output: 13
+
+console.log(Math.trunc(42.84));
+// Expected output: 42
+
+console.log(Math.trunc(0.123));
+// Expected output: 0
+
+console.log(Math.trunc(-0.123));
+// Expected output: -0
+```
 
 ## Syntaxe
 

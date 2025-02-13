@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 
 La méthode **`valueOf()`** renvoie la valeur primitive correspondant à celle représentée par l'objet {{jsxref("Number")}}.
 
-{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+
+```js interactive-example
+const numObj = new Number(42);
+console.log(typeof numObj);
+// Expected output: "object"
+
+const num = numObj.valueOf();
+console.log(num);
+// Expected output: 42
+
+console.log(typeof num);
+// Expected output: "number"
+```
 
 ## Syntaxe
 

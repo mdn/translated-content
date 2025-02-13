@@ -7,7 +7,30 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 
 L'opérateur de plus unaire (`+`) précède son opérande et évalue son opérande en essayant de le convertir en nombre si ce n'est pas déjà une valeur numérique.
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+
+```js interactive-example
+const x = 1;
+const y = -1;
+
+console.log(+x);
+// Expected output: 1
+
+console.log(+y);
+// Expected output: -1
+
+console.log(+"");
+// Expected output: 0
+
+console.log(+true);
+// Expected output: 1
+
+console.log(+false);
+// Expected output: 0
+
+console.log(+"hello");
+// Expected output: NaN
+```
 
 ## Syntaxe
 

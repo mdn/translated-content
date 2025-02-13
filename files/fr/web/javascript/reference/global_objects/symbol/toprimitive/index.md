@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 
 Le symbole « connu » **`Symbol.toPrimitive`** définit une fonction qui est appelée pour convertir un objet en une valeur primitive.
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 ## Description
 

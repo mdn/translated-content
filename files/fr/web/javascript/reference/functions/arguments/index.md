@@ -13,7 +13,22 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 > [!NOTE]
 > Par « objet semblable à un tableau », on indique que l'objet `arguments` possède une propriété {{jsxref("Fonctions/arguments.length", "length")}} et que ses propriétés sont indexées à partir de 0 mais qu'il ne possède aucune des méthodes natives de {{jsxref("Array")}} telles que {{jsxref("Array.forEach", "forEach()")}} et {{jsxref("Array.map", "map()")}}.
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 > [!NOTE]
 > « Variable ayant la fonction pour portée » correspond à la traduction de « Variable of the function scope » qu'il serait incorrect de traduire par « Variable de la portée de la fonction » car la portée de la fonction est la portée dans laquelle on peut appeler la fonction. Une variable locale de la fonction pourrait quant à elle avoir une portée strictement incluse dans le corps de la fonction (variable définie dans un bloc de la fonction même si cette subtilité n'existe pas en Javascript). Toute suggestion pour éviter cette tournure un peu longue sans altérer le sens est la bienvenue. (variable intrinsèque)

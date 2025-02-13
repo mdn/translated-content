@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 
 La propriété **`sticky`** (adhérante) permet de déterminer si la recherche s'effectue uniquement à partir de l'indice {{jsxref("RegExp.lastIndex", "lastIndex")}} lié à l'expression rationnelle ou non). `sticky` est une propriété accessible en lecture seule, rattachée à l'instance.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky")}}
+
+```js interactive-example
+const str1 = "table football";
+const regex1 = new RegExp("foo", "y");
+
+regex1.lastIndex = 6;
+
+console.log(regex1.sticky);
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: false
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 

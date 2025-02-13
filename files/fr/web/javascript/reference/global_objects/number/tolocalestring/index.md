@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 La méthode **`toLocaleString()`** permet de renvoyer une chaîne de caractères représentant un nombre en tenant compte de la locale.
 
-{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+
+```js interactive-example
+function eArabic(x) {
+  return x.toLocaleString("ar-EG");
+}
+
+console.log(eArabic(123456.789));
+// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(eArabic("123456.789"));
+// Expected output: "123456.789"
+
+console.log(eArabic(NaN));
+// Expected output: "ليس رقم"
+```
 
 ## Syntaxe
 
