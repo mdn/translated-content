@@ -1,23 +1,24 @@
 ---
-title: 一般的な HTML と CSS の問題への対処
+title: 一般的な HTML と CSS の問題の処理
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
-  sourceCommit: 56fc816a9fb8e96a6b69cd19be03f62b582c06ae
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}
 
-ここでは、HTML と CSS のコードで発生する可能性のある一般的なブラウザー間の問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
+
+ここでは、HTML と CSS のコードで発生する可能性のある一般的なブラウザー間の問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するためのポリフィルの使用、レスポンシブデザイン問題への取り組みなどが含まれます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語の主要部に通じていること。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語の主要部に通じていること。
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/ja/docs/Learn_web_development/Extensions/Testing/Introduction"
           >ブラウザー横断テストの基本</a
         >について高水準の考えを持っていること。
       </td>
@@ -33,16 +34,15 @@ l10n:
 
 ## HTML と CSS の問題
 
-一部の HTML と CSS の問題は、両方の言語がかなり単純で、コードがうまく作成され、効率的であり、ページ上に「機能の目的」を意味的に記述していることを確認するという意味で開発者がそれらについて真剣に考えていないという事実にあります。最悪の場合、JavaScript を使用してウェブページのコンテンツとスタイル全体を生成するため、ページにアクセスできなくなり、パフォーマンスが低下します（DOM 要素の生成にはコストがかかります）。他のケースでは、初期の機能がブラウザー間で一貫してサポートされていないため、一部の機能やスタイルが一部のユーザーには機能しないことがあります。
-レスポンシブデザインの問題も一般的です。デスクトップブラウザーで見栄えの良いサイトはモバイル端末だとひどい経験を提供するかもしれません、内容が読むには小さすぎるか、高精細なアニメーションのせいで遅いでしょう。
+一部の HTML と CSS の問題は、両方の言語がかなり単純で、コードがうまく作成され、効率的であり、ページ上に「機能の目的」を意味的に記述していることを確認するという意味で開発者がそれらについて真剣に考えていないという事実にあります。最悪の場合、JavaScript を使用してウェブページのコンテンツとスタイル全体を生成するため、ページにアクセスできなくなり、パフォーマンスが低下します（DOM 要素の生成にはコストがかかります）。他のケースでは、初期の機能がブラウザー間で一貫してサポートされていないため、一部の機能やスタイルが一部のユーザーには機能しないことがあります。レスポンシブデザインの問題も一般的です。デスクトップブラウザーで見栄えの良いサイトはモバイル端末だとひどい経験を提供するかもしれません、内容が読むには小さすぎるか、高精細なアニメーションのせいで遅いでしょう。
 
 HTML/CSS に起因するブラウザー間のエラーを減らす方法を見てみましょう。
 
 ## まず最初に：一般的な問題を解決する
 
-[このシリーズの最初の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#テスト発見)では、まずブラウザー間の問題に集中する前に、デスクトップ/モバイルの最新ブラウザーでいくつかテストしてコードが正常に機能するか確認することをお勧めします。
+[このシリーズの最初の記事](/ja/docs/Learn_web_development/Extensions/Testing/Introduction#テスト発見)では、まずブラウザー間の問題に集中する前に、デスクトップ/モバイルの最新ブラウザーでいくつかテストしてコードが正常に機能するか確認することをお勧めします。
 
-[HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)および [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)の記事では、HTML/CSS のデバッグに関する基本的なガイダンスをいくつか提供しました。基本に慣れていない場合は、先に進む前に必ずこれらの記事をよく読んでください。
+[HTML のデバッグ](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)および [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Building_blocks/Debugging_CSS)の記事では、HTML/CSS のデバッグに関する基本的なガイダンスをいくつか提供しました。基本に慣れていない場合は、先に進む前に必ずこれらの記事をよく読んでください。
 
 基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。
 
@@ -53,7 +53,7 @@ HTML/CSS に起因するブラウザー間のエラーを減らす方法を見�
 
 HTML の検証では、すべてのタグが適切に閉じられてネストされていること、DOCTYPE を使用していること、およびタグを正しい目的で使用していることを確認します。良い戦略はコードを定期的に検証することです。これを可能にするサービスの 1 つに、W3C [マークアップ検証サービス](https://validator.w3.org/)があります。これを使用すると、コードを指定してエラーのリストを返すことができます。
 
-![The HTML validator homepage](validator.png)
+![The HTML validator ホームページ](validator.png)
 
 CSS にも同様の話があります — プロパティ名が正しくつづられていること、プロパティ値が正しくつづられていて、それらが使われているプロパティに対して有効であること、中括弧を見逃していないということです。この目的のために、W3C には [CSS Validator](https://jigsaw.w3.org/css-validator/) も用意されています。
 
@@ -158,7 +158,7 @@ CSS は間違いなく HTML よりも代替性に優れています。ブラウ�
 ![角丸、インセットシャドウ、ドロップシャドウの赤い錠剤型ボタン](blingy-button.png)
 
 > [!NOTE]
-> GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)も参照してください）。
+> GitHub で [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)も参照してください）。
 
 ボタンにはスタイル設定をする宣言がいくつもありますが、最も興味深いのは以下の 2 つです。
 
@@ -194,7 +194,7 @@ button:active {
 
 ### セレクターの対応
 
-もちろん、正しい[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)を使用してスタイル設定したい要素を選択しなければ、 CSS の特性はまったく適用されません。
+もちろん、正しい[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)を使用してスタイル設定したい要素を選択しなければ、 CSS の特性はまったく適用されません。
 
 カンマ区切りのセレクターリストでは、セレクターの書き方を間違えただけで、どの要素にも一致しなくなることがあります。しかし、セレクターが不正な場合は、スタイルブロック全体とともに、セレクターの**リスト全体**が無視されます。このため、 `:-moz-` 接頭辞のついた擬似クラスや擬似要素は、[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#forgiving_selector_list) の中で、 `:where(::-moz-thumb)` のようにのみ記載してください。 Firefox 以外のすべてのウェブブラウザーはブロック全体を無視するので、 [`:is()`](/ja/docs/Web/CSS/:is) または [`:where()`](/ja/docs/Web/CSS/:where) の寛容なセレクターリストの外側のカンマ区切りのセレクターグループ内に、接頭辞 `:-moz-` が付いた擬似クラスまたは擬似要素を記載しないでください。 `is()` と `:where()` は、他にも [`:has()`](/ja/docs/Web/CSS/:has) や [`:not()`](/ja/docs/Web/CSS/:not) などのセレクターリストの引数として渡すことができることに注意してください。
 
@@ -216,7 +216,7 @@ form > #date
 
 他の問題点として、 CSS 接頭辞があります。接頭辞は元々、ブラウザーベンダーが CSS （または JavaScript）の機能を実験的な状態で自分自身で実装できるようにするために使用することができる仕組みで、他のブラウザーの実装や接頭辞のない最終的な実装と競合することなく、正しく実装することができます。
 
-例えば、 Firefox は `-moz-` を、 Chrome/Edge/Opera/Safari は `-webkit-` を使用しています。古いコードで遭遇する可能性があるその他の接頭辞、例えばインターネットエクスプローラーと Edge の初期バージョンで使用されていた `-ms-` や、 Opera の元バージョンで使用されていた `-o` などは、除去しても安全です。
+例えば、 Firefox は `-moz-` を、 Chrome/Edge/Opera/Safari は `-webkit-` を使用しています。古いコードで遭遇する可能性があるその他の接頭辞、例えば Internet Explorer と Edge の初期バージョンで使用されていた `-ms-` や、 Opera のオリジナルバージョンで使用されていた `-o` などは、除去しても安全です。
 
 接頭辞機能は、本番のウェブサイトで使用することは想定されていません。警告なしに変更または削除される可能性があり、それを要求される古いバージョンのブラウザーではパフォーマンスの問題を引き起こす可能性があり、ブラウザー間の問題を発生させることもあります。この例は具体的な問題で、例えば開発者がプロパティの `-webkit-` バージョンだけを使用することにした場合、他のブラウザーではサイトが動作しないことを意味します。このようなことが実際に起こったため、他にもいくつかのブラウザーが `-webkit-` 接頭辞付きバージョンの CSS プロパティを実装しました。ブラウザーは今でもいくつかの接頭辞付きプロパティ名、プロパティ値、擬似クラスに対応していますが、これで実験的な機能はフラグの後ろに置かれ、ウェブ開発者が開発中にテストできるようになりました。
 
@@ -254,21 +254,21 @@ form > #date
 
 ### レスポンシブデザインの問題
 
-レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
-解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を含め、たくさんあります。
+解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を含め、たくさんあります。
 
 ## ヘルプを探す
 
 HTML と CSS で遭遇する課題は他にもたくさんあり、オンラインで答えを探す方法の知識は非常に貴重です。
 
-サポート情報の最良の情報源としては、[Mozilla Developer Network]（今いる場所です）、[stackoverflow.com](https://stackoverflow.com/)、[caniuse.com](https://caniuse.com/) などがあります。
+サポート情報の最良の情報源としては、Mozilla Developer Network（今いる場所です）、[stackoverflow.com](https://stackoverflow.com/)、[caniuse.com](https://caniuse.com/) などがあります。
 
 Mozilla Developer Network (MDN) を使用するために、ほとんどの人は検索エンジンで情報を探そうとしている技術に "MDN" という単語を加えて検索します（例えば "MDN HTML video"）。MDN にはいくつかの有益な種類のコンテンツが収められています。
 
 - クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Element/video)など。
-- その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Formats)など。
-- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
+- その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
+- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 
 [caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください）テキストボックスに検索したい機能を入力してください）。
 
@@ -280,4 +280,4 @@ Mozilla Developer Network (MDN) を使用するために、ほとんどの人は
 
 これで、ウェブ開発者が直面する主要なブラウザー間の HTML と CSS の問題の種類、およびそれらを修正する方法について習熟したことでしょう。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
