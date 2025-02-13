@@ -24637,10 +24637,38 @@
       "sosleepy"
     ]
   },
+  "Web/CSS/CSS_cascade/Cascade": {
+    "modified": "2020-04-19T05:24:20.123Z",
+    "contributors": [
+      "mfuji09",
+      "isdh"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Specificity": {
+    "modified": "2020-04-20T23:20:01.731Z",
+    "contributors": [
+      "mfuji09",
+      "sakai-akinobu",
+      "yoshidax",
+      "ethertank",
+      "sii"
+    ]
+  },
   "Web/CSS/CSS_cascading_variables": {
     "modified": "2019-09-26T04:21:48.836Z",
     "contributors": [
       "cmplstofB"
+    ]
+  },
+  "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
+    "modified": "2020-10-15T21:45:20.930Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "hamasaki",
+      "YuichiNukiyama",
+      "lv7777",
+      "buffarin"
     ]
   },
   "Web/CSS/CSS_charsets": {
@@ -24707,6 +24735,49 @@
   },
   "Web/CSS/CSS_display": {
     "modified": "2020-10-15T22:01:55.406Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow": {
+    "modified": "2020-05-14T13:25:53.556Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Containing_block": {
+    "modified": "2020-10-17T13:41:06.755Z",
+    "contributors": [
+      "mfuji09",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout": {
+    "modified": "2019-03-18T21:32:57.417Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout_and_overflow": {
+    "modified": "2019-03-18T21:27:42.298Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout_and_writing_modes": {
+    "modified": "2019-03-18T21:28:55.263Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/In_flow_and_out_of_flow": {
+    "modified": "2019-03-18T21:28:49.433Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Introduction_to_formatting_contexts": {
+    "modified": "2020-08-09T11:07:11.560Z",
     "contributors": [
       "mfuji09"
     ]
@@ -24789,42 +24860,6 @@
     "modified": "2019-03-18T21:27:50.748Z",
     "contributors": [
       "sutara79"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout": {
-    "modified": "2019-03-18T21:32:57.417Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow": {
-    "modified": "2020-05-14T13:25:53.556Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Flow_layout_and_overflow": {
-    "modified": "2019-03-18T21:27:42.298Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes": {
-    "modified": "2019-03-18T21:28:55.263Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow": {
-    "modified": "2019-03-18T21:28:49.433Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts": {
-    "modified": "2020-08-09T11:07:11.560Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/CSS_fonts": {
@@ -25298,13 +25333,6 @@
       "dynamis"
     ]
   },
-  "Web/CSS/Cascade": {
-    "modified": "2020-04-19T05:24:20.123Z",
-    "contributors": [
-      "mfuji09",
-      "isdh"
-    ]
-  },
   "Web/CSS/Child_combinator": {
     "modified": "2020-10-15T21:22:37.540Z",
     "contributors": [
@@ -25335,13 +25363,6 @@
     "contributors": [
       "mfuji09",
       "ethertank"
-    ]
-  },
-  "Web/CSS/Containing_block": {
-    "modified": "2020-10-17T13:41:06.755Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta"
     ]
   },
   "Web/CSS/Descendant_combinator": {
@@ -25589,16 +25610,6 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/Specificity": {
-    "modified": "2020-04-20T23:20:01.731Z",
-    "contributors": [
-      "mfuji09",
-      "sakai-akinobu",
-      "yoshidax",
-      "ethertank",
-      "sii"
-    ]
-  },
   "Web/CSS/Subsequent-sibling_combinator": {
     "modified": "2020-10-15T21:22:37.143Z",
     "contributors": [
@@ -25639,17 +25650,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Using_CSS_custom_properties": {
-    "modified": "2020-10-15T21:45:20.930Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "hamasaki",
-      "YuichiNukiyama",
-      "lv7777",
-      "buffarin"
     ]
   },
   "Web/CSS/Value_definition_syntax": {

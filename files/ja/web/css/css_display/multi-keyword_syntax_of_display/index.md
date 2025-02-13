@@ -1,6 +1,7 @@
 ---
 title: CSS display の複数キーワード構文の使用
-slug: Web/CSS/display/multi-keyword_syntax_of_display
+slug: Web/CSS/CSS_display/multi-keyword_syntax_of_display
+original_slug: Web/CSS/display/multi-keyword_syntax_of_display
 l10n:
   sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---

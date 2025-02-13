@@ -1,6 +1,7 @@
 ---
 title: CSS カスケード入門
-slug: Web/CSS/Cascade
+slug: Web/CSS/CSS_cascade/Cascade
+original_slug: Web/CSS/Cascade
 ---
 
 {{CSSRef}}
