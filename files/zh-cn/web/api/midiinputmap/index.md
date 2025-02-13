@@ -9,7 +9,7 @@ l10n:
 
 [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API) 的 **`MIDIInputMap`** 只读接口提供了当前可用的 MIDI 输入端口集合。
 
-`MIDIInputMap` 实例是一个只读的[类 `Map` 类对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map#类_map_浏览器_api)，其中每个键是 MIDI 输入的 ID 字符串，关联的值是对应的 {{domxref("MIDIInput")}} 对象。
+`MIDIInputMap` 实例是一个只读的[类 `Map` 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map#类_map_浏览器_api)，其中每个键是 MIDI 输入的 ID 字符串，关联的值是对应的 {{domxref("MIDIInput")}} 对象。
 
 ## 规范
 
