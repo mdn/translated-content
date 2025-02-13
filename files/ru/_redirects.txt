@@ -768,8 +768,8 @@
 /ru/docs/Web/CSS/CSS_Color	/ru/docs/Web/CSS/CSS_colors
 /ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-/ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
-/ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+/ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
+/ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 /ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
@@ -788,10 +788,13 @@
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
 /ru/docs/Web/CSS/CSS_animations/Tips	/ru/docs/Web/API/Web_Animations_API/Tips
+/ru/docs/Web/CSS/CSS_flow_layout	/ru/docs/Web/CSS/CSS_display/Flow_layout
+/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts	/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /ru/docs/Web/CSS/CSS_Селекторы	/ru/docs/Web/CSS/CSS_selectors
 /ru/docs/Web/CSS/CSS_Селекторы/Using_the_:target_pseudo-class_in_selectors	/ru/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /ru/docs/Web/CSS/Child_selectors	/ru/docs/Web/CSS/Child_combinator
 /ru/docs/Web/CSS/Common_CSS_Questions	/ru/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
+/ru/docs/Web/CSS/Containing_block	/ru/docs/Web/CSS/CSS_display/Containing_block
 /ru/docs/Web/CSS/Descendant_selectors	/ru/docs/Web/CSS/Descendant_combinator
 /ru/docs/Web/CSS/General_sibling_combinator	/ru/docs/Web/CSS/Subsequent-sibling_combinator
 /ru/docs/Web/CSS/General_sibling_selectors	/ru/docs/Web/CSS/Subsequent-sibling_combinator
@@ -801,7 +804,9 @@
 /ru/docs/Web/CSS/Media_Queries/Тестирование_медиа_запросы	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ru/docs/Web/CSS/Paged_Media	/ru/docs/Web/CSS/CSS_paged_media
 /ru/docs/Web/CSS/Reference/background-blend-mode	/ru/docs/Web/CSS/background-blend-mode
-/ru/docs/Web/CSS/Using_CSS_variables	/ru/docs/Web/CSS/Using_CSS_custom_properties
+/ru/docs/Web/CSS/Specificity	/ru/docs/Web/CSS/CSS_cascade/Specificity
+/ru/docs/Web/CSS/Using_CSS_custom_properties	/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+/ru/docs/Web/CSS/Using_CSS_variables	/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /ru/docs/Web/CSS/attr()	/ru/docs/Web/CSS/attr
 /ru/docs/Web/CSS/box_model	/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /ru/docs/Web/CSS/calc()	/ru/docs/Web/CSS/calc
