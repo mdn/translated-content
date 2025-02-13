@@ -1,7 +1,6 @@
 ---
 title: CSS 流式布局
 slug: Web/CSS/CSS_display/Flow_layout
-original_slug: Web/CSS/CSS_flow_layout
 ---
 
 {{CSSRef}}
@@ -20,17 +19,8 @@ original_slug: Web/CSS/CSS_flow_layout
 
 ## 参见
 
-- [Block and Inline Layout in Normal Flow](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [In Flow and Out of Flow](/zh-CN/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
-- [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [Flow Layout and Writing Modes](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [Flow Layout and Overflow](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
-
-## 参考
-
-### Glossary Entries
-
-- {{Glossary("Block/CSS", "Block (CSS)")}}
-
-1. [**CSS**](/zh-CN/docs/Web/CSS)
-2. [**CSS Reference**](/zh-CN/docs/Web/CSS/Reference)
+- [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [应用或脱离流式布局](/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [流式布局和书写模式](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [流式布局和溢出](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)

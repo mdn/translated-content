@@ -44,7 +44,7 @@ CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值
    | 7   | 用户代理                   | `!important` |
    | 8   | css 过渡 (css transitions) |              |
 
-3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/Web/CSS/Specificity)。
+3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)。
 
 ## 重置样式
 
@@ -147,12 +147,12 @@ margin-left: 3px;
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)
