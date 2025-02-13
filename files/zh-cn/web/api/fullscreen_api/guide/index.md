@@ -2,7 +2,7 @@
 title: 全屏 API 指南
 slug: Web/API/Fullscreen_API/Guide
 l10n:
-  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -16,16 +16,16 @@ l10n:
 我们来看看 {{HTMLElement("video")}} 这个元素：
 
 ```html
-<video controls id="myvideo">
-  <source src="somevideo.webm"></source>
-  <source src="somevideo.mp4"></source>
+<video controls id="my-video">
+  <source src="somevideo.webm" />
+  <source src="somevideo.mp4" />
 </video>
 ```
 
 我们可以用下面的代码让视频进入全屏模式：
 
 ```js
-const elem = document.getElementById("myvideo");
+const elem = document.getElementById("my-video");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
 }
@@ -42,11 +42,11 @@ if (elem.requestFullscreen) {
 你并不总是可以进入全屏模式。例如 {{HTMLElement("iframe")}} 元素具有 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性，可选择是否允许将其内容以全屏模式显示。另外，几种特定的内容，比如窗体插件（windowed plug-ins），不能以全屏模式显示。尝试将不能以全屏模式显示的元素（或者此元素的父元素和后代元素）的时候，全屏请求将不起作用。而相应元素会收到一个 `fullscreenerror` 事件。当全屏请求失败时，Firefox 会在 Web 控制台上打印一条错误信息解释请求为什么失败。但是在 Chrome 和新版的 Opera 中，不会生成这样的警告。
 
 > [!NOTE]
-> 全屏请求必须在事件处理函数中调用，否则将会被拒绝。
+> 全屏请求必须在事件处理器中调用，否则将会被拒绝。
 
 ## 退出全屏模式
 
-用户总是可以自行退出全屏模式；详见[你的用户想了解的信息](#things_your_users_want_to_know)。你也可以以编程方式通过调用 {{DOMxRef("Document.exitFullscreen()")}} 方法来做到这点。
+用户总是可以自行退出全屏模式；详见[你的用户想了解的信息](#你的用户想了解的信息)。你也可以以编程方式通过调用 {{DOMxRef("Document.exitFullscreen()")}} 方法来做到这点。
 
 ## 其他信息
 
@@ -73,7 +73,7 @@ if (elem.requestFullscreen) {
 
 [查看实时运行示例](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
-### 监听 <kbd>Enter</kbd> 键
+### 监听 Enter 键
 
 当页面加载完成时，这段代码可以设置一个事件监听器以监听 <kbd>Enter</kbd> 键。
 
