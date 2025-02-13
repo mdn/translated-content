@@ -2428,7 +2428,7 @@
 /ja/docs/Learn/Server-side/First_steps/Web_frameworks	/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks
 /ja/docs/Learn/Server-side/First_steps/Website_security	/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security
 /ja/docs/Learn/Server-side/Node_server_without_framework	/ja/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework
-/ja/docs/Learn/Tools_and_testing	/ja/docs/conflicting/Learn_web_development/Extensions/Testing
+/ja/docs/Learn/Tools_and_testing	/ja/docs/Learn_web_development/Extensions/Testing
 /ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks	/ja/docs/Learn_web_development/Core/Frameworks_libraries
 /ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building	/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building
 /ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering	/ja/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering
