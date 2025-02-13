@@ -1,14 +1,14 @@
 ---
 title: 웹 성능이란
 slug: Learn_web_development/Extensions/Performance/What_is_web_performance
-page-type: learn-module-chapter
+original_slug: Learn/Performance/What_is_web_performance
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance")}}
 
-웹 성능은 웹 사이트를 빠르게 만드는 것과, 느린 프로세스를 빠르게 보이도록 만드는 것이 전부입니다. 사이트가 빠르게 로드되고 사용자가 사이트와 상호작용을 빠르게 하도록 만들며, 로드하는 데 오랜 시간이 걸리면 로딩 스피너 같은 확신을 주는 피드백을 제안하나요? 스크롤과 애니메이션이 부드럽게 이뤄지나요? 이번 기사에서는 객관적으로 측정 가능한 웹 성능\*에 대한 간략한 소개를 제공하고 웹 최적화와 관련된 기술과 기법 및 도구를 살펴봅니다.
+웹 성능은 웹 사이트를 빠르게 만드는 것과, 느린 프로세스를 빠르게 보이도록 만드는 것이 전부입니다. 사이트가 빠르게 로드되고 사용자가 사이트와 상호작용을 빠르게 하도록 만들며, 로드하는 데 오랜 시간이 걸리면 로딩 스피너 같은 확신을 주는 피드백을 제안하나요? 스크롤과 애니메이션이 부드럽게 이뤄지나요? 이번 기사에서는 객관적으로 측정 가능한 웹 성능에 대한 간략한 소개를 제공하고 웹 최적화와 관련된 기술과 기법 및 도구를 살펴봅니다.
 
 <table>
   <tbody>
