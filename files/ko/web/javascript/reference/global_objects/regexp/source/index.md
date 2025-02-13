@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("RegExp")}} 인스턴스의 **`source`** 접근자 속성은 양쪽 슬래시 2개나 플래그 없이 이 정규 표현식의 소스 텍스트가 포함된 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
+
+```js interactive-example
+const regex1 = /fooBar/gi;
+
+console.log(regex1.source);
+// Expected output: "fooBar"
+
+console.log(new RegExp().source);
+// Expected output: "(?:)"
+
+console.log(new RegExp("\n").source === "\\n");
+// Expected output: true (starting with ES5)
+// Due to escaping
+```
 
 ## 설명
 

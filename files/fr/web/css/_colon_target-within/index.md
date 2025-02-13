@@ -1,5 +1,5 @@
 ---
-title: ":target-within"
+title: :target-within
 slug: Web/CSS/:target-within
 l10n:
   sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2

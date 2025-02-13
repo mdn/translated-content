@@ -843,6 +843,7 @@
 /ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
+/ru/docs/Web/Guide	/ru/docs/MDN/Guides
 /ru/docs/Web/Guide/AJAX	/ru/docs/Learn_web_development/Core/Scripting/Network_requests
 /ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Media/Guides/Audio_and_video_delivery/buffering_seeking_time_ranges
@@ -869,7 +870,7 @@
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/conflicting/Learn_web_development/Core/Structuring_content
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
-/ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Parsing_and_serializing_XML
+/ru/docs/Web/Guide/Parsing_and_serializing_XML	/ru/docs/Web/XML/Guides/Parsing_and_serializing_XML
 /ru/docs/Web/Guide/User_input_methods	/ru/docs/Learn_web_development/Extensions/Forms/User_input_methods
 /ru/docs/Web/Guide/WOFF	/ru/docs/Web/CSS/CSS_fonts/WOFF
 /ru/docs/Web/HTML/Applying_color	/ru/docs/Web/CSS/CSS_colors/Applying_color
@@ -1112,6 +1113,7 @@
 /ru/docs/Web/SVG/Элемент/svg	/ru/docs/Web/SVG/Element/svg
 /ru/docs/Web/SVG/Элемент/use	/ru/docs/Web/SVG/Element/use
 /ru/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ru/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/ru/docs/Web/Tutorials	/ru/docs/MDN/Tutorials
 /ru/docs/Web/WebGL	/ru/docs/Web/API/WebGL_API
 /ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -1120,8 +1122,12 @@
 /ru/docs/Web/Web_Components	/ru/docs/Web/API/Web_components
 /ru/docs/Web/Web_Components/Using_custom_elements	/ru/docs/Web/API/Web_components/Using_custom_elements
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/API/Web_components/Using_custom_elements
-/ru/docs/Web/XPath/Functions/floor	/ru/docs/Web/XPath/Reference/Functions/floor
-/ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Reference/Functions/floor
+/ru/docs/Web/XML/Parsing_and_serializing_XML	/ru/docs/Web/XML/Guides/Parsing_and_serializing_XML
+/ru/docs/Web/XML/XML_introduction	/ru/docs/Web/XML/Guides/XML_introduction
+/ru/docs/Web/XPath/Functions/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/Web/XPath/Reference/Functions/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/Web/XSLT	/ru/docs/Web/XML/XSLT
 /ru/docs/WebAssembly/C_to_Wasm	/ru/docs/WebAssembly/Guides/C_to_Wasm
 /ru/docs/WebAssembly/Concepts	/ru/docs/WebAssembly/Guides/Concepts
 /ru/docs/WebAssembly/Exported_functions	/ru/docs/WebAssembly/Guides/Exported_functions
@@ -1141,8 +1147,8 @@
 /ru/docs/WebSockets	/ru/docs/Web/API/WebSockets_API
 /ru/docs/WebSockets/Writing_WebSocket_client_applications	/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ru/docs/XHTML	/ru/docs/Glossary/XHTML
-/ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Reference/Functions/floor
-/ru/docs/XSLT	/ru/docs/Web/XSLT
+/ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XML/XPath/Reference/Functions/floor
+/ru/docs/XSLT	/ru/docs/Web/XML/XSLT
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_overview

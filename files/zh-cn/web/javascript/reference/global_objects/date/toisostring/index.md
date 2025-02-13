@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 
 **`toISOString()`** 方法返回一个 ISO（[ISO 8601 Extended Format](http://en.wikipedia.org/wiki/ISO_8601)）格式的字符串： **YYYY-MM-DDTHH:mm:ss.sssZ**。时区总是 UTC（协调世界时），加一个后缀“Z”标识。
 
-{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+
+```js interactive-example
+const event = new Date("05 October 2011 14:48 UTC");
+console.log(event.toString());
+// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toISOString());
+// Expected output: "2011-10-05T14:48:00.000Z"
+```
 
 ## 语法
 

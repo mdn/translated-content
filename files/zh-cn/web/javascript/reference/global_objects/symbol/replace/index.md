@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 
 更多信息，详见 [`RegExp.prototype[Symbol.replace]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace) 和 {{jsxref("String.prototype.replace()")}}。
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
 
 {{js_property_attributes(0,0,0)}}
 

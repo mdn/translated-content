@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/push
 
 El método **`push()`** añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
 
-{{EmbedInteractiveExample("pages/js/array-push.html")}}
+{{InteractiveExample("JavaScript Demo: Array.push()")}}
+
+```js interactive-example
+const animals = ["pigs", "goats", "sheep"];
+
+const count = animals.push("cows");
+console.log(count);
+// Expected output: 4
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+animals.push("chickens", "cats", "dogs");
+console.log(animals);
+// Expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+```
 
 ## Sintaxis
 

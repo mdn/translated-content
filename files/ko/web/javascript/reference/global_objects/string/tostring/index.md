@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toString
 
 **`toString()`** 메서드는 객체의 문자열 표현을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: String.toString()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+```
 
 ## 구문
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 
 **`toLocaleString()`** 方法返回一个表示给定 BigInt 对象的字符串，该字符串格式因不同语言而不同。在支持 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的实现中，该方法仅是调用了 `Intl.NumberFormat` 方法。
 
-{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: BigInt.toLocaleString()")}}
+
+```js interactive-example
+const bigint = 123456789123456789n;
+
+// German uses period for thousands
+console.log(bigint.toLocaleString("de-DE"));
+// Expected output: "123.456.789.123.456.789"
+
+// Request a currency format
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
+// Expected output: "123.456.789.123.456.789,00 €"
+```
 
 ## 语法
 

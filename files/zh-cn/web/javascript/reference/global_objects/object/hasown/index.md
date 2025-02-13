@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 
 > **备注：** `Object.hasOwn()` 旨在取代 {{jsxref("Object.prototype.hasOwnProperty()")}}。
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+
+```js interactive-example
+const object1 = {
+  prop: "exists",
+};
+
+console.log(Object.hasOwn(object1, "prop"));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, "toString"));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+// Expected output: false
+```
 
 ## 语法
 

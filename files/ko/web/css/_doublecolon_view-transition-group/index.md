@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-group"
+title: ::view-transition-group
 slug: Web/CSS/::view-transition-group
 l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd

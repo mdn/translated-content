@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 
 **`find()`** 方法會回傳第一個滿足所提供之測試函式的元素**值**。否則回傳 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/array-find.html")}}
+{{InteractiveExample("JavaScript Demo: Array.find()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const found = array1.find((element) => element > 10);
+
+console.log(found);
+// Expected output: 12
+```
 
 也可以參考 {{jsxref("Array.findIndex", "findIndex()")}} 方法，它回傳被找到的元素在陣列中的**索引**，而不是它的值。
 

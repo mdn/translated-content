@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 
 **`getMinutes()`** 方法基於本地時區回傳指定日期的分鐘數。
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()", "shorter")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## 語法
 

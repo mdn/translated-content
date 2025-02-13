@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/function*
 
 **`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 你可以透過 {{jsxref("GeneratorFunction")}} 建構式來定義生成器函式。
 

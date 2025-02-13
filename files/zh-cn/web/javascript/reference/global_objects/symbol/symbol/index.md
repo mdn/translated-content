@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 
 **`Symbol()`** 构造函数返回一个 **symbol** 类型的值，但是它并不完全支持构造函数的语法，因为它不支持 `new Symbol()` 语法，也无法被子类化。它可以作为 `class` 定义中 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 子句的值使用，但对它进行 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 调用将会导致异常。
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## 语法
 

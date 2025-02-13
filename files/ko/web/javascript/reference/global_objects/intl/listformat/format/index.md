@@ -9,7 +9,29 @@ l10n:
 
 {{jsxref("Intl.ListFormat")}} 인스턴스의 **`format()`** 메서드는 언어별 목록을 표현하는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## 구문
 

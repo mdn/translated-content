@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("String")}} 값의 **`trimStart()`** 메서드는 이 문자열 시작 부분의 공백을 제거하고 기존 문자열의 수정 없이 새로운 문자열을 반환합니다. `trimLeft()`는 이 메서드의 별칭입니다.
 
-{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimStart()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimStart());
+// Expected output: "Hello world!   ";
+```
 
 ## 구문
 
