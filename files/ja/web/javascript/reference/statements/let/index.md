@@ -9,7 +9,21 @@ l10n:
 
 **`let`** 文はブロックスコープのローカル変数を宣言します。任意で値を代入して初期化できます。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 構文
 

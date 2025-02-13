@@ -9,7 +9,15 @@ l10n:
 
 **ビット論理積 (`&`)** 演算子は、両方のオペランドの対応するビットのいずれもが `1` である位置のビットで `1` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## 構文
 

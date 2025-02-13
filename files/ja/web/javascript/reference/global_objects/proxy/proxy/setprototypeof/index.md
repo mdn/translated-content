@@ -9,7 +9,30 @@ l10n:
 
 **`handler.setPrototypeOf()`** メソッドは、オブジェクトの `[[SetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.setPrototypeOf()")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  setPrototypeOf(monster1, monsterProto) {
+    monster1.geneticallyModified = true;
+    return false;
+  },
+};
+
+const monsterProto = {};
+const monster1 = {
+  geneticallyModified: false,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+// Object.setPrototypeOf(proxy1, monsterProto); // Throws a TypeError
+
+console.log(Reflect.setPrototypeOf(proxy1, monsterProto));
+// Expected output: false
+
+console.log(monster1.geneticallyModified);
+// Expected output: true
+```
 
 ## 構文
 

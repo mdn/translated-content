@@ -9,7 +9,15 @@ l10n:
 
 **ビット論理積代入 (`&=`)** 演算子は、 2 つのオペランドで[論理積](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)を取り、その結果を左オペランドへ代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND assignment", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a &= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## 構文
 

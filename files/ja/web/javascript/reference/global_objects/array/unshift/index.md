@@ -9,7 +9,17 @@ l10n:
 
 **`unshift()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された要素を配列の先頭に追加し、新しい配列の長さを返します。
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## 構文
 

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 
 **`Intl.Collator.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替しなくても照合で対応するロケールを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator-supportedlocalesof.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.Collator.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 

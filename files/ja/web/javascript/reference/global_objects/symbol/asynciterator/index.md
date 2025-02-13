@@ -9,7 +9,36 @@ l10n:
 
 **`Symbol.asyncIterator`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.asyncIterator` を表します。[非同期反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)は、オブジェクトの非同期反復子を返すメソッドをこのシンボルで探します。オブジェクトが非同期反復可能であるためには、`[Symbol.asyncIterator]` キーを持つ必要があります。
 
-{{EmbedInteractiveExample("pages/js/symbol-asynciterator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol.asyncIterator", "taller")}}
+
+```js interactive-example
+const delayedResponses = {
+  delays: [500, 1300, 3500],
+
+  wait(delay) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, delay);
+    });
+  },
+
+  async *[Symbol.asyncIterator]() {
+    for (const delay of this.delays) {
+      await this.wait(delay);
+      yield `Delayed response for ${delay} milliseconds`;
+    }
+  },
+};
+
+(async () => {
+  for await (const response of delayedResponses) {
+    console.log(response);
+  }
+})();
+
+// Expected output: "Delayed response for 500 milliseconds"
+// Expected output: "Delayed response for 1300 milliseconds"
+// Expected output: "Delayed response for 3500 milliseconds"
+```
 
 ## 値
 
