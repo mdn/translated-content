@@ -13,8 +13,8 @@ slug: Web/API/Location/assign
 
 ## Синтаксис
 
-```
-location.assign(url);
+```js-nolint
+assign(url)
 ```
 
 ### Параметры
