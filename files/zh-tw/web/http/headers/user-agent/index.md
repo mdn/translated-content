@@ -48,7 +48,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ## Firefox UA 字串
 
-關於基於 Firefox 和 Gecko 的 user agent 字串的更多訊息，請參見[Firefox user agent 字串參考](/zh-TW/docs/Web/HTTP/Headers/User-Agent/Firefox)。Firefox 的 UA 字串分為四個部分：
+關於基於 Firefox 和 Gecko 的使用者代理字串的更多訊息，請參見 [Firefox 使用者代理字串參考](/zh-TW/docs/Web/HTTP/Headers/User-Agent/Firefox)。Firefox 的 UA 字串分為四個部分：
 
 ```plain
 Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version
