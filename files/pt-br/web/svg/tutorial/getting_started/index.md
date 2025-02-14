@@ -5,7 +5,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
 {{SVGRef}}
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ## Um Exemplo Simples
 
