@@ -193,7 +193,7 @@ async function start() {
 start();
 ```
 
-> **メモ:** {{domxref("setTimeout")}} 関数は、アプリケーションがストリームを閉じた後に書き込みを行おうとした場合に発生する可能性のあるエラーを処理するために、`write()` 呼び出しを [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックで囲みます。
+> **メモ:** {{domxref("Window.setTimeout", "setTimeout()")}} 関数は、アプリケーションがストリームを閉じた後に書き込みを行おうとした場合に発生する可能性のあるエラーを処理するために、`write()` 呼び出しを [`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックで囲みます。
 
 WebSocket 接続が閉じられた場合、{{domxref("WebSocketStream.closed", "closed")}} プロミスが履行されることで通知されるように、コードと理由をユーザーに通知するプロミススタイルのコードセクションを追加しました。
 

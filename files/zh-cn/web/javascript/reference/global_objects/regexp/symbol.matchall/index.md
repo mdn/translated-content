@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 
 {{jsxref("RegExp")}} 实例的 **`[Symbol.matchAll]`** 方法指定了 [`String.prototype.matchAll`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) 的行为。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()", "taller")}}
+
+```js interactive-example
+class MyRegExp extends RegExp {
+  [Symbol.matchAll](str) {
+    const result = RegExp.prototype[Symbol.matchAll].call(this, str);
+    if (!result) {
+      return null;
+    }
+    return Array.from(result);
+  }
+}
+
+const re = new MyRegExp("-[0-9]+", "g");
+console.log("2016-01-02|2019-03-07".matchAll(re));
+// Expected output: Array [Array ["-01"], Array ["-02"], Array ["-03"], Array ["-07"]]
+```
 
 ## 语法
 

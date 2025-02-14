@@ -3,8 +3,6 @@ title: 署名和版权许可
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档的内容是免费的，并在开源协议下提供。
 
 ## 使用 MDN Web 文档的内容

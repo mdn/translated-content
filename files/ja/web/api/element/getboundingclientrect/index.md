@@ -3,12 +3,13 @@ title: "Element: getBoundingClientRect() メソッド"
 short-title: getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.getBoundingClientRect()`** メソッドは、要素の寸法と、その[ビューポート](/ja/docs/Glossary/Viewport)に対する相対位置に関する情報を返します。
+**`Element.getBoundingClientRect()`** メソッドは、要素の寸法と、その[ビューポート](/ja/docs/Glossary/Viewport)に対する相対位置に関する情報を
+{{domxref("DOMRect")}} オブジェクトで返します。
 
 ## 構文
 
@@ -106,7 +107,7 @@ function update() {
   const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = "";
+  container.textContent = "";
   for (const key in rect) {
     if (typeof rect[key] !== "function") {
       let para = document.createElement("p");
@@ -133,5 +134,3 @@ update();
 ## 関連情報
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
-- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>)、初期バージョンの `DOMRect`

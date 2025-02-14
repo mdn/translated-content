@@ -9,7 +9,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/substr
 
 > **备注：** `substr()` 不属于 ECMAScript 主要规范——它在[附件 B: Web 浏览器的附加 ECMAScript 功能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html)中定义，这是非浏览器运行时的可选标准。因此，建议人们使用标准的 [`String.prototype.substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 和 [`String.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/slice) 方法，以便使他们的代码能够更好地、最大程度地跨平台。[`String.prototype.substring()` 页面](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring#substring_和_substr_之间的区别)对这三种方法进行了一些比较。
 
-{{EmbedInteractiveExample("pages/js/string-substr.html")}}
+{{InteractiveExample("JavaScript Demo: String.substr()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
+```
 
 ## 语法
 

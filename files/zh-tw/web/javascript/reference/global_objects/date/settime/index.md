@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 
 **`setTime()`** 方法將從 1970 年 01 月 01 日 00:00:00 UTC 起所經過的毫秒數設置為 {{jsxref("Date")}} 物件的值。
 
-{{EmbedInteractiveExample("pages/js/date-settime.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Date.setTime()", "taller")}}
+
+```js interactive-example
+const launchDate = new Date("July 1, 1999, 12:00:00");
+const futureDate = new Date();
+futureDate.setTime(launchDate.getTime());
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+
+const fiveMinutesInMillis = 5 * 60 * 1000;
+futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+
+console.log(futureDate);
+// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 語法
 

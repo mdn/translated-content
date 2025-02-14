@@ -2,10 +2,10 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 l10n:
-  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
+  sourceCommit: dcbb1d99185118360cc84b3a0e935e77fe0a03e3
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 `XMLHttpRequest` (XHR) オブジェクトは、サーバーと対話するために使用されます。ページ全体を更新する必要なしに、データを受け取ることができます。これでユーザーの作業を中断させることなく、ウェブページの一部を更新することができます。
 
@@ -14,8 +14,6 @@ l10n:
 `XMLHttpRequest` という名前ではあるものの、 XML だけでなく、あらゆる種類のデータを受け取るために使用することができます。
 
 通信においてサーバーからのイベントデータやメッセージデータの受信を含む必要があるのであれば、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)の {{domxref("EventSource")}} インターフェイスを使用することも検討してください。全二重の通信では、 [WebSocket](/ja/docs/Web/API/WebSockets_API) の方が良いかもしれません。
-
-{{AvailableInWorkers("notservice")}}
 
 ## コンストラクター
 
@@ -42,7 +40,7 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
   - : リクエストの [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)を返します。
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
 
-  - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（"`OK`" のような）レスポンスメッセージの完全な文が含まれています。
+  - : 文字列で、HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、（`"OK"` のような）レスポンスメッセージの完全な文が含まれています。
 
     > [!NOTE]
     > HTTP/2 仕様書 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}} によれば、 HTTP/2 では、 HTTP/1.1 のステータス行に含まれていたバージョンや原因の文を伝える方法が定義されていません。
@@ -79,6 +77,8 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
   - : サーバーから返ってくる MIME タイプを上書きします。
 - {{domxref("XMLHttpRequest.send()")}}
   - : リクエストを送信します。このリクエストが非同期（既定）の場合、このメソッドはリクエストが送るとすぐに返ります。
+- {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{experimental_inline}}
+  - : リクエストのレスポンスで、帰属ソースや発生するイベントを登録できるようにすることを示します。
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : HTTP リクエストヘッダーの値を設定します。 `setRequestHeader()` は {{domxref("XMLHttpRequest.open", "open()")}} の後、および {{domxref("XMLHttpRequest.send", "send()")}} の前に呼び出さなくてはいけません。
 

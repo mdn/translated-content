@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 
 **`entries()`** 方法會回傳一個包含陣列中每一個索引之鍵值對（key/value pairs）的新陣列迭代器（**`Array Iterator`**）物件。
 
-{{EmbedInteractiveExample("pages/js/array-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+const iterator1 = array1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array [0, "a"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "b"]
+```
 
 ## 語法
 

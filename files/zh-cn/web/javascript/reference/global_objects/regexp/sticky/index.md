@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 
 **`sticky`** 属性反映了搜索是否具有粘性（仅从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性表示的索引处搜索）。`sticky` 是正则表达式对象的只读属性。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-sticky.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.sticky", "taller")}}
+
+```js interactive-example
+const str1 = "table football";
+const regex1 = new RegExp("foo", "y");
+
+regex1.lastIndex = 6;
+
+console.log(regex1.sticky);
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: true
+
+console.log(regex1.test(str1));
+// Expected output: false
+```
 
 {{js_property_attributes(0, 0, 1)}}
 

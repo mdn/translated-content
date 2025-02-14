@@ -33,13 +33,13 @@ all: revert;
   - : 该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。
 - {{cssxref("revert")}}
 
-  - : 指定依赖于声明所属的样式表原点的行为：
+  - : 指定依赖于声明所属的样式表来源的行为：
 
-    - [User-agent origin](/zh-CN/docs/Web/CSS/Cascade#user-agent_stylesheets)
+    - [用户代理来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)
       - : 相当于 `unset`
-    - [User origin](/zh-CN/docs/Web/CSS/Cascade#user_stylesheets)
+    - [用户来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户样式表)
       - : 将层叠回滚到用户代理级别，以便计算指定的值，就好像没有为该元素指定作者级别或用户级别规则。
-    - [Author origin](/zh-CN/docs/Web/CSS/Cascade#author_stylesheets)
+    - [作者来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#作者样式表)
       - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，“作者”原点包括“覆盖”和“动画”原点。
 
 ### 形式定义
@@ -191,4 +191,4 @@ blockquote {
 
 ## 参见
 
-CSS 通用属性值： {{cssxref("initial")}}、{{cssxref("inherit")}} 和 {{cssxref("unset")}}。
+CSS 通用属性值：{{cssxref("initial")}}、{{cssxref("inherit")}} 和 {{cssxref("unset")}}。

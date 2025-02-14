@@ -1,20 +1,24 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
+l10n:
+  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`accent-color`** устанавливает {{Glossary("accent", "акцентный")}} цвет для некоторых элементов управления пользовательским интерфейсом.
+[CSS](/ru/docs/Web/CSS)-свойство **`accent-color`** устанавливает {{Glossary("accent", "акцентный цвет")}} для некоторых элементов управления пользовательским интерфейсом.
 
 {{EmbedInteractiveExample("pages/css/accent-color.html")}}
 
-Браузеры, которые поддерживают `accent-color`, в настоящее время применяют его к следующим HTML элементам:
+Браузеры, которые поддерживают `accent-color`, в настоящее время применяют его к следующим HTML-элементам:
 
 - [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox)
 - [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio)
 - [`<input type="range">`](/ru/docs/Web/HTML/Element/input/range)
 - [`<progress>`](/ru/docs/Web/HTML/Element/progress)
+
+Во всех пользовательских агентах есть акцентный цвет для обеспечения читаемости и контрастности. Этот цвет используется не в каждом элементе управления пользовательского интерфейса и не в каждом состоянии элемента. `accent-color` применяется только к тем элементам управления и только в тех состояниях, где он применим.
 
 ## Синтаксис
 
@@ -22,11 +26,11 @@ slug: Web/CSS/accent-color
 /* Ключевые слова */
 accent-color: auto;
 
-/* <color> значения */
-accent-color: red;
+/* Значения <color> */
+accent-color: darkred;
 accent-color: #5729e9;
-accent-color: rgb(0, 200, 0);
-accent-color: hsl(228, 4%, 24%);
+accent-color: rgb(0 200 0);
+accent-color: hsl(228 4% 24%);
 
 /* Глобальные значения */
 accent-color: inherit;
@@ -39,7 +43,7 @@ accent-color: unset;
 ### Значения
 
 - `auto`
-  - : Браузер сам определяет цвет в зависимости от платформы.
+  - : Цвет будет выбран пользовательским агентом и должен соответствовать акцентному цвету платформы, если таковой имеется.
 - {{cssxref("&lt;color&gt;")}}
   - : Задает цвет, который будет использован в качестве акцентного.
 
@@ -91,7 +95,6 @@ input.custom {
 
 ## Смотрите также
 
-- {{HTMLElement("input")}} элемент
-- [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
-- {{cssxref("&lt;color&gt;")}}
-- Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
+- Другие свойства, связанные с цветом: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("caret-color")}}, {{cssxref("color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}
+- {{cssxref("&lt;color&gt;")}} — связанный тип данных
+- {{HTMLElement("input")}} — связанный HTML-элемент

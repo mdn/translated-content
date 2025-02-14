@@ -36,13 +36,13 @@ background-attachment: inherit;
 
 ## Exemplos
 
-### Exemplo simpes
+### Exemplo simples
 
 #### CSS
 
 ```css
 p {
-  background-image: url("starsolid.gif");
+  background-image: url("star-solid.gif");
   background-attachment: fixed;
 }
 ```
@@ -59,7 +59,7 @@ p {
 
 #### Resultado
 
-{{EmbedLiveSample("Simple_example")}}
+{{EmbedLiveSample("Exemplo_simples")}}
 
 ### Suporte de múltiplas imagem de background
 
@@ -69,7 +69,7 @@ Essa propriedade suporta múltiplas imagens de background. Você pode especifica
 
 ```css
 p {
-  background-image: url("starsolid.gif"), url("startransparent.gif");
+  background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

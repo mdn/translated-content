@@ -161,7 +161,7 @@ Run-in 盒子通过 `display:run-in` 来定义，它可以是块盒子，也可�
 
 ### 绝对定位
 
-在绝对定位中，盒子会完全从当前流中移除，并且不会再与其有任何联系（译注：此处仅指定位和位置计算，而绝对定位的元素在文档树中仍然与其他元素有父子或兄弟等关系），其位置会使用 {{ cssxref("top") }}、{{ cssxref("bottom") }}、{{ cssxref("left") }} 和 {{ cssxref("right") }} 相对其[包含块](/zh-CN/docs/Web/CSS/Containing_block)进行计算。
+在绝对定位中，盒子会完全从当前流中移除，并且不会再与其有任何联系（译注：此处仅指定位和位置计算，而绝对定位的元素在文档树中仍然与其他元素有父子或兄弟等关系），其位置会使用 {{ cssxref("top") }}、{{ cssxref("bottom") }}、{{ cssxref("left") }} 和 {{ cssxref("right") }} 相对其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)进行计算。
 
 如果元素的 {{ cssxref("position") }} 为 `absolute` 或 `fixed`，该元素为绝对定位。
 
@@ -174,7 +174,7 @@ Run-in 盒子通过 `display:run-in` 来定义，它可以是块盒子，也可�
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)

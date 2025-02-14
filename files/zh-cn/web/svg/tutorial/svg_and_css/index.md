@@ -393,7 +393,7 @@ svg {
 | 修改样式表使得当鼠标指针移到任何一个内层花瓣上时所有内层花瓣都变为粉色，但不改变外层花瓣的效果。 |
 | ------------------------------------------------------------------------------------------------ |
 
-[查看挑战的参考答案](/zh-CN/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_和_css)
+[查看挑战的参考答案](/zh-CN/docs/Learn_web_development/Core/Challenges#svg_和_css)
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 

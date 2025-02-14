@@ -2,7 +2,7 @@
 title: 網路錯誤記錄
 slug: Web/HTTP/Network_Error_Logging
 l10n:
-  sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
+  sourceCommit: ab1bf2c5955c1bfa4d96d779f701ab22f3870d43
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
@@ -48,7 +48,7 @@ Report-To: { "group": "nel",
 
 ## 錯誤報告
 
-在這些範例中，顯示了整個報告 API 負載。頂層 **`"body"`** 鍵包含網路錯誤報告。
+在這些範例中，顯示了報告 API 的回應內容。頂層 **`"body"`** 鍵包含網路錯誤報告。
 
 ### HTTP 400（Bad Request）回應
 
@@ -140,3 +140,7 @@ Report-To: { "group": "nel",
 ## 瀏覽器相容性
 
 {{Compat}}
+
+## 參見
+
+- [報告 API](/zh-TW/docs/Web/API/Reporting_API)

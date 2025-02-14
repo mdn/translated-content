@@ -107,12 +107,12 @@ div.menu-bar li:hover > ul {
 
 - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
 - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-- [层叠](/zh-CN/docs/Web/CSS/Cascade)
+- [层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
 - [继承](/zh-CN/docs/Web/CSS/Inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
-- [优先级](/zh-CN/docs/Web/CSS/Specificity)
+- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
 - [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
 - [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS 函数表记](/zh-CN/docs/Web/CSS/CSS_Functions)
@@ -130,7 +130,7 @@ div.menu-bar li:hover > ul {
 
 - [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [包含块](/zh-CN/docs/Web/CSS/Containing_block)
+- [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
 - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
 - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [替换元素](/zh-CN/docs/Web/CSS/Replaced_element)

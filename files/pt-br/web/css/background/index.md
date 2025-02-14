@@ -79,7 +79,7 @@ Um ou mais dos seguintes, por qualquer ordem:
 }
 
 .Topbanner {
-  background: url("starsolid.gif") #00d repeat-y fixed;
+  background: url("star-solid.gif") #00d repeat-y fixed;
 }
 ```
 

@@ -24,7 +24,7 @@ l10n:
   - : 一个布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
     > [!NOTE]
-    > 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+    > 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Guides/Autoplay)。
 
     无法使用 `autoplay="false"` 来关闭视频的自动播放功能；只要 `<video>` 标签中有这个属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。
 
@@ -282,14 +282,14 @@ l10n:
 </video>
 ```
 
-我们提供了一份关于[媒体文件类型指南](/zh-CN/docs/Web/Media/Formats)和[视频支持的编解码器指南](/zh-CN/docs/Web/Media/Formats/Video_codecs)。此外，还有一份[可与之配合使用的音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)指南。
+我们提供了一份关于[媒体文件类型指南](/zh-CN/docs/Web/Media/Guides/Formats)和[视频支持的编解码器指南](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)。此外，还有一份[可与之配合使用的音频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)指南。
 
 其他的使用说明：
 
-- 如果你不指定 `controls` 属性，视频将不会包含浏览器的默认控件；你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详细信息请参阅[创建跨浏览器视频播放器](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
+- 如果你不指定 `controls` 属性，视频将不会包含浏览器的默认控件；你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详细信息请参阅[创建跨浏览器视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 - 为了实现对视频（和音频）内容的精确控制，`HTMLMediaElement` 会触发多种不同的[事件](/zh-CN/docs/Web/Events#media)，除了提供可控性之外，这些事件还允许你监控媒体的下载进度和播放进度，以及播放状态和位置。
 - 你可以使用 {{cssxref("object-position")}} 属性调整视频在元素框内的位置，和使用 {{cssxref("object-fit")}} 属性控制视频如何调整大小以适应框架。
-- 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详细信息请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
+- 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详细信息请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
 - 你可以使用 `<video>` 元素播放音频文件。如果你需要结合 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕进行音频播放，这会非常有用，因为 {{HTMLElement("audio")}} 元素不支持使用 WebVTT 提供字幕。
 - 要在支持该元素的浏览器上测试回退内容，你可以将 `<video>` 替换为不存在的元素，如 `<notavideo>`。
 
@@ -299,7 +299,7 @@ l10n:
 
 `<video>` 元素是一个替换元素——其 {{cssxref("display")}} 值默认为 `inline`，但在视口中的默认宽度和高度由所嵌入的视频定义。
 
-对 `<video>` 元素进行样式化并无特殊考虑；一种常见策略是为其 `display` 值赋为 `block`，以方便定位、调整大小等操作，然后根据需要提供样式和布局信息。[视频播放器样式基础](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的样式化技巧。
+对 `<video>` 元素进行样式化并无特殊考虑；一种常见策略是为其 `display` 值赋为 `block`，以方便定位、调整大小等操作，然后根据需要提供样式和布局信息。[视频播放器样式基础](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的样式化技巧。
 
 ### 检测轨道添加和移除
 
@@ -417,13 +417,13 @@ AddType video/webm .webm
 
 {{EmbedLiveSample('多个 source', '', '400')}}
 
-首先尝试 [Ogg](/zh-CN/docs/Web/Media/Formats/Containers#ogg)。如果无法播放，则尝试 AVI。最后尝试 [MP4](/zh-CN/docs/Web/Media/Formats/Containers#mpeg-4_mp4)。如果浏览器不支持视频元素，则会显示回退消息，但如果所有源都失败则不会显示。
+首先尝试 [Ogg](/zh-CN/docs/Web/Media/Guides/Formats/Containers#ogg)。如果无法播放，则尝试 AVI。最后尝试 [MP4](/zh-CN/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4)。如果浏览器不支持视频元素，则会显示回退消息，但如果所有源都失败则不会显示。
 
-某些媒体文件类型允许你使用 [`codecs`](/zh-CN/docs/Web/Media/Formats/codecs_parameter) 参数作为文件类型字符串的一部分来提供更具体的信息。一个相对简单的例子是 `video/webm; codecs="vp8, vorbis"`，表示该文件是一个使用 [VP8](/zh-CN/docs/Web/Media/Formats/Video_codecs#vp8) 视频和 [Vorbis](/zh-CN/docs/Web/Media/Formats/Audio_codecs#vorbis) 音频的 [WebM](/zh-CN/docs/Web/Media/Formats/Containers#webm) 视频。
+某些媒体文件类型允许你使用 [`codecs`](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter) 参数作为文件类型字符串的一部分来提供更具体的信息。一个相对简单的例子是 `video/webm; codecs="vp8, vorbis"`，表示该文件是一个使用 [VP8](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#vp8) 视频和 [Vorbis](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs#vorbis) 音频的 [WebM](/zh-CN/docs/Web/Media/Guides/Formats/Containers#webm) 视频。
 
 ## 无障碍考虑
 
-视频应提供能准确描述其内容的字幕和脚本（请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)，了解如何实现这些功能的更多信息）。字幕可以让听力受损的人在播放视频时理解视频的音频内容，而文字稿可以让需要更多时间的人以舒适的速度和形式查看音频内容。
+视频应提供能准确描述其内容的字幕和脚本（请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)，了解如何实现这些功能的更多信息）。字幕可以让听力受损的人在播放视频时理解视频的音频内容，而文字稿可以让需要更多时间的人以舒适的速度和形式查看音频内容。
 
 值得注意的是，虽然可以为纯音频媒体添加字幕，但只有在 {{HTMLElement("video")}} 元素中播放音频时才能这样做，因为该元素的视频区域是用来显示字幕的。这是一种特殊情况，在视频元素中播放音频非常有用。
 
@@ -521,14 +521,14 @@ AddType video/webm .webm
 
 ## 参见
 
-- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
 
-  - [媒体容器格式（文件类型）](/zh-CN/docs/Web/Media/Formats/Containers)
-  - [web 视频编码指南](/zh-CN/docs/Web/Media/Formats/Video_codecs)
-  - [web 音频编码指南](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
+  - [媒体容器格式（文件类型）](/zh-CN/docs/Web/Media/Guides/Formats/Containers)
+  - [web 视频编码指南](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)
+  - [web 音频编码指南](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)
 
 - 在框架内定位和调整图片大小：{{cssxref("object-position")}} 和 {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
 - [使用 HTML 音频和视频](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [使用 canvas 处理视频](/zh-CN/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-- [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)
+- [Ogg 格式媒体文件的服务器配置](/zh-CN/docs/Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media)
