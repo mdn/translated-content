@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/raw
 
 **`String.raw()`** 静态方法是[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)的标签函数。它的作用类似于 Python 中的 `r` 前缀或 C# 中用于字符串字面量的 `@` 前缀。它用于获取模板字符串的原始字符串形式——即，替换表达式（例如 `${foo}`）会被替换处理，但转义序列（例如 `\n`）不会被处理。
 
-{{EmbedInteractiveExample("pages/js/string-raw.html")}}
+{{InteractiveExample("JavaScript Demo: String.raw()")}}
+
+```js interactive-example
+// Create a variable that uses a Windows
+// path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\aboutme.html`;
+
+console.log(`The file was uploaded from: ${filePath}`);
+// Expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+```
 
 ## 语法
 

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 {{jsxref("Function")}} 实例的 **`call()`** 方法会以给定的 `this` 值和逐个提供的参数调用该函数。
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## 语法
 

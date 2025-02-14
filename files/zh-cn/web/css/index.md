@@ -45,9 +45,9 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 - CSS 关键概念：
 
   - [语言语法和形式](/zh-CN/docs/Web/CSS/Syntax)
-  - [特殊性（另译优先级）](/zh-CN/docs/Web/CSS/Specificity)、[继承](/zh-CN/docs/Web/CSS/Inheritance)和[级联](/zh-CN/docs/Web/CSS/Cascade)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/Inheritance)和[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - [包含块](/zh-CN/docs/Web/CSS/Containing_block)
+  - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
   - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
   - [初始值](/zh-CN/docs/Web/CSS/initial_value)、[计算值](/zh-CN/docs/Web/CSS/computed_value)、[应用值](/zh-CN/docs/Web/CSS/used_value)和[实际值](/zh-CN/docs/Web/CSS/actual_value)
   - [CSS 简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)

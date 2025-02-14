@@ -11,7 +11,18 @@ l10n:
 바이트 오프셋에서 8바이트를 읽고 이를 64비트 부동소수점 숫자로 해석합니다.
 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-getfloat64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getFloat64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat64(1, Math.PI);
+
+console.log(view.getFloat64(1));
+// Expected output: 3.141592653589793
+```
 
 ## 구문
 

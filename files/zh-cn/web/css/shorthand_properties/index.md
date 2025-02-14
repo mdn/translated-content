@@ -148,7 +148,7 @@ Margin 对于多个值有以下的简写规则：
 
 CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于文档里所有的属性。它的目的是改变属性的继承模型。
 
-查看[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/Cascade)以了解更多关于继承的信息。
+查看[层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)或 [CSS 层叠基础](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)以了解更多关于继承的信息。
 
 ## 参见
 
@@ -157,7 +157,7 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)

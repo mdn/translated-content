@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toTimeString
 
 **`toTimeString()`** 方法以人类易读形式返回一个日期对象时间部分的字符串，该字符串以美式英语格式化。
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toTimeString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toTimeString());
+// Expected output: "23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## 语法
 

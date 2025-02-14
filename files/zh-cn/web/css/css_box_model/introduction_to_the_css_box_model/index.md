@@ -39,20 +39,20 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 ## 参见
 
-- [布局与包含块](/zh-CN/docs/Web/CSS/Containing_block)
-- [CSS 层叠介绍](/zh-CN/docs/Web/CSS/Cascade)
+- [布局与包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
+- [CSS 层叠介绍](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
 - [层叠和继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

@@ -9,7 +9,22 @@ l10n:
 
 El método **`Symbol.keyFor(sym)`** recupera la clave de símbolo compartida del símbolo pasado como argumento desde el registro global de símbolos.
 
-{{EmbedInteractiveExample("pages/js/symbol-keyfor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+
+```js interactive-example
+const globalSym = Symbol.for("foo"); // Global symbol
+
+console.log(Symbol.keyFor(globalSym));
+// Expected output: "foo"
+
+const localSym = Symbol(); // Local symbol
+
+console.log(Symbol.keyFor(localSym));
+// Expected output: undefined
+
+console.log(Symbol.keyFor(Symbol.iterator));
+// Expected output: undefined
+```
 
 ## Sintaxis
 

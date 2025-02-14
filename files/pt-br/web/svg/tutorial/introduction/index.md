@@ -28,7 +28,7 @@ SVG é uma especificação imensa. Este tutorial combre apenas o conteúdo bási
 
 ### Sabores do SVG
 
-Desde que se tornou uma recomendação em 2003, a mais recente Versão SVG completa é 1.1. Ele se baseia SVG 1.0, mas adiciona mais modularização para facilitar a implementação. [The second edition of SVG 1.1](https://www.w3.org/TR/SVG/) tournouse uma recomendação em 2011. O SVG 1.2 completo deveria se tornar o próximo grande lançamento. Ele foi descartado para o próximo lançamento [SVG 2.0](https://www.w3.org/TR/SVG2/), o qual está sob forte desenvolvimento agora e segue uma abordagem semelhante ao CSS 3, que divide pois divide componentes em várias especificações fracamente acopladas.
+Desde que se tornou uma recomendação em 2003, a mais recente Versão SVG completa é 1.1. Ele se baseia SVG 1.0, mas adiciona mais modularização para facilitar a implementação. [The second edition of SVG 1.1](https://www.w3.org/TR/SVG/) tornou-se uma recomendação em 2011. O SVG 1.2 completo deveria se tornar o próximo grande lançamento. Ele foi descartado para o próximo lançamento [SVG 2.0](https://www.w3.org/TR/SVG2/), o qual está sob forte desenvolvimento agora e segue uma abordagem semelhante ao CSS 3, pois divide componentes em várias especificações fracamente acopladas.
 
 Além das recomendações completas do SVG, o grupo de trabalho do W3C introduziu o SVG Tiny e o SVG Basic em 2003. Esses dois perfis são voltados principalmente para dispositivos móveis. O primeiro, SVG Tiny, deve render primitivos gráficos para pequenos dispositivos com baixa capacidade. O SVG Basic oferece muitos recursos de SVG completo, mas não inclui aqueles que são difíceis de implementar ou pesados para renderizar (como animações). Em 2008, o SVG Tiny 1.2 tornou-se uma recomendação do W3C.
 

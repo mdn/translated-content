@@ -72,7 +72,7 @@ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以�
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/Comments)
-  - [优先级](/zh-CN/docs/Web/CSS/Specificity)
+  - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
