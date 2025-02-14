@@ -2170,7 +2170,7 @@
 /zh-CN/docs/Web/API/Window.top	/zh-CN/docs/Web/API/Window/top
 /zh-CN/docs/Web/API/Window/DOMContentLoaded_event	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
-/zh-CN/docs/Web/API/Window/console	/zh-CN/docs/conflicting/Web/API/console
+/zh-CN/docs/Web/API/Window/console	/zh-CN/docs/Web/API/console
 /zh-CN/docs/Web/API/Window/content	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozPaintCount	/zh-CN/docs/Web/API/Window

@@ -29,8 +29,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : {{domxref("Window.navigator")}} 对象的别名。
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
   - : 此属性表示当前窗口是否关闭。
-- {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : 返回对 console 对象的引用，该对象提供对浏览器调试控制台的访问。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : 返回一个布尔值，表示当前文档是否在无凭据（credentialless）的 {{htmlelement("iframe")}} 中加载。参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless) 以了解更多细节。
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}
