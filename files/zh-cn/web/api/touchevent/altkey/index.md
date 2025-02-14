@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Touch Events") }}
 
-{{domxref("TouchEvent")}} 接口的只读 **`altKey`** 属性但会一个布尔值，指示在创建触摸事件时是否启用 <kbd>alt</kbd> （Alternate）键。如果启用了 <kbd>alt</kbd> 键，则属性为 `true`。否则为 `false`。
+{{domxref("TouchEvent")}} 接口的只读 **`altKey`** 属性但会一个布尔值，指示在创建触摸事件时是否启用 <kbd>alt</kbd>（Alternate）键。如果启用了 <kbd>alt</kbd> 键，则属性为 `true`。否则为 `false`。
 
 此属性为 {{ReadOnlyInline}}。
 
