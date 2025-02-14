@@ -94,7 +94,7 @@ MDN 的學習文章均不要求你自行建立圖形，但部分文章可能要�
 
 ## 版本控制工具
 
-**版本控制**工具讓開發者能夠管理伺服器上的檔案、與團隊協作、分享程式碼和資產，以及避免編輯衝突。目前，[Git](https://git-scm.com/) 是最受歡迎的版本控制系統，以及 [GitHub](https://github.com/) 或 [GitLab](https://about.gitlab.com/) 等託管服務。
+**版本控制**工具讓開發者能夠管理伺服器上的檔案、與團隊協作、分享程式碼和資產，以及避免編輯衝突。目前，[Git](https://git-scm.com/) 是最流行的版本控制系統，還有 [GitHub](https://github.com/) 或 [GitLab](https://about.gitlab.com/) 等託管服務。
 
 雖然版本控制工具對網頁開發團隊至關重要，但目前你暫時不需要關注這一部份。我們在核心模組系列的後段有專門介紹[版本控制](/zh-TW/docs/Learn_web_development/Core/Version_control)。
 
