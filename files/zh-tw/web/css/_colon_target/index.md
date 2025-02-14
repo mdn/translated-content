@@ -16,7 +16,7 @@ l10n:
 }
 ```
 
-例如，下列 URL 具有一個片段識別碼（由 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
+例如，下列 URL 具有一個片段識別碼（以 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
 
 ```url
 http://www.example.com/help/#setup
@@ -25,7 +25,7 @@ http://www.example.com/help/#setup
 當當前 URL 等於上述內容時，以下元素將被 `:target` 選擇器選中：
 
 ```html
-<section id="setup">Installation instructions</section>
+<section id="setup">安裝說明</section>
 ```
 
 ## 語法
