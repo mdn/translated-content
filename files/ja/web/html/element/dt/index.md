@@ -11,7 +11,38 @@ l10n:
 
 後に続く {{HTMLElement("dd")}}（**詳細説明**）要素は、 `<dt>` を用いて指定した用語について、定義やその他の関連する文字列を表します。
 
-{{EmbedInteractiveExample("pages/tabbed/dt.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Please use the following paint colors for the new house:</p>
+
+<dl>
+  <dt>Denim (semigloss finish)</dt>
+  <dd>Ceiling</dd>
+
+  <dt>Denim (eggshell finish)</dt>
+  <dt>Evening Sky (eggshell finish)</dt>
+  <dd>Layered on the walls</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dl {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+dl > dt {
+  font-weight: normal;
+  font-style: oblique;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+```
 
 ## 属性
 

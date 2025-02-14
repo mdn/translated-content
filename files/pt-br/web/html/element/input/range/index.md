@@ -7,7 +7,41 @@ slug: Web/HTML/Element/input/range
 
 {{HTMLElement("input")}} elementos do tipo **`"range"`** deixam o usuário especificar um valor numérico que não deve ser inferior a um determinado valor, e não mais do que um valor máximo especificado. O valor preciso, no entanto, não é considerado importante. Este geralmente é representado por um controle deslizante ou o mesmo tipo de controle de "number" input. Como este tipo de elemento é impreciso, não deve ser usado a menos que o valor exato do controle não seja importante.
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Se o navegador do usuário não suportar o tipo `"range"`, este será tratado como um input do tipo [`"text"`](/pt-BR/docs/Web/HTML/Element/input/text).
 

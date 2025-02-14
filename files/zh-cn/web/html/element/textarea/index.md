@@ -9,7 +9,37 @@ l10n:
 
 **`<textarea>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个多行纯文本编辑控件，适用于允许用户输入大量自由格式文本的场景，例如评论或反馈表单。
 
-{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+```
+
+```css interactive-example
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 上述示例展示了 `<textarea>` 的几个特点：
 

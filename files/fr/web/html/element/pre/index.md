@@ -9,7 +9,35 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<pre>`** représente du texte préformaté, généralement écrit avec une [police à chasse fixe](https://fr.wikipedia.org/wiki/Police_d%27écriture_à_chasse_fixe). Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 Il est nécessaire d'échapper les caractères `<`, `>`, `&`, et `"` afin de s'assurer que le code écrit entre les éléments ne soit pas interprété de façon involontaire, l'échappement se fait en utilisant [l'entité HTML](/fr/docs/Glossary/Entity) correspondante.
 

@@ -9,7 +9,37 @@ l10n:
 
 **`<textarea>`** は [HTML](/ja/docs/Web/HTML) の要素で、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。
 
-{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+```
+
+```css interactive-example
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 上記の例では `<textarea>` の様々な機能を紹介しています。
 

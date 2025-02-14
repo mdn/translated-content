@@ -7,7 +7,36 @@ slug: Web/HTML/Element/fieldset
 
 **`<fieldset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於在網頁表單中將多個控件以及標籤（{{HTMLElement("label")}}）分組。
 
-{{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <fieldset>
+    <legend>Choose your favorite monster</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+
+    <input type="radio" id="sasquatch" name="monster" value="S" />
+    <label for="sasquatch">Sasquatch</label><br />
+
+    <input type="radio" id="mothman" name="monster" value="M" />
+    <label for="mothman">Mothman</label>
+  </fieldset>
+</form>
+```
+
+```css interactive-example
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 正如上面的範例所示，`<fieldset>` 元素為 HTML 表單的一部分提供了分組功能，其中嵌套的 {{htmlelement("legend")}} 元素為 `<fieldset>` 提供了標題。它有一些屬性，其中最顯著的是 `form`，它可以包含同一頁面上的 {{htmlelement("form")}} 的 `id`，這允許你將 `<fieldset>` 作為該 `<form>` 的一部分，即使它不在其中，以及 `disabled`，它允許你一次性禁用 `<fieldset>` 及其所有內容。
 

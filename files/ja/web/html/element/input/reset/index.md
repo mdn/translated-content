@@ -9,7 +9,50 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`reset`** 型はボタンとして表示され、既定の {{domxref("Element/click_event", "click")}} イベントのハンドラーは、フォーム内の入力欄すべてを初期値にリセットします。
 
-{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form>
+  <div class="controls">
+    <label for="id">User ID:</label>
+    <input type="text" id="id" name="id" />
+
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+```
+
+```css interactive-example
+.controls {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
+  gap: 0.7rem;
+}
+
+label {
+  font-size: 0.8rem;
+  justify-self: end;
+}
+
+input[type="reset"],
+input[type="submit"] {
+  width: 5rem;
+  justify-self: end;
+}
+
+input[type="reset"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+input[type="submit"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+```
 
 > [!NOTE]
 > 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。

@@ -11,7 +11,17 @@ l10n:
 
 *ルビ*という言葉は[写植者が使用した長さの単位](<https://en.wikipedia.org/wiki/Agate_(typography)>)に由来しており、読みやすさ保ったままテキストを新聞用紙に印刷できる最小のサイズを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 <table class="properties">
   <tbody>

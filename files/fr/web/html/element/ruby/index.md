@@ -7,7 +7,17 @@ slug: Web/HTML/Element/ruby
 
 L'élément HTML **`<ruby>`** représente une annotation ruby. Les annotations Ruby servent à afficher la prononciation des caractères d'Asie orientale.
 
-{{EmbedInteractiveExample("pages/tabbed/ruby.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ruby&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## Attributs
 

@@ -7,7 +7,21 @@ slug: Web/HTML/Element/video
 
 O elemento [HTML](/pt-BR/docs/Web/HTML) **`<video>`** incorpora um reprodutor de mídia que suporta a reprodução de vídeo no documento. Você também pode usar `<video>` para conteúdo de áudio, mas o elemento {{HTMLElement("audio")}} pode proporcionar uma experiência de usuário mais adequada.
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 O exemplo acima mostra um uso simples do elemento `<video>`. Semelhante ao elemento {{htmlelement("img")}}, incluímos o caminho da mídia que queremos exibir dentro do atributo `src`; também podemos incluir outros atributos para especificar informações, como largura e altura do vídeo, se queremos que ele seja reproduzido automaticamente e em loop, se queremos mostrar os controles de vídeo padrão do navegador etc.
 

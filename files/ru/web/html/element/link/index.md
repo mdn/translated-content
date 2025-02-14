@@ -7,7 +7,16 @@ slug: Web/HTML/Element/link
 
 HTML-элемент **`<link>`** определяет отношения между текущим документом и внешним ресурсом. Этот элемент чаще всего используется для ссылки на {{Glossary("CSS", "stylesheets")}}, а также для создания иконок сайта (как для иконок в стиле "favicon", так и для иконок домашних экранов и приложений мобильных устройств) среди прочего.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 Чтобы подключить таблицу стилей, вы должны включить элемент `<link>` внутри вашего {{HTMLElement("head")}} следующим образом:
 

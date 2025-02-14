@@ -7,7 +7,31 @@ slug: Web/HTML/Element/main
 
 **HTML `<main>` 요소**는 문서 {{HTMLElement("body")}}의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어집니다.
 
-{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<header>Gecko facts</header>
+
+<main>
+  <p>
+    Geckos are a group of usually small, usually nocturnal lizards. They are
+    found on every continent except Antarctica.
+  </p>
+
+  <p>
+    Many species of gecko have adhesive toe pads which enable them to climb
+    walls and even windows.
+  </p>
+</main>
+```
+
+```css interactive-example
+header {
+  font:
+    bold 7vw Arial,
+    sans-serif;
+}
+```
 
 [`hidden`](/ko/docs/Web/HTML/Global_attributes#hidden) 속성 없이는 문서에 하나보다 많은 `<main>` 요소가 존재해선 안됩니다.
 

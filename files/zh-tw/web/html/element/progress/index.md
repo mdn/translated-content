@@ -7,7 +7,20 @@ slug: Web/HTML/Element/progress
 
 **`<progress>`** [HTML](/zh-TW/docs/Web/HTML) 元素顯示顯示任務完成進度的指示器，通常呈現為進度條。
 
-{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 ## 屬性
 

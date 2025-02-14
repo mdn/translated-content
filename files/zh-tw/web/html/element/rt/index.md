@@ -7,7 +7,19 @@ slug: Web/HTML/Element/rt
 
 **`<rt>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於指定 ruby 注釋的 ruby 文本部分，用於為東亞排版提供發音、翻譯或音譯信息。`<rt>` 元素必須始終包含在一個 {{HTMLElement("ruby")}} 元素中。
 
-{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 請參見 {{HTMLElement("ruby")}} 元素的文章以獲取更多範例。
 

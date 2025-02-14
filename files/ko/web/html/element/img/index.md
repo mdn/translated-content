@@ -7,7 +7,20 @@ slug: Web/HTML/Element/img
 
 **HTML `<img>` 요소**는 문서에 이미지를 넣습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 위의 예제를 통해 `<img>` 요소의 사용법을 알 수 있습니다.
 

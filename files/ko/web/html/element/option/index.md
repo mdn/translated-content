@@ -7,7 +7,34 @@ slug: Web/HTML/Element/option
 
 **HTML `<option>` 요소**는 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} 요소의 항목을 정의합니다. 그러므로, `<option>`을 사용해 팝업 메뉴 등 목록에서 하나의 항목을 나타낼 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 <table class="properties">
   <tbody>

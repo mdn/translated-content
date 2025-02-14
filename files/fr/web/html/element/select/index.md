@@ -7,7 +7,34 @@ slug: Web/HTML/Element/select
 
 L'élément HTML **`<select>`** représente un contrôle qui fournit une liste d'options parmi lesquelles l'utilisateur pourra choisir.
 
-{{EmbedInteractiveExample("pages/tabbed/select.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="pet-select">Choose a pet:</label>
+
+<select name="pets" id="pet-select">
+  <option value="">--Please choose an option--</option>
+  <option value="dog">Dog</option>
+  <option value="cat">Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
+</select>
+```
+
+```css interactive-example
+label {
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+}
+
+select {
+  font-size: 0.9rem;
+  padding: 2px 5px;
+}
+```
 
 L'exemple ci-avant illustre une utilisation simple de `<select>` où l'attribut `id` peut être associé à un élément {{htmlelement("label")}} qui permettra d'avoir un libellé accessible pour ce champ et où un attribut `name` représente le nom de la donnée qui sera envoyée au serveur. Chaque option est définie grâce à un élément {{htmlelement("option")}} qui se situe à l'intérieur de l'élément `<select>`.
 

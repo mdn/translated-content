@@ -9,7 +9,20 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 

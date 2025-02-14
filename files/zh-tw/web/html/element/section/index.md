@@ -7,7 +7,33 @@ slug: Web/HTML/Element/section
 
 **`<section>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文件中的通用獨立區段，它沒有更具體的語義元素來代表它。區段應始終具有標題，幾乎沒有例外。
 
-{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Choosing an Apple</h1>
+<section>
+  <h2>Introduction</h2>
+  <p>
+    This document provides a guide to help with the important task of choosing
+    the correct Apple.
+  </p>
+</section>
+
+<section>
+  <h2>Criteria</h2>
+  <p>
+    There are many different criteria to be considered when choosing an Apple —
+    size, color, firmness, sweetness, tartness...
+  </p>
+</section>
+```
+
+```css interactive-example
+h1,
+h2 {
+  margin: 0;
+}
+```
 
 ## 屬性
 

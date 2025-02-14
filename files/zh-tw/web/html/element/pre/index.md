@@ -9,7 +9,35 @@ slug: Web/HTML/Element/pre
 
 預設情況下，`<pre>` 是[區塊級](/zh-TW/docs/Glossary/Block-level_content)元素，即其預設的 {{cssxref("display")}} 值為 `block`。
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 如果你需要在 `<pre>` 標籤內顯示保留字元，如 `<`、`>`、`&` 和 `"`，這些字元必須使用相應的 [HTML 實體](/zh-TW/docs/Glossary/Entity)進行轉義。
 

@@ -7,7 +7,20 @@ slug: Web/HTML/Element/progress
 
 **HTML `<progress>` 요소**는 어느 작업의 완료 정도를 나타내며, 주로 진행 표시줄의 형태를 띕니다.
 
-{{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;progress&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+```
+
+```css interactive-example
+label {
+  padding-right: 10px;
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

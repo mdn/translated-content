@@ -7,7 +7,32 @@ slug: Web/HTML/Element/input/password
 
 {{HTMLElement("input")}} элементы типа **`"password"`** предоставляют пользователю возможность безопасного ввода пароль. Элемент представлен как однострочный текстовый редактор, в котором текст затенён, чтобы его нельзя было прочитать, как правило, путём замены каждого символа другим символом, таким как звёздочка ("\*") или точка ("•"). Этот символ будет меняться в зависимости от {{Glossary("user agent")}} и {{Glossary("OS")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 Особенности работы процесса ввода могут отличаться от браузера к браузеру; мобильные устройства, например, часто отображают вводимый символ на мгновение, прежде чем закрывать его, чтобы позволить пользователю быть уверенным, что они нажали клавишу, которую они хотели нажать; это полезно, учитывая небольшой размер клавиш и лёгкость, с которой может быть нажата неправильная, особенно на виртуальных клавиатурах.
 

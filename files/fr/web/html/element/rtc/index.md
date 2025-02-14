@@ -7,7 +7,27 @@ slug: Web/HTML/Element/rtc
 
 L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est donc « proche » des éléments liées à la représentation Ruby comme {{HTMLElement("rb")}}, {{HTMLElement("ruby")}}. Les éléments {{HTMLElement("rb")}} peuvent être annotés pour la prononciation ({{HTMLElement("rt")}}) ou pour la sémantique ({{HTMLElement("rtc")}}).
 
-{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+    <rbc>
+        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+    </rbc>
+    <rtc xml:lang="en" style="ruby-position: over;">
+        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+    </rtc>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## Attributs
 

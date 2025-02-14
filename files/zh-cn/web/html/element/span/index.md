@@ -9,7 +9,26 @@ l10n:
 
 **`<span>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个通用的行级容器，本身不具备特殊含义。它可被用于对元素进行编组，以便于添加样式（通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性），或共享属性值（例如 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。该元素仅应在无其他合适语义元素时使用。`<span>` 与 {{HTMLElement("div")}} 元素非常相似，但是 {{HTMLElement("div")}} 是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，而 `<span>` 是一个[行级元素](/zh-CN/docs/Glossary/Inline-level_content)。
 
-{{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;span&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Add the <span class="ingredient">basil</span>,
+  <span class="ingredient">pine nuts</span> and
+  <span class="ingredient">garlic</span> to a blender and blend into a paste.
+</p>
+
+<p>
+  Gradually add the <span class="ingredient">olive oil</span> while running the
+  blender slowly.
+</p>
+```
+
+```css interactive-example
+span.ingredient {
+  color: #f00;
+}
+```
 
 ## 属性
 

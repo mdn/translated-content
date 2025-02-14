@@ -7,7 +7,23 @@ slug: Web/HTML/Element/a
 
 O **elemento** **`<a>`** em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Atributos
 

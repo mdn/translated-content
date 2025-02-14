@@ -7,7 +7,17 @@ slug: Web/HTML/Global_attributes/spellcheck
 
 L'attribut universel **`spellcheck`** est un attribut à valeur contrainte qui définit si l'orthographe du contenu de l'élément doit être vérifiée.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
+
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
+```
 
 Les valeurs autorisées pour cet attribut sont :
 

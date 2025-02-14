@@ -9,7 +9,23 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<code>`** 元素为其显示的内容添加用以表明其中的文本是一段简短的计算机代码的样式。默认情况下，内容文本使用{{Glossary("user agent", "用户代理")}}默认的等宽字体显示。
 
-{{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <code>push()</code> method adds one or more elements to the end of an
+  array and returns the new length of the array.
+</p>
+```
+
+```css interactive-example
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+```
 
 ## 属性
 

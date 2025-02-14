@@ -7,7 +7,40 @@ slug: Web/HTML/Element/blockquote
 
 **HTML `<blockquote>` 元素**（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（[注](#Notes) 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 {{HTMLElement("cite")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+
+```css interactive-example
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+```
 
 <table class="properties">
  <tbody>

@@ -9,7 +9,21 @@ l10n:
 
 **`<strong>`** は [HTML](/ja/docs/Web/HTML) の要素で、内容の重要性、重大性、または緊急性が高いテキストを表します。ブラウザーは一般的に太字で描画します。
 
-{{EmbedInteractiveExample("pages/tabbed/strong.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;strong&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  ... the most important rule, the rule you can never forget, no matter how much
+  he cries, no matter how much he begs:
+  <strong>never feed him after midnight</strong>.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+}
+```
 
 ## 属性
 

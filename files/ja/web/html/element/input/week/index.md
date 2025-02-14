@@ -9,7 +9,33 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`week`** 型は、年と、その年の [ISO 8601 週番号](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) (つまり、第 1 週から第 [52 または 53](https://ja.wikipedia.org/wiki/ISO_8601#%E5%B9%B4%E3%81%A8%E9%80%B1%E3%81%A8%E6%9B%9C%E6%97%A5) 週) を簡単に入力することができる入力欄を生成します。
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 コントロールのユーザーインターフェイスは、ブラウザーによって様々です。現時点ではブラウザー間の対応は限定的で、 Chrome/Opera と Microsoft Edge のみが対応しています。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 

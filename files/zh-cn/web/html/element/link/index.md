@@ -9,7 +9,16 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<link>`** 元素规定了当前文档与某个外部资源的关系。该元素最常用于链接{{Glossary("CSS", "样式表")}}，此外也可以被用来创建站点图标（比如 PC 端的“favicon”图标和移动设备上用以显示在主屏幕的图标) 。
 
-{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 要链接一个外部的样式表，你需要像这样在你的 {{HTMLElement("head")}} 中包含一个 `<link>` 元素：
 

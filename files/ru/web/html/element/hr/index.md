@@ -7,7 +7,34 @@ slug: Web/HTML/Element/hr
 
 **HTML `<hr>` элемент** служит для тематического разделения абзацев.Рисует горизонтальную прямую
 
-{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+
+<hr />
+
+<p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+```
+
+```css interactive-example
+hr {
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr::after {
+  background: #fff;
+  content: "§";
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+```
 
 Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
 

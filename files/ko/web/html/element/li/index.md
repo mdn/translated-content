@@ -7,7 +7,32 @@ slug: Web/HTML/Element/li
 
 **HTML `<li>` 요소**는 목록의 항목을 나타냅니다. 반드시 정렬 목록({{htmlelement("ol")}}), 비정렬 목록({{htmlelement("ul")}}, 혹은 메뉴({{htmlelement("menu")}}) 안에 위치해야 합니다. 메뉴와 비정렬 목록에서는 보통 불릿으로 항목을 나타내고, 정렬 목록에서는 숫자나 문자를 사용한 오름차순 카운터로 나타냅니다.
 
-{{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Apollo astronauts:</p>
+
+<ul>
+  <li>Neil Armstrong</li>
+  <li>Alan Bean</li>
+  <li>Peter Conrad</li>
+  <li>Edgar Mitchell</li>
+  <li>Alan Shepard</li>
+</ul>
+```
+
+```css interactive-example
+p,
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>

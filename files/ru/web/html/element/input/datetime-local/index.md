@@ -13,7 +13,33 @@ slug: Web/HTML/Element/input/datetime-local
 <input id="datetime" type="datetime-local" />
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="meeting-time">Choose a time for your appointment:</label>
+
+<input
+  type="datetime-local"
+  id="meeting-time"
+  name="meeting-time"
+  value="2018-06-12T19:30"
+  min="2018-06-07T00:00"
+  max="2018-06-14T00:00" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 Для тех из вас, кто не использует поддерживающий браузер, Chrome/Opera datetime-local control выглядит как скриншот ниже. Нажатие на стрелку вниз с правой стороны приводит к выбору даты, чтобы вы могли выбрать дату; вы должны ввести время вручную.
 

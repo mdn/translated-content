@@ -9,7 +9,20 @@ l10n:
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 上記の例では、 `<img>` 要素の使い方を示しています。
 

@@ -9,7 +9,33 @@ l10n:
 
 **`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
-{{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<style>
+  p {
+    color: #26b72b;
+  }
+  code {
+    font-weight: bold;
+  }
+</style>
+
+<p>
+  This text will be green. Inline styles take precedence over CSS included
+  externally.
+</p>
+
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
+
+```css interactive-example
+p {
+  color: #f00;
+}
+```
 
 `<style>` 要素は文書の {{htmlelement("head")}} 要素の中に入れる必要があります。一般に、スタイルを外部スタイルシートに入れて {{htmlelement("link")}} 要素を使用することをより推奨します。
 

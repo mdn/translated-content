@@ -7,7 +7,26 @@ slug: Web/HTML/Element/ol
 
 L'élément HTML **`<ol>`** représente une liste ordonnée. Les éléments d'une telle liste sont généralement affichés avec un indicateur ordinal pouvant prendre la forme de nombres, de lettres, de chiffres romains ou de points. La mise en forme de la numérotation n'est pas utilisée dans la description HTML mais dans la feuille de style CSS associée grâce à la propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type).
 
-{{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ol>
+  <li>Mix flour, baking powder, sugar, and salt.</li>
+  <li>In another bowl, mix eggs, milk, and oil.</li>
+  <li>Stir both mixtures together.</li>
+  <li>Fill muffin tray 3/4 full.</li>
+  <li>Bake for 20 minutes.</li>
+</ol>
+```
+
+```css interactive-example
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+  margin-bottom: 0.5rem;
+}
+```
 
 <table class="properties">
   <tbody>

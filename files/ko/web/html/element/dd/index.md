@@ -9,7 +9,38 @@ l10n:
 
 **HTML `<dd>` 요소**는 설명 목록 요소({{HTMLElement("dl")}})에서 앞선 용어({{htmlelement("dt")}})에 대한 설명, 정의, 또는 값을 제공합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/dd.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 ## 특성
 

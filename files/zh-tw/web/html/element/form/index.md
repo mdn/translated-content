@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 **`<form>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個包含用於提交信息的交互式控制項的文件章節。
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
 

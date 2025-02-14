@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/number
 
 {{HTMLElement("input")}} элементы типа **`number`** используются для того, чтобы дать возможность пользователю ввести число. У них есть встроенная валидация, запрещающая вводить нечисловые значения. Браузер может предоставить возможность увеличить или уменьшить значение специальными стрелками, используя мышь или просто двигая пальцем по экрану.
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 В браузерах, которые не поддерживают тип `number`, тип `number` приводится к `text`.
 

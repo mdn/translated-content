@@ -13,7 +13,25 @@ Cet élément permet de représenter :
 - une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
 - [une durée valide](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 ## Attributs
 

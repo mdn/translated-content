@@ -1018,7 +1018,19 @@ To do this, you create a `<video>` (or `<audio>`) element with no [`src`](/zh-TW
 
 In the example shown here, a video is offered to the browser in two formats: WebM and MP4.
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 The video is offered first in WebM format (with the [`type`](/zh-TW/docs/Web/HTML/Element/video#type) attribute set to `video/webm`). If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`. If neither of those can be played, the text "This browser does not support the HTML5 video element." is presented.
 

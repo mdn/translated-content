@@ -9,7 +9,35 @@ l10n:
 
 **`<div>`** は [HTML](/ja/docs/Web/HTML) の要素で、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる（例えば、スタイルが直接適用されたり、親要素に[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などの何らかのレイアウトモデルが適用されるなど）までは、コンテンツやレイアウトには影響を与えません。
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 「純粋」なコンテナーとして、`<div>` 要素は本質的には何も表しません。その代わり、 [`class`](/ja/docs/Web/HTML/Global_attributes#class) や [`id`](/ja/docs/Web/HTML/Global_attributes#id) を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を（[`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を使用して）示したりするために使用します。
 

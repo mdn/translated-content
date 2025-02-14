@@ -9,7 +9,37 @@ HTML-элемент **`<details>`** используется для раскры
 
 Виджет раскрытия обычно представлен на экране с использованием небольшого треугольника, который поворачивается, чтобы показать состояние открытия / закрытия, с меткой рядом с треугольником. Если первый дочерний элемент элемента `<details>` является `<summary>`, содержимое элемента `<summary>` используется в качестве метки для виджета раскрытия.
 
-{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<details>
+  <summary>Details</summary>
+  Something small enough to escape casual notice.
+</details>
+```
+
+```css interactive-example
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+```
 
 | [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), sectioning root, interactive content, palpable content. |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |

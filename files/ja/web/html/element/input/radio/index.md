@@ -9,7 +9,41 @@ l10n:
 
 {{htmlelement("input")}} 要素の **`radio`** 型は、一般に**ラジオグループ**、すなわち関連するオプションの組み合わせを示すラジオボタンの集まりです。グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶされたりや強調表示されたりします。
 
-{{EmbedInteractiveExample("pages/tabbed/input-radio.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Select a maintenance drone:</legend>
+
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey" checked />
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey" />
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie" />
+    <label for="louie">Louie</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ラジオボタンと呼ばれるのは、以下のように外見や操作方法が古い型のラジオのプッシュボタンに似ているからです。
 

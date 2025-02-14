@@ -22,7 +22,25 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 > 2. 作为 `<form>` 元素的后代
 > 3. 具有 {{HTMLElement("input/submit", "submit")}} 按钮的表单
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="firstName">First Name:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="lastName">Last Name:</label>
+<input name="lastName" id="lastName" type="text" autocomplete="family-name" />
+
+<label for="email">Email:</label>
+<input name="email" id="email" type="email" autocomplete="off" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1rem;
+}
+```
 
 ## 值
 

@@ -11,7 +11,23 @@ l10n:
 
 `<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 属性
 

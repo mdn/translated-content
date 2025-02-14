@@ -7,7 +7,28 @@ slug: Web/HTML/Element/br
 
 **`<br>`** [HTML](/zh-TW/docs/Web/HTML) 元素可在文字中插入換行（回車）。在寫詩或地址時，這很有用，因為行的分隔是重要的。
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 如上例所示，每當我們希望文字換行時，都會包含一個 `<br>` 元素。 `<br>` 後的文本將重新開始於文本塊的下一行的開頭。
 

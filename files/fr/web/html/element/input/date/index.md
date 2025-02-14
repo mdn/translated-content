@@ -9,7 +9,33 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `typ
 
 La valeur fournie par un tel contrôle contiendra l'année, le mois et le jour mais _pas_ l'heure et les minutes. Les éléments [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) permettent respectivement de saisir des heures et des combinaisons de dates et heures.
 
-{{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start date:</label>
+
+<input
+  type="date"
+  id="start"
+  name="trip-start"
+  value="2018-07-22"
+  min="2018-01-01"
+  max="2018-12-31" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section en fin d'article sur [la compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément `<input>`, c'est un simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui sera affiché.
 

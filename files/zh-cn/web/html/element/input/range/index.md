@@ -9,7 +9,41 @@ slug: Web/HTML/Element/input/range
 
 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 如果用户的浏览器不支持 `range` 类型，它将回退并将其视为 `{{HTMLElement('input/text', 'text')}}` 输入。
 

@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/month
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format `YYYY-MM`, où `YYYY` représente l'année sur quatre chiffre et `MM` le mois sur deux chiffres.
 
-{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start month:</label>
+
+<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 L'interface utilisateur associée à ce contrôle varie d'un navigateur à l'autre et la prise en charge de cette fonctionnalité reste encore hétérogène&nbsp;: seuls Chrome, Opéra et Edge implémentent cette fonctionnalité sur ordinateur et la plupart des navigateurs mobiles possèdent une implémentation. Pour les navigateurs qui ne prennent pas en charge cette fonctionnalité, l'élément sera transformé en un simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
 

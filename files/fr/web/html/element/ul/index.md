@@ -7,7 +7,30 @@ slug: Web/HTML/Element/ul
 
 L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
 
-{{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ul>
+  <li>Milk</li>
+  <li>
+    Cheese
+    <ul>
+      <li>Blue cheese</li>
+      <li>Feta</li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css interactive-example
+li {
+  list-style-type: circle;
+}
+
+li li {
+  list-style-type: square;
+}
+```
 
 ## Attributs
 

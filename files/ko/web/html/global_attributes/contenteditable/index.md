@@ -7,7 +7,44 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 **`contenteditable`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소를 편집할 수 있는지 나타내는 열거형 특성입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
+
+```html interactive-example
+<blockquote contenteditable="true">
+  <p>Edit this content to add your own quote</p>
+</blockquote>
+
+<cite contenteditable="true">-- Write your own name here</cite>
+```
+
+```css interactive-example
+blockquote {
+  background: #eee;
+  border-radius: 5px;
+  margin: 16px 0;
+}
+
+blockquote p {
+  padding: 15px;
+}
+
+cite {
+  margin: 16px 32px;
+  font-weight: bold;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+[contenteditable="true"] {
+  caret-color: red;
+}
+```
 
 가능한 값은 다음과 같습니다.
 

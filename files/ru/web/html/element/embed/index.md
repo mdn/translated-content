@@ -7,7 +7,15 @@ slug: Web/HTML/Element/embed
 
 HTML-элемент **`<embed>`** встраивает внешнее содержимое в выбранное место документа. Это содержимое может быть предоставлено внешним приложением или плагином браузера.
 
-{{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />
+```
 
 > [!NOTE]
 > Этот раздел посвящён только элементу, который является частью стандарта [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element), и не относится к ранним, нестандартизированным его реализациям.

@@ -9,7 +9,29 @@ Elementos `<input>` do tipo **`time`** (hora) criam campos de inserção que per
 
 A interface de usuário deste tipo de campo varia de navegador para navegador. A maioria dos navegadores modernos é compatível com ele exceto pelo Safari, o único grande navegador que ainda não o implementou; no Safari (e em qualquer outro navegador que ainda não suporte `<time>`), ele regride para [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text).
 
-{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="appt">Choose a time for your meeting:</label>
+
+<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+
+<small>Office hours are 9am to 6pm</small>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## Aparência
 

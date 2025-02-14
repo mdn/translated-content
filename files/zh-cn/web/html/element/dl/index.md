@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dl
 
 **HTML `<dl>` 元素** （或 _HTML_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 在 HTML5 之前， \<dl> 被大家以定义列表所熟知。
 

@@ -7,7 +7,46 @@ slug: Web/HTML/Element/Heading_Elements
 
 **HTML `<h1>`–`<h6>` 요소**는 6단계의 구획 제목을 나타냅니다. 구획 단계는 `<h1>`이 가장 높고 `<h6>`은 가장 낮습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Beetles</h1>
+<h2>External morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+```
+
+```css interactive-example
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  padding-left: 40px;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 60px;
+}
+```
 
 <table class="properties">
   <tbody>

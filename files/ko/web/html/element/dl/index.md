@@ -9,7 +9,38 @@ l10n:
 
 **HTML `<dl>` 요소**는 설명 목록을 나타냅니다. `<dl>`은 {{htmlelement("dt")}}로 표기한 용어와 {{htmlelement("dd")}} 요소로 표기한 설명 그룹의 목록을 감싸서 설명 목록을 생성합니다. 주로 용어사전 구현이나 메타데이터(키-값 쌍 목록)를 표시할 때 사용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 ## 특성
 

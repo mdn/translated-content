@@ -7,7 +7,18 @@ slug: Web/HTML/Global_attributes/accesskey
 
 [Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **accesskey** даёт возможность быстро перейти к элементу с помощью комбинации клавиш. Значение атрибута состоит из одного печатного символа (в том числе спец. символы, акценты и другие, которые можно написать с клавиатуры).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+
+```html interactive-example
+<p>If you need to relax, press the <b>S</b>tress reliever!</p>
+<button accesskey="s">Stress reliever</button>
+```
+
+```css interactive-example
+b {
+  text-decoration: underline;
+}
+```
 
 > [!NOTE]
 > Спецификация WHATWG допускает использования нескольких символов разделённых пробелом. Однако, на момент написания, эта функциональность не поддерживается в современных браузерах. IE и Edge в таком случае будет использовать первый символ, игнорируя остальные.

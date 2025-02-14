@@ -10,7 +10,27 @@ l10n:
 {{HTMLElement("input")}} 要素の **`month`** 型は、ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。
 値は "`YYYY-MM`" の形式の文字列で、`YYYY` は 4 桁の年、 `MM` は月の番号です。
 
-{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="start">Start month:</label>
+
+<input type="month" id="start" name="start" min="2018-03" value="2018-05" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 コントロールのユーザーインターフェイスは、一般にブラウザーによって異なります。現時点では対応が不安定であり、デスクトップ版の Chrome/Opera と Edge — および最新のバージョンのモバイルブラウザー — のみに利用可能な実装があります。
 `month` 入力欄に対応していないブラウザーでは、コントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされますが、入力されたテキストが期待されている形式であることを保証するための自動検証が行われることもあります。

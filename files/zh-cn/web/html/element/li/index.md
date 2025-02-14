@@ -9,7 +9,32 @@ l10n:
 
 **`<li>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于表示列表中的项目。它必须包含在一个父元素中：有序列表（{{HTMLElement("ol")}}）、无序列表（{{HTMLElement("ul")}}）或菜单（{{HTMLElement("menu")}}）。在菜单和无序列表中，列表项通常使用项目符号显示。在有序列表中，通常在左侧显示一个升序计数器，如数字或字母。
 
-{{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Apollo astronauts:</p>
+
+<ul>
+  <li>Neil Armstrong</li>
+  <li>Alan Bean</li>
+  <li>Peter Conrad</li>
+  <li>Edgar Mitchell</li>
+  <li>Alan Shepard</li>
+</ul>
+```
+
+```css interactive-example
+p,
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+```
 
 ## 属性
 

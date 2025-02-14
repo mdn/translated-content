@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 HTML-элемент **`<form>`** представляет раздел документа, содержащий интерактивные элементы управления, которые позволяют отправлять информацию.
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 Можно использовать CSS [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} для стилизации элемента `<form>`, в зависимости от того, валидны или нет {{domxref("HTMLFormElement.elements", "элементы")}} внутри формы.
 

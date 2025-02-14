@@ -9,7 +9,37 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/input-image.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Sign in to your account:</p>
+
+<div>
+  <label for="userId">User ID</label>
+  <input type="text" id="userId" name="userId" />
+</div>
+
+<input
+  type="image"
+  id="image"
+  alt="Login"
+  src="/shared-assets/images/examples/login-button.png" />
+```
+
+```css interactive-example
+label {
+  font-size: 0.8rem;
+}
+
+label,
+input[type="image"] {
+  margin-top: 1rem;
+}
+
+input[type="image"] {
+  width: 80px;
+}
+```
 
 ## 値
 

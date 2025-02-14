@@ -9,7 +9,33 @@ l10n:
 
 [HTML](/zh-CN/docs/Web/HTML) **`<bdo>`** 元素覆盖了当前文本的方向，使文本以不同的方向渲染出来。
 
-{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdo {
+}
+```
 
 文本的字符是从给定方向的起始点开始绘制的；各个字符的方向不受影响（例如，字符因此而不会反向绘制）。
 

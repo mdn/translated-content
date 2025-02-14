@@ -9,7 +9,21 @@ l10n:
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 上記の例は `<video>` 要素のシンプルな使い方を示しています。{{htmlelement("img")}} 要素と同様に、 `src` 属性の中に表示したいメディアへのパスを含めます。他の属性を含めて、動画の幅や高さ、自動再生やループをするかどうか、ブラウザーの標準の動画コントロールを表示するかなどの情報を指定することができます。
 

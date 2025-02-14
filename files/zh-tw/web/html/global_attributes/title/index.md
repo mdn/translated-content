@@ -9,7 +9,29 @@ l10n:
 
 [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes) **`title`** 包含表示與其所屬元素相關的建議資訊的文字。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
+  identify the content of the <code>iframe</code> to screen readers.
+</p>
+
+<iframe
+  title="Wikipedia page for the HTML language"
+  src="https://en.m.wikipedia.org/wiki/HTML"></iframe>
+<iframe
+  title="Wikipedia page for the CSS language"
+  src="https://en.m.wikipedia.org/wiki/CSS"></iframe>
+```
+
+```css interactive-example
+iframe {
+  height: 200px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+```
 
 `title` 屬性的主要用途是為輔助技術標記 {{HTMLElement("iframe")}} 元素。
 

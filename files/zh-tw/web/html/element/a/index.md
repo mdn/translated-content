@@ -9,7 +9,23 @@ slug: Web/HTML/Element/a
 
 每個 `<a>` 元素內的內容*應該*指示連結的目的地。如果存在 `href` 屬性，則在焦點位於 `<a>` 元素上時按下 Enter 鍵將激活它。
 
-{{EmbedInteractiveExample("pages/tabbed/a.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## 屬性
 

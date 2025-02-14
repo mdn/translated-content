@@ -7,7 +7,21 @@ slug: Web/HTML/Element/audio
 
 **HTML-элемент `<audio>`** используется для встраивания звукового контента в документ. Он может содержать один или более источников аудио, представленных с помощью атрибута `src` или элемента {{HTMLElement("source")}} – браузер выберет один наиболее подходящий. Он так же может предназначаться для потокового мультимедиа, используя интерфейс {{domxref("MediaStream")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 Приведённый выше пример показывает простое использование элемента `<audio>`. По аналогии с элементом {{htmlelement("img")}} мы добавляем путь к мультимедиа, которое мы хотим встроить, в атрибут `src`. Мы можем добавить другие атрибуты, чтобы указать сведения, такие как автовоспроизведение и повтор, хотим ли мы отображать стандартные элементы управления звуком браузера и т.д.
 

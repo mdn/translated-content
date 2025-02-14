@@ -7,7 +7,28 @@ slug: Web/HTML/Element/br
 
 **HTML `<br>` 요소**는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성합니다. 주소나 시조 등 줄의 구분이 중요한 내용을 작성할 때 유용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/br.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  O’er all the hilltops<br />
+  Is quiet now,<br />
+  In all the treetops<br />
+  Hearest thou<br />
+  Hardly a breath;<br />
+  The birds are asleep in the trees:<br />
+  Wait, soon like these<br />
+  Thou too shalt rest.
+</p>
+```
+
+```css interactive-example
+p {
+  font-size: 1rem;
+  font-family: sans-serif;
+  margin: 20px;
+}
+```
 
 위 예제에서 확인할 수 있듯, `<br>` 요소는 텍스트를 끊고 싶은 지점에 삽입해야 합니다. `<br>` 이후의 텍스트는 텍스트 블록의 다음 줄에서 다시 시작합니다.
 

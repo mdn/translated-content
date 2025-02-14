@@ -7,7 +7,40 @@ slug: Web/HTML/Element/figure
 
 **`<figure>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表自成一體的內容，可能具有非必填的圖片說明（使用 {{HTMLElement("figcaption")}} 元素指定）。圖片、其圖片說明和其內容被作為一個單一單位被引用。
 
-{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<figure>
+  <img
+    src="/shared-assets/images/examples/elephant.jpg"
+    alt="Elephant at sunset" />
+  <figcaption>An elephant at sunset</figcaption>
+</figure>
+```
+
+```css interactive-example
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 220px;
+  margin: auto;
+}
+
+img {
+  max-width: 220px;
+  max-height: 150px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}
+```
 
 ## 屬性
 

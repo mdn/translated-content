@@ -7,7 +7,40 @@ slug: Web/HTML/Element/blockquote
 
 **HTML `<blockquote>` 요소**는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 [사용 일람](#사용_일람)을 참고하세요) 인용문의 출처 URL은 [`cite`](#cite) 특성으로, 출처 텍스트는 {{htmlelement("cite")}} 요소로 제공할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+
+```css interactive-example
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+```
 
 <table class="properties">
   <tbody>

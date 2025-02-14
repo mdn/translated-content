@@ -9,7 +9,33 @@ l10n:
 
 El elemento de [HTML](/es/docs/Web/HTML) **`<section>`** representa una sección genérica independiente de un documento, que no tiene un elemento semántico más específico para representarla. Las secciones siempre deben tener un título, con muy pocas excepciones.
 
-{{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Choosing an Apple</h1>
+<section>
+  <h2>Introduction</h2>
+  <p>
+    This document provides a guide to help with the important task of choosing
+    the correct Apple.
+  </p>
+</section>
+
+<section>
+  <h2>Criteria</h2>
+  <p>
+    There are many different criteria to be considered when choosing an Apple —
+    size, color, firmness, sweetness, tartness...
+  </p>
+</section>
+```
+
+```css interactive-example
+h1,
+h2 {
+  margin: 0;
+}
+```
 
 ## Atributos
 

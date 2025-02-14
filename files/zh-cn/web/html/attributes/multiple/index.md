@@ -9,7 +9,41 @@ l10n:
 
 如果设置了布尔属性 **`multiple`**，则意味着表单控件将接受一个及以上的值。该属性对 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型以及 {{HTMLElement("select")}} 元素有效。用户选择多个值的方式取决于表单控件。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
+
+```html interactive-example
+<label for="recipients">Where should we send the receipt?</label>
+<input id="recipients" name="recipients" type="email" multiple />
+
+<label for="shakes">Which shakes would you like to order?</label>
+<select id="shakes" name="shakes" multiple>
+  <option>Vanilla Shake</option>
+  <option>Strawberry Shake</option>
+  <option>Chocolate Shake</option>
+</select>
+
+<label for="payment">How would you like to pay?</label>
+<select id="payment" name="payment">
+  <option>Credit card</option>
+  <option>Bank Transfer</option>
+</select>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input,
+select {
+  width: 100%;
+}
+
+input:invalid {
+  background-color: lightpink;
+}
+```
 
 ## 概述
 

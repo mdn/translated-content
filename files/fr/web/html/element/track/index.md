@@ -7,7 +7,31 @@ slug: Web/HTML/Element/track
 
 L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) et permet de fournir une piste texte pour le média (par exemple afin de gérer automatiquement les sous-titres). Les pistes texte utilisées avec cet élément sont formatées selon [le format WebVTT](/fr/docs/Web/API/WebVTT_API) (ce sont des fichiers `.vtt`) (WebVTT pour <i lang="en">Web Video Text Tracks</i>).
 
-{{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;track&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls src="/shared-assets/videos/friday.mp4">
+  <track
+    default
+    kind="captions"
+    srclang="en"
+    src="/shared-assets/misc/friday.vtt" />
+  Download the
+  <a href="/shared-assets/videos/friday.mp4">MP4</a>
+  video, and
+  <a href="/shared-assets/misc/friday.vtt">subtitles</a>.
+</video>
+```
+
+```css interactive-example
+video {
+  width: 250px;
+}
+
+video::cue {
+  font-size: 1rem;
+}
+```
 
 <table class="properties">
   <tbody>

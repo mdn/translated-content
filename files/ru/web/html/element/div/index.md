@@ -7,7 +7,35 @@ slug: Web/HTML/Element/div
 
 **Элемент разделения контента HTML** (**`<div>`**) является универсальным контейнером для [потокового контента](/ru/docs/Web/HTML/Content_categories#потоковый_контент). Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью {{glossary("CSS")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div class="warning">
+  <img
+    src="/shared-assets/images/examples/leopard.jpg"
+    alt="An intimidating leopard." />
+  <p>Beware of the leopard</p>
+</div>
+```
+
+```css interactive-example
+.warning {
+  border: 10px ridge #f00;
+  background-color: #ff0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning img {
+  width: 100%;
+}
+
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+```
 
 Являясь "чистым" контейнером, элемент `<div>`, по существу, не представляет ничего. Между тем, он используется для группировки контента, что позволяет легко его стилизовать, используя атрибуты [`class`](/ru/docs/Web/HTML/Global_attributes#class) или [`id`](/ru/docs/Web/HTML/Global_attributes#id), помечать раздел документа, написанный на разных языках (используя атрибут [`lang`](/ru/docs/Web/HTML/Global_attributes#lang)), и так далее.
 

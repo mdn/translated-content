@@ -9,7 +9,51 @@ l10n:
 
 El Elemento de HTML **`<article>`** representa una composición auto-contenida en un documento, una página, una aplicación o en un sitio, que se quiere que sea distribuíble y/o reutilizable de manera independiente, por ejemplo, en la redifusión. Algunos ejemplos podrían ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, el comentario de un usuario, un widget o gadget interactivo, o cualquier otro elemento de contenido independiente.
 
-{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article>
+</article>
+```
+
+```css interactive-example
+.forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/shared-assets/images/examples/rain.svg") white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+```
 
 Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el que se que muestran distintos mensajes a medida que el usuario va navegando, cada mensaje estaría en un elemento `<article>`, posiblemente con uno o más elemenentos `<section>` dentro.
 

@@ -7,7 +7,32 @@ slug: Web/HTML/Element/cite
 
 _HTML 引用（Citation）标签_ (**\<cite>**) 表示一个作品的引用，且必须包含作品的标题。这个引用可能是一个根据适当的上下文约定关联引用的元数据的缩写。
 
-{{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <blockquote>
+    <p>
+      It was a bright cold day in April, and the clocks were striking thirteen.
+    </p>
+  </blockquote>
+  <figcaption>
+    First sentence in
+    <cite
+      ><a href="http://www.george-orwell.org/1984/0.html"
+        >Nineteen Eighty-Four</a
+      ></cite
+    >
+    by George Orwell (Part 1, Chapter 1).
+  </figcaption>
+</figure>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+cite {
+}
+```
 
 <table class="properties">
  <tbody>

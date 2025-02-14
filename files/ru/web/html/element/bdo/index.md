@@ -7,7 +7,33 @@ slug: Web/HTML/Element/bdo
 
 **HTML - элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.
 
-{{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>Famous seaside songs</h1>
+
+<p>The English song "Oh I do like to be beside the seaside"</p>
+
+<p>
+  Looks like this in Hebrew:
+  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+</p>
+
+<p>
+  In the computer's memory, this is stored as
+  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+</p>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdo {
+}
+```
 
 Текстовые символы рисуются от заданной точки в указанном направлении; индивидуальная ориентация символов не меняется (к примеру, символы не зеркалятся).
 

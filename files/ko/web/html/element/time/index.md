@@ -13,7 +13,25 @@ slug: Web/HTML/Element/time
 - 정확한 [그레고리력](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EA%B3%A0%EB%A6%AC%EB%A0%A5) 날짜. (시간대 정보 포함 가능)
 - [유효한 시간 범위](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
-{{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The Cure will be celebrating their 40th anniversary on
+  <time datetime="2018-07-07">July 7</time> in London's Hyde Park.
+</p>
+
+<p>
+  The concert starts at <time datetime="20:00">20:00</time> and you'll be able
+  to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.
+</p>
+```
+
+```css interactive-example
+time {
+  font-weight: bold;
+}
+```
 
 <table class="properties">
   <tbody>

@@ -9,7 +9,31 @@ L'élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElemen
 
 Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
 
-{{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<header>Gecko facts</header>
+
+<main>
+  <p>
+    Geckos are a group of usually small, usually nocturnal lizards. They are
+    found on every continent except Antarctica.
+  </p>
+
+  <p>
+    Many species of gecko have adhesive toe pads which enable them to climb
+    walls and even windows.
+  </p>
+</main>
+```
+
+```css interactive-example
+header {
+  font:
+    bold 7vw Arial,
+    sans-serif;
+}
+```
 
 ## Attributs
 

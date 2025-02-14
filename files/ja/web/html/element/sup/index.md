@@ -9,7 +9,25 @@ l10n:
 
 **`<sup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で上付き文字として表示するべきインラインテキストを指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
 
-{{EmbedInteractiveExample("pages/tabbed/sup.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The <em>Pythagorean theorem</em> is often expressed as the following equation:
+</p>
+
+<p>
+  <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+</p>
+```
+
+```css interactive-example
+p {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+```
 
 ## 属性
 

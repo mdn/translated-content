@@ -7,7 +7,21 @@ slug: Web/HTML/Element/video
 
 **HTML `<video>` 요소**는 비디오 플레이백을 지원하는 미디어 플레이어를 문서에 삽입합니다. 오디오 콘텐츠에도 사용할 수 있으나, {{htmlelement("audio")}} 요소가 사용자 경험에 좀 더 적합합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250">
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 위 예제는 `<video>` 요소의 간단한 사용법을 보입니다. `<video>` 또한 {{htmlelement("img")}} 요소와 비슷하게, 표시하고자 하는 미디어로의 경로를 `src` 특성에 제공합니다. 또한 비디오의 너비와 높이, 자동재생과 반복 여부, 브라우저 기본 컨트롤 노출 여부 등 다른 정보도 특성을 통해 지정할 수 있습니다.
 

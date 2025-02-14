@@ -7,7 +7,33 @@ slug: Web/HTML/Element/bdi
 
 L'élément **`<bdi>`** (ou élément d'isolation de texte bidirectionnel) isole une portée (_span_) de texte pouvant être formatée dans une direction différente de celle du texte qui l'entoure. Cela permet, par exemple, de présenter correctement une citation en arabe (écrit de droite à gauche) au sein d'un texte écrit en français (écrit de gauche à droite).
 
-{{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<h1>World wrestling championships</h1>
+
+<ul>
+  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
+  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
+  <li><span class="name">سما</span>: 3rd place</li>
+  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
+  <li><span class="name" dir="auto">سما</span>: 5th place</li>
+</ul>
+```
+
+```css interactive-example
+html {
+  font-family: sans-serif;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+bdi {
+}
+
+.name {
+  color: red;
+}
+```
 
 Un texte bidirectionnel est un texte qui contient à la fois des suites de caractères à lire de gauche à droite (LTR en anglais pour _left-to-right_) et des suites de caractères à lire de droite à gauche (RTL en anglais pour _right-to-left_), par exemple une citation en arabe dans un texte en néerlandais. Les navigateurs implémentent [l'algorithme de bidirection Unicode (W3C)(document en anglais)](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics) afin de gérer ces cas. Dans cet algorithme, les caractères ont une direction implicite : les caractères latins sont considérés comme allant de gauche à droite et les caractères arabes comme allant de droite à gauche par exemple. D'autres caractères, comme les espaces ou certains caractères de ponctuation sont considérés comme neutres et leur direction est fournie par les caractères environnants.
 

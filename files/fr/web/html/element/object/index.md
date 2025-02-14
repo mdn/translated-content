@@ -7,7 +7,15 @@ slug: Web/HTML/Element/object
 
 L'élément HTML **`<object>`** représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
 
-{{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<object
+  type="application/pdf"
+  data="/shared-assets/misc/In-CC0.pdf"
+  width="250"
+  height="200"></object>
+```
 
 <table class="properties">
   <tbody>

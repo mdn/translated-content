@@ -10,7 +10,29 @@ slug: Web/HTML/Global_attributes/lang
 > [!NOTE]
 > По умолчанию значение `lang` равно пустой строке, что означает, что язык неизвестен. Поэтому рекомендуется всегда указывать соответствующее значение для этого атрибута.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+
+```html interactive-example
+<p>This paragraph is English, but the language is not specifically defined.</p>
+
+<p lang="en-GB">This paragraph is defined as British English.</p>
+
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+```css interactive-example
+p::before {
+  padding-right: 5px;
+}
+
+[lang="en-GB"]::before {
+  content: "(In British English) ";
+}
+
+[lang="fr"]::before {
+  content: "(In French) ";
+}
+```
 
 Если значение атрибута — _пустая строка_ (`lang=""`), язык устанавливается, как _неизвестный_. Если тег языка недействителен согласно BCP47, он устанавливается, как _недействительный_.
 

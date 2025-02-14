@@ -7,7 +7,33 @@ slug: Web/HTML/Element/input/week
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`week`** permettent de créer des champs de saisie où l'on peut saisir une année et le numéro de la semaine pendant cette année (allant de 1 à 52 ou 53, suivant la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Numéro_de_semaine)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="camp-week">Choose a week in May or June:</label>
+
+<input
+  type="week"
+  name="week"
+  id="camp-week"
+  min="2018-W18"
+  max="2018-W26"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 L'interface utilisateur offerte par un tel contrôle varie en fonction des navigateurs. Au moment où nous écrivons ces lignes, seuls Chrome/Opera et Edge prennent en charge cette fonctionnalité. Pour les navigateurs qui ne l'implémentent pas, l'élément est interprété comme un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
 

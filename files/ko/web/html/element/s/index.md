@@ -7,7 +7,19 @@ slug: Web/HTML/Element/s
 
 **HTML `<s>` 요소**는 글자에 취소선, 즉 글자를 가로지르는 선을 그립니다. `<s>` 요소를 사용해 이제 관계 없거나 더 이상 정확하지 않은 부분을 나타내세요. 그러나, `<s>`는 문서의 편집 기록을 나타내는 용도로는 적합하지 않습니다. 상황에 따라 {{HTMLElement("del")}}과 {{HTMLElement("ins")}} 요소를 대신 사용하세요.
 
-{{EmbedInteractiveExample("pages/tabbed/s.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;s&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p><s>There will be a few tickets available at the box office tonight.</s></p>
+
+<p>SOLD OUT!</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+s {
+}
+```
 
 <table class="properties">
   <tbody>

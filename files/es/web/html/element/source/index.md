@@ -5,7 +5,19 @@ slug: Web/HTML/Element/source
 
 El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Web/Media/Formats).
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, por favor clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envíenos una solicitud de pull.
 

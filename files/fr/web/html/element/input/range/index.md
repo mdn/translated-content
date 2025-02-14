@@ -9,7 +9,41 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `typ
 
 Ce genre de <i lang="en">widget</i> n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie est importante.
 
-{{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Audio settings:</p>
+
+<div>
+  <input type="range" id="volume" name="volume" min="0" max="11" />
+  <label for="volume">Volume</label>
+</div>
+
+<div>
+  <input
+    type="range"
+    id="cowbell"
+    name="cowbell"
+    min="0"
+    max="100"
+    value="90"
+    step="10" />
+  <label for="cowbell">Cowbell</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le type `range`, il utilisera le type [`text`](/fr/docs/Web/HTML/Element/input/text) à la place.
 

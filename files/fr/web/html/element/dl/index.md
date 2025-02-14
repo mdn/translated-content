@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dl
 
 L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Element/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 <table class="properties">
   <tbody>

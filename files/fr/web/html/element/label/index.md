@@ -7,7 +7,28 @@ slug: Web/HTML/Element/label
 
 L'élément HTML **`<label>`** représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut `for` ou en plaçant l'élément du contrôle à l'intérieur de l'élément `<label>`. Un tel contrôle est appelé _contrôle étiqueté_ par l'élément `<label>`.
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 Rattacher un libellé à un élément de saisie ({{HTMLElement("input")}}) offre différents avantages :
 

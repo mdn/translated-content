@@ -7,7 +7,21 @@ slug: Web/HTML/Element/audio
 
 **`<audio>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于在文档中嵌入音频内容。`<audio>` 元素可以包含一个或多个音频资源，这些音频资源可以使用 `src` 属性或者 {{HTMLElement("source")}} 元素来进行描述：浏览器将会选择最合适的一个来使用。也可以使用 {{domxref("MediaStream")}} 将这个元素用于流式媒体。
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 上述例子展示了 `<audio>` 元素的基本用法。与 {{htmlelement("img")}} 元素类似，我们在 `src` 属性中添加了嵌入媒体的路径；也可以使用其他属性来规定一些功能，例如是否自动播放、是否循环播放、是否显示浏览器的默认音频控件等等。
 

@@ -9,7 +9,40 @@ slug: Web/HTML/Element/blockquote
 
 **HTML-элемент `<blockquote>`** (от англ. _Block Quotation_) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри [Примечание](/ru/docs/Web/HTML/Element/blockquote#notes), где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте **cite**, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>
+      Words can be like X-rays, if you use them properly—they’ll go through
+      anything. You read and you’re pierced.
+    </p>
+  </blockquote>
+  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+</div>
+```
+
+```css interactive-example
+div:has(> blockquote) {
+  background-color: #ededed;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+blockquote + p {
+  text-align: right;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной контент](/ru/docs/Web/HTML/Content_categories#основной_контент), секционный корень, явный контент. |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |

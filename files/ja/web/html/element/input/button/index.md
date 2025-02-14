@@ -9,7 +9,44 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、単純なプッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{domxref("Element/click_event", "click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
 
 > **メモ:** `<input>` 要素の `button` 型は完全に妥当な HTML ですが、より新しい {{HTMLElement("button")}} 要素が、ボタンの作成にはより好まれるようになりました。 {{HTMLElement("button")}} のラベル文字列は開始タグと終了タグの間に挿入され、ラベルに画像を含む HTML を含めることができます。
 

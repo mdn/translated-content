@@ -11,7 +11,35 @@ l10n:
 
 既定では、 `<pre>` は[ブロックレベル](/ja/docs/Glossary/Block-level_content)要素であり、 {{cssxref("display")}} の既定値は `block` です。
 
-{{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;pre&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+```
+
+```css interactive-example
+pre {
+  font-size: 0.7rem;
+  margin: 0;
+}
+```
 
 `<pre>` タグ内で `<`、`>`、`&`、`"` などの予約文字を表示する必要がある場合は、それぞれの [HTML エンティティ](/ja/docs/Glossary/Entity)を用いてエスケープする必要があります。
 

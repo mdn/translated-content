@@ -9,7 +9,32 @@ slug: Web/HTML/Element/input/password
 
 这个元素是作为单行纯文本编辑器控件呈现的，其中文本被遮蔽，无法读取。通常通过用诸如星号（“\*”）或点（“•”）等符号替换每个字符来实现。根据用户的{{Glossary("user agent","用户代理")}}和操作系统不同，显示的字符也会不同。
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 输入过程的具体细节可能因浏览器而异。例如，有的浏览器经常在隐藏它之前显示键入的字符一段时间，而另外一些浏览器允许用户切换明文显示模式。移动端设备上检查是否输入了预期的密码通常比较困难，而这两种机制都能解决这个问题。
 

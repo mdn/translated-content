@@ -9,7 +9,27 @@ slug: Web/HTML/Element/input/number
 
 浏览器可能会选择提供步进箭头，让用户可以使用鼠标增加和减少输入的值，或者只需用指尖敲击即可。
 
-{{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="tentacles">Number of tentacles (10-100):</label>
+
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 不支持 `number` 类型的浏览器会回退为标准的 `text` 输入框。
 

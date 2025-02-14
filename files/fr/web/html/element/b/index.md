@@ -7,7 +7,22 @@ slug: Web/HTML/Element/b
 
 L'élément HTML **`<b>`** permet d'attirer l'attention du lecteur sur un contenu qui n'a pas, pour autant, d'importance significative. Anciennement utilisé pour mettre le texte en gras. Cet élément ne doit pas être utilisé pour mettre en forme des éléments, c'est la propriété CSS [`font-weight`](/fr/docs/Web/CSS/font-weight) qu'il faut utiliser. Si l'élément est d'une importance particulière, on utilisera l'élément HTML [`<strong>`](/fr/docs/Web/HTML/Element/strong).
 
-{{EmbedInteractiveExample("pages/tabbed/b.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  The two most popular science courses offered by the school are
+  <b class="term">chemistry</b> (the study of chemicals and the composition of
+  substances) and <b class="term">physics</b> (the study of the nature and
+  properties of matter and energy).
+</p>
+```
+
+```css interactive-example
+/* stylelint-disable-next-line block-no-empty */
+b {
+}
+```
 
 <table class="properties">
   <tbody>

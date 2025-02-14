@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dl
 
 **`<dl>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個描述清單。該元素包含一組術語（使用 {{HTMLElement("dt")}} 元素指定）和描述（由 {{HTMLElement("dd")}} 元素提供）。此元素的常見用途包括實現詞彙表或顯示後設資料（一組鍵值對的串列）。
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 ## 屬性
 

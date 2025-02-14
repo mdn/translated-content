@@ -15,7 +15,39 @@ l10n:
 
 `minlength` 不意味着输入为 [`required`](/zh-CN/docs/Web/HTML/Attributes/required)；只有当用户输入了一个值时，输入才会违反 `minlength` 约束。如果输入不是 `required` 的，即使设置了 `minlength`，也可以提交空字符串。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-minlength.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: minlength", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Product name:</label>
+<input
+  id="name"
+  name="name"
+  type="text"
+  value="Shampoo"
+  minlength="3"
+  maxlength="20"
+  required />
+
+<label for="description">Product description:</label>
+<textarea
+  id="description"
+  name="description"
+  minlength="10"
+  maxlength="40"
+  required></textarea>
+```
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:valid,
+textarea:valid {
+  background-color: palegreen;
+}
+```
 
 ## 示例
 

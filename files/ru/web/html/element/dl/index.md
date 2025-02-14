@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dl
 
 **HTML-элемент `<dl>`** (_от англ._ _Description List_) представляет собой список описаний. Этот элемент служит контейнером для списка пар терминов (определяемых элементом {{HTMLElement("dt")}}) и их описаний (определяемых элементами {{HTMLElement("dd")}}). Этот элемент обычно используют при создании глоссария или для отображения метаданных (списка пар ключ-значение).
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент), и если потомки элемента `<dl>` включают одну группу имя-значение явный контент.                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

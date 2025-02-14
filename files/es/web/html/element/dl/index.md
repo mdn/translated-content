@@ -7,7 +7,38 @@ slug: Web/HTML/Element/dl
 
 El elemento **HTML `<dl>`** representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).
 
-{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+```css interactive-example
+p,
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+```
 
 El contenido para este ejemplo interactivo se encuentra almacenado en un repositorio GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, por favor clona [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples)y envía la petición de extración (pull request).
 

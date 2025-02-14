@@ -7,7 +7,27 @@ slug: Web/HTML/Element/rtc
 
 **HTML `<rtc>` 요소**는 {{htmlelement("rb")}} 요소가 표시하는 문자의 의미에 대한 주석을 나타냅니다. `<rb>`는 발음({{htmlelement("rt")}})과 의미(`<rtc>`) 둘 다 가질 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/rtc.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;rtc&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<ruby xml:lang="zh-Hant" style="ruby-position: under;">
+    <rbc>
+        <rb>馬</rb><rp>(</rp><rt>mǎ</rt><rp>)</rp>
+        <rb>來</rb><rp>(</rp><rt>lái</rt><rp>)</rp>
+        <rb>西</rb><rp>(</rp><rt>xī</rt><rp>)</rp>
+        <rb>亞</rb><rp>(</rp><rt>yà</rt><rp>)</rp>
+    </rbc>
+    <rtc xml:lang="en" style="ruby-position: over;">
+        <rp>(</rp><rt>Malaysia</rt><rp>)</rp>
+    </rtc>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 <table class="properties">
   <tbody>

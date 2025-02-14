@@ -9,7 +9,35 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`url`** 型は、ユーザーに URL を入力および編集させるために使用します。
 
-{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<form>
+  <label for="url">Enter an https:// URL:</label>
+  <input
+    type="url"
+    name="url"
+    id="url"
+    placeholder="https://example.com"
+    pattern="https://.*"
+    size="30"
+    required />
+</form>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 入力値はフォームの送信前に自動的に検証され、空欄または正しい形式の URL のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当な URL であるかどうかを視覚的に示します。
 

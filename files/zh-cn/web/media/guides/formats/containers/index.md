@@ -1032,7 +1032,19 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 
 在这里显示的示例中，我们向浏览器提供了两种格式的视频：WebM 和 MP4。
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
 
 视频首先以 WebM 格式提供（[`type`](/zh-CN/docs/Web/HTML/Element/video#type) 属性设置为 `video/webm`）。如果{{Glossary("user agent","用户代理")}}无法播放，就会转到下一个选项，其 `type` 属性被指定为 `video/mp4`。如果两个选项都无法播放，则会显示 `This browser does not support the HTML video element` 的文本。
 

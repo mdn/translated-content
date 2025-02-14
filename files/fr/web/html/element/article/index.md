@@ -7,7 +7,51 @@ slug: Web/HTML/Element/article
 
 L'élément **`<article>`** représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée de manière indépendante (par exemple, dans le cadre d'une syndication). Exemples : un message de forum, un article de magazine ou de journal, ou un article de blog, une fiche produit, un commentaire soumis par un utilisateur, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.
 
-{{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article class="forecast">
+  <h1>Weather forecast for Seattle</h1>
+  <article class="day-forecast">
+    <h2>03 March 2018</h2>
+    <p>Rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>04 March 2018</h2>
+    <p>Periods of rain.</p>
+  </article>
+  <article class="day-forecast">
+    <h2>05 March 2018</h2>
+    <p>Heavy rain.</p>
+  </article>
+</article>
+```
+
+```css interactive-example
+.forecast {
+  margin: 0;
+  padding: 0.3rem;
+  background-color: #eee;
+}
+
+.forecast > h1,
+.day-forecast {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.day-forecast {
+  background: right/contain content-box border-box no-repeat
+    url("/shared-assets/images/examples/rain.svg") white;
+}
+
+.day-forecast > h2,
+.day-forecast > p {
+  margin: 0.2rem;
+  font-size: 1rem;
+}
+```
 
 Un document donné peut contenir plusieurs articles ; par exemple, sur un blog qui affiche le texte de chaque article l'un après l'autre au fur et à mesure que le lecteur fait défiler, chaque message sera contenu dans un élément `<article>`, avec éventuellement une ou plusieurs `<section>` à l'intérieur.
 

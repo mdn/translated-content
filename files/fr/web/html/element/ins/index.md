@@ -10,7 +10,55 @@ L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajout�
 > [!NOTE]
 > À l'inverse, on pourra utiliser l'élément {{HTMLElement("del")}} afin de représenter un fragment de texte supprimé.
 
-{{EmbedInteractiveExample("pages/tabbed/ins.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>&ldquo;You're late!&rdquo;</p>
+<del>
+  <p>&ldquo;I apologize for the delay.&rdquo;</p>
+</del>
+<ins cite="../howtobeawizard.html" datetime="2018-05">
+  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+</ins>
+```
+
+```css interactive-example
+del,
+ins {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+del {
+  background-color: #fbb;
+}
+
+ins {
+  background-color: #d4fcbc;
+}
+
+del::before,
+ins::before {
+  position: absolute;
+  left: 0.5rem;
+  font-family: monospace;
+}
+
+del::before {
+  content: "−";
+}
+
+ins::before {
+  content: "+";
+}
+
+p {
+  margin: 0 1.8rem 0;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+}
+```
 
 ## Attributs
 

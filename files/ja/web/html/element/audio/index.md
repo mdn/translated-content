@@ -9,7 +9,21 @@ l10n:
 
 **`<audio>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。
 
-{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<figure>
+  <figcaption>Listen to the T-Rex:</figcaption>
+  <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+  <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+</figure>
+```
+
+```css interactive-example
+figure {
+  margin: 0;
+}
+```
 
 上記の例は、 `<audio>` 要素の基本的な使用方法を示しています。 {{htmlelement("img")}} 要素と同様の方法で、埋め込みたいメディアへのパスを `src` 属性に設定します。他にも自動再生や繰り返しを行うかどうか、ブラウザーの既定のオーディオコントロールを表示したいかどうか、などの情報を指定する属性を含めることができます。
 

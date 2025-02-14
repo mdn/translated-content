@@ -9,7 +9,29 @@ slug: Web/HTML/Element/input/time
 
 控件的用户界面因浏览器而异，请查阅[浏览器兼容性](#浏览器兼容性)以了解更多细节。在不支持该类型的浏览器中，它会优雅地降级为 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)。
 
-{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="appt">Choose a time for your meeting:</label>
+
+<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+
+<small>Office hours are 9am to 6pm</small>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## 外观
 

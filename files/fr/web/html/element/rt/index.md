@@ -7,7 +7,19 @@ slug: Web/HTML/Element/rt
 
 L'élément HTML **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<ruby>
+  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+```
+
+```css interactive-example
+ruby {
+  font-size: 2em;
+}
+```
 
 ## Attributs
 

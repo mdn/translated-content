@@ -7,7 +7,23 @@ slug: Web/HTML/Element/data
 
 **HTML-элемент `<data>`** связывает данное содержимое с машиночитаемым представлением. Если содержимое относится к времени или дате, необходимо использовать элемент {{HTMLElement("time")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>New Products:</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+```css interactive-example
+data:hover::after {
+  content: " (ID " attr(value) ")";
+  font-size: 0.7em;
+}
+```
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), явный контент. |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

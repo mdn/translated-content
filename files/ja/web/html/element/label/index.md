@@ -9,7 +9,28 @@ l10n:
 
 **`<label>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーインターフェイスの項目のキャプションを表します。
 
-{{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+```
+
+```css interactive-example
+.preference {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0.5rem;
+}
+```
 
 `<label>` を {{htmlelement("input")}} や {{htmlelement("textarea")}} などのフォーム要素と関連付けると、いくらかの利点が発生します。
 

@@ -7,7 +7,43 @@ slug: Web/HTML/Element/form
 
 L'élément HTML **`<form>`** représente un formulaire, c'est-à-dire une section d'un document qui contient des contrôles interactifs permettant à un utilisateur de fournir des informations.
 
-{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<form action="" method="get" class="form-example">
+  <div class="form-example">
+    <label for="name">Enter your name: </label>
+    <input type="text" name="name" id="name" required />
+  </div>
+  <div class="form-example">
+    <label for="email">Enter your email: </label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div class="form-example">
+    <input type="submit" value="Subscribe!" />
+  </div>
+</form>
+```
+
+```css interactive-example
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+```
 
 Il est possible d'utiliser les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) pour mettre en forme un élément `<form>` selon que le contenu des éléments du formulaire est valide ou non.
 
