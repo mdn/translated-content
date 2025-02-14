@@ -23,9 +23,9 @@ l10n:
 
 撰寫任何文件時，可參考的有用資源包括：
 
-1. [How-to guides](/zh-TW/docs/MDN/Writing_guidelines/Howto)（MDN Web Docs 的教學指南）：你現在已經在這裡，但瀏覽所有文章並熟悉我們的寫作風格、各種頁面的類型與包含的區塊，以及我們如何整合不同部分（例如規範和瀏覽器相容性資訊）都是很重要的。
+1. MDN Web Docs 的[教學指南](/zh-TW/docs/MDN/Writing_guidelines/Howto)：你現在已經在這裡，但瀏覽所有文章並熟悉我們的寫作風格、各種頁面的類型與包含的區塊，以及我們如何整合不同部分（例如規範和瀏覽器相容性資訊）都是很重要的。
 2. 最新的規範：各標準制定組織會為被 MDN Web Docs 文件化的技術制定規範。例如，針對 JavaScript 的 [TC39](https://tc39.es/)、針對 HTML 的 [WHATWG](https://whatwg.org/)，以及針對 CSS、XML 和一些 Web API 的 [W3C](https://www.w3.org/)。規範通常會從 MDN Web Docs 的參考頁面中以「Specifications」區塊連結；或者你也可以進行網路搜尋。務必參考最新、最完整的規範。
-3. 最新的現代網路瀏覽器：這些通常應該是實驗性或內部測試版本，例如 [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly)、[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) 或 [Safari Technology Preview](https://webkit.org/downloads/)，因為它們更有可能支援你正在文件化的功能。這一點對於撰寫「即將推出」的功能尤其重要。
+3. 最新的現代網路瀏覽器：這些通常應該是實驗性或內部測試版本，例如 [Firefox Nightly](https://www.mozilla.org/zh-TW/firefox/channel/desktop/#nightly)、[Chrome Canary](https://www.google.com/intl/zh-TW/chrome/canary/) 或 [Safari Technology Preview](https://webkit.org/downloads/)，因為它們更有可能支援你正在文件化的功能。這一點對於撰寫「即將推出」的功能尤其重要。
 4. 示範、部落格文章或其他資訊：盡可能多地收集資訊。如果你在更新某項技術的文件，請確保你參考的資源並非已經過時。這也解釋了前兩點的重要性。
 
 同時，尋找能夠協助回答疑問的人也是一個不錯的選擇。這些人可能是規範的作者，或是實作瀏覽器功能的工程師。
@@ -39,7 +39,7 @@ l10n:
 - [如何閱讀網路規範第一部分 – 或：WebVR，你該如何處理？](https://surma.dev/things/reading-specs/) – 以 WebVR 規範為例，但對於閱讀 Web API 規範也是一個很好的介紹
 - [如何閱讀網路規範第二部分a – 或：ECMAScript 符號](https://surma.dev/things/reading-specs-2/) – 上述文章的第二部分，介紹了理解描述 JavaScript 語言的 ECMAScript 規範
 
-此外，我們還有 [WebIDL 文件中包含的資訊](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file) 指南，當你在閱讀 Web API 規範時，它能夠提供很大的幫助。
+此外，我們還有 [WebIDL 文件中包含的資訊](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file)指南，當你在閱讀 Web API 規範時，它能夠提供很大的幫助。
 
 ## 探索功能
 
@@ -55,13 +55,13 @@ l10n:
 
 ### 側邊欄
 
-你撰寫的頁面的側邊欄也可能需要重新定義或更新。要了解是否需要這麼做以及如何進行，請參考 [側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)。
+你撰寫的頁面的側邊欄也可能需要重新定義或更新。要了解是否需要這麼做以及如何進行，請參考[側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)。
 
 ### 程式碼範例
 
 MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名的例子包括參考頁面中「試一試」區塊的互動範例，以及指南中需要的大型示範程式碼。如果你需要新增或修改這些版本庫中的內容，建議你在清單中做個記錄。
 
-關於 MDN Web Docs 所使用的不同類型程式碼範例，請參考 [程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples) 文章。
+關於 MDN Web Docs 所使用的不同類型程式碼範例，請參考[程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples)文章。
 
 ### 範例
 
@@ -112,4 +112,4 @@ MDN Web Docs 的部分程式碼範例儲存在獨立的版本庫中。最著名�
 
 ## 建立頁面
 
-接下來，建立你所需要的頁面。要建立新頁面，請參考我們的指南 [如何建立、移動、刪除及編輯頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。同時，也請參考我們的 [頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types) 指南，以瞭解哪些頁面範本可能對你有幫助。
+接下來，建立你所需要的頁面。要建立新頁面，請參考我們的指南[如何建立、移動、刪除及編輯頁面](/zh-TW/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting)。同時，也請參考我們的[頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types)指南，以瞭解哪些頁面範本可能對你有幫助。
