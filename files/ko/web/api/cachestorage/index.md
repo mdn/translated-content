@@ -20,7 +20,7 @@ l10n:
 
 윈도우에서는 {{domxref("Window.caches")}} 속성을, 워커에서는 {{domxref("WorkerGlobalScope.caches")}} 속성을 통해 `CacheStorage` 에 접근할 수 있습니다.
 
-> [!NOTE] 신뢰할 수 없는 출처(즉, HTTPS를 사용하지 않는 출처)에서는 `CacheStorage`가 항상 `SecurityError`로 거부됩니다(이 정의는 향후 더 복잡해질 수 있습니다). Firefox에서 테스트할 경우, Firefox DevTools 옵션/설정 메뉴에서 **Enable Service Workers over HTTP (when toolbox is open)** 옵션을 활성화하여 이를 우회할 수 있습니다. 또한, `CacheStorage`는 파일 시스템 접근이 필요하기 때문에 Firefox의 개인 모드에서 사용할 수 없을 수도 있습니다.
+> [!NOTE] 신뢰할 수 없는 출처(즉, HTTPS를 사용하지 않는 출처)에서는 `CacheStorage`가 항상 `SecurityError`로 거부됩니다(이 정의는 향후 더 복잡해질 수 있습니다). Firefox에서 테스트할 경우, Firefox DevTools 옵션/설정 메뉴에서 **Enable Service Workers over HTTP (도구 모음이 열려있을 때)** 옵션을 활성화하여 이를 우회할 수 있습니다. 또한, `CacheStorage`는 파일 시스템 접근이 필요하기 때문에 Firefox의 개인 모드에서 사용할 수 없을 수도 있습니다.
 
 > [!NOTE] {{domxref("CacheStorage.match()")}} 는 편의 메서드입니다. 캐시 항목과 일치하는 기능은 {{domxref("CacheStorage.keys()")}} 로부터 캐시 이름 배열을 반환하고, 각 캐시를 {{domxref("CacheStorage.open()")}} 으로 연 다음, 원하는 항목을 {{domxref("Cache.match()")}} 으로 일치시킴으로써 구현할 수 있습니다.
 
@@ -167,7 +167,7 @@ try {
 
 ## 같이 보기
 
-- [Using Service Workers](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [서비스 워커 사용하기](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}
 - [Private Browsing / Incognito modes](/ko/docs/Web/API/Web_Storage_API#private_browsing_incognito_modes)
