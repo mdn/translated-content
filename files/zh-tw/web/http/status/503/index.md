@@ -7,14 +7,16 @@ l10n:
 
 {{HTTPSidebar}}
 
-超文本傳輸協定（HTTP）**`503 Service Unavailable`** 伺服器錯誤回應代碼表示伺服器尚未準備好處理請求。
+HTTP **`503 Service Unavailable`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#server_error_responses)狀態碼表示伺服器尚未準備好處理請求。
 
-常見原因是伺服器正在進行維護或超載。此回應應用於臨時情況，如果可能，{{HTTPHeader("Retry-After")}} HTTP 標頭應包含恢復服務的預估時間。
+Common causes are that a server is down for maintenance or overloaded. During maintenance, server administrators may temporarily route all traffic to a `503` page, or this may happen automatically during software updates. In overload cases, some server-side applications will reject requests with a `503` status when resource thresholds like memory, CPU, or connection pool limits are met. Dropping incoming requests creates backpressure that prevents the server's compute resources from being exhausted, avoiding more severe failures. If requests from specific clients are being restricted due to {{Glossary("Rate_limit", "rate limiting")}}, the appropriate response is {{HTTPStatus("429", "429 Too Many Requests")}}.
+
+This response should be used for temporary conditions and the {{HTTPHeader("Retry-After")}} HTTP header should contain the estimated time for the recovery of the service, if possible.
+
+A user-friendly page explaining the problem should be sent along with this response.
 
 > [!NOTE]
-> 伴隨此回應，應發送一個友好的頁面來解釋問題。
-
-與此回應一起發送的與緩存相關的標頭應該被處理，因為 503 狀態通常是一個臨時條件，通常不應該將回應緩存。
+> Caching-related headers sent with this response require special attention; a `503` indicates a temporary issue and responses shouldn't usually be cached as clients may receive outdated error pages after a fix has been deployed.
 
 ## 狀態
 
@@ -22,15 +24,46 @@ l10n:
 503 Service Unavailable
 ```
 
+
+## Examples
+
+### 503 server error response
+
+The following request tries to fetch a webpage, but receives a `503` response.
+The response body contains a page describing the server state with a link to a support page for visitors.
+An identifier is contained in the response body for illustration of a method that may help server administrators narrow down the root cause of the problem:
+
+```http
+GET /highlights HTTP/1.1
+Host: example.com
+User-Agent: curl/8.6.0
+Accept: */*
+```
+
+```http
+HTTP/1.1 503 Service Unavailable
+Content-Type: text/html;
+Content-Length: 123
+
+<!doctype html>
+<html lang="en">
+<head>
+<title>503 Service Unavailable</title>
+</head>
+<body>
+<h1>503 Service Unavailable</h1>
+<p>The server was unable to complete your request. Please try again later.</p>
+<p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
+<p>Server logs contain details of this error with request ID: ABC-123.</p>
+</body>
+</html>
+```
+
 ## 規範
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
+- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Retry-After")}}
-- [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.503)
