@@ -14,7 +14,7 @@ l10n:
 `resize` 는 다음 요소들에는 적용되지 않습니다.
 
 - 인라인 요소
-- `visible` or `clip` {{cssxref("overflow")}} 속성이 `visible` 혹은 `clip` 로 설정된 블록 요소
+- {{cssxref("overflow")}} 속성이 `visible` 혹은 `clip` 로 설정된 블록 요소
 
 ## 구문
 
