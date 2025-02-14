@@ -40,7 +40,7 @@ slug: Web/CSS
 - CSS 關鍵概念：
 
   - [語法](/zh-TW/docs/Web/CSS/Syntax)
-  - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/Inheritance)
+  - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒子模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[邊框的崩潰](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
   - [初始值](/zh-TW/docs/Web/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/Web/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/Web/CSS/used_value)和[運作值](/zh-TW/docs/Web/CSS/actual_value)
