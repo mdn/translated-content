@@ -7,9 +7,9 @@ l10n:
 
 {{ APIRef("Location") }}
 
-{{domxref("Location")}} 接口的 **`hash`** 属性返回一个字符串，其中包含一个 `'#'`，后跟 URL 的片段标识符——URL 试图指向的页面上的 ID。
+{{domxref("Location")}} 接口的 **`hash`** 属性是一个字符串，包含一个 `"#"` 后跟位置 URL 的片段标识符。如果 URL 没有片段标识符，则该属性的值为空字符串 `""`。
 
-该片段未经过{{Glossary("Percent-encoding", "百分号编码")}}。如果 URL 没有片段标识符，此属性将包含一个空字符串 `""`。
+请参阅 {{domxref("URL.hash")}} 以获取更多信息。
 
 ## 值
 
