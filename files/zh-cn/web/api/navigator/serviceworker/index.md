@@ -7,9 +7,9 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Service Workers API")}}
 
-{{domxref("Navigator")}} 接口的 **`serviceWorker`** 只读属性返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，用于管理 {{domxref("ServiceWorker")}} 的注册、移除、升级和通信的访问权限。
+{{domxref("Navigator")}} 接口的 **`serviceWorker`** 只读属性返回[关联文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorkerContainer")}} 对象，用于提供 {{domxref("ServiceWorker")}} 的注册、移除、升级和通信的访问。
 
-该功能可能在无痕模式下不可用。
+该特性可能无法在无痕模式下使用。
 
 请注意，worker 同样可以通过 {{domxref("WorkerNavigator.serviceWorker")}} 访问文档的 {{domxref("ServiceWorkerContainer")}}。
 
@@ -19,7 +19,7 @@ l10n:
 
 ## 示例
 
-此代码用于检查浏览器是否支持 service workers。
+此代码检查浏览器是否支持 service worker。
 
 ```js
 if ("serviceWorker" in navigator) {
@@ -38,4 +38,4 @@ if ("serviceWorker" in navigator) {
 ## 参见
 
 - {{domxref("Service Worker API", "", "", "nocode")}}
-- [使用 Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
