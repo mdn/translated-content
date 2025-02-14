@@ -2,7 +2,7 @@
 title: Location：hash 属性
 slug: Web/API/Location/hash
 l10n:
-  sourceCommit: 6033c369db35bf1df34430cc375705e2d959fc0b
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ APIRef("Location") }}
