@@ -43,7 +43,7 @@ slug: Web/CSS
   - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒子模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[邊框的崩潰](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [初始值](/zh-TW/docs/Web/CSS/initial_value) 、[計算值（computed）](/zh-TW/docs/Web/CSS/computed_value)、 [使用值（used）](/zh-TW/docs/Web/CSS/used_value)和[運作值](/zh-TW/docs/Web/CSS/actual_value)
+  - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value) 、[計算值（computed）](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)、 [使用值（used）](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)和[運作值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
   - [CSS 簡寫屬性](/zh-TW/docs/Web/CSS/Shorthand_properties)
   - [CSS 彈性盒子排版](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 格線排版](/zh-TW/docs/Web/CSS/CSS_grid_layout)

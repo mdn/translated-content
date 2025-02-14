@@ -28,12 +28,12 @@ CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所�
   - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-TW/docs/Web/CSS/initial_value)
-    - [計算值](/zh-TW/docs/Web/CSS/computed_value)
+    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
+    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-TW/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-TW/docs/Web/CSS/specified_value)
-    - [應用值](/zh-TW/docs/Web/CSS/used_value)
-    - [實際值](/zh-TW/docs/Web/CSS/actual_value)
+    - [指定值](/zh-TW/docs/Web/CSS/CSS_cascade/specified_value)
+    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
+    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [特性值定義語法](/zh-TW/docs/Web/CSS/Value_definition_syntax)
   - [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)
