@@ -9,7 +9,7 @@ CSS 属性的应用值（used value）是完成所有计算后最终使用的值
 
 ## 详情
 
-计算出 CSS 属性的最终值有三个步骤。首先，[指定值 specified value](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value) 取自样式层叠 (选取样式表里权重最高的规则), [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance) (如果属性可以继承则取父元素的值)，或者默认值。然后，按规范算出 [计算值 computed value](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value) (例如， `span` 指定 `position: absolute` 后`display` 变为 `block`)。最后，计算布局 (尺寸比如 `auto` 或 百分数 换算为像素值 )，结果即 **应用值 used value**。这些步骤是在内部完成的，脚本只能使用 [window.getComputedStyle](/zh-CN/docs/Web/API/Window/getComputedStyle) 获得最终的应用值。
+计算出 CSS 属性的最终值有三个步骤。首先，[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)取自样式层叠（选取样式表里权重最高的规则）[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)（如果属性可以继承则取父元素的值），或者默认值。然后，按规范算出[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)（例如，`span` 指定 `position: absolute` 后 `display` 变为 `block`）。最后，计算布局（尺寸比如 `auto` 或 百分数 换算为像素值），结果即**应用值**。这些步骤是在内部完成的，脚本只能使用 [window.getComputedStyle](/zh-CN/docs/Web/API/Window/getComputedStyle) 获得最终的应用值。
 
 ## 举例
 
@@ -29,7 +29,7 @@ CSS 2.0 只定义了[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)�
 
 ## 规范
 
-[CSS Level 2: Used Values](https://www.w3.org/TR/CSS2/cascade.html#used-value)
+{{Specifications}}
 
 ## 参见
 
@@ -51,7 +51,6 @@ CSS 2.0 只定义了[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)�
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
     - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)

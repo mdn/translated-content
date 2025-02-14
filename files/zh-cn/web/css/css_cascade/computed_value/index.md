@@ -1,14 +1,13 @@
 ---
 title: 计算值
 slug: Web/CSS/CSS_cascade/computed_value
-original_slug: Web/CSS/computed_value
 ---
 
 {{CSSRef}}
 
 一个 CSS 属性的计算值是指这个属性在由父类转向子类的继承中的值。它通过指定值计算出来：
 
-- 处理特殊的值 {{cssxref("inherit")}}，{{cssxref("initial")}}， {{cssxref("unset")}}和 {{cssxref("revert")}}。
+- 处理特殊的值 {{cssxref("inherit")}}，{{cssxref("initial")}}、{{cssxref("unset")}}和 {{cssxref("revert")}}。
 - 进行计算，以达到属性摘要中“计算值”行中描述的值。
 
 计算值所需要的计算通常包括将相对值转换成绝对值 (如 em 单位或百分比)。例如，如一个元素的属性值为 `font-size:16px` 和 `padding-top:2em`, 则 `padding-top` 的计算值为 `32px` (字体大小的 2 倍).

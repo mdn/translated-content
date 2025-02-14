@@ -1,7 +1,6 @@
 ---
 title: 初始值
 slug: Web/CSS/CSS_cascade/initial_value
-original_slug: Web/CSS/initial_value
 ---
 
 {{CSSRef}}
