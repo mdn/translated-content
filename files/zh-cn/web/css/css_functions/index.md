@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_Functions
 
 {{CSSRef}}
 
-**CSS 值函数**是调用特殊数据处理或计算的语句，以返回一个 CSS 属性的 [CSS](/zh-CN/docs/Web/CSS) [值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)。CSS 值函数代表更复杂的[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)，它们可能需要一些输入参数来计算返回值。
+**CSS 值函数**是调用特殊数据处理或计算的语句，以返回一个 CSS 属性的 [CSS](/zh-CN/docs/Web/CSS) [值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)。CSS 值函数代表更复杂的[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)，它们可能需要一些输入参数来计算返回值。
 
 ## 语法
 
@@ -24,7 +24,7 @@ selector {
 
 ## 转换函数
 
-{{CSSxRef("&lt;transform-function&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)代表外观变换。它被用作 {{CSSxRef("transform")}} 属性的一个值。
+{{CSSxRef("&lt;transform-function&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)代表外观变换。它被用作 {{CSSxRef("transform")}} 属性的一个值。
 
 ### 转换函数
 
@@ -152,7 +152,7 @@ selector {
 
 ## 过滤器函数
 
-{{CSSxRef("&lt;filter-function&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示可以改变输入图像的外观的图形效果。它被用于 {{CSSxRef("filter")}} 和 {{CSSxRef("backdrop-filter")}} 属性。
+{{CSSxRef("&lt;filter-function&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示可以改变输入图像的外观的图形效果。它被用于 {{CSSxRef("filter")}} 和 {{CSSxRef("backdrop-filter")}} 属性。
 
 - {{CSSxRef("filter-function/blur", "blur()")}}
   - : 增加图像的高斯模糊度。
@@ -177,7 +177,7 @@ selector {
 
 ## 颜色值函数
 
-{{CSSxRef("color_value","&lt;color&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)指定了不同的颜色表示方法。
+{{CSSxRef("color_value","&lt;color&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)指定了不同的颜色表示方法。
 
 - {{CSSxRef("color_value/rgb", "rgb()")}}
   - : 根据红、绿、蓝和 alpha（透明度）成分来定义一个给定的颜色。
@@ -202,7 +202,7 @@ selector {
 
 ## 图像函数
 
-{{CSSxRef("&lt;image&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)提供了图像或渐变的图形化表示。
+{{CSSxRef("&lt;image&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)提供了图像或渐变的图形化表示。
 
 ### 渐变函数
 
@@ -245,7 +245,7 @@ CSS 计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过�
 
 ## 形状函数
 
-{{CSSxRef("&lt;basic-shape&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示一个图形形状。它被用于 {{CSSxRef("clip-path")}}、{{CSSxRef("offset-path")}} 和 {{CSSxRef("shape-outside")}} 属性中。
+{{CSSxRef("&lt;basic-shape&gt;")}} CSS [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一个图形形状。它被用于 {{CSSxRef("clip-path")}}、{{CSSxRef("offset-path")}} 和 {{CSSxRef("shape-outside")}} 属性中。
 
 - {{CSSxRef("basic-shape/circle","circle()")}}
   - : 定义一个圆形。

@@ -1,7 +1,6 @@
 ---
 title: 继承
 slug: Web/CSS/CSS_cascade/Inheritance
-original_slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}
@@ -10,7 +9,7 @@ original_slug: Web/CSS/Inheritance
 
 ## 继承属性
 
-当元素的一个**继承属性**（inherited property）没有指定值时，则取父元素的同属性的[计算值 computed value](/zh-CN/docs/Web/CSS/computed_value)。只有文档根元素取该属性的概述中给定的[初始值](/zh-CN/docs/Web/CSS/initial_value)（[initial value](/zh-CN/docs/Web/CSS/initial_value)）（这里的意思应该是在该属性本身的定义中的默认值）。
+当元素的一个**继承属性**（inherited property）没有指定值时，则取父元素的同属性的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)。只有文档根元素取该属性的概述中给定的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)（[initial value](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)）（这里的意思应该是在该属性本身的定义中的默认值）。
 
 继承属性的一个典型例子就是 {{ Cssxref("color") }} 属性。给出以下样式规则：
 
@@ -30,7 +29,7 @@ p {
 
 ## 非继承属性
 
-当元素的一个**非继承属性**(在 Mozilla code 里有时称之为**reset property** ) 没有指定值时，则取属性的[初始值 initial value](/zh-CN/docs/Web/CSS/initial_value)（该值在该属性的概述里被指定）。
+当元素的一个**非继承属性**没有指定值时，则取属性的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)（该值在该属性的概述里被指定）。
 
 非继承属性的一个典型例子就是 {{ Cssxref("border") }} 属性。给出以下样式规则：
 
@@ -82,12 +81,12 @@ font {
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)

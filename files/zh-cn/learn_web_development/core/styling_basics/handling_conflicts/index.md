@@ -38,7 +38,7 @@ CSS 代表**层叠样式表**（Cascading Style Sheets），理解第一个词*�
 
 在某些时候，在做一个项目过程中你会发现一些应该产生效果的样式没有生效。通常的原因是你创建了两个应用于同一个元素的规则。与[**层叠**](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)密切相关的概念是[**优先级**（specificity）](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)，决定在发生冲突的时候应该使用哪条规则。设计元素样式的规则可能不是期望的规则，因此需要了解这些机制是如何工作的。
 
-这里也有[**继承**](/zh-CN/docs/Web/CSS/Inheritance)的概念，也就是在默认情况下，一些 css 属性继承当前元素的父元素上设置的值，有些则不继承。这也可能导致一些和期望不同的结果。
+这里也有[**继承**](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)的概念，也就是在默认情况下，一些 css 属性继承当前元素的父元素上设置的值，有些则不继承。这也可能导致一些和期望不同的结果。
 
 我们来快速地看下正在处理的关键问题，然后依次了解它们是如何相互影响的，以及如何和 CSS 交互的。虽然这些概念难以理解，但是随着不断的练习，你会慢慢熟悉它的工作原理。
 
@@ -184,7 +184,7 @@ CSS 为控制继承提供了五个特殊的通用属性值。每个 CSS 属性�
 - {{cssxref("inherit")}}
   - : 设置该属性会使子元素属性和父元素相同。实际上，就是“开启继承”。
 - {{cssxref("initial")}}
-  - : 将应用于选定元素的属性值设置为该属性的[初始值](/zh-CN/docs/Web/CSS/initial_value)。
+  - : 将应用于选定元素的属性值设置为该属性的[初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)。
 - {{cssxref("revert")}}
   - : 将应用于选定元素的属性值重置为浏览器的默认样式，而不是应用于该属性的默认值。在许多情况下，此值的作用类似于 {{cssxref("unset")}}。
 - {{cssxref("revert-layer")}}
