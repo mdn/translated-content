@@ -23,7 +23,7 @@ slug: Web/API/PerformanceResourceTiming
 - 计算临时请求响应耗时：`firstInterimResponseStart` - `finalResponseHeadersStart`
 - 计算请求响应耗时：`responseStart` - `requestStart`
 - 计算 SSL 安全连接耗时：`requestStart` - `secureConnectionStart`
-- 计算 Fetch 时间(不包括重定向)：`responseEnd` - `fetchStart`
+- 计算 Fetch 时间 (不包括重定向) ：`responseEnd` - `fetchStart`
 - 计算 ServiceWorker 处理时间：`fetchStart` - `workerStart`
 - 检查内容是否被压缩：`decodedBodySize` != `encodedBodySize`
 - 检查是否命中本地缓存：`transferSize` = `0`
@@ -47,7 +47,7 @@ slug: Web/API/PerformanceResourceTiming
 
 ### 时间戳
 
-该接口支持以下时间戳属性，你可以在图表中看到这些属性，并且它们按照资源获取时记录的顺序列出。按字母顺序排列的列表显示在左侧导航栏中。
+该接口支持以下时间戳属性，可以在图表中看到这些属性，并且它们按照资源获取时记录的顺序列出。按字母顺序排列的列表显示在左侧导航栏中。
 
 ![按获取文档时记录的时间戳顺序排列的时间戳图](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
@@ -56,7 +56,7 @@ slug: Web/API/PerformanceResourceTiming
 - {{domxref('PerformanceResourceTiming.redirectEnd')}} {{ReadOnlyInline}}
   - : 表示在接收到最后一个重定向响应的最后一个字节后的 {{domxref("DOMHighResTimeStamp")}}。
 - {{domxref('PerformanceResourceTiming.workerStart')}} {{ReadOnlyInline}}
-  - : 如果 Service Worker 线程已在运行，则在调用 {{domxref("FetchEvent")}} 之前的 {{domxref("DOMHighResTimeStamp")}}；如果 Service Worker 线程尚未在运行，则在启动 Service Worker 线程之前返回的 {{domxref("DOMHighResTimeStamp")}}。如果资源未被 Service Worker 拦截, 该属性将始终返回 0。
+  - : 如果 Service Worker 线程已在运行，则在调用 {{domxref("FetchEvent")}} 之前的 {{domxref("DOMHighResTimeStamp")}}；如果 Service Worker 线程尚未在运行，则在启动 Service Worker 线程之前返回的 {{domxref("DOMHighResTimeStamp")}}。如果资源未被 Service Worker 拦截，该属性将始终返回 0。
 - {{domxref('PerformanceResourceTiming.fetchStart')}} {{ReadOnlyInline}}
   - : 表示浏览器即将开始获取资源之前的 {{domxref("DOMHighResTimeStamp")}}。
 - {{domxref('PerformanceResourceTiming.domainLookupStart')}} {{ReadOnlyInline}}
@@ -82,7 +82,7 @@ slug: Web/API/PerformanceResourceTiming
 
 ### 附加资源信息
 
-此外，该接口还公开了以下包含有关资源更多信息的属性:
+此外，该接口还公开了以下包含有关资源更多信息的属性：
 
 - {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : 表示获取资源 MIME-type 最小化和标准化版本
