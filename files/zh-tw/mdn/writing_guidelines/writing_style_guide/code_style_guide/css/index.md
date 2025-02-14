@@ -25,19 +25,19 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 為了在最廣裝置範圍內提供最大靈活性，建議使用相對單位來設定容器（container）、內距（padding）等大小，例如 `em`、`rem`，或使用百分比與視口單位（viewport units），以根據視口寬度動態調整。你可以在我們的 [CSS 值與單位指南](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units)中閱讀更多相關資訊。
 
-### 別使用預處理器（preprocessor）
+### 別使用預處理器
 
-請別在範例程式碼中使用預處理器語法，諸如 [Sass](https://sass-lang.com/)、[Less](https://lesscss.org/) 或 [Stylus](https://stylus-lang.com/)。在 MDN Web 文件，我們記錄的是純（vanilla）CSS 語言。使用預處理器可能增加範例理解難度，進而困惑讀者。
+請別在範例程式碼中使用預處理器（preprocessor）語法，諸如 [Sass](https://sass-lang.com/)、[Less](https://lesscss.org/) 或 [Stylus](https://stylus-lang.com/)。在 MDN Web 文件，我們記錄的是純（vanilla）CSS 語言。使用預處理器可能增加範例理解難度，進而困惑讀者。
 
 ### 別使用特定的 CSS 方法學
 
 與前述指南相同，在 MDN Web 文件撰寫範例程式碼時，別使用特定的 CSS 方法學，例如 [BEM](https://getbem.com/naming/) 或 [SMACSS](https://smacss.com/)。盡管這些命名規則符合 CSS 語法，對於不熟悉這些方法學的讀者來說很容易混淆。
 
-### 別使用重設（reset）
+### 別使用重置
 
 為了在不同平台上都能最大程度控制 CSS，許多人過去會使用 CSS 重置（reset）來移除所有樣式，然後再自行重新定義。這種做法雖然有其優點，但在現代開發環境中，CSS 重置可能過猶不及，導致額外時間都浪費在重新實作本來沒有問題的樣式，例如預設的邊距（margin）、清單樣式等。
 
-如果你真的認為需要使用 CSS 重置，建議考慮使用 [Nicolas Gallagher 的 normalize.css](https://necolas.github.io/normalize.css/)。它的目標是讓不同瀏覽器之間的樣式更一致，移除一些常見的預設問題（例如 `<body>` 的邊距），並修正一些瀏覽器錯誤，而非完全刪除所有樣式。
+如果你真的認為需要使用 CSS 重置，建議考慮使用 [Nicolas Gallagher 的 normalize.css](https://necolas.github.io/normalize.css/)。它的目標是讓不同瀏覽器之間的樣式更一致，移除一些常見的預設問題（例如 `<body>` 的邊距），並修正一些瀏覽器錯誤。
 
 ## !important
 
@@ -51,13 +51,13 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 ## CSS 註解
 
-請使用 CSS 樣式的註釋來標註不易理解的程式碼。此外，請注意應在星號與註釋之間留一格空白。
+請使用 CSS 樣式的註解來標註不易理解的程式碼。此外，請注意應在星號與註解之間留一格空白。
 
 ```css example-good
-/* 這是一個 CSS 樣式的註釋 */
+/* 這是一個 CSS 樣式的註解 */
 ```
 
-請將註釋放在與其對應程式碼的前一行，如下所示：
+請將註解放在與其對應程式碼的前一行，如下所示：
 
 ```css example-good
 h3 {
@@ -101,16 +101,16 @@ h3 {
 
 - 使用 CSS 簡寫屬性可能帶來額外風險——當你未明確指定某些值時，瀏覽器會為這些屬性設定預設值，這可能導致先前定義的值意外重置，或產生預期外效果。例如，{{cssxref("grid")}} 屬性會為未指定的項目設定以下預設值：
 
-  - {{cssxref("grid-template-rows")}}: `none`
-  - {{cssxref("grid-template-columns")}}: `none`
-  - {{cssxref("grid-template-areas")}}: `none`
-  - {{cssxref("grid-auto-rows")}}: `auto`
-  - {{cssxref("grid-auto-columns")}}: `auto`
-  - {{cssxref("grid-auto-flow")}}: `row`
-  - {{cssxref("column-gap")}}: `0`
-  - {{cssxref("row-gap")}}: `0`
-  - {{cssxref("column-gap")}}: `normal`
-  - {{cssxref("row-gap")}}: `normal`
+  - {{cssxref("grid-template-rows")}}：`none`
+  - {{cssxref("grid-template-columns")}}：`none`
+  - {{cssxref("grid-template-areas")}}：`none`
+  - {{cssxref("grid-auto-rows")}}：`auto`
+  - {{cssxref("grid-auto-columns")}}：`auto`
+  - {{cssxref("grid-auto-flow")}}：`row`
+  - {{cssxref("column-gap")}}：`0`
+  - {{cssxref("row-gap")}}：`0`
+  - {{cssxref("column-gap")}}：`normal`
+  - {{cssxref("row-gap")}}：`normal`
 
 - 某些簡寫屬性僅在值的組成部分按照特定順序排列時才能正常運作。例如，在 CSS 動畫中，值的順序必須符合規定。以下範例中，註解標示了值的正確順序：
 
@@ -124,7 +124,7 @@ h3 {
 
 ## 行動裝置優先的媒體查詢（media query）
 
-在樣式表中，若包含針對不同目標視口（viewport）大小的[媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)樣式，應先定義窄螢幕/行動裝置的樣式，再逐步增加媒體查詢來新增較寬視口的樣式。遵循這個原則能帶來許多優勢，詳情請參閱[響應式設計](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)。
+在樣式表中，若包含針對不同目標視口（viewport）大小的[媒體查詢](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)樣式，應先定義窄螢幕/行動裝置的樣式，再逐步增加媒體查詢來新增較寬視口的樣式。遵循這個原則能帶來許多優勢，詳情請參閱[回應式設計](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)。
 
 ```css example-good
 /* 預設樣式：適用於窄螢幕 */

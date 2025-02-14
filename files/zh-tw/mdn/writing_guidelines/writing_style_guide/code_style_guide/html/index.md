@@ -22,7 +22,7 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 > [!NOTE]
 > 本節指南僅適用於需要顯示完整 HTML 文件的情境。通常，程式碼片段便足以展示某項功能。使用 [EmbedLiveSample 巨集](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples) 時，只須包含 HTML 片段，顯示時它將自動插入完整的 HTML 文件中。
 
-### 文件型態宣告（doctype）
+### 文件型態宣告
 
 請使用 HTML5 文件型態宣告（`doctype`）。它簡潔、好記，並向後相容。
 
@@ -30,7 +30,7 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 <!doctype html>
 ```
 
-### 文件語言（lang）
+### 文件語言
 
 請在 {{htmlelement("html")}} 元素上使用 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes/lang) 屬性來設定文件語言：
 
@@ -40,7 +40,7 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 這有助於提升無障礙體驗與搜尋引擎優化（SEO），也能幫助內容本地化，並提醒開發者遵循**最佳實踐**。
 
-### 文件編碼（charset）
+### 文件編碼
 
 你也應該這樣定義文件的字元編碼：
 
@@ -50,7 +50,7 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 請使用 UTF-8，除非有極特殊理由不這麼做。UTF-8 幾乎涵蓋所有語言的字元需求，確保文件的正確顯示與相容性。
 
-### 視口 `meta` 標籤（viewport meta tag）
+### 視口 `meta` 標籤
 
 最後，你應該在 HTML 文件的 {{HTMLElement("head")}} 內加入視口 `meta` 標籤，以確保程式碼範例在行動裝置上能夠正確顯示。你的文件應包含至少以下內容，並可根據需求進一步修改：
 
@@ -60,9 +60,9 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 詳情請參閱[使用視口 `meta` 標籤控制行動瀏覽器的版面配置](/zh-TW/docs/Web/HTML/Viewport_meta_tag)。
 
-## 屬性（attribute）
+## 屬性
 
-所有屬性的值應使用雙引號包覆。雖然 HTML5 允許省略引號，但包含引號可使標記更整潔易讀。例如，以下寫法較佳：
+所有屬性（attribute）的值應使用雙引號包覆。雖然 HTML5 允許省略引號，但包含引號可使標記更整潔易讀。例如，以下寫法較佳：
 
 ```html example-good
 <img src="images/logo.jpg" alt="A circular globe icon" class="no-border" />
@@ -76,7 +76,7 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 省略引號可能會導致問題。在上述範例中，`alt` 屬性將被解讀為多個獨立屬性，因為沒有引號來確保 `"A circular globe icon"` 作為單一屬性值。
 
-## 布林屬性（boolean attribute）
+## 布林屬性
 
 不要為布林屬性指定值（但{{glossary("enumerated", "枚舉")}}屬性仍須指定值）；僅須寫出屬性名稱即可啟用該屬性。例如，可以這樣寫：
 
@@ -134,8 +134,6 @@ Prettier 會格式化所有程式碼並保持風格一致。不過，還有些�
 
 在 MDN Web 文件撰寫 HTML 元素時，有些規則需要遵循。遵守這些規則可確保元素及其元件的描述一致，並確保正確連結到詳細文件。
 
-- **元素名稱**：請使用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 巨集，該巨集會自動產生連結至 MDN Web 文件的對應頁面。例如，撰寫 `\{{HTMLElement("title")}}` 會產生 {{HTMLElement("title")}}。
-  若想建立連結，則請**使用角括號**包覆元素名稱，並使用「行內程式碼」樣式（例如 `<title>`）。
-- **屬性名稱**：請使用「行內程式碼」樣式來標示屬性名稱，使其顯示為 `程式碼字體`。
-  此外，當屬性名稱首次出現在頁面中，或與其功能說明相關時，請用**粗體**標示。
-- **屬性值**：請使用「行內程式碼」樣式（`<code>`）來標示屬性值，並且**不要**為字串型屬性值加上引號，除非程式碼範例的語法要求使用。例如：「當 `<input>` 元素的 `type` 屬性設定為 `email` 或 `tel` 時……」。
+- **元素名稱**：請使用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 巨集，該巨集會自動產生連結至 MDN Web 文件的對應頁面。例如，撰寫 `\{{HTMLElement("title")}}` 會產生 {{HTMLElement("title")}}。若想建立連結，則請**使用角括號**包覆元素名稱，並使用「行內程式碼」樣式（例如 `<title>`）。
+- **屬性名稱**：請使用「行內程式碼」樣式來標示屬性名稱，使其顯示為 `程式碼字體`。此外，當屬性名稱首次出現在頁面中，或與其功能說明相關時，請用**粗體**標示。
+- **屬性值**：請使用「行內程式碼」樣式（`<code>`）來標示屬性值，並且不要為字串型屬性值加上引號，除非程式碼範例的語法要求使用。例如：「當 `<input>` 元素的 `type` 屬性設定為 `email` 或 `tel` 時……」。

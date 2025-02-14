@@ -65,7 +65,7 @@ pets[pets.length] = "cat";
 
 撰寫非同步程式碼能提升效能，建議能用就用。具體而言，你可以用：
 
-- [Promises](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Promise](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [`async`](/zh-TW/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/zh-TW/docs/Web/JavaScript/Reference/Operators/await)
 
 當兩種技術皆可行時，我們傾向使用較簡潔的 `async`/`await` 語法。不過，除非是在 ECMAScript 模組中，否則無法在最上層使用 `await`。Node.js 使用的 CommonJS 模組並非 ES 模組。如果你的範例須適用於所有環境，請避免使用最上層 `await`。
@@ -138,7 +138,7 @@ pets[pets.length] = "cat";
 
 ### 日誌輸出
 
-- 在用於正式環境的程式碼中，通常不用為記錄資料的部分新增註解。在程式碼範例中，我們經常使用 `console.log()`、`console.error()` 或類似的函式來輸出重要數值。為了讓讀者在不執行程式碼的情況下理解其行為，你可以在該函式之後新增註解，說明將會輸出的內容。請這樣撰寫：
+- 在用於正式環境的程式碼中，通常不用為記錄資料的部分新增註解。在程式碼範例中，我們經常使用 `console.log()`、`console.error()` 或類似的函式來輸出重要數值。為了讓讀者在不執行程式碼的情況下理解其行為，你可以在該函式*之後*新增註解，說明將會輸出的內容。請這樣撰寫：
 
   ```js example-good
   function exampleFunc(fruitBasket) {
@@ -225,7 +225,7 @@ array.forEach((value /* , index, array */) => {
 
 ### 函式名稱
 
-函式名稱應使用 {{Glossary("camel_case", "駝峰命名法")}}，首個字母須為小寫。請選擇簡潔、易讀且具語意性的名稱，以提升可讀性。
+函式名稱應使用{{Glossary("camel_case", "駝峰命名法")}}，首個字母須為小寫。請選擇簡潔、易讀且具語意性的名稱，以提升可讀性。
 
 以下是符合規範的函式名稱範例：
 
@@ -321,7 +321,7 @@ function doIt() {
 
 當需要用[迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops)時，請根據需求選擇適當的迴圈類型，例如 [`for(;;)`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for)、[`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for-of)、[`while`](/zh-TW/docs/Web/JavaScript/Reference/Statements/while) 等等。
 
-- 在遍歷集合元素時，請避免使用傳統 `for (;;)` 迴圈，建議使用 `for-of` 或 `forEach()`。請注意，若使用的集合並非 `陣列（Array）`，則須確認 `for-of` 是否支援（它要求變數可迭代），或確保 `forEach()` 方法是否存在。
+- 在遍歷集合元素時，請避免使用傳統 `for (;;)` 迴圈，建議使用 `for-of` 或 `forEach()`。請注意，若使用的集合並非 `Array`（陣列），則須確認 `for-of` 是否支援（它要求變數可迭代），或確保 `forEach()` 方法是否存在。
 
   請使用 `for-of`：
 
@@ -582,7 +582,7 @@ const object = new Object();
   }
   ```
 
-### 函式
+### 方法
 
 定義方法時，請使用方法定義語法：
 
@@ -652,7 +652,7 @@ if (condition) {
 }
 ```
 
-The conditional operator is helpful when creating strings to log information. In such cases, using a regular `if...else` statement leads to long blocks of code for a side operation like logging, obfuscating the central point of the example.
+條件運算子在建立用來記錄日誌的字串時非常有用。這類情境下，使用一般的 `if-else` 陳述式會導致程式碼顯得冗長，將記錄這類次要操作的程式碼與範例的核心重點混在一起，影響可讀性。
 
 ### 嚴格相等運算子
 
