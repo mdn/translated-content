@@ -1,7 +1,6 @@
 ---
 title: Perceived performance
 slug: Learn_web_development/Extensions/Performance/Perceived_performance
-origin-slug: Learn/Performance/Perceived_performance
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
