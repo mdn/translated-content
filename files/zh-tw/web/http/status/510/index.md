@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`510 Not Extended`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示當用戶端的請求聲明了一個應用於處理請求的 HTTP 擴展（{{RFC("2774")}}）但伺服器不支援該擴展時，會回傳此狀態碼。
+HTTP **`510 Not Extended`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼會在用戶端的請求聲明了一個應用於處理請求的 HTTP 擴展（{{RFC("2774")}}）但伺服器不支援該擴展時被發送。
 
 ## 狀態
 
