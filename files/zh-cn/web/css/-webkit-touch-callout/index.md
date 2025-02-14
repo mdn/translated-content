@@ -2,14 +2,14 @@
 title: -webkit-touch-callout
 slug: Web/CSS/-webkit-touch-callout
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-`-webkit-touch-callout` [CSS](/zh-CN/docs/Web/CSS) 属性控制触摸并按住触摸目标时显示的默认呼叫框。
+`-webkit-touch-callout` [CSS](/zh-CN/docs/Web/CSS) 属性控制触摸并按住触摸目标时显示的默认标注。
 
-在 iOS 上，当目标被触摸并长按时，Safari 会显示关于链接的呼叫框信息。此属性允许禁用该行为。
+在 iOS 上，当目标被触摸并长按时，Safari 会显示关于链接的标注信息。此属性允许禁用该行为。
 
 ## 语法
 
@@ -29,9 +29,9 @@ l10n:
 ### 值
 
 - `default`
-  - : 显示默认的呼叫框。
+  - : 显示默认的标注。
 - `none`
-  - : 禁用呼叫框。
+  - : 禁用标注。
 
 ## 形式定义
 
