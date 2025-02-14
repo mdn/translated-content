@@ -2,12 +2,12 @@
 title: :target
 slug: Web/CSS/:target
 l10n:
-  sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
 {{CSSRef}}
 
-The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selects the _target element of the document_. When the document is loaded, the target element is derived using the document's [URL fragment identifier](/en-US/docs/Web/URI/Fragment#fragment).
+**`:target`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)選擇*文件中的目標元素*。當文件載入時，目標元素是根據文件的 [URL 片段識別碼](/zh-TW/docs/Web/URI/Fragment#片段)確定的。
 
 ```css
 /* 選擇文件的目標元素 */
@@ -16,7 +16,7 @@ The **`:target`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 }
 ```
 
-For example, the following URL has a fragment identifier (denoted by the _#_ sign) that marks the element with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `setup` as the document's target element:
+例如，下列 URL 具有一個片段識別碼（由 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
 
 ```url
 http://www.example.com/help/#setup
@@ -36,11 +36,11 @@ http://www.example.com/help/#setup
 }
 ```
 
-## Description
+## 描述
 
-When an HTML document loads, the browser sets its target element. The element is identified using the URL fragment identifier. Without the URL fragment identifier, the document has no target element. The `:target` pseudo-class allows styling the document's target element. The element could be focused, highlighted, animated, etc.
+當 HTML 文件載入時，瀏覽器會設定其目標元素。該元素透過 URL 片段識別碼進行辨識。若無 URL 片段識別碼，則文件沒有目標元素。`:target` 偽類允許對文件的目標元素進行樣式設定，該元素可以獲得焦點、突顯或呈現動畫效果等。
 
-The target element is set at document load and [`history.back()`](/en-US/docs/Web/API/History/back), [`history.forward()`](/en-US/docs/Web/API/History/forward), and [`history.go()`](/en-US/docs/Web/API/History/forward) method calls. But it is _not_ changed when [`history.pushState()`](/en-US/docs/Web/API/History/pushState) and [`history.replaceState()`](/en-US/docs/Web/API/History/replaceState) methods are called.
+目標元素在文件載入以及呼叫 [`history.back()`](/zh-TW/docs/Web/API/History/back)、[`history.forward()`](/zh-TW/docs/Web/API/History/forward) 和 [`history.go()`](/zh-TW/docs/Web/API/History/forward) 方法時被設定。但 [`history.pushState()`](/zh-TW/docs/Web/API/History/pushState) 與 [`history.replaceState()`](/zh-TW/docs/Web/API/History/replaceState) 方法被呼叫時則*不會*改變。
 
 > [!NOTE]
 > 由於 [CSS 規範中的可能錯誤](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070/)，`:target` 無法在 [Web 組件](/zh-TW/docs/Web/API/Web_components)中運作，因為[影子根](/zh-TW/docs/Web/API/ShadowRoot)無法將目標元素傳遞到影子樹中。
