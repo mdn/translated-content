@@ -92,7 +92,7 @@ p {
 
 ## 参见
 
-- 在 webkit.org 上[介绍 Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/)（2006 年）
+- [介绍 Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/)（webkit.org，2006 年）
 - [解释此特性的 CSS-Tricks 文章](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-stroke-color")}}
 - {{cssxref("-webkit-text-stroke")}}
