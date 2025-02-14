@@ -1,11 +1,9 @@
 ---
 title: 繼承
-slug: Web/CSS/Inheritance
+slug: Web/CSS/CSS_cascade/Inheritance
 ---
 
 {{CSSRef}}
-
-## 摘要
 
 每個 [CSS property definition](/zh-TW/docs/Web/CSS/Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
 
@@ -62,7 +60,6 @@ the words "emphasized text" will not have a border (since the initial value of {
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/inheritance)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
