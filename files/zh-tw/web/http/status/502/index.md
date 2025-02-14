@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`502 Bad Gateway`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示充當閘道器或{{Glossary("Proxy_server", "代理")}}的伺服器從上游伺服器接收到無效回應。
+HTTP **`502 Bad Gateway`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示充當閘道器或{{Glossary("Proxy_server", "代理")}}的伺服器從上游伺服器接收到無效回應。
 
 此回應與 {{HTTPStatus("500", "500 Internal Server Error")}} 類似，因為它是伺服器錯誤的通用的「捕獲所有」回應。但不同之處在於，它特指請求鏈中錯誤發生的特定點。如果來源伺服器向閘道器發送了有效的 HTTP 錯誤回應，閘道器應將該回應傳遞給用戶端，而非返回 `502`，以確保錯誤原因透明化。如果代理或閘道器未能從來源伺服器接收到任何 HTTP 回應，它應改為向用戶端發送 {{HTTPStatus("504", "504 Gateway Timeout")}}。
 
