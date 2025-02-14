@@ -2,21 +2,16 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 8ec1d24d4f935e73f39df9a7d69e58c098ebb003
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`502 Bad Gateway`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#server_error_responses)狀態碼表示充當閘道器或{{Glossary("Proxy_server", "代理")}}的伺服器從上游伺服器接收到無效回應。
+HTTP **`502 Bad Gateway`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#伺服器錯誤回應)狀態碼表示充當閘道器或{{Glossary("Proxy_server", "代理")}}的伺服器從上游伺服器接收到無效回應。
 
-This response is similar to a {{HTTPStatus("500", "500 Internal Server Error")}} response in the sense that it is a generic "catch-call" for server errors.
-The difference is that it is specific to the point in the request chain that the error has occurred.
-If the origin server sends a valid HTTP error response to the gateway, the response should be passed on to the client instead of a `502` to make the failure reason transparent.
-If the proxy or gateway did not receive any HTTP response from the origin, it instead sends a {{HTTPStatus("504", "504 Gateway Timeout")}} to the client.
+此回應與 {{HTTPStatus("500", "500 Internal Server Error")}} 類似，因為它是伺服器錯誤的通用的「捕獲所有」回應。但不同之處在於，它特指請求鏈中錯誤發生的特定點。如果來源伺服器向閘道器發送了有效的 HTTP 錯誤回應，閘道器應將該回應傳遞給用戶端，而非返回 `502`，以確保錯誤原因透明化。如果代理或閘道器未能從來源伺服器接收到任何 HTTP 回應，它應改為向用戶端發送 {{HTTPStatus("504", "504 Gateway Timeout")}}。
 
-There are many causes of `502` errors, and fixing such problems probably requires investigation by server owners or administrators.
-Exceptions are client networking errors, particularly if the service works for other visitors, and if clients use VPNs or other custom networking setups.
-In such cases, clients should check network settings, firewall setup, proxy settings, DNS configuration, etc.
+`502` 錯誤的成因眾多，通常需要伺服器擁有者或管理員進行調查才能修復。例外情況是用戶端的網路錯誤，尤其是當其他訪客可以正常使用該服務時。如果用戶端使用 VPN 或其他自訂網路設定，應檢查網路設定、防火牆配置、代理設定、DNS 設定等。
 
 ## 狀態
 
@@ -24,12 +19,11 @@ In such cases, clients should check network settings, firewall setup, proxy sett
 502 Bad Gateway
 ```
 
-## Examples
+## 範例
 
-### 502 gateway error response
+### 502 閘道器錯誤回應
 
-The following request tries to fetch a webpage, but receives a `502` response in return.
-The response body contains a page describing the server state with a link to a support page for visitors.
+以下請求嘗試擷取網頁，但伺服器返回 `502` 回應。回應主體包含描述伺服器狀態的頁面，並附有一個指向支援頁面的連結。
 
 ```http
 GET /highlights HTTP/1.1
@@ -44,14 +38,14 @@ Content-Type: text/html;
 Content-Length: 123
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
 <title>502 Bad Gateway</title>
 </head>
 <body>
 <h1>Bad Gateway</h1>
-<p>The server was unable to complete your request. Please try again later.</p>
-<p>If this problem persists, please <a href="https://example.com/support">contact support</a>.</p>
+<p>伺服器無法完成你的請求，請稍後再試。</p>
+<p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
 </body>
 </html>
 ```
