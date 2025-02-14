@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Functions)以及[@ 规则](/zh-CN/docs/Web/CSS/At-rule)。你也可以浏览[CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Functions)以及[@ 规则](/zh-CN/docs/Web/CSS/At-rule)。你也可以浏览[CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -110,7 +110,7 @@ div.menu-bar li:hover > ul {
 - [层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
 - [注释](/zh-CN/docs/Web/CSS/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
-- [继承](/zh-CN/docs/Web/CSS/Inheritance)
+- [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
 - [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
@@ -119,12 +119,12 @@ div.menu-bar li:hover > ul {
 
 ### 值
 
-- [实际值](/zh-CN/docs/Web/CSS/actual_value)
-- [计算值](/zh-CN/docs/Web/CSS/computed_value)
-- [初始值](/zh-CN/docs/Web/CSS/initial_value)
+- [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+- [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
+- [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
 - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-- [指定值](/zh-CN/docs/Web/CSS/specified_value)
-- [使用值](/zh-CN/docs/Web/CSS/used_value)
+- [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+- [使用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
 
 ### 布局
 
