@@ -2,7 +2,7 @@
 title: Navigator
 slug: Web/API/Navigator
 l10n:
-  sourceCommit: c1fd7dc9410c14ec9e00b3ec35b7b94d43296389
+  sourceCommit: a3d19af7e3eeb1c40748c80cd6b5143cfa201c54
 ---
 
 {{APIRef("DOM")}}
