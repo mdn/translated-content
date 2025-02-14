@@ -56,5 +56,5 @@ Content-Length: 123
 
 ## 參見
 
-- [HTTP 回應狀態碼](zh-TW/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus("504", "504 Gateway Timeout")}}
