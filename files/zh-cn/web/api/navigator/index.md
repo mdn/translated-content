@@ -31,6 +31,8 @@ _不继承任何属性_。
   - : 返回 {{domxref("CredentialsContainer")}} 接口，该接口暴露了请求凭据及在成功登录或注销等重要事件发生时通知用户代理的方法。
 - {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回设备内存的近似值。该值通过向下取整到最接近的 2 的幂，然后将其除以 1024 来近似。
+- {{domxref("Navigator.devicePosture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 返回浏览器的 {{domxref("DevicePosture")}} 对象，允许开发者查询设备当前的姿态（即视口是处于平放还是折叠状态），并在姿态变化时执行相应的代码。
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Geolocation")}} 对象，用于访问设备的位置。
 - {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
@@ -98,7 +100,7 @@ _不继承任何属性_。
 
 - {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : 返回浏览器的构建标识符。在现代浏览器中，为了保护隐私，该属性现在返回一个固定的时间戳，例如 Firefox 64 及更高版本中返回 `20181001000000`。
-- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个布尔值，表示用户是否同意共享或出售他们的信息。
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : 返回一个布尔值，表示浏览器是否以独立模式运行。仅在 Apple 的 iOS Safari 上可用。
