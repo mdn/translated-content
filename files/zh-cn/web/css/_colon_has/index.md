@@ -16,7 +16,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
+`:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
 
 ## 语法
 

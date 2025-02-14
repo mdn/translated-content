@@ -152,7 +152,7 @@ OpenType 特性最常用的情形之一，就是正确地呈现小型大写字�
 
 ## 字体特性设置
 
-{{cssxref("font-feature-settings")}} 是允许直接访问每个命名的 OpenType 特性的“底层语法”。这样可以获得更多的控制权，但也有一些缺点，比如它对继承的影响，以及——如上所述——如果你想改变一个设置，你就必须重新声明整个字符串（除非你使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)来设置值）。因此，最好在可能的情况下使用上面展示的标准属性。
+{{cssxref("font-feature-settings")}} 是允许直接访问每个命名的 OpenType 特性的“底层语法”。这样可以获得更多的控制权，但也有一些缺点，比如它对继承的影响，以及——如上所述——如果你想改变一个设置，你就必须重新声明整个字符串（除非你使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)来设置值）。因此，最好在可能的情况下使用上面展示的标准属性。
 
 其具有大量可能的特性。你可以在上面看到其中一部分的示例，也有一些资源可以帮助你找到更多的特性。
 
