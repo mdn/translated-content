@@ -1,13 +1,18 @@
 ---
-title: 实际值
-slug: Web/CSS/actual_value
+title: 初始值
+slug: Web/CSS/CSS_cascade/initial_value
+original_slug: Web/CSS/initial_value
 ---
 
 {{CSSRef}}
 
-## 概述
+[CSS](/zh-CN/docs/Web/CSS)属性的**初始值**是其默认值，如其定义表中所列。初始值的使用取决于属性是否被继承：
 
-一个 CSS 属性的**实际值（actual value）**是应用值（used value）被应用后的近似值。例如，一个用户代理可能只能渲染一个整数像素值的边框（实际值），并且该值可能被强制近似于边框的计算宽度值。
+- 对于[继承属性](/zh-CN/docs/Web/CSS/Inheritance#inherited_properties)，初始值只能被用于没有指定值的**根元素**上。
+- 对于[非继承属性](/zh-CN/docs/Web/CSS/Inheritance#non-inherited_properties)，初始值可以被用于**任意**没有指定值的元素上。
+
+> [!NOTE]
+> 你可以使用 [`initial`](/zh-CN/docs/Web/CSS/initial) 关键词明确指定初始值。
 
 ## 规范
 
@@ -15,7 +20,7 @@ slug: Web/CSS/actual_value
 
 ## 参见
 
-- [CSS Reference](/zh-CN/docs/Web/CSS/Reference)
+- {{cssxref("initial")}}
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
@@ -26,7 +31,7 @@ slug: Web/CSS/actual_value
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

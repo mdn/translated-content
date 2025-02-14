@@ -1,6 +1,7 @@
 ---
 title: 应用值
-slug: Web/CSS/used_value
+slug: Web/CSS/CSS_cascade/used_value
+original_slug: Web/CSS/used_value
 ---
 
 {{CSSRef}}
