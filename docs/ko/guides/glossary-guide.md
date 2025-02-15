@@ -85,6 +85,7 @@
 | Directives          | 지시어           | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Guide               | 안내서           | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
 | Instruction         | 지침             | [링크](https://github.com/mdn/translated-content/issues/11093#issuecomment-1411005106) |
+| Learning Outcomes   | 학습 성과        |                                                                                        |
 | Naming              | 이름 지정        |                                                                                        |
 | Parameters          | 매개변수         | [링크][AudioWorkletNode]                                                               |
 | Prerequisites       | 선행 지식        |                                                                                        |
