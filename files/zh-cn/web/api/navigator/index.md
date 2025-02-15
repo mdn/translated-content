@@ -72,7 +72,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个当前文档的 {{domxref("Scheduling")}} 对象。
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 返回一个 {{domxref("Serial")}} 对象，代表了进入 [Web Serial API](/zh-CN/docs/Web/API/Web_Serial_API) 的入口点，用于控制串行端口。
+  - : 返回一个 {{domxref("Serial")}} 对象，代表了 [Web Serial API](/zh-CN/docs/Web/API/Web_Serial_API) 的入口点，用于控制串行端口。
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回一个 {{domxref("ServiceWorkerContainer")}} 对象，它提供了注册、移除、升级以及与[相关文档](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)的 {{domxref("ServiceWorker")}} 对象进行通信的功能。
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
@@ -94,7 +94,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回 {{domxref("WindowControlsOverlay")}} 接口，该接口暴露了桌面渐进式 Web 应用程序标题栏的几何信息，以及在标题栏发生变化时触发的事件。
 - {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 返回 {{domxref("XRSystem")}} 对象，它代表了进入 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API) 的入口点。
+  - : 返回 {{domxref("XRSystem")}} 对象，它代表了 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API) 的入口点。
 
 ### 非标准的属性
 
