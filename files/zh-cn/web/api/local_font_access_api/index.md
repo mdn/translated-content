@@ -2,7 +2,7 @@
 title: Local Font Access API
 slug: Web/API/Local_Font_Access_API
 l10n:
-  sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
