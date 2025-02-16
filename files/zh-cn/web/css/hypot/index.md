@@ -7,7 +7,7 @@ slug: Web/CSS/hypot
 
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`hypot()`** 为指数型函数，返回其参数平方和的[平方根](https://zh.wikipedia.org/wiki/平方根)。
 
-尽管 {{CSSXref("pow")}} 和 {{CSSXref("sqrt")}} 仅作用于无单位数值，然而 `hypot()` 可接受带单位的值，但是这些值须全部具有相同[类型](/zh-CN/docs/Web/CSS/CSS_Types)。
+尽管 {{CSSXref("pow")}} 和 {{CSSXref("sqrt")}} 仅作用于无单位数值，然而 `hypot()` 可接受带单位的值，但是这些值须全部具有相同[类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)。
 
 ## 语法
 

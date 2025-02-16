@@ -3847,6 +3847,14 @@
       "jackblackevo"
     ]
   },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2020-06-01T00:28:11.978Z",
+    "contributors": [
+      "bensontobeicsc",
+      "jackblackevo",
+      "xuan0123"
+    ]
+  },
   "Web/CSS/Descendant_combinator": {
     "modified": "2019-03-23T22:47:36.182Z",
     "contributors": [
@@ -3872,14 +3880,6 @@
       "fscholz",
       "irvinfly",
       "wildsky"
-    ]
-  },
-  "Web/CSS/Syntax": {
-    "modified": "2020-06-01T00:28:11.978Z",
-    "contributors": [
-      "bensontobeicsc",
-      "jackblackevo",
-      "xuan0123"
     ]
   },
   "Web/CSS/Type_selectors": {

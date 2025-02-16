@@ -1,6 +1,6 @@
 ---
 title: CSS 注释
-slug: Web/CSS/Comments
+slug: Web/CSS/CSS_syntax/Comments
 ---
 
 {{CSSRef}}
@@ -11,8 +11,8 @@ CSS 注释用于为代码添加额外的解释，或者用于阻止浏览器解�
 
 注释可以写在样式表中任意允许空格的位置。注释可以写成一行，也可以写成多行。
 
-```plain
-/* Comment */
+```css
+/* 注释 */
 ```
 
 ## 示例
@@ -43,29 +43,29 @@ span {
 
 ## 规范
 
-- [CSS 2.1 Syntax and basic data types #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
+{{Specifications}}
 
 ## 参见
 
 - CSS 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)

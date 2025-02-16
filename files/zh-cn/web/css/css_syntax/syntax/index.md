@@ -1,6 +1,6 @@
 ---
 title: 语法
-slug: Web/CSS/Syntax
+slug: Web/CSS/CSS_syntax/Syntax
 ---
 
 {{CSSRef}}
@@ -58,7 +58,7 @@ _这会导致一个重要的后果：如果其中的一个选择器是无效的�
 语句类型：
 
 - 规则。如上，将一组 CSS 声明与用选择器定义的条件相关联。
-- at 规则（[at-rules](/zh-CN/docs/Web/CSS/At-rule)）。以 @ (U+0040 COMMERCIAL AT) 开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset @import)，条件信息（比如 @media @document), 描述信息（比如 @font-face)。
+- [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。以 @（U+0040 COMMERCIAL AT）开始，随后是标识符，一直到以分号或右大括号结束。每个 at 规则由其标识符定义，可能有它自己的语法。at 规则涵盖了 meta 信息（比如 @charset @import）、条件信息（比如 @media @document）、描述信息（比如 @font-face）。
 
 不是上面类型的语句则是非法的，被忽略。
 
@@ -69,23 +69,23 @@ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以�
 
 - CSS 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-CN/docs/Web/CSS/specified_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
   - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)

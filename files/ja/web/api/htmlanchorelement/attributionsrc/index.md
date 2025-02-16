@@ -12,7 +12,7 @@ l10n:
 
 ブラウザーは、ナビゲーションレスポンスを受信すると、ナビゲーションベースの帰属ソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定されたもの）に関連付けられたソースデータを格納します。
 
-詳細は、[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+詳細は、[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
 > **メモ:** `<a>` 要素は帰属のトリガーとして使用することはできず、ソースのみです。
 
@@ -72,4 +72,4 @@ aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 
 ## 関連情報
 
-- [帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API)
+- [帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API)

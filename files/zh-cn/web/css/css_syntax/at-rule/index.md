@@ -1,11 +1,11 @@
 ---
 title: At 规则
-slug: Web/CSS/At-rule
+slug: Web/CSS/CSS_syntax/At-rule
 ---
 
 {{CSSRef}}
 
-**At 规则**是一个 [CSS 语句](/zh-CN/docs/Web/CSS/Syntax#css_语句)，用来指示 CSS 如何运行。以 at 符号开头，'`@`'（`U+0040 COMMERCIAL AT`），后跟一个标识符，并包括直到下一个分号的所有内容，'`;`'（`U+003B SEMICOLON`），或下一个 [CSS 块](/zh-CN/docs/Web/CSS/Syntax#css_声明块)，以先到者为准。
+**At 规则**是一个 [CSS 语句](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句)，用来指示 CSS 如何运行。以 at 符号开头，'`@`'（`U+0040 COMMERCIAL AT`），后跟一个标识符，并包括直到下一个分号的所有内容，'`;`'（`U+003B SEMICOLON`），或下一个 [CSS 块](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明块)，以先到者为准。
 
 ## 语法
 
@@ -87,19 +87,19 @@ slug: Web/CSS/At-rule
 ## 参见
 
 - CSS 关键概念
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
   - [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
