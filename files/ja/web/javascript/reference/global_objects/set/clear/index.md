@@ -9,7 +9,21 @@ l10n:
 
 **`clear()`** は {{jsxref("Set")}} インターフェイスのメソッドで、この集合からすべての要素を取り除きます。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(1);
+set1.add("foo");
+
+console.log(set1.size);
+// Expected output: 2
+
+set1.clear();
+
+console.log(set1.size);
+// Expected output: 0
+```
 
 ## 構文
 

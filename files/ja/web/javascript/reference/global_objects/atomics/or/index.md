@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
 
 静的な **`Atomics.or()`** メソッドは、配列内の指定した位置の値に指定した値でビット単位の OR を計算し、その位置にあった古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-{{EmbedInteractiveExample("pages/js/atomics-or.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.or()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+// 5 (0101) OR 2 (0010) = 7 (0111)
+console.log(Atomics.or(uint8, 0, 2));
+// Expected output: 5
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 7
+```
 
 ## 構文
 

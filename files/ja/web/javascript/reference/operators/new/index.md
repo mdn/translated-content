@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/new
 
 **`new` 演算子**を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## 構文
 

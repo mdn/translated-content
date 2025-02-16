@@ -9,7 +9,15 @@ l10n:
 
 **`ArrayBuffer()`** コンストラクターは {{jsxref("ArrayBuffer")}} オブジェクトを生成するために使用されます。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 構文
 

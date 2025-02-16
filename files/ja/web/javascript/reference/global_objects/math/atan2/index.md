@@ -9,7 +9,22 @@ l10n:
 
 **`Math.atan2()`** は静的メソッドで、`Math.atan2(y, x)` に対して点 (0, 0) から点 (x, y) までの半直線と、正の x 軸の間の平面上での角度（ラジアン単位）を返します。
 
-{{EmbedInteractiveExample("pages/js/math-atan2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+
+```js interactive-example
+function calcAngleDegrees(x, y) {
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+
+console.log(calcAngleDegrees(5, 5));
+// Expected output: 45
+
+console.log(calcAngleDegrees(10, 10));
+// Expected output: 45
+
+console.log(calcAngleDegrees(0, 10));
+// Expected output: 90
+```
 
 ## 構文
 

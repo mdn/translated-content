@@ -9,7 +9,21 @@ l10n:
 
 **`Math.trunc()`** 関数は、引数として与えた数の小数部の桁を取り除くことによって整数部を返します。
 
-{{EmbedInteractiveExample("pages/js/math-trunc.html")}}
+{{InteractiveExample("JavaScript Demo: Math.trunc()")}}
+
+```js interactive-example
+console.log(Math.trunc(13.37));
+// Expected output: 13
+
+console.log(Math.trunc(42.84));
+// Expected output: 42
+
+console.log(Math.trunc(0.123));
+// Expected output: 0
+
+console.log(Math.trunc(-0.123));
+// Expected output: -0
+```
 
 ## 構文
 

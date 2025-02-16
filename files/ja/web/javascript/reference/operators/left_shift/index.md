@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Left_shift
 
 **左シフト演算子 (`<<`)** は、1 つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。0 のビットが右からずれて入ります。
 
-{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 2; // 00000000000000000000000000000010
+
+console.log(a << b); // 00000000000000000000000000010100
+// Expected output: 20
+```
 
 ## 構文
 

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_OR
 
 ビット論理和演算子 (`|`) は、両方のオペランドの対応するビットのどちらか一方が `1` である位置のビットで `1` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a | b); // 00000000000000000000000000000111
+// Expected output: 7
+```
 
 ## 構文
 

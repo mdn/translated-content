@@ -9,7 +9,22 @@ l10n:
 
 **`[Symbol.search]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.search`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search) がどのように動作するのかを指定します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  constructor(str) {
+    super(str);
+    this.pattern = str;
+  }
+  [Symbol.search](str) {
+    return str.indexOf(this.pattern);
+  }
+}
+
+console.log("table football".search(new RegExp1("foo")));
+// Expected output: 6
+```
 
 ## 構文
 

@@ -9,7 +9,18 @@ l10n:
 
 **`[Symbol.toPrimitive]()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付を表すプリミティブ値を返します。返される値は、指定されたヒントに応じて文字列または数値となります。
 
-{{EmbedInteractiveExample("pages/js/date-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype[Symbol.toPrimitive]")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const date = new Date("20 December 2019 14:48");
+
+console.log(date[Symbol.toPrimitive]("string"));
+// Expected output: "Fri Dec 20 2019 14:48:00 GMT+0530 (India Standard Time)"
+
+console.log(date[Symbol.toPrimitive]("number"));
+// Expected output: 1576833480000
+```
 
 ## 構文
 

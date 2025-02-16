@@ -15,7 +15,21 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-cbrt.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+
+```js interactive-example
+console.log(Math.cbrt(-1));
+// Expected output: -1
+
+console.log(Math.cbrt(1));
+// Expected output: 1
+
+console.log(Math.cbrt(Infinity));
+// Expected output: Infinity
+
+console.log(Math.cbrt(64));
+// Expected output: 4
+```
 
 ## 構文
 

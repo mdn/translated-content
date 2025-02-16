@@ -9,7 +9,15 @@ l10n:
 
 **`map()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、与えられた関数を呼び出された型付き配列のすべての要素に対して呼び出し、その結果からなる新しい型付き配列を生成します。このメソッドは、 {{jsxref("Array.prototype.map()")}} と同じアルゴリズムです。
 
-{{EmbedInteractiveExample("pages/js/typedarray-map.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.map()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([25, 36, 49]);
+const roots = uint8.map(Math.sqrt);
+
+console.log(roots);
+// Expected output: Uint8Array [5, 6, 7]
+```
 
 ## 構文
 

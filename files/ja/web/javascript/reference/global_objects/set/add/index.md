@@ -9,7 +9,21 @@ l10n:
 
 **`add()`** は {{jsxref("Set")}} インスタンスのメソッドで、この集合に同じ値を持つ要素がない場合、指定した値を持つ新しい要素をこの集合に追加します。
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## 構文
 
