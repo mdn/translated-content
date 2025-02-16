@@ -1,6 +1,7 @@
 ---
 title: Указанное значение
-slug: Web/CSS/specified_value
+slug: Web/CSS/CSS_cascade/specified_value
+original_slug: Web/CSS/specified_value
 ---
 
 {{CSSRef}}
