@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 The static **`Reflect.construct()`** method acts like the [`new` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), but as a function. It is equivalent to calling `new target(...args)`. It gives also the added option to specify a different prototype.
 
-{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.construct()")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  this.sum = a + b + c;
+}
+
+const args = [1, 2, 3];
+const object1 = new func1(...args);
+const object2 = Reflect.construct(func1, args);
+
+console.log(object2.sum);
+// Expected output: 6
+
+console.log(object1.sum);
+// Expected output: 6
+```
 
 ## Sintaxe
 

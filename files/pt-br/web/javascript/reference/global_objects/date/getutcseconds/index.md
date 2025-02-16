@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 
 O método **`getUTCSeconds()`** retorna os segundos na data informada de acordo com a hora universal.
 
-{{EmbedInteractiveExample("pages/js/date-getutcseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+
+console.log(moonLanding.getUTCSeconds());
+// Expected output: 4
+```
 
 ## Sintaxe
 

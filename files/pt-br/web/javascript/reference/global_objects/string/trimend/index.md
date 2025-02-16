@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 
 O método `trimEnd()` remove espaços do final de uma _string_. `trimRight()` é um apelido para este método.
 
-{{EmbedInteractiveExample("pages/js/string-trimend.html")}}
+{{InteractiveExample("JavaScript Demo: String.trimEnd()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trimEnd());
+// Expected output: "   Hello world!";
+```
 
 ## Sintaxe
 
