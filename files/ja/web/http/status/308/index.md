@@ -1,34 +1,57 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
+l10n:
+  sourceCommit: fcb01c3c48499529a7e846d1887a091433add073
 ---
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`308 Permanent Redirect`** リダイレクトステータスコードは、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。ブラウザーはこのページにリダイレクトし、検索エンジンはリソースへのリンクを更新します (「SEO 用語」では、「リンクジュース」が新しい URL に送られたと言われます)。
+HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ完全に移動したことを示します。
 
-{{HTTPStatus("301")}} の場合は不正に {{HTTPMethod("GET")}} メソッドに変更される可能性があるのに対し、このコードの場合はリクエストメソッドと本文が変更されません。
+このステータスを受信したブラウザーは、自動的に `Location` ヘッダー内の URL のリソースをリクエストし、ユーザーを新しいページにリダイレクトします。
+このレスポンスを受け取った検索エンジンは、リンクを元の URL からリダイレクトされたリソースへと関連付けするため、 {{Glossary("SEO")}} の値を新しい URL に移行させます。
+
+リダイレクトされたリクエストでは、クライアントによってリクエストメソッドと本体が**変更されることはありません**。
+{{HTTPStatus("301", "301 Moved Permanently")}} では、リダイレクトが実行された際にリクエストメソッドと本体を変更しないことが要求されますが、古いクライアントでは、これに誤って対応して代わりに {{HTTPMethod("GET")}} メソッドを使用してしまいます。
 
 > [!NOTE]
-> ウェブアプリケーションによっては、 `308 Permanent Redirect` を標準外かつ他の目的に使用していることがあります。例えば、 Google Drive はアップロードが不完全に停止したことを表すために、 `308 Resume Incomplete` レスポンスを使用します。[\[1\]](https://developers.google.com/drive/v3/web/manage-uploads#resumable)
+> ウェブアプリケーションによっては、 `308 Permanent Redirect` を標準外かつ他の目的に使用していることがあります。
+> 例えば、 Google Drive はアップロードが不完全に停止したことを表すために、 `308 Resume Incomplete` レスポンスを使用します。
+>  Google ドライブのドキュメント内の「[再開可能なダウンロードを実行する](https://developers.google.com/drive/api/guides/manage-uploads)」を参照してください。
 
 ## ステータス
 
-```
+```http
 308 Permanent Redirect
+```
+
+## 例
+
+### 移動したリソースに対する 308 レスポンス
+
+```http
+GET /featured HTTP/1.1
+Host: www.example.org
+```
+
+```http
+HTTP/1.1 308 Permanent Redirect
+Location: http://www.example.com/featured
+Content-Length: 0
 ```
 
 ## 仕様書
 
-| 仕様書                                          | 題名                                                                 |
-| ----------------------------------------------- | -------------------------------------------------------------------- |
-| {{RFC("7538", "308 Permanent Redirect" , "3")}} | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect) |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- {{HTTPStatus("301", "301 Moved Permanently")}}
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Redirections)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
+- {{HTTPStatus("301", "301 Moved Permanently")}}: このステータスコードに相当するもので、リクエストメソッドが {{HTTPMethod("GET")}} ではない場合に変更する可能性があります。
 - {{HTTPStatus("302", "302 Found")}}: 一時リダイレクト
