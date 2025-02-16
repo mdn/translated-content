@@ -1,6 +1,7 @@
 ---
 title: Начальное значение
-slug: Web/CSS/initial_value
+slug: Web/CSS/CSS_cascade/initial_value
+original_slug: Web/CSS/initial_value
 ---
 
 {{CSSRef}}
