@@ -1,6 +1,6 @@
 ---
 title: Комментарии
-slug: Web/CSS/Comments
+slug: Web/CSS/CSS_syntax/Comments
 ---
 
 {{CSSRef}}
