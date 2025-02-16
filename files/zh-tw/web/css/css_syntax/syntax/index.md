@@ -1,6 +1,6 @@
 ---
 title: 語法
-slug: Web/CSS/Syntax
+slug: Web/CSS/CSS_syntax/Syntax
 ---
 
 {{cssref}}
