@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/null
 
 Значение `null` представляет отсутствие какого-либо объектного значения. В JavaScript, `null` является {{Glossary("Primitive", "примитивом")}}, и в контексте логических операций, рассматривается как {{Glossary("Falsy", "ложное (falsy)")}}.
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## Синтаксис
 

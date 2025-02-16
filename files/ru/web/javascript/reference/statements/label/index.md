@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/label
 
 **Метки** используются вместе с операторами {{jsxref("Statements/break", "break")}} и {{jsxref("Statements/continue", "continue")}}. Они выступают в роли идентификатора инструкции, на который можно сослаться.
 
-{{EmbedInteractiveExample("pages/js/statement-label.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+
+```js interactive-example
+let str = "";
+
+loop1: for (let i = 0; i < 5; i++) {
+  if (i === 1) {
+    continue loop1;
+  }
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "0234"
+```
 
 ## Синтаксис
 
