@@ -18,7 +18,7 @@ HTTP の **`308 Permanent Redirect`** は[リダイレクトレスポンス](/ja
 > [!NOTE]
 > ウェブアプリケーションによっては、 `308 Permanent Redirect` を標準外かつ他の目的に使用していることがあります。
 > 例えば、 Google Drive はアップロードが不完全に停止したことを表すために、 `308 Resume Incomplete` レスポンスを使用します。
->  Google ドライブのドキュメント内の「[再開可能なダウンロードを実行する](https://developers.google.com/drive/api/guides/manage-uploads)」を参照してください。
+> Google ドライブのドキュメント内の「[再開可能なダウンロードを実行する](https://developers.google.com/drive/api/guides/manage-uploads)」を参照してください。
 
 ## ステータス
 
