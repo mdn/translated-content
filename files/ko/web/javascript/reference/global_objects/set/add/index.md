@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("Set")}} 인스턴스의 **`add()`** 메서드는 같은 값인 요소가 이 Set에 없다면 지정된 값과 함께 새로운 요소를 이 Set에 삽입합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
+
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add(42);
+set1.add(13);
+
+for (const item of set1) {
+  console.log(item);
+  // Expected output: 42
+  // Expected output: 13
+}
+```
 
 ## 구문
 

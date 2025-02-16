@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 
 El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es rechazado por la razón específicada.
 
-{{EmbedInteractiveExample("pages/js/promise-reject.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+
+```js interactive-example
+function resolved(result) {
+  console.log("Resolved");
+}
+
+function rejected(result) {
+  console.error(result);
+}
+
+Promise.reject(new Error("fail")).then(resolved, rejected);
+// Expected output: Error: fail
+```
 
 ## Sintaxis
 

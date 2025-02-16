@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/Containing_block)。
+如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
 
 > [!WARNING]
 > 只能 `transform` 由盒模型定位的元素，也就是所有布局由 CSS 盒模型管理的元素，除了：[非替换的行内盒子](/zh-CN/docs/Glossary/Inline-level_content)、[表格列](/zh-CN/docs/Web/HTML/Element/col)和[表格列组](/zh-CN/docs/Web/HTML/Element/colgroup)。

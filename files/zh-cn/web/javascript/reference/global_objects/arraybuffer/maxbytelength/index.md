@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("ArrayBuffer")}} 实例的 **`maxByteLength`** 访问器属性返回该数组缓冲区可调整到的最大长度（以字节为单位）。
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-maxbytelength.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.maxByteLength")}}
+
+```js interactive-example
+const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
+
+console.log(buffer.byteLength);
+// Expected output: 8
+
+console.log(buffer.maxByteLength);
+// Expected output: 16
+```
 
 ## 描述
 

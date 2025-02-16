@@ -11,7 +11,29 @@ l10n:
 로케일을 고려하여 값의 목록을 형식화하는 데 사용할 수 있는
 다양한 구성 요소를 나타내는 객체들의 {{jsxref("Array")}}을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.listformat.prototype.formatToParts()", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatterEn = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+
+const formatterFr = new Intl.ListFormat("fr", {
+  style: "long",
+  type: "conjunction",
+});
+
+const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
+const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
+
+console.log(partValuesEn);
+// Expected output: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
+console.log(partValuesFr);
+// Expected output: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+```
 
 ## 구문
 

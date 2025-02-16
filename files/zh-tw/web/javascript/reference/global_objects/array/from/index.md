@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 
 **`Array.from()`** 方法會從類陣列（array-like）或是可迭代（iterable）物件建立一個新的 `Array` 實體。
 
-{{EmbedInteractiveExample("pages/js/array-from.html")}}
+{{InteractiveExample("JavaScript Demo: Array.from()")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ### 參數
 

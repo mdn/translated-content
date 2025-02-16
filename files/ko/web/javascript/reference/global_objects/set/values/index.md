@@ -10,7 +10,21 @@ l10n:
 {{jsxref("Set")}} 인스턴스의 **`values()`** 메서드는 요소가 삽입된 순서대로 각 요소의 값을 순회할 수 있는 새로운
 [set 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator) 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1.values();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## 구문
 

@@ -3759,6 +3759,13 @@
       "MOSapeizer"
     ]
   },
+  "Web/CSS/CSS_cascade/Inheritance": {
+    "modified": "2019-03-23T22:48:52.230Z",
+    "contributors": [
+      "jackblackevo",
+      "alk03073135"
+    ]
+  },
   "Web/CSS/CSS_colors/Color_picker_tool": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
@@ -3840,18 +3847,19 @@
       "jackblackevo"
     ]
   },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2020-06-01T00:28:11.978Z",
+    "contributors": [
+      "bensontobeicsc",
+      "jackblackevo",
+      "xuan0123"
+    ]
+  },
   "Web/CSS/Descendant_combinator": {
     "modified": "2019-03-23T22:47:36.182Z",
     "contributors": [
       "ExE-Boss",
       "changbenny"
-    ]
-  },
-  "Web/CSS/Inheritance": {
-    "modified": "2019-03-23T22:48:52.230Z",
-    "contributors": [
-      "jackblackevo",
-      "alk03073135"
     ]
   },
   "Web/CSS/Pseudo-classes": {
@@ -3872,14 +3880,6 @@
       "fscholz",
       "irvinfly",
       "wildsky"
-    ]
-  },
-  "Web/CSS/Syntax": {
-    "modified": "2020-06-01T00:28:11.978Z",
-    "contributors": [
-      "bensontobeicsc",
-      "jackblackevo",
-      "xuan0123"
     ]
   },
   "Web/CSS/Type_selectors": {

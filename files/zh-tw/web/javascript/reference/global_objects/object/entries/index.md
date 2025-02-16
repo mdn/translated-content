@@ -9,7 +9,22 @@ l10n:
 
 **`Object.entries()`** 靜態方法回傳給定之物件自己的可枚舉字串以字串為鍵的屬性之鍵值對陣列。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## 語法
 

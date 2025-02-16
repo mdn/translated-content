@@ -86,4 +86,4 @@ body {
 ## 参见
 
 - {{cssxref("env","env(…)")}}——由 user‑agent 控制的只读环境变量。
-- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)
+- [使用 CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

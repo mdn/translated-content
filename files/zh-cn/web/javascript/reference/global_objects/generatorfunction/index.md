@@ -17,7 +17,25 @@ const GeneratorFunction = function* () {}.constructor;
 
 `GeneratorFunction` 是 {{jsxref("Function")}} 的子类。
 
-{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+
+```js interactive-example
+const GeneratorFunction = function* () {}.constructor;
+
+const foo = new GeneratorFunction(`
+  yield 'a';
+  yield 'b';
+  yield 'c';
+`);
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 构造函数
 
