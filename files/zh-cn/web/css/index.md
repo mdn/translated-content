@@ -44,7 +44,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 - [CSS 参考](/zh-CN/docs/Web/CSS/Reference)：针对资深 Web 开发者的详细参考手册，其中描述了 CSS 的各个属性和概念。
 - CSS 关键概念：
 
-  - [语言语法和形式](/zh-CN/docs/Web/CSS/Syntax)
+  - [语言语法和形式](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)和[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)

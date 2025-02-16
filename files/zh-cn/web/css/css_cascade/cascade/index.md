@@ -143,9 +143,9 @@ margin-left: 3px;
 - CSS 教程中层叠知识的[介绍](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)。
 - CSS 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

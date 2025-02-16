@@ -20,7 +20,7 @@ selector {
 函数可以接受多个参数，这些参数的格式与 CSS 属性值类似。允许有空白字符，但在括号内是可选的。在一些函数符号中，多个参数用逗号隔开，而其他参数则使用空格。
 
 > [!NOTE]
-> CSS 值函数是作为属性值使用的，不应该与伪类相混淆。[函数式伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#函数式伪类)、[语言伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#语言的伪类)和几种[树状结构伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#树结构的伪类)都需要参数值，但它们不是值函数。[条件 @ 规则](/zh-CN/docs/Web/CSS/At-rule#条件规则组)也不是值函数；括号是用来分组的。
+> CSS 值函数是作为属性值使用的，不应该与伪类相混淆。[函数式伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#函数式伪类)、[语言伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#语言的伪类)和几种[树状结构伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#树结构的伪类)都需要参数值，但它们不是值函数。[条件 @ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)也不是值函数；括号是用来分组的。
 
 ## 转换函数
 
