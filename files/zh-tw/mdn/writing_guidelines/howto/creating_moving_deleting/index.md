@@ -1,123 +1,166 @@
 ---
-title: 編輯以及新增頁面
+title: 如何建立、編輯、移動或刪除頁面
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
+l10n:
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-幾乎每位 MDN 的貢獻者在 MDN 中都會做的兩件基本工作，即為編輯一個已存在的頁面或者是新增一個頁面。這篇文章將介紹如何編輯文件的基本技能。
+本篇文章說明如何建立、移動、刪除或編輯頁面。在執行這些操作之前，建議先參閱我們的[我們撰寫的內容](/zh-TW/docs/MDN/Writing_guidelines/What_we_write)，確認是否應該進行這些變更，並在 MDN Web 文件的[溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與團隊討論後再開始。
 
-## 編輯一個已存在的頁面
+## 建立頁面
 
-想要編輯十分的簡單：
+MDN Web 文件上的所有頁面皆以 Markdown 格式撰寫。內容存放在 `index.md` 檔案中，並置於對應獨立目錄內，目錄名稱即為頁面名稱。例如，若要為 CSS 屬性 `align-content` 建立新的參考頁面，應在 `zh-TW/web/css` 目錄下建立名為 `align-content` 的資料夾，並在其中建立 `index.md` 檔案。
 
-- 只要按下畫面右上角的 **Edit** 按鈕。
-- 頁面會重新載入各種選項，這樣一來你就能直接在頁面新增或刪除資訊。
-- 你可以增加文件段落、刪除文字、插入標題、以及做各式各樣的基本撰寫與編輯。
+> [!NOTE]
+> 目錄名稱與頁面的 slug 略有不同，特別是 slug 遵循句子大小寫格式（sentence casing）。
 
-## 預覽修改
+MDN Web 文件有許多不同的[頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types)，每種類型都有特定結構與對應頁面範本，你可以直接複製範本來加快撰寫。
 
-若是要檢視你所做出的變更:
+每個文件的 `index.md` 檔案必須以 Front Matter 開頭，其中定義 `title`（標題）、`slug`（頁面路徑）與 `page-type`（頁面類型）。這些 Front Matter 設定可從前述頁面範本中取得，或是你也可以參考類似文件的 `index.md` 來確保格式正確。
 
-- 點選「預覽修改」按鈕（在編輯模式之中）位於文章標題上方。
-- 會以開啟一個新分頁或是新視窗來顯示一個你所做的所有變更。
-- 每當你按下此按鈕，此預覽頁會顯示你最新的更動狀態
+建立新頁面的標準步驟如下：
 
-請注意！預覽變更**並不等同**儲存你的修改，請小心不要太快關閉你的文章編輯頁面。
+1. 建立一個全新分支，並確保內容是最新的。
 
-## 版本註解
+   ```bash
+   cd ~/repos/mdn/content
+   git checkout main
+   git pull mdn main
+   # 再次執行 "yarn" 確保已安裝最新的 Yari 相依套件。
+   yarn
+   git checkout -b my-add
+   ```
 
-在你預覽你的編輯過後，你總會希望送出你的修訂版本。在你**送出**之前，請在頁面文章下方找版本註解的輸入框，並且留下你於此次所做的變更註解以讓其他貢獻者能了解你做了那些變更。 舉例來說，你可能新增了一個段落，改變一些詞彙使其更符合原意，重新編寫段落以更在地化，或是移除了一些多餘的資訊。
+2. 建立一個或多個新文件目錄，並在各自目錄內新增 `index.md` 檔案。
 
-## Tags
+3. 新增並提交你的變更，然後推送分支至你的 Fork 倉儲。
 
-你可以於文章編輯區塊下增加或移除用以描述文章內容以及用途的 tags。請詳見 [How to properly tag pages](/zh-TW/docs/MDN/Writing_guidelines/Howto) 以了解 tags 如何來提供資訊。
+   ```bash
+   git add files/zh-TW/folder/you/created
+   git commit -m "適當描述你的變更"
+   git push -u origin my-add
+   ```
 
-## 審核是必要的嗎?
+4. 建立 Pull Request。
 
-在你送出你的變更之前，你可以藉由勾選技術審核（針對 code、APIs 或是技術內容），編輯審查（針對篇章結構、文法或內容），或是模板審查（針對 KumaScript code ），來讓專家或是經驗豐富的貢獻者審核你的變更。
+## 移動頁面
 
-## 附件
+移動一個或多個文件乃至整個文件樹相當簡單，因為我們創造了一個專門指令來處理所有細節：
 
-若你想要讓文章更易於理解或是加上插圖，而希望在頁面上**夾帶檔案**，你可在文章編輯頁面下方找到此功能。{OptimizeImagesNote(1)}}
-
-## 儲存、放棄、以及繼續修改
-
-當你修改完成，以及滿懷希望的預覽修改之後，你可以填寫註解並且透過點擊於文章標題右手邊的「**儲存修改**」綠色按鈕。若你改變你的心意，你可以透過點擊於文章標題右手邊的「**放棄修改**」紅色按鈕。
-
-於版本註解輸入 **Enter** 和點選「儲存並繼續修改」具有同等的效果。
-
-## 新增一個新頁面
-
-若你不知道能夠在哪裡新增文章，**別擔心**！你可以隨意存放，我們會找到文章並且移到文章到它所屬的地方，或者與現有內容合併比較合理。你可以不需要為了使其完美而花費太多心力。 我們有快樂的地精幫手可以來為你的內容保持乾淨以及充滿價值。
-
-以下是一些創造新頁面的方法：
-
-- [「缺失頁面」連結](#「缺失頁面」連結)
-- [非基於連結而建立的新頁面](#非基於連結而建立的新頁面)
-- [從現有的頁面新增子頁面](#從現有的頁面新增子頁面)
-- [複製現有的頁面](#複製現有的頁面)
-- [從現有頁面連結](#從現有頁面連結)
-
-## 「缺失頁面」連結
-
-就像大部分的 wiki，在 MDN 上當然可能在頁面上新增還未存在的頁面連結。舉例來說，作者可以在新增 API 所屬頁面前，新增所有 API 的成員清單。在 MDN 上，連結至還未存在的頁面會顯示為紅色。
-
-要在頁面新增「缺失頁面」連結：
-
-1. 請先確認你已經登入 MDN（如果你還未登入，點繫「缺失頁」連結會出現 404（找不到頁面）錯誤）。
-2. 點擊「缺失頁面」連結，將開啟[MDN Editor UI](/zh-TW/docs/MDN/Contribute/Editor)，讓你新增缺失頁面。
-3. 撰寫頁面內容，並且儲存。
-
-## 非基於連結而建立的新頁面
-
-為了建立一個非基於連結而建立的新頁面，你需要於 URL 區塊後輸入一個獨一無二的頁面名稱。舉例來說，若你輸入:
-
-```plain
-https://developer.mozilla.org/zh-TW/docs/FooBar
+```bash
+yarn content move <from-slug> <to-slug> [locale]
 ```
 
-MDN 會心建立一個標題為「FooBar」而且會於開啟編輯器讓你能夠編輯此新頁面。請參考 [Editing an existing page](#editing_an_existing_page) section of this article for how to use the editor mode.
+你只須指定欲移動文件的 slug（例如 `Web/HTTP/Authentication`），以及新位置的 slug（例如 `Web/HTTP/Auth`）；可選擇性地再指定文件語系（預設為 `en-US`）。
 
-## 從現有的頁面新增子頁面
+如果要移動的文件包含子文件（亦即它是一棵文件樹），`yarn content move` 指令將一併移動整個樹狀結構。
 
-為你在現有的頁面架構下新增一個子頁面:
+舉例來說，你想將 `/zh-TW/Web/HTTP/Authentication` 整個文件樹移動至 `/zh-TW/Web/HTTP/Auth`，你可以按照以下步驟操作：
 
-1. 在「父」頁面，點選**進階目錄** ( 於列表上呈現齒輪圖樣 )，並點選**新增子頁面**。接著便會出現一個可以編輯新頁面的模式。
-2. 於 **Title** 欄位輸入文章標題。
-3. 若有必要，改變 **Slug** 欄位 ( 舉例來說，若文章標題非常長而你又希望有個較短的 URL）。此欄位會由編輯器自動地來填入， by substituting underscores for spaces in the title. 在此種狀況下，你只能改變 URL 的最後一部分。
-4. 在**TOC**欄位，選擇你想要自動生成顯示在目錄的標題層級，或者這一頁不需要目錄也可以選擇「不需要目錄」選項。
-5. 於編輯器中增添內容並且儲存，請參考 [Editing an existing page](#editing_an_existing_page) 文章來了解如何運用編輯模式。
+1. 建立一個新分支來處理這次變更。
 
-## 複製現有的頁面
+   ```bash
+   cd ~/repos/mdn/content
+   git checkout main
+   git pull mdn main
+   # 再次執行 "yarn" 確保已安裝最新的 Yari 相依套件。
+   yarn
+   git checkout -b my-move
+   ```
 
-若你想於你的新頁面上套用某個現存頁面的格式，你可以點選「複製此頁」並於稍後改變該複製頁的內容。
+2. 執行移動操作（這將會刪除、修改現有文件，並建立新的文件）。
 
-1. 於原始的頁面上，點選**進階目錄** ( 於列表上呈現齒輪圖樣 )，並且點選**複製此頁**。接著便可編輯一個以該原始文件為樣本的複製頁面。
-2. 你可根據你文章的內容適當地訂下**標題**。**Slug** 會根據你文章**標題**如何訂定而自動變換。
-3. 如有必要，可以改變 **Slug** 的部分內容以呈現出新文件於原始架構下的不同。（在大多數的狀況下，此舉是多餘的。因為複製後的頁面對於原始頁面具有相似的內容，因此就必須放在相似的架構之下。）
-4. 在**TOC**欄位，選擇你想要自動生成顯示在目錄的標題層級，或者這一頁不需要目錄也可以選擇「不需要目錄」選項。
-5. 在頁面編輯欄位編寫內容，並且儲存你的變更。請參考 [Editing an existing page](#editing_an_existing_page) 文章來了解如何運用編輯模式。
+   ```bash
+   yarn content move Web/HTTP/Authentication Web/HTTP/Auth
+   ```
 
-## 從現有頁面連結
+3. 文件移動後，需要更新其它文件中對此的引用。可使用以下指令一次更新所有引用：
 
-這種方法算是混合形式，你可以在其他頁面產生連結，接著點擊剛加上去的連結，就會產生新的頁面了。
+   ```bash
+   node scripts/update-moved-file-links.js
+   ```
 
-1. 從現有頁面任何地方輸入新頁面的名稱（需合理）。
-2. 反白該名子並且於編輯器中點選連結圖樣。「連結」的訊息框會出現並且詢問該段反白文字需要被導向哪個頁面
-3. 「/zh-TW/docs/」 是預設的 URL 欄位內容。你可於「/zh-TW/docs/」之後輸入新頁面的名子（該頁面的名字並不需要和被連結的文字內容相同）。
-4. 點擊「確定」來創造和插入新的連結。
+4. 新增並提交所有刪除、新增及修改的文件，然後推送至你的 Fork 倉儲。
 
-當連結呈現紅色時，代表著該頁面尚未存在。當連結呈現藍色時，代表著該頁面已經存在。若你想要建立一個新頁面但他的編題已經存在時，首先去檢查並改善現存的頁面，否則為你的新頁面想個不同的標題名稱並以此產生連結。請參考 [page naming guide](/Project:en/Page_Naming_Guide) 以幫助你命名。
+   ```bash
+   git add .
+   git commit -m "Move Web/HTTP/Authentication to Web/HTTP/Auth"
+   git push -u origin my-move
+   ```
 
-你可點擊你新建立的紅色連結（在你儲存以及關閉編輯器之後），來為你的新頁面增添內容。新頁面將在編輯模式下開啟，此時你就可以編寫內容了。請參考 [Editing an existing page](#editing_an_existing_page) 文章來了解如何運用編輯模式。
+5. 建立 Pull Request。
 
-## 重新整理頁面內容
+> [!NOTE]
+> 指令 `yarn content move` 會在 `_redirects.txt` 檔案中新增必要的重新導向，讓舊位置的網址自動重新導向至新位置。請不要手動編輯 `_redirects.txt` 檔案，這可能導致不易察覺的錯誤。如果你需要新增重新導向但不移動文件，請透過 [MDN Web 文件溝通管道](/zh-TW/docs/MDN/Community/Communication_channels) 與 MDN Web 文件團隊討論。
 
-MDN 支援 KumaScript 巨集和嵌入其他頁面內容插入頁面，有時候因效能因素需要為生成的頁面用快取，而略為延遲內容更新。頁面從原始碼生成，產生的頁面會先產生快取以便未來存取使用。從現在起，所有的巨集（模版）或是嵌入（在該頁使用[`Page`](/zh-TW/docs/Template:Page)巨集）並不會馬上就會反應更動後的巨集變動，巨集生成頁面，或者嵌入頁面的內容。
+## 刪除頁面
 
-- 要手動更新頁面，你可以在你的瀏覽器強制更新。MDN 偵測到強制更新，將會重新生成頁面，更新的巨集生成頁面，以及嵌入頁面內容。
-- 你可以週期性設定自動重新生成頁面。不過除非該頁面常常更新，不然請不要這麼做。請參考 [Page regeneration](/zh-TW/docs/MDN/Contribute/Tools/Page_regeneration) 一文獲得更多資訊。
+MDN Web 文件上的文件只在特殊情況下才能刪除。若你在考慮刪除頁面，請先在 [MDN Web 文件聊天室](/zh-TW/docs/MDN/Community/Communication_channels#chat_rooms)與 MDN Web 文件團隊討論。
 
-## 參見
+刪除一個或多個文件乃至整個文件樹，就跟移動頁面一樣簡單，因為我們創造了一個專門指令來處理所有細節：
 
-- [MDN 編輯器指南](/zh-TW/docs/MDN/Contribute/Editor)
-- [MDN 風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide)
+```bash
+yarn content delete <document-slug> [locale]
+```
+
+> [!NOTE]
+> 請使用 `yarn content delete` 指令來刪除 MDN Web 文件的頁面，**不要** 直接從倉儲中刪除它們的目錄。`yarn content delete` 指令還會處理其它必要更動，例如更新 `_wikihistory.json` 檔案。
+
+你只須指定欲刪除文件的 slug（例如 `Web/HTTP/Authentication`），可選擇性地再指定文件語系（預設為 `en-US`）。
+
+如果要刪除的文件包含子文件（亦即它是一棵文件樹），則須使用 `-r, --recursive` 選項，否則指令會失敗。
+
+舉例來說，若要刪除整個 `/zh-TW/Web/HTTP/Authentication` 文件樹，請按照以下步驟操作：
+
+1. 建立一個新分支來處理這次變更。
+
+   ```bash
+   cd ~/repos/mdn/content
+   git checkout main
+   git pull mdn main
+   # 再次執行 "yarn" 以確保已安裝最新的 Yari 相依套件。
+   yarn
+   git checkout -b my-delete
+   ```
+
+2. 執行刪除操作。
+
+   ```bash
+   yarn content delete Web/HTTP/Authentication --recursive
+   ```
+
+3. 新增重新導向。目標頁面可以是外部網址或 MDN Web 文件內的另一個頁面。
+
+   ```bash
+   yarn content add-redirect /zh-TW/path/of/deleted/page /zh-TW/path/of/target/page
+   ```
+
+4. 提交所有刪除的文件，然後推送至你的 Fork 倉儲。
+
+   ```bash
+   git commit -a
+   git push -u origin my-delete
+   ```
+
+5. 建立 Pull Request。
+
+> [!NOTE]
+> 如果要刪除的頁面 slug 包含特殊字元，請使用引號，如下所示：
+>
+> ```bash
+> yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
+> ```
+
+移除 MDN Web 文件的內容通常也會影響其它現有內容，因為許多文章彼此相互連結，因此被刪除的內容可能仍會被其它地方引用。新增重新導向可以降低刪除內容的影響，但**最佳實踐**仍然是編輯相關內容，以反映這些變更，並將內容編輯與刪除請求一起提交。
+
+## 編輯現有頁面
+
+要編輯頁面，你需要在 [content 倉儲](https://github.com/mdn/content)中找到該頁面的原始檔案。最簡單的方法是先前往要編輯的頁面，然後滾動到底部，點擊「View the source on GitHub」連結，即可跳轉至 GitHub 上的對應原始碼。
+
+### 預覽變更
+
+如果你在本機編輯頁面，可以透過 `yarn start` 指令來預覽變更。在內容倉儲目錄中執行該指令後，打開瀏覽器並前往 `localhost:5042`，然後找到該頁面進行預覽。你可以在搜尋框輸入標題來快速找到頁面。當你編輯原始碼時，瀏覽器中的預覽頁面將即時更新。
+
+### 附加檔案
+
+要將檔案附加到你的文章，只須將該檔案放入與文章 `index.md` 相同的目錄，然後在頁面中引用該檔案，通常使用 {{htmlelement("a")}} 元素來加入連結。
