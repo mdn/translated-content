@@ -13,13 +13,13 @@ CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所�
 
 另需注意的是，**某些**置換元素本身就具備固定尺寸 (Intrinsic dimension) 或已定義的基準線 (Baseline)，並可由 CSS 的某些屬性 (如 {{cssxref("vertical-align")}}) 所利用。
 
-## 另可參閱
+## 參見
 
 - CSS 重要概念：
 
-  - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)
-  - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
-  - [註釋](/zh-TW/docs/Web/CSS/Comments)
+  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
+  - [註釋](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
   - [繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
