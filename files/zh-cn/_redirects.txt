@@ -21,7 +21,7 @@
 /zh-CN/docs/CSS/@font-face	/zh-CN/docs/Web/CSS/@font-face
 /zh-CN/docs/CSS/@supports	/zh-CN/docs/Web/CSS/@supports
 /zh-CN/docs/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
-/zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/At-rule
+/zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/CSS/Attribute_selectors	/zh-CN/docs/Web/CSS/Attribute_selectors
 /zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
@@ -31,7 +31,7 @@
 /zh-CN/docs/CSS/CSS_一般问题	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-CN/docs/CSS/Child_selectors	/zh-CN/docs/Web/CSS/Child_combinator
 /zh-CN/docs/CSS/Class_selectors	/zh-CN/docs/Web/CSS/Class_selectors
-/zh-CN/docs/CSS/Comments	/zh-CN/docs/Web/CSS/Comments
+/zh-CN/docs/CSS/Comments	/zh-CN/docs/Web/CSS/CSS_syntax/Comments
 /zh-CN/docs/CSS/Common_CSS_Questions	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-CN/docs/CSS/Descendant_selectors	/zh-CN/docs/Web/CSS/Descendant_combinator
 /zh-CN/docs/CSS/General_sibling_selectors	/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator
@@ -42,7 +42,7 @@
 /zh-CN/docs/CSS/Pseudo-classes	/zh-CN/docs/Web/CSS/Pseudo-classes
 /zh-CN/docs/CSS/Pseudo-elements	/zh-CN/docs/Web/CSS/Pseudo-elements
 /zh-CN/docs/CSS/Specificity	/zh-CN/docs/Web/CSS/CSS_cascade/Specificity
-/zh-CN/docs/CSS/Syntax	/zh-CN/docs/Web/CSS/Syntax
+/zh-CN/docs/CSS/Syntax	/zh-CN/docs/Web/CSS/CSS_syntax/Syntax
 /zh-CN/docs/CSS/Tutorials	/zh-CN/docs/Web/CSS/Tutorials
 /zh-CN/docs/CSS/Tutorials/Using_CSS_transforms	/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /zh-CN/docs/CSS/Tutorials/Using_CSS_transitions	/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
@@ -2386,6 +2386,7 @@
 /zh-CN/docs/Web/CSS/Adjacent_sibling_combinator	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/CSS_display/Containing_block
+/zh-CN/docs/Web/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
 /zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems
@@ -2457,6 +2458,7 @@
 /zh-CN/docs/Web/CSS/CSS_分片	/zh-CN/docs/Web/CSS/CSS_fragmentation
 /zh-CN/docs/Web/CSS/Cascade	/zh-CN/docs/Web/CSS/CSS_cascade/Cascade
 /zh-CN/docs/Web/CSS/Child_selectors	/zh-CN/docs/Web/CSS/Child_combinator
+/zh-CN/docs/Web/CSS/Comments	/zh-CN/docs/Web/CSS/CSS_syntax/Comments
 /zh-CN/docs/Web/CSS/Common_CSS_Questions	/zh-CN/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 /zh-CN/docs/Web/CSS/Containing_block	/zh-CN/docs/Web/CSS/CSS_display/Containing_block
 /zh-CN/docs/Web/CSS/Descendant_selectors	/zh-CN/docs/Web/CSS/Descendant_combinator
@@ -2473,6 +2475,7 @@
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
 /zh-CN/docs/Web/CSS/Specificity	/zh-CN/docs/Web/CSS/CSS_cascade/Specificity
+/zh-CN/docs/Web/CSS/Syntax	/zh-CN/docs/Web/CSS/CSS_syntax/Syntax
 /zh-CN/docs/Web/CSS/Tools	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/Tutorials/Using_CSS_transforms	/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 /zh-CN/docs/Web/CSS/Understanding_z-index	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
