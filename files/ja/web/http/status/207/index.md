@@ -2,16 +2,19 @@
 title: 207 Multi-Status
 slug: Web/HTTP/Status/207
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
 ---
 
 {{HTTPSidebar}}
 
-> **メモ:** _リソースのコレクション_ を返す機能は {{Glossary("WebDAV")}} プロトコルの一部です。(WebDAV サーバーにアクセスしているウェブアプリケーションが受信する可能性があります) ウェブページにアクセスしているブラウザーがこのステータスコードを受け取ることは無いでしょう。
+HTTP の **`207 Multi-Status`** は[成功レスポンス](/ja/docs/Web/HTTP/Status#成功レスポンス)ステータスコードで、レスポンスが混在していることを示します。
+このレスポンスは、ウェブ分散オーサリングおよびバージョン管理 ({{Glossary("WebDAV")}}) のコンテキストでのみ使用されています。
 
-HTTP **`207 Multi-Status`** レスポンスコードは、レスポンスが混ざっている可能性があることを示します。
+レスポンス本体は `text/xml` または `application/xml` の HTTP エンティティであり、 `multistatus` ルート要素に個々のレスポンスコードが列挙されています。
 
-レスポンスボディは `multistatus` ルート要素を持つ `text/xml` または `application/xml` の HTTP エンティティです。XML ボディですべての個別のレスポンスコードが列挙されます。
+> [!NOTE]
+> ウェブページにアクセスしているブラウザーがこのステータスコードを受け取ることはないでしょう。
+> リソースのコレクションを返すことができる機能は {{Glossary("WebDAV")}} プロトコルの一部であり、 WebDAV サーバーにアクセスするウェブアプリケーションのみが受信する可能性があります。
 
 ## ステータス
 
@@ -20,6 +23,11 @@ HTTP **`207 Multi-Status`** レスポンスコードは、レスポンスが混�
 ```
 
 ## 例
+
+### `207` レスポンスを WebDAV のコンテキストで受信
+
+次のレスポンスは、 {{Glossary("WebDAV")}} サーバーがクライアントに送信する `207` レスポンスの例です。
+`multistatus` ルート要素があり、個々の集合の詳細が含まれています。
 
 ```http
 HTTP/1.1 207 Multi-Status
@@ -61,6 +69,7 @@ Content-Length: 1241
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
 - {{HTTPStatus("204")}}
 - {{HTTPStatus("403")}}
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
