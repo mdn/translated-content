@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 
 Le constructeur `Symbol()` renvoie une valeur de type **`symbol`**. Ce n'est pas à proprement parler un constructeur, car il n'accepte pas la syntaxe `new Symbol()` et qu'il n'est pas prévu pour créer des sous-classes. On pourra l'utiliser comme valeur pour la clause [`extends`](/fr/docs/Web/JavaScript/Reference/Classes/extends) d'une définition de classe, mais on ne pourra pas l'utiliser avec un appel [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super), cela entraînera une exception.
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## Syntaxe
 

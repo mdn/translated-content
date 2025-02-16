@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 
 La méthode **`getUTCMilliseconds()`** renvoie les millièmes de secondes pour la date renseignée selon UTC.
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()")}}
+
+```js interactive-example
+const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+
+console.log(exampleDate.getUTCMilliseconds());
+// Expected output: 678
+```
 
 ## Syntaxe
 

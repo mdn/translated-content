@@ -10,7 +10,17 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
 > [!NOTE]
 > Cette méthode renverra `false`, quelle que soit la condition, si elle est utilisée sur un tableau vide.
 
-{{EmbedInteractiveExample("pages/js/array-some.html")}}
+{{InteractiveExample("JavaScript Demo: Array.some()")}}
+
+```js interactive-example
+const array = [1, 2, 3, 4, 5];
+
+// Checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even));
+// Expected output: true
+```
 
 ## Syntaxe
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 
 La propriété **`global`** indique si le marqueur (_flag_) "`g`" est utilisé pour l'expression rationnelle. `global` est une propriété accessible en lecture seule pour une expression rationnelle donnée.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+
+console.log(regex1.global);
+// Expected output: true
+
+const regex2 = new RegExp("bar", "i");
+
+console.log(regex2.global);
+// Expected output: false
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## Description
 
