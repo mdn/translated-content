@@ -3,6 +3,8 @@ title: Utilizando a função "alerta"
 slug: Web/Accessibility/ARIA/Roles/alert_role
 ---
 
+{{AccessibilitySidebar}}
+
 ### Descrição
 
 Esta técnica mostra como utilizar o atributo _role_ [alert](https://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
