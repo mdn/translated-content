@@ -1,6 +1,7 @@
 ---
 title: コメント
-slug: Web/CSS/Comments
+slug: Web/CSS/CSS_syntax/Comments
+original_slug: Web/CSS/Comments
 ---
 
 {{CSSRef}}

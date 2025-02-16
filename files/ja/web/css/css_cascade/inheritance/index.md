@@ -1,6 +1,7 @@
 ---
 title: 継承
-slug: Web/CSS/Inheritance
+slug: Web/CSS/CSS_cascade/Inheritance
+original_slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}
