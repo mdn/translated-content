@@ -204,6 +204,6 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 ## 参见
 
 - [`@supports`](/zh-CN/docs/Web/CSS/@supports) at 规则
-- [CSS at 规则](/zh-CN/docs/Web/CSS/At-rule)
+- [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
 - [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
