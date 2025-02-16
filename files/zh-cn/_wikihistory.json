@@ -23562,15 +23562,6 @@
       "14725"
     ]
   },
-  "Web/CSS/At-rule": {
-    "modified": "2019-08-08T06:46:40.777Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "teoli",
-      "yan",
-      "alimon"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:22:08.999Z",
     "contributors": [
@@ -24576,6 +24567,36 @@
       "linuxbckp"
     ]
   },
+  "Web/CSS/CSS_syntax/At-rule": {
+    "modified": "2019-08-08T06:46:40.777Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "teoli",
+      "yan",
+      "alimon"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Comments": {
+    "modified": "2020-06-11T09:14:45.384Z",
+    "contributors": [
+      "Carllllo",
+      "m4jing",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2020-01-08T04:59:07.628Z",
+    "contributors": [
+      "flowfire",
+      "sgzzy",
+      "Ende93",
+      "haofu",
+      "ReyCG_sub",
+      "teoli",
+      "yan"
+    ]
+  },
   "Web/CSS/CSS_table": {
     "modified": "2020-12-01T03:09:38.045Z",
     "contributors": [
@@ -24676,15 +24697,6 @@
       "karma2014",
       "laguarage",
       "woshisbb43"
-    ]
-  },
-  "Web/CSS/Comments": {
-    "modified": "2020-06-11T09:14:45.384Z",
-    "contributors": [
-      "Carllllo",
-      "m4jing",
-      "teoli",
-      "ziyunfei"
     ]
   },
   "Web/CSS/Descendant_combinator": {
@@ -24901,18 +24913,6 @@
       "fscholz",
       "teoli",
       "alimon"
-    ]
-  },
-  "Web/CSS/Syntax": {
-    "modified": "2020-01-08T04:59:07.628Z",
-    "contributors": [
-      "flowfire",
-      "sgzzy",
-      "Ende93",
-      "haofu",
-      "ReyCG_sub",
-      "teoli",
-      "yan"
     ]
   },
   "Web/CSS/Tutorials": {
