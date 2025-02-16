@@ -1,7 +1,6 @@
 ---
 title: Наследование
 slug: Web/CSS/CSS_cascade/Inheritance
-original_slug: Web/CSS/Inheritance
 ---
 
 {{CSSRef}}

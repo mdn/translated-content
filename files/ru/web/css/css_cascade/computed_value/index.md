@@ -1,7 +1,6 @@
 ---
 title: Вычисленное значение
 slug: Web/CSS/CSS_cascade/computed_value
-original_slug: Web/CSS/computed_value
 ---
 
 {{cssref}}

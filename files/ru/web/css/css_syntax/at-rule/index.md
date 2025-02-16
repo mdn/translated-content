@@ -1,7 +1,6 @@
 ---
 title: At-rules
 slug: Web/CSS/CSS_syntax/At-rule
-original_slug: Web/CSS/At-rule
 ---
 
 {{cssref}}
