@@ -16,9 +16,9 @@ l10n:
 ## 属性
 
 - {{SVGAttr("preserveAspectRatio")}}
-  - : 该属性定义了当 SVG 片段嵌入到具有不同{{glossary("aspect ratio", "纵横比")}}的容器中时应如何变形。_值类型_：（`none`|`xMinYMin`|`xMidYMin`|`xMaxYMin`|`xMinYMid`|`xMidYMid`|`xMaxYMid`|`xMinYMax`|`xMidYMax`|`xMaxYMax`）（`meet`|`slice`）？；_默认值_：`xMidYMid meet`；_动画性_：**是**
+  - : 该属性定义了当 SVG 片段嵌入到具有不同{{glossary("aspect ratio", "纵横比")}}的容器中时应如何变形。_值类型_：(`none`|`xMinYMin`|`xMidYMin`|`xMaxYMin`|`xMinYMid`|`xMidYMid`|`xMaxYMid`|`xMinYMax`|`xMidYMax`|`xMaxYMax`) (`meet`|`slice`)?；_默认值_：`xMidYMid meet`；_动画性_：**是**
 - {{SVGAttr("viewBox")}}
-  - : 该属性定义了模式片段的 SVG 视口边界。_值类型_：**[\<list-of-numbers>](/zh-CN/docs/Web/SVG/Content_type#t_值数列)** ; _默认值_：无；_动画性_：**是**
+  - : 该属性定义了模式片段的 SVG 视口边界。_值类型_：[**\<list-of-numbers>**](/zh-CN/docs/Web/SVG/Content_type#t_值数列)；_默认值_：无；_动画性_：**是**
 - {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 此属性指定 SVG 文档是否可以被放大和平移。_值类型_：**disable | magnify**；_默认值_：magnify；_动画性_：**否**
 
