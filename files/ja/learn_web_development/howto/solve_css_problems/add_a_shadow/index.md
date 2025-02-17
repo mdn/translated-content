@@ -1,9 +1,8 @@
 ---
 title: 要素に影を追加するには
 slug: Learn_web_development/Howto/Solve_CSS_problems/Add_a_shadow
-original_slug: Learn/CSS/Howto/Add_a_shadow
 l10n:
-  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
@@ -25,7 +24,38 @@ l10n:
 
 下記例では、X 軸と Y 軸を 5px、ぼかしを 10px、広がりを 2px に設定しています。色として半透明の黒を使用しています。異なる値でシャドウがどのように変わるか、試してみてください。
 
-{{EmbedGHLiveSample("css-examples/howto/box-shadow-button.html", '100%', 500)}}
+```html live-sample___box-shadow-button
+<div class="wrapper">
+  <button class="shadow">box-shadow</button>
+</div>
+```
+
+```css hidden live-sample___box-shadow-button
+.wrapper {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 140%;
+  background-color: #db1f48;
+  color: #fff;
+}
+```
+
+```css live-sample___box-shadow-button
+.shadow {
+  box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 0.8);
+}
+```
+
+{{EmbedLiveSample("box-shadow-button")}}
 
 > [!NOTE]
 > この例では `inset` を使用していません。これは、シャドウが既定のドロップシャドウであり、シャドウの上にボックスがあることを意味しています。インセットシャドウは、コンテンツがページに押し込まれているかのように、ボックスの内側に現れます。
@@ -33,4 +63,4 @@ l10n:
 ## 関連情報
 
 - [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-- [CSS の学習: 高度な装飾効果](/ja/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
+- [CSS の学習: 高度なスタイル設定の効果](/ja/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects)
