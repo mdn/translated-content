@@ -1,20 +1,21 @@
 ---
 title: 例
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example
-original_slug: Learn/Forms/How_to_structure_a_web_form/Example
 l10n:
-  sourceCommit: 615d347dfc822fd49638f804317f3e95df2f7288
+  sourceCommit: fc2dda92008a140acbe7b291c20388112580a6e2
 ---
 
-これは記事 [ウェブフォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の基本的なお支払いフォームの例です。
+{{LearnSidebar}}
 
-## お支払いフォーム
+これは記事 [ウェブフォームの構築方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)の基本的な決済フォームの例です。
 
-### HTML コンテンツ
+## 決済フォーム
 
-```html
+### HTML
+
+```html-nolint
 <form method="post">
-  <h1>お支払いフォーム</h1>
+  <h1>決済フォーム</h1>
   <p>
     必須のフィールドには
     <strong><span aria-label="required">*</span></strong> が付いています。
@@ -49,30 +50,30 @@ l10n:
         <span>氏名: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="text" id="name" name="username" />
+      <input type="text" id="name" name="username" required />
     </p>
     <p>
       <label for="mail">
         <span>メールアドレス: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="email" id="mail" name="usermail" />
+      <input type="email" id="mail" name="user-mail" required />
     </p>
     <p>
       <label for="pwd">
         <span>パスワード: </span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="password" id="pwd" name="password" />
+      <input type="password" id="pwd" name="password" required />
     </p>
   </section>
   <section>
-    <h2>お支払い情報</h2>
+    <h2>決済情報</h2>
     <p>
       <label for="card">
         <span>カードの種類:</span>
       </label>
-      <select id="card" name="usercard">
+      <select id="card" name="user-card">
         <option value="visa">Visa</option>
         <option value="mc">Mastercard</option>
         <option value="amex">American Express</option>
@@ -83,7 +84,7 @@ l10n:
         <span>カード番号:</span>
         <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="tel" id="number" name="cardnumber" />
+      <input type="tel" id="number" name="card-number" />
     </p>
     <p>
       <label for="expiration">
@@ -99,12 +100,12 @@ l10n:
     </p>
   </section>
   <section>
-    <p><button type="submit">お支払いを検証</button></p>
+    <p><button type="submit">決済を検証</button></p>
   </section>
 </form>
 ```
 
-### CSS コンテンツ
+### CSS
 
 ```css
 h1 {
@@ -125,18 +126,13 @@ form {
   border-radius: 1em;
 }
 
-div + div {
-  margin-top: 1em;
-}
-
 label span {
   display: inline-block;
-  width: 120px;
   text-align: right;
 }
 
 input,
-textarea {
+fieldset {
   font: 1em sans-serif;
   width: 250px;
   box-sizing: border-box;
@@ -149,36 +145,20 @@ input[type="radio"] {
   border: none;
 }
 
-input:focus,
-textarea:focus {
-  border-color: #000;
-}
-
-textarea {
-  vertical-align: top;
-  height: 5em;
-  resize: vertical;
-}
-
-fieldset {
-  width: 250px;
-  box-sizing: border-box;
-  margin-left: 136px;
-  border: 1px solid #999;
+input:focus {
+  background-color: yellow;
 }
 
 button {
-  margin: 20px 0 0 124px;
+  margin: 20px 0 0 0;
 }
 
 label {
-  position: relative;
+  display: inline-block;
 }
 
-label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
+p label {
+  width: 100%;
 }
 ```
 
