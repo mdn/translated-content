@@ -1,8 +1,6 @@
 ---
 title: API 建構子子頁面範本
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
-l10n:
-  source-commit: null
 ---
 
 > **注意：** _發布前請將此整個說明性註解移除_
