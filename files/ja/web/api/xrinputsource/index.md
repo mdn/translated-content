@@ -54,7 +54,7 @@ _`XRInputSource` インターフェイスはメソッドを定義していませ
 
 入力ソースの座標系の詳細については、{{domxref("XRInputSource.gripSpace", "gripSpace")}} プロパティについて詳しく説明している記事を参照してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

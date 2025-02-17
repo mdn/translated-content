@@ -39,7 +39,7 @@ l10n:
 
 {{ EmbedLiveSample('mi_example', 700, 200, "", "") }}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -16,7 +16,7 @@ slug: Web/API/StorageManager
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
   - : サイトのストレージに永続性がすでに付与されている場合に `true` に解決される {{jsxref('Promise')}} を返します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

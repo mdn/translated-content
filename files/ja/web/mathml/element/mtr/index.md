@@ -28,7 +28,7 @@ MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElem
   - : {{ MathMLElement("mtable") }} で指定された、セルの垂直方向の揃えをこの行について上書きします。
     取り得る値は `axis`, `baseline`, `bottom`, `center`, `top` です。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

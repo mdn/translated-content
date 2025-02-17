@@ -18,7 +18,7 @@ performanceData = window.performance;
 
 それが公開する API によって提供されるパフォーマンスおよびタイミング関連情報へのアクセスを提供する {{domxref("Performance")}} オブジェクト。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
