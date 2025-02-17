@@ -1,6 +1,7 @@
 ---
 title: 構文
-slug: Web/CSS/Syntax
+slug: Web/CSS/CSS_syntax/Syntax
+original_slug: Web/CSS/Syntax
 ---
 
 {{CSSRef}}

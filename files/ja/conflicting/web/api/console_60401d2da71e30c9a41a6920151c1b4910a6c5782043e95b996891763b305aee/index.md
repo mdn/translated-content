@@ -1,7 +1,8 @@
 ---
 title: "Window: console プロパティ"
 short-title: console
-slug: Web/API/Window/console
+slug: conflicting/Web/API/console_60401d2da71e30c9a41a6920151c1b4910a6c5782043e95b996891763b305aee
+original_slug: Web/API/Window/console
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
