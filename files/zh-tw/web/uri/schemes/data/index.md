@@ -2,7 +2,7 @@
 title: Data URL
 slug: Web/URI/Schemes/data
 l10n:
-  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
+  sourceCommit: 48fc59029d83dbc53748561d30be41f6a0ae62c1
 ---
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Web/URI")}}
@@ -97,7 +97,7 @@ lots of text…
 - 在 HTML 中的格式化
   - : 一個 `data` URL 提供了一個嵌套於檔案內的檔案，可能相對於包裹文件的寬度非常寬。作為 URL，`data` 應該可以用空白（換行符號、Tab 或空格）格式化，但實際上在[使用 base64 編碼](https://bugzil.la/73026#c12)時可能會出現問題。
 - 長度限制
-  - : 不要求瀏覽器支援任何特定的最大資料長度。例如，Opera 11 瀏覽器將 URL 限制為 65535 字元，因此 Data URL 被限制為 65529 字元（65529 字元為編碼資料的長度，而非來源的長度，若使用純 `data:` 而不指定 MIME 類型）。Firefox 97 版及更新版本支援最大 32MB 的 Data URL（97 版之前的限制接近 256MB）。Chromium 拒絕超過 512MB 的 URL，而 WebKit（Safari）拒絕超過 2048MB 的 URL。
+  - : 不要求瀏覽器支援任何特定的最大資料長度。Chromium 與 Firefox 將 `data` URL 限制在 512MB，而 Safari（WebKit）則將其限制在 2048MB。請注意，Firefox 97 將該限制從 256KB 提升至 32MB，而 [Firefox 136 將其提升至 512MB](/zh-TW/docs/Mozilla/Firefox/Releases/136)。
 - 缺乏錯誤處理
   - : 媒體的無效參數，或在指定 `'base64'` 時的拼寫錯誤，會被忽略，但不會提供錯誤訊息。
 - 不支援查詢字串等
