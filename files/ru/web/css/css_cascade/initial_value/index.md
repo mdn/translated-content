@@ -1,21 +1,23 @@
 ---
-title: Действительное значение
-slug: Web/CSS/actual_value
+title: Начальное значение
+slug: Web/CSS/CSS_cascade/initial_value
 ---
 
 {{CSSRef}}
 
 ## Описание
 
-**Действительное значение** CSS-свойства - используемое после всех приближений значение. Например, браузер может отображать рамки только с целым значением пикселей и будет принудительно округлять ширину.
+**Начальное значение**, данное в кратком описании [каждого CSS-свойства](/ru/docs/Web/CSS/Reference) имеет различное значение для [наследуемых и не наследуемых свойств](/ru/docs/Web/CSS/Inheritance).
 
-## Спецификации
+Для [наследуемых](/ru/docs/Web/CSS/Inheritance#inherited_properties), начальное значение установлено **только** для корневого элемента, если не указано никакого значения для элемента.
 
-{{Specifications}}
+Для [ненаследуемых свойств](/ru/docs/Web/CSS/Inheritance#non-inherited_properties) используется начальное значение для **каждого** элемента, даже когда значение для элемента не указано.
+
+Ключевое слово [`initial`](/ru/docs/Web/CSS/initial) добавлено в CSS3, чтобы предоставить авторам возможность явно указывать это первоначальное значение.
 
 ## Смотрите также
 
-- [Руководство по CSS](/ru/docs/Web/CSS/Reference)
+- [CSS документация](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
   - [@-правила](/ru/docs/Web/CSS/At-rule)
@@ -34,3 +36,4 @@ slug: Web/CSS/actual_value
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
   - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
   - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+- [`initial`](/ru/docs/Web/CSS/initial)
