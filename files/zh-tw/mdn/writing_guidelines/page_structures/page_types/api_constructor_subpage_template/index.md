@@ -82,8 +82,8 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_
 
 {{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-在頁面內容開始處，撰寫一段簡介文字——首先點名建構子並說明其用途。  
-這通常應該是一到兩個簡短的句子。  
+在頁面內容開始處，撰寫一段簡介文字——首先點名建構子並說明其用途。
+這通常應該是一到兩個簡短的句子。
 你可以從相應 API 參考頁面的建構子摘要中複製大部分內容。
 
 ## 語法
@@ -93,22 +93,22 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_
 ### 參數
 
 - `parameter1` {{optional_inline}}
-  - : 在此提供該參數及其功能的簡短描述。  
-    每個參數請包含一個術語及其定義。  
+  - : 在此提供該參數及其功能的簡短描述。
+    每個參數請包含一個術語及其定義。
     若該參數非選用，請移除 \\{{optional_inline}} 宏呼叫。
 - `parameter2`
   - : 以此類推。
 
 ### 回傳值
 
-提供建構子回傳值的描述，包括資料型別及其所代表的含義。  
+提供建構子回傳值的描述，包括資料型別及其所代表的含義。
 通常僅為「一個 `\{{domxref("NameOfTheParentInterface")}}` 物件的實例」。
 
 _使用此宏時，請移除 markdown 文件中的反引號與反斜線。_
 
 ### 例外狀況
 
-列出該建構子可能引發的所有例外狀況。  
+列出該建構子可能引發的所有例外狀況。
 針對每個例外狀況，請提供一個術語及其定義。
 
 - `Exception1`
