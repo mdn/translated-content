@@ -1,6 +1,7 @@
 ---
 title: Window.console
-slug: Web/API/Window/console
+slug: conflicting/Web/API/console
+original_slug: Web/API/Window/console
 ---
 
 {{ APIRef }}
