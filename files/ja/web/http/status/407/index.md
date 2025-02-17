@@ -23,7 +23,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 Proxy-Authenticate: Basic realm="Access to internal site"
 ```
 
-## 仕様
+## 仕様書
 
 | Specification                                                | Title                    |
 | ------------------------------------------------------------ | ------------------------ |
