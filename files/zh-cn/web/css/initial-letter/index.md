@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-`initial-letter` CSS 属性用于设置首字符的样式，包括嵌入、凸起和下沉。这个属性适用于 {{cssxref("::first-letter")}} 伪元素以及区块容器内的首个内联级子元素。
+`initial-letter` CSS 属性用于设置首字符的样式，包括嵌入、凸起和下沉。这个属性适用于 {{cssxref("::first-letter")}} 伪元素以及区块容器内的首个行内级子元素。
 
 ## 语法
 
@@ -33,7 +33,7 @@ initial-letter: unset;
 
 ### 值
 
-关键词值为 `normal`，或者是一个 `<number>`，后面可以跟一个 `<integer>`。
+关键字值为 `normal`，或者是可以后跟一个 `<integer>` 的 `<number>`。
 
 - `normal`
   - : 没有特殊首字母效果，像正常文本一样显示。
@@ -96,10 +96,10 @@ p {
 #### HTML
 
 ```html
-<p class="four">首字母大写：沉降值 = 4</p>
-<p class="same">首字母大写：未声明沉降值（与大小相同）</p>
-<p class="two">首字母大写：沉降值 = 2</p>
-<p class="one">首字母大写：沉降值 = 1</p>
+<p class="four">首字母大写：下沉值 = 4</p>
+<p class="same">首字母大写：未声明下沉值（与大小相同）</p>
+<p class="two">首字母大写：下沉值 = 2</p>
+<p class="one">首字母大写：下沉值 = 1</p>
 ```
 
 #### CSS
@@ -146,4 +146,4 @@ p {
 
 - {{cssxref("::first-letter")}}
 - {{cssxref(":first-child")}}
-- [CSS 中的首字母下沉效果](https://www.oddbird.net/2017/01/03/initial-letter/)，由 via Oddbird 提供（2017）
+- [CSS 中的首字母下沉效果](https://www.oddbird.net/2017/01/03/initial-letter/)，由 Oddbird 提供（2017）
