@@ -29,25 +29,25 @@ l10n:
 >
 > - **title**
 >   - : 頁面頂部所顯示的標題。
-> 格式為 `NameOfTheParentInterface: NameOfTheConstructor() constructor`。  
+> 格式為 `NameOfTheParentInterface: NameOfTheConstructor() constructor`。
 > 例如，[Request()](/zh-TW/docs/Web/API/Request/Request) 建構子的 _title_ 為 `Request: Request() constructor`。
 > - **slug**
->   - : URL 中 `https://developer.mozilla.org/zh-TW/docs/` 之後的部分。  
->格式將為 `Web/API/NameOfTheParentInterface/NameOfTheConstructor`。  
->注意，slug 中的建構子函數名稱不包含括號（結尾為 `NameOfTheConstructor` 而非 `NameOfTheConstructor()`）。
+>   - : URL 中 `https://developer.mozilla.org/zh-TW/docs/` 之後的部分。
+>     格式將為 `Web/API/NameOfTheParentInterface/NameOfTheConstructor`。
+>     注意，slug 中的建構子函數名稱不包含括號（結尾為 `NameOfTheConstructor` 而非 `NameOfTheConstructor()`）。
 > - **page-type**
 >   - : 對於 Web/API 建構子，`page-type` 鍵始終為 `web-api-constructor`。
 > - **status**
 >   - : 描述此功能狀態的標誌。這是一個陣列，可能包含以下一個或多個值：`experimental`、`deprecated`、`non-standard`。
->     此鍵不應手動設定，而是根據瀏覽器相容性資料中的值自動設定。  
+>     此鍵不應手動設定，而是根據瀏覽器相容性資料中的值自動設定。
 >     請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)。
 > - **browser-compat**
-> 
+>
 >   - : 將佔位符值 `path.to.feature.NameOfTheConstructor` 替換為 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中該建構子的查詢字串。  
->       工具鏈會自動使用此鍵來填充相容性和規格部分（取代 `\{{Compat}}` 和 `\{{Specifications}}` 宏）。
+>     工具鏈會自動使用此鍵來填充相容性和規格部分（取代 `\{{Compat}}` 和 `\{{Specifications}}` 宏）。
 >
 >   注意，你可能需要先在我們的 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中建立或更新該 API 建構子的條目，且該 API 條目需包含規格資訊。
->請參閱我們的[如何執行此操作的指南](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
+>   請參閱我們的[如何執行此操作的指南](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
 >
 > ---
 >
@@ -57,23 +57,23 @@ l10n:
 >
 > 這些宏由工具鏈自動新增（無需手動新增或移除）：
 >
-> - `\{{SeeCompatTable}}` — 此宏會生成一個 **這是實驗性技術** 橫幅，表示該技術為 [實驗性](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)。  
-    >   如果該技術是實驗性的，且在 Firefox 中透過偏好設定隱藏，你還應在 [Firefox 實驗功能](/zh-TW/docs/Mozilla/Firefox/Experimental_features) 頁面中為其填寫條目。
+> - `\{{SeeCompatTable}}` — 此宏會生成一個 **這是實驗性技術** 橫幅，表示該技術為 [實驗性](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)。
+>   如果該技術是實驗性的，且在 Firefox 中透過偏好設定隱藏，你還應在 [Firefox 實驗功能](/zh-TW/docs/Mozilla/Firefox/Experimental_features) 頁面中為其填寫條目。
 > - `\{{Deprecated_Header}}` — 此宏會生成一個 **已棄用** 橫幅，表示該技術的使用已被[不建議](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated)。
 > - `\{{Non-standard_Header}}` — 此宏會生成一個 **非標準** 橫幅，表示該功能不屬於任何正式規格。
 >
 > 你應根據以下建議更新或移除下列宏：
 >
-> - `\{{SecureContext_Header}}` — 此宏會生成一個 **安全環境** 橫幅，表示該技術僅在 [安全環境](/zh-TW/docs/Web/Security/Secure_Contexts) 中可用。  
-    >   如果該技術非安全環境專用，則可移除此宏呼叫。  
-    >   如果是，則你還應在 [受限於安全環境的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) 頁面中為其新增條目。
-> - `\{{AvailableInWorkers}}` — 此宏會生成一個 **Worker 可用** 的註記，表示該技術在 [Worker 環境](/zh-TW/docs/Web/API/Web_Workers_API) 中可用。  
-    >   如果該技術僅在 window 環境中可用，則可移除此宏呼叫。  
-    >   如果該技術也或僅在 Worker 環境中可用，則你可能需要傳遞參數以指明其可用性（請參閱 [\\{{AvailableInWorkers}} 宏原始碼](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 了解所有可用值），並可能需在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) 頁面中為其新增條目。
-> - `\{{APIRef("GroupDataName")}}` — 此宏會生成左側參考側邊欄，顯示與當前頁面相關的快速參考連結。  
-    >   例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。  
-    >   若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。  
-    >   請參閱我們的[API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
+> - `\{{SecureContext_Header}}` — 此宏會生成一個 **安全環境** 橫幅，表示該技術僅在 [安全環境](/zh-TW/docs/Web/Security/Secure_Contexts) 中可用。
+>   如果該技術非安全環境專用，則可移除此宏呼叫。  
+>   如果是，則你還應在 [受限於安全環境的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) 頁面中為其新增條目。
+> - `\{{AvailableInWorkers}}` — 此宏會生成一個 **Worker 可用** 的註記，表示該技術在 [Worker 環境](/zh-TW/docs/Web/API/Web_Workers_API) 中可用。
+>   如果該技術僅在 window 環境中可用，則可移除此宏呼叫。
+>   如果該技術也或僅在 Worker 環境中可用，則你可能需要傳遞參數以指明其可用性（請參閱 [\\{{AvailableInWorkers}} 宏原始碼](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 了解所有可用值），並可能需在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) 頁面中為其新增條目。
+> - `\{{APIRef("GroupDataName")}}` — 此宏會生成左側參考側邊欄，顯示與當前頁面相關的快速參考連結。
+>   例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。  
+>   若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。  
+>   請參閱我們的[API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
 > - 複製此頁面時，請記得移除 `\{{MDNSidebar}}` 宏。
 >
 > 請勿手動新增狀態標頭宏。請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)了解如何將這些狀態新增至頁面中。
@@ -137,9 +137,9 @@ _使用此宏時，請移除 markdown 文件中的反引號與反斜線。_
 
 ### 描述性標題
 
-每個範例必須有一個 H3 標題，標明該範例的名稱。  
+每個範例必須有一個 H3 標題，標明該範例的名稱。
 該標題應能描述範例所執行的操作。
-例如，「一個簡單的範例」並未說明任何內容，因此並非理想的標題。  
+例如，「一個簡單的範例」並未說明任何內容，因此並非理想的標題。
 標題應保持簡潔。
 若需進一步說明，請在標題下方以段落形式補充說明。
 
