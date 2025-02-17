@@ -3,6 +3,8 @@ title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
 ---
 
+{{DefaultAPISidebar("IndexedDB")}}
+
 IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele você pode criar aplicações web com possibilidade de fazer query sem necessidade de conexão, suas aplicações podem funcionar tanto online quanto offline.
 
 ## Sobre esse documento

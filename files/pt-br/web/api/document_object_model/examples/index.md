@@ -3,6 +3,8 @@ title: Examples of web and XML development using the DOM
 slug: Web/API/Document_Object_Model/Examples
 ---
 
+{{DefaultAPISidebar("DOM")}}
+
 Este capítulo fornece exemplos mais longos de desenvolvimento de Web e XML usando o DOM. Sempre que possível, os exemplos usam APIs, truques e padrões comuns no JavaScript para manipular o objeto de documento.
 
 ## Exemplo 1: altura e largura

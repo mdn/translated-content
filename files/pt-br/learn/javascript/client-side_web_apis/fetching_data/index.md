@@ -3,6 +3,8 @@ title: AJAX
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
+{{LearnSidebar}}
+
 **[Primeiros passos](/pt-BR/docs/conflicting/Web/Guide/AJAX)** Uma introdução ao AJAX.
 
 **AJAX** é o acrônimo para **JavaScript assíncrono + XML.** Não é exatamente uma tecnologia nova, mas um termo empregado em 2005 por Jesse James Garrett para descrever uma nova forma de utilizar em conjunto algumas tecnologias, incluindo [HTML](/pt-BR/docs/Web/HTML) ou [XHTML](/pt-BR/docs/Glossary/XHTML), [CSS](/pt-BR/docs/Web/CSS), [JavaScript](/pt-BR/docs/Web/JavaScript), [DOMl](/pt-BR/docs/Web/API/Document_Object_Model), [XML](/pt-BR/docs/Web/XML), [XSLT](/pt-BR/docs/Web/XSLT), e o mais importante: [objeto XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest).
