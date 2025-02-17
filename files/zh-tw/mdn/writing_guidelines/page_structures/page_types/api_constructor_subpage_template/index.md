@@ -29,8 +29,8 @@ l10n:
 >
 > - **title**
 >   - : 頁面頂部所顯示的標題。
-> 格式為 `NameOfTheParentInterface: NameOfTheConstructor() constructor`。
-> 例如，[Request()](/zh-TW/docs/Web/API/Request/Request) 建構子的 _title_ 為 `Request: Request() constructor`。
+>     格式為 `NameOfTheParentInterface: NameOfTheConstructor() constructor`。
+>     例如，[Request()](/zh-TW/docs/Web/API/Request/Request) 建構子的 _title_ 為 `Request: Request() constructor`。
 > - **slug**
 >   - : URL 中 `https://developer.mozilla.org/zh-TW/docs/` 之後的部分。
 >     格式將為 `Web/API/NameOfTheParentInterface/NameOfTheConstructor`。
@@ -43,7 +43,7 @@ l10n:
 >     請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)。
 > - **browser-compat**
 >
->   - : 將佔位符值 `path.to.feature.NameOfTheConstructor` 替換為 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中該建構子的查詢字串。  
+>   - : 將佔位符值 `path.to.feature.NameOfTheConstructor` 替換為 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中該建構子的查詢字串。
 >     工具鏈會自動使用此鍵來填充相容性和規格部分（取代 `\{{Compat}}` 和 `\{{Specifications}}` 宏）。
 >
 >   注意，你可能需要先在我們的 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中建立或更新該 API 建構子的條目，且該 API 條目需包含規格資訊。
@@ -65,14 +65,14 @@ l10n:
 > 你應根據以下建議更新或移除下列宏：
 >
 > - `\{{SecureContext_Header}}` — 此宏會生成一個 **安全環境** 橫幅，表示該技術僅在 [安全環境](/zh-TW/docs/Web/Security/Secure_Contexts) 中可用。
->   如果該技術非安全環境專用，則可移除此宏呼叫。  
+>   如果該技術非安全環境專用，則可移除此宏呼叫。
 >   如果是，則你還應在 [受限於安全環境的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) 頁面中為其新增條目。
 > - `\{{AvailableInWorkers}}` — 此宏會生成一個 **Worker 可用** 的註記，表示該技術在 [Worker 環境](/zh-TW/docs/Web/API/Web_Workers_API) 中可用。
 >   如果該技術僅在 window 環境中可用，則可移除此宏呼叫。
 >   如果該技術也或僅在 Worker 環境中可用，則你可能需要傳遞參數以指明其可用性（請參閱 [\\{{AvailableInWorkers}} 宏原始碼](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 了解所有可用值），並可能需在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) 頁面中為其新增條目。
 > - `\{{APIRef("GroupDataName")}}` — 此宏會生成左側參考側邊欄，顯示與當前頁面相關的快速參考連結。
->   例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。  
->   若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。  
+>   例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。
+>   若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。
 >   請參閱我們的[API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
 > - 複製此頁面時，請記得移除 `\{{MDNSidebar}}` 宏。
 >
