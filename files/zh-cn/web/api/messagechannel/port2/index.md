@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-{{domxref("MessageChannel")}} 接口的 **`port2`** 只读属性返回消息消息频道的第二个端口——即连接到通道另一端上下文的端口，消息最初将发送到这个端口。
+{{domxref("MessageChannel")}} 接口的 **`port2`** 只读属性返回消息频道的第二个端口——即连接到通道另一端上下文的端口，消息最初将发送到这个端口。
 
 ## 值
 
@@ -36,7 +36,7 @@ function handleMessage(e) {
 }
 ```
 
-有关完整的运行示例，请参阅我们在 GitHub 上的[频道传递消息基本演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，[也可以实时运行它](https://mdn.github.io/dom-examples/channel-messaging-basic/)。
+有关完整的运行示例，请参阅我们在 GitHub 上的[频道消息传递基本演示](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，[也可以实时运行它](https://mdn.github.io/dom-examples/channel-messaging-basic/)。
 
 ## 规范
 
