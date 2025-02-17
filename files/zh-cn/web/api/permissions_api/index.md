@@ -2,7 +2,7 @@
 title: 权限 API
 slug: Web/API/Permissions_API
 l10n:
-  sourceCommit: 3fde60e07c74ad4954a0c77fdd80958c7d07f088
+  sourceCommit: 93b34fcdb9cf91ff44f5dfe7f4dcd13e961962da
 ---
 
 {{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}
@@ -71,7 +71,7 @@ l10n:
 
 ## 示例
 
-我们创建了一个名为 Location Finder 的简单示例。你可以[实时运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)、[在 GitHub 上查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)，或者在我们的文章[使用权限 API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)中阅读有关其工作原理的更多信息。
+我们创建了一个名为 Location Finder 的示例。你可以[实时运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)、[在 GitHub 上查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)，或者在我们的文章[使用权限 API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)中阅读有关其工作原理的更多信息。
 
 [`Permissions.query()` 示例](/zh-CN/docs/Web/API/Permissions/query#测试对不同权限的支持)也展示了在当前浏览器上测试大多数权限并记录结果的代码。
 
