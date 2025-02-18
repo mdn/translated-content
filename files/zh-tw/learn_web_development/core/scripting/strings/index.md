@@ -31,7 +31,7 @@ original_slug: Learn/JavaScript/First_steps/Strings
 
 ## 字串 — 基礎
 
-剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們從在 console 裡輸入一些基本的程式行來熟悉它吧！在下方，我們提供一個 Console （你也可以使用瀏覽器的[開發人員工具](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)）。
+剛開始你會覺得字串與數字的處理方式很類似，但當你越深入就會了解到一些明顯的差異。讓我們先在[瀏覽器開發者控制台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)輸入一些基本字串來熟悉一下。
 
 ```html hidden
 <!doctype html>
