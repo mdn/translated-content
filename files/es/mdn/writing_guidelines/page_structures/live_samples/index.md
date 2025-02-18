@@ -31,7 +31,7 @@ Cada [bloque de código](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#e
 /* Código CSS */
 ```
 
-\{{EmbedLiveSample("Examples")}}
+\{{EmbedLiveSample("Ejemplos")}}
 ````
 
 El sistema de ejemplos en vivo permite agrupar bloques de código de diferentes maneras para mostrar efectivamente la salida. La siguiente sección describe estos métodos.
@@ -43,7 +43,7 @@ Los bloques de código pueden agruparse de dos maneras:
 1. Usando el ID de un encabezado o un elemento de bloque que contenga los bloques de código como identificador
 2. Especificando un identificador de cadena junto con los bloques de código
 
-Los bloques de código que no especifican explícitamente un identificador se agrupan por defecto utilizando el ID del encabezado o el elemento de bloque que los contiene. El identificador, en este caso, es el ID de un encabezado o un elemento de bloque (como un {{HTMLElement("div")}}). Esto se muestra en el siguiente ejemplo, donde los códigos `html` y `css` dentro del bloque "Styling a paragraph" se usan para generar la salida de la llamada a la macro `EmbedLiveSample`.
+Los bloques de código que no especifican explícitamente un identificador se agrupan por defecto utilizando el ID del encabezado o el elemento de bloque que los contiene. El identificador, en este caso, es el ID de un encabezado o un elemento de bloque (como un {{HTMLElement("div")}}). Esto se muestra en el siguiente ejemplo, donde los códigos `html` y `css` dentro del bloque "Estilizando un párrafo" se usan para generar la salida de la llamada a la macro `EmbedLiveSample`.
 
 ````md
 ## Ejemplos
@@ -70,7 +70,7 @@ p.fancy {
 
 #### Resultado
 
-\{{EmbedLiveSample("Styling a paragraph")}}
+\{{EmbedLiveSample("Estilizando_un_parrafo")}}
 
 Solo el elemento `<p>` con `class="fancy"` se estilizará en `red`.
 ````
@@ -127,13 +127,20 @@ En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a 
 \{{EmbedLiveSample(sample_id, width, height, screenshot_URL, page_slug, class_name, allow)}}
 ```
 
-- **sample_id** (Requerido): Puede ser el identificador de cadena de la muestra o el ID del encabezado o bloque contenedor de donde extraer el código.
-- **width** (Obsoleto): Atributo `width` del {{HTMLElement("iframe")}}, especificado en `px`. Ya no tiene efecto: las muestras en vivo siempre ocupan todo el ancho del área de contenido.
-- **height**: Atributo `height` del {{HTMLElement("iframe")}}, especificado en `px`. Debe ser al menos `60`. Es opcional; se usará un valor predeterminado razonable si se omite.
-- **screenshot_URL** (Obsoleto): URL de una captura de pantalla que muestra cómo debería verse la muestra en vivo.
-- **page_slug** (Obsoleto): Identificador de la página que contiene la muestra. Si se omite, se toma de la misma página donde se usa la macro.
-- **class_name** (Obsoleto): Nombre de clase para aplicar al {{HTMLElement("iframe")}}.
-- **allow**: Atributo `allow` para el {{HTMLElement("iframe")}}. Es opcional y por defecto no se permiten características adicionales.
+- `sample_id`
+  - : Requerido: Puede ser el identificador de cadena de la muestra o el ID del encabezado o bloque contenedor de donde extraer el código. Para verificar si tiene el ID de encabezado correcto, mire la URL de la sección en la tabla de contenido de la página; también puede comprobarlo viendo el código fuente de la página.
+- `width` {{deprecated_inline}}
+  - : Atributo `width` del {{HTMLElement("iframe")}}, especificado en `px`. Ya no tiene efecto: las muestras en vivo siempre ocupan todo el ancho del área de contenido.
+- `height`
+  - : Atributo `height` del {{HTMLElement("iframe")}}, especificado en `px`. Debe ser al menos `60`. Es opcional; se usará un valor predeterminado razonable si se omite.
+- `screenshot_URL` {{deprecated_inline}}
+  - : URL de una captura de pantalla que muestra cómo debería verse la muestra en vivo. Obsoleto; solo agregue muestras en vivo si existe un soporte razonable del navegador.
+- `page_slug` {{deprecated_inline}}
+  - : Identificador de la página que contiene la muestra. Si se omite, se toma de la misma página donde se usa la macro. Obsoleto; solo incluya muestras en vivo si el código está en la misma página.
+- `class_name` {{deprecated_inline}}
+  - : Nombre de clase para aplicar al {{HTMLElement("iframe")}}. Obsoleto; no hay razón para utilizar otro nombre de clase.
+- `allow`
+  - : Atributo `allow` para el {{HTMLElement("iframe")}}. Es opcional y por defecto no se permiten características adicionales.
 
 #### Macro LiveSampleLink
 
@@ -141,10 +148,14 @@ En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a 
 \{{LiveSampleLink(block_ID, link_text)}}
 ```
 
-- **block_ID**: ID del encabezado o bloque contenedor de donde extraer el código.
-- **link_text**: Cadena de texto a utilizar como texto del enlace.
+- `block_ID`
+  - : ID del encabezado o bloque contenedor de donde extraer el código. La mejor forma de asegurarse de que tiene el ID correcto es mirar la URL de la sección en la tabla de contenidos de la página; también puede comprobarlo viendo el código fuente de la página.
+- `link_text`
+  - : Cadena de texto a utilizar como texto del enlace.
 
 ## Uso del sistema de muestras en vivo
+
+Las secciones siguientes describen algunos casos de uso comunes para el sistema de muestra en vivo.
 
 ### Formato de muestras en vivo
 
@@ -155,13 +166,17 @@ Si escribes una muestra en vivo en la sección "Ejemplos", proporciona un encabe
 - JavaScript
 - Resultado
 
-Escribe los bloques de código en las subsecciones correspondientes. En la subsección **Resultado**, agrega la llamada a la macro `EmbedLiveSample` y describe el resultado.
+Escribe los bloques de código en las subsecciones correspondientes.
+
+En la subsección **Resultado**, agrega la llamada a la macro `EmbedLiveSample` y describe el resultado.
 
 Si no usas un tipo de lenguaje en particular (por ejemplo, si no usas JavaScript) o si ocultas el bloque de código, omite el encabezado correspondiente.
 
 ### Ocultando código
 
-A veces, solo quieres mostrar el bloque de código estático en una página sin mostrar la muestra en vivo. Para lograr esto, puedes ocultar cualquier bloque de código agregando la cadena `hidden` al identificador de lenguaje. Si haces esto, omite los encabezados `### HTML/CSS/JavaScript` para los bloques de código ocultos.
+A veces, solo deseas mostrar el bloque de código estático correspondiente al ejemplo representado dentro de una página. Sin embargo, aún necesita los bloques de código HTML, CSS y JavaScript para representar dicho ejemplo.
+
+Para lograrlo, puedes ocultar los bloques de código que no sean relevantes agregando la cadena de información `hidden` al identificador de lenguaje. Si lo haces, omite los encabezados `### HTML/CSS/JavaScript` para los bloques de código ocultos.
 
 Usando el ejemplo anterior pero ocultando el código HTML:
 
@@ -189,7 +204,7 @@ p.fancy {
 
 Solo el elemento `<p>` con `class="fancy"` se mostrará en rojo.
 
-\{{EmbedLiveSample("Styling a paragraph")}}
+\{{EmbedLiveSample("Estilizando_un_parrafo")}}
 ````
 
 ### Convertir fragmentos de código en ejemplos en vivo
@@ -199,7 +214,7 @@ El primer paso es agregar fragmentos de código o asegurarse de que los existent
 
 Cada pieza de código debe estar en un bloque de código separado para cada lenguaje, correctamente marcado con su tipo de lenguaje. La mayor parte del tiempo, esto ya estará hecho, pero siempre es bueno verificar que cada pieza de código esté configurada con la sintaxis correcta. Esto se hace con un identificador de lenguaje en el bloque de código del tipo `language-type`, donde _language-type_ es el tipo de lenguaje que contiene el bloque, por ejemplo, `html`, `css` o `js`.
 
-> [!NOTA]
+> [!NOTE]
 > Puedes tener más de un bloque para cada lenguaje; todos se concatenan juntos. Esto permite tener un fragmento de código seguido de una explicación de su funcionamiento, luego otro fragmento, y así sucesivamente. Esto facilita la creación de tutoriales y otros contenidos que utilicen ejemplos en vivo intercalados con texto explicativo.
 
 Asegúrate de que los bloques de código para tu HTML, CSS y/o JavaScript estén configurados correctamente para el resaltado de sintaxis del lenguaje correspondiente, y estarás listo para continuar.
@@ -260,13 +275,13 @@ el.onclick = function () {
 
 #### Resultado
 
-Aquí está el resultado de ejecutar los bloques de código anteriores a través de `\{{EmbedLiveSample('grouping_code_blocks_by_heading')}}`:
+Aquí está el resultado de ejecutar los bloques de código anteriores a través de `\{{EmbedLiveSample('Agrupación_de_bloques_de_código_por_encabezado')}}`:
 
-{{EmbedLiveSample('grouping_code_blocks_by_heading')}}
+{{EmbedLiveSample('Agrupación_de_bloques_de_código_por_encabezado')}}
 
-Aquí hay un enlace generado a partir de estos bloques de código mediante `\{{LiveSampleLink('grouping_code_blocks_by_heading', 'Enlace de demostración del ejemplo en vivo')}}`:
+Aquí hay un enlace generado a partir de estos bloques de código mediante `\{{LiveSampleLink('Agrupación_de_bloques_de_código_por_encabezado', 'Enlace de demostración del ejemplo en vivo')}}`:
 
-{{LiveSampleLink('grouping_code_blocks_by_heading', 'Enlace de demostración del ejemplo en vivo')}}
+{{LiveSampleLink('Agrupación_de_bloques_de_código_por_encabezado', 'Enlace de demostración del ejemplo en vivo')}}
 
 ### Agrupación de bloques de código por identificador
 
@@ -330,7 +345,7 @@ Resultado de `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
 
 {{EmbedLiveSample("iframe_size", "", "120")}}
 
-### Permitir funciones
+### Permitir caracterísitcas
 
 El parámetro `allow` se puede usar para especificar las funciones permitidas en el elemento `<iframe>` que contiene la salida del ejemplo en vivo. Los valores disponibles provienen de la [sintaxis de política de permisos para iframes](/es/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
 
@@ -353,13 +368,13 @@ toggleBtn.addEventListener("click", () => {
 });
 ```
 
-Resultado de `\{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}`:
+Resultado de `\{{EmbedLiveSample("Permitir_caracterísitcas", "", "60", "", "", "", "fullscreen")}}`:
 
-{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}
+{{EmbedLiveSample("Permitir_caracterísitcas", "", "60", "", "", "", "fullscreen")}}
 
-Resultado de `\{{EmbedLiveSample("allowing_features", "", "60")}}`:
+Resultado de `\{{EmbedLiveSample("Permitir_caracterísitcas", "", "60")}}`:
 
-{{EmbedLiveSample("allowing_features", "", "60")}}
+{{EmbedLiveSample("Permitir_caracterísitcas", "", "60")}}
 
 ### Mostrar un registro de entrada único
 
@@ -367,7 +382,7 @@ Este ejemplo muestra cómo implementar un registro de entrada único en tu muest
 
 Para mayor claridad, este ejemplo separa el código de registro del código que lo usa y muestra primero el código de registro. Generalmente, cuando implementes tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
 
-> [!NOTA]
+> [!NOTE]
 > Mostrar la salida del registro como parte del ejemplo proporciona una mejor experiencia de usuario que usar `console.log()`.
 
 #### HTML
@@ -422,11 +437,7 @@ incrementButton.addEventListener("click", () => {
 
 Presiona el botón para agregar nuevo contenido al registro.
 
-{{EmbedLiveSample("Displaying a single entry log", "100%", "80px")}}
-
-Aquí tienes la traducción manteniendo el formato y las convenciones adecuadas:
-
----
+{{EmbedLiveSample("mostrar_un_registro_de_entrada_único", "100%", "80px")}}
 
 ### Mostrar un registro que agrega elementos
 
@@ -436,10 +447,10 @@ La consola agrega una nueva línea al final de la salida cada vez que se añade 
 Para mayor claridad, este ejemplo separa el código de registro del código que lo utiliza y muestra primero el código de registro.
 Generalmente, al implementar tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
 
-> [!NOTA]
+> [!NOTE]
 > Mostrar la salida del registro como parte del ejemplo proporciona una experiencia de usuario mucho mejor que usar `console.log()`.
 
-> [!NOTA]
+> [!NOTE]
 > Consulta [`DataTransfer.effectAllowed`](/es/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) para ver un ejemplo más completo.
 
 #### HTML
@@ -502,7 +513,7 @@ incrementButton.addEventListener("click", () => {
 
 Presiona el botón para agregar un nuevo contenido de registro.
 
-{{EmbedLiveSample("Displaying a log that appends items elementos", "100%", "180px")}}
+{{EmbedLiveSample("mostrar_un_registro_que_agrega_elementos", "100%", "180px")}}
 
 ### Mostrar un botón de reinicio
 
@@ -563,13 +574,13 @@ incrementButton.addEventListener("click", () => {
 Haz clic en el botón "Presióname varias veces" varias veces.
 Reinicia el ejemplo presionando el botón "Reiniciar".
 
-{{EmbedLiveSample("Displaying a reset button", "100%", "180px")}}
+{{EmbedLiveSample("Mostrar_un_botón_de_reinicio", "100%", "180px")}}
 
 ### Convenciones sobre muestras en vivo
 
 - Orden de los bloques de código
-  - Al agregar una muestra en vivo, los bloques de código deben estar ordenados de manera que el primero corresponda al lenguaje principal de la muestra (si lo hay). Por ejemplo, cuando se agrega una muestra en vivo para la referencia de HTML, el primer bloque debe ser HTML; cuando se agrega una muestra para la referencia de CSS, debe ser CSS, y así sucesivamente.
+  - : Al agregar una muestra en vivo, los bloques de código deben estar ordenados de manera que el primero corresponda al lenguaje principal de la muestra (si lo hay). Por ejemplo, cuando se agrega una muestra en vivo para la referencia de HTML, el primer bloque debe ser HTML; cuando se agrega una muestra para la referencia de CSS, debe ser CSS, y así sucesivamente.
 - Nombres de los encabezados
-  - Cuando no haya ambigüedad (por ejemplo, si la muestra está en una sección "Ejemplos"), los encabezados deben ser directos y usar solo el nombre del lenguaje correspondiente: HTML, CSS, JavaScript, SVG, etc. (ver arriba). No se deben usar encabezados como "Contenido HTML" o "Contenido JavaScript". Sin embargo, si un encabezado tan corto hace que el contenido sea poco claro, se puede usar un título más descriptivo.
+  - : Cuando no haya ambigüedad (por ejemplo, si la muestra está en una sección "Ejemplos"), los encabezados deben ser directos y usar solo el nombre del lenguaje correspondiente: HTML, CSS, JavaScript, SVG, etc. (ver arriba). No se deben usar encabezados como "Contenido HTML" o "Contenido JavaScript". Sin embargo, si un encabezado tan corto hace que el contenido sea poco claro, se puede usar un título más descriptivo.
 - Uso de un bloque "Resultado"
-  - Después de los diferentes bloques de código, por favor usa un último bloque "Resultado" antes de utilizar la macro `EmbedLiveSample` (ver arriba). De esta manera, la semántica del ejemplo es más clara tanto para el lector como para cualquier herramienta que analice la página (por ejemplo, lectores de pantalla, rastreadores web).
+  - : Después de los diferentes bloques de código, por favor usa un último bloque "Resultado" antes de utilizar la macro `EmbedLiveSample` (ver arriba). De esta manera, la semántica del ejemplo es más clara tanto para el lector como para cualquier herramienta que analice la página (por ejemplo, lectores de pantalla, rastreadores web).
