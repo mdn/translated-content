@@ -26,26 +26,26 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_
 > ```
 >
 > - **title**
-    >   - : 頁面頂部所顯示的標題。
-          >     格式為 `NameOfTheParentInterface: NameOfTheConstructor() constructor`。
-          >     例如，[Request()](/zh-TW/docs/Web/API/Request/Request) 建構子的 _title_ 為 `Request: Request() constructor`。
+>   - : 頁面頂部所顯示的標題。
+>     格式為 `NameOfTheParentInterface: NameOfTheConstructor() constructor`。
+>     例如，[Request()](/zh-TW/docs/Web/API/Request/Request) 建構子的 _title_ 為 `Request: Request() constructor`。
 > - **slug**
-    >   - : URL 中 `https://developer.mozilla.org/zh-TW/docs/` 之後的部分。
-          >     格式將為 `Web/API/NameOfTheParentInterface/NameOfTheConstructor`。
-          >     注意，slug 中的建構子函數名稱不包含括號（結尾為 `NameOfTheConstructor` 而非 `NameOfTheConstructor()`）。
+>   - : URL 中 `https://developer.mozilla.org/zh-TW/docs/` 之後的部分。
+>     格式將為 `Web/API/NameOfTheParentInterface/NameOfTheConstructor`。
+>     注意，slug 中的建構子函數名稱不包含括號（結尾為 `NameOfTheConstructor` 而非 `NameOfTheConstructor()`）。
 > - **page-type**
-    >   - : 對於 Web/API 建構子，`page-type` 鍵始終為 `web-api-constructor`。
+>   - : 對於 Web/API 建構子，`page-type` 鍵始終為 `web-api-constructor`。
 > - **status**
-    >   - : 描述此功能狀態的標誌。這是一個陣列，可能包含以下一個或多個值：`experimental`、`deprecated`、`non-standard`。
-          >     此鍵不應手動設定，而是根據瀏覽器相容性資料中的值自動設定。
-          >     請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)。
+>   - : 描述此功能狀態的標誌。這是一個陣列，可能包含以下一個或多個值：`experimental`、`deprecated`、`non-standard`。
+>     此鍵不應手動設定，而是根據瀏覽器相容性資料中的值自動設定。
+>     請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)。
 > - **browser-compat**
-    >
-    >   - : 將佔位符值 `path.to.feature.NameOfTheConstructor` 替換為 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中該建構子的查詢字串。
-          >     工具鏈會自動使用此鍵來填充相容性和規格部分（取代 `\{{Compat}}` 和 `\{{Specifications}}` 宏）。
-    >
-    >   注意，你可能需要先在我們的 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中建立或更新該 API 建構子的條目，且該 API 條目需包含規格資訊。
-    >   請參閱我們的[如何執行此操作的指南](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
+>
+>   - : 將佔位符值 `path.to.feature.NameOfTheConstructor` 替換為 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中該建構子的查詢字串。
+>     工具鏈會自動使用此鍵來填充相容性和規格部分（取代 `\{{Compat}}` 和 `\{{Specifications}}` 宏）。
+>
+>   注意，你可能需要先在我們的 [Browser compat data repo](https://github.com/mdn/browser-compat-data) 中建立或更新該 API 建構子的條目，且該 API 條目需包含規格資訊。
+>   請參閱我們的[如何執行此操作的指南](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)。
 >
 > ---
 >
