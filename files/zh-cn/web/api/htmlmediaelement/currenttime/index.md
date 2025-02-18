@@ -19,7 +19,7 @@ l10n:
 
 将 `currentTime` 设置为新值会将媒体定位到给定的时间（如果媒体可用）。
 
-对于没有已知持续时间的媒体（例如实时流式传输的媒体），浏览器可能无法从媒体缓冲区中获取已过期的媒体部分。此外，对于时间线不从 0 秒开始的媒体，无法定位到其时间线最早的时间点之前的时间。
+对于没有已知时长的媒体（例如正在直播的媒体），浏览器可能无法从媒体缓冲区中获取已过期的部分。此外，对于时间线不从 0 秒开始的媒体，无法定位到其时间线最早时间之前的时间点。
 
 可以使用 {{domxref("HTMLMediaElement.duration", "duration")}} 属性确定媒体的长度（以秒为单位）。
 
@@ -34,22 +34,22 @@ console.log(video.currentTime);
 
 ### 降低时间精度
 
-为了防止计时攻击和[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)，`video.currentTime` 的精度可能会根据浏览器设置进行舍入。在 Firefox 中，`privacy.reduceTimerPrecision` 首选项被默认启用且默认为 2ms。你还可以启用 `privacy.resistFingerprinting`，在这种情况下，精度将为 100ms 和 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值中的较大值。
+为了防止计时攻击和[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)，`video.currentTime` 的精度可能会根据浏览器设置进行舍入。在 Firefox 中，`privacy.reduceTimerPrecision` 首选项默认开启，默认为 2ms。你还可以启用 `privacy.resistFingerprinting`，在这种情况下，精度将为 100ms 或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 中较大的值。
 
 例如，在降低了时间精度的情况下，`video.currentTime` 的结果总是 0.002 的倍数，或者在 `privacy.resistFingerprinting` 启用的情况下，为 0.1（或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`）的倍数。
 
 ```js
 // Firefox 60 中降低的时间精度（2ms）
 video.currentTime;
-// 可以是：
+// 可能是：
 // 23.404
 // 24.192
 // 25.514
 // ……
 
-// `privacy.resistFingerprinting` 启用的情况下的降低的时间精度
+// 启用 `privacy.resistFingerprinting` 后降低的时间精度
 video.currentTime;
-// 可以是：
+// 可能是：
 // 49.8
 // 50.6
 // 51.7
