@@ -3,8 +3,6 @@ title: 如何研究一项技术
 slug: MDN/Writing_guidelines/Howto/Research_technology
 ---
 
-{{MDNSidebar}}
-
 本文提供有关如何记录各种技术的实用信息。
 
 ## 进行准备工作

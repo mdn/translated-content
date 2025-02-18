@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Statements/do...while
 
 La sentencia (hacer mientras) crea un bucle que ejecuta una sentencia especificada, hasta que la condición de comprobación se evalúa como falsa. La condición se evalúa después de ejecutar la sentencia, dando como resultado que la sentencia especificada se ejecute al menos una vez.
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## Sintaxis
 

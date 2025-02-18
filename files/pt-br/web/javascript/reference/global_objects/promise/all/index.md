@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 
 O método **`Promise.all(iterable)`** retorna uma única {{jsxref("Promise")}} que resolve quando todas as promises no argumento iterável forem resolvidas ou quando o iterável passado como argumento não contém promises. É rejeitado com o motivo da primeira promise que foi rejeitada.
 
-{{EmbedInteractiveExample("pages/js/promise-all.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.all()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = 42;
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([promise1, promise2, promise3]).then((values) => {
+  console.log(values);
+});
+// Expected output: Array [3, 42, "foo"]
+```
 
 ## Sintaxe
 

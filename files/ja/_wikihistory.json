@@ -5659,6 +5659,42 @@
       "jswisher"
     ]
   },
+  "MDN/Guides": {
+    "modified": "2020-01-12T11:59:05.782Z",
+    "contributors": [
+      "mfuji09",
+      "snakada",
+      "silverskyvicto",
+      "dskmori",
+      "hideo54",
+      "szk0u",
+      "Uemmra3",
+      "DonburiDon",
+      "stingray",
+      "mantaroh",
+      "momoi",
+      "fucsm",
+      "ethertank",
+      "Sheppy"
+    ]
+  },
+  "MDN/Tutorials": {
+    "modified": "2019-06-10T15:05:39.813Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "hamasaki",
+      "Uemmra3",
+      "higechira",
+      "takubokudori",
+      "horichiyo",
+      "t-cool",
+      "karaage-kun",
+      "taiyaki32lp64",
+      "YuichiKamiki",
+      "Mohawk"
+    ]
+  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
     "contributors": [
@@ -11360,6 +11396,13 @@
       "mfuji09",
       "ethertank",
       "RobinEgg"
+    ]
+  },
+  "Web/API/Document_Object_Model/Transforming_with_XSLT": {
+    "modified": "2020-04-13T14:02:19.940Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf"
     ]
   },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
@@ -21178,12 +21221,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Window/console": {
-    "modified": "2019-03-23T22:03:50.688Z",
-    "contributors": [
-      "mdmss37"
-    ]
-  },
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:27:12.990Z",
     "contributors": [
@@ -22804,28 +22841,6 @@
       "erikadoyle"
     ]
   },
-  "Web/API/XSLTProcessor/Basic_Example": {
-    "modified": "2020-04-13T14:02:55.964Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "Marsf"
-    ]
-  },
-  "Web/API/XSLTProcessor/Generating_HTML": {
-    "modified": "2020-04-13T14:02:19.940Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
-  "Web/API/XSLTProcessor/Introduction": {
-    "modified": "2020-04-13T14:03:23.203Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
   "Web/API/console": {
     "modified": "2020-10-15T21:08:48.807Z",
     "contributors": [
@@ -23375,13 +23390,6 @@
       "Marsf",
       "Mgjbot",
       "Taken"
-    ]
-  },
-  "Web/CSS/-webkit-line-clamp": {
-    "modified": "2020-11-22T08:36:33.464Z",
-    "contributors": [
-      "mixplace",
-      "8845musign"
     ]
   },
   "Web/CSS/-webkit-tap-highlight-color": {
@@ -24443,17 +24451,6 @@
       "Kohei"
     ]
   },
-  "Web/CSS/At-rule": {
-    "modified": "2020-07-19T14:52:47.759Z",
-    "contributors": [
-      "mfuji09",
-      "i12o",
-      "takahashim",
-      "yyss",
-      "ethertank",
-      "Marsf"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:20:41.486Z",
     "contributors": [
@@ -24477,18 +24474,18 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Types": {
-    "modified": "2020-11-10T07:25:34.702Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/CSS/CSS_Values_and_Units": {
     "modified": "2020-10-27T06:39:35.001Z",
     "contributors": [
       "MikuroXina",
       "mfuji09",
       "awazo"
+    ]
+  },
+  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
+    "modified": "2020-11-10T07:25:34.702Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "Web/CSS/CSS_animated_properties": {
@@ -24623,10 +24620,92 @@
       "sosleepy"
     ]
   },
+  "Web/CSS/CSS_cascade/Cascade": {
+    "modified": "2020-04-19T05:24:20.123Z",
+    "contributors": [
+      "mfuji09",
+      "isdh"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Inheritance": {
+    "modified": "2020-09-16T06:01:11.329Z",
+    "contributors": [
+      "mfuji09",
+      "inkusu",
+      "ethertank",
+      "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Specificity": {
+    "modified": "2020-04-20T23:20:01.731Z",
+    "contributors": [
+      "mfuji09",
+      "sakai-akinobu",
+      "yoshidax",
+      "ethertank",
+      "sii"
+    ]
+  },
+  "Web/CSS/CSS_cascade/actual_value": {
+    "modified": "2020-07-14T09:14:56.040Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sii"
+    ]
+  },
+  "Web/CSS/CSS_cascade/computed_value": {
+    "modified": "2020-08-10T14:02:33.669Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sii",
+      "Mgjbot",
+      "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/initial_value": {
+    "modified": "2019-03-23T23:52:49.170Z",
+    "contributors": [
+      "SphinxKnight",
+      "mfuji09",
+      "ethertank",
+      "teoli",
+      "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_cascade/specified_value": {
+    "modified": "2020-08-11T01:05:33.608Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "ethertank",
+      "sii"
+    ]
+  },
+  "Web/CSS/CSS_cascade/used_value": {
+    "modified": "2019-10-02T00:12:10.056Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "sii"
+    ]
+  },
   "Web/CSS/CSS_cascading_variables": {
     "modified": "2019-09-26T04:21:48.836Z",
     "contributors": [
       "cmplstofB"
+    ]
+  },
+  "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
+    "modified": "2020-10-15T21:45:20.930Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "hamasaki",
+      "YuichiNukiyama",
+      "lv7777",
+      "buffarin"
     ]
   },
   "Web/CSS/CSS_charsets": {
@@ -24693,6 +24772,49 @@
   },
   "Web/CSS/CSS_display": {
     "modified": "2020-10-15T22:01:55.406Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow": {
+    "modified": "2020-05-14T13:25:53.556Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Containing_block": {
+    "modified": "2020-10-17T13:41:06.755Z",
+    "contributors": [
+      "mfuji09",
+      "alattalatta"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout": {
+    "modified": "2019-03-18T21:32:57.417Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout_and_overflow": {
+    "modified": "2019-03-18T21:27:42.298Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout_and_writing_modes": {
+    "modified": "2019-03-18T21:28:55.263Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/In_flow_and_out_of_flow": {
+    "modified": "2019-03-18T21:28:49.433Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_display/Introduction_to_formatting_contexts": {
+    "modified": "2020-08-09T11:07:11.560Z",
     "contributors": [
       "mfuji09"
     ]
@@ -24775,42 +24897,6 @@
     "modified": "2019-03-18T21:27:50.748Z",
     "contributors": [
       "sutara79"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout": {
-    "modified": "2019-03-18T21:32:57.417Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow": {
-    "modified": "2020-05-14T13:25:53.556Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Flow_layout_and_overflow": {
-    "modified": "2019-03-18T21:27:42.298Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes": {
-    "modified": "2019-03-18T21:28:55.263Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow": {
-    "modified": "2019-03-18T21:28:49.433Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts": {
-    "modified": "2020-08-09T11:07:11.560Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/CSS_fonts": {
@@ -25208,6 +25294,35 @@
       "mfuji09"
     ]
   },
+  "Web/CSS/CSS_syntax/At-rule": {
+    "modified": "2020-07-19T14:52:47.759Z",
+    "contributors": [
+      "mfuji09",
+      "i12o",
+      "takahashim",
+      "yyss",
+      "ethertank",
+      "Marsf"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Comments": {
+    "modified": "2019-03-23T23:33:39.632Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2020-08-16T03:09:34.358Z",
+    "contributors": [
+      "mfuji09",
+      "keis94",
+      "mpcjazz",
+      "kei-itof",
+      "ethertank",
+      "sii"
+    ]
+  },
   "Web/CSS/CSS_table": {
     "modified": "2019-03-18T21:28:51.893Z",
     "contributors": [
@@ -25284,13 +25399,6 @@
       "dynamis"
     ]
   },
-  "Web/CSS/Cascade": {
-    "modified": "2020-04-19T05:24:20.123Z",
-    "contributors": [
-      "mfuji09",
-      "isdh"
-    ]
-  },
   "Web/CSS/Child_combinator": {
     "modified": "2020-10-15T21:22:37.540Z",
     "contributors": [
@@ -25316,20 +25424,6 @@
       "ExE-Boss"
     ]
   },
-  "Web/CSS/Comments": {
-    "modified": "2019-03-23T23:33:39.632Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank"
-    ]
-  },
-  "Web/CSS/Containing_block": {
-    "modified": "2020-10-17T13:41:06.755Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta"
-    ]
-  },
   "Web/CSS/Descendant_combinator": {
     "modified": "2020-10-15T21:22:42.147Z",
     "contributors": [
@@ -25345,15 +25439,6 @@
       "FumiyaShibusawa",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Inheritance": {
-    "modified": "2020-09-16T06:01:11.329Z",
-    "contributors": [
-      "mfuji09",
-      "inkusu",
-      "ethertank",
-      "Marsf"
     ]
   },
   "Web/CSS/Layout_cookbook": {
@@ -25575,16 +25660,6 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/Specificity": {
-    "modified": "2020-04-20T23:20:01.731Z",
-    "contributors": [
-      "mfuji09",
-      "sakai-akinobu",
-      "yoshidax",
-      "ethertank",
-      "sii"
-    ]
-  },
   "Web/CSS/Subsequent-sibling_combinator": {
     "modified": "2020-10-15T21:22:37.143Z",
     "contributors": [
@@ -25595,17 +25670,6 @@
       "SphinxKnight",
       "ethertank",
       "sosleepy"
-    ]
-  },
-  "Web/CSS/Syntax": {
-    "modified": "2020-08-16T03:09:34.358Z",
-    "contributors": [
-      "mfuji09",
-      "keis94",
-      "mpcjazz",
-      "kei-itof",
-      "ethertank",
-      "sii"
     ]
   },
   "Web/CSS/Type_selectors": {
@@ -25625,17 +25689,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Using_CSS_custom_properties": {
-    "modified": "2020-10-15T21:45:20.930Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "hamasaki",
-      "YuichiNukiyama",
-      "lv7777",
-      "buffarin"
     ]
   },
   "Web/CSS/Value_definition_syntax": {
@@ -25675,14 +25728,6 @@
       "mfuji09",
       "ExE-Boss",
       "silverskyvicto"
-    ]
-  },
-  "Web/CSS/actual_value": {
-    "modified": "2020-07-14T09:14:56.040Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "sii"
     ]
   },
   "Web/CSS/align-content": {
@@ -26885,16 +26930,6 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/computed_value": {
-    "modified": "2020-08-10T14:02:33.669Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "sii",
-      "Mgjbot",
-      "Marsf"
-    ]
-  },
   "Web/CSS/contain": {
     "modified": "2020-10-15T22:11:47.883Z",
     "contributors": [
@@ -27716,16 +27751,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/initial_value": {
-    "modified": "2019-03-23T23:52:49.170Z",
-    "contributors": [
-      "SphinxKnight",
-      "mfuji09",
-      "ethertank",
-      "teoli",
-      "Marsf"
-    ]
-  },
   "Web/CSS/inline-size": {
     "modified": "2020-10-16T08:12:21.127Z",
     "contributors": [
@@ -27859,6 +27884,13 @@
       "mfuji09",
       "Uemmra3",
       "rigani"
+    ]
+  },
+  "Web/CSS/line-clamp": {
+    "modified": "2020-11-22T08:36:33.464Z",
+    "contributors": [
+      "mixplace",
+      "8845musign"
     ]
   },
   "Web/CSS/line-height": {
@@ -28974,15 +29006,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/specified_value": {
-    "modified": "2020-08-11T01:05:33.608Z",
-    "contributors": [
-      "mfuji09",
-      "mpcjazz",
-      "ethertank",
-      "sii"
-    ]
-  },
   "Web/CSS/string": {
     "modified": "2020-10-15T21:22:38.285Z",
     "contributors": [
@@ -29525,14 +29548,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/used_value": {
-    "modified": "2019-10-02T00:12:10.056Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "sii"
-    ]
-  },
   "Web/CSS/user-modify": {
     "modified": "2020-10-15T22:12:52.310Z",
     "contributors": [
@@ -29682,69 +29697,6 @@
       "mpcjazz"
     ]
   },
-  "Web/EXSLT": {
-    "modified": "2019-03-23T23:52:02.096Z",
-    "contributors": [
-      "ExE-Boss",
-      "silverskyvicto",
-      "Mgjbot",
-      "Potappo",
-      "Qshino"
-    ]
-  },
-  "Web/EXSLT/exsl": {
-    "modified": "2019-01-16T15:21:01.946Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/exsl/node-set": {
-    "modified": "2019-01-16T15:43:11.594Z",
-    "contributors": [
-      "ExE-Boss",
-      "Mgjbot",
-      "Potappo",
-      "Qshino"
-    ]
-  },
-  "Web/EXSLT/exsl/object-type": {
-    "modified": "2019-01-16T15:43:12.506Z",
-    "contributors": [
-      "ExE-Boss",
-      "Mgjbot",
-      "Potappo",
-      "Marsf",
-      "Qshino"
-    ]
-  },
-  "Web/EXSLT/math": {
-    "modified": "2019-01-16T15:22:56.006Z",
-    "contributors": [
-      "ExE-Boss",
-      "teoli",
-      "Anonymous"
-    ]
-  },
-  "Web/EXSLT/math/highest": {
-    "modified": "2019-01-16T15:43:15.130Z",
-    "contributors": [
-      "ExE-Boss",
-      "Mgjbot",
-      "Potappo",
-      "Qshino"
-    ]
-  },
-  "Web/EXSLT/math/lowest": {
-    "modified": "2019-01-16T15:43:11.269Z",
-    "contributors": [
-      "ExE-Boss",
-      "Mgjbot",
-      "Potappo",
-      "Qshino"
-    ]
-  },
   "Web/Events": {
     "modified": "2020-10-16T22:39:39.169Z",
     "contributors": [
@@ -29759,25 +29711,6 @@
       "WhiteHawk-taka",
       "Marsf",
       "ssw",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
-  "Web/Guide": {
-    "modified": "2020-01-12T11:59:05.782Z",
-    "contributors": [
-      "mfuji09",
-      "snakada",
-      "silverskyvicto",
-      "dskmori",
-      "hideo54",
-      "szk0u",
-      "Uemmra3",
-      "DonburiDon",
-      "stingray",
-      "mantaroh",
-      "momoi",
-      "fucsm",
       "ethertank",
       "Sheppy"
     ]
@@ -42806,23 +42739,6 @@
       "hashedhyphen"
     ]
   },
-  "Web/Tutorials": {
-    "modified": "2019-06-10T15:05:39.813Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "hamasaki",
-      "Uemmra3",
-      "higechira",
-      "takubokudori",
-      "horichiyo",
-      "t-cool",
-      "karaage-kun",
-      "taiyaki32lp64",
-      "YuichiKamiki",
-      "Mohawk"
-    ]
-  },
   "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-12-06T15:11:17.468Z",
     "contributors": [
@@ -42861,7 +42777,70 @@
       "ExE-Boss"
     ]
   },
-  "Web/XML/XML_introduction": {
+  "Web/XML/EXSLT": {
+    "modified": "2019-03-23T23:52:02.096Z",
+    "contributors": [
+      "ExE-Boss",
+      "silverskyvicto",
+      "Mgjbot",
+      "Potappo",
+      "Qshino"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/exsl": {
+    "modified": "2019-01-16T15:21:01.946Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/exsl/node-set": {
+    "modified": "2019-01-16T15:43:11.594Z",
+    "contributors": [
+      "ExE-Boss",
+      "Mgjbot",
+      "Potappo",
+      "Qshino"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/exsl/object-type": {
+    "modified": "2019-01-16T15:43:12.506Z",
+    "contributors": [
+      "ExE-Boss",
+      "Mgjbot",
+      "Potappo",
+      "Marsf",
+      "Qshino"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math": {
+    "modified": "2019-01-16T15:22:56.006Z",
+    "contributors": [
+      "ExE-Boss",
+      "teoli",
+      "Anonymous"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math/highest": {
+    "modified": "2019-01-16T15:43:15.130Z",
+    "contributors": [
+      "ExE-Boss",
+      "Mgjbot",
+      "Potappo",
+      "Qshino"
+    ]
+  },
+  "Web/XML/EXSLT/Reference/math/lowest": {
+    "modified": "2019-01-16T15:43:11.269Z",
+    "contributors": [
+      "ExE-Boss",
+      "Mgjbot",
+      "Potappo",
+      "Qshino"
+    ]
+  },
+  "Web/XML/Guides/XML_introduction": {
     "modified": "2019-05-01T21:52:56.542Z",
     "contributors": [
       "ExE-Boss",
@@ -42871,7 +42850,7 @@
       "Foximer"
     ]
   },
-  "Web/XPath": {
+  "Web/XML/XPath": {
     "modified": "2020-10-24T08:12:08.073Z",
     "contributors": [
       "silverskyvicto",
@@ -42886,14 +42865,14 @@
       "Okome"
     ]
   },
-  "Web/XPath/Guides/Comparison_with_CSS_selectors": {
+  "Web/XML/XPath/Guides/Comparison_with_CSS_selectors": {
     "modified": "2020-10-24T08:07:33.764Z",
     "contributors": [
       "silverskyvicto",
       "mfuji09"
     ]
   },
-  "Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript": {
+  "Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-03-23T23:54:12.896Z",
     "contributors": [
       "SphinxKnight",
@@ -42904,14 +42883,14 @@
       "Gakuueda"
     ]
   },
-  "Web/XPath/Guides/Snippets": {
+  "Web/XML/XPath/Guides/Snippets": {
     "modified": "2019-03-30T16:01:33.863Z",
     "contributors": [
       "silverskyvicto",
       "ExE-Boss"
     ]
   },
-  "Web/XPath/Reference/Axes": {
+  "Web/XML/XPath/Reference/Axes": {
     "modified": "2019-03-30T15:58:22.824Z",
     "contributors": [
       "silverskyvicto",
@@ -42920,7 +42899,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions": {
+  "Web/XML/XPath/Reference/Functions": {
     "modified": "2019-03-30T15:59:12.311Z",
     "contributors": [
       "silverskyvicto",
@@ -42930,7 +42909,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/boolean": {
+  "Web/XML/XPath/Reference/Functions/boolean": {
     "modified": "2019-10-11T08:28:23.493Z",
     "contributors": [
       "mfuji09",
@@ -42939,7 +42918,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/ceiling": {
+  "Web/XML/XPath/Reference/Functions/ceiling": {
     "modified": "2019-03-23T23:49:11.327Z",
     "contributors": [
       "ExE-Boss",
@@ -42947,7 +42926,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/choose": {
+  "Web/XML/XPath/Reference/Functions/choose": {
     "modified": "2019-03-24T00:02:06.973Z",
     "contributors": [
       "ExE-Boss",
@@ -42956,7 +42935,7 @@
       "yiwasaki"
     ]
   },
-  "Web/XPath/Reference/Functions/concat": {
+  "Web/XML/XPath/Reference/Functions/concat": {
     "modified": "2019-03-23T23:49:18.440Z",
     "contributors": [
       "ExE-Boss",
@@ -42964,7 +42943,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/contains": {
+  "Web/XML/XPath/Reference/Functions/contains": {
     "modified": "2019-03-23T23:49:18.920Z",
     "contributors": [
       "ExE-Boss",
@@ -42972,7 +42951,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/count": {
+  "Web/XML/XPath/Reference/Functions/count": {
     "modified": "2019-03-23T23:49:16.746Z",
     "contributors": [
       "ExE-Boss",
@@ -42980,28 +42959,28 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/current": {
+  "Web/XML/XPath/Reference/Functions/current": {
     "modified": "2019-03-18T21:27:49.496Z",
     "contributors": [
       "ExE-Boss",
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/document": {
+  "Web/XML/XPath/Reference/Functions/document": {
     "modified": "2020-10-24T08:13:42.920Z",
     "contributors": [
       "silverskyvicto",
       "ExE-Boss"
     ]
   },
-  "Web/XPath/Reference/Functions/element-available": {
+  "Web/XML/XPath/Reference/Functions/element-available": {
     "modified": "2019-03-18T21:27:47.076Z",
     "contributors": [
       "ExE-Boss",
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/false": {
+  "Web/XML/XPath/Reference/Functions/false": {
     "modified": "2019-03-23T23:49:18.548Z",
     "contributors": [
       "ExE-Boss",
@@ -43009,7 +42988,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/floor": {
+  "Web/XML/XPath/Reference/Functions/floor": {
     "modified": "2019-03-23T23:49:22.994Z",
     "contributors": [
       "ExE-Boss",
@@ -43017,28 +42996,28 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/format-number": {
+  "Web/XML/XPath/Reference/Functions/format-number": {
     "modified": "2019-03-18T21:27:56.750Z",
     "contributors": [
       "ExE-Boss",
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/function-available": {
+  "Web/XML/XPath/Reference/Functions/function-available": {
     "modified": "2019-03-18T21:27:54.021Z",
     "contributors": [
       "ExE-Boss",
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/generate-id": {
+  "Web/XML/XPath/Reference/Functions/generate-id": {
     "modified": "2019-03-18T21:27:48.496Z",
     "contributors": [
       "ExE-Boss",
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/id": {
+  "Web/XML/XPath/Reference/Functions/id": {
     "modified": "2019-03-23T23:49:25.185Z",
     "contributors": [
       "ExE-Boss",
@@ -43046,14 +43025,14 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/key": {
+  "Web/XML/XPath/Reference/Functions/key": {
     "modified": "2019-03-18T21:28:00.861Z",
     "contributors": [
       "ExE-Boss",
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/lang": {
+  "Web/XML/XPath/Reference/Functions/lang": {
     "modified": "2019-03-23T23:49:21.547Z",
     "contributors": [
       "ExE-Boss",
@@ -43061,7 +43040,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/last": {
+  "Web/XML/XPath/Reference/Functions/last": {
     "modified": "2019-03-23T23:49:24.591Z",
     "contributors": [
       "ExE-Boss",
@@ -43069,7 +43048,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/local-name": {
+  "Web/XML/XPath/Reference/Functions/local-name": {
     "modified": "2019-03-23T23:49:23.411Z",
     "contributors": [
       "ExE-Boss",
@@ -43077,7 +43056,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/name": {
+  "Web/XML/XPath/Reference/Functions/name": {
     "modified": "2019-03-23T23:49:24.087Z",
     "contributors": [
       "ExE-Boss",
@@ -43085,7 +43064,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/namespace-uri": {
+  "Web/XML/XPath/Reference/Functions/namespace-uri": {
     "modified": "2019-03-23T23:49:20.944Z",
     "contributors": [
       "ExE-Boss",
@@ -43093,7 +43072,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/normalize-space": {
+  "Web/XML/XPath/Reference/Functions/normalize-space": {
     "modified": "2020-10-24T08:29:12.750Z",
     "contributors": [
       "silverskyvicto",
@@ -43101,7 +43080,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/not": {
+  "Web/XML/XPath/Reference/Functions/not": {
     "modified": "2019-03-23T23:49:21.892Z",
     "contributors": [
       "ExE-Boss",
@@ -43109,7 +43088,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/number": {
+  "Web/XML/XPath/Reference/Functions/number": {
     "modified": "2019-03-23T23:49:25.284Z",
     "contributors": [
       "ExE-Boss",
@@ -43117,7 +43096,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/position": {
+  "Web/XML/XPath/Reference/Functions/position": {
     "modified": "2019-03-23T23:49:21.411Z",
     "contributors": [
       "ExE-Boss",
@@ -43125,7 +43104,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/round": {
+  "Web/XML/XPath/Reference/Functions/round": {
     "modified": "2019-03-23T23:49:24.941Z",
     "contributors": [
       "ExE-Boss",
@@ -43133,7 +43112,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/starts-with": {
+  "Web/XML/XPath/Reference/Functions/starts-with": {
     "modified": "2019-03-23T23:49:19.494Z",
     "contributors": [
       "ExE-Boss",
@@ -43141,7 +43120,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/string": {
+  "Web/XML/XPath/Reference/Functions/string": {
     "modified": "2019-03-23T23:49:25.486Z",
     "contributors": [
       "ExE-Boss",
@@ -43149,7 +43128,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/string-length": {
+  "Web/XML/XPath/Reference/Functions/string-length": {
     "modified": "2019-03-23T23:49:24.843Z",
     "contributors": [
       "ExE-Boss",
@@ -43157,7 +43136,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/substring": {
+  "Web/XML/XPath/Reference/Functions/substring": {
     "modified": "2019-03-23T23:49:21.312Z",
     "contributors": [
       "ExE-Boss",
@@ -43165,7 +43144,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/substring-after": {
+  "Web/XML/XPath/Reference/Functions/substring-after": {
     "modified": "2020-01-04T09:22:40.508Z",
     "contributors": [
       "mfuji09",
@@ -43174,7 +43153,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/substring-before": {
+  "Web/XML/XPath/Reference/Functions/substring-before": {
     "modified": "2020-01-04T09:17:28.740Z",
     "contributors": [
       "mfuji09",
@@ -43183,7 +43162,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/sum": {
+  "Web/XML/XPath/Reference/Functions/sum": {
     "modified": "2019-03-23T23:49:20.311Z",
     "contributors": [
       "ExE-Boss",
@@ -43191,7 +43170,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/system-property": {
+  "Web/XML/XPath/Reference/Functions/system-property": {
     "modified": "2020-08-06T04:20:54.253Z",
     "contributors": [
       "mfuji09",
@@ -43199,7 +43178,7 @@
       "silverskyvicto"
     ]
   },
-  "Web/XPath/Reference/Functions/translate": {
+  "Web/XML/XPath/Reference/Functions/translate": {
     "modified": "2020-09-19T09:49:26.735Z",
     "contributors": [
       "mfuji09",
@@ -43208,7 +43187,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/true": {
+  "Web/XML/XPath/Reference/Functions/true": {
     "modified": "2019-03-23T23:49:24.379Z",
     "contributors": [
       "ExE-Boss",
@@ -43216,7 +43195,7 @@
       "Shoot"
     ]
   },
-  "Web/XPath/Reference/Functions/unparsed-entity-url": {
+  "Web/XML/XPath/Reference/Functions/unparsed-entity-url": {
     "modified": "2020-08-06T04:34:51.425Z",
     "contributors": [
       "mfuji09",
@@ -43224,7 +43203,7 @@
       "silverskyvicto"
     ]
   },
-  "Web/XSLT": {
+  "Web/XML/XSLT": {
     "modified": "2019-03-23T22:00:06.823Z",
     "contributors": [
       "mfuji09",
@@ -43239,21 +43218,21 @@
       "Shimono"
     ]
   },
-  "Web/XSLT/Guides/Common_errors": {
+  "Web/XML/XSLT/Guides/Common_errors": {
     "modified": "2019-03-18T20:50:34.398Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Guides/PI_Parameters": {
+  "Web/XML/XSLT/Guides/PI_Parameters": {
     "modified": "2019-03-18T20:50:34.245Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Guides/Transforming_XML_with_XSLT": {
+  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT": {
     "modified": "2019-03-30T15:42:19.715Z",
     "contributors": [
       "silverskyvicto",
@@ -43261,21 +43240,21 @@
       "ethertank"
     ]
   },
-  "Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview": {
+  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview": {
     "modified": "2019-03-18T20:50:34.881Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading": {
+  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading": {
     "modified": "2019-03-18T20:50:35.199Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element": {
+  "Web/XML/XSLT/Reference/Element": {
     "modified": "2019-11-30T15:35:09.776Z",
     "contributors": [
       "mfuji09",
@@ -43285,224 +43264,224 @@
       "Okome"
     ]
   },
-  "Web/XSLT/Reference/Element/apply-imports": {
+  "Web/XML/XSLT/Reference/Element/apply-imports": {
     "modified": "2019-11-30T15:26:05.193Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/apply-templates": {
+  "Web/XML/XSLT/Reference/Element/apply-templates": {
     "modified": "2019-11-30T15:26:05.203Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/attribute": {
+  "Web/XML/XSLT/Reference/Element/attribute": {
     "modified": "2019-11-30T15:26:05.294Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/attribute-set": {
+  "Web/XML/XSLT/Reference/Element/attribute-set": {
     "modified": "2019-11-30T15:26:05.231Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/call-template": {
+  "Web/XML/XSLT/Reference/Element/call-template": {
     "modified": "2019-11-30T15:26:06.232Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/choose": {
+  "Web/XML/XSLT/Reference/Element/choose": {
     "modified": "2019-11-30T15:26:05.298Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/comment": {
+  "Web/XML/XSLT/Reference/Element/comment": {
     "modified": "2019-11-30T15:26:06.152Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/copy": {
+  "Web/XML/XSLT/Reference/Element/copy": {
     "modified": "2019-11-30T15:26:06.154Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/copy-of": {
+  "Web/XML/XSLT/Reference/Element/copy-of": {
     "modified": "2019-11-30T15:26:07.231Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/decimal-format": {
+  "Web/XML/XSLT/Reference/Element/decimal-format": {
     "modified": "2019-11-30T15:26:05.170Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/element": {
+  "Web/XML/XSLT/Reference/Element/element": {
     "modified": "2019-11-30T15:26:08.535Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/fallback": {
+  "Web/XML/XSLT/Reference/Element/fallback": {
     "modified": "2019-11-30T15:26:06.274Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/for-each": {
+  "Web/XML/XSLT/Reference/Element/for-each": {
     "modified": "2019-11-30T15:26:06.266Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/if": {
+  "Web/XML/XSLT/Reference/Element/if": {
     "modified": "2019-11-30T15:26:07.158Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/import": {
+  "Web/XML/XSLT/Reference/Element/import": {
     "modified": "2019-11-30T15:26:07.220Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/include": {
+  "Web/XML/XSLT/Reference/Element/include": {
     "modified": "2019-11-30T15:26:07.255Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/key": {
+  "Web/XML/XSLT/Reference/Element/key": {
     "modified": "2019-11-30T15:26:05.183Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/message": {
+  "Web/XML/XSLT/Reference/Element/message": {
     "modified": "2019-11-30T15:26:07.265Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/namespace-alias": {
+  "Web/XML/XSLT/Reference/Element/namespace-alias": {
     "modified": "2019-11-30T15:26:08.518Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/number": {
+  "Web/XML/XSLT/Reference/Element/number": {
     "modified": "2019-11-30T15:26:06.276Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/otherwise": {
+  "Web/XML/XSLT/Reference/Element/otherwise": {
     "modified": "2019-11-30T15:26:06.157Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/output": {
+  "Web/XML/XSLT/Reference/Element/output": {
     "modified": "2019-11-30T15:26:08.548Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/param": {
+  "Web/XML/XSLT/Reference/Element/param": {
     "modified": "2019-11-30T15:26:08.549Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/preserve-space": {
+  "Web/XML/XSLT/Reference/Element/preserve-space": {
     "modified": "2019-11-30T15:26:09.863Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/processing-instruction": {
+  "Web/XML/XSLT/Reference/Element/processing-instruction": {
     "modified": "2019-11-30T15:26:09.785Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/sort": {
+  "Web/XML/XSLT/Reference/Element/sort": {
     "modified": "2019-11-30T15:26:07.169Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/strip-space": {
+  "Web/XML/XSLT/Reference/Element/strip-space": {
     "modified": "2019-11-30T15:26:09.786Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/stylesheet": {
+  "Web/XML/XSLT/Reference/Element/stylesheet": {
     "modified": "2020-10-15T22:08:29.366Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/template": {
+  "Web/XML/XSLT/Reference/Element/template": {
     "modified": "2019-11-30T15:26:06.240Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/text": {
+  "Web/XML/XSLT/Reference/Element/text": {
     "modified": "2019-11-30T15:26:18.776Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/transform": {
+  "Web/XML/XSLT/Reference/Element/transform": {
     "modified": "2019-11-30T15:26:11.033Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/value-of": {
+  "Web/XML/XSLT/Reference/Element/value-of": {
     "modified": "2019-11-30T15:26:05.156Z",
     "contributors": [
       "mfuji09",
@@ -43512,21 +43491,21 @@
       "Okome"
     ]
   },
-  "Web/XSLT/Reference/Element/variable": {
+  "Web/XML/XSLT/Reference/Element/variable": {
     "modified": "2019-11-30T15:26:11.225Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/when": {
+  "Web/XML/XSLT/Reference/Element/when": {
     "modified": "2019-11-30T15:26:07.229Z",
     "contributors": [
       "mfuji09",
       "silverskyvicto"
     ]
   },
-  "Web/XSLT/Reference/Element/with-param": {
+  "Web/XML/XSLT/Reference/Element/with-param": {
     "modified": "2019-11-30T15:26:08.530Z",
     "contributors": [
       "mfuji09",
@@ -44118,6 +44097,21 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT": {
+    "modified": "2020-04-13T14:03:23.203Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT_300e84df44cef6ddc8270071df554b6eb08575161affaf8d115dfcaa77eaed54": {
+    "modified": "2020-04-13T14:02:55.964Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank",
+      "Marsf"
+    ]
+  },
   "conflicting/Web/API/Element/clientHeight": {
     "modified": "2020-10-15T21:21:06.996Z",
     "contributors": [
@@ -44220,6 +44214,12 @@
     "modified": "2020-10-15T22:05:58.801Z",
     "contributors": [
       "yumemi-kuwahara"
+    ]
+  },
+  "conflicting/Web/API/console_60401d2da71e30c9a41a6920151c1b4910a6c5782043e95b996891763b305aee": {
+    "modified": "2019-03-23T22:03:50.688Z",
+    "contributors": [
+      "mdmss37"
     ]
   },
   "conflicting/Web/Accessibility/ARIA": {

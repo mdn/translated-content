@@ -48,7 +48,7 @@ margin: unset;
 - **{{cssxref("length")}}**
   - : 以固定值为外边距。
 - {{cssxref("percentage")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的*宽度*，以百分比值为外边距。
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的*宽度*，以百分比值为外边距。
 - `auto`
   - : 让浏览器自己选择一个合适的外边距。有时，在一些特殊情况下，该值可以使元素居中。
 

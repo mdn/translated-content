@@ -1,5 +1,5 @@
 ---
-title: ":target"
+title: :target
 slug: Web/CSS/:target
 l10n:
   sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12

@@ -9,7 +9,18 @@ l10n:
 
 **`for` 语句**用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 语法
 

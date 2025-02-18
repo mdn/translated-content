@@ -11,7 +11,17 @@ l10n:
 
 한쪽 끝의 공백만 제거한 새로운 문자열을 반환하려면 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 또는 {{jsxref("String.prototype.trimEnd()" , "trimEnd()")}}를 사용하세요.
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+{{InteractiveExample("JavaScript Demo: String.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## 구문
 

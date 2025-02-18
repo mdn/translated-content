@@ -9,7 +9,22 @@ l10n:
 
 {{jsxref("String")}} 값의 **`endsWith()`** 메서드는 문자열이 이 문자열의 문자로 끝나는지 여부를 결정하여 적절하게 `true` 또는 `false`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+
+```js interactive-example
+const str1 = "Cats are the best!";
+
+console.log(str1.endsWith("best!"));
+// Expected output: true
+
+console.log(str1.endsWith("best", 17));
+// Expected output: true
+
+const str2 = "Is this a question?";
+
+console.log(str2.endsWith("question"));
+// Expected output: false
+```
 
 ## 구문
 

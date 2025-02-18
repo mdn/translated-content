@@ -55,9 +55,9 @@ slug: Web/CSS/CSS_fonts/Variable_fonts_guide
      "GRAD" 88;
    ```
 
-   `wght` (weight) 是一个注册轴， `GRAD` (grade) 是一个自定义轴。
+   `wght`（weight）是一个注册轴，`GRAD`（grade）是一个自定义轴。
 
-2. 如果你使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。你可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
+2. 如果你使用 `font-variation-settings` 设置了值并想要更改其中一个值，则必须重新声明所有值。你可以通过对各个值使用[CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)（CSS 变量）来解决此限制，并只需修改单个自定义属性的值。该指南末尾有示例代码。
 
 ### 字重
 

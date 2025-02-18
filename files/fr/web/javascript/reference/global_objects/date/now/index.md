@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/now
 
 La méthode **`Date.now()`** renvoie le nombre de millisecondes écoulées depuis le 1er Janvier 1970 00:00:00 UTC.
 
-{{EmbedInteractiveExample("pages/js/date-now.html")}}
+{{InteractiveExample("JavaScript Demo: Date.now()")}}
+
+```js interactive-example
+// This example takes 2 seconds to run
+const start = Date.now();
+
+console.log("starting timer...");
+// Expected output: "starting timer..."
+
+setTimeout(() => {
+  const millis = Date.now() - start;
+
+  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  // Expected output: "seconds elapsed = 2"
+}, 2000);
+```
 
 ## Syntaxe
 
