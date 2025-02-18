@@ -418,7 +418,7 @@ El CSS establece la altura del elemento de registro.
 
 #### Código de prueba del registro
 
-Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "qué se registra" no es tan importante. Se implementa trivialmente como un botón que el usuario puede presionar para incrementar un valor.
+Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante. Se implementa trivialmente como un botón que el usuario puede presionar para incrementar un valor.
 
 ```html
 <button id="increment" type="button">Presióname varias veces</button>
@@ -493,7 +493,7 @@ Ten en cuenta que el código JavaScript anterior asegura que, si el contenido de
 
 #### Código de prueba de registro
 
-Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "qué se registra" no es tan importante.
+Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante.
 Por lo tanto, se implementa de manera trivial como un botón que el usuario puede presionar para incrementar un valor.
 
 ```html
