@@ -67,7 +67,7 @@ Storage Access API のメソッドは、{{domxref("Document")}} インターフ�
 
 {{htmlelement("iframe")}} 要素の `sandbox` 属性には新しいトークン `allow-storage-access-by-user-activation` があり、サンドボックス化した `<iframe>` は Storage Access API を使用してストレージアクセスを要求できます。
 
-## 仕様
+## 仕様書
 
 API は現在、提案段階にあり、標準化プロセスはまだ開始されていません。 現在、Apple の [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) ブログ投稿、および [WHATWG HTML issue 3338 — Proposal: Storage Access API](https://github.com/whatwg/html/issues/3338) で API の仕様の詳細を見つけることができます。
 

@@ -46,7 +46,7 @@ if (window.isSecureContext) {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

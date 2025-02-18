@@ -56,7 +56,7 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 </math>
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

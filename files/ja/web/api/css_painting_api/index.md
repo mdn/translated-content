@@ -171,7 +171,7 @@ li:nth-of-type(3n + 1) {
 
 {{EmbedLiveSample("hollowExample", 300, 300)}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
