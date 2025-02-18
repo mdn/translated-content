@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 
 La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.
 
-{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.resolvedOptions")}}
+
+```js interactive-example
+const numberDe = new Intl.NumberFormat("de-DE");
+const numberAr = new Intl.NumberFormat("ar");
+
+console.log(numberDe.resolvedOptions().numberingSystem);
+// Expected output: "latn"
+
+console.log(numberAr.resolvedOptions().numberingSystem);
+// Expected output: "arab"
+```
 
 ## Syntaxe
 

@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffe
 
 Le **constructeur `SharedArrayBuffer()`** permet de créer un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) qui représente un tampon de mémoire binaire brute de taille fixe, similaire à un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## Syntaxe
 

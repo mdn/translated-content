@@ -9,7 +9,14 @@ l10n:
 
 **`toUpperCase()`** メソッドは、呼び出す文字列の値を（文字列でない場合、文字列に変換して）大文字に変換して返します。
 
-{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.toUpperCase()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+console.log(sentence.toUpperCase());
+// Expected output: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG."
+```
 
 ## 構文
 
