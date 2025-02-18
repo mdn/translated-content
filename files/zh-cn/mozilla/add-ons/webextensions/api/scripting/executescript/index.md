@@ -14,7 +14,7 @@ l10n:
 
 使用此 API 必须拥有 `"scripting"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)以及目标 URL 的权限，权限可以是明确的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)或使用 [activeTab 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#活动标签权限)。需要注意，部分特殊页面（包括阅读模式、查看源代码和 PDF 查看器页面）不支持该权限。
 
-在 Firefox 和 Safari 中，部分缺少主机权限可能导致执行部分成功（部分结果包含在兑现的 Promise 中）。在 Chrome 中，任何缺少的权限都会阻止执行（参见 [Issue 1325114](https://crbug.com/1325114)）。
+在 Firefox 和 Safari 中，缺少部分主机权限也会导致执行成功（这一部分的结果会包含在兑现的 Promise 中）。在 Chrome 中，缺少任意一个权限都会导致执行被阻止（参见 [Issue 1325114](https://crbug.com/1325114)）。
 
 注入的脚本被称为[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)。
 
