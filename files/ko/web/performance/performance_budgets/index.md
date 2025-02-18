@@ -63,7 +63,7 @@ l10n:
 
 성능 예산은 새로운 시장을 개척하고 개인 맞춤 경험을 제공할 수 있어 현재 사용자를 위한 최적의 행동을 보호하는데 도움이 됩니다.
 
-## 참고
+## 같이 보기
 
 - [Start Performance Budgeting](https://addyosmani.com/blog/performance-budgets/) by Addy Osmani
 - [Performance Budgets 101](https://web.dev/articles/performance-budgets-101) by Milica Mihajlija
