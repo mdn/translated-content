@@ -176,7 +176,7 @@ l10n:
 
 サンプルでわかるように、ラベルとそのウィジェットを {{HTMLElement("ul")}} や {{HTMLElement("ol")}} リストの中の {{HTMLElement("li")}} 要素で包み込むのが一般的な慣習です。HTML リストにあるように、{{HTMLElement("p")}} 要素と {{HTMLElement("div")}} 要素も良く使われます。リストは複数のチェックボックスやラジオボタンを構造化するのに最もよく使われます。
 
-{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例{{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
+{{HTMLElement("fieldset")}} 要素に加えて、複雑なフォームの構築に HTML の見出し (例えば {{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}) やセクション (例 {{htmlelement("section")}}) を使うことも一般的です。
 
 とりわけ、コーディングスタイルがどうあるのが心地よく、どれがアクセシブルで使いやすいフォームとなるのかを見つけるのはあなた次第です。別の機能セクションは別の {{htmlelement("section")}} 要素と、ラジオボタンを含む {{htmlelement("fieldset")}} にそれぞれ分けておくべきです。
 
@@ -391,7 +391,7 @@ l10n:
 
 {{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
 
-## スキルをテスト
+## スキルテスト
 
 この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: フォームの構築](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure)を参照してください。
 

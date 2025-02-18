@@ -1,12 +1,11 @@
 ---
 title: ウェブフォームへのスタイル設定
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
-original_slug: Learn/Forms/Styling_web_forms
 l10n:
-  sourceCommit: fbc9980c0718c3ead40863b20a74fc8535ebcc85
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 前回までのいくつかの記事では、HTML でウェブフォームを作成する方法を示しました。これで、[CSS](/ja/docs/Web/CSS) でスタイル設定する方法を示します。
 
@@ -15,8 +14,8 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> および
-        <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> に対する基本的な理解。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> および
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> に対する基本的な理解。
       </td>
     </tr>
     <tr>
@@ -53,7 +52,7 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 1. チェックボックスとラジオボタン
 2. [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
 
-これら特殊なケースをどのように扱うかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)の記事で見ていきます。
+これら特殊なケースをどのように扱うかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)の記事で見ていきます。
 
 #### 内部が CSS 単独ではスタイル設定できないもの
 
@@ -66,14 +65,14 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 
 例えば、日付ピッカーのカレンダーや、クリックするとオプションリストが表示されるボタンなどは、CSS を使用するだけではスタイル設定することができません。
 
-[フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)および[カスタムウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)の記事で、これらのスタイル設定の方法を説明します。
+[フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)および[カスタムウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)の記事で、これらのスタイル設定の方法を説明します。
 
 > [!NOTE]
 > フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 擬似要素、例えば {{cssxref('::-moz-range-track')}} がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
 
 ## 単純なフォームウィジェットのスタイル設定
 
-前節の「スタイル設定しやすい」ウィジェットは、[初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)および [CSS の構成要素](/ja/docs/Learn/CSS/Building_blocks)の記事で紹介したテクニックを使用してスタイル設定することができます。また、UI の現在の状態に基づいたスタイル設定を可能にする特別なセレクター [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)もあります。
+前節の「スタイル設定しやすい」ウィジェットは、[初めてのフォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)および [CSS の構成要素](/ja/docs/Learn_web_development/Core/Styling_basics/Building_blocks)の記事で紹介したテクニックを使用してスタイル設定することができます。また、UI の現在の状態に基づいたスタイル設定を可能にする特別なセレクター [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)もあります。
 
 この記事の終わりで例を説明しますが、最初の段階で、フォームのスタイル設定について知っておくべきいくつかの特別な側面について説明します。
 
@@ -161,7 +160,7 @@ HTML フォームにスタイルを設定する方法の具体例を見ていき
 
 ### HTML
 
-HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)で使用したものより少しだけ複雑です。いくつか ID やタイトルを追加しています。
+HTML は、[ガイドの最初の記事](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)で使用したものより少しだけ複雑です。いくつか ID やタイトルを追加しています。
 
 ```html
 <form>
@@ -203,7 +202,7 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 1. fontsquirrel.com の [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) に移動します。
 2. フォームを使って、両方のフォントファイルをアップロードして webfont キットを生成します。キットをコンピューターにダウンロードします。
 3. zip ファイルを展開します。
-4. 展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn/CSS/Styling_text/Web_fonts) の記事を見てください。
+4. 展開した中身には 2 つの `.woff` ファイルと 2 つの `.woff2` ファイルがあります。このファイルを、前と同じ fonts というディレクトリーにコピーします。各フォントの 2 つのファイルはブラウザー互換性を最大化するのに使います; より詳しい情報は [Web fonts](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts) の記事を見てください。
 
 ### CSS
 
@@ -211,7 +210,7 @@ HTML は、[ガイドの最初の記事](/ja/docs/Learn/Forms/Your_first_form)�
 
 #### 全体レイアウト
 
-まず、 {{cssxref("@font-face")}} ルールと、すべての {{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。 fontsquirrel の出力が上記で述べたものと異なる場合、 `stylesheet.css` ファイル内にダウンロード済みの webfont キットの中から正しい `@font-face` ブロックを見つけることができます（下記の `@font-face` ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります）。
+まず、 {{cssxref("@font-face")}} アットルールと、すべての {{HTMLElement("body")}} と {{HTMLElement("form")}} 要素に設定するスタイルを定義して準備します。 fontsquirrel の出力が上記で述べたものと異なる場合、 `stylesheet.css` ファイル内にダウンロード済みの webfont キットの中から正しい `@font-face` ブロックを見つけることができます（下記の `@font-face` ブロックをそれで置換し、パスをフォントファイルのものに更新する必要があります）。
 
 ```css
 @font-face {
@@ -374,16 +373,16 @@ button:focus {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn/Forms/Test_your_skills:_Styling_basics)をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: スタイル設定の基本](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics)をご覧ください。
 
 ## まとめ
 
-ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn/Forms/Advanced_form_styling)、「不良」や「劣悪」に分類されているウィジェットの扱い方を見ていきます。
+ご覧いただいたとおり、テキストフィールドとボタンだけでフォームを作成する限りでは、CSS を使用したスタイル設定は容易です。[次の記事では](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)、「不良」や「劣悪」に分類されているウィジェットの扱い方を見ていきます。
 
-{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 ### 高度なトピック
 
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)
