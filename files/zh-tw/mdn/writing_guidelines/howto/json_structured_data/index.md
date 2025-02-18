@@ -2,6 +2,8 @@
 title: 如何使用結構化資料
 short-title: 使用結構化資料
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
+l10n:
+  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
 MDN 會儘可能地以定義良好的結構來儲存資料。這些資訊隨後會被集中管理，只需更新一次，就可在眾多地方重複使用。
@@ -12,16 +14,16 @@ MDN 會儘可能地以定義良好的結構來儲存資料。這些資訊隨後�
 
 `GroupData` 是一個用來收集 Web API 資訊的 JSON 檔案。API 的分組概念有點模糊：任何介面、方法或屬性都可以屬於多個 API。以某個名稱來分組 API，只是一種約定，用以溝通某項功能，而並非技術上強制的規範。
 
-不過，MDN 需要這些資訊來建立一致性的 Web API 側邊欄（例如使用 `\{{APIRef}}` 巨集），以正確連結參考頁面、指南和概覽文章。
+不過，MDN 需要這些資訊來建立具有適當參考頁面、指南和概覽文章的 Web API 側邊欄（例如使用 `\{{APIRef}}` 巨集）。
 
-GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬的介面、屬性、方法、指南和概覽頁面。過去，它也會列出字典和回呼函式。但這種用法雖然仍受支援，已被標記為不推薦使用，並將在未來移除。
+GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬的介面、屬性、方法、指南和概覽頁面。過去，它也會列出字典和回呼函式。但這種用法雖然仍受支援，已被棄用，並將在未來移除。
 
 ### GroupData 的結構
 
 > [!WARNING]
-> 此檔案中列出的不存在的頁面將會被忽略（以 zh-TW 為例）。
+> 此檔案中列出的不存在的頁面將會被忽略（在 en-US 中）。
 
-`GroupData.json` 中的一個條目具有以下結構：
+`GroupData.json` 中的條目具有以下結構：
 
 ```json
 "Name_of_the_API": {
@@ -49,35 +51,35 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 }
 ```
 
-...其中：
+……其中：
 
 - `"Name_of_the_API"`
-  - ：這個鍵同時作為側邊欄巨集（例如 `\{{APIRef("Name_of_the_API")}}`）使用的 ID，也就是側邊欄上顯示的名稱。請謹慎選擇。
+  - : 這個鍵同時作為側邊欄巨集（例如 `\{{APIRef("Name_of_the_API")}}`）使用的 ID，也就是側邊欄上顯示的名稱。請謹慎選擇。
     > [!WARNING]
     > 若要更改側邊欄上顯示的名稱，必須編輯所有顯示它的頁面。
 - `"overview"`
-  - ：這是一個只包含一個頁面的清單：即概覽頁面，用作 `"Name_of_the_API"` 文字的連結。其值為頁面的 _標題_，而且該頁面必須位於 `web/api/` 目錄下。
+  - : 這是一個只包含一個頁面的清單：即概覽頁面，用作 `"Name_of_the_API"` 文字的連結。其值為頁面的*標題*，而且該頁面必須位於 `web/api/` 目錄下。
 - `"guides"`
-  - ：這是一個以特定順序顯示在側邊欄上的指南清單。值為從 `/docs/` 開始的 _頁面路徑_。
+  - : 這是一個以特定順序顯示在側邊欄上的指南清單。值為從 `/docs/` 開始的*頁面路徑*。
 - `"interfaces"`
-  - ：列出屬於該 API 的介面。
+  - : 列出屬於該 API 的介面。
 - `"methods"`
-  - ：列出屬於該 API 的方法。
+  - : 列出屬於該 API 的方法。
     > [!NOTE]
     > 已在 `"interfaces"` 中列出的介面所擁有的方法，**千萬不要**在此處再列出。若該頁面的 `page-type` 鍵為 `web-api-static-method` 或 `web-api-instance-method`，這些方法會自動加入側邊欄。
 - `"properties"`
-  - ：列出屬於該 API 的其他介面上的屬性，例如 `navigator.xr`（WebXR API 為 `navigator` 物件新增的屬性）。
+  - : 列出屬於該 API 的其他介面上的屬性，例如 `navigator.xr`（WebXR API 為 `navigator` 物件新增的屬性）。
     > [!NOTE]
     > 已在 `"interfaces"` 中列出的介面所擁有的屬性，**千萬不要**在此處再列出。若該頁面的 `page-type` 鍵為 `web-api-static-property` 或 `web-api-instance-property`，這些屬性會自動加入側邊欄。
 - `"events"`
-  - ：列出屬於該 API 的其他介面上的事件。其值為位於 `Web/Events` 目錄下的頁面 _標題_。
+  - : 列出屬於該 API 的其他介面上的事件。其值為位於 `Web/Events` 目錄下的頁面*標題*。
     > [!NOTE]
     > 針對 `"interfaces"` 中列出的介面的事件，**千萬不要**在此處再列出。若該頁面的 `page-type` 鍵為 `web-api-event`，這些事件會自動加入側邊欄。
 
-此外，還有兩個鍵 `"dictionaries"` 和 `"callbacks"`，其原理相同。由於我們不再為這些實體建立獨立頁面，所以已標記為不推薦使用，未來也不會再新增任何條目（我們會逐步移除它們）。
+此外，還有兩個鍵 `"dictionaries"` 和 `"callbacks"`，其原理相同。由於我們不再為這些實體建立獨立頁面，所以已被棄用，未來也不會再新增任何條目（我們會逐步移除它們）。
 
 > [!NOTE]
-> 此外，所有的鍵都不是強制性的；不過建議（且未來我們會強制要求）即使沒有內容，也要把未被標記為不推薦使用的鍵加入空清單，這能表明「無值」是經過深思熟慮的選擇。
+> 此外，所有的鍵都不是強制性的；不過建議（且未來我們會強制要求）即使沒有內容，也要用空清單加入未被棄用的鍵，這能表明「無值」是經過深思熟慮的選擇。
 
 ### GroupData 的更新流程
 
@@ -85,20 +87,20 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 
 要測試你的修改，請確認 PR 中的檔案所顯示的側邊欄條目是否都正確顯示。
 
-`GroupData.json` 檔案位於 [這裡](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json)（GitHub）。
+`GroupData.json` 檔案位於[這裡](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json)（GitHub）。
 
 ## InterfaceData：記錄介面繼承
 
 > [!NOTE]
 > 我們希望未來能從 w3c/webref 提供的資料自動生成此檔案。
 
-`InterfaceData` 描述了介面的階層結構，列出了繼承關係。過去，它也會列出各介面所實作的 mixin；但由於這種用法已不推薦，因此我們會隨著 MDN 的更新逐步從此檔案中移除 mixin。
+`InterfaceData` 描述了介面的階層結構，列出了繼承關係。過去，它也會列出各介面所實作的混入（mixin）；但由於這種用法已被棄用，因此我們會隨著 MDN 的更新逐步從此檔案中移除混入。
 
 這些繼承資料在建立 API 側邊欄以及介面頁面中的 `\{{InheritanceDiagram}}` 所使用。
 
 ### InterfaceData 的結構
 
-一個 `InterfaceData.json` 中的條目具有以下結構：
+`InterfaceData.json` 中的條目具有以下結構：
 
 ```json
 "Name_of_the_interface": {
@@ -108,9 +110,9 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 ```
 
 > [!NOTE]
-> 由於 mixin 已不推薦使用，所有新介面的 `"impl"` 必須為空清單。
+> 由於混入已被棄用，所有新介面的 `"impl"` 必須為空清單。
 
-`"Name_of_the_parent_interface"` 的值不是一個清單，而是單一的條目，且為必填；我們不應該列出任何沒有繼承其他介面的介面。
+`"Name_of_the_parent_interface"` 的值不是清單，而是單一的條目，且為必填；我們不應該列出任何沒有繼承其他介面的介面。
 
 ### InterfaceData 的更新流程
 
@@ -118,12 +120,12 @@ GroupData 正是用來達成這個目的：對於每個 API，它會列出所屬
 
 要測試你的修改，請確認你在 PR 中修改的每個介面的側邊欄是否正確顯示繼承關係。
 
-`InterfaceData.json` 檔案位於 [這裡](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json)（GitHub）。
+`InterfaceData.json` 檔案位於[這裡](https://github.com/mdn/content/blob/main/files/jsondata/InterfaceData.json)（GitHub）。
 
 ## SpecData：規範資訊
 
-> [!WARNING]`SpecData.json` 檔案已不再維護。正式的規範資訊儲存在 w3c/browser-spec 與 mdn/browser-compat-data 中各功能的 `spec_url` 鍵中。
+> **警告：** `SpecData.json` 檔案已不再維護。正式的規範資訊儲存在 w3c/browser-spec 與 mdn/browser-compat-data 中各功能的 `spec_url` 鍵中。
 
-我們正在移除使用 `SpecData.json` 檔案的 `\{{SpecName}}` 與 `\{{Spec2}}` 巨集，不再接受對 `SpecData.json` 檔案的任何進一步貢獻；取而代之的是，請嘗試使用 `\{{Specifications}}` 巨集來插入規範表格，或直接硬編碼（且良好的）規範連結。請注意，多數情況下，在 _Specifications_ 區段之外提及或連結規範，都代表該部分在 MDN 上的文件記錄不完整。
+我們正在移除使用 `SpecData.json` 檔案的 `\{{SpecName}}` 與 `\{{Spec2}}` 巨集，不再接受對 `SpecData.json` 檔案的任何進一步貢獻；取而代之的是，請嘗試使用 `\{{Specifications}}` 巨集來插入規範表格，或直接硬編碼（且良好的）規範連結。請注意，多數情況下，在*規範*小節之外提及或連結規範，都代表該部分在 MDN 上的文件記錄不完整。
 
-`SpecData.json` 檔案位於 [這裡](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json)（GitHub）。
+`SpecData.json` 檔案位於[這裡](https://github.com/mdn/content/blob/main/files/jsondata/SpecData.json)（GitHub）。
