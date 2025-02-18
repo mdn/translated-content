@@ -1,6 +1,8 @@
 ---
 title: Ejemplos ejecutables
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
+l10n:
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
 
 {{MDNSidebar}}
