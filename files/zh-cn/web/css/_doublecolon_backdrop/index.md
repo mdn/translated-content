@@ -64,7 +64,8 @@ dialog::backdrop {
 
 ```css
 ::backdrop {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle,
       #fff 0 5vw,
       transparent 5vw 20vw,

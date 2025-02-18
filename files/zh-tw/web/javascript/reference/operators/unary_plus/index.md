@@ -7,7 +7,30 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 
 一元正號運算子（`+`）置於運算元之前並取其數值。如果可以，亦會將之轉為數字。
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+
+```js interactive-example
+const x = 1;
+const y = -1;
+
+console.log(+x);
+// Expected output: 1
+
+console.log(+y);
+// Expected output: -1
+
+console.log(+"");
+// Expected output: 0
+
+console.log(+true);
+// Expected output: 1
+
+console.log(+false);
+// Expected output: 0
+
+console.log(+"hello");
+// Expected output: NaN
+```
 
 ## 語法
 

@@ -64,7 +64,7 @@ l10n:
 
 ### 多个样式元素
 
-在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
+在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
 
 ```html
 <!doctype html>

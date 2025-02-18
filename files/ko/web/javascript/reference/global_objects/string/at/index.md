@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("String")}} 값의 **`at()`** 메서드는 정수 값을 받아 지정된 오프셋에 위치한 단일 UTF-16 코드 유닛으로 구성된 새로운 {{jsxref("String")}}을 반환합니다. 이 메서드는 양의 정수와 음의 정수를 모두 허용합니다. 음의 정수는 문자열의 마지막 문자부터 거꾸로 세어 위치를 지정합니다.
 
-{{EmbedInteractiveExample("pages/js/string-at.html")}}
+{{InteractiveExample("JavaScript Demo: String.at()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+let index = 5;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of 5 returns the character u"
+
+index = -4;
+
+console.log(`An index of ${index} returns the character ${sentence.at(index)}`);
+// Expected output: "An index of -4 returns the character d"
+```
 
 ## 구문
 

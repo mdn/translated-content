@@ -9,7 +9,22 @@ l10n:
 
 **`Object.entries()`** は静的メソッドで、与えられたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティのキーと値の組の配列を返します。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## 構文
 

@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 **`Intl.NumberFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールと整形オプションに従って数値を整形します。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-format.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format", "taller")}}
+
+```js interactive-example
+const amount = 654321.987;
+
+const options1 = { style: "currency", currency: "RUB" };
+const numberFormat1 = new Intl.NumberFormat("ru-RU", options1);
+
+console.log(numberFormat1.format(amount));
+// Expected output: "654 321,99 ₽"
+
+const options2 = { style: "currency", currency: "USD" };
+const numberFormat2 = new Intl.NumberFormat("en-US", options2);
+
+console.log(numberFormat2.format(amount));
+// Expected output: "$654,321.99"
+```
 
 <!-- このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
 

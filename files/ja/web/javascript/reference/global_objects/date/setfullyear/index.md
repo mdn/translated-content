@@ -9,7 +9,21 @@ l10n:
 
 **`setFullYear()`** メソッドは、地方時に基づき、指定された日付の「年」を設定します。新しいタイムスタンプを返します。
 
-{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setFullYear(1969);
+
+console.log(event.getFullYear());
+// Expected output: 1969
+
+event.setFullYear(0);
+
+console.log(event.getFullYear());
+// Expected output: 0
+```
 
 ## 構文
 

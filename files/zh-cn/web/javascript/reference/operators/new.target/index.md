@@ -9,7 +9,22 @@ l10n:
 
 **`new.target`** 元属性允许你检测函数或构造函数是否是通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符被调用的。在通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符执行的函数或构造函数中，`new.target` 返回一个指向 `new` 调用的构造函数或函数的引用。在普通的函数调用中，`new.target` 的值是 {{jsxref("undefined")}}。
 
-{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+
+```js interactive-example
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalid
+}
+```
 
 ## 语法
 

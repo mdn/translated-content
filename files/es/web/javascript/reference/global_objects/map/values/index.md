@@ -9,7 +9,22 @@ l10n:
 
 El método **`values()`** de las instancias {{jsxref("Map")}} regresa un nuevo objeto _[iterator de mapa](/es/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ que contiene los valores de cada elemento en este _map_ en orden de inserción.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1.values();
+
+console.log(iterator1.next().value);
+// Expected output: "foo"
+
+console.log(iterator1.next().value);
+// Expected output: "bar"
+```
 
 ## Sintaxis
 

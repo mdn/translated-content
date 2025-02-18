@@ -59,7 +59,7 @@ l10n:
 
   - : 用 CSS 定位 HTML 元素，其中包含带状态的元素。
 
-- [优先级](/zh-CN/docs/Web/CSS/Specificity)
+- [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
 
   - : 通过[优先级测验](https://estelle.github.io/CSS/selectors/exercises/specificity.html)了解浏览器算法在遇到存在冲突的 CSS 声明时会决定将哪个声明应用到元素上。
 

@@ -10,7 +10,20 @@ l10n:
 {{jsxref("Set")}} 객체의 **`has()`** 메서드는
 이 Set 객체에 주어진 요소가 존재하는지 여부를 판별해 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## 구문
 
