@@ -18,7 +18,7 @@ slug: Web/CSS/@font-face
 
 ## 概述
 
-这是一个叫做`@font-face` 的[CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) ，它允许网页开发者为其网页指定在线字体。通过这种作者自备字体的方式，`@font-face` 可以消除对用户电脑字体的依赖。 `@font-face` 不仅可以放在在 CSS 的最顶层，也可以放在 @规则 的 [条件规则组](/zh-CN/docs/Web/CSS/At-rule#conditional_group_rules) 中。
+这是一个叫做`@font-face` 的[CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)，它允许网页开发者为其网页指定在线字体。通过这种作者自备字体的方式，`@font-face` 可以消除对用户电脑字体的依赖。`@font-face` 不仅可以放在在 CSS 的最顶层，也可以放在 @规则 的[条件规则组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)中。
 
 ## 语法
 

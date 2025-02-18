@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/return
 
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
 
-{{EmbedInteractiveExample("pages/js/statement-return.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+
+```js interactive-example
+function getRectArea(width, height) {
+  if (width > 0 && height > 0) {
+    return width * height;
+  }
+  return 0;
+}
+
+console.log(getRectArea(3, 4));
+// Expected output: 12
+
+console.log(getRectArea(-3, 4));
+// Expected output: 0
+```
 
 ## 語法
 

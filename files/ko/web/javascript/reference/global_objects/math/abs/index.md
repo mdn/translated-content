@@ -9,7 +9,22 @@ l10n:
 
 **`Math.abs()`** 정적 메서드는 숫자의 절대 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-abs.html")}}
+{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+
+```js interactive-example
+function difference(a, b) {
+  return Math.abs(a - b);
+}
+
+console.log(difference(3, 5));
+// Expected output: 2
+
+console.log(difference(5, 3));
+// Expected output: 2
+
+console.log(difference(1.23456, 7.89012));
+// Expected output: 6.6555599999999995
+```
 
 ## 구문
 

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 El método **`flatMap()`** primero mapea cada elemento usando una función de mapeo, luego aplana el resultado en una nueva matriz. Es idéntico a un [map](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) seguido de un [flatten](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)de profundidad 1, pero `flatMap` es a menudo útil y la fusión de ambos en un método es ligeramente más eficiente.
 
-{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}
+{{InteractiveExample("JavaScript Demo: Array.flatMap()")}}
+
+```js interactive-example
+const arr1 = [1, 2, 1];
+
+const result = arr1.flatMap((num) => (num === 2 ? [2, 2] : 1));
+
+console.log(result);
+// Expected output: Array [1, 2, 2, 1]
+```
 
 La fuente de este ejemplo interactivo, se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción.
 

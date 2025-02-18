@@ -15,7 +15,21 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{EmbedInteractiveExample("pages/js/math-sinh.html")}}
+{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+
+```js interactive-example
+console.log(Math.sinh(0));
+// Expected output: 0
+
+console.log(Math.sinh(1));
+// Expected output: 1.1752011936438014
+
+console.log(Math.sinh(-1));
+// Expected output: -1.1752011936438014
+
+console.log(Math.sinh(2));
+// Expected output: 3.626860407847019
+```
 
 ## 構文
 

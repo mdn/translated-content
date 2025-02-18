@@ -11,7 +11,21 @@ l10n:
 
 正規表現について詳しく知りたい方は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide) の [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions) を参照してください。
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## 構文
 

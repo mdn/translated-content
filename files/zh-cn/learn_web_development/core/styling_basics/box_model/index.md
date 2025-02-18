@@ -72,7 +72,7 @@ l10n:
 当你继续详细学习 CSS 布局时，将会遇到 [`flex`](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox) 以及盒子可以具有的其他各种内部值，例如 [`grid`](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)。
 
 > [!NOTE]
-> 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)。
+> 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)。
 
 ## 不同显示类型的例子
 

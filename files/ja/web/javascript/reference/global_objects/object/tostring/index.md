@@ -9,7 +9,22 @@ l10n:
 
 **`toString()`** は {{jsxref("Object")}} インスタンスのオブジェクトで、このオブジェクトを表す文字列を返します。このメソッドは、独自の[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)ロジックのために派生オブジェクトがオーバーライドするためのものです。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+
+```js interactive-example
+function Dog(name) {
+  this.name = name;
+}
+
+const dog1 = new Dog("Gabby");
+
+Dog.prototype.toString = function dogToString() {
+  return `${this.name}`;
+};
+
+console.log(dog1.toString());
+// Expected output: "Gabby"
+```
 
 ## 構文
 

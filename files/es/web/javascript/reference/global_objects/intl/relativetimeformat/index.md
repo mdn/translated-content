@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 El objeto **`Intl.RelativeTimeFormat`** te proporciona una manera de formatear tiempos relativos con traducciones.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+
+console.log(rtf1.format(3, "quarter"));
+// Expected output: "in 3 qtrs."
+
+console.log(rtf1.format(-1, "day"));
+// Expected output: "1 day ago"
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+
+console.log(rtf2.format(2, "day"));
+// Expected output: "pasado mañana"
+```
 
 El código de este ejemplo interactivo está disponible en un repositorio GitHub. Si quieres contribuir a los ejemplos interactivos del proyecto, por favor, clona <https://github.com/mdn/interactive-examples> y manda una Pull Request.
 

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/has
 
 Метод **`has()`** возвращает логическое значение, показывающее, существует ли элемент с указанным значением в объекте `Set` или нет.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+
+```js interactive-example
+const set1 = new Set([1, 2, 3, 4, 5]);
+
+console.log(set1.has(1));
+// Expected output: true
+
+console.log(set1.has(5));
+// Expected output: true
+
+console.log(set1.has(6));
+// Expected output: false
+```
 
 ## Синтаксис
 

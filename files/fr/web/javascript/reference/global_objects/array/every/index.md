@@ -10,7 +10,16 @@ La méthode **`every()`** permet de tester si tous les éléments d'un tableau v
 > [!NOTE]
 > Cette méthode renvoie `true` pour n'importe quelle condition utilisée sur un tableau vide.
 
-{{EmbedInteractiveExample("pages/js/array-every.html")}}
+{{InteractiveExample("JavaScript Demo: Array.every()")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## Syntaxe
 
