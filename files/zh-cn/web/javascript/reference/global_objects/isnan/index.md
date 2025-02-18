@@ -9,7 +9,22 @@ l10n:
 
 **`isNaN()`** 函数用来确定一个值是否为 {{jsxref("NaN")}}，若有必要，则首先将值转换为数字。由于 `isNaN()` 函数内部的强制类型转换可能[令人迷惑](#描述)，因此你可能更想要使用 {{jsxref("Number.isNaN()")}}。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## 语法
 

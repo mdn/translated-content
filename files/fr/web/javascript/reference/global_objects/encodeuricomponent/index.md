@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 
 La fonction **`encodeURIComponent()`** permet d'encoder un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par une, deux, trois ou quatres séquences d'échappement UTF-8 correspondantes (quatre séquences seront utilisées uniquement lorsque les caractères à encoder sont composés de deux caractères « _surrogate_ »).
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()")}}
+
+```js interactive-example
+// Encodes characters such as ?,=,/,&,:
+console.log(`?x=${encodeURIComponent("test?")}`);
+// Expected output: "?x=test%3F"
+
+console.log(`?x=${encodeURIComponent("шеллы")}`);
+// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```
 
 ## Syntaxe
 

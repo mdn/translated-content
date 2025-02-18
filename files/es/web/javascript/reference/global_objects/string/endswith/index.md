@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
 
 El método **`endsWith()`** determina si una cadena de texto termina con los caracteres de una cadena indicada, devolviendo `true` o `false` según corresponda.
 
-{{EmbedInteractiveExample("pages/js/string-endswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+
+```js interactive-example
+const str1 = "Cats are the best!";
+
+console.log(str1.endsWith("best!"));
+// Expected output: true
+
+console.log(str1.endsWith("best", 17));
+// Expected output: true
+
+const str2 = "Is this a question?";
+
+console.log(str2.endsWith("question"));
+// Expected output: false
+```
 
 ## Sintaxis
 

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-repeat"
+title: -webkit-mask-repeat
 slug: Web/CSS/mask-repeat
 ---
 

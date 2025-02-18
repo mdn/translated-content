@@ -5,7 +5,23 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 {{jsSidebar("Statements")}}A condicional **switch** avalia uma [expressão](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators), combinando o valor da expressão para um cláusula **case**, e executa as [instruções](/pt-BR/docs/Web/JavaScript/Reference/Statements) associadas ao **case**.
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## Sintaxe
 

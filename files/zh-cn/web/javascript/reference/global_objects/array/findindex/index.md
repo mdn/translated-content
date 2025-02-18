@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 另请参阅 {{jsxref("Array/find", "find()")}} 方法，它返回满足测试函数的第一个元素（而不是它的索引）。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 ## 语法
 

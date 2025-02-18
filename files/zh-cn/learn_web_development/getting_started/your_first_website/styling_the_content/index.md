@@ -165,7 +165,8 @@ h1 {
    ```css
    html {
      font-size: 10px; /* px 表示“像素（pixel）”: 基础字号为 10 像素 */
-     font-family: "Open Sans", sans-serif; /* 这应该是你从 Google Fonts 得到的其余输出。 */
+     font-family:
+       "Open Sans", sans-serif; /* 这应该是你从 Google Fonts 得到的其余输出。 */
    }
    ```
 

@@ -9,7 +9,18 @@ l10n:
 
 **`while`** 文は、テスト条件が真と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
 
-{{EmbedInteractiveExample("pages/js/statement-while.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - While")}}
+
+```js interactive-example
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// Expected output: 3
+```
 
 ## 構文
 
