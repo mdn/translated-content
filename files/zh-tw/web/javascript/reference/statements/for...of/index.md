@@ -2,7 +2,7 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: 3f91fdcc678991410f4f5adcbff44d1b3b1ede88
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{jsSidebar("Statements")}}
