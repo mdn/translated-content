@@ -3,18 +3,18 @@ title: Event：preventDefault() 方法
 slug: Web/API/Event/preventDefault
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 {{domxref("Event")}} 接口的 **`preventDefault()`** 方法，告诉{{Glossary("user agent", "用户代理")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。
 
-此事件还是继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
+此事件仍会继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 才停止传播。
 
-如后文所述，对于不可取消的事件（例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 分派的、没有指定 `cancelable: true` 的事件），调用 **`preventDefault()`** 是没有任何效果的。
+如后文所述，对于不可取消的事件（例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 分派的、没有指定 `cancelable: true` 的事件），调用 **`preventDefault()`** 是没有任何效果的，并且可能导致控制台警告信息。
 
 ### 语法
 
 ```js-nolint
-event.preventDefault()
+preventDefault()
 ```
 
 ## 示例
@@ -31,8 +31,8 @@ const checkbox = document.querySelector("#id-checkbox");
 checkbox.addEventListener("click", checkboxClick, false);
 
 function checkboxClick(event) {
-  let warn = "preventDefault() won't let you check this!<br>";
-  document.getElementById("output-box").innerHTML += warn;
+  const warn = "preventDefault() 将导致你无法选中此项\n";
+  document.getElementById("output-box").innerText += warn;
   event.preventDefault();
 }
 ```
@@ -40,7 +40,7 @@ function checkboxClick(event) {
 #### HTML
 
 ```html
-<p>Please click on the checkbox control.</p>
+<p>请勾选复选框。</p>
 
 <form>
   <label for="id-checkbox">Checkbox:</label>
@@ -66,10 +66,10 @@ function checkboxClick(event) {
 
 ```html
 <div class="container">
-  <p>Please enter your name using lowercase letters only.</p>
+  <p>请仅用小写字母输入你的名字。</p>
 
   <form>
-    <input type="text" id="my-textbox" />
+    <input type="text" id="my-textbox" autocomplete="off" />
   </form>
 </div>
 ```
@@ -94,26 +94,19 @@ function checkboxClick(event) {
 这里是相关的 JavaScript 代码。首先，监听 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件：
 
 ```js
-var myTextbox = document.getElementById("my-textbox");
-myTextbox.addEventListener("keypress", checkName, false);
+const myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keydown", checkName, false);
 ```
 
 `checkName()` 方法可以监听按键并且决定是否允许按键的默认行为发生。
 
 ```js
 function checkName(evt) {
-  var charCode = evt.charCode;
-  if (charCode != 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      displayWarning(
-        "Please use lowercase letters only." +
-          "\n" +
-          "charCode: " +
-          charCode +
-          "\n",
-      );
-    }
+  const key = evt.key;
+  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!lowerCaseAlphabet.includes(key)) {
+    evt.preventDefault();
+    displayWarning(`请仅用小写字母。\n你按下了：${key}\n`);
   }
 }
 ```
@@ -121,21 +114,21 @@ function checkName(evt) {
 `displayWarning()` 方法显示了一个问题的通知。这不是一种优雅的方法，但是确实可以达到我们的目的。
 
 ```js
-var warningTimeout;
-var warningBox = document.createElement("div");
+let warningTimeout;
+const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
-  warningBox.innerHTML = msg;
+  warningBox.innerText = msg;
 
   if (document.body.contains(warningBox)) {
-    window.clearTimeout(warningTimeout);
+    clearTimeout(warningTimeout);
   } else {
-    // insert warningBox after myTextbox
+    // 在 myTextbox 后插入 warningBox
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function () {
+  warningTimeout = setTimeout(() => {
     warningBox.parentNode.removeChild(warningBox);
     warningTimeout = -1;
   }, 2000);
