@@ -28,18 +28,20 @@
   },
   "dependencies": {
     "autocorrect-node": "2.13.0",
-    "cld": "^2.10.0",
-    "fdir": "^6.4.2",
+    "fdir": "^6.4.3",
+    "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
+    "html-to-text": "^9.0.5",
     "husky": "9.1.7",
-    "lint-staged": "15.2.11",
+    "lint-staged": "15.4.3",
     "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.16.0",
+    "markdownlint-cli2": "0.17.2",
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
-    "ora": "^8.1.1",
-    "prettier": "3.4.2",
+    "ora": "^8.2.0",
+    "prettier": "3.5.1",
     "unist-util-visit": "^5.0.0",
     "yargs": "^17.7.2"
-  }
+  },
+  "packageManager": "yarn@1.22.22"
 }

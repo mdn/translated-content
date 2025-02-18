@@ -1,15 +1,16 @@
 ---
 title: CSS の値と単位
 slug: Learn_web_development/Core/Styling_basics/Values_and_units
-original_slug: Learn/CSS/Building_blocks/Values_and_units
 l10n:
-  sourceCommit: 092b1b09f93caa0a103ac782812cf51d1d58ad88
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
-CSS ルールには[宣言](/ja/docs/Web/CSS/Syntax#css_declarations)が含まれており、その宣言はプロパティと値で構成されています。
-CSS を使用するそれぞれのプロパティには、どのような値を使用することができるかを記述する**値型**があります。
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
+
+CSS ルールには[宣言](/ja/docs/Web/CSS/Syntax#css_の宣言)が含まれており、その宣言はプロパティと値で構成されています。
+CSS を使用するそれぞれのプロパティには、どのような値を使用することができるかを記述する**値の型**があります。
 このレッスンでは、最も頻繁に使用する値の型と、それが何であるか、そしてそれらがどのように動作するかを見ていきます。
 
 > [!NOTE]
@@ -18,23 +19,22 @@ CSS を使用するそれぞれのプロパティには、どのような値を�
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされている</a
-        >こと、<a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルの扱い</a
-        >、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >の学習）、CSS がどのように動作するかの考え（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>で学習）の基本的な知識を得ていること。
+        HTML の基本（
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Getting_started">CSS の基本的な構文</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">CSS セレクター<a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        CSS プロパティで使用されるさまざまな種類の値と単位について学ぶこと。
+        <ul>
+          <li>プロパティ値にはさまざまな種類があり、それらの種類が何を意味するかを理解すること。</li>
+          <li>基本的な型の使用に慣れること。数値、長さ、パーセント値、色、画像、位置指定、文字列、識別子、関数。</li>
+          <li>絶対単位と相対単位が何であるか、またそれらの違いを理解すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -42,16 +42,14 @@ CSS を使用するそれぞれのプロパティには、どのような値を�
 
 ## CSS での値とは
 
-CSS の仕様書や MDN のプロパティページでは、[`<color>`](/ja/docs/Web/CSS/color_value) や {{cssxref("length")}} のような角括弧で囲まれた値を見かけることがあります。特定のプロパティに有効な値型として `<color>` が表示されている場合、 [`<color>`](/ja/docs/Web/CSS/color_value) のリファレンスページに掲載されているように、そのプロパティの値として有効な色を使用することができることを意味しています。
+CSS の仕様書や MDN のプロパティページでは、[`<color>`](/ja/docs/Web/CSS/color_value) や {{cssxref("length")}} のような角括弧で囲まれた値を見かけることがあります。特定のプロパティに有効な値の型として `<color>` が表示されている場合、 [`<color>`](/ja/docs/Web/CSS/color_value) のリファレンスページに掲載されているように、そのプロパティの値として有効な色を使用することができることを意味しています。
+
+値の型とプロパティが同じ名前、または類似した名前になっていることがあります。例えば、 {{cssxref("color")}} プロパティと [`<color>`](/ja/docs/Web/CSS/color_value) データ型があります。このような場合、角括弧を使用して、どちらを調べているのかを明確にすることができます。 HTML 要素も角括弧を使用しますが、どちらを調べているのかはコンテキストから明らかであるはずです。もし不明な場合は、MDN で検索してみてください。
 
 > [!NOTE]
-> CSS の値型は _データ型_ と呼ばれます。これらの用語は基本的に同じ意味です。 CSS の中でデータ型と呼ばれるものを見かけますが、これは実に値型のおしゃれな言い方に過ぎません。 _値_ という用語は、使用している値型に対応している具体的な表現を参照します。
+> CSSの値の型を「データ型」と呼ぶことがあります。 基本的に、これらの用語は同じ意味で使われており、 CSS でデータ型と呼ばれる何かを見かけた場合、それは実際には値の型を表現するおしゃれな言い方であると考えてください。「値」という用語は、値の型に対応している具体的な表現を指します。
 
-> [!NOTE]
-> CSS の値は角括弧 (`<`, `>`) で囲むことが多く、 CSS のプロパティによって違います。> 例えば、 {{cssxref("color")}} プロパティや [`<color>`](/ja/docs/Web/CSS/color_value) データ型があります。
-> これは同様に角括弧を使用する HTML の要素は違いますので、混同しないでください。しかし、これは、文脈から明らかであるべきであることを覚えておいてください。
-
-次の例では、キーワードを使用して章立ての色を設定し、かつ背景色を `rgb()` 関数を使って指定します。
+次の例では、キーワードを使用して見出しの色を設定し、かつ背景色を `rgb()` 関数を使って指定します。
 
 ```css
 h1 {
@@ -60,13 +58,13 @@ h1 {
 }
 ```
 
-CSS の値型とは、許容される値の集合を定義する方法です。つまり、もし `<color>` が有効であると判断した場合、キーワード、16 進数、`rgb()` 関数など、どの型の色値を使用することができるかを考える必要はありません。利用できるすべての `<color>` 値のうち、ブラウザーが対応していると考えられるものを利用することができます。 MDN でそれぞれの値のページを見ると、ブラウザーの対応についての情報が得られます。例えば、 [`<color>`](/ja/docs/Web/CSS/color_value) のページを見ていくと、ブラウザーの互換性の節に、さまざまな色の値の入力型と対応状況が記載されています。
+CSS の値の型とは、許容される値の集合を定義する方法です。つまり、もし `<color>` が有効であると判断した場合、キーワード、16 進数、`rgb()` 関数など、どの型の色値を使用することができるかを考える必要はありません。利用できるすべての `<color>` 値のうち、ブラウザーが対応していると考えられるものを利用することができます。 MDN でそれぞれの値のページを見ると、ブラウザーの対応についての情報が得られます。例えば、 [`<color>`](/ja/docs/Web/CSS/color_value) のページを見ていくと、ブラウザーの互換性の節に、さまざまな色の値の入力型と対応状況が記載されています。
 
 ここでは見ることが多いいくつかの値の型や単位を確認しましょう。また例のさまざまな値を変えて試しましょう。
 
 ## 数値、長さ、パーセント値
 
-CSS を使用していると、さまざまな数値の型があります。以下はすべて数値型です。
+CSS を使用していると、さまざまな数値の型があります。以下はすべて数値の型です。
 
 <table class="standard-table no-markdown">
   <thead>
@@ -100,6 +98,7 @@ CSS を使用していると、さまざまな数値の型があります。以�
       </td>
       <td>
         <code>&#x3C;dimension></code>（量）は <code>&#x3C;number></code> に単位が付いたものです。例えば、 <code>45deg</code>, <code>5s</code>, <code>10px</code> などです。 <code>&#x3C;dimension></code> は {{cssxref("length")}}（長さ）、<code><a href="/ja/docs/Web/CSS/angle">&#x3C;angle></a></code>（角度）、<code><a href="/ja/docs/Web/CSS/time">&#x3C;time></a></code>（時間）、<code><a href="/ja/docs/Web/CSS/resolution">&#x3C;resolution></a></code>（解像度）などを傘下に持つカテゴリーです。
+      </td>
     </tr>
     <tr>
       <td>{{cssxref("percentage")}}</td>
@@ -112,7 +111,7 @@ CSS を使用していると、さまざまな数値の型があります。以�
 
 ### 長さ
 
-数値型でもっともよく遭遇するのは {{cssxref("length")}} です。例えば、`10px` （ピクセル）や `30em` です。CSS で使用される長さの種類は 2 つに分けられます。相対長と絶対調です。何かがどれほど大きいかを理解するためには、その違いを知ることが重要です。
+数値の型でもっともよく遭遇するのは {{cssxref("length")}} です。例えば、`10px` （ピクセル）や `30em` です。 CSS で使用される長さの種類は 2 つに分けられます。相対長と絶対調です。何かがどれほど大きいかを理解するためには、その違いを知ることが重要です。
 
 #### 絶対長の単位
 
@@ -134,7 +133,7 @@ CSS を使用していると、さまざまな数値の型があります。以�
 
 相対長の単位は、他の何かとの相対値です。
 
-- `em` および `rem` は、それぞれ親要素またはルート要素のフォントサイズに対する相対値です。
+- `em` は、この要素のフォントサイズ、または {{cssxref("font-size")}} で使用する場合は親要素のフォントサイズからの相対値です。 `rem` はルート要素のフォントサイズからの相対値です。
 - `vh` および `vw` は、それぞれビューポートの高さと幅に対する相対値です。
 
 相対的な単位を使用することができる好ましいことは、注意深く計画することで、テキストや他の要素のサイズをページ上の他の要素に対して相対的に変倍するようにできることです。利用できる相対単位の完全な一覧は、 {{cssxref("length")}} 型のリファレンスページを参照してください。
@@ -151,11 +150,44 @@ CSS を使用していると、さまざまな数値の型があります。以�
 
 上の手順を行った後で、これらの値を変更してどのようにふるまうかを確認してください。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 900)}}
+```html live-sample___length
+<div class="wrapper">
+  <div class="box px">これは 200px の幅です</div>
+  <div class="box vw">これは 10vw の幅です</div>
+  <div class="box em">これは 10em の幅です</div>
+</div>
+```
+
+```css live-sample___length
+.box {
+  background-color: lightblue;
+  border: 5px solid darkblue;
+  padding: 10px;
+  margin: 1em 0;
+}
+
+.wrapper {
+  font-size: 1em;
+}
+
+.px {
+  width: 200px;
+}
+
+.vw {
+  width: 10vw;
+}
+
+.em {
+  width: 10em;
+}
+```
+
+{{EmbedLiveSample("length", "", "250px")}}
 
 #### em と rem
 
-`em` と `rem` は開発者がボックスやテキストまですべてのサイズを変更するときによく遭遇する相対的な長さの単位です。これらがどのように動作するか、どのように違いがあるかを理解しましょう。特に[テキストのスタイル設定](/ja/docs/Learn/CSS/Styling_text)や [CSS レイアウト](/ja/docs/Learn/CSS/CSS_layout)のようなより複雑なテーマを扱うようになったときに価値があります。以下の例は、デモを提供しています。
+`em` と `rem` は開発者がボックスやテキストまですべてのサイズを変更するときによく遭遇する相対的な長さの単位です。これらがどのように動作するか、どのように違いがあるかを理解しましょう。特に[テキストの装飾](/ja/docs/Learn_web_development/Core/Text_styling)や [CSS レイアウト](/ja/docs/Learn_web_development/Core/CSS_layout)のようなより複雑なテーマを扱うようになったときに価値があります。以下の例は、デモを提供しています。
 
 この HTML はネストしたリストの組です。全部で 3 つのリストがあり、どちらも同じ HTML です。唯一異なるのは、最初のものは _ems_ クラスを持っており、二つ目のものは _rems_ クラスを持っていることです。
 
@@ -167,7 +199,57 @@ CSS を使用していると、さまざまな数値の型があります。以�
 
 ただし、CSS で `<html>` の `font-size` を変更すると、その他のすべて（`rem` サイズと `em` サイズの両方のテキスト）が相対的に変更されることがわかります。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
+```html live-sample___em-rem
+<ul class="ems">
+  <li>One</li>
+  <li>Two</li>
+  <li>
+    Three
+    <ul>
+      <li>Three A</li>
+      <li>
+        Three B
+        <ul>
+          <li>Three B 2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ul class="rems">
+  <li>One</li>
+  <li>Two</li>
+  <li>
+    Three
+    <ul>
+      <li>Three A</li>
+      <li>
+        Three B
+        <ul>
+          <li>Three B 2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
+
+```css live-sample___em-rem
+html {
+  font-size: 16px;
+}
+
+.ems li {
+  font-size: 1.3em;
+}
+
+.rems li {
+  font-size: 1.3rem;
+}
+```
+
+{{EmbedLiveSample("em-rem", "", "400px")}}
 
 #### 行の高さの単位
 
@@ -175,7 +257,7 @@ CSS を使用していると、さまざまな数値の型があります。以�
 
 これらの単位を用いることで、ボックスの装飾をテキストに正確に配置することができます。この例では、 `lh` 単位を使用して、 [`repeating-linear-gradient()`](/ja/docs/Web/CSS/gradient/repeating-linear-gradient) を使ってメモ帳のような線を作成しています。テキストの行の高さは関係なく、行は常に正しい場所から始まります。
 
-```css hidden
+```css hidden live-sample___line_height_units
 body {
   margin: 0;
   display: grid;
@@ -198,7 +280,7 @@ body {
 }
 ```
 
-```css
+```css live-sample___line_height_units
 p {
   margin: 0;
   background-image: repeating-linear-gradient(
@@ -209,17 +291,13 @@ p {
 }
 ```
 
-```html
+```html-nolint live-sample___line_height_units
 <p style="line-height: 2em">
-  Summer is a time for adventure, and this year was no exception. I had many
-  exciting experiences, but two of my favorites were my trip to the beach and my
-  week at summer camp.
+  夏は冒険の季節であり、今年も例外ではありませんでした。私は多くの期待に満ちた経験をしましたが、その中でも特に気に入っているのは、ビーチへの旅行とサマーキャンプでの 1 週間です。
 </p>
 
 <p style="line-height: 4em">
-  At the beach, I spent my days swimming, collecting shells, and building
-  sandcastles. I also went on a boat ride and saw dolphins swimming alongside
-  us.
+  ビーチでは、泳いだり、貝殻を集めたり、砂のお城を作ったりして過ごしました。ボートに乗ってイルカが横に並んで泳いでいくのを見ました。
 </p>
 ```
 
@@ -233,23 +311,102 @@ p {
 
 違いは、 2 つのボックスの 2 つ目が幅 400 ピクセルのラッパーの中に設定されていることです。 2 つ目の幅 200px のボックスは最初のボックスと同じ幅ですが、 2 つ目の 40% のボックスはこれで 400px の 40% になり、最初のボックスよりかなり狭くなります。
 
-**顔んでいるボックスの幅またはパーセント値を変更してその影響を確認してください。**
+ラッパーの幅やパーセント値を変更して、これがどのように動作するのか試してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 1000)}}
+```html live-sample___percentage
+<div class="box px">これは 200px の幅です</div>
+<div class="box percent">これは 40% の幅です</div>
+<div class="wrapper">
+  <div class="box px">これは 200px の幅です</div>
+  <div class="box percent">これは 40% の幅です</div>
+</div>
+```
+
+```css live-sample___percentage
+.box {
+  background-color: lightblue;
+  border: 5px solid darkblue;
+  padding: 10px;
+  margin: 1em 0;
+}
+.wrapper {
+  width: 400px;
+  border: 5px solid rebeccapurple;
+}
+
+.px {
+  width: 200px;
+}
+
+.percent {
+  width: 40%;
+}
+```
+
+{{EmbedLiveSample("percentage", "", "350px")}}
 
 次の例はフォントサイズをパーセント値で指定しています。それぞれの `<li>` には `font-size` が 80% で設定されています。入れ子になったリストはその親のサイズを継承するため、徐々にフォントサイズが小さくなっています。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 800)}}
+```html live-sample___percentage-fonts
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>
+    Three
+    <ul>
+      <li>Three A</li>
+      <li>
+        Three B
+        <ul>
+          <li>Three B 2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
 
-多くの値型が長さまたはパーセント値を受け入れる一方で、長さしか受け入れないものもあることに注意してください。どの値が受け入れられるかは、 MDN プロパティのリファレンスページで確認できます。許容される値に {{cssxref("length-percentage")}} と記載されている場合、長さまたはパーセント値を使用することができます。許容される値に `<length>` しか記載されていない場合、パーセント値を使用することはできません。
+```css live-sample___percentage-fonts
+li {
+  font-size: 80%;
+}
+```
+
+{{EmbedLiveSample("percentage-fonts")}}
+
+多くの値の型が長さまたはパーセント値を受け入れる一方で、長さしか受け入れないものもあることに注意してください。どの値が受け入れられるかは、 MDN プロパティのリファレンスページで確認できます。許容される値に {{cssxref("length-percentage")}} と記載されている場合、長さまたはパーセント値を使用することができます。許容される値に `<length>` しか記載されていない場合、パーセント値を使用することはできません。
 
 ### 数値
 
 一部の値は、単位のない数値を受け入れます。 単位のない数値を受け入れるプロパティの例は、要素の不透明度（透明度）を制御する `opacity` プロパティです。 このプロパティは、 `0` （完全に透明）〜 `1`（完全に不透明）の数値を受け入れます。
 
-**この下の例を見てください。`opacity` を `0` から `1` までの間の数に変えて、この箱とそのコンテンツがどのよう表示されるかを確認してください。**
+この下の例を見てください。`opacity` を `0` から `1` までの間の数に変えて、この箱とそのコンテンツがどのよう表示されるかを確認してください。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 600)}}
+```html live-sample___opacity
+<div class="wrapper">
+  <div class="box">これは opacity を設定したボックスです</div>
+</div>
+```
+
+```css live-sample___opacity
+.wrapper {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 20px;
+}
+
+.box {
+  margin: 40px auto;
+  width: 200px;
+  background-color: lightblue;
+  border: 5px solid darkblue;
+  padding: 10px;
+  opacity: 0.6;
+}
+```
+
+{{EmbedLiveSample("opacity", "", "210px")}}
 
 > [!NOTE]
 > CSS で値として数を使用する場合、その値を引用符で囲んではなりません。
@@ -269,11 +426,38 @@ CSS で色を設定するには多くの方法があり、多くのエキサイ�
 
 ### 色キーワード
 
-多くの MDN のサンプルコードで色キーワード（または 'named color'）が使用されているのを見かけるでしょう。 [`<named-color>`](/ja/docs/Web/CSS/named-color) データ型は非常に限られた数の色値しか含まれないため、本番のウェブサイトではあまり使用されません。キーワードは人間が読み取り可能なテキスト値として色を表しますので、名前付きカラーは、学習者が教えられているコンテンツに集中できるように、どの色が期待されているかを明確に指示するためにサンプルコードで使用されます。
+多くの MDN のサンプルコードで色キーワード（または「名前付き色」）が使用されているのを見かけるでしょう。 [`<named-color>`](/ja/docs/Web/CSS/named-color) データ型は非常に限られた数の色値しか含まれないため、本番のウェブサイトではあまり使用されません。キーワードは人間が読み取り可能なテキスト値として色を表しますので、名前付きカラーは、学習者が教えられているコンテンツに集中できるように、どの色が期待されているかを明確に指示するためにサンプルコードで使用されます。
 
-**下の練習で別の色キーワードを試して、それがどのように作用するのか確認してください。**
+次のライブサンプルででさまざまな色キーワードを試して、それがどのように作用するのか確認してください。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-keywords.html", '100%', 800)}}
+```html live-sample___color-keywords
+<div class="wrapper">
+  <div class="box one">antiquewhite</div>
+  <div class="box two">blueviolet</div>
+  <div class="box three">greenyellow</div>
+</div>
+```
+
+```css live-sample___color-keywords
+.box {
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+}
+.one {
+  background-color: antiquewhite;
+}
+
+.two {
+  background-color: blueviolet;
+}
+
+.three {
+  background-color: greenyellow;
+}
+```
+
+{{EmbedLiveSample("color-keywords")}}
 
 ### 16 進 RGB
 
@@ -281,12 +465,40 @@ CSS で色を設定するには多くの方法があり、多くのエキサイ�
 16 進数は `0-9` と `a-f` の 16 文字を用いますので、全範囲は `0123456789abcdef` となります。
 各16進数の色値はハッシュ/ポンド記号 (`#`) に続けて 3 文字または 6 文字の 16 進数（例えば `#fcc` や `#ffc0cb`）で構成され、オプションで 1 文字または 2 文字の 16 進数で、その前にある 3 文字または 6 文字の色値のアルファ透過率を表します。
 
-16 進数を使用して RGB 値を記述する場合、 16 進文字の**組**はそれぞれ赤、緑、青のいずれかのチャンネルを表す数値で、それぞれ 256 個の利用できる値のいずれかを指定します（16 x 16 = 256）。
+16 進数を使用して RGB 値を記述する場合、 16 進文字の**ペア**はそれぞれ赤、緑、青のいずれかのチャンネルを表す数値で、それぞれ 256 個の利用できる値のいずれかを指定します（16 x 16 = 256）。
 これらの値は色を定義するためのキーワードよりも直感的ではありませんが、 RGB のどの色でも表すことができるので、より汎用性があります。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 800)}}
+値を変更して、色がどのように変化するかを試してみてください。
 
-**もう一度、値を変更させてどのように色が変化するか確認しましょう。**
+```html live-sample___color-hex
+<div class="wrapper">
+  <div class="box one">#02798b</div>
+  <div class="box two">#c55da1</div>
+  <div class="box three">#128a7d</div>
+</div>
+```
+
+```css live-sample___color-hex
+.box {
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+}
+
+.one {
+  background-color: #02798b;
+}
+
+.two {
+  background-color: #c55da1;
+}
+
+.three {
+  background-color: #128a7d;
+}
+```
+
+{{EmbedLiveSample("color-hex")}}
 
 ### RGB 値
 
@@ -294,21 +506,77 @@ RGB 値を直接作成する場合、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb
 
 最後の表記を書き直して、RGB で表現してみましょう。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 800)}}
+```html live-sample___color-rgb
+<div class="wrapper">
+  <div class="box one">rgb(2 121 139)</div>
+  <div class="box two">rgb(197 93 161)</div>
+  <div class="box three">rgb(18 138 125)</div>
+</div>
+```
+
+```css live-sample___color-rgb
+.box {
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+}
+.one {
+  background-color: rgb(2 121 139);
+}
+
+.two {
+  background-color: rgb(197 93 161);
+}
+
+.three {
+  background-color: rgb(18 138 125);
+}
+```
+
+{{EmbedLiveSample("color-rgb")}}
 
 `rgb()` には 4 番目の引数を渡すことができ、これは色のアルファチャンネルを表します。この値を `0` に設定すると色は完全に透明になり、 `1` に設定すると完全に不透明になります。この中間の値を指定すると、さまざまな透過率を得ることができます。
 
 > [!NOTE]
 > 色にアルファチャンネルを設定する場合、先ほど見てきた {{cssxref("opacity")}} プロパティを使用するのとは異なる点があります。 opacity を使用すると、要素とその中のすべてのものを不透明にしますが、 RGB にアルファ引数付きの色を使用すると、指定した色だけを不透明にします。
 
-下記の例では、色つきボックスの包含ブロックに背景画像を追加しています。アルファチャンネルの値が小さいほど、背景がより透けて見えることに注目してください。
+次の例では、色のついたボックスの包含ブロックに背景画像を追加しています。 さらに、ボックスに異なる不透明度を設定しています。アルファチャンネルの値が小さいほど、背景がより濃く表示されることに注目してください。
+この例では、アルファチャンネルの値を変更して、色出力にどのような影響があるか試してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 900)}}
+```html live-sample___color-rgba
+<div class="wrapper">
+  <div class="box one">rgb(2 121 139 / .3)</div>
+  <div class="box two">rgb(197 93 161 / .7)</div>
+  <div class="box three">rgb(18 138 125 / .9)</div>
+</div>
+```
 
-**この例では、アルファチャンネルの値を変えてみて、それが色出力にどのように影響するかを見てみましょう。**
+```css live-sample___color-rgba
+.wrapper {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  padding: 40px 20px;
+}
 
-> [!NOTE]
-> 古いバージョンの CSS では、 `rgb()` 構文はアルファ引数に対応しておらず、そのために `rgba()` という別な関数を使用する必要がありました。最近では `rgb()` にアルファ引数を渡すことができます。 `rgba()` 関数は `rgb()` の別名です。
+.box {
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+}
+
+.one {
+  background-color: rgb(2 121 139 / 0.3);
+}
+
+.two {
+  background-color: rgb(197 93 161 / 0.7);
+}
+
+.three {
+  background-color: rgb(18 138 125 / 0.9);
+}
+```
+
+{{EmbedLiveSample("color-rgba", "", "250px")}}
 
 ### SRGB 値
 
@@ -346,14 +614,72 @@ HSL は色相に加えて、彩度と明度を使用します。
 
 RGB の例を HSL の色に更新すると次のようになります。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 800)}}
+```html live-sample___color-hsl
+<div class="wrapper">
+  <div class="box one">hsl(188 97% 28%)</div>
+  <div class="box two">hsl(321 47% 57%)</div>
+  <div class="box three">hsl(174 77% 31%)</div>
+</div>
+```
+
+```css live-sample___color-hsl
+.box {
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+}
+
+.one {
+  background-color: hsl(188 97% 28%);
+}
+
+.two {
+  background-color: hsl(321 47% 57%);
+}
+
+.three {
+  background-color: hsl(174 77% 31%);
+}
+```
+
+{{EmbedLiveSample("color-hsl")}}
 
 `rgb()` と同様に、 `hsl()` にアルファ引数を渡して透明度を指定することができます。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
+```html live-sample___color-hsla
+<div class="wrapper">
+  <div class="box one">hsl(188 97% 28% / .3)</div>
+  <div class="box two">hsl(321 47% 57% / .7)</div>
+  <div class="box three">hsl(174 77% 31% / .9)</div>
+</div>
+```
 
-> [!NOTE]
-> CSS の古いバージョンでは、 `hsl()` 構文はアルファ引数に対応していませんでした。そのためには `hsla()` という別の関数を使用する必要がありました。最近では `hsl()` にアルファ引数を渡すことができますが、古いウェブサイトとの後方互換性のために `hsla()` 構文も対応しており、`hsl()` とまったく同じ動作があります。
+```css live-sample___color-hsla
+.wrapper {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/balloons.jpg);
+  padding: 40px 20px;
+}
+
+.box {
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+}
+
+.one {
+  background-color: hsl(188 97% 28% / 0.3);
+}
+
+.two {
+  background-color: hsl(321 47% 57% / 0.7);
+}
+
+.three {
+  background-color: hsl(174 77% 31% / 0.9);
+}
+```
+
+{{EmbedLiveSample("color-hsla", "", "250px")}}
 
 ## 画像
 
@@ -361,7 +687,32 @@ RGB の例を HSL の色に更新すると次のようになります。
 
 下記の例では、画像とグラデーションを CSS の `background-image` プロパティの値として使用する例を示しています。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 900)}}
+```html live-sample___image
+<div class="box image"></div>
+<div class="box gradient"></div>
+```
+
+```css live-sample___image
+.box {
+  height: 150px;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 0.5em;
+}
+.image {
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+}
+
+.gradient {
+  background-image: linear-gradient(
+    90deg,
+    rgb(119 0 255 / 39%),
+    rgb(0 212 255 / 100%)
+  );
+}
+```
+
+{{EmbedLiveSample("image", "", "380px")}}
 
 > **メモ:** `<image>` が取りうる他の値もありますが、それは新しくてブラウザーの対応が貧弱です。知りたい場合、MDN の [`<image>`](/ja/docs/Web/CSS/image) データ型のページを確認してください。
 
@@ -372,18 +723,52 @@ RGB の例を HSL の色に更新すると次のようになります。
 典型的な位置の値は 2 つの値を持ち — 最初は水平位置を、2 つ目は垂直位置をセットします。1 つの軸だけの値を指定する場合、もう 1 つは既定で `center` となります。
 
 次の例では、背景画像をキーワードを使ってコンテナーの右端の上から 40px の位置に配置しています。
+この値でいろいろ遊んでみて、画像がどう移動するか見てください。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 800)}}
+```html live-sample___position
+<div class="box"></div>
+```
 
-**この値でいろいろ遊んでみて、画像がどう移動するか見てください。**
+```css live-sample___position
+.box {
+  height: 100px;
+  width: 400px;
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
+  background-repeat: no-repeat;
+  background-position: right 40px;
+  margin: 20px auto;
+  border-radius: 0.5em;
+  border: 5px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("position")}}
 
 ## 文字列と識別子
 
 上記の例を通じて、キーワードが値として使われる場所を見てきました (例えば、`<color>` キーワードの例として `red`, `black`, `rebeccapurple`, `goldenrod`)。このキーワードをより正確に述べると、 CSS が理解できる特別な値の _識別子_ です。このためそれは引用符で囲まれておらず、文字列として扱われません。
 
-CSS で文字列が使われる場所もあります、例えば、[生成されたコンテンツを指定するとき](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#before_および_after_を使用したコンテンツの生成)です。この場合、値は文字列を示すようクォートで囲まれます。下記の例ではクォートで囲まれていない color キーワードと生成されたコンテンツ文字列を一緒に使っています。
+CSS で文字列が使われる場所もあります、例えば、[生成されたコンテンツを指定するとき](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#before_および_after_を使用したコンテンツの生成)です。この場合、値は文字列を示すようクォートで囲まれます。下記の例ではクォートで囲まれていない color キーワードと生成されたコンテンツ文字列を一緒に使っています。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 600)}}
+```html live-sample___strings-idents
+<div class="box"></div>
+```
+
+```css live-sample___strings-idents
+.box {
+  width: 400px;
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 5px solid rebeccapurple;
+  background-color: lightblue;
+}
+
+.box::after {
+  content: "これは文字列です。 CSS で引用されているので、私は知っています。";
+}
+```
+
+{{EmbedLiveSample("strings-idents")}}
 
 ## 関数
 
@@ -392,9 +777,9 @@ CSS で文字列が使われる場所もあります、例えば、[生成され
 ほとんどのプログラミング言語は関数に対応しているだけでなく、一般的なタスクのための便利な組み込み関数が決まりますので、自分で一から書く必要はありません。
 
 CSS にも[関数](/ja/docs/Web/CSS/CSS_Functions)があり、他の言語の関数と同じように動作します。
-実際、すでに CSS 関数としては、上記の[色](#color)の節で、 [`rgb()`](/ja/docs/Web/CSS/color_value#rgb_function) と [`hsl()`](/ja/docs/Web/CSS/color_value#hsl_function) 関数をすでに見てきました。
+実際、すでに CSS 関数としては、上記の[色](#色)の節で、 [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) と [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) 関数をすでに見てきました。
 
-色を適用する以外にも、CSSで関数を使用して多数のことを行うことができます。
+色を適用する以外にも、 CSS で関数を使用して多数のことを行うことができます。
 例えば[座標変換関数](/ja/docs/Web/CSS/CSS_Functions#座標変換関数)はページ上の要素を移動したり、回転させたり、変倍したりする一般的な方法です。
 何かを水平や垂直に移動させるには [`translate()`](/ja/docs/Web/CSS/transform-function/translate) を、何かを回転させるには [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate) を、何かを大きくしたり小さくしたりするには [`scale()`](/ja/docs/Web/CSS/transform-function/scale) を使うでしょう。
 
@@ -412,24 +797,43 @@ CSS は[数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)に対応し�
 しかし、 `calc()` を使用することで、要素の幅を親コンテナーの 20% + 100px に設定することができます。
 この 20% は親コンテナー (`.wrapper`) の幅に基づいており、その幅が変更された場合、計算も変更されます。
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 500)}}
+```html live-sample___calc
+<div class="wrapper">
+  <div class="box">この幅は計算されたものです。</div>
+</div>
+```
+
+```css live-sample___calc
+.wrapper {
+  width: 400px;
+}
+.box {
+  padding: 1em;
+  border-radius: 0.5em;
+  border: 5px solid rebeccapurple;
+  background-color: lightblue;
+  width: calc(20% + 100px);
+}
+```
+
+{{EmbedLiveSample("calc")}}
 
 他にも CSS で使用することができる数学関数はたくさんあります。[`min()`](/ja/docs/Web/CSS/min)、[`max()`](/ja/docs/Web/CSS/max)、[`clamp()`](/ja/docs/Web/CSS/clamp) などで、それぞれ設定した値の中から最小、最大、中間の値を選ぶことができます。
-また、[三角関数](/ja/docs/Web/CSS/CSS_Functions#trigonometric_functions)、たとえば [`sin()`](/ja/docs/Web/CSS/sin)、[`cos()`](/ja/docs/Web/CSS/cos)、[`tan()`](/ja/docs/Web/CSS/tan) あんどを使用して、この点を中心に要素を回転させる角度を計算したり、[色相角](/ja/docs/Web/CSS/hue)を引数として色を選んだりすることができます。
-[指数関数](/ja/docs/Web/CSS/CSS_Functions#exponential_functions)は、アニメーションやトランジションに使用することもでき、何かの移動や見てくれを非常に具体的に制御する必要がある場合に使用します。
+また、[三角関数](/ja/docs/Web/CSS/CSS_Functions#三角関数)、たとえば [`sin()`](/ja/docs/Web/CSS/sin)、[`cos()`](/ja/docs/Web/CSS/cos)、[`tan()`](/ja/docs/Web/CSS/tan) あんどを使用して、この点を中心に要素を回転させる角度を計算したり、[色相角](/ja/docs/Web/CSS/hue)を引数として色を選んだりすることができます。
+[指数関数](/ja/docs/Web/CSS/CSS_Functions#指数関数)は、アニメーションやトランジションに使用することもでき、何かの移動や見てくれを非常に具体的に制御する必要がある場合に使用します。
 
 CSS関数について知っておくことは有益なことです。普通の CSS で取得できる結果を得るために、カスタムコードを書いたり、繰り返しコードを書いたりせずに済むようになります。
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_tasks)を見てください。
 
 ## まとめ
 
 ここまで最もよく見かける値と単位を一通り見てきました。[CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units) のリファレンスページで、さまざまな型をすべて見ることができます。多くはこのレッスンを進んでいくと出てくるでしょう。
 
-覚えておくべき重要なことは、各プロパティには許可される値の定義されたリストがあり、各値にはサブ値が何であるかを説明する定義があるということです。詳細は MDN で調べることができます。例えば、`<image>` でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう。
+覚えておくべき重要なことは、各プロパティには許可される値の定義されたリストがあり、各値にはサブ値が何であるかを説明する定義があるということです。詳細は MDN で調べることができます。例えば、[`<image>`](/ja/docs/Web/CSS/image) でもカラーグラデーションを作成できることを理解しておくと便利ですが、たぶん当たり前の知識ではないでしょう。
 
-次の記事では、CSSにおける[アイテムへのサイズ指定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)の方法を見ていきます。
+次の記事では、 CSS においてアイテムがどのようにサイズ指定されるかを見ていきます。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

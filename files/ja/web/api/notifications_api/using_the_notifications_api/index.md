@@ -225,7 +225,7 @@ window.addEventListener("load", () => {
 
 {{ EmbedLiveSample('Tag_example', '100%', 150) }}
 
-上記の例をテストするには、ウェブサイト `https://live.mdnplay.dev` の[通知設定](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions)を変更してください。。
+上記の例をテストするには、ウェブサイト `https://live.mdnplay.dev` の[通知設定](https://support.mozilla.org/en-US/kb/firefox-page-info-window#w_permissions)を変更してください。
 
 ## 関連情報
 

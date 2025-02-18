@@ -111,7 +111,7 @@ cd beastify
 
 ### 工具列按鈕(The toolbar button)
 
-工具列按鈕也需要一個 icon，在 manifest.json 裡 "browser_action" 物件中的 "default_icon" 中告訴他要使用 "icons/beasts-32.png" 路徑下的 icon。。
+工具列按鈕也需要一個 icon，在 manifest.json 裡 "browser_action" 物件中的 "default_icon" 中告訴他要使用 "icons/beasts-32.png" 路徑下的 icon。
 
 準備一個命名為 "beasts-32.png" 的 icon，並存在 "beastify/icons" 資料夾中（你可以使用[範例圖檔](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png)，圖檔來源：[IconBeast Lite icon set](http://www.iconbeast.com/free)，遵守[使用條款](http://www.iconbeast.com/faq/)來使用）。
 

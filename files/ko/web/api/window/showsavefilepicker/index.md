@@ -1,9 +1,9 @@
 ---
 title: "Window: showSaveFilePicker() 메서드"
+short-title: showSaveFilePicker()
 slug: Web/API/Window/showSaveFilePicker
 l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
-short-title: showSaveFilePicker()
 ---
 
 {{APIRef("File System API")}}{{SecureContext_Header}}{{SeeCompatTable}}

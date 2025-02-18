@@ -10,7 +10,7 @@ l10n:
 
 这篇文章讨论什么是互联网以及它是如何工作的。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

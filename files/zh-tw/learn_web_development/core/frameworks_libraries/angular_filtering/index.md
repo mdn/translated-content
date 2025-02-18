@@ -8,7 +8,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
 
 現在讓我們來增加功能，讓使用者篩選待辦事項，這樣他們就可以選擇查看進行中、已完成，或是全部的事項。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>

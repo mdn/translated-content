@@ -1,12 +1,11 @@
 ---
 title: CSS の整理
 slug: Learn_web_development/Core/Styling_basics/Organizing
-original_slug: Learn/CSS/Building_blocks/Organizing
 l10n:
-  sourceCommit: bed92df387c4a8d94ee1e682cd33dab06cb30f4c
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
 
 大きなスタイルシートや巨大なプロジェクトで作業をはじめると、巨大な CSS ファイルを維持するのが難しいことがわかります。この記事では、CSS を書いていくのと保守していくのをやりやすくするためのベストプラクティスと、保守性を向上させるための解決策の一部を紹介します。
 
@@ -16,18 +15,18 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >基本的なソフトウェアがインストールされている</a
         >こと、
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >ファイルの扱い</a
         >、 HTML の基本（<a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ja/docs/Learn_web_development/Core/Structuring_content"
           >HTML 入門</a
         >）および CSS に関するアイデア（<a
-          href="/ja/docs/Learn/CSS/First_steps"
-          >CSS の第一歩</a>）に関する基本的な知識を得ていること。
+          href="/ja/docs/Learn_web_development/Core/Styling_basics"
+          >CSS 入門</a>）に関する基本的な知識を得ていること。
       </td>
     </tr>
     <tr>
@@ -394,13 +393,3 @@ CSS を整理する 1 つの方法は、スタイルシートを小さなスタ�
 #### ポストプロセッサー
 
 もし、コメントや空白を大量に追加することでスタイルシートのサイズが大きくなることを気にしているのであれば、本番バージョンでは不要なものを取り除くことで CSS を最適化することが後処理のステップになります。これを実現するポストプロセッサーの例としては、[cssnano](https://cssnano.co/) があります。
-
-## まとめ
-
-これは CSS 学習ガイドの最後の部分で、ここから CSS の探求を続けるための様々な方法があることがお分かりいただけると思います。
-
-CSS のレイアウトの詳細については、「[CSS レイアウトの学習](/ja/docs/Learn/CSS/CSS_layout)」部分を参照してください。
-
-また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)などの特定のガイドを読んだりすることができます。
-
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

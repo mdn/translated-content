@@ -1,12 +1,13 @@
 ---
 title: HTML の表の基本
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables/Basics
 l10n:
-  sourceCommit: 7a5d4c39c672ee4562aba5f4e8254dcbe6cc0d7f
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 この記事は、 HTML の表を始めるために、行やセルなどとても基本的なところから、見出し、複数列や行のセルの結合、スタイルを適用するために列の中のセルをすべてグループ化する方法などを扱います。
 
@@ -15,14 +16,22 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を参照）。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>HTML の表の基本に親しむこと。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>表は何のためにあるのか — 表形式のデータを構造化するためです。</li>
+          <li>表は、レイアウトや<em>その他何らかの目的</em>のためのものではありません。</li>
+          <li>基本的案表の構文 — <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, and <code>&lt;td&gt;</code></li>
+          <li>表の見出しを <code>&lt;th&gt;</code> で定義すること。</li>
+          <li><code>colspan</code> と <code>rowspan</code> で複数の列と行にまたがらせること。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -212,17 +221,17 @@ td {
 
 GitHub の[ライブサンプルもご覧ください](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html)。表がもう少し読みやすくなっているということに気付くでしょう。これは、今までこのページで見てきた表には最小限のスタイルしか施されていないからです。対して、GitHub 版ではより特別な意味を持った CSS が適用されています。
 
-幻想にふけってはいけません。表をウェブ上で効果的に使うには、[CSS](/ja/docs/Learn/CSS) でスタイル情報を提供し、HTML でしっかりとした構造を提供する必要があります。このモジュールでは、HTML 部分に焦点を合わせています。CSS の部分については、ここを終えた後に[表のスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)の記事を参照してください。
+幻想にふけってはいけません。表をウェブ上で効果的に使うには、[CSS](/ja/docs/Learn_web_development/Core/Styling_basics) でスタイル情報を提供し、HTML でしっかりとした構造を提供する必要があります。このモジュールでは、HTML 部分に焦点を合わせています。CSS の部分については、ここを終えた後に[表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)の記事を参照してください。
 
 このモジュールでは CSS に焦点を当てませんが、スタイルを設定しなくてもデフォルトの表より読みやすくなるように、最小限の CSS スタイルシートを使用できます。[スタイルシートはここ](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css)で、そしてスタイルシートを適用する [HTML テンプレート](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html)も見つけることができます。これらを一緒にすると、HTML の表を試すための良い出発点になります。
 
 ### HTML の表を使用するべきではない場面
 
-HTML の表は表形式のデータに使用する必要があります。そのために設計されているのです。残念ながら、HTML の表を使用してウェブページをレイアウトする人が多くいました。1 行を見出しを入れるために使用し、1 行をコンテンツの複数列を含むために使用し、1 行をフッターを入れるために使用するなどです。[アクセシビリティ学習モジュール](/ja/docs/Learn/Accessibility)の[ページレイアウト](/ja/docs/Learn/Accessibility/HTML#ページレイアウト)でより多くの詳細と例を見つけることができます。これは一般的に使用されていました。ブラウザー間での CSS 対応がひどいものだったからです。表レイアウトは、現在ではあまり一般的ではありませんが、ウェブの一部の場所ではまだ見られることがあります。
+HTML の表は表形式のデータに使用する必要があります。そのために設計されているのです。残念ながら、HTML の表を使用してウェブページをレイアウトする人が多くいました。1 行を見出しを入れるために使用し、1 行をコンテンツの複数列を含むために使用し、1 行をフッターを入れるために使用するなどです。[アクセシビリティ学習モジュール](/ja/docs/Learn_web_development/Core/Accessibility)の[ページレイアウト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#ページレイアウト)でより多くの詳細と例を見つけることができます。これは一般的に使用されていました。ブラウザー間での CSS 対応がひどいものだったからです。表レイアウトは、現在ではあまり一般的ではありませんが、ウェブの一部の場所ではまだ見られることがあります。
 
-つまり、表を[CSS レイアウト手法](/ja/docs/Learn/CSS/CSS_layout)の代わりにレイアウトに使用するのは得策ではありません。主な理由は次のとおりです。
+つまり、表を[CSS レイアウト手法](/ja/docs/Learn_web_development/Core/CSS_layout)の代わりにレイアウトに使用するのは得策ではありません。主な理由は次のとおりです。
 
-1. **レイアウト表は視覚障碍のあるユーザーのアクセシビリティを低下させます**。 視覚障碍者が使用する[スクリーンリーダー](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#スクリーンリーダー)は、HTML ページに存在するタグを解釈し、その内容をユーザーに読み上げます。表はレイアウトに適したツールではなく、マークアップは CSS のレイアウト手法よりも複雑であるため、スクリーンリーダーの出力はユーザーにとってわかりにくいものになります。
+1. **レイアウト表は視覚障碍のあるユーザーのアクセシビリティを低下させます**。 視覚障碍者が使用する[スクリーンリーダー](/ja/docs/Learn_web_development/Core/Accessibility/Tooling#スクリーンリーダー)は、HTML ページに存在するタグを解釈し、その内容をユーザーに読み上げます。表はレイアウトに適したツールではなく、マークアップは CSS のレイアウト手法よりも複雑であるため、スクリーンリーダーの出力はユーザーにとってわかりにくいものになります。
 2. **表はタグスープを生成します**。 前述のように、表レイアウトは通常、適切なレイアウト手法よりも複雑なマークアップ構造を含みます。これにより、コードの記述、保守、およびデバッグが困難になる可能性があります。
 3. **表は自動的にはレスポンシブになりません**。 適切なレイアウトコンテナー ({{htmlelement("header")}}、{{htmlelement("section")}}、{{htmlelement("article")}}、{{htmlelement("div")}} など) を使用する場合、その幅は既定で親要素の 100％になります。一方、表は既定では内容に応じてサイズが設定されているため、さまざまなデバイスで効果的に機能するように表レイアウトのスタイルを変更するには、追加の対策が必要です。
 
@@ -444,115 +453,8 @@ th {
 > [!NOTE]
 > 完成した例は GitHub の [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) にあります ([こちらもご覧ください](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html))。
 
-## 列への共通のスタイル設定
-
-### \<col> なしのスタイル設定
-
-先に進む前に、この記事で最後に紹介する機能があります。
-HTML では、データの列全体のスタイル情報を 1 か所にまとめて定義することができます — **[`<col>`](/ja/docs/Web/HTML/Element/col)** 要素と **[`<colgroup>`](/ja/docs/Web/HTML/Element/colgroup)** 要素です。列にスタイルを指定するのは少々面倒で非効率的な場合があるためです。列内の `<td>` や `<th>` ごとにスタイル情報を指定するか、{{cssxref(":nth-child")}} などの複雑なセレクターを使用する必要があります。
-
-> [!NOTE]
-> このような列ののスタイル設定は、[いくつかのプロパティに制限されます](https://www.w3.org/TR/CSS22/tables.html#columns)。[`border`](/ja/docs/Web/CSS/border)、[`background`](/ja/docs/Web/CSS/background)、[`width`](/ja/docs/Web/CSS/width)、[`visibility`](/ja/docs/Web/CSS/visibility) です。他のプロパティを設定するには、列内のすべての `<td>` や `<th>` にスタイルを設定するか、{{cssxref(":nth-child")}} のような複雑なセレクターを使用する必要があります。
-
-次の簡単な例を見てください。
-
-```html
-<table>
-  <tr>
-    <th>データ 1</th>
-    <th style="background-color: yellow">データ 2</th>
-  </tr>
-  <tr>
-    <td>Calcutta</td>
-    <td style="background-color: yellow">Orange</td>
-  </tr>
-  <tr>
-    <td>Robots</td>
-    <td style="background-color: yellow">Jazz</td>
-  </tr>
-</table>
-```
-
-```css hidden
-table {
-  border-collapse: collapse;
-}
-td,
-th {
-  border: 1px solid black;
-  padding: 10px 20px;
-}
-```
-
-これにより、次のような出力結果が得られます。
-
-{{EmbedLiveSample("Styling_without_col", "", "200")}}
-
-列内の 3 つすべてのセルにわたってスタイル情報を繰り返す必要があるため、これは理想的ではありません（実際のプロジェクトでは 3 つすべてに `class` を設定し、別のスタイルシートでスタイルを指定することになります）。
-
-### \<col> によるスタイル設定
-
-これを行う代わりに、`<col>` 要素で情報を 1 回指定できます。`<col>` 要素は、開始 `<table>` タグのすぐ下の `<colgroup>` コンテナー内で指定されます。次のように表を指定することで、上と同じ効果を生み出すことができます。
-
-```html
-<table>
-  <colgroup>
-    <col />
-    <col style="background-color: yellow" />
-  </colgroup>
-  <tr>
-    <th>データ 1</th>
-    <th>データ 2</th>
-  </tr>
-  <tr>
-    <td>Calcutta</td>
-    <td>Orange</td>
-  </tr>
-  <tr>
-    <td>Robots</td>
-    <td>Jazz</td>
-  </tr>
-</table>
-```
-
-事実上、2 つの "スタイル列" を定義しています。1 つは各列のスタイル情報を指定しています。最初の列にはスタイルを設定していませんが、空白の `<col>` 要素を含める必要があります。そうでない場合、スタイルは最初の列にも適用されます。
-
-両方の列にスタイル情報を適用する場合は、次のように span 属性を持つ 1 つの `<col>` 要素を含めるだけで済みます。
-
-```html
-<colgroup>
-  <col style="background-color: yellow" span="2" />
-</colgroup>
-```
-
-`colspan` や `rowspan` と同じように、`span` はスタイルを適用したい列の数を指定する単位なしの数値を取ります。
-
-> [!NOTE]
-> 表、列、およびその列の表セルがすべて別個のスタイル設定である場合、セルに適用されたスタイルは表の上に描画される列スタイルの上に描画されます。これは、表のレイヤーが最初にレンダリングされ、次に列のレイヤーがレンダリングされ、[セルのレイヤーが他のすべての表のレイヤーの最上位にレンダリングされる](/ja/docs/Web/HTML/Element/table#table_layers_and_transparency)ためです。
-
-### アクティブラーニング: colgroup と col
-
-今こそ自分でやってみるべき時です。
-
-以下に言語教師のタイム表を見ることができます。金曜日に、彼女は一日中オランダ語を教える新しいクラスを持っていますが、彼女はまた火曜日と木曜日に数期間ドイツ語を教えています。彼女は教えている日を含むコラムをハイライトしたいと思います。
-
-{{EmbedGHLiveSample("learning-area/html/tables/basic/timetable-fixed.html", '100%', 350)}}
-
-以下の手順に従って表を再作成してください。
-
-1. まず、[timetable.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable.html) ファイルのローカルコピーをあなたのローカルマシンの新しいディレクトリーに作成してください。HTML には、上で見たのと同じ表から、列のスタイル情報を除いたものが含まれています。
-2. `<col>` 要素を追加することができる `<table>` タグのすぐ下の表の上部に `<colgroup>` 要素を追加します (以下の残りの手順を参照)。
-3. 最初の 2 つの列はスタイルなしのままにする必要があります。
-4. 3 列目に背景色を追加します。`style` 属性の値は`background-color:#97DB9A;` です。
-5. 4 列目に別の幅を設定します。`style` 属性の値は `width: 42px;` です。
-6. 5 列目に背景色を追加します。`style` 属性の値は `background-color: #97DB9A;` です。
-7. これは特別な日であり、彼女は新しいクラスを教えていることを示すために、6 番目の列に異なる背景色と境界線を追加します。`style` 属性の値は `background-color:#DCC48E; border:4px solid #C1437A;` です。
-8. 最後の 2 日間は空き日なので、背景色を設定せずに幅を設定します。`style` 属性の値は `width: 42px;` です。
-
-例でどのようにして上手くいくかを見てください。どうしていいか分からなくなったり、作業をチェックしたい場合は、[timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) として GitHub に私たちのバージョンを見つけることができます ([それもライブを見てください](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html))。
-
 ## まとめ
 
-HTML の表の基本はこれで終わりです。次の記事では、もう少し[高度な表の機能](/ja/docs/Learn/HTML/Tables/Advanced)を見て、視覚障碍者にとってそれらがどれほどアクセシブルであるかを考えます。
+以上で HTML 表の基本は終わりです。次の記事では、視覚障碍者が HTML 表をよりアクセスしやすくするために使用できる機能について見ていきます。
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}

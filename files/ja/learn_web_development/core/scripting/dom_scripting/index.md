@@ -1,27 +1,32 @@
 ---
-title: 文書の操作
+title: DOM スクリプティング入門
 slug: Learn_web_development/Core/Scripting/DOM_scripting
-original_slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}
 
-ウェブページやアプリケーションを書くとき、最もよく行うことのひとつが、何らかの方法で文書内の構造を操作することでしょう。これは通常、ドキュメントオブジェクトモデル (DOM) を使用することで行われます。これは HTML とスタイル情報を制御するための API のセットで、 {{domxref("Document")}} オブジェクトを多用します。この記事では、DOM を使用する方法を詳しく見ていきます。また、他にも興味深い方法であなたの環境を変化させることができる API もいくつか紹介します。
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}
+
+ウェブページやアプリを書くとき、最もよく行うことのひとつが、何らかの方法で文書内の構造を操作することでしょう。これは通常、ドキュメントオブジェクトモデル (DOM) を使用して行われます。これは HTML とスタイル情報を制御するための API の集合です。この記事では **DOM スクリプティング**にご案内します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        基本的なコンピューターリテラシー、HTML、CSS、JavaScriptの基本的な理解（JavaScript オブジェクトを含む）があること。
-      </td>
+      <th scope="row">前提知識:</th>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。</td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        DOM のコアとなる API、および DOM と文書操作によく関連する他の API に慣れること。
+        <ul>
+          <li>DOM とは何か。ブラウザーの内部表現であり、文書内の HTML 構造をオブジェクトの階層として表したもの。</li>
+          <li>JavaScript で表されるウェブブラウザーの重要な部分。 <code>Navigator</code>、<code>Window</code>、<code>Document</code>。</li>
+          <li>DOM ノードが DOM ツリー内で相対的にどのように存在しているか（ルート、親、子、兄弟、子孫など）。</li>
+          <li>DOM ノードを参照し、新しいノードを作成し、ノードや属性を追加したり除去したりすること。</li>
+          <li>JavaScript で CSS スタイルを操作すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -35,7 +40,7 @@ l10n:
 
 ![ウェブブラウザーの重要な部分。文書 (document) は、ウェブページのことです。ウィンドウは文書内の全体と、タブを含みます。 Navigator はブラウザーで、このウィンドウ（この文書を含んでいるもの）と他のすべてのウィンドウを記載します。](document-window-navigator.png)
 
-- ウィンドウはウェブページが読み込まれる部分の回りのブラウザーの枠です。これは JavaScript では {{domxref("Window")}} オブジェクトで表わされます。このオブジェクトに備わるメソッドを使って、ウィンドウの大きさを調べたり（{{domxref("Window.innerWidth")}} と {{domxref("Window.innerHeight")}} を参照）、ウィンドウに読み込まれる文書を操作したり、その文書に関係するデータをクライアント側で保存したり（例えばローカルデータベースや他のデータ保存機構）、現在のウィンドウに対して[イベントハンドラー](/ja/docs/Learn/JavaScript/Building_blocks/Events#s_series_of_fortunate_events)を追加したりすることができます。
+- ウィンドウはウェブページが読み込まれる部分の回りのブラウザーの枠です。これは JavaScript では {{domxref("Window")}} オブジェクトで表わされます。このオブジェクトに備わるメソッドを使って、ウィンドウの大きさを調べたり（{{domxref("Window.innerWidth")}} と {{domxref("Window.innerHeight")}} を参照）、ウィンドウに読み込まれる文書を操作したり、その文書に関係するデータをクライアント側で保存したり（例えばローカルデータベースや他のデータ保存機構）、現在のウィンドウに対して[イベントハンドラー](/ja/docs/Learn_web_development/Core/Scripting/Events)を追加したりすることができます。
 - ナビゲーターは、ブラウザーの状態やウェブで使われているようなブラウザーの身元（つまりユーザーエージェント）を表わします。JavaScript では {{domxref("Navigator")}} オブジェクトで表わされます。このオブジェクトを使用して、ユーザーの好む言語や、ユーザーのウェブカメラからのメディアストリームなどを取得することができます。
 - 文書化（ブラウザーでは DOM で表される）は、ウィンドウに読み込まれた実際のページであり、JavaScript では {{domxref("Document")}} オブジェクトで表されます。このオブジェクトを使用して、文書を構成する HTML と CSS に関する情報を返したり操作したりすることができます。例えば、DOM 内の要素への参照を取得し、そのテキストコンテンツを変更し、新しいスタイルを適用し、新しい要素を作成して現在の要素に子として追加したり、あるいは完全に削除したりすることができます。
 
@@ -43,7 +48,7 @@ l10n:
 
 ## ドキュメントオブジェクトモデル
 
-ブラウザーのそれぞれのタブに現在読み込まれている文書は、ドキュメントオブジェクトモデルによって表されています。これは、ブラウザーが作成した「ツリー構造」の表現で、プログラミング言語から HTML の構造に簡単にアクセスできるようになっています。例えば、ブラウザー自身はこれを使用して、ページを表示するときに正しい要素にスタイルやその他の情報を適用し、開発者はページが表示された後に JavaScript で DOM を操作することができます。
+このコースの前半でも見かけた、ドキュメントオブジェクトモデル (DOM) について、簡単に復習しておきましょう。ブラウザーのそれぞれのタブに現在読み込まれている文書は、 DOM によって表されます。これは、ブラウザーが作成した「ツリー構造」の表現で、プログラミング言語から HTML の構造に簡単にアクセスできるようになっています。例えば、ブラウザー自身はこれを使用して、ページを表示するときに正しい要素にスタイルやその他の情報を適用し、開発者はページが表示された後に JavaScript で DOM を操作することができます。
 
 [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) にちょっとした例を作成しました（[ライブ実行](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)もどうぞ）。ブラウザーから開いてみてください。これはとても簡素なページで、{{htmlelement("section")}} 要素の中に画像が一つと、一つのリンクを含む一つの段落があります。HTML のソースはこんな感じです。
 
@@ -75,7 +80,7 @@ l10n:
 > [!NOTE]
 > この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
 
-ツリーのそれぞれの項目は、ノードと呼ばれます。上の図では、ノードには要素（`HTML`、`HEAD`、`META` などと識別される）を表すものや 、テキスト（`#text` と識別される）を表すものがあることが分かります。[他の種類のノード](/ja/docs/Web/API/Node/nodeType)もありますが、よく見かけるものはこれらのものです。
+ツリーのそれぞれの項目は、**ノード**と呼ばれます。上の図では、ノードには要素（`HTML`、`HEAD`、`META` などと識別される）を表すものや 、テキスト（`#text` と識別される）を表すものがあることが分かります。[他の種類のノード](/ja/docs/Web/API/Node/nodeType)もありますが、よく見かけるものはこれらのものです。
 
 また、ノードは、ツリーの中で他のノードからの相対的な位置によって参照されます。
 
@@ -91,7 +96,7 @@ l10n:
 
 DOM 操作の学習を始めるにあたり、まずは実践的な例から始めましょう。
 
-1. [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) と [image](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dinosaur.png) のローカルコピーを一緒に作成して下さい。
+1. [dom-example.html のページ](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) と[画像](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dinosaur.png)のローカルコピーを一緒に作成して下さい。
 2. `<script></script>` 要素を、閉じ `</body>` タグのすぐ上に追加して下さい。
 3. DOM の中の要素を操作するため、まず DOM を選びだしてこれへの参照を変数に保存する必要があります。script 要素の中に、次の行を追加して下さい。
 
@@ -99,7 +104,7 @@ DOM 操作の学習を始めるにあたり、まずは実践的な例から始�
    const link = document.querySelector("a");
    ```
 
-4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェイス、さらにその汎化した親のインターフェイス {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
+4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます（利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェイス、さらにその汎化した親のインターフェイス {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています）。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
 
    ```js
    link.textContent = "Mozilla Developer Network";
@@ -111,14 +116,14 @@ DOM 操作の学習を始めるにあたり、まずは実践的な例から始�
    link.href = "https://developer.mozilla.org";
    ```
 
-JavaScript でよくあることですが、要素を選択し、その参照を変数に格納する方法はたくさんあることに注意してください。{{domxref("Document.querySelector()")}} は、現代の手法として推奨されています。CSS のセレクターを使用して要素を選択することができるので便利です。上記の `querySelector()` 呼び出しは、文書内に最初に現れる {{htmlelement("a")}} 要素を選択します。もし、複数の要素を選択して何かをしたいのであれば、 {{domxref("Document.querySelectorAll()")}} を使用することができます。これはセレクターに一致する文書内のすべての要素を選択し、それらへの参照を[配列](/ja/docs/Learn/JavaScript/First_steps/Arrays)風のオブジェクトである {{domxref("NodeList")}} に格納します。
+JavaScript でよくあることですが、要素を選択し、その参照を変数に格納する方法はたくさんあることに注意してください。{{domxref("Document.querySelector()")}} は、現代の手法として推奨されています。CSS のセレクターを使用して要素を選択することができるので便利です。上記の `querySelector()` 呼び出しは、文書内に最初に現れる {{htmlelement("a")}} 要素を選択します。もし、複数の要素を選択して何かをしたいのであれば、 {{domxref("Document.querySelectorAll()")}} を使用することができます。これはセレクターに一致する文書内のすべての要素を選択し、それらへの参照を[配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)風のオブジェクトである {{domxref("NodeList")}} に格納します。
 
 要素への参照を得るためには、次のような古いやり方もあります。
 
 - {{domxref("Document.getElementById()")}} は、指定された `id` 属性値を持つ要素を選択します。例えば `<p id="myId">My paragraph</p>` の場合、この関数に引数として ID を渡します。すなわち、 `const elementRef = document.getElementById('myId')` とします。
 - {{domxref("Document.getElementsByTagName()")}} は、指定した種類の全ての要素を配列風のオブジェクトに入れて返します、例えばすべての `<p>`、すべての `<a>` などです。要素の型をこの関数に引数として渡します。すなわち、 `const elementRefArray = document.getElementsByTagName('p')` のようにします。
 
-この 2 つは、 `querySelector()` のような現代のメソッドよりも古いブラウザーでうまく動作しますが、それほど便利なものではありません。他にどんなものがあるか、探してみてください。
+この 2 つは、古いブラウザーでは `querySelector()` のような現代のメソッドよりもうまく動作しますが、それほど便利なものではありません。他にどんなものがあるか、探してみてください。
 
 ### 新しいノードの作成と配置
 
@@ -158,11 +163,11 @@ JavaScript でよくあることですが、要素を選択し、その参照を
    linkPara.appendChild(text);
    ```
 
-DOMにノードを追加するために必要なものは、これでほとんど揃いました。動的なインターフェイスを構築する際には、これらのメソッドを多く使用することになるでしょう（後でいくつかの例を見てみましょう）。
+DOM にノードを追加するために必要なものは、これでほとんど揃いました。動的なインターフェイスを構築する際には、これらのメソッドを多く使用することになるでしょう（後でいくつかの例を見てみましょう）。
 
-### 要素の移動や削除
+### 要素の移動や除去
 
-ノードを移動させたり、 DOM から完全に削除したい場合があります。これは完全に可能です。
+ノードを移動させたり、 DOM から完全に除去したい場合があります。これは完全に可能です。
 
 リンクが含まれる段落を節の一番下に移動させたい場合は、このようにします。
 
@@ -170,7 +175,7 @@ DOMにノードを追加するために必要なものは、これでほとん�
 sect.appendChild(linkPara);
 ```
 
-これは段落をセクションの一番下に移動させます。2つ目のコピーができると思ったかもしれませんが、そうではありません。 `linkPara` は、その段落の唯一のコピーを参照するものなのです。もしコピーを作成してそれも追加したい場合は、代わりに {{domxref("Node.cloneNode()")}} を使用する必要があります。
+これは段落をセクションの一番下に移動させます。 2 つ目のコピーができると思ったかもしれませんが、そうではありません。 `linkPara` は、その段落の唯一のコピーを参照するものなのです。もしコピーを作成してそれも追加したい場合は、代わりに {{domxref("Node.cloneNode()")}} を使用する必要があります。
 
 ノードの削除も、少なくとも削除するノードとその親への参照がある場合は、とても簡単です。今回の例では、以下のように {{domxref("Node.removeChild()")}} を使用するだけです。
 
@@ -220,7 +225,7 @@ linkPara.parentNode.removeChild(linkPara);
    ```
 
 > [!NOTE]
-> JavaScript のプロパティ版では、 CSS スタイルが小文字のキャメルケースで書かれているのに対し、 CSS 版はハイフン区切りで書かれていることに注意してください（例: `backgroundColor` と `background-color`）。これらを混合しないように注意してください。さもなければ、これは動作しません。
+> JavaScript のプロパティ版では、 CSS スタイルが小文字のキャメルケースで書かれているのに対し、 CSS 版はハイフン区切りで書かれていることに注意してください（`backgroundColor` や `background-color` など）。これらを混合しないように注意してください。さもなければ、これは動作しません。
 
 ドキュメントのスタイルを動的にいじる際によく使われる別のやり方をこれから見ていきましょう。
 
@@ -247,9 +252,9 @@ linkPara.parentNode.removeChild(linkPara);
 
 4. ページを更新すると、何も変化がないことがわかります。CSS は引き続き段落に適用されていますが、今回はインライン CSS スタイルではなく、CSS ルールによって選択されたクラスが与えられています。
 
-どちらの方法を選ぶかは、あなた次第です。どちらも長所と短所があります。最初の方法は設定が少なくて済み、単純な使用に適しています。一方、2番目の方法はより純粋主義的です（CSS と JavaScript を混合しない、悪しき習慣とされるインラインスタイルも使用しない）。より大規模で複雑なアプリを作り始めると、おそらく2つ目の方法をより多く使用するようになるでしょうが、それは実にあなた次第です。
+どちらの方法を選ぶかは、あなた次第です。どちらも長所と短所があります。最初の方法は設定が少なくて済み、単純な使用に適しています。一方、 2 番目の方法はより純粋主義的です（CSS と JavaScript を混合しない、悪しき習慣とされるインラインスタイルも使用しない）。より大規模で複雑なアプリを作り始めると、おそらく 2 つ目の方法をより多く使用するようになるでしょうが、それは実にあなた次第です。
 
-この点で、我々は実際に有用なことは何もしていません! 静的コンテンツを作成するためにJavaScript を使用する意味はありません。JavaScript を使用せず、HTML に記述したほうがよいでしょう。HTMLよりも複雑ですし、JavaScriptでコンテンツを作成することには他にも付随する問題があります（検索エンジンに読み取られないなど）。
+この点で、我々は実際に有用なことは何もしていません! 静的コンテンツを作成するために JavaScript を使用する意味はありません。 JavaScript を使用せず、 HTML に記述したほうがよいでしょう。 HTML よりも複雑ですし、 JavaScript でコンテンツを作成することには他にも付随する問題があります（検索エンジンに読み取られないなど）。
 
 次の節では、 DOM API をより有用に使用する方法を見ていきます。
 
@@ -272,10 +277,10 @@ linkPara.parentNode.removeChild(linkPara);
 
 1. まず私たちが用意した [shopping-list.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html) 初期ファイルをダウンロードしてローカルコピーをどこかに作成してください。最小限の CSS、ラベルのついたリスト、input とボタン、空のリストと {{htmlelement("script")}} 要素が書いてあるはずです。この先書き足していくものは全部 script の中に書きます。
 2. ({{htmlelement("ul")}}) と {{htmlelement("input")}} と {{htmlelement("button")}} 要素への参照を保持する 3 つの変数を作成します。
-3. ボタンがクリックされた時の応答として走らせる[関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions)を作成します。
+3. ボタンがクリックされた時の応答として走らせる[関数](/ja/docs/Learn_web_development/Core/Scripting/Functions)を作成します。
 4. 関数本体は、input 要素の現在の[値](/ja/docs/Web/API/HTMLInputElement#プロパティ)を変数に保存するところから始めます。
 5. 次に、input 要素の値に空文字列 (`''`) を代入して、 input 要素を空にします。
-6. 3 つの要素を作成します — リスト項目({{htmlelement('li')}}) と {{htmlelement('span')}} と {{htmlelement('button')}} で、これらを変数に保存します。
+6. 3 つの要素を作成します — リスト項目 ({{htmlelement('li')}}) と {{htmlelement('span')}} と {{htmlelement('button')}} で、これらを変数に保存します。
 7. span と button をリスト項目の子に追加します。
 8. span のテキストに、先ほど保存した input 要素の値を代入し、ボタンのテキストを「削除」にします。
 9. できたリスト項目をリストの子に追加します。
@@ -300,4 +305,4 @@ linkPara.parentNode.removeChild(linkPara);
 
 （私たちの [Web API の索引](/ja/docs/Web/API) で、 MDN で文書化されている Web API の全リストを参照できます。）
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics","Learn_web_development/Core/Scripting/Network_requests", "Learn_web_development/Core/Scripting")}}

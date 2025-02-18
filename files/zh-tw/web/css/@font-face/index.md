@@ -2,12 +2,12 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
 {{CSSRef}}
 
-**`@font-face`** [CSS](/zh-TW/docs/Web/CSS) [@ 規則](/zh-TW/docs/Web/CSS/At-rule)用來指定一個自定義的字型，用於顯示文本；該字型可以從遠端伺服器加載，或者使用者本地安裝的字型。
+**`@font-face`** [CSS](/zh-TW/docs/Web/CSS) [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)用來指定一個自定義的字型，用於顯示文本；該字型可以從遠端伺服器加載，或者使用者本地安裝的字型。
 
 ## 語法
 
@@ -31,18 +31,13 @@ l10n:
 - {{cssxref("@font-face/font-display", "font-display")}}
   - : 決定字型在下載並準備使用時的顯示方式。
 - {{cssxref("@font-face/font-family", "font-family")}}
-  - : 指定將作為字型屬性的字型名稱。
+  - : 指定將作為字型屬性的字型名稱。`font-family` 名稱是 `@font-face` 規則有效的必要條件。
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
   - : 一個 {{cssxref("font-stretch")}} 值。接受兩個值以指定字型範圍，例如 `font-stretch: 50% 200%;`
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : 一個 {{cssxref("font-style")}} 值。接受兩個值以指定字型範圍，例如 `font-style: oblique 20deg 50deg;`
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-
   - : 一個 {{cssxref("font-weight")}} 值。接受兩個值以指定字型範圍，例如 `font-weight: 100 400;`
-
-    > [!NOTE]
-    > 字型變體參數值於 2018 年從規範中移除。{{cssxref("font-variant")}} 值屬性仍受支持，但沒有對應的描述符。
-
 - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
   - : 允許控制 OpenType 字型的高級排版功能。
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
@@ -52,7 +47,7 @@ l10n:
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : 定義字型輪廓和指標的縮放乘數，方便在相同字型大小下協調不同字型設計。
 - {{cssxref("@font-face/src", "src")}}
-  - : 指定字型資源的參考，包括字型格式及技術的提示。該參數值是 @font-face 規則有效的必要條件。
+  - : 指定字型資源的參考，包括字型格式及技術的提示。`src` 是 `@font-face` 規則有效的必要條件。
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : 指定字型所使用的 Unicode 碼位範圍。
 
@@ -89,7 +84,8 @@ l10n:
   .className {
     @font-face {
       font-family: "MyHelvetica";
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
@@ -132,7 +128,8 @@ body {
 ```css
 @font-face {
   font-family: "MyHelvetica";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }

@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 我們實作教程系列的第一篇文章，會說明將學到什麼東西，並提供「本地圖書館」範例網站的概述 。我們將在接下來的文章中一步一步完成這個網站。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前置條件:</th>

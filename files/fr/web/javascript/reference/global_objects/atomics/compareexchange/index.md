@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 
 La méthode statique **`Atomics.compareExchange()`** échange une valeur d'un tableau à un emplacement donné si la valeur qui était dans le tableau correspond à une valeur donnée. Cette méthode renvoie l'ancienne valeur à cet emplacement, qu'il y ait eu remplacement ou non. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-{{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.compareExchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+Atomics.compareExchange(uint8, 0, 5, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+
+Atomics.compareExchange(uint8, 0, 5, 4); // Returns 2
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntaxe
 

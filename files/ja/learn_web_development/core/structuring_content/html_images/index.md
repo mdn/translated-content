@@ -1,37 +1,41 @@
 ---
 title: HTML の画像
 slug: Learn_web_development/Core/Structuring_content/HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 l10n:
-  sourceCommit: e831294901a97571f85c34651460401d6d0be897
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
 
-当初、ウェブは単なるテキストであり、とてもつまらないものでした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。ウェブページに単純な画像を埋め込むために用いる地味な {{htmlelement("img")}} 要素から始めるのは論理的ですが、他にも考慮すべき種類のマルチメディアがあります。この記事では、基本的な使い方、 {{htmlelement("figure")}} を使用したキャプションの注釈、 {{glossary("CSS")}} 背景画像との関連の詳細、そして他にもウェブプラットフォームで使用することができるグラフィックを紹介するなど、詳しく見ていきます。
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+
+当初、ウェブは単なるテキストであり、とてもつまらないものでした。幸運なことに、ウェブページ内に画像（および他のより面白い種類のコンテンツ）を埋め込む能力が追加されるまでにはあまり時間がかかりませんでした。この記事では、 {{htmlelement("img")}} 要素の使い方について、基本的な使い方、 {{htmlelement("figure")}} を使用したキャプションの注釈、 {{glossary("CSS")}} 背景画像との関連の詳細などを詳しく見ていきます。
 
 <table>
-<caption>マルチメディアと埋め込み画像</caption>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >インストール済みの基本的なソフトウェア</a
-        >、基本的な
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイル操作</a
-        >の知識、 HTML の基礎知識になじんでいること（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML を始めよう</a
-        >にあるような）。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >見出しと段落</a
+        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >リスト</a
+        >などのテキストレベルの意味付け。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        単純な画像を HTML に埋め込み、キャプションで注釈を付ける方法、および HTML 画像と CSS 背景画像との関連を学ぶ。
+        <ul>
+          <li>「置換要素」という耀g。どういう意味でしょう。</li>
+          <li>基本的な <code>&lt;img&gt;</code> タグの構文</li>
+          <li><code>src</code> を使用してリソースを指すこと。</li>
+          <li><code>width</code> と <code>height</code> を使用して、例えば、画像の読み込みが完了して表示された後に、 UI が不快でぎこちない動きで更新されるのを避けることができること。</li>
+          <li>ウェブ用にメディア資産を最適化する — ファイルサイズを小さく保ちます。</li>
+          <li>メディア資産ライセンスの理解 — さまざまなライセンスの種類、それらに準拠する方法、そして自分のプロジェクトで使用する適切なライセンスのメディアファイルを検索する方法。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -44,7 +48,7 @@ l10n:
 [`alt` 属性は後で説明します](#代替テキスト)。
 
 > [!NOTE]
-> 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url_とパスに関する簡単な入門)を読んで、相対 URL と絶対 URL の記憶を更新してください。
+> 続行する前に、[URL とパスに関する簡単な入門](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#url_とパスに関する簡単な入門)を読んで、相対 URL と絶対 URL の記憶を更新してください。
 
 例えば、画像が `dinosaur.jpg` というファイル名で、HTML ページと同じディレクトリーにある場合、画像を次のように埋め込むことができます。
 
@@ -110,15 +114,15 @@ l10n:
 
 `alt` 属性の中に正確に何を書けばいいのでしょうか？それは、最初に画像を置く理由に依存します。言い換えれば、画像が表示されないと何を失うかです。
 
-- **装飾**。装飾的な画像には [CSS 背景画像](#css_背景画像)を使用すべきですが、 HTML を使用する必要がある場合は、空白の `alt=""` を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは読んで時間を浪費すべきではありません。
+- **装飾**。装飾的な画像には [CSS 背景画像](#css_背景画像)を使用すべきですが、 HTML を使用する必要がある場合は、空白の `alt=""` を追加してください。画像がコンテンツの一部でない場合、スクリーンリーダーは読み上げて時間を浪費すべきではありません。
 - **コンテンツ**。画像が重要な情報を提供している場合は、簡単な代替テキストで同じ情報を提供してください。それよりもっと良いのは、誰もが見ることができる本文の中で提供することです。冗長な `alt` テキストを書かないでください。すべての段落がメインコンテンツに 2 重に書かれていると、目に見えるユーザーにとってはどれほど迷惑でしょうか？画像が主たる本文で十分に記述されている場合は、単に `alt=""` が使用できます。
-- **リンク**。 {{htmlelement("a")}} タグ内に画像を置いた場合、画像をリンクにすると、[アクセス可能なリンクテキスト](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#明確なリンク語を使う)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
+- **リンク**。 {{htmlelement("a")}} タグ内に画像を置いた場合、画像をリンクにすると、[アクセス可能なリンクテキスト](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を提供する必要があります。そのような場合は、同じ `<a>` 要素内に、または画像の `alt` 属性内に書き込むことができます。
 - **テキスト**。テキストを画像に入れないでください。たとえば、メインの見出しにドロップシャドウが必要な場合は、テキストを画像に入れるのではなく、 [CSS を使用](/ja/docs/Web/CSS/text-shadow)してください。しかし、これが本当に避けられない場合は、 `alt` 属性でテキストを与える必要があります。
 
 基本的には、画像が見えないときでも、実用的な使い勝手を提供することが鍵です。これにより、すべてのユーザーにコンテンツが欠落していないことが保証されます。ブラウザーの画像をオフにして、どのように見えるかを確認してください。画像が見えない場合に、すぐに役立つ代替テキストがどれほどあるかがすぐに理解できます。
 
 > [!NOTE]
-> 詳細については、[代替テキストのガイド](/ja/docs/Learn/Accessibility/HTML#代替テキスト)を参照してください。
+> 詳細については、[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)のガイドや [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) を参照すると、さまざまな状況で画像の `alt` 属性を使用する方法が分かります。
 
 ### 幅と高さ
 
@@ -182,11 +186,11 @@ HTML で `width` 属性と `height` 属性を用いて画像の実際の大き�
 >
 > 画像サイズを大きく設定しすぎると、画像が粗くなったり、ぼやけたり、小さすぎたりして、ユーザーのニーズに合っていない画像をダウンロードすることになり、帯域幅を浪費することになります。また、正しい[アスペクト比](https://ja.wikipedia.org/wiki/アスペクト比)を維持しないと、画像が歪んでいってしまうかもしれません。ウェブページに画像を掲載する前に、画像エディターを使用して正しいサイズにしましょう。
 >
-> 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn/CSS) を使用しましょう。
+> 画像のサイズを変更する必要がある場合は、代わりに [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) を使用しましょう。
 
 ### 画像のタイトル
 
-[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#title_属性による補足情報の追加)と同様に、画像に `title` 属性を追加して、必要に応じてさらに補足情報を提供することもできます。この例では、これを行うことができます。
+[リンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#title_属性による補足情報の追加)と同様に、画像に `title` 属性を追加して、必要に応じてさらに補足情報を提供することもできます。この例では、これを行うことができます。
 
 ```html
 <img
@@ -202,7 +206,7 @@ HTML で `width` 属性と `height` 属性を用いて画像の実際の大き�
 
 ![恐竜の画像に、 A T-Rex on display at the Manchester University Museum というツールチップのタイトルが表示されています](image-with-title.png)
 
-しかし、これは推奨されていません。`title` には多くのアクセシビリティ上の問題があります。主に、スクリーンリーダーの対応予測不可能で、ほとんどのブラウザーではマウスを当てない限り表示されません（そのため、例えばキーボードのユーザーはアクセスできません）。このことについてもっと知りたい場合は、Scott O'Hara の[タイトル属性の試行錯誤](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) （英語）をお読みください。
+しかし、これは推奨されていません。`title` には多くのアクセシビリティ上の問題があります。主に、スクリーンリーダーの対応予測不可能で、ほとんどのブラウザーではマウスを当てない限り表示されません（そのため、例えばキーボードのユーザーはアクセスできません）。このことについてもっと知りたい場合は、 Scott O'Hara の[タイトル属性の試行錯誤](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) （英語）をお読みください。
 
 画像に添付するのではなく、メインの記事のテキストにそのような補足情報を含めた方がいいでしょう。
 
@@ -224,15 +228,14 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 間違えた場合は、\[リセット] ボタンを使用してリセットすることができます。あなたが本当に立ち往生した場合は、\[答えを表示] ボタンを押して答えを表示してください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
-  はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
@@ -309,12 +312,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -434,7 +437,7 @@ textarea.onkeyup = function () {
 
 より良い解決策は、HTML の {{htmlelement("figure")}} と {{htmlelement("figcaption")}} 要素を使用することです。図表のための意味的なコンテナーを提供し、図表をキャプションに明確にリンクさせること。これはまさにこの目的のために作成されたものです。上記の例は次のように書き直すことができます。
 
-```html
+```html-nolint
 <figure>
   <img
     src="images/dinosaur.jpg"
@@ -443,7 +446,9 @@ textarea.onkeyup = function () {
     width="400"
     height="341" />
 
-  <figcaption>マンチェスター大学博物館に展示されている T-Rex。</figcaption>
+  <figcaption>
+    マンチェスター大学博物館に展示されている T-Rex。
+  </figcaption>
 </figure>
 ```
 
@@ -469,7 +474,7 @@ textarea.onkeyup = function () {
 
 間違えた場合は、\[リセット] ボタンを使用してリセットすることができます。あなたが本当に立ち往生した場合は、\[答えを表示] ボタンを押して答えを表示してください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 
 <div class="output" style="min-height: 50px;"></div>
@@ -555,12 +560,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -613,29 +618,12 @@ p {
 
 要約: 画像に意味がある場合、すなわちコンテンツであれば、HTML 画像を使用してください。画像が純粋に装飾である場合は、 CSS 背景画像を使用してください。
 
-> **メモ:** [CSS 背景画像](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)については、[CSS](/ja/docs/Learn/CSS) のトピックで詳しく説明します。
-
-## ウェブ上のその他のグラフィック
-
-静止画像は {{HTMLElement("img")}} 要素を使用して表示したり、 {{cssxref("background-image")}} プロパティを使用してHTML要素の背景を設定したりすることができます。また、その場で画像を作成したり、後から画像を操作することもできます。ブラウザーには、コードで 2D や 3D グラフィックを作成する方法や、アップロードされたファイルやユーザーのカメラからライブ配信された動画を記載する方法があります。この記事では、より高度なグラフィックスのトピックを紹介しています：
-
-- [キャンバス](/ja/docs/Web/API/Canvas_API)
-  - : {{HTMLElement("canvas")}} 要素は、 JavaScript で 2D グラフィックを描画する API を提供します。
-- [SVG](/ja/docs/Web/SVG)
-  - : SVG (Scalable Vector Graphics) は、線、曲線、その他の幾何学図形を使用して 2D グラフィックスをレンダリングします。ベクターを用いて、どんなサイズにもきれいに変倍する画像を作成することができます。
-- [WebGL](/ja/docs/Web/API/WebGL_API)
-  - : WebGL API ガイドは、ウェブコンテンツで標準の OpenGL ES を使用することができるウェブ用 3D グラフィック API である WebGL を使い始めるために役立ちます。
-- [HTML の音声と動画の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : `<img>` と同様に、 HTML を使用して動画 ({{htmlelement("video")}}) や 音声({{htmlelement("audio")}}) をウェブページに埋め込み、その再生を制御することができます。
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
-  - : WebRTC の RTC は Real-Time Communications の略で、ブラウザークライアント（ピア）間の音声/動画ストリーミングとデータ共有を可能にする技術です。
-
 ## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: HTML 画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images) を見てください。
 
 ## まとめ
 
-今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。次の記事では、さらにギアを上げて、HTML を使用してウェブページに[動画や音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を埋め込む方法について見ていきたいと思います。
+今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。次の記事では、さらにギアを上げて、HTML を使用してウェブページに動画や音声コンテンツを埋め込む方法について見ていきたいと思います。
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}

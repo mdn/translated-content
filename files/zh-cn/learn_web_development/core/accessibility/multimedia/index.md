@@ -10,7 +10,7 @@ original_slug: Learn/Accessibility/Multimedia
 
 可能导致无障碍（accessibility）问题的另一类内容是多媒体——视频、音频和图像内容需要提供适当的文本替代方式，以便辅助技术及其用户能够理解它们。本文展示了具体内容。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">先决条件：</th>
@@ -226,9 +226,9 @@ player.ontimeupdate = () => {
 
 这为你提供了如何向视频/音频播放器实例添加自定义播放器功能的基本想法。有关如何向视频/音频播放器添加更复杂的功能（包括旧版浏览器的 Flash 回退）的详细信息，请参阅：
 
-- [Audio and video delivery](/zh-CN/docs/Web/Media/Audio_and_video_delivery)
-- [Video player styling basics](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/zh-CN/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
+- [Audio and video delivery](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)
+- [Video player styling basics](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
+- [Creating a cross-browser video player](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
 
 我们还创建了一个高级示例，以演示如何创建面向对象的系统，该系统可查找页面上的每个视频和音频播放器 (无论有多少个视频和音频播放器),并将自定义控件添加到其中。请参阅 [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/)（[查看其源码](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)）。
 
@@ -324,7 +324,7 @@ This is the second.
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。你可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，你需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
+有关详细信息，请阅读[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。你可以找到与本文一起使用本文的[the example](http://iandevlin.github.io/mdn/video-player-with-captions/),本文由 Ian Devlin 编写 (请参阅[source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions))。此示例使用一些 JavaScript 允许用户在不同的字幕之间进行选择。请注意，要打开字幕，你需要按"CC"按钮并选择一个选项 - 英语、德语或西班牙语。
 
 > [!NOTE]
 > 文本轨道和转录也可以帮助你使用{{glossary("SEO")}},因为搜索引擎在文本上尤其繁荣。文本轨道甚至允许搜索引擎通过视频直接链接到一个点部分。

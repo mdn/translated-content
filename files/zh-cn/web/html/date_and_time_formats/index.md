@@ -390,6 +390,6 @@ HTML 中的日期和时间总会使用 [ASCII](https://zh.wikipedia.org/zh-cn/IS
 - {{HTMLElement("input")}}
 - {{HTMLElement("ins")}} 和 {{HTMLElement("del")}}：请查阅 `datetime` 属性，它指定了插入或删除内容的日期或本地日期和时间
 - [ISO 8601 定义](https://www.iso.org/iso-8601-date-and-time-format.html)
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[数字和字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)
 - JavaScript {{jsxref("Date")}} 对象
 - 以给定区域选项格式化日期和时间的 [`Intl.DateTimeFormat`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 对象

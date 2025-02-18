@@ -1,36 +1,13 @@
 ---
 title: レスポンシブ画像
 slug: Web/HTML/Responsive_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 l10n:
-  sourceCommit: 76c1e86a6bf1fd58aa6b0e627842a3c1161add28
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{HTMLSidebar}}
 
-この記事では、レスポンシブ画像の概念 — 画面サイズ、解像度などの機能が大きく異なる機器で適切に動作する画像 — について学び、 HTML がそれを実装する上でどのような道具を提供しているかを見てみます。 レスポンシブ画像は、レスポンシブウェブデザインの一部にすぎませんが（そしてそれを実現する上で良いステージになりますが）、 [CSS のトピック](/ja/docs/Learn/CSS)の将来のモジュールで多くのことを学ぶトピックです。
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML の基本</a>および<a
-          href="/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
-          >ウェブページに静止画を追加する方法</a
-        >をすでに知っているものとします。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> や
-        {{htmlelement("picture")}}
-        要素のような機能を使って、ウェブサイトにレスポンシブ画像を実装する方法を学ぶこと。
-      </td>
-    </tr>
-  </tbody>
-</table>
+この記事では、レスポンシブ画像という概念について学びます。レスポンシブ画像とは、画面サイズや解像度などが大きく異なる端末でも適切に表示される画像のことです。また、HTML が提供する、レスポンシブ画像の実装に役立つツールについても見ていきます。これにより、さまざまな端末でのパフォーマンスを向上させることができます。
 
 ## なぜレスポンシブ画像なのか？
 
@@ -50,13 +27,13 @@ l10n:
 
 改善策として、狭い画面の内側へ表示される場合は、画像の重要な部分を表示するトリミングした版を表示することが考えられます。タブレットのような画面の内側が中型の機器には、 2 つ目のトリミングされた画像を表示することができます。このように、さまざまなレイアウトで異なるトリミング画像を提供したい場合の一般的な問題は、一般に「**アートディレクション問題**」と呼ばれます。
 
-さらに、小さなモバイル画面で見ている場合、このような大きな画像をページに埋め込む必要はありません。このようなことをすると、帯域幅が無駄になります。具体的な例としては、モバイル端末のユーザーは、自分の端末では小さな画像で済むのに、デスクトップユーザー向けの大きな画像をダウンロードして、帯域幅を無駄にしたくないということがあります。逆に、小さな[ラスター画像](/ja/docs/Glossary/Raster_image)は、元のサイズより大きく表示すると、粒状に見えてきます（ラスター画像は、[ベクターグラフィック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)のところで見たように、幅の数ののピクセルの集まりと、高さの数のピクセルの集まりです）。理想的な状況は、複数の解像度が利用可能で、ウェブサイト上のデータにアクセスする端末に応じて適切なサイズを提供することです。これは**解像度切り替えの問題**と呼ばれています。
+さらに、小さなモバイル画面で見ている場合、このような大きな画像をページに埋め込む必要はありません。このようなことをすると、帯域幅が無駄になります。具体的な例としては、モバイル端末のユーザーは、自分の端末では小さな画像で済むのに、デスクトップユーザー向けの大きな画像をダウンロードして、帯域幅を無駄にしたくないということがあります。逆に、小さな[ラスター画像](/ja/docs/Glossary/Raster_image)は、元のサイズより大きく表示すると、粒状に見えてきます（ラスター画像は、幅の数のピクセルの集まりと、高さの数のピクセルの集まりです）。理想的な状況は、複数の解像度が利用可能で、ウェブサイト上のデータにアクセスする端末に応じて適切なサイズを提供することです。これは**解像度切り替えの問題**と呼ばれています。
 
 状況をより複雑にしているのが、端末によっては高い解像度の画面を持ち、きれいに表示するには、期待されるよりも大きい画像を必要としていることです。 これは本質的に同じ問題ですが、少し異なる状況のものです。
 
 ベクター画像はある側面でこれらの問題を解決すると思うかもしれません。 — ファイルサイズが小さくて容易に縮尺変更でき、どこでも利用できるからです。 しかし、すべての種類の画像に適しているわけではありません。単純な図形、パターン、インターフェイス要素などには適していますが、例えば写真のような精細なものをベクターベースの画像で作成すると、とても複雑になります。上記の例に見られるような種類の画像には、JPEG のようなラスター画像形式がより適しています。
 
-この種の問題は、ウェブが最初に登場したとき、90 年代前半から中期の頃には存在しませんでした。 — ウェブをブラウズする唯一の端末はデスクトップとラップトップであったため、ブラウザーの技術者や仕様書の著者は解決策を実装することを考えませんでした。 *レスポンシブ画像技術*は上記のような問題を解決するために最近になって実装され、ブラウザーに様々な画像ファイル、どれも表示するものは同じですが、ピクセル数が異なる様々な画像（解像度の切り替え）、異なる領域の取り方が異なる様々な画像（アートディレクション）を含めることができます。
+この種の問題は、ウェブが最初に登場したとき、90 年代前半から中期の頃には存在しませんでした。 — ウェブをブラウズする唯一の端末はデスクトップとラップトップであったため、ブラウザーの技術者や仕様書の著者は解決策を実装することを考えませんでした。「レスポンシブ画像技術」は、上記のような問題を解決するために最近になって実装され、ブラウザーに様々な画像ファイル、どれも表示するものは同じですが、ピクセル数が異なる様々な画像（解像度の切り替え）、異なる領域の取り方が異なる様々な画像（アートディレクション）を含めることができます。
 
 > [!NOTE]
 > この記事で説明している新機能 — [`srcset`](/ja/docs/Web/HTML/Element/img#srcset)/[`sizes`](/ja/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — は、現行のデスクトップおよびモバイルブラウザーのすべてが対応しています。
@@ -90,19 +67,11 @@ l10n:
 
 1. 画像ファイル名 (`elva-fairy-480w.jpg`)
 2. 空白
-3. 画像の**幅の内在的なピクセル数** (`480w`) — なお、これは単位に `px` ではなく `w` を使用します。画像の[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)は実際の寸法で、これはコンピューターの画像ファイルを調べると分かります（例えば Mac では Finder で画像を選択して、
-
-   <kbd>Cmd</kbd>
-
-   \+
-
-   <kbd>I</kbd>
-
-   を押すと情報画面が出てきます）。
+3. 画像の**幅の内在的なピクセル数** (`480w`) — なお、これは単位に `px` ではなく `w` を使用します。画像の[内在サイズ](/ja/docs/Glossary/Intrinsic_Size)は実際の寸法で、これはコンピューターの画像ファイルを調べると分かります（例えば Mac では Finder で画像を選択して、 <kbd>Cmd</kbd> + <kbd>I</kbd> を押すと情報画面が出てきます）。
 
 **`sizes`** は、一連のメディア条件(例えば画面の幅)であり、特定のメディア条件が成立したときに、どの寸法の画像を選択するのが最適かを示します。これらは以前に説明したヒントです。 この場合、それぞれのカンマの前には次のようなものを書きます。
 
-1. **メディア条件** (`(max-width:600px)`) — これについては [CSS の記事](/ja/docs/Learn/CSS)で詳しく学びますが、今はメディア条件とは画面がなる可能性がある状態であるとだけ言っておきましょう。 この場合、「ビューポートの幅が 600 ピクセル以下であるとき」と言っています。
+1. **メディア条件** (`(max-width:600px)`) — これについては [CSS の記事](/ja/docs/Learn_web_development/Core/Styling_basics)で詳しく学びますが、今はメディア条件とは画面がなる可能性がある状態であるとだけ言っておきましょう。 この場合、「ビューポートの幅が 600 ピクセル以下であるとき」と言っています。
 2. 空白
 3. メディア条件が成立したときに埋める**スロットの幅** (`480px`)
 
@@ -164,7 +133,7 @@ img {
 <img src="elva-800w.jpg" alt="クリスは立って彼の娘エルバを抱えています" />
 ```
 
-{{htmlelement("picture")}} でこれを修正しましょう。 [`<video>`や`<audio>`](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)と同様に、`<picture>` 要素はラッパーで、ブラウザーが選択できるいくつかの異なるソースを提供するいくつかの {{htmlelement("source")}} 要素を含み、次に極めて重要な {{htmlelement("img")}} 要素が続きます。 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) のコードは次のようになります。
+{{htmlelement("picture")}} でこれを修正しましょう。 [`<video>`や`<audio>`](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)と同様に、`<picture>` 要素はラッパーで、ブラウザーが選択できるいくつかの異なるソースを提供するいくつかの {{htmlelement("source")}} 要素を含み、次に極めて重要な {{htmlelement("img")}} 要素が続きます。 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) のコードは次のようになります。
 
 ```html
 <picture>
@@ -203,16 +172,13 @@ img {
 レスポンシブ画像の解説は以上です。新しいテクニックを楽しんでいただけたでしょうか。おさらいとして、ここで学んできた、2 つの異なる問題を振り返りましょう。
 
 - **アートディレクション**: 異なるレイアウトでトリミングされた画像を提供したいという問題 — 例えば、デスクトップレイアウトではシーン全体を表す横長の画像を、モバイルレイアウトでは中心の被写体にズームインした縦長の画像にする画像などです。これは、 {{htmlelement("picture")}} 要素を使用して解決できます。
-- **解像度切り替え**: 狭い画面の端末では、デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、[ベクターグラフィックス](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)（SVG 画像）と [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) と [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を使用して解決できます。
-
-これはまた、[マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding)のモジュール全体の最終回です。先に進む前に行うべき唯一のことは、[マルチメディアと埋め込みの評価課題](/ja/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)に挑戦して、結果を見てみることです。楽しんでください。
+- **解像度切り替え**: 狭い画面の端末では、デスクトップ画面のような巨大な画像を必要としないため、小さな画像ファイルを配信したいという問題 — 必要に応じて異なる解像度の画像を高密度や低密度の画面に表示したい場合もあります。 これは、[ベクターグラフィックス](/ja/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)（SVG 画像）と [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) と [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を使用して解決できます。
 
 ## 関連情報
 
+- [学習: レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
 - [Jason Grigsby のレスポンシブ画像の優れた紹介](https://cloudfour.com/thinks/responsive-images-101-definitions/) (英語)
 - [レスポンシブ画像: 解像度を変更するだけの場合は、srcset を使う](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — ブラウザーがどの画像を使用するかの詳細な説明が含まれています(英語)
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
-
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}

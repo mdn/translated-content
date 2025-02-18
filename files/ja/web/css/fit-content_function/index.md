@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(最小サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
+**`fit-content()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、指定された寸法を `min(最大サイズ, max(最小サイズ, 引数))` の式に従って有効な範囲の寸法に収めます。
 
 {{EmbedInteractiveExample("pages/css/function-fit-content.html")}}
 

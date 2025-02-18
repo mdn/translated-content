@@ -8,7 +8,7 @@ original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row"><p>前提：</p></th>

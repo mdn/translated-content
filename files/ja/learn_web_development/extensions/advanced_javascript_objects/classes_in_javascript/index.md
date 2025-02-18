@@ -1,16 +1,17 @@
 ---
 title: JavaScript のクラス
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 l10n:
-  sourceCommit: ad3d16a5acd46253a4f5e2861fd4fba4e4497110
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
 
-[前回の記事](/ja/docs/Learn/JavaScript/Objects/Object-oriented_programming)で、オブジェクト指向プログラミング (OOP) の基本的な概念を紹介し、OOP の原則を用いて学校の教授と生徒をモデル化した例を説明しました。
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
-また、このようなモデルを実装するために[プロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)や[コンストラクター](/ja/docs/Learn/JavaScript/Objects/Basics#introducing_constructors)を使用できることや、より古典的なOOP の概念に近い形で、 JavaScript にも機能を提供することができることもお話ししました。
+前回の記事で、オブジェクト指向プログラミング (OOP) の基本的な概念を紹介し、OOP の原則を用いて学校の教授と生徒をモデル化した例を説明しました。
+
+また、このようなモデルを実装するために[プロトタイプ](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)や[コンストラクター](/ja/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors)を使用できることや、より古典的なOOP の概念に近い形で、 JavaScript にも機能を提供することができることもお話ししました。
 
 この記事では、これらの機能について説明していきます。ここで記述する機能は、オブジェクトを結合する新しい方法ではないことに留意する必要があります。プロトタイプチェーンを簡単に設定するための方法なのです。
 
@@ -19,16 +20,18 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        JavaScript 関数の理解、基本的な HTML と CSS 理解、JavaScript の基礎知識（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>や <a href="/ja/docs/Learn/JavaScript/Building_blocks"
-          >JavaScript の構成要素</a
-        >を参照）、OOJS の基礎（<a href="/ja/docs/Learn/JavaScript/Objects/Basics"
-          >オブジェクトの基本</a>、<a href="/ja/docs/Learn/JavaScript/Objects/Object_prototypes">オブジェクトのプロトタイプ</a>、<a href="/ja/docs/Learn/JavaScript/Objects/Object-oriented_programming">オブジェクト指向プログラミング</a>を参照）。
+        JavaScript の基本
+        （特に<a href="/ja/docs/Learn_web_development/Core/Scripting/Object_basics">オブジェクトの基本</a>を参照）、およびこのモジュールのこれまでのレッスンで扱ってきたオブジェクト指向 JavaScript の概念。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        「古典的な」オブジェクト指向プログラムを実装するために、JavaScript が提供する機能をどのように使用するかを理解すること。
+        <ul>
+          <li>JavaScript でのクラスの作成</li>
+          <li>JavaScript でのコンストラクターの作成。</li>
+          <li>JavaScript での継承とカプセル化。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -60,9 +63,9 @@ class Person {
 
 `name;` 宣言はオプションです。除外しても、コンストラクターの `this.name = name;` という行は、初期化する前に `name` プロパティを作成します。しかし、クラス宣言の中でプロパティを明示的に記載しておくと、コードを読む人がどのプロパティがこのクラスの一部であるかを容易に知ることができるかもしれません。
 
-また、プロパティを宣言するときに、`name = '';` のような行で、プロパティを既定値に初期化することも可能です。
+また、プロパティを宣言するときに、 `name = '';` のような行で、プロパティを既定値に初期化することも可能です。
 
-コンストラクターは {{jsxref("Classes/constructor", "constructor")}} キーワードを使って定義します。[クラス定義外のコンストラクター](/ja/docs/Learn/JavaScript/Objects/Basics#introducing_constructors)と同じように、次のようになります。
+コンストラクターは {{jsxref("Classes/constructor", "constructor")}} キーワードを使って定義します。[クラス定義外のコンストラクター](/ja/docs/Learn_web_development/Core/Scripting/Object_basics#introducing_constructors)と同じように、次のようになります。
 
 - 新しいオブジェクトを生成する
 - 新しいオブジェクトに `this` を結びつけ、コンストラクターのコードで `this` を参照することができるようにする
@@ -177,6 +180,9 @@ summers.canStudyArchery(); // true
 summers.#year; // SyntaxError
 ```
 
+> [!NOTE]
+> Chrome コンソールで実行したコードは、クラスの外部にあるプライベートプロパティにアクセスすることができます。これは、 JavaScript の構文制限を緩和した開発ツール独自の機能です。
+
 プライベートデータプロパティはクラス宣言で宣言する必要があり、その名前は `#` で始まります。
 
 ### プライベートメソッド
@@ -203,9 +209,10 @@ myExample.#somePrivateMethod(); // SyntaxError
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に行く前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります - [Test your skills: Object-oriented JavaScript](/ja/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript) を参照してください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に行く前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: オブジェクト指向 JavaScript](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript) を参照してください。
 
 ## まとめ
 
 この記事では、オブジェクト指向のプログラムを書くために JavaScript で利用できる主なツールについて説明しました。ここですべてを網羅したわけではありませんが、始めるには十分でしょう。この記事で紹介した[クラスの記事](/ja/docs/Web/JavaScript/Reference/Classes)は、さらに詳しく学ぶには良い場所です。
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

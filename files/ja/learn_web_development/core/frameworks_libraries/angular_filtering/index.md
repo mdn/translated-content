@@ -1,27 +1,27 @@
 ---
-title: To Do アイテムのフィルタリング
+title: to-do アイテムのフィルタリング
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
-次に、ユーザーが To Do アイテムをフィルタリングできるようにする機能を追加して、アクティブなアイテム、完了したアイテム、またはすべてのアイテムを表示できるようにしましょう。
+次に、ユーザーが to-do アイテムをフィルタリングできるようにする機能を追加して、アクティブなアイテム、完了したアイテム、またはすべてのアイテムを表示できるようにしましょう。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p>
-          <a href="/ja/docs/Learn/HTML">HTML</a>、
-          <a href="/ja/docs/Learn/CSS">CSS</a>、
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
-          <a
-            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ターミナル/コマンドライン</a
-          >に関する知識があること。
-        </p>
+        主要な
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> と
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a>
+        言語を扱うことができ、
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+          >端末/コマンドライン</a
+        >に関する知識があること。
       </td>
     </tr>
     <tr>
@@ -39,12 +39,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
 filter: 'all' | 'active' | 'done' = 'all';
 ```
 
-filter のデフォルト値は `all` ですが、 `active` または `done` にすることもできます。
+filter の既定値は `all` ですが、 `active` または `done` にすることもできます。
 
 ## フィルター コントロールの追加
 
 `app.component.html` で、次の HTML を **Add** ボタンの前、アイテムをリストするセクションの上に追加します。
-次のスニペットでは、HTML の既存のセクションがコメントになっているため、ボタンを配置する場所を正確に確認できます。
+次のスニペットでは、 HTML の既存のセクションがコメントになっているため、ボタンを配置する場所を正確に確認できます。
 
 ```html
 <!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
@@ -75,7 +75,7 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 </div>
 
 <!-- <h2>\{{items.length}} item(s)</h2>
-        <ul>... -->
+         <ul>... -->
 ```
 
 ボタンをクリックすると `filter` 値が変更され、Angular がアクティブなボタンにスタイルを適用し、表示する `items` を決定します。
@@ -94,4 +94,4 @@ filter のデフォルト値は `all` ですが、 `active` または `done` に
 
 簡単でしたね！ `app.component.ts` には既に `filter` コードがあるので、アイテムのフィルタリングをコントロールする為にテンプレートを編集するだけで済みました。 次の - そして最後の - 記事では、Angular アプリを本番環境で構築する方法を検討し、学習の旅を続けるための追加のリソースを提供します。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}

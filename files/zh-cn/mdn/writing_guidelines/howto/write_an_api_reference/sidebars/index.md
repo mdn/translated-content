@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc7310a85a8e6d5c0677dfaffba9b8fbbadc94a9
 ---
 
-{{MDNSidebar}}
-
 你可以在 API 参考页面上包含一个自定义侧边栏，以便它显示与该 API 相关的接口、教程和其他资源的链接。本文介绍了如何实现。
 
 ## 创建侧边栏

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<url>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)是指向资源的指针。资源可以是图像、视频、CSS 文件、字体文件、SVG 特性等。
+**`<url>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)是指向资源的指针。资源可以是图像、视频、CSS 文件、字体文件、SVG 特性等。
 
 ## 语法
 

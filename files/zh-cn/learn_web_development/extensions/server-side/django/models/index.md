@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Models
 
 这篇文章展示了如何为我们的 LocalLibray（本地图书馆）网站定义 models。它解释了一个模型是什么，它是怎么被声明的，和其中的一些主要域类型。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>

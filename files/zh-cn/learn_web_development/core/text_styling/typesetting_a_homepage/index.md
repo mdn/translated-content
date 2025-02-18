@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 
 在本测评中，通过对社区学校主页的文本样式化，我们会测试你对所有本模块涉及到的文本样式化技术的理解。你或许也会从中获得乐趣。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">预备条件：</th>

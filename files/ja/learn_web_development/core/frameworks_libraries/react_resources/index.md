@@ -1,10 +1,13 @@
 ---
 title: React のリソース
 slug: Learn_web_development/Core/Frameworks_libraries/React_resources
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
 最後の記事では、更に学習を進めるために利用できる React のリソースを紹介します。
 
@@ -13,93 +16,85 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_r
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p>
-          <a href="/ja/docs/Learn/HTML">HTML</a>、
-          <a href="/ja/docs/Learn/CSS">CSS</a>、
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
-          <a
-            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ターミナル/コマンドライン</a
-          >に関する知識があること。
-        </p>
+        コアの <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">端末/コマンドライン</a>が分かっていること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>React をより学習するためのさらなるリソースを提供する</td>
+      <th scope="row">学習成果:</th>
+      <td>React についてさらに学ぶためのリソースを把握すること。</td>
     </tr>
   </tbody>
 </table>
 
 ## コンポーネントレベルのスタイル
 
-このチュートリアルではこのアプローチは使用しませんが、多くの React アプリケーションでは、単一のモノリシックなスタイルシートではなく、コンポーネントごとにスタイルを定義しています。
+チュートリアルでは、すべての CSS を単一の `index.css` ファイルにまとめましたが、 React アプリケーションでは、コンポーネントごとのスタイルシートを定義するのが一般的です。 Vite で構築されたアプリケーションでは、 CSS ファイルを作成し、対応するコンポーネントモジュールにインポートすることで、このスタイルシートを定義することができます。
 
-`create-react-app` を使うと、CSS ファイルが JavaScript モジュールにインポートできるので、対応するコンポーネントがレンダリングされるときにだけ CSS がユーザーに送信されるようになります。このアプリでは、例えば、専用の `Form.css` ファイルを書いて、それぞれのコンポーネントのスタイルを記載し、次のようにそれぞれのモジュールにスタイルをインポートすることができます。
+例えば、`<Form />` コンポーネントに関連の CSS を収める専用の `Form.css` ファイルを作り、そのスタイル設定を `Form.jsx` にインポートするということも可能です。
 
-```js
+```jsx
 import Form from "./Form";
 import "./Form.css";
 ```
 
 この方法だと、特定のコンポーネントに属する CSS を簡単に特定し、管理することができます。しかし、コードベース全体でスタイルシートを断片化することになり、この断片化は価値のあるものにならないかもしれません。何百ものユニークなビューと多くの可動部分を持つ大規模なアプリケーションの場合、ユーザーに送信される無関係なコードの量を制限することは理にかなっています。アプリケーション全体のスタイルと、その上に構築された特定のコンポーネントのスタイルをもつことになるでしょう。
 
-[コンポーネントのスタイルシートについては、 create-react-app のドキュメントに詳しく書かれています。](https://create-react-app.dev/docs/adding-a-stylesheet/)
+React コンポーネントのスタイル設定に関するこの手法や他にも様々な手法については、Smashing Magazine の記事「[Styling Components In React](https://www.smashingmagazine.com/2020/05/styling-components-react/)」で詳しく解説されています。
 
-## React DevTools
+## React 開発者ツール
 
-このチュートリアルでは `console.log()` を使ってアプリケーションの state や props を確認しました。また、 React が CLI やブラウザーの JavaScript コンソールに表示する便利な警告やエラーメッセージも見てきたと思います。しかし、ここでできることはまだあります。
+このチュートリアルでは `console.log()` を使ってアプリケーションの状態やプロップを確認しました。また、 React が CLI やブラウザーの JavaScript コンソールに表示する便利な警告やエラーメッセージも見てきたと思います。しかし、ここでできることはまだあります。
 
-React DevTools はブラウザーで React アプリケーションの内部を直接検査できるようにするものです。ブラウザーの開発者ツールに新しいパネルが追加され、それを使って様々なコンポーネントの state や props を検査したり、 state や props を編集してアプリケーションにすぐに変更を加えたりすることができます。
+React 開発者ツールはブラウザーで React アプリケーションの内部を直接検査できるようにするものです。ブラウザーの開発者ツールに新しいパネルが追加され、それを使って様々なコンポーネントの状態やプロップを検査したり、状態やプロップを編集してアプリケーションにすぐに変更を加えたりすることができます。
 
-このスクリーンショットは React DevTools に表示される私達が作成したアプリケーションの最終形を示します。
+このスクリーンショットは React 開発者ツールに表示される私達が作成したアプリケーションの最終形を示します。
 
-![Our project being shown in React devtools](react-devtools.png)
+![自分のプロジェクトを React 開発ツールで表示させる](react-devtools.png)
 
-左側には、アプリケーションを構成するすべてのコンポーネントが表示され、配列からレンダリングされるものの一意なキーが表示されます。右側には、 App コンポーネントが利用する props とフックが表示されています。また、`Form`、`FilterButton`、`Todo` コンポーネントは右側にインデントされていることに注意してください。より複雑なアプリでは、このビューは親子関係を一目で理解するために最適です。
+左側には、アプリケーションを構成するすべてのコンポーネントが表示され、配列からレンダリングされるものの一意なキーが表示されます。右側には、 App コンポーネントが利用するプロップとフックが表示されています。また、`Form`、`FilterButton`、`Todo` コンポーネントは右側にインデントされていることに注意してください。より複雑なアプリでは、このビューは親子関係を一目で理解するために最適です。
 
 React DevTools は様々な形態で提供されています。
 
-- [Chrome 拡張](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
-- [Firefox 拡張](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
-- Chromium 版 Edge 拡張 （近日公開）
-- [NPM か Yarn でインストールできるスタンドアロンアプリケーション](https://www.npmjs.com/package/react-devtools)
+- [Chrome 拡張機能](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+- [Firefox 拡張機能](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+- [Microsoft Edge ブラウザー拡張機能](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
+- [npm か Yarn でインストールできるスタンドアロンアプリケーション](https://www.npmjs.com/package/react-devtools)
 
 これらのうち一つをインストールしてみて、作ったアプリの検査に使ってみてください！
 
-[React のブログで React DevTools について詳しく読むことができます。](https://reactjs.org/blog/2019/08/15/new-react-devtools.html)
+[React のブログで React 開発者ツールについて詳しく読むことができます](https://ja.react.dev/learn/react-developer-tools)。
 
-## コンテクスト API
+## `useReducer()` フック
 
-このチュートリアルで作成したアプリケーションでは、 `App` コンポーネントからデータを必要とする子コンポーネントにデータを渡すために、コンポーネントの props を利用しました。ほとんどの場合、 props はデータを共有するための適切な方法です。しかし、複雑で深くネストされたアプリケーションでは、必ずしも最適とは言えません。
+このチュートリアルでは、`useState()` フックを使用して、イベントハンドラー関数の小さな集合全体にわたって状態を管理しました。これは学ぶ目的では良かったのですが、状態管理のロジックがコンポーネントのイベントハンドラー（特に `<Todo />` コンポーネントの）に紐付けられた状態になってしまいました。
 
-React はコンポーネントツリーの下に props を渡さずに、データを必要とするコンポーネントにデータを提供する方法として [コンテクスト API](https://reactjs.org/docs/context.html) を提供します。また、これを容易にする [useContext フック](https://reactjs.org/docs/hooks-reference.html#usecontext) も提供されています。
+`useReducer()` フックは、異なるが関連のある状態管理ロジックを単一の関数に統合する方法を開発者に提供します。 `useState()` よりもやや複雑ですが、これは開発者が保有しておくと便利なツールです。 [`useReducer()` についての詳細は React のドキュメント](https://ja.react.dev/learn/extracting-state-logic-into-a-reducer)をご覧ください。
 
-自身でこの API を試したいというかたは、 Smashing Magazine が書いた [React コンテクストの紹介記事](https://www.smashingmagazine.com/2020/01/introduction-react-context-api/) を読むといいでしょう。
+## コンテキスト API
+
+このチュートリアルで作成したアプリケーションでは、 `App` コンポーネントからデータを必要とする子コンポーネントにデータを渡すために、コンポーネントのプロップを利用しました。ほとんどの場合、プロップはデータを共有するための適切な方法です。しかし、複雑で深くネストされたアプリケーションでは、必ずしも最適とは言えません。
+
+React はコンポーネントツリーの下にプロップを渡さずに、データを必要とするコンポーネントにデータを提供する方法として [コンテキスト API](https://ja.react.dev/learn/passing-data-deeply-with-context) を提供します。また、これを容易にする [useContext フック](https://ja.react.dev/reference/react/useContext)も提供されています。
+
+自身でこの API を試したいというかたは、 Smashing Magazine が書いた [React コンテキストの紹介記事](https://www.smashingmagazine.com/2020/01/introduction-react-context-api/) を読むといいでしょう。
 
 ## クラスコンポーネント
 
-このチュートリアルでは触れていませんが、 ES6 のクラスを使用して React コンポーネントを構築することは可能です。これらはクラスコンポーネントと呼ばれます。フックが登場するまで、 ES6 のクラスはコンポーネントに state をもたせたり、副作用のある描画の管理を行うための唯一の方法でした。これらは、他の特定のエッジケースな機能を処理する唯一の方法であり、従来の React プロジェクトでは非常に一般的です。公式の React ドキュメントは、それらについて学び始めるのに最適です。
-
-- [React ドキュメントで学ぶ状態とライフサイクル](https://reactjs.org/docs/state-and-lifecycle.html)
-- [React ドキュメントで学ぶ React 入門](https://reactjs.org/tutorial/tutorial.html)
-- [MDN で学ぶ JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
+このチュートリアルでは触れていませんが、 React コンポーネントを [JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)を使用して構築することは可能です。これらはクラスコンポーネントと呼ばれます。フックが登場するまで、クラスはコンポーネントに状態をもたせたり、副作用のある描画の管理を行うための唯一の方法でした。これらは、他の特定のエッジケースな機能を処理する唯一の方法であり、従来の React プロジェクトでは非常に一般的です。公式の React ドキュメントでは、 [`Component`](https://ja.react.dev/reference/react/Component) 基底クラスのリファレンスを保守していますが、フックを使用して[状態](https://ja.react.dev/learn/state-a-components-memory)や[副作用](https://ja.react.dev/learn/synchronizing-with-effects)を管理することを推奨しています。
 
 ## テスト
 
-`create-react-app` はアプリケーションがすぐにテストできるツールを提供しています。しかし、チュートリアルの前半で関連するファイルを削除してしまったかもしれません。 `create-react-app` のドキュメントには [テストのための基本的なことが書かれています](https://create-react-app.dev/docs/running-tests/) 。
+[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) などのライブラリーを使用すると、 React コンポーネントの単体テストを書くことが可能になります。 これらのテストを実行する方法は数多くあります。 テストフレームワークの [Vitest](https://vitest.dev/) は Vite の上に構築されており、 Vite を使用した React アプリケーションに最適なツールです。 [Jest](https://jestjs.io/) は、 React と併用できるもう一つの人気テストフレームワークです。
 
 ## ルーティング
 
 ルーティングは従来、ユーザーのコンピューター上のアプリケーションではなく、サーバーによって処理されていました。しかし、現在では、ウェブアプリケーションがブラウザーの位置を読み取り、更新し、特定のユーザーインターフェイスをレンダリングすることが可能です。これをクライアントサイドルーティングと呼びます。アプリケーションのために多くの一意なルート (`/home` または `/dashboard` 、 `login/` など) を作成することが可能です。
 
-React コミュニティはクライアントサイドルーティングについて、2 つの主要なライブラリーを作成しています。 [React Router](https://reacttraining.com/react-router/) と [Reach Router](https://reach.tech/router) です。
+[React Router](https://reactrouter.com/) は、 React 用の最も人気があり、最も堅牢なクライアントサイドのルーティングライブラリーです。開発者はこのライブラリーを使用して、アプリケーションのルートを定義し、それらのルートに関連付けられたコンポーネントを作成することができます。また、ブラウザーのロケーションと履歴を管理するための便利なフックやコンポーネントが数値指定されています。
 
-- React Router は、複雑なルーティングを必要とするアプリケーションに適しており、 Reach Router よりもエッジケースに対応することができます。しかし、 React Router はサイズが大きいライブラリーになります。
-- Reach Router は、より単純なアプリケーションに適しており、ユーザーがページ間を移動するときにフォーカスを自動的に管理します。
+> [!NOTE]
+> クライアントサイドのルーティングでは、フォーカス管理が不可欠です。これがないと、キーボードユーザーはフォーカスの問題に陥り、スクリーンリーダーを使用するユーザーは新しいページに移動したことに気づかない可能性があります。これについて詳しくは、 Marcy Sutton の記事 ["The Implications of Client-Side Routing"](https://testingaccessibility.com/implications-of-client-side-routing) を参照してください。
 
-クライアントサイドのルーティングでは、フォーカス管理が不可欠です。これがないと、キーボードユーザーはフォーカスの問題に陥り、スクリーンリーダーを使用するユーザーは新しいページに移動したことに気づかない可能性があります。 Reach Router はアクセシビリティに優れているため、ルーティングを導入し始めるには良いライブラリーです。
-
-ただし、一つだけ注意点があります。これらのプロジェクトは [近い将来、統合される](https://reacttraining.com/blog/reach-react-router-future/) 予定があるということです。この統合が行われた場合、 React Router が(Reach のフォーカス管理機能が追加され)存続するプロジェクトとなる予定です。
-
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_accessibility","Learn_web_development/Core/Accessibility", "Learn_web_development/Core/Frameworks_libraries")}}

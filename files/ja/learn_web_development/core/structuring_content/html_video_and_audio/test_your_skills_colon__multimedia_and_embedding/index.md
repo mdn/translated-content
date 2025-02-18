@@ -1,19 +1,18 @@
 ---
 title: "スキルテスト: マルチメディアと埋め込み"
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{learnsidebar}}
 
-このスキルテストの目的は、あなたが [HTML への動画および音声コンテンツの埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を行う方法、および [object、iframe およびその他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)の使い方を理解しているかどうかを評価することです。
+このスキルテストの目的は、あなたが [HTML での動画と音声コンテンツの埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)を行う方法を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。
+> このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
 >
-> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
 
@@ -51,18 +50,3 @@ l10n:
 > [!CALLOUT]
 >
 > 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed2-download.html)しましょう。
-
-## 課題 3
-
-このタスクでは、次のことをやっていただきます。
-
-- PDF をページに埋め込みましょう。PDF は `mypdf.pdf` という名前で、`media` フォルダーの中にあります。
-- YouTube や Google Maps 等の共有サイトへ行き、動画などのメディアアイテムをページへ埋め込みましょう。
-
-下記のライブコードを更新して、完成例を再現してみてください。
-
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/media-embed/mediaembed3.html", '100%', 700)}}
-
-> [!CALLOUT]
->
-> 自分のエディターやオンラインエディターで作業する場合は、[この課題の開始時点のものをダウンロード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/media-embed/mediaembed3-download.html)しましょう。

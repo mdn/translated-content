@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 我們現在準備好要新增網頁，以顯示本地圖書館網站的書本與其它資料。這些網頁將包括一個主頁 ，顯示我們每個模型的型態有多少筆紀錄，以及我們所有模型的清單與細節頁面。藉此，我們將得到從數據庫取得紀錄、以及使用樣版的實務經驗。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前置條件:</th>

@@ -1,14 +1,13 @@
 ---
 title: カスタムフォームコントロールの作成方法
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
-original_slug: Learn/Forms/How_to_build_custom_form_controls
 l10n:
-  sourceCommit: aa5cd008f866b855beba47c183176670f4876b65
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn/Forms/Advanced_form_styling)場合や、独自の動作を提供したい場合は、独自のコントロールを作成するしかありません。
+HTML フォームで使用可能なコントロールだけでは十分でない場合が多くあります。例えば、{{HTMLElement("select")}} 要素のようなコントロールに[高度なスタイル設定を行いたい](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)場合や、独自の動作を提供したい場合は、独自のコントロールを作成するしかありません。
 
 本記事では、そのようなコントロールの作り方を見ていきます。そのための例として、 {{HTMLElement("select")}} 要素の再構築に取り組みます。このほかに独自コントロール作成をどういう方法でするか、いつするか、またそれが意味をなすのかや、コントロール作成が必須なときに何に気をつけるべきかを扱います。
 
@@ -73,7 +72,6 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 新しいユーザーインタラクションを発明しないのがベストです。インタラクションを追加する場合、設計段階で時間を使うのが重要です。動作の定義が貧弱であったり定義もれがあったりした場合、いったんユーザーが使い始めると動作を再定義するのが非常に困難になると思われますので、設計段階に時間をかけることは賢明です。もし疑っているのでしたら、他の人に意見を聞きましょう。また予算を持っているのでしたら、[ユーザーテストの実施](https://en.wikipedia.org/wiki/Usability_testing)をためらってはいけません。このプロセスは、UX デザインと呼ばれます。この点について詳しく学びたいのでしたら、以下の役に立つリソースをご覧になるとよいでしょう。
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](https://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
 > [!NOTE]
@@ -197,9 +195,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 
 .select .value {
-  /* 値がコントロールの幅より大きくなる可能性があるため、コントロールの幅を
-     変更しないようにすることが必要です。内容物がオーバーフローした場合は、
-     省略記号をつけます。 */
+  /* 値がコントロールの幅より大きくなる可能性があるため、コントロールの幅を変更しないようにすることが必要です。内容物がオーバーフローした場合は、省略記号をつけます。 */
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -281,11 +277,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-3 つの状態の結果がこちらです（[ソースコードを調べる](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1)）。
+3 つの状態の結果がこちらです（[ソースコードを調べる](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1)）。
 
 #### 基本状態
 
-```html hidden
+```html hidden live-sample___basic_state
 <div class="select">
   <span class="value">Cherry</span>
   <ul class="optList hidden">
@@ -298,7 +294,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 </div>
 ```
 
-```css hidden
+```css hidden live-sample___basic_state
 .select {
   position: relative;
   display: inline-block;
@@ -403,11 +399,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-{{EmbedLiveSample("基本状態",120,130)}}
+{{EmbedLiveSample("Basic_state",120,130)}}
 
 #### アクティブ状態
 
-```html hidden
+```html hidden live-sample___active_state
 <div class="select active">
   <span class="value">Cherry</span>
   <ul class="optList hidden">
@@ -420,7 +416,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 </div>
 ```
 
-```css hidden
+```css hidden live-sample___active_state
 .select {
   position: relative;
   display: inline-block;
@@ -525,11 +521,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-{{EmbedLiveSample("アクティブ状態",120,130)}}
+{{EmbedLiveSample("Active_state",120,130)}}
 
 #### 開いた状態
 
-```html hidden
+```html hidden live-sample___open_state
 <div class="select active">
   <span class="value">Cherry</span>
   <ul class="optList">
@@ -542,7 +538,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 </div>
 ```
 
-```css hidden
+```css hidden live-sample___open_state
 .select {
   position: relative;
   display: inline-block;
@@ -647,7 +643,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 }
 ```
 
-{{EmbedLiveSample("開いた状態",120,130)}}
+{{EmbedLiveSample("Open_state",120,130)}}
 
 ## JavaScript でコントロールに命を吹き込む
 
@@ -664,7 +660,7 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 - スクリプトが読み込まれません。これはよくあるケースのひとつであり、特にネットワークの信頼性が低いモバイル環境で発生します。
 - スクリプトに不具合があります。この可能性は常に考慮すべきです。
 - スクリプトがサードパーティのスクリプトと競合しています。これは、トラッキングのスクリプトやユーザーが使用するブックマークレットとの間で発生する可能性があります。
-- スクリプトがブラウザーの拡張機能 (Firefox の [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) 拡張機能や Chrome の [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。
+- スクリプトがブラウザーの拡張機能 (Firefox の [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) 拡張機能や Chrome の [ScriptBlock](https://chromewebstore.google.com/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。
 - ユーザーが古いブラウザーを使用しており、必要な機能のいずれかがサポートされていません。これは、最先端の API を使用するときに頻繁に発生します。
 - ユーザーは JavaScript が完全にダウンロード、解析、実行される前にコンテンツを操作します。
 
@@ -674,11 +670,11 @@ HTML フォームで使用可能なコントロールだけでは十分でない
 
 これを実現するには、2 つのことが必要です。
 
-第一に、カスタムコントロールを使用する前に通常の {{HTMLElement("select")}} 要素を追加することが必要です。実際は、これは残りのフォームデータと共にカスタムコントロールのデータを送信できるようにするために必要です。詳しくは後述します。
+第一に、カスタムコントロールを使用する前に通常の {{HTMLElement("select")}} 要素を追加することが必要です。 JavaScript で期待する通りに動作するとしても、この「追加の」選択ができるメリットがあります。この選択を使用して、カスタムコントロールからフォームデータの残りの部分とともにデータを送信します。この点については、後ほど詳しく解説します。
 
 ```html
-<body>
-  <form class="no-widget">
+<body class="no-widget">
+  <form>
     <select name="myFruit">
       <option>Cherry</option>
       <option>Lemon</option>
@@ -730,7 +726,7 @@ window.addEventListener("load", () => {
 
 #### JS なし
 
-[ソースコード全体](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#no_js)を確認してください。
+[ソースコード全体](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#no_js)を確認してください。
 
 ```html hidden
 <form class="no-widget">
@@ -769,7 +765,7 @@ window.addEventListener("load", () => {
 
 #### JS あり
 
-[ソースコード全体](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#js)を確認してください。
+[ソースコード全体](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_2#js)を確認してください。
 
 ```html hidden
 <form class="no-widget">
@@ -1065,11 +1061,11 @@ window.addEventListener("load", () => {
 
 この時点でコントロールは設計どおりに状態が変わりますが、コントロール値はまだ更新されません。次の章でこれを扱います。
 
-#### ライブ例
+#### ライブサンプル
 
-[ソースコード全体](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)を確認してください。
+[ソースコード全体](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_3)を確認してください。
 
-```html hidden
+```html hidden live-sample___live_example
 <form class="no-widget">
   <select name="myFruit" tabindex="-1">
     <option>Cherry</option>
@@ -1092,7 +1088,7 @@ window.addEventListener("load", () => {
 </form>
 ```
 
-```css hidden
+```css hidden live-sample___live_example
 .widget select,
 .no-widget .select {
   position: absolute;
@@ -1205,7 +1201,7 @@ window.addEventListener("load", () => {
 }
 ```
 
-```js hidden
+```js hidden live-sample___live_example
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
@@ -1282,7 +1278,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("ライブ例",120,130)}}
+{{EmbedLiveSample("Live_example",120,130)}}
 
 ### コントロール値の制御
 
@@ -1395,11 +1391,11 @@ window.addEventListener("load", () => {
 
 これで完了です。結果は以下のとおりです。
 
-#### ライブ例
+#### ライブサンプル
 
-[こちらのソースコード](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)を確認してください。
+[こちらのソースコード](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_4)を確認してください。
 
-```html hidden
+```html hidden live-sample___live_example_2
 <form class="no-widget">
   <select name="myFruit">
     <option>Cherry</option>
@@ -1422,7 +1418,7 @@ window.addEventListener("load", () => {
 </form>
 ```
 
-```css hidden
+```css hidden live-sample___live_example_2
 .widget select,
 .no-widget .select {
   position: absolute;
@@ -1535,7 +1531,7 @@ window.addEventListener("load", () => {
 }
 ```
 
-```js hidden
+```js hidden live-sample___live_example_2
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
@@ -1574,7 +1570,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1654,7 +1650,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("ライブ例_2",120,130)}}
+{{EmbedLiveSample("live_example_2",120,130)}}
 
 ちょっと待ってください、本当に終わったのでしょうか?
 
@@ -1711,7 +1707,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 ```
@@ -1720,11 +1716,11 @@ function updateValue(select, index) {
 
 以下がこれらの変更を施した最終結果です （[NVDA](https://www.nvaccess.org/) や [VoiceOver](https://www.apple.com/accessibility/vision/) などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう）。
 
-#### ライブ例
+#### ライブサンプル
 
-[こちらの完全なソースコード](/ja/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)を確認してください。
+[こちらの完全なソースコード](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5)を確認してください。
 
-```html hidden
+```html hidden live-sample___live_example_3
 <form class="no-widget">
   <select name="myFruit">
     <option>Cherry</option>
@@ -1747,7 +1743,7 @@ function updateValue(select, index) {
 </form>
 ```
 
-```css hidden
+```css hidden live-sample___live_example_3
 .widget select,
 .no-widget .select {
   position: absolute;
@@ -1860,7 +1856,7 @@ function updateValue(select, index) {
 }
 ```
 
-```js hidden
+```js hidden live-sample___live_example_3
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
@@ -1905,7 +1901,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1981,13 +1977,13 @@ window.addEventListener("load", () => {
 
 ## 他の方法: ラジオボタンを使う
 
-上の例では、非動的な HTML、CSS、JavaScript を使って {{htmlelement('select')}} 要素を再発明しました。この select は限られた選択肢から 1 つが選択され、それは {{htmlelement('input/radio', 'radio')}} ボタンのグループと同様な機能です。
+上の例では、意味論的ではない HTML、CSS、JavaScript を使って {{htmlelement('select')}} 要素を再発明しました。この select は限られた選択肢から 1 つが選択され、それは {{htmlelement('input/radio', 'radio')}} ボタンのグループと同様な機能です。
 
 このため、代わりにラジオボタンを使って再発明できます。このオプションを見てみましょう。
 
 完全に意味のある、アクセシブルで、順序のない、関連する {{htmlelement('label')}} つきの {{htmlelement('input/radio','radio')}} ボタンのリストから始めます、グループ全体を適切な意味のある{{htmlelement('fieldset')}} と{{htmlelement('legend')}} のペアにラベルづけします。
 
-```html
+```html live-sample___an_alternative_approach_using_radio_buttons
 <fieldset>
   <legend>Pick a fruit</legend>
   <ul class="styledSelect">
@@ -2026,7 +2022,7 @@ window.addEventListener("load", () => {
 
 (legend/fieldset ではなく)ラジオボタンリストに少しスタイルづけをして、前の例と同じ見た目にし、完了したことがわかるようにします。
 
-```css
+```css live-sample___an_alternative_approach_using_radio_buttons
 .styledSelect {
   display: inline-block;
   padding: 0;
@@ -2076,9 +2072,9 @@ window.addEventListener("load", () => {
 }
 ```
 
-JavaScript なしで少しの CSS にて、ラジオボタンのリストをスタイルづけしてチェック済み項目のみを表示することができます。フォーカスが`<fieldset>`内の `<ul>` に来ると、リストは開いて、上下左右の矢印が前後の項目を選択するのに使えます。次で試してください。
+JavaScript なしで少しの CSS にて、ラジオボタンのリストをスタイルづけしてチェック済み項目のみを表示することができます。フォーカスが`<fieldset>` 内の `<ul>` に来ると、リストは開いて、上下左右の矢印が前後の項目を選択するのに使えます。次で試してください。
 
-{{EmbedLiveSample("他の方法_ラジオボタンを使う",200,240)}}
+{{EmbedLiveSample("An_alternative_approach_Using_radio_buttons",200,240)}}
 
 これはある程度、 JavaScript なしで動作します。 JavaScript が失敗しても動作する、われわれのカスタムコントロールど同じものを作ってきました。よい解決策でしょう？これはキーボードでは動作しますが、マウスクリックではそうなりません。ネイティブな意味づけのない要素を作るフレームワークに依存する代わりに、ウェブ標準をカスタムコントロールの基礎として使った方が意味があります。しかし、われわれのコントロールは `<select>` が自ずと持つ機能と同じものを備えていません。
 
@@ -2102,20 +2098,19 @@ JavaScript なしで少しの CSS にて、ラジオボタンのリストをス�
 
 ### 学習経路
 
-- [初めてのフォーム](/ja/docs/Learn/Forms/Your_first_form)
-- [フォームの構築方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)
-- [基本的なネイティブフォームコントロール](/ja/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 の入力型](/ja/docs/Learn/Forms/HTML5_input_types)
-- [その他のフォームコントロール](/ja/docs/Learn/Forms/Other_form_controls)
-- [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [HTML フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
-- [フォームデータ検証](/ja/docs/Learn/Forms/Form_validation)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [初めてのフォーム](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [フォームの構築方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [基本的なネイティブフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
+- [HTML5 の入力型](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
+- [その他のフォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Other_form_controls)
+- [UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
+- [HTML フォームへのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [フォームデータ検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
 ### 高度なトピック
 
-- [JavaScript によるフォームの送信](/ja/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
 - **カスタムフォームコントロールの作成方法**
-- [古いブラウザーでの HTML フォーム](/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
-- [フォームコントロール向けのプロパティの互換性一覧表](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [古いブラウザーでの HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)

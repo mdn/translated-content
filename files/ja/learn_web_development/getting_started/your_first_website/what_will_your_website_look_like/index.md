@@ -1,14 +1,36 @@
 ---
 title: ウェブサイトをどんな外見にするか
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
-original_slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 l10n:
-  sourceCommit: 1724e23bc76b136266b75afa6b45bfd708ee69a5
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
+
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 「_ウェブサイトをどんな外見にするか_」では、コードを書き始める前に、このウェブサイトについて計画したりデザインしたりすべき事柄について説明します。例えば「どんな情報をウェブサイトで提供するのか」「どのフォントや色を使いたいのか」「このウェブサイトは何をするのか」などです。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        コンピューターのオペレーティングシステム、ウェブサイトを構築する際に使用する基本ソフトウェア、およびファイルシステムに概ね慣れておくこと。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>基本的なウェブサイトを計画すること。</li>
+          <li>基本的なデザインプロセスを使うこと。</li>
+          <li>資産を集めること。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## まず最初に: 計画を立てる
 
@@ -21,7 +43,7 @@ l10n:
 3. **ウェブサイトをどんな外見にしますか？** 簡単で大まかな言葉で言うと？背景色は？適切なフォントはフォーマル？漫画？太字で派手？繊細？
 
 > [!NOTE]
-> 複雑なプロジェクトでは、色、フォント、ページのアイテム間の余白、適切な文体など、詳細なガイドラインが必要です。これは、デザインガイド、デザインシステム、ブランドブックなどと呼ばれます。一例として、 [Firefox Photon Design System](https://design.firefox.com/photon/)があります。
+> 複雑なプロジェクトでは、色、フォント、ページのアイテム間の余白、適切な文体など、詳細なガイドラインが必要です。これは、デザインガイド、デザインシステム、ブランドブックなどと呼ばれます。一例として、 [Firefox Acorn Design System](https://acorn.firefox.com/latest)があります。
 
 ## デザインをスケッチする
 
@@ -30,19 +52,13 @@ l10n:
 ![紙に描いたウェブサイトのラフ画とスケッチ](website-drawing-scan.png)
 
 > [!NOTE]
-> 現実の複雑なウェブサイトの場合でも、デザインチームは普通、ラフスケッチを描くことから始めます。その後、グラフィックエディターや Web の技術を使って、デジタルのモックアップを作るのです。
+> 現実の複雑なウェブサイトの場合でも、デザインチームは普通、ラフスケッチを描くことから始めます。その後、グラフィックエディターやウェブの技術を使って、デジタルのモックアップを作るのです。
 >
 > 多くの場合、ウェブの開発チームには、グラフィックデザイナーと{{Glossary("UX", "ユーザーエクスペリエンス")}} (UX) デザイナーがいます。グラフィックデザイナーは、ウェブサイトの見た目を作り上げます。 UX デザイナーは、もう少し抽象的な役割を持っていて、サイトを訪れるユーザーがウェブサイトでどういう経験をし、どのように操作するかということを考えます。
 
-## 資産を選ぶ
+この時点で、最終的にウェブページに現れるコンテンツの用意を始めておくといいでしょう。早くから文章とタイトルを決めておいてください。これらを近くに置いておいてください。
 
-この時点で、ウェブページについて、将来どう表現したいかをまとめ始めるとよいでしょう。
-
-### テキスト
-
-先ほど考えたちょっとした文章やタイトルは、まだそのまま残しておきます。手近なところに置いておきましょう。
-
-### テーマカラー
+### テーマカラーの選択
 
 色を選ぶときは、[色選択ツール](/ja/docs/Web/CSS/CSS_colors/Color_picker_tool)へ行き、好みの色を見つけましょう。色をクリックすると、 `#660066` のような 6 桁の奇妙なコードが出てきます。これは*ヘキサコード*（16 進コード）と呼ばれ、選んだ色を表します。今はどこか安全なところにコピーしておきましょう。
 
@@ -75,4 +91,4 @@ l10n:
 
 また、Arial、Times New Roman、Courier New などの[セーフウェブフォント](https://web.mit.edu/jmorzins/www/fonts.html)を使用することもできます。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website")}}

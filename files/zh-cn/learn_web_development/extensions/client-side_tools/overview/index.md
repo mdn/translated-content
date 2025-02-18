@@ -8,7 +8,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 在本文中，我们提供了现代 web 工具的概述，有哪些工具可用，在 web 应用程序开发的生命周期中你将在哪里遇到它们，以及如何使用各个工具寻求帮助。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">预备条件：</th>
@@ -33,7 +33,7 @@ original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 单个项目中包含的大量工具很容易让人不知所措。同样，像 Webpack 这样的工具的一个配置文件可能有数百行之长，其中大多数都是神奇的咒语，似乎可以完成工作，但只有大神级工程师才能完全理解
 
-有时，即使是最有经验的 web 开发人员也会因为工具问题而陷入困境;甚至在接触到一行应用程序代码之前，都可能浪费数小时来尝试让工具管道工作。如果你发现自己在过去挣扎，那么用担心，你并不孤独。
+有时，即使是最有经验的 web 开发人员也会因为工具问题而陷入困境；甚至在接触到一行应用程序代码之前，都可能浪费数小时来尝试让工具管道工作。如果你发现自己在过去挣扎，那么不用担心，你并不孤独。
 
 在这篇文章中，我们将不会回答所有关于 web 工具的所有问题，但我们将为你提供一个了解基本原理的有用起点，你可以从中构建。对于任何复杂的主题，最好从小处开始，然后逐步进行更高级的使用。
 

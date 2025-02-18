@@ -30,7 +30,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 - `selectionEnd`
   - : 選択範囲の最後の文字の次の文字のインデックス。要素の値の長さを超えるインデックスを指定すると、値の末尾を指しているものとみなされます。 `selectionEnd` が `selectionStart` より小さい場合、どちらも `selectionEnd` の値として扱われます。 詳細な情報については、{{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} プロパティを参照してください。
 - `selectionDirection` {{optional_inline}}
-  - : `"forward"`、`"backward"`、または既定値の `"none"` で、、選択が実行された方向を示します。 詳細は、 {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}} プロパティを参照してください。
+  - : `"forward"`、`"backward"`、または既定値の `"none"` で、選択が実行された方向を示します。 詳細は、 {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}} プロパティを参照してください。
 
 ### 返値
 

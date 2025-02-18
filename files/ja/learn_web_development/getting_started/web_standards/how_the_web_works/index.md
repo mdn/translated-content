@@ -1,16 +1,41 @@
 ---
 title: ウェブのしくみ
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
-original_slug: Learn/Getting_started_with_the_web/How_the_Web_works
 l10n:
-  sourceCommit: 2a05d41787da87b54d662d5d6937afaadc42b2ef
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
 
-*ウェブのしくみ*では、あなたがコンピューターや携帯電話のウェブブラウザーでウェブページを見るときに起こることを簡単に説明します。
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+
+*ウェブのしくみ*では、コンピューターや携帯電話のウェブブラウザーでウェブページを見るときに起こることを簡単に説明します。
 
 この理論は、ウェブのコードを書く上ですぐにでも必要というわけではありませんが、背景で何が起きているのかを理解しておくと、いずれ役に立つでしょう。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        コンピューターのオペレーティングシステム、ウェブブラウザー、ウェブ技術に基本的な知識があること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>ウェブにおける、クライアントとサーバーと、その役割。</li>
+          <li>DNS とその高水準の動作。</li>
+          <li>TCP/IP、HTTP、パケット。</li>
+          <li>基本的なレベルの HTTP の構文。</li>
+          <li>よくある HTTP レスポンスコード（200, 301, 403, 404, 500 など）。</li>
+          <li>URL の成分（プロトコル、ドメイン、サブドメイン）。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## クライアントとサーバー
 
@@ -51,11 +76,11 @@ l10n:
 
 ## 構成するファイルが解釈される順序
 
-ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn/CSS) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn/JavaScript) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって解釈される](/ja/docs/Web/Performance/How_browsers_work#parsing)順序を知ることが重要です。
+ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/Web/Performance/How_browsers_work#構文解析)順序を知ることが重要です。
 
 - ブラウザーはまず HTML ファイルを解釈し、 `<link>` 要素による外部 CSS スタイルシートへの参照や、 `<script>` 要素によるスクリプトへの参照を認識するようになります。
 - ブラウザーは HTML を解釈しながら、 `<link>` 要素から見つかった CSS ファイルと `<script>` 要素から見つかった JavaScript ファイルに対してサーバーにリクエストを送り返し、それらから CSS と JavaScript を解釈します。
-- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/How_browsers_work#javascript_compilation)します。
+- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/How_browsers_work#javascript_のコンパイル)します。
 - ブラウザーが DOM ツリーを構築し、 CSSOM ツリーからスタイルを適用して JavaScript を実行すると、ページの視覚表現が画面に描かれ、ユーザーはページの内容を見て、それとの対話を始めることができます。
 
 ## DNS の説明
@@ -64,7 +89,7 @@ l10n:
 
 これは、 {{Glossary("IP Address", "IP アドレス")}}と呼ばれ、ウェブ上の一意の場所を表します。しかし、あまり覚えやすくはないですね。それが、ドメインネームシステムが発明された理由です。このシステムは、特別なサーバーを使用して、ブラウザーに入力されたウェブアドレス（"mozilla.org" など）とウェブサイトの実際の (IP) アドレスを対応させます。
 
-ウェブサイトには、 IP アドレスを使用して直接アクセスできます。 [DNS lookup ツール](https://www.nslookup.io/website-to-ip-lookup/)を使用して、ウェブサイトの IP アドレスを知ることができます。
+ウェブサイトには、 IP アドレスを使用して直接アクセスできます。 [DNS ルックアップツール](https://www.nslookup.io/website-to-ip-lookup/)を使用して、ウェブサイトの IP アドレスを知ることができます。
 
 ## パケットの説明
 
@@ -72,13 +97,10 @@ l10n:
 
 ## 関連情報
 
-- [インターネットの仕組み](/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
-- [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
-- [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
+- [インターネットの仕組み](/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 
 ## クレジット表示
 
-道路の写真: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [kevin digga](https://www.pinterest.com/kevindigga/).
+道路の写真: [Street composing](https://www.pinterest.com/pin/400538960580676851/), by [Kevin Digga](https://www.pinterest.com/kevindigga/).
 
-{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}

@@ -2,7 +2,7 @@
 title: 私たちが書くもの
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: 3c0315d7898d2a5bc21784002c9cdc9dddcf559d
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{MDNSidebar}}
@@ -56,10 +56,10 @@ MDN Web Docs にコンテンツを提案したい場合は、投稿する前に�
 - [Web API](/ja/docs/Web/API)
 - [HTTP](/ja/docs/Web/HTTP)
 
-また、[SVG](/ja/docs/Web/SVG), [XML](/ja/docs/Web/XML), [WebAssembly](/ja/docs/WebAssembly), [アクセシビリティ](/ja/docs/Learn/Accessibility)など、より幅広いトピックについても文書化しています。さらに、これらの技術に関する豊富な[学習ガイド](/ja/docs/Learn)や[用語集](/ja/docs/Glossary)を提供しています。
+また、[SVG](/ja/docs/Web/SVG), [XML](/ja/docs/Web/XML), [WebAssembly](/ja/docs/WebAssembly), [アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)など、より幅広いトピックについても文書化しています。さらに、これらの技術に関する豊富な[学習ガイド](/ja/docs/Learn_web_development)や[用語集](/ja/docs/Glossary)を提供しています。
 
 > [!NOTE]
-> バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn/Server-side)。
+> バックエンドテクノロジーには、別の文書化の場所があり、 MDN Web Docs はこれにとって代わるつもりはありませんが、[いくつかの例外はあります](/ja/docs/Learn_web_development/Extensions/Server-side)。
 
 MDN Web Docs のすべてのコンテンツは、それが掲載されている技術分野に関連したものでなければなりません。投稿者は、書き方やコードサンプルなどについて、この [MDN 執筆ガイドライン](/ja/docs/MDN/Writing_guidelines) に従うことが期待されています。
 
@@ -92,7 +92,7 @@ MDN Web Docs に不適切なトピックの例としては、以下のような�
 
 - ウェブに公開されない、あるブラウザーに特化した技術。
 - ウェブに関連しない技術。
-- エンドユーザー向けの文書化。例えば Mozilla 製品の場合、そのような文書は [Mozilla サポートサイト](https://support.mozilla.org) に属します。
+- エンドユーザー向けの文書化。例えば Mozilla 製品の場合、そのような文書は [Mozilla サポートサイト](https://support.mozilla.org/) に属します。
 - 自己リンクや自己宣伝のための外部リンク。外部リンクを追加する前に、[執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#外部リンク)にあるガイドラインを確認してみてください。
 
 ### 文書を削除する場合

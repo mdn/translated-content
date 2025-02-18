@@ -8,7 +8,7 @@ original_slug: Learn/CSS/Styling_text/Web_fonts
 
 在模块的第一篇文章中，我们探讨了用于样式化字体和文本的基本 CSS 特性。在这篇文章中，我们将更进一步，详细地探索 web 字体——它们允许你下载自定义字体和你的 web 页面，以允许更多不同的、自定义的文本样式。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

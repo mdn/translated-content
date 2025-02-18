@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Express_Nodejs/development_environment
 
 你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
@@ -58,7 +58,7 @@ Express 应选用最新版本。
 
 ## 安装 Node
 
-先在操作系统上安装 Node.js 和 NPM 后才可使用 Express。接下来将介绍如何最简便地在 Ubuntu 18.04、macOS Mojave 以及 Windows 10 上安装 Node.js 最新的 LTS 版本。.
+先在操作系统上安装 Node.js 和 NPM 后才可使用 Express。接下来将介绍如何最简便地在 Ubuntu 18.04、macOS Mojave 以及 Windows 10 上安装 Node.js 最新的 LTS 版本。
 
 > [!NOTE]
 > 以下内容将介绍在上述三种 OS 上安装 Node 和 NPM 的最简便方法。对于其他操作系统，以及更多的安装方法，可以参考 [通过包管理器方式安装 Node.js](https://nodejs.org/zh-cn/download/package-manager/) (nodejs.org).

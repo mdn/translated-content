@@ -1,6 +1,8 @@
 ---
 title: clip-path
 slug: Web/CSS/clip-path
+l10n:
+  sourceCommit: 2c741257dd3abbd28d7d5f035800002f3b578b89
 ---
 
 {{CSSRef}}
@@ -30,11 +32,13 @@ clip-path: view-box;
 /* <basic-shape> 値 */
 clip-path: inset(100px 50px);
 clip-path: circle(50px at 0 100px);
-clip-path: ellipse(50px 60px at 0 10% 20%);
+clip-path: ellipse(50px 60px at 10% 20%);
 clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
 );
+clip-path: rect(5px 5px 160px 145px round 20%);
+clip-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* ボックスおよびシェイプ値の組み合わせ */
 clip-path: padding-box circle(50px at 0 100px);
@@ -43,6 +47,7 @@ clip-path: padding-box circle(50px at 0 100px);
 clip-path: inherit;
 clip-path: initial;
 clip-path: revert;
+clip-path: revert-layer;
 clip-path: unset;
 ```
 
@@ -51,25 +56,31 @@ clip-path: unset;
 ### 値
 
 - `<clip-source>`
-  - : {{cssxref("url()")}} で、[SVG](/ja/docs/Web/SVG) の {{SVGElement("clipPath")}} 要素を参照します。
+  - : {{cssxref("url_value", "&lt;url&gt;")}} で、[SVG](/ja/docs/Web/SVG) の {{SVGElement("clipPath")}} 要素を参照します。
 - {{cssxref("&lt;basic-shape&gt;")}}
 
-  - : `<geometry-box>` 値で寸法と位置が定義されるシェイプです。ジオメトリボックスが指定されない場合、参照ボックスとして `border-box` が使用されます。以下のいずれかです。
+  - : `<geometry-box>` 値で寸法と位置が定義されるシェイプです。ジオメトリーボックスが指定されない場合、参照ボックスとして `border-box` が使用されます。以下のいずれかです。
 
-    - {{cssxref("basic-shape/inset()","inset()")}}
+    - {{cssxref("basic-shape/inset","inset()")}}
       - : 内部の長方形を定義します。
-    - {{cssxref("basic-shape/circle()","circle()")}}
+    - {{cssxref("basic-shape/circle","circle()")}}
       - : 半径と中心位置を使用して円を定義します。
-    - {{cssxref("basic-shape/ellipse()","ellipse()")}}
+    - {{cssxref("basic-shape/ellipse","ellipse()")}}
       - : 2つの半径と位置を指定して楕円を定義します。
-    - {{cssxref("basic-shape/polygon()","polygon()")}}
+    - {{cssxref("basic-shape/polygon","polygon()")}}
       - : SVG の塗りつぶし規則と頂点のセットを用いて多角形を定義します。
-    - {{cssxref("path()","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : SVG の塗りつぶし規則と SVG のパス定義を用いて形状を定義します。
+    - {{cssxref("basic-shape/rect","rect()")}}
+      - : 参照ボックスの縁からの指定距離を使用して長方形を定義します。
+    - {{cssxref("basic-shape/shape","shape()")}}
+      - : オプションの SVG 塗りつぶしルールと、行、曲線、円弧用の図形コマンドを使用して図形を定義します。
+    - {{cssxref("basic-shape/xywh","xywh()")}}
+      - : 参照ボックスの上端と左端からの指定距離、および長方形の幅と高さを指定して、長方形を定義します。
 
 - `<geometry-box>`
 
-  - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形 ({{cssxref("border-radius")}} など) を含めてクリッピングパスにします。ジオメトリボックスは以下の値のうちの一つが指定できます。
+  - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形 ({{cssxref("border-radius")}} など) を含めてクリッピングパスにします。ジオメトリーボックスは以下の値のうちの一つが指定できます。
 
     - `margin-box`
       - : [マージンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#margin-box)を参照ボックスとして使用します。
@@ -102,7 +113,7 @@ clip-path: unset;
 
 ## 例
 
-<h3 id="Comparison_of_HTML_and_SVG">HTML と SVG の比較</h3>
+### HTML と SVG の比較
 
 ```html hidden
 <svg class="defs">
@@ -126,7 +137,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="none">
               <rect x="24" y="24" width="144" height="144" />
@@ -140,7 +151,7 @@ clip-path: unset;
 
     <div class="note">
       clip-path: url(#myPath)<br /><br />
-      Assuming the following clipPath definition:
+      次の clipPath の定義があったとします。
       <pre>
 &lt;svg&gt;
   &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
@@ -162,7 +173,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg">
               <rect x="24" y="24" width="144" height="144" />
@@ -187,7 +198,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="svg2">
               <rect x="24" y="24" width="144" height="144" />
@@ -209,7 +220,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape1">
               <rect x="24" y="24" width="144" height="144" />
@@ -231,7 +242,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape2">
               <rect x="24" y="24" width="144" height="144" />
@@ -253,7 +264,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape3">
               <rect x="24" y="24" width="144" height="144" />
@@ -275,7 +286,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape4">
               <rect x="24" y="24" width="144" height="144" />
@@ -297,7 +308,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape5">
               <rect x="24" y="24" width="144" height="144" />
@@ -319,7 +330,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape6">
               <rect x="24" y="24" width="144" height="144" />
@@ -341,7 +352,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape7">
               <rect x="24" y="24" width="144" height="144" />
@@ -363,7 +374,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape8">
               <rect x="24" y="24" width="144" height="144" />
@@ -385,7 +396,7 @@ clip-path: unset;
       </div>
       <div class="cell">
         <span>SVG</span>
-        <div class="container viewbox">
+        <div class="container view-box">
           <svg viewBox="0 0 192 192">
             <g class="shape9">
               <rect x="24" y="24" width="144" height="144" />
@@ -454,7 +465,7 @@ body {
   position: relative;
 }
 
-.container:before {
+.container::before {
   content: "margin";
   position: absolute;
   top: 2px;
@@ -462,14 +473,14 @@ body {
   font: italic 0.6em sans-serif;
 }
 
-.viewbox {
+.view-box {
   box-shadow:
     1rem 1rem 0 #efefef inset,
     -1rem -1rem 0 #efefef inset;
 }
 
-.container.viewbox:after {
-  content: "viewbox";
+.container.view-box::after {
+  content: "view-box";
   position: absolute;
   left: 1.1rem;
   top: 1.1rem;
@@ -562,13 +573,13 @@ svg text.em {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", "800px")}}
 
-<h3 id="Complete_example">完全な例</h3>
+### 完全な例
 
 #### HTML
 
-```html
+```html live-sample___complete_example
 <img id="clipped" src="mdn.svg" alt="MDN logo" />
 <svg height="0" width="0">
   <defs>
@@ -586,6 +597,8 @@ svg text.em {
   <option value="circle(100px at 110px 100px)">circle</option>
   <option value="url(#cross)" selected>cross</option>
   <option value="inset(20px round 20px)">inset</option>
+  <option value="rect(10px 10px 180px 220px round 20px)">rect</option>
+  <option value="xywh(0 20% 90% 67% round 0 0 5% 5px)">xywh</option>
   <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
     path
   </option>
@@ -594,16 +607,16 @@ svg text.em {
 
 #### CSS
 
-```css
+```css live-sample___complete_example
 #clipped {
   margin-bottom: 20px;
   clip-path: url(#cross);
 }
 ```
 
-```js hidden
+```js hidden live-sample___complete_example
 const clipPathSelect = document.getElementById("clipPath");
-clipPathSelect.addEventListener("change", function (evt) {
+clipPathSelect.addEventListener("change", (evt) => {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
 ```
@@ -625,7 +638,6 @@ clipPathSelect.addEventListener("change", function (evt) {
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - CSS プロパティ: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-
 - SVG 属性:
 
   - {{SVGAttr("clip-path")}}

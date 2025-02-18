@@ -1,14 +1,13 @@
 ---
 title: 支持旧浏览器
 slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
-original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 
 {{LearnSidebar}}
 
 本文中，我们推荐使用弹性盒和网格作为你的设计的主要布局方式。但是，你的网站的访客会有人使用旧浏览器，或者是不支持你已经使用的方式。这总是 Web 上存在的情况，因为新的特性被开发出来，不同的浏览器会优先支持不同的特性。本文解释了如何使用现代的 Web 技术，而无需让采用旧技术的用户被拒之门外。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">学习前提：</th>
@@ -194,32 +193,17 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 
 对于特性查询的规范，也包含了测试浏览器是否支持某个特性的能力——这只在浏览器支持特性查询的时候有用。未来，一种检测支持的缺失的方式将会实现，同时不支持特性查询的浏览器也将退出历史舞台。但是现在，你要使用这种编写旧 CSS 的方式，然后覆写它，以求最广泛的支持。
 
-## 弹性盒的旧版本
-
-在旧版浏览器中，你可以找到弹性盒规范的旧有修订版本。在编写这篇文章的时候，这大多数是 IE10 的问题，它在弹性盒上使用了`-ms-`前缀。这也意味着现在还存在着一些过时的文章和教程，[这篇有用的指导](https://css-tricks.com/old-flexbox-and-new-flexbox/)帮助你分辨你看到的信息；如果你需要在很旧的浏览器中需要 flex 支持的话，它也会帮到你。
-
-## IE10 和 IE11 的带前缀版的网格
-
-CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支持*现代的*网格，虽然这种网格和本站记载的现代布局不同，它们还是有一个很堪用的网格布局版本。IE10 和 IE11 的实现是以`-ms-`为前缀的，也就是说你可以给这两个浏览器用，而在非微软浏览器上，这种属性会被忽略。不过 Edge 仍然能理解旧语法，所以小心点，让每个东西都安全地在你的现代网格 CSS 中覆写。
-
-[网格布局渐进增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)指导能帮你理解 IE 版的网格，我们在这节课的末尾加入了一些额外的有用的链接。不过，除非你有很多使用旧版 IE 的访客，你可能发现专注于建立一个由所有不支持的浏览器共用的回滚版本是一个更好的选择。
-
 ## 测试旧浏览器
 
-由于大多数浏览器都支持弹性盒和网格，测试旧浏览器想想就很难。一种方式是使用在线的测试工具，例如 Sauce Labs，在[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)模块里有详细说明。
+一种方式是使用在线的测试工具，例如 Sauce Labs，在[跨浏览器测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)模块里有详细说明。
 
-你也可以下载安装虚拟机，在你的电脑的容器环境中运行旧版浏览器。能够使用旧版 IE 是很有用的，为此，微软已经制作了[一些可以免费下载的虚拟机](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)。这些对 Mac、Windows 和 Linux 操作系统都是可以用的，所以即使你没有 Windows 电脑，这也是一个测试旧的和现代 Windows 浏览器的绝佳办法。
-
-## 小结
+## 总结
 
 你现在有了自信地使用例如网格和弹性盒技术、建立面向旧浏览器的回滚以及利用任何可能会在未来出现的 新技术所需的知识。
 
 ## 参见
 
-- [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
-- [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)
-- [我应该尽力使用 IE10 的网格布局实现吗？](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)
-- [有特性查询的层叠式 Web 设计](https://24ways.org/2017/cascading-web-design/)
-- [使用特性查询（视频）](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
+- [`@supports`](/zh-CN/docs/Web/CSS/@supports) at 规则
+- [CSS at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+- [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块

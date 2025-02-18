@@ -10,7 +10,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的“骨架”站点。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

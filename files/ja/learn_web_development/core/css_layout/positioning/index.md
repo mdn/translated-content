@@ -1,12 +1,13 @@
 ---
 title: 位置指定
 slug: Learn_web_development/Core/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/Positioning
 l10n:
-  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 位置指定を使用すると、文書の通常のレイアウトフローから要素を取り出して異なるふるまいをさせることができます。 例えば、互いの上に重なったり、常にブラウザーのビューポート内の同じ場所に留まったりします。 この記事では、さまざまな {{cssxref("position")}} の値とその使い方について説明します。
 
@@ -15,14 +16,24 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学ぶ）、および CSS の機能の考え方（<a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>で学ぶ）。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
+        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>CSS 位置指定がどのように機能するのかを学ぶこと。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li><code>static</code> 位置指定が、ページ上で要素を位置指定するための既定の方法であること。</li>
+          <li>相対位置指定の要素は通常フローに残る一方で、絶対（および固定・粘着）位置指定は通常フローから完全に外し、個別のレイヤーに配置すること。</li>
+          <li>最終的なレイアウト位置は <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> の各プロパティで変更できるものの、設定されている <code>position</code> 値によって効果が異なること。</li>
+          <li>位置指定要素の位置のコンテキストを、祖先要素の位置指定によって設定すること。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -37,9 +48,9 @@ HTML 要素に適用できるさまざまな種類の位置指定があります
 
 ## 静的位置指定
 
-静的位置指定（Static positioning）は、すべての要素が取得するデフォルトです。 これは、「要素を文書レイアウトフロー内の通常の位置に配置する — ここで見るべき特別なことは何もありません」を意味します。
+静的位置指定 (Static positioning) は、すべての要素が取得するデフォルトです。 これは、「要素を文書レイアウトフロー内の通常の位置に配置する — ここで見るべき特別なことは何もありません」を意味します。
 
-これを実演し、例をこれからのセクションのために準備するために、最初に HTML の 2 番目の {{htmlelement("p")}} に `positioned` の `class` を次のように追加します。
+これを実演し、例をこれからのセクションのために準備するために、最初に HTML で次のように、 2 つ目の {{htmlelement("p")}} の `class` に `positioned` を追加します。
 
 ```html
 <p class="positioned">…</p>
@@ -54,20 +65,20 @@ HTML 要素に適用できるさまざまな種類の位置指定があります
 }
 ```
 
-保存してリフレッシュしても、2 段落目の背景色が更新されていることを除けば、まったく違いはありません。 これは問題ありません。 前にも述べたように、静的位置指定は既定のふるまいです！
+保存して再読み込みしても、2 段落目の背景色が更新されていることを除けば、まったく違いはありません。 これは問題ありません。 前にも述べたように、静的位置指定は既定のふるまいです！
 
 > [!NOTE]
 > この時点でのライブ例は [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)）。
 
 ## 相対位置指定
 
-相対位置指定（Relative positioning）は、最初に見ていく位置指定の種類です。 これは静的位置指定と非常によく似ていますが、位置指定要素（positioned element）が通常のレイアウトフローで配置されたら、ページ上の他の要素と重なることも含んで最終的な位置を変更できるという点が異なります。 先に進んで、次のようにコード内の `position` の宣言を更新してください。
+相対位置指定 (Relative positioning) は、最初に見ていく位置指定の種類です。 これは静的位置指定と非常によく似ていますが、位置指定要素 (positioned element) が通常のレイアウトフローで配置されたら、ページ上の他の要素と重なることも含んで最終的な位置を変更できるという点が異なります。 先に進んで、次のようにコード内の `position` の宣言を更新してください。
 
 ```css
 position: relative;
 ```
 
-この段階で保存してリフレッシュしても、結果にまったく変化はありません。 それでは、どうやって要素の位置を変更するのでしょうか？ {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} の各プロパティを使用する必要があります。 これについては次のセクションで説明します。
+この段階で保存して再読み込みしても、結果にまったく変化はありません。 それでは、どうやって要素の位置を変更するのでしょうか？ {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} の各プロパティを使用する必要があります。 これについては次のセクションで説明します。
 
 ### top、bottom、left、right の紹介
 
@@ -79,40 +90,33 @@ left: 30px;
 ```
 
 > [!NOTE]
-> これらのプロパティの値は、論理的に想定される任意の[単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)（ピクセル、mm、rem、% など）をとることができます。
+> これらのプロパティの値は、論理的に想定される任意の[単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)（ピクセル、mm、rem、% など）をとることができます。
 
 保存して再読み込みすると、次のような結果になります。
 
-```html hidden
-<h1>Relative positioning</h1>
+```html-nolint hidden live-sample___ntroducing_top_bottom_left_and_right
+<h1>相対位置指定</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置されます。
 </p>
 
 <p class="positioned">
-  By default we span 100% of the width of our parent element, and we are as tall
-  as our child content. Our total width and height is our content + padding +
-  border width/height.
+  既定では、親要素の幅を 100% 使用し、子コンテンツの高さと同じ高さになります。全体の幅と高さは、コンテンツの幅と高さ＋パディング＋境界線の幅/高さです。
 </p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  これらはマージンによって分離されています。マージンが相殺されているため、互いのマージンではなく、マージン 1 つ分のサイズによって分離されています。
 </p>
 
 <p>
-  Inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
+  インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
+  <img src="long.jpg" alt="布切れ" />
 </p>
 ```
 
-```css hidden
+```css hidden live-sample___ntroducing_top_bottom_left_and_right
 body {
   width: 500px;
   margin: 0 auto;
@@ -140,14 +144,14 @@ span {
 
 {{ EmbedLiveSample('Introducing_top_bottom_left_and_right', '100%', 500) }}
 
-かっこいいですよね？はい、おそらくこれはあなたが期待していたものではなかったでしょう。上と左を指定したのに、なぜ下と右に移動したのでしょうか？ 最初は非論理的に聞こえるかもしれませんが、これは相対的位置指定が機能する方法です。位置指定したボックスの指定した側を反対方向に押す見えない力を考える必要があります。 例えば、`top: 30px;` と指定した場合、力がボックスの上側を押して、箱の上側が 30px 下向きに移動します。
+かっこいいですよね？はい、おそらくこれは期待していたものではなかったでしょう。上と左を指定したのに、なぜ下と右に移動したのでしょうか？ 最初は非論理的に聞こえるかもしれませんが、これは相対的位置指定が機能する方法です。位置指定したボックスの指定した側を反対方向に押す見えない力を考える必要があります。 例えば、`top: 30px;` と指定した場合、力がボックスの上側を押して、箱の上側が 30px 下向きに移動します。
 
 > [!NOTE]
 > この時点でのライブ例は [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html)）。
 
 ## 絶対位置指定
 
-絶対位置指定（Absolute positioning）はまったく異なる結果をもたらします。
+絶対位置指定 (Absolute positioning) はまったく異なる結果をもたらします。
 
 ### position: absolute の設定
 
@@ -159,32 +163,25 @@ position: absolute;
 
 保存して再読み込みすると、次のようになります。
 
-```html hidden
-<h1>Absolute positioning</h1>
+```html-nolint hidden
+<h1>絶対位置指定</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置されます。
 </p>
 
 <p class="positioned">
-  By default we span 100% of the width of our parent element, and we are as tall
-  as our child content. Our total width and height is our content + padding +
-  border width/height.
+  既定では、親要素の幅を 100% 使用し、子コンテンツの高さと同じ高さになります。全体の幅と高さは、コンテンツの幅と高さ＋パディング＋境界線の幅/高さです。
 </p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  これらはマージンによって分離されています。マージンが相殺されているため、互いのマージンではなく、マージン 1 つ分のサイズによって分離されています。
 </p>
 
 <p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
+  インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
+  <img src="long.jpg" alt="布切れ" />
 </p>
 ```
 
@@ -216,58 +213,52 @@ span {
 
 {{ EmbedLiveSample('Setting_position_absolute', '100%', 450) }}
 
-まず最初に、文書フロー内にあるべき位置指定要素のギャップが存在しないことに注意してください。 1 番目と 3 番目の要素はそれが存在しないので一緒になっています。ある意味、これは正しいです。 絶対位置指定要素は、通常の文書レイアウトフローには存在しません。 他のすべてのものとは異なる独自のレイヤー上にあります。これはとても便利です。つまり、ページ上の他の要素のレイアウトを妨げない独立した UI 機能を作成できるということです。例えば、ポップアップ情報ボックスやコントロールメニュー、ロールオーバーパネル、ページ上の任意の場所にドラッグアンドドロップできる UI 機能、等々です。
+まず、文書内のフローに位置指定された要素が配置されていたはずのすき間が、なくなっていることに注意してください。これがなくなったので、 1 つ目と 3 つ目の要素は互いに隣接しています。ある意味、これは正しいです。 絶対位置指定要素は、通常の文書レイアウトフローには存在しなくなります。 他のすべてのものとは異なる独自のレイヤー上にあります。これはとても便利です。つまり、ページ上の他の要素のレイアウトを妨げない独立した UI 機能を作成できるということです。例えば、ポップアップ情報ボックスやコントロールメニュー、ロールオーバーパネル、ページ上の任意の場所にドラッグアンドドロップできる UI 機能、等々です。
 
-次に、要素の位置が変更されたことに注意してください。 これは、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} の絶対位置指定でのふるまいが異なるためです。 通常の文書レイアウトフロー内での相対的な位置に基づいて要素を配置するのではなく, 要素がそれぞれの包含要素の側からあるべき距離を指定します。 したがって、この場合は、絶対位置指定要素は「包含要素」の上側から 30 ピクセル、左側から 30 ピクセルとなるようにします。（この場合、「包含要素」とは、**最初の包含ブロック** (initial containing block) のことです。詳細については、以下のセクションを参照してください。）
+次に、要素の位置が変更されたことに注意してください。 これは、{{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} の絶対位置指定でのふるまいが異なるためです。 通常の文書レイアウトフロー内での相対的な位置に基づいて要素を配置するのではなく, 要素がそれぞれの包含要素の側からあるべき距離を指定します。 したがって、この場合は、絶対位置指定要素は「包含要素」の上側から 30 ピクセル、左側から 30 ピクセルとなるようにします。（この場合、**包含要素**とは、**初期包含ブロック** (initial containing block) のことです。詳細については、以下の節を参照してください。）
 
 > [!NOTE]
 > 必要に応じて、 {{cssxref("top")}}、{{cssxref("bottom")}}、{{cssxref("left")}}、{{cssxref("right")}} を使用して要素のサイズを変更することができます。 位置指定要素に `top: 0; bottom: 0; left: 0; right: 0; margin: 0;` を設定して、何が起こるか見てみてください。後で元に戻しましょう。
 
 > [!NOTE]
-> そう、マージンはなお位置指定要素に影響します。 しかしながら、マージンの相殺はそうではありません。
+> そう、マージンはなお位置指定要素に影響します。 しかしながら、マージンの相殺行われません。
 
 > [!NOTE]
 > この時点でのライブ例は [`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html)）。
 
 ### 位置指定コンテキスト
 
-絶対位置指定要素の「包含要素」はどの要素でしょうか？ これは、位置指定要素の先祖の `position` プロパティに大きく依存します（[包含ブロックの識別](/ja/docs/Web/CSS/Containing_block#identifying_the_containing_block)を参照）。
+絶対位置指定要素の「包含要素」はどの要素でしょうか？ これは、位置指定要素の祖先の `position` プロパティに大きく依存します。
 
-明示的に定義された `position` プロパティを持つ祖先要素がない場合、デフォルトではすべての祖先要素は静的位置を持ちます。 この結果、絶対位置指定要素は**最初の包含ブロック**（initial containing block）に含まれます。 最初の包含ブロックはビューポートの大きさを持ち、{{htmlelement("html")}} 要素を含むブロックでもあります。 簡単に言うと、絶対位置指定要素は {{htmlelement("html")}} 要素の外側に表示され、最初のビューポートを基準にして配置されます。
+明示的に定義された `position` プロパティを持つ祖先要素がない場合、デフォルトではすべての祖先要素は静的位置を持ちます。 この結果、絶対位置指定要素は**初期包含ブロック**に含まれます。 初期包含ブロックはビューポートの大きさを持ち、{{htmlelement("html")}} 要素を含むブロックでもあります。 簡単に言うと、絶対位置指定要素は {{htmlelement("html")}} 要素の外側に表示され、最初のビューポートを基準にして配置されます。
 
-位置指定要素は HTML ソースの {{htmlelement("body")}} 内にネストされていますが、最終的なレイアウトでは、ページの端の左上から 30 ピクセル離れています。 **位置指定コンテキスト** (positioning context) — 絶対位置指定要素がどの要素を基準にして配置されているか — を変更することができます。 これは、要素の先祖の 1 つに位置指定を設定することによって行われます — それを内部にネストしている要素の 1 つにです（内部にネストしていない要素を基準にしての配置はできません）。 これを実証するために、次の宣言を `body` ルールに追加してください。
+位置指定要素は HTML ソースの {{htmlelement("body")}} 内に含まれていますが、最終的なレイアウトでは、ページの端の左上から 30 ピクセル離れています。 **位置指定コンテキスト** (positioning context) — 絶対位置指定要素が配置される基準となる要素 — を変更することができます。 これは、要素の祖先の 1 つに位置指定を設定することによって行われます。つまり、位置指定する要素を内部に含んでいる要素の 1 つです（その要素を含んでいない要素を基準にして配置することはできません）。これを確認するために、次の宣言を `body` ルールに追加してください。
 
 ```css
 position: relative;
 ```
 
-これにより、次の結果が得られます。
+これにより、次のような結果になります。
 
-```html hidden
-<h1>Positioning context</h1>
+```html-nolint hidden
+<h1>位置指定コンテキスト</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置されます。
 </p>
 
 <p class="positioned">
-  Now I'm absolutely positioned relative to the
-  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+  この絶対位置指定要素は、 <code>&lt;body&gt;</code> 要素からの相対位置となり、 <code>&lt;html&gt;</code> 要素からの相対位置ではなくなりました。
 </p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  これらはマージンによって分離されています。マージンが相殺されているため、互いのマージンではなく、マージン 1 つ分のサイズによって分離されています。
 </p>
 
 <p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
+  インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
+  <img src="long.jpg" alt="布切れ" />
 </p>
 ```
 
@@ -307,9 +298,9 @@ span {
 
 ### z-index の紹介
 
-この絶対位置指定はすべて楽しいですが、まだ検討していないことがもう 1 つあります。 要素が重なり合ったときに、どの要素が他のどの要素の上に表われるかを決定するのは何でしょうか？ これまで見てきた例では、位置指定コンテキスト内には位置指定要素が 1 つしかなく、位置指定要素は位置指定されていない要素よりも優先されるため、一番上に表われます。 複数あるときはどうでしょうか？
+この絶対位置指定はすべて楽しいものですが、まだ検討していないことがもう 1 つあります。 要素が重なり合ったときに、どの要素が他のどの要素の上に表われるかを決定するのは何でしょうか？ これまで見てきた例では、位置指定コンテキスト内には位置指定要素が 1 つしかなく、位置指定要素は位置指定されていない要素よりも優先されるため、一番上に表われます。 複数あるときはどうでしょうか？
 
-最初の段落も絶対位置指定にするために、CSS に次を追加してみてください。
+最初の段落も絶対位置指定にするために、 CSS に次を追加してみてください。
 
 ```css
 p:nth-of-type(1) {
@@ -320,13 +311,13 @@ p:nth-of-type(1) {
 }
 ```
 
-この時点で、最初の段落がライム色に着色され、文書フローの外に移動し、元の位置よりも少し上に配置されていることがわかります。 また、2 つが重なったところでは、元の `.positioned` 段落の下にも重なっています。 これは、`.positioned` 段落がソース順の 2 番目の段落であり、ソース順の後ろに配置された要素がソース順の前に配置された要素よりも優先されるためです。
+この時点で、最初の段落がライム色に着色され、文書フローの外に移動し、元の位置よりも少し上に配置されていることがわかります。 また、2 つが重なったところでは、元の `.positioned` 段落の下にも重なっています。 これは、`.positioned` 段落がソース順の 2 つ目の段落であり、ソース順の後ろに配置された要素がソース順の前に配置された要素よりも優先されるためです。
 
 重ね合わせ順を変更できるでしょうか？ はい、 {{cssxref("z-index")}} プロパティを使うことでできます。 "z-index" は z 軸への参照です。 背景画像やドロップシャドウのオフセットなどを位置指定するために、水平（x 軸）座標と垂直（y 軸）座標を使用してウェブページについて説明したコースの前のポイントから思い出すことができます。 (0,0) はページ（または要素）の左上にあり、x 軸と y 軸はページの右下を横切っています（左から右の言語ならば）。
 
 ウェブページには、z 軸もあります。 画面の表面から自分の顔に向かって走る想像上の線（または、画面の前に持ってきたい他の何か）です。 {{cssxref("z-index")}} の値は、位置指定要素がその軸のどこにあるかに影響します。 正の値はそれらを重ね合わせの上に移動し、負の値はそれらを重ね合わせの下に移動します。 既定では、位置指定要素はすべて `auto` の `z-index` を持ち、これは事実上 0 です。
 
-重ね合わせ順を変更するには、`p:nth-of-type(1)` ルールに次の宣言を追加してみてください。
+重ね合わせ順を変更するには、 `p:nth-of-type(1)` ルールに次の宣言を追加してみてください。
 
 ```css
 z-index: 1;
@@ -334,31 +325,25 @@ z-index: 1;
 
 これで完成した例が表示され、ライム色の段落が一番上になります。
 
-```html hidden
+```html-nolint hidden
 <h1>z-index</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置されます。
 </p>
 
 <p class="positioned">
-  Now I'm absolutely positioned relative to the
-  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+  この絶対位置指定要素は、 <code>&lt;body&gt;</code> 要素からの相対位置となり、 <code>&lt;html&gt;</code> 要素からの相対位置ではなくなりました。
 </p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  これらはマージンによって分離されています。マージンが相殺されているため、互いのマージンではなく、マージン 1 つ分のサイズによって分離されています。
 </p>
 
 <p>
-  inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
+  インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
+  <img src="long.jpg" alt="布切れ" />
 </p>
 ```
 
@@ -406,7 +391,7 @@ p:nth-of-type(1) {
 
 ## 固定位置指定
 
-固定位置指定 (Fixed positioning) を見てみましょう。これは絶対位置指定とまったく同じように機能しますが、1 つの重要な違いがあります。 絶対位置指定では、要素をその最も近くで位置指定された祖先 (the initial containing block if there isn't one) に対して固定しますが、**固定位置指定**では、ふつう、ビューポートの見えている部分に対して固定します。（要素の祖先の 1 つが固定されたコンテナーブロックであり、その [transform プロパティ](/ja/docs/Web/CSS/transform) に _none_ 以外の値が設定されている場合は例外となります）。つまり、ページのスクロール量に関係なく常に表示される持続的なナビゲーションメニューのような、固定された便利な UI アイテムを作成できることを意味します。
+固定位置指定 (Fixed positioning) を見てみましょう。これは絶対位置指定とまったく同じように機能しますが、1 つの重要な違いがあります。 絶対位置指定では、要素をその最も近くで位置指定された祖先（存在しない場合は初期包含ブロック） に対して固定しますが、**固定位置指定**では、ふつう、ビューポートの見えている部分に対して固定します。つまり、ページのスクロール量に関係なく常に表示される持続的なナビゲーションメニューのような、固定された便利な UI アイテムを作成できることを意味します。
 
 簡単な例をまとめて、意味を説明しましょう。 まず最初に、CSS から既存の `p:nth-of-type(1)` ルールと `.positioned` ルールを削除します。
 
@@ -420,7 +405,7 @@ body {
 }
 ```
 
-それでは、{{htmlelement("Heading_Elements", "h1")}} 要素に `position: fixed;` を与え、ビューポートの中央上部に配置します。 CSS に次のルールを追加してください。
+それでは、{{htmlelement("Heading_Elements", "&lt;h1>")}} 要素に `position: fixed;` を与え、ビューポートの中央上部に配置します。 CSS に次のルールを追加してください。
 
 ```css
 h1 {
@@ -445,28 +430,23 @@ p:nth-of-type(1) {
 
 完成した例を見てください。
 
-```html hidden
-<h1>Fixed positioning</h1>
+```html-nolint hidden
+<h1>固定位置指定</h1>
 
 <p>
-  I am a basic block level element. My adjacent block level elements sit on new
-  lines below me.
+  これは基本的なブロックレベル要素です。隣接するブロックレベル要素は、この下に新しい行に配置されます。
 </p>
 
-<p class="positioned">I'm not positioned any more.</p>
+<p class="positioned">これは位置指定されなくなりました。</p>
 
 <p>
-  We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  これらはマージンによって分離されています。マージンが相殺されているため、互いのマージンではなく、マージン 1 つ分のサイズによって分離されています。
 </p>
 
 <p>
-  Inline elements <span>like this one</span> and <span>this one</span> sit on
-  the same line as one another, and adjacent text nodes, if there is space on
-  the same line. Overflowing inline elements
-  <span>wrap onto a new line if possible — like this one containing text</span>,
-  or just go on to a new line if not, much like this image will do:
-  <img src="long.jpg" alt="snippet of cloth" />
+  この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
+  インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
+  <img src="long.jpg" alt="布切れ" />
 </p>
 ```
 
@@ -515,8 +495,8 @@ p:nth-of-type(1) {
 
 これは、ナビゲーションバーを特定の位置までページと共にスクロールさせ、その後ページの上部に固定するなどの目的で使用できます。
 
-```html hidden
-<h1>Sticky positioning</h1>
+```html-nolint hidden
+<h1>粘着位置指定</h1>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
@@ -530,7 +510,7 @@ p:nth-of-type(1) {
   lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
 </p>
 
-<div class="positioned">Sticky</div>
+<div class="positioned">粘着</div>
 
 <p>
   Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
@@ -585,7 +565,7 @@ body {
 `position:sticky` の興味深く一般的な使用法は、スクロールする索引ページを作成し、異なる見出しが到達するにつれてページの上部にくっつくようにすることです。そのような例のマークアップは次のようになります。
 
 ```html
-<h1>Sticky positioning</h1>
+<h1>粘着位置指定</h1>
 
 <dl>
   <dt>A</dt>
@@ -633,53 +613,21 @@ dt {
 ```css hidden
 body {
   width: 500px;
-  height: 1400px;
+  height: 880px;
   margin: 0 auto;
 }
 ```
 
-```html hidden
-<h1>Sticky positioning</h1>
-
-<dl>
-  <dt>A</dt>
-  <dd>Apple</dd>
-  <dd>Ant</dd>
-  <dd>Altimeter</dd>
-  <dd>Airplane</dd>
-  <dt>B</dt>
-  <dd>Bird</dd>
-  <dd>Buzzard</dd>
-  <dd>Bee</dd>
-  <dd>Banana</dd>
-  <dd>Beanstalk</dd>
-  <dt>C</dt>
-  <dd>Calculator</dd>
-  <dd>Cane</dd>
-  <dd>Camera</dd>
-  <dd>Camel</dd>
-  <dt>D</dt>
-  <dd>Duck</dd>
-  <dd>Dime</dd>
-  <dd>Dipstick</dd>
-  <dd>Drone</dd>
-  <dt>E</dt>
-  <dd>Egg</dd>
-  <dd>Elephant</dd>
-  <dd>Egret</dd>
-</dl>
-```
-
 {{ EmbedLiveSample('Scrolling_index', '100%', 200) }}
 
-粘着要素は「スクロール機構」を持つ最も近い祖先（[position](/ja/docs/Web/CSS/position) プロパティによって決定する）に相対的に「粘着」します。
+粘着要素は「スクロール機構」を持つ最も近い祖先（[overflow](/ja/docs/Web/CSS/overflow) プロパティによって決定する）に相対的に「粘着」します。
 
 > [!NOTE]
 > このライブ例は [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)）。
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 位置指定](/ja/docs/Learn/CSS/CSS_layout/Position_skills) を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Position_skills)を参照してください。
 
 ## まとめ
 
@@ -688,6 +636,6 @@ body {
 ## 関連情報
 
 - {{cssxref("position")}} プロパティのリファレンス。
-- いくつかのより有用なアイデアのための[実用的な位置指定の例](/ja/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)。
+- いくつかのより有用なアイデアのための[実用的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)。
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

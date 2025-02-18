@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-old"
+title: ::view-transition-old
 slug: Web/CSS/::view-transition-old
 l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd

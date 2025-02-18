@@ -1,12 +1,16 @@
 ---
 title: HTML のデバッグ
 slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
-original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 l10n:
-  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
+
+> [!NOTE]
+> この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
 
 HTML を書くのはいいのですが、何かがうまくいかず、コードのどこに誤りがあるのかがわからなくなったらどうしますか。この記事では、 HTML のエラーを探し、修正するのに役立つツールをいくつか紹介します。
 
@@ -15,24 +19,24 @@ HTML を書くのはいいのですが、何かがうまくいかず、コード
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        HTML に、例えば、<a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML の始め方</a
-        >、
-        <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >HTML テキストの基礎</a
-        >、
-        <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
-          >ハイパーリンクの作成</a
-        >に書かれているようなことに親しんでいること。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >見出しと段落</a
+        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >リスト</a
+        >などのテキストレベルの意味付け。<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Structuring_documents"
+          >構造化 HTML</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        HTML 内の問題を見つけるためのデバッグ用ツールの基本的な使い方の学習。
+        <ul>
+          <li>寛容なコードの概念、そしてこれが HTML デバッグに意味していること。</li>
+          <li>マークアップエラーを検出するために [HTML validator](https://validator.w3.org/) を使用すること。</li>
+          <li>ブラウザーの開発ツールの DOM インスペクターを使用して、マークアップをさらに掘り下げること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -42,7 +46,9 @@ HTML を書くのはいいのですが、何かがうまくいかず、コード
 
 ある種のコードを書いているとき、通常はすべてうまくいっているのですが、あるとき恐ろしいことにエラーが発生します。何か間違ったことをしたために、コードが動作しないのです。まったく動作しないか、まったく思い通りに動作しないかのいずれかです。例えば、以下は [Rust](https://www.rust-lang.org/) 言語で書かれた簡単なプログラムを{{glossary("compile", "コンパイル")}}した際に報告されたエラーです。
 
-![print 文の文字列の周りに引用符が抜けた状態で、 Rust プログラムをコンパイルしようとした結果を示すコンソールウィンドウです。報告されたエラーメッセージは error: unterminated double quote string です。](error-message.png)ここで、比較的分かりやすいエラーメッセージがあります。 "unterminated double quote string" （閉じていない二重引用符文字列）。リストを見れば、おそらく論理的に `println!(Hello, world!");` に二重引用符がない可能性があるとわかるでしょう。しかし、プログラムが大きくなるにつれてエラーメッセージはすぐに複雑になり、解釈しにくくなります。簡単な場合でも、 Rust について何も知らない人には少し威圧的に見えるかもしれません。
+![print 文の文字列の周りに引用符が抜けた状態で、 Rust プログラムをコンパイルしようとした結果を示すコンソールウィンドウです。報告されたエラーメッセージは error: unterminated double quote string です。](error-message.png)
+
+ここで、比較的分かりやすいエラーメッセージがあります。 "unterminated double quote string" （閉じていない二重引用符文字列）。リストを見れば、おそらく論理的に `println!(Hello, world!");` に二重引用符がない可能性があるとわかるでしょう。しかし、プログラムが大きくなるにつれてエラーメッセージはすぐに複雑になり、解釈しにくくなります。簡単な場合でも、 Rust について何も知らない人には少し威圧的に見えるかもしれません。
 
 デバッグを怖がる必要はありません — プログラミング言語やコードの作成、デバッグに慣れるための鍵は、言語とツールの両方に親しんでおくことです。
 
@@ -96,7 +102,7 @@ HTML コードの寛容な性質を学習する時が来ました。
    - `<strong>strong <em>strong emphasized?</strong> what is this?</em>` の部分は入れ子構造が間違っています。前の問題もあって、これがどのように解釈されたかを見分けるのは容易ではありません。
    - [`href`](/ja/docs/Web/HTML/Element/a#href) 属性値に、閉じる二重引用符がありません。これが最大の問題を引き起こしているようです。リンクはまったくレンダリングされていません。
 
-5. それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[ブラウザー開発者ツールを見る](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)をちょっと確認してください。
+5. それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[ブラウザー開発者ツールを見る](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)をちょっと確認してください。
 6. DOM インスペクターでは、レンダリングされたマークアップがどのように見えるかを見ることができます。![Firefox の HTML インスペクターで、例の段落がハイライトされ、 "What causes errors in HTML?" というテキストが表示されています。ここでは、段落要素がブラウザーによって閉じられていることがわかります。](html-inspector.png)
 7. DOM インスペクターを使用して、ブラウザーが HTML エラーを修正しようとしている方法を確認するためにコードを詳しく調べてみましょう（もちろん Firefox で確認していますが、他の現代のブラウザーでも同じ結果が得られる*はず*です）。
 
@@ -171,9 +177,13 @@ HTML コードの寛容な性質を学習する時が来ました。
 
 !["The document validates according to the specified schema(s) and to additional constraints checked by the validator." と読めるバナー。](valid-html-banner.png)
 
+## DOM インスペクターの使用
+
+TODO
+
 ## まとめ
 
 ここでは HTML のデバッグについて紹介しました。これは、後で CSS、JavaScript、およびその他の種類のコードのデバッグを始めるときに頼りになる便利なスキルです。
 また HTML モジュールの学習に関する記事の紹介の終わりにもなります。今、あなたは私たちの評価で自分自身をテストすることに進むことができます。最初のものは以下にリンクされています。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

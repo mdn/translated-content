@@ -1,12 +1,13 @@
 ---
 title: フレックスボックス
 slug: Learn_web_development/Core/CSS_layout/Flexbox
-original_slug: Learn/CSS/CSS_layout/Flexbox
 l10n:
-  sourceCommit: d6a792e3adce2c8b29a73a3b407e786091363980
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 [フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
 
@@ -15,15 +16,25 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学んでください）、および CSS の動作の仕組みの考え方（<a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>で学んでください）。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
+        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        フレックスボックスレイアウトシステムを使用して、ウェブのレイアウトを作成する方法を習得する。
+        <ul>
+          <li>フレックスボックスの目的。一連のブロック要素やインライン要素を、 1 次元で柔軟にレイアウトすること。</li>
+          <li>フレックスの用語 — フレックスコンテナー、フレックスアイテム、主軸、交差軸。</li>
+          <li>既定で <code>display: flex</code> が何をもたらすかを理解すること。</li>
+          <li>新しい行や列にコンテンツを折り返す方法。</li>
+          <li>フレックスアイテムを柔軟にサイズ変更したり、並べ替えたりすること。</li>
+          <li>コンテンツの位置合わせと配置。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -221,7 +232,7 @@ div {
 - 上記のコードで使用した `center` の値により、アイテムは固有の寸法を維持しますが、交差軸の中心に配置されます。 これが、この例のボタンが縦方向に中央揃えされている理由です。これが、最初の例で既定では同じ高さの列になった理由です。
 - `flex-start`、`self-start`、`start`、`flex-end`、`self-end`、`end` のような値を指定することもでき、それぞれすべてのアイテムを交差軸の先頭と末尾に配置します。`baseeline` を指定すると、フレックスアイテムのベースラインを揃えます。基本的に、各フレックスアイテムの交差始点とベースラインの間の距離が最も大きい要素の最初の行の下端に並べられます。詳細は {{cssxref("align-items")}} を参照してください。
 
-{{cssxref("align-self")}} プロパティを適用することで、個々のフレックスアイテムの {{cssxref("align-items")}} のふるまいを上書きできます。 例えば、CSS に次のコードを追加してみてください。
+個々のフレックスアイテムの {{cssxref("align-items")}} のふるまいは、 {{cssxref("align-self")}} プロパティを適用することで上書きできます。 例えば、 CSS に次のコードを追加してみてください。
 
 ```css
 button:first-child {
@@ -342,11 +353,11 @@ button {
 
 ## スキルテスト
 
-この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox_skills)を見てください。
+この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills)を見てください。
 
 ## まとめ
 
-以上でフレックスボックスの基本についての解説を終わります。これから学習を進めていく中で、フレックスボックスで楽しく遊んでいただけることを期待しています。次は、CSS レイアウトのもう 1 つの重要な側面を見ていきましょう。[CSS グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)です。
+以上でフレックスボックスの基本についての解説を終わります。これから学習を進めていく中で、フレックスボックスで楽しく遊んでいただけることを期待しています。次は、CSS レイアウトのもう 1 つの重要な側面を見ていきましょう。[CSS グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)です。
 
 ## 関連情報
 
@@ -358,4 +369,4 @@ button {
 - [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — フレックスボックスのすべてを視覚的にわかりやすく説明した記事です。
 - [Flexbox Froggy](https://flexboxfroggy.com/) — フレックスボックスの基本を学び、理解を深めるための教育ゲームです。
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

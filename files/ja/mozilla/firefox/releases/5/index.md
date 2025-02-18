@@ -51,7 +51,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 ### JavaScript
 
 - 正規表現を関数のように呼び出せなくなりました。この変更は WebKit チームと互換性の確保について話し合った結果行われたものです。([WebKit bug 28285](https://webkit.org/b/28285) をお読みください。この機能は長いこと存在していたものの、少なくとも MDC ではドキュメント化されていませんでした。)
-- [`Function.prototype.isGenerator()`](/ja/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) メソッドがサポートされました。個のメソッドによってある関数が [generator](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#generators.3a_a_better_way_to_build_iterators) であるかを調べられます。
+- [`Function.prototype.isGenerator()`](/ja/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) メソッドがサポートされました。個のメソッドによってある関数が [generator](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators#ジェネレーター関数.3a_a_better_way_to_build_iterators) であるかを調べられます。
 - chrome コード内に生成された DOM 文書が sandbox 内のスクリプトに現れなくなりました。
 - [予約語](/ja/docs/Web/JavaScript/Reference/Lexical_grammar) `class`, `enum`, `export`, `extends`, `import`, `super` はこれまで Strict Mode のみで予約されていましたが、Strict Mode ではない通常のモードでも予約語扱いになりました。
 - JSON パーサーが書き直され、スピードと準拠度が向上しました。この書き直しには [Firefox バグ 572279](https://bugzil.la/572279) の修正も含まれています。

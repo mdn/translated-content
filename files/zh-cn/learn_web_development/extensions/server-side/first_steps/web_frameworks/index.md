@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/First_steps/Web_frameworks
 
 前面的文章向你展示了 web 客户端和服务器之间的通信是什么样子的，HTTP 的请求和回应之间的性质，以及服务器端应用为了回应来自 web 浏览器的请求的需要做的事情。有了这些知识后，现在是时候来探索一个 web 框架是如何简化这些任务的，并且告诉你应该如何为你的第一个服务器端应用选择一个框架。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">预先要求：</th>

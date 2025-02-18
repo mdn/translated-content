@@ -1,12 +1,15 @@
 ---
-title: Git と GitHub
+title: バージョン管理
 slug: Learn_web_development/Core/Version_control
-original_slug: Learn/Tools_and_testing/GitHub
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-すべての開発者が、何らかの**バージョン管理システム** (**VCS**) を使用しています。これは、他の開発者との共同作業において、お互いの作業を上書きする危険がなく、また、後で問題が発見された場合には以前のバージョンのコードベースにロールバックすることができるツールです。 (少なくともウェブ開発者の間では) 最も人気のある VCS は **Git** であり、 **GitHub** はリポジトリーのホスティングとそれを操作するためのいくつかのツールを提供するサイトです。このモジュールは、この 2 つについて知っておくべきことを紹介することを目的としています。
+{{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}
+
+バージョン管理ツールは、コードベースのバックアップや共同作業を行うために、現行のワークフローに不可欠な要素です。このモジュールでは、Git と GitHub を使用してバージョン管理の要点を案内します。
 
 ## 概要
 
@@ -21,14 +24,6 @@ VCS は、上記のニーズを満たすツールを提供します。 [Git](htt
 
 > [!NOTE]
 > Git は実際には*分散*バージョン管理システムです。つまり、コードベースを含むリポジトリーの完全なコピーが、自分のコンピューター (そして他の全員のコンピューター) に作られます。自分のコピーに変更を加え、その変更をサーバーにプッシュします。サーバーでは、管理者があなたの変更をマスターコピーにマージするかどうかを決定します。
-
-> [!CALLOUT]
->
-> #### フロントエンドのウェブ開発者を目指している方へ
->
-> ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
->
-> [**始めましょう**](/ja/curriculum/)
 
 ## 前提条件
 
@@ -45,19 +40,34 @@ Git と GitHub を使用するには、以下のものが必要です。
 > [!NOTE]
 > GitHub が Git で使えるサイトやツールセットとして唯一のものではありません。 GitLab のような他のツールもありますし、自分で Git サーバーを立ち上げて GitHub の代わりに使うこともできます。このコースでは、 GitHub を使った方法だけを紹介しています。
 
+## 学習成果
+
+- バージョン管理システムが必要な理由。
+- Git と GitHub や GitLab のようなウェブサイトとの違い。
+- GitHub や GitLab などのウェブサイトは、 Git だけでは簡単ではないチームワークやコラボレーションを可能にすること。
+- 基本的なセットアップ — git のインストール、選んだソーシャルコーディングサイトの登録。
+- SSH/GPG 鍵などのセキュリティ要件を処理すること。
+- リポジトリーを作成し、変更をプッシュすること。
+- 他人のリポジトリーに貢献すること。フォーク、新しいブランチの作成、PRの作成、レビューフロー。
+- 良き保守作業:
+  - リモートのリポジトリーと同期するように、ローカルのリポジトリーを定期的に更新すること。
+  - `.gitignore` を使用して、コミットしたくないものをすべて無視すること。
+  - 完了したブランチを削除すること。
+- マージの競合の処理。
+
 ## ガイド
 
-以下のリンクは、外部サイト (訳注: 多くは英語) のリソースに移動しますのでご注意ください。最終的には、 Git/GitHub に特化した独自のコースを設けることを目指していますが、現時点では、これらのサイトがこの主題を把握するのに役立つでしょう。
+以下のリンクは、外部サイトのリソースに移動しますのでご注意ください。最終的には、 Git/GitHub に特化した独自のコースを設けることを目指していますが、現時点では、これらのサイトがこの主題を把握するのに役立つでしょう。
 
-- [Hello, World (from GitHub)](https://guides.github.com/activities/hello-world/) (英語)
+- [Hello, World (GitHub より)](https://docs.github.com/ja/get-started/start-your-journey/hello-world)
   - : 始めるのによいところです。 — リポジトリーやブランチの作成、コミットの作成、プルリクエストの作成とマージなど、 Git の基本を学びながら、 GitHub をすぐに使い始めることができる実用的なガイドとなっています。
-- [Git Handbook (from GitHub)](https://guides.github.com/introduction/git-handbook/) (英語)
+- [Git について（GitHub より）](https://docs.github.com/ja/get-started/using-git/about-git)
   - : この Git ハンドブックでは、 VCS とは何か、リポジトリーとは何か、 GitHub の基本モデルはどうなっているのか、 Git コマンドとその例など、もう少し深く掘り下げて説明しています。
-- [Forking Projects (from GitHub)](https://guides.github.com/activities/forking/) (英語)
+- [プロジェクトのフォーク（GitHub より）](https://docs.github.com/ja/get-started/exploring-projects-on-github/contributing-to-a-project)
   - : 誰かのコードに協力したいときには、プロジェクトをフォークすることが不可欠です。このガイドでは、その方法を説明します。
-- [プルリクエストについて (GitHub より)](https://docs.github.com/ja/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+- [pull requests について（GitHub より）](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   - : 提案されたコードの変更を、他の人のリポジトリーに配信して検討してもらう方法であるプルリクエストを管理す津ための有益なガイドです。
-- [Mastering issues (from GitHub)](https://guides.github.com/features/issues/) (英語)
+- [Issue について（GitHub より）](https://docs.github.com/ja/issues/tracking-your-work-with-issues/about-issues)
   - : 課題 (issue) とは、 GitHub プロジェクトのフォーラムのようなものです。質問をしたり問題を報告したりすることができ、そこで更新を管理することができます (たとえば、問題を修正する人を割り当てたり、問題を明確にしたり、問題が修正されたことを人々に知らせたりすることができます)。この記事では、課題について知っておくべきことを説明します。
 
 > [!NOTE]
@@ -65,10 +75,12 @@ Git と GitHub を使用するには、以下のものが必要です。
 
 ## 関連情報
 
-- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
+- [GitHub フロー](https://docs.github.com/ja/get-started/using-github/github-flow)
 - [Git command list](https://git-scm.com/docs)
-- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (the text format you write in on PR, issue comments, and `.md` files).
-- [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (デモやウェブサイトを GitHub で公開する方法).
+- [Markdown のマスター](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) （PR、課題へのコメント、 `.md` ファイルに書くテキスト形式）。
+- [GitHub Pagesのクイックスタート](https://docs.github.com/ja/pages/quickstart) (デモやウェブサイトを GitHub で公開する方法).
 - [Learn Git branching](https://learngitbranching.js.org/)
 - [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (Git であることを実現するための方法や、間違えた場合の修正方法など、とても有用な概説が書かれています。).
-- [Dangit, git!](https://dangitgit.com/) (もう一つの有用な概説で、特に、間違ったときに物事を修正する方法です。).
+- [Dangit, git!](https://dangitgit.com/) (もう一つの有用な概説で、特に、間違ったときに物事を修正する方法です。)
+
+{{PreviousMenu("Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core")}}

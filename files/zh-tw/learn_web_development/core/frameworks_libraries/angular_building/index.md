@@ -4,11 +4,13 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}
+
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 這篇文章內容涵蓋，如何建立一個生產版本（production）的應用程式，以及提供後續的學習資源。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">預備知識：</th>
@@ -69,4 +71,4 @@ ng build -c production
 
 以上。希望你喜歡 Angular！
 
-{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}

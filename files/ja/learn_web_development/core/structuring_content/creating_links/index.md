@@ -1,34 +1,43 @@
 ---
-title: ハイパーリンクの作成
+title: リンクの作成
 slug: Learn_web_development/Core/Structuring_content/Creating_links
-original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 l10n:
-  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 ハイパーリンクは本当に重要なものです。ウェブをウェブたらしめているものです。
-この記事ではリンクを作るために必要な構文を示し、リンクに関する良き習慣について議論します。
+この記事ではリンクを作るために必要な構文を示し、リンクに関する良き習慣について扱います。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提知識:</th>
+      <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >HTML を始めよう</a
-        >にあるような、基本的な HTML を理解していること。
-        <a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >HTML テキストの基礎</a
-        >にあるような、 HTML のテキストの整形ができること。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >に載っている、基本的な HTML に精通していること。 <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >見出しと段落</a
+        >および<a href="/ja/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >リスト</a
+        >などのテキストレベルの意味付け。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        ハイパーリンクを効率的に実装する方法、複数のファイルを互いにリンクする方法を学ぶ。
+        <ul>
+          <li>リンクがウェブの基本的な機能である理由を理解しましょう。リンクのないウェブはありません。</li>
+          <li><code>href</code> 属性。</li>
+          <li>絶対パスと相対パス、およびそれらを使用するタイミング。</li>
+          <li>パス構文の詳細。スラッシュ、単一のドット、二重のドット。</li>
+          <li>リンクの状態とその重要性。<code>:hover</code>、<code>:focus</code>、<code>:visited</code>、<code>:active</code>。</li>
+          <li>インラインおよびブロックレベルのリンク。</li>
+          <li>スクリーンリーダーユーザーにとってのアクセシビリティの向上や、 SEO に好ましい効果を及ぼす可能性など、好ましいリンクテキストを書くことの利点を理解すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -60,12 +69,13 @@ l10n:
 </p>
 ```
 
-これは以下のような結果になります。\
+これは以下のような結果になります。
+
 [Mozilla ホームページ](https://www.mozilla.org/ja/)へのリンクを作成しています。
 
 ### ブロックレベルリンク
 
-前述したように、[ブロックレベル要素](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements) を含む、ほぼすべてのコンテンツをリンクにすることが可能です。
+前述したように、{{Glossary("Block/CSS", "ブロックレベル要素")}}を含む、ほぼすべてのコンテンツをリンクにすることが可能です。
 見出しをリンクにしたい場合は、以下のコードのようにアンカー（`<a>`）要素で囲みます。
 
 ```html
@@ -146,6 +156,8 @@ URL はファイルを見つけるためにパスを使います。パスはフ�
 
 私たちのルートの中にも 2 つのディレクトリー、 `pdfs` と `projects` があります。これらはそれぞれ中に PDF (`project-brief.pdf`) と `index.html` ファイルというファイルがあります。ファイルシステム内の別の場所にある限り、1 つのプロジェクトに 2 つの `index.html` ファイルを非常にうまく入れることができることに注意してください。多くのウェブサイトはそうします。2 番目の `index.html` は、おそらくプロジェクト関連の情報のメインランディングページになります。
 
+このディレクトリー構造にある異なるファイル間のリンクの例を見ていきましょう。
+
 - **同じディレクトリーの場合**: `index.html` （最上位の `index.html`）内に `contacts.html` を指すハイパーリンクを含める場合は、現在のファイルと同じディレクトリーにあるため、リンクしたいファイルの名前を指定するだけです。そのため使用する URL は `contacts.html` です。
 
   ```html
@@ -203,19 +215,19 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 ウェブ上では、**絶対 URL** と**相対 URL** という 2 つの用語があります。
 
 **絶対 URL**: {{glossary("protocol", "プロトコル")}}と{{glossary("domain name", "ドメイン名")}}を含む、ウェブ上の絶対位置で定義された位置を指します。
-たとえば、`index.html` ページがウェブサーバーのルート内にある `projects` というディレクトリーにアップロードされており、そのウェブサイトのドメインが `http://www.example.com` である場合、そのページは `http://www.example.com/projects/index.html` （あるいは `http://www.example.com/projects/` だけでも、URL で指定されていない場合、ウェブサーバーは `index.html` のようなランディングページを探して読み込みます）で取得することができます。
+たとえば、`index.html` ページがウェブサーバーのルート内にある `projects` というディレクトリーにアップロードされており、そのウェブサイトのドメインが `https://www.example.com` である場合、そのページは `https://www.example.com/projects/index.html` （あるいは `https://www.example.com/projects/` だけでも、URL で指定されていない場合、ウェブサーバーは `index.html` のようなランディングページを探して読み込みます）で取得することができます。
 
 絶対 URL は、使用されている場所に関係なく、常に同じ場所を指します。
 
-**相対 URL**: リンク元のファイルからの*相対的な*場所を指しています。たとえば、`http://www.example.com/projects/index.html` にあるサンプルファイルから同じディレクトリー内の PDF ファイルにリンクする場合、URL は単にファイル名 — 例えば `project-brief.pdf` — となり、追加情報は不要です。PDF が `projects` 内の `pdfs` という名前のサブディレクトリーにある場合、相対リンクは `pdfs/project-brief.pdf` （同等の絶対 URL は `http://www.example.com/projects/pdfs/project-brief.pdf`）になります。
+**相対 URL**: リンク元のファイルからの*相対的な*場所を指しています。たとえば、`https://www.example.com/projects/index.html` にあるサンプルファイルから同じディレクトリー内の PDF ファイルにリンクする場合、URL は単にファイル名 — 例えば `project-brief.pdf` — となり、追加情報は不要です。PDF が `projects` 内の `pdfs` という名前のサブディレクトリーにある場合、相対リンクは `pdfs/project-brief.pdf` （同等の絶対 URL は `https://www.example.com/projects/pdfs/project-brief.pdf`）になります。
 
-相対 URL は内部で使用されているファイルの実際の場所によって、異なる場所を指します。たとえば、`index.html` ファイルを `projects` ディレクトリーからウェブサイトのルート（最上位レベル、どのディレクトリーの中でもありません）に移動した場合、`pdfs/project-brief.pdf` 相対 URL リンクの内部は、`http://www.example.com/pdfs/project-brief.pdf` にあるファイルを指し、`http://www.example.com/projects/pdfs/project-brief.pdf` にあるファイルではありません。
+相対 URL は内部で使用されているファイルの実際の場所によって、異なる場所を指します。たとえば、`index.html` ファイルを `projects` ディレクトリーからウェブサイトのルート（最上位レベル、どのディレクトリーの中でもありません）に移動した場合、`pdfs/project-brief.pdf` 相対 URL リンクの内部は、`https://www.example.com/pdfs/project-brief.pdf` にあるファイルを指し、`https://www.example.com/projects/pdfs/project-brief.pdf` にあるファイルではありません。
 
 もちろん、`index.html` ファイルを移動しても `project-brief.pdf` ファイルと `pdfs` フォルダーの場所が突然変わることはありません。これはリンクが間違った場所を指しているため、クリックしても機能しません。注意する必要があります。
 
-## リンクの良い慣習
+## リンクの最善の手法
 
-リンクを書くときに従うべき良い慣習がいくつかあります。今これらを見てみましょう。
+リンクを書くときに従うべき最善の手法がいくつかあります。今これらを見てみましょう。
 
 ### 明確なリンク語を使う
 
@@ -237,7 +249,7 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 ```html example-bad
 <p>
-  <a href="https://www.mozilla.org/firefox/"> こちらをクリック </a>して Firefox
+  <a href="https://www.mozilla.org/firefox/">こちらをクリック</a>して Firefox
   をダウンロード
 </p>
 ```
@@ -316,7 +328,8 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 ## メールのリンク
 
-クリックすると、リソースまたはページにリンクするのではなく、新しい送信メールメッセージを開くリンクまたはボタンを作成することができます。これは {{HTMLElement("a")}} 要素と `mailto:` URL スキームを使って行われます。
+クリックすると、リソースまたはページにリンクするのではなく、新しい送信メールメッセージを開くリンクまたはボタンを作成することができます。
+これは {{HTMLElement("a")}} 要素と `mailto:` URL スキームを使って行われます。
 
 最も基本的で一般的に使用されている形式では、`mailto:` リンクは単に意図した受信者のメールアドレスを示します。例えば次のようになります。
 
@@ -324,7 +337,7 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 <a href="mailto:nowhere@mozilla.org">メールをどこにも送信しません</a>
 ```
 
-この結果、次のようなリンクが表示されます。 [メールをどこにも送信しません](mailto:nowhere@mozilla.org)
+この結果、 [メールをどこにも送信しません](mailto:nowhere@mozilla.org) というリンクが表示されます。
 
 実際、メールアドレスはオプションです。省略して [`href`](/ja/docs/Web/HTML/Element/a#href) が "mailto:" であった場合、ユーザーのメールクライアントによって新しい送信メールのウィンドウが、宛先なしで開かれます。
 これは、ユーザーがクリックして自分が選択したアドレスにメールを送信できる「共有」リンクとして役立つことがよくあります。
@@ -343,9 +356,9 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 ```
 
 > [!NOTE]
-> 各フィールドの値は URL エンコードされている必要があります。つまり、非印刷文字（タブ、改行、改ページなどの不可視文字）とスペースの[パーセントエスケープ](http://en.wikipedia.org/wiki/Percent-encoding)が含まれています。
+> 各フィールドの値は URL エンコードされている必要があります。つまり、非印刷文字（タブ、改行、改ページなどの不可視文字）と空白の{{Glossary("Percent-encoding", "パーセントエスケープ")}}が含まれています。
 > また、疑問符 (`?`) を使用してメイン URL とフィールド値を区別し、アンパサンド (&) を使用して `mailto:` URL 内の各フィールドを区別します。
-> これは標準の URL クエリー表記です。 [GET メソッド](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#get_メソッド)を読んで、どの URL クエリー表記がより一般的に使用されているかを理解してください。
+> これは標準の URL クエリー表記です。 [GET メソッド](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#get_メソッド)を読んで、どの URL クエリー表記がより一般的に使用されているかを理解してください。
 
 以下は `mailto` の他の URL の例です。
 
@@ -355,12 +368,12 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org>
 - <mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject>
 
-## スキルをテストしましょう
+## スキルテスト
 
-この記事の最後にたどり着きましたが、最も重要な情報を覚えていますか？次に移動する前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります - [スキルのテスト: リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links) をご覧ください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルのテスト: リンク](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)を見てください。
 
 ## まとめ
 
-リンクについては、今のところこれで終わりです。このコースの後半で、スタイル設定を始める際にリンクに戻ります。 HTML についての次は、テキストの意味づけに戻り、有用と思われるより高度で珍しい機能を見ていきます - [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)が次のステップです。
+リンクについては、今のところは以上です！このコースのリンクについては、スタイル設定について学習する際に、後ほどまた取り上げます。次に HTML で、これまで学習したトピックの理解度を確かめるためのいくつかの課題に取り組みます。
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}

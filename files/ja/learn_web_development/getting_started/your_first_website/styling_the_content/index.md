@@ -1,18 +1,40 @@
 ---
-title: CSS の基本
+title: "CSS: コンテンツのスタイル設定"
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-original_slug: Learn/Getting_started_with_the_web/CSS_basics
 l10n:
-  sourceCommit: 15ed3e49a0e5ac3cd6833fc6b0fd0ddbd158718f
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS (Cascading Style Sheets) は、ウェブページのスタイルを設定するコードです。「_CSS の基本_」では、始めるのに必要なものを紹介します。ここでは、テキストを赤くするにはどうすればいいのか？コンテンツを（ウェブページの）レイアウトの中で特定の場所に表示するにはどうすればいいのか？背景画像と色を使って ウェブページをどのように飾るのか？というような疑問に答えていきます。
 
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        コンピューターのオペレーティングシステム、ウェブサイトを構築する際に使用する基本ソフトウェア、およびファイルシステムに概ね慣れておくこと。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>CSS の目的と機能。</li>
+          <li>CSS構文の基本的な部分 — ルールセット、セレクター、宣言、プロパティ、プロパティの数値。</li>
+          <li>ボックスモデル、色やフォントの変更、HTML 要素の位置指定など、一般的な CSS 機能が含まれます。</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS とは何か
 
-HTML のように、CSS は本当のプログラミング言語ではありません。またマークアップ言語でもありません。**CSS はスタイルシート言語です**。CSS は、HTML の要素を選択的にスタイルにするために使うものです。例えば、この CSS は段落のテキストを選択し、色を赤に設定しています。
+HTML と同様、CSS は本当のプログラミング言語ではありません。またマークアップ言語でもありません。**CSS はスタイルシート言語です**。CSS は、HTML の要素を選択的にスタイルにするために使うものです。例えば、この CSS は段落のテキストを選択し、色を赤に設定しています。
 
 ```css
 p {
@@ -20,9 +42,13 @@ p {
 }
 ```
 
-それでは試してみましょう。テキストエディターを使用して、（上記の） 3 行の CSS 新しいファイルに貼り付けてください。そのファイルを `style.css` として `styles` という名前のディレクトリーに保存してください。
+それでは試してみましょう。
 
-コードを働かせるには、この（上記の） CSS を HTML 文書に適用する必要があります。そうしないと、このスタイルはブラウザーの HTML 文書の表示に影響しません。（今までのプロジェクトをやっていない場合は、ここでいったん止めて[ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)と [HTML の基本](/ja/docs/Learn/Getting_started_with_the_web/HTML_basics)を読み、まず何をする必要があるのかを見てください。）
+1. `first-website` フォルダー内にもう一つ、 `styles` というフォルダーを作成してください。
+2. テキストエディターを使用して、上記の 3 行の CSS 新しいファイルに貼り付けてください。
+3. そのファイルを `styles` フォルダーの中に `style.css` ファイル名で保存してください。
+
+コードを動作させるには、この（上記の） CSS を HTML 文書に適用する必要があります。そうしないと、このスタイルはブラウザーの HTML 文書の表示に影響しません。
 
 1. `index.html` ファイルを開き、先頭（{{HTMLElement("head")}} タグと `</head>` タグの間）に以下の行を貼り付けてください。
 
@@ -32,7 +58,9 @@ p {
 
 2. `index.html` を保存し、ブラウザーで読み込んでください。次のように表示されるはずです。
 
-![Mozilla のロゴといくつかの段落です。段落のテキストは、 CSS によって赤くスタイル付けされています。](website-screenshot-styled.png)段落のテキストが赤くなっていれば、おめでとう！ CSS が動作しています。
+![Mozilla のロゴといくつかの段落です。段落のテキストは、 CSS によって赤くスタイル付けされています。](website-screenshot-styled.png)
+
+段落のテキストが赤くなっていれば、おめでとう！ CSS が動作しています。
 
 ### CSS ルールセットの構造
 
@@ -139,13 +167,13 @@ h1 {
   </tbody>
 </table>
 
-他にも様々なセレクターがあります。詳しくは、 MDN の[セレクターガイド](/ja/docs/Learn/CSS/Building_blocks/Selectors)をご覧ください。
+他にも様々なセレクターがあります。詳しくは、 MDN の[セレクターガイド](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)をご覧ください。
 
 ## フォントとテキスト
 
 CSS の基本をいくつか勉強しましたので、`style.css` ファイルにいくつかのルールと情報を追加して、この例を見栄え良くしましょう。
 
-1. まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#フォント)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか（{{HTMLElement("head")}} タグと `</head>` タグの間）に追加します。それは次のようなものです。
+1. まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか（{{HTMLElement("head")}} タグと `</head>` タグの間）に追加します。それは次のようなものです。
 
    ```html
    <link
@@ -156,12 +184,13 @@ CSS の基本をいくつか勉強しましたので、`style.css` ファイル�
    このコードは、ウェブページに Open Sans フォントファミリーを読み込むスタイルシートにページをリンクします。
 
 2. 次に `style.css` ファイルにある既存のルールを削除します。試験としては良いものでしたが、赤いテキストだらけにするのはもうやめましょう。
-3. 以下の行（下記参照）を追加し、 `font-family` の割り当てを[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で選択した `font-family` に置き換えます。 `font-family` というプロパティは、テキストに使用するフォントを指します。このルールでは、ページ全体の基本フォントとフォントの大きさを定義します。 {{HTMLElement("html")}} はページ全体の親要素なので、その中のすべての要素は同じ `font-size` と `font-family` を継承します。
+3. 以下の行（下記参照）を追加し、 `font-family` の割り当てを[ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)で選択した `font-family` に置き換えます。 `font-family` というプロパティは、テキストに使用するフォントを指します。このルールでは、ページ全体の基本フォントとフォントの大きさを定義します。 {{HTMLElement("html")}} はページ全体の親要素なので、その中のすべての要素は同じ `font-size` と `font-family` を継承します。
 
    ```css
    html {
      font-size: 10px; /* px は「ピクセル」 (pixels) の意味。ベースフォントサイズは 10 ピクセルの高さになった */
-     font-family: "Open Sans", sans-serif; /* これが Google フォントから取得した残りの出力になるはず。 */
+     font-family:
+       "Open Sans", sans-serif; /* これが Google フォントから取得した残りの出力になるはず。 */
    }
    ```
 
@@ -222,7 +251,7 @@ html {
 }
 ```
 
-このルールはページ全体の背景色に設定を行います。上記のカラーコードを、[ウェブサイトをどんな外見にするかで選んだ色](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#テーマカラー)に変更しましょう。
+このルールはページ全体の背景色に設定を行います。上記のカラーコードを、[ウェブサイトをどんな外見にするかで選んだ色](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like#%e3%83%86%e3%83%bc%e3%83%9e%e3%82%ab%e3%83%a9%e3%83%bc)に変更しましょう。
 
 ### 本文のスタイル付け
 
@@ -276,26 +305,26 @@ body の上部にひどい隙間があることに気づいたかもしれませ
 img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 ```
 
 次に、画像を中央に配置して見栄えを良くします。本文のときと同じように、 `margin: 0 auto` のトリックを使うこともできます。しかし、 CSS を機能させるために追加の設定が必要になる違いがあります。
 
-{{htmlelement("body")}} は**ブロック**要素であるため、ページの中でスペースを占めます。ブロック要素は、マージンやその他の余白を開ける値を適用することができます。一方、画像は**インライン**要素です。インライン要素にマージンやその他の余白を開ける値を適用することはできません。画像にマージンを適用するには、`display: block;` を使用して画像にブロックレベルの動作を指定する必要があります。
+{{htmlelement("body")}} は**ブロック**要素であるため、ページの中で空間を占めます。ブロック要素は、マージンやその他の余白を開ける値を適用することができます。一方、画像は**インライン**要素です。インライン要素にマージンやその他の余白を開ける値を適用することはできません。画像にマージンを適用するには、`display: block;` を使用して画像にブロックレベルの動作を指定する必要があります。
 
-> [!NOTE]
-> 上記の手順は、本体に設定されている幅 (600 ピクセル) よりも小さい画像を使用していることを前提としています。画像が大きい場合、それは本文をあふれ、ページの残りの部分にはみ出します。これを修正するには、1) [画像編集ソフト](https://ja.wikipedia.org/wiki/%E3%83%9A%E3%82%A4%E3%83%B3%E3%83%88%E3%82%BD%E3%83%95%E3%83%88)を使用して画像の幅を縮小するか、2) CSS を使用して、 {{cssxref("width")}} プロパティでより小さな値を `<img>` 要素に設定し、画像の大きさを変更します。
+最後に、画像が本体に設定した幅（600 ピクセル）よりも大きい場合は、この幅で表示され、それ以上大きくならないようにするために、 `max-width: 100%;` が含まれます。
 
-> **メモ:** `display: block;` や、ブロックレベル/インラインの区別がまだ理解できなくても心配しないでください。 CSS の勉強を続けていくうちに意味が分かってくるはずです。さまざまな display の値の違いについて詳しくは、 MDN の [display のリファレンスページ](/ja/docs/Web/CSS/display)を参照してください。
+> **メモ:** `display: block;` や、ブロックレベルとインラインの区別、 `max-width: 100%;` がまだ理解できなくても心配しないでください。 CSS の勉強を続けていくうちに意味が分かってくるはずです。これらのプロパティについての詳細情報は、 {{cssxref("display")}} および {{cssxref("max-width")}} のリファレンスページを参照してください。
 
 ## まとめ
 
-この記事のすべての手順に従っている場合は、次のようなページが表示されます。
+この記事のすべての指示に従った場合は、次のようなページが表示されます。
 
 ![Mozilla のロゴを中央に配置し、ヘッダーと段落を配置しています。これで、ページ全体の背景が青くなり、中央に配置されたメインコンテンツストリップの背景がオレンジになるなど、きれいなスタイルになりました。](website-screenshot-final.png)
 
-([作成した結果はこちらから見ることができます](https://mdn.github.io/beginner-html-site-styled/)。) もしわからなくなった場合、[Github の完成したサンプルコード](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)と作業内容を常に比較することができます。
+([作成した結果はこちらから見ることができます](https://mdn.github.io/beginner-html-site-styled/)。) もしわからなくなった場合、[GitHub 上の完成したサンプルコード](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)と作業内容を常に比較することができます。
 
-ここでは、CSS の表面に少し触れただけです。詳細については、[CSS の学習トピック](/ja/docs/Learn/CSS)をご覧ください。
+ここでは、CSS の表面に少し触れただけです。[コアモジュール](/ja/docs/Learn_web_development/Core)詳細については、[CSS のスタイル設定の基本モジュール](/ja/docs/Learn_web_development/Core/Styling_basics)をご覧ください。
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

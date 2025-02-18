@@ -1,42 +1,25 @@
 ---
-title: 基礎的なレイアウトの理解
+title: "課題: 基礎的なレイアウトの理解"
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
-original_slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
-{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-このモジュールを乗り越えてきたならば、今日 CSS レイアウトを行うために知っておくべきことや、より古い CSS を使って作業するために必要なことの基本についてはすでに説明しているはずです。 このタスクでは、さまざまなテクニックを使用して簡単なウェブページレイアウトを作成することによって、あなたの知識の一部をテストします。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        フレックスボックス、グリッド、浮動ボックス、位置指定を使用した CSS レイアウトメソッドの理解度をテストします。
-      </td>
-    </tr>
-  </tbody>
-</table>
+このモジュールを乗り越えてきたならば、今日 CSS レイアウトを行うために知っておくべきことや、より古い CSS を使って作業するために必要なことの基本についてはすでに説明しているはずです。 このタスクでは、さまざまなテクニックを使用して簡単なウェブページレイアウトを作成することによって、知識の一部をテストします。
 
-## 開始点
+## 出発点
 
 HTML と CSS、そして 6 枚の画像一式は[こちら](https://github.com/mdn/learning-area/tree/main/css/css-layout/fundamental-layout-comprehension)からダウンロードすることができます。
 
 HTML 文書とスタイルシートはコンピューターのディレクトリーに保存し、画像は `images` という名前のフォルダー内に追加してください。ブラウザーに `index.html` ファイルを開くと、下記の画像のような、基本的なスタイル設定はあるがレイアウトがないページができるはずです。
 
-![レイアウト課題の開始点。要素はきれいにレイアウトされていません。左側に5つのリンクがある黒いナビバーの上にウェブサイトのタイトルがあり、以下ブログ記事のタイトルと記事コンテンツが続きます。ブログタイトルとブログコンテンツの間には、左側に配置された写真があります。](layout-task-start.png)
+![レイアウト課題の出発点。要素はきれいにレイアウトされていません。左側に5つのリンクがある黒いナビバーの上にウェブサイトのタイトルがあり、以下ブログ記事のタイトルと記事コンテンツが続きます。ブログタイトルとブログコンテンツの間には、左側に配置された写真があります。](layout-task-start.png)
 
-この開始点には、通常フローでブラウザーに表示されるレイアウトのコンテンツがすべて含まれています。
+この出発点には、通常フローでブラウザーに表示されるレイアウトのコンテンツがすべて含まれています。
 
 また、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) のようなオンラインエディターを使用することもできます。
 オンラインエディターを使用する場合、画像をアップロードし、 `src` 属性の値を新しい画像の場所を指すように置き換える必要があります。
@@ -63,7 +46,7 @@ HTML 文書とスタイルシートはコンピューターのディレクトリ
 このレイアウトを実現するために HTML を編集する必要はなく、使用するべきテクニックは次のとおりです。
 
 - 位置指定
-- 浮動ブロック
+- 浮動ボックス
 - フレックスボックス
 - CSS グリッドレイアウト
 
@@ -75,4 +58,4 @@ HTML 文書とスタイルシートはコンピューターのディレクトリ
 
 ![ウェブサイトのレイアウト課題完了。要素がきれいにレイアウトされています。 5 つのリンクが等間隔に格納された黒いナビバーの上に、ウェブサイトのタイトルがあります。ナビバーの下記には 2 つの節があります。左側にはブログ記事があります。ブログ記事のタイトルの下に、記事のコンテンツが続きます。ブログのコンテンツは、左配置されたの写真を囲むように配置されています。正しい辺には「写真」のタイトルがあり、 2 枚幅のグリッドに並べられた画像群について書かれています。](layout-task-complete.png)
 
-{{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}

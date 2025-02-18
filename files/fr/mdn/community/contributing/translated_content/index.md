@@ -43,8 +43,8 @@ Nous avons actuellement dégelé les langues suivantes :
 
 ### Espagnol (es)
 
-- Discussions : [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- Contributeurs actuels : [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson)
+- Discussions : [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
+- Contributeurs actuels : [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz)
 
 ## Autres sujets de localisation sur MDN
 

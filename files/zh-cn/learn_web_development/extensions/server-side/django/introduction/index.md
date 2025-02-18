@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Introduction
 
 在这第一 Django 文章中，我们将回答“什么是 Django”这个问题，并概述这个网络框架有什么特性。我们将描述主要功能，包括一些高级功能，但我们并不会在本单元中详细介绍。我们还会展示一些 Django 应用程序的主要构建模块（尽管此时你还没有要测试的开发环境）。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

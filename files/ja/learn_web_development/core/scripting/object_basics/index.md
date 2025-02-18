@@ -1,12 +1,13 @@
 ---
 title: JavaScript オブジェクトの基本
 slug: Learn_web_development/Core/Scripting/Object_basics
-original_slug: Learn/JavaScript/Objects/Basics
 l10n:
-  sourceCommit: 9f2d1a4747bc0cd97799893b979f55d63500d036
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}
 
 この記事では、基本的な JavaScript オブジェクトの構文を学び、このコースで以前に見た一部の JavaScript の機能を復習し、すでに提供された多くの機能がオブジェクトであるという事実を再確認します。
 
@@ -14,14 +15,18 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>
-        基本的なコンピューターリテラシー、基本的な HTML と CSS に対する理解、基本的な JavaScript に親しんでいること（<a href="/ja/docs/Learn/JavaScript/First_steps">JavaScript の第一歩</a>と<a href="/ja/docs/Learn/JavaScript/Building_blocks">JavaScript の構成要素</a>を参照してください）。
-      </td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>および<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS の基礎</a>を理解し、これまでのレッスンで説明した JavaScript を把握していること。</td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        オブジェクト指向プログラミングについての基本的な理論、どのように JavaScript に関連するか、JavaScript の作業を始める方法を理解できること。
+        <ul>
+          <li>JavaScript ではほとんどのことがオブジェクトであること、 JavaScript に触れた時点で、おそらくオブジェクトを使用していたであることを理解すること。</li>
+          <li>基本構文: オブジェクトリテラル、プロパティおよびメソッド、オブジェクト内にオブジェクトや配列を入れ子にすること。</li>
+          <li>コンストラクターを使用して新しいオブジェクトを作成すること。</li>
+          <li>オブジェクトスコープ、および <code>this</code>。</li>
+          <li>プロパティおよびメソッドにアクセスすること。ブラケット構文とドット構文。</li>
+        <ul>
       </td>
     </tr>
   </tbody>
@@ -33,7 +38,7 @@ l10n:
 これらは通常、いくつかの変数や関数（オブジェクトの中にある場合はプロパティやメソッドと呼ばれる）で構成されています。
 見ていくうちに理解できるように、例を挙げてみましょう。
 
-最初に [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) ファイルを手元にコピーしてください。このファイルにはちょっとした内容 — ソースコードを書き込むための {{HTMLElement("script")}} 要素が一つ含まれています。このファイルをオブジェクトを書くための元として使います。作業中は[開発者ツールの JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#javascript_コンソール)を開いておいて、すぐにコマンドを入力できるようにしておくとよいでしょう。
+最初に [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) ファイルを手元にコピーしてください。このファイルにはちょっとした内容 — ソースコードを書き込むための {{HTMLElement("script")}} 要素が一つ含まれています。このファイルをオブジェクトを書くための元として使います。作業中は[開発者ツールの JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#javascript_コンソール)を開いておいて、すぐにコマンドを入力できるようにしておくとよいでしょう。
 
 他の JavaScript の書き方と同じように、オブジェクトの生成は変数の宣言と初期化から始まります。手始めに、ファイルにある JavaScript コードの下に次のものを書いてみてください。それから保存して再読み込みしましょう。
 
@@ -41,7 +46,7 @@ l10n:
 const person = {};
 ```
 
-ブラウザーの [JavaScript コンソール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#javascript_コンソール)を開いて、`person` と入力して、 <kbd>Enter</kbd>/<kbd>Return</kbd> を押してください。以下のいずれかの行に似た結果が得られるはずです。
+ブラウザーの [JavaScript コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#javascript_コンソール)を開いて、`person` と入力して、 <kbd>Enter</kbd>/<kbd>Return</kbd> を押してください。以下のいずれかの行に似た結果が得られるはずです。
 
 ```
 [object Object]
@@ -53,32 +58,32 @@ Object { }
 
 ```js
 const person = {
-  name: ["Bob", "Smith"],
+  name: ["ボブ", "スミス"],
   age: 32,
   bio: function () {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    console.log(`${this.name[0]}・${this.name[1]}は ${this.age} 歳です。`);
   },
   introduceSelf: function () {
-    console.log(`Hi! I'm ${this.name[0]}.`);
+    console.log(`こんにちは、${this.name[0]}です。`);
   },
 };
 ```
 
-保存して更新した後、ブラウザーの開発者ツールの JavaScript コンソールに以下いくつか入力してみてください：
+保存して更新した後、ブラウザーの開発者ツールの JavaScript コンソールに以下のいくつかを入力してみてください。
 
 ```js
 person.name;
 person.name[0];
 person.age;
 person.bio();
-// "Bob Smith is 32 years old."
+// "ボブ・スミスは 32 歳です。"
 person.introduceSelf();
-// "Hi! I'm Bob."
+// "こんにちは、ボブです。"
 ```
 
 オブジェクトから、データと機能を追加することができました。これで簡単な書き方で情報が引き出せます。
 
-さて、何が起きているのでしょうか。オブジェクトには複数のメンバーがあり、それぞれに名前がついていて(例えば上の例では `name` や `age`)、それぞれに値 (`['Bob', 'Smith']` や `32`) があります。それぞれの名前と値の組はカンマ ( , ) で区切られていて、名前と値はコロン ( : ) で区切られています。常にそのように書きます。
+さて、何が起きているのでしょうか。オブジェクトには複数のメンバーがあり、それぞれに名前がついていて(例えば上の例では `name` や `age`)、それぞれに値 (`['Bob', 'Smith']` や `32`) があります。それぞれの名前と値の組はカンマ ( , ) で区切られていて、名前と値はコロン (:) で区切られています。常にそのように書きます。
 
 ```js
 const objectName = {
@@ -94,13 +99,13 @@ const objectName = {
 
 ```js
 const person = {
-  name: ["Bob", "Smith"],
+  name: ["ボブ", "スミス"],
   age: 32,
   bio() {
-    console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+    console.log(`${this.name[0]}・${this.name[1]}は ${this.age} 歳です。`);
   },
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name[0]}.`);
+    console.log(`こんにちは、${this.name[0]}です。`);
   },
 };
 ```
@@ -113,7 +118,7 @@ const person = {
 
 ## ドット記法
 
-先ほどの例では、オブジェクトのプロパティとメソッドに対して、**ドット記法**を用いてアクセスしました 。オブジェクト名 (person) は**名前空間**として機能します。オブジェクト内に**カプセル化**されたものにアクセスするには、まずこのオブジェクト名を入力する必要があります。次に、ドット ( . ) を書いて、それからアクセスしたい項目を記述します。項目になりうるのは、単純なプロパティの名前や、配列の要素や、そのオブジェクトのメソッドの 1 つへの呼び出しなどです。次に例を示します:
+先ほどの例では、オブジェクトのプロパティとメソッドに対して、**ドット記法**を用いてアクセスしました 。オブジェクト名 (person) は**名前空間**として機能します。オブジェクト内に**カプセル化**されたものにアクセスするには、まずこのオブジェクト名を入力する必要があります。次に、ドット ( . ) を書いて、それからアクセスしたい項目を記述します。項目になりうるのは、単純なプロパティの名前や、配列の要素や、そのオブジェクトのメソッドの 1 つへの呼び出しなどです。例を示します。
 
 ```js
 person.age;
@@ -122,11 +127,11 @@ person.bio();
 
 ### オブジェクトプロパティとしてのオブジェクト
 
-オブジェクトの内部にさらにほかのオブジェクトを持つことも可能です。例えば、先の例で、`name` メンバーを、
+オブジェクトの内部にさらにほかのオブジェクトを持つことも可能です。例えば、先の例で、 `name` メンバーを、
 
 ```js
 const person = {
-  name: ["Bob", "Smith"],
+  name: ["ボブ", "スミス"],
 };
 ```
 
@@ -135,8 +140,8 @@ const person = {
 ```js
 const person = {
   name: {
-    first: "Bob",
-    last: "Smith",
+    first: "ボブ",
+    last: "スミス",
   },
   // …
 };
@@ -189,11 +194,11 @@ person["name"]["first"];
 しかし、角括弧を使用しなければならない用途もあります。
 例えば、オブジェクトのプロパティ名が変数で管理されている場合、ドット記法を使用して値にアクセスすることはできませんが、ブラケット記法を使用して値にアクセスすることは可能です。
 
-下記の例では、`logProperty()` 関数は `person[propertyName]` を使用して `propertyName` で指定されたプロパティの値を取得することができる。
+下記の例では、 `logProperty()` 関数は `person[propertyName]` を使用して `propertyName` で指定されたプロパティの値を取得することができる。
 
 ```js
 const person = {
-  name: ["Bob", "Smith"],
+  name: ["ボブ", "スミス"],
   age: 32,
 };
 
@@ -202,7 +207,7 @@ function logProperty(propertyName) {
 }
 
 logProperty("name");
-// ["Bob", "Smith"]
+// ["ボブ", "スミス"]
 logProperty("age");
 // 32
 ```
@@ -275,7 +280,7 @@ person.height;
 
 ```js
 introduceSelf() {
-  console.log(`Hi! I'm ${this.name[0]}.`);
+  console.log(`こんにちは、${this.name[0]}です。`);
 }
 ```
 
@@ -287,25 +292,27 @@ introduceSelf() {
 
 ```js
 const person1 = {
-  name: "Chris",
+  name: "クリス",
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`こんにちは、${this.name}です。`);
   },
 };
 
 const person2 = {
-  name: "Deepti",
+  name: "ディプティ",
   introduceSelf() {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`こんにちは、${this.name}です。`);
   },
 };
 ```
 
-この場合、`person1.introduceSelf()` は "Hi! I'm Chris." を出力します。一方、`person2.introduceSelf()` は "Hi! I'm Deepti." を出力します。しかし、どちらの場合も、そのメソッド部分のコードは全く同じです。これは、オブジェクトリテラルを手書きするときにはあまり有益ではありませんが、**コンストラクター**を使用して単一のオブジェクト定義から複数のオブジェクトを作成するようになったときには不可欠なものとなります（これが次の節の主題です）。
+この場合、`person1.introduceSelf()` は "こんにちは、クリスです。" を出力します。一方、`person2.introduceSelf()` は "こんにちは、ディプティです。" を出力します。これは、メソッドが呼び出される際に、 `this` がメソッドが呼び出されたオブジェクトを参照します。これにより、同じメソッド定義が複数のオブジェクトでうまく動作します。
+
+オブジェクトリテラルを手書きで書く場合には、オブジェクトの名前（`person1` と `person2`）を使用するとまったく同じ結果になるため、この情報はあまり役に立ちません。しかし、単一のオブジェクト定義から複数のオブジェクトを作成する**コンストラクター**の使用を始めるには不可欠であり、それが次の節のテーマとなります。
 
 ## コンストラクターの導入
 
-オブジェクトリテラルを使用するのは、1つのオブジェクトを作成するだけなら問題ありませんが、前回の節のように複数のオブジェクトを作成する必要がある場合は、非常に不十分です。オブジェクトを作成するたびに同じコードを書かなければならないし、オブジェクトのプロパティを変更したい場合（たとえば`height`プロパティを追加したい場合）には、すべてのオブジェクトを更新することを忘れてはなりません。
+オブジェクトリテラルを使用するのは、 1 つのオブジェクトを作成するだけなら問題ありませんが、前回の節のように複数のオブジェクトを作成する必要がある場合は、非常に不十分です。オブジェクトを作成するたびに同じコードを書かなければならないし、オブジェクトのプロパティを変更したい場合（たとえば `height` プロパティを追加したい場合）には、すべてのオブジェクトを更新することを忘れてはなりません。
 
 オブジェクトの「形」、つまりオブジェクトが持つことのできるメソッドやプロパティの集合を定義して、好きなだけオブジェクトを作成し、異なるプロパティの値だけを更新する方法が欲しいところです。
 
@@ -316,7 +323,7 @@ function createPerson(name) {
   const obj = {};
   obj.name = name;
   obj.introduceSelf = function () {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`こんにちは、${this.name}です。`);
   };
   return obj;
 }
@@ -332,15 +339,13 @@ function createPerson(name) {
 これで、定義を再利用して、好きなだけオブジェクトを作成することができます。
 
 ```js
-const salva = createPerson("Salva");
-salva.name;
+const salva = createPerson("サルバ");
 salva.introduceSelf();
-// "Hi! I'm Salva."
+// "こんにちは、サルバです。"
 
-const frankie = createPerson("Frankie");
-frankie.name;
+const frankie = createPerson("フランキー");
 frankie.introduceSelf();
-// "Hi! I'm Frankie."
+// "こんにちは、フランキーです。"
 ```
 
 これはうまくいくのですが、少し時間がかかります。空のオブジェクトを作成し、初期化して、それを返す必要があります。より良い方法は、**コンストラクター**を使用することです。コンストラクターとは、{{jsxref("operators/new", "new")}} キーワードを使って呼び出される関数に過ぎません。コンストラクターを呼び出すと、次のようなことが行われます。
@@ -356,7 +361,7 @@ frankie.introduceSelf();
 function Person(name) {
   this.name = name;
   this.introduceSelf = function () {
-    console.log(`Hi! I'm ${this.name}.`);
+    console.log(`こんにちは、${this.name}です。`);
   };
 }
 ```
@@ -364,15 +369,13 @@ function Person(name) {
 `Person()` をコンストラクターとして呼び出すには `new` を使用します。
 
 ```js
-const salva = new Person("Salva");
-salva.name;
+const salva = new Person("サルバ");
 salva.introduceSelf();
-// "Hi! I'm Salva."
+// "こんにちは、サルバです。"
 
-const frankie = new Person("Frankie");
-frankie.name;
+const frankie = new Person("フランキー");
 frankie.introduceSelf();
-// "Hi! I'm Frankie."
+// "こんにちは、フランキーです。"
 ```
 
 ## ずっとオブジェクトを使ってきた
@@ -406,12 +409,12 @@ const myNotification = new Notification("Hello!");
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Object basics](/ja/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: オブジェクトの基本](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Object_basics) を見てください。
 
-## おさらい
+## まとめ
 
 お疲れ様でした。最初の JS オブジェクトの記事の終わりまで到達しました。JavaScript のオブジェクトがどのように機能するかについて、良い考えを得ることができたのではないでしょうか。記事では、簡単なオリジナルオブジェクトの作成を含んでいました。オブジェクトは関連するデータと機能を保存する構造として非常に便利であることも理解しなければいけません。もし別々の変数と関数として、`person` オブジェクトのすべてのプロパティとメソッドを記録していくとすると、非効率でありストレスが溜まります。そして同じ名前の他の変数や関数をクラッシュしてしまう危険性も抱えてしまいます。オブジェクトは有害な方法を避けて、パッケージの中で安全に鍵をして情報を守ってくれます。
 
 次の記事では、**プロトタイプ**について見ていきます。これは、JavaScript がオブジェクトに他のオブジェクトのプロパティを継承させるための基本的な方法です。
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Core/Scripting")}}

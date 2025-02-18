@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 
 **`getSeconds()`** 메서드는 `Date` 객체의 초 값을 현지 시간에 맞춰 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getSeconds()")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getSeconds());
+// Expected output: 18
+```
 
 ## 구문
 

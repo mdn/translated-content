@@ -2,7 +2,7 @@
 title: 色彩空间
 slug: Glossary/Color_space
 l10n:
-  sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
+  sourceCommit: c7416fd067774fc2583944d10801b56672b56631
 ---
 
 {{GlossarySidebar}}
@@ -36,7 +36,7 @@ HSV（色调、饱和度和值）色彩空间及其同义词 HSB（色调、饱�
 - `srgb-linear` 色彩空间
   - : 预定义的线性光 sRGB 色彩空间 `srgb-linear` 与 `srgb`相同，只是传输函数是没有伽玛编码的线性光。`srgb-linear` 色彩空间接受三个 `r`、`g` 和 `b` 值作为数值参数，色域范围为 `0` 至 `1`。它的白点为 D65。
 - `display-p3` 色彩空间
-  - : **Display P3** 色彩空间由苹果公司定义，结合了 DCI-P3 色域、D65 白点和 sRGB 伽马曲线。它是一种典型的宽色域空间，适用于当前的宽色域显示器，能呈现出比 sRGB 色域更鲜艳的绿色和红色。`display-p3` 基于 `r`、`g` 和 `b`，伽玛值范围为 `0` 至 `1`。它的白点为 D65。
+  - : [**Display P3**](https://www.color.org/chardata/rgb/DisplayP3.xalter) 色彩空间由苹果公司定义，结合了 DCI-P3 色域、D65 白点和 sRGB 伽马曲线。它是一种典型的宽色域空间，适用于当前的宽色域显示器，能呈现出比 sRGB 色域更鲜艳的绿色和红色。`display-p3` 基于 `r`、`g` 和 `b`，伽玛值范围为 `0` 至 `1`。它的白点为 D65。
 - `a98-rgb` 色彩空间
   - : `a98-rgb` 是 Adobe® 1998 RGB 色彩空间，旨在将所有 CMYK 颜色表示为 RGB。它可实现 [CIELab 色彩空间](#cielab_色彩空间)指定的约 50% 的可见色彩，比其他 RGB 色彩空间包含更多的青绿色调。伽玛内的 `r`、`g` 和 `b` 值范围从 `0` 到 `1`。它的传输曲线是一个伽马函数，不完全地接近于 1/2.2。它的白点为 D65。
 - `prophoto-rgb`

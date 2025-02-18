@@ -4,11 +4,11 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("Learn_web_development/Howto")}}
 
 本文章將講解網路伺服器是什麼、如何運作、還有他們的重要性。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">要求：</th>
@@ -49,7 +49,7 @@ original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 
 ## 主動學習
 
-_目前還沒有好用的內容。[請考慮貢獻一下](/zh-TW/docs/MDN/Community/Contributing/Getting_started)。_
+_目前還沒有好用的內容。[請考慮貢獻一下](/zh-TW/docs/MDN/Community/Getting_started)。_
 
 ## 深入一點……
 

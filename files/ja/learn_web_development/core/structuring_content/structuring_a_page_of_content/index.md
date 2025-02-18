@@ -1,38 +1,17 @@
 ---
-title: コンテンツのページの構造化
+title: "課題: コンテンツのページの構造化"
 slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content
-original_slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}
 
 CSS を使用してレイアウトできるようにコンテンツのページを構成することは、習得が非常に重要なスキルです。そのためこの評価では、ページがどのように表示されるのかを検討し、適切な構造セマンティクスを選択してその上にレイアウトを構築する能力についてテストします。
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        この評価課題を実施する前に、コースの他の部分を履修しておく必要があります。
-        コースの残りの部分、
-        特に、<a
-          href="/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
-          >文書とウェブサイトの構造</a
-        >に重点を置いて学習してください。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        ウェブページ構造の知識、および将来のレイアウト設計をマークアップで表現する方法をテストする。
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## 開始点
+## 出発点
 
 この評価を開始するには、[すべての開始資産を含む zip ファイル](https://raw.githubusercontent.com/mdn/learning-area/main/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip)を入手してください。
 
@@ -81,4 +60,4 @@ zip ファイルには以下のものが含まれています。
 
 ![評価のための完成例。「バードウォッチング」という見出し、鳥の写真、ウェルカムメッセージを記載した、バードウォッチングに関するシンプルなウェブページ。](example-page.png)
 
-{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content")}}

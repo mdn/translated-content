@@ -1,32 +1,15 @@
 ---
-title: かっこいいボックス
+title: "課題: かっこいいボックス"
 slug: Learn_web_development/Core/Styling_basics/Cool-looking_box
-original_slug: Learn/CSS/Building_blocks/A_cool_looking_box
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
-{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 この評価では、人目を引くボックスを作成しようとすることで、かっこいいボックスを作成する方法をさらに習得できます。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        CSS ボックスモデルと、境界線や背景などの他のボックス関連機能の理解をテストすること。
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 出発点
 
@@ -74,4 +57,4 @@ l10n:
 
 ![角を丸めた大きな赤い箱。ドロップシャドウ付きの白いテキストには "This is a cool box" と書かれています。](fancy-box2.png)
 
-{{PreviousMenu("Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}

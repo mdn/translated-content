@@ -268,7 +268,7 @@ function handleObjectValues(obj) {
 
 - [`core-js` 中 `WeakMap` 的 polyfill](https://github.com/zloirock/core-js#weakmap)
 - [带键的集合](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_对象)
-- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)，作者：尼克·菲茨杰拉德（2014）
+- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)，作者：尼克·菲茨杰拉德（2014）
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

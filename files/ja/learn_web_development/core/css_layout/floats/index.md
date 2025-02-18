@@ -1,29 +1,38 @@
 ---
 title: 浮動ボックス
 slug: Learn_web_development/Core/CSS_layout/Floats
-original_slug: Learn/CSS/CSS_layout/Floats
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}
 
-元々は、テキストブロック内の画像を浮動させるためのものだった {{cssxref("float")}} プロパティは、ウェブページで複数の列のレイアウトを作成するために最もよく使用されるツールの 1 つになりました。フレックスボックスとグリッドの出現により、この記事で説明するように、これで元の目的に戻っています。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
+
+元々は、テキストブロック内の画像を浮動させるためのものだった {{cssxref("float")}} プロパティは、ウェブページで段組みのレイアウトを作成するために最もよく使用されるツールの 1 つになりました。フレックスボックスやグリッドの出現により、この記事で説明するように、これで元の目的に戻っています。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >で学んでください）、および CSS の動作の仕組みの考え方（<a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>で学んでください）。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content"
+          >HTML によるコンテンツの構造化</a
+        >、
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS によるスタイル設定の基本</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals">基本的なテキストとフォントのスタイル設定</a>、
+        <a href="/ja/docs/Learn_web_development/Core/CSS_layout/Introduction">CSS レイアウトの基本概念</a>の基礎知識。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">学習成果:</th>
       <td>
-        ウェブページ上に浮動ボックスの特徴を作成する方法と、 `clear` プロパティおよびその他の浮動状態のクリア方法の使い方を習得すること。
+        <ul>
+          <li>浮動ボックスの目的を理解すること。テキストの段組み内に画像を浮動させるため、他にもドロップキャップや浮動インセット情報ボックスのようなテクニックがある。</li>
+          <li>浮動ボックスはかつては段組みのレイアウトに使用されていましたが、現在ではより有益なツールが利用できるようになったため、その用途は適さなくなったこと。</li>
+          <li><code>浮動ボックス</code> プロパティを使用して浮動ボックスを作成すること。</li>
+          <li><code>clear</code> や <code>display: flow-root</code> 値を使用して浮動を解除すること。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
@@ -35,7 +44,7 @@ l10n:
 
 しかしウェブ開発者はすぐに画像だけでなく何でも浮動させることができることに気づいたので、浮動ボックスの使用は広がりました。例えば、[ドロップキャップ](https://css-tricks.com/snippets/css/drop-caps/)のような楽しいレイアウト効果です。
 
-浮動ボックスは一般に、互いに並ぶように浮動する複数列の情報を含むウェブサイト全体のレイアウトを作成するために使用されてきました（既定のふるまいでは、列はソースに表れる順序と同じ順序で上下に配置されます）。 より新しくより良いレイアウトテクニックが利用可能なので、このように浮動ボックスを使うことは[過去のテクニック](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)とみなされるべきです。
+浮動ボックスは一般に、互いに並ぶように浮動する、段組みの情報を含むウェブサイト全体のレイアウトを作成するために使用されてきました（既定のふるまいでは、列はソースに表れる順序と同じ順序で上下に配置されます）。 より新しくより良いレイアウトテクニックが利用可能なので、この用途で浮動ボックスを使うことは過去のテクニックとみなされるべきです。
 
 この記事では、浮動ボックスの正しい使い方に集中します。
 
@@ -46,9 +55,9 @@ l10n:
 まず、簡単な HTML から始めましょう。 HTML の `body` に次のコードを追加し、それまでの内部にあるものはすべて削除します。
 
 ```html
-<h1>Float example</h1>
+<h1>浮動ボックスの例</h1>
 
-<div class="box">Float</div>
+<div class="box">浮動ボックス</div>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
@@ -106,9 +115,9 @@ body {
 ボックスを浮動させるには、次のように {{cssxref("float")}} と {{cssxref("margin-right")}} プロパティを `.box` ルールに追加します。
 
 ```html hidden
-<h1>Float example</h1>
+<h1>浮動ボックスの例</h1>
 
-<div class="box">Float</div>
+<div class="box">浮動ボックス</div>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
@@ -153,13 +162,13 @@ body {
 
 {{EmbedLiveSample('Floating_the_box', '100%', 500)}}
 
-浮動ボックスがどのように機能するかを考えてみましょう。 `float` が設定されている要素（この場合は {{htmlelement("div")}} 要素）は、文書の通常のレイアウトフローから除かれ、その親コンテナー（この場合は {{htmlelement("body")}}）の左側に固定されます。通常のレイアウトフローで浮動した要素の下に来るコンテンツは、これで浮動要素の周りを回り込み、浮動した要素の上まで右側の空間を埋めます。そこで、コンテンツは停止します。
+浮動ボックスがどのように機能するかを考えてみましょう。 `float` が設定されている要素（この場合は {{htmlelement("div")}} 要素）は、文書の通常のレイアウトフローから除かれ、その親コンテナー（この場合は {{htmlelement("body")}}）の左側に固定されます。通常のレイアウトフローで浮動した要素の下に来るコンテンツは、これで浮動ボックスの周りを回り込み、浮動した要素の上まで右側の空間を埋めます。そこで、コンテンツは停止します。
 
 コンテンツを右に浮動させると、まったく同じ効果が得られますが、逆になります。 つまり、浮動した要素は右に固定され、コンテンツはその左側を回り込みます。 `float` の値を `right` に変更し、最後のルールセットで {{cssxref("margin-right")}} を {{cssxref("margin-left")}} に置き換えて、結果がどうなるかを確認してください。
 
-### 浮動ブロックを視覚化
+### 浮動ボックスを視覚化
 
-テキストを遠ざけるために浮動ボックスにマージン（margin、余白）を追加することはできますが、テキストを浮動ボックスから遠ざけるためにテキストにマージンを追加することはできません。 これは、浮動要素は通常フローから外され、後続アイテムのボックスが実際には浮動ボックスの背後にあるためです。例にいくつかの変更を加えることによってこれを実証することができます。
+テキストを遠ざけるために浮動ボックスにマージン（margin、余白）を追加することはできますが、テキストを浮動ボックスから遠ざけるためにテキストにマージンを追加することはできません。 これは、浮動ボックスは通常フローから外され、後続アイテムのボックスが実際には浮動ボックスの背後にあるためです。例にいくつかの変更を加えることによってこれを実証することができます。
 
 テキストの最初の段落、つまり浮動ボックスの直後の段落に `special` のクラスを追加してから、CSS に次のルールを追加します。 これらは続く段落に背景色を設定します。
 
@@ -174,9 +183,9 @@ body {
 効果を見やすくするために、浮動ボックスの `margin-right` を `margin` に変更すると、浮動ボックスの全周にマージンができます。 以下の例のように、浮動ボックスの真下にある段落の背景を見ることができます。
 
 ```html hidden
-<h1>Float example</h1>
+<h1>浮動ボックスの例</h1>
 
-<div class="box">Float</div>
+<div class="box">浮動ボックス</div>
 
 <p class="special">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
@@ -231,9 +240,9 @@ body {
 
 続く要素の[行ボックス](/ja/docs/Web/CSS/Visual_formatting_model#line_boxes)が短くなっているので、テキストは浮動ボックスを回り込みますが、浮動ボックスは通常フローから除かれるため、段落の周りのボックスは全幅のままになります。
 
-## 浮動ボックスのクリア
+## 浮動ボックスの解除
 
-浮動ボックスは通常フローから除かれ、他の要素がその横に表示されることを見てきました。したがって、続く要素が上方向に移動するのを止めたい場合は、それをクリアする必要があります。これは {{cssxref("clear")}} プロパティによって実現できます。
+浮動ボックスは通常フローから除かれ、他の要素がその横に表示されることを見てきました。したがって、続く要素が上方向に移動するのを止めたい場合は、それを解除する必要があります。これは {{cssxref("clear")}} プロパティによって実現できます。
 
 前の例の HTML では、浮動しているアイテムの下の 2 番目の段落に `cleared` のクラスを追加します。 次に、 CSS に以下を追加してください。
 
@@ -244,9 +253,9 @@ body {
 ```
 
 ```html hidden
-<h1>Float example</h1>
+<h1>浮動ボックスの例</h1>
 
-<div class="box">Float</div>
+<div class="box">浮動ボックス</div>
 
 <p class="special">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
@@ -309,7 +318,7 @@ body {
 
 {{EmbedLiveSample('Clearing_floats', '100%', 600)}}
 
-続く段落では浮動要素がクリアされ、並んで現れなくなったことがわかります。 `clear` プロパティは次の値を受け入れます。
+続く段落では浮動ボックスがクリアされ、並んで現れなくなったことがわかります。 `clear` プロパティは次の値を受け入れます。
 
 - `left`: 左に浮動しているアイテムをクリアします。
 - `right`: 右に浮動しているアイテムをクリアします。
@@ -317,11 +326,11 @@ body {
 
 ## 浮動ボックスを回り込むボックスのクリア
 
-これで、浮動要素に続く何かをクリアする方法はお分かりいただけたと思いますが、背の高い浮動要素と短い段落があり、両方の要素を囲むボックスがある場合、どうなるかを見てみましょう。
+これで、浮動ボックスに続く何かをクリアする方法はお分かりいただけたと思いますが、背の高い浮動ボックスと短い段落があり、両方の要素を囲むボックスがある場合、どうなるかを見てみましょう。
 
 ### 問題
 
-文書を変更して、最初の段落と浮動要素を、{{htmlelement("div")}} に `wrapper` クラスがついた要素で囲むようにします。
+文書を変更して、最初の段落と浮動ボックスを、{{htmlelement("div")}} に `wrapper` クラスがついた要素で囲むようにします。
 
 ```html live-sample___the_problem
 <div class="wrapper">
@@ -336,7 +345,7 @@ body {
 </div>
 ```
 
-CSS で、`.wrapper` クラスに次のルールを追加してからページをリロードします。
+CSS で、`.wrapper` クラスに次のルールを追加してからページを再読み込みします。
 
 ```css live-sample___the_problem
 .wrapper {
@@ -354,7 +363,7 @@ CSS で、`.wrapper` クラスに次のルールを追加してからページ�
 }
 ```
 
-段落に背景色を付けた例と同じように、背景色は浮動要素の後ろに来ることがわかります。
+段落に背景色を付けた例と同じように、背景色は浮動ボックスの後ろに来ることがわかります。
 
 ```html hidden live-sample___the_problem
 <p>
@@ -402,7 +411,7 @@ body {
 
 {{EmbedLiveSample('the_problem', '100%', 600)}}
 
-繰り返しになりますが、これは浮動要素が通常のフローから外れているためです。浮動ボックスと、浮動ボックスに回り込む最初の段落のテキストを一緒に囲めば、その後のコンテンツはボックスから外されると思うかもしれません。しかし、上記のようにそうではありません。これに対処するには、[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を作成すするように {{cssxref("display")}} プロパティを使用するのが標準的な方法です。
+繰り返しになりますが、これは浮動ボックスが通常のフローから外れているためです。浮動ボックスと、浮動ボックスに回り込む最初の段落のテキストを一緒に囲めば、その後のコンテンツはボックスから外されると思うかもしれません。しかし、上記のようにそうではありません。
 
 ### display: flow-root
 
@@ -418,9 +427,9 @@ body {
 ```
 
 ```html hidden
-<h1>Float example</h1>
+<h1>浮動ボックスの例</h1>
 <div class="wrapper">
-  <div class="box">Float</div>
+  <div class="box">浮動ボックス</div>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
@@ -476,10 +485,10 @@ body {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 浮動ブロック](/ja/docs/Learn/CSS/CSS_layout/Floats_skills)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Floats_skills)を見てください。
 
 ## まとめ
 
-あなたは今、現代のウェブ開発で浮動ボックスについて知っておくべきことがすべてわかっています。 過去のレイアウト方法の使用方法については、[過去のレイアウト方法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関する記事を参照してください。 古いプロジェクトで作業している場合に便利です。
+浮動ボックスについて知っておくべきことはそれだけです。次に、位置指定について詳しく見ていきましょう。
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

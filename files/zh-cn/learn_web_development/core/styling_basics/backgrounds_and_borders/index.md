@@ -332,8 +332,8 @@ span {
 其他 `background-*` 属性也可以像 `background-image` 一样使用逗号分隔的方式设置：
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image4.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -364,7 +364,8 @@ background-position:
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+  background-image:
+    url(https://mdn.github.io/shared-assets/images/examples/star.png),
     url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
 }
 ```

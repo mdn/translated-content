@@ -2,10 +2,10 @@
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_expressions
 l10n:
-  sourceCommit: 0b0cac4814d37f8a62d69de1b0d76dbe20d085ec
+  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。
 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp/exec", "exec()")}} および {{jsxref("RegExp/test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}}、{{jsxref("String/replace", "replace()")}}、{{jsxref("String/replaceAll", "replaceAll()")}}、{{jsxref("String/search", "search()")}}、{{jsxref("String/split", "split()")}} メソッドで使用できます。
@@ -149,27 +149,16 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
 特殊文字を文字として使う必要がある場合 (例えば、実際に `"*"` を検索する場合)、その前にバックスラッシュを付けてエスケープする必要があります。
 例えば、 `"a"` に `"*"` が続き、さらに `"b"` が続くものを検索するには、 `/a\*b/` と使用します。バックスラッシュは `"*"` を「エスケープ」し、特殊文字ではなく文字として扱うようにします。
 
-同様に、もし正規表現リテラルを書いていてスラッシュ ('/') に一致させる必要がある場合は、スラッシュをエスケープする必要があります（そうしないとスラッシュでパターンが終了します）。
-例えば、 "/example/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 `/\/example\/[a-z]+/i` とします。それぞれのスラッシュ前のバックスラッシュが、スラッシュを文字として扱わせます。
+同様に、もし正規表現リテラルを書いていてスラッシュ ("/") と照合する必要がある場合は、スラッシュをエスケープする必要があります（そうしないとスラッシュでパターンが終了します）。
+例えば、 "/example/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 `/\/example\/[a-z]+/i` とします。それぞれのスラッシュの前にバックスラッシュを置くことによって、スラッシュを文字として扱います。
 
-バックスラッシュ文字に一致させるには、バックスラッシュをエスケープする必要があります。
+バックスラッシュ文字と照合するには、バックスラッシュをエスケープする必要があります。
 例えば、 "C:\\" という文字列で "C" が任意の英字になる場合は、 `/[A-Z]:\\/` を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。
 
-`RegExp` コンストラクターに文字列リテラルを渡して使用する場合は、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。
+`RegExp` コンストラクターに文字列リテラルを渡して使用する場合、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。
 `/a\*b/` と `new RegExp("a\\*b")` は同じ表現を生成するものであり、 "a" の次に "\*"、その次に "b" があるものを探します。
 
-エスケープ文字がパターンに含まれていない場合は、 {{jsxref("String.prototype.replace()")}} を使用して追加することができます。
-
-```js
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& は一致した部分文字列全体を意味します
-}
-```
-
-正規表現の後の "g" はグローバルサーチを行うオプション/フラグで、文字列全体を見て一致したものをすべて返します。
-下の[フラグを用いた高度な検索](#フラグを用いた高度な検索)に詳しく説明されています。
-
-_なぜこれが JavaScript に組み込まれていないのでしょうか？_ RegExp にそのような関数を追加する[提案](https://github.com/tc39/proposal-regex-escaping)があります。
+{{jsxref("RegExp.escape()")}} 関数は、正規表現の構文における特殊文字をすべてエスケープした新しい文字列を返します。これを使用して、 `new RegExp(RegExp.escape("a*b"))` とすることで、文字列 `"a*b"` にのみ一致する正規表現を作成することができます。
 
 ### 括弧の使用
 
@@ -191,7 +180,7 @@ _なぜこれが JavaScript に組み込まれていないのでしょうか？_
 | {{jsxref("String/replaceAll", "replaceAll()")}} | 文字列内で一致するものすべてを検索し、一致した部分文字列を置換する部分文字列で置換します。                       |
 | {{jsxref("String/split", "split()")}}           | 正規表現または固定文字列を用いて文字列を分割し、部分文字列の配列に入れます。                                     |
 
-あるパターンが文字列に存在するかを知りたいときは、`test()` または `search()` メソッドを使用してください。詳細な情報が知りたいときは (実行時間が長くなりますが) `exec()` または `match()` メソッドを使用してください。
+あるパターンが文字列に存在するかを知りたいときは、`test()` または `search()` メソッドを使用してください。詳細な情報が知りたいときは（実行時間が長くなりますが） `exec()` または `match()` メソッドを使用してください。
 `exec()` や `match()` を使用して一致した場合、これらのメソッドは配列を返し、関連する正規表現オブジェクトと定義済みオブジェクトである `RegExp` オブジェクトのプロパティを更新します。
 一致しなかった場合、 `exec` メソッドは `null` （`false` に変換される値）を返します。
 
@@ -211,7 +200,7 @@ const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // /d(b+)d/g.exec('cdbbdbsbz') は配列 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ] を出力する。
 ```
 
-(異なる動作についての詳しい情報は[`exec()` のグローバル検索フラグの使用](#exec_におけるグローバル検索の使用)を参照してください。)
+(異なる動作についての詳しい情報は[`exec()` におけるグローバル検索フラグの使用](#exec_におけるグローバル検索フラグの使用)を参照してください。)
 
 ある文字列から正規表現を組み立てたい場合は、次のスクリプトのような方法があります。
 
@@ -313,7 +302,7 @@ console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 | `m`    | `^` および `$` が改行文字の隣で一致するようになります。                                        | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`    | `.` が改行文字に一致するようにします。                                                         | {{jsxref("RegExp/dotAll", "dotAll")}}           |
 | `u`    | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                        | {{jsxref("RegExp/unicode", "unicode")}}         |
-| `v`    | Unicodeの機能がさらに追加された `u` モードへのアップグレード。                                 | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
+| `v`    | Unicodeの機能がさらに追加された `u` モードのアップグレード。                                   | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
 | `y`    | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 | {{jsxref("RegExp/sticky", "sticky")}}           |
 
 フラグを正規表現に含めるには、次のようにしてください。
@@ -360,7 +349,7 @@ const re = new RegExp("\\w+\\s", "g");
 
 `i`, `m`, `s` フラグは、正規表現の特定の部分に対して、[修飾子](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)構文を使用して有効または無効にすることができます。
 
-#### exec() におけるグローバル検索の使用
+#### exec() におけるグローバル検索フラグの使用
 
 {{jsxref("RegExp.prototype.exec()")}} メソッドに `g` フラグを付けると、それぞれ一致した値とその位置を繰り返し返します。
 
@@ -468,4 +457,4 @@ form.addEventListener("submit", (event) => {
 - [Regex visualizer](https://extendsclass.com/regex-tester.html)
   - : オンラインのビジュアルな正規表現テスターです。
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("Web/JavaScript/Guide/Representing_dates_times", "Web/JavaScript/Guide/Indexed_collections")}}

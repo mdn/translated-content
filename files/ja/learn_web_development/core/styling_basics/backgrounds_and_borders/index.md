@@ -1,41 +1,45 @@
 ---
 title: 背景と境界線
 slug: Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 l10n:
-  sourceCommit: 68772e87a84d6d6fc6a8e377dea4998afbeb511c
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 このレッスンでは、CSS の背景および境界モジュールの機能を使ったクリエイティブな表現方法をいくつか見ていきます。グラデーション、背景画像、角の丸めを加えることを通じて、CSS を使ったスタイル設定の多様な課題に対する解答が得られるでしょう。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件:</th>
+      <th scope="row">前提知識:</th>
       <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされている</a
-        >こと、<a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルの扱い</a
-        >、HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >の学習）、CSS がどのように動作するかの考え（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>で学習）の基本的な知識を得ていること。
+        HTML の基本（
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本的な HTML の構文</a
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units">CSS の値と単位</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Sizing">CSS におけるサイズ設定<a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
-      <td>ボックスの背景と境界線をスタイルする方法を学ぶこと。</td>
+      <th scope="row">学習成果:</th>
+      <td>
+        <ul>
+          <li>基本的な背景スタイル設定（色と画像）。</li>
+          <li>背景画像のサイズ、繰り返し、位置指定、添付場所。</li>
+          <li>背景のグラデーション — 一般的な概念と線形グラデーション（放射、扇形、反復グラデーションはより高度なものです。現段階では、深い知識は要求されません。）</li>
+          <li>背景のアクセシビリティを考慮する — コントラストを確実に保持する。</li>
+          <li>境界線の基本 — 幅、スタイル設定、色、境界線の一括指定。角を丸める場合は、角丸機能を使用します。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## CSS による背景の設定
 
-CSS の {{cssxref("background")}} プロパティは、このレッスンで説明する多くの個別指定プロパティ (longhand property) を一度に指定する一括指定プロパティ (shorthand property) です。スタイルシートで複雑な背景プロパティを見かけると、一度に多くの値を渡していて理解するのが少し難しく感じるかもしれません。
+CSS の {{cssxref("background")}} プロパティは一括指定プロパティであり、このレッスンで説明する多くの個別指定プロパティを一度に指定します。スタイルシートで複雑な背景プロパティを見かけると、一度に多くの値を渡していて理解するのが少し難しく感じるかもしれません。
 
 ```css
 .box {
@@ -124,15 +128,15 @@ span {
 背景画像と背景色を同時に指定すると、背景色より手前に背景画像が表示されます。
 上記の例に `background-color` プロパティを追加して、動作を確認してみましょう。
 
-#### 背景画像の繰り返しの指定
+#### 背景画像の反復の指定
 
-{{cssxref("background-repeat")}} プロパティは、画像の繰り返し表示の動作を制御するために使用されます。使用可能な値には次のものがあります:
+{{cssxref("background-repeat")}} プロパティは、画像の反復表示の動作を制御するために使用されます。使用可能な値には次のものがあります:
 
-- `no-repeat` — 背景画像が繰り返されるのを完全に防ぎます。
-- `repeat-x` — 水平方向に繰り返します。
-- `repeat-y` — 垂直方向に繰り返します。
-- `repeat` — 既定値です。両方の方向に繰り返します。
-- `space` — 可能な限り何度も繰り返し、利用できる空間があれば、画像と画像の間に空間を加えます。
+- `no-repeat` — 背景画像が反復されるのを完全に防ぎます。
+- `repeat-x` — 水平方向に反復します。
+- `repeat-y` — 垂直方向に反復します。
+- `repeat` — 既定値です。両方の方向に反復します。
+- `space` — 可能な限り何度も反復し、利用できる空間があれば、画像と画像の間に空間を加えます。
 - `round` — `space` に似ていますが、余分な空間を埋めるように画像を伸ばします。
 
 以下の例でこれらの値を試してみましょう。値を `no-repeat` に設定したため、星が 1 つだけ表示されます。異なる値（`repeat-x` や `repeat-y`）に変えてみて、その効果を確認してみましょう。
@@ -332,7 +336,7 @@ span {
 
 `background-image` プロパティにカンマ区切りで複数の画像を指定することで、複数の背景画像を使用することもできます。
 
-これを行うと、背景画像が互いに重なり合う可能性があります。背景は、最後に指定したものが一番下に置かれ、先のものが順に上に重ねられます。
+これを行うと、背景画像が重なり合うことがあります。背景は、最後に記載されている背景画像が積み重ねの最下層となり、その上にコードで前の画像が順に積み重ねられます。
 
 > [!NOTE]
 > グラデーションを通常の背景画像と同じように重ね合わせることができます。
@@ -340,8 +344,8 @@ span {
 他の `background-*` プロパティも、 `background-image` と同じ方法でカンマ区切りの値を持つことができます。
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image4.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,
@@ -372,7 +376,8 @@ background-position:
 }
 
 .box {
-  background-image: url(https://mdn.github.io/shared-assets/images/examples/star.png),
+  background-image:
+    url(https://mdn.github.io/shared-assets/images/examples/star.png),
     url(https://mdn.github.io/shared-assets/images/examples/big-star.png);
 }
 ```
@@ -435,10 +440,9 @@ background-position:
 
 ## 境界線
 
-ボックスモデルについて学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。
-通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/line-style)を指定する一括指定プロパティを使います。
+[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)について学習するとき、境界線 (border) がボックスのサイズにどのように影響するかを見てきました。このレッスンでは、境界線をクリエイティブに活用する方法を見ていきます。通常、CSS で要素に境界線を追加するときは、CSS の 1 行で境界線の色、幅、[スタイル](/ja/docs/Web/CSS/line-style)を指定する一括指定プロパティを使います。
 
-{{cssxref("border")}} を使用して、ボックスの 4 辺すべてに境界線を設定できます。
+{{cssxref("border")}} を使用すると、ボックスの 4 辺すべてに境界線を設定できます。
 
 ```css
 .box {
@@ -475,7 +479,7 @@ background-position:
 ```
 
 > [!NOTE]
-> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)に応じたこれらの方法を探ります。
+> top, right, bottom, left の各方向の境界線を指定するプロパティには、HTML 文書の書字方向 (writing mode) と結びついた[論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)が割り当てられています（書字方向は、左から右、右から左、上から下といったテキストの方向を制御するものです）。次回のレッスンでは、[テキスト方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)に応じたこれらの方法を探ります。
 
 境界線にはさまざまなスタイルを指定できます。以下の例では、ボックスの 4 辺にそれぞれ異なる境界線スタイルを使用しています。境界線の色、幅、スタイルを試して、境界線の動作を確認しましょう。
 
@@ -553,12 +557,12 @@ h2 {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 背景と境界線](/ja/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders)を見てください。
 
 ## まとめ
 
 ここでかなり多くのことを取り上げましたが、ボックスに背景や境界線を追加するにはかなり多くのことがあることがお分かりいただけたと思います。ここで説明した機能についてもっと知りたければ、さまざまなプロパティのページを探してみてください。 MDN でほとんどすべてのページに、知識を深めるために試してみる例があります。
 
-次のレッスンでは、文書の書字方向が CSS とどのように相互作用するかを説明します。テキストが左から右以外の方向に流れる場合に何が起こるのでしょうか？
+次の記事では、要素ボックス内に収まりきらないほどコンテンツが多い場合に現れる「オーバーフロー」の概念について、さらに詳しく見ていきましょう。
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}

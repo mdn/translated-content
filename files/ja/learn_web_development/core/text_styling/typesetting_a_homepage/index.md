@@ -1,29 +1,15 @@
 ---
-title: コミュニティスクールのホームページの組版
+title: "課題: コミュニティスクールのホームページの組版"
 slug: Learn_web_development/Core/Text_styling/Typesetting_a_homepage
-original_slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}
 
-この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 途中で楽しい時間があるかもしれません。
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        この評価を試みる前に、このモジュールのすべての記事を読んでおくべきです。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>CSS テキスト装飾テクニックの理解をテストすること。</td>
-    </tr>
-  </tbody>
-</table>
+この評価では、コミュニティスクールのホームページ用にテキストを装飾することで、このモジュール全体でカバーしてきたすべてのテキスト装飾テクニックについての理解をテストします。 その過程は楽しくなるかもしれません。
 
 ## 出発点
 
@@ -83,6 +69,6 @@ l10n:
 
 次のスクリーンショットは、完成したデザインの外観の例です。
 
-![「コミュニティスクールのウェブサイトホームページ」のテキストスタイル設定評価のデザイン完了画面。見出しは「St Huxley's Community College」となっています。バナーヘッダーとコンテンツを区切る赤い行があります。本文は 3 段組みです。最初の一番広い段組みには、学生にとってのカレッジの重要性を示唆するいくつかの段があります。2 つ目の段組みには、カレッジが提供するトップコースの選択肢へのリンクのリストがあります。3 つ目の段組みには、ウェブサイトのさまざまな節へのリンクが長方形の輪郭線で描かれた縦長のナビゲーションバーがあります。](example2.png)
+![課題デザインの完了画面のスクリーンショット。上部の見出しには 'St Huxley's Community College' と表示されています。バナーヘッダーとコンテンツの間には赤い線が引かれています。メインコンテンツは 3 段組みで、 2 つの段にはテキストが含まれ、 3 つ目の段には縦のナビゲーションバーがあります。](example2.png)
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/CSS_layout", "Learn_web_development/Core/Text_styling")}}

@@ -8,7 +8,7 @@ original_slug: Learn/Server-side/Django/Authentication
 
 在本教程中，我們將會展示如何允許用戶使用自己的帳戶登入到你的網站，以及如何根據用戶是否已登入和權限的不同來控制他們可以執行和查看的內容。作為展示的一部分，我們會擴展[本地圖書館](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)網站，添加登入頁面和登出頁面，以及用來查看已借閱的圖書的頁面——分為用戶與員工兩種不同頁面。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提:</th>

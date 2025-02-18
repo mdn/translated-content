@@ -213,7 +213,7 @@ _親インターフェイスである {{domxref("HTMLElement")}} から継承し
 
 - {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
 
-  - : 文字列で、選択された方向を表します。可能な値は、 `forward` （現在のロケールの文頭から文末の方向に選択）、 `backward` （逆方向）、 `none` （方向は不明）のいずれかです。。
+  - : 文字列で、選択された方向を表します。可能な値は、 `forward` （現在のロケールの文頭から文末の方向に選択）、 `backward` （逆方向）、 `none` （方向は不明）のいずれかです。
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 

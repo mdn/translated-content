@@ -1,18 +1,17 @@
 ---
 title: "スキルテスト: 位置指定"
 slug: Learn_web_development/Core/CSS_layout/Position_skills
-original_slug: Learn/CSS/CSS_layout/Position_skills
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
 
-このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
+このスキルテストの目的は、CSS の {{CSSxRef("position")}} プロパティと値を使用した [CSS の位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)を理解しているかどうかを評価することです。今までに学んだ素材の様々な要素を使用する、2 つの小さな課題を行っていただきます。
 
 > [!NOTE]
-> 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
->
+> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
+> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
 > 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
@@ -23,17 +22,79 @@ l10n:
 
 ![緑色のボックスが灰色の枠で囲まれたコンテナーの右上にあります。](position-task1.png)
 
+**ボーナス問題:** target をテキストの下に表示するように変更できますか？
+
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/position/position1.html", '100%', 1000)}}
+```html live-sample___position1
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <div class="target">Target</div>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
+```
 
-追加の課題です。
+```css hidden live-sample___position1
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
-- 追加課題として、 target をテキストの下に表示するように変更できますか？
+.container {
+  padding: 0.5em;
+  border: 5px solid #ccc;
+}
 
-> [!CALLOUT]
->
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position1-download.html)しましょう。
+.target {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: #663398;
+  padding: 1em;
+  color: white;
+}
+```
+
+```css live-sample___position1
+.container {
+}
+
+.target {
+}
+```
+
+{{EmbedLiveSample("position1", "", "400px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+これには、 `position: relative` と `position: absolute` が必要であり、相対位置指定の観点から、新しい位置指定コンテキストにおいて、両者がどのように関連しているかを理解する必要があります。
+よくある問題は、子要素に `position: absolute` を追加していても、コンテナーに `position: relative` を適用していないということでしょう。その場合、 target はビューポートに従って位置指定されることになります。
+
+```css
+.container {
+  position: relative;
+}
+
+.target {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+```
+
+ボーナス問題では、 target 要素に `z-index` の負の値を追加する必要があります。例えば `z-index: -2` です。
+
+</details>
 
 ## 課題 2
 
@@ -43,22 +104,89 @@ l10n:
 
 下記のライブコードを更新して、完成例を再現してみてください。
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1300)}}
+```html live-sample___position2
+<div class="container">
+  <div class="sidebar">
+    <p>
+      This is the sidebar. It should remain in position as the content scrolls.
+    </p>
+  </div>
+  <div class="content">
+    <p>
+      Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh
+      onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+    </p>
+    <p>
+      Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+      tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+      Dandelion cucumber earthnut pea peanut soko zucchini.
+    </p>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo
+      shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea.
+      Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi
+      beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki
+      bean chickweed potato bell pepper artichoke.
+    </p>
+  </div>
+</div>
+```
 
-> [!CALLOUT]
->
-> 自分自身のエディターやオンラインエディターで作業する場合は、[このタスクの開始点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position2-download.html)しましょう。
+```css hidden live-sample___position2
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
-## 評価またはさらなるヘルプ
+.container {
+  height: 400px;
+  padding: 0.5em;
+  border: 5px solid #ccc;
+  overflow: auto;
+}
 
-この例は、上記のインタラクティブエディターで練習することができます。
+.sidebar {
+  color: white;
+  background-color: #663398;
+  padding: 1em;
+  float: left;
+  width: 150px;
+}
 
-この作品を評価してほしい、行き詰っているので相談に乗ってほしいという方は次のようにしてください。
+.content {
+  padding: 1em;
+  margin-left: 160px;
+}
+```
 
-1. 作品をオンラインの共有可能なエディター、例えば [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) に置いてください。コードは自分で書いても、上の節でリンクされている開始時点のファイルを使用しても構いません。
-2. [MDN Discourse forum 学習カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に評価や助けを依頼する記事を書いてください。投稿には以下を記載してください。
+```css live-sample___position2
+.container {
+}
 
-   - 「位置指定のスキルテスト 1 のための評価希望」のような説明的なタイトル。
-   - すでに持っている内容や、私たちに望むことの詳細。例えば、行き詰まって助けが必要な場合や、評価を希望する場合などを指示してください。
-   - 評価やヘルプが必要な例へのリンクを、オンライン共有エディターで示してください（上記のステップ 1 で述べたとおり）。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
-   - 実際の課題または評価ページへのリンク。あなたが助けを求めている問題を探すことができます。
+.sidebar {
+}
+```
+
+{{EmbedLiveSample("position2", "", "400px")}}
+
+<details>
+<summary>ここをクリックすると、解決策を表示します。</summary>
+
+ここでは学習素材とは少し異なる方法で、 `position: fixed` の理解をテストしています。
+
+```css
+.sidebar {
+  position: fixed;
+}
+```
+
+</details>
+
+## 関連情報
+
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)

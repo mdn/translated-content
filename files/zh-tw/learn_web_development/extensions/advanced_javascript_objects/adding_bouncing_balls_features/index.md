@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">必備條件：</th>

@@ -71,31 +71,37 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 - [逻辑运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#逻辑运算符)
 - [条件（三元）运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#条件（三元）运算符)
 
-## 数字与日期
+## 数字与字符串
 
-概述：[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)
+概述：[数字与字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings)
 
-- [`Number` 字面量](/zh-CN/docs/WJavaScript/概述：Guide/Numbers_and_dates#数字)
-- [`Number` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#数字对象)
-- [`Math` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#数学对象（math）)
-- [`Date` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates#日期对象)
+- [数字](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings#数字)
+- [`Number` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings#数字对象)
+- [`Math` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings#数学对象（math）)
+- [字符串](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings#字符串)
+- [`String` 对象](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings#string_对象)
+- [模板字面量](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_strings#模板字面量)
 
-## 文本格式化
+## 表示日期与时间
 
-概述：[文本格式化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting)
+概述：[表示日期与时间](/zh-CN/docs/Web/JavaScript/Guide/Representing_dates_times)
 
-- [字符串字面量](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#字符串)
-- [字符串对象](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#字符串对象)
-- [模版字面量](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#多行模板字符串)
-- [国际化](/zh-CN/docs/Web/JavaScript/Guide/Text_formatting#国际化)
-- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+- [`Date` 对象](/zh-CN/docs/Web/JavaScript/Guide/Representing_dates_times#date_对象)
+
+## 正则表达式
+
+概述：[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+
+- [创建一个正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#创建一个正则表达式)
+- [编写一个正则表达式的模式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#编写一个正则表达式的模式)
+  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
 
 ## 索引集合
 
 概述：[索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
-
-- [数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#map%E6%95%B0%E7%BB%84)
-- [类型数组](</zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#类型化数组(Typed_Arrays_)>)
 
 ## 带键集合
 
@@ -113,25 +119,26 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 - [对象和属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)
 - [创建对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#创建新对象)
 - [定义方法](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义方法)
-- [getter 和 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getters_与_setters)
+- [getter 和 setter](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#定义_getter_与_setter)
 
-## 对象模型的细节
+## 使用类
 
-概述：[对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+概述：[使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)
 
-- [基于原型的面向对象编程](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs_prototype-based_languages)
-- [创建对象层次结构](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#%E5%88%9B%E5%BB%BA%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84)
-- [继承](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7)
+- [声明一个类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#声明一个类)
+- [各种类的特征](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#构造函数)
+- [扩展与继承](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#扩展与继承)
+- [为什么用类？](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#为什么用类？)
 
-## Promises
+## Promise
 
-概述：[Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+概述：[Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 
-- [约定](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#%E7%BA%A6%E5%AE%9A)
-- [链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8)
-- [错误传递](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#%E9%94%99%E8%AF%AF%E4%BC%A0%E9%80%92)
-- [组合](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#%E7%BB%84%E5%90%88)
-- [时序](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#%E6%97%B6%E5%BA%8F)
+- [保证](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#保证)
+- [链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)
+- [错误处理](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#错误处理)
+- [组合](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#组合)
+- [时序](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#时序)
 
 ## 迭代器与生成器
 
@@ -140,6 +147,14 @@ JavaScript 指南向你介绍如何使用 [JavaScript](/zh-CN/docs/Web/JavaScrip
 - [迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#迭代器)
 - [可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)
 - [生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#生成器函数)
+
+## 国际化
+
+概述：[国际化](/zh-CN/docs/Web/JavaScript/Guide/Internationalization)
+
+- [日期与时间格式化](/zh-CN/docs/Web/JavaScript/Guide/Internationalization#日期与时间格式化)
+- [Number 格式化](/zh-CN/docs/Web/JavaScript/Guide/Internationalization#number_格式化)
+- [排序规则](/zh-CN/docs/Web/JavaScript/Guide/Internationalization#排序规则)
 
 ## 元编程
 

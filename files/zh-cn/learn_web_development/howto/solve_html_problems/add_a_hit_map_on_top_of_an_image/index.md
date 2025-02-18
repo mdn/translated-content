@@ -8,7 +8,7 @@ original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 现在我们将学习如何设置图像映射，先讨论他的缺点。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

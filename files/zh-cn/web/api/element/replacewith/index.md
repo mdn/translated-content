@@ -41,7 +41,7 @@ console.log(div.outerHTML);
 // "<div><span></span></div>"
 ```
 
-### `replaceWith()` 是非作用域方法
+### `replaceWith()` 是不可绑定作用域方法
 
 `replaceWith()` 方法不能作用于 with 语句。参考 {{jsxref("Symbol.unscopables")}} 获取更多信息。
 

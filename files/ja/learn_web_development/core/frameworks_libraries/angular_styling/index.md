@@ -1,27 +1,27 @@
 ---
-title: Angular アプリのスタイリング
+title: Angular アプリのスタイル設定
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
-基本的なアプリケーション構造がセットアップされ、アプリケーションが表示されるようになったので、次の段階へ移って、Angular がアプリケーションのスタイリングをどのように処理するかを見てみましょう。
+基本的なアプリケーション構造がセットアップされ、アプリケーションが表示されるようになったので、次の段階へ移って、 Angular がアプリケーションのスタイル設定をどのように処理するかを見てみましょう。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p>
-          <a href="/ja/docs/Learn/HTML">HTML</a>、
-          <a href="/ja/docs/Learn/CSS">CSS</a>、
-          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること、
-          <a
-            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ターミナル/コマンドライン</a
-          >に関する知識があること。
-        </p>
+        主要な
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a> と
+        <a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、
+        <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a>
+        言語を扱うことができ、
+        <a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+          >端末/コマンドライン</a
+        >に関する知識があること。
       </td>
     </tr>
     <tr>
@@ -35,12 +35,12 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular
 
 Angular CLI は、次の 2 種類のスタイルファイルを生成します。
 
-- Component styles: Angular CLI は、各コンポーネントにスタイル用の独自のファイルを提供します。
+- コンポーネントスタイル: Angular CLI は、各コンポーネントにスタイル用の独自のファイルを提供します。
   このファイルのスタイルは、そのコンポーネントにのみ適用されます。
 - `styles.css`: `src` ディレクトリーでは、コンポーネントレベルでスタイルを指定しない限り、このファイルのスタイルはアプリケーション全体に適用されます。
 
 CSS プリプロセッサーを使用しているかどうかによって、CSS ファイルの拡張子は異なる場合があります。
-Angular は、プレーン CSS、SCSS、Sass、Less、および Stylus をサポートします。
+Angular は、プレーン CSS、SCSS、Sass、Less に対応しています。
 
 `src/styles.css` に、次のスタイルを貼り付けます。
 
@@ -109,12 +109,6 @@ body {
 `app.component.css` に、次のスタイルを追加します。
 
 ```css
-body {
-  color: #4d4d4d;
-  background-color: #f5f5f5;
-  color: #4d4d4d;
-}
-
 .main {
   max-width: 500px;
   width: 85%;
@@ -122,8 +116,8 @@ body {
   padding: 1rem;
   text-align: center;
   box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    0 2px 4px 0 rgb(0 0 0 / 20%),
+    0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 
 @media screen and (min-width: 600px) {
@@ -173,6 +167,6 @@ ul li {
 
 ## まとめ
 
-Angular でのスタイリングの簡単なツアーが終了したので、アプリ機能の作成に戻りましょう。 次の記事では、to-do items に適切なコンポーネントを作成し、to-do items を確認、編集、および削除できるようにします。
+Angular でのスタイル設定の簡単なツアーが終了したので、アプリ機能の作成に戻りましょう。 次の記事では、to-do items に適切なコンポーネントを作成し、to-do items を確認、編集、および削除できるようにします。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}

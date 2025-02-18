@@ -1,31 +1,15 @@
 ---
 title: Mozilla のスプラッシュページ
 slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
-original_slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}
 
 今回の評価試験では、このモジュールの記事で説明したいくつかの技術の知識をテストするために、Mozilla のすべてついてのファンキーなスプラッシュページに、いくつかの画像と動画を追加してもらいます！
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提条件:</th>
-      <td>
-        この評価に挑戦する前に、すでにこのモジュールのすべての記事を読み終えておいてください。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目的:</th>
-      <td>
-        ウェブページに画像と動画を埋め込むこと、フレーム、および HTML レスポンシブ画像技術に関する知識をテストすること。
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 出発点
 
@@ -52,8 +36,6 @@ l10n:
 - `firefox-addons.jpg`
 - `mozilla-dinosaur-head.png`
 
-たとえば、`firefoxlogo400.png` と `firefoxlogo120.png` のように、それらを判りやすい名前にしてください。
-
 `mdn.svg` に加えて、これらの画像は、`further-info` 領域内のさらなるリソースにリンクするアイコンになります。 また、サイトヘッダーの Firefox ロゴにもリンクします。 これらすべてのコピーを `index.html` と同じディレクトリーに保存してください。
 
 次に、 `red-panda.jpg` の 1200 ピクセル幅のランドスケープバージョンと、パンダをより近くに見せてくれる 600 ピクセル幅のポートレートバージョンを作成します。 繰り返しますが、簡単に識別できるように、判りやすい名前にしてください。 これらの両方のコピーを `index.html` と同じディレクトリーに保存してください。
@@ -69,19 +51,18 @@ l10n:
 
 {{htmlelement("article")}} 要素の内側（開始タグのすぐ下）に、 <https://www.youtube.com/watch?v=ojcNcvb1olg> にある YouTube 動画を適切な YouTube ツールを使用してコードを生成して埋め込みます。 動画の幅は 400 ピクセルにしてください。
 
+> [!NOTE]
+> これは少し背伸びした目標です。なぜなら、このコースの YouTube 動画の埋め込みに要求されるコードについてはまだ扱っていないからです。オンラインで YouTube 動画の埋め込み方法について調べてみてください。
+
 ### さらなる情報リンクにレスポンシブ画像を追加する
 
-`further-info` クラスを持つ {{htmlelement("div")}} の中には、それぞれが興味深い Mozilla 関連のページにリンクする 4 つの {{htmlelement("a")}} 要素があります。 この節を完成させるには、適切な [`src`](/ja/docs/Web/HTML/Element/img#src)、[`alt`](/ja/docs/Web/HTML/Element/img#alt)、[`srcset`](/ja/docs/Web/HTML/Element/img#srcset)、[`sizes`](/ja/docs/Web/HTML/Element/img#sizes) の各属性を含む {{htmlelement("img")}} 要素をそれぞれの内部に挿入する必要があります。
-
-いずれの場合でも（1 つを除く — どれが本質的にレスポンシブでしょうか？）、ブラウザーにビューポートの幅が 500px 以下の場合は 120px 幅のバージョン、それ以外の場合は 400px 幅のバージョンを提供したい。
+`further-info` クラスを持つ {{htmlelement("div")}} の中には、それぞれが興味深い Mozilla 関連のページにリンクする 4 つの {{htmlelement("a")}} 要素があります。この節を完成させるには、 {{htmlelement("img")}} 要素をそれぞれの内部に挿入する必要があります。
 
 正しい画像と正しいリンクが一致していることを確認してください。
 
-> **メモ:** `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([GitHub ページ](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)などのツールを使用して正しく動作しているかどうかをテストできます。
+### レッサーパンダの追加
 
-### アートディレクションされたレッサーパンダ
-
-`red-panda` クラスを持つ {{htmlelement("div")}} の中に、ビューポートの幅が 600px 以下の場合は小さな縦型ののパンダ画像を提供する {{htmlelement("picture")}} 要素を挿入し、それ以外の場合は大きな横型の画像を挿入します。
+`red-panda` クラスを持つ {{htmlelement("div")}} の中に、レッサーパンダの画像を表示する{{htmlelement("img")}} を挿入したいと思います。
 
 ## ヒントとコツ
 
@@ -91,10 +72,8 @@ l10n:
 
 ## 例
 
-以下のスクリーンショットは、広い画面と狭い画面で、スプラッシュページが正しくマークアップされた後にどのように見えるかを示しています。
+次のスクリーンショットは、スプラッシュページがどのように表示されるべきかを示しています。
 
 ![サンプルのスプラッシュページの広い画面のショット](wide-shot.png)
 
-![サンプルのスプラッシュページの狭い画面のショット](narrow-shot.png)
-
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content")}}

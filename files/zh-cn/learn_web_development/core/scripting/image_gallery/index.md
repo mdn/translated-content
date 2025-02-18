@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/Building_blocks/Image_gallery
 
 我们已经学习了 JavaScript 基础的块结构，下面我们通过编写一个常见的基于 JavaScript 的图片库来测验一下你对于循环、函数、条件和事件的掌握情况。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
@@ -70,7 +70,7 @@ JavaScript 部分则需要实现：
 
 ## 声明图像文件名数组
 
-你需要创建一个用于列出所有需要包含在图片库中的图像的文件名。这个数组应该以常量的形式声明。
+你需要创建一个数组，用于列出所有需要包含在图片库中的图像的文件名。这个数组应该以常量的形式声明。
 
 ### 迭代照片
 

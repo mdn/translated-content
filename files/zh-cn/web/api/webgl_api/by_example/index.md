@@ -3,7 +3,7 @@ title: WebGL 的例子
 slug: Web/API/WebGL_API/By_example
 ---
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}
 
 WebGL *例子*是一系列附有简短的解释的样本用来展示 WebGL 的概念和功能。这些示例根据主题和难度级别进行排序，涵盖 WebGL 渲染上下文，着色器编程，纹理，几何图形，用户交互等。
 
@@ -52,4 +52,4 @@ WebGL *例子*是一系列附有简短的解释的样本用来展示 WebGL 的�
 - [Video textures](/zh-CN/docs/Web/API/WebGL_API/By_example/Video_textures)
   - : This example demonstrates how to use video files as textures.
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}

@@ -9,7 +9,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol
 
 每个从 `Symbol()` 返回的 symbol 值都是唯一的。一个 symbol 值能作为对象属性的标识符；这是该数据类型仅有的目的。更进一步的解析见——[glossary entry for Symbol](/zh-CN/docs/Glossary/Symbol)。
 
-{{EmbedInteractiveExample("pages/js/symbol-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol - Constructor")}}
+
+```js interactive-example
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("foo");
+
+console.log(typeof symbol1);
+// Expected output: "symbol"
+
+console.log(symbol2 === 42);
+// Expected output: false
+
+console.log(symbol3.toString());
+// Expected output: "Symbol(foo)"
+
+console.log(Symbol("foo") === Symbol("foo"));
+// Expected output: false
+```
 
 ## 语法
 

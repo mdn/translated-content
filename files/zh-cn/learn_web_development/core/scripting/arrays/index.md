@@ -8,7 +8,7 @@ original_slug: Learn/JavaScript/First_steps/Arrays
 
 在本模块的最后一篇文章中，我们将看看数组——一种将一组数据存储在单个变量名下的优雅方式。现在我们看看它有什么用，然后探索如何来创建一个数组，检索、添加和删除存储在数组中的元素，以及其他更多的功能。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>

@@ -10,7 +10,7 @@ l10n:
 
 在本教程中，我们将为[本地图书馆](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)网站最终需要的所有资源端点设置具有“虚拟”处理器函数的路由（URL 处理代码）。完成后，我们就有了路由处理代码的模块化结构，可以在接下来的文章中使用真正的处理器函数对其进行扩展。此外，我们还将真正了解如何使用 Express 创建模块化路由！
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
