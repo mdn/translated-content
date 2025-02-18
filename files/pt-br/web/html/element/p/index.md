@@ -3,6 +3,8 @@ title: <p> O elemento Parágrafo
 slug: Web/HTML/Element/p
 ---
 
+{{HTMLSidebar}}
+
 O **elemento HTML** **`<p>`** representa um parágrafo. Em mídias visuais, parágrafos são representados como blocos indentados de texto com a primeira letra avançada e separados por linhas em branco. Já em HTML, parágrafos são usados para agrupar conteúdos relacionados de qualquer tipo, como imagens e campos de um formulário.
 
 Parágrafos são [Elementos block-level](/pt-BR/docs/Glossary/Block-level_content), e fecharão automaticamente caso outro [Elemento block-level](/pt-BR/docs/Glossary/Block-level_content) inicie antes da tag de fechamento `</p>`. Veja "Omissão de tag" abaixo.

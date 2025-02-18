@@ -3,6 +3,8 @@ title: datalist
 slug: Web/HTML/Element/datalist
 ---
 
+{{HTMLSidebar}}
+
 ## Sumário
 
 O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTMLElement("option") }} que representam as opções possíveis para o valor de outros controles.
