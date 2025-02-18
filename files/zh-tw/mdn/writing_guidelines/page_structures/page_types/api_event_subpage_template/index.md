@@ -1,9 +1,9 @@
 ---
 title: API event subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
+l10n:
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
-
-# API 事件子頁面模板
 
 > **注意：** _在發布前請刪除此整段說明文字。_
 >
@@ -70,9 +70,13 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_templa
 >
 > _請記得刪除這整段說明文字後再發布。_
 
----
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-## 語法（Syntax）
+請在頁面內容開頭添加一個簡介段落——首先命名該事件，說明它屬於哪個介面，並描述它的功能。  
+這部分應該儘量用一到兩個簡短的句子來表達。  
+您可以從對應 API 參考頁面中該屬性的摘要中擷取大部分內容。
+
+## 語法
 
 可使用事件名稱搭配 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法，或設置事件處理屬性：
 
@@ -82,7 +86,7 @@ addEventListener("事件名稱", (event) => {});
 on事件名稱 = (event) => {};
 ```
 
-## 事件類型（Event type）
+## 事件類型
 
 若該事件有特殊類型，請列出其繼承關係；否則，標註為通用事件：
 
@@ -94,7 +98,7 @@ _一個 {{domxref("XRSessionEvent")}}，繼承自 {{domxref("Event")}}。_
 
 {{InheritanceDiagram("XRSessionEvent")}}
 
-## 事件屬性（Event properties）
+## 事件屬性
 
 若該事件不是通用的 {{domxref("Event")}}，請列出額外的屬性：
 
@@ -103,23 +107,23 @@ _除了下列屬性外，該事件還繼承自 {{domxref("Event")}} 的屬性。
 - {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
   - : 指向與此事件相關的 {{domxref("XRSession")}}。
 
-## 描述（Description）
+## 描述
 
 若需要提供額外的描述，可加入 **描述（Description）** 區段，包括：
 
-### 觸發條件（Trigger）
+### 觸發條件
 
 描述該事件在何種情況下會被觸發。
 
-### 使用案例（Use cases）
+### 使用案例
 
 列出該事件的實際應用場景。
 
-## 範例（Examples）
+## 範例
 
 即使只有一個範例，標題仍使用「範例（Examples）」。
 
-### 範例標題（請具體描述）
+### 範例標題
 
 每個範例應包含 **H3 標題**（`###`），標題應簡明描述該範例的作用，而不是使用「簡單範例」這類模糊的標題。
 
@@ -150,19 +154,19 @@ _除了下列屬性外，該事件還繼承自 {{domxref("Event")}} 的屬性。
 > 有關此 API 的範例，請參見 [fetch() 範例](https://example.org/)。
 > ```
 
-## 規範（Specifications）
+## 規範
 
 `\{{Specifications}}`
 
 _請移除反引號與反斜線來使用此巨集。_
 
-## 瀏覽器相容性（Browser compatibility）
+## 瀏覽器相容性
 
 `\{{Compat}}`
 
 _請移除反引號與反斜線來使用此巨集。_
 
-## 參見（See also）
+## 參見
 
 請包含與當前 API 相關的參考頁面與指南，更多規範請參見 [參見區段寫作指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section)。
 
