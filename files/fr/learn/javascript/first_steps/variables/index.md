@@ -92,7 +92,7 @@ let myName;
 let myAge;
 ```
 
-Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (Vous [ouvrez cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) soit dans un onglet séparé, soit dans une fenêtre selon votre préférence). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
+Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (ou utilisez la [console de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) soit dans un onglet séparé). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
 
 ```html hidden
 <!doctype html>
