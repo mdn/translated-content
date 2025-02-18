@@ -1,7 +1,6 @@
 ---
 title: 安装基础软件
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
-original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
 l10n:
   sourceCommit: a53253307ade5c6e3eec896a5f2d799fdebe9ae8
 ---
@@ -10,7 +9,7 @@ l10n:
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
-在这篇文章中，我们将讨论进行简单网页开发所需的软件以及哪些软件是现在就需要安装的，包括代码编辑器和现代浏览器。
+在这篇文章中，我们将讨论进行简单 Web 开发所需的软件以及哪些软件是现在就需要安装的，包括代码编辑器和现代 Web 浏览器。
 
 <table>
   <tbody>
@@ -39,25 +38,25 @@ l10n:
 
 对于当前阶段，我们建议安装 [Visual Studio Code](https://code.visualstudio.com/)，它支持多种平台，功能强大，支持丰富，而且是我们主要使用的编辑器。现在先安装它，本文的其余部分会以它为例展开。
 
-## 现代浏览器
+## 现代 Web 浏览器
 
-现代浏览器对于网页开发至关重要，你可以在访客使用的浏览器上测试你的网站或应用。此外，最好保持你的网络浏览器处于最新版本，以确保它们支持最新的网络技术并应用最新的安全修复。
+现代 Web 浏览器对于 Web 开发至关重要，你可以在访客使用的浏览器上测试你的网站或应用。此外，最好保持你的 Web 浏览器处于最新版本，以确保它们支持最新的 Web 技术并应用最新的安全修复。
 
 > [!NOTE]
 > 大多数浏览器都会自动安装更新，在重启时切换到新版本。你通常也可以在浏览器的“关于”页面检查更新，例如（对于 macOS 的 Firefox/Chrome）在 Firefox > 关于 Firefox 或 Chrome > 关于 Google Chrome 中，或者（对于 Windows 的 Firefox/Chrome）在菜单图标 > 帮助 > 关于 Firefox 或菜单图标 > 帮助 > 关于 Google Chrome 中。
 
-对于当前阶段，你应该安装几个桌面和移动/替代设备浏览器来测试你的代码。尽管网络浏览器通常在桌面端、笔记本电脑和移动设备上出现，但其他设备上的网络浏览器也并不罕见，例如平板电脑、手表和电视。如果可能的话，确保下面列表中每一行你都安装了至少一个浏览器（这样以避免在基于相同的渲染引擎在多个浏览器中测试）：
+对于当前阶段，你应该安装几个桌面和移动/替代设备浏览器来测试你的代码。尽管 Web 浏览器通常在桌面端、笔记本电脑和移动设备上出现，但其他设备上的 Web 浏览器也并不罕见，例如平板电脑、手表和电视。如果可能的话，确保下面列表中每一行你都安装了至少一个浏览器（这样以避免仅在基于相同的渲染引擎的多个浏览器中测试）：
 
 - 桌面端浏览器：
-  - Chromium：[Google Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-cn/edge/)、[Vivaldi](https://vivaldi.com/)。
+  - Chromium：[Google Chrome](https://www.google.cn/chrome/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-cn/edge/)、[Vivaldi](https://vivaldi.com/)。
   - Gecko：[Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/new/)。
   - WebKit：[Apple Safari](https://www.apple.com/safari/)。
-- 移动端/附加设备浏览器：
-  - Chromium（Android）：[Google Chrome](https://www.google.com/chrome/go-mobile/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-cn/edge/mobile)、[三星浏览器](https://www.samsung.com.cn/support/model/samsung-internet/)、[Vivaldi](https://vivaldi.com/android/)。
+- 移动端/替代设备浏览器：
+  - Chromium（Android）：[Google Chrome](https://www.google.cn/chrome/go-mobile/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-cn/edge/mobile)、[三星浏览器](https://www.samsung.com.cn/support/model/samsung-internet/)、[Vivaldi](https://vivaldi.com/android/)。
   - Gecko（Android）：[Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/browsers/mobile/android/)。
   - WebKit（iOS）：[Apple Safari](https://www.apple.com/safari/)。
     > [!NOTE]
-    > 上面列出的大多数浏览器都有 iOS 版本，但由于苹果的 App Store 规则限制，这些浏览器在历史上都是由苹果的 WebKit 引擎驱动的。在本文写作的时候，由于监管变化，这些浏览器都开始开发基于自有渲染引擎的 iOS 版本。参见[苹果终于允许 Chrome 和 Firefox 在 iPhone 上运行完整版本了](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu)。
+    > 上面列出的大多数浏览器都有 iOS 版本，但由于苹果的 App Store 规则限制，这些浏览器在历史上都是由苹果的 WebKit 引擎驱动的。在本文撰写的时候，由于监管变化，这些浏览器都开始开发基于自有渲染引擎的 iOS 版本。参见[苹果终于允许 Chrome 和 Firefox 在 iPhone 上运行完整版本了](https://www.theverge.com/2024/1/25/24050478/apple-ios-17-4-browser-engines-eu)。
 
 ## 本地 Web 服务器
 
@@ -67,8 +66,8 @@ l10n:
 
 我们找到的让本地服务器在你的电脑上可用的最简单方法之一，就是使用代码编辑器扩展——这样，你就可以直接在代码编辑器中使用了。在 Visual Studio Code 中，请按照以下步骤操作：
 
-1. 使用 _查看_ > _扩展_ 菜单选项打开 _扩展_ 窗格。
-2. 在窗口顶部的“在应用商店中搜索扩展”框中，输入“live preview”。搜索结果的第一个应该就是微软创建的“[_Live Preview_](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)”扩展。
+1. 使用*查看* > *扩展*菜单选项打开*扩展*面板。
+2. 在面板顶部的“在应用商店中搜索扩展”框中，输入“live preview”。搜索结果的第一个应该就是微软创建的“[_Live Preview_](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)”扩展。
 3. 点击该选项，即可打开一个包含使用说明的扩展详情页。
 4. 点击*安装*按钮安装扩展。
 5. 现在，当你使用编辑器编辑 HTML 文件时，你就可以点击“Show Preview”按钮，在单独的标签页中打开实时示例。
@@ -86,8 +85,8 @@ MDN 学习区的文章不需要你创建自己的图像，但其中一些可能�
 比如：
 
 - macOS 自带一个名为[预览](https://support.apple.com/zh-cn/guide/preview/welcome/mac)的工具。它主要用于查看图片和 PDF 文件，同时也具备一些非常实用的图像编辑功能，包括调整大小、旋转、裁剪、添加标记以及在不同文件类型之间转换。
-- Windows 内置的[照片](https://support.microsoft.com/zh-cn/windows/manage-photos-and-videos-with-microsoft-photos-app-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b)也有许多类似的功能。
-- [tinypng](https://tinypng.com/) 网站提供免费服务，可以压缩 PNG、JPEG 等格式的图片，这也是在为网站准备资源时经常会做的工作。（译者注：也推荐使用 [imagesTool](https://imagestool.com/zh_CN/) 完成图片压缩与格式转换，这个网站是纯前端实现的，这意味着你不需要将文件上传至服务器，同时该网站的服务完全免费）
+- Windows 内置的[照片](https://support.microsoft.com/zh-cn/windows/使用-microsoft照片-应用管理照片和视频-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b)也有许多类似的功能。
+- [tinypng](https://tinypng.com/) 网站提供免费服务，可以压缩 PNG、JPEG 等格式的图片，这也是在为网站准备资源时经常会做的工作。
 
 如果你有更实质性的图形编辑/创作需求，你可能需要一个完整的图形软件包。在商业产品中，[Adobe Photoshop](https://www.adobe.com/products/photoshop.html) 长期以来一直是行业标杆，同时也有一些受欢迎的新兴产品，如 [Figma](https://www.figma.com/)、[Sketch](https://www.sketch.com/) 和 [Canva 可画](https://www.canva.com)。
 
@@ -101,7 +100,7 @@ MDN 学习区的文章不需要你创建自己的图像，但其中一些可能�
 
 ## 网站部署应用
 
-完成网站或应用（在本地计算机或开发服务器上）的开发后，你可能想将其上传到远程服务器，这样用户就可以输入与之关联的网址，在网络上查看它了！
+完成网站或应用（在本地计算机或开发服务器上）的开发后，你可能想将其上传到远程 Web 服务器，这样用户就可以输入与之关联的网址，在 Web 上查看它了！
 
 有各种方法可以做到这一点，比如购买托管服务并使用 [SFTP 应用](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server#sftp)、使用 [GitHub Pages](https://pages.github.com/) 或 [Netlify](https://www.netlify.com/) 等服务，甚至使用 [Glitch](https://glitch.com/) 或 [CodePen](https://codepen.io/) 等工具构建一个快速演示与他人分享。
 
