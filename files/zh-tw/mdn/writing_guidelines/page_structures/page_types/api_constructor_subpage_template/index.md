@@ -56,22 +56,22 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_
 > 這些宏由工具鏈自動新增（無需手動新增或移除）：
 >
 > - `\{{SeeCompatTable}}` — 此宏會生成一個 **這是實驗性技術** 橫幅，表示該技術為 [實驗性](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)。
-    >   如果該技術是實驗性的，且在 Firefox 中透過偏好設定隱藏，你還應在 [Firefox 實驗功能](/zh-TW/docs/Mozilla/Firefox/Experimental_features) 頁面中為其填寫條目。
+>   如果該技術是實驗性的，且在 Firefox 中透過偏好設定隱藏，你還應在 [Firefox 實驗功能](/zh-TW/docs/Mozilla/Firefox/Experimental_features) 頁面中為其填寫條目。
 > - `\{{Deprecated_Header}}` — 此宏會生成一個 **已棄用** 橫幅，表示該技術的使用已被[不建議](/zh-TW/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated)。
 > - `\{{Non-standard_Header}}` — 此宏會生成一個 **非標準** 橫幅，表示該功能不屬於任何正式規格。
 >
 > 你應根據以下建議更新或移除下列宏：
 >
 > - `\{{SecureContext_Header}}` — 此宏會生成一個 **安全環境** 橫幅，表示該技術僅在 [安全環境](/zh-TW/docs/Web/Security/Secure_Contexts) 中可用。
-    >   如果該技術非安全環境專用，則可移除此宏呼叫。
-    >   如果是，則你還應在 [受限於安全環境的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) 頁面中為其新增條目。
+>   如果該技術非安全環境專用，則可移除此宏呼叫。
+>   如果是，則你還應在 [受限於安全環境的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) 頁面中為其新增條目。
 > - `\{{AvailableInWorkers}}` — 此宏會生成一個 **Worker 可用** 的註記，表示該技術在 [Worker 環境](/zh-TW/docs/Web/API/Web_Workers_API) 中可用。
-    >   如果該技術僅在 window 環境中可用，則可移除此宏呼叫。
-    >   如果該技術也或僅在 Worker 環境中可用，則你可能需要傳遞參數以指明其可用性（請參閱 [\\{{AvailableInWorkers}} 宏原始碼](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 了解所有可用值），並可能需在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) 頁面中為其新增條目。
+>   如果該技術僅在 window 環境中可用，則可移除此宏呼叫。
+>   如果該技術也或僅在 Worker 環境中可用，則你可能需要傳遞參數以指明其可用性（請參閱 [\\{{AvailableInWorkers}} 宏原始碼](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) 了解所有可用值），並可能需在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#supported_web_apis) 頁面中為其新增條目。
 > - `\{{APIRef("GroupDataName")}}` — 此宏會生成左側參考側邊欄，顯示與當前頁面相關的快速參考連結。
-    >   例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。
-    >   若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。
-    >   請參閱我們的[API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
+>   例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向該 API 的其他頁面。
+>   若要為你的 API 生成正確的側邊欄，你需要在我們的 GitHub repo 中新增一個 `GroupData` 條目，並在宏呼叫中以 _GroupDataName_ 替換該條目名稱。
+>   請參閱我們的[API 參考側邊欄指南](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)以獲取更多資訊。
 > - 複製此頁面時，請記得移除 `\{{MDNSidebar}}` 宏。
 >
 > 請勿手動新增狀態標頭宏。請參閱[如何新增或更新功能狀態](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)了解如何將這些狀態新增至頁面中。
