@@ -67,7 +67,7 @@ em {
 
 #### 結果
 
-{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
+{{EmbedLiveSample("色と固有の文字で強調", 450, 100)}}
 
 ## 仕様書
 
