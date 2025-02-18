@@ -9,7 +9,20 @@ l10n:
 
 **`do...while`** 语句创建了一个循环，只要测试条件为 true，该循环就会执行指定语句。执行语句后会对条件进行评估，从而使指定语句至少执行一次。
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## 语法
 

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 O método **`filter()`** cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
 
-{{EmbedInteractiveExample("pages/js/array-filter.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## Sintaxe
 

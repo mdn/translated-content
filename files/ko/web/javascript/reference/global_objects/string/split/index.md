@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/String/split
 
 **`split()`** 메서드는 {{jsxref("String")}} 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다.
 
-{{EmbedInteractiveExample("pages/js/string-split.html")}}
+{{InteractiveExample("JavaScript Demo: String.split()")}}
+
+```js interactive-example
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
 
 ## 구문
 

@@ -9,7 +9,20 @@ l10n:
 
 **`Math.min()`** 정적 메서드는 입력 매개변수로 주어진 숫자 중 가장 작은 수를 반환하거나, 매개변수가 없으면 {{jsxref("Infinity")}}를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-min.html")}}
+{{InteractiveExample("JavaScript Demo: Math.min()")}}
+
+```js interactive-example
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
+```
 
 ## 구문
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation
 
 L'opérateur d'exponentiation (`**`) fournit le résultat obtenu lorsqu'on élève le premier opérande à la puissance indiquée par le second. Il est équivalent `Math.pow` exception faite que cet opérateur permet également d'utiliser des valeurs BigInt comme opérandes.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## Syntaxe
 

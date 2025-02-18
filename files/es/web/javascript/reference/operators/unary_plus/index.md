@@ -9,7 +9,30 @@ l10n:
 
 El operador **unario más (`+`)** precede a su operando y evalúa a su operando intentando [convertirlo en un número](/es/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), si aún no lo es.
 
-{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+
+```js interactive-example
+const x = 1;
+const y = -1;
+
+console.log(+x);
+// Expected output: 1
+
+console.log(+y);
+// Expected output: -1
+
+console.log(+"");
+// Expected output: 0
+
+console.log(+true);
+// Expected output: 1
+
+console.log(+false);
+// Expected output: 0
+
+console.log(+"hello");
+// Expected output: NaN
+```
 
 ## Sintaxis
 

@@ -39,7 +39,7 @@ margin-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 外边距的大小为固定值。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
+  - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
 - `auto`
 
   - : 右边距接收未使用的水平空间中的一部分（这主要由所使用的布局模式确定）。如果 `margin-left` 和 `margin-right` 的值都是 `auto`，则最后计算的空间是均匀分布的。下表总结了不同的情况：

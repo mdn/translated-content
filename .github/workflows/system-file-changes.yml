@@ -11,6 +11,8 @@ on:
       - package.json
       - yarn.lock
 
+permissions: {}
+
 jobs:
   block:
     # This make sure it only runs on our origin repo

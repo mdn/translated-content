@@ -37,7 +37,7 @@ _変更なし。_
 ### JavaScript
 
 - [RegExp match indices](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) をサポートしました ([Firefox バグ 1519483](https://bugzil.la/1519483))。
-- [`Intl.DisplayNames()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) および [`Intl.ListFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) で、コンストラクターに渡す `options` が [オブジェクト](/ja/docs/Learn/JavaScript/Objects) であるかを厳密に確認して、文字列や他のプリミティブ値を使用した場合に例外が発生するようになりました ([Firefox バグ 1696881](https://bugzil.la/1696881))。
+- [`Intl.DisplayNames()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames) および [`Intl.ListFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat) で、コンストラクターに渡す `options` が [オブジェクト](/ja/docs/Learn_web_development/Core/Scripting/Object_basics) であるかを厳密に確認して、文字列や他のプリミティブ値を使用した場合に例外が発生するようになりました ([Firefox バグ 1696881](https://bugzil.la/1696881))。
 
 ### HTTP
 

@@ -9,7 +9,20 @@ l10n:
 
 **`do...while`** 文は指定された文を、テスト条件が false に評価されるまで実行するループを作成します。条件は文を実行した後に評価されます。結果として、指定された文は少なくとも 1 回は実行されます。
 
-{{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Do...While")}}
+
+```js interactive-example
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
+// Expected output: "12345"
+```
 
 ## 構文
 

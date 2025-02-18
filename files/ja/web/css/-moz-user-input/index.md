@@ -1,5 +1,5 @@
 ---
-title: "-moz-user-input"
+title: -moz-user-input
 slug: Web/CSS/-moz-user-input
 l10n:
   sourceCommit: 016ea3d6160143ec4a05d12be1bff9cad594f0e5

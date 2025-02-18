@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
 
 Метод **`Object.getOwnPropertyNames()`** возвращает массив со всеми свойствами (независимо от того, перечисляемые они или нет), найденными непосредственно в переданном объекте.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertynames.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+
+```js interactive-example
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## Синтаксис
 

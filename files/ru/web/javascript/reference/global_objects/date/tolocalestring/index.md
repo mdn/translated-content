@@ -11,7 +11,19 @@ l10n:
 
 При каждом вызове `toLocaleString` происходит поиск по большой базе локализованных строк, что может быть неэффективным. Когда метод вызывается много раз с одинаковыми параметрами, лучше создать объект {{jsxref("Intl.DateTimeFormat")}} и использовать его метод {{jsxref("Intl/DateTimeFormat/format", "format()")}}, потому что объект `DateTimeFormat` запоминает переданные ему параметры и может кешировать данные, чтобы последующие вызовы `format` могли выполнять поиск с более определённым контекстом.
 
-{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+// British English uses day-month-year order and 24-hour time without AM/PM
+console.log(event.toLocaleString("en-GB", { timeZone: "UTC" }));
+// Expected output: "20/12/2012, 03:00:00"
+
+// Korean uses year-month-day order and 12-hour time with AM/PM
+console.log(event.toLocaleString("ko-KR", { timeZone: "UTC" }));
+// Expected output: "2012. 12. 20. 오전 3:00:00"
+```
 
 ## Синтаксис
 

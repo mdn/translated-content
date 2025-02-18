@@ -1,5 +1,5 @@
 ---
-title: "::backdrop"
+title: ::backdrop
 slug: Web/CSS/::backdrop
 l10n:
   sourceCommit: 7dae0a08ea89d28b9360c666291a3d86a593da37
@@ -64,7 +64,8 @@ dialog::backdrop {
 
 ```css
 ::backdrop {
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle,
       #fff 0 5vw,
       transparent 5vw 20vw,

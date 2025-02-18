@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 
 **`Math.tan()`** 함수는 탄젠트 값을 반환합니다
 
-{{EmbedInteractiveExample("pages/js/math-tan.html")}}
+{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+
+```js interactive-example
+function getTanFromDegrees(degrees) {
+  return Math.tan((degrees * Math.PI) / 180);
+}
+
+console.log(getTanFromDegrees(0));
+// Expected output: 0
+
+console.log(getTanFromDegrees(45));
+// Expected output: 0.9999999999999999
+
+console.log(getTanFromDegrees(90));
+// Expected output: 16331239353195370
+```
 
 ## 문법
 

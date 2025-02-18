@@ -1,45 +1,19 @@
 ---
 title: MathML 添字要素
 slug: Web/MathML/Guides/Scripts
-original_slug: Learn/MathML/First_steps/Scripts
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+{{MathMLRef}}
+
+{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
 
 基本的な数学記法の復習を続け、添字つきの MathML 要素の構築に焦点を当てます。
 
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提知識:</th>
-      <td>
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアがインストールされていること</a
-        >、
-        <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイルでの作業</a
-        >に関する基本的な知識、 HTML の基本（
-        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 入門</a
-        >を学ぶこと）
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">目標:</th>
-      <td>
-        添字要素を作成する基本的な MathML 要素に慣れること。
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 下付き文字と上付き文字
 
-[前回の記事](/ja/docs/Learn/MathML/First_steps/Fractions_and_roots)で見たものと同様に、`<msub>`、`<msup>`、`<msubsup>` は、ちょうど 2 つの要素（`<msub>`、`<msup>`の場合）、または 3 つの要素（`<msubsup>` の場合）ガ指定された特別な構造があります。
+[前回の記事](/ja/docs/Web/MathML/Guides/Fractions_and_roots)で見たものと同様に、`<msub>`、`<msup>`、`<msubsup>` は、ちょうど 2 つの要素（`<msub>`、`<msup>`の場合）、または 3 つの要素（`<msubsup>` の場合）ガ指定された特別な構造があります。
 
 ```html
 <p>
@@ -149,7 +123,7 @@ document.getElementById("showSolution").addEventListener("click", () => {
 
 以下のMathML式は、分数、根号、添字を入れ子にして、より複雑な式を格納しています。添字要素 `<msub>`, `<msup>`, `<msubsup>`, `<munder>`, `<mover>`, `<munderover>` でレイアウトされた要素を推測してみてください。このような要素をクリックするたびに、その要素が強調表示され、確認メッセージが表示されます。最後に、 MathML のソースを読んで、それが予想と一致しているかどうかを確認してください。
 
-```html hidden
+```html-nolint hidden
 <!doctype html>
 <html lang="ja">
   <head>
@@ -172,8 +146,8 @@ document.getElementById("showSolution").addEventListener("click", () => {
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow
-          ><mo>|</mo>
+        <mrow>
+          <mo>|</mo>
           <mover>
             <mi>α</mi>
             <mo>→</mo>
@@ -249,7 +223,7 @@ scriptedElements.forEach((scripted) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -257,13 +231,13 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 ## それ以外の演算子プロパティ
 
-前回、いくつかの [`<mo>` 要素のプロパティ](/ja/docs/Learn/MathML/First_steps/Text_containers#operator_properties_of_mo)、すなわち縦方向の伸縮と空間について見てきました。これで添字要素が利用できるようになったので、このリストを拡張することができます。[前回の例](#アクティブラーニング_添字要素を認識する)を多少修正することで行います。
+前回、いくつかの [`<mo>` 要素のプロパティ](/ja/docs/Web/MathML/Guides/Text_containers#mo_の演算子プロパティ)、すなわち縦方向の伸縮と空間について見てきました。これで添字要素が利用できるようになったので、このリストを拡張することができます。[前回の例](#アクティブラーニング_添字要素を認識する)を多少修正することで行います。
 
 ### 水平方向の伸長
 
-最初に <math> <mi>β</mi> <mo>≔</mo> <mrow> <msub> <mi>z</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>z</mi> <mn>2</mn> </msub> </mrow> </math> と <math> <mi>α</mi> <mo>≔</mo> <mrow> <msub> <mi>v</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>v</mi> <mn>2</mn> </msub> </mrow> </math> の置き換えを行ってみましょう。
+最初に <math><mi>β</mi><mo>≔</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><annotation encoding="TeX">\beta := z*{1} + z*{2}</annotation></math> and <math><mi>α</mi><mo>≔</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><annotation encoding="TeX">\alpha := v*{1} + v*{2}</annotation></math> の置き換えを行ってみましょう。
 
-```html hidden
+```html-nolint hidden
 <!doctype html>
 <html lang="ja">
   <head>
@@ -296,8 +270,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow
-          ><mo>|</mo>
+        <mrow>
+          <mo>|</mo>
           <mover>
             <mrow>
               <msub>
@@ -361,16 +335,16 @@ math {
 
 {{ EmbedLiveSample('Stretching_in_horizontal_direction', 700, 200, "", "") }}
 
-これで、下カッコ "⎵" と右向き矢印 "→" は、置換された値の幅に応じて水平方向に伸びることがわかりました。 `<mrow>` 内の伸縮しない兄弟の高さに応じて、[いくつかの縦方向の演算子は伸縮できる](/ja/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators) ことを思い出してください。同様に、いくつかの水平方向の演算子は `<munder>`、`<mover>`、`<munderover>` 要素内の伸縮しない兄弟の幅に応じて伸縮を行います。
+これで、下カッコ "⎵" と右向き矢印 "→" は、置換された値の幅に応じて水平方向に伸びることがわかりました。 `<mrow>` 内の伸縮しない兄弟の高さに応じて、[いくつかの縦方向の演算子は伸縮できる](/ja/docs/Web/MathML/Guides/Text_containers#active_learning_stretchy_operators) ことを思い出してください。同様に、いくつかの水平方向の演算子は `<munder>`、`<mover>`、`<munderover>` 要素内の伸縮しない兄弟の幅に応じて伸縮を行います。
 
 > [!NOTE]
 > 伸縮は `<munder>`、`<mover>` 、`<munderover>` 要素のどの子要素に対しても、真下付き文字や真上付き文字に限らず行うことができます。
 
 ### 大きな演算子と制限
 
-これまでの例では、 [`display="block"`](/ja/docs/Learn/MathML/First_steps/Getting_started#display_属性) 属性を使用しています。同じ例を、その属性なしで表示してみましょう。
+これまでの例では、 [`display="block"`](/ja/docs/Web/MathML/Guides/Getting_started#display_属性) 属性を使用しています。同じ例を、その属性なしで表示してみましょう。
 
-```html hidden
+```html-nolint hidden
 <!doctype html>
 <html lang="ja">
   <head>
@@ -403,8 +377,8 @@ math {
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow
-          ><mo>|</mo>
+        <mrow>
+          <mo>|</mo>
           <mover>
             <mrow>
               <msub>
@@ -478,9 +452,7 @@ math {
 
 ## まとめ
 
-この記事では、下付き・上付き・真下付き・真上付き文字のための要素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>`、`<munderover>` を紹介し、基本的なレイアウトの確認を完了しました。これらの要素を用いて、 `<mo>` 要素の新しい特性を簡単に紹介することができました。次の記事では、引き続き[表レイアウト](/ja/docs/Learn/MathML/First_steps/Tables)を取り上げます。
-
-{{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Fractions_and_roots", "Learn/MathML/First_steps/Tables", "Learn/MathML/First_steps")}}
+この記事では、下付き・上付き・真下付き・真上付き文字のための要素 `<msub>`、`<msup>`、`<msubsup>`、`<munder>`、`<mover>`、`<munderover>` を紹介し、基本的なレイアウトの確認を完了しました。これらの要素を用いて、 `<mo>` 要素の新しい特性を簡単に紹介することができました。次の記事では、引き続き[表レイアウト](/ja/docs/Web/MathML/Guides/Tables)を取り上げます。
 
 ## 関連情報
 
@@ -490,3 +462,5 @@ math {
 - [`<munder>` 要素](/ja/docs/Web/MathML/Element/munder)
 - [`<mover>` 要素](/ja/docs/Web/MathML/Element/mover)
 - [`<munderover>` 要素](/ja/docs/Web/MathML/Element/munderover)
+
+{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}

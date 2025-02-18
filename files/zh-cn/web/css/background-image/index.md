@@ -25,11 +25,8 @@ slug: Web/CSS/background-image
 可以提供由逗号分隔的多个值来指定多个背景图像：
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 0, 0.5),
-    rgba(0, 0, 255, 0.5)
-  ),
+background-image:
+  linear-gradient(to bottom, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
   url("cat-front.png");
 ```
 

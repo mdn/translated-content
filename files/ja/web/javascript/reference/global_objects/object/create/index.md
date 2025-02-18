@@ -9,7 +9,24 @@ l10n:
 
 **`Object.create()`** 静的メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## 構文
 

@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Statements/for...of
 
 L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Les_protocoles_iteration","objet itérable","#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Fonctions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
 
-{{EmbedInteractiveExample("pages/js/statement-forof.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntaxe
 

@@ -1,5 +1,5 @@
 ---
-title: ":scope"
+title: :scope
 slug: Web/CSS/:scope
 l10n:
   sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a

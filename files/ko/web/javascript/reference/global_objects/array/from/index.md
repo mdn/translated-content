@@ -9,7 +9,15 @@ l10n:
 
 **`Array.from()`** 정적 메서드는 [순회 가능](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#순회_가능_프로토콜) 또는 [유사 배열](/ko/docs/Web/JavaScript/Guide/Indexed_collections##유사_배열_객체_다루기) 객체에서 얕게 복사된 새로운 `Array` 인스턴스를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 구문
 

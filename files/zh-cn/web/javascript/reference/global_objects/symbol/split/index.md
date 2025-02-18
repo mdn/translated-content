@@ -9,7 +9,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 详情请参阅 [`RegExp.prototype[Symbol.split]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) 和 {{jsxref("String.prototype.split()")}}。
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Symbol.split", "taller")}}
+
+```js interactive-example
+class Split1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.split](string) {
+    const index = string.indexOf(this.value);
+    return `${this.value}${string.substring(0, index)}/${string.substring(
+      index + this.value.length,
+    )}`;
+  }
+}
+
+console.log("foobar".split(new Split1("foo")));
+// Expected output: "foo/bar"
+```
 
 ## 值
 

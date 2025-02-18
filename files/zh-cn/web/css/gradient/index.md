@@ -5,7 +5,7 @@ slug: Web/CSS/gradient
 
 {{CSSRef}}
 
-**`<gradient>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，包含两种或多种颜色的过渡转变。
+**`<gradient>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 是 {{cssxref("&lt;image&gt;")}} 的一种特殊类型，包含两种或多种颜色的过渡转变。
 
 {{EmbedInteractiveExample("pages/css/type-gradient.html")}}
 
@@ -171,6 +171,6 @@ div {
 
 - [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
+- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS 单位和值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
 - [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

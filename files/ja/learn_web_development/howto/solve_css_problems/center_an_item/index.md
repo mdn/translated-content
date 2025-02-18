@@ -1,9 +1,8 @@
 ---
 title: アイテムを中央揃えするには
 slug: Learn_web_development/Howto/Solve_CSS_problems/Center_an_item
-original_slug: Learn/CSS/Howto/Center_an_item
 l10n:
-  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
@@ -16,7 +15,29 @@ CSS を使用して、あるボックスを別のボックスの中に配置す�
 
 下記の例では、親コンテナーに `display: flex` を指定し、水平方向に配置するために {{cssxref("justify-content")}} を center に、垂直方向に配置するために {{cssxref("align-items")}} を center に設定しています。
 
-{{EmbedGHLiveSample("css-examples/howto/center.html", '100%', 700)}}
+```html live-sample___center
+<div class="wrapper">
+  <div class="box">これを中央揃えします</div>
+</div>
+```
+
+```css live-sample___center
+.wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background-color: rgb(69 164 181);
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("center", "", "220px")}}
 
 > [!NOTE]
 > このテクニックを使用して、1 つ以上の要素を別の要素の中に配置することができます。上の例では、{{cssxref("justify-content")}} と {{cssxref("align-items")}} の値を任意の有効な値に変更してみてください。

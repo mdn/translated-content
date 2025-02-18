@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 전역 **`NaN`** 속성은 Not-A-Number(숫자가 아님)를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## 값
 

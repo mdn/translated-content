@@ -22,7 +22,7 @@ slug: Web/HTML/Element/picture
 - 遇到不支持的特定格式时，**提供替代的图像格式**。
 
   > [!NOTE]
-  > 例如，像 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)中找到支持的图像格式的列表。
+  > 例如，像 [AVIF](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_图像) 或 [WEBP](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_图像) 这样的新格式具有诸多优点，但可能不受浏览器的支持。可以在[图像文件格式和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)中找到支持的图像格式的列表。
 
 - 通过加载最适合观看者显示的图像来**节省带宽和提高页面加载速度**。
 

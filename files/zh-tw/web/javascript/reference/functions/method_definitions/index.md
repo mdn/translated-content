@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 
 自 ECMAScript 2015 開始，引入了一種於物件初始器（objects initializers）中定義方法的簡短語法。是一個將函式指派予方法名稱的簡便方式。
 
-{{EmbedInteractiveExample("pages/js/functions-definitions.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+
+```js interactive-example
+const obj = {
+  foo() {
+    return "bar";
+  },
+};
+
+console.log(obj.foo());
+// Expected output: "bar"
+```
 
 ## 語法
 

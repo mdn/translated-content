@@ -68,7 +68,7 @@ object-position: unset;
 
 それぞれ MDN のロゴを表示する 2 つの {{HTMLElement("img")}} 要素があります。
 
-```html
+```html live-sample___positioning_image_content
 <img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
 <img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
@@ -77,7 +77,7 @@ object-position: unset;
 
 この CSS には、`<img>` 要素自体の既定のスタイルと、2 つの画像それぞれに個別のスタイルが含まれています。
 
-```css
+```css live-sample___positioning_image_content
 img {
   width: 300px;
   height: 250px;

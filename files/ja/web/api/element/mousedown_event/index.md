@@ -3,7 +3,7 @@ title: "Element: mousedown イベント"
 short-title: mousedown
 slug: Web/API/Element/mousedown_event
 l10n:
-  sourceCommit: b965392d6e4f2c897e914a3b69dec3e2a4212782
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}
@@ -24,7 +24,7 @@ onmousedown = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("MouseEvent")}} です。 {{domxref("UIEvent")}} および {{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -94,7 +94,7 @@ _親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承
 
 ## 関連情報
 
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
 - {{domxref("Element/click_event", "click")}}

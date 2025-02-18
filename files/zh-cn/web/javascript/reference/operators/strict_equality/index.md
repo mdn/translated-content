@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Strict_equality
 
 严格相等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符不同，严格相等运算符总是认为不同类型的操作数是不同的。
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+
+```js interactive-example
+console.log(1 === 1);
+// Expected output: true
+
+console.log("hello" === "hello");
+// Expected output: true
+
+console.log("1" === 1);
+// Expected output: false
+
+console.log(0 === false);
+// Expected output: false
+```
 
 ## 语法
 

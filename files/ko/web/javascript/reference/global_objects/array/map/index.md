@@ -11,7 +11,17 @@ l10n:
 호출한 배열의 모든 요소에 주어진 함수를 호출한 결과로 채운
 새로운 배열을 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## 구문
 

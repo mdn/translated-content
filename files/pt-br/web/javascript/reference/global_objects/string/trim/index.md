@@ -15,7 +15,17 @@ str.trim()
 
 O método `trim()` retorna o texto sem espaços em branco no início e/ou fim da string. O `trim()` não altera o valor da string original.
 
-{{EmbedInteractiveExample("pages/js/string-trim.html")}}
+{{InteractiveExample("JavaScript Demo: String.trim()")}}
+
+```js interactive-example
+const greeting = "   Hello world!   ";
+
+console.log(greeting);
+// Expected output: "   Hello world!   ";
+
+console.log(greeting.trim());
+// Expected output: "Hello world!";
+```
 
 ## Exemplos
 

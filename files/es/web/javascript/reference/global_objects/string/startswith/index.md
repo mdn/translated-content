@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
 
 El método **`startsWith()`** indica si una cadena de texto comienza con los caracteres de una cadena de texto concreta, devolviendo `true` o `false` según corresponda.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## Sintaxis
 

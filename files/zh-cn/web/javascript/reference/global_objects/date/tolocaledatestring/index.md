@@ -7,7 +7,26 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 
 **`toLocaleDateString()`** 方法返回指定日期对象日期部分的字符串，该字符串格式因不同语言而不同。在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，该方法仅是调用了 `Intl.DateTimeFormat` 方法。
 
-{{EmbedInteractiveExample("pages/js/date-tolocaledatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()")}}
+
+```js interactive-example
+const event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(event.toLocaleDateString("de-DE", options));
+// Expected output (varies according to local timezone): Donnerstag, 20. Dezember 2012
+
+console.log(event.toLocaleDateString("ar-EG", options));
+// Expected output (varies according to local timezone): الخميس، ٢٠ ديسمبر، ٢٠١٢
+
+console.log(event.toLocaleDateString(undefined, options));
+// Expected output (varies according to local timezone and default locale): Thursday, December 20, 2012
+```
 
 ## 语法
 

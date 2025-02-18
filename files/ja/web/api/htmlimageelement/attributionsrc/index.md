@@ -15,9 +15,9 @@ l10n:
 ブラウザーが画像ファイルを含む応答を受信すると、ソース/トリガーが登録されます。
 
 > [!NOTE]
-> ユーザーが必ずしもその画像を認識できるとは限らないことに留意してください。それは、帰属報告のみに使用される 1x1 の透明トラッキングピクセルである可能性があります。
+> ユーザーが必ずしもその画像を認識できるとは限らないことに留意してください。それは、帰属レポートのみに使用される 1x1 の透明トラッキングピクセルである可能性があります。
 
-詳しくは[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
 ## 値
 
@@ -75,4 +75,4 @@ imgElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 
 ## 関連情報
 
-- [帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API)
+- [帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API)

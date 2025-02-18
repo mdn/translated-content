@@ -3,12 +3,12 @@ title: HTML 属性リファレンス
 short-title: 属性
 slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: f30dffedcab86e62919265f08238ed712434a817
+  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
 
 {{HTMLSidebar("Attributes")}}
 
-HTML の要素は**属性**を持ちます。ユーザーが望む条件を満たすために、さまざまな方法で要素を構成したり、動作を調整したりする追加の値です。
+HTML 要素には**属性**が存在します。これは、ユーザーが求める基準を満たすために、要素を構成したり、さまざまな方法で動作を調整したりするための追加の値です。
 
 ## 属性一覧
 
@@ -35,7 +35,7 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
         <code><a href="/ja/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
-      <td>対応している文字集合のリストです。</td>
+      <td>文字集合であり、指定した場合は <code>"UTF-8"</code> でなければなりません。</td>
     </tr>
     <tr>
       <td>
@@ -1301,34 +1301,34 @@ HTML の要素は**属性**を持ちます。ユーザーが望む条件を満�
 
 ## コンテンツ属性と IDL 属性
 
-HTML では、ほとんどの属性に **コンテンツ属性** と **IDL (Interface Definition Language) 属性** の 2 つの側面があります。
+HTML では、ほとんどの属性に**コンテンツ属性**と **IDL (Interface Definition Language) 属性**の 2 つの側面があります。
 
-コンテンツ属性はコンテンツ (HTML コード) から設定する属性であり、 {{domxref("element.setAttribute()")}} や {{domxref("element.getAttribute()")}} を使用して設定または取得できます。 コンテンツ属性は値として数値を想定するものであっても、常に文字列です。例えば コンテンツ属性を使用して {{HTMLElement("input")}} 要素の `maxlength` 属性に 42 を設定するには、その要素で `setAttribute("maxlength", "42")` を呼び出さなければなりません。
+コンテンツ属性はコンテンツ（HTML コード）から設定する属性であり、 {{domxref("element.setAttribute()")}} や {{domxref("element.getAttribute()")}} を使用して設定または取得できます。 コンテンツ属性は値として数値を想定するものであっても、常に文字列です。例えば コンテンツ属性を使用して {{HTMLElement("input")}} 要素の `maxlength` 属性に 42 を設定するには、その要素で `setAttribute("maxlength", "42")` を呼び出さなければなりません。
 
 IDL 属性は JavaScript プロパティとしても知られています。これらは、 JavaScript のプロパティを使って、 `element.foo` のように読み込んだり設定したりすることができます。 IDL 属性は常に、取得する際に値を返すために基盤となっているコンテンツ属性を使用し（変換することもあります）、設定するにはコンテンツ属性に何かを保存します。言い換えれば、 IDL 属性は要するにコンテンツ属性を反映します。
 
-ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性のデフォルト値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text タイプになりますが、"type" コンテンツ属性の値は "foobar" になります。しかし、`type` IDL 属性は文字列 "text" を返します。
+ほとんどの場合、IDL 属性は実際に使用する値として自身の値を返します。例えば {{HTMLElement("input")}} 要素の `type` 属性の既定値は "text" であるので、`input.type="foobar"` を設定すると `<input>` 要素は (外見と動作が) text 型になりますが、 "type" コンテンツ属性の値は "foobar" になります。しかし、 `type` の IDL 属性は文字列 "text" を返します。
 
-IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値 (符号付き long) です。 IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
+IDL 属性は常に文字列とは限りません。例えば `input.maxlength` は数値（符号付き long）です。 IDL 属性を使用するときは望ましい型の値を読み書きするので、`input.maxlength` は常に数値を返し、また `input.maxlength` を設定するときは数値を要求します。他の型で渡すと、標準的な JavaScript の型変換規則に従って自動的に数値へ変換されます。
 
-IDL 属性は、[他の型を反映する](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)ことができます。符号なし long、URL、論理値などです。残念ながら、明確な規則はなく、 IDL 属性が対応するコンテンツ属性と結びついてどのように振る舞うかは、属性によって異なります。ほとんどの場合は[仕様書にあるレイアウトルール](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)に従いますが、そうでない場合もあります。 HTML 仕様では可能な限り開発者にやさしいものにしようとしていますが、さまざまな理由 (たいていは歴史的な理由) により奇妙な動作になる属性 (例えば `select.size`) があり、実際どのように動作するかを理解するために仕様書を読むようにしましょう。
+IDL 属性は、[他の型を反映する](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)ことができます。符号なし long、URL、論理値などです。残念ながら、明確な規則はなく、 IDL 属性が対応するコンテンツ属性と結びついてどのように振る舞うかは、属性によって異なります。ほとんどの場合は[仕様書にあるレイアウトルール](https://html.spec.whatwg.org/multipage/urls-and-fetching.html)に従いますが、そうでない場合もあります。 HTML 仕様では可能な限り開発者にやさしいものにしようとしていますが、さまざまな理由 (たいていは歴史的な理由) により奇妙な動作になる属性（例えば `select.size`）があり、実際どのように動作するかを理解するために仕様書を読むようにしましょう。
 
 ## 論理属性
 
-一部のコンテンツ属性 (例えば `required`, `readonly`, `disabled`) は[論理属性](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes) (boolean attributes) と呼ばれています。論理属性は存在すれば、その値が **true** となり、存在しなければ、その値が **false** となります。
+一部のコンテンツ属性（例えば `required`, `readonly`, `disabled`）は「論理属性」 ([boolean attributes](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes)) と呼ばれています。論理属性は存在すれば、その値が**真**となり、存在しなければ、その値が**偽**となります。
 
-HTML では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列 (属性の値が割り当てられないことがあります) または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
+HTML では、論理属性に許されている値の制約を定義しています。属性が存在する場合は、値は空文字列（属性の値が割り当てられないことがあります）または属性の正式名に ASCII で大文字・小文字まで一致する値のどちらかで、前後にホワイトスペースを含んではいけません。以下の例は論理属性をマークアップする正しい方法です。
 
 ```html-nolint
-<div itemscope>This is valid HTML but invalid XML.</div>
-<div itemscope=itemscope>This is also valid HTML but invalid XML.</div>
-<div itemscope="">This is valid HTML and also valid XML.</div>
+<div itemscope>これは HTML では有効ですが XML では無効です。</div>
+<div itemscope=itemscope>これも HTML では有効ですが XML では無効です。</div>
+<div itemscope="">これは HTML でも XML でも有効です。</div>
 <div itemscope="itemscope">
-  This is also valid HTML and XML, but perhaps a bit verbose.
+  これは HTML でも XML でも有効ですが、おそらく少し冗長です。
 </div>
 ```
 
-明確にするために、 `"true"` および `"false"` という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が **true** であると解釈されます。
+明確にするために、 `"true"` および `"false"` という値は論理属性では許可されていません。偽の値を表すには、属性ごと省略する必要があります。この制約により、いくつかのよくある誤解が明確になります。例えば `checked="false"` は、属性が存在するため、その要素の `checked` 属性が**真**であると解釈されます。
 
 ## イベントハンドラー属性
 
@@ -1340,9 +1340,9 @@ HTML では、論理属性に許されている値の制約を定義していま
 すべてのイベントハンドラー属性は文字列を受け入れます。この文字列は、 [JavaScript 関数](/ja/docs/Web/JavaScript/Reference/Functions)、たとえば `function name(/*args*/) {body}` などを生成するために使用され、`name` は属性の名前、`body` は属性の値となります。ハンドラーは、対応する JavaScript イベントハンドラーと同じ引数を受け取ります。ほとんどのハンドラーは `event` 引数 1 つだけを受け取りますが、`onerror` は5つの引数 (`event`, `source`, `lineno`, `colno`, `error`) を受け取ります。これは、一般的に、属性内で変数 `event` を使用することができることを意味しています。
 
 ```html
-<div onclick="console.log(event)">Click me!</div>
-<!-- The synthesized handler has a name; you can reference itself -->
-<div onclick="console.log(onclick)">Click me!</div>
+<div onclick="console.log(event)">ここをクリック</div>
+<!-- 生成されたハンドラーには名前があります。自分自身で参照できます。 -->
+<div onclick="console.log(onclick)">ここをクリック</div>
 ```
 
 ## 関連情報

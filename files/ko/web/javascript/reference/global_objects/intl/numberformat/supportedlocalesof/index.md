@@ -8,7 +8,16 @@ l10n:
 {{JSRef}}
 **`Intl.NumberFormat.supportedLocalesOf()`** 정적 메서드는 런타임의 기본 로케일로 되돌아가지 않고 숫자 서식 지정에서 지원되는 제공된 로케일을 포함하는 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.NumberFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## 구문
 

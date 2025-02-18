@@ -13,7 +13,21 @@ l10n:
 > **Note:** {{jsxref("Object.hasOwn()")}} 가 권장됩니다.
 > `hasOwnProperty()` 는 이를 지원하는 브라우저에서만 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## 구문
 

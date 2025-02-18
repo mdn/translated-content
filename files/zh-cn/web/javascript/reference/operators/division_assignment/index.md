@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Division_assignment
 
 **除法赋值**（**`/=`**）运算符将变量除以右操作数的值，并将结果赋值给该变量。
 
-{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+a /= 2;
+console.log(a);
+// Expected output: 1.5
+
+a /= 0;
+console.log(a);
+// Expected output: Infinity
+
+a /= "hello";
+console.log(a);
+// Expected output: NaN
+```
 
 ## 语法
 

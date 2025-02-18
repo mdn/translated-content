@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 
 {{jsxref("RegExp")}} 实例的 **`[Symbol.match]()`** 方法指定了 [`String.prototype.match()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match) 的行为。此外，它的存在（或不存在）可能会影响对象是否被视为正则表达式。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.match](str) {
+    const result = RegExp.prototype[Symbol.match].call(this, str);
+    if (result) {
+      return "VALID";
+    }
+    return "INVALID";
+  }
+}
+
+console.log("2012-07-02".match(new RegExp1("([0-9]+)-([0-9]+)-([0-9]+)")));
+// Expected output: "VALID"
+```
 
 ## 语法
 

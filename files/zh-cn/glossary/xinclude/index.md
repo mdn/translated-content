@@ -14,4 +14,4 @@ XInclude 机制在任何主流浏览器中都不受支持。
 ## 参见
 
 - [XInclude 标准](https://www.w3.org/TR/xinclude-11/)
-- [`XPath`](/zh-CN/docs/Web/XPath)
+- [`XPath`](/zh-CN/docs/Web/XML/XPath)

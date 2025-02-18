@@ -9,7 +9,22 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`includes()`** 메서드는 배열의 항목에 특정 값이 포함되어 있는지를 판단하여 적절히 `true` 또는 `false`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## 구문
 

@@ -9,7 +9,23 @@ l10n:
 
 **`for await...of`** 语句创建一个循环，该循环遍历[异步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)以及[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。该语句只能在可以使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 的上下文中使用，包括[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)体内以及[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)中。
 
-{{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield 1;
+  yield 2;
+}
+
+(async function () {
+  for await (const num of foo()) {
+    console.log(num);
+    // Expected output: 1
+
+    break; // Closes iterator, triggers return
+  }
+})();
+```
 
 ## 语法
 

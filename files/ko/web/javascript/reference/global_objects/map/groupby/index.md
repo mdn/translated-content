@@ -14,7 +14,25 @@ l10n:
 
 이 메서드는 주로 객체와 연관된 요소를 그룹화할 때, 특히 객체가 시간이 지남에 따라 변경될 수 있는 경우에 유용합니다. 객체가 불변인 경우 대신 문자열을 사용하여 객체를 표현하고 {{jsxref("Object.groupBy()")}}로 요소를 그룹화할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 구문
 

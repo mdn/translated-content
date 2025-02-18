@@ -350,7 +350,7 @@ On notera que `no-cache` signifie plutôt que la réponse peut être enregistré
 Cache-Control: no-cache
 ```
 
-En théorie, si les directives rentrent en conflit, c'est la plus restrictive qui est respectée. Aussi, le premier exemple qui inutilement verbeux, car `private`, `no-cache`, `max-age=0` et `must-revalidate` sont en conflit avec `no-store`.
+En théorie, si les directives rentrent en conflit, c'est la plus restrictive qui est respectée. Aussi, le premier exemple qui suit est inutilement verbeux, car `private`, `no-cache`, `max-age=0` et `must-revalidate` sont en conflit avec `no-store`.
 
 ```http example-bad
 # Conflit entre les directives

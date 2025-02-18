@@ -11,7 +11,22 @@ l10n:
 
 > **참고:** `Math.random()`은 암호학적으로 안전한 난수를 제공하지 않습니다. 보안과 관련된 용도로 사용하지 마세요. 대신 Web Crypto API, 더 정확하게는 {{domxref("Crypto/getRandomValues", "window.crypto.getRandomValues()")}} 메서드를 사용하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/math-random.html")}}
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## 문법
 

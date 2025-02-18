@@ -11,7 +11,19 @@ La palabra clave **`this`** de una función se comporta un poco diferente en Jav
 
 En general, el valor de `this` está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para [establecer el valor de la función `this` independientemente de como es llamada](#funciones_enlazadas), y ES2015 introdujo las [funciones flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions) que no proporcionan su propio "binding" de `this` (se mantiene el valor de `this` del contexto léxico que envuelve a la función)
 
-{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - this")}}
+
+```js interactive-example
+const test = {
+  prop: 42,
+  func: function () {
+    return this.prop;
+  },
+};
+
+console.log(test.func());
+// Expected output: 42
+```
 
 ## Sintaxis
 

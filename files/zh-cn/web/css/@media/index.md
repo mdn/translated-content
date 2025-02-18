@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > [!NOTE]
 > 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
@@ -14,7 +14,7 @@ slug: Web/CSS/@media
 
 ## 语法
 
-`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/At-rule#条件规则组)中。
+`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)中。
 
 ```css
 /* 在你的代码的顶层 */

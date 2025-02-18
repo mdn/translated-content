@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 **`Number.isSafeInteger()`** 메서드는 전달된 값이 안전한 정숫값인지 확인합니다.
 
-{{EmbedInteractiveExample("pages/js/number-issafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+
+```js interactive-example
+function warn(x) {
+  if (Number.isSafeInteger(x)) {
+    return "Precision safe.";
+  }
+  return "Precision may be lost!";
+}
+
+console.log(warn(Math.pow(2, 53)));
+// Expected output: "Precision may be lost!"
+
+console.log(warn(Math.pow(2, 53) - 1));
+// Expected output: "Precision safe."
+```
 
 안전한 정숫값이란 다음과 같습니다.
 

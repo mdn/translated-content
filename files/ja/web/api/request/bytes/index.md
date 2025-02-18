@@ -3,10 +3,10 @@ title: "Request: bytes() メソッド"
 short-title: bytes()
 slug: Web/API/Request/bytes
 l10n:
-  sourceCommit: 9dfdc8522d5c53448643682bacaf33959487006a
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`bytes()`** は {{domxref("Request")}} インターフェイスのメソッドで、リクエスト本体を読み込み、{{jsxref("Uint8Array")}} で解決するプロミスとしてそれを返します。
 

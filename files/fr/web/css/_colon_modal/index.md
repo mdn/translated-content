@@ -1,5 +1,5 @@
 ---
-title: ":modal"
+title: :modal
 slug: Web/CSS/:modal
 l10n:
   sourceCommit: 96f68b50c1eac0af56f185d82c17c9ccaf212b67

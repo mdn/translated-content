@@ -3,10 +3,10 @@ title: "Request: bodyUsed プロパティ"
 short-title: bodyUsed
 slug: Web/API/Request/bodyUsed
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`bodyUsed`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエスト本体がまだ読み込まれていないかどうかを示す論理値です。
 

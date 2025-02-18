@@ -1,12 +1,11 @@
 ---
 title: 機能検出の実装
 slug: Learn_web_development/Extensions/Testing/Feature_detection
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 l10n:
-  sourceCommit: 02d11d391e3d376ed66b516c135147ea7cc34618
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 機能検出は、あるブラウザーがあるコードのブロックに対応しているかどうかを調べ、対応しているか (またはしていないか) に応じて異なるコードを実行することで、ブラウザーが常に動作し、ブラウザーによってクラッシュやエラーが発生しないようにします。この記事では、独自の単純な機能検出の書き方、実装をスピードアップするためのライブラリーの使い方、 `@supports` などの機能検出のためのネイティブ機能について詳しく説明します。
 
@@ -15,9 +14,9 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語の主要部に通じていること。
+        <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、<a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語の主要部に通じていること。
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          href="/ja/docs/Learn_web_development/Extensions/Testing/Introduction"
           >ブラウザー横断テストの基本</a
         >について高水準の考えを持っていること。
       </td>
@@ -35,7 +34,7 @@ l10n:
 
 機能検出の根底にあるアイデアは、プログラムを実行中のブラウザーがある特定の機能に対応しているかを確かめ、その結果に応じて異なるコードを実行するということで、対応ブラウザーと非対応ブラウザーのいずれでも許容できる挙動となるようにすることです。もしこの対策をしなければ、その特定の機能に対応していないブラウザーではサイトが正常に表示されなかったり、エラーを起こして使い勝手を悪化させるでしょう。
 
-それでは、[よくある JavaScript の問題の扱い](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#機能検出)で触れた例を振り返ってみましょう。[位置情報 API](/ja/docs/Web/API/Geolocation_API) (ブラウザーを実行している端末の位置情報を返します)は、 [Navigator](/ja/docs/Web/API/Navigator) オブジェクトに含まれる `geolocation` プロパティを主なエントリーポイントとして持っています。そこで、以下のようにしてブラウザーが位置情報機能に対応しているかどうかを検出できます。
+それでは、[よくある JavaScript の問題の処理](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#機能検出)で触れた例を振り返ってみましょう。[位置情報 API](/ja/docs/Web/API/Geolocation_API) (ブラウザーを実行している端末の位置情報を返します)は、 [Navigator](/ja/docs/Web/API/Navigator) オブジェクトに含まれる `geolocation` プロパティを主なエントリーポイントとして持っています。そこで、以下のようにしてブラウザーが位置情報機能に対応しているかどうかを検出できます。
 
 ```js
 if ("geolocation" in navigator) {
@@ -47,7 +46,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-次に進む前にもう 1 つお伝えさせてください。機能検出と**ブラウザー検出**（サイトにアクセスしているブラウザーの種類の検出）を混同しないでください。これはいかなる場合にも避けられるべき悪しき風習です。詳しくは[ブラウザー検出をしない](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#ブラウザー検出をしない)を参照してください。
+次に進む前にもう 1 つお伝えさせてください。機能検出と**ブラウザー検出**（サイトにアクセスしているブラウザーの種類の検出）を混同しないでください。これはいかなる場合にも避けられるべき悪しき風習です。詳しくは[ブラウザー検出をしない](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript#ブラウザー検出をしない)を参照してください。
 
 ## 自分自身で機能検出テストを書く
 
@@ -202,4 +201,4 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 次は自動テストについて見ていきます。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}

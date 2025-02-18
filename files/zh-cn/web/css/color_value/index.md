@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
+**`<color>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一个颜色。`<color>` 可以包括一个 [alpha 通道](https://zh.wikipedia.org/wiki/Alpha合成)_透明度值_，来表明颜色如何与背景色[混合（composite）](https://www.w3.org/TR/compositing-1/#simplealphacompositing)。
 
 > [!NOTE]
 > 尽管 `<color>` 被精确定义，但在不同的输出设备上仍然有可能表现不一致（有时甚至区别很大）。这是因为大多数设备不是经校准的，而且有些浏览器不支持输出设备的[色彩配置（color profile）](https://zh.wikipedia.org/wiki/ICC色彩特性文件)。
@@ -113,7 +113,7 @@ background-color: hsl(0deg 100% 50%);
 
 颜色插值会发生在[渐变](/zh-CN/docs/Web/CSS/gradient)、[过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)和[动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)中。
 
-当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/computed_value)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
+当对 `<color>` 值进行插值时，它们首先会转换成指定的色彩空间，然后颜色分量的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)会进行线性插值，插值速度由过渡和动画中的[缓动函数](/zh-CN/docs/Web/CSS/easing-function)决定。插值色彩空间默认为 Oklab，但是可以在一些与颜色相关的函数标记中通过 {{CSSXref("&lt;color-interpolation-method&gt;")}} 覆盖。
 
 ### 带有缺失分量时的插值
 

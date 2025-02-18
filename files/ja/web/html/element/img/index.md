@@ -83,7 +83,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     ブラウザーが画像ファイルを含むレスポンスを受信すると、対応するソースまたはトリガーイベントがオフになります。
 
     > [!NOTE]
-    > 詳しくは[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+    > 詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
     この属性には、設定できるバージョンが 2 つあります。
 

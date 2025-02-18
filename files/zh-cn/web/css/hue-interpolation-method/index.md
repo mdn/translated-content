@@ -5,7 +5,7 @@ slug: Web/CSS/hue-interpolation-method
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<hue-interpolation-method>`** 表示用于在 {{CSSXref("&lt;hue&gt;")}} 值之间插值的算法。此插值方法指定了如何根据色轮求两个色相值之间的中点。此数据类型用作数据类型 {{CSSXref("&lt;color-interpolation-method&gt;")}} 的分量。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<hue-interpolation-method>`** 表示用于在 {{CSSXref("&lt;hue&gt;")}} 值之间插值的算法。此插值方法指定了如何根据色轮求两个色相值之间的中点。此数据类型用作数据类型 {{CSSXref("&lt;color-interpolation-method&gt;")}} 的分量。
 
 在对 `<hue>` 值进行插值时，色相插值算法默认为 [`shorter`](#shorter)。
 

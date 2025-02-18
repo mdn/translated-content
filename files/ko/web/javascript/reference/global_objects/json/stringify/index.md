@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 **`JSON.stringify()`** 메서드는 JavaScript 값이나 객체를 JSON 문자열로 변환합니다. 선택적으로, `replacer`를 함수로 전달할 경우 변환 전 값을 변형할 수 있고, 배열로 전달할 경우 지정한 속성만 결과에 포함합니다.
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## 구문
 

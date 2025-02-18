@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`filter()`** 메서드는 지정된 형식화 배열의 일부 복사본을 생성하며, 지정된 형식화 배열에서 제공된 함수에 의해 구현된 테스트를 통과한 요소로만 필터링됩니다. 이 메서드는 {{jsxref("Array.prototype.filter()")}}와 동일한 알고리즘을 사용합니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-filter.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.filter()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, 20, -30, 40, -50]);
+const negInt8 = int8.filter(isNegative);
+
+console.log(negInt8);
+// Expected output: Int8Array [-10, -30, -50]
+```
 
 ## 구문
 

@@ -9,7 +9,21 @@ La méthode **`at()`** prend un entier en argument et renvoie l'élément du tab
 
 L'accès aux éléments d'un tableau en utilisant les crochets ne permet que d'utiliser des indices positifs&nbsp;: `array[0]` renverra le premier élément, `array[array.length-1]` renverra le dernier. Avec `array.at(-1)`, on peut avoir une écriture plus concise pour accéder au dernier élément. Voir les exemples ci-après.
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## Syntaxe
 

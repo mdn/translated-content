@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 La méthode **`getHours()`** renvoie l'heure pour la date renseignée, d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## Syntaxe
 

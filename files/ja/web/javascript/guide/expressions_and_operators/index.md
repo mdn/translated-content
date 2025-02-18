@@ -2,10 +2,10 @@
 title: 式と演算子
 slug: Web/JavaScript/Guide/Expressions_and_operators
 l10n:
-  sourceCommit: d71b141d2d18b96639547856714df19cefacfebf
+  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 この章では JavaScript の式 (expression) や演算子 (operator) について、代入、比較、算術、ビット、論理、文字列、三項演算子などを説明しています。
 
@@ -127,7 +127,6 @@ console.log(val); // 0 と表示
 ```js
 const foo = ["one", "two", "three"];
 
-// 分割を行わない代入
 const one = foo[0];
 const two = foo[1];
 const three = foo[2];
@@ -141,7 +140,7 @@ const [one, two, three] = foo;
 
 ### 評価とネスト
 
-一般に、代入は変数宣言の中で（すなわち、 [`const`][], [`let`][], [`var`][] と一緒に）、または独立した文として使用されます。
+一般に、代入は変数宣言の中で（すなわち、 [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let), [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) と一緒に）、または独立した文として使用されます。
 
 ```js
 // 変数 x を宣言し、 f() の返値で初期化します。
@@ -151,18 +150,12 @@ let x = f();
 x = g(); // 変数 x に g() の返値を再代入します。
 ```
 
-[`const`]: /ja/docs/Web/JavaScript/Reference/Statements/const
-[`let`]: /ja/docs/Web/JavaScript/Reference/Statements/let
-[`var`]: /ja/docs/Web/JavaScript/Reference/Statements/var
-
 しかし、他の式と同様に、`x = f()` のような代入式も結果値として評価されます。
 この結果の値は通常は使用されませんが、別の式で使用することができます。
 
 代入を連鎖させたり、他の式で代入を入れ子にすると、驚くような動作になることがあります。
-このため、 JavaScript のスタイルガイドによっては、代入の連鎖や入れ子を[連鎖や入れ子の代入を非推奨][discourage assign chain]と定めています。）
+このため、 JavaScript のスタイルガイドによっては、代入の連鎖や入れ子を[連鎖や入れ子の代入を非推奨](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment)と定めていることがあります。）
 とはいえ、代入の連鎖や入れ子が発生することもあるので、それらがどのように動作するのか理解できるようにしておくことは重要です。
-
-[discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
 
 代入式を連鎖させたり入れ子にしたりすることで、その結果自体を別の変数に代入することができます。
 また、ログに記録したり、配列リテラルや関数呼び出しの中に入れたりすることも可能です。
@@ -181,13 +174,11 @@ console.log([0, x = f(), 0]);
 console.log(f(0, x = f(), 0));
 ```
 
-評価結果は、上の表の「意味」の欄の `=` 記号の右側にある式に一致します。つまり、 `x = f()` は `f()` の結果に、`x += f()` は結果の和 `x + f()` に、 `x **= f()` は結果のべき乗 `x ** y` に評価される、といった具合になります。
+評価結果は、上の表の「意味」の欄の `=` 記号の右側にある式に一致します。つまり、 `x = f()` は `f()` の結果に、`x += f()` は結果の和 `x + f()` に、 `x **= f()` は結果のべき乗 `x ** f()` に評価される、といった具合になります。
 
 論理代入の場合、 `x &&= f()`, `x ||= f()`, `x ??= f()` は，それぞれ代入を除いた論理演算の返値なので、 `x && f()`, `x || f()`, `x ?? f()` となります。
 
-これらの式を括弧や配列リテラルのようなグループ化演算子なしで連結する場合、代入式は**右から左へグループ化されます**（[右結合][]です）が、**左から右へ評価されます**。
-
-[右結合]: https://ja.wikipedia.org/wiki/%E7%B5%90%E5%90%88%E6%B3%95%E5%89%87#%E9%9D%9E%E7%B5%90%E5%90%88%E7%9A%84%E6%BC%94%E7%AE%97%E3%81%AE%E8%A8%98%E6%B3%95
+これらの式を括弧や配列リテラルのようなグループ化演算子なしで連結する場合、代入式は**右から左へグループ化されます**（[右結合](https://ja.wikipedia.org/wiki/結合法則#非結合的演算の記法)です）が、**左から右へ評価されます**。
 
 また、 `=` 以外のすべての代入演算子では、結果の値は常に演算前のオペランドの値に基づいていることに注意してください。
 
@@ -216,7 +207,7 @@ x[f()] = g();
 #### 評価例 1
 
 `y = x = f()` は `y = (x = f())` と同じです。
-`=` は [右結合][] だからです。
+`=` は[右結合](https://ja.wikipedia.org/wiki/結合法則#非結合的演算の記法)だからです。
 しかし、評価は左から右へ行われます。
 
 1. 代入式 `y = x = f()` の評価が始まります。
@@ -276,9 +267,9 @@ x[f()] = g();
 
 ### 代入連鎖の防止
 
-代入を連鎖させたり、他の式に代入を入れ子にすると、意外な動作をすることがあります。このため、[同じ文の中で代入を連鎖させることは推奨されません][discourage assign chain]。
+代入を連鎖させたり、他の式に代入を入れ子にすると、意外な動作をすることがあります。このため、[同じ文の中で代入を連鎖させることは推奨されません](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment)。
 
-特に、 [`const`][], [`let`][], [`var`][] 文の中に変数連鎖を入れると、しばしばうまく行かなくなります。代入連鎖の中で一番外側/左側の変数だけが宣言され、他の変数は `const`/`let`/`var` 文では宣言されないからです。例えば、
+特に、 [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/ja/docs/Web/JavaScript/Reference/Statements/let)、[`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) 文の中に変数連鎖を入れると、しばしばうまく行かなくなります。代入連鎖の中で一番外側/左側の変数だけが宣言され、他の変数は `const`/`let`/`var` 文では宣言されないからです。例えば、
 
 ```js-nolint
 const z = y = x = f();
@@ -606,7 +597,8 @@ const var2 = 4;
 ## 論理演算子
 
 論理演算子では、基本的に論理値（ブール値）を用います。その場合は論理値を返します。
-しかし、 `&&` および `||` 演算子については、実際には指定されたオペランドの一方の値を返します。そのため、これらの演算子で論理値以外が使用された場合、論理値以外を返すことがあります。論理演算子は次の表で説明します。
+しかし、 `&&`、`||`、`??` の各演算子については、実際には指定されたオペランドの一方の値を返します。そのため、これらの演算子で論理値以外が使用された場合、論理値以外を返すことがあります。そのため、これらは「値選択演算子」と読んだ方がより適切です。
+論理演算子は次の表で説明します。
 
 <table class="fullwidth-table">
   <caption>
@@ -642,6 +634,15 @@ const var2 = 4;
     </tr>
     <tr>
       <td>
+        <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">Null 合体演算子</a> (<code>??</code>)
+      </td>
+      <td><code>expr1 ?? expr2</code></td>
+      <td>
+        <code>expr1</code> が <code>null</code> でも <code>undefined</code> でもない場合はこれを返します。そうでない場合は <code>expr2</code> を返します。
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT">論理否定 (NOT)</a> (<code>!</code>)
       </td>
       <td><code>!expr</code></td>
@@ -652,7 +653,7 @@ const var2 = 4;
   </tbody>
 </table>
 
-`false` に変換される式としては、null、0、NaN、空文字列 ("")、undefined に評価される式が挙げられます。
+`false` に変換される表現の例としては、`null`、`0`、`0n`、`NaN`、空文字列 (`""`)、`undefined` に評価されるものが挙げられます。
 
 以下のコードでは、 `&&` （論理積）演算子の例を示します。
 
@@ -666,7 +667,7 @@ const a6 = false && "Cat"; // f && t は false を返す
 const a7 = "Cat" && false; // t && f は false を返す
 ```
 
-以下のコードでは、 || （論理和）演算子の例を示します。
+以下のコードでは、 `||` （論理和）演算子の例を示します。
 
 ```js
 const o1 = true || true; // t || t は true を返す
@@ -677,6 +678,17 @@ const o5 = "Cat" || "Dog"; // t || t は Cat を返す
 const o6 = false || "Cat"; // f || t は Cat を返す
 const o7 = "Cat" || false; // t || f は Cat を返す
 ```
+
+以下のコードでは、 `??` （NUll 合体）演算子の例を示します。
+
+```js
+const n1 = null ?? 1; // 1
+const n2 = undefined ?? 2; // 2
+const n3 = false ?? 3; // false
+const n4 = 0 ?? 4; // 0
+```
+
+`??` は `||` と似た動作をしますが、最初の式が "[nullish](/ja/docs/Glossary/Nullish)"、つまり [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) の場合に、 2 番目の式のみを返すことに注意してください。 `null` または `undefined` となる可能性がある値の既定値を設定するには、 `||` よりも `??` の方が適しています。特に、 `''` や `0` のような値が有効な値であり、既定値を適用しない場合です。
 
 以下のコードでは、 ! （論理否定）演算子の例を示します。
 
@@ -690,12 +702,11 @@ const n3 = !"Cat"; // !t は false を返す
 
 複数の論理式が左から右へ評価される際に、以下の規則で「短絡」 (short-circuit) 評価ができるかどうかが確認されます。
 
-- `false && 何か` は false へと短絡評価されます。
-- `true || 何か` は true へと短絡評価されます。
+- `偽値 && 何か` は偽値へと短絡評価されます。
+- `真値 || 何か` は真値へと短絡評価されます。
+- `非 Nullish ?? 何か` は非 Nullish 値へと短絡評価されます。
 
 論理的なルールにより、これらの評価が常に正確であることが保証されます。上記の式で`何か`の部分は評価されないため、どのようにしても副作用が生じないことに注意してください。
-
-なお、 2 番目のケースについては、現在のコードでは新しい [Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) が使用できますが、これは最初の式が "[nullish](/ja/docs/Glossary/Nullish)"、つまり [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) である場合のみ 2 番目の式を返します。したがって、 1 番目の式で `''` や `0` などを有効な値として扱う場合に、既定値を提供する代替策とすることをお勧めします。
 
 ## 長整数型の演算子
 
@@ -751,8 +762,8 @@ console.log("my " + "string"); // 文字列 "my string" がログに表示され
 例えば、
 
 ```js
-let mystring = "alpha";
-mystring += "bet"; // "alphabet" と評価されて、mystring にその値を代入します。
+let myString = "alpha";
+myString += "bet"; // "alphabet" と評価されて、myString にその値を代入します。
 ```
 
 ### 条件（三項）演算子
@@ -930,9 +941,9 @@ const myString = new String("coral");
 "length" in myString; // true を返す
 
 // ユーザー定義オブジェクト
-const mycar = { make: "Honda", model: "Accord", year: 1998 };
-"make" in mycar; // returns true
-"model" in mycar; // returns true
+const myCar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in myCar; // true を返す
+"model" in myCar; // true を返す
 ```
 
 ### instanceof
@@ -940,12 +951,13 @@ const mycar = { make: "Honda", model: "Accord", year: 1998 };
 [`instanceof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/instanceof)は、指定されたオブジェクトが指定されたオブジェクトの種類である場合に `true` を返します。構文は以下のとおりです。
 
 ```js-nolint
-オブジェクト名 instanceof オブジェクト型
+オブジェクト instanceof オブジェクト型
 ```
 
-ここで`オブジェクト名`は`オブジェクト型`と比較するオブジェクトの名前を、`オブジェクト型`は {{jsxref("Date")}} や {{jsxref("Array")}} のようなオブジェクトの型をそれぞれ表します。
+ここで`オブジェクト`は`オブジェクト型`と比較するオブジェクトであり、`オブジェクト型`は型を表すコンストラクター、例えば {{jsxref("Date")}} や {{jsxref("Array")}} です。
 
-実行時にオブジェクトの型を確認する必要があるときは `instanceof` を使用してください。例えば例外を受け取るとき、発生した例外の型に応じて、別々の例外を扱うコードに分岐することができます。
+実行時にオブジェクトの型を確認する必要があるときは `instanceof` を使用してください。
+例えば例外を受け取るとき、発生した例外の型に応じて、別々の例外を扱うコードに分岐することができます。
 
 例えば次のコードでは、 `instanceof` を使用して `theDay` が `Date` オブジェクトであるかを判断しています。 `theDay` は `Date` オブジェクトであるため、`if` 文中の文が実行されます。
 
@@ -958,7 +970,7 @@ if (theDay instanceof Date) {
 
 ## 基本的な式
 
-すべての演算子は、最終的に 1 つ以上の基本的な式を演算します。これらの基本的な式には[識別子](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)と[リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#literals)が含まれますが、他にもいくつかの種類があります。以下でそれらを簡単に紹介し、それらの意味づけはそれぞれの参照する章で詳細に記述されています。
+すべての演算子は、最終的に 1 つ以上の基本的な式を演算します。これらの基本的な式には[識別子](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#宣言)と[リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#リテラル)が含まれますが、他にもいくつかの種類があります。以下でそれらを簡単に紹介し、それらの意味づけはそれぞれの参照する章で詳細に記述されています。
 
 ### this
 
@@ -972,8 +984,8 @@ this.propertyName;
 `validate` という関数があり、オブジェクトと上限と下限の値を渡すことでオブジェクトの `value` プロパティを検証するものであるとしましょう。
 
 ```js
-function validate(obj, lowval, hival) {
-  if (obj.value < lowval || obj.value > hival) {
+function validate(obj, lowVal, highVal) {
+  if (obj.value < lowVal || obj.value > highVal) {
     console.log("Invalid Value!");
   }
 }
@@ -1008,6 +1020,28 @@ a + (b * c)   // 7
 a * c + b * c // 9
 ```
 
+### プロパティアクセサー
+
+[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文は、ドット記法またはブラケット記法をいずれかを使用して、オブジェクト上のプロパティ値を取得します。
+
+```js
+object.property;
+object["property"];
+```
+
+[オブジェクトでの作業](/ja/docs/Web/JavaScript/Guide/Working_with_objects)ガイドでは、オブジェクトプロパティについてもっと詳細を示しています。
+
+### オプショナルチェーン
+
+[オプショナルチェーン](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)構文 (`?.`) は、オブジェクトが定義され、 `null` でない場合にオブジェクトに対してチェーン操作を実行し、それ以外の場合には操作を短絡して `undefined` を返します。
+これにより、`null` または `undefined` の可能性がある値に対して操作を行う際に `TypeError` を発生させることなく操作を行うことができます。
+
+```js
+maybeObject?.property;
+maybeObject?.[property];
+maybeFunction?.();
+```
+
 ### new
 
 [`new` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/new)を使用すると、いずれかのユーザー定義オブジェクト型や組み込みオブジェクト型のインスタンスを生成することができます。 `new` の使用法は以下のとおりです。
@@ -1026,4 +1060,4 @@ super(引数); // 親のコンストラクターを呼び出す。
 super.親の関数(引数);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

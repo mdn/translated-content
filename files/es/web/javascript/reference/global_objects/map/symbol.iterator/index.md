@@ -11,7 +11,22 @@ El método **`[Symbol.iterator]()`** de las instancias {{jsxref("Map")}} impleme
 
 El valor inicial de esta propiedad, es el mismo objeto de función que el valor inicial de la propiedad {{jsxref("Map.prototype.entries")}}.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## Sintaxis
 

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 
 **`Date()`** 构造函数可以创建一个 {{jsxref("Date")}} 实例或返回代表当前时间的字符串。
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## 语法
 

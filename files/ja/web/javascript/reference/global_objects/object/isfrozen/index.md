@@ -9,7 +9,21 @@ l10n:
 
 **`Object.isFrozen()`** はオブジェクトが{{jsxref("Object/freeze", "凍結されている", "", 1)}}かどうかを判定します。
 
-{{EmbedInteractiveExample("pages/js/object-isfrozen.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isFrozen()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isFrozen(object1));
+// Expected output: false
+
+Object.freeze(object1);
+
+console.log(Object.isFrozen(object1));
+// Expected output: true
+```
 
 ## 構文
 

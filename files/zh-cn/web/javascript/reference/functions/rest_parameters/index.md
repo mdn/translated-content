@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Functions/rest_parameters
 
 **剩余参数**语法允许我们将一个不定数量的参数表示为一个数组。
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## 语法
 

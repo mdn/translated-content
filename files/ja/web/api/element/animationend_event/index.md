@@ -3,7 +3,7 @@ title: "Element: animationend イベント"
 short-title: animationend
 slug: Web/API/Element/animationend_event
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef}}
@@ -90,19 +90,17 @@ animated.onanimationend = () => {
 
 .animation.active {
   animation-duration: 2s;
-  animation-name: slidein;
+  animation-name: slide-in;
   animation-iteration-count: 2;
 }
 
-@keyframes slidein {
+@keyframes slide-in {
   from {
-    margin-left: 100%;
-    width: 300%;
+    transform: translateX(100%) scaleX(3);
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    transform: translateX(0) scaleX(1);
   }
 }
 ```
@@ -167,5 +165,3 @@ applyAnimation.addEventListener("click", () => {
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}
 - 関連イベント: {{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/animationend_event", "animationend")}}
-- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/animationend_event", "animationend")}}

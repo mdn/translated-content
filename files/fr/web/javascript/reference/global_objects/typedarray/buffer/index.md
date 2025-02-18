@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 
 La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuffer")}} représenté par le _TypedArray_ lors de la construction de l'objet.
 
-{{EmbedInteractiveExample("pages/js/typedarray-buffer.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.buffer")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint16 = new Uint16Array(buffer);
+
+console.log(uint16.buffer.byteLength);
+// Expected output: 8
+```
 
 ## Syntaxe
 

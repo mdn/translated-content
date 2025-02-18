@@ -33,7 +33,8 @@ slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 
 ```css
 .multi_bg_example {
-  background-image: url(firefox.png), url(bubbles.png),
+  background-image:
+    url(firefox.png), url(bubbles.png),
     linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 
   background-repeat: no-repeat, no-repeat, no-repeat;

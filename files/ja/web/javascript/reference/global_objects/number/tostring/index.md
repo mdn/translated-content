@@ -9,7 +9,22 @@ l10n:
 
 **`toString()`** は {{jsxref("Number")}} 値のメソッドで、この数値を表現する文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## 構文
 

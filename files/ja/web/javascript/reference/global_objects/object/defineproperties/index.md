@@ -9,7 +9,22 @@ l10n:
 
 **`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperties(object1, {
+  property1: {
+    value: 42,
+    writable: true,
+  },
+  property2: {},
+});
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 構文
 

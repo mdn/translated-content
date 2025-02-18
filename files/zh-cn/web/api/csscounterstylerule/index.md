@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSCounterStyleRule`** 接口表示 {{CSSxRef("@counter-style")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)。
+**`CSSCounterStyleRule`** 接口表示 {{CSSxRef("@counter-style")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。
 
 {{InheritanceDiagram}}
 

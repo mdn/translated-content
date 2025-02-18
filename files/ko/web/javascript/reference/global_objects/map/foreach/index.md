@@ -9,7 +9,23 @@ l10n:
 
 {{jsxref("Map")}} 인스턴스의 **`forEach()`** 메서드는 이 Map 객체의 키/값 쌍마다 각각 제공된 함수를 삽입되었던 순서대로 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+
+```js interactive-example
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+```
 
 ## 구문
 

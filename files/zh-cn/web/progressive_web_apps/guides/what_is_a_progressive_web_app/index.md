@@ -81,7 +81,7 @@ PWA 通常看起来像平台特定应用程序——它们通常是在没有浏�
 
 PWA 必须有一个 web 应用程序清单，并且[清单必须包含足够的信息以便浏览器安装 PWA](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)。
 
-清单可以定义 PWA 外观的许多其他方面，比如[主题颜色](/zh-CN/docs/Web/Manifest/theme_color)和[背景颜色](/zh-CN/docs/Web/Manifest/background_color)，以及其行为，包括其[充当其他应用程序数据的共享目标](/zh-CN/docs/Web/Manifest/share_target)的能力或[处理特定文件类型](/zh-CN/docs/Web/Manifest/file_handlers)的能力。
+清单可以定义 PWA 外观的许多其他方面，比如[主题颜色](/zh-CN/docs/Web/Manifest/theme_color)和[背景颜色](/zh-CN/docs/Web/Manifest/Reference/background_color)，以及其行为，包括其[充当其他应用程序数据的共享目标](/zh-CN/docs/Web/Manifest/share_target)的能力或[处理特定文件类型](/zh-CN/docs/Web/Manifest/file_handlers)的能力。
 
 #### Service worker
 

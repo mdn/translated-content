@@ -114,4 +114,4 @@ window.addEventListener("load", () => {
 
 - [HTML 中的图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
-- [图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
+- [图像文件类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)

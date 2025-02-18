@@ -1,0 +1,147 @@
+# This is more or less a copy of
+# https://github.com/mdn/content/blob/main/.github/workflows/pr-test-legacy.yml
+# but done in a way that it first checks out mdn/translated-content (or
+# fork of) and _then_ checks out mdn/content which has the relevant
+# CI related tooling.
+
+name: PR Test Legacy
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    if: github.repository == 'mdn/translated-content'
+    runs-on: ubuntu-latest
+    # Set the permissions to `read-all`, preventing the workflow from
+    # any accidental write access to the repository.
+    permissions: read-all
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      # If we don't do this the built files will end up in
+      # `node_modules/@mdn/yari/client/build/` and we don't want that
+      # to get pushed into the cache.
+      BUILD_OUT_ROOT: /tmp/build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get changed files
+        run: |
+          # Use the GitHub API to get the list of changed files
+          # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${BASE_SHA}...${HEAD_SHA} \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+
+          # filter out files that are not markdown files
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+
+          # filter out files that are not attachments
+          # note that we should get the absolute path of the changed attachments
+          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs readlink -e | xargs)
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v4
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        with:
+          repository: mdn/content
+          path: mdn/content
+
+      - name: Setup Node.js environment
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+          cache-dependency-path: mdn/content/yarn.lock
+
+      - name: Install all yarn packages
+        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        working-directory: ${{ github.workspace }}/mdn/content
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build changed content
+        id: build-content
+        if: env.GIT_DIFF_CONTENT
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+
+          # This is so that if there's a single 'unsafe_html' flaw, it
+          # completely fails the build.
+          # But all other flaws should be 'warn', so that we can include
+          # information about the flaws when we analyze the built PR.
+          BUILD_FLAW_LEVELS: "unsafe_html: error, *:warn"
+
+          # Because we build these pages in a way that you get a toolbar,
+          # so the flaws can be displayed, but we don't want any of the
+          # other toolbar features like "Fix fixable flaws" or "Quick-edit"
+          # we set this to disable that stuff.
+          REACT_APP_CRUD_MODE_READONLY: true
+
+          BUILD_LIVE_SAMPLES_BASE_URL: https://live.mdnyalp.dev
+          BUILD_LEGACY_LIVE_SAMPLES_BASE_URL: https://live-samples.mdn.allizom.net
+
+          # In these builds, we never care for or need the ability to sign in.
+          # This environment variable will disable that functionality entirely.
+          REACT_APP_DISABLE_AUTH: true
+
+          # TODO: This should be implicit when `CI=true`
+          BUILD_NO_PROGRESSBAR: true
+
+          # Playground
+          REACT_APP_PLAYGROUND_BASE_HOST: mdnyalp.dev
+
+        working-directory: ${{ github.workspace }}/mdn/content
+        run: |
+          mkdir -p $BUILD_OUT_ROOT
+
+          # Don't use `yarn build` (from mdn/content) because that one hardcodes
+          # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
+          node node_modules/@mdn/yari/build/cli.js $GIT_DIFF_CONTENT
+
+          echo "Disk usage size of the build"
+          du -sh $BUILD_OUT_ROOT
+
+          # Save the PR number into the build
+          echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
+
+          # Download the raw diff blob and store that inside the build
+          # directory.
+          # The purpose of this is for the PR Review Companion to later
+          # be able to use this raw diff file for the benefit of analyzing.
+          wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
+
+      - name: Merge static assets with built documents
+        if: env.GIT_DIFF_CONTENT
+        run: |
+          # Exclude the .map files, as they're used for debugging JS and CSS.
+          rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
+          # Show the final disk usage size of the build.
+          du -sh $BUILD_OUT_ROOT
+
+      - uses: actions/upload-artifact@v4
+        if: env.GIT_DIFF_CONTENT
+        with:
+          name: build
+          path: ${{ env.BUILD_OUT_ROOT }}
+
+      - name: Check changed files
+        if: env.GIT_DIFF_FILES
+        env:
+          CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+        working-directory: ${{ github.workspace }}/mdn/content
+        run: |
+          echo $GIT_DIFF_FILES
+
+          yarn filecheck $GIT_DIFF_FILES

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Inequality
 
 O operador de desigualdade (`!=`) verifica se seus dois operandos não são igual, retornando um resultado booleano. Ao contrário do operador de [desigualdade estrito](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality), ele tenta converter os tipos e comparar operandos de tipos diferentes.
 
-{{EmbedInteractiveExample("pages/js/expressions-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
+
+```js interactive-example
+console.log(1 != 1);
+// Expected output: false
+
+console.log("hello" != "hello");
+// Expected output: false
+
+console.log("1" != 1);
+// Expected output: false
+
+console.log(0 != false);
+// Expected output: false
+```
 
 ## Sintaxe
 

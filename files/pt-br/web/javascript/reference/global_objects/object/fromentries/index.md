@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 O método **`Object.fromEntries()`** transforma uma lista de pares chave-valor em um objeto.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Sintaxe
 

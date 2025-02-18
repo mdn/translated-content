@@ -8,7 +8,22 @@ original_slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@search
 
 La méthode **`[@@search]()`** recherche une correspondance entre une expression rationnelle décrite par `this` et une chaîne de caractères donnée.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@search.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  constructor(str) {
+    super(str);
+    this.pattern = str;
+  }
+  [Symbol.search](str) {
+    return str.indexOf(this.pattern);
+  }
+}
+
+console.log("table football".search(new RegExp1("foo")));
+// Expected output: 6
+```
 
 ## Syntaxe
 

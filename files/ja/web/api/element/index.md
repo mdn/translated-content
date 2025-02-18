@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
+  sourceCommit: 17f6285a31667b55f6964cef45e4e6db7222e2dd
 ---
 
 {{APIRef("DOM")}}
@@ -39,7 +39,7 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
   - : この要素の上境界の幅を表す数値を返します。
 - {{DOMxRef("Element.clientWidth")}} {{ReadOnlyInline}}
   - : この要素の内部の幅を表す数値を返します。
-- {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{DOMxRef("Element.currentCSSZoom")}} {{ReadOnlyInline}}
   - : 要素の実効ズームサイズを示す数値。要素がレンダリングされない場合は 1.0 です。
 - {{DOMxRef("Element.elementTiming")}} {{Experimental_Inline}}
   - : {{domxref("PerformanceElementTiming")}} API において要素を監視するためのマークとなる [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を反映した文字列です。
@@ -109,7 +109,7 @@ _`Element` インターフェイスには、以下のプロパティもありま
   - : 文字列で、[`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの列数を定義します。
 - {{domxref("Element.ariaColIndex")}}
   - : 文字列で、[`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の列の総数に対する要素の列インデックスまたは位置を定義します。
-- {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
+- {{domxref("Element.ariaColIndexText")}}
   - : 文字列で、[`aria-colindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) 属性を反映します。これは aria-colindex の代替となる読み取り可能なテキストを定義します。
 - {{domxref("Element.ariaColSpan")}}
   - : 文字列で、[`aria-colspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする列数を定義します。
@@ -159,7 +159,7 @@ _`Element` インターフェイスには、以下のプロパティもありま
   - : 文字列で、[`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの行の総数を定義します。
 - {{domxref("Element.ariaRowIndex")}}
   - : 文字列で、[`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の行の総数に対する要素の行インデックスまたは位置を定義します。
-- {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
+- {{domxref("Element.ariaRowIndexText")}}
   - : 文字列で、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性を反映し、aria-rowindex の代替となる人間に読み取り可能なテキストを定義します。
 - {{domxref("Element.ariaRowSpan")}}
   - : 文字列で、[`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする行数を定義します。
@@ -221,7 +221,9 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{DOMxRef("Element.getElementsByTagName()")}}
   - : 現在要素から、特定のタグ名を持つすべての子孫要素の集合を取得して生きた {{DOMxRef("HTMLCollection")}} で返します。
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
-  - : 生きた {{DOMxRef("HTMLCollection")}} で、現在要素から、特定のタグ名と名前空間を持つすべての子孫要素の集合を取得して、生きた {{DOMxRef("HTMLCollection")}} で返します。
+  - : 生きた {{DOMxRef("HTMLCollection")}} で、現在要素から、特定のタグ名と名前空間を持つすべての子孫要素の集合を取得して返します。
+- {{DOMxRef("Element.getHTML()")}}
+  - : 要素の DOM コンテンツを HTML 文字列として返します。オプションで、シャドウ DOM が含まれます。
 - {{DOMxRef("Element.hasAttribute()")}}
   - : 要素が指定された指定された属性を持っているか否かを示す論理値を返します。
 - {{DOMxRef("Element.hasAttributeNS()")}}
@@ -282,8 +284,6 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : 現在ノードに、指定された名前と名前空間を持つ属性値を設定します。
 - {{DOMxRef("Element.setCapture()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : マウスイベントキャプチャーを設定し、すべてのマウスイベントをこの要素にリダイレクトします。
-- {{DOMxRef("Element.setHTML()")}} {{SecureContext_Inline}} {{deprecated_inline}}
-  - : HTML の文字列を構文解析し、[無害化](/ja/docs/Web/API/HTML_Sanitizer_API)して文書フラグメントにし、DOM 内の要素の元サブツリーを置き換えます。
 - {{DOMxRef("Element.setHTMLUnsafe()")}}
   - : HTML の文字列を無害化せずに構文解析して文書フラグメントに入れ、DOM 内の要素の元サブツリーを置き換えます。HTML 文字列は宣言的なシャドウルートを入れることができますが、[`Element.innerHTML`](#element.innerhtml) を使用して HTML を設定した場合は、テンプレート要素として解釈されます。
 - {{DOMxRef("Element.setPointerCapture()")}}
@@ -297,16 +297,18 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 
 - {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
   - : スクリプトが実行されたときに発行されます。
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+  - : 入力要素の値が変更されようとすると発行されます。
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : [見つかるまでの間は非表示](/ja/docs/Web/HTML/Global_attributes/hidden)状態にある要素で、ユーザーが「ページ内検索」機能やフラグメントナビゲーションによってコンテンツを見つけたため、ブラウザーがそのコンテンツを公開しようとしているときに発行されます。
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : スクリプトが実行されそうになったときに発行されます。
+- {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
+  - : WebXR の選択イベント ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) の前に発行されます。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
   - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#ユーザーとの関連)、[コンテンツのスキップ](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)を開始または終了するときに、その要素を対象に発行されます。
-- {{domxref("Element/scroll_event", "scroll")}}
-  - : 文書のビューまたは要素がスクロールしたときに発行されます。
-- {{domxref("Element/scrollend_event", "scrollend")}}
-  - : 文書ビューのスクロールが完全に終了したときに発行されます。
+- {{domxref("Element/input_event","input")}}
+  - : ユーザー操作の結果として要素の値が変更されたときに発行されます。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
 - {{domxref("Element/wheel_event","wheel")}}
@@ -401,7 +403,7 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : マウスのホイールなどを操作すると発行されます。
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
-  - : trackpadtouchscreen の上の圧力が変化するたびに発行されます。
+  - : トラックパッドのタッチ画面の上の圧力が変化するたびに発行されます。
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
   - : 「強制クリック」と判断されるのに十分な圧力があった直後の mousedown イベントの後で発行されます。
 - {{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}} {{Non-standard_Inline}}
@@ -433,6 +435,17 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
   - : ポインターが {{domxref("Element/pointerdown_event", "pointerdown")}} または {{domxref("Element/pointerup_event", "pointerup")}} イベントを発行しないプロパティを変更したときに発行されます。
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : ポインターがアクティブでなくなったときに発行されます。
+
+### スクロールイベント
+
+- {{domxref("Element/scroll_event", "scroll")}}
+  - : 文書ビューまたは要素がスクロールされたときに発行されます。
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : 文書ビューのスクロールが完全に終了したときに発行されます。
+- {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : 新しいスクロールスナップターゲットが選択された場合に、スクロール操作の終わりにスクロールコンテナーで発行されます。
+- {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : 新しいスクロールスナップターゲットが待機中になったとブラウザーが判断した場合、すなわち、現在のスクロール操作が終わったときに選択されるであろう場合、スクロールコンテナーで発行されます。
 
 ### タッチイベント
 

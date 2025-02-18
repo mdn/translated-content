@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 
 El método **`toLocaleString()`** devuelve un string que representa a un objeto. Este método está pensado para ser redefinido en los objetos derivados, para los propósitos específicos de cada configuración regional.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+
+```js interactive-example
+const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+console.log(date1.toLocaleString("ar-EG"));
+// Expected output: "٢٠‏/١٢‏/٢٠١٢ ٤:٠٠:٠٠ ص"
+
+const number1 = 123456.789;
+
+console.log(number1.toLocaleString("de-DE"));
+// Expected output: "123.456,789"
+```
 
 ## Sintaxis
 

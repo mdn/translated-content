@@ -7,7 +7,27 @@ slug: Web/JavaScript/Reference/Operators/Object_initializer
 
 **对象初始化器**是一个用大括号（`{}`）括起来的以逗号分隔的列表，包含了一个对象的零个或多个属性名称和相关值。可以通过 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create) 方法，或者使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符[调用其构造函数](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#使用构造函数)而初始化一个对象。
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## 语法
 

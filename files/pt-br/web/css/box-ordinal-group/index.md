@@ -1,5 +1,5 @@
 ---
-title: "-moz-box-ordinal-group"
+title: -moz-box-ordinal-group
 slug: Web/CSS/box-ordinal-group
 ---
 

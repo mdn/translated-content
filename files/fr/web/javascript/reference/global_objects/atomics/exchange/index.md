@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 
 La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## Syntaxe
 

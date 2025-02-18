@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
 
 **`Reflect.ownKeys()`** 정적 메서드는 대상 객체의 자체 속성 키를 배열로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.ownKeys()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+  property2: 13,
+};
+
+const array1 = [];
+
+console.log(Reflect.ownKeys(object1));
+// Expected output: Array ["property1", "property2"]
+
+console.log(Reflect.ownKeys(array1));
+// Expected output: Array ["length"]
+```
 
 ## 구문
 

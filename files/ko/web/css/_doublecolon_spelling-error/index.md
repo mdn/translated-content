@@ -1,5 +1,5 @@
 ---
-title: "::spelling-error"
+title: ::spelling-error
 slug: Web/CSS/::spelling-error
 l10n:
   sourceCommit: c72b86b3d6818ec6c8df1d52a77513d769f4164e

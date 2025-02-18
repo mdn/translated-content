@@ -9,7 +9,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 
 [rfc7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1)에 기반하고 [ECMA-262 toUTCString](https://tc39.es/ecma262/#sec-date.prototype.toutcstring)에 따라 음수 값을 가질 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.toUTCString()", "shorter")}}
+
+```js interactive-example
+const event = new Date("14 Jun 2017 00:00:00 PDT");
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 14 Jun 2017 07:00:00 GMT"
+```
 
 ## 구문
 

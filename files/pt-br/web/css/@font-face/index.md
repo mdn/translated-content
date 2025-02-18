@@ -91,7 +91,8 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
@@ -115,7 +116,8 @@ Neste exemplo, a cópia local do usuário "Helvetica Neue Bold" é usada; se o u
   .className {
     @font-face {
       font-family: MyHelvetica;
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url(MgOpenModernaBold.ttf);
       font-weight: bold;
     }

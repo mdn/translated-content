@@ -1,5 +1,5 @@
 ---
-title: ":-moz-drag-over"
+title: :-moz-drag-over
 slug: Web/CSS/:-moz-drag-over
 l10n:
   sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5

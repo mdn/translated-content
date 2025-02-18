@@ -9,7 +9,21 @@ l10n:
 
 **`var` 语句**用于声明一个函数作用域或全局作用域的变量，并且可以选择将其初始化为一个值。
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## 语法
 

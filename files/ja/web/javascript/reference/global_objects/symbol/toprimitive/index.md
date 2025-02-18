@@ -9,7 +9,21 @@ l10n:
 
 **`Symbol.toPrimitive`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.toPrimitive` を表します。すべての[型変換](/ja/docs/Web/JavaScript/Data_structures#型変換)アルゴリズムにおいて、すべての型変換アルゴリズムにおいて、オブジェクト上でこのシンボルを使って、その `valueOf()` や `toString()` メソッドを使用する前に、望ましい型を受け入れ、オブジェクトのプリミティブ表現を返すメソッドを調べます。
 
-{{EmbedInteractiveExample("pages/js/symbol-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+
+```js interactive-example
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint === "number") {
+      return 42;
+    }
+    return null;
+  },
+};
+
+console.log(+object1);
+// Expected output: 42
+```
 
 ## 値
 

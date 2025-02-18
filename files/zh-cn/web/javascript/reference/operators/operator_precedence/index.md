@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Operator_precedence
 
 **运算符的优先级**决定了表达式中运算执行的先后顺序。优先级高的运算符会作为优先级低的运算符的操作数。
 
-{{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Operator precedence")}}
+
+```js interactive-example
+console.log(3 + 4 * 5); // 3 + 20
+// Expected output: 23
+
+console.log(4 * 3 ** 2); // 4 * 9
+// Expected output: 36
+
+let a;
+let b;
+
+console.log((a = b = 5));
+// Expected output: 5
+```
 
 ## 优先级和结合性
 

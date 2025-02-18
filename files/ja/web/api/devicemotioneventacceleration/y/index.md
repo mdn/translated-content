@@ -1,6 +1,6 @@
 ---
 title: "DeviceMotionEventAcceleration: y プロパティ"
-short-title: "y"
+short-title: y
 slug: Web/API/DeviceMotionEventAcceleration/y
 l10n:
   sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8

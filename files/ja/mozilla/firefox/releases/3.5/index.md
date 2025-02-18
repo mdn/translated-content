@@ -13,7 +13,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### HTML 5 サポート
 
-- [Firefox での音声と動画の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Firefox での音声と動画の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Element/audio) および [video](/ja/docs/Web/HTML/Element/video) 要素がサポートされます。
 - [Firefox でのオフラインリソース](/ja/docs/Web/HTML/Using_the_application_cache)
   - : Firefox 3.5 では HTML 5 のオフラインリソース仕様をすべてサポートしています。

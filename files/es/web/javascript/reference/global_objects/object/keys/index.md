@@ -9,7 +9,18 @@ l10n:
 
 El método estático **`Object.keys()`** devuelve un arreglo de propiedades enumerables propias de un objeto dado.
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## Sintaxis
 

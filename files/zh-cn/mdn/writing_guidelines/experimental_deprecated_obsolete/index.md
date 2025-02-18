@@ -3,8 +3,6 @@ title: 实验性、已弃用和过时
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 ---
 
-{{MDNSidebar}}
-
 这些术语通常与技术和规范相关联，还用于在 MDN Web 文档上标记技术的状态。对于这些术语的定义，MDN Web 文档与[浏览器兼容性数据（BCD）](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)仓库保持一致。下文描述了这些术语以及它们应在 MDN Web 文档的哪些上下文中使用。
 
 ## 实验性

@@ -36,7 +36,7 @@ background-attachment: inherit;
 
 ## Exemplos
 
-### Exemplo simpes
+### Exemplo simples
 
 #### CSS
 
@@ -59,7 +59,7 @@ p {
 
 #### Resultado
 
-{{EmbedLiveSample("Exemplo_simpes")}}
+{{EmbedLiveSample("Exemplo_simples")}}
 
 ### Suporte de múltiplas imagem de background
 

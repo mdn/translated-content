@@ -9,7 +9,14 @@ l10n:
 
 **`Function()`** 생성자는 {{jsxref("Function")}} 객체를 생성합니다. 이 생성자를 직접 호출하면 동적으로 함수를 만들 수 있지만, {{jsxref("Global_Objects/eval", "eval()")}} 함수와 비슷한 보안 및 미미한 성능 상의 문제가 있습니다. 하지만 지역 범위에 접근할 수 있는 `eval`과 달리, `Function` 생성자는 오직 전역 범위에서만 실행되는 함수를 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/function-constructor.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Function()", "shorter")}}
+
+```js interactive-example
+const sum = new Function("a", "b", "return a + b");
+
+console.log(sum(2, 6));
+// Expected output: 8
+```
 
 ## 구문
 

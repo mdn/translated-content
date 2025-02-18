@@ -9,7 +9,22 @@ l10n:
 
 **`Math.cos()`** 정적 메서드는 숫자의 코사인을 라디안 단위로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-cos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+
+```js interactive-example
+function getCircleX(radians, radius) {
+  return Math.cos(radians) * radius;
+}
+
+console.log(getCircleX(1, 10));
+// Expected output: 5.403023058681398
+
+console.log(getCircleX(2, 10));
+// Expected output: -4.161468365471424
+
+console.log(getCircleX(Math.PI, 10));
+// Expected output: -10
+```
 
 ## 구문
 

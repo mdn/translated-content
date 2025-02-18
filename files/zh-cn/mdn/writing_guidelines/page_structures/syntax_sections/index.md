@@ -3,8 +3,6 @@ title: 语法小节
 slug: MDN/Writing_guidelines/Page_structures/Syntax_sections
 ---
 
-{{MDNSidebar}}
-
 MDN 参考页面的语法小节包含一个语法框，其定义了某个特性的确切语法（例如，它可以接受哪些参数，哪些参数是可选的）。本文将解释如何编写参考页面的语法框。
 
 ## API 参考语法

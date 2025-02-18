@@ -9,7 +9,7 @@ l10n:
 
 ## MathML 特定类型
 
-除了 [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Types)外，一些 MathML 属性还接受以下类型：
+除了 [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)外，一些 MathML 属性还接受以下类型：
 
 - `<unsigned-integer>`：一个不以 U+002D HYPHEN-MINUS 字符（-）或 U+002B PLUS SIGN（+）开头的 [`<integer>`](/zh-CN/docs/Web/CSS/integer)，例如 `1234`。
 - `<boolean>`：表示布尔值的字符串 `true` 或 `false`。

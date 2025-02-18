@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 **`Reflect.has()`** 정적 메서드는 [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)의 함수판입니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-has.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.has(object1, "property1"));
+// Expected output: true
+
+console.log(Reflect.has(object1, "property2"));
+// Expected output: false
+
+console.log(Reflect.has(object1, "toString"));
+// Expected output: true
+```
 
 ## 구문
 

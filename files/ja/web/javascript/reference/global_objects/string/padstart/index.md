@@ -9,7 +9,21 @@ l10n:
 
 **`padStart()`** メソッドは、結果の文字列が指定した長さになるように、現在の文字列を他の文字列で（必要に応じて繰り返して）延長します。延長は、現在の文字列の先頭から適用されます。
 
-{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+
+```js interactive-example
+const str1 = "5";
+
+console.log(str1.padStart(2, "0"));
+// Expected output: "05"
+
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+console.log(maskedNumber);
+// Expected output: "************5581"
+```
 
 ## 構文
 

@@ -9,7 +9,22 @@ l10n:
 
 **`delete`**는 객체의 속성을 제거합니다. 속성의 값이 객체이고 더 이상 그 객체에 대한 참조가 없다면, 해당 객체는 결국 자동으로 메모리에서 해제됩니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 구문
 

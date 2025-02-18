@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 **그룹 연산자 `()`** 는 표현식 내에서 평가의 우선순위를 제어합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+
+```js interactive-example
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log(1 + 2 * 3); // 1 + 6
+// Expected output: 7
+
+console.log((1 + 2) * 3); // 3 * 3
+// Expected output: 9
+
+console.log(1 * 3 + 2 * 3); // 3 + 6
+// Expected output: 9
+```
 
 ## 구문
 

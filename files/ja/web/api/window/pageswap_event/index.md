@@ -10,7 +10,7 @@ l10n:
 
 **`pageswap`** イベントは、文書間の移動時、つまり前回表示していた文書がアンロードされようとする際に発行されます。
 
-これは、文書間 (MPA) の[ビュー遷移](/ja/docs/Web/API/View_Transitions_API)において、移動の流出ページからアクティブな遷移を操作する場合に便利です。例えば、遷移をスキップしたり、JavaScript で流出遷移のアニメーションをカスタマイズしたい場合などです。
+これは、文書間 (MPA) の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)において、移動の流出ページからアクティブな遷移を操作する場合に便利です。例えば、遷移をスキップしたり、JavaScript で流出遷移のアニメーションをカスタマイズしたい場合などです。
 
 また、ナビゲーションの種類や、移動元及び移動先文書内の履歴項目にアクセスすることもできます。
 
@@ -101,5 +101,5 @@ window.addEventListener("pageswap", async (e) => {
 
 ## 関連情報
 
-- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transitions_API/Using)
+- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
 - {{domxref("Window.pagereveal_event", "pagereveal")}} イベント

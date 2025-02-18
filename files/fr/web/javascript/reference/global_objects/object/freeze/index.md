@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
 
 La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on empêche d'ajouter de nouvelles propriétés, de supprimer ou d'éditer des propriétés existantes, y compris en ce qui concerne leur caractère énumérable, configurable ou pour l'accès en écriture. L'objet devient ainsi immuable. La méthode renvoie l'objet ainsi « gelé ».
 
-{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
+{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+
+```js interactive-example
+const obj = {
+  prop: 42,
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// Expected output: 42
+```
 
 ## Syntaxe
 

@@ -9,7 +9,23 @@ El operador de **encadenamiento opcional** **`?.`** permite leer el valor de una
 
 Esto da como resultado expresiones más cortas y simples cuando se accede a propiedades encadenadas dónde existe la posibilidad de que falte una referencia. También puede ser útil al explorar el contenido de un objeto cuando no hay una garantía conocida de qué propiedades se requieren.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Sintaxis
 

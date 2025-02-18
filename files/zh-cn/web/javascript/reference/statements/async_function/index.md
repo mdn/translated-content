@@ -11,7 +11,26 @@ l10n:
 
 你也可以使用 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)来定义异步函数。
 
-{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+
+```js interactive-example
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log("calling");
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+```
 
 ## 语法
 

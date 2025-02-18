@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/function*
 
 **`function*`** keyword 는 표현식 내에서 generator function 을 정의합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## Syntax
 

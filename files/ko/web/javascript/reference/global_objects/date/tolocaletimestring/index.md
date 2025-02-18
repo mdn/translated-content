@@ -11,7 +11,21 @@ l10n:
 
 `toLocaleTimeString`을 호출할 때마다 방대한 현지화 문자열 데이터베이스에서 검색을 수행해야 하므로 비효율적일 수 있습니다. 메서드가 동일한 인수를 사용하여 여러 번 호출되는 경우 `DateTimeFormat` 객체가 전달된 인수를 기억하고 데이터베이스의 일부를 캐시하기로 결정할 수 있으므로 {{jsxref("Intl.DateTimeFormat")}} 객체를 생성하고 그 {{jsxref("Intl/DateTimeFormat/format", "format()")}} 메서드를 사용하는 것이 더 좋습니다. 이렇게 함으로써 향후 `format` 호출에서 보다 제한된 컨텍스트 내에서 현지화 문자열을 검색할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## 구문
 

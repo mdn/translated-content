@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
 **`replaceAll()`** 方法返回一个新字符串，其中所有匹配 `pattern` 的部分都被替换为 `replacement`。`pattern` 可以是一个字符串或一个 {{jsxref("RegExp")}}，`replacement` 可以是一个字符串或一个在每次匹配时调用的函数。原始字符串保持不变。
 
-{{EmbedInteractiveExample("pages/js/string-replaceall.html")}}
+{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+console.log(paragraph.replaceAll("dog", "monkey"));
+// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+
+// Global flag required when calling replaceAll with regex
+const regex = /Dog/gi;
+console.log(paragraph.replaceAll(regex, "ferret"));
+// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+```
 
 ## 语法
 

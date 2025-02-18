@@ -9,7 +9,22 @@ l10n:
 
 **静态初始化块**是在 {{jsxref("Statements/class", "class")}} 中声明的。它包含在类初始化过程中要求值的语句。与 {{jsxref("Classes/static", "static")}} 属性相比，它允许更灵活的初始化逻辑，例如使用 `try...catch` 或用单个值设置多个字段。初始化是在当前类声明的上下文中进行的，并可访问私有状态，这允许类与在同一作用域中声明的其他类或函数共享其私有属性信息（类似于 C++ 中的“友元”类）。
 
-{{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
+{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
+
+```js interactive-example
+class ClassWithStaticInitializationBlock {
+  static staticProperty1 = "Property 1";
+  static staticProperty2;
+  static {
+    this.staticProperty2 = "Property 2";
+  }
+}
+
+console.log(ClassWithStaticInitializationBlock.staticProperty1);
+// Expected output: "Property 1"
+console.log(ClassWithStaticInitializationBlock.staticProperty2);
+// Expected output: "Property 2"
+```
 
 ## 语法
 

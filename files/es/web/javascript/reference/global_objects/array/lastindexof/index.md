@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 El método **`lastIndexOf()`** devuelve el último índice en el que un cierto elemento puede encontrarse en el arreglo, ó `-1` si el elemento no se encontrara. El arreglo es recorrido en sentido contrario, empezando por el índice `fromIndex`.
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## Sintaxis
 

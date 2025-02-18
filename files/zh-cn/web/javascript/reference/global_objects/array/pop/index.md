@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 
 **`pop()`** 方法从数组中删除**最后一个**元素，并返回该元素的值。此方法会更改数组的长度。
 
-{{EmbedInteractiveExample("pages/js/array-pop.html")}}
+{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+
+```js interactive-example
+const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];
+
+console.log(plants.pop());
+// Expected output: "tomato"
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// Expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
 
 ## 语法
 

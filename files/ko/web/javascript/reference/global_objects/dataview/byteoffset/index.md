@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("DataView")}} 인스턴스의 **`byteOffset`** 접근자 속성은 이 뷰의 오프셋(바이트 단위)을 {{jsxref("ArrayBuffer")}} 또는 {{jsxref("SharedArrayBuffer")}}의 시작 부분으로부터 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.byteOffset")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer, 12, 4); // From byte 12 for the next 4 bytes
+
+console.log(view.byteOffset);
+// Expected output: 12
+```
 
 ## 설명
 

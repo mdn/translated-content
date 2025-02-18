@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 
 **`valueOf()`** 메서드는 {{jsxref("Boolean")}} 객체의 원시 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}
+
+```js interactive-example
+const x = new Boolean();
+
+console.log(x.valueOf());
+// Expected output: false
+
+const y = new Boolean("Mozilla");
+
+console.log(y.valueOf());
+// Expected output: true
+```
 
 ## 구문
 

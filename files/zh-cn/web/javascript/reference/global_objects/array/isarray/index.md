@@ -9,7 +9,21 @@ l10n:
 
 **`Array.isArray()`** 静态方法用于确定传递的值是否是一个{{jsxref("Array", "数组", "", 1)}}。
 
-{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
+{{InteractiveExample("JavaScript Demo: Array.isArray()")}}
+
+```js interactive-example
+console.log(Array.isArray([1, 3, 5]));
+// Expected output: true
+
+console.log(Array.isArray("[]"));
+// Expected output: false
+
+console.log(Array.isArray(new Array(5)));
+// Expected output: true
+
+console.log(Array.isArray(new Int16Array([15, 33])));
+// Expected output: false
+```
 
 ## 语法
 

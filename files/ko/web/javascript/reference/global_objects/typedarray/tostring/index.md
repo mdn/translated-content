@@ -9,7 +9,16 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`toString()`** 메서드는 명시된 형식화 배열과 배열의 요소를 표현하는 문자열을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.toString()")}}과 같은 알고리즘을 가집니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-tostring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.toString()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+const uint8String = uint8.toString();
+
+console.log(uint8String.startsWith("10"));
+// Expected output: true
+```
 
 ## 구문
 

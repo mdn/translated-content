@@ -41,7 +41,7 @@ slug: Web/CSS/@property/initial-value
 
 为 `--my-color` {{cssxref('--*', '自定义属性')}}添加颜色值类型检测、设置默认值并且设置属性值不允许被继承。
 
-使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/At-rule):
+使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule):
 
 ```css
 @property --my-color {

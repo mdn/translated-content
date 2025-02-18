@@ -3,8 +3,6 @@ title: 如何记录 HTTP 标头
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档上的 [HTTP 标头参考](/zh-CN/docs/Web/HTTP/Headers)记录了 HTTP 标头字段。这是超文本传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）请求和响应消息的标头的组成部分。它们定义了 HTTP 事务的操作参数。本文介绍如何为 HTTP 标头创建新的参考页面。
 
 你需要知道或能够深入了解 [HTTP](/zh-CN/docs/Web/HTTP)。

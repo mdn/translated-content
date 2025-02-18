@@ -62,7 +62,7 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
   - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
 - [链接类型](/zh-CN/docs/Web/HTML/Attributes/rel)
   - : 在 HTML 中，各种各样的链接类型被用来确立和定义两个文档之间的关系。可以设置链接类型的链接元素包括 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}}。
-- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
   - : {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素允许你原生地播放音频和视频媒体，无需任何外部软件的支持。
 - [HTML 内容种类](/zh-CN/docs/Web/HTML/Content_categories)
   - : HTML 包含了几种内容，每种内容在特定的情景上下文中有效，而在其他上下文中无效。每种内容也指定了可以被它们包含的类别，以及可以或不可以在其中使用的元素。这里提供了一个关于这些类别的说明。

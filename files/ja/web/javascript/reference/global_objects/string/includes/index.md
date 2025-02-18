@@ -9,7 +9,20 @@ l10n:
 
 **`includes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `true` か `false` を返します。
 
-{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## 構文
 

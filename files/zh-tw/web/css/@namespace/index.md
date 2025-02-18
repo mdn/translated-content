@@ -5,7 +5,7 @@ slug: Web/CSS/@namespace
 
 {{CSSRef}}
 
-**`@namespace`** 是一個 [at-rule](/zh-TW/docs/Web/CSS/At-rule)，它決定要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中要使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespaces)。
+**`@namespace`** 是一個 [at-rule](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)，它決定要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中要使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespaces)。
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-namespace.html", "tabbed-shorter")}}
 

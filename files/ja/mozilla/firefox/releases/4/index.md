@@ -18,9 +18,9 @@ Gecko は現在 [HTML5](/ja/docs/HTML/HTML5) パーサーを利用していま�
 
 ### HTML
 
-- [HTML5 パーサー入門](/ja/docs/Learn/HTML)
+- [HTML5 パーサー入門](/ja/docs/Learn_web_development/Core/Structuring_content)
   - : HTML5 パーサーが意味することと、どのように SVG と MathML をコンテンツにインラインで埋め込むかの概説。
-- [HTML5 におけるフォーム](/ja/docs/Learn/Forms/HTML5_input_types)
+- [HTML5 におけるフォーム](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)
   - : HTML5 におけるウェブフォームの改善の概説。これらの変更点には [`<input>`](/ja/docs/Web/HTML/Element/input) 要素における入力種類の追加、データバリデーションなどが含まれています。
 - [HTML5 Sections](/ja/docs/Web/HTML/Element/Heading_Elements)
   - : Gecko は文書におけるセクションに関する新しい HTML5 要素をサポートします。: [`<article>`](/ja/docs/Web/HTML/Element/article)、[`<section>`](/ja/docs/Web/HTML/Element/section)、[`<nav>`](/ja/docs/Web/HTML/Element/nav)、[`<aside>`](/ja/docs/Web/HTML/Element/aside)、 [`<hgroup>`](/ja/docs/Web/HTML/Element/hgroup)、[`<header>`](/ja/docs/Web/HTML/Element/header) および [`<footer>`](/ja/docs/Web/HTML/Element/footer)。

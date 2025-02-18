@@ -11,7 +11,15 @@ El **operador lógico AND (`&&`)** (conjunción lógica) será `true` para un co
 
 Generalmente, el operador retorna el valor del primer operando _{{Glossary("falsy")}}_ encontrado cuando evalúa de izquierda a derecha, o el valor del último operando si todos ellos son _{{Glossary("truthy")}}_.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## Sintaxis
 

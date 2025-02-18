@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
+**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
 
 {{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
 

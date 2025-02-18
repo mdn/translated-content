@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Decrement
 
 **감소(`--`) 연산자** 는 피연산자를 감소(1을 뺌)시키고 연산자의 위치에 따라 감소하기 전이나 후의 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-decrement.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Decrement operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x--;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:2, y:3"
+
+let a = 3;
+const b = --a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:2, b:2"
+```
 
 ## 구문
 

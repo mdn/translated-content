@@ -9,7 +9,21 @@ l10n:
 
 **`at()`** は {{jsxref("Array")}} インスタンスのメソッドで、整数値を受け取り、その位置にある項目を返します。正の整数値と負の整数値が使用できます。負の整数は、配列の最後の項目から前へ数えます。
 
-{{EmbedInteractiveExample("pages/js/array-at.html")}}
+{{InteractiveExample("JavaScript Demo: Array.at()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+let index = 2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"
+
+index = -2;
+
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of -2 returns 130"
+```
 
 ## 構文
 

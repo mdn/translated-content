@@ -182,8 +182,8 @@ Quand vous faites cela, il est possible de se retrouver avec plusieurs arrière-
 Les autres propriétés `background-*` peuvent aussi avoir une série de valeurs séparées de virgules, de la même manière que `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,

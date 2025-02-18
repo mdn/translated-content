@@ -9,7 +9,16 @@ l10n:
 
 {{jsxref("Array")}} 实例的 **`concat()`** 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
 
-{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+const array3 = array1.concat(array2);
+
+console.log(array3);
+// Expected output: Array ["a", "b", "c", "d", "e", "f"]
+```
 
 ## 语法
 

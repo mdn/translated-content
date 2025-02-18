@@ -9,7 +9,15 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffe
 
 **`SharedArrayBuffer()` コンストラクター**は {{jsxref("SharedArrayBuffer")}} オブジェクトを生成し、これは {{jsxref("ArrayBuffer")}} オブジェクトと似た、汎用的な、固定長の生のバイナリーデータバッファーを表します。
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer Constructor", "shorter")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## 構文
 

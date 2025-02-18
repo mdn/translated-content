@@ -9,7 +9,19 @@ l10n:
 
 **`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다. 이 구문은 [classes](/ko/docs/Web/JavaScript/Reference/Classes)에서도 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 구문
 

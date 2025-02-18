@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 
 **`setHours()`** 方法基於本地時區設置指定日期的小時，並回傳自 1970 年 1 月 1 日 00:00:00 UTC 起至更新的 {{jsxref("Date")}} 實例所表示的時間為止，共經過的毫秒數。
 
-{{EmbedInteractiveExample("pages/js/date-sethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setHours()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+event.setHours(20);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+event.setHours(20, 21, 22);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
+```
 
 ## 語法
 

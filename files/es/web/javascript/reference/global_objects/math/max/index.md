@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/max
 
 La función **`Math.max()`** retorna el mayor de cero o más números dados como parámetros de entrada, o {{jsxref("NaN")}} si cualquier parámetro no es un número y no puede ser convertido en uno.
 
-{{EmbedInteractiveExample("pages/js/math-max.html")}}
+{{InteractiveExample("JavaScript Demo: Math.max()")}}
+
+```js interactive-example
+console.log(Math.max(1, 3, 2));
+// Expected output: 3
+
+console.log(Math.max(-1, -3, -2));
+// Expected output: -1
+
+const array1 = [1, 3, 2];
+
+console.log(Math.max(...array1));
+// Expected output: 3
+```
 
 ## Sintaxis
 

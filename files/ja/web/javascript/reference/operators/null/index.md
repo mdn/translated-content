@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/null
 
 `null` という値は、意図的にオブジェクトの値が存在しないことを表します。これは JavaScript の[プリミティブ値](/ja/docs/Glossary/Primitive)の 1 つであり、論理演算では[偽値](/ja/docs/Glossary/Falsy)として扱われます。
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## 構文
 

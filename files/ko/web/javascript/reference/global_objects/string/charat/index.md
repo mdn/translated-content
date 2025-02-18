@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 **charAt()** 함수는 문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-charat.html")}}
+{{InteractiveExample("JavaScript Demo: String.charAt()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// Expected output: "The character at index 4 is q"
+```
 
 ## 구문
 

@@ -9,7 +9,23 @@ l10n:
 
 El método **`forEach()`** de las instancias de {{jsxref("Map")}} ejecuta la función provista, una vez por cada tupla llave/valor en este _map_, en orden de inserción.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.forEach()")}}
+
+```js interactive-example
+function logMapElements(value, key, map) {
+  console.log(`m[${key}] = ${value}`);
+}
+
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
+
+// Expected output: "m[foo] = 3"
+// Expected output: "m[bar] = [object Object]"
+// Expected output: "m[baz] = undefined"
+```
 
 ## Sintaxis
 

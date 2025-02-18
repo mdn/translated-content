@@ -10,7 +10,18 @@ l10n:
 {{jsxref("DataView")}} 인스턴스의 **`getUint32()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
 4바이트를 읽고 이를 32비트 부호 없는 정수로 해석합니다. 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint32.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getUint32()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint32(1, 4294967295); // Max unsigned 32-bit integer
+
+console.log(view.getUint32(1));
+// Expected output: 4294967295
+```
 
 ## 구문
 

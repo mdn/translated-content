@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Right_shift
 
 **右移运算符**（**`>>`**）将一个操作数的二进制表示形式向右移动指定位数，该操作数可以是数值或者 BigInt 类型。右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。该操作也称为“符号位传播右移”（sign-propagating right shift）或“算术右移”（arithmetic right shift），因为返回值的符号位与第一个操作数的符号位相同。
 
-{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >> b); //  11111111111111111111111111111110
+// Expected output: -2
+```
 
 ## 语法
 

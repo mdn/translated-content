@@ -134,27 +134,27 @@ MIME 类型为 `image` 的文件包含图像数据。子类型指定数据所代
 
 以下是常用的图像类型，可在网页中*安全*使用：
 
-- [`image/apng`](/zh-CN/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)：动画便携式网络图形（APNG）
-- [`image/avif`](/zh-CN/docs/Web/Media/Formats/Image_types#avif_图像)：AV1 图像文件格式（AVIF）
-- [`image/gif`](/zh-CN/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)：图形交换格式（GIF）
-- [`image/jpeg`](/zh-CN/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)：联合图像专家小组图片（JPEG）
-- [`image/png`](/zh-CN/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)：便携式网络图形（PNG）
-- [`image/svg+xml`](/zh-CN/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)：可缩放矢量图形（SVG）
-- [`image/webp`](/zh-CN/docs/Web/Media/Formats/Image_types#webp_图像)：Web 图像格式（WEBP）
+- [`image/apng`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics)：动画便携式网络图形（APNG）
+- [`image/avif`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#avif_图像)：AV1 图像文件格式（AVIF）
+- [`image/gif`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format)：图形交换格式（GIF）
+- [`image/jpeg`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image)：联合图像专家小组图片（JPEG）
+- [`image/png`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics)：便携式网络图形（PNG）
+- [`image/svg+xml`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics)：可缩放矢量图形（SVG）
+- [`image/webp`](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#webp_图像)：Web 图像格式（WEBP）
 
-[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Formats/Image_types#常见图像文件格式)提供了有关何时使用不同图像格式的信息和建议。
+[图像文件类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types#常见图像文件格式)提供了有关何时使用不同图像格式的信息和建议。
 
 ### 音频与视频类型
 
 与图像的情况一样，HTML 并不强制要求 web 浏览器支持 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素的任何特定文件和编解码器类型，因此在选择媒体使用的文件类型和编解码器时，必须考虑目标受众以及他们可能使用的浏览器（和这些浏览器的版本）范围。
 
-我们的[媒体容器格式指南](/zh-CN/docs/Web/Media/Formats/Containers)提供了 web 浏览器通常支持的文件类型列表，包括其特殊用途、缺点、兼容性信息以及其他详细信息。
+我们的[媒体容器格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Containers)提供了 web 浏览器通常支持的文件类型列表，包括其特殊用途、缺点、兼容性信息以及其他详细信息。
 
-[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。
+[音频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)和[视频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)指南列出了 web 浏览器通常支持的各种编解码器，并提供了兼容性细节和技术信息，如它们支持多少音频通道、使用哪种压缩方式以及它们的比特率等。在此基础上，[WebRTC 使用的编解码器](/zh-CN/docs/Web/Media/Guides/Formats/WebRTC_codecs)指南专门介绍了主要 web 浏览器支持的编解码器，因此你可以选择最适合你所希望支持的浏览器范围的编解码器。
 
-音频和视频文件的 MIME 类型，通常指的是其容器格式（或者说文件类型）。添加可选的 [codec 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter)到 MIME 类型中，能进一步指出要使用的编解码器和编码媒体时曾用到的选项，如编解码器配置文件、级别或其他此类信息。
+音频和视频文件的 MIME 类型，通常指的是其容器格式（或者说文件类型）。添加可选的 [codec 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)到 MIME 类型中，能进一步指出要使用的编解码器和编码媒体时曾用到的选项，如编解码器配置文件、级别或其他此类信息。
 
-下面列出了网络内容最常用的 MIME 类型。不过，这并不是一份包含所有可用类型的完整列表。请参阅[媒体容器格式指南](/zh-CN/docs/Web/Media/Formats/Containers)以查看完整的列表。
+下面列出了网络内容最常用的 MIME 类型。不过，这并不是一份包含所有可用类型的完整列表。请参阅[媒体容器格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Containers)以查看完整的列表。
 
 | MIME 类型                                                  | 音频或视频类型                                                                                                |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -271,7 +271,7 @@ Content-Range: bytes 300-400/1270
 常见的导致服务器配置错误的文件类型如下所示：
 
 - RAR 压缩文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能，因为 .RAR 文件可能包含多种不同类型的资源。这种情况，将所发送文件的 MIME 类型配置为 `application/x-rar-compressed`。
-- 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 元素识别和播放。请确保指定了正确的[音频和视频的媒体类型](/zh-CN/docs/Web/Media/Formats)。
+- 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 元素识别和播放。请确保指定了正确的[音频和视频的媒体类型](/zh-CN/docs/Web/Media/Guides/Formats)。
 - 专有文件类型。避免使用 `application/octet-stream`，对于这种一般的 MIME 类型浏览器不允许定义默认行为（比如“在 Word 中打开”）。像 `application/vnd.mspowerpoint` 这样的类型可以让用户选择自动在幻灯片软件中打开这样的文件。
 
 ## MIME 嗅探
@@ -290,6 +290,6 @@ MIME 类型不是传达文档类型信息的唯一方式：
 ## 参见
 
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
-- [Web 媒体类型指南](/zh-CN/docs/Web/Media/Formats)
+- [Web 媒体类型指南](/zh-CN/docs/Web/Media/Guides/Formats)
 - [正确配置服务器 MIME 类型](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
 - <https://www.iana.org/assignments/media-types/application/json>

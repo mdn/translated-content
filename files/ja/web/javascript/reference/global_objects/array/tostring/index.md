@@ -9,7 +9,14 @@ l10n:
 
 **`toString()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, 2, "a", "1a"];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+```
 
 ## 構文
 

@@ -12,7 +12,22 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 
 이 속성의 초기 값은 {{jsxref("Map.prototype.entries")}} 속성의 초기 값과 동일한 함수 객체입니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("0", "foo");
+map1.set(1, "bar");
+
+const iterator1 = map1[Symbol.iterator]();
+
+for (const item of iterator1) {
+  console.log(item);
+}
+// Expected output: Array ["0", "foo"]
+// Expected output: Array [1, "bar"]
+```
 
 ## 구문
 

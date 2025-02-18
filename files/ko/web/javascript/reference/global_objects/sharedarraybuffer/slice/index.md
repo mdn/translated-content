@@ -9,7 +9,20 @@ l10n:
 
 {{jsxref("SharedArrayBuffer")}} 인스턴스의 **`slice()`** 메서드는 `start`이상 `end`미만 이 `SharedArrayBuffer`의 바이트의 복사본을 내용으로 하는 새로운 `SharedArrayBuffer`를 반환합니다. `start` 또는 `end`가 음수이면 배열의 시작이 아닌 끝부터의 인덱스를 참조합니다.
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const int32View = new Int32Array(buffer); // Create the view
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+
+console.log(sliced);
+// Expected output: Int32Array [42, 0]
+```
 
 ## 구문
 

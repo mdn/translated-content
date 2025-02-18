@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 
 곱하기 할당 연산자(`*=`)는 오른쪽 피연산자의 값을 변수에 곱한 결과를 다시 변수에 할당합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-multiplication-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+
+```js interactive-example
+let a = 2;
+
+console.log((a *= 3));
+// Expected output: 6
+
+console.log((a *= "hello"));
+// Expected output: NaN
+```
 
 ## 구문
 

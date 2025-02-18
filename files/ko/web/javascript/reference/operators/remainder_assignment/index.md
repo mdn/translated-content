@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 
 나머지 할당 연산자(`%=`)는 오른쪽 피연산자의 값으로 변수를 나눴을 때의 나머지를 다시 변수에 할당합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+console.log((a %= 2));
+// Expected output: 1
+
+console.log((a %= 0));
+// Expected output: NaN
+
+console.log((a %= "hello"));
+// Expected output: NaN
+```
 
 ## 구문
 

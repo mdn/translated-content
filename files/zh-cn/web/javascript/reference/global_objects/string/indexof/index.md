@@ -7,7 +7,25 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 {{jsxref("String")}} 的 **`indexOf()`** 方法在字符串中搜索指定子字符串，并返回其第一次出现的位置索引。它可以接受一个可选的参数指定搜索的起始位置，如果找到了指定的子字符串，则返回的位置索引大于或等于指定的数字。
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: String.indexOf()")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 ## 语法
 

@@ -1,9 +1,11 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
+l10n:
+  sourceCommit: cc27a64bb555b250cf0984a3a744e5fd251e3565
 ---
 
-{{APIRef("Web Crypto API")}} {{AvailableInWorkers}}
+{{APIRef("Web Crypto API")}}{{AvailableInWorkers}}
 
 **`Crypto`** 接口提供了当前上下文中可用的基本的加密功能。它允许访问一个密码学安全的随机数生成器和密码学原语（cryptographic primitive）。
 

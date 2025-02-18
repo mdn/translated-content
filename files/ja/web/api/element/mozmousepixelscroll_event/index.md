@@ -3,7 +3,7 @@ title: "Element: MozMousePixelScroll イベント"
 short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
 ---
 
 {{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
@@ -25,9 +25,9 @@ onMozMousePixelScroll = (event) => {};
 
 ## イベント型
 
-{{domxref("MouseWheelEvent")}} です。{{domxref("Event")}} から継承しています。
+{{domxref("WheelEvent")}} です。 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}}、{{domxref("Event")}} を継承しています。
 
-{{InheritanceDiagram("MouseWheelEvent")}}
+{{InheritanceDiagram("WheelEvent")}}
 
 ## スクロールした距離の取得
 

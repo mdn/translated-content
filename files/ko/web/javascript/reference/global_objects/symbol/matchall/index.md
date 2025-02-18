@@ -11,7 +11,16 @@ l10n:
 
 더 많은 정보를 참고하시려면 [`RegExp.prototype[@@matchAll]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)와 {{jsxref("String.prototype.matchAll()")}}를 참고하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.matchAll")}}
+
+```js interactive-example
+const re = /[0-9]+/g;
+const str = "2016-01-02|2019-03-07";
+const result = re[Symbol.matchAll](str);
+
+console.log(Array.from(result, (x) => x[0]));
+// Expected output: Array ["2016", "01", "02", "2019", "03", "07"]
+```
 
 ## 값
 

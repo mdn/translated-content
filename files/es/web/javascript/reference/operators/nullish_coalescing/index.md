@@ -10,7 +10,17 @@ l10n:
 El operador **nullish coalescing (`??`)** (de coalescencia nula) es un operador lógico que retorna el operando de lado derecho cuando el operando de lado izquierdo es [`null`](/es/docs/Web/JavaScript/Reference/Operators/null) o {{jsxref("undefined")}},
 y en caso contrario retorna el operando de lado izquierdo.
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## Sintaxis
 

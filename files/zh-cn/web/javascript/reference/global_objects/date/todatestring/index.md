@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 
 **`toDateString()`** 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。
 
-{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+
+```js interactive-example
+const event = new Date(1993, 6, 28, 14, 39, 7);
+
+console.log(event.toString());
+// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toDateString());
+// Expected output: "Wed Jul 28 1993"
+```
 
 ## 语法
 

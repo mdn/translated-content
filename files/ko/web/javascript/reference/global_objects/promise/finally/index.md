@@ -12,7 +12,30 @@ l10n:
 
 **`finally()`** 메서드를 사용하면 {{jsxref("Promise/then", "then()")}} 와 {{jsxref("Promise/catch", "catch()")}} 처리기 속 코드 중복을 피할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Promise.finally()", "taller")}}
+
+```js interactive-example
+function checkMail() {
+  return new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) {
+      resolve("Mail has arrived");
+    } else {
+      reject(new Error("Failed to arrive"));
+    }
+  });
+}
+
+checkMail()
+  .then((mail) => {
+    console.log(mail);
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+  .finally(() => {
+    console.log("Experiment completed");
+  });
+```
 
 ## 문법
 

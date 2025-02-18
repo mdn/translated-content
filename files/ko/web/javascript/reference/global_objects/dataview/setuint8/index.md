@@ -10,7 +10,18 @@ l10n:
 {{jsxref("DataView")}} 인스턴스의 **`setUint8()`** 메서드는 숫자를 받아
 이 `DataView`의 지정된 바이트 오프셋의 1 바이트의 공간에 8비트 부호 없는 정수로 저장합니다.
 
-{{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setUint8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint8(1, 255); // Max unsigned 8-bit integer
+
+console.log(view.getUint8(1));
+// Expected output: 255
+```
 
 ## 구문
 

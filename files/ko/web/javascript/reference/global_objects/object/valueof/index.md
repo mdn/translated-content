@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 **`valueOf()`** 메서드는 특정 객체의 원시 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.valueOf()")}}
+
+```js interactive-example
+function MyNumberType(n) {
+  this.number = n;
+}
+
+MyNumberType.prototype.valueOf = function () {
+  return this.number;
+};
+
+const object1 = new MyNumberType(4);
+
+console.log(object1 + 3);
+// Expected output: 7
+```
 
 ## 구문
 

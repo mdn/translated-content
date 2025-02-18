@@ -9,7 +9,16 @@ l10n:
 
 La función **`encodeURIComponent()`** codifica un {{Glossary("URI")}} reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación {{Glossary("UTF-8")}} del carácter (serán cuatro secuencias de escape solo para caracteres compuestos por dos caracteres sustitutos). En comparación con {{jsxref("encodeURI()")}}, esta función codifica más caracteres, incluidos aquellos que son parte de la sintaxis de un URI.
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()", "shorter")}}
+
+```js interactive-example
+// Encodes characters such as ?,=,/,&,:
+console.log(`?x=${encodeURIComponent("test?")}`);
+// Expected output: "?x=test%3F"
+
+console.log(`?x=${encodeURIComponent("шеллы")}`);
+// Expected output: "?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+```
 
 ## Sintaxis
 

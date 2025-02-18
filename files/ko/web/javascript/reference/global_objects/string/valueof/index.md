@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("String")}} 값의 **`valueOf()`** 메서드는 {{jsxref("String")}} 이 문자열 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.valueOf());
+// Expected output: "foo"
+```
 
 ## 구문
 

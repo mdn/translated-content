@@ -11,7 +11,18 @@ l10n:
 
 **`Number.isFinite()`** 정적 메서드는 전달받은 값이 유한수인지 여부를 판별합니다. 즉, 주어진 값이 숫자이고 이 숫자가 양의 {{jsxref("Infinity")}}, 음의 `Infinity`, {{jsxref("NaN")}}이 아님을 확인합니다.
 
-{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isFinite()")}}
+
+```js interactive-example
+console.log(Number.isFinite(1 / 0));
+// Expected output: false
+
+console.log(Number.isFinite(10 / 5));
+// Expected output: true
+
+console.log(Number.isFinite(0 / 0));
+// Expected output: false
+```
 
 ## 구문
 

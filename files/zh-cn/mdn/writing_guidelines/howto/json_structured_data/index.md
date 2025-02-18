@@ -3,8 +3,6 @@ title: 如何使用结构化数据
 slug: MDN/Writing_guidelines/Howto/JSON_Structured_data
 ---
 
-{{MDNSidebar}}
-
 MDN 尽可能以明确定义的结构存储数据。这些信息将被集中存储和更新，以便同时在多个地方使用。
 
 这样的文件有好几个，本文档描述了它们的用途、结构和维护过程。

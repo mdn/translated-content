@@ -9,7 +9,21 @@ l10n:
 
 **`Math.clz32()`** は静的メソッドで、引数として与えられた数値の 32 ビットバイナリー表現での先頭の 0 の個数を返します。
 
-{{EmbedInteractiveExample("pages/js/math-clz32.html")}}
+{{InteractiveExample("JavaScript Demo: Math.clz32()")}}
+
+```js interactive-example
+// 00000000000000000000000000000001
+console.log(Math.clz32(1));
+// Expected output: 31
+
+// 00000000000000000000000000000100
+console.log(Math.clz32(4));
+// Expected output: 29
+
+// 00000000000000000000001111101000
+console.log(Math.clz32(1000));
+// Expected output: 22
+```
 
 ## 構文
 

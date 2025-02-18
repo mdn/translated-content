@@ -37,7 +37,7 @@ margin-top: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 设置固定边距大小。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的内联尺寸（对于竖排语言则是*宽度*，这由 {{cssxref("writing-mode")}} 定义）的百分比边距大小。
+  - : 相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的内联尺寸（对于竖排语言则是*宽度*，这由 {{cssxref("writing-mode")}} 定义）的百分比边距大小。
 - `auto`
   - : 浏览器选择一个合适的值来使用。参见 {{cssxref("margin")}}。
 

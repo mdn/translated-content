@@ -11,7 +11,17 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 널 병합 연산자는 [연산자 우선 순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence)가 다섯번째로 낮은데, `||` 의 바로 아래이며 [조건부 (삼항) 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)의 바로 위이다.
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## 문법
 

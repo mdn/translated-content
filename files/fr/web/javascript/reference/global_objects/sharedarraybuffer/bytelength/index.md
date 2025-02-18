@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 
 La propriété d'accesseur **`byteLength`** représente la longueur d'un {{jsxref("SharedArrayBuffer")}} exprimée en octets.
 
-{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.byteLength")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(8);
+
+console.log(buffer.byteLength);
+// Expected output: 8
+```
 
 ## Syntaxe
 

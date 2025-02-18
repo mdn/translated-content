@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/typeof
 
 **`typeof`** 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## 구문
 

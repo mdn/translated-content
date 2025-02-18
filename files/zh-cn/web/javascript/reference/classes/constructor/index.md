@@ -12,7 +12,20 @@ l10n:
 > [!NOTE]
 > 本页介绍 `constructor` 语法。关于所有对象的 `constructor` 属性，请参见 {{jsxref("Object.prototype.constructor")}}。
 
-{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+
+```js interactive-example
+class Polygon {
+  constructor() {
+    this.name = "Polygon";
+  }
+}
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// Expected output: "Polygon"
+```
 
 ## 语法
 

@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 **`filter()`** 方法會建立一個經指定之函式運算後，由原陣列中通過該函式檢驗之元素所構成的新陣列。
 
-{{EmbedInteractiveExample("pages/js/array-filter.html")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ### ES6 版本
 

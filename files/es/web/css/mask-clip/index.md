@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask-clip"
+title: -webkit-mask-clip
 slug: Web/CSS/mask-clip
 ---
 

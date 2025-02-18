@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 
 **`byteLength`** 접근자 속성은 형식화 배열의 길이(바이트)를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.byteLength", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.byteLength);
+// Expected output: 6
+```
 
 ## 설명
 

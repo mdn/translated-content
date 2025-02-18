@@ -3,7 +3,7 @@ title: "Element: classList プロパティ"
 short-title: classList
 slug: Web/API/Element/classList
 l10n:
-  sourceCommit: 1b22d649b27f7b9359388cb57fc0075559e32584
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("DOM")}}
@@ -31,9 +31,9 @@ console.log(div.outerHTML);
 
 // classList API を用いてクラスを除去、追加
 div.classList.remove("foo");
-div.classList.add("anotherclass");
+div.classList.add("another-class");
 
-// <div class="anotherclass"></div>
+// <div class="another-class"></div>
 console.log(div.outerHTML);
 
 // visible が設定されていれば除去し、なければ追加

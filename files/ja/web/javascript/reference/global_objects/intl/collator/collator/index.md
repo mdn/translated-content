@@ -8,7 +8,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 **`Intl.Collator()`** コンストラクターは、言語を考慮した文字列の比較を可能にする
 {{jsxref("Intl/Collator", "Intl.Collator")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-collator.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+
+```js interactive-example
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
+// Expected output: Array ["a", "ä", "z", "Z"]
+
+console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
+// Expected output: Array ["a", "z", "Z", "ä"]
+
+console.log(
+  ["Z", "a", "z", "ä"].sort(
+    new Intl.Collator("de", { caseFirst: "upper" }).compare,
+  ),
+);
+// Expected output: Array ["a", "ä", "Z", "z"]
+```
 
 <!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 

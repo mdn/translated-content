@@ -67,7 +67,8 @@ A propriedade `background-origin` é especificada por uma chave de valores lista
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
   background-position:
     top right,
     0px 0px;

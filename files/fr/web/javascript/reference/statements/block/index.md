@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Statements/block
 
 Une **instruction de bloc** est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un [label](/fr/docs/Web/JavaScript/Reference/Statements/label).
 
-{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Statement - Block", "taller")}}
+
+```js interactive-example
+var x = 1;
+let y = 1;
+
+if (true) {
+  var x = 2;
+  let y = 2;
+}
+
+console.log(x);
+// Expected output: 2
+
+console.log(y);
+// Expected output: 1
+```
 
 ## Syntaxe
 

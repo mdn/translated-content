@@ -10,7 +10,21 @@ l10n:
 **`Atomics.sub()`** 정적 메서드는 배열에서 주어진 위치에 주어진 값으로 빼기 연산을 수행하고
 해당 포지션의 기존 값을 반환합니다. 이 아토믹 연산은 수정된 값이 쓰이기 전까지 다른 쓰기 연산이 일어나지 않음을 보장합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-sub.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.sub()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 - 2 = 5
+console.log(Atomics.sub(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+```
 
 ## 구문
 

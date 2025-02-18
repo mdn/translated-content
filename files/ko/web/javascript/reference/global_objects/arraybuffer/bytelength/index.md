@@ -9,7 +9,18 @@ l10n:
 
 **`byteLength`** 접근자 속성은 {{jsxref("ArrayBuffer")}}의 길이를 바이트 단위로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-bytelength.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+
+// Use byteLength to check the size
+const bytes = buffer.byteLength;
+
+console.log(bytes);
+// Expected output: 8
+```
 
 ## 설명
 

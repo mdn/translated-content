@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 
 La méthode **`setDate()`** définit le jour du mois (relatif au début du mois courant) pour une date donnée.
 
-{{EmbedInteractiveExample("pages/js/date-setdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setDate()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setDate(24);
+
+console.log(event.getDate());
+// Expected output: 24
+
+event.setDate(32);
+// Only 31 days in August!
+
+console.log(event.getDate());
+// Expected output: 1
+```
 
 ## Syntaxe
 

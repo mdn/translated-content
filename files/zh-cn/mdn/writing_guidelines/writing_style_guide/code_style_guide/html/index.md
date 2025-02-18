@@ -3,8 +3,6 @@ title: HTML 代码示例编写指南
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 ---
 
-{{MDNSidebar}}
-
 下面的指南涵盖了如何为 MDN Web 文档编写 HTML 示例代码。
 
 ## HTML 代码示例常规指南

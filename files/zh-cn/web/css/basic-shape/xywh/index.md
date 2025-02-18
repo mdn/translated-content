@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
+**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
 
 ## 语法
 

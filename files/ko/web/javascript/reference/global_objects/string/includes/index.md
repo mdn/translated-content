@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/String/includes
 
 **`includes()`** 메서드는 하나의 문자열이 다른 문자열에 포함되어 있는지를 판별하고, 결과를 `true` 또는 `false` 로 반환합니다. 검색 시 대소문자를 구분합니다.
 
-{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## 구문
 

@@ -3,14 +3,16 @@ title: "Element: setAttribute() メソッド"
 short-title: setAttribute()
 slug: Web/API/Element/setAttribute
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---
 
 {{APIRef("DOM")}}
 
-指定された要素の属性の値を設定します。属性が既に存在する場合は値が更新され、そうでない場合は指定された名前と値で新しい属性が追加されます。
+**`setAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素の属性の値を設定します。属性が既に存在する場合は値が更新され、そうでない場合は指定された名前と値で新しい属性が追加されます。
 
 属性の現在の値を取得するには {{domxref("Element.getAttribute", "getAttribute()")}} を、属性を削除するには {{domxref("Element.removeAttribute", "removeAttribute()")}} を呼び出します。
+
+追加する前に {{domxref("Attr")}} ノードに対して操作をする必要がある場合は（他の要素から複製するなど）、代わりに {{domxref("Element.setAttributeNode()", "setAttributeNode()")}} メソッドが使用できます。
 
 ## 構文
 
@@ -36,7 +38,7 @@ setAttribute(name, value)
 ### 例外
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : 指定された属性 `name` に、属性名として無効な文字が 1 文字以上含まれています。
+  - : [`name`](#name) の値が有効な [XML 名](https://www.w3.org/TR/REC-xml/#dt-name) でない場合に発生します。例えば、数値、ハイフン、ピリオドで始まっていたり、英数字、アンダースコア、ハイフン、ピリオド以外の文字が含まれていたりする場合です。
 
 ## 例
 
@@ -72,8 +74,8 @@ button.setAttribute("disabled", "");
 これは 2 つのことを示しています。
 
 - 最初の `setAttribute()` の呼び出しでは、`name` 属性の値を "helloButton" に変更しています。
-  これはブラウザーのページインスペクター ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect),
-  [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)) を使用すると確認することができます。
+  これはブラウザーのページインスペクター ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://learn.microsoft.com/ja-jp/microsoft-edge/devtools-guide-chromium/css/inspect),
+  [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/guide/safari-developer/welcome/mac)) を使用すると確認することができます。
 - `disabled` のような論理属性の値を設定するには、任意の値を指定することができます。
   推奨される値は空の文字列か属性名です。
   重要なことは、属性が存在する場合、実際の値に関係なく、その値は `true` とみなされるということです。
@@ -87,6 +89,9 @@ button.setAttribute("disabled", "");
 
 {{Compat}}
 
-### Gecko のメモ
+## 関連情報
 
-特定の属性、特に XUL の `value` を変更するために `setAttribute()` を使用すると、属性が既定値を指定するため、矛盾した動作をします。現在の値にアクセスしたり変更したりするには、プロパティを使用する必要があります。例えば、`Element.value` を `Element.setAttribute()` の代わりに使用してください。
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

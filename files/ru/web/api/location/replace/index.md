@@ -13,8 +13,8 @@ slug: Web/API/Location/replace
 
 ## Синтаксис
 
-```
-object.replace(url);
+```js-nolint
+replace(url)
 ```
 
 ### Параметры

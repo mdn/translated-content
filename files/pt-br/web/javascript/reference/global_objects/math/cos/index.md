@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 
 A função **`Math.cos()`** ,que é estatica, retorna o [cosseno](https://pt.wikipedia.org/wiki/cosseno) de um ângulo, que deve estar em [radianos](https://pt.wikipedia.org/wiki/radianos). A expressão é <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>adjacent</mtext> </mrow></mrow></msub><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>hypotenuse</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
 
-{{EmbedInteractiveExample("pages/js/math-cos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+
+```js interactive-example
+function getCircleX(radians, radius) {
+  return Math.cos(radians) * radius;
+}
+
+console.log(getCircleX(1, 10));
+// Expected output: 5.403023058681398
+
+console.log(getCircleX(2, 10));
+// Expected output: -4.161468365471424
+
+console.log(getCircleX(Math.PI, 10));
+// Expected output: -10
+```
 
 ## Sintaxe
 

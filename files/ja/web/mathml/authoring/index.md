@@ -2,7 +2,7 @@
 title: MathML の記述
 slug: Web/MathML/Authoring
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{MathMLRef}}
@@ -22,10 +22,10 @@ MathML の数式がオーサリングツールで生成されるとしても、�
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>MathML in HTML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>MathML in HTML</h1>
 
     <p>
       One over square root of two (inline style):
@@ -68,7 +68,7 @@ MathML に対応していないブラウザーに対しては、代替機構を�
 <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
 ```
 
-ただ、もっと高度な表現も使いたいという場合にはもう少し大きい [MathJax](https://www.mathjax.org) ライブラリーを用いると良いでしょう。
+ただ、もっと高度な表現も使いたいという場合にはもう少し大きい [MathJax](https://www.mathjax.org/) ライブラリーを用いると良いでしょう。
 
 ```html
 <script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
@@ -85,7 +85,7 @@ MathML に対応していないブラウザーに対しては、代替機構を�
 
 #### 数学記号用のフォント
 
-[MathML フォント](/ja/docs/Web/MathML/Fonts)の記事で説明したように、数学フォントは MathML コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/Web/MathML/Fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)として指定されたフォントを提供することは常によい考えです。
+[MathML フォント](/ja/docs/Web/MathML/Fonts)の記事で説明したように、数学フォントは MathML コンテンツをレンダリングするのに役立ちます。そのため、[そのようなフォントのインストール手順](/ja/docs/Web/MathML/Fonts#インストール手順)を共有したり、[ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)として指定されたフォントを提供することは常によい考えです。
 
 [MathFonts ページ](https://fred-wang.github.io/MathFonts/)は、そのようなウェブフォントを適切なスタイルシートとともに提供しています。例えば、以下の行を文書内のヘッダーに挿入するだけで、フォールバックのウェブフォントとともに現代の欧文フォントを選択することができます。
 
@@ -141,7 +141,7 @@ MathML に対応していないブラウザーに対しては、代替機構を�
 </html>
 ```
 
-LaTeXに慣れない場合は、 [ASCIIMath](http://asciimath.org/#syntax) や [jqMath](https://mathscribe.com/author/jqmath.html) などの構文も利用できます。 JavaScript ライブラリーを読み込んで、適切な区切り文字を使用してください。
+LaTeXに慣れない場合は、 [ASCIIMath](https://asciimath.org/#syntax) や [jqMath](https://mathscribe.com/author/jqmath.html) などの構文も利用できます。 JavaScript ライブラリーを読み込んで、適切な区切り文字を使用してください。
 
 ```html
 <!doctype html>
@@ -199,7 +199,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 このコマンドを実行すると、以下の HTML 出力を格納したファイル `output.html` が作成されます。ドルで区切られた数式は MathML に変換されています。
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -210,12 +210,12 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
     <p>
       One over square root of two (inline style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
 
     <p>
       One over square root of two (display style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
   </body>
 </html>
@@ -236,7 +236,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 ```
 
 > [!NOTE]
-> コマンドラインツールはサーバー側で使用することができます。例えば、 [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) は [Mathoid](https://github.com/wikimedia/mathoid) を介して LaTeX から MathML への変換を行います。
+> コマンドラインツールはサーバー側で使用することができます。例えば、 [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) は [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid) を介して LaTeX から MathML への変換を行います。
 
 ## グラフィカルインターフェイス
 
@@ -271,6 +271,6 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 
 ## 光学文字認識・手書き文字認識
 
-数学を入力する最後のオプションは、[光学式文字認識](https://ja.wikipedia.org/wiki/光学文字認識)や[手書き文字認識](https://ja.wikipedia.org/wiki/手書き文字認識)のユーザーインターフェイスによるものです。これらのツールのいくつかは数式に対応しており、 MathML としてエクスポートすることができます。以下のスクリーンショットは [MyScript のデモ](https://webdemo.myscript.com/views/math/index.html)を示しています。
+数学を入力する最後のオプションは、[光学式文字認識 (OCR)](https://ja.wikipedia.org/wiki/光学文字認識) や[手書き文字認識](https://ja.wikipedia.org/wiki/手書き文字認識)のユーザーインターフェイスによるものです。これらのツールのいくつかは数式に対応しており、 MathML としてエクスポートすることができます。以下のスクリーンショットは [MyScript のデモ](https://webdemo.myscript.com/views/math/index.html)を示しています。
 
 ![MyScript](myscript.png)

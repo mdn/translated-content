@@ -1,5 +1,5 @@
 ---
-title: "-moz-force-broken-image-icon"
+title: -moz-force-broken-image-icon
 slug: Web/CSS/-moz-force-broken-image-icon
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41

@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Comma_operator
 
 **쉼표 연산자**는 각각의 피연산자를 왼쪽에서 오른쪽 순서로 평가하고, 마지막 연산자의 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-commaoperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Comma operator")}}
+
+```js interactive-example
+let x = 1;
+
+x = (x++, x);
+
+console.log(x);
+// Expected output: 2
+
+x = (2, 3);
+
+console.log(x);
+// Expected output: 3
+```
 
 ## 구문
 

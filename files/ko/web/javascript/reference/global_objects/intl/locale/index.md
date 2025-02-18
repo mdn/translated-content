@@ -9,7 +9,24 @@ l10n:
 
 **`Intl.Locale`** 객체는 유니코드 로케일 식별자를 나타내는 Intl 객체의 표준 내장 속성입니다.
 
-{{EmbedInteractiveExample("pages/js/intl-locale.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Locale")}}
+
+```js interactive-example
+const korean = new Intl.Locale("ko", {
+  script: "Kore",
+  region: "KR",
+  hourCycle: "h23",
+  calendar: "gregory",
+});
+
+const japanese = new Intl.Locale("ja-Jpan-JP-u-ca-japanese-hc-h12");
+
+console.log(korean.baseName, japanese.baseName);
+// Expected output: "ko-Kore-KR" "ja-Jpan-JP"
+
+console.log(korean.hourCycle, japanese.hourCycle);
+// Expected output: "h23" "h12"
+```
 
 ## 설명
 

@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Functions/Default_parameters
 
 Cette syntaxe permet d'initialiser des paramètres lors de l'appel de la fonction si aucune valeur n'est passée ou si c'est la valeur {{jsxref("undefined")}} qui est passée.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## Syntaxe
 

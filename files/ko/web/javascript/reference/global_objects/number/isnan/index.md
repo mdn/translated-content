@@ -9,7 +9,24 @@ l10n:
 
 **`Number.isNaN()`** 정적 메서드는 전달받은 값이 {{jsxref("NaN")}}인지 여부를 결정하고 입력이 Number 유형이 아니라면 `false`를 반환합니다. 이 함수는 원래의 전역 {{jsxref("isNaN()")}} 함수보다 강력합니다.
 
-{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Number.isNaN()", "taller")}}
+
+```js interactive-example
+function typeOfNaN(x) {
+  if (Number.isNaN(x)) {
+    return "Number NaN";
+  }
+  if (isNaN(x)) {
+    return "NaN";
+  }
+}
+
+console.log(typeOfNaN("100F"));
+// Expected output: "NaN"
+
+console.log(typeOfNaN(NaN));
+// Expected output: "Number NaN"
+```
 
 ## 구문
 

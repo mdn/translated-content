@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Statements/function*
 
 A declaração **`function*`** (palavra chave `function` seguida de um asterisco) define uma _função geradora_ (_generator function_), que retorna um objeto {{jsxref("Global_Objects/Generator","Generator")}}.
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 Você também pode definir funções geradoras usando o construtor {{jsxref("GeneratorFunction")}} ou a sintaxe da expressão de uma função.
 

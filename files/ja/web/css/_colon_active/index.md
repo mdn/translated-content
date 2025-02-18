@@ -1,5 +1,5 @@
 ---
-title: ":active"
+title: :active
 slug: Web/CSS/:active
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e

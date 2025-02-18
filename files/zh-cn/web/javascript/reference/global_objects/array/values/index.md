@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/values
 
 **`values()`** 方法返回一个新的[_数组迭代器_](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)对象，该对象迭代数组中每个元素的值。
 
-{{EmbedInteractiveExample("pages/js/array-values.html")}}
+{{InteractiveExample("JavaScript Demo: Array.values()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 

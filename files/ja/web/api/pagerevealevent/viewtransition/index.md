@@ -29,4 +29,4 @@ l10n:
 ## 関連情報
 
 - [ナビゲーション API](/ja/docs/Web/API/Navigation_API)
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)

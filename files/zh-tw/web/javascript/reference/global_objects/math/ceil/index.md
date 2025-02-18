@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 
 **`Math.ceil()`** 函式會回傳大於等於所給數字的最小整數。
 
-{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
+{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+
+```js interactive-example
+console.log(Math.ceil(0.95));
+// Expected output: 1
+
+console.log(Math.ceil(4));
+// Expected output: 4
+
+console.log(Math.ceil(7.004));
+// Expected output: 8
+
+console.log(Math.ceil(-7.004));
+// Expected output: -7
+```
 
 ## 語法
 

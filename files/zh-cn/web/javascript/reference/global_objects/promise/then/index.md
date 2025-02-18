@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 {{jsxref("Promise")}} 实例的 **`then()`** 方法最多接受两个参数：用于 `Promise` 兑现和拒绝情况的回调函数。它立即返回一个等效的 {{jsxref("Promise")}} 对象，允许你链接到其他 Promise 方法，从而实现[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)。
 
-{{EmbedInteractiveExample("pages/js/promise-then.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.then()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Success!");
+});
+
+promise1.then((value) => {
+  console.log(value);
+  // Expected output: "Success!"
+});
+```
 
 ## 语法
 

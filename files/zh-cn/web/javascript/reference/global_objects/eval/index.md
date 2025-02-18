@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 **`eval()`** 函数会将传入的字符串当做 JavaScript 代码进行执行。
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## 语法
 

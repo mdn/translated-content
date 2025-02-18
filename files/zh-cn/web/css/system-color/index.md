@@ -5,7 +5,7 @@ slug: Web/CSS/system-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<system-color>`** 通常反映了用于网页不同部分所选的默认颜色。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<system-color>`** 通常反映了用于网页不同部分所选的默认颜色。
 
 然而用户代理可以提供名为*强制颜色模式*的无障碍特性，颜色在此模式中被限制于用户和用户代理所定义的色组中，在特定属性中改写作者所选的颜色。在强制颜色模式中，`<system-color>` 暴露了所选颜色，页面的其余部分可由此融入其中。强制颜色模式的一个例子为 [Windows 上的高对比度模式](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)。
 

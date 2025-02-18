@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 
 当格式化大量数字时，最好创建一个 {{jsxref("Intl.NumberFormat")}} 对象，并使用其提供的 {{jsxref("Intl/NumberFormat/format", "format()")}} 方法。
 
-{{EmbedInteractiveExample("pages/js/number-tolocalestring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+
+```js interactive-example
+function eArabic(x) {
+  return x.toLocaleString("ar-EG");
+}
+
+console.log(eArabic(123456.789));
+// Expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(eArabic("123456.789"));
+// Expected output: "123456.789"
+
+console.log(eArabic(NaN));
+// Expected output: "ليس رقم"
+```
 
 ## 语法
 

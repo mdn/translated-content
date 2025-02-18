@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("RegExp")}} 实例的 **`flags`** 访问器属性返回当前正则表达式的[标志](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions#通过标志进行高级搜索)。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}
+
+```js interactive-example
+// Outputs RegExp flags in alphabetical order
+
+console.log(/foo/gi.flags);
+// Expected output: "gi"
+
+console.log(/bar/muy.flags);
+// Expected output: "muy"
+```
 
 ## 描述
 

@@ -9,7 +9,16 @@ l10n:
 
 **`Math.LOG2E`** 靜態數據屬性表示 [e](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/E) 以 2 為底的對數值，約為 1.443。
 
-{{EmbedInteractiveExample("pages/js/math-log2e.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.log2e()", "shorter")}}
+
+```js interactive-example
+function getLog2e() {
+  return Math.LOG2E;
+}
+
+console.log(getLog2e());
+// Expected output: 1.4426950408889634
+```
 
 ## 值
 

@@ -11,7 +11,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 
 그에 비해, {{jsxref("Promise.all()")}}이 반환한 프로미스는 서로 연관된 작업을 수행하거나, 하나라도 거부 당했을 때 즉시 거부하고 싶을 때 적합합니다.
 
-{{EmbedInteractiveExample("pages/js/promise-allsettled.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.allSettled()")}}
+
+```js interactive-example
+const promise1 = Promise.resolve(3);
+const promise2 = new Promise((resolve, reject) =>
+  setTimeout(reject, 100, "foo"),
+);
+const promises = [promise1, promise2];
+
+Promise.allSettled(promises).then((results) =>
+  results.forEach((result) => console.log(result.status)),
+);
+
+// Expected output:
+// "fulfilled"
+// "rejected"
+```
 
 ## 문법
 

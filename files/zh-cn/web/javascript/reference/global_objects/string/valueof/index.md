@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
 
 **`valueOf()`** 方法返回 {{jsxref("String")}} 对象的字符串值。
 
-{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.valueOf());
+// Expected output: "foo"
+```
 
 ## 语法
 

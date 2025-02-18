@@ -11,7 +11,23 @@ El símbolo conocido como **`Symbol.replace`** especifica el método que reempla
 
 Para más información, consulte {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} y {{jsxref("String.prototype.replace()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-replace.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+
+```js interactive-example
+class Replace1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.replace](string) {
+    return `s/${string}/${this.value}/g`;
+  }
+}
+
+console.log("foo".replace(new Replace1("bar")));
+// Expected output: "s/foo/bar/g"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Ejemplos
 

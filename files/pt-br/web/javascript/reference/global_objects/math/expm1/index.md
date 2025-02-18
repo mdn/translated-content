@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 
 The **`Math.expm1()`** function returns `ex - 1`, where `x` is the argument, and {{jsxref("Math.E", "e", "", 1)}} the base of the natural logarithms.
 
-{{EmbedInteractiveExample("pages/js/math-expm1.html")}}
+{{InteractiveExample("JavaScript Demo: Math.expm1()")}}
+
+```js interactive-example
+console.log(Math.expm1(0));
+// Expected output: 0
+
+console.log(Math.expm1(1));
+// Expected output: 1.718281828459045
+
+console.log(Math.expm1(-1));
+// Expected output: -0.6321205588285577
+
+console.log(Math.expm1(2));
+// Expected output: 6.38905609893065
+```
 
 ## Syntax
 

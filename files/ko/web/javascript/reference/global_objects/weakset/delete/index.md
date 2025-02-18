@@ -9,7 +9,22 @@ l10n:
 
 {{jsxref("WeakSet")}} 인스턴스의 **`delete()`** 메서드는 이 `WeakSet`에서 특정 요소를 제거합니다.
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.delete()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+weakset1.delete(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: false
+```
 
 ## 구문
 

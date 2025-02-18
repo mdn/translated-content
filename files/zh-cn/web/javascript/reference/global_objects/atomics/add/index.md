@@ -9,7 +9,21 @@ l10n:
 
 **`Atomics.add()`** 静态方法会将给定的值加到数组里的指定位置上，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
-{{EmbedInteractiveExample("pages/js/atomics-add.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 7;
+
+// 7 + 2 = 9
+console.log(Atomics.add(uint8, 0, 2));
+// Expected output: 7
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 9
+```
 
 ## 语法
 

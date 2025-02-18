@@ -10,7 +10,14 @@ l10n:
 {{jsxref("Array")}} 인스턴스의 **`toString()`** 메서드는
 지정된 배열 및 그 요소를 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, 2, "a", "1a"];
+
+console.log(array1.toString());
+// Expected output: "1,2,a,1a"
+```
 
 ## 구문
 

@@ -2,7 +2,7 @@
 title: Document：fullscreenchange 事件
 slug: Web/API/Document/fullscreenchange_event
 l10n:
-  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -41,7 +41,7 @@ onfullscreenchange = (event) => {};
 
 对于示例代码，这意味着，如果元素当前处于全屏模式，则 `fullscreenchange` 处理器在控制台中打印全屏元素的 `id`。如果 `document.fullscreenElement` 为 `null`，则代码记录消息表示更改是为了退出全屏模式。
 
-### HTML
+#### HTML
 
 ```html
 <h1>fullscreenchange 事件示例</h1>
@@ -72,7 +72,7 @@ onfullscreenchange = (event) => {};
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const logger = document.querySelector("#logger");
@@ -82,7 +82,7 @@ function log(message) {
   logger.textContent = `${logger.textContent}\n${message}`;
 }
 
-function fullscreenchanged(event) {
+function fullscreenchangeHandler(event) {
   // 如果有元素处于全屏模式，则 document.fullscreenElement 将指向该元素。如果没有元素处于全屏模式，则该属性的值为 null。
   if (document.fullscreenElement) {
     log(`元素：${document.fullscreenElement.id} 进入全屏模式。`);
@@ -91,7 +91,7 @@ function fullscreenchanged(event) {
   }
 }
 
-document.addEventListener("fullscreenchange", fullscreenchanged);
+document.addEventListener("fullscreenchange", fullscreenchangeHandler);
 
 // 在切换按钮被点击时，将会进入或退出全屏模式
 document.getElementById("toggle-fullscreen").addEventListener("click", () => {
@@ -103,6 +103,8 @@ document.getElementById("toggle-fullscreen").addEventListener("click", () => {
   }
 });
 ```
+
+{{EmbedLiveSample("打印 fullscreenchange 事件", 640, 250, "", "", "", "fullscreen")}}
 
 ## 规范
 

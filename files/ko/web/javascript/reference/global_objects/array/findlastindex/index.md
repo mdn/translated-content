@@ -12,7 +12,17 @@ l10n:
 
 인덱스 대신 판별 함수를 만족하는 마지막 값을 반환하는 {{jsxref("Array/findLast", "findLast()")}} 메서드도 참고하세요.
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const isLargeNumber = (element) => element > 45;
+
+console.log(array1.findLastIndex(isLargeNumber));
+// Expected output: 3
+// Index of element with value: 130
+```
 
 ## 구문
 

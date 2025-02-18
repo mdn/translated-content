@@ -11,7 +11,22 @@ l10n:
 
 你也可以使用 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)来定义生成器函数。
 
-{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+
+```js interactive-example
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// Expected output: 10
+
+console.log(gen.next().value);
+// Expected output: 20
+```
 
 ## 语法
 

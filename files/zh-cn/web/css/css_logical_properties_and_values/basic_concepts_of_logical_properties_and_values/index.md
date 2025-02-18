@@ -49,5 +49,5 @@ slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_proper
 
 - [网格布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [弹性布局中的盒对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [Understanding Logical Properties and Values](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
-- [书写模式](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [理解逻辑属性与逻辑值](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
+- [书写模式](/zh-CN/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)

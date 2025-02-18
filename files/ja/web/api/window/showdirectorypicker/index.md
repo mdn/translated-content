@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c6e1b00e194b214c2f82149aeaa15a944d2b005a
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}{{SeeCompatTable}}
+{{APIRef("File System API")}}{{Securecontext_Header}}{{SeeCompatTable}}
 
 {{domxref("Window")}} インターフェイスの **`showDirectoryPicker()`** メソッドは、ユーザーがディレクトリーを選択できるディレクトリーピッカーを表示します。
 

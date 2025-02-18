@@ -9,7 +9,22 @@ l10n:
 
 **`Object.preventExtensions()`** 静的メソッドは、すでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。また、このオブジェクトのプロトタイプが再代入されることを防ぎます。
 
-{{EmbedInteractiveExample("pages/js/object-preventextensions.html")}}
+{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.preventExtensions(object1);
+
+try {
+  Object.defineProperty(object1, "property1", {
+    value: 42,
+  });
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: Cannot define property property1, object is not extensible
+}
+```
 
 ## 構文
 

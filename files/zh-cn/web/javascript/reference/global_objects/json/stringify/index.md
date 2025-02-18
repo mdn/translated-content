@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 **`JSON.stringify()`** 方法将一个 JavaScript 对象或值转换为 JSON 字符串，如果指定了一个 replacer 函数，则可以选择性地替换值，或者指定的 replacer 是数组，则可选择性地仅包含数组指定的属性。
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## 语法
 

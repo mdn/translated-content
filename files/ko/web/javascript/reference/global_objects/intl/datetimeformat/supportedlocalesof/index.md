@@ -9,7 +9,16 @@ l10n:
 
 **`Intl.DateTimeFormat.supportedLocalesOf()`** 정적 메서드는 런타임의 기본 로케일로 돌아갈 필요 없이 날짜 및 시간 서식 지정에서 지원되는 제공된 로케일을 포함하는 배열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-supportedlocalesof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## 구문
 

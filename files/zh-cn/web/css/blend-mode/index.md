@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<blend-mode>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)描述当元素重叠时，颜色应当如何呈现。它被用于 {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
+**`<blend-mode>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)描述当元素重叠时，颜色应当如何呈现。它被用于 {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
 
 ## 语法
 

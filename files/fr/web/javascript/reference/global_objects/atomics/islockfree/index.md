@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 
 La méthode statique **`Atomics.isLockFree()`** est utilisée afin de déterminer si on doit utiliser des verrous (_locks_) ou des opérations atomiques. Elle renvoie `true` si la taille donnée correspond à une des propriétés [`BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT) d'un des types `TypedArray`.
 
-{{EmbedInteractiveExample("pages/js/atomics-islockfree.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.isLockFree()")}}
+
+```js interactive-example
+console.log(Atomics.isLockFree(3));
+// 3 is not one of the BYTES_PER_ELEMENT values
+// Expected output: false
+
+console.log(Atomics.isLockFree(4));
+// 4 is one of the BYTES_PER_ELEMENT values
+// Expected output: true
+```
 
 ## Syntaxe
 

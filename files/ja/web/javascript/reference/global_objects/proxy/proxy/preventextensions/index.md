@@ -9,7 +9,31 @@ l10n:
 
 **`handler.preventExtensions()`** はオブジェクトの `[[PreventExtensions]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。 {{jsxref("Object.preventExtensions()")}} のような操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.preventExtensions()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  canEvolve: true,
+};
+
+const handler1 = {
+  preventExtensions(target) {
+    target.canEvolve = false;
+    Object.preventExtensions(target);
+    return true;
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(monster1.canEvolve);
+// Expected output: true
+
+Object.preventExtensions(proxy1);
+
+console.log(monster1.canEvolve);
+// Expected output: false
+```
 
 ## 構文
 

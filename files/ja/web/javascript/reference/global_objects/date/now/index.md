@@ -9,7 +9,22 @@ l10n:
 
 **`Date.now()`** メソッドは、UTC (協定世界時) での 1970 年 1 月 1 日 0 時 0 分 0 秒 から現在までの経過時間をミリ秒単位で返します。
 
-{{EmbedInteractiveExample("pages/js/date-now.html")}}
+{{InteractiveExample("JavaScript Demo: Date.now()")}}
+
+```js interactive-example
+// This example takes 2 seconds to run
+const start = Date.now();
+
+console.log("starting timer...");
+// Expected output: "starting timer..."
+
+setTimeout(() => {
+  const millis = Date.now() - start;
+
+  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  // Expected output: "seconds elapsed = 2"
+}, 2000);
+```
 
 ## 構文
 

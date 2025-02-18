@@ -9,7 +9,17 @@ l10n:
 
 **`toString()`** メソッドは指定されたオブジェクトを表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/string-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: String.toString()")}}
+
+```js interactive-example
+const stringObj = new String("foo");
+
+console.log(stringObj);
+// Expected output: String { "foo" }
+
+console.log(stringObj.toString());
+// Expected output: "foo"
+```
 
 ## 構文
 

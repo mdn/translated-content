@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("Intl.RelativeTimeFormat")}} 인스턴스의 **`resolvedOptions()`** 메서드는 이 `Intl.RelativeTimeFormat` 객체의 초기화 중 계산된 상대 시간 형식 옵션과 로케일을 반영하는 속성을 가진 새 객체를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-resolvedoptions.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.resolvedOptions")}}
+
+```js interactive-example
+const rtf1 = new Intl.RelativeTimeFormat("en", { style: "narrow" });
+const options1 = rtf1.resolvedOptions();
+
+const rtf2 = new Intl.RelativeTimeFormat("es", { numeric: "auto" });
+const options2 = rtf2.resolvedOptions();
+
+console.log(`${options1.locale}, ${options1.style}, ${options1.numeric}`);
+// Expected output: "en, narrow, always"
+
+console.log(`${options2.locale}, ${options2.style}, ${options2.numeric}`);
+// Expected output: "es, long, auto"
+```
 
 ## 구문
 

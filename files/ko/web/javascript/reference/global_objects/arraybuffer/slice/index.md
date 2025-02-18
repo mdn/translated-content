@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 
 **`slice()`** 메서드는 현재 `ArrayBuffer`를 주어진 시작과 끝점에 맞춰 자른 새로운 `ArrayBuffer`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
+{{InteractiveExample("JavaScript Demo: ArrayBuffer.slice()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+const int32View = new Int32Array(buffer);
+// Produces Int32Array [0, 0, 0, 0]
+
+int32View[1] = 42;
+const sliced = new Int32Array(buffer.slice(4, 12));
+// Produces Int32Array [42, 0]
+
+console.log(sliced[0]);
+// Expected output: 42
+```
 
 ## 구문
 

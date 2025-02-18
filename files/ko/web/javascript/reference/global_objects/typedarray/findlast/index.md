@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`findLast()`** 메서드는 형식화 배열을 역순으로 순회하며 제공된 테스트 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 테스트 함수를 만족하는 요소가 없으면 {{jsxref("undefined")}}가 반환됩니다. 이 메서드는 {{jsxref("Array.prototype.findLast()")}}와 같은 알고리즘을 가집니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-findlast.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.findLast()")}}
+
+```js interactive-example
+function isNegative(element /*, index, array */) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([10, 0, -10, 20, -30, 40, 50]);
+
+console.log(int8.find(isNegative));
+// Expected output: -30
+```
 
 ## 구문
 

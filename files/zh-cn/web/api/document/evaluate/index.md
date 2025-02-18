@@ -5,7 +5,7 @@ slug: Web/API/Document/evaluate
 
 {{ ApiRef("DOM") }}
 
-根据传入的 [XPath](/zh-CN/docs/Web/XPath) 表达式以及其他参数，返回一个 {{domxref("XPathResult")}} 对象。
+根据传入的 [XPath](/zh-CN/docs/Web/XML/XPath) 表达式以及其他参数，返回一个 {{domxref("XPathResult")}} 对象。
 
 ## 语法
 
@@ -50,7 +50,7 @@ document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
 
 注意上面的 `document.body` 已经替代了 document 作为上下文，所以 XPath 从 body 元素开始查找。（在这个例子中，`"."` 很重要，因为它指示了查找要从 document.body 这个上下文节点开始。如果遗漏了 `"."` (剩下 `//h2`) ，查找会从根节点（`html`）处开始，这样会很浪费。）
 
-查阅 [Introduction to using XPath in JavaScript](/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) 获得更多信息。
+查阅[在 JavaScript 中使用 XPath 的简介](/zh-CN/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)获得更多信息。
 
 ## 注意
 

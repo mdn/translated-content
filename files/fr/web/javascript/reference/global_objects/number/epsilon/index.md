@@ -9,7 +9,19 @@ La propriété **`Number.EPSILON`** représente la différence entre le chiffre 
 
 Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique, elle est accessible avec `Number.EPSILON`.
 
-{{EmbedInteractiveExample("pages/js/number-epsilon.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+
+```js interactive-example
+const result = Math.abs(0.2 - 0.3 + 0.1);
+
+console.log(result);
+// Expected output: 2.7755575615628914e-17
+
+console.log(result < Number.EPSILON);
+// Expected output: true
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## Description
 
