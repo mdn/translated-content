@@ -2,7 +2,7 @@
 title: text-transform
 slug: Web/CSS/text-transform
 l10n:
-  sourceCommit: dad91b2a7c51b05d98cd79e436f61565810a42a5
+  sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
 {{CSSRef}}
@@ -174,7 +174,7 @@ strong {
 }
 ```
 
-単語の前の区切り記号が無視される様子を示す例です。このキーワードは、文字または数字の一般カテゴリに含まれる Unicode 文字である、最初の文字が対象です。
+単語の前の区切り記号が無視される様子を示す例です。このキーワードは、文字または数字の一般カテゴリーに含まれる Unicode 文字である、最初の文字が対象です。
 
 {{ EmbedLiveSample('Example using "capitalize" (punctuation)', '100%', '100px') }}
 

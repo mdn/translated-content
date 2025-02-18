@@ -2,12 +2,14 @@
 title: text-wrap-mode
 slug: Web/CSS/text-wrap-mode
 l10n:
-  sourceCommit: 693c8b0befd8ca3d2ea20a7988d844e21309264a
+  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
 {{CSSRef}}
 
-**`text-wrap-mode`** は CSS プロパティで、要素内のテキストを折り返すかどうかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
+**`text-wrap-mode`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストを折り返すかどうかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定または {{CSSXRef("white-space")}} の一括指定を使って設定したり、リセットしたりすることができます。
+
+> **メモ:** {{CSSxRef("white-space-collapse")}} および `text-wrap-mode` プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを使用して同時に宣言できます。
 
 > [!NOTE]
 > このプロパティの名前は、 CSSWG がより良い名前を探すまでのプレースホルダーです。
@@ -18,15 +20,15 @@ l10n:
 
 ```css
 /* キーワード値 */
-text-wrap-style: wrap;
-text-wrap-style: nowrap;
+text-wrap-mode: wrap;
+text-wrap-mode: nowrap;
 
 /* グローバル値 */
-text-wrap-style: inherit;
-text-wrap-style: initial;
-text-wrap-style: revert;
-text-wrap-style: revert-layer;
-text-wrap-style: unset;
+text-wrap-mode: inherit;
+text-wrap-mode: initial;
+text-wrap-mode: revert;
+text-wrap-mode: revert-layer;
+text-wrap-mode: unset;
 ```
 
 ## 値
@@ -47,9 +49,6 @@ text-wrap-style: unset;
 {{CSSSyntax}}
 
 ## 例
-
-> [!NOTE]
-> このプロパティのブラウザーの対応状況を調べてください。
 
 ### 折り返すコンテンツ
 
@@ -107,7 +106,7 @@ text-wrap-style: unset;
 
 #### 結果
 
-{{EmbedLiveSample("nowrapping_content", "100%",100)}}
+{{EmbedLiveSample("not_wrapping_content", "100%",100)}}
 
 ## 仕様書
 

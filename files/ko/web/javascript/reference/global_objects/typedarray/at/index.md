@@ -9,7 +9,21 @@ l10n:
 
 {{jsxref("TypedArray")}} 인스턴스의 **`at()`** 메서드는 정수 값을 받아 해당 인덱스에 있는 항목을 반환하며, 양의 정수와 음의 정수를 모두 허용합니다. 음의 정수는 배열의 마지막 항목에서부터 역순으로 셉니다. 이 메서드는 {{jsxref("Array.prototype.at()")}}와 동일한 알고리즘을 가집니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-at.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.at()")}}
+
+```js interactive-example
+const int8 = new Int8Array([0, 10, -10, 20, -30, 40, -50]);
+
+let index = 1;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// Expected output: "An index of 1 returns the item 10"
+
+index = -2;
+
+console.log(`An index of ${index} returns the item ${int8.at(index)}`);
+// Expected output: "An index of -2 returns the item 40"
+```
 
 ## 구문
 

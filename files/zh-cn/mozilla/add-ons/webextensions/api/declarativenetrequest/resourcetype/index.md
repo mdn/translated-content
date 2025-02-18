@@ -64,7 +64,7 @@ l10n:
 - `xmlhttprequest`
   - : 由 {{domxref("XMLHttpRequest")}} 对象发送的请求，或通过 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 发送的请求。
 - `xslt`
-  - : 用于转换 XML 文档的 [XSLT](/zh-CN/docs/Web/XSLT) 样式表。
+  - : 用于转换 XML 文档的 [XSLT](/zh-CN/docs/Web/XML/XSLT) 样式表。
 - `other`
   - : 没被任何其他可用类型涵盖的资源。
 

@@ -108,7 +108,7 @@ HTML5 本身是多平台的，所以你只需要写一种代码就可以适配�
 其他替代工具包括：
 
 - [Intel XDK](https://software.intel.com/en-us/intel-xdk) — 一个很棒的替代品，类似 CocoonIO。
-- [Electron](http://electron.atom.io/) — 或者叫 Atom Shell，是 GitHub 的一个开源跨平台工具。.
+- [Electron](http://electron.atom.io/) — 或者叫 Atom Shell，是 GitHub 的一个开源跨平台工具。
 - [Manifold.js](http://manifoldjs.com/) — 微软团队的这个工具可以从 iOS、Android 和 Windows 创建 HTML5 游戏的本地发行版。
 
 ## 总结

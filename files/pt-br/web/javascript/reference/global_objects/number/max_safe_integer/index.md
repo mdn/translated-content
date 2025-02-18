@@ -9,7 +9,23 @@ A constante **`Number.MAX_SAFE_INTEGER`** representa o maior inteiro seguro no J
 
 Para inteiros maiores, considere usar {{jsxref("BigInt")}}.
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}{{js_property_attributes(0, 0, 0)}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
+
+{{js_property_attributes(0, 0, 0)}}
 
 ## Descrição
 

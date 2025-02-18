@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.Segmenter`** 객체를 사용하면 로케일에 따른 텍스트 분할이 가능하므로 문자열에서 의미 있는 항목(문자소, 단어 또는 문장)을 가져올 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+console.log(iterator1.next().value.segment);
+// Expected output: 'Que'
+
+console.log(iterator1.next().value.segment);
+// Expected output: ' '
+```
 
 ## 생성자
 

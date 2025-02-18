@@ -1,16 +1,17 @@
 ---
 title: 例 5
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_5
-original_slug: Learn/Forms/How_to_build_custom_form_controls/Example_5
 l10n:
-  sourceCommit: 741bc42293cb9a434367f5e998f5076a8ae8137e
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-これが、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)を説明する最後の例です。
+{{LearnSidebar}}
+
+これが、[カスタムフォームウィジェットの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)を説明する最後の例です。
 
 ## 状態を変更する
 
-### HTML コンテンツ
+### HTML
 
 ```html
 <form class="no-widget">
@@ -35,7 +36,7 @@ l10n:
 </form>
 ```
 
-### CSS コンテンツ
+### CSS
 
 ```css
 .widget select,
@@ -58,7 +59,7 @@ l10n:
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -88,7 +89,7 @@ l10n:
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -104,7 +105,7 @@ l10n:
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -158,7 +159,7 @@ l10n:
 }
 ```
 
-### JavaScript コンテンツ
+### JavaScript
 
 ```js
 // -------------------- //
@@ -209,7 +210,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -267,14 +268,20 @@ window.addEventListener("load", () => {
     select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
 
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        event.preventDefault();
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
+        event.preventDefault();
+      }
+
+      if (event.key === "Enter" || event.key === " ") {
+        toggleOptList(select);
       }
 
       updateValue(select, index);

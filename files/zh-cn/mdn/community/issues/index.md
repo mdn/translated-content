@@ -3,8 +3,6 @@ title: 创建和解决议题指南
 slug: MDN/Community/Issues
 ---
 
-{{MDNSidebar}}
-
 作为贡献者，你可以[报告](#报告议题指南)和[解决](#解决议题指南)议题（issue）。
 
 在你报告议题后，议题会被分类。议题[分类](#议题分类指南)通常由被指定为维护者或所有者的人员完成。
@@ -31,7 +29,7 @@ slug: MDN/Community/Issues
 
 ### 创建议题前
 
-如果你认为你发现了 MDN Web 文档内容或网站界面外观的错误，请搜索[相关的仓库](/zh-CN/docs/MDN/Community/Contributing/Our_repositories)中当前未解决的议题，确保没有其他人报告该议题。
+如果你认为你发现了 MDN Web 文档内容或网站界面外观的错误，请搜索[相关的仓库](/zh-CN/docs/MDN/Community/Our_repositories)中当前未解决的议题，确保没有其他人报告该议题。
 
 ### 报告议题
 

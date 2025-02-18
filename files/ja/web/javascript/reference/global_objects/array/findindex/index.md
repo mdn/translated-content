@@ -12,7 +12,16 @@ l10n:
 
 {{jsxref("Array/find", "find()")}} メソッドも参照してください。こちらのメソッドは、配列内で見つかった要素の位置ではなく、値を返します。
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 ## 構文
 

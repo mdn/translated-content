@@ -74,7 +74,7 @@ PWA 的安装后和离线体验的外观由清单文件定义。外观清单成�
 
 - [`theme_color`](/zh-CN/docs/Web/Manifest/theme_color)
   - : 默认的[操作系统和浏览器 UI 元素的颜色](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#定义主题色)，例如某些移动体验中的状态栏和桌面操作系统上的应用程序标题栏。
-- [`background_color`](/zh-CN/docs/Web/Manifest/background_color)
+- [`background_color`](/zh-CN/docs/Web/Manifest/Reference/background_color)
   - : 在 CSS 加载之前，显示为[应用程序背景](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors#定制应用窗口背景色)的占位符颜色。为了在应用启动和加载之间创建平滑过渡，建议使用声明为应用程序 [`background-color`](/zh-CN/docs/Web/CSS/background-color) 颜色的 [`<color>`](/zh-CN/docs/Web/CSS/color_value)。
 
 ### 任务

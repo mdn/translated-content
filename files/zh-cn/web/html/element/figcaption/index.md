@@ -1,6 +1,8 @@
 ---
-title: <figcaption>
+title: <figcaption>：图像标题元素
 slug: Web/HTML/Element/figcaption
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
@@ -20,31 +22,34 @@ slug: Web/HTML/Element/figcaption
 ## 技术概要
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">
-   <a href="/zh-CN/docs/Web/HTML/Content_categories"
-   >内容分类</a
-   ></th>
-   <td>无。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>
-   <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
-   >流式内容</a
-   >。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>不允许，开始标签和结束标签都不能省略。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>{{HTMLElement("figure")}} 元素；<code>&lt;figcaption&gt;</code> 元素必须是它的第一个或者最后一个子节点。
-   </td>
-  </tr>
-  <tr>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>无。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        {{HTMLElement("figure")}} 元素；<code>&#x3C;figcaption></code> 元素必须是它的第一个或者最后一个子节点。
+      </td>
+    </tr>
+    <tr>
       <th scope="row">隐式 ARIA 角色</th>
       <td>
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
@@ -59,10 +64,10 @@ slug: Web/HTML/Element/figcaption
       </td>
     </tr>
     <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
 ## 规范

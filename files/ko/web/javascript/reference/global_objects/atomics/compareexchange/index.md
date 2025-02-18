@@ -12,7 +12,22 @@ l10n:
 이 메서드는 해당 위치의 이전 값이 해당 위치의 이전 값을 반환합니다. 이 아토믹 연산은 수정된 값이 반환될 때까지 다른 쓰기가
 발생하지 않음을 보장합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.compareExchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+Atomics.compareExchange(uint8, 0, 5, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+
+Atomics.compareExchange(uint8, 0, 5, 4); // Returns 2
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 구문
 

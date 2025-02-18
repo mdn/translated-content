@@ -13,7 +13,7 @@ slug: Web/API/PerformanceNavigationTiming
 
 下图显示了 `PerformanceNavigationTiming` 中定义的所有时间戳属性。
 
-![按获取文档记录的顺序列出时间戳的时间戳图](timestamp-diagram.svg)
+![按获取文档时记录的时间戳顺序排列的时间戳图](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 ## 实例属性
 

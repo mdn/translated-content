@@ -67,7 +67,7 @@ wm1.has(o1); // false
 
 - [`core-js` 中 `WeakMap` 的 polyfill](https://github.com/zloirock/core-js#weakmap)
 - [JavaScript 指南中的 `WeakMap`](/zh-CN/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_对象)
-- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
+- [使用 ECMAScript 6 WeakMap 隐藏实现细节](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

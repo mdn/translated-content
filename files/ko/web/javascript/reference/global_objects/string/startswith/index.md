@@ -9,7 +9,17 @@ l10n:
 
 **`startsWith()`**는 {{jsxref("String")}} 값의 메서드로, 어떤 문자열의 문자로 시작하는지 확인하여 결과를 적절하게 `true` 혹은 `false`로 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
+{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+
+```js interactive-example
+const str1 = "Saturday night plans";
+
+console.log(str1.startsWith("Sat"));
+// Expected output: true
+
+console.log(str1.startsWith("Sat", 3));
+// Expected output: false
+```
 
 ## 구문
 

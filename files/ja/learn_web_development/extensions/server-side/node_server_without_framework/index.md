@@ -113,7 +113,7 @@ if (filePath == "./") {
 
 例えば、`example.org`という URL を要求されたときは、`example.org/index.html`.のことだと解釈します。
 
-次に、要求されたファイルの拡張子を調べ、以下に定義する[MIME タイプ](/ja/docs/Web/HTTP/MIME_types)のどれかと一致したら、そのタイプを使います。一致しない場合には、デフォルトのタイプ`application/octet-stream`を使うようにします。.
+次に、要求されたファイルの拡張子を調べ、以下に定義する[MIME タイプ](/ja/docs/Web/HTTP/MIME_types)のどれかと一致したら、そのタイプを使います。一致しない場合には、デフォルトのタイプ`application/octet-stream`を使うようにします。
 
 ```js
 var extname = String(path.extname(filePath)).toLowerCase();

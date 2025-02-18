@@ -1,5 +1,5 @@
 ---
-title: "-webkit-mask"
+title: -webkit-mask
 slug: Web/CSS/mask
 ---
 

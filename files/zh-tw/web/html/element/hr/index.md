@@ -25,7 +25,7 @@ slug: Web/HTML/Element/hr
 - `noshade` {{deprecated_inline}}
   - : 設置這個標線沒有陰影。
 - `size` {{deprecated_inline}}
-  - : 設置標線的高度，單位是 px。.
+  - : 設置標線的高度，單位是 px。
 - `width` {{deprecated_inline}}
   - : 設置標線的長度，單位是 px；或者也可以用頁面寛度的百分比 (%)表示。
 
