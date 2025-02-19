@@ -1,6 +1,7 @@
 ---
 title: 文本片段
-slug: Web/URI/Fragment/Text_fragments
+slug: Web/URI/Reference/Fragment/Text_fragments
+original_slug: Web/URI/Fragment/Text_fragments
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/URI")}}

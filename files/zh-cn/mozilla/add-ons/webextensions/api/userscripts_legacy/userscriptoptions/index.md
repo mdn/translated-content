@@ -1,6 +1,7 @@
 ---
 title: UserScripts.UserScriptOptions
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/UserScriptOptions
+original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
 l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---

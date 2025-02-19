@@ -1,6 +1,7 @@
 ---
 title: 选择 www 或非 www URL
-slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
+slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+original_slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/URI")}}

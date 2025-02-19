@@ -1,6 +1,7 @@
 ---
 title: userScripts.onBeforeScript
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
+original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 l10n:
   sourceCommit: 0b956178ef19e8fc3981ed97dc6659d5a63f59a6
 ---
