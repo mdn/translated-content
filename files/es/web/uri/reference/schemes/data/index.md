@@ -1,7 +1,7 @@
 ---
 title: Datos URIs
-slug: Web/URI/Schemes/data
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URLs
+slug: Web/URI/Reference/Schemes/data
+original_slug: Web/URI/Schemes/data
 ---
 
 {{HTTPSidebar}}
