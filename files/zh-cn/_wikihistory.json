@@ -42783,7 +42783,7 @@
       "msforest"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2019-03-23T22:18:43.282Z",
     "contributors": [
       "zqyue",
@@ -42793,7 +42793,7 @@
       "chaos_zhang"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-10-15T21:06:54.948Z",
     "contributors": [
       "leegent",
