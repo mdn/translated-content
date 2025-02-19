@@ -18520,14 +18520,14 @@
       "Abelhg"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2019-03-18T21:22:07.450Z",
     "contributors": [
       "Adorta4",
       "carlosgocereceda"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2019-03-23T22:24:54.977Z",
     "contributors": [
       "Sergio_Gonzalez_Collado",
