@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片表示的 [data URI](/zh-CN/docs/Web/URI/Schemes/data)，此图片的格式由 `type` 参数指定。
+**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片表示的 [data URI](/zh-CN/docs/Web/URI/Reference/Schemes/data)，此图片的格式由 `type` 参数指定。
 
 可以指定所需的文件格式和图片质量。如果未指定文件格式，或指定的文件格式不受支持，则数据将以 `image/png` 导出。换句话说，如果传入的类型非 `image/png`，但是返回的值以 `data:image/png` 开头，那么这个类型是不受支持的。
 
@@ -32,7 +32,7 @@ toDataURL(type, encoderOptions)
 
 ### 返回值
 
-包含 [data URI](/zh-CN/docs/Web/URI/Schemes/data) 的字符串。
+包含 [data URI](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的字符串。
 
 ## 示例
 
@@ -134,4 +134,4 @@ function removeColors() {
 ## 参考
 
 - 定义接口，{{domxref("HTMLCanvasElement")}}
-- [HTTP](/zh-CN/docs/Web/HTTP) 参考中的 [Data URI](/zh-CN/docs/Web/URI/Schemes/data)
+- [HTTP](/zh-CN/docs/Web/HTTP) 参考中的 [Data URI](/zh-CN/docs/Web/URI/Reference/Schemes/data)

@@ -1,6 +1,6 @@
 ---
 title: 使用 userScript
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/Working_with_userScripts
 l10n:
   sourceCommit: 0b956178ef19e8fc3981ed97dc6659d5a63f59a6
 ---
@@ -100,6 +100,6 @@ async function registerScript() {
 
 ## 参见
 
-- {{WebExtAPIRef("userScripts")}}
-- {{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}
-- {{WebExtAPIRef("userScripts.onBeforeScript")}}
+- {{WebExtAPIRef("userScripts_legacy", "userScripts")}}
+- {{WebExtAPIRef("userScripts_legacy.register()", "userScripts.register()")}}
+- {{WebExtAPIRef("userScripts_legacy.onBeforeScript", "userScripts.onBeforeScript")}}

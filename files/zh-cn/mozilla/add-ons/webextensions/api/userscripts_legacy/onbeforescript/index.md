@@ -1,13 +1,13 @@
 ---
-title: userScripts.onBeforeScript
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
+title: userScripts.onBeforeScript（旧版）
+slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
 l10n:
   sourceCommit: 0b956178ef19e8fc3981ed97dc6659d5a63f59a6
 ---
 
 {{AddonSidebar}}
 
-{{WebExtAPIRef("userScripts","browser.userScripts")}} 的 `onBeforeScript` 事件在执行用户脚本之前触发。它只能包含在 API 脚本中（即在 [`"user_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 中注册的脚本中）用于检测自定义 API 方法是否应导出到用户脚本。
+{{WebExtAPIRef("userScripts_legacy","browser.userScripts")}} 的 `onBeforeScript` 事件在执行用户脚本之前触发。它只能包含在 API 脚本中（即在 [`"user_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) 中注册的脚本中）用于检测自定义 API 方法是否应导出到用户脚本。
 
 ## 语法
 
