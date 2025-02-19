@@ -133,8 +133,6 @@ WCAG 成功基準 3.1.2 では、ページ内に言語の異なる**部分**が�
 
 ## 継承
 
-If an element has no `lang` attribute, it will inherit the `lang` value set on its [parent node](/ja/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
-
 `lang` 属性を持っていない要素については、[親ノード](/ja/docs/Glossary/Node/DOM)に指定された `lang` の値が継承されます。場合によってはその親から、さらにその親から…、と継承されることになります。
 
 ## 仕様書
