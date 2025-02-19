@@ -1,6 +1,7 @@
 ---
 title: URI フラグメント
-slug: Web/URI/Fragment
+slug: Web/URI/Reference/Fragment
+original_slug: Web/URI/Fragment
 l10n:
   sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---

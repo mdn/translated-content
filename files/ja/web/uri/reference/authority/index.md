@@ -1,6 +1,7 @@
 ---
 title: URI オーソリティ
-slug: Web/URI/Authority
+slug: Web/URI/Reference/Authority
+original_slug: Web/URI/Authority
 l10n:
   sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---

@@ -1,7 +1,7 @@
 ---
 title: テキストフラグメント
-slug: Web/URI/Fragment/Text_fragments
-original_slug: Web/Text_fragments
+slug: Web/URI/Reference/Fragment/Text_fragments
+original_slug: Web/URI/Fragment/Text_fragments
 l10n:
   sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
