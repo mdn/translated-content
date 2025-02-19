@@ -61,7 +61,7 @@ l10n:
 
 #### Media、WebRTC 和 Web Audio
 
-- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
+- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
 
 #### 移除
 
@@ -69,7 +69,7 @@ l10n:
 
 ### WebAssembly
 
-- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
+- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 

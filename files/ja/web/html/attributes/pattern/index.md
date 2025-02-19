@@ -1,8 +1,9 @@
 ---
 title: "HTML 属性: pattern"
+short-title: pattern
 slug: Web/HTML/Attributes/pattern
 l10n:
-  sourceCommit: ab06e6d171cc1d1cc9d53b51164e8e6dc08649fb
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -90,7 +91,7 @@ input:invalid {
 
 ### パターンの指定
 
-[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)を参照してください）。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用すると、入力された値が有効とみなされるために一致しなければならない正規表現を指定することができます（正規表現を使用して入力を検証する簡単な集中講座は、[正規表現での検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#正規表現での検証)を参照してください）。
 
 以下の例では、値を 4-8 文字に制限し、小文字のみを含むことを要求しています。
 
@@ -158,5 +159,5 @@ This renders like so:
 ## 関連情報
 
 - [制約検証](/ja/docs/Web/HTML/Constraint_validation)
-- [フォーム: データフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォーム: データフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)

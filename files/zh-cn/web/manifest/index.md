@@ -96,7 +96,7 @@ web 应用清单可通过文档 {{HTMLElement("head")}} 中的 {{HTMLElement("li
 在某些浏览器和操作系统中，已安装的 PWA 启动时会显示启动画面。该启动画面是自动生成的，其外观由 web 应用清单中的成员定义，具体如下：
 
 - [`name`](/zh-CN/docs/Web/Manifest/name)
-- [`background_color`](/zh-CN/docs/Web/Manifest/background_color)
+- [`background_color`](/zh-CN/docs/Web/Manifest/Reference/background_color)
 - [`icons`](/zh-CN/docs/Web/Manifest/icons)
 
 ## 浏览器兼容性

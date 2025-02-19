@@ -9,7 +9,14 @@ El método **`getFullYear()`** devuelve el año de la fecha indicada acorde a la
 
 Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getYear()")}}.
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getFullYear()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 69 00:20:18");
+
+console.log(moonLanding.getFullYear());
+// Expected output: 1969
+```
 
 ## Sintaxis
 

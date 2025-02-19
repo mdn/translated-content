@@ -1,24 +1,27 @@
 ---
-title: アニメーションを順番に再生する
+title: "課題: アニメーションを順番に再生する"
 slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
-original_slug: Learn/JavaScript/Asynchronous/Sequencing_animations
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}
 
-この評価では、一連のアニメーションを順番に再生するためにページを更新します。これを行うには、[プロミスの使い方](/ja/docs/Learn/JavaScript/Asynchronous/Promises)の記事で学んだテクニックのいくつかを使用します。
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
+
+この評価では、一連のアニメーションを順番に再生するためにページを更新します。これを行うには、[プロミスの使い方](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)の記事で学んだテクニックのいくつかを使用します。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、JavaScript の基本、プロミスベースの API を使用する方法をそれなりに理解していること。
+        JavaScript の基本と、プロミスベースの API を使用する方法を適度に理解していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
-      <td>プロミスベースの API を使用する方法の理解度をテストするため。</td>
+      <th scope="row">目的:</th>
+      <td>プロミスベースの API を使用する方法の理解度をテストすること。</td>
     </tr>
   </tbody>
 </table>
@@ -39,6 +42,9 @@ original_slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 ![アニメーションを順番に再生する評価ページのスクリーンショット](./sequencing-animations.png)
 
 画像は、[ウェブアニメーション API を使用する](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)のガイドから引用しています。
+
+> [!NOTE]
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## プロジェクト概要
 
@@ -85,24 +91,12 @@ alice1.animate(aliceTumbling, aliceTiming);
 
 この実装を行うためにいくつかの異なる方法を試し、プロミスを使用する方法を強化していただきたいと思います。
 
-1. 最初に、動作するものを実装するのですが、[コールバックを使用する際の注意点](/ja/docs/Learn/JavaScript/Asynchronous/Introducing#コールバック)で見た「コールバック地獄」問題のプロミス版があります
+1. 最初に、動作するものを実装するのですが、[コールバックを使用する際の注意点](/ja/docs/Learn_web_development/Extensions/Async_JS/Introducing#コールバック)で見た「コールバック地獄」問題のプロミス版があります。
 
-2. 次に、これを[プロミス連鎖](/ja/docs/Learn/JavaScript/Asynchronous/Promises#プロミスの連鎖)として実装しましょう。[アロー関数](/ja/docs/Learn/JavaScript/Building_blocks/Functions#アロー関数)で使用できる形が異なるため、この書き方はいくつかあることに注意してください。どれが一番簡潔でしょうか？どれが一番読みやすいと感じますか？
+2. 次に、これを[プロミス連鎖](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises#プロミスの連鎖)として実装しましょう。[アロー関数](/ja/docs/Learn_web_development/Core/Scripting/Functions#アロー関数)で使用できる形が異なるため、この書き方はいくつかあることに注意してください。どれが一番簡潔でしょうか？どれが一番読みやすいと感じますか？
 
-3. 最後に [`async` と `await`](/ja/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await) を使用して実装しましょう。
+3. 最後に [`async` と `await`](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises#async_and_await) を使用して実装しましょう。
 
 `element.animate()` は `Promise` を返すのではないことに注意してください。 `Promise` である `finished` プロパティを持つ `Animation` オブジェクトを返すのです。
 
-## 評価またはさらなる支援
-
-自分の作品を評価してほしい、または行き詰まりを感じていて相談したい場合は、次のようにしてください。
-
-1. [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/)などのオンライン共有エディターに自分の作品を入れてください。
-2. [MDN Discourse forum 学習カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に評価や助けを依頼する記事を（英語で）書いてください。記事には以下のことを記載してください。
-
-   - "Assessment wanted for Sequencing animations" など、わかりやすいタイトル。
-   - すでに試したこと、そして私たちに何をしてほしいかについての詳細（例：行き詰まって助けが必要なとき、または評価が必要なとき）。
-   - 評価したい、または助けが必要な例へのリンクを、オンライン共有エディター（上記のステップ 1 で述べたとおり）にて添付してください。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
-   - 実際の課題または評価ページへのリンクで、助けを求めている問題を探すことができます。
-
-{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
+{{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}

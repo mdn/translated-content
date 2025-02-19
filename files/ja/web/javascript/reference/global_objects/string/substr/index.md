@@ -11,7 +11,17 @@ l10n:
 
 > **メモ:** `substr()` は ECMAScript 仕様書の主要部にはありません。[付録 B: ウェブブラウザーのための追加 ECMAScript 機能](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html) で定義されており、ブラウザー以外のランタイムでは通常オプションです。従って、コードのクロスプラットフォームの親和性を最大にするには、代わりに標準の [`String.prototype.substring()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring) または [`String.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice) メソッドを使用するよう勧められています。これら 3 つのメソッドの比較が [`String.prototype.substring()` page](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) にあります。
 
-{{EmbedInteractiveExample("pages/js/string-substr.html")}}
+{{InteractiveExample("JavaScript Demo: String.substr()")}}
+
+```js interactive-example
+const str = "Mozilla";
+
+console.log(str.substr(1, 2));
+// Expected output: "oz"
+
+console.log(str.substr(2));
+// Expected output: "zilla"
+```
 
 ## 構文
 

@@ -8,7 +8,21 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 전역 **`undefined`** 속성은 `{{Glossary("Undefined", "undefined")}}` 원시 값을 나타내며,
 JavaScript의 {{Glossary("Primitive", "원시 자료형")}} 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## 값
 

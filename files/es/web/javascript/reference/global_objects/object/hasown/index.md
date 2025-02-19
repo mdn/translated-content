@@ -11,7 +11,22 @@ El método estático **`Object.hasOwn()`** devuelve `true` si el objeto especifi
 
 > **Nota:** `Object.hasOwn()` está pensada como un reemplazo de {{jsxref("Object.prototype.hasOwnProperty()")}}.
 
-{{EmbedInteractiveExample("pages/js/object-hasown.html")}}
+{{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
+
+```js interactive-example
+const object1 = {
+  prop: "exists",
+};
+
+console.log(Object.hasOwn(object1, "prop"));
+// Expected output: true
+
+console.log(Object.hasOwn(object1, "toString"));
+// Expected output: false
+
+console.log(Object.hasOwn(object1, "undeclaredPropertyValue"));
+// Expected output: false
+```
 
 ## Sintaxis
 

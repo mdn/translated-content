@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 
 {{jsxref("WeakSet")}} 实例的 **`has()`** 方法返回一个布尔值，指示该 `WeakSet` 中指定的对象是否存在。
 
-{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.has()")}}
+
+```js interactive-example
+const weakset1 = new WeakSet();
+const object1 = {};
+const object2 = {};
+
+weakset1.add(object1);
+
+console.log(weakset1.has(object1));
+// Expected output: true
+
+console.log(weakset1.has(object2));
+// Expected output: false
+```
 
 ## 语法
 

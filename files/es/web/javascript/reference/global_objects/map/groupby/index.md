@@ -14,7 +14,25 @@ El método estático **`Map.groupBy()`** agrupa los elementos de un iterable, ut
 
 El método es útil principalmente cuando se quiere agrupar elementos que están asociados con un objeto, y particularmente cuando el objeto puede cambiar con el tiempo. Si el objeto es invariante, podrías en su lugar representarlo utilizando una cadena de caracteres _string_, y agrupando los elementos con {{jsxref("Object.groupBy()")}}.
 
-{{EmbedInteractiveExample("pages/js/map-groupby.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Map.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? restock : sufficient,
+);
+console.log(result.get(restock));
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Sintaxis
 

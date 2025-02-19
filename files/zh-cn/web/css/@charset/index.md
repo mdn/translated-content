@@ -7,15 +7,15 @@ slug: Web/CSS/@charset
 
 ## 概述
 
-**`@charset`** [CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule)指定样式表中使用的字符编码。它必须是样式表中的第一个元素，而前面不得有任何字符。因为它不是一个[嵌套语句](/zh-CN/docs/Web/CSS/Syntax#css_语句)，所以不能在[@规则](/zh-CN/docs/Web/CSS/At-rule)[条件组](/zh-CN/docs/Web/CSS/At-rule#条件规则组)中使用。如果有多个 **`@charset`** [@规则](/zh-CN/docs/Web/CSS/At-rule)被声明，只有第一个会被使用，而且不能在 HTML 元素或 HTML 页面的字符集相关 {{ HTMLElement("style") }} 元素内的样式属性内使用。
+**`@charset`** [CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)指定样式表中使用的字符编码。它必须是样式表中的第一个元素，而前面不得有任何字符。因为它不是一个[嵌套语句](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句)，所以不能在[@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)[条件组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)中使用。如果有多个 **`@charset`** [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)被声明，只有第一个会被使用，而且不能在 HTML 元素或 HTML 页面的字符集相关 {{ HTMLElement("style") }} 元素内的样式属性内使用。
 
-此 [@规则](/zh-CN/docs/Web/CSS/At-rule)在某些 CSS 属性中使用非 ASCII 字符时非常有用，例如 {{ cssxref("content") }}。
+此 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)在某些 CSS 属性中使用非 ASCII 字符时非常有用，例如 {{ cssxref("content") }}。
 
 在样式表中有多种方法去声明字符编码，浏览器会按照以下顺序尝试下边的方法（一旦找到就停止并得出结果）：
 
 1. 文件的开头的 [Unicode byte-order](https://zh.wikipedia.org/wiki/字节顺序标记) 字符值。
 2. 由 Content-Type：HTTP header 中的 charset 属性给出的值或用于提供样式表的协议中的等效值。
-3. `CSS` [@规则](/zh-CN/docs/Web/CSS/At-rule) `@charset`。
+3. `CSS` [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) `@charset`。
 4. 使用参考文档定义的字符编码：{{ HTMLElement("link") }} 元素的 charset 属性。该方法在 HTML5 标准中已废除，无法使用。
 5. 假设文档是 UTF-8。
 

@@ -137,7 +137,6 @@ slug: Web/CSS/CSS_grid_layout
 - [Box alignment in CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Grid, Logical Values and Writing Modes](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout and accessibility](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Realising common layouts using CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## 外部资源

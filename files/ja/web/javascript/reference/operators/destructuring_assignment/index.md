@@ -9,7 +9,23 @@ l10n:
 
 **分割代入** (Destructuring assignment) 構文は、配列から値を取り出して、あるいはオブジェクトからプロパティを取り出して別個の変数に代入することを可能にする JavaScript の式です。
 
-{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Destructuring assignment", "taller")}}
+
+```js interactive-example
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+```
 
 ## 構文
 

@@ -70,7 +70,7 @@ list-style-position: inside | outside | inherit
 }
 
 .three {
-  list-style-image: url("starsolid.gif");
+  list-style-image: url("star-solid.gif");
   list-style-position: inherit;
 }
 ```

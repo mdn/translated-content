@@ -11,7 +11,21 @@ l10n:
 
 자세한 내용은 [`RegExp.prototype[Symbol.search]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search)와 {{jsxref("String.prototype.search()")}}을 참고하세요.
 
-{{EmbedInteractiveExample("pages/js/symbol-search.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.search")}}
+
+```js interactive-example
+class Search1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.search](string) {
+    return string.indexOf(this.value);
+  }
+}
+
+console.log("foobar".search(new Search1("bar")));
+// Expected output: 3
+```
 
 ## 값
 

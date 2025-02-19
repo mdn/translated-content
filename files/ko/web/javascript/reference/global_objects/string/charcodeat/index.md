@@ -11,7 +11,20 @@ l10n:
 
 `charCodeAt()`은 항상 문자열을 [UTF-16 코드 단위](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters)의 시퀀스로 색인하므로 론 서로게이트(lone surrogates)를 반환할 수 있습니다. 주어진 인덱스에서 전체 유니코드 코드 포인트를 가져오려면 {{jsxref("String.prototype.codePointAt()")}}를 사용합니다.
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.charCodeAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// Expected output: "Character code 113 is equal to q"
+```
 
 ## 구문
 

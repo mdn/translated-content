@@ -122,8 +122,6 @@ slug: Web/CSS/CSS_selectors
 
 {{Specifications}}
 
-[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#specifications)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements#specifications)的规范位于各自的页面中。
-
 ## 参见
 
-- [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity)
+- [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
