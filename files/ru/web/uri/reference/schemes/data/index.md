@@ -1,7 +1,6 @@
 ---
 title: Data URL
 slug: Web/URI/Reference/Schemes/data
-original_slug: Web/URI/Schemes/data
 ---
 
 {{HTTPSidebar}}
