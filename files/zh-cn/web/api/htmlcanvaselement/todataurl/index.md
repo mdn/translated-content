@@ -9,7 +9,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 可以指定所需的文件格式和图片质量。如果未指定文件格式，或指定的文件格式不受支持，则数据将以 `image/png` 导出。换句话说，如果传入的类型非 `image/png`，但是返回的值以 `data:image/png` 开头，那么这个类型是不受支持的。
 
-浏览器都支持 `image/png`，许多浏览器也会支持 `image/jpeg` 和 `image/webp` 在内的其他格式。
+浏览器被要求支持 `image/png`，许多浏览器也会支持 `image/jpeg` 和 `image/webp` 在内的其他格式。
 
 对于支持编码分辨率元数据的文件格式，创建的图像数据将具有 96dpi 的分辨率。
 
