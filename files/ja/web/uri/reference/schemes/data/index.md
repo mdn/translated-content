@@ -1,6 +1,7 @@
 ---
 title: データ URL
-slug: Web/URI/Schemes/data
+slug: Web/URI/Reference/Schemes/data
+original_slug: Web/URI/Schemes/data
 l10n:
   sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---

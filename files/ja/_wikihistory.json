@@ -42739,7 +42739,7 @@
       "hashedhyphen"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-12-06T15:11:17.468Z",
     "contributors": [
       "mfuji09",
@@ -42748,7 +42748,7 @@
       "yyss"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-12-04T15:28:57.902Z",
     "contributors": [
       "mfuji09",
@@ -42758,7 +42758,7 @@
       "sosleepy"
     ]
   },
-  "Web/URI/Schemes/resource": {
+  "Web/URI/Reference/Schemes/resource": {
     "modified": "2019-03-18T21:26:41.834Z",
     "contributors": [
       "mfuji09",

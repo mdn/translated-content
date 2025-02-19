@@ -1,6 +1,7 @@
 ---
 title: "javascript: URL"
-slug: Web/URI/Schemes/javascript
+slug: Web/URI/Reference/Schemes/javascript
+original_slug: Web/URI/Schemes/javascript
 l10n:
   sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
 ---

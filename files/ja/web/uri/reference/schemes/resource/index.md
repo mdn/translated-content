@@ -1,6 +1,7 @@
 ---
 title: リソース URL
-slug: Web/URI/Schemes/resource
+slug: Web/URI/Reference/Schemes/resource
+original_slug: Web/URI/Schemes/resource
 l10n:
   sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
 ---
