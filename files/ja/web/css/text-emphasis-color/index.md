@@ -50,7 +50,7 @@ text-emphasis-color: unset;
 
 #### CSS
 
-```css
+```css live-sample___emphasis_with_a_color_and_custom_character
 em {
   text-emphasis-color: green;
   text-emphasis-style: "*";
@@ -59,7 +59,7 @@ em {
 
 #### HTML
 
-```html
+```html live-sample___emphasis_with_a_color_and_custom_character
 <p>例:</p>
 
 <em>これには圏点があります！</em>
@@ -67,7 +67,7 @@ em {
 
 #### 結果
 
-{{EmbedLiveSample("色と固有の文字で強調", 450, 100)}}
+{{EmbedLiveSample("Emphasis_with_a_color_and_custom_character", 450, 100)}}
 
 ## 仕様書
 
