@@ -1,10 +1,7 @@
 ---
 title: 选择 www 或非 www URL
 slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
-original_slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/URI")}}
 
 网站所有者经常会问的一个问题是选择非 www 的还是 www 的 URL。本文提供了选择建议。
 
