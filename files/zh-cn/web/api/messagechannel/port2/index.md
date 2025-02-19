@@ -48,4 +48,4 @@ function handleMessage(e) {
 
 ## 参见
 
-- [使用频道传递消息](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [使用频道消息传递](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
