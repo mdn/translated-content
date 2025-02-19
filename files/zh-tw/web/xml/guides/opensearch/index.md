@@ -40,7 +40,7 @@ OpenSearch 描述文件可以按照[搜尋插件的自動探索](#搜尋插件�
 
   - : 搜尋引擎圖標的 URL。盡可能包括一個 16×16 的 `image/x-icon` 類型圖像（例如 `/favicon.ico`）和一個 64×64 的 `image/jpeg` 或 `image/png` 類型圖像。
 
-    URL 也可以使用 [`data:` URL 方案](/zh-TW/docs/Web/URI/Schemes/data)。（你可以在 [`data:` URL 廚房](https://software.hixie.ch/utilities/cgi/data/data) 生成一個 `data:` URL。）
+    URL 也可以使用 [`data:` URL 方案](/zh-TW/docs/Web/URI/Reference/Schemes/data)。（你可以在 [`data:` URL 廚房](https://software.hixie.ch/utilities/cgi/data/data) 生成一個 `data:` URL。）
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>

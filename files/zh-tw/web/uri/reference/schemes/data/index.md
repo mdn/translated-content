@@ -1,11 +1,9 @@
 ---
 title: Data URL
-slug: Web/URI/Schemes/data
+slug: Web/URI/Reference/Schemes/data
 l10n:
   sourceCommit: 48fc59029d83dbc53748561d30be41f6a0ae62c1
 ---
-
-{{QuickLinksWithSubpages("/zh-TW/docs/Web/URI")}}
 
 **Data URL**，即以 `data:` 為前綴的 URL，允許內容創作者將小型檔案內嵌於文件中。它們先前被稱為「資料 URI」，但該名稱已被 WHATWG 廢除。
 
