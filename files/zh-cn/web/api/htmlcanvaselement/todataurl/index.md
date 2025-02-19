@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/toDataURL
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片展示的 [data URI](/zh-CN/docs/Web/URI/Schemes/data)，此图片的格式由 `type` 参数指定。
+**`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片表示的 [data URI](/zh-CN/docs/Web/URI/Schemes/data)，此图片的格式由 `type` 参数指定。
 
 可以指定所需的文件格式和图片质量。如果未指定文件格式，或指定的文件格式不受支持，则数据将作为 `image/png` 导出。换句话说，如果传入的类型非 `image/png`，但是返回的值以 `data:image/png` 开头，那么该传入的类型是不支持的。
 
