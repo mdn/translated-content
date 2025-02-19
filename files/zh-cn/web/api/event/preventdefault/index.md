@@ -9,7 +9,9 @@ slug: Web/API/Event/preventDefault
 
 此事件仍会继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 才停止传播。
 
-如后文所述，对于不可取消的事件（例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 分派的、没有指定 `cancelable: true` 的事件），调用 **`preventDefault()`** 是没有任何效果的，并且可能导致控制台警告信息。
+如后文所述，对于不可取消的事件（例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 分派的、没有指定 `cancelable: true` 的事件），调用 **`preventDefault()`** 是没有任何效果的。
+
+如果被动监听器调用 `preventDefault()`，则不会发生任何事情，并且可能会生成控制台警告。
 
 ### 语法
 
@@ -40,11 +42,11 @@ function checkboxClick(event) {
 #### HTML
 
 ```html
-<p>请勾选复选框。</p>
+<p>请点击复选框控件。</p>
 
 <form>
-  <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox" />
+  <label for="id-checkbox">复选框：</label
+  ><input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -52,17 +54,15 @@ function checkboxClick(event) {
 
 #### 结果
 
-你可以看到如下的行为：
-
 {{EmbedLiveSample("阻止默认的点击事件执行")}}
 
-### 在编辑域中阻止按键
+### 在编辑字段中阻止按键
 
-下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)来代替。
+下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑字段中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)来代替。
 
 #### HTML
 
-此 HTML 表单用于捕获用户输入。由于我们只对按键输入感兴趣，因此我们禁用 `autocomplete` 功能来防止浏览器使用缓存的值填充输入字段。
+此 HTML 表单用于捕获用户输入。由于我们只对按键输入感兴趣，因此我们禁用 `autocomplete` 来防止浏览器使用缓存的值填充输入字段。
 
 ```html
 <div class="container">
@@ -76,7 +76,7 @@ function checkboxClick(event) {
 
 #### CSS
 
-当用户按下一个有效按键的时候，我们就给这个 warning box 加上一些样式：
+当用户按下一个无效按键的时候，我们就给这个警告框加上一些样式：
 
 ```css
 .warning {
@@ -137,15 +137,13 @@ function displayWarning(msg) {
 
 #### 结果
 
-这里就是代码的执行结果：
-
-{{ EmbedLiveSample('在编辑域中阻止按键', 600, 200) }}
+{{ EmbedLiveSample('在编辑字段中阻止按键', 600, 200) }}
 
 ## 备注
 
 在事件流的任何阶段调用 `preventDefault()` 都会取消事件，这意味着任何通常被该实现触发并作为结果的默认行为都不会发生。
 
-你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不支持 cancelable 的事件调用 `preventDefault()` 将没有效果。
+你可以使用 {{domxref("Event.cancelable")}} 来检查该事件是否支持取消。为一个不可取消的事件调用 `preventDefault()` 将没有效果。
 
 ## 规范
 
