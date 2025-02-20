@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-橫幅與通知會顯示在某些頁面中（特別是 API 參考文件），以突顯會影響描述內容使用方式的重要因素。例如，橫幅用於突顯某個介面、方法或屬性已被棄用、不應在產品程式碼中使用，或只能在安全環境中使用。
+橫幅與通知會顯示在某些頁面中（特別是 API 參考文件），以突顯會影響描述內容使用方式的重要因素。例如，橫幅用於突顯某個介面、方法或屬性已被棄用、不應在產品程式碼中使用，或只能在安全上下文中使用。
 
 橫幅透過頁面內容中的巨集呈現，部分橫幅巨集會自動加入頁面，而其他則需手動加入。
 
@@ -33,7 +33,7 @@ browser-compat: api.AudioDecoder
 必須手動加入下列巨集：
 
 - `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，表示該技術僅能在[安全上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中使用。
-- `\{{AvailableInWorkers}}`——這會產生一個**可在 Worker 使用**通知，表示該技術在[Worker 上下文](/zh-TW/docs/Web/API/Web_Workers_API)中可用。
+- `\{{AvailableInWorkers}}`——這會產生一個**可在 Worker 使用**通知，表示該技術在 [Worker 上下文](/zh-TW/docs/Web/API/Web_Workers_API)中可用。
 
 ## 自動加入的橫幅
 
