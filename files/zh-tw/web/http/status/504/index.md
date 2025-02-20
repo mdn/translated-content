@@ -43,7 +43,7 @@ Content-Length: 123
 <body>
   <h1>Gateway timeout</h1>
   <p>伺服器未能及時回應。請稍後再試。</p>
-  <p>如果此問題持續發生，請 <a href="https://example.com/support">聯繫支援</a>。</p>
+  <p>如果此問題持續發生，請<a href="https://example.com/support">聯繫支援</a>。</p>
 </body>
 </html>
 ```
