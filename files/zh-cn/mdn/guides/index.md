@@ -64,5 +64,5 @@ MDN Web 文档上有许多指南，通过实际示例教你如何使用特性或
 
 ## 用户界面开发
 
-- [用户输入和控制](/zh-CN/docs/Learn_web_development/Extensions/Forms/User_input_methods)
+- [用户输入和控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/User_input_methods)
   - : 用户输入不仅限于鼠标和键盘：例如触摸屏。本文提供了在开放式 web 应用程序中管理用户输入和实现控件的建议，以及常见问题解答、实际示例和更多信息链接，供需要更多底层技术详细信息的用户参考。
