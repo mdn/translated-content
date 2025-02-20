@@ -1,6 +1,7 @@
 ---
 title: 代替スタイルシート
-slug: Web/CSS/Alternative_style_sheets
+slug: Web/HTML/Attributes/rel/alternate_stylesheet
+original_slug: Web/CSS/Alternative_style_sheets
 ---
 
 {{cssref}}

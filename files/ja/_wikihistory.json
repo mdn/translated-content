@@ -13025,13 +13025,6 @@
       "fscholz"
     ]
   },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2020-10-15T22:11:44.225Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/API/FocusEvent": {
     "modified": "2020-10-15T21:48:28.510Z",
     "contributors": [
@@ -24441,16 +24434,6 @@
       "yyss"
     ]
   },
-  "Web/CSS/Alternative_style_sheets": {
-    "modified": "2020-10-15T21:15:43.078Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "ethertank",
-      "Mgjbot",
-      "Kohei"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:20:41.486Z",
     "contributors": [
@@ -29964,6 +29947,16 @@
     "modified": "2020-11-08T15:06:32.777Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/HTML/Attributes/rel/alternate_stylesheet": {
+    "modified": "2020-10-15T21:15:43.078Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "ethertank",
+      "Mgjbot",
+      "Kohei"
     ]
   },
   "Web/HTML/Attributes/rel/preload": {
@@ -44135,6 +44128,13 @@
     "contributors": [
       "tyankatsu",
       "Marsf"
+    ]
+  },
+  "conflicting/Web/API/File_System_API": {
+    "modified": "2020-10-15T22:11:44.225Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
     ]
   },
   "conflicting/Web/API/FormData": {
