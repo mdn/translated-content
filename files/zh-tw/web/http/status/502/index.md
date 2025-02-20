@@ -23,7 +23,7 @@ HTTP **`502 Bad Gateway`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#�
 
 ### 502 閘道器錯誤回應
 
-以下請求嘗試擷取網頁，但伺服器返回 `502` 回應。回應主體包含描述伺服器狀態的頁面，並附有一個指向支援頁面的連結。
+以下請求嘗試擷取網頁，但收到 `502` 回應。回應主體包含描述伺服器狀態的頁面，並附有一個指向支援頁面的連結。
 
 ```http
 GET /highlights HTTP/1.1
@@ -40,12 +40,12 @@ Content-Length: 123
 <!doctype html>
 <html lang="zh-TW">
 <head>
-<title>502 Bad Gateway</title>
+  <title>502 Bad Gateway</title>
 </head>
 <body>
-<h1>Bad Gateway</h1>
-<p>伺服器無法完成你的請求，請稍後再試。</p>
-<p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
+  <h1>Bad Gateway</h1>
+  <p>伺服器無法完成你的請求，請稍後再試。</p>
+  <p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
 </body>
 </html>
 ```
