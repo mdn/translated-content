@@ -228,8 +228,8 @@
 /zh-CN/docs/DOM/FileList	/zh-CN/docs/Web/API/FileList
 /zh-CN/docs/DOM/FileReader	/zh-CN/docs/Web/API/FileReader
 /zh-CN/docs/DOM/FileReaderSync	/zh-CN/docs/Web/API/FileReaderSync
-/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
-/zh-CN/docs/DOM/File_APIs/Filesystem/文件系统API的基本概念	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/zh-CN/docs/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API	/zh-CN/docs/Web/API/File_System_API
+/zh-CN/docs/DOM/File_APIs/Filesystem/文件系统API的基本概念	/zh-CN/docs/Web/API/File_System_API
 /zh-CN/docs/DOM/HTMLCanvasElement	/zh-CN/docs/Web/API/HTMLCanvasElement
 /zh-CN/docs/DOM/HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM/HTMLFieldSetElement	/zh-CN/docs/Web/API/HTMLFieldSetElement
@@ -463,7 +463,7 @@
 /zh-CN/docs/DOM/window.setImmediate	/zh-CN/docs/Web/API/Window/setImmediate
 /zh-CN/docs/DOM/window.setInterval	/zh-CN/docs/Web/API/Window/setInterval
 /zh-CN/docs/DOM/window.setTimeout	/zh-CN/docs/Web/API/Window/setTimeout
-/zh-CN/docs/DOM/文件系统API的基本概念	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/zh-CN/docs/DOM/文件系统API的基本概念	/zh-CN/docs/Web/API/File_System_API
 /zh-CN/docs/DOM:HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM:XMLDocument	/zh-CN/docs/Web/API/XMLDocument
 /zh-CN/docs/DOM:document	/zh-CN/docs/Web/API/Document
@@ -1807,6 +1807,8 @@
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/File_Handle_API	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/File_System_Access_API	/zh-CN/docs/Web/API/File_System_API
+/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Firefox_support	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
+/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction	/zh-CN/docs/Web/API/File_System_API
 /zh-CN/docs/Web/API/FormData/Using_FormData_Objects	/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
@@ -2389,6 +2391,7 @@
 /zh-CN/docs/Web/CSS/Adjacent_sibling_combinator	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/CSS_display/Containing_block
+/zh-CN/docs/Web/CSS/Alternative_style_sheets	/zh-CN/docs/Web/HTML/Attributes/rel/alternate_stylesheet
 /zh-CN/docs/Web/CSS/At-rule	/zh-CN/docs/Web/CSS/CSS_syntax/At-rule
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
@@ -3180,7 +3183,7 @@
 /zh-CN/docs/WebGL	/zh-CN/docs/Web/API/WebGL_API
 /zh-CN/docs/WebGL/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-CN/docs/WebGL/开始使用WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-/zh-CN/docs/WebGuide/API/File_System/Introduction	/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/zh-CN/docs/WebGuide/API/File_System/Introduction	/zh-CN/docs/Web/API/File_System_API
 /zh-CN/docs/WebRTC/navigator.getUserMedia	/zh-CN/docs/Web/API/Navigator/getUserMedia
 /zh-CN/docs/WebRTC/介绍	/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime
 /zh-CN/docs/Web_Development/Introduction_to_Web_development	/zh-CN/docs/Learn_web_development
