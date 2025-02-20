@@ -1,6 +1,7 @@
 ---
 title: 文件系统 API 的基本概念
-slug: Web/API/File_and_Directory_Entries_API/Introduction
+slug: conflicting/Web/API/File_System_API
+original_slug: Web/API/File_and_Directory_Entries_API/Introduction
 ---
 
 {{DefaultAPISidebar("File and Directory Entries API")}}

@@ -1,6 +1,7 @@
 ---
 title: File and Directory Entries API support in Firefox
-slug: Web/API/File_and_Directory_Entries_API/Firefox_support
+slug: conflicting/Web/API/File_and_Directory_Entries_API
+original_slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 ---
 
 {{DefaultAPISidebar("File System API")}} {{Non-standard_header}}

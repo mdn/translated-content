@@ -12597,20 +12597,6 @@
       "Clouds_W"
     ]
   },
-  "Web/API/File_and_Directory_Entries_API/Firefox_support": {
-    "modified": "2019-06-11T23:33:01.083Z",
-    "contributors": [
-      "xiaoxingchi"
-    ]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2019-03-23T23:31:18.012Z",
-    "contributors": [
-      "JobbyM",
-      "ziyunfei",
-      "james.li"
-    ]
-  },
   "Web/API/FocusEvent": {
     "modified": "2020-10-20T08:42:06.825Z",
     "contributors": [
@@ -23556,12 +23542,6 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/Alternative_style_sheets": {
-    "modified": "2020-10-15T22:30:11.278Z",
-    "contributors": [
-      "14725"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:22:08.999Z",
     "contributors": [
@@ -28420,6 +28400,12 @@
       "grtreexyz",
       "blue0125",
       "Breezewish"
+    ]
+  },
+  "Web/HTML/Attributes/rel/alternate_stylesheet": {
+    "modified": "2020-10-15T22:30:11.278Z",
+    "contributors": [
+      "14725"
     ]
   },
   "Web/HTML/Attributes/rel/prefetch": {
@@ -43083,6 +43069,20 @@
     "modified": "2020-10-15T22:15:29.365Z",
     "contributors": [
       "Cyandev"
+    ]
+  },
+  "conflicting/Web/API/File_System_API": {
+    "modified": "2019-03-23T23:31:18.012Z",
+    "contributors": [
+      "JobbyM",
+      "ziyunfei",
+      "james.li"
+    ]
+  },
+  "conflicting/Web/API/File_and_Directory_Entries_API": {
+    "modified": "2019-06-11T23:33:01.083Z",
+    "contributors": [
+      "xiaoxingchi"
     ]
   }
 }
