@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 
 La méthode **`getUint8()`** permet de lire un entier non-signé sur 8 bits à l'octet donné par rapport au début de la {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-getuint8.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.getUint8()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setUint8(1, 255); // Max unsigned 8-bit integer
+
+console.log(view.getUint8(1));
+// Expected output: 255
+```
 
 ## Syntaxe
 

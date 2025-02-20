@@ -9,7 +9,17 @@ l10n:
 
 **`map()`** は {{jsxref("Array")}} インスタンスのメソッドで、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
 
-{{EmbedInteractiveExample("pages/js/array-map.html")}}
+{{InteractiveExample("JavaScript Demo: Array.map()")}}
+
+```js interactive-example
+const array1 = [1, 4, 9, 16];
+
+// Pass a function to map
+const map1 = array1.map((x) => x * 2);
+
+console.log(map1);
+// Expected output: Array [2, 8, 18, 32]
+```
 
 ## 構文
 

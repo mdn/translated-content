@@ -7,7 +7,24 @@ slug: Web/JavaScript/Reference/Classes/static
 
 Le mot-clé **`static`** permet de définir une méthode statique d'une classe. Les méthodes statiques ne sont pas disponibles sur les instances d'une classe mais sont appelées sur la classe elle-même. Les méthodes statiques sont généralement des fonctions utilitaires (qui peuvent permettre de créer ou de cloner des objets par exemple).
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+{{InteractiveExample("JavaScript Demo: Classes Static")}}
+
+```js interactive-example
+class ClassWithStaticMethod {
+  static staticProperty = "someValue";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+  static {
+    console.log("Class static initialization block called");
+  }
+}
+
+console.log(ClassWithStaticMethod.staticProperty);
+// Expected output: "someValue"
+console.log(ClassWithStaticMethod.staticMethod());
+// Expected output: "static method has been called."
+```
 
 ## Syntaxe
 

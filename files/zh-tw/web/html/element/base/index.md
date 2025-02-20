@@ -18,7 +18,7 @@ slug: Web/HTML/Element/base
 - `href`
   - : 用於整個文件中相對 URL 的基礎 URL。
     允許絕對和相對 URL。
-    不允許 [`data:`](/zh-TW/docs/Web/URI/Schemes/data) 和 `javascript:` URL。
+    不允許 [`data:`](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `javascript:` URL。
 - `target`
 
   - : 顯示來自 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素的導航結果的**關鍵字**或**作者定義的名稱**的默認{{Glossary("browsing context", "瀏覽上下文")}}。以下關鍵字具有特殊含義：
