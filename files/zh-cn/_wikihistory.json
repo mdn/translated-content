@@ -43070,19 +43070,5 @@
     "contributors": [
       "Cyandev"
     ]
-  },
-  "conflicting/Web/API/File_System_API": {
-    "modified": "2019-03-23T23:31:18.012Z",
-    "contributors": [
-      "JobbyM",
-      "ziyunfei",
-      "james.li"
-    ]
-  },
-  "conflicting/Web/API/File_and_Directory_Entries_API": {
-    "modified": "2019-06-11T23:33:01.083Z",
-    "contributors": [
-      "xiaoxingchi"
-    ]
   }
 }
