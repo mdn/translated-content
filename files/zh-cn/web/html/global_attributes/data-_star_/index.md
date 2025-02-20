@@ -19,7 +19,7 @@ l10n:
 
 这些都是建议。如果不遵循这些命名建议，将不会发生错误。属性仍将使用 CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)进行匹配，属性不区分大小写，任何属性值都区分大小写。不符合这三项建议的属性仍将被 JavaScript {{domxref("HTMLElement.dataset")}} 属性识别，用户代理将把该属性包含在包含 {{domxref("HTMLElement")}} 的所有自定义数据属性的 {{domxref("DOMStringMap")}} 中。
 
-如果计划使用 {{domxref("HTMLElement.dataset")}}，那么属性名中 `data-` 后面的部分只能包含 JavaScript 属性名中允许使用的字符（以及连字符，连字符将被删除）。属性名的 `dataset` 版本会去掉“data-”前缀，并将名称的其余部分从{{Glossary("kebab_case", "烤串命名法")}}} 转换为驼峰命名法。例如，`element.getAttribute("data-test")` 等同于 `element.dataset.test`，而 `data-test-abc ` 将以 `HTMLElement.dataset.testAbc`（或 `HTMLElement.dataset["testAbc"]`）的形式访问。避免使用连字符后的非字母字符，如 `data-test-1` 或 `data--test`，因为 {{domxref("HTMLElement.dataset")}} 无法识别这些字符。
+如果计划使用 {{domxref("HTMLElement.dataset")}}，那么属性名中 `data-` 后面的部分只能包含 JavaScript 属性名中允许使用的字符（以及连字符，连字符将被删除）。属性名的 `dataset` 版本会去掉“data-”前缀，并将名称的其余部分从{{Glossary("Kebab_case", "烤串命名法")}}} 转换为驼峰命名法。例如，`element.getAttribute("data-test")` 等同于 `element.dataset.test`，而 `data-test-abc ` 将以 `HTMLElement.dataset.testAbc`（或 `HTMLElement.dataset["testAbc"]`）的形式访问。避免使用连字符后的非字母字符，如 `data-test-1` 或 `data--test`，因为 {{domxref("HTMLElement.dataset")}} 无法识别这些字符。
 
 ### 用法
 
