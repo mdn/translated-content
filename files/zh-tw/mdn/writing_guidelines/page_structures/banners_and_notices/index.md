@@ -59,13 +59,10 @@ browser-compat: api.AudioDecoder
 
   ```md
   > [!WARNING]
-  > This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
+  > 此功能目前受到 <number> 家瀏覽器供應商的反對。請參閱下方的[標準立場](#標準立場) 部分以了解反對的詳細資訊。
   ```
 
-  - 將 `<number>` 替換為反對該技術的瀏覽器廠商數量。
-  - 根據情況使用 `vendor` 或 `vendors`。
-
-- 在與上述橫幅相同的頁面中新增一個『標準立場』章節，作為標準『規範』章節的子節。
+- 在與上述橫幅相同的頁面中新增一個『標準立場』小節，作為標準『規範』小節的子節。
 
 > [!NOTE]
 > 請參閱[相關網站集](/zh-TW/docs/Web/API/Storage_Access_API/Related_website_sets)以了解『標準立場』章節的範例、內容應包含的資訊，以及著陸頁橫幅的範例。
