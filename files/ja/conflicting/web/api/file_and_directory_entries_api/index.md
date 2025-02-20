@@ -1,6 +1,7 @@
 ---
 title: ファイルとディレクトリー項目 API の Firefox における対応
-slug: Web/API/File_and_Directory_Entries_API/Firefox_support
+slug: conflicting/Web/API/File_and_Directory_Entries_API
+original_slug: Web/API/File_and_Directory_Entries_API/Firefox_support
 l10n:
   sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---

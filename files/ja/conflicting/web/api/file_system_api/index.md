@@ -1,6 +1,7 @@
 ---
 title: ファイルとディレクトリー項目 API の紹介
-slug: Web/API/File_and_Directory_Entries_API/Introduction
+slug: conflicting/Web/API/File_System_API
+original_slug: Web/API/File_and_Directory_Entries_API/Introduction
 l10n:
   sourceCommit: a92d0c0dde556dad5143598c8bed4f71bb5afa94
 ---
