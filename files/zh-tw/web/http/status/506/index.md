@@ -40,7 +40,7 @@ Negotiate: trans
 Accept-Language: fr
 ```
 
-由於伺服器組態錯誤，`fr` 語系的變體回應指向一個 [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)，該 type map 本身會導致執行透明協商。伺服器可藉由在傳送選擇回應前偵測到 `TCN` 標頭來發現此狀況：
+由於伺服器組態錯誤，`fr` 語系的變體回應指向一個[類型映射](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)，該類型映射本身會導致執行透明協商。伺服器可藉由在傳送選擇回應前偵測到 `TCN` 標頭來發現此狀況：
 
 ```http
 HTTP/1.1 506 Variant Also Negotiates
