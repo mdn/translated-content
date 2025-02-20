@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`421 Misdirected Request`** [客户端错误响应](/zh-CN/docs/Web/HTTP/Status#客户端错误响应)状态码表示请求被定向到了一个无法生成响应的服务器。此响应可以由未配置为针对请求 URI 中包含的 [scheme](/zh-CN/docs/Web/URI/Schemes) 和 [authority](/zh-CN/docs/Web/URI/Authority) 组合生成响应的服务器发送。
+HTTP **`421 Misdirected Request`** [客户端错误响应](/zh-CN/docs/Web/HTTP/Status#客户端错误响应)状态码表示请求被定向到了一个无法生成响应的服务器。此响应可以由未配置为针对请求 URI 中包含的 [scheme](/zh-CN/docs/Web/URI/Reference/Schemes) 和 [authority](/zh-CN/docs/Web/URI/Reference/Authority) 组合生成响应的服务器发送。
 
 客户端可以通过不同的连接重试请求。
 
