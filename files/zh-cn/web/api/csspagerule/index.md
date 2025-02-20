@@ -13,16 +13,16 @@ l10n:
 
 ## 实例属性
 
-_继承自其父类 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
+_继承自其父接口 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
 
 - {{domxref("CSSPageRule.selectorText")}}
-  - : 表示与该 at-规则关联的页面选择器的文本。
+  - : 表示与该 at 规则关联的页面选择器的文本。
 - {{domxref("CSSPageRule.style")}} {{ReadOnlyInline}}
-  - : 返回与该 at-规则关联的[声明块](/zh-CN/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)。
+  - : 返回与该 at 规则关联的[声明块](/zh-CN/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)。
 
 ## 实例方法
 
-_继承自其父类 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
+_继承自其父接口 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
 
 ## 示例
 
@@ -79,7 +79,7 @@ for (
   for (let i = 0; i < myRules.length; i++) {
     log(`规则：${myRules[i]}`);
     if (myRules[i] instanceof CSSPageRule) {
-      //... 使用 CSSPageRule 做一些事情
+      //……使用 CSSPageRule 做一些事情
     }
   }
 }
