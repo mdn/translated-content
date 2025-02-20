@@ -3094,8 +3094,8 @@
 /ja/docs/Web/API/FileSystemEntrySync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/File_Handle_API	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/File_System_Access_API	/ja/docs/Web/API/File_System_API
-/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support	/ja/docs/conflicting/Web/API/File_and_Directory_Entries_API
-/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction	/ja/docs/conflicting/Web/API/File_System_API
+/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support	/ja/docs/Web/API/File_and_Directory_Entries_API
+/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction	/ja/docs/Web/API/File_System_API
 /ja/docs/Web/API/FormData/Using_FormData_Objects	/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
