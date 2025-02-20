@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`:target`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)選擇*文件中的目標元素*。當文件載入時，目標元素是根據文件的 [URL 片段識別碼](/zh-TW/docs/Web/URI/Fragment#片段)確定的。
+**`:target`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)選擇*文件中的目標元素*。當文件載入時，目標元素是根據文件的 [URL 片段標識符](/zh-TW/docs/Web/URI/Fragment#片段)確定的。
 
 ```css
 /* 選擇文件的目標元素 */
@@ -16,7 +16,7 @@ l10n:
 }
 ```
 
-例如，下列 URL 具有一個片段識別碼（以 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
+例如，下列 URL 具有一個片段標識符（以 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
 
 ```url
 http://www.example.com/help/#setup
@@ -38,7 +38,7 @@ http://www.example.com/help/#setup
 
 ## 描述
 
-當 HTML 文件載入時，瀏覽器會設定其目標元素。該元素透過 URL 片段識別碼進行辨識。若無 URL 片段識別碼，則文件沒有目標元素。`:target` 偽類允許對文件的目標元素進行樣式設定，該元素可以獲得焦點、突顯或呈現動畫效果等。
+當 HTML 文件載入時，瀏覽器會設定其目標元素。該元素透過 URL 片段標識符進行辨識。若無 URL 片段標識符，則文件沒有目標元素。`:target` 偽類允許對文件的目標元素進行樣式設定，該元素可以獲得焦點、突顯或呈現動畫效果等。
 
 目標元素在文件載入以及呼叫 [`history.back()`](/zh-TW/docs/Web/API/History/back)、[`history.forward()`](/zh-TW/docs/Web/API/History/forward) 和 [`history.go()`](/zh-TW/docs/Web/API/History/forward) 方法時被設定。但 [`history.pushState()`](/zh-TW/docs/Web/API/History/pushState) 與 [`history.replaceState()`](/zh-TW/docs/Web/API/History/replaceState) 方法被呼叫時則*不會*改變。
 
