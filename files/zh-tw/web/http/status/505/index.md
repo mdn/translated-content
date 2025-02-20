@@ -34,14 +34,14 @@ Content-Type: text/html;
 Content-Length: 123
 
 <!doctype html>
-<html lang="en">
+<html lang="zh">
 <head>
-<title>505 HTTP 版本不支援</title>
+  <title>505 HTTP 版本不支援</title>
 </head>
 <body>
-<h1>505 HTTP 版本不支援</h1>
-<p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
-<p>伺服器日誌中包含此錯誤的詳細訊息，請求識別碼：ABC-123。</p>
+  <h1>505 HTTP 版本不支援</h1>
+  <p>如果此問題持續發生，請<a href="https://example.com/support">聯絡支援</a>。</p>
+  <p>伺服器日誌中包含此錯誤的詳細訊息，請求識別碼：ABC-123。</p>
 </body>
 </html>
 ```
