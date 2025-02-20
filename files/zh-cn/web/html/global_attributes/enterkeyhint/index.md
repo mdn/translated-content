@@ -13,7 +13,7 @@ l10n:
 
 ## 描述
 
-[Form controls](/zh-CN/docs/Learn_web_development/Extensions/Forms)（如 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) 或 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 元素）或使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 的元素可以指定 [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode) 属性来控制使用哪种虚拟键盘。为了进一步改善用户体验，可以通过提供一个 `enterkeyhint` 属性来特别定制回车键，该属性指明回车键应如何标记（或应显示哪个图标）。回车键通常代表用户下一步要做的操作；典型的操作有：发送文本、插入新行或搜索。
+[表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms)（如 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) 或 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 元素）或使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 的元素可以指定 [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode) 属性来控制使用哪种虚拟键盘。为了进一步改善用户体验，可以通过提供 `enterkeyhint` 属性来特别定制回车键，该属性指明回车键应如何标记（或应显示哪个图标）。回车键通常代表用户下一步要做的操作；典型的操作有：发送文本、插入新行或搜索。
 
 如果没有提供 `enterkeyhint` 属性，用户代理可能会使用 [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode)、[`type`](/zh-CN/docs/Web/HTML/Element/input#input_类型) 或 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性中的上下文信息来显示合适的回车键标签（或图标）。
 
