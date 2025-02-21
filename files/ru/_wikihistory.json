@@ -6885,18 +6885,18 @@
       "Lambrusco.pro"
     ]
   },
+  "Web/API/File_System_API": {
+    "modified": "2019-03-23T22:06:14.603Z",
+    "contributors": [
+      "egorshulga"
+    ]
+  },
   "Web/API/File_and_Directory_Entries_API": {
     "modified": "2020-10-15T21:56:47.477Z",
     "contributors": [
       "SphinxKnight",
       "svetley1",
       "tocretpa"
-    ]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2019-03-23T22:06:14.603Z",
-    "contributors": [
-      "egorshulga"
     ]
   },
   "Web/API/FontFace": {
