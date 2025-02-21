@@ -2,7 +2,7 @@
 title: 代码编辑器
 slug: Learn_web_development/Getting_started/Environment_setup/Code_editors
 l10n:
-  sourceCommit: a53253307ade5c6e3eec896a5f2d799fdebe9ae8
+  sourceCommit: f12c4c8c5128f0e84d1167f8a6285fc68c1eb8e2
 ---
 
 {{LearnSidebar}}
