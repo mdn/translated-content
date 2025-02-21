@@ -3,6 +3,8 @@ title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
+{{DefaultAPISidebar("Canvas API")}}
+
 Já que estamos usando JavaScript para controlar {{HTMLElement("canvas")}} elementos, também é muito fácil criar animações interativas. Fazer animações mais complexas pode levar um tempo extra; esperamos introduzir um novo artigo para auxiliar sobre isso em breve.
 
 Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela permanece assim. Se precisarmos mover, temos que redesenhar-lá e tudo que foi desenhado antes. Demora muito tempo pra redesenhar frames complexos e a desempenho depende altamente da velocidade do computador em que está rodando.

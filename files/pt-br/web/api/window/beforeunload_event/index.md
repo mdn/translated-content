@@ -3,6 +3,8 @@ title: beforeunload
 slug: Web/API/Window/beforeunload_event
 ---
 
+{{APIRef}}
+
 O evento **`beforeunload`** é disparado quando o _window_, o _document_ e seus recursos estão prestes a ser descarregados.
 
 Quando uma _string_ é atribuída na propriedade `returnValue` do _Event_, uma caixa de díalogo aparecerá solicitando ao usuário uma confirmação para sair da página (veja exemplo abaixo). Quando nenhum valor é fornecido, o evento é processado silenciosamente.
