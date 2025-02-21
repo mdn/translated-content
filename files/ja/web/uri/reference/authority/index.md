@@ -1,14 +1,12 @@
 ---
 title: URI オーソリティ
+short-title: オーソリティ
 slug: Web/URI/Reference/Authority
-original_slug: Web/URI/Authority
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
-
-**オーソリティ**は URI の部分で、[スキーム](/ja/docs/Web/URI/Schemes)の後でパスより前に来る部分です。 最大 3 つの部分、すなわちユーザー情報、ホスト、ポート番号を持つことがあります。
+**オーソリティ**は URI の部分で、[スキーム](/ja/docs/Web/URI/Reference/Schemes)の後でパスより前に来る部分です。 最大 3 つの部分、すなわちユーザー情報、ホスト、ポート番号を持つことがあります。
 
 ## 構文
 
@@ -19,11 +17,11 @@ user@host
 user@host:port
 ```
 
-- host
-  - : 通常、_host_ はリソースをホストするサーバーのドメイン名または IP アドレスです。ドメイン名は、DNS（ドメインネームシステム）を使用して IP アドレスに解決されます。
-- port {{optional_inline}}
+- `host`
+  - : 通常、_host_ はリソースをホスティングするサーバーのドメイン名または IP アドレスです。ドメイン名は、DNS（ドメインネームシステム）を使用して IP アドレスに解決されます。
+- `port` {{optional_inline}}
   - : _port_ は、サーバーがリクエストを待ち受けするポート番号を示す数字です。これはオプションであり、HTTP の場合は既定で 80、HTTPS の場合は 443 です。他にも、自分自身で既定値を定義したり、必須にしたりするスキームがあります。
-- user {{optional_inline}}
+- `user` {{optional_inline}}
 
   - : ユーザーはオプションであり、認証目的で使用します。ウェブの URI では一般的に使用されません。
 
@@ -41,7 +39,11 @@ user@host:port
 - `https://cnn.example.com&story=breaking_news@10.0.0.1`
   - : 信頼できるウェブサイトを指しているように見える、誤解を招く URL。しかし、ホスト名は `10.0.0.1` であり、`cnn.example.com&story=breaking_news` の部分は「ユーザー」です。
 
+## 仕様書
+
+{{Specifications}}
+
 ## 関連情報
 
 - [URI](/ja/docs/Web/URI)
-- [www 付きと www なしの URL の選択](/ja/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
+- [www 付きと www なしの URL の選択](/ja/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs)

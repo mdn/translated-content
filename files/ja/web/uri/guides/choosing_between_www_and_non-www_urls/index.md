@@ -1,12 +1,10 @@
 ---
 title: www 付きと www なしの URL の選択
+short-title: URL における 'www' の使用
 slug: Web/URI/Guides/Choosing_between_www_and_non-www_URLs
-original_slug: Web/URI/Authority/Choosing_between_www_and_non-www_URLs
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
 
 ウェブサイトの管理者の間で繰り返される質問が、 'www' (`www.example.com`) のついた URL と非 'www' (`example.com`) URL のどちらを選択するかです。このページでは、何が最良かについてアドバイスを提供します。
 
