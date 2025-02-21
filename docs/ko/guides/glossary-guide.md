@@ -103,6 +103,7 @@
 | Boolean             | 불리언          |                                                                                |
 | Capture             | 캡처            |                                                                                |
 | Class               | 클래스          |                                                                                |
+| Command line        | 명령줄          |                                                                                |
 | Content(s)          | 콘텐츠          |                                                                                |
 | Context             | 맥락            |                                                                                |
 | Control             | 컨트롤          |                                                                                |
@@ -110,6 +111,7 @@
 | Custom              | 사용자 정의     |                                                                                |
 | Decoding            | 디코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                 |
 | Document            | 문서            |                                                                                |
+| Editor              | 편집기          |                                                                                |
 | Element             | 요소            |                                                                                |
 | Encoding            | 인코딩          | [링크](https://github.com/mdn/translated-content/issues/12452)                 |
 | Entity              | 개체            |                                                                                |
