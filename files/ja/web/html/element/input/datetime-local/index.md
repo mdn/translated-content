@@ -2,7 +2,7 @@
 title: <input type="datetime-local">
 slug: Web/HTML/Element/input/datetime-local
 l10n:
-  sourceCommit: f8066bc2967fb16c5107c2b4bdab7a99f26f7d72
+  sourceCommit: 1977c6e57be71ba31aaadec114ccdaca41c2019c
 ---
 
 {{HTMLSidebar}}
@@ -11,9 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/input-datetime-local.html", "tabbed-shorter")}}
 
-コントロールのユーザーインターフェイスは、ブラウザーが対応していない場合、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
-
-このコントロールは単純に*ローカルの日付と時刻*を表現するためのものであって、*ユーザーのローカルの日付と時刻*を示すとは限りません。言い換えれば、入力欄は有効な年、月、日、時、分をすべて、仮にその組み合わせがユーザーのタイムゾーンで無効であったとしても (春の夏時間への移行ギャップなど)、許可します。
+このコントロールの UI は一般的にブラウザーによって異なります。このコントロールは、ローカルの日付と時刻を意図通りに表示しますが、必ずしもユーザーの地域の日付と時刻を表示するわけではありません。言い換えれば、この入力フィールドは、ユーザーの地域のタイムゾーンでは不正な組み合わせ（夏時間の切り替え移行期間の 1 時間など）であっても、年、月、日、時、分を任意に組み合わせることができます。
 
 ## 値
 
@@ -26,16 +24,16 @@ l10n:
 <input
   id="party"
   type="datetime-local"
-  name="partydate"
+  name="party-date"
   value="2017-06-01T08:30" />
 ```
 
 {{ EmbedLiveSample('Value', 600, 60) }}
 
-一点気を付けなければならないことは、表示される日付と時刻の書式は実際の `value` とは異なることです。表示される日付と時刻は、オペレーティングシステムからの報告に従ってユーザーのロケールによって書式化されますが、日付や時刻の `value` は常に `YYYY-MM-DDThh:mm` の書式です。例えば、上記の値をサーバーに送信すると、 `partydate=2024-06-01T08:30` のようになります。
+一点気を付けなければならないことは、表示される日付と時刻の書式は実際の `value` とは異なることです。表示される日付と時刻は、オペレーティングシステムからの報告に従ってユーザーのロケールによって書式化されますが、日付や時刻の `value` は常に `YYYY-MM-DDTHH:mm` の書式です。例えば、上記の値をサーバーに送信すると、 `party-date=2024-06-01T08:30` のようになります。
 
 > [!NOTE]
-> このようなデータが HTTP の [`GET`](/ja/docs/Web/HTTP/Methods/GET) を通じて送信されると、コロン文字を URL 引数に含めるために、 `partydate=2024-06-01T08%3A30` のようにエスケープする必要があることもお忘れなく。これを行う方法の一つとして {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} を参照してください。
+> このようなデータが HTTP の [`GET`](/ja/docs/Web/HTTP/Methods/GET) を通じて送信されると、コロン文字を URL 引数に含めるために、 `party-date=2024-06-01T08%3A30` のようにエスケープする必要があることもお忘れなく。これを行う方法の一つとして {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} を参照してください。
 
 次のように、 JavaScript で {{domxref("HTMLInputElement")}} の `value` プロパティを使用して日付の値を取得したり設定したりすることもできます。
 
@@ -50,13 +48,13 @@ dateControl.value = "2017-06-01T08:30";
 
 ### max
 
-受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
+受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDTHH:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ日付を指定する必要があります。
 
 ### min
 
-受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
+受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDTHH:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ日付を指定する必要があります。
 
@@ -67,7 +65,7 @@ dateControl.value = "2017-06-01T08:30";
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
 > [!NOTE]
-> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
+> ユーザーがデータを入力したときには刻みの設定には吸着せず、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸められます。
 
 `datetime-local` 入力欄では、 `step` の値は秒数で指定され、 1000 が乗じられます (ミリ秒単位の数値であるため)。 `step` の既定値は 60 であり、60秒 (1分、60000ミリ秒) を表します。
 
@@ -75,7 +73,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ## datetime-local 入力の使用
 
-日付や時刻の入力欄は一見すると便利に見えます。簡単に日付と時刻を選択するユーザーインターフェイスを提供し、ユーザーのロケールに関係なく、データ形式を正規化してサーバーに送信するからです。しかし、ブラウザーの互換性が限られているため、 `<input type="datetime-local">` には問題があります。
+日時入力欄は開発者にとって便利なもので、日時を簡単に選べますし、ユーザーのロケールに関係なくサーバーに送信されるデータ形式を標準化できます。しかし、ユーザーのことを考慮することも重要です。アプリの機能として必要のないデータをユーザーに入力させることは避けましょう。
 
 ### 入力欄の大きさの制御
 
@@ -109,7 +107,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 既定では、 `<input type="datetime-local">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも入力欄を空のままにしたり、 (`text` 型にフォールバックするブラウザーにおいて) 無効な日付 (例えば 4 月 32 日など) を入力したりすることが可能です。
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日時の最大値と最小値の設定)を参照)、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して日時の入力を必須にしたりすることができます。その結果、対応しているブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日時の最大値と最小値の設定)を参照)、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して日時の入力を必須にしたりすることができます。その結果、ブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
 
@@ -123,7 +121,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
     <input
       id="party"
       type="datetime-local"
-      name="partydate"
+      name="party-date"
       min="2017-06-01T08:30"
       max="2017-06-30T16:30"
       required />
@@ -167,7 +165,7 @@ input:valid + span::after {
 > [!WARNING]
 > HTML のフォーム検証は、入力されたデータが正しい形式であることを保証するスクリプトの代用にはなりません。 HTML を調整して検証をくぐり抜けたり、完全に削除したりすることはとても簡単にできます。 HTML を完全にバイパスし、サーバーに直接データを送信することも可能です。サーバー側のコードが受信したデータの検証に失敗した場合、不適切な形式のデータ（または大きすぎるデータ、誤った種類のデータなど）が送信された場合に問題が発生するおそれがあります。
 
-> **メモ:** `datetime-local` の入力欄では、日時の値は常に `YYYY-MM-DDThh:mm` の書式に正規化されます。
+> **メモ:** `datetime-local` の入力欄では、日時の値は常に `YYYY-MM-DDTHH:mm` の書式に正規化されます。
 
 ## 例
 
@@ -178,7 +176,7 @@ input:valid + span::after {
 ```html
 <form>
   <label for="party">パーティーを予約する日時を入力してください:</label>
-  <input id="party" type="datetime-local" name="partydate" />
+  <input id="party" type="datetime-local" name="party-date" />
 </form>
 ```
 
@@ -186,7 +184,7 @@ input:valid + span::after {
 
 ### 日時の最大値および最小値の設定
 
-[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用することで、ユーザーが選べる日時を制限することができます。次の例では、日時の最小値を `2024-06-01T08:30`、最大値を `2024-06-30T16:30` に設定しています。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用することで、ユーザーが選べる日時を制限することができます。次の例では、日時の最小値を `2025-06-01T08:30`、最大値を `2025-06-30T16:30` に設定しています。
 
 ```html
 <form>
@@ -194,15 +192,15 @@ input:valid + span::after {
   <input
     id="party"
     type="datetime-local"
-    name="partydate"
-    min="2024-06-01T08:30"
-    max="2024-06-30T16:30" />
+    name="party-date"
+    min="2025-06-01T08:30"
+    max="2025-06-30T16:30" />
 </form>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_dates_and_times', 600, 40) }}
 
-2024 年 6 月中の日のみ選択可能です。ブラウザーによって、指定した値以外の時刻は選択できないようになっているもの、有効な日時は選択可能ですが、 {{CSSXref(":invalid")}} と {{CSSXref(":out-of-range")}} に一致し、[検証](#検証)に失敗するものがあります。
+2025 年 6 月中の日のみ選択可能です。ブラウザーによって、指定した値以外の時刻は選択できないようになっているもの、有効な日時は選択可能ですが、 {{CSSXref(":invalid")}} と {{CSSXref(":out-of-range")}} に一致し、[検証](#検証)に失敗するものがあります。
 
 一部のブラウザー（Chrome や Edge）では、日付値の「日」の部分のみが編集可能で、 6 月以外の日付はスクロールできません。他のブラウザー（Safari）では、日付ピッカーはどの日付でも選択できるように現れますが、日付が選択されると値は有効な範囲に固定されます。
 
@@ -238,7 +236,10 @@ input:valid + span::after {
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>.
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
@@ -255,7 +256,7 @@ input:valid + span::after {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -273,5 +274,4 @@ input:valid + span::after {
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する {{domxref("HTMLInputElement")}} インターフェイス
 - [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date) および [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time)
 - [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)
-- [日付と時刻の選択のチュートリアル](/ja/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [日付と時刻の選択のチュートリアル](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日付と時刻ピッカー)
