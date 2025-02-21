@@ -54,6 +54,6 @@ window.scroll({
 
 次のページもご覧下さい : {{domxref("window.scrollByLines")}} 、 {{domxref("window.scrollByPages")}} 、 {{domxref("Element.scrollIntoView()")}}
 
-## 仕様
+## 仕様書
 
 {{Specifications}}

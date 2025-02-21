@@ -69,7 +69,7 @@ console.log(generator.next().value); // 2
 // ...
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

@@ -31,7 +31,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 他にも『[コード内でのメディアクエリの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)』にいくつか例があります。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

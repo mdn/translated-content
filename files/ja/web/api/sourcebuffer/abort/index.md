@@ -45,7 +45,7 @@ sourceBuffer.appendBuffer(buf);
 
 Nick Desaulnier の [bufferWhenNeeded デモ](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html)で同様の動作を確認できます。 [48 行目では、イベントリスナーが再生中の動画に追加され](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L48)、`seek()` という関数が `seeking` イベントが発生したときに実行されます。 [行 92〜101 では、seek() 関数が定義されています](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L92-L101)。 ここで、{{domxref("MediaSource.readyState")}} が `open` に設定されている場合、`abort()` が呼び出されることに注意してください。 つまり、新しいソースバッファを受信する準備ができていることを意味します。 この時点で、現在のセグメントを打ち切り、新しいシーク位置のセグメントを取得するだけの価値があります（[`checkBuffer()`](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L78-L90) および [`getCurrentSegment()`](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L103-L105) を参照）。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
