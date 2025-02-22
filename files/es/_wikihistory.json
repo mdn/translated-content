@@ -9330,13 +9330,6 @@
       "MilkSnake"
     ]
   },
-  "Web/CSS/At-rule": {
-    "modified": "2019-03-23T22:29:55.371Z",
-    "contributors": [
-      "Legioinvicta",
-      "israel-munoz"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:26:03.862Z",
     "contributors": [
@@ -9347,7 +9340,7 @@
       "jota1410"
     ]
   },
-  "Web/CSS/CSS_Types": {
+  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2019-03-18T21:35:39.343Z",
     "contributors": [
       "lajaso"
@@ -9410,6 +9403,76 @@
       "javichito"
     ]
   },
+  "Web/CSS/CSS_cascade/Inheritance": {
+    "modified": "2019-03-23T23:53:04.499Z",
+    "contributors": [
+      "joseanpg",
+      "teoli",
+      "Mgjbot",
+      "Nathymig",
+      "HenryGR"
+    ]
+  },
+  "Web/CSS/CSS_cascade/Specificity": {
+    "modified": "2020-11-14T17:11:45.294Z",
+    "contributors": [
+      "0neomar",
+      "fer",
+      "glrodasz",
+      "mariupereyra",
+      "arjusgit",
+      "DavidGalvis",
+      "gcjuan",
+      "LuisSevillano",
+      "deimidis2",
+      "aeroxmotion",
+      "padrecedano",
+      "Remohir"
+    ]
+  },
+  "Web/CSS/CSS_cascade/actual_value": {
+    "modified": "2019-03-23T22:16:54.955Z",
+    "contributors": [
+      "israel-munoz"
+    ]
+  },
+  "Web/CSS/CSS_cascade/computed_value": {
+    "modified": "2019-03-23T23:53:20.456Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Firewordy",
+      "HenryGR"
+    ]
+  },
+  "Web/CSS/CSS_cascade/initial_value": {
+    "modified": "2019-01-16T15:32:31.295Z",
+    "contributors": [
+      "teoli",
+      "Mgjbot",
+      "Nathymig",
+      "HenryGR"
+    ]
+  },
+  "Web/CSS/CSS_cascade/specified_value": {
+    "modified": "2019-03-23T22:16:53.752Z",
+    "contributors": [
+      "israel-munoz"
+    ]
+  },
+  "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
+    "modified": "2020-11-26T20:11:21.130Z",
+    "contributors": [
+      "lupomontero",
+      "betocantu93",
+      "sokaluis",
+      "chrisdavidmills",
+      "BubuAnabelas",
+      "Creasick",
+      "Maseria38",
+      "FlorTello"
+    ]
+  },
   "Web/CSS/CSS_colors": {
     "modified": "2019-03-23T22:23:30.277Z",
     "contributors": [
@@ -9441,6 +9504,12 @@
     "contributors": [
       "Enesimus",
       "javichito"
+    ]
+  },
+  "Web/CSS/CSS_display/Flow_layout": {
+    "modified": "2019-03-18T21:21:28.417Z",
+    "contributors": [
+      "ariasfernando"
     ]
   },
   "Web/CSS/CSS_flexible_box_layout": {
@@ -9475,12 +9544,6 @@
     "modified": "2019-03-18T21:18:33.523Z",
     "contributors": [
       "danpaltor"
-    ]
-  },
-  "Web/CSS/CSS_flow_layout": {
-    "modified": "2019-03-18T21:21:28.417Z",
-    "contributors": [
-      "ariasfernando"
     ]
   },
   "Web/CSS/CSS_fonts": {
@@ -9697,6 +9760,28 @@
       "israel-munoz"
     ]
   },
+  "Web/CSS/CSS_syntax/At-rule": {
+    "modified": "2019-03-23T22:29:55.371Z",
+    "contributors": [
+      "Legioinvicta",
+      "israel-munoz"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Comments": {
+    "modified": "2019-03-23T22:16:58.806Z",
+    "contributors": [
+      "israel-munoz"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2020-09-29T20:54:10.526Z",
+    "contributors": [
+      "lucasmmaidana",
+      "joseanpg",
+      "mili01gm",
+      "Derhks"
+    ]
+  },
   "Web/CSS/CSS_text": {
     "modified": "2019-03-23T22:36:23.444Z",
     "contributors": [
@@ -9754,12 +9839,6 @@
       "israel-munoz"
     ]
   },
-  "Web/CSS/Comments": {
-    "modified": "2019-03-23T22:16:58.806Z",
-    "contributors": [
-      "israel-munoz"
-    ]
-  },
   "Web/CSS/Descendant_combinator": {
     "modified": "2019-03-23T23:13:24.480Z",
     "contributors": [
@@ -9772,16 +9851,6 @@
     "contributors": [
       "lajaso",
       "israel-munoz"
-    ]
-  },
-  "Web/CSS/Inheritance": {
-    "modified": "2019-03-23T23:53:04.499Z",
-    "contributors": [
-      "joseanpg",
-      "teoli",
-      "Mgjbot",
-      "Nathymig",
-      "HenryGR"
     ]
   },
   "Web/CSS/Layout_cookbook": {
@@ -9861,36 +9930,10 @@
       "huichops"
     ]
   },
-  "Web/CSS/Specificity": {
-    "modified": "2020-11-14T17:11:45.294Z",
-    "contributors": [
-      "0neomar",
-      "fer",
-      "glrodasz",
-      "mariupereyra",
-      "arjusgit",
-      "DavidGalvis",
-      "gcjuan",
-      "LuisSevillano",
-      "deimidis2",
-      "aeroxmotion",
-      "padrecedano",
-      "Remohir"
-    ]
-  },
   "Web/CSS/Subsequent-sibling_combinator": {
     "modified": "2019-03-23T22:39:33.429Z",
     "contributors": [
       "alkaithil"
-    ]
-  },
-  "Web/CSS/Syntax": {
-    "modified": "2020-09-29T20:54:10.526Z",
-    "contributors": [
-      "lucasmmaidana",
-      "joseanpg",
-      "mili01gm",
-      "Derhks"
     ]
   },
   "Web/CSS/Tutorials": {
@@ -9913,19 +9956,6 @@
       "israel-munoz"
     ]
   },
-  "Web/CSS/Using_CSS_custom_properties": {
-    "modified": "2020-11-26T20:11:21.130Z",
-    "contributors": [
-      "lupomontero",
-      "betocantu93",
-      "sokaluis",
-      "chrisdavidmills",
-      "BubuAnabelas",
-      "Creasick",
-      "Maseria38",
-      "FlorTello"
-    ]
-  },
   "Web/CSS/Value_definition_syntax": {
     "modified": "2019-03-23T22:38:52.899Z",
     "contributors": [
@@ -9933,12 +9963,6 @@
       "Sebastianz",
       "Guillaume-Heras",
       "VictorAbdon"
-    ]
-  },
-  "Web/CSS/actual_value": {
-    "modified": "2019-03-23T22:16:54.955Z",
-    "contributors": [
-      "israel-munoz"
     ]
   },
   "Web/CSS/align-content": {
@@ -10694,15 +10718,6 @@
       "AlePerez92"
     ]
   },
-  "Web/CSS/computed_value": {
-    "modified": "2019-03-23T23:53:20.456Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Firewordy",
-      "HenryGR"
-    ]
-  },
   "Web/CSS/content": {
     "modified": "2019-03-23T23:51:59.928Z",
     "contributors": [
@@ -11063,15 +11078,6 @@
       "Nathymig",
       "HenryGR",
       "Mgjbot"
-    ]
-  },
-  "Web/CSS/initial_value": {
-    "modified": "2019-01-16T15:32:31.295Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Nathymig",
-      "HenryGR"
     ]
   },
   "Web/CSS/inline-size": {
@@ -11642,12 +11648,6 @@
     "modified": "2019-03-23T22:07:41.439Z",
     "contributors": [
       "pantuflo"
-    ]
-  },
-  "Web/CSS/specified_value": {
-    "modified": "2019-03-23T22:16:53.752Z",
-    "contributors": [
-      "israel-munoz"
     ]
   },
   "Web/CSS/text-decoration": {
@@ -18520,14 +18520,14 @@
       "Abelhg"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2019-03-18T21:22:07.450Z",
     "contributors": [
       "Adorta4",
       "carlosgocereceda"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2019-03-23T22:24:54.977Z",
     "contributors": [
       "Sergio_Gonzalez_Collado",

@@ -104,7 +104,8 @@ Passons à la manipulation :
      Comme vous pouvez le voir, les gradients
      sont considérés et manipulés comme des
      images */
-  background-image: linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
+  background-image:
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
     linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
     linear-gradient(175deg, rgba(0, 0, 0, 0) 90%, #b4b07f 90%),
     linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),

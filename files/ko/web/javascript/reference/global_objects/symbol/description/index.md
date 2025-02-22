@@ -10,7 +10,21 @@ l10n:
 {{jsxref("Symbol")}} 값의 **`description`** 접근자 속성은 이 심볼에 대한 설명이 포함된 문자열을
 반환하거나 설명이 없는 경우 `undefined`를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-description.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.description")}}
+
+```js interactive-example
+console.log(Symbol("desc").description);
+// Expected output: "desc"
+
+console.log(Symbol.iterator.description);
+// Expected output: "Symbol.iterator"
+
+console.log(Symbol.for("foo").description);
+// Expected output: "foo"
+
+console.log(`${Symbol("foo").description}bar`);
+// Expected output: "foobar"
+```
 
 ## 설명
 

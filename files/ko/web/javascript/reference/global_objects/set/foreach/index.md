@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("Set")}} 인스턴스의 **`forEach()`** 메서드는 제공된 함수를 Set 요소 각각에 대해 삽입 순서대로 한 번씩 실행합니다.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+
+```js interactive-example
+function logSetElements(value1, value2, set) {
+  console.log(`s[${value1}] = ${value2}`);
+}
+
+new Set(["foo", "bar", undefined]).forEach(logSetElements);
+
+// Expected output: "s[foo] = foo"
+// Expected output: "s[bar] = bar"
+// Expected output: "s[undefined] = undefined"
+```
 
 ## 구문
 

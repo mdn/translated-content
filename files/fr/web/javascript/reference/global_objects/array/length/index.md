@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 La propriété **`length`** (longueur) est un entier non-signé de 32 bits qui indique le nombre d'éléments présents dans le tableau. Elle est toujours supérieure au plus grand indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-length.html")}}
+{{InteractiveExample("JavaScript Demo: Array.length")}}
+
+```js interactive-example
+const clothing = ["shoes", "shirts", "socks", "sweaters"];
+
+console.log(clothing.length);
+// Expected output: 4
+```
 
 ## Description
 

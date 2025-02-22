@@ -2,7 +2,7 @@
 title: <style>：样式信息元素
 slug: Web/HTML/Element/style
 l10n:
-  sourceCommit: 53ef82d1809b84ab8d80ebcae0e5f818a237030a
+  sourceCommit: 176953b8260e0dd4328a7e788e8179accbafb8e1
 ---
 
 {{HTMLSidebar}}
@@ -21,15 +21,15 @@ l10n:
 
 该元素包含所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- `blocking` {{Experimental_Inline}}
-  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。
+- `blocking`
+  - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
     - `render`：屏幕上的内容渲染被阻断。
 - `media`
   - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。
 - `nonce`
   - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
 - `title`
-  - : 该属性指定[替代样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)集。
+  - : 该属性指定[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)集。
 
 ### 已弃用的属性
 
@@ -38,9 +38,9 @@ l10n:
 
 ## 示例
 
-### 一个简单的样式表
+### 基础样式表
 
-在下面的例子中，我们将简单的样式应用到文档中：
+在下面的例子中，我们将简短的样式应用到文档中：
 
 ```html
 <!doctype html>
@@ -60,11 +60,11 @@ l10n:
 </html>
 ```
 
-{{EmbedLiveSample('一个简单的样式表', '100%', '100')}}
+{{EmbedLiveSample('基础样式表', '100%', '100')}}
 
 ### 多个样式元素
 
-在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
+在本例中，我们包含了两个 `<style>` 元素。请注意，如果后一个 `<style>` 元素中的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)相同，那么后一个元素中的冲突声明将覆盖前一个元素中的冲突声明。
 
 ```html
 <!doctype html>
@@ -192,4 +192,4 @@ l10n:
 ## 参见
 
 - {{HTMLElement("link")}} 元素允许我们在文档中应用外部样式表。
-- [替代样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)
+- [替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)

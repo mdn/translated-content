@@ -61,7 +61,7 @@ width: calc(100px * log(625, 5)); /* 400px */
 
 #### CSS
 
-此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
+此处使用 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)定义待用尺寸。首先声明第一个尺寸（`--size-0`），再用此尺寸计算其他尺寸。
 
 - `--size-1` 所计算的为 `log(7.389)` 的值（2）乘 `--size-0`（50px），结果为 100px。
 - `--size-2` 所计算的为 `log(8, 2)` 的值（3）乘 `--size-0`（50px），结果为 150px。

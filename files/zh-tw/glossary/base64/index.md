@@ -15,13 +15,13 @@ l10n:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-一種常見的變體是「Base64 URL 安全編碼」，它省略了填充，並將 `+/` 替換為 `-_`，以避免在 {{glossary("URL")}} 路徑段或查詢參數中可能引起問題的字元。如果資料不會放置在路徑段或查詢參數中，例如 [data URL](/zh-TW/docs/Web/URI/Schemes/data) 就沒有這些限制，因此可以使用標準的 Base64 編碼。
+一種常見的變體是「Base64 URL 安全編碼」，它省略了填充，並將 `+/` 替換為 `-_`，以避免在 {{glossary("URL")}} 路徑段或查詢參數中可能引起問題的字元。如果資料不會放置在路徑段或查詢參數中，例如 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 就沒有這些限制，因此可以使用標準的 Base64 編碼。
 
 Base64 編碼系統常用於將二進位資料進行編碼，以便在只能處理 ASCII 文字（或某種超集但仍無法接受任意二進位資料）的媒體上儲存或傳輸。這可確保資料在傳輸過程中保持完整且未被修改。Base64 的常見應用包括：
 
 - 透過 [MIME](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展) 發送電子郵件
 - 在 [XML](/zh-TW/docs/Web/XML) 中儲存複雜資料
-- 將二進位資料編碼後納入 [`data:` URL](/zh-TW/docs/Web/URI/Schemes/data) 中
+- 將二進位資料編碼後納入 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 中
 
 ## 編碼後的大小增長
 
@@ -59,6 +59,6 @@ Base64 字串可以分成 4 個字元為一組的分塊，最後一組可能少�
   - {{domxref("Window.atob()")}}（也可在 {{domxref("WorkerGlobalScope.atob()", "worker 中使用", "", "nocode")}}）
   - {{domxref("Window.btoa()")}}（也可在 {{domxref("WorkerGlobalScope.btoa()", "worker 中使用", "", "nocode")}}）
   - {{jsxref("Uint8Array")}}
-- [Data URLs](/zh-TW/docs/Web/URI/Schemes/data)
+- [Data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data)
 - [Base64](https://zh.wikipedia.org/wiki/Base64)（維基百科）
 - [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 中描述的 Base64 演算法

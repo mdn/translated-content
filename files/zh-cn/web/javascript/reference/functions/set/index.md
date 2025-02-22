@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Functions/set
 
 当尝试设置属性时，**`set`** 语法将对象属性绑定到要调用的函数。它还可以在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)中应用。
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## 语法
 
