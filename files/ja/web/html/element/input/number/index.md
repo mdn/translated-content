@@ -288,7 +288,7 @@ input:valid + span::after {
 
 HTML は次のようになります。
 
-```html
+```html-nolint
 <form>
   <div class="metersInputGroup">
     <label for="meters">あなたの身長を入力してください (メートル):</label>
