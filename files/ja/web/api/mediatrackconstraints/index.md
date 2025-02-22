@@ -1,8 +1,6 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
-page-type: web-api-interface
-spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
 l10n:
   sourceCommit: c9e9f9f4faf2e8a5985e5834d9424557341f33c9
 ---
