@@ -9,7 +9,17 @@ l10n:
 
 **Null 合体演算子 (`??`)** は論理演算子の一種です。この演算子は左辺が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} の場合に右の値を返し、それ以外の場合に左の値を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing operator")}}
+
+```js interactive-example
+const foo = null ?? "default string";
+console.log(foo);
+// Expected output: "default string"
+
+const baz = 0 ?? 42;
+console.log(baz);
+// Expected output: 0
+```
 
 ## 構文
 

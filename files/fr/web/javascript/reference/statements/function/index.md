@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Statements/function
 
 La déclaration **`function`** (ou l'instruction `function`) permet de définir une fonction et les paramètres que celle-ci utilise.
 
-{{EmbedInteractiveExample("pages/js/statement-function.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction","",1)}}.
 

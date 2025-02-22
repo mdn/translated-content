@@ -9,7 +9,25 @@ slug: Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 Метод **`indexOf()`** возвращает индекс первого вхождения указанного значения в строковый объект {{jsxref("Global_Objects/String", "String")}}, на котором он был вызван, начиная с индекса `fromIndex`. Возвращает -1, если значение не найдено.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: String.indexOf()", "taller")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+const indexOfFirst = paragraph.indexOf(searchTerm);
+
+console.log(`The index of the first "${searchTerm}" is ${indexOfFirst}`);
+// Expected output: "The index of the first "dog" is 15"
+
+console.log(
+  `The index of the second "${searchTerm}" is ${paragraph.indexOf(
+    searchTerm,
+    indexOfFirst + 1,
+  )}`,
+);
+// Expected output: "The index of the second "dog" is 38"
+```
 
 ## Синтаксис
 

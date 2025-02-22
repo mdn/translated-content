@@ -7,7 +7,31 @@ slug: Web/JavaScript/Reference/Operators/void
 
 L'**opérateur `void`** permet d'évaluer une _expression_ donnée et de renvoyer `undefined`.
 
-{{EmbedInteractiveExample("pages/js/expressions-voidoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - void operator")}}
+
+```js interactive-example
+const output = void 1;
+console.log(output);
+// Expected output: undefined
+
+void console.log("expression evaluated");
+// Expected output: "expression evaluated"
+
+void (function iife() {
+  console.log("iife is executed");
+})();
+// Expected output: "iife is executed"
+
+void function test() {
+  console.log("test function executed");
+};
+try {
+  test();
+} catch (e) {
+  console.log("test function is not defined");
+  // Expected output: "test function is not defined"
+}
+```
 
 ## Syntaxe
 

@@ -7,7 +7,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 
 La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller", "taller")}}
+
+```js interactive-example
+const handler1 = {
+  setPrototypeOf(monster1, monsterProto) {
+    monster1.geneticallyModified = true;
+    return false;
+  },
+};
+
+const monsterProto = {};
+const monster1 = {
+  geneticallyModified: false,
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+// Object.setPrototypeOf(proxy1, monsterProto); // Throws a TypeError
+
+console.log(Reflect.setPrototypeOf(proxy1, monsterProto));
+// Expected output: false
+
+console.log(monster1.geneticallyModified);
+// Expected output: true
+```
 
 ## Syntaxe
 

@@ -921,10 +921,10 @@ window.addEventListener("load", () => {
 
 作成しようとしているコードでは、必要な作業すべてのために標準の JavaScript と DOM API を使用するでしょう。ここで使用するつもりである機能は以下のとおりです:
 
-1. {{domxref("element.classList","classList")}}
+1. {{domxref("Element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
 3. {{domxref("NodeList.forEach()")}}
-4. {{domxref("element.querySelector","querySelector()")}} および {{domxref("element.querySelectorAll","querySelectorAll()")}}
+4. {{domxref("Element.querySelector","querySelector()")}} および {{domxref("Element.querySelectorAll","querySelectorAll()")}}
 
 ### イベントコールバックを作成する
 

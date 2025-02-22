@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 **`call()`** メソッドは、 `this` の値と、独立して提供された引数によって関数を呼び出します。
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## 構文
 
