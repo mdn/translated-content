@@ -27,6 +27,7 @@
     "node": ">=20"
   },
   "dependencies": {
+    "autocorrect": "^1.2.0",
     "autocorrect-node": "2.13.0",
     "fdir": "^6.4.3",
     "franc-min": "^6.2.0",
