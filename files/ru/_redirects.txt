@@ -611,7 +611,8 @@
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/File/Using_files_from_web_applications	/ru/docs/Web/API/File_API/Using_files_from_web_applications
 /ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
-/ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
+/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction	/ru/docs/Web/API/File_System_API
+/ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_System_API
 /ru/docs/Web/API/FormData/Using_FormData_Objects	/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
@@ -915,8 +916,8 @@
 /ru/docs/Web/HTML/Общие_атрибуты/tabindex	/ru/docs/Web/HTML/Global_attributes/tabindex
 /ru/docs/Web/HTML/Ссылки	/ru/docs/Web/HTML/Reference
 /ru/docs/Web/HTTP/Basics_of_HTTP	/ru/docs/Web/HTTP
-/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ru/docs/Web/URI/Schemes/data
-/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/ru/docs/Web/URI/Schemes/data
+/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/ru/docs/Web/URI/Reference/Schemes/data
+/ru/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/ru/docs/Web/URI/Reference/Schemes/data
 /ru/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/ru/docs/Web/URI
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types	/ru/docs/Web/HTTP/MIME_types
 /ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types	/ru/docs/Web/HTTP/MIME_types/Common_types
@@ -1130,6 +1131,7 @@
 /ru/docs/Web/SVG/Элемент/use	/ru/docs/Web/SVG/Element/use
 /ru/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ru/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /ru/docs/Web/Tutorials	/ru/docs/MDN/Tutorials
+/ru/docs/Web/URI/Schemes/data	/ru/docs/Web/URI/Reference/Schemes/data
 /ru/docs/Web/WebGL	/ru/docs/Web/API/WebGL_API
 /ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL

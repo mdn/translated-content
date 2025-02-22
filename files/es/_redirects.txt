@@ -2430,10 +2430,10 @@
 /es/docs/Web/HTML/Índice	/es/docs/Web/HTML
 /es/docs/Web/HTTP/Access_control_CORS	/es/docs/Web/HTTP/CORS
 /es/docs/Web/HTTP/Basics_of_HTTP	/es/docs/conflicting/Web/HTTP
-/es/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/es/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs
-/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/URI/Schemes/data
-/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/es/docs/Web/URI/Schemes/data
-/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/URI/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs	/es/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/es/docs/Web/URI/Reference/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs	/es/docs/Web/URI/Reference/Schemes/data
+/es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/URI/Reference/Schemes/data
 /es/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP	/es/docs/Web/HTTP/Evolution_of_HTTP
 /es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 /es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web	/es/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
@@ -3061,6 +3061,8 @@
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
 /es/docs/Web/Tutoriales	/es/docs/MDN/Tutorials
 /es/docs/Web/Tutorials	/es/docs/MDN/Tutorials
+/es/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/es/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
+/es/docs/Web/URI/Schemes/data	/es/docs/Web/URI/Reference/Schemes/data
 /es/docs/Web/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/Web/WebGL/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/Web_Components	/es/docs/Web/API/Web_components

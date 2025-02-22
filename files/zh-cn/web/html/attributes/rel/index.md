@@ -50,7 +50,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 表示当前文档的另一种方式。对 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 有效，其含义取决于其他属性的值。
 
-    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)。
+    - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/HTML/Attributes/rel/Alternate_stylesheet)。
 
       ```html
       <!-- 一个永久样式表 -->
