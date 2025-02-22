@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 
 La méthode **`getMinutes()`** renvoie les minutes pour la date renseignée d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getMinutes()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getMinutes());
+// Expected output: 20
+```
 
 ## Syntaxe
 

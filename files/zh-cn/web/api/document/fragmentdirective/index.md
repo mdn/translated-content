@@ -34,5 +34,5 @@ document.fragmentDirective;
 
 ## 参见
 
-- [文本片段](/zh-CN/docs/Web/URI/Fragment/Text_fragments)
+- [文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

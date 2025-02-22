@@ -2,7 +2,7 @@
 title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: 000726d71e4bae5780e9fe787555aed8cf38e316
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
 {{CSSRef}}
@@ -31,7 +31,7 @@ l10n:
 - {{cssxref("@font-face/font-display", "font-display")}}
   - : 決定字型在下載並準備使用時的顯示方式。
 - {{cssxref("@font-face/font-family", "font-family")}}
-  - : 指定將作為字型屬性的字型名稱。
+  - : 指定將作為字型屬性的字型名稱。`font-family` 名稱是 `@font-face` 規則有效的必要條件。
 - {{cssxref("@font-face/font-stretch", "font-stretch")}}
   - : 一個 {{cssxref("font-stretch")}} 值。接受兩個值以指定字型範圍，例如 `font-stretch: 50% 200%;`
 - {{cssxref("@font-face/font-style", "font-style")}}
@@ -47,7 +47,7 @@ l10n:
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
   - : 定義字型輪廓和指標的縮放乘數，方便在相同字型大小下協調不同字型設計。
 - {{cssxref("@font-face/src", "src")}}
-  - : 指定字型資源的參考，包括字型格式及技術的提示。該參數值是 @font-face 規則有效的必要條件。
+  - : 指定字型資源的參考，包括字型格式及技術的提示。`src` 是 `@font-face` 規則有效的必要條件。
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
   - : 指定字型所使用的 Unicode 碼位範圍。
 
