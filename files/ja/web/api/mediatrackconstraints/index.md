@@ -9,13 +9,13 @@ l10n:
 
 **`MediaTrackConstraints`** 辞書は、一連の能力とそれぞれが取り得る値や値の範囲を記述するために使用されます。この制約辞書は {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} に渡され、スクリプトがトラックに対して正確な（要求された）値や範囲、もしくは希望する値や値の範囲のセットを指定できるようにします。また、最後に要求されたカスタム制約のセットは、{{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} を呼び出すことで取得できます。
 
-## Constraints
+## 制約
 
-The following types are used to specify a constraint for a property. They allow you to specify one or more `exact` values from which one must be the parameter's value, or a set of `ideal` values which should be used if possible. You can also specify a single value (or an array of values) which the user agent will do its best to match once all more stringent constraints have been applied.
+以下の型は、プロパティに対する制約を指定するために使用されます。これらを使用すると、そのうちどれか 1 つがパラメーターの値として使用されるべき `exact` 値を 1 つ以上指定できます。あるいは、可能であれば使用されるべき `ideal` 値のセットを指定することもできます。さらに、単一の値（または値の配列）を指定することもでき、ユーザーエージェントは、より厳しい制約がすべて適用された後に、その値を満たすよう最善を尽くします。
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
+制約の仕組みについて詳しく知りたい場合は、[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)を参照してください。
 
-> **Note:** `min` and `exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls — they produce a `TypeError` — but they are allowed in constraints used in {{domxref("MediaStreamTrack.applyConstraints()")}} calls.
+> **メモ:** `min` および `exact` 値は、{{domxref("MediaDevices.getDisplayMedia()")}} 呼び出しで使用される制約では許可されておらず、`TypeError` が発生します。ただし、これらは {{domxref("MediaStreamTrack.applyConstraints()")}} 呼び出しで使用される制約では許可されています。
 
 ### ConstrainBoolean
 
