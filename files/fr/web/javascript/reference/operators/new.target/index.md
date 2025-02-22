@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/new.target
 
 La syntaxe **`new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+
+```js interactive-example
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalid
+}
+```
 
 ## Syntaxe
 

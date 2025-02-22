@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
 
 La méthode **`toISOString()`** renvoie une chaîne de caractères au format ISO ([ISO 8601 Extended Format](http://en.wikipedia.org/wiki/ISO_8601)), qui peut être décrite de cette façon : **`YYYY-MM-DDTHH:mm:ss.sssZ`** (toujours longue de 24 caractères) ou de cette façon **`±YYYYYY-MM-DDTHH:mm:ss.sssZ`** (27 caractères). Le fuseau horaire est toujours UTC, comme l'indique le suffixe « Z » (pour zéro décalage avec UTC).
 
-{{EmbedInteractiveExample("pages/js/date-toisostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toISOString()")}}
+
+```js interactive-example
+const event = new Date("05 October 2011 14:48 UTC");
+console.log(event.toString());
+// Expected output: "Wed Oct 05 2011 16:48:00 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toISOString());
+// Expected output: "2011-10-05T14:48:00.000Z"
+```
 
 ## Syntaxe
 
