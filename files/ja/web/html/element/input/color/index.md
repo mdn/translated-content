@@ -2,16 +2,16 @@
 title: <input type="color">
 slug: Web/HTML/Element/input/color
 l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`color`** は視覚的なインターフェイス、もしくは `#rrggbb` の 16 進数表記でテキストを入力することでユーザーが色を指定することができます。
+{{HTMLElement("input")}} 要素の **`color`** は視覚的なインターフェイス、もしくは `#rrggbb` の 16 進数表記でテキストを入力することでユーザーが色を指定することができるユーザーインターフェイス要素を提供します。
 
-CSS の色表現には他にも色名、関数表記、アルファ値つきの 16 進表記などがありますが、ここでは単純な (アルファ値のない) もののみが利用できます。
+CSS の色表現には他にも色名、関数表記、アルファ値つきの 16 進表記などがありますが、ここでは（アルファ値のない）基本的な 16 進の色のみが利用できます。
 
-この要素の外見は、ブラウザーやプラットフォームによって大きく異なります。— 単純なテキストの入力欄で、入力された色情報が文字列の検証のみを行う入力欄であったり、プラットフォームの標準カラーピッカーや、独自のピッカーウィンドウを表示するなど、ブラウザーやプラットフォームにより大きく異なることがあります。
+この要素の外見は、ブラウザーやプラットフォームによって大きく異なります。基本的なテキストの入力欄で、入力された色情報が文字列の検証のみを行う入力欄であったり、プラットフォームの標準カラーピッカーや、独自のピッカーウィンドウを表示するなど、ブラウザーやプラットフォームにより大きく異なることがあります。
 
 {{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
 
@@ -67,7 +67,7 @@ colorPicker.select();
 
 ## 検証
 
-{{Glossary("user agent", "ユーザーエージェント")}} が値を正しい形式である 7 桁の小文字の 16 進記法に変換できない場合、値は無効であると見なされます。このときは {{cssxref(":invalid")}} 疑似クラスが要素に適用されます。
+{{Glossary("User agent", "ユーザーエージェント")}} が値を正しい形式である 7 桁の小文字の 16 進記法に変換できない場合、値は無効であると見なされます。このときは {{cssxref(":invalid")}} 擬似クラスが要素に適用されます。
 
 ## 例
 
@@ -192,7 +192,7 @@ function updateAll(event) {
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
   </tbody>
 </table>
@@ -204,7 +204,3 @@ function updateAll(event) {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

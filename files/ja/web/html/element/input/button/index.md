@@ -2,7 +2,7 @@
 title: <input type="button">
 slug: Web/HTML/Element/input/button
 l10n:
-  sourceCommit: cc032eaae8b14c1253216ded69c076242c4f757c
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -17,7 +17,7 @@ l10n:
 
 ### value ありのボタン
 
-`<input type="button">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、ボタンのラベルとして使われる文字列を設定します。 `value` はボタンの{{glossary("accessible description", "アクセシブル説明")}}を指定します。
+`<input type="button">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、ボタンのラベルとして使われる文字列を設定します。 `value` はボタンの{{glossary("Accessible description", "アクセシブル説明")}}を指定します。
 
 ```html
 <input type="button" value="クリックしてね" />
@@ -39,9 +39,9 @@ l10n:
 
 `<input type="button">` 要素には既定の動作がありません（親戚である `<input type="submit">` や [`<input type="reset">`](/ja/docs/Web/HTML/Element/input/reset) は、それぞれフォームの送信とリセットに使用されます）。ボタンに何かをさせる場合は、処理を行うための JavaScript コードを書く必要があります。
 
-### 単純なボタン
+### 基本的なボタン
 
-単純なボタンに {{domxref("Element/click_event", "click")}} イベントハンドラーを設定し、マシンを起動させましょう（つまり、ボタンの `value` と続く段落の文字列コンテンツを切り替えます）。
+基本的なボタンに {{domxref("Element/click_event", "click")}} イベントハンドラーを設定し、マシンを起動させましょう（つまり、ボタンの `value` と続く段落の文字列コンテンツを切り替えます）。
 
 ```html
 <form>
@@ -69,7 +69,7 @@ function updateButton() {
 
 このスクリプトは DOM で `<input>` を表す {{domxref("HTMLInputElement")}} オブジェクトの参照を受け取り、この参照を変数 `button` に保存します。{{domxref("EventTarget.addEventListener", "addEventListener()")}} は、ボタンに {{domxref("Element/click_event", "click")}} イベントが発生したときに実行される関数を設定します。
 
-{{EmbedLiveSample("A_simple_button", 650, 100)}}
+{{EmbedLiveSample("A_basic_button", 650, 100)}}
 
 ### ボタンへのショートカットキーの追加
 
@@ -116,7 +116,7 @@ function updateButton() {
 
 #### disabled 属性の設定
 
-実行時に `disabled` に `true` または `false` を設定するだけで、ボタンを有効化したり無効化したりすることができます。この例では、ボタンは有効の状態で始まりますが、押すと `button.disabled = true` を使用して無効化されます。それから {{domxref("setTimeout()")}} 関数を使用して、2 秒後にボタンの状態を有効の状態にリセットしています。
+実行時に `disabled` に `true` または `false` を設定するだけで、ボタンを有効化したり無効化したりすることができます。この例では、ボタンは有効の状態で始まりますが、押すと `button.disabled = true` を使用して無効化されます。それから {{domxref("Window.setTimeout", "setTimeout()")}} 関数を使用して、2 秒後にボタンの状態を有効の状態にリセットしています。
 
 ```html
 <input type="button" value="Enabled" />
@@ -179,7 +179,7 @@ function disableButton() {
 
 ## 例
 
-以下の例では、 {{htmlelement("canvas")}} 要素といくらかの単純な CSS と JavaScript を使用して作成した、とても簡単なお絵かきアプリを紹介します。 (簡略化のため CSS を省略します)。上部の 2 つのコントロールで、色と描画するペンの大きさを選択できます。ボタンは、クリックすると、キャンバスを消去する関数を呼び出します。
+以下の例では、 {{htmlelement("canvas")}} 要素といくらかの CSS と JavaScript を使用して作成した、とても簡単なお絵かきアプリを紹介します。 (簡略化のため CSS を省略します)。上部の 2 つのコントロールで、色と描画するペンの大きさを選択できます。ボタンは、クリックすると、キャンバスを消去する関数を呼び出します。
 
 ```html
 <div class="toolbar">
@@ -351,4 +351,3 @@ draw();
 
 - {{HTMLElement("input")}} およびそれに実装されている {{domxref("HTMLInputElement")}} インターフェイス。
 - より新しい {{HTMLElement("button")}} 要素。
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

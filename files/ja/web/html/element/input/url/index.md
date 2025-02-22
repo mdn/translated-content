@@ -2,7 +2,7 @@
 title: <input type="url">
 slug: Web/HTML/Element/input/url
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -13,20 +13,21 @@ l10n:
 
 入力値はフォームの送信前に自動的に検証され、空欄または正しい形式の URL のどちらかであることが確認されます。 CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスが自動的に適用され、フィールド上の現在の値が妥当な URL であるかどうかを視覚的に示します。
 
-`url` 型に対応していないブラウザーでは、 `url` 入力欄は標準の {{HTMLElement("input/text", "text")}} 入力欄で代替されます。
-
 ## 値
 
 {{HTMLElement("input")}} 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、自動的に URL の構文として検証される文字列が入ります。より具体的に言うと、検証を通る値の書式は下記の 2 通りがあります。
 
-1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを表します。
-2. 単一の正しい形式の絶対 URL。 URL が実在する必要はありませんが、少なくとも正しい書式です。簡単に言えば、 `urlscheme://restofurl` の形です。
+1. 空文字列 ("")。ユーザーが値を入力しないか、または値が削除されたことを示します。
+2. 単一の整形式の絶対 URL。これがあるからといって、その URL アドレスが存在するということには必ずしもなりません。しかし、少なくとも整形式で書式化されています。 `urlscheme://rest-of-url` に一致する項目は、入力された `urlscheme` が存在しなくても有効である可能性があります。
 
 [検証](#検証)の節で、どのようなメールアドレスが正しい形式であると検証されるかの詳細を参照してください。
 
 ## 追加の属性
 
-型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `url` 型の入力欄は次の属性にも対応しています。
+[グローバル属性](/ja/docs/Web/HTML/Global_attributes)および、型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `url` 型の入力欄は次の属性にも対応しています。
+
+> [!NOTE]
+> グローバル属性の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) を URL 入力に追加することはできますが、格納される状態は常に `off` になります。
 
 ### list
 
@@ -34,7 +35,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### maxlength
 
-ユーザーが `url` 入力欄に入力することができる（UTF-16 コード単位での）文字列長の最大値です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、この `url` 入力欄には文字列長の最大値が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーが `url` 入力欄に入力することができる（UTF-16 コード単位での）文字列長の最大値です。 `0` 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、この `url` 入力欄には文字列長の最大値が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドの URL の長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。制約検証はユーザーが値を変更した場合にのみ適用されます。
 
@@ -65,10 +66,10 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### readonly
 
-論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
+[`readonly`](/ja/docs/Web/HTML/Attributes/readonly) は論理属性で、存在すれば、ユーザーが編集することができないことを表します。しかし、 `value` は、 JavaScript コードから直接 {{domxref("HTMLInputElement")}} の `value` プロパティを設定することで変更することができます。
 
 > [!NOTE]
-> 読み取り専用フィールドは値を持てないため、 `required` は `readonly` 属性も指定されている入力欄には効果がありません。
+> 読み取り専用フィールドは値を持てないため、 [`required`](/ja/docs/Web/HTML/Attributes/required) は `readonly` 属性も指定されている入力欄には効果がありません。
 
 ### size
 
@@ -78,7 +79,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### spellcheck
 
-`spellcheck` はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
+[`spellcheck`](/ja/docs/Web/HTML/Global_attributes/spellcheck) はグローバル属性で、要素でスペルチェックを有効にするかどうかを示します。内容が編集可能なものすべてに使用することができますが、ここでは `spellcheck` 属性の {{HTMLElement("input")}} 要素の使用に関して特に考えます。 `spellcheck` で利用できる値は次の通りです。
 
 - `false`
   - : この要素でスペルチェックを無効にします。
@@ -89,26 +90,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 入力欄では、 [readonly](#readonly) 属性が設定されておらず、かつ無効になっていない場合にスペルチェックを有効にすることができます。
 
-`spellcheck` を読み取ることで返される値は、{{Glossary("user agent", "ユーザーエージェント")}}の設定によって上書きされる場合、コントロール内のスペルチェックの実際の状態を反映しない可能性があります。
-
-## 標準外の属性
-
-ブラウザーによっては、以下の標準外の属性が利用できます。一般的な規則として、できれば使用することを避けてください。
-
-### autocorrect
-
-Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
-
-- `on`
-  - : 構成されていれば、打ち間違いの自動修正や、テキストの置き換え処理を有効にします。
-- `off`
-  - : 自動修正やテキストの置き換えを無効にします。
-
-### mozactionhint {{deprecated_inline}}
-
-Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
-
-<strong>非推奨です。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。</strong>
+`spellcheck` を読み取ることで返される値は、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって上書きされる場合、コントロール内のスペルチェックの実際の状態を反映しない可能性があります。
 
 ## URL 入力欄の使用
 
@@ -119,15 +101,15 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 > [!NOTE]
 > ユーザーが HTML をその場面の裏でいじることができることを意識しておくことは極めて重要です。ですから、安全を目的として、サイトでクライアント側の値検証機能のみを使用しては*いけません*。何らかのセキュリティ上の問題を含む可能性がある値が提供されるトランザクションの場合は、いずれもサーバー側で値検証を行う*必要があります*。
 
-### 単純な URL 入力欄
+### 基本的な URL 入力欄
 
-現在、この要素を実装しているすべてのブラウザーは、基本的な検証機能を備えた標準的なテキスト入力フィールドとして実装しています。最も基本的な形として、 URL 入力は次のように実装することができます。
+この要素は、基本的な検証機能を備えた標準的なテキスト入力フィールドとして実装しています。最も基本的な形として、 URL 入力は次のように実装することができます。
 
 ```html
 <input id="myURL" name="myURL" type="url" />
 ```
 
-{{ EmbedLiveSample('A_simple_URL_input', 600, 40) }}
+{{ EmbedLiveSample('A_basic_URL_input', 600, 40) }}
 
 有効と見なされるのは空欄のときと、有効な書式の URL アドレスが 1 つだけ入力されたときであり、それ以外のときは無効とみなされることに注意してください。 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を追加すると、適切な書式の URL のみが許可されるようになり、空の場合は入力が有効であるとは見なされなくなります。
 
@@ -151,7 +133,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 ### 入力欄の寸法の制御
 
-入力ボックスの物理的な長さだけでなく、入力テキスト自体に許される最小・最大の長さも制御することができます。
+入力ボックスの物理的な長さと、入力テキストに許される最小・最大の長さも制御することができます。
 
 #### 物理的な入力欄の寸法
 
@@ -245,7 +227,7 @@ URL 入力欄を `type` に適切な値 `url` を指定して作成すると、�
 
 `url` 入力型に対応しているブラウザーは、自動的に検証を行い、 URL の標準の書式に一致するテキストのみが入力ボックスに入力されることを保証します。
 
-URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Standard](https://url.spec.whatwg.org/) で定義されており、私たちの記事 [URL とは何か](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) で初めての人のために説明されています。
+URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Standard](https://url.spec.whatwg.org/) で定義されており、私たちの記事 [URL とは何か](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) で初めての人のために説明しています。
 
 ### URL を必須にする
 
@@ -264,11 +246,11 @@ URL の構文はかなり入り組んでいます。 WHATWG の [URL Living Stan
 
 ### パターンによる検証
 
-入力された URL を、単なる「URL に見える文字列」よりも制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("regular expression", "正規表現")}}を値として取ります。
+入力された URL を、単なる「URL に見える文字列」よりも制限し、特定のパターンに適合させたい場合は、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用してください。この属性は、入力された値が一致すべき{{Glossary("Regular expression", "正規表現")}}を値として取ります。
 
 例えば、 Myco, Inc. の従業員向けに、あるページに問題があった場合に IT 部門に問い合わせるためのサポートページを作るとします。この単純化したフォームでは、ユーザーは問題のあるページの URL と、何が問題なのかを説明するメッセージを入力する必要があります。しかし、入力された URL が Myco のドメインにある場合にのみ、 URL の検証に成功するようにしたいのです。
 
-`url` 型の入力は、標準の URL バリデーション*および*指定された [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) の両方に対して検証されるので、簡単に実装することができます。では、その方法を見てみましょう。
+`url` 型の入力は、標準の URL バリデーション*および*指定された [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) の両方に対して検証されるので、正規表現によって実装することができます。では、その方法を見てみましょう。
 
 ```css hidden
 div {
@@ -325,11 +307,11 @@ input:valid + span::after {
 
 まず、 [`required`](/ja/docs/Web/HTML/Element/input#required)t/input#required)t/input#required) 属性が指定されており、有効なメールアドレスの入力が必須になっています。
 
-次に、 `url` 入力欄の `pattern` を `".*\.myco\..*"` に設定しました。このシンプルな正規表現は、文字列が任意の数の文字の後に、ドット、 "myco" 、ドット、そして任意の数の文字が続くことを要求します。ブラウザーは標準的な URL フィルター*および*指定されたテキストに対する独自のパターンの両方を実行するため、「これが有効な URL であり、かつ Myco ドメインであることを確認する」という検証を行うことになります。
+次に、 `url` 入力欄の `pattern` を `".*\.myco\..*"` に設定しました。この正規表現は、文字列が任意の数の文字の後に、ドット、 "myco" 、ドット、そして任意の数の文字が続くことを要求します。ブラウザーは標準的な URL フィルターおよび指定されたテキストに対する独自のパターンの両方を実行するため、「これが有効な URL であり、かつ Myco ドメインであることを確認する」という検証を行うことになります。
 
-これは完全ではありませんが、この単純なデモの要件では十分です。
+これは完全ではありませんが、この基本的なデモの要件では十分です。
 
-[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "URL" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。 URL」というメッセージになり、あまり良いものではなくなります。
+[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を `pattern` と併用することをお勧めします。その場合、 `title` でパターンを説明する必要があります。つまり、他の情報ではなく、データがどのような形式を取るべきかを説明してください。これは、 `title` が検証エラーメッセージの一部として表示されたり、読み上げられたりする可能性があるからです。例えば、ブラウザーが「入力された値がフィールドに指定された書式と異なります。」というメッセージの後に、あなたが指定した `title` を表示するかもしれません。もし `title` が "URL" のようなものであれば、結果は「入力された値がフィールドに指定された書式と異なります。 URL」というメッセージになり、あまり良いものではなくなります。
 
 そのため、「URL は myco ドメインのものを入力してください」という文字列を指定しています。こうすることで、エラーメッセージ全体が「入力された値がフィールドに指定された書式と異なります。URL は myco ドメインのものを入力してください。」のようになります。
 
@@ -409,8 +391,7 @@ input:valid + span::after {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel)
 - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
