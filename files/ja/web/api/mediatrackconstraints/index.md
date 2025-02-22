@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaTrackConstraints`** 辞書は、一連の能力とそれぞれが取り得る値や値の範囲を記述するために使用されます。この制約辞書は {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} に渡され、スクリプトがトラックに対して正確な（要求された）値や範囲、もしくは希望する値や値の範囲のセットを指定できるようにします。また、最後に要求されたカスタム制約のセットは、{{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} を呼び出すことで取得できます。
+**`MediaTrackConstraints`** 辞書は、一連の能力とそれぞれが取り得る値や値の範囲を記述するために使用されます。この制約辞書は {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} に渡され、スクリプトがトラックに対して正確な（要求された）値や範囲、もしくは理想的な値や値の範囲のセットを指定できるようにします。また、最後に要求されたカスタム制約のセットは、{{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} を呼び出すことで取得できます。
 
 ## 制約
 
@@ -19,47 +19,47 @@ l10n:
 
 ### ConstrainBoolean
 
-The `ConstrainBoolean` constraint type is used to specify a constraint for a property whose value is a Boolean value. Its value may either be set to a Boolean (`true` or `false`) or an object containing the following properties:
+`ConstrainBoolean` 制約型は真偽値を持つプロパティの制約を指定するために使用されます。その値は真偽値 (`true` または `false`) または次のプロパティを含むオブジェクトを設定できます。
 
 - `exact`
-  - : A Boolean which must be the value of the property. If the property can't be set to this value, matching will fail.
+  - : プロパティの値となるべき真偽値です。プロパティをこの値に設定できない場合、制約に失敗します。
 - `ideal`
-  - : A Boolean specifying an ideal value for the property. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.
+  - : プロパティの理想的な値を指定する真偽値です。可能であればこの値が使用されますが、不可能な場合はユーザーエージェントは最も近い値を使用します。
 
 ### ConstrainDouble
 
-The `ConstrainDouble` constraint type is used to specify a constraint for a property whose value is a double-precision floating-point number. Its value may either be set to a number or an object containing the following properties:
+`ConstrainDouble` 制約型は倍精度浮動小数点数の値を持つプロパティの制約を指定するために使用されます。その値は数値または次のプロパティを含むオブジェクトを設定できます。
 
 - `max`
-  - : A decimal number specifying the largest permissible value of the property it describes. If the value cannot remain equal to or less than this value, matching will fail.
+  - : プロパティの値として許容できる最大の値を指定する数値です。値がこの値以下にならない場合、制約に失敗します。
 - `min`
-  - : A decimal number specifying the smallest permissible value of the property it describes. If the value cannot remain equal to or greater than this value, matching will fail.
+  - : プロパティの値として許容できる最小の値を指定する数値です。値がこの値以上にならない場合、制約に失敗します。
 - `exact`
-  - : A decimal number specifying a specific, required, value the property must have to be considered acceptable.
+  - : プロパティが受け入れる必要がある、要求された特定の値を指定する十進数です。
 - `ideal`
-  - : A decimal number specifying an ideal value for the property. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.
+  - : プロパティの理想的な値を指定する十進数です。可能であればこの値が使用されますが、不可能な場合はユーザーエージェントは最も近い値を使用します。
 
 ### ConstrainDOMString
 
-The `ConstrainDOMString` constraint type is used to specify a constraint for a property whose value is a string. Its value may either be set to a string, an array of strings, or an object containing the following properties:
+`ConstrainDOMString` 制約型は文字列の値を持つプロパティの制約を指定するために使用されます。その値は文字列、文字列の配列、または次のプロパティを含むオブジェクトを設定できます。
 
 - `exact`
-  - : A string or an array of strings, one of which must be the value of the property. If the property can't be set to one of the listed values, matching will fail.
+  - : 文字列またはそのうちひとつがプロパティの値となるべき文字列の配列です。プロパティをこれらの値のいずれかに設定できない場合、制約に失敗します。
 - `ideal`
-  - : A string or an array of strings, specifying ideal values for the property. If possible, one of the listed values will be used, but if it's not possible, the user agent will use the closest possible match.
+  - : プロパティの理想的な値を指定する文字列またはその配列です。可能であればこれらの値が使用されますが、不可能な場合はユーザーエージェントは最も近い値を使用します。
 
 ### ConstrainULong
 
-The `ConstrainULong` constraint type is used to specify a constraint for a property whose value is an integer. Its value may either be set to a number or an object containing the following properties:
+`ConstrainULong` 制約型は整数の値を持つプロパティの制約を指定するために使用されます。その値は数値または次のプロパティを含むオブジェクトを設定できます。
 
 - `max`
-  - : An integer specifying the largest permissible value of the property it describes. If the value cannot remain equal to or less than this value, matching will fail.
+  - : プロパティの値として許容できる最大の値を指定する整数です。値がこの値以下にならない場合、制約に失敗します。
 - `min`
-  - : An integer specifying the smallest permissible value of the property it describes. If the value cannot remain equal to or greater than this value, matching will fail.
+  - : プロパティの値として許容できる最小の値を指定する整数です。値がこの値以上にならない場合、制約に失敗します。
 - `exact`
-  - : An integer specifying a specific, required, value the property must have to be considered acceptable.
+  - : プロパティが受け入れる必要がある、要求された特定の値を指定する整数です。
 - `ideal`
-  - : An integer specifying an ideal value for the property. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.
+  - : プロパティの理想的な値を指定する整数です。可能であればこの値が使用されますが、不可能な場合はユーザーエージェントは最も近い値を使用します。
 
 ## Instance properties
 
