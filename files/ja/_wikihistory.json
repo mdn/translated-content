@@ -24451,12 +24451,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Functions": {
-    "modified": "2020-11-10T07:17:38.541Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/CSS/CSS_Values_and_Units": {
     "modified": "2020-10-27T06:39:35.001Z",
     "contributors": [
@@ -24465,10 +24459,30 @@
       "awazo"
     ]
   },
+  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
+    "modified": "2020-11-10T07:17:38.541Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2020-11-10T07:25:34.702Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+    "modified": "2020-09-27T00:52:29.488Z",
+    "contributors": [
+      "mfuji09",
+      "Hakaato",
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "Guillaume-Heras",
+      "prayash",
+      "ethertank",
+      "sosleepy"
     ]
   },
   "Web/CSS/CSS_animated_properties": {
@@ -25672,20 +25686,6 @@
       "mpcjazz",
       "ethertank",
       "sii"
-    ]
-  },
-  "Web/CSS/Value_definition_syntax": {
-    "modified": "2020-09-27T00:52:29.488Z",
-    "contributors": [
-      "mfuji09",
-      "Hakaato",
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "Guillaume-Heras",
-      "prayash",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "Web/CSS/Viewport_concepts": {
@@ -41393,102 +41393,6 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-10-15T21:48:19.083Z",
-    "contributors": [
-      "mfuji09",
-      "JohnTitor",
-      "mottox2",
-      "east-pmo",
-      "sujiniku",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/Manifest/Reference/background_color": {
-    "modified": "2020-10-15T22:29:06.754Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/categories": {
-    "modified": "2020-10-15T22:29:07.021Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/description": {
-    "modified": "2020-10-15T22:29:05.707Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/display": {
-    "modified": "2020-10-15T22:29:06.946Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/icons": {
-    "modified": "2020-10-15T22:29:07.009Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/name": {
-    "modified": "2020-10-15T22:29:06.830Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/orientation": {
-    "modified": "2020-10-15T22:29:07.784Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/prefer_related_applications": {
-    "modified": "2020-10-15T22:29:07.739Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/related_applications": {
-    "modified": "2020-10-15T22:29:10.435Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/scope": {
-    "modified": "2020-10-15T22:29:08.903Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/screenshots": {
-    "modified": "2020-10-15T22:29:10.927Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/short_name": {
-    "modified": "2020-10-15T22:29:09.571Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/start_url": {
-    "modified": "2020-10-15T22:29:11.077Z",
-    "contributors": [
-      "sunya9",
-      "mfuji09"
-    ]
-  },
-  "Web/Manifest/Reference/theme_color": {
-    "modified": "2020-10-15T22:29:08.873Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T21:27:32.187Z",
     "contributors": [
@@ -41808,6 +41712,102 @@
       "YUUKIToriyama",
       "chrisdavidmills",
       "k-kuwahara"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-10-15T21:48:19.083Z",
+    "contributors": [
+      "mfuji09",
+      "JohnTitor",
+      "mottox2",
+      "east-pmo",
+      "sujiniku",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/background_color": {
+    "modified": "2020-10-15T22:29:06.754Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/categories": {
+    "modified": "2020-10-15T22:29:07.021Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/description": {
+    "modified": "2020-10-15T22:29:05.707Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/display": {
+    "modified": "2020-10-15T22:29:06.946Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/icons": {
+    "modified": "2020-10-15T22:29:07.009Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/name": {
+    "modified": "2020-10-15T22:29:06.830Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/orientation": {
+    "modified": "2020-10-15T22:29:07.784Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications": {
+    "modified": "2020-10-15T22:29:07.739Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/related_applications": {
+    "modified": "2020-10-15T22:29:10.435Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/scope": {
+    "modified": "2020-10-15T22:29:08.903Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/screenshots": {
+    "modified": "2020-10-15T22:29:10.927Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/short_name": {
+    "modified": "2020-10-15T22:29:09.571Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/start_url": {
+    "modified": "2020-10-15T22:29:11.077Z",
+    "contributors": [
+      "sunya9",
+      "mfuji09"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/theme_color": {
+    "modified": "2020-10-15T22:29:08.873Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
