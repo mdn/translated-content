@@ -540,7 +540,7 @@ slug: Web/HTML/Element/input
 
 - `value`
 
-  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox`、`radio`和`hidden` 来说，应该被认为是必须的。
+  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox`、`radio` 和 `hidden` 来说，应该被认为是必须的。
 
 - `width`
 
