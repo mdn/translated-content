@@ -2,7 +2,7 @@
 title: <input type="image">
 slug: Web/HTML/Element/input/image
 l10n:
-  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -21,7 +21,7 @@ l10n:
 
 ### alt
 
-`alt` 属性は、画像が表示できない場合のボタンのラベルとして使用される代替文字列を提供します（エラーの場合、{{Glossary("user agent", "ユーザーエージェント")}}が画像を表示できない場合、画像を表示しないように設定されていた場合、ユーザーが読み上げ端末を使用している場合など）。提供する場合は、ボタンのラベルとして適切な空ではない文字列である必要があります。
+`alt` 属性は、画像が表示できない場合のボタンのラベルとして使用される代替文字列を提供します（エラーの場合、{{Glossary("User agent", "ユーザーエージェント")}}が画像を表示できない場合、画像を表示しないように設定されていた場合、ユーザーが読み上げ端末を使用している場合など）。提供する場合は、ボタンのラベルとして適切な空ではない文字列である必要があります。
 
 例えば、「今すぐログイン」をアイコンやテキストが入った画像を表示するグラフィックボタンの場合、 `alt` 属性も `今すぐログイン` のように設定してください。
 
@@ -40,7 +40,7 @@ l10n:
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って [URL エンコーディング](https://ja.wikipedia.org/wiki/パーセントエンコーディング)した後で送信します。
+  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
@@ -55,9 +55,9 @@ l10n:
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Element/form#method) を上書きします。許されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("get")}} リクエストでサーバーに送信されます。この方法は、ASCII 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("GET")}} リクエストでサーバーに送信されます。この方法は、 {{Glossary("ASCII")}} 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
 - `post`
-  - : フォームのデータは `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に HTTP の {{HTTPMethod("post")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
+  - : フォームのデータは `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に HTTP の {{HTTPMethod("POST")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
 - `dialog`
   - : このメソッドは、ボタンが入力に関連するダイアログを閉じ、フォームデータを全く送信しないことを示すために使用される。
 
@@ -78,7 +78,7 @@ l10n:
 - `_self`
   - : レスポンスを、フォームを含むものと同じ閲覧コンテキストに読み込みます。これにより、現在の文書が受信したデータで置き換えられます。これは、何も指定されていない場合に使用される既定値です。
 - `_blank`
-  - : レスポンスを新しい、名前のない閲覧コンテキストに読み込みます。これは通常、現在の文書と同じウィンドウの新しいタブですが、{{Glossary("user agent", "ユーザーエージェント")}}の設定によって異なる場合があります。
+  - : レスポンスを新しい、名前のない閲覧コンテキストに読み込みます。これは通常、現在の文書と同じウィンドウの新しいタブですが、{{Glossary("User agent", "ユーザーエージェント")}}の設定によって異なる場合があります。
 - `_parent`
   - : 現在の閲覧コンテキストの親コンテキストにレスポンスを読み込みます。親コンテキストがない場合は、 `_self` と同じ動作をします。
 - `_top`
@@ -128,7 +128,7 @@ l10n:
 
 - [`src`](/ja/docs/Web/HTML/Element/input#src) 属性は、ボタンに表示したい画像のパスを指定するために使用されます。
 - [`alt`](/ja/docs/Web/HTML/Element/input#alt) 属性は画像の alt テキストを提供し、スクリーンリーダーの利用者がボタンが何に使われるかをより良く理解することができるようにします。また、何らかの理由で画像を表示できない場合にも表示されます（例えば、パスのスペルが間違っている場合など）。可能であれば、標準的な送信ボタンを使用する場合に使用するラベルと一致するテキストを使用してください。
-- [`width`](/ja/docs/Web/HTML/Element/input#width) および [`height`](/ja/docs/Web/HTML/Element/input#height) 属性は、画像を表示する幅と高さをピクセル単位で指定するために使用されます。ボタンは画像と同じ大きさです。ボタンのヒット領域を画像より大きくしたい場合は、 CSS を使う必要があります（例： {{cssxref("padding")}}）。また、片方の寸法だけを指定した場合、もう片方は自動的に調整され、画像は元のアスペクト比を維持します。
+- [`width`](/ja/docs/Web/HTML/Element/input#width) および [`height`](/ja/docs/Web/HTML/Element/input#height) 属性は、画像を表示する幅と高さをピクセル単位で指定するために使用されます。ボタンは画像と同じ大きさです。ボタンのヒット領域を画像より大きくしたい場合は、 CSS を使う必要があります（例： {{cssxref("padding")}}）。また、片方の寸法だけを指定した場合、もう片方は自動的に調整され、画像は元の{{glossary("Aspect ratio", "アスペクト比")}}を維持します。
 
 ### 既定のフォームの動作の上書き
 
@@ -160,7 +160,7 @@ l10n:
 
   - : フォームを送信した後に受信したレスポンスを表示する場所を示す名前またはキーワードです。これは、閲覧コンテキスト（例えば、タブ、ウィンドウ、インライン枠）の名前、またはキーワードです。この属性が指定された場合、要素のフォームオーナーの [`target`](/ja/docs/Web/HTML/Element/form#target) 属性を上書きします。次のキーワードは特別な意味を持ちます。
 
-    - \_`self`: 現在のコンテキストと同じ閲覧コンテキストにレスポンスを読み込みます。この属性が指定されていない場合は、この値が既定値となります。
+    - `_self`: 現在のコンテキストと同じ閲覧コンテキストにレスポンスを読み込みます。この属性が指定されていない場合は、この値が既定値となります。
     - `_blank`: 新しい無名の閲覧コンテキストにレスポンスを読み込みます。
     - `_parent`: 現在の閲覧コンテキストの親コンテキストにレスポンスを読み込みます。親が存在しない場合、このオプションは `_self` と同じように動作します。
     - `_top`: 最上位の閲覧コンテキスト（つまり、現在の閲覧コンテキストの祖先のうち、親を持たない閲覧コンテキスト）にレスポンスを読み込みます。親がいない場合、このオプションは `_self` と同じ振る舞いをします。
@@ -213,7 +213,7 @@ l10n:
 
 #### CSS
 
-次に、基本的な要素をよりきれいに配置するための簡単な CSS です。
+次に、基本的な要素をよりきれいに配置するための CSS です。
 
 ```css
 div {
@@ -232,21 +232,19 @@ label {
 
 この例では、前の例を応用して画像のための空間を確保し、 {{cssxref("object-fit")}} と {{cssxref("object-position")}} で実際の画像の大きさと位置を調整しています。
 
-#### 例
-
 {{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
 #### HTML
 
-```html
+```html-nolint
 <form>
   <p>アカウントにログインしてください</p>
   <div>
-    <label for="userId">User ID</label>
+    <label for="userId">ユーザー ID</label>
     <input type="text" id="userId" name="userId" />
   </div>
   <div>
-    <label for="pwd">Password</label>
+    <label for="pwd">パスワード</label>
     <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
@@ -270,7 +268,7 @@ div {
 
 label {
   display: inline-block;
-  width: 70px;
+  width: 90px;
   text-align: right;
   padding-right: 10px;
 }
@@ -282,7 +280,7 @@ label {
 }
 ```
 
-ここでは、 `object-position` は画像を要素の右上隅に描画するように設定され、 `object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
+ここでは、 `object-position` は画像4を要素の右上隅に描画するように設定され、 `object-fit` は `contain` に設定されています。これは、画像の縦横比を変えずに要素のボックス内に収まる最大の大きさで描画することを意味しています。画像で覆われていない領域では、要素の灰色の背景がまだ見えていることに注意してください。
 
 ## 技術的概要
 
@@ -342,4 +340,3 @@ label {
 - {{HTMLElement("input")}} および実装している {{domxref("HTMLInputElement")}} インターフェイス
 - HTML の {{HTMLElement("img")}} 要素
 - `<input>` 要素の枠内における画像の位置と大きさの指定: {{cssxref("object-position")}} および {{cssxref("object-fit")}}
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
