@@ -1,7 +1,6 @@
 ---
 title: Estándares web
 slug: Learn_web_development/Getting_started/Web_standards
-page-type: landing-page
 ---
 
 {{LearnSidebar}}
