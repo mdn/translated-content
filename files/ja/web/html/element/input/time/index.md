@@ -372,7 +372,7 @@ input:valid + span::after {
 
 ## 関連情報
 
-- [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date)
+- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date)
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date), [`<input type="week">`](/ja/docs/Web/HTML/Element/input/week), [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month)
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する {{domxref("HTMLInputElement")}} インターフェイス
 - [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)
