@@ -34,7 +34,7 @@ Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </m
 </math>
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
