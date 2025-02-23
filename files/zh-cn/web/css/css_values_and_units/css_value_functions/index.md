@@ -1,6 +1,6 @@
 ---
 title: CSS 值函数
-slug: Web/CSS/CSS_Functions
+slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 ---
 
 {{CSSRef}}

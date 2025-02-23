@@ -78,11 +78,11 @@ slug: Web/Progressive_web_apps/Guides/Best_practices
 用户期望安装的 PWA 与任何安装的特定平台应用程序一样运行。为了提供用户期望的类似应用的体验，你可以以以下方式将你的应用程序与操作系统集成：
 
 - 使用[通知 API](/zh-CN/docs/Web/API/Notifications_API) 向用户设备发送通知。
-- 使用 [`file_handlers`](/zh-CN/docs/Web/Manifest/file_handlers) Web 应用清单成员处理文件。
+- 使用 [`file_handlers`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/file_handlers) Web 应用清单成员处理文件。
 - 在应用图标上[显示标记（badge）](/zh-CN/docs/Web/Progressive_web_apps/How_to/Display_badge_on_app_icon)。
 - 启用[应用程序之间的数据共享](/zh-CN/docs/Web/Progressive_web_apps/How_to/Share_data_between_apps)。
 
-许多 [Web 应用程序清单成员](/zh-CN/docs/Web/Manifest#成员)可用于自定义应用程序在用户设备上的显示方式，并在操作系统中更深入地集成。
+许多 [Web 应用程序清单成员](/zh-CN/docs/Web/Progressive_web_apps/Manifest#成员)可用于自定义应用程序在用户设备上的显示方式，并在操作系统中更深入地集成。
 
 #### 应用的外观和感觉
 

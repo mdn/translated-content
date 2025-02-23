@@ -148,7 +148,7 @@ slug: Web/HTML/Attributes/rel
     > 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
 
 - `manifest`
-  - : 代表 [Web 应用清单](/zh-CN/docs/Web/Manifest)。需要使用 CORS 协议进行跨源获取。
+  - : 代表 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)。需要使用 CORS 协议进行跨源获取。
 - `modulepreload`
   - : 对于提高性能很有用，并且与文档中的 {{htmlelement('link')}} 元素相关，设置 `rel="modulepreload"` 告诉浏览器预先获取脚本（和依赖关系）并存储在文档的模块映射中，以便以后评估。 `modulepreload` 链接可以确保网络抓取时，模块映射中的模块已经准备好（但没有评估），然后才一定需要它。参见 [`modulepreload`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
 - `next`
