@@ -8,7 +8,7 @@ l10n:
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
-此页面列出了 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)成员在 Web 中如何使用的参考。
+此页面列出了如何在 Web 中使用 [Web 应用清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)成员的参考。
 
 {{SubPagesWithSummaries}}
 
