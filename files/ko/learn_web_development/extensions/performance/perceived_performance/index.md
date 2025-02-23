@@ -1,5 +1,5 @@
 ---
-title: Perceived performance
+title: 인지된 성능
 slug: Learn_web_development/Extensions/Performance/Perceived_performance
 l10n:
   sourceCommit: 906e2110500779091f12d8a1080fd3e0443962f4
