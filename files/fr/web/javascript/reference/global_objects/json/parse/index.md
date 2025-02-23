@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 La méthode **`JSON.parse()`** analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne. On peut éventuellement utiliser cette fonction avec un paramètre de modification permettant de traiter l'objet avant qu'il soit renvoyé.
 
-{{EmbedInteractiveExample("pages/js/json-parse.html")}}
+{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+
+```js interactive-example
+const json = '{"result":true, "count":42}';
+const obj = JSON.parse(json);
+
+console.log(obj.count);
+// Expected output: 42
+
+console.log(obj.result);
+// Expected output: true
+```
 
 ## Syntaxe
 

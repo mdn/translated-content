@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)之一。
+**`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。
 
 {{EmbedInteractiveExample("pages/css/function-ellipse.html")}}
 

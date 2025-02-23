@@ -5,7 +5,7 @@ slug: Web/CSS/named-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<named-color>`** 为颜色名——如 `red`、`blue`、`black` 或 `lightseagreen`。`<named-color>` 在语法上为 [`<ident>`](/zh-CN/docs/Web/CSS/ident)。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<named-color>`** 为颜色名——如 `red`、`blue`、`black` 或 `lightseagreen`。`<named-color>` 在语法上为 [`<ident>`](/zh-CN/docs/Web/CSS/ident)。
 
 在可使用 {{CSSXref("&lt;color&gt;")}} 的任意位置均可使用 `<named-color>` 值。
 

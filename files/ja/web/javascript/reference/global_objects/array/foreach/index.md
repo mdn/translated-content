@@ -9,7 +9,17 @@ l10n:
 
 **`forEach()`** メソッドは、与えられた関数を、配列の各要素に対して一度ずつ実行します。
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 構文
 

@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+**`@media`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)的结果来应用样式表的一部分。使用它，你可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > [!NOTE]
 > 在 JavaScript 中，可以使用 {{domxref("CSSMediaRule")}} CSS 对象模型接口访问使用 `@media` 创建的规则。
@@ -14,7 +14,7 @@ slug: Web/CSS/@media
 
 ## 语法
 
-`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/At-rule#条件规则组)中。
+`@media` at 规则可置于你代码的顶层或嵌套至其他任何的 [at 条件规则组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)中。
 
 ```css
 /* 在你的代码的顶层 */
@@ -75,7 +75,7 @@ _媒体特性_（media feature）描述了{{glossary("user agent", "用户代理
 - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
   - : 输出设备渲染表面的宽度。于媒体查询第 4 版中被弃用。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
+  - : 应用程序的显示模式，显示模式由 web 应用的清单（manifest）中的 [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest#display) 成员所指定。定义于 [Web App Manifest 规范](https://w3c.github.io/manifest/#the-display-mode-media-feature)。
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : 用户代理和输出设备支持的亮度、对比度和色彩深度的组合。于媒体查询第 5 版中被添加。
 - {{cssxref("@media/forced-colors", "forced-colors")}}

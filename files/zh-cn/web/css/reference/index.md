@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Functions)以及[@ 规则](/zh-CN/docs/Web/CSS/At-rule)。你也可以浏览[CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -43,11 +43,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
+有关 CSS 选择器语法的初学者介绍，请参阅 [CSS 选择器教程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)。注意，规则定义中的任何 [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)错误都将使整个规则无效，无效的规则将被浏览器忽略。注意 CSS 定义完全是[基于（ASCII）文本](https://www.w3.org/TR/css-syntax-3/#intro)的，而 DOM-CSS / CSSOM（规则管理系统）是[基于对象](https://www.w3.org/TR/cssom/#introduction)的。
 
 ### @规则语法
 
-由于 @规则间的结构变化很大，请参阅 [@规则](/zh-CN/docs/Web/CSS/At-rule)以找到你所想要的特定规则语法。
+由于 @规则间的结构变化很大，请参阅 [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)以找到你所想要的特定规则语法。
 
 ## 索引
 
@@ -105,26 +105,26 @@ div.menu-bar li:hover > ul {
 
 ### 语法和语义
 
-- [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-- [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
+- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+- [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
 - [层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
-- [注释](/zh-CN/docs/Web/CSS/Comments)
+- [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
 - [解释器](/zh-CN/docs/Glossary/CSS_Descriptor)
-- [继承](/zh-CN/docs/Web/CSS/Inheritance)
+- [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-- [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+- [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 函数表记](/zh-CN/docs/Web/CSS/CSS_Functions)
+- [CSS 函数表记](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
 ### 值
 
-- [实际值](/zh-CN/docs/Web/CSS/actual_value)
-- [计算值](/zh-CN/docs/Web/CSS/computed_value)
-- [初始值](/zh-CN/docs/Web/CSS/initial_value)
+- [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+- [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
+- [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
 - [解析值](/zh-CN/docs/Web/CSS/resolved_value)
-- [指定值](/zh-CN/docs/Web/CSS/specified_value)
-- [使用值](/zh-CN/docs/Web/CSS/used_value)
+- [指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)
+- [使用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
 
 ### 布局
 

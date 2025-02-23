@@ -28,7 +28,7 @@ all: revert;
 - {{cssxref("initial")}}
   - : 该关键字代表改变该元素或其父元素的所有属性至初始值。
 - {{cssxref("inherit")}}
-  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[inherited values](/zh-CN/docs/Web/CSS/Inheritance)
+  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[继承值](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{cssxref("unset")}}
   - : 该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。
 - {{cssxref("revert")}}

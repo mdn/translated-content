@@ -12,7 +12,21 @@ l10n:
 
 **`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。ソースはスクリプトとして解釈されます。
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## 構文
 

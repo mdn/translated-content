@@ -154,23 +154,23 @@ CSS 提供了一个通用的简写属性 {{cssxref("all")}}，它可以应用于
 
 - CSS 重要概念：
 
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [@ 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-  - [继承](/zh-CN/docs/Web/CSS/Inheritance)
+  - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
-    - [初始值](/zh-CN/docs/Web/CSS/initial_value)
-    - [计算值](/zh-CN/docs/Web/CSS/computed_value)
-    - [应用值](/zh-CN/docs/Web/CSS/used_value)
-    - [实际值](/zh-CN/docs/Web/CSS/actual_value)
+    - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)
+    - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
+    - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
+    - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
 
 - 简写属性：{{cssxref("all")}}、{{cssxref("animation")}}、{{cssxref("background")}}、{{cssxref("border")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-start")}}、{{cssxref("border-bottom")}}、{{cssxref("border-color")}}、{{cssxref("border-image")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-left")}}、{{cssxref("border-radius")}}、{{cssxref("border-right")}}、{{cssxref("border-style")}}、{{cssxref("border-top")}}、{{cssxref("border-width")}}、{{cssxref("column-rule")}}、{{cssxref("columns")}}、{{cssxref("flex")}}、{{cssxref("flex-flow")}}、{{cssxref("font")}}、{{cssxref("gap")}}、{{cssxref("grid")}}、{{cssxref("grid-area")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("grid-template")}}、{{cssxref("list-style")}}、{{cssxref("margin")}}、{{cssxref("mask")}}、{{cssxref("offset")}}、{{cssxref("outline")}}、{{cssxref("overflow")}}、{{cssxref("padding")}}、{{cssxref("place-content")}}、{{cssxref("place-items")}}、{{cssxref("place-self")}}、{{cssxref("scroll-margin")}}、{{cssxref("scroll-padding")}}、{{cssxref("text-decoration")}}、{{cssxref("text-emphasis")}}、{{cssxref("transition")}}

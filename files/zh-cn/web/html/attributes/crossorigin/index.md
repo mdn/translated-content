@@ -64,7 +64,7 @@ slug: Web/HTML/Attributes/crossorigin
 
 ### 示例：带有用户凭据的 Web 清单
 
-在获取需要用户凭据的[清单](/zh-CN/docs/Web/Manifest)时，即使是同源的情况，属性值也必须设置为 `use-credentials`。
+在获取需要用户凭据的[清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest)时，即使是同源的情况，属性值也必须设置为 `use-credentials`。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
