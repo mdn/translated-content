@@ -159,16 +159,16 @@ l10n:
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
   - : 制約可能プロパティ {{domxref("MediaTrackSettings.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} の値に課される要求または必須の制約を記述する [`ConstrainBoolean`](#constrainboolean) 値。このプロパティは、タブがキャプチャされたときにタブ内で再生されるオーディオがユーザーのローカルスピーカーから引き続き再生されるかどうかを制御します。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [メディアキャプチャとストリーム API (メディアストリーム)](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
+- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
+- [画面キャプチャ API の使用](/ja/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
 - {{domxref("MediaDevices.getUserMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}
