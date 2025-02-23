@@ -56,7 +56,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
+  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : 返回窗口中的框架（frame）数。参见 {{domxref("window.frames")}}。
 - {{domxref("Window.location")}}

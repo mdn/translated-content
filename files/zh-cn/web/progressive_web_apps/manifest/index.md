@@ -1,12 +1,11 @@
 ---
 title: Web 应用清单
 slug: Web/Progressive_web_apps/Manifest
-original_slug: Web/Manifest
 l10n:
   sourceCommit: b3d5659a6f16dc6cb8be5c48d19820a67434ecb9
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 [Web 应用清单](https://w3c.github.io/manifest/)规范中定义的 **web 应用清单**是一个提供 web 应用信息的 {{Glossary("JSON")}} 文本文件。
 
@@ -20,7 +19,7 @@ web 应用清单包含一个 JSON 对象，其中的顶级键称为*成员*。
 
 在规范中，所有成员都是可选的，但有些应用要求某些成员必须存在。例如，[PWA 必须提供某些清单成员](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#必需的清单成员)。
 
-{{ListSubpages("/zh-CN/docs/Web/Manifest")}}
+{{ListSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 > [!NOTE]
 > 部分成员，如 `dir`、`lang`、`iarc_rating_id` 和 `note_taking` 未经实现。
@@ -96,9 +95,9 @@ web 应用清单可通过文档 {{HTMLElement("head")}} 中的 {{HTMLElement("li
 
 在某些浏览器和操作系统中，已安装的 PWA 启动时会显示启动画面。该启动画面是自动生成的，其外观由 web 应用清单中的成员定义，具体如下：
 
-- [`name`](/zh-CN/docs/Web/Manifest/name)
-- [`background_color`](/zh-CN/docs/Web/Manifest/Reference/background_color)
-- [`icons`](/zh-CN/docs/Web/Manifest/icons)
+- [`name`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/name)
+- [`background_color`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
+- [`icons`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 
 ## 浏览器兼容性
 

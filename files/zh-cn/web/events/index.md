@@ -360,7 +360,7 @@ l10n:
       <td>清单</td>
       <td>
         <p>
-          与安装<a href="/zh-CN/docs/Web/Manifest">渐进式 web 应用清单</a>相关的事件。
+          与安装<a href="/zh-CN/docs/Web/Progressive_web_apps/Manifest">渐进式 web 应用清单</a>相关的事件。
         </p>
       </td>
       <td>
