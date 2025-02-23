@@ -33,6 +33,8 @@ l10n:
   </tbody>
 </table>
 
+객관적인 성능과 달리, [인지된 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)은 다음 기사에서 다루고 있습니다. 
+
 ## 웹 성능이란
 
 웹 성능은 웹 사이트 또는 애플리케이션의 객관적인 지표이고 인지된 사용자 경험입니다. 이는 다음과 같은 주요 내용을 포함합니다.
