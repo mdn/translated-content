@@ -157,7 +157,7 @@ l10n:
   - : ディスプレイ領域に直接対応しないソース表面の選択を許可するかどうかを示す単一の真偽値、またはそのセットを含む [`ConstrainBoolean`](#constrainboolean) 値。これには、他のウィンドウに隠されたウィンドウの内容をキャプチャできるようにするウィンドウのバッキングバッファや、ウィンドウ内で全体を表示するためにスクロールが必要な大きなドキュメントを含むバッファが含まれる場合があります。
 
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}
-  - : 制約可能プロパティ {{domxref("MediaTrackSettings.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} の値に課される要求または必須の制約を記述する [`ConstrainBoolean`](#constrainboolean) 値。このプロパティは、タブがキャプチャされたときにタブ内で再生されるオーディオがユーザーのローカルスピーカーから引き続き再生されるかどうかを制御します。
+  - : 制約可能プロパティ {{domxref("MediaTrackSettings.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} の値に課される要求または必須の制約を記述する [`ConstrainBoolean`](#constrainboolean) 値。このプロパティは、タブがキャプチャされたときにタブ内で再生される音声がユーザーのローカルスピーカーから引き続き再生されるかどうかを制御します。
 
 ## 仕様書
 
