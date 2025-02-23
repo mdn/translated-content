@@ -1,7 +1,6 @@
 ---
 title: 具有独立分区状态的 Cookie（CHIPS）
 slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
-original_slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
 l10n:
   sourceCommit: 81dbd6314e340cfff2a489b370a3ec6d53c74287
 ---
@@ -45,7 +44,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 3. 当用户访问 `https://site-b.example`，该站点也嵌入了 `https://3rd-party.example`，因为分区键不一致，所以新嵌入的实例不再能够访问前一页面设置的 cookie。
 
 > [!NOTE]
-> CHIPS 类似于 Firefox 实现的[状态分区机制](/zh-CN/docs/Web/Privacy/State_Partitioning)。不同之处在于，状态分区将 cookie 存储和检索分区到每个顶级站点的单独的 cookie 存储空间中，而没有在需要时可以选择启用第三方 cookie 的机制。随着浏览器开始逐步淘汰第三方 cookie 的使用，当开发人员开始处理此更改时，仍然需要允许第三方 cookie 的有效和非跟踪的使用。
+> CHIPS 类似于 Firefox 实现的[状态分区机制](/zh-CN/docs/Web/Privacy/Guides/State_Partitioning)。不同之处在于，状态分区将 cookie 存储和检索分区到每个顶级站点的单独的 cookie 存储空间中，而没有在需要时可以选择启用第三方 cookie 的机制。随着浏览器开始逐步淘汰第三方 cookie 的使用，当开发人员开始处理此更改时，仍然需要允许第三方 cookie 的有效和非跟踪的使用。
 
 ## 有效的第三方嵌入场景
 
@@ -65,9 +64,5 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 参见
 
-- [具有独立分区状态的 Cookie（CHIPS）——developer.chrome.com](https://developers.google.cn/privacy-sandbox/3pcd/chips)
+- [具有独立分区状态的 Cookie（CHIPS）](https://developers.google.cn/privacy-sandbox/3pcd/chips)，developers.google.cn
 - [CHIPS 解释](https://github.com/privacycg/CHIPS)
-
-<section id="Quick_links">
-{{ListSubpages("/zh-CN/docs/Web/Privacy", "2", "0", "0")}}
-</section>
