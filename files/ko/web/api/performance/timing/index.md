@@ -1,5 +1,5 @@
 ---
-title: "Performance: timing property"
+title: "Performance: timing 요소"
 slug: Web/API/Performance/timing
 l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
@@ -12,7 +12,7 @@ l10n:
 속성은 대기시간과 관련된 성능 정보를 포함한 {{domxref("PerformanceTiming")}}
 객체를 반환합니다.
 
-이 속성은 사용할 수 없습니다.
+이 속성은 워커에서 사용할 수 없습니다.
 
 > [!WARNING]
 > 이 속성은 [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete) 문서에 따라 더 이상 지원되지 않습니다. {{domxref("PerformanceNavigationTiming")}}
@@ -32,4 +32,4 @@ l10n:
 
 ## 같이 보기
 
-- {{domxref("Performance")}} 인터페이스와 관련있습니다.
+- 이 속성이 속한 {{domxref("Performance")}} 인터페이스
