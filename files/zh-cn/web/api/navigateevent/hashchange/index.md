@@ -7,7 +7,6 @@ l10n:
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`hashChange`** read-only property of the {{domxref("NavigateEvent")}} interface returns `true` if the navigation is a fragment navigation (i.e. to a fragment identifier in the same document), or `false` otherwise.
 {{domxref("NavigateEvent")}} 接口的 **`hashChange`** 只读属性在导航是片段导航（即，导航到同一文档中的片段标识符）时返回 `true`，否则返回 `false`。
 
 ## 值
