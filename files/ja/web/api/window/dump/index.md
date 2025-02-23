@@ -40,6 +40,6 @@ firefox > console.txt 2>&1
 > [!NOTE]
 > コンソールメッセージを、アプリケーションを起動したコンソールに表示させたいときは、[Gecko Console Redirector](https://github.com/matthewkastor/Redirector) を使用してください。プリコンパイルされたバイナリが <https://github.com/matthewkastor/Redirector/archive/master.zip> の ZIP アーカイブ内の `Redirector-master\Gecko\Console Redirector\bin\Release` に含まれています。すべての dll ファイルと exe ファイルをお好みの場所にコピーしてください。次に、`Console Redirector.exe /?` を実行します。
 
-## 仕様
+## 仕様書
 
 これは、どの仕様にも含まれません。

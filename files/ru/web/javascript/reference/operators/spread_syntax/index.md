@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Operators/Spread_syntax
 - для элементов (литералов массива)
 - для выражений объектов: в местах, где количество пар "ключ-значение" должно быть равно нулю или больше (для объектных литералов)
 
-{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+
+```js interactive-example
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
 
 ## Синтаксис
 

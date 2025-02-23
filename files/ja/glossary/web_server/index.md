@@ -12,4 +12,4 @@ l10n:
 ## 関連情報
 
 - [サーバーの紹介](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [サーバ](https://ja.wikipedia.org/wiki/サーバ)（ウィキペディア）
+- [サーバー](https://ja.wikipedia.org/wiki/サーバ)（ウィキペディア）

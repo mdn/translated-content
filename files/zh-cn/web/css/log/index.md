@@ -5,9 +5,9 @@ slug: Web/CSS/log
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`log()`** 为指数型函数，返回某数的对数。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`log()`** 为指数型函数，返回某数的对数。
 
-[对数](https://en.wikipedia.org/wiki/Logarithm)为指数的逆运算。固定底数的此数次方将产生传入的第一个参数。
+[对数](https://zh.wikipedia.org/wiki/对数)为指数的逆运算。固定底数的此数次方将产生传入的第一个参数。
 
 在 CSS 中传入单个参数时，将使用以 `e`（约 `2.7182818`）为底数的自然对数，不过底数可用可选的第二个参数设置为任意值。
 

@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Functions)以及[@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。你也可以浏览[CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
+使用此 **CSS 参考**页面以浏览按[字母索引](#索引)的所有标准 [CSS](/zh-CN/docs/Web/CSS) 属性、[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)、[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)、[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[功能表记](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)以及 [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。你也可以浏览 [CSS 关键概念](#概念)和[按类型排列的 CSS 选择器](#选择器)列表。还有一份简短的 [DOM-CSS / CSSOM 参考](#dom-css_cssom)。
 
 ## 基本规则语法
 
@@ -113,9 +113,9 @@ div.menu-bar li:hover > ul {
 - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
 - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
 - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
-- [值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+- [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS 单位与取值类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 函数表记](/zh-CN/docs/Web/CSS/CSS_Functions)
+- [CSS 函数表记](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
 ### 值
 

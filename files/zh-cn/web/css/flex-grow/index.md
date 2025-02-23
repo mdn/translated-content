@@ -11,7 +11,7 @@ CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸
 
 ## 语法
 
-满足[CSS 属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax) {{csssyntax("flex-grow")}}。
+满足 [CSS 属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax) {{csssyntax("flex-grow")}}。
 
 ```css
 /* <number> 值 */

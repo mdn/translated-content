@@ -6885,18 +6885,18 @@
       "Lambrusco.pro"
     ]
   },
+  "Web/API/File_System_API": {
+    "modified": "2019-03-23T22:06:14.603Z",
+    "contributors": [
+      "egorshulga"
+    ]
+  },
   "Web/API/File_and_Directory_Entries_API": {
     "modified": "2020-10-15T21:56:47.477Z",
     "contributors": [
       "SphinxKnight",
       "svetley1",
       "tocretpa"
-    ]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2019-03-23T22:06:14.603Z",
-    "contributors": [
-      "egorshulga"
     ]
   },
   "Web/API/FontFace": {
@@ -9817,12 +9817,6 @@
       "ahtohbi4"
     ]
   },
-  "Web/API/Window/console": {
-    "modified": "2019-03-18T21:20:36.516Z",
-    "contributors": [
-      "AndreiSoroka"
-    ]
-  },
   "Web/API/Window/crypto": {
     "modified": "2019-03-23T22:55:57.909Z",
     "contributors": [
@@ -11306,20 +11300,13 @@
       "andreww2012"
     ]
   },
-  "Web/CSS/At-rule": {
-    "modified": "2019-11-07T14:56:39.596Z",
-    "contributors": [
-      "sashakrauzer",
-      "JokerHD"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2019-03-23T22:55:54.351Z",
     "contributors": [
       "surrsoft"
     ]
   },
-  "Web/CSS/CSS_Types": {
+  "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2019-03-18T21:45:05.678Z",
     "contributors": [
       "TViglesGoom"
@@ -11415,6 +11402,13 @@
       "hinduCoder"
     ]
   },
+  "Web/CSS/CSS_cascade/Inheritance": {
+    "modified": "2019-03-23T22:44:45.904Z",
+    "contributors": [
+      "ViktorPalansky",
+      "BychekRU"
+    ]
+  },
   "Web/CSS/CSS_cascade/Specificity": {
     "modified": "2019-03-23T22:31:13.059Z",
     "contributors": [
@@ -11425,6 +11419,39 @@
       "hellpirat",
       "Hydrock",
       "102"
+    ]
+  },
+  "Web/CSS/CSS_cascade/actual_value": {
+    "modified": "2019-03-23T22:31:07.849Z",
+    "contributors": [
+      "warsan",
+      "BychekRU"
+    ]
+  },
+  "Web/CSS/CSS_cascade/computed_value": {
+    "modified": "2019-03-23T22:31:07.128Z",
+    "contributors": [
+      "ViktorPalansky",
+      "BychekRU"
+    ]
+  },
+  "Web/CSS/CSS_cascade/initial_value": {
+    "modified": "2019-03-23T22:46:29.428Z",
+    "contributors": [
+      "BychekRU"
+    ]
+  },
+  "Web/CSS/CSS_cascade/specified_value": {
+    "modified": "2019-03-23T22:30:59.718Z",
+    "contributors": [
+      "BychekRU"
+    ]
+  },
+  "Web/CSS/CSS_cascade/used_value": {
+    "modified": "2019-11-29T01:24:06.046Z",
+    "contributors": [
+      "wKich",
+      "Tuman"
     ]
   },
   "Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties": {
@@ -11767,6 +11794,28 @@
       "Hoopers_Hooch"
     ]
   },
+  "Web/CSS/CSS_syntax/At-rule": {
+    "modified": "2019-11-07T14:56:39.596Z",
+    "contributors": [
+      "sashakrauzer",
+      "JokerHD"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Comments": {
+    "modified": "2019-03-23T22:32:40.563Z",
+    "contributors": [
+      "BychekRU",
+      "Evgeny166"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2019-07-26T04:52:30.660Z",
+    "contributors": [
+      "munaticu",
+      "teoli",
+      "Norville"
+    ]
+  },
   "Web/CSS/CSS_table": {
     "modified": "2019-03-23T22:31:01.222Z",
     "contributors": [
@@ -11811,13 +11860,6 @@
       "opereverzeva"
     ]
   },
-  "Web/CSS/Comments": {
-    "modified": "2019-03-23T22:32:40.563Z",
-    "contributors": [
-      "BychekRU",
-      "Evgeny166"
-    ]
-  },
   "Web/CSS/Descendant_combinator": {
     "modified": "2019-03-23T22:45:17.695Z",
     "contributors": [
@@ -11832,13 +11874,6 @@
       "bezik",
       "BychekRU",
       "bilazikboy"
-    ]
-  },
-  "Web/CSS/Inheritance": {
-    "modified": "2019-03-23T22:44:45.904Z",
-    "contributors": [
-      "ViktorPalansky",
-      "BychekRU"
     ]
   },
   "Web/CSS/Layout_cookbook": {
@@ -11951,14 +11986,6 @@
       "BychekRU"
     ]
   },
-  "Web/CSS/Syntax": {
-    "modified": "2019-07-26T04:52:30.660Z",
-    "contributors": [
-      "munaticu",
-      "teoli",
-      "Norville"
-    ]
-  },
   "Web/CSS/Type_selectors": {
     "modified": "2019-03-23T22:46:27.753Z",
     "contributors": [
@@ -11984,13 +12011,6 @@
       "kapvik",
       "hhharm",
       "ViT09"
-    ]
-  },
-  "Web/CSS/actual_value": {
-    "modified": "2019-03-23T22:31:07.849Z",
-    "contributors": [
-      "warsan",
-      "BychekRU"
     ]
   },
   "Web/CSS/align-content": {
@@ -12464,13 +12484,6 @@
       "opereverzeva"
     ]
   },
-  "Web/CSS/computed_value": {
-    "modified": "2019-03-23T22:31:07.128Z",
-    "contributors": [
-      "ViktorPalansky",
-      "BychekRU"
-    ]
-  },
   "Web/CSS/content": {
     "modified": "2020-10-15T22:17:47.064Z",
     "contributors": [
@@ -12797,12 +12810,6 @@
     "modified": "2020-10-15T22:09:53.246Z",
     "contributors": [
       "bsergey"
-    ]
-  },
-  "Web/CSS/initial_value": {
-    "modified": "2019-03-23T22:46:29.428Z",
-    "contributors": [
-      "BychekRU"
     ]
   },
   "Web/CSS/inline-size": {
@@ -13179,12 +13186,6 @@
       "HImichun"
     ]
   },
-  "Web/CSS/specified_value": {
-    "modified": "2019-03-23T22:30:59.718Z",
-    "contributors": [
-      "BychekRU"
-    ]
-  },
   "Web/CSS/tab-size": {
     "modified": "2020-10-15T22:18:59.542Z",
     "contributors": [
@@ -13329,13 +13330,6 @@
     "modified": "2020-10-15T22:23:07.292Z",
     "contributors": [
       "delfin211"
-    ]
-  },
-  "Web/CSS/used_value": {
-    "modified": "2019-11-29T01:24:06.046Z",
-    "contributors": [
-      "wKich",
-      "Tuman"
     ]
   },
   "Web/CSS/user-select": {
@@ -21802,7 +21796,7 @@
       "ZVanoZ"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-10-15T22:23:29.676Z",
     "contributors": [
       "alex3d",
@@ -22018,6 +22012,12 @@
     "contributors": [
       "wbamberg",
       "warsan"
+    ]
+  },
+  "conflicting/Web/API/console": {
+    "modified": "2019-03-18T21:20:36.516Z",
+    "contributors": [
+      "AndreiSoroka"
     ]
   },
   "conflicting/Web/JavaScript/Guide/Numbers_and_strings": {
