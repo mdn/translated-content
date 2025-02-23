@@ -53,7 +53,7 @@
 /zh-CN/docs/CSS/Understanding_z-index/Stacking_without_z-index	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /zh-CN/docs/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 /zh-CN/docs/CSS/Universal_selectors	/zh-CN/docs/Web/CSS/Universal_selectors
-/zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/Value_definition_syntax
+/zh-CN/docs/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /zh-CN/docs/CSS/Visual_formatting_model	/zh-CN/docs/Web/CSS/Visual_formatting_model
 /zh-CN/docs/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/actual_value
 /zh-CN/docs/CSS/animation-direction	/zh-CN/docs/Web/CSS/animation-direction
@@ -2415,6 +2415,7 @@
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/zh-CN/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/在Flow中和Flow之外	/zh-CN/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow
+/zh-CN/docs/Web/CSS/CSS_Functions	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 /zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
@@ -2491,6 +2492,7 @@
 /zh-CN/docs/Web/CSS/Understanding_z-index/The_stacking_context	/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 /zh-CN/docs/Web/CSS/Using_CSS_custom_properties	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 /zh-CN/docs/Web/CSS/Using_CSS_variables	/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+/zh-CN/docs/Web/CSS/Value_definition_syntax	/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 /zh-CN/docs/Web/CSS/actual_value	/zh-CN/docs/Web/CSS/CSS_cascade/actual_value
 /zh-CN/docs/Web/CSS/attr()	/zh-CN/docs/Web/CSS/attr
 /zh-CN/docs/Web/CSS/box_model	/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
@@ -3081,7 +3083,9 @@
 /zh-CN/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /zh-CN/docs/Web/JavaScript/Typed_arrays	/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-CN/docs/Web/JavaScript/重新认识js	/zh-CN/docs/Web/JavaScript/Language_overview
-/zh-CN/docs/Web/Manifest/background_color	/zh-CN/docs/Web/Manifest/Reference/background_color
+/zh-CN/docs/Web/Manifest	/zh-CN/docs/Web/Progressive_web_apps/Manifest
+/zh-CN/docs/Web/Manifest/Reference/background_color	/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/background_color
+/zh-CN/docs/Web/Manifest/background_color	/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/background_color
 /zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /zh-CN/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 /zh-CN/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained	/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/WebAudio_playbackRate_explained
@@ -3098,6 +3102,7 @@
 /zh-CN/docs/Web/Media/images	/zh-CN/docs/Web/Media/Guides/Images
 /zh-CN/docs/Web/OpenSearch	/zh-CN/docs/Web/XML/Guides/OpenSearch
 /zh-CN/docs/Web/Performance/浏览器渲染页面的工作原理	/zh-CN/docs/Web/Performance/How_browsers_work
+/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies	/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
 /zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/Progressive_web_apps/App_structure	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /zh-CN/docs/Web/Progressive_web_apps/Installable_PWAs	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs

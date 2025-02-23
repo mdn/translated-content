@@ -1,6 +1,7 @@
 ---
 title: Web 应用清单
-slug: Web/Manifest
+slug: Web/Progressive_web_apps/Manifest
+original_slug: Web/Manifest
 l10n:
   sourceCommit: b3d5659a6f16dc6cb8be5c48d19820a67434ecb9
 ---

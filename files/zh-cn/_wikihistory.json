@@ -23573,12 +23573,6 @@
       "1Cr18Ni9"
     ]
   },
-  "Web/CSS/CSS_Functions": {
-    "modified": "2020-11-20T07:10:42.861Z",
-    "contributors": [
-      "xgqfrms"
-    ]
-  },
   "Web/CSS/CSS_Values_and_Units": {
     "modified": "2020-07-17T05:52:14.158Z",
     "contributors": [
@@ -23586,11 +23580,33 @@
       "Owen-Tsai"
     ]
   },
+  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
+    "modified": "2020-11-20T07:10:42.861Z",
+    "contributors": [
+      "xgqfrms"
+    ]
+  },
   "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2019-03-23T22:08:42.415Z",
     "contributors": [
       "Ende93",
       "h2x"
+    ]
+  },
+  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+    "modified": "2020-03-13T13:15:23.549Z",
+    "contributors": [
+      "AchooLuv",
+      "zjffun",
+      "wjp5826",
+      "Tankunpeng",
+      "Sebastianz",
+      "Guillaume-Heras",
+      "prayash",
+      "uolcano",
+      "ljwrer",
+      "teoli",
+      "Jimmie_Felidae"
     ]
   },
   "Web/CSS/CSS_animated_properties": {
@@ -24920,22 +24936,6 @@
       "iwillbe",
       "teoli",
       "ziyunfei"
-    ]
-  },
-  "Web/CSS/Value_definition_syntax": {
-    "modified": "2020-03-13T13:15:23.549Z",
-    "contributors": [
-      "AchooLuv",
-      "zjffun",
-      "wjp5826",
-      "Tankunpeng",
-      "Sebastianz",
-      "Guillaume-Heras",
-      "prayash",
-      "uolcano",
-      "ljwrer",
-      "teoli",
-      "Jimmie_Felidae"
     ]
   },
   "Web/CSS/Viewport_concepts": {
@@ -40946,24 +40946,6 @@
       "wizardforcel"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2019-10-29T05:08:14.882Z",
-    "contributors": [
-      "7NZ",
-      "mySoul",
-      "flyingsouthwind",
-      "varcat",
-      "_da",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/Manifest/Reference/background_color": {
-    "modified": "2020-10-15T22:31:53.672Z",
-    "contributors": [
-      "wobuhuisuanmin",
-      "wr20060926"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T21:25:04.339Z",
     "contributors": [
@@ -41212,6 +41194,24 @@
     "modified": "2019-11-13T02:27:54.714Z",
     "contributors": [
       "JC-Ge"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2019-10-29T05:08:14.882Z",
+    "contributors": [
+      "7NZ",
+      "mySoul",
+      "flyingsouthwind",
+      "varcat",
+      "_da",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/background_color": {
+    "modified": "2020-10-15T22:31:53.672Z",
+    "contributors": [
+      "wobuhuisuanmin",
+      "wr20060926"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {

@@ -1,6 +1,7 @@
 ---
 title: 具有独立分区状态的 Cookie（CHIPS）
-slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
+slug: Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies
+original_slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
 l10n:
   sourceCommit: 81dbd6314e340cfff2a489b370a3ec6d53c74287
 ---
