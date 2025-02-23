@@ -10,6 +10,7 @@ l10n:
 {{domxref("NavigateEvent")}} 接口的 **`userInitiated`** 只读属性在导航是由用户发起的（例如，通过单击链接、提交表单或按浏览器的“后退”/“前进”按钮）时返回 `true`，否则返回 `false`。
 
 > [!NOTE]
+>
 > [附录：导航类型](https://github.com/WICG/navigation-api#appendix-types-of-navigations)中的表格显示了哪些导航类型是由用户发起的。
 
 ## 值
