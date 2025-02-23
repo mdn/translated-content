@@ -420,7 +420,7 @@ This article offers a list of events that can be sent; some are standard events 
       <td>
         <p>
           Events related to installation of
-          <a href="/zh-TW/docs/Web/Manifest">progressive web app manifests</a>.
+          <a href="/zh-TW/docs/Web/Progressive_web_apps/Manifest">progressive web app manifests</a>.
         </p>
       </td>
       <td>
