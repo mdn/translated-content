@@ -1,12 +1,11 @@
 ---
 title: Web 應用程式清單
 slug: Web/Progressive_web_apps/Manifest
-original_slug: Web/Manifest
 l10n:
   sourceCommit: ab4090ce439d9ea25229a8583a138b2f8fa8a74e
 ---
 
-{{QuickLinksWithSubpages("/zh-TW/docs/Web/Manifest/Reference")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 **Web 應用程式清單**，定義於 [Web 應用程式清單](https://w3c.github.io/manifest/)規範中，是一個提供有關 Web 應用程式的訊息的 {{Glossary("JSON")}} 文字檔案。
 
@@ -69,9 +68,9 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 在某些瀏覽器和作業系統中，啟動已安裝的 PWA 時會顯示啟動畫面。此啟動畫面是自動生成的，其外觀由 Web 應用程式清單中的成員定義，具體如下：
 
-- [`name`](/zh-TW/docs/Web/Manifest/Reference/name)
-- [`background_color`](/zh-TW/docs/Web/Manifest/Reference/background_color)
-- [`icons`](/zh-TW/docs/Web/Manifest/Reference/icons)
+- [`name`](/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference/name)
+- [`background_color`](/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference/background_color)
+- [`icons`](/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference/icons)
 
 ## 瀏覽器相容性
 
