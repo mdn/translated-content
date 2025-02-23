@@ -1,5 +1,5 @@
 ---
-title: Performance budgets
+title: 성능 예산
 slug: Web/Performance/Performance_budgets
 l10n:
   sourceCommit: 49d7c6425eefe66062848b47a3d995a3629ba88e
