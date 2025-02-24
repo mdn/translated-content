@@ -58,7 +58,7 @@ name=Joe%20User&request=Send%20me%20one%20of%20your%20catalogue
 
 ### 요청 메서드
 
-HTTP는 주어진 자원에 대해 실행되길 바라는 동작을 가리키는 [요청 메서드](/ko/docs/Web/HTTP/Methods) 집합을 정의합니다. 그것들이 명사가 될 수 있을을지라도, 이 요청 메서드들은 때때로 HTTP 동사로써 참조됩니다. 일반적으로 대부분의 요청은 `GET`과 `POST`입니다.
+HTTP는 주어진 자원에 대해 실행되길 바라는 동작을 가리키는 [요청 메서드](/ko/docs/Web/HTTP/Methods) 집합을 정의합니다. 그것들이 명사가 될 수 있을지라도, 이 요청 메서드들은 때때로 HTTP 동사로써 참조됩니다. 일반적으로 대부분의 요청은 `GET`과 `POST`입니다.
 
 - {{HTTPMethod("GET")}} 메서드는 지정된 자원의 표시를 요청합니다. `GET`을 사용하는 요청은 데이터를 가져오는 것 외에는 할 수 없습니다.
 - {{HTTPMethod("POST")}} 메서드는 서버에 데이터를 전송하여 서버가 상태를 바꾸도록 만듭니다. 이것은 [HTML Forms](/ko/docs/Learn/Forms)에서 자주 사용되는 메서드입니다.
