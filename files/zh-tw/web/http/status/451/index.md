@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-超文本傳輸協定（HTTP）**`451 Unavailable For Legal Reasons`** 用戶端錯誤回應碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
+HTTP **`451 Unavailable For Legal Reasons`** [用戶端回應錯誤](/zh-TW/docs/Web/HTTP/Status#用戶端回應錯誤)狀態碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
 
 ## 狀態
 
@@ -16,6 +16,8 @@ l10n:
 ```
 
 ## 範例
+
+### 帶有 Link 標頭的回應
 
 此範例回應來自 IETF RFC（參見下文），並包含對[《萬世魔星》](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)的參考。
 
@@ -32,10 +34,7 @@ Content-Type: text/html
       <head><title>Unavailable For Legal Reasons</title></head>
       <body>
             <h1>Unavailable For Legal Reasons</h1>
-            <p>This request may not be serviced in the Roman Province
-            of Judea due to the Lex Julia Majestatis, which disallows
-            access to resources hosted on servers deemed to be
-            operated by the People's Front of Judea.</p>
+            <p>此請求可能無法在羅馬行省猶太行省處理，因為《尤利亞叛國法》禁止存取被認定由猶太人民陣線運營的伺服器上所託管的資源。</p>
       </body>
 </html>
 ```
@@ -44,11 +43,8 @@ Content-Type: text/html
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
 ## 參見
 
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - [維基百科：HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
 - [維基百科：華氏 451 度](https://zh.wikipedia.org/wiki/華氏451度)（該回應碼的數字詞源）
