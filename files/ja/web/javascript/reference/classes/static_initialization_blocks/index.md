@@ -9,7 +9,22 @@ l10n:
 
 **静的初期化ブロック**は{{jsxref("Statements/class", "クラス", "", 1)}}内で宣言されます。これは、クラスの初期化の時に評価される文を格納します。これにより、{{jsxref("Classes/static", "静的", "", 1)}}プロパティよりも柔軟な初期化ロジックが可能になり、 `try...catch` を使用したり、 1 つの値から複数のフィールドを設定したりすることができます。初期化は現在のクラス宣言のコンテキストで実行され、プライベートプロパティにアクセスすることができます。つまり、インスタンスのプライベートフィールドを持つクラスと、同じスコープで宣言された他のクラスや関数との間で情報を共有するためにも使用できます（C++ の "friend" クラスに似ています）。
 
-{{EmbedInteractiveExample("pages/js/classes-static-initialization.html")}}
+{{InteractiveExample("JavaScript Demo: Class Static Initialization Blocks")}}
+
+```js interactive-example
+class ClassWithStaticInitializationBlock {
+  static staticProperty1 = "Property 1";
+  static staticProperty2;
+  static {
+    this.staticProperty2 = "Property 2";
+  }
+}
+
+console.log(ClassWithStaticInitializationBlock.staticProperty1);
+// Expected output: "Property 1"
+console.log(ClassWithStaticInitializationBlock.staticProperty2);
+// Expected output: "Property 2"
+```
 
 ## 構文
 

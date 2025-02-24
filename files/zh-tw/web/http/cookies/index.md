@@ -219,7 +219,7 @@ Cookie 與特定域和方案（如 `http` 或 `https`）相關，如果 {{HTTPHe
 開發人員希望尊重用戶隱私並最小化第三方跟蹤的場景中提供了一些有用的功能：
 
 - 伺服器可以（並且應該）設置 Cookie 的 [SameSite 屬性](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)，以指定是否可以發送第三方 Cookie。
-- [獨立分區狀態的 Cookie（CHIPS）](/zh-TW/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)允許開發人員將其 Cookie 選擇性地選擇為分區儲存，每個頂級站點都有一個獨立的 Cookie 庫。這使得不跟蹤用途的第三方 Cookie 在不允許用於第三方跟蹤的瀏覽器中繼續工作。
+- [獨立分區狀態的 Cookie（CHIPS）](/zh-TW/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)允許開發人員將其 Cookie 選擇性地選擇為分區儲存，每個頂級站點都有一個獨立的 Cookie 庫。這使得不跟蹤用途的第三方 Cookie 在不允許用於第三方跟蹤的瀏覽器中繼續工作。
 
 ### 與 Cookie 相關的法規
 

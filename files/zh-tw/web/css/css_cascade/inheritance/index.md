@@ -56,9 +56,9 @@ the words "emphasized text" will not have a border (since the initial value of {
 - [CSS Reference](/zh-TW/docs/Web/CSS/Reference)
 - CSS 重要概念：
 
-  - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)
-  - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
-  - [註釋](/zh-TW/docs/Web/CSS/Comments)
+  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
+  - [註釋](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
@@ -73,7 +73,7 @@ the words "emphasized text" will not have a border (since the initial value of {
     - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
     - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [特性值定義語法](/zh-TW/docs/Web/CSS/Value_definition_syntax)
+  - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)
   - [可置換元素](/zh-TW/docs/Web/CSS/Replaced_element)
 

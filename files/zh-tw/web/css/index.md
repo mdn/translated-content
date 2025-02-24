@@ -39,7 +39,7 @@ slug: Web/CSS
 - [CSS 參考](/zh-TW/docs/Web/CSS/Reference)：一個詳細的參考資料，為資深網頁開發人員設計，包含 CSS 各種屬性和觀念。
 - CSS 關鍵概念：
 
-  - [語法](/zh-TW/docs/Web/CSS/Syntax)
+  - [語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
   - [權重](/zh-TW/docs/Web/CSS/Specificity)和[繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒子模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[邊框的崩潰](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [堆疊](/zh-TW/docs/CSS/Understanding_z-index/Stacking_context)和[格式化區塊](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)

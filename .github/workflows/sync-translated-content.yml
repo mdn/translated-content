@@ -100,7 +100,7 @@ jobs:
           title: "[${{ matrix.lang }}] sync translated content"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
-          body: "Yari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
+          body: "Rari generated sync. Related upstream commits:\n\n${{ env.COMMIT_URLS }}"
           labels: |
             automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}

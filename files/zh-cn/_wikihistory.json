@@ -12597,20 +12597,6 @@
       "Clouds_W"
     ]
   },
-  "Web/API/File_and_Directory_Entries_API/Firefox_support": {
-    "modified": "2019-06-11T23:33:01.083Z",
-    "contributors": [
-      "xiaoxingchi"
-    ]
-  },
-  "Web/API/File_and_Directory_Entries_API/Introduction": {
-    "modified": "2019-03-23T23:31:18.012Z",
-    "contributors": [
-      "JobbyM",
-      "ziyunfei",
-      "james.li"
-    ]
-  },
   "Web/API/FocusEvent": {
     "modified": "2020-10-20T08:42:06.825Z",
     "contributors": [
@@ -23556,21 +23542,6 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/Alternative_style_sheets": {
-    "modified": "2020-10-15T22:30:11.278Z",
-    "contributors": [
-      "14725"
-    ]
-  },
-  "Web/CSS/At-rule": {
-    "modified": "2019-08-08T06:46:40.777Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "teoli",
-      "yan",
-      "alimon"
-    ]
-  },
   "Web/CSS/Attribute_selectors": {
     "modified": "2020-10-15T21:22:08.999Z",
     "contributors": [
@@ -23602,12 +23573,6 @@
       "1Cr18Ni9"
     ]
   },
-  "Web/CSS/CSS_Functions": {
-    "modified": "2020-11-20T07:10:42.861Z",
-    "contributors": [
-      "xgqfrms"
-    ]
-  },
   "Web/CSS/CSS_Values_and_Units": {
     "modified": "2020-07-17T05:52:14.158Z",
     "contributors": [
@@ -23615,11 +23580,33 @@
       "Owen-Tsai"
     ]
   },
+  "Web/CSS/CSS_Values_and_Units/CSS_Value_Functions": {
+    "modified": "2020-11-20T07:10:42.861Z",
+    "contributors": [
+      "xgqfrms"
+    ]
+  },
   "Web/CSS/CSS_Values_and_Units/CSS_data_types": {
     "modified": "2019-03-23T22:08:42.415Z",
     "contributors": [
       "Ende93",
       "h2x"
+    ]
+  },
+  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+    "modified": "2020-03-13T13:15:23.549Z",
+    "contributors": [
+      "AchooLuv",
+      "zjffun",
+      "wjp5826",
+      "Tankunpeng",
+      "Sebastianz",
+      "Guillaume-Heras",
+      "prayash",
+      "uolcano",
+      "ljwrer",
+      "teoli",
+      "Jimmie_Felidae"
     ]
   },
   "Web/CSS/CSS_animated_properties": {
@@ -24576,6 +24563,36 @@
       "linuxbckp"
     ]
   },
+  "Web/CSS/CSS_syntax/At-rule": {
+    "modified": "2019-08-08T06:46:40.777Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "teoli",
+      "yan",
+      "alimon"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Comments": {
+    "modified": "2020-06-11T09:14:45.384Z",
+    "contributors": [
+      "Carllllo",
+      "m4jing",
+      "teoli",
+      "ziyunfei"
+    ]
+  },
+  "Web/CSS/CSS_syntax/Syntax": {
+    "modified": "2020-01-08T04:59:07.628Z",
+    "contributors": [
+      "flowfire",
+      "sgzzy",
+      "Ende93",
+      "haofu",
+      "ReyCG_sub",
+      "teoli",
+      "yan"
+    ]
+  },
   "Web/CSS/CSS_table": {
     "modified": "2020-12-01T03:09:38.045Z",
     "contributors": [
@@ -24676,15 +24693,6 @@
       "karma2014",
       "laguarage",
       "woshisbb43"
-    ]
-  },
-  "Web/CSS/Comments": {
-    "modified": "2020-06-11T09:14:45.384Z",
-    "contributors": [
-      "Carllllo",
-      "m4jing",
-      "teoli",
-      "ziyunfei"
     ]
   },
   "Web/CSS/Descendant_combinator": {
@@ -24903,18 +24911,6 @@
       "alimon"
     ]
   },
-  "Web/CSS/Syntax": {
-    "modified": "2020-01-08T04:59:07.628Z",
-    "contributors": [
-      "flowfire",
-      "sgzzy",
-      "Ende93",
-      "haofu",
-      "ReyCG_sub",
-      "teoli",
-      "yan"
-    ]
-  },
   "Web/CSS/Tutorials": {
     "modified": "2019-03-23T23:32:32.218Z",
     "contributors": [
@@ -24940,22 +24936,6 @@
       "iwillbe",
       "teoli",
       "ziyunfei"
-    ]
-  },
-  "Web/CSS/Value_definition_syntax": {
-    "modified": "2020-03-13T13:15:23.549Z",
-    "contributors": [
-      "AchooLuv",
-      "zjffun",
-      "wjp5826",
-      "Tankunpeng",
-      "Sebastianz",
-      "Guillaume-Heras",
-      "prayash",
-      "uolcano",
-      "ljwrer",
-      "teoli",
-      "Jimmie_Felidae"
     ]
   },
   "Web/CSS/Viewport_concepts": {
@@ -28420,6 +28400,12 @@
       "grtreexyz",
       "blue0125",
       "Breezewish"
+    ]
+  },
+  "Web/HTML/Attributes/rel/alternate_stylesheet": {
+    "modified": "2020-10-15T22:30:11.278Z",
+    "contributors": [
+      "14725"
     ]
   },
   "Web/HTML/Attributes/rel/prefetch": {
@@ -40960,24 +40946,6 @@
       "wizardforcel"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2019-10-29T05:08:14.882Z",
-    "contributors": [
-      "7NZ",
-      "mySoul",
-      "flyingsouthwind",
-      "varcat",
-      "_da",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/Manifest/Reference/background_color": {
-    "modified": "2020-10-15T22:31:53.672Z",
-    "contributors": [
-      "wobuhuisuanmin",
-      "wr20060926"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T21:25:04.339Z",
     "contributors": [
@@ -41226,6 +41194,24 @@
     "modified": "2019-11-13T02:27:54.714Z",
     "contributors": [
       "JC-Ge"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2019-10-29T05:08:14.882Z",
+    "contributors": [
+      "7NZ",
+      "mySoul",
+      "flyingsouthwind",
+      "varcat",
+      "_da",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest/Reference/background_color": {
+    "modified": "2020-10-15T22:31:53.672Z",
+    "contributors": [
+      "wobuhuisuanmin",
+      "wr20060926"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
@@ -42783,7 +42769,7 @@
       "msforest"
     ]
   },
-  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Guides/Choosing_between_www_and_non-www_URLs": {
     "modified": "2019-03-23T22:18:43.282Z",
     "contributors": [
       "zqyue",
@@ -42793,7 +42779,7 @@
       "chaos_zhang"
     ]
   },
-  "Web/URI/Schemes/data": {
+  "Web/URI/Reference/Schemes/data": {
     "modified": "2020-10-15T21:06:54.948Z",
     "contributors": [
       "leegent",

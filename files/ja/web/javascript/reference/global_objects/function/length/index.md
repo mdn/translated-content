@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 **`length`** プロパティは、関数が期待する引数の数を示します。
 
-{{EmbedInteractiveExample("pages/js/function-length.html")}}{{js_property_attributes(0,0,1)}}
+{{InteractiveExample("JavaScript Demo: Function.length")}}
+
+```js interactive-example
+function func1() {}
+
+function func2(a, b) {}
+
+console.log(func1.length);
+// Expected output: 0
+
+console.log(func2.length);
+// Expected output: 2
+```
+
+{{js_property_attributes(0,0,1)}}
 
 ## 解説
 

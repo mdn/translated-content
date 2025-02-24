@@ -9,7 +9,18 @@ l10n:
 
 **`has()`** メソッドは、指定されたキーに対する要素が存在するかどうかを示す論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.has("bar"));
+// Expected output: true
+
+console.log(map1.has("baz"));
+// Expected output: false
+```
 
 ## 構文
 

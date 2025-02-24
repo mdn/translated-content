@@ -5,7 +5,7 @@ slug: Web/CSS/acos
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`acos()`** 为三角函数，返回介于 `-1` 和 `1` 之间的数的反余弦值。此函数含有单个计算式，此式返回表示介于 `0deg` 和 `180deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`acos()`** 为三角函数，返回介于 `-1` 和 `1` 之间的数的反余弦值。此函数含有单个计算式，此式返回表示介于 `0deg` 和 `180deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
 
 ## 语法
 

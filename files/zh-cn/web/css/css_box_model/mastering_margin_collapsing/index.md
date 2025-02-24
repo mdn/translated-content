@@ -66,9 +66,9 @@ p {
 ## 参见
 
 - CSS 关键概念：
-  - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
-  - [At 规则](/zh-CN/docs/Web/CSS/At-rule)
-  - [注释](/zh-CN/docs/Web/CSS/Comments)
+  - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+  - [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
+  - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
@@ -79,6 +79,6 @@ p {
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
