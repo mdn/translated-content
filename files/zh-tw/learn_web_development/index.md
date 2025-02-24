@@ -2,7 +2,7 @@
 title: 學習 Web 開發
 slug: Learn_web_development
 l10n:
-  sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
 {{LearnSidebar}}
@@ -29,7 +29,7 @@ l10n:
 - 超越基本？
   - : 我們的[延伸模組](/zh-TW/docs/Learn_web_development/Extensions)涵蓋在擴展知識與發展專長時值得學習的額外實用技能。在完成核心模組後，再進一步學習這些內容。
 - 在學校工作？
-  - : 使用我們的模組作為教學指引，並瀏覽我們的[教育工作者專頁](/zh-TW/docs/Learn_web_development/Educators)獲取更多點子，或將你的學生註冊 Scrimba 的[前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>_MDN 課程夥伴_</sup>。
+  - : 使用我們的模組作為教學指引，並瀏覽我們的[教育工作者專頁](/zh-TW/docs/Learn_web_development/Educators)獲取更多點子，或將你的學生註冊 Scrimba 的[前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn)<sup>_MDN 學習夥伴_</sup>。
 
 ## 取得我們的程式碼範例
 
@@ -46,11 +46,11 @@ l10n:
 
 ## 參見
 
-- [前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 課程夥伴_</sup>
-  - : [Scrimba 的](https://scrimba.com?via=mdn)*前端開發者職涯路徑*教導成為一位稱職前端開發者所需了解的一切知識，內容包含有趣的互動式課程與挑戰、知識淵博的教師以及充滿支援的社群。從零開始，直至獲得第一份前端工作！該課程的許多元件皆提供作為獨立免費版本。
-- [學習 JavaScript](https://learnjavascript.online/)
-  - : 一個極佳的資源給有志成為網頁開發者的人——在互動環境中學習 JavaScript，透過短小課程與互動測驗並結合自動評量進行引導。前 40 課為免費提供，而完整課程則需一次性支付少量費用。
 - [Codecademy](https://www.codecademy.com/)
   - : 一個極佳的從零開始學習程式語互動網站。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : 一個透過教學與專案互動學習網頁開發的網站。
+- [學習 JavaScript](https://learnjavascript.online/)
+  - : 一個極佳的資源給有志成為網頁開發者的人——在互動環境中學習 JavaScript，透過短小課程與互動測驗並結合自動評量進行引導。前 40 課為免費提供，而完整課程則需一次性支付少量費用。
+- [前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 學習夥伴_</sup>
+  - : [Scrimba 的](https://scrimba.com?via=mdn)*前端開發者職涯路徑*教導成為一位稱職前端開發者所需了解的一切知識，內容包含有趣的互動式課程與挑戰、知識淵博的教師以及充滿支援的社群。從零開始，直至獲得第一份前端工作！該課程的許多元件皆提供作為獨立免費版本。
