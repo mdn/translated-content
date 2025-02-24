@@ -9,7 +9,17 @@ l10n:
 
 **`spellcheck`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素でスペルミスのチェックを行うかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
+
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
+```
 
 以下の値を使用できます。
 

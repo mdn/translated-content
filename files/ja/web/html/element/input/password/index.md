@@ -11,7 +11,32 @@ l10n:
 この要素はプレーンテキストの 1 行編集コントロールとして表示され、そのテキストは読み取られることがないように、1 つ 1 つの文字がアスタリスク ("\*") やドット ("•") のような記号に置き換えられ、隠されます。
 この文字は{{Glossary("user agent", "ユーザーエージェント")}}やオペレーティングシステムによって変わります。
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 入力時の正確な動作は、ブラウザーによって異なる場合があります。
 ブラウザーによっては、入力された文字を一瞬だけ表示して見えなくするものや、ユーザーがプレーンテキストの表示のオン・オフを切り替えられるものがあります。
