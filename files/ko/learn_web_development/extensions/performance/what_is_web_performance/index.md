@@ -33,7 +33,7 @@ l10n:
   </tbody>
 </table>
 
-객관적인 성능과 달리, [인지된 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)은 다음 기사에서 다루고 있습니다. 
+객관적인 성능과 달리, [인지된 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)은 다음 기사에서 다루고 있습니다.
 
 ## 웹 성능이란
 
