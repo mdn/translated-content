@@ -9346,6 +9346,15 @@
       "lajaso"
     ]
   },
+  "Web/CSS/CSS_Values_and_Units/Value_definition_syntax": {
+    "modified": "2019-03-23T22:38:52.899Z",
+    "contributors": [
+      "apazacoder",
+      "Sebastianz",
+      "Guillaume-Heras",
+      "VictorAbdon"
+    ]
+  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-07-06T16:16:21.887Z",
     "contributors": [
@@ -9954,15 +9963,6 @@
     "contributors": [
       "lajaso",
       "israel-munoz"
-    ]
-  },
-  "Web/CSS/Value_definition_syntax": {
-    "modified": "2019-03-23T22:38:52.899Z",
-    "contributors": [
-      "apazacoder",
-      "Sebastianz",
-      "Guillaume-Heras",
-      "VictorAbdon"
     ]
   },
   "Web/CSS/align-content": {
@@ -18193,18 +18193,6 @@
       "orasio"
     ]
   },
-  "Web/Manifest": {
-    "modified": "2020-07-18T01:40:57.131Z",
-    "contributors": [
-      "angelmlucero",
-      "ardillan",
-      "Zellius",
-      "Pablo_Bangueses",
-      "luisabarca",
-      "malonson",
-      "AlePerez92"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T21:24:26.572Z",
     "contributors": [
@@ -18287,6 +18275,18 @@
     "modified": "2020-09-20T03:25:41.762Z",
     "contributors": [
       "Nachec"
+    ]
+  },
+  "Web/Progressive_web_apps/Manifest": {
+    "modified": "2020-07-18T01:40:57.131Z",
+    "contributors": [
+      "angelmlucero",
+      "ardillan",
+      "Zellius",
+      "Pablo_Bangueses",
+      "luisabarca",
+      "malonson",
+      "AlePerez92"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
