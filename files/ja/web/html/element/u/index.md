@@ -12,7 +12,24 @@ l10n:
 > [!WARNING]
 > この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを `underline` に設定したスタイルを適用してください。
 
-{{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  You could use this element to highlight <u>speling</u> mistakes, so the writer
+  can <u>corect</u> them.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 0;
+}
+
+u {
+  text-decoration: #f00 wavy underline;
+}
+```
 
 `<u>` を使用するのがどのような場合に適切で、どのような場合に適切でないのかについての詳細は、[使用上の注意](#使用上の注意)を参照してください。
 
