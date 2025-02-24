@@ -21,13 +21,13 @@ GitHub issue とディスカッションのどちらが良いか分からない�
 
 ディスカッションを適切な場所から開始するために、下記の各ディスカッションカテゴリーの主題を調べてみてください。
 
-| ディスカッションカテゴリー                  | 主題                                                                                                                                                                               |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 📣 [Announcements][announcements]    | MDN Web Docs スタッフ専用です。他にも利用できるカテゴリーがいくつかありますので、そのいずれかを選んでください。                                                                                        |
-| 🔮 [Browser compatibility data][bcd] | ブラウザーの互換性データを文書化する [browser-compat-data][bcd-repo] プロジェクトです。                                                                                          |
-| ✏️ [Content][content]                | MDN Web Docs の [content リポジトリー][content-repo]です。ここではコーディングの質問はしないでください。問題に直面したら、[ウェブ開発の学習][learn-web-dev]領域を見てみてください。           |
-| 🌐 [Localization][localization]      | [translated-content リポジトリー][translated-content]の[対応するロケール][locales]です。これは[非推奨化のお知らせ][macro-deprecation]をする場所でもあります。                |
-| 👾 [MDN Plus][mdn-plus]              | [MDN Plus の機能][mdn-plus-feature]やアイディアなどです。定期契約などの MDN Plus のサポートについては、 Mozilla の[公式サポートチャンネル][mdn-plus-support]を参照してください。         |
+| ディスカッションカテゴリー           | 主題                                                                                                                                                                                         |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 📣 [Announcements][announcements]    | MDN Web Docs スタッフ専用です。他にも利用できるカテゴリーがいくつかありますので、そのいずれかを選んでください。                                                                              |
+| 🔮 [Browser compatibility data][bcd] | ブラウザーの互換性データを文書化する [browser-compat-data][bcd-repo] プロジェクトです。                                                                                                      |
+| ✏️ [Content][content]                | MDN Web Docs の [content リポジトリー][content-repo]です。ここではコーディングの質問はしないでください。問題に直面したら、[ウェブ開発の学習][learn-web-dev]領域を見てみてください。          |
+| 🌐 [Localization][localization]      | [translated-content リポジトリー][translated-content]の[対応するロケール][locales]です。これは[非推奨化のお知らせ][macro-deprecation]をする場所でもあります。                                |
+| 👾 [MDN Plus][mdn-plus]              | [MDN Plus の機能][mdn-plus-feature]やアイディアなどです。定期契約などの MDN Plus のサポートについては、 Mozilla の[公式サポートチャンネル][mdn-plus-support]を参照してください。             |
 | 🛠️ [Platform][platform]              | MDN Web Docs のフロントエンドとビルドシステム。バグが見つかった場合は、[関連するリポジトリー][mdn-repos]で報告してください。 **メモ:** MDN Plus 専用のディスカッションカテゴリーもあります。 |
 
 [announcements]: https://github.com/orgs/mdn/discussions/categories/announcements
