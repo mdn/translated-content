@@ -2,7 +2,7 @@
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
 {{HTTPSidebar}}
