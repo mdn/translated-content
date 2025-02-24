@@ -1,9 +1,9 @@
 ---
 title: background_color
-slug: Web/Manifest/Reference/background_color
+slug: Web/Progressive_web_apps/Manifest/Reference/background_color
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 <table class="properties">
   <tbody>

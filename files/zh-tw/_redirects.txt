@@ -701,6 +701,7 @@
 /zh-TW/docs/Web/JavaScript/Typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
 /zh-TW/docs/Web/JavaScript/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/Language_overview
+/zh-TW/docs/Web/Manifest	/zh-TW/docs/Web/Progressive_web_apps/Manifest
 /zh-TW/docs/Web/Media/Formats/Containers	/zh-TW/docs/Web/Media/Guides/Formats/Containers
 /zh-TW/docs/Web/OpenSearch	/zh-TW/docs/Web/XML/Guides/OpenSearch
 /zh-TW/docs/Web/Reference	/zh-TW/docs/Web

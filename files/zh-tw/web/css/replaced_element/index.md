@@ -35,6 +35,6 @@ CSS 中所謂的「置換元素 (**Replaced element**)」，即是該元素所�
     - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
     - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [特性值定義語法](/zh-TW/docs/Web/CSS/Value_definition_syntax)
+  - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)
   - [可置換元素](/zh-TW/docs/Web/CSS/Replaced_element)

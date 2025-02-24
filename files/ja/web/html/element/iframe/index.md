@@ -194,7 +194,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## `error` および `load` イベントの動作
 
-`<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
+`<iframe>` で発生する `error` イベントと `load` イベントを使用すると、ローカルネットワークの HTTP サーバーの URL 空間を推測することができる可能性があります。そのため、セキュリティ対策として、ユーザーエージェントは `<iframe>` に対して [error](/ja/docs/Web/API/HTMLElement/error_event) イベントを発生させず、`<iframe>` のコンテンツの読み込みに失敗しても、常に [load](/ja/docs/Web/API/HTMLElement/load_event) イベントが発生します。
 
 ## アクセシビリティ
 

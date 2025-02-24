@@ -1,6 +1,6 @@
 ---
 title: CSS 属性值定义语法
-slug: Web/CSS/Value_definition_syntax
+slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 ---
 
 {{CSSRef}}
@@ -398,6 +398,6 @@ bold smaller#
     - [应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)
     - [实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [属性值定义语法](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+  - [属性值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)
   - [可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
