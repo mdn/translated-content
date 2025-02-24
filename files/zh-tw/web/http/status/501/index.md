@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`501 Not Implemented`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Status#server_error_responses)狀態碼表示伺服器不支援完成請求所需的功能。
+HTTP **`501 Not Implemented`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Status#server_error_responses)狀態碼表示伺服器不支援完成請求所需的功能。
 
 此回應狀態也可能包含 {{HTTPHeader("Retry-After")}} 標頭，告知用戶端在指定時間後可以重試請求。`501` 回應預設是可快取的，除非快取標頭另有指示。
 
@@ -27,7 +27,7 @@ HTTP **`501 Not Implemented`** [伺服器錯誤回應](/en-US/docs/Web/HTTP/Stat
 
 ### 擴展方法不受支援
 
-在以下的 HTTP 擴展框架範例中，用戶端發送了一個請求，並在 `C-MAN` 標頭中指定了一個強制擴展。{{HTTPHeader("Connection")}} 標頭指定這些擴展應按[逐跳](/en-US/docs/Web/HTTP/Headers#逐跳標頭)方式處理。代理拒絕轉發 `M-GET` 方法，因此回應 `501` 錯誤：
+在以下的 HTTP 擴展框架範例中，用戶端發送了一個請求，並在 `C-MAN` 標頭中指定了一個強制擴展。{{HTTPHeader("Connection")}} 標頭指定這些擴展應按[逐跳](/zh-TW/docs/Web/HTTP/Headers#逐跳標頭)方式處理。代理拒絕轉發 `M-GET` 方法，因此回應 `501` 錯誤：
 
 ```http
 M-GET /document HTTP/1.1
@@ -46,6 +46,6 @@ HTTP/1.1 501 Not Implemented
 
 ## 參見
 
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Status)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - {{HTTPStatus("510", "510 Not Extended")}}
 - [HTTP 501 錯誤](https://learn.microsoft.com/zh-tw/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)（微軟 ASP.NET 文件）
