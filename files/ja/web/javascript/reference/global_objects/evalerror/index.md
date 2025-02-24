@@ -3,6 +3,8 @@ title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 page-type: javascript-class
 browser-compat: javascript.builtins.EvalError
+l10n:
+  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
 {{JSRef}}
