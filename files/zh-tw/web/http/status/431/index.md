@@ -51,7 +51,6 @@ Content-Type: text/html
 </html>
 ```
 
-
 ## 規範
 
 {{Specifications}}
