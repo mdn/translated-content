@@ -1,18 +1,15 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-page-type: javascript-class
-browser-compat: javascript.builtins.EvalError
 l10n:
   sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
 {{JSRef}}
 
-
 **`EvalError`** オブジェクトは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関するエラーを示します。この例外はもう JavaScript からは発生しなくなっていますが、互換性のために `EvalError` オブジェクトが残っています。
 
-`EvalError` は {{Glossary("serializable object")}} ですので、{{DOMxRef("Window.structuredClone", "structuredClone()")}} でクローンされるか、 or {{domxref("Worker/postMessage()", "postMessage()")}} を使い [Workers](/en-US/docs/Web/API/Worker) の間でコピーされます。
+`EvalError` は {{Glossary("serializable object")}} ですので、{{DOMxRef("Window.structuredClone", "structuredClone()")}} でクローンされるか、 or {{domxref("Worker/postMessage()", "postMessage()")}} を使い [Workers](/ja/docs/Web/API/Worker) の間でコピーされます。
 
 `EvalError` は {{jsxref("Error")}} のサブクラスです。
 
