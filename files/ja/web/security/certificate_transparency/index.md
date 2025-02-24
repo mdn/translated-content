@@ -1,7 +1,6 @@
 ---
 title: 証明書の透明性
 slug: Web/Security/Certificate_Transparency
-page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
