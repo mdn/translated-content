@@ -1,6 +1,7 @@
 ---
 title: Forbidden header name (禁止ヘッダー名)
-slug: Glossary/Forbidden_header_name
+slug: Glossary/Forbidden_request_header
+original_slug: Glossary/Forbidden_header_name
 ---
 
 {{GlossarySidebar}}
