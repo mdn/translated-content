@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-La sentencia **`for...of`** ejecuta un bucle que opera sobre una secuencia de valores provenientes de un [objeto iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Los objetos iterables incluyen instancias de objetos nativos como {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (y otras colecciones del DOM), así como el objeto {{jsxref("Functions/arguments", "arguments")}}, [generadores](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) producidos por [funciones generadoras](/en-US/docs/Web/JavaScript/Reference/Statements/function*), e iterables definidos por el usuario.
+La sentencia **`for...of`** ejecuta un bucle que opera sobre una secuencia de valores provenientes de un [objeto iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). Los objetos iterables incluyen instancias de objetos nativos como {{jsxref("Array")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{domxref("NodeList")}} (y otras colecciones del DOM), así como el objeto {{jsxref("Functions/arguments", "arguments")}}, [generadores](/es/docs/Web/JavaScript/Reference/Global_Objects/Generator) producidos por [funciones generadoras](/es/docs/Web/JavaScript/Reference/Statements/function*), e iterables definidos por el usuario.
 
 {{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
 
