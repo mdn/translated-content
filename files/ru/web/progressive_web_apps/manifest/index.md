@@ -1,7 +1,6 @@
 ---
 title: Web App Manifest
 slug: Web/Progressive_web_apps/Manifest
-original_slug: Web/Manifest
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}{{SeeCompatTable}}

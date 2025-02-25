@@ -1,7 +1,6 @@
 ---
 title: icons
 slug: Web/Progressive_web_apps/Manifest/Reference/icons
-original_slug: Web/Manifest/Reference/icons
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}

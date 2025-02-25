@@ -1,7 +1,6 @@
 ---
 title: background_color
 slug: Web/Progressive_web_apps/Manifest/Reference/background_color
-original_slug: Web/Manifest/Reference/background_color
 l10n:
   sourceCommit: b3d5659a6f16dc6cb8be5c48d19820a67434ecb9
 ---

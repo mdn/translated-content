@@ -1,7 +1,6 @@
 ---
 title: Запрещённое имя заголовка
 slug: Glossary/Forbidden_request_header
-original_slug: Glossary/Forbidden_header_name
 ---
 
 {{GlossarySidebar}}
