@@ -12,7 +12,7 @@ slug: Web/API/Headers/delete
 - name 参数的值不是 HTTP 标头的名称。
 - {{Glossary("Guard")}} 的值为 `immutable`。
 
-出于安全原因，部分标头信息只能由用户代理控制。这些标头信息包括{{Glossary("Forbidden_header_name", "禁止修改的标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
+出于安全考虑，某些标头只能由用户代理控制。这些标头包括{{Glossary("Forbidden_request_header", "禁止修改的请求标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
 
 ## 语法
 

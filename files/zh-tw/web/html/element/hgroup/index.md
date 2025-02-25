@@ -7,7 +7,37 @@ slug: Web/HTML/Element/hgroup
 
 **`<hgroup>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個標題及相關內容。它將一個單獨的 [`<h1>–<h6>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素與一個或多個 [`<p>`](/zh-TW/docs/Web/HTML/Element/p) 元素分組。
 
-{{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<hgroup>
+  <h1>Frankenstein</h1>
+  <p>Or: The Modern Prometheus</p>
+</hgroup>
+<p>
+  Victor Frankenstein, a Swiss scientist, has a great ambition: to create
+  intelligent life. But when his creature first stirs, he realizes he has made a
+  monster. A monster which, abandoned by his master and shunned by everyone who
+  sees it, follows Dr Frankenstein to the very ends of the earth.
+</p>
+```
+
+```css interactive-example
+hgroup {
+  text-align: right;
+  padding-right: 16px;
+  border-right: 10px solid #00c8d7;
+}
+
+hgroup h1 {
+  margin-bottom: 0;
+}
+
+hgroup p {
+  margin: 0;
+  font-weight: bold;
+}
+```
 
 ## 屬性
 
