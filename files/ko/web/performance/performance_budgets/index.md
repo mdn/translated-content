@@ -2,7 +2,7 @@
 title: 성능 예산
 slug: Web/Performance/Performance_budgets
 l10n:
-  sourceCommit: 49d7c6425eefe66062848b47a3d995a3629ba88e
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
