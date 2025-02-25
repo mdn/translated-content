@@ -2,7 +2,7 @@
 title: 인지된 성능
 slug: Learn_web_development/Extensions/Performance/Perceived_performance
 l10n:
-  sourceCommit: 906e2110500779091f12d8a1080fd3e0443962f4
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/what_is_web_performance", "Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance")}}
