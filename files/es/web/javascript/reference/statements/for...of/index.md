@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Recibe un valor de la secuencia en cada iteración. Puede ser una declaración con [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), [`let`](/es/docs/Web/JavaScript/Reference/Statements/let`), o [`var`](/es/docs/Web/JavaScript/Reference/Statements/var), o un objetivo de [asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment) (p. ej., una variable previamente declarada, una propiedad de objeto o un [patrón de asignación por desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Las variables declaradas con `var` no son locales al bucle, es decir, están en el mismo ámbito en el que se encuentra el bucle `for...of`.
+  - : Recibe un valor de la secuencia en cada iteración. Puede ser una declaración con [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), [`let`](/es/docs/Web/JavaScript/Reference/Statements/let), o [`var`](/es/docs/Web/JavaScript/Reference/Statements/var), o un objetivo de [asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment) (p. ej., una variable previamente declarada, una propiedad de objeto o un [patrón de asignación por desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Las variables declaradas con `var` no son locales al bucle, es decir, están en el mismo ámbito en el que se encuentra el bucle `for...of`.
 - `iterable`
   - : Un objeto iterable. La fuente de la secuencia de valores sobre la que opera el bucle.
 - `statement`
@@ -65,7 +65,7 @@ for (let value of iterable) {
 ```
 
 > [!NOTE]
-> Cada iteración crea una nueva variable. Reasignar la variable dentro del cuerpo del bucle no afecta al valor original en el iterable (un array, en este caso).
+> Cada iteración crea una nueva variable. Reasignar la variable dentro del cuerpo del bucle no afecta al valor original en el iterable (un arreglo, en este caso).
 
 Puedes usar [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) para asignar múltiples variables locales, o usar un acceso a propiedades como `for (x.y of iterable)` para asignar el valor a una propiedad de objeto.
 
@@ -289,7 +289,7 @@ for (const value of iterator) {
   if (value === 1) {
     break;
   }
-  console.log("This string will not be logged.");
+  console.log("Esta cadena no será registrada.");
 }
 // 1
 
@@ -325,7 +325,7 @@ for (const value of generator) {
   if (value === 1) {
     break;
   }
-  console.log("This string will not be logged.");
+  console.log("Esta cadena no será registrada.");
 }
 // 1
 
@@ -376,13 +376,13 @@ El bucle `for...in` solo registra las [propiedades enumerables](/es/docs/Web/Jav
 
 El segundo bucle es similar al primero, pero utiliza {{jsxref("Object.hasOwn()")}} para comprobar si la propiedad enumerable encontrada es propia del objeto, es decir, no heredada. Si lo es, se registra la propiedad. Las propiedades `0`, `1`, `2` y `foo` se registran porque son propiedades propias. Las propiedades `arrCustom` y `objCustom` no se registran porque son heredadas.
 
-El bucle `for...of` itera y registra los _valores_ que `iterable`, como un array (que es [iterable](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), define para ser iterados. Se muestran los _elementos_ del objeto `3`, `5`, `7`, pero ninguna de las _propiedades_ del objeto.
+El bucle `for...of` itera y registra los _valores_ que son `iterable`, como un arreglo (que es [iterable](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), define para ser iterados. Se muestran los _elementos_ del objeto `3`, `5`, `7`, pero ninguna de las _propiedades_ del objeto.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
