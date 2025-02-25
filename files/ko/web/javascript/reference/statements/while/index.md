@@ -1,8 +1,6 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-page-type: javascript-statement
-browser-compat: javascript.statements.while
 l10n:
   sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
@@ -32,13 +30,13 @@ while (condition)
 ```
 
 - `condition`
-  - : 루프를 통과할 때마다 문이 실행되기 _전에_ 평가되는 표현식입니다. 만약 이 조건이 [참으로 평가된다면](/en-US/docs/Glossary/Truthy), `statement` 가 실행됩니다. 이 조건이 [거짓으로 평가될 때는](/en-US/docs/Glossary/Falsy), `while` 반복문 이후의 문으로 실행이 계속됩니다.
+  - : 루프를 통과할 때마다 문이 실행되기 _전에_ 평가되는 표현식입니다. 만약 이 조건이 [참으로 평가된다면](/ko/docs/Glossary/Truthy), `statement` 가 실행됩니다. 이 조건이 [거짓으로 평가될 때는](/ko/docs/Glossary/Falsy), `while` 반복문 이후의 문으로 실행이 계속됩니다.
 - `statement`
-  - : 조건이 참으로 평가되는 동안 실행되는 문입니다. [블록문](/en-US/docs/Web/JavaScript/Reference/Statements/block) 을 사용하여, 여러개의 문을 실행할 수 있습니다.
+  - : 조건이 참으로 평가되는 동안 실행되는 문입니다. [블록문](/ko/docs/Web/JavaScript/Reference/Statements/block) 을 사용하여, 여러개의 문을 실행할 수 있습니다.
 
 ## 설명
 
-다른 반복문과 같이, `statement` 속에서 [흐름 제어 문](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) 을 사용할 수 있습니다.
+다른 반복문과 같이, `statement` 속에서 [흐름 제어 문](/ko/docs/Web/JavaScript/Reference/Statements#control_flow) 을 사용할 수 있습니다.
 
 - {{jsxref("Statements/break", "break")}} 은 `statement` 의 실행을 멈추고, 반복문 아래의 첫 번째 문으로 가도록 합니다.
 - {{jsxref("Statements/continue", "continue")}} 은 `statement` 의 실행을 멈추고, `condition` 을 다시 평가하도록 합니다.
@@ -69,7 +67,6 @@ while (n < 3) {
 
 세 번째 통과를 완료하면 `n` < 3 조건이 더 이상 참이 아니게 되므로, 반복문이 종료됩니다.
 
-
 ### 변수 할당을 조건으로 사용하기
 
 어떤 경우에는 변수 할당을 조건으로 사용하는 것이 합리적일 수 있습니다. 이것은 가독성과 상충되는 경우가 있으므로, 모든 사람이 패턴을 더 명확하게 알아볼 수 있는 특정 형식 권장 사항이 있습니다.
@@ -93,22 +90,22 @@ while (currentNode = iterator.nextNode()) {
 그 행의 _동작_ 은 매번 주석 노드가 얻어진다는 점에서는 괜찮습니다.
 
 1. `iterator.nextNode()`는 해당 주석 노드를 반환하며, 이 노드는 `currentNode`에 할당됩니다.
-2. 따라서 `currentNode = iterator.nextNode()`의 값은 [truthy](/en-US/docs/Glossary/Truthy)입니다.
+2. 따라서 `currentNode = iterator.nextNode()`의 값은 [truthy](/ko/docs/Glossary/Truthy)입니다.
 3. 따라서 `console.log()` 호출이 실행되고 반복문이 계속됩니다.
 
 ...그리고 문서에 더 이상 주석 노드가 없는 경우:
 
-1. `iterator.nextNode()`는 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)을 반환합니다.
-2. 따라서 `currentNode = iterator.nextNode()`의 값도 `null`이며, 이는 [거짓](/en-US/docs/Glossary/Falsy)으로 평가됩니다.
+1. `iterator.nextNode()`는 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)을 반환합니다.
+2. 따라서 `currentNode = iterator.nextNode()`의 값도 `null`이며, 이는 [거짓](/ko/docs/Glossary/Falsy)으로 평가됩니다.
 3. 따라서 반복문이 종료됩니다.
 
-이 줄의 문제는, 일반적으로 조건문은 `===`와 같은 [비교 연산자](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)를 사용하지만 이 줄의 `=`는 비교 연산자가 아니라 [할당 연산자](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) 라는 점입니다. 따라서 `=`는 `===`의 오타처럼 보여집니다 (실제로는 오타가 _아니더라도_).
+이 줄의 문제는, 일반적으로 조건문은 `===`와 같은 [비교 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators)를 사용하지만 이 줄의 `=`는 비교 연산자가 아니라 [할당 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators) 라는 점입니다. 따라서 `=`는 `===`의 오타처럼 보여집니다 (실제로는 오타가 _아니더라도_).
 
-따라서 이와 같은 경우, 오타 가능성을 검사하여 수정할 수 있도록 도와주는 ESLint의 [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) 규칙과 같은, 일부 [코드 린팅 도구](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#code_linting_tools)는 다음과 같은 경고를 표시합니다:
+따라서 이와 같은 경우, 오타 가능성을 검사하여 수정할 수 있도록 도와주는 ESLint의 [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) 규칙과 같은, 일부 [코드 린팅 도구](/ko/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#code_linting_tools)는 다음과 같은 경고를 표시합니다:
 
 > Expected a conditional expression and instead saw an assignment. (조건부 표현식을 기대하는 곳에 할당이 있었습니다)
 
-많은 스타일 가이드에서는 조건이 할당이 되려는 의도를 보다 명시적으로 표시할 것을 권장합니다. 이를 위해, 할당 주위에 [그룹화 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping)로 괄호를 추가하면 최소한의 작업으로 수행할 수 있습니다:
+많은 스타일 가이드에서는 조건이 할당이 되려는 의도를 보다 명시적으로 표시할 것을 권장합니다. 이를 위해, 할당 주위에 [그룹화 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Grouping)로 괄호를 추가하면 최소한의 작업으로 수행할 수 있습니다:
 
 ```js example-good
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
