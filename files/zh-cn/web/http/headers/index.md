@@ -7,20 +7,20 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且无效的空格，最后是它的值。（比如 `Allow: POST`）在 HTTP/2 或更高，标头在开发者工具中展示为小写（`accept: */*`），并且带有前缀冒号，表示特殊组[伪标头](/zh-CN/docs/Web/HTTP/Messages#pseudo-headers)（`:status: 200`）。
+**HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且会被忽略的空格，最后是它的值（例如 `Allow: POST`）。在 HTTP/2 或更高的版本中，标头在开发者工具中展示为小写（`accept: */*`），对于特殊的[伪标头](/zh-CN/docs/Web/HTTP/Messages#pseudo-headers)组则会以冒号作为前缀（`:status: 200`）。
 
-自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法在 2012 年被弃用，因为在 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 中非标准字段成为标准，造成不便；其他的标头在 [IANA HTTP 字段名注册表](https://www.iana.org/assignments/http-fields/http-fields.xhtml)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。IANA 注册表列出了标头及其[状态](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)。
+自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法在 2012 年被弃用，因为当非标准字段在 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 中成为标准时，它会带来很多不便；其他的标头在 [IANA HTTP 字段名注册表](https://www.iana.org/assignments/http-fields/http-fields.xhtml)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。IANA 注册表列出了标头及其[状态信息](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)。
 
 根据不同的消息上下文，标头可以分为：
 
 - {{Glossary("Request header", "请求标头")}}
-  - : 包含获取的资源，或请求资源的客户端的更多信息。
+  - : 包含请求的资源，或请求资源的客户端的更多信息。
 - {{Glossary("Response header", "响应标头")}}
   - : 包含有关响应的额外信息，例如响应的位置或者提供响应的服务器。
 - {{Glossary("Representation header", "表示标头")}}
-  - : 包含资源主体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
+  - : 包含资源体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
 - {{Glossary("Payload header","负载标头")}}
-  - : 包含与负载数据的形式无关的表示信息，包括内容长度和用于传输的编码。
+  - : 包含与负载数据的形式无关的表示信息，包含内容长度和用于传输的编码。
 
 标头也可以根据{{Glossary("Proxy_server", "代理")}}处理它们的方式进行分组：
 
@@ -64,7 +64,7 @@ l10n:
 - {{HTTPHeader("If-None-Match")}}
   - : 使请求有条件，并且仅当存储的资源与给定的 ETag 都*不*匹配时才应用该方法。这用于更新缓存（用于安全请求），或防止在资源已存在时上传新资源。
 - {{HTTPHeader("If-Modified-Since")}}
-  - : 使请求有条件，并期望只有在给定日期后修改资源时才请求传输资源。这可用于仅在缓存过期时传输数据。
+  - : 使请求有条件，并期望只有在给定日期后修改资源时才请求传输资源。这用于仅在缓存过期时传输数据。
 - {{HTTPHeader("If-Unmodified-Since")}}
   - : 使请求有条件，并期望只有在给定日期后资源未被修改时才请求传输资源。这确保了特定范围的新片段与先前片段的一致性，或者在修改现有文档时实现乐观的（optimistic）并发控制系统。
 - {{HTTPHeader("Vary")}}
@@ -86,7 +86,7 @@ l10n:
 - {{HTTPHeader("Accept-Encoding")}}
   - : 可用于返回的资源的编码算法，通常是[压缩算法](/zh-CN/docs/Web/HTTP/Compression)。
 - {{HTTPHeader("Accept-Language")}}
-  - : 通知希望服务器返回的人类语言。这是一个提示，不一定在用户的完全控制之下：服务器应该始终注意不要覆盖明确的用户选择（比如从下拉列表中选择一种语言）。
+  - : 通知希望服务器返回的人类语言。这是仅仅一个提示而不一定由用户完全控制：服务器应该始终注意不要覆盖用户的明确选择（比如从下拉列表中选择的语言）。
 - {{HTTPHeader("Accept-Patch")}}
   - : *请求内容协商*响应标头，在 {{HTTPMethod("PATCH")}} 请求中用于通告服务器能够理解的[媒体类型](/zh-CN/docs/Web/HTTP/MIME_types)。
 - {{HTTPHeader("Accept-Post")}}
@@ -95,7 +95,7 @@ l10n:
 ## 控制
 
 - {{HTTPHeader("Expect")}}
-  - : 表示正确处理请求服务器需要满足的期望。
+  - : 表示服务器正确处理请求需要满足的期望。
 - {{HTTPHeader("Max-Forwards")}}
   - : 使用 [`TRACE`](/zh-CN/docs/Web/HTTP/Methods/TRACE) 时，指示请求在被反映到发送方之前可以执行的最大跃点数。
 
@@ -141,7 +141,7 @@ l10n:
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
   - : 提供 HTTP 消息中构建的字节流（消息内容）的{{Glossary("digest", "摘要")}}，依赖于 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}}。
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
-  - : 在传输之前提供目标资源的选定表示的{{Glossary("digest", "摘要")}}。
+  - : 在传输之前提供指定形式的目标资源的{{Glossary("digest", "校验摘要")}}。
     不同于 {{HTTPHeader("Content-Digest")}}，这个摘要不考虑 {{HTTPHeader("Content-Encoding")}} 和 {{HTTPHeader("Content-Range")}}。
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : 表达希望使用 {{HTTPHeader("Content-Digest")}}。
@@ -229,7 +229,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
   - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
   - : 响应标头，允许网站所有者指定一个或多个用于接收错误的端点，如 CSP 违规报告、{{HTTPHeader("Cross-Origin-Opener-Policy")}} 报告或其他一般违规。
 - {{HTTPHeader("Strict-Transport-Security")}}（{{Glossary("HSTS")}}）
-  - : 强制通信使用 HTTPS 而不用 HTTP。
+  - : 强制使用 HTTPS 而不是 HTTP 进行通信。
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
   - : 向服务器发送一个信号，表达客户端对加密和身份验证响应的偏好，还表达它可以成功处理 {{CSP("upgrade-insecure-requests")}} 指令。
 - {{HTTPHeader("X-Content-Type-Options")}}
@@ -281,7 +281,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 
 ## WebSockets
 
-[WebSockets API](/zh-CN/docs/Web/API/WebSockets_API) 在 [WebSocket 握手](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) 中使用的标头：
+[WebSocket API](/zh-CN/docs/Web/API/WebSockets_API) 在 [WebSocket 握手](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_握手)中使用的标头：
 
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
   - : 响应标头，指示服务器愿意升级到 WebSocket 连接。
@@ -315,15 +315,13 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
   - : 包含在 Service Worker 脚本资源的获取请求中。
     此标头有助于管理员记录服务工作线程脚本请求以进行监控。
 - {{HTTPHeader("Service-Worker-Allowed")}}
-  - : 通过在[服务工作线程脚本的响应](https://w3c.github.io/ServiceWorker/#service-worker-script-response)中包含此标头来移除[路径限制](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register)。
+  - : 通过在[服务工作线程脚本的响应](https://w3c.github.io/ServiceWorker/#service-worker-script-response)中包含此标头来移除[路径限制](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#为什么我的_service_worker_注册失败了？)。
 - {{HTTPHeader("SourceMap")}}
   - : 连接到 {{Glossary("source map")}}，以便调试器可以逐步执行原始源代码，而不是生成或转换后的代码。
 - {{HTTPHeader("Upgrade")}}
-  - : 此 HTTP/1.1（仅适用）标头可用于将已建立的客户端/服务器连接升级为不同的协议（基于相同的传输协议）。
-    例如，客户端可以使用它将连接从 HTTP 1.1 升级到 HTTP 2.0，或将 HTTP 或 HTTPS 连接升级为 WebSocket。
+  - : 此仅用于 HTTP/1.1 的标头可用于将已建立的客户端/服务器连接升级为不同的协议（基于相同的传输协议）。例如，客户端可以使用它将连接从 HTTP 1.1 升级到 HTTP 2.0，或将 HTTP 或 HTTPS 连接升级为 WebSocket。
 - {{HTTPHeader("Priority")}}
-  - : 提供关于特定资源请求在特定连接上的优先级的提示。
-    该值可以在请求中发送，以指示客户端的优先级，或者在响应中发送，如果服务器选择重新调整请求的优先级。
+  - : 提示特定资源请求在特定连接上的优先级。该值可以在请求中发送，以指示客户端的优先级，或者在响应中发送，如果服务器选择重新调整请求的优先级。
 
 ## 实验性标头
 
@@ -390,7 +388,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 #### 设备客户端提示
 
 - {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 响应标头，用于确认图像设备与像素的比（DPR），使用与以 {{HTTPHeader("DPR")}} 客户端提示选择图像资源的请求中。
+  - : 响应标头，用于确认图像设备与像素的比（DPR），使用于以 {{HTTPHeader("DPR")}} 客户端提示选择图像资源的请求中。
 - {{HTTPHeader("Device-Memory")}}
   - : 客户端可用 RAM 内存的近似值。这是[设备内存 API](/zh-CN/docs/Web/API/Device_Memory_API) 的一部分。
 - {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}} {{non-standard_inline}}
@@ -411,7 +409,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("RTT")}} {{experimental_inline}}
   - : 应用层往返时间（RTT），以毫秒为单位，其中包括服务器处理时间。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
-  - : 一个布尔值，指示用户代理对减少数据使用量的偏好。
+  - : 一个布尔值，指示用户代理偏好减少数据使用量。
 
 ### 隐私
 
