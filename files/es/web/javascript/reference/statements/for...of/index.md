@@ -376,7 +376,7 @@ El bucle `for...in` solo registra las [propiedades enumerables](/es/docs/Web/Jav
 
 El segundo bucle es similar al primero, pero utiliza {{jsxref("Object.hasOwn()")}} para comprobar si la propiedad enumerable encontrada es propia del objeto, es decir, no heredada. Si lo es, se registra la propiedad. Las propiedades `0`, `1`, `2` y `foo` se registran porque son propiedades propias. Las propiedades `arrCustom` y `objCustom` no se registran porque son heredadas.
 
-El bucle `for...of` itera y registra los _valores_ que `iterable`, como un array (que es [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), define para ser iterados. Se muestran los _elementos_ del objeto `3`, `5`, `7`, pero ninguna de las _propiedades_ del objeto.
+El bucle `for...of` itera y registra los _valores_ que `iterable`, como un array (que es [iterable](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), define para ser iterados. Se muestran los _elementos_ del objeto `3`, `5`, `7`, pero ninguna de las _propiedades_ del objeto.
 
 ## Especificaciones
 
