@@ -31,7 +31,7 @@ for (variable of iterable)
 ```
 
 - `variable`
-  - : Recibe un valor de la secuencia en cada iteración. Puede ser una declaración con [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let`), o [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), o un objetivo de [asignación](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) (p. ej., una variable previamente declarada, una propiedad de objeto o un [patrón de asignación por desestructuración](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Las variables declaradas con `var` no son locales al bucle, es decir, están en el mismo ámbito en el que se encuentra el bucle `for...of`.
+  - : Recibe un valor de la secuencia en cada iteración. Puede ser una declaración con [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), [`let`](/es/docs/Web/JavaScript/Reference/Statements/let`), o [`var`](/es/docs/Web/JavaScript/Reference/Statements/var), o un objetivo de [asignación](/es/docs/Web/JavaScript/Reference/Operators/Assignment) (p. ej., una variable previamente declarada, una propiedad de objeto o un [patrón de asignación por desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Las variables declaradas con `var` no son locales al bucle, es decir, están en el mismo ámbito en el que se encuentra el bucle `for...of`.
 - `iterable`
   - : Un objeto iterable. La fuente de la secuencia de valores sobre la que opera el bucle.
 - `statement`
