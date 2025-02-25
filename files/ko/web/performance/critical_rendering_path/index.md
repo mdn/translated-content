@@ -2,7 +2,7 @@
 title: 중요 렌더링 경로
 slug: Web/Performance/Critical_rendering_path
 l10n:
-  sourceCommit: 09754a6288962d9131e16383e9b3c78a3f26c685
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
