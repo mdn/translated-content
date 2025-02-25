@@ -370,7 +370,7 @@ for (const i of iterable) {
 // 3 5 7
 ```
 
-El objeto `iterable` hereda las propiedades `objCustom` y `arrCustom` porque contiene tanto `Object.prototype` como `Array.prototype` en su [cadena de prototipos](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+El objeto `iterable` hereda las propiedades `objCustom` y `arrCustom` porque contiene tanto `Object.prototype` como `Array.prototype` en su [cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 El bucle `for...in` solo registra las [propiedades enumerables](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) del objeto `iterable`. No registra los _elementos_ del array `3`, `5`, `7` o `"hello"` porque no son _propiedades_, sino _valores_. Registra los _índices_ del array, así como `arrCustom` y `objCustom`, que son propiedades reales. Si no estás seguro de por qué se itera sobre estas propiedades, hay una explicación más detallada de cómo funciona la [iteración de arrays y `for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in#array_iteration_and_for...in).
 
