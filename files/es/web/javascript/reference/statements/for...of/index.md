@@ -41,7 +41,7 @@ for (variable of iterable)
 
 Un bucle `for...of` opera sobre los valores provenientes de un iterable, uno por uno y en orden secuencial. Cada operación del bucle sobre un valor se denomina _iteración_, y se dice que el bucle _itera sobre el iterable_. Cada iteración ejecuta sentencias que pueden referirse al valor actual de la secuencia.
 
-Cuando un bucle `for...of` itera sobre un iterable, primero llama al método [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) del iterable, que devuelve un [iterador](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), y luego llama repetidamente al método [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) del iterador resultante para producir la secuencia de valores que se asignarán a `variable`.
+Cuando un bucle `for...of` itera sobre un iterable, primero llama al método [`[Symbol.iterator]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) del iterable, que devuelve un [iterador](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), y luego llama repetidamente al método [`next()`](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) del iterador resultante para producir la secuencia de valores que se asignarán a `variable`.
 
 Un bucle `for...of` finaliza cuando el iterador se ha completado (el resultado de `next()` es un objeto con `done: true`). Al igual que otras sentencias de bucle, puedes usar [sentencias de control de flujo](/es/docs/Web/JavaScript/Reference/Statements#control_flow) dentro de `statement`:
 
