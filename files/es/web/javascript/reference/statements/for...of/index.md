@@ -35,7 +35,7 @@ for (variable of iterable)
 - `iterable`
   - : Un objeto iterable. La fuente de la secuencia de valores sobre la que opera el bucle.
 - `statement`
-  - : Una sentencia que se ejecutará en cada iteración. Puede hacer referencia a `variable`. Puedes usar una [sentencia de bloque](/en-US/docs/Web/JavaScript/Reference/Statements/block) para ejecutar múltiples sentencias.
+  - : Una sentencia que se ejecutará en cada iteración. Puede hacer referencia a `variable`. Puedes usar una [sentencia de bloque](/es/docs/Web/JavaScript/Reference/Statements/block) para ejecutar múltiples sentencias.
 
 ## Descripción
 
