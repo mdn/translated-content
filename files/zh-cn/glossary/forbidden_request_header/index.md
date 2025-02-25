@@ -1,6 +1,7 @@
 ---
 title: 禁止修改的标头
-slug: Glossary/Forbidden_header_name
+slug: Glossary/Forbidden_request_header
+original_slug: Glossary/Forbidden_header_name
 l10n:
   sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
 ---
