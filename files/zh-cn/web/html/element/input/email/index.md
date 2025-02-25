@@ -7,7 +7,27 @@ slug: Web/HTML/Element/input/email
 
 **`"email"`** 类型的 {{HTMLElement("input")}} 元素能够让用户输入或编辑一个电子邮箱地址，如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple) 属性，则可以输入多个电子邮箱地址。
 
-{{EmbedInteractiveExample("pages/tabbed/input-email.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="email">Enter your example.com email:</label>
+
+<input type="email" id="email" pattern=".+@example\.com" size="30" required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 在表单提交前，输入框会自动验证输入值是否是一个或多个合法的电子邮箱地址（非空值且符合电子邮箱地址格式）。CSS 伪标签 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 能够在校验后自动应用，代表被校验的邮箱地址是否合法。
 
