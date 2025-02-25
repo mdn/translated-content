@@ -309,7 +309,7 @@ for (const value of iterator) {
 // [Sin salida]
 ```
 
-Los generadores implementan el método [`return()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator/return), lo que hace que la función generadora regrese anticipadamente cuando el bucle termina. Esto hace que los generadores no sean reutilizables entre bucles.
+Los generadores implementan el método [`return()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Generator/return), lo que hace que la función generadora regrese anticipadamente cuando el bucle termina. Esto hace que los generadores no sean reutilizables entre bucles.
 
 ```js example-bad
 function* source() {
