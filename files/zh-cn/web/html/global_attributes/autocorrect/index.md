@@ -26,9 +26,11 @@ l10n:
 - `on` 或 `""`（空字符串）
 
   - : 启用拼写和标点符号的自动更正特性。
+
 - `off`
 
   - : 禁用可编辑文字的自动更正。
+
 不支持自动更正的 {{htmlelement("input")}} 元素类型（[`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`email`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`url`](/zh-CN/docs/Web/HTML/Element/input/url)）始终处于 `off` 状态。
 
 对于所有其他可编辑元素，设置上述值以外的任何其他值都会被视为 `on`。未嵌套在 `<form>` 内的元素的默认值为 `on`。
