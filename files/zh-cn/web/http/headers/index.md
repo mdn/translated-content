@@ -2,12 +2,12 @@
 title: HTTP 标头
 slug: Web/HTTP/Headers
 l10n:
-  sourceCommit: e114a6686e813abfcb8f071b18987eb4c1f17ce6
+  sourceCommit: 217e25f9d2c39d2031ecf50f891c27e7f5b96e06
 ---
 
 {{HTTPSidebar}}
 
-**HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且会被忽略的空格，最后是它的值（例如 `Allow: POST`）。在 HTTP/2 或更高的版本中，标头在开发者工具中展示为小写（`accept: */*`），对于特殊的[伪标头](/zh-CN/docs/Web/HTTP/Messages#pseudo-headers)组则会以冒号作为前缀（`:status: 200`）。
+**HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且会被忽略的空格，最后是它的值（例如 `Allow: POST`）。在 HTTP/2 或更高的版本中，标头在开发者工具中展示为小写（`accept: */*`），对于特殊的[伪标头](/zh-CN/docs/Web/HTTP/Messages#伪标头)组则会以冒号作为前缀（`:status: 200`）。你可以在 [HTTP 消息](/zh-CN/docs/Web/HTTP/Messages)页面找到每个协议版本的有关信息和语法。
 
 自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法在 2012 年被弃用，因为当非标准字段在 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 中成为标准时，它会带来很多不便；其他的标头在 [IANA HTTP 字段名注册表](https://www.iana.org/assignments/http-fields/http-fields.xhtml)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。IANA 注册表列出了标头及其[状态信息](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)。
 
@@ -18,16 +18,16 @@ l10n:
 - {{Glossary("Response header", "响应标头")}}
   - : 包含有关响应的额外信息，例如响应的位置或者提供响应的服务器。
 - {{Glossary("Representation header", "表示标头")}}
-  - : 包含资源体的信息，例如主体的 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
+  - : 包含资源体的信息，例如其 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)或者应用的编码/压缩方案。
 - {{Glossary("Payload header","负载标头")}}
   - : 包含与负载数据的形式无关的表示信息，包含内容长度和用于传输的编码。
 
 标头也可以根据{{Glossary("Proxy_server", "代理")}}处理它们的方式进行分组：
 
-- 端到端（End-to-end）标头
+- 端到端（end-to-end）标头
   - : 这类标头*必须*被传输到最终的消息接收者：请求的服务器或者响应的客户端。中间的代理必须重新转发这些未经修改的标头，并且必须缓存它们。
-- 逐跳（Hop-by-hop）标头
-  - : 这类标头仅对单次传输连接有意义，并且*不得由*代理重传或者缓存。注意，只能使用 {{httpheader("Connection")}} 标头来设置逐跳标头。
+- 逐跳（hop-by-hop）标头
+  - : 这类标头仅对单次传输连接有意义，并且*不得*由代理重传或者缓存。注意，只能使用 {{httpheader("Connection")}} 标头来设置逐跳标头。
 
 ## 验证
 
@@ -64,9 +64,9 @@ l10n:
 - {{HTTPHeader("If-None-Match")}}
   - : 使请求有条件，并且仅当存储的资源与给定的 ETag 都*不*匹配时才应用该方法。这用于更新缓存（用于安全请求），或防止在资源已存在时上传新资源。
 - {{HTTPHeader("If-Modified-Since")}}
-  - : 使请求有条件，并期望只有在给定日期后修改资源时才请求传输资源。这用于仅在缓存过期时传输数据。
+  - : 使请求有条件，并期望资源在给定日期后被修改时才请求传输该资源。这用于仅在缓存过期时传输数据。
 - {{HTTPHeader("If-Unmodified-Since")}}
-  - : 使请求有条件，并期望只有在给定日期后资源未被修改时才请求传输资源。这确保了特定范围的新片段与先前片段的一致性，或者在修改现有文档时实现乐观的（optimistic）并发控制系统。
+  - : 使请求有条件，并期望资源只有在给定日期后未被修改时才请求传输资源。这确保了特定范围的新片段与先前片段的一致性，或者在修改现有文档时实现乐观的（optimistic）并发控制系统。
 - {{HTTPHeader("Vary")}}
   - : 确定如何匹配请求标头，以决定是否可以使用缓存的响应，还是从源服务器请求新的响应。
 
@@ -116,7 +116,7 @@ l10n:
   - : 用在对{{Glossary("Preflight_request", "预检请求")}}的响应中，指示实际的请求中可以使用哪些 HTTP 标头。
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
   - : 指定访问资源允许的 HTTP 方法，用在对预检请求的响应中。
-  - {{HTTPHeader("Access-Control-Allow-Origin")}}
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : 指示响应否可以被共享。
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
   - : 通过列出标头的名称，指示哪些标头可以作为响应的一部分暴露。
@@ -125,11 +125,11 @@ l10n:
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : 用于发起一个预检请求，告知服务器正式请求会使用哪些 HTTP 标头。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Methods)。
+  - : 用于发起一个预检请求，告知服务器正式请求会使用哪一种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Methods)。
 - {{HTTPHeader("Origin")}}
   - : 指示获取请求是从什么源发起的。
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : 指定特定的源，以允许其访问 [Resource Timing API](/zh-CN/docs/Web/API/Performance_API/Resource_timing) 功能提供的属性值，否则由于跨源限制，这些值将被报告为零。
+  - : 指定特定的源，以允许其访问[资源计时 API](/zh-CN/docs/Web/API/Performance_API/Resource_timing) 特性提供的属性值，否则由于跨源限制，这些值将被报告为零。
 
 ## 下载
 
@@ -199,7 +199,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("Referer")}}
   - : 前一个网页的地址，表示从该网页链接（进入）到当前请求的页面。
 - {{HTTPHeader("Referrer-Policy")}}
-  - : 规定了在发出的请求中应包含哪些引用信息，这些信息会在 {{HTTPHeader("Referer")}} 头中发送。
+  - : 规定了在发出的请求中应包含哪些引用信息，这些信息会在 {{HTTPHeader("Referer")}} 标头中发送。
 - {{HTTPHeader("User-Agent")}}
   - : 包含一个特征字符串，允许网络协议对端识别发起请求的用户代理软件的应用程序类型、操作系统、软件供应商或软件版本。
 
@@ -213,11 +213,11 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 ## 安全
 
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}（COEP）
-  - : 允许服务器为给定文档声明嵌入器（embedder）策略。
+  - : 允许服务器为给定文档声明嵌入器策略。
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}（COOP）
   - : 防止其他域打开/控制窗口。
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}（CORP）
-  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy).
+  - : 防止从其他域读取应用了此标头的资源的响应。见 [CORP 的解释文章](/zh-CN/docs/Web/HTTP/Cross-Origin_Resource_Policy)。
 - {{HTTPHeader("Content-Security-Policy")}}（{{Glossary("CSP")}}）
   - : 控制用户代理可以为给定页面加载哪些资源。
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
@@ -226,7 +226,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
   - : 允许网站选择报告和执行[证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，以检测该网站使用的错误颁发的证书。
 - {{HTTPHeader("Permissions-Policy")}}
   - : 提供一种机制来允许和拒绝在网站自己的框架和它嵌入的 {{htmlelement("iframe")}} 中使用浏览器特性。
-  - {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
+- {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
   - : 响应标头，允许网站所有者指定一个或多个用于接收错误的端点，如 CSP 违规报告、{{HTTPHeader("Cross-Origin-Opener-Policy")}} 报告或其他一般违规。
 - {{HTTPHeader("Strict-Transport-Security")}}（{{Glossary("HSTS")}}）
   - : 强制使用 HTTPS 而不是 HTTP 进行通信。
@@ -237,7 +237,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : 指示是否应允许浏览器在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("object")}} 中呈现页面。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}
-  - : 跨域策略文件可能会授予客户端，例如 Adobe Acrobat 或 Apache Flex 等，处理跨域数据的权限，否则这些客户端将因[同源（Same-Origin）策略](/zh-CN/docs/Web/Security/Same-origin_policy)而受到限制。`X-Permitted-Cross-Domain-Policies` 标头会覆盖该策略文件，此时客户端仍然阻止不希望的请求。
+  - : 跨域策略文件可能会授予客户端，例如 Adobe Acrobat 或 Apache Flex 等，处理跨域数据的权限，否则这些客户端将因[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)而受到限制。`X-Permitted-Cross-Domain-Policies` 标头会覆盖该策略文件，此时客户端仍然阻止不希望的请求。
 - {{HTTPHeader("X-Powered-By")}}
   - : 可能由托管环境或其他框架设置，并包含有关它们的信息，但不会为应用程序或其访问者提供任何用处。取消设置此标头以避免暴露潜在的漏洞。
 - {{HTTPHeader("X-XSS-Protection")}}
@@ -248,13 +248,13 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 {{Glossary("Fetch metadata request header", "fetch 元数据请求标头")}}提供有关发起请求的上下文的信息。这允许服务器根据请求的来源和资源将如何使用来决定是否允许请求。
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
-  - : 它是一个请求标头，指示请求发起者的源与其目标源之间的关系。它是一个结构化标头，其值可能是 `cross-site`、`same-origin`、`same-site` 和 `none`。
+  - : 指示请求发起者的源与其目标源之间的关系。它是一个结构化标头，其值可能是具有以下值的令牌 `cross-site`、`same-origin`、`same-site` 和 `none`。
 - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - : 它是一个请求标头，向服务器指示请求的模式。它是一个结构化标头，其值可能是 `cors`、`navigate`、`no-cors`、`same-origin` 和 `websocket`。
+  - : 向服务器指示请求的模式。它是一个结构化标头，其值可能是具有以下值的令牌 `cors`、`navigate`、`no-cors`、`same-origin` 和 `websocket`。
 - {{HTTPHeader("Sec-Fetch-User")}}
-  - : 它是一个请求标头，指示导航请求是否由用户激活触发。它是一个结构化标头，其值为布尔值，因此可能的值为 `?0` 表示 false，`?1` 表示 true。
+  - : 指示导航请求是否由用户激活触发。它是一个结构化标头，其值为布尔值，因此可能的值为 `?0` 表示 false，`?1` 表示 true。
 - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - : 它是一个请求标头，指示请求到服务器的目的地。它是一个结构化标头，其值可能是 `audio`、`audioworklet`、`document`、`embed`、`empty`、`font`、`image`、`manifest`、`object`、`paintworklet`、`report`、`script`、`serviceworker`、`sharedworker`、`style`、`track`、`video`、`worker` 和 `xslt`。
+  - : 指示请求到服务器的目的地。它是一个结构化标头，其值可能是具有以下值的令牌 `audio`、`audioworklet`、`document`、`embed`、`empty`、`font`、`image`、`manifest`、`object`、`paintworklet`、`report`、`script`、`serviceworker`、`sharedworker`、`style`、`track`、`video`、`worker` 和 `xslt`。
 
 以下请求标头*严格来说*不是“fetch 元数据请求标头”，但同样提供了有关如何使用资源的上下文的信息。服务器可能会使用它们来修改其缓存行为或返回的信息：
 
@@ -263,12 +263,12 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
   - : 在 service worker 启动期间，在提前请求中发送的请求头，用于使用 {{domxref("Window/fetch", "fetch()")}} 请求资源。该值由 {{domxref("NavigationPreloadManager.setHeaderValue()")}} 设置，可用于通知服务器应返回与正常 `fetch()` 操作不同的资源。
 
-## 服务器发送的事件
+## 服务器发送事件
 
 - {{HTTPHeader("Reporting-Endpoints")}}
-  - : 用于指定 [Reporting API](/zh-CN/docs/Web/API/Reporting_API) 发送警告和错误报告的服务器端点。
+  - : 用于指定浏览器应使用[报告 API](/zh-CN/docs/Web/API/Reporting_API) 发送警告和错误报告的服务器端点的响应标头。
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 用于指定 [Reporting API](/zh-CN/docs/Web/API/Reporting_API) 发送警告和错误报告的服务器端点。
+  - : 用于指定浏览器应使用[报告 API](/zh-CN/docs/Web/API/Reporting_API) 发送警告和错误报告的服务器端点的响应标头。
 
 ## 传输编码
 
@@ -279,7 +279,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("Trailer")}}
   - : 允许发送方在分块消息的末尾包含其他字段。
 
-## WebSockets
+## WebSocket
 
 [WebSocket API](/zh-CN/docs/Web/API/WebSockets_API) 在 [WebSocket 握手](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#websocket_握手)中使用的标头：
 
@@ -310,14 +310,14 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Range_requests)允许客户端向服务
 - {{HTTPHeader("Retry-After")}}
   - : 指示用户代理在进行后续请求前应等待的时间。
 - {{HTTPHeader("Server-Timing")}}
-  - : 传达在一个给定请求 - 响应周期中的一个或多个参数或描述。
+  - : 传达在一个给定请求—响应周期中的一个或多个参数或描述。
 - {{HTTPHeader("Service-Worker")}}
   - : 包含在 Service Worker 脚本资源的获取请求中。
     此标头有助于管理员记录服务工作线程脚本请求以进行监控。
 - {{HTTPHeader("Service-Worker-Allowed")}}
   - : 通过在[服务工作线程脚本的响应](https://w3c.github.io/ServiceWorker/#service-worker-script-response)中包含此标头来移除[路径限制](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#为什么我的_service_worker_注册失败了？)。
 - {{HTTPHeader("SourceMap")}}
-  - : 连接到 {{Glossary("source map")}}，以便调试器可以逐步执行原始源代码，而不是生成或转换后的代码。
+  - : 连接到{{Glossary("source map", "源代码映射")}}，以便调试器可以逐步执行原始源代码，而不是生成或转换后的代码。
 - {{HTTPHeader("Upgrade")}}
   - : 此仅用于 HTTP/1.1 的标头可用于将已建立的客户端/服务器连接升级为不同的协议（基于相同的传输协议）。例如，客户端可以使用它将连接从 HTTP 1.1 升级到 HTTP 2.0，或将 HTTP 或 HTTPS 连接升级为 WebSocket。
 - {{HTTPHeader("Priority")}}
@@ -351,7 +351,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 
 #### 用户代理客户端提示
 
-[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)是请求标头，其提供有关用户代理、它运行的平台/架构以及在用户代理或平台上设置的用户首选项信息：
+[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#用户代理客户端提示)是请求标头，其提供有关用户代理、它运行的平台/架构以及在用户代理或平台上设置的用户首选项信息：
 
 - {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
   - : 用户代理的品牌（brand）和版本。
@@ -403,19 +403,18 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 网络客户端提示允许服务器根据用户选择以及网络带宽和延迟来选择发送什么信息。
 
 - {{HTTPHeader("Downlink")}} {{experimental_inline}}
-  - : 客户端连接到服务器的近似带宽，以 Mbps 为单位。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
+  - : 客户端连接到服务器的近似带宽，以 Mbps 为单位。属于[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API)。
 - {{HTTPHeader("ECT")}} {{experimental_inline}}
-  - : 最匹配连接延迟和带宽的{{Glossary("effective connection type", "有效连接类型")}}（“网络配置文件”）。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
+  - : 最匹配连接延迟和带宽的{{Glossary("effective connection type", "有效连接类型")}}（“网络配置文件”）。属于[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API)。
 - {{HTTPHeader("RTT")}} {{experimental_inline}}
-  - : 应用层往返时间（RTT），以毫秒为单位，其中包括服务器处理时间。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
+  - : 应用层往返时间（RTT），以毫秒为单位，其中包括服务器处理时间。属于[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API)。
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
-  - : 一个布尔值，指示用户代理偏好减少数据使用量。
+  - : 字符串 `on` 指示用户代理偏好减少数据使用量。
 
 ### 隐私
 
 - {{HTTPHeader("DNT")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 请求标头，指示用户的跟踪偏好（Do Not Track）。
-    为了支持全球隐私控制（GPC）而被弃用，其使用 {{HTTPHeader("Sec-GPC")}} 表头与服务器通信，使用{{domxref("navigator.globalPrivacyControl")}}与客户端通信。
+  - : 请求标头，指示用户的跟踪偏好（Do Not Track）。因被全球隐私控制（GPC，使用 {{HTTPHeader("Sec-GPC")}} 标头传达给服务器，而客户端可通过 {{domxref("navigator.globalPrivacyControl")}} 访问）取代而被弃用。
 - {{HTTPHeader("Tk")}} {{deprecated_inline}} {{non-standard_inline}}
   - : 响应标头，指示应用于相应请求的跟踪状态。与 DNT 结合使用。
 - {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}} {{experimental_inline}}
@@ -424,7 +423,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 ### 安全
 
 - {{HTTPHeader("Origin-Agent-Cluster")}} {{experimental_inline}}
-  - : 响应标头，用于指示关联的 {{domxref("Document")}} 应放置在*基于来源的 [agent 集群](https://tc39.es/ecma262/#sec-agent-clusters)*中。
+  - : 响应标头，用于指示关联的 {{domxref("Document")}} 应放置在*基于来源的*[_代理集群_](https://tc39.es/ecma262/#sec-agent-clusters)中。
     这种隔离允许用户代理更有效地为代理集群分配特定于实现的资源，如进程或线程。
 
 ### 服务器发送的事件
@@ -437,7 +436,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 主题 API 为开发人员提供了一种机制来实现诸如基于兴趣的广告（IBA）之类的用例。见[主题 API](/zh-CN/docs/Web/API/Topics_API)。
 
 - {{HTTPHeader("Observe-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
-  - : 响应头，用于标记从调用站点的 URL 推断出的感兴趣的主题，正如在对[启用主题 API 的功能](/zh-CN/docs/Web/API/Topics_API/Using#what_api_features_enable_the_topics_api)生成的请求的响应中观察到的。
+  - : 响应头，用于标记从调用站点的 URL 推断出的感兴趣的主题，正如在对[启用主题 API 的特性](/zh-CN/docs/Web/API/Topics_API/Using#哪些_api_特性可以启用主题_api)生成的请求的响应中观察到的。
 - {{HTTPHeader("Sec-Browsing-Topics")}} {{experimental_inline}} {{non-standard_inline}}
   - : 请求标头，为当前用户和相关请求发送选定的主题，广告技术平台使用这些主题来选择要显示的个性化广告。
 
@@ -448,7 +447,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : 指示请求已在 TLS 早期数据中传送。
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
-  - : 由联合身份提供者（IdP）发送的响应标头，用于设置其登录状态，这意味着是否有任何用户在当前浏览器上登录到 IdP。
+  - : 由联合身份提供商（IdP）发送的响应标头，用于设置其登录状态，这意味着是否有任何用户在当前浏览器上登录到 IdP。
     这由浏览器存储，并用于 [FedCM API](/zh-CN/docs/Web/API/FedCM_API)。
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1) 标头字段传达交换的签名列表，每个签名都附有有关如何确定签名的权限和刷新该签名的信息。
@@ -457,16 +456,16 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : 提供 URL 列表，指向[推测规则](/zh-CN/docs/Web/API/Speculation_Rules_API)的 JSON 定义资源。当响应是 HTML 文档时，这些规则将被添加到文档的推测规则集中。
 - {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
-  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/zh-CN/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.由导航目标设置，以选择使用各种高风险加载模式。例如，跨源、同站[预渲染](/zh-CN/docs/Web/API/Speculation_Rules_API#using_prerendering)需要 `Supports-Loading-Mode` 值为 `credentialed-prerender`。
+  - : 由导航目标设置，以选择使用各种高风险加载模式。例如，跨源、同站[预渲染](/zh-CN/docs/Web/API/Speculation_Rules_API#使用预渲染)需要 `Supports-Loading-Mode` 值为 `credentialed-prerender`。
 
 ## 非标准标头
 
 - {{HTTPHeader("X-Forwarded-For")}} {{non-standard_inline}}
-  - : 标识通过 HTTP 代理或负载均衡器（load balancer）连接到 Web 服务器的客户端的原始 IP 地址。
+  - : 标识通过 HTTP 代理或负载均衡器连接到 Web 服务器的客户端的原始 IP 地址。
 - {{HTTPHeader("X-Forwarded-Host")}} {{non-standard_inline}}
-  - : 标识请求客户端用于连接到你的代理或负载均衡器（load balancer）的原始主机。
+  - : 标识请求客户端用于连接到你的代理或负载均衡器的原始主机。
 - {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
-  - : 标识客户端用于连接到你的代理或负载均衡器（load balancer）的协议（HTTP 或 HTTPS）。
+  - : 标识客户端用于连接到你的代理或负载均衡器的协议（HTTP 或 HTTPS）。
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : 控制 DNS 预取，这是一种浏览器主动对用户可能选择的链接以及文档引用的项目（包括图像、CSS、JavaScript 等）的 URL 执行域名解析的功能。
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
@@ -475,15 +474,13 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 ## 弃用的标头
 
 - {{HTTPHeader("Pragma")}} {{deprecated_inline}}
-  - : 特定于实现的标头可能会在请求—响应链（request-response chain）的任何地方产生各种影响。用于向后兼容 `Cache-Control` 标头尚不存在的 HTTP/1.0 缓存。
+  - : 特定于实现的标头可能会在请求—响应链的任何地方产生各种影响。用于向后兼容 `Cache-Control` 标头尚不存在的 HTTP/1.0 缓存。
 - {{HTTPHeader("Warning")}} {{deprecated_inline}}
   - : 关于可能出现的问题的一般警告信息。
 
 ## 贡献
 
 你可以通过[编写新条目](/zh-CN/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header)或改进现有条目来提供帮助。
-
-<!-- Check https://github.com/mdn/content/issues/1458 for known missing pages -->
 
 ## 参见
 
