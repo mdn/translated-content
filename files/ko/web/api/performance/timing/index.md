@@ -1,5 +1,5 @@
 ---
-title: "Performance: timing 요소"
+title: "Performance: timing 속성"
 slug: Web/API/Performance/timing
 l10n:
   sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
