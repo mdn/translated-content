@@ -341,7 +341,7 @@ for (const value of generator) {
 
 Ambas sentencias `for...in` y `for...of` iteran sobre algo. La principal diferencia entre ellas radica en sobre qué iteran.
 
-La sentencia {{jsxref("Statements/for...in", "for...in")}} itera sobre las [propiedades de cadena enumerables](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) de un objeto, mientras que la sentencia `for...of` itera sobre los valores que el [objeto iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) define para ser iterados.
+La sentencia {{jsxref("Statements/for...in", "for...in")}} itera sobre las [propiedades de cadena enumerables](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) de un objeto, mientras que la sentencia `for...of` itera sobre los valores que el [objeto iterable](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) define para ser iterados.
 
 El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle `for...in` cuando se utilizan con un {{jsxref("Array")}}.
 
