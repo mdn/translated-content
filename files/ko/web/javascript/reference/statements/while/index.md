@@ -123,7 +123,7 @@ while ((currentNode = iterator.nextNode())) {
 while ((currentNode = iterator.nextNode()) !== null) {
 ```
 
-또 다른 이 패턴을 작성하는 방법도 있습니다:
+이 패턴을 작성하는 또 다른 방법도 있습니다:
 
 ```js-nolint example-good
 while ((currentNode = iterator.nextNode()) && currentNode) {
