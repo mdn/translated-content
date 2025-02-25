@@ -48,7 +48,7 @@ Un bucle `for...of` finaliza cuando el iterador se ha completado (el resultado d
 - {{jsxref("Statements/break", "break")}} detiene la ejecución de `statement` y va a la primera sentencia después del bucle.
 - {{jsxref("Statements/continue", "continue")}} detiene la ejecución de `statement` y va a la siguiente iteración del bucle.
 
-Si el bucle `for...of` termina prematuramente (p. ej., se encuentra una sentencia `break` o se produce un error), se llama al método [`return()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) del iterador para realizar cualquier limpieza.
+Si el bucle `for...of` termina prematuramente (p. ej., se encuentra una sentencia `break` o se produce un error), se llama al método [`return()`](/es/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) del iterador para realizar cualquier limpieza.
 
 La parte `variable` de `for...of` acepta cualquier cosa que pueda preceder al operador `=`. Puedes usar {{jsxref("Statements/const", "const")}} para declarar la variable siempre y cuando no se reasigne dentro del cuerpo del bucle (puede cambiar entre iteraciones, porque son dos variables separadas). De lo contrario, puedes usar {{jsxref("Statements/let", "let")}}.
 
@@ -67,7 +67,7 @@ for (let value of iterable) {
 > [!NOTE]
 > Cada iteración crea una nueva variable. Reasignar la variable dentro del cuerpo del bucle no afecta al valor original en el iterable (un array, en este caso).
 
-Puedes usar [desestructuración](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) para asignar múltiples variables locales, o usar un acceso a propiedades como `for (x.y of iterable)` para asignar el valor a una propiedad de objeto.
+Puedes usar [desestructuración](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) para asignar múltiples variables locales, o usar un acceso a propiedades como `for (x.y of iterable)` para asignar el valor a una propiedad de objeto.
 
 Sin embargo, una regla especial prohíbe usar `async` como el nombre de la variable. Esta es una sintaxis inválida:
 
@@ -76,7 +76,7 @@ let async;
 for (async of [1, 2, 3]); // SyntaxError: The left-hand side of a for-of loop may not be 'async'.
 ```
 
-Esto es para evitar la ambigüedad sintáctica con el código válido `for (async of => {};;)`, que es un bucle [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for).
+Esto es para evitar la ambigüedad sintáctica con el código válido `for (async of => {};;)`, que es un bucle [`for`](/es/docs/Web/JavaScript/Reference/Statements/for).
 
 ## Ejemplos
 
@@ -95,7 +95,7 @@ for (const value of iterable) {
 
 ### Iterando sobre una cadena de texto
 
-Las cadenas de texto son [iteradas por puntos de código Unicode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator).
+Las cadenas de texto son [iteradas por puntos de código Unicode](/es/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator).
 
 ```js
 const iterable = "boo";
@@ -176,7 +176,7 @@ foo(1, 2, 3);
 
 ### Iterando sobre un NodeList
 
-El siguiente ejemplo añade una clase `read` a los párrafos que son descendientes directos del elemento [`<article>`](/en-US/docs/Web/HTML/Element/article) iterando sobre una colección [`NodeList`](/en-US/docs/Web/API/NodeList) del DOM.
+El siguiente ejemplo añade una clase `read` a los párrafos que son descendientes directos del elemento [`<article>`](/es/docs/Web/HTML/Element/article) iterando sobre una colección [`NodeList`](/es/docs/Web/API/NodeList) del DOM.
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");
