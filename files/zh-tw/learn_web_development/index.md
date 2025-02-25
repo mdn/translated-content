@@ -53,4 +53,4 @@ l10n:
 - [學習 JavaScript](https://learnjavascript.online/)
   - : 一個極佳的資源給有志成為網頁開發者的人——在互動環境中學習 JavaScript，透過短小課程與互動測驗並結合自動評量進行引導。前 40 課為免費提供，而完整課程則需一次性支付少量費用。
 - [前端開發者職涯路徑](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN 學習夥伴_</sup>
-  - : [Scrimba 的](https://scrimba.com?via=mdn)*前端開發者職涯路徑*教導成為一位稱職前端開發者所需了解的一切知識，內容包含有趣的互動式課程與挑戰、知識淵博的教師以及充滿支援的社群。從零開始，直至獲得第一份前端工作！該課程的許多元件皆提供作為獨立免費版本。
+  - : [Scrimba 的](https://scrimba.com?via=mdn)*前端開發者職涯路徑*透過有趣的互動課程與挑戰，知識淵博的教師以及充滿支援的社群，教導成為一位稱職前端 Web 開發者所需了解的一切知識。從零開始，直至獲得第一份前端工作！許多課程元件皆有獨立的免費版本。
