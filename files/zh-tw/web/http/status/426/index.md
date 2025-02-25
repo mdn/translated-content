@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`426 Upgrade Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#client_error_responses)狀態碼表示伺服器拒絕使用當前協定執行請求，但在用戶端升級到不同協定後可能願意這樣做。
+HTTP **`426 Upgrade Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕使用當前協定執行請求，但在用戶端升級到不同協定後可能願意這樣做。
 
 伺服器使用此回應發送一個 {{HTTPHeader("Upgrade")}} 標頭來表示所需的協定。
 
