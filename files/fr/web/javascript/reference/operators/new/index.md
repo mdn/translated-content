@@ -14,7 +14,20 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 3. Le nouvel objet, créé à l'étape 1, est passé comme valeur `this` à la fonction
 4. Si la fonction ne renvoie pas d'objet, c'est la valeur `this` qui est renvoyée.
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## Syntaxe
 

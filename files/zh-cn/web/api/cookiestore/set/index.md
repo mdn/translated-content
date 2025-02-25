@@ -38,7 +38,7 @@ set(options)
     - `name`
       - : 记录 cookie 名称的字符串。
     - `partitioned` {{Optional_Inline}}
-      - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+      - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
     - `path` {{Optional_Inline}}
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `sameSite` {{Optional_Inline}}
