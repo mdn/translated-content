@@ -110,7 +110,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 #### Encrypted Media Extensions API
 
-- 現在、Firefox は仕様書で認められていないにもかかわらず、安全でないコンテキストで Encrypted Media Extensions を使用できます。近い将来にこの動作を変更する予定であり、Firefox 55 からこのようなことを行うと、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) に非推奨である旨の警告を出力します ([Firefox バグ 1361000](https://bugzil.la/1361000))。
+- 現在、Firefox は仕様書で認められていないにもかかわらず、保護されていないコンテキストで Encrypted Media Extensions を使用できます。近い将来にこの動作を変更する予定であり、Firefox 55 からこのようなことを行うと、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) に非推奨である旨の警告を出力します ([Firefox バグ 1361000](https://bugzil.la/1361000))。
 - 現在、Firefox は仕様書で必須であるにもかかわらず、{{domxref("Navigator.requestMediaKeySystemAccess()")}} に渡す `suggestedConfigurations` 引数に {{domxref("MediaKeySystemCapabilities")}} オブジェクトを少なくとも 1 つ含めることを要求していません。Firefox 55 より、サポートするコーデックを指定せずに音声や動画の構成を指定すると、ウェブコンソールに警告を表示します。まもなく、1 つ以上の音声や動画の有効な構成が含められていない場合に例外が発生するようになります ([Firefox バグ 1368683](https://bugzil.la/1368683))。
 
 #### WebGL
@@ -119,8 +119,8 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### セキュリティ
 
-- {{domxref("Geolocation")}} API が、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1072859](https://bugzil.la/1072859))。
-- {{domxref("Storage API")}} が、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1268804](https://bugzil.la/1268804))。
+- {{domxref("Geolocation")}} API が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1072859](https://bugzil.la/1072859))。
+- {{domxref("Storage API")}} が、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) である場合に限り利用可能になりました ([Firefox バグ 1268804](https://bugzil.la/1268804))。
 - localhost で、混在コンテンツの読み込みを許可しました ([Firefox バグ 903966](https://bugzil.la/903966))。
 - リモートの JAR ファイルの読み込みを再び無効化しました ([Firefox バグ 1329336](https://bugzil.la/1329336))。詳しくは [Security and the jar protocol](/ja/docs/Mozilla/Security/Security_and_the_jar_protocol) をご覧ください。
 
