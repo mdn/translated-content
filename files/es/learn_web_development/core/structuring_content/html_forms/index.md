@@ -71,8 +71,8 @@ En este artículo, ofrecemos una introducción a los aspectos básicos de los fo
 
 Hasta ahora en este curso, ha visto un par de formas en que los usuarios pueden interactuar con la web:
 
--   Los [enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) se pueden usar para navegar a diferentes secciones de contenido, ya sea en la misma página o en una página diferente.
--   Los elementos [`<video>` y `<audio>`](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) generalmente cuentan con controles como reproducir/pausar, avanzar rápidamente, rebobinar, etc., que permiten a los usuarios consumir contenido multimedia como deseen.
+- Los [enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links) se pueden usar para navegar a diferentes secciones de contenido, ya sea en la misma página o en una página diferente.
+- Los elementos [`<video>` y `<audio>`](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) generalmente cuentan con controles como reproducir/pausar, avanzar rápidamente, rebobinar, etc., que permiten a los usuarios consumir contenido multimedia como deseen.
 
 Sin embargo, estas características tienden a facilitar las interacciones unidireccionales, con los usuarios consumiendo contenido pasivamente. Esto está bien, pero la web es una experiencia bidireccional. Los usuarios de los sitios web establecen preferencias sobre cómo quieren experimentar el contenido y los servicios. Piden taxis y solicitan que se les devuelva la llamada. Proporcionan comentarios y presentan quejas. Compran productos y los reciben en sus casas.
 
@@ -240,8 +240,8 @@ Por ejemplo:
 
 Los elementos `<label>` son importantes por varias razones, sobre todo porque:
 
--   Cuando los usuarios con discapacidades visuales utilizan un lector de pantalla para ayudarles a leer e interactuar con el contenido de la página web, el lector de pantalla leerá el texto de la etiqueta asociada cuando se encuentre con cada control. Esto facilita a los usuarios la comprensión del contenido que debe introducirse en cada control.
--   Permiten enfocar los elementos del formulario haciendo clic en el texto de su etiqueta, así como en los controles. Esto es especialmente útil para los usuarios de teléfonos móviles, donde puede ser difícil seleccionar con precisión un elemento de formulario con el dedo en una pantalla táctil. Ampliar el **área de impacto** es útil en tales circunstancias.
+- Cuando los usuarios con discapacidades visuales utilizan un lector de pantalla para ayudarles a leer e interactuar con el contenido de la página web, el lector de pantalla leerá el texto de la etiqueta asociada cuando se encuentre con cada control. Esto facilita a los usuarios la comprensión del contenido que debe introducirse en cada control.
+- Permiten enfocar los elementos del formulario haciendo clic en el texto de su etiqueta, así como en los controles. Esto es especialmente útil para los usuarios de teléfonos móviles, donde puede ser difícil seleccionar con precisión un elemento de formulario con el dedo en una pantalla táctil. Ampliar el **área de impacto** es útil en tales circunstancias.
 
 #### Etiquetas de formulario explícitas e implícitas
 
@@ -266,9 +266,9 @@ Cuando se incluye un elemento {{htmlelement("button")}} dentro de un elemento `<
 
 Existen otros comportamientos de los botones que se pueden especificar a través del atributo `type` del elemento `<button>`:
 
--   `<button type="submit">` declara explícitamente que un botón debe comportarse como un botón de envío. En realidad, nunca es necesario declarar esto, a menos que por alguna razón esté incluyendo otros botones dentro de su `<form>`, y quiera dejar claro cuál es el botón de envío. Esto será muy raro.
--   `<button type="reset">` crea un _botón de reinicio_; esto elimina inmediatamente todos los datos del formulario, restableciéndolo a su estado inicial. **Advertencia:** no utilice botones de reinicio, solían ser populares en los primeros tiempos de la web, pero suelen ser más molestos que útiles. La mayoría de la gente ha experimentado el hecho de rellenar un formulario largo sólo para hacer clic en el botón de reinicio por accidente en lugar de en el botón de envío, lo que significa que tiene que volver a empezar.
--   `<button type="button">` crea un botón con el mismo comportamiento que los botones especificados fuera de los elementos `<form>`. Como vimos antes, no hacen absolutamente nada por defecto, y se necesita JavaScript para darles funcionalidad.
+- `<button type="submit">` declara explícitamente que un botón debe comportarse como un botón de envío. En realidad, nunca es necesario declarar esto, a menos que por alguna razón esté incluyendo otros botones dentro de su `<form>`, y quiera dejar claro cuál es el botón de envío. Esto será muy raro.
+- `<button type="reset">` crea un _botón de reinicio_; esto elimina inmediatamente todos los datos del formulario, restableciéndolo a su estado inicial. **Advertencia:** no utilice botones de reinicio, solían ser populares en los primeros tiempos de la web, pero suelen ser más molestos que útiles. La mayoría de la gente ha experimentado el hecho de rellenar un formulario largo sólo para hacer clic en el botón de reinicio por accidente en lugar de en el botón de envío, lo que significa que tiene que volver a empezar.
+- `<button type="button">` crea un botón con el mismo comportamiento que los botones especificados fuera de los elementos `<form>`. Como vimos antes, no hacen absolutamente nada por defecto, y se necesita JavaScript para darles funcionalidad.
 
 > [!NOTE]
 >
@@ -475,3 +475,4 @@ Los campos de entrada de texto de varias líneas se crean utilizando elementos {
 ```html-nolint
 <label for="comments">Algún comentario adicional:</label>
 <textarea id="comments" name="comments"
+```
