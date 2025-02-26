@@ -1,11 +1,9 @@
 ---
 title: Web 性能计时推荐：多久才算太久？
-slug: Web/Performance/How_long_is_too_long
+slug: Web/Performance/Guides/How_long_is_too_long
 l10n:
   sourceCommit: fff37e54dad8353fc89f6c61f5ec408094bcebd8
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 对于加载页面时速度缓慢的定义并不明确，但有一些具体的指导方针：在 1 秒内加载内容、在 50 毫秒内释放线程、在 16.7 毫秒内渲染一帧动画、在 50 至 200 毫秒内响应用户输入。
 
@@ -13,7 +11,7 @@ l10n:
 
 “不到一秒”通常被吹捧为最佳加载时间，但这意味着什么？一秒应当被视为向用户表明已请求新内容并将其加载到网页的最长时间准则，例如浏览器显示网页的标题与背景颜色。
 
-从请求中获取到的第一个资源通常是 HTML 文档，然后该文档会调用额外的资源。正如在[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)中描述的，浏览器在接收到 HTML 后，会立即开始处理，并在接收到内容时进行渲染，而不是等待额外资源的加载。
+从请求中获取到的第一个资源通常是 HTML 文档，然后该文档会调用额外的资源。正如在[关键渲染路径](/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path)中描述的，浏览器在接收到 HTML 后，会立即开始处理，并在接收到内容时进行渲染，而不是等待额外资源的加载。
 
 诚然，在一秒钟内完成加载是理想目标，但很少有网站能实现。这是因为各方的期望有所不同，比如在商用网络上的“hello world”预计只需几毫秒即可加载；而在西伯利亚北部的用户，用着边缘网络在五年的老设备上下载一个猫咪视频时，可能觉得 20 秒内下完就很快了。如果用户等待三四秒而又没有任何加载提示和进度条，那么网站就可能失去潜在访客，得经过很长时间这些访客才会回归了。
 

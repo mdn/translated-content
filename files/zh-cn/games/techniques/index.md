@@ -11,7 +11,7 @@ l10n:
 
 - [使用 asm.js 中的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)
   - : 尤其在制作中大型游戏时，异步脚本是一项必备技术，它可以让游戏的 JavaScript 脱离主线程进行编译，并在以后运行游戏时缓存起来，从而显著提高用户的性能。本文将介绍如何使用异步脚本。
-- [优化启动性能](/zh-CN/docs/Web/Performance/Optimizing_startup_performance)
+- [优化启动性能](/zh-CN/docs/Web/Performance/Guides/Optimizing_startup_performance)
   - : 如何确保游戏启动快速、流畅，并且不会占用用户的浏览器或设备太久。
 - [使用 WebRTC 点对点数据通道](/zh-CN/docs/Games/Techniques/WebRTC_data_channels)
   - : 除了支持音频和视频通信外，WebRTC 还能建立点对点数据通道，在播放器之间主动交换文本或二进制数据。本文将解释 WebRTC 的功能，并介绍如何使用库来轻松实现这一功能。

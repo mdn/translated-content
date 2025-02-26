@@ -1,11 +1,9 @@
 ---
 title: 关键渲染路径
-slug: Web/Performance/Critical_rendering_path
+slug: Web/Performance/Guides/Critical_rendering_path
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 关键渲染路径是浏览器将 HTML、CSS 和 JavaScript 转换为屏幕上的像素所经历的步骤序列。优化关键渲染路径可提高渲染性能。关键渲染路径包含了[文档对象模型](/zh-CN/docs/Web/API/Document_Object_Model)（DOM）、[CSS 对象模型](/zh-CN/docs/Web/API/CSS_Object_Model)（CSSOM）、渲染树和布局。
 

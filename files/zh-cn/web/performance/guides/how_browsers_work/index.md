@@ -1,11 +1,9 @@
 ---
 title: 渲染页面：浏览器的工作原理
-slug: Web/Performance/How_browsers_work
+slug: Web/Performance/Guides/How_browsers_work
 l10n:
   sourceCommit: f32c38c1245815c7f520730f0cdef54960e5cee1
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 在浏览网页时用户希望页面的内容能够快速加载且流畅交互。因此，开发者应力争实现这两个目标。
 
@@ -107,7 +105,7 @@ TCP 的“三次握手”技术经常被称为“SYN-SYN-ACK”——更确切�
 
 ### 构建 DOM 树
 
-我们在[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)这篇文章中描述了五个步骤。
+我们在[关键渲染路径](/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path)这篇文章中描述了五个步骤。
 
 第一步是处理 HTML 标记并构造 DOM 树。HTML 解析涉及到[符号化](/zh-CN/docs/Web/API/DOMTokenList)和树的构造。HTML 标记包括开始和结束标记，以及属性名和值。如果文档格式良好，则解析它会简单而快速。解析器将标记化的输入解析到文档中，构建文档树。
 

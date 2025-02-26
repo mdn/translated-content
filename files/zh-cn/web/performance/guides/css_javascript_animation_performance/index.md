@@ -1,9 +1,7 @@
 ---
 title: CSS 动画与 JavaScript 动画的性能
-slug: Web/Performance/CSS_JavaScript_animation_performance
+slug: Web/Performance/Guides/CSS_JavaScript_animation_performance
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 对众多应用程序而言，动画对提供友好的用户体验有着关键的作用。我们有很多方式生成 web 动画，比如 CSS {{cssxref("transition")}} 和 {{cssxref("animation")}} 或者基于 JavaScript 的动画（使用 {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}）。在这篇文章中，我们分析 CSS 动画和 JavaScript 动画的性能差异。
 
