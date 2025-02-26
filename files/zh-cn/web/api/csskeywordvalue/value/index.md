@@ -16,11 +16,11 @@ l10n:
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `value` 属性被设置为空字符串时抛出此异常。
+  - : 如果 `value` 属性被设置为空字符串则抛出此异常。
 
 ## 示例
 
-以下示例重设 CSS 的 {{cssxref('display')}} 属性为初始值
+以下示例重设 CSS 的 {{cssxref('display')}} 属性为其默认值
 
 ```js
 let indicator = document.getElementById("indicator");
