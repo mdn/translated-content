@@ -1,6 +1,7 @@
 ---
 title: パフォーマンスの基礎
-slug: Web/Performance/Fundamentals
+slug: Web/Performance/Guides/Fundamentals
+original_slug: Web/Performance/Fundamentals
 l10n:
   sourceCommit: 1adcd073cda78153f7db0e764815ba68c60fe5bb
 ---

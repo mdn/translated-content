@@ -1,6 +1,7 @@
 ---
 title: ナビゲーションおよびリソースタイミング
-slug: Web/Performance/Navigation_and_resource_timings
+slug: Web/Performance/Guides/Navigation_and_resource_timings
+original_slug: Web/Performance/Navigation_and_resource_timings
 l10n:
   sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---

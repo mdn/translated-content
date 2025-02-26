@@ -1,6 +1,7 @@
 ---
 title: dns-prefetch の使用
-slug: Web/Performance/dns-prefetch
+slug: Web/Performance/Guides/dns-prefetch
+original_slug: Web/Performance/dns-prefetch
 l10n:
   sourceCommit: 226ae7cf624bfebf611172acb1cd992348b4f165
 ---
