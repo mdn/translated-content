@@ -1,6 +1,7 @@
 ---
 title: Performance fundamentals
-slug: Web/Performance/Fundamentals
+slug: Web/Performance/Guides/Fundamentals
+original_slug: Web/Performance/Fundamentals
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
