@@ -478,6 +478,7 @@
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity
 /es/docs/Glossary/Espacio_en_blanco	/es/docs/Glossary/Whitespace
 /es/docs/Glossary/Estructura_de_datos	/es/docs/Glossary/Data_structure
+/es/docs/Glossary/Forbidden_header_name	/es/docs/Glossary/Forbidden_request_header
 /es/docs/Glossary/Funcion_de_primera_clase	/es/docs/Glossary/First-class_Function
 /es/docs/Glossary/Función	/es/docs/Glossary/Function
 /es/docs/Glossary/Grid_Rows	/es/docs/Glossary/Grid_Row
@@ -488,7 +489,7 @@
 /es/docs/Glossary/Metadato	/es/docs/Glossary/Metadata
 /es/docs/Glossary/Método	/es/docs/Glossary/Method
 /es/docs/Glossary/Nombre_de_dominio	/es/docs/Glossary/Domain_name
-/es/docs/Glossary/Nombre_de_encabezado_prohibido	/es/docs/Glossary/Forbidden_header_name
+/es/docs/Glossary/Nombre_de_encabezado_prohibido	/es/docs/Glossary/Forbidden_request_header
 /es/docs/Glossary/Numero	/es/docs/Glossary/Number
 /es/docs/Glossary/Objecto	/es/docs/Glossary/Object
 /es/docs/Glossary/Operador	/es/docs/Glossary/Operator
@@ -3021,7 +3022,9 @@
 /es/docs/Web/MathML/Elemento/math	/es/docs/Web/MathML/Element/math
 /es/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video	/es/docs/Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
 /es/docs/Web/OpenSearch	/es/docs/Web/XML/Guides/OpenSearch
-/es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
+/es/docs/Web/Performance/Fundamentals	/es/docs/Web/Performance/Guides/Fundamentals
+/es/docs/Web/Performance/Optimizing_startup_performance	/es/docs/Web/Performance/Guides/Optimizing_startup_performance
+/es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Guides/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/App_structure	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/Web/Progressive_web_apps/Guides
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Guides/Installing

@@ -1336,6 +1336,7 @@
 /ja/docs/Glossary/Descriptor_(CSS)	/ja/docs/Glossary/CSS_Descriptor
 /ja/docs/Glossary/Empty_element	/ja/docs/Glossary/Void_element
 /ja/docs/Glossary/First_interactive	/ja/docs/Glossary/First_CPU_idle
+/ja/docs/Glossary/Forbidden_header_name	/ja/docs/Glossary/Forbidden_request_header
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Grid_Rows	/ja/docs/Glossary/Grid_Row
 /ja/docs/Glossary/Guard	/ja/docs/Web/API/Fetch_API/Using_Fetch
@@ -2398,7 +2399,7 @@
 /ja/docs/Learn/Performance/Measuring_performance	/ja/docs/Learn_web_development/Extensions/Performance/Measuring_performance
 /ja/docs/Learn/Performance/Multimedia	/ja/docs/Learn_web_development/Extensions/Performance/Multimedia
 /ja/docs/Learn/Performance/Perceived_performance	/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance
-/ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
+/ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/Guides/How_browsers_work
 /ja/docs/Learn/Performance/Web_Performance_Basics	/ja/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics
 /ja/docs/Learn/Performance/What_is_web_performance	/ja/docs/Learn_web_development/Extensions/Performance/What_is_web_performance
 /ja/docs/Learn/Performance/business_case_for_performance	/ja/docs/Learn_web_development/Extensions/Performance/business_case_for_performance
@@ -4991,6 +4992,13 @@
 /ja/docs/Web/Media/images	/ja/docs/Web/Media/Guides/Images
 /ja/docs/Web/Media/images/aspect_ratio_mapping	/ja/docs/Learn_web_development/Extensions/Performance/Multimedia
 /ja/docs/Web/OpenSearch	/ja/docs/Web/XML/Guides/OpenSearch
+/ja/docs/Web/Performance/Animation_performance_and_frame_rate	/ja/docs/Web/Performance/Guides/Animation_performance_and_frame_rate
+/ja/docs/Web/Performance/Fundamentals	/ja/docs/Web/Performance/Guides/Fundamentals
+/ja/docs/Web/Performance/How_browsers_work	/ja/docs/Web/Performance/Guides/How_browsers_work
+/ja/docs/Web/Performance/Lazy_loading	/ja/docs/Web/Performance/Guides/Lazy_loading
+/ja/docs/Web/Performance/Navigation_and_resource_timings	/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings
+/ja/docs/Web/Performance/Speculative_loading	/ja/docs/Web/Performance/Guides/Speculative_loading
+/ja/docs/Web/Performance/dns-prefetch	/ja/docs/Web/Performance/Guides/dns-prefetch
 /ja/docs/Web/Progressive_web_apps/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
