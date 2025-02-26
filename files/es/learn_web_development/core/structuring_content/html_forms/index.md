@@ -476,3 +476,37 @@ Los campos de entrada de texto de varias líneas se crean utilizando elementos {
 <label for="comments">Algún comentario adicional:</label>
 <textarea id="comments" name="comments"
 ```
+
+Se comportan de la misma manera que los elementos `<input type="text">`, excepto que permiten ingresar múltiples líneas de texto. El atributo `rows` especifica la cantidad de filas de alto que tendrá el área de texto de forma predeterminada, mientras que el atributo `cols` especifica la cantidad de columnas de ancho que tendrá el área de texto de forma predeterminada. Si no se especifican, los valores utilizados son `cols="20"` y `rows="2"`.
+
+> [!OBSERVACIÓN]
+>
+> **Pruébalo**
+>
+> La mayoría de los navegadores representan las áreas de texto con un controlador de arrastre en una esquina, que se puede utilizar para cambiar su tamaño. Intenta usar esto para cambiar el tamaño del área de texto en nuestra demostración.
+
+## Validación de formularios
+
+Anteriormente, analizamos algunas de las validaciones básicas de formularios del lado del cliente proporcionadas por el navegador. El atributo `required` se utiliza para especificar que un campo debe completarse antes de que se pueda enviar el formulario; también verifica que se ingrese el tipo de valor correcto para tipos de valor específicos como direcciones de correo electrónico, URL, números, etc. La validación es importante por dos razones principales:
+
+- Asegurarse de que los datos se envíen en el formato correcto para que no causen errores en su aplicación.
+- Asegurarse de que los datos no causen problemas de seguridad. Las personas malintencionadas saben cómo enviar datos formateados específicamente para que, en aplicaciones no seguras, puedan ejecutar comandos para eliminar bases de datos o tomar el control de un sistema.
+
+La validación de formularios es un tema extenso que está fuera del alcance de este artículo, por lo que lo dejaremos aquí por ahora. Solo ten en cuenta que hay dos tipos de validación de formularios:
+
+- Validación del lado del cliente, que se realiza en el navegador, implementada utilizando una combinación de atributos de validación de formularios (como `required`) y JavaScript. La validación del lado del cliente es útil para brindar a los usuarios sugerencias instantáneas cuando han ingresado datos incorrectos, pero no es tan eficaz para evitar que entren datos maliciosos. Es muy fácil desactivar JavaScript o alterar el código del lado del cliente para que la validación ya no funcione.
+- Validación del lado del servidor, que se realiza en el servidor, implementada utilizando cualquier lenguaje que esté utilizando el servidor. Se pueden enviar mensajes con formato incorrecto a un servidor por accidente o a propósito. La sabiduría convencional es asegurarse de que su servidor no confíe en nada de lo que un cliente está enviando para evitar errores o problemas de seguridad causados ​​por mensajes con formato incorrecto. La validación del lado del servidor es excelente para detener mensajes maliciosos, ya que es más difícil manipular el código que se ejecuta en el servidor. La validación del lado del servidor no es tan buena para dar a los usuarios sugerencias sobre datos incorrectos porque los datos deben ir al servidor para ser validados, luego el resultado debe enviarse de vuelta al cliente antes de que se pueda notificar al usuario.
+
+En resumen, no decida entre usar la validación del lado del cliente o del lado del servidor: necesitará ambas. Necesita la validación del lado del cliente para brindar a los usuarios comentarios sobre su entrada y la validación del lado del servidor para asegurarse de que los mensajes estén en un formato que su servidor pueda manejar de forma segura. Si desea comenzar a obtener más información sobre la validación, un buen lugar para comenzar es [Validación de formularios del lado del cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation).
+
+## Resumen
+
+Eso es todo por ahora. Hay mucho más que saber sobre los formularios, pero por ahora, le hemos brindado suficiente información para seguir adelante con sus estudios.
+
+A continuación, echaremos un vistazo a cómo depurar problemas en su código HTML.
+
+## Véase también
+
+- [Formularios web: cómo trabajar con datos de usuario](/es/docs/Learn_web_development/Extensions/Forms)
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
