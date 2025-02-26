@@ -2,7 +2,7 @@
 title: <input type="date">
 slug: Web/HTML/Element/input/date
 l10n:
-  sourceCommit: b7955e77cd4293adf45ef23686df50b0305f02ad
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -62,7 +62,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 文字列値の `any` は刻みがないことを意味し、（[`min`](#min) や [`max`](#max) のようなほかの制約を除けば）どの値でも許可されます。
 
 > [!NOTE]
-> ユーザーによって入力されたデータが step 設定に従っていない場合、{{Glossary("user agent", "ユーザーエージェント")}}は最も近い有効な値に丸める可能性があり、同じ距離の値が 2 つあった場合は、正の方向の値を優先します。
+> ユーザーによって入力されたデータが step 設定に従っていない場合、{{Glossary("User agent", "ユーザーエージェント")}}は最も近い有効な値に丸める可能性があり、同じ距離の値が 2 つあった場合は、正の方向の値を優先します。
 
 `date` 入力欄では、 `step` の値は日単位で指定します。また、 86,400,000 に `step` を乗じた値に等しいミリ秒数として扱われます（数値はミリ秒単位であるため）。 `step` の既定値は `1` であり、 1 日を表します。
 
@@ -76,7 +76,7 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ## 日付入力の基本的な使用
 
-もっとも単純な `<input type="date">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
+もっとも基本的な `<input type="date">` の使用方法は、次のように基本的な `<input>` と {{htmlelement("label")}} 要素の組み合わせです。
 
 ```html
 <form action="https://example.com">
@@ -272,6 +272,5 @@ input:valid + span::after {
 ## 関連情報
 
 - 全般的な {{HTMLElement("input")}} およびその操作に使用する{{domxref("HTMLInputElement")}} インターフェイス
-- [日付と時刻の選択のチュートリアル](/ja/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [日付と時刻の選択のチュートリアル](/ja/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#日付と時刻ピッカー)
 - [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -2,7 +2,7 @@
 title: <input type="number">
 slug: Web/HTML/Element/input/number
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{HTMLSidebar}}
@@ -68,13 +68,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
 > [!NOTE]
-> ユーザーが入力したデータが刻みの設定に従わない場合、{{Glossary("user agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸めることがあります。
+> ユーザーが入力したデータが刻みの設定に従わない場合、{{Glossary("User agent", "ユーザーエージェント")}}は直近の妥当な値、同じ距離の値の選択肢が 2 つあった場合は、正の方向の推奨値に丸めることがあります。
 
 `number` 入力欄の既定の刻み値は `1` であり、刻みの基準値が整数ではない場合を*除いて*、整数の入力のみを許可します。
 
 ## number 入力欄の使用
 
-`number` 入力型は、増減する数値にのみ、特にスピンボタンによる増減が使い勝手として有益な場合に使用すべきです。 `number` 入力型は、多くの国の郵便番号やクレジットカード番号のような、数字だけで構成されているが、厳密には数値ではない値には適していません。数値以外の入力には、 [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel) や他の {{HTMLElement('input')}} 型で [`inputmode`](/ja/docs/Web/HTML/Global_attributes#inputmode) 属性をつけるなど、別の入力型を使うことを検討してみてください。
+`number` 入力型は、増減する数値にのみ、特にスピンボタンによる増減が使い勝手として有益な場合に使用すべきです。 `number` 入力型は、多くの国の郵便番号やクレジットカード番号のような、数字だけで構成されているが、厳密には数値ではない値には適していません。数値以外の入力には、 [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel) や他の {{HTMLElement('input')}} 型で [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性をつけるなど、別の入力型を使うことを検討してみてください。
 
 ```html
 <input type="text" inputmode="numeric" pattern="\d*" />
@@ -86,11 +86,11 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 > 論理的には、数値入力欄の中に数字以外を入力することはできないはずです。ブラウザーによって、無効な文字を許可するものとしないものがあります。 [Firefox バグ 1398528](https://bugzil.la/1398528) を参照してください。
 
 > [!NOTE]
-> ユーザーが HTML をその場面の裏でいじることができることを意識しておくことは極めて重要です。ですから、安全を目的として、サイトでクライアント側の値検証機能のみを使用しては*いけません*。何らかのセキュリティ上の問題を含む可能性がある値が提供されるトランザクションの場合は、いずれもサーバー側で値検証を行う*必要があります*。
+> ユーザーが HTML をその場面の裏でいじることができるので、サイトで安全を目的として、クライアント側の検証を使用してはいけません。何らかのセキュリティ上の問題を含む可能性がある値が提供されるトランザクションの場合は、いずれもサーバー側で検証を行う必要があります。
 
 モバイルブラウザーでは、ユーザーが値を入力しようとした時に、数値入力に適した特別なキーボードを表示することで、使い勝手をさらに向上させます。
 
-### 単純な数値入力
+### 基本的な数値入力
 
 最も基本的なフォームでは、次のように数値入力を実装することができます。
 
@@ -99,17 +99,17 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 <input id="ticketNum" type="number" name="ticketNum" value="0" />
 ```
 
-{{EmbedLiveSample('A_simple_number_input', 600, 40)}}
+{{EmbedLiveSample('A_basic_number_input', 600, 40)}}
 
 数値入力は空の場合と単一の数値が入力された場合に妥当とみなされますが、それ以下は無効とみなされます。 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性が使用された場合は、入力欄が空の場合に妥当とみなされなくなります。
 
-> **メモ:** [有効な浮動小数点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)を受け入れることができます（つまり、 [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) でも [Infinity](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) でもないもの）。
+> **メモ:** [有効な浮動小数点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（つまり、 [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) でも [Infinity](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) でもないもの）であれば、どのような数値でも受け入れられます。
 
 ### プレイスホルダー
 
 フォームがどのような入力データを取るのかについての行内のヒントを提供すると、有益なことがあります。これはページのデザインでそれぞれの {{HTMLElement("input")}} に説明のラベルを付けることができない場合に特に重要になります。ここで**プレイスホルダー**が登場します。プレイスホルダーはほとんどの場合、入力される `value` が取るべき値の形式のヒントを説明するために使用される値です。これは `value` が `""` の時に入力欄の中に表示されます。入力欄にデータが入力されると、プレイスホルダーは非表示になり、入力欄が空欄になると、プレイスホルダーは再度表示されます。
 
-ここで、 `number` 入力欄に "`10 の倍数`" というプレイスホルダーを設定します。なお、プレイスホルダーが非表示になったり再表示されたりするのは、入力欄の中身を変更したときです。
+ここで、 `number` 入力欄に "10 の倍数" というプレイスホルダーを設定します。なお、プレイスホルダーが非表示になったり再表示されたりするのは、入力欄の中身を変更したときです。
 
 ```html
 <input type="number" placeholder="10 の倍数" />
@@ -143,7 +143,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 小数が使用できるようにする
 
-数値入力の問題の一つが、既定で刻みが 1 になっていることです。小数を含む数値（たとえば "1.0"）を入力しようとすると、無効な値とみなされるでしょう。小数が必要な値を入力させたい場合は、これを `step` の値に反映させる必要があります（例えば `step="0.01"` で小数第 2 位まで許可します）。単純な例を示します。
+数値入力の問題の一つが、既定で刻みが 1 になっていることです。小数を含む数値（たとえば "1.0"）を入力しようとすると、無効な値とみなされるでしょう。小数が必要な値を入力させたい場合は、これを `step` の値に反映させる必要があります（例えば `step="0.01"` で小数第 2 位まで許可します）。基本的な例を示します。
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -153,11 +153,13 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 この例では `0.0` から `10.0` までで、小数第 2 位までの値が許容されます。この例では "9.52" は妥当になりますが、 "9.521" は妥当ではありません。
 
+任意の小数値を許可したい場合は、 `step` の値を `"any"` に設定してください。
+
 ### 入力欄の寸法の制御
 
 {{HTMLElement("input")}} 要素で type が `number` の場合、 [`size`](/ja/docs/Web/HTML/Element/input#size) のような寸法を決める属性には対応していません。入力欄の寸法を変更するには [CSS](/ja/docs/Web/CSS) に頼る必要があります。
 
-例えば、入力欄の幅を数字 3 桁の入力に必要なだけの幅に調整するには、 HTML に [`id`](/ja/docs/Web/HTML/Global_attributes#id) を設定し、これから入力欄を短くしたときに文字列が表示できなくならないように、プレイスホルダーを短縮します。
+例えば、入力欄の幅を数字 3 桁の入力に必要なだけの幅に調整するには、 HTML に [`id`](/ja/docs/Web/HTML/Global_attributes/id) を設定し、これから入力欄を短くしたときに文字列が表示できなくならないように、プレイスホルダーを短縮します。
 
 ```html
 <input
@@ -183,7 +185,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### サジェスト値の提供
 
-[`list`](/ja/docs/Web/HTML/Element/input#list) 属性に、サジェスト値あたり一つの {{HTMLElement("option")}} 要素を含んだ {{HTMLElement("datalist")}} の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を値として入れることにより、ユーザーの選択することができる既定の選択肢のリストを提供することができます。それぞれの `option` の `value` は、数値入力ボックスのサジェスト値に関係します。
+[`list`](/ja/docs/Web/HTML/Element/input#list) 属性に、サジェスト値あたり一つの {{HTMLElement("option")}} 要素を含んだ {{HTMLElement("datalist")}} の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を値として入れることにより、ユーザーの選択することができる既定の選択肢のリストを提供することができます。それぞれの `option` の `value` は、数値入力ボックスのサジェスト値に関係します。
 
 ```html
 <input id="ticketNum" type="number" name="ticketNum" list="defaultNumbers" />
@@ -270,6 +272,12 @@ input:valid + span::after {
 
 これは、 number 入力欄は数値以外の何が入力されても妥当にはならないからであり、上記で説明したとおり、 [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を用いて妥当な数値の最大値および最小値を制約することができます。
 
+## アクセシビリティの考慮
+
+`<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう考えてください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
+
+また、 [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を使用して、ユーザーがよりすばやく、エラーの可能性を低くしてフォームを記入できるようにすることも検討してください。例えば、郵便番号のフィールドで自動補完を有効にするには、 `autocomplete="postal-code"` と設定してください。
+
 ## 例
 
 すでに既定では増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
@@ -280,7 +288,7 @@ input:valid + span::after {
 
 HTML は次のようになります。
 
-```html
+```html-nolint
 <form>
   <div class="metersInputGroup">
     <label for="meters">あなたの身長を入力してください (メートル):</label>
@@ -385,7 +393,7 @@ switchBtn.addEventListener("click", () => {
 });
 ```
 
-いくつかの変数を宣言した後、イベントリスナーを `button` に追加し、切り替えの仕組みを制御しています。これはとても単純で、ほとんどがボタンの `class` と {{HTMLElement("label")}} を変更するためのものであり、そしてボタンが押されたときに2組の入力の display 値を更新しています。
+いくつかの変数を宣言した後、イベントリスナーを `button` に追加し、切り替えの仕組みを制御しています。これは、ほとんどがボタンの `class` と {{HTMLElement("label")}} を変更するためのものであり、そしてボタンが押されたときに 2 組の入力の display 値を更新しています。
 
 （なお、ここではメートルとフィート/インチの間の変換は行っていませんが、実際のウェブアプリケーションではおそらく行うでしょう。）
 
@@ -393,12 +401,6 @@ switchBtn.addEventListener("click", () => {
 > ユーザーがボタンをクリックしたとき、 `required` 属性を非表示にする入力欄から削除し、 `value` 属性を空にしています。これは入力欄の両方の組が入力されていなくてもフォームを送信することができるようにしています。これはユーザーが意図していないデータをフォームが送信しないことを保証するものでもあります。
 >
 > これを行わないと、フィート/インチ**と**メートルの両方を入力してフォームを送信することができてしまいます。
-
-## アクセシビリティの考慮
-
-`<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう検討してください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
-
-また、 [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を使用して、ユーザーがよりすばやく、エラーの可能性を低くしてフォームを記入できるようにすることも検討してください。例えば、郵便番号のフィールドで自動補完を有効にするには、 `autocomplete="postal-code"` と設定してください。
 
 ## 技術的概要
 
@@ -426,7 +428,11 @@ switchBtn.addEventListener("click", () => {
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
-      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsNumber</code>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM インターフェイス</strong></td>
@@ -459,8 +465,7 @@ switchBtn.addEventListener("click", () => {
 
 ## 関連情報
 
-- [HTML フォームガイド](/ja/docs/Learn/Forms)
+- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/ja/docs/Web/HTML/Element/input/tel)
-- [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 - [Article: Why Gov.UK changed the input type for numbers](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)
