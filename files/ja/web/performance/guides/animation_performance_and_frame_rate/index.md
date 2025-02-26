@@ -1,6 +1,7 @@
 ---
 title: アニメーションのパフォーマンスとフレームレート
-slug: Web/Performance/Animation_performance_and_frame_rate
+slug: Web/Performance/Guides/Animation_performance_and_frame_rate
+original_slug: Web/Performance/Animation_performance_and_frame_rate
 l10n:
   sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---

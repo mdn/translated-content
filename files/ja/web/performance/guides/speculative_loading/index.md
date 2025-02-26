@@ -1,6 +1,7 @@
 ---
 title: 投機的読み込み
-slug: Web/Performance/Speculative_loading
+slug: Web/Performance/Guides/Speculative_loading
+original_slug: Web/Performance/Speculative_loading
 l10n:
   sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---

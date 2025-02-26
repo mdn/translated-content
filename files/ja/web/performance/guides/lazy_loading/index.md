@@ -1,6 +1,7 @@
 ---
 title: 遅延読み込み
-slug: Web/Performance/Lazy_loading
+slug: Web/Performance/Guides/Lazy_loading
+original_slug: Web/Performance/Lazy_loading
 l10n:
   sourceCommit: 9bbf5b1cc3cf5736fad6b3d972657df8f8cec234
 ---
