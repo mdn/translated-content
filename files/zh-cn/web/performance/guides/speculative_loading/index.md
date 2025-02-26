@@ -1,12 +1,9 @@
 ---
 title: 推测性加载
 slug: Web/Performance/Guides/Speculative_loading
-original_slug: Web/Performance/Speculative_loading
 l10n:
   sourceCommit: 0a9c10fc67901972221dc7b3d006334fbfa73dce
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **推测性加载**（Speculative load）是指在用户实际访问相关页面之前，基于对用户下一步最有可能访问的页面的预测，来进行导航操作（如 DNS 获取、获取资源或渲染文档）的行为。
 
@@ -68,7 +65,7 @@ Link: <https://example.com>; rel="preconnect"
 ```
 
 > [!NOTE]
-> 有关详细信息，请参阅[使用 dns-prefetch](/zh-CN/docs/Web/Performance/dns-prefetch)。
+> 有关详细信息，请参阅[使用 dns-prefetch](/zh-CN/docs/Web/Performance/Guides/dns-prefetch)。
 
 ### `<link rel="preload">`
 

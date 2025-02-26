@@ -1,12 +1,9 @@
 ---
 title: 懒加载
 slug: Web/Performance/Guides/Lazy_loading
-original_slug: Web/Performance/Lazy_loading
 ---
 
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
-
-**延迟加载**（懒加载）是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
+**懒加载**（延迟加载）是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
 延迟加载可以在应用程序的不同时刻发生，但通常会在某些用户交互（例如滚动和导航）上发生。
 
@@ -14,7 +11,7 @@ original_slug: Web/Performance/Lazy_loading
 
 随着网络的发展，发送给用户的资源数量和规模都在急剧增加。从 2011 年到 2019 年，桌面端的资源中位数从 **\~100KB** 增至 **\~400KB**，移动端的资源中位数从 **\~50KB** 增至 **\~350KB**。桌面端上图片资源的大小已经从 **\~250KB** 增至 **\~900KB**，而移动设备上的图片 **\~100KB** 增至 **\~850KB**。
 
-解决这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)的长度。一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且**只有**在用户导航到购物车页面/区域时才会下载其所有资源（如 JavaScript、CSS 和图片）。
+解决这个问题的方法之一是延迟加载对第一次渲染并不重要的资源来缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path)的长度。一个实际例子是，当用户打开一个电商网站的主页时，该页面有一个指向购物车页面/区域的链接，并且**只有**在用户导航到购物车页面/区域时才会下载其所有资源（如 JavaScript、CSS 和图片）。
 
 ## 策略
 
@@ -37,7 +34,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 ### CSS
 
-默认情况下，CSS 被视为[渲染阻塞](/zh-CN/docs/Web/Performance/Critical_rendering_path)资源，因此，在 [CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model) 构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须尽量小，才能尽快送达，建议使用媒体类型和查询实现非阻塞渲染。
+默认情况下，CSS 被视为[渲染阻塞](/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path)资源，因此，在 [CSSOM](/zh-CN/docs/Web/API/CSS_Object_Model) 构造完成之前，浏览器不会渲染任何已处理的内容。CSS 必须尽量小，才能尽快送达，建议使用媒体类型和查询实现非阻塞渲染。
 
 ```html
 <link href="style.css" rel="stylesheet" media="all" />
@@ -57,7 +54,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 ### 图片和 iframe
 
-很多时候，网页包含许多图片，这些图片会影响数据的使用和网页的加载速度。这些图片大部分都在屏幕之外（[非关键](/zh-CN/docs/Web/Performance/Critical_rendering_path)），需要用户互动，如滚动，才能看到它们。
+很多时候，网页包含许多图片，这些图片会影响数据的使用和网页的加载速度。这些图片大部分都在屏幕之外（[非关键](/zh-CN/docs/Web/Performance/Guides/Critical_rendering_path)），需要用户互动，如滚动，才能看到它们。
 
 #### Loading 属性
 

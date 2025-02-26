@@ -1,10 +1,7 @@
 ---
 title: 优化启动性能
 slug: Web/Performance/Guides/Optimizing_startup_performance
-original_slug: Web/Performance/Optimizing_startup_performance
 ---
-
-{{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
 
 一个在软件应用开发中经常被忽视的方面—即便在那些专注于性能优化的软件中—就是启动时的表现。你的应用需要花费多长时间启动？当应用加载时是否会卡住用户的设备或浏览器？这会让用户担心你的应用崩溃了，或者哪儿出错了。花时间确保你的应用能够更好地启动总是一个好主意。这篇文章提供了一些技巧和建议来帮助你达成这个目标，不管是在写一个新的应用还是从其他平台向 Web 移植一个应用。
 
