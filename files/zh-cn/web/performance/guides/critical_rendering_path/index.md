@@ -1,6 +1,7 @@
 ---
 title: 关键渲染路径
-slug: Web/Performance/Critical_rendering_path
+slug: Web/Performance/Guides/Critical_rendering_path
+original_slug: Web/Performance/Critical_rendering_path
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

@@ -1,6 +1,7 @@
 ---
 title: 优化启动性能
-slug: Web/Performance/Optimizing_startup_performance
+slug: Web/Performance/Guides/Optimizing_startup_performance
+original_slug: Web/Performance/Optimizing_startup_performance
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}

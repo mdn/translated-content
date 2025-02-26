@@ -1,6 +1,7 @@
 ---
 title: 渲染页面：浏览器的工作原理
-slug: Web/Performance/How_browsers_work
+slug: Web/Performance/Guides/How_browsers_work
+original_slug: Web/Performance/How_browsers_work
 l10n:
   sourceCommit: f32c38c1245815c7f520730f0cdef54960e5cee1
 ---

@@ -1,6 +1,7 @@
 ---
 title: 懒加载
-slug: Web/Performance/Lazy_loading
+slug: Web/Performance/Guides/Lazy_loading
+original_slug: Web/Performance/Lazy_loading
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}

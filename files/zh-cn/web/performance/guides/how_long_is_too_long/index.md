@@ -1,6 +1,7 @@
 ---
 title: Web 性能计时推荐：多久才算太久？
-slug: Web/Performance/How_long_is_too_long
+slug: Web/Performance/Guides/How_long_is_too_long
+original_slug: Web/Performance/How_long_is_too_long
 l10n:
   sourceCommit: fff37e54dad8353fc89f6c61f5ec408094bcebd8
 ---

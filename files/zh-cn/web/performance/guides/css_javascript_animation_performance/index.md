@@ -1,6 +1,7 @@
 ---
 title: CSS 动画与 JavaScript 动画的性能
-slug: Web/Performance/CSS_JavaScript_animation_performance
+slug: Web/Performance/Guides/CSS_JavaScript_animation_performance
+original_slug: Web/Performance/CSS_JavaScript_animation_performance
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Performance")}}
