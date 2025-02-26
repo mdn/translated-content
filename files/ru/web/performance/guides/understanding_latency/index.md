@@ -1,6 +1,6 @@
 ---
 title: Время ожидания (latency)
-slug: Web/Performance/Understanding_latency
+slug: Web/Performance/Guides/Understanding_latency
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

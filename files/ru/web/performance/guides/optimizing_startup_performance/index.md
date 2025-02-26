@@ -1,6 +1,6 @@
 ---
 title: Оптимизация запуска
-slug: Web/Performance/Optimizing_startup_performance
+slug: Web/Performance/Guides/Optimizing_startup_performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
