@@ -1,6 +1,7 @@
 ---
 title: Критические этапы рендеринга
-slug: Web/Performance/Critical_rendering_path
+slug: Web/Performance/Guides/Critical_rendering_path
+original_slug: Web/Performance/Critical_rendering_path
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

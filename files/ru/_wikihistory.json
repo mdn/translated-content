@@ -20885,31 +20885,31 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Performance/Animation_performance_and_frame_rate": {
+  "Web/Performance/Guides/Animation_performance_and_frame_rate": {
     "modified": "2020-04-02T11:48:28.669Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/CSS_JavaScript_animation_performance": {
+  "Web/Performance/Guides/CSS_JavaScript_animation_performance": {
     "modified": "2020-04-02T11:47:32.867Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Critical_rendering_path": {
+  "Web/Performance/Guides/Critical_rendering_path": {
     "modified": "2020-03-30T19:35:11.484Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Fundamentals": {
+  "Web/Performance/Guides/Fundamentals": {
     "modified": "2020-04-15T18:48:38.137Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/How_browsers_work": {
+  "Web/Performance/Guides/How_browsers_work": {
     "modified": "2020-12-07T17:11:39.900Z",
     "contributors": [
       "SamTLT",
@@ -20917,50 +20917,50 @@
       "D.Lesnik"
     ]
   },
-  "Web/Performance/How_long_is_too_long": {
+  "Web/Performance/Guides/How_long_is_too_long": {
     "modified": "2020-05-15T10:59:03.931Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Lazy_loading": {
+  "Web/Performance/Guides/Lazy_loading": {
     "modified": "2020-05-23T10:12:03.445Z",
     "contributors": [
       "mfranzke",
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Navigation_and_resource_timings": {
+  "Web/Performance/Guides/Navigation_and_resource_timings": {
     "modified": "2020-04-02T11:43:41.543Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Optimizing_startup_performance": {
+  "Web/Performance/Guides/Optimizing_startup_performance": {
     "modified": "2020-04-03T10:03:42.671Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Performance_budgets": {
+  "Web/Performance/Guides/Performance_budgets": {
     "modified": "2020-04-06T12:41:24.362Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Rum-vs-Synthetic": {
+  "Web/Performance/Guides/Rum-vs-Synthetic": {
     "modified": "2020-04-17T19:39:30.304Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/Understanding_latency": {
+  "Web/Performance/Guides/Understanding_latency": {
     "modified": "2020-05-28T07:49:08.019Z",
     "contributors": [
       "D.Lesnik"
     ]
   },
-  "Web/Performance/dns-prefetch": {
+  "Web/Performance/Guides/dns-prefetch": {
     "modified": "2020-12-13T17:12:00.849Z",
     "contributors": [
       "iozee",

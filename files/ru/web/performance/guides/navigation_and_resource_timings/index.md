@@ -1,6 +1,7 @@
 ---
 title: Время загрузки страницы и ресурсов
-slug: Web/Performance/Navigation_and_resource_timings
+slug: Web/Performance/Guides/Navigation_and_resource_timings
+original_slug: Web/Performance/Navigation_and_resource_timings
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

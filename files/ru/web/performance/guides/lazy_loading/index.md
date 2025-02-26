@@ -1,6 +1,7 @@
 ---
 title: Lazy loading
-slug: Web/Performance/Lazy_loading
+slug: Web/Performance/Guides/Lazy_loading
+original_slug: Web/Performance/Lazy_loading
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

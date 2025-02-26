@@ -1,6 +1,7 @@
 ---
 title: Как работают браузеры
-slug: Web/Performance/How_browsers_work
+slug: Web/Performance/Guides/How_browsers_work
+original_slug: Web/Performance/How_browsers_work
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
