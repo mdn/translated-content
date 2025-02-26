@@ -25,7 +25,7 @@ HTTP **`425 Too Early`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Status#用
 
 {{Compat}}
 
-## See also
+## 參見
 
 - [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)
 - [TLS 1.3](/zh-TW/docs/Web/Security/Transport_Layer_Security#tls_1.3)
