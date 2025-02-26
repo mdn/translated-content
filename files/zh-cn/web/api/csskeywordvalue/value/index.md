@@ -35,4 +35,3 @@ indicator.attributeStyleMap.get("display").value; // 'initial'
 ## 浏览器兼容性
 
 {{Compat}}
-
