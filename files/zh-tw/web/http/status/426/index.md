@@ -2,7 +2,7 @@
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 585f0ff3393eec16f00cf3adcf4e59250c1fe315
 ---
 
 {{HTTPSidebar}}
@@ -32,7 +32,7 @@ Host: example.com
 
 ```http
 HTTP/1.1 426 Upgrade Required
-Upgrade: HTTP/2.0
+Upgrade: HTTP/3.0
 Connection: Upgrade
 Content-Length: 53
 Content-Type: text/plain
