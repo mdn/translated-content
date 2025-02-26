@@ -7,7 +7,35 @@ slug: Web/HTML/Element/input/tel
 
 Элементы {{HTMLElement("input")}} с типом **`tel`** используются для ввода телефонных номеров. В отличие от {{HTMLElement("input/email")}} и {{HTMLElement("input/url")}} вводимое значение не проходит автоматическую валидацию перед отправкой формы, поскольку форматы телефонных номеров сильно различаются по всему миру.
 
-{{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="phone">
+  Enter your phone number:<br />
+  <small>Format: 123-456-7890</small>
+</label>
+
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+  required />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 Несмотря на то, что поля ввода `tel` функционально идентичны обычным полям ввода с типом `text`, они приносят пользу: например, браузеры мобильных телефонов могут предоставлять для таких полей специальную клавиатуру, оптимизированную для ввода телефонных номеров. Использование специального поля ввода для телефонных номеров также упрощает реализацию их проверки и обработки.
 
