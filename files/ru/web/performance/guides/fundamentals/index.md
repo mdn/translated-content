@@ -1,7 +1,6 @@
 ---
 title: Основы производительности
 slug: Web/Performance/Guides/Fundamentals
-original_slug: Web/Performance/Fundamentals
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

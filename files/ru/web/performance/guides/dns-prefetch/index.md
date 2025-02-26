@@ -1,7 +1,6 @@
 ---
 title: Использование dns-prefetch
 slug: Web/Performance/Guides/dns-prefetch
-original_slug: Web/Performance/dns-prefetch
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

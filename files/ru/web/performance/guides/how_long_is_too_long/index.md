@@ -1,7 +1,6 @@
 ---
 title: "Тайминги производительности: как долго - долго?"
 slug: Web/Performance/Guides/How_long_is_too_long
-original_slug: Web/Performance/How_long_is_too_long
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

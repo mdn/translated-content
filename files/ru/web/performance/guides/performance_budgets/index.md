@@ -1,7 +1,6 @@
 ---
 title: Бюджет производительности
 slug: Web/Performance/Guides/Performance_budgets
-original_slug: Web/Performance/Performance_budgets
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

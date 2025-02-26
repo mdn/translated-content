@@ -1,7 +1,6 @@
 ---
 title: "Мониторинг производительности: реальные пользователи и их эмуляция"
 slug: Web/Performance/Guides/Rum-vs-Synthetic
-original_slug: Web/Performance/Rum-vs-Synthetic
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
