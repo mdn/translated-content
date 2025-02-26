@@ -9,26 +9,19 @@ Los elementos {{HTMLElement("input")}} del tipo «**`color`**» proporciona un e
 
 La presentación del elemento puede variar considerablamente entre navegadores y plataformas: podría ser un campo de entrada sencillo que valida automáticamente que la entrada esté en el formato adecuado, o podría lanzar un selector de colores estándar de la plataforma, o incluso podría abrir una ventana de colores personalizada.
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Audio settings:</p>
+<p>Choose your monster's colors:</p>
 
 <div>
-  <input type="range" id="volume" name="volume" min="0" max="11" />
-  <label for="volume">Volume</label>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
 </div>
 
 <div>
-  <input
-    type="range"
-    id="cowbell"
-    name="cowbell"
-    min="0"
-    max="100"
-    value="90"
-    step="10" />
-  <label for="cowbell">Cowbell</label>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
 </div>
 ```
 
