@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
 
-Los formularios y botones HTML son herramientas poderosas para interactuar con los usuarios de un sitio web. Principalmente, proporcionan a los usuarios controles para manipular una interfaz de usuario (UI) o ingresar datos cuando sea necesario.
+Los formularios y botones HTML son herramientas poderosas para interactuar con los usuarios de un sitio web. Principalmente, proporcionan a los usuarios controles para manipular una interfaz de usuario (UI, por sus siglas en inglés) o ingresar datos cuando sea necesario.
 
 En este artículo, ofrecemos una introducción a los aspectos básicos de los formularios y botones. Hay mucho más que aprender (se omiten muchos tipos de entrada y características de los formularios), pero este artículo le proporcionará una base sólida para la mayoría de los casos. Puede aprender los usos avanzados o especializados según sea necesario, como parte del aprendizaje constante que realizará a lo largo de su carrera.
 
@@ -78,7 +78,7 @@ Sin embargo, estas características tienden a facilitar las interacciones unidir
 
 Para proporcionar esta experiencia bidireccional, debe utilizar botones y formularios.
 
-Los botones se crean normalmente utilizando elementos HTML {{htmlelement("button")}} (a veces también se crean utilizando elementos {{htmlelement("input")}} con sus atributos `type` establecidos en un valor como `button` o `submit`). Estos pulsadores son de propósito general: puede conectarlos para que activen cualquier funcionalidad que desee, limitada únicamente por su imaginación y sus habilidades de programación.
+Los botones se crean normalmente utilizando elementos HTML {{htmlelement("button")}} (a veces también se crean utilizando elementos {{htmlelement("input")}} con sus atributos `type` establecidos en un valor como `button` o `submit`). Estos botones son de propósito general: puede conectarlos para que activen cualquier funcionalidad que desee, limitada únicamente por su imaginación y sus habilidades de programación.
 
 Los formularios se crean utilizando elementos como {{htmlelement("form")}}, {{htmlelement("label")}}, {{htmlelement("input")}} y {{htmlelement("select")}}. Los elementos de formulario se pueden utilizar para crear controles más complejos de lo que permiten los botones simples, por ejemplo, un menú desplegable que contiene múltiples opciones que le permiten elegir entre diferentes temas para un elemento de la interfaz de usuario.
 
@@ -118,7 +118,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-Le daría la siguiente salida; intente hacer clic en ella:
+Le daría la siguiente salida; intente hacer clic:
 
 {{EmbedLiveSample("basic-button-with-js", "100%", "60")}}
 
@@ -136,7 +136,7 @@ Un formulario básico contiene tres cosas:
   - El elemento `<label>` proporciona una etiqueta de identificación asociada con el control de formulario que describe los datos que se deben ingresar en él.
 - Un elemento {{htmlelement("button")}}, que se utiliza para enviar el formulario.
 
-Veamos un ejemplo básico que incluye los tres elementos anteriores. Este formulario podría usarse para solicitar el nombre y el correo electrónico de un usuario, para registrarlo en un boletín informativo (**Nota:** no se preocupe, no está conectado a ningún servidor, por lo que actualmente no hará nada).
+Veamos un ejemplo básico que incluye los tres elementos anteriores. Este formulario podría usarse para solicitar el nombre y el correo electrónico de un usuario, para registrarlo en un boletín informativo (no se preocupe, no está conectado a ningún servidor, por lo que actualmente no hará nada).
 
 ```html live-sample___form-anatomy
 <form action="./submit_page" method="get">
@@ -184,7 +184,7 @@ Puede incluir cualquier elemento HTML que desee dentro de un elemento `<form>` p
 
 En nuestro ejemplo, hemos incluido un [elemento de encabezado](/es/docs/Web/HTML/Element/Heading_Elements) (`<h2>`) para describir el propósito del formulario.
 
-También hemos colocado cada par entrada/etiqueta y el botón de envío dentro de un {{htmlelement("p")}} separado, de modo que cada uno aparezca en una línea separada. Todos estos elementos están en línea de forma predeterminada, lo que significa que si no hiciéramos esto, todos se sentarían en la misma línea.
+También hemos colocado cada par entrada/etiqueta y el botón de envío dentro de un {{htmlelement("p")}} separado, de modo que cada uno aparezca en una línea separada. Todos estos elementos están en línea de forma predeterminada, lo que significa que si no hiciéramos esto, todos estarían en la misma línea.
 
 Este es un patrón común para la estructuración de formularios. Algunas personas usan elementos `<p>` para separar los elementos de su formulario, algunos usan {{htmlelement("div")}}, {{htmlelement("section")}} o incluso elementos {{htmlelement("li")}}. No importa mucho, siempre y cuando los elementos utilizados tengan sentido semántico. Por ejemplo, tiene sentido dividir los grupos de elementos de formulario en párrafos o secciones de contenido separados, o incluso en elementos de una lista. Tendría menos sentido representarlos como [citas en bloque](/es/docs/Web/HTML/Element/blockquote), [aparte](/es/docs/Web/HTML/Element/aside) o [direcciones](/es/docs/Web/HTML/Element/address).
 
@@ -207,7 +207,7 @@ Los atributos son los siguientes:
 
 Debe tener en cuenta que algunos tipos de entrada normalmente no obtienen sus valores del texto ingresado en un campo. Por ejemplo, [`<input type="color">`](/es/docs/Web/HTML/Element/input/color) representa un widget de selector de color del que elige un color, mientras que [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio) representa un control de botón de opción que se puede seleccionar o no.
 
-En el caso de los botones de opción, generalmente necesita proporcionar el valor que se enviaría si se selecciona dentro de un atributo `value` específico. **Nota:** puede especificar un atributo `value` en tipos de entrada como `text` y `color`; el efecto es que el valor se rellena previamente en el campo de formulario cuando se representa por primera vez.
+En el caso de los botones de opción, generalmente necesita proporcionar el valor que se enviaría si se selecciona dentro de un atributo `value` específico. Nota que puedes especificar un atributo `value` en tipos de entrada como `text` y `color`; el efecto es que el valor se rellena previamente en el campo de formulario cuando se representa por primera vez.
 
 > [!CALLOUT]
 >
@@ -219,7 +219,7 @@ En el caso de los botones de opción, generalmente necesita proporcionar el valo
 
 #### Entradas especializadas de campo de texto
 
-El segundo ejercicio anterior plantea un punto interesante. El segundo campo de entrada espera específicamente una dirección de correo electrónico y valida los valores ingresados como tales. Si mira el código del formulario nuevamente, verá por qué: la segunda `<input>` tiene un `type` de `email`. Hay varios tipos de entrada de campo de texto especializados diseñados para manejar tipos de datos específicos: [`<input type="number">`](/es/docs/Web/HTML/Element/input/number), [`<input type="password">`](/es/docs/Web/HTML/Element/input/password), [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel), etc.
+El segundo ejercicio anterior plantea un punto interesante. El segundo campo de entrada espera específicamente una dirección de correo electrónico y valida los valores ingresados como tales. Si mira el código del formulario nuevamente, verá por qué: el segundo `<input>` tiene un `type` de `email`. Hay varios tipos de entrada de campo de texto especializados diseñados para manejar tipos de datos específicos: [`<input type="number">`](/es/docs/Web/HTML/Element/input/number), [`<input type="password">`](/es/docs/Web/HTML/Element/input/password), [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel), etc.
 
 > [!CALLOUT]
 >
@@ -267,14 +267,14 @@ Cuando se incluye un elemento {{htmlelement("button")}} dentro de un elemento `<
 Existen otros comportamientos de los botones que se pueden especificar a través del atributo `type` del elemento `<button>`:
 
 - `<button type="submit">` declara explícitamente que un botón debe comportarse como un botón de envío. En realidad, nunca es necesario declarar esto, a menos que por alguna razón esté incluyendo otros botones dentro de su `<form>`, y quiera dejar claro cuál es el botón de envío. Esto será muy raro.
-- `<button type="reset">` crea un _botón de reinicio_; esto elimina inmediatamente todos los datos del formulario, restableciéndolo a su estado inicial. **Advertencia:** no utilice botones de reinicio, solían ser populares en los primeros tiempos de la web, pero suelen ser más molestos que útiles. La mayoría de la gente ha experimentado el hecho de rellenar un formulario largo sólo para hacer clic en el botón de reinicio por accidente en lugar de en el botón de envío, lo que significa que tiene que volver a empezar.
+- `<button type="reset">` crea un _botón de reinicio_; esto elimina inmediatamente todos los datos del formulario, restableciéndolo a su estado inicial. **No utilice botones de reinicio**: solían ser populares en los primeros tiempos de la web, pero suelen ser más molestos que útiles. La mayoría de la gente ha experimentado el hecho de rellenar un formulario largo sólo para hacer clic en el botón de reinicio por accidente en lugar de en el botón de envío, lo que significa que tiene que volver a empezar.
 - `<button type="button">` crea un botón con el mismo comportamiento que los botones especificados fuera de los elementos `<form>`. Como vimos antes, no hacen absolutamente nada por defecto, y se necesita JavaScript para darles funcionalidad.
 
 > [!NOTE]
 >
 > También puede crear los tipos de botones anteriores utilizando un elemento `<input>` con los mismos valores de `type` especificados: [`<input type="submit">`](/es/docs/Web/HTML/Element/input/submit), [`<input type="reset">`](/es/docs/Web/HTML/Element/input/reset) y [`<input type="button">`](/es/docs/Web/HTML/Element/input/button). Sin embargo, estos tienen muchas desventajas en comparación con sus homólogos `<button>`. Debe utilizar `<button>` en su lugar.
 
-## Un aparte sobre la accesibilidad
+## Sobre la accesibilidad
 
 Ya hemos hablado de la importancia de las etiquetas de los formularios para la accesibilidad, pero también queríamos incluir algunos comentarios sobre la importancia general de utilizar los elementos semánticos correctos para crear formularios (por ejemplo, utilizar un `<button>` para enviar su formulario, y no un `<div>` programado para comportarse como un `<button>`). Es perfectamente posible utilizar una combinación de CSS y JavaScript para hacer que prácticamente cualquier elemento HTML parezca y se comporte como un elemento de formulario. Los desarrolladores suelen hacer esto por razones de diseño: algunos controles de formulario son difíciles de diseñar.
 
@@ -355,7 +355,7 @@ Esto se representa de la siguiente manera:
 
 {{EmbedLiveSample("form-other-controls", "100%", "500")}}
 
-Recomendamos que abra este ejemplo en una pestaña separada del navegador mientras trabaja en las siguientes secciones, en las que analizaremos cada tipo de control por turno. Para lograr esto, copie el código en un archivo HTML utilizando su editor de código y ábralo en una pestaña del navegador.
+Recomendamos que abra este ejemplo en una pestaña separada del navegador mientras trabaja en las siguientes secciones, en las que analizaremos cada tipo de control en turno. Para lograr esto, copie el código en un archivo HTML utilizando su editor de código y ábralo en una pestaña del navegador.
 
 > [!CALLOUT]
 >
@@ -365,7 +365,7 @@ Recomendamos que abra este ejemplo en una pestaña separada del navegador mientr
 
 ### Botones de radio
 
-Los botones "Elija el tipo de habitación de hotel" se implementan utilizando controles [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio). Estos se representan como un conjunto de controles de botón pulsador en los que solo se puede seleccionar uno del conjunto a la vez; no puede seleccionar más de uno a la vez. Llevan el nombre de los botones que se encuentran en las radios antiguas, donde se presiona un botón y el seleccionado previamente vuelve a aparecer.
+Los botones "Elija el tipo de habitación de hotel" se implementan utilizando controles [`<input type="radio">`](/es/docs/Web/HTML/Element/input/radio). Estos se representan como un conjunto de controles de botón en los que solo se puede seleccionar uno del conjunto a la vez; no puede seleccionar más de uno a la vez. Llevan el nombre de los botones que se encuentran en las radios antiguas, donde se presiona un botón y el seleccionado previamente vuelve a aparecer.
 
 Nuestro código de ejemplo se ve así:
 
@@ -389,11 +389,10 @@ Los tipos de entrada `radio` funcionan en su mayoría de la misma manera que los
 
 - Los atributos `name` para cada conjunto de botones de opción deben contener el mismo valor, para asociarlos entre sí como un solo conjunto. Si contienen valores diferentes, serán efectivamente conjuntos separados, con diferentes valores en el envío.
 - Debe incluir un atributo `value` que contenga el valor a enviar para cada botón de opción. El valor enviado será un par nombre/valor, pero el nombre siempre será el mismo, por ejemplo, `hotel=economy` o `hotel=superior`.
-- La `<label>` para cada botón de opción debe describir esa elección de valor en particular, en lugar del valor general que está seleccionando. La forma preferida de proporcionar una descripción de la elección de valor general es envolverlos en un {{htmlelement("fieldset")}}, que toma un elemento {{htmlelement("legend")}} como hijo que contiene la descripción.
+- La etiqueta `<label>` para cada botón de opción debe describir esa elección de valor en particular, en lugar del valor general que está seleccionando. La forma preferida de proporcionar una descripción de la elección de valor general es envolverlos en un {{htmlelement("fieldset")}}, que toma un elemento {{htmlelement("legend")}} como hijo que contiene la descripción.
 
 > [!NOTE]
->
-> Además de estructurar y etiquetar los formularios, los fieldsets tienen otros usos, como [desactivar](#disabling_form_controls) un conjunto completo de controles como una sola unidad.
+> Además de estructurar y etiquetar los formularios, los _fieldsets_ tienen otros usos, como [desactivar](#disabling_form_controls) un conjunto completo de controles como una sola unidad.
 
 También vale la pena señalar que hemos aplicado el atributo `checked` al primer botón de opción: esto hace que se seleccione cuando la página se carga por primera vez. Así es como justificamos marcar el valor del tipo de habitación de hotel como "obligatorio": siempre se seleccionará una opción y no puede deseleccionar un botón de opción sin seleccionar otro.
 
@@ -403,7 +402,7 @@ También vale la pena señalar que hemos aplicado el atributo `checked` al prime
 >
 > Intente eliminar el atributo `checked` del primer botón de opción, guarde y luego vuelva a cargar, para ver el efecto que tiene. Vuelva a colocarlo antes de seguir adelante.
 
-#### Desactivación de los controles del formulario
+#### Deshabilitar controles de formulario
 
 En el ejemplo del botón de opción, notará que el tercer botón de opción tiene el atributo `disabled` configurado. Esto hace que el control renderizado se muestre en gris y no se pueda seleccionar. Esto es útil en muchas situaciones en las que una opción normalmente está disponible, pero no en este momento. Por ejemplo, un producto puede estar agotado o, como en el caso del ejemplo, ¡las suites penthouse están todas reservadas!
 
@@ -440,7 +439,6 @@ Como puede ver en los fragmentos de código, los botones de opción y las casill
 La principal diferencia (¡aparte del valor de `type`!) es que cada casilla de verificación tiene un valor de `name` diferente y generalmente no se les dan atributos `value`. En cuanto al comportamiento, esto significa que representan diferentes valores de datos, mientras que un conjunto de botones de opción solo representa uno. En el momento del envío, cada valor se envía con un valor de `on` si la casilla de verificación se marcó: `yoga=on`, `balloon=on`, etc.
 
 > [!NOTE]
->
 > Es posible cambiar el valor enviado para una casilla de verificación dándole un atributo `value`, por ejemplo: `<input type="checkbox" id="yoga" name="yoga" value="yes" />` resultaría en que se enviaría `yoga=yes` si se marca. Sin embargo, no tiene mucho sentido hacer esto. Una casilla de verificación se envía con un solo valor si se marca, o no se envía en absoluto. Realmente no importa qué valor se envía al servidor.
 
 ### Menús desplegables
@@ -465,7 +463,6 @@ El elemento `<select>` envuelve todas las diferentes opciones de valor. Es donde
 Cada valor posible para el elemento de datos está representado por un elemento `<option>`, anidado dentro del elemento `<select>`. Cada elemento `<option>` puede tomar un atributo `value`, que especifica el valor que se enviará si esa opción se elige de la lista desplegable. Si no especifica un `value`, el texto dentro de las etiquetas `<option></option>` se utiliza como valor.
 
 > [!NOTE]
->
 > Si desea que una opción específica se seleccione al cargar la página, puede agregar un atributo `selected` al elemento `<option>` relevante.
 
 ### Campos de entrada de texto de varias líneas
@@ -474,12 +471,12 @@ Los campos de entrada de texto de varias líneas se crean utilizando elementos {
 
 ```html-nolint
 <label for="comments">Algún comentario adicional:</label>
-<textarea id="comments" name="comments"
+<textarea id="comments" name="comments" rows="5" cols="33"></textarea>
 ```
 
 Se comportan de la misma manera que los elementos `<input type="text">`, excepto que permiten ingresar múltiples líneas de texto. El atributo `rows` especifica la cantidad de filas de alto que tendrá el área de texto de forma predeterminada, mientras que el atributo `cols` especifica la cantidad de columnas de ancho que tendrá el área de texto de forma predeterminada. Si no se especifican, los valores utilizados son `cols="20"` y `rows="2"`.
 
-> [!OBSERVACIÓN]
+> [!CALLOUT]
 >
 > **Pruébalo**
 >
