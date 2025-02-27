@@ -11,7 +11,29 @@ l10n:
 
 コントロールのユーザーインターフェイスはブラウザーとオペレーティングシステムに基づいて現れますが、機能は同じです。 UI の入力形式に関わらず、値は常にゼロが先行する 24 時間表記の `HH:mm` または `HH:mm:ss` に書式化された時刻です。
 
-{{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="appt">Choose a time for your meeting:</label>
+
+<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+
+<small>Office hours are 9am to 6pm</small>
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ### value 属性の設定
 
