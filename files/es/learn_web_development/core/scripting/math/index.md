@@ -43,8 +43,6 @@ La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes 
 
 Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), o utiliza la sencilla consola integrada que verás abajo si lo prefieres.
 
-**[Abrir en una ventana nueva](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
-
 1. Primero que todo, declara un par de variables e inicializalas con un entero y un flotante, respectivamente, luego escribe los nombres de esas variables para chequear que todo esté en orden:
 
    ```js

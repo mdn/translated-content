@@ -2,18 +2,18 @@
 title: 424 Failed Dependency
 slug: Web/HTTP/Status/424
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`424 Failed Dependency`** クライエントエラーレスポンスコードは、要求されたアクションが他のアクションに依存しており、そのアクションが失敗したため、対象のリソースに対してメソッドを実行できなかったことを示します。
+HTTP の **`424 Failed Dependency`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Status#クライアントエラーレスポンス)ステータスコードで、要求されたアクションが他のアクションに依存しており、そのアクションが失敗したため、対象のリソースに対してメソッドを実行できなかったことを示します。
 
 普通のウェブサーバーがこのステータスコードを返すことは通常ありません。しかし、{{Glossary("WebDAV")}} などの他のプロトコルが返すことはあります。たとえば、{{Glossary("WebDAV")}} では、`PROPPATCH` 要求が発行され、あるコマンドが失敗した場合は、他のコマンドも自動的に `424 Failed Dependency` で失敗します。
 
 ## ステータス
 
-```plain
+```http
 424 Failed Dependency
 ```
 
@@ -23,4 +23,6 @@ HTTP **`424 Failed Dependency`** クライエントエラーレスポンスコ�
 
 ## 関連情報
 
+- [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Status)
 - {{HTTPStatus("403")}} (Forbidden)
+- {{HTTPStatus("501", "501 Not Implemented")}}, {{HTTPStatus("510", "510 Not Extended")}}

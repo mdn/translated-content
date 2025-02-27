@@ -35,7 +35,7 @@ var string = "This is my string";
 
 **好的，在你腦袋燒壞之前先別擔心！**在這趟學習旅程中，關於這些大部分對於現在的你其實還不需要知道。不過有一些你可能會經常使用，我們將在這裡介紹。
 
-Let's enter some examples into a fresh console. We've provided one below (you can also [open this console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) in a separate tab or window, or use the [browser developer console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) if you'd prefer).
+讓我們在[瀏覽器開發者控制台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)輸入一些範例。
 
 ```html hidden
 <!doctype html>

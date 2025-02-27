@@ -9,7 +9,18 @@ slug: Web/HTML/Element/picture
 
 瀏覽器將會考慮每個 `<source>` 元素，並且在其中選出最適當的選項。如果沒有找到最適當的選項——或是瀏覽器不支援 `<picture>` 元素——則 `<img>` 屬性的 URL 會被選擇。被選擇的圖片將會在 `<img>` 元素存在的位置顯示。
 
-{{EmbedInteractiveExample("pages/tabbed/picture.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 為了決定載入哪一個 URL，{{Glossary("user agent")}} 會檢視每一個 `<source>` 的 [`srcset`](/zh-TW/docs/Web/HTML/Element/source#srcset)、[`media`](/zh-TW/docs/Web/HTML/Element/source#media) 以及 [`type`](/zh-TW/docs/Web/HTML/Element/source#type) 屬性，以選出最適合當前版面以及顯示裝置支援度的圖片。
 

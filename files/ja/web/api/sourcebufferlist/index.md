@@ -34,7 +34,7 @@ _親インターフェイスである {{domxref("EventTarget")}} からメソッ
 
 未定
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

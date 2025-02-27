@@ -35,7 +35,7 @@ console.log(speechRecognitionList[0].src); // grammar 変数の内容と同じ�
 console.log(speechRecognitionList[0].weight); // 4 行目で設定された weight と同じ値の 1 が返される
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
