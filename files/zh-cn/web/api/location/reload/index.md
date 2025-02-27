@@ -27,7 +27,7 @@ reload()
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用方法的脚本的{{Glossary("origin", "源")}}不与 {{domxref("Location")}} 对象最初描述的页面的{{Glossary("Same-origin policy", "源相同")}}，则抛出该异常，主要是当脚本托管在不同的域上时。
+  - : 如果调用方法的脚本的{{Glossary("Origin", "源")}}不与 {{domxref("Location")}} 对象最初描述的页面的{{Glossary("Same-origin policy", "同源")}}，则抛出该异常，主要是当脚本托管在不同的域上时。
 
 ## 示例
 
