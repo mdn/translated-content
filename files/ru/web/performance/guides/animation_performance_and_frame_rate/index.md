@@ -1,6 +1,6 @@
 ---
 title: Производительность анимации и частота кадров
-slug: Web/Performance/Animation_performance_and_frame_rate
+slug: Web/Performance/Guides/Animation_performance_and_frame_rate
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}

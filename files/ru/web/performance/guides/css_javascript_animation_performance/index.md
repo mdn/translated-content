@@ -1,6 +1,6 @@
 ---
 title: Производительность CSS и JavaScript анимации
-slug: Web/Performance/CSS_JavaScript_animation_performance
+slug: Web/Performance/Guides/CSS_JavaScript_animation_performance
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
